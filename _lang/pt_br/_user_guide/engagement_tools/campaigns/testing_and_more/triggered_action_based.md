@@ -16,7 +16,7 @@ description: "Este artigo de referência explica como testar campanhas acionadas
 A única maneira de testar o acionamento de uma campanha com a API ou evento personalizado é colocar a campanha no ar com um push. Como parte do lançamento de uma nova campanha, recomendamos fortemente adicionar um segmento de usuário teste às campanhas ao testar a entregabilidade de disparo. Isso fornecerá uma rede de segurança, garantindo que, mesmo que uma campanha seja enviada acidentalmente, ela seja direcionada apenas para usuários internos.
 
 1. **Importar usuários de teste**<br>Os usuários de teste podem ser importados para o Braze através de um CSV ou uma solicitação em lote única através do [Postman]({{site.baseurl}}/api/postman_collection/). Ao importar esses usuários, recomendamos definir um atributo personalizado em seus perfis (como `internal_test_user: true`) que pode ser usado para construir um segmento de grupo de teste. <br><br>
-2. **Adicione usuários de teste como usuários de teste reconhecidos pela Braze**<br>[Marcar seus usuários de teste como usuários de teste reconhecidos pelo Braze]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) no dashboard lhe dá acesso a logs detalhados para cada usuário, permitindo inspecionar solicitações de API, seus payloads e visualizar logs de entregabilidade. Esses logs podem ajudá-lo a determinar se houve algum problema na entrega de campanhas aos usuários finais. <br><br>
+2. **Adicione usuários de teste como usuários de teste reconhecidos pela Braze**<br>[Marcar seus usuários de teste como usuários de teste reconhecidos pelo Braze]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) no dashboard lhe dá acesso a logs detalhados para cada usuário, permitindo inspecionar solicitações de API, seus payloads e visualizar logs de entregabilidade. Esses logs podem ajudá-lo a determinar se houve algum problema na entrega de campanhas aos usuários finais. <br><br>
 3. **Crie segmento**<br>Para criar um segmento de usuário teste, crie um segmento de usuários com o atributo personalizado `internal_test_user` definido como `true`. Este segmento pode ser removido quando a campanha for ao ar. 
 
 ## Etapa 2: Envios de teste
@@ -26,8 +26,8 @@ Em seguida, você pode fazer um envio de teste do dashboard da Braze ou usar o I
 ## Etapa 3: Use os registros da Braze para inspecionar os resultados recebidos
 
 Use os registros da Braze para solucionar problemas de gatilho, envio e eventos. 
-- O [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) mostrará a carga útil bruta da solicitação disparada pela API, o evento personalizado disparando a campanha e quaisquer propriedades associadas ao disparo ou evento.
-- O [registro de atividade de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) registrará quaisquer erros e ajudará você a entender por que uma determinada mensagem pode não ter sido entregue.
+- O [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) mostrará a carga útil bruta da solicitação disparada pela API, o evento personalizado disparando a campanha e quaisquer propriedades associadas ao disparo ou evento.
+- O [registro de atividade de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) registrará quaisquer erros e ajudará você a entender por que uma determinada mensagem pode não ter sido entregue.
 
 ## Etapa 4: Remova o segmento de teste e lance a campanha
 
