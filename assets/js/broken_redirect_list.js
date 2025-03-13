@@ -1,4 +1,12 @@
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
+
+if (typeof module !== 'undefined' && module.exports) {
+  // Export so we can import validurls from another file
+  // Required for: braze-docs/scripts/find_broken_links.ts
+  module.exports = validurls;
+
+}
+
 validurls['/docs/best_practices/#android-push-category'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-category';
 validurls['/docs/best_practices/#android-push-priority'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-priority';
 validurls['/docs/best_practices/#android-push-visibility'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-visibility';
@@ -2042,9 +2050,3 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
 // validurls['OLD'] = 'NEW';
-
-if (typeof module !== 'undefined' && module.exports) {
-  // export so i can import validurls from another file
-  module.exports = validurls;
-
-}
