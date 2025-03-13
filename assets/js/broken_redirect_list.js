@@ -2053,6 +2053,10 @@ validurls['/docs/developer_guide/platforms/android/localization'] = '/docs/devel
 validurls['/docs/developer_guide/platforms/android/geofences'] = '/docs/developer_guide/geofences/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/storage'] = '/docs/developer_guide/storage/?tab=android';
 
+validurls['/docs/developer_guide/platforms/fireos/localization'] = '/docs/developer_guide/localization/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/geofences'] = '/docs/developer_guide/geofences/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/storage'] = '/docs/developer_guide/storage/?tab=android';
+
 validurls['/docs/developer_guide/platforms/swift/localization'] = '/docs/developer_guide/localization/?tab=swift';
 validurls['/docs/developer_guide/platforms/swift/geofences'] = '/docs/developer_guide/geofences/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/storage'] = '/docs/developer_guide/storage/?tab=swift';
