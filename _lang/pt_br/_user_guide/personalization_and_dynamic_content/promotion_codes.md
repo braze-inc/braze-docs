@@ -9,7 +9,7 @@ description: "Este artigo de referência ensina como criar listas de códigos de
 
 # Códigos promocionais
 
-> Códigos promocionais—também chamados de códigos de promoção—são uma ótima maneira de manter os usuários engajados, incentivando interações com forte ênfase em compras.
+> Códigos promocionais—também chamados de códigos de promoção—são uma ótima maneira de manter os usuários engajados, incentivando interações com forte ênfase em compras.<br><br>Esta página aborda como criar listas de códigos promocionais e adicioná-los a suas campanhas e Canvas.
 
 Com a funcionalidade Liquid da Braze, oferecemos uma maneira de facilitar o uso generalizado de códigos promocionais, permitindo que as mensagens agora sejam extraídas da lista de promoções que você forneceu, de forma automática e intuitiva. O recurso de códigos promocionais oferece datas de vencimento de até seis meses e suporte para até 20MM de códigos individuais por lista.
 
@@ -59,7 +59,7 @@ Você também tem a opção de configurar alertas de limite opcionais e personal
 
 ### Etapa 4: Upload do código de promoção
 
-Braze não gerencia a criação ou a troca de códigos, o que significa que você deve gerar seus códigos de promoção para um arquivo CSV e fazer upload deles para o Braze. Certifique-se de que o arquivo CSV siga estas diretrizes:
+O Braze não gerencia a criação ou o resgate de códigos, o que significa que você deve gerar seus códigos promocionais em um arquivo CSV e fazer upload deles no Braze. Certifique-se de que o arquivo CSV siga estas diretrizes:
 
 - Inclui uma coluna para códigos de promoção.
 - Tem um código de promoção por linha.
@@ -81,7 +81,7 @@ Depois de selecionar salvar, uma nova linha aparecerá no **Histórico de Import
 ![][8]
 
 {% alert note %}
-Arquivos maiores levarão alguns minutos para importar. Enquanto você espera, pode sair da página e trabalhar em outra coisa enquanto a importação está em andamento. Quando a importação for concluída, você verá o status mudar para **Concluído** na tabela.
+Arquivos maiores levarão alguns minutos para importar. Enquanto você espera, pode sair da página e trabalhar em outra coisa enquanto a importação está em andamento. Quando a importação for concluída, o status será alterado para **Complete** na tabela.
 {% endalert %}
 
 #### Atualizando uma lista de códigos de promoção
