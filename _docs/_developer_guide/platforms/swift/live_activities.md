@@ -63,7 +63,7 @@ sequenceDiagram
   Note over Server, APNS: Updating a Live Activity
   loop update a live activity
   Server ->> BrazeAPI: POST /messages/live_activity/update
-  Note right of BrazeAPI: Payload includes changes<br>to Content State (dynamic variables)
+  Note right of BrazeAPI: Payload includes changes<br>to ContentState (dynamic variables)
   BrazeAPI ->> APNS: Update sent to APNS
   APNS ->> App: APNS sends update to device
   end
