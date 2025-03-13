@@ -22,7 +22,7 @@ channel: email
 - 세그먼트에서 제외하기 전에 사용자에게 특별한 캠페인을 제공하나요?
 - 어떤 메시징 채널에 일몰 정책이 적용되나요? 
 
-예를 들어, [Apple의 MPP(메일 개인정보 보호)]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/)에 옵트인한 사용자가 있는 경우 이것이 이메일 캠페인과 전달률 지표에 어떤 영향을 미칠지 고려하고 일몰 정책을 가장 잘 구성하는 방법을 결정하세요.
+For example, if you have users who opt in to [Apple's Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/), consider how this may impact your email campaigns and deliverability metrics and determine how to best structure your sunset policy.
 
 일몰 정책을 캠페인에 통합하려면 이메일을 스팸으로 표시했거나 일정 기간 동안 메시지와 상호 작용하지 않은 사용자를 자동으로 제외하는 [세그먼트][19]를 만드세요.  
 
