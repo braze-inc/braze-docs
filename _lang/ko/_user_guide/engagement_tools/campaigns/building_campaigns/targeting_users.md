@@ -45,7 +45,7 @@ description: "이 참조 문서에서는 캠페인 생성의 타겟 오디언스
 
 ## 오디언스를 테스트 중
 
-오디언스에 세그먼트와 필터를 추가한 후에는 [사용자를 조회하여]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) 오디언스 기준과 일치하는지 확인하여 오디언스가 예상대로 설정되었는지 테스트할 수 있습니다.
+After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
