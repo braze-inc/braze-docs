@@ -34,6 +34,40 @@ Additional prerequisites include:
 While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
 {% endalert %}
 
+## Sequence Diagram
+```mermaid
+---
+config:
+  theme: mc
+---
+sequenceDiagram
+  participant Server as Client Server
+  participant Device as User Device
+  participant App as iOS App / Braze SDK
+  participant BrazeAPI as Braze API
+  participant APNS as Apple Push Notification Service
+  Note over Server, APNS: Option 1<br/>Locallyl Start Activities
+  App ->> App: User starts Live Activity locally
+  App ->> App: Generate Activity ID
+  App ->> App: Get push token from iOS
+  App ->> BrazeAPI: Send Activity ID & push token to Braze SDK
+  Note over Server, APNS: Option 2<br/>Remotely Start Activities
+  Server ->> BrazeAPI: POST /messages/live_activity/start<br>(external_id, activity_id, push_token, event_name)
+  Note right of BrazeAPI: Payload includes:<br>- push_token<br>- activity_id<br>- external_id<br>- event_name<br>- content_state (optional)
+  BrazeAPI ->> APNS: Live activity start request
+  loop update a live activity
+  Note over Server, APNS: Update a Live Activity
+  Server ->> BrazeAPI: POST /messages/live_activity/update
+  Note right of BrazeAPI: Payload includes:<br>- foo<br>- foo<br>- foo
+  BrazeAPI ->> APNS: Live activity update request
+  APNS ->> App: Live activity update payload
+  end
+  Note over Server, APNS: End a Live Activity
+  Server ->> BrazeAPI: POST /messages/live_activity/update
+  Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- `dismissal_date` is now in the past<br>- Setting `end_activity: true`
+  APNS ->> App: Live activity is dismissed
+```
+
 ## Implementing a Live Activity
 
 ### Step 1: Create an activity
