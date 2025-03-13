@@ -37,6 +37,7 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
   syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
@@ -121,6 +122,10 @@ case $1 in
         "$MRD"
         "$ULINKS" "$2"
         # rm "$REDIRECT_MATCHES"
+        ;;
+    fblinks)
+        # require_git_fetch
+        npx ts-node ./scripts/find_broken_links.ts
         ;;
     lredirects)
         require_git_fetch

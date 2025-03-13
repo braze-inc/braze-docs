@@ -11,6 +11,7 @@ jekyll-algolia-*
 .jekyll-cache
 .vscode
 .jekyll-metadata
+yarn.lock
 
 # Jetbrains IDEs
 .idea/
@@ -19,4 +20,3 @@ braze-docs.iml
 # Braze scripts
 scripts/temp/*
 node_modules
-broken-links.csv

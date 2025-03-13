@@ -1,3 +1,10 @@
+/**
+ * Scans Markdown files in the documentation folder for broken links.
+ * Uses 'assets/js/broken_redirect_list.js' to determine valid redirects.
+ *
+ * Usage: ./bdocs fblinks
+ */
+
 import { existsSync, link } from 'fs';
 import path, { resolve } from 'path';
 import fs from 'fs';
@@ -242,4 +249,4 @@ const deduplicated = Array.from(new Set(csv)).sort();
 
 console.log(`\n\nFound ${deduplicated.length - 1} broken links in ${totalFiles} files`);
 // console.log(redirectList)
-fs.writeFileSync('broken-links.csv', [headers, ...deduplicated].join('\n'));
+fs.writeFileSync('./scripts/temp/broken-links.csv', [headers, ...deduplicated].join('\n'));
