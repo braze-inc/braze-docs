@@ -1,8 +1,8 @@
 ---
+page_order: 2.2
 nav_title: 콘텐츠 카드
 article_title: 콘텐츠 카드 사용자 지정
 layout: dev_guide
-page_order: 5
 channel:
   - content cards
 platform:
@@ -18,18 +18,18 @@ description: "이 랜딩 페이지는 여러 플랫폼에 맞게 Braze SDK 콘�
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: 콘텐츠 카드 스타일 사용자 지정
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
+    link: /docs/developer_guide/content_cards/customizing_styles
     image: /assets/img/braze_icons/brush-02.svg
   - name: 콘텐츠 카드 동작 사용자 지정
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
+    link: /docs/developer_guide/content_cards/customizing_behavior/
     image: /assets/img/braze_icons/settings-01.svg
   - name: 기본 콘텐츠 카드 피드 사용자 지정
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
+    link: /docs/developer_guide/content_cards/customizing_feed/
     image: /assets/img/braze_icons/book-closed.svg
   - name: 로깅 분석 
-    link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
+    link: /docs/developer_guide/content_cards/logging_analytics
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: 커스텀 콘텐츠 카드 생성
-    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
+    link: /docs/developer_guide/content_cards/creating_custom_content_cards
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---
