@@ -54,9 +54,18 @@ O dashboard de insights de e-mail rastreia onde e quando seus clientes estão in
 
 ### Engajamento por dispositivo
 
-O relatório de **engajamento por dispositivo** fornece um detalhamento dos dispositivos que seus usuários estão usando para interagir com seu e-mail. Esses dados rastreiam o engajamento por e-mail em dispositivos móveis, desktops, tablets e outros tipos de dispositivos. 
+O relatório de **engajamento por dispositivo** fornece um detalhamento dos dispositivos que seus usuários estão usando para interagir com seu e-mail. Esses dados rastreiam o engajamento por e-mail em dispositivos móveis, desktops, tablets e outros tipos de dispositivos. Esses dados são baseados na string do agente do usuário passada pelos dispositivos dos usuários.
+
+{% alert note %}
+Se você usar o CloudFront como CDN, certifique-se de que o agente de usuário dos seus usuários seja transmitido ao ESP. Caso contrário, todo agente de usuário será "Amazon Cloudfront".
+{% endalert %}
 
 A categoria "Outros" inclui qualquer string de usuário que não possa ser identificada como desktop, celular ou tablet. Por exemplo, televisão, carro, console de videogame, OTT (over-the-top ou streaming) e similares. Isso também pode incluir valores nulos ou vazios.
+
+Para entender melhor o que está nessa categoria "Outros", você pode extrair os agentes de usuário usando uma dessas opções:
+
+1. O [Currents]({{site.baseurl}}/user_guide/data/braze_currents) enviará a string exata do agente do usuário que foi recuperada dos dispositivos dos seus usuários.
+2. Aproveite nosso [Criador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder) para usar SQL ou nosso [Criador de consultas com IA]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) para visualizar os agentes de usuário.
 
 ![Relatório Engajamento por dispositivo, que mostra o número de cliques para celular, desktop, tablet e outros. O maior número de cliques ocorre em dispositivos móveis.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
