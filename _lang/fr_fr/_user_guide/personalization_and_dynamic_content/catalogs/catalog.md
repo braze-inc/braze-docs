@@ -8,9 +8,9 @@ description: "Cet article de référence explique comment créer des catalogues 
 
 # Création d’un catalogue
 
-> La création d’un catalogue implique l’importation d’un fichier CSV de données non-utilisateurs dans Braze. Cela vous permet ensuite d'accéder à ces informations pour enrichir vos messages. Vous pouvez ajouter n’importe quel type de données à un catalogue. Ces données sont généralement des métadonnées de votre entreprise, telles que des informations sur les produits pour une entreprise de commerce électronique ou des informations sur les cours pour un prestataire de services éducatifs.
+> La création d’un catalogue implique l’importation d’un fichier CSV de données non-utilisateurs dans Braze. Cela vous permet ensuite d'accéder à ces informations pour enrichir vos messages. Vous pouvez ajouter n’importe quel type de données à un catalogue. Ces données sont généralement des métadonnées de votre entreprise, telles que des informations sur les produits pour une entreprise Ecommerce, ou des informations sur le cours pour un fournisseur de formation.<br><br>Cette page explique comment préparer et télécharger un fichier CSV pour créer un catalogue, comment gérer les catalogues, etc.
 
-Voici quelques exemples d'utilisation courante des catalogues :
+Les cas d'utilisation des catalogues sont les suivants
 
 - Produits
 - Services
@@ -19,7 +19,7 @@ Voici quelques exemples d'utilisation courante des catalogues :
 - Musique
 - Emballages
 
-Une fois ces informations importées, vous pouvez commencer à y accéder dans les messages de la même manière que pour accéder aux attributs personnalisés ou aux propriétés d’événements personnalisés via Liquid.
+Une fois ces informations importées, vous pouvez commencer à y accéder dans les messages d'une manière similaire à l'accès aux attributs personnalisés ou aux propriétés d'événement personnalisé via Liquid.
 
 ## Préparer votre fichier CSV
 
@@ -47,14 +47,14 @@ Nous vous recommandons également de formater tout le texte de vos fichiers CSV 
 Pour créer un catalogue, allez dans **Paramètres des données** > **Catalogues**.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **catalogues** sous **Données.**
+Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **catalogues** sous **Données.**
 {% endalert %}
 
 Sélectionnez **Créer un catalogue**, puis choisissez de **charger un fichier CSV** ou de **créer dans le navigateur**.
 
 ### Méthode 1 : Charger un fichier CSV
 
-1. Glissez-déposez votre fichier dans la zone de chargement, ou cliquez sur **Charger un fichier CSV** et choisissez votre fichier. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Glissez-déposez votre fichier dans la zone de téléchargement ou sélectionnez **Télécharger CSV** et choisissez votre fichier. <br>![][1]{: style="max-width:80%;"} <br><br>
 2. Sélectionnez l’un des types de données suivants pour chaque colonne : booléen, nombre, chaîne de caractères ou temps.
 <br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Nommez votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom du catalogue :
@@ -62,7 +62,7 @@ Sélectionnez **Créer un catalogue**, puis choisissez de **charger un fichier C
 - Maximum de 250 caractères
 - Peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement<br><br>
 4. (facultatif) Ajoutez une description pour le catalogue.
-5. Cliquez sur **Traiter le catalogue** pour créer le catalogue.
+5. Sélectionnez **Process Catalog** pour créer le catalogue.
 
 {% alert note %}
 Ce type de données ne peut pas être modifié après la configuration de votre catalogue. En outre, la valeur `NULL` n'est pas prise en charge dans le téléchargement CSV et sera traitée comme une chaîne de caractères.
@@ -82,9 +82,11 @@ Vous pouvez également utiliser des modèles dans le nom d'un catalogue. Par exe
 Votre fichier CSV peut être rejeté si vous dépassez votre [seuil](#tiers).
 {% endalert %}
 
-Vous pouvez également mettre à jour le fichier CSV après avoir choisi de créer un catalogue dans le navigateur. Cliquez sur **Mettre à jour le catalogue > Charger un fichier CSV**, puis choisissez de mettre à jour, d'ajouter ou de supprimer des produits dans votre catalogue.
+Vous pouvez également mettre à jour le fichier CSV après avoir choisi de créer un catalogue dans le navigateur. Sélectionnez **Mettre à jour le catalogue > Charger CSV**, puis choisissez de mettre à jour, d'ajouter ou de supprimer des éléments dans votre catalogue.
 
 ### Méthode 2 : Créer dans le navigateur
+
+Pour modifier ou créer des catalogues dans le navigateur, vous devez disposer de l'autorisation "Gérer le tableau de bord des catalogues".
 
 1. Saisissez un nom pour votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom de votre catalogue :
 - Doit être unique
@@ -143,7 +145,7 @@ Ce type de données ne peut pas être modifié après la configuration de votre 
 
 ![Quatre noms de colonnes de catalogue : "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Ensuite, nous appellerons ce catalogue « games_catalog » et cliquerons sur le bouton **Traiter le catalogue**. Braze vérifie alors que le catalogue ne contient pas d'erreurs avant de le créer.
+Ensuite, nous nommerons ce catalogue "games_catalog" et nous sélectionnerons le bouton **Traiter le catalogue.**  Braze vérifie alors que le catalogue ne contient pas d'erreurs avant de le créer.
 
 ![Un catalogue nommé "games_catalog".][11]{: style="max-width:85%;"}
 
@@ -163,15 +165,7 @@ Par exemple, si vous souhaitez modifier un produit de catalogue spécifique, vou
 
 ## Niveaux du catalogue {#tiers}
 
-Le tableau suivant décrit les différences entre la version gratuite et la version pro des catalogues :
-
-| Secteur                                  | Version gratuite                                                                                                                                            | Catalogues Pro                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Taille du fichier CSV                         | Jusqu'à 100 Mo pour tous les fichiers CSV combinés dans votre entreprise                                                                                        | Jusqu'à 2 Go pour un seul fichier CSV                                                                                                                   |
-| Limite de caractères pour la valeur de l’article       | Jusqu’à 5 000 caractères en une seule valeur. Par exemple, si vous aviez un champ `description`, le nombre maximum de caractères dans le champ est de 5 000. | Jusqu’à 5 000 caractères en une seule valeur. Par exemple, si vous aviez un champ `description`, le nombre maximum de caractères dans le champ est de 5 000. |
-| Limite de caractères pour le nom de la colonne d’article | Jusqu’à 250 caractères                                                                                                                                    | Jusqu’à 250 caractères                                                                                                                                    |
-| Sélections                            | Jusqu'à 30 sélections par catalogue                                                                                                                         | Jusqu'à 30 sélections par catalogue                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+La version gratuite de Catalogues prend en charge des tailles de fichiers CSV allant jusqu'à 100 Mo pour tous les fichiers CSV combinés de votre entreprise, tandis que la version Pro de Catalogues prend en charge des tailles de fichiers CSV allant jusqu'à 2 Go pour un seul fichier CSV.
 
 ### Stockage du catalogue
 
