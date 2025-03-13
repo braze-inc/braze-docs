@@ -166,10 +166,6 @@ const getLinks = (filePath: string): {links: LinkData[], aliases: string[], perm
   return {links: results, aliases, permalinks}
 };
 
-
-// recursively get all files in _docs and call getLinks on each file
-// if the file is a directory, recursively call getLinks on each file in the directory
-// quit early after analyzing 10 files
 let totalFiles = 0;
 const links: LinkData[] = [];
 const aliases: string[] = [];
@@ -204,20 +200,7 @@ const csv: string[] = [];
 // Process each result
 for (const item of links) {
   const fullLink = `/docs${item.link}`;
-  // Skip if result is undefined/null
-  // if (!result) {
-  //   continue;
-  // }
-  // if (!result.links) {
-  //   console.log(`No links found`);
-  //   console.log(result);
-  //   continue;
-  // }
-
-  // For each link in the result
-  // Add to CSV if link exists is false
   let exists = fs.existsSync(path.join(item.markdownFile));
-  console.log(item.markdownFile, exists);
   if (!exists) {
     // Check if any redirect matches the link pattern
     const redirectRegex = new RegExp(`(/docs)?${item.link.replace(/\/$/, '')}/?`);
@@ -240,7 +223,6 @@ for (const item of links) {
     }
   }
   if (!exists) {
-    // console.log(`Link ${fullLink} does not exist at ${item.markdownFile}`, `https://www.braze.com${fullLink}`);
     csv.push(`${item.sourceFile},${fullLink},${item.markdownFile}`);
   }
 }
@@ -248,5 +230,4 @@ for (const item of links) {
 const deduplicated = Array.from(new Set(csv)).sort();
 
 console.log(`\n\nFound ${deduplicated.length - 1} broken links in ${totalFiles} files`);
-// console.log(redirectList)
 fs.writeFileSync('./scripts/temp/broken-links.csv', [headers, ...deduplicated].join('\n'));
