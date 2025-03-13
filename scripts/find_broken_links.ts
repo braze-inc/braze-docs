@@ -228,6 +228,6 @@ for (const item of links) {
 
 const deduplicated = Array.from(new Set(csv)).sort();
 
-fs.writeFileSync(path.join(PROJECT_ROOT, './scripts/temp/broken-links.csv'), [headers, ...deduplicated].join('\n'));
+fs.writeFileSync(path.join(PROJECT_ROOT, '/scripts/temp/broken-links.csv'), [headers, ...deduplicated].join('\n'));
 
-console.log(`${deduplicated.length - 1} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, './scripts/temp/broken-links.csv')}`);
+console.log(`${deduplicated.length - 1} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, '/scripts/temp/broken-links.csv')}`);
