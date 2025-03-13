@@ -2099,9 +2099,11 @@ validurls['/docs/developer_guide/platforms/fireos/analytics/uninstall_tracking/'
 validurls['/docs/developer_guide/platforms/fireos/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
 
 // flutter
-validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/flutter/analytics/'] = '/docs/developer_guide/analytics/';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#session-tracking'] = '/docs/developer_guide/analytics/tracking_sessions/';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/tracking_events/?tab=flutter';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=flutter';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
 
 // react_native
 validurls['/docs/developer_guide/platforms/react_native/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
