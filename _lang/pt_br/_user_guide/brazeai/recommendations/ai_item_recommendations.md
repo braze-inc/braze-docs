@@ -36,7 +36,7 @@ Você também pode optar por criar uma recomendação diretamente de um catálog
 
 Dê um nome e uma descrição opcional à sua recomendação.
 
-![][1]
+!["Detalhes da recomendação" etapa com os campos de nome e descrição.][1]
 
 ### Etapa 2: Defina sua recomendação {#recommendation-type}
 
@@ -55,7 +55,7 @@ Ao usar **Mais recentes** ou **IA personalizada**, os usuários com dados insufi
 
 Para evitar sugerir itens que um usuário já tenha comprado ou com os quais já tenha interagido, selecione **Não recomendar itens com os quais os usuários tenham interagido anteriormente**. Essa opção só está disponível quando o **Tipo** de recomendação está definido como **IA Personalizado**.
 
-![][2-3]
+!["Defina sua recomendação" etapa com "Mais popular" como o tipo e a opção "Não recomendar itens com os quais os usuários interagiram anteriormente" selecionada.][2-3]
 
 Essa configuração impede que as mensagens reutilizem os itens que um usuário já comprou ou com os quais interagiu, desde que a recomendação tenha sido atualizada recentemente. Os itens comprados ou com os quais houve interação entre as atualizações de recomendação ainda podem aparecer. Na versão gratuita das recomendações de itens, as atualizações ocorrem semanalmente. Para a versão profissional das recomendações de itens de IA, as atualizações ocorrem a cada 24 horas.
 
@@ -69,7 +69,7 @@ Se ainda não estiver preenchido, selecione o [catálogo][catálogo] do qual ess
 
 Se quiser ter mais controle sobre sua recomendação, escolha uma [seleção]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para aplicar filtros personalizados. As seleções filtram as recomendações por colunas específicas em seu catálogo, como marca, tamanho ou local. As seleções que contêm Liquid não podem ser usadas em sua recomendação.
 
-![][2-2]
+![Um exemplo da seleção "em estoque" selecionada para a recomendação.][2-2]
 
 {% alert tip %}
 Caso não encontre sua seleção, lembre-se de que é preciso criá-la primeiro.
@@ -87,7 +87,7 @@ Você pode otimizar para:
 
 Se você escolher **Evento personalizado**, selecione seu evento na lista.
 
-![][3]
+![O evento personalizado "Compra Concluída" selecionado como a forma como os eventos estão sendo rastreados atualmente.][3]
 
 ### Etapa 4: Selecione o nome da propriedade correspondente {#property-name}
 
@@ -97,7 +97,7 @@ Selecione esse campo para o **Nome da propriedade**.
 
 O campo **Property Name (Nome da propriedade** ) será preenchido previamente com uma lista de campos enviados pelo SDK à Braze. Se forem fornecidos dados suficientes, essas propriedades também serão classificadas em ordem de probabilidade de serem a propriedade correta. Selecione a opção que corresponde ao campo `id` do catálogo.
 
-![][4]
+![O nome da propriedade "purchase_item" selecionado que corresponde aos IDs dos itens no catálogo.][4]
 
 #### Requisitos {#requirements}
 
@@ -302,7 +302,7 @@ Você pode encontrar a recomendação na página **Previsões**, onde poderá ed
 
 Na parte superior da página, você pode encontrar estatísticas sobre sua recomendação, como precisão e cobertura.
 
-![][5]
+![Métricas de público de recomendação mostrando precisão (21,1%), cobertura (83,0%) e tipos de recomendação divididos entre itens personalizados e mais populares.][5]
 
 Essas métricas são definidas na tabela a seguir. 
 
@@ -318,15 +318,15 @@ A próxima seção mostra um detalhamento dos itens no catálogo, dividido em du
 - **Itens personalizados** ou **Itens mais recentes:** Essa coluna lista cada item do catálogo em ordem decrescente dos mais frequentemente recomendados aos usuários. Essa coluna também mostra quantos usuários foram atribuídos a cada item pelo modelo.
 - **Itens mais populares:** Essa coluna lista cada item do catálogo em ordem decrescente de popularidade. A popularidade aqui se refere aos itens do catálogo com os quais os usuários interagem com mais frequência em todo o espaço de trabalho. O mais popular é usado como fallback quando o personalizado ou o mais recente não pode ser calculado para um usuário individual.
 
-![][6]
+![Tabelas lado a lado listando itens atribuídos a usuários, separados por recomendações personalizadas e recomendações mais populares.][6]
 
 A **visão geral da recomendação** mostra um resumo da configuração da recomendação escolhida, inclusive quando a recomendação foi atualizada pela última vez.
 
-![][7]{: style="max-width:45%" }
+![Tabela de visão geral da recomendação exibindo tipo, catálogo, tipo de evento, nome do evento personalizado, nome da propriedade e data da última atualização.][7]{: style="max-width:45%" }
 
 ## Uso de recomendações no envio de mensagens
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+![Modal "Adicionar Personalização" com recomendação de item como o tipo de personalização.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Depois que sua recomendação terminar o treinamento, você poderá personalizar suas mensagens com o Liquid para inserir os produtos mais populares nesse catálogo. O Liquid pode ser gerado para você pela janela de personalização encontrada nos criadores de mensagens:
 
@@ -361,6 +361,10 @@ Isso acontece em algumas condições específicas:
 - O modelo encontra menos de 30 itens que correspondem aos seus critérios.
 - Os itens relevantes não estão mais disponíveis ou em estoque.
 - Os itens não atendem aos critérios de seleção atuais, talvez devido a uma alteração no estoque ou nas preferências do usuário.
+
+### As recomendações existentes treinam semanalmente após a atualização para Item Recommendations Pro?
+
+Não, as recomendações existentes não serão atualizadas automaticamente para treinar semanalmente ou prever diariamente após a atualização. Você pode verificar os próximos horários de treinamento e previsão na seção **Recomendação** selecionando uma recomendação. Para horários atualizados, sugerimos recriar suas recomendações.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
