@@ -2061,9 +2061,15 @@ validurls['/docs/developer_guide/platforms/android/analytics/uninstall_tracking/
 validurls['/docs/developer_guide/platforms/android/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
 
 // swift
-validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/swift/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/swift_idfv/'] = '/docs/developer_guide/platforms/swift/swift_idfv';
 
 // web
 validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
