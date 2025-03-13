@@ -31,6 +31,6 @@ description: "Learn how to set user attributes through the Braze SDK."
 {% endsdktab %}
 
 {% sdktab other wrappers %}
-For Cordova, Flutter, React Native, Roku, and Xamarin, set user attributes using the relevant Android and Swift methods.
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endsdktab %}
 {% endsdktabs %}

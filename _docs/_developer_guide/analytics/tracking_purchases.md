@@ -10,6 +10,10 @@ description: "Learn how to track purchases through the Braze SDK."
 
 > Learn how to track in-app purchases through the Braze SDK, so you can track your revenue over time and across revenue sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/) using custom events, custom attributes, and purchase events.
 
+{% alert note %}
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
+{% endalert %}
+
 ## Tracking purchases and revenue
 
 To track purchases and revenue, call `logPurchase()` after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.

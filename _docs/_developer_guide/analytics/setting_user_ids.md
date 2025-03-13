@@ -10,6 +10,10 @@ description: "Learn how to set user IDs through the Braze SDK."
 
 > Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
 
+{% alert note %}
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
+{% endalert %}
+
 ## Setting a user ID
 
 To set a user ID, call the `changeUser()` method after the user initially log ins. IDs should be unique and follow our [naming best practices](#naming-best-practices).
@@ -87,8 +91,6 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 You can use a [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) to assign third-party IDs to a Braze user, so you can more-easily manage external data.
 
 They consists of two parts: a name and a label. The name refers to the identifier itself, while the label refers to the type of identifier it belongs to. For example, if you have a user in a third-party customer support platform with the external ID `987654`, you can assign them an alias in Braze with the name `987654` and the label `support_id`, so you can track them across platforms.
-
-To set a user alias, use one of the following methods:
 
 {% tabs local %}
 {% tab android %}

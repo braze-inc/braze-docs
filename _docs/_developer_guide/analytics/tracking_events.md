@@ -10,9 +10,13 @@ description: "Learn how to track custom events through the Braze SDK."
 
 > Learn how to track custom events through the Braze SDK.
 
+{% alert note %}
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
+{% endalert %}
+
 ## Tracking a custom event
 
-To track a custom event, use the event-logging method for your specific SDK. If you're using a wrapper SDK that isn't listed, use the corresponding Android or Swift method instead.
+To track a custom event, use the following event-logging method.
 
 {% tabs %}
 {% tab android %}
@@ -106,7 +110,7 @@ UBraze->LogCustomEvent(TEXT("YOUR_EVENT_NAME"));
 
 When you track a custom event, you have the option to add metadata about that custom events by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects.
 
-To add metadata properties, use the event-logging method for your specific SDK. If you're using a wrapper SDK that isn't listed, use the corresponding Android or Swift method instead.
+To add metadata properties, use the following event-logging method.
 
 {% tabs %}
 {% tab android %}
