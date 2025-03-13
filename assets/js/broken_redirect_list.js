@@ -2119,8 +2119,6 @@ validurls['/docs/developer_guide/platforms/unity/analytics/setting_custom_attrib
 validurls['/docs/developer_guide/platforms/unity/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=unity';
 
 // unreal_engine
-validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unreal_engine/analytics/'] = '/docs/developer_guide/analytics/';
 
 // validurls['OLD'] = 'NEW';
