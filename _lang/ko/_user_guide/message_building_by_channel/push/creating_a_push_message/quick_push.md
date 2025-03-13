@@ -1,38 +1,38 @@
 ---
-nav_title: 빠른 푸시 캠페인
-article_title: 빠른 푸시 캠페인
+nav_title: Quick Push Messages
+article_title: Quick Push Messages
 alias: "/quick_push/"
-description: "이 문서에서는 빠른 푸시 편집 환경을 사용하여 푸시 캠페인을 만들 때 알아야 할 사항에 대해 설명합니다."
+description: "This article describes things to know when creating a push campaign or Cavnas using the quick push editing experience."
 ---
 
-# 빠른 푸시 캠페인
+# Quick push messages
 
-Braze에서 푸시 캠페인을 만들 때 여러 플랫폼과 디바이스를 선택하여 퀵 푸시라는 단일 편집 환경에서 모든 플랫폼에 하나의 메시지를 작성할 수 있습니다.
-
-{% alert important %}
-이 기능은 캠페인에만 사용할 수 있습니다.
-{% endalert %}
+When creating a push campaign or Canvas in Braze, you can select multiple platforms and devices to craft one message for all platforms in a single editing experience called quick push.
 
 ## 사용 사례
 
 이 편집 환경은 다음과 같은 사용 사례에 가장 적합합니다:
 
-- 여러 기기 유형(예: iOS 및 Android 모두)에 전송해야 하는 모바일 푸시 캠페인입니다.
+- Mobile push campaigns and Canvas Message steps that need to be sent to multiple device types (such as both iOS and Android).
 - 여러 플랫폼에 걸쳐 콘텐츠가 동일한 경우(예: 속보 또는 실시간 게임 업데이트) 여러 플랫폼을 빠르고 정확하게 타겟팅해야 하는 시간에 민감한 푸시 알림입니다.
 
-## 빠른 푸시 캠페인 만들기
+## Creating a quick push campaign or Canvas
 
 여러 플랫폼과 기기를 타겟팅하는 캠페인을 만들려면 다음과 같이 하세요.
 
-1. **캠페인**으로 이동하여 **캠페인 만들기**를 클릭합니다.
-2. **푸시 알림**을 선택합니다.
+1. Create a campaign or add a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) to a Canvas.  
+2. Select **Push notification**.
 3. 원하는 플랫폼(모바일, 웹, Kindle) 및 모바일 디바이스(iOS, Android)를 선택합니다. 여러 기기를 선택하면 캠페인에 다변량 테스트를 사용할 수 없습니다.
 
+### Selecting platforms for a campaign
 ![푸시 캠페인에 대해 모바일, 웹, 킨들 등 여러 플랫폼과 iOS, Android 등 여러 기기를 선택할 수 있는 옵션입니다.][1]
 
+### Selecting platforms for a Canvas step
+![Options to select multiple platforms for a push Message step, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.][8]
+
 {:start="4"}
-4\. **다음**을 클릭합니다. **다음을** 클릭한 후에는 선택한 플랫폼이나 디바이스를 변경할 수 없습니다.
-5\. 푸시 캠페인 설정을 계속 진행합니다.
+4\. Select **Confirm**. After selecting **Confirm**, you will be unable to change your selected platforms or devices.
+5\. Continue setting up your campaign or Canvas.
 
 작성기가 평소와 약간 다르게 보일 것입니다. 무엇이 달라졌는지 계속 읽어보세요.
 
@@ -73,6 +73,7 @@ iOS 및 Android와 같은 모바일 플랫폼에 대해 여러 디바이스를 �
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
+[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
