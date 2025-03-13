@@ -1,24 +1,4 @@
----
-nav_title: News Feed
-article_title: News Feed for the Braze Web SDK
-description: "Learn about News Feed for the Braze Web SDK."
-platform: Web
-page_order: 4
-page_type: reference
-channel: news feed
----
-
-# News Feed
-
-> Learn about News Feed for the Braze Web SDK, including card types, card properties, and optional configurations.
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-## What's News Feed?
-
-News Feed is a fully customizable in-app content feed for your users. Our targeting and segmentation allow you to create a stream of content that is individually catered to the interests of each user. Depending on their position in the user life cycle and the nature of your app, this could be an onboarding content server, an advertisement center, an achievement center, or a generic news center.
-
-<img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="An example News Feed displaying several notifications such as follow request, update notices, ads, and more." height="600" />
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## Card types
 

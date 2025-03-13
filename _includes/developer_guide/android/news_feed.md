@@ -1,12 +1,4 @@
-# News Feed
-
-> Learn about News Feed for the Braze Android SDK, including card types, card properties, and optional configurations.
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-## Prerequisites
-
-Before you can use News Feed, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/). However, no additional setup is required.
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Google fragments
 
@@ -92,7 +84,3 @@ The Android UI fragments do not automatically track session analytics. To ensure
 ### Linking from in-app messages
 
 Linking to the News Feed from an in-app message must be enabled by registering the `BrazeFeedActivity` within your `AndroidManifest.xml`.
-
-## Next steps
-
-If you're ready to create your own News Feed, see [Creating a custom News Feed]({{site.baseurl}}/developer_guide/platforms/android/news_feed/creating_a_custom_feed/).

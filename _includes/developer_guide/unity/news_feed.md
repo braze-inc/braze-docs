@@ -1,22 +1,3 @@
----
-nav_title: News Feed
-article_title: News Feed for Unity
-channel: news feed
-platform: 
-  - Unity
-  - iOS
-  - Android
-page_order: 5
-description: "This reference article covers News Feed integration for the Unity platform, such as parsing cards, receiving News Feed data, and analytics."
-
----
-
-# News Feed
-
-> This article covers how to set up a News Feed for the Unity platform.
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
 {% multi_lang_include developer_guide/prerequisites/unity.md %}
 
 ## Receiving News Feed data in Unity
