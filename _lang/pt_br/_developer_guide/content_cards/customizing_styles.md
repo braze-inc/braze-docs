@@ -14,7 +14,7 @@ platform:
 
 # Personalizando estilos de cartão de conteúdo
 
-> Os Cartões de Conteúdo da Braze vêm com uma aparência padrão. Este artigo cobre opções de estilo para seus Cartões de Conteúdo para ajudá-lo a corresponder à identidade da sua marca. Para uma visão geral básica dos tipos de opções de personalização que você tem com os Cartões de Conteúdo, veja [Visão geral da personalização]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Os Cartões de Conteúdo da Braze vêm com uma aparência padrão. Este artigo cobre opções de estilo para seus Cartões de Conteúdo para ajudá-lo a corresponder à identidade da sua marca. Para uma visão geral básica dos tipos de opções de personalização que você tem com os cartões de Conteúdo, consulte [Visão geral da personalização]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Personalizando a formatação
 
