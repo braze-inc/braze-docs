@@ -8,6 +8,7 @@ platform:
   - Android
   - FireOS
   - Swift
+  - Web
 ---
 
 # Storage
