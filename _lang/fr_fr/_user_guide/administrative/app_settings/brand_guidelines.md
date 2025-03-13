@@ -1,5 +1,9 @@
 ---
-nav\_title: Lignes directrices de la marque article\_title: Lignes directrices de la marque page\_order: 1 page\_type: reference description: "Cet article de référence décrit comment créer, gérer et utiliser les buidelines de marque qui peuvent être appliquées à vos messages grâce à l'assistant de rédaction de l'intelligence artificielle."
+nav_title: Brand Guidelines
+article_title: Brand Guidelines
+page_order: 1
+page_type: reference
+description: "Cet article de référence décrit comment créer, gérer et utiliser les buidelines de marque qui peuvent être appliquées à vos messages grâce à l'assistant de rédaction de l'intelligence artificielle."
 ---
 
 # Lignes directrices de la marque
