@@ -38,8 +38,8 @@ Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous tro
 {:start=“2"}
 2\. Sélectionnez **E-mail** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
 3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire.
-   * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
+4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
+   * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Pour plus d'informations sur ce sujet, consultez [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -61,7 +61,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Braze propose deux expériences d'édition lors de la création d'une campagne par e-mail : notre [éditeur par glisser-déposer]({{site.baseurl}}/dnd/) et notre éditeur HTML standard. Choisissez la tuile appropriée pour l'expérience de modification que vous préférez. 
 
-![Choisir entre un éditeur par glisser-déposer ou un éditeur HTML pour votre expérience d'édition d'e-mails.][3]{: style="max-width:75%" }
+![Choisir entre l'éditeur par glisser-déposer, l'éditeur HTML ou les modèles pour votre expérience d'édition d'e-mails.][3]{: style="max-width:75%" }
 
 Ensuite, vous pouvez soit sélectionner un [modèle d'email][10], [charger un modèle][18] à partir d'un fichier (éditeur HTML uniquement) ou utiliser un modèle vide. 
 
@@ -71,7 +71,11 @@ Nous vous recommandons de sélectionner une expérience d’édition par campagn
 
 ## Étape 3 : Composez votre e-mail
 
-Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pourrez passer directement à l'éditeur en plein écran pour rédiger votre e-mail, modifier vos informations d'envoi et voir les avertissements concernant la délivrabilité ou la conformité légale. 
+Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pourrez passer directement à l'éditeur en plein écran pour rédiger votre e-mail, modifier vos informations d'envoi et voir les avertissements concernant la délivrabilité ou la conformité légale. Vous pouvez basculer entre les onglets HTML, classique, texte brut et [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) pendant que vous rédigez. 
+
+![Le bouton "Régénérer à partir de HTML".][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+La version en clair de votre e-mail sera toujours mise à jour automatiquement à partir de la version HTML jusqu'à ce qu'une modification de la version en clair soit détectée. Lorsqu'une modification est détectée, Braze ne met plus à jour le texte en clair, car nous supposons que vous avez apporté des modifications intentionnelles qui ne devraient pas être écrasées. Vous pouvez revenir à la synchronisation automatique dans l'onglet **Texte en clair** en sélectionnant l'icône **Régénérer à partir du HTML**, qui n'apparaît que si le texte en clair n'est pas synchronisé.
 
 {% alert tip %}
 Pour ajouter une dynamique dans un e-mail avec un aperçu précis, utilisez des GIF au lieu d'éléments nécessitant JavaScript, car la plupart des boîtes de réception ne prennent pas en charge JavaScript.
@@ -84,10 +88,12 @@ Braze supprimera automatiquement les gestionnaires d’événements HTML référ
 {% endalert %}
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
+Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
 ![Bouton Lancer l’IA de rédaction, situé dans l’onglet Corps du composeur d’e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des langues telles que l'arabe et l'hébreu ? Reportez-vous à la section [Créer des messages de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) pour connaître les meilleures pratiques.
 
 ### Étape 3a : Ajoutez vos informations d'envoi
 
@@ -271,6 +277,7 @@ La dernière section vous donnera un résumé de la campagne que vous venez de c
 
 Pour savoir comment vous pouvez accéder aux résultats de vos campagnes d'e-mail, consultez la rubrique [Rapports d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
