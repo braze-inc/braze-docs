@@ -7,11 +7,9 @@ description: "Este artigo de referência aborda como criar e usar seleções com
 
 # Seleções
 
-> Saiba como criar e usar seleções em seus catálogos.
+> As seleções são grupos de dados que podem ser usados para personalizar uma mensagem para cada usuário em sua campanha. Ao usar uma seleção, você está basicamente configurando filtros personalizados com base em colunas específicas do seu catálogo. Isso pode incluir filtros por marca, tamanho, local, data de adição e muito mais. Isso lhe dá controle sobre o que está sendo mostrado aos usuários, permitindo que você defina critérios que os itens devem atender primeiro.<br><br>Esta página aborda como criar e usar seleções com seus catálogos.
 
-As seleções são grupos de dados que podem ser usados para personalizar uma mensagem para cada usuário em sua campanha. Ao usar uma seleção, você está basicamente configurando filtros personalizados com base em colunas específicas do seu catálogo. Isso pode incluir filtros por marca, tamanho, local, data de adição e muito mais. Isso lhe dá controle sobre o que está sendo mostrado aos usuários, permitindo que você defina critérios que os itens devem atender primeiro.
-
-Depois de criar um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), você pode fazer referência adicional aos dados do catálogo incorporando seleções em suas campanhas ou recomendações do Braze.
+Depois de criar um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), você pode fazer referência adicional aos dados do catálogo incorporando seleções em suas campanhas ou recomendações do Braze.
 
 ![A seção Seleções em um catálogo de exemplo.][1]
 
@@ -19,7 +17,7 @@ Depois de criar um [catálogo]({{site.baseurl}}/user_guide/personalization_and_d
 
 - Você pode criar até 30 seleções por catálogo.
 - Você pode adicionar até quatro filtros por seleção.
-- As seleções são ótimas para refinar as recomendações dos dados do catálogo da Braze. Se estiver procurando inspiração, consulte [as recomendações do item Sobre]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/) para ver exemplos de casos de uso.
+- As seleções são ótimas para refinar as recomendações dos dados do catálogo da Braze. Se estiver procurando inspiração, consulte [as recomendações do item Sobre]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) para ver exemplos de casos de uso.
 
 ## Criação de uma seleção
 
@@ -48,13 +46,13 @@ O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos 
 
 Depois de criar sua seleção, personalize suas mensagens com o Liquid para inserir os itens filtrados desse catálogo. Você pode fazer com que o Braze gere o Liquid para você na janela de personalização encontrada nos criadores de mensagens:
 
-1. Em qualquer criador de mensagens que suporte a personalização, clique em <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Adicionar personalização"></i> para abrir a janela de personalização.
+1. Em todos os criadores de mensagens que suportam personalização, selecione <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Adicionar personalização"></i> para abrir a janela de personalização.
 2. Em **Personalization Type (Tipo de personalização**), selecione **Catalog Items (Itens de catálogo**).
 3. Selecione o nome do catálogo.
 4. Para **Método de seleção de item**, selecione **Usar uma seleção**.
 4. Selecione sua seleção na lista.
 5. Em **Informações a serem exibidas**, selecione quais campos do catálogo devem ser incluídos para cada item.
-6. Clique no ícone **Copiar** e cole o Liquid onde quer que ele seja necessário em sua mensagem.
+6. Selecione o ícone **Copiar** e cole o Liquid onde quer que ele seja necessário em sua mensagem.
 
 ![O modal Add Personalization com as seguintes seleções: "Catalog Items" (Itens do catálogo) para "Personalization Type" (Tipo de personalização), "Games" (Jogos) para "Catalog Name" (Nome do catálogo), "Selections" (Seleções) para "Selection Type" (Tipo de seleção), "game_selection" (Seleção_do_jogo) para "Selection" (Seleção) e "title" (Título) e "description_en" (Descrição) para "Information to Display" (Informações a serem exibidas).][6]{: style="max-width:70%;"}
 
