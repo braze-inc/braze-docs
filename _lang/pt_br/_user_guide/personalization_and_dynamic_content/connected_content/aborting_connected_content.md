@@ -8,7 +8,7 @@ description: "Este artigo de referência cobre algumas das melhores práticas de
 
 # Abortando conteúdo conectado {#aborting-connected-content}
 
-> Usando a modelagem Liquid, você tem a opção de abortar mensagens com lógica condicional. 
+> Ao usar o modelo Liquid, você tem a opção de abortar mensagens com lógica condicional. Esta página aborda as práticas recomendadas para fazer isso.
 
 No exemplo a seguir, os condicionais `connected.recommendations.size < 5` e `connected.foo.bar == nil` especificam situações que causariam a interrupção da mensagem.
 
@@ -21,6 +21,8 @@ No exemplo a seguir, os condicionais `connected.recommendations.size < 5` e `con
 ```
 {% endraw %}
 
+## Especificar um motivo para abortar
+
 Você também pode especificar um motivo de aborto, que será salvo no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Este motivo de aborto deve ser uma string e não pode conter Liquid.
 
 {% raw %}
@@ -28,5 +30,5 @@ Você também pode especificar um motivo de aborto, que será salvo no [Registro
 {% endraw %}
 
 {% alert important %}
-Braze não conta mensagens abortadas para a contagem de envios na sua conta Braze ou em Currents.
+O Braze não conta as mensagens abortadas para a contagem de envios em sua conta Braze ou no Currents.
 {% endalert %}
