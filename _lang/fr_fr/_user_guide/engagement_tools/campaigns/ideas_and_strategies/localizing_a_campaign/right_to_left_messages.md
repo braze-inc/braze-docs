@@ -1,5 +1,9 @@
 ---
-nav\_title : Messages de droite à gauche article\_title : Création de messages de droite à gauche page\_order : 1 page\_type : référence description : "Cette page couvre les meilleures pratiques pour rédiger des messages dans Braze qui se lisent de droite à gauche."
+nav_title : Messages de droite à gauche
+article_title : Création de messages de droite à gauche
+page_order : 1
+page_type: référence
+description: "Cette page couvre les meilleures pratiques pour rédiger des messages dans Braze qui se lisent de droite à gauche."
 ---
 
 # Création d'envois de messages de droite à gauche
@@ -23,7 +27,7 @@ La manière la plus courante d'élaborer des messages de droite à gauche dans B
 1. Créez un message de gauche à droite dans un éditeur Braze.
 2. Copiez le texte du message depuis Braze, puis utilisez un outil de communication individualisée pour le localiser et en faire un message de droite à gauche.
 3. Confirmez que l'alignement est correctement formaté en utilisant un traitement de texte (tel que Word).
-- Vous pouvez sauter cette étape si vous créez un message e-mail par glisser-déposer ou en HTML. L'éditeur par glisser-déposer vous permet de changer la direction du texte en sélectionnant un bouton, et l'éditeur HTML vous permet de personnaliser l'alignement de droite à gauche. <br><br>\![Menu de l'éditeur par glisser-déposer avec bouton pour basculer l'alignement du texte de droite à gauche et de gauche à droite.]\[1]{ : style="max-width:50% ;"}
+- Vous pouvez sauter cette étape si vous créez un message e-mail par glisser-déposer ou en HTML. L'éditeur par glisser-déposer vous permet de changer la direction du texte en sélectionnant un bouton, et l'éditeur HTML vous permet de personnaliser l'alignement de droite à gauche. <br><br>![Menu de l'éditeur par glisser-déposer avec bouton pour basculer l'alignement du texte de droite à gauche et de gauche à droite.][1]{ : style="max-width:50% ;"}
 
 { : start="4"} 4. Collez le texte formaté dans Braze.
 
@@ -31,7 +35,7 @@ La manière la plus courante d'élaborer des messages de droite à gauche dans B
 
 La ponctuation permet souvent de savoir si les paramètres de droite à gauche sont corrects. Dans l'image de gauche, le point d'exclamation et l'emoji se trouvent à droite du texte, ce qui correspond au début de la phrase dans les langues allant de droite à gauche. Dans l'image de droite, formatée de droite à gauche, le message affiche correctement les points d'exclamation et l'emoji à la fin des phrases.
 
-Comparaison de deux messages en arabe pour montrer comment apparaissent les messages de droite à gauche et de gauche à droite]\[2].
+![Comparaison de deux messages en arabe pour montrer comment apparaissent les messages de droite à gauche et de gauche à droite][2].
 
 ## Considérations particulières pour les envois de messages de droite à gauche
  
@@ -55,4 +59,5 @@ Les caractères spéciaux (tels que la ponctuation, les symboles mathématiques 
 
 Lorsque vous rédigez des messages en arabe, utilisez des tailles de caractères nettement plus élevées pour obtenir la même lisibilité qu'avec d'autres langues. Nous vous conseillons d'utiliser une taille de police supérieure d'environ 20 % à votre taille habituelle pour les langues utilisant l'alphabet latin ou romain. En effet, les polices de caractères arabes sont réduites pour tenir compte de l'espace vertical occupé par les diacritiques (marques d'accent).
 
-\[1] : {% image\_buster /assets/img/rtl\_button.png %} \[2] : {% image\_buster /assets/img/rtl\_comparison.png %}
+[1]: {% image_buster /assets/img/rtl_button.png %}
+[2]: {% image_buster /assets/img/rtl_comparison.png %}
