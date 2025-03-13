@@ -15,7 +15,7 @@ Neste artigo, vamos guiá-lo por um caso de uso para o Modelo de **Adoção de F
 
 ## Pré-requisitos
 
-Para usar com sucesso este modelo, você precisará de um [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) que faça referência a quando os usuários usaram o recurso.
+Para usar com sucesso este modelo, você precisará de um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) que faça referência a quando os usuários usaram o recurso.
 
 ## Adaptar o modelo às suas necessidades
 
