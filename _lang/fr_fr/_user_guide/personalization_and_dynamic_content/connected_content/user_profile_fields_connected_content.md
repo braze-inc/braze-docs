@@ -8,9 +8,9 @@ description: "Le présent article explique comment extraire les profils d’util
 
 # Extraire des données de profil utilisateur
 
-> Si une réponse de Contenu connecté contient des champs de profil utilisateur (dans une balise de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message par le biais de Liquid, avant l’appel Contenu connecté afin d’interpréter correctement le retour Liquid. 
+> Cette page explique comment intégrer les profils utilisateurs dans vos appels au contenu connecté et présente les meilleures pratiques en matière de création de modèles liquides. 
 
-De même, l’indicateur `:rerender` doit être inclus dans la requête. Prenez en compte le fait que l’indicateur `:rerender` a une profondeur d’un seul niveau, ce qui signifie qu’il ne s’applique pas aux balises de contenu connecté imbriquées.
+Si une réponse de contenu connecté contient des champs de profil utilisateur (dans une étiquette de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message avec Liquid, avant l'appel de contenu connecté afin de rendre le passback Liquid correctement. De même, l’indicateur `:rerender` doit être inclus dans la requête. Prenez en compte le fait que l’indicateur `:rerender` a une profondeur d’un seul niveau, ce qui signifie qu’il ne s’applique pas aux balises de contenu connecté imbriquées.
 
 Pour la personnalisation, Braze extrait les champs de profil utilisateur avant de transmettre ce champ au Liquid. Donc si la réponse du contenu connecté comporte des champs de profil utilisateur, il doit être défini au préalable. 
 
@@ -30,5 +30,21 @@ Pour pouvoir afficher le renvoi Liquid correctement, vous devez insérer la bali
 ```
 {% endraw %}
 {% alert important %}
-Rappelez-vous que l’option d’indicateur `:rerender` a une profondeur d’un seul niveau. Si la réponse du Contenu connecté lui-même comporte davantage de balises de Contenu connecté, Braze n’interprètera pas à nouveau ces balises supplémentaires.
+Rappelez-vous que l’option d’indicateur `:rerender` a une profondeur d’un seul niveau. Si la réponse au contenu connecté comporte elle-même d'autres étiquettes de contenu connecté ou d'autres étiquettes de catalogue, Braze n'effectuera pas de nouveau le rendu de ces étiquettes supplémentaires.
 {% endalert %}
+
+## Bonnes pratiques
+
+### Utilisez `json_escape` avec les étiquettes Liquid qui pourraient casser le format JSON
+
+Lorsque vous utilisez `:rerender`, ajoutez le filtre `json_escape` à toutes les étiquettes Liquid qui pourraient potentiellement casser le format JSON. Si vos étiquettes Liquid contiennent des caractères qui ne respectent pas le format JSON, l'intégralité de la réponse au contenu connecté sera interprétée comme du texte et intégrée dans le message, et aucune des variables ne sera enregistrée.
+
+Par exemple, si la propriété d'événement `message` dans l'exemple ci-dessous contient des caractères susceptibles de casser le format JSON, ajoutez le filtre `json_escape` comme dans cet exemple :
+
+{% raw %}
+```liquid
+[{
+"message":"{{event_properties.${message} | json_escape}}"
+}]
+```
+{% endraw %}
