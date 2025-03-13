@@ -89,7 +89,7 @@ Para usar o gerador de IA SQL, faça o seguinte:
 - Usuários que fizeram menos de cinco compras no último ano
 
 ### Dicas
-- Familiarize-se com as tabelas de dados disponíveis [do Snowflake]({{site.baseurl}}/sql_segments_tables/). A solicitação de dados que não existem nessas tabelas pode fazer com que o ChatGPT crie uma tabela falsa.
+- Familiarize-se com as tabelas de dados disponíveis [do Snowflake]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). A solicitação de dados que não existem nessas tabelas pode fazer com que o ChatGPT crie uma tabela falsa.
 - Familiarize-se com as [regras de escrita SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) para esse recurso. O não cumprimento dessas regras causará um erro. Por exemplo, seu código SQL deve selecionar a coluna `user_id`. Iniciar seu prompt com "users who" pode ajudar.
 - Você pode enviar até 20 prompts por minuto com o IA SQL Generator.
 
@@ -107,7 +107,7 @@ Quando a extensão terminar de processar, você poderá [criar um segmento][4] u
 
 ## Escrevendo SQL
 
-Sua consulta de SQL deve ser escrita usando [a sintaxe do Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte a [referência da tabela]({{site.baseurl}}/sql_segments_tables/) para obter uma lista completa das tabelas e colunas disponíveis para consulta.
+Sua consulta de SQL deve ser escrita usando [a sintaxe do Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte a [referência da tabela]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) para obter uma lista completa das tabelas e colunas disponíveis para consulta.
 
 {% alert important %}
 Observe que as tabelas disponíveis para consulta contêm apenas dados de eventos. Se desejar consultar os atributos do usuário, deverá combinar seu segmento SQL com filtros de atributos personalizados do [segmentador clássico]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
