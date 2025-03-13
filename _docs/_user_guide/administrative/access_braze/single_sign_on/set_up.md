@@ -134,7 +134,7 @@ Select **Export**. For **Select cookie-filter profile**, select **None**. Then, 
 
 ### Is the user's email address correctly set up?
 
-Confirm in the SAML trace that the `saml2:Attribute Name="email"` field matches the email address the user is using to log in. If you use Microsoft Entra ID, the attribute mapping is `email = user.userprincipalname`.
+If you're getting the error `ERROR_CODE_SSO_INVALID_EMAIL`, the user's email address isn't valid. Confirm in the SAML trace that the `saml2:Attribute Name="email"` field matches the email address the user is using to log in. If you use Microsoft Entra ID, the attribute mapping is `email = user.userprincipalname`.
 
 The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Azure Active Directory, and others).
 
@@ -166,11 +166,11 @@ Have the affected user [clear their browser's cache and cookies](https://its.uio
 
 ### Did you set your RelayState?
 
-To authenticate using your identity provider (IdP), your company needs to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate).
+If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayState could be misconfigured or nonexistant. If you haven't already, you need to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). 
 
 ### Is the user stuck in a sign-in loop between Okta and Braze?
 
-If you're using Okta and the user is stuck in a sign-in loop (in other words, is cycling through SSO and Braze dashboard), you need to set the destination to `https://dashboard-dashboard-instance-here.braze.com`. 
+If a user can't sign in because they're stuck cycling between the Okta SSO and Braze dashboard, you need to go to Okta and set the SSO URL destination to your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (for example, `https://dashboard-07.braze.com`). 
 
 If you're using another IdP, check if your company uploaded the correct SAML or x.509 certificate to Braze.
 
