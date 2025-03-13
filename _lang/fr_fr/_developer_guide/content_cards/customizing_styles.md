@@ -14,7 +14,7 @@ platform:
 
 # Personnaliser les styles des cartes de contenu
 
-> Les cartes de contenu de Braze ont une présentation par défaut. Cet article couvre les options de style pour vos cartes de contenu afin de vous aider à correspondre à l'identité de votre marque. Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Les cartes de contenu de Braze ont une présentation par défaut. Cet article couvre les options de style pour vos cartes de contenu afin de vous aider à correspondre à l'identité de votre marque. Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Personnaliser le style personnalisé
 
