@@ -45,7 +45,7 @@ Pour les campagnes d'e-mails, vous pouvez cibler les groupes initiateurs dans la
 
 ## Tester votre audience
 
-Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s'il correspond aux critères de l'audience.
+Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer s'il correspond aux critères de l'audience.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
