@@ -76,7 +76,7 @@ Pode haver de dois a cinco minutos de tempo de aquecimento quando a Braze se con
 
 {% tab Microsoft Fabric %}
 1. Crie uma entidade de serviço e permita o acesso ao espaço de trabalho do Fabric que será usado para sua integração.   
-2. Em seu espaço de trabalho do Fabric, configure os dados de origem e conceda permissões ao seu principal de serviço 
+2. No seu espaço de trabalho do Fabric, configure os dados de origem e conceda permissões ao seu principal de serviço. 
 3. Crie uma nova fonte conectada no dashboard do Braze.
 4. Teste a integração.
 5. Use a fonte conectada para criar um ou mais segmentos CDI.
