@@ -77,10 +77,6 @@ As implementações de Feature Flag permanecem consistentes para os usuários em
 
 Essa estratégia ajuda a garantir que os usuários tenham uma experiência consistente no app e não fiquem alternando entre as sessões. Obviamente, a desativação de um recurso até 0% removerá todos os usuários do sinalizador de recurso, o que é útil se você descobrir um bug ou precisar desativar o recurso por completo.
 
-### Posso criar um segmento de usuários que estão atualmente em um sinalizador de recurso? {#feature-flag-filter}
-
-Isso está em nosso mapa de produto Para ajudar a priorizar isso, envie esse feedback para a equipe da sua conta Braze ou envie um e-mail para a nossa equipe: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
-
 ## Tópicos técnicos
 
 ### Os Feature Flags podem ser usados para controlar quando o SDK da Braze é inicializado? {#initialization}
