@@ -19,7 +19,7 @@ Le raccourcissement des liens et le suivi des clics peuvent être activés au [n
 
 La longueur de l'URL est déterminée par le type de suivi activé :
 - Le **suivi de base** permet le suivi des clics au niveau de la campagne. Les URL statiques ont une longueur de 20 caractères et les URL dynamiques ont une longueur de 25 caractères.
-- Le **suivi avancé** permet un suivi des clics au niveau de la campagne et au niveau de l'utilisateur. Les clics génèrent également un [événement SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) envoyé par Currents. Les URL statiques avec suivi avancé auront une longueur de 27-28 caractères, ce qui vous permettra de créer des segmentations d'utilisateurs ayant cliqué sur les URL. Les URL dynamiques ont une longueur de 32 à 33 caractères.
+- Le **suivi avancé** permet un suivi des clics au niveau de la campagne et au niveau de l'utilisateur. Les clics génèrent également un [événement SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) envoyé par Currents. Les URL statiques avec suivi avancé auront une longueur de 27-28 caractères, ce qui vous permettra de créer des segmentations d'utilisateurs ayant cliqué sur les URL. Les URL dynamiques ont une longueur de 32 à 33 caractères.
 
 Les liens seront raccourcis en utilisant notre domaine court partagé (`brz.ai`). Un exemple d'URL peut ressembler à ceci : `https://brz.ai/8jshX` (basique, statique) ou `https://brz.ai/8jshX/2dj8d` (avancé, dynamique). Pour plus d'informations, reportez-vous à la section [Test](#testing).
 
