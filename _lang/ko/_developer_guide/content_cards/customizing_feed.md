@@ -14,13 +14,13 @@ platform:
 
 # 기본 콘텐츠 카드 피드 사용자 지정
 
-> 콘텐츠 카드 피드는 모바일 또는 웹 애플리케이션에 있는 콘텐츠 카드의 시퀀스입니다. 이 문서에서는 피드를 새로 고치는 시기, 카드 순서, 여러 피드 관리, '빈 피드' 오류 메시지 등을 구성하는 방법을 다룹니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)를 참조하세요. 
+> 콘텐츠 카드 피드는 모바일 또는 웹 애플리케이션에 있는 콘텐츠 카드의 시퀀스입니다. 이 문서에서는 피드를 새로 고치는 시기, 카드 순서, 여러 피드 관리, '빈 피드' 오류 메시지 등을 구성하는 방법을 다룹니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/getting_started/customization_overview)를 참조하세요. 
 
 ## 피드 새로 고침
 
 기본적으로 콘텐츠 카드 피드는 다음과 같은 경우에 자동으로 새로 고쳐집니다: 
 1. 새 세션이 시작됩니다.
-2. 피드가 열리고 마지막으로 새로 고친 후 60초 넘게 경과한 경우
+2. 피드를 열면 마지막 새로고침 이후 60초 이상이 경과한 경우. 이것은 기본 콘텐츠 카드 피드에만 적용되며 피드 열기당 한 번만 발생합니다.
 
 특정 시간에 수동으로 새로 고치도록 SDK를 구성할 수도 있습니다.
 
@@ -354,7 +354,7 @@ braze.showContentCards(null, (cards) => {
 </style>
 ```
 
-콘텐츠 카드 스타일 요소 사용자 지정에 대한 자세한 내용은 [스타일 사용자 지정]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles)을 참조하세요.
+콘텐츠 카드 스타일 요소 사용자 지정에 대한 자세한 내용은 [스타일 사용자 지정]({{site.baseurl}}/developer_guide/content_cards/customizing_styles/)을 참조하세요.
 {% endtab %}
 {% tab Jetpack Compose %}
 Jetpack Compose로 '빈 피드' 오류 메시지를 사용자 지정하려면 `emptyString`을 `ContentCardsList`에 전달하면 됩니다. `emptyTextStyle`을 `ContentCardListStyling`으로 전달하여 이 메시지를 추가로 사용자 지정할 수도 있습니다.
@@ -419,7 +419,7 @@ attributes.emptyStateMessageColor = .secondaryLabel
 
 ### 1단계: 카드에 키-값 쌍 설정
 
-콘텐츠 카드 캠페인을 생성할 때 각 카드에서 [키-값 페어 데이터]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/)를 설정합니다. 이 키-값 쌍을 사용하여 카드를 분류합니다. 키-값 쌍은 카드의 데이터 모델에 있는 `extras` 속성에 저장됩니다.
+콘텐츠 카드 캠페인을 생성할 때 각 카드에서 [키-값 페어 데이터]({{site.baseurl}}/developer_guide/content_cards/customizing_behavior/)를 설정합니다. 이 키-값 쌍을 사용하여 카드를 분류합니다. 키-값 쌍은 카드의 데이터 모델에 있는 `extras` 속성에 저장됩니다.
 
 이 예제에서는 `feed_type` 키와 함께 키-값 페어를 설정하여 카드를 표시해야 하는 콘텐츠 카드 피드를 지정합니다. 값은 `home_screen` 또는 `marketing`과 같이 커스텀 피드에 따라 달라집니다.
 
