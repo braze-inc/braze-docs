@@ -2072,14 +2072,31 @@ validurls['/docs/developer_guide/platforms/swift/analytics/disabling_tracking/']
 validurls['/docs/developer_guide/platforms/swift/analytics/swift_idfv/'] = '/docs/developer_guide/platforms/swift/swift_idfv';
 
 // web
-validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/web/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=web';
 
 // cordova
-validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/cordova/analytics/'] = '/docs/developer_guide/analytics/';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/tracking_events';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=cordova';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-user-ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=cordova';
+
+// fireos
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/beacon/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
 
 // flutter
 validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
