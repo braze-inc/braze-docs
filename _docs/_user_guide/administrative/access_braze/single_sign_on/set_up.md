@@ -138,6 +138,11 @@ If you're getting the error `ERROR_CODE_SSO_INVALID_EMAIL`, the user's email add
 
 The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Azure Active Directory, and others).
 
+Other errors that indicate you have issues with the user's email address include:
+- `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: The user's email address isn't within the dashboard.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING`: The user's email address is blank or otherwise misconfigured.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` or `ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH`: The user's email address doesn’t match the one used to set up SSO.
+
 ### Do you have a valid SAML certificate (x.509 certificate)?
 
 You can validate your SAML certificate using [this SAML validation tool](https://www.samltool.com/validate_response.php). Note that an expired SAML certificate is also an invalid SAML certificate.
