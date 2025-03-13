@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 O retorno é o seguinte:
 
-> Obtenha o trio definitivo Tales, Teslagrad e Acaratus hoje mesmo!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Confira [as seleções]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para criar grupos de dados para envio de mensagens mais personalizadas!
@@ -72,24 +72,7 @@ Confira [as seleções]({{site.baseurl}}/user_guide/personalization_and_dynamic_
 
 Você pode usar itens de catálogo para criar instruções condicionais. Por exemplo, você pode disparar uma determinada mensagem para ser exibida quando um item específico for selecionado em sua campanha.
 
-Para fazer isso, você usará uma declaração Liquid `if` em um formato como este:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Note que você deve declarar a lista de catálogos antes de usar as declarações `if`. No exemplo acima, `Test-list` é a lista de catálogos.
-
-#### Caso de uso: Snippet do Liquid `if`
-
-Nesse cenário, serão exibidas mensagens diferentes se o atributo personalizado `venue_name` tiver mais de 10 caracteres ou menos de 10 caracteres. Se `venue_name` for `blank`, nada será exibido.
+Para fazer isso, você usará uma instrução Liquid `if`, como neste exemplo:
 
 {% raw %}
 ```liquid
@@ -103,6 +86,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+Neste exemplo, serão exibidas mensagens diferentes se o atributo personalizado `venue_name` tiver mais de 10 caracteres ou menos de 10 caracteres. Se `venue_name` for `blank`, nada será exibido. 
+
+Note que você deve declarar a lista de catálogos e, se aplicável, a seleção antes de usar as declarações `if`. No exemplo, `item-list` é a lista de catálogos e `selections` é o nome da seleção.
 
 ### Usando imagens {#using-images}
 
@@ -138,6 +125,10 @@ Você também pode usar modelos para extrair dinamicamente itens do catálogo co
     ]
 }
 ```
+
+{% alert note %}
+Os objetos JSON nos catálogos só são ingeridos por meio da API. Não é possível fazer upload de um objeto JSON usando um arquivo CSV.
+{% endalert %}
 
 Usando o envio de mensagens Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para isso, atribua uma variável][10] ao seu atributo personalizado e, em seguida, use o modal **Add Personalization** para extrair um item específico da matriz.
 
