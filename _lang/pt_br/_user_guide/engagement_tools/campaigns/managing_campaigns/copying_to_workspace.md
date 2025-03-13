@@ -18,9 +18,9 @@ Copiar campanhas entre espaços de trabalho está geralmente disponível para os
 
 ## Como copiar uma campanha para um espaço de trabalho diferente
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu com a opção "Copy to workspace" (Copiar para o espaço de trabalho).][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Selecione o <i class="fas fa-cog"></i> ícone de engrenagem ao lado da campanha selecionada e selecione **Copiar para espaço de trabalho**. Após copiar, recomendamos revisar e testar sua campanha para confirmar que todos os campos funcionam corretamente.
+Selecione o ícone de engrenagem <i class="fas fa-cog"></i> ao lado da campanha selecionada e selecione **Copiar para o espaço de trabalho**. Após copiar, recomendamos revisar e testar sua campanha para confirmar que todos os campos funcionam corretamente.
 
 Quando você copia uma campanha entre espaços de trabalho, campos como nome e descrição da campanha, variantes, tipo de cronograma de entrega e comportamentos de conversão são copiados. Para campanhas de e-mail, campos como corpo do e-mail, assunto e pré-cabeçalho também são copiados para o espaço de trabalho de destino. 
 
@@ -154,6 +154,10 @@ Nota as seguintes referências de Liquid com dependências ao copiar campanhas e
 - Etiquetas de voucher e promoção
 
 Quando você copia uma campanha entre espaços de trabalho, os blocos de conteúdo não serão copiados. No entanto, um bloco de conteúdo pode ser referenciado no espaço de trabalho de destino se existir um bloco com o mesmo nome. Alternativamente, você pode criar o bloco de conteúdo (ou essas referências Liquid) no espaço de trabalho de destino para evitar erros ao lançar uma campanha.
+
+### Cópia de campanhas com feature flags
+
+Para copiar uma campanha de sinalizador de recurso entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de sinalizador de recurso]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao sinalizador de recurso referenciado na campanha original. Se você copiar uma campanha, mas não houver um ID de sinalizador de recurso correspondente no espaço de trabalho de destino, a seleção do sinalizador de recurso na campanha ficará em branco quando for copiada, e você terá de selecionar um diferente.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 
