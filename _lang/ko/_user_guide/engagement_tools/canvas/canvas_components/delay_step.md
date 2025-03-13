@@ -24,6 +24,30 @@ tool: Canvas
 - 지연 제한은 30일입니다.
 - 지연 구성요소는 다음 단계에 하나만 연결할 수 있습니다.
 
+### Personalized delays
+
+{% alert important %}
+Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
+
+Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
+
+- **Context variable name:** product_reminder_interval
+- **Data type:** Time
+- **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![The "product_reminder_interval" and its value.][2]
+
+Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context variable.
+
+![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".][3]
+
+#### Extended delays
+
+You can now extend Delay steps up to two years. For example, if you're onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven't started a session.
+
 ### 시간 지연 옵션
 
 캔버스에서 다음 메시지가 표시되기 전 지연 유형을 선택할 수 있습니다. 사용자가 지정된 기간이 지날 때까지 지연되도록 설정하거나 특정 날짜 및 시간까지 사용자를 지연시킬 수 있습니다.
@@ -85,3 +109,5 @@ tool: Canvas
 이러한 분석에 대한 시계열은 확장된 구성요소 보기에서 사용할 수 있습니다.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}
