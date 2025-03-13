@@ -21,7 +21,7 @@ Isso pode ser feito fazendo com que seu aplicativo seja iniciado automaticamente
 Para resolver isso, integre uma biblioteca como a [AutoStarter](https://github.com/judemanutd/AutoStarter) em seu aplicativo. O AutoStarter é compatível com vários fabricantes, oferecendo uma maneira fácil de chamar o gerenciador de permissões de inicialização em uma grande variedade de dispositivos. Depois de integrar o AutoStarter, chame `AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)` para abrir o gerenciador de permissões de inicialização no dispositivo do usuário final. Associe essa ação a um prompt que incentive o usuário final a ativar a "inicialização automática" do seu app. Sua equipe de marketing criará essa mensagem - veja a próxima seção!
 
 ## Etapas para profissionais de marketing
-Depois que os usuários aceitam receber notificações por push, há etapas adicionais que eles podem realizar para melhorar a entrega de mensagens para esses dispositivos. Recomendamos que a [mensagem push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) seja seguida por uma mensagem no app direcionada aos usuários de dispositivos OEM chineses com estas etapas adicionais:
+Depois que os usuários aceitam receber notificações por push, há etapas adicionais que eles podem realizar para melhorar a entrega de mensagens para esses dispositivos. Recomendamos que a [mensagem push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) seja seguida por uma mensagem no app direcionada aos usuários de dispositivos OEM chineses com estas etapas adicionais:
 
 - Ativar a "inicialização automática" do aplicativo
 - Desativar a otimização da bateria para o aplicativo
