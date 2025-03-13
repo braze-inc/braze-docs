@@ -32,8 +32,8 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 {: start="2"}
 2\. Selecione **SMS** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
 3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
-   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Selecione um [grupo de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) para garantir o envio da mensagem para os usuários adequados. Ao selecionar um grupo de inscrições, o Braze adicionará automaticamente um filtro de segmentação, garantindo que apenas os usuários inscritos recebam a campanha. Somente os códigos longos e curtos que pertencem a esse grupo de inscrições serão usados para enviar SMS aos usuários direcionados.
 
@@ -66,19 +66,27 @@ Antes de continuar, leia nossas diretrizes para [segmentos de mensagens SMS e li
 
 ![Criador de mensagem SMS na Braze com a mensagem "Olá, first_name, agradecemos seu apoio! Por que não passar em uma de nossas lojas e mostrar este SMS para obter um desconto exclusivo? Responda STOP para parar de receber nossas mensagens."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
-{% alert tip %}
+### Adição de um cartão de contato
+
+É possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão da sua empresa e das informações de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira os [cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
+
+### Dicas
+
+#### Usando Liquid
+
 {% raw %}
 Se planeja usar o Liquid, certifique-se de incluir um valor padrão para a personalização escolhida para que, caso o perfil do usuário do destinatário esteja incompleto, ele não receba um espaço reservado em branco `Hi, !`, em vez do nome ou de uma frase coerente.
 {% endraw %}
-{% endalert %}
 
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+#### Geração de cópia de IA
+
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Botão "Abrir AI Copywriter", localizado no campo Mensagem do criador de mensagens SMS.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### Cartões de contato
+#### Criação de mensagens da direita para a esquerda
 
-Se desejar, é possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão de suas informações comerciais e de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira os [cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
+A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Etapa 3: Pré-visualize e teste sua mensagem
 
