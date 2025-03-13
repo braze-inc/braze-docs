@@ -14,7 +14,7 @@ platform:
 > Learn how to configure network settings for the Braze SDK.
 
 {% sdktabs %}
-{% sdktab android & fireos %}
+{% sdktab android %}
 {% multi_lang_include developer_guide/android/network.md %}
 {% endsdktab %}
 
