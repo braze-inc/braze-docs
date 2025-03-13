@@ -16,7 +16,7 @@ Braze vous recommande de n’envoyer que les données utilisateurs que vous dés
 - **Ciblez** vos audiences en créant des [segments d'audience]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Déclenchez** vos messages avec une livraison [par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) ou une [réception/distribution par API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 - **Modélisez** et personnalisez vos messages à l'aide de la [logique conditionnelle Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Assurez le suivi** de l’efficacité de vos campagnes grâce au [suivi des conversions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Assurez le suivi** de l’efficacité de vos campagnes grâce au [suivi des conversions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
 
 Ceci vous permettra d’optimiser les données que vous enverrez à Braze et de simplifier votre capacité à envoyer des messages à vos utilisateurs en vous prémunissant contre le suivi de points de données pouvant ne pas être utiles à votre équipe sur le long terme. 
 
@@ -71,9 +71,13 @@ Le fait de visiter l’App Store prend du temps de la part de vos utilisateurs. 
 Lorsque vous modifiez des planifications de campagne ou des audiences, tenez compte des meilleures pratiques suivantes :
 
 - **Campagnes à planification unique :** Vous pouvez modifier la campagne jusqu'à l'heure d'envoi planifiée.
-- **Campagnes à planification récurrente :** Vous pouvez modifier la campagne jusqu'à l'heure d'envoi planifiée.
-- **Campagnes d'envoi local :** Ne faites pas de modifications 24 heures avant l'heure d'envoi prévue.
+- **Campagnes planifiées récurrentes :** Vous pouvez modifier la campagne jusqu'à l'heure d'envoi planifiée.
+- **Campagnes d'envoi local :** Ne modifiez pas vos documents 24 heures avant l'heure d'envoi prévue.
 - **Campagnes d'envoi optimales :** N'effectuez pas de modifications 24 heures avant minuit le jour où l'envoi de la campagne est planifié.
+
+{% alert note %}
+Si vous modifiez une campagne en ligne et que vous changez la réception/distribution en **heure locale**, un nouveau lot de messages sera mis en file d'attente, ce qui signifie que vos utilisateurs recevront le message deux fois en raison de la double mise en file d'attente. Pour éviter cela, arrêtez d'abord la campagne originale, puis lancez-en une copie après avoir mis à jour la planification.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
