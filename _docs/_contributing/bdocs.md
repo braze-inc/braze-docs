@@ -238,9 +238,9 @@ If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> the
 
 ```plaintext
 File,Broken Link,Path to Broken Link
-/Users/Isaiah.Robinson/braze-docs/_docs/_api/api_limits.md,/docs/api/endpoints/email/bounce/remove,/Users/Isaiah.Robinson/braze-docs/_docs/_api/endpoints/email/bounce/remove.md
-/Users/Isaiah.Robinson/braze-docs/_docs/_api/endpoints/messaging.md,/docs/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/,/Users/Isaiah.Robinson/braze-docs/_docs/_docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
-/Users/Isaiah.Robinson/braze-docs/_docs/_contributing/bdocs.md,/docs/resources/articles,/Users/Isaiah.Robinson/braze-docs/_docs/_resources/articles.md
+/Users/ Alex.Lee/braze-docs/_docs/_api/api_limits.md,/docs/api/endpoints/email/bounce/remove,/Users/ Alex.Lee/braze-docs/_docs/_api/endpoints/email/bounce/remove.md
+/Users/ Alex.Lee/braze-docs/_docs/_api/endpoints/messaging.md,/docs/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/,/Users/ Alex.Lee/braze-docs/_docs/_docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
+/Users/ Alex.Lee/braze-docs/_docs/_contributing/bdocs.md,/docs/resources/articles,/Users/ Alex.Lee/braze-docs/_docs/_resources/articles.md
 ```
 {% endtab %}
 {% endtabs %}
