@@ -2113,9 +2113,10 @@ validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-purch
 validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
 
 // unity
-validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
-validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unity/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=unity';
 
 // unreal_engine
 validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
