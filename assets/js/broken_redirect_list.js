@@ -2112,6 +2112,12 @@ validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custo
 validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=react%20native';
 validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
 
+// roku
+validurls['/docs/developer_guide/platforms/roku/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=roku';
+validurls['/docs/developer_guide/platforms/roku/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=roku';
+validurls['/docs/developer_guide/platforms/roku/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/roku/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=roku';
+
 // unity
 validurls['/docs/developer_guide/platforms/unity/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=unity';
 validurls['/docs/developer_guide/platforms/unity/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=unity';
