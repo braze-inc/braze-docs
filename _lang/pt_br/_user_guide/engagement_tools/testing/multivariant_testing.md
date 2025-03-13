@@ -65,9 +65,9 @@ Ao executar Testes A/B em mensagens no app, sua análise de dados pode parecer m
 
 A Variante A tem uma contagem consistentemente maior de *Destinatários Únicos* do que a Variante C. Isso não se deve à distribuição de variantes, mas sim à forma como *os Destinatários Únicos* são calculados para mensagens no app. Para mensagens no app, *os destinatários únicos* são, na verdade, *impressões únicas*, que é o número total de pessoas que receberam e visualizaram a mensagem no app. Isso significa que, se um usuário não receber a mensagem por qualquer motivo ou decidir não visualizá-la, ele não será incluído na contagem de *destinatários únicos*, e a distribuição de variantes poderá parecer distorcida.
 
-## FIVE rules for multivariate and A/B testing (Cinco regras para testes multivariantes e A/B) {#five-rules-for}
+## Dicas para testes multivariantes e Testes A/B
 
-Os testes multivariantes e A/B podem revelar insights poderosos sobre seus usuários. Para garantir que os resultados dos testes reflitam realmente o comportamento dos usuários, siga estas diretrizes.
+Os testes multivariantes e A/B podem revelar insights poderosos sobre seus usuários. Para receber resultados de testes que reflitam verdadeiramente o comportamento dos seus usuários, siga estas diretrizes.
 
 #### Execute o teste em um grande número de usuários
 
@@ -84,6 +84,15 @@ Os testes multivariantes e A/B permitem que você teste as diferenças entre vá
 #### Decida por quanto tempo seu teste será executado e não o encerre antes do tempo
 
 Antes de iniciar o teste, decida por quanto tempo ele será realizado e atenha-se a ele. Os profissionais de marketing muitas vezes são tentados a interromper os testes depois de verem resultados que lhes agradam, distorcendo suas descobertas. Resista à tentação de dar uma olhada e nunca termine seu teste antes do tempo!
+
+#### Adicione seu teste às campanhas antes de elas serem lançadas, não depois
+
+Se você adicionar seu teste a uma campanha após ela ter sido lançada, o teste não funcionará corretamente e você pode receber estatísticas incorretas ou enganosas. Por exemplo, se você adicionar um teste a uma campanha lançada que permite reentrada, os usuários que reentram na campanha sempre passarão pela mesma jornada para evitar imprecisões nos dados com o teste. Além disso, se você alterar qualquer uma das variantes enquanto o teste estiver em execução, a alteração invalidará seu teste e o reiniciará.
+
+Para resultados de teste precisos:
+1. Clone a campanha lançada.
+2. Pare a campanha original.
+3. Então, adicione o teste à campanha clonada. 
 
 #### Se possível, inclua um grupo de controle
 
