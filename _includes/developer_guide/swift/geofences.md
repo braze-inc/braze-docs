@@ -1,27 +1,8 @@
----
-nav_title: Geofences
-article_title: Geofences for the Braze Swift SDK
-platform: Swift
-page_order: 6.2
-description: "This reference article covers how to implement geofences for the Swift SDK."
-Tool:
-  - Location
-
----
-
-# Geofences
-
-> Learn how to set up geofences for the Braze Swift SDK. At the core of Braze’s real-time location offering is the concept of a [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences). A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
-
 {% alert important %}
-As of iOS 14, geofences do not work reliably for users who choose to give their approximate location permission.
+As of iOS 14, geofences do not work reliably for users who choose to only give their approximate location permission.
 {% endalert %}
 
-## Prerequisites
-
-Before you start, you'll need to complete the following:
-
-- To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/) enabled in addition to completing the standard push integration.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/).
 
 ## Setting up geofences
 
