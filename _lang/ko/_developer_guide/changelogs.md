@@ -1,5 +1,5 @@
 ---
-page_order: 90
+page_order: 98
 nav_title: 변경 로그
 layout: dev_guide
 guide_top_header: "Braze SDK 변경 로그"
@@ -9,34 +9,34 @@ description: "이 랜딩 페이지에는 Braze 설명서 내 각 SDK 및 개별 
 guide_featured_title: "Braze 설명서의 체인지로그"
 guide_featured_list:
   - name: Android SDK
-    link: /docs/developer_guide/platform_integration_guides/android/changelog/
+    link: /docs/developer_guide/platforms/android/changelog/
     image: /assets/img/braze_icons/android.svg
   - name: iOS SDK(Swift)
-    link: /docs/developer_guide/platform_integration_guides/swift/changelog/
+    link: /docs/developer_guide/platforms/swift/changelog/
     image: /assets/img/braze_icons/apple.svg
   - name: iOS SDK(Objective-C)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/changelog/objc_changelog/
     image: /assets/img/braze_icons/apple.svg
   - name: 웹 SDK
-    link: /docs/developer_guide/platform_integration_guides/web/changelog/
+    link: /docs/developer_guide/platforms/web/changelog/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Cordova SDK
-    link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
+    link: /docs/developer_guide/platforms/cordova/changelog/
     image: /assets/img/cordova.png
   - name: Flutter SDK
-    link: /docs/developer_guide/platform_integration_guides/flutter/changelog/
+    link: /docs/developer_guide/platforms/flutter/changelog/
     image: /assets/img/flutter_icon.png
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/changelog/
+    link: /docs/developer_guide/platforms/react_native/changelog/
     image: /assets/img/reactnative_icon.png
   - name: Unity SDK
-    link: /docs/developer_guide/platform_integration_guides/unity/changelog/
+    link: /docs/developer_guide/platforms/unity/changelog/
     image: /assets/img/unity.png
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/changelog/
+    link: /docs/developer_guide/platforms/xamarin/changelog/
     image: /assets/img/xamarin.png  
   - name: Roku SDK
-    link: /docs/developer_guide/platform_integration_guides/roku/changelog/
+    link: /docs/developer_guide/platforms/roku/changelog/
     image: /assets/img/roku.png
 
 guide_menu_title: "Changelogs on GitHub"
