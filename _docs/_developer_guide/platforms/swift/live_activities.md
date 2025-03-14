@@ -37,7 +37,7 @@ While Live Activities and push notifications are similar, their system permissio
 ## Sequence Diagram {#sequence-diagram}
 {% tabs %}
 {% tab Live Activities Sequence %}
-{% details Show template %}
+{% details Show Diagram %}
 ```mermaid
 ---
 config:
@@ -50,14 +50,18 @@ sequenceDiagram
   participant BrazeAPI as Braze API
   participant APNS as Apple Push Notification Service
   Note over Server, APNS: Launch Option 1<br/>Locally Start Activities
-  App ->> App: Start a Live Activity using <br>`launchActivity(pushTokenTag:activity:)`
+  App ->> App: Register a Live Activity using <br>`launchActivity(pushTokenTag:activity:)`
   App ->> App: Get push token from iOS
   App ->> BrazeAPI: Activity ID & Push token<br>automatically sent to Braze
   Note over Server, APNS: Launch Option 2<br/>Remotely Start Activities
   Device ->> App: Call `registerPushToStart`<br>to collect push tokens early
+  App ->> BrazeAPI: Push-to-start tokens sent to Braze
   Server ->> BrazeAPI: POST /messages/live_activity/start
   Note right of BrazeAPI: Payload includes:<br>- push_token<br>- activity_id<br>- external_id<br>- event_name<br>- content_state (optional)
   BrazeAPI ->> APNS: Live activity start request
+  APNS ->> Device: APNS sends activity to device
+  App ->> App: Get push token from iOS
+  App ->> BrazeAPI: Activity ID & Push token<br>automatically sent to Braze
   Note over Server, APNS: Resuming activities upon app launch
   App ->> App: Call `resumeActivities(ofType:)` on each app launch
   Note over Server, APNS: Updating a Live Activity
@@ -65,12 +69,12 @@ sequenceDiagram
   Server ->> BrazeAPI: POST /messages/live_activity/update
   Note right of BrazeAPI: Payload includes changes<br>to ContentState (dynamic variables)
   BrazeAPI ->> APNS: Update sent to APNS
-  APNS ->> App: APNS sends update to device
+  APNS ->> Device: APNS sends update to device
   end
   Note over Server, APNS: Ending a Live Activity
   Server ->> BrazeAPI: POST /messages/live_activity/update
   Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- `dismissal_date` is now in the past<br>- Setting `end_activity: true`
-  APNS ->> App: Live activity is dismissed
+  APNS ->> Device: Live activity is dismissed
 ```
 {% enddetails %}
 {% endtab %}
