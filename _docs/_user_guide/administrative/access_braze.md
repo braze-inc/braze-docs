@@ -61,7 +61,7 @@ If clearing your browser cache and cookies doesn't resolve your issues, contact 
 
 #### Creating a helpful Support ticket
 
-If you contact Support, it'll be useful to have the impacted user collect network logs (Har Logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
+If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
 
 Have the affected user do the following:
 
