@@ -152,11 +152,11 @@ To avoid these behaviors in the future, we recommend using monotonically increas
 
 ## During a sync, is the order preserved if multiple records share the same ID?
 
-The processing order is not 100% predictable. For example, if there are multiple rows with the same `EXTERNAL_ID` in the table during a sync, we cannot guarantee which value will end up in the final profile. 
+The processing order is not 100% predictable. For example, if there are multiple rows with the same `EXTERNAL_ID` in the table during a sync, we cannot guarantee which value will end up in the final profile. If you're updating the same `EXTERNAL_ID` with different attributes in the payload column, all changes are reflected when the sync is completed.
 
 ## What are the security measures for CDI?
 
-### Braze's measures
+### Our measures
 
 Braze has the following measures in place for CDI:
 
