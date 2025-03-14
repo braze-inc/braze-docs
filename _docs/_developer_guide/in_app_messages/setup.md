@@ -1,13 +1,8 @@
 ---
 nav_title: Initial Setup
 article_title: Setting up in-app messages for the Braze SDK
-platform: 
-  - Android
-  - FireOS
-  - Swift
 page_order: 0
 description: "Learn how to set up in-app messages for the Braze SDK."
-
 ---
 
 # Setting up in-app messages

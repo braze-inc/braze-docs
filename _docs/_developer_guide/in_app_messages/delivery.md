@@ -1,18 +1,18 @@
 ---
 nav_title: Message Delivery
 article_title: In-app message delivery for the Braze SDK
+page_order: 0.2
+description: "Learn about in-app message delivery for the Braze SDK."
 platform: 
   - Android
   - FireOS
   - Swift
-page_order: 0.2
-description: "Learn how to set up in-app messages for the Braze SDK."
-
+  - Web
 ---
 
 # In-app message delivery
 
-> Learn how to customize in-app messages for the Braze SDK.
+> Learn about in-app message delivery for the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}

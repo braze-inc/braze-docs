@@ -1,13 +1,13 @@
 ---
 nav_title: Customizing Messages
 article_title: Customizing in-app messages for the Braze SDK
+page_order: 0.1
+description: "Learn how to set up in-app messages for the Braze SDK."
 platform: 
   - Android
   - FireOS
   - Swift
-page_order: 0.1
-description: "Learn how to set up in-app messages for the Braze SDK."
-
+  - Web
 ---
 
 # Customizing in-app messages
