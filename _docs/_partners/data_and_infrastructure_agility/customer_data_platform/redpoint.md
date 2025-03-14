@@ -31,10 +31,6 @@ You'll configure an export template and outbound channel for each mode.
 | Redpoint Data Management artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Redpoint CDP custom attributes
 
 The following Redpoint custom attributes can be added to a Braze user profile.

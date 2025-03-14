@@ -14,10 +14,6 @@ channel:
 
 Go to **Templates** > **In-App Message Templates**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Templates & Media**.
-{% endalert %}
-
 From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
 ## Color profile
