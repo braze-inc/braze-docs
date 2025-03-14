@@ -24,7 +24,7 @@ Before you can integrate Banner Cards, you'll need to [create Banner Card placem
 
 In addition, these are the minimum SDK versions needed to start using Banner Cards:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 reactnative:14.0.0 %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 reactnative:14.0.0 flutter:x.y.z %}
 
 ## Integrating Banner Cards
 
@@ -64,7 +64,7 @@ Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 {% tab Kotlin %}
 
 ```kotlin
- Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
+Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
 ```
 
 {% endtab %}
@@ -88,7 +88,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-This feature is not currently supported on Flutter.
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endtab %}
 
@@ -144,9 +144,9 @@ Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
 
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
-    for (banner in update.banners) {
-      Log.d(TAG, "Received banner: " + banner.placementId)
-    }
+  for (banner in update.banners) {
+    Log.d(TAG, "Received banner: " + banner.placementId)
+  }
 }
 ```
 
@@ -180,7 +180,11 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-This feature is not yet available in Flutter.
+StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<BrazeBanner> banners) {
+  for (final banner in banners) {
+    print("Received banner: " + banner.toString());
+  }
+});
 ```
 {% endtab %}
 
@@ -344,13 +348,13 @@ If you're using [React Native's New Architecture](https://reactnative.dev/archit
 #endif
 ```
 
-To get the Banner in React Native, use:
+To get the Banner Card's data model in React Native, use:
 
 ```javascript
 const banner = await Braze.getBanner("global_banner");
 ```
 
-In your React Native application, add the following JavaScript XML (JSX) snippet into your view hierarchy.
+You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following JavaScript XML (JSX) snippet into your view hierarchy, providing just the placement ID.
 
 ```javascript
 <Braze.BrazeBannerView
@@ -371,8 +375,24 @@ This feature is not currently supported on Cordova.
 ```
 {% endtab %}
 {% tab Flutter %}
+To get the Banner Card's data model in Flutter, use:
+
 ```dart
-This feature is not yet available in Flutter.
+braze.getBanner("global_banner").then((banner) {
+  if (banner == null) {
+    // Handle null cases.
+  } else {
+    print(banner.toString());
+  }
+});
+```
+
+You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following widget into your view hierarchy, providing just the placement ID.
+
+```dart
+BrazeBannerView(
+  placementId: "global_banner",
+),
 ```
 {% endtab %}
 
@@ -456,7 +476,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-This feature is not yet available in Flutter.
+This feature is not currently supported on Flutter.
 ```
 {% endtab %}
 
