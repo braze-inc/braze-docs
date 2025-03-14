@@ -2049,4 +2049,11 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+validurls['/docs/developer_guide/platforms/android/news_feed/'] = '/docs/developer_guide/news_feed/';
+validurls['/docs/developer_guide/platforms/web/news_feed/'] = '/docs/developer_guide/news_feed/';
+validurls['/docs/developer_guide/platforms/cordova/news_feed/'] = '/docs/developer_guide/news_feed/';
+validurls['/docs/developer_guide/platforms/fireos/news_feed/'] = '/docs/developer_guide/news_feed/';
+validurls['/docs/developer_guide/platforms/unity/news_feed/'] = '/docs/developer_guide/news_feed/';
+validurls['/docs/developer_guide/platforms/xamarin/news_feed/'] = '/docs/developer_guide/news_feed/';
+
 // validurls['OLD'] = 'NEW';
