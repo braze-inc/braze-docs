@@ -1,8 +1,8 @@
 ---
+page_order: 2.2
 nav_title: Cartes de contenu
 article_title: Personnalisation de la carte de contenu
 layout: dev_guide
-page_order: 5
 channel:
   - content cards
 platform:
@@ -18,18 +18,18 @@ description: "Cette page d'accueil renvoie à diverses façons de personnaliser 
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Personnalisation des styles de cartes de contenu
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
+    link: /docs/developer_guide/content_cards/customizing_styles
     image: /assets/img/braze_icons/brush-02.svg
   - name: Personnaliser le comportement des cartes de contenu
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
+    link: /docs/developer_guide/content_cards/customizing_behavior/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Personnaliser le flux de la carte de contenu par défaut
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
+    link: /docs/developer_guide/content_cards/customizing_feed/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Enregistrer les analyses 
-    link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
+    link: /docs/developer_guide/content_cards/logging_analytics
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Création de cartes de contenu personnalisées
-    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
+    link: /docs/developer_guide/content_cards/creating_custom_content_cards
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---

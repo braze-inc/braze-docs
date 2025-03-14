@@ -27,10 +27,11 @@ Le tableau suivant répertorie les notifications disponibles :
 
 | Notification | Description | Canaux de notification disponibles |
 |--------------|-------------|-----------------|
-| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. Cela inclut également les notifications d'erreurs d'identification pour Google Cloud Services et Azure (Microsoft Cloud Services). | E-mail, Webhook |
+| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. Il s'agit notamment des notifications d'erreurs d'identification pour Google Cloud Services et Azure (Microsoft Cloud Services). | E-mail, Webhook |
 | Campagne arrêtée automatiquement | Avertit les destinataires lorsque Braze a arrêté une campagne. | E-mail |
 | Expiration de l’interaction avec la campagne | Informe les destinataires d’une campagne dont l’expiration des données d’interaction de campagne est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
-| Campagne/Canvas mis(e) à jour | Informe les destinataires lorsqu’une campagne/un canvas actif(ve) est mis(e) à jour ou désactivé(e), ainsi qu’une campagne/un canvas inactif(ve) est réactivé(e) ou lorsque des projets sont lancés. | E-mail |
+| Campagne/Canvas mis(e) à jour | Notifie les destinataires lorsqu'une campagne ou un Canvas actif est mis à jour ou désactivé, ainsi que lorsqu'une campagne ou un Canvas inactif est réactivé ou que des brouillons sont lancés. | E-mail |
+| Limite de volume de la campagne/du canvas atteinte | Notifie les destinataires lorsqu'une campagne ou un canvas atteint sa limite de volume. | E-mail | 
 | Expiration de l’interaction avec le canvas | Informe les destinataires d’un Canvas dont l’expiration des données d’interaction de Canvas est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
 | Carte de fil d’actualités publiée/en direct | Informe les destinataires lorsque les cartes de fil d’actualités sont programmées ou publiées. | E-mail, Webhook |
 | Erreurs d’identification de notification push | Avertit les destinataires lorsque les notifications push d’identification de l’application sont invalides et lorsqu’elles sont bientôt expirées. | E-mail, Webhook |

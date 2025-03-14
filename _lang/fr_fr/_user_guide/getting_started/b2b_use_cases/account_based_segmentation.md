@@ -10,7 +10,7 @@ description: "Apprenez à utiliser les différentes fonctionnalités de Braze po
 
 > Cette page montre comment utiliser diverses fonctionnalités de Braze pour alimenter vos cas d'utilisation de segmentation basée sur les comptes B2B.
 
-Vous pouvez effectuer une segmentation B2B basée sur les comptes de deux manières, selon la façon dont vous configurez votre [modèle de données B2B]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
+Vous pouvez effectuer une segmentation B2B basée sur les comptes de deux manières, selon la façon dont vous configurez votre [modèle de données B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - Lorsque vous utilisez des [catalogues pour vos objets de gestion](#option-1-when-using-catalogs-for-your-business-objects)
 - Lorsque vous utilisez des [sources connectées pour vos objets de gestion](#option-2-when-using-connected-sources-for-your-business-objects)

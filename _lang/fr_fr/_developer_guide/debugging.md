@@ -1,25 +1,25 @@
 ---
+page_order: 4.3
 nav_title: Débogage du SDK
 article_title: Débogage du SDK de Braze 
 description: "Apprenez à utiliser le débogueur du SDK de Braze, afin de pouvoir résoudre les problèmes de vos canaux alimentés par le SDK, sans avoir à activer manuellement la journalisation verbeuse dans votre application."
-page_order: 13
 ---
 
 # Débogage du SDK de Braze
 
 > Apprenez à utiliser le débogueur intégré au SDK de Braze, afin de pouvoir résoudre les problèmes de vos canaux alimentés par le SDK, sans avoir à activer la journalisation verbeuse dans votre application.
 
-{% alert important %}
-Actuellement, cette fonctionnalité n'est disponible que pour les applications natives iOS et Android. Pour activer le débogage pour le SDK Web de Braze, vous pouvez [utiliser un paramètre d'URL à]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) la place.
-{% endalert %}
-
 ## Conditions préalables
 
-Pour utiliser le débogueur Braze SDK, assurez-vous que vos SDK sont à jour avec au moins ces versions minimales :
+Pour utiliser le débogueur Braze SDK, vous devez disposer des autorisations `View PII` et `Export User Data`. En outre, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
 ## Débogage du SDK de Braze
+
+{% alert tip %}
+Pour activer le débogage du SDK Braze, vous pouvez [utiliser un paramètre d'URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
+{% endalert %}
 
 ### Étape 1 : Fermez votre application
 

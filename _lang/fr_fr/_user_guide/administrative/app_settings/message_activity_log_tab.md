@@ -16,7 +16,7 @@ Vous pouvez voir les transactions de campagne API, résoudre les problèmes sur 
 Pour accéder au journal, allez dans **Réglages** > **Journal d'activité des messages.**
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **journal d'activité des messages** sous **Paramètres** > **Console de développement.**
+Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **journal d'activité des messages** sous **Paramètres** > **Console de développement.**
 {% endalert %}
 
 ![Journal des activités de message][2]
@@ -37,6 +37,9 @@ Vous pouvez filtrer en fonction des contenus suivants enregistrés dans le **jou
 - Erreurs d’aliasing de l’utilisateur
 - Erreurs de test A/B
 - Erreurs de SMS/MMS
+- Erreurs dans WhatsApp
+- Erreurs de production en ligne/instantané
+- Mauvais déclencheurs d'utilisateurs
 
 Ces messages peuvent provenir de notre propre système, de vos apps ou plateformes, ou de nos partenaires tiers. Cela peut entraîner un nombre infini de messages pouvant apparaître dans ce journal.
 
@@ -70,6 +73,23 @@ Par exemple, certains messages de "blocage" potentiels, en plus de celui énumé
 - Message rejeté en raison de la politique locale.
 - Le message a été bloqué par le destinataire comme étant du spam.
 - Service indisponible, l'hôte du client [_IP_ADDRESS_] est bloqué par Spamhaus.
+
+## Durée de conservation des données
+
+Les erreurs des 60 dernières heures sont disponibles dans les journaux d'activité des messages. Les journaux datant de plus de 60 heures sont nettoyés et ne sont plus accessibles. 
+
+### Nombre de journaux d'erreurs stockés
+
+Le nombre de journaux enregistrés est influencé par plusieurs conditions. Par exemple, si une campagne planifiée est envoyée à des milliers d'utilisateurs, nous verrons potentiellement un échantillon des erreurs dans le journal d'activité des messages au lieu de toutes les erreurs.
+
+Voici un aperçu des conditions affectant le nombre de journaux enregistrés :
+- Jusqu'à 20 journaux d'erreurs de contenu connecté seront enregistrés pour la même campagne au cours d'une heure d'horloge fixe.
+- Jusqu'à 100 journaux d'erreurs du même type seront enregistrés au cours d'une heure d'horloge fixe par espace de travail pour les types d'erreurs suivants :
+    - Erreurs de message avorté
+    - Erreurs de Webhook
+    - Erreurs de notification push
+    - Erreurs de production en ligne/instantané
+    - Mauvais déclencheurs d'utilisateurs
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

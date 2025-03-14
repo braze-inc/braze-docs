@@ -33,7 +33,7 @@ Cette page vous permet d'afficher, de gérer, de créer ou de mettre sur liste d
 
 ### Mise en liste de blocage
 
-Les attributs personnalisés peuvent être bloqués individuellement dans le menu d'actions, ou jusqu'à 10 attributs peuvent être sélectionnés et bloqués en bloc. Si vous bloquez un attribut personnalisé, aucune donnée ne sera collectée concernant cet attribut, les données existantes seront indisponibles à moins d'être réactivées, et les attributs bloqués n'apparaîtront pas dans les filtres ou les graphiques. En outre, si l'attribut est actuellement référencé par des filtres ou des déclencheurs dans d'autres zones du tableau de bord de Braze, une fenêtre modale d'avertissement s'affiche expliquant que toutes les instances des filtres ou des déclencheurs qui y font référence seront supprimées et archivées.
+Les attributs personnalisés peuvent être bloqués individuellement dans le menu d'actions, ou jusqu'à 100 attributs peuvent être sélectionnés et bloqués en bloc. Si vous bloquez un attribut personnalisé, aucune donnée ne sera collectée concernant cet attribut, les données existantes seront indisponibles à moins d'être réactivées, et les attributs bloqués n'apparaîtront pas dans les filtres ou les graphiques. En outre, si l'attribut est actuellement référencé par des filtres ou des déclencheurs dans d'autres zones du tableau de bord de Braze, une fenêtre modale d'avertissement s'affiche expliquant que toutes les instances des filtres ou des déclencheurs qui y font référence seront supprimées et archivées.
 
 ### Marquage en tant qu'information personnelle identifiable (PII)
 
@@ -58,7 +58,7 @@ Vous pouvez supprimer les attributs personnalisés des profils utilisateurs de d
 
 Le rapport d'utilisation répertorie toutes les toiles, campagnes et segments utilisant un attribut personnalisé spécifique. Cette liste ne comprend pas les utilisations de Liquid. 
 
-Vous pouvez consulter jusqu'à 10 rapports d'utilisation à la fois en cochant les cases situées à côté des attributs personnalisés respectifs, puis en sélectionnant **Afficher le rapport d'utilisation.**
+Vous pouvez consulter jusqu'à 100 rapports d'utilisation à la fois en cochant les cases situées à côté des attributs personnalisés respectifs, puis en sélectionnant **Afficher le rapport d'utilisation.**
 
 ### Exporter des données
 
@@ -70,13 +70,13 @@ La liste suivante énumère les méthodes utilisées pour définir des attributs
 
 {% details Développer la documentation par plateforme %}
 
-- [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
 
 {% enddetails %}
 

@@ -90,11 +90,11 @@ Pour accéder à l'onglet **Gestion des liens** dans l'éditeur d'e-mails HTML m
 Les modèles de liens ne s'appliquent pas au texte brut. Cela signifie que Currents peut afficher des clics qui n'incluent pas les paramètres des modèles de lien, car ces clics peuvent provenir de la version texte de l'e-mail.
 {% endalert %}
 
-Lorsque vous ajoutez des modèles de liens dans l'onglet **Gestion des liens**, faites défiler vers la droite pour afficher les modèles que vous avez ajoutés.
+Lorsque vous ajoutez des modèles de liens dans l'onglet **Gestion des liens**, faites défiler vers la droite pour afficher les modèles que vous avez ajoutés. Si les liens existants dans un e-mail ont déjà un modèle de lien ajouté, les liens nouvellement ajoutés auront également le modèle de lien ajouté par défaut.
 
 ## Gestion des modèles de lien
 
-Vous pouvez également [dupliquer les]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) modèles de liens. Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Vous pouvez également [dupliquer les]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles de liens. Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 {% alert important %}
 L'archivage des modèles n'est pas disponible actuellement pour les modèles de liens.

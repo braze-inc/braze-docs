@@ -44,7 +44,7 @@ Vous voudrez peut-être utiliser ces types de segments si vous souhaitez exécut
 
 Selon le nombre de segments que vous voulez et la distribution des utilisateurs au sein de chaque segment, votre plan peut différer.
 
-Pour chacun de vos segments de numéros de compartiment aléatoires (y compris le groupe de contrôle), activez le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). Pour évaluer la satisfaction des variantes par rapport au groupe de contrôle, vous pouvez vous rendre sur votre page d'[événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) et voir à quelle fréquence chaque segment a réalisé certains événements personnalisés.
+Pour chacun de vos segments de numéros de compartiment aléatoires (y compris le groupe de contrôle), activez le [suivi analytique]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). Pour évaluer la satisfaction des variantes par rapport au groupe de contrôle, vous pouvez vous rendre sur votre page d'[événements personnalisés]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) et voir à quelle fréquence chaque segment a réalisé certains événements personnalisés.
 
 ### Réintégration aléatoire de l'audience à l'aide de numéros de compartiment aléatoires
 

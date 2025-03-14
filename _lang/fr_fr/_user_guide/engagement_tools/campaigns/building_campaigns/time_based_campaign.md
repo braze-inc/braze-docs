@@ -138,7 +138,7 @@ La Limite de fréquence est basée sur des jours civils, non pas sur une périod
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Durée maximale pouvant s’écouler entre la réception de la campagne par l’utilisateur et le moment où il effectue l’action assignée pour qu’elle soit considérée comme une conversion. Pour plus d'informations, consultez l’article sur les [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | S.O. |
+| Durée maximale pouvant s’écouler entre la réception de la campagne par l’utilisateur et le moment où il effectue l’action assignée pour qu’elle soit considérée comme une conversion. Pour plus d'informations, consultez l’article sur les [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | S.O. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

@@ -76,7 +76,7 @@ Il peut y avoir un temps de préchauffage de deux à cinq minutes au moment où 
 
 {% tab Microsoft Fabric %}
 1. Créez un principal de service et autorisez l'accès à l'espace de travail Fabric qui sera utilisé pour votre intégration.   
-2. Dans votre espace de travail Fabric, configurez les données sources et accordez des permissions à votre principal de service. 
+2. Dans votre espace de travail Fabric, configurez les données sources et accordez des autorisations à votre principal de service 
 3. Créez une nouvelle source connectée dans le tableau de bord de Braze.
 4. Testez l'intégration.
 5. Utilisez la source connectée pour créer une ou plusieurs segmentations CDI.

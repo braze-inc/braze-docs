@@ -42,9 +42,9 @@ Les rôles permettent une meilleure structuration en regroupant vos autorisation
 {% endtab %}
 {% endtabs %}
 
-### En quoi les jeux d'autorisations et les rôles diffèrent-ils des équipes ?
+## En quoi les jeux d'autorisations et les rôles diffèrent-ils des équipes ?
 
-Reportez-vous à la section [Utilisateurs de l'entreprise]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) pour connaître les différences entre les équipes, les jeux d'autorisations et les rôles.
+{% multi_lang_include permissions.md content="Différences" %}
 
 ## Modifier les autorisations d'un utilisateur
 
@@ -127,13 +127,13 @@ Pour télécharger la liste de vos utilisateurs et de leurs autorisations, allez
 |Espace de travail|Approuver et supprimer des canvas|Permet aux utilisateurs d'approuver ou de refuser les canevas. Le [processus d'approbation des toiles]({{site.baseurl}}/canvas_approval) doit être activé pour que cette autorisation s'applique.|
 |Espace de travail|Modifier les intégrations Currents|Permet aux utilisateurs de modifier une connexion Currents, y compris les informations d'identification. Par défaut, les utilisateurs auxquels est attribuée l'autorisation "Intégrations externes" se voient également attribuer cette autorisation.|
 |Espace de travail|Modifier les segments|Permet aux utilisateurs de créer et de modifier des segmentations. Vous pouvez toujours créer des campagnes avec des segments et filtres existants sans cette autorisation. Vous avez besoin de cette autorisation pour générer un segment des utilisateurs dans un CSV ou recibler le groupe d’utilisateurs dans le CSV.|
-|Espace de travail|Exporter les données utilisateur|Permet aux utilisateurs d'exporter leurs données utilisateur à partir des segments, des campagnes et des Canevas.|
+|Espace de travail|Exporter les données utilisateur|Permet aux utilisateurs d'exporter leurs données utilisateur à partir des segments, des campagnes et des Canevas. Cette autorisation comprend des informations sensibles sur les utilisateurs, telles que les noms, les adresses e-mail et d'autres informations personnelles identifiables (IPI) collectées. |
 |Espace de travail|Importer et mettre à jour les données utilisateur|Permet aux utilisateurs d’importer les fichiers CSV et de mettre à jour les fichiers des utilisateurs d’applications, ainsi que de visualiser la page Importation d’utilisateurs. Cela vous permet également de modifier le statut de l'abonnement d'un utilisateur et les règles d'abonnement/de désabonnement de son groupe d'abonnement.|
 |Espace de travail|Lancer des blocs de contenu|Permet aux utilisateurs de lancer des [blocs de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
 |Espace de travail|Gérer les centres de préférence|Permet aux utilisateurs de lancer des [centres de préférences]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espace de travail|Gérer les applications|Permet aux utilisateurs de modifier les **paramètres de l'application.**|
 |Espace de travail|Gérer les autorisations sur le tableau de bord des catalogues|Permet aux utilisateurs de créer et de gérer des catalogues.|
-|Espace de travail|Gérer les utilisateurs du tableau de bord|Permet aux utilisateurs d'afficher, de modifier et de gérer la page **Utilisateurs de la société**. Les utilisateurs disposant de cette autorisation peuvent modifier les autorisations de tout utilisateur, y compris eux-mêmes. Ainsi, cette autorisation doit être considérée comme un niveau d’accès administratif. Cette autorisation ne permet pas aux utilisateurs de supprimer des utilisateurs car seuls les administrateurs peuvent supprimer des utilisateurs.|
+|Espace de travail|Gérer les utilisateurs du tableau de bord| Permet aux non-administrateurs d'afficher, de modifier et de gérer la page **Utilisateurs de la société**, et de gérer les utilisateurs du tableau de bord dans leur espace de travail en modifiant les autorisations de n'importe quel utilisateur, y compris les leurs. Les utilisateurs disposant de cette autorisation ne peuvent pas supprimer des utilisateurs (seuls les administrateurs peuvent supprimer des utilisateurs).|
 |Espace de travail|Gérer les paramètres des e-mails|Permet aux utilisateurs d'enregistrer les modifications apportées à la configuration de l'e-mail**(Paramètres** > **Préférences e-mail**).|
 |Espace de travail|Gérer les événements, attributs, achats|Permet aux utilisateurs de modifier les attributs personnalisés (les utilisateurs qui n'ont pas cette capacité peuvent toujours afficher les attributs personnalisés), de modifier et d'afficher les propriétés des événements personnalisés, et de modifier et d'afficher les propriétés des produits sous **Paramètres des données.**|
 |Espace de travail|Gérer les intégrations externes|Permet d’accéder à tous les onglets sous **Partenaires technologiques** et offre la possibilité de synchroniser Braze avec d’autres plateformes.|
@@ -144,17 +144,18 @@ Pour télécharger la liste de vos utilisateurs et de leurs autorisations, allez
 |Espace de travail|Gérer les équipes|Permet aux utilisateurs de gérer des **Teams internes**. La possibilité de sélectionner cette autorisation dépend de votre contrat avec Braze.|
 |Espace de travail|Gérer les transformations|Permet aux utilisateurs de créer et de gérer des transformations de données.|
 |Espace de travail|Publier des cartes|Cette permission n’est visible que si les fils d’actualité, qui deviennent obsolètes, sont activés sur votre compte. Ceci n’a aucun effet sur les cartes de contenu. Permet aux utilisateurs de créer et de modifier des cartes de fil d'actualité. Vous pouvez toujours afficher les cartes de fil d’actualité sans cette autorisation. Si votre compte est activé pour le fil d'actualité et qu'un utilisateur doit pouvoir lancer des blocs de contenu existants, il doit disposer des autorisations "Publier des cartes" et "Lancer des blocs de contenu".|
-|Espace de travail|Envoyer des campagnes, des canvas|Permet aux utilisateurs de modifier, d'archiver et d'arrêter des campagnes et des campagnes, de créer des campagnes et de lancer des campagnes.|
+|Espace de travail|Envoyer des campagnes, des canvas|Permet aux utilisateurs de modifier, d'archiver et d'arrêter des campagnes et des campagnes, de créer des campagnes et de lancer des campagnes. |
 |Espace de travail|Afficher les détails de facturation|Permet aux utilisateurs de visualiser les abonnements et la facturation.|
 |Espace de travail|Voir l'intégration currents|Permet aux utilisateurs d'afficher toutes les informations relatives à une connexion Currents, à l'exception des informations d'identification. Par défaut, cette autorisation est également attribuée aux utilisateurs bénéficiant de l'autorisation "Accéder aux campagnes, aux toiles, aux cartes, aux blocs de contenu, aux drapeaux de fonctionnalité, aux segments, à la bibliothèque multimédia, aux emplacements, aux codes de promotion et aux centres de préférences".|
-|Espace de travail|Afficher les attributs personnalisés marqués comme PII|Permet à cet utilisateur d'afficher les attributs personnalisés marqués comme IIP sans être administrateur.|
-|Espace de travail|Afficher les données d'identification|Permet aux utilisateurs de visualiser les champs d'informations personnellement identifiables tels que définis par votre entreprise dans le tableau de bord. Les utilisateurs peuvent également visualiser les champs IIP dans l'onglet **Aperçu en tant qu'utilisateur** des aperçus de messages. |
-|Espace de travail|Voir les profils utilisateur respectueux des données d'identification|Permet aux utilisateurs de voir les profils utilisateur, mais masque les champs que votre entreprise a indiqués comme étant des données d'identification.|
-|Espace de travail|Afficher les transformations|Permet aux utilisateurs de visualiser les [transformations de données de Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
+|Espace de travail|Afficher les attributs personnalisés marqués comme PII|Permet aux utilisateurs non administrateurs de visualiser les attributs personnalisés qui contiennent des informations sensibles et sont marqués comme des informations personnelles identifiables (PII).|
+|Espace de travail|Afficher les données d'identification|Permet aux utilisateurs d'afficher les champs d'informations personnelles identifiables (IPI) tels que définis par votre entreprise dans le tableau de bord. Les utilisateurs peuvent également visualiser les champs IIP dans l'onglet **Aperçu en tant qu'utilisateur** des aperçus de messages.|
+|Espace de travail|Voir les profils utilisateur respectueux des données d'identification|Permet aux utilisateurs de consulter des profils utilisateurs contenant des champs que votre entreprise a définis comme des informations personnelles identifiables (IPI), mais en expurgeant les champs IPI. |
+|Espace de travail|Afficher les transformations|Permet aux utilisateurs de visualiser les [transformations de données de Braze]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Espace de travail|Afficher les données d’utilisation|Permet aux utilisateurs de consulter l'utilisation de l'app, y compris les tableaux de bord des performances des canaux.|
 |Espace de travail|Fusionner les utilisateurs dupliqués|Permet aux utilisateurs de fusionner des profils d'utilisateurs en double.|
 |Espace de travail|Afficher les utilisateurs dupliqués|Permet aux utilisateurs de voir quels profils utilisateurs sont dupliqués.|
 |Espace de travail|Créer et modifier des modèles Canvas|Permet aux utilisateurs de créer et de modifier des modèles de canvas.|
 |Espace de travail|Afficher les modèles Canvas|Permet aux utilisateurs de visualiser les modèles de Canvas.|
 |Espace de travail|Archiver les modèles Canvas|Permet aux utilisateurs d'archiver les modèles de canvas.|
+|Espace de travail|Gérer la segmentation des propriétés d'événements personnalisés|Permet aux utilisateurs de créer des segments basés sur la récurrence et la fréquence des propriétés d'événement.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

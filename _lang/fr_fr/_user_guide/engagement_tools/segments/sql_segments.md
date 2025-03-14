@@ -89,7 +89,7 @@ Pour utiliser le générateur SQL basé sur l’IA, procédez comme suit :
 - Utilisateurs ayant effectué moins de cinq achats au cours de l'année écoulée
 
 ### Conseils
-- Familiarisez-vous avec les [tableaux de données Snowflake]({{site.baseurl}}/sql_segments_tables/) disponibles. Si vous demandez des données qui n'existent pas dans ces tableaux, ChatGPT risque de créer un faux tableau.
+- Familiarisez-vous avec les [tableaux de données Snowflake]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) disponibles. Si vous demandez des données qui n'existent pas dans ces tableaux, ChatGPT risque de créer un faux tableau.
 - Familiarisez-vous avec les [règles d'écriture SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) pour cette fonctionnalité. Le non-respect de ces règles entraînera une erreur. Par exemple, votre code SQL doit sélectionner la colonne `user_id`. Il peut être utile de commencer votre invite par « Utilisateurs qui ».
 - Vous pouvez envoyer jusqu'à 20 invites par minute avec le générateur SQL basé sur l’IA.
 
@@ -107,7 +107,7 @@ Lorsque le traitement de l'extension est terminé, vous pouvez [créer un segmen
 
 ## Requêtes SQL
 
-Votre requête SQL doit être écrite en utilisant la [syntaxe Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consultez la [référence du tableau]({{site.baseurl}}/sql_segments_tables/) pour obtenir la liste complète des tableaux et des colonnes pouvant être interrogés.
+Votre requête SQL doit être écrite en utilisant la [syntaxe Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consultez la [référence du tableau]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) pour obtenir la liste complète des tableaux et des colonnes pouvant être interrogés.
 
 {% alert important %}
 Notez que les tables disponibles pour l'interrogation ne contiennent que des données sur les événements. Si vous souhaitez interroger les attributs de l'utilisateur, vous devez combiner votre segment SQL avec les filtres d'attributs personnalisés du [segmenteur classique]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).

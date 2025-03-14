@@ -24,18 +24,4 @@ guide_featured_list:
 
 ## Quelles sont les différences entre les équipes, les jeux de permissions et les rôles ? 
 
-Vous pouvez utiliser l'équipe, les jeux de permissions et les rôles d'utilisateur pour gérer l'accès et les responsabilités des utilisateurs du tableau de bord au sein de Braze. Chaque fonctionnalité englobe un ensemble différent d'autorisations et de contrôles d'accès.
-
-### Différences clés
-
-De manière générale, chaque fonctionnalité a une portée différente :
-- Les jeux de permissions contrôlent ce que les utilisateurs du tableau de bord peuvent faire dans tous les espaces de travail.
-- Les rôles contrôlent ce que les utilisateurs du tableau de bord peuvent faire dans des espaces de travail spécifiques.
-- Les Teams contrôlent les audiences auxquelles les utilisateurs du tableau de bord peuvent envoyer des messages.
-
-| Fonctionnalité | Ce que vous pouvez faire
-| - | - |
-| [Ensembles d’autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-permission-set) | Regroupez les autorisations liées à des domaines ou à des actions spécifiques (comme pour les « développeurs  et les « marketeurs »), puis appliquez-les aux utilisateurs du tableau de bord qui ont besoin des mêmes autorisations dans différents espaces de travail. |
-| [Rôles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) | Regroupez les autorisations personnalisées individuelles et les contrôles d'accès à l'espace de travail dans des rôles prédéfinis (tels que "Marketeur - Marques de mode" et "Marketeur - Marques de soins"), puis attribuez un rôle aux utilisateurs du tableau de bord afin de leur accorder directement l'accès à l'espace de travail et les autorisations correspondantes. |
-| [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) | Limiter l'accès des utilisateurs du tableau de bord aux ressources en fonction de l'audience (comme l'emplacement/localisation de la base de clients, la langue et les attributs personnalisés). |
-{: .reset-td-br-1 .reset-td-br-2 }
+{% multi_lang_include permissions.md content="Différences" %}

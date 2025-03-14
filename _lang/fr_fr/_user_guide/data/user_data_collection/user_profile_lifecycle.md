@@ -15,8 +15,10 @@ Toutes les données persistantes associées à un utilisateur sont stockées dan
 
 Ces paramètres comprennent :
 
-* `braze_id`
+* `braze_id` (attribué par Braze)
 * `external_id`
+* `email`
+* `phone`
 * Le nombre d’alias d’utilisateur personnalisés que vous définissez
 
 ## Profils d’utilisateurs anonymes
@@ -27,7 +29,7 @@ Au départ, lorsqu'un utilisateur est reconnu par le SDK, un profil utilisateur 
 
 ## Profils d’utilisateurs identifiés
 
-Une fois qu'un utilisateur est reconnaissable dans votre appli (en fournissant une forme d'ID utilisateur ou d'adresse e-mail), nous suggérons d'attribuer un `external_id` au profil de cet utilisateur en utilisant la méthode `changeUser` [(web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). Un `external_id` vous permet d’identifier le même profil utilisateur sur plusieurs appareils. 
+Une fois qu'un utilisateur est reconnaissable dans votre appli (en fournissant une forme d'ID utilisateur ou d'adresse e-mail), nous suggérons d'attribuer un `external_id` au profil de cet utilisateur en utilisant la méthode `changeUser` [(web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html)). Un `external_id` vous permet d’identifier le même profil utilisateur sur plusieurs appareils.
 
 Les autres avantages de l’utilisation d’un `external_id` sont les suivants : 
 
@@ -36,11 +38,20 @@ Les autres avantages de l’utilisation d’un `external_id` sont les suivants 
 - Activez l'importation de données utilisateur à partir de sources extérieures à l'app à l'aide des [endpoints de données utilisateur]({{site.baseurl}}/api/endpoints/user_data/) et ciblez les utilisateurs avec des messages transactionnels à l'aide de nos [endpoints d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging/)
 - Recherchez des utilisateurs individuels à l'aide de nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Test" dans le segmentation, et sur la page d'accueil du site. [**Recherche d'utilisateurs**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) et sur la page Recherche d'utilisateurs.
 
+### Considérations relatives aux ID externes
+
 {% alert warning %}
 N'attribuez pas de `external_id` à un profil utilisateur avant de pouvoir l'identifier de manière unique. Une fois que vous avez identifié un utilisateur, vous ne pouvez plus le rendre anonyme.
 <br><br>
 En outre, un site `external_id` est immuable une fois qu'il a été associé à un profil utilisateur. Toute tentative de définir un autre `external_id` pendant la session d’un utilisateur créera un nouveau profil utilisateur avec le nouveau `external_id` associé. Aucune donnée ne sera transmise entre les deux profils.
 {% endalert %} 
+
+#### Risque lié à l'utilisation d'un e-mail ou d'un e-mail haché comme ID externe
+
+L'utilisation d'une adresse e-mail ou d'une adresse e-mail hachée comme ID externe Braze peut simplifier la gestion des identités dans l'ensemble de vos sources de données. Cependant, il est important de prendre en compte les risques potentiels pour la confidentialité des utilisateurs et la sécurité des données.
+
+- **Informations à deviner :** Les adresses e-mail sont facilement devinables, ce qui les rend vulnérables aux attaques.
+- **Risque d'exploitation :** Si un utilisateur malveillant modifie son navigateur web pour envoyer l'adresse e-mail de quelqu'un d'autre comme ID externe, il pourrait potentiellement accéder à des messages sensibles ou à des informations de compte.
 
 ### Que se passe-t-il lorsque vous identifiez des utilisateurs anonymes ?
 
