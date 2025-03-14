@@ -73,7 +73,7 @@ At this point, Braze generates a randomly selected group of users to comprise th
 
 ## Making changes to your Global Control Group
 
-The only way to make any changes to your Global Control Group is to disable it and create a new one. For example, if you set up a Global Control Group that is 10% of your audience and you want to decrease its size to 5%, you must disable your current Global Control Group and re-enable a new Global Control Group. 
+You can only make changes to your Global Control Group by disabling it and creating a new one. For example, if you set up a Global Control Group that is 10% of your audience and you want to decrease its size to 5%, you must disable your current Global Control Group and re-enable a new Global Control Group. 
 
 You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
 
