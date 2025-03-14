@@ -49,7 +49,7 @@ sequenceDiagram
   participant App as iOS App / Braze SDK
   participant BrazeAPI as Braze API
   participant APNS as Apple Push Notification Service
-  Note over Server, APNS: Launch Option 1<br/>Locallyl Start Activities
+  Note over Server, APNS: Launch Option 1<br/>Locally Start Activities
   App ->> App: Start a Live Activity using <br>`launchActivity(pushTokenTag:activity:)`
   App ->> App: Get push token from iOS
   App ->> BrazeAPI: Activity ID & Push token<br>automatically sent to Braze
