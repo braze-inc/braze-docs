@@ -1,37 +1,24 @@
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
+
 ## Setting up the UI delegate (required)
 
-You can use the optional [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
+To customize the presentation of in-app messages and react to various lifecycle events, you'll need to set up [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). This is a delegate protocol used for receiving and processing triggered in-app message payloads, receiving display lifecycle events, and controlling display timing. To use `BrazeInAppMessageUIDelegate`, you must:
+- Use the default [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) implementation as your `inAppMessagePresenter`. 
+- Include the `BrazeUI` library in your project.
 
-To use `BrazeInAppMessageUIDelegate`:
-- You must be using the default [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) implementation as your `inAppMessagePresenter`. 
-- You must include the `BrazeUI` library in your project.
-
-Then you can set the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate object on the Braze instance by following this sample code:
-
-{% tabs %}
-{% tab swift %}
+### Step 1: Implement the `BrazeInAppMessageUIDelegate` protocol 
 
 First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In our example below, we are implementing this protocol in our application's `AppDelegate` class.
 
+{% tabs %}
+{% tab swift %}
 ```swift
 extension AppDelegate: BrazeInAppMessageUIDelegate {
   // Implement your protocol methods here.
 }
 ```
-
-Then assign the `delegate` object on the `BrazeInAppMessageUI` instance before assigning this in-app message UI as your `inAppMessagePresenter`.
-
-```swift
-let inAppMessageUI = BrazeInAppMessageUI()
-inAppMessageUI.delegate = self
-AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
-```
-
 {% endtab %}
 {% tab OBJECTIVE-C %}
-
-First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In our example below, we are implementing this protocol in our application's `AppDelegate` class.
-
 ```objc
 @interface AppDelegate () <BrazeInAppMessageUIDelegate>
 
@@ -41,17 +28,31 @@ First, implement the `BrazeInAppMessageUIDelegate` protocol and any correspondin
   // Implement your protocol methods here.
 @end
 ```
+{% endtab %}
+{% endtabs %}
 
-Then assign the `delegate` object on the `BrazeInAppMessageUI` instance before assigning this in-app message UI as your `inAppMessagePresenter`.
+### Step 2: Assign the `delegate` object 
 
+Assign the `delegate` object on the `BrazeInAppMessageUI` instance before assigning this in-app message UI as your `inAppMessagePresenter`.
+
+{% tabs %}
+{% tab swift %}
+```swift
+let inAppMessageUI = BrazeInAppMessageUI()
+inAppMessageUI.delegate = self
+AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
+```
+{% endtab %}
+{% tab OBJECTIVE-C %}
 ```objc
 BrazeInAppMessageUI *inAppMessageUI = [[BrazeInAppMessageUI alloc] init];
 inAppMessageUI.delegate = self;
 AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 ```
 
+{% alert important %}
 Not all delegate methods are available in Objective-C due to the incompatibility of their parameters with the language runtime.
-
+{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -423,6 +424,17 @@ Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following val
 For a sample of `InAppMessageUI`, check out our [Swift Braze SDK repository](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) and [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI).
 {% endalert %}
 
+## Hiding the status bar
+
+For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status bar by default. For other types of in-app messages, the status bar is left untouched. To configure this behavior, use the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to set the `statusBarHideBehavior` property on the `PresentationContext`. This field takes one of the following values:
+
+| Status Bar Hide Behavior            | Description                                                                           |
+| ----------------------------------- | ------------------------------------------------------------------------------------- |
+| `.auto`                             | The message view decides the status bar hidden state.                                 |
+| `.hidden`                           | Always hide the status bar.                                                           |
+| `.visible`                          | Always display the status bar.                                                        |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Disabling dark mode
 
 To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) method. The `PresentationContext` passed to the method contains a reference to the `InAppMessage` object to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, Braze will automatically present the in-app message using its light theme.
@@ -529,17 +541,6 @@ func inAppMessage(
 
 {% endtab %}
 {% endtabs %}
-
-## Hiding the status bar
-
-For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status bar by default. For other types of in-app messages, the status bar is left untouched. To configure this behavior, use the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to set the `statusBarHideBehavior` property on the `PresentationContext`. This field takes one of the following values:
-
-| Status Bar Hide Behavior            | Description                                                                           |
-| ----------------------------------- | ------------------------------------------------------------------------------------- |
-| `.auto`                             | The message view decides the status bar hidden state.                                 |
-| `.hidden`                           | Always hide the status bar.                                                           |
-| `.visible`                          | Always display the status bar.                                                        |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Customizing the app store review prompt
 

@@ -14,6 +14,10 @@ description: "Learn about in-app messages for the Braze SDK."
 
 > Learn about in-app messages for the Braze SDK.
 
+## Prerequisites
+
+Before you can use this feature, you’ll need to [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/).
+
 {% sdktabs %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}

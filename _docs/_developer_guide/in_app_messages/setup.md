@@ -31,6 +31,10 @@ If your SDK isn't listed, that means no initial setup is required. You're ready 
 {% multi_lang_include developer_guide/roku/in_app_messages.md %}
 {% endsdktab %}
 
+{% sdktab tvos %}
+{% multi_lang_include developer_guide/tvos/in_app_messages/setup.md %}
+{% endsdktab %}
+
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
