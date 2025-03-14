@@ -103,7 +103,7 @@ Append the following statement to the queue's access policy, being careful to re
 3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
 {% alert note %}
-If you upload your files to the root folder of an S3 bucket then move some of the files to a specific folder in the bucket, you may encounter an unexpected error. Instead, you can change the event notifications to send for only files in the prefix, avoid placing files in the S3 bucket outside that prefix, or update the integration with no prefix, which will then ingest all files.
+If you upload your files to the root folder of an S3 bucket then move some of the files to a specific folder in the bucket, you may encounter an unexpected error. Instead, you can change the event notifications to send for only the files in the prefix, avoid placing files in the S3 bucket outside that prefix, or update the integration with no prefix, which will then ingest all files.
 {% endalert %}
 
 ### Step 5: Create an IAM policy
@@ -166,6 +166,7 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
+{: start="4"}
 4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
 
 <br><br>![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
@@ -196,6 +197,7 @@ Give the role a name and a description, and select **Create Role**.
 
 <br><br>![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
+{: start="4"}
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
 
 <br><br> ![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
