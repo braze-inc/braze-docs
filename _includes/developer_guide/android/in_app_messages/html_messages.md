@@ -1,7 +1,3 @@
-# HTML in-app messages
-
-> Learn how to add the Braze JavaScript interface to your Android and FireOS apps, so you can use the Braze API to create [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) in your custom WebViews.
-
 ## How it works
 
 With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
@@ -37,3 +33,21 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 
 {% endtab %}
 {% endtabs %}
+
+## Embedding YouTube content
+
+YouTube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the activity where the in-app message is being displayed; see the [Android developer guide](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling) for more details. Hardware acceleration is only available on Android API versions 11 and later.
+
+The following is an example of an embedded YouTube video in an HTML snippet:
+
+```html
+<body>
+    <div class="box">
+        <div class="relativeTopRight">
+            <a href="appboy://close">X</a>
+        </div>
+        <iframe width="60%" height="50%" src="https://www.youtube.com/embed/_x45EB3BWqI">
+        </iframe>
+    </div>
+</body>
+```

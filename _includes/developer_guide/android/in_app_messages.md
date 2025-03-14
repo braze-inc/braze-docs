@@ -1,6 +1,4 @@
-# In-app messages
-
-> [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. For in-app message examples, check out our [case studies](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Message types
 
