@@ -32,8 +32,8 @@ search_rank: 1
 {: start="2"}
 2\. **SMS를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가하세요.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 6. [구독 그룹을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 선택하여 적절한 사용자에게 메시지를 보낼 수 있도록 하세요. 구독 그룹을 선택할 때 Braze는 자동으로 세그먼트 필터를 추가하여 구독한 사용자만 캠페인을 수신할 수 있도록 합니다. 해당 구독 그룹에 속하는 긴 코드와 짧은 코드만 대상 사용자에게 SMS를 보내는 데 사용됩니다.
 
@@ -66,19 +66,27 @@ search_rank: 1
 
 !["안녕하세요 first_name, 여러분의 성원에 감사드립니다!"라는 메시지가 담긴 Braze의 SMS 빌더! 매장에 들러 이 SMS를 제시하고 특별 할인 혜택을 받아보는 것은 어떨까요? 답장 중지를 통해 메시지 수신을 중지할 수 있습니다."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
-{% alert tip %}
-{% raw %}
-Liquid를 사용하려는 경우 선택한 개인화의 기본값을 포함해야 수신자의 고객 프로필이 불완전한 경우 이름이나 일관된 문장 대신 빈 `Hi, !` 입력 안내가 표시되지 않습니다.
-{% endraw %}
-{% endalert %}
+### Adding a contact card
 
-멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+You can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. 이러한 카드에 회사 이름, 전화번호, 주소, 이메일, 작은 사진 등의 공통 속성을 지정할 수 있습니다. 자세한 내용은 [연락처 카드에서]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) 확인하세요.
+
+### Tips
+
+#### Using Liquid
+
+{% raw %}
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
+{% endraw %}
+
+#### Generating AI copy
+
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![SMS 작성기의 메시지 필드에 있는 AI 카피라이터 실행 버튼(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### 연락처 카드
+#### Creating right-to-left messages
 
-원하는 경우 SMS 메시지에 연락처 카드를 추가하여 고객이 비즈니스 및 연락처 정보를 연락처에 쉽게 추가할 수 있도록 할 수 있습니다. 이러한 카드에 회사 이름, 전화번호, 주소, 이메일, 작은 사진 등의 공통 속성을 지정할 수 있습니다. 자세한 내용은 [연락처 카드에서]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) 확인하세요.
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## 3단계: 메시지 미리보기 및 테스트
 

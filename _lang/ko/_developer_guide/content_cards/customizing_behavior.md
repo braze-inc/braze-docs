@@ -14,7 +14,7 @@ platform:
 
 # 콘텐츠 카드 동작 사용자 지정
 
-> 이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)를 참조하세요. 
+> 이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/getting_started/customization_overview)를 참조하세요. 
 
 ## 키-값 쌍
 

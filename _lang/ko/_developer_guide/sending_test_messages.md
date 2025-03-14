@@ -1,7 +1,7 @@
 ---
 nav_title: 테스트 메시지 보내기
 article_title: 테스트 메시지 보내기
-page_order: 6
+page_order: 4.1
 description: "이 참조 문서에서는 다양한 채널에 대한 테스트 메시지 보내기에 대해 설명합니다."
 
 ---

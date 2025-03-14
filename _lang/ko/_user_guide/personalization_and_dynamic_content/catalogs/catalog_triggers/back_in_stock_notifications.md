@@ -7,7 +7,7 @@ description: "이 참고 문서에서는 Braze 카탈로그에서 품절 알림�
 
 # 품절 알림
 
-> Braze 카탈로그와 캔버스를 통해 품절 알림을 조합하여 품목의 품절 시 고객에게 알릴 수 있습니다. 고객이 선택한 커스텀 이벤트를 수행할 때마다 아이템이 보충될 때마다 자동으로 알림을 받도록 구독할 수 있습니다.
+> Use a combination of back-in-stock notifications through Braze catalogs and a Canvas to notify customers when an item is back in stock. 고객이 선택한 커스텀 이벤트를 수행할 때마다 아이템이 보충될 때마다 자동으로 알림을 받도록 구독할 수 있습니다.<br><br>This page covers how back-in-stock notifications work and how you can set up and use them.
 
 사용자가 아이템에 대한 커스텀 이벤트를 트리거하면 자동으로 해당 아이템의 품절 알림을 받도록 구독을 신청합니다. 아이템의 재고 수량이 재고 규칙을 충족하면(예: 100보다 큰 재고) 모든 구독자가 캠페인 또는 캔버스를 통해 알림을 받을 수 있습니다. 그러나 알림을 선택한 사용자만 알림을 받게 됩니다. 
 
@@ -29,7 +29,7 @@ description: "이 참고 문서에서는 Braze 카탈로그에서 품절 알림�
     <br> ![카탈로그 설정 서랍.][2]{: style="max-width:70%;"}
     - **대체 카탈로그** 커스텀 이벤트에 `catalog_name` 속성이 없는 경우 이월 구독에 사용할 카탈로그입니다.
     - **구독을 위한 사용자 지정 이벤트는** 사용자에게 품절 알림을 구독하도록 설정하는 데 사용되는 Braze 사용자 지정 이벤트입니다. 이 이벤트가 발생하면 이벤트를 수행한 사용자가 구독하게 됩니다.
-    - **구독 취소를 위한 사용자 지정 이벤트는** 재고가 없는 알림에서 사용자의 구독을 취소하는 데 사용되는 Braze 사용자 지정 이벤트입니다.
+    - **구독 취소를 위한 사용자 지정 이벤트는** 재고가 없는 알림에서 사용자의 구독을 취소하는 데 사용되는 Braze 사용자 지정 이벤트입니다. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
     - **품목 ID 이벤트 속성**은 위 커스텀 이벤트의 속성으로, 이월 구독 또는 구독 취소를 위한 품목을 결정하는 데 사용됩니다. 사용자 지정 이벤트의 이 속성에는 카탈로그에 있는 항목 ID가 포함되어야 합니다. 사용자 지정 이벤트에는 이 항목이 어느 카탈로그에 있는지 지정하기 위해 `catalog_name` 속성도 포함되어야 합니다.
     
     - 샘플 커스텀 이벤트는 다음과 같습니다
@@ -84,7 +84,7 @@ description: "이 참고 문서에서는 Braze 카탈로그에서 품절 알림�
 
 {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%}을 사용하면 재고로 돌아온 아이템의 ID를 반환합니다. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%}은 업데이트 전 아이템의 인벤토리 값을 반환하고 {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%}은 업데이트 후 새 인벤토리 값을 반환합니다.
 
-이 Liquid 태그 {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%}를 메시지 상단에 사용한 다음, {%raw%}``{{ items[0].<field_name> }}``{%endraw%}를 사용하여 메시지 전체에서 해당 항목에 대한 데이터를 액세스하세요.
+Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} at the top of your message, then use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} to access data about that item throughout the message.
 
 ## 고려사항
 

@@ -36,7 +36,7 @@ Braze에서 **분석** > **예측 이벤트**로 이동합니다.
 
 ## 2단계: 이벤트 추적 지정 {#event-tracking}
 
-사용자의 이벤트를 Braze에서 [구매]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) 이벤트로 저장할지, 아니면 [커스텀 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)로 저장할지 지정합니다.
+Specify if your users' events are stored in Braze as [purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 여기에서 선택한 방법이 Braze가 머신 러닝 모델을 생성하기에 충분한 데이터를 제공하는지 확인할 수 있습니다. 요구 사항이 충족되지 않으면 애플리케이션에서도 다른 로깅 방법을 사용하는 경우 해당 방법을 선택해 보세요. 안타깝게도 그렇지 않은 경우, Braze는 사용 가능한 데이터의 양으로 예측을 생성할 수 없습니다. 이 오류가 잘못 표시되고 있다고 생각되면 고객 성공 매니저에게 문의하세요.
 

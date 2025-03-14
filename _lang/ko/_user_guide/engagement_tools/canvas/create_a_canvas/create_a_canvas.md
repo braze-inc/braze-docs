@@ -78,14 +78,14 @@ search_rank: 1
 여기에서 캔버스의 이름을 지정하고 [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams)을(를) 할당하며 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags)를 만들거나 추가합니다. 캔버스에 대한 전환 이벤트를 할당할 수도 있습니다.
 
 {% alert tip %}
-캔버스에 태그를 지정하여 쉽게 찾고 이를 이용하여 보고서를 작성할 수 있습니다. 예를 들어, [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그로 필터링할 수 있습니다.
+캔버스에 태그를 지정하여 쉽게 찾고 이를 이용하여 보고서를 작성할 수 있습니다. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
 ![캔버스 이름, 설명, 위치 및 태그 필드가 있는 캔버스 세부 정보 페이지입니다.][53]
 
 #### 전환 이벤트 선택
 
-전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. 이 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)는 귀하의 캔버스 효율성을 측정할 것입니다. 
+전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![구매하기 전환 이벤트 유형의 주요 전환 이벤트 A는 3일의 전환 기한 내에 구매를 한 사용자의 대화를 기록합니다.][52]
 
@@ -146,7 +146,7 @@ search_rank: 1
 
 #### 오디언스를 테스트 중
 
-세그먼트와 필터를 타겟 오디언스에 추가한 후, [사용자를 조회하여]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) 오디언스 기준에 맞는지 확인함으로써 오디언스가 예상대로 설정되었는지 테스트할 수 있습니다.
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
 !['사용자 조회' 필드에서는 외부 사용자 아이디 또는 Braze 아이디로 검색할 수 있습니다.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
@@ -218,7 +218,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 {% details 단계를 보려면 확장하세요 %}
 
-1. 랜덤 숫자를 저장할 커스텀 속성을 만드세요. 쉽게 찾을 수 있는 "lottery_number" 또는 "random_assignment"와 같은 이름을 지정하세요. 속성을 [대시보드]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/)에서 생성하거나 API 호출을 통해 [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)에서 생성할 수 있습니다.<br><br>
+1. 랜덤 숫자를 저장할 커스텀 속성을 만드세요. 쉽게 찾을 수 있는 "lottery_number" 또는 "random_assignment"와 같은 이름을 지정하세요. You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. 캔버스의 시작 부분에서 웹훅 캠페인을 만드세요. 이 캠페인은 사용자가 무작위 숫자를 생성하고 이를 커스텀 속성으로 저장하는 매개체가 될 것입니다. [웹훅 생성]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook)을 참조하십시오. URL을 우리 `/users/track` 엔드포인트로 설정하십시오.<br><br>
 3. 무작위 숫자 생성기를 만드세요. 사용자의 고유한 입장 시간을 활용하여 무작위 숫자를 생성하는 [여기에 설명된](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486) 코드를 사용할 수 있습니다. 결과 숫자를 Liquid 변수로 설정하여 웹훅 캠페인 내에서 사용하세요.<br><br>
 4. 웹훅 캠페인에서 `/users/track` 호출을 포맷하여 1단계에서 생성한 커스텀 속성을 현재 사용자의 프로필에 생성한 임의의 숫자로 설정하세요. 이 단계가 실행되면 사용자가 캠페인에 들어올 때마다 변경되는 무작위 숫자를 성공적으로 만들 수 있습니다.<br><br>
@@ -336,7 +336,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 ![Braze의 캔버스 예시.][19]
 
 {% alert tip %}
-이미 실행한 캔버스를 편집해야 한다고요? 당연히 가능합니다! [출시 후 캔버스 편집]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)에 대한 자세한 내용을 확인하세요.
+이미 실행한 캔버스를 편집해야 한다고요? 당연히 가능합니다! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
 

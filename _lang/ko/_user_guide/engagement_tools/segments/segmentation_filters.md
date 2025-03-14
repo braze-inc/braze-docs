@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: 세그먼트 구성원
-    description: "세그먼트, 캠페인 등 필터가 사용되는 모든 곳에서 세그먼트 멤버십을 기준으로 필터링하고 하나의 캠페인 내에서 여러 개의 서로 다른 세그먼트를 타겟팅할 수 있습니다. <br><br>이미 이 필터를 사용하고 있는 세그먼트는 다른 세그먼트에 추가로 포함하거나 중첩할 수 없습니다. 동일한 필터를 사용하여 포함하려는 세그먼트를 다시 만들어야 합니다."
+    description: "세그먼트, 캠페인 등 필터가 사용되는 모든 곳에서 세그먼트 멤버십을 기준으로 필터링하고 하나의 캠페인 내에서 여러 개의 서로 다른 세그먼트를 타겟팅할 수 있습니다. <br><br>Note that segments already using this filter cannot be further included or nested into other segments because this may create a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it. Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters."
     tags:
       - Segment or CSV membership
   - name: Braze 세그먼트 확장

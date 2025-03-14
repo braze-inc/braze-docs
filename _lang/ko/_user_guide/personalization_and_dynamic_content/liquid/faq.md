@@ -72,20 +72,17 @@ Braze에는 메시지에서 사용할 수 있는 세그먼트에 대한 리퀴�
 
 루프는 [반복 태그](https://shopify.github.io/liquid/tags/iteration/)라고도 합니다. Liquid 스니펫에서 for 루프 로직을 사용하면 조건이 충족될 때까지 Liquid 블록을 순환할 수 있습니다. 
 
-Braze에서는 배열 사용자 지정 속성의 항목이나 [카탈로그]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) 또는 [커넥티드 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) 호출 응답에서 반환된 값 및 개체 목록을 확인하는 데 사용할 수 있습니다. 특히, 제품의 재고가 있는지 또는 제품의 최소 등급이 있는지 확인하는 메시징의 일부로 루프 로직을 사용할 수 있습니다. 
+In Braze, this could be used for checking items in an array custom attribute, or a list of values and objects returned by a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) call response. 특히, 제품의 재고가 있는지 또는 제품의 최소 등급이 있는지 확인하는 메시징의 일부로 루프 로직을 사용할 수 있습니다. 
 
-예를 들어 100개의 행으로 구성된 카탈로그를 검색하고 Get Going이라는 신발 회사의 모든 이미지를 포함하려는 경우 이 Liquid 스니펫을 사용할 수 있습니다:
+For example, let's say you have a catalog called "Games" that has a selection called "cheap_games". To pull the titles of the games in "cheap_games", you could use this Liquid snippet:
 
 {% raw %}
-
 ```liquid
-{% for item in catalog %}
-{% if {{item.brand}} = "GetGoing %}
-{{item.image}}
-{% endif %}
+{% catalog_selection_items Games cheap_games %}
+{% for item in items %}
+ Get this game: {{ item.title }}
 {% endfor %}
 ```
-
 {% endraw %}
 
 설정된 조건이 충족되면 메시지를 진행할 수 있습니다. 이 로직을 사용하면 다양한 조건에 대해 Liquid 블록을 반복하는 대신 시간을 절약할 수 있습니다.

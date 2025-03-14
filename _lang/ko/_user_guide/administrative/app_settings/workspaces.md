@@ -25,9 +25,9 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 전역 헤더의 워크스페이스 드롭다운에서 새 워크스페이스를 만들거나 기존 워크스페이스 간에 전환할 수 있습니다.
 
-1. 워크스페이스 드롭다운을 선택하고 <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **워크스페이스 만들기**를 클릭합니다.
+1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
 
-![][1]
+![The workspace dropdown with the "Create workspace" button.][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. 작업 공간에 이름을 지정하세요.
@@ -39,29 +39,29 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 {:start="3"}
 3\. **만들기**를 선택합니다. Braze가 워크스페이스를 생성하는 데 몇 초 정도 걸릴 수 있습니다.
 
-![][2]
+!["Create Workspace" modal with the name "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 앱 인스턴스 추가를 시작할 수 있는 **앱 설정** 페이지로 이동합니다. 이 페이지는 **설정** > **앱 설정에서** 언제든지 액세스할 수 있습니다.
 
-![][3]
+!["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.][3]
 
 ### 3단계: 앱 인스턴스 추가
 
 워크스페이스 내에서 수집되는 다양한 사이트와 앱을 "앱 인스턴스"라고 합니다.
 
-1. **앱 설정** 페이지에서 **\+ 앱 추가를** 클릭합니다.
+1. From the **App Settings** page, select **\+ Add app**.
 2. 앱 인스턴스의 이름을 지정하고 이 앱 인스턴스가 어떤 플랫폼에 있는지 선택하세요. 여러 플랫폼을 선택하면 Braze는 각 플랫폼에 대해 하나의 앱 인스턴스를 생성합니다.
 
-![][4]{: style="max-width:60%" }
+!["Add New App to Upon Voyage US - Staging" modal with options to select app details.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. **앱 추가**를 클릭하여 확인합니다.
+3\. Select **Add app** to confirm.
 
 #### 앱 API 키
 
 앱 인스턴스를 추가하면 해당 API 키에 액세스할 수 있습니다. API 키는 앱 인스턴스와 Braze API 간에 요청을 할 때 사용됩니다. API 키는 앱이나 웹사이트와 Braze SDK를 통합하는 데에도 중요합니다.
 
-![][5]
+![Settings page for the Upon Voyage iOS app with fields for the API Key and SDK Endpoint.][5]
 
 {% alert note %}
 각 플랫폼에서 앱의 각 버전에 대해 별도의 앱 인스턴스를 생성해야 합니다. 예를 들어 iOS와 Android 모두에 무료 및 프로 버전의 앱이 있는 경우 워크스페이스 내에 4개의 앱 인스턴스(무료 iOS 앱, 무료 Android 앱, 프로 iOS 앱, 프로 Android 앱)를 생성합니다. 이렇게 하면 각 앱 인스턴스에 대해 하나씩 사용할 수 있는 4개의 API 키가 제공됩니다.
@@ -73,7 +73,7 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 이 필드는 앱이나 웹사이트에 Braze SDK를 통합한 후에 표시됩니다. 플랫폼에 최신 버전의 Braze SDK를 사용할 수 있는 경우 "최신 버전 사용 가능" 태그가 표시됩니다.
 
-![][6]
+!["Live SDK Version" section with a field value of "5.4.0" and an icon that says a new version is available.][6]
 
 ### 4단계: 필요에 따라 반복
 
@@ -89,7 +89,7 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 즐겨찾는 워크스페이스를 추가하여 가장 자주 사용하는 워크스페이스에 더욱 빠르게 액세스할 수 있습니다.
 
-![][7]
+![Workspace dropdown with the tab for "Favorite workspaces".][7]{: style="max-width:50%;"}
 
 즐겨찾는 작업 공간을 추가하려면:
 
@@ -108,21 +108,22 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 2. 워크스페이스 이름 위로 마우스를 가져가 <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i> 을 선택합니다.
 3. 워크스페이스에 새 이름을 지정한 다음 <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **저장을** 선택합니다.
 
-![][8]
+![The pencil icon appearing next to the workspace name.][8]{: style="max-width:50%;"}
 
-### 워크스페이스 삭제하기
+### Deleting workspaces and app instances
 
-
-워크스페이스를 삭제하려면,
+To delete your workspace or app instance:
 
 1. **설정** > **앱 설정으로** 이동합니다.
-2. **워크스페이스 삭제**를 선택합니다.
+2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
+
+You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/help/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
 {% alert warning %}
 작업 공간을 삭제할 때는 주의하세요! 워크스페이스가 삭제된 후에는 복원할 수 없습니다.
 {% endalert %}
 
-![][9]
+![The App Settings page with a button to delete a workspace and a trash can icon to delete an app.][9]
 
 ## 자주 묻는 질문
 
@@ -148,7 +149,7 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 2. **타겟팅하는 앱 및 웹사이트**의 경우 **특정 앱의 사용자**를 선택합니다.
 3. **특정 앱** 드롭다운에서 앱 또는 사이트를 선택합니다.
 
-![][10]{: style="max-width:75%" }
+![Segment that is targetting users from specific apps.][10]
 
 그런 다음 이 세그먼트를 메시지에 추가하고 필요한 경우 추가 세그먼트 및 필터를 사용하여 오디언스를 더욱 세분화할 수 있습니다.
 

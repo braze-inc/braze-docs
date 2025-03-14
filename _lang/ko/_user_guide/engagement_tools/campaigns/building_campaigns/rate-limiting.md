@@ -86,6 +86,8 @@ A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은
 
 각 분마다 비율 제한이 있는 메시지가 고르게 전송되지 않을 수 있습니다. 10,000개의 메시지 전송 속도 제한의 예를 사용하면, 이는 Braze가 분당 10,000개 이상의 메시지가 전송되지 않도록 보장한다는 의미입니다. 이것은 10,000개의 메시지 중 더 높은 비율이 마지막 30초에 비해 처음 30초 이내에 전송된다는 것을 의미할 수 있습니다. 
 
+Also, note that the rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
+
 {% alert important %}
 이러한 형태의 속도 제한으로 인해 시간에 민감한 메시지가 지연되지 않도록 주의하세요. 세그먼트에 3천만
 {% endalert %}
