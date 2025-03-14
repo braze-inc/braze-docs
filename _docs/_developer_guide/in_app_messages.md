@@ -6,13 +6,13 @@ platform:
   - FireOS
   - Swift
 page_order: 2.4
-description: "Learn how to set up in-app messages for the Braze SDK."
+description: "Learn about in-app messages for the Braze SDK."
 
 ---
 
-# In-app messages
+# About in-app messages
 
-> Learn how to set up in-app messages for the Braze SDK.
+> Learn about in-app messages for the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}

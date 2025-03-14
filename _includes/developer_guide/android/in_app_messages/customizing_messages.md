@@ -1,22 +1,10 @@
-## Custom listeners
-
-Before customizing in-app messages with custom listeners, it's important to understand the [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html), which handles the majority of in-app message handling. As described in [step 1]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#step-1-braze-in-app-message-manager-registration) of the in-app message integration guide, it must be registered for in-app messages to function appropriately.
-
-`BrazeInAppMessageManager` manages in-app message display on Android. It contains helper class instances that help it manage the lifecycle and display of in-app messages. All of these classes have standard implementations and defining custom classes is completely optional. However, doing so can add another level of control over the display and behavior of in-app messages. These customizable classes include:
-
-- [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html) - [Custom manage in-app message display and behavior](#custom-manager-listener)
-- [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html) - [Build custom in-app message views](#custom-view-factory)
-- [`IInAppMessageAnimationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-animation-factory/index.html) - [Define custom in-app message animations](#custom-animation-factory)
-- [`IHtmlInAppMessageActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-html-in-app-message-action-listener/index.html) - [Custom manage HTML in-app message display and behavior](#custom-html-in-app-message-action-listener)
-- [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) - [Custom manage in-app message view hierarchy interaction](#custom-view-wrapper-factory)
-
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/in_app_messages/setup/?sdktab=android).
 
 ## Setting a custom manager listener
 
-The `BrazeInAppMessageManager` automatically handles the display and lifecycle of in-app messages. If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [extras]({{site.baseurl}}/developer_guide/platforms/android/news_feed/customization/key_value_pairs/), and much more.
+The `BrazeInAppMessageManager` that you [set up previously]({{site.baseurl}}/developer_guide/in_app_messages/setup/?sdktab=android) automatically handles the display and lifecycle of in-app messages.
+
+If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [extras]({{site.baseurl}}/developer_guide/platforms/android/news_feed/customization/key_value_pairs/), and much more.
 
 ### Step 1: Implement an in-app message manager listener
 
