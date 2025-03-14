@@ -1,13 +1,4 @@
-# Geofences
-
-> Learn how to set up geofences for the Braze Android SDK. A [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences) is a virtual geographic area that forms a circle around a specific global position, and is represented by combining latitude, longitude, and a radius.
-
-## Prerequisites
-
-To use geofences for Android, you'll need to complete the following:
-
-1. Your integration must support background push notifications.
-2. Braze geofences or location collection must be enabled.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
 
 ## Setting up geofences
 
