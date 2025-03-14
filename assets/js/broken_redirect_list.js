@@ -2052,4 +2052,7 @@ validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/s
 validurls['/docs/partners/ada/'] = '/docs/partners/home/';
 validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'] = '/docs/partners/home/';
 
+
+validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
+
 // validurls['OLD'] = 'NEW';
