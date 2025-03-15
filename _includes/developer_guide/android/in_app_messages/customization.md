@@ -425,25 +425,6 @@ We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.
 {% endtab %}
 {% endtabs %}
 
-## Setting key-value pairs
-
-In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under **Settings** when creating an in-app message campaign. These can be used to send data with an in-app message for further handling by the application.
-
-Call the following method when you get an in-app message object to retrieve its extras. For more information, refer to the [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
-
-{% tabs %}
-{% tab JAVA %}
-```java
-Map<String, String> getExtras()
-```
-{% endtab %}
-{% tab KOTLIN %}
-```kotlin
-extras: Map<String, String>
-```
-{% endtab %}
-{% endtabs %}
-
 ## Custom styles
 
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. This reference article covers custom in-app messaging styling for your Android or FireOS application.

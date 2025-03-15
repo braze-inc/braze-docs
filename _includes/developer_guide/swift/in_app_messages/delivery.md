@@ -1,46 +1,26 @@
-## Trigger types
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-In-app messages are triggered by events logged by the SDK. You can trigger an in-app message off of the following event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, the `Specific Purchase` and `Custom Event` triggers contain robust property filters.
+## Message triggers
+
+### Trigger types
+
+In-app messages are automatically triggered when the SDK logs one of the following custom event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Note that the `Specific Purchase` and `Custom Event` triggers also contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/) article to learn more. 
+In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/platforms/analytics/logging_custom_events/).
 {% endalert %}
 
-## Enabling in-app messages
+### Delivery semantics
 
-To allow Braze to display in-app messages, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
+All eligible in-app messages are delivered to a user's device at the start of their session. When delivered, the SDK will prefetch assets, so they're available at trigger time, minimizing display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered.
 
-Note that you will need to import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
+For more information about the SDK's session start semantics, see[Session Lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle).
 
-{% tabs %}
-{% tab swift %}
+### Default rate limit
 
-```swift
-AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
-```
+By default, you can send an in-app message once every 30 seconds.
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
-```
-{% endtab %}
-{% endtabs %}
-
-## Delivery semantics
-
-All in-app messages that a user is eligible for are delivered to the user's device on session start. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
-
-When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
-
-There can be some latency for in-app messages that display immediately on delivery (session start, push click) due to assets not being prefetched. For more information about the SDK's session start semantics, read about our [session lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle).
-
-## Minimum time interval between triggers
-
-By default, we rate limit in-app messages to once every 30 seconds to faciliate a quality user experience.
-
-You can override this value by setting the `triggerMinimumTimeInterval` property in your Braze configuration. Be sure to configure this value before initializing your Braze instance. Set the `triggerMinimumTimeInterval` to the integer value you want as your minimum time in seconds between in-app messages:
+To override this, add the `triggerMinimumTimeInterval` property to your Braze configuration before the Braze instance is initialized. It can be set to any positive integer and represents the minimum time interval in seconds. For example:
 
 {% tabs %}
 {% tab swift %}
@@ -70,9 +50,158 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-## Failing to find a matching trigger
+## Key-value pairs
 
-When Braze fails to find a matching trigger for a particular event, it will call [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/). Implement this method in your class adopting `BrazeDelegate` to handle this scenario. 
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app. For example:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+let customization = message.extras["custom-display"] as? String
+if customization == "colorful-slideup" {
+  // Perform your custom logic.
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
+  NSString *customization = message.extras[@"custom-display"];
+  if ([customization isEqualToString:@"colorful-slideup"]) {
+    // Perform your custom logic.
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+For a full implementation, you may refer to the in-app message customization samples in our [Example app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+
+## Disabling automatic triggers
+
+To prevent in-app messages from automatically triggering:
+
+1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our [iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
+
+## Manually triggering messages
+
+### Using a server-side event
+
+To trigger in-app messages using server-side events, send a silent push to the device to allow the device to log an SDK-based event. This SDK event can subsequently trigger the user-facing in-app message.
+
+#### Step 1: Handle silent push and key-value pairs
+
+Implement the following function and call it within the [`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`: method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application/):
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+func handleExtras(userInfo: [AnyHashable : Any]) {
+  print("A push was received")
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
+    AppDelegate.braze?.logCustomEvent("IAM Trigger", properties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
+  }
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (void)handleExtrasFromPush:(NSDictionary *)userInfo {
+  NSLog(@"A push was received.");
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
+    [AppDelegate.braze logCustomEvent:@"IAM Trigger" properties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+  }
+};
+```
+
+{% endtab %}
+{% endtabs %}
+
+When the silent push is received, an SDK recorded event "in-app message trigger" will be logged against the user profile. 
+
+{% alert important %}
+Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
+{% endalert %}
+
+#### Step 2: Create a silent push campaign
+
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/) that is triggered via the server-sent event. 
+
+![An action-based delivery in-app message campaign that will be delivered to users whose user profiles have the custom event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+
+The push campaign must include key-value pair extras, which indicate that this push campaign is sent to log an SDK custom event. This event will be used to trigger the in-app message.
+
+![An action-based delivery in-app message campaign that has two key-value pairs. "CAMPAIGN_NAME" set as "In-app message name example", and "IS_SERVER_EVENT" set to "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+
+The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
+
+You can alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. When logging the custom event, these extras can be used as the parameter of either the event name or as an event property.
+
+#### Step 3: Create an in-app message campaign
+
+Create your user-visible in-app message campaign in the Braze dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
+
+In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
+
+![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "In-app message trigger" where "campaign_name" equals "IAM Campaign Name Example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+
+{% alert note %}
+Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
+{% endalert %}
+
+### Displaying a pre-defined
+
+To manually display a pre-defined in-app message, use the following method:
+
+```swift
+if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMessage() {
+  AppDelegate.braze?.inAppMessagePresenter?.present(message: inAppMessage)
+}
+```
+
+### Displaying a message in real-time
+
+You can also display local in-app messages in real-time by manually calling the [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) method on your `inAppMessagePresenter`. For example:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+let customInAppMessage = Braze.InAppMessage.slideup(
+  .init(message: "YOUR_CUSTOM_SLIDEUP_MESSAGE", slideFrom: .bottom, themes: .defaults)
+)
+AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];
+customInAppMessage.type = BRZInAppMessageRawTypeSlideup;
+customInAppMessage.message = @"YOUR_CUSTOM_SLIDEUP_MESSAGE";
+customInAppMessage.slideFrom = BRZInAppMessageRawSlideFromBottom;
+customInAppMessage.themes = @{
+  @"light": BRZInAppMessageRawTheme.defaultLight,
+  @"dark": BRZInAppMessageRawTheme.defaultDark
+};
+[AppDelegate.braze.inAppMessagePresenter presentMessage:customInAppMessage];
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+Creating your own in-app message, you opt out of any analytics tracking and will have to manually handle click and impression logging using your `message.context`.
+{% endalert %}
 
 ## The in-app message stack
 
@@ -108,71 +237,3 @@ A triggered in-app message will be discarded in the following situations:
 - The device orientation doesn't match the triggered in-app message's orientation.
 
 The in-app message will be removed from the stack. After being discarded, the in-app message can be triggered later on by another instance of the trigger event.
-
-## Real-time in-app message creation and display
-
-If you wish to display an in-app message at other times within your app, you may manually call the [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) method on your `inAppMessagePresenter`. In-app messages can be locally created within the app and displayed via Braze. This is particularly useful for displaying messages you wish to trigger within the app in real-time.
-
-Note that by creating your own in-app message, you opt out of any analytics tracking and will have to manually handle click and impression logging using your `message.context`.
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-let customInAppMessage = Braze.InAppMessage.slideup(
-  .init(message: "YOUR_CUSTOM_SLIDEUP_MESSAGE", slideFrom: .bottom, themes: .defaults)
-)
-AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];
-customInAppMessage.type = BRZInAppMessageRawTypeSlideup;
-customInAppMessage.message = @"YOUR_CUSTOM_SLIDEUP_MESSAGE";
-customInAppMessage.slideFrom = BRZInAppMessageRawSlideFromBottom;
-customInAppMessage.themes = @{
-  @"light": BRZInAppMessageRawTheme.defaultLight,
-  @"dark": BRZInAppMessageRawTheme.defaultDark
-};
-[AppDelegate.braze.inAppMessagePresenter presentMessage:customInAppMessage];
-```
-
-{% endtab %}
-{% endtabs %}
-
-## Key-value pair extras
-
-`Braze.InAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down with an in-app message for further handling by your app.
-
-For example, consider a case where we want to customize the presentation of an in-app message based on the contents of its extras. We could access the key-value pairs in its `extras` property and define custom logic to execute around it:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-let customization = message.extras["custom-display"] as? String
-if customization == "colorful-slideup" {
-  // Perform your custom logic.
-}
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
-  NSString *customization = message.extras[@"custom-display"];
-  if ([customization isEqualToString:@"colorful-slideup"]) {
-    // Perform your custom logic.
-  }
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-For a full implementation, you may refer to the in-app message customization samples in our [Example app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
-

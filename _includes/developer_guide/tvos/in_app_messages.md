@@ -4,7 +4,7 @@ Keep in mind, you'll need to implement your own custom UI since in-app messaging
 
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Setting up in-app messages
+## Enabling in-app messages
 
 ### Step 1: Create a new iOS app
 

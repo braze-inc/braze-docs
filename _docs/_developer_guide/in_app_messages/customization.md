@@ -23,7 +23,11 @@ platform:
 {% multi_lang_include developer_guide/swift/in_app_messages/customization.md %}
 {% endsdktab %}
 
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/in_app_messages/customization.md %}
+{% endsdktab %}
+
+{% sdktab unity %}
+{% multi_lang_include developer_guide/unity/in_app_messages/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

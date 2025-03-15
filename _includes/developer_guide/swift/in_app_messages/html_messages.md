@@ -1,17 +1,6 @@
----
-nav_title: HTML Messages
-article_title: Adding the Braze JavaScript Interface to WebViews for Swift
-platform: Swift
-page_order: 5
-description: "This reference article shows how to add the Braze JavaScript Interface to WebViews."
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
----
-
-# HTML in-app messages
-
-> Learn how to add the Braze JavaScript interface to your iOS app, so you can use the Braze API to create [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) in your custom WebViews.
-
-## How it works
+## About HTML messages
 
 With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
 

@@ -1,16 +1,3 @@
----
-nav_title: Troubleshooting
-article_title: Troubleshooting In-App Messaging for iOS
-platform: Swift
-page_order: 6
-description: "This reference article covers potential iOS in-app message troubleshooting topics for the Swift SDK."
-channel:
-  - in-app messages
-
----
-
-# Troubleshooting
-
 {% multi_lang_include inapp_message_troubleshooting.md sdk="iOS" %}
 
 ### Troubleshooting asset loading (`NSURLError` code `-1008`)

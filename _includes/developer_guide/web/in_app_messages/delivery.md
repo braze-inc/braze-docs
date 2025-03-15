@@ -1,29 +1,64 @@
+{% multi_lang_include developer_guide/prerequisites/web.md %}
+
+## Message triggers
+
 ## Trigger types
 
-Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
+In-app messages are automatically triggered when the SDK logs one of the following custom event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Note that the `Specific Purchase` and `Custom Event` triggers also contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with a web app, check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
+In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/platforms/analytics/logging_custom_events/).
 {% endalert %}
 
-## Delivery semantics
+### Delivery semantics
 
-All in-app messages that a user is eligible for are automatically downloaded to the user's device, or browser upon a session start event and triggered according to the message's delivery rules. Visit our [session lifecycle documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle) for more information about the SDK's session start semantics.
+All eligible in-app messages are delivered to a user's device at the start of their session. When delivered, the SDK will prefetch assets, so they're available at trigger time, minimizing display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered.
 
-## Minimum time interval between triggers
+For more information about the SDK's session start semantics, see[Session Lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/).
 
-By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function:
+### Rate limits
+
+By default, you can send an in-app message once every 30 seconds.
+
+To override this, add the following property to your Braze configuration&#8212;before the Braze instance is initialized. You can set it to any positive integer, which represents the minimum time interval in seconds. For example:
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
 braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
 ```
 
-## Manual in-app message display
+## Key-value pairs
 
-If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. 
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app. For example:
 
-First, find and remove the call to `braze.automaticallyShowInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered in-app message, where you show or don't show the message. 
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToInAppMessage(function(inAppMessage) {
+  // control group messages should always be "shown"
+  // this will log an impression and not show a visible message
+  if (inAppMessage instanceof braze.ControlMessage) {
+    return braze.showInAppMessage(inAppMessage);
+  }
+
+
+  if (inAppMessage instanceof braze.InAppMessage) {
+    const extras = inAppMessage.extras;
+    if (extras) {
+      for (const key in extras) {
+        console.log("key: " + key + ", value: " + extras[key]);
+      }
+    }
+  }
+  braze.showInAppMessage(inAppMessage);
+});
+```
+
+## Disabling automatic triggers
+
+To prevent in-app messages from automatically triggering:
+
+Remove the call to `braze.automaticallyShowInAppMessages()` within your loading snippet, then create custom logic to handle showing or not showing in-app messages.
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
@@ -46,14 +81,16 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 ```
 
 {% alert important %}
-If you don't remove `braze.automaticallyShowInAppMessages()` from your website when also calling `braze.showInAppMessage`, the message may be displayed twice.
+If you don't remove `braze.automaticallyShowInAppMessages()` from your website, then call `braze.showInAppMessage`, the message may display multiple times.
 {% endalert %}
 
 The `inAppMessage` parameter will be an [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) subclass or an [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html) object, each of which has various lifecycle event subscription methods. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) for full documentation.
 
 Only one [`Modal`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages) or [`Full`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages) in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
 
-## Local in-app messages
+## Manually triggering messages
+
+### Displaying a message in real-time
 
 In-app messages can also be created within your site and displayed locally in real-time. All customization options available on the dashboard are also available locally. This is particularly useful for displaying messages you wish to trigger within the app in real-time. However, analytics on these locally-created messages will not be available within the Braze dashboard.
 
@@ -64,16 +101,14 @@ In-app messages can also be created within your site and displayed locally in re
   braze.showInAppMessage(message);
 ```
 
-## Exit-intent messages
+## Triggering exit-intent messages
 
-Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users while not interrupting their experience on your site. 
+Exit-intent messages are non-disruptive in-app messages used to communicate important information to visitors before they leave your site.
 
-To send these messages, first add an exit intent library, such as this [open-source library](https://github.com/carlsednaoui/ouibounce) to your website. Then, use the following code snippet to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
+To set up triggers for these message types, implement an exit-intent library in your website (such as [ouibounce's open-source library](https://github.com/carlsednaoui/ouibounce)), then use the following code to log `'exit intent'` as a custom event in Braze. Now your future in-app message campaigns can use this message type as a custom event trigger.
 
 ```javascript
   var _ouibounce = ouibounce(false, {
     callback: function() { braze.logCustomEvent('exit intent'); }
   });
 ```
-
-

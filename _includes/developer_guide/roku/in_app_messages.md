@@ -1,10 +1,12 @@
-## Setting up in-app messages
-
-### Prerequisites
-
-Before you can use this feature, you'll need to [integrate the Braze Roku SDK]({{site.baseurl}}/developer_guide/platforms/roku/sdk_integration/). Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
+{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
 {% sdk_min_versions roku:0.1.2 %}
+
+## Message types
+
+...
+
+## Enabling in-app messages
 
 ### Step 1: Add an observer
 
@@ -75,45 +77,3 @@ Alternatively, you could implement the in-app message and style it within your R
 | `text` | The text to display on the button. |
 | `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## Handling analytics
-
-You will need to make sure certain functions are called to handle the analytics for your campaign.
-
-### For displayed messages
-
-When a message is displayed or seen, log an impression:
-
-```brightscript
-LogInAppMessageImpression(in_app_message.id, brazetask)
-```
-
-### For clicked messages
-
-Once a user clicks on the message, log a click and then process `in_app_message.click_action`:
-
-```brightscript
-LogInAppMessageClick(in_app_message.id, brazetask)
-```
-
-### For clicked buttons
-
-If the user clicks on a button, log the button click and then process `inappmessage.buttons[selected].click_action`:
-
-```brightscript
-LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
-```
-
-### After processing a message
-
-After processing an in-app message, you should clear the field:
-
-```brightscript
-m.BrazeTask.BrazeInAppMessage = invalid
-```
-
-## Sending a Roku message
-
-Create an in-app message for Roku by selecting **Roku Devices** as the in-app message platform.
-
-![]({% image_buster /assets/img/roku/1-Platform-Selector.png %})

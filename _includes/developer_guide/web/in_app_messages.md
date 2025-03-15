@@ -1,10 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-## Message interface
+## Message types
 
 All in-app messages inherit their prototype from [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html), which defines basic behavior and traits for all in-app messages. The prototypical subclasses are [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html), and [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
-
-## Message types
 
 Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
