@@ -2082,4 +2082,7 @@ validurls['/docs/developer_guide/platforms/web/news_feed/customization/styling/'
 validurls['/docs/developer_guide/platforms/web/news_feed/defining_a_category/'] = '/docs/developer_guide/news_feed/';
 validurls['/docs/developer_guide/platforms/xamarin/news_feed/'] = '/docs/developer_guide/news_feed/';
 
+validurls['/docs/partners/ada/'] = '/docs/partners/home/';
+validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'] = '/docs/partners/home/';
+
 // validurls['OLD'] = 'NEW';

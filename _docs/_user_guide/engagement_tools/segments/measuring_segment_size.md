@@ -52,13 +52,13 @@ Note that:
 
 ## Viewing historical segment membership size
 
-For all segments with [advanced analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/#viewing-revenue-and-purchases-over-time) enabled, you can view a historical membership chart that shows the estimated segment membership for each day. This chart shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range. Note that this membership chart only begins populating after advance analytics tracking is turned on for that segment, and data does not populate retroactively for dates prior to when tracking gets turned on.
+For all segments, you can view a historical membership chart that shows the estimated segment membership for each day. This chart shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
 
 ![Use the Historical Membership dropdown to filter segment membership by date range.][1]
 
-Because the goal of this graph is to give you a sense of overall segment membership trends, the daily count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. 
+Because the goal of this chart is to give you a sense of overall segment membership trends, the daily count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. And because this graph shows estimates, it's possible that your segment’s size appears as "0" in this chart, even though its actual size (which can be determined after selecting **Calculate Exact Stats**) is not "0". It is especially likely for the chart to show an estimate of "0" if your segment is very small relative to the size of your workspace population.
 
-Braze estimates the segment membership count by querying a subset of your users, and then extrapolating those results to your entire audience. This means that the graph's results provide only an estimate of what segment membership might be on that day, and is expected to also fluctuate from day-to-day because a different sample of users may get queried for this estimate each day.
+Braze estimates the segment membership count by querying a subset of your users, and then extrapolating those results to your entire audience. This means that the chart's results provide only an estimate of what segment membership might be on that day, and is expected to also fluctuate from day-to-day because a different sample of users may get queried for this estimate each day.
 
 {% alert note %}
 All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces are to be expected.
