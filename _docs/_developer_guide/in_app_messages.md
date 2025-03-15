@@ -1,0 +1,65 @@
+---
+nav_title: In-App Messages
+article_title: In-app messages for the Braze SDK
+platform: 
+  - Android
+  - FireOS
+  - Swift
+page_order: 2.4
+description: "Learn about in-app messages for the Braze SDK."
+
+---
+
+# About in-app messages
+
+> Learn about in-app messages for the Braze SDK.
+
+## Prerequisites
+
+Before you can use this feature, you’ll need to [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/).
+
+{% sdktabs %}
+{% sdktab android %}
+{% multi_lang_include developer_guide/android/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab swift %}
+{% multi_lang_include developer_guide/swift/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab android ott %}
+{% multi_lang_include developer_guide/android_ott/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab cordova %}
+{% multi_lang_include developer_guide/cordova/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab fireos %}
+{% multi_lang_include developer_guide/android/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab unity %}
+{% multi_lang_include developer_guide/unity/in_app_messages.md %}
+{% endsdktab %}
+
+{% sdktab xamarin %}
+{% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
+{% endsdktab %}
+{% endsdktabs %}
