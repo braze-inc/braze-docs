@@ -1,10 +1,9 @@
 ---
 nav_title: Common Push Error Messages
 article_title: Common Push Error Messages
-page_order: 2
-
-page_type: solution
-description: "This help article covers common push-related error messages for iOS and Android, and walks you through potential solutions."
+page_order: 22
+page_type: reference
+description: "This article covers common push-related error messages for iOS and Android, and walks you through potential solutions."
 channel: push
 platform:
 - iOS
@@ -13,7 +12,7 @@ platform:
 
 # Common push error messages
 
-Check out these common error messages for push messaging:
+> This page covers common error messages for push messaging.
 
 {% tabs %}
 {% tab Android %} 
@@ -35,11 +34,11 @@ Common failures may include:
 {% endtab %}
 {% tab iOS %}
 
-### Push bounced: Error sending to bad push token
+### Push bounced: BadToken
 
-This error may occur for several reasons:
+The `BadToken` error may occur for several reasons:
 - The push token isn't being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
-	- Check the token in the **Message Activity Log**. It should generally look like a long string of letters and numbers. (e.g `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`) If it doesn't, check the code involved in sending Braze push token errors.<br><br>
+	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
@@ -53,8 +52,5 @@ This error may occur for several reasons:
 
 This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to Apple's [Communicating with APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
 
-
 {% endtab %}
 {% endtabs %}
-
-_Last updated on January 24, 2021_
