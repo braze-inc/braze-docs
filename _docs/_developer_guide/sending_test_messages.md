@@ -73,10 +73,6 @@ You can send a single notification through the terminal via CURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
-{% endalert %}
-
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) to see which endpoint to make requests to.
 
 ```bash

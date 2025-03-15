@@ -9,6 +9,3 @@ Before you can send an iOS push notification using Braze, you need to upload you
 7. When prompted, enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). You'll also need to specify whether to send notifications to your app's development or production environment, which is defined by its provisioning profile. 
 8. When you're finished, select **Save**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
-{% endalert %}

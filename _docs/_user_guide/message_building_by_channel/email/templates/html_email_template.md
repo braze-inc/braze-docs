@@ -29,10 +29,6 @@ First, you'll need to create your HTML email template. This must be a ZIP file t
 
 Go to the **Templates** > **Email Templates**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
-{% endalert %}
-
 ### Step 2: Open the uploader
 
 Under the **Template Type** section, select **HTML Editor** and scroll down to the section **Start from a Basic HTML Template**. Select **From File**.

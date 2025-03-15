@@ -17,10 +17,6 @@ In addition to this article, we also recommend checking out our [Quality Assuran
 
 To access the log, go to **Settings** > **Event User Log**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** under **Settings** > **Developer Console**.
-{% endalert %}
-
 To find your logs easily, you can filter based on:
 
 * SDK or API

@@ -13,10 +13,6 @@ description: "This reference article covers how to access and use the Braze Prod
 
 The product portal can be found at **Community** > **Product Roadmap**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Product Roadmap** under **Resources**.
-{% endalert %}
-
 ## What's in the portal
 
 | Section | Description |

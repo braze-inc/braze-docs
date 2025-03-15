@@ -37,10 +37,6 @@ The real value of Predictive Events lies in using prediction results to create a
 
 The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
-{% endalert %}
-
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo prediction with synthetic data as well as create one preview prediction model at a time. This prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to their likelihood score. It will also not update regularly after creation.
 
 With the Preview, you can also edit and rebuild this one prediction or archive it and create others to test the expected [prediction quality]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality) of [different audiences]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience) and become familiar with the analytics.

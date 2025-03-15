@@ -39,10 +39,6 @@ Acknowledge the following before proceeding with integration:
 
 In Braze, go to **Partner Integrations** > **Technology Partners** and search for **WhatsApp**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 On the WhatsApp partner page, select **Begin Integration**.
 
 ![][1]

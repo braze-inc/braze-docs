@@ -42,10 +42,6 @@ Duplicated templates can be found by sorting the **Last Edited** column. By defa
 
 ## Archiving templates
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Templates** is **Templates & Media**.
-{% endalert %}
-
 ![Expanded settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option highlighted.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 To archive an individual template, select the settings icon on the template grid screen and select **Archive**. When a template is archived, note the following different scenarios:

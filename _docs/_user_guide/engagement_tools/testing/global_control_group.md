@@ -45,10 +45,6 @@ You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/ca
 
 From the dashboard, go to **Audience** > **Global Control Group**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Engagement** > **Global Message Settings** > **Global Control Group Settings**.
-{% endalert %}
-
 ### Step 2: Assign a percentage of all users to this control group
 
 Input a percentage for your control group and select **Save**. When entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 

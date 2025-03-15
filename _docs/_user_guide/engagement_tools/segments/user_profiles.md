@@ -24,10 +24,6 @@ To access a user's profile, go to the **Search Users** page and search for a use
 - Push token
 - User alias with the format "[user_alias]:[alias_name]", such as "amplitude_id:user_123"
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
-{% endalert %}
-
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
@@ -128,10 +124,6 @@ Abort events are currently not available for in-app messages and Content Cards.
 ##### Frequency cap events
 
 A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
-{% endalert %}
 
 ##### Blank destinations
 

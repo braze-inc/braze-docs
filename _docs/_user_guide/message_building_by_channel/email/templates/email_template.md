@@ -19,10 +19,6 @@ search_rank: 1
 
 Go to **Templates** > **Email Templates**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
-{% endalert %}
-
 ## Step 2: Select your editing experience 
 
 Select between **Drag-And-Drop Editor** or **HTML Editor** for your editing experience. 

@@ -23,10 +23,6 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | RelayState API key | To enable identity provider login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Service Provider (SP) initiated login within Microsoft Entra SSO
 
 ### Step 1: Add Braze from the gallery
@@ -96,12 +92,6 @@ After you've set up Braze within Microsoft Entra admin center, Microsoft Entra w
 After your account manager has enabled SAML SSO for your account, do the following:
 
 1. Go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
-{% endalert %}
-
-{: start="2"}
 2. On the same page, add the following:
 
 | Requirement | Details |

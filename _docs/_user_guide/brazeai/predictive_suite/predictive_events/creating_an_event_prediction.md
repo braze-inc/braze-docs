@@ -12,10 +12,6 @@ description: "This article covers how to create an event prediction within the B
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
-{% endalert %}
-
 On this page, you will see a list of current active event predictions and some basic information about them. Here, you can rename, archive, and create new predictions. Archived predictions are inactive and do not update user scores.
 
 ## Step 1: Create a new prediction

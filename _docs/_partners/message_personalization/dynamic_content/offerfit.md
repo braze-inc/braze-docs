@@ -24,10 +24,6 @@ The OfferFit and Braze integration allows you to automatically discover the righ
 | Braze REST API endpoint | [Your REST API endpoint URL][1]. Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ### Braze REST API endpoints
 
 Your OfferFit license and use case will determine the Braze REST API endpoints you use. Below are various API endpoints you might use.

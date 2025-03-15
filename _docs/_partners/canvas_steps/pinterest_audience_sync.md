@@ -44,10 +44,6 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 ![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
