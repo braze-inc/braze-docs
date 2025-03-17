@@ -1,14 +1,14 @@
 ---
 page_order: 2
-nav_title: GIFs
-article_title: In-app message GIFs for the Braze SDK
+nav_title: Embedding GIFs
+article_title: Embedding GIFs into in-app messages for the Braze SDK
 channel:
   - push notifications
 ---
 
-# In-app message GIFs
+# Embedding GIFs into in-app messages
 
-> Learn how to add GIFs to in-app messages for the Braze SDK.
+> Learn how to embed GIFs into in-app messages for the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}
