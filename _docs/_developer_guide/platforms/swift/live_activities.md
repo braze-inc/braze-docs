@@ -35,8 +35,9 @@ While Live Activities and push notifications are similar, their system permissio
 {% endalert %}
 
 ## Sequence Diagram {#sequence-diagram}
+
 {% tabs %}
-{% tab Live Activities Sequence %}
+{% tab Live Activities Sequence Diagram %}
 {% details Show Diagram %}
 ```mermaid
 ---
@@ -79,6 +80,7 @@ sequenceDiagram
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
+
 ## Implementing a Live Activity
 
 ### Step 1: Create an activity {#create-an-activity}
