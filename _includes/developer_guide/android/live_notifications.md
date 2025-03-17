@@ -1,17 +1,10 @@
----
-nav_title: Live Updates
-article_title: Emulating Live Updates in the Android Braze SDK
-platform: Android
-page_order: 6
-description: "Learn how to emulate Live Updates in the Android Braze SDK."
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
----
+## About Live Updates for Android
 
-# Live Updates
+Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), you can emulate their behavior in the Android Braze SDK, allowing you to display interactive lock-screen notifications similar to Swift. Unlike official Live Updates, this functionality can also be implemented for older Android versions.
 
-> Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/platforms/swift/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
-
-## About `IBrazeNotificationFactory`
+## How it works
 
 You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed. By extending `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass a payload containing custom key-value pairs sent through the Braze dashboard or REST API.
 
