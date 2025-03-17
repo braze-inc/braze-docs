@@ -1994,9 +1994,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/sdk_integra
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshooting'] = '/docs/developer_guide/platforms/xamarin/troubleshooting';
 
 validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
-
-validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = 'https://braze.com/unlisted_docs/post_duplicate_canvases/';
-
 validurls['/docs/developer_guide/platform_integration_guide/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 validurls['/docs/developer_guide/platforms/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 
