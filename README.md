@@ -31,6 +31,12 @@ Next, install project dependencies.
 bundle install
 ```
 
+Add precommit hook
+```
+chmod u+x ./install-git-hooks.sh
+./install-git-hooks.sh
+```
+
 To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
 ```bash

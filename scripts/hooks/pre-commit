@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'open3'
+
+# Function to run a shell command and capture the output
+def run_command(*args)
+  stdout_str, stderr_str, status = Open3.capture3(*args)
+  return stdout_str, stderr_str, status
+end
+
+# Get the list of staged files
+staged_files = `git diff --cached --name-only`.split
+
+# Filter the staged files for Markdown files (case-insensitive)
+markdown_files = staged_files.select { |file| file =~ /(?i)\.md$/ }
+if markdown_files.empty?
+  exit 0
+end
+
+# Run mdl on the staged Markdown files
+# If you'd like to pass a custom config, add the options here.
+command = ['mdl','-t','braze'] + markdown_files
+
+puts "Running Markdown validation for staged files: #{markdown_files.join(', ')}"
+stdout_str, stderr_str, status = run_command(*command)
+
+# If there are errors, print them and prevent the commit
+unless status.success?
+  puts stdout_str unless stdout_str.empty?
+  puts stderr_str unless stderr_str.empty?
+  puts "\nMarkdown lint errors were found. Please fix them and try committing again."
+  exit 1
+end
+
+# All clear; allow the commit
+exit 0
