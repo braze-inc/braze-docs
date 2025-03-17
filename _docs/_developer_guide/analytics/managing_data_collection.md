@@ -1,14 +1,14 @@
 ---
-nav_title: Disabling Data Collection
-article_title: Disabling Data Collection for the Braze SDK
+nav_title: Managing Data Collection
+article_title: Managing Data Collection for the Braze SDK
 page_order: 8
-description: "Learn how to disable data collection for the Braze SDK."
+description: "Learn how to manage data collection for the Braze SDK."
 
 ---
 
-# Disabling data collection
+# Managing data collection
 
-> Learn how to disable data collection for the Braze SDK, so you can comply with any data-privacy regulations as needed.
+> Learn how to manage data collection for the Braze SDK, so you can comply with any data-privacy regulations as needed.
 
 {% sdktabs %}
 {% sdktab android %}

@@ -1,4 +1,4 @@
-## Enabling location tracking
+## Logging the current location
 
 ### Step 1: Configure your project
 

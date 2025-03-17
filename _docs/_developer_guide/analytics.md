@@ -17,7 +17,7 @@ platform:
   - Xamarin
 ---
 
-# About Analytics
+# Analytics
 
 > Learn about the Braze SDK's analytics, so you can better understand which data Braze collects, the difference between custom events and custom attributes, and best practices for managing analytics.
 

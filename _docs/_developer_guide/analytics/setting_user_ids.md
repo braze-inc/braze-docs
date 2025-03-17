@@ -141,7 +141,7 @@ braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 {% endtab %}
 {% endtabs %}
 
-## Naming best practices
+## ID Naming best practices {#naming-best-practices}
 
 We recommend that you create user IDs using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard, meaning they are 128-bit strings that are random and well distributed.
 
