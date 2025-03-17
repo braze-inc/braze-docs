@@ -292,10 +292,6 @@ If you'd like to test in-app and push notifications via the command-line interfa
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
-{% endalert %}
-
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],

@@ -743,6 +743,12 @@ $(document).ready(function() {
       $(this).attr('tabindex', 0)
     }
   });
-  setAdaTableRole()
+  setAdaTableRole();
 
+  // intialized mermaid
+  mermaid.initialize({
+    startOnLoad:true,
+    theme: "default",
+  });
+  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 });

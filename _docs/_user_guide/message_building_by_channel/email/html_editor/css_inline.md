@@ -24,10 +24,6 @@ You can control whether CSS inlining is turned on or off for any email message t
 
 You can set a default on or off state globally from **Settings** > **Email Preferences**. Locate the setting for **CSS Inlining**. This setting determines the desired default value that all new email messages start with. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings**.
-{% endalert %}
-
 ![Inline CSS on new emails by default option located in email settings.][1]
 
 [1]:{% image_buster /assets/img_archive/css-inline1.png %}
