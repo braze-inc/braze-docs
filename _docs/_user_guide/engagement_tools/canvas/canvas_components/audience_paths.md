@@ -15,7 +15,9 @@ tool: Canvas
 
 This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been eight full components into one. This helps you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
 
-![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
+![An Audience Path with five groups.][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
+
+## How it works
 
 Audience Paths are similar to sorting funnels with ranking criteria. Users are evaluated for each criterion in priority order and sent down the path of the highest-ranking criteria they qualify. This reduces ambiguity of where users will go and what messages they will receive. Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
@@ -27,14 +29,24 @@ With Audience Paths, you can:
 - Precisely target users on a large scale.
   - Create up to eight audience groups (two default and six additional groups) per component, but you may want to connect multiple Audience Paths Steps to further sort your users. 
 
+### Allowing time for user evaluations
+
+Users are evaluated as soon as they reach the Audience Path step. After they have been evaluated, they will immediately progress to the next step. This makes it important to allow an appropriate time window to lapse if the Audience Path is determined by a user action.
+
+![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.][5]{: style="float:right;max-width:40%;margin-left:15px;"}
+
+For example, if users are sent Message A and the next step is an Audience Path that evaluates whether they interacted with that message, all users will progress to the step for those who haven't interacted with that message. This is because the users immediately progressed to the Audience Path step without time to interact with the message. In other words, users are evaluated for an interaction with the message almost immediately after the message sends.
+
+To give users time to interact with a sent message, a delay needs to be between the Message step and Audience Path. For example, a 24-hour delay would give users 24 hours after the message sends to interact with Message A before being evaluation.
+
 ## Creating an Audience Path
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+![An Audience Path with two groups.][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 To add an Audience Paths step, do the following: 
 
 1. Add a step to your Canvas. 
-2. Drag and drop the component from the sidebar, or click <i class="fas fa-plus-circle"></i> **Add** at the bottom of a step and select **Audience Paths**.
+2. Drag and drop the component from the sidebar, or select <i class="fas fa-plus-circle"></i> **Add** at the bottom of a step and select **Audience Paths**.
 
 The default Audience Paths component contains two default audience groups, **Group 1** and **Everybody Else**. The **Everybody Else** group includes any user who does not fall into a defined audience group. This group will always be ranked last.
 
@@ -44,15 +56,15 @@ The following screenshot shows the layout of an expanded Audience Paths step. He
 
 For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", and "Loves European Cuisine". 
 
-![][3]{: style="max-width:90%;margin-left:15px;"}
+![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".][3]{: style="max-width:90%;margin-left:15px;"}
 
 After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
-![][4]{: style="max-width:90%;margin-left:15px;"}
+![Two Audience Paths with different groups for various cusines.][4]{: style="max-width:90%;margin-left:15px;"}
 
 ### Testing audience groups
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![The "User Lookup" section.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
 After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm they match the audience criteria. 
 
@@ -62,7 +74,7 @@ The true power of Audience Paths lies in the ability to assign priority. While t
 
 By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas step.
 
-![][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![An Audience Path with groups for “Likes Big Brand Shoes”, “Likes Big Brand”, and "Everyone Else".][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
 For example, let's say you wanted to send a group of users ads for new products. You'd start by ranking filters that fall under those products high on the Audience Path. If you were creating a marketing campaign for the company "Big Brand" and a new shoe brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand", and send different email messages based on what filtered group they fall into. 
 
@@ -93,3 +105,4 @@ Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_to
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
 [3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
 [4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
+[5]: {% image_buster /assets/img/audience_path/audience_path5.png %}

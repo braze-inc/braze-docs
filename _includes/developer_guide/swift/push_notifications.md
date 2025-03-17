@@ -367,3 +367,44 @@ Create your push notification subscription in `application(_:didFinishLaunchingW
 ## Push primers {#push-primers}
 
 Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+
+## Dynamic APNs gateway management
+
+Dynamic Apple Push Notification Service (APNs) gateway management enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually select APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and `BadDeviceToken` errors.
+
+With dynamic APNs gateway management, you'll have:
+
+- **Improved reliability:** Notifications are always delivered to the correct APNs environment, reducing failed deliveries.
+- **Simplified configuration:** You no longer need to manually manage APNs gateway settings.
+- **Error resilience:** Invalid or missing gateway values are gracefully handled, providing uninterrupted service.
+
+### Prerequisites
+
+Braze supports Dynamic APNs gateway management for push notifications on iOS with the following SDK version requirement:
+
+{% sdk_min_versions swift:10.0.0 %}
+
+### How it works
+
+When an iOS app integrates with the Braze Swift SDK, it sends device-related data, including [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) to the Braze SDK API, if available. The `apns_gateway` value indicates whether the app is using the development (`dev`) or production (`prod`) APNs environment.
+
+Braze also stores the reported gateway value for each device. If a new, valid gateway value is received, Braze updates the stored value automatically.
+
+When Braze sends a push notification:
+
+- If a valid gateway value (dev or prod) is stored for the device, Braze uses it to determine the correct APNs environment.
+- If no gateway value is stored, Braze defaults to the APNs environment configured in the **App Settings** page.
+
+### Frequently asked questions
+
+#### Why was this feature introduced?
+
+With dynamic APNs gateway management, the correct environment is selected automatically. Previously, you had to manually configure the APNs gateway, which could lead to `BadDeviceToken` errors, token invalidation, and potential APNs rate-limiting issues.
+
+#### How does this impact push delivery performance?
+
+This feature improves delivery rates by always routing push tokens to the correct APNs environment, avoiding failures caused by misconfigured gateways.
+
+#### Can I disable this feature?
+
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support]({{site.baseurl}}/help/support).
