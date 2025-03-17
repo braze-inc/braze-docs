@@ -18,3 +18,4 @@ braze-docs.iml
 
 # Braze scripts
 scripts/temp/*
+node_modules

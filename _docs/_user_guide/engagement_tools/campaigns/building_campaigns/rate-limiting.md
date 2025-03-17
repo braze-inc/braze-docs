@@ -156,6 +156,10 @@ Each line of frequency caps will be connected using the `AND` operator, and you 
 
 ![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.][14]
 
+#### Behavior when users are frequency capped on a Canvas step
+
+If a Canvas user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
+
 ### Delivery rules
 
 There may be some campaigns, like transactional messages, that you want to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.

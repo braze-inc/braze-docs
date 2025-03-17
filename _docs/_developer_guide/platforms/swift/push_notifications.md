@@ -306,10 +306,6 @@ If you'd like to test in-app and push notifications via the command line, you ca
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
-{% endalert %}
-
 In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/) to see which endpoint to make requests to.
 
 ```bash

@@ -215,7 +215,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> is the total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
+<i>Spam</i> is the total number of emails delivered that were marked as “spam.” Braze automatically unsubscribes users who marked an email as spam, and those users won’t be targeted by future emails. Users will still receive transactional emails that are configured to "send to all users including unsubscribe".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}

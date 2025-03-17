@@ -14,7 +14,7 @@ search_tag: Ketch
 The Braze and Ketch integration allows you to control customer communication preferences within the Ketch preference center and automatically propagate these changes to Braze. 
 
 {% alert note %}
-Looking for guidance on creating subscription groups? Check out our articles for <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS subscription groups</a> and <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>email subscription groups</a>.
+Looking for guidance on creating subscription groups? Check out our articles for <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>SMS subscription groups</a> and <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>email subscription groups</a>.
 {% endalert %}
 
 ## Prerequisites

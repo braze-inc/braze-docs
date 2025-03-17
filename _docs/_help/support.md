@@ -34,6 +34,10 @@ Designated support contacts can access all support cases for your company, regar
 
 The number of designated support contacts you can set depends on your contact limit. Contact your customer success manager for more information.
 
+### Gaining access
+
+After a user is designated as a support contact, the Braze support portal will send that user a welcome email with instructions to set up their access.
+
 ## Provide developer console screenshots
 
 When communicating with support, you may find you need to access your developer console to provide additional information:

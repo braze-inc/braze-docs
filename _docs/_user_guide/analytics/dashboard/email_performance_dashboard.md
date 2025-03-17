@@ -13,10 +13,6 @@ tool:
 
 > Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboards are located under **Overview**.
-{% endalert %}
-
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
 You can view the following dashboards:
@@ -81,7 +77,7 @@ The **Engagement by Mailbox Provider** report displays the top mailbox providers
 
 ### Time of Engagement
 
-The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your workspace’s time zone.
+The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your company’s time zone.
 
 The **Day of the Week** engagement report breaks down opens or clicks by day of the week. 
 
