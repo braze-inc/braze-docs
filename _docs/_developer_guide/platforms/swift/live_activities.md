@@ -19,7 +19,7 @@ Live Activities present a combination of static information and dynamic informat
 
 As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as soon as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption.
 
-## Prerequisites 
+## Prerequisites {#prerequisites}
 
 {% sdk_min_versions swift:5.11.0 %}
 
@@ -34,9 +34,56 @@ Additional prerequisites include:
 While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
 {% endalert %}
 
+## Sequence Diagram {#sequence-diagram}
+
+{% tabs %}
+{% tab Live Activities Sequence Diagram %}
+{% details Show Diagram %}
+```mermaid
+---
+config:
+  theme: mc
+---
+sequenceDiagram
+  participant Server as Client Server
+  participant Device as User Device
+  participant App as iOS App / Braze SDK
+  participant BrazeAPI as Braze API
+  participant APNS as Apple Push Notification Service
+  Note over Server, APNS: Launch Option 1<br/>Locally Start Activities
+  App ->> App: Register a Live Activity using <br>`launchActivity(pushTokenTag:activity:)`
+  App ->> App: Get push token from iOS
+  App ->> BrazeAPI: Activity ID & Push token<br>automatically sent to Braze
+  Note over Server, APNS: Launch Option 2<br/>Remotely Start Activities
+  Device ->> App: Call `registerPushToStart`<br>to collect push tokens early
+  App ->> BrazeAPI: Push-to-start tokens sent to Braze
+  Server ->> BrazeAPI: POST /messages/live_activity/start
+  Note right of BrazeAPI: Payload includes:<br>- push_token<br>- activity_id<br>- external_id<br>- event_name<br>- content_state (optional)
+  BrazeAPI ->> APNS: Live activity start request
+  APNS ->> Device: APNS sends activity to device
+  App ->> App: Get push token from iOS
+  App ->> BrazeAPI: Activity ID & Push token<br>automatically sent to Braze
+  Note over Server, APNS: Resuming activities upon app launch
+  App ->> App: Call `resumeActivities(ofType:)` on each app launch
+  Note over Server, APNS: Updating a Live Activity
+  loop update a live activity
+  Server ->> BrazeAPI: POST /messages/live_activity/update
+  Note right of BrazeAPI: Payload includes changes<br>to ContentState (dynamic variables)
+  BrazeAPI ->> APNS: Update sent to APNS
+  APNS ->> Device: APNS sends update to device
+  end
+  Note over Server, APNS: Ending a Live Activity
+  Server ->> BrazeAPI: POST /messages/live_activity/update
+  Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- `dismissal_date` is now in the past<br>- Setting `end_activity: true`
+  APNS ->> Device: Live activity is dismissed
+```
+{% enddetails %}
+{% endtab %}
+{% endtabs %}
+
 ## Implementing a Live Activity
 
-### Step 1: Create an activity
+### Step 1: Create an activity {#create-an-activity}
 
 First, ensure that you have followed [Displaying live data with Live Activities](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) in Apple’s documentation to set up Live Activities in your iOS application. As part of this task, make sure you include `NSSupportsLiveActivities` set to `YES` in your `Info.plist`.
 
@@ -73,7 +120,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 }
 ```
 
-### Step 2: Start the activity
+### Step 2: Start the activity {#start-the-activity}
 
 First, choose how you want to register your activity:
 
@@ -211,7 +258,7 @@ Your Live Activity widget would display this initial content to your users.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Resume activity tracking
+### Step 3: Resume activity tracking {#resume-activity-tracking}
 
 To ensure Braze tracks your Live Activity upon app launch:
 
@@ -252,7 +299,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-### Step 4: Update the activity
+### Step 4: Update the activity {#update-the-activity}
 
 ![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab has 4 points.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
@@ -262,7 +309,7 @@ As you update your `ContentState`, your Live Activity widget will display the ne
 
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
 
-### Step 5: End the activity
+### Step 5: End the activity {#end-the-activity}
 
 When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. There are a few different ways for a Live Activity to end and be removed from a user's UI. 
 
@@ -273,7 +320,7 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
 
-## Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ) {#faq}
 
 ### Functionality and support
 
