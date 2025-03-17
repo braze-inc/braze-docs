@@ -1,38 +1,31 @@
 {% multi_lang_include archive/web-v4-rename.md %}
 
+{% multi_lang_include developer_guide/prerequisites/web.md %}
+
 ## Push protocols
 
 Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support. For more information on specific push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications") [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility") and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API").
 
 ## Setting up push notifications
 
-### Prerequisites
-
-Before you can set up push notifications, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) into your app.
-
 ### Step 1: Configure your service worker
 
-- If you don't already have a service worker, create a new file named `service-worker.js` with the following snippet, and place it in the root directory of your website.
-- Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) initialization option to `true` when initializing the Web SDK.
+In your project's `service-worker.js` file, add the following snippet and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) initialization option to `true` when initializing the Web SDK.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-If your service worker filename is not `service-worker.js`, you must use the `serviceWorkerLocation` [initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
-
 {% alert important %}
-Your web server must return a `Content-Type: application/javascript` when serving your service worker file. 
+Your web server must return a `Content-Type: application/javascript` when serving your service worker file. Additionally, if your service worker file is not `service-worker.js` named, you'll need to use the `serviceWorkerLocation` [initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
 {% endalert %}
 
-### Step 2: Register your browser
+### Step 2: Register the browser
 
-For a browser to receive push notifications, you must register it for push by calling `braze.requestPushPermission()`. This will immediately request push permission from the user. 
+To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if if push is supported in their browser first, call `braze.isPushSupported()`.
 
-If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with `braze.isPushSupported()`. Refer to the [soft push prompt example]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/soft_push_prompts/) using in-app messages.
-
-If you wish to unsubscribe a user, you can do so by calling `braze.unregisterPush()`.
+You can also [send a soft push prompt]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/soft_push_prompts/) to the user before requesting push permission to show your own push-related UI.
 
 {% alert important %}
-Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (for example, from a button click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
+On macOS, both **Google Chrome** and **Google Chrome Helper (Alerts)** must be enabled by the end-user in **System Settings > Notifications** before push notifications can be displayed&#8212;even if permissions are granted.
 {% endalert %}
 
 ### Step 3: Disable `skipWaiting` (optional)
@@ -40,6 +33,14 @@ Recent versions of Safari and Firefox require that you call this method from a s
 The Braze service worker file will automatically call `skipWaiting` upon install. If you'd like to disable this functionality, add the following code to your service worker file, after importing Braze:
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+## Unsubscribingn a user
+
+To unsubscribe a user, call `braze.unregisterPush()`.
+
+{% alert important %}
+Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (such as from a button-click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
+{% endalert %}
 
 ## Alternate domains
 
