@@ -8,11 +8,13 @@ description: "This reference article describes how to create price drop notifica
 
 # Price drop notifications
 
-> Use a combination of price drop notifications through Braze catalogs and a Canvas to notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.<br><br>This page covers how price drop notifications work and how you can set up and use them.
+> This page covers how price drop notifications work and how you can set up and use them. With a combination of price drop notifications through Braze catalogs and a Canvas, you can notify customers when an item's price has decreased.
 
-## How price drop notifications work
+## How it works
 
 When a user triggers a custom event for an item, we'll automatically subscribe them to receive price drop notifications for that item. When the item's price meets your inventory rule (such as a drop larger than 50%), all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
+
+## Setting a custom event for price drop notifications
 
 You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We recommend including a catalog name, but this isn't required. You'll also provide the name of a price field, which must be a number data type. 
 
@@ -21,7 +23,9 @@ You can create a price drop subscription for a user and a catalog item it occurr
 - A selected custom event is performed by a user
 - The custom event has a `type` property that includes `price_drop`
 
-To set both price-drop and back-in-stock notifications in the same event, you must use an array for the `type` property. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
+To set both price-drop and back-in-stock notifications in the same event, you must use an array for the `type` property. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. 
+
+The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
 
 ## Setting up price drop notifications
 
@@ -59,15 +63,21 @@ Here's an example custom event:
 ```
 
 {: start="4"}
-4. Select **Save** and continue to the catalog's **Settings** page.
-5. Set your notification rule. There are two options:
-    - **Notify all subscribed users:** Notify all customers who are waiting when the item's price drops.
-    - **Set notification limits:** Notify a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.
-6. Set the **Price field in catalog**. This is the catalog field that will be used to determine the item's price. It must be a number type.<br>
-7. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or how much value the price field has changed by.<br>
-8. Select **Save settings**.
+4. Select **Save**, and continue to the next section to set up notification rules.
 
-![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.][1]{:style="max-width:60%;"}
+### Setting up notification rules
+
+1. Go to your catalog's **Settings** page. 
+2. For **Notification rules**, select from the following options:<br>
+
+    - **Notify all subscribed users:** Notify all customers who are waiting when the item's price drops.
+    - **Set notification limits:** Notify a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.<br>
+
+2. Set the **Price field in catalog**. This is the catalog field that will be used to determine the item's price. It must be a number type.
+3. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or how much value the price field has changed by.
+4. Select **Save settings**.
+
+![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.][1]
 
 {% alert important %}
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
