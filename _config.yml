@@ -174,7 +174,7 @@ permalink: ./:collection/:path/
 permalink_custom_vars: ["nav_title"]
 
 # List of pages(path) to auto expand. For help, see:
-#   braze.com/docs/contributing/content_management/sections/#forcing-a-section-to-auto-expand
+#   braze.com/docs/contributing/content_management/sections/#forcing-auto-expand
 #nav_expand_list:
 
 # Don't serve non-jekyll files
