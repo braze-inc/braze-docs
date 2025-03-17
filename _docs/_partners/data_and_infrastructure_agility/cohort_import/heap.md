@@ -37,10 +37,6 @@ Use the Heap to Braze integration to automatically sync cohorts defined in Heap 
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and then select **Heap**. 
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 On this page, you can find your data import key and a REST endpoint. Take note of both of these values and provide them to your Heap account manager to finish setting up the integration.
 
 ![][3]{: style="max-width:90%;"}

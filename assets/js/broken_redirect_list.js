@@ -2086,4 +2086,7 @@ validurls['/docs/developer_guide/platforms/xamarin/news_feed/'] = '/docs/develop
 validurls['/docs/partners/ada/'] = '/docs/partners/home/';
 validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'] = '/docs/partners/home/';
 
+
+validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
+
 // validurls['OLD'] = 'NEW';

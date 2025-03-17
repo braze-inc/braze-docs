@@ -35,11 +35,6 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{: start="2"}
 2. Select **LINE**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.

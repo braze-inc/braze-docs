@@ -22,10 +22,6 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | RelayState API key | Go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Setting up SAML SSO
 
 ### Step 1: Configure your identity provider
@@ -51,10 +47,6 @@ Braze only requires `email` in the SAML Assertion.
 When you finish setting up Braze in your identity provider, your identity provider will provide you with a target URL and `x.509` certificate to input into your Braze account.
 
 After your account manager turns on SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
-{% endalert %}
 
 On the same page, input the following:
 
