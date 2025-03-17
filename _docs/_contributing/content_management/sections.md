@@ -168,20 +168,22 @@ The output is similar to the following:
 
 ## Forcing auto-expand
 
-When a landing page is selected, its section automatically expands in the navigation. However, you can force a section to always auto-expand even if its not selected. For example, when a user visits the [developer guide]({{site.baseurl}}/developer_guide/) the **Platforms** section is always auto-expanded even when not selected.
+When a landing page is selected, the section is auto-expanded in the navigation. However, you can force a section to always auto-expand even if its not selected.
 
-[An example of the 'Platforms' section being forced to auto-expand in the Braze Developer Guide.]()
+For example, when you go to the [developer guide]({{site.baseurl}}/developer_guide/), the **Platforms** section is always auto-expanded.
 
-To force a section to auto-expand, open the `_config.yml` in your text editor, and add the relevant section to the `nav_expand_list`.
+![An example of the 'Platforms' section being forced to auto-expand in the Braze Developer Guide.]({% image_buster /assets/img/contributing/styling_examples/nav-auto-expand.png %}){: style="max-width:85%;"}
+
+To force a section to auto-expand, open the `_config.yml` in your text editor and add the section's relative URL path to the `nav_expand_list`.
 
 ```yml
 # List of pages(path) to auto expand
 nav_expand_list:
   - "/developer_guide/platforms"
-  - "/RELATIVE/PATH/TO/PAGE"
+  - "/RELATIVE/URL/PATH/"
 ```
 
-Replace `/RELATIVE/PATH/TO/PAGE` with URL path to the page with `braze.com/docs` removed. Your list should be similar to the following:
+Replace `/RELATIVE/URL/PATH/` with URL path to your section with `braze.com/docs` removed. Your list should be similar to the following:
 
 ```yaml
 # List of pages(path) to auto expand
