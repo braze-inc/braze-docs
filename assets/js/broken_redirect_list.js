@@ -2089,4 +2089,7 @@ validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'
 
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
+validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
+validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
+
 // validurls['OLD'] = 'NEW';
