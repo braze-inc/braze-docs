@@ -166,7 +166,7 @@ The output is similar to the following:
 
 ![The left-side navigation on Braze Docs, with the 'Section B' landing page listed third.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
 
-## Forcing sections to auto-expand
+## Forcing a section to auto-expand
 
 When a landing page is selected, its section automatically expands in the navigation. However, you can force a section to always auto-expand even if its not selected. For example, when a user visits the [developer guide]({{site.baseurl}}/developer_guide/) the **Platforms** section is always auto-expanded even when not selected.
 
