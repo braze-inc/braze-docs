@@ -9,6 +9,10 @@ description: "Learn how to set user attributes through the Braze SDK."
 
 > Learn how to set user attributes through the Braze SDK.
 
+{% alert note %}
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
+{% endalert %}
+
 {% sdktabs %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
@@ -28,9 +32,5 @@ description: "Learn how to set user attributes through the Braze SDK."
 
 {% sdktab unreal engine %}
 {% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
-{% sdktab other wrappers %}
-For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endsdktab %}
 {% endsdktabs %}
