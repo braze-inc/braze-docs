@@ -14,7 +14,7 @@ In-app message display is managed by the [`BrazeInAppMessageManager`](https://br
 
 {% tabs local %}
 {% tab automatically %}
-The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#step-3-enable-user-session-tracking) handles in-app message registration automatically; no extra integration is required. This is the recommended method for handling in-app message registration.
+The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) handles in-app message registration automatically; no extra integration is required. This is the recommended method for handling in-app message registration.
 {% endtab %}
 
 {% tab manually %}
