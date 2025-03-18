@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
+{% multi_lang_include developer_guide/prerequisites/roku.md %} Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
 {% sdk_min_versions roku:0.1.2 %}
 
