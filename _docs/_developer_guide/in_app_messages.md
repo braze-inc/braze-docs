@@ -27,6 +27,10 @@ description: "Learn about in-app messages for the Braze SDK."
 {% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
+{% sdktab android ott %}
+{% multi_lang_include developer_guide/android_ott/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab cordova %}
 {% multi_lang_include developer_guide/cordova/in_app_messages.md %}
 {% endsdktab %}
