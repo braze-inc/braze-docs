@@ -2083,7 +2083,7 @@ validurls['/docs/developer_guide/platforms/web/analytics/disabling_tracking/'] =
 validurls['/docs/developer_guide/platforms/cordova/analytics/'] = '/docs/developer_guide/analytics/';
 validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events';
 validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=cordova';
-validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
 validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-user-ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=cordova';
 
 validurls['/docs/developer_guide/platforms/fireos/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
@@ -2100,17 +2100,17 @@ validurls['/docs/developer_guide/platforms/flutter/analytics/'] = '/docs/develop
 validurls['/docs/developer_guide/platforms/flutter/analytics/#session-tracking'] = '/docs/developer_guide/analytics/tracking_sessions/';
 validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events/?tab=flutter';
 validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=flutter';
-validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
 
 validurls['/docs/developer_guide/platforms/react_native/analytics/'] = '/docs/developer_guide/analytics/';
 validurls['/docs/developer_guide/platforms/react_native/analytics/#session-tracking'] = '/docs/developer_guide/analytics/tracking_sessions/';
 validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events/?tab=react%20native';
 validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=react%20native';
-validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
 
 validurls['/docs/developer_guide/platforms/roku/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=roku';
 validurls['/docs/developer_guide/platforms/roku/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=roku';
-validurls['/docs/developer_guide/platforms/roku/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=other%20wrappers';
+validurls['/docs/developer_guide/platforms/roku/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
 validurls['/docs/developer_guide/platforms/roku/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=roku';
 
 validurls['/docs/developer_guide/platforms/unity/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=unity';
