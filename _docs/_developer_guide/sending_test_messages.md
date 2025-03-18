@@ -73,7 +73,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/#endpoints) to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -98,7 +98,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/#endpoints) to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -124,6 +124,8 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/#endpoints) to see which endpoint to make requests to.
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
@@ -143,7 +145,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 There are a few situations where test messages don't have complete feature parity with launching a campaign or Canvas to a real set of users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
 
-- Viewing the Braze [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) from **Test Messages** will cause the submit button to be grayed out
-- The list-unsubscribe header is not included in emails sent by the test message functionality
-- For in-app messages and Content Cards, the target user must have a push token for the target device
+- Viewing the Braze [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) from **Test Messages** will cause the submit button to be grayed out.
+- The list-unsubscribe header is not included in emails sent by the test message functionality.
+- For in-app messages and Content Cards, the target user must have a push token for the target device.
 

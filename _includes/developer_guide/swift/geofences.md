@@ -62,7 +62,7 @@ AppDelegate.braze = braze;
 
 By default, geofences are only monitored if your app is in the foreground, or it has `Always` authorization (which monitors all application states).
 
-However, you can choose to monitor geofence events when your app is in the background or when it has the [`When In Use` authorization](#step-5-request-authorization) by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
+However, you can choose to monitor geofence events when your app is in the background or when it has the [`When In Use` authorization](#step-5) by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
 
 `allowBackgroundGeofenceUpdates` only works when your app is in the background. When it re-opens, it's existing background processes are paused, so foreground processes can be prioritized instead.
 
@@ -80,7 +80,7 @@ Add the key `NSLocationAlwaysUsageDescription`, `NSLocationAlwaysAndWhenInUseUsa
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
-### Step 5: Request authorization
+### Step 5: Request authorization {#step-5}
 
 When requesting authorization from a user, you can request `When In Use` or `Always` authorization.
 
