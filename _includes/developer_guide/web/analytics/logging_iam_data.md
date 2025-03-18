@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %}
 
-## Logging impressions and clicks
+## Logging message data
 
 Logging in-app message [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) and [clicks](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) is performed automatically when you use the `showInAppMessage` or `automaticallyShowInAppMessage` method.
 

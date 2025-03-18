@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## Logging analytics
+## Logging message data
 
 To log analytics using your `BrazeInAppMessage`, pass the instance into the desired analytics function:
 
@@ -19,7 +19,7 @@ braze.logInAppMessageImpression(inAppMessage);
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
-## Accessing in-app message data
+## Accessing message data
 
 To access in-app message data in your Flutter app, the `BrazePlugin` supports sending in-app message data using [Dart Streams](https://dart.dev/tutorials/language/streams).
 

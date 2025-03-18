@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Logging analytics
+## Logging message data
 
 You will need to make sure certain functions are called to handle the analytics for your campaign.
 

@@ -1,10 +1,10 @@
-## Receiving in-app message data in Unity
+## Subscribing to in-app messages
 
 You may register Unity game objects to be notified of incoming in-app messages. We recommend setting game object listeners from the Braze configuration editor. In the configuration editor, listeners must be set separately for Android and iOS.
 
 If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.IN_APP_MESSAGE`.
 
-## Parsing in-app messages
+## Parsing messages
 
 Incoming `string` messages received in your in-app message game object callback can be parsed into our pre-supplied model objects for convenience.
 
@@ -23,7 +23,7 @@ void InAppMessageReceivedCallback(string message) {
 }
 ```
 
-## Logging analytics
+## Logging message data
 
 Clicks and impressions must be manually logged for in-app messages not displayed directly by Braze.
 
