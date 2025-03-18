@@ -1,27 +1,8 @@
----
-nav_title: Geofences
-article_title: Geofences for the Braze Swift SDK
-platform: Swift
-page_order: 6.2
-description: "This reference article covers how to implement geofences for the Swift SDK."
-Tool:
-  - Location
-
----
-
-# Geofences
-
-> Learn how to set up geofences for the Braze Swift SDK. At the core of Braze’s real-time location offering is the concept of a [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences). A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
-
 {% alert important %}
-As of iOS 14, geofences do not work reliably for users who choose to give their approximate location permission.
+As of iOS 14, geofences do not work reliably for users who choose to only give their approximate location permission.
 {% endalert %}
 
-## Prerequisites
-
-Before you start, you'll need to complete the following:
-
-- To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/) enabled in addition to completing the standard push integration.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/).
 
 ## Setting up geofences
 
@@ -81,7 +62,7 @@ AppDelegate.braze = braze;
 
 By default, geofences are only monitored if your app is in the foreground, or it has `Always` authorization (which monitors all application states).
 
-However, you can choose to monitor geofence events when your app is in the background or when it has the [`When In Use` authorization](#step-5-request-authorization) by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
+However, you can choose to monitor geofence events when your app is in the background or when it has the [`When In Use` authorization](#step-5) by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
 
 `allowBackgroundGeofenceUpdates` only works when your app is in the background. When it re-opens, it's existing background processes are paused, so foreground processes can be prioritized instead.
 
@@ -99,7 +80,7 @@ Add the key `NSLocationAlwaysUsageDescription`, `NSLocationAlwaysAndWhenInUseUsa
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
-### Step 5: Request authorization
+### Step 5: Request authorization {#step-5}
 
 When requesting authorization from a user, you can request `When In Use` or `Always` authorization.
 
