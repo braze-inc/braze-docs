@@ -223,7 +223,7 @@ If the specified sound file doesn't exist or the keyword "default" is entered, B
 
 See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
-## Advanced settings
+## Settings
 
 When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
 
