@@ -195,7 +195,39 @@ BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(C
 
 ## Setting custom factories
 
-You can set the following custom message factories:
+You can override a number of defaults through custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. However, if you decide to override a factory, you'll likely need to explicitly defer to the default or reimplement the functionality provided by the Braze default. The following code snippet illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces.
+
+{% tabs local %}
+{% tab Kotlin %}
+**In-app message types**<br>
+
+```kotlin
+class BrazeDemoApplication : Application(){
+ override fun onCreate() {
+    super.onCreate()
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(true, true))
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(CustomInAppMessageViewFactory())
+  }
+}
+```
+{% endtab %}
+{% tab Java %}
+**In-app message types**<br> 
+
+```java
+public class BrazeDemoApplication extends Application {
+  @Override
+  public void onCreate{
+    super.onCreate();
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(true, true));
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(new CustomInAppMessageViewFactory());
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab view %}

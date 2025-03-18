@@ -2049,11 +2049,10 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
-// android
 validurls['/docs/developer_guide/platforms/android/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/in_app_messages/delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=android';
-validurls['/docs/developer_guide/platforms/android/in_app_messages/ott_devices/'] = '/docs/developer_guide/in_app_messages/PAGE';
-validurls['/docs/developer_guide/platforms/android/in_app_messages/examples/'] = '/docs/developer_guide/in_app_messages/PAGE';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/ott_devices/'] = '/docs/developer_guide/in_app_messages/?sdktab=android%20ott';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/examples/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/in_app_messages/html_messages/'] = '/docs/developer_guide/in_app_messages/html_messages/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/in_app_messages/deep_linking/'] = '/docs/developer_guide/in_app_messages/deep_linking/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=android';
