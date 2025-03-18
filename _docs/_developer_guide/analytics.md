@@ -83,7 +83,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team, as this may incur additional data costs.
+Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team.
 
 ## Custom attributes
 

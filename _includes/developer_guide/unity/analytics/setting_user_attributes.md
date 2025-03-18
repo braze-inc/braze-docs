@@ -20,7 +20,7 @@ To set user attributes, you need to call the appropriate method on the `BrazeBin
 
 ## Custom user attributes
 
-In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/analytics).
 
 ### Setting custom attributes
 
