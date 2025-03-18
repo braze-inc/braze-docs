@@ -2005,7 +2005,7 @@ validurls['/docs/developer_guide/platforms/android/sdk_integration/'] = '/docs/d
 validurls['/docs/developer_guide/platforms/swift/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/web/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=web';
 validurls['/docs/developer_guide/platforms/cordova/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=cordova';
-validurls['/docs/developer_guide/platforms/fireos/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=android';
 validurls['/docs/developer_guide/platforms/flutter/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=flutter';
 validurls['/docs/developer_guide/platforms/react_native/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=react%20native';
 validurls['/docs/developer_guide/platforms/unity/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unity';
@@ -2021,7 +2021,7 @@ validurls['/docs/developer_guide/platforms/android/content_cards/'] = '/docs/dev
 validurls['/docs/developer_guide/platforms/swift/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/web/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=web';
 validurls['/docs/developer_guide/platforms/cordova/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=cordova';
-validurls['/docs/developer_guide/platforms/fireos/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=android';
 validurls['/docs/developer_guide/platforms/swift/content_cards/tvos/'] = '/docs/developer_guide/content_cards/?sdktab=tvos';
 validurls['/docs/developer_guide/platforms/flutter/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=flutter';
 validurls['/docs/developer_guide/platforms/react_native/content_cards/'] = '/docs/developer_guide/content_cards/?sdktab=react%20native';
@@ -2030,10 +2030,10 @@ validurls['/docs/developer_guide/platforms/xamarin/content_cards/'] = '/docs/dev
 
 validurls['/docs/developer_guide/platforms/android/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=android';
 validurls['/docs/developer_guide/platforms/swift/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=swift';
-validurls['/docs/developer_guide/platforms/fireos/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=android';
 
 validurls['/docs/developer_guide/platforms/android/content_cards/gif/'] = '/docs/developer_guide/content_cards/embedding_gifs/?sdktab=android';
-validurls['/docs/developer_guide/platforms/fireos/content_cards/gif/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/gif/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=android';
 
 validurls['/docs/developer_guide/content_cards/creating_custom_content_cards'] = '/docs/developer_guide/content_cards/creating_cards';
 validurls['/docs/developer_guide/content_cards/customizing_behavior'] = '/docs/developer_guide/content_cards/customizing_cards/behavior';
@@ -2042,14 +2042,99 @@ validurls['/docs/developer_guide/content_cards/customizing_styles'] = '/docs/dev
 
 validurls['/docs/developer_guide/platforms/android/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
-validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
-validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/swift/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initialization'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/docs/developer_guide/sdk_initalization/?sdktab=unreal%20engine';
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+validurls['/docs/developer_guide/platforms/android/localization'] = '/docs/developer_guide/localization/?tab=android';
+validurls['/docs/developer_guide/platforms/android/geofences'] = '/docs/developer_guide/geofences/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/storage'] = '/docs/developer_guide/storage/?tab=android';
+
+validurls['/docs/developer_guide/platforms/fireos/localization'] = '/docs/developer_guide/localization/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/geofences'] = '/docs/developer_guide/geofences/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/storage'] = '/docs/developer_guide/storage/?tab=android';
+
+validurls['/docs/developer_guide/platforms/swift/localization'] = '/docs/developer_guide/localization/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/geofences'] = '/docs/developer_guide/geofences/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/storage'] = '/docs/developer_guide/storage/?tab=swift';
+
+validurls['/docs/developer_guide/platforms/web/storage'] = '/docs/developer_guide/storage/?tab=web';
+validurls['/docs/developer_guide/platforms/android/network/network_offline_mode_integration/'] = '/docs/developer_guide/network/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/network/network_offline_mode_integration/'] = '/docs/developer_guide/network/?sdktab=android';
+validurls['/docs/developer_guide/platforms/swift/network/traffic_control'] = '/docs/developer_guide/network/?sdktab=swift';
+validurls['/docs/developer_guide/getting_started/analytics_overview/'] = '/docs/developer_guide/analytics/';
+
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/beacon/'] = '/docs/developer_guide/analytics/logging_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android';
+
+validurls['/docs/developer_guide/platforms/swift/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/analytics/swift_idfv/'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift';
+
+validurls['/docs/developer_guide/platforms/web/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=web';
+
+validurls['/docs/developer_guide/platforms/cordova/analytics/'] = '/docs/developer_guide/analytics/';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=cordova';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
+validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-user-ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=cordova';
+
+validurls['/docs/developer_guide/platforms/fireos/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/beacon/'] = '/docs/developer_guide/analytics/logging_events/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android';
+
+validurls['/docs/developer_guide/platforms/flutter/analytics/'] = '/docs/developer_guide/analytics/';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#session-tracking'] = '/docs/developer_guide/analytics/tracking_sessions/';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events/?tab=flutter';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=flutter';
+validurls['/docs/developer_guide/platforms/flutter/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
+
+validurls['/docs/developer_guide/platforms/react_native/analytics/'] = '/docs/developer_guide/analytics/';
+validurls['/docs/developer_guide/platforms/react_native/analytics/#session-tracking'] = '/docs/developer_guide/analytics/tracking_sessions/';
+validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-events'] = '/docs/developer_guide/analytics/logging_events/?tab=react%20native';
+validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-purchases'] = '/docs/developer_guide/analytics/logging_purchases/?tab=react%20native';
+validurls['/docs/developer_guide/platforms/react_native/analytics/#logging-custom-attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
+
+validurls['/docs/developer_guide/platforms/roku/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=roku';
+validurls['/docs/developer_guide/platforms/roku/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=roku';
+validurls['/docs/developer_guide/platforms/roku/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
+validurls['/docs/developer_guide/platforms/roku/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=roku';
+
+validurls['/docs/developer_guide/platforms/unity/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=unity';
+
+validurls['/docs/developer_guide/platforms/unreal_engine/analytics/'] = '/docs/developer_guide/analytics/';
 validurls['/docs/developer_guide/platforms/android/news_feed/'] = '/docs/developer_guide/news_feed/';
 validurls['/docs/developer_guide/platforms/android/news_feed/creating_a_custom_feed/'] = '/docs/developer_guide/news_feed/';
 validurls['/docs/developer_guide/platforms/android/news_feed/customization/'] = '/docs/developer_guide/news_feed/';
@@ -2086,7 +2171,10 @@ validurls['/docs/developer_guide/platforms/xamarin/news_feed/'] = '/docs/develop
 validurls['/docs/partners/ada/'] = '/docs/partners/home/';
 validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'] = '/docs/partners/home/';
 
-
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
+
+validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
+validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
+validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 
 // validurls['OLD'] = 'NEW';
