@@ -103,7 +103,7 @@ public override fun onPause() {
 
 ### Step 2: Update the manager's blocklist (optional)
 
-In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#step-3-enable-user-session-tracking) provides an easy way to accomplish this.
+In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) provides an easy way to accomplish this.
 
 The following sample code adds two activities to the in-app message registration blocklist, `SplashActivity` and `SettingsActivity`:
 
