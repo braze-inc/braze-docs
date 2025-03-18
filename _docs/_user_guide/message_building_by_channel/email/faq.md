@@ -25,6 +25,14 @@ API-triggered campaigns will deduplicate or send deduplicates depending on where
 - **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the `recipients`` object, the email will be sent twice.
 - **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object:** If you try to add the same user profile twice, only one of the profiles will get the email.
 
+### How do I check if an email address is already associated with a user?
+
+Before creating a user through the API or SDK, call the [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint and specify the user's `email_address`. If it returns a user profile, that Braze user is already associated with that email address.
+
+We strongly recommend that you look for unique email addresses when new users are created, and avoid passing or importing users with the same email address. Otherwise, you may have unintended consequences that impact message sending, targeting, reporting, and other features.
+
+For example, let's say you have duplicate profiles but certain custom attributes or events reside on only one profile. When you try to trigger campaigns or Canvases with multiple criteria, Braze can't identify the user as eligible because there are two user profiles. Or, if a campaign targets an email address shared by two users, the **Search Users** page will show both user profiles as having received the campaign.
+
 ### Will updates to my outbound email settings apply retroactively?
 
 No. Updates made to the outbound email settings do not retroactively affect existing sends. For example, changing your default display name in the email settings will not automatically replace the existing default display name in your active campaigns or Canvases. 
