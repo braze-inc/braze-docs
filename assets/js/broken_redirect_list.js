@@ -2050,6 +2050,9 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+validurls['/docs/developer_guide/platforms/android/network/network_offline_mode_integration/'] = '/docs/developer_guide/network/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/network/network_offline_mode_integration/'] = '/docs/developer_guide/network/?sdktab=android';
+validurls['/docs/developer_guide/platforms/swift/network/traffic_control'] = '/docs/developer_guide/network/?sdktab=swift';
 validurls['/docs/developer_guide/getting_started/analytics_overview/'] = '/docs/developer_guide/analytics/';
 
 validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
