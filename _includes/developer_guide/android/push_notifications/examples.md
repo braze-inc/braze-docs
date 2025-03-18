@@ -17,19 +17,3 @@ Push notifications can display user-specific information inside a custom view hi
 To set up a personalized push in the dashboard, register the specific category you want to be displayed, then set any relevant user attributes you'd like to display using Liquid.
 
 ![Personalized Push dashboard Example]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
-
-## Logging analytics
-
-You can log analytics using either of the following methods, however we recommend using the Braze API.
-
-{% tabs local %}
-{% tab Braze API %}
-You can log analytics in real-time by making calls to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send the `braze_id` value from the Braze dashboard to identify which user profile to update.
-
-![Personalized Push dashboard Example]({% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}){: style="max-width:80%;"}
-{% endtab %}
-
-{% tab Manual %}
-Depending on the details of your payload, you can log analytics manually within your `FirebaseMessagingService.onMessageReceived` implementation or your startup activity. Keep in mind, your `FirebaseMessagingService` subclass must finish execution within 10 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system.
-{% endtab %}
-{% endtabs %}
