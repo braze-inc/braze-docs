@@ -10,9 +10,13 @@ description: "Learn how to track sessions through the Braze SDK."
 
 > Learn how to track sessions through the Braze SDK.
 
+{% alert note %}
+For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
+{% endalert %}
+
 ## About the session lifecycle
 
-A session refers to the period of time the Braze SDK tracks user activity in your app after it's launched. You can also force a new session by [calling the `changeUser()` method]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id). For wrapper SDKs, refer to the relevant Android or Swift information.
+A session refers to the period of time the Braze SDK tracks user activity in your app after it's launched. You can also force a new session by [calling the `changeUser()` method]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
 
 {% tabs %}
 {% tab android %}
@@ -40,7 +44,7 @@ By default, a session starts when you first call `braze.openSession()`. The sess
 
 ### Step 1: Subscribe to updates
 
-To subscribe to session updates, use the `subscribeToSessionUpdates()` method. For wrapper SDKs, use the relevant method from Android or Swift.
+To subscribe to session updates, use the `subscribeToSessionUpdates()` method.
 
 {% tabs %}
 {% tab android %}
@@ -145,7 +149,7 @@ App-specific details are only shown for users who have used more than one app.
 
 ## Changing the default session timeout
 
-You can change the length of time that passes before a session automatically times out. For wrapper SDKs, use the relevant method from Android or Swift.
+You can change the length of time that passes before a session automatically times out.
 
 {% tabs %}
 {% tab android %}
