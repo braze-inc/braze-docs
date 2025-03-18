@@ -2090,17 +2090,13 @@ validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/mes
 validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/open_link_in_new_tab/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_opening-links-in-a-new-tab';
 validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/styling/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_custom-styles';
 
-// cordova
 validurls['/docs/developer_guide/platforms/cordova/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=cordova';
 
-// flutter
 validurls['/docs/developer_guide/platforms/flutter/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=flutter';
 
-// react_native
 validurls['/docs/developer_guide/platforms/react_native/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=react_native';
 validurls['/docs/developer_guide/platforms/react_native/in_app_messages/#accessing-message-data'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=react%20native';
 
-// unity
 validurls['/docs/developer_guide/platforms/unity/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/unity/in_app_messages/#configuring-in-app-message-display-behavior'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/unity/in_app_messages/#custom-action-listeners'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
@@ -2109,10 +2105,8 @@ validurls['/docs/developer_guide/platforms/unity/in_app_messages/#receiving-in-a
 validurls['/docs/developer_guide/platforms/unity/in_app_messages/#parsing-in-app-messages'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/unity/in_app_messages/#displaying-in-app-messages-on-demand'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=unity#displaying-a-message-in-real-time';
 
-// xamarin
 validurls['/docs/developer_guide/platforms/xamarin/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=xamarin';
 
-// roku
 validurls['/docs/developer_guide/platforms/roku/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=roku';
 
 // validurls['OLD'] = 'NEW';
