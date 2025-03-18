@@ -334,7 +334,7 @@ valid_partner_list:
   url: /docs/partners/canvas_steps/pinterest_audience_sync/
 - name: Snapchat
   url: /docs/partners/canvas_steps/snapchat_audience_sync/
-- name: Tiktok
+- name: TikTok
   url: /docs/partners/canvas_steps/tiktok_audience_sync/
 - name: Trustpilot
   url: /docs/partners/message_personalization/dynamic_content/trustpilot/
