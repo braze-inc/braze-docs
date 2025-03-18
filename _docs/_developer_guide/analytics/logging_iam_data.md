@@ -1,8 +1,8 @@
 ---
-nav_title: Logging IAM data
+nav_title: Logging IAM Data
 article_title: Logging in-app message data through the Braze SDK
 page_order: 7
-description: "Learn how to log custom events through the Braze SDK."
+description: "Learn how to log in-app message (IAM) data through the Braze SDK."
 
 ---
 
