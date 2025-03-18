@@ -22,10 +22,6 @@ page_order: 2
 {% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/sdk_integration.md %}
-{% endsdktab %}
-
 {% sdktab cordova %}
 {% multi_lang_include developer_guide/cordova/sdk_integration.md %}
 {% endsdktab %}
