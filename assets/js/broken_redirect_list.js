@@ -2049,4 +2049,71 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+// android
+validurls['/docs/developer_guide/platforms/android/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/ott_devices/'] = '/docs/developer_guide/in_app_messages/PAGE';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/examples/'] = '/docs/developer_guide/in_app_messages/PAGE';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/html_messages/'] = '/docs/developer_guide/in_app_messages/html_messages/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/deep_linking/'] = '/docs/developer_guide/in_app_messages/deep_linking/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/styling/'] = '/docs/developer_guide/in_app_messages/customization/#android_custom-styles';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/app_store_review_prompt/'] = '/docs/developer_guide/in_app_messages/?sdktab=android#android_customizing-the-google-play-review-prompt';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/gif/'] = '/docs/developer_guide/in_app_messages/gifs/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/key_value_pairs/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/listeners/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/message_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_message-dismissals';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/'] = '/docs/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content';
+
+// swift
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/message_delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/html_messages/'] = '/docs/developer_guide/in_app_messages/html_messages/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/deep_linking/'] = '/docs/developer_guide/in_app_messages/deep_linking/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/'] = '/docs/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/message_triggers/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/modal_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift#swift_customizing-modal-dismissals';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/on_click_behavior/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift#swift_on-click-behavior';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/tvos_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=tvos';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/ui_delegates/'] = '/docs/developer_guide/in_app_messages/customization/#swift_setting-up-the-ui-delegate-required';
+
+// web
+validurls['/docs/developer_guide/platforms/web/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/key_value_pairs/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/logging_impressions_and_clicks/'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/message_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_customizing-message-dismissals';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/open_link_in_new_tab/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_opening-links-in-a-new-tab';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/styling/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_custom-styles';
+
+// cordova
+validurls['/docs/developer_guide/platforms/cordova/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=cordova';
+
+// flutter
+validurls['/docs/developer_guide/platforms/flutter/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=flutter';
+
+// react_native
+validurls['/docs/developer_guide/platforms/react_native/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=react_native';
+validurls['/docs/developer_guide/platforms/react_native/in_app_messages/#accessing-message-data'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=react%20native';
+
+// unity
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#configuring-in-app-message-display-behavior'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#custom-action-listeners'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#analytics'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#receiving-in-app-message-data-in-unity'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#parsing-in-app-messages'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#displaying-in-app-messages-on-demand'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=unity#displaying-a-message-in-real-time';
+
+// xamarin
+validurls['/docs/developer_guide/platforms/xamarin/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=xamarin';
+
+// roku
+validurls['/docs/developer_guide/platforms/roku/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=roku';
+
 // validurls['OLD'] = 'NEW';

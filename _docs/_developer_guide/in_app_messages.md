@@ -43,6 +43,10 @@ description: "Learn about in-app messages for the Braze SDK."
 {% multi_lang_include developer_guide/roku/in_app_messages.md %}
 {% endsdktab %}
 
+{% sdktab tvos %}
+{% multi_lang_include developer_guide/tvos/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
