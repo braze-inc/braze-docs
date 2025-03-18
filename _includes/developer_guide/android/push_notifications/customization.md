@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
-## Using a callback for push events
+## Using a callback for push events {#push-callback}
 
 Braze provides a [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
 
@@ -128,7 +128,7 @@ For example, the following styles override would use the `bungee` font family fo
 Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
 {% endalert %}
 
-## Customizing notification display
+## Customizing notification display {#customization-display}
 
 ### Step 1: Create your custom notification factory
 
