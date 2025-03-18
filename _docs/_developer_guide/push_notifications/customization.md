@@ -12,14 +12,14 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/push_notifications/customizing_notifications.md %}
+{% multi_lang_include developer_guide/android/push_notifications/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/push_notifications/customizing_notifications.md %}
+{% multi_lang_include developer_guide/swift/push_notifications/customization.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-{% multi_lang_include developer_guide/fireos/push_notifications/customizing_notifications.md %}
+{% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}
