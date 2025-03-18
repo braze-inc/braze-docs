@@ -2163,5 +2163,6 @@ validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/n
 validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
 validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
 validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
+validurls['/docs/help/help_articles/email/universal_links/'] = '/docs/user_guide/message_building_by_channel/email/universal_links/';
 
 // validurls['OLD'] = 'NEW';

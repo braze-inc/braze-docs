@@ -1,8 +1,8 @@
 ---
 nav_title: Universal Links and App Links
 article_title: Universal Links and App Links
-page_order: 1
-page_type: solution
+page_order: 6.4
+page_type: reference
 description: "This help article walks you through how to set up Apple universal links and Android App Links."
 channel: email
 ---
@@ -263,6 +263,68 @@ For example:
 
 Then, make sure your app is set up to handle the custom path properly. Refer to SparkPost's article on [Using SparkPost click tracking on deep links](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). This article contains example code for [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) and [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).
 
+### Turning off click-tracking on a link-to-link basis
+
+You can turn off click tracking for specific links by adding HTML code to your email message in the HTMl editor or to components in the drag-and-drop editor.
+
+#### Sendgrid
+
+If your email service provider is Sendgrid, use the HTML code `clicktracking=off` like this:
+
+```HTML
+<a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Sparkpost 
+
+If your email service provider is Sparkpost, use the HTML code `data-msys-clicktrack="0"` like this:
+
+```HTML
+<a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Drag-and-drop editor
+
+If using the drag-and-drop email editor, enter your HTML code as a custom attribute if your link is attached to text, a button, or an image.
+
+##### Custom attribute for a text link
+
+#### Sendgrid
+
+Select the following for the custom attribute:
+
+- **Name:** `clicktracking`
+- **Value:** `off`
+
+#### Sparkpost
+
+Select the following for the custom attribute:
+
+- **Name:** `data-msys-clicktrack`
+- **Value:** `0`
+
+![A custom attribute for a text link.][2]{: style="max-width:60%;"}
+
+##### Custom attribute for a button or image
+
+#### Sendgrid
+
+Select the following for the custom attribute:
+
+- **Name:** `clicktracking`
+- **Value:** `off`
+- **Type:** Link
+
+#### Sparkpost
+
+Select the following for the custom attribute:
+
+- **Name:** `data-msys-clicktrack`
+- **Value:** `0`
+- **Type:** Link
+
+![A custom attribute for a button.][1]{: style="max-width:60%;"}
+
 ### Troubleshooting universal links with click-tracking
 
 If your universal links aren't working as expected in your emails, such as navigating the recipient from their email app to the web browser before finally redirecting to the app, refer to these tips to troubleshoot your universal link setup.
@@ -282,3 +344,6 @@ Make sure you have the correct definitions for domains your app is allowed to op
 
 - **iOS:** Review the Associated Domains set up in Xcode for your app ([step 1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)). Check that the click-tracking domain is included in that list.
 - **Android:** Open the app info page (long press the app icon and click ⓘ). Within the app info menu, locate **Open by default** and tap that. This should show a screen with all verified links the app is allowed to open. Check that the click-tracking domain is included in that list.
+
+[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
+[2]: {% image_buster /assets/img/text_click_tracking_off.png %}
