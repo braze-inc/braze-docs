@@ -2088,6 +2088,8 @@ validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'
 
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
+validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
+validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
 validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 
 // validurls['OLD'] = 'NEW';

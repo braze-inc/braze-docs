@@ -1,17 +1,10 @@
----
-nav_title: Live Updates
-article_title: Emulating Live Updates in the Android Braze SDK
-platform: Android
-page_order: 6
-description: "Learn how to emulate Live Updates in the Android Braze SDK."
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
----
+## About Live Updates for Android
 
-# Live Updates
+Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), you can emulate their behavior in the Android Braze SDK, allowing you to display interactive lock-screen notifications similar to Swift. Unlike official Live Updates, this functionality can also be implemented for older Android versions.
 
-> Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/platforms/swift/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
-
-## About `IBrazeNotificationFactory`
+## How it works
 
 You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed. By extending `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass a payload containing custom key-value pairs sent through the Braze dashboard or REST API.
 
@@ -150,7 +143,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
 
 In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Updates are displayed.
 
-In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
+In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#android_step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
 {% details Show the sample code %}
 ```kotlin
@@ -306,7 +299,7 @@ While curl commands are helpful for testing, we recommend handling this call in 
 | `messages.android_push.title` | The message's title. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
 | `messages.android_push.alert` | The message's body. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
 | `messages.extra`             | Key-value pairs that the custom notification factory uses for live notifications. You can assign any string to this value&#8212;however, in the example above, `live_updates` is used to determine if it's a default or live push notification. |
-| `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to the chosen user's live notification. The ID must be unique to this game, and must be used in order to [update their existing notification](#step-4-update-data-with-the-braze-rest-api) later. |
+| `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to the chosen user's live notification. The ID must be unique to this game, and must be used in order to [update their existing notification](#android_step-4-update-data-with-the-braze-rest-api) later. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Step 6: Update the activity

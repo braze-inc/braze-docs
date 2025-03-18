@@ -1,38 +1,23 @@
----
-nav_title: Live Activities
-article_title: Live Activities for the Swift Braze SDK
-platform: Swift
-page_order: 6
-description: "Learn how to implement Live Activities for the Swift Braze SDK."
+{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to complete the following:
 
----
+- Ensure that your project is targeting iOS 16.1 or later.
+- Add the `Push Notification` entitlement under **Signing & Capabilities** in your Xcode project.
+- Ensure `.p8` keys are used to send notifications. Older files such as a `.p12` or `.pem` are not supported.
+- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#swift_step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
 
-# Live Activities
+{% alert note %}
+While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
+{% endalert %}
 
-> Learn how to implement Live Activities for the Swift Braze SDK. Live Activities are persistent, interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
+{% sdk_min_versions swift:5.11.0 %}
 
-## About Live Activities
+## About Live Activities for Swift
 
 ![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity would have your company's name as static information, as well as a dynamic "Time to delivery" that would be updated as the delivery driver approaches its destination.
 
 As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as soon as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption.
-
-## Prerequisites {#prerequisites}
-
-{% sdk_min_versions swift:5.11.0 %}
-
-Additional prerequisites include:
-
-- Live Activities are only available for iPhones and iPads on iOS 16.1 and later. To use this feature, ensure that your project is targeting this iOS version.
-- The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
-- Live Activities require using a `.p8` key to send the notification. Older files such as a `.p12` or `.pem` are not supported.
-- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
-
-{% alert note %}
-While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
-{% endalert %}
 
 ## Sequence Diagram {#sequence-diagram}
 
@@ -370,7 +355,7 @@ To verify that your push-to-start notification successfully arrived at the devic
 
 #### After starting my Live Activity with push-to-start, why isn't it receiving new updates?
 
-Verify that you have correctly implemented the instructions described [above](#brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
+Verify that you have correctly implemented the instructions described [above](#swift_brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
 
 After receiving a Live Activity push-to-start notification, double-check that you can see an outgoing network request to the `/push_token_tag` endpoint of your Braze URL and that it contains the correct activity ID under the `"tag"` field.
 
