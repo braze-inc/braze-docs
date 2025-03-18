@@ -143,7 +143,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
 
 In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Updates are displayed.
 
-In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
+In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#android_step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
 {% details Show the sample code %}
 ```kotlin
@@ -299,7 +299,7 @@ While curl commands are helpful for testing, we recommend handling this call in 
 | `messages.android_push.title` | The message's title. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
 | `messages.android_push.alert` | The message's body. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
 | `messages.extra`             | Key-value pairs that the custom notification factory uses for live notifications. You can assign any string to this value&#8212;however, in the example above, `live_updates` is used to determine if it's a default or live push notification. |
-| `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to the chosen user's live notification. The ID must be unique to this game, and must be used in order to [update their existing notification](#step-4-update-data-with-the-braze-rest-api) later. |
+| `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to the chosen user's live notification. The ID must be unique to this game, and must be used in order to [update their existing notification](#android_step-4-update-data-with-the-braze-rest-api) later. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Step 6: Update the activity
