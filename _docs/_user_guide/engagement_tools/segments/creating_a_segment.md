@@ -16,10 +16,6 @@ search_rank: 3
 
 Go to **Audience** > **Segments**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Segments** under **Engagement**.
-{% endalert %}
-
 ## Step 2: Name your segment
 
 Select **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will help you identify the segment when you want to target it for your campaigns or Canvases. Vague segment titles can be confusing.

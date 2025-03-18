@@ -48,10 +48,6 @@ In Braze, navigate to **Settings** > **API Keys**. Select **Create New API Key**
 - `kpi.new_users.data_series`
 - `kpi.uninstalls.data_series`
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
 ### Step 2: Provide information to the actionable.me team
 
 To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
