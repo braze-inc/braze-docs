@@ -1,7 +1,7 @@
 ---
 nav_title: Upgrading to iOS 18
 article_title: Upgrading to iOS 18
-page_order: 7
+page_order: 7.1
 platform: 
   - iOS
 description: "This article covers insights into the iOS 18 release to help you upgrade your SDK seamlessly."
