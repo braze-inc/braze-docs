@@ -2050,6 +2050,8 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+validurls['/docs/developer_guide/getting_started/analytics_overview/'] = '/docs/developer_guide/analytics/';
+
 validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
 validurls['/docs/developer_guide/platforms/android/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
 validurls['/docs/developer_guide/platforms/android/analytics/beacon/'] = '/docs/developer_guide/analytics/logging_events/?tab=android';
