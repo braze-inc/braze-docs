@@ -44,7 +44,7 @@ To enable push capabilities for iOS, your project must have been built from sour
 {% tab Android %}
 #### Setting small and large icons
 
-To set the [small and large notification icons](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-3-configure-notification-icons):
+To set the [small and large notification icons]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android&tab=android#configure-icons):
 
 1. Add icons to the appropriate drawable folder (`drawable` by default) inside of the `AndroidCopies/res` folder.
 2. Add `braze.xml` to the `AndroidCopies/res/values` folder to set the icons. A very basic braze.xml file:

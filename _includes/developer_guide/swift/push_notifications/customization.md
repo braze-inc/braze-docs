@@ -2,7 +2,7 @@
 
 ## Customizing action buttons {#push-action-buttons-integration}
 
-The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. To create your own custom notification categories, see [action button customization](#push-category-customization).
+The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. To create your own custom notification categories, see [action button customization](#customizing-push-categories).
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
@@ -22,7 +22,7 @@ Use the following code to register for the default push categories when you [reg
 
 {% tabs %}
 {% tab swift %}
-
+a
 ```swift
 UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications.categories)
 ```
@@ -65,7 +65,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 
 If you use the `UNNotification` framework and have implemented the Braze [notification methods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling), you should already have this method integrated. 
 
-## Customizing push categories
+## Customizing push categories {#customizing-push-categories}
 
 In addition to providing a set of default push categories, Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
 
@@ -131,7 +131,7 @@ After you register a category, use the Braze dashboard to send notifications of 
 You only need to define custom notification categories for action buttons with _special actions_, such as deep linking into your app or opening a URL. You do not need to define them for action buttons that only dismiss a notification.
 {% endalert %}
 
-1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/creating_a_push_message).
+1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
 2. Under **Compose push notification**, turn on **Action Buttons**.
 3. In the **iOS Notification Category** dropdown, select **Enter pre-registered custom iOS Category**.
 4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.

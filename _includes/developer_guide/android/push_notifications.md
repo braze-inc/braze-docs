@@ -326,7 +326,7 @@ The following large and small icons pictured are examples of properly designed i
 
 ![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon")
 
-### Step 3: Configure notification icons
+### Step 3: Configure notification icons {#configure-icons}
 
 #### Specifying icons in braze.xml
 

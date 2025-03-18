@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## Setting up push notifications
+## Setting up push notifications {#setting-up-push-notifications}
 
 ### Step 1: Complete the initial setup
 
@@ -144,7 +144,7 @@ To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/
 {% tab Android Native %}
 If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
 
-To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#step-4-add-deep-links).
+To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
 
 {% endtab %}
 {% tab iOS Native %}
@@ -195,7 +195,7 @@ Braze provides this workaround since React Native's Linking API does not support
 
 #### Step 3.3 Enable Universal Links (optional)
 
-To enable [universal linking](https://www.braze.com/docs/developer_guide/platforms/swift/push_notifications/deep_linking/#linking-handling-customization) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
+To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
 
 ```objc
 #import <Foundation/Foundation.h>
