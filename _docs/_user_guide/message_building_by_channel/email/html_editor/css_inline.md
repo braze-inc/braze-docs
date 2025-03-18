@@ -12,11 +12,11 @@ channel:
 
 > CSS inlining is a form of email preprocessing that moves styles in a CSS style sheet into the body of an HTML email. The term "inlining" refers to the fact that styles are applied "inline" to individual HTML elements.
 
-For some email clients, CSS inlining can improve the way that emails render and help confirm that your emails look the way you expect.
+For some email clients, CSS inlining can improve the way that emails render and help confirm that your emails look the way you expect. If you already have a majority of the CSS inlined or are confident that your HTML and CSS are compatible with the requirements of most mail clients, it may not be necessary to turn on this feature. It may cause dynamically embedded styles to conflict with your existing inline styles and may alter your expected preview and email rendering.
 
 ## Using CSS inlining
 
-You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML editor.
+You can control whether CSS inlining is turned on or off for any email message by selecting a checkbox in the **Sending Info** tab of the HTML editor.
 
 ![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:80%;"}
 
