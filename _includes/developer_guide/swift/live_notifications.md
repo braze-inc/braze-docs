@@ -3,7 +3,7 @@
 - Ensure that your project is targeting iOS 16.1 or later.
 - Add the `Push Notification` entitlement under **Signing & Capabilities** in your Xcode project.
 - Ensure `.p8` keys are used to send notifications. Older files such as a `.p12` or `.pem` are not supported.
-- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
+- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#swift_step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
 
 {% alert note %}
 While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
@@ -355,7 +355,7 @@ To verify that your push-to-start notification successfully arrived at the devic
 
 #### After starting my Live Activity with push-to-start, why isn't it receiving new updates?
 
-Verify that you have correctly implemented the instructions described [above](#brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
+Verify that you have correctly implemented the instructions described [above](#swift_brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
 
 After receiving a Live Activity push-to-start notification, double-check that you can see an outgoing network request to the `/push_token_tag` endpoint of your Braze URL and that it contains the correct activity ID under the `"tag"` field.
 
