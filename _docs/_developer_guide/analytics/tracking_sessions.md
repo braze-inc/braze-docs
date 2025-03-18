@@ -36,7 +36,7 @@ If your app goes to the background, `UIApplicationDidEnterBackgroundNotification
 {% endtab %}
 
 {% tab web %}
-By default, a session starts when you first call `braze.openSession()`. The session will remain active for up to `30` minutes of inactivity (unless you [change the default session timeout](#changing-the-default-session-timeout)) or the user closes the app.
+By default, a session starts when you first call `braze.openSession()`. The session will remain active for up to `30` minutes of inactivity (unless you [change the default session timeout](#change-session-timeout)) or the user closes the app.
 {% endtab %}
 {% endtabs %}
 
@@ -147,7 +147,7 @@ To test session tracking, start a session on your device, then open the Braze da
 App-specific details are only shown for users who have used more than one app.
 {% endalert %}
 
-## Changing the default session timeout
+## Changing the default session timeout {#change-session-timeout}
 
 You can change the length of time that passes before a session automatically times out.
 
