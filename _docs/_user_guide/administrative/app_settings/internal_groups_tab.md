@@ -22,12 +22,6 @@ In addition to this article, we also recommend checking out our [Quality Assuran
 To create an Internal Group, perform the following steps: 
 
 1. Go to **Settings** > **Internal Groups**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Settings** > **Developer Console** > **Internal Groups**.
-{% endalert %}
-
-{:start="2"}
 2. Click **Create Internal Group**.
 3. Give your group a meaningful name.
 4. Choose one or more group types, as listed in the following chart.

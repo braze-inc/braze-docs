@@ -39,10 +39,6 @@ Using Liquid enables you to retrieve the names of your subscription groups, and 
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Settings** > **API Keys** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
 ### Step 1: Use the Create preference center endpoint
 
 Let's begin building a preference center using the [Create preference center endpoint]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). To customize your preference center, you can include HTML that aligns with your branding in the `preference_center_page_html` field and `confirmation_page_html` field.

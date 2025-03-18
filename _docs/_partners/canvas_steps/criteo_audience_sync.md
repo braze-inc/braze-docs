@@ -43,10 +43,6 @@ You will need to ensure that you have the following items created and/or complet
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 ![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.][5]{: style="max-width:80%;"}
 
 A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
