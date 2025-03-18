@@ -14,10 +14,6 @@ tool: Media
 
 You can find the **Media Library** under **Templates**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Templates & Media**.
-{% endalert %}
-
 You can use the **Media Library** to:
 
 * Upload multiple images at one time

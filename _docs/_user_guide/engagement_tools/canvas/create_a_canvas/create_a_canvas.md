@@ -20,10 +20,6 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 Go to **Messaging** > **Canvas**, then select **Create Canvas**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
-{% endalert %}
-
 ## Step 2: Set up your Canvas
 
 The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Select each of the following tabs to view which settings you can adjust for each builder step.

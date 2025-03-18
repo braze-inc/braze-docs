@@ -46,10 +46,6 @@ For more information, refer to [Request a Contentsquare integration](https://uxa
 
 Once the integration is complete, Contentsquare custom events will be available to use in your campaigns and Canvases. You can check which events are being sent to Braze from **Data Settings** > **Custom Events**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Manage Settings** > **Custom Events**.
-{% endalert %}
-
 ![Contentsquare Live Signals data in Braze Custom Events tab][1]
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 
