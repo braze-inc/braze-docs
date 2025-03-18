@@ -96,7 +96,7 @@ To create this new user, you can do either of the following:
 1. Delete the user from the other instance before you can create them in the new one, or
 2. Create the user with a different email string (such as `testing+01@braze.com`) or another email alias. 
 
-If you don't receive the message activation on your inbox when using `testing+01@braze.com`, confirm with your IT team that you can accept messages from that kind of email address. Some administrators filter messages sent to email address with a `+`.
+If you don't receive the message activation on your inbox when using `testing+01@braze.com`, confirm with your IT team that you can accept messages from that kind of email address. Some administrators filter messages sent to email addresses with a `+`.
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
