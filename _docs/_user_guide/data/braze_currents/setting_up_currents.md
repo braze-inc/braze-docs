@@ -48,10 +48,6 @@ Before you begin your integration, it's best to decide which integration is best
 
 To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Integrations** > **Currents**.
-{% endalert %}
-
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Step 3: Add your partner

@@ -13,10 +13,6 @@ channel:
 
 In the Braze dashboard, go to **Audience** > **Subscriptions** > **Email Preference Center**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups** > **Email Preference Center**.
-{% endalert %}
-
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
 
 {% alert important %}

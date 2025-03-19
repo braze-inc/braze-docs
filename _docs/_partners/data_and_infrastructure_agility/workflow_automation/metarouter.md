@@ -32,10 +32,6 @@ Before you start, you'll need the following:
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Setting up MetaRouter
 
 To set up MetaRouter for your Braze integration:

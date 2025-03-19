@@ -87,10 +87,6 @@ To use an existing custom HTML template or templates created by a third party, y
 
 You can also access all templates from the **Templates** section.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
-{% endalert %}
-
 After selecting your template, you’ll see an overview of your email under **Email Variants** that includes the sending information and email body. 
 
 Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 

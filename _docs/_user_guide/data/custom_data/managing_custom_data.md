@@ -18,10 +18,6 @@ To pre-populate custom events and attributes, do the following:
 
 1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
-{% endalert %}
-
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
 
 {: start="2"}
