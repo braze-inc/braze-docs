@@ -48,6 +48,8 @@ When a push campaign is launched, Braze will make requests to APNs to deliver yo
 
 If [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with.
 
+{% alert note %} It is normal for APNs to initially return a success status even if a token has become unregistered, as APNs does not immediately report token invalidation events. APNs intentionally delays returning a 410 Gone status for invalid tokens on a randomized schedule, designed to protect user privacy and prevent tracking of app uninstallations. You can safely continue sending notifications to an unregistered token until APNs returns a 410 status. {% endalert %}
+
 ## Using the push error logs
 
 The [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
