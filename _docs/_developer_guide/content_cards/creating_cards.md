@@ -68,9 +68,9 @@ Content Cards can be used to simulate a message center. In this format, each mes
 
 #### Example
 
-For example, you may want to create two message cards: a call-to-action for users enable to reading recommendations and a coupon code given to your new subscriber segment.
+For example, you may want to create two message cards: a call-to-action for users to enable reading recommendations and a coupon code given to your new subscriber segment.
 
-Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site."
+Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site.
 
 {% tabs local %}
 {% tab Reading recommendations %}
