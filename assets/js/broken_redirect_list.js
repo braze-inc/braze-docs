@@ -21,6 +21,7 @@ validurls['/docs/dashboard_features/#changing-email-subscriptions'] = '/docs/use
 validurls['/docs/dashboard_features/#common-errors'] = '/docs/user_guide/data_and_analytics/user_data_collection/user_import/#common-errors';
 validurls['/docs/dashboard_features/#conversion-events'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events';
 validurls['/docs/dashboard_features/#creating-a-webhook'] = '/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook';
+validurls['/docs/user_guide/message_building_by_channel/webhooks/webhook_setting'] = '/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-3-configure-additional-settings'
 validurls['/docs/dashboard_features/#creating-geofence-sets-via-bulk-upload'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#creating-geofence-sets-via-bulk-upload';
 validurls['/docs/dashboard_features/#css-inlining'] = '/docs/user_guide/message_building_by_channel/email/css_inline/#css-inlining';
 validurls['/docs/dashboard_features/#dashboard-fallback-channel'] = '/docs/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel';
@@ -117,6 +118,7 @@ validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/
 validurls['/docs/tvos'] = '/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/';
 validurls['/docs/sdk_integration/unity/ios'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/';
 validurls['/docs/cordova/ios'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/';
+validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup'] = '/docs/developer_guide/sdk_integration/?sdktab=android';
 
 validurls['/docs/android/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';
 validurls['/docs/eclipse_setup/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#android-sdk-integration';
@@ -809,9 +811,9 @@ validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktrack
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
-validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/platforms/swift/live_activities/';
-validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities/'] = '/docs/developer_guide/platforms/swift/live_activities/';
-
+validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
+validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/create/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customize'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/';
@@ -1628,7 +1630,8 @@ validurls['/docs/developer_guide/platform_integration_guides/android/changelog']
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards'] = '/docs/developer_guide/platforms/android/content_cards';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/custom_fonts'] = '/docs/developer_guide/platforms/android/content_cards/custom_fonts';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/deep_linking'] = '/docs/developer_guide/platforms/android/content_cards/deep_linking';
-validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/examples'] = '/docs/developer_guide/platforms/android/content_cards/examples';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/examples'] = '/docs/developer_guide/content_cards?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/content_cards/example'] = '/docs/developer_guide/content_cards?sdktab=android';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/gif'] = '/docs/developer_guide/platforms/android/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/jetpack_compose'] = '/docs/developer_guide/platforms/android/content_cards/jetpack_compose';
 validurls['/docs/developer_guide/platform_integration_guides/android/geofences'] = '/docs/developer_guide/platforms/android/geofences';
@@ -1711,7 +1714,8 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/content_card
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/deep_linking'] = '/docs/developer_guide/platforms/fireos/content_cards/deep_linking';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/examples'] = '/docs/developer_guide/platforms/fireos/content_cards/examples';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/gif'] = '/docs/developer_guide/platforms/fireos/content_cards/gif';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/jetpack_compose'] = '/docs/developer_guide/platforms/fireos/content_cards/jetpack_compose';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/jetpack_compose'] = ['/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose']
 validurls['/docs/developer_guide/platform_integration_guides/fireos/geofences'] = '/docs/developer_guide/platforms/fireos/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/google_play_privacy'] = '/docs/developer_guide/platforms/fireos/google_play_privacy';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages'] = '/docs/developer_guide/platforms/fireos/in_app_messages';
