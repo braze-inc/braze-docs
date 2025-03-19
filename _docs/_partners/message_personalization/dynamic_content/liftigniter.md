@@ -41,5 +41,7 @@ Once you put this message into the composer body, you can preview your message. 
 
 ![A preview image of what the message will look like after it's sent.][2]
 
+*This integration is maintained by Liftigniter.*
+
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}

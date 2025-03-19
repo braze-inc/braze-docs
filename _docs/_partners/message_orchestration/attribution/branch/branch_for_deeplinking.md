@@ -39,6 +39,8 @@ Depending on your ESP, additional customization may be required to support click
 - [SendGrid][7]
 - [SparkPost][9]
 
+*This integration is maintained by Branch.*
+
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://help.branch.io/developers-hub/docs/ios-universal-links

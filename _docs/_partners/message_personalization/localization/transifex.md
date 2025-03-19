@@ -70,5 +70,7 @@ This example code snippet utilizes the Transifex resource translation API and th
 ```
 {% endraw %}
 
+*This integration is maintained by Transifex.*
+
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
