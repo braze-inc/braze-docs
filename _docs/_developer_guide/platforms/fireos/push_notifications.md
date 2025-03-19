@@ -10,7 +10,7 @@ description: "This landing page is home to all things Android push notifications
 > With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
 {% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/).
+If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/).
 {% endalert %}
 
 {% multi_lang_include developer_guide/prerequisites/android.md %}
@@ -26,7 +26,7 @@ The following features are built into the Braze Android SDK. To use any other pu
 
 ## Amazon Device Messaging (ADM)
 
-Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)](https://developer.amazon.com/public/apis/engage/device-messaging). Keep in mind, ADM is not supported on non-Amazon devices, so in order to test Kindle push, you must have a [FireOS device](https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm). For best practices, see [Troubleshooting Push Notifications]({{site.baseurl}}/developer_guide/platforms/fireos/push_notifications/troubleshooting/).
+Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)](https://developer.amazon.com/public/apis/engage/device-messaging). Keep in mind, ADM is not supported on non-Amazon devices, so in order to test Kindle push, you must have a [FireOS device](https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm). For best practices, see [Troubleshooting Push Notifications]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=fireos).
 
 ## Setting up push notifications
 
@@ -116,7 +116,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) in the Android push documentation for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. For more information, see [Using a callback for push events]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events) in the Android push documentation for more information.
 
 ### Step 5: Upload client secret and ID to Braze
 
@@ -183,7 +183,7 @@ Braze.getInstance(context).registeredPushToken = registration_id
 
 ## ADM key-value pairs
 
-Users may send custom key-value pairs with a Kindle push message as `extras` for [deep linking]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/deep_linking/), tracking URLs, etc. Unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining `extra` key-value pairs.
+Users may send custom key-value pairs with a Kindle push message as `extras` for [deep linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=android), tracking URLs, etc. Unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining `extra` key-value pairs.
 
 If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Push Reserved Key Used`.
 

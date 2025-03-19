@@ -148,11 +148,15 @@ After adding segments and filters to your target audience, you can test if your 
 
 #### Selecting entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you check the **Limit entrance volume** checkbox and set the **Maximum entries** field to 1,000 users, then the Canvas will sent to 1,000 users per day.
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas by a selected cadence (daily, lifetime of the Canvas, or every time the Canvas is scheduled). 
 
-![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and whether you'd like to limit hourly, daily, or for the lifetime of the Canvas.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:70%;"}
+For example, if you select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas will only send to 5,000 users per day.
 
+![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and whether you'd like to limit daily, lifetime of the Canvas, or every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
 Braze doesn't recommend using the **Every time the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+{% endalert %}
 
 #### Setting exit criteria
 

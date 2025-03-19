@@ -121,7 +121,7 @@ Placement IDs must be unique to a workspace, and should not be edited after laun
 
 ### Analytics
 
-The following table defines key Banner Card metrics. For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+The following table defines key Banner Card metrics. For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Metric | Definition |
 | --- | --- |

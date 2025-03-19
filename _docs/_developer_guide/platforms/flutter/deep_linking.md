@@ -13,7 +13,7 @@ description: "This article covers how to implement deep linking for your Flutter
 
 ## Prerequisites
 
-Before you can implement deep linking into your Flutter app, you'll need to set up deep linking in the native [Android]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/deep_linking/) or [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/deep_linking/) layer.
+Before you can implement deep linking into your Flutter app, you'll need to set up deep linking in the native [Android]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=android) or [iOS]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift) layer.
 
 ## Implementing deep linking
 

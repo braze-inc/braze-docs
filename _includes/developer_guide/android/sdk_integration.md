@@ -277,7 +277,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 ```
 
 {% alert tip %}
-To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/).
+To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 {% endalert %}
 
 ### Enable exclusive in-app message TalkBack

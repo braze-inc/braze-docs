@@ -2,7 +2,7 @@
 nav_title: Integrating the SDK
 article_title: Integrating the Braze SDK
 description: "Learn how to integrate the Braze SDK."
-page_order: 2
+page_order: 2.0
 ---
 
 # Integrating the Braze SDK
@@ -20,10 +20,6 @@ page_order: 2
 
 {% sdktab web %}
 {% multi_lang_include developer_guide/web/sdk_integration.md %}
-{% endsdktab %}
-
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}

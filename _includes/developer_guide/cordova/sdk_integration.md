@@ -136,7 +136,7 @@ Boolean preferences are read by the SDK using `true` and `false` keywords as a s
 {% endtab %}
 {% endtabs %}
 
-## Optional configurations
+## Optional configurations {#optional}
 
 You can add any of the following preferences to the `platform` element in your project's `config.xml` file:
 

@@ -14,7 +14,7 @@ platform:
 
 # Customizing the style of Content Cards
 
-> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
+> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For the full list of content card types, see [About Content Cards]({{site.baseurl}}/developer_guide/content_cards/).
 
 ## Creating a custom style
 

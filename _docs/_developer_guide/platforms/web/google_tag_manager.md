@@ -44,7 +44,7 @@ Use the Initialization Tag to add the Braze Web SDK to your website.
 
 ### Step 1: Push setup (optional)
 
-Optionally, if you want to be able to send push through the Google Tag Manager, first follow the [push integration]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/) guidelines to:
+Optionally, if you want to be able to send push through the Google Tag Manager, first follow the [push integration]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) guidelines to:
 1. Configure your site's service worker, placing it in the root directory of your site
 2. Set up browser registration - After the service worker is configured, you must set the `braze.requestPushPermission()` method either natively in their app or through a custom HTML tag (via the GTM dashboard). You will also need to make sure that the tag is fired after the SDK has been initialized.
 
@@ -189,7 +189,7 @@ When implementing the [standard feed UI]({{site.baseurl}}/developer_guide/platfo
 
 #### Custom feed UI
 
-For [custom feed]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
+For [custom feed]({{site.baseurl}}/developer_guide/content_cards/creating_cards/) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
 
 {% raw %}
 ```css
