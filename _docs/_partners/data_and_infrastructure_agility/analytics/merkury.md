@@ -62,4 +62,4 @@ The following fields are required:
 
 See your Braze representative for further information.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Merkury.

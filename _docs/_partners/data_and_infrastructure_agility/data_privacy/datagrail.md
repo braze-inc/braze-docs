@@ -36,4 +36,4 @@ If there are additional Braze accounts to integrate:
 
 Email DataGrail at support@datagrail.io with any issues or questions regarding your integration.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by DataGrail.

@@ -171,7 +171,7 @@ Yes! To discover other data points and customization options available, refer to
 Yotpo does not support custom requirements beyond what is described in this guide.
 {% endalert %}
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Yotpo.
 
 [1]: {% image_buster /assets/img/yotpo/image1.png %}
 [2]: {% image_buster /assets/img/yotpo/image2.png %}

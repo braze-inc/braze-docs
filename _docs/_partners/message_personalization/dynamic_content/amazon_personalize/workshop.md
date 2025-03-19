@@ -72,7 +72,7 @@ Similar to the Personalization workshop in step 2, the following Braze messaging
 
 To avoid incurring future charges, delete the AWS resources the Retail Demo Store project created by deleting the AWS CloudFormation stack you created in step 1.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Amazon Personalize.
 
 [1]: {% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}
 [2]: {% image_buster /assets/img/amazon_personalize/region.png %}

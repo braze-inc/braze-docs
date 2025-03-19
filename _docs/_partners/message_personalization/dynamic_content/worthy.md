@@ -48,4 +48,4 @@ In the Worthy message creator, click **Export** and select **Braze** to export y
 
 That's it! You can immediately test your personalized message using the **Test** tab in the Braze campaign editor. 
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Worthy.

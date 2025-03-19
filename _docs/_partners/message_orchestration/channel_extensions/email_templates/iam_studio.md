@@ -78,7 +78,7 @@ Navigate to Braze, and in your in-app message, paste the custom code in the **HT
 
 ![][3]{: style="max-width:85%;"}
 
-_This integration is maintained by ([^\.]+)\._s
+This integration is maintained by IAM Studio.s
 
 [1]: {% image_buster /assets/img/iam_studio/iam_template_gallery.png %}
 [2]: {% image_buster /assets/img/iam_studio/export_iam_code.png %}

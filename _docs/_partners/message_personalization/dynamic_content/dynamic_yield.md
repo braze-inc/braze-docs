@@ -78,7 +78,7 @@ When satisfied with your email, the next step is to generate the code to embed i
 2. Next, click **Copy to Clipboard**.<br>![][1]<br><br> 
 3. Paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Dynamic Yield.
 
 [1]: {% image_buster /assets/img/dynamic_yield/dynamic_yield.png %}
 [2]: {% image_buster /assets/img/dynamic_yield/dynamic_yield1.png %}

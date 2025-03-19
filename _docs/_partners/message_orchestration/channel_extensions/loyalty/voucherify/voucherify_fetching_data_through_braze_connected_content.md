@@ -468,4 +468,4 @@ When setting up a campaign target, use advanced settings to limit the number of 
 
 Read more about Rate Limiter and Frequency Capping in Braze [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting).
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Voucherify.

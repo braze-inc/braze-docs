@@ -48,7 +48,7 @@ After integrating with Braze, Nift will automatically push events to the existin
 - Event name: `nift_processed`
 - Time: The time the customer selected/used the gift
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Nift.
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -77,7 +77,7 @@ Finally, add your API key and REST endpoint URL and click **Save** to enable the
 
 Once your integration has been completed, you can use the Komo data sent to Braze to create segments for targeting.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Komo.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/komo/komo_hub_publish.png %}

@@ -48,6 +48,6 @@ Once the integration is complete, Contentsquare custom events will be available 
 
 ![Contentsquare Live Signals data in Braze Custom Events tab][1]
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Contentsquare.
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 

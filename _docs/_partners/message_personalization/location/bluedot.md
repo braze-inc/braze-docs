@@ -54,4 +54,4 @@ Set up an action-based campaign within Braze that will send messages based on a 
 Make sure to target **All Users** for your workspace.
 ![An action-based campaign with the target users step encouraging you to select "All Users" as the desired segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Bluedot.

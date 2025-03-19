@@ -61,7 +61,7 @@ With the integration, you can apply location conditions by sending geofence info
 
 ![][8]
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Loplat.
 
 [1]: https://www.loplat.com/
 [2]: https://www.loplat.com/loplat-x#usecase

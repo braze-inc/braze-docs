@@ -62,6 +62,6 @@ When you create a campaign in Braze, you can select customers in that GrowthLoop
 
 Contact the GrowthLoop team at solutions@growthloop.com for additional information or support.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by GrowthLoop.
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

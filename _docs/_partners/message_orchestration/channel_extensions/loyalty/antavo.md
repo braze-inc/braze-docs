@@ -90,7 +90,7 @@ Use events synchronized from Antavo to enter loyalty members in action-based Bra
 
 Visit the step-by-step guide to learn how to configure the synchronization of the [loyalty program enrollment event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) and the synchronization of the [loyalty program benefit earning event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Antavo.
 
 [1]: {% image_buster /assets/img/antavo/connect_braze.png %}
 [2]: {% image_buster /assets/img/antavo/data_field_mapping.png %}

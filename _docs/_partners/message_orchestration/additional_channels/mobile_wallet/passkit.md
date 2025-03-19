@@ -300,7 +300,7 @@ UNREDEEMED
 {% endtab %}
 {% endtabs %}
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Passkit.
 
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}

@@ -72,7 +72,7 @@ To create your segment, navigate to **Segment > + Create Segment** and select **
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Lexer.
 
 [1]: {% image_buster /assets/img/lexer/braze_integrate_screen.png %}
 [2]: {{site.baseurl}}/api/basics/#company-secret-explanation

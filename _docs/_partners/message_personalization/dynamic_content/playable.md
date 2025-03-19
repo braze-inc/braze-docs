@@ -40,7 +40,7 @@ Videos will autoplay in over 98% of inboxes, including iPhone Mail, Gmail, Apple
 
 Lastly, paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Playable.
 
 [1]: https://playable.video
 [signup]: https://signup.playable.video

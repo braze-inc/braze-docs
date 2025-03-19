@@ -48,4 +48,4 @@ Attribute field names can also be customized to your preference.
 
 If you want additional attributes from Jebbit in Braze, map the new attribute in your Jebbit account. The attribute will automatically show in Braze as you collect data for that attribute.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Jebbit.

@@ -108,4 +108,4 @@ When it's ready, you can see the code in your message preview.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_email_preview.png %})
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Voucherify.

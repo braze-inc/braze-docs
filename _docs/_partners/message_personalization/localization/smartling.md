@@ -77,7 +77,7 @@ Smartling provides advanced features to search and select content by:
 
 As translations are completed in the Smartling platform, they are automatically sent to Braze—no need to manually sync content between Smartling and Braze.
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Smartling.
 
 [1]: {{site.baseurl}}/api/basics/#endpoints
 [2]: https://dashboard.smartling.com/

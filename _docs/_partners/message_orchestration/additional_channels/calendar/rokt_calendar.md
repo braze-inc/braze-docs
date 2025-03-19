@@ -196,4 +196,4 @@ Preview your request in the **Preview** panel or navigate to the **Test** tab, w
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Rokt Calendar.

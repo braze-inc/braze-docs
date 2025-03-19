@@ -91,4 +91,4 @@ For certain use cases, such as a new email or SMS subscription where Extole does
 
 After connecting your accounts, events will automatically begin flowing from Extole to Braze without any action on your part. A live view of events being sent to Braze can be found in Extole’s Outbound Webhook Center for troubleshooting. 
 
-_This integration is maintained by ([^\.]+)\._
+This integration is maintained by Extole.
