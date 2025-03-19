@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages](#enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to enable in-app messages.
 
 ## Message types
 
