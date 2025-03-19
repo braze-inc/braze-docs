@@ -54,4 +54,4 @@ Access your onboarding course at:
 4. Include an appropriate field to map the `externalUserId` field to. The example connected content call uses the `driver_id`, though your field will likely be different. This ID will be available in eduMe reports, allowing you to correlate them with your systems.<br><br>
 5. Lastly, customize and test your message as needed. We recommend you send at least one test message, access the eduMe content, complete the lesson or course, and verify the eduMe analytics are being recorded. 
 
-This integration is maintained by eduMe.
+_This integration is maintained by ([^\.]+)\._

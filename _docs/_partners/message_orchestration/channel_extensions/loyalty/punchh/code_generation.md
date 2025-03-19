@@ -148,4 +148,4 @@ To link the coupon code inside an image:
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-This integration is maintained by Punchh.
+_This integration is maintained by ([^\.]+)\._

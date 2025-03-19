@@ -173,7 +173,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 ## Support
 Reach out to your client success manager at Quikly with any questions.
 
-This integration is maintained by Quikly.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: https://www.quikly.com
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

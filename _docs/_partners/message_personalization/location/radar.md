@@ -179,6 +179,6 @@ near you!
 Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in Connected Content.
 {% endalert %}
 
-This integration is maintained by Radar.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: {% image_buster /assets/img/radar_example.png %}

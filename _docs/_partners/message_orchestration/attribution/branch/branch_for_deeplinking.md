@@ -39,7 +39,7 @@ Depending on your ESP, additional customization may be required to support click
 - [SendGrid][7]
 - [SparkPost][9]
 
-This integration is maintained by Branch.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/

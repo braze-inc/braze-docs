@@ -76,7 +76,7 @@ Once the authentication is complete, you must create at least one import or expo
 
 Use the toggle next to the Braze connection title to toggle the connection on and off. A connection must be on to run during scheduled times. 
 
-This integration is maintained by Blueconic.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: https://www.blueconic.com/
 [2]: https://portal.aws.amazon.com/billing/signup#/start

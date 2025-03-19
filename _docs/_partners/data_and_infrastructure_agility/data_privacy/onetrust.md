@@ -120,7 +120,7 @@ To see a full list of supported actions:
 
 ![][7]
 
-This integration is maintained by OneTrust.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: {% image_buster /assets/img/onetrust/onetrust.png %}
 [2]: {% image_buster /assets/img/onetrust/onetrust2.png %}

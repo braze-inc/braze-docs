@@ -86,7 +86,7 @@ Preview the message to ensure the request is rendering properly for different us
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-This integration is maintained by Remerge.
+_This integration is maintained by ([^\.]+)\._
 
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API

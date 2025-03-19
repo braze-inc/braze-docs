@@ -77,7 +77,7 @@ The Survicate and Braze integration offers real-time data syncing, so the most u
 1. In Braze, paste the survey link or HTML code into your email campaign’s content.
 2. Start collecting feedback and track responses directly within Survicate.
 
-This integration is maintained by Survicate.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter
 [2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}

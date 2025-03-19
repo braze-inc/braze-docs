@@ -73,7 +73,7 @@ Friendbuy uses the international standard (E.164) to verify real phone numbers. 
 | Neither           | No customer data is sent to Braze.                              |
 | Both              | The customer's email address and phone number is sent to Braze. |
 
-This integration is maintained by Friendbuy.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}

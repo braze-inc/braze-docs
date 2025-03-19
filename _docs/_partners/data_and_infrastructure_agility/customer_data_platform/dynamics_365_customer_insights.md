@@ -57,6 +57,6 @@ To create a segment of these users, In Braze, navigate to **Segments**, create a
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).
 {% endalert %}
 
-This integration is maintained by Dynamics 365 Customer Insights.
+_This integration is maintained by ([^\.]+)\._
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
