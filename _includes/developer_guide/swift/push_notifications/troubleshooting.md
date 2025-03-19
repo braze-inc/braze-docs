@@ -39,7 +39,7 @@ The [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settin
 
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
-Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"](#received-unregistered-sending).
+Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"](#swift_received-unregistered-sending).
 
 In addition, Braze also provides a push changelog on the user profile under the **Engagement** tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
 
@@ -138,7 +138,7 @@ Links in push notifications need to be ATS compliant to be opened in web views. 
 
 ### Deep links from push clicks not opening
 
-Most of the code that handles deep links also handles push opens. First, ensure that push opens are being logged. If not, [fix that issue](#push-clicks-not-logged) (as the fix often fixes link handling).
+Most of the code that handles deep links also handles push opens. First, ensure that push opens are being logged. If not, [fix that issue](#swift_push-clicks-not-logged) (as the fix often fixes link handling).
 
 If opens are being logged, check whether it is an issue with the deep link in general or with the deep linking push click handling. To do this, test to see if a deep link from an in-app message click works.
 

@@ -72,7 +72,7 @@ If you are not using the Braze Expo plugin, or would like to configure these set
 
 #### Step 1.1: Request for push permissions
 
-If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
+If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#reactnative_step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
 #### Step 1.2 (Optional): Migrate your push key
 
@@ -277,7 +277,7 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ## Using the Expo plugin
 
-After you [set up push notifications for Expo](#setting-up-push-notifications), you can use it to handle the following push notifications behaviors&#8212;without needing to write any code in the native Android or iOS layers.
+After you [set up push notifications for Expo](#reactnative_setting-up-push-notifications), you can use it to handle the following push notifications behaviors&#8212;without needing to write any code in the native Android or iOS layers.
 
 ### Forwarding Android push to additional FMS
 

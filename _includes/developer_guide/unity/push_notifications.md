@@ -164,7 +164,7 @@ The required ADM Jar file may be placed anywhere in your project according to th
 
 #### Step 2.4: Add Client Secret and Client ID to your Braze dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1](#step-1-enable-adm) to the Braze dashboard's **Manage Settings** page.
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1](#unity_step-1-enable-adm) to the Braze dashboard's **Manage Settings** page.
 
 ![]({% image_buster /assets/img_archive/fire_os_dashboard.png %})
 {% endtab %}
@@ -276,7 +276,7 @@ public class MainMenu : MonoBehaviour {
 {% endtab %}
 
 {% tab Amazon Device Messaging %}
-By updating your `AndroidManifest.xml` in the [previous step](#step-21-update-androidmanifestxml), push listeners were automatically set up when you added the following lines. So, no further setup is required.
+By updating your `AndroidManifest.xml` in the [previous step](#unity_step-21-update-androidmanifestxml), push listeners were automatically set up when you added the following lines. So, no further setup is required.
 
 ```xml
 <action android:name="com.amazon.device.messaging.intent.RECEIVE" />

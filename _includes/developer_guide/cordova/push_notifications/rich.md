@@ -8,7 +8,7 @@ In your Xcode project, create a notification service extension. For a full walkt
 
 ### Step 2: Add a new target
 
-Open your Podfile and add `BrazeNotificationService` to the notification service extension target [you just created](#step-1-create-a-notification-service-extension). If `BrazeNotificationService` is already added to a target, remove it before continuing. To avoid duplicate symbol errors, use static linking.
+Open your Podfile and add `BrazeNotificationService` to the notification service extension target [you just created](#cordova_step-1-create-a-notification-service-extension). If `BrazeNotificationService` is already added to a target, remove it before continuing. To avoid duplicate symbol errors, use static linking.
 
 ```ruby
 target 'NOTIFICATION_SERVICE_EXTENSION' do

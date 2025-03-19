@@ -6,7 +6,7 @@ If your Android push integration is already set up, and you're looking to migrat
 
 ## Built-in features
 
-The following features are built into the Braze Android SDK. To use any other push notification features, you will need to [set up push notifications](#setting-up-push-notifications) for your app.
+The following features are built into the Braze Android SDK. To use any other push notification features, you will need to [set up push notifications](#android_setting-up-push-notifications) for your app.
 
 |Feature|Description|
 |-------|-----------|
@@ -71,7 +71,7 @@ Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud
 
 ### Step 5: Generate JSON credentials {#json}
 
-Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
+Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#android_service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
@@ -95,12 +95,12 @@ Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i 
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#json). When you're finished, select **Save**.
+Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#android_json). When you're finished, select **Save**.
 
 ![The form for "Push Notification Settings" with "Firebase" selected as the push provider.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
-Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#json).
+Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#android_json).
 {% endalert %}
 
 ### Step 7: Set up automatic token registration

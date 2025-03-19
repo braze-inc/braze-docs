@@ -8,7 +8,7 @@ In your Xcode project, create a notification content extension. For a full walkt
 
 ### Step 2: Configure your push app group
 
-In your project's `config.xml` file, configure the push app group [you just created](#step-1-create-a-notification-content-extension).
+In your project's `config.xml` file, configure the push app group [you just created](#cordova_step-1-create-a-notification-content-extension).
 
 ```xml
 <preference name="com.braze.ios_push_app_group" value="NOTIFICATION_CONTENT_EXTENTION" />
@@ -22,7 +22,7 @@ Replace `PUSH_APP_GROUP` with the name of your push app group. Your `config.xml`
 
 ### Step 3: Add a new target
 
-Open your Podfile and add `BrazePushStory` to the notification content extension target [you created previously](#step-1-create-a-notification-content-extension). To avoid duplicate symbol errors, use static linking.
+Open your Podfile and add `BrazePushStory` to the notification content extension target [you created previously](#cordova_step-1-create-a-notification-content-extension). To avoid duplicate symbol errors, use static linking.
 
 ```ruby
 target 'NOTIFICATION_CONTENT_EXTENSION' do

@@ -30,10 +30,6 @@ description: "This landing page is home to all things push notifications."
 {% multi_lang_include developer_guide/cordova/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/push_notifications.md %}
-{% endsdktab %}
-
 {% sdktab flutter %}
 {% multi_lang_include developer_guide/flutter/push_notifications.md %}
 {% endsdktab %}
