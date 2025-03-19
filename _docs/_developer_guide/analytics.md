@@ -1,7 +1,7 @@
 ---
 nav_title: Analytics
 article_title: About Analytics for the Braze SDK
-page_order: 2.4
+page_order: 2.6
 description: "Learn about the Braze SDK's analytics, so you can better understand which data Braze collects, the difference between custom events and custom attributes, and best practices for managing analytics."
 platform: 
   - Android

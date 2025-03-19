@@ -473,7 +473,7 @@ validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/o
 validurls['/docs/user_guide/message_building_by_channel/content_cards/style_and_design/'] = '/docs/user_guide/message_building_by_channel/content_cards/creative_details/';
 
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/overview/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/data_models/';
-validurls['/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/'] = '/docs/developer_guide/platforms/android/push_notifications/troubleshooting/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/'] = '/docs/developer_guide/platforms/android/push_notifications/troubleshooting/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/html_rendered_push/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/html_rendered_push/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/conversation_push/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/conversation_push/';
@@ -1348,9 +1348,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/advanced_us
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration'] = '/docs/developer_guide/platform_integration_guides/android/analytics/beacon';
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization'] = '/docs/developer_guide/platform_integration_guides/android/localization';
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences'] = '/docs/developer_guide/platform_integration_guides/android/geofences';
-validurls['/developer_guide/platform_integration_guides/android/advanced_use_cases/adding_braze_js_interface/'] = '/docs/developer_guide/platforms/android/in_app_messages/html_messages/';
-
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/android/in_app_messages/enabling_talkback';
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/adding_braze_js_interface/'] = '/docs/developer_guide/platforms/android/in_app_messages/html_messages/';
 
 validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
 validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager';
@@ -2050,6 +2048,63 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+validurls['/docs/developer_guide/platforms/android/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/ott_devices/'] = '/docs/developer_guide/in_app_messages/?sdktab=android%20ott';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/examples/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/html_messages/'] = '/docs/developer_guide/in_app_messages/html_messages/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/deep_linking/'] = '/docs/developer_guide/in_app_messages/deep_linking/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/styling/'] = '/docs/developer_guide/in_app_messages/customization/#android_custom-styles';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/app_store_review_prompt/'] = '/docs/developer_guide/in_app_messages/?sdktab=android#android_customizing-the-google-play-review-prompt';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/gif/'] = '/docs/developer_guide/in_app_messages/gifs/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/key_value_pairs/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=android';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/listeners/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/message_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_message-dismissals';
+validurls['/docs/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/'] = '/docs/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content';
+
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/message_delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/html_messages/'] = '/docs/developer_guide/in_app_messages/html_messages/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/deep_linking/'] = '/docs/developer_guide/in_app_messages/deep_linking/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/'] = '/docs/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/message_triggers/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=swift';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/modal_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift#swift_customizing-modal-dismissals';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/on_click_behavior/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=swift#swift_on-click-behavior';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/tvos_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=tvos';
+validurls['/docs/developer_guide/platforms/swift/in_app_messages/customization/ui_delegates/'] = '/docs/developer_guide/in_app_messages/customization/#swift_setting-up-the-ui-delegate-required';
+
+validurls['/docs/developer_guide/platforms/web/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/delivery/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/troubleshooting/'] = '/docs/developer_guide/in_app_messages/troubleshooting/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/key_value_pairs/'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/logging_impressions_and_clicks/'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/message_dismissals/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_customizing-message-dismissals';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/open_link_in_new_tab/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_opening-links-in-a-new-tab';
+validurls['/docs/developer_guide/platforms/web/in_app_messages/customization/styling/'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=web#web_custom-styles';
+
+validurls['/docs/developer_guide/platforms/cordova/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=cordova';
+
+validurls['/docs/developer_guide/platforms/flutter/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=flutter';
+
+validurls['/docs/developer_guide/platforms/react_native/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=react_native';
+validurls['/docs/developer_guide/platforms/react_native/in_app_messages/#accessing-message-data'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=react%20native';
+
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#configuring-in-app-message-display-behavior'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#custom-action-listeners'] = '/docs/developer_guide/in_app_messages/customization/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#analytics'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#receiving-in-app-message-data-in-unity'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#parsing-in-app-messages'] = '/docs/developer_guide/analytics/logging_iam_data/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unity/in_app_messages/#displaying-in-app-messages-on-demand'] = '/docs/developer_guide/in_app_messages/triggering_messages/?tab=unity#displaying-a-message-in-real-time';
+
+validurls['/docs/developer_guide/platforms/xamarin/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=xamarin';
+
+validurls['/docs/developer_guide/platforms/roku/in_app_messages/'] = '/docs/developer_guide/in_app_messages/?sdktab=roku';
 validurls['/docs/developer_guide/platforms/android/localization'] = '/docs/developer_guide/localization/?tab=android';
 validurls['/docs/developer_guide/platforms/android/geofences'] = '/docs/developer_guide/geofences/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/storage'] = '/docs/developer_guide/storage/?tab=android';
@@ -2171,10 +2226,68 @@ validurls['/docs/developer_guide/platforms/xamarin/news_feed/'] = '/docs/develop
 validurls['/docs/partners/ada/'] = '/docs/partners/home/';
 validurls['/docs/partners/message_orchestration/channel_extensions/surveys/ada/'] = '/docs/partners/home/';
 
+validurls['/docs/developer_guide/platforms/android/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/silent/'] = '/docs/developer_guide/push_notifications/silent/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/conversations/'] = '/docs/developer_guide/push_notifications/?sdktab=android#android_conversation-push-notifications';
+validurls['/docs/developer_guide/platforms/android/push_notifications/android_tv/'] = '/docs/developer_guide/push_notifications/?sdktab=android%20tv';
+validurls['/docs/developer_guide/platforms/android/push_notifications/deep_linking/'] = '/docs/developer_guide/push_notifications/deep_linking/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/examples/'] = '/docs/developer_guide/push_notifications/examples/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/troubleshooting/'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/event_callback/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/html_messages/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android#android_rendering-multiplier-text';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/inline_images/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android#android_sending-inline-images';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/notification_display/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android#android_customizing-notification-display';
+validurls['/docs/developer_guide/platforms/android/push_notifications/customization/settings/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=android#android_settings';
+validurls['/docs/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/'] = '/docs/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/';
+validurls['/docs/developer_guide/platforms/android/push_notifications/examples/#logging-analytics/'] = '/docs/developer_guide/analytics/logging_push_data/?sdktab=android';
+
+validurls['/docs/developer_guide/platforms/fireos/push_notifications/silent/'] = '/docs/developer_guide/push_notifications/silent/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/push_notifications/troubleshooting/'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/push_notifications/customization/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=fireos';
+
+validurls['/docs/developer_guide/platforms/swift/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/deep_linking/'] = '/docs/developer_guide/push_notifications/deep_linking/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/silent/'] = '/docs/developer_guide/push_notifications/silent/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/rich/'] = '/docs/developer_guide/push_notifications/rich/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/push_stories/'] = '/docs/developer_guide/push_notifications/push_stories/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/ignoring_internal/'] = '/docs/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/dynamic_apns/'] = '/docs/developer_guide/push_notifications/#swift_dynamic-apns-gateway-management';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/examples/'] = '/docs/developer_guide/push_notifications/examples/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/troubleshooting/'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/customization/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_push-action-buttons-integration';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/customization/action_buttons/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/customization/badges/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-badges';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/customization/settings/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/customization/sounds/'] = '/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-sounds';
+validurls['/docs/developer_guide/platforms/swift/push_notifications/examples/#logging-analytics/'] = '/docs/developer_guide/analytics/logging_push_data/?sdktab=swift';
+
+validurls['/docs/developer_guide/platforms/web/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/push_notifications/safari_push/'] = '/docs/developer_guide/push_notifications/?sdktab=safari';
+validurls['/docs/developer_guide/platforms/web/push_notifications/soft_push_prompts/'] = '/docs/developer_guide/push_notifications/soft_push_prompts/?sdktab=web';
+validurls['/docs/developer_guide/platforms/web/push_notifications/alternate_domains/'] = '/docs/developer_guide/push_notifications/?sdktab=web#web_alternate-domains';
+validurls['/docs/developer_guide/platforms/web/push_notifications/troubleshooting/#troubleshooting'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=web';
+
+validurls['/docs/developer_guide/platforms/cordova/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=cordova';
+validurls['/docs/developer_guide/platforms/cordova/push_notifications/#setting-up-rich-push-notifications'] = '/docs/developer_guide/push_notifications/rich/?sdktab=cordova';
+validurls['/docs/developer_guide/platforms/cordova/push_notifications/#setting-up-push-stories'] = '/docs/developer_guide/push_notifications/push_stories/?sdktab=cordova';
+
+validurls['/docs/developer_guide/platforms/flutter/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=flutter';
+
+validurls['/docs/developer_guide/platforms/react_native/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=react%20native';
+validurls['/docs/developer_guide/platforms/react_native/push_notifications/#enabling-rich-push-notifications-for-ios'] = '/docs/developer_guide/push_notifications/rich/?sdktab=react%20native';
+validurls['/docs/developer_guide/platforms/react_native/push_notifications/#enabling-push-stories-for-ios'] = '/docs/developer_guide/push_notifications/push_stories/?sdktab=react%20native';
+
+validurls['/docs/developer_guide/platforms/unity/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=unity';
+
+validurls['/docs/developer_guide/platforms/xamarin/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=xamarin';
+validurls['/docs/developer_guide/platforms/xamarin/troubleshooting'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=xamarin';
+
+validurls['/docs/developer_guide/platforms/unreal_engine/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=unreal%20engine';
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
-validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
-validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
+validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android';
+validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 
 // validurls['OLD'] = 'NEW';

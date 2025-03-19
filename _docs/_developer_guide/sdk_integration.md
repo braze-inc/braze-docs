@@ -2,7 +2,7 @@
 nav_title: Integrating the SDK
 article_title: Integrating the Braze SDK
 description: "Learn how to integrate the Braze SDK."
-page_order: 2
+page_order: 2.0
 ---
 
 # Integrating the Braze SDK
