@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=cordova), which includes implementing the `UNNotification` framework.
+{% multi_lang_include developer_guide/prerequisites/cordova.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), which includes implementing the `UNNotification` framework.
 
 The following SDK versions is required to receive Push Stories:
 
