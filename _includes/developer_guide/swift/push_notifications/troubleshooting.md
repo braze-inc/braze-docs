@@ -134,7 +134,7 @@ The following would indicate a problem with push registration or that the user's
 
 ### Web links from push clicks not opening
 
-Links in push notifications need to be ATS compliant to be opened in web views. Ensure that your web links use HTTPS. Refer to our [ATS compliance]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats) article for more information.
+Links in push notifications need to be ATS compliant to be opened in web views. Ensure that your web links use HTTPS. For more information, refer to [ATS compliance]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
 
 ### Deep links from push clicks not opening
 

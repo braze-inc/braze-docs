@@ -189,11 +189,13 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) article for more information.
+{% alert tip %}
+To custom handle deep links, you'll need to create a push callback that listens for push-received and opened-intent data from Braze.
+{% endalert %}
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation") on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation") on deep linking if you have not already added deep links to your app. To learn more about deep links, see our [FAQ: Deep Links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 #### Adding deep links
 

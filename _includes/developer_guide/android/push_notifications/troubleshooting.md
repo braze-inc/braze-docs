@@ -40,7 +40,7 @@ Your push messages might not be sending because of the following situations:
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
 
-For more situations that could prevent push messages from sending, refer to [Troubleshooting push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 

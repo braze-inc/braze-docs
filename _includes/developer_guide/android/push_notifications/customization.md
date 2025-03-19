@@ -458,7 +458,7 @@ The priority levels that you can set on Android or Fire OS push notifications ar
 | Min      | Contextual or background information. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Refer to Google's [Android notification](http://developer.android.com/design/patterns/notifications.html) documentation for more information.
+For more information, refer to Google's [Android notification](http://developer.android.com/design/patterns/notifications.html) documentation.
 
 ### Sounds {#sounds}
 
