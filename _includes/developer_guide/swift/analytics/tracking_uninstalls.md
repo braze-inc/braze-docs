@@ -2,11 +2,11 @@
 
 ### Step 1: Enable background push
 
-In your Xcode project, go to **Capabilities** and ensure you have **Background Modes** enabled. For more information, see [silent push notification]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/).
+In your Xcode project, go to **Capabilities** and ensure you have **Background Modes** enabled. For more information, see [silent push notification]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
 
 ### Step 2: Ignore internal push notifications
 
-The Swift Braze SDK uses background push notifications to collect uninstall tracking analytics. To ensure your app doesn't make unwanted actions when these are sent, you'll need to ensure that [internal push notifications are ignored]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/ignoring_internal/).
+The Swift Braze SDK uses background push notifications to collect uninstall tracking analytics. To ensure your app doesn't make unwanted actions when these are sent, you'll need to ensure that [internal push notifications are ignored]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications).
 
 ### Step 3: Send a test push (optional)
 

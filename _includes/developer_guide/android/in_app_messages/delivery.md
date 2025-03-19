@@ -111,7 +111,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 #### Step 2: Create a push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) triggered via the server sent event.
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) triggered via the server sent event.
 
 ![]({% image_buster /assets/img_archive/serverSentPush.png %})
 

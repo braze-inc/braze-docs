@@ -140,7 +140,7 @@ You only need to define custom notification categories for action buttons with _
 
 ## Customizing badges
 
-Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/settings/) tab when you compose a push notification using Braze's dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) property or the [remote notification payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
+Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) tab when you compose a push notification using Braze's dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) property or the [remote notification payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
 
 Braze will automatically clear the badge count when a Braze notification is received while the app is in the foreground. Manually setting the badge number to 0 will also clear notifications in the notification center. 
 
@@ -239,11 +239,11 @@ Select the **Alert Options** checkbox to see a dropdown of key-values available 
 
 ### Adding content-available flag
 
-Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/).
+Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
 
 ### Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/rich/), regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/push_notifications/rich/?sdktab=swift), regardless of the value of this checkbox.
 
 ### Collapse ID
 

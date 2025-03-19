@@ -67,4 +67,4 @@ button.onclick = function(){
 
 ## Next steps
 
-Next, send yourself a [test message]({{site.baseurl}}/developer_guide/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.
+Next, send yourself a [test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.

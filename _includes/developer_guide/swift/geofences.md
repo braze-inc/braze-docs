@@ -2,7 +2,7 @@
 As of iOS 14, geofences do not work reliably for users who choose to only give their approximate location permission.
 {% endalert %}
 
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
 
 ## Setting up geofences
 
@@ -72,7 +72,7 @@ To prevent battery drain and rate limiting, be sure to configure `distanceFilter
 
 ### Step 3: Verify background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/ignoring_internal/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ### Step 4: Update your `Info.plist`
 

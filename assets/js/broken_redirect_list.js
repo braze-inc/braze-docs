@@ -2290,4 +2290,9 @@ validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/develope
 validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 
+validurls['/docs/developer_guide/sdk_initialization/'] = '/docs/developer_guide/sdk_integration/initialization/'
+validurls['/docs/developer_guide/authentication/'] = '/docs/developer_guide/sdk_integration/authentication/'
+validurls['/docs/developer_guide/debugging/'] = '/docs/developer_guide/sdk_integration/debugging/'
+validurls['/docs/developer_guide/sending_test_messages/'] = '/docs/developer_guide/in_app_messages/sending_test_messages/';
+
 // validurls['OLD'] = 'NEW';

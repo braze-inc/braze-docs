@@ -253,7 +253,7 @@ To use the Braze Unity plugin with Prime31 plugins, edit your project's `Android
 
 ### Amazon Device Messaging (ADM)
 
-Braze supports integrating [ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating ADM with Braze, visit our [ADM push integration instructions]({{site.baseurl}}/developer_guide/platforms/unity/push_notifications/).
+Braze supports integrating [ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating ADM with Braze, visit our [ADM push integration instructions]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=unity).
 
 ### Extending the Braze Unity player (Android only)
 
@@ -261,7 +261,7 @@ The example `AndroidManifest.xml` file provided has one Activity class registere
 
 If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend our `BrazeUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `BrazeUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
 
-1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 2. Integrate our Unity `.aar`, which contains our Unity-specific functionality, to your Android library project you are building for Unity. The `appboy-unity.aar` is available from our [public repo](https://github.com/braze-inc/braze-unity-sdk/tree/master/Assets/Plugins/Android). After our Unity library is successfully integrated, modify your `UnityPlayerActivity` to extend `BrazeUnityPlayerActivity`.
 3. Export your library or plugin project and drop it into `/<your-project>/Assets/Plugins/Android` as normal. Do not include any Braze source code in your library or plugin as they will already be present in `/<your-project>/Assets/Plugins/Android`.
 4. Edit your `/<your-project>/Assets/Plugins/Android/AndroidManifest.xml` to specify your `BrazeUnityPlayerActivity` subclass as the main activity.

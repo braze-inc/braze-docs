@@ -6,10 +6,10 @@ For an example of logging and tracking analytics, refer to our [Android MAUI](ht
 
 {% tabs %}
 {% tab android %}
-For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/location_tracking/).
+For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android).
 {% endtab %}
 
 {% tab ios %}
-To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/geofences/).
+To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/geofences/?sdktab=swift).
 {% endtab %}
 {% endtabs %}
