@@ -26,7 +26,7 @@ In Braze, select your Android app on the **App Settings** page under **Manage Se
 {% tab Swift %}
 #### Step 1.1: Verify integration method
 
-Braze provides a native Unity solution for automating iOS push integrations. If you you'd like to set up and manage your integration manually instead, see [Swift: Push Notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/).
+Braze provides a native Unity solution for automating iOS push integrations. If you you'd like to set up and manage your integration manually instead, see [Swift: Push Notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
 Otherwise, continue to the next step.
 

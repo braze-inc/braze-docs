@@ -22,7 +22,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if if push is supported in their browser first, call `braze.isPushSupported()`.
 
-You can also [send a soft push prompt]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/soft_push_prompts/) to the user before requesting push permission to show your own push-related UI.
+You can also [send a soft push prompt]({{site.baseurl}}/developer_guide/push_notifications/soft_push_prompts/?sdktab=web) to the user before requesting push permission to show your own push-related UI.
 
 {% alert important %}
 On macOS, both **Google Chrome** and **Google Chrome Helper (Alerts)** must be enabled by the end-user in **System Settings > Notifications** before push notifications can be displayed&#8212;even if permissions are granted.

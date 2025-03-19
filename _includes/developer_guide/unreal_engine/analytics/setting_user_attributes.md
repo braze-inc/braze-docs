@@ -24,7 +24,7 @@ The following attributes should be set on the `UBrazeUser` object:
 
 ## Custom User Attributes
 
-In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/analytics/).
 
 {% tabs local %}
 {% tab string %}

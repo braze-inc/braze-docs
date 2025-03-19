@@ -45,7 +45,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android) for an in-depth discussion of attribute tracking best practices and interfaces.
 
 {% endtab %}
 {% tab iOS %}
@@ -54,7 +54,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift) for an in-depth discussion of attribute tracking best practices and interfaces.
 
 {% endtab %}
 {% endtabs %}

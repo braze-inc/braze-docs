@@ -53,7 +53,7 @@ The automation steps performed by the SDK are compatible with pre-existing push 
 
 {% alert warning %}
 The SDK must be initialized on the main thread to enable push notification automation. SDK initialization must happen before the application has finished launching or in your AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) implementation.
-If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization]({{site.baseurl}}/developer_guide/platforms/swift/initialization/delayed_initialization/) documentation page.
+If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=swift) documentation page.
 {% endalert %}
 
 #### Step 3.2: Override individual configurations (optional)
@@ -93,7 +93,7 @@ If you rely on push notifications for additional behavior specific to your app, 
 
 Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
-Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/) for additional integration steps.
+Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories) for additional integration steps.
 
 Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate. 
 
