@@ -60,3 +60,5 @@ In Enterprise MetaRouter, select **Integrations** > **New Integration** > **Braz
 Add event mapping for each identity output, then configure the events you want to send to Braze. When you're finished, select **Save as New Revision**.
 
 ![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
+
+This integration is maintained by Metarouter.

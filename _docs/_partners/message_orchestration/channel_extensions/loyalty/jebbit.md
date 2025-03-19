@@ -43,6 +43,9 @@ The attribute ID you have set in Jebbit is how the attribute field name will be 
 ## Customization
 
 We currently support the [user data]({{site.baseurl}}/api/endpoints/user_data/) endpoints specifically, but requests for different endpoints can be supported.
+
 Attribute field names can also be customized to your preference.
 
 If you want additional attributes from Jebbit in Braze, map the new attribute in your Jebbit account. The attribute will automatically show in Braze as you collect data for that attribute.
+
+This integration is maintained by Jebbit.

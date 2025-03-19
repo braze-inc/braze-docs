@@ -30,3 +30,5 @@ Once connected, Wunderkind will:
 - Create individual campaigns within the Braze UI for each part of a series to allow the rendered emails to be sent.
 - Develop the integration for sending rendered email content in real-time through Braze using the appropriate API endpoint.
 - Conduct extensive quality assurance in a testing environment to ensure emails pass through correctly and data flows into Braze as anticipated.
+
+This integration is maintained by Wunderkind.

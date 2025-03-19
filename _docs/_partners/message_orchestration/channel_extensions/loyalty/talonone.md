@@ -37,3 +37,4 @@ Talon.One **_requires_** a maximum rate limit of 2,500 messages per minute. This
   - [Create referrals via Braze](https://docs.talon.one/docs/dev/technology-partners/braze/creating-referrals-braze)
   - [Create a birthday promotion via Braze](https://docs.talon.one/docs/dev/technology-partners/braze/bday-promotion-braze)
 
+This integration is maintained by Talon.One.

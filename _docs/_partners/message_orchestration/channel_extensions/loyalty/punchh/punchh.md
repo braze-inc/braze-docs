@@ -315,6 +315,7 @@ Considerations:
 {% endtab %}
 {% endtabs %}
 
+This integration is maintained by Punchh.
 
 [1]: {% image_buster /assets/img/punchh/punchh1.png %}
 [2]: {% image_buster /assets/img/punchh/punchh2.png %}

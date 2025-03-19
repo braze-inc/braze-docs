@@ -44,4 +44,6 @@ On receipt of successful status codes from the API, Peak will record the success
 
 Once the sync between Peak and Braze is successful, the updated users now include the new attributes. Use these attributes in campaigns and Canvases to target users and personalize messages.
 
+This integration is maintained by Peak.
+
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

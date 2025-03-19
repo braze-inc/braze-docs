@@ -112,6 +112,7 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Kochava will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
+This integration is maintained by Kochava.
 
 [18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3

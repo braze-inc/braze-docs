@@ -41,5 +41,7 @@ Once you put this message into the composer body, preview your Connected Content
 
 ![An image showing the "Test" tab, encouraging users to thoroughly test their message before send.][2]
 
+This integration is maintained by Certona.
+
 [1]: {% image_buster /assets/img/certona.png %}
 [2]: {% image_buster /assets/img/certona2.png %}

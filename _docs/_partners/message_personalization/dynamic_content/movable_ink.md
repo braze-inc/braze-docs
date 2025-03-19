@@ -168,6 +168,8 @@ This template will take the current time (in seconds), append it to the end of t
 ### Having trouble showing GIFs on Android?
 - Android requires GIF support in implementation. Follow the Android [in-app message customization][GIFsupport] article if you do not have this setup.
 
+This integration is maintained by Movable Ink.
+
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [support]: https://support.movableink.com/

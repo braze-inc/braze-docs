@@ -73,6 +73,8 @@ The **View Error** section will show the error code and some additional informat
 
 If you have any additional questions, reach out to Wyng support ([support@wyng.com][13]) for assistance.
 
+This integration is maintained by Wyng.
+
 [0]: https://wyng.com/
 [1]: https://wyng.com/dashboard/integrations/
 [2]: {% image_buster /assets/img/wyng/2.png %}

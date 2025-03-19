@@ -61,3 +61,5 @@ The following fields are required:
 - email address
 
 See your Braze representative for further information.
+
+This integration is maintained by Merkury.

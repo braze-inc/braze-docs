@@ -277,3 +277,5 @@ class BrazeExample:
 ### Step 3: Update solution flows to redirect upon success/failure of action node
 
 Lastly, in each solution's design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 
+
+This integration is maintained by Pypestream.

@@ -63,6 +63,8 @@ The data from Braze will start flowing from the time of the next scheduled data 
 
 Visit Clarisights for more information on available [metrics and dimensions][10] or [report creation][11].
 
+This integration is maintained by Clarisights.
+
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://clarisights.com
 [3]: {{site.baseurl}}/assets/img/clarisights/overall_view.png

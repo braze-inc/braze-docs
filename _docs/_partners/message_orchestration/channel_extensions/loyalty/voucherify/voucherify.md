@@ -35,3 +35,5 @@ Visit the following articles for additional resources on the Voucherify integrat
 - [Fetching data through Braze Connected Content]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content)
 - [Distribution with Braze custom attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes)
 - [Using Braze promotion codes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list)
+
+This integration is maintained by Voucherify.

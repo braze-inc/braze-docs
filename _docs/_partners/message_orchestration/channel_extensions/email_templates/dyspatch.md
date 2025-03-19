@@ -50,6 +50,8 @@ Do not select **Inline CSS** in the **Sending Info** section for any Dyspatch em
 
 Find your uploaded Dyspatch template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
+This integration is maintained by Dyspatch.
+
 [1]: https://www.dyspatch.io
 [2]: https://dashboard.braze.com/sign_in
 [3]: https://www.dyspatch.io/login/

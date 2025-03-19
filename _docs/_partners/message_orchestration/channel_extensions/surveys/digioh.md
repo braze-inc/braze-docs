@@ -63,6 +63,8 @@ To apply this integration to a Digioh [lightbox](https://help.digioh.com/knowled
 
 Here, select **Add Integration**, choose your desired integration, and **Save**. Digioh will now pass your captured leads to Braze in real-time.
 
+This integration is maintained by Digioh.
+
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}
 [4]: {% image_buster /assets/img/digioh/4.png %}
