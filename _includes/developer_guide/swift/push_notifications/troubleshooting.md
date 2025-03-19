@@ -34,7 +34,7 @@ When a push campaign is launched, Braze will make requests to APNs to deliver yo
 If [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with.
 
 {% alert note %}
-It is normal for APNs to initially return a success status even if a token has become unregistered, as APNs does not immediately report token invalidation events. APNs intentionally delays returning a 410 Gone status for invalid tokens on a randomized schedule, designed to protect user privacy and prevent tracking of app uninstallations. You can safely continue sending notifications to an unregistered token until APNs returns a 410 status.
+It's normal for APNs to initially return a success status even if a token becomes unregistered, as APNs doesn't immediately report token invalidation events. APNs intentionally delays returning a `410` status for invalid tokens on a randomized schedule, designed to protect user privacy and prevent tracking of app uninstalls. You can safely continue sending notifications to an unregistered token until APNs returns a `410` status.
 {% endalert %}
 
 ## Using the push error logs
