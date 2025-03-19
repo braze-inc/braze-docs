@@ -48,10 +48,6 @@ You'll need to confirm that you have the following items created and completed b
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. Under Facebook Audience Export, select **Connect Facebook**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 ![Facebook technology page in Braze that includes an Overview section and Facebook Audience Export section with the Connected Facebook button.][4]{: style="max-width:85%;"}
 
 A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
@@ -76,8 +72,15 @@ For customers who have previously undergone the Facebook App Review process for 
 
 ### Step 2: Accept custom audiences terms of service
 
-Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
-`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<YOUR_AD_ACCOUNT_ID>`
+Before building out your Canvas, you must accept the following Facebook terms of service at the following links:
+
+- **Customer List Custom Audiences Terms for your personal account:** `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
+- **Facebook Business Tools Terms for your business account:** `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+
+![An example of the terms to accept for customer list custom audiences.][24]{: style="max-width:85%;"}
+![An example of the terms to accept for Facebook business tools.][25]{: style="max-width:85%;"}
+
+Refer to the [FAQ section](#terms) for more details on auditing your Facebook account when integrating.
 
 ### Step 3: Add a Facebook Audience component in Canvas Flow
 
@@ -291,7 +294,7 @@ If you experience additional issues with your integration, refer to the followin
 2. As an **Employee**, confirm that the Admin grants you full **Manage Ad Account** permissions for each ad account to create an audience or sync users to the audience. 
 3. After that has been granted, you must disconnect and reconnect your account.
 
-#### Accept the terms of service
+#### Accept the terms of service {#terms}
 
 Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of service.
 
@@ -367,3 +370,5 @@ As another troubleshooting step, we recommend that a different admin user try to
 [21]: {% image_buster /assets/img/audience_sync/fb_sync.png %}
 [22]: {% image_buster /assets/img/audience_sync/fb_sync2.png %}
 [23]: {% image_buster /assets/img/audience_sync/fb_sync3.png %}
+[24]: {% image_buster /assets/img/fb_audience_sync/fb_sync_tos.png %}
+[25]: {% image_buster /assets/img/fb_audience_sync/fb_sync_tos2.png %}

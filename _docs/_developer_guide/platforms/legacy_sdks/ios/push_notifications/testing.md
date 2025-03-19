@@ -22,10 +22,6 @@ Required fields:
 - `EXTERNAL_USER_ID` - available on the **Search Users** page.
 - `REST_API_ENDPOINT_URL` - listed on the Braze [Instances]({{site.baseurl}}/api/basics/#endpoints. Ensure using the endpoint corresponds to the Braze instance your workspace is on.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
-{% endalert %}
-
 Optional fields:
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)

@@ -43,10 +43,6 @@ Select any segment name above the graph to turn on or off visibility for that se
 
 Similarly, you can find data on [sessions over time for this particular segment][13] on the **Home** page.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
-{% endalert %}
-
 ![Session data by segment][18]
 
 ## View custom events over time

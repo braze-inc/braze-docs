@@ -40,10 +40,6 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Segment**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 
 ### Step 3: Connect the Braze Cohorts Destination
