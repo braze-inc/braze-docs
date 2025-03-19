@@ -89,6 +89,8 @@ braze.openSession();
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
+{% multi_lang_include developer_guide/web/about_google_tag_manager.md %}
+
 ## Optional configurations
 
 ### Logging

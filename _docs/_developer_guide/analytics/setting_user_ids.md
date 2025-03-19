@@ -52,9 +52,17 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endtab %}
 
 {% tab WEB %}
+For a standard Web SDK implementation, you can use the following method:
+
 ```javascript
 braze.changeUser(YOUR_USER_ID_STRING);
 ```
+
+If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
+
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 {% endtab %}
 
 {% tab CORDOVA %}
