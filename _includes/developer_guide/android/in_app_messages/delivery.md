@@ -14,7 +14,7 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 
 All eligible in-app messages are delivered to a user's device at the start of their session. When delivered, the SDK will prefetch assets, so they're available at trigger time, minimizing display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered.
 
-For more information about the SDK's session start semantics, see[Session Lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle).
+For more information about the SDK's session start semantics, see[Session Lifecycle]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android).
 
 ### Rate limit
 
@@ -68,9 +68,9 @@ By default, in-app messages are automatically triggered when the SDK logs a cust
 
 #### Step 1: Create a push callback to receive the silent push
 
-Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
+Register your custom push callback to listen for a specific silent push notification.
 
-Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
+In the following example, two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 {% tabs %}
 {% tab JAVA %}

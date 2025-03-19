@@ -474,7 +474,7 @@ func inAppMessage(
 You can use in-app messages in a campaign to ask users for an App Store review.
 
 {% alert note %}
-Because this example prompt overrides default behavior of Braze, we cannot automatically track impressions if it is implemented. You must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/#logging-impressions-and-clicks).
+Because this example prompt overrides default behavior of Braze, we cannot automatically track impressions if it is implemented. You must [log your own analytics]({{site.baseurl}}/developer_guide/analytics/).
 {% endalert %}
 
 ### Step 1: Set the in-app message delegate

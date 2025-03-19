@@ -86,7 +86,7 @@ If you don't remove `braze.automaticallyShowInAppMessages()` from your website, 
 
 The `inAppMessage` parameter will be an [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) subclass or an [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html) object, each of which has various lifecycle event subscription methods. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) for full documentation.
 
-Only one [`Modal`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages) or [`Full`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages) in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
+Only one [`Modal`]({{site.baseurl}}/developer_guide/in_app_messages/?tab=modal&sdktab=web) or [`Full`]({{site.baseurl}}/developer_guide/in_app_messages/?tab=full&sdktab=web) in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
 
 ## Manually triggering messages
 
