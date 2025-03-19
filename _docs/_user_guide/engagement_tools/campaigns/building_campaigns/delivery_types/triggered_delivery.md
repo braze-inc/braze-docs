@@ -172,16 +172,16 @@ We recommend either changing the target audience to include all users, or checki
 
 ![][51]
 
-### Troubleshooting
+### Troubleshooting custom events
 
-First, confirm that the custom event is being passed to Braze. Go to **Analytics** > **Custom Events Report**, and then select the respective custom event and date range. If the event doesn't pass, confirm that it's set up correctly and that the user performed the correct action.
+First, confirm that the custom event is being passed to Braze. Go to **Analytics** > **Custom Events Report**, and then select the respective custom event and date range. If the event doesn't display, confirm that it's set up correctly and that the user performed the correct action.
 
-If the custom event passes, further troubleshoot by doing the following:
+If the custom event displays, further troubleshoot by doing the following:
 
-- Check the user's profile download to confirm they triggered the event and when they did it. If the event was triggered, compare the timestamp for when the event was triggered to the time the campaign went live.
-- Determine if the user would have been in the segment when triggering by reviewing changelogs for the campaign and any segments used in targeting.
-- Verify whether the user was entered into a control group through segmentation.
-- If there is a scheduled delay, check if the event was triggered after the delay. 
+- Check the user's profile download to confirm they triggered the event and when they did it. If the event was triggered, compare the timestamp for when the event was triggered to the time the campaign went live. The event may have been triggered before the campaign went live.
+- Review changelogs for the campaign and any segments used in targeting to determine if the user was in the segment when their custom event was triggered. If they weren't in the segment, they wouldn't have received the campaign.
+- Verify whether the user was entered into a control group through segmentation and consequently prevented from receiving the campaign.
+- If there is a scheduled delay, check if the user's custom event was triggered before the delay. If the event was triggered before the delay, they wouldn't have received the campaign.
 
 If the triggered event changes the user's segment membership and the segment is used within the **Target Audiences** step, this could cause the user to drop out of the campaign. If the user is currently in the segment, verify how they entered the segment (such as through an attribute or event change). Sometimes the properties come in differently than expected, such as through different datatypes or case.
 
