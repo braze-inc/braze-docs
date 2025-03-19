@@ -1,7 +1,7 @@
 ---
 nav_title: References and Repositories
 article_title: Braze SDK reference documentation and repositories
-page_order: 4.4
+page_order: 5.1
 description: "This is a list of reference documentation and GitHub repositories belonging to each Braze SDK."
 ---
 

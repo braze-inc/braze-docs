@@ -1,11 +1,11 @@
 ---
-nav_title: Initializing the SDK
+nav_title: Initialization
 article_title: Initializing the Braze SDK
 platform: 
   - Android
   - FireOS
   - Swift
-page_order: 2.1
+page_order: 1.1
 description: "Learn how to initialize the Braze SDK using methods like runtime initialization, delayed initialization, or Google Tag Manager."
 
 ---

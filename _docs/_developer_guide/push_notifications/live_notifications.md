@@ -1,7 +1,7 @@
 ---
 nav_title: Live Notifications
 article_title: Live notifications for the Braze SDK
-page_order: 3.0
+page_order: 5
 description: "Learn how to set up live notifications for Braze SDK, which includes emulating Live Updates for Android and implementing Live Activities for Swift."
 platform:
     - Android

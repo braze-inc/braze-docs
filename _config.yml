@@ -175,7 +175,8 @@ permalink_custom_vars: ["nav_title"]
 
 # List of pages(path) to auto expand. For help, see:
 #   braze.com/docs/contributing/content_management/sections/#forcing-auto-expand
-#nav_expand_list:
+nav_expand_list:
+  - "/null"
 
 # Don't serve non-jekyll files
 exclude:
