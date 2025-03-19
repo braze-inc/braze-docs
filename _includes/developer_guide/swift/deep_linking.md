@@ -2,7 +2,7 @@
 
 ## Handling deep links
 
-### Step 1: Register a scheme
+### Step 1: Register a scheme {#register-a-scheme}
 
 To handle deep linking, a custom scheme must be stated in your `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
 
@@ -190,7 +190,7 @@ To decode an encoded link, use the `String` property [`removingPercentEncoding`]
 You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze push notifications, in-app messages, and the News Feed.
 
 To take users from your app into the iOS settings:
-1. First, make sure your application is set up for either [scheme-based deep links](##step-1-registering-a-scheme) or [universal links](#universal-links).
+1. First, make sure your application is set up for either [scheme-based deep links](#swift_register-a-scheme) or [universal links](#swift_universal-links).
 2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 
