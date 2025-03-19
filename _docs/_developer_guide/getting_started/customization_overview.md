@@ -3,7 +3,9 @@ nav_title: Customization Overview
 article_title: Customization Overview
 page_order: 10
 description: "This reference article covers the essential concepts of customizing and extending the SDK messaging channels."
-  
+hidden: true
+layout: redirect
+redirect_to: /docs/developer_guide/getting_started/
 ---
 
 # Customization overview

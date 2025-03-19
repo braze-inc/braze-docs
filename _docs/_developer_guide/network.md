@@ -1,7 +1,7 @@
 ---
 nav_title: Network Settings
 article_title: Network Settings for the Braze SDK
-page_order: 4.1
+page_order: 4.0
 description: "Learn how to configure network settings for the Braze SDK."
 platform: 
   - Android

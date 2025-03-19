@@ -106,7 +106,6 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 
 <br>
 <br>
-For more on customizing messaging channels, check out: [Getting Started: Customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 ## Integrating Braze
 

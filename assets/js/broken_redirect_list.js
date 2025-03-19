@@ -2286,8 +2286,8 @@ validurls['/docs/developer_guide/platforms/xamarin/troubleshooting'] = '/docs/de
 validurls['/docs/developer_guide/platforms/unreal_engine/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=unreal%20engine';
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
-validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=android';
-validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/live_notifications/?sdktab=swift';
+validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android';
+validurls['/docs/developer_guide/swift/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/help/help_articles/email/email_bounces/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 
 // validurls['OLD'] = 'NEW';
