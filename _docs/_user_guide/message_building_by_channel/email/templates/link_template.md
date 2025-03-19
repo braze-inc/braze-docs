@@ -33,12 +33,6 @@ You can create an unlimited number of link templates to support your various nee
 
 1. Go to **Templates** > **Email Link Templates**. 
 2. Select **Create email link template**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
-{% endalert %}
-
-{:start="3"}
 3. Give your link template a name.
 4. (optional) Add a description, team, or tag to add details about the link template.
 5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.

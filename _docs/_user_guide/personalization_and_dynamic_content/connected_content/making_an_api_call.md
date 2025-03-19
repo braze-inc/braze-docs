@@ -80,10 +80,6 @@ Braze systems may make the same Connected Content API call more than once per re
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones from **Settings** > **Connected Content**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Connected Content** under **Manage Settings**.
-{% endalert %}
-
 ![The 'Connected Content' settings in the Braze dashboard.][34]
 
 To add a new credential, select **Add Credential**. Give your credential a name and enter the username and password.

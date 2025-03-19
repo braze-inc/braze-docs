@@ -359,10 +359,6 @@ For this example, suppose we have an `accounts` object array that we've just sen
 
 In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
-{% endalert %}
-
 Search for your object or object array. In the **Attribute Name** column, select **Generate Schema**.
 
 ![][8]
