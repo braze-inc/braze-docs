@@ -138,7 +138,7 @@ Links in push notifications need to be ATS compliant to be opened in web views. 
 
 ### Deep links from push clicks not opening
 
-Most of the code that handles deep links also handles push opens. First, ensure that push opens are being logged. If not, [fix that issue](#swift_push-clicks-not-logged) (as the fix often fixes link handling).
+Most of the code that handles deep links also handles push opens. First, ensure that push opens are being logged. If not, fix that issue (as the fix often fixes link handling).
 
 If opens are being logged, check whether it is an issue with the deep link in general or with the deep linking push click handling. To do this, test to see if a deep link from an in-app message click works.
 
