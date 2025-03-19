@@ -65,6 +65,7 @@ target 'YourNotificationServiceExtensionTarget' do
 pod 'BrazeNotificationService'
 end
 ```
+
 {% alert note %}
 For instructions to implement Rich Push, see [Rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/?tab=swift%20package%20manager).
 {% endalert %}

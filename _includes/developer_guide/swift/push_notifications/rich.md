@@ -54,6 +54,7 @@ target 'YourNotificationContentExtensionTarget' do
   pod 'BrazePushStory'
 end
 ```
+
 {% alert note %}
 For instructions to implement Push Stories, see the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
 {% endalert %}

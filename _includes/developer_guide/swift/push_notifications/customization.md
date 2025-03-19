@@ -2,7 +2,7 @@
 
 ## Customizing action buttons {#push-action-buttons-integration}
 
-The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. To create your own custom notification categories, see [action button customization](#customizing-push-categories).
+The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`.
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
