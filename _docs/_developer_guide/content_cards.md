@@ -11,7 +11,7 @@ platform:
   - Web
 ---
 
-# About Content Cards
+# Content Cards
 
 > Learn about Content Cards for the Braze SDK, including the different data models and card-specific properties available for your application.
 
