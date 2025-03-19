@@ -23,7 +23,7 @@ guide_featured_list:
     link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Analytics Overview
-    link: /docs/developer_guide/getting_started/analytics_overview/
+    link: /docs/developer_guide/analytics/
     image: /assets/img/braze_icons/check-done-02.svg
   - name: Customization Overview
     link: /docs/developer_guide/getting_started/customization_overview/

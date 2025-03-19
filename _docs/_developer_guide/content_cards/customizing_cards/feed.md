@@ -354,7 +354,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 </style>
 ```
 
-For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/content_cards/customizing_styles/).
+For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/).
 {% endtab %}
 {% tab Jetpack Compose %}
 To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
@@ -419,7 +419,7 @@ Content Cards can be filtered on your app so that only specific cards are displa
 
 ### Step 1: Set key-value pairs on cards
 
-When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/developer_guide/content_cards/customizing_behavior/) on each card. You will use this key-value pair to categorize cards. Key-value pairs are stored in the `extras` property in the card's data model.
+When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/behavior/) on each card. You will use this key-value pair to categorize cards. Key-value pairs are stored in the `extras` property in the card's data model.
 
 For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, such as `home_screen` or `marketing`.
 

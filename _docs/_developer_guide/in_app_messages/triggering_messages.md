@@ -266,7 +266,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 #### Step 2: Create a push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) triggered via the server sent event.
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) triggered via the server sent event.
 
 ![]({% image_buster /assets/img_archive/serverSentPush.png %})
 
@@ -329,7 +329,7 @@ Due to a push message being used to record an SDK logged custom event, Braze wil
 
 #### Step 2: Create a silent push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/) that is triggered via the server-sent event. 
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) that is triggered via the server-sent event. 
 
 ![An action-based delivery in-app message campaign that will be delivered to users whose user profiles have the custom event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 

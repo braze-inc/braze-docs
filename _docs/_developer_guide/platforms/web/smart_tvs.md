@@ -15,7 +15,7 @@ For a complete technical reference, check out our [JavaScript Documentation](htt
 
 ## Install the Braze SDK
 
-To get started, follow our [Initial SDK setup]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) guide for the Web SDK.
+To get started, follow our [Initial SDK setup]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 
@@ -26,11 +26,11 @@ There are two changes required when integrating with Smart TVs:
 
 All of the same Web SDK methods for analytics can be used on Smart TVs.
 
-For a complete guide to tracking custom events, custom attributes, and more, read our [Analytics]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) documentation.
+For a complete guide to tracking custom events, custom attributes, and more, read our [Analytics]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) documentation.
 
 ## In-app messages and Content Cards
 
-The Braze Web SDK supports both [in-app messages]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/) and [Content Cards]({{site.baseurl}}/developer_guide/platforms/web/content_cards/) on Smart TVs. Note that you must use the ["Core" Web SDK](https://www.npmjs.com/package/@braze/web-sdk) as rendering in-app messages and Content Cards is not supported using our standard UI display and should instead be customized by your app to fit into your TV App's experience.
+The Braze Web SDK supports both [in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=web) and [Content Cards]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web) on Smart TVs. Note that you must use the ["Core" Web SDK](https://www.npmjs.com/package/@braze/web-sdk) as rendering in-app messages and Content Cards is not supported using our standard UI display and should instead be customized by your app to fit into your TV App's experience.
 
 Visit [Manual in-app message display]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display) for more information on how your Smart TV App can receive and display in-app messages.
 
