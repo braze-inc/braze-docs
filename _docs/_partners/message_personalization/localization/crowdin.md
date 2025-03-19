@@ -64,7 +64,7 @@ As soon as translations are complete, open the Braze app in Crowdin, select the 
 
 ![An image of a user selecting their translation files and syncing them to Braze.][3]
 
-This integration is maintained by Crowdin.
+*This integration is maintained by Crowdin.*
 
 [1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
 [2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}

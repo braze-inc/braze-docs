@@ -97,7 +97,7 @@ Next to your actor property name, choose an operator and a value (if applicable)
 
 ![Choosing an operating and value for the selected ][504]
 
-This integration is maintained by Scuba Analytics.
+*This integration is maintained by Scuba Analytics.*
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table

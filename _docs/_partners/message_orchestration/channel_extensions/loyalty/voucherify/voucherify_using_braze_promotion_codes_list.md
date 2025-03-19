@@ -56,4 +56,4 @@ Add the code snippet to display a code from the list.
 
 Once the message with the code is sent, the same code won't be used again.
 
-This integration is maintained by Voucherify.
+*This integration is maintained by Voucherify.*

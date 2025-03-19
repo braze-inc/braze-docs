@@ -158,7 +158,7 @@ You can view the Redpoint associated properties on the user profile.
 
 ![][15]{: style="max-width:80%;"}
 
-This integration is maintained by Redpoint.
+*This integration is maintained by Redpoint.*
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com

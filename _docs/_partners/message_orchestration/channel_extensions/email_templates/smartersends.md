@@ -78,7 +78,7 @@ Create a message variant ID for each group you create in SmarterSends to view me
 
 Each SmarterSends instance is fully customizable with your brand's logo colors and custom domain name, creating a familiar environment. Additionally, for further personalization, you can define the attributes and custom attributes to target users in campaigns based on the segments within your Braze workspace.
 
-This integration is maintained by SmarterSends.
+*This integration is maintained by SmarterSends.*
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://smartersends.com

@@ -36,4 +36,4 @@ Visit the following articles for additional resources on the Voucherify integrat
 - [Distribution with Braze custom attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes)
 - [Using Braze promotion codes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list)
 
-This integration is maintained by Voucherify.
+*This integration is maintained by Voucherify.*

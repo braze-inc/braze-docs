@@ -56,7 +56,7 @@ Next, verify the email name and click **Sync**.
 
 You can find your uploaded Knak emails in Braze under **Engagement > Templates & Media**. They'll be beautiful, on-brand, and fully responsive. The only limit is your own creativity!
 
-This integration is maintained by Knak.
+*This integration is maintained by Knak.*
 
 [1]: https://knak.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

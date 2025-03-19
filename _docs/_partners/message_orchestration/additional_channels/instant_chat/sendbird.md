@@ -108,7 +108,7 @@ This custom event will be triggered twice for each notification, when a message 
 - When a message is sent, a custom event is triggered with `SENT` status.
 - When a message is read, a custom event is triggered with `READ` status.
 
-This integration is maintained by Sendbird.
+*This integration is maintained by Sendbird.*
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://sendbird.com/docs/notifications/v1/uikit/ios/install-uikit

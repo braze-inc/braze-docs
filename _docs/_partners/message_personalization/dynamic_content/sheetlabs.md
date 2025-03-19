@@ -68,7 +68,7 @@ Now that your API is accessible, you can use it in your Connected Content calls.
 For more examples and advice on integrating with Sheetlabs, refer to [Sheetlabs documentation](https://app.sheetlabs.com/docs/producers/braze/).
 {% endalert %}
 
-This integration is maintained by Sheetlabs.
+*This integration is maintained by Sheetlabs.*
 
 
 [1]: https://sheetlabs.com/

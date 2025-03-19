@@ -56,4 +56,4 @@ Upon receiving the notification, log a custom crash event and update user attrib
 
 Once completed, you'll be able to harness the power of Braze segmentation and engagement analytics using the crash information found in the Apteligent platform.
 
-This integration is maintained by Apteligent.
+*This integration is maintained by Apteligent.*

@@ -92,7 +92,7 @@ Next, preview your request in the **Preview** panel or navigate to the **Test** 
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-This integration is maintained by optilyz.
+*This integration is maintained by optilyz.*
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/

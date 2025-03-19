@@ -58,4 +58,4 @@ Celebrus will use the defined identifiers to send the customer attributes that a
 For now, this release doesn't support events and purchases.<br><br> This integration sends attributes as string values, so some attributes are lists (such as signals). For now, lists can't be converted to arrays. There are no nested attributes.
 {% endalert%}
 
-This integration is maintained by Celebrus.
+*This integration is maintained by Celebrus.*

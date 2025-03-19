@@ -202,7 +202,7 @@ If the API call responds with `{{local_weather[0].WeatherText}}` returning `Rain
 {% endtab %}
 {% endtabs %}
 
-This integration is maintained by AccuWeather.
+*This integration is maintained by AccuWeather.*
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"

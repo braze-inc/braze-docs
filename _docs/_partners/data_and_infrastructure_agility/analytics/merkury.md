@@ -62,4 +62,4 @@ The following fields are required:
 
 See your Braze representative for further information.
 
-This integration is maintained by Merkury.
+*This integration is maintained by Merkury.*

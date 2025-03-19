@@ -61,4 +61,4 @@ Add event mapping for each identity output, then configure the events you want t
 
 ![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
 
-This integration is maintained by Metarouter.
+*This integration is maintained by Metarouter.*

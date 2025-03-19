@@ -92,7 +92,7 @@ Here is a specific definition of settings fields.
 
 Deduplication is a major challenge when reconciling data from multiple sources, especially online and offline. Through Octolis's advanced no-code module, you can use multiple keys for [deduplication][3]. This module is available for each master table, meaning you can adapt the logic to each entity.
 
-This integration is maintained by Octolis.
+*This integration is maintained by Octolis.*
 
 [0]: http://octolis.com
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
