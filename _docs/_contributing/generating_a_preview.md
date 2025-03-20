@@ -32,6 +32,7 @@ git checkout BD-2346-fixing-typo-swift
 
 When you start a local server, the files in your [current branch](#step-1-checkout-a-branch) are used to you build a local preview of Braze Docs. To start a local server using your current branch, run the following command in your `braze-docs` directory.
 
+{% raw %}
 ```bash
 # for 'en' language:
 rake
@@ -42,10 +43,14 @@ rake fr
 rake ja
 rake ko
 rake pt_br
+
+# for content in '{% markdown_embed %}' tags:
+MARKDOWN_API=yes rake
 ```
+{% endraw %}
 
 {% alert note %}
-To preview content within a {% raw %}`{% markdown_embed %}`{% endraw %} tag (such as the content found in [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/)), prepend `MARKDOWN_API=yes` to your rake command. For example, `MARKDOWN_API=yes rake`.
+By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a {% raw %}`{% markdown_embed %}`{% endraw %} tag, such as the [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/) page.
 {% endalert %}
 
 The output will be similar to the following:
