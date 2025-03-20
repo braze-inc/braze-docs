@@ -2315,4 +2315,10 @@ validurls['docs/developer_guide/platforms/fireos/google_play_privacy'] = 'docs/d
 validurls['docs/developer_guide/platforms/fireos/sample_apps'] = 'docs/developer_guide/platforms/fireos/sample_apps';
 validurls['docs/developer_guide/platforms/fireos/changelog'] = 'docs/developer_guide/platforms/fireos/changelog';
 
+validurls['/docs/developer_guide/platforms/android/sample_apps'] = '/docs/developer_guide/references/?tab=android';
+validurls['/docs/developer_guide/platforms/swift/sample_apps'] = '/docs/developer_guide/references/?tab=swift';
+
+validurls['/docs/developer_guide/platforms/android/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_privacy-questionnaire';
+validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest';
+
 // validurls['OLD'] = 'NEW';

@@ -7,7 +7,7 @@ The Web Braze SDK lets you collect analytics and display rich in-app messages, p
 ## Integrating the Web SDK
 
 {% alert tip %}
-Not sure if the standard integration method is right for you? Check out our [other integration methods](#other-integration-methods) before continuing.
+Not sure if the standard integration method is right for you? Check out our [other integration methods](#web_other-integration-methods) before continuing.
 {% endalert %}
 
 ### Step 1: Install the Braze library
@@ -93,7 +93,7 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 
 ### Logging
 
-To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#basic-logging) or [custom](#custom-logging) logging.
+To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging.
 
 #### Basic logging
 
@@ -131,7 +131,7 @@ braze.toggleLogging();
 {% endtabs %}
 
 {% alert important %}
-Basic logs are visible to all users, so consider disabling, or switch to [`setLogger`](#custom-logging), before releasing your code to production.
+Basic logs are visible to all users, so consider disabling, or switch to [`setLogger`](#web_custom-logging), before releasing your code to production.
 {% endalert %}
 
 #### Custom logging
