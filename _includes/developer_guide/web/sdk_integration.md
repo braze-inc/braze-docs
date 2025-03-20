@@ -89,8 +89,6 @@ braze.openSession();
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-{% multi_lang_include developer_guide/web/about_google_tag_manager.md %}
-
 ## Optional configurations
 
 ### Logging
@@ -168,6 +166,41 @@ You can keep up-to-date with our latest release [following our release feed](htt
 - If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file.
 
 These two files must be updated in coordination with each other for proper functionality.
+
+## Google Tag Manager {#google-tag-manager}
+
+[Google Tag Manager (GTM)](https://support.google.com/tagmanager/answer/6103696) lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources. Braze offers the following GTM templates:
+
+|Tag Type|Use Case|
+|--------|--------|
+| **Initialization tag:** | The initialization tag can be used for [initializing the Web Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktabs=web).|
+| **Action tag:** | The action tag can be used for [managing Content Cards]({{site.baseurl}}/docs/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) and [logging analytics]({{site.baseurl}}/docs/developer_guide/analytics/).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+Both tags can be added to your workspace from [Google's community gallery](https://tagmanager.google.com/gallery/#/?filter=braze) or by searching for Braze when adding a new tag from the Community Templates.
+
+![image of gallery search]({% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %})
+
+### Google's updated EU User Consent Policy
+
+{% alert important %}
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
+{% endalert %}
+
+As part of Google's EU User Consent Policy, the following boolean custom attributes need to be logged to user profiles:
+
+- `$google_ad_user_data`
+- `$google_ad_personalization`
+
+If setting these via the GTM integration, custom attributes require creating a custom HTML tag. The following is an example of how to log these values as boolean data types (not as strings):
+
+```js
+<script>
+window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true);
+</script>
+```
+
+For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/).
 
 ## Other integration methods
 

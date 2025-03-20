@@ -2307,4 +2307,6 @@ validurls['/docs/developer_guide/platforms/unreal_engine/changelog'] = '/docs/de
 validurls['/docs/developer_guide/platforms/web/changelog'] = '/docs/developer_guide/changelogs/?sdktab=web';
 validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/developer_guide/changelogs/?sdktab=xamarin';
 
+validurls['/docs/developer_guide/platforms/web/google_tag_manager'] = '/docs/developer_guide/sdk_integration/?sdktab=web#web_google-tag-manager';
+
 // validurls['OLD'] = 'NEW';
