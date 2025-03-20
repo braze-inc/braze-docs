@@ -44,6 +44,10 @@ rake ko
 rake pt_br
 ```
 
+{% alert note %}
+To preview content within a {% raw %}`{% markdown_embed %}`{% endraw %} tag (such as the content found in [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/)), prepend `MARKDOWN_API=yes` to your rake command. For example, `MARKDOWN_API=yes rake`.
+{% endalert %}
+
 The output will be similar to the following:
 
 ```bash
