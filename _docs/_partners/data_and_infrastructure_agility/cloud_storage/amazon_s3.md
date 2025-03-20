@@ -126,10 +126,6 @@ After creating a new policy, go to **Users** and select into your specific user.
 
 In Braze, go to **Partner Integrations** > **Data Export**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Integrations**.
-{% endalert %}
-
 Next, select **Create Current** then **Amazon S3 Data Export**.
 
 Name your Current. In the **Credentials** section, make sure **AWS Secret Access Key** is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
@@ -153,10 +149,6 @@ A notification will inform you whether your credentials have been successfully v
 {% tab Dashboard Data Export %}
 
 In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
 
 On the **AWS Credentials** page, make sure **AWS Secret Access Key** is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, select **Test Credentials** first to ensure your credentials work, then select **Save** when successful.
 
@@ -247,10 +239,6 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 Retrieve your Braze account ID and external ID from your Braze account:
 - **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
 - **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br>- **Currents** is located under **Integrations** > **Currents** <br>- **Technology Partners** is located under **Integrations**
-{% endalert %}
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
 

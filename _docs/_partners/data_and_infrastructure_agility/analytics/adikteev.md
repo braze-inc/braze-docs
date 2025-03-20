@@ -80,3 +80,5 @@ The payload sent from Adikteev to Braze is customizable and can be configured to
 ## Support and troubleshooting
 
 Contact your Adikteev account manager for any questions related to the integration or for any support with your use cases.
+
+*This integration is maintained by Adikteev.*

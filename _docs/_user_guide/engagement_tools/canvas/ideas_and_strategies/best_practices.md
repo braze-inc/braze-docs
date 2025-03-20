@@ -42,3 +42,14 @@ Determine the impact of your Canvas messaging by incorporating control groups. T
 - Check [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to see the performance of each component in your user journey.
 - [Edit your Canvas]({{site.baseurl}}/post-launch_edits/) after the initial launch.
 
+## Scheduling your Canvases
+
+{% alert note %}
+Canvas will prevent you from using scheduled send with a time that has already passed. However, it's possible to launch a Canvas during the exact same minute that the campaign is scheduled (or in the seconds before). This can lead to the Canvas missing the scheduled entry time and users not entering the Canvas. We recommend sending Canvases immediately in the event that any campaigns are edited within minutes of the scheduled send time.
+{% endalert %}
+
+For Canvas steps, consider the following details when scheduling your Canvas:
+
+- Schedule changes will only apply to users who aren't already waiting to receive the step.
+- Audience changes by default apply to all users, unless you schedule changes to apply to users who aren't waiting to receive the step.
+- Editing a Canvas that is scheduled to deliver as soon as deployed and selecting **Update** will essentially cause it to be sent.

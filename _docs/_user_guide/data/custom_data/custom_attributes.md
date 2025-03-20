@@ -17,10 +17,6 @@ When stored in Braze, custom attributes can be used to build out audience segmen
 
 To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
-{% endalert %}
-
 ![Four custom attributes that are booleans.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
@@ -33,7 +29,7 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
 ### Marking as personally identifiable information (PII)
 
@@ -58,7 +54,7 @@ There are two ways you can remove custom attributes from user profiles:
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
 ### Exporting data
 

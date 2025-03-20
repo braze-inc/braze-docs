@@ -22,10 +22,6 @@ In Voucherify, navigate to your Voucherify campaign. Next, select **Export to CS
 
 Go to **Data Settings** > **Promotion Codes** and click **Create Promotion Code List**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Integrations**.
-{% endalert %}
-
 You can use the Voucherify campaign name to name the list and check data consistency.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}
@@ -59,3 +55,5 @@ Add the code snippet to display a code from the list.
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_liquid_email.png %})
 
 Once the message with the code is sent, the same code won't be used again.
+
+*This integration is maintained by Voucherify.*

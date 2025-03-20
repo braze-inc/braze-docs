@@ -58,6 +58,7 @@ module Tags
           content = content.strip # Strip again to avoid "\n"
           tabslug = @tab.gsub(/[^0-9a-z]/i, '')
           tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
+          content = content.gsub(/<(h[1-6]) id=\"/, '<\1 id="' + tabslug + '_')
 
           return '<div id="sdkc_' + contentid + '"  class="sdk-ab-tab-pane ' + tabslug + '_tab " data-sdk-tab="sdk-' + @tab + '">' + content + "</div>"
       end

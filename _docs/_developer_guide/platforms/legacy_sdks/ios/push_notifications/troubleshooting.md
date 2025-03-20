@@ -118,6 +118,10 @@ The following would indicate a problem with push registration or that the user's
 
 ![A user profile displaying the contact settings of a user. Here, you can see what apps push is registered for.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
+## Push messages not sending
+
+To troubleshoot push notifications that aren't sending, refer to [Troubleshooting Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+
 ## Message activity log errors
 
 #### Received unregistered sending to push token {#received-unregistered-sending}

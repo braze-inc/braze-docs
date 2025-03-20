@@ -16,7 +16,7 @@ This document is for informational purposes only. It is not intended to provide,
 
 ## Subscription states {#subscription-states}
 
-Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
+Braze has three global subscription states for email users (listed in the following table), which are the final gatekeepers between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in your **Sending Configuration** settings, normal email sending will resume.
 
-If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
+If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refer to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
@@ -43,7 +43,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 {% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
-If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ### Updating email subscription states
 
@@ -90,12 +90,6 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 ### Creating a subscription group
 
 1. Go to **Audience** > **Subscriptions**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
 2. Select **Create email subscription group**. 
 3. Give your subscription group a name and description.
 4. Select **Save**. 

@@ -190,10 +190,6 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Airbridge**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![][1]
@@ -272,6 +268,8 @@ idfv={{most_recently_used_device.${id}}}
 **This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
+
+*This integration is maintained by Airbridge.*
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
 [2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

@@ -71,9 +71,13 @@ Visiting the app store takes time on the part of your users. To maximize the lik
 When editing campaign schedules or audiences, note the following best practices:
 
 - **One-time schedule campaigns:** You can edit the campaign up until the scheduled send time.
-- **Recurring scheduled Campaigns:** You can edit the campaign up until the scheduled send time.
-- **Local send time campaigns:** Don't make edits 24 hours prior to the scheduled send time.
-- **Optimal send time campaigns:** Don't make edits 24 hours prior to midnight of the day the campaign is scheduled to send on.
+- **Recurring scheduled campaigns:** You can edit the campaign up until the scheduled send time.
+- **Local send time campaigns:** Don't make edits 24 hours before the scheduled send time.
+- **Optimal send time campaigns:** Don't make edits 24 hours before midnight of the day the campaign is scheduled to be sent on.
+
+{% alert note %}
+Editing a live campaign and changing the delivery to **Local Send Time** will cause a new batch of messages to be enqueued, meaning your users will receive the message twice due to the message being enqueued twice. To prevent this, first stop the original campaign, then launch a duplicate after updating the schedule.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

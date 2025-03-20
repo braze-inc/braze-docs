@@ -47,3 +47,5 @@ Create an [in-app message campaign]({{site.baseurl}}/user_guide/message_building
 In the Worthy message creator, click **Export** and select **Braze** to export your personalized message for use in Braze campaigns. Copy the exported content into the HTML text box under **HTML + Asset Zip** in the Braze campaign editor.
 
 That's it! You can immediately test your personalized message using the **Test** tab in the Braze campaign editor. 
+
+*This integration is maintained by Worthy.*

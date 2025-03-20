@@ -68,7 +68,7 @@ The following requests have a rate limit of 250,000 requests per hour, shared be
 - [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/)
 - [`/content_blocks/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)
 - [`/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/)
-- [`/email/blacklist`]({{site.baseurl}}//api/endpoints/email/post_blacklist/)
+- [`/email/blacklist`]({{site.baseurl}}/api/endpoints/email/post_blacklist/)
 - [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/bounce/remove)
 - [`/email/hard_bounces`]({{site.baseurl}}/api/endpoints/email/get_list_hard_bounces/)
 - [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam/)
@@ -90,7 +90,7 @@ The following requests have a rate limit of 250,000 requests per hour, shared be
 - [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/)
 - [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/)
 - [`/segments/details`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/)
-- [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment//)
+- [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)
 - [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics/)
 - [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics/)
 - [`/sms/invalid_phone_numbers`]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/)
@@ -229,5 +229,5 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
 [45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
 [46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
-[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
-[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/
+[47]: {{site.baseurl}}/api/endpoints/cdi/get_job_sync_status/
+[48]: {{site.baseurl}}/api/endpoints/cdi/post_job_sync/

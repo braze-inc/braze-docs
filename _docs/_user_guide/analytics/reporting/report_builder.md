@@ -37,10 +37,6 @@ Try to use the same conversion events for conversion A, B, and so on across camp
 
 Within the dashboard, navigate to **Analytics** > **Report Builder**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Data**.
-{% endalert %}
-
 Select **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
 
 If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.

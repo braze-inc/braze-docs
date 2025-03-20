@@ -86,10 +86,6 @@ For a full list of available fields, their types, and helpful descriptions, have
 
 Create and name a new Content Block by navigating to **Templates** > **Content Blocks** within the Braze dashboard.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Content Block Library**.
-{% endalert %}
-
 Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
@@ -303,6 +299,8 @@ UNREDEEMED
 ```
 {% endtab %}
 {% endtabs %}
+
+*This integration is maintained by Passkit.*
 
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}

@@ -16,7 +16,7 @@ guide_featured_list:
   link: /docs/developer_guide/banner_cards/creating_placements/
   image: /assets/img/braze_icons/compass-01.svg
 - name: Creating Banner Cards
-  link: /docs/create_banner_card/
+  link: /docs/developer_guide/banner_cards/creating_banner_cards/
   image: /assets/img/braze_icons/channel-content-cards.svg
 - name: Integrating Banner Cards
   link: /docs/developer_guide/banner_cards/integration/

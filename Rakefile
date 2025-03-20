@@ -116,6 +116,10 @@ task :es do
   Rake::Task["lang"].invoke('es')
 end
 
+task :de do
+  Rake::Task["lang"].invoke('de')
+end
+
 task :fr_build do
   Rake::Task["lang:build"].invoke('fr')
 end
@@ -138,4 +142,8 @@ end
 
 task :es_build do
   Rake::Task["lang:build"].invoke('es')
+end
+
+task :de_build do
+  Rake::Task["lang:build"].invoke('de')
 end

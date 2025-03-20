@@ -183,8 +183,10 @@ $(document).ready(function() {
         var cur_filter_text = partner_hash['search'][partner_hash['sorted'][i]];
          if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
            if (initialize) {
-             var vp = valid_partners[cur_partner['partner_name'].toLowerCase()]
-             partner_div.append(generate_card(cur_partner,vp[0][1],vp[0][2],false));
+             var vp = valid_partners[cur_partner['partner_name'].toLowerCase()] || [];
+             if (vp[0]) {
+               partner_div.append(generate_card(cur_partner,vp[0][1],vp[0][2],false));
+             }
 
              // append alternative partner links
 

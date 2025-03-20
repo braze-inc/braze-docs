@@ -35,3 +35,5 @@ If there are additional Braze accounts to integrate:
 5. Select **Connect**.
 
 Email DataGrail at support@datagrail.io with any issues or questions regarding your integration.
+
+*This integration is maintained by DataGrail.*

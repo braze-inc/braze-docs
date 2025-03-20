@@ -76,7 +76,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 {% tab Microsoft Fabric %}
 1. Create a service principal and allow access to the Fabric workspace that will be used for your integration.   
-2. In your Fabric workspace, set up the source data and grant permissoins to your service principal 
+2. In your Fabric workspace, set up the source data and grant permissions to your service principal 
 3. Create a new connected source in the Braze dashboard.
 4. Test the integration.
 5. Use the connected source to create one or more CDI Segments.

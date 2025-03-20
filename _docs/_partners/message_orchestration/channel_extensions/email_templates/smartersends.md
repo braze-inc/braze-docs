@@ -23,10 +23,6 @@ The Braze and SmarterSends partnership allows you to combine the power of Braze 
 | Braze API campaign ID | The [Braze API campaign ID]({{site.baseurl}}/api/api_campaigns/) is the unique identifier for all campaigns sent through SmarterSends. This can be created in the Braze dashboard at **Messaging** > **Campaigns**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Use cases
 
 With the Braze and SmarterSends integration, you can take advantage of distributed marketing by creating and executing marketing campaigns across multiple channels and locations. These advantages include:
@@ -81,6 +77,8 @@ Create a message variant ID for each group you create in SmarterSends to view me
 ## Customization
 
 Each SmarterSends instance is fully customizable with your brand's logo colors and custom domain name, creating a familiar environment. Additionally, for further personalization, you can define the attributes and custom attributes to target users in campaigns based on the segments within your Braze workspace.
+
+*This integration is maintained by SmarterSends.*
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://smartersends.com

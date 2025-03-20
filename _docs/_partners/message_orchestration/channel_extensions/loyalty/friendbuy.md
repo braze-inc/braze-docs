@@ -23,10 +23,6 @@ Before you start, you'll need the following:
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Integrating Friendbuy
 
 In [Friendbuy][1], go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
@@ -76,6 +72,8 @@ Friendbuy uses the international standard (E.164) to verify real phone numbers. 
 | Phone only        | Only the customer's phone number is sent to Braze.              |
 | Neither           | No customer data is sent to Braze.                              |
 | Both              | The customer's email address and phone number is sent to Braze. |
+
+*This integration is maintained by Friendbuy.*
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}

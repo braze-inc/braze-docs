@@ -18,10 +18,6 @@ To pre-populate custom events and attributes, do the following:
 
 1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
-{% endalert %}
-
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
 
 {: start="2"}
@@ -59,7 +55,7 @@ When an event or attribute is blocklisted, any segment, campaign, or Canvas usin
 To stop tracking a specific custom attribute, event, or product, follow these steps:
 
 1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
-2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 10 to blocklist at a time.
+2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 100 to blocklist at a time.
 3. Select **Blocklist**.
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -84,6 +80,10 @@ Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than
 
 ## Deleting custom data
 
+{% alert important %}
+Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
+{% endalert %}
+
 As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
 
 {% alert important %}
@@ -104,10 +104,6 @@ When you delete custom data, the following occurs:
 - **For custom events:** Permanently removes the event metadata from every user's profile.
 
 When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore it after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
-
-{% alert important %}
-Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
-{% endalert %}
 
 Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
 
@@ -131,7 +127,7 @@ Forcing data types does not apply to event properties or purchase properties.
 ![Custom attributes data type dropdown][75]
 
 {% alert warning %}
-If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
+If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
 {% endalert %}
 
 ### Data type coercion
