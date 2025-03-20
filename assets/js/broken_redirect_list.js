@@ -2309,4 +2309,10 @@ validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/develope
 
 validurls['/docs/developer_guide/platforms/web/google_tag_manager'] = '/docs/developer_guide/sdk_integration/?sdktab=web#web_google-tag-manager';
 
+validurls['docs/developer_guide/platforms/fireos/push_notifications'] = '/docs/developer_guide/push_notifications/?sdktab=android';
+validurls['docs/developer_guide/platforms/fireos/android_13'] = 'docs/developer_guide/platforms/fireos/android_13';
+validurls['docs/developer_guide/platforms/fireos/google_play_privacy'] = 'docs/developer_guide/platforms/fireos/google_play_privacy';
+validurls['docs/developer_guide/platforms/fireos/sample_apps'] = 'docs/developer_guide/platforms/fireos/sample_apps';
+validurls['docs/developer_guide/platforms/fireos/changelog'] = 'docs/developer_guide/platforms/fireos/changelog';
+
 // validurls['OLD'] = 'NEW';

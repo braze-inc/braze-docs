@@ -1,7 +1,19 @@
 ---
-page_order: 98
+page_order: 98.1
 nav_title: Changelogs
-description: "This landing page lists the changelogs available for each SDK within Braze Docs and their individual GitHub repositories."
+description: "These are the available changelogs for each SDK within Braze Docs and their individual GitHub repositories."
+platform: 
+  - Android
+  - Swift
+  - Web
+  - Cordova
+  - FireOS
+  - Flutter
+  - React Native
+  - Roku
+  - Unity
+  - Unreal Engine
+  - Xamarin
 ---
 
 # Braze SDK changelogs
