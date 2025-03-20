@@ -37,9 +37,9 @@ Promotion codes can't be sent in in-app messages.
 
 Here are some details to consider when creating a code snippet:
 
-- Code snippets can't be changed after saving.
-- Snippets are also case-sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
-- The code snippet is what you'll reference in Liquid to display this specific set of promotion codes. 
+- Once saved, code snippets can’t be edited.
+- Snippets are case-sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
+- Use the snippet name in Liquid to reference this set of promotion codes.
 - Make sure the code snippet isn't already being used in another list.
 
 ![A promotion code list named "SpringSale2025" with the code snippet "spring25".][3]{: style="max-width:80%"}
