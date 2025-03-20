@@ -106,7 +106,7 @@ To send promotion codes in messages:
 
 Using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
 
-#### Sending promo codes to users
+#### Sending promotion codes to users
 
 When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes.
 
