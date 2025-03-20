@@ -265,19 +265,19 @@ Then, make sure your app is set up to handle the custom path properly. Refer to 
 
 ### Turning off click-tracking on a link-to-link basis
 
-You can turn off click tracking for specific links by adding HTML code to your email message in the HTMl editor or to components in the drag-and-drop editor.
+You can turn off click tracking for specific links by adding HTML code to your email message in the HTML editor or to components in the drag-and-drop editor.
 
-#### Sendgrid
+#### SendGrid
 
-If your email service provider is Sendgrid, use the HTML code `clicktracking=off` like this:
+If your email service provider is SendGrid, use the HTML code `clicktracking=off` like this:
 
 ```HTML
 <a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
 ```
 
-#### Sparkpost 
+#### SparkPost 
 
-If your email service provider is Sparkpost, use the HTML code `data-msys-clicktrack="0"` like this:
+If your email service provider is SparkPost, use the HTML code `data-msys-clicktrack="0"` like this:
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
@@ -285,18 +285,18 @@ If your email service provider is Sparkpost, use the HTML code `data-msys-clickt
 
 #### Drag-and-drop editor
 
-If using the drag-and-drop email editor, enter your HTML code as a custom attribute if your link is attached to text, a button, or an image.
+When using the drag-and-drop email editor, enter your HTML code as a custom attribute if your link is attached to text, a button, or an image.
 
 ##### Custom attribute for a text link
 
-#### Sendgrid
+#### SendGrid
 
 Select the following for the custom attribute:
 
 - **Name:** `clicktracking`
 - **Value:** `off`
 
-#### Sparkpost
+#### SparkPost
 
 Select the following for the custom attribute:
 
@@ -307,7 +307,7 @@ Select the following for the custom attribute:
 
 ##### Custom attribute for a button or image
 
-#### Sendgrid
+#### SendGrid
 
 Select the following for the custom attribute:
 
@@ -315,7 +315,7 @@ Select the following for the custom attribute:
 - **Value:** `off`
 - **Type:** Link
 
-#### Sparkpost
+#### SparkPost
 
 Select the following for the custom attribute:
 
