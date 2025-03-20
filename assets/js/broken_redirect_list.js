@@ -2295,4 +2295,16 @@ validurls['/docs/developer_guide/authentication/'] = '/docs/developer_guide/sdk_
 validurls['/docs/developer_guide/debugging/'] = '/docs/developer_guide/sdk_integration/debugging/'
 validurls['/docs/developer_guide/sending_test_messages/'] = '/docs/developer_guide/in_app_messages/sending_test_messages/';
 
+validurls['/docs/developer_guide/platforms/android/changelog'] = '/docs/developer_guide/changelogs/?sdktab=android';
+validurls['/docs/developer_guide/platforms/cordova/changelog'] = '/docs/developer_guide/changelogs/?sdktab=cordova';
+validurls['/docs/developer_guide/platforms/fireos/changelog'] = '/docs/developer_guide/changelogs/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/flutter/changelog'] = '/docs/developer_guide/changelogs/?sdktab=flutter';
+validurls['/docs/developer_guide/platforms/react_native/changelog'] = '/docs/developer_guide/changelogs/?sdktab=react%20native';
+validurls['/docs/developer_guide/platforms/roku/changelog'] = '/docs/developer_guide/changelogs/?sdktab=roku';
+validurls['/docs/developer_guide/platforms/swift/changelog'] = '/docs/developer_guide/changelogs/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/unity/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unreal_engine/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unreal%20engine';
+validurls['/docs/developer_guide/platforms/web/changelog'] = '/docs/developer_guide/changelogs/?sdktab=web';
+validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/developer_guide/changelogs/?sdktab=xamarin';
+
 // validurls['OLD'] = 'NEW';
