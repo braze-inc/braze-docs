@@ -50,7 +50,7 @@ MARKDOWN_API=yes rake
 {% endraw %}
 
 {% alert note %}
-By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a {% raw %}`{% markdown_embed %}`{% endraw %} tag, such as the [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/) page.
+By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a {% raw %}`{% markdown_embed %}`{% endraw %} tag, such as the content on the [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/) page.
 {% endalert %}
 
 The output will be similar to the following:

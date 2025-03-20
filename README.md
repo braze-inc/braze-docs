@@ -48,7 +48,7 @@ rake pt_br
 MARKDOWN_API=yes rake
 ```
 
-> **Note:** By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a `{% markdown_embed %}` tag, such as the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page.
+> **Note:** By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page.
 
 ## About `bdocs` wrapper
 
