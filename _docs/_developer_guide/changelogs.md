@@ -1,7 +1,7 @@
 ---
 page_order: 98.1
 nav_title: Changelogs
-description: "These are the available changelogs for each SDK within Braze Docs and their individual GitHub repositories."
+description: "This reference page includes the changelogs for each Braze SDK and a link to the changelog in their public GitHub repository."
 platform: 
   - Android
   - Swift
@@ -18,7 +18,7 @@ platform:
 
 # Braze SDK changelogs
 
-> These are the documentation and GitHub changelogs for each Braze SDK.
+> This reference page includes the changelogs for each Braze SDK and a link to the changelog in their public GitHub repository. For the full list of resources, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/).
 
 {% sdktabs %}
 {% sdktab android %}
