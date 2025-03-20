@@ -39,6 +39,8 @@ Create a Braze [API triggered campaign][4] based on the customer events that Too
 
 Contact Toovio at [info@toovio.com](mailto:info@toovio.com?subject=New%20Customer%20Request) with the subject "New Customer Request" to set up an account. Toovio will work with clients to set up triggers and underlying models.
 
+*This integration is maintained by Toovio.*
+
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/
 [2]: {{site.baseurl}}/api/api_key/
 [3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

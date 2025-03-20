@@ -14,10 +14,6 @@ alias: /scim/automated_user_provisioning/
 
 To access this page, go to **Settings** > **Admin Settings** > **SCIM Provisioning**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Automated User Provisioning**.
-{% endalert %}
-
 ## How to get your SCIM token
 
 You will need to provide the following information to get your SCIM token:

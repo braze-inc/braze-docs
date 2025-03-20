@@ -9,10 +9,6 @@ The **Message Usage** dashboard is divided into three sections:
 
 Access the dashboard by going to **Settings** > **Billing** > **Message Usage**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then selecting **Subscriptions and Usage**.
-{% endalert %}
-
 ## Message credits usage overview
 
 **Message Credits Usage Overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details about your active contract and your contract period.

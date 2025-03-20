@@ -54,3 +54,5 @@ Airbyte's Braze source connector supports the following [sync modes](https://doc
 {% alert note %}
 Rate limits differ depending on the stream. Visit the [rate limits table](https://www.braze.com/docs/api/api_limits/#rate-limits-by-request-type) for more information.
 {% endalert %}
+
+*This integration is maintained by Airbyte.*

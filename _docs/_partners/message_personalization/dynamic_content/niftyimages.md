@@ -59,4 +59,6 @@ Customize your image's font, font size, positioning, color, layering, and more. 
 
 In Braze, open a campaign or canvas, then paste your NiftyImage URL. Optionally, you can preview your changes to verify your Liquid tags.
 
+*This integration is maintained by NiftyImages.*
+
 ![alt text]({% image_buster /assets/img/niftyimages/6.png %})

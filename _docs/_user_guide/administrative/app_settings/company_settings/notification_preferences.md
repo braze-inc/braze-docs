@@ -17,10 +17,6 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Notification Preferences**.
-{% endalert %}
-
 ## Available notifications
 
 The following table lists available notifications:
