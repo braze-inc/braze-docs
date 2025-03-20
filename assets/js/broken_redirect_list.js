@@ -1856,6 +1856,7 @@ validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/sam
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/storage'] = '/docs/developer_guide/platforms/legacy_sdks/ios/storage';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/macOS'] = '/docs/developer_guide/platforms/legacy_sdks/macOS';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/macOS/initial_sdk_setup'] = '/docs/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/';
+
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos'] = '/docs/developer_guide/platforms/legacy_sdks/tvos';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/initial_sdk_setup'] = '/docs/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/news_feed'] = '/docs/developer_guide/platforms/legacy_sdks/tvos/news_feed';
@@ -2038,7 +2039,7 @@ validurls['/docs/developer_guide/platforms/fireos/content_cards/deep_linking/'] 
 
 validurls['/docs/developer_guide/platforms/android/content_cards/gif/'] = '/docs/developer_guide/content_cards/embedding_gifs/?sdktab=android';
 validurls['/docs/developer_guide/platforms/fireos/content_cards/gif/'] = '/docs/developer_guide/content_cards/embedding_gifs/';
-validurls['/docs/developer_guide/content_cards/gifs/'] = ['/docs/developer_guide/content_cards/embedding_gifs/'];
+validurls['/docs/developer_guide/content_cards/gifs/'] = '/docs/developer_guide/content_cards/embedding_gifs/';
 
 validurls['/docs/developer_guide/content_cards/creating_custom_content_cards'] = '/docs/developer_guide/content_cards/creating_cards';
 validurls['/docs/developer_guide/content_cards/customizing_behavior'] = '/docs/developer_guide/content_cards/customizing_cards/behavior';
