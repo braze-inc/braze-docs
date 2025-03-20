@@ -137,6 +137,11 @@ Braze will send Currents data from the listed IPs:
 | `40.76.166.145` |
 {: .reset-td-br-1 role="presentation"}
 
+| For Instance `US-10` |
+|---|
+| `123` |
+{: .reset-td-br-1 role="presentation"}
+
 | For Instances `EU-01` and `EU-02` |
 |---|
 | `127.0.0.1` |

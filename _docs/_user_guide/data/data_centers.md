@@ -88,6 +88,7 @@ table td {
           <li><code>https://dashboard-06.braze.com</code></li>
           <li><code>https://dashboard-07.braze.com</code></li>
           <li><code>https://dashboard-08.braze.com</code></li>
+          <li><code>https://dashboard-10.braze.com</code></li>
         </ul>
       </td>
       <td>
@@ -100,6 +101,7 @@ table td {
           <li><code>https://rest.iad-06.braze.com</code></li>
           <li><code>https://rest.iad-07.braze.com</code></li>
           <li><code>https://rest.iad-08.braze.com</code></li>
+          <li><code>https://rest.iad-10.braze.com</code></li>
         </ul>
       </td>
       <td>
@@ -112,6 +114,7 @@ table td {
           <li><code>sdk.iad-06.braze.com</code></li>
           <li><code>sdk.iad-07.braze.com</code></li>
           <li><code>sdk.iad-08.braze.com</code></li>
+          <li><code>sdk.iad-10.braze.com</code></li>
         </ul>
       </td>
     </tr>
