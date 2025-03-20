@@ -70,9 +70,18 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 {% endtab %}
 
 {% tab web %}
+For a standard Web SDK implementation, you can use the following method:
+
 ```javascript
 braze.logCustomEvent("YOUR_EVENT_NAME");
 ```
+
+If you'd like to use Google Tag Manager instead, you can use the **Custom Event** tag type to call the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) and send custom events to Braze, optionally including custom event properties. To do this:
+
+1. Enter the **Event Name** by either using a variable or typing an event name.
+2. Use the **Add Row** button to add event properties.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
 {% endtab %}
 
 {% tab flutter %}

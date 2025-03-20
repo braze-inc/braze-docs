@@ -1,16 +1,3 @@
----
-nav_title: Deep Linking
-article_title: Deep Linking for Flutter
-platform: Flutter
-page_order: 6
-description: "This article covers how to implement deep linking for your Flutter apps on Android and iOS."
-
----
-
-# Deep linking
-
-> Learn how to implement deep links into your iOS or Android app using Flutter. If you'd like to check out a sample app, see [GitHub: Braze Flutter SDK Example](https://github.com/braze-inc/braze-flutter-sdk/tree/master/example). For general information about deep linking, see our [Deep Linking FAQ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
-
 ## Prerequisites
 
 Before you can implement deep linking into your Flutter app, you'll need to set up deep linking in the native [Android]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=android) or [iOS]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift) layer.
@@ -136,4 +123,3 @@ void deepLinkAlert(String link, BuildContext context) {
   );
 }
 ```
-

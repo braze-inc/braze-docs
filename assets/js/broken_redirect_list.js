@@ -2304,4 +2304,30 @@ validurls['/docs/developer_guide/authentication/'] = '/docs/developer_guide/sdk_
 validurls['/docs/developer_guide/debugging/'] = '/docs/developer_guide/sdk_integration/debugging/'
 validurls['/docs/developer_guide/sending_test_messages/'] = '/docs/developer_guide/in_app_messages/sending_test_messages/';
 
+validurls['/docs/developer_guide/platforms/android/changelog'] = '/docs/developer_guide/changelogs/?sdktab=android';
+validurls['/docs/developer_guide/platforms/cordova/changelog'] = '/docs/developer_guide/changelogs/?sdktab=cordova';
+validurls['/docs/developer_guide/platforms/fireos/changelog'] = '/docs/developer_guide/changelogs/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/flutter/changelog'] = '/docs/developer_guide/changelogs/?sdktab=flutter';
+validurls['/docs/developer_guide/platforms/react_native/changelog'] = '/docs/developer_guide/changelogs/?sdktab=react%20native';
+validurls['/docs/developer_guide/platforms/roku/changelog'] = '/docs/developer_guide/changelogs/?sdktab=roku';
+validurls['/docs/developer_guide/platforms/swift/changelog'] = '/docs/developer_guide/changelogs/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/unity/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unity';
+validurls['/docs/developer_guide/platforms/unreal_engine/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unreal%20engine';
+validurls['/docs/developer_guide/platforms/web/changelog'] = '/docs/developer_guide/changelogs/?sdktab=web';
+validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/developer_guide/changelogs/?sdktab=xamarin';
+
+validurls['/docs/developer_guide/platforms/web/google_tag_manager'] = '/docs/developer_guide/sdk_integration/?sdktab=web#web_google-tag-manager';
+
+validurls['docs/developer_guide/platforms/fireos/push_notifications'] = '/docs/developer_guide/push_notifications/?sdktab=android';
+validurls['docs/developer_guide/platforms/fireos/android_13'] = 'docs/developer_guide/platforms/fireos/android_13';
+validurls['docs/developer_guide/platforms/fireos/google_play_privacy'] = 'docs/developer_guide/platforms/fireos/google_play_privacy';
+validurls['docs/developer_guide/platforms/fireos/sample_apps'] = 'docs/developer_guide/platforms/fireos/sample_apps';
+validurls['docs/developer_guide/platforms/fireos/changelog'] = 'docs/developer_guide/platforms/fireos/changelog';
+
+validurls['/docs/developer_guide/platforms/android/sample_apps'] = '/docs/developer_guide/references/?tab=android';
+validurls['/docs/developer_guide/platforms/swift/sample_apps'] = '/docs/developer_guide/references/?tab=swift';
+
+validurls['/docs/developer_guide/platforms/android/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_privacy-questionnaire';
+validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest';
+
 // validurls['OLD'] = 'NEW';
