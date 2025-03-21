@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
 
+_This integration is maintained by Adjust._
+
+## About the integration
+
 The Braze and Adjust integration lets you import non-organic install attribution data to segment more intelligently within your lifecycle campaigns.
 
 ## Prerequisites
@@ -136,7 +140,6 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers-such as the IDFV or GAID-in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-*This integration is maintained by Adjust.*
 
 [1]: {% image_buster /assets/img/attribution/adjust.png %}
 [2]: {% image_buster /assets/img/attribution/adjust2.png %}

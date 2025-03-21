@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Antavo](https://antavo.com/) is an enterprise-grade SaaS loyalty technology provider that builds comprehensive loyalty programs to foster brand love and change customer behavior.
 
+_This integration is maintained by Antavo._
+
+## About the integration
+
 The Antavo and Braze integration allows you to use loyalty program-related data to build personalized campaigns to enhance the customer experience. Antavo supports loyalty data synchronization between the two platforms—this is a one-way data synchronization only, from Antavo to Braze. The integration supports the `external_id` Braze field, which Antavo uses to synchronize the loyalty member ID.
 
 ## Prerequisites
@@ -90,7 +94,6 @@ Use events synchronized from Antavo to enter loyalty members in action-based Bra
 
 Visit the step-by-step guide to learn how to configure the synchronization of the [loyalty program enrollment event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) and the synchronization of the [loyalty program benefit earning event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
-*This integration is maintained by Antavo.*
 
 [1]: {% image_buster /assets/img/antavo/connect_braze.png %}
 [2]: {% image_buster /assets/img/antavo/data_field_mapping.png %}

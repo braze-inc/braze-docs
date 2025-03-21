@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Playable][1] allows you to add auto-play video content to your Braze email campaigns.
 
+_This integration is maintained by Playable._
+
+## About the integration
+
 The Braze and Playable integration allows you to deliver your best content (high-quality video) to your best audience (email), increasing your click-through and post-click metrics with exciting high-quality content that plays automatically within the inbox.
 
 ## Prerequisites
@@ -40,7 +44,6 @@ Videos will autoplay in over 98% of inboxes, including iPhone Mail, Gmail, Apple
 
 Lastly, paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign.
 
-*This integration is maintained by Playable.*
 
 [1]: https://playable.video
 [signup]: https://signup.playable.video

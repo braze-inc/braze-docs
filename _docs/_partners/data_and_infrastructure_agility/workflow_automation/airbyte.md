@@ -12,6 +12,10 @@ search_tag: Airbyte
 
 > [Airbyte](https://airbyte.com/) is an open-source data integration engine that helps you consolidate your data in your data warehouses, lakes, and databases.
 
+_This integration is maintained by Airbyte._
+
+## About the integration
+
 The Braze and Airbyte integration allows users to create a data pipeline to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. After data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools.
 
 ## Prerequisites
@@ -55,4 +59,3 @@ Airbyte's Braze source connector supports the following [sync modes](https://doc
 Rate limits differ depending on the stream. Visit the [rate limits table](https://www.braze.com/docs/api/api_limits/#rate-limits-by-request-type) for more information.
 {% endalert %}
 
-*This integration is maintained by Airbyte.*

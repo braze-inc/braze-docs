@@ -12,6 +12,8 @@ search_tag: Partner
 
 > Braze integration enables you to send Voucherify codes in your Braze messages. This reference article covers how to use Braze custom attributes with Voucherify distributions.
 
+_This integration is maintained by Voucherify._
+
 {% alert tip %}
 Before you use Braze custom attributes in Voucherify distributions, you need to add your Braze users to the Voucherify dashboard. You can use Braze Connected Content to synchronize users or import your customers through CSV or API. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
 {% endalert %}
@@ -108,4 +110,3 @@ When it's ready, you can see the code in your message preview.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_email_preview.png %})
 
-*This integration is maintained by Voucherify.*

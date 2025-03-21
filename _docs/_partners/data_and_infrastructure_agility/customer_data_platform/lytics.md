@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Lytics][1] is the customer data platform (CDP) of choice for the next generation of customer-centric businesses. Lytics Decision Engine, Conductor, and Cloud Connect solutions provide marketers and data teams opportunities to perform identity resolution, orchestration, and campaign optimization in real time and in a privacy-compliant manner.
 
+_This integration is maintained by Lytics._
+
+## About the integration
+
 The Braze and Lytics integration provides a unified view of your customers to enable powerful personalization and to drive optimized campaigns using the next best action orchestration and decisions.
 
 The integration allows brands to:
@@ -192,7 +196,6 @@ Next, select the job type. To import Braze CSV files into Lytics, select **Impor
 
 Finally, input a label and optional description for the job and configure any other required details. Click **Complete** to initiate and save the job.
 
-*This integration is maintained by Lytics.*
 
 [1]: https://www.lytics.com/
 [2]: {% image_buster /assets/img/lytics/braze_authorization.png %}

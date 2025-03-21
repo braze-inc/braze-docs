@@ -12,6 +12,10 @@ search_tag: Knak
 
 > [Knak][1] is the first campaign creation platform built for enterprise marketing teams to use in-house. Their drag-and-drop platform lets anyone create beautiful, on-brand emails and landing pages in minutes, with no coding or outside help required.
 
+_This integration is maintained by Knak._
+
+## About the integration
+
 The Braze and Knak integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding. 
 
 ## Prerequisites
@@ -56,7 +60,6 @@ Next, verify the email name and click **Sync**.
 
 You can find your uploaded Knak emails in Braze under **Engagement > Templates & Media**. They'll be beautiful, on-brand, and fully responsive. The only limit is your own creativity!
 
-*This integration is maintained by Knak.*
 
 [1]: https://knak.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

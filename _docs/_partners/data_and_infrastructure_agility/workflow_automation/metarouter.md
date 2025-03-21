@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [MetaRouter](https://www.metarouter.io/) elevates your Braze experience by seamlessly integrating as a powerful server-side tag management platform. It empowers you to orchestrate a complete customer data journey within Braze, from reliable fully first-party data collection enriched by up to 30%, to real-time event stream activation for personalized journeys. Additionally, MetaRouter streamlines implementation by eliminating the need for Braze tags or other third-party tags, granting you granular, parameter-by-parameter control over the data flowing into Braze.
 
+_This integration is maintained by Metarouter._
+
 ## Supported features
 
 - Retries can be built in.
@@ -57,4 +59,3 @@ Add event mapping for each identity output, then configure the events you want t
 
 ![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
 
-*This integration is maintained by Metarouter.*
