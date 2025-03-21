@@ -1,7 +1,7 @@
 ---
+page_order: 4.2
 nav_title: SDK 인증
 article_title: SDK 인증
-page_order: 12
 description: "이 참조 문서에서는 SDK 인증 및 Braze SDK에서 이 기능을 활성화하는 방법을 다룹니다."
 platform:
   - iOS
@@ -208,7 +208,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab Objective-C %}
 
-[`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69)를 호출할 때 JWT 토큰을 제공합니다.
+[`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:))를 호출할 때 JWT 토큰을 제공합니다.
 
 ```objc
 [AppDelegate.braze changeUser:@"userId" sdkAuthSignature:@"signature"];
@@ -222,7 +222,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab Swift %}
 
-[`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69)를 호출할 때 JWT 토큰을 제공합니다.
+[`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:))를 호출할 때 JWT 토큰을 제공합니다.
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "userId", sdkAuthSignature: "signature")

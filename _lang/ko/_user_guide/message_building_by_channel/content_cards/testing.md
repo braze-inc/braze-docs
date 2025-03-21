@@ -37,7 +37,7 @@ channel:
 
 ## 디버그
 
-콘텐츠 카드가 전송된 후 개발자 콘솔의 [이벤트 사용자 로그]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/)에서 문제를 분석하거나 디버그할 수 있습니다. 
+After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) in the Developer Console. 
 
 일반적인 사용 사례는 사용자가 특정 콘텐츠 카드를 볼 수 없는 이유를 디버깅하려고 시도하는 것입니다. 이를 위해 세션 시작 시 SDK에 전달된 콘텐츠 카드를 **이벤트 사용자 로그**에서 확인하고 노출 횟수 이전에 특정 캠페인으로 추적할 수 있습니다.
 

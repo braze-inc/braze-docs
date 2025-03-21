@@ -77,7 +77,7 @@ tool: Canvas
 | **켜기** | 모든 응모작은 해당 평가 기간이 끝날 때 진행됩니다. 중복이 발생하지 않습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-순위는 [출시 후에는 수정할 수]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) 없습니다.
+Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}

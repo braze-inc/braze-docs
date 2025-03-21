@@ -1,25 +1,25 @@
 ---
+page_order: 4.3
 nav_title: SDK 디버깅
 article_title: Braze SDK 디버깅하기 
 description: "앱에서 자세한 로깅을 수동으로 활성화하지 않고도 SDK 기반 채널의 문제를 해결할 수 있도록 Braze SDK 디버거를 사용하는 방법을 알아보세요."
-page_order: 13
 ---
 
 # Braze SDK 디버깅하기
 
 > 앱에서 자세한 로깅을 활성화하지 않고도 SDK 기반 채널의 문제를 해결할 수 있도록 Braze SDK에 내장된 디버거를 사용하는 방법을 알아보세요.
 
-{% alert important %}
-현재 이 기능은 기본 iOS 및 Android 앱에서만 사용할 수 있습니다. Braze 웹 SDK에 대한 디버깅을 사용하려면 [URL 매개변수를 대신 사용할]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) 수 있습니다.
-{% endalert %}
-
 ## 전제 조건
 
-Braze SDK 디버거를 사용하려면 SDK가 최소한 이 최소 버전 이상으로 최신 상태인지 확인하세요:
+Braze SDK 디버거를 사용하려면 `View PII` 및 `Export User Data` 권한이 필요합니다. 또한 Braze SDK는 다음 최소 버전을 충족하거나 이를 가리켜야 합니다: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
 ## Braze SDK 디버깅하기
+
+{% alert tip %}
+Braze 웹 SDK에 대한 디버깅을 사용하려면 [URL 매개변수를 사용하면]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) 됩니다.
+{% endalert %}
 
 ### 1단계: 앱 닫기
 

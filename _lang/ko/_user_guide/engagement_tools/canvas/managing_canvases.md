@@ -13,7 +13,7 @@ tool: Canvas
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: 출시 후 캔버스 편집
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+    link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 캔버스 승인 및 권한
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/

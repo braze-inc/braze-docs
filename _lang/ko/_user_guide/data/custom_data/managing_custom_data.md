@@ -59,7 +59,7 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 특정 커스텀 속성, 이벤트 또는 제품의 추적을 중지하려면 다음 단계를 따르세요.
 
 1. **커스텀 속성**, **커스텀 이벤트**, 또는 **제품** 페이지에서 검색하세요.
-2. 커스텀 속성, 이벤트 또는 제품을 선택하십시오. 커스텀 속성과 이벤트의 경우 한 번에 최대 10개까지 차단 목록에 추가할 수 있습니다.
+2. 커스텀 속성, 이벤트 또는 제품을 선택하십시오. For custom attributes and events, you can select up to 100 to blocklist at a time.
 3. **차단 목록을** 선택합니다.
 
 ![커스텀 속성 페이지에서 차단된 여러 선택된 커스텀 속성.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -78,13 +78,21 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 
 ### 차단 목록에 대한 고려 사항
 
-많은 수의 이벤트와 속성을 차단 목록에 추가하는 것은 가능하지만 권장하지는 않습니다. 이것은 이벤트가 수행되거나 속성이 Braze로 전송될 때마다 이 이벤트나 속성이 전체 차단 목록과 대조되어야 하기 때문입니다. 목록에 나타나면 전송되지 않습니다. 이 작업은 시간이 걸리며, 목록이 충분히 커지면 앱이 느려질 수 있습니다. 향후 이벤트나 속성을 사용할 필요가 없다면 다음 릴리스에서 앱 코드에서 제거해야 합니다.
+많은 수의 이벤트와 속성을 차단 목록에 추가하는 것은 가능하지만 권장하지는 않습니다. 이것은 이벤트가 수행되거나 속성이 Braze로 전송될 때마다 이 이벤트나 속성이 전체 차단 목록과 대조되어야 하기 때문입니다.
 
-차단 목록의 변경 사항이 전파되는 데 몇 분 정도 걸릴 수 있습니다. 언제든지 차단 목록 이벤트 또는 속성을 다시 활성화할 수 있습니다.
+Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than 300 items, this data will be sent from the SDK. If you do not need to use the event or attribute in the future, consider removing it from your app code during your next release. 차단 목록의 변경 사항이 전파되는 데 몇 분 정도 걸릴 수 있습니다. You can re-enable any blocklist event or attribute at any time.
 
 ## 커스텀 데이터를 삭제하는 중
 
+{% alert important %}
+커스텀 데이터 삭제는 현재 초기 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access. 커스텀 데이터를 삭제하는 데 더 도움이 필요하면 고객 성공 매니저 또는 지원 팀에 문의하십시오.
+{% endalert %}
+
 타겟팅 캠페인과 세그먼트를 구축하다 보면 더 이상 맞춤 이벤트나 맞춤 속성이 필요하지 않을 수 있습니다. 예를 들어, 특정 커스텀 속성을 일회성 캠페인의 일부로 사용했다면, [차단 목록에 추가한 후](#blocklisting-custom-attributes-custom-events-and-products) 이 데이터를 삭제하고 앱에서 해당 참조를 제거할 수 있습니다. 문자열, 숫자 및 중첩된 커스텀 속성과 같은 데이터 유형을 삭제할 수 있습니다.
+
+{% alert important %}
+You must be a [Braze admin]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to delete custom data.
+{% endalert %}
 
 사용자 지정 이벤트 또는 사용자 지정 속성을 삭제하려면 다음과 같이 하세요:
 
@@ -99,7 +107,7 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 - **사용자 지정 속성의 경우:** 모든 사용자의 프로필에서 속성 데이터를 영구적으로 제거합니다.
 - **사용자 지정 이벤트의 경우:** 모든 사용자의 프로필에서 이벤트 메타데이터를 영구적으로 제거합니다.
 
-삭제할 속성 또는 이벤트를 선택하면 해당 상태는 **휴지통으로** 변경됩니다. 향후 7일 동안 해당 속성 또는 이벤트를 복원할 수 있습니다. 7일이 지나도 복원하지 않으면 데이터가 영구적으로 삭제됩니다. 속성 또는 이벤트를 복원하면 차단된 상태로 다시 설정됩니다.
+삭제할 속성 또는 이벤트를 선택하면 해당 상태는 **휴지통으로** 변경됩니다. 향후 7일 동안 해당 속성 또는 이벤트를 복원할 수 있습니다. If you don't restore it after seven days, the data will be permanently deleted. 속성 또는 이벤트를 복원하면 차단된 상태로 다시 설정됩니다.
 
 삭제해도 사용자 프로필에 사용자 지정 데이터 개체가 추가로 기록되는 것을 막지는 못하므로 이벤트나 속성을 삭제하기 전에 사용자 지정 데이터가 더 이상 기록되지 않는지 확인해야 합니다.
 
@@ -123,7 +131,7 @@ Braze는 우리에게 전송된 속성 데이터의 데이터 유형을 자동�
 ![사용자 지정 속성 데이터 유형 드롭다운][75]
 
 {% alert warning %}
-속성정보에 대해 데이터 유형을 강제 선택하면 지정된 유형이 아닌 모든 데이터는 무시됩니다.
+If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
 {% endalert %}
 
 ### 데이터 유형 변환
@@ -135,7 +143,7 @@ Braze는 우리에게 전송된 속성 데이터의 데이터 유형을 자동�
 | 숫자 | 정수 또는 플로트(`1`, `1.5`와 같은)는 숫자로 저장됩니다 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-다양한 데이터 유형 비교에 의해 노출된 특정 필터 옵션에 대한 자세한 내용은 [보고서 구성][43]을 참조하세요. 그리고 사용 가능한 다양한 데이터 유형에 대한 자세한 내용은 [커스텀 속성 데이터 유형][44]을 참조하세요.
+다양한 데이터 유형 비교에 의해 노출된 특정 필터 옵션에 대한 자세한 내용은 [보고서 구성][43]을 참조하세요. For more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
 데이터가 Braze로 전송되면 변경할 수 없으며 수신 후 삭제하거나 수정할 수 없습니다. 그러나 대시보드에서 추적하는 항목을 제어하려면 앞의 섹션에 나열된 단계를 사용할 수 있습니다.

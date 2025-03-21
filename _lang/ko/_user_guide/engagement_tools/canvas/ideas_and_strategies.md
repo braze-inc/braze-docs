@@ -31,7 +31,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: 리드 점수
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lead_scoring/
+    link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
 
 ---

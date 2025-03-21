@@ -44,7 +44,7 @@ tool:
 
 원하는 세그먼트 수와 각 세그먼트 내 사용자 분포에 따라 요금제가 다르게 보일 수 있습니다.
 
-대조 그룹을 포함한 임의의 버킷 번호 세그먼트 각각에 대해 [애널리틱스 추적을]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking) 사용 설정합니다. 대조 그룹을 기준으로 이형 상품의 성공 여부를 평가할 때 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) 페이지로 이동하여 각 세그먼트가 특정 사용자 지정 이벤트를 완료한 빈도를 확인할 수 있습니다.
+대조 그룹을 포함한 임의의 버킷 번호 세그먼트 각각에 대해 [애널리틱스 추적을]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) 사용 설정합니다. 대조 그룹을 기준으로 이형 상품의 성공 여부를 평가할 때 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) 페이지로 이동하여 각 세그먼트가 특정 사용자 지정 이벤트를 완료한 빈도를 확인할 수 있습니다.
 
 ### 무작위 버킷 번호를 사용한 무작위 오디언스 재입장
 

@@ -16,9 +16,9 @@ Braze 구현을 완료하기 전에 마케팅 팀과 개발 팀은 마케팅 목
 
 ## 자동으로 수집된 데이터
 
-특정 사용자 데이터(예: 처음 사용한 앱, 마지막으로 사용한 앱, 총 세션 수, 기기 OS 등)는 SDK에서 자동으로 수집됩니다. 통합 가이드에 따라 SDK를 구현하면 이 [기본 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) 기능을 활용할 수 있습니다. 이 목록을 확인하면 사용자에 대한 동일한 정보를 두 번 이상 저장하지 않도록 하는 데 도움이 됩니다. 세션 시작과 종료를 제외한 다른 모든 자동 추적 데이터는 데이터 포인트 할당에 포함되지 않습니다.
+특정 사용자 데이터(예: 처음 사용한 앱, 마지막으로 사용한 앱, 총 세션 수, 기기 OS 등)는 SDK에서 자동으로 수집됩니다. 통합 가이드에 따라 SDK를 구현하면 이 [기본 데이터 수집]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) 기능을 활용할 수 있습니다. 이 목록을 확인하면 사용자에 대한 동일한 정보를 두 번 이상 저장하지 않도록 하는 데 도움이 됩니다. 세션 시작과 종료를 제외한 다른 모든 자동 추적 데이터는 데이터 포인트 할당에 포함되지 않습니다.
 
-특정 데이터 항목의 기본 수집을 차단하는 프로세스를 허용 목록에 추가하려면 [SDK 프라이머]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/)를 참조하세요.
+특정 데이터 항목의 기본 수집을 차단하는 프로세스를 허용 목록에 추가하려면 [SDK 프라이머]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/)를 참조하세요.
 
 ## 사용자 지정 이벤트
 

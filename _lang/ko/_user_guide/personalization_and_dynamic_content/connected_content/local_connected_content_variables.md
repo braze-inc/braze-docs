@@ -8,11 +8,13 @@ search_rank: 1
 
 # 로컬 연결된 콘텐츠 변수
 
+> This page provides an overview of local Connected Content variables and how to use and store them.
+
 Braze는 전송 시점에 `connected_content` 태그에 지정된 엔드포인트로 표준 GET 요청을 보냅니다. 엔드포인트가 JSON을 반환하면 자동으로 파싱되어 `connected`라는 변수에 저장됩니다. 엔드포인트가 텍스트를 반환하는 경우 `connected_content` 태그 대신 메시지에 직접 삽입됩니다.
 
-응답을 변수에 저장하려면 JSON 객체를 반환하는 것이 좋습니다. 그리고 연결된 콘텐츠의 응답이 태그를 텍스트로 바꾸려면 응답이 [json.org][46])에 정의된 대로 유효한 JSON이 아닌지 확인하세요.
+응답을 변수에 저장하려면 JSON 객체를 반환하는 것이 좋습니다. And if you want the response of Connected Content to replace the tag with the text, make sure the response isn't valid JSON (as defined by [json.org][46])
 
-URL 뒤에 `:save your_variable_name`을 지정하여 데이터를 다른 이름으로 저장할 수도 있습니다. 예를 들어 다음 `connected_content` 태그는 `localweather`라는 로컬 변수에 응답을 저장합니다(여러 개의 `connected_content` JSON 변수를 저장할 수 있음).
+You can also specify `:save your_variable_name` after the URL to save the data as something else. 예를 들어 다음 `connected_content` 태그는 `localweather`라는 로컬 변수에 응답을 저장합니다(여러 개의 `connected_content` JSON 변수를 저장할 수 있음).
 
 {% raw %}
 ```js
@@ -97,7 +99,6 @@ API가 `Rain`을 반환하는 {%raw%}`{{localweather.consolidated_weather[0].wea
 기본적으로 연결된 콘텐츠는 지정된 URL에 HTTP GET 요청을 합니다. 대신 POST 요청을 하려면 `:method post`를 지정합니다.
 
 선택적으로 `:body` 뒤에 `key1=value1&key2=value2&...` 형식의 쿼리 문자열 또는 캡처된 값에 대한 참조를 지정하여 POST 본문을 제공할 수 있습니다. 콘텐츠 유형 기본값은 `application/x-www-form-urlencoded`입니다. `:content_type application/json`을 지정하고 `key1=value1&key2=value2`와 같이 양식으로 URL 인코딩된 본문을 제공하면, Braze는 전송 전에 자동으로 본문을 JSON 인코딩합니다.
-
 
 #### 기본 콘텐츠 유형
 {% raw %}
@@ -198,7 +199,6 @@ Braze는 커넥티드 콘텐츠 응답을 영구적으로 기록하거나 저장
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
-
 
 #### 캐시 버스팅
 

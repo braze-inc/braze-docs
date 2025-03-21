@@ -25,84 +25,198 @@ description: "이 참조 페이지에는 Liquid가 지원하는 연산자와 관
 | 포함 | 문자열 또는 문자열 배열에 문자열이 포함되어 있는지 확인합니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 사용 사례
+## 튜토리얼
 
-다음은 이러한 운영자가 마케팅 캠페인에 어떻게 도움이 될 수 있는지에 대한 몇 가지 사용 사례입니다:
+Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
 
 ### 정수 사용자 지정 속성이 있는 메시지 선택하기
+
+Let's send push notifications with personalized promotional discounts to users who have or haven't made purchases. The push notification will use an integer custom attribute called `total_spend` to check a user's total spend.
+
+1. Write a conditional statement using the greater than (`>`) operator to check if a user's total spend is greater than `0`, indicating they've made a purchase. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+```
+{% endraw %}
+
+{: start="2"}
+2\. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users whose total spend equals `0` or doesn't exist. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
 {% else %}
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+```
+{% endraw %}
+
+{: start="3"}
+3\. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
-![][13]{: width="100%"}
+![A push notification composer with the full Liquid code from the tutorial.][13]{: width="100%"}
 
-이 사용 사례에서 고객의 '총 지출' 사용자 지정 속성이 `0` 보다 큰 경우 메시지가 표시됩니다:
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${total_spend}}} >0 %}
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+{% else %}
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+Now if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
 ```
-고객의 '총 지출' 사용자 지정 속성이 존재하지 않거나 `0` 와 같으면 다음과 같은 메시지가 표시됩니다:
+If a user's "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
 
 ```
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
 ### 문자열 사용자 지정 속성이 있는 메시지 선택
 
-{% raw %}
+Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
+1. Write a conditional statement using the equals (`==`) operator to check if a user's most recent game is *Awkward Dinner Party*. Then, create a message to send to those users.
+
+{% raw %}
 ```liquid
-{% if {{custom_attribute.${Game}}} == 'Game1' %}
-You played our Game! We're so happy!
-{% elsif{{custom_attribute.${Game}}} == 'Game2' %}
-You played our other Game! Woop!{% else %}
-Hey! Get in here and play this Game!
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+```
+{% endraw %}
+
+{: start="2"}
+2\. Use the `elsif` tag with the equals (`==`) operator to check if user's most recent game is *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+```
+{% endraw %}
+
+{: start="3"}
+3\. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+{% endraw %}
+
+{: start="4"}
+4\. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users who don't have a recent game. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+```
+{% endraw %}
+
+{: start="5"}
+5\. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
-![][14]
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
 
-이 사용 사례에서는 특정 게임을 플레이한 경우 다음과 같은 메시지가 표시됩니다:
+![A push notification composer with the full Liquid code from the tutorial.][14]
+
+Now, if a user last played *Awkward Dinner Party*, they'll receive this message:
 
 ```
-You played our Game! We're so happy!
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 ```
 
-다른 지정된 게임을 플레이한 경우:
+If a user's most recent game is *Proxy War 3: War of Thirst*, they will receive this message:
 
 ```
-You played our other Game! Woop!
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-게임을 플레이한 적이 없거나 프로필에 해당 커스텀 속성이 존재하지 않는 경우 다음과 같은 메시지가 표시됩니다.
+If a user has recently played a game that wasn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*, they'll get this message:
 
 ```
-Hey! Get in here and play this Game!
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+
+If a user hasn't played any games or that custom attribute doesn't exist on their profile, they'll get this message:
+
+```
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 
 ### 위치에 따른 메시지 중단
 
-거의 모든 것을 기준으로 메시지를 중단할 수 있습니다. 다음 예는 사용자가 특정 지역에 거주하지 않는 경우 프로모션, 표시 또는 전달 자격이 없을 수 있으므로 메시지를 중단하는 방법을 보여줍니다.
+거의 모든 것을 기준으로 메시지를 중단할 수 있습니다. Let's abort a message if a user isn't based in a specified area, as they might not qualify for the promotion, show, or delivery.
+
+1. Write a conditional statement using the equals (`==`) operator to check if the user's time zone is `America/Los_Angeles`, then create a message to send to those users. 
 
 {% raw %}
 ```liquid
-{% if {{${time_zone.$}}} =='America/Los_Angeles' %}
+{% if {{${time_zone}}} == 'America/Los_Angeles' %}
 Stream now!
+```
+{% endraw %}
+
+{: start="2"}
+2\. To avoid sending messages to users outside the `America/Los_Angeles` time zone, wrap {% raw %}`{% else %}`{% endraw %} and {% raw %}`{% endif %}`{% endraw %} tags around an {% raw %}`{% abort_message () %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
 {% else %}
 {% abort_message () %}
 {% endif %}
 ```
 {% endraw %}
 
-![][26]
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{${time_zone}}} =='America/Los_Angeles' %}
+Stream now!
+{% else %}
+{% abort_message () %}
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+![A push notification composer with the full Liquid code from the tutorial.][26]
 
 연결된 콘텐츠를 기반으로 [메시지를 중단할][1] 수도 있습니다.
 

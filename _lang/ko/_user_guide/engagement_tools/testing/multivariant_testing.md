@@ -65,9 +65,9 @@ Braze 설명서에서 "다변량 테스트"는 설정 과정이 동일하므로 
 
 이는 배리언트 분포 때문이 아니라 인앱 메시지의 *고유 수신자* 수가 계산되는 방식 때문이며, 배리언트 A가 배리언트 C보다 *고유 수신자* 수가 지속적으로 더 많습니다. 인앱 메시지의 경우, *고유 수신자*는 실제로 인앱 메시지를 수신하고 본 총 사용자 수인 *고유 노출* 횟수입니다. 즉, 사용자가 어떤 이유로든 메시지를 받지 못하거나 보지 않기로 결정한 경우 *고유 수신자* 수에 포함되지 않으며 변형 분포가 왜곡되어 나타날 수 있습니다.
 
-## 다변량 및 A/B 테스트를 위한 5가지 규칙 {#five-rules-for}
+## Tips for multivariate and A/B testing
 
-다변량 및 A/B 테스트를 통해 사용자에 대한 강력한 인사이트를 발견할 수 있습니다. 테스트 결과가 사용자의 행동을 제대로 반영하는지 확인하려면 다음 가이드라인을 따르세요.
+다변량 및 A/B 테스트를 통해 사용자에 대한 강력한 인사이트를 발견할 수 있습니다. To receive test results that are truly reflective of your users' behaviors, follow these guidelines.
 
 #### 많은 수의 사용자를 대상으로 테스트 실행
 
@@ -84,6 +84,15 @@ Braze 설명서에서 "다변량 테스트"는 설정 과정이 동일하므로 
 #### 테스트 실행 시간을 결정하고 테스트를 일찍 종료하지 마세요.
 
 테스트를 시작하기 전에 테스트를 실행할 기간을 정하고 그 기간을 지키세요. 마케터들은 종종 마음에 드는 결과가 나오면 테스트를 중단하여 결과를 편향적으로 해석하려는 유혹을 받습니다. 엿보고 싶은 유혹을 뿌리치고 시험을 일찍 끝내지 마세요!
+
+#### Add your test to campaigns before they launch, not after
+
+If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to a launched campaign that allows re-entry, users who re-enter the campaign will always go through the same path to prevent data inaccuracies with the test. Additionally, if you change any of the variants while the test is running, the change will invalidate your test and restart it.
+
+For accurate test results:
+1. Clone the launched campaign.
+2. Stop the original campaign.
+3. Then, add the test to the cloned campaign. 
 
 #### 가능하면 대조 그룹을 포함하세요.
 

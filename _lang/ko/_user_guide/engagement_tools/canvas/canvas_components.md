@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: 캔버스의 기능 플래그
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: 캔버스 오디언스 동기화
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ guide_featured_list:
 
 [의사 결정 분할][3] 구성 요소는 간단한 "예 또는 아니오" 논리를 사용하여 작업 또는 사용자 속성을 기반으로 사용자 여정에 대한 두 개의 상호 배타적인 경로를 만듭니다. 이를 통해 사용자 그룹을 식별하고 타겟팅할 수 있습니다.
 
-[지연][4] 구성 요소를 사용하면 캔버스에서 단일 단계를 지연시킬 수 있습니다. 캔버스의 이 독립형 지연 단계는 특정 시간에 사용자에게 메시지를 전달하는 데 가장 적합합니다. 또한 지연 구성 요소를 사용하면 오디언스가 구성 요소의 기준을 충족하는 데 더 많은 시간을 허용하여 잠재고객 도달 범위를 늘릴 수도 있습니다. 
+[지연][4] 구성 요소를 사용하면 캔버스에서 단일 단계를 지연시킬 수 있습니다. 캔버스의 이 독립형 지연 단계는 특정 시간에 사용자에게 메시지를 전달하는 데 가장 적합합니다. 또한 지연 구성 요소를 사용하면 오디언스가 구성 요소의 기준을 충족하는 데 더 많은 시간을 허용하여 잠재고객 도달 범위를 늘릴 수도 있습니다.
 
 ### 테스트
 
@@ -62,7 +62,7 @@ guide_featured_list:
 
 ### 통합
 
-브랜드의 퍼스트 파티 사용자 데이터와 동기화하고 싶으신가요? [Facebook][6] 및 [Google에서][7] 사용 가능한 오디언스 동기화 옵션을 활용하세요. <br><br>
+브랜드의 퍼스트 파티 사용자 데이터와 동기화하고 싶으신가요? [Facebook][6] 및 [Google에서][7] 사용 가능한 오디언스 동기화 옵션을 활용하세요.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

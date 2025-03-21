@@ -16,7 +16,7 @@ table td {
 
 # SQL 테이블 참조
 
-이 페이지는 [쿼리 빌더]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/)에서 또는 [SQL 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)을 생성할 때 쿼리할 수 있는 테이블 및 열에 대한 참조입니다. 
+This page is a reference of tables and columns available to be queried in the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or when generating [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 ## 목차
 

@@ -48,7 +48,7 @@ description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 
 
 태그는 인게이지먼트 전술을 추적하는 데 유용한 조직 도구가 될 수 있습니다. 세그먼트와 캠페인을 비즈니스 목표, 퍼널 단계 등과 연결할 수 있습니다.
 
-다음은 전자 상거래 앱에 유용할 수 있는 태그의 예입니다:
+The following is an example of tags an eCommerce app might find useful:
 
 <style>
 table td {

@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: 식별자 필드 수준 암호화
-  link: /docs/user_guide/data_and_analytics/field_level_encryption/
+  link: /docs/user_guide/analytics/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Gmail 프로모션 도구
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
