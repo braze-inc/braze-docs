@@ -42,7 +42,7 @@ When a user creates a booking, use the following structure for the array of obje
 
 The nested custom attribute “trips” will display in the user profile like so.
 
-![Two nested custom attributes for a London trip and Sydney trip.][1]
+![Two nested custom attributes for a London trip and Sydney trip.][1]{: style="max-width:70%;"}
 
 ### Update booking
 When a user updates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` API endpoint.
@@ -96,7 +96,7 @@ When a user deletes a booking, use the following structure for the array of obje
 
 The specified booking will be removed from the nested custom attribute in the user profile and display any remaining bookings.
 
-![A nested custom attribute for a London trip.][2]
+![A nested custom attribute for a London trip.][2]{: style="max-width:70%;"}
 
 ### Alternative: Write nested attributes to user profiles through the SDK
 If you’re collecting appointment bookings with your app, website, or both and want to write that data directly to a user profile, you can use the Braze SDK to transmit this data. Here is an example utilizing the Web SDK:
