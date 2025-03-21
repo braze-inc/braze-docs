@@ -42,4 +42,7 @@ guide_menu_list:
   - name: Creating Right-to-Left Messages
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/
     image: /assets/img/braze_icons/globe-02.svg
+  - name: Booking Reminder Email System
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case/
+    image: /assets/img/braze_icons/channel-email.svg
 ---
