@@ -73,7 +73,7 @@ As a developer, you'll work with your team to define what additional, custom dat
 Keep data nomenclature consistent across tools. For example, your data warehouse may record "purchase limited time offer" in a particular way. You will need to decide if a custom event in Braze is needed to match this format.
 {% endalert %}
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/analytics/).
 
 ### Customizations planning
 
@@ -161,7 +161,7 @@ You can also import users and update customer attribute values through a one-tim
 
 ### Setting up session tracking
 
-The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)).
+The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)).
 
 ### Tracking custom events, attributes, and purchase events
 

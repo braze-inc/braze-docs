@@ -46,10 +46,6 @@ We also recommend formatting all text in your CSV files as lowercase. Make sure 
 
 To create a catalog, go to **Data Settings** > **Catalogs**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
-{% endalert %}
-
 Select **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV

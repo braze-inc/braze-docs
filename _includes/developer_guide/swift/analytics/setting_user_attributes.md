@@ -35,7 +35,7 @@ The following attributes should be set on the `Braze.User` object:
 
 ## Custom user attributes
 
-In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/analytics/).
 
 {% alert important %}
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated. For more information, refer to [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).

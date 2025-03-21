@@ -8,7 +8,7 @@ While not a native feature, Android TV push integration is made possible by leve
 
 To use this feature, you'll need to complete the following:
 
-- [Integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration)
+- [Integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android)
 - [Set up push notifications for the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
 
 ## Setting up push notifications

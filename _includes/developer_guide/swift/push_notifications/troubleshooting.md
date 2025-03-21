@@ -33,6 +33,10 @@ When a push campaign is launched, Braze will make requests to APNs to deliver yo
 
 If [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with.
 
+{% alert note %}
+It's normal for APNs to initially return a success status even if a token becomes unregistered, as APNs doesn't immediately report token invalidation events. APNs intentionally delays returning a `410` status for invalid tokens on a randomized schedule, designed to protect user privacy and prevent tracking of app uninstalls. You can safely continue sending notifications to an unregistered token until APNs returns a `410` status.
+{% endalert %}
+
 ## Using the push error logs
 
 The [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
@@ -72,14 +76,14 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ### No push registration prompt
 
-If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
+If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
 
 ### No "push registered" users showing in the dashboard (prior to sending messages)
 
 Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
 
 - Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
-  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) were successfully completed.
+  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.

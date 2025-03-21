@@ -13,10 +13,6 @@ tool:
 
 > The **Home** page on the dashboard provides key metrics for you to track and understand the performance of your app or website, and gives you an at-a-glance high-level understanding of your userbase.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
-{% endalert %}
-
 ![Home dashboard in Braze.][1]
 
 The **Home** page has two main sections:

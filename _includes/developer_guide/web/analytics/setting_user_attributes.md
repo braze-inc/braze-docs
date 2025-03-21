@@ -2,22 +2,38 @@
 
 ## Default user attributes
 
+{% tabs %}
+{% tab standard implementation %}
 To set a default attribute for a user, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
-{% tabs local %}
-{% tab First name %}
+{% subtabs local %}
+{% subtab First name %}
 ```javascript
 braze.getUser().setFirstName("SomeFirstName");
 ```
-{% endtab %}
-{% tab Gender %}
+{% endsubtab %}
+{% subtab Gender %}
 ```javascript
 braze.getUser().setGender(braze.User.Genders.FEMALE);
 ```
-{% endtab %}
-{% tab Date of birth %}
+{% endsubtab %}
+{% subtab Date of birth %}
 ```javascript
 braze.getUser().setDateOfBirth(2000, 12, 25);
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab google tag manager %}
+Using Google Tag Manager, standard user attributes (such as a user's first name), should be logged in the same manner as custom user attributes. Ensure the values you're passing in for standard attributes match the expected format specified in the [User class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) documentation.
+
+For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
+
+```html
+<script>
+window.braze.getUser().setGender("f")
+</script>
 ```
 {% endtab %}
 {% endtabs %}
@@ -36,10 +52,12 @@ Braze provides predefined methods for setting the following user attributes with
 
 ## Custom user attributes
 
+{% tabs %}
+{% tab standard implementation %}
 In addition to the default user attribute methods, you can also set [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for your users. Full method specifications, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
-{% tabs local %}
-{% tab String %}
+{% subtabs local %}
+{% subtab String %}
 To set a custom attribute with a `string` value:
 
 ```javascript
@@ -49,8 +67,8 @@ braze.getUser().setCustomUserAttribute(
 );
 ```
 
-{% endtab %}
-{% tab Integer %}
+{% endsubtab %}
+{% subtab Integer %}
 To set a custom attribute with a `integer` value:
 
 ```javascript
@@ -66,8 +84,8 @@ braze.getUser().incrementCustomUserAttribute(
 );
 ```
 
-{% endtab %}
-{% tab Date %}
+{% endsubtab %}
+{% subtab Date %}
 To set a custom attribute with a `date` value:
 
 ```javascript
@@ -89,8 +107,8 @@ braze.getUser().setCustomUserAttribute(
 );
 ```
 
-{% endtab %}
-{% tab Array %}
+{% endsubtab %}
+{% subtab Array %}
 
 You can have up to 25 elements in custom attribute arrays. Individual arrays that are manually set (not automatically detected) for **Data Type** can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your Braze account manager.
 
@@ -111,12 +129,30 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 {% alert important %}
 Dates passed to Braze with this method must be JavaScript Date objects.
 {% endalert %}
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert important %}
 Custom attribute keys and values can only have a maximum of 255 characters. For more information about valid custom attribute values, refer to the [reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 {% endalert %}
+{% endtab %}
+
+{% tab google tag manager %}
+Custom user attributes are not available due to a limitation in Google Tag Manager's scripting language. To log custom attributes, create a Custom HTML tag with the following content:
+
+```html
+<script>
+  // Note: If using SDK version 3.x or below, use `window.appboy` instead of `window.braze`
+  // Version 4 or greater should use `window.braze`
+window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value");
+</script>
+```
+
+{% alert important %}
+The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
+{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ### Unsetting a custom attribute
 

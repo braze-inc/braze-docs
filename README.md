@@ -31,7 +31,7 @@ Next, install project dependencies.
 bundle install
 ```
 
-To start your local docs server on localhost `http://127.0.0.1:4000`, run:
+To start your local docs server on localhost `http://127.0.0.1:4000`, run the following command. To stop your server, reopen the terminal and press **Control**+**C**.
 
 ```bash
 # for 'en' language:
@@ -43,9 +43,12 @@ rake fr
 rake ja
 rake ko
 rake pt_br
+
+# for content in '{% markdown_embed %}' tags:
+MARKDOWN_API=yes rake
 ```
 
-To stop your server, reopen the terminal and press **Control**+**C**.
+> **Note:** By prepending `MARKDOWN_API=yes` to your rake command, you can preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page.
 
 ## About `bdocs` wrapper
 

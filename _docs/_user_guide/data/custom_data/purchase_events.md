@@ -257,10 +257,6 @@ You may occasionally identify purchase events that either consume too many data 
 
 In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) to learn more.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
-{% endalert %}
-
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}
 [5]: {% image_buster /assets/img/purchase5.png %}

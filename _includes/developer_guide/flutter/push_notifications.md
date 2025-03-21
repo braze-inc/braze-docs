@@ -88,7 +88,7 @@ For a full list of push notification fields, refer to the table below:
 | `summaryText`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
 | `badgeCount`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
-| `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/). |
+| `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift). |
 | `isBrazeInternal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as geofences sync, Feature Flag sync, or uninstall tracking. The payload is received silently for the user. |
 | `imageUrl`        | String    | Specifies the URL associated with the notification image. |
 | `brazeProperties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |

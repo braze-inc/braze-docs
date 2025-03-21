@@ -44,7 +44,7 @@ To prevent Braze from triggering unnecessary network requests every time you sen
 {% tab ios %}
 ### Step 1: Complete the initial setup
 
-See the [Swift integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
+See the [Swift integration instructions]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
 
 ### Step 2: Request push notifications permission
 

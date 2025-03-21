@@ -81,5 +81,7 @@ The following values must be sent in your ActionIQ export to Braze:
 - Consumer identifier (either `braze_id` or `external_id`)
 - Campagin ID
 
+*This integration is maintained by ActionIQ.*
+
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.actioniq.com/
