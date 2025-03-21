@@ -13,7 +13,7 @@ These are the content types you'll find on Braze Docs:
 | Documentation type | Purpose |
 | --- | --- |
 | [How-to guides](#how-to-guides) | Help the user **apply knowledge**. |
-| [Tutorials](#tutorials) | Help the user **acquire knowledge**. |
+| [Tutorials](#tutorials), [Use cases](#use-cases) | Help the user **acquire knowledge**. |
 | [References](#references) | Provide the user with **technical knowledge**. |
 | [Explanations](#explanations) | Broaden the user’s **contextual knowledge**. |
 | [Release notes](#release-notes) | Inform the user about product updates. |
@@ -118,9 +118,33 @@ Tutorials are learning-oriented practical lessons. They focus on what the user l
 Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
 {% endalert %}
 
+#### Header syntax
+
+The title header should be prepended with `Tutorial:` and generally describe what the user will do or create. For example, "Tutorial: Your first contribution".
+
+### Use cases
+
+Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory. ([Tutorials](#tutorials) are a type of article that allow for a hypothetical scenario to be used to illustrate some functionality.) A special value of use cases is that they illustrate the real-world value that Braze offers marketers.
+
+{% tabs local %}
+{% tab use case template %}
+{% multi_lang_include contributing/templates/use_case.md %}
+{% endtab %}
+{% endtabs %}
+
+#### Guidelines
+
+- Create a hypothetical but real-world scenario using an imaginary brand
+- Highlight the value that a feature brings to a different industry: eCommerce, finance, gaming, finance, and others.
+- Show a practical example of how Braze is commonly used: add to cart, add to wishlist, saved song, created playlist, loyalty program, submitted feedback, and similar.
+- Create a step-by-step activity for the user to roleplay
+- Make it clear that the use case is a fictional scenario; users should not actually follow these steps with real data.
+
 ##### Header syntax
 
-The title header should be prepended with `Tutorial:` and generally describe what the user will do or create. For example, "Tutorial: Your first contribution". 
+The title header should be prepended with `Use case:` and describe the way Braze is being used in the recipe. For example, "Use case: Abandoned cart." 
+
+Each use of the words "Use case" in a header should have a description following it. 
 
 ### References
 
