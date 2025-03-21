@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Quikly][1], an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
 
+_This integration is maintained by Quikly._
+
+## About the integration
+
 The Braze and Quikly partnership allows you to accelerate conversions on events within a Braze customer journey. Quikly does this by using urgency psychology to motivate consumers in fun — and instant — ways. For example, brands can use Quikly to immediately acquire new email and SMS subscribers directly into Braze or to motivate other key marketing objectives like downloading your mobile app.
 
 ## Prerequisites
@@ -172,6 +176,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 ## Support
 Reach out to your client success manager at Quikly with any questions.
+
 
 [1]: https://www.quikly.com
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

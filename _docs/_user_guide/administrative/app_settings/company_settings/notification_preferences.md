@@ -17,10 +17,6 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Notification Preferences**.
-{% endalert %}
-
 ## Available notifications
 
 The following table lists available notifications:
@@ -39,6 +35,7 @@ The following table lists available notifications:
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
+| Daily Canvas/Campaign Entry Volume Limits | Sends notifications each time a send limit is reached. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Weekly analytics reporting

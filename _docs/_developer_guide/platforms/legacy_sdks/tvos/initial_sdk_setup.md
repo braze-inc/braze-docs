@@ -193,5 +193,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repository](https://github.com/appboy/appboy-ios-sdk) and initialize Braze as outlined in the preceding sections.
 
 ## Identifying users and reporting analytics
-See our [iOS documentation]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
+See our [iOS documentation]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 

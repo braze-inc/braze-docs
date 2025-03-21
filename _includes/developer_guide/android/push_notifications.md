@@ -1,16 +1,8 @@
-# Push notifications
-
-> With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
-
-{% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/).
-{% endalert %}
-
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Built-in features
 
-The following features are built into the Braze Android SDK. To use any other push notification features, you will need to [set up push notifications](#setting-up-push-notifications) for your app.
+The following features are built into the Braze Android SDK. To use any other push notification features, you will need to [set up push notifications](#android_setting-up-push-notifications) for your app.
 
 |Feature|Description|
 |-------|-----------|
@@ -20,8 +12,6 @@ The following features are built into the Braze Android SDK. To use any other pu
 
 ## Setting up push notifications
 
-{% tabs local %}
-{% tab Android %}
 {% alert tip %}
 To check out a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 {% endalert %}
@@ -57,7 +47,7 @@ In Google Cloud, select the project your Android app is using, then enable the [
 
 ![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
-### Step 4: Create a service account
+### Step 4: Create a service account {#service-account}
 
 Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
@@ -75,9 +65,9 @@ Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-### Step 5: Generate JSON credentials
+### Step 5: Generate JSON credentials {#json}
 
-Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
+Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#android_service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
@@ -101,12 +91,12 @@ Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i 
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#step-4-generate-json-credentials). When you're finished, select **Save**.
+Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#android_json). When you're finished, select **Save**.
 
 ![The form for "Push Notification Settings" with "Firebase" selected as the push provider.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
-Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-4-generate-json-credentials).
+Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#android_json).
 {% endalert %}
 
 ### Step 7: Set up automatic token registration
@@ -121,10 +111,10 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your [`braze.xml`](#option-1-brazexml) or [`BrazeConfig`](#option-2-brazeconfig).
+Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig`.
 
-#### Option 1: `braze.xml`
-
+{% tabs local %}
+{% tab Braze.XML %}
 To configure automatic FCM token registration, add the following lines to your `braze.xml` file:
 
 ```xml
@@ -142,9 +132,9 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">603679405392</string>
 </resources>
 ```
+{% endtab %}
 
-#### Option 2: `BrazeConfig`
-
+{% tab BrazeConfig %}
 To configure automatic FCM token registration, add the following lines to  your `BrazeConfig`:
 
 {% subtabs local %}
@@ -198,135 +188,14 @@ Braze.configure(this, brazeConfig)
 {% alert tip %}
 If you'd like manually register FCM tokens instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
 {% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 8: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests everytime you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
-{% endtab %}
 
-{% tab Huawei %}
-Newer phones manufactured by [Huawei](https://huaweimobileservices.com/) come equipped with Huawei Mobile Services (HMS) - a service used to deliver push instead of Google's Firebase Cloud Messaging (FCM).
-
-### Step 1: Register for a Huawei developer account
-
-Before getting started, you'll need to register and set up a [Huawei Developer account](https://developer.huawei.com/consumer/en/console). In your Huawei account, go to **My Projects > Project Settings > App Information**, and take note of the `App ID` and `App secret`.
-
-![]({% image_buster /assets/img/huawei/huawei-credentials.png %})
-
-### Step 2: Create a new Huawei app in the Braze dashboard
-
-In the Braze dashboard, go to **App Settings**, listed under the **Settings** navigation.
-
-Click **+ Add App**, provide a name (such as My Huawei App), select `Android` as the platform.
-
-![]({% image_buster /assets/img/huawei/huawei-create-app.png %}){: style="max-width:60%;"}
-
-Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei Client Secret` and `Huawei App ID`.
-
-![]({% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %})
-
-### Step 3: Integrate the Huawei messaging SDK into your app
-
-Huawei has provided an [Android integration codelab](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) detailing integrating the Huawei Messaging Service into your application. Follow those steps to get started.
-
-After completing the codelab, you will need to create a custom [Huawei Message Service](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls) to obtain push tokens and forward messages to the Braze SDK.
-
-{% subtabs local %}
-{% subtab JAVA %}
-
-```java
-public class CustomPushService extends HmsMessageService {
-  @Override
-  public void onNewToken(String token) {
-    super.onNewToken(token);
-    Braze.getInstance(this.getApplicationContext()).setRegisteredPushToken(token);
-  }
-
-  @Override
-  public void onMessageReceived(RemoteMessage remoteMessage) {
-    super.onMessageReceived(remoteMessage);
-    if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getDataOfMap())) {
-      // Braze has handled the Huawei push notification
-    }
-  }
-}
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-class CustomPushService: HmsMessageService() {
-  override fun onNewToken(token: String?) {
-    super.onNewToken(token)
-    Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
-  }
-
-  override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {
-    super.onMessageReceived(hmsRemoteMessage)
-    if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.dataOfMap)) {
-      // Braze has handled the Huawei push notification
-    }
-  }
-}
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-
-After adding your custom push service, add the following to your `AndroidManifest.xml`:
-
-```xml
-<service
-  android:name="package.of.your.CustomPushService"
-  android:exported="false">
-  <intent-filter>
-    <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
-  </intent-filter>
-</service>
-```
-
-### Step 4: Test your push notifications (optional)
-
-At this point, you've created a new Huawei Android app in the Braze dashboard, configured it with your Huawei developer credentials, and have integrated the Braze and Huawei SDKs into your app.
-
-Next, we can test out the integration by testing a new push campaign in Braze.
-
-#### Step 4.1: Create a new push notification campaign
-
-In the **Campaigns** page, create a new campaign, and choose **Push Notification** as your message type.
-
-After you name your campaign, choose **Android Push** as the push platform.
-
-![The campaign creation composer displaying the available push platforms.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
-
-Next, compose your push campaign with a title and message.
-
-#### Step 4.2: Send a test push
-
-In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), and click **Send Test** to send a test push.
-
-![The test tab in the campaign creation composer shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.]({% image_buster /assets/img/huawei/huawei-test-send.png %})
-
-At this point, you should receive a test push notification on your Huawei (HMS) device from Braze.
-
-#### Step 4.3: Set up Huawei segmentation (optional)
-
-Since your Huawei app in the Braze dashboard is built upon the Android push platform, you have the flexibility to send push to all Android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
-
-To send push to only Huawei apps, [create a new Segment]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) and select your Huawei App within the **Apps** section.
-
-![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
-
-Of course, if you want to send the same push to all Android push providers, you can choose not to specify the app which will send to all Android apps configured within the current workspace.
-{% endtab %}
-{% endtabs %}
-
-## Displaying notifications (Android only)
-
-{% alert important %}
-The following steps are intended for Android only, not Huawei.
-{% endalert %}
+## Displaying notifications
 
 ### Step 1: Register Braze Firebase Messaging Service
 
@@ -406,7 +275,7 @@ In your `braze.xml`, specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration:]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/)
+or set via [runtime configuration:]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android)
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -453,7 +322,7 @@ The following large and small icons pictured are examples of properly designed i
 
 ![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon")
 
-### Step 3: Configure notification icons
+### Step 3: Configure notification icons {#configure-icons}
 
 #### Specifying icons in braze.xml
 
@@ -492,7 +361,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
+This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android):
 
 {% tabs %}
 {% tab JAVA %}
@@ -517,7 +386,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) article for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. For more information, see [Using a callback for push events]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
 
 #### Creating custom deep links
 
@@ -533,7 +402,7 @@ The Braze dashboard supports setting deep links or web URLs in push notification
 
 The Android SDK, by default, will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
-For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
+For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android):
 
 {% tabs %}
 {% tab JAVA %}
@@ -594,13 +463,13 @@ At this point, you should be able to see notifications sent from Braze. To test 
 
 ![The 'Test' tab of a push notification campaign in the Braze dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
-For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
+For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
 #### Testing analytics
 
 At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) article for a break down on push analytics.
 
-For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
+For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
 #### Testing from command line
 
@@ -626,7 +495,20 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/basics/#endpoints).
+
+## Conversation push notifications
+
+![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+
+The [people and conversations initiative](https://developer.android.com/guide/topics/ui/conversations) is a multi-year Android initiative that aims to elevate people and conversations in the system surfaces of the phone. This priority is based on the fact that communication and interaction with other people is still the most valued and important functional area for the majority of Android users across all demographics.
+
+### Usage requirements
+
+- This notification type requires the Braze Android SDK v15.0.0+ and Android 11+ devices. 
+- Unsupported devices or SDKs will fallback to a standard push notification.
+
+This feature is only available over the Braze REST API. See the [Android push object]({{site.baseurl}}/api/objects_filters/messaging/android_object#android-conversation-push-object) for more information.
 
 ## FCM quota exceeded errors
 

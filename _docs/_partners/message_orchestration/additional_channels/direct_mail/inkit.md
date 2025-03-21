@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Inkit][1] and Braze empower organizations to securely generate and distribute documents - both digitally as well as via direct mail.
 
+_This integration is maintained by Inkit._
+
+## About the integration
+
 The Braze and Inkit integration allows you to generate documents and mail them directly to Braze users with Braze webhooks.
 
 ## Prerequisites
@@ -89,6 +93,7 @@ Preview your request in the **Preview** panel or navigate to the **Test** tab, w
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
+
 
 [1]: https://www.inkit.com
 [2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration

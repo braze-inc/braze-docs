@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Jampp](https://www.jampp.com/) is a performance marketing platform used for acquiring and retargeting mobile customers. Jampp combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time or more often.
 
+_This integration is maintained by Jampp._
+
+## About the integration
+
 The Braze and Jampp integration allows Braze users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
 
 Some examples of when you would want to retarget customers with an ad:
@@ -91,6 +95,7 @@ Preview the message to ensure the request is rendering properly for different us
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
 [2]: {% image_buster /assets/img/jampp_webhook.png %}

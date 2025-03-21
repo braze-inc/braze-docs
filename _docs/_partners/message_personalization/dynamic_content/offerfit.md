@@ -13,6 +13,10 @@ search_tag: OfferFit
 
 > [OfferFit](https://www.offerfit.ai/) replaces manual A/B testing with AI testing. Lifecycle marketers use OfferFit’s AI testing to make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes.
 
+_This integration is maintained by OfferFit._
+
+## About the integration
+
 The OfferFit and Braze integration allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
 
 ## Prerequisites
@@ -105,8 +109,6 @@ In addition to orchestrating activation events in Braze, OfferFit provides data 
 After OfferFit is configured, the automated experimentation platform will automatically send 1:1 personalized activation events to Braze for each user in your target audience. These activation events will be triggered through the Braze campaigns or Canvases you configured in [step 2](#step-2).
 
 In addition to the analytics data available in Braze, OfferFit provides a comprehensive reporting layer that allows marketers to explore the customer insights discovered by OfferFit through its self-learning AI capabilities.
-
-
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -1,6 +1,6 @@
 ## Prerequisites
 
-Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) into your app. However, no additional setup is required.
 
 ## Google fragments
 

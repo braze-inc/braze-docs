@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [SmarterSends][2] drives personalization with marketing campaigns that businesses can create, schedule, and deploy to enforce brand and legal compliance with control over the content and data used. 
 
+_This integration is maintained by SmarterSends._
+
+## About the integration
+
 The Braze and SmarterSends partnership allows you to combine the power of Braze with the hyper-localized content owned by your distributed users to elevate your marketing campaigns.
 
 ## Prerequisites
@@ -77,6 +81,7 @@ Create a message variant ID for each group you create in SmarterSends to view me
 ## Customization
 
 Each SmarterSends instance is fully customizable with your brand's logo colors and custom domain name, creating a familiar environment. Additionally, for further personalization, you can define the attributes and custom attributes to target users in campaigns based on the segments within your Braze workspace.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://smartersends.com

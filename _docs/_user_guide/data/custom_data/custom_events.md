@@ -29,10 +29,6 @@ Some common custom event use cases include:
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
-{% endalert %}
-
 Select the menu next to a custom event for the following actions:
 
 ### Blocklisting
@@ -106,10 +102,6 @@ The following table shows the filters available for segmenting users by custom e
 ## Analytics
 
 Braze notes the number of times custom events have occurred and the last time they were performed by each user for segmentation. View these analytics by going to **Analytics** > **Custom Events Report**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Custom Events** report under **Data**.
-{% endalert %}
 
 On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlayed on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
 

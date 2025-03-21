@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementalist measurement, and marketing mix modeling.
 
+_This integration is maintained by Airbridge._
+
+## About the integration
+
 The Braze and Airbridge integration lets you pass all non-organic install attribution data from Airbridge to Braze to build personalized marketing campaigns.
 
 ## Prerequisites
@@ -268,6 +272,7 @@ idfv={{most_recently_used_device.${id}}}
 **This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
 [2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

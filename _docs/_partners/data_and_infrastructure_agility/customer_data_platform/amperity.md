@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Amperity](https://amperity.com/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity provides intelligent capabilities across data management unification, analytics, insights, and activation.
 
+_This integration is maintained by Amperity._
+
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 The Braze and Amperity integration offers a unified view of your customers across the two platforms. This integration allows you to:
@@ -190,6 +192,7 @@ To send Braze Currents data into Amperity:
 1. [Set up a Braze Current]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
 2. Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
 3. Configure feeds and automate data loads using standard workflows.
+
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}

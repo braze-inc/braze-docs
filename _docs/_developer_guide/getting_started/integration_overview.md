@@ -73,11 +73,11 @@ As a developer, you'll work with your team to define what additional, custom dat
 Keep data nomenclature consistent across tools. For example, your data warehouse may record "purchase limited time offer" in a particular way. You will need to decide if a custom event in Braze is needed to match this format.
 {% endalert %}
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/analytics/).
 
 ### Customizations planning
 
-Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview) for more information.
+Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope.
 
 ### Getting dashboard access
 
@@ -132,7 +132,7 @@ During SDK implementation, you will:
 
 * Write SDK integration code for each platform you want to support.
 * Activate the messaging channels for each platform, ensuring that the Braze SDK tracks the data from your interactions with your customers across email, SMS, push notifications, and other channels.
-* Create any planned [UI component customizations]({{site.baseurl}}/developer_guide/getting_started/customization_overview) (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
+* Create any planned UI component customizations (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
 
 ### Using the Braze API
 
@@ -161,7 +161,7 @@ You can also import users and update customer attribute values through a one-tim
 
 ### Setting up session tracking
 
-The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)).
+The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)).
 
 ### Tracking custom events, attributes, and purchase events
 

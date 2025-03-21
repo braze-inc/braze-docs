@@ -11,6 +11,10 @@ search_tag: Partner
  
 > [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) is a leading enterprise customer data platform that delivers personalized customer experiences with a 360-degree view of your customers.
 
+_This integration is maintained by Dynamics 365 Customer Insights._
+
+## About the integration
+
 The Braze and Dynamics 365 Customer Insights integration allows you to export customer segments to Braze to use in campaigns or Canvases.
 
 ## Prerequisites
@@ -56,5 +60,6 @@ To create a segment of these users, In Braze, navigate to **Segments**, create a
 {% alert note %}
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).
 {% endalert %}
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

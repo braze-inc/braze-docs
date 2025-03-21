@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stripo](https://stripo.email/) is a drag-and-drop email template builder that helps you create and design responsive emails with interactive elements. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
 
+_This integration is maintained by Stripo._
+
+## About the integration
+
 The Braze and Stripo integration allows you to export your customized Stripo emails and upload them as templates within Braze.
 
 ## Prerequisites
@@ -46,5 +50,6 @@ This is a one-time setup, and any exports in the future will automatically utili
 ## Usage
 
 Find your uploaded Stripo template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

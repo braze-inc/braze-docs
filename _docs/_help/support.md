@@ -17,10 +17,6 @@ To contact the Braze Support team, navigate to the Braze dashboard. In the dashb
 
 Depending on your Braze permissions, and if you're a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select **Get Help** > **Support**.
-{% endalert %}
-
 ## Adding designated support contacts
 
 Designated support contacts can access all support cases for your company, regardless of who submitted them. You can set users as designated support contacts directly from the **Edit user** page. 

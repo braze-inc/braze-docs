@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
 
+_This integration is maintained by optilyz._
+
+## About the integration
+
 Use the optilyz and Braze webhook integration to send your customers direct mail such as letters, postcards, and self-mailers.
 
 ## Prerequisites
@@ -91,6 +95,7 @@ Next, preview your request in the **Preview** panel or navigate to the **Test** 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
+
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/

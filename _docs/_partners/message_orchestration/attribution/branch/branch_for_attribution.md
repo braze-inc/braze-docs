@@ -14,6 +14,10 @@ search_tag: Partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
 
+_This integration is maintained by Branch._
+
+## About the integration
+
 The Braze and Branch integration will help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/).
 
 ## Prerequisites
@@ -135,6 +139,7 @@ user_data_idfv={{most_recently_used_device.${id}}}
 **This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
+
 
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"
 [4]: {% image_buster /assets/img/attribution/branch.png %}
