@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Toovio](https://toovio.com/) is a data-as-a-service company powered by artificial intelligence that helps you discover your actionable data and use the most critical elements to drive incremental results based on pre-defined objectives.
 
+_This integration is maintained by Toovio._
+
+## About the integration
+
 The Braze and Toovio partnership provides near real-time message triggering, the tools to drive incremental performance, and access to Toovio's advanced campaign measurement tools.
 
 ## Prerequisites
@@ -39,7 +43,6 @@ Create a Braze [API triggered campaign][4] based on the customer events that Too
 
 Contact Toovio at [info@toovio.com](mailto:info@toovio.com?subject=New%20Customer%20Request) with the subject "New Customer Request" to set up an account. Toovio will work with clients to set up triggers and underlying models.
 
-*This integration is maintained by Toovio.*
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/
 [2]: {{site.baseurl}}/api/api_key/

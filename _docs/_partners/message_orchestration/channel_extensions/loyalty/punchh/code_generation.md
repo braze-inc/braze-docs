@@ -11,6 +11,10 @@ search_tag: Partner
 
 > A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the point-of-sale (POS) system.
 
+_This integration is maintained by Punchh._
+
+## About the integration
+
 Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
 
 - Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
@@ -148,4 +152,3 @@ To link the coupon code inside an image:
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-*This integration is maintained by Punchh.*

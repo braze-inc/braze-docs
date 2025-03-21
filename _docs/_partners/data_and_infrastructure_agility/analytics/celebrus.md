@@ -8,6 +8,8 @@ description: "Integrating Braze and Celebrus."
 
 > Celebrus seamlessly integrates with the Braze SDK across web and mobile app channels, facilitating the population of Braze with channel activity data. This includes comprehensive insights into visitor traffic across digital assets over specified periods. <br><br>In addition, Celebrus captures rich profile data for each individual customer, which can be synced with Braze. This empowers you to create effective Braze analytics and communication strategies based on comprehensive, accurate, and detailed first-party data. This capability is further bolstered by Celebrus' Machine Learning-driven Signals, allowing for hassle-free data capture without the need for extensive tagging. With a robust first-party identity graph in place, all data becomes instantly accessible for immediate use. 
 
+_This integration is maintained by Celebrus._
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -58,4 +60,3 @@ Celebrus will use the defined identifiers to send the customer attributes that a
 For now, this release doesn't support events and purchases.<br><br> This integration sends attributes as string values, so some attributes are lists (such as signals). For now, lists can't be converted to arrays. There are no nested attributes.
 {% endalert%}
 
-*This integration is maintained by Celebrus.*

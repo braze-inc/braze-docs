@@ -14,6 +14,8 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) is a location data platform providing location data targeting in your Braze campaigns. Use Foursquare's Pilgrim SDK on iOS and Android apps to provide real-time event triggering based on location, allowing you to harness Foursquare's powerful geo-targeting capabilities to send relevant, personalized messaging with Braze.
 
+_This integration is maintained by Foursquare._
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -60,7 +62,6 @@ To retarget your users, use the Pilgrim SDK to set a `last_location` custom attr
 
 You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, refer to the [Foursquare developer site](https://developer.foursquare.com/).
 
-*This integration is maintained by Foursquare.*
 
 [1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}
