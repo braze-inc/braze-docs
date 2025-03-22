@@ -50,6 +50,9 @@ guide_menu_list:
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Locales in Messaging
+  link: /docs/user_guide/message_building_by_channel/push/using_locales/
+  image: /assets/img/braze_icons/translate-01.svg
 - name: Common Push Error Messages
   link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
   image: /assets/img/braze_icons/alert-triangle.svg

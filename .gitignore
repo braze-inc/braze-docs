@@ -17,5 +17,5 @@ jekyll-algolia-*
 braze-docs.iml
 
 # Braze scripts
-scripts/temp/*
+scripts/temp
 node_modules
