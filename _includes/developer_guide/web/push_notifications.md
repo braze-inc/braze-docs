@@ -20,7 +20,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 ### Step 2: Register the browser
 
-To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if if push is supported in their browser first, call `braze.isPushSupported()`.
+To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if push is supported in their browser first, call `braze.isPushSupported()`.
 
 You can also [send a soft push prompt]({{site.baseurl}}/developer_guide/push_notifications/soft_push_prompts/?sdktab=web) to the user before requesting push permission to show your own push-related UI.
 
