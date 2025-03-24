@@ -37,7 +37,7 @@ guide_featured_list:
 - name: "Gestion des numéros de téléphone inconnus"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "Expérience de marketing WhatsApp"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Rapports WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/

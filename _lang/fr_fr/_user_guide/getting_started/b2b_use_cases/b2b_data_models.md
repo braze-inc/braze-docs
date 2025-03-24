@@ -43,14 +43,14 @@ Il existe deux méthodes pour créer et gérer vos objets de gestion dans Braze,
 | Méthode | Description |
 | --- | --- |
 | [Catalogues]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Il s'agit d'objets de données indépendants (objets de données supplémentaires) sur le profil utilisateur principal dans Braze. Dans un contexte B2B, vous aurez probablement des catalogues pour vos comptes et vos opportunités. |
-| [Sources connectées]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | Ceux-ci permettent à Braze d'interroger directement votre entrepôt de données. Il est probable que vous synchronisiez déjà régulièrement vos prospects, contacts, opportunités et comptes avec votre entrepôt de données. Vous pouvez donc faire pointer la segmentation de Braze directement vers cet entrepôt et l'activer dans un environnement sans copie. |
+| [Sources connectées]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Ceux-ci permettent à Braze d'interroger directement votre entrepôt de données. Il est probable que vous synchronisiez déjà régulièrement vos prospects, contacts, opportunités et comptes avec votre entrepôt de données. Vous pouvez donc faire pointer la segmentation de Braze directement vers cet entrepôt et l'activer dans un environnement sans copie. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Option 1 : Utiliser des catalogues pour les comptes et les opportunités
 
 Les catalogues sont des tables de données hébergées et gérées dans Braze. Alors que les données relatives aux comptes et aux opportunités proviennent du système CRM de vente de votre choix, vous les dupliqueriez dans Braze pour les utiliser à des fins marketing : segmentation basée sur les comptes, marketing basé sur les comptes, gestion des leads, etc.
 
-Pour cette option, nous vous recommandons de créer un catalogue pour vos comptes et un autre pour vos opportunités, et de les mettre à jour fréquemment en envoyant des mises à jour à Braze par le biais de notre [API catalogues]({{site.baseurl}}/api/endpoints/catalogs/) ou de l'[ingestion de données dans le cloud (CDI) catalogues]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/). Lorsque vous créez ces catalogues, assurez-vous que le `id` (première colonne) de votre catalogue correspond au `id` de votre système CRM de vente.
+Pour cette option, nous vous recommandons de créer un catalogue pour vos comptes et un autre pour vos opportunités, et de les mettre à jour fréquemment en envoyant des mises à jour à Braze par le biais de notre [API catalogues]({{site.baseurl}}/api/endpoints/catalogs/) ou de l'[ingestion de données dans le cloud (CDI) catalogues]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/). Lorsque vous créez ces catalogues, assurez-vous que le `id` (première colonne) de votre catalogue correspond au `id` de votre système CRM de vente.
 
 #### Mappage des champs de votre CRM
 
@@ -145,7 +145,7 @@ Pour configurer les sources connectées, reportez-vous à la section [Intégrati
 
 ## Étape 2 : Relier vos objets d'entreprise aux profils utilisateurs
 
-Les profils utilisateurs sont l'objet principal de Braze, qui alimente la majorité de votre segmentation démographique, de vos déclencheurs et de votre personnalisation. Les profils utilisateurs comprennent les [données utilisateur par défaut]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) collectées par notre SDK et d'autres sources, y compris les [données personnalisées]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), qui prennent la forme soit d'attributs (données démographiques), soit d'événements (données comportementales), soit d'achats (données transactionnelles).
+Les profils utilisateurs sont l'objet principal de Braze, qui alimente la majorité de votre segmentation démographique, de vos déclencheurs et de votre personnalisation. Les profils utilisateurs comprennent les [données utilisateur par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/) collectées par notre SDK et d'autres sources, y compris les [données personnalisées]({{site.baseurl}}/user_guide/data/custom_data/), qui prennent la forme soit d'attributs (données démographiques), soit d'événements (données comportementales), soit d'achats (données transactionnelles).
 
 ### Étape 2.1 : Mappez les ID des CRM de vente à Braze
 

@@ -54,9 +54,18 @@ Le tableau de bord des informations sur les e-mails permet de savoir où et quan
 
 ### Engagement par appareil
 
-Le rapport sur **l'engagement par appareil** fournit une ventilation des appareils utilisés par vos utilisateurs pour s'engager dans votre e-mail. Ces données permettent de contrôler l'engagement des e-mails sur les mobiles, les ordinateurs de bureau, les tablettes et d'autres types d'appareils. 
+Le rapport sur **l'engagement par appareil** fournit une ventilation des appareils utilisés par vos utilisateurs pour s'engager dans votre e-mail. Ces données permettent de contrôler l'engagement des e-mails sur les mobiles, les ordinateurs de bureau, les tablettes et d'autres types d'appareils. Ces données sont basées sur la chaîne de caractères de l'agent utilisateur transmise par les appareils de vos utilisateurs.
+
+{% alert note %}
+Si vous utilisez CloudFront comme réseau de diffusion de contenu, assurez-vous que l'agent utilisateur de vos utilisateurs est transmis à l'ESP. Sinon, chaque agent utilisateur sera "Amazon Cloudfront".
+{% endalert %}
 
 La catégorie "Autres" comprend toute chaîne de caractères d'utilisateurs qui ne peut être identifiée comme étant un ordinateur de bureau, un mobile ou une tablette. Par exemple, télévision, voiture, console de jeux vidéo, OTT (over-the-top ou streaming), et similaires. Il peut également s'agir de valeurs nulles ou vides.
+
+Pour mieux comprendre ce qui se trouve dans la catégorie "Autres", vous pouvez extraire les agents utilisateurs à l'aide de l'une ou l'autre de ces options :
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) vous enverra la chaîne de caractères exacte de l'agent utilisateur qui a été récupérée sur les appareils de vos utilisateurs.
+2. Tirez parti de notre [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder) [pour]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) utiliser le langage SQL ou de notre [générateur de requêtes pour l'intelligence artificielle]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) pour afficher les agents utilisateurs.
 
 ![Rapport sur l'engagement par appareil qui indique le nombre de clics pour les mobiles, les ordinateurs de bureau, les tablettes et autres. C'est sur les appareils mobiles que l'on enregistre le plus grand nombre de clics.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 

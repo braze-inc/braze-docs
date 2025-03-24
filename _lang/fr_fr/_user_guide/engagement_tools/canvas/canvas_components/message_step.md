@@ -61,7 +61,7 @@ Utilisez le code Liquid suivant lorsque vous faites référence à ces propriét
 Imaginons, par exemple, la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pouvez ajouter le mot « chaussures » à un message avec le code Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-Vous pouvez également exploiter les [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) dans n'importe quelle étape du message pour guider vos utilisateurs à travers des étapes personnalisées tout au long de votre flux de travail Canvas.
+Vous pouvez également exploiter les [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) dans n'importe quelle étape du message pour guider vos utilisateurs à travers des étapes personnalisées tout au long de votre flux de travail Canvas.
 
 #### Flux de travail d’origine
 

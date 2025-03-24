@@ -77,10 +77,6 @@ Les déploiements de drapeaux de fonctionnalité restent cohérents pour les uti
 
 Cette stratégie permet de s'assurer que les utilisateurs bénéficient d'une expérience sur votre application cohérente et qu'ils ne basculent pas d'une session à l'autre. Bien entendu, la désactivation d'une fonctionnalité jusqu'à 0 % supprimera tous les utilisateurs du drapeau de la fonctionnalité, ce qui est utile si vous découvrez un bogue ou si vous avez besoin de désactiver complètement la fonctionnalité.
 
-### Puis-je créer un segment d’utilisateurs qui se trouvent actuellement dans un indicateur de fonctionnalité ? {#feature-flag-filter}
-
-C’est sur notre feuille de route produit. Pour nous aider à définir les priorités, veuillez faire part de vos commentaires à l'équipe de votre compte Braze ou envoyez un e-mail à notre équipe : [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
-
 ## Sujets techniques
 
 ### Les indicateurs de fonctionnalité peuvent-ils être utilisés pour contrôler quand le SDK Braze est initialisé ? {#initialization}

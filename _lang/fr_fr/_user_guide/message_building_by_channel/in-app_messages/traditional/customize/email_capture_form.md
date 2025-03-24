@@ -26,7 +26,7 @@ Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’
     - Adresses e-mail valides : 
         - `example@gmail.com`
         - `example@gnail.com` (avec une erreur)
-    - Pour plus d'informations sur la validation des e-mails dans Braze, reportez-vous aux [directives et notes techniques sur l'e-mail]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
+    - Pour plus d'informations sur la validation des e-mails dans Braze, reportez-vous aux [directives et notes techniques sur l'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details Plus d'informations sur les utilisateurs identifiés et anonymes %}
 
@@ -36,7 +36,7 @@ Si un utilisateur anonyme saisit son e-mail dans le formulaire et le soumet, Bra
 
 Si `changeUser` est appelé avec un `external_id` existant, le profil utilisateur anonyme est orphelin et les [champs de données spécifiques du profil utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) qui n'existent pas encore pour l'utilisateur identifié sont fusionnés, mais tous les champs qui existent déjà sont perdus, y compris l'adresse e-mail.
 
-Pour plus d'informations, reportez-vous au [cycle de vie du profil utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Pour plus d'informations, reportez-vous au [cycle de vie du profil utilisateur]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

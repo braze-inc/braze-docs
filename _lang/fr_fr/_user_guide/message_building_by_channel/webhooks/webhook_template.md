@@ -34,7 +34,7 @@ Par exemple, si vous utilisez [LINE]({{site.baseurl}}/user_guide/message_buildin
 
 1. Donnez un nom unique à votre modèle de webhook.
 2. (Facultatif) Ajoutez une description du modèle pour expliquer comment ce modèle est destiné à être utilisé.
-3. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire pour faciliter la recherche et le filtrage de votre modèle.
+3. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire pour faciliter la recherche et le filtrage de votre modèle.
 
 ## Étape 4 : Créez votre modèle
 

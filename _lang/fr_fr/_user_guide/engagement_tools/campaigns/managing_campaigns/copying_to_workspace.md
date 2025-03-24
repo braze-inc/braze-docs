@@ -18,7 +18,7 @@ La copie de campagnes entre espaces de travail est généralement disponible pou
 
 ## Comment copier une campagne dans un autre espace de travail ?
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu avec l'option "Copier dans l'espace de travail".][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Sélectionnez l'icône d'engrenage <i class="fas fa-cog"></i> en regard de la campagne sélectionnée, puis sélectionnez **Copier dans l'espace de travail**. Après la copie, nous vous recommandons de revoir et de tester votre campagne pour confirmer que tous les champs fonctionnent correctement.
 
@@ -154,6 +154,10 @@ Notez les références liquides suivantes avec les dépendances lorsque vous cop
 - Étiquettes de bons d'achat et de promotions
 
 Lorsque vous copiez une campagne entre espaces de travail, les blocs de contenu ne sont pas copiés. Toutefois, un bloc de contenu peut être référencé dans l'espace de travail de destination s'il existe un bloc portant le même nom. Vous pouvez également créer le bloc de contenu (ou ces références liquides) dans l'espace de travail de destination afin d'éviter les erreurs lors du lancement d'une campagne.
+
+### Copier des campagnes avec des drapeaux de fonctionnalité
+
+Pour copier une campagne d'indicateurs de fonctionnalité entre des espaces de travail, assurez-vous que l'espace de travail de destination dispose d'une [expérience d'indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurée avec un ID correspondant à l'indicateur de fonctionnalité référencé dans la campagne d'origine. Si vous copiez une campagne mais qu'un ID de fonctionnalité correspondant n'existe pas dans l'espace de travail de destination, la sélection de l'indicateur de fonctionnalité dans la campagne sera vide lors de la copie et vous devrez en sélectionner un autre.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

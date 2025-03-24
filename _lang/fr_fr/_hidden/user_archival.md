@@ -40,6 +40,7 @@ Les utilisateurs inactifs sont des utilisateurs qui ne sont pas joignables et qu
 - Ne peuvent pas recevoir de SMS. Par exemple, ils n’ont pas de numéro de téléphone valide, ou ils sont désabonnés de tous les groupes d’abonnement SMS.
 - Ne peuvent pas recevoir des notifications push. Par exemple, ils ont désinstallé l’application ou désactivé la notification push dans les autorisations.
 - Impossible de recevoir un message WhatsApp. Par exemple, ils n'ont pas de numéro de téléphone valide ou sont désabonnés de tous les groupes d'abonnement WhatsApp.
+- Impossible de recevoir un message LINE. Par exemple, ils n'ont pas d'ID LINE ou sont désabonnés de tous les groupes d'abonnement LINE.
 - Je n'ai pas utilisé d'application mobile ni visité de site web dans un espace de travail depuis plus de six mois.
 - Je n'ai reçu aucun message d'un espace de travail depuis plus de six mois.
 - Ils n'ont pas été mis à jour depuis plus de six mois.
@@ -60,7 +61,7 @@ Les utilisateurs du groupe de contrôle global ne seront jamais archivés, même
 
 ### Groupe d’échantillons de traitement
 
-Les utilisateurs du groupe d’échantillons de traitement sont exclus de l'archivage dans un rapport sur le groupe de contrôle global.
+Les utilisateurs du groupe de contrôle global dans un rapport sur le groupe de contrôle global sont exclus de l'archivage.
 
 ## Utilisateurs test
 
@@ -94,7 +95,9 @@ Ceci vous permet de :
 
 ### Étapes
 
-1. Ciblez les utilisateurs qui répondent aux critères d'archivage de votre marque et que vous souhaitez conserver.<br><br>
+1. Ciblez les utilisateurs qui répondent aux critères d'archivage de votre marque et que vous souhaitez conserver. Par exemple, vous pouvez conserver les utilisateurs qui
+    - Le dernier message reçu remonte à plus de 23 semaines ou vous n'avez jamais reçu de message.<br>ET<br>
+    - Dernière utilisation de votre application il y a plus de 23 semaines ou aucune session dans votre application<br><br>
       ![Cibler des utilisateurs qui ont reçu un message il y a plus de 23 semaines, n’ont jamais reçu un message d’une campagne ou d’une étape de Canvas, a utilisé ces applications il y a plus de 23 semaines et ont utilisé ces applications exactement zéro fois.][2]<br><br>
 2. Définissez la rééligibilité pour être d’un peu moins de 6 mois.<br><br>
       ![Les contrôles d’entrée avec la rééligibilité activée et sa fenêtre définie sur 23 semaines.][3]<br><br>

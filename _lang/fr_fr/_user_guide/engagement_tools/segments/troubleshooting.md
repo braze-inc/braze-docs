@@ -1,7 +1,7 @@
 ---
 nav_title: Résolution des problèmes
 article_title: Résolution des problèmes de segments
-page_order: 8
+page_order: 9
 page_type: reference
 tool: 
   - Segments

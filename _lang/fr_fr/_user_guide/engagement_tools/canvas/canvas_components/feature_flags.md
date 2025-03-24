@@ -13,7 +13,7 @@ local_redirect:
 
 > Les indicateurs de fonctionnalités vous permettent d'expérimenter et de confirmer vos hypothèses autour de nouvelles fonctionnalités. Les marketeurs peuvent utiliser les drapeaux de fonctionnalité pour segmenter votre audience dans [Canvas][1] et suivre l'impact du déploiement des fonctionnalités sur les conversions. De plus, les [chemins d'expérience][2] vous permettent d'optimiser ces conversions en testant différents messages ou chemins les uns par rapport aux autres et en déterminant lequel est le plus efficace. Utilisez le chemin gagnant pour déployer progressivement votre fonction à une audience plus large.
 
-Vous souhaitez en savoir plus sur les indicateurs de fonctionnalités et leur utilisation dans Braze ? Consultez nos articles consacrés aux [drapeaux de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/).
+Vous souhaitez en savoir plus sur les indicateurs de fonctionnalités et leur utilisation dans Braze ? Consultez nos articles consacrés aux [drapeaux de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Création d'un drapeau de fonctionnalité
 

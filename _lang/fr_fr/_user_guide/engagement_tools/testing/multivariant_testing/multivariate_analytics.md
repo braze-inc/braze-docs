@@ -22,7 +22,7 @@ Si vous avez sélectionné **Pas d'optimisation** lors de l'implémentation de v
 
 ![Section performance des analyses de campagne pour une campagne par e-mail avec plusieurs variantes. Le tableau répertorie divers indicateurs de performance pour chaque variante, tels que les destinataires, les rebonds, les clics et les conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-Pour plus de détails, reportez-vous à l'article [Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) correspondant à votre canal de communication.
+Pour plus de détails, reportez-vous à l'article [Analyse de campagne]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) correspondant à votre canal de communication.
 
 ### Variante gagnante
 
@@ -127,7 +127,7 @@ Le tableau de cette page présente les indicateurs pour chaque variante de l'env
 La confiance est la mesure statistique du degré de certitude qu'une différence dans les données, comme les taux de conversion, est réelle et n'est pas due au hasard.
 
 {% alert note %}
-Vous n'avez pas confiance en vos résultats ? La confiance n'apparaîtra que si vous avez choisi la **variante gagnante** ou la **variante personnalisée** comme optimisation.
+Vous n'avez pas confiance en vos résultats ? La confiance n'apparaîtra que si vous avez un groupe de contrôle.
 {% endalert %}
 
 Une partie importante de vos résultats est la confiance dans l’exactitude de vos résultats. Par exemple, que se passe-t-il si le groupe de contrôle avait un taux de conversion de 20 % et que la variante A avait un taux de conversion de 25 % ? Cela indique qu’il est préférable d’envoyer la variante A que de n’envoyer aucun message. Avoir une confiance de 95 % signifie que la différence entre les deux taux de conversion est probablement due à une différence réelle dans les réactions des utilisateurs et qu’il n’y a qu’une probabilité de 5 % que la différence se soit produite par hasard.
@@ -183,4 +183,4 @@ Utilisez les informations issues de vos tests passés pour mieux orienter vos fu
 
 #### Comparer l’impact à long terme de différentes variantes
 
-Si vous effectuez des tests A/B sur les messages de réengagement, n'oubliez pas de comparer l'impact à long terme des différentes variantes à l'aide des [rapports de rétention.]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/) Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.
+Si vous effectuez des tests A/B sur les messages de réengagement, n'oubliez pas de comparer l'impact à long terme des différentes variantes à l'aide des [rapports de rétention.]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.

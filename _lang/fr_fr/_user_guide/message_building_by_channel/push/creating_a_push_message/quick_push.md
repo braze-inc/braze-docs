@@ -1,38 +1,38 @@
 ---
-nav_title: Campagnes Quick Push
-article_title: Campagnes Quick Push
+nav_title: Envoi rapide de messages
+article_title: Envoi rapide de messages
 alias: "/quick_push/"
-description: "Cet article décrit les choses à savoir lors de la création d'une campagne de push à l'aide de l'expérience d'édition rapide de push."
+description: "Cet article décrit les choses à savoir lors de la création d'une campagne push ou d'un Cavnas en utilisant l'expérience d'édition push rapide."
 ---
 
-# Campagnes de push rapide
+# Envoi rapide de messages
 
-Lorsque vous créez une campagne de notifications push dans Braze, vous pouvez sélectionner plusieurs plateformes et appareils afin de créer un message pour toutes les plateformes au sein d’une seule expérience d’édition appelée «Quick Push ».
-
-{% alert important %}
-Cette fonctionnalité n'est disponible que pour les campagnes.
-{% endalert %}
+Lorsque vous créez une campagne de push ou un Canvas dans Braze, vous pouvez sélectionner plusieurs plateformes et appareils afin de créer un message pour toutes les plateformes en une seule expérience de communication appelée quick push.
 
 ## Cas d’utilisation
 
 Cette expérience de modification est optimale pour les cas d'utilisation suivants :
 
-- Les campagnes push mobiles qui doivent être envoyées à plusieurs types d'appareils (par exemple à la fois iOS et Android).
+- Campagnes push mobiles et étapes du canvas message qui doivent être envoyées à plusieurs types d'appareils (par exemple à la fois iOS et Android).
 - Les notifications push sensibles à la durée qui doivent cibler plusieurs plateformes rapidement et avec précision, lorsque le contenu est le même d'une plateforme à l'autre (comme les nouvelles de dernière minute ou les mises à jour de jeux en direct).
 
-## Créer une campagne de push rapide
+## Création d'une campagne de push rapide ou d'un canvas
 
 Pour créer une campagne ciblant plusieurs plateformes et appareils :
 
-1. Allez dans **Campagnes** et cliquez sur **Créer une campagne.**
-2. Sélectionnez **Notification push.**
+1. Créez une campagne ou ajoutez une [étape message à]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) un canvas.  
+2. Sélectionnez **Notification push**.
 3. Sélectionnez les plateformes souhaitées (Mobile, Web, Kindle) et les appareils mobiles (iOS, Android). Si vous sélectionnez plusieurs appareils, les tests multivariés ne seront pas disponibles pour votre campagne.
 
+### Sélection des plateformes pour une campagne
 ![Options permettant de sélectionner plusieurs plateformes pour une campagne de notifications push, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.][1]
 
+### Sélection des plates-formes pour une étape du canvas
+![Options permettant de sélectionner plusieurs plateformes pour une étape de message push, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.][8]
+
 {:start="4"}
-4\. Cliquez sur **Suivant.** Après avoir cliqué sur **Suivant**, vous ne pourrez plus modifier les plateformes ou appareils sélectionnés.
-5\. Continuez à implémenter votre campagne de push.
+4\. Sélectionnez **Confirmer**. Après avoir sélectionné **Confirmer**, vous ne pourrez plus modifier les plateformes ou appareils sélectionnés.
+5\. Continuez à implémenter votre campagne ou votre Canvas.
 
 Votre compositeur aura un aspect légèrement différent de l'habituel. Poursuivez votre lecture pour découvrir les différences.
 
@@ -73,6 +73,7 @@ Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
+[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
