@@ -70,6 +70,10 @@ When a user updates a booking, use the following structure for the array of obje
 {% endraw %}
 
 ### Remove booking
+
+{% tabs %}
+{% tab /users/track endpoint %}
+#### Send data through the `/users/track` endpoint
 When a user deletes a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` endpoint.
 
 {% raw %}
@@ -93,12 +97,10 @@ When a user deletes a booking, use the following structure for the array of obje
 }
 ```
 {% endraw %}
+{% endtab %}
+{% tab SDK %}
+#### Write nested attributes to user profiles through the SDK
 
-The specified booking will be removed from the nested custom attribute in the user profile and display any remaining bookings.
-
-![A nested custom attribute for a London trip.][2]{: style="max-width:70%;"}
-
-### Alternative: Write nested attributes to user profiles through the SDK
 If you’re collecting appointment bookings with your app, website, or both and want to write that data directly to a user profile, you can use the Braze SDK to transmit this data. Here is an example utilizing the Web SDK:
 
 {% raw %}
@@ -115,10 +117,16 @@ const json = [{
 braze.getUser().setCustomUserAttribute("trips", json);
 ```
 {% endraw %}
+{% endtab %}
+{% endtabs %}
+
+The specified booking will be removed from the nested custom attribute in the user profile and display any remaining bookings.
+
+![A nested custom attribute for a London trip.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
 ## Step 2: Set up and launch a booking reminder message {#step-2}
 
-### Step 2.1: Create a target audience
+### Step 2a: Create a target audience
 Create a target audience to receive reminders using multi-criteria segmentation. For example, if you want to send a reminder two days before the booking date, select the following:
 
 - A start date **in more than 1 days** and
@@ -126,7 +134,7 @@ Create a target audience to receive reminders using multi-criteria segmentation.
 
 ![A nested custom attribute "trips" with criteria for a start date that is more than one day and less than two days.][3]
 
-### Step 2.2: Create your message
+### Step 2b: Create your message
 
 Create the reminder email message by following the steps in [Creating an email with custom HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Use Liquid to personalize the message with data from the custom customer attribute you created (“trips”), such as in this example.
 
@@ -145,7 +153,7 @@ You have the following booked in 2 days! Check the information below:
 ```
 {% endraw %}
 
-### Step 2.3: Launch your campaign
+### Step 2c: Launch your campaign
 
 Launch the campaign for the reminder email message. Now, each time Braze receives the “trips” custom attribute, a message will be scheduled according to the data included in the respective booking’s object.
 
@@ -153,8 +161,12 @@ Launch the campaign for the reminder email message. Now, each time Braze receive
 
 Now that you’re sending reminder messages, you can set up confirmation messages to send when bookings are updated or canceled.
 
-### Step 3.1: Send a custom event to the `/users/track` endpoint
+### Step 3a: Send updated data
 
+{% tabs %}
+{% tab /users/track %}
+
+#### Send data through the `/users/track` endpoint
 Use the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to send a custom event when a user updates or cancels a booking. In that event, put the necessary data into event properties that will confirm the change. 
 
 Let’s say that in this use case, a user has updated the date of their trip to Sydney. The event would look like:
@@ -178,8 +190,12 @@ Let’s say that in this use case, a user has updated the date of their trip to 
 }
 ```
 {% endraw %}
+{% endtab %}
+{% tab SDK %}
 
-You could alternatively send custom events to the user profile through the SDK. For example, if you’re using the web SDK, you could send:
+#### Write nested attributes to user profiles through the SDK
+
+Send custom events to the user profile through the SDK. For example, if you’re using the web SDK, you could send:
 
 {% raw %}
 ```json
@@ -191,8 +207,10 @@ braze.logCustomEvent("trip_updated", {
 });
 ```
 {% endraw %}
+{% endtab %}
+{% endtabs %}
 
-### Step 3.2: Create a message to confirm the update
+### Step 3b: Create a message to confirm the update
 
 Create an [action-based campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to send the user a confirmation of their updated booking. You can [use Liquid to template event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) that reflect the name, old time, and new time of the booking (or just the name if it’s a cancellation) into the message itself.
 
@@ -204,7 +222,7 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 ```
 {% endraw %}
 
-### Step 3.3: Modify the user profile to reflect the update
+### Step 3c: Modify the user profile to reflect the update
 
 Finally, to send the booking reminders from steps 1 and 2 based on the most recent data, update the nested custom attributes to reflect the change or cancellation in the booking.
 
@@ -263,5 +281,4 @@ If the user in this use case cancelled their Syndey trip, you’d send the follo
 After these calls are sent and the user profile is updated, the booking reminder messages will reflect the latest data about the user’s booking dates.
 
 [1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[2]: {% image_buster /assets/img/use_cases/1_nested_attribute.png %}
 [3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}
