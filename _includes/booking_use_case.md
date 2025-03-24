@@ -17,11 +17,11 @@ Follow these steps to achieve this use case:
 
 ## Step 1: Write upcoming booking data to a Braze user profile {#step-1}
 
-Use the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint to write a [nested custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) to a user profile each time a booking takes place. Make sure the nested custom attribute contains all the information that will be needed to send and personalize the reminder message. In this use case, we’ll name the nested custom attribute “trips”.
+Use the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to write a [nested custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) to a user profile each time a booking takes place. Make sure the nested custom attribute contains all the information that will be needed to send and personalize the reminder message. In this use case, we’ll name the nested custom attribute “trips”.
 
 ### Add booking
 
-When a user creates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` API endpoint.
+When a user creates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` endpoint.
 
 {% raw %}
 ```json
@@ -45,7 +45,7 @@ The nested custom attribute “trips” will display in the user profile like so
 ![Two nested custom attributes for a London trip and Sydney trip.][1]{: style="max-width:70%;"}
 
 ### Update booking
-When a user updates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` API endpoint.
+When a user updates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` endpoint.
 
 {% raw %}
 ```json
@@ -70,7 +70,7 @@ When a user updates a booking, use the following structure for the array of obje
 {% endraw %}
 
 ### Remove booking
-When a user deletes a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` API endpoint.
+When a user deletes a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` endpoint.
 
 {% raw %}
 ```json
