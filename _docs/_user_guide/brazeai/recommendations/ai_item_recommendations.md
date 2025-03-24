@@ -364,7 +364,7 @@ This happens under a few specific conditions:
 
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
-Yes—but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle.
+Yes—but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
 
 To apply the new schedule right away, you can recreate the recommendation manually. Otherwise, you can check when the updated schedule will take effect by viewing the **Next Update** time on the Predictions list view.
 
