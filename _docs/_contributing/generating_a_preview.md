@@ -49,6 +49,9 @@ MARKDOWN_API=yes rake
 
 # to render tiles on partner landing pages:
 PARTNER_API=yes rake
+
+# to render both APIs:
+MARKDOWN_API=yes PARTNER_API=yes rake
 ```
 {% endraw %}
 
