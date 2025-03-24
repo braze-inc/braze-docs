@@ -1,6 +1,6 @@
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) into your app. Then you'll need to complete the steps for setting up your tvOS app.
+Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) into your app. Then you'll need to complete the steps for setting up your tvOS app.
 
 {% alert important %}
 Keep in mind, you'll need to implement your own custom UI since Content Cards are supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.

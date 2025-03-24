@@ -31,10 +31,6 @@ To create a Segment Extension, you will create a filter to refine a segment of y
 
 Go to **Audience** > **Segment Extensions**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
-{% endalert %}
-
 From the Segment Extensions table, select  **Create New Extension**, then select your Segment Extension creation experience:
 
 - **Simple extension:** Create a Segment Extension focused on a single event by using a guided form.

@@ -36,10 +36,6 @@ You can re-run the report to generate updated statistics.
 
 In your dashboard account, go to **Analytics** > **Engagement Reports**. Select **+ Create New Report**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Data**.
-{% endalert %}
-
 ### Step 2: Add messages
 
 Add the campaigns and Canvas messages that you would like to compile in your report. You can select your messages in two ways:

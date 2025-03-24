@@ -90,12 +90,6 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 ### Creating a subscription group
 
 1. Go to **Audience** > **Subscriptions**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
 2. Select **Create email subscription group**. 
 3. Give your subscription group a name and description.
 4. Select **Save**. 

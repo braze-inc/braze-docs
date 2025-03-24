@@ -173,9 +173,10 @@ permalink: ./:collection/:path/
 #permalink: /:platform/:nav_title/
 permalink_custom_vars: ["nav_title"]
 
-# List of pages(path) to auto expand
+# List of pages(path) to auto expand. For help, see:
+#   braze.com/docs/contributing/content_management/sections/#forcing-auto-expand
 nav_expand_list:
-  - "/developer_guide/platforms"
+  - "/null"
 
 # Don't serve non-jekyll files
 exclude:

@@ -161,7 +161,7 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
     temp_dir
     └── BrazeKit.xcframework
     ```
-3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
+3. Move each of your [chosen XCFrameworks](#swift_step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
     ```bash
     temp_dir
     ├── BrazeKit.xcframework
@@ -180,7 +180,7 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
    temp_frameworks_dir
    └── BrazeKit.xcframework
    ```
-3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
+3. Move each of your [chosen XCFrameworks](#swift_step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
    ```bash
    temp_frameworks_dir
    ├── BrazeKit.xcframework
@@ -206,18 +206,18 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
    └── SDWebImage.bundle
    ```
 {% alert note %}
-Only move over bundles for the [frameworks you prepared](#step-31-prepare-your-frameworks).
+Only move over bundles for the [frameworks you prepared](#swift_step-31-prepare-your-frameworks).
 {% endalert %}
 {% endsubtab %}
 {% endsubtabs local %}
 
 #### Step 1.4: Integrate your frameworks
 
-Next, integrate the **Dynamic** or **Static** XCFrameworks you [prepared previously](#step-3-prepare-your-files):
+Next, integrate the **Dynamic** or **Static** XCFrameworks you [prepared previously](#swift_step-3-prepare-your-files):
 
 {% subtabs local %}
 {% subtab dynamic %}
-In your Xcode project, select your build target, then **General**. Under **Frameworks, Libraries, and Embedded Content**, drag and drop the [files you prepared previously](#step-3-prepare-your-files).
+In your Xcode project, select your build target, then **General**. Under **Frameworks, Libraries, and Embedded Content**, drag and drop the [files you prepared previously](#swift_step-3-prepare-your-files).
 
 !["An example Xcode project with each Braze library set to 'Embed & Sign.'"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
@@ -227,7 +227,7 @@ To enable GIF support, add `SDWebImage.xcframework`, located in `braze-swift-sdk
 {% endsubtab %}
 
 {% subtab static %}
-In your Xcode project, select your build target, then **General**. Under **Frameworks, Libraries, and Embedded Content**, drag and drop the [frameworks you prepared previously](#step-31-prepare-your-frameworks). Next to each framework, choose **Do Not Embed**. 
+In your Xcode project, select your build target, then **General**. Under **Frameworks, Libraries, and Embedded Content**, drag and drop the [frameworks you prepared previously](#swift_step-31-prepare-your-frameworks). Next to each framework, choose **Do Not Embed**. 
 
 !["An example Xcode project with each Braze library set to 'Do Not Embed.'"]({% image_buster /assets/img/swift/sdk_integration/do-not-embed-and-sign.png %})
 
@@ -235,7 +235,7 @@ In your Xcode project, select your build target, then **General**. Under **Frame
 To enable GIF support, add `SDWebImage.xcframework`, located in `braze-swift-sdk-prebuilt/static`.
 {% endalert %}
 
-While in your build target, select **Build Phases**. Under **Copy Bundle Resources** drag and drop the [bundles you prepared previously](#step-32-prepare-your-bundles).
+While in your build target, select **Build Phases**. Under **Copy Bundle Resources** drag and drop the [bundles you prepared previously](#swift_step-32-prepare-your-bundles).
 
 !["An example Xcode project with bundles added under 'Copy Bundle Resources.'"]({% image_buster /assets/img/swift/sdk_integration/copy-bundle-resources.png %})
 {% endsubtab %}

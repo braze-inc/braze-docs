@@ -40,6 +40,7 @@ Custom attribute objects can contain [data types][1], such as:
 - Objects have a maximum size of 100&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
+- Periods (`.`) and dollar signs (`$`) aren't supported characters in an API payload if you're attempting to send a nested custom attribute to a user profile.
 - Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if specific partner integrations support this feature.
 - Nested custom attributes cannot be used as a filter when making a Connected Audience API call.
 
@@ -357,10 +358,6 @@ For this example, suppose we have an `accounts` object array that we've just sen
 ```
 
 In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
-{% endalert %}
 
 Search for your object or object array. In the **Attribute Name** column, select **Generate Schema**.
 

@@ -137,7 +137,7 @@ Features include:
 - In-app messages
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 
-For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 
 ### Kindle Fire {#kindle-fire}
 
@@ -151,7 +151,7 @@ Features include:
 - Feature Flags
 - In-app messages
 
-For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 
 ### Android TV {#android-tv}
 
@@ -165,9 +165,9 @@ Features include:
 - In-app messages 
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 - &#42; Push Notifications (Manual Integration Required)
-  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html). You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/android_tv/) on how to set this up.
+  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html). You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android%20tv) on how to set this up.
 
-For more information, visit the [Android SDK integration guide]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+For more information, visit the [Android SDK integration guide]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 
 {% alert note %}
 Make sure to create a new Android app in the dashboard for your Android OTT integration.
@@ -210,7 +210,7 @@ Features include:
   - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
 - Feature Flags
 
-For more information, visit the [Roku integration guide]({{site.baseurl}}/developer_guide/platforms/roku/in_app_messages/).
+For more information, visit the [Roku integration guide]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=roku).
 
 ### Apple TV OS {#tvos}
 
@@ -264,8 +264,8 @@ Platforms that support in-app messages or Content Cards via headless UI **do not
 With headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. For more information about custom handling messaging, see the following:
 
 **Android SDK**
-- [In-App Message Customization]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/listeners/)
-- [Content Cards Customization]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)
+- [In-App Message Customization]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners)
+- [Content Cards Customization]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/)
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)

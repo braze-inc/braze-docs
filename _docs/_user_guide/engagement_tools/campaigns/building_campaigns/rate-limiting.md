@@ -140,10 +140,6 @@ As your user base continues to grow and your messaging scales to include lifecyc
 
 Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace from **Settings** > **Frequency Capping Rules**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is called **Global Message Settings** and is located under **Engagement**.
-{% endalert %}
-
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, or any of those five.

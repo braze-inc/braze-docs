@@ -20,10 +20,6 @@ Campaign approval is not supported in the building workflow for API campaigns an
 
 By default, the campaign approval setting is turned off. To enable this feature, go to **Settings** > **Approval Workflow**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Manage Settings** > **Approval Workflow**.
-{% endalert %}
-
 ## Using approvals
 
 After the campaign approval is turned on, you must have the "Approve and Deny Campaigns" permission. This permission controls who can update the approval status of a campaign. This permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
