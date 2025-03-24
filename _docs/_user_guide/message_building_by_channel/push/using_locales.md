@@ -15,7 +15,7 @@ To edit and manage [multi-language support]({{site.baseurl}}/multi_language_supp
 
 ## Using locales
 
-To use locales in your messaging, compose a push campaign or Canvas, then follow the steps.
+To use locales in your messaging, compose a push campaign or Canvas, then complete the following:
 
 1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated.<br><br>![Push notification composer with translation tags added to the title and message fields.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})<br><br>
 2. After adding the tags, save your message as a draft.
