@@ -16,7 +16,7 @@ module Jekyll
       site = context.registers[:site]
       # partnerembed = context.config['partner_api']
       partnerembed = site.config['partner_api']
-      if ENV["PARTNER_API"].to_s.downcase != 'true'
+      if ENV["PARTNER_API"].to_s.downcase != 'yes'
         partnerembed = false
       end
 
