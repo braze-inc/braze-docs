@@ -413,7 +413,7 @@ Test Banner Cards are like any other banners, except they're removed at the next
 
 ## Logging analytics
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner Card&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at banners-feedback@braze.com.
+Braze automatically logs impressions when you use SDK methods to insert a Banner Card&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
 
 ## Dimensions and sizing
 
