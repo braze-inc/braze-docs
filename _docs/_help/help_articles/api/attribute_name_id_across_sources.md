@@ -24,7 +24,7 @@ Campaign and Canvas attributes are also available in the [Export campaign detail
 
 ### Currents
 
-Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) from Currents. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
+Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) from Currents. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
 
 ## Campaign attributes
 

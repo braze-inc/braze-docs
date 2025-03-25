@@ -8,7 +8,9 @@ description: "This reference article covers how to go about dealing with Connect
 
 # Connected Content retries
 
-> Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. 
+> Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. <br><br> This page covers how to add retries to your Connected Content calls.
+
+## How to enable retries
 
 To enable retries, add `:retry` in the Connected Content call, as shown in the following code snippet:
 {% raw %}
@@ -18,7 +20,13 @@ To enable retries, add `:retry` in the Connected Content call, as shown in the f
 ```
 {% endraw %}
 
+## Retry outcomes
+
+### When the API call fails and retries are enabled
+
 If the API call fails and this is enabled, Braze will retry the call while respecting the [rate limit][47] you set for each resend. Braze will move any failed messages to the back of the queue and add additional minutes, if necessary, to the total minutes it would take to send your message.
+
+### When a retry succeeds
 
 If a retried attempt succeeds, the message is sent and no further retries are attempted for that message. If the Connected Content call errors out 5 times, the message is aborted similar to if an [abort message tag][1] was triggered.
 

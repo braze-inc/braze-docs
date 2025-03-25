@@ -113,6 +113,8 @@
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
 
+<script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
+
 <script type="text/javascript">
 
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
@@ -171,7 +173,9 @@
   var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
   var algolia_doc_index = '{{ site.algolia.index_name }}';
   var algolia_learning_index = '{{ site.learning_index_name }}';
+  var max_redirects = 10;
 
+  var query_params = new URLSearchParams(window.location.search);
 </script>
 
 <!-- Adds LaTeX support -->

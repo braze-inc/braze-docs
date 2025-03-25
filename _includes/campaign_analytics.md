@@ -151,11 +151,15 @@ If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remov
 
 #### Heatmaps
 
-Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Click **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can click the hyperlink in the variant name to view the heatmap.
+Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Select **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can select the hyperlink in the variant name to view the heatmap.
 
-In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, click the download button.
+In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, select the download button.
 
 ![Example of the Preview and Heatmap page that includes an email campaign, and a panel with link alias examples with their total clicks.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### Images
+
+We suggest enabling CORS for your image URLs to help prevent images from breaking in heatmap previews and exports.
 
 {% endif %}
 
@@ -301,8 +305,20 @@ Here are some key email-specific metrics that you won't see in other channels. T
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft Bounce</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Deferral</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Deferrals
+
+Deferred or deferral is when an email was not immediately delivered, but Braze will retry the email for up to 72 hours after this temporary delivery failure to maximize the chances of successful delivery before attempts for that specific campaign are stopped. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, or DNS errors.
+
+_Deferrals_ differ from _Soft Bounces_. If no email was successfully delivered during this retry period, Braze will send one soft bounce event per attempted campaign sent. Before February 25, 2025, these retries were counted as multiple soft bounces for 1 campaign send.
+
+Note that _Deferrals_ are currently only available using Currents or Braze Snowflake features (such as Query Builder, SQL Segment, Snowflake Data Sharing). If you’d like to include this in campaign or Canvas analytics, please [submit product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 

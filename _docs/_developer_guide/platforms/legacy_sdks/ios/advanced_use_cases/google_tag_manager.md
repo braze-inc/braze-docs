@@ -16,7 +16,7 @@ noindex: true
 
 The Braze iOS SDK can be initialized and controlled by tags configured within [Google Tag Manager](https://tagmanager.google.com/).
 
-Before using Google Tag Manager, be sure to first follow our [initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/).
+Before using Google Tag Manager, be sure to first follow our [initial SDK setup]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/).
 
 ## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 

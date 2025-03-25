@@ -16,10 +16,10 @@ description: "This landing page covers the Braze iOS SDK News Feed customization
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/custom_styling/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/news_feed/customization/custom_styling/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/badges/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/news_feed/customization/badges/
     image: /assets/img/braze_icons/key-01.svg
 
 

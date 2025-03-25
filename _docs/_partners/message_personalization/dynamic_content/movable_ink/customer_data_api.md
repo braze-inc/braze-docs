@@ -59,7 +59,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
-2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard ecommerce events.
+2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard eCommerce events.
 
 ![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.][img3]{: style="max-width:75%" }
 

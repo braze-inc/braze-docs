@@ -35,7 +35,9 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
+  syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
 ```
 
@@ -122,7 +124,7 @@ Before continuing, [create your SSH token][2]. When you're finished, see [Step 2
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
@@ -151,7 +153,7 @@ After you run `tlinks`, `rlinks` will be automatically run against the same file
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
@@ -162,7 +164,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 ```
 {% endraw %}
@@ -179,7 +181,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 
 ```bash
 $ ./bdocs ulinks _docs/_developer_guide/content_cards/creating_custom_content_cards.md
-In 'update_old_links.md', made 1 replacement.
+Made 1 replacements in _docs/_developer_guide/content_cards/creating_custom_content_cards.md
 Total replacements made: 1
 ```
 
@@ -187,7 +189,7 @@ Total replacements made: 1
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guides/android/content_cards/logging_analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 
@@ -195,7 +197,7 @@ Learn how to [log analytics]({{site.baseurl}}/developer_guide/customization_guid
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guides/content_cards/analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 {% endtab %}
@@ -210,12 +212,45 @@ Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github
 
 It should not be used to redirect URLs on an existing Braze Docs page to another existing Braze Docs page. Instead, these URLs should be updated with the newest possible link. We want to avoid cases in which someone reading an existing Braze Docs page clicks a link and is redirected from one page, to another page, to another page, and so on. `ulinks` helps solves this issue, improving the end-user experience.
 
+### `fblinks`
+
+`fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
+
+{% alert important %}
+To use `fblinks`, you'll need to install the dependencies using `yarn`. In the docs repository, run `brew install yarn && yarn install`. This only needs to be done a single time.
+{% endalert %}
+
+{% tabs local %}
+{% tab usage example %}
+#### Example command
+
+```bash
+$ braze-docs git:(404s) ✓ ./bdocs fblinks                           
+59 broken links were found. The full list can be found at:
+  /Users/Alex.Lee/braze-docs/scripts/temp/broken-links.csv
+```
+
+{% alert tip %}
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> the link to open the CSV file in a new tab.
+{% endalert %}
+
+#### Example CSV file
+
+```plaintext
+File,Broken Link,Path to Broken Link
+/Users/Alex.Lee/braze-docs/_docs/_api/api_limits.md,/docs/api/endpoints/email/bounce/remove,/Users/Alex.Lee/braze-docs/_docs/_api/endpoints/email/bounce/remove.md
+/Users/Alex.Lee/braze-docs/_docs/_api/endpoints/messaging.md,/docs/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/,/Users/Alex.Lee/braze-docs/_docs/_docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
+/Users/Alex.Lee/braze-docs/_docs/_contributing/bdocs.md,/docs/resources/articles,/Users/Alex.Lee/braze-docs/_docs/_resources/articles.md
+```
+{% endtab %}
+{% endtabs %}
+
 ### `lredirects`
 
 `lredirects` (short for "list redirects") checks if any new redirects have been added to [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js), then lists all of the old URLs using a base URL of your choice. For more general information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls).
 
 {% alert tip %}
-If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 {% endalert %}
 
 {% tabs local %}
@@ -238,5 +273,54 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/
 https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
 ```
+{% endtab %}
+{% endtabs %}
+
+### `syntax`
+
+`syntax` prints all the unique Braze Docs syntax to the terminal. Keep in mind, this doesn't include any standard Markdown syntax, only _unique_ syntax. This is helpful for two reasons:
+
+1. You no longer need to leave your text-editor to verify the syntax of a unique Braze Markdown implementation.
+2. Even if you're offline, you can easily review the unique Braze Docs syntax&#8212;making it easier when working on airplane mode.
+
+{% tabs local %}
+{% tab usage example %}
+{% raw %}
+<pre style="font-family: 'Roboto Mono', monospace; font-size: 14px; line-height: 16px; background-color: #f4f4f7; color: #666666; padding: 10px; overflow-x: auto; white-space: pre; word-break: inherit; word-wrap: inherit; min-height: 36px;">
+$ ./bdocs syntax
+This is all of the unique Markdown syntax supported by Braze Docs.
+
+ALERTS
+  {% alert TYPE %}
+  {% endalert %}
+
+IMAGE LINK
+  ![ALT_TEXT.]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
+
+IMAGE RESIZING
+  {: style="max-width:NUMBER%;"}
+
+INCLUDES
+  {% multi_lang_include PATH_TO_INCLUDE %}
+
+LIQUID RAW TAGS
+  &#123;% raw %}&#123;% endraw %}
+
+TABS
+  {% tabs %}
+  {% tab NAME %}
+  {% endtab %}
+  {% endtabs %}
+
+SUBTABS
+  {% subtabs %}
+  {% subtab NAME %}
+  {% endsubtab %}
+  {% endsubtabs %}
+
+TABLE WORD-BREAK
+  {: .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM role="presentation"}
+</pre>
+{% endraw %}
 {% endtab %}
 {% endtabs %}

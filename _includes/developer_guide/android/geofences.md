@@ -1,13 +1,4 @@
-# Geofences
-
-> [Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/) are only available in select Braze packages. For access, create a [support ticket]({{site.baseurl}}/braze_support/) or speak with your Braze customer success manager.
-
-## Prerequisites
-
-To use geofences for Android, you'll need to complete the following:
-
-1. Your integration must support background push notifications.
-2. Braze geofences or location collection must be enabled.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
 ## Setting up geofences
 

@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment.
 
-The Braze and Zeotap integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
+The Braze and Zeotap integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
 
 {% alert important %}
 The custom HTTP connector is currently in beta. If you're interested in setting up this integration, reach out to your customer success manager.
@@ -22,7 +22,7 @@ The custom HTTP connector is currently in beta. If you're interested in setting 
 | Requirement | Description |
 | --- | --- |
 |Zeotap account | A [Zeotap account](https://zeotap.com/) is required to take advantage of this partnership. |
-| Currents | To export data back into Zeotap, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) set up for your account. |
+| Currents | To export data back into Zeotap, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Implementation

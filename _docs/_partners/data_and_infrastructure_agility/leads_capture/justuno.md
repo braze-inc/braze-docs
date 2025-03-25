@@ -28,7 +28,7 @@ Integrating Justuno and Braze gives you the best of both worlds. You can combine
 
 ### Step 1: Create custom attributes in Braze
 
-To sync user attributes from Justuno to Braze, you'll need to create those attributes in Braze if you haven't already. You can do so by going to **Data Settings** > **Custom Attributes**, then creating your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+To sync user attributes from Justuno to Braze, you'll need to create those attributes in Braze if you haven't already. You can do so by going to **Data Settings** > **Custom Attributes**, then creating your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 
 ### Step 2: Add the Braze app to Justuno
 

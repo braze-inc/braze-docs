@@ -262,7 +262,7 @@ The following table lists possible error messages that may occur.
 | --- |
 | `'merge_updates' must be an array of objects` | Check that `merge_updates` is an array of objects. |
 | `a single request may not contain more than 50 merge updates` | You can only specify up to 50 merge updates in a single request. |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Check the identifiers in your request. |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, 'email' property that is a string, or 'phone' property that is a string` | Check the identifiers in your request. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Check that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

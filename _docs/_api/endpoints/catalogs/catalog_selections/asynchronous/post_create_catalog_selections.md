@@ -16,9 +16,6 @@ description: "This article outlines details about the Create catalog selection B
 {% endapimethod %}
 
 > Use this endpoint to create a selection in your catalog.
-{% alert important %}
-This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Prerequisites
 

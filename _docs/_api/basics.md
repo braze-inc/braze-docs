@@ -54,6 +54,7 @@ For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administ
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
+|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### API limits
@@ -86,12 +87,6 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 To create a new REST API key:
 
 1. Go to **Settings** > **APIs and Identifiers**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
 4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
@@ -383,7 +378,7 @@ If you're implementing Braze using Ruby, you can use our [Ruby client library](h
 
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
-{% alert note %}
+{% alert important %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

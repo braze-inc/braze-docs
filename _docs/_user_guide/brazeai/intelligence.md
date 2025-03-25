@@ -36,7 +36,7 @@ guide_menu_list:
 
 The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewership, and conversions. For a few examples of how these features can benefit different industries, see the below use cases.
 
-### Ecommerce
+### eCommerce
 
 - **Flash sales:** Use the [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) to study user history to identify the users who are more responsive to push notifications versus emails, then send push notifications and emails to the respective users. Optionally, select a specific channel for users who don't have enough data to determine their preferred channel.
 - **Promotional banners:** Use [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) to analyze the performance of different promotional banners in a recurring campaign, then automatically select and send the banner that generates the highest click-through rates.

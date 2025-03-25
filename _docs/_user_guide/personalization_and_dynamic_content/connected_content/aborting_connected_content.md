@@ -8,7 +8,7 @@ description: "This reference article covers some message aborting best practices
 
 # Aborting Connected Content {#aborting-connected-content}
 
-> Using Liquid templating, you have the option to abort messages with conditional logic. 
+> When you use Liquid templating, you have the option to abort messages with conditional logic. This page covers best practices when doing so.
 
 In the following example, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
@@ -21,6 +21,8 @@ In the following example, the conditionals `connected.recommendations.size < 5` 
 ```
 {% endraw %}
 
+## Specify an abort reason
+
 You can also specify an abort reason, which will be saved to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). This abort reason must be a string and cannot contain Liquid.
 
 {% raw %}
@@ -28,5 +30,5 @@ You can also specify an abort reason, which will be saved to the [Message Activi
 {% endraw %}
 
 {% alert important %}
-Braze does not count aborted messages toward the send count in your Braze account or in Currents.
+Braze doesn't count aborted messages toward the send count in your Braze account or in Currents.
 {% endalert %}

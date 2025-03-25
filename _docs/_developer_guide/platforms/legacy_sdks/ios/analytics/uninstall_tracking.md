@@ -18,11 +18,11 @@ Uninstall tracking utilizes background push notifications with a Braze flag in t
 
 ## Step 1: Enabling background push
 
-Make sure that you have enabled the **Remote notifications** option from the **Background Modes** section of your Xcode project's **Capabilities** tab. Refer to our [silent push notification]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/silent_push_notifications/) documentation for additional details.
+Make sure that you have enabled the **Remote notifications** option from the **Background Modes** section of your Xcode project's **Capabilities** tab. Refer to our [silent push notification]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/) documentation for additional details.
 
 ## Step 2: Checking for Braze background push
 
-Braze uses background push notifications to collect uninstall tracking analytics. Make sure that your application [does not take any unwanted actions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/ignoring_internal_push/) upon receiving our uninstall tracking notifications.
+Braze uses background push notifications to collect uninstall tracking analytics. Make sure that your application [does not take any unwanted actions]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/ignoring_internal_push/) upon receiving our uninstall tracking notifications.
 
 ## Step 3: Test from the dashboard
 

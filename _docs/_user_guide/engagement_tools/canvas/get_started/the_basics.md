@@ -20,28 +20,28 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% tab Canvas %}
   Canvas is a unified interface where marketers craft campaigns with multiple messages. It's a bit like a visual programming tool, letting you build a cohesive user journey out of a series of steps.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![An example of a Canvas with a Decision Split step into two different user journeys depending if a user is push enabled.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Journey %}
 
-  A journey, or commonly referred to as a user journey, is an individual user's experience within the Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  A journey, or commonly referred to as a user journey, is an individual user's experience within the Canvas.<br><br> ![A chart with the customer journey for a new user. An anonymous user installs an app, Kat creates an account, Kat doesn't open the app for a week, a push notification brings Kat back to the app, then Kat uses the app regularly.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Canvas Builder %}
-  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variants %}
-  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You control which segment of your audience will follow each variant.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You control which segment of your audience will follow each variant.<br><br> ![Selecting the "Add Variant" button.]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}

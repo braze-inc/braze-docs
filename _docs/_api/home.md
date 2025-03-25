@@ -411,11 +411,11 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
-    description: Update an item in a catalog.
+    description: Replace an item in a catalog.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>
-    description: Update multiple items in a catalog.
+    description: Replace multiple items in a catalog.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>
@@ -439,7 +439,7 @@ glossaries:
     tags:
       - SCIM
   - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
-    description: Look up an existing dashboard user account by specifying their email.
+    description: Look up an existing dashboard user account by specifying their resource ID.
     tags:
       - SCIM
   - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>

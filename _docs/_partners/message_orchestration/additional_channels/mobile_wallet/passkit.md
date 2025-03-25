@@ -12,6 +12,10 @@ search_tag: Partner
 
 > PassKit enables you to extend your mobile reach by integrating Apple Wallet, and Google Pay passes into your customer's experience. Easily create, manage, distribute, and analyze the performance of digital coupons, loyalty cards, membership cards, tickets, and much more; without your customers needing another app.
 
+_This integration is maintained by Passkit._
+
+## About the integration
+
 The Braze and PassKit integration allows you to increase and measure the engagement of your online campaigns by instantly delivering custom Apple Wallet and Google Pay passes. You can then analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet. 
 
 ## Prerequisites
@@ -85,10 +89,6 @@ For a full list of available fields, their types, and helpful descriptions, have
 ### Step 2: Create and encode an undefined payload variable
 
 Create and name a new Content Block by navigating to **Templates** > **Content Blocks** within the Braze dashboard.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Content Block Library**.
-{% endalert %}
 
 Select **Create Content Block** to get started.
 
@@ -304,12 +304,13 @@ UNREDEEMED
 {% endtab %}
 {% endtabs %}
 
+
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}
 [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
 [4]: {% image_buster /assets/img/passkit/passkit4.png %}
 [5]: {% image_buster /assets/img/passkit/passkit5.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks

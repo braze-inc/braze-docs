@@ -13,7 +13,7 @@ search_rank: 1
 
 # Creating an MMS campaign
 
-> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).
+> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 
 ## MMS sending basics
 

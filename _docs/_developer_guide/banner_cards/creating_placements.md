@@ -46,9 +46,14 @@ Avoid editing your placement ID after launch, as this can break the integration 
 
 For steps on how to launch a Banner Card campaign, refer to [Creating a Banner Card]({{site.baseurl}}/create_banner_card/).
 
+## Prioritizing your Banner Cards
+
+You can view which campaigns have Banner Cards using a specific placement. If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones. For more details, refer to [Setting Banner Cards prioritization]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#prioritize-banner-cards).
+
 ## Next steps
 
 Now that you've created your Banner Card placements, you can:
 
 - [Integrate Banner Cards]({{site.baseurl}}/developer_guide/banner_cards/integration/)
 - [Create Banner Cards]({{site.baseurl}}/create_banner_card/)
+

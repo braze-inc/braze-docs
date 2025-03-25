@@ -13,10 +13,6 @@ description: "This reference article explains the different components of the Br
 
 Either `external_user_id`, `user_alias`, or `email` is required in this object. **Requests must specify only one.**
 
-{% alert important %}
-Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object body
@@ -31,6 +27,8 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
+
+When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
 
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)

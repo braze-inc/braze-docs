@@ -1,24 +1,22 @@
-# In-app message delivery
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
-> This reference article covers Android and FireOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps.
+## Message triggers
 
-## Trigger types
+### Trigger types
 
-Our in-app message product allows you to trigger an in-app message display due to several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
+In-app messages are automatically triggered when the SDK logs one of the following custom event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Note that the `Specific Purchase` and `Custom Event` triggers also contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/).
+In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/platforms/analytics/logging_custom_events/).
 {% endalert %}
 
-## Delivery semantics
+### Delivery semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on the [session start]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle). Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
+All eligible in-app messages are delivered to a user's device at the start of their session. When delivered, the SDK will prefetch assets, so they're available at trigger time, minimizing display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered.
 
-When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
+For more information about the SDK's session start semantics, see[Session Lifecycle]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android).
 
-There can be some latency for in-app messages that display immediately on delivery (such as session start and push click) due to assets not being prefetched.
-
-## Minimum time interval between triggers
+### Rate limit
 
 By default, we rate limit in-app messages to once every 30 seconds to support a quality user experience.
 
@@ -28,17 +26,51 @@ To override this value, set `com_braze_trigger_action_minimum_time_interval_seco
   <integer name="com_braze_trigger_action_minimum_time_interval_seconds">5</integer>
 ```
 
-## Server-side event triggering
+## Key-value pairs
 
-By default, in-app messages are triggered by custom events logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this.
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app. For example:
 
-To enable this feature, a silent push is sent to the device, which allows a custom push callback to log an SDK-based event. This SDK event will subsequently trigger the user-facing in-app message.
+{% tabs %}
+{% tab JAVA %}
+```java
+Map<String, String> getExtras()
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+extras: Map<String, String>
+```
+{% endtab %}
+{% endtabs %}
 
-### Step 1: Create a push callback to receive the silent push
+{% alert note %}
+For more information, refer to the [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
+{% endalert %}
 
-Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
+## Disabling automatic triggers
 
-Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
+To prevent in-app messages from automatically triggering:
+
+1. Ensure you are using the automatic integration initializer, which is enabled by default starting in version `2.2.0`.
+2. Set the in-app message operation default to `DISCARD` by adding the following line to your `braze.xml` file.
+
+```xml
+<string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
+```
+
+## Manually triggering messages
+
+By default, in-app messages are automatically triggered when the SDK logs a custom event. However, you can manually trigger a message using the following methods.
+
+### Using a server-side event
+
+To trigger an in-app message using a server-sent event, send a silent push notification to the device, which allows a custom push callback to log an SDK-based event. This event will then trigger the user-facing in-app message.
+
+#### Step 1: Create a push callback to receive the silent push
+
+Register [your custom push even callback]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) to listen for a specific silent push notification.
+
+In the following example, two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 {% tabs %}
 {% tab JAVA %}
@@ -77,9 +109,9 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Create a push campaign
+#### Step 2: Create a push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/) triggered via the server sent event.
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) triggered via the server sent event.
 
 ![]({% image_buster /assets/img_archive/serverSentPush.png %})
 
@@ -91,7 +123,7 @@ The earlier push callback sample code recognizes the key-value pairs and logs th
 
 Should you want to include any event properties to attach to your "in-app message trigger" event, you can achieve this by passing these in the key-value pairs of the push payload. In this example, the campaign name of the subsequent in-app message has been included. Your custom push callback can then pass the value as the parameter of the event property when logging the custom event.
 
-### Step 3: Create an in-app message campaign
+#### Step 3: Create an in-app message campaign
 
 Create your user-visible in-app message campaign in the Braze dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within your custom push callback.
 
@@ -101,9 +133,30 @@ In the following example, the specific in-app message to be triggered has been c
 
 If a server-sent event is logged while the app is not in the foreground, the event will log, but the in-app message will not be displayed. Should you want the event to be delayed until the application is in the foreground, a check must be included in your custom push receiver to dismiss or delay the event until the app has entered the foreground.
 
-## Local in-app messages
+### Displaying a pre-defined message
 
-In-app messages can be created within the app and displayed locally in real-time. All customization options available on the dashboard are also available locally. This is particularly useful for displaying messages you wish to trigger within the app in real-time.
+To manually display a pre-defined in-app message, use the following method:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Displaying a message in real-time 
+
+You can also create and display local in-app messages in real-time, using the same customization options available on the dashboard. To do so:
 
 {% tabs %}
 {% tab JAVA %}
@@ -129,25 +182,3 @@ inAppMessage.message = "Welcome to Braze! This is a slideup in-app message."
 {% alert important %}
 Do not display in-app messages when the soft keyboard is displayed on the screen as rendering is undefined in this circumstance.
 {% endalert %}
-
-### Manually triggering in-app message display
-
-The following method will manually display your in-app message:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
-```
-
-{% endtab %}
-{% endtabs %}
-

@@ -8,9 +8,9 @@ hidden: true
 ## Data collection
 
 Learn more about how Braze collects data:
-- [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)
-- [Data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/)
-- [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)
+- [SDK data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)
+- [Data collection best practices]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)
+- [User profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 
 ## Braze identifiers
 
@@ -104,7 +104,7 @@ This functionality is currently in early access.
 [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
 - Similar to the user track endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table or view you would like to sync to the desired Braze workspace.
 
-[Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)
+[Data points]({{site.baseurl}}/user_guide/data/data_points/)
 - Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
 
 ## Sending audiences of users to Braze
@@ -117,7 +117,7 @@ This functionality is currently in early access.
 - This is a publicly accessible endpoint that can be used immediately to create users in Braze by denoting a user in a particular audience through a user attribute. The primary difference between this endpoint and the cohort import endpoint is that audiences sent using this endpoint would be stored on the user profile, whereas the cohort import endpoint would show as a filler in our segmentation tool. This endpoint has a rate limit of 50,000 requests per minute applied at the workspace level.
 - When using this endpoint, ensure that you are including the `partner` key as shown in our [Partner documentation]({{site.baseurl}}/partners/isv_partners/api_partner).
 
-[Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)<br>
+[Data points]({{site.baseurl}}/user_guide/data/data_points/)<br>
 - Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of if the value has changed.
 - Data points are incurred by both cohort import and the user track endpoints.
 
@@ -127,8 +127,8 @@ This functionality is currently in early access.
 
 Currents are Braze's near real-time message engagement analytics streaming tool. This will stream user-level data on all sends, deliveries, opens, clicks, etc., for campaigns and Canvases sent from the customer's workspace. A couple of things to note: Currents are priced per connector for the customer, so all-new Currents Partners must go through an EA process. We ask that our Partners have five customers as part of the EA before we build the custom-branded UI and publicly make the connector available. 
 - [Partner documentation]({{site.baseurl}}/partners/isv_partners/currents_integration/)
-- [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) - all customers who purchase a Currents connector will have access to these events.
-- [User Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events) - not all customers who purchase a Current connector will purchase an "all events" connector that will include these events. 
+- [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) - all customers who purchase a Currents connector will have access to these events.
+- [User Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) - not all customers who purchase a Current connector will purchase an "all events" connector that will include these events. 
 
 ### Snowflake Data Share
 

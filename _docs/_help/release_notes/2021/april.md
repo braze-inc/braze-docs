@@ -9,7 +9,7 @@ description: "This article contains release notes for April 2021."
 
 ## iOS push advanced implementation guide
 
-This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
+This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
 
 ## VFC support for multimedia message service (MMS)
 
@@ -30,7 +30,7 @@ The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestr
 
 ### Census - Customer data platform
 
-[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department.
+[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/census#census) allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department.
 
 ### Treasure Data - Customer data platform
 

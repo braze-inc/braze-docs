@@ -21,7 +21,7 @@ This can be achieved by having your app automatically start on your end user's d
 To solve for this, integrate a library like [AutoStarter](https://github.com/judemanutd/AutoStarter) into your application. AutoStarter supports multiple manufacturers, giving you an easy way to call the startup permission manager on a wide array of devices. After you have integrated AutoStarter, call `AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)` to bring up the startup permission manager on your end user's device. Couple this action with a prompt encouraging the end user to enable "auto-start" for your app. Your marketing team will craft this message—see the next section!
 
 ## Steps for marketers
-After your users opt in to receive push notifications, there are additional steps they can take on their end to improve message delivery for these devices. We recommend you follow up your [push primer message]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) with an in-app message targeted to users on Chinese OEM devices with these additional steps:
+After your users opt in to receive push notifications, there are additional steps they can take on their end to improve message delivery for these devices. We recommend you follow up your [push primer message]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) with an in-app message targeted to users on Chinese OEM devices with these additional steps:
 
 - Enable "auto-start" for the app
 - Disable battery optimization for the app

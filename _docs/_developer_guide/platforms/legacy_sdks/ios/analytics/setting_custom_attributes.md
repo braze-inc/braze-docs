@@ -14,7 +14,7 @@ noindex: true
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 
@@ -54,7 +54,7 @@ The following attributes should be set on the `ABKUser` object:
 
 ## Assigning custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
+Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/analytics/) for more information on the segmentation options each of these attributes will afford you.
 
 ### Custom attribute with a string value
 

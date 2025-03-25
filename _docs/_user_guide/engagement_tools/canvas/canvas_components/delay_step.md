@@ -17,12 +17,42 @@ Delays can make your Canvas look cleaner. You can also use this component to del
 
 ## Create a delay
 
-To create a delay, first add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
+To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
 
 There are several details to consider when creating a delay in your Canvas journey.
 
 - The delay limit is 30 days.
 - A Delay component can only connect to one next step.
+
+### Personalized delays
+
+{% alert important %}
+Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
+
+Braze will exit a user at the step if:
+
+- The context variable doesn't return to any value.
+- An embedded Connected Content call fails.
+- The context variable types don't match.
+
+Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
+
+- **Context variable name:** product_reminder_interval
+- **Data type:** Time
+- **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![The "product_reminder_interval" and its value.][2]
+
+Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context variable.
+
+![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".][3]
+
+#### Extended delays
+
+You can now extend Delay steps up to two years. For example, if you're onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven't started a session.
 
 ### Time delay options
 
@@ -31,12 +61,14 @@ You can choose the type of delay before the next message in your Canvas. You can
 {% tabs %}
   {% tab After a duration %}
 
-  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day. 
+  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
   
-  Note the difference between how "days" and "calendar days" are calculated. 
+  Note the difference between how "days" and "calendar days" are calculated.
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
     - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
+
+  You can also select **At a specific time** to specify when the users will advance in the Canvas. This option takes into account the time the user entered the Delay step. If this time is beyond the time configured in the settings, we'll append more hours to the delay. As an example, let's say today is December 11, and our Delay step is set to **After a duration** of one week at 8 am UTC. If a user enters the Delay step on December 4, they would be released from the Delay step to continue their journey today if they originally entered the Delay step at a time before 8 am UTC. If they entered the Delay step after this time, the user will be delayed until the next day (the next occurrence of this time). 
 
   {% endtab %}
   {% tab Until a specific date %}
@@ -83,3 +115,5 @@ Delays have three statistics available in the analytics view of an active or pre
 Time series for these analytics are available in the expanded component view.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}

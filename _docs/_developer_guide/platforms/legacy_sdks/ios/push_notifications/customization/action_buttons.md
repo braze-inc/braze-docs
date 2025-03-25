@@ -116,7 +116,7 @@ We strongly recommend that people using `handleActionWithIdentifier` begin using
 
 ## Push category customization
 
-In addition to providing a set of [default push categories]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/action_buttons/), Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
+In addition to providing a set of [default push categories]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/action_buttons/), Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 
 If you are not using the `UserNotifications` framework, see the [alternative categories](https://developer.apple.com/documentation/usernotifications/unnotificationcategory) documentation.
 

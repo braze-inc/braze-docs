@@ -48,7 +48,7 @@ This feature is currently in early access. Contact your customer success manager
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.
 
-The following is an example of tags an ecommerce app might find useful:
+The following is an example of tags an eCommerce app might find useful:
 
 <style>
 table td {
@@ -81,10 +81,6 @@ table td {
 </table>
 
 You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Settings** > **Manage Settings** > **Tags**.
-{% endalert %}
 
 ![Tags tab on the Manage Settings page][8]
 

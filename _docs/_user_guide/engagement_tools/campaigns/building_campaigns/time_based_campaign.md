@@ -138,7 +138,7 @@ Frequency capping is based on calendar days, not a 24-hour period. This means th
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| The maximum amount of time that may pass between a user receiving a campaign and performing the assigned action for it to be considered a conversion. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/A |
+| The maximum amount of time that may pass between a user receiving a campaign and performing the assigned action for it to be considered a conversion. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

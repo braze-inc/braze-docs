@@ -13,7 +13,7 @@ description: "This article contains release notes for February 2019."
 
 For example, if you send out multiple categories of email campaigns, you can offer your customers the option to subscribe or unsubscribe from those groups in bulk from a single page, using our [email preference center](#email-preference-center).
 
-Use the [Subscription Group REST APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
+Use the [Subscription Group REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
 ## Email preference center
 

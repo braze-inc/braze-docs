@@ -20,5 +20,5 @@ Several test applications are available within the [iOS SDK GitHub repository](h
 1. Create a new [workspace]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps) and note the app identifier API key.
 2. Place your API key within the appropriate field in the `AppDelegate.m` file.
 
-Push notifications for the iOS test application require additional configuration. Refer to our [iOS Push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) for details.
+Push notifications for the iOS test application require additional configuration. Refer to our [iOS Push integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/) for details.
 

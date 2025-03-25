@@ -12,20 +12,20 @@ noindex: true
 
 # Completing the integration
 
-Before following these steps, make sure you have integrated the SDK using either [Carthage]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), or a [manual]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) integration.
+Before following these steps, make sure you have integrated the SDK using either [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), [Swift Package Manager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), or a [manual]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) integration.
 
 ## Step 1: Update your app delegate
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-If you are integrating the Braze SDK with CocoaPods, Carthage, or with a [dynamic manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with CocoaPods, Carthage, or with a [dynamic manual integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
 
 ```objc
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-If you are integrating with Swift Package Manager or with a [static manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), use this line instead:
+If you are integrating with Swift Package Manager or with a [static manual integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), use this line instead:
 
 ```objc
 #import "AppboyKit.h"
@@ -44,13 +44,13 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Manage S
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with CocoaPods, Carthage, or with a [dynamic manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.swift` file:
+If you are integrating the Braze SDK with CocoaPods, Carthage, or with a [dynamic manual integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
 import Appboy_iOS_SDK
 ```
 
-If you are integrating with Swift Package Manager or with a [static manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), use this line instead:
+If you are integrating with Swift Package Manager or with a [static manual integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/), use this line instead:
 
 ```swift
 import AppboyKit
@@ -97,7 +97,7 @@ If given a pre-existing custom endpoint:
 
 ## SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
+Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift), [push messaging]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
 
 ## Customizing Braze on startup
 

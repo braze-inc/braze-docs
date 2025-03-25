@@ -16,28 +16,28 @@ description: "This landing page covers the Braze iOS SDK in-app message customiz
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Setting Delegates
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Customizing Orientation
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/customizing_orientation/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/customizing_orientation/
     image: /assets/img/braze_icons/arrow-square-right.svg
   - name: Custom Display Handling
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Custom On-Click Behavior
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/behavior_on_click/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/behavior_on_click/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Custom View Controller
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/custom_view_controller/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/custom_view_controller/
     image: /assets/img/braze_icons/eye.svg
   - name: Custom Triggering
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/custom_triggering/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/custom_triggering/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name:  Modal Dismissal
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/modal_dismissal/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/modal_dismissal/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Key-Value Pairs
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/key_value_pairs/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/key_value_pairs/
     image: /assets/img/braze_icons/code-square-01.svg
 
 

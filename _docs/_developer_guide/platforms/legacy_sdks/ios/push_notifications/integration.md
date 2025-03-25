@@ -30,21 +30,9 @@ noindex: true
 
 # Push integration
 
-## Step 1: Configure push notifications
+## Step 1: Upload your APNs token
 
-Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file provided by Apple. As described on the Apple [developer documentation](https://developer.apple.com/documentation/usernotifications):
-
-1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
-2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
-3. Under **Key Description**, enter a unique name for the signing key.
-4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
-5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
-6. In Braze, go to **Settings** > **App Settings** and upload the `.p8` file under **Apple Push Certificate**. You can upload either your development or production push certificate. To test push notifications after your app is live in the App Store, its recommended to set up a separate workspace for the development version of your app.
-7. When prompted, enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id), then click **Save**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
-{% endalert %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## Step 2: Enable push capabilities
 
@@ -60,10 +48,10 @@ If you have separate development and production push certificates, make sure to 
 
 The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
-Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/action_buttons/) for additional integration steps.
+Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/action_buttons/) for additional integration steps.
 
 {% alert warning %}
-If you've implemented a custom push prompt as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/troubleshooting/), make sure that you're calling the following code **every time the app runs** after they grant push permissions to your app. **Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
+If you've implemented a custom push prompt as described in our [push best practices]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/troubleshooting/), make sure that you're calling the following code **every time the app runs** after they grant push permissions to your app. **Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
 {% endalert %}
 
 ### Using UserNotification framework (iOS 10+)
@@ -320,5 +308,5 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Step 7: Unit tests (optional)
 
-To add test coverage for the integration steps you've just followed, implement [push unit testing]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/).
+To add test coverage for the integration steps you've just followed, implement [push unit testing]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/unit_tests/).
 

@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Amperity](https://amperity.com/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity provides intelligent capabilities across data management unification, analytics, insights, and activation.
 
+_This integration is maintained by Amperity._
+
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 The Braze and Amperity integration offers a unified view of your customers across the two platforms. This integration allows you to:
@@ -48,7 +50,7 @@ Read below to learn about these attributes.
 
 ### Custom attributes 
 
-[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) in Braze are fields that are determined by your brand. If you want Amperity to manage custom attributes that already exist in Braze, align the output that is sent from Amperity with the names already in your Braze workspace. This can include the following:
+[Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) in Braze are fields that are determined by your brand. If you want Amperity to manage custom attributes that already exist in Braze, align the output that is sent from Amperity with the names already in your Braze workspace. This can include the following:
 - Purchase histories
 - Loyalty status
 - Value tiers
@@ -94,7 +96,7 @@ Amperity keeps track of what changes between syncs to Braze and the status of se
 
 1. Create a Braze REST API key for your Braze workspace with the `users.track` permissions under **User Data**. The `users.track` endpoint syncs the Amperity audience to Braze as a custom attribute.
 2. Determine the [REST API endpoint]({{site.baseurl}}/api/basics#endpoints) for your Braze instance. For example, if your Braze URL is `https://dashboard-03.braze.com`, your REST API endpoint is `https://rest.iad-03.braze.com` and your instance is “US-03”.
-3. Determine a list of [user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) that may be sent to Braze from Amperity.
+3. Determine a list of [user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) and [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) that may be sent to Braze from Amperity.
 
 ### Step 2: Set up Braze as a destination—DataGrid Operator
 
@@ -187,9 +189,10 @@ Run the campaign to send the segment to Braze. This can be done manually or base
 
 ### Using Amperity with Braze Currents
 To send Braze Currents data into Amperity:
-1. [Set up a Braze Current]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
+1. [Set up a Braze Current]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
 2. Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
 3. Configure feeds and automate data loads using standard workflows.
+
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}

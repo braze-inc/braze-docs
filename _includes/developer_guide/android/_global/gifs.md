@@ -1,6 +1,6 @@
-# GIFs {#gifs-delegate-integration}
+## About GIFs
 
-> Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
+Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
 
 ## Integrating a custom image library
 
@@ -141,7 +141,7 @@ public class GlideIntegrationApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Braze.getInstance(context).setBrazeImageLoader(new GlideBrazeImageLoader());
+    Braze.getInstance(context).setImageLoader(new GlideBrazeImageLoader());
   }
 }
 ```
@@ -153,7 +153,7 @@ public class GlideIntegrationApplication extends Application {
 class GlideIntegrationApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    Braze.getInstance(context).appboyImageLoader = GlideBrazeImageLoader()
+    Braze.getInstance(context).imageLoader = GlideBrazeImageLoader()
   }
 }
 ```

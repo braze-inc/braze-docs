@@ -19,7 +19,7 @@ The Braze and Kubit integration allows you to [import Kubit user cohorts]({{site
 | Requirement | Description |
 |---|---|
 |Kubit enterprise account | A Kubit enterprise account is required to take advantage of this partnership. |
-| Matching user IDs | Your customer data in Kubit and Braze must have matching user IDs across the two platforms. This also includes anonymous UUIDs. Visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) to read about how Braze sets user IDs. |
+| Matching user IDs | Your customer data in Kubit and Braze must have matching user IDs across the two platforms. This also includes anonymous UUIDs. Visit our [documentation]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/) to read about how Braze sets user IDs. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Analyzing Braze data in Kubit

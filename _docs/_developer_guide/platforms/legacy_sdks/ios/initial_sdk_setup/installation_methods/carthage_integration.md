@@ -45,7 +45,7 @@ Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the [appropriate version](ht
 
 ## Next steps
 
-Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/).
+Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/completing_integration/).
 
 ## Core only integration
 

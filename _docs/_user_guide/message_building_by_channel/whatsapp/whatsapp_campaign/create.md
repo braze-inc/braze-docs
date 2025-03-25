@@ -38,8 +38,8 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
 2. Select **WhatsApp**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -69,10 +69,6 @@ If an action-based Canvas is triggered by an inbound WhatsApp message, you can r
 
 Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window.
 
-{% alert note %}
-WhatsApp templates currently don't support coupon code buttons.
-{% endalert %}
-
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 
 ### Template messages
@@ -87,6 +83,8 @@ Disabled text fields (highlighted gray) cannot be edited as they are part of the
 Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
 
 ![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
+
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Variables
 
@@ -183,7 +181,10 @@ Message feature    | Details
 ----------- |---------------- 
 Headers | 
 Text | Supports variable parameters
-Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
+Videos | Currently, must be hosted on a URL and less than sixteen MB. Must also have a video type of 3GPP or MP4. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Audio | Supported only for response messaging. Must be AAC, AMR, MP3, MP4 audio, or OGG, hosted on a URL, and less than sixteen MB. <br><br>Audio messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Documents | Must be hosted on a URL and less than 100 MB. Must also have a document type of text (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`), or PDF (`.pdf`). <br><br>Document messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).

@@ -16,7 +16,7 @@ search_tag: Partner
 
 > [Segment](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between [Braze and Segment Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
 
-The Braze and Segment integration allows you to use [Engage](https://segment.com/docs/engage/), Segment’s built-in audience builder, to create segments of users based on data you have already collected across various sources. These audiences will then be synced to Braze as a cohort, or denoted on the user profile through [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
+The Braze and Segment integration allows you to use [Engage](https://segment.com/docs/engage/), Segment’s built-in audience builder, to create segments of users based on data you have already collected across various sources. These audiences will then be synced to Braze as a cohort, or denoted on the user profile through [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
 
 ## Prerequisites
 
@@ -39,10 +39,6 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 ### Step 2: Capture your cohort data import key
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Segment**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
 
 Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 

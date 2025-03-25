@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/overview/).
+Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # In-app messaging implementation guide
@@ -350,7 +350,7 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 {% endtabs %}
 
 {% alert tip %}
-Interesting in leveraging our custom modal in-app messages to share videos across FaceTime? Check out our SharePlay in-app message [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/implementation_guide/shareplay/).
+Interesting in leveraging our custom modal in-app messages to share videos across FaceTime? Check out our SharePlay in-app message [implementation guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/shareplay/).
 {% endalert%}
 
 ### Custom full in-app message

@@ -18,7 +18,7 @@ The Push Story feature requires the `UNNotification` framework and iOS 10. The f
 
 ## Step 1: Enable push in your app
 
-Follow the [push notification integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) to enable push in your app.
+Follow the [push notification integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/) to enable push in your app.
 
 ## Step 2: Adding the Notification Content Extension target
 
@@ -65,7 +65,7 @@ If you do not add your app to an App Group, your app may fail to populate certai
 {% tabs local %}
 {% tab Swift Package Manager %}
 
-After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), add `AppboyPushStory` to your `Notification Content Extension`:
+After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), add `AppboyPushStory` to your `Notification Content Extension`:
 
 ![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
@@ -240,6 +240,6 @@ Alternatively, to configure the Push Story workspace from your `Info.plist` file
 
 ## Next steps
 
-Next refer to the steps for integrating [action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
+Next refer to the steps for integrating [action buttons]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
 
 

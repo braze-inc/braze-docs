@@ -10,7 +10,7 @@ description: "Learn how to use various Braze features to power your B2B account-
 
 > This page shows how to use various Braze features to power your B2B account-based segmentation use cases.
 
-You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
+You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - When using [catalogs for your business objects](#option-1-when-using-catalogs-for-your-business-objects)
 - When using [connected sources for your business objects](#option-2-when-using-connected-sources-for-your-business-objects)

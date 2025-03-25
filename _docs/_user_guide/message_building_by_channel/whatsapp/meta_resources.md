@@ -21,7 +21,18 @@ Review the following Meta documentation for guidance with display names, phone n
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
 - [Quality Rating](https://www.facebook.com/business/help/896873687365001)
 
-## WhatsApp Product Updates
+## WhatsApp product updates
+
+### January 2025: WhatsApp pausing marketing message sending to US users starting April 1
+*Last Updated January 2025*
+
+WhatsApp will pause marketing message sending to US users (people with US phone numbers) starting April 1, 2025. [Utility, service, authentication](https://developers.facebook.com/docs/whatsapp/pricing/), and [response messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) will still be allowed in the US. 
+
+Marketing message sending (plus all other message types) to all other countries or regions is still allowed and will not be affected.
+
+Meta informed us that they are making this update to maintain the health of the WhatsApp ecosystem in the US, where WhatsApp is fast growing, but still at an earlier stage (for example, marketing messages see lower engagement than other regions). They will continue to evaluate when the US market is ready to resume marketing messages.
+
+Marketing message delivery to phone numbers with US area codes will be rejected by WhatsApp and return an error code of 131049. 
 
 ### November 2024: Changes to WhatsApp Opt-in policy
 *Last Updated January 2025*

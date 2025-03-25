@@ -29,7 +29,7 @@ This feature will import historical data and events that could result in uninten
 {% alert important %}
 We recommend you audit your current active campaigns and Canvases for messages that may trigger the above events using data from our Shopify Historical Backfill. 
 
-- For "Make Purchase" and "Perform Custom Event", you can update the [start time duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/?redirected=true#step-4-assign-duration) to any date and time after your Shopify store was connected in Braze. Any past events before this new start time will not trigger any messages. 
+- For "Make Purchase" and "Perform Custom Event", you can update the [start time duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration) to any date and time after your Shopify store was connected in Braze. Any past events before this new start time will not trigger any messages. 
 - For all other events above, you can [temporarily stop]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign) them before activating the backfill to guarantee no messages get sent. 
 {% endalert %}
 

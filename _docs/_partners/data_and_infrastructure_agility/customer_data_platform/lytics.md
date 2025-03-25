@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Lytics][1] is the customer data platform (CDP) of choice for the next generation of customer-centric businesses. Lytics Decision Engine, Conductor, and Cloud Connect solutions provide marketers and data teams opportunities to perform identity resolution, orchestration, and campaign optimization in real time and in a privacy-compliant manner.
 
+_This integration is maintained by Lytics._
+
+## About the integration
+
 The Braze and Lytics integration provides a unified view of your customers to enable powerful personalization and to drive optimized campaigns using the next best action orchestration and decisions.
 
 The integration allows brands to:
@@ -180,7 +184,7 @@ In the **Configure Authorization** prompt that appears, provide a label and a de
 
 #### Step 2: Export your segment data to CSV
 
-In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv).
+In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 #### Step 3: Configure a CSV Import Job
 
@@ -191,6 +195,7 @@ Next, select the job type. To import Braze CSV files into Lytics, select **Impor
 ![][10]{: style="max-width:80%;"}
 
 Finally, input a label and optional description for the job and configure any other required details. Click **Complete** to initiate and save the job.
+
 
 [1]: https://www.lytics.com/
 [2]: {% image_buster /assets/img/lytics/braze_authorization.png %}

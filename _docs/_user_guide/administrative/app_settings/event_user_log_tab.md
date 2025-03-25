@@ -17,10 +17,6 @@ In addition to this article, we also recommend checking out our [Quality Assuran
 
 To access the log, go to **Settings** > **Event User Log**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** under **Settings** > **Developer Console**.
-{% endalert %}
-
 To find your logs easily, you can filter based on:
 
 * SDK or API
@@ -46,7 +42,7 @@ Event User Logs will remain in the dashboard for 30 days after they are logged.
 
 ### Missing SDK logs for test users
 
-If you've added a user to an internal group, but they aren't showing any SDK logs in the Event User Log, this may be a result of a missing configuration option. In order to capture SDK logs, make sure to select **Record User Events for group members** in the **Internal Group Settings** for that [internal group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/).
+If you've added a user to an internal group, but they aren't showing any SDK logs in the Event User Log, this may be a result of a missing configuration option. In order to capture SDK logs, make sure to select **Record User Events for group members** in the **Internal Group Settings** for that [internal group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/).
 
 ### Delay in logs updates
 

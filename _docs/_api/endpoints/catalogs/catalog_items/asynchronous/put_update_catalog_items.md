@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Update Multiple Catalog Items"
-article_title: "PUT: Update Multiple Catalog Items"
+nav_title: "PUT: Replace Multiple Catalog Items"
+article_title: "PUT: Replace Multiple Catalog Items"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update multiple catalog items Braze endpoint."
+description: "This article outlines details about the Replace multiple catalog items Braze endpoint."
 
 ---
 {% api %}
-# Update catalog items
+# Replace catalog items
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use this endpoint to update multiple items in your catalog.
+> Use this endpoint to replace multiple items in your catalog.
 
 If a catalog item doesn't exist, this endpoint will create the item in your catalog. Each request can support up to 50 catalog items. This endpoint is asynchronous.
 

@@ -1,8 +1,4 @@
-# Integrating the Braze Android SDK
-
-> Learn how to integrate the Braze Android SDK. To learn more about the SDK in general, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
-
-## Integrating the SDK
+## Integrating the Android SDK
 
 ### Step 1: Configure `braze.xml`
 
@@ -89,7 +85,7 @@ Starting with Braze Android SDK version 3.6.0, Braze location collection is disa
 You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
 {% endalert %}
 
-If you experience issues while testing, enable [verbose logging](#enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
+If you experience issues while testing, enable [verbose logging](#android_enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
 
 1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
     ![The "Overview" page in Braze, with the "Display Data For" field set to "Today".]({% image_buster /assets/img_archive/android_sessions.png %})
@@ -153,7 +149,7 @@ Google requires the Advertising ID to be collected on a non-UI thread.
 
 ### Logging
 
-By default, the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
+By default, the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#android_suppressing-logs) or [set a different log level](#android_enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
 
 #### Enabling logs
 
@@ -281,7 +277,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 ```
 
 {% alert tip %}
-To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/).
+To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 {% endalert %}
 
 ### Enable exclusive in-app message TalkBack

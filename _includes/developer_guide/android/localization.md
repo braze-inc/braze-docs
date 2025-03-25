@@ -4,7 +4,7 @@
 
 If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
-If you are looking for a complete list of supported languages you may attribute to your users in their profiles, see our [user language list]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).
+If you are looking for a complete list of supported languages you may attribute to your users in their profiles, see our [user language list]({{site.baseurl}}/user_guide/data/user_data_collection/language_codes/).
 
 ## Languages supported
 

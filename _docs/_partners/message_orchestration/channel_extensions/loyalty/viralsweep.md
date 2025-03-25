@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [ViralSweep](https://viralsweep.com) is a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more. 
 
+_This integration is maintained by ViralSweep._
+
+## About the integration
+
 The Braze and ViralSweep integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstakes or contest entry information into Braze to use in campaigns or Canvases. 
 
 ## Prerequisites
@@ -71,6 +75,7 @@ If you have connected to Braze and data is not being added to your account, it m
 The email address entered into the promotion may already be in your Braze account, so it will not be added again; it will only be updated if new information is provided for that contact.<br><br>
 - **Email already entered into ViralSweep**<br>
 The email address entered into the promotion has already been entered previously, so it is not passed to Braze again. This can happen if you set up your Braze integration after you have already entered the promotion.
+
 
 [1]: {% image_buster /assets/img/viralsweep/connect.gif %}
 [2]: {% image_buster /assets/img/viralsweep/connect2.png %}

@@ -63,16 +63,16 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 ## Push registration issues
 
-To add verification for your application's push registration logic, implement [push unit testing]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/).
+To add verification for your application's push registration logic, implement [push unit testing]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/unit_tests/).
 
 #### No push registration prompt
 
-If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
+If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
 
 #### No "push registered" users showing in the dashboard
 
 - Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
-  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) were successfully completed.
+  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/) were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (Or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.
@@ -118,6 +118,10 @@ The following would indicate a problem with push registration or that the user's
 
 ![A user profile displaying the contact settings of a user. Here, you can see what apps push is registered for.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
+## Push messages not sending
+
+To troubleshoot push notifications that aren't sending, refer to [Troubleshooting Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+
 ## Message activity log errors
 
 #### Received unregistered sending to push token {#received-unregistered-sending}
@@ -143,7 +147,7 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ## Issues after push delivery
 
-To add verification for your application's push handling, implement [push unit tests]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/) .
+To add verification for your application's push handling, implement [push unit tests]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/unit_tests/) .
 
 #### Push clicks not logged {#push-clicks-not-logged}
 
@@ -162,10 +166,10 @@ If opens are being logged, check whether it is an issue with the deep link in ge
 
 #### Few or no direct opens
 
-If at least one user opens your iOS push notification, but few or no _Direct Opens_ are logged to Braze, there may be an issue with your [SDK integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview). Keep in mind, _Direct Opens_ are not logged for test sends or silent push notifications.
+If at least one user opens your iOS push notification, but few or no _Direct Opens_ are logged to Braze, there may be an issue with your [SDK integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/). Keep in mind, _Direct Opens_ are not logged for test sends or silent push notifications.
 
 - Make sure that the messages are not being sent as [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). The message must have text in the title or body to not be considered silent.
-- Double-check the following steps from the [push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration):
+- Double-check the following steps from the [push integration guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/):
    - [Register for push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
    - [Enable push handling]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
 
