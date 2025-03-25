@@ -2334,6 +2334,8 @@ validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/dev
 //localization
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/#internationalize-campaigns'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
 validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages';
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
 //status
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
 validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
