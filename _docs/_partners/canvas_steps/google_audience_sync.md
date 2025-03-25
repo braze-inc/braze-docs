@@ -208,7 +208,7 @@ For privacy purposes, the user list size will show zero until the list has at le
 
 ### I've synced an audience into Google, but my ads are not serving.
 
-Check that your audiences contain at least 5,000 users to ensure that ads start serving.
+Check that your audiences contain at least 5,000 users so that ads can start serving.
 
 ### How do I resolve the "Mobile App IDs Deleted" error?
 
