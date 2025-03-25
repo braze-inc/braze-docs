@@ -22,7 +22,7 @@ Patch version updates are always non breaking, and include important bug fixes. 
 
 Minor version updates are always non breaking, and include net new functionality. You should update to the latest minor version for your current major version as soon as possible, and updating will never require changes in your application code.
 
-Major version updates are breaking changes, and will likely require changes in your application code.
+Major version updates are breaking changes, and can require changes in your application code.
 
 ## Versions with known issues
 
