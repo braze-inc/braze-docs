@@ -8,7 +8,7 @@ description: "This reference article covers information about data centers, incl
 
 # Data centers
 
-> Braze data centers are built to provide you with options on where your users' data is processed and stored. This allows you to effectively manage your risks related to data sovereignty, flexibility, and management. When you select a Braze data center, you can be certain that our platform meets or exceeds all local requirements in data management.
+> Braze data centers are built to provide you with options on where your users' data is processed and stored. This allows you to effectively manage your risks related to data sovereignty, flexibility, and management.
 
 ## How it works
 
