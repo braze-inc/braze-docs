@@ -173,11 +173,10 @@ permalink: ./:collection/:path/
 #permalink: /:platform/:nav_title/
 permalink_custom_vars: ["nav_title"]
 
-# List of pages(path) to auto expand
+# List of pages(path) to auto expand. For help, see:
+#   braze.com/docs/contributing/content_management/sections/#forcing-auto-expand
 nav_expand_list:
-  - "/developer_guide/platform_integration_guides"
-  - "/developer_guide/platform_wide"
-  - "/developer_guide/customization_guides"
+  - "/null"
 
 # Don't serve non-jekyll files
 exclude:
@@ -236,7 +235,7 @@ learning_index_name: "BrazeLearningCourses"
 
 # Algolia Search index
 algolia:
-  algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
+  algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b" # Read only algolia public search key
   application_id: "1T770XQJ1A"
   index_name: "DocSearch" # You can replace that with whatever name you want
   nodes_to_index: "p,h1,h2,h3,h4,h5,h6,tr,pre,details"

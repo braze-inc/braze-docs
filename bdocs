@@ -19,6 +19,7 @@ export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export MREDIRECTS="$PROJECT_ROOT/scripts/make_redirects.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
+export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
 export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
@@ -38,7 +39,9 @@ OPTIONS:
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
   mredirects     Make redirects for all renamed files in this branch
+  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
+  syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
 
 EOF
@@ -67,18 +70,31 @@ require_new_merges() {
     fi
 }
 
+# If a the 'jq' package is required, pass or fail. This is needed to parse JSON.
+# For more info, see: https://jqlang.org/
+require_jq() {
+    if ! command -v jq &> /dev/null; then
+        echo "Error: 'jq' is required to run this command. On MacOS, run:"
+        echo "  brew install jq"
+        exit 1
+    fi
+}
+
+# Fetch the latest changes from the remote quietly.
+require_git_fetch() {
+    git fetch origin develop --quiet
+}
+
 # Check if no arguments were provided
 if [[ $# -eq 0 ]]; then
     display_help
     exit 1
 fi
 
-# Fetch the latest changes from the remote quietly.
-git fetch origin develop --quiet
-
 # Argument parsing
 case $1 in
     deploy)
+        require_git_fetch
         require_new_merges
         if [[ $# -eq 3 ]]; then
             "$DEPLOY" "$2" "$3"
@@ -87,7 +103,9 @@ case $1 in
         fi
         ;;
     release)
+        require_git_fetch
         require_new_merges
+        require_jq
         "$RELEASE"
         ;;
     tlinks)
@@ -100,6 +118,7 @@ case $1 in
         "$RLINKS" "$2"
         ;;
     ulinks)
+        require_git_fetch
         require_path_or_file "$2"
         touch "$REDIRECT_MATCHES"
         "$MRD"
@@ -108,13 +127,20 @@ case $1 in
         ;;
     mredirects)
         "$MREDIRECTS"
+    fblinks)
+        # require_git_fetch
+        npx ts-node ./scripts/find_broken_links.ts
         ;;
     lredirects)
+        require_git_fetch
         if [[ $# -eq 2 ]]; then
             "$LREDIRECTS" "$2"
         else
             "$LREDIRECTS"
         fi
+        ;;
+    syntax)
+        "$SYNTAX"
         ;;
     help)
         display_help

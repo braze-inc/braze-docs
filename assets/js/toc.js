@@ -25,7 +25,7 @@
       if (!this.id && previousSiblingName) {
         this.id = $(this).attr( "id", previousSiblingName.replace(/\./g, "-") );
       }
-      if ($(this).html().length == 0) {
+      if ($(this).html().length == 0 || !$(this).is(":visible")) {
         return false;
       }
       return this.id;

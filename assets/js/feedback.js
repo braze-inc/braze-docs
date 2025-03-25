@@ -43,7 +43,8 @@ $(document).ready(function(){
               "Feedback": helpful,
               "Article Title": feedback_config['article_title'],
               "Nav Title": feedback_config['nav_title'],
-              "URL": feedback_config['site']
+              "URL": feedback_config['site'],
+              "Language": page_language
             }
           )
         }
@@ -53,7 +54,8 @@ $(document).ready(function(){
           'URL':feedback_config['site'],
           'Article Title': feedback_config['article_title'],
           'Nav Title': feedback_config['nav_title'],
-          'Params':window.location.search
+          'Params':window.location.search,
+          "Language": page_language
         };
         var jqxhr = $.ajax({
           url: feedback_config['dest'],
@@ -99,6 +101,7 @@ $(document).ready(function(){
         'Params': feedback_config['params'],
         'ID': feedback_config['ID'],
         'postdate':feedback_config['postdate'],
+        "Language": page_language,
         'Feedback':$('#feedback_comment').val()
       };
       if (typeof (appboy) !== 'undefined') {
@@ -108,6 +111,7 @@ $(document).ready(function(){
             "Article Title": feedback_config['article_title'],
             "Nav Title": feedback_config['nav_title'],
             "URL": feedback_config['site'],
+            "Language": page_language,
             "Comment": $('#feedback_comment').val()
           }
         );

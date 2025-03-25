@@ -33,6 +33,9 @@
         &:hover, &:hover ~ li {
           color: #000000;
         }
+        &.active {
+          color: #000000;
+        }
       }
     }
 
