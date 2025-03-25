@@ -69,7 +69,7 @@ Like conversions, revenue is technically tracked at the Canvas level, but is att
 For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second component, and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first Canvas component, that revenue is attributed to the variant they entered, but not to any component.
 {% endalert %}
 
-Beyond that, you can see a more explicit breakdown of [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), including the following:
+Beyond that, you can see a more explicit breakdown of [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), including the following:
 
 - Conversion totals and conversion rates for each conversion event
 - Uplift against the control variant

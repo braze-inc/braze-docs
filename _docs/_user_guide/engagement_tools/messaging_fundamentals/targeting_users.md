@@ -49,7 +49,7 @@ After adding segments and filters to your audience, you can test if your audienc
 
 ### Audience summary
 
-After adding segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) delivery speed.
+After adding segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) delivery speed.
 
 ![The "Audience Summary" section with options to set a maximum user cap or rate limit delivery speed.][27]
 

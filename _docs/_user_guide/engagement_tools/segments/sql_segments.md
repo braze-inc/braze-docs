@@ -48,7 +48,7 @@ The Incremental refresh SQL editor allows user query aggregations to happen on a
 1. Go to **Audience** > **Segment Extensions**.
 {% alert note %}
 
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
 {:start="2"}
