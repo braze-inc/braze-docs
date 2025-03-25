@@ -28,8 +28,8 @@ guide_menu_list:
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/#high-ratings
     image: /assets/img/braze_icons/target-04.svg
   - name: Localization
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
-    image: /assets/img/braze_icons/globe-02.svg
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
+    image: /assets/img/braze_icons/annotation-question.svg
   - name: Install Attribution Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     image: /assets/img/braze_icons/pie-chart-01.svg

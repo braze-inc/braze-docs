@@ -2331,4 +2331,29 @@ validurls['/docs/developer_guide/platforms/swift/sample_apps'] = '/docs/develope
 validurls['/docs/developer_guide/platforms/android/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_privacy-questionnaire';
 validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest';
 
+//localization
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/#internationalize-campaigns'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+//status
+validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
+validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
+//archiving
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/';
+//duplicating
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_duplication/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/';
+//approvals
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/';
+//conversion events
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/';
+//targeting users
+validurls['/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/';
+//reeligiblity
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/';
+//tbf
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/';
+
 // validurls['OLD'] = 'NEW';
