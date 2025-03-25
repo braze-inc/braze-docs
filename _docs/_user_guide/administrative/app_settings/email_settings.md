@@ -127,7 +127,7 @@ If the header is in the raw version of the email but is not displayed, the mailb
 
 When the email unsubscribe header feature is turned on, this setting applies to the entire workspace, not the company-level. It’s added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users in the **Target Audiences** step of the campaign and Canvas builders.
 
-Braze doesn’t add the header for what is considered transactional, so if a message is set to send to all users including unsubscribed users, the list-unsubscribe header will not be attached to the message unless specified otherwise in the message-level one-click list-unsubscribe setting. Additionally, the header is not added for messages delivered via test send because the list-unsubscribe header is only generated and added for targeting user profiles in Braze.
+When using the "workspace default," Braze doesn't add the one-click unsubscribe header for campaigns that are considered transactional, which are configured to "send to all users including unsubscribed users". To override this and add the one-click unsubscribe header when sending to unsubscribed users, you select **Unsubscribe globally from all emails** in the message-level one-click list-unsubscribe settings.
 
 ### Default list-unsubscribe header
 
