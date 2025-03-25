@@ -21,7 +21,7 @@ If a user decides to disable the email forwarding to your app's relay email, Bra
 
 If you use SendGrid as an email provider, you can send emails to Apple without making DNS changes. 
 
-1. Log into the [Apple Developer Portal](https://www.developer.apple.com)
+1. Log into the [Apple Developer Portal](https://developer.apple.com/)
 2. Go to the **Certificates, Identifiers & Profiles** page.
 3. Select **Services** > **Sign in with Apple for Email Communication**.
 4. In the **Email Sources** section, add the domains and subdomains.
