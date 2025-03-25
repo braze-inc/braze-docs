@@ -142,29 +142,23 @@ The following table includes metrics and descriptions to help you better underst
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}
 
-## Troubleshooting
+## Frequently asked questions
 
-{% details What should I do next if I receive an invalid token error? %}
+### What should I do next if I receive an invalid token error?
 You can simply disconnect and reconnect your Criteo account on the Criteo partner page. Ensure with your Criteo admin that you have the appropriate permissions to the ad account you wish to sync with.
-{% enddetails %}
 
-{% details Why is my Canvas not allowed to launch? %}
-Make sure that your Criteo ad account has successfully connected to Braze on the Criteo partner page.
+### Why is my Canvas not allowed to launch?
 
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
-{% enddetails %}
+Confirm that your Criteo ad account has successfully connected to Braze on the Criteo partner page. Next, check that you've selected an ad account, entered a name for the new audience, and selected fields to match.
 
-{% details How do I know if users have matched after passing users to Criteo? %}
+### How do I know if users have matched after passing users to Criteo?
+
 Criteo does not provide this information for their own data privacy policies.
-{% enddetails %}
 
-{% details How many audiences can Criteo support? %}
-At this time, you can only have 1,000 audiences within your Criteo account. 
+### How many audiences can Criteo support?
 
-If you breach this limit, Braze will notify you that we are unable to create new audiences. 
+At this time, you can only have 1,000 audiences within your Criteo account. If you're exceed this limit, Braze will notify you that we are unable to create new audiences. You'll need to remove audiences that you're no longer using in your Criteo ad account.
 
-You will need to go into your Criteo ads account and remove audiences that you are no longer using.
-{% enddetails %} 
 
 [0]: {% image_buster /assets/img/criteo/criteo.png %}
 [1]: {% image_buster /assets/img/criteo/criteo1.png %}
