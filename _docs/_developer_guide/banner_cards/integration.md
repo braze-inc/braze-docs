@@ -20,9 +20,7 @@ Banner Cards are currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-Before you can integrate Banner Cards, you'll need to [create Banner Card placements]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in your app.
-
-In addition, these are the minimum SDK versions needed to start using Banner Cards:
+Before you can integrate Banner Cards, you'll need to [create Banner Card placements]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in your app. Additionally, these are the minimum SDK versions needed to start using Banner Cards:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:x.y.z %}
 
@@ -403,19 +401,19 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
+### Step 4: Testing a card (optional) {#handling-test-cards}
+
+Before you launch a campaign, you can send a test Banner Card to verify your integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be able to receive foreground push notifications to display the test Banner Card.
+
+{% alert important %}
+A test banner is treated like any other banner except it's removed at the next app session. You must have its placement set up in your app for the test banner to display.
+{% endalert %}
+
 ## Analytics
 
 You don't need to worry about tracking impressions manually because Braze automatically handles all impression logging when using the SDK methods to insert Banner Cards.
 
 If you need to parse and render the HTML in a custom view, [contact us](mailto:banners-feedback@braze.com).
-
-## Handling test sends
-
-Use test sends to verify Banner Card integrations before launching a campaign. Test Banner Cards are stored in a separate in-memory cache and do not persist across app restarts. While no extra setup is needed, the device must be able to receive foreground push notifications to display test Banner Cards.
-
-{% alert important %}
-A test banner is treated like any other banner except it's removed at the next app session. You must have its placement set up in your app for the test banner to display.
-{% endalert %}
 
 ## Dimensions and sizing
 
