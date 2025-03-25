@@ -35,7 +35,7 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 
 고객 프로필은 사용자의 인게이지먼트 기록, 세그먼트 멤버십, 기기 및 운영 체제에 대한 정보에 쉽게 액세스할 수 있기 때문에 문제 해결 및 테스트에 유용한 리소스입니다.
 
-예를 들어 사용자가 문제를 신고했는데 어떤 기기 및 운영 체제를 사용 중인지 잘 모르는 경우 [개요 탭을](#overview-tab) 사용하여 이메일이나 사용자 ID만 있으면 이 정보를 찾을 수 있습니다. 또한 사용자의 언어를 확인할 수 있으므로 예상대로 작동하지 않는 [다국어 캠페인의][13] 문제를 해결하는 데 유용할 수 있습니다.
+예를 들어 사용자가 문제를 신고했는데 어떤 기기 및 운영 체제를 사용 중인지 잘 모르는 경우 [개요 탭을](#overview-tab) 사용하여 이메일이나 사용자 ID만 있으면 이 정보를 찾을 수 있습니다. 사용자의 언어를 볼 수도 있으며, 이는 예상대로 작동하지 않은 [다국어 캠페인][13]을 문제 해결하는 데 도움이 될 수 있습니다.
 
 [참여 탭을](#engagement-tab) 사용하여 특정 사용자가 캠페인을 수신했는지 확인할 수 있습니다. 또한 이 특정 사용자가 캠페인을 수신한 경우 언제 캠페인을 수신했는지 확인할 수 있습니다. 또한 사용자가 특정 세그먼트에 속하는지 여부와 사용자가 푸시, 이메일 또는 둘 다에 옵트인했는지 여부를 확인할 수 있습니다. 이 정보는 문제 해결에 유용합니다. 예를 들어, 사용자가 예상한 캠페인을 받지 못했거나 예상하지 못한 캠페인을 받은 경우 이 정보를 확인해야 합니다.
 
@@ -61,9 +61,9 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 | 구매 | 이 사용자의 평생 매출 속성, 마지막 구매, 총 구매 횟수, 각 구매 목록이 표시됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-이 데이터에 대한 자세한 내용은 [사용자 데이터 수집][12]을 참조하세요.
+이 데이터에 대한 자세한 정보는 [사용자 데이터 수집][12]을 참조하십시오.
 
-![][2]
+![고객 프로필의 개요 탭.][2]
 
 ### 인게이지먼트 탭 {#engagement-tab}
 
@@ -72,7 +72,7 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 | 참여 카테고리 | 포함 사항 |
 | --- | --- |
 | 연락처 설정 | 이메일, SMS, 푸시의 구독 상태 및 이 사용자가 이 세 가지 채널에 대해 연결된 구독 그룹입니다. 이 섹션에는 푸시 토큰에 대한 변경 로그 정보도 포함되어 있습니다. 구독 및 옵트인 설정 방법에 대한 자세한 내용은 [이메일]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 및 [푸시를]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) 참조하세요. |
-| 수신된 캠페인 | 이 사용자가 수신한 캠페인 및 시기. 목록에서 캠페인을 선택하여 확인합니다. |
+| 수신된 캠페인 | 캠페인은 사용자가 캠페인을 받을 때 또는 사용자의 상호작용 데이터가 처음 감지될 때 표시됩니다. 목록에서 캠페인을 선택하여 확인합니다. |
 | 세그먼트 | 이 사용자가 포함된 세그먼트입니다. 목록에서 세그먼트를 선택하면 해당 세그먼트를 볼 수 있습니다. |
 | 커뮤니케이션 통계 | 이 사용자가 각 채널에서 마지막으로 메시지를 받은 시기입니다. |
 | 설치 속성 | 사용자가 앱을 설치한 방법과 시기에 대한 정보입니다. [사용자 설치 이해]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)에 대해 자세히 알아보세요. |
@@ -81,7 +81,7 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 | 예측 | 이 사용자에 대한 [이탈 예측]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) 및 [이벤트 예측]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) 점수입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![사용자 프로필의 참여 탭은 연락처 설정 및 커뮤니케이션 통계를 표시합니다.][3]
 
 ### 메시징 내역 탭
 
@@ -91,7 +91,7 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 이 표에 대한 피드백이 있거나 특정 이벤트를 보고 싶다면 "메시징 기록 탭 피드백"이라는 제목으로 [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) 으로 이메일을 보내주세요.
 {% endalert %}
 
-![][5]
+![메시징 기록 탭은 사용자가 받은 캠페인과 캔버스를 보여줍니다.][5]
 
 #### 이벤트 보기 및 이해
 
@@ -149,6 +149,5 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

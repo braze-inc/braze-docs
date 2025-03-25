@@ -21,7 +21,7 @@ Para configurar seu relatório do dashboard de conversões:
 2. Selecione um **Intervalo de datas** para seu relatório, até um período de 90 dias.
 3. Selecione as campanhas ou as Canvas (ou ambas) a serem analisadas. 
    - (opcional) Filtre campanhas e telas selecionando uma tag.  
-4. Selecione o **(s) canal(is)** a ser(em) analisado( s) para suas mensagens.
+4. Selecione o(s) **canal(is)** a ser(em) analisado(s) para suas mensagens.
 5. (opcional) Selecione uma camada de **detalhamento** para visualizar diferentes dimensões de dados, como por variante, etapa do canva, país ou idioma.
 6. (opcional) Se você quiser calcular as conversões de um evento que não foi configurado como um evento de conversão na campanha ou no Canva, ative [Usar eventos personalizados](#using-custom-events).
 7. Selecione um [método de atribuição](#attribution-methods) para analisar as mensagens selecionadas.

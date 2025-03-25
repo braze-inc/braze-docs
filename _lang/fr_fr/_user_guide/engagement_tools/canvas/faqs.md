@@ -32,9 +32,15 @@ Lorsque vous arrêtez un Canvas, les éléments suivants s’appliquent :
 - Plus aucun message ne sera envoyé, quel que soit le niveau auquel se situe un utilisateur dans le flux.
 - **Exception :** Les Canvas avec des e-mails ne seront pas automatiquement arrêtés. Une fois que les requêtes d’envoi sont transmises à SendGrid, nous ne pouvons rien faire pour arrêter la distribution à l’utilisateur.
 
+### Dois-je créer un seul canvas ou des canvas distincts par cycle de vie de l'utilisateur ?
+
+En fonction de ce que vous cherchez à accomplir avec votre Canvas, vous pouvez avoir besoin de différentes approches dans la façon dont vous créez votre parcours utilisateur. La flexibilité de Canvas vous permet de mapper les parcours des utilisateurs pour n'importe quelle étape du cycle de vie de l'utilisateur. Consultez nos [modèles de canvas Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) pour obtenir plusieurs exemples d'approches rationalisées pour créer des parcours utilisateurs efficaces.
+
 #### Messages in-app de Canvas
 
 Les messages in-app sont envoyés au démarrage de la session suivante. Cela signifie que si l'utilisateur entre dans l'étape du canvas avant que le canvas ne soit interrompu, il recevra toujours le message in-app lors de son prochain démarrage de session, tant que le message in-app n'a pas encore expiré.
+
+Il est possible qu'un utilisateur démarre une session avant l'arrêt du canvas, mais qu'il ne reçoive pas immédiatement le message in-app. Cela peut se produire si le message in-app est déclenché par un événement personnalisé ou est retardé. Cela signifie qu'il est possible pour un utilisateur d'enregistrer une impression de message in-app et de "recevoir" le message in-app après l'arrêt du Canvas. Cependant, l'utilisateur aurait dû démarrer la session avant l'arrêt du canvas, mais **après avoir** reçu l'étape du canvas.
 
 {% alert note %}
 L’arrêt de Canvas ne forcera pas les utilisateurs en attente de réception de messages à quitter leur parcours utilisateur. Si vous activez à nouveau le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (à moins que le temps d’envoi du message se soit écoulé, dans ce cas, ils ne le recevront pas).
@@ -63,7 +69,7 @@ Il existe un chemin Canvas avec 10 notifications push et l’événement de con
 - L’utilisateur A ouvre l’application après l’accès, mais avant la réception du premier message.
 - L’utilisateur B ouvre l’application après chaque notification push.
 
-**Résultat :** La synthèse affichera deux conversions alors que chaque étape affichera une conversion pour la première étape et aucune conversion pour toutes les étapes suivantes.
+**Résultat :** Le résumé indiquera deux conversions, tandis que les étapes individuelles indiqueront une conversion de un pour la première étape et de zéro pour toutes les étapes suivantes.
 
 {% alert note %}
 Si des heures calmes sont actives lorsque l’événement de conversion se produit, les mêmes règles s’appliquent.
@@ -83,7 +89,7 @@ Il existe un Canvas à une seule étape avec les heures calmes activées :
 
 ### Quelle est la différence entre les différents types de taux de conversion ?
 
-- Le nombre de conversions Canvas total illustre le nombre d’utilisateurs uniques qui ont terminé un événement de conversion et non le nombre de conversions effectuées par chacun d’eux. 
+- Le nombre total de conversions Canvas reflète le nombre d'utilisateurs uniques ayant effectué un événement de conversion, et non le nombre de conversions effectuées par chacun d'entre eux. 
 - Le taux de conversion de la variante ou le bloc de synthèse au début d’un Canvas illustre toutes les conversions effectuées par les utilisateurs dans ce parcours, qu’ils aient reçu un message ou pas, sous forme d’un total additionné. 
 - Le taux de conversion d’étape illustre le nombre d’individus qui ont reçu cette étape de message et terminé n’importe lequel des événements de conversion décrits.
 
@@ -97,11 +103,15 @@ Pour afficher l'analyse/analytique d'un composant Canvas, accédez à votre Canv
 
 ### Lorsqu’on examine le nombre d’utilisateurs uniques, l’analyse Canvas est-elle plus précise que la segmentation ?
 
-La segmentation est une statistique plus précise pour les données de l’utilisateur unique par rapport aux statistiques de Canvas ou de la campagne. Cela est dû au fait que les statistiques Canvas et des campagnes sont des nombres incrémentés par Braze en fonction des opérations effectuées. En d’autres termes, des variables peuvent entraîner cette différence de nombre par rapport à l’outil de segmentation. Par exemple, des utilisateurs peuvent effectuer plus de conversions pour un Canvas ou une campagne.
+La segmentation est une statistique plus précise pour les données de l’utilisateur unique par rapport aux statistiques de Canvas ou de la campagne. En effet, les statistiques des Canvas et des campagnes sont des nombres que Braze incrémente lorsque quelque chose se produit, ce qui signifie qu'il existe des variables qui pourraient faire en sorte que ce nombre soit différent de celui de la segmentation. Par exemple, des utilisateurs peuvent effectuer plus de conversions pour un Canvas ou une campagne.
 
 ### Pourquoi le nombre d’utilisateurs qui accèdent à un Canvas ne correspond pas au nombre prévu ?
 
 Le nombre d’utilisateurs accédant à un Canvas peut être différent du nombre prévu selon le mode d’évaluation des audiences et des déclencheurs. Dans Braze, une audience est évaluée avant le déclencheur (à moins d'utiliser un déclencheur de [changement d'attribut]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Les utilisateurs seront alors exclus du Canvas s’ils ne font pas partie de l’audience que vous avez sélectionnée, avant l’évaluation des actions de déclenchement.
+
+### Qu'advient-il des utilisateurs anonymes au cours de leur parcours dans Canvas ?
+
+Bien que les utilisateurs anonymes puissent entrer et sortir de Canvases, leurs actions ne sont pas associées à un profil utilisateur spécifique jusqu'à ce qu'ils soient identifiés, de sorte que leurs interactions peuvent ne pas être entièrement suivies dans votre analyse/analytique. Vous pouvez utiliser le [générateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) pour générer un rapport sur ces indicateurs.
 
 ### Pourquoi est-ce que le taux de conversion de mon étape Canvas est différent du taux de conversion total de ma variante de Canvas ?
 
@@ -125,11 +135,11 @@ Canvas Flow est l’expérience d’édition améliorée qui simplifie la façon
 
 Vous pouvez [cloner votre canvas dans Canvas Flow]({{site.baseurl}}/cloning_canvases/). Vous créerez ainsi une copie de votre Canvas d’origine dans le flux de travail Canvas Flow.
 
-### Qu’adviendra-t-il de mes Canvas créées à l’aide de l’éditeur Canvas d’origine ?
+### Qu'adviendra-t-il des toiles que j'ai créées à l'aide de l'éditeur original ?
 
 Tous vos Canvas existants et la version d’origine de Canvas continueront d’exister et seront pris en charge par Braze. Les clients qui choisissent de rejoindre Canvas Flow en accès anticipé auront la possibilité de créer un Canvas en utilisant le workflow Canvas d’origine ou de Flow.
 
-### Existe-t-il une limite au nombre d’étapes que je peux ajouter ?
+### Y a-t-il une limite au nombre d'étapes que je peux inclure ?
 
 Oui. Un Canvas créé en utilisant Canvas Flow peut comprendre jusqu’à 200 étapes.
 
@@ -185,4 +195,4 @@ Pour les segments et filtres, le composant de message Canvas Flow comporte une n
 
 ##### Réglage de la planification « dans » ou « suivant »/« prochain »
 
-Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les chemins d’action prennent uniquement en charge « après une fenêtre X temps » et non « dans X temps » ou « le X suivant/prochain ».
+Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les parcours d'action ne prennent en charge que l'expression "après une fenêtre de temps X" et non "dans X temps" ou "au prochain X temps".

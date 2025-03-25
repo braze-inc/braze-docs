@@ -52,11 +52,11 @@ search_rank: 6
 {% enddetails %}
 
 {% alert important %}
-Currents は、900 KB を超える過度に大きなペイロードを持つイベントをドロップすることに注意してください。
+Currents は、900 KB を超える過度に大きなペイロードを持つイベントをドロップします。
 {% endalert %}
 
 {% alert note %}
-キャンバスフローに関連するオブジェクトの ID は、グループ化に使用でき、[「キャンバスの詳細をエクスポートする」エンドポイント]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)によって人間が読める名前に変換されます。
+キャンバスフローに関連するオブジェクトの ID は、グループ化に使用でき、[「キャンバスの詳細をエクスポートする」エンドポイントによ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)って人間が読める名前に変換されます。
 {% endalert %}
 
 {% alert note %}
@@ -886,7 +886,7 @@ WhatsApp、中止
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -917,7 +917,7 @@ WhatsApp、中止
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -957,7 +957,7 @@ WhatsApp、中止
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1000,7 +1000,7 @@ WhatsApp、中止
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1040,7 +1040,7 @@ WhatsApp、中止
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1294,7 +1294,7 @@ Abort, Content Cards
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1310,7 +1310,7 @@ Abort, Content Cards
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1324,7 +1324,7 @@ Abort, Content Cards
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1341,7 +1341,7 @@ Abort, Content Cards
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1363,7 +1363,7 @@ Abort, Content Cards
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1377,7 +1377,7 @@ Abort, Content Cards
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1404,7 +1404,7 @@ Abort, Content Cards
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1417,7 +1417,7 @@ Abort, Content Cards
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1441,7 +1441,7 @@ Abort, Content Cards
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1455,7 +1455,7 @@ Abort, Content Cards
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1487,7 +1487,7 @@ Abort, Email
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1505,7 +1505,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1519,7 +1519,7 @@ Abort, Email
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1538,7 +1538,7 @@ Abort, Email
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1560,7 +1560,7 @@ Abort, Email
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1575,7 +1575,7 @@ Abort, Email
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1603,7 +1603,7 @@ Abort, Email
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1618,7 +1618,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1644,7 +1644,7 @@ Abort, Email
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1659,7 +1659,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1691,7 +1691,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1709,7 +1709,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1723,7 +1723,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1742,7 +1742,7 @@ Abort, Push
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1765,7 +1765,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1780,7 +1780,7 @@ Abort, Push
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1807,7 +1807,7 @@ Abort, Push
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1822,7 +1822,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1848,7 +1848,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1864,7 +1864,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(required, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1896,7 +1896,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1924,7 +1924,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1958,7 +1958,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1996,7 +1996,7 @@ Abort, Push
 {
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2032,7 +2032,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2076,7 +2076,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2092,7 +2092,7 @@ Abort, Push
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -2106,7 +2106,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -2123,7 +2123,7 @@ Abort, Push
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -2145,7 +2145,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -2159,7 +2159,7 @@ Abort, Push
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -2186,7 +2186,7 @@ Abort, Push
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2199,7 +2199,7 @@ Abort, Push
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -2223,7 +2223,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2237,7 +2237,7 @@ Abort, Push
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -2911,7 +2911,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -2945,7 +2945,7 @@ Abort, Push
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -2987,7 +2987,7 @@ Abort, Push
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3032,7 +3032,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3077,7 +3077,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(required, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3134,7 +3134,7 @@ Abort, Push
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3172,7 +3172,7 @@ Abort, Push
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3214,7 +3214,7 @@ Abort, Push
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3260,7 +3260,7 @@ Abort, Push
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3305,7 +3305,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3361,7 +3361,7 @@ Abort, Push
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3394,7 +3394,7 @@ Abort, Push
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3429,7 +3429,7 @@ Abort, Push
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3474,7 +3474,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3528,7 +3528,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3561,7 +3561,7 @@ Abort, Push
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3602,7 +3602,7 @@ Abort, Push
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3646,7 +3646,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3690,7 +3690,7 @@ Abort, Push
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3741,7 +3741,7 @@ Abort, Push
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3771,7 +3771,7 @@ Abort, Push
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3809,7 +3809,7 @@ Abort, Push
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3851,7 +3851,7 @@ Abort, Push
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -3893,7 +3893,7 @@ Abort, Push
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3906,7 +3906,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `dispatch_id` の動作は、キャンバスとキャンペーンで異なります。これは、Braze がキャンバスのステップ (スケジュール可能なエントリステップを除く) を、スケジュール済みの場合でもトリガーされたイベントとして扱うためです。詳細については、「[ディスパッチ ID の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)」を参照してください。
-- `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
+- `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、または国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
   {% endapi %}
 
 
@@ -3948,7 +3948,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3979,7 +3979,7 @@ Abort, Push
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4017,7 +4017,7 @@ Abort, Push
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4060,7 +4060,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4101,7 +4101,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4165,7 +4165,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -4204,7 +4204,7 @@ Abort, Push
   "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -4249,7 +4249,7 @@ Abort, Push
           "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -4300,7 +4300,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -4350,7 +4350,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -4412,7 +4412,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
@@ -4453,7 +4453,7 @@ Abort, Push
   "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
@@ -4500,7 +4500,7 @@ Abort, Push
           "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "url" : "(optional, string) URL that the user clicked on",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
@@ -4553,7 +4553,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
@@ -4605,7 +4605,7 @@ Abort, Push
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "url" : "(optional, string) URL that the user clicked on",
     "link_url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -4663,7 +4663,7 @@ Abort, Push
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -4696,7 +4696,7 @@ Abort, Push
   "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4736,7 +4736,7 @@ Abort, Push
           "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4781,7 +4781,7 @@ Abort, Push
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4824,7 +4824,7 @@ Abort, Push
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4878,7 +4878,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -4910,7 +4910,7 @@ Abort, Push
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4949,7 +4949,7 @@ Abort, Push
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4993,7 +4993,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5035,7 +5035,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5088,7 +5088,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -5120,7 +5120,7 @@ Abort, Push
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -5158,7 +5158,7 @@ Abort, Push
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -5202,7 +5202,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -5244,7 +5244,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -5301,7 +5301,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5330,7 +5330,7 @@ Abort, Push
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5365,7 +5365,7 @@ Abort, Push
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5406,7 +5406,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5445,7 +5445,7 @@ Abort, Push
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5495,7 +5495,7 @@ Abort, Push
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5503,7 +5503,7 @@ Abort, Push
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5532,7 +5532,7 @@ Abort, Push
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5540,7 +5540,7 @@ Abort, Push
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5580,11 +5580,11 @@ Abort, Push
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5626,13 +5626,13 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -5674,12 +5674,12 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5735,14 +5735,14 @@ Abort, Push
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5772,14 +5772,14 @@ Abort, Push
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5820,10 +5820,10 @@ Abort, Push
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5866,12 +5866,12 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -5914,11 +5914,11 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5970,7 +5970,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5998,7 +5998,7 @@ Webhook、送信
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6033,7 +6033,7 @@ Webhook、送信
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6072,7 +6072,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -6109,7 +6109,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6160,7 +6160,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6190,7 +6190,7 @@ Webhook、送信
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6226,7 +6226,7 @@ Webhook、送信
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6266,7 +6266,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -6304,7 +6304,7 @@ Webhook、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6360,7 +6360,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6396,7 +6396,7 @@ Webhook、送信
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6439,7 +6439,7 @@ Webhook、送信
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6486,7 +6486,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6532,7 +6532,7 @@ Webhook、送信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6589,7 +6589,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6625,7 +6625,7 @@ Webhook、送信
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6668,7 +6668,7 @@ Webhook、送信
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6715,7 +6715,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6761,7 +6761,7 @@ Webhook、送信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6819,7 +6819,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6855,7 +6855,7 @@ Webhook、送信
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6898,7 +6898,7 @@ Webhook、送信
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6945,7 +6945,7 @@ Webhook、送信
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6991,7 +6991,7 @@ Webhook、送信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -7236,7 +7236,7 @@ SMS、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7267,7 +7267,7 @@ SMS、送信
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7305,7 +7305,7 @@ SMS、送信
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7348,7 +7348,7 @@ SMS、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7390,7 +7390,7 @@ SMS、送信
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7446,7 +7446,7 @@ SMS、配信
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7476,7 +7476,7 @@ SMS、配信
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7513,7 +7513,7 @@ SMS、配信
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7555,7 +7555,7 @@ SMS、配信
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7596,7 +7596,7 @@ SMS、配信
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7644,7 +7644,7 @@ SMS、配信
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7674,7 +7674,7 @@ SMS、配信
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7711,7 +7711,7 @@ SMS、配信
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7753,7 +7753,7 @@ SMS、配信
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7794,7 +7794,7 @@ SMS、配信
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7844,7 +7844,7 @@ SMS、拒否
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7876,7 +7876,7 @@ SMS、拒否
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7915,7 +7915,7 @@ SMS、拒否
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7959,7 +7959,7 @@ SMS、拒否
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -8002,7 +8002,7 @@ SMS、拒否
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -8052,7 +8052,7 @@ SMS、配信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -8083,7 +8083,7 @@ SMS、配信
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8121,7 +8121,7 @@ SMS、配信
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -8164,7 +8164,7 @@ SMS、配信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -8206,7 +8206,7 @@ SMS、配信
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -8664,7 +8664,7 @@ FeatureFlags, インプレッション
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -8688,7 +8688,7 @@ FeatureFlags, インプレッション
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -8718,7 +8718,7 @@ FeatureFlags, インプレッション
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -8753,7 +8753,7 @@ FeatureFlags, インプレッション
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -8786,7 +8786,7 @@ FeatureFlags, インプレッション
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -9328,7 +9328,7 @@ FeatureFlags, インプレッション
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -9350,7 +9350,7 @@ FeatureFlags, インプレッション
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -9378,7 +9378,7 @@ FeatureFlags, インプレッション
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -9411,7 +9411,7 @@ FeatureFlags, インプレッション
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -9442,7 +9442,7 @@ FeatureFlags, インプレッション
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -9493,7 +9493,7 @@ Subscription
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9526,7 +9526,7 @@ Subscription
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "phone_number" : "(optional, string) Phone number of the user in e.164 format (for example +14155552671)",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_group_id" : "(required, string) Subscription group API ID",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9563,7 +9563,7 @@ Subscription
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_group_id" : "(required, string) Subscription group API ID",
           "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
@@ -9606,7 +9606,7 @@ Subscription
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9648,7 +9648,7 @@ Subscription
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
@@ -9715,7 +9715,7 @@ Subscription
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -9745,7 +9745,7 @@ Subscription
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -9778,7 +9778,7 @@ Subscription
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
         },
@@ -9819,7 +9819,7 @@ Subscription
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "timezone" : "(optional, string) Time zone of the user"
@@ -9859,7 +9859,7 @@ Subscription
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },

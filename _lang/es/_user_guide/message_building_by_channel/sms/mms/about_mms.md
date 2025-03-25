@@ -33,9 +33,18 @@ Un [grupo de suscripción][1] es una colección de números de teléfono de env�
 
 ### Límites y rendimiento de los mensajes MMS
 
-Para MMS, el límite de mensajes es de 1 MB (esto incluye el activo multimedia y el tamaño del cuerpo del mensaje). Para estar más seguro, Braze recomienda no superar los 600 KB para tu activo multimedia, incluyendo también el cuerpo del mensaje.
+Los operadores imponen sus propios límites de tamaño de archivo, que en última instancia determinan el éxito de los envíos de MMS. Estos límites pueden variar según la geografía y el operador, por lo que, para estar más seguro, Braze recomienda no superar los 600 KB para tu activo multimedia, incluyendo también el cuerpo del mensaje. También recomendamos hacer pruebas para confirmar que tus medios se pueden entregar a través de los operadores de tus usuarios.
 
-El caudal de MMS es de un segmento por segundo a través de un código largo.
+El rendimiento del MMS es de un segmento por segundo a través de un código largo.
+
+#### Límites de tamaño de los archivos del operador
+
+| Tamaño del archivo | Manipulación de operadores |
+| --- | --- |
+| 300 KB | Todos los operadores deberían gestionar con fiabilidad mensajes MMS de este tamaño. |
+| 600 KB | Se considera el tamaño máximo de archivo estándar para MMS en la mayoría de los operadores. |
+| 1 MB |  La mayoría de los operadores estadounidenses y canadienses pueden gestionar mensajes MMS de este tamaño, aunque esto puede variar según el operador. Algunos operadores pueden permitir archivos de mayor tamaño. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### MMS entrantes
 

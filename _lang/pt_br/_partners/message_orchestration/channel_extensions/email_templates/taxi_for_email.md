@@ -19,7 +19,7 @@ A integração entre o Braze e o Taxi aproveita a sintaxe simples e poderosa do 
 | Requisito | Descrição |
 | ------------| ----------- |
 | Taxi para conta de e-mail | É necessário ter uma conta do Taxi for Email para aproveitar essa parceria. |
-| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **Templates**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **modelos**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | Ponto de extremidade do Braze | [Seu endpoint Braze]({{site.baseurl}}/api/basics/#endpoints) está alinhado com o URL do dashboard Braze.<br><br> Por exemplo, se o URL do dashboard for `https://dashboard-03.braze.com`, seu endpoint será `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

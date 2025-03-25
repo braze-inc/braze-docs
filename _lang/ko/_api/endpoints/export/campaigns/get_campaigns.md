@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 캠페인 내보내기 목록 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 내보내기 캠페인 목록 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 캠페인 내보내기 목록 Braze 엔드포�
 /campaigns/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 캠페인 목록을 내보내며, 각 목록에는 이름, 캠페인 API 식별자, API 캠페인인지 여부 및 캠페인과 연결된 태그가 포함됩니다.
+> 이 엔드포인트를 사용하여 캠페인 목록을 내보내면 각 캠페인에는 이름, 캠페인 API 식별자, API 캠페인인지 여부, 캠페인과 연결된 태그가 포함됩니다.
 
 캠페인은 생성 시간별로 정렬된 100개 그룹으로 반환됩니다(기본적으로 가장 오래된 것부터 최신 것까지).
 
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

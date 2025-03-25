@@ -27,7 +27,7 @@ Disons que nous travaillons chez PantsLabyrinth, et que notre objectif est d'am�
 
 Pour accéder au modèle d'onboarding, lorsque vous créez un nouveau Canvas, sélectionnez **Utiliser un modèle de Canvas** > **Modèles de Braze**. Ensuite, à côté de **Onboarding**, sélectionnez **Apply Template**. Commençons à personnaliser ce modèle pour l'adapter à notre cas d'utilisation.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -42,7 +42,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![Le nouveau nom, la nouvelle description et le nouveau tag de la toile.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
-### Étape 2 : Attribuez vos événements de conversion
+### Étape 2 : Attribuez vos événements de conversion
 
 Ensuite, attribuons nos événements de conversion. Les événements de conversion sont un type d'indicateurs qui peuvent être utilisés pour mesurer le succès du canvas. Pour **Nom de l'événement personnalisé**, sélectionnez **Clic e-mail** comme événement personnalisé.
 
@@ -50,7 +50,7 @@ Ensuite, attribuons nos événements de conversion. Les événements de conversi
 
 Cela signifie que les nouveaux utilisateurs ont jusqu'à quatre jours pour cliquer sur l'e-mail de bienvenue. Dans ce cas, nous voulons que nos nouveaux utilisateurs ressentent un sentiment d'urgence à s'engager avec PantsLabyrinth et à s'abonner à une réception/distribution récurrente sur des vêtements de saison.
 
-### Étape 3 : Définir une planification d'entrée
+### Étape 3 : Définir une planification d'entrée
 
 L'objectif étant de cibler les nouveaux utilisateurs de PantsLabyrinth, le Canvas sera basé sur l'action. Pour **Démarrer la session**, sélectionnez **Démarrer la session dans n'importe quelle** application pour permettre aux utilisateurs qui démarrent une session dans n'importe quelle application d'entrer dans le Canvas.
 

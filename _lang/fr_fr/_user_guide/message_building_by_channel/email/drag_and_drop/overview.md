@@ -73,7 +73,7 @@ Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagn
 
 Une fois que vous avez choisi l'endroit où créer votre message, passons aux étapes de la création d'un e-mail par glisser-déposer.
 
-### Étape 1 : Sélectionnez votre modèle
+### Étape 1 : Sélectionnez votre modèle
 
 Après avoir sélectionné l'éditeur par glisser-déposer comme votre expérience d'édition, vous pouvez choisir de :
 
@@ -97,7 +97,7 @@ Ensuite, sélectionnez **Modifier le corps de l'e-mail** pour commencer à conce
 
 ![La section "Variantes d'e-mail" avec un exemple de corps d'e-mail.][8]
 
-### Étape 2 : Créez votre e-mail
+### Étape 2 : Créez votre e-mail
 
 L'expérience d'édition par glisser-déposer est divisée en trois sections : **Envoi des paramètres**, **Contenu**, et **Aperçu et test**. La magie de la création de votre corps d’e-mail se produit dans la section **Contenu**. Avant de créer votre e-mail, il est important de comprendre les principaux composants de votre expérience de création d’e-mail. Si vous avez besoin d'une révision, consultez la rubrique [À propos de l'éditeur.](#about-the-editor)
 
@@ -110,7 +110,7 @@ Lorsque vous êtes prêt, utilisez les blocs de contenu à glisser-déposer pour
 - Vous pouvez également faire glisser n'importe laquelle des tuiles de **Contenu** dans l'éditeur principal. Cela crée une ligne pour la tuile.
 - Vous pouvez affiner davantage la tuile en sélectionnant la tuile et en ajustant les champs dans **Propriétés du contenu** et **Options de bloc**. Cela inclut l’espacement des lettres, la marge intérieure, la hauteur de ligne, etc.
 
-Consultez la rubrique [Autres personnalisations](#other-customizations) pour découvrir d'autres moyens de personnaliser davantage votre e-mail glissé-déposé.
+Consultez la rubrique [Autres personnalisations](#other-customizations) pour découvrir d'autres moyens de personnaliser davantage votre e-mail par glisser-déposer.
 
 Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre communication par e-mail recherchera vos groupes d’utilisateurs. Cela vérifiera que votre contenu est réactif et vous pourrez apporter les ajustements nécessaires en cours de route.
 
@@ -264,4 +264,4 @@ Vous pouvez également vous intégrer à l'un de nos partenaires d'attribution, 
 [10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/email/drag_and_drop/dnd_email_style_settings/
+[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/

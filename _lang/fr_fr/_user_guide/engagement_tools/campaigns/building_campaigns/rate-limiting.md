@@ -56,7 +56,7 @@ En sélectionnant la limite maximale d'utilisateurs, vous pouvez limiter le déb
 
 Si vous utilisez une optimisation telle que la variante gagnante ou la variante personnalisée, la campagne comprendra deux envois : l'expérience initiale et l'envoi final. 
 
-Pour implémenter un plafond d'utilisateurs dans ce scénario, sélectionnez **Limiter le nombre de personnes qui recevront cette campagne**, puis sélectionnez **Au total, cette campagne doit** et entrez une limite d'audience. La limite de votre audience sera divisée selon les pourcentages indiqués dans le panneau de **test A/B.**  
+Pour implémenter un plafond d'utilisateurs dans ce scénario, sélectionnez **Limiter le nombre de personnes qui recevront cette campagne**, puis sélectionnez **Au total, cette campagne doit** et entrez une limite d'audience. La limite de votre audience sera divisée en fonction des pourcentages indiqués dans le panneau de **test A/B.**  
 
 Si vous sélectionnez **Chaque fois que la campagne est planifiée**, ces deux phases seront limitées séparément au nombre défini. Ce n’est généralement pas souhaitable.
 
@@ -76,7 +76,7 @@ Lorsque vous utilisez la limite de débit avec un test A/B, la limite de débit 
 
 Si vous prévoyez que de grandes campagnes entraîneront un pic d'activité des utilisateurs et une surcharge de vos serveurs, vous pouvez spécifier une limite de débit par minute pour l'envoi des messages, ce qui signifie que Braze n'enverra pas plus que la limite de débit définie en une minute.
 
-Lorsque vous ciblez des utilisateurs lors de la création d'une campagne, vous pouvez naviguer vers **Target Audiences** (pour les campagnes) ou **Send Settings** (pour Canvas) pour sélectionner une limite de débit (dans divers incréments allant de 10 à 500 000 messages par minute). 
+Lorsque vous ciblez des utilisateurs lors de la création d'une campagne, vous pouvez accéder à **Target Audiences** (pour les campagnes) ou **Send Settings** (pour les Canvas) pour sélectionner une limite de débit (dans différents incréments allant de 10 à 500 000 messages par minute). 
 
 Notez que les campagnes sans limitation du taux peuvent dépasser ces limites de livraison. Toutefois, sachez que les messages seront interrompus s'ils sont retardés de 72 heures ou plus en raison d'une limite de débit trop basse. Si la limite de débit est trop basse, le créateur de la campagne recevra des alertes dans le tableau de bord et par e-mail.
 
@@ -107,7 +107,7 @@ Lors de l'envoi d'une campagne multicanal avec une limite de débit, chaque cana
 
 Pour les campagnes push diffusées sur plusieurs plateformes, la limite de débit sélectionnée sera répartie de manière égale entre les plateformes. Une campagne de notification push utilisant Android et iOS avec une limite de débit de 10 000 messages par minute distribuera en parts égales les 10 000 messages sur les deux plates-formes.
 
-#### Limitation de la vitesse de réception/distribution des toiles {#canvas-delivery-speed}
+#### Limitation de la vitesse de réception/distribution des canevas {#canvas-delivery-speed}
 
 Lors de l'envoi d'un Canvas avec une limite de débit, la limite de débit est partagée entre les canaux. Cela signifie que le nombre total de messages envoyés par minute à partir du Canvas ne dépassera pas la limite de débit. Par exemple, si votre Canvas a une limite de débit de 10 000 par minute et utilise l'e-mail et le SMS, Braze enverra un total de 10 000 messages par minute à travers l'e-mail et le SMS.
 

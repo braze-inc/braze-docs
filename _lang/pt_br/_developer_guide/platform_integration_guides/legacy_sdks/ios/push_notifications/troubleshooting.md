@@ -47,7 +47,7 @@ Quando uma campanha de mensagens push for lançada, a Braze fará solicitações
 
 #### Etapa 4: Remoção de tokens inválidos
 
-Se [os APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) nos informarem que qualquer um dos tokens por push para os quais estávamos tentando enviar uma mensagem é inválido, removeremos esses tokens dos perfis de usuário aos quais eles estavam associados.
+Se os [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) nos informarem que qualquer um dos tokens por push para os quais estávamos tentando enviar uma mensagem é inválido, removeremos esses tokens dos perfis de usuário aos quais eles estavam associados.
 
 ## Utilização dos registros de erros do push
 
@@ -77,7 +77,7 @@ Se o aplicativo não solicitar que você se registre para notificações por pus
     1. No Xcode, acesse **Preferences > Accounts** (Preferências > Contas) (ou use o atalho de teclado <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Selecione o ID Apple que você usa para sua conta de desenvolvedor e clique em **View Details** (Ver Detalhes).
     3. Na próxima página, clique em **<i class="fas fa-redo-alt"></i> Atualizar** e confirme que você está puxando todos os perfis de provisionamento disponíveis.
-- Verifique se você ativou [corretamente a capacitação push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities) em seu app.
+- Verifique se você [ativou corretamente a capacitação push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities) em seu app.
 - Verifique se o seu perfil de provisionamento push corresponde ao ambiente em que você está testando. Os certificados universais podem ser configurados no dashboard do Braze para enviar para o ambiente APNs de desenvolvimento ou produção. Usar um certificado de desenvolvimento para um app de produção ou um certificado de produção para um app de desenvolvimento não funcionará.
 - Verifique se você está chamando nosso método `registerPushToken` com a definição de um ponto de interrupção no código.
 - Verifique se você está em um dispositivo (push não funcionará em um simulador) e se tem uma boa conectividade de rede.
@@ -156,8 +156,16 @@ O iOS 9 e posteriores exigem que os links estejam em conformidade com o ATS para
 
 #### Links profundos de cliques push não abrem
 
-A maior parte do código que lida com deep links também lida com aberturas de push. Primeiro, confira se as aberturas do push estão sendo registradas. Caso contrário, corrija [esse problema](#push-clicks-not-logged) (já que a correção geralmente corrige o tratamento de links).
+A maior parte do código que lida com deep links também lida com aberturas de push. Primeiro, confira se as aberturas do push estão sendo registradas. Caso contrário, [corrija esse problema](#push-clicks-not-logged) (já que a correção geralmente corrige o tratamento de links).
 
 Se as aberturas estiverem sendo registradas, verifique se é um problema com o deep link em geral ou com o manuseio do clique do push de deep linking. Para fazer isso, teste para ver se um deep link de um clique de mensagem no app funciona.
 
+#### Poucas ou nenhuma aberturas diretas
+
+Se pelo menos um usuário abrir a notificação por push do iOS, mas poucas ou nenhuma _abertura direta_ for registrada no Braze, pode haver um problema com a [integração do SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview). Lembre-se de que _as aberturas diretas_ não são registradas para envios de teste ou notificações por push silenciosas.
+
+- Certifique-se de que as mensagens não estejam sendo enviadas como [notificações por push silenciosas]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). A mensagem deve ter texto no título ou no corpo para não ser considerada silenciosa.
+- Verifique novamente as seguintes etapas do [guia de integração push]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration):
+   - [Registre-se para push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): Em cada lançamento de app, de preferência em `application:didFinishLaunchingWithOptions:`, o código da etapa 3 precisa ocorrer. A propriedade delegate de `UNUserNotificationCenter.current()` precisa ser atribuída a um objeto que implemente `UNUserNotificationCenterDelegate` e contenha o método `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:`.
+   - [Ativar a capacitação push]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Verifique se o método `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` foi implementado.
 

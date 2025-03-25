@@ -13,15 +13,14 @@ tool: Canvas
 
 > Os componentes de postergação permitem adicionar uma postergação autônoma a um Canva. Você pode adicionar uma postergação ao seu Canva sem precisar adicionar uma mensagem associada. 
 
-As postergações podem fazer com que sua tela pareça mais limpa. Onde antes era necessário criar duas etapas completas, você pode criar uma etapa de postergação e uma única etapa completa. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
-
-Você também pode usar esse componente para postergar uma etapa diferente até uma data exata, até um dia específico ou até um dia específico da semana.
+As postergações podem fazer com que sua tela pareça mais limpa. Você também pode usar esse componente para postergar uma etapa diferente até uma data exata, até um dia específico ou até um dia específico da semana. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Criar uma postergação
 
-Para criar uma postergação, primeiro adicione uma etapa do canva. Arraste e solte o componente Postergação da barra lateral ou clique no botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Postergação**.
+Para criar uma postergação, adicione uma etapa do Canva. Arraste e solte o componente Postergação da barra lateral ou clique no botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Postergação**.
 
 Há vários detalhes a serem considerados ao criar uma postergação em sua jornada no canva.
+
 - O limite de postergação é de 30 dias.
 - Um componente de postergação só pode se conectar a uma etapa seguinte.
 
@@ -32,12 +31,14 @@ Você pode escolher o tipo de postergação antes da próxima mensagem em seu Ca
 {% tabs %}
   {% tab Após uma duração %}
 
-  A opção **Após uma duração** permite a postergação de usuários por um número definido de segundos, minutos, horas, dias ou semanas, e em um horário específico. Por exemplo, é possível fazer a postergação de usuários por quatro horas ou por um dia. 
+  A opção **Após uma duração** permite a postergação de usuários por um número definido de segundos, minutos, horas, dias ou semanas, e em um horário específico. Por exemplo, é possível fazer a postergação de usuários por quatro horas ou por um dia.
   
-  Note a diferença entre a forma como os "dias" e os "dias corridos" são calculados. 
+  Note a diferença entre a forma como os "dias" e os "dias corridos" são calculados.
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
     - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
+
+  Também é possível selecionar **Em um horário específico** para especificar quando os usuários avançarão no Canva. Essa opção leva em conta a hora em que o usuário entrou na etapa de postergação. Se esse tempo estiver além do tempo configurado nas configurações, acrescentaremos mais horas à postergação. Por exemplo, digamos que hoje seja 11 de dezembro e que nossa etapa de postergação esteja definida como **Após uma semana** às 8 horas UTC. Se um usuário entrar na etapa de postergação em 4 de dezembro, ele será liberado da etapa de postergação para continuar sua jornada hoje se tiver entrado originalmente na etapa de postergação em um horário anterior às 8h UTC. Se entrar na etapa de postergação após esse horário, o usuário será postergado até o dia seguinte (a próxima ocorrência desse horário). 
 
   {% endtab %}
   {% tab Até uma data específica %}
@@ -60,7 +61,11 @@ Você pode escolher o tipo de postergação antes da próxima mensagem em seu Ca
 
 Digamos que seja 10 de junho. Em 11 de junho, você gostaria que os usuários entrassem no canva e recebessem uma mensagem sobre uma promoção futura. Em seguida, mantenha os usuários no canva até 17 de junho, às 15 horas, fuso local. Às 15 horas, fuso local, do dia 17 de junho, você deseja enviar aos usuários uma mensagem de lembrete sobre a promoção.
 
-Você começaria adicionando uma etapa completa que seria enviada imediatamente após os usuários entrarem no Canva em 11 de junho. Em seguida, crie uma etapa de postergação que mantenha os usuários na etapa até as 15 horas, fuso local, do dia 17 de junho. Depois disso, você vincularia a etapa de postergação a uma etapa completa que envia sua mensagem imediatamente.
+A sequência de etapas do Canva pode ser parecida com a seguinte:
+
+1. Comece adicionando uma etapa de Mensagens que é enviada imediatamente após os usuários entrarem no Canva em 11 de junho.
+2. Crie uma etapa de postergação que mantenha os usuários até as 13 horas, fuso local, do dia 17 de junho.
+3. Vincule a etapa de postergação a outra etapa de mensagem que envia sua mensagem imediatamente.
 
 ### Componentes de postergação no final de uma tela {#delay-as-last-step}
 
@@ -72,7 +77,7 @@ As postergações têm três estatísticas disponíveis na exibição de anális
 
 | Métrico | Descrição |
 |---|---|
-| `Entered` | Reflete o número de vezes que a etapa foi inserida. Se o seu canva tiver reelegibilidade e um usuário entrar em uma etapa do canva duas vezes, duas entradas serão registradas. |
+| `Entered` | Reflete o número de vezes que a etapa foi inserida. Se o seu Canva tiver reelegibilidade e um usuário inserir uma etapa do canva duas vezes, duas entradas serão registradas. |
 | `Proceeded to Next Step` | Reflete o número de entradas que prosseguiram para a próxima etapa do canva. |
 | `Exited Canvas` | Reflete o número de entradas que saíram do Canva e não prosseguiram para a próxima etapa. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

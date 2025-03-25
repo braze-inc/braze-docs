@@ -169,7 +169,7 @@ Um conector é uma integração entre a Tealium e outro fornecedor usada para tr
 
 Depois que a fonte tiver sido configurada, volte à página do conector Braze em **EventStream** > **Event Connectors** > **\+ Add Connector** > **Braze**. 
 
-Em seguida, selecione a fonte de dados que você acabou de criar e, em **Event Feed**, selecione **All Events (Todos os eventos** ) ou uma especificação de evento específica, a jornada recomendada para enviar apenas valores alterados para o Braze. Selecione **Continuar**.
+Em seguida, selecione a fonte de dados que você acabou de criar e, em **Event Feed**, selecione **All Events (Todos os eventos)** ou uma especificação de evento específica, a jornada recomendada para enviar apenas valores alterados para o Braze. Selecione **Continuar**.
 
 #### Configuração
 
@@ -236,7 +236,7 @@ Certifique-se de selecionar **Salvar / Publicar** para seu conector quando termi
 
 Depois que o conector estiver instalado e funcionando, teste-o para garantir que esteja funcionando corretamente. A maneira mais simples de testar isso é usar a Tealium **Trace Tool**. Para começar a usar o Trace, confirme se adicionou a extensão de navegador Tealium Tools.
 
-1. Para iniciar um novo rastreamento, encontre **Server-Side** (Lado do servidor) na barra lateral e selecione **Trace** (Rastrear). Selecione **Iniciar** e capture a ID do rastreamento.
+1. Para iniciar um novo rastreamento, selecione **Trace (Rastreamento)** na barra lateral, em opções **Server-Side**. Selecione **Iniciar** e capture a ID do rastreamento.
 2. Abra a extensão do navegador e insira a ID do rastreamento no AudienceStream Trace.
 3. Examine o registro em tempo real.
 4. Verifique a ação que deseja validar selecionando a entrada **Ações disparadas** para expandir.
@@ -286,7 +286,7 @@ Os usuários que se integram à Tealium usando a tag SDK para Web da Braze podem
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
 [18]: {% image_buster /assets/img/tealium/braze_connection.png %}
-Daqui a [19]: https://docs.tealium.com/iq-tag-management/events/about/
+[19]: https://docs.tealium.com/iq-tag-management/events/about/
 Daqui a [21]: https://docs.tealium.com/server-side/connectors/trace/about/
 [22]: {% image_buster /assets/img/tealium/tealium_overview.png %}
 [23]: {% image_buster /assets/img/tealium/remote_mappings.png %}

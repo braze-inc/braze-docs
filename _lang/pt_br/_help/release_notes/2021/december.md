@@ -17,7 +17,7 @@ A partir de dezembro de 2021, as seguintes alterações entrarão em vigor para 
 
 ## Novas propriedades para eventos de engajamento com mensagens do Currents
 
-Novas propriedades foram adicionadas para eventos selecionados [de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Essa atualização se aplica aos seguintes eventos de engajamento com mensagens do Currents e a todos os parceiros que os utilizam:
+Novas propriedades foram adicionadas para [eventos selecionados de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Essa atualização se aplica aos seguintes eventos de engajamento com mensagens do Currents e a todos os parceiros que os utilizam:
 
 - Adicione `LINK_ID`, `LINK_ALIAS` a:
   - Clique no e-mail (todos os destinos)
@@ -53,8 +53,8 @@ Se quiser saber mais, visite nosso novo artigo sobre o [Amazon Personalize]({{si
 
 ### Yotpo - Comércio eletrônico
 
-A integração entre [o Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) e o Braze permite extrair e exibir dinamicamente classificações com estrelas, principais avaliações e conteúdo visual gerado pelo usuário sobre produtos em e-mails e outros canais de comunicação no Braze. Também é possível incluir dados de fidelidade no nível do cliente em e-mails e outros métodos de comunicação para criar uma interação mais personalizada, aumentando as vendas e a fidelidade.
+A integração entre o [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) e o Braze permite extrair e exibir dinamicamente classificações com estrelas, principais avaliações e conteúdo visual gerado pelo usuário sobre produtos em e-mails e outros canais de comunicação no Braze. Também é possível incluir dados de fidelidade no nível do cliente em e-mails e outros métodos de comunicação para criar uma interação mais personalizada, aumentando as vendas e a fidelidade.
 
 ### Zeotap - Plataforma de dados do cliente
 
-Com a integração entre [o Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) e o Braze, você pode ampliar a escala e o alcance de suas campanhas sincronizando os segmentos de clientes do Zeotap para mapear os dados de usuários do Zeotap para as contas de usuários do Braze. Em seguida, é possível agir com base nesses dados, oferecendo experiências de direcionamento personalizadas aos seus usuários.
+Com a integração entre o [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) e o Braze, você pode ampliar a escala e o alcance de suas campanhas sincronizando os segmentos de clientes do Zeotap para mapear os dados de usuários do Zeotap para as contas de usuários do Braze. Em seguida, é possível agir com base nesses dados, oferecendo experiências de direcionamento personalizadas aos seus usuários.

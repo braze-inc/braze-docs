@@ -34,7 +34,7 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
+![]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:45%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、製品 (Classic Straight Leg) の再入荷時にユーザーをターゲットとするキャンバスであることを示すようにします。

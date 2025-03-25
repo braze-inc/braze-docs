@@ -10,7 +10,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Excluir telas progr
 ---
 {% api %}
 # Excluir telas programadas disparadas pela API
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
@@ -46,9 +46,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| Obrigatória | String | Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
+| `canvas_id`| Obrigatória | String | Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Obrigatória | String | O endereço `schedule_id` a ser excluído (obtido da resposta à programação de criação). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Exemplo de solicitação

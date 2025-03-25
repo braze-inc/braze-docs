@@ -33,9 +33,18 @@ Un [groupe d'abonnement][1] ] est un ensemble de numéros de téléphone d'envoi
 
 ### Débit et limites des messages MMS
 
-Pour les MMS, la limite des messages est de 1 Mo (ceci inclut la ressource multimédia et la taille du corps du message). Pour plus de sécurité, Braze recommande de ne pas dépasser 600 Ko pour votre ressource multimédia et d'inclure un corps de message.
+Les opérateurs imposent leurs propres limites de taille de fichier, qui déterminent en fin de compte le succès des envois de MMS. Ces limites peuvent varier en fonction de la zone géographique et de l'opérateur. Pour plus de sécurité, Braze recommande de ne pas dépasser 600 Ko pour votre ressource multimédia et d'inclure un corps de message. Nous vous recommandons également de procéder à des tests pour confirmer que vos médias peuvent être diffusés par les opérateurs de vos utilisateurs.
 
-Le débit MMS est d’un segment par seconde via un code long.
+Le débit des MMS est d'un segment par seconde par l'intermédiaire d'un code long.
+
+#### Limitation de la taille des fichiers des transporteurs
+
+| Taille du fichier | Traitement des transporteurs |
+| --- | --- |
+| 300 KB | Tous les opérateurs devraient pouvoir traiter de manière fiable des envois MMS de cette taille. |
+| 600 KB | Cette taille est considérée comme la taille maximale standard pour les MMS par la plupart des opérateurs. |
+| 1 MB |  La plupart des opérateurs américains et canadiens peuvent traiter des envois MMS de cette taille, bien que cela puisse varier d'un opérateur à l'autre. Certains opérateurs peuvent autoriser des tailles de fichiers plus importantes. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### MMS entrant
 

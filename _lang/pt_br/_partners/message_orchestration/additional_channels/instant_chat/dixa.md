@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Dixa
 
-> [A Dixa](https://www.dixa.com/) é uma plataforma de atendimento ao cliente projetada para aprimorar as experiências de suporte unificando canais de comunicação como chat, e-mail, telefone e redes sociais em uma única interface. Ele ajuda as empresas a melhorar a satisfação e a eficiência do cliente por meio de roteamento inteligente, automação e insights de performance em tempo real.
+> A [Dixa](https://www.dixa.com/) é uma plataforma de atendimento ao cliente projetada para aprimorar as experiências de suporte unificando canais de comunicação como chat, e-mail, telefone e redes sociais em uma única interface. Ele ajuda as empresas a melhorar a satisfação e a eficiência do cliente por meio de roteamento inteligente, automação e insights de performance em tempo real.
 
 A integração Braze e Dixa oferece uma visão melhor de todos os seus usuários, fornecendo aos agentes de atendimento ao cliente dados do Braze em tempo real.
 
@@ -44,7 +44,7 @@ Você deve ser um administrador da Dixa para configurar as integrações dentro 
 Na página **Criar widget do Braze**, preencha os seguintes campos obrigatórios para criar a integração:
 
 - **Nome do widget:** Esse é o nome da integração que será usado posteriormente na barra lateral da conversa como o título.
-- **URL DA API:** Esse é o URL do endpoint da API do Braze REST para sua instância.
+- **URL de API:** Esse é o URL do endpoint da API do Braze REST para sua instância.
 - **chave de API:** Essa é a chave de API do Braze que você criou nos pré-requisitos.
 
 ### Etapa 2: Configurar a integração

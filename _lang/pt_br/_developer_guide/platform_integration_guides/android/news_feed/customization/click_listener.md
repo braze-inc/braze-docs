@@ -15,9 +15,7 @@ channel:
 
 > Este artigo de referência aborda como lidar manualmente com os cliques no feed de notícias em seu aplicativo para Android ou FireOS.
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Para saber mais, consulte o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Você pode lidar com os cliques no feed de notícias manualmente, configurando um ouvinte de cliques no feed de notícias personalizado. Isso ativa casos de uso, como o uso seletivo do navegador da Web nativo para abrir links da Web.
 

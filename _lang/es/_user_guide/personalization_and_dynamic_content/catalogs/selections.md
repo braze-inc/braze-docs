@@ -28,11 +28,15 @@ Para crear una selección, haga lo siguiente.
 1. Vaya a **Catálogos** y seleccione su catálogo de la lista.
 2. Seleccione la pestaña **Selección** y haga clic en **Crear selección**.
 3. Dé a su selección un nombre y una descripción opcional.
-4. En **Campo de filtro**, seleccione la columna del catálogo por la que desea filtrar. Los campos de cadena con más de 1.000 caracteres no pueden seleccionarse para los filtros.
+4. En **Campo de filtro**, seleccione la columna del catálogo por la que desea filtrar. Los campos de cadena con más de 1.000 caracteres no se pueden seleccionar para filtrar.
 5. Termine de definir los criterios de filtrado seleccionando el operador correspondiente (por ejemplo, "igual" o "no igual") y el atributo.
 6. En la sección **Tipo de ordenación**, determine cómo se ordenan los resultados. Por defecto, los resultados no se muestran en un orden determinado. Para especificar la ordenación por un campo concreto, desactive **Ordenar aleatoriamente** y especifique el **Campo de ordenación** y el **Orden de ordenación** (ascendente o descendente).
-7. En la sección **Límite de resultados**, introduzca el número máximo de resultados, hasta 50.
-8. Haga clic en **Crear selección**.
+7. En la sección **Límite de** resultados, introduce los resultados (hasta 50).
+8. Selecciona **Crear selección**.
+
+### Prueba y vista previa
+
+Después de crear una selección, puedes utilizar la sección **Vista previa para el usuario** para ver lo que devolvería una selección para un usuario aleatorio o para un usuario concreto. Para las selecciones que utilizan personalización, sólo puedes ver la vista previa después de seleccionar un usuario.
 
 ### Líquido en los resultados de la selección
 

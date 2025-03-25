@@ -30,13 +30,13 @@ Antes de lançar uma campanha de cartão de banner em seu app, você deve config
 
 #### Etapa 1: Criar um novo posicionamento
 
-Acesse **Settings** > **Banner Cards Placements**e selecione **Create Placement**).
+Acesse **Settings** > **Banner Cards Placements** e selecione **Create Placement**).
 
 ![Seção de posicionamentos de cartão de banner para criar IDs de posicionamento.]({% image_buster /assets/img/banner_cards/create_placement.png %})
 
 #### Etapa 2: Preencha os detalhes
 
-Dê um nome à sua colocação e atribua a ela uma **ID de colocação**. Opcionalmente, você pode adicionar uma descrição para sua colocação.
+Dê um nome à sua colocação e atribua a ela uma **ID de posicionamento**. Opcionalmente, você pode adicionar uma descrição para sua colocação.
 
 Trabalhe com sua equipe de marketing para criar essa ID. Essa é a ID que será referenciada no código do seu aplicativo, e sua equipe de marketing usará a ID para atribuir uma campanha ao local no seu app. 
 
@@ -327,9 +327,11 @@ This feature is not currently supported on Roku.
 
 ## Análise de dados
 
-O Braze tratará automaticamente de todo o registro de impressões ao usar os métodos do SDK para inserir cartões de banner. 
+Não é necessário se preocupar com o rastreamento manual das impressões, pois o Braze cuida automaticamente de todo o registro de impressões ao usar os métodos do SDK para inserir cartões de banner.
 
-Se precisar analisar e renderizar o HTML, [entre em contato conosco](mailto:banners-feedback@braze.com). Você pode usar o seguinte método para rastrear impressões:
+Se precisar analisar e renderizar o HTML em uma exibição personalizada, [entre em contato conosco](mailto:banners-feedback@braze.com).
+
+{% details Para saber mais sobre o rastreamento manual de impressões %}
 
 {% alert important %}
 É provável que a personalização de sua integração seja desnecessária, portanto, considere cuidadosamente a etapa a seguir.
@@ -406,6 +408,8 @@ This feature is not currently supported on Roku.
 ```
 {% endtab %}
 {% endtabs %}
+
+{% enddetails %}
 
 ## Práticas recomendadas
 

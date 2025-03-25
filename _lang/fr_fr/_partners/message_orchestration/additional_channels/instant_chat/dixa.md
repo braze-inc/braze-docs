@@ -18,7 +18,7 @@ L'intégration de Braze et Dixa offre une meilleure vue sur tous vos utilisateur
 
 Avant de commencer, vous avez besoin des éléments suivants :
 
-| Prérequis          | Descriptif                                                                                                                                                       |
+| Prérequis          | Description                                                                                                                                                       |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Un compte Dixa        | Un compte administrateur Dixa est nécessaire pour bénéficier de ce partenariat.                                                                                           |
 | Une clé de l'API REST de Braze  | Une clé API REST Braze avec les autorisations `users.export.ids` et `email.status`.<br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
@@ -39,7 +39,7 @@ Vous devez être un administrateur Dixa pour configurer les intégrations dans D
 
 ![][1]{: style="width:450px;"}
 
-### Étape 1 : Créer l'intégration à Dixa
+### Étape 1 : Créer l'intégration à Dixa
 
 Sur la page **Créer un widget Braze**, remplissez les champs obligatoires suivants pour créer l'intégration :
 
@@ -47,7 +47,7 @@ Sur la page **Créer un widget Braze**, remplissez les champs obligatoires suiva
 - **URL DE L'API :** Il s'agit de l'URL de l'endpoint de l'API REST de Braze pour votre instance.
 - **Clé API :** Il s'agit de la clé API Braze que vous avez créée dans les conditions préalables.
 
-### Étape 2 : Configurer l'intégration
+### Étape 2 : Configurer l'intégration
 
 Configurez ensuite l'intégration de Braze et Dixa. Choisissez parmi les options suivantes pour ajuster l'affichage du widget Braze dans la barre latérale de conversation.
 

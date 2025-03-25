@@ -79,13 +79,19 @@ Braze は、コントロールグループのユーザーとトリートメン�
 
 ## コントロールグループメンバーをエクスポートする {#export-group-members}
 
-グローバルコントロールグループに属するユーザーを確認するには、CSV または API を使用してグループのメンバーをエクスポートします。 
+グローバルコントロールグループのユーザーを確認したい場合は、CSVまたはAPIでグループのメンバーをエクスポートできる。 
 
-CSV エクスポートを実行するには、[**グローバルコントロールグループ設定**] タブに移動し、[<i class="fas fa-download"></i>**エクスポート**] をクリックします。API 経由でエクスポートするには、[`/users/export/global_control_group`　エンドポイント]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)を使用します。
+CSV エクスポートを実行するには、[**グローバルコントロールグループ設定**] タブに移動し、[<i class="fas fa-download"></i>**エクスポート**] をクリックします。API 経由でエクスポートするには、[エンドポイント`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)を使用します。
 
 {% alert important %}
 履歴コントロールグループは保持されないため、エクスポートできるのは現在のグループのメンバーのみです。コントロールグループを無効にする前に、必要な情報をエクスポートしてください。
 {% endalert %}
+
+## ユーザーがグローバルコントロールグループに属しているかどうかを表示する。
+
+グローバルコントロールグループのメンバーシップは、個別のユーザープロファイルの [**エンゲージメント**] タブにある [**その他**] セクションで確認できます。
+
+![ユーザーのランダムバケット番号が2030であり、グローバルコントロールグループに所属していることをレポートする [その他] セクション][1]{: style="max-width:60%;"}
 
 ## レポート
 
@@ -163,6 +169,7 @@ CSV エクスポートを実行するには、[**グローバルコントロー�
 
 最も関心のあるメトリックのベースライン動作を検討します。年単位でのみ更新されるサブスクリプションプランの購入料金に関心がありますか?または、顧客は測定したいイベントについて毎週の習慣がありますか?ユーザーがメッセージングによって行動を変える可能性が生じるまでにどのくらいの時間がかかるかを考えてみてください。テストの実行期間を決定したら、テストを早期に終了したり、最終結果を記録したりしないようにしてください。結果にバイアスがかかる可能性があります。
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

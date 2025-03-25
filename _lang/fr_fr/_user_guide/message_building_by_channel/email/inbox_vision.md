@@ -2,7 +2,7 @@
 nav_title: Inbox Vision
 article_title: Inbox Vision
 page_order: 9
-description: "Cet article de référence explique comment configurer Inbox Vision, une fonctionnalité qui permet aux spécialistes du marketing d’afficher leurs e-mails du point de vue de divers clients de messagerie et appareils mobiles."
+description: "Cette page explique comment configurer Inbox Vision, une fonctionnalité qui permet aux marketeurs de visualiser leurs e-mails du point de vue de divers clients de messagerie et appareils mobiles."
 tool:
   - Dashboard
 channel:
@@ -12,34 +12,33 @@ channel:
 
 # Inbox Vision
 
-> Inbox Vision vous permet de visualiser vos e-mails du point de vue de différents clients de messagerie et appareils mobiles. 
-
-## Tester votre e-mail dans Inbox Vision
-
-Inbox Vision fonctionne lorsque l'**utilisateur aléatoire** est sélectionné pour la **prévisualisation en tant qu'utilisateur** et ne conserve aucun utilisateur personnalisé ni aucun autre paramètre d'utilisateur de prévisualisation. Cela signifie que si vous sélectionnez **Utilisateur personnalisé** et que vous exécutez Vision de la boîte de réception, ce qui s'affiche dans Vision de la boîte de réception peut différer de l'aperçu du message ailleurs. 
-
-Pour tester votre message e-mail dans Inbox Vision, procédez comme suit :
-
-1. Allez dans votre éditeur par glisser-déposer ou dans votre éditeur d'e-mails HTML. 
-2. Ouvrez l'onglet **Prévisualisation et test**.
-3. Sélectionnez **Inbox Vision** et cliquez sur **Exécuter Inbox Vision**. <br><br> ![][3]{: style="max-width:80%;"} <br><br> Braze envoie ensuite une version HTML de votre e-mail à différents clients e-mail utilisés dans le monde entier, ce qui peut prendre entre deux et dix minutes. <br><br> Les aperçus HTML rendus seront divisés en trois sections : 
-- **Clients Web** 
-- **Clients de l’application** 
-- **Clients mobiles** <br><br>
-4. Sélectionnez une mosaïque pour afficher l’aperçu plus en détail. <br><br> Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. Prenez garde au fait que votre e-mail peut s’afficher différemment sur les ordinateurs de bureau que sur les appareils mobiles. En affichant ces prévisualisations, vous pouvez vous assurer que le contenu de vos e-mails s’affiche comme vous le désirez.
-
-{% alert tip %}
-Utilisez Inbox Vision pour tester les différences entre les modes sombre et lumineux afin de confirmer que vous recevez bien vos e-mails !
-{% endalert %}
-
-![Overview d’Inbox Vision pour l’éditeur HTML.][1]
-
-{: start="5"}
-5\. Apportez des modifications à un modèle, si nécessaire, puis cliquez sur **Réexécuter le test** pour voir les aperçus mis à jour.
+> Inbox Vision vous permet de visualiser vos e-mails du point de vue de différents clients de messagerie et appareils mobiles. Par exemple, vous pouvez utiliser Inbox Vision pour tester les différences entre les modes sombre et lumineux afin de confirmer que vos e-mails sont parfaitement adaptés.
 
 {% alert important %}
 En général, votre e-mail ne fonctionnera pas avec Inbox Vision si le contenu de votre e-mail repose sur des informations de modélisation, telles que les informations du profil utilisateur. En effet, Braze modélise un utilisateur vide lorsque nous envoyons des e-mails à l’aide de cette fonctionnalité.
 {% endalert %}
+
+## Tester votre e-mail dans Inbox Vision
+
+Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. Prenez garde au fait que votre e-mail peut s’afficher différemment sur les ordinateurs de bureau que sur les appareils mobiles. En affichant ces prévisualisations, vous pouvez vous assurer que le contenu de vos e-mails s’affiche comme vous le désirez.
+
+Pour tester votre message e-mail dans Inbox Vision, procédez comme suit :
+
+1. Allez dans votre éditeur par glisser-déposer ou dans votre éditeur d'e-mails HTML.
+2. Dans votre éditeur, sélectionnez **Prévisualiser et tester**.
+3. Sélectionnez **Boîte de réception**. 
+4. Sélectionnez **Exécuter la vision de la boîte de réception**. Cela peut prendre de deux à dix minutes.
+5. Ensuite, sélectionnez une tuile pour afficher l'aperçu plus en détail. Ces aperçus sont regroupés dans les sections suivantes : **Clients web**, **clients applicatifs** et **clients mobiles**.
+
+![Overview d’Inbox Vision pour l’éditeur HTML.][1]
+
+{: start="6"}
+6\. Apportez des modifications à un modèle, si nécessaire.
+7\. Sélectionnez **Ré-exécuter le test** pour voir les aperçus mis à jour.
+
+### Prévisualisation en tant qu'utilisateur
+
+Lorsque vous prévisualisez l'e-mail en tant qu'utilisateur aléatoire, les paramètres ou attributs spécifiques associés à un utilisateur, tels que son nom ou ses préférences, ne sont pas enregistrés pour les prévisualisations actuelles ou futures. Lorsque vous sélectionnez un utilisateur personnalisé, l'aperçu affiché dans Vision Boîte de réception peut différer de l'aperçu des messages affiché ailleurs, car cette option utilise des données utilisateur spécifiques pour créer l'aperçu.
 
 ## Analyse des codes
 
@@ -61,11 +60,15 @@ Les tests de courrier indésirable visent à prédire si votre e-mail s’affich
 
 ### Consultation des résultats des tests courrier indésirable
 
-Pour vérifier les résultats de votre test de courrier indésirable, cliquez sur l'onglet **Tests de courrier indésirable** dans la section **Vision de la boîte de réception**. Le tableau **Résultat du test de courrier** indésirable répertorie le nom, l'état et le type du filtre anti-spam.
+Pour vérifier les résultats de votre test courrier indésirable, procédez comme suit :
+
+1. Sélectionnez l'onglet **Tests courrier indésirable** dans la section **Vision de la boîte de réception**. Le tableau **Résultat du test de courrier** indésirable répertorie le nom, l'état et le type du filtre anti-spam.
 
 ![Tableau des résultats des tests de courrier indésirable à trois colonnes : Nom, État et Type. Il existe une liste de filtres anti-spam et de filtres de fournisseurs de services Internet qui ont réussi les tests de courrier indésirable, indiquant que la campagne par e-mail ne s’affichera pas dans le dossier de courrier indésirable.][4]
 
-Après avoir examiné ces résultats et apporté d'éventuels ajustements à votre campagne e-mail, cliquez sur **Ré-exécuter le test** pour recharger les résultats de votre test de courrier indésirable.
+{: start="2"}
+2\. Examinez ces résultats et apportez d'éventuels ajustements à votre campagne d'e-mail.
+3\. Sélectionnez **Réexécuter le test** pour recharger les résultats de votre test de courrier indésirable.
 
 ## Précision du test
 

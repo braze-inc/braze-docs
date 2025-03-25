@@ -32,7 +32,7 @@ description: "この記事では、「ニュースフィードカード分析の
 
 | パラメーター   | required | データ型 | 説明 |
 | ----------- | -------- | --------- | ----------- |
-| `card_id` | 必須 | 文字列 | [カード API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 指定したカードの `card_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページやダッシュボード内のカード詳細ページで確認できるほか、[ニュースフィードカードリストのエクスポート]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)エンドポイントも使用できます。|
+| `card_id` | required | 文字列 | [カード API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 指定したカードの `card_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページやダッシュボード内のカード詳細ページで確認できるほか、[ニュースフィードカードリストのエクスポート]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)エンドポイントも使用できます。|
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
 | `unit` | オプション | 文字列 | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |

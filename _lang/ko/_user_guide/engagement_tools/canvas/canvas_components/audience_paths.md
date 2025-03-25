@@ -78,6 +78,16 @@ tool: Canvas
 
 이 시나리오에서는 대신 [실험 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)를 사용해 보십시오.
 
+### 인텔리전트 채널 필터와 오디언스 경로 사용
+
+오디언스 경로 단계와 인텔리전트 채널 필터의 조합을 사용하여 각 사용자의 선호도와 행동에 맞게 메시징 경험을 조정할 수 있습니다. 이렇게 하면 사용자가 적절한 채널을 통해 가장 관련성 높은 메시지를 받을 수 있습니다.
+
+예를 들어, 오디언스 경로 단계에서 세 개의 오디언스를 만들 수 있습니다: 이메일, 모바일 푸시, 그리고 다른 모든 사람들. 이메일 오디언스, 필터 `Intelligent Channel is Email`를 추가하세요. 모바일 푸시 오디언스를 위해 필터 `Intelligent Channel is Mobile Push`를 추가하세요. 그런 다음, 각 오디언스 경로에 대해 개인화된 관련 메시지를 전달하기 위해 메시지 단계를 추가할 수 있습니다.
+
+{% alert tip %}
+우리의 [Braze Canvas 템플릿]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates)을 확인하여 이러한 미리 만들어진 템플릿을 어떻게 유리하게 사용자 정의할 수 있는지에 대한 예를 찾아보세요.
+{% endalert %}
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}

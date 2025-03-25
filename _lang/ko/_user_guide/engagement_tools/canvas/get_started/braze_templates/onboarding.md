@@ -60,7 +60,7 @@ tool: Canvas
 
 ### 4단계: 오디언스 타겟팅
 
-적절한 오디언스를 타겟팅하면 신규 사용자와 효과적으로 소통할 수 있습니다. 예를 들어, 이 템플릿은 앱을 처음 사용한 지 하루가 되지 않은 모든 사용자를 대상으로 하며, 이 사용 사례에 적합합니다. 따라서 이 섹션은 그대로 두겠습니다.
+적절한 오디언스를 타겟팅하면 신규 사용자와 효과적으로 소통할 수 있습니다. 예를 들어, 이 템플릿은 앱을 처음 사용한 지 하루가 되지 않은 모든 사용자를 대상으로 하며, 이는 사용 사례에 정확합니다. 따라서 이 섹션은 그대로 두겠습니다.
 
 ### 5단계: 전송 설정 설정
 
@@ -98,7 +98,7 @@ tool: Canvas
 캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 캔버스 **시작을** 선택하여 캔버스를 실행합니다. 이제 신규 사용자에게 개인화된 온보딩 경험을 제공하여 지속적인 관계를 구축할 수 있습니다!
 
 {% alert tip %}
-캔버스를 시작하기 전과 후에 고려해야 할 사항은 출시 전후 [체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
+캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}

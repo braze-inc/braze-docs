@@ -67,7 +67,7 @@ Uma implementação de exemplo disso pode ser encontrada no BrazeProject dentro 
 
 ## Modelo de dados do cartão de conteúdo
 
-O modelo de dados dos cartões de conteúdo está disponível no React Native SDK. Para uma referência completa do modelo de dados do cartão de conteúdo, consulte a [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) e a [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) documentação.
+O modelo de dados dos cartões de conteúdo está disponível no React Native SDK. Para uma referência completa do modelo de dados do cartão de conteúdo, consulte a documentação para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) e para [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard).
 
 O SDK React Native do Braze tem três tipos exclusivos de cartões de conteúdo que compartilham um modelo básico: **somente imagem**, **imagem com legenda** e **clássico**.
 
@@ -108,7 +108,7 @@ Os cartões somente de imagem são imagens clicáveis e em tamanho real.
 |`imageAspectRatio` | A proporção da imagem do cartão. Destina-se a servir como uma dica antes que o carregamento da imagem seja concluído. Nota que a propriedade pode não ser fornecida em certas circunstâncias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para uma referência completa do cartão de imagem apenas, consulte a documentação [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) e [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct).
+Para uma referência completa do cartão de imagem apenas, consulte a documentação para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) e para [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct).
 
 ### Propriedades do modelo de cartão de conteúdo de imagem legendada
 
@@ -148,7 +148,7 @@ Os cartões de controle incluem todas as propriedades básicas, com algumas dife
 - A propriedade `isControl` tem a garantia de ser `true`.
 - A propriedade `extras` tem a garantia de estar vazia.
 
-Para uma referência completa do cartão de controle, consulte a [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) e a [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct) documentação.
+Para uma referência completa do cartão de controle, consulte a documentação para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) e para [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct).
 
 ## Suporte a GIFs
 

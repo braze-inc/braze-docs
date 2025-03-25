@@ -402,7 +402,7 @@ Braze.configure(this, brazeConfig)
 
 Braze 대시보드는 푸시 알림 캠페인과 캔버스에서 알림을 클릭할 때 열 딥링크 또는 웹 URL 설정을 지원합니다.
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "딥링크 클릭 액션")
+![드롭다운에서 '애플리케이션에 딥링크'를 선택한 상태에서 Braze 대시보드의 '클릭 동작 시' 설정(]({% image_buster /assets/img_archive/deep_link_click_action.png %} "딥링크 클릭 동작")
 
 #### 백 스택 동작 사용자 지정
 
@@ -467,7 +467,7 @@ Braze 안드로이드 SDK는 [안드로이드 알림 채널을](https://develope
 
 이 시점에서 Braze에서 보낸 알림을 볼 수 있을 것입니다. 이를 테스트하려면 Braze 대시보드의 **캠페인** 페이지로 이동하여 **푸시 알림** 캠페인을 생성하세요. **Android 푸시**를 선택하고 메시지를 디자인합니다. 그런 다음, 작성기에서 눈 아이콘을 클릭하여 테스트 발신자를 가져옵니다. 현재 사용자의 사용자 ID 또는 이메일 주소를 입력하고 **테스트 보내기를** 클릭합니다. 기기에 푸시가 표시됩니다.
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "안드로이드 푸시 테스트")
+![Braze 대시보드의 푸시 알림 캠페인의 '테스트' 탭.]({% image_buster /assets/img_archive/android_push_test.png %} "안드로이드 푸시 테스트")
 
 푸시 표시와 관련된 문제는 [문제 해결 가이드를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/) 참조하세요.
 

@@ -14,7 +14,7 @@ description: "Este artigo de referência cobre como definir valores de fallback 
 
 ## Como eles funcionam
 
-Os valores padrão podem ser adicionados especificando um [Filtro de Líquido][3] (use `|` para distinguir o filtro inline, conforme mostrado) com o nome "default."
+Os valores padrão podem ser adicionados especificando um [Liquid Filter][3] (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
 
 ```
 | default: 'Insert Your Desired Default Here'

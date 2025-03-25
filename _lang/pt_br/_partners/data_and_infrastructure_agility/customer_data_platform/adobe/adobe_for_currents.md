@@ -30,7 +30,7 @@ A integração Braze e Adobe permite que você controle de forma contínua o flu
 1. No Adobe Experience Platform, Acessar **Schemas** > selecionar **Criar esquema** > selecionar **Evento de Experiência** > selecionar **Próximo**.<br><br>![Página de Esquemas da Adobe para o esquema chamado "Braze Currents Walk-Through".][1]<br><br>
 2. Forneça um nome e uma descrição para seu esquema. 
 3. No painel **Composição**, configure os atributos do seu esquema:
-- Em **Field groups**, selecione **Add** e, em seguida, adicione o **Braze Currents User Event** grupo de campos.
+- Em **Field groups**, selecione **Add** e, em seguida, adicione o grupo de campos **Braze Currents User Event**.
 - Selecione **Salvar**.
 
 Para saber mais sobre esquemas, consulte a documentação da Adobe sobre [criação de esquemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui).

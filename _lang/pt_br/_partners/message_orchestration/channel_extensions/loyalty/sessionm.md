@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Plataforma de fidelidade SessionM
 
-> [A SessionM](https://www.mastercardservices.com/en/capabilities/sessionm) é uma plataforma de engajamento com clientes e fidelidade que oferece recursos de gerenciamento de campanhas e soluções de gerenciamento de fidelidade para ajudar os profissionais de marketing a impulsionar o direcionamento para aumentar o engajamento e a lucratividade.
+> A [SessionM](https://www.mastercardservices.com/en/capabilities/sessionm) é uma plataforma de engajamento com clientes e fidelidade que oferece recursos de gerenciamento de campanhas e soluções de gerenciamento de fidelidade para ajudar os profissionais de marketing a impulsionar o direcionamento para aumentar o engajamento e a lucratividade.
 
 ## Pré-requisitos
 
@@ -55,7 +55,7 @@ No Braze, crie um segmento de usuários para direcionamento com promoções e of
 
 Primeiro, crie uma campanha de webhook no Braze e defina o URL do webhook como {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Use Liquid para definir o endereço `user_id` no URL. 
 
-Usando um **corpo de solicitação de** texto bruto, crie o corpo do webhook para incluir as tags desejadas a serem adicionadas ao perfil do usuário na SessionM e o TTL desejado. Um exemplo é:
+Usando um **corpo de solicitação** de texto bruto, crie o corpo do webhook para incluir as tags desejadas a serem adicionadas ao perfil do usuário na SessionM e o TTL desejado. Um exemplo é:
 
  ```
  {
@@ -117,7 +117,7 @@ Em seguida, a SessionM adiciona a oferta à carteira do cliente no estado emitid
 
 ### Etapa 2: Chamar a API SessionM Offer Wallet
 
-Na etapa da campanha ou do Canva com as ofertas da SessionM, use [o Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) para fazer uma chamada de API para o [ponto de extremidade da SessionM `get_user_offers` ](https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers/).
+Na etapa da campanha ou do Canva com as ofertas da SessionM, use o [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) para fazer uma chamada de API para o [endpoint da SessionM `get_user_offers` ](https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers/).
 
 Na solicitação Connected Content, especifique a SessionM `user_id` do usuário e sua `retailer_id` para recuperar a lista completa de ofertas ativas que o cliente tem em sua carteira. Cada solicitação a esse endpoint pode incluir um único usuário. Entre em contato com a equipe do SessionM para obter a chave de string codificada para o cabeçalho de autorização básica na sua chamada de Connected Content.
 
@@ -227,11 +227,11 @@ Crie uma campanha acionada pela API ou uma tela no Braze para ser disparada pela
 
 ![Propriedades do disparador da API.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
-Na guia **Schedule Delivery (Entrega de agendamento** ), anote o ID da campanha ou do Canva, pois ele será adicionado às **Advanced Settings (Configurações avançadas**) da campanha SessionM.
+Na guia **Schedule Delivery (Entrega de agendamento)**, anote o ID da campanha ou do Canva, pois ele será adicionado às **Advanced Settings (Configurações avançadas)** da campanha SessionM.
 
 ![Campanha disparada pela API.]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 
-Finalize os detalhes de sua campanha ou do Canva e selecione **Launch (Iniciar**). 
+Finalize os detalhes de sua campanha ou do Canva e selecione **Launch (Iniciar)**. 
 
 ### Etapa 3: Criar uma campanha promocional ou de envio de mensagens da SessionM
 

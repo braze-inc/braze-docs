@@ -9,7 +9,7 @@ description: "Este artículo le explicará cómo activar el inicio de sesión ú
 
 # Inicio de sesión iniciado por el proveedor de servicios (SP)
 
-> Este artículo le explicará cómo activar el inicio de sesión único SAML para su cuenta Braze.
+> Este artículo te explicará cómo habilitar el inicio de sesión único SAML para tu cuenta Braze y cómo obtener un rastreo SAML.
 
 ## Requisitos
 
@@ -92,3 +92,30 @@ Puedes restringir que los miembros de tu organización solo inicien sesión con 
 ![Sección Reglas de autenticación de la página Configuración de seguridad]({% image_buster /assets/img/sso3.png %})
 
 Al activar las restricciones, los usuarios de Braze de su empresa ya no podrán iniciar sesión utilizando una contraseña, aunque hayan iniciado sesión con una contraseña anteriormente.
+
+## Obtener una traza SAML
+
+Si experimentas problemas de inicio de sesión relacionados con el SSO, obtener un rastreo SAML puede ayudarte a solucionar los problemas de tu conexión SSO identificando lo que se envía en las peticiones SAML.
+
+### Requisitos previos
+
+Para ejecutar un rastreo SAML, necesitarás un rastreador SAML. Aquí tienes dos opciones posibles según tu navegador:
+
+- [Google Chrome](https://chromewebstore.google.com/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/saml-tracer/)
+
+### Paso 1: Abre el rastreador SAML
+
+Selecciona el rastreador SAML en la barra de navegación de tu navegador. Asegúrate de que no está seleccionada la opción **Pausa**, ya que esto impedirá que el rastreador SAML capture lo que se envía en las solicitudes SAML. Cuando el rastreador SAML esté abierto, verás que rellena el rastreo.
+
+![Rastreador SAML para Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
+
+### Paso 2: Iniciar sesión en Braze mediante SSO
+
+Ve a tu panel de Braze e intenta iniciar sesión mediante SSO. Si encuentras un error, abre el rastreador SAML e inténtalo de nuevo. Un rastreo SAML se ha recopilado correctamente si hay una fila con una URL como `https://dashboard-XX.braze.com/auth/saml/callback` y una etiqueta SAML naranja.
+
+### Paso 3: Exportar y enviar a Braze
+
+Selecciona **Exportar**. Para **Seleccionar perfil de filtrado de cookies**, selecciona **Ninguno**. A continuación, selecciona **Exportar**. Esto generará un archivo JSON que puedes enviar al soporte de Braze para una mayor solución de problemas.
+
+![Menú "Exportar preferencias de rastreo SAML" con la opción "Ninguna" seleccionada.]({% image_buster /assets/img/export_saml_trace_preferences.png %})

@@ -17,7 +17,7 @@ search_rank: 6
 
 ### 이벤트 구조
 
-이 이벤트 분석은 일반적으로 메시지 인게이지먼트 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서, 차트를 만들고 기타 유용한 데이터 메트릭을 활용할 수 있습니다.
+이 이벤트 분석은 일반적으로 메시지 인게이지먼트 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
 
 ![사용자별 속성, 캠페인 또는 캔버스 추적 속성, 이벤트별 속성별로 그룹화된 이메일 수신 거부 이벤트를 보여주는 메시지 인게이지먼트 이벤트의 분석]({% image_buster /assets/img/message_engagement_event.png %})
 
@@ -52,7 +52,7 @@ search_rank: 6
 {% enddetails %}
 
 {% alert important %}
-커런츠는 900KB를 초과하는 지나치게 큰 페이로드가 있는 이벤트를 삭제합니다.
+현재 페이로드가 900KB를 초과하는 지나치게 큰 이벤트는 삭제됩니다.
 {% endalert %}
 
 {% alert note %}
@@ -886,7 +886,7 @@ WhatsApp, 중단
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -917,7 +917,7 @@ WhatsApp, 중단
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -957,7 +957,7 @@ WhatsApp, 중단
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1000,7 +1000,7 @@ WhatsApp, 중단
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1040,7 +1040,7 @@ WhatsApp, 중단
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1294,7 +1294,7 @@ WhatsApp, 인바운드 수신
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1310,7 +1310,7 @@ WhatsApp, 인바운드 수신
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1324,7 +1324,7 @@ WhatsApp, 인바운드 수신
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1341,7 +1341,7 @@ WhatsApp, 인바운드 수신
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1363,7 +1363,7 @@ WhatsApp, 인바운드 수신
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1377,7 +1377,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1404,7 +1404,7 @@ WhatsApp, 인바운드 수신
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1417,7 +1417,7 @@ WhatsApp, 인바운드 수신
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1441,7 +1441,7 @@ WhatsApp, 인바운드 수신
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1455,7 +1455,7 @@ WhatsApp, 인바운드 수신
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1487,7 +1487,7 @@ WhatsApp, 인바운드 수신
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1505,7 +1505,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1519,7 +1519,7 @@ WhatsApp, 인바운드 수신
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1538,7 +1538,7 @@ WhatsApp, 인바운드 수신
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1560,7 +1560,7 @@ WhatsApp, 인바운드 수신
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1575,7 +1575,7 @@ WhatsApp, 인바운드 수신
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1603,7 +1603,7 @@ WhatsApp, 인바운드 수신
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1618,7 +1618,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1644,7 +1644,7 @@ WhatsApp, 인바운드 수신
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1659,7 +1659,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1691,7 +1691,7 @@ WhatsApp, 인바운드 수신
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1709,7 +1709,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1723,7 +1723,7 @@ WhatsApp, 인바운드 수신
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1742,7 +1742,7 @@ WhatsApp, 인바운드 수신
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -1765,7 +1765,7 @@ WhatsApp, 인바운드 수신
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1780,7 +1780,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1807,7 +1807,7 @@ WhatsApp, 인바운드 수신
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1822,7 +1822,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -1848,7 +1848,7 @@ WhatsApp, 인바운드 수신
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1864,7 +1864,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(required, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1896,7 +1896,7 @@ WhatsApp, 인바운드 수신
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1924,7 +1924,7 @@ WhatsApp, 인바운드 수신
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1958,7 +1958,7 @@ WhatsApp, 인바운드 수신
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1996,7 +1996,7 @@ WhatsApp, 인바운드 수신
 {
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2032,7 +2032,7 @@ WhatsApp, 인바운드 수신
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2076,7 +2076,7 @@ WhatsApp, 인바운드 수신
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2092,7 +2092,7 @@ WhatsApp, 인바운드 수신
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -2106,7 +2106,7 @@ WhatsApp, 인바운드 수신
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -2123,7 +2123,7 @@ WhatsApp, 인바운드 수신
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -2145,7 +2145,7 @@ WhatsApp, 인바운드 수신
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -2159,7 +2159,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -2186,7 +2186,7 @@ WhatsApp, 인바운드 수신
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2199,7 +2199,7 @@ WhatsApp, 인바운드 수신
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -2223,7 +2223,7 @@ WhatsApp, 인바운드 수신
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2237,7 +2237,7 @@ WhatsApp, 인바운드 수신
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -2911,7 +2911,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -2945,7 +2945,7 @@ WhatsApp, 인바운드 수신
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -2987,7 +2987,7 @@ WhatsApp, 인바운드 수신
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3032,7 +3032,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3077,7 +3077,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(required, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3089,7 +3089,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
 - `message_extras`를 사용하면 연결된 콘텐츠의 동적 데이터, 커스텀 속성(예: 언어, 국가) 및 캔버스 항목 속성을 사용하여 보내기 이벤트에 주석을 달 수 있습니다. 자세한 내용은 [메시지 추가]({{site.baseurl}}/message_extras_tag/) 정보를 참조하세요.
   {% endapi %}
@@ -3134,7 +3134,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3172,7 +3172,7 @@ WhatsApp, 인바운드 수신
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3214,7 +3214,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3260,7 +3260,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3305,7 +3305,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3317,7 +3317,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
   {% api %}
@@ -3361,7 +3361,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3394,7 +3394,7 @@ WhatsApp, 인바운드 수신
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3429,7 +3429,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3474,7 +3474,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3486,7 +3486,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
   {% api %}
@@ -3528,7 +3528,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3561,7 +3561,7 @@ WhatsApp, 인바운드 수신
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3602,7 +3602,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3646,7 +3646,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -3690,7 +3690,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3741,7 +3741,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3771,7 +3771,7 @@ WhatsApp, 인바운드 수신
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -3809,7 +3809,7 @@ WhatsApp, 인바운드 수신
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -3851,7 +3851,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -3893,7 +3893,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -3906,7 +3906,7 @@ WhatsApp, 인바운드 수신
 #### 부동산 세부 정보
 
 - `dispatch_id`의 동작은 캔버스와 캠페인 간에 다르며, 이는 예약된 경우에도 Braze가 예약 가능한 진입 단계를 제외한 캔버스 단계를 트리거된 이벤트로 취급하기 때문입니다. [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)에 대해 자세히 알아보세요.
-- `message_extras`를 사용하면 연결된 콘텐츠의 동적 데이터, 커스텀 속성(예: 언어, 국가) 및 캔버스 항목 속성을 사용하여 보내기 이벤트에 주석을 달 수 있습니다. 자세한 내용은 [메시지 추가]({{site.baseurl}}/message_extras_tag/) 정보를 참조하세요.
+- `message_extras` 를 사용하면 연결된 콘텐츠의 동적 데이터, 사용자 지정 속성(예: 언어 또는 국가) 및 캔버스 항목 속성을 사용하여 보내기 이벤트에 주석을 달 수 있습니다. 자세한 내용은 [메시지 추가]({{site.baseurl}}/message_extras_tag/) 정보를 참조하세요.
   {% endapi %}
 
 
@@ -3948,7 +3948,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -3979,7 +3979,7 @@ WhatsApp, 인바운드 수신
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4017,7 +4017,7 @@ WhatsApp, 인바운드 수신
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4060,7 +4060,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4101,7 +4101,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4165,7 +4165,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -4204,7 +4204,7 @@ WhatsApp, 인바운드 수신
   "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -4249,7 +4249,7 @@ WhatsApp, 인바운드 수신
           "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -4300,7 +4300,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -4350,7 +4350,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -4412,7 +4412,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
@@ -4453,7 +4453,7 @@ WhatsApp, 인바운드 수신
   "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
@@ -4500,7 +4500,7 @@ WhatsApp, 인바운드 수신
           "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "url" : "(optional, string) URL that the user clicked on",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
@@ -4553,7 +4553,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
@@ -4605,7 +4605,7 @@ WhatsApp, 인바운드 수신
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "url" : "(optional, string) URL that the user clicked on",
     "link_url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -4663,7 +4663,7 @@ WhatsApp, 인바운드 수신
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -4696,7 +4696,7 @@ WhatsApp, 인바운드 수신
   "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4736,7 +4736,7 @@ WhatsApp, 인바운드 수신
           "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4781,7 +4781,7 @@ WhatsApp, 인바운드 수신
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4824,7 +4824,7 @@ WhatsApp, 인바운드 수신
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4878,7 +4878,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -4910,7 +4910,7 @@ WhatsApp, 인바운드 수신
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -4949,7 +4949,7 @@ WhatsApp, 인바운드 수신
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4993,7 +4993,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5035,7 +5035,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5088,7 +5088,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -5120,7 +5120,7 @@ WhatsApp, 인바운드 수신
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -5158,7 +5158,7 @@ WhatsApp, 인바운드 수신
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "user_agent" : "(optional, string) User agent on which the spam report occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -5202,7 +5202,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -5244,7 +5244,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -5301,7 +5301,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5330,7 +5330,7 @@ WhatsApp, 인바운드 수신
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5365,7 +5365,7 @@ WhatsApp, 인바운드 수신
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5406,7 +5406,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5445,7 +5445,7 @@ WhatsApp, 인바운드 수신
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5495,7 +5495,7 @@ WhatsApp, 인바운드 수신
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5503,7 +5503,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5532,7 +5532,7 @@ WhatsApp, 인바운드 수신
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5540,7 +5540,7 @@ WhatsApp, 인바운드 수신
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5580,11 +5580,11 @@ WhatsApp, 인바운드 수신
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5626,13 +5626,13 @@ WhatsApp, 인바운드 수신
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -5674,12 +5674,12 @@ WhatsApp, 인바운드 수신
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5695,7 +5695,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -5735,14 +5735,14 @@ WhatsApp, 인바운드 수신
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5772,14 +5772,14 @@ WhatsApp, 인바운드 수신
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -5820,10 +5820,10 @@ WhatsApp, 인바운드 수신
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5866,12 +5866,12 @@ WhatsApp, 인바운드 수신
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -5914,11 +5914,11 @@ WhatsApp, 인바운드 수신
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5930,7 +5930,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -5970,7 +5970,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -5998,7 +5998,7 @@ WhatsApp, 인바운드 수신
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6033,7 +6033,7 @@ WhatsApp, 인바운드 수신
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6072,7 +6072,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -6109,7 +6109,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6160,7 +6160,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6190,7 +6190,7 @@ WhatsApp, 인바운드 수신
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6226,7 +6226,7 @@ WhatsApp, 인바운드 수신
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6266,7 +6266,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -6304,7 +6304,7 @@ WhatsApp, 인바운드 수신
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6360,7 +6360,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6396,7 +6396,7 @@ WhatsApp, 인바운드 수신
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6439,7 +6439,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6486,7 +6486,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6532,7 +6532,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6544,7 +6544,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -6589,7 +6589,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6625,7 +6625,7 @@ WhatsApp, 인바운드 수신
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6668,7 +6668,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6715,7 +6715,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6761,7 +6761,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -6773,7 +6773,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -6819,7 +6819,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -6855,7 +6855,7 @@ WhatsApp, 인바운드 수신
   "message_variation_name" : "(optional, string) Name of the message variation",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -6898,7 +6898,7 @@ WhatsApp, 인바운드 수신
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -6945,7 +6945,7 @@ WhatsApp, 인바운드 수신
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -6991,7 +6991,7 @@ WhatsApp, 인바운드 수신
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -7003,7 +7003,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -7236,7 +7236,7 @@ SMS, 보내기
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7267,7 +7267,7 @@ SMS, 보내기
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7305,7 +7305,7 @@ SMS, 보내기
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7348,7 +7348,7 @@ SMS, 보내기
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7390,7 +7390,7 @@ SMS, 보내기
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7446,7 +7446,7 @@ SMS, 배달
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7476,7 +7476,7 @@ SMS, 배달
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7513,7 +7513,7 @@ SMS, 배달
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7555,7 +7555,7 @@ SMS, 배달
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7596,7 +7596,7 @@ SMS, 배달
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7644,7 +7644,7 @@ SMS, 배달
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7674,7 +7674,7 @@ SMS, 배달
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7711,7 +7711,7 @@ SMS, 배달
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7753,7 +7753,7 @@ SMS, 배달
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -7794,7 +7794,7 @@ SMS, 배달
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -7844,7 +7844,7 @@ SMS, 거부
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -7876,7 +7876,7 @@ SMS, 거부
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -7915,7 +7915,7 @@ SMS, 거부
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -7959,7 +7959,7 @@ SMS, 거부
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -8002,7 +8002,7 @@ SMS, 거부
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -8052,7 +8052,7 @@ SMS, 배달
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
@@ -8083,7 +8083,7 @@ SMS, 배달
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8121,7 +8121,7 @@ SMS, 배달
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
@@ -8164,7 +8164,7 @@ SMS, 배달
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
@@ -8206,7 +8206,7 @@ SMS, 배달
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -8664,7 +8664,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -8688,7 +8688,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -8718,7 +8718,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -8753,7 +8753,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -8786,7 +8786,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -9328,7 +9328,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -9350,7 +9350,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -9378,7 +9378,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to"
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -9411,7 +9411,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -9442,7 +9442,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to"
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -9493,7 +9493,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9526,7 +9526,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "phone_number" : "(optional, string) Phone number of the user in e.164 format (for example +14155552671)",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_group_id" : "(required, string) Subscription group API ID",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9563,7 +9563,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_group_id" : "(required, string) Subscription group API ID",
           "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
@@ -9606,7 +9606,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
@@ -9648,7 +9648,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
@@ -9715,7 +9715,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -9745,7 +9745,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -9778,7 +9778,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
         },
@@ -9819,7 +9819,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "timezone" : "(optional, string) Time zone of the user"
@@ -9859,7 +9859,7 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },

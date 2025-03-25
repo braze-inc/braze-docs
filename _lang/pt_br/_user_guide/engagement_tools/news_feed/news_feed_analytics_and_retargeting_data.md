@@ -13,9 +13,7 @@ hidden: true
 
 # Análise de dados do feed de notícias
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Semelhante às campanhas programadas, a ferramenta Feed de notícias vem com um dashboard de análise de dados para monitorar impressões, cliques e taxas de cliques. Ao clicar em uma mensagem específica do Feed de notícias em seu dashboard, uma série de análises de dados visuais são exibidas. 
 

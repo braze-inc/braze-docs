@@ -25,7 +25,7 @@ Avant de créer un message LINE, faites ce qui suit :
 
 L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte.
 
-## Étape 1 : Choisissez où créer votre message
+## Étape 1 : Choisissez où créer votre message
 
 Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
 
@@ -67,7 +67,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Rédigez votre message LINE
 
-Rédigez votre message en utilisant la personnalisation (comme le contenu liquide ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
+Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
 
 ![LINE avec un message affiché dans l'aperçu.][1]
 

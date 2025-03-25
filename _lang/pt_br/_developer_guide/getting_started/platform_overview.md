@@ -64,7 +64,7 @@ Para saber mais sobre a Braze, confira: [Primeiros passos: Visão geral da arqui
 
 Os dados armazenados no Braze são retidos e podem ser usados para segmentação, personalização e direcionamento enquanto você for um cliente Braze. Isso permite que você aja com base nos dados de perfil de usuários (por exemplo, atividade de sessão ou compras) até que você decida descontinuar essas informações. Por exemplo, um serviço de fluxo de dados poderia rastrear o conteúdo visto por cada inscrito desde o primeiro dia no serviço (mesmo que isso tenha ocorrido há muitos anos) e usar esses dados para enviar mensagens relevantes.
 
-![Um segmento no dashboard do Braze chamado "Compradores recentes" justaposto ao lado de uma tela de telefone mostrando o e-mail "Principais recomendações para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Um segmento no dashboard do Braze chamado "Compradores recentes" colocado ao lado de uma tela de telefone mostrando o e-mail "Principais recomendações para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### Análise de dados do app
 

@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 전송 분석 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 보내기 애널리틱스 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
-# 전송 분석 내보내기
+# 보내기 분석 내보내기
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 API 캠페인의 추적된 `send_id`에 대한 다양한 통계를 매일 검색할 수 있습니다.
+> 이 엔드포인트를 사용하여 추적된 `send_id` API 캠페인에 대한 다양한 통계를 매일 검색할 수 있습니다.
 
 Braze 스토어는 전송 후 14일 동안 분석을 전송합니다. 캠페인 전환은 특정 사용자가 캠페인에서 가장 최근에 수신한 `send_id`로 어트리뷰션됩니다.
 
@@ -34,11 +34,11 @@ Braze 스토어는 전송 후 14일 동안 분석을 전송합니다. 캠페인 
 | --------- | -------- | --------- |------------ |
 | `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 | `send_id` | 필수 | 문자열 | [API 식별자 보내기를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일수입니다. 1에서 100 사이여야 합니다(포함). |
-| `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
+| `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 전 최대 일수. 1에서 100 사이여야 합니다(포함). |
+| `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜. 요청 시점으로 기본 설정됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
 {% raw %}
 ```
@@ -99,7 +99,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

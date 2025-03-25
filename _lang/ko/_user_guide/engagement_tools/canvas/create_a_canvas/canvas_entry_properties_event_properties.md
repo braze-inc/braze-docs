@@ -28,7 +28,7 @@ tool: Canvas
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
 | **지속성** | 캔버스 플로우를 사용하여 만든 캔버스의 기간 동안 모든 [메시지][1] 단계에서 참조할 수 있습니다. | \- 한 번만 참조할 수 있습니다. <br> \- 후속 메시지 단계에서 참조할 수 없습니다. |
 | **원본 캔버스 동작** | \- 영구 항목 속성이 켜져 있어야 합니다. <br> \- 캔버스의 첫 번째 전체 단계에서만 `canvas_entry_properties`를 참조할 수 있습니다. 캔버스는 액션 기반 또는 API 트리거형이어야 합니다. | \- 캔버스에서 실행 기반 전달을 사용하는 모든 단계에서 `event_properties`를 참조할 수 있습니다. <br> \- 실행 기반 캔버스의 첫 번째 전체 단계 이외의 예약된 전체 단계에서는 사용할 수 없습니다. 그러나 사용자가 [캔버스 구성요소][2]를 사용하는 경우 동작은 `event_properties`에 대한 캔버스 흐름 규칙을 따릅니다. |
-| **캔버스 흐름 동작** | 캔버스의 모든 단계에서 `canvas_entry_properties` 을 참조할 수 있습니다. | \- 커스텀 이벤트 또는 구매 이벤트가 수행되는 [작업 경로][3] 단계 **뒤의** 첫 번째 메시지 단계에서 `event_properties`를 참조할 수 있습니다. <br> \- 작업 경로 단계의 다른 모든 사람 경로 뒤에 있을 수 없습니다. <br> \- 액션 경로와 메시지 단계 사이에 메시지 캔버스가 아닌 다른 구성 요소를 넣을 수 있습니다. 이러한 메시지 이외의 구성 요소 중 하나가 작업 경로 단계인 경우 사용자는 해당 작업 경로의 다른 모든 사람 경로를 통해 이동할 수 있습니다. | 
+| **캔버스 흐름 동작** | 캔버스의 모든 단계에서 `canvas_entry_properties` 을 참조할 수 있습니다. 출시 후 동작에 대해서는 [출시 후 캔버스 편집을]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties) 참조하세요. | \- 커스텀 이벤트 또는 구매 이벤트가 수행되는 [작업 경로][3] 단계 **뒤의** 첫 번째 메시지 단계에서 `event_properties`를 참조할 수 있습니다. <br> \- 작업 경로 단계의 다른 모든 사람 경로 뒤에 있을 수 없습니다. <br> \- 액션 경로와 메시지 단계 사이에 메시지 캔버스가 아닌 다른 구성 요소를 넣을 수 있습니다. 이러한 메시지 이외의 구성 요소 중 하나가 작업 경로 단계인 경우 사용자는 해당 작업 경로의 다른 모든 사람 경로를 통해 이동할 수 있습니다. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 캔버스 항목 프로퍼티는 Liquid에서만 참조할 수 있습니다. 캔버스 내 속성을 필터링하려면 대신 [이벤트 속성정보 세분화]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)를 사용하십시오.

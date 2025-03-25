@@ -43,13 +43,13 @@ L'utilisation de Liquid vous permet de retrouver les noms de vos groupes d'abonn
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
 {% endalert %}
 
-### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
+### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
 
 Commençons par créer un centre de préférences à l'aide de l' [endpoint Créer un centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Pour personnaliser votre centre de préférences, vous pouvez inclure du code HTML correspondant à votre image de marque dans les champs `preference_center_page_html` et `confirmation_page_html`.
 
 L'[endpoint Générer l'URL du centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) vous permet d'obtenir l'URL du centre de préférences pour un utilisateur spécifique en dehors d'un e-mail envoyé par Braze.
 
-### Étape 2 : Inclure dans votre campagne d'e-mailing
+### Étape 2 : Inclure dans votre campagne d'e-mailing
 
 {% multi_lang_include preference_center_warning.md %}
 

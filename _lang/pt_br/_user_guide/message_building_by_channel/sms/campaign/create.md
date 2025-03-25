@@ -26,13 +26,13 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {: start="2"}
 2\. Selecione **SMS** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
 3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
+4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Selecione um [grupo de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) para garantir o envio da mensagem para os usuários adequados. Ao selecionar um grupo de inscrições, o Braze adicionará automaticamente um filtro de segmentação, garantindo que apenas os usuários inscritos recebam a campanha. Somente os códigos longos e curtos que pertencem a esse grupo de inscrições serão usados para enviar SMS aos usuários direcionados.
@@ -78,7 +78,7 @@ Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copy
 
 ### Cartões de contato
 
-Se desejar, é possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão de suas informações comerciais e de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira [os cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
+Se desejar, é possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão de suas informações comerciais e de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira os [cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
 
 ## Etapa 3: Pré-visualize e teste sua mensagem
 

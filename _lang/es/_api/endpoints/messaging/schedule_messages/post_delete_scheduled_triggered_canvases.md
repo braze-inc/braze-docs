@@ -10,7 +10,7 @@ description: "En este artículo se describen los detalles del punto final Elimin
 ---
 {% api %}
 # Borrar Lienzos programados desencadenados por la API
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `canvas_id`| Obligatoria | Cadena | Ver [identificador de Canvas]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Obligatoria | Cadena | El `schedule_id` a borrar (obtenido de la respuesta a crear horario). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Ejemplo de solicitud

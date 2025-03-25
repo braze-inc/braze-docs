@@ -36,7 +36,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 ```
 
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
-- Para saber mais e conhecer práticas recomendadas de pré-cabeçalhos, consulte nosso artigo de ajuda sobre \[estilização do corpo de e-mail][46].
+- Para saber mais e conhecer práticas recomendadas de pré-cabeçalhos, consulte nosso artigo de ajuda sobre [estilização do corpo de e-mail][46].
 
 {% alert warning %}
 A Braze recomenda que você evite usar links do Google Drive para os seus anexos `url`, pois isso pode bloquear as chamadas dos nossos servidores para obter o arquivo e resultar no não envio da mensagem de e-mail.

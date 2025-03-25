@@ -26,7 +26,7 @@ Digamos que trabalhamos na Kitchenerie, uma marca de varejo especializada em ute
 
 Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Facebook para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
-Para acessar o modelo de intenção abandonada, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Abandoned Intent**, selecione **Apply Template (Aplicar modelo**). Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
+Para acessar o modelo de intenção abandonada, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Abandoned Intent**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
 ### Etapa 1: Configurar os detalhes
 
@@ -47,7 +47,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 Em seguida, vamos atribuir nosso evento de conversão. Como nosso foco está em nosso produto "Enormous Paper Plate", faremos o seguinte para o **evento de conversão primária A**:
 
-1. Para o **tipo de evento Conversion (Conversão**), selecione **Makes Purchase (Compra**).
+1. Para o **tipo de evento Conversion (Conversão)**, selecione **Makes Purchase (Compra)**.
 2. Selecione **Fazer uma compra específica**. Isso nos permite selecionar um nome de produto específico.
 3. Selecione **Enormous Paper Plate**.
 
@@ -74,7 +74,7 @@ Deixaremos os controles de entrada como estão, para que os usuários não tenha
 
 Para os critérios de saída, os usuários sairão do Canva se tiverem comprado o "Enormous Paper Plate". Dessa forma, eles não receberão mais mensagens sobre um item que já compraram.
 
-![Critérios de saída que determinam que os usuários que fizerem uma compra específica para o enorme prato de papel sairão do Canva.][4]
+![Critérios de saída que determinam que os usuários que fizerem uma compra específica para o enormous paper plate sairão do Canva.][4]
 
 ### Etapa 5: Selecione suas configurações de envio
 
@@ -101,7 +101,7 @@ Agora, criaremos nosso Canvas personalizando as etapas do modelo:
 7\. Certifique-se de que a etapa de sincronização do público do Facebook esteja configurada para sincronizar com o Facebook. Isso ajudará ainda mais no redirecionamento de anúncios.
 
 {% alert tip %}
-Você pode usar [as propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens no seu Canvas com base no produto ao qual está se referindo.
+Você pode usar as [propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens no seu Canvas com base no produto ao qual está se referindo.
 {% endalert %}
 
 ### Etapa 7: Teste e inicie o Canva

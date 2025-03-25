@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: 환경설정 센터 URL 생성"
-article_title: "GET: 환경설정 센터 URL 생성"
+nav_title: "GET: 선호 센터 URL 생성"
+article_title: "GET: 선호 센터 URL 생성"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 생성에 대한 자세한 내용을 설명합니다."
+description: "이 기사는 Generate 기본 설정 센터 URL Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
-# 환경설정 센터 URL 생성
+# 선호 센터 URL 생성
 {% apimethod get %}
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
@@ -26,7 +26,7 @@ description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 
 
 ## 사용량 제한
 
-이 엔드포인트에는 워크스페이스당 분당 1,000개 요청의 사용량 제한이 있습니다.
+이 엔드포인트는 작업 공간당 분당 1,000개의 요청에 대한 속도 제한이 있습니다.
 
 ## 경로 매개변수
 
@@ -62,5 +62,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-이 엔드포인트는 새 환경설정 센터(예: API 또는 끌어서 놓기 편집기를 통해 만든 환경설정 센터)에 대한 URL만 생성합니다.
+이 엔드포인트는 새로운 선호 센터(예: 우리의 API 또는 드래그 앤 드롭 편집기를 사용하여 생성된 선호 센터)에 대한 URL만 생성합니다.
 {% endalert %}

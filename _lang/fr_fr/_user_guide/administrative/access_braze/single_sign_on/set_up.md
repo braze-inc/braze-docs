@@ -9,7 +9,7 @@ description: "Cet article vous expliquera comment activer l’authentification u
 
 # Le fournisseur de services (SP) a initié une connexion
 
-> Cet article vous expliquera comment activer l’authentification unique SAML pour votre compte Braze.
+> Cet article vous explique comment activer l'authentification unique SAML pour votre compte Braze et comment obtenir une trace SAML.
 
 ## Conditions
 
@@ -26,7 +26,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver vos clés API sous **Paramètres** dans **Console Développeur** > **Paramètres API**.
 {% endalert %}
 
-## Configuration Authentification unique (SSO) SAML
+## Configuration de l'authentification unique SAML (SSO)
 
 ### Étape 1 : Configurer votre fournisseur d’identité
 
@@ -92,3 +92,30 @@ Vous pouvez également choisir de limiter les membres de votre organisation pour
 ![Section Règles d'authentification de la page Paramètres de sécurité]({% image_buster /assets/img/sso3.png %})
 
 En activant les restrictions, les utilisateurs de Braze de votre entreprise ne pourront plus se connecter à l'aide d'un mot de passe, même s'ils se sont déjà connectés avec un mot de passe auparavant.
+
+## Obtenir une trace SAML
+
+Si vous rencontrez des problèmes d'identification liés au SSO, l'obtention d'une trace SAML peut vous aider à dépanner votre connexion SSO en identifiant ce qui est envoyé dans les requêtes SAML.
+
+### Conditions préalables
+
+Pour exécuter une trace SAML, vous avez besoin d'un traceur SAML. Voici deux options possibles en fonction de votre navigateur :
+
+- [Google Chrome](https://chromewebstore.google.com/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/saml-tracer/)
+
+### Étape 1 : Ouvrez le traceur SAML
+
+Sélectionnez le traceur SAML dans la barre de navigation de votre navigateur. Assurez-vous que l'option **Pause** n'est pas sélectionnée, car cela empêcherait le traceur SAML de capturer ce qui est envoyé dans les demandes SAML. Lorsque le traceur SAML est ouvert, vous verrez qu'il remplit la trace.
+
+![Traceur SAML pour Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
+
+### Étape 2 : Connectez-vous à Braze à l'aide du SSO
+
+Rendez-vous sur votre tableau de bord de Braze et essayez de vous connecter à l'aide du SSO. Si vous rencontrez une erreur, ouvrez le traceur SAML et réessayez. Une trace SAML a été collectée avec succès s'il y a une ligne avec une URL comme `https://dashboard-XX.braze.com/auth/saml/callback` et une étiquette SAML orange.
+
+### Étape 3 : Exporter et envoyer à Braze
+
+Sélectionnez **Exporter**. Pour **Sélectionner un profil de filtrage des cookies**, sélectionnez **Aucun.** Sélectionnez ensuite **Exporter**. Cela générera un fichier JSON que vous pourrez envoyer à l'assistance de Braze pour une résolution des problèmes plus poussée.
+
+![Menu "Export SAML-trace preferences" avec l'option "None" sélectionnée.]({% image_buster /assets/img/export_saml_trace_preferences.png %})

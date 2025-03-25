@@ -51,4 +51,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: VISTO
   url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Contenido
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---

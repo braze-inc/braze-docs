@@ -29,5 +29,5 @@ Expanda os recursos de e-mail do Braze para fornecer seu melhor conteúdo (víde
 
 ## A parceria Crowdin está ativa
 
-[O Crowdin]({{site.baseurl}}/partners/crowdin/) é um software baseado em nuvem para gerenciamento de localização. A integração da Braze com o Crowdin permite que você traduza modelos de e-mail e blocos de conteúdo. Você pode sincronizar o conteúdo de sua conta Braze com seu projeto do Crowdin e adicionar traduções de volta à Braze.
+O [Crowdin]({{site.baseurl}}/partners/crowdin/) é um software baseado em nuvem para gerenciamento de localização. A integração da Braze com o Crowdin permite que você traduza modelos de e-mail e blocos de conteúdo. Você pode sincronizar o conteúdo de sua conta Braze com seu projeto do Crowdin e adicionar traduções de volta à Braze.
 

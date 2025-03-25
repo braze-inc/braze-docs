@@ -23,13 +23,13 @@ tool: Canvas
 
 再入荷テンプレートにアクセスするには、新しいキャンバスを作成するときに [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択します。次に、**Feature Adoption**の横にある**Apply Template**を選択します。あとは、テンプレートを見ながら、自分たちのニーズに合わせていくだけだ。
 
-### ステップ 1: 詳細を設定する
+### ステップ1:詳細を設定する
 
 キャンバスの詳細を調整して、目標を反映しましょう。
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:60%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスがユーザフィードバック収集対象のユーザーをターゲット設定するためのものであることを示すようにします。
@@ -105,10 +105,10 @@ tool: Canvas
 1. クルーズコントロールのフィードバックをキャプチャして追跡するため、この2つの調査の選択肢について、カスタム属性として ［**エクスペリエンスフィードバック**] を選択します。このカスタム属性には、調査回答を表す2つの値があります (`good` と `bad`)。
 2. 調査オプションに合わせて属性値を更新します。これにより、ユーザーの回答を追跡できます。
 
-### ステップ 7:キャンバスをテストして起動する
+### ステップ 7:キャンバスをテストして開始する
 
 キャンバスをテストし、期待通りに動作することを確認したら、[**キャンバスを開始**] を選択してキャンバスを開始します。これで、パーソナライズされたユーザージャーニーでユーザをターゲットに設定して、新機能であるクルーズコントロールの導入を促すことができます。
 
 {% alert tip %}
-キャンバスの開始前後に考慮すべき点については、[開始前と開始後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
+キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}

@@ -144,7 +144,7 @@ Nem todos os campos oferecidos são obrigatórios.
 {% endalert %}
 
 {% tabs local %}
-{% tab Rastrear Usuário - Lote e Não Lote %}
+{% tab Rastreamento de usuário - lote e não lote %}
 
 Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma única ação. Embora a ação "Rastrear usuário" seja a mesma para AudienceStream e EventStream, a Tealium recomenda definir mapeamentos de atributo de usuário com ações AudienceStream e mapeamentos de evento e compra com ações EventStream.
 
@@ -164,7 +164,7 @@ Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Excluir Usuário - Não em Lote %}
+{% tab Excluir usuário - Não lote %}
 
 Essa ação permite excluir usuários do dashboard do Braze.
 

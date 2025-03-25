@@ -160,4 +160,12 @@ iOS 9 이상에서는 웹 보기에서 링크를 열려면 ATS와 호환되는 �
 
 열람이 기록되는 경우 일반적인 딥링크 문제인지 또는 딥링크 푸시 클릭 처리에 문제가 있는지 확인합니다. 이를 위해 인앱 메시지 클릭의 딥링크가 작동하는지 테스트합니다.
 
+#### 직접 열기가 거의 또는 전혀 없음
+
+한 명 이상의 사용자가 iOS 푸시 알림을 열었지만 Braze에 _직접 열기가_ 거의 또는 전혀 기록되지 않는다면 [SDK 통합에]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview) 문제가 있는 것일 수 있습니다. 테스트 전송 또는 무음 푸시 알림의 경우 _직접 열기는_ 기록되지 않습니다.
+
+- 메시지가 [무음 푸시 알림으로]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications) 전송되고 있지 않은지 확인하세요. 메시지가 무음으로 간주되지 않으려면 제목이나 본문에 텍스트가 있어야 합니다.
+- [푸시 연동 가이드에서]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration) 다음 단계를 다시 확인하세요:
+   - [푸시 등록하기]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): 앱을 실행할 때마다, 가급적이면 `application:didFinishLaunchingWithOptions:` 내에서 3단계의 코드가 실행되어야 합니다. `UNUserNotificationCenter.current()` 의 델리게이트 속성은 `UNUserNotificationCenterDelegate` 을 구현하고 `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` 메서드를 포함하는 객체에 할당해야 합니다.
+   - [푸시 처리를 사용]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling) 설정합니다: `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` 메서드가 구현되었는지 확인합니다.
 

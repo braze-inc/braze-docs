@@ -36,29 +36,31 @@ Les conditions suivantes sont les exigences élémentaires et minimales pour s�
 Il est important de garder les identifiants et les clés/jetons de votre partenaire à jour ; si les identifiants de votre connecteur expirent, le connecteur cessera d’envoyer des événements. Si cette situation persiste pendant plus de **48 heures**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
 {% endalert %}
 
-## Étape 1 : Choisissez votre partenaire
+## Configuration de Currents
+
+### Étape 1 : Choisissez votre partenaire
 
 Braze Currents vous permet d’intégrer via Data Storage à l’aide de fichiers plats, ou avec nos partenaires Behavioral Analytics et Customer Data, en utilisant des payloads JSON en batch pour un endpoint désigné.  
 
 Avant de commencer votre intégration, il est préférable de décider quelle intégration vous convient le mieux. Par exemple, si vous utilisez déjà mParticle et Segment et que vous souhaitez y envoyer les données de Braze, il vaut mieux utiliser un payload JSON en batch. Si vous préférez manipuler les données par vous-même ou si vous disposez d'un système d'analyse des données plus complexe, il est préférable d'utiliser le stockage des données ([Braze utilise cette méthode]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) !).
 
-## Étape 2 : Accéder à Currents
+### Étape 2 : Flux Currents ouverts
 
 Pour commencer, sélectionnez **Intégrations partenaires** > **Exportation de données**. Vous serez dirigé vers la page de gestion des Intégrations Currents.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve sous **Intégrations** > **Currents**.
+Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Intégrations** > **Currents**.
 {% endalert %}
 
 ![Page actuelle du tableau de bord de Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
-## Étape 3 : Ajouter un partenaire
+### Étape 3 : Ajoutez votre partenaire
 
 Ajoutez un partenaire, parfois appelé "connecteur actuel", en sélectionnant le menu déroulant en haut de l'écran.
 
 Les étapes de configuration varient selon les partenaires. Pour activer chaque intégration, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et suivez les instructions de leurs pages respectives.
 
-## Étape 4 : Configurer les événements
+### Étape 4 : Configurez vos événements
 
 Choisissez les événements que vous souhaitez transmettre à ce partenaire en cochant les options disponibles. Vous trouverez la liste de ces événements dans nos bibliothèques [Événements de comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) et [Événements d’engagement liés aux messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
@@ -66,25 +68,29 @@ Choisissez les événements que vous souhaitez transmettre à ce partenaire en c
 
 Si nécessaire, vous pouvez en savoir plus sur nos événements dans notre article sur [la sémantique de réception/distribution des événements]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/).
 
-## Étape 5 : Transformations de champ
+### Étape 5 : Mise en place des transformations de champ
 
-Les transformations de champs de Currents vous permettent de désigner certains champs de chaînes de caractères dans Currents pour les supprimer (remplacement par une chaîne vide) ou les hacher (application d'un algorithme de hachage SHA-256). 
+Vous pouvez utiliser les transformations de champs Currents pour supprimer ou hacher un champ de chaînes de caractères.
+
+- **supprimer** : Remplace la chaîne de caractères par `[REDACTED]`. Ceci est utile si votre partenaire rejette les événements dont les champs sont manquants ou vides.
+- **Hash** : Applique un algorithme de hachage SHA-256 au champ chaîne de caractères.
 
 La sélection d'un champ pour l'une de ces transformations appliquera cette transformation à tous les événements dans lesquels ce champ apparaît. Par exemple, si vous sélectionnez `email_address` pour le hachage, le champ `email_address` sera haché dans les champs Envoi d'e-mail, Ouverture d'e-mail, Rebond d'e-mail et Changement d'état du groupe d'abonnement.
 
 ![Ajout de transformations de champs]({% image_buster /assets/img/current3.png %})
 
-## Étape 6 : Tester votre intégration
+### Étape 6 : Tester votre intégration
 
 Vous pouvez tester votre intégration ou examiner les exemples de données Currents dans notre [référentiel GitHub](https://github.com/Appboy/currents-examples) d’exemples Currents.
 
 {% alert important %}
-Notez que Currents abandonnera les événements dont la charge utile est excessivement importante (plus de 900 Ko).
+Currents abandonnera les événements dont la charge utile est excessivement importante (plus de 900 Ko).
 {% endalert %}
 
-### Connecteurs test Currents
+#### Test des connecteurs de courant
 
 Les connecteurs Test Currents sont des versions gratuites de nos connecteurs existants qui peuvent être utilisées pour tester et essayer différentes destinations. Les connecteurs test Currents présentent les propriétés suivantes :
+
 - Le nombre de connecteurs Test Currents que vous pouvez créer n'est pas limité.
 - Un maximum global de 10 000 événements par période de déploiement de sept jours. Ce total d'événements est mis à jour toutes les heures sur le tableau de bord.
 
@@ -98,7 +104,7 @@ Pour mettre à niveau votre connecteur test Currents, modifiez l'intégration da
 
 ## Liste d’adresses IP autorisées
 
-Braze enverra des données Currents à partir des IP répertoriées, qui sont automatiquement et dynamiquement ajoutées à toutes les clés API qui ont fait l'objet d'un abonnement à la liste d'autorisation.
+Braze enverra les données Currents à partir des adresses IP répertoriées.
 
 | Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` et `US-07` : |
 |---|

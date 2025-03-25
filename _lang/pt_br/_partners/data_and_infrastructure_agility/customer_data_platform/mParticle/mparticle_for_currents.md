@@ -29,7 +29,7 @@ A integração entre a Braze e o mParticle permite que você controle com pratic
 mParticle tem credenciais em nível de app e em nível de espaço de trabalho que impactam como seus eventos são enviados.
 
 - **Nível do App:** mParticle separará eventos por cada aplicativo individual, o que significa que as credenciais de nível de aplicativo que você fornece para seu aplicativo iOS só podem ser usadas para enviar eventos específicos do iOS.
-- **Espaço de trabalho:** mParticle agrupa todos os eventos (que são **não** específicos do app), o que significa que as credenciais de nível de espaço de trabalho que você fornece ao seu grupo de app serão usadas para enviar todos os seus eventos não específicos do app.
+- **Espaço de trabalho:** mParticle agrupa todos os eventos (que **não** são específicos do app), o que significa que as credenciais de nível de espaço de trabalho que você fornece ao seu grupo de app serão usadas para enviar todos os seus eventos não específicos do app.
 
 Você pode pensar nisso como o mParticle ingerindo um "feed" com base em cada aplicativo individual. Por exemplo, se você tiver um app para iOS, um para Android e um para Web, seus eventos serão desconexos. Isso significa que, se você fornecer as mesmas credenciais para cada app, então um mParticle feed será usado para receber todos os dados de todos os seus apps, sem duplicação.
 

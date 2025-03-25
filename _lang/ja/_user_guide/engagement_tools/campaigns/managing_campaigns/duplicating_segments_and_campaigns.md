@@ -16,7 +16,7 @@ tool:
 > 既存のセグメント、キャンペーン、およびキャンバスを複製して、成功した戦略を利用して継続的に反復し、構築できます。これらの項目は、ダッシュボードのそれぞれのページのリストとして表示するときに複製できます(**Segments**、**Campaigns**、または**Canvas**)。
 
 {% alert tip %}
-セグメントとキャンペーンの詳細については、[ブレーズラーニングコース](https://learning.braze.com/quick-overview-segment-and-campaign-setup)をご覧ください。
+セグメントとキャンペーンの詳細については、[Braze ラーニングコース](https://learning.braze.com/quick-overview-segment-and-campaign-setup)をご覧ください。
 {% endalert %}
 
 ## キャンペーンとセグメントの複製

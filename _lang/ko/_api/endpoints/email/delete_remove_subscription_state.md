@@ -6,7 +6,7 @@ page_order: 0
 hidden: true
 layout: api_page
 page_type: reference
-description: "이 문서에서는 이메일 주소 또는 전화번호별 구독 삭제 상태 Braze 엔드포인트에 대한 자세한 내용을 간략하게 설명합니다."
+description: "이 기사는 이메일 주소 또는 전화번호 Braze 엔드포인트에 의한 구독 삭제 상태에 대한 세부 정보를 설명합니다."
 
 ---
 

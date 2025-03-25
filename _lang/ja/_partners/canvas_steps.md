@@ -29,7 +29,7 @@ guide_menu_list:
   - name: Google オーディエンスの同期
     link: /docs/partners/canvas_steps/google_audience_sync
     image: /assets/img/braze_icons/google.svg
-  - name: LinkedIn Audience 同期
+  - name: LinkedIn オーディエンス同期
     link: /docs/partners/canvas_steps/linkedin_audience_sync
     image: /assets/img/braze_icons/linkedin.svg
   - name: Pinterestオーディエンス同期

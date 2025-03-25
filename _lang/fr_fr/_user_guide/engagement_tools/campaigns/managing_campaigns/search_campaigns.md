@@ -3,7 +3,7 @@ nav_title: Recherche de campagnes
 article_title: Recherche de campagnes
 page_order: 10
 page_type: reference
-description: "Cet article décrit les différentes façons de rechercher des campagnes sur la page de la liste des campagnes."
+description: "Cet article décrit les différentes façons dont vous pouvez rechercher des campagnes sur la page de la liste des campagnes."
 tool:
   - Campaigns
 

@@ -89,13 +89,13 @@ Use este filtro para encontrar usuários que estão ou não no grupo de controle
 
 ### Última mensagem recebida de campanha específica 
 
-Use este filtro para encontrar usuários que receberam uma campanha específica antes ou depois de uma data ou número de dias especificado.
+Use este filtro para encontrar usuários que receberam uma campanha específica antes ou depois de uma data ou número de dias especificado. Esse filtro não considera quando os usuários receberam outras campanhas.
 
 ![][14]
 
 ### Última mensagem recebida de campanha específica ou canva com tag 
 
-Use este filtro para encontrar usuários que receberam pela última vez uma campanha ou canva com uma tag específica antes ou depois de uma data ou número de dias especificado.
+Use este filtro para encontrar usuários que receberam pela última vez uma campanha ou canva com uma tag específica antes ou depois de uma data ou número de dias especificado. Esse filtro não considera quando os usuários receberam outras campanhas ou Canvas.
 
 ![][17]
 

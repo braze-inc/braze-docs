@@ -14,9 +14,7 @@ noindex: true
 
 # Señales
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ## Solicitar recuentos de tarjetas de canal de noticias no leídas
 
@@ -105,5 +103,5 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-Para más información, consulta el [archivo de cabecera `Appboy.h` [](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Archivo de cabecera").
+Para más información, consulta el `Appboy.h` [archivo de cabecera](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Archivo de cabecera").
 

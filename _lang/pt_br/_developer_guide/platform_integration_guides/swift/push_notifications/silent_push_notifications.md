@@ -31,7 +31,7 @@ Para usar notificações por push silenciosas para disparar trabalho em segundo 
 
 Mesmo com o modo de fundo de notificações remotas ativado, o sistema não iniciará seu app em segundo plano se o usuário tiver forçado o encerramento do aplicativo. O usuário deve iniciar explicitamente o aplicativo ou reiniciar o dispositivo antes que o app possa ser lançado automaticamente em segundo plano pelo sistema.
 
-Para saber mais, consulte [as atualizações de fundo do push](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app) e a [documentação](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:) do site `application:didReceiveRemoteNotification:fetchCompletionHandler:`.
+Para saber mais, consulte as [atualizações de fundo do push](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app) e a [documentação](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:) do site `application:didReceiveRemoteNotification:fetchCompletionHandler:`.
 
 ## Enviando notificações por push silenciosas
 
@@ -55,5 +55,5 @@ Ao enviar uma notificação por push silenciosa, você também pode querer inclu
 
 O sistema operacional iOS pode bloquear notificações para alguns recursos. Nota que se você estiver enfrentando dificuldades com esses recursos, o portão de notificações silenciosas do iOS pode ser a causa.
 
-Consulte a documentação sobre o [método de instância](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application) e [as notificações não recebidas](https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23) da Apple para obter mais detalhes.
+Consulte a documentação sobre o [método de instância](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application) e as [notificações não recebidas](https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23) da Apple para obter mais detalhes.
 

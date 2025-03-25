@@ -31,7 +31,7 @@ Os MMS são cobrados em uma taxa diferente dos SMS somente de texto, e nem todas
 
 ### Use cartões de contato
 
-Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files (vcf)) são um formato de arquivo padronizado para o envio de informações comerciais e de contato que podem ser facilmente importadas para catálogos de endereços ou de contatos. Esses cartões podem ser criados [de forma programática](https://www.twilio.com/blog/send-vcard-twilio-sms) e feitos upload para a biblioteca de mídia do Braze ou criados por meio do nosso [gerador de cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) integrado.
+Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files (vcf)) são um formato de arquivo padronizado para o envio de informações comerciais e de contato que podem ser facilmente importadas para catálogos de endereços ou de contatos. Esses cartões podem ser criados de [forma programática](https://www.twilio.com/blog/send-vcard-twilio-sms) e feitos upload para a biblioteca de mídia do Braze ou criados por meio do nosso [gerador de cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) integrado.
 
 ## Criação de uma mensagem MMS
 

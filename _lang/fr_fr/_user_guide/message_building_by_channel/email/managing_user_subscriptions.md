@@ -121,7 +121,7 @@ Braze ne traitera aucun changement d’état pour les utilisateurs des groupes a
 
 Vous pouvez consulter le graphique **Série temporelle des groupes d’abonnement** dans la page **Groupes d'abonnement** pour voir la taille du groupe d'abonnement en fonction du nombre d'utilisateurs sur une période donnée. Ces tailles de groupes d'abonnement sont également cohérentes avec d'autres aspects de Braze, tels que le calcul de la taille des segments.
 
-![][10]
+![Un exemple de graphique de "groupe d'abonnement" daté du 2 au 11 décembre. Le graphique montre une augmentation d'environ 10 millions du nombre d'utilisateurs entre le 6e et le 7e jour.][10]
 
 #### Visualisation des groupes d'abonnement dans l'analyse/analytique des campagnes
 
@@ -129,7 +129,7 @@ Vous pouvez voir le nombre d’utilisateurs qui ont modifié leur état d’abon
 
 Sur la page **Analyse/analytique de** votre campagne, descendez jusqu'à la section **Performances des messages électroniques** et cliquez sur la flèche située sous **Groupes d'abonnement** pour afficher le décompte global des changements d'état, tels qu'ils ont été soumis par vos clients.
 
-![][30]
+![La page "Performance des messages e-mail" affiche le nombre total de changements d'état soumis par les clients.][30]
 
 ## Centre de préférence des e-mails
 

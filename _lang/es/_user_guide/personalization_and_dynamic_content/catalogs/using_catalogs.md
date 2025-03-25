@@ -177,10 +177,6 @@ Actualmente, Liquid no puede utilizarse dentro de los catálogos. Si la personal
 
 De forma similar al [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), debes utilizar la bandera `:rerender` en una etiqueta de Liquid para representar el contenido Liquid de un elemento del catálogo. Ten en cuenta que la flag `:rerender` solo tiene un nivel de profundidad, lo que significa que no se aplicará a ninguna llamada anidada a la etiqueta de Liquid.
 
-{% alert important %}
-La plantilla de elementos de catálogo que incluye Liquid está en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
-
 Si un elemento del catálogo contiene campos de perfil de usuario (dentro de una etiqueta de personalización de Liquid), estos valores deben definirse en Liquid antes en el mensaje y antes de la plantilla para que Liquid se muestre correctamente. Si no se indica la bandera `:rerender`, se mostrará el contenido sin procesar de Liquid.
 
 Por ejemplo, si un catálogo llamado "Mensajes" tiene un elemento con este Liquid:

@@ -54,6 +54,10 @@
 <i>클릭 후 열람율</i>은 단일 사용자 또는 컴퓨터가 한 번 이상 열어본 전달된 이메일의 비율이며 <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>에서만 사용할 수 있습니다.
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>메시지 닫기</i> 횟수는 메시지의 닫기 버튼을 클릭한 총 횟수입니다. 이는 기존 에디터가 아닌 드래그 앤 드롭 에디터에서 만든 인앱 메시지에만 존재합니다.
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 <i>전달 확인</i>은 이동통신사가 메시지가 대상 전화 번호로 전달되었음을 확인한 경우입니다.
 {% endif %}

@@ -75,7 +75,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 Primeiro, escolha como deseja registrar sua atividade:
 
-- **Remotamente:** Use o método [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) e, em seguida, inicie uma atividade usando o endpoint [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start).
+- **Remotamente:** O mais cedo possível no ciclo de vida do aplicativo e do usuário (e antes que o token por push seja necessário), use o método [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>). Em seguida, inicie uma atividade usando o endpoint [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start).
 - **Localmente:** Crie uma instância de sua Live Activity e, em seguida, use o método [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) para criar tokens push para serem gerenciados pelo Braze.
 
 {% tabs localização %}

@@ -9,10 +9,6 @@ description: "Este artigo de referência descreve como criar notificações de f
 
 > Usando uma combinação de notificações de falta de estoque por meio dos catálogos da Braze e de um canva, você pode notificar os clientes quando um item estiver em falta. Sempre que um cliente realiza um evento personalizado selecionado, ele pode se inscrever automaticamente para ser notificado quando o item for reabastecido.
 
-{% alert important %}
-As notificações de estoque em espera para catálogos estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta se estiver interessado em participar deste acesso antecipado.
-{% endalert %}
-
 Quando um usuário dispara um evento personalizado para um item, nós o inscrevemos automaticamente para receber notificações de falta de estoque desse item. Quando a quantidade de estoque do item atender à sua regra de estoque (por exemplo, um estoque maior que 100), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou do canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
 ## Como funcionam as notificações de estoque em espera
@@ -31,10 +27,11 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
 2. Selecione a opção **Voltar ao estoque**.
 3. Se as configurações globais de estoque em espera não tiverem sido configuradas, será solicitado que você configure os eventos e propriedades personalizados que serão usados para disparar notificações de estoque em espera:
     <br> ![Gaveta de configurações do catálogo.][2]{: style="max-width:70%;"}
+    - **Catálogo de fallback** Esse é o catálogo que será usado para a inscrição de back-in-stock, se não houver nenhuma propriedade `catalog_name` presente no evento personalizado.
     - O **evento personalizado para inscrições** é o evento personalizado do Braze que será usado para inscrever um usuário para receber notificações de falta de estoque. Quando esse evento ocorrer, o usuário que o realizou será inscrito.
     - O **evento personalizado para cancelamento de inscrição** é o evento personalizado do Braze que será usado para cancelar a inscrição de um usuário nas notificações de estoque em espera.
     - **A propriedade do evento Item ID** é a propriedade do evento personalizado acima que será usada para determinar o item para uma inscrição ou cancelamento de inscrição em estoque. Essa propriedade no evento personalizado deve conter um ID de item, que está presente em um catálogo. O evento personalizado também deve conter uma propriedade `catalog_name`, para especificar em qual catálogo esse item está.
-    - **Catálogo de fallback** Esse é o catálogo que será usado para a inscrição de back-in-stock, se não houver nenhuma propriedade `catalog_name` presente no evento personalizado.
+    
     - Um exemplo de evento personalizado seria
     ```json
     {
@@ -53,14 +50,14 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
     }
     ```
 {% alert note %}
-Os disparos de reposição de estoque e de queda de preço usam o mesmo evento para inscrever o usuário na notificação. Crie uma notificação de queda de preço definindo `type` como `back-in-stock`. Não é possível definir uma notificação de queda de preço e de volta ao estoque.
+Os disparadores de queda de preço e de volta ao estoque usam o mesmo evento para inscrever o usuário na notificação, portanto, é possível usar a matriz `type` para definir notificações de queda de preço e de volta ao estoque no mesmo evento.
 {% endalert %}
 
 {: start="4"}
 4\. Selecione **Salvar** e continue para a página de **Configurações** do catálogo.
 5\. Defina sua regra de notificação. Existem duas opções:
-    - **Notify all subscribed users (Notificar todos os usuários inscritos** ) notifica todos os clientes que estão aguardando quando o item estiver novamente em estoque.
-    - **Notificar um determinado número de usuários por um determinado número de minutos** notifica um número específico de clientes por período de notificação configurado. O Braze notificará o número especificado de clientes em incrementos até que não haja mais clientes a serem notificados ou até que o item fique fora de estoque. Sua taxa de notificação não pode exceder a notificação de 10.000 usuários por minuto.
+    - **Notify all subscribed users (Notificar todos os usuários inscritos)** notifica todos os clientes que estão aguardando quando o item estiver novamente em estoque.
+    - **Definir limites de notificação** notifica um número específico de clientes por período de notificação configurado. O Braze notificará o número especificado de clientes em incrementos até que não haja mais clientes a serem notificados ou até que o item fique fora de estoque. Sua taxa de notificação não pode exceder a notificação de 10.000 usuários por minuto.
 6\. Defina o **campo Inventário no catálogo**. Esse campo do catálogo será usado para determinar se o item está fora de estoque. O campo deve ser do tipo numérico.
 7\. Selecione **Salvar configurações**.
 

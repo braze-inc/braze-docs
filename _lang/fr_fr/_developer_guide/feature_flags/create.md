@@ -13,7 +13,7 @@ platform:
 
 # Création d’indicateurs de fonctionnalité
 
-> Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, une audience cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale. Pour en savoir plus sur les drapeaux de fonctionnalité et leur utilisation dans Braze, consultez la section [À propos des drapeaux de fonctionnalité.]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/)
+> Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, une audience cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale. Pour en savoir plus sur les indicateurs de fonctionnalité et leur utilisation dans Braze, consultez la section [À propos des indicateurs de fonctionnalité.]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/)
 
 ## Conditions préalables
 
@@ -25,7 +25,7 @@ Pour utiliser des indicateurs de fonctionnalité, assurez-vous que vos SDK sont 
 
 ### Permissions de Braze
 
-Pour gérer les drapeaux de fonctionnalité dans le tableau de bord, vous devez être un gestionnaire ou disposer des [autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) suivantes :
+Pour gérer les indicateurs de fonctionnalité dans le tableau de bord, vous devez être un gestionnaire ou disposer des [autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) suivantes :
 
 | Autorisation                                                                    | Ce que vous pouvez faire                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
@@ -39,7 +39,7 @@ Pour gérer les drapeaux de fonctionnalité dans le tableau de bord, vous devez 
 
 Allez dans **Messagerie** > **Indicateurs de fonctionnalité**, puis sélectionnez **Créer un indicateur de fonctionnalité**.
 
-![Une liste des drapeaux de fonctionnalité créés précédemment sur le tableau de bord de Braze]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
+![Une liste des indicateurs de fonctionnalité créés précédemment sur le tableau de bord de Braze]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
 
 ### Étape 2 : Fournir les informations demandées
 
@@ -84,7 +84,7 @@ Avant de déployer un indicateur de fonctionnalité, vous devez choisir un [segm
 
 ### Étape 5 : Définir le trafic de déploiement {#rollout}
 
-Par défaut, les drapeaux de fonctionnalité sont toujours désactivés, ce qui vous permet de séparer la date de publication de vos fonctionnalités du nombre total d'utilisateurs activés. Pour commencer votre déploiement, utilisez le curseur **Trafic de déploiement**, ou entrez un pourcentage dans la zone de texte, pour choisir le pourcentage d'utilisateurs aléatoires dans votre segmentation sélectionnée qui recevront cette nouvelle fonctionnalité.
+Par défaut, les indicateurs de fonctionnalité sont toujours désactivés, ce qui vous permet de séparer la date de publication de vos fonctionnalités du nombre total d'utilisateurs activés. Pour commencer votre déploiement, utilisez le curseur **Trafic de déploiement**, ou entrez un pourcentage dans la zone de texte, pour choisir le pourcentage d'utilisateurs aléatoires dans votre segmentation sélectionnée qui recevront cette nouvelle fonctionnalité.
 
 ![Un curseur intitulé "Rollout Traffic", compris entre 0 et 100.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}){: style="max-width:75%;"}
 
@@ -92,7 +92,7 @@ Par défaut, les drapeaux de fonctionnalité sont toujours désactivés, ce qui 
 Ne définissez pas votre trafic de déploiement au-dessus de 0 % jusqu’à ce que vous soyez prêt à lancer votre nouvelle fonctionnalité. Lorsque vous définissez initialement votre indicateur de fonctionnalité dans le tableau de bord, laissez ce paramètre à 0 %.
 {% endalert %}
 
-## Utilisation du champ "enabled" pour vos drapeaux de fonctionnalité {#enabled}
+## Utilisation du champ "enabled" pour vos indicateurs de fonctionnalité {#enabled}
 
 Une fois que vous avez défini votre indicateur de fonctionnalité, configurez votre application ou site pour vérifier si elle est activée ou non pour un utilisateur particulier. Lorsqu’il est activé, vous allez définir une action ou référencer les propriétés variables de l’indicateur d’entité en fonction de votre cas d’utilisation. Le SDK Braze fournit des méthodes de gestion de l’état de l’indicateur de fonctionnalité et de ses propriétés dans votre application. 
 
@@ -831,9 +831,9 @@ Vous pouvez y consulter la date d'une modification, l'auteur de la modification,
 
 ## Segmentation avec les indicateurs de fonctionnalités {#segmentation}
 
-Braze garde automatiquement la trace des utilisateurs qui sont actuellement activés pour un drapeau de fonctionnalité. Vous pouvez créer un segment ou un envoi de messages ciblés à l'aide du [filtre**Drapeau de fonctionnalité**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Pour plus d'informations sur le filtrage sur les segments, voir [Créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+Braze garde automatiquement la trace des utilisateurs qui sont actuellement activés pour un indicateur de fonctionnalité. Vous pouvez créer un segment ou un envoi de messages ciblés à l'aide du [filtre**Drapeau de fonctionnalité**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Pour plus d'informations sur le filtrage sur les segments, voir [Créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![La section "Filtres" avec "Drapeau de fonctionnalité" tapé dans la barre de recherche des filtres.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![La section "Filtres" avec "Indicateur de fonctionnalité" tapé dans la barre de recherche des filtres.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Pour éviter les segments récursifs, il n'est pas possible de créer un segment faisant référence à d'autres drapeaux de fonctionnalité.

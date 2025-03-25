@@ -78,6 +78,16 @@ Um [número de balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/ca
 
 Neste cenário, tente usar [Caminhos de Experimento]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) em vez disso.
 
+### Uso do filtro de canal inteligente com jornadas do público
+
+Usando uma combinação de etapas de jornadas do público e filtros de canais inteligentes, é possível personalizar a experiência de envio de mensagens de acordo com as preferências e os comportamentos de cada usuário. Dessa forma, seus usuários receberão as mensagens mais relevantes por meio dos canais apropriados.
+
+Por exemplo, em uma etapa de jornadas do público, você pode criar três públicos: E-mail, push móvel e todos os outros. Para o público de e-mail, adicione o filtro `Intelligent Channel is Email`. Para o público do Mobile Push, adicione o filtro `Intelligent Channel is Mobile Push`. Em seguida, você pode adicionar uma etapa de Mensagem para cada uma das jornadas do público para fornecer mensagens personalizadas e relevantes.
+
+{% alert tip %}
+Confira nossos [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para ver exemplos de como você pode personalizar esses modelos pré-criados a seu favor.
+{% endalert %}
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}

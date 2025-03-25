@@ -36,7 +36,7 @@ description: "Este artículo de referencia explica los diferentes componentes de
 ```
 
 - [Identificador de la aplicación]({{site.baseurl}}/api/identifier_types/)
-- Para más información y mejores prácticas sobre los preencabezados, consulte nuestro artículo de ayuda sobre \[email body styling][46].
+- Para más información y mejores prácticas sobre los preencabezados, consulte nuestro artículo de ayuda sobre [email body styling][46].
 
 {% alert warning %}
 Braze recomienda evitar el uso de enlaces de Google Drive para los archivos adjuntos `url`, ya que esto puede bloquear las llamadas de nuestros servidores para obtener el archivo y provocar que el mensaje de correo electrónico no se envíe.

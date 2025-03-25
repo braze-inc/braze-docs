@@ -137,7 +137,7 @@ La siguiente tabla enumera los posibles errores devueltos y los pasos asociados 
 | `invalid-ids` | Los ID de elementos solo pueden incluir letras, números, guiones y guiones bajos. |
 | `invalid-fields` | Confirme que todos los campos que está enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
 | `invalid-keys-in-value-object` | Las claves de objeto de artículo no pueden incluir `.` ni `$`. |
-| `items-missing-ids` | Hay artículos que no tienen ID de artículo. Compruebe que cada artículo tiene un ID de artículo. |
+| `items-missing-ids` | Algunos artículos no tienen ID de artículo. Compruebe que cada artículo tiene un ID de artículo. |
 | `item-array-invalid` | `items` debe ser un array de objetos. |
 | `items-too-large` | Los valores de los elementos no pueden superar los 5.000 caracteres. |
 | `request-includes-too-many-items` | Su solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |

@@ -27,7 +27,7 @@ Antes de iniciar a sessão de depuração, feche o app que está apresentando pr
 
 ### Etapa 2: Criar uma sessão de depuração
 
-No Braze, acesse **Settings (Configurações**) e, em **Setup and Testing (Configuração e teste**), selecione **SDK Debugger (Depurador SDK**).
+No Braze, acesse **Settings (Configurações)** e, em **Setup and Testing (Configuração e teste)**, selecione **SDK Debugger (Depurador SDK)**.
 
 ![A seção "Setup and Testing" (Configuração e teste) com "SDK Debugger" destacado.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
@@ -37,7 +37,7 @@ Selecione **Criar sessão de depuração**.
 
 ### Etapa 3: Selecione um usuário
 
-Pesquise um usuário usando seu endereço de e-mail, `external_id`, alias de usuário ou token por push. Quando estiver pronto para iniciar a sessão, selecione **Select User (Selecionar usuário**).
+Pesquise um usuário usando seu endereço de e-mail, `external_id`, alias de usuário ou token por push. Quando estiver pronto para iniciar a sessão, selecione **Select User (Selecionar usuário)**.
 
 ![A página de depuração do usuário selecionado.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 

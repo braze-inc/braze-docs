@@ -39,9 +39,9 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 
 ### ステップ2:プッシュ機能を有効にする
 
-Xcode で、**署名 & 機能**ペインを使ってメインアプリのターゲットにプッシュ通知機能を追加します。
+Xcode で、メインアプリのターゲットの**署名 & 機能**セクションに移動しプッシュ通知機能を追加します。
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Xcode プロジェクトの「署名 & 機能」セクション]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## 自動プッシュ統合
 

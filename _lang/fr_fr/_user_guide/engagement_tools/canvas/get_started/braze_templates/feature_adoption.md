@@ -23,7 +23,7 @@ Imaginons que vous travailliez chez Calorie Rocket, une appli de réception/dist
 
 Pour accéder au modèle en stock, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de **Adoption des fonctionnalités**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -38,7 +38,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canvas d'adoption de fonctionnalité pour suivre l'adoption et le sentiment des utilisateurs pour Cruise Control, une fonctionnalité permettant de planifier des réceptions/distributions de nourriture récurrentes"]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
-### Étape 2 : Attribuer un événement de conversion
+### Étape 2 : Attribuer un événement de conversion
 
 Ensuite, ajoutons un événement de conversion pour notre Canvas afin de signaler l'adoption de la fonctionnalité. Cela nous permettra d'adapter ultérieurement le chemin d'expérience dans notre parcours utilisateur.
 
@@ -49,7 +49,7 @@ Ensuite, ajoutons un événement de conversion pour notre Canvas afin de signale
 
 ![La fenêtre de l'événement de conversion dans le canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
-### Étape 3 : Adapter la planification de l'entrée
+### Étape 3 : Adapter la planification de l'entrée
 
 Notre objectif est d'encourager nos utilisateurs à adopter le régulateur de vitesse, mais nous ne voulons pas que nos envois de messages soient trop fréquents. Nous conserverons donc ce Canvas en tant que réception/distribution planifiée et apporterons les ajustements suivants à la section des **options basées sur le temps**.
 

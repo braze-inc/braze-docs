@@ -71,7 +71,7 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 | Objetos | Los objetos se ingestarán como cadenas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 50 KB.
+Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 100 KB.
 
 ### Persistencia de las propiedades del evento
 Las propiedades del evento están diseñadas para filtrar los mensajes desencadenados por sus eventos principales y para personalizarlos con Liquid. De forma predeterminada, no persisten en el perfil de usuario de Braze. Para utilizar los valores de las propiedades del evento en la segmentación, consulta los [eventos personalizados][5], donde se detallan los distintos enfoques para almacenar los valores de las propiedades del evento a largo plazo.

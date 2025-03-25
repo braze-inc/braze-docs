@@ -20,7 +20,7 @@ Se descobrir que as mensagens no app não estão sendo exibidas ou renderizadas 
 
 ## Eventos de gatilho
 
-Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral][1] ) (para dados de sessão) ou [Custom Events (Eventos personalizados][2] ):
+Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral)][1] (para dados de sessão) ou [Custom Events (Eventos personalizados)][2]:
 
 ![A página Eventos personalizados mostra um gráfico do número de vezes que o evento personalizado Adicionado aos favoritos ocorreu em um período de um mês][14]
 

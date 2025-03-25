@@ -1,15 +1,15 @@
 ---
-nav_title: "POST: 하드 바운스된 이메일 제거"
-article_title: "POST: 하드 바운스된 이메일 제거"
+nav_title: "POST: 하드 반송 이메일 제거"
+article_title: "POST: 하드 반송 이메일 제거"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "이 문서에서는 하드 바운스된 이메일 주소 제거 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 기사에서는 Remove 하드 반송 이메일 주소 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
-# 하드 바운스된 이메일 제거
+# 하드 반송된 이메일을 제거하십시오.
 {% apimethod post %}
 /email/bounce/remove
 {% endapimethod %}
@@ -43,8 +43,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| ---------|------ |
-| `email` | 필수 | 문자열 또는 배열 | 수정할 문자열 이메일 주소 또는 수정할 최대 50개의 이메일 주소 배열. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `email` | 필수 | 문자열 또는 배열 | 수정할 이메일 주소를 문자열로 입력하거나 수정할 이메일 주소를 최대 50개까지 배열할 수 있습니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

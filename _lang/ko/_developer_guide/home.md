@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze 개발자 가이드"
-guide_top_text: "개발자는 여기에서 Braze에서 사용할 수 있는 모든 통합 기능을 찾을 수 있습니다.<br>추가 리소스를 확인하고 Braze 개발자 커뮤니티에 참여하려면 <a href='https://www.braze.com/dev-portal'>Braze 개발자 포털</a>을 방문하세요."
+guide_top_text: "개발자는 여기에서 Braze에서 사용할 수 있는 모든 통합 기능을 찾을 수 있습니다. Braze로 개발 중인 다른 개발자들과 교류하고, 배우고, 영감을 얻으려면 Braze <a href='https://www.braze.com/dev-portal'>개발자 커뮤니티에</a> 가입하세요."
 article_title: Braze 개발자 가이드
 description: "이 랜딩 페이지에서는 개발자가 Braze에서 사용할 수 있는 모든 통합 기능을 찾을 수 있습니다."
 

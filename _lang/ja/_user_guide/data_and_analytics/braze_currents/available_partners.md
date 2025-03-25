@@ -10,7 +10,7 @@ tool: Currents
 
 # 利用可能なパートナー
 
-> このページでは、Braze Currents との連携に使用できるデータパートナーのユースケースを概説します。
+> このページでは、Braze Currentsと連携できるデータパートナーの一覧と、そのユースケースの概要を説明する。 
 
 {% alert note %}
 Braze から配信するイベントの命名規則が、パートナーによって異なる場合があります。たとえば、セグメントでの Currents メール開封イベントは `Email Opened` ですが、Mixpanel では `Email Open` になります。

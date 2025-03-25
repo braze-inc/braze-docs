@@ -25,7 +25,7 @@ Com o aliasing de link, você pode:
 
 ### Como funciona?
 
-O Braze identifica de forma única os links dentro dos emails ao anexar um parâmetro extra chamado `lid` (também conhecido como identificador de link) a cada URL de link. Este `lid` valor permite que Braze rastreie, monitore e agregue interações do usuário com o link, mesmo que o restante dos parâmetros da URL possa diferir. Isso ajuda a fornecer insights sobre como os usuários interagem com o conteúdo em suas campanhas de e-mail.
+O Braze identifica de forma única os links dentro dos emails ao anexar um parâmetro extra chamado `lid` (também conhecido como identificador de link) a cada URL de link. Este valor `lid` permite que Braze rastreie, monitore e agregue interações do usuário com o link, mesmo que o restante dos parâmetros da URL possa diferir. Isso ajuda a fornecer insights sobre como os usuários interagem com o conteúdo em suas campanhas de e-mail.
 
 ## Criação de um alias de link
 
@@ -49,7 +49,7 @@ O aliasing de links só é compatível com as atribuições `href` dentro de tag
 Para ver todos os seus aliases de link rastreados, faça o seguinte:
 
 1. Acesse **Configurações** > **Preferências de envio de e-mail** em **Configurações do espaço de trabalho**.
-2. Selecione a guia **Link Aliasing Settings**.
+2. Selecione a guia **Link Aliasing Settings (Configurações de aliasing de link)**.
 
 {% alert important %}
 Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), essas configurações estão em **Manage Settings (Gerenciar configurações**).
@@ -60,7 +60,7 @@ Aqui, você pode classificar, pesquisar e desativar o rastreamento para aliases 
 ![Página de Aliases de Links Rastreados que mostra dois aliases de link chamados "TechPartners" e "Help" que estão associados a uma campanha chamada "e-mail_Survey".][8]
 
 {% alert tip %}
-Use o [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) e [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) endpoints para extrair o `alias` conjunto em cada variante de mensagem em uma campanha ou um componente Canvas específico de e-mail.
+Use os endpoints [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) e [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extrair o conjunto `alias` em cada variante de mensagem em uma campanha ou um componente Canvas específico de e-mail.
 {% endalert %}
 
 Braze recomenda avaliar os links dentro do e-mail, adicionar modelos de links e fornecer uma convenção de nomes que funcione para fins de segmentação e relatórios. Isso o ajuda a manter o rastreamento de todos os links.
@@ -91,7 +91,7 @@ As tabelas a seguir fornecem exemplos de links em um e-mail, resultados de alias
 
 ### link HTML
 
-**Lógica:** Braze reconhece que um link é uma URL e já possui um ponto de interrogação (?) presente, então o `lid` parâmetro de consulta é anexado após o ponto de interrogação.
+**Lógica:** Braze reconhece que um link é uma URL e já possui um ponto de interrogação (?) presente, então o parâmetro de consulta `lid` é anexado após o ponto de interrogação.
 
 | Link no corpo do e-mail                                                | Link com aliasing                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -118,7 +118,7 @@ As tabelas a seguir fornecem exemplos de links em um e-mail, resultados de alias
 
 ## Rastreamento link aliases
 
-Na guia **Link Management (Gerenciamento de links** ), selecione quais aliases você gostaria que fossem "rastreados" para fins de segmentação e que estivessem presentes nos filtros de segmentação. Note que os aliases rastreados são apenas para fins de segmentação e não terão impacto sobre o rastreamento de seu link para fins de relatório.
+Na guia **Link Management (Gerenciamento de links)**, selecione quais aliases você gostaria que fossem "rastreados" para fins de segmentação e que estivessem presentes nos filtros de segmentação. Note que os aliases rastreados são apenas para fins de segmentação e não terão impacto sobre o rastreamento de seu link para fins de relatório.
 
 {% alert tip %}
 Para rastrear as métricas de engajamento do link, seu link precisa ser precedido por HTTP ou HTTPS.
@@ -153,7 +153,7 @@ O Braze só rastreia até os últimos 100 aliases de links clicados no nível do
 
 No Braze, se você tiver um alias de link no seu e-mail e um usuário clicar nele, o evento é registrado no perfil do usuário com o alias.
 
-Se você usar o filtro de segmentação "Clique no Alias em Qualquer Campanha ou Etapa do Canva" e depois decidir renomear este alias de link, os dados de clique anteriores no perfil do usuário **não** serão atualizados, o que significa que ainda aparecerão como o alias de link anterior. Portanto, se você direcionar os usuários com base no novo alias de link, ele não incluirá os dados do alias de link anterior.
+Se você usar o filtro de segmentação "Clique no Alias em Qualquer Campanha ou Etapa do Canva" e depois decidir renomear este alias de link, os dados de clique anteriores no perfil do usuário **não serão** atualizados, o que significa que ainda aparecerão como o alias de link anterior. Portanto, se você direcionar os usuários com base no novo alias de link, ele não incluirá os dados do alias de link anterior.
 
 Se você usar o filtro de segmentação "Alias Clicado na Campanha" ou "Alias Clicado no Canva", isso filtrará seus usuários com base em se eles clicaram em um alias específico em uma campanha ou Canva específica. Se vários usuários compartilharem o mesmo e-mail e o alias do link for clicado, todos os outros usuários que compartilham o e-mail terão seus perfis de usuário atualizados. 
 

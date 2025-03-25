@@ -1,16 +1,16 @@
 ---
-nav_title: "POST: Envio de e-mails de transação por meio de entrega disparada por API"
-article_title: "POST: Envio de e-mails de transação por meio de entrega disparada por API"
+nav_title: "POST: Envie e-mails de transação usando a entrega disparada por API"
+article_title: "POST: Envie e-mails de transação usando a entrega disparada por API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o endpoint da Braze \"Envio de e-mails de transação por meio de entrega disparada por API\"."
+description: "Este artigo descreve detalhes sobre o endpoint do Braze Send transactional e-mail messages using API-triggered delivery."
 
 ---
 
 {% api %}
-# Envie e-mails de transação por meio de entrega disparada por API
+# Envie e-mails de transação usando a entrega disparada por API
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}

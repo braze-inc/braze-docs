@@ -98,6 +98,6 @@ Para inicializar o SDK do Braze, siga o [processo padrão de inicialização do 
 
 Ao usar `Braze.prepareForDelayedInitialization(pushAutomation:)`, você está configurando o SDK para usar automaticamente os recursos de automação de notificações por push. Os métodos delegados do sistema que manipulam notificações por push não serão chamados para notificações por push originadas do Braze.
 
-O SDK somente processará uma notificação por push do Braze e a ação resultante **depois que** o SDK for inicializado. Por exemplo, se um usuário tocar em uma notificação por push que abre um deep linking, o deep link só será aberto depois que a instância `Braze` for inicializada.
+O SDK somente processará uma notificação por push do Braze e a ação resultante **depois** que o SDK for inicializado. Por exemplo, se um usuário tocar em uma notificação por push que abre um deep linking, o deep link só será aberto depois que a instância `Braze` for inicializada.
 
 Se você precisar realizar um processamento adicional nas notificações por push do Braze, consulte [Assinatura de atualizações de notificações por push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#subscribing-to-push-notifications-updates). Lembre-se de que, para receber atualizações de notificações por push que foram enfileiradas anteriormente, você deve implementar o manipulador de inscrição diretamente após a inicialização do SDK.

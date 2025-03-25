@@ -33,9 +33,18 @@ Um [grupo de inscrições][1] é uma coleção de números de telefone de envio 
 
 ### Limites e taxa de transferência de mensagens MMS
 
-Para MMS, o limite da mensagem é de 1 MB (isso inclui o ativo multimídia e o tamanho do corpo da mensagem). Por precaução, a Braze recomenda não exceder 600 KB para o seu ativo multimídia e incluir um corpo de mensagem.
+As operadoras impõem seus próprios limites de tamanho de arquivo, que, em última análise, determinam o sucesso do envio de MMS. Esses limites podem variar por geografia e operadora, então, para estar do lado seguro, Braze recomenda não exceder 600 KB para seu ativo multimídia, enquanto também inclui um corpo de mensagem. Também recomendamos testar para confirmar se sua mídia pode ser entregue através das operadoras de seus usuários.
 
-A taxa de transferência de MMS é de um segmento por segundo por meio de um código longo.
+A taxa de transferência do MMS é um segmento por segundo através de um código longo.
+
+#### Limites de tamanho de arquivo da operadora
+
+| Tamanho do arquivo | Operadora manuseio |
+| --- | --- |
+| 300 KB | Todos os operadores devem lidar de forma confiável com mensagens MMS desse tamanho. |
+| 600 KB | Este é considerado o tamanho máximo padrão de arquivo para MMS na maioria das operadoras. |
+| 1 MB |  A maioria das operadoras dos EUA e do Canadá pode lidar com mensagens MMS desse tamanho, embora isso possa variar de operadora. Alguns provedores podem permitir tamanhos de arquivo maiores do que isso. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### MMS de entrada
 

@@ -14,7 +14,7 @@ guide_top_text: "Utilisez les points de terminaison d'ingestion de données clou
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET : Intégrations de liste"
+  - name: "GET : Intégrations de listes"
     link: /docs/api/cdi/get_integration_list/
     image: /assets/img/braze_icons/list.svg
   - name: "GET : Liste Statut de Synchronisation des Emplois"

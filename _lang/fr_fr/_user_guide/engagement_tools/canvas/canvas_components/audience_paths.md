@@ -78,6 +78,16 @@ Un [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_t
 
 Dans ce cas, essayez plutôt d'utiliser les [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
 
+### Utiliser le filtre d'un canal intelligent avec les parcours d'audience
+
+En combinant les étapes des parcours audience et les filtres d'un canal intelligent, vous pouvez adapter votre expérience de communication aux préférences et aux comportements de chaque utilisateur. Ainsi, vos utilisateurs recevront les messages les plus pertinents par le biais des canaux appropriés.
+
+Par exemple, dans une étape de parcours d'audience, vous pouvez créer trois audiences : L'e-mail, le Mobile Push, et tous les autres. Pour l'audience e-mail, ajoutez le filtre `Intelligent Channel is Email`. Pour l'audience Mobile Push, ajoutez le filtre `Intelligent Channel is Mobile Push`. Ensuite, vous pouvez ajouter une étape Message pour chacun des parcours d'audience afin d'envoyer des messages personnalisés et pertinents.
+
+{% alert tip %}
+Consultez nos [modèles Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) pour voir comment vous pouvez personnaliser ces modèles prédéfinis à votre avantage.
+{% endalert %}
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}

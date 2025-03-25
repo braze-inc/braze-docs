@@ -24,10 +24,10 @@ Hay dos maneras de localizar tu `app_id`:
 
 {% tabs local %}
 {% tab Identificadores de la aplicación %}
-Ve a **Configuración** > **API e identificadores** > Identificadores de aplicación. Tu clave de API para cada aplicación aparece en la columna **Identificador**.
+Ve a **Configuración** > **API e identificadores** > **Identificadores de aplicación**. Tu clave de API para cada aplicación aparece en la columna **Identificador**.
 
 {% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **Identificadores de aplicación** se encuentra en **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **Identificadores de aplicación** se encuentra en **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 {% endtab %}
 
@@ -35,7 +35,7 @@ Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **Identifica
 Ve a **Configuración** > **Configuración de la aplicación**. Su clave API aparece junto al campo **Clave API** en la sección de configuración.
 
 {% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), la **configuración de la aplicación** se encuentra en **Administrar configuración** > Configuración.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), la **configuración de la aplicación** se encuentra en **Administrar configuración** > **Configuración**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -83,7 +83,7 @@ Vaya a **Plantillas**, seleccione una página de plantilla y, a continuación, s
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
 {% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar identificadores de API en **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar identificadores de API en **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Campañas**
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
 {% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **las claves de API** se encuentran en **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **las claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -173,7 +173,7 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Segmentos**
 Ve a **Configuración** > \*\***API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
 {% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **las claves de API** se encuentran en **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), las **claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -188,9 +188,7 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **las claves 
 
 Un identificador de tarjeta o ID de tarjeta es una clave aleatoria generada por Braze para una determinada tarjeta de noticias dentro del cuadro de mandos. Los ID de tarjeta son exclusivos de cada tarjeta de [noticias]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) y pueden utilizarse para hacer referencia a las tarjetas a través de la API. 
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ### ¿Dónde puedo encontrarlo?
 
@@ -209,7 +207,7 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **la fuente d
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
 {% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **las claves de API** se encuentran en **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), las **claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

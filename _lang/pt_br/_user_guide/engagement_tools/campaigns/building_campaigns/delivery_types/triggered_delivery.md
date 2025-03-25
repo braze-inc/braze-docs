@@ -96,11 +96,11 @@ Você também pode optar por enviar a campanha em um dia específico da semana (
 
 ### Etapa 3: Selecionar eventos de exceção
 
-Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. Os eventos de exceção podem ser a realização de uma compra, o início de uma sessão, a performance de um dos [eventos de conversão][18]] designados de uma campanha ou a realização de um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/).
+Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. Os eventos de exceção podem ser a realização de uma compra, o início de uma sessão, a performance de um dos [eventos de conversão][18]] designados de uma campanha ou a realização de um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
 
 ![][20]
 
-Você pode ler mais sobre como empregar eventos de exceção em nossa seção sobre [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
+Você pode ler mais sobre como empregar eventos de exceção em nossa seção sobre [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
 > Se você enviar uma campanha com um evento de disparo que corresponda ao evento de exceção, o Braze cancelará a campanha e reagendará automaticamente uma nova campanha com base no tempo de entrega da mensagem do evento de exceção. Por exemplo, se o seu primeiro evento de gatilho começar em cinco minutos e o evento de exceção começar em 10 minutos, você consideraria os 10 minutos do evento de exceção como o tempo de envio de mensagens da campanha oficial.
 
@@ -114,7 +114,7 @@ Atribua a duração da campanha especificando uma hora de início e uma hora de 
 
 ![][21]
 
-Se um usuário concluir um evento de gatilho durante o período de tempo especificado, mas se qualificar para a mensagem fora do período de tempo devido a uma postergação programada, ele não receberá a campanha. Portanto, se você definir uma postergação maior do que o período de tempo da mensagem, nenhum usuário receberá sua campanha. Além disso, é possível optar por enviar a mensagem nos [fusos locais dos usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
+Se um usuário concluir um evento de gatilho durante o período de tempo especificado, mas se qualificar para a mensagem fora do período de tempo devido a uma postergação programada, ele não receberá a campanha. Portanto, se você definir uma postergação maior do que o período de tempo da mensagem, nenhum usuário receberá sua campanha. Além disso, é possível optar por enviar a mensagem nos [fusos locais dos usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
 ### Etapa 5: Selecione o período
 
@@ -126,7 +126,7 @@ No caso de um usuário concluir o evento de gatilho dentro do período de tempo,
 
 ![][31]
 
-Se um usuário não receber a mensagem porque perdeu o prazo, ele ainda estará qualificado para recebê-la na próxima vez que concluir o evento de gatilho, mesmo que você não tenha optado por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/). Se optar pela reelegibilidade dos usuários, eles poderão receber a campanha sempre que concluírem o evento de gatilho, desde que se qualifiquem durante o período de tempo especificado.
+Se um usuário não receber a mensagem porque perdeu o prazo, ele ainda estará qualificado para recebê-la na próxima vez que concluir o evento de gatilho, mesmo que você não tenha optado por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Se optar pela reelegibilidade dos usuários, eles poderão receber a campanha sempre que concluírem o evento de gatilho, desde que se qualifiquem durante o período de tempo especificado.
 
 Se também tiver atribuído à campanha uma determinada duração, o usuário deverá se qualificar tanto na duração quanto na parte específica do dia para receber a mensagem.
 
@@ -189,7 +189,7 @@ Recomendamos alterar o público-alvo para incluir todos os usuários ou verifica
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

@@ -402,7 +402,7 @@ Sigue las instrucciones que se encuentran en la [documentación para desarrollad
 
 El panel de Braze admite la configuración de vínculos profundos o URL de Web en campañas de notificaciones push y Lienzos que se abrirán cuando se haga clic en la notificación.
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Acción de clic en vínculo profundo")
+![La configuración de "Comportamiento al hacer clic" en el panel de Braze con la opción "Vinculación profunda con la aplicación" seleccionada en el menú desplegable.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Acción de clic de vinculación profunda")
 
 #### Personalizar el comportamiento de la pila de actividades
 
@@ -467,7 +467,7 @@ El nombre y la descripción predeterminados del canal también se pueden configu
 
 En este punto, deberías poder ver las notificaciones enviadas desde Braze. Para probarlo, ve a la página **Campañas** de tu panel de Braze y crea una campaña de **Notificación push**. Elige **Android Push** y diseña tu mensaje. A continuación, haz clic en el icono del ojo en el compositor para obtener el remitente de la prueba. Introduce el ID de usuario o la dirección de correo electrónico de tu usuario actual y haz clic en **Enviar prueba**. Deberías ver aparecer el push en tu dispositivo.
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![La pestaña "Prueba" de una campaña de notificación push en el panel de Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Para problemas relacionados con la visualización push, consulta nuestra [guía de solución de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
 

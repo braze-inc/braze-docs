@@ -84,7 +84,7 @@ Les modifications apportées à la liste de blocage peuvent prendre quelques min
 
 ## Suppression de données personnalisées
 
-Au fur et à mesure que vous créez des campagnes et des segments ciblés, vous constaterez peut-être que vous n'avez plus besoin d'un événement personnalisé ou d'un attribut personnalisé. Par exemple, si vous avez utilisé un attribut personnalisé spécifique dans le cadre d'une campagne ponctuelle, vous pouvez supprimer ces données après les avoir [mises en liste bloquée](#blocklisting-custom-attributes-custom-events-and-products) et avoir supprimé leurs références dans votre application. 
+Au fur et à mesure que vous créez des campagnes et des segments ciblés, vous constaterez peut-être que vous n'avez plus besoin d'un événement personnalisé ou d'un attribut personnalisé. Par exemple, si vous avez utilisé un attribut personnalisé spécifique dans le cadre d'une campagne ponctuelle, vous pouvez supprimer cette donnée après l'avoir [mise en liste bloquée](#blocklisting-custom-attributes-custom-events-and-products) et supprimer ses références de votre application. Vous pouvez supprimer tous les types de données (tels que les chaînes de caractères, les nombres et les attributs personnalisés imbriqués).
 
 Pour supprimer un événement personnalisé et un attribut personnalisé, procédez comme suit :
 

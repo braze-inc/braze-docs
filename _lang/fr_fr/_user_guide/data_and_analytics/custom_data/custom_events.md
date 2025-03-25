@@ -60,7 +60,7 @@ Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous s
 
 ### Consultation des rapports d'utilisation
 
-Le rapport d'utilisation répertorie toutes les toiles, campagnes et segments utilisant un événement personnalisé spécifique. La liste ne comprend pas les utilisations du liquide. 
+Le rapport d'utilisation répertorie toutes les toiles, campagnes et segments utilisant un événement personnalisé spécifique. La liste ne comprend pas les utilisations de Liquid. 
 
 Vous pouvez afficher jusqu'à 10 rapports d'utilisation à la fois en cochant les cases correspondant à plusieurs événements personnalisés, puis en sélectionnant **Afficher le rapport d'utilisation.**
 
@@ -224,7 +224,7 @@ Les filtres de segmentation des propriétés d'événement sont les suivants :
 - A effectué des achats avec le bien A d'une valeur B, X fois au cours des Y derniers jours.
 - Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-![][3]
+![Un groupe de filtres qui "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendary days (720-744 hours)".][3]
 
 Les données ne sont enregistrées pour une propriété d'événement donnée qu'après avoir été activées par votre gestionnaire de la satisfaction client, et les propriétés d'événement ne sont disponibles qu'à partir de cette date.
 
@@ -253,7 +253,7 @@ Pour l'envoi de messages par Canvas Flow, `canvas_entry_properties` peut être u
 #### Cas d’utilisation
 
 {% raw %}
-Supposons qu'un magasin de détail, RetailApp, ait la demande suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. RetailApp peut intégrer le nom du produit (chaussures) dans un message avec le liquide `{{canvas_entry_properties.${product_name}}}`.
+Supposons qu'un magasin de détail, RetailApp, ait la demande suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. RetailApp peut intégrer le nom du produit (chaussures) dans un message avec le code Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
 RetailApp peut également déclencher l'envoi de messages spécifiques pour différentes propriétés d' `product_name` dans un canvas qui cible les utilisateurs après qu'ils aient déclenché un événement d'achat. Par exemple, ils peuvent envoyer des messages différents aux utilisateurs qui ont acheté des chaussures et à ceux qui ont acheté autre chose en ajoutant le liquide suivant dans une étape Message.

@@ -73,8 +73,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages/
-- name: 未来のアンセム
+- name: Future Anthem
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
-- name: 見る
+- name: SEEN
   url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---

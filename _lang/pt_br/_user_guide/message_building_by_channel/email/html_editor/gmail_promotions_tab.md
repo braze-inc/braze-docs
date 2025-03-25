@@ -96,7 +96,7 @@ O Gmail determina quando e para quem exibir o cartão, portanto, não há garant
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}
 [3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
 [4]: {% image_buster /assets/img/promocardmap.png %}
-Daqui a [5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
+[5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
 [6]: {% image_buster /assets/img/gmail_preview.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
 Daqui a [8]: https://developers.google.com/gmail/promotab/best-practices

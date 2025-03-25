@@ -177,11 +177,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 
 [연결된 콘텐츠와]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) 마찬가지로, 카탈로그 항목의 리퀴드 콘텐츠를 렌더링하려면 리퀴드 태그에 `:rerender` 플래그를 사용해야 합니다. `:rerender` 플래그는 한 단계 깊이에 불과하므로 중첩된 Liquid 태그 호출에는 적용되지 않는다는 점에 유의하세요.
 
-{% alert important %}
-Liquid를 포함하는 카탈로그 항목 템플릿은 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
-{% endalert %}
-
-카탈로그 항목에 사용자 프로필 필드(Liquid 개인화 태그 내)가 포함된 경우, 이러한 값을 메시지 앞부분과 템플릿 전에 Liquid에서 정의해야 Liquid를 올바르게 렌더링할 수 있습니다. `:rerender` 플래그가 제공되지 않으면 원시 리퀴드 콘텐츠를 렌더링합니다.
+카탈로그 항목에 사용자 프로필 필드(Liquid 개인화 태그 내)가 포함된 경우, 이러한 값을 메시지 앞부분과 템플릿 지정 전에 Liquid에서 정의해야 Liquid를 올바르게 렌더링할 수 있습니다. `:rerender` 플래그가 제공되지 않으면 원시 리퀴드 콘텐츠를 렌더링합니다.
 
 예를 들어 "메시지"라는 이름의 카탈로그에 이 Liquid가 있는 항목이 있는 경우입니다.
 

@@ -46,9 +46,9 @@ Para las regiones poligonales, puede designar más específicamente qué áreas 
 
 La combinación de la beacon o geovalla existente con nuestras características de segmentación y mensajería te proporciona más información sobre las acciones físicas de tus usuarios para que puedas enviarles mensajes en consecuencia. Puedes aprovechar el seguimiento de ubicación con algunos de nuestros socios: 
 
-- [Radar][6]
-- [Gimbal][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

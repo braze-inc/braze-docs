@@ -78,6 +78,16 @@ tool: Canvas
 
 このような場合は、代わりに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を使用してみてください。
 
+### オーディエンスパスでインテリジェントチャネルフィルターを使う
+
+オーディエンスパスのステップとインテリジェントチャネルフィルターを組み合わせて使用することで、メッセージング体験を各ユーザーの好みや行動に合わせることができます。こうすることで、ユーザーは適切なチャネルを通じて最も関連性の高いメッセージを受け取ることができる。
+
+例えば、オーディエンスパスのステップでは、3つのオーディエンスを作成することができます。メール、モバイル・プッシュ、その他すべて。メールオーディエンスには、フィルター`Intelligent Channel is Email` を追加します。モバイルプッシュのオーディエンスには、フィルター`Intelligent Channel is Mobile Push` を追加します。そして、オーディエンスパスごとにメッセージステップを追加し、パーソナライズされた関連性のあるメッセージを配信することができます。
+
+{% alert tip %}
+[Brazeキャンバスのテンプレートには]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates)、あらかじめ用意されたテンプレートをどのようにカスタマイズすればよいかの例が掲載されている。
+{% endalert %}
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}

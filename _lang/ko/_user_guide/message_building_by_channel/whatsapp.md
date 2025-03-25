@@ -42,6 +42,9 @@ guide_featured_list:
 - name: "WhatsApp 신고"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg
+- name: "메시지 사용 대시보드"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "WhatsApp 모범 사례"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg

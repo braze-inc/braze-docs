@@ -15,9 +15,7 @@ channel:
 
 > このリファレンス記事では、Android または FireOS アプリケーションでニュースフィードのクリックを手動で処理する方法について説明します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 カスタムニュースフィードクリックリスナーを設定することで、ニュースフィードのクリックを手動で処理できます。これにより、Web リンクを開くためにネイティブ・Web・ブラウザーを選択的に使用するといったユースケースが可能になります。
 

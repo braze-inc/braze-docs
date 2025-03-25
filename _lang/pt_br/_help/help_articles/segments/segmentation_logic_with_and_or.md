@@ -10,7 +10,7 @@ tool: Segments
 
 # Lógica de segmentação 
 
-Os operadores `AND` e `OR` ativam uma filtragem poderosa ao [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). Usando esses operadores, é possível direcionar seus usuários com base em suas ações ou comportamentos na etapa **Target Audience (Público-alvo** ) da criação de suas campanhas ou Canvas.
+Os operadores `AND` e `OR` ativam uma filtragem poderosa ao [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). Usando esses operadores, é possível direcionar seus usuários com base em suas ações ou comportamentos na etapa **Target Audience (Público-alvo)** da criação de suas campanhas ou Canvas.
 
 ## Compreensão dos operadores AND e OR
 

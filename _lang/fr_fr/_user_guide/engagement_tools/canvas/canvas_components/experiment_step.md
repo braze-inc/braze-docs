@@ -55,7 +55,7 @@ Si la rééligibilité Canvas est activée, les utilisateurs qui accèdent à Ca
 
 Vous pouvez choisir d'optimiser votre expérience en activant [Chemin Gagnant][WP] ou [Chemins Personnalisés][PP]. Les deux options fonctionnent en testant initialement vos chemins avec une partie de votre audience. À la fin de l'expérience, les utilisateurs restants et les suivants sont envoyés sur le chemin le plus performant (chemin gagnant) ou sur le chemin le plus performant pour chaque utilisateur (chemins personnalisés).
 
-### Étape 3 : Créer des chemins
+### Étape 3 : Créer des chemins
 
 Enfin, vous devez créer vos chemins en aval. Sélectionnez **Terminé** et revenez au créateur de Canvas. Cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> sous chaque chemin pour commencer la création des parcours à l’aide des outils habituels Canvas comme bon vous semble et lancez le Canvas quand vous êtes prêt.
 

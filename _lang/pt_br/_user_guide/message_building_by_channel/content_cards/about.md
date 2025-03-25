@@ -8,7 +8,7 @@ channel:
 search_rank: 4
 ---
 
-# [![curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Sobre Content Cards
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Sobre Cartões de Conteúdo
 
 > Os cartões de conteúdo são incorporados diretamente ao seu app ou site para que você possa engajar os usuários com uma experiência que pareça natural e perfeita. Eles oferecem mais controle sobre a experiência do app ou do site e permitem criar caixas de entrada de mensagens, carrosséis e banners, além de ampliar o alcance de outros canais (como e-mail ou notificações por push).
 
@@ -116,11 +116,11 @@ Esta seção aborda as três maneiras mais comuns de colocar cartões de conteú
 
 A lógica e a implementação desses posicionamentos não são padrão no Braze, portanto, sua equipe de engenharia deve fornecer e apoiar o trabalho para alcançar esses casos de uso. Para obter uma visão geral sobre como implementar esses posicionamentos, consulte [Criação de cartão de conteúdo personalizado]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 exemplos de cartões de conteúdo de conteúdo, mostrando as diferentes opções de posicionamento: caixa de entrada de mensagens, carrossel e banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Caixa de entrada de mensagens
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Um exemplo de cartão de conteúdo usando o posicionamento da "caixa de entrada de mensagens".]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Uma caixa de entrada de mensagens (também chamada de central de notificações ou feed) é um local persistente em seu app ou site onde você pode exibir Cartões de Conteúdo no formato que preferir. Cada mensagem na caixa de entrada é seu próprio cartão de conteúdo. 
 
@@ -142,7 +142,7 @@ Os Cartões de Conteúdo vêm com um estilo padrão, mas você pode escolher uma
 
 ### Carrossel
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Um exemplo de cartão de conteúdo usando o posicionamento "carrossel".]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Os carrosséis exibem várias peças de conteúdo em um único espaço que seus clientes podem deslizar para ver. Eles podem ser uma apresentação de slides de imagens, texto, vídeo ou uma combinação deles. Esta é uma implementação personalizada e requer um pouco de trabalho dos seus desenvolvedores.
 
@@ -159,7 +159,7 @@ Como esta é uma implementação personalizada, você precisará trabalhar com s
 
 ### Banner
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Um exemplo de cartão de conteúdo de banner.]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Os Cartões de Conteúdo podem aparecer como um banner dinâmico que é exibido de forma persistente na sua página inicial ou no topo de outras páginas designadas.
 

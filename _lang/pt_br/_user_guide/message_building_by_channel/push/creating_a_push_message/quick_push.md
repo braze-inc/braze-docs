@@ -62,18 +62,17 @@ Se você selecionar vários dispositivos para plataformas móveis, como iOS e An
 
 ### Configurações específicas do dispositivo
 
-As configurações específicas para iOS e Android não são suportadas quando várias plataformas ou dispositivos são selecionados. Isso inclui configurações como [botões de ação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canais e grupos de notificação, TTL, prioridade de exibição, sons e muito mais.
+Você pode editar configurações específicas da plataforma no editor. Isso inclui configurações como [botões de ação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canais e grupos de notificação, TTL, prioridade de exibição, sons e muito mais.
 
 Para saber mais sobre as configurações específicas do dispositivo, consulte as seguintes coleções de artigos:
 
-- [Opções do iOS][6]
+- [Opções iOS][6]
 - [Opções do Android][7]
 
 
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios

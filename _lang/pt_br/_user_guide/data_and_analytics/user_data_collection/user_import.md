@@ -35,11 +35,11 @@ Have you read Ulysses?
 
 ## API REST
 
-Use o ponto de extremidade [`/users/track`][12] para registrar eventos personalizados, atributos de usuário e compras para usuários.
+Use o [endpoint`/users/track`][12] para registrar eventos personalizados, atributos de usuário e compras para usuários.
 
 ## Ingestão de dados na nuvem
 
-Use o Braze [Cloud Data Ingestion][14] ] para importar e manter as atribuições de usuários. 
+Use o Braze [Cloud Data Ingestion][14] para importar e manter as atribuições de usuários. 
 
 ## importação de CSV
 
@@ -112,9 +112,9 @@ Embora `external_id` não seja obrigatório, você **deve** incluir um desses ca
 
 ### Importando um CSV
 
-Para importar seu arquivo CSV, Acessar a página de **importação de usuário** na seção **Audiences**. Aqui, você encontrará uma tabela que lista as importações mais recentes, que inclui detalhes como a data de fazer upload, o nome do responsável pelo upload, nome do arquivo, disponibilidade de direcionamento, número de linhas importadas e status de cada importação.
+Para importar o arquivo CSV, acesse **Públicos** > **Importação de usuário**. Aqui, você encontrará uma tabela que lista as importações mais recentes, que inclui detalhes como a data de fazer upload, o nome do responsável pelo upload, nome do arquivo, disponibilidade de direcionamento, número de linhas importadas e status de cada importação.
 
-![][3]
+![A página "Importar usuários" no dashboard do Braze.][3]
 
 Selecione **Procurar Arquivos** e seu arquivo. Braze fará upload do seu arquivo e verificará os cabeçalhos das colunas e os tipos de dados de cada coluna.
 
@@ -193,12 +193,27 @@ Você não pode usar uma importação CSV para criar um novo usuário usando `br
 O valor `braze_id` pode ser rotulado como `Appboy ID` nas exportações CSV do dashboard da Braze. Este ID será o mesmo que o `braze_id` para um usuário, então você pode renomear esta coluna para `braze_id` quando reimportar o CSV.
 {% endalert %}
 
+### Importação com endereços de e-mail e números de telefone
+
+É possível omitir uma ID externa ou um alias de usuário e usar apenas um endereço de e-mail ou número de telefone para a importação de usuários. Antes de importar um arquivo CSV com endereços de e-mail ou números de telefone, verifique o seguinte:
+
+- Verifique se não há IDs externos ou aliases de usuário para esses perfis.
+- Confirme se o arquivo CSV está formatado corretamente.
+
+{% alert note %}
+Se incluir endereços de e-mail e números de telefone em seu arquivo CSV, o endereço de e-mail terá prioridade sobre o número de telefone ao procurar perfis.
+{% endalert %}
+
+Se um perfil existente tiver esse endereço de e-mail ou número de telefone, esse perfil será atualizado e o Braze não criará um novo perfil. Se houver vários perfis com o mesmo endereço de e-mail, o Braze usará a mesma lógica do [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), no qual o perfil atualizado mais recentemente será atualizado.
+
+Se não houver um perfil com esse endereço de e-mail ou número de telefone, o Braze criará um novo perfil com esse identificador. Você pode usar o [endpoint `/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) para identificar esse perfil posteriormente. Para excluir um perfil de usuário, você também pode usar o endpoint [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete).
+
 ### Importando dados personalizados
 
 Todos os cabeçalhos que não corresponderem exatamente aos dados de usuários padrão criarão um atributo personalizado no Braze.
 
 Os seguintes tipos de dados são aceitos na importação de usuário:
-- **Data e hora:** Deve ser armazenado no formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 
+- **Data e hora:** Deve ser armazenado no formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)
 - **Booleano:** `true` ou `false`
 - **Número:** Inteiro ou float sem espaços ou vírgulas; os floats devem usar um ponto (`.`) como separador decimal
 - **String:** Pode conter vírgulas se houver aspas duplas (`""`) ao redor do valor da coluna

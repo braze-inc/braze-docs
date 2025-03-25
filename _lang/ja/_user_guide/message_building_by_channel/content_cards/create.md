@@ -25,13 +25,13 @@ search_rank: 3.9
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**キャンペーン**の下に**エンゲージメント**があります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
 {% endalert %}
 
 {:start="2"}
 2\.**Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
 3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)と[tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)を追加します。
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加する。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。たとえば、[Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用する場合、関連するタグでフィルタリングできます。
 5. キャンペーンに必要な数のバリアントを追加し、名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。バリアントの詳細については、[多変量およびA/B 検定]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を参照してください。
 
@@ -62,7 +62,7 @@ search_rank: 3.9
 
 | メッセージの種類 | 例 | 説明 |
 |---|---|---|
-|[クラシック]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![ワークアウトクラスの予約を促す小さなアイコンとテキストを持つクラシックコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |クラシック・カードはシンプルなレイアウトで、太字のタイトル、メッセージ・テキスト、そしてタイトルとテキストの左にオプションの画像が配置されている。クラシックカードには正方形の画像やアイコンを使うのがベストだ。 |
+|[クラシック]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![ワークアウトクラスの予約を促す小さなアイコンとテキストを持つクラシックコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |クラシック・カードはシンプルなレイアウトで、太字のタイトル、メッセージ・テキスト、そしてタイトルとテキストの左にオプションの画像が配置されている。クラシックカードには正方形の画像やアイコンを使うことがいます。 |
 |[キャプション付き画像]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![ワークアウトクラスを予約することを奨励するための、ウェイトリフターとテキストのイメージを含むキャプション付きコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | キャプション付き画像カードでは、コピーと注目を集める画像でコンテンツを紹介できます。 |
 |[画像のみ]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![テキストのみの画像専用コンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | 画像のみのカードは、画像、GIF、およびその他のクリエイティブな非テキストコンテンツ用のスペースで注目を引きます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -115,6 +115,10 @@ search_rank: 3.9
 
 {% alert warning %}
 コンテンツ・カードのメッセージ・フィールドは、以下のフィールドのバイトサ イズ長を足して計算される合計サイズが2KBに制限されている：タイトル、メッセージ、イメージURL、リンクテキスト、リンクURL、およびキーと値のペア(名前と値)。このサイズを超えるメッセージは送信されない。これは画像のサイズではなく、画像URLの長さを含むことに注意。
+{% endalert %}
+
+{% alert warning %}
+各ユーザーのフィードには、有効期限が切れていないコンテンツカードを常時250枚まで含めることができます。この制限を超えると、Braze は、未読のカードであっても、最も古いカードの返却を停止します。放棄されたカードも、この250枚のカード制限に数えられます。つまり、放棄されたカードの数が多いと、新しいカードのために利用可能なスペースが減る可能性があります。
 {% endalert %}
 
 ## ステップ 4:追加の設定を行う (オプション)

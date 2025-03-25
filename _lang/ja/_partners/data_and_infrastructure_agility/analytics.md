@@ -42,6 +42,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
-- name: 受信トレイ・モンスター
+- name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 ---

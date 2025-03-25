@@ -15,6 +15,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Com o editor de arrastar e soltar, você pode criar mensagens no app totalmente personalizadas em campanhas ou no canva usando a experiência de edição de arrastar e soltar.
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 Se quiser usar seus modelos HTML personalizados existentes ou modelos criados por terceiros, eles deverão ser recriados no editor de arrastar e soltar.
 
 Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.

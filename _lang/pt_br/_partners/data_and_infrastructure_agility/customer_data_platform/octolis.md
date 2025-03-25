@@ -25,7 +25,7 @@ A integração da Braze com a Octolis atua como middleware entre suas fontes de 
 | ----------- | ----------- |
 | Conta Octolis | É necessário ter uma conta Octolis para usar esta parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com permissões [**users.track**][1]. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][2]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][2] Seu endpoint dependerá do URL do Braze para sua instância. |
 | Chave do app da Braze | A chave do identificador de seu app. Ela pode ser entrada em **Dashboard da Braze > Gerenciar configurações > Chave de API**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -81,7 +81,7 @@ Aqui, você nomeará seu Canvas, atribuirá [equipes]({{site.baseurl}}/user_guid
 Coloque tags em suas telas para que seja fácil encontrá-las e criar relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 {% endalert %}
 
-![][53]
+![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.][53]
 
 #### Selecionar eventos de conversão
 
@@ -103,7 +103,7 @@ Você pode escolher uma das três maneiras pelas quais os usuários podem entrar
 
     In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
 
-    ![]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Entrega baseada em ação %}
     Com a entrega baseada em ação, os usuários entrarão no Canvas e começarão a receber mensagens quando realizarem ações específicas, como abrir seu app, fazer uma compra ou disparar um evento personalizado.
@@ -148,13 +148,13 @@ Evite configurar uma campanha baseada em ação ou o Canva com o mesmo disparo d
 
 Depois de adicionar segmentos e filtros ao seu público-alvo, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar se ele corresponde aos critérios do público.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
+![O campo "User Lookup", que permite pesquisar por ID de usuário externo ou ID do Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
 #### Seleção de controles de entrada
 
 Os controles de entrada determinam se os usuários têm permissão para entrar novamente em um Canva. Você também pode limitar o número de pessoas que potencialmente entrariam nessa tela. Por exemplo, se você definir o campo **Máximo de usuários com potencial para entrar neste Canvas** como 1.000 usuários e marcar a caixa de seleção **Limitar toda vez que o Canvas for agendado**, o Canvas será enviado para 1.000 usuários por dia.
 
-![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+![A página "Entry Controls" (Controles de entrada) exibe caixas de seleção para "Allow users to re-enter Canvas" (Permitir que os usuários entrem novamente no Canvas) e "Limit the number of people who will potentially enter this Canvas" (Limitar o número de pessoas que potencialmente entrarão neste Canvas). O último permite que você defina o máximo de usuários e se deseja limitar toda vez que o Canva for agendado.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
 A Braze não recomenda o uso do recurso **Limite de cada vez que o Canva é agendado** para aquecimento de IP, pois isso pode levar a um aumento no volume de envios.
 
@@ -171,7 +171,7 @@ Note que:
 - O cálculo de estatísticas exatas pode levar alguns minutos para ser executado. Essa função calcula apenas as estatísticas exatas no nível do segmento, não no nível do filtro ou do grupo de filtros.
 - Em segmentos grandes, é normal haver uma pequena variação, mesmo ao calcular estatísticas exatas. Espera-se que a precisão desse recurso seja de 99,999% ou mais.
 
-Para visualizar estatísticas adicionais, como a receita média vitalícia dos usuários direcionados, selecione **Show Additional Statistics (Mostrar estatísticas adicionais**).
+Para visualizar estatísticas adicionais, como a receita média vitalícia dos usuários direcionados, selecione **Show Additional Statistics (Mostrar estatísticas adicionais)**.
 
 ![Detalhamento do público-alvo com opção de calcular estatísticas exatas.][2]
 
@@ -182,8 +182,8 @@ Selecione **Send Settings (Configurações de envio** ) para editar suas configu
 Para Canvas direcionados a canais de envio de e-mail e push, talvez você queira limitar seu Canvas para que somente os usuários com aceitação explícita recebam a mensagem (excluindo usuários inscritos ou cancelados). Por exemplo, digamos que você tenha três usuários com status de aceitação diferentes:
 
 - **O usuário A** está inscrito no e-mail e tem a capacitação push ativada. Esse usuário não recebe o e-mail, mas receberá o push.
-- **O usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
-- **O usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
+- O **usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
+- O **usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
 
 Para fazer isso, defina as **Configurações de inscrição** para enviar esse canva como "apenas usuários que aceitaram". Essa opção garantirá que apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que estiverem ativados para push por padrão. 
 
@@ -195,23 +195,23 @@ Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usu�
 
 Se desejar, especifique o Horário de silêncio (o tempo durante o qual as mensagens não serão enviadas) para o canva. Marque **Ativar Horário de Silêncio** em suas **Configurações de Envio**. Em seguida, selecione o Horário de silêncio no fuso local do usuário e a ação a ser seguida se a mensagem for disparada dentro desse Horário de silêncio.
 
-![][50]
+![A página "Quiet Hours" exibe uma caixa de seleção para ativar o horário de silêncio. Se ativada, a hora de início, a hora de término e o comportamento de fallback podem ser definidos.][50]
 
 ## Etapa 3: Crie seu canva
 
 {% alert tip %}
-Economize tempo e agilize sua criação de telas usando [os modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Navegue em nossa biblioteca de modelos pré-criados para encontrar um que se adapte ao seu caso de uso e personalize-o para atender às suas necessidades específicas.
+Economize tempo e agilize sua criação de telas usando os [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Navegue em nossa biblioteca de modelos pré-criados para encontrar um que se adapte ao seu caso de uso e personalize-o para atender às suas necessidades específicas.
 {% endalert %}
 
 ### Adição de uma variante
 
-![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Um gif que mostra um usuário selecionando "Add Variant" e, em seguida, selecionando "Add Variant" novamente no menu de contexto.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 Selecione **Add Variant (Adicionar variante**) e adicione uma nova variante ao seu Canva. As variantes representam uma jornada que seus usuários farão e podem conter várias etapas e ramificações.
 
 Você pode adicionar outras variantes selecionando o botão de mais <i class="fas fa-plus-circle"></i>. Ao adicionar novas variantes, você poderá ajustar como seus usuários serão distribuídos entre elas para que possa comparar e analisar a eficácia de diferentes estratégias de engajamento.
 
-![][12]
+![Dois exemplos de variantes em um Braze Canvas.][12]
 
 {% alert tip %}
 Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuários entram no Canvas, o que significa que, se um usuário inserir uma variante pela primeira vez, essa será sua variante sempre que ele entrar novamente no Canvas. No entanto, há maneiras de contornar esse comportamento. <br><br>Para isso, é possível criar um gerador de números aleatórios usando o Liquid, executá-lo no início da entrada de cada usuário no Canva, armazenar o valor como um atributo personalizado e usar esse atributo para dividir os usuários aleatoriamente.
@@ -235,7 +235,7 @@ Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e 
 À medida que você começa a adicionar mais etapas, pode aumentar o nível de zoom para se concentrar nos detalhes ou observar toda a jornada do usuário. Aumente o zoom com <kbd>Shift</kbd> + <kbd>+</kbd> ou diminua o zoom com <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
+![A janela de pesquisa de componentes adiciona uma etapa do canva do Braze.]({% image_buster /assets/img_archive/add_components_flow.png %})
 
 {% alert warning %}
 Um canva criado com o Canvas Flow pode conter até 200 etapas. Se seu canva exceder 200 etapas, ocorrerão problemas de carregamento.
@@ -251,11 +251,11 @@ Deseja editar uma etapa da jornada do usuário? Veja como fazer isso de acordo c
 
 Você pode editar qualquer etapa do fluxo de trabalho do Canvas Flow selecionando qualquer um dos componentes. Por exemplo, digamos que você queira editar a primeira etapa, um componente de [postergação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), em seu fluxo de trabalho para um dia específico. Selecione a etapa para visualizar suas configurações e ajustar sua postergação para 1º de março. Isso significa que, em 1º de março, seus usuários passarão para a próxima etapa do seu canva.
 
-![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
+![Um exemplo de etapa "Delay" (Atraso) com a postergação definida como "Until a specific day" (Até um dia específico).]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
 Ou pode editar e ajustar rapidamente as **configurações de ação** da etapa [Jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) para reter os usuários por um período de tempo. Isso prioriza sua próxima jornada com base nas ações durante esse período de avaliação.
 
-![]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![A segunda etapa do canva, "Configurações de ação", com uma janela de avaliação definida como 1 dia.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 Os componentes leves do canva permitem uma experiência de edição simples, portanto, o ajuste dos detalhes mais finos do canva é facilitado. 
 
@@ -270,7 +270,7 @@ Use a tag `campaign.${name}` Liquid no canva para exibir o nome do componente at
 
 O componente Message gerencia as mensagens enviadas aos usuários. Você pode selecionar seus **canais de envio de mensagens** e ajustar **as configurações de entrega** para otimizar o envio de mensagens do Canva. Para obter mais detalhes sobre esse componente, consulte [Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+![A etapa "Set up Messages" (Configurar mensagens), com "Messaging Channels" (Canais de mensagens) selecionado, exibe a lista de canais de envio de mensagens disponíveis, como Android Push, cartões de conteúdo, e-mail e muito mais.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 Selecione **Concluído** depois de terminar de configurar o componente Canva.
 
@@ -313,7 +313,7 @@ Você pode ajustar a distribuição entre suas mensagens clicando duas vezes nos
 
 Neste exemplo, temos nosso canva dividido em duas variantes. A variante 1 tem 70% dos usuários. A segunda variante é um grupo de controle com os 30% restantes de usuários.
 
-![]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
+![Um exemplo de variante em um Braze Canvas, em que 70% acessam a "Variante 1", que posterga por 1 dia na primeira etapa e, em seguida, envia uma mensagem na segunda etapa. Os outros 30% acessam um "Controle" que não tem nenhuma etapa de acompanhamento.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
 ### Seleção inteligente para o Canva
 
@@ -321,7 +321,7 @@ Os recursos de Seleção Inteligente agora estão disponíveis em Canvas multiva
 
 Lembre-se de que as telas multivariantes permitem que você teste mais do que o texto, mas também o tempo e os canais. Por meio do Intelligent Selection, é possível testar Canvas com mais eficiência e ter a certeza de que seus usuários serão enviados para a melhor jornada de Canvas possível.
 
-![][18b]
+![A opção "Intelligent Selection" (Seleção inteligente) está ativada na página "Edit Variant Distribution" (Editar distribuição de variantes). Ao analisar e otimizar o Canva, ele exibe uma barra horizontal na página que é dividida em várias seções, cada uma variando em cor e tamanho. Essa é apenas uma representação visual e não está correlacionada a nenhuma análise de dados específica.][18b]
 
 O Intelligent Selection for Canvas otimiza os resultados do Canvas, fazendo ajustes graduais em tempo real na distribuição de usuários classificados em cada variante. Quando o algoritmo estatístico determinar um vencedor decisivo entre suas variantes, ele excluirá as variantes de baixo desempenho e incluirá todos os futuros destinatários elegíveis do Canva nas Variantes vencedoras. 
 
@@ -333,7 +333,7 @@ Quando terminar de criar o canva, selecione **Lançar canva** para salvar e inic
 
 Você também pode salvar seu Canva como rascunho se precisar voltar a ele.
 
-![][19]
+![Um exemplo é o Canva no Braze.][19]
 
 {% alert tip %}
 Precisa fazer edições em seu Canva após o lançamento? Bem, você pode! Para saber mais, dê [uma]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) olhada no [Editing Canvas após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).

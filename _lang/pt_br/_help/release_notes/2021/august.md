@@ -14,7 +14,7 @@ A integração da Braze [Audience Sync com o Google]({{site.baseurl}}/partners/c
 
 ## Guia de práticas recomendadas para integração de SDK do iOS
 
-Este guia opcional [de integração do SDK com o iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewios_sdk_integration/) leva você a uma jornada passo a passo sobre as práticas recomendadas de configuração ao integrar pela primeira vez o SDK do iOS e seus componentes principais em seu aplicativo. Este guia o ajudará a criar um arquivo auxiliar `BrazeManager.swift` que desacoplará todas as dependências do SDK da Braze para iOS do restante do seu código de produção, resultando em um `import AppboyUI` em todo o seu aplicativo. Essa abordagem limita os problemas decorrentes do excesso de importações de SDK, facilitando o rastreamento, a depuração e a alteração do código. 
+Este guia opcional de [integração do SDK com o iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewios_sdk_integration/) leva você a uma jornada passo a passo sobre as práticas recomendadas de configuração ao integrar pela primeira vez o SDK do iOS e seus componentes principais em seu aplicativo. Este guia o ajudará a criar um arquivo auxiliar `BrazeManager.swift` que desacoplará todas as dependências do SDK da Braze para iOS do restante do seu código de produção, resultando em um `import AppboyUI` em todo o seu aplicativo. Essa abordagem limita os problemas decorrentes do excesso de importações de SDK, facilitando o rastreamento, a depuração e a alteração do código. 
 
 ## Compras preditivas
 
@@ -50,7 +50,7 @@ Os usuários que tiverem problemas para registrar-se por meio da autenticação 
 
 ### Hightouch - Automação do fluxo de trabalho
 
-A integração entre a Braze e [o Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/) permite que você crie campanhas melhores na Braze com dados atualizados de clientes de seu data warehouse. Você deseja fornecer interações relevantes e oportunas aos seus clientes e, para isso, depende muito de que os dados da sua conta Braze sejam precisos e atualizados. Ao sincronizar automaticamente os dados de clientes do seu data warehouse para o Braze, você não precisa mais se preocupar com a consistência dos dados e pode se concentrar na criação de experiências de clientes de classe mundial.
+A integração entre a Braze e o [Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/) permite que você crie campanhas melhores na Braze com dados atualizados de clientes de seu data warehouse. Você deseja fornecer interações relevantes e oportunas aos seus clientes e, para isso, depende muito de que os dados da sua conta Braze sejam precisos e atualizados. Ao sincronizar automaticamente os dados de clientes do seu data warehouse para o Braze, você não precisa mais se preocupar com a consistência dos dados e pode se concentrar na criação de experiências de clientes de classe mundial.
 
 ### Transcend - Privacidade e conformidade de dados
 

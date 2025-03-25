@@ -402,7 +402,7 @@ Si vous n'avez pas encore ajouté de liens profonds à votre application, suivez
 
 Le tableau de bord de Braze prend en charge la mise en place de liens profonds ou d’URL Web dans les campagnes de notifications push et des Canvas qui seront ouverts lorsque la notification est cliquée.
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Action de clic sur le lien profond")
+![Le paramètre "On Click Behavior" dans le tableau de bord de Braze avec "Deep Link Into Application" sélectionné dans le menu déroulant.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Personnaliser le comportement de la pile arrière
 
@@ -467,7 +467,7 @@ Le nom et la description par défaut du canal peuvent également être configur�
 
 À ce stade, vous devriez pouvoir voir les notifications envoyées par Braze. Pour tester cela, rendez-vous sur la page **Campagnes de** votre tableau de bord Braze et créez une campagne de **notification push.**  Choisissez **Android Push** et concevez votre message. Cliquez ensuite sur l’icône « Œil » dans le composeur pour obtenir l’expéditeur de test. Saisissez l'ID ou l'adresse e-mail de votre utilisateur actuel et cliquez sur **Envoyer le test.** Vous devriez voir la notification push s’afficher sur votre appareil.
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![L'onglet 'Test' d'une campagne de notification push dans le tableau de bord de Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Pour les problèmes liés à l'affichage push, consultez notre [guide de résolution des problèmes.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/)
 

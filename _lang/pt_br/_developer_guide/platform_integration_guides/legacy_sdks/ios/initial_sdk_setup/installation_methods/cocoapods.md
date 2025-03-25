@@ -22,7 +22,7 @@ Execute o seguinte comando para começar:
 $ sudo gem install cocoapods
 ```
 
-Se você tiver problemas com o CocoaPods, consulte o [Guia de solução de problemas do CocoaPodsGuia ](http://guides.cocoapods.org/using/troubleshooting.html "de solução de problemas do CocoaPods").
+Se você tiver problemas com o CocoaPods, consulte o [](http://guides.cocoapods.org/using/troubleshooting.html "Guia de solução de problemas do CocoaPods").
 
 {% alert note %}
 Se for solicitado que você substitua o executável `rake`, consulte as [instruções de ](http://guides.cocoapods.org/using/getting-started.html "Introdução às instruções de instalação do CocoaPods") em CocoaPods.org para obter mais detalhes.

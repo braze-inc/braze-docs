@@ -28,9 +28,9 @@ Brazeでフィーチャーフラグを作成する方法に関するステップ
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## フィーチャーフラグ sの使用
+## フィーチャーフラグの使用
 
-フィーチャーフラグ s を使用して:
+フィーチャーフラグを使用して:
 
 - [段階的なロールアウトを導入する](#gradual-rollouts)
 - [アプリ変数をリモートでコントロールする](#remotely-control-app-variables)
@@ -129,7 +129,7 @@ return (<>
 
 ### メッセージの調整
 
-フィーチャーフラグを使用して、機能のロールアウトとメッセージングを同期します。これにより、ユーザーエクスペリエンスと関連メッセージングの両方の信頼できる情報源として Braze を使用できるようになります。これを実現するには、新しい機能の対象をオーディエンスの特定のセグメントまたはフィルター処理された部分にします。次に、そのSegmentのみを対象とするキャンペーンまたはキャンバスを作成します。 
+フィーチャーフラグを使用して、機能のロールアウトとメッセージングを同期します。これにより、ユーザーエクスペリエンスと関連メッセージングの両方の信頼できる情報源として Braze を使用できるようになります。これを実現するには、新しい機能の対象をオーディエンスの特定のセグメントまたはフィルター処理された部分にします。次に、そのセグメントのみを対象とするキャンペーンまたはキャンバスを作成します。 
 
 たとえば、ユーザー向けに新しいロイヤルティ報酬プログラムを開始するとします。マーケティングチームと製品チームが、プロモーションメッセージングのタイミングと機能のロールアウトのタイミングを完璧に調整するのは難しいかもしれません。キャンバスのフィーチャーフラグを使用すると、選択したオーディエンスに対して機能を有効にし、その同じユーザーに対して関連するメッセージングをコントロールする際に、高度なロジックを適用できます。
 
@@ -169,7 +169,7 @@ if (featureFlag?.enabled) {
 
 A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) で設定します。
 
-さて、50%のユーザー sが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントを分析して、どのチェックアウトフローが高い変換率をもたらしたかを判断することができます。{% multi_lang_include metrics.md metric='Conversion Rate' %}
+さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントを分析して、どのチェックアウトフローが高い変換率をもたらしたかを判断することができます。{% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![トラフィックを2 つの50 パーセントグループに分割する機能フラグ実験。]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -181,7 +181,7 @@ A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/pl
 
 ![]({% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %})
 
-Segment s でのフィルター ing の詳細については、[Segmentの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
+セグメントでのフィルタリングの詳細については、[セグメントの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
 
 {% alert note %}
 再帰的なセグメントを防ぐため、他のフィーチャーフラグを参照するセグメントを作成することはできない。

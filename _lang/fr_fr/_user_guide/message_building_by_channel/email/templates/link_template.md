@@ -12,29 +12,36 @@ channel:
 
 # Modèles de lien
 
-> Les modèles de liens vous permettent d’ajouter des paramètres ou des URL à tous les liens d’un e-mail.
-
-Les modèles de liens sont le plus souvent utilisés dans les cas suivants :
-
-1. Ajouter des paramètres de requête Google Analytics à tous les liens dans un e-mail donné
-2. Ajouter une URL à tous les liens dans un e-mail donné
+> Avec les modèles de liens, vous pouvez créer des liens dynamiques et réutilisables pour vos campagnes d'e-mail en ajoutant des paramètres ou des URL. Cela permet d'assurer la cohérence des URL dans l'ensemble de vos campagnes et de vos messages. 
 
 {% alert note %}
 Les modèles de liens sont une fonctionnalité facultative. Si l'option **Modèles de liens e-mail** n'apparaît pas dans la section **Modèles**, contactez votre gestionnaire de compte pour activer cette fonctionnalité.
 {% endalert %}
 
+## Fonctionnement
+
+Les modèles de liens sont le plus souvent utilisés dans les cas suivants :
+
+- Ajouter des paramètres de requête Google Analytics à tous les liens dans un e-mail donné
+- Ajouter une URL à tous les liens dans un e-mail donné
+
+Imaginons que vous lanciez une campagne d'e-mails promotionnels pour le lancement d'un nouveau produit. Vous pouvez utiliser un modèle de lien qui dirige les utilisateurs vers la page du produit et personnaliser le lien pour y inclure le nom de votre utilisateur ou un code promotionnel spécifique. Vous pouvez ainsi savoir combien d'utilisateurs ont cliqué sur le lien et ont effectué un achat. De cette façon, vous pouvez créer une cohérence entre vos liens et mieux suivre vos analyses/analytiques.
+
 ## Création d’un modèle de lien
 
-![][11]{: style="float:right;max-width:20%;"}
-
-Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vos différents besoins. Pour créer un modèle de lien :
+Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vos différents besoins. Pour créer un modèle de lien, procédez comme suit :
 
 1. Allez dans **Modèles** > **Modèles de liens d'e-mail.** 
-2. Cliquez sur **Créer un modèle de lien**.
+2. Sélectionnez **Créer un modèle de lien d'e-mail**.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve sous **Engagement** > **Modèles et médias** > **Modèles de liens**.
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve à l'emplacement/localisation **Engagement** > **Modèles et médias** > **Modèles de liens**.
 {% endalert %}
+
+{:start="3"}
+3\. Donnez un nom à votre modèle de lien.
+4) (facultatif) Ajoutez une description, une équipe ou une étiquette pour ajouter des détails sur le modèle de lien.
+5\. (facultatif) Basculer pour ajouter automatiquement le modèle de lien aux liens dans les campagnes d'e-mail et les canevas. Ceci s'applique à l'ajout d'un nouveau lien à tout e-mail nouveau ou existant.
 
 Il existe deux types de modèles de liens que vous pouvez créer :
 
@@ -45,7 +52,11 @@ Lors de l'utilisation de modèles de liens et de [Liquid]({{site.baseurl}}/user_
 
 ### Ajouter avant une URL : Créer un modèle de lien qui s’insère avant une URL {#prepend-link-template}
 
-Si vous souhaitez ajouter une chaîne de caractères ou une URL avant les liens dans votre envoi e-mail, créez un nouveau modèle de lien et définissez la **position du modèle** sur **Avant l'URL.** Saisissez ensuite une chaîne de caractères qui sera toujours ajoutée à votre URL. 
+Pour ajouter une chaîne de caractères ou une URL avant les liens dans votre message e-mail, procédez comme suit :
+
+1. Créez un nouveau modèle de lien.
+2. Définissez la **position du modèle** sur **Avant l'URL.** 
+3. Saisissez une chaîne de caractères qui sera toujours ajoutée à votre URL. 
 
 Une section d’aperçu est fournie pour vous donner un exemple de processus d’insertion.
 
@@ -53,9 +64,11 @@ Une section d’aperçu est fournie pour vous donner un exemple de processus d�
 
 ### Ajouter : Créer un modèle de lien qui s’insère après une URL {#append-link-template}
 
-Si vous souhaitez ajouter des paramètres de requête après une URL dans votre message e-mail, créez un nouveau modèle de lien et définissez la **position du modèle** sur **Après l'URL**. Ensuite, ajoutez des paramètres de requête (`value=something`) à la fin de chaque URL.
+Si vous souhaitez ajouter des paramètres de requête après une URL dans votre message e-mail :
 
-Vous pouvez avoir plusieurs paramètres ajoutés à la fin d’une URL.
+1. Créez un nouveau modèle de lien.
+2. Définissez la **position du modèle** sur **Après l'URL**. 
+3. Saisissez les paramètres de requête (`value=example`) à la fin de chaque URL. Vous pouvez avoir plusieurs paramètres ajoutés à la fin d’une URL.
 
 ![Les champs Position du modèle, Paramètres de la requête et Aperçu du modèle pour le processus d'insertion du modèle de lien après un URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 

@@ -38,7 +38,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation/), pod
 ### Etapa 2: Configurar Braze Connected Content
 
 1. [Registro em Braze](https://dashboard.braze.com/sign_in) com suas credenciais.
-2. No painel do Braze, acesse **Templates** > **blocos de conteúdo** > **Criar bloco de conteúdo** > **Bloco de conteúdo HTML**.
+2. No painel do Braze, acesse **Modelos** > **Blocos de conteúdo** > **Criar bloco de conteúdo** > **Bloco de conteúdo HTML**.
 3. Crie uma solicitação de Conteúdo Conectado para a URL da [API de Entrega de Conteúdo do Contentful](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links). Um exemplo de URL da API de Entrega de Conteúdo do Contentful é ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> A recuperação de diferentes ativos requer a inclusão de variáveis específicas. A solicitação de URL de Conteúdo Conectado do exemplo tem como alvo o endpoint [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) do Contentful. Este endpoint precisa de variáveis como `{space_id}` e `{environment_id}`, ou `{entry_id}` e `{access_token}`. Esses podem ser retirados da sua instância do Contentful. Neste exemplo de bloco de conteúdo, as variáveis devem ser substituídas pelo seu ID de Espaço Contentful e ID de Ambiente.<br><br>A URL de API de Entrega de Conteúdo de exemplo usa apenas um dos endpoints disponíveis do Contentful. Casos de uso diferentes podem ser alcançados aproveitando diferentes URLs. Por exemplo, a [Image API](https://www.contentful.com/developers/docs/references/images-api/) pode ser usada para capturar imagens armazenadas no Contentful. Para saber mais, revise [API de Entrega de Conteúdo](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 
 {% alert note %}
@@ -70,7 +70,7 @@ Diferentes endpoints podem exigir novas variáveis, por exemplo, a API de Imagen
 
 1. No Braze, crie uma nova campanha ou edite uma existente.
 2. Use o bloco de conteúdo conectado para inserir dados buscados do Contentful. Use os caminhos de dados que você definiu durante a configuração para preencher dinamicamente o conteúdo da campanha.<br><br>
-- **Resposta jornada:** Após incluir o bloco de conteúdo em uma campanha Braze ou canva, a resposta se torna disponível quando você insere a variável `{response}` na sua mensagem.<br><br>A notação de ponto JSON permite que você especifique qual parte do corpo da resposta do Contentful deseja incluir em sua mensagem. Isso vai variar com base no seu caso de uso. Por exemplo, você pode usar o valor do título ({% raw %}```liquid{{response.items[0].fields.title}}```{% endraw %}) do endpoint de Entrada do Contentful e receber uma resposta como esta:
+- **Jornada de resposta:** Após incluir o bloco de conteúdo em uma campanha Braze ou canva, a resposta se torna disponível quando você insere a variável `{response}` na sua mensagem.<br><br>A notação de ponto JSON permite que você especifique qual parte do corpo da resposta do Contentful deseja incluir em sua mensagem. Isso vai variar com base no seu caso de uso. Por exemplo, você pode usar o valor do título ({% raw %}```liquid{{response.items[0].fields.title}}```{% endraw %}) do endpoint de Entrada do Contentful e receber uma resposta como esta:
 
 {% raw %}
 ```json

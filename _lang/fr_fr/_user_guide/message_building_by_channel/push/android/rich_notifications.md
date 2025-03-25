@@ -35,7 +35,7 @@ Bien que Braze fournisse des instructions sur la manière de configurer le push 
 
 ## Configurer votre notification enrichie Android
 
-### Étape 1 : Créer une campagne de notification push
+### Étape 1 : Créer une campagne de notification push
 
 Suivez les étapes pour [créer une campagne][3] afin de composer une notification push pour Android. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
 
@@ -43,9 +43,9 @@ Suivez les étapes pour [créer une campagne][3] afin de composer une notificati
 
 Ajoutez le **texte récapitulatif/la légende de l'image** que vous souhaitez afficher avant l'image dans la notification.
 
-![La section de l'image de notification étendue où vous pouvez ajouter une image ou entrer l'URL d'une image.][9]
+![La section de l'image de notification étendue dans laquelle vous pouvez ajouter une image ou entrer une URL d'image.][9]
 
-### Étape 3 : Ajouter des médias
+### Étape 3 : Ajouter des médias
 
 Ajoutez votre image dans le champ **Image de la notification élargie** dans le compositeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL pour le contenu hébergé ailleurs.
 
@@ -58,6 +58,6 @@ Pour plus d'informations sur les images prises en charge, consultez la rubrique 
 Une fois que le contenu de votre notification enrichie est téléchargé dans le tableau de bord, vous pouvez continuer à [planifier votre campagne][6].
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [8]: {% image_buster /assets/img_archive/android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}

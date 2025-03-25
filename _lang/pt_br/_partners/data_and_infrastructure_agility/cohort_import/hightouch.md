@@ -33,9 +33,9 @@ No Braze, navegue até **Segments (Segmentos**), crie um novo segmento e selecio
 ### Usando essa integração
 Para usar seu segmento da Hightouch, crie uma campanha da Braze ou um canva e selecione o segmento como seu público-alvo.<br><br>![][10]{: style="max-width:90%;"}
 
-## Correspondência de Usuário
+## Correspondência de usuários
 
-Usuários identificados podem ser correspondidos pelo seu `external_id` ou `alias`. Usuários anônimos podem ser correspondidos pelo seu `device_id`. Usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo seu `device_id`, e devem ser identificados pelo seu `external_id` ou `alias`.
+Os usuários identificados podem ser combinados pelo endereço `external_id` ou `alias`. Os usuários anônimos podem ser combinados pelo site `device_id`. Os usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo endereço `device_id` e devem ser identificados pelo endereço `external_id` ou `alias`.
 
 [1]: https://hightouch.io
 [6]: {% image_buster /assets/img/hightouch/data_import_key.png %}

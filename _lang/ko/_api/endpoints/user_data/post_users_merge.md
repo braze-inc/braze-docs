@@ -56,7 +56,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 엔드포인트는 업데이트되는 `merge_updates` 객체의 순서를 보장하지 않습니다.
 {% endalert %}
 
-이 엔드포인트는 타겟 사용자에서 다음 필드를 찾을 수 없는 경우 해당 필드를 병합합니다.
+이 엔드포인트는 대상 사용자에서 다음 필드를 찾을 수 없는 경우 병합합니다.
 
 - 이름
 - 성
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 생년월일
 - 전화번호
 - 시간대
-- 거주 구/군/시
+- 출생지
 - 국가
 - 언어
 - 장치 정보
@@ -88,8 +88,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 캠페인 상호작용 데이터(Braze는 가장 최근 날짜 필드를 선택합니다)
 - 워크플로 요약(Braze가 가장 최근 날짜 필드를 선택합니다)
 - 메시지 및 메시지 참여 내역
-
-세션 데이터는 앱이 두 사용자 프로필 모두에 있는 경우에만 병합됩니다.
+- 세션 데이터는 앱이 두 사용자 프로필 모두에 있는 경우에만 병합됩니다.
 
 {% alert note %}
 사용자를 병합할 때 `/users/merge` 엔드포인트를 사용하는 것은 [`changeUser()` 방법을](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) 사용하는 것과 동일한 방식으로 작동합니다.
@@ -233,7 +232,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202` 및 `400` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202` 와 `400` 두 가지입니다.
 
 ### 성공 응답의 예
 

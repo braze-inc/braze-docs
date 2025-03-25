@@ -16,7 +16,7 @@ description: "이 문서에서는 업데이트 이메일 템플릿 Braze 엔드�
 
 > 이 엔드포인트를 사용하여 Braze 대시보드에서 이메일 템플릿을 업데이트하세요.
 
-**템플릿 및 미디어** 페이지에서 이메일 템플릿의 `email_template_id` 으로 이동하여 액세스할 수 있습니다. [이메일 템플릿 만들기 엔드포인트]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)는 `email_template_id` 참조도 반환합니다.
+**템플릿 및 미디어** 페이지에서 이메일 템플릿의 `email_template_id` 으로 이동하여 액세스할 수 있습니다. [이메일 템플릿 만들기 엔드포인트는]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) `email_template_id` 참조도 반환합니다.
 
 `email_template_id` 이외의 모든 필드는 선택 사항이지만 업데이트할 필드를 하나 이상 지정해야 합니다.
 

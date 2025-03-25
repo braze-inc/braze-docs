@@ -82,7 +82,7 @@ Les utilisateurs de Treasure Data peuvent ingérer des données via l'API REST p
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
 [2]: {% image_buster /assets/img/treasure_data/braze_authentication.png %}
 [3]: {% image_buster /assets/img/treasure_data/braze_export_configuration.png %}
-Il y a [4]: https://www.treasuredata.com/
+Il y a  https://www.treasuredata.com/
 Il y a [5]: https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration
 [10]: {% image_buster /assets/img/treasure_data/query_1.png %}
 [11]: {% image_buster /assets/img/treasure_data/query_2.png %}

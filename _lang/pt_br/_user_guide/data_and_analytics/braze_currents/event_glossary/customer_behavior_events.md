@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 7
 ---
 
-Entre em contato com seu representante Braze ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/) se precisar de acesso a direitos de eventos adicionais. Se não encontrar o que precisa neste artigo, consulte nossa [Biblioteca de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou nossos [exemplos de dados de amostra do Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Entre em contato com seu representante Braze ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/) se precisar de acesso a direitos de eventos adicionais. Se não encontrar o que precisa nesta página, consulte nossa [Biblioteca de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou nossos [exemplos de dados de amostra do Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explicação do comportamento do cliente e da estrutura de eventos do usuário e valores da plataforma %}
 
@@ -240,7 +240,7 @@ As propriedades de compra são eventos personalizados especiais e vêm com uma s
 
 #### Detalhes da propriedade
 - Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisará coletar explicitamente o IDFA do iOS e o ID de anúncio do Google Ads do Android por meio dos SDKs nativos. Saiba mais sobre eles aqui: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Se estiver usando o Kafka para ingerir dados [do Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o recurso flipper para enviar `ad_id`.
+- Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o flipper de recursos para enviar `ad_id`.
 {% endapi %}
 
 
@@ -611,7 +611,7 @@ Esse evento é disparado quando um usuário visita um local especificado. Use is
 
 #### Detalhes da propriedade
 - Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisará coletar explicitamente o IDFA do iOS e o ID de anúncio do Google Ads do Android por meio dos SDKs nativos. Saiba mais sobre eles aqui: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Se estiver usando o Kafka para ingerir dados [do Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o recurso flipper para enviar `ad_id`.
+- Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o flipper de recursos para enviar `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -711,7 +711,7 @@ Esse evento de usuário ocorre sempre que um novo usuário é criado em seu espa
 {% endtabs %}
 
 {% alert important %}
-Observe que esse evento Currents só está disponível para clientes que adquiriram um "conector de todos os eventos" e só está disponível para conectores de eventos de armazenamento (i.e Amazon S3, Microsoft Azure, Google Cloud Storage).
+Esse evento Currents só está disponível para clientes que adquiriram um "conector de todos os eventos" e só está disponível para conectores de eventos de armazenamento ( Amazon S3, Microsoft Azure, Google Cloud Storage).
 <br><br>Para ativar esse evento e programar o backfill para os números de baldes aleatórios dos usuários existentes em seu espaço de trabalho, entre em contato com o gerente de sucesso do cliente.
 {% endalert %}
 

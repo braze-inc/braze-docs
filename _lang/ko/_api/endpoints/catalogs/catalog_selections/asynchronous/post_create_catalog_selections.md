@@ -81,7 +81,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 

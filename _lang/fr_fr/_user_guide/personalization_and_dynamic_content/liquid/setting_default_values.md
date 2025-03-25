@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Code Liquid complet %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Code Liquid complet %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Code Liquid complet %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

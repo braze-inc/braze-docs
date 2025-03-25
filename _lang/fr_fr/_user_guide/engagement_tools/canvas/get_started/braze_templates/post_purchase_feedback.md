@@ -28,7 +28,7 @@ Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience 
 
 Pour accéder au modèle de retour d'information après achat, lorsque vous créez un nouveau canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**. Ensuite, en regard de **Feedback post-achat**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Configurer les détails de Canvas
+### Étape 1 : Configurer les détails de Canvas
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -43,7 +43,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canevas de réactions après l'achat pour évaluer l'intérêt pour la prochaine extension de PWD3, Liquid Mirage"]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
-### Étape 2 : Attribuer des événements de conversion
+### Étape 2 : Attribuer des événements de conversion
 
 Ensuite, attribuons nos événements de conversion. Mettez à jour l'**événement de conversion principal - A** en **effectuant un achat spécifique** et sélectionnez **Guerre par procuration**.
 
@@ -51,7 +51,7 @@ Ensuite, attribuons nos événements de conversion. Mettez à jour l'**événeme
 
 Nous conservons le délai de conversion du modèle de trois jours car nous voulons cibler nos utilisateurs les plus récents.
 
-### Étape 3 : Définir une planification d'entrée
+### Étape 3 : Définir une planification d'entrée
 
 1. Conservez le type de planification des entrées comme étant **basé sur des actions.**
 2. Définissez l'**heure de début de** la fenêtre de saisie à la date de lancement du jeu.

@@ -29,12 +29,12 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouv
 
 ## Identifiant initié par le fournisseur de services (SP) dans le cadre de Microsoft Entra SSO
 
-### Étape 1 : Ajouter un Braze à partir de la galerie
+### Étape 1 : Ajouter un Braze à partir de la galerie
 
 1. Dans votre centre d'administration Microsoft Entra, allez dans **Identité** > **Applications** > **Applications d'entreprise**, puis sélectionnez **Nouvelle application**.
 2. Recherchez **Braze** dans la zone de recherche, sélectionnez-le dans le panneau de résultats, puis sélectionnez **Ajouter.**
 
-### Étape 2 : Configurer Microsoft Entra SSO
+### Étape 2 : Configurer Microsoft Entra SSO
 
 1. Dans votre centre d'administration Microsoft Entra, allez sur la page d'intégration de votre application Braze et sélectionnez **Authentification unique**.
 2. Sur la page **Sélectionner une méthode d'authentification unique**, sélectionnez **SAML** comme méthode.
@@ -89,7 +89,7 @@ Vous pouvez gérer ces revendications et valeurs d'utilisateur à partir de la s
 8\. Accédez à la page **Configurer l'authentification unique avec SAML**, puis faites défiler jusqu'à la section **Certificat de signature SAML** et téléchargez le **Certificat (Base64)** approprié en fonction de vos besoins.
 9\. Allez à la section **Set up Braze** et copiez les URL appropriées à utiliser dans la [Braze configuration](#step-3).
 
-### Étape 3 : Configurer Microsoft Entra SSO dans Braze {#step-3}
+### Étape 3 : Configurer Microsoft Entra SSO dans Braze {#step-3}
 
 Après avoir configuré Braze dans le centre d'administration de Microsoft Entra, Microsoft Entra vous fournira une URL cible (URL d'identification) et un certificat que vous devrez introduire dans votre compte Braze. **x.509** que vous introduirez dans votre compte Braze.
 

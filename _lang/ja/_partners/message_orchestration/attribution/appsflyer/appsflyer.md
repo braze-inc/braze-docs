@@ -83,7 +83,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 単一性 %}
+{% tab Unity %}
 UnityでデバイスIDをマッピングするには、次を使用します。
 
 ```

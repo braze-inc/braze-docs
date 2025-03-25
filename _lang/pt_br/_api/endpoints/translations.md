@@ -13,13 +13,13 @@ guide_top_text: "Use os endpoints de tradução da Braze para gerenciar e atuali
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "OBTER: Ver traduções para uma campanha"
+  - name: "OBTER: Exibir traduções para uma campanha"
     link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "OBTER: Ver traduções para uma canva"
+  - name: "OBTER: Exibir traduções de um canva"
     link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "OBTER: Ver tradução para uma campanha"
+  - name: "OBTER: Exibir tradução para uma campanha"
     link: /docs/api/endpoints/translations/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "OBTER: Ver tradução para uma canva"

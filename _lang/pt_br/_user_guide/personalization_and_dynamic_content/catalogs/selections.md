@@ -31,8 +31,12 @@ Para criar uma seleção, faça o seguinte.
 4. Em **Filter Field (Campo de filtro**), selecione a coluna do catálogo pela qual você deseja filtrar. Os campos de string com mais de 1.000 caracteres não podem ser selecionados para filtros.
 5. Termine de definir seus critérios de filtro selecionando o operador relevante (por exemplo, "igual" ou "não igual") e a atribuição.
 6. Na seção **Sort type (Tipo de classificação** ), determine como os resultados são classificados. Por padrão, os resultados são retornados em nenhuma ordem específica. Para especificar a classificação por um campo específico, desative a opção **Randomize Sort Order** e especifique o **Sort Field** e **a Sort Order** (ascendente ou descendente).
-7. Na seção **Limite de resultados**, insira o número máximo de resultados, até 50.
-8. Clique em **Criar seleção**.
+7. Na seção **Limite de resultados**, insira os resultados (até 50).
+8. Selecione **Criar seleção**.
+
+### Teste e prévia
+
+Depois de criar uma seleção, é possível usar a seção **Pré-visualização para o usuário** para ver o que uma seleção retornaria para um usuário aleatório ou um usuário específico. Para seleções que usam personalização, só é possível visualizar a prévia depois de selecionar um usuário.
 
 ### Liquid nos resultados da seleção
 

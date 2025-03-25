@@ -19,7 +19,7 @@ Na Braze, as informações sobre seu público são armazenadas em perfis de usu�
 
 Ao entender os perfis dos usuários, você pode obter insights sobre seu público e interagir com eles de maneira personalizada e direcionada. O perfil de um usuário contém muitas informações, mas aqui estão algumas das partes principais:
 
-- **Identificador do Usuário:** Cada perfil de usuário é identificado de forma única por um ID de usuário, chamado de `external_id`. Este identificador permite que a Braze rastreie e associe dados de usuários em diferentes canais e dispositivos, fornecendo uma visão unificada das interações de cada usuário com sua marca.
+- **Identificador do Usuário:** Cada perfil de usuário é identificado de forma única por um ID de usuário, chamado de `external_id`. Este identificador permite que a Braze rastreie e associe dados de usuários em diferentes canais e dispositivos, fornecendo uma visão unificada das interações de cada usuário com sua marca. Os [perfis de usuários anônimos]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/) (usuários que visitam seu site ou app sem registro) não têm um `external_id`, mas podem ser atribuídos [aliases de usuário]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/#assigning-user-aliases) como um identificador alternativo.
 - [Atributos](#attributes)**:** Estas são informações específicas sobre o usuário, como seu nome, idade, local ou qualquer outra informação demográfica. Você pode usar esses atributos para segmentar seu público e personalizar seu envio de mensagens.
 - [Eventos](#events)**:** Estas são ações que o usuário realiza, como fazer uma compra, clicar em um link ou abrir um app. Braze rastreia esses eventos para ajudar você a entender o comportamento e o engajamento do usuário. Semelhante aos atributos, você também pode usar eventos para segmentar e personalizar.
 - **Compras:** Esta seção registra o histórico de compras do usuário. É crucial para entender os hábitos e preferências de compra do usuário.
@@ -37,7 +37,7 @@ Atributos são características ou propriedades específicas associadas a um usu
 
 #### Atributos padrão
 
-Os atributos padrão são atributos predefinidos que a Braze fornece. Estes são rastreados automaticamente pela Braze após o SDK ser integrado ao seu app. Eles são peças comuns de informações do usuário que a maioria dos aplicativos acharia útil, como dados demográficos e de dispositivo. Exemplos de atributos padrão incluem:
+Os atributos padrão são atributos predefinidos que você pode rastrear com o Braze após a integração do SDK em seu app. Eles são peças comuns de informações do usuário que a maioria dos aplicativos acharia útil, como dados demográficos e de dispositivo. Os exemplos incluem:
 
 - Nome
 - Sobrenome

@@ -11,7 +11,7 @@ alias: /landing_pages/drag_and_drop/
 > Usando o editor de arrastar e soltar, você pode criar e personalizar uma landing page para aumentar seu público e coletar preferências diretamente no Braze.
 
 {% alert important %}
-As landing pages estão atualmente em acesso antecipado. Há um limite de cinco landing pages por empresa.
+As landing pages estão atualmente em acesso antecipado. Há um limite de cinco landing pages por empresa. As sessões de usuário final registradas nas landing pages contam para o cálculo de Usuários ativos mensais (MAU).
 {% endalert %}
 
 ## Criação de uma landing page (arrastar e soltar)
@@ -96,7 +96,7 @@ Se um usuário inserir um valor de formulário inválido (como caracteres especi
 
 ## Mesclar usuários criados a partir de sua landing page
 
-Cada envio de formulário em uma landing page criará um novo perfil de usuário anônimo no Braze. Se já existir um usuário com o mesmo endereço de e-mail, é possível mesclar o novo perfil de usuário ao perfil existente usando o [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user) ponto de extremidade. Para saber mais sobre as diferentes maneiras de desduplicar usuários no Braze, consulte [Duplicar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+Cada envio de formulário em uma landing page criará um novo perfil de usuário anônimo no Braze. Se já existir um usuário com o mesmo endereço de e-mail, é possível mesclar o novo perfil de usuário ao perfil existente usando o endpoint [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user). Para saber mais sobre as diferentes maneiras de desduplicar usuários no Braze, consulte [Duplicar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
 
 A fusão de usuários será tratada automaticamente por meio de uma Liquid tag no futuro. 
 
@@ -111,6 +111,15 @@ Você precisa de permissões de administrador ou de todas as seguintes permissõ
 - Acessar landing page
 - Criar rascunhos de landing page
 - Publicar landing page
+
+## Níveis de planos
+
+O número de landing pages publicadas e domínios personalizados que você pode usar depende do seu tipo de plano: gratuito ou pago (incremental).
+
+| Recurso                                                                                                   | Nível gratuito     | Nível pago (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Landing pages publicadas                                                                 | Cinco por empresa | 20 adicionais |
+| Domínios personalizados          | Um por empresa | Cinco adicionais |
 
 ## Perguntas frequentes
 
@@ -130,23 +139,21 @@ Você pode editar o HTML de uma landing page usando o bloco Custom Code.
 
 Não, isso não está disponível no momento.
 
-### Existe um editor de HTML para landing pages?
-
-Não, isso não está disponível no momento. Você pode usar o bloco Código personalizado no editor.
-
 ### Posso criar um webhook dentro de uma landing page?
 
 Não, isso não é suportado no momento.
 
 ### Quais recursos estão no roteiro das landing pages? {#roadmap}
 
-Recursos adicionais estão em desenvolvimento. Isso inclui:
+Planejamos lançar recursos adicionais para landing pages, que estão em desenvolvimento. Isso pode incluir:
 
 * Nova tag Liquid para vincular uma landing page em um canal de envio de mensagens do Braze
 * Mesclagem automática de usuários quando uma landing page é enviada por meio de um canal Braze
 * Página de relatórios básicos
 * Blocos de formulário de arrastar e soltar para caixas de seleção e menus suspensos
 * Evento padrão para rastreamento e redirecionamento com base em envios de formulários
+
+Embora esses recursos façam parte de nosso roteiro, eles ainda estão em desenvolvimento, e o Braze não pode garantir que qualquer um ou todos esses recursos serão disponibilizados de forma geral. O acesso a alguns ou todos os recursos planejados para landing pages pode estar sujeito a taxas adicionais.
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}

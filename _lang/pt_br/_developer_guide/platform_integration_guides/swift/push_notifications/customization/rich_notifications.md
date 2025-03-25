@@ -23,7 +23,7 @@ Certifique-se de que **Embed In Application** esteja definido para incorporar a 
 
 ## Etapa 2: Configuração da extensão do serviço de notificação
 
-Uma extensão de serviço de notificação é seu próprio binário, que é empacotado com seu app. Ele deve ser configurado no [Apple Developer Portal](https://developer.apple.com) com seu próprio ID de app e perfil de provisionamento.
+Uma extensão de serviço de notificação é seu próprio binário, que é empacotado com seu app. Ele deve ser configurado no [Portal Apple Developer](https://developer.apple.com) com seu próprio ID de app e perfil de provisionamento.
 
 A ID do pacote da extensão do serviço de notificação deve ser diferente da ID do pacote do direcionamento do seu aplicativo principal. Por exemplo, se o ID do pacote do seu app for `com.company.appname`, você poderá usar `com.company.appname.AppNameServiceExtension` para a extensão do serviço.
 

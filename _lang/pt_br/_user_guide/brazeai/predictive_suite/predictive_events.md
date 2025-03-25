@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Visão geral
 
-![Gráfico intitulado "How Predictive Events Works" (Como funcionam os eventos de previsão). À esquerda mostra os dados de usuários sendo canalizados para o modelo de machine learning. O rótulo diz "Treine com dados históricos, compare o comportamento dos usuários que realizaram o evento em um determinado período com aqueles que não o fizeram". À direita, são mostrados os resultados do machine learning, em que os usuários são classificados de menos propensos a mais propensos a realizar o evento. O rótulo diz: "Preveja a probabilidade de eventos futuros, atribua uma pontuação de probabilidade aos usuários para um direcionamento preciso e conveniente".][1]
+![Gráfico intitulado "Como Funciona a Previsão de Eventos", exibindo dados de usuários sendo canalizados para o modelo de machine learning. O rótulo diz "Treine com dados históricos, compare o comportamento dos usuários que realizaram o evento em um determinado período com aqueles que não o fizeram". São mostrados também os resultados do machine learning, em que os usuários são classificados de menos propensos a mais propensos a realizar o evento. O rótulo diz: "Preveja a probabilidade de eventos futuros, atribua uma pontuação de probabilidade aos usuários para um direcionamento preciso e conveniente".][1]
 
 > Os eventos de previsão oferecem aos profissionais de marketing uma ferramenta poderosa para identificar e enviar mensagens privadas aos usuários com base na probabilidade de realizarem um evento. Quando você cria uma previsão de evento, o Braze treina um modelo de machine learning usando [árvores de decisão com aumento de gradiente](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender com a atividade anterior e prever a atividade futura.
 

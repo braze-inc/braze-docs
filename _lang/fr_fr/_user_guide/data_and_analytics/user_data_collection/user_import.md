@@ -112,9 +112,9 @@ Bien que `external_id` ne soit pas obligatoire, vous **devez** inclure l'un de c
 
 ### Importation d’un CSV
 
-Pour importer votre fichier CSV, rendez-vous sur la page **Importation d'utilisateurs** dans la section **Audiences**. Vous y trouverez un tableau qui répertorie les importations les plus récentes, avec des détails tels que la date de téléchargement, le nom du téléchargeur, le nom du fichier, la disponibilité du ciblage, le nombre de lignes importées et l'état de chaque importation.
+Pour importer votre fichier CSV, allez dans **Audiences** > Importation d'utilisateurs **.** Vous y trouverez un tableau qui répertorie les importations les plus récentes, avec des détails tels que la date de téléchargement, le nom du téléchargeur, le nom du fichier, la disponibilité du ciblage, le nombre de lignes importées et l'état de chaque importation.
 
-![][3]
+![La page "Importation d'utilisateurs" du tableau de bord de Braze.][3]
 
 Sélectionnez **Parcourir les fichiers** et votre fichier. Braze téléchargera votre fichier et vérifiera les en-têtes de colonne et les types de données de chaque colonne.
 
@@ -192,6 +192,21 @@ Vous ne pouvez pas importer un CSV pour créer un nouvel utilisateur à l’aide
 {% alert tip %}
 La valeur `braze_id` peut être étiquetée comme `Appboy ID` dans les exportations CSV du tableau de bord de Braze. Cet ID sera le même que le `braze_id` pour un utilisateur, vous pouvez donc renommer cette colonne en `braze_id` lorsque vous réimporterez le CSV.
 {% endalert %}
+
+### Importation d'adresses e-mail et de numéros de téléphone
+
+Vous pouvez ne pas utiliser d'ID externe ou d'alias utilisateur et vous contenter d'une adresse e-mail ou d'un numéro de téléphone pour importer des utilisateurs. Avant d'importer un fichier CSV contenant des adresses e-mail ou des numéros de téléphone, vérifiez les points suivants :
+
+- Vérifiez que vous n'avez pas d'ID externe ou d'aliasing de l'utilisateur pour ces profils.
+- Confirmez que votre fichier CSV est correctement formaté.
+
+{% alert note %}
+Si vous incluez à la fois des adresses e-mail et des numéros de téléphone dans votre fichier CSV, l'adresse e-mail est prioritaire sur le numéro de téléphone lors de la recherche de profils.
+{% endalert %}
+
+Si un profil existant comporte cette adresse e-mail ou ce numéro de téléphone, ce profil sera mis à jour et Braze ne créera pas de nouveau profil. S'il existe plusieurs profils avec la même adresse e-mail, Braze utilisera la même logique que l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) où le profil le plus récemment mis à jour sera mis à jour.
+
+Si un profil avec cette adresse e-mail ou ce numéro de téléphone n'existe pas, Braze créera un nouveau profil avec cet identifiant. Vous pouvez utiliser l'[endpoint`/users/identify` ]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) pour identifier ce profil ultérieurement. Pour supprimer un profil utilisateur, vous pouvez également utiliser l’enpoint [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete).
 
 ### Importation de données personnalisées
 

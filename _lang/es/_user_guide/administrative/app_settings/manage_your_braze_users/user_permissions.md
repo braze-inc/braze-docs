@@ -137,7 +137,7 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Espacio de trabajo|Administrar configuración del correo electrónico|Permite a los usuarios guardar los cambios de configuración del correo electrónico**(Configuración** > **Preferencias de correo electrónico**).|
 |Espacio de trabajo|Administrar eventos, atributos, compras|Permite a los usuarios editar atributos personalizados (los usuarios sin esta capacidad pueden seguir viendo atributos personalizados), editar y ver propiedades de eventos personalizados, y editar y ver propiedades de productos en **Configuración de datos**.|
 |Espacio de trabajo|Administrar integraciones externas|Permite acceder a todas las pestañas de **Socios tecnológicos** y sincronizar Braze con otras plataformas.|
-|Espacio de trabajo|Administrar conmutadores de características|Permite a los usuarios crear o editar [banderas de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
+|Espacio de trabajo|Administrar conmutadores de características|Permite a los usuarios crear o editar [banderas de características]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Espacio de trabajo|Administrar activos de biblioteca de medios|Permite a los usuarios añadir, editar y eliminar activos de la mediateca.|
 |Espacio de trabajo|Administrar grupos de suscripción|Permite a los usuarios crear y gestionar grupos de suscripción.|
 |Espacio de trabajo|Gestionar etiquetas|Permite a los usuarios editar o eliminar etiquetas (en **Gestión de etiquetas**). No necesita este permiso para añadir etiquetas a campañas o segmentos.|
@@ -148,8 +148,8 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Espacio de trabajo|Ver datos de facturación|Permite a los usuarios ver las suscripciones y la facturación.|
 |Espacio de trabajo|Ver la integración de las corrientes|Permite a los usuarios ver toda la información sobre una conexión Currents, excluyendo las credenciales. Por defecto, a los usuarios que tienen asignado el permiso "Acceder a campañas, lienzos, tarjetas, bloques de contenido, indicadores de características, segmentos, biblioteca multimedia, ubicaciones, códigos de promoción y centros de preferencias" también se les asigna este permiso.|
 |Espacio de trabajo|Ver atributos personalizados marcados como Información personal identificable (PII)|Permite a este usuario ver los atributos personalizados que están marcados como PII sin ser un administrador.|
-|Espacio de trabajo|Ver PII|Permite a los usuarios ver los campos de información de identificación personal definidos por su empresa dentro del panel de control.|
-|Espacio de trabajo|Ver perfiles de usuarios que cumplen las reglas de PII|Permite a los usuarios visualizar perfiles de usuario, pero suprime los campos que tu empresa haya definido como información personal identificable (PII).|
+|Espacio de trabajo|Ver PII|Permite a los usuarios ver los campos de información de identificación personal (PII) definidos por tu empresa dentro del panel. Los usuarios también pueden ver los campos PII en la pestaña **Vista previa como usuario** de las vistas previas de los mensajes. |
+|Espacio de trabajo|Ver perfiles de usuarios que cumplen las reglas de PII|Permite a los usuarios ver los perfiles de usuario, pero redacta los campos que tu empresa haya definido como información de identificación personal.|
 |Espacio de trabajo|Ver transformaciones|Permite a los usuarios ver [las transformaciones de datos Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Espacio de trabajo|Ver datos de consumo|Permite a los usuarios ver el uso de la aplicación, incluidos los paneles de rendimiento del canal.|
 |Espacio de trabajo|Fusionar usuarios duplicados|Permite a los usuarios fusionar perfiles de usuario duplicados.|

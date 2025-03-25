@@ -56,7 +56,7 @@ A linguagem de modelo Liquid é compatível com o uso de objetos, tags e filtros
 
 - [**Objetos**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) permitem que você insira atributos personalizados em suas mensagens.
 - [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) permitem que você insira dados no envio de mensagens e use a lógica condicional para enviar mensagens se determinadas condições forem atendidas. Por exemplo, você pode usar tags para incluir lógica inteligente, como declarações "if", em suas campanhas.
-- [**Filtros**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) permitem que você reformate atributos personalizados e conteúdo dinâmico. Por exemplo, você pode usar o [filtro`date` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#date-filter) para converter um carimbo de data/hora, como *2016-09-07 08:43:50 UTC*, em uma data, como *7 de setembro de 2016*.
+- [**Filtros**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) permitem que você reformate atributos personalizados e conteúdo dinâmico. Por exemplo, você pode usar o [filtro `date` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#date-filter) para converter um carimbo de data/hora, como *2016-09-07 08:43:50 UTC*, em uma data, como *7 de setembro de 2016*.
 
 {% alert warning %}
 Atualmente, o Braze não suporta 100% do Liquid da Shopify, apenas algumas partes que tentamos delinear em nossa documentação. Recomendamos fortemente testar todas as mensagens usando Liquid antes de enviá-las para reduzir o risco de erros ou de usar Liquid não suportado.

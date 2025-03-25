@@ -9,7 +9,7 @@ tool: Reports
 
 # クエリビルダー
 
-> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートsを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
+> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
 
 クエリビルダーでは一部の顧客データに直接アクセスできるため、「PII を表示」[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/)がある場合にのみ、クエリビルダーにアクセスできます。
 

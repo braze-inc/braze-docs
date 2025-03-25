@@ -30,4 +30,4 @@ Para integrar Inbox Monster, sigue los pasos de [Integración con Inbox Monster]
 
 ## Uso
 
-Para saber cómo enviar pruebas [de nivel de](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e) buzón [de](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e) entrada [programadas](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e) a través de Inbox Monster, consulta [Pruebas de nivel de buzón de entrada programadas](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).
+Para saber cómo enviar pruebas de nivel de buzón de entrada programadas a través de Inbox Monster, consulta [Pruebas de nivel de buzón de entrada programadas](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).

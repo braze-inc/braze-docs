@@ -31,8 +31,12 @@ Pour créer une sélection, procédez comme suit.
 4. Dans le champ **Filtre**, sélectionnez la colonne du catalogue sur laquelle vous voulez filtrer. Les chaînes de caractères de plus de 1 000 caractères ne peuvent pas être sélectionnées pour les filtres.
 5. Terminez la définition de vos critères de filtrage en sélectionnant l'opérateur approprié (par exemple, « est égal à » ou « n'est pas égal à »), ainsi que l'attribut.
 6. Dans la section **Type de tri**, déterminez comment les résultats sont triés. Par défaut, les résultats sont renvoyés sans ordre particulier. Pour spécifier le tri sur un champ spécifique, désactivez l'option **Ordre de tri aléatoire** et spécifiez le **champ de tri** et l'**ordre de tri** (croissant ou décroissant).
-7. Dans la section **Limite de résultats**, entrez le nombre maximum de résultats, jusqu'à 50.
-8. Cliquez sur **Créer une sélection**.
+7. Dans la section **Limite des résultats**, saisissez les résultats (jusqu'à 50).
+8. Sélectionnez **Créer une sélection**.
+
+### Test et prévisualisation
+
+Après avoir créé une sélection, vous pouvez utiliser la section **Prévisualisation pour l'utilisateur** pour voir ce qu'une sélection donnerait pour un utilisateur aléatoire ou un utilisateur spécifique. Pour les sélections qui utilisent la personnalisation, vous ne pouvez voir l'aperçu qu'après avoir sélectionné un utilisateur.
 
 ### Liquide dans les résultats de la sélection
 

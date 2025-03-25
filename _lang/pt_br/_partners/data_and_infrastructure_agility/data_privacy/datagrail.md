@@ -25,12 +25,12 @@ A integração entre a Braze e a DataGrail permite que você detecte os dados do
 
 ## Integração
 
-Faça login no portal DataGrail e selecione **Connect (Conectar** ) na página de integração do Braze. Em seguida, insira sua instância e a chave de API do Braze e selecione **Connect Braze**.
+Faça login no portal DataGrail e selecione **Connect (Conectar)** na página de integração do Braze. Em seguida, insira sua instância e a chave de API do Braze e selecione **Connect Braze**.
 
 Se houver contas Braze adicionais a serem integradas:
 1. Selecione **Editar conexão** na página de integração do Braze.
-2. No menu suspenso, selecione **+Add New Connection (Adicionar nova conexão**).
-3. Em **Connection Name (Nome da conexão**), digite um novo nome para identificar essa conta separada (por exemplo, Braze Training Account).
+2. No menu suspenso, selecione **+Add New Connection (Adicionar nova conexão)**.
+3. Em **Connection Name (Nome da conexão)**, digite um novo nome para identificar essa conta separada (por exemplo, Braze Training Account).
 4. Insira uma instância separada e uma chave de API da Braze para essa nova conta.
 5. Selecione **Conectar**.
 

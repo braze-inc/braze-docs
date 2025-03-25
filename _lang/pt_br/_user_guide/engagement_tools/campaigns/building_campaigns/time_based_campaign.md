@@ -17,7 +17,7 @@ Para saber mais sobre a entrega de campanhas, confira nosso curso do Braze Learn
 
 ## Entrega programada
 
-Esta seção cobre opções de agendamento e entrega baseadas em tempo para campanhas de [entrega agendada]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/).
+Esta seção cobre opções de agendamento e entrega baseadas em tempo para campanhas de [entrega agendada]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/).
 
 ### Enviar em um horário determinado
 
@@ -50,19 +50,19 @@ Esta seção cobre opções de agendamento e entrega baseadas em tempo para camp
 
 | Definição | Fuso horário |
 | ---------- | --------- |
-| Depois que um usuário recebe uma mensagem da campanha, especifique quando ele se tornará elegível novamente para receber a campanha. [Saiba mais]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns). | N/D |
+| Depois que um usuário recebe uma mensagem da campanha, especifique quando ele se tornará elegível novamente para receber a campanha. [Saiba mais]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). | N/D |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Uma campanha com a caixa de seleção marcada "Permitir que os usuários se tornem re-elegíveis para receber a campanha" após uma semana.][5]
 
 ## entrega baseada em ação
 
-Esta seção cobre a postergação do cronograma e as opções de entrega para campanhas de [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/).
+Esta seção cobre a postergação do cronograma e as opções de entrega para campanhas de [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
 ### Postergação de cronograma
 
 {% alert important %}
-Ao escolher o comprimento da postergação, tenha em mente que, se você definir uma postergação maior que a [Duração da Campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), seus usuários não receberão sua campanha.
+Ao escolher a duração da postergação, lembre-se de que, se definir uma postergação maior do que a [duração da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration), os usuários não receberão a campanha.
 {% endalert %}
 
 #### Enviar campanha imediatamente
@@ -118,7 +118,7 @@ A Braze calcula a postergação como `day of the week` + `calendar days`, depois
 
 | Definição | Fuso horário |
 | ---------- | --------- |
-| Depois que um usuário é contatado por esta campanha, especifique quando ele se tornará [re-elegível]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) para receber a campanha novamente. | N/D |
+| Depois que um usuário é contatado por esta campanha, especifique quando ele se tornará [re-elegível]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) para receber a campanha novamente. | N/D |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Uma campanha com a caixa de seleção marcada "Permitir que os usuários se tornem re-elegíveis para receber a campanha" após uma semana.][5]

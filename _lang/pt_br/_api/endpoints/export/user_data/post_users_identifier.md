@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Exportar usuários 
 /users/export/ids
 {% endapimethod %}
 
-> Use esse endpoint para exportar dados de qualquer perfil de usuário, especificando um identificador de usuário. 
+> Use esse endpoint para exportar dados de qualquer perfil de usuário, especificando um identificador de usuário.
 
 Até 50 `external_ids` ou `user_aliases` podem ser incluídos em uma única solicitação. Se quiser especificar `device_id`, `email_address` ou `phone`, somente um de cada identificador poderá ser incluído por solicitação.
 
@@ -43,22 +43,26 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (optional, array of strings) Name of user data fields to export. Defaults to all if not provided
+  "fields_to_export": (required, array of strings) Name of user data fields to export
 }
 ```
 
+{% alert note %}
+Para clientes que fizeram a integração com o Braze em 22 de agosto de 2024 ou após essa data, é necessário o parâmetro de solicitação `fields_to_export`.
+{% endalert %}
+
 ## Parâmetros de solicitação
 
-| Parâmetro | Obrigatória | Tipo de dados | Descrição |
-|-----|-----|-----|-----|
-|`external_ids` | Opcional | Matriz de strings | Identificadores externos para os usuários que deseja exportar. |
-|`user_aliases` | Opcional | Vetor de objeto de alias de usuário | [Aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/) para usuários a serem exportados. |
-|`device_id` | Opcional | String | Identificador do dispositivo, conforme retornado por vários métodos do SDK, como `getDeviceId`. |
-|`braze_id` | Opcional | String | Identificador do Braze para um usuário específico. |
-|`email_address` | Opcional | String | Endereço de e-mail do usuário. |
-|`phone` | Opcional | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | Número de telefone do usuário. |
-|`fields_to_export` | Opcional | Matriz de strings | Nome dos campos de dados de usuários a serem exportados. O padrão é all se não for fornecido. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Parâmetro          | Obrigatória | Tipo de dados                                                     | Descrição                                                                                  |
+| ------------------ | -------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `external_ids`     | Opcional | Matriz de strings                                              | Identificadores externos para os usuários que deseja exportar.                                              |
+| `user_aliases`     | Opcional | Vetor de objeto de alias de usuário                                    | [Aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/) para usuários a serem exportados. |
+| `device_id`        | Opcional | String                                                        | Identificador do dispositivo, conforme retornado por vários métodos do SDK, como `getDeviceId`.                 |
+| `braze_id`         | Opcional | String                                                        | Identificador do Braze para um usuário específico.                                                      |
+| `email_address`    | Opcional | String                                                        | Endereço de e-mail do usuário.                                                                       |
+| `phone`            | Opcional | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | Número de telefone do usuário.                                                                        |
+| `fields_to_export` | Obrigatória | Array de strings                                              | Nome dos campos de dados de usuários a serem exportados.                                                          |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```
@@ -85,41 +89,41 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 
 A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_export` para minimizar os dados retornados pode melhorar o tempo de resposta desse endpoint da API:
 
-| Campo a ser exportado | Tipo de dados | Descrição |
-|---|---|---|
-| `apps` | Vetor | Apps nos quais esse usuário registrou sessões, que incluem os campos:<br><br>- `name`: nome do app<br>- `platform`: plataforma do app, como iOS, Android ou Web<br>- `version`: número ou nome da versão do app <br>- `sessions`: número total de sessões para este app<br>- `first_used`: data da primeira sessão<br>- `last_used`: data da última sessão<br><br>Todos os campos são strings. |
-| `attributed_campaign` | String | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de uma determinada campanha publicitária. |
-| `attributed_source` | String | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador da plataforma em que o anúncio estava. |
-| `attributed_adgroup` | String | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de um subgrupo opcional abaixo da campanha. |
-| `attributed_ad` | String | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de um subgrupo opcional abaixo da campanha e do grupo de anúncios. |
-| `braze_id` | String | Identificador de usuário exclusivo específico do dispositivo definido pelo Braze para esse usuário. |
-| `country` | String | País do usuário usando o padrão [ISO 3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| `created_at` | String | Data e hora em que o perfil do usuário foi criado, no formato ISO 8601. |
-| `custom_attributes` | Objeto | Pares de valores-chave de atributos personalizados para esse usuário. |
-| `custom_events` | Vetor | Eventos personalizados atribuídos a esse usuário nos últimos 90 dias. |
-| `devices` | Vetor | Informações sobre o dispositivo do usuário, que podem incluir o seguinte, dependendo da plataforma:<br><br>- `model`: Nome do modelo do dispositivo<br>- `os`: Sistema operacional do dispositivo<br>- `carrier`: Operadora de serviço do dispositivo, se disponível<br>- `idfv`: (iOS) identificador do dispositivo Braze, o identificador da Apple para o fornecedor, se houver<br>- `idfa`: (iOS) identificador para publicidade, se houver<br>- `device_id`: (Android) Identificador do dispositivo Braze<br>- `google_ad_id`: (Android) Identificador de publicidade do Google Play, se houver<br>- `roku_ad_id`: (Roku) Identificador de publicidade da Roku<br>- `ad_tracking_enabled`: Se o rastreamento de anúncios estiver ativado no dispositivo, pode ser verdadeiro ou falso. |
-| `dob` | String | Data de nascimento do usuário no formato `YYYY-MM-DD`. |
-| `email` | String | Endereço de e-mail do usuário. |
-| `external_id` | String | Identificador de usuário exclusivo para usuários identificados. |
-| `first_name` | String | Nome do usuário. |
-| `gender` | String | Gênero do usuário. Os valores possíveis são:<br><br>- `M`: masculino<br>- `F`: feminino<br>- `O`: outros<br>- `N`: não aplicável<br>- `P`: prefere não se pronunciar<br>- `nil`: desconhecido |
-| `home_city` | String | Cidade natal do usuário. |
-| `language` | String | Idioma do usuário no padrão ISO-639-1. |
-| `last_coordinates` | Matriz de valores flutuantes | O local mais recente do dispositivo do usuário, formatado como `[longitude, latitude]`. |
-| `last_name` | String | Sobrenome do usuário. |
-| `phone` | String | Número de telefone do usuário no formato E.164. |
-| `purchases` | Vetor | Compras que esse usuário fez nos últimos 90 dias. |
-| `push_tokens` | Vetor | Identificador anônimo exclusivo que especifica para onde enviar as notificações de um app. |
-| `random_bucket` | Inteiro | [Número de bucket aleatório]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) do usuário, usado para criar segmentos uniformemente distribuídos de usuários aleatórios. |
-| `time_zone` | String | Fuso horário do usuário no mesmo formato do banco de dados de fuso horário da IANA. |
-| `total_revenue` | Flutuação | Receita total atribuída a esse usuário. A receita total é calculada com base nas compras que o usuário fez durante as janelas de conversão para as campanhas e Canvas que recebeu. |
-| `uninstalled_at` | Data e hora | Data e hora em que o usuário desinstala o app. Omitido se o app não tiver sido desinstalado. |
-| `user_aliases` | Objeto | [Objeto de aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contendo `alias_name` e `alias_label`, se houver. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Campo a ser exportado       | Tipo de dados       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apps`                | Vetor           | Apps nos quais esse usuário registrou sessões, que incluem os campos:<br><br>- `name`: nome do app<br>- `platform`: plataforma do app, como iOS, Android ou Web<br>- `version`: número ou nome da versão do app <br>- `sessions`: número total de sessões para este app<br>- `first_used`: data da primeira sessão<br>- `last_used`: data da última sessão<br><br>Todos os campos são strings.                                                                                                                                                                                                                                                                                       |
+| `attributed_campaign` | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de uma determinada campanha publicitária.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `attributed_source`   | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador da plataforma em que o anúncio estava.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `attributed_adgroup`  | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de um subgrupo opcional abaixo da campanha.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `attributed_ad`       | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/attribution), se configurados. Identificador de um subgrupo opcional abaixo da campanha e do grupo de anúncios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `braze_id`            | String          | Identificador de usuário exclusivo específico do dispositivo definido pelo Braze para esse usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `country`             | String          | País do usuário usando o padrão [ISO 3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `created_at`          | String          | Data e hora em que o perfil do usuário foi criado, no formato ISO 8601.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `custom_attributes`   | Objeto          | Pares de valores-chave de atributos personalizados para esse usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `custom_events`       | Vetor           | Eventos personalizados atribuídos a esse usuário nos últimos 90 dias.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `devices`             | Vetor           | Informações sobre o dispositivo do usuário, que podem incluir o seguinte, dependendo da plataforma:<br><br>- `model`: Nome do modelo do dispositivo<br>- `os`: Sistema operacional do dispositivo<br>- `carrier`: Operadora de serviço do dispositivo, se disponível<br>- `idfv`: (iOS) identificador do dispositivo Braze, o identificador da Apple para o fornecedor, se houver<br>- `idfa`: (iOS) Identificador para publicidade, se houver<br>- `device_id`: (Android) Identificador do dispositivo Braze<br>- `google_ad_id`: (Android) Identificador de publicidade do Google Play, se houver<br>- `roku_ad_id`: (Roku) Identificador de publicidade da Roku<br>- `ad_tracking_enabled`: Se o rastreamento de anúncios estiver ativado no dispositivo, pode ser verdadeiro ou falso. |
+| `dob`                 | String          | Data de nascimento do usuário no formato `YYYY-MM-DD`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `email`               | String          | Endereço de e-mail do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `external_id`         | String          | Identificador de usuário exclusivo para usuários identificados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `first_name`          | String          | Nome do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `gender`              | String          | Gênero do usuário. Os valores possíveis são:<br><br>- `M`: masculino<br>- `F`: feminino<br>- `O`: outros<br>- `N`: não aplicável<br>- `P`: prefere não se pronunciar<br>- `nil`: desconhecido                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `home_city`           | String          | Cidade natal do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `language`            | String          | Idioma do usuário no padrão ISO-639-1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `last_coordinates`    | Matriz de valores flutuantes | O local mais recente do dispositivo do usuário, formatado como `[longitude, latitude]`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `last_name`           | String          | Sobrenome do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `phone`               | String          | Número de telefone do usuário no formato E.164.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `purchases`           | Vetor           | Compras que esse usuário fez nos últimos 90 dias.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `push_tokens`         | Vetor           | Identificador anônimo exclusivo que especifica para onde enviar as notificações de um app.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `random_bucket`       | Inteiro         | [Número de bucket aleatório]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) do usuário, usado para criar segmentos uniformemente distribuídos de usuários aleatórios.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `time_zone`           | String          | Fuso horário do usuário no mesmo formato do banco de dados de fuso horário da IANA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `total_revenue`       | Float           | Receita total atribuída a esse usuário. A receita total é calculada com base nas compras que o usuário fez durante as janelas de conversão para as campanhas e Canvas que recebeu.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `uninstalled_at`      | Data e hora       | Data e hora em que o usuário desinstala o app. Omitido se o app não tiver sido desinstalado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `user_aliases`        | Objeto          | [Objeto de aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contendo `alias_name` e `alias_label`, se houver.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Esteja ciente de que o ponto de extremidade `/users/export/ids` reunirá todo o perfil desse usuário, incluindo dados como todas as campanhas e Canvas recebidos, todos os eventos personalizados realizados, todas as compras feitas e todos os atributos personalizados. Como resultado, esse endpoint é mais lento do que outros endpoints da API REST.
 
-Dependendo dos dados solicitados, esse endpoint da API pode não ser suficiente para atender às suas necessidades devido ao limite de frequência de 2.500 solicitações por minuto. Se você pretende usar esse endpoint regularmente para exportar usuários, considere exportar usuários por segmento, que é um processo assíncrono e mais otimizado para extrações de dados maiores.
+Dependendo dos dados solicitados, esse endpoint da API pode não ser suficiente para atender às suas necessidades devido ao limite de frequência de 250 solicitações por minuto. Se você pretende usar esse endpoint regularmente para exportar usuários, considere exportar usuários por segmento, que é um processo assíncrono e mais otimizado para extrações de dados maiores.
 
 ## Resposta
 
@@ -199,7 +203,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -207,7 +211,9 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -226,18 +232,18 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -248,7 +254,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {
@@ -310,10 +316,10 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -373,12 +379,12 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -422,7 +428,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
 {% endtabs %}
 
 {% alert tip %}
-Para obter ajuda com exportações CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

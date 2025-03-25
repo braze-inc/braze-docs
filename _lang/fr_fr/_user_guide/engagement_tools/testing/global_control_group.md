@@ -79,13 +79,19 @@ Vous pouvez enregistrer un nouveau groupe après avoir désactivé votre groupe 
 
 ## Exporter vos membres de groupe de contrôle {#export-group-members}
 
-Si vous souhaitez voir quels utilisateurs sont inclus dans votre groupe de contrôle global, vous pouvez exporter les membres de votre groupe dans un fichier CSV ou via une API. 
+Si vous souhaitez voir quels utilisateurs font partie de votre groupe de contrôle global, vous pouvez exporter les membres de votre groupe par CSV ou API. 
 
-Pour lancer une exportation CSV, accédez à l'onglet **Paramètres du groupe de contrôle global** et cliquez sur <i class="fas fa-download"></i> **Export.** Pour exporter via l'API, utilisez l'[endpoint `/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+Pour lancer une exportation CSV, accédez à l'onglet **Paramètres du groupe de contrôle global** et cliquez sur <i class="fas fa-download"></i> **Export.** Pour exporter par API, utilisez l'[endpoint`/users/export/global_control_group` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Les groupes de contrôle historiques ne sont pas conservés, vous pouvez donc uniquement exporter les membres de votre groupe actuel. Assurez-vous d’exporter toutes les informations nécessaires avant de désactiver un groupe de contrôle.
 {% endalert %}
+
+## Vérifier si un utilisateur fait partie d'un groupe de contrôle global
+
+Vous pouvez consulter l'appartenance à un groupe de contrôle global en allant dans la section **Divers de** l'onglet **Engagement** du profil d'un utilisateur individuel.
+
+![Une section "Divers" signalant que l'utilisateur a un numéro de compartiment aléatoire est 2030 et se trouve dans le groupe de contrôle global.][1]{: style="max-width:60%;"}
 
 ## Reporting
 
@@ -163,6 +169,7 @@ Avant de commencer, décidez de la durée sur laquelle vous allez conduire votre
 
 Pensez aux comportements de référence pour les mesures qui vous intéressent le plus. Êtes-vous intéressé(e) par les tarifs des abonnements qui sont renouvelés uniquement tous les ans ? Ou voulez-vous savoir si vos clients ont une habitude hebdomadaire pour l’événement que vous souhaitez mesurer ? Pensez au temps qu’il faut pour que les utilisateurs changent potentiellement leurs comportements suite à votre message. Une fois que vous avez décidé de la durée de votre expérience, veillez à ne pas la terminer ou à ne pas enregistrer les résultats finaux trop tôt, car vos conclusions risqueraient d'être faussées.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

@@ -18,6 +18,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
-- name: ナルヴァル
+- name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

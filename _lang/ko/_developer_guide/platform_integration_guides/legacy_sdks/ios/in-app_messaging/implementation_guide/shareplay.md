@@ -21,7 +21,7 @@ noindex: true
 ## 개요
 
 Apple이 iOS 15 업데이트의 일환으로 출시된 새로운 `GroupActivities` 프레임워크를 사용하면 Braze 인앱 메시지의 도움을 받아 SharePlay를 애플리케이션에 통합하여 FaceTime을 활용할 수 있습니다.
-SharePlay![(]){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay3.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
 사용자가 FaceTime 통화에서 SharePlay 비디오를 시작하면 모든 사람의 화면 상단에 '열기' 버튼이 나타납니다. 열면 오디오와 비디오가 호환되는 모든 기기에서 동기화되어 사용자가 실시간으로 함께 비디오를 시청할 수 있습니다. 앱을 다운로드하지 않은 회원은 App Store로 리디렉션됩니다.
 

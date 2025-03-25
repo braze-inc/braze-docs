@@ -77,4 +77,4 @@ Lorsque vous modifiez des planifications de campagne ou des audiences, tenez com
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/content_cards/about/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/

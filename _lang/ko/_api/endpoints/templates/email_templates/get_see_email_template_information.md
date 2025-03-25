@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 이메일 템플릿 Braze 엔드포인트 참조에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 이메일 템플릿 보기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}

@@ -121,7 +121,7 @@ Braze no procesará ningún cambio de estado para usuarios en grupos archivados.
 
 Puede consultar el gráfico **de series temporales de grupos de suscripción** en la página **Grupos de suscripción** para ver el tamaño del grupo de suscripción en función del número de usuarios durante un periodo de tiempo. Estos tamaños de grupos de suscripción también son coherentes con otras áreas de Braze, como el cálculo del tamaño de los segmentos.
 
-![][10]
+![Un ejemplo de gráfico de "Timeseries de grupos de suscripción" del 2 al 11 de diciembre. El gráfico muestra un aumento de ~10 millones en el número de usuarios del 6º al 7º.][10]
 
 #### Visualización de los grupos de suscripción en los análisis de campaña
 
@@ -129,7 +129,7 @@ Puede ver el número de usuarios que cambiaron su estado de suscripción (suscri
 
 En la página **Análisis de** campaña de su campaña, desplácese hasta la sección **Rendimiento de los mensajes de correo electrónico** y haga clic en la flecha situada bajo **Grupos de suscripción** para ver el recuento agregado de cambios de estado, tal y como lo envían sus clientes.
 
-![][30]
+![La página "Rendimiento de los mensajes de correo electrónico" muestra el recuento agregado de los cambios de estado enviados por los clientes.][30]
 
 ## Centro de preferencias de correo electrónico
 

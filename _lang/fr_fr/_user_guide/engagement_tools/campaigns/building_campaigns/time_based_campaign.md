@@ -17,7 +17,7 @@ Pour en savoir plus sur la réception/distribution des campagnes, consultez notr
 
 ## Livraison planifiée
 
-Cette section couvre les options de planification et de livraison basées sur le temps pour les campagnes de [livraison programmée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/).
+Cette section couvre les options de planification et de livraison basées sur le temps pour les campagnes de [livraison programmée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/).
 
 ### Envoyer à un moment spécifié
 
@@ -50,19 +50,19 @@ Cette section couvre les options de planification et de livraison basées sur le
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera rééligible pour recevoir de nouveau la campagne. [En savoir plus.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) | S.O. |
+| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera rééligible pour recevoir de nouveau la campagne. [En savoir plus.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) | S.O. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Une campagne avec la case « Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne » après une semaine de cochée.][5]
 
 ## Livraison par événement
 
-Cette section couvre le retard de planification et les options de livraison pour les campagnes de [livraison basée sur l'action]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/).
+Cette section couvre le retard de planification et les options de livraison pour les campagnes de [livraison basée sur l'action]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
 ### Planifier un délai
 
 {% alert important %}
-Lorsque vous choisissez la durée de votre délai, gardez à l'esprit que si vous définissez un délai plus long que la [Durée de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), vos utilisateurs ne recevront pas votre campagne.
+Lorsque vous choisissez la durée de votre délai, gardez à l'esprit que si vous définissez un délai supérieur à la [durée de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration), vos utilisateurs ne recevront pas votre campagne.
 {% endalert %}
 
 #### Envoyer immédiatement la campagne
@@ -78,7 +78,7 @@ Lorsque vous choisissez la durée de votre délai, gardez à l'esprit que si vou
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Envoyer un message après un délai Vous pouvez indiquer un délai en secondes, minutes, heures, jours ou semaines. Pour les [campagnes d'envoi de messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), vous pouvez définir un délai allant jusqu'à deux heures seulement. | S.O. |
+| Envoyer un message après un délai Vous pouvez indiquer un délai en secondes, minutes, heures, jours ou semaines. Pour les [campagnes d'envoi de messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), vous pouvez définir un délai allant jusqu'à deux heures seulement. | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Délai de planification défini pour envoyer la campagne un jour après l'événement déclencheur.][7]
@@ -118,7 +118,7 @@ Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis 
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Après qu'un utilisateur a été contacté par cette campagne, spécifiez quand il deviendra [à nouveau éligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) pour recevoir la campagne à nouveau. | S.O. |
+| Après qu'un utilisateur a été contacté par cette campagne, spécifiez quand il deviendra [à nouveau éligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) pour recevoir la campagne à nouveau. | S.O. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Une campagne avec la case « Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne » après une semaine de cochée.][5]

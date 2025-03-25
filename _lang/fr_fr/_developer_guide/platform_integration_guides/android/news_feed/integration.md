@@ -15,9 +15,7 @@ channel:
 
 > Cet article de référence couvre différents types de cartes de fil d’actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Sous Android, le fil d'actualité est mis en œuvre sous la forme d'un [fragment](http://developer.android.com/guide/components/fragments.html) disponible dans le projet Android UI de Braze. Reportez-vous à la [documentation de Google sur les fragmentsAndroid](https://developer.android.com/guide/fragments#Adding "Documentation : Fragments") pour obtenir des informations sur l'ajout d'un fragment à une activité.
 

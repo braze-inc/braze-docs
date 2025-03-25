@@ -77,7 +77,7 @@ Puede asignar un equipo a lienzos, campañas, tarjetas, segmentos, plantillas de
 Considera las dos situaciones siguientes para una especialista en marketing de Braze llamada Michelle. Michelle es miembro de un equipo llamado "Desarrollo". Tiene acceso a todos los permisos a nivel de equipo para el equipo de Desarrollo.
 
 {% tabs %}
-{% tab Escenario 1: Solo permisos de equipo %}
+{% tab Escenario 1 - Sólo permisos de equipo %}
 
 En este escenario, Michelle es un usuario limitado que no tiene permisos a nivel de espacio de trabajo. Sus permisos son más o menos así:
 
@@ -88,7 +88,7 @@ Según los permisos asignados a Michelle, cada vez que crea una campaña, sólo 
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab Escenario 2: Permisos de equipo y permisos de espacio de trabajo %}
+{% tab Escenario 2 - Permisos de equipo y espacio de trabajo %}
 
 En este caso, Michelle sigue siendo miembro del equipo de Desarrollo, pero también tiene un permiso adicional a nivel de espacio de trabajo.
 

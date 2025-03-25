@@ -20,33 +20,31 @@ Pour utiliser les paramètres régionaux dans vos messages, composez une campagn
 {% tabs %}
 {% tab Editeur HTML %}
 
-1. Mettez en surbrillance le texte à traduire. Sélectionnez **Insérer une étiquette de traduction**. Votre texte sera ainsi entouré de tags de traduction. <br>![]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. Mettez en surbrillance le texte à traduire. Sélectionnez **Insérer une étiquette de traduction**. Votre texte sera ainsi entouré de tags de traduction. <br>![Editeur HTML avec une seule locale sélectionnée.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Enregistrez le message en tant que brouillon.
 3. Sélectionnez **Multi-langues** et ajoutez vos langues pour le message à l'aide du menu déroulant.
-4. Sélectionnez **Télécharger le modèle** pour télécharger le modèle de traduction au format CSV. Complétez ensuite les traductions dans le CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. Sélectionnez **Télécharger le** modèle pour télécharger le modèle de traduction sous forme de fichier CSV. Complétez ensuite les traductions dans le fichier CSV. <br>![Exemple de fichier CSV de traduction.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. Sélectionnez **Télécharger les traductions** pour télécharger le fichier CSV contenant les traductions terminées.
 
 {% endtab %}
 {% tab Editeur par glisser-déposer %}
 
-1. Ajoutez les tags de traduction {% raw %}`{% translation %}` et `{% endtranslation %}`{% endraw %} autour de tous les textes et images ou liens URL à traduire.<br>![]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
-2. Après avoir ajouté les tags, enregistrez votre message en tant que brouillon.
-3. Sélectionnez **Multi-langues** et ajoutez vos langues pour le message à l'aide du menu déroulant.
-4. Sélectionnez **Télécharger le modèle** pour télécharger le modèle de traduction au format CSV. Complétez ensuite les traductions dans le CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-5. Sélectionnez **Télécharger les traductions** pour télécharger le fichier CSV contenant les traductions terminées.
+1. Ajoutez les tags de traduction {% raw %}`{% translation %}` et `{% endtranslation %}`{% endraw %} autour de tous les textes et images ou liens URL à traduire. 
+2. Ajoutez un tag ID à chaque étiquette de traduction. En voici un exemple : {% raw %}`{% translation id_1 %}`{% endraw %} <br>![Éditeur par glisser-déposer avec deux ID de traduction.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
+3. Après avoir ajouté les tags, enregistrez votre message en tant que brouillon.
+4. Sélectionnez **Multi-langues** et ajoutez vos langues pour le message à l'aide du menu déroulant.
+5. Sélectionnez **Télécharger le** modèle pour télécharger le modèle de traduction sous forme de fichier CSV. 
+6. Complétez les traductions dans le fichier CSV. Si vous avez copié et collé les étiquettes de traduction directement à partir de l'étape 1, vous devrez peut-être supprimer `<code>` de la colonne **Étiquettes de traduction** du fichier CSV.
+7. Sélectionnez **Télécharger les traductions** pour télécharger le fichier CSV contenant les traductions terminées.
 
 {% endtab %}
 {% endtabs %}
 
-Pour mettre à jour les traductions, actualisez le fichier CSV et chargez-le à nouveau. Cela signifie que toute modification des ID ou des lieux dans le CSV ne sera pas automatiquement mise à jour dans votre message.
-
-{% alert tip %}
-Consultez notre [API de traduction]({{site.baseurl}}/api/endpoints/translations) pour gérer et mettre à jour les traductions dans vos campagnes et canvas.
-{% endalert %}
+Toute modification des ID ou des lieux dans le fichier CSV ne sera pas automatiquement mise à jour dans votre message. Pour mettre à jour les traductions, mettez à jour le fichier CSV et téléchargez à nouveau le fichier.
 
 ## Prévisualiser vos paramètres régionaux
 
-Dans la section **Prévisualisation et test**, sélectionnez **Utilisateur multilingue** pour prévisualiser le message afin de vérifier si la traduction de votre message est conforme aux attentes.
+Dans la section **Aperçu et test**, sélectionnez **Utilisateur multilingue** pour vérifier si votre message est traduit comme prévu.
 
 ## Foire aux questions
 
@@ -56,10 +54,13 @@ Modifiez le fichier CSV, puis chargez à nouveau le fichier pour apporter une mo
 #### Puis-je imbriquer des tags de traduction ?
 Non.
 
+#### Puis-je utiliser des langues locales dans mes modèles d'e-mail ?
+Non. Les langues ne sont prises en charge que dans l'éditeur d'e-mail pour les campagnes et les étapes du message dans Canvas.
+
 #### Puis-je ajouter un style HTML dans les étiquettes de traduction ?
 Oui. Toutefois, veillez à vérifier que le style HTML n'est pas traduit avec le contenu.
 
-#### Quelles sont les validations ou les vérifications supplémentaires effectuées par Braze ?
+#### Quelles validations ou vérifications supplémentaires Braze effectue-t-elle pour les traductions ?
 
 | Scénario                                                                                                                                                 | Validation en Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|

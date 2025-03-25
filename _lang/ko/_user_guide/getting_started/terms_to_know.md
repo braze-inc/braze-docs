@@ -71,7 +71,7 @@ glossaries:
   - name: 월간 활성 사용자(MAU)
     description: 지난 30일 이내에 세션이 있는 모든 사용자.
   - name: 멀티 채널 메시징
-    description: "이메일, 웹 푸시, 모바일 푸시 알림 등 다양한 매체를 통해 사용자에게 메시징을 전달할 수 있습니다. <a href=\"https://www.braze.com/docs/developer_guide/platform_wide/getting_started/platform_overview/#multichannel-messaging\">메시징 채널</a>은 이탈한 사용자를 다시 참여시키고, 활성 사용자를 유지하며, 브랜드 홍보대사에게 활력을 불어넣기 위해 정기적으로 함께 사용하는 것이 가장 좋습니다."
+    description: "이메일, 웹 푸시, 모바일 푸시 알림 등 다양한 매체를 통해 사용자에게 메시징을 전달할 수 있습니다. <a href=\"https://www.braze.com/docs/developer_guide/getting_started/platform_overview/#multichannel-messaging\">메시징 채널</a>은 이탈한 사용자를 다시 참여시키고, 활성 사용자를 유지하며, 브랜드 홍보대사에게 활력을 불어넣기 위해 정기적으로 함께 사용하는 것이 가장 좋습니다."
   - name: 다변량 테스트
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/\">다변량 테스트</a>를 사용하면 두 개 이상의 메시지 버전을 비교하여 여러 변수를 테스트하여 어떤 배리언트가 가장 실적이 좋은지 평가할 수 있습니다."
   - name: 신규 사용자

@@ -10,19 +10,19 @@ description: "En este artículo se describen los detalles del punto final Actual
 ---
 {% api %}
 # Actualizar lienzos programados desencadenados por la API
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/update
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar los Lienzos programados desencadenados por la API que se crearon en el panel. 
+> Utiliza este punto final para actualizar los Lienzos programados desencadenados por la API que se crearon en el panel.
 
 Esto te permite decidir qué acción debe desencadenar el envío del mensaje. Puedes introducir `trigger_properties`, que se incluirá como plantilla en el propio mensaje.
 
 Ten en cuenta que para enviar mensajes con este punto final, debes tener un ID de Canvas, creado cuando construyes un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-Cualquier horario sobrescribirá completamente el que hayas proporcionado en la solicitud de crear horario o en anteriores solicitudes de actualizar horario. 
-  - Por ejemplo, si originalmente proporcionas `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y luego en tu actualización proporcionas `"schedule" : {"time" : "2015-02-20T14:14:47"}`, tu mensaje se enviará ahora a la hora proporcionada en UTC, no en la hora local del usuario. 
-  - Los desencadenantes programados que se actualicen muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con el máximo esfuerzo, por lo que los cambios de último segundo podrían aplicarse a todos, a algunos o a ninguno de tus usuarios objetivo.
+Cualquier horario sobrescribirá completamente el que hayas proporcionado en la solicitud de crear horario o en anteriores solicitudes de actualizar horario.
+  - Por ejemplo, si originalmente proporciona `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y luego en su actualización proporciona `"schedule" : {"time" : "2015-02-20T14:14:47"}`, su mensaje ahora se enviará a la hora proporcionada en UTC, no en la hora local del usuario.
+  - Los desencadenantes programados que se actualicen muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con el máximo esfuerzo, por lo que los cambios de último segundo podrían aplicarse a todos, a algunos o a ninguno de sus usuarios objetivo.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_id`|Obligatoria|Cadena| Ver [identificador de Canvas]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Opcional | Cadena | El `schedule_id` para actualizar (obtenido de la respuesta para crear horario). |
 |`schedule` | Obligatoria | Objeto | Ver [objeto de programación]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```

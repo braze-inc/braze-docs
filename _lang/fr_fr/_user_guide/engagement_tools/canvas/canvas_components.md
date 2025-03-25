@@ -46,13 +46,9 @@ guide_featured_list:
 
 Avec les composants Canvas, vous pouvez débloquer de nouveaux parcours utilisateurs pour améliorer votre processus et améliorer l’efficacité de la sensibilisation de votre audience.
 
-{% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-{% endalert %}
-
 ### Parcours utilisateur de Customizing
 
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Exemple d'un parcours utilisateur Canvas avec une étape de l'arbre décisionnel suivie d'étapes de délai et de message.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Utilisez les [parcours d'action][1] pour diviser votre parcours utilisateur en fonction des actions et des événements d'engagement tels que la réalisation d'un achat. Si vous souhaitez filtrer et cibler vos audiences, les [parcours d'audience][2] permettent de simplifier le ciblage des utilisateurs en leur faisant suivre différents parcours canvas en fonction de critères d'audience.
 
@@ -61,9 +57,11 @@ Les composants d'[arbre décisionnel][3] utilisent une simple logique "oui ou no
 Les composants de [retardement][4] vous permettent de retarder une seule étape de votre canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant. 
 
 ### Test
-Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d'expérience][5], vous pouvez tester plusieurs chemins Canvas à n'importe quelle étape. 
 
-### Intégration 
+Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d'expérience][5], vous pouvez tester plusieurs chemins Canvas à n'importe quelle étape. Vous pouvez également utiliser les connexions entre les étapes comme un aperçu de haut niveau. Les connexions orange indiquent que l'étape précédente permet aux utilisateurs de passer immédiatement à l'étape suivante.
+
+### Intégration
+
 Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Tirez parti des options de synchronisation d'audience disponibles pour [Facebook][6] et [Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths

@@ -47,7 +47,7 @@ Maintenant, passons à la technique. En coulisses, une carte de contenu comporte
 - **Voir :** À quoi ressemble la carte
 - **Contrôleur :** Comment l’utilisateur interagit avec la carte
 
-Dans le cas d'une implémentation par défaut, vous ajoutez le contenu de la carte - le modèle - à partir du tableau de bord ou par le biais d'API, et la vue et le contrôleur sont gérés par ce que l'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
+Dans le cas d'une implémentation par défaut, vous ajoutez le contenu de la carte - le modèle - à partir du tableau de bord ou par l'intermédiaire d'API, et la vue et le contrôleur sont gérés par ce que l'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
 
 ## Cas d’utilisation
 
@@ -60,7 +60,7 @@ Pour plus d'inspiration, nous vous recommandons vivement de consulter notre [Gui
 {% tabs %}
 {% tab Onboarding et étapes suivantes %}
 
-Lorsque de nouveaux utilisateurs explorent votre application et votre site web, faites-leur découvrir les valeurs et les avantages de ce que vous proposez à l'aide de cartes de contenu placées à des endroits stratégiques. Encouragez les utilisateurs à s'abonner à d'autres canaux de communication avec une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en suspens dans un onglet dédié à l'onboarding alimenté par des cartes de contenu. N'oubliez pas de retirer une carte lorsque l'utilisateur a accompli la tâche souhaitée !
+Lorsque de nouveaux utilisateurs explorent votre application et votre site web, faites-leur découvrir les valeurs et les avantages de ce que vous proposez grâce à des cartes de contenu placées à des endroits stratégiques. Encouragez les utilisateurs à s'abonner à d'autres canaux de communication avec une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en suspens dans un onglet dédié à l'onboarding alimenté par des cartes de contenu. N'oubliez pas de retirer une carte lorsque l'utilisateur a accompli la tâche souhaitée !
 
 <style>
   .imgDiv {
@@ -116,11 +116,11 @@ Cette section couvre les trois façons les plus courantes de placer les cartes d
 
 La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 exemples de cartes de contenu, montrant les différentes options de placement : boîte de réception des messages, carrousel et bannière.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Boîte de réception de messages
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Exemple de carte de contenu utilisant l'emplacement "boîte de réception".]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Une boîte de réception de messages (également appelée centre de notification ou flux) est un emplacement persistant dans votre application ou votre site Web où vous pouvez afficher les cartes de contenu dans le format que vous préférez. Chaque message dans la boîte de réception constitue sa propre carte de contenu. 
 
@@ -142,7 +142,7 @@ Les cartes de contenu sont fournies avec un style par défaut, mais vous pouvez 
 
 ### Carrousel
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Exemple de carte de contenu utilisant le placement "carrousel".]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Les carrousels affichent plusieurs éléments de contenu dans un seul emplacement que vos clients peuvent balayer pour l’afficher. Il peut s'agir d'un diaporama d'images, de texte, de vidéo ou d'une combinaison de ces éléments. Il s’agit d’une implémentation personnalisée qui nécessite un peu de travail de la part de vos développeurs.
 
@@ -159,7 +159,7 @@ Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un car
 
 ### Bannière
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Exemple de carte de contenu utilisant le placement "bannièree".]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Les cartes de contenu peuvent apparaître sous la forme d’une bannière dynamique qui s’affiche constamment sur votre page d’accueil ou en haut d’autres pages désignées.
 

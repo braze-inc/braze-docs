@@ -24,7 +24,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {:start="2"}
@@ -39,9 +39,9 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
+{% tab Canva %}
 
-1. [Crie seu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
+1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
 3. Escolha uma [programação de etapas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) e especifique uma postergação, conforme necessário. Observe que as etapas que contêm mensagens no app não podem ser baseadas em ações.
 4. Filtre seu público para esta etapa, conforme necessário. Você pode refinar ainda mais os destinatários dessa etapa especificando segmentos e adicionando filtros adicionais. As opções do público serão conferidas após a postergação, no momento em que as mensagens forem enviadas.
@@ -184,11 +184,11 @@ A guia **Criar** permite que você edite todos os aspectos do conteúdo e do com
 
 ![Um exemplo de mensagem no app de uma marca para dar as boas-vindas a novos clientes e solicitar que eles criem um perfil de usuário.][24]{: style="max-width:85%" }
 
-O conteúdo da guia **Compose (Criar** ) varia de acordo com as opções de mensagem escolhidas na etapa anterior, mas pode incluir qualquer uma das opções a seguir:
+O conteúdo da guia **Compose (Criar)** varia de acordo com as opções de mensagem escolhidas na etapa anterior, mas pode incluir qualquer uma das opções a seguir:
 
 #### Idioma
 
-Selecione **Add Languages (Adicionar idiomas** ) e selecione os idiomas desejados na lista fornecida. Isso inserirá [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Consulte nossa [lista completa de idiomas disponíveis][18].
+Selecione **Add Languages (Adicionar idiomas)** e selecione os idiomas desejados na lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Consulte nossa [lista completa de idiomas disponíveis][18].
 
 #### Imagem
 
@@ -281,7 +281,7 @@ O conteúdo da guia **Style (Estilo** ) varia de acordo com as opções de mensa
 Sempre [faça uma prévia e teste]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sua mensagem antes de enviá-la.
 
 {% alert important %}
-Alguns tipos de mensagens no app não têm a opção de estilização além de fazer upload de HTML personalizado (ou CSS ou JavaScript) e ativos usando um arquivo ZIP. [O Web Modal com CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) permite que você faça upload ou escreva CSS personalizado para criar mensagens bonitas e com estilo personalizado.
+Alguns tipos de mensagens no app não têm a opção de estilização além de fazer upload de HTML personalizado (ou CSS ou JavaScript) e ativos usando um arquivo ZIP. O [Web Modal com CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) permite que você faça upload ou escreva CSS personalizado para criar mensagens bonitas e com estilo personalizado.
 {% endalert %}
 
 ## Etapa 6: Configurar definições adicionais (opcional)
@@ -338,7 +338,7 @@ Você pode escolher entre as seguintes prioridades de mensagens:
 - Prioridade média
 - Alta prioridade (mostrado antes de outras mensagens)
 
-As opções alta, média e baixa para as prioridades das mensagens disparadas são compartimentos e, portanto, várias mensagens podem ter a mesma prioridade selecionada. Para definir prioridades dentro desses compartimentos, clique em **Set Exact Priority (Definir prioridade exata**), e você poderá arrastar e soltar campanhas para ordená-las com a prioridade correta.
+As opções alta, média e baixa para as prioridades das mensagens disparadas são compartimentos e, portanto, várias mensagens podem ter a mesma prioridade selecionada. Para definir prioridades dentro desses compartimentos, clique em **Set Exact Priority (Definir prioridade exata)**, e você poderá arrastar e soltar campanhas para ordená-las com a prioridade correta.
 
 ![Um exemplo de como a prioridade é definida para uma campanha de mensagens no app e no Canva.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 

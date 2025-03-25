@@ -26,7 +26,7 @@ Tous les utilisateurs sont éligibles pour les campagnes API, même ceux de votr
 
 ## Créer une nouvelle campagne
 
-Allez dans **Messagerie** > **Campagnes** et cliquez sur **Créer une campagne**, puis sélectionnez **Campagnes API**. Vous pouvez maintenant passer à la configuration de votre campagne API.
+Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**, puis sélectionnez **Campagnes API.** Vous pouvez maintenant passer à la configuration de votre campagne API.
 
 Une [campagne déclenchée par l'API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) est différente d'une campagne API.
 

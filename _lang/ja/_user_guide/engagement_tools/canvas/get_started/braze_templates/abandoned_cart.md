@@ -28,13 +28,13 @@ tool: Canvas
 
 放棄されたインテント・テンプレートにアクセスするには、新しいキャンバスを作成する際に、「**キャンバス・テンプレートを使用する**」＞「**Brazeテンプレート**」を選択する。次に、**「放棄された意図**」の隣にある「**テンプレートを適用**」を選択する。あとは、テンプレートを見ながら、自分たちのニーズに合わせていくだけだ。
 
-### ステップ 1: 詳細を設定する
+### ステップ1:詳細を設定する
 
-各自の目標を反映してキャンバスの詳細を調整します。
+キャンバスの詳細を調整して、目標を反映しましょう。
 
-1. テンプレート名の横にある [**編集**]を選択します。
+1. テンプレート名の横にある**編集**を選択します。
 
-![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:60%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、カートを放棄したユーザーをターゲットとするキャンバスであることを示すようにします。
@@ -101,7 +101,7 @@ tool: Canvas
 7. オーディエンス同期ステップがFacebookと同期するように設定されていることを確認する。これは広告リターゲティングにおいてさらに役立ちます。
 
 {% alert tip %}
-[キャンバスエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)を使用して、言及する製品に応じてキャンバスのメッセージをカスタマイズできます。
+[キャンバスエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)を使用して、参照している製品に基づいてキャンバス内のメッセージをカスタマイズできます。
 {% endalert %}
 
 ### ステップ 7:キャンバスをテストして起動する
@@ -109,7 +109,7 @@ tool: Canvas
 キャンバスをテストし、期待通りに動作することを確認したら、[**キャンバスを開始**] を選択してキャンバスを開始します。これで、ユーザーがカートに入れた製品の購入手続きに進むように促すパーソナライズされたユーザージャーニーで、ユーザーを意図的にターゲットにすることができます。
 
 {% alert tip %}
-キャンバスの開始前後に考慮すべき点については、[開始前と開始後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
+キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}
 
 [1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}

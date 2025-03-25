@@ -17,7 +17,7 @@ Braze で Scuba Analytics を使用するには、以下が必要です。
 
 | 必要条件 | 説明 |
 |---|---|
-|スキューバ API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
+|Scuba API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -110,5 +110,5 @@ Você também pode [abortar mensagens][1] com base no Connected Content.
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
 [14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-Daqui a [25]: https://docs.shopify.com/themes/liquid/basics/operators
+[25]: https://docs.shopify.com/themes/liquid/basics/operators
 [26]: {% image_buster /assets/img/abort-if.png %}

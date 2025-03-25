@@ -169,6 +169,29 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 3\. Si tienes políticas de red en vigor, debes dar acceso de red Braze a tu instancia de Databricks. Para ver una lista de IP, consulta la página de [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+
+Cree una o más tablas para utilizar en su integración CDI con los siguientes campos:
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. Configura un sevicio principal y concede los permisos adecuados. Si ya dispone de credenciales de una sincronización existente, puede reutilizarlas; sólo tiene que asegurarse de ampliar el acceso a la tabla de origen del catálogo. Para saber más sobre cómo crear una nueva entidad de seguridad de servicio y sus credenciales, consulta la página [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+
+{:start="3"}
+3\. Si tienes políticas de red en vigor, debes dar acceso de red a Braze a tu instancia de Microsoft Fabric. Para ver una lista de IP, consulta la [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
 {% endtabs %}
 
 ## Cómo funciona la integración
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}

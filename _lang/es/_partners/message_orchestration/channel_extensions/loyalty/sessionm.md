@@ -31,7 +31,7 @@ search_tag: Partner
 Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), puede crear una clave de API en **Consola de desarrollador** > **Configuración de API**.
 {% endalert %} 
 
-## Casos prácticos
+## Ejemplos
 
 Los siguientes casos de uso muestran algunas formas de aprovechar la integración de SessionM y Braze.
 

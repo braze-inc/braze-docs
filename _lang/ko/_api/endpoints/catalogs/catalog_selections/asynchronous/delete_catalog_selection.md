@@ -46,7 +46,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202` 및 `404` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202` 와 `404` 두 가지입니다.
 
 ### 성공 응답의 예
 

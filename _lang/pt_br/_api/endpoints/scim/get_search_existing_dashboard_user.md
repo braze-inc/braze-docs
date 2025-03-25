@@ -25,7 +25,7 @@ Observe que, quando o parâmetro de consulta estiver codificado em URL, ele ter�
 
 ## Pré-requisitos
 
-Para usar esse endpoint, você precisará de um token SCIM. Para saber mais, consulte [Provisionamento automatizado de usuários]({{site.baseurl}}/scim/automated_user_provisioning/).
+Para usar esse endpoint, você precisará de um token SCIM. Você usará a origem de seu serviço como o cabeçalho `X-Request-Origin`. Para saber mais, consulte [Provisionamento automatizado de usuários]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de taxa
 

@@ -8,7 +8,7 @@ alias: /landing_pages/connect_domain/
 
 # Connexion de votre domaine
 
-> Connectez votre propre domaine à votre espace de travail Braze pour personnaliser les URL de vos pages d'atterrissage avec votre marque.
+> Connectez votre propre domaine à votre espace de travail Braze pour personnaliser les URL de vos pages de destination avec votre marque.
 
 Pour connecter un domaine ou un sous-domaine à votre compte Braze, demandez à un administrateur de suivre les étapes ci-dessous.
 

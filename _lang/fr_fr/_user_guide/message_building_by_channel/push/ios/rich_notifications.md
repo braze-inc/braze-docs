@@ -119,7 +119,7 @@ Les détails suivants peuvent également avoir un impact sur la troncature du te
 
 ## Configurer votre notification enrichie iOS
 
-### Étape 1 : Créer une campagne de notification push
+### Étape 1 : Créer une campagne de notification push
 
 Suivez les [étapes de la campagne][3] pour composer une notification push pour iOS. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
 
@@ -131,9 +131,9 @@ Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Rich Notificat
 
 Vous pouvez également limiter ce message à des utilisateurs qui ont un appareil qui exécute iOS 10. Pour les utilisateurs qui ne sont pas passés à iOS 10, elle apparaîtra sous forme de notifications textuelles sans le contenu enrichi si vous ne cochez pas l'option **N'envoyer qu'aux appareils prenant en charge les notifications enrichies**.
 
-![La section de l'image de notification étendue où vous pouvez ajouter une image ou entrer l'URL d'une image.][5]{: style="max-width:70%;" }
+![La section de l'image de notification étendue dans laquelle vous pouvez ajouter une image ou entrer une URL d'image.][5]{: style="max-width:70%;" }
 
-### Étape 3 : Continuer à créer votre campagne
+### Étape 3 : Continuer à créer votre campagne
 
 Une fois que votre contenu de notification enrichie est chargé dans le tableau de bord, vous pouvez continuer à [planifier votre campagne][6].
 

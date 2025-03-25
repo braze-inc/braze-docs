@@ -144,7 +144,7 @@ Para enviar mensagens a toda a sua base de usuários com um som específico, rec
 [12]: {% image_buster /assets/img_archive/deep_link.png %}
 [13]: {{site.baseurl}}/api/endpoints/messaging/
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
-Daqui a [17]: https://developer.android.com/training/notify-user/channels#importance
+[17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels
 Daqui a [51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [52]: {% image_buster /assets/img_archive/braze_category.png %}

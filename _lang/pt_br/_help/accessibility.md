@@ -34,7 +34,7 @@ Para interagir com seu conteúdo, esses usuários precisam ter a capacidade de:
 - Ler textos usando Braille atualizável
 
 {% alert note %}
-- Em todo o mundo, pelo menos 2,2 bilhões de pessoas têm deficiência visual para perto ou para longe (consulte [a OMS](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment))
+- Em todo o mundo, pelo menos 2,2 bilhões de pessoas têm deficiência visual para perto ou para longe (consulte a [OMS](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment))
 - Cerca de 1 em cada 12 homens e 1 em cada 200 mulheres têm algum grau de deficiência de visão de cores, com uma estimativa de 300 milhões de pessoas no mundo (consulte o [NHS](https://www.nhs.uk/conditions/colour-vision-deficiency/))
 {% endalert %}
 
@@ -51,7 +51,7 @@ Para entender seu conteúdo, esses usuários dependem de:
 
 {% alert note %}
 - Uma em cada oito pessoas nos Estados Unidos (13%, ou 30 milhões) com 12 anos ou mais tem perda auditiva em ambos os ouvidos, com base em exames auditivos padrão
-- Aproximadamente 15% dos adultos americanos (37,5 milhões) com 18 anos ou mais relatam algum problema de audição (consulte [o NIH](https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing))
+- Aproximadamente 15% dos adultos americanos (37,5 milhões) com 18 anos ou mais relatam algum problema de audição (consulte o [NIH](https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing))
 {% endalert %}
 
 ### Físico
@@ -85,8 +85,8 @@ Dependendo das necessidades individuais, esses usuários contam com:
 
 {% alert note %}
 - Uma em cada cinco pessoas nos Estados Unidos tem problemas de aprendizado e atenção (consulte [LDA](https://ldaamerica.org/lda_today/the-state-of-learning-disabilities-today/#:~:text=LD%20Today,have%20learning%20and%20attention%20issues.))
-- Cerca de 10 a 20% da população global é considerada neurodivergente (consulte [a Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html))
-- Cerca de 1 em cada 100 crianças tem autismo em todo o mundo (consulte [a OMS](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders))
+- Cerca de 10 a 20% da população global é considerada neurodivergente (consulte a [Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html))
+- Cerca de 1 em cada 100 crianças tem autismo em todo o mundo (consulte a [OMS](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders))
 {% endalert %}
 
 ## Práticas recomendadas
@@ -104,7 +104,7 @@ Dependendo das necessidades individuais, esses usuários contam com:
 Use links para navegação, como direcionar os usuários para uma página externa.
 
 {% alert tip %}
-Se você quiser algo que pareça e funcione como um botão, tente sempre usar um botão real em vez de estilizar um link como um botão. Os links e os botões podem parecer iguais para os usuários comuns - eles podem passar o mouse sobre o link ou o botão e clicar neles com o mouse -, mas os botões e os links têm controles diferentes (por exemplo, os botões podem ser ativados pressionando a tecla <kbd>Espaço</kbd> ou a tecla <kbd>Enter</kbd>, mas os links só podem ser ativados com a tecla <kbd>Enter</kbd> ), o que pode gerar confusão se você estilizar um link como um botão.
+Se você quiser algo que pareça e funcione como um botão, tente sempre usar um botão real em vez de estilizar um link como um botão. Os links e os botões podem parecer iguais para os usuários comuns - eles podem passar o mouse sobre o link ou o botão e clicar neles com o mouse -, mas os botões e os links têm controles diferentes (por exemplo, os botões podem ser ativados pressionando a tecla <kbd>Espaço</kbd> ou a tecla <kbd>Enter</kbd>, mas os links só podem ser ativados com a tecla <kbd>Enter</kbd>), o que pode gerar confusão se você estilizar um link como um botão.
 {% endalert %}
 
 Escreva um texto de link que descreva claramente para onde o link levará o usuário. Os usuários de leitores de tela costumam pular de um link para outro como forma de folhear o conteúdo, portanto, certifique-se de que o texto do link seja independente. Evite frases como "clique aqui", "mais" e "clique para obter detalhes", pois elas são ambíguas quando lidas fora do contexto.

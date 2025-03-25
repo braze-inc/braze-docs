@@ -56,7 +56,7 @@ Qualquer outra entrada que não corresponda ao padrão de tag discutido acima po
 
 #### Como posso associar o campo message_extras nos eventos de envio aos meus eventos de engajamento, como aberturas e cliques? 
 
-Um `dispatch_id` é gerado e fornecido em seus eventos de envio, que pode ser usado como um identificador exclusivo para vincular a eventos específicos de clique, abertura ou entrega. Você poderá usar e consultar esse campo no Currents ou no Snowflake. Saiba mais sobre o [comportamento do`dispatch_id` ]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Um `dispatch_id` é gerado e fornecido em seus eventos de envio, que pode ser usado como um identificador exclusivo para vincular a eventos específicos de clique, abertura ou entrega. Você poderá usar e consultar esse campo no Currents ou no Snowflake. Saiba mais sobre o [comportamento do `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 #### Posso usar o message_extras com mensagens no app? {#iam-sdk}
 

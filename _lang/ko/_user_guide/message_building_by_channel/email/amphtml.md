@@ -169,7 +169,7 @@ AMP 구성 요소의 전체 목록은 [AMP 설명서](https://amp.dev/documentat
 {% endtab %}
 {% tab 이미지가 많은 이메일 %}
 
-리테일 브랜드처럼 전문적인 사진이 많이 포함된 이메일을 보내는 경우, 사용자가 관심을 끌 수 있는 이미지로 참여를 유도하는 `<amp-image-lightbox>` 구성 요소를 사용할 수 있습니다. 사용자가 이미지를 클릭하면 이 컴포넌트는 메시지 중앙에 이미지를 표시하여 라이트박스 효과를 만듭니다. 
+리테일 브랜드처럼 전문적인 사진이 많이 포함된 이메일을 보내는 경우 사용자가 관심을 끌 수 있는 이미지로 참여를 유도하는 `<amp-image-lightbox>` 구성 요소를 사용할 수 있습니다. 사용자가 이미지를 클릭하면 이 컴포넌트는 메시지 중앙에 이미지를 표시하여 라이트박스 효과를 만듭니다. 
 
 또한 `<amp-image-lightbox>` 컴포넌트를 통해 사용자는 자세한 이미지 설명을 볼 수 있습니다. 동일한 구성요소를 두 개 이상의 이미지에 사용할 수 있습니다. 예를 들어 이메일에 여러 개의 이미지가 포함되어 있는 경우 사용자가 이미지를 클릭하면 해당 이미지가 라이트박스에 표시됩니다.
 
@@ -223,7 +223,7 @@ Liquid와 마찬가지로 AMP는 고급 사용 사례를 위한 스크립팅 언
         </tr>
         <tr>
             <td class="no-split">AMP 클릭 수</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP 클릭' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>

@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda como importar seus produtos da S
 
 # Sincronização de produtos do Shopify 
 
->  
+> Você pode sincronizar todos os produtos de sua loja Shopify com um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) Braze para uma personalização mais profunda do envio de mensagens. 
 
 Os catálogos da Shopify serão atualizados quase em tempo real à medida que você fizer edições e alterações nos produtos da sua loja da Shopify. É possível enriquecer seu carrinho abandonado, a confirmação do pedido e muito mais com os detalhes e as informações mais atualizadas do produto.
 
@@ -84,12 +84,12 @@ Modificar o catálogo da Shopify de alguma forma pode interferir involuntariamen
 
 Para acessar e usar `product_handle` e `product_url`, desconecte e reconecte seu catálogo Shopify fazendo o seguinte.
 
-1. 
+1. Acesse a página de integração do Shopify e selecione **Editar configuração**.
 
 ![Página de integração do Shopify.]({% image_buster /assets/img/Shopify/edit_config.png %})
 
 {: start="2"}
-2\. Na etapa **Sync catalog**, desative o catálogo e, em seguida, atualize as configurações.
+2\. Na etapa **Sincronizar catálogo**, desative o catálogo e, em seguida, atualize as configurações.
 3\. Ative o catálogo e atualize as configurações.
 
 ![Shopify "Sincronizar catálogo" etapa com alternância de catálogo.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
@@ -104,11 +104,11 @@ Note que, com a integração do Shopify, será necessário criar um evento perso
 
 ## Alteração do ID do catálogo
 
-Para alterar o identificador de produto de seu catálogo da Shopify, você precisará desativar a sincronização.  Execute novamente a sincronização inicial do catálogo da Shopify e selecione o identificador de produto desejado seguindo as etapas [de sincronização do produto](#setting-up).
+Para alterar o identificador de produto de seu catálogo da Shopify, você precisará desativar a sincronização. Confirme que você parou de enviar mensagens usando esses dados do catálogo da Shopify primeiro. Execute novamente a sincronização inicial do catálogo da Shopify e selecione o identificador de produto desejado seguindo as etapas [de sincronização do produto](#setting-up).
 
 ## Desativar a sincronização do produto {#deactivate}
 
-A desativação do recurso de sincronização de produtos da Shopify excluirá o catálogo completo e os produtos.   Não exclua o catálogo da Shopify diretamente na página de catálogos.
+A desativação do recurso de sincronização de produtos da Shopify excluirá o catálogo completo e os produtos. Isso também pode afetar quaisquer mensagens que possam estar usando ativamente os dados do produto desse catálogo. Confirme se você atualizou ou pausou essas campanhas ou Canvas antes da desativação, pois isso pode resultar no envio de mensagens sem detalhes do produto. Não exclua o catálogo da Shopify diretamente na página de catálogos.
 
 ## Solução de problemas
 Se sua sincronização de produtos do Shopify apresentar um problema, ele poderá ser resultado dos seguintes erros. Siga as instruções sobre como corrigir o problema e resolver a sincronização:

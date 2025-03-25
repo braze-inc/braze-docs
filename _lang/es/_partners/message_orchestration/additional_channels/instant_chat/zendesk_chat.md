@@ -21,7 +21,7 @@ search_tag: Partner
 | Un token de autorización básica de Zendesk | Se utilizará un token de autorización básica de Zendesk para realizar una solicitud de webhook saliente de Braze a Zendesk.|
 | Una clave de API REST Braze  | Una clave de API REST de Braze con permisos `campaigns.trigger.send`. Puede crearse en el panel Braze desde **Configuración** > **Claves API**.|
 
-## Casos prácticos
+## Ejemplos
 
 Mejora la eficacia de la atención al cliente combinando las capacidades de Braze SMS con las respuestas en vivo de los agentes de Zendesk para atender las consultas de los usuarios con asistencia humana con prontitud.
 
@@ -80,7 +80,7 @@ Por último, en **Controles de entrega**, activa la reelegibilidad.
 
 ### Paso 3: Crea un desencadenador en Zendesk para reenviar las respuestas de los agentes a Braze
 
-Ve a **Objetos y reglas** > **Reglas de negocio** > Desencadenantes.
+Ve a **Objetos y reglas** > **Reglas de negocio** > **Desencadenantes**.
 
 1. Crea una nueva **categoría** (por ejemplo, **Desencadenar un mensaje**).
 2. Crea un nuevo **desencadenante** (por ejemplo, **Responder vía SMS Braze**).

@@ -73,6 +73,15 @@ Braze가 Classic 및 Pro SQL 인스턴스에 연결될 때 2분에서 5분 정�
 {% endalert %}
 
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+1. 서비스 주체를 만들고 통합에 사용할 Fabric 작업 영역에 대한 액세스를 허용합니다.   
+2. 귀하의 Fabric 작업 공간에서 소스 데이터를 설정하고 서비스 주체에 대한 권한을 부여하십시오. 
+3. Braze 대시보드에서 새 연결 소스를 생성합니다.
+4. 통합을 테스트합니다.
+5. 연결된 소스를 사용하여 하나 이상의 CDI 세그먼트를 만드십시오.
+{% endtab %}
+
 {% endtabs %}
 
 ### 2단계: 데이터 웨어하우스를 설정하세요
@@ -317,6 +326,56 @@ GCP에서 Braze가 테이블에서 데이터를 연결하고 읽을 수 있도�
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+#### 2.1 단계: 패브릭 리소스에 대한 액세스 권한 부여 
+Braze는 Entra ID 인증이 있는 서비스 주체를 사용하여 Fabric 웨어하우스에 연결합니다. Braze가 사용할 새 서비스 주체를 생성하고 필요에 따라 Fabric 리소스에 대한 액세스 권한을 부여합니다. Braze에 연결하려면 다음 세부 정보가 필요합니다:    
+
+* Azure 계정의 테넌트 ID(디렉터리라고도 함) 
+* 서비스 주체에 대한 주체 ID(애플리케이션 ID라고도 함) 
+* Braze가 인증하기 위한 클라이언트 비밀
+
+1. Azure 포털에서 Microsoft Entra 관리 센터로 이동한 다음 앱 등록으로 이동합니다. 
+2. **신원 > 애플리케이션 > 앱 등록에서** **\+ 신규 등록을** 선택합니다 
+3. 이름을 입력하고 지원되는 계정 유형으로 `Accounts in this organizational directory only` 을 선택합니다. 그런 다음 **등록을** 선택합니다. 
+4. 방금 만든 애플리케이션(서비스 계정주)을 선택한 다음 **인증서 및 비밀번호 > + 새 클라이언트 비밀번호로** 이동합니다.
+5. 비밀 번호에 대한 설명을 입력하고 비밀 번호의 만료 기간을 설정합니다. 그런 다음 추가를 클릭합니다. 
+6. Braze 설정에서 사용하기 위해 생성한 클라이언트 비밀번호를 기록해 두세요. 
+
+{% alert note %}
+Azure는 서비스 계정 암호의 무제한 만료를 허용하지 않습니다. 자격 증명이 만료되기 전에 새로 고쳐야 Braze에 대한 데이터 흐름을 유지할 수 있습니다.
+{% endalert %}
+
+#### 2.2 단계: 패브릭 리소스에 대한 액세스 권한 부여 
+Braze가 Fabric 인스턴스에 연결할 수 있도록 액세스 권한을 제공해야 합니다. Fabric 관리자 포털에서 **설정 > 거버넌스 및 인사이트 > 관리자 포털 > 테넌트 설정으로** 이동합니다.    
+
+* **개발자 설정에서** "서비스 주체가 패브릭 API를 사용할 수 있음"을 활성화하여 Braze가 Microsoft Entra ID를 사용하여 연결할 수 있도록 합니다.
+* 서비스 주체가 외부 앱에서 데이터에 액세스할 수 있도록 원레이크 **설정에서** "사용자가 Fabric 외부 앱으로 원레이크에 저장된 데이터에 액세스할 수 있음"을 사용 설정합니다.
+
+#### 2.3 단계: 웨어하우스 연결 문자열 가져오기 
+Braze가 연결하려면 웨어하우스에 대한 SQL 엔드포인트가 필요합니다. SQL 엔드포인트를 가져오려면 Fabric의 **workspace**로 이동하고, 항목 목록에서 창고 이름 위에 마우스를 올린 다음 **SQL 연결 문자열 복사**를 선택하세요.
+
+![사용자가 SQL 연결 문자열을 검색해야 하는 Microsoft Azure의 '패브릭 콘솔' 페이지.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+
+
+#### 2.4 단계: 방화벽에서 Braze IP 허용(선택 사항)
+
+Microsoft Fabric 계정의 구성에 따라 방화벽에서 다음 IP 주소를 허용하여 Braze의 트래픽을 허용해야 할 수도 있습니다. 이 기능을 활성화하는 방법에 대한 자세한 내용은 [Entra 조건부 액세스에](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access) 대한 관련 문서를 참조하세요.
+
+| 예: `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | 인스턴스 `EU-01` 및 `EU-02`의 경우 |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
+
+{% endtab %}
+
 {% endtabs %}
 
 ### 3단계: Braze 대시보드에서 연결된 소스를 생성합니다
@@ -442,6 +501,36 @@ Databricks 자격 증명 및 선택적 카탈로그와 소스 스키마에 대�
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+#### 3.1 단계: Microsoft 패브릭 연결 정보 및 소스 테이블 추가
+
+Braze 대시보드에서 연결된 소스를 생성합니다. **데이터 설정** > **클라우드 데이터 수집** > **연결된 소스**, 그리고 **새 데이터 동기화 만들기** > **마이크로소프트 패브릭 가져오기**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Microsoft Fabric 자격 증명, 소스 창고 및 스키마에 대한 정보를 입력한 후 다음 단계로 진행하십시오.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_1.png %})
+
+#### 3.2 단계: 동기화 세부 정보 구성
+
+연결된 소스의 이름을 선택하세요. 이 이름은 새로운 CDI 세그먼트를 생성할 때 사용 가능한 소스 목록에 사용됩니다. 
+
+이 소스에 대한 최대 실행 시간을 구성하십시오. Braze는 세그먼트를 생성하거나 새로 고칠 때 최대 실행 시간을 초과하는 모든 쿼리를 자동으로 중단합니다. 허용되는 최대 실행 시간은 60분입니다. 더 짧은 실행 시간은 Microsoft Fabric 계정에서 발생하는 비용을 줄입니다. 
+
+{% alert note %}
+쿼리가 지속적으로 시간 초과되고 최대 실행 시간을 60분으로 설정한 경우, 쿼리 실행 시간을 최적화하거나 패브릭 용량을 확장해 보십시오.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_2.png %})
+
+#### 3.3 단계: 연결 테스트
+
+사용자가 볼 수 있는 테이블 목록이 예상한 대로인지 확인하려면 **테스트 연결**을 선택한 다음 **완료**를 선택하십시오. 귀하의 연결된 소스가 이제 생성되었으며 CDI 세그먼트에서 사용할 준비가 되었습니다.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
+
+{% endtab %}
 {% endtabs %}
 
 ### 4단계: 데이터 웨어하우스 구성을 완료하십시오
@@ -475,6 +564,10 @@ SSH 터널에 연결하는 경우, 마지막 단계에서 기록한 공개 키�
 이것은 Databricks에 적용되지 않습니다.
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+이것은 Microsoft Fabric에 적용되지 않습니다.
+
+{% endtab %}
 {% endtabs %}
 
 {% alert note %}
@@ -500,6 +593,10 @@ Braze와 여러 통합을 설정할 수 있지만, 각 통합은 다른 스키�
 
 {% tab Databricks %}
 여러 소스를 Braze와 설정할 수 있지만, 각 소스는 다른 스키마에 연결되도록 구성해야 합니다. 추가 소스를 만들 때 동일한 Databricks 계정에 연결하는 경우 기존 자격 증명을 재사용할 수 있습니다.
+{% endtab %}
+
+{% tab Microsoft Fabric %}
+여러 소스를 Braze와 설정할 수 있지만, 각 소스는 다른 스키마에 연결되도록 구성해야 합니다. 추가 소스를 생성할 때, 동일한 Azure 계정에 연결하는 경우 기존 자격 증명을 재사용할 수 있습니다.
 {% endtab %}
 {% endtabs %}
 

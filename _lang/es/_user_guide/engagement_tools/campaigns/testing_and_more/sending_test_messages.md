@@ -116,9 +116,7 @@ Después de crear tu webhook, puedes hacer un envío de prueba para comprobar la
 {% endtab %}
 {% tab Canal de noticias %}
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Para enviar una tarjeta de noticias de prueba es necesario configurar un segmento de prueba y enviar una campaña de prueba.
 
@@ -225,7 +223,7 @@ Alternativamente, si guardas ID de usuario personalizadas, también puedes proba
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

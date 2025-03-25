@@ -15,7 +15,7 @@ search_tag: Partner
 ## Conditions préalables
 
 
-| Prérequis | Descriptif |
+| Prérequis | Description |
 |---|---|
 | Un compte Zendesk | Un compte Zendesk est nécessaire pour bénéficier de ce partenariat.|
 | Un jeton d'autorisation de base Zendesk | Un jeton d'autorisation de base Zendesk sera utilisé pour effectuer une demande de webhook sortant de Braze à Zendesk.|
@@ -27,7 +27,7 @@ Améliorez l'efficacité du support client en combinant les fonctionnalités SMS
 
 ## Intégration de Zendesk Chat
 
-### Étape 1 : Créer un webhook dans Zendesk
+### Étape 1 : Créer un webhook dans Zendesk
 
 1. Dans la console de développement Zendesk, accédez à webhooks : {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. Sous **Créer un webhook**, sélectionnez **Déclencheur ou automatisation**.
@@ -36,7 +36,7 @@ Améliorez l'efficacité du support client en combinant les fonctionnalités SMS
 
 ![Un exemple de webhook Zendesk.][1]{: style="max-width:70%;"}
 
-### Étape 2 : Créer une campagne de SMS sortants
+### Étape 2 : Créer une campagne de SMS sortants
 
 Ensuite, vous allez créer une campagne SMS qui écoutera les webhooks de Zendesk et enverra une réponse SMS personnalisée à vos clients.
 
@@ -68,15 +68,15 @@ Feel free to respond directly to this number!
 
 ![Un exemple de SMS avec mise en forme.][3]{: style="max-width:70%;"}
 
-#### Étape 2.2 : Planifier la réception/distribution
+#### Étape 2.2 : Planifier la distribution
 
-Pour le type de **réception/distribution**, sélectionnez **API-Triggered delivery**, puis copiez l'ID de la campagne qui sera utilisé dans les étapes suivantes.
+Pour le type de distribution, sélectionnez **Distribution déclenchée par API**, puis copiez l'ID de la campagne qui sera utilisé dans les étapes suivantes.
 
-![Réception/distribution déclenchée par l'API][4]{: style="max-width:70%;"}
+![Distribution déclenchée par l'API][4]{: style="max-width:70%;"}
 
-Enfin, sous **Contrôle de la réception/distribution**, activez la rééligibilité.
+Enfin, sous **Contrôle de la distribution**, activez la rééligibilité.
 
-![Rééligibilité activée sous "Contrôles de la réception/distribution".][5]
+![Rééligibilité activée sous "Contrôles de la distribution".][5]
 
 ### Étape 3 : Créez un déclencheur dans Zendesk pour transmettre les réponses des agents à Braze.
 
@@ -121,7 +121,7 @@ Si vous souhaitez informer l'utilisateur que le ticket a été fermé, créez un
 
 ![Mettre à jour un utilisateur lorsque le ticket est fermé.][8]{: style="max-width:70%;"}
 
-Sélectionnez **Réception/distribution déclenchée par l'API** et copiez l'ID de la campagne.
+Sélectionnez **Distribution déclenchée par l'API** et copiez l'ID de la campagne.
 
 Ensuite, configurez un déclencheur pour avertir Braze de la clôture du ticket :
 - Catégorie : **Déclencher un message**
@@ -220,11 +220,11 @@ Dans le compositeur de webhook, remplissez les champs suivants :
 
 Pour **Schedule Delivery**, sélectionnez **Action-Based Delivery**, puis choisissez **Send an SMS Inbound Message** pour votre type de déclencheur. Ajoutez également le groupe d'abonnement SMS et la catégorie de mots-clés que vous avez définis précédemment.
 
-![La page "Planifier la réception/distribution" pour la première campagne webhook.][13]
+![La page "Planifier la distribution" pour la première campagne webhook.][13]
 
-Sous **Contrôle de la réception/distribution**, activez la rééligibilité.
+Sous **Contrôle de la distribution**, activez la rééligibilité.
 
-![Rééligibilité sélectionnée sous "Contrôles de réception/distribution" pour la première campagne webhook.][14]
+![Rééligibilité sélectionnée sous "Contrôles de la distribution" pour la première campagne webhook.][14]
 
 #### Étape 6.4 : Créez votre deuxième campagne webhook
 

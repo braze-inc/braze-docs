@@ -49,7 +49,7 @@ O filtro **Uninstalled (Desinstalado)** na página **Segmentos** seleciona os us
 
 As estatísticas diárias sobre desinstalações estão na página **inicial**. O gráfico pode ser dividido por app e segmento, semelhante a outras estatísticas que a Braze fornece. Na seção **Visão geral da performance**, selecione o intervalo de datas e, se desejar, um app. Em seguida, role a tela para baixo até o gráfico **Performance Over Time** e faça o seguinte:
 
-1. No menu suspenso **Statistics For (Estatísticas para** ), selecione **Uninstalls (Desinstalações**).
+1. No menu suspenso **Statistics For (Estatísticas para)**, selecione **Uninstalls (Desinstalações)**.
 2. No menu suspenso **Detalhamento**, selecione **Por segmento**.
 3. No menu suspenso **Breakdown Values**, selecione os segmentos a serem incluídos no gráfico.
 

@@ -17,6 +17,9 @@ guide_featured_list:
   - name: サブドメインの接続
     link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
     image: /assets/img/braze_icons/refresh-cw-02.svg
+  - name: データの追跡
+    link: /docs/user_guide/engagement_tools/landing_pages/data_tracking/
+    image: /assets/img/braze_icons/data.svg
 ---
 
 {% alert important %}

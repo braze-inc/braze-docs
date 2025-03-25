@@ -177,10 +177,6 @@ Liquid ロジックを手動で作成することもできます。ただし、�
 
 [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)と同様に、Liquid タグで `:rerender` フラグを使用してカタログアイテムの Liquid コンテンツをレンダリングする必要があります。`:rerender` フラグはレベル1の深さしかないことに注意してください。つまり、階層化 Liquid タグ 呼び出しには適用されません。
 
-{% alert important %}
-Liquid を含むカタログアイテムのテンプレート化は、早期アクセス段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
-{% endalert %}
-
 カタログアイテムにユーザープロファイルフィールド (Liquid パーソナライゼーションタグ内) が含まれている場合は、Liquid を適切にレンダリングするために、テンプレート作成の前にメッセージでこれらの値を Liquid で事前に定義する必要があります。`:rerender` フラグが指定されていない場合、生の Liquid コンテンツがレンダリングされます。
 
 たとえば、「Messages」という名前のカタログに、この Liquid を含むアイテムがあるとします。

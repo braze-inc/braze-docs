@@ -10,11 +10,11 @@ description: "En este artículo se describen los detalles del punto final Actual
 ---
 {% api %}
 # Actualizar mensajes programados
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar los mensajes programados. 
+> Utiliza este punto final para actualizar los mensajes programados.
 
 Este punto final acepta actualizaciones de los parámetros `schedule`, `messages` o ambos. Tu solicitud debe contener al menos una de esas dos claves.
 
@@ -53,7 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule_id` | Obligatoria | Cadena | El `schedule_id` para actualizar (obtenido de la respuesta para crear horario). |
 |`schedule` | Opcional | Objeto | Ver [objeto de programación]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 |`messages` | Opcional | Objeto | Consulta [los objetos de mensajería disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```

@@ -19,7 +19,7 @@ guide_featured_list:
   - name: "GET: 캔버스에 대한 번역 보기"
     link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: 캠페인에 대한 번역 보기"
+  - name: "GET: 캠페인 번역 보기"
     link: /docs/api/endpoints/translations/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: 캔버스에 대한 번역 보기"

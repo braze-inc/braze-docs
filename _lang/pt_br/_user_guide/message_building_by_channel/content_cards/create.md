@@ -25,13 +25,13 @@ Não tem certeza se sua mensagem deve ser enviada com uma campanha ou um canva? 
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {:start="2"}
 2\. Selecione **Cartões de Conteúdo** ou, para campanhas de direcionamento em múltiplos canais, selecione **Multicanal**.
 3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
+4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Construtor de Relatórios]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar pelos tags relevantes.
 5. Adicione e nomeie quantas variantes desejar para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para mais informações sobre variantes, consulte [multivariante e Testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -40,9 +40,9 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
+{% tab Canva %}
 
-1. [Crie seu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
+1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Após configurar seu canva, adicione uma etapa de Mensagem no construtor de canva. Dê um nome claro e significativo à sua etapa.
 3. Selecione **Cartões de conteúdo** como seu canal de envio de mensagens.
 4. Escolha quando o Braze calcula a elegibilidade do público e a personalização do cartão de conteúdo. Isso pode ser feito na entrada da etapa ou na primeira impressão (recomendado). As etapas que contêm cartões de conteúdo podem ser programadas ou baseadas em ações.
@@ -69,7 +69,7 @@ Para saber mais sobre o comportamento e a aparência esperados de cada tipo, con
 
 ## Etapa 3: Crie um cartão de conteúdo
 
-É possível editar todos os aspectos do conteúdo e do comportamento de sua mensagem na guia **Compose (Compor** ) do editor de mensagens.
+É possível editar todos os aspectos do conteúdo e do comportamento de sua mensagem na guia **Compose (Compor)** do editor de mensagens.
 
 ![Detalhes do cartão de conteúdo de amostra na guia de composição do editor de mensagens.][24]
 
@@ -77,7 +77,7 @@ O conteúdo aqui varia de acordo com o **tipo de cartão** escolhido na etapa an
 
 #### Idioma
 
-Selecione **Adicionar Idiomas** para adicionar os idiomas desejados da lista fornecida. Isso inserirá [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
+Selecione **Adicionar Idiomas** para adicionar os idiomas desejados da lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
 
 ![Uma janela com inglês, espanhol e francês selecionados para os idiomas, e título, descrição e texto do link selecionados para os campos a serem internacionalizados.][2]{: style="max-width:70%;"}
 
@@ -117,11 +117,15 @@ As seguintes ações estão disponíveis para os links do cartão de conteúdo:
 Os campos de mensagem do cartão de conteúdo são limitados a 2 KB de tamanho total, calculado pela adição do tamanho em bytes dos seguintes campos: Título, Mensagem, URL da Imagem, Texto do Link, URL(s) do Link, e Pares Chave-Valor (nomes + valores). As mensagens que excederem esse tamanho não serão enviadas. Observe que isso não inclui o tamanho da imagem, mas sim o comprimento do URL da imagem.
 {% endalert %}
 
+{% alert warning %}
+Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Os cartões descartados também contam para esse limite de 250 cartões, o que significa que um grande número de cartões descartados pode reduzir o espaço disponível para novos cartões.
+{% endalert %}
+
 ## Etapa 4: Configurar definições adicionais (opcional)
 
 Você pode usar [pares-chave-valor][19] para criar categorias para seus Cartões, criar [vários feeds de Cartão de Conteúdo]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) e personalizar como os cartões são classificados.
 
-Para adicionar pares chave-valor à sua mensagem, acesse a **Configurações** guia e selecione **Adicionar Novo Par**.
+Para adicionar pares de valores-chave à sua mensagem, acesse a guia **Settings (Configurações)** e selecione **Add New Pair (Adicionar novo par)**.
 
 ## Etapa 5: Crie o restante de sua campanha ou Canva
 
@@ -177,7 +181,7 @@ Em seguida, confira [os relatórios do Content Card]({{site.baseurl}}/user_guide
 
 Após os Cartões de Conteúdo serem enviados, eles ficam aguardando em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante ao que acontece com os e-mails). Depois que o conteúdo é inserido no cartão de conteúdo (no momento da exibição), o conteúdo não pode ser alterado durante sua vida útil. Isso se aplica mesmo que você esteja chamando uma API através do Conteúdo Conectado, e os dados do endpoint mudem. Esses dados não serão atualizados. Ele só pode ser impedido de ser enviado a novos usuários e removido dos feeds dos usuários. Se você modificar uma campanha, somente os cartões futuros que forem enviados terão a atualização.
 
-Se você precisar remover cartões antigos, primeiro deve parar a campanha. Para interromper uma campanha, abra sua campanha do Content Card e selecione **Stop Campaign (Interromper campanha**). A interrupção da campanha solicitará que você decida como lidar com os usuários que já receberam o cartão. 
+Se você precisar remover cartões antigos, primeiro deve parar a campanha. Para interromper uma campanha, abra sua campanha do Content Card e selecione **Stop Campaign (Interromper campanha)** A interrupção da campanha solicitará que você decida como lidar com os usuários que já receberam o cartão. 
 
 Se você quiser remover o cartão de conteúdo dos feeds dos seus usuários, selecione **Remover cartão do feed**. O cartão será então ocultado pelo SDK na próxima sincronização.
 
@@ -205,7 +209,7 @@ Dentro de uma campanha ou mensagem de canva, você pode opcionalmente adicionar 
 
 ### Atualização de cartões lançados
 
-Os cartões de conteúdo não podem ser editados após serem enviados. Se você perceber que precisa fazer alterações em cartões que já foram enviados, considere usar [re-eligibilidade da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) conforme mostrado nas opções a seguir.
+Os cartões de conteúdo não podem ser editados após serem enviados. Se você perceber que precisa fazer alterações em cartões que já foram enviados, considere usar [reelegibilidade da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) conforme mostrado nas opções a seguir.
 
 {% alert note %}
 Os cartões de conteúdo que usam [a primeira impressão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) usam o tempo de impressão para calcular a reelegibilidade - no entanto, todos os outros tipos de cartão de conteúdo usam o tempo de envio ou o tempo de impressão mais recente.

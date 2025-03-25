@@ -27,14 +27,14 @@ Le tableau suivant répertorie les notifications disponibles :
 
 | Notification | Description | Canaux de notification disponibles |
 |--------------|-------------|-----------------|
-| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. | E-mail, Webhook |
+| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. Cela inclut également les notifications d'erreurs d'identification pour Google Cloud Services et Azure (Microsoft Cloud Services). | E-mail, Webhook |
 | Campagne arrêtée automatiquement | Avertit les destinataires lorsque Braze a arrêté une campagne. | E-mail |
 | Expiration de l’interaction avec la campagne | Informe les destinataires d’une campagne dont l’expiration des données d’interaction de campagne est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
 | Campagne/Canvas mis(e) à jour | Informe les destinataires lorsqu’une campagne/un canvas actif(ve) est mis(e) à jour ou désactivé(e), ainsi qu’une campagne/un canvas inactif(ve) est réactivé(e) ou lorsque des projets sont lancés. | E-mail |
 | Expiration de l’interaction avec le canvas | Informe les destinataires d’un Canvas dont l’expiration des données d’interaction de Canvas est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
 | Carte de fil d’actualités publiée/en direct | Informe les destinataires lorsque les cartes de fil d’actualités sont programmées ou publiées. | E-mail, Webhook |
 | Erreurs d’identification de notification push | Avertit les destinataires lorsque les notifications push d’identification de l’application sont invalides et lorsqu’elles sont bientôt expirées. | E-mail, Webhook |
-| Campagne planifiée envoyée/non envoyée | Informe les destinataires lorsque les campagnes planifiées commencent à être envoyées ou lorsque des tentatives d’envoi sont effectuées, mais qu’aucun utilisateur éligible n’a été trouvé. | E-mail, Webhook |
+| Campagne planifiée envoyée/non envoyée | Notifie les destinataires lorsque les campagnes planifiées commencent à être envoyées ou lorsque les campagnes planifiées tentent d'être envoyées mais n'ont pas d'utilisateurs éligibles à qui envoyer. | E-mail, Webhook |
 | Limite de campagne planifiée atteinte | Informe les destinataires lorsque la limite d’une campagne planifiée récurrente a été atteinte. | E-mail, Webhook |
 | Envoi terminé d’une campagne planifiée | Informe les destinataires lorsque l’envoi d’une campagne planifiée est terminé. | E-mail, Webhook |
 | Rapport hebdomadaire d’analyse | Envoie chaque lundi aux destinataires un résumé de l'activité de l'espace de travail de la semaine écoulée. Les destinataires reçoivent un résumé pour chaque espace de travail auquel ils appartiennent. | E-mail |
@@ -66,8 +66,7 @@ Slack dispose d'une [application de webhook entrant][67] qui permet de publier d
     ![Sélectionnez les notifications Slack à activer][65]{: style="max-width:60%;"}<br><br>
 5. Saisissez l’URL que Slack a générée pour vous.
 
-Et voilà ! Vous devez commencer à recevoir des notifications concernant votre entreprise dans ce canal Slack. Vous pouvez également consulter l'article d'aide de Slack sur ce sujet : [Envoi de messages à l'aide de webhooks entrants][62].
-
+Et voilà ! Vous devriez commencer à recevoir des notifications concernant votre entreprise sur ce canal Slack. Vous pouvez également consulter l'article d'aide de Slack sur ce sujet : [Envoi de messages à l'aide de webhooks entrants][62].
 
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [63]: {% image_buster /assets/img_archive/slack_f.png %}

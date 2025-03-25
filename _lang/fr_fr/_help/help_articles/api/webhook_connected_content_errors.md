@@ -4,7 +4,7 @@ article_title: Résolution des problèmes liés aux demandes de webhook et de co
 page_order: 3
 channel:
   - webhooks
-description: "Cet article explique comment résoudre les codes d'erreur de webhook et de contenu connecté, notamment la nature des erreurs et les étapes pour les résoudre."
+description: "Cet article explique comment résoudre les codes d'erreur de webhook et de contenu connecté, notamment la nature des erreurs et les étapes à suivre pour les résoudre."
 ---
 
 # Résolution des problèmes liés aux demandes de webhook et de contenu connecté
@@ -13,7 +13,7 @@ description: "Cet article explique comment résoudre les codes d'erreur de webho
 
 ## Erreurs 4XX
 
-`4XX` indiquent qu'il y a un problème avec la requête envoyée à l'endpoint. Ces erreurs sont généralement causées par des demandes erronées, notamment des paramètres mal formés, des en-têtes d'authentification manquants ou des URL incorrectes.
+`4XX` indiquent qu'il y a un problème avec la requête envoyée à l'endpoint. Ces erreurs sont généralement causées par des requêtes erronées, notamment des paramètres mal formés, des en-têtes d'authentification manquants ou des URL incorrectes.
 
 Reportez-vous au tableau suivant pour connaître les détails du code d'erreur et les étapes de résolution :
 
@@ -45,7 +45,7 @@ table td {
     </tr>
     <tr>
       <td><b>401 Non autorisé</b></td>
-      <td>La demande nécessite l'authentification de l'utilisateur.</td>
+      <td>La demande requiert l'authentification de l'utilisateur.</td>
       <td>
         <ul>
           <li>Vérifiez que les informations d'authentification correctes (telles que les clés ou jetons API) sont incluses dans les en-têtes de la demande.</li>
@@ -125,12 +125,28 @@ table td {
 | **502 Mauvaise passerelle**           | L'endpoint a reçu une réponse non valide du serveur en amont.                                                                                   |
 | **503 Service indisponible**   | L'endpoint est actuellement incapable de traiter la demande en raison d'une surcharge temporaire ou d'une maintenance.                                                    |
 | **504 Délai d'attente de la passerelle**       | L'endpoint n'a pas reçu de réponse en temps voulu de la part du serveur en amont.                                                                               |
+| **529 Hôte surchargé**       | L'hôte de l'endpoint est surchargé et n'a pas pu répondre. |
+| **598 Hôte en mauvaise santé**        | Braze a simulé la réponse parce que l'hôte de l'endpoint est temporairement marqué comme malsain. Pour en savoir plus, consultez la section [Détection d'un hôte malsain](#unhealthy-host-detection). |
 | **599 Erreur de connexion**      | Braze a rencontré une erreur de délai de connexion au réseau en essayant d'établir une connexion à l'endpoint, ce qui signifie que l'endpoint peut être instable ou en panne. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Résolution des erreurs 5XX
 
-Voici des conseils pour la résolution des problèmes les plus courants sur le site `5XX`:
+Vous trouverez ci-dessous des conseils pour la résolution des problèmes les plus courants sur le site `5XX`:
 
 - Consultez le message d'erreur pour obtenir des détails spécifiques disponibles dans le **journal d'activité des messages.** Pour les webhooks, rendez-vous dans la section **Performance au fil du temps** sur la page d'accueil de Braze et sélectionnez les statistiques pour les webhooks. À partir de là, vous pouvez trouver l'horodatage qui indique quand les erreurs se sont produites.
 - Assurez-vous que vous n'envoyez pas trop de demandes qui surchargent l'endpoint. Vous pouvez envoyer par lots ou ajuster la limite de débit pour vérifier si cela réduit les erreurs.
+
+## Détection d'un hôte malsain
+
+Les webhooks et le contenu connecté de Braze utilisent un mécanisme de détection d'hôte malsain pour détecter lorsque l'hôte cible connaît un taux élevé de lenteur significative ou de surcharge entraînant des dépassements de délai, un trop grand nombre de demandes ou d'autres résultats qui empêchent Braze de communiquer avec succès avec l'endpoint cible. Il agit comme un garde-fou pour réduire la charge inutile qui pourrait être à l'origine des difficultés de l'hôte cible. Il sert également à stabiliser l'infrastructure de Braze et à maintenir des vitesses d'envoi de messages rapides.
+
+En général, si le nombre d'**échecs dépasse 3 000 dans une fenêtre de temps mobile d'une minute** (par combinaison unique de nom d'hôte et de groupe d'applications - et **non** par chemin d'accès), Braze interrompt temporairement les requêtes vers l'hôte cible pendant une minute et simule des réponses avec un code d'erreur `598` pour indiquer le mauvais état de santé de l'hôte. Au bout d'une minute, Braze reprend les requêtes à pleine vitesse si l'hôte est jugé sain. Si l'hôte est toujours en mauvaise santé, Braze attendra encore une minute avant de réessayer.
+
+Les codes d'erreur suivants contribuent au nombre d'échecs du détecteur d'hôte malsain : `408`, `429`, `502`, `503`, `504`, `529`.
+
+Pour les webhooks, Braze relance automatiquement les requêtes HTTP qui ont été interrompues par le détecteur d'hôte malsain. Cette relance automatique utilise des délais exponentiels et n'effectuera que quelques tentatives avant d'échouer. Pour plus d'informations sur les erreurs de webhook, reportez-vous à la section [Erreurs, logique de réessai et délais d'attente.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts)
+
+Pour le contenu connecté, si les requêtes vers l'hôte cible sont interrompues par le détecteur d'hôte malsain, Braze continuera à rendre les messages et à suivre votre logique Liquid comme s'il avait reçu un code de réponse d'erreur. Si vous voulez vous assurer que ces demandes de contenu connecté sont relancées lorsqu'elles sont interrompues par le détecteur d'hôte malsain, utilisez l'option `:retry`. Pour plus d'informations sur l'option `:retry`, reportez-vous à la section [Tentatives de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+Si vous pensez que la détection des hôtes malsains peut être à l'origine de problèmes, contactez l'[assistance de Braze]({{site.baseurl}}/support_contact/).

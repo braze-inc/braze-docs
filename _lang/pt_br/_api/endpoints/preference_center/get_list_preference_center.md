@@ -28,7 +28,7 @@ Este endpoint tem um limite de frequência de 1.000 solicitações por minuto, p
 
 ## jornada e parâmetros de solicitação
 
-Não há jornada ou parâmetros de solicitação para este endpoint.
+Não há parâmetros de jornada ou solicitação para esse endpoint.
 
 ## Exemplo de solicitação
 

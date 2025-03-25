@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 여러 카탈로그 항목 삭제 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 여러 카탈로그 항목 삭제 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -60,7 +60,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -100,7 +100,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | `ids-too-large` | 아이템 ID는 250자를 초과할 수 없습니다. |
 | `ids-not-unique` | 요청에서 항목 ID가 고유한지 확인합니다. |
 | `ids-not-strings` | 항목 ID는 문자열 유형이어야 합니다. |
-| `items-missing-ids` | 항목 ID가 없는 항목이 있습니다. 각 항목에 항목 ID가 있는지 확인합니다. |
+| `items-missing-ids` | 일부 품목에는 품목 ID가 없습니다. 각 항목에 항목 ID가 있는지 확인합니다. |
 | `invalid-ids` | 항목 ID는 문자, 숫자, 하이픈, 밑줄만을 포함할 수 있습니다. |
 | `request-includes-too-many-items` | 요청에 항목이 너무 많습니다. 요청당 아이템 한도는 50개입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

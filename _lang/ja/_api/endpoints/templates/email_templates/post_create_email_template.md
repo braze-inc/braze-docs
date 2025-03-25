@@ -17,7 +17,7 @@ description: "この記事では、BrazeのEメールテンプレート作成エ
 
 これらのテンプレートは、**「テンプレート＆メディア**」ページで利用できるようになる。このエンドポイントからのレスポンスには、`email_template_id` のフィールドが含まれ、以降のAPIコールでテンプレートを更新するために使用できる。
 
-ユーザーのメールサブスクリプションステータスは、RESTful API を使って Braze 経由で更新・取得できます。APIを使用して、Brazeと他のメールシステムまたは独自のデータベースとの双方向同期を設定できる。すべてのAPIリクエストはHTTPSで行われる。
+ユーザーのメールサブスクリプションステータスは、RESTful APIを使ってBrazeで更新・取得できる。APIを使用して、Brazeと他のメールシステムまたは独自のデータベースとの双方向同期を設定できる。すべてのAPIリクエストはHTTPSで行われる。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`template_name`|必須|文字列|メールテンプレートの名前|
 |`subject`|必須|文字列|メールテンプレートの件名|

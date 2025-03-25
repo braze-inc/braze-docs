@@ -53,6 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \
@@ -64,12 +65,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
   ]
 }'
 ```
+
 {% alert important %}
 더 이상 사용되지 않는 ID만 제거할 수 있으며, 기본 외부 ID를 제거하려고 하면 오류가 발생합니다.
 {% endalert %}
 
-## 응답 
-응답은 성공한 제거와 실패한 제거 모두 관련 오류와 함께 확인합니다. `removal_errors` 필드의 오류 메시지는 원래 요청의 배열에 있는 인덱스를 참조합니다.
+## 응답
+
+응답은 모든 성공적인 제거와 실패한 제거를 관련 오류와 함께 확인합니다. `removal_errors` 필드의 오류 메시지는 원래 요청의 배열에 있는 인덱스를 참조합니다.
 
 ```
 {

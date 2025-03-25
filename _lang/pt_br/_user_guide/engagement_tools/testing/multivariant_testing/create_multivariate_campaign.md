@@ -136,7 +136,7 @@ Se você usar números aleatórios para grupos de controle manualmente, consulte
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
- [6]:{{site.baseurl}}/brazeai/intelligence/intelligent_selection/
+[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

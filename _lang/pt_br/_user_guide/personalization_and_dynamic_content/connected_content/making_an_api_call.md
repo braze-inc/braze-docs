@@ -47,6 +47,20 @@ Se o URL não estiver disponível e chegar a uma página 404, a Braze renderizar
 
 Se o ponto de extremidade retornar JSON, você poderá detectar isso verificando se o valor de `connected` é nulo e, em seguida, [abortar condicionalmente a mensagem][1]. A Braze só permite URLs que se comunicam pelas portas 80 (HTTP) e 443 (HTTPS).
 
+### Detecção de host não saudável
+
+O Connected Content emprega um mecanismo de detecção de host insalubre para detectar quando o host de destino apresenta uma alta taxa de lentidão significativa ou sobrecarga, resultando em tempos limite, excesso de solicitações ou outros resultados que impedem que o Braze se comunique com sucesso com o endpoint de destino. Ele atua como uma salvaguarda para reduzir a carga desnecessária que pode estar causando dificuldades ao host de destino. Ele também serve para estabilizar a infraestrutura do Braze e manter velocidades rápidas de envio de mensagens.
+
+Se o host de destino apresentar uma alta taxa de lentidão significativa ou sobrecarga, o Braze interromperá temporariamente as solicitações ao host de destino por um minuto, simulando respostas que indiquem a falha. Após um minuto, o Braze examinará a integridade do host usando um pequeno número de solicitações antes de retomar as solicitações em velocidade máxima se o host for considerado íntegro. Se o host ainda não estiver saudável, o Braze aguardará mais um minuto antes de tentar novamente.
+
+Se as solicitações ao host de destino forem interrompidas pelo detector de host não saudável, o Braze continuará a renderizar mensagens e a seguir sua lógica Liquid como se tivesse recebido um código de resposta de erro. Se você quiser garantir que essas solicitações de Connected Content sejam repetidas quando forem interrompidas pelo detector de host não saudável, use a opção `:retry`. Para saber mais sobre a opção `:retry`, consulte [Tentativas de Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+Se achar que a detecção de host não saudável pode estar causando problemas, entre em contato com o [suporte da Braze]({{site.baseurl}}/support_contact/).
+
+{% alert tip %}
+Visite [Solução de problemas de solicitações de webhook e Connected Content]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) para saber mais sobre como solucionar problemas de códigos de erro comuns.
+{% endalert %}
+
 ## Performance
 
 Como o Braze entrega mensagens em uma velocidade muito rápida, certifique-se de que seu servidor possa lidar com milhares de conexões simultâneas para que os servidores não fiquem sobrecarregados ao baixar o conteúdo. Ao usar APIs públicas, confira se o seu uso não violará nenhum limite de frequência que o provedor de API possa empregar. A Braze exige que o tempo de resposta do servidor seja inferior a 2 segundos por motivos de performance; se o servidor demorar mais de 2 segundos para responder, o conteúdo não será inserido.
@@ -70,11 +84,11 @@ Se o URL exigir autenticação básica, a Braze poderá gerar uma credencial de 
 Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Connected Content** em **Manage Settings (Gerenciar configurações**).
 {% endalert %}
 
-![][34]
+![As configurações de "Connected Content" no dashboard do Braze.][34]
 
 Para adicionar uma nova credencial, clique em **Add Credential (Adicionar credencial**). Dê um nome à sua credencial e digite o nome de usuário e a senha.
 
-![][35]{: style="max-width:30%" }
+![A janela "Create New Credential" (Criar nova credencial) com a opção de inserir um nome, nome de usuário e senha.][35]{: style="max-width:30%" }
 
 Em seguida, você pode usar essa credencial de autenticação básica em suas chamadas de API fazendo referência ao nome do token:
 

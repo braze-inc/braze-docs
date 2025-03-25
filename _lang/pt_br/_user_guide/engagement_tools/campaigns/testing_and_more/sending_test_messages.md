@@ -116,9 +116,7 @@ Depois de criar seu webhook, você pode fazer um envio de teste para verificar a
 {% endtab %}
 {% tab Feed de notícias %}
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 O envio de um cartão de teste do Feed de notícias exige que você configure um segmento de teste e, posteriormente, envie uma campanha de teste.
 
@@ -225,7 +223,7 @@ Como alternativa, se estiver salvando IDs de usuário personalizados, também po
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

@@ -160,4 +160,12 @@ iOS 9以降では、ウェブビューで開くにはATS準拠のリンクが必
 
 開封が記録されている場合は、ディープリンク全般の問題なのか、ディープリンクのプッシュクリック処理の問題なのかを確認してください。そのためには、アプリ内メッセージクリックからのディープリンクが機能するかテストします。
 
+#### 直接開封はほとんどない、または全くない
+
+iOS プッシュ通知を開封したユーザーが1人以上いるにもかかわらず、Braze に_直接開封_のログがほとんど残っていない場合、[SDKの統合]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview)に問題がある可能性があります。テスト送信またはサイレントプッシュ通知については、_Direct Opens_はログに記録されません。
+
+- メッセージが[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications)として送信されていないことを確認します。メッセージがサイレントメッセージと見なされないようにするには、タイトルまたは本文にテキストを含める必要があります。
+- [プッシュ統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration)から以下のステップをダブルチェックします。
+   - [プッシュを登録する]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns):アプリを起動するたびに、できれば`application:didFinishLaunchingWithOptions:` 内で、ステップ3のコードを実行する必要があります。`UNUserNotificationCenter.current()` のdelegate プロパティは、`UNUserNotificationCenterDelegate` を実装し、`(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` メソッドを含むオブジェクトに割り当てる必要があります。
+   - [プッシュ処理を有効にする]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling):`(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` メソッドが実装されていることを確認します。
 

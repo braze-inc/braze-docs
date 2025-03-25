@@ -6,7 +6,7 @@ description: "この記事では、インテリジェントタイミング (旧�
 
 ---
 
-# [![Braze ラーニングコース] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing) {: style="float:right;width:120px;border:0;" class="noimgborder"}インテリジェントタイミング
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}インテリジェントタイミング
 
 > インテリジェントタイミングを使用して、Braze が、最適な送信時間と呼ばれる、ユーザーがエンゲージ (開封またはクリック) する可能性が最も高いと判断したときに、各ユーザーにメッセージを配信します。これにより、ユーザーの望む時間にメッセージを送信していることを確認しやすくなり、エンゲージメントが高くなる可能性があります。
 

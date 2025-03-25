@@ -15,9 +15,12 @@ guide_featured_list:
   - name: Carrinho abandonado
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart/
     image: /assets/img/braze_icons/users-right.svg
-  - name: De Volta em Estoque
+  - name: De volta ao estoque
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock/
     image: /assets/img/braze_icons/shopping-cart-03.svg
+  - name: Cadastro de E-mail com Aceitação Dupla
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup/
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Adoção de Recursos
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption/
     image: /assets/img/braze_icons/flag-02.svg
@@ -27,7 +30,10 @@ guide_featured_list:
   - name: Onboarding
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding/
     image: /assets/img/braze_icons/user-check-01.svg
+  - name: Integração com Pesquisa de Preferências
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey/
+    image: /assets/img/braze_icons/annotation-question.svg
   - name: Feedback de Compra
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback/
-    image: /assets/img/braze_icons/annotation-question.svg
+    image: /assets/img/braze_icons/coins-hand.svg
 ---

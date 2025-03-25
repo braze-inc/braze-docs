@@ -33,8 +33,8 @@ Os benefícios adicionais de usar um `external_id` incluem o seguinte:
 
 - Fornecer uma experiência de usuário consistente em vários dispositivos e plataformas (por exemplo, não enviar notificações de usuário caducas para o tablet Android de um usuário quando ele é um usuário fiel do app para iPhone).
 - Melhore a precisão de sua análise de dados confirmando que os usuários não estão criando um novo perfil de usuário sempre que desinstalam e reinstalam ou instalam o app em um dispositivo diferente.
-- Ative a importação de dados de usuários de fontes externas ao app usando os [pontos de extremidade de dados do usuário]({{site.baseurl}}/api/endpoints/user_data/) e direcione os usuários com mensagens transacionais usando nossos [pontos de extremidade de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/).
-- Pesquise usuários individuais usando nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Testing" no segmentador e na seção [**Pesquisar usuários**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) página.
+- Ative a importação de dados de usuários de fontes externas ao app usando os [Endpoints de dados do usuário]({{site.baseurl}}/api/endpoints/user_data/) e direcione os usuários com mensagens transacionais usando nossos [endpoints de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/).
+- Pesquise usuários individuais usando nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Testing" (Teste) no segmentador e na página [**User Search (Pesquisa de usuários)**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/).
 
 {% alert warning %}
 Não atribua um `external_id` a um perfil de usuário antes de poder identificá-lo exclusivamente. Depois de identificar um usuário, não é possível revertê-lo para anônimo.
@@ -57,7 +57,7 @@ Em outras palavras, você já tem um perfil de usuário para esse usuário. Ness
 
 Se o usuário anônimo e o usuário conhecido tiverem um primeiro nome, o primeiro nome do usuário conhecido será mantido. Se o usuário conhecido tiver um valor nulo e o usuário anônimo tiver um valor, o valor do usuário anônimo será mesclado no perfil do usuário conhecido se o valor se enquadrar nesses [campos específicos do perfil do usuário]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
-Para obter informações sobre como definir um `external_id` em relação a um perfil de usuário, consulte nossa documentação[(iOS][24], [Android][30], [Web][31]).
+Para obter informações sobre como definir um `external_id` em relação a um perfil de usuário, consulte nossa documentação ([iOS][24], [Android][30], [Web][31]).
 
 ## Alias do usuário
 

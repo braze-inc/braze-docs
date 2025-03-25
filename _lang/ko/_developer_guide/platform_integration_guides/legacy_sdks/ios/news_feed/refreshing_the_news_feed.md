@@ -14,9 +14,7 @@ noindex: true
 
 # 뉴스피드 새로 고침
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 `- (void) requestFeedRefresh;`를 사용하여 `Appboy.h`에서 사용자의 뉴스피드를 새로 고치도록 Braze에 수동으로 요청할 수 있습니다. 예를 들어, 다음과 같습니다.
 

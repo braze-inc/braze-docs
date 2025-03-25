@@ -12,9 +12,7 @@ hidden: true
 
 # Crear un elemento del canal de noticias
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Los elementos de noticias le permiten insertar contenido permanente directamente en su aplicación desde nuestro panel web. Y lo que es mejor, las noticias también se pueden dirigir a segmentos individuales, al igual que los demás tipos de mensajes. Esto significa que lo que usted ve en el feed puede ser completamente diferente de lo que ve otra persona. Las posibilidades del canal de noticias son casi ilimitadas.
 

@@ -125,7 +125,7 @@ La siguiente tabla enumera los posibles errores devueltos y los pasos asociados 
 | `ids-not-unique` | Comprueba que el ID de cada artículo es único. |
 | `ids-too-large` | El límite de caracteres para cada ID de artículo es de 250 caracteres. |
 | `item-array-invalid` | `items` debe ser un array de objetos. |
-| `items-missing-ids` | Confirma que cada elemento tiene un ID. |
+| `items-missing-ids` | Algunos artículos no tienen ID de artículo. Confirma que cada elemento tiene un ID. |
 | `items-too-large` | Los valores de los elementos no pueden superar los 5.000 caracteres. |
 | `invalid-ids` | Los caracteres admitidos para los nombres de ID de artículos son letras, números, guiones y guiones bajos. |
 | `invalid-fields` | Confirme que todos los campos que está enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |

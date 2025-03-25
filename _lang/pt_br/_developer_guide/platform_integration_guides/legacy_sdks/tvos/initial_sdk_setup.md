@@ -34,7 +34,7 @@ $ sudo gem install cocoapods
 ```
 
 - Se for solicitado que você substitua o executável `rake`, consulte [Getting startedCocoaPods do CocoaPods](http://guides.cocoapods.org/using/getting-started.html "Installation Directions (Instruções de instalação") ) em CocoaPods.org para obter mais detalhes.
-- Se você tiver problemas relacionados ao CocoaPods, consulte o [Guia de solução de](http://guides.cocoapods.org/using/troubleshooting.html "problemas do CocoaPods Guia de solução de problemas do Cocoa Pods").
+- Se você tiver problemas relacionados ao CocoaPods, consulte o [Guia de solução de problemas do CocoaPods ](http://guides.cocoapods.org/using/troubleshooting.html "Guia de solução de problemas do Cocoa Pods").
 
 ### Etapa 2: Construindo o arquivo de pod
 

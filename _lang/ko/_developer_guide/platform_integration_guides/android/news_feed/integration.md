@@ -15,9 +15,7 @@ channel:
 
 > 이 참조 문서에서는 Android 또는 FireOS 애플리케이션에 대한 다양한 뉴스피드 카드 유형, 사용 가능한 다양한 카드별 속성정보 및 커스텀 통합 예제를 다룹니다.
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Android에서 뉴스피드는 Braze Android UI 프로젝트에서 사용할 수 있는 [조각](http://developer.android.com/guide/components/fragments.html)으로 구현됩니다. [조각에 대한 Google의 문서 조각안드로이드](https://developer.android.com/guide/fragments#Adding "문서를") 참조하세요: 활동에 조각을 추가하는 방법에 대한 자세한 내용은 조각을 참조하세요.
 

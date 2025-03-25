@@ -15,9 +15,7 @@ channel:
 
 Cet article de référence montre comment définir une catégorie de fil d'actualité dans votre application Android ou FireOS.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Les instances du fil d’actualité Braze peuvent être configurées pour ne recevoir que des cartes d’une certaine « catégorie ». Cela permet l’intégration efficace de plusieurs flux de fils d’actualité au sein d’une seule application. Pour plus d'informations sur cette fonctionnalité, consultez nos [bonnes pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) concernant le fil d'actualité.
 

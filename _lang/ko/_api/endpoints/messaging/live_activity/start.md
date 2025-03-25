@@ -26,7 +26,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 이 엔드포인트를 사용하려면 다음을 완료해야 합니다:
 
 - `messages.live_activity.start` 권한을 사용하여 API 키를 생성합니다.
-- Braze Swift SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity).
+- 브레이즈 스위프트 SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity).
 
 ## 사용량 제한
 
@@ -65,8 +65,8 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 | `notification` | 필수 | 객체 | 객체를 포함하여 [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 객체를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 사용자가 프록시 기기를 사용하고 있는지에 따라 달라집니다. {::nomarkdown}<ul><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성화되어 있으면 업데이트된 실시간 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 사용자가 iPhone에서 활성화되어 있지 않으면 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li>그리고 <code>notification alert</code> 는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 디바이스가 있는 경우에는 <code>alert</code> 가 표시됩니다.</li></ul>{:/} |
 | `external_user_ids` | `segment_id` 또는 `audience` 제공 시 선택 사항 | 문자열 배열 | [외부 사용자 ID를]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조하세요.  |
 | `segment_id `  | `external_user_ids` 또는 `audience` 제공 시 선택 사항 | 문자열    | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `custom_audience` | `external_user_ids` 또는 `segment_id` 제공 시 선택 사항 | 연결된 대상 개체  | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `custom_audience` | `external_user_ids` 또는 `segment_id` 제공 시 선택 사항 | 연결된 대상 개체  | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -103,11 +103,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `201` 및 `4XX` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `201` 와 `4XX` 두 가지입니다.
 
 ### 성공 응답의 예
 
-요청의 형식이 올바르고 요청을 받은 경우 `201` 상태 코드가 반환됩니다. `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
+요청 형식이 올바르게 지정되어 요청을 수신한 경우 `201` 상태 코드가 반환됩니다. `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {
@@ -117,9 +117,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ### 오류 응답의 예
 
-`4XX` 상태 코드 클래스는 클라이언트 오류를 ​​나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서]({{site.baseurl}}/api/errors/)를 참조하세요.
+`4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서를]({{site.baseurl}}/api/errors/) 참조하세요.
 
-`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다. 
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 
 
 ```json
 {

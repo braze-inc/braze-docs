@@ -44,11 +44,11 @@ Braze でプッシュキャンペーンを作成するときに、複数のプ�
 
 ![iOS、Android、Webの3つのプッシュタイプに対応した、1つのタイトル、メッセージ、クリック時の動作フィールドを持つ単一の編集ビュー。][2]
 
-[**アセット**] セクションで、各プラットフォームに表示する画像を選択するか、アップロードします。デバイスによって、画像や文字数の仕様が異なることに留意してほしい。ヘルプについては、「[プッシュメッセージと画像の形式][3]」を参照してください。
+[**アセット**] セクションで、各プラットフォームに表示する画像を選択するか、アップロードします。デバイスによって、画像や文字数の仕様が異なることに留意してほしい。ヘルプについては、「プッシュメッセージと画像の形式][3]」を参照してください。
 
 ![[プッシュアイコン画像]、[iOS 通知画像]、[Android 通知画像]、および [Web 通知画像] のフィールドを含む、単一編集ビューの [アセット] セクション。][4]{:style="max-width:50%"}
 
-その後、通常通りプッシュキャンペーンの設定を終える。詳しくは[プッシュ・キャンペーンの作成を][5]参照のこと。
+その後、通常通りプッシュキャンペーンの設定を終える。詳しくはプッシュ・キャンペーンの作成を][5]参照のこと。
 
 ## 知っておくべきこと
 
@@ -62,7 +62,7 @@ iOSとAndroidの両方など、モバイルプラットフォームで複数の�
 
 ### デバイス固有の設定
 
-複数のプラットフォームやデバイスを選択した場合、iOSとAndroidに固有の設定はサポートされない。これには、[プッシュアクションボタン]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/)、通知チャンネルとグループ、TTL、表示優先度、サウンドなどの設定が含まれる。
+エディタでプラットフォーム固有の設定を編集できます。これには、[プッシュアクションボタン]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/)、通知チャンネルとグループ、TTL、表示優先度、サウンドなどの設定が含まれる。
 
 デバイス固有の設定の詳細については、以下の記事集を参照のこと：
 
@@ -73,7 +73,6 @@ iOSとAndroidの両方など、モバイルプラットフォームで複数の�
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios

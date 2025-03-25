@@ -71,7 +71,7 @@ glossaries:
   - name: Usuario activo al mes (MAU)
     description: Cualquier usuario que haya iniciado sesión en los últimos 30 días.
   - name: Mensajería multicanal
-    description: "Envío de mensajes a un usuario a través de varios medios, como una combinación de correo electrónico, web push y notificaciones push para móviles. <a href=\"https://www.braze.com/docs/developer_guide/platform_wide/getting_started/platform_overview/#multichannel-messaging\">Los canales de mensajería</a> se utilizan mejor en conjunto y con regularidad para volver a captar a los usuarios perdidos, retener a los usuarios activos y dinamizar a los embajadores de su marca."
+    description: "Envío de mensajes a un usuario a través de varios medios, como una combinación de correo electrónico, web push y notificaciones push para móviles. <a href=\"https://www.braze.com/docs/developer_guide/getting_started/platform_overview/#multichannel-messaging\">Los canales de mensajería</a> se utilizan mejor en conjunto y con regularidad para volver a captar a los usuarios perdidos, retener a los usuarios activos y dinamizar a los embajadores de su marca."
   - name: Pruebas multivariantes
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/\">Las pruebas multivariantes</a> le permiten probar múltiples variables comparando dos o más versiones de un mensaje para evaluar qué variante funciona mejor."
   - name: Nuevo usuario

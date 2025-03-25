@@ -15,7 +15,7 @@ description: "이 문서에서는 카탈로그 항목 Braze 엔드포인트 삭�
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 카탈로그에서 항목을 삭제할 수 있습니다. 
+> 이 엔드포인트를 사용하여 카탈로그에서 항목을 삭제할 수 있습니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
@@ -33,7 +33,7 @@ description: "이 문서에서는 카탈로그 항목 Braze 엔드포인트 삭�
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
 | `item_id` | 필수 | 문자열 | 카탈로그 항목의 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
@@ -49,7 +49,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -92,6 +92,6 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | `arbitrary-error` | 임의의 오류가 발생했습니다. 다시 시도하거나 [지원팀에]({{site.baseurl}}/support_contact/) 문의하세요. |
 | `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. |
 | `item-not-found` | 삭제할 항목이 카탈로그에 있는지 확인합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

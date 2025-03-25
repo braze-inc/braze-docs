@@ -90,7 +90,7 @@ Vous pouvez rechercher ces termes actualisés dans notre [glossaire des indicate
 {% alert update %}
 Le comportement de `dispatch_id` diffère entre Canvas et les campagnes car Braze traite les étapes de Canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont " planifiées ". [En savoir plus sur le [comportement de`dispatch_id` ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans Canvas et les campagnes.
 
-_Mise à jour prévue en août 2019._
+_Mise à jour notée en août 2019._
 {% endalert %}
 
 

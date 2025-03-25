@@ -24,7 +24,7 @@ search_rank: 2
 - **규정 준수:** 모든 해당 Braze 및 메타 설명서와 해당 [메타 정책](https://www.whatsapp.com/legal/?lang=en)을 준수하세요.
 - **24시간 대화 제한:** 비즈니스가 초기 템플릿 메시지를 보내거나 사용자가 메시지를 보내면 24시간 동안 두 당사자가 메시지를 주고받을 수 있는 창이 열립니다. 
 - **대화 시작하기:** 사용자는 언제든지 대화를 시작할 수 있습니다. 기업은 승인된 메시지 템플릿을 통해서만 대화를 시작할 수 있습니다.
-- **계정 제한:** 각 Braze 워크스페이스에는 하나의 WhatsApp 비즈니스 계정, 구독 그룹 및 전화번호를 보유할 수 있습니다. 또한, 각 WhatsApp 비즈니스 계정에는 [하나의 타사 연동](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047) 기능만 보유할 수 있습니다.
+- **계정 제한:** 각 Braze 워크스페이스에는 하나의 WhatsApp 비즈니스 계정, 구독 그룹 및 전화번호를 보유할 수 있습니다. 또한, 각 WhatsApp 비즈니스 계정에는 [하나의 타사 연동](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047) 기능만 보유할 수 있습니다. WhatsApp 비즈니스 계정은 하나의 작업 공간에서만 존재할 수 있으며 작업 공간 간에 공유할 수 없습니다.
 <br><br>
 
 | 요구 사항| 설명|

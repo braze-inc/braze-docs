@@ -151,11 +151,15 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### 히트맵
 
-히트맵을 사용하여 단일 이메일 캠페인에서 다양한 링크가 얼마나 성공적인지 확인할 수 있습니다. **메시지 분석** 섹션에서 **이메일 성능** 패널로 이동하세요. 클릭 **미리보기 & 히트맵**를 클릭하여 이메일 캠페인과 히트맵의 미리보기를 확인하세요. 대안적으로, 변형 이름의 하이퍼링크를 클릭하여 히트맵을 볼 수 있습니다.
+히트맵을 사용하여 단일 이메일 캠페인에서 다양한 링크가 얼마나 성공적인지 확인할 수 있습니다. **메시지 분석** 섹션에서 **이메일 성능** 패널로 이동하세요. **미리보기 및 히트맵**을 선택하여 이메일 캠페인의 미리보기와 히트맵을 확인하세요. 대안적으로, 배리언트 이름의 하이퍼링크를 선택하여 히트맵을 볼 수 있습니다.
 
-이 보기에서는 **Show Heatmap** 토글을 사용하여 캠페인의 수명 동안 클릭의 전반적인 빈도와 위치를 보여주는 이메일의 시각적 보기를 가져올 수 있습니다. **링크 테이블 총 클릭 수** 패널에서 이메일 캠페인의 모든 링크를 보고 총 클릭 수로 정렬할 수 있습니다. 이것은 사용자가 어디로 이동하는지에 대한 추가 인사이트를 제공할 수 있습니다. 참고용으로 히트맵의 복사본을 저장하려면 다운로드 버튼을 클릭하세요.
+이 보기에서는 **Show Heatmap** 토글을 사용하여 캠페인의 수명 동안 클릭의 전반적인 빈도와 위치를 보여주는 이메일의 시각적 보기를 가져올 수 있습니다. **링크 테이블 총 클릭 수** 패널에서 이메일 캠페인의 모든 링크를 보고 총 클릭 수로 정렬할 수 있습니다. 이것은 사용자가 어디로 이동하는지에 대한 추가 인사이트를 제공할 수 있습니다. 참고용으로 히트맵의 복사본을 저장하려면 다운로드 버튼을 선택하세요.
 
 ![미리보기 및 히트맵 페이지의 예로, 이메일 캠페인과 총 클릭 수가 포함된 링크 별칭 예시 패널이 포함되어 있습니다.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### 이미지
+
+이미지 URL에 대한 CORS를 활성화하여 히트맵 미리보기 및 내보내기에서 이미지가 깨지는 것을 방지하는 것을 권장합니다.
 
 {% endif %}
 
@@ -192,11 +196,11 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">총 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='총 노출' %} 이는 동일한 사용자에 대해 여러 번 증가할 수 있습니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} 이는 동일한 사용자에 대해 여러 번 증가할 수 있습니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">고유 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='고유 노출' %} <span style="white-space: nowrap">이 수치</span>는 사용자가 카드를 두 번째로 볼 때 증가하지 않습니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">이 수치</span>는 사용자가 카드를 두 번째로 볼 때 증가하지 않습니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">고유 수신자</a></td>
@@ -204,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='고유 클릭수' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='고유 클릭 수' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">고유 무시 수</a></td>
@@ -254,23 +258,23 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='고유 클릭' %} 이는 이메일에 대해 7일 동안 추적되며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. 이 숫자는 5–10% 사이여야 합니다. 10%보다 큰 것은 예외적입니다!
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} 이는 이메일에 대해 7일 동안 추적되며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. 이 숫자는 5–10% 사이여야 합니다. 10%보다 큰 것은 예외적입니다!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">고유 열람</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='고유 열람' %} 이메일의 경우, 이는 7일 동안 추적됩니다. 이 숫자는 10–20% 사이여야 합니다. 20%를 초과하는 것은 예외적입니다!
+                {% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다. 이 숫자는 30–40% 사이여야 합니다. 40%보다 큰 것은 예외적입니다!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">클릭 후 열람률</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='클릭-열람율' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">스팸율</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='스팸' %}이 측정기준이 0.08보다 크면, 이는 메시지 내용이 너무 판매적이거나, 이메일 주소 수집 방법을 재고해야 할 수 있음을 나타낼 수 있습니다(서신에 관심이 있는 사람들에게 메시징하고 있는지 확인하기 위해).
+                {% multi_lang_include metrics.md metric='Spam' %}이 측정기준이 0.08보다 크면, 이는 메시지 내용이 너무 판매적이거나, 이메일 주소 수집 방법을 재고해야 할 수 있음을 나타낼 수 있습니다(서신에 관심이 있는 사람들에게 메시징하고 있는지 확인하기 위해).
             </td>
         </tr>
         <tr>
@@ -283,7 +287,7 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">추정된 실제 열람</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='추정된 실제 열람' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">기계 열람</a></td>
@@ -366,7 +370,11 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">전환율</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">닫기 메시지</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='닫기 메시지' %}</td>
         </tr>
     </tbody>
 </table>
@@ -393,7 +401,7 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">반송 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='바운스' %} <a href="#bounced-push">반송된 푸시 알림</a>을 참고하세요.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">반송된 푸시 알림</a>을 참고하세요.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">직접 열람 수</a></td>

@@ -116,11 +116,11 @@ search_rank: 4
 
 これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)を参照してください。
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![メッセージインボックス、カルーセル、およびバナー(banner.]({% image_buster /assets/img_archive/cc_placements.png %})という異なる配置オプションを示す3 つのコンテンツカードの例{: style="border:0px;"}
 
 ### メッセージの受信トレイ
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["message inbox" placement.]({% image_buster /assets/img_archive/cc_placement_inbox.png %})を使用したコンテンツカードの例{: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 メッセージ受信ボックス (通知センターまたはフィードとも呼ばれます) は、アプリまたは Web サイト内の永続的な場所であり、コンテンツカードを任意の形式で表示できます。受信トレイ内の各メッセージは、それぞれ独自のコンテンツカードです。 
 
@@ -142,7 +142,7 @@ search_rank: 4
 
 ### カルーセル
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["carousel" placement.]({% image_buster /assets/img_archive/cc_politer_carousel.png %})を使用したコンテンツカードの例{: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 カルーセルは、顧客がスワイプして表示できる 1 つのスペースに複数のコンテンツを表示します。画像、テキスト、動画のスライドショーであったり、それらを組み合わせたものであったりする。これはカスタム実装であり、開発者による多少の作業が必要です。
 
@@ -159,7 +159,7 @@ search_rank: 4
 
 ### バナー
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["banner" placement.]({% image_buster /assets/img_archive/cc_placement_banner.png %})を使用したコンテンツカードの例{: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 コンテンツカードは動的なバナーとして表示され、ホームページや他の指定ページの上部に永続的に表示されます。
 

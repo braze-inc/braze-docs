@@ -94,9 +94,9 @@ Copie o corpo da solicitação exibido na Ferramenta de Administração B2B, em 
 
 ### Etapa 2: veja uma prévia da sua solicitação
 
-Em seguida, prévia sua solicitação no painel **Prévia** ou Acessar a guia **Teste**, onde você pode escolher um usuário aleatório, um usuário existente ou criar um usuário personalizado para testar seu webhook. Não se esqueça de salvar seu modelo antes de sair da página!
+Em seguida, faça uma prévia da solicitação no painel **Preview (Prévia)** ou navegue até a guia **Test (Teste)**, onde é possível selecionar um usuário aleatório, um usuário existente ou personalizar o seu próprio usuário para testar o webhook. Não se esqueça de salvar seu modelo antes de sair da página!
 
-![Teste de Webhook guia com diferentes campos para validar a implementação.][5]
+![Teste a guia Webhook com diferentes campos para validar a implementação.][5]
 
 {% alert important %}
 Lembre-se de salvar seu modelo antes de sair da página! <br>Os modelos de webhook atualizados podem ser encontrados na lista **Modelos de webhook salvos** ao criar uma nova [campanha de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).

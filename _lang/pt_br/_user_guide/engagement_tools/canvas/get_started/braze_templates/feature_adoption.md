@@ -11,7 +11,7 @@ tool: Canvas
 
 > Este modelo é projetado para impulsionar o uso de seus novos recursos, produtos existentes, ofertas adicionais ou qualquer outra área que você gostaria que seus clientes experimentassem. Ao aproveitar a comunicação personalizada e um conjunto estruturado de mensagens, você pode apresentar novas funcionalidades aos usuários de forma fluida e obter feedback valioso deles. 
 
-Neste artigo, vamos guiá-lo por um caso de uso para o **Modelo de Adoção de Funcionalidades**, que é destinado às etapas de retenção e fidelidade do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada do usuário que incentiva os usuários a utilizarem novos recursos e coleta o sentimento do usuário.
+Neste artigo, vamos guiá-lo por um caso de uso para o Modelo de **Adoção de Funcionalidades**, que é destinado às etapas de retenção e fidelidade do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada do usuário que incentiva os usuários a utilizarem novos recursos e coleta o sentimento do usuário.
 
 ## Pré-requisitos
 
@@ -42,8 +42,8 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 Em seguida, vamos adicionar um evento de conversão para nosso canva para sinalizar a adoção de recursos. Isso nos permitirá personalizar a jornada experimental em nossa experiência do usuário mais tarde.
 
-1. Sob **atribuir Eventos de Conversão**, selecione **Adicionar Evento de Conversão**.
-2. Sob **Evento de Conversão Primária - A**, selecione **Executa Evento Personalizado** como o **tipo de evento de conversão**.
+1. Em **atribuir Eventos de Conversão**, selecione **Adicionar Evento de Conversão**.
+2. Em **Evento de Conversão Primária - A**, selecione **Executa Evento Personalizado** como o **tipo de evento de conversão**.
 3. Selecione nosso evento personalizado `scheduled_delivery`.
 4. Manteremos o prazo de conversão em três dias.
 
@@ -105,7 +105,7 @@ Em seguida, iremos acessar a etapa da Mensagem chamada **Feedback Survey** para 
 1. Para as duas opções da pesquisa, selecione **Feedback de Experiência** como nosso atributo personalizado para capturar e rastrear feedback sobre o Controle de Cruzeiro. Este atributo personalizado terá dois valores para representar as respostas da pesquisa (`good` e `bad`).
 2. Atualize os valores dos atributos para corresponder às opções da pesquisa. Isso nos permitirá acompanhar a resposta de um usuário.
 
-### Etapa 7: Teste e lance seu canva
+### Etapa 7: Teste e inicie seu Canva
 
 Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme o esperado, selecione **Launch Canvas** para iniciar o Canvas. Agora, podemos direcionar os usuários com uma jornada personalizada para incentivá-los a adotar nosso novo recurso Controle de Cruzeiro.
 

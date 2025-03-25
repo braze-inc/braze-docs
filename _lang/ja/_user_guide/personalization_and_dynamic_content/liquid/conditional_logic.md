@@ -113,7 +113,7 @@ NULLまたはnil値は、カスタム属性の値が設定されていない場�
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![ヌルの'first name' 属性を使用した、Braze ダッシュボードのメッセージ例。][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

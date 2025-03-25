@@ -15,7 +15,7 @@ search_tag: Partner
 
 Pour utiliser Scuba Analytics avec Braze, vous aurez besoin des éléments suivants :
 
-| Condition | Descriptif |
+| Condition | Description |
 |---|---|
 |Jeton API Scuba | Un jeton API Scuba que vous pouvez récupérer à partir de l'endpoint `https://{scuba_hostname}/api/create_token`. |
 | Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |

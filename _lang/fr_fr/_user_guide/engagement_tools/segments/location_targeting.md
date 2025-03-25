@@ -46,9 +46,9 @@ Avec les régions polygonales, vous pouvez désigner les zones que vous souhaite
 
 En combinant la prise en charge des balises ou des géorepérages existants avec nos fonctionnalités de ciblage et d'envoi de messages, vous obtenez davantage d'informations sur les actions physiques de vos utilisateurs, ce qui vous permet de leur envoyer des messages en conséquence. Vous pouvez tirer parti de l'emplacement/localisation avec certains de nos partenaires : 
 
-- [Radar][6]
-- [Gimbal][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

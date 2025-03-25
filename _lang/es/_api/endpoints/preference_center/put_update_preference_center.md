@@ -30,7 +30,7 @@ Este punto final tiene un límite de velocidad de 10 solicitudes por minuto, por
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de tu centro de preferencias. |
+|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de su centro de preferencias. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -48,9 +48,20 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "unknown macro": {links-tags}
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of: "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values: "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Parámetros de la solicitud
@@ -61,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Opcional | Cadena | El título para el centro de preferencias y las páginas de confirmación. Si no se especifica un título, el título de las páginas será predeterminado "Centro de preferencias". |
 |`confirmation_page_html`| Obligatoria | Cadena | El HTML de la página de confirmación. |
 |`state` | Opcional | Cadena | Elige `active` o `draft`.|
-|`options` | Opcional | Objeto | Atributos: `meta-viewport-content`. Cuando esté presente, se añadirá una metaetiqueta `viewport` a la página con `content= <value of attribute>`. |
+|`options` | Opcional | Objeto | Atributos: <br>`meta-viewport-content`: Cuando esté presente, se añadirá una metaetiqueta `viewport` a la página con `content= <value of attribute>`.<br><br> `link-tags`: Establece un favicon para la página. Cuando se establece, se añade a la página una etiqueta `<link>` con un atributo rel.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud

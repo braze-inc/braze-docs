@@ -28,7 +28,7 @@ Avant de créer le Canvas, nous avons mis en [place un catalogue]({{site.baseurl
 
 Pour accéder au modèle en stock, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, à côté de **Retour en stock**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -43,13 +43,13 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![L'étape du canvas "Set Up Canvas Details" avec un nom de canvas "Back in Stock - Classic Straight Leg" et une brève description du canvas.][1]
 
-### Étape 2 : Attribuer des événements de conversion
+### Étape 2 : Attribuer des événements de conversion
 
 Modifiez l'**événement de conversion principal - A** en **Effectuer un achat spécifique** et sélectionnez **Jambes droites classiques** pour le nom du produit.
 
 !["Attribuer des événements de conversion" pour le type d'événement de conversion de l'achat du produit Classic Straight Leg avec un délai de conversion de 7 jours.][2]
 
-### Étape 3 : Adapter la planification de l'entrée
+### Étape 3 : Adapter la planification de l'entrée
 
 Gardons la planification d'entrée **basée sur l'action** pour que les utilisateurs entrent dans notre canvas lorsqu'ils effectuent une action, que le modèle a déjà définie comme **Effectuer un événement de retour en stock**.
 
@@ -57,7 +57,7 @@ Nous allons apporter deux Adjust à cette étape :
 
 1. Sélectionnez le catalogue qui contient des informations sur nos jeans classiques à jambe droite, que nous avons appelés "Pantalons à jambe droite". 
 
-![Étape "Entry Schedulde" pour un Canvas basé sur l'action.][3]
+![Étape de "planification de l'entrée" pour un Canvas basé sur l'action.][3]
 
 {: start="2"}
 2\. Réglez l'**heure de début (obligatoire)** sur la date et l'heure de début souhaitées.
