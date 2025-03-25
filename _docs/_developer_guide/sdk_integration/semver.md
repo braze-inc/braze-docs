@@ -28,6 +28,6 @@ Major version updates are breaking changes, and will likely require changes in y
 
 In order to not break our customers' build pipelines, **we will never alter or remove a release once it is published to a distribution system**, even if that particular release has known issues.
 
-We will publish new patch versions for impacted major and/or minor versions as applicable.
+We will publish new patch versions for impacted major and/or minor versions as applicable and appropriate.
 
 Additionally, we will retroactively update changelogs when applicable to indicate that a given version has known issues and should not be used.
