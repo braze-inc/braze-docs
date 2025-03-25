@@ -1,8 +1,8 @@
 ---
-nav_title: Banner Cards
-article_title: Banner Cards for the Braze SDK
+nav_title: Embedding Cards
+article_title: Embedding Banner Cards for the Braze SDK
 hidden: true
-description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
+description: "Learn how to embed Banner Cards for the Braze SDK."
 platform:
   - iOS
   - Android
@@ -10,9 +10,9 @@ platform:
   
 ---
 
-# Integrating Banner Cards
+# Embedding Banner Cards
 
-> Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications).
+> Learn how to embed banner cards using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards/).
 
 {% alert important %}
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -20,13 +20,15 @@ Banner Cards are currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-Before you can integrate Banner Cards, you'll need to [create Banner Card placements]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in your app. Additionally, these are the minimum SDK versions needed to start using Banner Cards:
+These are the minimum SDK versions needed to start using Banner Cards:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:x.y.z %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## Integrating Banner Cards
+## Embedding a Banner Card
 
-### Step 1: Refresh placements in your app {#requestBannersRefresh}
+{% multi_lang_include banner_cards/creating_placements.md %}
+
+### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
 Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
@@ -97,7 +99,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Listen for updates {#subscribeToBannersUpdates}
+### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
 If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
@@ -193,7 +195,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Insert cards by placement ID {#insertBanner}
+### Step 4: Embed using the placement ID {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -401,19 +403,17 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Testing a card (optional) {#handling-test-cards}
+### Step 5: Send a test card (optional) {#handling-test-cards}
 
-Before you launch a campaign, you can send a test Banner Card to verify your integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be able to receive foreground push notifications to display the test Banner Card.
+Before you [launch a Banner Card campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/), you can send a test Banner Card to verify the integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test card.
 
-{% alert important %}
-A test banner is treated like any other banner except it's removed at the next app session. You must have its placement set up in your app for the test banner to display.
+{% alert note %}
+Test Banner Cards are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
-## Analytics
+## Logging analytics
 
-You don't need to worry about tracking impressions manually because Braze automatically handles all impression logging when using the SDK methods to insert Banner Cards.
-
-If you need to parse and render the HTML in a custom view, [contact us](mailto:banners-feedback@braze.com).
+Braze automatically logs impressions when you use SDK methods to insert a Banner Card&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at banners-feedback@braze.com.
 
 ## Dimensions and sizing
 

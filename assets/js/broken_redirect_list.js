@@ -2333,4 +2333,8 @@ validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/dev
 
 validurls['/docs/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/'] = '/docs/developer_guide/push_notifications/?sdktab=android';
 
+validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_guide/banner_cards/embedding_cards/';
+validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banner_cards/creating_campaigns/';
+validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banner_cards/#placement-ids';
+
 // validurls['OLD'] = 'NEW';
