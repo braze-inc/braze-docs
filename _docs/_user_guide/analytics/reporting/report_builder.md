@@ -29,8 +29,8 @@ page_order: 6.2
     - Campaigns
     - Canvases
     - Campaigns and Canvases
-        - Channels
-        - Tags
+    - Channels
+    - Tags
 
 ![The "Rows and columns" section with fields to select the rows and groupings for your report.][1]{: style="width:90%;"}
 
@@ -88,7 +88,7 @@ To create a line chart, select **Date** as a drilldown option when configuring t
 
 To download an image of the report chart, select the dotted icon then choose a download option.
 
-![A menu with download options for different file formats.][7]{: style="max-width:90%;"}
+![A menu with download options for different file formats.][7]{: style="max-width:30%;"}
 
 ## Adding a report to a dashboard
 

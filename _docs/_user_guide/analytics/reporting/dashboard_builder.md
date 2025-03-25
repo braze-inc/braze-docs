@@ -13,7 +13,7 @@ page_order: 6.1
 
 > Use Dashboard Builder to create dashboards and visualizations using reports created in Report Builder or Query Builder.
 
-Braze provides pre-built dashboard templates for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a template dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard templates in future template releases.
+Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied templates. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze templates.
 
 ## Creating a custom dashboard
 
@@ -32,12 +32,11 @@ Now, follow the respective steps for your data source:
 4. Select **+ Add Tile** and then choose one of the reports you created in [Report Builder (New)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
 5. Select the pencil icon to change how the title and chart type display in the tile.
     - You can toggle between different chart types below the default visualization. The current options include bar charts (horizontal or vertical), and line charts (only available if you selected **Date** as a drilldown option in the Report Builder setup).<br><br>![Toggles for different chart types.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
-    - Use the metrics dropdown to select which metrics to include in your visualization. By default, the first metric will display in the selected report. 
+    - Use the metrics dropdown to select which metrics to include in your visualization. By default, the first column in the report will be the default displayed metric.
 6. Select **Save** after you've changed the visualization to your liking.
 7. Add a name, description, and tag to make your dashboard easier to find later.
 {% endtab %}
 {% tab Custom Queries %}
-
 {: start="4"}
 4. Select **+ Add Tile** and then choose a query you’ve run in Query Builder.
 5. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.
@@ -45,13 +44,17 @@ Now, follow the respective steps for your data source:
         - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x axis.
         - Use the **Y-axis** dropdown to select which metrics to include in your visualization. By default, all columns from your query results will display, so de-select the columns you’re not interested in viewing.<br><br>![Toggles for different chart types.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         - (Optional) You can use the **Grouping** dropdown to group together your query results. For example, if you have campaign ID as a column result and you want to add together all the rows with that value, use the **Grouping** dropdown.  
-6. To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/). 
-7. Select **Save** after you've changed the visualization to your liking.
-8. Add a name, description, and tag to make your dashboard easier to find later.
+        - (Optional) To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/). 
+6. Select **Save** after you've changed the visualization to your liking.
+7. Add a name, description, and tag to make your dashboard easier to find later.
 {% endtab %}
 {% endtabs %}
 
-Repeat the steps for your respective method until you create your desired dashboard. Then, select **View Dashboard**, and then select **Run Dashboard**. Your dashboard may take up to a few minutes to finish generating reports.
+{: start="8"}
+8. Repeat steps 4—7 for your respective method until you create your desired dashboard.
+9. Select **View Dashboard** > select **Run Dashboard**. 
+
+Your dashboard may take up to a few minutes to finish generating reports.
 
 {% alert note %}
 You can add up to 10 tiles to a dashboard.
@@ -78,6 +81,8 @@ Adjust the tile size by dragging the bottom right corner of the tile, and adjust
 3. Select **Run Dashboard** to load the respective dashboard using that template.
 
 ### Available dashboard templates
+
+Braze provides pre-built dashboard templates for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a template dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard templates in future template releases.
 
 #### Revenue - Last Touch Attribution
 
@@ -111,21 +116,6 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 | Device Operating System | Count of users in the selected date range who opened a push notification, grouped by device operating system. |
 | Device Screen Size | Count of users in the selected date range who opened a push notification, grouped by device screen resolution (size). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## Creating a customized dashboard
-
-1. Select **Create Dashboard**, or an existing dashboard and **Edit**. Then select **+ Add Tile**.
-2. Select **Select Existing Query** and choose a query you've run in Query Builder.
-3. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.<br><br>![Tile editor view with options to change the title and chart type.][2]{: style="max-width:60%;"}<br><br>
-    - If selecting a chart type of **Column**, **Bar**, or **Line**:
-        - Select a field from the query to use for your X-axis.
-        - De-select the columns you're not interested in.<br><br>![Dropdown with the chart types.][1]{: style="max-width:40%;"}
-
-{: start="4"}        
-4. Make sure to save your changes. If you want to delete the tile, select the trash can icon. Deleted tiles can't be reverted and must be recreated.
-5. Adjust the tile size by dragging the bottom right corner, and the tile position on the dashboard by dragging the handle at the top right corner.<br><br>![Tile getting dragging by the handle.][3]<br><br>
-6. Add additional tiles until your dashboard is complete.
-7. Select **View Dashboard**, and then select **Run Dashboard**. Your dashboard might take up to a few minutes to finish generating reports.
 
 ## Share your feedback with us
 
