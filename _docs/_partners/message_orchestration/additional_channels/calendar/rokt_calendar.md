@@ -14,6 +14,10 @@ redirect_to: /docs/partners/home
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) is a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications in the form of calendar events and notifications.
 
+_This integration is maintained by Rokt Calendar._
+
+## About the integration
+
 The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers and their data to be pushed to Braze via Braze webhook. You can then use this data in Braze Canvases for journey targeting and audience segmentation using any of the following custom [Rokt Calendar attributes](#audience-segmentation). 
 
 ## Prerequisites
@@ -196,4 +200,3 @@ Preview your request in the **Preview** panel or navigate to the **Test** tab, w
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-*This integration is maintained by Rokt Calendar.*

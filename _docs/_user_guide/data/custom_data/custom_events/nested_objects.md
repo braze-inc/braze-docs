@@ -39,7 +39,7 @@ If new properties are sent in the future, they won't be in the schema until it i
 
 ## Step 2: Use the nested object
 
-After generating a schema, you can reference the nested data during segmentation and personalization. Refer to the following sections for usage examples:
+You can reference the nested data during segmentation and personalization. Note that a schema is not required. Refer to the following sections for usage examples:
 
 - [API request body](#api-request-body)
 - [Liquid templating](#liquid-templating)

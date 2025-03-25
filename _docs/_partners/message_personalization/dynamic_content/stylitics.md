@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stylitics](https://stylitics.com/) is a cloud-based SaaS platform for retailers to automate and distribute visual content at scale. Stylitics bundles inspire by contextualizing products, boosting purchase confidence, and increasing engagement, ultimately leading to higher average order value and conversion rates.
 
+_This integration is maintained by Stylitics._
+
+## About the integration
+
 Your Braze and Stylitics integration allows you to enhance your existing email campaigns with engaging and relevant bundled content, creating a personalized customer experience.
 
 ![][0]{: style="max-width:60%;"}
@@ -99,6 +103,5 @@ Contact your Stylitics account manager to coordinate the next steps and timeline
 - Align on analytics 
 - Align on the launch timeline 
 
-*This integration is maintained by Stylitics.*
 
 [0]: {% image_buster /assets/img/stylitics.png %}

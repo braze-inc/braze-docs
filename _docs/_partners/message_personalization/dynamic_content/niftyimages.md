@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [NiftyImages](https://niftyimages.com) is a real-time email personalization software that allows marketers to send relevant and up to date email communication more efficiently while increasing engagement and revenue. It is a user-friendly and self-serve tool that allows marketers to add dynamic content to their emails easily and quickly.
 
+_This integration is maintained by NiftyImages._
+
 ## Prerequisites
 
 NiftyImages works with the default Braze platform with no integration required. To get started, all you need is a [NiftyImages account](https://niftyimages.com/Signup).
@@ -59,6 +61,5 @@ Customize your image's font, font size, positioning, color, layering, and more. 
 
 In Braze, open a campaign or canvas, then paste your NiftyImage URL. Optionally, you can preview your changes to verify your Liquid tags.
 
-*This integration is maintained by NiftyImages.*
 
 ![alt text]({% image_buster /assets/img/niftyimages/6.png %})

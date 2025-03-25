@@ -12,6 +12,10 @@ search_tag: Octolis
 
 > [Octolis][0] is a powerful data activation platform (or headless CDP). Sitting on top of a database you own, Octolis is an easy way to unify, prepare, score and sync data in your business tools.
 
+_This integration is maintained by Octolis._
+
+## About the integration
+
 The Braze and Octolis integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, online and offline:
 1. Unify and combine data from sources such as Eshop, CRM, POS system, etc.
 2. Normalize and score
@@ -92,7 +96,6 @@ Here is a specific definition of settings fields.
 
 Deduplication is a major challenge when reconciling data from multiple sources, especially online and offline. Through Octolis's advanced no-code module, you can use multiple keys for [deduplication][3]. This module is available for each master table, meaning you can adapt the logic to each entity.
 
-*This integration is maintained by Octolis.*
 
 [0]: http://octolis.com
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
