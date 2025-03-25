@@ -88,7 +88,7 @@ Braze provides pre-built dashboard templates for frequent use cases such as anal
 
 The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
 
-Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SMS Delivery`, `WhatsApp Read`, and `Webhook Send`.
+Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SMS Delivery_, _WhatsApp Read_, and _Webhook Send_.
 
 | Metrics | Definition |
 | --- | --- |
@@ -119,7 +119,7 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 
 ## Share your feedback with us
 
-Feel free to share your feedback with us by selecting the **Send feedback** button or contacting your customer success manager.
+Select the **Send feedback** button or contact your customer success manager to share your feedback with us.
 
 [1]: {% image_buster /assets/img/chart_type.png %}
 [2]: {% image_buster /assets/img/sample_tile.png %}
