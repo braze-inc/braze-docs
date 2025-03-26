@@ -26,7 +26,7 @@ Refer to the following table for a list of available data centers.
 
 {% multi_lang_include data_centers.md datacenters='AU' %}
 
-### Europe
+### European Union
 
 {% multi_lang_include data_centers.md datacenters='EU' %}
 
