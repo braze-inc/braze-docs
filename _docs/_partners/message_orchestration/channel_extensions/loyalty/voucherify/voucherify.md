@@ -13,6 +13,10 @@ search_tag: Partner
 
 > [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
 
+_This integration is maintained by Voucherify._
+
+## About the integration
+
 <iframe src="https://player.vimeo.com/video/745340934?h=17ceae8c3c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
@@ -36,4 +40,3 @@ Visit the following articles for additional resources on the Voucherify integrat
 - [Distribution with Braze custom attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes)
 - [Using Braze promotion codes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list)
 
-*This integration is maintained by Voucherify.*

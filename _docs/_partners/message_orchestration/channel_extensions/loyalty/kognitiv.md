@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Kognitiv Inspire][1] is a loyalty technology system that helps unlock unparalleled customer experiences through results-driven loyalty programs that amplify customer engagement, augment spending, and celebrate loyal behavior.
 
+_This integration is maintained by Kognitiv Inspire._
+
+## About the integration
+
 The Braze and Kognitiv integration allows you to implement and evaluate your loyalty strategy, offering innovative capabilities and tailored member communications for enhanced program efficacy.
 
 ## Prerequisites
@@ -125,7 +129,6 @@ Once you integrate Braze with Kognitiv Inspire, Kognitiv empowers you to access 
 
 For more information on configuring access tokens and SFTP endpoints, contact Kognitiv for a demonstration.
 
-*This integration is maintained by Kognitiv Inspire.*
 
 [1]: http://kognitiv.com
 [2]: https://info.kognitivloyalty.com

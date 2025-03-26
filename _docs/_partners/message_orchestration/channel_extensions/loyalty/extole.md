@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Extole](https://www.extole.com/), a SaaS company, is an industry leader in refer-a-friend marketing, helping create and optimize effective referral marketing programs to increase customer acquisition.
 
+_This integration is maintained by Extole._
+
+## About the integration
+
 With the Braze and Extole integration, you can pull customer events and attributes from Extole refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty. You can also dynamically pull Extole content attributes, such as personalized share codes and links, into Braze communications.
 
 ## Prerequisites
@@ -91,4 +95,3 @@ For certain use cases, such as a new email or SMS subscription where Extole does
 
 After connecting your accounts, events will automatically begin flowing from Extole to Braze without any action on your part. A live view of events being sent to Braze can be found in Extole’s Outbound Webhook Center for troubleshooting. 
 
-*This integration is maintained by Extole.*
