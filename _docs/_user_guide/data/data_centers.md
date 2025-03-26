@@ -20,8 +20,6 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 ## List of data centers
 
-Refer to the following table for a list of available data centers.
-
 ### Australia
 
 {% multi_lang_include data_centers.md datacenters='AU' %}
