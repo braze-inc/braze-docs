@@ -24,6 +24,7 @@
 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
+| `https://dashboard-10.braze.com` | `https://rest.iad-10.braze.com` | `sdk.iad-10.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
@@ -81,6 +82,16 @@
 | `40.76.166.71` |
 | `40.76.166.144` |
 | `40.76.166.145` |
+{: .reset-td-br-1 role="presentation"}
+
+| For Instance `US-10` |
+|---|
+| `100.25.232.164` |
+| `35.168.86.179` |
+| `52.7.44.117` |
+| `3.92.153.18` |
+| `35.172.3.129` |
+| `50.19.162.19` |
 {: .reset-td-br-1 role="presentation"}
 
 | For Instances `EU-01` and `EU-02` |
