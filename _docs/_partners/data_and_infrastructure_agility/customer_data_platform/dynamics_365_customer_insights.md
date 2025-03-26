@@ -38,9 +38,7 @@ In Customer Insights, navigate to **Admin > Connections**. Next, select **Add co
 
 ### Step 2: Create a Braze Segment
 
-In Customer Insights, navigate to **Admin > Connections**. Next, select **Add connections** and choose **Braze** to configure the connection. 
-
-1. Create a segment in Braze of the users you want Microsoft to update through Dynamics 365 Customer Insights. 
+1. Create a segment in Braze of the users you want Microsoft to update through Dynamics 365 Customer Insights. This can be done in the Braze Dashboard via **Audience > Segments**.
 2. Capture the Segment's **API Identifier**
 
 ### Step 3: Configure an export
