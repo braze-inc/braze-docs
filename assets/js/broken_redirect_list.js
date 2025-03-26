@@ -2341,5 +2341,6 @@ validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/de
 
 validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local';
 validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
+validurls['/docs/developer_guide/analytics/logging_custom_events/'] = ['/docs/developer_guide/analytics/logging_events/'];
 
 // validurls['OLD'] = 'NEW';
