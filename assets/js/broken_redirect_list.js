@@ -2337,4 +2337,7 @@ validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_
 validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banner_cards/creating_campaigns/';
 validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banner_cards/#placement-ids';
 
+validurls['/docs/developer_guide/push_notifications/live_notifications/?sdktab=android'] = '/docs/developer_guide/live_notifications/live_updates/';
+validurls['/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift'] = '/docs/developer_guide/live_notifications/live_activities/';
+
 // validurls['OLD'] = 'NEW';

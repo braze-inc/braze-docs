@@ -1,17 +1,17 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to complete the following:
+---
+nav_title: Live Activities for Swift
+article_title: Live Activities for the Swift Braze SDK
+page_order: 0.2
+description: "Learn how to set up Live Activities for the Swift Braze SDK."
+platform: 
+  - Swift
+---
 
-- Ensure that your project is targeting iOS 16.1 or later.
-- Add the `Push Notification` entitlement under **Signing & Capabilities** in your Xcode project.
-- Ensure `.p8` keys are used to send notifications. Older files such as a `.p12` or `.pem` are not supported.
-- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#swift_step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
+# Live Activities for Swift
 
-{% alert note %}
-While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
-{% endalert %}
+> Learn how to implement Live Activities for the Swift Braze SDK. Live Activities are persistent, interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
 
-{% sdk_min_versions swift:5.11.0 %}
-
-## About Live Activities for Swift
+## How it works
 
 ![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
@@ -67,6 +67,19 @@ sequenceDiagram
 {% endtabs %}
 
 ## Implementing a Live Activity
+
+#{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to complete the following:
+
+- Ensure that your project is targeting iOS 16.1 or later.
+- Add the `Push Notification` entitlement under **Signing & Capabilities** in your Xcode project.
+- Ensure `.p8` keys are used to send notifications. Older files such as a `.p12` or `.pem` are not supported.
+- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#swift_step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
+
+{% alert note %}
+While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
+{% endalert %}
+
+{% sdk_min_versions swift:5.11.0 %}
 
 ### Step 1: Create an activity {#create-an-activity}
 
