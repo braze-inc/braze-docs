@@ -268,7 +268,7 @@ You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send
 
 Superb Owl sent their request using the following curl command:
 
-```bash
+```
 curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
   -H "Authorization: Bearer {REST_API_KEY}" \
   -H "Content-Type: application/json" \
