@@ -135,18 +135,7 @@ When connecting different workspaces to the same Snowflake account, you must cre
 #### Step 1.5: Allow Braze IPs in Snowflake network policy (optional)
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` | For instances `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include braze_ips.md %}
 {% endtab %}
 {% tab Redshift %}
 
@@ -207,18 +196,7 @@ Some important things to know:
      - If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an SSH tunnel to access the Redshift data. Check out this [AWS Knowledge Center post](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine) for more information.
  
 Allow access from the following IPs corresponding to your Braze dashboard’s region.
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` | For instances `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include braze_ips.md %}
 {% endtab %}
 {% tab BigQuery %}
 
@@ -288,19 +266,7 @@ After creating the service account and granting permissions, generate a JSON key
 #### Step 1.3: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Big Query instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` | For instances `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
-
+{% multi_lang_include braze_ips.md %}
 {% endtab %}
 {% tab Databricks %}
 
@@ -371,19 +337,7 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 #### Step 1.3: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` | For instances `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
-
+{% multi_lang_include braze_ips.md %}
 {% endtab %}
 {% tab Microsoft Fabric %}
 
@@ -455,18 +409,7 @@ You will need the SQL endpoint for your warehouse in order for Braze to connect.
 #### Step 1.5: Allow Braze IPs in Firewall (Optional)
 
 Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` | For instances `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include braze_ips.md %}
 {% endtab %}
 
 {% endtabs %}
