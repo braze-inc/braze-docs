@@ -70,7 +70,7 @@ You can revisit recently accessed content from the search menu. The search inter
 
 ### Find pages that have been renamed
 
-The search understands synonyms for pages that have been renamed in our [updated navigation]({{site.baseurl}}/navigation). For example, it will find "Data Export" when you search for "Currents", as that page has been renamed.
+The search understands synonyms for pages that have been renamed in our [updated navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). For example, it will find "Data Export" when you search for "Currents", as that page has been renamed.
 
 ![Search results for "Data Export" where the user has searched for "Currents."][3]
 

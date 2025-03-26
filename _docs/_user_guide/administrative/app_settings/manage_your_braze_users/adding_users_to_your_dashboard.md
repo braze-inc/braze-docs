@@ -12,7 +12,7 @@ description: "This reference article covers how to manage users in your company 
 > Learn how to manage users in your company account, including adding, suspending, and deleting users.
 
 {% alert note %}
-Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
+Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
 ## Adding Braze users

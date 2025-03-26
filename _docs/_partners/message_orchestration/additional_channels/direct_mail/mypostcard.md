@@ -41,7 +41,7 @@ To integrate with MyPostcard, [log in or sign up][2] and create your first campa
 Create a MyPostcard webhook template to use in future campaigns or Canvases by navigating to **Templates** > **Webhook Templates** in the Braze platform.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation/), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
 If you would like to create a one-off MyPostcard webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign. Fill out the following fields:
