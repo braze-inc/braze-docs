@@ -13,7 +13,7 @@ guide_top_text: "<h2>What is it?</h2>Braze Cloud Data Ingestion (CDI) allows you
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
-    link: /docs/user_guide/data/cloud_ingestion/
+    link: /docs/user_guide/data/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: Connected Sources
     link: /docs/user_guide/data/cloud_ingestion/connected_sources/
