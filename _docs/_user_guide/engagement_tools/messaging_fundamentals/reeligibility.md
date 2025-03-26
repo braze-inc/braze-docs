@@ -1,4 +1,3 @@
-
 ---
 nav_title: Re-eligibility
 article_title: Re-eligibility
