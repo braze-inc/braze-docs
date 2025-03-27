@@ -31,7 +31,7 @@ If a user is identified on a device where they have never been identified before
 
 ## Assigning user aliases
 
-Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases). This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
+Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases). This allows you to take similar actions on an anonymous user profile. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
 
 ## Merging anonymous users  
 
