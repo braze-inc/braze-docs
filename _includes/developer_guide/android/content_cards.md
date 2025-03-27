@@ -26,7 +26,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in the Braze WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
 |`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
-|`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
+|`getIsDismissible()`  | Returns a boolean that reflects whether the card is dismissible by the user.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image only {#banner-image-card-for-android}
