@@ -11,6 +11,8 @@ description: "This reference article gives an overview of the various statuses a
 
 > On your Braze dashboard, your campaigns and Canvases are grouped by their status. Learn about the different statuses and descriptions for what they mean and how you can organize your messages.
 
+## Message statuses
+
 As you build and send campaigns and Canvases, these messages will have their status displayed by default. You can update the status of the message by selecting the <i class="fas fa-ellipsis-vertical"></i> menu in the row.
 
 Refer to the following table for statuses and their descriptions.

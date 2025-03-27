@@ -11,9 +11,7 @@ tool:
 
 # Conversion events
 
-> A conversion event is a type of success metric that tracks whether a recipient of your messaging performs a high-value action in a set amount of time after receiving your engagement.
-
-Use conversion events to make sure you're collecting relevant, useful information that you can later use to gain insight for your campaign or Canvas.
+> A conversion event is a type of success metric that tracks whether a recipient of your messaging performs a high-value action in a set amount of time after receiving your engagement. Use these events to make sure you're collecting relevant, useful information that you can later use to gain insight for your campaign or Canvas.
 
 ## How it works
 
@@ -35,9 +33,9 @@ Conversion events allow you to attribute user action back to a point of engageme
 
 The primary conversion event is the first event added during the campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Your primary conversion event is used to:
 
-- Compute the winning message variation in [multivariate][4] campaigns or Canvases.
+- Compute the winning message variation in [multivariate]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing) campaigns or Canvases.
 - Determine the window when revenue is calculated for the campaign or Canvas.
-- Adjust message distributions for campaigns and Canvases using [Intelligent Selection][5].
+- Adjust message distributions for campaigns and Canvases using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 {% alert note %}
 If messages are aborted using the Liquid `abort` tag, only the users who go through variants are potentially aborted. This means the messages to users who go through the control group won't be aborted, which may lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
@@ -49,24 +47,27 @@ If messages are aborted using the Liquid `abort` tag, only the users who go thro
 
 [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking.
 
-We highly recommend using as many conversion events as you feel is necessary because the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event and the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
+We recommend using as many conversion events as you feel is necessary because the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event and the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
 
 ### Step 2: Add the conversion events
 
-For each conversion event you want to track, select the event and conversion deadline.
+First, select the general type of event you'd like to use:
 
-1. Select the general type of event you'd like to use:
-  - **Starts Session**: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).
-  - **Makes Purchase**: A user is counted as having converted when they purchase the product you specify (defaults to any product).
-  - **Performs Custom Event**: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
-  - **Upgrade App**: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze will perform a best-efforts numerical comparison to determine if the version change was an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, but Braze wouldn't register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version name contains strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was an upgrade. In this situation, Braze will count it as a conversion when the user's most recent app version changes.
-  - **Opens email**: A user is counted as having converted when they open the email (only for email campaigns).
-  - **Clicks email**: A user is counted as having converted when they click a link within the email (only for email campaigns).<br><br>
-2. Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which the conversion will be counted if the user takes the specified action.  
+| Conversion Event Type         | Description                                                                                                                                                                                                                                                                                                                                 |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).                                                                                                                                                                                                         |
+| **Makes Purchase**      | A user is counted as having converted when they purchase the product you specify (defaults to any product).                                                                                                                                                                                                                                 |
+| **Performs Custom Event** | A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).                                                                                                                                                                                                        |
+| **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.              |
+| **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).                                                                                                                                                                                                                                                 |
+| **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).                                                                                                                                                                                                                                  |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-![The "Makes Purchase" conversion event type as an example to record conversions for users who make any purchase. This has a conversion deadline of 12 hours.][2]
+Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which the conversion will be counted if the user takes the specified action.
 
-Once you've selected your conversion events, continue the campaign creation process and begin sending your campaign.
+![The "Makes Purchase" conversion event type as an example to record conversions for users who make any purchase. This has a conversion deadline of 12 hours.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
+
+After you've selected your conversion events, continue the campaign creation process and begin sending your campaign.
 
 ### Step 3: View your results
 
@@ -78,10 +79,6 @@ If there are no conversion events selected during campaign creation, the time de
 
 Additionally, for multivariate messages, you can see the number of conversions and conversion percentages for your control group and each variant.
 
-![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session iwthin 25 minutes.][3]
+![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session iwthin 25 minutes.]({% image_buster /assets/img_archive/conversion_event_details.png %})
 
 
-[2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing
-[5]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
