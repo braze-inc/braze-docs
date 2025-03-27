@@ -14,10 +14,6 @@ tool: Reports
 
 You can find the **Custom Events Report** under **Analytics**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** report page under **Data**.
-{% endalert %}
-
 ![Custom events][14]
 
 You can export the following CSVs:

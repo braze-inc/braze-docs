@@ -12,6 +12,10 @@ search_tag: Partner
 
 > LiftIgniter is a leading personalization platform helping enterprises transform their customer experiences through real-time personalization across every touchpoint.
 
+_This integration is maintained by Liftigniter._
+
+## About the integration
+
 The LiftIgniter and Braze integration leverage Connected Content to allow you to recommend interesting topics such as news articles, clothing, and other retail items and videos.
 
 ## Prerequisites
@@ -40,6 +44,7 @@ Next, write your message, defining the content you would like to call with JSON.
 Once you put this message into the composer body, you can preview your message. You can even pull in images, shown in the following example:
 
 ![A preview image of what the message will look like after it's sent.][2]
+
 
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns.
 
+_This integration is maintained by Digioh._
+
+## About the integration
+
 The Braze and Digioh integration allows you to use their flexible drag-and-drop builder to create on-brand forms, pop-ups, performance centers, landing pages, and surveys that connect you with your customers. Digioh will aid in integration set up and help build, design, and launch your first campaign for you.
 
 !["Create flexible email and communications preference centers with Digioh"][5]{: style="border:0"}
@@ -62,6 +66,7 @@ To apply this integration to a Digioh [lightbox](https://help.digioh.com/knowled
 !["Add the integration to a lightbox"][3]{: style="max-width:90%"}
 
 Here, select **Add Integration**, choose your desired integration, and **Save**. Digioh will now pass your captured leads to Braze in real-time.
+
 
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}

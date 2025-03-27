@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [MetaRouter](https://www.metarouter.io/) elevates your Braze experience by seamlessly integrating as a powerful server-side tag management platform. It empowers you to orchestrate a complete customer data journey within Braze, from reliable fully first-party data collection enriched by up to 30%, to real-time event stream activation for personalized journeys. Additionally, MetaRouter streamlines implementation by eliminating the need for Braze tags or other third-party tags, granting you granular, parameter-by-parameter control over the data flowing into Braze.
 
+_This integration is maintained by Metarouter._
+
 ## Supported features
 
 - Retries can be built in.
@@ -31,10 +33,6 @@ Before you start, you'll need the following:
 | Braze REST API key    | A Braze REST API key with `users.track` permissions. To create one go to **Settings** > **API Keys**.                                                |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
 
 ## Setting up MetaRouter
 
@@ -60,3 +58,4 @@ In Enterprise MetaRouter, select **Integrations** > **New Integration** > **Braz
 Add event mapping for each identity output, then configure the events you want to send to Braze. When you're finished, select **Save as New Revision**.
 
 ![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
+

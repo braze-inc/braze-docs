@@ -39,7 +39,7 @@ If you experience any issues, reach out to your SEEN customer success manager fo
 
 ### Step 1: Create a webhook campaign
 
-Create a new [webhook campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
+Create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
 
 {% raw %}
 <table>
@@ -84,8 +84,8 @@ If everything works as intended, go to Braze, then set the rate at which the cam
 
 ### Step 2: Create data transformation
 
-1. Create new [custom attribute](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
-2. Open [Data Transformation](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
+1. Create new [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
+2. Open [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
 3. Give your transformation a name, then choose **Start from scratch** and set **Destination** to **POST: Track users**.
 4. Select **Share your Webhook URL with SEEN**.
 5. You can use the code below as the starting point for the transformation:

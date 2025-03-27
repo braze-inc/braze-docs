@@ -11,7 +11,7 @@ platform:
   - Web
 ---
 
-# About Content Cards
+# Content Cards
 
 > Learn about Content Cards for the Braze SDK, including the different data models and card-specific properties available for your application.
 
@@ -28,14 +28,6 @@ platform:
 {% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/content_cards.md %}
-{% endsdktab %}
-
-{% sdktab tvos %}
-{% multi_lang_include developer_guide/tvos/content_cards.md %}
-{% endsdktab %}
-
 {% sdktab cordova %}
 {% multi_lang_include developer_guide/cordova/content_cards.md %}
 {% endsdktab %}
@@ -46,6 +38,10 @@ platform:
 
 {% sdktab react native %}
 {% multi_lang_include developer_guide/react_native/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab tvos %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab unity %}

@@ -13,10 +13,6 @@ page_order: 1
 
 When you [connect your domain to Braze](#connecting-your-domain-to-braze), it will be used as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs would now be `forms.example.com/holiday-sale`.
 
-{% alert note %}
-Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your domain.
-{% endalert %}
-
 ## Connecting your domain to Braze
 
 To connect a domain to your Braze account, have an administrator follow the steps below.
@@ -31,6 +27,20 @@ To connect a domain to your Braze account, have an administrator follow the step
 {% alert note %}
 Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
 {% endalert %}
+
+## Removing your domain
+
+If you're a Braze administrator, you can remove a previously-configured domain by completing the following steps:
+
+1. Go to **Settings** > **Landing Page Settings**.
+2. Select **Remove Custom Domain**
+3. Confirm removal of the domain.
+4. Remove the listed DNS records from your domain settings.
+
+{% alert important %}
+When you remove a custom domain, that URL will no longer be valid. Any landing pages that were using this domain will automatically revert back to the default domain set by Braze.
+{% endalert %}
+
 
 ## DNS resources
 

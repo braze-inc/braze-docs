@@ -14,7 +14,7 @@ platform:
 
 # Creating Content Cards
 
-> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It is especially to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
+> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
 
 ## Creating a card
 
@@ -68,9 +68,9 @@ Content Cards can be used to simulate a message center. In this format, each mes
 
 #### Example
 
-For example, you may want to create two message cards: a call-to-action for users enable to reading recommendations and a coupon code given to your new subscriber segment.
+For example, you may want to create two message cards: a call-to-action for users to enable reading recommendations and a coupon code given to your new subscriber segment.
 
-Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site."
+Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site.
 
 {% tabs local %}
 {% tab Reading recommendations %}
@@ -103,7 +103,7 @@ Key-value pairs for a new subscriber coupon:
 
 {% details Additional information for Android %}
 
-In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) method, you can filter and identify these class types.
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) method, you can filter and identify these class types.
 
 {% tabs local %}
 {% tab Kotlin %}

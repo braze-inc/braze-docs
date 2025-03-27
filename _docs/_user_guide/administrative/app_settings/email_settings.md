@@ -15,10 +15,6 @@ channel: email
 
 **Email Preferences** can be found under **Settings** in the dashboard.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Settings** > **Manage Settings** > **Email Settings**.
-{% endalert %}
-
 ## Sending configuration
 
 The email settings under the **Sending Configuration** section determine which details are included in your email campaigns. In particular, these settings are mainly related to what your user sees when they receive an email from Braze.
@@ -49,7 +45,7 @@ Adding an email address in this section allows you to select it as a reply-to ad
 This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
 {% alert important %} 
-Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
+Appending a BCC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
 {% endalert %}
 
 ![BCC Address section of the Email Settings tab.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -82,10 +78,6 @@ To change the location:
 1. In Braze, go to **Settings** > **Email Preferences**.
 2. Click the checkbox under **Custom Open Tracking Pixel Settings**. 
 3. Press **Save**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this is located at **Manage Settings** > **Email Settings**.
-{% endalert %}
 
 Once saved, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
   
@@ -135,7 +127,7 @@ If the header is in the raw version of the email but is not displayed, the mailb
 
 When the email unsubscribe header feature is turned on, this setting applies to the entire workspace, not the company-level. It’s added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users in the **Target Audiences** step of the campaign and Canvas builders.
 
-Braze doesn’t add the header for what is considered transactional, so if a message is set to send to all users including unsubscribed users, the list-unsubscribe header will not be attached to the message unless specified otherwise in the message-level one-click list-unsubscribe setting. Additionally, the header is not added for messages delivered via test send because the list-unsubscribe header is only generated and added for targeting user profiles in Braze.
+When using the "workspace default," Braze doesn't add the one-click unsubscribe header for campaigns that are considered transactional, which are configured to "send to all users including unsubscribed users". To override this and add the one-click unsubscribe header when sending to unsubscribed users, you can select **Unsubscribe globally from all emails** in the message-level one-click list-unsubscribe settings.
 
 ### Default list-unsubscribe header
 

@@ -56,7 +56,7 @@ popular_topic_list:
   - name: User Import
     link: /docs/user_guide/data/user_data_collection/user_import/
   - name: Web SDK Setup
-    link: /docs/developer_guide/platforms/web/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=web
   - name: Custom Events
     link: /docs/user_guide/data/custom_data/custom_events/
   - name: Custom Attributes
