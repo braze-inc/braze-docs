@@ -46,12 +46,12 @@ Due to iOS's handling of buttons, you need to perform additional integration ste
 To use action buttons in your Android push messages, do the following:
 
 1. Create an Android [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
-2. Click <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
+2. Select <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
   - Open App
   - Redirect to Web URL
   - [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) Into Application
 
-![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![Selecting "Open App" as the on-click behavior for a notification button.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 You can add up to three buttons in your push.
 
@@ -59,7 +59,7 @@ You can add up to three buttons in your push.
 
 Unlike iOS buttons, which are stacked, Android buttons are displayed side-by-side in a row. This means that the more buttons you add (up to three), the less space you have for button copy. 
 
-![Android push action buttons with truncated text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![Android push action buttons with truncated text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 The following table outlines how many characters you can add before your button copy is truncated, depending on how many buttons you have:
 
