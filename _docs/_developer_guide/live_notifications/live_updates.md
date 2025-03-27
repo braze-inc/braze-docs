@@ -1,8 +1,16 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %}
+---
+nav_title: Live Updates for Android
+article_title: Live Activities for the Android Braze SDK
+page_order: 0.1
+description: "Learn how to set up Live Activities for the Android Braze SDK."
+platform: 
+  - Android
+  - FireOS
+---
 
-## About Live Updates for Android
+# Live Activities for Android
 
-Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), you can emulate their behavior in the Android Braze SDK, allowing you to display interactive lock-screen notifications similar to Swift. Unlike official Live Updates, this functionality can also be implemented for older Android versions.
+> Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates aren't officially supported, this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/live_notifications/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
 
 ## How it works
 
@@ -11,7 +19,7 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 ## Emulating a Live Update
 
 {% alert important %}
-Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html). The following section only shows you how to emulate their general behavior.
+Live Updates aren't natively supported in the Android OS. The following section only shows you how to emulate their general behavior.
 {% endalert %}
 
 In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Updates in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
@@ -260,7 +268,7 @@ You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send
 
 Superb Owl sent their request using the following curl command:
 
-```bash
+```
 curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
   -H "Authorization: Bearer {REST_API_KEY}" \
   -H "Content-Type: application/json" \

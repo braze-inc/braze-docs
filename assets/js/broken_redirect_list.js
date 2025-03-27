@@ -2339,6 +2339,7 @@ validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_
 validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banner_cards/creating_campaigns/';
 validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banner_cards/#placement-ids';
 
+validurls['/docs/developer_guide/push_notifications/live_notifications/'] = '/docs/developer_guide/live_notifications/';
 validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local';
 validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
 validurls['/docs/developer_guide/analytics/logging_custom_events/'] = ['/docs/developer_guide/analytics/logging_events/'];
