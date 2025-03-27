@@ -37,7 +37,7 @@ The connector deploys and configures the Braze SDK in your channel, so you will 
 ```
 
 {% alert important %}
-The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) or take advantage of other Braze SDK-supported features. 
+The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) or take advantage of other Braze SDK-supported features. 
 {% endalert%}
 
 ### Celebrus connector for Braze custom attributes

@@ -33,7 +33,7 @@ To support sending iOS universal links as deep links from within Braze:
 
 ### Deep linking in email
 
-Refer to our documentation on [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/)
+Refer to our documentation on [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)
 or see [Branch's documentation](https://help.branch.io/developers-hub/docs/ios-universal-links#apps-that-always-work) to set up deep linking from emails sent through Braze.
 
 Linking to phone numbers (appending `tel` to `href`) isn't supported in the Gmail app for iOS unless a user grants call permissions to the app.
