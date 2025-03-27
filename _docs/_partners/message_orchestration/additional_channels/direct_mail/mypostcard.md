@@ -104,6 +104,6 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 [1]: https://www.mypostcard.com
 [2]: https://www.mypostcard.com/b2b/admin/
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
 [4]: {% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %}
 [5]: {% image_buster /assets/img/mypostcard/mypostcard_test.jpg %}

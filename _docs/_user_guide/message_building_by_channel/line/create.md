@@ -124,7 +124,7 @@ If you haven’t already, complete the remaining sections of your Canvas. For fu
 
 After you’ve finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
-Next, check out [LINE reporting](https://www.braze.com/docs/line/reporting/) to learn how you can access the results of your LINE campaigns.
+Next, check out [LINE reporting]({{site.baseurl}}/line/reporting/) to learn how you can access the results of your LINE campaigns.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}
