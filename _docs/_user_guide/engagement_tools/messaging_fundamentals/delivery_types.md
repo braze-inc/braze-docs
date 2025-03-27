@@ -38,7 +38,7 @@ You can choose from the following options when using scheduled delivery:
 {% tab canvas %}
 With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it's launched or at a designated time.
 
-##### Designated times
+#### Designated times
 
 You can choose to send your Canvas at a specific entry frequency, including just once, daily, weekly, or monthly. For Canvases with a recurring scheduled delivery, you can set the recurrence to allow users to enter the Canvas up to 30 designated times.
 {% endtab %}
@@ -57,13 +57,9 @@ The action-based options determine what actions (or triggers) a user needs to pe
 - Opening your app
 - Adding an email address
 - Entering a location
-{% endtab %}
-{% endtabs %}
 
 #### Entry window
 
-{% tabs local %}
-{% tab canvas only %}
 The entry window of your Canvas determines which users can enter the Canvas at the designated start time (and optional end time). Similar to action-based campaigns, you can choose to enter users in their local time zone.
 {% endtab %}
 {% endtabs %}
