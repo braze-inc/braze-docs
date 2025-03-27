@@ -2,14 +2,14 @@
 
 ## Frequently asked questions
 
-#### I want to make a change to the translated copy in one of my locales. How can I do that?
-Make the edit in the CSV, then upload the file again to make a change to the translated copy.
+#### Can I make a change to the translated copy in one of my locales?
+Yes. First, make the edit in the CSV, then upload the file again to make a change to the translated copy.
 
 #### Can I nest translation tags?
 No.
 
 #### Can I add HTML styling in the translation tags?
-Yes. However, be sure to check that the HTML styling is not translated with the content.
+Yes, but be sure to check that the HTML styling is not translated with the content.
 
 #### What validations or extra checks does Braze do?
 

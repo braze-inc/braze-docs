@@ -18,10 +18,10 @@ To edit and manage [multi-language support]({{site.baseurl}}/multi_language_supp
 To use locales in your messaging, compose a push campaign or Canvas, then complete the following:
 
 1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated.<br><br>![Push notification composer with translation tags added to the title and message fields.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})<br><br>
-2. After adding the tags, save your message as a draft.
+2. Save your message as a draft.
 3. Select **Manage language** and add your locales for the message using the dropdown.
-4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV. <br><br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})<br><br>
-5. Select **Upload translations** to upload the CSV file with the completed translations. <br><br>![The "Multi-language messages" window with two locales selected and buttons to download a template or upload translations.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
+4. Select **Download template**, then fill in the translations within the CSV template. <br><br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})<br><br>
+5. To upload the completed CSV template, select **Upload translations**. <br><br>![The "Multi-language messages" window with two locales selected and buttons to download a template or upload translations.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
 
 To update the translations, update the CSV and re-upload the file. This means any changes to the IDs or locales in the CSV will not automatically update in your message.
 
