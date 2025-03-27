@@ -7,7 +7,7 @@ description: "Learn about version management for the Braze SDK."
 
 # About version management
 
-> Learn about version management for the Braze SDK, so your app can stay up-to-date with the latest features and quality improvements. Because older versions of the SDK may not receive the the latest patch or bugfix, we recommend always keeping it up-to-date as a part of your ongoing development lifecycle.
+> Learn about version management for the Braze SDK, so your app can stay up-to-date with the latest features and quality improvements. Because older versions of the SDK may not receive the latest patch, bugfix, or support, we recommend always keeping your it up-to-date as a part of your ongoing development lifecycle.
 
 ## Versioning recommendations
 
@@ -19,6 +19,10 @@ All Braze SDKs adhere to the [Semantic Versioning Specification (SemVer)](https:
 | `MINOR` | Updates are always non-breaking, and include net new functionality. They'll never require changes in your application code. | While you don't need to do this immediately, you should update to the latest minor version of your current major version as soon as possible. 
 | `MAJOR` | Updates are breaking changes, and may require changes in your application code. | Because this may require code changes, update to the latest major version in a timeframe that works best for your team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+{% alert note %}
+Sometimes new Android or Apple OS updates require changes to the Braze SDK. To ensure your app is compatible with newer phones, it's important you keep your SDK up-to-date.
+{% endalert %}
 
 ## About known issues
 
