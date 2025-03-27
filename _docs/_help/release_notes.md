@@ -154,7 +154,7 @@ When [composing an email message]({{site.baseurl}}/user_guide/message_building_b
 #### Android Live Updates
 
 Although Live Updates won’t be officially available until 
-[Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), our [Live Updates for Android]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local) page shows you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/platforms/swift/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
+[Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), our [Live Updates for Android]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local) page shows you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift). Unlike official Live Updates, this functionality can be implemented for older Android versions.
 
 #### Copying campaigns with feature flags across workspaces
 
@@ -210,7 +210,7 @@ We've done a huge cleanup of all docs across the [Braze Developer Guide]({{site.
 There's also a new [SDK reference page]({{site.baseurl}}/developer_guide/references) that lists all of the reference documentation and repositories for each Braze SDK.
 
 ##### Unreal Engine Braze SDK
-We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/platforms/unreal_engine/sdk_integration).
+We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=unreal%20engine).
 
 ### Data flexibility
 
@@ -546,7 +546,7 @@ We added [Adding UTM parameters]({{site.baseurl}}/user_guide/message_building_by
 
 #### Landing pages
 
-[Connect your own domain]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/connect_domain/) to your Braze workspace to customize your landing page URLs with your brand.
+[Connect your own domain]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/customizing_urls/) to your Braze workspace to customize your landing page URLs with your brand.
 
 #### LINE and Braze
 
@@ -699,7 +699,7 @@ The [message usage dashboard]({{site.baseurl}}/user_guide/message_building_by_ch
 
 #### Delayed initialization for the Braze Swift SDK
 
-Set up [delayed initialization]({{site.baseurl}}/developer_guide/platforms/swift/initialization/delayed_initialization/) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
+Set up [delayed initialization]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=swift) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
 
 ### SDK updates
 

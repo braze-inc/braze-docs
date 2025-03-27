@@ -30,7 +30,7 @@ With this approach, you want to encourage users to visit the App Store to add a 
 
 If you don't want users to leave your app, you can first prime users with a separate in-app message. Priming is a way of asking users for permission before you send them the native App Store review prompt. To do so, create an in-app message campaign and add a custom deep link that calls the `requestReview` method when clicked. 
 
-For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
+For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
 ![Two in-app messages side-by-side. The first primes the user to rate the app by asking if they have a moment to rate the app. The second is the native iOS App Store review message, displaying a scale of five stars the user can select to rate the app.][2]
 
