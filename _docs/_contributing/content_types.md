@@ -13,7 +13,7 @@ These are the content types you'll find on Braze Docs:
 | Documentation type | Purpose |
 | --- | --- |
 | [How-to guides](#how-to-guides) | Help the user **apply knowledge**. |
-| [Tutorials](#tutorials), [Use cases](#use-cases) | Help the user **acquire knowledge**. |
+| [Tutorials](#tutorials) | Help the user **acquire knowledge**. |
 | [References](#references) | Provide the user with **technical knowledge**. |
 | [Explanations](#explanations) | Broaden the user’s **contextual knowledge**. |
 | [Release notes](#release-notes) | Inform the user about product updates. |
