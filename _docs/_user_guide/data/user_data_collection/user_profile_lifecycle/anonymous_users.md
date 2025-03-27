@@ -23,15 +23,21 @@ You can do the following with captured anonymous users:
 
 ## How it works
 
-When a user first uses Braze on a device, they are considered "anonymous". This user will remain anonymous until an `external_id` is assigned to that user's profile by a `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)), and then will become known. Once an anonymous user becomes known, they can't reverted to an anonymous user, but uninstalling and reinstalling an app will generate a new anonymous user ID for that user. 
+After you [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/), users who launch your app for the first time will be considered "anonymous" until you call the `changeUser` method and assign them an `external_id` through the Braze SDK. For a full walkthrough, see [Setting User IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/).
 
-### When users are identified on new devices
+Once a user is assigned an `external_id`, you can't revert them to an anonymous user&#8212;however, by uninstalling and reinstalling your app they'll be considered anonymous again until `changeUser` is called.
 
-If a user is identified on a device where they have never been identified before, all their previous activity on that device as an anonymous user will be saved and linked to their newly identified profile. This means that all their attributes, events, and history will be attributed to them, even though they were anonymous at the time.
+
+If a previously-identified user starts a session on a new device, all of their "anonymous" activity will automatically sync to their existing profile after you call `changeUser` on that device. This includes any attributes, events, or history collected during the session on the new device.
 
 ## Assigning user aliases
 
-Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases). This allows you to take similar actions on an anonymous user profile. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
+Although anonymous users don’t have `external_ids`, you can assign them a [user alias]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases) instead. With user aliases, you can:
+
+- Use the Braze API to log events and attributes associated with anonymous users
+- Use the [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id) segmentation filter  to target anonymous users in your messaging
+
+For more information, see [Braze SDK: Setting a user alias]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
 
 ## Merging anonymous users  
 
