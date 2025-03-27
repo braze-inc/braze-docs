@@ -46,6 +46,33 @@ Any changes to the IDs or locales in the CSV file will not automatically update 
 
 In the **Preview & Test** section, select **Multi-language User** to check if your message translates as expected.
 
+## Managing translations
+
+### Editing translations for launched campaigns and Canvases
+
+After a campaign or Canvas has been launched, you can still modify translations when you're in draft mode. This applies whether you're editing translations directly in the composer, by CSV upload, or through the API. 
+
+Before making any translation updates, the campaign or Canvas must first be saved as a draft.
+
+1. Select **Edit campaign/Canvas** and then make your edits in the composer.
+2. Select **Save as draft**, and then select **Yes** in the modal.
+3. Go to the **Review Summary** step and select **Update campaign/Canvas**.
+4. Select **Update campaign/Canvas** in the modal.
+
+For more details on managing campaigns and Canvases after launch, refer to [Editing launched campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) and [Canvas drafts and post-launch editing]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+
+### Duplicating Canvas steps or campaigns, and translations
+
+When duplicating a Canvas step or a campaign, whether in the draft mode after launch or during initial creation, the translations associated with that step won't be carried over. Any necessary translations need to be added to the new step or campaign. Be sure to review and update translations accordingly when making modifications to your Canvas or campaign.
+
+### Using the multi-language API with Canvases
+
+To use the [multi-language API with Canvases]({{site.baseurl}}/api/endpoints/translations/), you must include the `workflow_id`, `step_id`, and `message_variation_id` in the parameter list.
+
+#### Canvas steps added to post-launch drafts
+
+When using the multi-language API with Canvas steps that were created after the Canvas has been launched, the `message_variation_id` that you pass into the API will be empty or blank.
+
 ## Frequently asked questions
 
 #### I want to make a change to the translated copy in one of my locales. How can I do that?

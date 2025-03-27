@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
 
+_This integration is maintained by Adjust._
+
+## About the integration
+
 The Braze and Adjust integration lets you import non-organic install attribution data to segment more intelligently within your lifecycle campaigns.
 
 ## Prerequisites
@@ -69,10 +73,6 @@ If you are planning to send post-install events from Adjust into Braze, you will
 ### Step 2: Get the Braze data import key
 
 In Braze, navigate to **Integrations** > **Technology Partners** and select **Adjust**. 
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
 
 Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
 
@@ -139,6 +139,7 @@ idfv={{most_recently_used_device.${id}}}
 **This recommendation is purely optional**<br>
 If you currently do not use any device identifiers-such as the IDFV or GAID-in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/attribution/adjust.png %}
 [2]: {% image_buster /assets/img/attribution/adjust2.png %}

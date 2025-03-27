@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [OneTrust](https://www.onetrust.com/) is a privacy and security software provider providing the visibility you need to better understand your trust landscape, action to leverage powerful insights, and automation to keep you elevated from the competition. 
 
+_This integration is maintained by OneTrust._
+
+## About the integration
+
 The Braze and OneTrust integration allows you to use the OneTrust workflow builder to create security workflows for your product.
 ## Prerequisites
 
@@ -119,6 +123,7 @@ To see a full list of supported actions:
 3. Navigate to the **Actions** tab.
 
 ![][7]
+
 
 [1]: {% image_buster /assets/img/onetrust/onetrust.png %}
 [2]: {% image_buster /assets/img/onetrust/onetrust2.png %}

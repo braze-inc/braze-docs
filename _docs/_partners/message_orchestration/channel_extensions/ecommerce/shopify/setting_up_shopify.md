@@ -11,7 +11,7 @@ page_order: 2
 
 # Setting up Shopify in Braze
 
-> This article outlines how to finish setting up the Shopify integration with Braze. Follow these instructions after you have [implemented the Braze Web SDK]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) onto your Shopify website.
+> This article outlines how to finish setting up the Shopify integration with Braze. Follow these instructions after you have [implemented the Braze Web SDK]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) onto your Shopify website.
 
 ## Shopify integration setup in Braze
 
@@ -87,7 +87,7 @@ You can optionally use an additional channel on your Shopify store for in-browse
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_5_channels.png %}){: style="max-width:70%"}
 
-If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide](/developer_guide/platform_integration_guides/web/in-app_messaging/integration/). 
+If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/). 
 
 ### Step 6: Finish setup
 

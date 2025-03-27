@@ -13,10 +13,6 @@ description: "This reference page breaks down the components of the content cale
 
 You can analyze messaging data, as well as view and manage your scheduled campaigns. To open the calendar, select **Messaging** > **Content Calendar**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select **Engagement** > **Campaigns** > **Calendar**.
-{% endalert %}
-
 ## Messaging analytics
 
 The messaging analytics section contains two reports for your recent and upcoming scheduled campaigns:

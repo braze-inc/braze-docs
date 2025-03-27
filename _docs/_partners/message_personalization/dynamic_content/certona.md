@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Certona's platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you're harnessing the power of personalization.
 
+_This integration is maintained by Certona._
+
+## About the integration
+
 The Braze and Certona integration leverages Certona's machine learning product recommendations in Braze campaigns and Canvases through Connected Content.
 
 ## Prerequisites
@@ -40,6 +44,7 @@ Next, define the content you would like to call such as relevant text or images.
 Once you put this message into the composer body, preview your Connected Content call to make sure you have displayed the correct information.
 
 ![An image showing the "Test" tab, encouraging users to thoroughly test their message before send.][2]
+
 
 [1]: {% image_buster /assets/img/certona.png %}
 [2]: {% image_buster /assets/img/certona2.png %}

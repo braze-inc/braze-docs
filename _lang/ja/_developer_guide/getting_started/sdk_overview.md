@@ -5,11 +5,11 @@ description: "このオンボーディングリファレンス記事には、Bra
 page_order: 0
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}開発者sのSDK概観
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}開発者向けの SDK 概要
 
 > Braze SDK の統合を開始する前に、正確に何を構築および統合するのかを疑問に思うかもしれません。また、ニーズに応じて SDK をより詳細にカスタマイズする方法に興味があるかもしれません。この記事は、SDK に関するすべての疑問を解決するのに役立ちます。 
 
-SDK の基本的な概要を探しているマーケターは、代わりに[マーケターの概要]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/)をご覧ください。
+SDK の基本的な概要を探しているマーケターは、代わりに[マーケターの概要]({{site.baseurl}}/user_guide/getting_started/web_sdk/)をご覧ください。
 
 Braze SDK を簡単に説明すると、次のとおりです。
 * ユーザーデータを収集し、統合ユーザープロファイルに同期します
@@ -29,7 +29,7 @@ Braze SDK は非常に円滑に動作し、アプリ内に存在する他の SDK
 
 ## デフォルトの分析とセッション処理
 
-最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッション開始とセッション終了を除く、自動トラッキングされるその他すべてのデータは、データポイントの割り当てにカウントされません。
+最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッション開始とセッション終了を除く、自動トラッキングされるその他すべてのデータは、データポイントの割り当てにカウントされません。
 
 {% alert note %}
 すべての機能が構成可能ですが、デフォルトのデータ収集モデルを完全に実装することをお勧めします。
@@ -67,7 +67,7 @@ SDK 統合からの特定のデータの自動収集をブロックしたり、�
 {% tabs %}
 {% tab Web SDK %}
 
-SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) を使用することもできます。このメソッドにより、`disableSDK()` の呼び出し前にロギングされたデータが同期され、このページと将来のページの読み込みに対するその後の Braze Web SDK の呼び出しはすべて無視されます。後の時点でデータ収集を再開するには、後で [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) メソッドを使用できます。この詳細については、[Web トラッキングの無効化]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/)に関する記事をご覧ください。
+SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) を使用することもできます。このメソッドにより、`disableSDK()` の呼び出し前にロギングされたデータが同期され、このページと将来のページの読み込みに対するその後の Braze Web SDK の呼び出しはすべて無視されます。後の時点でデータ収集を再開するには、後で [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) メソッドを使用できます。この詳細については、[Web トラッキングの無効化]({{site.baseurl}}/developer_guide/platforms/web/analytics/disabling_tracking/)に関する記事をご覧ください。
 
 {% endtab %}
 {% tab Android SDK %}
@@ -87,7 +87,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 デフォルトでは、Braze Swift SDK ですべてのフィールドが収集されます。一部のデバイスプロパティを削除すると、SDK 機能が無効になる場合があります。
 {% endalert %}
 
-使用の詳細については、Swift SDK ドキュメントの「[ストレージ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage)」を参照してください。
+使用の詳細については、Swift SDK ドキュメントの「[ストレージ]({{site.baseurl}}/developer_guide/platforms/swift/storage/)」を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -99,6 +99,6 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 ![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0です。]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
-iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) を使用していることを確認できます。
+iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) を使用していることを確認できます。
 {% endalert %}
 

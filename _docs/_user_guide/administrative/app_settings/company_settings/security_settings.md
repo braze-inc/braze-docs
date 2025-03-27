@@ -13,10 +13,6 @@ description: "This reference article covers generic cross-company security setti
 
 To access this page, go to **Settings** > **Admin Settings** > **Security Settings**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Security Settings**.
-{% endalert %}
-
 ## Authentication rules
 
 ### Password length
