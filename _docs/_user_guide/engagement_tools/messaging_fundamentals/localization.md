@@ -234,7 +234,7 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 {% endtab %}
 
 {% tab Locale messages %}
-Add and use [locales in your messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales) to target users in different languages all within a single email campaign or Canvas. 
+Add and use locales in your message to target users in different languages all within a single campaign or Canvas for the email or push channels. For a full walkthrough, refer to [Locales in email messages]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) or [Locales in push messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
 
 {% alert important %}
 This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
