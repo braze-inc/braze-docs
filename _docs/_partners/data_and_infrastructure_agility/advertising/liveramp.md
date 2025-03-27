@@ -62,7 +62,7 @@ Next, create a data table with the [required format](https://docs.liveramp.com/i
 
 #### Braze identifiers
 
-Braze’s event logs contain identifiers you can use within the LiveRamp native app. For a full list of available identifiers for each event type, download the [Braze Event Schemas and Identifiers](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
+Braze’s event logs contain identifiers you can use within the LiveRamp native app. For a full list of available identifiers for each event type, download the [Braze Event Schemas and Identifiers]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt).
 
 | Identifier Type | Description  |
 |-----------------|--------------|
