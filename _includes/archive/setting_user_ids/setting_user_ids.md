@@ -9,7 +9,7 @@ If such an identifier is not available, Braze will assign a unique identifier to
 {% endalert %}
 
 {% alert warning %}
-If you want to include an identifiable value as your user ID, for additional security, we **strongly recommend** adding our [SDK authentication]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) feature to prevent user impersonation.
+If you want to include an identifiable value as your user ID, for additional security, we **strongly recommend** adding our [SDK authentication]({{site.baseurl}}/developer_guide/authentication/) feature to prevent user impersonation.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

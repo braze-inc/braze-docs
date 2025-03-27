@@ -10,38 +10,31 @@ description: "This page covers best practices for crafting messages in Braze tha
 
 > The final appearance of right-to-left messages depends largely on how service providers (such as Apple, Android, and Google) render them. This page covers best practices for crafting right-to-left messages so that your messages display accurately as much as possible.
 
-## How it works
+## Message appearance
 
-There are three key areas to consider when creating a right-to-left message: 
-- How the message appears in your Braze dashboard
-- How the message appears when delivered
-- What happens in between creation and delivery
+When creating a right-to-left message, keep the following in mind:
 
-When a message appears on a user's device, its appearance is largely determined by how providers (like Apple and Microsoft) handle it, which depends on the device’s language settings. For example, an Arabic message will look different if the device is set to English instead of Arabic. 
+- **Appearance in Braze dashboard:** When a message appears on a user's device, its appearance is largely determined by their device’s operating system and language settings&#8212;meaning what you see in the dashboard isn't always 100% accurate.
+- **Appearance on the device:** Apple and Android have significant control over how messages are rendered, while email service providers (ESPs) have some control. HTML email customization in Braze can be more flexible; however, the same message may still render differently on different devices based on a user’s settings.
 
-Apple and Android have significant control over how messages are rendered, while email service providers (ESPs) have some control. HTML email customization in Braze can be more flexible; however, the same message may still render differently on different devices based on a user’s settings.
+Additionally, check punctuation and emojis to determine if your message is rendering standard or right-to-left.
 
-Though Braze has limited control over the final appearance of right-to-left messages, our goal is to facilitate accurate end results as much as possible. Use the following tips and tricks as guidance while you create right-to-left messages.
+| Standard Western Rendering | Right-to-Left Rendering |
+|------------------|------------------------|
+| Displays the exclamation point and emoji at the **end** of the sentences. | Displays the exclamation point and emoji at the **beginning** of the sentence. |
+| ![An example of a standard right-to-left messages.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![An example of a left-to-right messages.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Creating a right-to-left message
 
-The most common way to craft right-to-left messages in Braze is:
+To create your right-to-left message in Braze:
 
-1. Create a left-to-right message in a Braze editor.
-2. Copy the message text from Braze and then use a localization tool to localize it to a right-to-left message.
-3. Confirm the alignment is properly formatted by using a word processor (such as Word).
-- You can skip this step if you’re creating a drag-and-drop or HTML email message. The drag-and-drop editor allows you to change text direction by selecting a button, and the HTML editor allows you to customize right-to-left alignment. <br><br>![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.][1]{: style="max-width:50%;"}
+1. Draft your standard message in the Braze editor.
+2. Copy the message text from Braze, then use a localization tool to convert it to a right-to-left message.
+3. Paste your converted message back into Braze.
+4. Verify the text formatting and alignment. If you’re creating a drag-and-drop or HTML email message, you can do this within the composer. Otherwise, you'll need to use a separate wordprocessor.<br><br>![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
-{: start="4"}
-4. Paste the formatted text into Braze.
-
-### Comparison of left-to-right and left-to-right messages
-
-You can often tell if you have the correct right-to-left settings by looking at the punctuation. In the image on the left, the exclamation point and emoji are on the right side of the text, which is the beginning of the sentence for right-to-left languages. In the image on the right, formatted as right-to-left, the message correctly displays the exclamation points and emoji at the end of the sentences.
-
-![A comparison of two Arabic messages to show how right-to-left and left-to-right messages appear.][2]
-
-## Special considerations for right-to-left messages
+## Considerations
  
 ### Long push notifications
 
@@ -64,6 +57,3 @@ Special characters (such as punctuation, mathematical symbols, and currency), nu
 ### Arabic messages
 
 When composing Arabic messages, use significantly higher font point sizes for the same readability you'd achieve with other languages. We suggest using a font size about 20% larger than your usual size for languages that use the Latin or Roman alphabet. This is because Arabic fonts are made small to accommodate the vertical space taken up by diacritics (accent marks).
-
-[1]: {% image_buster /assets/img/rtl_button.png %}
-[2]: {% image_buster /assets/img/rtl_comparison.png %}

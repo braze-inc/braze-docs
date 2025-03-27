@@ -61,7 +61,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/).
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift).
 
 {% endtab %}
 {% endtabs %}

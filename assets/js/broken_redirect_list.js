@@ -1714,28 +1714,29 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/changelog'] 
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards'] = '/docs/developer_guide/platforms/fireos/content_cards';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/custom_fonts'] = '/docs/developer_guide/platforms/fireos/content_cards/custom_fonts';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/deep_linking'] = '/docs/developer_guide/platforms/fireos/content_cards/deep_linking';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/examples'] = '/docs/developer_guide/platforms/fireos/content_cards/examples';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/examples'] = '/docs/developer_guide/content_cards/creating_cards';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/examples'] = '/docs/developer_guide/content_cards/creating_cards';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/gif'] = '/docs/developer_guide/platforms/fireos/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose';
 validurls['/docs/developer_guide/platforms/fireos/content_cards/jetpack_compose'] = ['/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose']
 validurls['/docs/developer_guide/platform_integration_guides/fireos/geofences'] = '/docs/developer_guide/platforms/fireos/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/google_play_privacy'] = '/docs/developer_guide/platforms/fireos/google_play_privacy';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages'] = '/docs/developer_guide/platforms/fireos/in_app_messages';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/app_store_review_prompt'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/app_store_review_prompt';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/fonts'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/fonts';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/gif'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/key_value_pairs'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/key_value_pairs';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/listeners'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/listeners';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/message_dismissals'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/message_dismissals';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/styling'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/styling';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/youtube_in_html'] = '/docs/developer_guide/platforms/fireos/in_app_messages/customization/youtube_in_html';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/deep_linking'] = '/docs/developer_guide/platforms/fireos/in_app_messages/deep_linking';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/delivery'] = '/docs/developer_guide/platforms/fireos/in_app_messages/delivery';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/examples'] = '/docs/developer_guide/platforms/fireos/in_app_messages/examples';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/html_messages'] = '/docs/developer_guide/platforms/fireos/in_app_messages/html_messages';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/ott_devices'] = '/docs/developer_guide/platforms/fireos/in_app_messages/ott_devices';
-validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/troubleshooting'] = '/docs/developer_guide/platforms/fireos/in_app_messages/troubleshooting';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages'] = '/docs/developer_guide/in_app_messages/';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/app_store_review_prompt'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/fonts'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/gif'] = '/docs/developer_guide/in_app_messages/gifs';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/key_value_pairs'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/listeners'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/message_dismissals'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/styling'] = '/docs/developer_guide/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/customization/youtube_in_html'] = '/docs/developer_guide/in_app_messages/html_messages';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/deep_linking'] = '/docs/developer_guide/in_app_messages/deep_linking';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/delivery'] = '/docs/developer_guide/in_app_messages/triggering_messages';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/examples'] = '/docs/developer_guide/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/html_messages'] = '/docs/developer_guide/in_app_messages/html_messages';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/ott_devices'] = '/docs/developer_guide/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages/troubleshooting'] = '/docs/developer_guide/in_app_messages/troubleshooting';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/initialization'] = '/docs/developer_guide/platforms/fireos/initialization';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/platforms/fireos/initialization/google_tag_manager';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/initialization/runtime_configuration'] = '/docs/developer_guide/platforms/fireos/initialization/runtime_configuration';
@@ -1912,7 +1913,7 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/initializatio
 validurls['/docs/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization'] = '/docs/developer_guide/platforms/swift/initialization/delayed_initialization';
 validurls['/docs/developer_guide/platform_integration_guides/swift/initialization/google_tag_manager'] = '/docs/developer_guide/platforms/swift/initialization/google_tag_manager';
 validurls['/docs/developer_guide/platform_integration_guides/swift/ios_18'] = '/docs/developer_guide/platforms/swift/ios_18';
-validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/platforms/swift/live_activities';
+validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/developer_guide/platform_integration_guides/swift/localization'] = '/docs/developer_guide/platforms/swift/localization';
 validurls['/docs/developer_guide/platform_integration_guides/swift/network'] = '/docs/developer_guide/platforms/swift/network';
 validurls['/docs/developer_guide/platform_integration_guides/swift/network/traffic_control'] = '/docs/developer_guide/platforms/swift/network/traffic_control';
@@ -1965,7 +1966,8 @@ validurls['/docs/developer_guide/platform_integration_guides/web/browser_extensi
 validurls['/docs/developer_guide/platform_integration_guides/web/changelog'] = '/docs/developer_guide/platforms/web/changelog';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards'] = '/docs/developer_guide/platforms/web/content_cards';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_security_policy'] = '/docs/developer_guide/platforms/web/content_security_policy';
-validurls['/docs/developer_guide/platform_integration_guides/web/cookies_and_storage'] = '/docs/developer_guide/platforms/web/cookies_and_storage';
+validurls['/docs/developer_guide/platform_integration_guides/web/cookies_and_storage'] = '/docs/developer_guide/storage/#cookies';
+validurls['/docs/developer_guide/platforms/web/cookies_and_storage'] = '/docs/developer_guide/storage/#cookies';
 validurls['/docs/developer_guide/platform_integration_guides/web/google_tag_manager'] = '/docs/developer_guide/platforms/web/google_tag_manager';
 validurls['/docs/developer_guide/platform_integration_guides/web/in_app_messages'] = '/docs/developer_guide/platforms/web/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization'] = '/docs/developer_guide/platforms/web/in_app_messages/customization';
@@ -2331,10 +2333,42 @@ validurls['/docs/developer_guide/platforms/swift/sample_apps'] = '/docs/develope
 validurls['/docs/developer_guide/platforms/android/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_privacy-questionnaire';
 validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest';
 
+
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/#internationalize-campaigns'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages';
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
+validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_duplication/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/';
+
+validurls['/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/';
+
 validurls['/docs/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/'] = '/docs/developer_guide/push_notifications/?sdktab=android';
 
 validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_guide/banner_cards/embedding_cards/';
 validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banner_cards/creating_campaigns/';
 validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banner_cards/#placement-ids';
+
+validurls['/docs/developer_guide/push_notifications/live_notifications/'] = '/docs/developer_guide/live_notifications/';
+validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local';
+validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
+validurls['/docs/developer_guide/analytics/logging_custom_events/'] = ['/docs/developer_guide/analytics/logging_events/'];
 
 // validurls['OLD'] = 'NEW';
