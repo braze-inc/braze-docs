@@ -99,13 +99,41 @@ rake
 
 ### Tutorials
 
-Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
+There are two kinds of tutorials: use cases and generic. In most scenarios, you'll want to write a use case.
 
 {% tabs local %}
-{% tab tutorial template %}
-{% multi_lang_include contributing/templates/tutorial.md %}
+{% tab use cases %}
+Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory&#8212;unlike generic tutorials which may use hypothetical scenarios to illustrate some functionality. What makes use cases special is their ability to illustrate the _real-world value_ that Braze offers marketers.
+
+{% subtabs local %}
+{% subtab use case template %}
+{% multi_lang_include contributing/templates/use_case.md %}
+{% endsubtab %}
+{% endsubtabs %}
+
+#### Guidelines
+
+- Create a hypothetical but real-world scenario using an imaginary brand
+- Highlight the value that a feature brings to a different industry: eCommerce, finance, gaming, finance, and others.
+- Show a practical example of how Braze is commonly used: add to cart, add to wishlist, saved song, created playlist, loyalty program, submitted feedback, and similar.
+- Create a step-by-step activity for the user to roleplay
+- Make it clear that the use case is a fictional scenario; users should not actually follow these steps with real data.
+
+##### Header syntax
+
+The title header should be prepended with `Use case:` and describe the way Braze is being used in the recipe. For example, "Use case: Abandoned cart." 
+
+Each use of the words "Use case" in a header should have a description following it. 
 {% endtab %}
-{% endtabs %}
+
+{% tab generic %}
+Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
+
+{% subtabs local %}
+{% subtab tutorial template %}
+{% multi_lang_include contributing/templates/tutorial.md %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %}){: style="max-width:70%;"}
 
@@ -121,40 +149,18 @@ Provide ready-made assets for the user to input that aren't the key focus of you
 #### Header syntax
 
 The title header should be prepended with `Tutorial:` and generally describe what the user will do or create. For example, "Tutorial: Your first contribution".
-
-### Use cases
-
-Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory. ([Tutorials](#tutorials) are a type of article that allow for a hypothetical scenario to be used to illustrate some functionality.) A special value of use cases is that they illustrate the real-world value that Braze offers marketers.
-
-{% tabs local %}
-{% tab use case template %}
-{% multi_lang_include contributing/templates/use_case.md %}
 {% endtab %}
 {% endtabs %}
-
-#### Guidelines
-
-- Create a hypothetical but real-world scenario using an imaginary brand
-- Highlight the value that a feature brings to a different industry: eCommerce, finance, gaming, finance, and others.
-- Show a practical example of how Braze is commonly used: add to cart, add to wishlist, saved song, created playlist, loyalty program, submitted feedback, and similar.
-- Create a step-by-step activity for the user to roleplay
-- Make it clear that the use case is a fictional scenario; users should not actually follow these steps with real data.
-
-##### Header syntax
-
-The title header should be prepended with `Use case:` and describe the way Braze is being used in the recipe. For example, "Use case: Abandoned cart." 
-
-Each use of the words "Use case" in a header should have a description following it. 
 
 ### References
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
-{% tabs local %}
-{% tab reference template %}
+{% subtabs local %}
+{% subtab reference template %}
 {% multi_lang_include contributing/templates/reference.md %}
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %}){: style="max-width:70%;"}
 
