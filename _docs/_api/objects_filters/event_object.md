@@ -11,13 +11,11 @@ description: "This reference article goes over the event object, what it is, and
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 
-## What is the event object?
+## What is an event object?
 
 An event object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each event object in the events array represents a single occurrence of a custom event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by referencing the Platform Integration Guide in the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the **Analytics** tab of the various platforms. We have linked several for you.
-
-Tracking Custom Events article:
+For steps on how to set up custom events for a specific platform, refer to the Platform Integration Guide in the [Developer Guide][1]. Refer to the relevant article based on your platform:
 
 - [Android][2]
 - [iOS][3]
@@ -50,13 +48,14 @@ Tracking Custom Events article:
 
 #### Update existing profiles only
 
-If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
+To update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
-If you are creating an alias-only user profile through the `/users/track` endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+If you're creating an alias-only user profile through the `/users/track` endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
 {% endalert %}
 
 ## Event properties object
+
 Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
 
 Property values can be any of the following data types:
@@ -74,6 +73,7 @@ Property values can be any of the following data types:
 Event property objects that contain array or object values can have an event property payload of up to 100&nbsp;KB.
 
 ### Event property persistence
+
 Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events][5], which details the various approaches to storing event property values long-term.
 
 #### Event example request
