@@ -131,28 +131,28 @@ The following table includes metrics and descriptions to help you better underst
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}
 
-## Troubleshooting
+## Frequently asked questions
 
-{% details What should I do next if I receive an invalid token error? %}
+### What should I do next if I receive an invalid token error?
+
 You can disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
-{% enddetails %}
 
-{% details Why is my Canvas not allowed to launch? %}
-Ensure your TikTok account successfully connects to Braze on the TikTok partner page.
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
-{% enddetails %}
+### Why is my Canvas not allowed to launch?
 
-{% details How do I know if users have matched after passing users to TikTok? %}
+Confirm that your TikTok account successfully connects to Braze on the TikTok partner page. Next, make sure you've selected an ad account, entered a name for the new audience, and selected fields to match.
+
+### How do I know if users have matched after passing users to TikTok?
+
 TikTok does not provide this information for their data privacy policies.
-{% enddetails %}
 
-{% details How long will it take for my audiences to populate in TikTok? %}
+### How long will it take for my audiences to populate in TikTok?
+
 The audience size will update within 24-48 hours on the Audiences page in TikTok’s Ads Manager.
-{% enddetails %}
 
-{% details What is the maximum number of audiences I can have in my TikTok ads account? %}
-400
-{% enddetails %}
+### What is the maximum number of audiences I can have in my TikTok ad account?
+
+You can have up to 400 audiences per TikTok ad account.
+
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
 [2]: {% image_buster /assets/img/tiktok/tiktok2.png %}

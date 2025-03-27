@@ -154,38 +154,36 @@ Select the partner as **LinkedIn**, your ad account, and the audience to see the
 ![An example of Audience Sync step metrics with 10,000 entered users.]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
-## Troubleshooting
+## Frequently asked questions
 
-{% details How long will it take for the audience sizes to populate in LinkedIn? %}
+### How long will it take for the audience sizes to populate in LinkedIn?
+
 There is up to a 48-hour delay to view the audiences within your LinkedIn account.
-{% enddetails %}
 
-{% details What is the minimum audience size for LinkedIn to populate within your ad account?  %}
+### What is the minimum audience size for LinkedIn to populate within your ad account?
+
 The audience must include at least 300 members to populate the audience size within your LinkedIn account.
-{% enddetails %}
 
-{% details What should I do next if I receive an invalid token error? %}
+### What should I do next if I receive an invalid token error?
+
 You can disconnect and reconnect your LinkedIn account on the LinkedIn partner page. Confirm with your LinkedIn admin that you have the appropriate permissions to the ad account you wish to sync with.
-{% enddetails %}
 
-{% details Why is my Canvas not allowed to launch? %}
-Please confirm your LinkedIn ad account has successfully connected to Braze on the LinkedIn partner page.
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
-{% enddetails %}
+### Why is my Canvas not allowed to launch?
 
-{% details How do I know if users have matched after passing users to LinkedIn? %}
-- How do I know if users have matched after passing users to LinkedIn?
-LinkedIn does provide information around match rates within their dashboard. You can review it on LinkedIn under the **Audiences** section. 
-- In addition, you can review the match rate for your LinkedIn Audience within the Canvas Step Details page of your Audience Sync step.
-{% enddetails %} 
+Confirm your LinkedIn ad account has successfully connected to Braze on the LinkedIn partner page. Next, make sure you've selected an ad account, entered a name for the new audience, and selected fields to match.
 
-{% details How many audiences can LinkedIn support? %}
+### How do I know if users have matched after passing users to LinkedIn?
+
+LinkedIn does provide information around match rates in their dashboard. You can review it on LinkedIn under the **Audiences** section. You can review the match rate for your LinkedIn Audience in the Canvas step details of your Audience Sync step.
+
+### How many audiences can LinkedIn support?
+
 Currently, there is no limit on the number of audiences in your LinkedIn ad account.
-{% enddetails %}
 
-{% details Why is a segment stuck in BUILDING status and not updated? %}
+### Why is a segment stuck in BUILDING status and not updated?
+
 A segment is considered unused and set to ARCHIVED after it is not continuously used for 30 days in a draft or active campaign. Because of this, a segment may appear "stuck" in BUILDING when updates are streamed to an ARCHIVED segment, thus pushing it into the BUILDING state, and right before it is archived again, new updates are streamed to the unused segment.
-{% enddetails %}
+
 
 [1]: {% image_buster /assets/img/linkedin/linkedin1.png %}
 [2]: {% image_buster /assets/img/linkedin/linkedin2.png %}
