@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Draft
 
-Canvases marked as drafts are saved but not launched Canvases. To continue editing and begin sending the Canvas, select the draft.
+Draft Canvases are saved, but not launched. To continue editing, select your draft from the list.
 
 ## Active
 
@@ -22,31 +22,21 @@ Active Canvases are in the process of sending.
 
 ## Stopped
 
-Stopped Canvases have been paused, but are still editable. To resume a stopped Canvas, select the <i class="fas fa-cog"></i> gear icon for a given Canvas then **Resume**.
+Stopped Canvases are paused, but are still editable. Users can no longer enter the Canvas. When stopped:
 
-### Behavior when active Canvases are stopped
+| Scenario | Details |
+|----------|---------|
+| **Sent Messages**| No additional messages will be sent, regardless of a user's place in the Canvas. This includes users who were queued due to rate limiting.<br><br>Note that your email service provider (ESP) may continue processing any messages you've already requested. |
+| **Delay steps** | Users in a [delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will stay there until the set time passes, then they'll exit the Canvas. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-When an active Canvas is stopped, users will be prevented from entering the Canvas.
-
-#### Sent messages
-
-No further messages will be sent to already entered users, regardless where a user currently sits in the flow. However, sends may not immediately stop; once a send request is sent to an email service provider (ESP), the message can't be stopped from being delivered. 
-
-Additionally, users who are queued because of rate limiting won't be sent queued messages.
-
-#### Delay steps
-
-Users in delay steps will remain in the step until the time period passes, then will exit the Canvas. If there are no delay steps between the user and the last Canvas step, the user will exit the canvas.
-
-### Behavior when stopped Canvases are reactivated
-
-If you reactivate a stopped Canvas, users who were waiting for a message to deliver will receive the message. But if you reactivate that Canvas after the time the user would have been sent the message, the user won't receive the message.
+To reactivate the Canvas, select the <i class="fas fa-cog"></i> gear icon, then **Resume**. When reactivated, previously-stopped messages will be sent like normal&#8212;as long as their scheduled send time hasn't already passed.
 
 ## Archived
 
 Archived Canvases are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These Canvases are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
-To archive a Canvas, select the <i class="fas fa-cog"></i> gear icon for a given Canvas then **Archive Selected**.
+To archive a Canvas, select the <i class="fas fa-cog"></i> gear icon, then **Archive Selected**.
 
 ## Idle
 
