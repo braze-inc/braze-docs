@@ -87,7 +87,7 @@ def main(path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python convert_reference_links.py <directory_or_file>")
+        print("Usage: ./bdocs ulinks <directory_or_file>")
     else:
         given_path = sys.argv[1]
         # Normalize the path to ensure correct traversal
