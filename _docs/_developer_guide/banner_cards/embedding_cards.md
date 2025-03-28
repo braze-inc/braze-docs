@@ -1,7 +1,6 @@
 ---
 nav_title: Embedding Cards
 article_title: Embedding Banner Cards for the Braze SDK
-hidden: true
 description: "Learn how to embed Banner Cards for the Braze SDK."
 platform:
   - iOS

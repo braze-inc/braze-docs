@@ -3,7 +3,6 @@ nav_title: Creating Campaigns
 article_title: Creating Banner Card campaigns
 alias: "/create_banner_card/"
 description: "This reference article covers how to create and send Banner Cards using Braze campaigns."
-hidden: true
 page_type: reference
 ---
 
