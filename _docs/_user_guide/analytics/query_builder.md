@@ -18,12 +18,6 @@ Because the Query Builder allows direct access to some customer data, you can on
 To run a Query Builder report:
 
 1. Go to **Analytics** > **Query Builder**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Data**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If writing your own SQL, see [Writing custom SQL queries](#custom-sql) for requirements and resources.

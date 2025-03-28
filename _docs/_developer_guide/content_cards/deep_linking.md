@@ -28,8 +28,4 @@ platform:
 {% sdktab web %}
 At this time, Content Card deep links are not supported for the Web Braze SDK.
 {% endsdktab %}
-
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/_global/deep_linking.md %}
-{% endsdktab %}
 {% endsdktabs %}

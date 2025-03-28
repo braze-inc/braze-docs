@@ -50,7 +50,7 @@ When the integration is successfully set, you can only create email campaigns ba
 
 ## Data flow to Braze and supported identifiers
 
-The data will flow from Zeotap to Braze using the [user track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) API. The following points summarise the data flow:
+The data will flow from Zeotap to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). The following points summarise the data flow:
 
 1. Zeotap sends user profile attributes, custom attributes, custom events, and purchase fields.
 2. You maps all the relevant Zeotap Catalogue fields to the Braze fields under the **Data To Send** tab.
@@ -64,7 +64,7 @@ After applying filters or adding a condition for your users in Symphony, you can
 
 #### Add new destination
 Perform the following steps to add a new destination:
-1. Click **Add New Destination**.
+1. Select **Add New Destination**.
 2. Search for **Braze**.
 3. Add the **Client Name**, **API Key**, and **Instance** and save the destination.
 
@@ -94,13 +94,13 @@ You can find details of all the Braze fields in this section.
 | First Name | Static Mapping | This is mapped to `First Name` in the Zeotap Catalogue. |
 | Last Name | Static Mapping | This is mapped to `Last Name` in the Zeotap Catalogue. |
 | Gender | Static Mapping | This is mapped to `Gender` in the Zeotap Catalogue. |
-| Custom Event Name | Static Mapping | This is mapped to `Event Name` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
-| Custom Event Timestamp | Static Mapping | This is mapped to the `Event Timestamp` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
+| Custom Event Name | Static Mapping | This is mapped to `Event Name` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object]({{site.baseurl}}/api/objects_filters/event_object#what-is-the-event-object). |
+| Custom Event Timestamp | Static Mapping | This is mapped to the `Event Timestamp` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object]({{site.baseurl}}/api/objects_filters/event_object#what-is-the-event-object). |
 | Email Subscribe | Dropdown Selection | Onboard an `Email Marketing Preference` field and map to it.<br><br>Zeotap sends the following three values:<br>• `opted_in` - Indicates that the user has explicitly registered for email marketing preference<br>• `unsubscribed` - Indicates that the user has explicitly opted out of email messages<br>• `subscribed` - Indicates that the user has neither opted-in nor opted-out. |
 | Push Subscribe | Dropdown Selection | Onboard a `Push Marketing Preference` field and map to it.<br><br>Zeotap sends the following three values:<br>• `opted_in` - Indicates that the user has explicitly registered for push marketing preference<br>• `unsubscribed` - Indicates that the user has explicitly opted out of push messages.<br>• `subscribed` - Indicates that the user has neither opted-in nor opted out |
 | Email Open Tracking Enable | Dropdown Selection | Map the relevant `Marketing Preference` field.<br><br>When set to true, it enables an open tracking pixel to be added to all future emails sent to this user. |
 | Email Click Tracking Enable | Dropdown Selection | Map the relevant `Marketing Preference` field.<br><br>When set to true, it enables click tracking for all links within all future emails sent to this user. |
-| Product ID | Dropdown selection | • Identifier for a purchase action `(Product Name/Product Category)`. For more details, refer to [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object/).<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. For more information, refer to [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object/#purchase-object). |
+| Product ID | Dropdown selection | • Identifier for a purchase action `(Product Name/Product Category)`. For more details, refer to [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. For more information, refer to [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-object). |
 | Currency | Dropdown selection | • Currency attribute for purchase action.<br>• Supported format is `ISO 4217 Alphabetic Currency Code`.<br>• Onboard correctly formatted Currency Data to the Zeotap Catalogue and maps to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. |
 | Price | Dropdown selection | • Price attribute for purchase action.<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. |
 | Quantity | Dropdown selection | • Quantity attribute for purchase action.<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it. |

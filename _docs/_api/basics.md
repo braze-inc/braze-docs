@@ -87,12 +87,6 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 To create a new REST API key:
 
 1. Go to **Settings** > **APIs and Identifiers**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
 4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.

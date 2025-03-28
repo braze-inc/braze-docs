@@ -54,7 +54,7 @@ The following attributes should be set on the `ABKUser` object:
 
 ## Assigning custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
+Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/analytics/) for more information on the segmentation options each of these attributes will afford you.
 
 ### Custom attribute with a string value
 

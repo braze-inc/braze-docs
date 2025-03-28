@@ -1,7 +1,7 @@
 ---
 nav_title: Upgrading to iOS 18
 article_title: Upgrading to iOS 18
-page_order: 7
+page_order: 7.1
 platform: 
   - iOS
 description: "This article covers insights into the iOS 18 release to help you upgrade your SDK seamlessly."
@@ -17,7 +17,7 @@ Apple's [WWDC](https://developer.apple.com/wwdc24/) took place June 9th - 11th 2
 
 ### Live Activities on Apple Watch
 
-[Live Activities](https://www.braze.com/docs/developer_guide/platforms/swift/live_activities/) will be supported on watchOS 11. No additional setup is required. However, Apple offers the option to customize the watch interface.
+[Live Activities](https://www.braze.com/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift) will be supported on watchOS 11. No additional setup is required. However, Apple offers the option to customize the watch interface.
 
 ### Apple Vision Pro
 

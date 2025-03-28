@@ -136,7 +136,7 @@ Boolean preferences are read by the SDK using `true` and `false` keywords as a s
 {% endtab %}
 {% endtabs %}
 
-## Optional configurations
+## Optional configurations {#optional}
 
 You can add any of the following preferences to the `platform` element in your project's `config.xml` file:
 
@@ -152,7 +152,7 @@ You can add any of the following preferences to the `platform` element in your p
 | `enable_location_collection`                      | Sets whether the automatic location collection is enabled (if the user permits). The `geofence-branch`                                                                                                                                                |
 | `geofences_enabled`                               | Sets whether geofences are enabled.                                                                                                                                                                                                                   |
 | `ios_session_timeout`                             | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds.                                                                                                                                                               |
-| `sdk_authentication_enabled`                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                                                                              |
+| `sdk_authentication_enabled`                      | Sets whether to enable the [SDK Authentication]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                                                                              |
 | `display_foreground_push_notifications`           | Sets whether push notifications should be displayed while the application is in the foreground.                                                                                                                                                       |
 | `ios_disable_un_authorization_option_provisional` | Sets whether `UNAuthorizationOptionProvisional` should be disabled.                                                                                                                                                                                   |
 | `trigger_action_minimum_time_interval_seconds`    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                                                                                   |
@@ -185,8 +185,8 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | `android_fcm_sender_id`                                           | Sets the Firebase Cloud Messaging sender ID.                                                                                                                                                  |
 | `enable_location_collection`                                      | Sets whether the automatic location collection is enabled (if the user permits).                                                                                                              |
 | `geofences_enabled`                                               | Sets whether geofences are enabled.                                                                                                                                                           |
-| `android_disable_auto_session_tracking`                           | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#disabling-automatic-session-tracking-android-only) |
-| `sdk_authentication_enabled`                                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                      |
+| `android_disable_auto_session_tracking`                           | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#cordova_disable-automatic-session-tracking) |
+| `sdk_authentication_enabled`                                      | Sets whether to enable the [SDK Authentication]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                      |
 | `trigger_action_minimum_time_interval_seconds`                    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                           |
 | `is_session_start_based_timeout_enabled`                          | Sets whether the session timeout behavior to be based either on session start or session end events.                                                                                          |
 | `default_notification_channel_name`                               | Sets the user-facing name as seen via `NotificationChannel.getName` for the Braze default `NotificationChannel`.                                                                              |
@@ -266,7 +266,7 @@ The following is an example `config.xml` file with additional configurations:
 {% endtab %}
 {% endtabs %}
 
-## Disabling automatic session tracking (Android only)
+## Disabling automatic session tracking (Android only) {#disable-automatic-session-tracking}
 
 By default, the Android Cordova plugin automatically tracks sessions. To disable automatic session tracking, add the following preference to the `platform` element in your project's `config.xml` file:
 

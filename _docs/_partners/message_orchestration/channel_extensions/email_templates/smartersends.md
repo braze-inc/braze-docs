@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [SmarterSends][2] drives personalization with marketing campaigns that businesses can create, schedule, and deploy to enforce brand and legal compliance with control over the content and data used. 
 
+_This integration is maintained by SmarterSends._
+
+## About the integration
+
 The Braze and SmarterSends partnership allows you to combine the power of Braze with the hyper-localized content owned by your distributed users to elevate your marketing campaigns.
 
 ## Prerequisites
@@ -22,10 +26,6 @@ The Braze and SmarterSends partnership allows you to combine the power of Braze 
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze API campaign ID | The [Braze API campaign ID]({{site.baseurl}}/api/api_campaigns/) is the unique identifier for all campaigns sent through SmarterSends. This can be created in the Braze dashboard at **Messaging** > **Campaigns**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
 
 ## Use cases
 
@@ -81,6 +81,7 @@ Create a message variant ID for each group you create in SmarterSends to view me
 ## Customization
 
 Each SmarterSends instance is fully customizable with your brand's logo colors and custom domain name, creating a familiar environment. Additionally, for further personalization, you can define the attributes and custom attributes to target users in campaigns based on the segments within your Braze workspace.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://smartersends.com

@@ -15,10 +15,6 @@ You can see API campaign transactions, troubleshoot details on failed messages, 
 
 To access the log, go to **Settings** > **Message Activity Log**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** under **Settings** > **Developer Console**.
-{% endalert %}
-
 ![Message Activity Log][2]
 
 {% alert tip %}

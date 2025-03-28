@@ -28,7 +28,7 @@ Before you start, you'll need the following:
 
 ### Step 1: Create your campaign
 
-Create an [API triggered campaign](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery) in Braze. Then, share the campaign `api_identifier` with Notify.
+Create an [API triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery) in Braze. Then, share the campaign `api_identifier` with Notify.
 
 ### Step 2: Create your segment in Braze
 

@@ -35,7 +35,7 @@ Content Cards for Currents and our API documentation for Content Cards will be l
 
 Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
 
-You can now [retrieve data from Roku devices]({{site.baseurl}}/developer_guide/platforms/roku/sdk_integration/) for data enrichment and custom event tracking.
+You can now [retrieve data from Roku devices]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku) for data enrichment and custom event tracking.
 
 ## Notification preferences for Canvas or campaign updates
 

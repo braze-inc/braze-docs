@@ -40,7 +40,7 @@ To use silent push notifications to trigger background work, set up the `content
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
-Enabling background mode for remote notifications is required for [uninstall tracking]({{site.baseurl}}/developer_guide/platforms/swift/analytics/uninstall_tracking/).
+Enabling background mode for remote notifications is required for [uninstall tracking]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift).
 
 Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system.
 

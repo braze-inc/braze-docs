@@ -1,6 +1,6 @@
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) into your app. However, no additional setup is required.
 
 ## View controller contexts
 
