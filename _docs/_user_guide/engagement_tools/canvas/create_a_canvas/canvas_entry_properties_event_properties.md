@@ -36,9 +36,9 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 ### Things to know
 
 - Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
-- For in-app message channels, `context` can only be referenced in Canvas. `event_properties` can't be used for in-app message channels.
+- For in-app message channels, `context` can only be referenced in a Canvas. `event_properties` can't be used for in-app message channels.
 - You can't use `event_properties` in the lead Message step. Instead, you must use `context` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
-- When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvas. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+- When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
 ### Timestamps for event properties
 
