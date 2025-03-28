@@ -28,6 +28,8 @@ There are two ways to set context variables:
 - **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variable.
 - **Using a Context step:** You can create or update context variables in the step editor.
 
+Note that any variables included in the context variable aren't automatically stored in the user profile.
+
 ## Creating a Context step
 
 To create a Context step, add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Context**.
