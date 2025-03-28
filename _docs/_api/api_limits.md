@@ -41,6 +41,7 @@ Refer to the following for the default API rate limits of different request type
 | [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33]                                                                                                                                                                             | 50 requests per minute shared between the endpoints.                                                                                                                                                                                                                                                                                                                                      |
 | [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 16,000 requests per minute shared between the endpoints.                                                                                                                                                                                                                                                                                                                                  |
 | [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints.                                                                                                                                                                                                                                                                                                                                      |
+| [`/catalogs/{catalog_name}/fields/{field_name}`][51]<br>[`/catalogs/{catalog_name}/fields`][52]<br>[`/catalogs/{catalog_name}/selections/{selection_name}`][49]<br>[`/catalogs/{catalog_name}/selections`][50] | 50 requests per minute shared between the endpoints. |
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 5,000 requests per day, per company, shared between the endpoints.                                                                                                                                                                                                                                                                                                                        |
 | [`/cdi/integrations`][46]                                                                                                                                                                                                                              | 50 requests per minute.                                                                                                                                                                                                                                                                                                                                                                   |
 | [`/cdi/integrations/{integration_id}/sync`][47]                                                                                                                                                                                                        | 20 requests per minute.                                                                                                                                                                                                                                                                                                                                                                   |
@@ -68,7 +69,7 @@ The following requests have a rate limit of 250,000 requests per hour, shared be
 - [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/)
 - [`/content_blocks/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)
 - [`/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/)
-- [`/email/blacklist`]({{site.baseurl}}//api/endpoints/email/post_blacklist/)
+- [`/email/blacklist`]({{site.baseurl}}/api/endpoints/email/post_blacklist/)
 - [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/bounce/remove)
 - [`/email/hard_bounces`]({{site.baseurl}}/api/endpoints/email/get_list_hard_bounces/)
 - [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam/)
@@ -90,7 +91,7 @@ The following requests have a rate limit of 250,000 requests per hour, shared be
 - [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/)
 - [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/)
 - [`/segments/details`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/)
-- [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment//)
+- [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)
 - [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics/)
 - [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics/)
 - [`/sms/invalid_phone_numbers`]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/)
@@ -229,5 +230,9 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
 [45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
 [46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
-[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
-[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/
+[47]: {{site.baseurl}}/api/endpoints/cdi/get_job_sync_status/
+[48]: {{site.baseurl}}/api/endpoints/cdi/post_job_sync/
+[49]: {{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection
+[50]: {{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections
+[51]: {{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field
+[52]: {{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stensul](https://stensul.com/) empowers email marketers to easily build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for campaign creation.
 
+_This integration is maintained by Stensul._
+
+## About the integration
+
 The Braze and Stensul integration allows you to export your HTML-formatted Stensul emails and upload them as templates within Braze.
 
 ## Prerequisites
@@ -49,5 +53,6 @@ Next, enter the **template name**, **subject**, and **preheader** for your email
 ## Usage
 
 Find your uploaded Stensul template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

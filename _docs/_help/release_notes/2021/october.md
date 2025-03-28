@@ -30,11 +30,11 @@ This optional and advanced [implementation guide]({{site.baseurl}}/developer_gui
 
 ### In-app messaging
 
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/examples/) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
+This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
 
 ### Push notifications
 
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/examples/) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
+This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/push_notifications/examples/?sdktab=android) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
 
 ## New Braze partnerships
 

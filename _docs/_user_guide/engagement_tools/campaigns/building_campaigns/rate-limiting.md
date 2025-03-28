@@ -140,10 +140,6 @@ As your user base continues to grow and your messaging scales to include lifecyc
 
 Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace from **Settings** > **Frequency Capping Rules**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is called **Global Message Settings** and is located under **Engagement**.
-{% endalert %}
-
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, or any of those five.
@@ -155,6 +151,10 @@ This time frame can be measured in minutes, days, weeks (seven days), or months,
 Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
 ![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.][14]
+
+#### Behavior when users are frequency capped on a Canvas step
+
+If a Canvas user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
 
 ### Delivery rules
 

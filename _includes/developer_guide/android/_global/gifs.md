@@ -1,6 +1,6 @@
-# GIFs {#gifs-delegate-integration}
+## About GIFs
 
-> Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
+Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
 
 ## Integrating a custom image library
 

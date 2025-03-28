@@ -23,10 +23,6 @@ Before you start, you'll need the following:
 | A Braze account | You need a Braze account with access to the Connected Content feature. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation/), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Integration
 
 ### Step 1: Get your Contentful API credentials

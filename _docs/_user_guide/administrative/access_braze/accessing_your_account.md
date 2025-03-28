@@ -19,12 +19,16 @@ If you are not the first user on your company's Braze account, reach out to your
 
 Now that you've established where you need to log in, let's talk about how to log in, whether it's the first time or the millionth! If you are your company's first user, follow the guidance in the preceding section. If not, feel free to log in after your company's Braze admin creates your account.
 
-You can either log in from the [Braze.com](https://www.braze.com) home site, or just use your dashboard URL that corresponds to your specific [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For your convenience, Braze has several single sign on option such as:
+You can either log in from the [Braze.com](https://www.braze.com) home site, or just use your dashboard URL that corresponds to your specific [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For your convenience, Braze has several single sign-on (SSO) options such as:
 
 * [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
 * [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
+
+{% alert note %}
+After you log into Braze with SSO, you can no longer use your password to log into the dashboard. 
+{% endalert %}
 
 ## Resetting your password
 

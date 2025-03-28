@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Peak](https://platform.peak.ai/), a decision intelligence platform, is an end-to-outcome system where decision intelligence is the commercial application of AI to enhance business decision-making, growing revenue and profits.
 
+_This integration is maintained by Peak._
+
+## About the integration
+
 The partnership between Braze and Peak allows you to take predicted churn probability and attributes based on customer behaviors and interactions, and import them into Braze to use in customer segmentation and targeting. 
 
 ## Prerequisites
@@ -43,5 +47,6 @@ On receipt of successful status codes from the API, Peak will record the success
 ### Step 3: Using this integration
 
 Once the sync between Peak and Braze is successful, the updated users now include the new attributes. Use these attributes in campaigns and Canvases to target users and personalize messages.
+
 
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

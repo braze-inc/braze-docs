@@ -28,6 +28,8 @@ There are two ways to set context variables:
 - **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variable.
 - **Using a Context step:** You can create or update context variables in the step editor.
 
+Note that any variables included in the context variable aren't automatically stored in the user profile.
+
 ## Creating a Context step
 
 To create a Context step, add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Context**.
@@ -51,23 +53,25 @@ For example, if the context variable data type is set to **Date** but the value 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
 - In your Canvas step analytics, this will be counted as *Not Updated*.
 
-## Using context variables with other Canvas steps
+Braze will exit a user at the step if:
 
-You can add personalized delay options with the information from the Context step, meaning you can select the variable that delays users.
+- The context variable doesn't return any value.
+- A call to an embedded Connected Content fails.
+- The context variable types don't match.
 
-Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
+### JSON types and Connected Content responses
 
-- **Context variable name:** product_reminder_interval
-- **Data type:** Time
-- **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. To prevent context variables from being evaluated as strings, enter these results into this Liquid filter: `as_json_string`. An example is:
 
-![The "product_reminder_interval" and its value.][2]
+{%raw%}
+```liquid
+{% connected_content http://example.com :save product %}
+{{ product | as_json_string }}
+```
+{%endraw%}
 
-Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context variable.
+## Using context variables with Delay steps
 
-![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".][3]
-
+You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 
 [1]: {% image_buster /assets/img/context_step3.png %}
-[2]: {% image_buster /assets/img/context_step1.png %}
-[3]: {% image_buster /assets/img/context_step2.png %}

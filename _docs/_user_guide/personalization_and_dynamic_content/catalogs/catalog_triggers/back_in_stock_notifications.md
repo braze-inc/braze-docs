@@ -13,11 +13,11 @@ When a user triggers a custom event for an item, we'll automatically subscribe t
 
 ## How back-in-stock notifications work
 
-You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of an inventory quantity field, which must be a number-data type.
+You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of an inventory quantity field, which must be a number-data type. 
 
-When an item has an inventory quantity that meets your inventory rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas.
+Note that a catalog item's stock must be at zero for a user to subscribe to it successfully. When an item has an inventory quantity that meets your inventory rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas.
 
-The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends!
+The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
 
 ## Setting up back-in-stock notifications
 
@@ -84,7 +84,7 @@ To template in details about the catalog item that's back in stock, you can use 
 
 Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that came back in stock. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the inventory value of the item prior to the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new inventory value after the update.
 
-Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} to access data about that item throughout the message.
+Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} at the top of your message, then use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} to access data about that item throughout the message.
 
 ## Considerations
 

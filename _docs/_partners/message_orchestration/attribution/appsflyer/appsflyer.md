@@ -99,10 +99,6 @@ AppsFlyer.setAdditionalData(customData);
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **AppsFlyer**. 
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
@@ -149,7 +145,7 @@ Attribution data for Facebook and X (formerly Twitter) campaigns is not availabl
 AppsFlyer integrates with both SendGrid and SparkPost as Email Service Providers (ESPs) to support deep linking and click tracking. Follow the instructions below to integrate with your ESP of choice.
 
 {% alert tip %}
-Deep links&#8212;links that direct users toward a specific page or place within an app or website&#8212;are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in a click-recording domain, breaking the original link. As such, supporting deep links requires additional setup. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Deep links&#8212;links that direct users toward a specific page or place within an app or website&#8212;are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in a click-recording domain, breaking the original link. As such, supporting deep links requires additional setup. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 {% endalert %}
 
 ### Step 1: Set up OneLink in AppsFlyer
