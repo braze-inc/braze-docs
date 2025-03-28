@@ -42,7 +42,7 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 
 ### Timestamps for event properties
 
-If you're using `event_properties` in Canvas, timestamps are normalized to UTC, with some exceptions detailed below. Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
+If you're using `event_properties` in a Canvas, timestamps are normalized to UTC, with some exceptions detailed below. Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 
 {% raw %}
 ```liquid
