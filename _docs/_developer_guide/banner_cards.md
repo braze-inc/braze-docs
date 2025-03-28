@@ -2,7 +2,6 @@
 page_order: 2.2
 nav_title: Banner Cards
 article_title: Banner Cards
-hidden: true
 description: "This landing page is home to all things Banner Cards, including articles on how to create Banner Cards, and use cases."
 channel:
 - Banners
