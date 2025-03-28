@@ -1,6 +1,6 @@
 ---
-nav_title: FAQ
-article_title: Push FAQ
+nav_title: FAQs
+article_title: Push FAQs
 page_order: 80
 description: "This article addresses some of the most frequently asked questions that arise when setting up push campaigns."
 page_type: FAQ
@@ -14,7 +14,7 @@ channel:
 
 ### What happens when multiple users log into a single device?
 
-When a user logs out of an device or website, they will remain reachable by push until another user logs in and their push token is reassigned to the new user of the device. This is because a given app or website can only have one push subscription per device.
+When a user logs out of a device or website, they will remain reachable by push until another user logs in. At that point, the push token is reassigned to the new user. This is because each device can only have one active push subscription per app or website.
 
 When a push token is reassigned, the change is reflected in the user profile's **Push Changelog**. You can find this by going to the **Engagement** tab in the user profile.
 
@@ -22,10 +22,10 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 ### Why doesn't an opted-in user have a push token?
 
-The user's push token may have been moved to another user.
+This can happen if the user’s push token was reassigned to someone else who used the same device.
 
-1. Go to the **Push Changelog** in the **Engagement** tab of the affected user's profile, and look for the relevant push token. It will have a message that says the push token was moved to another user.
-2. Copy and paste the affected push token into the user search bar. If the token still exists, it will lead to a user that has more recently logged into the device.
+1. Go to the **Push Changelog** in the **Engagement** tab of the affected user's profile and look for the relevant push token. It will have a message that says the push token was moved to another user.
+2. Copy and paste the affected push token into the user search bar. If the token still exists, it will lead to a user who has more recently logged into the device.
 3. Have the user log into the profile with the missing token.
 4. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
