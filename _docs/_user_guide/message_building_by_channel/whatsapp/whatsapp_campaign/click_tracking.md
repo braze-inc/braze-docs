@@ -25,7 +25,7 @@ To set up click tracking for response messages:
 
 The link will be shortened to the Braze domain, or the custom domain specified for the subscription group, and personalized for the user.
 
-Any static URLs that start with `http://` or `https://` will be shortened. Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization (such as user-level tracking targeting) will be valid for two months.
+Any static URLs that start with `http://` or `https://` will be shortened. Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization (such as user-git level tracking targeting) will be valid for two months.
 
 ![WhatsApp message composer with content body and a button.][1]
 
