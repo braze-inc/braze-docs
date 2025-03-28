@@ -34,8 +34,4 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
-### What if a user's push token no longer exists?
-
-If a user's push token doesn't exist, check the user's profile for other accounts using the same device. The push token should be in one of those, and the associated account should have a more recent session time than the original.
-
 [1]: {% image_buster /assets/img/push_changelog_faq.png %}
