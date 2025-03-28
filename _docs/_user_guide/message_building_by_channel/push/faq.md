@@ -24,11 +24,18 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 This can happen if the user’s push token was reassigned to someone else who used the same device.
 
-1. Go to the **Push Changelog** in the **Engagement** tab of the affected user's profile and look for the relevant push token. It will have a message that says the push token was moved to another user.
-2. Copy and paste the affected push token into the user search bar. If the token still exists, it will lead to a user who has more recently logged into the device.
-3. Have the user log into the profile with the missing token.
-4. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
+1. Go to the **Push Changelog** in the **Engagement** tab of the affected user's profile.
+2. Look for a message that says the push token was moved to another user.
+3. Copy the push token and paste into the user search bar. 
+4. If the push token still exists, you'll be directed to the user who most recently logged in on the device.
 
-If the push token doesn't exist, check the user docs for other accounts using the same device. The push token should be in one of those, and the associated account should have a more recent session time than the original.
+If you want the push token reassigned to the original user:
+
+1. Have the original user log into the profile with the missing push token.
+2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
+
+### What if a user's push token no longer exists?
+
+If a user's push token doesn't exist, check the user's profile for other accounts using the same device. The push token should be in one of those, and the associated account should have a more recent session time than the original.
 
 [1]: {% image_buster /assets/img/push_changelog_faq.png %}
