@@ -17,6 +17,7 @@ Prior to this feature, the entry properties could only be used in the first step
 ## Using entry properties
 
 Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+
 - [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
@@ -26,7 +27,7 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
-The Canvas entry properties object has a maximum size limit of 50 KB. 
+The Canvas entry properties object has a maximum size limit of 50 KB.
 {% endalert %}
 
 ## Updating Canvas to use entry properties
