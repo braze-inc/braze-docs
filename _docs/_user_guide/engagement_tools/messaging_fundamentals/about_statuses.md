@@ -6,7 +6,7 @@ tool: Campaigns
 description: "Learn about statuses for campaigns and Canvases and how to use them in the dashboard."
 ---
 
-# Statuses
+# Campaign and Canvas statuses
 
 > Learn about statuses for campaigns and Canvases and how you can use them in the dashboard.
 
