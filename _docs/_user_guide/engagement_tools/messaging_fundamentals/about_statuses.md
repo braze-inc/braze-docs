@@ -41,7 +41,7 @@ These are the available statuses for campaigns and Canvases:
 
 When a Canvas is stopped, the following occurs:
 
-- **Scheduled messages:** Your scheduled messages won't be sent to users, regardless of their place in the Canvas. This also includes users who were queued due to rate limiting.
+- **Scheduled messages:** Your scheduled messages won't be sent, regardless of a user's place in the Canvas. This also includes users who were queued due to rate limiting.
 - **Email sends:** Email sends may not stop immediately, as your email service provider (ESP) may continue processing your existing requests.
 - **Delay steps:** Users in a [delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will remain there as normal, but will exit the Canvas when the set period ends.
 
