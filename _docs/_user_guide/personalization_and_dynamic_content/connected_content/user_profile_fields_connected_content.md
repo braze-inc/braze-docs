@@ -30,7 +30,7 @@ The Connected Content response is {% raw %}`Your language is ${language}`{% endr
 
 The language itself won't be templated. This is because Braze needs to know what fields to retrieve from the user before we make the Connected Content call.
 
-To render the Liquid passback properly, you must include the {% raw %}`${language}`{%endraw%} tag anywhere in the request, as shown in the following code snippet. The Liquid preprocessor will know to grab the "language" attribute from the user to have it ready for templating the response.
+To render the Liquid passback properly, you must include the {% raw %}`${language}`{% endraw %} tag anywhere in the request, as shown in the following code snippet. The Liquid preprocessor will know to grab the "language" attribute from the user to have it ready for templating the response.
 
 {%raw%}
 ```liquid
