@@ -21,9 +21,9 @@ You'll set up a custom event to use as a subscription event, such as a `product_
 You can create a price drop subscription for a user and a catalog item it occurred for when the following occurs:
 
 - A selected custom event is performed by a user
-- The custom event has a `type` property that includes `price_drop`
+- The custom event has a `type` property that includes `price_drop` (`type` must be an array)
 
-To set both price-drop and back-in-stock notifications in the same event, you must use an array for the `type` property. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. 
+To set both price-drop and back-in-stock notifications in the same event, you can use the `type` property that must be an array. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. 
 
 The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
 
