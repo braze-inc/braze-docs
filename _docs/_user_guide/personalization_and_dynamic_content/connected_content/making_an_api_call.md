@@ -1,12 +1,12 @@
 ---
-nav_title: Making an API Call
+nav_title: Making a Connected Content Call
 article_title: Making a Connected Content API Call
 page_order: 0
 description: "This reference article covers how to make a Connected Content API call, as well as helpful examples and advanced Connected Content use cases."
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making a Connected Content API call
 
 > Use Connected Content to insert any information accessible by API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.<br><br>This page covers how to make Connected Content API calls, advanced Connected Content use cases, error handling, and more.
 
@@ -144,7 +144,7 @@ The following example illustrates retrieving and saving an access token to a loc
 
 #### Step 2: Authorize the API using the retrieved access token
 
-Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
+After the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
 
 {% raw %}
 ```
@@ -178,6 +178,24 @@ Use [Webhook.site](https://webhook.site/) to troubleshoot your Connected Content
 2. Preview and test your campaign or Canvas step to see the requests come through to this website.
 
 Using this tool, you can diagnose issues with the request headers, request body, and other information that is being sent in the call.
+
+## Frequently asked questions
+
+### Why are there more Connected Content calls than users or sends? 
+
+Braze may make the same Connected Content API call more than once per recipient because we may need to make a Connected Content API call to render a message payload. Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
+
+It’s expected that a Connected Content API call can be made more than once per recipient, even if the retry logic is not used in the call. We recommend setting the rate limit of any messages that contain  Connected Content or configuring your servers to be better able to handle the expected volume.
+
+### How does rate limiting work with Connected Content?
+
+Connected Content doesn’t have its own rate limit. Instead, the rate limit is based on the message-sending rate. We recommend setting the messaging rate limit below your intended Connected Content rate limit if there are more Connected Content calls than messages sent.  
+
+### What’s caching behavior?
+
+By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

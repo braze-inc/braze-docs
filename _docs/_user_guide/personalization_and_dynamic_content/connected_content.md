@@ -10,27 +10,30 @@ description: "This landing page is home to all things Connected Content. Here, y
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Making An API Call
+- name: Making a Connected Content API Call
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Local Connected Content Variables
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
+- name: Caching Connected Content Responses
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Aborting Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   image: /assets/img/braze_icons/stop-circle.svg
-- name: Connected Content Retries
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  image: /assets/img/braze_icons/refresh-ccw-01.svg
-- name: Public APIs
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  image: /assets/img/braze_icons/target-05.svg
 - name: Pulling User Profile Data
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg
+- name: Connected Content Retries
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Troubleshooting Connected Content Requests 
   link: /docs/help/help_articles/api/webhook_connected_content_errors/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Using Public APIs
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
+  image: /assets/img/braze_icons/target-05.svg
 ---
 
 <br><br>
