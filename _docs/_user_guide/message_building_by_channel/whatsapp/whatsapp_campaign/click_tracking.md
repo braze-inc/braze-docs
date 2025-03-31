@@ -15,6 +15,10 @@ channel:
 
 > Click tracking allows you to collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your WhatsApp campaigns, and re-engage the users in future campaigns. <br><br> This page covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more.
 
+{% alert important %}
+Click tracking for WhatsApp is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 ## How it works
 
 ### Response messages 
@@ -25,7 +29,7 @@ To set up click tracking for response messages:
 
 The link will be shortened to the Braze domain, or the custom domain specified for the subscription group, and personalized for the user.
 
-Any static URLs that start with `http://` or `https://` will be shortened. Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization (such as user-git level tracking targeting) will be valid for two months.
+Any static URLs that start with `http://` or `https://` will be shortened. Shortened URLs that contain Liquid personalization (such as user-level tracking targeting) will be valid for two months.
 
 ![WhatsApp message composer with content body and a button.][1]
 
