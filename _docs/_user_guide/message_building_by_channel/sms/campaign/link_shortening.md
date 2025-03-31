@@ -13,7 +13,9 @@ channel:
 
 # Link shortening
 
-> Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. <br><br> This page covers how to turn on link shortening in your SMS messages, test shortened links, use your custom domain in shortened links, and more.
+> This page covers how to turn on link shortening in your SMS messages, test shortened links, use your custom domain in shortened links, and more.
+
+Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 

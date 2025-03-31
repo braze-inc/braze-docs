@@ -13,7 +13,11 @@ channel:
 
 # Click tracking
 
-> Click tracking allows you to collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your WhatsApp campaigns, and re-engage the users in future campaigns. <br><br> This page covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more.
+> This page covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more.
+
+Click tracking lets you measure when someone taps a link in your WhatsApp message—giving you a clear view into what content is driving engagement. Braze shortens your URLs, adds tracking behind the scenes, and logs click events as they happen.
+
+You can turn on click tracking in both response and template messages. It works with links in buttons and body text, and supports personalized URLs and custom domains. After it's turned on, you'll see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
 
 {% alert important %}
 Click tracking for WhatsApp is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -107,7 +111,7 @@ Click data will be automatically reported in the analytics dashboard.
 
 ## Retargeting users 
 
-You can segment and filter users based on their interactions with the links.
+You can use the `Clicked/Opened Step` filter and `clicked tracked WhatsApp link` interaction to segment users based on their interactions with the links.
 
 ![Filter group with a filter for "clicked tracked WhatsApp link".][8]
 
