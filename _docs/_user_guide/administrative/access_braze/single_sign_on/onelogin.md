@@ -21,10 +21,6 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## IdP-initiated login within OneLogin
 
 ### Step 1: Configure the Braze app
@@ -41,10 +37,6 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 Once you have set up Braze within your OneLogin, they will provide a target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
 
 After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
-{% endalert %}
 
 On this page, input the following:
 

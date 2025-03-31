@@ -21,7 +21,7 @@ This feature is currently in Early Access. Please reach out to the Future Anthem
 |--------------------------|--------------------------------------------------------|
 | Future Anthem Account    | A Future Anthem account. |
 | Braze REST API key       | A Braze REST API key with the [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track). This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint      | The Braze [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) that matches your instance, such as `rest.iad-01.com`. |
+| Braze REST endpoint      | The Braze [REST endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) that matches your instance, such as `rest.iad-01.com`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use Cases

@@ -8,6 +8,8 @@ description: "Integrating Braze and Celebrus."
 
 > Celebrus seamlessly integrates with the Braze SDK across web and mobile app channels, facilitating the population of Braze with channel activity data. This includes comprehensive insights into visitor traffic across digital assets over specified periods. <br><br>In addition, Celebrus captures rich profile data for each individual customer, which can be synced with Braze. This empowers you to create effective Braze analytics and communication strategies based on comprehensive, accurate, and detailed first-party data. This capability is further bolstered by Celebrus' Machine Learning-driven Signals, allowing for hassle-free data capture without the need for extensive tagging. With a robust first-party identity graph in place, all data becomes instantly accessible for immediate use. 
 
+_This integration is maintained by Celebrus._
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -35,7 +37,7 @@ The connector deploys and configures the Braze SDK in your channel, so you will 
 ```
 
 {% alert important %}
-The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) or take advantage of other Braze SDK-supported features. 
+The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) or take advantage of other Braze SDK-supported features. 
 {% endalert%}
 
 ### Celebrus connector for Braze custom attributes

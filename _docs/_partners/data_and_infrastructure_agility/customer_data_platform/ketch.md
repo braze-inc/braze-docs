@@ -11,6 +11,10 @@ search_tag: Ketch
 
 > [Ketch](https://www.ketch.com) enables businesses to be responsible stewards of their data. Ketch provides simplified privacy operations and complete, dynamic data control and intelligence. 
 
+_This integration is maintained by Ketch._
+
+## About the integration
+
 The Braze and Ketch integration allows you to control customer communication preferences within the Ketch preference center and automatically propagate these changes to Braze. 
 
 {% alert note %}
@@ -32,7 +36,7 @@ Looking for guidance on creating subscription groups? Check out our articles for
 1. In your [Ketch instance](https://app.ketch.com), navigate to **Data Systems**, and select **Braze**. Then, click **New Connection**.
 2. Give your Braze connection an identifiable name, which will be used to refer to this connection in API-based processes. Note that a code will also be created for that connection. This code should be unique across all connections.
 3. Confirm the identity mapping of your users. By default, Ketch will map user identities by a user's email address, or by the `external_id` in Braze.
-4. Add the Braze API key and provide the API endpoint. Note this [API endpoint](https://www.braze.com/docs/api/basics/#endpoints) is based on which Braze instance your organization is using.
+4. Add the Braze API key and provide the API endpoint. Note this [API endpoint]({{site.baseurl}}/api/basics/#endpoints) is based on which Braze instance your organization is using.
 
 ### Step 2: Configure subscription preferences
 

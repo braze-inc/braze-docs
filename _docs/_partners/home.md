@@ -91,7 +91,7 @@ valid_partner_list:
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
@@ -208,8 +208,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
 - name: Wunderkind
@@ -318,4 +316,30 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/constructor/
 - name: Email Love
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
+- name: Adikteev
+  url: /docs/partners/data_and_infrastructure_agility/analytics/adikteev/
+- name: Criteo
+  url: /docs/partners/canvas_steps/criteo_audience_sync/
+- name: Databricks
+  url: /docs/user_guide/data/cloud_ingestion/integrations/
+- name: Datadog
+  url: /docs/partners/data_and_infrastructure_agility/analytics/datadog/
+- name: Front
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
+- name: Notify
+  url: /docs/partners/message_personalization/dynamic_content/notify/
+- name: Odicci
+  url: /docs/partners/message_personalization/dynamic_content/odicc/
+- name: Pinterest
+  url: /docs/partners/canvas_steps/pinterest_audience_sync/
+- name: Snapchat
+  url: /docs/partners/canvas_steps/snapchat_audience_sync/
+- name: TikTok
+  url: /docs/partners/canvas_steps/tiktok_audience_sync/
+- name: Trustpilot
+  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+- name: VWO
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
+- name: SessionM
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 ---

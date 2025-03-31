@@ -13,10 +13,6 @@ channel:
 
 In the Braze dashboard, go to **Audience** > **Subscriptions** > **Email Preference Center**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups** > **Email Preference Center**.
-{% endalert %}
-
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
 
 {% alert important %}
@@ -38,10 +34,6 @@ Using Liquid enables you to retrieve the names of your subscription groups, and 
 | Valid user | A user with an email address and an external ID. |
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Settings** > **API Keys** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
 
 ### Step 1: Use the Create preference center endpoint
 

@@ -23,10 +23,6 @@ Teams are not available on all Braze contracts. If you'd like to access this fea
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
-{% endalert %}
-
 ![Adding a new team][68]
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
@@ -38,10 +34,6 @@ If a team is defined by a custom attribute, language, or country, you can then u
 Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign team-level permissions to a dashboard user with limited access. When assigned to a team, dashboard users are limited to only read or write data available to their particular teams, such as user language, location, or custom attribute, as defined when the team was created.
 
 To assign a user to a team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and selecting **Manage Users**.
-{% endalert %}
 
 Then perform the following steps:
 

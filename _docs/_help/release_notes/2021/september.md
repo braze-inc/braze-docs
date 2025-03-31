@@ -24,7 +24,7 @@ Contact Cards are a standardized file format for sending business and contact in
 
 ## Default Content Cards customization
 
-You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/content_cards/customizing_styles/). 
+You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/). 
 
 ## API rate limits
 

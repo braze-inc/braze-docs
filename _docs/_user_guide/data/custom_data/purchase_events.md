@@ -19,13 +19,13 @@ You can log purchases by passing a [purchase object]({{site.baseurl}}/api/object
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Viewing purchase data
 
@@ -256,10 +256,6 @@ This helps make products easy to identify for segmentation and triggering.
 You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 
 In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) to learn more.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

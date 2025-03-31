@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [eduMe](https://edume.com) is a mobile-based training tool that gives your workforce the knowledge they need to succeed, when they need it, wherever they are. 
 
+_This integration is maintained by eduMe._
+
+## About the integration
+
 The Braze and eduMe integration leverages Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) to give your users access to eduMe courses and lessons in your Braze campaigns. Individual and group progress can then be tracked through eduMe reporting functionality.
 
 ## Prerequisites
@@ -53,3 +57,4 @@ Access your onboarding course at:
 3. Users who arrive at eduMe through this link will be added to an eduMe team or group of your choosing. Replace `groupId` with the relevant team ID or eduMe group ID. You will typically use the team ID except for courses that require enrollment, in which case you should use the group ID<br><br>
 4. Include an appropriate field to map the `externalUserId` field to. The example connected content call uses the `driver_id`, though your field will likely be different. This ID will be available in eduMe reports, allowing you to correlate them with your systems.<br><br>
 5. Lastly, customize and test your message as needed. We recommend you send at least one test message, access the eduMe content, complete the lesson or course, and verify the eduMe analytics are being recorded. 
+

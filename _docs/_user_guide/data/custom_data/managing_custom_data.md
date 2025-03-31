@@ -18,10 +18,6 @@ To pre-populate custom events and attributes, do the following:
 
 1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
-{% endalert %}
-
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
 
 {: start="2"}
@@ -83,10 +79,6 @@ Blocklisting a high number of events and attributes is possible, but not advisab
 Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than 300 items, this data will be sent from the SDK. If you do not need to use the event or attribute in the future, consider removing it from your app code during your next release. Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at any time.
 
 ## Deleting custom data
-
-{% alert important %}
-Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
-{% endalert %}
 
 As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
 
