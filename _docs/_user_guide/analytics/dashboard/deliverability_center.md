@@ -108,7 +108,7 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
 {% alert important %}
-If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/help/support/) with a list of your IP addresses.
+If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) with a list of your IP addresses.
 {% endalert %}
 
 ![][8]

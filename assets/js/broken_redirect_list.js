@@ -15,6 +15,7 @@ validurls['/docs/best_practices/#email'] = '/docs/help/best_practices/email/over
 validurls['/docs/best_practices/email#managing-email-subscriptions'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 validurls['/docs/best_practices/email'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
+validurls['/docs/help/support/'] = '/docs/user_guide/administrative/support/';
 
 validurls['/docs/whatsapp_response_messaging/'] = '/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#response-messages';
 validurls['/docs/dashboard_features/#changing-email-subscriptions'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions';

@@ -4,7 +4,7 @@ article_title: Support
 description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
 alias: /braze_support/
 page_type: reference
-search_rank: 1
+search_rank: 7
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
@@ -66,6 +66,18 @@ The more insights you can offer, the better. Include specifics like the workspac
 
 Share a sampling of users rather than the entire affected segment. Providing a smaller amount of users helps us narrow our scope and speed up our investigations.
 
+### Attach network logs (HAR logs)
+
+If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
+
+Have the affected user do the following:
+
+1. Open their developer tools. If using Chrome, this can be be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
+2. Select **Network** > **Fetch/XHR** or **XHR**.
+3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
+
+Then attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
+
 ### Clarify expected versus actual behavior
 
 Let us know what you were expecting and what actually happened. This can help us narrow down the possible causes of the issue.
@@ -81,3 +93,5 @@ Select the appropriate severity level to help us assign the right resources to a
 {% alert important %}
 Marking an an issue as "Critical" means your production instance is down and all work within Braze has stopped.
 {% endalert %}
+
+[1]: {% image_buster /assets/img/network_xhr.png %}

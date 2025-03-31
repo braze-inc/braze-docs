@@ -32,6 +32,9 @@ guide_featured_list:
 - name: Product Portal
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Braze Support
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 ## Supported browsers
@@ -59,18 +62,4 @@ Clearing cookies will log you out, so unsaved work will be lost.
 
 If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
 
-#### Creating a helpful Support ticket
-
-If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
-
-Have the affected user do the following:
-
-1. Open their developer tools. If using Chrome, this can be be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
-2. Select **Network** > **Fetch/XHR** or **XHR**.
-3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
-
-Then attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
-
 <br><br>
-
-[1]: {% image_buster /assets/img/network_xhr.png %}
