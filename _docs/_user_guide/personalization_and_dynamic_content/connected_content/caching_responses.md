@@ -15,7 +15,7 @@ To prevent caching, you can specify `:no_cache`, which may cause increased netwo
 
 ## Default cache settings
 
-The cache age is up to 5 minutes (300 seconds). You can update this by adding the :cache_max_age parameter to the Connected Content call. An example is:
+The cache age is up to five minutes (300 seconds). You can update this by adding the `:cache_max_age` parameter to the Connected Content call. An example is:
 
 {% raw %}
 ```
