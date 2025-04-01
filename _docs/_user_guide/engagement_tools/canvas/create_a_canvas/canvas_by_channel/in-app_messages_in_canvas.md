@@ -48,7 +48,7 @@ In the in-app message composer, you can choose when the in-app message will expi
 | **On a specific date and time** | Select a specific date and time when the in-app message will be no longer available. | If you have a sale that ends on November 30, 2024, select this option so that users no longer see the associated in-app message when the sale ends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Use cases
+## Use cases
 
 Braze recommends that you consider using this feature in your promotional and onboarding Canvases.
 
@@ -183,17 +183,13 @@ To use the **Advance when message sent** option, add a separate [audience path](
 
 {% details Original Canvas editor %}
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with in-app messages.
-{% endalert %}
+You can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with in-app messages.
 
 Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (such as push or email). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
 
 If you have multiple in-app messages within one Canvas, a user must start multiple sessions to receive each of those individual messages.
-
-![]({% image_buster /assets/img/iam-advancement-behavior.png %})
 
 {% alert important %}
 When **Advance When In-App Message Live** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -208,8 +204,6 @@ Steps with an in-app message and another channel have the following advancement 
 | Advance When Message Sent | Users must be sent an email, webhook, or push notification, or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email, webhook, or push, or hasn't viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not. <br> <br> Users must match the step's segment and filter criteria to advance to the next steps. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img/push-advancement-behavior.png %})
 
 {% alert important %}
 When **Entire Audience** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you don't want the in-app message to be live when the next steps in the Canvas are delivered, check that the expiration is shorter than the delay on subsequent steps.
