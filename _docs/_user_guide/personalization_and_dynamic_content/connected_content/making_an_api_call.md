@@ -185,7 +185,7 @@ Using this tool, you can diagnose issues with the request headers, request body,
 
 Braze may make the same Connected Content API call more than once per recipient because we may need to make a Connected Content API call to render a message payload. Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
 
-It’s expected that a Connected Content API call can be made more than once per recipient, even if the retry logic is not used in the call. We recommend setting the rate limit of any messages that contain  Connected Content or configuring your servers to be better able to handle the expected volume.
+It’s expected that a Connected Content API call can be made more than once per recipient, even if the retry logic is not used in the call. We recommend setting the rate limit of any messages that contain Connected Content or configuring your servers to be better able to handle the expected volume.
 
 ### How does rate limiting work with Connected Content?
 
