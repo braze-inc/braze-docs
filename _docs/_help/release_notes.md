@@ -61,7 +61,7 @@ guide_featured_list:
 
 ### Updates to Braze navigation
 
-Updates to Braze navigation are being released gradually. You may not see these changes in your environment yet. This updated navigation is designed to help you efficiently access features and content across devices. Note that the option to switch between navigation versions is no longer available. Learn more at our dedicated [Navigating Braze]({{site.baseurl}}/user_guide/administrative/access_braze/navigation) article.
+The updated navigation in Braze is designed to help you efficiently access features and content across devices. Note that the option to switch between navigation versions is no longer available. Learn more at our dedicated [Navigating Braze]({{site.baseurl}}/user_guide/administrative/access_braze/navigation) article.
 
 ### Developer Guide detangle
 
@@ -79,7 +79,7 @@ Now, platform-level tasks have been merged into single pages and shared SDK feat
 
 ![The updated Android documentation located in the Android tab of the Integrating the SDK article.]({% image_buster /assets/img/after_android.png %})
 
-#### Contributing to Braze Docs
+### Contributing to Braze Docs
 
 If you didn’t know, our docs are fully open-source! You can learn how in our [Contributing Guide]({{site.baseurl}}/contributing/home). This month, we documented some site functionality, like [forcing sections to auto-expand]({{site.baseurl}}/contributing/content_management/sections#forcing-auto-expand) and [rendering API-generated content]({{site.baseurl}}/contributing/generating_a_preview#step-2-start-a-local-server).
 
@@ -138,11 +138,23 @@ There are now three [default user profile attributes]({{site.baseurl}}/partners/
 
 #### Flutter support for Banner Cards
 
+{% multi_lang_include release_type.md release="Early access" %}
+
 Banner Cards now support Flutter. Additionally, all Banner Card documentation has been overhauled for easier usability. Check out the following articles to get started:
 
 - [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards)
 - [Creating Banner Card campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
 - [Embedding Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
+
+#### WhatsApp custom domains
+
+You can now assign [custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/) to one or multiple WhatsApp subscription groups.
+
+#### WhatsApp click tracking
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+[Click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) lets you measure when someone taps a link in your WhatsApp message—giving you a clear view into what content is driving engagement. Braze shortens your URLs, adds tracking behind the scenes, and logs click events as they happen.
 
 #### Limit entrance volume for Canvas
 
