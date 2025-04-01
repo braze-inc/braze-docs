@@ -34,7 +34,7 @@ Starting in macOS 13, on certain devices, you can test push notifications on an 
 
 ### Step 3: Launching a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to APNs to deliver your message. Specifically, the requests are passed to APNs for each current valid push token unless **Send to a user's most recent device** is selected. Braze logs a successful delivery on the user profile at this point, though the user may not have received the actual message for reasons including:
+When a push campaign is launched, Braze will make requests to APNs to deliver your message. Specifically, the requests are passed to APNs for each current valid push token unless **Send to a user's most recent device** is selected. After Braze receives a successful response from APNs, we will log a successful delivery on the user profile, though the user may not have received the actual message for reasons including:
 - Their device is powered off.
 - Their device isn't connected to the internet (Wi-Fi or cellular).
 - They recently uninstalled the app.
