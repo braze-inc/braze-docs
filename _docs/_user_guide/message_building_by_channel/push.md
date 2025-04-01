@@ -59,5 +59,8 @@ guide_menu_list:
 - name: Troubleshooting
   link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Frequently Asked Questions
+  link: /docs/user_guide/message_building_by_channel/push/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

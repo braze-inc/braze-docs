@@ -1,30 +1,51 @@
 ---
-nav_title: Messaging Statuses
-article_title: Messaging Statuses
+nav_title: Statuses
+article_title: Campaign and Canvas statuses
 page_order: 1
-tool: Campaigns
-page_type: reference
-description: "This reference article gives an overview of the various statuses a campaign and Canvas can have and what they mean."
+description: "Learn about statuses for campaigns and Canvases and how to use them in the dashboard."
+tool:
+    - Campaigns
+    - Canvas
 ---
 
-# Understanding messaging statuses
+# Campaign and Canvas statuses
 
-> On your Braze dashboard, your campaigns and Canvases are grouped by their status. Learn about the different statuses and descriptions for what they mean and how you can organize your messages.
+> Learn about statuses for campaigns and Canvases and how you can use them in the dashboard.
 
-## Message statuses
+## Filtering by status
 
-As you build and send campaigns and Canvases, these messages will have their status displayed by default. You can update the status of the message by selecting the <i class="fas fa-ellipsis-vertical"></i> menu in the row.
+To filter your campaigns or Canvases by status, select **All Statuses**, then choose a status.
 
-Refer to the following table for statuses and their descriptions.
+![The 'All Statuses' dropdown in the Braze dashboard.]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
+
+## Changing the status
+
+To change the status of a campaign or Canvas, select the <i class="fas fa-ellipsis-vertical"></i> menu, then choose a status.
+
+![A list of Canvases in the Braze dashboard, with the menu open for one of the Canvases.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+
+## Available statuses
+
+These are the available statuses for campaigns and Canvases:
 
 | Status | Description |
 | --- | --- |
 | Active | Active campaigns and Canvases are in the process of sending. By default, you'll see active campaigns and Canvases on the respective pages. |
 | Draft | Drafts of campaigns and Canvases are saved but not launched. To continue editing and begin sending, you can select the draft by going to **Messaging** in the Braze dashboard and selecting **Canvas** or **Campaigns**. |
 | Archived | Archived campaigns and Canvases are messages that are no longer being sent. These campaigns and Canvases are also removed from the statistic graphs on the [**Home**]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard) and [**Revenue**]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report) pages.|
-| Stopped | Stopped campaigns and Canvases are paused, but you can still edit them. To resume a stopped campaign or Canvas, select the <i class="fas fa-ellipsis-vertical"></i> menu then **Resume**. |
+| Stopped | Stopped campaigns and Canvases are paused, but you can still edit them. To resume, select the <i class="fas fa-ellipsis-vertical"></i> menu, then **Resume**. For more information, refer to [Stopped Canvas behavior](#stopped-canvas-behavior). |
 | Idle | When a campaign or Canvas is no longer sending messages, Braze will assign it an idle status to help sort and manage your list of campaigns and Canvases. You can view which campaigns or Canvases will be automatically stopped and the associated stop date. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Stopped Canvas behavior {#stopped-canvas-behavior}
+
+When a Canvas is stopped, the following occurs:
+
+- **Scheduled messages:** Your scheduled messages won't be sent, regardless of a user's place in the Canvas. This also includes users who were queued because of rate limiting.
+- **Email sends:** Email sends may not stop immediately, as your email service provider (ESP) may continue processing your existing requests.
+- **Delay steps:** Users in a [delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will remain there as normal, but will exit the Canvas when the set period ends.
+
+To resume the Canvas, select the <i class="fas fa-ellipsis-vertical"></i> menu, then **Resume**. When reactivated, any previously-stopped messages will be sent as scheduled&#8212;as long as the scheduled time hasn't already passed.
 
 ## Best practices
 
