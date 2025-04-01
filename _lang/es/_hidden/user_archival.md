@@ -40,6 +40,7 @@ Los "usuarios inactivos" son usuarios a los que no se puede acceder y que probab
 - No puedo recibir SMS. Por ejemplo, no tienen un número de teléfono válido o se han dado de baja de todos los grupos de suscripción a SMS.
 - No puedo recibir notificaciones push. Por ejemplo, han desinstalado la aplicación o han desactivado los permisos push.
 - No puedo recibir un mensaje de WhatsApp. Por ejemplo, no tienen un número de teléfono válido o se han dado de baja de todos los grupos de suscripción de WhatsApp.
+- No puedo recibir un mensaje de LINE. Por ejemplo, no tienen un ID de LINE o se han dado de baja de todos los grupos de suscripción de LINE.
 - No has utilizado ninguna aplicación móvil o visitado un sitio web en un espacio de trabajo en más de seis meses.
 - Hace más de seis meses que no recibo mensajes de un espacio de trabajo.
 - No se ha actualizado en más de seis meses.
@@ -60,7 +61,7 @@ Los usuarios del grupo de control global nunca serán archivados, aunque cumplan
 
 ### Grupo de muestra de tratamiento
 
-Los usuarios del grupo de muestra de tratamiento están excluidos del archivo dentro de un informe de grupo de control global.
+Los usuarios del grupo de muestra de tratamiento en un Informe de grupo de control global están excluidos del archivo.
 
 ## Usuarios de prueba
 
@@ -94,7 +95,9 @@ Esto te permite lo siguiente:
 
 ### Pasos
 
-1. Dirígete a usuarios que cumplan los criterios de archivo de tu marca y que te gustaría conservar.<br><br>
+1. Dirígete a usuarios que cumplan los criterios de archivo de tu marca y que te gustaría conservar. Por ejemplo, podrías retener a los usuarios que:
+    - La última vez que recibiste un mensaje fue hace más de 23 semanas o nunca has recibido un mensaje<br>Y<br>
+    - Utilizó tu aplicación por última vez hace más de 23 semanas o tuvo cero sesiones en tu aplicación<br><br>
       ![Dirígete a usuarios que recibieron por última vez cualquier mensaje hace más de 23 semanas, que nunca han recibido un mensaje de una campaña o paso en Canvas, que utilizaron por última vez estas aplicaciones hace más de 23 semanas y que han utilizado estas aplicaciones exactamente cero veces.][2]<br><br>
 2. Establece que la nueva elegibilidad dure algo menos de 6 meses.<br><br>
       ![Controles de entrada con la reelegibilidad activada y la ventana de reelegibilidad fijada en 23 semanas.][3]<br><br>
