@@ -37,7 +37,7 @@ The Connected Content response body can be up to 1&nbsp;MB. If the response body
 
 ## Cache time 
 
-Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes.
+Connected Content will cache the value it returns from GET endpoints for a minimum of five minutes. If a cache time is not specified, the default cache time is five minutes.
 
 Connected Content cache time can be configured to be longer with :cache_max_age, as shown in the following example. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as Memcached. 
 
