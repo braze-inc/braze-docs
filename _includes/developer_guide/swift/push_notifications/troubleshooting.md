@@ -28,7 +28,7 @@ Starting in macOS 13, on certain devices, you can test push notifications on an 
 #### Considerations for push token generation
 
 - If users install your app on another device, another token will be created and captured in the same way. 
-- If users reinstall your app, a new token will be generated and again passed to Braze, but the original token may still be logged as valid by APNs and Braze.
+- If users reinstall your app, a new token will be generated and passed to Braze. However, the original token may still be logged as valid by APNs and Braze.
 - If users uninstall your app, Braze doesn't get immediately notified of this and the token will still appear as valid until it is retired by APNs. 
 - At some point, APNs will retire old tokens. Braze doesn't have control or visibility of this. 
 
