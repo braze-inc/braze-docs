@@ -144,6 +144,7 @@ When connecting different workspaces to the same Snowflake account, you must cre
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on doing this, refer to the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
+{% endtab %}
 
 {% tab Redshift %}
 #### Step 2.1: Create user and grant permissions 
