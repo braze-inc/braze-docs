@@ -30,6 +30,10 @@ On parle d'échec <i>d'envoi</i> définitif lorsqu'un e-mail ne parvient pas au 
 Un <i>échec provisoire d'envoi</i> survient lorsqu'un e-mail ne parvient pas au destinataire en raison d'une erreur de distribution temporaire, bien que l'adresse e-mail du destinataire soit valide. Un soft bounce peut se produire parce que la boîte de réception du destinataire est pleine, que le serveur était en panne ou que le message était trop volumineux pour la boîte de réception du destinataire.
 {% endif %}
 
+{% if include.metric == "Deferral" %}
+On parle de <i>report</i> lorsqu'un e-mail n'a pas été livré immédiatement, mais que Braze relance l'e-mail jusqu'à 72 heures après cet échec temporaire de la réception/distribution afin de maximiser les chances de réussite avant l'arrêt des tentatives pour cette campagne spécifique.
+{% endif %}
+
 {% if include.metric == "Body Click" %}
 Les notifications Push Story enregistrent un <i>clic du corps</i> lorsque la notification est cliquée. Aucun body click ne sera enregistré quand un message est développé ou lors de clics sur des boutons d’action.
 {% endif %}
@@ -102,8 +106,12 @@ Le <i>% de livraisons</i> est le pourcentage du nombre total de messages (envois
 On parle d'<i>échec de réception/distribution</i> lorsque le SMS n'a pas pu être envoyé en raison d'un débordement des files d'attente (envoi de SMS à un débit supérieur à celui que vos codes longs ou courts peuvent supporter).
 {% endif %}
 
+{% if include.metric == "Failed Delivery Rate" %}
+Le <i>taux de réception/distribution échouée</i> est le pourcentage d'envois qui ont échoué parce que le message n'a pas pu être envoyé. Cela peut se produire pour diverses raisons, notamment des débordements de file d'attente, des suspensions de compte et des erreurs de support dans le cas des MMS.
+{% endif %}
+
 {% if include.metric == "Direct Opens" %}
-<i>Ouvertures directes</i> est le nombre total (et le pourcentage) de notifications push qui ont été directement ouvertes à partir de ce push.
+Le nombre d'<i>ouvertures directes</i> est le nombre total d'utilisateurs qui ont ouvert votre application ou votre site web en appuyant directement sur la notification.
 {% endif %}
 
 {% if include.metric == "Emailable" %}
@@ -127,11 +135,11 @@ Le <i>revenu à vie</i> est la valeur <code>PurchaseEvents</code> totale (en USD
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-La <i>valeur à vie par utilisateur</i> est la moyenne de la somme des revenus de la campagne et du canvas pour un jour donné.
+La <i>valeur vie par utilisateur</i> est le <i>chiffre vie d'affaires</i> divisé par le nombre total d'<i>utilisateurs</i> (situé sur votre page d'accueil).
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
-Le <i>chiffre d'affaires quotidien moyen</i> est le <i>chiffre d'affaires à vie</i> divisé par le nombre total d'<i>utilisateurs</i> (situé sur votre page d'accueil).
+Le <i>chiffre d'affaires quotidien moyen</i> est la moyenne de la somme des chiffres d'affaires de la campagne et de Canvas pour un jour donné.
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
@@ -170,6 +178,10 @@ Les <i>conversions principales (A)</i> ou <i>événement de conversion principal
 La <i>lecture</i> est le moment où l'utilisateur lit le message WhatsApp. Les reçus de lecture de l'utilisateur doivent être activés pour que Braze puisse assurer le suivi des lectures.
 {% endif %}
 
+{% if include.metric == "Read Rate" %}
+Le <i>taux de lecture</i> est le pourcentage d'envois qui ont abouti à une lecture. Cette information n'est donnée que pour les utilisateurs qui ont activé les accusés de réception.
+{% endif %}
+
 {% if include.metric == "Received" %}
 La <i>réception</i> est définie différemment selon les canaux et peut avoir lieu lorsque les utilisateurs consultent le message, lorsqu'ils effectuent une action de déclenchement définie ou lorsque le message est envoyé au fournisseur de messages.
 {% endif %}
@@ -198,6 +210,10 @@ Le <i>chiffre d'affaires</i> est le chiffre d'affaires total, en dollars, réali
 L'<i>envoi au transporteur</i> est obsolète, mais continuera d'être pris en charge par les utilisateurs qui en disposent déjà. Il s'agit de la somme des <i>livraisons/distributions confirmées</i>, des <i>rejets</i> et des <i>envois</i> dont la livraison ou le rejet n'a pas été confirmé par le transporteur. Ceci inclut les instances dans lesquelles les opérateurs ne fournissent pas de confirmation de livraison ou de rejet, car certains opérateurs ne proposent pas ce service ou ne peuvent pas le faire au moment de l'envoi.
 {% endif %}
 
+{% if include.metric == "Sends to Carrier Rate" %}
+Le <i>taux d'envoi au transporteur</i> est le pourcentage du total des messages envoyés qui ont été classés comme étant des <i>envois au transporteur</i>. Cela inclut les instances où les transporteurs ne fournissent pas de confirmation de réception/distribution, car certains transporteurs ne fournissent pas cette confirmation ou ne peuvent pas le faire au moment de l'envoi. Ces indicateurs sont obsolètes mais continueront d'être pris en charge par les utilisateurs qui en disposent déjà.
+{% endif %}
+
 {% if include.metric == "Spam" %}
 <i>Spam</i> est le nombre total d'e-mails délivrés qui ont été marqués comme "spam". Braze désinscrit automatiquement les utilisateurs qui ont marqué un e-mail comme spam, et ces utilisateurs ne seront pas ciblés par des e-mails futurs.
 {% endif %}
@@ -211,11 +227,11 @@ Le nombre de <i>soumissions à l'enquête</i> est le nombre total de clics sur l
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-Le <i>nombre total de clics</i> est le nombre total (et le pourcentage) d'utilisateurs qui ont cliqué dans le message envoyé, indépendamment du fait que le même utilisateur clique plusieurs fois.
+Le <i>nombre total de clics</i> est le nombre de destinataires uniques qui ont cliqué sur un lien dans l'e-mail délivré.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
-Le terme <i>Total des rejets</i> désigne le nombre de fois où les cartes de contenu d'une campagne ont été rejetées. Si un utilisateur rejette deux fois un message, il ne sera compté qu’une seule fois.
+Le terme <i>Total des rejets</i> désigne le nombre de fois où les cartes de contenu d'une campagne ont été rejetées.
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
@@ -231,11 +247,11 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois dans un message et est mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message et est mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id.</a>
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
-Le terme <i>Rejets uniques</i> désigne le nombre d'utilisateurs qui ont rejeté des cartes de contenu dans le cadre d'une campagne. Un utilisateur qui rejette plusieurs fois une carte de contenu d’une campagne constitue un rejet unique.
+<i>Fermetures uniques</i> est le nombre de destinataires uniques qui ont renvoyé une carte de contenu d'une campagne. Un utilisateur qui rejette plusieurs fois une carte de contenu d’une campagne constitue un rejet unique.
 {% endif %}
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->

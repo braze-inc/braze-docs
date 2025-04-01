@@ -1,11 +1,11 @@
 ---
-nav_title: Public APIs
+nav_title: Using Public APIs
 article_title: Public APIs for Connected Content
-page_order: 4
+page_order: 10
 description: "This articles covers a list of publicly available APIs that can be used with Connected Content."
 ---
 
-# Public APIs
+# Using Public APIs for Connected Content
 
 > There are a variety of publicly available APIs that can be used for Connected Content. Public APIs allow you to insert custom data in messages. This page compiles a list of public APIs that could be used for Connected Content. However, there are many more APIs out there, providing a wide variety of potential Connected Content uses.  
 

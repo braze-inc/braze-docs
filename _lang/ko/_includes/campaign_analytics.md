@@ -305,8 +305,20 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">소프트바운스</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">연기</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### 연기
+
+지연 또는 연기는 이메일이 즉시 전달되지 않았을 때를 의미하지만, Braze는 이 임시 전달 실패 후 최대 72시간 동안 이메일을 재전송하여 특정 캠페인에 대한 시도가 중단되기 전에 성공적인 전달 가능성을 극대화합니다. 전형적인 연기 사유에는 받은편지함 제공자의 평판 기반 이메일 볼륨 속도 제한, 일시적인 연결 문제 또는 DNS 오류가 포함됩니다.
+
+_연기(Deferrals)_는 _소프트 반송(Soft Bounces)_과 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인당 하나의 소프트 바운스 이벤트를 보낼 것입니다. 2025년 2월 25일 이전에, 이러한 재시도는 1개의 캠페인 발송에 대해 여러 번의 소프트 반송으로 계산되었습니다.
+
+_Deferrals_는 현재 Currents 또는 Braze Snowflake 기능(예: Query Builder, SQL Segment, Snowflake Data Sharing)을 사용하여만 사용할 수 있습니다. 캠페인 또는 캔버스 분석에 포함하고 싶으시다면, [제품 피드백]({{site.baseurl}}/user_guide/administrative/access_braze/portal)을 제출해 주시기 바랍니다.
 
 ##### 추정된 실제 열람율 {#estimated-real-open-rate}
 
