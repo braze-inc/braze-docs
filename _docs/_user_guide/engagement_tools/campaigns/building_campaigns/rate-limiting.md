@@ -117,7 +117,7 @@ When sending a Canvas with a speed rate limit, the rate limit is shared between 
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content retry][19] is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content retry][19] is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
 
 Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the “back of the queue” and add an additional minute, if necessary, to the total minutes it would take to send your message.
 
