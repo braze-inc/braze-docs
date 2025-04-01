@@ -103,8 +103,6 @@ When an attribute or event is selected for deletion, its status is changed to **
 
 Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute. 
 
-Deleting custom data doesn't consume any [data points]({{site.baseurl}}/user_guide/data/data_points) and also doesn't generate new data points to use.
-
 ### Things to know
 
 When deleting custom data, keep in mind the following details:
@@ -113,6 +111,7 @@ When deleting custom data, keep in mind the following details:
 * Data is removed from the Braze platform and from user profiles.
 * You can "reuse" the custom attribute name or custom event name after deletion. This means if you notice that custom data "reappears" in Braze after deletion, this may be caused by an integration that hasn’t been stopped and is sending data with the same custom data name.
 * You may need to blocklist an item again if your deletion results in custom data reappearing. Blocklisting status isn’t preserved because the custom data is deleted.
+* Deleting custom data doesn't consume any [data points]({{site.baseurl}}/user_guide/data/data_points) and also doesn't generate new data points to use.
 
 ## Forcing data type comparisons
 
