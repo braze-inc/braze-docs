@@ -34,7 +34,7 @@ Por ejemplo, si utilizas [LINE]({{site.baseurl}}/user_guide/message_building_by_
 
 1. Dale un nombre único a tu plantilla de webhook.
 2. (Opcional) Añade una descripción de la plantilla para explicar cómo se va a utilizar esta plantilla.
-3. Añade [equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario para ayudar a encontrar y filtrar tu plantilla.
+3. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario para ayudar a encontrar y filtrar tu plantilla.
 
 ## Paso 4: Construye tu plantilla
 
