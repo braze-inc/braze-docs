@@ -8,7 +8,7 @@ description: "Este artículo de referencia describe cómo crear notificaciones d
 
 # Notificaciones de bajada de precios
 
-> Utilizando una combinación de notificaciones de bajada de precios a través de los catálogos Braze y un Canvas, puede notificar a los clientes cuando el precio de un artículo ha bajado. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reduzca el precio del artículo.
+> Utiliza una combinación de notificaciones de bajada de precios a través de los catálogos Braze y un Canvas para notificar a los clientes cuando el precio de un artículo ha bajado. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reduzca el precio del artículo.<br><br>Esta página explica cómo funcionan las notificaciones de bajada de precios y cómo puedes configurarlas y utilizarlas.
 
 Cuando un usuario active un evento personalizado para un artículo, le suscribiremos automáticamente para que reciba notificaciones de bajadas de precio de ese artículo. Cuando el precio del artículo cumpla tu regla de inventario (como una caída superior al 50 %), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
 
@@ -32,7 +32,7 @@ Siga estos pasos para configurar las notificaciones de bajada de precios en un c
     <br> ![Cajón de configuración del catálogo.][2]{: style="max-width:70%;"}
     - **Catálogo de alternativas:** El catálogo utilizado para la suscripción si no hay una propiedad `catalog_name` en el evento personalizado.
     - **Evento personalizado para suscribirse:** El evento personalizado Braze utilizado para suscribir a un usuario a las notificaciones de catálogo. Cuando se produzca este evento, se suscribirá el usuario que lo haya realizado.
-    - **Evento personalizado para cancelar suscripción:** El evento personalizado Braze utilizado para dar de baja a un usuario de las notificaciones.
+    - **Evento personalizado para cancelar suscripción:** El evento personalizado Braze utilizado para dar de baja a un usuario de las notificaciones. Este evento es opcional. Si el usuario no realiza este evento, se le cancelará la suscripción transcurridos 90 días o cuando se desencadene el evento de bajada de precio, lo que ocurra primero.
     - **Propiedad del evento ID del elemento:** La propiedad en el evento personalizado anterior que se utiliza para determinar el elemento para una suscripción o desuscripción. Esta propiedad del evento personalizado debe contener un ID de artículo que exista en un catálogo. El evento personalizado debe contener una propiedad `catalog_name` para especificar en qué catálogo se encuentra este artículo.
    
     - Un ejemplo de evento personalizado sería el siguiente
