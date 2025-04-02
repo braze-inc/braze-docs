@@ -7,7 +7,7 @@ description: "Esta página responde às perguntas frequentes sobre a ingestão d
 toc_headers: h2
 ---
 
-# Perguntas frequentes (FAQ)
+# Perguntas frequentes
 
 > Esta página contém respostas para algumas perguntas frequentes sobre a ingestão de dados na nuvem.
 
