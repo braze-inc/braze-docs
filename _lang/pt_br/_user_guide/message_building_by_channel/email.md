@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Criptografia do campo de identificador
-  link: /docs/user_guide/data_and_analytics/field_level_encryption/
+  link: /docs/user_guide/analytics/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Ferramenta de Promoção do Gmail
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
