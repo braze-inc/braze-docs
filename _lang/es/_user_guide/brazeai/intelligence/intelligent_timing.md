@@ -18,11 +18,17 @@ description: "Este artículo ofrece un resumen de Intelligent Timing (antes Entr
 
 ## Cómo funciona
 
-Braze calcula la hora óptima de envío basándose en un análisis estadístico de las interacciones anteriores de tus usuarios con tu aplicación, y de sus interacciones con cada canal de mensajería.
+Braze calcula la hora óptima de envío basándose en un análisis estadístico de las interacciones anteriores de tus usuarios con tu aplicación, y de sus interacciones con cada canal de mensajería. Se utilizan los siguientes datos de interacción: 
+
+- Horario de las sesiones
+- Push Direct Opens
+- Push Influenced Opens
+- Clics en correos electrónicos
+- Aperturas de correo electrónico (excluyendo [aperturas de máquina]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens))
 
 Por ejemplo, Sam puede abrir tus correos electrónicos por la mañana con regularidad, pero abre tu aplicación e interactúa con las notificaciones por la tarde. Eso significa que Sam recibiría una campaña por correo electrónico con Intelligent Timing por la mañana, mientras que recibiría campañas con notificaciones push por la tarde, cuando es más probable que interactúe.
 
-Si un usuario no tiene suficientes datos de interacción para que Braze calcule la hora de envío óptima, puedes especificar una [hora alternativa](#fallback-time). Además, las aperturas de máquina se excluyen de la consideración a efectos de calcular un tiempo óptimo.
+Si un usuario no tiene suficientes datos de interacción para que Braze calcule la hora de envío óptima, puedes especificar una [hora alternativa](#fallback-time).
 
 ## Utilizar Intelligent Timing
 
@@ -90,7 +96,7 @@ Más información sobre [cuándo comprueba Braze los criterios de elegibilidad p
 
 ##### Pruebas A/B con optimizaciones
 
-Si aprovechas [las pruebas A/B con una optimización]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), como el envío automático de la variante ganadora una vez finalizada la prueba A/B, la duración de la campaña aumentará. Por defecto, las campañas de Intelligent Timing enviarán la variante ganadora a los usuarios restantes al día siguiente de la prueba inicial, pero puedes cambiar esta fecha de envío.
+Si aprovechas [las pruebas A/B con una optimización]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), como el envío automático de la variante ganadora una vez finalizada la prueba A/B, la duración de la campaña aumentará. Por defecto, las campañas de Intelligent Timing enviarán la variante ganadora a los usuarios restantes al día siguiente de la prueba inicial, pero puedes cambiar esta fecha de envío.
 
 Te recomendamos que, si utilizas tanto Intelligent Timing como pruebas A/B, programes el envío de la variante ganadora 2 días después de la prueba inicial, en lugar de 1 día.
 
@@ -195,7 +201,7 @@ Braze necesita una cierta cantidad de datos de interacción para hacer una buena
 
 ### Envío fuera de plazo
 
-Tu campaña de Intelligent Timing podría estar enviándose más allá de la fecha programada si estás aprovechando las [pruebas A/B con una optimización]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Las campañas que utilizan optimizaciones de pruebas A/B pueden enviar automáticamente la variante ganadora una vez finalizada la prueba inicial, lo que aumenta la duración de la campaña. Por defecto, las campañas con una optimización enviarán la variante ganadora a los usuarios restantes al día siguiente de la prueba inicial, pero puedes cambiar esta fecha de envío.
+Tu campaña de Intelligent Timing podría estar enviándose más allá de la fecha programada si estás aprovechando las [pruebas A/B con una optimización]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). Las campañas que utilizan optimizaciones de pruebas A/B pueden enviar automáticamente la variante ganadora una vez finalizada la prueba inicial, lo que aumenta la duración de la campaña. Por defecto, las campañas con una optimización enviarán la variante ganadora a los usuarios restantes al día siguiente de la prueba inicial, pero puedes cambiar esta fecha de envío.
 
 Si utilizas Intelligent Timing, te recomendamos dejar más tiempo para que finalice la prueba A/B y programar el envío de la Variante Ganadora para 2 días después de la prueba inicial en lugar de 1 día.
 
