@@ -25,7 +25,7 @@ Sie sind sich nicht sicher, ob Sie eine Kampagne oder ein Canvas verwenden solle
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie dann **Kampagne erstellen**.
 2. Für Kampagnen auf mehreren Kanälen wählen Sie **Multichannel**. Andernfalls wählen Sie **Push-Benachrichtigung**. Wenn Sie sich immer noch nicht sicher sind, lesen Sie den Abschnitt **Entscheidung zwischen regulärer oder Multichannel-Push-Kampagne** weiter unten.
 3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu. **Tipp:** Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu. **Tipp:** Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Auswahl zwischen regulärer und kanalübergreifender Push-Kampagne %}
@@ -101,11 +101,13 @@ Der Inhalt der Registerkarte **Verfassen** hängt von der Art der Benachrichtigu
 
 #### Benachrichtigungskanal oder Gruppe (iOS und Android)
 
-Weitere Informationen zu plattformspezifischen Benachrichtigungsoptionen finden Sie unter [iOS-Benachrichtigungsoptionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) oder [Android-Benachrichtigungsoptionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+Weitere Informationen zu plattformspezifischen Benachrichtigungsoptionen finden Sie unter [iOS-Benachrichtigungsoptionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) oder [Android-Benachrichtigungsoptionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/).
 
 #### Sprache
 
 Fügen Sie über den Button **Sprachen hinzufügen** Texte in mehreren Sprachen hinzu. Wir empfehlen, die Sprachen auszuwählen, bevor Sie den Inhalt verfassen, damit Sie Ihren Text dort einfügen können, wo er im Liquid hingehört. Eine vollständige Liste der Sprachen, die Sie verwenden können, finden Sie unter [Unterstützte Sprachen][18]].
+
+Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieben ist, beachten Sie, dass das endgültige Aussehen von Nachrichten von rechts nach links weitgehend davon abhängt, wie die Dienste sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
 
 #### Titel und Text
 
@@ -122,13 +124,13 @@ Beginnen Sie mit der Eingabe in das Nachrichtenfeld und beobachten Sie, wie eine
 Um Ihre Push-Nachrichten personalisiert und zielgerichtet zu gestalten, können Sie [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) einbeziehen.
 
 {% alert important %}
-Sie **können** eine Android-Push-Nachricht **nicht** ohne Titel versenden. Sie können jedoch stattdessen ein einzelnes Leerzeichen eingeben. Denken Sie daran: Wenn Ihre Nachricht nur ein einziges Leerzeichen enthält, wird sie als stille Push-Benachrichtigung gesendet. Weitere Informationen finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+Sie **können** eine Android-Push-Nachricht **nicht** ohne Titel versenden. Sie können jedoch stattdessen ein einzelnes Leerzeichen eingeben. Denken Sie daran: Wenn Ihre Nachricht nur ein einziges Leerzeichen enthält, wird sie als stille Push-Benachrichtigung gesendet. Weitere Informationen finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
+Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
 ![Gehen Sie auf den Button "KI-Texter" im Textfeld des Push-Editors.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
