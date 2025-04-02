@@ -12,7 +12,7 @@ channel:
 
 # Hochladen einer HTML-E-Mail-Vorlage
 
-> Über das Braze-Dashboard können Sie Ihre eigenen HTML-E-Mail-Templates hochladen und zur späteren Verwendung in Kampagnen speichern. Sie können auch [eine E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) mit unserem Editor [erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/).
+> Über das Braze-Dashboard können Sie Ihre eigenen HTML-E-Mail-Templates hochladen und zur späteren Verwendung in Kampagnen speichern. Sie können auch [eine E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) mit unserem Editor [erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/).
 
 ## Voraussetzungen {#upload-requirements}
 
@@ -72,7 +72,7 @@ Um Ihre E-Mail für eine API-Kampagne zu verwenden, benötigen Sie die `email_te
 
 ## E-Mail-Vorlagen verwalten
 
-Sie können E-Mail-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) und [archivieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)! Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten unter [Vorlagen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Sie können E-Mail-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) und [archivieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)! Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten unter [Vorlagen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Häufig gestellte Fragen
 
