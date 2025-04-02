@@ -22,7 +22,7 @@ Wenn der dunkle Modus aktiviert ist, werden die Menüs und Bildschirme des Gerä
 
 ## Einstellen eines Themas für den dunklen Modus
 
-Mit der neuen Option Dunkler Modus, die Sie auf der Registerkarte Stil finden, wenn Sie [eine In-App-Nachricht erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), können Sie ganz einfach ein alternatives Farbthema für Benutzer hinzufügen, die sich auf ihrem Gerät im dunklen Modus befinden.
+Mit der neuen Option Dunkler Modus, die Sie auf der Registerkarte Stil finden, wenn Sie [eine In-App-Nachricht erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), können Sie ganz einfach ein alternatives Farbthema für Benutzer hinzufügen, die sich auf ihrem Gerät im dunklen Modus befinden.
 
 ![Nutzer:innen wechseln im Tab Stil beim Erstellen einer In-App-Nachricht zwischen den Stilen Light Mode und Dark Mode.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
