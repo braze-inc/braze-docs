@@ -3,7 +3,7 @@ nav_title: Creación de tarjetas
 article_title: Creación de tarjetas
 alias: /card_creation/
 description: "En este artículo se describen las diferencias entre la creación de tarjetas de contenido en el momento del lanzamiento de la campaña o de la entrada en el paso Canvas y en la primera impresión."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards
