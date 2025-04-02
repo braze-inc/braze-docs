@@ -13,7 +13,7 @@ tool: Campaigns
 > Aktionsbasierte Zustellungskampagnen oder Event-gesteuerte Kampagnen sind sehr effektiv für transaktions- oder leistungsbezogene Nachrichten. Anstatt Ihre Kampagne an bestimmten Tagen zu versenden, können Sie sie auslösen, wenn ein Nutzer ein bestimmtes Ereignis abgeschlossen hat. 
 
 {% alert important %}
-Die aktionsbasierte Bereitstellung ist für [Canvas-Komponenten mit In-App-Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas) nicht verfügbar. Diese Schritte müssen geplant werden.
+Die aktionsbasierte Bereitstellung ist für [Canvas-Komponenten mit In-App-Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) nicht verfügbar. Diese Schritte müssen geplant werden.
 {% endalert %}
 
 ## Eine ausgelöste Kampagne einrichten
