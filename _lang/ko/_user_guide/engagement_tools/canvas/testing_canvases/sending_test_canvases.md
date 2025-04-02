@@ -61,7 +61,7 @@ tool: Canvas
 
 ### 내부 그룹 만들기
 
-개별 테스트 사용자를 만드는 대신 메시지 콘텐츠를 검토하는 것을 목적으로 하는 내부 그룹인 [콘텐츠 테스트 그룹을]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) 만들 수 있습니다. 여기에는 캠페인 및 캔버스에서 테스트 메시지를 수신할 사용자 그룹이 포함됩니다. 그런 다음 **테스트 대상** 아래의 **콘텐츠 테스트 그룹 추가** 필드에 이 테스트 그룹을 추가할 수 있습니다.
+Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. 여기에는 캠페인 및 캔버스에서 테스트 메시지를 수신할 사용자 그룹이 포함됩니다. 그런 다음 **테스트 대상** 아래의 **콘텐츠 테스트 그룹 추가** 필드에 이 테스트 그룹을 추가할 수 있습니다.
 
 ### 시간 지연 감소
 
