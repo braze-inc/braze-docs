@@ -18,7 +18,7 @@ Arbeitsbereiche dienen zwei wichtigen Zwecken:
 - **Trennen Sie verschiedene Aktivitäten:** Workspaces bieten auch die Möglichkeit, verschiedene Marken oder Aktivitäten voneinander zu trennen. Wenn Sie zum Beispiel mehrere Untermarken mit unterschiedlichen Nutzerbasen haben, ist es von Vorteil, für jede Marke einen eigenen Workspace zu erstellen.
 
 {% alert tip %}
-Dieser Ansatz ist besonders nützlich für Unternehmen wie Anbieter von mobilen Spielen, die für jedes ihrer Spiele einen eigenen Arbeitsbereich verwalten können, oder für E-Commerce-Seiten, die für jede Region, in der sie tätig sind, einen eigenen Arbeitsbereich benötigen.
+Dieser Ansatz ist besonders nützlich für Unternehmen wie Firmen für mobile Spiele, die individuelle Workspaces für jedes ihrer Spiele verwalten können, oder für E-Commerce-Websites, die für jede Region, in der sie tätig sind, separate Workspaces wünschen.
 {% endalert %}
 
 ## Workspaces planen
@@ -188,24 +188,24 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Frequency-Capping gilt für alle Kampagnen, nicht für einzelne Apps, was es schwieriger macht, zu viele Nachrichten an Kund:innen zu verhindern.</td>
     </tr>
     <tr>
-        <td>Abo-Status</td>
-        <td>Der Abonnementstatus für jedes Benutzerprofil ist für jede App-Instanz eindeutig.</td>
+        <td>Abo-Status für Nutzer:in-Profile</td>
+        <td>Der Abo-Status jedes Nutzerprofils ist für jede App-Instanz eindeutig.</td>
         <td>--</td>
         <td>--</td>
-        <td>Die Abonnement-Status der verschiedenen App-Instanzen werden für ein Benutzerprofil kombiniert.<br><br><b>Tipp:</b> Sie können stattdessen benutzerdefinierte Attribute zur Verwaltung von Abonnements verwenden.</td>
+        <td>Die Abo-Status eines Nutzerprofils werden über App-Instanzen hinweg kombiniert.<br><br><b>Tipp:</b> Sie könnten stattdessen <a href='/docs/user_guide/data/custom_data/custom_attributes'>angepasste Attribute</a> verwenden, um die Abos Ihrer Nutzer:innen zu verwalten.</td>
     </tr>
     <tr>
-        <td>Benutzerrechte</td>
+        <td>Braze Benutzerberechtigungen</td>
         <td>--</td>
-        <td>Das Update der Nutzerberechtigungen für eine:n Nutzer:in des Dashboards muss für jeden Workspace, auf den die:der Nutzer:in Zugriff benötigt, separat durchgeführt werden.</td>
-        <td>Benutzerberechtigungen können einmal für einen Dashboard-Benutzer festgelegt werden, der dann die gleichen Berechtigungen für alle App-Instanzen im Arbeitsbereich hat.</td>
+        <td>Das Update der <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Benutzerberechtigungen</a> für einen Nutzer:innen des Dashboards muss für jeden Workspace, auf den der Nutzer:innen Zugriff benötigt, separat durchgeführt werden.</td>
+        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Nutzer</a>:innen können einmal für einen Nutzer des Dashboards festgelegt werden und haben dann dieselben Berechtigungen für alle App-Instanzen im Workspace.</td>
         <td>--</td>
     </tr>
     <tr>
         <td>Duplizieren von Inhalten</td>
         <td>--</td>
-        <td>Sie können keine Segmente, Kampagnen oder Canvases in verschiedenen Arbeitsbereichen duplizieren.</td>
-        <td>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
+        <td>Sie können keine Segmente, Push- oder Content-Card-Kampagnen oder Canvase in verschiedenen Workspaces duplizieren.</td>
+        <td>Kann [Kampagnen über Workspaces hinweg duplizieren]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) für die folgenden unterstützten Kanäle: SMS, In-App-Nachrichten, E-Mail, E-Mail-Vorlagen und Inhaltsblöcke. <br><br>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
         <td>--</td>
     </tr>
     <tr>
