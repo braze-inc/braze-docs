@@ -36,7 +36,7 @@ Hay un límite de cinco predicciones activas simultáneamente. Antes de comprar 
 
 ## Paso 2: Especificar seguimiento de eventos {#event-tracking}
 
-Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
+Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 Aquí verás si el método seleccionado proporciona suficientes datos para que Braze cree un modelo de aprendizaje automático. Si no se cumple el requisito, intenta seleccionar el otro método de registro si también lo utiliza tu aplicación. Desgraciadamente, si no es así, Braze es incapaz de crear una predicción con la cantidad de datos disponibles. Si crees que estás viendo incorrectamente este error, ponte en contacto con tu administrador del éxito del cliente.
 
