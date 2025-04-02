@@ -75,6 +75,10 @@ Da Änderungen des Abo-Status keine Datenpunkte verbrauchen, fallen auch beim Up
 
 ## Datenpunkte
 
+{% alert note %}
+Die folgenden Tabellen sind zur Veranschaulichung gedacht. Die genauen Namenskonventionen, die Großschreibung und die akzeptierten Werte für bestimmte Felder finden Sie in der entsprechenden Dokumentation für Ihre Ingestionsmethode.
+{% endalert %}
+
 {% tabs %}
 {% tab Nicht fakturierbar %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+
