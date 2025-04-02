@@ -15,6 +15,10 @@ Les équipes peuvent être constituées en fonction de l'emplacement/localisatio
 
 L’option Teams (Équipes) n’est pas disponible sur tous les contrats Braze. Si vous souhaitez accéder à cette fonctionnalité, adressez-vous à votre gestionnaire de compte Braze ou [contactez-nous](mailto:success@braze.com) pour une consultation.
 
+## En quoi les Teams diffèrent-elles des jeux d'autorisations et des rôles ?
+
+{% multi_lang_include permissions.md content="Différences" %}
+
 ## Créer des Teams
 
 Allez dans **Paramètres** > **Équipes internes** et sélectionnez <i class="fas fa-plus"></i> **Ajouter une équipe**.
@@ -130,10 +134,6 @@ Sélectionnez une ou plusieurs Teams à archiver. Si l'équipe n'est associée �
 ![Archivage d'une équipe associée à un objet dans Braze][86]{: style="max-width:70%;"}
 
 Les administrateurs de Braze peuvent désarchiver une équipe en sélectionnant l'équipe archivée et en choisissant **Désarchiver**.
-
-## En quoi les Teams diffèrent-elles des jeux d'autorisations et des rôles ?
-
-Reportez-vous à la section [Utilisateurs de l'entreprise]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) pour connaître les différences entre les équipes, les jeux d'autorisations et les rôles.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}
