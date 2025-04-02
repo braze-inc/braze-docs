@@ -144,14 +144,14 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
   updated_at TIMESTAMP DEFAULT current_timestamp(),
   id STRING,
   deleted BOOLEAN,
-  payload STRING
+  payload STRING, STRUCT, or MAP
 );
 ```
 
 | NOM DU CHAMP | TYPE | MODE |
 | --- | --- | --- |
 | UPDATED_AT | DATE/HEURE | REQUIS |
-| PAYLOAD | JSON | REQUIS |
+| PAYLOAD | Chaîne de caractères, STRUCT ou mappage | REQUIS |
 | ID | CHAÎNE DE CARACTÈRES | REQUIS |
 | SUPPRIMÉ | BOOLÉEN | NULLABLE |
 
