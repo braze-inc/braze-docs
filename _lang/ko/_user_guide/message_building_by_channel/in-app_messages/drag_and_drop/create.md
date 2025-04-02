@@ -19,7 +19,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 기존 커스텀 HTML 템플릿이나 타사에서 생성한 템플릿을 사용하려면 드래그 앤 드롭 편집기에서 다시 생성해야 합니다.
 
-귀하의 인앱 메시지를 캠페인을 통해 보내야 할지 [캔버스<1>를 통해 보내야 할지 확신이 서지 않으십니까? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다. 메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 인앱 메시지를 만드는 단계로 들어가 보겠습니다.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다. 메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 인앱 메시지를 만드는 단계로 들어가 보겠습니다.
 
 ## 전제 조건
 
@@ -135,6 +135,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 - 사용 가능한 편집기 블록 및 해당 속성 목록은 [편집기 블록]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)을 참조하십시오.
 - 메시지의 모양과 느낌을 사용자 정의하는 데 도움이 필요하면 [스타일 설정]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)을 확인하세요.
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## 5단계: 인앱 메시지를 테스트하세요
 
