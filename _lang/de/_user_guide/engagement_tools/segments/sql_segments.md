@@ -89,7 +89,7 @@ Um den KI SQL-Generator zu verwenden, gehen Sie wie folgt vor:
 - Nutzer, die im letzten Jahr weniger als fünf Einkäufe getätigt haben
 
 ### Tipps
-- Machen Sie sich mit den verfügbaren [Snowflake Datentabellen]({{site.baseurl}}/sql_segments_tables/) vertraut. Wenn Sie nach Daten fragen, die in diesen Tabellen nicht vorhanden sind, kann es sein, dass ChatGPT eine gefälschte Tabelle erstellt.
+- Machen Sie sich mit den verfügbaren [Snowflake Datentabellen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) vertraut. Wenn Sie nach Daten fragen, die in diesen Tabellen nicht vorhanden sind, kann es sein, dass ChatGPT eine gefälschte Tabelle erstellt.
 - Machen Sie sich mit den [SQL-Schreibregeln]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) für dieses Feature vertraut. Die Nichtbeachtung dieser Regeln führt zu einem Fehler. Zum Beispiel muss Ihr SQL Code die Spalte `user_id` auswählen. Beginnen Sie Ihre Eingabeaufforderung mit "Nutzer:innen".
 - Mit dem KI SQL Generator können Sie bis zu 20 Prompts pro Minute senden.
 
@@ -107,7 +107,7 @@ Wenn die Verarbeitung der Erweiterung abgeschlossen ist, können Sie [mit Ihrer 
 
 ## SQL schreiben
 
-Ihre SQL-Abfrage sollte in [Snowflake-Syntax](https://docs.snowflake.com/en/sql-reference.html) geschrieben sein. In der [Tabellenreferenz]({{site.baseurl}}/sql_segments_tables/) finden Sie eine vollständige Liste der Tabellen und Spalten, die abgefragt werden können.
+Ihre SQL-Abfrage sollte in [Snowflake-Syntax](https://docs.snowflake.com/en/sql-reference.html) geschrieben sein. In der [Tabellenreferenz]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) finden Sie eine vollständige Liste der Tabellen und Spalten, die abgefragt werden können.
 
 {% alert important %}
 Beachten Sie, dass die zur Abfrage verfügbaren Tabellen nur Event-Daten enthalten. Wenn Sie nach Benutzerattributen suchen möchten, sollten Sie Ihr SQL-Segment mit benutzerdefinierten Attributfiltern aus dem [klassischen Segmentierer]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) kombinieren.
