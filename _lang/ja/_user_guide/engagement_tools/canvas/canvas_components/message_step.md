@@ -61,7 +61,7 @@ tool: Canvas
 例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` というリクエストを考えてみます。`{{canvas_entry_properties.${product_name}}}` という Liquid でメッセージに「靴」という単語を追加できます。
 {% endraw %}
 
-また、任意のメッセージステップで[永続エントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)を利用して、キャンバスワークフロー全体を通じてパーソナライズされたステップにユーザーを誘導することもできます。
+また、任意のメッセージステップで[永続エントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)を利用して、キャンバスワークフロー全体を通じてパーソナライズされたステップにユーザーを誘導することもできます。
 
 #### 元のワークフロー
 
