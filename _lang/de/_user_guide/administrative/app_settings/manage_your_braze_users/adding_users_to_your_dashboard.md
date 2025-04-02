@@ -59,6 +59,10 @@ Administratoren können einen Benutzer auch sperren, indem sie seinen Namen in d
 
 ![Personen bei Bearbeitung der Nutzerdaten sperren.][5]
 
+## Zuweisung von Nutzer:innen und Verantwortlichkeiten
+
+{% multi_lang_include permissions.md content="Unterschiede" %}
+
 ## Löschung von Braze-Benutzern
 
 Um einen Benutzer zu löschen, gehen Sie zu **Einstellungen** > **Firmenbenutzer**, suchen Sie seinen Benutzernamen und wählen Sie <i class="fa fa-trash-can"></i> **Benutzer löschen**.
