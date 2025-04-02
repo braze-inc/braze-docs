@@ -91,10 +91,10 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 
 ### GIFs und Videos
 
-Braze unterstützt derzeit GIFs für In-App-Nachrichten im Web (inbegriffen), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) und iOS (inbegriffen), sofern diese während der gewünschten Plattformintegration aktiviert wurden. Weitere Informationen zu Videos in In-App-Nachrichten finden Sie in unserer [Dokumentation zur Anpassung]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze unterstützt derzeit GIFs für In-App-Nachrichten im Web (inbegriffen), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/) und iOS (inbegriffen), sofern diese während der gewünschten Plattformintegration aktiviert wurden. Weitere Informationen zu Videos in In-App-Nachrichten finden Sie in unserer [Dokumentation zur Anpassung]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Zusätzliche Überlegungen
 
-In-App-Nachrichten von Braze haben sowohl globale als auch individuelle kreative Vorgaben. Weitere Informationen zur vollständigen Anpassung von In-App-Nachrichten finden Sie auf unserer Seite [Anpassung]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+In-App-Nachrichten von Braze haben sowohl globale als auch individuelle kreative Vorgaben. Weitere Informationen zur vollständigen Anpassung von In-App-Nachrichten finden Sie auf unserer Seite [Anpassung]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 <br>
