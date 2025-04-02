@@ -63,7 +63,7 @@ Também é possível fazer com que a mensagem de abortar registre algo no Regist
 
 ## Consulta de mensagens de aborto
 
-Você pode usar o [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) ou seu próprio data warehouse, se ele estiver conectado ao Braze, para consultar mensagens de aborto específicas que são disparadas quando a lógica do Liquid faz com que uma mensagem seja abortada.
+Você pode usar o [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou seu próprio data warehouse, se ele estiver conectado ao Braze, para consultar mensagens de aborto específicas que são disparadas quando a lógica do Liquid faz com que uma mensagem seja abortada.
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
