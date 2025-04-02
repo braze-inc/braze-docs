@@ -52,7 +52,7 @@ tool: Campaigns
 
 Braze はユーザーのタイムゾーンをデバイスから自動的に判別します。これにより、タイムゾーンの精度を確保してユーザーを完全にカバーすることができます。ユーザー API を通じて作成されたユーザーや、タイムゾーンなしで作成されたユーザーは、SDK によってアプリで認識されるまで、既定のタイムゾーンとして貴社のタイムゾーンが使用されます。 
 
-会社のタイムゾーンはダッシュボードにある[会社の設定]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/)で確認できます。
+会社のタイムゾーンはダッシュボードにある[会社の設定]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/)で確認できます。
 
 ### Braze はローカルタイムゾーン配信のユーザーをいつ評価しますか?
 
