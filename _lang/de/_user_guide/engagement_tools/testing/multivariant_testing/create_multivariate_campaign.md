@@ -96,7 +96,7 @@ Welche Hebel müssen Sie betätigen und was sind die gewünschten Auswirkungen? 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Vergessen Sie bei der Durchführung von A/B-Tests nicht, [Trichterberichte]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) zu erstellen, die Ihnen Aufschluss darüber geben, wie sich die einzelnen Varianten auf Ihren Konversionstrichter ausgewirkt haben, insbesondere dann, wenn "Konversion" in Ihrem Unternehmen mehrere Schritte oder Aktionen umfasst.
+Vergessen Sie bei der Durchführung von A/B-Tests nicht, [Trichterberichte]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) zu erstellen, die Ihnen Aufschluss darüber geben, wie sich die einzelnen Varianten auf Ihren Konversionstrichter ausgewirkt haben, insbesondere dann, wenn "Konversion" in Ihrem Unternehmen mehrere Schritte oder Aktionen umfasst.
 {% endalert %}
 
 Darüber hinaus kann die ideale Länge Ihres Tests je nach Kanal variieren. Denken Sie daran, wie viel Zeit die meisten Nutzer:innen durchschnittlich für das Engagement auf den einzelnen Kanälen benötigen.
