@@ -86,6 +86,8 @@ Autre exemple, si vous essayez d'envoyer 75 000 messages avec une limite de déb
 
 Notez que les messages à débit limité peuvent ne pas être envoyés de manière régulière au cours de chaque minute. Si l'on prend l'exemple d'une limite de débit de 10 000 par minute, cela signifie que Braze veille à ce qu'il n'y ait pas plus de 10 000 messages envoyés par minute. Cela pourrait signifier qu'un pourcentage plus élevé des 10 000 messages est envoyé dans la première demi-minute par rapport à la dernière demi-minute. 
 
+Notez également que la limite de débit est appliquée au début de la tentative d'envoi des messages. Lorsque la durée de l'envoi varie, le nombre d'envois terminés peut légèrement dépasser la limite de débit pendant certaines minutes. Avec le temps, le nombre d'envois par minute se stabilisera au niveau de la limite de débit.
+
 {% alert important %}
 Attention à ne pas retarder les envois de messages sensibles au facteur temps avec cette forme de limite de débit. Si le segment contient 30 millions d'utilisateurs mais que nous fixons la limite de débit à 10 000 par minute, une grande partie de votre base d'utilisateurs ne recevra le message que le lendemain.
 {% endalert %}
