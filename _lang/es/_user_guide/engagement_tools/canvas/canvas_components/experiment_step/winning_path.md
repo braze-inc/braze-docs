@@ -8,7 +8,7 @@ tool: Canvas
 
 # Recorrido ganador en recorridos de experimentos
 
-> La Ruta ganadora es similar a la [Variante ganadora]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) en las campañas, y te permite automatizar tus pruebas A/B.
+> La Ruta ganadora es similar a la [Variante ganadora]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) en las campañas, y te permite automatizar tus pruebas A/B.
 
 Cuando se activa la ruta ganadora en un paso de la ruta de experimentación, después de un período de tiempo especificado, todos los usuarios posteriores serán enviados por la ruta con la tasa de conversión más alta.
 
