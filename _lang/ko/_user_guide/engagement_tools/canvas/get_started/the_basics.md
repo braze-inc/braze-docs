@@ -20,28 +20,28 @@ tool: Canvas
   {% tab 캔버스 %}
   캔버스는 마케터가 여러 메시지로 캠페인을 제작할 수 있는 통합 인터페이스입니다. 시각적 프로그래밍 도구와 비슷하며 일련의 단계를 통해 일관된 사용자 여정을 구축할 수 있습니다.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![An example of a Canvas with a Decision Split step into two different user journeys depending if a user is push enabled.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab 여정 %}
 
-  여정 또는 일반적으로 사용자 여정이라고 하는 것은 캔버스 내에서 개별 사용자의 경험을 의미합니다.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  여정 또는 일반적으로 사용자 여정이라고 하는 것은 캔버스 내에서 개별 사용자의 경험을 의미합니다.<br><br> ![A chart with the customer journey for a new user. An anonymous user installs an app, Kat creates an account, Kat doesn't open the app for a week, a push notification brings Kat back to the app, then Kat uses the app regularly.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab 캔버스 빌더 %}
-  캔버스 빌더는 캔버스를 만들 때 수행해야 할 단계를 매핑합니다. 여기에는 캔버스 이름 지정 및 팀 추가와 같은 기본 사항이 포함됩니다. 기본적으로 캔버스 빌더는 캔버스 제작을 시작하기 전에 필요한 중요한 설정입니다. 여기에서 [응모 일정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [대상 오디언스]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) 및 [전송 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)을 편집하는 옵션을 사용하여 사용자가 고객 여정을 시작하고 완료하는 방식을 제어할 수 있습니다.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  캔버스 빌더는 캔버스를 만들 때 수행해야 할 단계를 매핑합니다. 여기에는 캔버스 이름 지정 및 팀 추가와 같은 기본 사항이 포함됩니다. 기본적으로 캔버스 빌더는 캔버스 제작을 시작하기 전에 필요한 중요한 설정입니다. 여기에서 [응모 일정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [대상 오디언스]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) 및 [전송 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)을 편집하는 옵션을 사용하여 사용자가 고객 여정을 시작하고 완료하는 방식을 제어할 수 있습니다.<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab 변형 %}
-  배리언트는 각 고객이 여정에서 따라가는 경로입니다. 캔버스는 대조군과 함께 최대 8개의 배리언트 상품을 지원합니다. 각 배리언트를 팔로우할 오디언스 세그먼트를 제어할 수 있습니다.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  배리언트는 각 고객이 여정에서 따라가는 경로입니다. 캔버스는 대조군과 함께 최대 8개의 배리언트 상품을 지원합니다. 각 배리언트를 팔로우할 오디언스 세그먼트를 제어할 수 있습니다.<br><br> ![Selecting the "Add Variant" button.]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab 단계 %}
-  캔버스의 한 단계는 "이 경우 저걸 한다"라는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br>한 단계 내에서 트리거를 설정하거나 전송 일정을 예약하고, 필터를 추가하거나 [예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)를 표시하여 타겟팅을 구체화하고, 푸시 알림이나 웹훅 이벤트 등 다양한 채널을 지정할 수 있습니다.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  캔버스의 한 단계는 "이 경우 저걸 한다"라는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}
