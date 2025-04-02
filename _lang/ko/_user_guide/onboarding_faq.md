@@ -30,7 +30,7 @@ description: "이 페이지에는 자주 묻는 질문이 카테고리별로 정
 
 식별된 사용자와 병합하려는 별칭 사용자의 경우 유지하려는 실제 프로필과 관련된 모든 필드를 병합할 수 있습니다. [식별자별 고객 프로필 내보내기 엔드포인트]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)를 사용하여 별칭 프로필에서 데이터를 삭제하기 전에 해당 데이터를 내보내야 합니다. 그런 다음 [사용자 추적 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 사용하여 이러한 이벤트를 보관한 프로필에 게시할 수 있습니다. 이렇게 하면 이전에 한 프로필에 기록되었지만 다른 프로필에는 기록되지 않았던 속성 등 유지하려는 모든 데이터가 보존됩니다.
 
-Braze에서 신규 및 기존 사용자 데이터를 수집하는 다양한 방법에 대한 전체 분석은 [데이터 수집 모범 사례]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/)를 참조하세요.
+For a full breakdown of different methods for collecting new and existing user data in Braze, check out [data collection best practices]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/).
 
 {% endapi %}
 {% api %}
@@ -51,7 +51,7 @@ Braze에서 신규 및 기존 사용자 데이터를 수집하는 다양한 방�
 [이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **사용자** > **사용자 가져오기에서** 찾을 수 있습니다.
 {% endalert %}
 
-CSV 가져오기를 시작하기 전에 엔지니어링 팀으로부터 Braze에서 사용자를 식별하는 방법을 이해하는 것이 중요합니다. 일반적으로 내부에서 사용하는 데이터베이스 ID입니다. 이는 모바일과 웹에서 Braze SDK가 사용자를 식별하는 방식과 일치해야 하며, 각 고객은 여러 기기에서 Braze 내에서 단일 고객 프로필을 갖게 됩니다. Braze [사용자 프로필 수명주기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)에 대해 자세히 알아보세요.
+CSV 가져오기를 시작하기 전에 엔지니어링 팀으로부터 Braze에서 사용자를 식별하는 방법을 이해하는 것이 중요합니다. 일반적으로 내부에서 사용하는 데이터베이스 ID입니다. 이는 모바일과 웹에서 Braze SDK가 사용자를 식별하는 방식과 일치해야 하며, 각 고객은 여러 기기에서 Braze 내에서 단일 고객 프로필을 갖게 됩니다. Learn more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 가져오기에 `external_id` 을 입력하면 Braze는 기존 사용자를 동일한 `external_id` 으로 업데이트하거나, 사용자를 찾을 수 없는 경우 해당 `external_id` 설정으로 새로 식별된 사용자를 생성합니다.
 
@@ -188,7 +188,7 @@ Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신�
 
 타겟팅 정확도를 높이려면 **속성정보 필터 추가**를 선택하고 구매 또는 커스텀 이벤트의 특정 속성을 기반으로 세그먼트할 수 있습니다. Braze는 문자열, 숫자, 부울, 시간 개체를 기반으로 이벤트 속성정보 세분화를 지원합니다.
 
-[중첩된 이벤트 속성을]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/) 기반으로 한 세분화도 지원합니다.
+We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 세그먼트 확장은 이벤트 속성정보의 장기 저장에 의존하며 30일의 커스텀 이벤트 속성 저장 제한이 없습니다. 즉, 지난 1년 동안 추적된 이벤트 속성정보를 다시 살펴볼 수 있으며, 확장이 먼저 설정될 때까지 추적이 기다리지 않습니다.
 
@@ -272,7 +272,7 @@ Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신�
 
 Braze는 디바이스에서 사용자의 시간대를 자동으로 확인합니다. 이는 시간대의 정확성과 사용자의 전체 범위를 지원하도록 설계되었습니다. 사용자 API를 통해 생성된 사용자 또는 표준 시간대가 없는 사용자는 SDK에서 앱에서 인식할 때까지 회사의 표준 시간대가 기본 시간대로 사용됩니다.
 
-[회사 설정]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/)에서 회사의 표준 시간대를 확인할 수 있습니다.
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/).
 
 {% endapi %}
 {% api %}
@@ -410,7 +410,7 @@ Braze는 모든 현지 시간대 캠페인을 24시간 전에 예약할 것을 �
 
 각 단계마다 작업을 대기열에 추가하여 거의 동시에 실행하고 그 중 하나가 "승리"합니다. 실제로는 어느 정도 균등하게 정렬될 수 있지만, 적어도 먼저 생성된 단계에 약간의 편향이 있을 수 있습니다.
 
-또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. 균등하게 분할하려면 [무작위 버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) 필터를 추가하세요.
+또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. If you want to ensure an even split, add a [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
 
 {% endapi %}
 {% api %}
@@ -455,7 +455,7 @@ Braze는 모든 현지 시간대 캠페인을 24시간 전에 예약할 것을 �
 
 다단계 캔버스의 일부 단계를 편집하는 경우 이미 오디언스에 속해 있지만 단계를 받지 않은 사용자는 업데이트된 버전의 메시지를 받게 됩니다. 아직 해당 단계에 대한 평가가 이루어지지 않은 경우에만 이런 일이 발생한다는 점에 유의하세요.
 
-실행 후 편집할 수 있는 항목과 편집할 수 없는 항목에 대한 자세한 내용은 [실행 후 캔버스 변경하기]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/)를 참조하세요.
+For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/post-launch_edits/).
 
 {% endapi %}
 {% api %}
@@ -532,7 +532,7 @@ Braze는 모든 현지 시간대 캠페인을 24시간 전에 예약할 것을 �
 분석
 {% endapitags %}
 
-Braze는 채널에 따라 다양한 측정기준을 측정하여 캠페인의 성공 여부를 판단하고 향후 캠페인에 대한 정보를 제공합니다. [보고서 메트릭 용어집에서]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics) 전체 목록을 확인할 수 있습니다.
+Braze는 채널에 따라 다양한 측정기준을 측정하여 캠페인의 성공 여부를 판단하고 향후 캠페인에 대한 정보를 제공합니다. You can find a comprehensive list in our [report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 {% endapi %}
 {% api %}
@@ -558,7 +558,7 @@ Braze는 채널에 따라 다양한 측정기준을 측정하여 캠페인의 �
 
 커런츠 도구는 메시징 참여도와 고객 행동 데이터를 지속적으로 여러 데이터 파트너 중 한 곳으로 스트리밍하여 Braze가 생성하는 고유하고 가치 있는 데이터를 사용하여 다른 최고의 파트너에서 비즈니스 인텔리전스 및 분석 작업을 강화할 수 있도록 지원합니다.
 
-이 데이터에는 메시징 인게이지먼트 측정기준을 넘어 커스텀 속성 및 이벤트 성과와 같은 보다 복잡한 수치도 포함될 수 있습니다. 자세한 내용은 [커런츠 이벤트 용어집]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events)을 참조하세요.
+이 데이터에는 메시징 인게이지먼트 측정기준을 넘어 커스텀 속성 및 이벤트 성과와 같은 보다 복잡한 수치도 포함될 수 있습니다. For more details, review our [currents events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
 
 {% endapi %}
 {% api %}
@@ -595,6 +595,6 @@ Braze는 채널에 따라 다양한 측정기준을 측정하여 캠페인의 �
 
 보고서 빌더를 사용하면 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교할 수 있으므로 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 쉽게 확인할 수 있습니다. 캠페인과 캔버스 모두 데이터를 내보내고 보고서를 저장하여 나중에 볼 수 있습니다.
 
-Braze의 보고서 및 분석 사용에 대한 자세한 내용은 [보고서 개요]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/)를 참조하세요.
+For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/).
 
 {% endapi %}
