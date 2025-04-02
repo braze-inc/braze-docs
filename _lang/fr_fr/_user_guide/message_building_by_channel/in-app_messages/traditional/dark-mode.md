@@ -22,7 +22,7 @@ Lorsque le mode sombre est activé, les menus et écrans natifs de l'appareil (n
 
 ## Définition d’un thème du mode sombre
 
-La nouvelle option Mode sombre, située dans l'onglet Style lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
+La nouvelle option Mode sombre, située dans l'onglet Style lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
 
 ![Utilisateur basculant entre les modes sombre et clair dans l’onglet Style lors de la création d’un message in-app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
