@@ -1,7 +1,7 @@
 ---
 nav_title: メッセージタイプ
 article_title: LINE メッセージタイプ
-page_order: 1
+page_order: 0
 description: "この記事では、さまざまなタイプのLINE メッセージについて説明します。"
 page_type: reference
 tool:
