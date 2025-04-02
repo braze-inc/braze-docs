@@ -29,7 +29,7 @@ Beachten Sie die folgenden zulässigen Bearbeitungen des Canvas nach dem Start, 
 
 Sie können in Ihrer User Journey alle folgenden Einträge löschen:
 
-- [Canvas-Schritte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Canvas-Schritte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Leinwand-Varianten 
 - Verbindungen zwischen Canvas-Schritten
 
