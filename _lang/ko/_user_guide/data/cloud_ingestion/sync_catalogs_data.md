@@ -144,14 +144,14 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
   updated_at TIMESTAMP DEFAULT current_timestamp(),
   id STRING,
   deleted BOOLEAN,
-  payload STRING
+  payload STRING, STRUCT, or MAP
 );
 ```
 
 | 필드 이름 | TYPE | 모드 |
 | --- | --- | --- |
 | UPDATED_AT | 타임스탬프 | 필수 |
-| PAYLOAD | JSON | 필수 |
+| PAYLOAD | STRING, STRUCT, or MAP | 필수 |
 | ID | STRING | 필수 |
 | 삭제됨 | BOOLEAN | NULLABLE |
 
