@@ -16,11 +16,10 @@ description: "In diesem Referenzartikel erfahren Sie, wie Tags in Ihren Kampagne
 Ein Tag muss in `{% %}` verpackt sein.
 {% endraw %}
 
-{% alert tip %}
 Um Ihnen das Leben ein wenig zu erleichtern, hat Braze eine Farbformatierung eingebaut, die in grün und lila aktiviert wird, wenn Sie Ihre Liquid-Syntax korrekt formatiert haben. Die grüne Formatierung hilft bei der Identifizierung von Tags, während die violette Formatierung Bereiche hervorhebt, die eine Personalisierung enthalten.
-<br><br>
+
 Wenn Sie Schwierigkeiten mit der Verwendung von bedingtem Messaging haben, versuchen Sie, die bedingte Syntax aufzuschreiben, bevor Sie Ihre angepasste Attribute und andere Liquid-Elemente einfügen.
-<br><br>
+
 Fügen Sie zum Beispiel zuerst den folgenden Text in das Nachrichtenfeld ein:  
 {% raw %}
 ```liquid
@@ -40,11 +39,10 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## Bedingte Logik
 
-Sie können viele Arten von [intelligenter Logik in Nachrichten einfügen][1], wie z. B. eine bedingte Anweisung. Sehen Sie sich das folgende Beispiel an, in dem [Bedingungen][8] verwendet werden, um eine Kampagne zu internationalisieren:
+Sie können viele Arten von [intelligenter Logik in Nachrichten einfügen][1], wie z. B. eine bedingte Anweisung. Das folgende Beispiel verwendet [conditionals][8] ], um eine Kampagne zu internationalisieren:
 {% raw %}
 
 ```liquid
@@ -59,39 +57,93 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Schritt-für-Schritt-Beispiel
+### Bedingte Tags
 
-In diesem Beispiel verwenden wir Tags mit „if“-, „elsif“- und „else“-Anweisungen, um internationalisierte Inhalte bereitzustellen.
+#### `if` und `elsif`
+
+Die bedingte Logik beginnt mit dem Tag `if`, der die erste zu prüfende Bedingung angibt. Nachfolgende Bedingungen verwenden den Tag `elsif` und werden überprüft, wenn die vorherigen Bedingungen nicht erfüllt sind. Wenn in diesem Beispiel das Gerät eines Nutzers:innen nicht auf Englisch eingestellt ist, prüft dieser Code, ob das Gerät des Nutzers:innen auf Spanisch eingestellt ist, und wenn das nicht der Fall ist, prüft er, ob das Gerät auf. Wenn das Gerät des Benutzers eine dieser Bedingungen erfüllt, erhält der Benutzer eine Nachricht in der entsprechenden Sprache.
+
+#### `else`
+
+Sie haben die Möglichkeit, eine `{% else %}`-Anweisung in Ihre bedingte Logik aufzunehmen. Wenn keine der von Ihnen festgelegten Bedingungen erfüllt ist, gibt die Anweisung `{% else %}` die Nachricht an, die gesendet werden soll. In diesem Beispiel verwenden wir standardmäßig Englisch, wenn die Sprache eines Nutzers:innen nicht Englisch, Spanisch oder Chinesisch ist.
+
+#### `endif`
+
+Das Tag `{% endif %}` signalisiert, dass Sie Ihre bedingte Logik abgeschlossen haben. Sie müssen das Tag `{% endif %}` in jede Nachricht mit bedingter Logik einfügen. Wenn Sie in Ihrer bedingten Logik kein `{% endif %}`-Tag einfügen, erhalten Sie eine Fehlermeldung, da Braze Ihre Nachricht nicht analysieren kann.
+
+### Anleitung: Standortbezogene Inhalte zustellen
+
+Wenn Sie mit diesem Tutorial fertig sind, werden Sie in der Lage sein, Tags mit "if"-, "elsif"- und "else"-Anweisungen zu verwenden, um Inhalte abhängig vom Standort eines Nutzers zuzustellen.
+
+1. Beginnen Sie mit einem `if` Tag, um festzulegen, welche Nachricht gesendet werden soll, wenn sich der Ort des Nutzers:in New York befindet. Wenn der Ort des Nutzers:innen New York ist, ist diese erste Bedingung erfüllt und der Nutzer:innen erhält eine Nachricht, die seine New Yorker Identität angibt.
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${city} == "New York" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at your local Sandwich Emperor. 
+  Just show this message at the counter to redeem your offer!
 ```
-Wenn die Sprache des Benutzers Englisch ist, ist die erste Bedingung erfüllt und der Benutzer erhält eine Nachricht auf Englisch.
+
+{: start="2"}
+2\. Als nächstes verwenden Sie den Tag `elseif`, um festzulegen, welche Nachricht gesendet werden soll, wenn die Stadt des Nutzers:innen in Los Angeles liegt.
 
 ```liquid
-{% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
-{% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
 ```
 
-Sie können so viele bedingte Anweisungen angeben, wie Sie möchten. Nachfolgende Bedingungen werden geprüft, wenn die vorherigen Bedingungen nicht erfüllt sind. Wenn in diesem Beispiel das Gerät eines Benutzers nicht auf Englisch eingestellt ist, prüft dieser Code, ob das Gerät des Benutzers auf Spanisch oder Chinesisch eingestellt ist. Wenn das Gerät des Benutzers eine dieser Bedingungen erfüllt, erhält der Benutzer eine Nachricht in der entsprechenden Sprache.
+{: start="3"}
+3\. Lassen Sie uns einen weiteren `elseif` Tag verwenden, um festzulegen, welche Nachricht gesendet werden soll, wenn der Ort des Nutzers:innen in Chicago liegt.
+
+```liquid
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+```
+
+{: start="4"}
+4\. Lassen Sie uns nun den Tag `{% else %}` verwenden, um festzulegen, welche Nachricht gesendet werden soll, wenn die Stadt des Nutzers:innen nicht in San Francisco, New York oder Chicago liegt.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+ 🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
 ```
 
-Sie haben die Möglichkeit, eine `{% else %}`-Anweisung in Ihre bedingte Logik aufzunehmen. Wenn keine der von Ihnen festgelegten Bedingungen erfüllt ist, gibt die Anweisung `{% else %}` die Nachricht an, die gesendet werden soll. In diesem Fall verwenden wir standardmäßig Englisch, wenn die Sprache eines Nutzers:innen nicht Englisch, Spanisch oder Chinesisch ist.
+{: start="5"}
+5\. Schließlich verwenden wir den Tag `{% endif %}`, um anzugeben, dass unsere bedingte Logik abgeschlossen ist.
 
 ```liquid
 {% endif %}
 ```
 
-Das Tag `{% endif %}` signalisiert, dass Sie Ihre bedingte Logik abgeschlossen haben. Sie müssen das Tag `{% endif %}` in jede Nachricht mit bedingter Logik einfügen. Wenn Sie in Ihrer bedingten Logik kein `{% endif %}`-Tag einfügen, erhalten Sie eine Fehlermeldung, da Braze Ihre Nachricht nicht analysieren kann.
-
 {% endraw %}
+
+{% details Vollständiger Liquid-Code %}
+
+{% raw %}
+```liquid
+{% if ${city} == "New York City" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at our New York location. 
+  Just show this message at the counter to redeem your offer!
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+{% else %}
+  🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## Berücksichtigung von null, nil und leeren Attributwerten
 
