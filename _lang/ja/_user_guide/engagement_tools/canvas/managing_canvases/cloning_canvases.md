@@ -13,7 +13,7 @@ tool: Canvas
 2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、従来のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。
 {% endalert %}
 
-> 従来のエディターに既存のキャンバスがある場合は、このキャンバスを複製してキャンバスフローでコピーを作成できます。キャンバスフローのワークフローに切り替えることで、軽量な[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)、[永続エントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)、および[開始後の編集]({{site.baseurl}}/post-launch_edits)にアクセスできます。元のキャンバスは変更または削除されません。
+> 従来のエディターに既存のキャンバスがある場合は、このキャンバスを複製してキャンバスフローでコピーを作成できます。キャンバスフローのワークフローに切り替えることで、軽量な[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)、[永続エントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)、および[開始後の編集]({{site.baseurl}}/post-launch_edits)にアクセスできます。元のキャンバスは変更または削除されません。
 
 キャンバスを複製するには、次の手順を行います。
 
