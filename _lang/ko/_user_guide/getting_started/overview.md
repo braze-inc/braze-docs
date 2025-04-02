@@ -12,7 +12,7 @@ description: "Braze에서 작업할 때 알아야 할 핵심 개념을 숙지하
 Braze에 오신 것을 환영합니다! 이 글 모음은 플랫폼을 시작하는 데 도움이 되며 Braze의 주요 용어, 특징 및 기능을 소개합니다. 이 페이지에서는 Braze에서 작업할 때 알아야 할 핵심 개념을 소개합니다.
 
 {% alert tip %}
-이 글과 함께 [모두를 위한 Braze 파운데이션](https://learning.braze.com/page/braze-foundations-for-everyone) 무료 강좌를 확인해 보시기를 적극 추천합니다. 이 강좌에는 특별한 로그인이나 계정이 필요하지 않습니다. Braze에 대한 기술적인 설명이 필요한 개발자라면 [개발자를 위한 시작하기도]({{site.baseurl}}/developer_guide/platform_wide/getting_started/platform_overview) 확인해 보세요.
+이 글과 함께 [모두를 위한 Braze 파운데이션](https://learning.braze.com/page/braze-foundations-for-everyone) 무료 강좌를 확인해 보시기를 적극 추천합니다. 이 강좌에는 특별한 로그인이나 계정이 필요하지 않습니다. If you're a developer looking for a technical rundown of Braze, check out [Getting Started for Developers]({{site.baseurl}}/developer_guide/getting_started/platform_overview/), too.
 {% endalert %}
 
 시작하기 섹션에서는 Braze의 일반적인 구현에 중점을 두고 설명합니다. 하지만 Braze는 매우 유연하며 다양한 방식으로 조직에 가치를 제공하도록 맞춤 설정할 수 있습니다. 명확성과 간결성을 위해 딱딱한 지침을 제공하는 대신 기본 설정에 대한 설명적인 개요를 제공했습니다. 저희는 모든 조직이 각기 다른 요구사항을 가지고 있다는 것을 알고 있으며, Braze는 특정 요구사항에 맞는 다양한 사용자 지정 옵션을 제공할 수 있도록 제작되었습니다.
@@ -78,7 +78,7 @@ Braze는 빠르고 쉽게 시작하고 실행할 수 있도록 설계되었습�
 마이그레이션에 도움이 필요하신가요? [인증된 Braze 파트너가](https://www.braze.com/partners/solutions-partners) 도와드립니다!
 {% endalert %}
 
-- **이메일 전송량:** 이메일을 보내려면 IP를 워밍업해야 합니다. [IP 워밍업]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/)은 새로 할당된 IP 주소로 발송자 평판을 구축하는 과정입니다. 하루에 2~3백만 개 미만의 이메일을 보내는 경우 IP 워밍업은 30일 이내에 완료해야 합니다. 최대 전송량을 염두에 두세요. 평소에는 하루에 2백만 개의 이메일을 보내지만 계절에 따라 7백만 개의 이메일을 보낼 계획이라면 이 '피크' 전송에 대비해야 합니다. 대량 발송자는 여러 IP를 사용하여 워밍업 프로세스의 속도를 높일 수 있습니다.
+- **이메일 전송량:** 이메일을 보내려면 IP를 워밍업해야 합니다. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. 하루에 2~3백만 개 미만의 이메일을 보내는 경우 IP 워밍업은 30일 이내에 완료해야 합니다. 최대 전송량을 염두에 두세요. 평소에는 하루에 2백만 개의 이메일을 보내지만 계절에 따라 7백만 개의 이메일을 보낼 계획이라면 이 '피크' 전송에 대비해야 합니다. 대량 발송자는 여러 IP를 사용하여 워밍업 프로세스의 속도를 높일 수 있습니다.
 - **조직의 복잡성:** 온보딩 프로세스는 비즈니스 요구에 맞게 조정할 수 있습니다. 단일 사업부, 전문 센터, 여러 독립 부서, 에이전시와 함께 팀을 보강하는 등 Braze는 모든 시나리오에서 작업한 경험을 보유하고 있습니다.
 - **데이터 인프라의 정교함:** Braze SDK만 구현하거나 이미 고객 데이터 플랫폼(CDP)을 보유하고 있는 경우, 단 30일 만에 모든 설정을 완료할 수 있습니다. 최신 CDP를 사용하면 프로세스 속도를 높일 수 있습니다. 그러나 Braze와 연결할 백엔드 시스템, 도구 또는 데이터베이스가 많은 경우 설정을 완료하는 데 시간이 오래 걸리고 더 많은 전용 리소스가 필요할 수 있습니다.
 
