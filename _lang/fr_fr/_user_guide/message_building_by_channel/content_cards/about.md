@@ -114,7 +114,7 @@ Cette section couvre les trois façons les plus courantes de placer les cartes d
 - [Carrousel](#carousel)
 - [Bannière](#banner)
 
-La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
 
 ![3 exemples de cartes de contenu, montrant les différentes options de placement : boîte de réception des messages, carrousel et bannière.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -176,7 +176,7 @@ Les utilisateurs peuvent afficher le contenu le plus pertinent auquel ils sont �
 
 Vos développeurs intégreront les cartes de contenu lorsqu’ils intégreront le SDK Braze. Pour plus de détails sur l’intégration avec les cartes de contenu, consultez les articles du guide du développeur pour votre plateforme :
 
-- [ sous iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "Guide d’intégration des cartes de contenu")
+- [ sous iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guide d’intégration des cartes de contenu")
 - [ sous Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guide d'intégration des cartes de contenu")
 - [ Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guide d'intégration des cartes de contenu")
 
