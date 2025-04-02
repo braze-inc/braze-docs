@@ -17,7 +17,7 @@ Currents is a real-time, live data stream, which means that events can't be repl
 
 ### Why does Currents output data in the Avro format, not JSON?
 
-Avro, unlike schema-less JSON, natively supports schema evolution. You'll also benefit from the ability to send Avro files with less bandwidth as well as saved storage space because Avro is highly compressible.
+Avro, unlike schema-less JSON, natively supports schema evolution. You'll also benefit from the ability to send Avro files with less bandwidth and saved storage space because Avro is highly compressible.
 
 ### How does Braze handle file overhead?
 
