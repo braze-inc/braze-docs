@@ -7,7 +7,7 @@ description: "In diesem Referenzartikel wird beschrieben, wie Sie „Wieder verf
 
 # „Wieder verfügbar“-Benachrichtigungen
 
-> Mit einer Kombination aus Bestandsbenachrichtigungen über Braze-Kataloge und einem Canvas können Sie Kunden benachrichtigen, wenn ein Artikel wieder vorrätig ist. Jedes Mal, wenn ein:e Kund:in ein ausgewähltes angepasstes Event ausführt, kann er oder sie automatisch benachrichtigt werden, wenn der Artikel wieder aufgefüllt wird.
+> Verwenden Sie eine Kombination aus Back-in-Stock-Benachrichtigungen über Braze-Kataloge und ein Canvas, um Kunden zu benachrichtigen, wenn ein Artikel wieder auf Lager ist. Jedes Mal, wenn ein:e Kund:in ein ausgewähltes angepasstes Event ausführt, kann er oder sie automatisch benachrichtigt werden, wenn der Artikel wieder aufgefüllt wird.<br><br>Auf dieser Seite erfahren Sie, wie Bestandsmeldungen funktionieren und wie Sie sie einrichten und verwenden können.
 
 Wenn ein Benutzer ein benutzerdefiniertes Ereignis für einen Artikel auslöst, melden wir ihn automatisch an, um Benachrichtigungen für diesen Artikel zu erhalten, wenn er wieder vorrätig ist. Wenn die Bestandsmenge des Artikels Ihrer Bestandsregel entspricht (z. B. ein Bestand von mehr als 100), werden alle Abonnent:innen über eine Kampagne oder Canvas benachrichtigt. Allerdings erhalten nur Nutzer:innen, die sich für eine Benachrichtigung entschieden haben, eine Benachrichtigung. 
 
@@ -29,7 +29,7 @@ Führen Sie diese Schritte aus, um eine Benachrichtigung über einen nicht vorr�
     <br> ![Katalogeinstellungen.][2]{: style="max-width:70%;"}
     - **Fallback-Katalog** Dies ist der Katalog, der für das „Wieder verfügbar“-Abo verwendet wird, wenn die Eigenschaft `catalog_name` für das angepasste Event nicht vorhanden ist.
     - **Angepasstes Event für Abonnements** ist das angepasste Event von Braze, mit dem ein Nutzer:in für „Wieder verfügbar“-Benachrichtigungen abonniert wird. Wenn dieses Event eintritt, erhält der oder die Nutzer:in, der oder die das Event ausgeführt hat, ein Abonnement.
-    - **Angepasstes Event für die Abmeldung** ist das angepasste Event von Braze, mit dem ein Nutzer:in von den „Wieder verfügbar“-Benachrichtigungen abgemeldet wird.
+    - **Angepasstes Event für die Abmeldung** ist das angepasste Event von Braze, mit dem ein Nutzer:in von den „Wieder verfügbar“-Benachrichtigungen abgemeldet wird. Dieses Ereignis ist optional. Führt der Nutzer:in dieses Ereignis nicht aus, wird er nach 90 Tagen abgemeldet oder wenn das Back-in-Stock-Ereignis triggert, je nachdem, was zuerst eintritt.
     - Die **Event-Eigenschaft für Artikel-ID** ist die Eigenschaft des oben genannten angepassten Events, das verwendet wird, um den Artikel für ein Abo oder eine Abmeldung zu bestimmen, wenn ein Artikel wieder auf Lager ist. Diese Eigenschaft des angepassten Events sollte eine Artikel-ID enthalten, die in einem Katalog vorhanden ist. Das angepasste Event sollte auch eine Eigenschaft `catalog_name` enthalten, um anzugeben, in welchem Katalog sich dieser Artikel befindet.
     
     - Ein Beispiel für ein benutzerdefiniertes Ereignis würde wie folgt aussehen
@@ -84,7 +84,7 @@ Um ein Template mit Details zu dem Artikel zu erstellen, der wieder verfügbar i
 
 Die Verwendung von {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} gibt die ID des Artikels zurück, der wieder auf Lager ist. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} gibt den Bestandswert des Artikels vor der Aktualisierung zurück, und {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} gibt den neuen Bestandswert nach der Aktualisierung zurück.
 
-Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} am Anfang Ihrer Nachricht und verwenden Sie dann {%raw%}``{{ items[0].<field_name> }}``{%endraw%}, um in der gesamten Nachricht auf Daten zu diesem Artikel zuzugreifen.
+Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} am Anfang Ihrer Nachricht und verwenden Sie dann {%raw%}``{{ items[0].<field_name> }}``{%endraw%}, um in der gesamten Nachricht auf Daten zu diesem Artikel zuzugreifen.
 
 ## Überlegungen
 
