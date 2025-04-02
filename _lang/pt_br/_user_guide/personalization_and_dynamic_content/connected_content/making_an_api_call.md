@@ -8,9 +8,9 @@ search_rank: 2
 
 # [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/connected-content) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazer uma chamada API
 
-> Use o Connected Content para inserir qualquer informação acessível via API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.
+> Use o Connected Content para inserir qualquer informação acessível pela API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.<br><br>Esta página aborda como fazer chamadas à Connected Content API, casos de uso avançados da Connected Content, tratamento de erros e muito mais.
 
-## Tag de conteúdo conectado
+## Envio de uma chamada de Connected Content
 
 {% raw %}
 
@@ -61,16 +61,16 @@ Se achar que a detecção de host não saudável pode estar causando problemas, 
 Visite [Solução de problemas de solicitações de webhook e Connected Content]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) para saber mais sobre como solucionar problemas de códigos de erro comuns.
 {% endalert %}
 
-## Performance
+## Permitindo uma performance eficiente
 
-Como o Braze entrega mensagens em uma velocidade muito rápida, certifique-se de que seu servidor possa lidar com milhares de conexões simultâneas para que os servidores não fiquem sobrecarregados ao baixar o conteúdo. Ao usar APIs públicas, confira se o seu uso não violará nenhum limite de frequência que o provedor de API possa empregar. A Braze exige que o tempo de resposta do servidor seja inferior a 2 segundos por motivos de performance; se o servidor demorar mais de 2 segundos para responder, o conteúdo não será inserido.
+Como o Braze entrega mensagens em uma velocidade muito rápida, certifique-se de que seu servidor possa lidar com milhares de conexões simultâneas para que os servidores não fiquem sobrecarregados ao baixar o conteúdo. Ao usar APIs públicas, confirme que seu uso não violará nenhum limite de frequência que o provedor de API possa empregar. O Braze exige que o tempo de resposta do servidor seja inferior a dois segundos por motivos de performance; se o servidor demorar mais de dois segundos para responder, o conteúdo não será inserido.
 
 Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de uma vez por destinatário. Isso se deve ao fato de que a Braze pode precisar fazer uma chamada à API Connected Content para renderizar uma carga útil de mensagem, e as cargas úteis de mensagem podem ser renderizadas várias vezes por destinatário para validação, lógica de nova tentativa ou outros fins internos. Seus sistemas devem ser capazes de tolerar que a mesma chamada da conteúdo conectado seja feita mais de uma vez por destinatário.
 
 ## Coisas para saber
 
 * A Braze não cobra pelas chamadas de API e não será contabilizada em sua cota de dados.
-* Há um limite de 1 MB para as respostas do conteúdo conectado.
+* Há um limite de um MB para as respostas do Connected Content.
 * As chamadas do Connected Content ocorrerão quando a mensagem for enviada, exceto no caso de mensagens no app, que farão essa chamada quando a mensagem for visualizada.
 * As chamadas de Connected Content não seguem redirecionamentos.
 
@@ -81,12 +81,12 @@ Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de u
 Se o URL exigir autenticação básica, a Braze poderá gerar uma credencial de autenticação básica para você usar em sua chamada de API. Você pode gerenciar as credenciais de autenticação básica existentes e adicionar novas credenciais em **Settings** > **Connected Content**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Connected Content** em **Manage Settings (Gerenciar configurações**).
+Se você estiver usando a [navegação antiga]({{site.baseurl}}/navigation), poderá encontrar **Conteúdo conectado** em **Gerenciar configurações**.
 {% endalert %}
 
 ![As configurações de "Connected Content" no dashboard do Braze.][34]
 
-Para adicionar uma nova credencial, clique em **Add Credential (Adicionar credencial**). Dê um nome à sua credencial e digite o nome de usuário e a senha.
+Para adicionar uma nova credencial, selecione **Adicionar credencial**. Dê um nome à sua credencial e digite o nome de usuário e a senha.
 
 ![A janela "Create New Credential" (Criar nova credencial) com a opção de inserir um nome, nome de usuário e senha.][35]{: style="max-width:30%" }
 
@@ -115,7 +115,7 @@ Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs 
      :headers {
        "X-App-Id": "YOUR-APP-ID",
        "X-App-Token": "YOUR-APP-TOKEN"
-  }
+     }
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -127,7 +127,7 @@ Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs 
 
 Algumas configurações de API exigem a recuperação de um token de acesso que pode ser usado para autenticar o endpoint da API que você deseja acessar.
 
-#### Recuperar o token de acesso
+#### Etapa 1: Recuperar o token de acesso
 
 O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso em uma variável de localização que pode ser usada para autenticar a chamada subsequente à API. Um parâmetro `:cache_max_age` pode ser adicionado para corresponder ao tempo de validade do token de acesso e reduzir o número de chamadas de saída do conteúdo conectado. Para saber mais, consulte [Cache configurável][36] ].
 
@@ -139,14 +139,14 @@ O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso 
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
-  }
+     }
      :cache_max_age 900
      :save token_response
 %}
 ```
 {% endraw %}
 
-#### Autorizar a API usando o token de acesso recuperado
+#### Etapa 2: Autorizar a API usando o token de acesso recuperado
 
 Agora que o token está salvo, ele pode ser modelado dinamicamente na chamada subsequente do conteúdo conectado para autorizar a solicitação:
 
@@ -157,7 +157,7 @@ Agora que o token está salvo, ele pode ser modelado dinamicamente na chamada su
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "{{token_response}}"
-  }
+     }
      :body key1=value1&key2=value2
      :save response
 %}
