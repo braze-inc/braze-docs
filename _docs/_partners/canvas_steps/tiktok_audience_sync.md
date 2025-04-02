@@ -153,6 +153,12 @@ The audience size will update within 24-48 hours on the Audiences page in TikTok
 
 You can have up to 400 audiences per TikTok ad account.
 
+### Why is my audience size or match rate in TikTok higher than the users synced in Braze with Audience Sync?
+
+This is because in TikTok, one ID may be associated with multiple TikTok users. This occurs most often when clients use mobile ad IDs (iOS IDFA and Android GAID) because one device may have multiple TikTok users logged in. 
+
+Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
+
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
 [2]: {% image_buster /assets/img/tiktok/tiktok2.png %}
