@@ -27,7 +27,6 @@ After you [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integra
 
 Once a user is assigned an `external_id`, you can't revert them to an anonymous user&#8212;however, by uninstalling and reinstalling your app they'll be considered anonymous again until `changeUser` is called.
 
-
 If a previously-identified user starts a session on a new device, all of their "anonymous" activity will automatically sync to their existing profile after you call `changeUser` on that device. This includes any attributes, events, or history collected during the session on the new device.
 
 ## Assigning user aliases
