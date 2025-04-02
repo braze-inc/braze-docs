@@ -10,7 +10,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > アプリ内メッセージのドラッグアンドドロップエディタを使用して、新製品のローンチに対する認識を高めます。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
 
 ## 製品発表の作成
 
