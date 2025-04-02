@@ -16,7 +16,7 @@ table td {
 
 # SQL-Tabellenreferenz
 
-Diese Seite ist eine Referenz der Tabellen und Spalten, die im [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) oder bei der Erstellung von [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) abgefragt werden können. 
+Diese Seite ist eine Referenz der Tabellen und Spalten, die im [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) oder bei der Erstellung von [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) abgefragt werden können. 
 
 ## Inhaltsverzeichnis
 
