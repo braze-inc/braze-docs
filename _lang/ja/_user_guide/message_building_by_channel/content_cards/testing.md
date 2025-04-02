@@ -37,7 +37,7 @@ channel:
 
 ## デバッグ
 
-コンテンツカードが送信された後、開発者コンソールの[イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/)から問題を分解またはデバッグできます。 
+コンテンツカードが送信された後、開発者コンソールの[イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/)から問題を分解またはデバッグできます。 
 
 一般的なユースケースは、ユーザーが特定のコンテンツカードを見られない理由をデバッグしようとすることです。そのためには、セッション開始時にSDKに配信されたコンテンツカードをインプレッションの前に**イベントユーザーログ**で確認し、それらを特定のキャンペーンに遡ることができます。
 
