@@ -29,7 +29,7 @@ Tenga en cuenta las siguientes ediciones permitidas tras el lanzamiento del lien
 
 Puedes eliminar cualquiera de los siguientes elementos de tu recorrido de usuario:
 
-- [Pasos en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Pasos en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Variantes de Canvas 
 - Conexiones entre pasos en Canvas
 
