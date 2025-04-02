@@ -12,7 +12,7 @@ Tool:
 
 > Experimente a jornada dos canvas que você criou para seus usuários. Isso inclui a prévia do tempo e das mensagens que eles receberão. Essas execuções de teste funcionam como garantia de qualidade de que suas mensagens são enviadas para o público certo, tudo isso antes de enviar sua tela.
 
-## Iniciar uma execução de teste
+## Criação de uma execução de teste
 
 Siga estas etapas para fazer uma prévia da jornada do usuário:
 
@@ -57,12 +57,15 @@ As etapas de mensagem e atraso mostram o tempo em que um usuário avançaria ou 
 
 ## Quando os usuários entram e saem
 
-Os usuários de teste entrarão na prévia mesmo que não sejam elegíveis na vida real. Se eles não forem elegíveis, você pode ver por que eles não atenderiam aos critérios. Você pode ver os resultados na barra lateral quando os usuários entram e saem do Canva.
+Os usuários de teste entrarão na prévia mesmo que não sejam elegíveis na vida real. Se eles não forem elegíveis, você poderá ver por que não atenderam aos critérios. Quando um usuário de teste entra na prévia, presumimos que o usuário de teste atendeu aos critérios de público-alvo e executou os critérios de ação-gatilho. Por exemplo, para um Canva que usa eventos personalizados nos critérios de entrada, presume-se que o usuário teste tenha realizado o evento personalizado conforme esperado nos critérios de entrada. No entanto, se o mesmo evento personalizado for usado em outra parte da tela (como nos critérios de saída), considere como isso pode afetar a jornada do usuário.
 
-- Se você testar uma jornada de ação com ações que correspondam a critérios de saída (incluindo propriedades de eventos), os critérios de saída serão disparados e a execução do teste será encerrada.
-- Se você testar uma etapa de Mensagem que corresponda aos critérios de saída, os critérios de saída serão disparados e a execução do teste será encerrada.
-- Nesse momento, não é possível selecionar um evento ou uma propriedade específica em uma jornada de ação para disparar os critérios de saída (somente a jornada como um todo). Se um usuário puder atender a vários critérios de saída, o primeiro que for processado e que ele atender será mostrado como resultado.
-- Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas são aplicados com base na entrada do Canvas. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow. Por exemplo, durante os testes, quando um atributo personalizado é usado como um disparador do Canvas, os critérios do disparador são aplicados à prévia do usuário **como se** ele tivesse disparado a alteração do atributo personalizado. 
+Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas são aplicados com base na entrada do Canvas. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow. Por exemplo, durante os testes, quando um atributo personalizado é usado como um disparador do Canvas, os critérios do disparador são aplicados à prévia do usuário **como se** ele tivesse disparado a alteração do atributo personalizado.
+
+### Considerações
+
+Se você testar um caminho de ação com ações que correspondam a critérios de saída (incluindo propriedades de eventos), os critérios de saída serão disparados e a execução do teste será encerrada. Se você testar uma etapa de Mensagem que corresponda aos critérios de saída, os critérios de saída serão disparados e a execução do teste será encerrada. 
+
+Nesse momento, não é possível selecionar um evento ou uma propriedade específica em uma jornada de ação para disparar os critérios de saída (somente a jornada como um todo). Se um usuário puder atender a vários critérios de saída, o primeiro que for processado e que ele atender será mostrado como resultado.
 
 ## Caminhos de experimento e variantes do Canva
 
@@ -98,11 +101,11 @@ Os webhooks serão executados quando as mensagens de teste forem enviadas, mas n
 
 Nesse cenário, o Canva é configurado para direcionamento a usuários que não tiveram uma sessão em um app. Essa jornada inclui uma etapa de Mensagem com um e-mail de boas-vindas, uma etapa de Postergação definida para um dia e uma etapa de Caminhos do público que se divide em duas jornadas: usuários com pelo menos uma sessão e todos os outros. Dependendo da jornada do público em que o usuário se enquadra, a etapa subsequente da mensagem será enviada.
 
-![][1]{:style="max-width:70%"}
+![Um exemplo de uma tela com uma etapa de mensagem, etapa de postergação, etapa de jornadas do público e duas etapas de mensagens.][1]{:style="max-width:70%"}
 
 Como o nosso usuário teste atende aos critérios de entrada do Canvas, ele pode entrar no Canvas e percorrer a jornada do usuário. No entanto, como nosso usuário teste não abriu o app no último dia, ele continuará na jornada "Todos os outros" e receberá uma notificação por push que diz "Última chance! Conclua sua primeira tarefa para ganhar um bônus exclusivo."
 
-![][2]
+![A seção "Resultados do teste" que mostra que o usuário teste atendeu aos critérios de entrada e fornece um resumo de sua jornada, incluindo as etapas enviadas.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}
