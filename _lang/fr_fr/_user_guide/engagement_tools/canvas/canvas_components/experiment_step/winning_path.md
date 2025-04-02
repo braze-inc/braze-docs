@@ -8,7 +8,7 @@ tool: Canvas
 
 # Chemin gagnant dans les chemins d’expérience
 
-> Le chemin gagnant (Winning Path) est similaire à la [variante gagnante (Winning Variant)]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) dans les campagnes, et vous permet d'automatiser vos tests A/B.
+> Le chemin gagnant (Winning Path) est similaire à la [variante gagnante (Winning Variant)]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) dans les campagnes, et vous permet d'automatiser vos tests A/B.
 
 Lorsque le chemin gagnant est activé dans une étape des chemins d'expérience, après une période spécifiée, tous les utilisateurs suivants seront envoyés sur le chemin avec le taux de conversion le plus élevé.
 
