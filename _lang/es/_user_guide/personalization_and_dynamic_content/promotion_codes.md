@@ -9,7 +9,7 @@ description: "Este artículo de referencia explica cómo crear listas de código
 
 # Códigos de promoción
 
-> Los códigos promocionales -también llamados códigos de promoción- son una excelente forma de mantener el interés de los usuarios impulsando las interacciones con un fuerte énfasis en las compras.
+> Los códigos promocionales -también llamados códigos de promoción- son una excelente forma de mantener el interés de los usuarios impulsando las interacciones con un fuerte énfasis en las compras.<br><br>Esta página explica cómo crear listas de códigos promocionales y añadirlos a tus campañas y Lienzos.
 
 Con la funcionalidad Braze Liquid, ofrecemos una forma de hacer que el uso generalizado de códigos de promoción sea muy sencillo, permitiendo que los mensajes se extraigan ahora de la lista de promociones que usted proporcionó, de forma automática e intuitiva. La función de códigos promocionales ofrece fechas de caducidad de hasta seis meses y admite hasta 20 millones de códigos individuales por lista.
 
@@ -81,7 +81,7 @@ Tras seleccionar Guardar, aparecerá una nueva fila en el **Historial de importa
 ![][8]
 
 {% alert note %}
-Los archivos más grandes tardarán unos minutos en importarse. Mientras esperas, puedes salir de la página y trabajar en algo mientras se realiza la importación. Cuando finalice la importación, verá que el estado cambia a **Completado** en la tabla.
+Los archivos más grandes tardarán unos minutos en importarse. Mientras esperas, puedes salir de la página y trabajar en algo mientras se realiza la importación. Cuando finalice la importación, el estado cambiará a **Completado** en la tabla.
 {% endalert %}
 
 #### Actualizar una lista de códigos promocionales
