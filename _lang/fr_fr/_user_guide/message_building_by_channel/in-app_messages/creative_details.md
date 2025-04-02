@@ -91,10 +91,10 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 ### GIF et vidéos
 
-Braze prend actuellement en charge les GIF pour les messages in-app Web (inclus), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) et iOS (inclus), étant donné qu'ils ont été activés lors de l'intégration de la plateforme souhaitée. Pour en savoir plus sur la vidéo dans les messages in-app, consultez notre [documentation sur la personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)
+Braze prend actuellement en charge les GIF pour les messages in-app Web (inclus), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/) et iOS (inclus), étant donné qu'ils ont été activés lors de l'intégration de la plateforme souhaitée. Pour en savoir plus sur la vidéo dans les messages in-app, consultez notre [documentation sur la personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)
 
 ## Considérations supplémentaires
 
-Les messages in-app de Braze possèdent des spécifications de création globales et individuelles. Pour en savoir plus sur la personnalisation complète des messages in-app, consultez notre page [Personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) 
+Les messages in-app de Braze possèdent des spécifications de création globales et individuelles. Pour en savoir plus sur la personnalisation complète des messages in-app, consultez notre page [Personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/) 
 
 <br>
