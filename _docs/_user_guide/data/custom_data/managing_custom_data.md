@@ -46,7 +46,7 @@ You may occasionally identify custom attributes, custom events, or purchase even
 
 To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website. Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user.
 
-{% alert tip %}
+{% alert important %}
 To blocklist custom data, you'll need the [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access and edit campaigns, Canvases, and segments.
 {% endalert %}
 
