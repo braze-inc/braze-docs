@@ -90,11 +90,11 @@ Um auf die Registerkarte **Linkverwaltung** im aktualisierten HTML-E-Mail-Editor
 Linkvorlagen werden nicht auf reinen Text angewendet. Das bedeutet, dass Currents möglicherweise Klicks anzeigt, die nicht die Parameter aus den Linkvorlagen enthalten, da diese Klicks möglicherweise aus der reinen Textversion der E-Mail stammen.
 {% endalert %}
 
-Wenn Sie auf der Registerkarte **Linkverwaltung** Linkvorlagen hinzufügen, scrollen Sie nach rechts, um die von Ihnen hinzugefügten Vorlagen anzuzeigen.
+Wenn Sie auf der Registerkarte **Linkverwaltung** Linkvorlagen hinzufügen, scrollen Sie nach rechts, um die von Ihnen hinzugefügten Vorlagen anzuzeigen. Wenn bestehende Links in einer E-Mail bereits mit einem Link-Template versehen sind, wird bei neu hinzugefügten Links standardmäßig auch das Link-Template hinzugefügt.
 
 ## Verwalten von Link-Templates
 
-Sie können auch Link-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Sie können auch Link-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 Die Archivierung von Vorlagen ist derzeit nicht für Linkvorlagen verfügbar.
