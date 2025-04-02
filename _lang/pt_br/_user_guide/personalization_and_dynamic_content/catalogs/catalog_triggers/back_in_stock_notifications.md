@@ -7,7 +7,7 @@ description: "Este artigo de referência descreve como criar notificações de f
 
 # Notificações de estoque em espera
 
-> Usando uma combinação de notificações de falta de estoque por meio dos catálogos da Braze e de um canva, você pode notificar os clientes quando um item estiver em falta. Sempre que um cliente realiza um evento personalizado selecionado, ele pode se inscrever automaticamente para ser notificado quando o item for reabastecido.
+> Use uma combinação de notificações de volta ao estoque por meio de catálogos do Braze e uma tela para notificar os clientes quando um item estiver de volta ao estoque. Sempre que um cliente realiza um evento personalizado selecionado, ele pode se inscrever automaticamente para ser notificado quando o item for reabastecido.<br><br>Esta página aborda como funcionam as notificações de falta de estoque e como você pode configurá-las e usá-las.
 
 Quando um usuário dispara um evento personalizado para um item, nós o inscrevemos automaticamente para receber notificações de falta de estoque desse item. Quando a quantidade de estoque do item atender à sua regra de estoque (por exemplo, um estoque maior que 100), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou do canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
@@ -29,7 +29,7 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
     <br> ![Gaveta de configurações do catálogo.][2]{: style="max-width:70%;"}
     - **Catálogo de fallback** Esse é o catálogo que será usado para a inscrição de back-in-stock, se não houver nenhuma propriedade `catalog_name` presente no evento personalizado.
     - O **evento personalizado para inscrições** é o evento personalizado do Braze que será usado para inscrever um usuário para receber notificações de falta de estoque. Quando esse evento ocorrer, o usuário que o realizou será inscrito.
-    - O **evento personalizado para cancelamento de inscrição** é o evento personalizado do Braze que será usado para cancelar a inscrição de um usuário nas notificações de estoque em espera.
+    - O **evento personalizado para cancelamento de inscrição** é o evento personalizado do Braze que será usado para cancelar a inscrição de um usuário nas notificações de estoque em espera. Esse evento é opcional. Se o usuário não realizar esse evento, sua inscrição será cancelada depois de 90 dias ou quando o evento de estoque esgotado for disparado, o que ocorrer primeiro.
     - **A propriedade do evento Item ID** é a propriedade do evento personalizado acima que será usada para determinar o item para uma inscrição ou cancelamento de inscrição em estoque. Essa propriedade no evento personalizado deve conter um ID de item, que está presente em um catálogo. O evento personalizado também deve conter uma propriedade `catalog_name`, para especificar em qual catálogo esse item está.
     
     - Um exemplo de evento personalizado seria
@@ -84,7 +84,7 @@ Para obter detalhes sobre o item do catálogo que está de volta ao estoque, use
 
 O uso de {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} retornará o ID do item que voltou ao estoque. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} retornará o valor do estoque do item antes da atualização e {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} retornará o novo valor do estoque após a atualização.
 
-Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} no topo da sua mensagem, depois use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} para acessar dados sobre esse item ao longo da mensagem.
+Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} no topo da sua mensagem, depois use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} para acessar dados sobre esse item ao longo da mensagem.
 
 ## Considerações
 
