@@ -30,7 +30,7 @@ description: "このページでは、よくある質問をカテゴリー別に
 
 識別されたユーザーとマージしたいエイリアスユーザーの場合、保持したい実際のプロファイルに関連するフィールドをマージできます。エイリアスプロファイルからデータを削除する前に、[ID でユーザープロファイルをエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)エンドポイントを使用して、そのデータをエクスポートする必要があります。その後、[ユーザーを追跡]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイントを使って、これらのイベントをあなたが保持しているプロファイルに投稿できます。これにより、一方のプロファイルに記録されていたが、もう一方のプロファイルには記録されていなかった属性など、保持したいデータが保持される。
 
-Braze で新規および既存のユーザーデータを収集するためのさまざまな方法の詳細については、[データ収集のベストプラクティス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/)を参照してください。
+Braze で新規および既存のユーザーデータを収集するためのさまざまな方法の詳細については、[データ収集のベストプラクティス]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)を参照してください。
 
 {% endapi %}
 {% api %}
@@ -51,7 +51,7 @@ CSVファイルから**オーディエンス** > **ユーザーのインポー�
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これは [**ユーザー**] > [**ユーザーインポート**] にあります。
 {% endalert %}
 
-CSVインポートを開始する前に、Brazeでユーザーをどのように識別するかをエンジニアリングチームから理解しておくことが重要である。一般的に、これは内部で使用されるデータベース ID です。これは、モバイルと Web で Braze SDK がユーザーを識別する方法と一致する必要があります。これは、各顧客がデバイスを問わず Braze 内で単一のユーザープロファイルを持つようにするためです。詳細については、Braze の[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)を参照してください。
+CSVインポートを開始する前に、Brazeでユーザーをどのように識別するかをエンジニアリングチームから理解しておくことが重要である。一般的に、これは内部で使用されるデータベース ID です。これは、モバイルと Web で Braze SDK がユーザーを識別する方法と一致する必要があります。これは、各顧客がデバイスを問わず Braze 内で単一のユーザープロファイルを持つようにするためです。詳細については、Braze の[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)を参照してください。
 
 インポートで `external_id` を指定すると、Braze は、同じ `external_id` を持つ既存のユーザーを更新します。`external_id` が見つからない場合は、その external_id を持つ新規ユーザーを作成します。
 
@@ -188,7 +188,7 @@ Braze パートナーによる支援を受けながら、ロケーションタ�
 
 ターゲティングの精度を上げるために、**プロパティフィルターを追加を**選択し、購入またはカスタムイベントの特定のプロパティに基づいてセグメントすることができる。Brazeは、文字列、数値、ブーリアン、および時間オブジェクトに基づくイベントプロパティのセグメンテーションをサポートしている。
 
-[階層化イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)に基づくセグメンテーションもサポートしています。
+[階層化イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)に基づくセグメンテーションもサポートしています。
 
 セグメントエクステンションはイベントプロパティの長期保存に依存しており、30 日間のカスタムイベント保存制限はありません。つまり、過去1年以内にトラッキングされたイベント・プロパティを振り返ることができ、トラッキングはエクステンションがセットアップされるまで待つ必要がない。
 
@@ -272,7 +272,7 @@ Braze パートナーによる支援を受けながら、ロケーションタ�
 
 Braze はユーザーのタイムゾーンをデバイスから自動的に判別します。これは、タイムゾーンの正確さとユーザーの完全な範囲をサポートするように設計されています。ユーザー API を通じて作成されたユーザーや、タイムゾーンなしで作成されたユーザーは、SDK によってアプリで認識されるまで、既定のタイムゾーンとして貴社のタイムゾーンが使用されます。
 
-会社のタイムゾーンは [[会社の設定]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/)] で確認できます。
+会社のタイムゾーンは [[会社の設定]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/)] で確認できます。
 
 {% endapi %}
 {% api %}
@@ -410,7 +410,7 @@ Canvases
 
 それぞれのステップのジョブをキューに入れ、ほぼ同時に実行し、どちらかが "勝つ"。実際には、双方がほぼ均等な結果となるかも知れませんが、最初に作成されたステップが若干有利となる可能性が高くなると思われます。
 
-また、この分布がどのようになるかを正確に保証することはできません。均等に分けたい場合は、[ランダムなバケツ番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)フィルターを追加する。
+また、この分布がどのようになるかを正確に保証することはできません。均等に分けたい場合は、[ランダムなバケツ番号]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/)フィルターを追加する。
 
 {% endapi %}
 {% api %}
@@ -455,7 +455,7 @@ Canvases
 
 マルチステップキャンバスの一部のステップを編集した場合、すでにオーディエンスでありながらステップを受け取っていないユーザーは、更新後のバージョンのメッセージを受け取ることになります。これは、まだそのステップで評価されていない場合のみに該当することに注意してください。
 
-開始後に編集できる内容については、[開始後にキャンバスを変更する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/)を参照してください。
+開始後に編集できる内容については、[開始後にキャンバスを変更する]({{site.baseurl}}/post-launch_edits/)を参照してください。
 
 {% endapi %}
 {% api %}
@@ -532,7 +532,7 @@ Canvases
 分析
 {% endapitags %}
 
-チャネルに応じて、Brazeは様々な指標を測定し、キャンペーンの成功を判断し、今後のキャンペーンに反映させることができる。包括的なリストは、[レポートメトリクス用語集を]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics)参照されたい。
+チャネルに応じて、Brazeは様々な指標を測定し、キャンペーンの成功を判断し、今後のキャンペーンに反映させることができる。包括的なリストは、[レポートメトリクス用語集を]({{site.baseurl}}/user_guide/data/report_metrics/)参照されたい。
 
 {% endapi %}
 {% api %}
@@ -558,7 +558,7 @@ Canvases
 
 Braze の Currents ツールは、メッセージングエンゲージメントと顧客行動データの両方を、弊社の多くのデータパートナーのいずれかに継続的にストリーミングします。これにより、Braze が作成するユニークで価値のあるデータを活用して、クラス最高のパートナー各社におけるビジネスインテリジェンスと分析の取り組みを強化することができます。
 
-このデータには、メッセージング・エンゲージメントの指標にとどまらず、カスタム属性やイベントのパフォーマンスなど、より複雑な数値も含まれる。詳細については、[Currents のイベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events)を参照してください。
+このデータには、メッセージング・エンゲージメントの指標にとどまらず、カスタム属性やイベントのパフォーマンスなど、より複雑な数値も含まれる。詳細については、[Currents のイベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)を参照してください。
 
 {% endapi %}
 {% api %}
@@ -595,6 +595,6 @@ Braze の Currents ツールは、メッセージングエンゲージメント�
 
 レポートビルダーを使用すると、複数のキャンペーンまたはキャンバスの結果を 1 つのビューで比較できるため、主要な指標に最も影響を与えたエンゲージメント戦略を簡単に判断できます。キャンペーンとキャンバスの両方について、データをエクスポートし、レポートを保存して今後表示できます。
 
-Braze のレポートと分析の使用方法の詳細については、[レポートの概要]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/)を参照してください。
+Braze のレポートと分析の使用方法の詳細については、[レポートの概要]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/)を参照してください。
 
 {% endapi %}
