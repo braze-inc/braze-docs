@@ -86,7 +86,7 @@ Vous trouverez ci-après un exemple du Liquid et du corps de requête nécessair
 {% endraw %}
 
 {% alert note %}
-Chaque fois qu'un compteur d'attribut personnalisé est mis à jour (incrémenté ou décrémenté), il consommera un [point de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/), qui comptera dans votre consommation globale.
+Chaque fois qu'un compteur d'attribut personnalisé est mis à jour (incrémenté ou décrémenté), il consommera un [point de données]({{site.baseurl}}/user_guide/data/data_points/), qui comptera dans votre consommation globale.
 {% endalert %}
 
 ### Cas d’utilisation : Déclencher un deuxième Canvas depuis un premier Canvas
@@ -144,7 +144,7 @@ Ajoutez votre requête `canvas/trigger/send` dans le champ de texte. Pour plus d
 - Les mises à jour du profil utilisateur entraîneront des [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count) supplémentaires, alors que le déclenchement d'un autre message par le biais des points d'extrémité de messages n'en entraînera pas.
 - Si vous souhaitez cibler des [utilisateurs anonymes]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), vous pouvez utiliser `braze_id` au lieu de `external_id` dans le corps de la requête de votre webhook.
 - Vous pouvez enregistrer votre webhook Braze à Braze comme [modèle]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) à réutiliser.
-- Vous pouvez consulter le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) pour visualiser et résoudre les problèmes liés aux webhooks.
+- Vous pouvez consulter le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) pour visualiser et résoudre les problèmes liés aux webhooks.
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}
