@@ -96,7 +96,7 @@ Quels leviers devez-vous utiliser et quels sont les effets souhaités ? Bien qu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Lorsque vous exécutez des tests A/B, n'oubliez pas de générer des [rapports d'entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) afin de comprendre l'impact de chaque variante sur votre entonnoir de conversion, en particulier si, pour votre entreprise, la « conversion » implique plusieurs étapes ou plusieurs actions.
+Lorsque vous exécutez des tests A/B, n'oubliez pas de générer des [rapports d'entonnoir]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) afin de comprendre l'impact de chaque variante sur votre entonnoir de conversion, en particulier si, pour votre entreprise, la « conversion » implique plusieurs étapes ou plusieurs actions.
 {% endalert %}
 
 De plus, la longueur idéale de votre test peut également varier en fonction du canal. Gardez à l’esprit la durée moyenne dont la plupart des utilisateurs peuvent avoir besoin pour interagir avec chaque canal.
