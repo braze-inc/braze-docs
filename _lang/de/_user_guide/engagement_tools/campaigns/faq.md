@@ -52,7 +52,7 @@ Wenn beispielsweise ein in London ansässiges Unternehmen eine Kampagne um 12 Uh
 
 Braze ermittelt automatisch die Zeitzone eines Benutzers anhand seines Geräts. Dies gewährleistet die Genauigkeit der Zeitzone und die vollständige Abdeckung Ihrer Nutzer:innen. Benutzer, die über die Benutzer-API oder anderweitig ohne Zeitzone erstellt werden, haben die Zeitzone Ihres Unternehmens als Standardzeitzone, bis sie in Ihrer App vom SDK erkannt werden. 
 
-Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) auf dem Dashboard überprüfen.
+Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) auf dem Dashboard überprüfen.
 
 ### Wann bewertet Braze die Benutzer für die Bereitstellung in der lokalen Zeitzone?
 
