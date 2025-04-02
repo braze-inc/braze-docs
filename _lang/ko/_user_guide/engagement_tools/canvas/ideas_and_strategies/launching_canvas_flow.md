@@ -77,7 +77,7 @@ tool: Canvas
 
 ### 실험 경로
 
-Action Paths와 유사하게, 캔버스에서 [실험 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) 단계를 활용하여 대조군과 함께 여러 캔버스 경로를 서로 테스트할 수 있습니다. 이것은 경로 성능을 추적하여 캔버스 여정을 구축할 때 정보에 입각한 결정을 내릴 수 있도록 합니다. 
+Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. 이것은 경로 성능을 추적하여 캔버스 여정을 구축할 때 정보에 입각한 결정을 내릴 수 있도록 합니다. 
 
 ## 출시 전에 테스트
 
