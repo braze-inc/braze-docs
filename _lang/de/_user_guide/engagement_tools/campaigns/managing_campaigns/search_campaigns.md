@@ -32,7 +32,7 @@ Wenn Sie zum Beispiel Ihre Kampagnenentwürfe prüfen möchten, wählen Sie **St
 
 ### Suchen nach Tags
 
-Wenn Sie Ihre Kampagnen nach [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) durchsuchen, können Sie Ihre Ergebnisse weiter eingrenzen. Wenn Sie z.B. alle Kampagnen suchen, die Sie für die Ansprache von Neukunden, Vielkäufern und ehemaligen Kunden erstellt haben, können Sie diese Kampagnen nach ihrem gemeinsamen Tag **Targeting nach Kundentyp** durchsuchen.
+Wenn Sie Ihre Kampagnen nach [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) durchsuchen, können Sie Ihre Ergebnisse weiter eingrenzen. Wenn Sie z.B. alle Kampagnen suchen, die Sie für die Ansprache von Neukunden, Vielkäufern und ehemaligen Kunden erstellt haben, können Sie diese Kampagnen nach ihrem gemeinsamen Tag **Targeting nach Kundentyp** durchsuchen.
 
 ### Anpassen der Filter
 
