@@ -21,7 +21,7 @@ Um mit dem KI-Copywriting-Assistent Texte zu erstellen, gehen Sie folgendermaße
 5. (Optional) Wählen Sie einen Nachrichtenton aus den verfügbaren Optionen. Dies bestimmt den Stil der erzeugten Kopie.
 6. (Optional) Verfügbar für Push-Benachrichtigungen: Wählen Sie **Vergangene Kampagnendaten referenzieren**, um Ihre früheren mobilen Push-Nachrichten (Kampagnen und Canvas-Schritte) als stilistische Referenz für die Erstellung neuer Texte zu verwenden. Wenn Sie diese Option auswählen, wird die Ausgabe den Stil Ihrer vorherigen Nachrichten imitieren.
 7. Wählen Sie die Ausgabesprache. Diese kann sich von Ihrer Eingabesprache unterscheiden.
-8. Klicken Sie auf **Erzeugen**.
+8. Wählen Sie **Erzeugen**.
 
 Wir verwenden die von Ihnen bereitgestellten Informationen, um GPT zu veranlassen, Texte für Sie zu schreiben. Die Antwort wird von OpenAI abgerufen und Ihnen zur Verfügung gestellt. 
 
