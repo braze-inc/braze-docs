@@ -14,7 +14,7 @@ tool: Canvas
 
 > El componente Actualización de usuario permite actualizar los atributos, eventos y compras de un usuario en un compositor JSON, por lo que no es necesario incluir información confidencial como claves API.
 
-Con la actualización de usuarios, las actualizaciones no cuentan para el límite de solicitudes por minuto de `/users/track`. En su lugar, estas actualizaciones se agrupan por lotes para que Braze pueda procesarlas con mayor eficacia que un webhook de Braze a Braze. Tenga en cuenta que este componente no consume [puntos de datos]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) cuando se utiliza para actualizar puntos de datos no facturables (como grupos de suscripción).
+Con la actualización de usuarios, las actualizaciones no cuentan para el límite de solicitudes por minuto de `/users/track`. En su lugar, estas actualizaciones se agrupan por lotes para que Braze pueda procesarlas con mayor eficacia que un webhook de Braze a Braze. Tenga en cuenta que este componente no consume [puntos de datos]({{site.baseurl}}/user_guide/data/data_points/) cuando se utiliza para actualizar puntos de datos no facturables (como grupos de suscripción).
 
 Los usuarios sólo avanzarán a los siguientes pasos de Canvas una vez que hayan completado las actualizaciones de usuario pertinentes. Si su mensajería posterior depende de las actualizaciones que realice el usuario, puede asegurarse de que estas actualizaciones se hayan completado antes de que se envíen los mensajes.
 
@@ -52,7 +52,7 @@ Incrementando un atributo personalizado que rastrea un evento, puede rastrear el
 
 ### Actualizar una matriz de objetos
 
-Un [array de objetos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) es un atributo personalizado almacenado en el perfil de un usuario que es rico en datos. Esto le permite crear un historial de las interacciones del usuario con su marca. Esto le permite crear segmentos basados en un atributo personalizado que es un campo calculado, como el historial de compras o el valor total del tiempo de vida.
+Un [array de objetos]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) es un atributo personalizado almacenado en el perfil de un usuario que es rico en datos. Esto le permite crear un historial de las interacciones del usuario con su marca. Esto le permite crear segmentos basados en un atributo personalizado que es un campo calculado, como el historial de compras o el valor total del tiempo de vida.
 
 El paso de actualización de usuario puede añadir o eliminar atributos a esta matriz de objetos. Para actualizar una matriz, seleccione el nombre del atributo de la matriz en su lista de atributos e introduzca el valor de la clave.
 
@@ -91,7 +91,7 @@ Realice un seguimiento de cuándo un usuario tiene artículos en su cesta de la 
 {% endraw %}
 
 {:start="2"}
-2\. Crear un [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) llamado `add_item_to_cart` que se registra cuando un usuario añade un artículo a la cesta.
+2\. Crear un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) llamado `add_item_to_cart` que se registra cuando un usuario añade un artículo a la cesta.
 3\. Crea un Canvas con un público objetivo de usuarios con este evento personalizado. Ahora, cuando un usuario añade un artículo a su cesta, se activa este Canvas. A continuación, puede dirigir mensajes directamente a ese usuario, ofreciéndole códigos de cupón cuando haya alcanzado un determinado nivel de gasto, haya abandonado su cesta durante un determinado periodo de tiempo o cualquier otra cosa que se ajuste a su caso de uso. 
 
 El atributo `shopping_cart` lleva el total de muchos eventos personalizados: el coste total de todos los artículos, el número total de artículos en el carrito, si el carrito contiene un regalo, etc. Esto puede parecerse a lo siguiente:
@@ -129,7 +129,7 @@ Puedes utilizar el paso de actualización de usuario para persistir un `canvas_e
 Para almacenar la propiedad del evento desencadenante de un Canvas como atributo, utilice el modal de personalización para extraer y almacenar la propiedad de entrada del Canvas. La actualización de usuarios también admite las siguientes funciones de personalización: 
 * [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [Propiedades de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [Propiedades de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * Lógica líquida (incluidos los [mensajes de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Múltiples actualizaciones de atributos o eventos por objeto
 
