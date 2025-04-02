@@ -38,8 +38,8 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 {:start=“2"}
 2\. Wählen Sie **E-Mail**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel**.
 3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
-   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -61,7 +61,7 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Braze bietet zwei Bearbeitungsmöglichkeiten für die Erstellung einer E-Mail-Kampagne: unseren [Drag-and-Drop-Editor]({{site.baseurl}}/dnd/) und unseren Standard-HTML-Editor. Wählen Sie die passende Kachel für die gewünschte Bearbeitungsumgebung aus. 
 
-![Wählen Sie zwischen einem Drag-and-Drop-Editor oder einem HTML-Editor für die Bearbeitung Ihrer E-Mails.][3]{: style="max-width:75%" }
+![Wählen Sie zwischen dem Drag-and-Drop-Editor, dem HTML-Editor oder Templates für die Bearbeitung Ihrer E-Mails.][3]{: style="max-width:75%" }
 
 Dann können Sie entweder eine vorhandene [E-Mail-Vorlage][10] auswählen, [eine Vorlage][18] aus einer Datei hochladen (nur HTML-Editor) oder eine leere Vorlage verwenden. 
 
@@ -71,7 +71,11 @@ Wir empfehlen, pro E-Mail Kampagne eine Bearbeitungsumgebung auszuwählen. Wähl
 
 ## Schritt 3: E-Mail-Nachricht verfassen
 
-Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie eine Übersicht über Ihre E-Mail, in der Sie direkt zum Vollbild-Editor wechseln können, um Ihre E-Mail zu verfassen, Ihre Versandinformationen zu ändern und Warnungen zur Zustellbarkeit oder zur Einhaltung von Gesetzen anzuzeigen. 
+Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie eine Übersicht über Ihre E-Mail, in der Sie direkt zum Vollbild-Editor wechseln können, um Ihre E-Mail zu verfassen, Ihre Versandinformationen zu ändern und Warnungen zur Zustellbarkeit oder zur Einhaltung von Gesetzen anzuzeigen. Sie können zwischen HTML-, klassischen, Klartext- und [AMP-Tabs]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) wechseln, während Sie schreiben. 
+
+![Der Button "Aus HTML neu generieren".][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+Die Klartextversion Ihrer E-Mail wird immer automatisch von der HTML-Version aktualisiert, bis eine Änderung an der Klartextversion erkannt wird. Wenn eine Bearbeitung erkannt wird, wird Braze den Klartext nicht mehr aktualisieren, da wir davon ausgehen, dass Sie absichtlich Änderungen vorgenommen haben, die nicht überschrieben werden sollten. Sie können auf dem Tab **Klartext** zur automatischen Synchronisierung zurückkehren, indem Sie das Symbol **Aus HTML neu generieren** auswählen, das nur erscheint, wenn der Klartext nicht synchronisiert wird.
 
 {% alert tip %}
 Zur Erstellung von E-Mails mit Bewegungselementen und einer genauen Vorschau sollten Sie GIFs anstelle von Elementen verwenden, die JavaScript erfordern, da die meisten Posteingänge JavaScript nicht unterstützen.
@@ -84,10 +88,12 @@ Braze entfernt automatisch HTML-Event-Handler, die als Attribute referenziert we
 {% endalert %}
 
 {% alert tip %}
-Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
+Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
 ![Button „KI-Copywriter starten“, das sich im Tab „Text“ des E-Mail-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+Benötigen Sie Hilfe bei der Erstellung von Nachrichten von rechts nach links für Sprachen wie Arabisch und Hebräisch? Lesen Sie den Abschnitt [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) für bewährte Verfahren.
 
 ### Schritt 3a: Sendeinformationen hinzufügen
 
@@ -271,6 +277,7 @@ Im letzten Abschnitt erhalten Sie eine Zusammenfassung der Kampagne, die Sie ger
 
 Wie Sie die Ergebnisse Ihrer E-Mail-Kampagnen einsehen können, erfahren Sie unter [E-Mail-Berichterstattung]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
