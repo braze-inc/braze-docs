@@ -44,7 +44,7 @@ tool:
 
 必要なセグメントの数や各セグメント内のユーザーの分布によって、プランが異なる場合があります。
 
-コントロールグループを含むランダムバケット番号セグメントごとに、[[分析トラッキング]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking)] をオンにします。コントロールグループに対するバリアントの成功を評価する場合、[カスタムイベントページに]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data)行き、各セグメントが特定のカスタムイベントを完了した頻度を見ることができる。
+コントロールグループを含むランダムバケット番号セグメントごとに、[[分析トラッキング]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)] をオンにします。コントロールグループに対するバリアントの成功を評価する場合、[カスタムイベントページに]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/)行き、各セグメントが特定のカスタムイベントを完了した頻度を見ることができる。
 
 ### ランダムバケット番号を使用したランダムなオーディエンス再エントリ
 
