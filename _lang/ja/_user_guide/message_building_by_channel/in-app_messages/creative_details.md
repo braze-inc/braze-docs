@@ -91,10 +91,10 @@ guide_featured_list:
 
 ### GIFとビデオ
 
-Braze は現在、アプリ内メッセージングで GIF をサポートしており、Web (標準装備)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/)、およびの iOS (標準装備) に対応しています。ただし、目的のプラットフォームの連携時に有効にしておく必要があります。アプリ内メッセージの動画については、[カスタマイズのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)を参照してください。
+Braze は現在、アプリ内メッセージングで GIF をサポートしており、Web (標準装備)、[Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/)、およびの iOS (標準装備) に対応しています。ただし、目的のプラットフォームの連携時に有効にしておく必要があります。アプリ内メッセージの動画については、[カスタマイズのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)を参照してください。
 
 ## その他の考慮事項
 
-Brazeのアプリ内メッセージには、グローバル仕様と個別クリエイティブ仕様がある。アプリ内メッセージのフルカスタマイズの詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/)のページを参照してください。
+Brazeのアプリ内メッセージには、グローバル仕様と個別クリエイティブ仕様がある。アプリ内メッセージのフルカスタマイズの詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)のページを参照してください。
 
 <br>
