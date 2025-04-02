@@ -95,7 +95,7 @@ Sie können die Zugehörigkeit zu einer globalen Kontrollgruppe prüfen, wenn Si
 
 ## Berichterstattung
 
-Informationen zu den Berichtsmetriken finden Sie unter [Globale Kontrollgruppenberichte]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/).
+Informationen zu den Berichtsmetriken finden Sie unter [Globale Kontrollgruppenberichte]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/).
 
 ## Fehlersuche
 
