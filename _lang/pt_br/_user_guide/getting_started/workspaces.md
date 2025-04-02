@@ -188,24 +188,24 @@ A tabela a seguir descreve os benefícios e as desvantagens dessas duas abordage
         <td>O limite de frequência se aplica a todas as campanhas, e não por aplicativo, o que torna mais difícil evitar o envio excessivo de mensagens aos clientes.</td>
     </tr>
     <tr>
-        <td>Status da inscrição</td>
-        <td>O status da inscrição para cada perfil de usuário é exclusivo para cada instância do app.</td>
+        <td>Status da inscrição para perfis de usuário</td>
+        <td>O status de inscrição de cada perfil de usuário é exclusivo para cada instância do app.</td>
         <td>N/D</td>
         <td>N/D</td>
-        <td>Os status de inscrição nas instâncias do app são combinados para um perfil de usuário.<br><br><b>Dica:</b> Em vez disso, você pode usar atributos personalizados para gerenciar inscrições.</td>
+        <td>Os status de inscrição de um perfil de usuário são combinados entre as instâncias do app.<br><br><b>Dica:</b> Em vez disso, é possível usar <a href='/docs/user_guide/data/custom_data/custom_attributes'>atributos personalizados</a> para gerenciar as inscrições de seus usuários.</td>
     </tr>
     <tr>
-        <td>Permissões de usuário</td>
+        <td>Permissões de usuário do Braze</td>
         <td>N/D</td>
-        <td>A atualização das permissões de usuário para um usuário do dashboard deve ser feita separadamente para cada espaço de trabalho ao qual o usuário precisa ter acesso.</td>
-        <td>As permissões de usuário podem ser definidas uma vez para um usuário do dashboard e ele terá as mesmas permissões para todas as instâncias do app no espaço de trabalho.</td>
+        <td>A atualização das <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>permissões de usuário</a> para um usuário do dashboard deve ser feita separadamente para cada espaço de trabalho ao qual o usuário precisa ter acesso.</td>
+        <td>As <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>permissões de usuário</a> podem ser definidas uma vez para um usuário do dashboard, e ele terá as mesmas permissões para todas as instâncias do app no espaço de trabalho.</td>
         <td>N/D</td>
     </tr>
     <tr>
         <td>Duplicação de conteúdo</td>
         <td>N/D</td>
-        <td>Não é possível duplicar segmentos, campanhas ou Canvas entre espaços de trabalho.</td>
-        <td>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
+        <td>Não é possível duplicar segmentos, campanhas push ou de cartão de conteúdo ou Canvas em espaços de trabalho.</td>
+        <td>É possível [duplicar campanhas nos espaços de trabalho]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) para os seguintes canais compatíveis: SMS, mensagens no app, e-mail, modelos de e-mail e Blocos de Conteúdo. <br><br>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
         <td>N/D</td>
     </tr>
     <tr>
