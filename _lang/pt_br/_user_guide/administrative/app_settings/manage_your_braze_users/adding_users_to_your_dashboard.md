@@ -59,6 +59,10 @@ Os administradores também podem suspender um usuário selecionando seu nome na 
 
 ![Suspender um usuário ao editar os detalhes do usuário.][5]
 
+## Atribuindo acesso e responsabilidades do usuário
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Excluindo usuários do Braze
 
 Para excluir um usuário, acessar **Configurações** > **Usuários da Empresa**, encontre o nome de usuário e selecione <i class="fa fa-trash-can"></i> **Excluir usuário**.
