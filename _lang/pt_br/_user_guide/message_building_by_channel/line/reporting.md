@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > Depois de lançar sua campanha ou o Canvas, você pode visualizar as principais métricas na página de detalhes da campanha ou na análise de dados do Canvas. Este artigo aborda onde você pode encontrar essas métricas e o que elas representam.
 
 {% alert tip %}
-Está procurando definições para os termos e métricas em seu relatório? Consulte o [glossário de métricas do relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Está procurando definições para os termos e métricas em seu relatório? Consulte o [glossário de métricas do relatório]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Análise de dados da campanha
@@ -34,7 +34,7 @@ Examine esse painel para ver as métricas gerais, como o número de mensagens en
 
 #### Grupos de controle
 
-Para medir o impacto de uma mensagem LINE individual, é possível adicionar um [grupo de controle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) a um Testes A/B. O painel de nível superior **Campaign Details** não inclui métricas da variante Control Group.
+Para medir o impacto de uma mensagem LINE individual, é possível adicionar um [grupo de controle]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) a um Testes A/B. O painel de nível superior **Campaign Details** não inclui métricas da variante Control Group.
 
 ### Performance da LINE
 
@@ -46,7 +46,7 @@ Se quiser simplificar sua visualização, selecione **\+ Add/Remove Columns (Adi
 
 #### Métricas LINE
 
-Aqui estão algumas das principais métricas da LINE que você pode ver em sua análise de dados. Para ver as definições de todas as métricas LINE usadas no Braze, consulte o [Glossário de métricas de relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Aqui estão algumas das principais métricas da LINE que você pode ver em sua análise de dados. Para ver as definições de todas as métricas LINE usadas no Braze, consulte o [Glossário de métricas de relatório]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Prazo | Definição |
 | --- | --- |
