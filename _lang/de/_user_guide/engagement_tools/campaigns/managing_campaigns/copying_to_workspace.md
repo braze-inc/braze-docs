@@ -18,9 +18,9 @@ Das Kopieren von Kampagnen in andere Arbeitsbereiche ist in folgenden Kanälen m
 
 ## Wie kopiere ich eine Kampagne in einen anderen Arbeitsbereich?
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menü mit der Option "In Workspace kopieren".][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Wählen Sie das Zahnradsymbol <i class="fas fa-cog"></i> neben der ausgewählten Kampagne und wählen Sie **In Arbeitsbereich kopieren**. Nach dem Kopieren sollten Sie die Kampagne überprüfen und testen, um sicherzustellen, dass alle Felder korrekt funktionieren.
+Wählen Sie das Zahnradsymbol <i class="fas fa-cog"></i> neben der ausgewählten Kampagne, und wählen Sie **In Workspace kopieren**. Nach dem Kopieren sollten Sie die Kampagne überprüfen und testen, um sicherzustellen, dass alle Felder korrekt funktionieren.
 
 Wenn Sie eine Kampagne in andere Arbeitsbereiche kopieren, werden Felder wie Kampagnenname und -beschreibung, Varianten, Bereitstellungszeitplan und Konversionsverhalten ebenfalls kopiert. Bei E-Mail-Kampagnen werden Felder wie der E-Mail-Text, der Betreff und die Kopfzeile ebenfalls in den Zielarbeitsbereich kopiert. 
 
@@ -154,6 +154,10 @@ Beachten Sie die folgenden Liquid-Referenzen mit Abhängigkeiten beim Kopieren v
 - Gutschein- und Aktionstags
 
 Wenn Sie eine Kampagne in andere Arbeitsbereiche kopieren, werden die Content-Blöcke nicht mitkopiert. Sie können jedoch im Zielarbeitsbereich referenziert werden, wenn ein Block mit demselben Namen existiert. Alternativ können Sie ihn (oder entsprechende Liquid-Verweise) auch im Zielarbeitsbereich erstellen und so Fehler beim Kampagnenstart vermeiden.
+
+### Kopieren von Kampagnen mit Feature-Flags
+
+Um eine Feature-Flag-Kampagne zwischen Workspaces zu kopieren, vergewissern Sie sich, dass im Ziel-Workspace ein [Feature-Flag-Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) mit einer ID konfiguriert ist, die mit dem Feature-Flag übereinstimmt, auf das in der ursprünglichen Kampagne referenziert wurde. Wenn Sie eine Kampagne kopieren, aber im Workspace des Ziels keine passende Feature-Flag ID vorhanden ist, ist die Auswahl der Feature-Flags in der Kampagne beim Kopieren leer, und Sie müssen eine andere auswählen.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 
