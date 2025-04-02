@@ -13,7 +13,7 @@ local_redirect:
 
 > Las banderas de características le permiten experimentar y confirmar sus hipótesis en torno a nuevas características. Los profesionales del marketing pueden utilizar los indicadores de funciones para segmentar su audiencia en [Canvas][1] y realizar un seguimiento del impacto del despliegue de funciones en las conversiones. Además, [las rutas de experimentación][2] le permiten optimizar estas conversiones probando diferentes mensajes o rutas entre sí y determinando cuál es la más eficaz. Utiliza la ruta ganadora a medida que despliegues progresivamente tu característica a una audiencia más amplia.
 
-¿Busca más información sobre las banderas de características y cómo utilizarlas en Braze? Consulta nuestros artículos dedicados a [las banderas de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/).
+¿Busca más información sobre las banderas de características y cómo utilizarlas en Braze? Consulta nuestros artículos dedicados a [las banderas de características]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Creación de un indicador de características
 
