@@ -26,9 +26,31 @@ Para asignar un ID de notificación, vaya a la página de composición de la not
 
 ## Tiempo de vida (TTL) {#ttl}
 
-El campo de tiempo de vida (TTL) permite establecer un periodo de tiempo personalizado para almacenar mensajes con el servicio de mensajería push. Los valores predeterminados para el tiempo de vida son 4 semanas para Firebase Cloud Messaging (FCM) y 31 días para Amazon Device Messaging (ADM).
+El campo **Tiempo de vida** te permite establecer un tiempo personalizado para almacenar mensajes con el servicio de mensajería push. Si el dispositivo permanece desconectado más allá del TTL, el mensaje caducará y no se entregará.
 
-Por ejemplo, supongamos que tu aplicación es un juego y ofreces a tus usuarios una bonificación en moneda del juego si mantienen una racha de juego diario. Podrías enviar un push alertando a un usuario de que esa racha está en peligro de romperse si ha superado un determinado número de días. Sin embargo, si un usuario volviera a conectar su dispositivo a la aplicación del juego 4 semanas después con el tiempo de vida establecido por defecto, esos mensajes ya habrían caducado en el servicio de mensajería y no se entregarían.
+Para editar el tiempo de vida de tu push de Android, ve al compositor y selecciona la pestaña **Configuración**. Busca el campo **Tiempo de vida** e introduce un valor en días, horas o segundos.
+
+Los valores predeterminados para el tiempo de vida los define tu administrador en la página [Configuración de TTL para push]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/). Por defecto, Braze establece el TTL de push en el valor máximo para cada servicio de mensajería push. Aunque la configuración predeterminada de TTL se aplica globalmente, puedes anularla a nivel de mensaje durante la creación de la campaña. Esto es útil cuando diferentes campañas requieren diferentes plazos de urgencia o entrega.
+
+Por ejemplo, supongamos que tu aplicación organiza un concurso semanal de preguntas y respuestas. Envía una notificación push una hora antes de que empiece. Al establecer el TTL en 1 hora, te aseguras de que los usuarios que abran la aplicación después de que comience el concurso no reciban una notificación sobre un evento que ya ha comenzado.
+
+{% details Buenas prácticas %}
+
+#### Cuándo utilizar TTL más corto
+
+Los TTL más cortos garantizan que los usuarios reciban notificaciones puntuales de eventos o promociones que pierden relevancia rápidamente. Por ejemplo:
+
+- **Comercio minorista:** Envío de un push para una venta flash que finaliza en 2 horas (TTL: 1-2 horas)
+- **Entrega de comida:** Notificar a los usuarios cuando su pedido está cerca (TTL: 10-15 minutos)
+- **Aplicaciones de transporte:** Actualizaciones de llegada de trayectos compartidos (TTL: unos minutos)
+- **Recordatorios de eventos:** Notificar a los usuarios el próximo inicio de un seminario web (TTL: menos de 1 hora)
+
+#### Cuándo evitar un TTL más corto
+
+- Si el mensaje de tu campaña sigue siendo relevante durante varios días o semanas, como los recordatorios de renovación de suscripción o las promociones en curso.
+- Cuando maximizar el alcance es más importante que la urgencia, como con los anuncios de actualizaciones de la aplicación o las promociones de características.
+
+{% enddetails %}
 
 ## Prioridad de entrega de la mensajería Firebase {#fcm-priority}
 
