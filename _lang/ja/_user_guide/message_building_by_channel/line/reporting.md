@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > キャンペーンやキャンバスを開始後、キャンペーンの詳細ページやキャンバス分析で主要な指標を表示できます。この記事では、これらの指標をどこで見つけることができるのか、そしてそれらが何を表しているのかを説明する。
 
 {% alert tip %}
-レポートの用語や指標の定義を確認したい場合は、[レポート指標の用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)を参照してください。
+レポートの用語や指標の定義を確認したい場合は、[レポート指標の用語集]({{site.baseurl}}/user_guide/data/report_metrics/)を参照してください。
 {% endalert %}
 
 ## キャンペーン分析
@@ -34,7 +34,7 @@ LINE の開封とクリック関連の統計は、1 日にイベントを実行�
 
 #### コントロールグループ
 
-個々の LINE メッセージの影響を測定するには、AB テストに[コントロールグループ]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/)を追加できます。トップレベルの [**キャンペーン詳細**] パネルには、コントロールグループのバリアントからの指標が含まれません。
+個々の LINE メッセージの影響を測定するには、AB テストに[コントロールグループ]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を追加できます。トップレベルの [**キャンペーン詳細**] パネルには、コントロールグループのバリアントからの指標が含まれません。
 
 ### LINE のパフォーマンス
 
@@ -46,7 +46,7 @@ LINE の開封とクリック関連の統計は、1 日にイベントを実行�
 
 #### LINE の指標
 
-分析に表示される主な LINE の指標を一部ご紹介します。Braze で使用されているすべての LINE の指標の定義については、「[レポート指標の用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)」を参照してください。
+分析に表示される主な LINE の指標を一部ご紹介します。Braze で使用されているすべての LINE の指標の定義については、「[レポート指標の用語集]({{site.baseurl}}/user_guide/data/report_metrics/)」を参照してください。
 
 | 用語 | 定義 |
 | --- | --- |
