@@ -15,7 +15,7 @@ tool: Canvas
 Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. Diesen Artikel können Sie referenzieren, um zu verstehen, wie Ihre Nutzer:innen die Canvas-Komponenten im Original-Editor voranbringen. <br><br>Für Komponenten in Canvas Flow ist das **Fortschrittsverhalten** so eingestellt, dass die Zielgruppe immer sofort vorangebracht wird, oder **Zielgruppe sofort voranbringen**. Dies gilt auch für [nicht verbundene Schritte]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
-> Mit der Funktion **Beförderungsverhalten** können Sie die Kriterien für die Beförderung durch Ihre [Canvas-Komponente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/) festlegen. 
+> Mit der Funktion **Beförderungsverhalten** können Sie die Kriterien für die Beförderung durch Ihre [Canvas-Komponente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) festlegen. 
 
 ![Einstellungen für das Fortschrittsverhalten mit zwei Optionen, um die Zielgruppe entweder beim Senden der Nachricht voranzubringen oder die Zielgruppe sofort voranzubringen.][1]
 
