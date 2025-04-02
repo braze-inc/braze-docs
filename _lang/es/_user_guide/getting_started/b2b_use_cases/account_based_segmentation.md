@@ -10,7 +10,7 @@ description: "Aprende a utilizar varias características de Braze para potenciar
 
 > Esta página muestra cómo utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B.
 
-Puedes hacer la segmentación B2B basada en cuentas de dos formas, dependiendo de cómo configures tu [modelo de datos B2B]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
+Puedes hacer la segmentación B2B basada en cuentas de dos formas, dependiendo de cómo configures tu [modelo de datos B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - Cuando utilices [catálogos para tus objetos de negocio](#option-1-when-using-catalogs-for-your-business-objects)
 - Cuando utilices [fuentes conectadas para tus objetos de negocio](#option-2-when-using-connected-sources-for-your-business-objects)
