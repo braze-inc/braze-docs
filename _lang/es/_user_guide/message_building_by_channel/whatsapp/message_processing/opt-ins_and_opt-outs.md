@@ -30,7 +30,7 @@ Las adhesiones voluntarias pueden proceder de fuentes externas o de métodos Bra
 ## Configura adhesiones voluntarias para tu canal de WhatsApp Braze
 
 Para las adhesiones voluntarias de WhatsApp, debes cumplir [los requisitos de WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). También deberá facilitar a Braze la siguiente información:
-- Un `external_id`, un [número de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) y un estado de suscripción actualizado para cada usuario. Esto puede hacerse utilizando el [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) o a través del [punto final`/users/track` ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) para actualizar el número de teléfono y el estado de la suscripción. 
+- Un `external_id`, un [número de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) y un estado de suscripción actualizado para cada usuario. Esto puede hacerse utilizando el [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) o a través del [punto final`/users/track` ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) para actualizar el número de teléfono y el estado de la suscripción.
 
 {% alert note %}
 Braze ha publicado una mejora en el punto final `/users/track` que permite actualizar el estado de la suscripción que puede conocer en [Grupos de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status). Sin embargo, si ya has creado protocolos de adhesión voluntaria utilizando el [punto final `/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), puedes seguir haciéndolo allí.
@@ -40,7 +40,7 @@ Braze ha publicado una mejora en el punto final `/users/track` que permite actua
 
 Su aplicación o sitio web (registro de cuenta, página de pago, configuración de cuenta, terminal de tarjeta de crédito) a Braze.
 
-Si ya dispone de un consentimiento de marketing para el correo electrónico o los mensajes de texto, incluya una sección adicional para WhatsApp. Cuando un usuario se registra, necesita una dirección `external_id`, un [número de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) y un estado de suscripción actualizado. Para ello, dependiendo de cómo esté configurada tu instalación de Braze, aprovecha el [punto final `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) o utiliza el [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287).
+Si ya dispone de un consentimiento de marketing para el correo electrónico o los mensajes de texto, incluya una sección adicional para WhatsApp. Cuando un usuario se registra, necesita una dirección `external_id`, un [número de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) y un estado de suscripción actualizado. Para ello, dependiendo de cómo esté configurada tu instalación de Braze, aprovecha el [punto final `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) o utiliza el [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/).
 
 #### Lista de adhesión voluntaria creada externamente
 
@@ -54,8 +54,8 @@ En su canal de atención al cliente, haga un seguimiento de los problemas resuel
 2. Proporcionar [acciones de respuesta rápida]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies) en las que el cliente responda "Sí" para indicar su adhesión voluntaria.
 3. Configurar disparador de palabras clave personalizado.
 4. Para cualquiera de esas ideas, probablemente necesitarás terminar el camino con lo siguiente:
-	- Llama al [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para actualizar o crear un usuario 
-	- Aprovecha el [punto final `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) o utiliza el [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 
+	- Llama al [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para actualizar o crear un usuario
+	- Aprovecha el [punto final `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) o utiliza el [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)
 
 #### Mensaje entrante de WhatsApp 
 
