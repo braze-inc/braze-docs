@@ -65,7 +65,7 @@ Una vez fusionados los perfiles de usuario, esta acción no puede deshacerse.
 
 ## Recursos adicionales
 - Consulta nuestro artículo sobre el [ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) Braze para obtener más información.<br>
-- Consulta nuestra documentación sobre la configuración de ID de usuario y la llamada al método `changeUser()` para [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
+- Consulta nuestra documentación sobre la configuración de ID de usuario y la llamada al método `changeUser()` para [Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) y [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_user_ids/).
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}
