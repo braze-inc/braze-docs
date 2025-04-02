@@ -30,8 +30,8 @@ search_rank: 4.8
 {:start="2"}
 2\.[**アプリ内メッセージ**] を選択します。なお、アプリ内メッセージはマルチチャネルキャンペーンでは利用できない。
 3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
-   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% alert tip %}
@@ -52,7 +52,7 @@ search_rank: 4.8
 1 つのステップに複数のアプリ内メッセージバリアントを含めることはできません。
 {% endalert %}
 
-キャンバス固有の詳細情報は、[キャンバスのアプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)にあります。
+キャンバス固有の詳細情報は、[キャンバスのアプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)にあります。
 
 {% endtab %}
 {% endtabs %}
@@ -186,27 +186,33 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 **Compose」**タブの内容は、前のステップで選択したメッセージ・オプションによって異なるが、以下のオプションのいずれかを含むことができる：
 
-#### 言語
+### 言語
 
 **Add Languages**を選択し、表示されたリストから目的の言語を選択します。これで、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) がメッセージに挿入されます。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。私たちの[利用可能な言語の完全なリストを参照してください][18] 。
 
-#### 画像
+### 画像
 
 メッセージタイプに応じて、[**画像をアップロード**]、[**バッジを選ぶ**]、または [**Font Awesome**] を使用できます。画像をアップロードするには、[**画像の追加**] をクリックするか、画像の URL を入力します。[**画像を追加**] をクリックすると、**メディアライブラリ**が開き、以前にアップロードした画像を選択したり、新しい画像を追加したりできます。メッセージの種類やプラットフォームによって、推奨される比率や要件が異なる場合がある！
 
-#### ヘッダーとボディ
+### ヘッダーとボディ
 
 何でも好きなことを書けばいい！完全にカスタム化されたコピー（多くの場合、カスタムHTML機能付き）を含み、[リキッドや]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)他のタイプのパーソナライゼーションを含めるオプションがある。より早くメッセージを伝え、顧客にクリックしてもらうことができれば、それに越したことはない！明確で簡潔なヘッダーとメッセージ内容を推奨する。
 
 メッセージタイプによっては、ヘッダーを必要とせず、従ってヘッダーを要求 しないものもある。
 
-{% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+#### ヒント 
+
+##### AI コピーの生成
+
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![アプリ内メッセージ作成画面のメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
-{% endalert %}
 
-#### ボタンテキスト {#buttons}
+##### 右から左へのメッセージを作成する
+
+アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)参照のこと。
+
+### ボタンテキスト {#buttons}
 
 メッセージタイプで利用可能な場合、テキストの本文の下に最大 2 つのボタンを表示できます。カスタムボタンのテキストと色を作成、編集できる。また、メールキャプチャフォーム内にサービス使用条件のリンクを追加することもできます。
 
@@ -214,11 +220,11 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 ボタンを1つしか使用しない場合、追加ボタンを設置するスペースは確保されず、メッセージ下部の空いているスペースに自動的に調整される。
 
-##### プライマリボタンの選択
+#### プライマリボタンの選択
 
 これらのボタンを独自の色でフォーマットする場合は、ボタン2を使用することをお勧めする。言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
 
-#### クリック時動作 {#button-actions}
+### クリック時動作 {#button-actions}
 
 顧客がアプリ内メッセージのボタンをクリックしたときに、次のアクションを使用できます。 
 
@@ -227,35 +233,35 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 | ウェブURLにリダイレクトする | ネイティブでないウェブページを開く。 |
 | [アプリにディープリンクする]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | アプリの既存画面にディープリンクする。 |
 | メッセージを閉じる | 現在アクティブなメッセージを閉じる。 |
-| カスタムイベントを記録する | トリガーする[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)を選択します。別のアプリ内メッセージを表示したり、追加メッセージをトリガーしたりするために使用できます。 |
-| カスタム属性を記録する | 現在のユーザーに設定する[カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)選択する。 |
-| プッシュ許可をリクエストする | ネイティブのプッシュ許可を表示する。詳細については、[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)と、ユーザーのプッシュプライミングのための[ベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices)を参照してください。 |
+| カスタムイベントを記録する | トリガーする[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)を選択します。別のアプリ内メッセージを表示したり、追加メッセージをトリガーしたりするために使用できます。 |
+| カスタム属性を記録する | 現在のユーザーに設定する[カスタム属性を]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)選択する。 |
+| プッシュ許可をリクエストする | ネイティブのプッシュ許可を表示する。詳細については、[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)と、ユーザーのプッシュプライミングのための[ベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 注：__Request Push Permission__、__Log Custom Event__、__Log Custom Attribute__オプションは、以下のSDK最小バージョンを必要とする：
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-#### iOSデバイスのオプション
+### iOSデバイスのオプション
 
 必要であれば、アプリ内メッセージをiOSデバイスのみに送信するよう制限することもできる。そのためには、[**変更**] をクリックし、[**iOS デバイスにのみ送信**] を選択します。
 
-#### メッセージを閉じる
+### メッセージを閉じる
 
 以下のオプションから選択する：
  
 - **自動的に消去:**メッセージを何秒間画面に残すかを選択する。
 - **ユーザーのスワイプまたはタッチを待機: **却下または閉じるオプションが必要です。
 
-#### スライドアップポジション
+### スライドアップポジション
 
 この設定はSlideupメッセージタイプにのみ適用される。スライドアップを**アプリ画面の下部から**表示するか、**アプリ画面の上部から**表示するかを選択します。
 
-#### HTMLとアセット
+### HTMLとアセット
 
 この設定はカスタムコードメッセージタイプにのみ適用される。使用可能な領域にHTML をコピーして貼り付け、ZIP ファイルを使用してアセットをアップロードします。
 
-#### 電子メールのキャプチャ入力プレースホルダ
+### 電子メールのキャプチャ入力プレースホルダ
 
 この設定は、Eメールキャプチャフォームのメッセージタイプにのみ適用される。Eメール入力フィールドのプレースホルダーテキストとして表示されるカスタムコピーを入力する。デフォルトは「メールアドレスを入力してください」となっています。
 
@@ -318,7 +324,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 開始日時は選択する必要がありますが、終了日はオプションです。終了日は、指定した日時の後に特定のアプリ内メッセージがデバイスに表示されるのを停止します。
 
-[サーバーサイドのイベントトリガーと]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) [ローカルでのアプリ内メッセージ配信については]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)、開発者向けドキュメントを参照のこと。
+[サーバーサイドのイベントトリガーと]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) [ローカルでのアプリ内メッセージ配信については]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)、開発者向けドキュメントを参照のこと。
 
 ##### オンライン・トリガーとオフライン・トリガー
 
@@ -375,7 +381,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照のこと。
 
-キャンバス固有のアプリ内メッセージングオプションの詳細については、[キャンバスのアプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)を参照してください。
+キャンバス固有のアプリ内メッセージングオプションの詳細については、[キャンバスのアプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を参照してください。
 
 {% endtab %}
 {% endtabs %}
