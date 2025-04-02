@@ -36,7 +36,7 @@ Es gibt ein Limit von fünf gleichzeitig aktiven Vorhersagen. Vor dem Kauf von p
 
 ## Schritt 2: Legen Sie das Tracking von Events fest {#event-tracking}
 
-Geben Sie an, ob die Ereignisse Ihrer Benutzer in Braze als [Kaufereignisse]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) oder als [benutzerdefinierte Ereignisse]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) gespeichert werden.
+Geben Sie an, ob die Ereignisse Ihrer Benutzer in Braze als [Kaufereignisse]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) oder als [benutzerdefinierte Ereignisse]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) gespeichert werden.
 
 Hier sehen Sie, ob die ausgewählte Methode genügend Daten für Braze liefert, um ein Modell des maschinellen Lernens zu erstellen. Wenn die Anforderung nicht erfüllt ist, versuchen Sie, die andere Protokollierungsmethode auszuwählen, wenn diese auch von Ihrer Anwendung verwendet wird. Wenn dies nicht der Fall ist, ist Braze leider nicht in der Lage, mit der Menge der verfügbaren Daten eine Vorhersage zu erstellen. Wenn Sie glauben, dass Sie diesen Fehler fälschlicherweise sehen, wenden Sie sich an Ihren Customer-Success-Manager.
 
