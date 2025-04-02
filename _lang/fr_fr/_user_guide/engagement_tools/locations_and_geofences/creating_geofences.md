@@ -40,7 +40,7 @@ Dans la page **Localisations**, cliquez sur **\+ Créer un ensemble de géorepé
 
 ![Ensemble de géorepérages d’aéroports allemands avec un utilisateur qui dessine un rayon de deux mille mètres sur la carte de l’aéroport de Hambourg.][1]
 
-Après avoir créé un ensemble de géorepérages, vous pouvez ajouter manuellement des géorepérages en les dessinant sur la carte. Nous recommandons de créer des géorepérages avec un rayon d’au moins 200 mètres pour qu’elles fonctionnent de manière optimale. Pour plus d'informations sur les options configurables, reportez-vous à la rubrique [Configuration des géorepérages]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Après avoir créé un ensemble de géorepérages, vous pouvez ajouter manuellement des géorepérages en les dessinant sur la carte. Nous recommandons de créer des géorepérages avec un rayon d’au moins 200 mètres pour qu’elles fonctionnent de manière optimale. Pour plus d'informations sur les options configurables, reportez-vous à la rubrique [Configuration des géorepérages]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Création d’ensembles via le téléchargement en masse {#creating-geofence-sets-via-bulk-upload}
 
