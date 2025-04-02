@@ -65,7 +65,7 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 
 Cette étape est nécessaire si vous avez un utilisateur LINE existant et identifié, car Braze récupérera ensuite automatiquement l'état de son abonnement et mettra à jour le profil utilisateur correct. Si vous n'avez pas encore rapproché les utilisateurs avec leur ID LINE, sautez cette étape. 
 
-Vous pouvez importer ou mettre à jour des utilisateurs à l'aide de n'importe laquelle des méthodes prises en charge par Braze, y compris le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) l'endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/). 
+Vous pouvez importer ou mettre à jour des utilisateurs à l'aide de n'importe laquelle des méthodes prises en charge par Braze, y compris le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) l'endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/). 
 
 Quelle que soit la méthode utilisée, mettez à jour le site `native_line_id` pour fournir l'ID de ligne de l'utilisateur. Pour en savoir plus sur le site `native_line_id`, voir [Configuration de l'utilisateur](#user-setup).
 
@@ -230,7 +230,7 @@ Il s'agit de cas d'utilisation de la manière dont les utilisateurs peuvent êtr
 1. La chaîne reçoit un nouveau follower LINE.
 2. Braze crée un profil utilisateur anonyme dont l'attribut `native_line_id` correspond à l'ID LINE du suiveur et dont l'alias d'utilisateur `line_id` correspond à l'ID LINE du suiveur. Le profil a un statut d'abonnement de `subscribed`.
 3. L'utilisateur est identifié comme ayant l'ID LINE par le biais de la [réconciliation des utilisateurs](#user-id-reconciliation).
-  - Le profil utilisateur anonyme peut être identifié à l'aide du point de terminaison [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint. Les mises à jour ultérieures (via le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) à ce profil utilisateur peuvent cibler l'utilisateur par cette importation d'utilisateurs connue `external_id`.
+  - Le profil utilisateur anonyme peut être identifié à l'aide du point de terminaison [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint. Les mises à jour ultérieures (via le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/)) à ce profil utilisateur peuvent cibler l'utilisateur par cette importation d'utilisateurs connue `external_id`.
 
 {% raw %}
 ```json
@@ -248,7 +248,7 @@ Il s'agit de cas d'utilisation de la manière dont les utilisateurs peuvent êtr
 ```
 {% endraw %}
 
-  - Un nouveau profil utilisateur peut être créé (via le point de terminaison [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de l'endpoint, de l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou de l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) en définissant l'adresse `native_line_id`. Ce nouveau profil héritera de l'état de l'abonnement du profil de l'utilisateur anonyme existant. Notez que plusieurs profils partageront le même site `native_line_id`. Ceux-ci peuvent être fusionnés à tout moment à l'aide de l'endpoint `/users/merge` selon la procédure décrite à l'[étape 5.](#step-5-merge-profiles-optional)
+  - Un nouveau profil utilisateur peut être créé (via le point de terminaison [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de l'endpoint, de l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou de l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/)) en définissant l'adresse `native_line_id`. Ce nouveau profil héritera de l'état de l'abonnement du profil de l'utilisateur anonyme existant. Notez que plusieurs profils partageront le même site `native_line_id`. Ceux-ci peuvent être fusionnés à tout moment à l'aide de l'endpoint `/users/merge` selon la procédure décrite à l'[étape 5.](#step-5-merge-profiles-optional)
 
 ##### La création du profil utilisateur intervient avant le suivi de la LIGNE
 
@@ -287,7 +287,7 @@ Pour obtenir l'ID LINE correct pour chaque utilisateur, configurez l'identifiant
 
 4. Enregistrez l'ID de ligne de l'utilisateur (`native_line_id`) dans le profil de l'utilisateur avec un e-mail correspondant dans votre base de données, ou créez un nouveau profil d'utilisateur avec l'e-mail et l'ID de ligne de l'utilisateur.
 
-5. Envoyez les données nouvelles ou actualisées de l'utilisateur à Braze à l'aide de l'[endpoint`/user/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), de l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou de l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
+5. Envoyez les données nouvelles ou actualisées de l'utilisateur à Braze à l'aide de l'[endpoint`/user/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), de l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou de l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/).
 
 #### Flux de travail
 
