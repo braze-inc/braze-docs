@@ -86,7 +86,7 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 {% endraw %}
 
 {% alert note %}
-커스텀 속성 카운터가 업데이트될 때마다(증가 또는 감소) [데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)가 소비되며, 이는 전체 소비량에 포함됩니다.
+Each time a custom attribute counter is updated (incremented or decremented) it will consume a [data point]({{site.baseurl}}/user_guide/data/data_points/), which counts toward your overall consumption.
 {% endalert %}
 
 ### 사용 사례: 초기 캔버스에서 두 번째 캔버스 트리거하기
@@ -144,7 +144,7 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 - 고객 프로필을 업데이트하면 추가 [데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count)가 발생하지만 메시징 엔드포인트를 통해 다른 메시지를 트리거하는 것은 그렇지 않습니다.
 - [익명 사용자]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles)를 타겟팅하려면 웹훅의 요청 본문에 `external_id` 대신 `braze_id`를 사용하면 됩니다.
 - Braze-to-Braze 웹훅을 [템플릿으로]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) 저장하여 다시 사용할 수 있습니다.
-- [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/)를 확인하여 웹훅 오류를 확인하고 문제를 해결할 수 있습니다.
+- You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}
