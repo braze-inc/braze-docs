@@ -25,9 +25,9 @@ Antes de empezar, asegúrese de haber trabajado con su equipo y su gestor de inc
 
 Puede crear nuevos espacios de trabajo o cambiar entre espacios de trabajo existentes desde el desplegable de espacios de trabajo de la cabecera global.
 
-1. Seleccione el menú desplegable del espacio de trabajo y haga clic en <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Crear espacio de trabajo**.
+1. Selecciona el desplegable del espacio de trabajo y, a continuación, <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Crear espacio de trabajo**.
 
-![][1]
+![El desplegable del espacio de trabajo con el botón "Crear espacio de trabajo".][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. Dale un nombre a tu espacio de trabajo.
@@ -39,29 +39,29 @@ Es posible que desee adoptar una convención de nombres para que otras personas 
 {:start="3"}
 3\. Seleccione **Crear**. Braze puede tardar unos segundos en crear tu espacio de trabajo.
 
-![][2]
+!["Crear espacio de trabajo" modal con el nombre "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 Accederá a la página **Configuración de la aplicación** para empezar a añadir instancias de su aplicación. Puedes acceder a esta página en cualquier momento desde **Ajustes** > **Ajustes de la aplicación**.
 
-![][3]
+![Página "Configuración de la aplicación" para el espacio de trabajo Upon Voyage US - Staging con un botón para añadir una aplicación.][3]
 
 ### Paso 3: Añada las instancias de su aplicación
 
 Denominamos "instancias de aplicación" a los distintos sitios y aplicaciones que se reúnen en un espacio de trabajo.
 
-1. En la página **Configuración de aplicaciones**, haz clic en **\+ Añadir aplicación**.
+1. En la página **Configuración de la aplicación**, selecciona **\+ Añadir aplicación**.
 2. Dé un nombre a su instancia de aplicación y seleccione en qué plataforma o plataformas se encuentra esta instancia de aplicación. Si selecciona varias plataformas, Braze creará una instancia de aplicación para cada plataforma.
 
-![][4]{: style="max-width:60%" }
+![Modalidad "Añadir nueva aplicación a Upon Voyage US - Staging" con opciones para seleccionar los detalles de la aplicación.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. Haz clic en **Añadir aplicación** para confirmar.
+3\. Selecciona **Añadir aplicación** para confirmar.
 
 #### Claves API de la aplicación
 
 Después de añadir la instancia de tu aplicación, tendrás acceso a su clave de API. La clave API se utiliza al realizar solicitudes entre la instancia de su aplicación y la API Braze. La clave de API también es importante para integrar el SDK de Braze con tu aplicación o sitio web.
 
-![][5]
+![Página de configuración de la aplicación Upon Voyage para iOS con campos para la clave de API y el punto final SDK.][5]
 
 {% alert note %}
 Debe crear instancias de aplicación distintas para cada versión de su aplicación en cada plataforma. Por ejemplo, si tiene versiones Free y Pro de su aplicación tanto en iOS como en Android, cree cuatro instancias de aplicación dentro de su espacio de trabajo (aplicación Free para iOS, aplicación Free para Android, aplicación Pro para iOS y aplicación Pro para Android). Esto te dará cuatro claves de API para utilizar, una para cada instancia de la aplicación.
@@ -73,7 +73,7 @@ La versión del SDK activa que se muestra en la página Configuración de la apl
 
 Este campo aparece después de haber integrado el SDK de Braze con tu aplicación o sitio web. Si hay disponible una versión más reciente del SDK de Braze para tu plataforma, se anotará aquí con la etiqueta "Versión más reciente disponible."
 
-![][6]
+![Sección "Versión del SDK en vivo" con un valor de campo de "5.4.0" y un icono que dice que hay una nueva versión disponible.][6]
 
 ### Paso 4: Repetir según sea necesario
 
@@ -89,7 +89,7 @@ Repita los pasos 2 y 3 para configurar tantos espacios de trabajo como requiera 
 
 Puedes añadir espacios de trabajo favoritos para acceder aún más rápido a los que más utilizas.
 
-![][7]
+![Desplegable del espacio de trabajo con la pestaña "Espacios de trabajo favoritos".][7]{: style="max-width:50%;"}
 
 Para añadir espacios de trabajo favoritos:
 
@@ -108,21 +108,22 @@ Para cambiar el nombre de su espacio de trabajo:
 2. Pase el ratón por encima del nombre de su espacio de trabajo y seleccione <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Asigne un nuevo nombre a su espacio de trabajo y seleccione <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Guardar**.
 
-![][8]
+![El icono del lápiz que aparece junto al nombre del espacio de trabajo.][8]{: style="max-width:50%;"}
 
-### Eliminar espacios de trabajo
+### Eliminar espacios de trabajo e instancias de la aplicación
 
-
-Para eliminar tu espacio de trabajo:
+Para eliminar tu espacio de trabajo o instancia de la aplicación:
 
 1. Ve a **Ajustes** > **Ajustes de la aplicación**.
-2. Seleccione **Eliminar espacio de trabajo**.
+2. Selecciona **Eliminar espacio de trabajo** para eliminar el espacio de trabajo correspondiente, o selecciona el icono de la papelera situado junto a la instancia de la aplicación correspondiente.
+
+No puedes eliminar instancias de la aplicación o espacios de trabajo que se estén utilizando actualmente para seleccionar usuarios o que tengan más de 1.000 usuarios. Si intentas hacerlo, recibirás un mensaje de error. Para proceder a eliminarlos, [crea un caso de Soporte]({{site.baseurl}}/help/support/) que incluya un enlace al panel y el nombre de la instancia de la aplicación o del espacio de trabajo que se va a eliminar.
 
 {% alert warning %}
 Ten cuidado al eliminar espacios de trabajo. Una vez eliminado un espacio de trabajo, no se puede restaurar.
 {% endalert %}
 
-![][9]
+![La página de configuración de la aplicación con un botón para eliminar un espacio de trabajo y un icono de papelera para eliminar una aplicación.][9]
 
 ## Preguntas más frecuentes
 
@@ -148,7 +149,7 @@ Por defecto, un segmento se dirige a todas las aplicaciones y sitios web del ár
 2. Para **aplicaciones y sitios web específicos**, seleccione **Usuarios de aplicaciones específicas**.
 3. En el menú desplegable **Aplicaciones específicas**, seleccione su aplicación o sitio.
 
-![][10]{: style="max-width:75%" }
+![Segmento que se dirige a usuarios de aplicaciones específicas.][10]
 
 A continuación, puede añadir este segmento a su mensaje y empezar a refinar aún más su audiencia con segmentos y filtros adicionales si es necesario.
 
