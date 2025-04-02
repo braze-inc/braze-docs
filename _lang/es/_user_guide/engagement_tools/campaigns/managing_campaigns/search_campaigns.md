@@ -32,7 +32,7 @@ Por ejemplo, si quieres auditar los borradores de tu campaña, selecciona **Esta
 
 ### Búsqueda por etiquetas
 
-Buscar tus campañas por [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) puede limitar aún más tus resultados. Por ejemplo, si intentas encontrar todas las campañas que has creado para dirigirte a nuevos clientes, compradores frecuentes o clientes que han dejado de comprar, puedes buscar estas campañas por su etiqueta compartida **Orientación por tipo de cliente**.
+Buscar tus campañas por [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) puede limitar aún más tus resultados. Por ejemplo, si intentas encontrar todas las campañas que has creado para dirigirte a nuevos clientes, compradores frecuentes o clientes que han dejado de comprar, puedes buscar estas campañas por su etiqueta compartida **Orientación por tipo de cliente**.
 
 ### Ajustar filtros
 
