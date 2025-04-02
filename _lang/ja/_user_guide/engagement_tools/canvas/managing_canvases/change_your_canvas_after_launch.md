@@ -29,7 +29,7 @@ tool:
 
 ユーザージャーニーでは、以下を削除できます。
 
-- [キャンバスのステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [キャンバスのステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - キャンバスのバリエーション 
 - キャンバスのステップ間の接続
 
