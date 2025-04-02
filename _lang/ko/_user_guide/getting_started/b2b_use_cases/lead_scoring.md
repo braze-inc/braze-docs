@@ -32,7 +32,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 1. **입장 일정** 단계로 이동하여 **행동 기반** 입장 일정을 선택하십시오. 사용자가 특정 작업을 수행하면 캔버스에 들어가게 됩니다.
 
 2. **액션 기반 옵션**에서 다음 두 가지 액션을 추가하십시오:
-    - 리드 점수 속성 이름으로 **커스텀 속성 값 변경하기**(예: `lead score`). 아직 리드 스코어링 속성을 만들지 않았다면 [커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)의 단계를 따르세요. 리드 점수가 변경될 때마다 사용자가 캔버스에 들어가게 됩니다.
+    - 리드 점수 속성 이름으로 **커스텀 속성 값 변경하기**(예: `lead score`). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). 리드 점수가 변경될 때마다 사용자가 캔버스에 들어가게 됩니다.
     - **이메일 주소 추가**
 
 ![“액션 기반” 입력 일정 및 사용자 정의 속성 “리드 점수” 변경 및 이메일 주소 추가의 액션 기반 옵션으로 캔버스를 만드는 2단계입니다.][2]{: style="max-width:80%;"}
@@ -132,13 +132,13 @@ Braze를 내부 데이터 모델(리드 스코어링 모델 포함)과 다양한
 
 예를 들어, 메시징 참여 데이터(예: 이메일 열기 및 클릭, 랜딩 페이지 인게이지먼트 등)는 리드의 인게이지먼트를 결정할 수 있습니다. Braze 스트리밍 내보내기 데이터 솔루션을 사용하여 이 데이터를 클라우드 데이터 웨어하우스로 다시 전달하고 리드 스코어링 모델의 입력으로 사용할 수 있습니다:
 
-- [Braze 커런츠]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Snowflake 보안 데이터 공유]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab 대상으로서 Braze %}
 
-내부 팀이 리드 스코어링 모델을 생성하고 실행한 후, 해당 데이터를 Braze로 다시 가져와서 관련 메시징을 위해 리드를 더 잘 세그먼트하고 타겟팅할 수 있습니다. [Braze 클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/)을 사용하여 이 작업을 수행할 수 있습니다. 
+내부 팀이 리드 스코어링 모델을 생성하고 실행한 후, 해당 데이터를 Braze로 다시 가져와서 관련 메시징을 위해 리드를 더 잘 세그먼트하고 타겟팅할 수 있습니다. You can do this with [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
 클라우드 데이터 수집을 통해 내부 Teams는 사용자 식별자, 최신 리드 점수 및 점수가 업데이트된 타임스탬프가 포함된 새 테이블 또는 뷰를 생성합니다. Braze는 테이블 또는 뷰를 선택하고 리드 점수를 사용자 프로필에 추가합니다.
 
@@ -182,7 +182,7 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 | 헤더 | 콘텐츠 |
 | --- | --- |
-| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_902b769b-ec1e-4583-9e19-a004ed1eefc2/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_f133d642-d4c1-41cf-8758-5743620c7b04/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
