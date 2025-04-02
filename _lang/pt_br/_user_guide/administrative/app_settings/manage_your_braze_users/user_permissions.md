@@ -42,9 +42,9 @@ As funções permitem mais estrutura ao agrupar suas permissões personalizadas 
 {% endtab %}
 {% endtabs %}
 
-### Como os conjuntos de permissões e as funções diferem das equipes?
+## Como os conjuntos de permissões e as funções diferem das equipes?
 
-Consulte [Usuários da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) para obter um detalhamento das diferenças entre equipes, conjuntos de permissões e funções.
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## Editando as permissões de um usuário
 
@@ -127,13 +127,13 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Aprovar e rejeitar canvas|Permite que os usuários aprovem ou neguem canvas. O [fluxo de trabalho de aprovação para canvas]({{site.baseurl}}/canvas_approval) deve ser ativado para que essa permissão se aplique.|
 |Espaço de trabalho|Editar integrações com o Currents|Permite que os usuários modifiquem uma conexão Currents, incluindo credenciais. Por padrão, os usuários atribuídos à permissão "Integrações Externas" também recebem essa permissão.|
 |Espaço de trabalho|Editar segmentos|Permite aos usuários criar e editar segmentos. Você ainda pode criar campanhas com segmentos e filtros existentes sem essa permissão. Você precisa dessa permissão para gerar um segmento de usuários em um CSV ou redirecionar o grupo de usuários no CSV.|
-|Espaço de trabalho|Exportar dados de usuários|Permite que os usuários exportem seus dados de usuários de segmentos, campanhas e canvas.|
+|Espaço de trabalho|Exportar dados de usuários|Permite que os usuários exportem seus dados de usuários de segmentos, campanhas e canvas. Essa permissão inclui informações confidenciais do usuário, como nomes, envios de e-mail e outras informações de identificação pessoal (IPI) coletadas. |
 |Espaço de trabalho|Importar e atualizar dados de usuários|Permite que os usuários importem arquivos CSV e atualizem arquivos de usuários do app, bem como visualizem a página de importação de usuário. Isso também permite que você edite o status de inscrição de um usuário e suas regras de aceitação/recusa de grupo de inscrições.|
 |Espaço de trabalho|Lançar Blocos de Conteúdo|Permite que os usuários lancem [Blocos de Conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
 |Espaço de trabalho|Abrir Centrais de Preferências|Permite que os usuários lancem [centros de preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espaço de trabalho|Gerenciar apps|Permite que os usuários editem **Configurações do app**.|
 |Espaço de trabalho|Permissão para gerenciar catálogos do dashboard|Permite aos usuários criar e gerenciar catálogos.|
-|Espaço de trabalho|Gerenciar usuários do dashboard|Permite que os usuários visualizem, editem e gerenciem a página de **Usuários da Empresa**. Usuários com esta permissão podem modificar as permissões de qualquer usuário, incluindo eles próprios. Como tal, esta permissão deve ser vista como um nível de acesso administrativo. Esta permissão não permite que os usuários excluam usuários porque apenas os administradores podem excluir usuários.|
+|Espaço de trabalho|Gerenciar usuários do dashboard| Permite que os não administradores visualizem, editem e gerenciem a página **Usuários da empresa** e gerenciem os usuários do dashboard em seu espaço de trabalho, modificando as permissões de qualquer usuário, inclusive eles próprios. Os usuários com essa permissão não podem excluir usuários (somente os administradores podem excluir usuários).|
 |Espaço de trabalho|Gerenciar configurações de e-mail|Permite que os usuários salvem as alterações de configuração de e-mail (**Configurações** > **Preferências de e-mail**).|
 |Espaço de trabalho|Gerenciar eventos, atributos, compras|Permite que os usuários editem atributos personalizados (usuários sem essa capacidade ainda podem visualizar atributos personalizados), editem e visualizem propriedades de eventos personalizados e editem e visualizem propriedades de produtos em **Configurações de Dados**.|
 |Espaço de trabalho|Gerenciar integrações externas|Permite acesso a todas as guias em **Tecnologia Parceiros** e a capacidade de sincronizar a Braze com outras plataformas.|
@@ -144,17 +144,18 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Gerenciar equipes|Permite que os usuários gerenciem **Equipes Internas**. A capacidade de selecionar esta permissão depende do seu contrato com a Braze.|
 |Espaço de trabalho|Gerenciar transformações|Permite aos usuários criar e gerenciar Transformações de Dados.|
 |Espaço de trabalho|Publicar cartões|Esta permissão só é visível se a sua conta estiver habilitada para o feed de notícias, que está sendo descontinuado. Isso não afeta os Cartões de Conteúdo. Permite que os usuários criem e editem cards de feed de notícias. Você ainda pode ver os cards do feed de notícias sem esta permissão. Se a sua conta estiver habilitada para o feed de notícias e um usuário puder lançar Blocos de Conteúdo existentes, ele precisará das permissões "Publicar Cartões" e "Lançar Blocos de Conteúdo".|
-|Espaço de trabalho|Enviar campanhas, canvas|Permite que os usuários editem, arquivem e interrompam campanhas e canvas, criem campanhas e lancem canvas.|
+|Espaço de trabalho|Enviar campanhas, canvas|Permite que os usuários editem, arquivem e interrompam campanhas e canvas, criem campanhas e lancem canvas. |
 |Espaço de trabalho|Ver informações de faturamento|Permite que os usuários visualizem assinaturas e faturamento.|
 |Espaço de trabalho|Ver Integração do Currents|Permite que os usuários visualizem todas as informações sobre uma conexão Currents, excluindo credenciais. Por padrão, os usuários atribuídos à permissão "Acessar Campanhas, canvas, Cartões, Blocos de Conteúdo, Flags de Recursos, Segmentos, Biblioteca de Mídia, Localizações, Códigos de Promoção e Centros de Preferências" também recebem essa permissão.|
-|Espaço de trabalho|Ver atributos personalizados marcados como IPI|Permite que este usuário visualize atributos personalizados que são marcados como IPI sem ser um administrador.|
-|Espaço de trabalho|Ver IPI|Permite que os usuários visualizem os campos de informações pessoalmente identificáveis (IPI) conforme definido pela sua empresa no dashboard. Os usuários também podem visualizar os campos de IPI na guia **Preview as a User** das prévias de mensagens. |
-|Espaço de trabalho|Ver perfis de usuário em conformidade com IPI|Permite que os usuários vejam perfis de usuários, mas editem campos que a sua empresa definiu como informações pessoalmente identificáveis.|
-|Espaço de trabalho|Ver transformações|Permite que os usuários visualizem [Transformações de Dados do Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
+|Espaço de trabalho|Ver atributos personalizados marcados como IPI|Permite que usuários não administradores visualizem atributos personalizados que contenham informações confidenciais e estejam marcados como informações de identificação pessoal (IPI).|
+|Espaço de trabalho|Ver IPI|Permite que os usuários visualizem os campos de informações de identificação pessoal (IPI) conforme definido pela sua empresa no dashboard. Os usuários também podem visualizar os campos de IPI na guia **Preview as a User** das prévias de mensagens.|
+|Espaço de trabalho|Ver perfis de usuário em conformidade com IPI|Permite que os usuários visualizem perfis de usuários que contenham campos que sua empresa definiu como informações de identificação pessoal (IPI), mas os campos de IPI são redigidos. |
+|Espaço de trabalho|Ver transformações|Permite que os usuários visualizem [Transformações de Dados do Braze]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Espaço de trabalho|Ver dados de uso|Permite que os usuários visualizem o uso do app, incluindo os painéis de desempenho do canal.|
 |Espaço de trabalho|Mesclar usuários duplicados|Permite que os usuários mesclem perfis de usuário duplicados.|
 |Espaço de trabalho|Prévia de usuários duplicados|Permite que os usuários vejam uma prévia de quais perfis de usuário estão duplicados.|
 |Espaço de trabalho|Criar e editar modelos de canva|Permite que os usuários criem e editem modelos do Canva.|
 |Espaço de trabalho|Ver modelos de canva|Permite que os usuários visualizem os modelos do Canva.|
 |Espaço de trabalho|Arquivar modelos de canva|Permite que os usuários arquivem modelos do Canva.|
+|Espaço de trabalho|Gerenciar segmentação de propriedades personalizadas de eventos|Permite que os usuários criem segmentos com base na recência e na frequência da propriedade do evento.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
