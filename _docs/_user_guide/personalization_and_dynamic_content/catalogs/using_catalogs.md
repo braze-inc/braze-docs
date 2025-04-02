@@ -41,6 +41,10 @@ This renders as the following:
 
 > Get Tales for just 7.49!
 
+## Exporting catalogs
+
+You can also export a catalog. You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
+
 ## Additional use cases
 
 ### Multiple items
@@ -198,10 +202,6 @@ Welcome to our store, Peter!
 {% alert note %}
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
-
-### Exporting catalogs
-
-You can also export a catalog. You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
 
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
