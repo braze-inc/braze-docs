@@ -19,13 +19,13 @@ Puedes registrar las compras pasando un [objeto de compra]({{site.baseurl}}/api/
 
 A continuación se enumeran los métodos utilizados en diversas plataformas para registrar las compras. En estas páginas también encontrarás documentación sobre cómo añadir propiedades y cantidades a tu evento de compra. En función de estas propiedades, puede segmentar aún más a sus usuarios.
 
-- [Android y FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
+- [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
 
 ## Ver datos de compra
 
