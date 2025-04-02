@@ -188,24 +188,24 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>El límite de frecuencia se aplica a todas las campañas, no a cada aplicación, lo que hace más difícil evitar el exceso de mensajes a los clientes.</td>
     </tr>
     <tr>
-        <td>Estado de la suscripción</td>
-        <td>El estado de suscripción de cada perfil de usuario es único para cada instancia de aplicación.</td>
+        <td>Estado de suscripción de los perfiles de usuario</td>
+        <td>El estado de suscripción de cada perfil de usuario es único para cada instancia de la aplicación.</td>
         <td>N/A</td>
         <td>N/A</td>
-        <td>Los estados de suscripción de todas las instancias de la aplicación se combinan para un perfil de usuario.<br><br><b>Consejo:</b> En su lugar, puede utilizar atributos personalizados para gestionar las suscripciones.</td>
+        <td>Los estados de suscripción de un perfil de usuario se combinan en todas las instancias de la aplicación.<br><br><b>Consejo:</b> En su lugar, podrías utilizar <a href='/docs/user_guide/data/custom_data/custom_attributes'>atributos personalizados</a> para gestionar las suscripciones de tus usuarios.</td>
     </tr>
     <tr>
-        <td>Permisos de usuario</td>
+        <td>Permisos de usuario Braze</td>
         <td>N/A</td>
-        <td>La actualización de los permisos de usuario para un usuario del cuadro de mandos debe realizarse por separado para cada espacio de trabajo al que el usuario necesite acceder.</td>
-        <td>Los permisos de usuario se pueden establecer una vez para un usuario del cuadro de mando y tendrán los mismos permisos para todas las instancias de la aplicación en el espacio de trabajo.</td>
+        <td>La actualización de <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>los permisos de</a> un usuario del panel debe hacerse por separado para cada espacio de trabajo al que el usuario necesite acceder.</td>
+        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Los permisos de usuario</a> pueden configurarse una vez para un usuario del panel, y tendrán los mismos permisos para todas las instancias de la aplicación en el espacio de trabajo.</td>
         <td>N/A</td>
     </tr>
     <tr>
         <td>Duplicación de contenidos</td>
         <td>N/A</td>
-        <td>No se pueden duplicar segmentos, campañas o lienzos entre espacios de trabajo.</td>
-        <td>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
+        <td>No se pueden duplicar segmentos, campañas push o de tarjeta de contenido, ni lienzos entre espacios de trabajo.</td>
+        <td>Puedes [duplicar campañas entre espacios de trabajo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
         <td>N/A</td>
     </tr>
     <tr>
