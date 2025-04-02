@@ -24,6 +24,30 @@ Há vários detalhes a serem considerados ao criar uma postergação em sua jorn
 - O limite de postergação é de 30 dias.
 - Um componente de postergação só pode se conectar a uma etapa seguinte.
 
+### Postergações personalizadas
+
+{% alert important %}
+As postergações personalizadas e estendidas estão em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+{% endalert %}
+
+Selecione a opção **Personalizar postergação** para configurar uma postergação personalizada para seus usuários. Você pode usar isso com uma [etapa de Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para selecionar a variável de contexto para a postergação.
+
+Digamos que queremos lembrar nossos clientes de comprar pasta de dente daqui a 30 dias. Usando uma combinação de uma etapa de Contexto e uma etapa de Postergação, podemos selecionar essa variável de contexto para postergar. Nesse caso, nossa etapa Context teria os seguintes campos:
+
+- **Nome da variável de contexto:** product_reminder_interval
+- **Tipo de dados:** Horário
+- **Valor:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![O "product_reminder_interval" e seu valor.][2]
+
+Em seguida, como queremos lembrar nossos clientes daqui a 30 dias, selecionaremos **Até um dia específico** como a opção de postergação e selecionaremos **Personalizar postergação** para usar as informações da etapa Contexto. Isso significa que nossos usuários sofrerão postergação até a variável de contexto selecionada.
+
+![Exemplo de uso de variáveis de contexto com uma etapa de Atraso para postergar usuários com base no "product_reminder_interval".][3]
+
+#### Postergações prolongadas
+
+Agora você pode estender as etapas de postergação por até dois anos. Por exemplo, se você estiver integrando novos usuários ao seu app, poderá adicionar uma postergação estendida de dois meses antes de enviar uma etapa de Mensagem para incentivar os usuários que não iniciaram uma sessão.
+
 ### Opções de postergação
 
 Você pode escolher o tipo de postergação antes da próxima mensagem em seu Canva. É possível definir uma postergação para que seus usuários durem até depois de um período de tempo designado, ou postergar seus usuários até uma data e hora específicas.
@@ -85,3 +109,5 @@ As postergações têm três estatísticas disponíveis na exibição de anális
 As séries temporais para essas análises de dados estão disponíveis na exibição expandida do componente.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}
