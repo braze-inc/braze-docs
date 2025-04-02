@@ -128,7 +128,7 @@ Les variables sont les suivantes
 
 Les données sont disponibles pour les périodes où ces deux conditions sont remplies :
 
-1. Le [suivi de l'analyse/analytique par segment]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) est activé pour les segments dont vous souhaitez consulter les données.
+1. Le [suivi de l'analyse/analytique par segment]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) est activé pour les segments dont vous souhaitez consulter les données.
 2. La fonctionnalité de données de performance par segment est activée.
 
 Vous ne pouvez pas accéder aux données des périodes antérieures à l'activation de cette fonctionnalité pour votre entreprise. Par exemple, si le suivi analytique est activé pour le segment A le 1er octobre et que cette fonctionnalité est activée pour votre entreprise le 2 octobre, vous ne pourrez alors consulter les données du segment A que pour les campagnes et les Canevas qui ont enregistré des indicateurs après le 2 octobre. 
