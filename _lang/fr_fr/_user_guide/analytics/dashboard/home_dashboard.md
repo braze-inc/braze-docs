@@ -62,7 +62,7 @@ Un faible ratio MAU/utilisateur peut indiquer que vous devez diversifier vos can
 ### Sessions à vie
 
 Le nombre *de sessions à vie* est le nombre total de sessions enregistrées par Braze depuis son intégration. En termes simples, une session correspond à chaque fois qu'un utilisateur utilise l'application ou visite votre site web. Pour une définition plus précise de la manière dont les sessions sont définies par plate-forme, consultez la page correspondante du site web de l'UE.
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), ou les articles des développeurs sur le suivi des sessions [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), ou les articles des développeurs sur le suivi des sessions [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
 
 ### Utilisateur actif par mois
 
