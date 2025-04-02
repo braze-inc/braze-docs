@@ -15,7 +15,7 @@ guide_top_text: "Les articles suivants répertorient tout ce qui concerne unique
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Campagne d’amorce de notification push"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Icônes d’application personnalisables"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
