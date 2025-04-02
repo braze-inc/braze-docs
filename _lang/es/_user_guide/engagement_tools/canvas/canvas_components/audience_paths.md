@@ -17,7 +17,7 @@ Este componente Canvas sustituye la necesidad de crear excesivos pasos completos
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-Las rutas de audiencia son similares a los embudos de clasificación con criterios de clasificación. Los usuarios son evaluados para cada criterio en orden de prioridad y enviados por la vía del criterio de mayor rango que cumplan. Esto reduce la ambigüedad de dónde irán los usuarios y qué mensajes recibirán. Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Las rutas de audiencia son similares a los embudos de clasificación con criterios de clasificación. Los usuarios son evaluados para cada criterio en orden de prioridad y enviados por la vía del criterio de mayor rango que cumplan. Esto reduce la ambigüedad de dónde irán los usuarios y qué mensajes recibirán. Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 
 Con las Rutas de audiencia, puedes:
 
@@ -54,7 +54,7 @@ Una vez completado el paso Rutas de audiencia, cada grupo de audiencia tendrá u
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-Después de añadir segmentos y filtros a su público, puede probar si sus grupos de público están configurados como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar que coincide con los criterios del público. 
+Después de añadir segmentos y filtros a su público, puede probar si sus grupos de público están configurados como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar que coincide con los criterios del público. 
 
 ## Utilizar rutas de audiencia
 
@@ -74,7 +74,7 @@ También puedes ver el rendimiento de este paso utilizando [los análisis de Can
 
 Si su Canvas utiliza un [límite de tasa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (como limitar el número total de usuarios que recibirán el Canvas), Braze recomienda que no utilice números de cubo aleatorios para segmentar sus Rutas de audiencia. 
 
-Un [número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. Braze utiliza el número de cubo aleatorio para agrupar a los usuarios durante la fase de segmentación de la entrada en Canvas, y cada grupo se procesa por separado. Dependiendo de qué grupos terminen de procesarse primero, algunos usuarios pueden verse limitados en la entrada debido al límite de velocidad, lo que podría causar una distribución desigual de los usuarios cuando lleguen al paso Rutas de audiencia.
+Un [número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. Braze utiliza el número de cubo aleatorio para agrupar a los usuarios durante la fase de segmentación de la entrada en Canvas, y cada grupo se procesa por separado. Dependiendo de qué grupos terminen de procesarse primero, algunos usuarios pueden verse limitados en la entrada debido al límite de velocidad, lo que podría causar una distribución desigual de los usuarios cuando lleguen al paso Rutas de audiencia.
 
 En este caso, pruebe a utilizar [Vías de experimentación]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
 
