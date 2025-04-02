@@ -370,7 +370,7 @@ Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> par
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Tasa de entregas fallidas' %}
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
 
 Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender las razones de los fallos en la entrega.
 
