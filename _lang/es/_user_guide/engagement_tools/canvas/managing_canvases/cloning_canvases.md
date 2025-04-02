@@ -13,7 +13,7 @@ tool: Canvas
 A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando la experiencia Canvas original. Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow.
 {% endalert %}
 
-> Si tienes un Lienzo existente del editor original, puedes clonar este Lienzo para crear una copia en el Canvas Flow. Al cambiar al flujo de trabajo del Canvas, obtienes acceso a [componentes ligeros del Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [propiedades de entrada persistentes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) y [edición posterior al lanzamiento]({{site.baseurl}}/post-launch_edits). Tu Canvas original no será alterado ni borrado.
+> Si tienes un Lienzo existente del editor original, puedes clonar este Lienzo para crear una copia en el Canvas Flow. Al cambiar al flujo de trabajo del Canvas, obtienes acceso a [componentes ligeros del Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [propiedades de entrada persistentes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) y [edición posterior al lanzamiento]({{site.baseurl}}/post-launch_edits). Tu Canvas original no será alterado ni borrado.
 
 Para clonar tu Canvas, haz lo siguiente:
 
