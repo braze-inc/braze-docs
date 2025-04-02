@@ -75,6 +75,10 @@ De plus, étant donné que les changements d’état d’abonnement ne consommen
 
 ## Points de données
 
+{% alert note %}
+Les tableaux suivants sont donnés à titre d'exemple. Pour connaître les conventions d'appellation exactes, les majuscules et les valeurs acceptées pour certains champs, reportez-vous à la documentation relative à votre méthode d'ingestion.
+{% endalert %}
+
 {% tabs %}
 {% tab Non facturable %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+
