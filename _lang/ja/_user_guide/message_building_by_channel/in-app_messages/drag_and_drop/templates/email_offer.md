@@ -10,7 +10,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > アプリ内メッセージのドラッグアンドドロップエディタを使用して、サインアップ時に特別割引を提供することでメールリストを構築します。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
 
 ## 特別なオファーを使用した電子メールサインアップフォームの作成
 
