@@ -48,7 +48,7 @@ Esta función se encuentra actualmente en acceso anticipado. Ponte en contacto c
 
 Las etiquetas pueden ser una herramienta organizativa útil para realizar un seguimiento de las tácticas de participación. Puede vincular segmentos y campañas a objetivos empresariales, etapas del embudo, etc.
 
-A continuación se ofrece un ejemplo de etiquetas que una aplicación de comercio electrónico podría considerar útiles:
+Este es un ejemplo de etiquetas que pueden ser útiles para una aplicación de comercio electrónico:
 
 <style>
 table td {
