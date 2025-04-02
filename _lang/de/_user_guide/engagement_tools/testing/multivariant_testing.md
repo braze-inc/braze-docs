@@ -65,9 +65,9 @@ Wenn Sie A/B-Tests für In-App-Nachrichten durchführen, kann es vorkommen, dass
 
 Variante A hat eine durchgängig höhere Anzahl von *Unique Recipients* als Variante C. Das liegt nicht an der Verteilung der Varianten, sondern daran, wie *Unique Recipients* für In-App-Nachrichten berechnet werden. Bei In-App-Nachrichten sind *Unique Recipients* eigentlich *Unique Impressions*, also die Gesamtzahl der Personen, die die In-App-Nachricht erhalten und angesehen haben. Das bedeutet, dass ein Benutzer, der die Nachricht aus irgendeinem Grund nicht erhält oder sich entscheidet, sie nicht anzusehen, nicht in die Zählung der *eindeutigen Empfänger* einbezogen wird und die Variantenverteilung verzerrt erscheinen kann.
 
-## Fünf Regeln für Multivariante- und A/B-Tests {#five-rules-for}
+## Tipps für multivariate und A/B-Tests
 
-Multivariate und A/B-Tests können Ihnen wichtige Erkenntnisse über Ihre Nutzer liefern. Um sicherzustellen, dass Ihre Testergebnisse wirklich das Verhalten Ihrer Nutzer:innen widerspiegeln, befolgen Sie diese Richtlinien.
+Multivariate und A/B-Tests können Ihnen wichtige Erkenntnisse über Ihre Nutzer liefern. Um Testergebnisse zu erhalten, die das Verhalten Ihrer Nutzer:innen wirklich widerspiegeln, befolgen Sie diese Richtlinien.
 
 #### Führen Sie den Test mit einer großen Anzahl von Benutzern durch
 
@@ -84,6 +84,15 @@ Multivariate- und A/B-Tests ermöglichen es Ihnen, die Unterschiede zwischen ver
 #### Entscheiden Sie, wie lange Ihr Test laufen soll, und beenden Sie ihn nicht vorzeitig.
 
 Entscheiden Sie vor Beginn des Tests, wie lange er dauern soll, und halten Sie sich daran. Vermarkter sind oft versucht, Tests abzubrechen, sobald sie Ergebnisse sehen, die ihnen gefallen, und damit ihre Ergebnisse zu verfälschen. Widerstehen Sie der Versuchung zu gucken und beenden Sie Ihren Test niemals vorzeitig!
+
+#### Fügen Sie Ihren Test zu Kampagnen hinzu, bevor sie gestartet werden, nicht danach
+
+Wenn Sie Ihren Test zu einer Kampagne hinzufügen, nachdem diese bereits gestartet wurde, wird der Test nicht ordnungsgemäß ausgeführt und Sie erhalten möglicherweise falsche oder irreführende Statistiken. Wenn Sie z.B. einer gestarteten Kampagne einen Test hinzufügen, der einen erneuten Eintritt zulässt, durchlaufen Nutzer:innen bei einem erneuten Eintritt in die Kampagne immer denselben Weg, um Datenungenauigkeiten beim Test zu vermeiden. Wenn Sie außerdem eine der Varianten ändern, während der Test läuft, wird diese Änderung Ihren Test ungültig machen und ihn neu starten.
+
+Für genaue Testergebnisse:
+1. Klonen Sie die gestartete Kampagne.
+2. Stoppen Sie die ursprüngliche Kampagne.
+3. Fügen Sie dann den Test zu der geklonten Kampagne hinzu. 
 
 #### Wenn möglich, schließen Sie eine Kontrollgruppe ein
 
