@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Membresía de Segment
-    description: "Le permite filtrar en función de la pertenencia a un segmento en cualquier lugar en el que se utilicen filtros (como segmentos, campañas y otros) y dirigirse a varios segmentos diferentes dentro de una misma campaña. <br><br>Tenga en cuenta que los segmentos que ya utilizan este filtro no pueden incluirse ni anidarse en otros segmentos. Debe volver a crear el segmento que intenta incluir utilizando los mismos filtros."
+    description: "Le permite filtrar en función de la pertenencia a un segmento en cualquier lugar en el que se utilicen filtros (como segmentos, campañas y otros) y dirigirse a varios segmentos diferentes dentro de una misma campaña. <br><br>Ten en cuenta que los segmentos que ya utilizan este filtro no pueden incluirse más ni anidarse en otros segmentos, porque esto puede crear un ciclo en el que el segmento A incluya al segmento B, que a su vez intentará incluir de nuevo al segmento A. Si eso ocurriera, el segmento seguiría haciendo referencia a sí mismo, haciendo imposible calcular quién pertenece realmente a él. Además, anidar segmentos de este modo añade complejidad y puede ralentizar las cosas. En su lugar, recrea el segmento que intentas incluir utilizando los mismos filtros."
     tags:
       - Segment or CSV membership
   - name: Extensiones de segmento de Braze
