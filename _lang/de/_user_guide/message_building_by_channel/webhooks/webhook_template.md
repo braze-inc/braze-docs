@@ -34,7 +34,7 @@ Wenn Sie z.B. [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/lin
 
 1. Geben Sie Ihrer Webhook-Vorlage einen eindeutigen Namen.
 2. (Optional) Fügen Sie eine Beschreibung der Vorlage hinzu, um zu erklären, wie diese Vorlage verwendet werden soll.
-3. Fügen Sie bei Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu, um die Suche nach Ihrer Vorlage zu erleichtern und zu filtern.
+3. Fügen Sie bei Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu, um die Suche nach Ihrer Vorlage zu erleichtern und zu filtern.
 
 ## Schritt 4: Template erstellen
 
