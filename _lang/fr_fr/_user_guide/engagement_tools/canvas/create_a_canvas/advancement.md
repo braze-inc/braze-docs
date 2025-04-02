@@ -15,7 +15,7 @@ tool: Canvas
 Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cet article est disponible à titre de référence pour comprendre comment vos utilisateurs avancent dans les composants Canvas de l’éditeur d’origine. <br><br>Pour les composants de Canvas Flow, le **comportement d'avancement** est défini de manière à toujours faire avancer immédiatement l'audience, ou à **faire avancer immédiatement l'audience**. Ceci s'applique également aux [étapes déconnectées]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
-> La fonctionnalité **Comportement d'avancement** vous permet de choisir les critères d'avancement par le biais de votre [composant Canvas.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/) 
+> La fonctionnalité **Comportement d'avancement** vous permet de choisir les critères d'avancement par le biais de votre [composant Canvas.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) 
 
 ![Paramètres Comportement d’avancement avec deux options pour avancer l’audience lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
 
