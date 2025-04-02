@@ -75,6 +75,10 @@ Además, como los cambios de estado de suscripción no consumen puntos de datos,
 
 ## Puntos de datos
 
+{% alert note %}
+Las tablas siguientes tienen carácter ilustrativo. Para conocer las convenciones de nomenclatura exactas, las mayúsculas y los valores aceptados para determinados campos, consulta la documentación correspondiente a tu método de ingestión.
+{% endalert %}
+
 {% tabs %}
 {% tab No facturable %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+
