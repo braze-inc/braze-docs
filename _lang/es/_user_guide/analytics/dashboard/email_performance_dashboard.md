@@ -54,9 +54,18 @@ El panel de información sobre el correo electrónico hace un seguimiento de dó
 
 ### Participación por dispositivo
 
-El informe **Participación por dispositivo** ofrece un desglose de los dispositivos que utilizan los usuarios para interactuar con el correo electrónico. Estos datos hacen un seguimiento de la interacción del correo electrónico en móviles, escritorio, tabletas y otros tipos de dispositivos. 
+El informe **Participación por dispositivo** ofrece un desglose de los dispositivos que utilizan los usuarios para interactuar con el correo electrónico. Estos datos hacen un seguimiento de la interacción del correo electrónico en móviles, escritorio, tabletas y otros tipos de dispositivos. Estos datos se basan en la cadena del agente de usuario transmitida desde los dispositivos de tus usuarios.
 
-La categoría "Otros" incluye cualquier cadena de usuarios que no pueda identificarse como de escritorio, móvil o tableta. Por ejemplo, televisión, coche, consola de videojuegos, OTT (over-the-top o streaming) y similares. También puede incluir valores nulos o vacíos.
+{% alert note %}
+Si utilizas CloudFront como CDN, asegúrate de que el agente de usuario de tus usuarios se transmite al ESP. De lo contrario, todos los agentes de usuario serán "Amazon Cloudfront".
+{% endalert %}
+
+La categoría "Otros" incluye cualquier cadena de usuario que no pueda identificarse como ordenador de sobremesa, móvil o tableta. Por ejemplo, televisión, coche, consola de videojuegos, OTT (over-the-top o streaming) y similares. También puede incluir valores nulos o vacíos.
+
+Para comprender mejor lo que hay en esta categoría "Otros", puedes extraer los agentes de usuario utilizando cualquiera de estas opciones:
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) te enviará la cadena exacta del agente de usuario que se recuperó de los dispositivos de tus usuarios.
+2. Aprovecha nuestro [Constructor de consultas]({{site.baseurl}}/user_guide/analytics/query_builder) para utilizar SQL o nuestro [Constructor de consultas AI]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) para ver los agentes de usuario.
 
 ![Informe de interacción por dispositivo que muestra el número de clics para móvil, escritorio, tableta y otros. El mayor número de clics se produce en dispositivos móviles.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
