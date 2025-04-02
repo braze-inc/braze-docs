@@ -133,7 +133,7 @@ search_rank: 7
 {% endtabs %}
 
 #### 부동산 세부 정보
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - 고객 성공 매니저 또는 계정 매니저에게 문의하여 `ad_id`로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 매니저 또는 계정 매니저에게 문의하세요.
 
 {% endapi %}
@@ -239,7 +239,7 @@ search_rank: 7
 {% endtabs %}
 
 #### 부동산 세부 정보
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - 고객 성공 관리자 또는 계정 관리자에게 문의하여 `ad_id` 으로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 관리자 또는 계정 관리자에게 문의하세요.
 {% endapi %}
 
@@ -610,7 +610,7 @@ search_rank: 7
 {% endtabs %}
 
 #### 부동산 세부 정보
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - 고객 성공 관리자 또는 계정 관리자에게 문의하여 `ad_id` 으로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 관리자 또는 계정 관리자에게 문의하세요.
 {% endapi %}
 
