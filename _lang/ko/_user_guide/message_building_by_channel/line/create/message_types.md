@@ -1,7 +1,7 @@
 ---
 nav_title: 메시지 유형
 article_title: 라인 메시지 유형
-page_order: 1
+page_order: 0
 description: "이 기사는 다양한 유형의 LINE 메시지를 다룹니다."
 page_type: reference
 tool:
