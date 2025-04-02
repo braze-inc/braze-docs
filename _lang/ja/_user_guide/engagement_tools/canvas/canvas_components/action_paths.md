@@ -77,7 +77,7 @@ tool: Canvas
 | **オン** | 関連する評価期間の終了時に、すべてのエントリを進めます。重複排除は発生しません。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-なお、ランクを[開始後に編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)することはできません。
+なお、ランクを[開始後に編集]({{site.baseurl}}/post-launch_edits/)することはできません。
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}
