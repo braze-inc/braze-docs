@@ -68,7 +68,7 @@ Para mejorar las conversiones entre hablantes de idiomas distintos del inglés, 
 
 ### Comprender los indicadores de mayores ingresos
 
-Conseguir que los usuarios se conviertan en compradores puede ser difícil, y tratar de empujar a los usuarios nuevos, inactivos o desconectados directamente hacia la compra puede llevar al usuario a desinstalar su aplicación. Segment Insights puede ayudarle a descubrir acciones que lleven a los usuarios más lejos en el embudo de compra sin que tengan que comprar todavía, por ejemplo, añadir artículos a su lista de deseos, compartir en las redes sociales o dar un favorito a un contenido. Por ejemplo, puede trazar el impacto en las compras de diferentes comportamientos dentro de una aplicación de comercio electrónico.
+Conseguir que los usuarios se conviertan en compradores puede ser difícil, y tratar de empujar a los usuarios nuevos, inactivos o desconectados directamente hacia la compra puede llevar al usuario a desinstalar su aplicación. Segment Insights puede ayudarle a descubrir acciones que lleven a los usuarios más lejos en el embudo de compra sin que tengan que comprar todavía, por ejemplo, añadir artículos a su lista de deseos, compartir en las redes sociales o dar un favorito a un contenido. Por ejemplo, puedes trazar el impacto en las compras de diferentes comportamientos dentro de una aplicación de comercio electrónico.
 
 ![][7]
 
