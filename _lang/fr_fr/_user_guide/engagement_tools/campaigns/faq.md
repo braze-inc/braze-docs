@@ -52,7 +52,7 @@ Par exemple, une société basée à Londres qui envoie une campagne à midi att
 
 Braze détermine automatiquement le fuseau horaire d’un utilisateur à partir de son appareil. Cela garantit une précision de fuseau horaire et une couverture complète de vos utilisateurs. Les utilisateurs créés via l’API utilisateur ou n’ayant pas de fuseau horaire prendront celui de votre entreprise comme fuseau horaire par défaut jusqu’à ce qu’ils soient identifiés dans votre application par le SDK. 
 
-Vous pouvez vérifier le fuseau horaire de votre entreprise dans vos [paramètres de l'entreprise]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) sur le tableau de bord.
+Vous pouvez vérifier le fuseau horaire de votre entreprise dans vos [paramètres de l'entreprise]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) sur le tableau de bord.
 
 ### Quand Braze évalue-t-il les utilisateurs pour la livraison selon un fuseau horaire local ?
 
