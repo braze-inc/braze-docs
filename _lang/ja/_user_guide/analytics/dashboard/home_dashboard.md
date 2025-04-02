@@ -62,7 +62,7 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 ### 生涯セッション数
 
 *生涯セッション数*は、Braze が統合以降に記録したセッションの総数です。簡潔に言うと、セッションとはユーザーによるアプリの使用や、Web サイトの表示が行われている個々の期間です。プラットフォーム別のより正確なセッションの定義については、対応する
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/)、[Android、FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/)、または [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) のセッション追跡の開発者向け記事を参照してください。
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/)、[Android、FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/)、または [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) のセッション追跡の開発者向け記事を参照してください。
 
 ### 1 か月あたりのアクティブユーザー数
 
