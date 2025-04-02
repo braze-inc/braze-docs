@@ -7,7 +7,7 @@ description: "Cette page répond aux questions fréquemment posées sur l'ingest
 toc_headers: h2
 ---
 
-# Questions fréquemment posées (FAQ)
+# Foire aux questions
 
 > Cette page contient des réponses à certaines questions fréquemment posées concernant l'ingestion de données dans le cloud.
 
