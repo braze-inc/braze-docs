@@ -8,9 +8,9 @@ description: "Este artigo aborda como puxar perfis de usuários em suas chamadas
 
 # Puxando dados do perfil do usuário
 
-> Se uma resposta de Conteúdo Conectado contiver campos de perfil do usuário (dentro de uma tag de personalização Liquid), esses valores devem ser definidos anteriormente na mensagem via Liquid, antes da chamada de Conteúdo Conectado para renderizar corretamente o retorno do Liquid. 
+> Esta página aborda como extrair perfis de usuário para suas chamadas de Connected Content e as práticas recomendadas envolvendo modelos Liquid. 
 
-Da mesma forma, a bandeira `:rerender` deve ser incluída na solicitação. Observe que a bandeira `:rerender` é apenas um nível profundo, o que significa que não se aplicará a nenhuma tag de Conteúdo Conectado aninhada.
+Se uma resposta do Connected Content contiver campos de perfil de usuário (dentro de uma tag de personalização do Liquid), esses valores deverão ser definidos anteriormente na mensagem com o Liquid, antes da chamada do Connected Content, para que o passback do Liquid seja renderizado corretamente. Da mesma forma, a bandeira `:rerender` deve ser incluída na solicitação. Observe que a bandeira `:rerender` é apenas um nível profundo, o que significa que não se aplicará a nenhuma tag de Conteúdo Conectado aninhada.
 
 Para personalização, Braze puxa campos de perfil de usuário antes de passar esse campo para Liquid—então, se a resposta do Conteúdo Conectado tiver campos de perfil de usuário, ele deve ser definido previamente. 
 
@@ -30,5 +30,21 @@ Para renderizar o passback Liquid corretamente, você deve colocar a tag {% raw 
 ```
 {% endraw %}
 {% alert important %}
-Lembre-se de que a opção de bandeira `:rerender` só tem um nível de profundidade. Se a resposta do Conteúdo Conectado em si tiver mais tags de Conteúdo Conectado, a Braze não renderizará novamente essas tags adicionais.
+Lembre-se de que a opção de bandeira `:rerender` só tem um nível de profundidade. Se a própria resposta de Connected Content tiver mais tags de Connected Content ou quaisquer tags de catálogo, o Braze não renderizará novamente essas tags adicionais.
 {% endalert %}
+
+## Melhores práticas
+
+### Use `json_escape` com tags Liquid que possam quebrar o formato JSON
+
+Ao usar `:rerender`, adicione o filtro `json_escape` a qualquer tag Liquid que possa quebrar o formato JSON. Se suas tags Liquid contiverem caracteres que quebram o formato JSON, toda a resposta do Connected Content será interpretada como texto e será modelada na mensagem, e nenhuma das variáveis será salva.
+
+Por exemplo, se a propriedade de evento `message` no exemplo abaixo contiver caracteres que possam quebrar o formato JSON, adicione o filtro `json_escape` como neste exemplo:
+
+{% raw %}
+```liquid
+[{
+"message":"{{event_properties.${message} | json_escape}}"
+}]
+```
+{% endraw %}
