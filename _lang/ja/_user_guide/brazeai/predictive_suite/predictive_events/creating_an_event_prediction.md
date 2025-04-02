@@ -36,7 +36,7 @@ Braze で、[**分析**] > [**予測イベント**] に移動します。
 
 ## ステップ 2: イベントトラッキングを指定する {#event-tracking}
 
-ユーザのイベントがブレーズに[購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)または[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)として保存されているかどうかを指定します。
+ユーザのイベントがブレーズに[購入イベント]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/)または[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)として保存されているかどうかを指定します。
 
 ここでは、選択したメソッドが、機械学習モデルを作成するためにBraze に十分なデータを提供しているかどうかを確認します。要件が満たされていない場合は、アプリケーションでも使用されている他のロギング方法を選択してみてください。該当するものがない場合、残念ながら Braze では利用可能なデータの量で予測を作成できません。このエラーの表示が間違っていると思われる場合は、カスタマーサクセスマネージャーに連絡してください。
 
