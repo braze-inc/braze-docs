@@ -7,7 +7,7 @@ description: "Diese Seite beantwortet häufig gestellte Fragen zur Datenaufnahme
 toc_headers: h2
 ---
 
-# Häufig gestellte Fragen (FAQ)
+# Häufig gestellte Fragen
 
 > Auf dieser Seite finden Sie Antworten auf einige häufig gestellte Fragen zur Datenaufnahme in der Cloud.
 
