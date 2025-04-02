@@ -46,7 +46,7 @@ Event-Nutzerprotokolle bleiben 30 Tage lang im Dashboard, nachdem sie protokolli
 
 ### Fehlende SDK-Protokolle für Testbenutzer
 
-Wenn Sie eine:n Nutzer:in zu einer internen Gruppe hinzugefügt haben, diese:r aber keine SDK-Protokolle im Event-Nutzerprotokoll anzeigt, kann dies an einer fehlenden Konfigurationsoption liegen. Um SDK-Protokolle zu erfassen, stellen Sie sicher, dass die Option **Benutzerereignisse für Gruppenmitglieder aufzeichnen** in den **Internen Gruppeneinstellungen** für diese [interne Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) aktiviert ist.
+Wenn Sie eine:n Nutzer:in zu einer internen Gruppe hinzugefügt haben, diese:r aber keine SDK-Protokolle im Event-Nutzerprotokoll anzeigt, kann dies an einer fehlenden Konfigurationsoption liegen. Um SDK-Protokolle zu erfassen, stellen Sie sicher, dass die Option **Benutzerereignisse für Gruppenmitglieder aufzeichnen** in den **Internen Gruppeneinstellungen** für diese [interne Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) aktiviert ist.
 
 ### Verzögerung bei der Aktualisierung von Protokollen
 
