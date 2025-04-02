@@ -47,57 +47,104 @@ Intelligent Selection no estará disponible si:
 - Tu Canvas está compuesto por una única variante sin variantes adicionales ni grupos de control añadidos
 - Tu Canvas está compuesto por un único grupo de control, sin variantes añadidas
 
+---
+
 ## Intelligent Timing
 
-### ¿Predice el Intelligent Timing cuándo es más probable que un usuario convierta, o sólo cuándo es más probable que abra o haga clic?
+### General
 
-Intelligent Timing predice cuándo es más probable que un usuario abra o haga clic.
+#### ¿Qué predice el Intelligent Timing?
 
-### ¿Cómo se determina la hora de la aplicación más popular?
+Intelligent Timing se centra en predecir cuándo es más probable que un usuario abra o haga clic en tus mensajes para garantizar que tus mensajes lleguen a los usuarios en los momentos óptimos de interacción.
 
-La hora de la aplicación más popular viene determinada por la hora media de inicio de sesión del espacio de trabajo (en hora local). Esta métrica se puede encontrar en el panel al previsualizar los tiempos de una campaña, se muestra en rojo.
+#### ¿Se calcula el Intelligent Timing por separado para cada día de la semana?
 
-### ¿Tiene en cuenta el Intelligent Timing la apertura de la máquina?
+No, el Intelligent Timing no está vinculado a días concretos. En su lugar, personaliza los tiempos de envío en función de los patrones de interacción únicos de cada usuario y del canal que estés utilizando, como el correo electrónico o las notificaciones push. Esto garantiza que tus mensajes lleguen a los usuarios cuando están más receptivos.
 
-Sí, las aperturas de la máquina son filtradas por Intelligent Timing, por lo que no influyen en su rendimiento.
+### Cálculos
 
-### ¿Cómo puedo asegurarme de que Intelligent Timing funciona lo mejor posible?
+#### ¿Qué datos se utilizan para calcular el tiempo óptimo para cada usuario?
 
-Intelligent Timing utiliza el historial individual de interacción con mensajes de cada usuario en cualquier momento en que haya recibido mensajes. Antes de utilizar Intelligent Timing, asegúrate de que has enviado mensajes a los usuarios a distintas horas del día. De ese modo, puedes "muestrear" cuándo puede ser el mejor momento para cada usuario. Un muestreo inadecuado de las distintas horas del día puede hacer que Intelligent Timing elija una hora de envío que no sea la óptima para un usuario. 
+Para calcular el tiempo óptimo, Intelligent Timing:
 
-### ¿Con cuánta antelación debo lanzar una campaña de Intelligent Timing para entregarla con éxito a todos los usuarios de todas las zonas horarias?
+1. Analiza los datos de interacción de cada usuario registrados por el SDK de Braze. Esto incluye lo siguiente:
+  - Horario de las sesiones
+  - Push Direct Opens
+  - Push Influenced Opens
+  - Clics en el correo electrónico
+  - Aperturas de correo electrónico (excluyendo aperturas de máquina)
+2. Agrupa estos eventos por hora, identificando la hora de envío óptima para cada usuario.
 
-Braze calcula la hora óptima a medianoche en la hora de Samoa, uno de los primeros husos horarios del mundo. En un solo día, abarca aproximadamente 48 horas. Por ejemplo, alguien cuya hora óptima son las 12:01 de la mañana y vive en Australia ya ha pasado su hora óptima, y es "demasiado tarde" para enviársela. Por estas razones, tienes que programarlo con 48 horas de antelación para garantizar que todas las personas del mundo que utilicen tu aplicación la reciban correctamente.
+#### ¿Se incluyen las Aperturas de Máquina al calcular el tiempo óptimo?
 
-### ¿Por qué mi campaña de Intelligent Timing muestra pocos o ningún envío?
+No, [las Aperturas de máquina]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens) se excluyen de los cálculos del tiempo óptimo. Esto significa que los tiempos de envío se basan únicamente en la interacción real de los usuarios, lo que proporciona una sincronización más precisa para tus campañas.
+
+#### ¿Cómo de preciso es el momento óptimo?
+
+Intelligent Timing programa mensajes durante la "hora de mayor interacción" de cada usuario, basándose en los eventos de inicio de sesión y apertura de mensajes. Dentro de esa hora, la hora del mensaje se redondea a los cinco minutos más próximos. Por ejemplo, si la hora óptima de un usuario se calcula a las 16:58, el mensaje se programará para las 17:00. Puede haber ligeros retrasos en la entrega debido a la actividad del sistema durante los periodos de mayor actividad.
+
+#### ¿Cuáles son los cálculos alternativos si no hay datos suficientes?
+
+Si hay menos de cinco eventos relevantes para un usuario, Intelligent Timing utiliza la [hora alternativa][1] de tu configuración de mensajes. 
+
+### Administrador de campaña
+
+#### ¿Con cuánta antelación debo lanzar una campaña de Intelligent Timing para entregarla con éxito a todos los usuarios de todas las zonas horarias?
+
+Braze calcula la hora óptima a medianoche en la hora de Samoa, uno de los primeros husos horarios del mundo. En un solo día, abarca aproximadamente 48 horas. Por ejemplo, alguien cuya hora óptima son las 12:01 de la mañana y vive en Australia ya ha pasado su hora óptima, y es "demasiado tarde" para enviársela. Por estas razones, necesitas programar con 48 horas de antelación para entregar con éxito a todas las personas del mundo que utilicen tu aplicación.
+
+#### ¿Por qué mi campaña de Intelligent Timing muestra pocos o ningún envío?
 
 Braze necesita un número base de puntos de datos para hacer una buena estimación. Si no hay suficientes datos de sesión o los usuarios objetivo tienen pocos o ningún clic o apertura de correo electrónico (como los nuevos usuarios), Intelligent Timing puede predeterminar la hora más popular del espacio de trabajo en ese día de la semana. Si no hay suficiente información sobre el espacio de trabajo, volvemos a la hora predeterminada de las 17 h. También puedes elegir establecer una [hora específica de alternativa]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options).
 
-### ¿Por qué mi campaña de Intelligent Timing se envía pasada la fecha programada?
+#### ¿Por qué mi campaña de Intelligent Timing se envía pasada la fecha programada?
 
 Puede que tu campaña de Intelligent Timing esté enviando más allá de la fecha programada porque estás aprovechando las pruebas A/B. Las campañas que utilizan pruebas A/B pueden enviar automáticamente la variante ganadora una vez finalizada la prueba A/B, lo que aumenta la duración del envío de la campaña. Por defecto, las campañas de Intelligent Timing se programarán para enviar la variante ganadora a los usuarios restantes para el día siguiente, pero puedes cambiar esta fecha de envío.
 
 Te recomendamos que, si tienes campañas con Intelligent Timing, dejes más tiempo para que finalice la prueba A/B y programes el envío de la variante ganadora para dentro de dos días en lugar de uno. 
 
-### ¿Cuándo comprueba Braze los criterios de elegibilidad de los filtros de segmento y audiencia?
+### Consideraciones técnicas
+
+#### ¿Cuándo comprueba Braze los criterios de elegibilidad de los filtros de segmento y audiencia?
 
 Braze realiza dos comprobaciones cuando se lanza una campaña:
 
-1. En cuanto se identifica la primera zona horaria, se inicia el proceso de puesta en cola de usuarios, y
-2. A la hora programada para ver si los usuarios siguen siendo elegibles para recibir la campaña.
+1. **Comprobación inicial:** A medianoche en la primera zona horaria del día de envío.
+2. **Comprobación de la hora programada:** Justo antes de enviar a la hora Intelligent Timing seleccionada por el usuario.
 
-Ten cuidado al crear campañas que filtren envíos de otras campañas. Por ejemplo, si enviaras dos campañas el mismo día para horas distintas, y añades un filtro que sólo permita a los usuarios recibir la segunda campaña si han recibido la primera, los usuarios no recibirán la segunda campaña. Esto se debe a que nadie era elegible cuando se creó la campaña y se formaron los segmentos.
+Ten cuidado al filtrar en función de otros envíos de campaña para evitar dirigirte a segmentos no elegibles. Por ejemplo, si enviaras dos campañas el mismo día para horas distintas, y añades un filtro que sólo permita a los usuarios recibir la segunda campaña si han recibido la primera, los usuarios no recibirán la segunda campaña. Esto se debe a que nadie era elegible cuando se creó la campaña y se formaron los segmentos.
 
-### ¿Puedo utilizar horas tranquilas en mi campaña de Intelligent Timing?
+#### ¿Puedo utilizar horas tranquilas en mi campaña de Intelligent Timing?
 
-No recomendamos utilizar tanto Intelligent Timing como horas tranquilas para tu campaña o Canvas, ya que es contraproducente. Las horas tranquilas se basan en suposiciones descendentes sobre el comportamiento de los usuarios, mientras que el Intelligent Timing se basa en la actividad de los usuarios.
+Las Horas tranquilas pueden utilizarse en una campaña que utilice Intelligent Timing. El algoritmo de Intelligent Timing evitará las horas tranquilas para seguir enviando el mensaje a todos los usuarios elegibles. Dicho esto, te recomendamos que desactives las Horas tranquilas, a menos que haya implicaciones legales, de cumplimiento de normas o de otro tipo sobre cuándo se pueden enviar mensajes y cuándo no.
 
-### ¿Puedo utilizar Intelligent Timing y la limitación de tasas?
+#### ¿Qué ocurre si la hora óptima para un usuario está dentro de las horas tranquilas? 
 
-Braze no recomienda el uso de Intelligent Timing y la limitación de tasa porque no hay garantías sobre cuándo se entregará el mensaje.
+Si la hora óptima determinada cae dentro de las Horas Tranquilas, Braze encuentra el límite más cercano de las Horas Tranquilas y programa el mensaje para la siguiente hora permitida antes o después de las Horas Tranquilas. El mensaje se pone en cola para enviarse en el límite más cercano de las horas tranquilas en relación con la hora óptima.
 
-### ¿Puedo utilizar Intelligent Timing durante el calentamiento de IP?
+#### ¿Puedo utilizar Intelligent Timing y la limitación de tasas?
 
-Braze no recomienda utilizar Intelligent Timing cuando los usuarios estén calentando de IP por primera vez, ya que algunos de sus comportamientos pueden causar dificultades para alcanzar los volúmenes diarios. Esto se debe a que Intelligent Timing evalúa dos veces los segmentos de la campaña. Una vez cuando se construye la campaña por primera vez, y una segunda vez antes de enviarla a los usuarios para verificar que deben seguir estando en ese segmento. 
+El límite de velocidad puede utilizarse en una campaña que utilice Intelligent Timing. Sin embargo, la naturaleza del límite de velocidad implica que algunos usuarios pueden recibir su mensaje en un momento que no sea el óptimo, sobre todo si un gran número de usuarios en relación con el tamaño del límite de velocidad están programados en el momento alternativo debido a la insuficiencia de datos. 
+
+Recomendamos utilizar el límite de velocidad en una campaña de Intelligent Timing sólo cuando haya requisitos técnicos que deban cumplirse utilizando el límite de tasa.
+
+#### ¿Puedo utilizar Intelligent Timing durante el calentamiento de IP?
+
+Braze no recomienda utilizar Intelligent Timing cuando los usuarios estén calentando de IP por primera vez, ya que algunos de sus comportamientos pueden causar dificultades para alcanzar los volúmenes diarios. Esto se debe a que Intelligent Timing evalúa dos veces los segmentos de la campaña. Una vez cuando se construye la campaña por primera vez, y una segunda vez antes de enviarla a los usuarios para verificar que deben seguir estando en ese segmento.
 
 Esto puede hacer que los segmentos se desplacen y cambien, lo que a menudo hace que algunos usuarios salgan del segmento en la segunda evaluación. Estos usuarios no se reemplazan, lo que afecta a lo cerca del tope máximo de usuarios que puedes llegar.
+
+#### ¿Cómo se determina la hora de la aplicación más popular?
+
+La hora de la aplicación más popular viene determinada por la hora media de inicio de sesión del espacio de trabajo (en hora local). Esta métrica se puede encontrar en el panel al previsualizar los tiempos de una campaña, se muestra en rojo.
+
+#### ¿Tiene en cuenta el Intelligent Timing la apertura de la máquina?
+
+Sí, las aperturas de la máquina son filtradas por Intelligent Timing, por lo que no influyen en su rendimiento.
+
+#### ¿Cómo puedo asegurarme de que Intelligent Timing funciona lo mejor posible?
+
+Intelligent Timing utiliza el historial individual de interacción con mensajes de cada usuario en cualquier momento en que haya recibido mensajes. Antes de utilizar Intelligent Timing, asegúrate de que has enviado mensajes a los usuarios a distintas horas del día. De ese modo, puedes "muestrear" cuándo puede ser el mejor momento para cada usuario. Un muestreo inadecuado de las distintas horas del día puede hacer que Intelligent Timing elija una hora de envío que no sea la óptima para un usuario.
+
+
+[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing#fallback-time
