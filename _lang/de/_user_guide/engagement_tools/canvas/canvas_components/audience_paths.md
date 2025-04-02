@@ -17,7 +17,7 @@ Diese Canvas-Komponente ersetzt die Notwendigkeit, übermäßig viele zielgruppe
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-Zielgruppenpfade sind vergleichbar mit Sortiertrichtern mit Ranking-Kriterien. Die Benutzer werden für jedes Kriterium in der Reihenfolge ihrer Priorität bewertet und auf den Weg des höchsten Kriteriums geschickt, das sie erfüllen. Dadurch wird die Unklarheit darüber verringert, wohin die Nutzer:innen gehen und welche Nachrichten sie erhalten werden. Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) nicht [mehr geändert werden können]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Zielgruppenpfade sind vergleichbar mit Sortiertrichtern mit Ranking-Kriterien. Die Benutzer werden für jedes Kriterium in der Reihenfolge ihrer Priorität bewertet und auf den Weg des höchsten Kriteriums geschickt, das sie erfüllen. Dadurch wird die Unklarheit darüber verringert, wohin die Nutzer:innen gehen und welche Nachrichten sie erhalten werden. Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/post-launch_edits/) nicht [mehr geändert werden können]({{site.baseurl}}/post-launch_edits/).
 
 Mit Zielgruppenpfade können Sie Folgendes tun:
 
@@ -54,7 +54,7 @@ Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht. 
+Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht. 
 
 ## Audience Paths verwenden
 
@@ -74,7 +74,7 @@ Sie können die Leistung dieses Schrittes auch mit [Canvas Analytics]({{site.bas
 
 Wenn Ihr Canvas ein [Rate-Limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) verwendet (z. B. eine Begrenzung der Gesamtzahl der Nutzer:innen, die das Canvas erhalten), empfiehlt Braze, dass Sie keine zufälligen Bucket-Nummern zur Segmentierung Ihrer Zielgruppenpfade verwenden. 
 
-Eine [zufällige Bucket-Nummer]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) ist ein Benutzerattribut, das verwendet werden kann, um gleichmäßig verteilte Segmente von zufälligen Benutzern zu erstellen. Braze verwendet die zufällige Bucket-Nummer, um Nutzer:innen während der Segmentierungsphase der Canvas-Eingabe zu gruppieren, und jede Gruppe wird separat verarbeitet. Je nachdem, welche Gruppen die Verarbeitung zuerst abschließen, können einige Nutzer:innen aufgrund des Rate-Limits bei der Eingabe gedeckelt werden, was zu einer ungleichmäßigen Verteilung der Nutzer:innen führen kann, wenn sie den Schritt „Zielgruppenpfade“ erreichen.
+Eine [zufällige Bucket-Nummer]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) ist ein Benutzerattribut, das verwendet werden kann, um gleichmäßig verteilte Segmente von zufälligen Benutzern zu erstellen. Braze verwendet die zufällige Bucket-Nummer, um Nutzer:innen während der Segmentierungsphase der Canvas-Eingabe zu gruppieren, und jede Gruppe wird separat verarbeitet. Je nachdem, welche Gruppen die Verarbeitung zuerst abschließen, können einige Nutzer:innen aufgrund des Rate-Limits bei der Eingabe gedeckelt werden, was zu einer ungleichmäßigen Verteilung der Nutzer:innen führen kann, wenn sie den Schritt „Zielgruppenpfade“ erreichen.
 
 Versuchen Sie in diesem Fall, stattdessen [Experimentierpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) zu verwenden.
 
