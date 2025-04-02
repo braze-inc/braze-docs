@@ -22,7 +22,7 @@ A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utili
 
 Ponemos en cola un trabajo para cada paso, se ejecutan más o menos al mismo tiempo y uno de ellos "gana". En la práctica, la clasificación puede ser algo uniforme, pero es probable que tenga al menos un ligero sesgo hacia el paso que se creó en primer lugar. 
 
-Además, no podemos garantizar cómo será exactamente esa distribución. Si desea una división uniforme, añada un filtro [Número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/).
+Además, no podemos garantizar cómo será exactamente esa distribución. Si desea una división uniforme, añada un filtro [Número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
 
 ### ¿Qué ocurre cuando se detiene un lienzo?
 
@@ -54,7 +54,7 @@ Detener un Canvas no hará que los usuarios que están esperando recibir mensaje
 
 Si edita algunos de los pasos de un Canvas de varios pasos, los usuarios que ya estaban en la audiencia pero no han recibido los pasos recibirán la versión actualizada del mensaje. Ten en cuenta que esto solo ocurrirá si aún no han sido evaluados para el paso.
 
-Para más información sobre lo que puede editar después del lanzamiento, consulta [Cambiar tu Canvas después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Para más información sobre lo que puede editar después del lanzamiento, consulta [Cambiar tu Canvas después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 
 ### ¿Cómo se realiza el seguimiento de las conversiones de los usuarios en un Canvas?
 
@@ -95,7 +95,7 @@ Hay un lienzo de un solo paso con las horas de silencio activadas:
 
 ### ¿Cuál es la diferencia entre un componente y un paso?
 
-Un [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) es una parte individual de su lienzo que puede utilizar para determinar la eficacia de su lienzo. Los componentes pueden incluir acciones como dividir el recorrido del usuario, añadir un retraso e incluso probar varias rutas de Canvas. Un paso en Canvas se refiere al recorrido personalizado del usuario en sus ramas de Canvas. Esencialmente, tu Canvas está formado por componentes individuales que crean pasos para tu recorrido de usuario.
+Un [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) es una parte individual de su lienzo que puede utilizar para determinar la eficacia de su lienzo. Los componentes pueden incluir acciones como dividir el recorrido del usuario, añadir un retraso e incluso probar varias rutas de Canvas. Un paso en Canvas se refiere al recorrido personalizado del usuario en sus ramas de Canvas. Esencialmente, tu Canvas está formado por componentes individuales que crean pasos para tu recorrido de usuario.
 
 ### ¿Cómo puedo ver los análisis de cada uno de mis componentes de Canvas?
 
@@ -111,7 +111,7 @@ El número de usuarios que entran en un Canvas puede diferir del número esperad
 
 ### ¿Qué ocurre con los usuarios anónimos durante su viaje por Canvas?
 
-Aunque los usuarios anónimos pueden entrar y salir de los Lienzos, sus acciones no se asocian a un perfil de usuario específico hasta que se identifican, por lo que es posible que sus interacciones no se sigan completamente en tus análisis. Puedes utilizar el [Generador de consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) para generar un informe de estas métricas.
+Aunque los usuarios anónimos pueden entrar y salir de los Lienzos, sus acciones no se asocian a un perfil de usuario específico hasta que se identifican, por lo que es posible que sus interacciones no se sigan completamente en tus análisis. Puedes utilizar el [Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) para generar un informe de estas métricas.
 
 ### ¿Por qué mi tasa de conversión de pasos de Canvas no es igual a mi tasa de conversión total de variantes de Canvas?
 
