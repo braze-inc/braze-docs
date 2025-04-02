@@ -19,13 +19,13 @@ Vous pouvez enregistrer les achats en transmettant un [objet d'achat]({{site.bas
 
 La liste suivante énumère les méthodes utilisées pour enregistrer les achats sur les différentes plateformes. Dans ces pages, vous trouverez également de la documentation sur la manière d'ajouter des propriétés et des quantités à votre événement d'achat. Vous pouvez ensuite cibler vos utilisateurs en fonction de ces propriétés.
 
-- [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
+- [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
 
 ## Consultation des données d'achat
 
@@ -175,7 +175,7 @@ Alors que le profil de Sam présente deux événements d'achat, il n'a en réali
 
 Avec les propriétés de l'événement d’achat, vous pouvez définir des propriétés sur les achats pour qualifier plus précisément les conditions de déclenchement, améliorer la personnalisation des messages et générer des analyses plus sophistiquées via l’exportation de données brutes. Les types de valeurs des propriétés (chaîne de caractères, numérique, booléenne, date) varient selon la plate-forme et sont souvent attribués sous forme de paires clé-valeur.
 
-Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur après qu'il a effectué un achat, vous pourriez en outre améliorer votre audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d'événement d'achat de `brand_name`.
+Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur après avoir effectué un achat, vous pourriez en outre améliorer votre audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d'événement d'achat de `brand_name`.
 
 **Exemple de déclenchement basé sur les propriétés d'un événement d'achat :**
 
