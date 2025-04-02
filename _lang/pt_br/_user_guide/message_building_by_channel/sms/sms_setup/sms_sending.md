@@ -17,7 +17,7 @@ channel:
 
 ### Selecione seu grupo de inscrições
 
-As mensagens SMS devem ser enviadas de um [grupo de inscrições]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Um grupo de inscrições é uma coleção de números de telefone de envio (como códigos curtos, códigos longos e/ou IDs de remetente alfanuméricos) que são usados para um tipo específico de finalidade de envio de mensagens. É necessário designar um grupo de inscrições para garantir que apenas os usuários inscritos sejam direcionados. Alguns clientes podem descobrir que têm vários grupos de inscrições para diferentes casos de uso, como envio de mensagens SMS transacionais e mensagens SMS promocionais.<br><br>
+As mensagens SMS devem ser enviadas de um [grupo de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). Um grupo de inscrições é uma coleção de números de telefone de envio (como códigos curtos, códigos longos e/ou IDs de remetente alfanuméricos) que são usados para um tipo específico de finalidade de envio de mensagens. É necessário designar um grupo de inscrições para garantir que apenas os usuários inscritos sejam direcionados. Alguns clientes podem descobrir que têm vários grupos de inscrições para diferentes casos de uso, como envio de mensagens SMS transacionais e mensagens SMS promocionais.<br><br>
 
 ### Corpo da mensagem de entrada
 
