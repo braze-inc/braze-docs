@@ -1,29 +1,49 @@
 ---
 nav_title: Startseiten
 article_title: Startseiten
-layout: dev_guide
-page_type: landing
 page_order: 31
 guide_top_header: "Startseiten"
-guide_top_text: "Landing Pages von Braze sind eigenständige Webseiten, die Ihre Strategie zur Benutzergewinnung und -bindung vorantreiben können."
 description: "Dieser Artikel enthält Ressourcen zum Erstellen und Anpassen von Braze-Landingpages."
 alias: /landing_pages/
-
-guide_featured_title: "Abschnittsartikel"
-guide_featured_list:
-  - name: Drag-and-Drop-Editor
-    link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
-    image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Verbinden einer Subdomain
-    link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
-    image: /assets/img/braze_icons/refresh-cw-02.svg
-  - name: Datenverfolgung
-    link: /docs/user_guide/engagement_tools/landing_pages/data_tracking/
-    image: /assets/img/braze_icons/data.svg
 ---
 
-{% alert important %}
-Die Startseiten befinden sich derzeit in der Beta-Phase. Kontaktieren Sie Ihren Braze-Konto-Manager, wenn Sie an dieser Beta-Phase teilnehmen möchten.
-{% endalert %}
+# Über Landing Pages
 
-<br><br><br>
+> Landing Pages von Braze sind eigenständige Webseiten, die Ihre Strategie zur Benutzergewinnung und -bindung vorantreiben können.
+
+## Voraussetzungen
+
+Bevor Sie auf Landing Pages zugreifen, sie erstellen und veröffentlichen können, benötigen Sie entweder Administratorrechte oder alle der folgenden Berechtigungen:
+
+- Startseiten aufrufen
+- Entwürfe für Startseite erstellen
+- Startseiten veröffentlichen
+
+## Planebenen
+
+Die Anzahl der veröffentlichten Startseiten und angepassten Domains, die Sie nutzen können, hängt von der Art Ihres Tarifs ab: kostenlos oder kostenpflichtig (inkrementell).
+
+| Feature                                                                                                   | Kostenlose Nutzung     | Kostenpflichtige Nutzung (inkrementell)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Veröffentlichte Startseiten                                                                 | Fünf pro Unternehmen | 20 zusätzlich |
+| Angepasste Domains          | Eine pro Unternehmen | Fünf zusätzliche |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+## Häufig gestellte Fragen
+
+### Was ist die maximale Größe für Landing Pages?
+
+Die Größe der Startseite kann bis zu 1 MB betragen.
+
+### Gibt es irgendwelche technischen Voraussetzungen für die Veröffentlichung einer Landing Page?
+
+Nein, es gibt keine technischen Anforderungen.
+
+### Gibt es einen HTML-Editor für Landing Pages?
+
+Sie können den HTML-Code einer Landing Page mit dem Block Benutzerdefinierter Code bearbeiten.
+
+### Kann ich einen Webhook innerhalb einer Landing Page erstellen?
+
+Nein, dies wird derzeit nicht unterstützt.
+
