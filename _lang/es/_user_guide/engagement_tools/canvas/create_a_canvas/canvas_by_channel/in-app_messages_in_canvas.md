@@ -4,7 +4,7 @@ article_title: Mensajes dentro de la aplicación en Canvas
 alias: "/canvas_in-app_messages/"
 page_order: 2
 page_type: reference
-description: "Este artículo de referencia describe características y matices específicos de los Mensajes In-App de Canvas, que puedes añadir a tu Canvas para mostrar mensajes enriquecidos."
+description: "Este artículo de referencia describe características y matices específicos de los mensajes dentro de la aplicación que puedes añadir a tu Canvas para mostrar mensajería enriquecida."
 tool: Canvas
 channel: in-app messages
 
@@ -12,19 +12,28 @@ channel: in-app messages
 
 # Mensajes in-app en Canvas
 
-> Los mensajes dentro de la aplicación pueden añadirse como parte de tu Canvas journey para mostrar mensajes enriquecidos cuando tu cliente interactúa con tu aplicación. Este artículo describe características y matices específicos de los mensajes dentro de la aplicación Canvas.
+> Puedes añadir mensajes dentro de la aplicación como parte de tu recorrido en Canvas para mostrar mensajes enriquecidos cuando tu cliente interactúe con tu aplicación.
 
-Antes de continuar, ya deberías haber [creado tu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) y configurado las opciones de retraso y audiencia. 
 
-Ahora puedes añadir un mensaje in-app a tu Canvas. Añada un paso de [Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) y elija **Mensaje In-App** para su **Canal de Mensajería**. Una vez transcurridos los retrasos y comprobadas las opciones de audiencia, el mensaje dentro de la aplicación se establecerá en vivo y los usuarios lo verán si abren la aplicación. Los mensajes dentro de la aplicación en Canvas sólo pueden activarse mediante el evento de activación `start session`; no pueden activarse mediante eventos personalizados en un componente Canvas.
+## Cómo funciona
+
+Antes de poder utilizar mensajes dentro de la aplicación en tu Canvas, asegúrate de tener configurado un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) con opciones de retraso y audiencia.
+
+Después de que pasen los retrasos y se comprueben las opciones de audiencia, el mensaje dentro de la aplicación se establecerá en vivo, y los usuarios lo verán si abren la aplicación. Los mensajes dentro de la aplicación en Canvas sólo pueden ser desencadenados por el evento desencadenado `start session`; no pueden ser desencadenados por eventos personalizados en un componente Canvas.
 
 En el caso de los pasos del lienzo con entrada activada por acción, los usuarios pueden entrar en el lienzo en mitad de la sesión. Sin embargo, como se ha indicado anteriormente, los mensajes in-app no se activarán hasta que comience la siguiente sesión, por lo que estos usuarios se perderían el mensaje in-app inicial, ya que no podían entrar en el Canvas antes de que comenzara la sesión.
 
-Puedes personalizar [cuándo caducará tu mensaje](#in-app-message-expiration) y qué [comportamiento de avance](#advancement-behavior-options) tendrá.
+## Añadir un mensaje dentro de la aplicación a tu viaje de usuario
 
-## Caducidad de los mensajes en la aplicación
+Para añadir un mensaje dentro de la aplicación a tu Canvas, haz lo siguiente:
 
-En el compositor de mensajes in-app, puedes elegir cuándo caducará el mensaje in-app. Durante este tiempo, el mensaje dentro de la aplicación esperará a ser visto hasta que haya alcanzado la fecha de caducidad. Después de enviar el mensaje dentro de la aplicación, puedes verlo una vez.
+1. Añade un paso de [Mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) a tu recorrido de usuario.
+2. Selecciona **Mensaje dentro de la aplicación** para tu **canal de mensajería**. 
+3. Determina [cuándo caducará tu mensaje](#in-app-message-expiration) y qué [comportamiento de avance](#advancement-behavior-options) tendrá.
+
+### Caducidad de los mensajes en la aplicación
+
+En el editor de mensajes dentro de la aplicación, puedes elegir cuándo caducará el mensaje dentro de la aplicación. Durante este tiempo, el mensaje dentro de la aplicación se "sentará" y esperará a ser visto hasta que haya alcanzado la fecha de caducidad. Después de enviar el mensaje dentro de la aplicación, puedes verlo una vez.
 
 ![][1]
 
@@ -34,9 +43,9 @@ En el compositor de mensajes in-app, puedes elegir cuándo caducará el mensaje 
 | El mensaje caduca en la fecha especificada | La segunda opción te permite elegir una fecha y hora concretas en las que el mensaje in-app dejará de estar disponible. | Por ejemplo, si tiene una oferta que finalizó en una fecha y hora específicas, puede seleccionar esta opción para que los usuarios ya no vean el mensaje asociado en la aplicación cuando finalice la oferta. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Ejemplos
+## Ejemplos
 
-¿Cuándo debes utilizar esta característica? Braze recomienda encarecidamente que considere la posibilidad de utilizar esta función en sus lienzos promocionales y de incorporación.
+Puedes utilizar mensajes dentro de la aplicación en tus Lienzos promocionales y de incorporación.
 
 {% tabs %}
   {% tab Promocional %}
@@ -146,16 +155,14 @@ Como puede ver, los mensajes push se espacian alrededor de un mensaje in-app par
   {% endtab %}
 {% endtabs %}
 
-## Opciones de comportamiento de avance
+### Opciones de comportamiento de avance
 
-### Canvas Flow
+En Canvas, los pasos en Mensajería hacen avanzar automáticamente a todos los usuarios que entran en el paso. Para utilizar la opción **Avanzar cuando se envíe el mensaje**, añade una [Ruta de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) independiente para filtrar a los usuarios que no hayan recibido el paso anterior.
 
-En el Flujo Canvas, los componentes de Mensaje hacen avanzar automáticamente a todos los usuarios que entran en el paso. No es necesario especificar el comportamiento de avance de los mensajes, lo que simplifica la configuración del paso general. Si desea implementar la opción **Avanzar cuando se envíe el mensaje**, añada una [Ruta de público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) independiente para filtrar los usuarios que no hayan recibido el paso anterior.
-
-### Editor de lienzos original
+{% details Comportamiento original del editor de Canvas %}
 
 {% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible como referencia para entender cómo funciona el comportamiento de avance para los pasos con mensajes in-app.
+Ya no puedes crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible como referencia para entender cómo funciona el comportamiento de avance para los pasos con mensajes in-app.
 {% endalert %}
 
 Los lienzos creados en el editor original necesitan especificar un comportamiento de avance-el criterio para avanzar a través de su componente Lienzo. [Los pasos con sólo mensajes dentro de aplicación](#steps-iam-only) tienen diferentes opciones de avance que [los pasos con múltiples tipos de mensajes](#steps-multiple-channels) (push, email, etc.). Para los mensajes in-app en un flujo de trabajo de Canvas Flow, esta opción está configurada para que el público avance siempre inmediatamente.
@@ -190,13 +197,15 @@ Los pasos con un mensaje in-app y otro canal tienen las siguientes opciones de a
 Cuando se selecciona **Todo el público**, el mensaje in-app estará disponible hasta que caduque, aunque el usuario haya pasado a los pasos siguientes. Si no quieres que el mensaje in-app esté activo cuando se entreguen los siguientes pasos del Canvas, comprueba que la caducidad es más corta que el retraso en los pasos posteriores.
 {% endalert %}
 
+{% enddetails %}
+
 ## Priorizar los mensajes in-app
 
 Un cliente puede activar dos mensajes in-app dentro de tu Canvas al mismo tiempo. Cuando esto ocurra, Braze seguirá el siguiente orden de prioridad para determinar qué mensaje in-app se muestra. Arrastre diferentes pasos del lienzo para reordenar su prioridad. De manera predeterminada, los pasos anteriores en una variante en Canvas aparecerán antes que los pasos posteriores.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
-Ve a la sección **Configuración de envío** del lienzo para priorizar los mensajes in-app de un lienzo frente a los mensajes in-app de otros lienzos y campañas.
+Ve a la **Configuración de envío** de la sección Canvas para priorizar los mensajes dentro de la aplicación de un Canvas frente a los mensajes dentro de la aplicación de otros Canvas y campañas.
 
 ![]({% image_buster /assets/img_archive/canvas_send_settings.png %})
 
@@ -210,7 +219,9 @@ Al editar un borrador de un Lienzo activo, los cambios en la prioridad de los me
 
 ## Propiedades de eventos personalizados en un Canvas
 
-Debido a que la entrega basada en acciones no está disponible para los pasos de Canvas con mensajes dentro de la aplicación, tampoco puede utilizar propiedades de eventos personalizados para estos pasos. Para crear plantillas de propiedades del evento en Canvas, te recomendamos almacenar las propiedades del evento como atributos personalizados en tu primer paso en Canvas y, a continuación, personalizar tu mensaje dentro de la aplicación con los atributos personalizados en el segundo paso.
+La entrega basada en acciones no está disponible para los pasos en Canvas con mensajes dentro de la aplicación. Esto significa que tampoco puedes utilizar propiedades del evento personalizadas para estos pasos. 
+
+Para crear plantillas de propiedades del evento en Canvas, te recomendamos almacenar las propiedades del evento como atributos personalizados en tu primer paso en Canvas y personalizar tu mensaje dentro de la aplicación con los atributos personalizados en el segundo paso.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
