@@ -54,9 +54,18 @@ Das E-Mail Insights Dashboard verfolgt, wo und wann Ihre Kunden mit Ihren E-Mail
 
 ### Engagement nach Gerät
 
-Der Bericht **Engagement nach Gerät** bietet eine Aufschlüsselung, mit welchen Geräten Ihre Nutzer:innen auf Ihre E-Mails zugreifen. Diese Daten verfolgen das Engagement bei E-Mails über Mobil-, Desktop-, Tablet- und andere Geräte. 
+Der Bericht **Engagement nach Gerät** bietet eine Aufschlüsselung, mit welchen Geräten Ihre Nutzer:innen auf Ihre E-Mails zugreifen. Diese Daten verfolgen das Engagement bei E-Mails über Mobil-, Desktop-, Tablet- und andere Geräte. Diese Daten basieren auf dem User Agent String, der von den Geräten Ihrer Nutzer:innen übermittelt wird.
+
+{% alert note %}
+Wenn Sie CloudFront als CDN verwenden, stellen Sie sicher, dass der Nutzer:innen-Agent an den ESP weitergeleitet wird. Andernfalls wird jeder Nutzer:in "Amazon Cloudfront" sein.
+{% endalert %}
 
 Die Kategorie "Andere" umfasst jeden Nutzer:in String, der nicht als Desktop, Handy oder Tablet identifiziert werden kann. Zum Beispiel Fernsehen, Auto, Videospielkonsole, OTT (Over-the-Top oder Streaming) und ähnliches. Dies kann auch null oder leere Werte umfassen.
+
+Um besser zu verstehen, was sich in dieser Kategorie "Andere" befindet, können Sie die Nutzer:innen mit einer der beiden folgenden Optionen extrahieren:
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) sendet Ihnen den genauen Nutzer:innen String, der von den Geräten Ihrer Nutzer:innen abgerufen wurde.
+2. Nutzen Sie unseren [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) zur Verwendung von SQL oder unseren [KI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) zur Anzeige der Nutzer:innen.
 
 ![Bericht "Engagement nach Gerät", der die Anzahl der Klicks für Handy, Desktop, Tablet und andere anzeigt. Die meisten Klicks erfolgen auf mobilen Geräten.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
