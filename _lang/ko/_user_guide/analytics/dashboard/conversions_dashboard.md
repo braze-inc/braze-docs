@@ -111,5 +111,5 @@ tool:
 
 | 기간 | 정의 |
 | --- | --- |
-| 터치 | 메시지와의 물리적 상호작용 또는 접점입니다.<br><br>터치에는 다음이 포함될 수 있습니다:<br>{::nomarkdown}<ul><li>이메일 클릭</li><li>푸시 열람</li><li>콘텐츠 카드 클릭</li><li>인앱 메시지 클릭</li><li>SMS 전송</li></ul>{:/} |
+| 터치 | 메시지와의 물리적 상호작용 또는 접점입니다.<br><br>터치에는 다음이 포함될 수 있습니다:<br>{::nomarkdown}<ul><li>이메일 클릭</li><li>푸시 열람</li><li>콘텐츠 카드 클릭</li><li>인앱 메시지 클릭</li><li>SMS Click</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
