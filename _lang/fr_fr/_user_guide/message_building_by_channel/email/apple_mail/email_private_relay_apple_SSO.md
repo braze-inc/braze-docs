@@ -48,10 +48,8 @@ Reportez-vous à ce tableau pour les composants utilisés lors de l’ajout d’
 Pour configurer le relais privé Apple pour SparkPost, procédez comme suit : 
 
 1. Connectez-vous avec Apple.
-2. En vous basant sur la [documentation d'Apple](https://developer.apple.com/sign-in-with-apple/get-started/), créez les fichiers de vérification nécessaires et hébergez ces fichiers dans un répertoire accessible pour les domaines donnés.
-3. Ajoutez un enregistrement A à vos dns qui pointe vers le domaine où est hébergé votre fichier de vérification. Il s’agit d’un processus de vérification unique.
-4. Ajoutez les domaines d'e-mail dans Apple.
-5. Apple vérifiera automatiquement les domaines et montrera ceux qui sont vérifiés, et fournira la possibilité de revérifier ou de supprimer les domaines.
+2. Suivez la [documentation d'Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) pour enregistrer les domaines d'e-mail.
+3. Apple vérifiera automatiquement les domaines et montrera ceux qui sont vérifiés, et fournira la possibilité de revérifier ou de supprimer les domaines.
 
 {% alert important %}
 Veillez à effectuer cette opération dans les deux ou trois jours suivant la création des fichiers de vérification, faute de quoi ils expireront. Apple ne divulgue pas leur durée de validité.
