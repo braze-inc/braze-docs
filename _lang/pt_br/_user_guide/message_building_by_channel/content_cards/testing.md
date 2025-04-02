@@ -37,7 +37,7 @@ Também é possível fazer a prévia das mensagens na guia **Teste** como se fos
 
 ## Depurar
 
-Depois que os cartões de conteúdo forem enviados, você poderá analisar ou depurar quaisquer problemas no [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) no console do desenvolvedor. 
+Depois que os cartões de conteúdo forem enviados, você poderá analisar ou depurar quaisquer problemas no [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) no console do desenvolvedor. 
 
 Um caso de uso comum é tentar depurar por que um usuário não consegue ver um determinado cartão de conteúdo. Para isso, é possível procurar nos **registros de usuários de eventos** os cartões de conteúdo entregues ao SDK no início da sessão, mas antes de uma impressão, e rastreá-los até uma campanha específica:
 
