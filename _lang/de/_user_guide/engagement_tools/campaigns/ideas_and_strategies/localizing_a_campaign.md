@@ -49,7 +49,7 @@ Beim Ansatz „ein Template für alle“ wird die Lokalisierung auf ein einzelne
 Der Ansatz „ein Template pro Land“ trennt die Template-Erstellung in verschiedene Sende-Gebietsschemata. Nach dem Versand meldet das Dashboard die Analytics für jedes Land separat, und alle nachgelagerten [Currents-Ereignisse]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) auf Nutzerebene werden ebenfalls mit einer bestimmten Kampagne verknüpft.
 
 - Vorlagen profitieren von der Implementierung von [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) zu Wartungs- und Nachverfolgungszwecken.
-- Kampagnen können die Konfigurationen von derselben [Braze-Vorlage]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) und von [Inhaltsblöcken]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (z. B. [E-Mail-Vorlagen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template), die Liquid enthalten) übernehmen.
+- Kampagnen können die Konfigurationen von derselben [Braze-Vorlage]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) und von [Inhaltsblöcken]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (z. B. [E-Mail-Vorlagen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template), die Liquid enthalten) übernehmen.
 - Bereits existierende Kampagnen und Templates können [dupliziert]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) werden, um eine schnellere Wertschöpfung zu ermöglichen.
 
 | Vorteile | Überlegungen |
@@ -77,7 +77,7 @@ Nachdem ein Canvas versendet wurde, bietet das Dashboard aggregierte [Canvas-Ana
 {% endtab %}
 {% tab Eine Journey pro Land %}
 
-Bei dem Ansatz „eine Journey pro Land“ bietet der [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)-Journey-Builder die Flexibilität, Nutzer:innen über mehrere [Canvas-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) zu erstellen. Diese Komponenten können auf der Ebene der Komponenten und der gesamten Journey [dupliziert]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) werden.
+Bei dem Ansatz „eine Journey pro Land“ bietet der [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)-Journey-Builder die Flexibilität, Nutzer:innen über mehrere [Canvas-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) zu erstellen. Diese Komponenten können auf der Ebene der Komponenten und der gesamten Journey [dupliziert]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) werden.
 
 Die Lokalisierung kann mit den folgenden Methoden erfolgen:
 - Getrennte Canvase pro Land, um sicherzustellen, dass die komplexen Nutzer:innen mit Hilfe von Zielgruppen-Filtern am oberen Ende des Funnels definiert werden.
