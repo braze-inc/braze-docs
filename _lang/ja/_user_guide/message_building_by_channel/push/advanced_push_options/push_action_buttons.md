@@ -38,7 +38,7 @@ iOSのプッシュ・メッセージでアクション・ボタンを使うに�
 ![iOS 通知カテゴリのドロップダウンメニュー]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
+iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
 {% endalert %}
 
 ### Android{#android}
