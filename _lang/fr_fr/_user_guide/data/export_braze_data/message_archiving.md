@@ -28,13 +28,17 @@ L'activation de cette fonctionnalité aura une incidence sur la vitesse de réce
 
 Le JSON sera enregistré dans votre compartiment de stockage en utilisant la structure de clé suivante :
 
-`sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
+`sent_messages/{channel, one of: email, push, sms}/{MD5 digest of downcased: email address, push token, or E.164 phone number}/{campaign or Canvas step API ID}/{dispatch ID}.json.gz`
 
 Un fichier exemple peut ressembler à ceci :
 
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert note %}
+L'empreinte MD5 ne peut être calculée qu'à l'aide d'une adresse e-mail, d'un jeton push ou d'un numéro de téléphone E.164 connu. Un condensé MD5 connu ne peut pas être inversé pour obtenir l'adresse e-mail, le jeton push ou le numéro de téléphone E.164.
+{% endalert %}
+
+{% alert tip %}
 **Vous avez du mal à trouver vos jetons de notifications push dans vos compartiments ?**<br>
 Braze met en minuscules vos jetons push avant de les hacher. Le jeton de notification push `Test_Push_Token12345` apparaît alors en minuscules (`test_push_token12345`) dans le chemin d’accès à la clé avec le hachage `32b802170652af2b5624b695f34de089`.
 {% endalert %}
@@ -136,7 +140,7 @@ Le champ `extras` mentionné dans cette charge utile provient des paires clé-va
   "version" : 1, //numerical version of the json structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
-  "platform": ios/android/web/kindle,
+  "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
