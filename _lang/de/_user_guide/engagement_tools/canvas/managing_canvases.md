@@ -13,7 +13,7 @@ tool: Canvas
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Bearbeiten von Leinwänden nach dem Start
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+    link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Canvas Genehmigungen und Berechtigungen
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
