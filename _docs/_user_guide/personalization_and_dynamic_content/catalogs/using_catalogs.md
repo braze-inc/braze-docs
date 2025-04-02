@@ -199,6 +199,10 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
 
+### Exporting catalogs
+
+You can also export a catalog. You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
+
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
