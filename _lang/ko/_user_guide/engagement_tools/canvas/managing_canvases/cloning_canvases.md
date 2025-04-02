@@ -13,7 +13,7 @@ tool: Canvas
 2023년 2월 28일부터는 더 이상 기존 캔버스 환경을 사용하여 캔버스를 만들거나 복제할 수 없습니다. Braze는 원래 캔버스 경험을 사용하는 고객이 캔버스 플로우로 이동할 것을 권장합니다.
 {% endalert %}
 
-> 원본 편집기에서 기존 캔버스가 있는 경우 이 캔버스를 복제하여 캔버스 플로우에 복사본을 만들 수 있습니다. 캔버스 플로우 워크플로우로 전환하면 경량 [캔버스 구성 요소]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [지속적인 항목 속성]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), 및 [출시 후 편집]({{site.baseurl}}/post-launch_edits)에 액세스할 수 있습니다. 귀하의 원래 캔버스는 변경되거나 삭제되지 않습니다.
+> 원본 편집기에서 기존 캔버스가 있는 경우 이 캔버스를 복제하여 캔버스 플로우에 복사본을 만들 수 있습니다. By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). 귀하의 원래 캔버스는 변경되거나 삭제되지 않습니다.
 
 캔버스를 복제하려면 다음을 수행하세요.
 
