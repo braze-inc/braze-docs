@@ -62,7 +62,7 @@ Ein niedriges MAU-zu-Nutzer-Verhältnis kann darauf hinweisen, dass Sie Ihre Mes
 ### Lifetime-Sitzungen
 
 *Lifetime-Sitzungen* ist die Gesamtzahl der Sitzungen, die Braze seit der Integration aufgezeichnet hat. Einfach ausgedrückt: Eine Sitzung findet jedes Mal statt, wenn ein Nutzer:innen die App verwendet oder Ihre Website besucht. Eine genauere Definition, wie Sitzungen nach Plattform definiert werden, finden Sie in der entsprechenden
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android und FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), oder [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) Session Tracking Entwickler:in Artikel.
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android und FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), oder [Internet]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) Session Tracking Entwickler:in Artikel.
 
 ### Monatlich aktive Nutzer:innen
 
