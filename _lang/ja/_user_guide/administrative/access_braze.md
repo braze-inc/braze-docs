@@ -33,6 +33,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
 ---
+
 ## サポートされているブラウザー
 
 Braze ダッシュボードは次のブラウザーをサポートしています。
@@ -40,5 +41,22 @@ Braze ダッシュボードは次のブラウザーをサポートしていま�
 - Firefox（バージョン85以降）
 - Safari (バージョン 15.4 以降)
 - Edge (バージョン 87 以降)
+
+ダッシュボードに予期せぬエラーが発生したと表示され、ブラウザのコンソールツールにエラー`ReferenceError: structuredClone is not defined` が表示されている場合、ブラウザが古い。このエラーが繰り返される場合は、ブラウザをアンインストールして再インストールする。
+
+### ブラウザのキャッシュとクッキー
+
+ダッシュボードやセグメントのパフォーマンスリストが読み込まれないなど、ダッシュボードのパフォーマンスに問題がある場合は、各ブラウザのステップに従って、ブラウザのキャッシュとCookieをクリアしてみてください。
+
+{% alert important %}
+Cookieをクリアするとログアウトするので、未保存の作業は失われる。
+{% endalert %}
+
+- [ChromeのキャッシュとCookieを消去する](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [MacのSafariでCookieを消去する](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
+- [FirefoxでCookieとサイトデータを消去する](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
+- [Microsoft EdgeですべてのCookieを削除する](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
+
+ブラウザのキャッシュとCookieをクリアしても問題が解決しない場合は、[サポートに]({{site.baseurl}}/support_contact/)連絡してください。
 
 <br><br>
