@@ -24,7 +24,7 @@ tool: Reports
 メール
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='AMPクリック' %}
+{% multi_lang_include metrics.md metric='AMP Clicks' %}
 
 {% endapi %}
 
@@ -122,7 +122,7 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ボタン1クリック' %}
+{% multi_lang_include metrics.md metric='Button 1 Clicks' %}
 
 <span class="calculation-line">計算式: (ボタン 1 のクリック数) / (インプレッション数)</span>
 
@@ -136,7 +136,7 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ボタン2クリック' %}
+{% multi_lang_include metrics.md metric='Button 2 Clicks' %}
 
 <span class="calculation-line">計算式: (ボタン 2 のクリック数) / (インプレッション数)</span>
 
@@ -280,7 +280,7 @@ SMS
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='メッセージを閉じる' %}
+{% multi_lang_include metrics.md metric='Close Message' %}
 
 {% endapi %}
 
@@ -370,7 +370,7 @@ SMS
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md メトリクス='配信失敗率' %}
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
 
 <a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
 
@@ -528,7 +528,7 @@ iOSプッシュ、Androidプッシュ
 コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='平均日次収益' %}
+{% multi_lang_include metrics.md metric='Average Daily Revenue' %}
 
 {% endapi %}
 
@@ -552,7 +552,7 @@ iOSプッシュ、Androidプッシュ
 コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ユーザーあたりの日次収益' %}
+{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
 
 {% endapi %}
 
@@ -646,7 +646,7 @@ SMS
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='読み取り' %}
+{% multi_lang_include metrics.md metric='Reads' %}
 
 {% endapi %}
 
@@ -713,7 +713,7 @@ SMS
 メール
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='収益' %}
+{% multi_lang_include metrics.md metric='Revenue' %}
 
 {% endapi %}
 
