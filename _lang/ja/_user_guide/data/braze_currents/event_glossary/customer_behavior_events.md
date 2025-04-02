@@ -133,7 +133,7 @@ search_rank: 7
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 
 {% endapi %}
@@ -239,7 +239,7 @@ search_rank: 7
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 {% endapi %}
 
@@ -610,7 +610,7 @@ search_rank: 7
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 {% endapi %}
 
