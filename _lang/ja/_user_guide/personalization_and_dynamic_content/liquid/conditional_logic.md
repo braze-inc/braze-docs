@@ -16,11 +16,10 @@ description: "この参考記事では、キャンペーンでタグをどのよ
 タグは `{% %}` で囲む必要があります。
 {% endraw %}
 
-{% alert tip %}
 あなたの生活を少し楽にするために、Brazeはリキッド構文を正しくフォーマットした場合、緑と紫で起動するカラーフォーマットを搭載している。緑色の書式はタグを識別するのに役立ち、紫色の書式はパーソナライズされた部分を強調する。
-<br><br>
+
 もし条件付きメッセージングを使うのに苦労しているなら、カスタム属性や他のリキッド要素を挿入する前に、条件構文を書き出してみてほしい。
-<br><br>
+
 例えば、まずメッセージ・フィールドに以下を追加する：  
 {% raw %}
 ```liquid
@@ -40,11 +39,10 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## 条件論理
 
-条件付きステートメントなど、さまざまなタイプの [インテリジェントロジックをメッセージ内][1] に含めることができます。キャンペーンを国際化するために[conditionals][8] ]を使用した次の例を参照のこと：
+条件付きステートメントなど、さまざまなタイプの [インテリジェントロジックをメッセージ内][1] に含めることができます。次の例では、[conditionals][8] を使用してキャンペーンを国際化します。
 {% raw %}
 
 ```liquid
@@ -59,39 +57,93 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### ステップ・バイ・ステップの例
+### 条件付きタグ
 
-この例では、"if"、"elsif"、"else "ステートメントを持つタグを使って、国際化されたコンテンツを配信している。
+#### `if` と `elsif`
+
+条件付きロジックは、`if` タグで始まり、最初にチェックする条件を示します。後続の条件は `elsif` タグを使用し、前の条件が満たされない場にチェックされます。この例では、ユーザーのデバイスが英語に設定されていない場合、このコードは、ユーザーのデバイスがスペイン語に設定されているかどうかを確認し、それが失敗した場合は、デバイスが以下に設定されているかどうかを確認します。ユーザーのデバイスがこれらの条件のいずれかに当てはまる場合、ユーザーは該当する言語でメッセージを受け取る。
+
+#### `else`
+
+条件ロジックにはオプションで `{% else %}` ステートメントを含めることができます。設定した条件のどれにも当てはまらない場合、`{% else %}` ステートメントによって送信すべきメッセージが指定されます。この例では、ユーザーの言語が英語、スペイン語、中国語でない場合、デフォルトは英語になります。
+
+#### `endif`
+
+`{% endif %}` タグは、条件ロジックが終了したことを知らせます。条件付きロジックを含むメッセージには `{% endif %}` タグを必ず含める必要があります。条件ロジックに`{% endif %}` タグを含めないと、Brazeがメッセージを解析できないのでエラーになる。
+
+### チュートリアル: 位置情報コンテンツの配信
+
+このチュートリアルを完了すると、"if"、"elsif"、および"else"ステートメントを含むタグを使用して、ユーザーの場所に基づいてコンテンツを配信できるようになります。
+
+1. 最初に `if` タグを使用して、ユーザーの市区町村がニューヨークにある場合に送信するメッセージを指定します。ユーザーの市区町村がニューヨークの場合、この最初の条件が満たされ、ユーザーはニューヨーカーのアイデンティティを指定するメッセージを受け取ります。
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${city} == "New York" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at your local Sandwich Emperor. 
+  Just show this message at the counter to redeem your offer!
 ```
-ユーザーの言語が英語の場合、最初の条件が満たされ、ユーザーは英語のメッセージを受け取る。
+
+{: start="2"}
+2\.次に、`elseif` タグを使用して、ユーザーの市区町村がロサンゼルスにある場合に送信するメッセージを設定します。
 
 ```liquid
-{% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
-{% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
 ```
 
-条件付きステートメントはいくつでも指定できます。前の条件が満たされない場合、後続の条件がチェックされます。この例では、ユーザーのデバイスが英語に設定されていない場合、このコードはユーザーのデバイスがスペイン語か中国語に設定されているかどうかをチェックする。ユーザーのデバイスがこれらの条件のいずれかに当てはまる場合、ユーザーは該当する言語でメッセージを受け取る。
+{: start="3"}
+3\.別の`elseif` タグを使用して、ユーザーの市区町村がシカゴにある場合に送信するメッセージを設定します。
+
+```liquid
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+```
+
+{: start="4"}
+4\.次に、`{% else %}` タグを使用して、ユーザーの市区町村がサンフランシスコ、ニューヨーク、シカゴにない場合に送信するメッセージを指定します。
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+ 🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
 ```
 
-条件ロジックにはオプションで `{% else %}` ステートメントを含めることができます。設定した条件のどれにも当てはまらない場合、`{% else %}` ステートメントで送信すべきメッセージを指定する。この場合、ユーザーの言語が英語、スペイン語、中国語でない場合、デフォルトは英語になる。
+{: start="5"}
+5\.最後に、`{% endif %}` タグを使用して、条件付きロジックが実行されるように指定します。
 
 ```liquid
 {% endif %}
 ```
 
-`{% endif %}` タグは、条件ロジックが終了したことを知らせます。条件付きロジックを含むメッセージには `{% endif %}` タグを必ず含める必要があります。条件ロジックに`{% endif %}` タグを含めないと、Brazeがメッセージを解析できないのでエラーになる。
-
 {% endraw %}
+
+{% details 完全な Liquid コード %}
+
+{% raw %}
+```liquid
+{% if ${city} == "New York City" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at our New York location. 
+  Just show this message at the counter to redeem your offer!
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+{% else %}
+  🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## null、nil、および空白の属性値を処理する
 
