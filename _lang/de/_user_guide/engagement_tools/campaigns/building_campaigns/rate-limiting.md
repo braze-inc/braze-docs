@@ -86,6 +86,8 @@ Ein weiteres Beispiel: Wenn Sie versuchen, 75.000 Nachrichten mit einem Ratenlim
 
 Beachten Sie, dass Nachrichten mit Ratenbeschränkung möglicherweise nicht gleichmäßig über jede Minute gesendet werden. Am Beispiel eines Rate-Limits von 10.000 pro Minute bedeutet dies, dass Braze sicherstellt, dass nicht mehr als 10.000 Nachrichten pro Minute gesendet werden. Das könnte bedeuten, dass ein höherer Prozentsatz der 10.000 Nachrichten innerhalb der ersten halben Minute gesendet wird als in der letzten halben Minute. 
 
+Beachten Sie auch, dass das Rate-Limit zu Beginn des Sendeversuchs einer Nachricht gilt. Bei Schwankungen in der Sendezeit kann die Anzahl der abgeschlossenen Sendungen das Rate-Limit in einigen Minuten leicht überschreiten. Mit der Zeit wird die Anzahl der Sendungen pro Minute im Durchschnitt nicht mehr als das Rate-Limit betragen.
+
 {% alert important %}
 Seien Sie vorsichtig, wenn Sie zeitkritische Nachrichten mit dieser Form der Ratenbegrenzung verzögern. Wenn das Segment 30 Millionen Nutzer umfasst, wir aber das Ratenlimit auf 10.000 pro Minute setzen, wird ein großer Teil Ihrer Nutzerbasis die Nachricht erst am nächsten Tag erhalten.
 {% endalert %}
