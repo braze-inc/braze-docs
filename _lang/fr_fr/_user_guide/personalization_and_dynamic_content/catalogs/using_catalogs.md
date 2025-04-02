@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 Ceci donne le résultat suivant :
 
-> Découvrez le trio ultime Tales, Teslagrad et Acaratus dès aujourd’hui !
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Découvrez les [sélections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) permettant de créer des groupes de données pour un envoi de messages plus personnalisé !
@@ -72,24 +72,7 @@ Découvrez les [sélections]({{site.baseurl}}/user_guide/personalization_and_dyn
 
 Vous pouvez utiliser des éléments de catalogue pour créer des instructions conditionnelles. Par exemple, vous pouvez déclencher l'affichage d'un certain message lorsqu'un produit spécifique est sélectionné dans votre campagne.
 
-Pour ce faire, vous utiliserez une instruction Liquid `if` dans un format comme celui-ci :
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Notez que vous devez déclarer la liste du catalogue avant d'utiliser les instructions `if`. Dans l'exemple ci-dessus, `Test-list` correspond à la liste du catalogue.
-
-#### Cas d’utilisation : Extrait de code Liquid `if`
-
-Dans ce scénario, des messages différents s'afficheront si l'attribut personnalisé `venue_name` comporte plus de 10 caractères ou moins de 10 caractères. Si `venue_name` est `blank`, rien ne s'affichera.
+Pour ce faire, vous utiliserez une déclaration Liquid `if`, comme dans cet exemple :
 
 {% raw %}
 ```liquid
@@ -103,6 +86,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+Dans cet exemple, des messages différents s'afficheront si l'attribut personnalisé `venue_name` comporte plus de 10 caractères ou moins de 10 caractères. Si `venue_name` est `blank`, rien ne s'affichera. 
+
+Notez que vous devez déclarer la liste du catalogue et, le cas échéant, la sélection avant d'utiliser les instructions `if`. Dans l'exemple, `item-list` est la liste du catalogue et `selections` est le nom de la sélection.
 
 ### Utiliser des images {#using-images}
 
@@ -138,6 +125,10 @@ Vous pouvez également utiliser les modèles pour extraire dynamiquement des él
     ]
 }
 ```
+
+{% alert note %}
+Les objets JSON dans les catalogues ne sont ingérés que par l'API. Vous ne pouvez pas télécharger un objet JSON à l'aide d'un fichier CSV.
+{% endalert %}
 
 À l’aide du modèle Liquid, vous pouvez extraire dynamiquement les ID de la liste d’envies, puis les utiliser dans votre message. Pour ce faire, [assignez une variable][10] à votre attribut personnalisé, puis utilisez la fenêtre modale/boîte de dialogue de **personnalisation** pour extraire un élément spécifique du tableau.
 
