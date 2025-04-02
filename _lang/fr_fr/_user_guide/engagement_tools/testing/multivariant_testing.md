@@ -65,9 +65,9 @@ Lors de l'exécution d'un test A/B sur des messages in-app, vos analyses peuvent
 
 La variante A a un nombre de *destinataires uniques* systématiquement plus élevé que la variante C. Cela n'est pas dû à la distribution des variantes, mais plutôt à la façon dont les *destinataires uniques* sont calculés pour les messages in-app. Pour les messages in-app, les *Destinataires uniques* sont en fait des *Impressions uniques*, c'est-à-dire le nombre total de personnes qui ont reçu et consulté le message in-app. Cela signifie que si un utilisateur ne reçoit pas le message pour une raison quelconque ou décide de ne pas le consulter, il n'est pas inclus dans le décompte des *destinataires uniques* et la distribution des variantes peut apparaître faussée.
 
-## Cinq règles pour les tests A/B et multivariés {#five-rules-for}
+## Conseils pour les tests multivariés et les tests A/B
 
-Les tests A/B et multivariés peuvent révéler d’importantes informations sur vos utilisateurs. Suivez les directives ci-dessous pour vous assurer que les résultats de votre test reflètent vraiment les comportements de vos utilisateurs.
+Les tests A/B et multivariés peuvent révéler d’importantes informations sur vos utilisateurs. Pour obtenir des résultats de test qui reflètent réellement les comportements de vos utilisateurs, suivez les lignes directrices suivantes.
 
 #### Effectuez le test sur un grand nombre d’utilisateurs
 
@@ -84,6 +84,15 @@ Les tests A/B et multivarié vous permettent de tester les différences entre pl
 #### Décidez de la durée de votre test et n’interrompez pas votre test prématurément
 
 Décidez de la durée de votre test avant de le lancer, et ne l’interrompez pas prématurément. Les spécialistes du marketing sont souvent tentés d’interrompre leurs tests dès que les résultats vont en leur sens, ce qui a pour effet de biaiser les résultats. Résistez à la tentation de jeter un œil aux résultats avant la fin du test et ne terminez jamais votre test prématurément !
+
+#### Ajoutez votre test aux campagnes avant qu'elles ne soient lancées, et non après.
+
+Si vous ajoutez votre test à une campagne après son lancement, le test ne se déroulera pas correctement et vous risquez de recevoir des statistiques incorrectes ou trompeuses. Par exemple, si vous ajoutez un test à une campagne lancée qui autorise la réinscription, les utilisateurs qui réintègrent la campagne passeront toujours par le même chemin afin d'éviter toute inexactitude des données avec le test. En outre, si vous modifiez l'une des variantes alors que le test est en cours d'exécution, la modification invalidera votre test et le relancera.
+
+Pour des résultats de test précis :
+1. Clonez la campagne lancée.
+2. Arrêtez la campagne initiale.
+3. Ajoutez ensuite le test à la campagne clonée. 
 
 #### Si possible, ajoutez un groupe de contrôle
 
