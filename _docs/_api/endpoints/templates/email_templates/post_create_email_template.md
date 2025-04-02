@@ -85,7 +85,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-## Possible errors
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
