@@ -80,7 +80,9 @@ Braze erstellt erst dann Profile für Benutzer, wenn diese die App zum ersten Ma
 ![Segmenter-Filtergruppen mit dem Operator AND.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Segmente, die bereits den Filter **Segmentzugehörigkeit** verwenden, können nicht weiter einbezogen oder in andere Segmente verschachtelt werden.
+Segmente, die bereits den Filter **Segmentzugehörigkeit** verwenden, können nicht weiter einbezogen oder in andere Segmente verschachtelt werden. Dadurch wird ein Zyklus verhindert, bei dem Segment A Segment B einschließt, das dann wiederum versucht, Segment A einzuschließen. In diesem Fall würde das Segment immer wieder auf sich selbst verweisen, so dass es unmöglich wäre, zu berechnen, wer tatsächlich dazugehört.
+
+Außerdem wird die Verschachtelung von Segmenten auf diese Weise komplizierter und kann die Arbeit verlangsamen. Erstellen Sie stattdessen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu.
 {% endalert %}
 
 #### Ausschlussgruppen (optional) {#exclusion}
