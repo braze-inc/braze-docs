@@ -77,7 +77,7 @@ tool: Canvas
 
 ### 実験パス
 
-アクションパスと同様に、キャンバスの[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/)ステップを活用して、コントロールグループとともに複数のキャンバスパスを相互にテストできます。これにより、パスのパフォーマンスが追跡され、キャンバスジャーニーを構築する際に情報に基づいた意思決定を行うことができます。 
+アクションパスと同様に、キャンバスの[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)ステップを活用して、コントロールグループとともに複数のキャンバスパスを相互にテストできます。これにより、パスのパフォーマンスが追跡され、キャンバスジャーニーを構築する際に情報に基づいた意思決定を行うことができます。 
 
 ## 開始前のテスト
 
