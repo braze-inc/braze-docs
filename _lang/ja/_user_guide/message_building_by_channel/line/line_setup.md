@@ -65,7 +65,7 @@ Braze から LINE メッセージを送信すると、アカウントのメッ�
 
 Braze は LINE ユーザーのサブスクリプションステータスを後から自動的に取得して正しいユーザープロファイルを更新するので、すでに存在している識別済みの LINE ユーザーがいる場合には、このステップを行う必要があります。過去にユーザーとLINE IDを照合していない場合は、このステップをスキップする。 
 
-エンドポイント、CSVインポート、Cloud Data Ingestionなど、Brazeがサポートするどの方法でもユーザーをインポートまたは更新できる。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)含む。 
+エンドポイント、CSVインポート、Cloud Data Ingestionなど、Brazeがサポートするどの方法でもユーザーをインポートまたは更新できる。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/cloud_ingestion/)含む。 
 
 どの方法を使用している場合でも、ユーザーの LINE ID を提供するように `native_line_id` を更新します。`native_line_id` の詳細については、[ユーザー設定を](#user-setup)参照のこと。
 
@@ -230,7 +230,7 @@ LINEは、ユーザーのサブスクリプション状態の真実の情報源�
 1. チャネルに新しいLINEフォロワーが増える。
 2. Brazeは、`native_line_id` 属性をフォロワーのLINE ID に設定し、`line_id` のユーザーエイリアスをフォロワーのLINE ID に設定した匿名ユーザープロファイルを作成する。プロファイルのサブスクリプションステータスは `subscribed` です。
 3. [ユーザーの照合](#user-id-reconciliation)により、ユーザーに LINE ID があることが確認されます。
-  - 匿名ユーザープロファイルは、[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) エンドポイントを使用して識別できます。このユーザープロファイルに対する ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)による) その後の更新では、この既知の `external_id` でユーザーをターゲットに設定できます。
+  - 匿名ユーザープロファイルは、[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) エンドポイントを使用して識別できます。このユーザープロファイルに対する ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)による) その後の更新では、この既知の `external_id` でユーザーをターゲットに設定できます。
 
 {% raw %}
 ```json
@@ -248,7 +248,7 @@ LINEは、ユーザーのサブスクリプション状態の真実の情報源�
 ```
 {% endraw %}
 
-  - `native_line_id` を設定して、新しいユーザープロファイルを ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)により) 作成できます。この新しいプロファイルは、既存の匿名ユーザープロファイルのサブスクリプションステータスの状態を継承する。この場合、複数のプロファイルが同じ`native_line_id` を共有することになる。これらはいつでもマージできます。マージするには、[ステップ5](#step-5-merge-profiles-optional)で説明したプロセスで `/users/merge` エンドポイントを使用します。
+  - `native_line_id` を設定して、新しいユーザープロファイルを ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)により) 作成できます。この新しいプロファイルは、既存の匿名ユーザープロファイルのサブスクリプションステータスの状態を継承する。この場合、複数のプロファイルが同じ`native_line_id` を共有することになる。これらはいつでもマージできます。マージするには、[ステップ5](#step-5-merge-profiles-optional)で説明したプロセスで `/users/merge` エンドポイントを使用します。
 
 ##### ユーザープロファイルの作成はLINEのフォローより先に行われる
 
@@ -287,7 +287,7 @@ LINE IDと既存のBrazeユーザープロファイルを組み合わせるに�
 
 4. ユーザーのLINE ID (`native_line_id`)を、データベースにあるメールと一致するユーザープロファイルに保存するか、ユーザーのメールとLINE IDで新しいユーザープロファイルを作成する。
 
-5. [`/user/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/)、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)を使用して、新しいユーザー情報または更新されたユーザー情報を Braze に送信します。
+5. [`/user/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/)、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)を使用して、新しいユーザー情報または更新されたユーザー情報を Braze に送信します。
 
 #### ワークフロー
 
