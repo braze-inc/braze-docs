@@ -68,7 +68,7 @@ Pour améliorer les conversions parmi les locuteurs de langues autres que l'angl
 
 ### Comprendre les indicateurs de revenus plus élevés
 
-Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pousser de nouveaux utilisateurs ou des utilisateurs inactifs à effectuer un achat peut amener l’utilisateur à désinstaller votre application. Les Segment Insights peuvent vous aider à découvrir des actions qui incitent les utilisateurs à progresser dans l’entonnoir d’achat sans qu’ils n’achètent quoi que ce soit, par exemple, en ajoutant des éléments à leur liste de souhaits, en partageant des messages sur les réseaux sociaux ou ajoutant du contenu dans leurs favoris. Vous pouvez, par exemple, représenter l’impact que différents comportements ont sur les achats dans une application d’e-commerce.
+Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pousser de nouveaux utilisateurs ou des utilisateurs inactifs à effectuer un achat peut amener l’utilisateur à désinstaller votre application. Les Segment Insights peuvent vous aider à découvrir des actions qui incitent les utilisateurs à progresser dans l’entonnoir d’achat sans qu’ils n’achètent quoi que ce soit, par exemple, en ajoutant des éléments à leur liste de souhaits, en partageant des messages sur les réseaux sociaux ou ajoutant du contenu dans leurs favoris. Par exemple, vous pouvez déterminer l'impact sur les achats des différents comportements au sein d'une application de commerce électronique.
 
 ![][7]
 
