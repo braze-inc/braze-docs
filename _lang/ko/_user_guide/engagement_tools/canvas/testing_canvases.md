@@ -24,9 +24,9 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: 리텐션 보고서
-    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/reporting/retention_reports/
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: 퍼널 보고서
-    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reporting/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
 ---
