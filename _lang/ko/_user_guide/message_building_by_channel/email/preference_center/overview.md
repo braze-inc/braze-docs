@@ -85,7 +85,7 @@ HTML을 포함하는 Liquid을(를) 조합하여 사용할 수도 있습니다. 
 
 ## 사용자 정의
 
-Braze는 환경설정 센터의 구독 상태 업데이트를 관리하여 환경설정 센터를 동기화 상태로 유지합니다. 그러나 [구독 그룹 API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)를 사용하여 자체 환경설정 센터를 만들고 호스팅할 수도 있습니다.
+Braze는 환경설정 센터의 구독 상태 업데이트를 관리하여 환경설정 센터를 동기화 상태로 유지합니다. However, you can also create and host your own preference center using the [subscription groups APIs]({{site.baseurl}}/api/endpoints/subscription_groups/) with the following options.
 
 ### 옵션 1: 문자열 쿼리 매개변수를 가진 링크
 
