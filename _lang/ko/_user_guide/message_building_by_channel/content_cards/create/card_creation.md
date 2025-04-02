@@ -3,7 +3,7 @@ nav_title: 카드 생성
 article_title: 카드 생성
 alias: /card_creation/
 description: "이 문서에서는 캠페인 시작 또는 캔버스 단계 진입 시 콘텐츠 카드를 만들 때와 노출 횟수 시점의 차이점에 대해 설명합니다."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards
