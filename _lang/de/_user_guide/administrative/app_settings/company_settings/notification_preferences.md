@@ -27,10 +27,11 @@ In der folgenden Tabelle sind die verfügbaren Benachrichtigungen aufgeführt:
 
 | Benachrichtigung | Beschreibung | Verfügbare Benachrichtigungskanäle |
 |--------------|-------------|-----------------|
-| AWS-Zugangsdaten fehlerhaft | Benachrichtigt die Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dies umfasst auch Benachrichtigungen über Fehler bei den Zugangsdaten für Google Cloud Services und Azure (Microsoft Cloud Services). | E-Mail, Webhook |
+| AWS-Zugangsdaten fehlerhaft | Benachrichtigt die Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dazu gehören auch Benachrichtigungen über Zugangsdaten-Fehler für Google Cloud Serviceleistungen; Dienste und Azure (Microsoft Cloud Serviceleistungen; Dienste). | E-Mail, Webhook |
 | Kampagne automatisch angehalten | Benachrichtigt die Empfänger:innen, wenn Braze eine Kampagne angehalten hat. | E-Mail |
 | Ablauf der Kampagnen-Interaktion | Benachrichtigt die Empfänger über alle Kampagnen, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
-| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger, wenn eine aktive Kampagne/Leinwand aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne/Leinwand reaktiviert wird oder wenn Entwürfe gestartet werden. | E-Mail |
+| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger:in, wenn eine aktive Kampagne oder ein Canvas aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne oder ein Canvas reaktiviert wird oder Entwürfe gestartet werden. | E-Mail |
+| Kampagne/Canvas Volumengrenze erreicht | Benachrichtigt Empfänger:in, wenn eine Kampagne oder ein Canvas seine Volumengrenze erreicht. | E-Mail | 
 | Ablauf der Canvas-Interaktion | Benachrichtigt Empfänger über alle Canvas, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
 | News Feed Karte Veröffentlicht/Live | Benachrichtigt die Empfänger, wenn News Feed-Karten geplant oder veröffentlicht werden. | E-Mail, Webhook |
 | Fehler bei Push-Zugangsdaten | Benachrichtigt Empfänger, wenn die Push-Anmeldeinformationen einer App ungültig sind und wenn die Push-Anmeldeinformationen einer App bald ablaufen. | E-Mail, Webhook |
