@@ -15,7 +15,7 @@ tool: Canvas
 2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 문서는 사용자가 원래 편집기에서 캔버스 구성 요소를 진행하는 방법을 이해하는 데 참조할 수 있습니다. <br><br>캔버스 흐름의 구성요소의 경우, **진행 동작**은 항상 오디언스 즉시 진행 또는 **즉시 심화 오디언스**로 설정됩니다. 이는 [연결이 끊어진 단계에도]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/) 적용됩니다.
 {% endalert %}
 
-> **진행 동작** 기능을 사용하면 [캔버스 구성요소]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/)를 통해 진행 기준을 선택할 수 있습니다. 
+> The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
 ![진행 동작 설정에는 메시지가 전송될 때 오디언스를 진행시키거나 즉시 오디언스를 진행시키는 두 가지 옵션이 있습니다.][1]
 
