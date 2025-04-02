@@ -42,7 +42,7 @@ Braze から LINE メッセージを送信すると、アカウントのメッ�
 {: start="2"}
 2\.[**LINE**] を選択するか、マルチチャネルをターゲットとするキャンペーンでは、[**マルチチャネルキャンペーン**] を選択します。
 3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
@@ -71,9 +71,15 @@ Braze から LINE メッセージを送信すると、アカウントのメッ�
 
 ![プレビューにメッセージが表示された LINE コンポーザー。][1]
 
-{% alert tip %}
+### ヒント
+
+#### Liquid の使用
+
 Liquid を使用する場合は、必ずパーソナライゼーションのデフォルト値を含めてください。これにより、不完全なユーザープロファイルを持つ受信者が空のプレースホルダーを受信しないようにできます。例えば、ユーザーは、メッセージ「様」を受信する代わりに、メッセージ「新規に配信登録をいただいたお客様へ」を受信できます。
-{% endalert %}
+
+#### 右から左へのメッセージを作成する
+
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)を参照してください。
 
 ## ステップ 3: メッセージをプレビューしてテストする
 
