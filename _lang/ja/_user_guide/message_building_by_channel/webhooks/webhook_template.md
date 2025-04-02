@@ -34,7 +34,7 @@ Braze ダッシュボードで、[**テンプレート**] > [**Webhook テンプ
 
 1. Webhookテンプレートにユニークな名前をつける。
 2. (オプション）テンプレートの説明を追加し、このテンプレートがどのように使用されるかを説明する。
-3. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加し、テンプレートの検索やフィルターに役立てる。
+3. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加し、テンプレートの検索やフィルターに役立てる。
 
 ## ステップ4:テンプレートを作成する
 
