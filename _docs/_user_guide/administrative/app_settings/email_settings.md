@@ -30,8 +30,6 @@ In this section, you can add the names and email addresses that can be used when
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-When setting your "From" addresses, make sure your "From" email domain matches your sending domain (such as marketing.yourdomain.com). Failure to do this may result in SPF and DKIM misalignment. Emails with dynamic "From" addresses will be sent from the IP pool of the corresponding sending domain. All reply-to emails can be set to your root domain.
-
 {% endtab %}
 {% tab Reply-To Address %}
 
