@@ -48,10 +48,8 @@ In dieser Tabelle finden Sie die Komponenten, die beim Hinzufügen von E-Mail-Ad
 Um Apple Private Relay für SparkPost einzurichten, gehen Sie wie folgt vor: 
 
 1. Melden Sie sich mit Apple an.
-2. Erstellen Sie anhand der [Dokumentation von Apple](https://developer.apple.com/sign-in-with-apple/get-started/) die erforderlichen Verifizierungsdateien und hosten Sie diese Dateien in einem zugänglichen Verzeichnis für die angegebenen Domains.
-3. Fügen Sie in Ihren DNS-Einstellungen einen A-Eintrag hinzu, der auf die Domain verweist, auf der Ihre Verifizierungsdatei gehostet wird. Dies ist ein einmaliger Verifizierungsprozess.
-4. Fügen Sie die E-Mail Domains in Apple hinzu.
-5. Apple überprüft automatisch die Domains und zeigt an, welche davon überprüft wurden. Außerdem haben Sie die Möglichkeit, die Domains erneut zu überprüfen oder zu löschen.
+2. Folgen Sie der [Dokumentation von Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service), um die E-Mail Domains zu registrieren.
+3. Apple überprüft automatisch die Domains und zeigt an, welche davon überprüft wurden. Außerdem haben Sie die Möglichkeit, die Domains erneut zu überprüfen oder zu löschen.
 
 {% alert important %}
 Stellen Sie sicher, dass Sie diesen Vorgang innerhalb von 2 bis 3 Tagen nach der Erstellung der Verifizierungsdateien abschließen, da diese sonst verfallen. Apple gibt nicht bekannt, wie lange sie gültig sind.
