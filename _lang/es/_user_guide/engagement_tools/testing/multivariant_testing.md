@@ -65,9 +65,9 @@ Al ejecutar una prueba A/B en mensajes dentro de la aplicación, puede parecer q
 
 La variante A tiene un mayor número de *destinatarios únicos* que la variante C. Esto no se debe a la distribución de variantes, sino a cómo se calculan *los destinatarios únicos* para los mensajes dentro de la aplicación. Para los mensajes in-app, *los Destinatarios Únicos* son en realidad *Impresiones Únicas*, que es el número total de personas que recibieron y vieron el mensaje in-app. Esto significa que si un usuario no recibe el mensaje por cualquier motivo o decide no verlo, no se incluye en el recuento de *Destinatarios Únicos*, y la distribución de variantes puede aparecer sesgada.
 
-## Cinco reglas para las pruebas multivariantes y A/B {#five-rules-for}
+## Consejos para pruebas multivariantes y A/B
 
-Las pruebas multivariantes y A/B pueden revelar información muy valiosa sobre sus usuarios. Para garantizar que los resultados de las pruebas reflejan fielmente el comportamiento de los usuarios, siga estas directrices.
+Las pruebas multivariantes y A/B pueden revelar información muy valiosa sobre sus usuarios. Para obtener resultados de las pruebas que reflejen realmente el comportamiento de tus usuarios, sigue estas directrices.
 
 #### Ejecutar la prueba en un gran número de usuarios
 
@@ -84,6 +84,15 @@ Las pruebas multivariantes y A/B permiten comprobar las diferencias entre varias
 #### Decida la duración de la prueba y no la finalice antes de tiempo.
 
 Antes de empezar la prueba, decide cuánto tiempo va a durar y cíñete a ella. Los profesionales del marketing suelen caer en la tentación de detener las pruebas después de ver los resultados que les gustan, lo que sesga sus conclusiones. Resiste la tentación de echar un vistazo y no termines nunca el examen antes de tiempo.
+
+#### Añade tu prueba a las campañas antes de que se lancen, no después
+
+Si añades tu prueba a una campaña después de que se haya lanzado, la prueba no se ejecutará correctamente y puedes recibir estadísticas incorrectas o engañosas. Por ejemplo, si añades una prueba a una campaña lanzada que permite la reentrada, los usuarios que vuelvan a entrar en la campaña pasarán siempre por el mismo camino para evitar imprecisiones en los datos de la prueba. Además, si cambias alguna de las variantes mientras se está ejecutando la prueba, el cambio invalidará tu prueba y la reiniciará.
+
+Para obtener resultados precisos:
+1. Clona la campaña lanzada.
+2. Detén la campaña Origin.
+3. A continuación, añade la prueba a la campaña clonada. 
 
 #### Si es posible, incluya un grupo de control
 
