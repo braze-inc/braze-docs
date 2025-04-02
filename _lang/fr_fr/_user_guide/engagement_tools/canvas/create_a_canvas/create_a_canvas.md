@@ -78,14 +78,14 @@ Le constructeur de Canvas vous guidera étape par étape pour configurer votre C
 Ici, vous nommerez votre Canvas, assignerez [des équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) et créerez ou ajouterez [des étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Vous allez également affecter des événements de conversion pour le Canvas.
 
 {% alert tip %}
-Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lors de l'utilisation de [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer par des balises particulières.
+Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lors de l'utilisation de [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer par des balises particulières.
 {% endalert %}
 
 ![La page de détails du canvas, avec des champs pour le nom du canvas, la description, l'emplacement/localisation et les tags.][53]
 
 #### Sélectionner des événements de conversion
 
-Choisissez votre type d'événement de conversion, puis sélectionnez les conversions à enregistrer. Ces [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) mesureront l'efficacité de votre canvas. 
+Choisissez votre type d'événement de conversion, puis sélectionnez les conversions à enregistrer. Ces [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) mesureront l'efficacité de votre canvas. 
 
 ![Un événement de conversion principal A avec le type d’événement de conversion Effectue un achat pour enregistrer les conversations pour les utilisateurs qui effectuent n’importe quel achat avant une date butoir de conversion de trois jours.][52]
 
@@ -146,7 +146,7 @@ Sous **Contrôles d'entrée**, vous pouvez limiter le nombre d'utilisateurs chaq
 
 #### Tester votre audience
 
-Après avoir ajouté des segments et des filtres à votre audience cible, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s'ils correspondent aux critères de l'audience.
+Après avoir ajouté des segments et des filtres à votre audience cible, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer s'ils correspondent aux critères de l'audience.
 
 ![Le champ "Recherche d'utilisateurs", qui vous permet d'effectuer une recherche par ID externe ou ID Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
@@ -218,7 +218,7 @@ Par défaut, l'assignation de variante de Canvas est verrouillée lorsque les ut
 
 {% details Développer pour les étapes %}
 
-1. Créez un attribut personnalisé pour archiver votre nombre aléatoire. Nommez-le quelque chose de facile à localiser, comme "numéro_de_loterie" ou "attribution_aléatoire". Vous pouvez créer l'attribut soit [dans votre tableau de bord]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/), soit par des appels API à notre [`/users/track` point de terminaison]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+1. Créez un attribut personnalisé pour archiver votre nombre aléatoire. Nommez-le quelque chose de facile à localiser, comme "numéro_de_loterie" ou "attribution_aléatoire". Vous pouvez créer l'attribut soit [dans votre tableau de bord]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), soit par des appels API à notre [`/users/track` point de terminaison]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Créez une campagne webhook au début de votre Canvas. Cette campagne sera le moyen par lequel vous créerez votre nombre aléatoire et le stockerez en tant qu'attribut personnalisé. Consultez [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) pour plus d'informations. Définissez l'URL sur notre `/users/track` point de terminaison.<br><br>
 3. Créez le générateur de nombres aléatoires. Vous pouvez le faire avec le code [ décrit ici](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), qui tire parti de l'heure d'entrée unique de chaque utilisateur pour créer un nombre aléatoire. Définissez le nombre qui en résulte comme variante Liquid dans votre campagne webhook.<br><br>
 4. Formatez l’appel `/users/track` dans votre campagne webhook de sorte qu’il définisse l’attribut personnalisé que vous avez créé à l’étape 1 pour le nombre aléatoire que vous avez généré sur votre profil utilisateur actuel. L’exécution de cette étape vous permettra de créer correctement un nombre aléatoire qui change chaque fois que votre utilisateur accède à votre campagne.<br><br>
@@ -336,7 +336,7 @@ Vous pouvez également enregistrer votre Canvas en tant que brouillon si vous so
 ![Un exemple de canvas dans Braze.][19]
 
 {% alert tip %}
-Vous avez besoin de modifier votre Canvas après son lancement ? C’est tout à fait possible. Consultez [Modification des toiles après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) pour plus d'informations.
+Vous avez besoin de modifier votre Canvas après son lancement ? C’est tout à fait possible. Consultez [Modification des toiles après le lancement]({{site.baseurl}}/post-launch_edits/) pour plus d'informations.
 {% endalert %}
 
 
