@@ -20,28 +20,28 @@ Avant de commencer avec les détails plus fins de [la configuration de Canvas]({
   {% tab Canvas %}
   Canvas est une interface unifiée où les marketeurs conçoivent des campagnes avec plusieurs messages. C'est un peu comme un outil de programmation visuelle, vous permettant de créer un parcours utilisateur cohérent à partir d'une série d'étapes.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![Exemple d'un canvas avec une étape de l'arbre décisionnel en deux parcours utilisateurs différents selon que l'utilisateur est ou non "push enabled".]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Parcours %}
 
-  Un parcours, généralement appelé « parcours client », désigne une expérience utilisateur spécifique dans le Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  Un parcours, généralement appelé « parcours client », désigne une expérience utilisateur spécifique dans le Canvas.<br><br> ![Un graphique présentant le parcours client d'un nouvel utilisateur. Un utilisateur anonyme installe une application, Kat crée un compte, Kat n'ouvre pas l'application pendant une semaine, une notification push ramène Kat à l'application, puis Kat utilise l'application régulièrement.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Générateur de canvas %}
-  Le constructeur de Canvas cartographie les étapes à suivre lors de la création de votre Canvas. Il contient des bases comme le fait de donner un nom à votre Canvas et d’ajouter des équipes. Globalement, le générateur de canvas constitue la configuration fondamentale requise avant de commencer à créer votre canvas. Ici, vous pouvez contrôler la façon dont vos utilisateurs commencent et accomplissent leur parcours client avec des options pour modifier le [calendrier d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [public cible]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) et [paramètres d'envoi]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  Le constructeur de Canvas cartographie les étapes à suivre lors de la création de votre Canvas. Il contient des bases comme le fait de donner un nom à votre Canvas et d’ajouter des équipes. Globalement, le générateur de canvas constitue la configuration fondamentale requise avant de commencer à créer votre canvas. Ici, vous pouvez contrôler la façon dont vos utilisateurs commencent et accomplissent leur parcours client avec des options pour modifier le [calendrier d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [public cible]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) et [paramètres d'envoi]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![Le générateur de Canvas dans la section Basics pour un Canvas nommé "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variantes %}
-  Une variante désigne le chemin que chaque utilisateur suit au cours de son parcours. Canvas prend en charge jusqu’à huit variantes avec un groupe de contrôle. Vous contrôlez quel segment de votre audience suivra chaque variante.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  Une variante désigne le chemin que chaque utilisateur suit au cours de son parcours. Canvas prend en charge jusqu’à huit variantes avec un groupe de contrôle. Vous contrôlez quel segment de votre audience suivra chaque variante.<br><br> ![Sélectionnez le bouton "Ajouter une variante".]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Étapes %}
-  Une étape dans Canvas est un point de décision marketing : « si ceci, alors cela ». Tirez parti des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) pour construire les étapes d'un parcours utilisateur.<br>Dans une étape, vous définissez des déclencheurs ou planifiez la livraison, affinez le ciblage en ajoutant des filtres ou en marquant [des événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), et spécifiez différents canaux comme les notifications push ou les événements webhook.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  Une étape dans Canvas est un point de décision marketing : « si ceci, alors cela ». Tirez parti des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) pour construire les étapes d'un parcours utilisateur.<br><br> ![Exemple d'ajout d'une étape de retardement à une toile.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> Lorsqu'un utilisateur entre dans un canvas, il commence par la première étape. Chaque étape est assortie de conditions qui déterminent si l'utilisateur peut passer à l'étape suivante. Au sein d'une étape, vous pouvez définir des déclencheurs ou planifier la réception/distribution, affiner le ciblage en ajoutant des filtres ou en marquant des [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), et spécifier différents canaux comme les notifications push ou les événements webhook. Dans Canvas, les étapes se déroulent dans l'ordre, c'est-à-dire que la première étape se produit avant que la seconde ne puisse avoir lieu. Supposons que nous ayons un canvas avec les étapes suivantes : Retardez l'étape A avec un délai de 24 heures, envoyez un message à l'étape A avec un message push et envoyez un message in-app à l'étape B. L'utilisateur A est retenu dans un délai de 24 heures, puis, au bout de 24 heures, il recevra un message push, puis un message in-app.
 
   {% endtab %}
 {% endtabs %}
