@@ -7,7 +7,7 @@ description: "This article addresses some of the most frequently asked questions
 tool: Currents
 ---
 
-# Currents FAQ
+# Frequently asked questions
 
 > This page provides answers to some frequently asked questions about Currents.
 
