@@ -45,7 +45,7 @@ description: "この参考記事では、キャンペーン作成の「ターゲ
 
 ## オーディエンスのテスト
 
-オーディエンスにセグメントとフィルターを追加したら、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/)してオーディエンスの条件と一致するかどうかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
+オーディエンスにセグメントとフィルターを追加したら、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンスの条件と一致するかどうかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
