@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Komo][7] is a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty.
 
+_This integration is maintained by Komo._
+
+## About the integration
+
 The Braze and Komo integration allows you to gather first and zero-party data through Komo Engagement Hubs. These hubs are dynamic microsites that offer interactive content and gamification features. The user data collected from these hubs are then transmitted to the Braze API.
 
 - Ingest first and zero-party user data gather from Komo to Braze in real-time
@@ -76,6 +80,7 @@ Finally, add your API key and REST endpoint URL and click **Save** to enable the
 ## Using the integration
 
 Once your integration has been completed, you can use the Komo data sent to Braze to create segments for targeting.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/komo/komo_hub_publish.png %}

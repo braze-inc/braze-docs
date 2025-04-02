@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Remerge](https://www.remerge.io/) is purpose-built for app retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users.
 
+_This integration is maintained by Remerge._
+
+## About the integration
+
 The Braze and Remerge integration helps you develop robust, cross-channel lifecycle marketing campaigns by sending user data to Remerge via webhook events to help retarget users through their mobile demand-side platform.
 
 ## Prerequisites
@@ -30,10 +34,6 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 ### Step 1: Create your Braze webhook template
 
 To create a Remerge webhook template for future campaigns or Canvases, navigate to the **Templates** > **Webhook Templates** in the Braze platform. 
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
-{% endalert %}
 
 If you would like to create a one-off Remerge webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
@@ -89,6 +89,7 @@ Preview the message to ensure the request is rendering properly for different us
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
+
 
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API

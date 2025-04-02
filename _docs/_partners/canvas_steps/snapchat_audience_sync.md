@@ -45,10 +45,6 @@ You must ensure the following items are created, completed and/or accepted befor
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. Under Snapchat Audience Sync, select **Connect Snapchat**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 ![Snapchat technology page in Braze that includes an Overview section and Snapchat Audience Sync section with the Connected Snapchat button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Snapchat OAuth page to authorize Braze for the permissions related to your Audience Sync integration.
@@ -136,25 +132,26 @@ The following table includes metrics and descriptions to help you better underst
 Remember that there will be a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
 
-## Troubleshooting
+## Frequently asked questions
 
-{% details What should I do next if I receive an invalid token error? %}
-You can disconnect and reconnect your Snapchat account on the Snapchat partner page. Ensure with your Snapchat Business Manager admin that you have the appropriate permissions to the ad account you wish to sync with.
-{% enddetails %}
+### How many audiences can Snapchat support
 
-{% details Why is my Canvas not allowed to launch? %}
-Ensure your Snapchat ad account successfully connects to Braze on the Snapchat partner page. Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
-{% enddetails %}
-
-{% details How do I know if users have matched after passing users to Snapchat? %}
-Snapchat does not provide this information for their data privacy policies.
-{% enddetails %}
-
-{% details How many audiences can Snapchat support? %}
 At this time, you can only have 1,000 audiences within your Snapchat account. 
-If you breach this limit, Braze will notify you that we cannot create new audiences. 
-You will need to go into your Snapchat ads account and remove audiences you are no longer using. 
-{% enddetails %}
+
+If you exceed this limit, Braze will notify you that we can't create new audiences. You'll need to remove audiences you're no longer using in your Snapchat ad account.
+
+### How do I know if users have matched after passing users to Snapchat?
+
+Snapchat doesn't provide this information for their data privacy policies.
+
+### What should I do next if I receive an invalid token error?
+
+You can disconnect and reconnect your Snapchat account on the Snapchat partner page. Confirm with your Snapchat Business Manager admin that you have the appropriate permissions to the ad account you wish to sync with.
+
+### Why is my Canvas not allowed to launch?
+
+Make sure your Snapchat ad account successfully connects to Braze on the Snapchat partner page. Check that you've selected an ad account, entered a name for the new audience, and selected fields to match.
+
 
 [1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
 [2]: {% image_buster /assets/img/snapchat/snapchat2.png %}

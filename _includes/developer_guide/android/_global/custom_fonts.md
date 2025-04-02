@@ -1,7 +1,3 @@
-# Custom fonts
-
-> This reference article covers font customization options such as defining a font family and shows how to reference it throughout your Android or FireOS application.
-
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Using custom fonts

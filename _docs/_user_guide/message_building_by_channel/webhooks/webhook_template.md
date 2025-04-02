@@ -18,10 +18,6 @@ description: "This reference article covers how to create and customize webhook 
 
 In the Braze dashboard, go to **Templates** > **Webhook Templates**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Engagement** > **Templates & Media** > **Webhook Templates**.
-{% endalert %}
-
 ![The "Webhook Templates" page with predesigned and saved webhook templates.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Step 2: Choose your template

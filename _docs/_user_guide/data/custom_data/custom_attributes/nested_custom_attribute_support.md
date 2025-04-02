@@ -40,6 +40,7 @@ Custom attribute objects can contain [data types][1], such as:
 - Objects have a maximum size of 100&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
+- Periods (`.`) and dollar signs (`$`) aren't supported characters in an API payload if you're attempting to send a nested custom attribute to a user profile.
 - Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if specific partner integrations support this feature.
 - Nested custom attributes cannot be used as a filter when making a Connected Audience API call.
 
@@ -121,6 +122,10 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
   ]
 }
 ```
+
+{% alert note %}
+This approach can't be used to delete a nested key inside an [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -354,10 +359,6 @@ For this example, suppose we have an `accounts` object array that we've just sen
 
 In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
-{% endalert %}
-
 Search for your object or object array. In the **Attribute Name** column, select **Generate Schema**.
 
 ![][8]
@@ -441,7 +442,7 @@ If data doesn't appear as expected after regenerating the schema, the attribute 
 
 ## Data points
 
-Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
+Any key that is sent consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
 ```json
 {

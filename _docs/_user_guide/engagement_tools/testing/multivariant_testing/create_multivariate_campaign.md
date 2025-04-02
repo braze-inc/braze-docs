@@ -67,7 +67,7 @@ The size of the control group for a campaign with [Intelligent Selection][1] is 
 
 Setting a conversion event for a campaign allows you to see how many recipients of that campaign performed a particular action after receiving it.
 
-This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). 
+This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/). 
 
 ## Step 6: Review and launch
 

@@ -15,10 +15,6 @@ tool:
 
 You can find the **Revenue Report** under **Analytics**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Revenue** under **Data**.
-{% endalert %}
-
 {% alert tip %}
 Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 {% endalert %}

@@ -33,12 +33,6 @@ You can create an unlimited number of link templates to support your various nee
 
 1. Go to **Templates** > **Email Link Templates**. 
 2. Select **Create email link template**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
-{% endalert %}
-
-{:start="3"}
 3. Give your link template a name.
 4. (optional) Add a description, team, or tag to add details about the link template.
 5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
@@ -58,7 +52,7 @@ To add a string or URL before the links in your email message, do the following:
 2. Set the **Template Position** to **Before URL**. 
 3. Enter a string that will always get prepended to your URL. 
 
-A preview section is provided to give you an example of the insertion process.
+The **Template preview** is provided to give you an example of how the link template will be inserted before a URL.
 
 ![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 

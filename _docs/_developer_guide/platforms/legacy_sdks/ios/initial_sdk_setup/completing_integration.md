@@ -97,7 +97,7 @@ If given a pre-existing custom endpoint:
 
 ## SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
+Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift), [push messaging]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
 
 ## Customizing Braze on startup
 

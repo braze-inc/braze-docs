@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST: Create Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT: Update Catalog Item"
+  - name: "PUT: Replace Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 

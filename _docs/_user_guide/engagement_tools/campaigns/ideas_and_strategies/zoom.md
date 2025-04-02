@@ -59,7 +59,7 @@ Users are now registered for the webinar with the details that already exist on 
 	Example webhook call to Zoom endpoint.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",
@@ -95,7 +95,7 @@ Users are now registered for the webinar with the details that already exist on 
 	Example webhook call to Zoom endpoint.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",

@@ -42,20 +42,7 @@ When using endpoints for API calls, use the REST endpoint.
 For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the REST endpoint.
 {% endalert %}
 
-|Instance|URL|REST Endpoint|SDK Endpoint|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API limits
 
@@ -87,12 +74,6 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 To create a new REST API key:
 
 1. Go to **Settings** > **APIs and Identifiers**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
 4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.

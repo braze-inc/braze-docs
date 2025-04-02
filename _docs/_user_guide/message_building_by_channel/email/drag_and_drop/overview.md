@@ -87,10 +87,6 @@ To use an existing custom HTML template or templates created by a third party, y
 
 You can also access all templates from the **Templates** section.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
-{% endalert %}
-
 After selecting your template, you’ll see an overview of your email under **Email Variants** that includes the sending information and email body. 
 
 Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
@@ -256,7 +252,7 @@ Another common use case is to flag specific links as universal links. Universal 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured)
 
-To set up universal links, refer to [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+To set up universal links, refer to [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 

@@ -144,6 +144,18 @@ In-App Message
 
 {% api %}
 
+### Campaign analytics
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+The performance of the message across various channels. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
+
+{% endapi %}
+
+{% api %}
+
 ### Choices Submitted
 
 {% apitags %}
@@ -178,7 +190,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} As a Braze customer, deliveries are charged toward your SMS allotment. 
 
-<span class="calculation-line">Calculation: Count</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Confirmed Deliveries</i>: Count</li>
+        <li><i>Confirmed Delivery Rate</i>: (Confirmed Deliveries) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in 
 
 {% api %}
 
+### Failed Delivery Rate
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
+
+Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+
+<span class="calculation-line">Calculation: (Delivery Failures) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Direct Opens
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} Failures are included in the <i>Sends</i> count but not in the <i>Deliveries</i> count.</td>
 
 <span class="calculation-line">Calculation (<i>Failure Rate</i>): (Failures) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Feature flag experiment performance
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+Performance metrics for the message in a Feature Flag experiment. The specific metrics shown will vary depending on the messaging channel, and whether or not the experiment was a multivariate test.
 
 {% endapi %}
 
@@ -604,6 +652,20 @@ WhatsApp
 
 {% api %}
 
+### Read Rate
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Read Rate' %}
+
+<span class="calculation-line">Calculation: (Reads with read receipts) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Received
 
 {% apitags %}
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Rejections' %} As a Braze customer, rejections are charged toward your SMS allotment.
 
-<span class="calculation-line">Calculation: Count</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Rejections</i>: Count</li>
+        <li><i>Rejection Rate</i>: (Rejections) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">Calculation: Count</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Sends to Carrier</i>: Count</li>
+        <li><i>Sends to Carrier Rate</i>: (Sends to Carrier) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -726,6 +804,8 @@ Email
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
+
+While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) or exclude these users from your sending with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
 
 {% endapi %}
 
@@ -783,7 +863,7 @@ In-App Message
 Email, Content Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. For AMP emails, this is the total clicks in the HTML and plaintext versions.
+{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +886,17 @@ Email, Content Cards, SMS, LINE
 Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} If a user receives two different cards from the same campaign and dismisses both, this count will increase by two. Re-eligibility allows you to increment _Total Dismissals_ once every time a user receives a card; each card is a different message.
 
-<span class="calculation-line">Calculation: Count</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Total Dismissals:</i> Count</li>
+        <li><i>Total Dismissal Rate:</i> Total Dismissals / Total Impressions</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +959,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Email, Content Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email. This includes clicks on Braze-provided unsubscribe links. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+{% multi_lang_include metrics.md metric='Unique Clicks' %}  This includes clicks on Braze-provided unsubscribe links. This is tracked over a seven-day period for email. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 {::nomarkdown}
 <span class="calculation-line">

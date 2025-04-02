@@ -1,6 +1,6 @@
 ---
 nav_title: Anonymous users
-article_title: Getting Started&#58; Anonymous Users
+article_title: Anonymous Users
 page_order: 0
 page_type: reference
 description: "This article provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages."

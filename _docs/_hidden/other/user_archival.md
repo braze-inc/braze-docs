@@ -40,6 +40,7 @@ Both inactive users and dormant users will be archived unless the user is exclud
 - Can't receive SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Can't receive push. For example, they have uninstalled the app or disabled push permissions.
 - Can't receive a WhatsApp message. For example, they do not have a valid phone number or are unsubscribed from all WhatsApp subscription groups.
+- Can't receive a LINE message. For example, they do not have a LINE ID or are unsubscribed from all LINE subscription groups.
 - Haven't used any mobile app or visited a website in a workspace in more than six months.
 - Haven't received any messages from a workspace in more than six months.
 - Haven't been updated in more than six months.
@@ -60,7 +61,7 @@ Users in the Global Control Group will never be archived, even if they meet the 
 
 ### Treatment sample group
 
-Treatment sample group users are excluded from archiving within a Global Control Group report.
+Treatment sample group users in a Global Control Group Report are excluded from archiving.
 
 ## Test users
 

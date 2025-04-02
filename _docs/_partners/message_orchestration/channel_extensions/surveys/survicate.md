@@ -14,6 +14,10 @@ search_tag: Partner
 
 > [Survicate][1] is a customer feedback platform that helps you collect, analyze, and act on customer insights across multiple channels and throughout the user journey.  
 
+_This integration is maintained by Survicate._
+
+## About the integration
+
 With the Braze and Survicate integration, you can embed surveys directly in your Braze emails to increase response rates. Survey responses sync automatically with Braze user profiles as custom attributes or events. Real-time insights make it easy to track and analyze feedback alongside customer data and create targeted follow-ups.
 
 ## Use cases

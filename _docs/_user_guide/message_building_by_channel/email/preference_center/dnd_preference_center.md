@@ -14,10 +14,6 @@ page_order: 2
 
 Create a preference center by navigating to **Audience** > **Subscriptions** > **Email Preference Center**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Users** > **Subscription Groups** > **Email Preference Center**.
-{% endalert %}
-
 Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 
 ![A list of custom preference centers with the name, description, type, status, last edited date, and created by user.][1]

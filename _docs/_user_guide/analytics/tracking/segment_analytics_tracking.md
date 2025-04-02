@@ -27,10 +27,6 @@ An app can have tracking turned on for up to 25 segments. Braze recommends track
 
 Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment][14].
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Revenue** under **Data**.
-{% endalert %}
-
 ![Revenue data by segment][17]
 
 To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** in the **Breakdown** dropdown, and then select your segments in **Breakdown values**.
@@ -42,10 +38,6 @@ Select any segment name above the graph to turn on or off visibility for that se
 ## Sessions over time
 
 Similarly, you can find data on [sessions over time for this particular segment][13] on the **Home** page.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
-{% endalert %}
 
 ![Session data by segment][18]
 

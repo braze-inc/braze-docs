@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Yotpo](https://www.yotpo.com/), the leading eCommerce marketing platform, helps thousands of forward-thinking brands accelerate direct-to-consumer growth. Yotpo's single-platform approach integrates data-driven solutions for reviews, loyalty, SMS marketing, and more, empowering brands to create smarter, higher-converting customer experiences.
 
+_This integration is maintained by Yotpo._
+
+## About the integration
+
 With the Braze and Yotpo integration, you can dynamically pull and display star ratings, top reviews, and visual user-generated content (UGC) on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 
 ## Prerequisites
@@ -170,6 +174,7 @@ Yes! To discover other data points and customization options available, refer to
 {% alert note %}
 Yotpo does not support custom requirements beyond what is described in this guide.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/yotpo/image1.png %}
 [2]: {% image_buster /assets/img/yotpo/image2.png %}

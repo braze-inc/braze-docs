@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [BlueConic][1], the leading pure-play customer data platform, liberates companies' first-party data from disparate systems and makes it accessible wherever and whenever it is required to transform customer relationships and drive business growth. 
 
+_This integration is maintained by Blueconic._
+
+## About the integration
+
 The Braze and BlueConic integration allows users to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server. Potential goals include growth-focused initiatives, customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more. This integration supports both scheduled batch import and export. 
 
 {% alert important %}
@@ -75,6 +79,7 @@ Once the authentication is complete, you must create at least one import or expo
 ## Step 4: Toggle connection on
 
 Use the toggle next to the Braze connection title to toggle the connection on and off. A connection must be on to run during scheduled times. 
+
 
 [1]: https://www.blueconic.com/
 [2]: https://portal.aws.amazon.com/billing/signup#/start

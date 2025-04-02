@@ -65,4 +65,4 @@ To assign users to message variants, Canvas variants, or their respective contro
 
 ### Why can't I use rate limiting with a control group?
 
-Braze currently doesn’t support rate limiting with A/B testing that has a control group. This is because rate limiting doesn’t apply to the control group in the same way as the variants, thus introducing bias. Instead, consider using [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/), which automatically adjusts the percentage of users that will receive each variant based on analytics and the performance of the campaign.
+Braze currently doesn’t support rate limiting with A/B testing that has a control group. This is because rate limiting doesn’t apply to the control group in the same way as the variants, thus introducing bias. Instead, consider using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), which automatically adjusts the percentage of users that will receive each variant based on analytics and the performance of the campaign.

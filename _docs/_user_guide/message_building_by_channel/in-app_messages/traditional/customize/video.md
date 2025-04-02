@@ -28,7 +28,7 @@ Video content is only available when the device has a reasonable network speed, 
 
 ## Android considerations
 
-To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## iOS considerations
 

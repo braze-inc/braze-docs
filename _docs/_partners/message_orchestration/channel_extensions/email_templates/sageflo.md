@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Sageflo Radiate](https://sageflo.com/radiate) is a distributed marketing tool that empowers local teams to easily send their own emails using marketing-approved templates, images, and audience segments through API integrations with Braze.
 
+_This integration is maintained by Sageflo._
+
+## About the integration
+
 Give local teams the tools they need to market smarter, leveraging Braze's sophisticated capabilities including audience segmentation, frequency governance and dynamic content, all while including guardrails for your brand. 
 
 ## Prerequisites
@@ -43,5 +47,6 @@ Once connected, Sageflo will:
 * Define campaign, location and user group settings
 * Map templates from Braze for use with Radiate campaigns
 * Schedule and conduct user training
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

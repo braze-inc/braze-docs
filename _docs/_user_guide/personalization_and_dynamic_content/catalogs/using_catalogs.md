@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 This returns as the following:
 
-> Get the ultimate trio Tales, Teslagrad, and Acaratus today!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!

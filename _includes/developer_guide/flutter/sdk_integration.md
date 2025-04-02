@@ -147,6 +147,3 @@ braze.changeUser("{some-user-id}");
 
 Search for the user with `{some-user-id}` in the dashboard under **Audience** > **Search Users**. There, you can verify that session and device data have been logged.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can search for users from **Users** > **User Search**.
-{% endalert %}

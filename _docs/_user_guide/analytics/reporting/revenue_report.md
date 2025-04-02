@@ -12,10 +12,6 @@ tool: Reports
 
 To view a report for your revenue from the dashboard, go to **Analytics** > **Revenue Report**. 
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
-{% endalert %}
-
 ## Customizing your revenue report
 
 You can customize your revenue report by selecting a date range, the apps to report on, and parameters.

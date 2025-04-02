@@ -15,10 +15,6 @@ search_rank: 5
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then selecting **Subscriptions and Usage**.
-{% endalert %}
-
 The **Billing** page includes the following tabs:
 
 - [Subscriptions and Usage](#subscriptions-and-usage)

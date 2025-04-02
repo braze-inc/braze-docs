@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Transcend is a data privacy infrastructure company that makes it simple for companies to give their users control over their data, automatically fulfilling data subject requests inside companies across all of their data systems and vendors. 
 
+_This integration is maintained by Transcend._
+
+## About the integration
+
 The Braze and Transcend partnership helps users automate privacy requests by orchestrating data across dozens of data systems, helping teams comply with regulations like GDPR and CCPA. Transcend provides end-users with a control panel, or privacy center, hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. 
 
 ## Prerequisites
@@ -52,5 +56,6 @@ To remove the Braze data silo from your Transcend Data Map:
 1. Navigate to your **Data Map**, and click into **Braze**. <br><br>
 2. At the bottom of the screen, expand **Remove Braze** and click **Remove Silo**. You'll be prompted to confirm that you'd like to remove the silo. Click **Ok**. <br><br>
 3. Confirm the silo has been removed by navigating back to your Data Map.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -24,10 +24,6 @@ You’ll need a webhook endpoint URL to configure this integration, which you ca
 
 In Braze, navigate to **Partner Integrations** > **Data Export**, click **Create New Current**, and select **Heap Export**. 
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Integrations**.
-{% endalert %}
-
 Give your export a name, then proceed to the **Current Details** page. On this page, enter the endpoint and optional bearer token (if provided).
 
 After configuring your integration's credentials, check all message engagement, customer behavior, and user events you would like to export to Heap, and click **Launch Current**.

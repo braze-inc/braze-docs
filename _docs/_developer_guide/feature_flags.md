@@ -1,5 +1,5 @@
 ---
-page_order: 2.3
+page_order: 2.5
 nav_title: Feature Flags
 article_title: Feature flags for the Braze SDK
 description: "This reference article covers an overview of feature flags including prerequisites and use cases."

@@ -22,7 +22,3 @@ You can subscribe to this report on from the **Notification Preferences** page.
 ## Adding custom events to reports
 
 Additionally, if you using custom events, you can select up to five key events from the **Custom Events** page to be included in your weekly report. Go to **Data Settings** > **Custom Events** to update these events at any time.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location. <br>- Notification preferences are located under your account icon > **Company Settings** > **Notification Preferences**.<br>- **Custom Events** is located under **Manage Settings**.
-{% endalert %}

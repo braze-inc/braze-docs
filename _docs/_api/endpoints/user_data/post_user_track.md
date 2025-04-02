@@ -300,7 +300,7 @@ For customers who have purchased Monthly Active Users - CY 24-25, Braze manages 
 - In addition to the hourly limit, Braze enforces a burst limit on the number of requests that can be sent every three seconds.
 - Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
 
-Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
 
 
 

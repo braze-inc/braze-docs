@@ -5,12 +5,12 @@ Once you've launched your campaign, you can return to the details page for that 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
   {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards
-  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by in-app message
-  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push
-  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS
-  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by WhatsApp
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Content Cards
+  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by in-app message
+  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Push
+  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS
+  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by WhatsApp
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Webhook{% endif %}.
 {% endalert %}
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
@@ -305,8 +305,20 @@ Here are some key email-specific metrics that you won't see in other channels. T
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft Bounce</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Deferral</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Deferrals
+
+Deferred or deferral is when an email was not immediately delivered, but Braze will retry the email for up to 72 hours after this temporary delivery failure to maximize the chances of successful delivery before attempts for that specific campaign are stopped. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, or DNS errors.
+
+_Deferrals_ differ from _Soft Bounces_. If no email was successfully delivered during this retry period, Braze will send one soft bounce event per attempted campaign sent. Before February 25, 2025, these retries were counted as multiple soft bounces for 1 campaign send.
+
+Note that _Deferrals_ are currently only available using Currents or Braze Snowflake features (such as Query Builder, SQL Segment, Snowflake Data Sharing). If you’d like to include this in campaign or Canvas analytics, please [submit product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
@@ -660,13 +672,13 @@ Inbound messages are truncated past 1,600 characters.
 
 ## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 

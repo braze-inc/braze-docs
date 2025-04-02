@@ -13,10 +13,6 @@ tool:
 
 > Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboards are located under **Overview**.
-{% endalert %}
-
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
 You can view the following dashboards:
@@ -41,7 +37,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Sends | Count | Total number of sends across each day in the date range |
 | Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
-| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for a date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
+| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for a date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. These unsubscribes are logged across all sources (such as the SDK, REST API, CSV imports, emails, and list unsubscribes). The unsubscribe rates in Campaign and Canvas analytics are unsubscribes that occur as a result of an unsubscribe click on a Braze-delivered email.  |
 | Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for a date range) |
 | Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven't been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
 | Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for a date range) |
@@ -54,9 +50,18 @@ The email insights dashboard tracks where and when your customers are interactin
 
 ### Engagement by Device
 
-The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. 
+The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. This data is based on the user agent string passed from your users' devices.
 
-The "Other" category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT (over-the-top or streaming), and similar. This may also include null or empty values.
+{% alert note %}
+If you use CloudFront as your CDN, make sure your users' user agent is passed along to the ESP. Otherwise, every user agent will be "Amazon Cloudfront".
+{% endalert %}
+
+The “Other” category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT (over-the-top or streaming), and similar. This may also include null or empty values.
+
+To better understand what is in this "Other" category, you can extract the user agents using either of these options:
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) will send you the exact user agent string that was retrieve from the your users' devices.
+2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
 ![Enagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
@@ -72,7 +77,7 @@ The **Engagement by Mailbox Provider** report displays the top mailbox providers
 
 ### Time of Engagement
 
-The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your workspace’s time zone.
+The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your company’s time zone.
 
 The **Day of the Week** engagement report breaks down opens or clicks by day of the week. 
 

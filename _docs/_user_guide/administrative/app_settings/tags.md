@@ -82,10 +82,6 @@ table td {
 
 You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Settings** > **Manage Settings** > **Tags**.
-{% endalert %}
-
 ![Tags tab on the Manage Settings page][8]
 
 To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 

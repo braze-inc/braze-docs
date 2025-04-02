@@ -1,9 +1,5 @@
 1. Go to **Templates** > **Content Blocks**. Click <i class="fas fa-plus"></i> **Create Content Block** and select **Drag-and-drop Content Block**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Content Block Library**.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

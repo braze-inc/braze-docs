@@ -35,9 +35,11 @@ You can access the nested data in your custom event by generating a schema for e
 
 ![][6]{: style="max-width:80%;"}
 
+If new properties are sent in the future, they won't be in the schema until it is regenerated. Schemas can be regenerated every 24 hours.
+
 ## Step 2: Use the nested object
 
-After generating a schema, you can reference the nested data during segmentation and personalization. Refer to the following sections for usage examples:
+You can reference the nested data during segmentation and personalization. Note that a schema is not required. Refer to the following sections for usage examples:
 
 - [API request body](#api-request-body)
 - [Liquid templating](#liquid-templating)
@@ -101,6 +103,10 @@ The following is a `/users/track` example with an "Ordered" custom event. After 
 ```
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+For nested custom event properties, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
+{% endalert %}
 
 ### Liquid templating
 
@@ -166,6 +172,8 @@ To segment users based on nested event properties, you must use [Segment Extensi
 ![][4]
 
 Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
+
+To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 
 ### Personalization
 

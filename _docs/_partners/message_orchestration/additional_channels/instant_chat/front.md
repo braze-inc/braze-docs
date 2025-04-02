@@ -77,7 +77,7 @@ First, you'll create a new data transformation in Braze. The following steps are
     ![An example data transformation.]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
-You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/docs/user_guide/data_and_analytics/data_transformation/overview/). 
+You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/user_guide/data/data_transformation/overview/). 
 {% endalert %}
 
 ### Step 2: Create an outbound SMS campaign

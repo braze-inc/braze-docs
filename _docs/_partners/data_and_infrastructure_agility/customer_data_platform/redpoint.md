@@ -11,6 +11,10 @@ search_tag: Redpoint
 
 > [Redpoint][2] is a technology platform that provides marketers with a fully integrated campaign orchestration platform. Leverage Redpoint's segmentation, scheduling, and automation capabilities to control how and when CDP data is imported to Braze.
 
+_This integration is maintained by Redpoint._
+
+## About the integration
+
 The Braze and Redpoint integration allows you to create Braze segments based on your Redpoint CDP data. Redpoint provides two modes for passing data to Braze: 
 
 1. **Braze Onboarding and Upsert** mode: "Upserts" a user profile from Redpoint into Braze. This is intended to be used for onboarding or updating user records when data has changed. 
@@ -30,10 +34,6 @@ You'll configure an export template and outbound channel for each mode.
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Redpoint Data Management artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
 
 ## Redpoint CDP custom attributes
 
@@ -161,6 +161,7 @@ Once the workflow has executed successfully in RPI, the orchestration and CDP da
 You can view the Redpoint associated properties on the user profile.
 
 ![][15]{: style="max-width:80%;"}
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com

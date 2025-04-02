@@ -29,10 +29,6 @@ Braze automatically collects a base level of uninstall information from your reg
 
 You can turn on uninstall tracking on the **App Settings** page, under **Settings**, for each app you want to track.
 
-{% alert note %}
-If you're using the older navigation, **App Settings** is **Settings** and is located under **Manage Settings**.
-{% endalert %}
-
 When uninstall tracking is turned on for an app, background push messages will be sent nightly to users who haven't recorded a session or received a push in 24 hours.
 
 ### Configuration

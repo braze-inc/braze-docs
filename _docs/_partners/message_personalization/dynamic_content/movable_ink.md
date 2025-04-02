@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Movable Ink](https://www.movableink.com/) is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers. The Movable Ink platform provides valuable customization options that can easily be inserted into your campaigns. 
 
+_This integration is maintained by Movable Ink._
+
+## About the integration
+
 Expand our creative capabilities by leveraging Movable Ink's Intelligent Creative features like polling, countdown timer, and scratch-off. The Movable Ink and Braze integration powers a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
 ## Prerequisites
@@ -167,6 +171,7 @@ This template will take the current time (in seconds), append it to the end of t
 
 ### Having trouble showing GIFs on Android?
 - Android requires GIF support in implementation. Follow the Android [in-app message customization][GIFsupport] article if you do not have this setup.
+
 
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})

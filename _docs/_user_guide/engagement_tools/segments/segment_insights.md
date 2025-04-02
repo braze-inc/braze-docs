@@ -19,10 +19,6 @@ Segment Insights shows you how one segment is performing compared to another acr
 
 Go to the **Segment Insights** page of your dashboard, under **Analytics**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Insights**.
-{% endalert %}
-
 ![Segment Insights dashboard.][1]
 
 The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:

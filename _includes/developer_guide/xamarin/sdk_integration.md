@@ -58,7 +58,7 @@ Now that the libraries have been integrated, you have to create an `Braze.xml` f
 {% alert note %}
 Be sure to substitute `YOUR_API_KEY` with the API key located at **Settings** > **API Keys** in the Braze dashboard.
 <br><br>
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find API keys at **Developer Console** > **API Settings**..
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find API keys at **Developer Console** > **API Settings**..
 {% endalert %}
 
 ```xml
@@ -102,7 +102,7 @@ When setting up your Braze instance, add the following snippet to configure your
 {% alert note %}
 Be sure to substitute `YOUR_API_KEY` with the API key located at **Settings** > **API Keys** in the Braze dashboard.
 
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find API keys at **Developer Console** > **API Settings**..
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find API keys at **Developer Console** > **API Settings**..
 {% endalert %}
 
 ```csharp
@@ -119,11 +119,11 @@ See the `App.xaml.cs` file in the [iOS MAUI](https://github.com/braze-inc/braze-
 
 {% tabs %}
 {% tab android %}
-Now you can launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics). For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+Now you can launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics). For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 {% endtab %}
 
 {% tab ios %}
-Now you can launch your application and see sessions being logged to the Braze dashboard. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/).
+Now you can launch your application and see sessions being logged to the Braze dashboard. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift).
 
 {% alert important %}
 Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.

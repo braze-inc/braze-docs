@@ -29,15 +29,11 @@ Some common custom event use cases include:
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
-{% endalert %}
-
 Select the menu next to a custom event for the following actions:
 
 ### Blocklisting
 
-You can blocklist individual custom events through the actions menu, or select and blocklist up to 10 events in bulk. 
+You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
 When you block a custom event:
 
@@ -59,15 +55,11 @@ You can add tags to a custom event after it's created if you have the "Manage Ev
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
 
 ## Exporting data
 
 To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
-
-{% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Logging custom events
 
@@ -75,13 +67,13 @@ Custom events require additional setup. Refer to the list below for documentatio
 
 {% details Expand for documentation by platform %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -110,10 +102,6 @@ The following table shows the filters available for segmenting users by custom e
 ## Analytics
 
 Braze notes the number of times custom events have occurred and the last time they were performed by each user for segmentation. View these analytics by going to **Analytics** > **Custom Events Report**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Custom Events** report under **Data**.
-{% endalert %}
 
 On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlayed on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
 
@@ -214,6 +202,8 @@ Event properties for custom events are updated in real-time for any segment that
 ##### Adding event properties for segmentation
 
 You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+By default, you can have 20 segmentable event properties per workspace. Contact your Braze account manager to increase this limit.
 
 To add event properties for segmentation, do the following:
 

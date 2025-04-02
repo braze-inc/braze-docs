@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [B.Layer](https://blayer.phiture.com) is Phiture's in-app message builder that helps mobile apps' CRM teams to create custom-designed in-app messages simply, rapidly, and without coding. 
 
+_This integration is maintained by B.Layer._
+
+## About the integration
+
 The Braze and B.Layer integration allows you to leverage the B.Layer in-app message builder to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to Braze. This integration does not require additional developer resources, saving you time and budget.
 
 ![][2]
@@ -61,6 +65,7 @@ In Braze, create a custom code in-app message. If you have a ZIP file, drag and 
 With B.Layer, you can log button interactions or text input as a Braze attribute. That can be done within the editor. A popular example is an NPS survey.
 
 B.Layer uses Braze button tracking added to the links you enter (for example, `?button=0`). This way, you can see the button clicks in the analytics part of your campaign.
+
 
 [2]: {% image_buster /assets/img/blayer/blayer2.png %}
 [3]: {% image_buster /assets/img/blayer/blayer3.png %}

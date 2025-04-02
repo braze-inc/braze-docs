@@ -15,10 +15,6 @@ In your Braze dashboard:
 2. Under **Transactional Event Status Postback**, enter the URL where Braze should send status updates for your transactional emails.
 3. Test the postback.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings**.
-{% endalert %}
-
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
 
 ### Postback body

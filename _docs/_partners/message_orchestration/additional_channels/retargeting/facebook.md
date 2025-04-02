@@ -42,10 +42,6 @@ If you are participating in testing Meta Work Accounts in beta, ensure you disco
 
 1. In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. 
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 {: start="2"}
 2. In the Facebook Audience Export module, select **Connect Facebook**. <br><br>![Facebook technology partners page in the Braze platform.][6]{: style="max-width:70%;"}
 

@@ -82,5 +82,5 @@ valid_partner_list:
 - name: Trustpilot
   url: /docs/partners/message_personalization/dynamic_content/trustpilot/
 - name: Constructor
-  url: /docs/_partners/message_personalization/dynamic_content/constructor/
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
 ---

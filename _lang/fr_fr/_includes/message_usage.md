@@ -2,10 +2,6 @@
 
 > Le tableau de bord de l'utilisation des messages fournit des informations en libre-service sur l'utilisation de vos crédits SMS et WhatsApp pour une vue d'ensemble de l'utilisation historique et actuelle par rapport aux attributions contractuelles. Ces informations peuvent réduire votre confusion et vous aider à faire des ajustements pour prévenir les risques de dépassement.
 
-{% alert important %}
-Le tableau de bord de l'envoi de messages est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 Le tableau de bord de l'**utilisation des messages** est divisé en trois sections :
 - [Aperçu de l'utilisation du crédit](#credit-usage-overview)
 - [SMS/MMS](#smsmms) 
@@ -46,7 +42,7 @@ Des filtres sont disponibles pour vous permettre de filtrer par **pays** ou par 
 Contrairement à l'**aperçu de l'utilisation des crédits de messages**, cette section contient les données historiques des périodes contractuelles précédentes. 
 
 {% alert note %}
-Il est possible de sélectionner une plage de dates contenant à la fois des utilisations sans crédits et des utilisations avec crédits de messages. Dans ce cas, la consommation qui s'est produite en dehors des crédits d'envoi de messages affichera `—` (null) dans les colonnes **Rapport de crédit** et **Crédits.** 
+Il est possible de sélectionner une plage de dates qui contient à la fois des utilisations sans crédits et des utilisations avec crédits de messages. Dans ce cas, la consommation qui s'est produite en dehors des crédits d'envoi de messages affichera `—` (null) dans les colonnes **Rapport de crédit** et **Crédits.** 
 {% endalert %}
 
 ![Tableau d'utilisation des crédits SMS/MMS avec des valeurs nulles.][3]{: style="max-width:80%;"}

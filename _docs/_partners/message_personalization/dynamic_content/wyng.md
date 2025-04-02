@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Wyng][0] makes it easy to build interactive digital experiences (that is, quizzes, preference centers, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real-time.
 
+_This integration is maintained by Wyng._
+
+## About the integration
+
 The Braze and Wyng integration allows you to leverage zero-party data earned via Wyng experiences to personalize interactions in Braze Campaigns and Braze Canvas. Wyng can also power a preference center, so consumers can control the data and preferences (including communication preferences) they share with your brand.
 
 ## Prerequisites
@@ -72,6 +76,7 @@ The **View Error** section will show the error code and some additional informat
 ![An example error log shown in the Wyng platform.][16]{: style="max-width:80%;"}
 
 If you have any additional questions, reach out to Wyng support ([support@wyng.com][13]) for assistance.
+
 
 [0]: https://wyng.com/
 [1]: https://wyng.com/dashboard/integrations/

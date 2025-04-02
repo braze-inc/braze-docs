@@ -10,12 +10,12 @@ page_order: 1
 
 # Getting started with Shopify
 
-> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
+> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
 
 ## Integration setup checklist
 
 1. [Implement the Braze Web SDK](#implement-web-sdk)
-2. [Set up Shopify in Braze]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
+2. [Set up Shopify in Braze]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
 3. Test the Shopify integration
 
 ## Implementing the Web SDK on your Shopify website {#implement-web-sdk}
@@ -184,7 +184,7 @@ During the installation process, Braze will check if instances of the Web SDK ar
 
 #### How to enable
 
-To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/). To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
+To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web). To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
 
 With either implementation path, make sure that your Web SDK integration includes the following or the Shopify integration will not be supported: 
 - Web SDK version of v4.0+
@@ -293,7 +293,7 @@ The Braze Shopify ScriptTag integration is incompatible with headless Shopify si
 
 #### How to enable
 
-To directly integrate the Web SDK to your headless Shopify site, refer to [Inital SDK Setup for Web]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/).
+To directly integrate the Web SDK to your headless Shopify site, refer to [Inital SDK Setup for Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web).
 
 Make sure that your Web SDK integration includes the following: 
 - Web SDK version should be v4.0+
@@ -330,7 +330,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 
 1. Randomly assign a unique [user alias]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) for your site visitor upon a new session.
 
-2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/) or [capture user attributes]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email into a Shopify form, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
+2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web) or [capture user attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web). When the user proceeds to checkout and inputs their email into a Shopify form, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
 
 {% raw %}
 ```javascript
