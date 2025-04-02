@@ -13,7 +13,7 @@ tool: Campaigns
 > Las campañas de entrega basadas en acciones o las campañas activadas por eventos son muy eficaces para los mensajes transaccionales o basados en logros. En lugar de enviar su campaña en determinados días, puede hacer que se envíen después de que un usuario complete un determinado evento. 
 
 {% alert important %}
-La entrega basada en acciones no está disponible para los [componentes Canvas con mensajes in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Estos pasos deben programarse.
+La entrega basada en acciones no está disponible para los [componentes Canvas con mensajes in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Estos pasos deben programarse.
 {% endalert %}
 
 ## Crear una campaña activada
