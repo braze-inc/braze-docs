@@ -15,7 +15,7 @@ guide_top_text: "以下の記事には、Braze の Android プッシュ通知専
 guide_featured_title: "セクションの記事"
 guide_featured_list:
 - name: "プッシュプライマーキャンペーン"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "アプリのアイコンをカスタマイズできる"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
