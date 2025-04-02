@@ -19,13 +19,13 @@ search_rank: 3
 
 以下に、購入をログ記録するために使用されるさまざまなプラットフォームでの方法を示します。これらのページには、購入イベントにプロパティと数量を追加する方法に関するドキュメントもあります。これらのプロパティに基づいて、さらにユーザーのターゲットを絞り込むことができます。
 
-- [Android と FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
+- [Android と FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
 
 ## 購入データの表示
 
