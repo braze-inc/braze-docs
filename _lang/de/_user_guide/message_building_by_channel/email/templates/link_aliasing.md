@@ -218,9 +218,9 @@ Wenn ein Inhaltsblock ohne einen `lid` Wert in eine neue Nachricht eingefügt wi
 Für Content-Blöcke empfiehlt Braze die Erstellung von Kopien bestehender Content-Blöcke zur Verwendung in neuen Nachrichten. Dies kann durch Massenvervielfältigung erfolgen, um Szenarien zu vermeiden, in denen Sie auf einen Content-Block verweisen, der in einer neuen Nachricht nicht für Link Aliasing aktiviert wurde.
 {% endalert %}
 
-## Link-Aliasing für über Liquid generierte URLs
+## Link-Aliasing für von Liquid generierte URLs
 
-Für URLs, die durch eine `assign`-Anweisung im HTML oder in einem Content-Block erzeugt werden, empfehlen wir, ein Fragezeichen (?) in den Anker-Tag einzufügen. Dies hilft Braze, Abfrageparameter anzuhängen (`lid = somevalue`), damit Link Aliasing richtig funktioniert. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt das Link-Aliasing diese URLs nicht.
+Bei URLs, die durch eine `assign` -Anweisung im HTML oder in einem Content-Block generiert werden, müssen Sie dem Anker-Tag ein Fragezeichen (`?`) hinzufügen. Dies erlaubt Braze das Anhängen von Abfrageparametern (`lid = somevalue`), so dass Link-Aliasing richtig funktionieren kann. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt Link-Aliasing diese URLs nicht und die Link-Templates können nicht angewendet werden.
 
 ### Beispiel
 
