@@ -1,5 +1,7 @@
 ---
-nav\_title:ドキュメントのフィードバックパーマリンク: /feedback/hide\_toc: true
+nav_title: ドキュメントのフィードバック
+permalink: /feedback/
+hide_toc: true
 ---
 
 <fieldset style="margin-top: 60px;">
