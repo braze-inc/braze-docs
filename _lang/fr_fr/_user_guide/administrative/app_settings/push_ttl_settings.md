@@ -10,20 +10,33 @@ channel: push
 
 # Paramètres TTL (Durée de vie) de notification push
 
-> Découvrez la page de paramètres Durée de vie des notifications push dans le tableau de bord de Braze.
+> Découvrez la page de paramètres Push Time to Live dans le tableau de bord de Braze.
 
-La page **TTL (Time-To-Live) Push** vous permet de contrôler la durée des tentatives de réception/distribution pour les appareils hors ligne. Cela signifie que si l’appareil d’un utilisateur est hors ligne lorsque votre campagne est en cours de diffusion, Braze tente de transmettre le message jusqu’à l’heure définie.
+## Qu'est-ce que le TTL notifications push ?
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Paramètres** > **Gérer les paramètres** > **Paramètres de durée de vie des notifications push**.
-{% endalert %}
+Push Time to Live (TTL) contrôle la durée pendant laquelle Braze tentera de délivrer une notification push aux appareils qui sont hors ligne au moment de l'envoi de la campagne. Si un appareil se reconnecte après l'expiration du TTL, le message ne sera pas envoyé. Ce paramètre ne supprime pas une notification si elle a déjà été reçue par l'appareil de l'utilisateur. Il contrôle uniquement la durée pendant laquelle le fournisseur push tente de délivrer une notification.
 
-Cette fonctionnalité ne supprimera pas une notification de réception par l’appareil de l’utilisateur ; il ne contrôlera que la durée pendant laquelle le fournisseur de notification push tentera d’envoyer une notification.
+## Réglage des valeurs TTL push push par défaut
+
+Par défaut, Braze définit le TTL des notifications push au maximum pour chaque service d'envoi de messages push. 
+
+| Service d'envoi de messages en mode push | Maximum TTL |
+| --- | --- |
+| Web (par le biais des services FCM ou Web Push) | 28 jours |
+| Firebase Cloud Messaging (FCM) | 28 jours |
+| Kindle (ADM) | 31 jours |
+| Huawei (HMS) | 15 jours |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Ces paramètres généraux s'appliquent à toutes les campagnes push, sauf si un TTL différent est défini pour un message spécifique. Pour ajuster le TTL d'un message, reportez-vous à la section [Paramètres avancés de la campagne.]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#ttl)
+
+Pour définir un autre TTL des notifications push par défaut :
+
+1. Allez dans **Paramètres** > **Gérer les paramètres** > **Paramètres TTL push**.
+2. Pour chaque plateforme Android, définissez une valeur de durée en ligne/instantanée par défaut. Vous pouvez définir des incréments plus petits, comme les heures ou les secondes, pour un contrôle plus précis.
+3. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
 ![Onglet Paramètres de durée de vie (TTL) des notifications push sous Gérer les paramètres][1]
 
-{% alert tip %}
-N'oubliez pas de cliquer sur **Enregistrer** avant de quitter la page !
-{% endalert %}
 
 [1]: {% image_buster /assets/img/push_ttl.png %}
