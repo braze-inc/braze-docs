@@ -52,7 +52,7 @@ Por exemplo, uma empresa com sede em Londres que envia uma campanha às 12h atin
 
 Braze determinará automaticamente o fuso horário de um usuário a partir de seu dispositivo. Isso garante a precisão do fuso horário e a cobertura total de seus usuários. Os usuários criados através da API de Usuário ou de outra forma sem um fuso horário terão o fuso horário da sua empresa como seu fuso horário padrão até serem reconhecidos em seu app pelo SDK. 
 
-Você pode verificar o fuso horário da sua empresa nas [configurações da empresa]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) no dashboard.
+Você pode verificar o fuso horário da sua empresa nas [configurações da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) no dashboard.
 
 ### Quando a Braze avalia os usuários para a entrega no fuso local?
 
