@@ -1,6 +1,7 @@
 ---
 nav_title: メッセージエンゲージメントイベント
 layout: message_engagement_events_glossary
+alias: /message_events_glossary/
 page_order: 5
 excerpt_separator: ""
 page_type: glossary
@@ -3089,7 +3090,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 - `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
   {% endapi %}
@@ -3317,7 +3318,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
@@ -3486,7 +3487,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
@@ -5470,6 +5471,10 @@ Abort, Push
 
 このイベントは、ユーザーがアプリ内メッセージを表示したときに発生します。
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -5695,7 +5700,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
@@ -5708,6 +5713,10 @@ Abort, Push
 {% endapitags %}
 
 このイベントは、ユーザーがアプリ内メッセージをクリックしたときに発生します。
+
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -5930,7 +5939,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
@@ -6134,6 +6143,10 @@ Webhook、送信
 
 このイベントは、コンテンツカードがユーザーに送信されたときに発生します。
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6328,6 +6341,10 @@ Webhook、送信
 
 このイベントは、ユーザーがコンテンツカードを表示したときに発生します。
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6544,7 +6561,7 @@ Webhook、送信
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
@@ -6557,6 +6574,10 @@ Webhook、送信
 
 このイベントは、ユーザーがコンテンツカードをクリックしたときに発生します。
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6773,7 +6794,7 @@ Webhook、送信
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
@@ -6787,6 +6808,10 @@ Webhook、送信
 
 このイベントは、ユーザーがコンテンツカードを却下したときに発生します。
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -7003,7 +7028,7 @@ Webhook、送信
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
@@ -8643,6 +8668,10 @@ FeatureFlags, インプレッション
 コンバージョンイベントは `conversion_behavior` フィールドにエンコードされ、コンバージョンイベントのタイプ、ウィンドウ (期間)、およびコンバージョンイベントのタイプに応じた追加情報が含まれます。`conversion_behavior_index` フィールドは、0 = A、1 = B、2 = C、3 = D のように、どのコンバージョンイベントかを表します。
 {% endalert %}
 
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9308,6 +9337,10 @@ FeatureFlags, インプレッション
 {% endapitags %}
 
 このイベントは、複数のバリアントを持つキャンペーンに設定されたコントロールバリアントに、ユーザーが登録したときに発生します。このイベントは、このユーザーのチャネル送信イベントがないために生成されます。
+
+{% alert note %}
+`dispatch_id` は非推奨であり、次の Currents リリースでは削除されます。
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
