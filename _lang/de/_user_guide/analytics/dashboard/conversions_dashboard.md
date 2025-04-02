@@ -111,5 +111,5 @@ Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> 
 
 | Begriff | Definition |
 | --- | --- |
-| Berühren | Eine physische Interaktion oder ein Touchpoint mit einer Nachricht.<br><br>Zu den Berührungen können gehören:<br>{::nomarkdown}<ul><li>E-Mail-Klick</li><li>Push-Öffnung</li><li>Contend-Card-Klick</li><li>In-App-Nachricht-Klick</li><li>SMS-Zustellung</li></ul>{:/} |
+| Berühren | Eine physische Interaktion oder ein Touchpoint mit einer Nachricht.<br><br>Zu den Berührungen können gehören:<br>{::nomarkdown}<ul><li>E-Mail-Klick</li><li>Push-Öffnung</li><li>Contend-Card-Klick</li><li>In-App-Nachricht-Klick</li><li>SMS Klick</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
