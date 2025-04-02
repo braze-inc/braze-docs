@@ -61,7 +61,7 @@ Em alguns casos, um usuário pode potencialmente receber várias mensagens ao pa
 
 ### Criar um grupo interno
 
-Em vez de criar usuários de teste individuais, é possível criar um [Grupo de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), que é um grupo interno cuja finalidade é revisar o conteúdo da sua mensagem. Isso inclui um grupo de usuários que receberão mensagens de teste de campanhas e Canvas. Em seguida, você pode adicionar esse grupo de teste no campo **Add Content Test Groups (Adicionar grupos de teste de conteúdo** ) em **Test Recipients (Destinatários de teste**).
+Em vez de criar usuários de teste individuais, é possível criar um [Grupo de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que é um grupo interno cuja finalidade é revisar o conteúdo da sua mensagem. Isso inclui um grupo de usuários que receberão mensagens de teste de campanhas e Canvas. Em seguida, você pode adicionar esse grupo de teste no campo **Add Content Test Groups (Adicionar grupos de teste de conteúdo** ) em **Test Recipients (Destinatários de teste**).
 
 ### Reduzir as postergações
 
