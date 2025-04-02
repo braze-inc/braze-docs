@@ -12,7 +12,7 @@ channel:
 
 # HTML 이메일 템플릿 업로드 중
 
-> Braze 대시보드는 사용자가 직접 HTML 이메일 템플릿을 업로드하고 캠페인에서 나중에 사용할 수 있도록 저장할 수 있게 해줍니다. 편집기를 사용하여 [이메일 템플릿을 만들]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) 수도 있습니다.
+> Braze 대시보드는 사용자가 직접 HTML 이메일 템플릿을 업로드하고 캠페인에서 나중에 사용할 수 있도록 저장할 수 있게 해줍니다. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) using our editor.
 
 ## 필수 조건 {#upload-requirements}
 
@@ -72,7 +72,7 @@ API 캠페인에 이메일을 사용하려면 `email_template_id`가 필요하�
 
 ## 이메일 템플릿 관리
 
-이메일 템플릿을 [복제]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/)하고 [보관]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)할 수 있습니다! [템플릿]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) email templates! [템플릿]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
 ## 자주 묻는 질문
 
