@@ -36,7 +36,7 @@ También puedes elegir crear una recomendación directamente desde un catálogo 
 
 Dale a tu recomendación un nombre y una descripción opcional.
 
-![][1]
+![Paso "Detalles de la recomendación" con los campos nombre y descripción.][1]
 
 ### Paso 2: Define tu recomendación {#recommendation-type}
 
@@ -55,7 +55,7 @@ Al utilizar **Más recientes** o **AI personalizada**, los usuarios con datos in
 
 Para evitar sugerir artículos que un usuario ya haya comprado o con los que ya haya interactuado, selecciona **No recomendar artículos con los que los usuarios hayan interactuado previamente**. Esta opción sólo está disponible cuando el **Tipo de** recomendación está configurado como **AI Personalizado**.
 
-![][2-3]
+![Paso "Define tu recomendación" con "Más populares" como tipo y la opción "No recomendar artículos con los que los usuarios hayan interactuado previamente" seleccionada.][2-3]
 
 Esta configuración impide que la mensajería reutilice los artículos que un usuario ya ha comprado o con los que ya ha interactuado, siempre que la recomendación se haya actualizado recientemente. Los artículos comprados o con los que se haya interactuado entre las actualizaciones de las recomendaciones pueden seguir apareciendo. En la versión gratuita de las recomendaciones de artículos, las actualizaciones son semanales. Para la versión pro de las recomendaciones de elementos de IA, las actualizaciones se producen cada 24 horas.
 
@@ -69,7 +69,7 @@ Si aún no está rellenado, selecciona el [catálogo][catálogo] del que esta re
 
 Si quieres tener más control sobre tu recomendación, elige una [selección]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para aplicar filtros personalizados. Las selecciones filtran las recomendaciones por columnas específicas de tu catálogo, como marca, tamaño o ubicación. Las selecciones que contienen Liquid no pueden utilizarse en tu recomendación.
 
-![][2-2]
+![Un ejemplo de la selección "en stock" seleccionada para la recomendación.][2-2]
 
 {% alert tip %}
 Si no puedes encontrar tu selección, asegúrate de que esté configurada en tu catálogo.
@@ -87,7 +87,7 @@ Puedes optimizar para:
 
 Si eliges **Evento personalizado**, selecciona tu evento de la lista.
 
-![][3]
+![El evento personalizado "Compra finalizada" seleccionado es la forma en que se realiza actualmente el seguimiento de los eventos.][3]
 
 ### Paso 4: Elige el nombre de la propiedad correspondiente {#property-name}
 
@@ -97,7 +97,7 @@ Selecciona este campo para el **Nombre de la propiedad**.
 
 El campo **Nombre de propiedad** se rellenará previamente con una lista de campos enviados a través del SDK a Braze. Si se proporcionan datos suficientes, estas propiedades también se clasificarán por orden de probabilidad de ser la propiedad correcta. Selecciona la que corresponda al campo `id` del catálogo.
 
-![][4]
+![El nombre de la propiedad "purchase_item" seleccionada que corresponde a los ID de artículo del catálogo.][4]
 
 #### Requisitos {#requirements}
 
@@ -302,7 +302,7 @@ Puedes consultar los análisis de tu recomendación para ver qué artículos se 
 
 En la parte superior de la página, puedes encontrar estadísticas sobre tu recomendación, como la precisión y la cobertura.
 
-![][5]
+![Métricas de audiencia de las recomendaciones que muestran la precisión (21,1%), la cobertura (83,0%) y los tipos de recomendación divididos entre artículos personalizados y más populares.][5]
 
 Estas métricas se definen en la tabla siguiente. 
 
@@ -318,15 +318,15 @@ La siguiente sección muestra un desglose de los elementos del catálogo, dividi
 - **Artículos personalizados** o **Artículos más recientes:** Esta columna enumera cada artículo del catálogo en orden descendente de los más recomendados a los usuarios. Esta columna también muestra a cuántos usuarios asignó el modelo cada elemento.
 - **Artículos más populares:** Esta columna enumera cada artículo del catálogo en orden descendente de popularidad. La popularidad aquí se refiere a los elementos del catálogo con los que los usuarios interactúan más a menudo en todo el espacio de trabajo. El más popular se utiliza como alternativa cuando no se puede calcular el personalizado o el más reciente para un usuario individual.
 
-![][6]
+![Tablas contiguas que enumeran los elementos asignados a los usuarios, separados por recomendaciones personalizadas y recomendaciones más populares.][6]
 
 El **resumen de recomendaciones** muestra un resumen de la configuración de recomendaciones elegida, incluyendo cuándo se actualizó la recomendación por última vez.
 
-![][7]{: style="max-width:45%" }
+![Tabla resumen de recomendaciones que muestra el tipo, el catálogo, el tipo de evento, el nombre del evento personalizado, el nombre de la propiedad y la última fecha de actualización.][7]{: style="max-width:45%" }
 
 ## Utilizar recomendaciones en mensajería
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+![Modalidad "Añadir personalización" con la recomendación de artículos como tipo de personalización.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Después de que tu recomendación termine de formarse, puedes personalizar tus mensajes con Liquid para insertar los productos más populares de ese catálogo. El Liquid puede ser generado para ti por la ventana de personalización que se encuentra en los creadores de mensajes:
 
@@ -361,6 +361,10 @@ Esto ocurre en algunas condiciones específicas:
 - El modelo encuentra menos de 30 artículos que coinciden con tus criterios.
 - Los artículos relevantes ya no están disponibles o en stock.
 - Los artículos no cumplen los criterios de selección actuales, quizás debido a un cambio en las existencias o a las preferencias del usuario.
+
+### ¿Las recomendaciones existentes se entrenan semanalmente después de actualizar a Recomendaciones de Artículos Pro?
+
+No, las recomendaciones existentes no se actualizarán automáticamente para entrenar semanalmente o predecir diariamente tras la actualización. Puedes comprobar los próximos tiempos de entrenamiento y predicción en la sección **Recomendación** seleccionando una recomendación. Para actualizar los horarios, te sugerimos que vuelvas a crear tus recomendaciones.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
