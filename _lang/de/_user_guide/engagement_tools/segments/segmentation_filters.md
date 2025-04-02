@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segmentzugehörigkeit
-    description: "Ermöglicht es Ihnen, überall dort, wo Filter verwendet werden (z. B. Segmente, Kampagnen und andere), nach der Segmentzugehörigkeit zu filtern und mehrere verschiedene Segmente innerhalb einer Kampagne anzusprechen. <br><br>Beachten Sie, dass Segmente, die diesen Filter bereits verwenden, nicht weiter einbezogen oder in andere Segmente verschachtelt werden können. Sie müssen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu erstellen."
+    description: "Ermöglicht es Ihnen, überall dort, wo Filter verwendet werden (z. B. Segmente, Kampagnen und andere), nach der Segmentzugehörigkeit zu filtern und mehrere verschiedene Segmente innerhalb einer Kampagne anzusprechen. <br><br>Beachten Sie, dass Segmente, die diesen Filter bereits verwenden, nicht weiter in andere Segmente eingeschlossen oder verschachtelt werden können, da dies zu einem Zyklus führen kann, bei dem Segment A Segment B einschließt, das dann wiederum versucht, Segment A einzuschließen. In diesem Fall würde das Segment immer wieder auf sich selbst verweisen, so dass es unmöglich wäre, zu berechnen, wer tatsächlich dazugehört. Außerdem wird die Verschachtelung von Segmenten auf diese Weise komplizierter und kann die Arbeit verlangsamen. Erstellen Sie stattdessen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu."
     tags:
       - Segment or CSV membership
   - name: Braze-Segmenterweiterungen
