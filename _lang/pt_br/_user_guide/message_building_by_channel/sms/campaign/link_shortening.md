@@ -19,7 +19,7 @@ O encurtamento de links e o rastreamento de cliques podem ser ativados no [níve
 
 O comprimento do URL é determinado pelo tipo de rastreamento que está ativado:
 - **O rastreamento básico** ativa o rastreamento de cliques no nível da campanha. Os URLs estáticos terão um comprimento de 20 caracteres e os URLs dinâmicos terão um comprimento de 25 caracteres.
-- **O rastreamento avançado ativa** o rastreamento de cliques no nível da campanha e do usuário. Os cliques também gerarão um [evento de clique por SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) enviado pelo Currents. Os URLs estáticos com rastreamento avançado terão um comprimento de 27 a 28 caracteres, o que permite criar segmentos de usuários que clicaram nos URLs. Para URLs dinâmicos, eles terão um comprimento de 32 a 33 caracteres.
+- **O rastreamento avançado ativa** o rastreamento de cliques no nível da campanha e do usuário. Os cliques também gerarão um [evento de clique por SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) enviado pelo Currents. Os URLs estáticos com rastreamento avançado terão um comprimento de 27 a 28 caracteres, o que permite criar segmentos de usuários que clicaram nos URLs. Para URLs dinâmicos, eles terão um comprimento de 32 a 33 caracteres.
 
 Os links serão encurtados usando nosso domínio curto compartilhado (`brz.ai`). Um exemplo de URL pode ter a seguinte aparência: `https://brz.ai/8jshX` (básico, estático) ou `https://brz.ai/8jshX/2dj8d` (avançado, dinâmico). Para saber mais, consulte [Testes](#testing).
 
