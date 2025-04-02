@@ -48,7 +48,7 @@ Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous s
 
 Les balises peuvent être un outil organisationnel utile pour suivre les tactiques d’engagement. Vous pouvez lier des segments et des campagnes à des objectifs commerciaux, à des étapes d’entonnoir et autres.
 
-Voici un exemple d'étiquettes qu'une application de commerce électronique pourrait trouver utiles :
+Voici un exemple de balises que l’application Ecommerce peut trouver utile :
 
 <style>
 table td {
