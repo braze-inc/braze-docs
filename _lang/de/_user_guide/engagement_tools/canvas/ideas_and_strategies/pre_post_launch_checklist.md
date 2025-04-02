@@ -39,7 +39,13 @@ Wenn Sie feststellen, dass Ihre Zielgruppe kleiner ist als erwartet, versuchen S
 
 ### Entry-Einstellungen und Race-Condition identifizieren
 
-Eine Race-Condition kann auftreten, wenn Sie in den Einstellungen für den**Entry-Zeitplan** und die **Zielgruppe** dieselben Entry-Kriterien verwendet haben. Wenn Sie eine aktionsbasierte Entry verwenden, stellen Sie sicher, dass Sie hier nicht dieselbe Trigger-Aktion wie bei Ihrer Zielgruppe verwendet haben. Es kann eine Race-Condition auftreten, bei der der oder die Nutzer:in zum Zeitpunkt der Ausführung des Trigger-Events nicht in der Zielgruppe ist, was bedeutet, dass er oder sie das Canvas nicht aufrufen wird.
+Eine Race-Condition kann auftreten, wenn Sie in den Einstellungen für den**Entry-Zeitplan** und die **Zielgruppe** dieselben Entry-Kriterien verwendet haben. 
+
+Wenn Sie eine aktionsbasierte Entry verwenden, stellen Sie sicher, dass Sie hier nicht dieselbe Trigger-Aktion wie bei Ihrer Zielgruppe verwendet haben. Es kann eine Race-Condition auftreten, bei der der oder die Nutzer:in zum Zeitpunkt der Ausführung des Trigger-Events nicht in der Zielgruppe ist, was bedeutet, dass er oder sie das Canvas nicht aufrufen wird.
+
+{% alert tip %}
+Informieren Sie sich über die [besten Methoden]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) zur Vermeidung dieser Race-Condition, wenn Sie ein aktionsbasiertes Canvas mit demselben Trigger wie der Zielgruppen-Filter einrichten.
+{% endalert %}
 
 ### Prüfen Sie die Eigenschaften von Canvas-Einträgen und Ereignissen
 
@@ -97,7 +103,7 @@ Als Nächstes ist es wichtig, die Einstellungen zu ermitteln, die beeinflussen k
 - Ruhezeiten
 - Zustellungsvalidierungen
 
-Im Allgemeinen wählen Sie für Ihren Canvas entweder Intelligent Timing oder Quiet Hours, nicht beides. Es gilt der gleiche Vorschlag, entweder Intelligent Timing oder [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) zu verwenden, nicht beides. Weitere Informationen darüber, wie Sie die Intelligence Suite am besten nutzen, finden Sie in unseren [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/).
+Im Allgemeinen wählen Sie für Ihren Canvas entweder Intelligent Timing oder Quiet Hours, nicht beides. Es gilt der gleiche Vorschlag, entweder Intelligent Timing oder [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) zu verwenden, nicht beides. Weitere Informationen darüber, wie Sie die Intelligence Suite am besten nutzen, finden Sie in unseren [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Verdächtiges Sendevolumen zwischen Pfaden
 
