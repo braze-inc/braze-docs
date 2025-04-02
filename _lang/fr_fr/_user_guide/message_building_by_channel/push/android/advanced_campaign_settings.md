@@ -24,11 +24,33 @@ Pour attribuer un ID de notification, accédez à la page de composition du push
 
 ![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
 
-## Durée en ligne/en vie (TTL) {#ttl}
+## TTL (Durée de vie) {#ttl}
 
-Le champ de la durée en vie (TTL) vous permet de définir une durée personnalisée de stockage des messages avec le service de messagerie push. Les valeurs par défaut de la durée de vie sont de 4 semaines pour Firebase Cloud Messaging (FCM) et de 31 jours pour Amazon Device Messaging (ADM).
+Le champ **Durée en vie** vous permet de définir une durée personnalisée de stockage des messages avec le service de production/instantané. Si l'appareil reste hors ligne au-delà du TTL, le message expirera et ne sera pas délivré.
 
-Par exemple, supposons que votre application soit un jeu et que vous offrez à vos utilisateurs un bonus de monnaie du jeu s’ils maintiennent une habitude de jouer au jeu quotidiennement. Vous pourriez envoyer une notification push pour signaler à un utilisateur que cette série de connexions risque d’être brisée s’il a dépassé un certain nombre de jours. Cependant, si un utilisateur devait reconnecter son appareil à l’application de jeu 4 semaines plus tard avec la durée de vie réglée sur la valeur par défaut, alors ces messages auraient déjà expiré dans le service de messagerie et ne seraient pas livrés.
+Pour modifier la durée en vie de votre push Android, accédez au compositeur et sélectionnez l'onglet **Paramètres**. Recherchez le champ **Durée en vie** et saisissez une valeur en jours, heures ou secondes.
+
+Les valeurs par défaut de la durée en vie sont définies par votre administrateur sur la page [Paramètres TTL des notifications push.]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/)  Par défaut, Braze définit le TTL des notifications push à la valeur maximale pour chaque service d'envoi de messages. Bien que les paramètres généraux TTL s'appliquent globalement, vous pouvez les modifier au niveau du message lors de la création de la campagne. Ceci est utile lorsque différentes campagnes nécessitent des urgences ou des fenêtres de réception/distribution différentes.
+
+Par exemple, supposons que votre application organise un concours hebdomadaire de jeux-questionnaires. Vous envoyez une notification push une heure avant qu'elle ne commence. En fixant le TTL à 1 heure, vous vous assurez que les utilisateurs qui ouvrent l'application après le début du concours ne recevront pas de notification concernant un événement qui a déjà commencé.
+
+{% details Meilleures pratiques %}
+
+#### Quand utiliser un TTL plus court ?
+
+Des TTL plus courts permettent de s'assurer que les utilisateurs reçoivent des notifications en temps voulu pour des événements ou des promotions qui perdent rapidement de leur pertinence. Par exemple :
+
+- **pour la vente au détail** Envoi d'une notification push pour une vente flash qui se termine dans 2 heures (TTL : 1-2 heures)
+- **Réception/distribution de nourriture :** Notifier les utilisateurs lorsque leur commande est proche (TTL : 10-15 minutes)
+- **Applications de transport :** Partage de mises à jour sur l'arrivée des véhicules (TTL : quelques minutes)
+- **Rappels d'événements :** Notifier les utilisateurs lorsqu'un webinaire commence bientôt (TTL : moins d'une heure)
+
+#### Quand éviter un TTL plus court ?
+
+- Si le message de votre campagne reste pertinent pendant plusieurs jours ou semaines, comme les rappels de renouvellement d'abonnement ou les promotions en cours.
+- Lorsque maximiser la portée est plus important que l'urgence, comme pour les annonces de mises à jour d'applis ou les promotions de fonctionnalités.
+
+{% enddetails %}
 
 ## Priorité de livraison de messagerie Firebase {#fcm-priority}
 
