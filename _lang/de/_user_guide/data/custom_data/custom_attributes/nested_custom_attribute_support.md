@@ -122,6 +122,10 @@ Um ein angepasstes Attribut-Objekt zu löschen, senden Sie einen POST an `users/
 }
 ```
 
+{% alert note %}
+Dieser Ansatz kann nicht verwendet werden, um einen verschachtelten Schlüssel innerhalb eines [Arrays von Objekten]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects) zu löschen.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -441,7 +445,7 @@ Wenn die Daten nach der Neugenerierung des Schemas nicht wie erwartet angezeigt 
 
 ## Datenpunkte
 
-Jeder Schlüssel, der aktualisiert wird, verbraucht einen Datenpunkt. Zum Beispiel zählt dieses Objekt, das im Nutzerprofil initialisiert wurde, sieben (7) Datenpunkte:
+Jeder Schlüssel, der gesendet wird, verbraucht einen Datenpunkt. Zum Beispiel zählt dieses Objekt, das im Nutzerprofil initialisiert wurde, sieben (7) Datenpunkte:
 
 ```json
 {
