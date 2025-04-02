@@ -33,7 +33,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 ### ブロックリスト
 
-カスタム属性は、アクションメニューに個別にブロックリストすることも、最大10個の属性を選択して一括でブロックリストすることもできます。カスタム属性をブロックすると、その属性に関するデータは収集されず、既存のデータは再アクティブ化しない限り利用できなくなります。また、禁止リストに追加された属性はフィルターやグラフに表示されません。さらに、この属性が現在、Brazeダッシュボードの他の領域のフィルタまたはトリガによって参照されている場合、その属性を参照するフィルタまたはトリガのすべてのインスタンスが削除され、アーカイブされることを示す警告モードが表示されます。
+カスタム属性は、アクションメニューに個別にブロックリストすることも、最大100 個の属性を選択して一括でブロックリストすることもできます。カスタム属性をブロックすると、その属性に関するデータは収集されず、既存のデータは再アクティブ化しない限り利用できなくなります。また、禁止リストに追加された属性はフィルターやグラフに表示されません。さらに、この属性が現在、Brazeダッシュボードの他の領域のフィルタまたはトリガによって参照されている場合、その属性を参照するフィルタまたはトリガのすべてのインスタンスが削除され、アーカイブされることを示す警告モードが表示されます。
 
 ### 個人識別情報(PII)としてのマーキング
 
@@ -58,7 +58,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 使用状況レポートは、特定のカスタム属性を使用しているすべてのキャンバス、キャンペーン、およびセグメントを一覧表示する。このリストには、Liquid の使用状況は含まれていません。 
 
-各カスタム属性の横にあるチェックボックスを選択し、「**使用状況レポートを表示**」を選択することで、一度に最大10件の使用状況レポートを表示することができる。
+各カスタム属性の横にあるチェックボックスを選択し、**使用状況レポートの表示**を選択すると、一度に最大100件の使用状況レポートを表示できます。
 
 ### データのエクスポート
 
@@ -70,13 +70,13 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 {% details プラットフォーム別のドキュメントの拡張 %}
 
-- [Android と FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android と FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
 
 {% enddetails %}
 
