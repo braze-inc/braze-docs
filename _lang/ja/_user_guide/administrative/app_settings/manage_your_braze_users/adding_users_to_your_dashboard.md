@@ -59,6 +59,10 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 
 ![ユーザー詳細の編集時にユーザーを一時停止する。][5]
 
+## ユーザーアクセスと責任の割り当て
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Braze ユーザーの削除
 
 ユーザーを削除するには、**「Settings（設定）**」＞「**Company Users（会社ユーザー）**」と進み、ユーザー名を見つけ、「<i class="fa fa-trash-can"></i> **Delete user（ユーザーを削除）**」を選択する。
