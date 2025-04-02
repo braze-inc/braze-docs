@@ -13,7 +13,7 @@ channel:
 
 > Las notificaciones push son magníficas para las llamadas a la acción urgentes, así como para volver a atraer a los usuarios que hace tiempo que no entran en la aplicación. Las campañas push exitosas llevan al usuario directamente al contenido y demuestran el valor de su aplicación.
 
-Tenga en cuenta que los usuarios deben optar por recibir notificaciones push para recibir sus mensajes, lo que significa que es una buena idea utilizar mensajes dentro de la aplicación para explicar a sus clientes por qué desea enviarles notificaciones push y en qué les beneficiará activarlas. Este proceso se llama [preparación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
+Tenga en cuenta que los usuarios deben optar por recibir notificaciones push para recibir sus mensajes, lo que significa que es una buena idea utilizar mensajes dentro de la aplicación para explicar a sus clientes por qué desea enviarles notificaciones push y en qué les beneficiará activarlas. Este proceso se llama [preparación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 ![Ejemplo de mensaje push en los productos Apple.][1]{: height="400px"}  ![Ejemplo de mensaje push de Cronómetro en una pantalla de inicio de iPhone que dice: "¡Hola! Esto es un push de iOS".][2]{: height="400px"}
 
@@ -37,9 +37,9 @@ Para más información sobre la reactivación de la interacción de los usuarios
 
 Antes de poder crear y enviar mensajes push con Braze, debe trabajar con sus desarrolladores para integrar la función push en su sitio web o aplicación. Para conocer los pasos detallados, consulta nuestras guías de integración para cada plataforma:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
 
 ## Normativa sobre mensajes push
 
