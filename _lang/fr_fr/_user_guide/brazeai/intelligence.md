@@ -36,7 +36,7 @@ guide_menu_list:
 
 La suite Intelligence offre des fonctionnalités puissantes pour analyser l'historique des utilisateurs et les performances des campagnes et des Canvas, puis procéder à des ajustements automatiques pour augmenter l'engagement, l'audience et les conversions. Pour quelques exemples de la manière dont ces fonctionnalités peuvent bénéficier à différents secteurs, consultez les cas d'utilisation ci-dessous.
 
-### E-commerce
+### eCommerce
 
 - **Ventes flash :** Utilisez le [filtre Canal intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) pour étudier l'historique des utilisateurs afin d'identifier ceux qui sont plus réactifs aux notifications push qu'aux e-mails, puis envoyez des notifications push et des e-mails aux utilisateurs concernés. En option, sélectionnez un canal spécifique pour les utilisateurs qui ne disposent pas de suffisamment de données pour déterminer leur canal préféré.
 - **Bannières promotionnelles :** Utilisez la [sélection intelligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) pour analyser les performances de différentes bannières promotionnelles dans une campagne récurrente, puis sélectionnez et envoyez automatiquement la bannière qui génère les taux de clics les plus élevés.
