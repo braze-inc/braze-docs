@@ -36,14 +36,14 @@ Braze는 [커스텀 바닥글]({{site.baseurl}}/user_guide/message_building_by_c
 사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 의미합니다.
 
 {% alert tip %}
-[IP 온난화]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) 모범 사례를 참조하여 사용자를 효과적으로 다시 참여시키는 방법에 대한 지침을 확인하세요.
+Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
 {% endalert %}
 
 ### 반송 및 유효하지 않은 이메일
 
 {% multi_lang_include metrics.md metric='하드 바운스' %} {% multi_lang_include metrics.md metric='소프트 바운스' %} 
 
-해당 사용자의 이메일 주소가 변경되면 새 이메일이 유효할 수 있으므로 이메일 전송을 재개합니다. 소프트 바운스는 72시간 동안 자동으로 재시도됩니다.
+When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. 해당 사용자의 이메일 주소가 변경되면 새 이메일이 유효할 수 있으므로 이메일 전송을 재개합니다. 소프트 바운스는 72시간 동안 자동으로 재시도됩니다.
 
 ### 이메일 구독 상태 업데이트하기
 
@@ -55,12 +55,12 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 
 #### REST API
 
-`/users/track` 엔드포인트][사용자 트랙]을 사용하여 지정된 사용자에 대한 [`email_subscribe`][user_attributes_object] 속성을 업데이트합니다.
+Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the [`email_subscribe` attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object) for a given user.
 
 #### 사용자 프로필
 
 1. **사용자 검색**을 통해 사용자를 찾습니다. 
-2. **참여** 탭에서 **구독 취소**, **구독** 또는 **옵트인** 버튼을 클릭하여 해당 사용자의 구독 상태를 변경합니다. 
+2. Under the **Engagement** tab, select the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. 
 
 가능한 경우 고객 프로필에는 사용자의 구독이 마지막으로 변경된 시점의 타임스탬프도 표시됩니다.
 
@@ -70,14 +70,14 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 
 ### 이메일 구독 상태 확인
 
-![이메일 구독 상태가 구독됨으로 설정된 신원미상의 고객 프로필입니다.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze에서 사용자의 이메일 구독 상태를 확인할 수 있는 방법은 두 가지가 있습니다:
 
-1. **REST API 내보내기:** 세그먼트로 사용자 내보내기][세그먼트] 또는 [식별자로 사용자 내보내기][식별자] 엔드포인트를 사용하여 개별 고객 프로필을 JSON 형식으로 내보낼 수 있습니다.
-2. **사용자 프로필:** 사용자 검색][5] 페이지]에서 사용자의 프로필을 찾은 다음 **참여** 탭을 선택하여 사용자의 구독 상태를 확인하고 수동으로 업데이트합니다.
+1. **REST API 내보내기:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
+2. **사용자 프로필:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state. 
 
-사용자가 이메일 주소를 업데이트하면 업데이트된 이메일 주소가 Braze 워크스페이스의 다른 곳에 이미 존재하지 않는 한 구독 상태가 구독됨으로 설정됩니다. 세그먼트로 사용자 내보내기][세그먼트] 또는 [식별자로 사용자 내보내기][식별자] 엔드포인트를 사용하여 개별 고객 프로필을 JSON 형식으로 내보낼 수 있습니다.
+사용자가 이메일 주소를 업데이트하면 업데이트된 이메일 주소가 Braze 워크스페이스의 다른 곳에 이미 존재하지 않는 한 구독 상태가 구독됨으로 설정됩니다.
 
 ## 구독 그룹
 
@@ -85,59 +85,66 @@ Braze에서 사용자의 이메일 구독 상태를 확인할 수 있는 방법�
 
 예를 들어 여러 카테고리의 이메일 캠페인(프로모션, 뉴스레터 또는 제품 업데이트)을 발송한다고 가정해 보겠습니다. 이 경우 [이메일 환경설정 센터](#email-preference-center)를 사용하여 구독 그룹을 사용하여 고객이 단일 페이지에서 일괄적으로 구독 또는 수신 거부할 이메일 카테고리를 선택하도록 할 수 있습니다. 또는 구독 그룹을 사용하여 일별, 주별 또는 월별 이메일에 대한 구독 그룹을 만들어 고객이 이메일 수신 빈도를 선택할 수 있도록 할 수도 있습니다.
 
-구독 그룹 엔드포인트][25]를 사용하여 Braze 대시보드에 저장한 구독 그룹을 프로그래밍 방식으로 관리하여 **구독 그룹** 페이지로 이동합니다.
+Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscription_groups) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
 ### 구독 그룹 만들기
 
 1. **오디언스** > **구독**으로 이동합니다.
 
 {% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 이 페이지는 **사용자** > **구독 그룹**에 있습니다.
+If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
 {% endalert %}
 
 {: start="2"}
-2\. **+이메일 구독 그룹 만들기**를 선택합니다.
-3\. 구독 그룹에 이름과 설명을 입력하고 **저장**을 클릭합니다. 
+2\. Select **Create email subscription group**.
+3\. Give your subscription group a name and description.
+4\. Select **Save**. 
 
 모든 구독 그룹은 환경설정 센터에 자동으로 추가됩니다.
 
-![필드를 사용하여 구독 그룹을 만듭니다.][26]{: height="50%" width="50%"}
+![Fields to create a subscription group.][2]{: style="max-width:75%"}
 
 ### 구독 그룹으로 세분화하기
 
 세그먼트를 만들 때 구독 그룹 이름을 필터로 설정합니다. 이렇게 하면 그룹에 옵트인한 사용자가 내 이메일을 받을 수 있습니다. 월간 뉴스레터, 쿠폰, 멤버십 등급 등에 유용하게 사용할 수 있습니다.
 
-![구독 그룹 이름을 필터로 설정한 사용자의 GIF입니다.][27]{: style="max-width:80%"}
+![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.][3]{: style="max-width:90%"}
 
 ### 구독 그룹 아카이브
 
 보관된 구독 그룹은 편집할 수 없으며 세그먼트 필터나 환경설정 센터에 더 이상 표시되지 않습니다. 이메일, 캠페인 또는 캔버스에서 세그먼트 필터로 사용 중인 그룹을 보관하려고 하면 해당 그룹의 모든 사용을 제거할 때까지 해당 그룹을 보관할 수 없다는 오류 메시지가 표시됩니다.
 
-**구독 그룹** 페이지에서 그룹을 아카이브할 수 있습니다. 목록에서 해당 그룹을 찾은 다음 기어를 클릭하고 드롭다운 메뉴에서 **아카이브**를 선택합니다.
+To archive your group from the **Subscription Groups** page, do the following:
 
-Braze는 보관된 그룹의 사용자에 대한 상태 변경을 처리하지 않습니다. 예를 들어 수지가 `subscribed`인 상태에서 "구독 그룹 A"를 보관하면, Susie가 수신 거부 링크를 클릭하더라도 이 그룹은 "`subscribed`"로 유지됩니다("구독 그룹 A"는 보관되어 있고 이를 사용하여 메시지를 보낼 수 없으므로 수지에게는 중요하지 않습니다).
+1. Find your group in the list of subscription groups. 
+2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i> dropdown menu.
+
+Braze는 보관된 그룹의 사용자에 대한 상태 변경을 처리하지 않습니다. For example, if you archive "Subscription Group A" while Susie is subscribed to it, they will remain "subscribed" to this group, even if they click an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
 
 #### 구독 그룹 크기 보기
 
-**구독 그룹** 페이지에서 **구독 그룹 시계열** 그래프를 참조하여 일정 기간 동안의 사용자 수에 따른 구독 그룹 규모를 확인할 수 있습니다. 이러한 구독 그룹 크기는 세그먼트 크기 계산과 같은 Braze의 다른 영역과도 일치합니다.
+You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to view the subscription group size based on the number of users over a period of time. 이러한 구독 그룹 크기는 세그먼트 크기 계산과 같은 Braze의 다른 영역과도 일치합니다.
 
-![12월 2일부터 11일까지의 '구독 그룹 시계열' 그래프 예시입니다. 그래프는 6일부터 7일까지 사용자 수가 약 1,000만 명 증가한 것을 보여줍니다.][10]
+![12월 2일부터 11일까지의 '구독 그룹 시계열' 그래프 예시입니다. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.][4]
 
 #### 캠페인 분석에서 구독 그룹 보기
 
 해당 캠페인의 분석 페이지에서 특정 이메일 캠페인에서 구독 상태(구독 또는 구독 취소)를 변경한 사용자 수를 확인할 수 있습니다.
 
-캠페인의 캠페인 **분석** 페이지에서 **이메일 메시지 실적** 섹션까지 아래로 스크롤하여 **구독 그룹** 아래의 화살표를 클릭하면 고객이 제출한 상태 변경의 총 개수를 확인할 수 있습니다.
+1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
+2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
-![고객이 제출한 상태 변경 사항의 총 개수를 표시하는 '이메일 메시지 성능' 페이지입니다.][30]
+![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.][5]
 
 ## 이메일 환경설정 센터
 
-이메일 환경설정 센터는 어떤 사용자가 특정 뉴스레터 그룹을 수신할지 쉽게 관리할 수 있는 방법으로, 대시보드의 **구독 그룹**에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 환경설정 센터를 추가하거나 커스텀하는 방법에 대해 자세히 알아보려면 [환경설정 센터]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/)를 참조하세요.
+이메일 환경설정 센터는 어떤 사용자가 특정 뉴스레터 그룹을 수신할지 쉽게 관리할 수 있는 방법으로, 대시보드의 **구독 그룹**에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 
+
+To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## 이메일 구독 변경하기 {#changing-email-subscriptions}
 
-대부분의 경우 사용자는 수신하는 이메일에 포함된 구독 링크를 통해 이메일 구독을 관리합니다. 보내는 모든 이메일 하단에 수신 거부 링크가 포함된 법적 규정을 준수하는 바닥글을 삽입해야 합니다. 사용자가 바닥글에 있는 구독 취소 URL을 클릭하면 구독이 취소되고 구독 변경을 확인하는 랜딩 페이지로 이동해야 합니다. 이 Liquid 태그를 포함하는 것이 좋습니다: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+대부분의 경우 사용자는 수신하는 이메일에 포함된 구독 링크를 통해 이메일 구독을 관리합니다. 보내는 모든 이메일 하단에 수신 거부 링크가 포함된 법적 규정을 준수하는 바닥글을 삽입해야 합니다. When users select the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. 이 Liquid 태그를 포함하는 것이 좋습니다: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 사용자가 이메일 환경설정 센터에서 "위의 모든 유형의 이메일 수신 취소"를 선택하면 글로벌 이메일 수신 상태가 `unsubscribed`로 업데이트되고 모든 수신 그룹에서 수신이 취소됩니다.
 
@@ -153,17 +160,24 @@ Braze는 보관된 그룹의 사용자에 대한 상태 변경을 처리하지 �
 
 ### 커스텀 수신 거부 페이지 만들기
 
-사용자가 이메일에서 수신 거부 URL을 클릭하면 구독 변경을 확인하는 기본 랜딩 페이지로 이동합니다.
+When users select an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-구독 시 사용자가 기본 페이지 대신 연결되는 사용자 지정 랜딩 페이지를 만들려면 **이메일 환경설정** > **구독 페이지 및 바닥글로** 이동하여 사용자 지정 랜딩 페이지의 HTML을 입력합니다. 사용자가 실수로 구독을 취소한 경우 재수신할 수 있도록 랜딩 페이지에 재수신 링크(예: {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %})를 포함시키는 것이 좋습니다.
+To create a custom landing page that users will be directed to (instead of the default page) upon subscribing:
 
-![커스텀 수신 거부 페이지 패널에서 커스텀 수신 거부 이메일을 작성합니다.][11]
+1. Go to **Email Preferences** > **Subscription Pages and Footers**.
+2. Provide the HTML for your custom landing page. 
+
+We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
+
+![Custom unsubscribe email in the Custom Unsubscribe Page panel.][6]
 
 ### 사용자 지정 옵트인 페이지 만들기
 
 사용자를 이메일 캠페인에 즉시 가입시키는 대신 사용자 지정 옵트인 페이지를 만들면 사용자가 자신의 알림 기본 설정을 확인하고 제어할 수 있습니다. 이러한 추가 커뮤니케이션은 사용자가 수신 동의를 선택했기 때문에 이메일 캠페인이 스팸 폴더에서 제외되는 데 도움이 될 수 있습니다. 
 
-**이메일 환경설정** > **구독 페이지 및 바닥글로** 이동하여 사용자 **지정 옵트인 페이지** 섹션에서 스타일을 사용자 지정하여 사용자에게 구독했음을 표시하는 방법을 확인합니다.
+1. Go to **Settings** > **Email Preferences**.
+2. Select **Subscription Pages and Footers**.
+3. Customize the styling in the **Custom opt-in page** section to see how that indicates to your users that they've been subscribed.
 
 {% alert tip %}
 Braze는 이메일 홍보를 위해 이중 옵트인 프로세스를 사용할 것을 권장합니다. 이 프로세스는 사용자가 이메일의 링크를 통해 알림 기본 설정을 다시 확인할 수 있는 추가 확인 이메일을 보냅니다. 이 시점에서 사용자는 옵트인한 것으로 간주됩니다.
@@ -171,7 +185,7 @@ Braze는 이메일 홍보를 위해 이중 옵트인 프로세스를 사용할 �
 
 ## 구독 및 캠페인 타겟팅 {#subscriptions-and-campaign-targeting}
 
-푸시 또는 이메일 메시지가 포함된 캠페인은 기본적으로 구독 또는 옵트인한 사용자를 대상으로 합니다. 캠페인을 수정할 때 **타겟 오디언스** 단계로 이동하여 **다음 사용자에게 보내기:** 옆의 드롭다운을 클릭하여 이 타겟팅 기본 설정을 변경할 수 있습니다.
+By default, campaigns with push or email messages are targeted at users who are subscribed or opted-in by default. You can change this targeting preference when editing a campaign by going to the **Target Audience** step and selecting the dropdown next to **Send to these users:**.
 
 Braze는 세 가지 타겟팅 상태를 지원합니다:
 
@@ -180,36 +194,22 @@ Braze는 세 가지 타겟팅 상태를 지원합니다:
 - 구독을 취소한 사용자를 포함한 모든 사용자.
 
 {% alert important %}
-이러한 타겟팅 설정을 사용할 때 해당 [스팸 관련 법률을]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) 준수하는 것은 회원님의 책임입니다.
+It's your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
-
-![타겟 오디언스 단계의 타겟팅 옵션 섹션에서 구독 또는 옵트인한 사용자를 대상으로 하는 타겟팅 예시입니다.][17]
 
 ## 사용자 구독별로 세분화하기 {#segmenting-by-user-subscriptions}
 
-`Email Subscription Status` 및 `Push Subscription Status` 필터를 사용하면 구독 상태별로 사용자를 세분화할 수 있습니다.
+The "Email Subscription Status" and "Push Subscription Status" filters allow you to segment your users by their subscription status.
 
-예를 들어, 옵트인하거나 옵트아웃하지 않은 사용자를 타겟팅하여 이메일이나 푸시 수신에 명시적으로 옵트인하도록 유도하려는 경우 유용할 수 있습니다. 이 경우 "이메일/푸시 구독 상태가 구독됨"에 대한 필터를 사용하여 세그먼트를 생성하면 이 세그먼트에 대한 캠페인이 구독 중이지만 옵트인하지 않은 사용자에게 전달됩니다.
+This can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. 이 경우 "이메일/푸시 구독 상태가 구독됨"에 대한 필터를 사용하여 세그먼트를 생성하면 이 세그먼트에 대한 캠페인이 구독 중이지만 옵트인하지 않은 사용자에게 전달됩니다.
 
-![이메일 구독 상태는 세그먼트 필터로 사용됩니다.][18]
+![Email Subscription Status used as a segment filter.][8]
 
-[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
-[17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[18]: {% image_buster /assets/img_archive/not_optin.png %}
-[19]: {% image_buster /assets/img_archive/email_settings.png %}
-[25]: {{site.baseurl}}/api/endpoints/subscription_groups
-[26]: {% image_buster /assets/img/sub_group_create.png %}
-[27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{site.baseurl}}/api/endpoints/preference_center/
-[29]: {% image_buster /assets/img/user-sub-state-export.png %}
-[30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[3]: {% image_buster /assets/img/push_example.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
+[1]: {% image_buster /assets/img/push_example.png %}
+[2]: {% image_buster /assets/img/sub_group_create.png %}
+[3]: {% image_buster /assets/img/segment_sub_group.png %}
+[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
+[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
+[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
+[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
+[8]: {% image_buster /assets/img_archive/not_optin.png %}
