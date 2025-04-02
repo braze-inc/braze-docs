@@ -13,7 +13,7 @@ tool: Campaigns
 > アクションベースの配信キャンペーンまたはイベントトリガーキャンペーンは、トランザクションベースまたはアチーブメントベースのメッセージに非常に効果的です。特定の日にキャンペーンを送信する代わりに、ユーザーが特定のイベントを完了した後に送信するようにトリガーできます。 
 
 {% alert important %}
-アクションベースの配信は、[アプリ内メッセージを含むキャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas)では使用できません。これらのステップはスケジュールする必要があります。
+アクションベースの配信は、[アプリ内メッセージを含むキャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)では使用できません。これらのステップはスケジュールする必要があります。
 {% endalert %}
 
 ## トリガーキャンペーンの設定
