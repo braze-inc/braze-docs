@@ -50,7 +50,7 @@ Limite los países de su lista de permitidos a sólo los necesarios para satisfa
 
 ## Visibilidad de los envíos bloqueados
 
-Los intentos de envío a países que no estén en tu lista de permitidos serán abortados. Los mensajes abortados se registrarán en el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) y dentro del [evento de compromiso de mensaje SMS abortado]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+Los intentos de envío a países que no estén en tu lista de permitidos serán abortados. Los mensajes abortados se registrarán en el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) y dentro del [evento de compromiso de mensaje SMS abortado]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 Los mensajes abortados causados por envíos bloqueados se mostrarán como `Abort_Type = "blocked_recipient_country"` con el registro de abortos detallando el país bloqueado.
 
