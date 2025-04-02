@@ -94,6 +94,8 @@ Fügen Sie dem Array mit dem Operator `$add` einen weiteren Artikel hinzu. Das f
 
 Aktualisieren Sie Werte für bestimmte Objekte innerhalb eines Arrays mit dem Parameter `_merge_objects` und dem Operator `$update`. Ähnlich wie bei Updates von einfachen [, verschachtelten]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) Objekten [mit angepassten Attributen]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) wird hier eine tiefe Zusammenführung durchgeführt.
 
+Beachten Sie, dass `$update` nicht verwendet werden kann, um eine verschachtelte Eigenschaft aus einem Objekt innerhalb eines Arrays zu entfernen. Dazu müssen Sie den gesamten Artikel aus dem Array entfernen und dann das Objekt ohne diesen speziellen Schlüssel hinzufügen (mit einer Kombination aus `$remove` und `$add`).
+
 Das folgende Beispiel zeigt das Update der Eigenschaft `breed` auf `goldfish` für das Objekt mit einer `id` von `4`. Dieses Anfrage-Beispiel aktualisiert auch das Objekt mit `id` gleich `5` mit einem neuen `name` von `Annette`. Da der Parameter `_merge_objects` auf `true` gesetzt ist, bleiben alle anderen Felder für diese beiden Objekte gleich.
 
 ```json
