@@ -40,7 +40,7 @@ Klicken Sie auf der Seite **Standorte** auf **\+ Geofence-Set erstellen**.
 
 ![Geofence-Set der deutschen Flughäfen mit einem Benutzer, der einen Radius von zweitausend Metern auf der Karte für den Flughafen Hamburg zeichnet.][1]
 
-Sobald Sie ein Geofence-Set erstellt haben, können Sie Geofences manuell hinzufügen, indem Sie sie auf der Karte einzeichnen. Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. Weitere Informationen zu den konfigurierbaren Optionen finden Sie unter [Geofence-Konfiguration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Sobald Sie ein Geofence-Set erstellt haben, können Sie Geofences manuell hinzufügen, indem Sie sie auf der Karte einzeichnen. Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. Weitere Informationen zu den konfigurierbaren Optionen finden Sie unter [Geofence-Konfiguration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Erstellen von Sets per Bulk-Upload {#creating-geofence-sets-via-bulk-upload}
 
