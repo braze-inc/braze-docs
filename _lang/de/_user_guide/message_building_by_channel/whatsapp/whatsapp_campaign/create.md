@@ -38,8 +38,8 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 1. Gehen Sie auf die Seite **Kampagnen** und klicken Sie auf <i class="fas fa-plus"></i> **Kampagne erstellen**.
 2. Gehen Sie auf **WhatsApp** oder für Multichannel-Kampagnen auf **Multichannel-Kampagne**.
 3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
-   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -69,10 +69,6 @@ Wenn ein aktionsbasiertes Canvas durch eine eingehende WhatsApp-Nachricht ausgel
 
 Wählen Sie, ob Sie eine [WhatsApp-Vorlage](#template-messages) oder eine Antwortnachricht erstellen möchten, je nach Anwendungsfall. Jede geschäftlich initiierte Konversation muss von einer genehmigten Vorlage ausgehen, wohingegen Antwortnachrichten innerhalb eines Zeitfensters von 24 Stunden als Antwort auf eingehende Nachrichten von Benutzern verwendet werden können.
 
-{% alert note %}
-WhatsApp-Vorlagen unterstützen derzeit keine Gutscheincode-Schaltflächen.
-{% endalert %}
-
 ![Unter Nachrichtenvarianten können Sie eine Abo-Gruppe und eine von zwei Nachrichtentypen auswählen: WhatsApp-Vorlage Nachricht und Antwortnachricht.][5]{: style="max-width:80%;"}
 
 ### Template-Nachrichten
@@ -87,6 +83,8 @@ Deaktivierte Textfelder (grau unterlegt) können nicht bearbeitet werden, da sie
 Jede Vorlage hat eine zugewiesene Sprache, so dass Sie für jede Sprache eine Kampagne oder einen Canvas-Schritt erstellen müssen, um den Benutzerabgleich korrekt einzurichten. Wenn Sie z.B. ein Canvas erstellen, das Vorlagen verwendet, die mit Indonesisch und Englisch belegt sind, müssen Sie einen Canvas-Schritt für die indonesische Vorlage und einen Canvas-Schritt für die englische Vorlage erstellen.
 
 ![Template-Liste mit Nachrichteninhalt, zugewiesenen Sprachen und Genehmigungsstatus.][8]{: style="max-width:80%;"}
+
+Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieben ist, beachten Sie, dass das endgültige Aussehen von Nachrichten von rechts nach links weitgehend davon abhängt, wie die Dienste sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
 
 #### Variablen
 
@@ -183,7 +181,10 @@ Element    | Details
 ----------- |---------------- 
 Kopfzeilen | 
 Text | Unterstützt variable Parameter
-Bilder (JPEG und PNG) | 8-Bit, RGB oder RGBA und max. 5 MB 
+Bilder (JPEG und PNG) | Muss 8-Bit, RGB oder RGBA und bis zu fünf MB für jeden Typ sein. 
+Videos | Sie müssen derzeit auf einer URL gehostet werden und weniger als sechzehn MB groß sein. Außerdem muss das Video den Typ 3GPP oder MP4 haben. <br><br>Video Nachrichten befinden sich derzeit in der Early Access Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
+Audio | Wird nur für Response Messaging unterstützt. Es muss sich um AAC-, AMR-, MP3-, MP4-Audio- oder OGG-Dateien handeln, die unter einer URL gehostet werden und weniger als sechzehn MB groß sind. <br><br>Audio Nachrichten befinden sich derzeit in der Early Access Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
+Dokumente | Muss auf einer URL gehostet werden und weniger als 100 MB groß sein. Sie müssen auch einen Dokumententyp Text (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`) oder PDF (`.pdf`) haben. <br><br>Nachrichten zu Dokumenten sind derzeit im frühen Zugriff. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
 Haupttext | Unterstützt variable Parameter
 Text in der Fußzeile | Unterstützt variable Parameter 
 CTAs | Siehe [CTA](#ctas).
