@@ -42,7 +42,7 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 {: start="2"}
 2\. Wählen Sie **LINE**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel-Kampagne**.
 3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
+4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -71,9 +71,15 @@ Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid ode
 
 ![LINE composer mit einer in der Vorschau angezeigten Nachricht.][1]
 
-{% alert tip %}
+### Tipps
+
+#### Liquid verwenden
+
 Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardwert für Ihre Personalisierung angeben. Dadurch wird verhindert, dass Empfänger mit unvollständigen Benutzerprofilen einen leeren Platzhalter erhalten. Zum Beispiel könnte ein:e Nutzer:in statt der Nachricht "Hallo!" die Nachricht "Hallo, neue:r Abonnent:in!" erhalten.
-{% endalert %}
+
+#### Erstellen von Nachrichten von rechts nach links
+
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
 
 ## Schritt 3: Vorschau und Test Ihrer Nachricht
 
