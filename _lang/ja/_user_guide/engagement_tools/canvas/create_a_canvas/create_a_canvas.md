@@ -78,14 +78,14 @@ search_rank: 1
 ここでは、キャンバスに名前を付け、[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams)を割り当て、[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags)を作成または追加します。キャンバスのコンバージョンイベントを割り当てることもできます。
 
 {% alert tip %}
-キャンバスにタグを付けることで、検索とレポートの作成が簡単に行えるようになります。例えば、[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用する場合、特定のタグでフィルタリングできます。
+キャンバスにタグを付けることで、検索とレポートの作成が簡単に行えるようになります。例えば、[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)を使用する場合、特定のタグでフィルタリングできます。
 {% endalert %}
 
 ![キャンバスの詳細ページには、キャンバス名、説明、場所、タグのフィールドが表示されます。][53]
 
 #### コンバージョンイベントを選択する
 
-コンバージョンイベントのタイプを選択し、記録するコンバージョンを選択します。これらの[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)によって、キャンバスの効果を測定します。 
+コンバージョンイベントのタイプを選択し、記録するコンバージョンを選択します。これらの[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)によって、キャンバスの効果を測定します。 
 
 ![「購入」のイベントタイプを持つ 1 次コンバージョンイベント A。3 日間のコンバージョン期限内に何かを購入したユーザーとの会話を記録します。][52]
 
@@ -146,7 +146,7 @@ search_rank: 1
 
 #### オーディエンスのテスト
 
-ターゲットオーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/)してオーディエンス基準に一致しているかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
+ターゲットオーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンス基準に一致しているかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
 ![[ユーザー検索] フィールド。外部ユーザー ID または Braze ID で検索できます。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
@@ -218,7 +218,7 @@ Braze では、IP ウォームアップの目的で**キャンバスがスケジ
 
 {% details 展開して手順を表示 %}
 
-1. 乱数を保存するカスタム属性を作成します。「lottery_number」や「random_assignment」など、見つけやすい名前を付けます。属性は[ダッシュボードで]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/)作成するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)への API 呼び出しを通じて作成できます。<br><br>
+1. 乱数を保存するカスタム属性を作成します。「lottery_number」や「random_assignment」など、見つけやすい名前を付けます。属性は[ダッシュボードで]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)作成するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)への API 呼び出しを通じて作成できます。<br><br>
 2. キャンバスの始めに Webhook キャンペーンを作成します。このキャンペーンは、そこに乱数を作成し、カスタム属性として保存する媒体となります。詳細は、「[Webhook の作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook)」を参照してください。URL を `/users/track` エンドポイントに設定します。<br><br>
 3. 乱数ジェネレーターを作成します。これを行うには、[ここで説明](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486)されているコードを使用できます。このコードは、各ユーザーに固有のエントリ時刻を利用して乱数を作成します。Webhook キャンペーン内で、結果の数値を Liquid 変数として設定します。<br><br>
 4. Webhook キャンペーンの `/users/track` 呼び出しをフォーマットして、ステップ 1 で作成したカスタム属性を、現在のユーザーのプロファイルで生成した乱数に設定します。このステップを実行すると、ユーザーがキャンペーンに入るたびに変化する乱数を作成することができます。<br><br>
@@ -336,7 +336,7 @@ Braze は、コントロールグループに含まれるユーザーのコン�
 ![Braze のキャンバスの例。][19]
 
 {% alert tip %}
-キャンバスを開始した後で変更したい場合もあります。その場合には編集が可能です。詳細は、「[開始後にキャンバスを編集する]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)」を参照してください。
+キャンバスを開始した後で変更したい場合もあります。その場合には編集が可能です。詳細は、「[開始後にキャンバスを編集する]({{site.baseurl}}/post-launch_edits/)」を参照してください。
 {% endalert %}
 
 
