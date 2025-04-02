@@ -15,7 +15,7 @@ En este artículo, te guiaremos a través de un caso de uso de la plantilla **Ad
 
 ## Requisitos previos
 
-Para utilizar correctamente esta plantilla, necesitarás un [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) que haga referencia a cuándo los usuarios han utilizado la característica.
+Para utilizar correctamente esta plantilla, necesitarás un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) que haga referencia a cuándo los usuarios han utilizado la característica.
 
 ## Adaptar la plantilla a tus necesidades
 
