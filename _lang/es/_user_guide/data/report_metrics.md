@@ -658,7 +658,7 @@ WhatsApp
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Tasa de lectura' %}
+{% multi_lang_include metrics.md metric='Read Rate' %} 
 
 <span class="calculation-line">Cálculo: (Lecturas con recibos de lectura) / (Envíos)</span>
 
@@ -884,7 +884,7 @@ Correo electrónico, tarjetas de contenido, SMS, LINE
 Tarjetas de contenido
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Descartes totales' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad te permite incrementar _el Total de Descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
+{% multi_lang_include metrics.md metric='Total Dismissals' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad te permite incrementar _el Total de Descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -957,7 +957,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, W
 Correo electrónico, Tarjetas de contenido, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Clics únicos' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze. Se realiza un seguimiento durante un periodo de siete días para el correo electrónico. En el caso de LINE, el seguimiento se realiza una vez alcanzado un umbral mínimo de 20 mensajes diarios.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze. Se realiza un seguimiento durante un periodo de siete días para el correo electrónico. En el caso de LINE, el seguimiento se realiza una vez alcanzado un umbral mínimo de 20 mensajes diarios.
 
 {::nomarkdown}
 <span class="calculation-line">
