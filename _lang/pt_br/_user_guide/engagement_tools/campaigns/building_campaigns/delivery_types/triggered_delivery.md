@@ -13,7 +13,7 @@ tool: Campaigns
 > As campanhas de entrega baseadas em ação ou campanhas disparadas por eventos são muito eficazes para mensagens transacionais ou baseadas em conquistas. Em vez de enviar sua campanha em determinados dias, é possível disparar o envio depois que um usuário concluir um determinado evento. 
 
 {% alert important %}
-A entrega baseada em ação não está disponível para [componentes do Canva com mensagens no app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Essas etapas devem ser programadas.
+A entrega baseada em ação não está disponível para [componentes do Canva com mensagens no app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Essas etapas devem ser programadas.
 {% endalert %}
 
 ## Configuração de uma campanha disparada
