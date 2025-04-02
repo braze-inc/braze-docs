@@ -44,7 +44,7 @@ Talvez você queira usar esses tipos de segmentos se quiser executar um teste de
 
 Dependendo do número de segmentos desejados e da distribuição de usuários em cada segmento, seu plano pode ser diferente.
 
-Para cada um dos segmentos de números aleatórios, incluindo o grupo de controle, ative o [rastreamento da análise de dados]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). Ao avaliar o sucesso das variantes em relação ao grupo de controle, é possível acessar a página de [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) e visualizar a frequência com que cada segmento concluiu determinados eventos personalizados.
+Para cada um dos segmentos de números aleatórios, incluindo o grupo de controle, ative o [rastreamento da análise de dados]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). Ao avaliar o sucesso das variantes em relação ao grupo de controle, é possível acessar a página de [eventos personalizados]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) e visualizar a frequência com que cada segmento concluiu determinados eventos personalizados.
 
 ### Reentrada aleatória do público usando números de baldes aleatórios
 
