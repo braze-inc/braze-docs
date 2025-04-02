@@ -27,7 +27,7 @@ Sie können die neue Navigation jederzeit einschalten, indem Sie in der globalen
 
 ## Was Sie als nächstes erwartet
 
-Sie werden noch bis **Januar 2025** zwischen der neuen und der alten Navigation hin- und herwechseln können.
+Sie werden noch bis **März 2025** zwischen der neuen und der alten Navigation hin- und herwechseln können.
 
 ## Was sich geändert hat
 
