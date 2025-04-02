@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > 캠페인 또는 캔버스를 시작한 후 캠페인 세부 정보 페이지 또는 캔버스 분석에서 주요 측정기준을 확인할 수 있습니다. 이 문서에서는 이러한 메트릭을 찾을 수 있는 위치와 해당 메트릭이 나타내는 내용에 대해 설명합니다.
 
 {% alert tip %}
-보고서의 용어 및 지표에 대한 정의를 찾고 계신가요? [보고서 메트릭 용어집을]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 참조하세요.
+보고서의 용어 및 지표에 대한 정의를 찾고 계신가요? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## 캠페인 분석
@@ -34,7 +34,7 @@ LINE의 오픈 및 클릭 관련 통계는 특정 날짜에 20명 이상의 사�
 
 #### 대조군
 
-개별 LINE 메시지의 영향력을 측정하려면 A/B 테스트에 [대조 그룹을]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) 추가할 수 있습니다. 최상위 **캠페인 세부 정보** 패널에는 컨트롤 그룹 변형의 지표가 포함되지 않습니다.
+To measure the impact of an individual LINE message, you can add a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to an A/B test. 최상위 **캠페인 세부 정보** 패널에는 컨트롤 그룹 변형의 지표가 포함되지 않습니다.
 
 ### LINE 성과
 
@@ -46,7 +46,7 @@ LINE의 오픈 및 클릭 관련 통계는 특정 날짜에 20명 이상의 사�
 
 #### LINE 지표
 
-다음은 분석에서 확인할 수 있는 몇 가지 주요 LINE 지표입니다. Braze에서 사용되는 모든 LINE 측정기준의 정의를 확인하려면 [측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)을 참조하세요.
+다음은 분석에서 확인할 수 있는 몇 가지 주요 LINE 지표입니다. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | 기간 | 정의 |
 | --- | --- |
