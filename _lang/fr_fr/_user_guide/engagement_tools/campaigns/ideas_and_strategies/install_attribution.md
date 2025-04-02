@@ -27,7 +27,7 @@ Maintenant que vous avez plus d’informations sur votre utilisateur, vous pouve
 
 ### Données de référence de la publicité
 
-Les utilisateurs peuvent être attirés sur votre application par une offre promotionnelle ou un cadeau. L’utilisation des données d’attribution d’installation vous permet d’envoyer des campagnes contenant des codes de réduction ou des offres uniquement aux utilisateurs qui ont installé en raison de ces promotions. De la même manière, si votre publicité contient des informations sur un produit particulier (comme un film spécifique dans une appli vidéo ou une vente dans une appli de commerce électronique), vous pouvez envoyer des campagnes dirigeant les utilisateurs vers la bonne page de votre appli.
+Les utilisateurs peuvent être attirés sur votre application par une offre promotionnelle ou un cadeau. L’utilisation des données d’attribution d’installation vous permet d’envoyer des campagnes contenant des codes de réduction ou des offres uniquement aux utilisateurs qui ont installé en raison de ces promotions. De même, si votre annonce contient des informations sur un produit particulier (comme un film spécifique dans une application vidéo ou une vente dans une application d’e-commerce), vous pouvez envoyer des campagnes amenant les utilisateurs à la page correcte de votre application.
 
 ## Évaluer les efforts publicitaires
 
