@@ -329,7 +329,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
   --If you include both email and phone, we will use the email as the primary identifier
   email STRING,
   phone STRING,
-  payload STRING
+  payload STRING, STRUCT, or MAP
 );
 ```
 
@@ -337,7 +337,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 | Nombre del campo | Tipo | Modo |
 |---|---|---|
 | `UPDATED_AT`| MARCA DE TIEMPO | REQUERIDO |
-| `PAYLOAD`| STRING o STRUCT | REQUERIDO |
+| `PAYLOAD`| CADENA, ESTRUCTURA o MAPA | REQUERIDO |
 | `EXTERNAL_ID`| CADENA | NULABLE |
 | `ALIAS_NAME`| CADENA | NULABLE |
 | `ALIAS_LABEL`| CADENA | NULABLE |
