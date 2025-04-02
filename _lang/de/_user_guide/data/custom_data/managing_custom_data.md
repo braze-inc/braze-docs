@@ -59,7 +59,7 @@ Wenn ein Ereignis oder Attribut auf der Blockliste steht, werden alle Segmente, 
 Um das Tracking eines bestimmten angepassten Attributs, Ereignisses oder Produkts zu beenden, gehen Sie folgendermaßen vor:
 
 1. Suchen Sie danach auf den Seiten **Angepasste Attribute**, **Angepasste Events** oder **Produkte**.
-2. Wählen Sie das angepasste Attribut, das Event oder das Produkt aus. Für angepasste Attribute und Events können Sie jeweils bis zu 10 auswählen, um sie zu blockieren.
+2. Wählen Sie das angepasste Attribut, das Event oder das Produkt aus. Für angepasste Attribute und Events können Sie jeweils bis zu 100 auswählen, um sie zu blockieren.
 3. Wählen Sie **Blockliste**.
 
 ![Mehrere ausgewählte angepasste Attribute, die auf der Seite "Angepasste Attribute" in einer Blockliste aufgeführt sind.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -78,13 +78,21 @@ Um dies zu erreichen, sendet Braze die Blocklisting-Informationen an jedes Gerä
 
 ### Überlegungen zur Blocklistung
 
-Das Blockieren einer großen Anzahl von Ereignissen und Attributen ist möglich, aber nicht ratsam. Das liegt daran, dass jedes Mal, wenn ein Ereignis ausgeführt oder ein Attribut (möglicherweise) an Braze gesendet wird, dieses Ereignis oder Attribut mit der gesamten Blockliste abgeglichen werden muss. Wenn es auf der Liste steht, wird es nicht hochgeschickt. Dieser Vorgang nimmt Zeit in Anspruch, und wenn die Liste groß genug wird, könnte Ihre App langsam werden. Wenn Sie das Ereignis oder Attribut in Zukunft nicht mehr benötigen, sollten Sie es bei der nächsten Version aus dem Code Ihrer App entfernen.
+Das Blockieren einer großen Anzahl von Ereignissen und Attributen ist möglich, aber nicht ratsam. Das liegt daran, dass jedes Mal, wenn ein Ereignis ausgeführt oder ein Attribut (möglicherweise) an Braze gesendet wird, dieses Ereignis oder Attribut mit der gesamten Blockliste abgeglichen werden muss.
 
-Es kann ein paar Minuten dauern, bis Änderungen an der Blockliste übertragen werden. Sie können jedes Blocklistenereignis oder Attribut jederzeit wieder aktivieren.
+Bis zu 300 Artikel werden an das SDK für die Blocklistung gesendet. Wenn Sie mehr als 300 Artikel auf der Blockliste haben, werden diese Daten vom SDK gesendet. Wenn Sie das Ereignis oder Attribut in Zukunft nicht mehr benötigen, sollten Sie es bei der nächsten Version aus dem Code Ihrer App entfernen. Es kann ein paar Minuten dauern, bis Änderungen an der Blockliste übertragen werden. Sie können jedes Blocklistenereignis oder Attribut jederzeit wieder aktivieren.
 
 ## Anpassen von Daten löschen
 
+{% alert important %}
+Die Löschung angepasster Daten befindet sich derzeit im Early Access-Status. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren. Wenn Sie weitere Hilfe beim Löschen von benutzerdefinierten Daten benötigen, wenden Sie sich an Ihren Kundenbetreuer oder das Support-Team.
+{% endalert %}
+
 Wenn Sie zielgerichtete Kampagnen und Segmente erstellen, werden Sie vielleicht feststellen, dass Sie kein angepasstes Event oder angepasstes Attribut mehr benötigen. Wenn Sie z.B. ein bestimmtes angepasstes Attribut als Teil einer einmaligen Kampagne verwendet haben, können Sie diese Daten nach der [Blocklistung](#blocklisting-custom-attributes-custom-events-and-products) löschen und ihre Referenzen aus Ihrer App entfernen. Sie können beliebige Datentypen löschen (z.B. Strings, Zahlen und verschachtelte angepasste Attribute).
+
+{% alert important %}
+Sie müssen ein [Braze-Administrator]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) sein, um angepasste Daten zu löschen.
+{% endalert %}
 
 Um ein angepasstes Event oder ein angepasstes Attribut zu löschen, gehen Sie wie folgt vor:
 
@@ -99,7 +107,7 @@ Wenn Sie angepasste Daten löschen, geschieht Folgendes:
 - **Für angepasste Attribute:** Entfernt dauerhaft die Attributdaten aus dem Profil jedes Nutzers:innen.
 - **Für angepasste Events:** Entfernt dauerhaft die Ereignis-Metadaten aus dem Profil jedes Nutzers:innen.
 
-Wenn ein Attribut oder ein Ereignis zum Löschen ausgewählt wird, ändert sich sein Status in **"Verworfen"**. Für die nächsten sieben Tage ist es möglich, das Attribut oder Ereignis wiederherzustellen. Wenn Sie nach sieben Tagen nicht wiederhergestellt haben, werden die Daten dauerhaft gelöscht. Wenn Sie das Attribut oder das Ereignis wiederherstellen, wird es in den Zustand der Sperrliste zurückversetzt.
+Wenn ein Attribut oder ein Ereignis zum Löschen ausgewählt wird, ändert sich sein Status in **"Verworfen"**. Für die nächsten sieben Tage ist es möglich, das Attribut oder Ereignis wiederherzustellen. Wenn Sie sie nach sieben Tagen nicht wiederherstellen, werden die Daten endgültig gelöscht. Wenn Sie das Attribut oder das Ereignis wiederherstellen, wird es in den Zustand der Sperrliste zurückversetzt.
 
 Das Löschen verhindert nicht die weitere Aufzeichnung der angepassten Datenobjekte in Nutzerprofilen. Stellen Sie also sicher, dass die angepassten Daten nicht mehr aufgezeichnet werden, bevor Sie das Ereignis oder Attribut löschen.
 
@@ -123,7 +131,7 @@ Das Erzwingen von Datentypen gilt nicht für Event-Eigenschaften oder Kauf-Detai
 ![Angepasste Attribute Datentyp Dropdown][75]
 
 {% alert warning %}
-Wenn Sie den Datentyp für ein Attribut erzwingen möchten, werden alle Daten, die nicht dem angegebenen Typ entsprechen, ignoriert.
+Wenn Sie den Datentyp für ein Attribut erzwingen möchten, werden alle Daten, die nicht dem angegebenen Typ entsprechen, in diesen Typ gezwungen. Wenn eine solche Umwandlung nicht möglich ist (z.B. wenn ein String mit Buchstaben in eine Zahl umgewandelt wird), werden die Daten ignoriert. Alle Daten, die vor der Änderung des Typs aufgenommen wurden, werden weiterhin als der alte Typ gespeichert (und können daher möglicherweise nicht segmentiert werden), und in den Profilen der betroffenen Nutzer:innen wird neben dem Attribut eine Warnung angezeigt.
 {% endalert %}
 
 ### Zwang zum Datentyp
