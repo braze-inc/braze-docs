@@ -12,7 +12,7 @@ Tool:
 
 > Découvrez l'expérience Canvas que vous avez créée pour vos utilisateurs. Ceci inclut la prévisualisation du timing et des messages qu'ils recevront. Ces tests permettent de s'assurer que vos messages sont envoyés à la bonne audience, et ce avant l'envoi de votre Canvas.
 
-## Exécuter un test
+## Création d'un test
 
 Procédez comme suit pour prévisualiser votre parcours utilisateur :
 
@@ -57,12 +57,15 @@ Les étapes Message et Délai indiquent le moment où un utilisateur progressera
 
 ## Lorsque les utilisateurs entrent et sortent
 
-Les utilisateurs test entreront dans la prévisualisation, même s'ils ne sont pas éligibles dans la vie réelle. S'ils ne sont pas éligibles, vous pouvez savoir pourquoi ils n'auraient pas rempli les critères. Vous pouvez voir les résultats dans la barre latérale lorsque les utilisateurs entrent et sortent du Canvas.
+Les utilisateurs test entreront dans l'aperçu même s'ils ne sont pas éligibles dans la vie réelle. S'ils ne sont pas éligibles, vous pouvez comprendre pourquoi ils n'ont pas rempli les critères. Lorsqu'un utilisateur test entre dans l'aperçu, nous supposons qu'il a répondu aux critères de l'audience cible et qu'il a effectué les critères de déclenchement de l'action. Par exemple, pour un Canvas qui utilise des événements personnalisés dans les critères d'entrée, l'utilisateur test est supposé avoir effectué l'événement personnalisé comme prévu dans les critères d'entrée. Cependant, si le même événement personnalisé est utilisé ailleurs dans le Canvas (comme dans les critères de sortie), réfléchissez à l'impact que cela pourrait avoir sur votre parcours utilisateur.
 
-- Si vous testez un parcours d'action avec des actions qui correspondent à des critères de sortie (y compris des propriétés d'événement), les critères de sortie seront déclenchés et l'exécution du test se terminera.
-- Si vous testez une étape du message qui correspond à des critères de sortie, ces derniers seront déclenchés et l'exécution du test prendra fin.
-- À ce stade, vous ne pouvez pas sélectionner un événement ou une propriété spécifique au sein d'un parcours d'action pour déclencher des critères de sortie (uniquement le parcours dans son ensemble). Si un utilisateur peut potentiellement répondre à plusieurs critères de sortie, le premier qui est traité et auquel il répond est affiché comme résultat.
-- Les événements, les déclencheurs API, les attributs personnalisés et les propriétés d'entrée du Canvas sont appliqués en fonction de l'entrée du Canvas. Le test simule le parcours de l'utilisateur sans appliquer ces éléments pour modifier le profil utilisateur réel ou le flux du Canvas. Par exemple, lors des tests, lorsqu'un attribut personnalisé est utilisé comme déclencheur Canvas, les critères de déclenchement sont appliqués à l'aperçu de l'utilisateur **comme s'il** avait déclenché la modification de l'attribut personnalisé. 
+Les événements, les déclencheurs API, les attributs personnalisés et les propriétés d'entrée du Canvas sont appliqués en fonction de l'entrée du Canvas. Le test simule le parcours de l'utilisateur sans appliquer ces éléments pour modifier le profil utilisateur réel ou le flux du Canvas. Par exemple, lors des tests, lorsqu'un attribut personnalisé est utilisé comme déclencheur Canvas, les critères de déclenchement sont appliqués à l'aperçu de l'utilisateur **comme s'il** avait déclenché la modification de l'attribut personnalisé.
+
+### Considération
+
+Si vous testez un parcours d'action avec des actions qui correspondent à des critères de sortie (y compris des propriétés d'événement), les critères de sortie seront déclenchés et l'exécution du test se terminera. Si vous testez une étape du message qui correspond à des critères de sortie, les critères de sortie seront déclenchés et l'exécution du test prendra fin. 
+
+À ce stade, vous ne pouvez pas sélectionner un événement ou une propriété spécifique au sein d'un parcours d'action pour déclencher des critères de sortie (uniquement le parcours dans son ensemble). Si un utilisateur peut potentiellement répondre à plusieurs critères de sortie, le premier qui est traité et auquel il répond est affiché comme résultat.
 
 ## Chemins d'expérience et variantes du canvas
 
@@ -98,11 +101,11 @@ Les webhooks s'exécutent lors de l'envoi des messages de test, mais pas pendant
 
 Dans ce scénario, le Canvas est mis en place pour cibler les utilisateurs qui n'ont pas eu de session dans une app. Ce parcours comprend une étape Message avec un e-mail de bienvenue, une étape Délai fixée à un jour et une étape Parcours d'audience qui se divise en deux parcours : les utilisateurs ayant au moins une session et tous les autres. En fonction du parcours d'audience dans lequel se trouve l'utilisateur, l'étape Message suivante sera envoyée.
 
-![][1]{:style="max-width:70%"}
+![Exemple de canvas avec une étape de message, une étape de délai, une étape de parcours audience et deux étapes de message.][1]{:style="max-width:70%"}
 
 Comme notre utilisateur test répond aux critères d'entrée du Canvas, il peut entrer dans le Canvas et suivre le parcours de l'utilisateur. Cependant, comme notre utilisateur test n'a pas ouvert l'application au cours du dernier jour calendrier, il continuera à suivre le chemin "Tous les autres" et recevra une notification push libellée comme suit : "Dernière chance ! Terminez votre première tâche pour obtenir un bonus exclusif".
 
-![][2]
+![La section "Résultats du test" qui montre que l'utilisateur test a satisfait aux critères d'entrée et fournit un résumé de son parcours, y compris les étapes qui lui ont été envoyées.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}
