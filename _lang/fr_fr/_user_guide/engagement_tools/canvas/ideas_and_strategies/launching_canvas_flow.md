@@ -77,7 +77,7 @@ L'étape de [l’arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tool
 
 ### Chemins d’expérience
 
-À l'instar des parcours d'action, vous pouvez tirer parti des étapes [des chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) dans votre Canvas pour tester plusieurs parcours Canvas les uns par rapport aux autres, ainsi qu'un groupe de contrôle. Ceci permet de suivre la performance des chemins, vous permettant de prendre des décisions bien renseignées lorsque vous construisez votre parcours Canvas. 
+À l'instar des parcours d'action, vous pouvez tirer parti des étapes [des chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) dans votre Canvas pour tester plusieurs parcours Canvas les uns par rapport aux autres, ainsi qu'un groupe de contrôle. Ceci permet de suivre la performance des chemins, vous permettant de prendre des décisions bien renseignées lorsque vous construisez votre parcours Canvas. 
 
 ## Tester avant le lancement
 
