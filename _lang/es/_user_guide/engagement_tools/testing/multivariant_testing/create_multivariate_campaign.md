@@ -96,7 +96,7 @@ Dependiendo del canal que elija, podrá probar distintos componentes de su mensa
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Cuando ejecute pruebas A/B, no olvide generar [informes de embudo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) que le permitan comprender el impacto de cada variante en su embudo de conversión, especialmente si la "conversión" para su negocio implica realizar múltiples pasos o acciones.
+Cuando ejecute pruebas A/B, no olvide generar [informes de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) que le permitan comprender el impacto de cada variante en su embudo de conversión, especialmente si la "conversión" para su negocio implica realizar múltiples pasos o acciones.
 {% endalert %}
 
 Además, la duración ideal de su prueba también puede variar en función del canal. Tenga en cuenta el tiempo medio que la mayoría de los usuarios necesitan para interactuar con cada canal.
