@@ -18,7 +18,7 @@ En general, la copia de campañas entre espacios de trabajo está disponible par
 
 ## Cómo copiar una campaña en otro espacio de trabajo
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menú con la opción "Copiar al espacio de trabajo".][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Selecciona el icono de engranaje <i class="fas fa-cog"></i> situado junto a la campaña seleccionada, y selecciona **Copiar al espacio de trabajo**. Después de copiar, te recomendamos que revises y pruebes tu campaña para confirmar que todos los campos funcionan correctamente.
 
@@ -154,6 +154,10 @@ Tenga en cuenta las siguientes referencias líquidas con dependencias al copiar 
 - Etiquetas de vales y promociones
 
 Cuando se copia una campaña entre espacios de trabajo, los Bloques de contenido no se copian. Sin embargo, se puede hacer referencia a un Content Block en el área de trabajo de destino si existe un bloque con el mismo nombre. Como alternativa, puede crear el Bloque de contenido (o estas referencias líquidas) en el espacio de trabajo de destino para evitar errores al lanzar una campaña.
+
+### Copiar campañas con banderas de características
+
+Para copiar una campaña de bandera de características entre espacios de trabajo, asegúrate de que el espacio de trabajo de destino tiene un [experimento de bandera de características]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado con un ID que coincide con la bandera de características a la que se hace referencia en la campaña original. Si copias una campaña pero en el espacio de trabajo de destino no existe un ID de bandera de característica que coincida, la selección de bandera de característica en la campaña quedará en blanco al copiarla, y tendrás que seleccionar una diferente.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 
