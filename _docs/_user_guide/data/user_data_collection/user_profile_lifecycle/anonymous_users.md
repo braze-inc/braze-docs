@@ -23,20 +23,11 @@ You can do the following with captured anonymous users:
 
 ## How it works
 
-After you [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/), users who launch your app for the first time will be considered "anonymous" until you call the `changeUser` method and assign them an `external_id` through the Braze SDK. For a full walkthrough, see [Setting User IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/).
-
-Once a user is assigned an `external_id`, you can't revert them to an anonymous user&#8212;however, by uninstalling and reinstalling your app they'll be considered anonymous again until `changeUser` is called.
-
-If a previously-identified user starts a session on a new device, all of their "anonymous" activity will automatically sync to their existing profile after you call `changeUser` (with their `external_id`) on that device. This includes any attributes, events, or history collected during the session on the new device. 
+{% multi_lang_include anonymous_users/about_anonymous_users.md section='user_guide' %}
 
 ## Assigning user aliases
 
-Although anonymous users don’t have `external_ids`, you can assign them a [user alias]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases) instead. You should assign a user alias when you want to add other identifiers to the user but don't know what their `external_id` is (for example, they aren't logged in). With user aliases, you also can:
-
-- Use the Braze API to log events and attributes associated with anonymous users
-- Use the [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id) segmentation filter to target anonymous users in your messaging
-
-For more information, see [Braze SDK: Setting a user alias]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
+{% multi_lang_include anonymous_users/about_user_aliases.md section='user_guide' %}
 
 ## Merging anonymous users  
 
