@@ -171,7 +171,7 @@ Action-based delivery campaigns or event-triggered campaigns are very effective 
 
 #### API-triggered
 
-API-triggered or server-triggered campaigns are ideal for more advanced transactional use cases, allowing you to trigger the delivery of campaign content from your own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real time.
+API-triggered and server-triggered campaigns are ideal for handling more advanced transactions, allowing you to trigger the delivery of campaign content from your own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real time.
 
 | Pros | Cons | 
 | ---- | ---- |
