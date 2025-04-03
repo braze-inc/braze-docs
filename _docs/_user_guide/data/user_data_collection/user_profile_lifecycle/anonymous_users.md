@@ -1,5 +1,5 @@
 ---
-nav_title: Anonymous users
+nav_title: Anonymous Users
 article_title: Anonymous Users
 page_order: 0
 page_type: reference
