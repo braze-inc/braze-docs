@@ -43,7 +43,12 @@ This renders as the following:
 
 ## Exporting catalogs
 
-You can also export a catalog. You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
+There are two ways you can export catalogs from the dashboard: 
+
+- Hover over the catalog row in the **Catalogs** section. Then, select the **Export catalog** button.
+- Select your catalog. Then, select the **Export catalog** button in the **Preview** tab of the catalog.
+
+You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
 
 ## Additional use cases
 
