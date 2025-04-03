@@ -1,6 +1,7 @@
 ---
 nav_title: Jacquard
 article_title: Jacquard
+alias: /partners/jacquard/
 page_order: 1
 description: "This reference article outlines the partnership between Braze and Jacquard Dynamic Optimisation that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
 page_type: partner

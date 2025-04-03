@@ -1,6 +1,6 @@
 ---
-nav_title: "Data & Infrastructure Agility"
-article_title: Data & Infrastructure Agility Partners
+nav_title: "Data & Analytics"
+article_title: Data & Analytics Partners
 page_order: 5
 
 page_type: landing
@@ -8,7 +8,7 @@ description: "This page lists Braze partners (Alloys) who allow you to send, sto
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Data & Infrastructure Agility"
+partner_top_header: "Data & Analytics"
 
 valid_partner_list:
 - name: Fivetran

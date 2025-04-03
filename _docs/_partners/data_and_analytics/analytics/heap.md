@@ -3,8 +3,8 @@ nav_title: Heap
 article_title: "Heap Analytics"
 description: "This reference article outlines how to use Braze Currents to automatically analyze engagement events with Heap, a digital insights platform, that allows you to import Heap data to Braze, create user cohorts, and export Braze data to Heap to create segments."
 page_type: partner
+alias: /partners/heap/
 search_tag: Partner
-
 
 ---
 

@@ -8,7 +8,7 @@ description: "This landing page is home to all things AppsFlyer including integr
 
 guide_featured_list:
 - name: AppsFlyer
-  link: /docs/partners/message_orchestration/attribution/appsflyer/appsflyer/
+  link: /docs/partners/appsflyer/
   image: /assets/img/braze_icons/user-circle.svg
 - name: AppsFlyer Audiences
   link: /docs/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/

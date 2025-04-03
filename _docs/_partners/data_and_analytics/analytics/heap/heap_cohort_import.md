@@ -1,14 +1,14 @@
 ---
-nav_title: Heap
-article_title: Heap
+nav_title: Heap Cohort Import
+article_title: Heap Cohort Import
 description: "This reference article details the integration between Braze and Heap, a digital insights platform, that allows you to import Heap data to Braze, create user cohorts, as well as export Braze data to Heap to create segments."
-alias: /partners/heap/
+alias: /partners/heap_cohort_import/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# Heap
+# Heap cohort import
 
 > [Heap](https://heap.io/), a digital insights platform, focuses you on opportunities in your digital experience that most impact your business, eliminating friction, delighting your customers, and accelerating revenue.
 
