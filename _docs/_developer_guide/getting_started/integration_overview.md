@@ -197,6 +197,10 @@ Make sure your production and testing environments are set up before beginning Q
 |                           | Confirm all message channel integrations are working together properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
+{% alert note %}
+While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
+{% endalert %}
+
 ### Passing Braze off to marketers
 
 Once you have integrated your platform or site, you will want to involve your Marketing team to pass ownership of the platform to them. This process looks different at every company, but might include the following:
