@@ -34,7 +34,7 @@ To reference the active Canvas, select **View Active Canvas** in the footer from
 You can only reference steps that have already been launched before the draft was created. This means if you created a step or channel **after** the draft was created, it can't be referenced in your draft.
 
 {% alert note %}
-If a Content Block is referenced in a Canvas draft, the Canvas is listed in the Content Block inclusion count. However, if the Content Block is referenced in a **draft** of an active Canvas, the Canvas won't be listed in the Content Block inclusion count.
+If a Content Block is referenced in a Canvas draft, the Canvas is listed in the Content Block inclusion count. However, if the Content Block is referenced in a draft of an **active** Canvas, the Canvas won't be listed in the Content Block inclusion count.
 {% endalert %}
 
 ### In-app message prioritization
