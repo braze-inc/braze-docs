@@ -3,37 +3,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollyBlocks = document.querySelectorAll(".scrolly-code-block");
 
   scrollyBlocks.forEach((block) => {
-    // Within each block, get its own steps and code container.
+    // Get narrative steps, tab buttons, and code panels within this block.
+    const id = block.getAttribute("id");
     const steps = [...block.querySelectorAll(".scrolly-step")];
-    const codeContainer = block.querySelector(".code-animate");
-    if (!codeContainer) {
-      console.warn("Missing code container in scrolly block", block);
-      return;
-    }
-    const codeBlock = codeContainer.querySelector("code");
-    const rawCode = codeBlock?.dataset?.fullCode?.trim() || "";
+    const tabButtons = [...block.querySelectorAll(".tab-selector button")];
+    const codeBlocks = [...block.querySelectorAll(".code-blocks pre")];
 
-    if (!rawCode) {
-      console.warn(
-        "Missing full code in data-full-code attribute in block",
-        block
+    let currentIndex = 0; // active narrative step index for this block
+
+    // Helper: Return the currently active <pre> element.
+    function getActiveCodeBlock() {
+      return (
+        codeBlocks.find((pre) => pre.style.display !== "none") || codeBlocks[0]
       );
-      return;
     }
 
-    const rawLines = rawCode.split("\n");
-    let currentIndex = -1;
-
-    // Build the code block – each line is a <span> with a "code-line" class.
+    // Build code spans and update highlights in the active code block.
     function highlightLines(linesToHighlight = []) {
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+      const codeElem = activePre.querySelector("code");
+      if (!codeElem) return;
+      const rawCode = codeElem.dataset.fullCode?.trim() || "";
+      if (!rawCode) return;
+      const rawLines = rawCode.split("\n");
+
       const fragment = document.createDocumentFragment();
+      // Detect language from the active pre element (default to "javascript")
+      const langMatch = activePre.className.match(/language-(\w+)/);
+      const lang = langMatch ? langMatch[1] : "javascript";
+
       rawLines.forEach((line, i) => {
         const lineEl = document.createElement("span");
         lineEl.innerHTML = hljs.highlight(line || " ", {
-          language: "javascript",
+          language: lang,
         }).value;
         lineEl.classList.add("code-line");
-        // Mark highlighted lines.
         if (linesToHighlight.includes(i + 1)) {
           lineEl.dataset.highlight = "true";
         } else {
@@ -41,24 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         fragment.appendChild(lineEl);
       });
-      codeBlock.innerHTML = "";
-      codeBlock.appendChild(fragment);
+      codeElem.innerHTML = "";
+      codeElem.appendChild(fragment);
       updateHighlightOverlay();
     }
 
-    // Create or update overlay(s) for highlighted lines.
+    // Create or update overlays for highlighted lines.
     function updateHighlightOverlay() {
-      // Remove existing overlays.
-      codeContainer
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+      const codeElem = activePre.querySelector("code");
+      if (!codeElem) return;
+      // Remove any existing overlays.
+      activePre
         .querySelectorAll(".highlight-overlay")
         .forEach((el) => el.remove());
-      const highlightedLines = [
-        ...codeBlock.querySelectorAll(".code-line[data-highlight='true']"),
-      ];
+      const highlightedLines = Array.from(
+        codeElem.querySelectorAll(".code-line[data-highlight='true']")
+      );
       if (highlightedLines.length === 0) return;
 
-      const containerRect = codeContainer.getBoundingClientRect();
-
+      const containerRect = activePre.getBoundingClientRect();
       // Group contiguous highlighted lines.
       let groups = [];
       let currentGroup = [highlightedLines[0]];
@@ -87,18 +95,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const newHeight = groupBottom - groupTop;
         const overlay = document.createElement("div");
         overlay.className = "highlight-overlay";
-        // Set initial values with opacity 0.
         overlay.style.top = groupTop + "px";
         overlay.style.height = newHeight + "px";
         overlay.style.opacity = "0";
-        codeContainer.appendChild(overlay);
-        // Force a reflow and then update to trigger the transition.
+        activePre.appendChild(overlay);
         requestAnimationFrame(() => {
           overlay.style.opacity = "1";
         });
       });
     }
 
+    // Parse a range string like "1-3,5" into an array of line numbers.
     function parseLineRange(rangeStr) {
       const parts = rangeStr.split(",").map((p) => p.trim());
       const result = new Set();
@@ -110,28 +117,54 @@ document.addEventListener("DOMContentLoaded", () => {
           result.add(Number(part));
         }
       }
-      return [...result].sort((a, b) => a - b);
+      return Array.from(result).sort((a, b) => a - b);
     }
 
-    function activate(index) {
-      if (index === currentIndex || index < 0 || index >= steps.length) return;
-      steps.forEach((el, i) =>
-        el.setAttribute("data-active", i === index ? "true" : "false")
-      );
-      const lines = steps[index].dataset.lines || "";
-      const highlightList = parseLineRange(lines);
-      highlightLines(highlightList);
+    // Activate a narrative step by index.
+    // Each step is expected to have a data attribute in the form:
+    // data-lines-<filekey>="<range>" (e.g. data-lines-index-js="1-3").
+    function activateStep(index) {
+      if (index < 0 || index >= steps.length) return;
       currentIndex = index;
+      steps.forEach((step, i) => {
+        step.setAttribute("data-active", i === index ? "true" : "false");
+      });
+      const currentStep = steps[index];
+      // Look for a data attribute starting with "data-lines-"
+      let activeFile = null;
+      for (const attr of currentStep.attributes) {
+        if (attr.name.startsWith("data-lines-")) {
+          activeFile = attr.name.replace("data-lines-", "");
+          break;
+        }
+      }
+      if (!activeFile) return;
+      // Activate the corresponding tab in this block.
+      tabButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.file === activeFile);
+      });
+      codeBlocks.forEach((pre) => {
+        pre.style.display = pre.dataset.file === activeFile ? "" : "none";
+      });
+      const rangeStr =
+        currentStep.getAttribute(`data-lines-${activeFile}`) || "";
+      const highlightList = parseLineRange(rangeStr);
+      highlightLines(highlightList);
     }
 
+    // Determine the closest narrative step based on scroll position.
     function getClosestStep() {
-      if (window.scrollY < 50) return 0;
-      const centerY = window.scrollY + window.innerHeight / 2;
-      let closestIdx = -1;
+      // workaround to make sure the first step is selected while scrolling back up
+      if (stepsContainer.scrollTop < 5) return 0;
+      const style = getComputedStyle(stepsContainer);
+      const paddingBottom = parseFloat(style.paddingBottom) || 0;
+      const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
+      const centerY = stepsContainer.scrollTop + effectiveHeight / 2;
+      let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
-        const rect = step.getBoundingClientRect();
-        const mid = rect.top + window.scrollY + rect.height / 2;
+        // Use offsetTop relative to the scroll container.
+        const mid = step.offsetTop + step.offsetHeight / 2;
         const distance = Math.abs(mid - centerY);
         if (distance < minDistance) {
           minDistance = distance;
@@ -141,38 +174,56 @@ document.addEventListener("DOMContentLoaded", () => {
       return closestIdx;
     }
 
-    // Attach scroll event for this block.
-    window.addEventListener("scroll", () => {
-      const index = getClosestStep();
-      if (index !== -1) activate(index);
+    // Get the scrollable steps container.
+    const stepsContainer = block.querySelector(".scrolly-text");
+    // Attach scroll event to the steps container instead of the window.
+    stepsContainer.addEventListener("scroll", () => {
+      const idx = getClosestStep();
+      if (idx !== currentIndex) {
+        activateStep(idx);
+      }
     });
 
-    // Allow clicking on a narrative step to activate it.
-    steps.forEach((el, i) => {
-      el.dataset.index = i;
-      el.addEventListener("click", () => {
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-        activate(i);
+    // Clicking on a narrative step activates it.
+    steps.forEach((step, i) => {
+      step.addEventListener("click", () => {
+        step.scrollIntoView({ behavior: "smooth", block: "center" });
+        activateStep(i);
       });
     });
 
-    // Expose updateHighlightOverlay to the block so it can be called externally.
-    block.updateHighlightOverlay = updateHighlightOverlay;
+    // Clicking on a tab manually overrides the current narrative selection.
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const fileKey = btn.dataset.file;
+        tabButtons.forEach((b) => {
+          b.classList.toggle("active", b.dataset.file === fileKey);
+        });
+        codeBlocks.forEach((pre) => {
+          pre.style.display = pre.dataset.file === fileKey ? "" : "none";
+        });
+        // When a tab is clicked manually, clear any highlights.
+        highlightLines([]);
+      });
+    });
 
-    // Initialize this block.
-    setTimeout(() => activate(0), 100);
-
-    // Needed so that the highlight overlay shows up if a scrolly block is initially rendered out of view (ie. behind anohter tab)
+    // IntersectionObserver to handle blocks that are initially hidden.
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            updateHighlightOverlay();
+            // When the block becomes visible, re-activate its current step.
+            activateStep(currentIndex);
           }
         });
       },
       { threshold: 0.1 }
     );
     observer.observe(block);
+
+    // Initialize this block after a short delay.
+    setTimeout(() => {
+      activateStep(0);
+    }, 100);
   });
 });

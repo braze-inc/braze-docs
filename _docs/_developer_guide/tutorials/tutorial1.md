@@ -6,33 +6,68 @@ description: "Interactive, step-by-step coding tutorials using dynamic, scrollab
 layout: dev_guide
 ---
 
+## Setting Up Push Notifications
+
 {% tabs %}
-{% tab Android %}
+{% tab Web %}
 {% scrolly %}
 
-```js
-const houses = ["Stark", "Lannister", "Baratheon", "Targaryen"];
+```js file=index.js
+braze.initialize("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", {
+  baseUrl: "sondheim.braze.com",
+  enableLogging: true,
+  sessionTimeoutInSeconds: 10,
+  serviceWorkerLocation: "/service-worker.js",
+  allowUserSuppliedJavascript: true, //
+  noCookies: true,
+});
 
-const winner = houses[Math.floor(Math.random() * houses.length)];
-console.log(`Iron Throne: ${winner}`);
-
-const clash = () => {
-  const winner = houses[Math.floor(Math.random() * houses.length)];
-  return `${winner} wins the battle!`;
+// Request Push Permission
+const requestPushPermission = () => {
+  braze.requestPushPermission(
+    (endpoint, publicKey, userAuth) => {
+      console.log("Push permission granted!");
+      console.log("Endpoint:", endpoint);
+      console.log("Public Key:", publicKey);
+      console.log("User Auth:", userAuth);
+    },
+    (temporaryDenial) => {
+      if (temporaryDenial) {
+        console.warn("Push permission temporarily denied.");
+      } else {
+        console.error("Push permission permanently denied.");
+      }
+    }
+  );
 };
-console.log(clash());
 
-if (winner == "me") {
-  console.log("Woohoo");
-} else {
-  console.log("That sucks");
-}
+const requestPushPermission = () => {
+  braze.requestPushPermission(
+    (endpoint, publicKey, userAuth) => {
+      console.log("Push permission granted!");
+      console.log("Endpoint:", endpoint);
+      console.log("Public Key:", publicKey);
+      console.log("User Auth:", userAuth);
+    },
+    (temporaryDenial) => {
+      if (temporaryDenial) {
+        console.warn("Push permission temporarily denied.");
+      } else {
+        console.error("Push permission permanently denied.");
+      }
+    }
+  );
+};
+```
+
+```js file=service-worker.js
+self.importScripts("https://js.appboycdn.com/web-sdk/5.6/service-worker.js");
 ```
 
 !!step
-lines=1
+lines-index.js=1-8
 
-#### First step
+#### Initialize braze
 
 Some instructions on what this `line` does, and how to use it.
 
@@ -40,27 +75,39 @@ Some instructions on what this `line` does, and how to use it.
 - item 2
 
 !!step
-lines=3-4
+lines-index.js=1-2,4,6-7
 
-#### Second step
+#### Set up basic settings
 
 Some instructions on what these lines do, and how to use them.
 
-```js
-var x = "hello";
-console.log(x);
-```
+!!step
+lines-index.js=3
+
+#### Enable logging
+
+Some instructions on what these lines do, and how to use them.
 
 !!step
-lines=6-9
+lines-service-worker.js=1
 
-## Step 3
+#### Create your service-worker file
 
-Highlighting just the decision logic, lines 6–9.
+Add this line to the service worker file to allow for push notifications.
 
 !!step
-lines=10,12-16
-Highlighting just the decision logic, line 10.
+lines-index.js=5
+
+#### Link your service-worker file
+
+Some instructions on what these lines do, and how to use them.
+
+!!step
+lines-index.js=11-27
+
+#### Request push permissions
+
+Highlighting some more stuff
 
 {% endscrolly %}
 
@@ -69,7 +116,7 @@ Highlighting just the decision logic, line 10.
 
 {% scrolly %}
 
-```swift
+```swift file=delegate.swift
 let configuration = Braze.Configuration(
     apiKey: "YOUR-APP-IDENTIFIER-API-KEY",
     endpoint: "YOUR-BRAZE-ENDPOINT"
@@ -79,19 +126,19 @@ AppDelegate.braze = braze
 ```
 
 !!step
-lines=1
+lines-delegate.swift=1
 Some instructions on what this `line` does, and how to use it.
 
 !!step
-lines=3-4
+lines-delegate.swift=3-4
 Some instructions on what these lines do, and how to use them.
 
 !!step
-lines=6-9
+lines-delegate.swift=6-9
 Highlighting just the decision logic, lines 6–9.
 
 !!step
-lines=10
+lines-delegate.swift=10
 No lines!
 
 {% endscrolly %}
