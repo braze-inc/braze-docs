@@ -473,7 +473,7 @@ Content-Cards, E-Mail, In-App-Messaging, Web-Push, iOS-Push, Android-Push, Webho
 {% endapi %}
 
 {% api %}
-
+ß
 ### Tägliche Einkäufe
 
 {% apitags %}
