@@ -114,11 +114,11 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 ## Managing consent for ad targeting
 
-Managing consent for ad tracking or targeting of your end users is your responsibility as the advertiser.
+As the advertiser, it is your responsibility to manage consent for ad tracking or targeting of your users.
 
-To send ads to your end users, you must comply with all applicable laws and regulations as well as with the ad platform's policies and requirements. You should only use Braze to target and sync users where you have obtained their consent. 
+To send ads to your users, you must comply with all applicable laws and regulations, and the ad platform's policies and requirements. Only use Braze to target and sync users where you have obtained their consent. 
 
-To keep your audience lists in these ad platforms up-to-date and remove end users who have revoked their consent, you must set up a Canvas to remove users from these existing audience lists using an Audience Sync step.
+To keep your audience lists in these ad platforms up-to-date and remove users who have revoked their consent, set up a Canvas to remove users from these existing audience lists using an Audience Sync step.
 
 
 [1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
