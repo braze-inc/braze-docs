@@ -1,1 +1,4 @@
-Visual and Interactive Content
+---
+nav_title: Visual and Interative Content
+config_only: true
+---

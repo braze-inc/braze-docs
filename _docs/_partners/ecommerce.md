@@ -1,7 +1,7 @@
 ---
 nav_title: eCommerce
 article_title: eCommerce Partners
-page_order: 9
+page_order: 11
 
 page_type: landing
 description: "This landing page lists Braze partners (Alloys) who allow you to integrate with their eCommerce platform."

@@ -1,4 +1,4 @@
 ---
-nav_title: Loyalty
+nav_title: Landing Pages
 config_only: true
 ---
