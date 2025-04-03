@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Dynamic Yield](https://www.dynamicyield.com/), a Mastercard company, helps businesses across industries deliver digital customer experiences that are personalized, optimized, and synchronized. With Dynamic Yield's [Experience OS](http://www.dynamicyield.com/experience-os), marketers, product managers, developers, and digital teams can algorithmically match content, products, and offers to each customer for the acceleration of revenue and customer loyalty.
 
+_This integration is maintained by Dynamic Yield._
+
+## About the integration
+
 The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
 - **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 
 - **Dynamic Content Blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
@@ -78,7 +82,6 @@ When satisfied with your email, the next step is to generate the code to embed i
 2. Next, click **Copy to Clipboard**.<br>![][1]<br><br> 
 3. Paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign.
 
-*This integration is maintained by Dynamic Yield.*
 
 [1]: {% image_buster /assets/img/dynamic_yield/dynamic_yield.png %}
 [2]: {% image_buster /assets/img/dynamic_yield/dynamic_yield1.png %}

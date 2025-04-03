@@ -18,6 +18,6 @@ guide_menu_list:
     link: /docs/help/help_articles/email/html_looks_strange/
     image: /assets/img/braze_icons/code-02.svg
   - name: Universal Links and App Links
-    link: /docs/help/help_articles/email/universal_links/
+    link: /docs/user_guide/message_building_by_channel/email/universal_links/
     image: /assets/img/braze_icons/link-03.svg
 ---

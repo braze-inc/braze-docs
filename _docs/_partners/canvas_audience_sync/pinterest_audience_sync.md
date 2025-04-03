@@ -48,11 +48,11 @@ In the Braze dashboard, go to **Partner Integrations** > **Technology Partners**
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
 
-Once you have selected confirm, you'll be redirected back into Braze to select which Pinterest ad accounts you wish to sync. 
+After selecting **Confirm**, you'll be redirected back into Braze to select which Pinterest ad accounts you wish to sync. 
 
 ![A list of available ad accounts you can connect to Pinterest.][2]{: style="max-width:80%;"}
 
-Once successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+When successfully connected, you'll return to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
 ![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
 
@@ -130,23 +130,27 @@ The following table includes metrics and descriptions to help you better underst
 Remember that there will be a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
 
-## Troubleshooting
-{% details What should I do next if I receive an invalid token error? %}
-You can simply disconnect and reconnect your Pinterest account on the Pinterest partner page. Ensure with your Pinterest Business Hub admin that you have the appropriate permissions to the ad account you wish to sync.
-{% enddetails %}
+## Frequently asked questions
 
-{% details Why is my Canvas not allowed to launch? %}
-Ensure your Pinterest account successfully connects to Braze on the Pinterest partner page.
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
-{% enddetails %}
+### How long will it take for my audiences to populate in Pinterest?
 
-{% details How do I know if users have matched after passing users to Pinterest? %}
+The audience size will update within 24-48 hours on the **Audiences** page in Pinterest's Ads Manager.
+
+### How do I know if users have matched after passing users to Pinterest?
+
 Pinterest does not provide this information for its own data privacy policies.
-{% enddetails %}
 
-{% details How long will it take for my audiences to populate in Pinterest? %}
-The audience size will update within 24-48 hours on the Audiences page in Pinterest's Ads Manager.
-{% enddetails %}
+### What should I do next if I receive an invalid token error?
+
+Confirm with your Pinterest Business Hub admin that you have the appropriate permissions to the ad account you wish to sync. You can also disconnect and reconnect your Pinterest account on the Pinterest partner page. 
+
+### Why is my Canvas not allowed to launch?
+
+Ensure your Pinterest account successfully connects to Braze on the Pinterest partner page. Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
+
+### Why can't I select my ad account for my Audience Sync step?
+
+Check that your token was generated with the correct account permissions. Note that if you have too many audiences in your Pinterest ad account, the dropdown to select your ad account may timeout. In this case, we recommend reducing the amount of audiences in your ad account.
 
 [1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
 [2]: {% image_buster /assets/img/pinterest/pinterest2.png %}

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Transifex enables robust localization across your user base, no matter the language.
 
+_This integration is maintained by Transifex._
+
+## About the integration
+
 The Braze and Transifex integration leverages Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 {% alert important %}
@@ -70,7 +74,6 @@ This example code snippet utilizes the Transifex resource translation API and th
 ```
 {% endraw %}
 
-*This integration is maintained by Transifex.*
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings

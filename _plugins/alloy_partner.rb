@@ -16,6 +16,9 @@ module Jekyll
       site = context.registers[:site]
       # partnerembed = context.config['partner_api']
       partnerembed = site.config['partner_api']
+      if ENV["PARTNER_API"].to_s.downcase != 'true'
+        partnerembed = false
+      end
 
       if partnerembed
         lang = site.config['language'] || 'en'

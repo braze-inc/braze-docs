@@ -12,6 +12,8 @@ search_tag: Partner
 
 > Leverage the integration between Friendbuy and Braze to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
 
+_This integration is maintained by Friendbuy._
+
 ## Prerequisites
 
 Before you start, you'll need the following:
@@ -73,7 +75,6 @@ Friendbuy uses the international standard (E.164) to verify real phone numbers. 
 | Neither           | No customer data is sent to Braze.                              |
 | Both              | The customer's email address and phone number is sent to Braze. |
 
-*This integration is maintained by Friendbuy.*
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Sheetlabs][1] is a platform that allows you to turn spreadsheets into powerful, well-documented APIs. You can import data from Google Sheets or Excel, turn it into an API, and then use that API in other applications, such as Braze.
 
+_This integration is maintained by Sheetlabs._
+
+## About the integration
+
 The Sheetlabs and Braze integration allows you to leverage [Connected Content][2] to include Sheetlabs APIs inside your Braze marketing campaigns. This is commonly used to provide a bridge between a Google Spreadsheet (which is updated directly by the marketing team) and Braze templates. This allows you to achieve more with Braze templates, such as translations or larger sets of custom attributes.
 
 ## Prerequisites
@@ -68,7 +72,6 @@ Now that your API is accessible, you can use it in your Connected Content calls.
 For more examples and advice on integrating with Sheetlabs, refer to [Sheetlabs documentation](https://app.sheetlabs.com/docs/producers/braze/).
 {% endalert %}
 
-*This integration is maintained by Sheetlabs.*
 
 
 [1]: https://sheetlabs.com/

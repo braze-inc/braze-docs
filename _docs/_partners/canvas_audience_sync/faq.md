@@ -61,4 +61,4 @@ The user reconnecting must have both read and write access to all the audiences 
   - To resolve this issue, complete the configuration of each partner before launching.
 - **Terms of Service**<br>
   - For some Audience Sync destinations, like Facebook, it is required by the ad network to accept specific terms of services to use the Audience Sync feature. This error will trigger if you have not accepted the appropriate terms. 
-  - To resolve this issue, ensure you have accepted each partner's required terms. For Facebook specifically, review [Facebook troubleshooting](https://www.braze.com/docs/partners/canvas_steps/facebook_audience_sync/#troubleshooting). 
+  - To resolve this issue, ensure you have accepted each partner's required terms. For Facebook specifically, review [Facebook troubleshooting]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/#troubleshooting). 

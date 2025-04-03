@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Dyspatch][1] offers an intuitive drag-and-drop email builder used to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a few steps! 
 
+_This integration is maintained by Dyspatch._
+
+## About the integration
+
 The Dyspatch and Braze integration allow you to simplify your email creation lifecycle by exporting Dyspatch email templates directly to Braze.
 
 ## Prerequisites
@@ -50,7 +54,6 @@ Do not select **Inline CSS** in the **Sending Info** section for any Dyspatch em
 
 Find your uploaded Dyspatch template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
-*This integration is maintained by Dyspatch.*
 
 [1]: https://www.dyspatch.io
 [2]: https://dashboard.braze.com/sign_in

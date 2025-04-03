@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Judo](https://judo.app) is a server-driven UI platform that empowers publishers to efficiently deliver rich, engaging in-app user experiences without app updates.
 
+_This integration is maintained by Judo._
+
+## About the integration
+
 The Braze and Judo integration provides bespoke experiences in your campaigns and Canvases. Instead of a simple, templated landing page experience, a Braze campaign may incorporate content that comprises multiple screens, modals, video, custom fonts, and support settings such as dark mode and accessibility built without code and deployed without app updates. Data from Braze may also be used to support personalized content in a Judo Experience. User events and data from the experience can feedback into Braze for attribution and targeting.
 
 ## Prerequisites
@@ -82,7 +86,6 @@ Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dy
 
 Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) on the different components of a Braze in-app message.
 
-*This integration is maintained by Judo.*
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}
 [3]: {% image_buster /assets/img/judo/braze-html-boilerplate.png %}

@@ -13,7 +13,9 @@ channel:
 
 # Link shortening
 
-> Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. <br><br> This page covers how to turn on link shortening in your SMS messages, test shortened links, use your custom domain in shortened links, and more.
+> This page covers how to turn on link shortening in your SMS messages, test shortened links, use your custom domain in shortened links, and more.
+
+Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
@@ -41,15 +43,7 @@ Braze will only recognize URLs that start with `http://` or `https://`. When a U
 
 ### Adding UTM parameters
 
-While link shortening allows you to track your URLs automatically, you can also add UTM parameters to your URLs to track the performance of campaigns in third-party analytics tools, such as Google Analytics.
-
-To add UTM parameters to your URL, do the following:
-
-1. Start with your base URL. This is the URL of the page you want to track (such as `https://www.example.com`).
-2. Add a question mark (?) after your base URL.
-3. Add each UTM parameter separated by an ampersand (&).
-
-An example is `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## Liquid personalization in URLs
 
@@ -122,31 +116,13 @@ The **Historical Performance** and **SMS/MMS Performance** charts also include a
 
 For guidance on retargeting, visit [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-## Custom domains
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
-Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image. For more information, refer to [Custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
-
-## Frequently asked questions
-
-### Are the links I receive when test sending real URLs?
-
-If the campaign has been saved as a draft before test sending, yes. Otherwise, it is a placeholder link. Note that the exact URL sent in a launched campaign may differ from the one sent in a test send.
-
-### Does the Braze SDK need to be installed in order to shorten links?
-
-No. Link shortening works without any SDK integration.
+{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
 
 ### Do I know which individual users are clicking on a URL?
 
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
-
-### Can I add UTM parameters to a URL before it is shortened?
-
-Yes. Both static and dynamic parameters can be added. 
-
-### How long do shortened URLs remain valid?
-
-Static URLs are valid for one year from the time of URL registration, such as first send. Dynamic URLs are valid for two months from the time of URL registration.
 
 ### Does link shortening work with deep links or universal links?
 

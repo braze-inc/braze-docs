@@ -13,6 +13,10 @@ search_tag: Partner
 -->
 > Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions.
 
+_This integration is maintained by Amazon Personalize._
+
+## About the integration
+
 Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on users' past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize, customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
 
 This reference article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
@@ -148,7 +152,6 @@ Including the title, the image, and linking the URL, this is what the complete C
 
 ![An image of a campaign with Connected Content added to the message body and "Add Image" field. This image also shows Connected Content logic added to the "Redirect to Web URL" field, linking users to a recommendation URL.][2]
 
-*This integration is maintained by Amazon Personalize.*
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}

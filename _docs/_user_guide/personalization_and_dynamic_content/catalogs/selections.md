@@ -38,7 +38,11 @@ After creating a selection, you can use the **Preview for user** section to view
 
 ### Liquid in selection results
 
-Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection.
+Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection. 
+
+{% alert note %}
+Connected Content Liquid isn't supported in these filter settings.
+{% endalert %}
 
 ![Filter settings for catalog selection where the attribute is set to a Liquid custom attribute.][7]
 

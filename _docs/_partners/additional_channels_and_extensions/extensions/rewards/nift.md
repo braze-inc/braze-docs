@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Nift](https://gonift.com/) helps companies acquire, engage and retain customers. The two-sided platform helps partners thank their customers with Nift gift cards. Thanking customers increases their lifetime value and generates incremental revenue.
 
+_This integration is maintained by Nift._
+
+## About the integration
+
 The Braze and Nift integration allows you to automatically trigger "thank-yous" containing Nift gifts at key moments in the customer lifecycle and identify which customers used their gift. Nift gift cards can be used to access products and services supplied by brands relying on Nift's matchmaking technology to acquire new customers cost-effectively at scale.
 
 ## Prerequisites
@@ -48,7 +52,6 @@ After integrating with Braze, Nift will automatically push events to the existin
 - Event name: `nift_processed`
 - Time: The time the customer selected/used the gift
 
-*This integration is maintained by Nift.*
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

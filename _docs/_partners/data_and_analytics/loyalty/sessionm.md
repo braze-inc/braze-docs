@@ -28,7 +28,7 @@ search_tag: Partner
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %} 
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**. 
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can create an API key at **Developer Console** > **API Settings**. 
 {% endalert %} 
 
 ## Use cases

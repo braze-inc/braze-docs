@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Punchh](https://punchh.com/) is an industry-leading loyalty and engagement platform that enables brands to deliver omnichannel customer loyalty programs both in-store and digitally. 
 
+_This integration is maintained by Punchh._
+
+## About the integration
+
 The Braze and Punchh integration allows you to sync data for gifting and loyalty purposes across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via Braze webhooks.
 
 ## What are the benefits?
@@ -315,7 +319,6 @@ Considerations:
 {% endtab %}
 {% endtabs %}
 
-*This integration is maintained by Punchh.*
 
 [1]: {% image_buster /assets/img/punchh/punchh1.png %}
 [2]: {% image_buster /assets/img/punchh/punchh2.png %}

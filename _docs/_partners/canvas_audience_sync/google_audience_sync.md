@@ -192,28 +192,28 @@ The following table includes metrics and descriptions to help you better underst
 | *Exited Canvas* | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Troubleshooting
+## Frequently asked questions
 
-{% details Why can I not select multiple fields to match in my Google Audience Step configuration? %}
-Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined). 
-{% enddetails %}
+### Why can I not select multiple fields to match in my Google Audience Step configuration?
 
-{% details How long will it take for my audiences to sync in Google? %} 
+Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined).
+
+### How long will it take for my audiences to sync in Google?
+
 It can take anywhere between 6 to 12 hours for an audience to be synced into Google. 
-{% enddetails %}
 
-{% details I've synced an audience, but the audience size in Google is zero. %}
-For privacy purposes, the user list size will show zero until the list has at least **1,000 members**. After that, the size will be rounded to the two most significant digits.
-{% enddetails %}
+### I've synced an audience, so why is the audience size in Google zero?
 
-{% details I've synced an audience into Google, but my ads are not serving. %}
-Check that your audiences contain at least **5,000** users to ensure that ads start serving. 
-{% enddetails %}
+For privacy purposes, the user list size will show zero until the list has at least 1,000 members. After that, the size will be rounded to the two most significant digits.
 
-{% details How do I resolve the "Mobile App IDs Deleted" error? %}
-If you are syncing audiences to Google, this error will trigger if you have selected to sync mobile identifiers as part of your syncs but deleted your mobile app IDs from the Google partner page. 
-To resolve this issue, ensure you have added the appropriate mobile app IDs for iOS and Android to the Google partner page. 
-{% enddetails %}
+### I've synced an audience into Google, but my ads are not serving.
+
+Check that your audiences contain at least 5,000 users so that ads can start serving.
+
+### How do I resolve the "Mobile App IDs Deleted" error?
+
+If you're syncing audiences to Google, this error will trigger if you have selected to sync mobile identifiers as part of your syncs but deleted your mobile app IDs from the Google partner page. To resolve this issue, make sure you've added the appropriate mobile app IDs for iOS and Android to the Google partner page.
+
 
 [1]: {% image_buster /assets/img/google_sync/google_sync1.png %}
 [2]: {% image_buster /assets/img/google_sync/google_sync2.png %}

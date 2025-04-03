@@ -50,7 +50,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     }
     ```
 {% alert note %}
-Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification, so you can use the `type` array to set both price-drop and back-in-stock notifications in the same event.
+Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification, so you can use the `type` property to set both price-drop and back-in-stock notifications in the same event. Note that the `type` property must be an array.
 {% endalert %}
 
 {: start="4"}

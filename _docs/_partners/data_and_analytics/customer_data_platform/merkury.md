@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Merkury](https://merkury.merkleinc.com/) is Merkle’s enterprise identity platform that helps brands maximize consumer engagement, experience, and revenue through first-party cookieless identity capabilities. The `MerkuryID` unifies a brand’s known and unknown customer and prospects records, site/app visits, and consumer data to a single, persistent person ID.
 
+_This integration is maintained by Merkury._
+
+## About the integration
+
 The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury will update the Braze profile to include the subscribers email address. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
 
 ## Prerequisites
@@ -62,4 +66,3 @@ The following fields are required:
 
 See your Braze representative for further information.
 
-*This integration is maintained by Merkury.*

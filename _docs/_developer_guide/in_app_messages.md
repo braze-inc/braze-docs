@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
   - Swift
-page_order: 2.4
+page_order: 2.2
 description: "Learn about in-app messages and how to set them up for the Braze SDK."
 
 ---

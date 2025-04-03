@@ -24,19 +24,19 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios
     image: /assets/img/cordova.png
   - name: React Native
-    link: /docs/developer_guide/platforms/react_native/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=react%20native
     image: /assets/img/reactnative_icon.png
   - name: Unity Android
-    link: /docs/developer_guide/platforms/unity/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
   - name: Unity iOS
-    link: /docs/developer_guide/platforms/unity/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
   - name: Xamarin
-    link: /docs/developer_guide/platforms/xamarin/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
     image: /assets/img/xamarin.png
   - name: Flutter
-    link: /docs/developer_guide/platforms/flutter/sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=flutter
     image: /assets/img/flutter_icon.png
 
 ---

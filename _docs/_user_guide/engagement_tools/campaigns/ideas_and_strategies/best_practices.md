@@ -16,7 +16,7 @@ Braze recommends that you only send customer data that you intend to utilize on 
 - **Target** your audiences by building [audience segments]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Trigger** your messages with [action-based]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) or [API-triggered]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) delivery.
 - **Template** and personalize your messages with [Liquid conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 This allows you to optimize the data you send to Braze and will streamline your ability to message your users while guaranteeing against tracking data points your team may not find helpful long-term. 
 

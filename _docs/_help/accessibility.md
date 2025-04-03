@@ -97,7 +97,7 @@ Depending on individual needs, these users rely on:
 - Structure your content logically, and make sure headings follow the correct hierarchy. Don't skip heading levels.
 - Avoid center-aligned text for long chunks of content. This can be difficult for users with cognitive or learning disabilities to read. Content that wraps to more than two lines should be aligned left.
 - Use sans-serif fonts, which are easier to read on digital devices.
-- Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+- Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
 
 ### Links
 

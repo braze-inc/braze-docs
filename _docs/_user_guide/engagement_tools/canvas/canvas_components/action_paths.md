@@ -53,7 +53,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 - Make a purchase
 - Start a session
-- Perform a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)
+- Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Perform a conversion event
 - Add an email address
 - Change a custom attribute value (not nested custom attributes)

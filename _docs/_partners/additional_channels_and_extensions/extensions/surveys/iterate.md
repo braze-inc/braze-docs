@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
 
+_This integration is maintained by Iterate._
+
+## About the integration
+
 Iterate's integration with Braze allows you to deliver Iterate surveys natively and seamlessly within your product or campaigns. Survey responses can be recorded as custom user attributes in Braze, allowing you to build a complete picture of your users or create powerful new audiences and segments.
 
 With the Braze SDK installed in your app or website, you can use the segmentation and targeting tools available in Braze to deliver surveys via in-app messages to a specific portion of your audience based on any trigger or custom segment. Iterate surveys can also be embedded directly into your email campaigns or included as links in your push or other campaign types.
@@ -84,7 +88,6 @@ When a user answers a survey question, Iterate triggers a custom event within Br
 By default, the user attribute created for a question is the same as the prompt. 
 In some cases, you may want to customize this. To do that, click on the **Customize user attribute names** dropdown in the **Create your Survey** step and enter any custom names you'd like.
 
-*This integration is maintained by Iterate.*
 
 [6]: {{site.baseurl}}/api/basics/#endpoints
 [2]: {% image_buster /assets/img/iterate.png %}

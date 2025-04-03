@@ -1,9 +1,5 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-{% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/).
-{% endalert %}
-
 ## Built-in features
 
 The following features are built into the Braze Android SDK. To use any other push notification features, you will need to [set up push notifications](#android_setting-up-push-notifications) for your app.

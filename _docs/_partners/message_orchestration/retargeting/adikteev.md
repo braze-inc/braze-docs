@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adikteev](https://www.adikteev.com/churn-prediction) is a user-retention engine that combines churn prediction with full-service app retargeting.
 
+_This integration is maintained by Adikteev._
+
+## About the integration
+
 The Braze and Adikteev integration allows you to boost user retention by leveraging Adikteev's churn prediction technology within Braze CRM campaigns to target high-risk user segments in priority.
 
 ## Prerequisites
@@ -81,4 +85,3 @@ The payload sent from Adikteev to Braze is customizable and can be configured to
 
 Contact your Adikteev account manager for any questions related to the integration or for any support with your use cases.
 
-*This integration is maintained by Adikteev.*

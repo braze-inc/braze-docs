@@ -340,4 +340,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/trustpilot/
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
+- name: SessionM
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 ---

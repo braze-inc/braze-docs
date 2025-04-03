@@ -29,7 +29,7 @@ Occasionally, we'll make non-breaking changes to Braze Currents schemas. Non-bre
 We typically give a two-week notice for these changes, but sometimes this isn't possible. Its essential that you design your integration to handle unrecognized fields or event types, otherwise it will likely lead to data loss.
 
 {% alert tip %}
-For the full list of Currents event schemas, [Message Engagement Events](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+For the full list of Currents event schemas, [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
 {% endalert %}
 
 ## Batching and serialization
@@ -51,7 +51,7 @@ There will be a top-level JSON object with the key `"events"` that maps to an ar
 
 The following examples show payloads for individual events, meaning the payloads would belong to a larger array of JSON objects, where each JSON object represents a single event in the batch.
 
-Additionally, their structure varies slightly from the flat structure found in [Message Engagement Events](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events). In particular, they contain two sub-objects:
+Additionally, their structure varies slightly from the flat structure found in [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events). In particular, they contain two sub-objects:
 
 |Name|Description|
 |----|-----------|

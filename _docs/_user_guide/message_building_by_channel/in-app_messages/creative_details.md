@@ -91,7 +91,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 ### GIFs and videos
 
-Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Additional considerations
 

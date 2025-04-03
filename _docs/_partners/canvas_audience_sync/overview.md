@@ -49,7 +49,7 @@ To use Audience Sync to Google or Facebook, connect your ad account by searching
 
 ![Facebook technology partner.][3]{: style="max-width:35%;"} ![Google Ads technology partner.][4]{: style="max-width:35%;"}
 
-After connecting your ads account, you can create a Canvas with an Audience Sync step.
+After connecting your ad account, you can create a Canvas with an Audience Sync step.
 
 ![Canvas component menu to add the Audience Sync step to the user journey.][22]{: style="max-width:75%;"}
 

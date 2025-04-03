@@ -11,6 +11,10 @@ search_tag: partner
 
 > [Recurly](https://recurly.com/) is a subscription management and billing platform. The Recurly integrated platform simplifies the automation of the subscription lifecycle at scale by enabling teams to manage and optimize the subscriber experience&#8212;from testing new plans, offers, and promotions to managing payment methods, integrations, and insights.
 
+_This integration is maintained by Recurly._
+
+## About the integration
+
 The integration between Recurly and Braze simplifies the process of sharing subscription data with Braze, enabling targeted communication with customers.
 
 - Leverage Recurly subscription lifecycle events (for example, subscription renewals, pauses, or cancels) in Braze to trigger personalized campaigns and communications.
@@ -86,7 +90,6 @@ Recurly batches certain subscription lifecycle events as single API calls to Bra
 
 Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests][4] for details.
 
-*This integration is maintained by Recurly.*
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

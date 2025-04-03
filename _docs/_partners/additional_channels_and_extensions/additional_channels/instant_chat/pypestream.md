@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into "always-on" digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
 
+_This integration is maintained by Pypestream._
+
+## About the integration
+
 The Braze and Pypestream integration allows you to seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. 
 
 ## Prerequisites
@@ -278,4 +282,3 @@ class BrazeExample:
 
 Lastly, in each solution's design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 
 
-*This integration is maintained by Pypestream.*

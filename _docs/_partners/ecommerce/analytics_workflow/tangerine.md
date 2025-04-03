@@ -49,7 +49,7 @@ To track and analyze mobile app user store visits and in-store activities along 
 
 Take advantage of Snowflake secure data sharing to share your Braze raw campaign and impression data with Store360 Insight analytics, providing a full picture of users' lifecycle and activities from online to offline.
 
-For reference, here are all the [Braze fields](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?ffbc5f5ca7092bc9ae26268aa0e711df) available to be incorporated into Store360 analytics. The details of this step are very customer-specific and require special configurations. Talk to your Store360 account manager or support@tangerine.io to learn more.
+For reference, here are all the [Braze fields]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ffbc5f5ca7092bc9ae26268aa0e711df) available to be incorporated into Store360 analytics. The details of this step are very customer-specific and require special configurations. Talk to your Store360 account manager or support@tangerine.io to learn more.
 
 ## Important information and limitations
 

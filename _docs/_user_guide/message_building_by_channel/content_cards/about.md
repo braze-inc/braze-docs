@@ -114,7 +114,7 @@ This section covers the three most common ways to place Content Cards within you
 - [Carousel](#carousel)
 - [Banner](#banner)
 
-The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
+The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 example content cards, showing the different placement options: message inbox, carousel, and banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 

@@ -305,8 +305,20 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">ソフトバウンス</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">延期</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### 延期
+
+「Deferred」または「deferral」とは、メールがすぐに配信されなかったが、Braze がこの一時的な配信エラーの後、その特定のキャンペーンの試行が停止される前に配信成功の可能性を最大化するために、最大72時間メールを再試行することです。「deferrals (延期)」の一般的な理由には、受信トレイプロバイダーからのレピュテーションに基づくメールボリュームのレート制限、一時的な接続の問題、DNS エラーなどがあります。
+
+_延期は_ _ソフトバウンスとは_異なる。この再試行期間中にメールが正常に配信されなかった場合、Brazeは送信されたキャンペーンごとに1つのソフトバウンスイベントを送信する。2025年2月25日以前は、これらの再試行は1回のキャンペーン送信に対して複数のソフトバウンスとしてカウントされていた。
+
+_延期は_現在、CurrentsまたはBraze Snowflake機能（Query Builder、SQLセグメンテーション、Snowflakeデータ共有など）を使用した場合のみ利用可能であることに注意。キャンペーンやキャンバスの分析にこれを含めたい場合は、[製品フィードバックを送信して]({{site.baseurl}}/user_guide/administrative/access_braze/portal)ください。
 
 ##### 推定実質開封率 {#estimated-real-open-rate}
 

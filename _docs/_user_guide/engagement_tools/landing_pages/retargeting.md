@@ -22,7 +22,7 @@ Braze automatically tracks when a user submits a landing page form. You can view
 
 {% tabs local %}
 {% tab Using a segment %}
-When you [create a segment]({{site.baseurl}}/docs/user_guide/engagement_tools/segments/creating_a_segment/), under "Retargeting" group, choose **Submitted form on Landing Page**.
+When you [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), under "Retargeting" group, choose **Submitted form on Landing Page**.
 
 ![Segment creation with the Filter Group selected as "Submitted Form on Landing Page"]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 

@@ -40,6 +40,7 @@ Tanto os usuários ociosos quanto os usuários inativos serão arquivados, a men
 - Não é possível receber SMS. Por exemplo, eles não têm um número de telefone válido ou cancelaram a inscrição em todos os grupos de inscrições de SMS.
 - Não é possível receber push. Por exemplo, eles desinstalaram o app ou desativaram as permissões push.
 - Não é possível receber uma mensagem do WhatsApp. Por exemplo, eles não têm um número de telefone válido ou cancelaram a inscrição em todos os grupos de inscrições do WhatsApp.
+- Não consigo receber uma mensagem LINE. Por exemplo, eles não têm um ID do LINE ou estão desinscritos de todos os grupos de inscrição do LINE.
 - Não uso nenhum app móvel nem visito um site em um espaço de trabalho há mais de seis meses.
 - Não receberam nenhuma mensagem de um espaço de trabalho há mais de seis meses.
 - Não são atualizados há mais de seis meses.
@@ -60,7 +61,7 @@ Os usuários do grupo de controle global nunca serão arquivados, mesmo que aten
 
 ### Amostra do grupo de tratamento
 
-Os usuários do grupo de amostra do grupo de tratamento são excluídos do arquivamento em um relatório do grupo de controle global.
+Os usuários do grupo de amostra de tratamento em um Relatório Global de Grupo de Controle são excluídos da arquivação.
 
 ## Usuários teste
 
@@ -94,7 +95,9 @@ Isso permite que você:
 
 ### Etapas
 
-1. Alvo usuários que atendem aos critérios de arquivamento da sua marca e que você gostaria de reter.<br><br>
+1. Alvo usuários que atendem aos critérios de arquivamento da sua marca e que você gostaria de reter. Por exemplo, você pode reter usuários que:
+    - Última vez que recebeu uma mensagem foi há mais de 23 semanas ou nunca recebeu uma mensagem.<br>E<br>
+    - Última vez que usou seu app há mais de 23 semanas ou teve zero sessões em seu app<br><br>
       ![Usuários-alvo que receberam qualquer mensagem pela última vez há mais de 23 semanas, nunca receberam uma mensagem de uma campanha ou etapa do Canva, usaram esses aplicativos pela última vez há mais de 23 semanas e usaram esses aplicativos exatamente zero vezes.][2]<br><br>
 2. Defina a reelegibilidade para um período de pouco menos de 6 meses.<br><br>
       ![Controles de entrada com a reelegibilidade ativada e a janela de reelegibilidade definida para 23 semanas.][3]<br><br>
