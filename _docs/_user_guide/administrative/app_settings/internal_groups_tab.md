@@ -65,7 +65,7 @@ Additionally, if you preview the message as a random user, custom user, or exist
 
 If you use an IP pool to send out an email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
 
-![Test send to Content Test Groups.]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
+![The Test section of the in-app message editor to select the Content Test Group.]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
 
 ### Seed Groups
 
@@ -83,22 +83,22 @@ Seed emails will have `[SEED]` appended to the start of the email subject line. 
 - Impact frequency capping.
 
 {% alert tip %}
-If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders.
+If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.
 {% endalert %}
 
 #### For campaigns
 
-Seed Groups can be edited from the **Targeting** page when composing an email campaign.
+When composing an email campaign, you can edit your Seed Groups in the **Target Audiences** section of the editor.
 
 Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages, this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this will be the time the first user is sent a message.
 
-If your campaign is multivariate and your variant has a 0% send percentage, it will not be sent to seed groups. Additionally, if the variant has already been sent and has not been updated to resend in **Edit Seed Groups** on the **Target** step, it will not be sent again by default.
+If your campaign is multivariate and your variant has a 0% send percentage, it won't be sent to Seed Groups. Additionally, if the variant has already been sent and hasn't been updated to resend in **Edit Seed Groups** on the **Target** step, it won't be sent again by default.
 
 {% alert note %}
-If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants, or turning off Seed Group sending upon update.
+If you have a recurring campaign and any one of the variants is updated, you can choose to send again to only the updated variants or all variants, or turn off Seed Group sending upon update.
 {% endalert %}
 
-![Seed groups preview for a campaign]({% image_buster /assets/img_archive/seed_group_campaign.png %})
+![The "Email seed test" Seed Group selected to be sent the Variant 1 email campaign.]({% image_buster /assets/img_archive/seed_group_campaign.png %})
 
 #### For Canvas
 
