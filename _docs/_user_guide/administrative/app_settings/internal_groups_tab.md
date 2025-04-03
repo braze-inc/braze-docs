@@ -71,7 +71,7 @@ If you use an IP pool to send out an email, you can select which IP pool you wou
 
 ### Seed Groups
 
-Seed Groups supported for the email channel only and allow you to send a copy of each email variant message to members of that group. 
+Seed Groups are only supported for the email channel. You can add users to a Seed Group to send copies of each email variant message to all members of the group.
 
 Seed Groups aren't available for API campaigns, but you can include Seed Groups using an API-triggered entry in the campaign. You can use this to measure deliverability metrics and to keep a record of your email content for historical and archival purposes. 
 
