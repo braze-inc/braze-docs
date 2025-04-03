@@ -1,5 +1,5 @@
 ---
-nav_title: Comentarios de ls docuentación
+nav_title: Documentación Feedback
 permalink: /feedback/
 hide_toc: true
 ---

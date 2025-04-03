@@ -111,5 +111,5 @@ Para descargar los datos de las series temporales, selecciona <i class="fas fa-b
 
 | Plazo | Definición |
 | --- | --- |
-| Toque | Una interacción física o punto de contacto con un mensaje.<br><br>Los toques pueden incluir:<br>{::nomarkdown}<ul><li>Clic en correo electrónico</li><li>Apertura de notificaciones push</li><li>Clic en tarjeta de contenido</li><li>Clic en mensaje dentro de la aplicación</li><li>Entrega de SMS</li></ul>{:/} |
+| Toque | Una interacción física o punto de contacto con un mensaje.<br><br>Los toques pueden incluir:<br>{::nomarkdown}<ul><li>Clic en correo electrónico</li><li>Apertura de notificaciones push</li><li>Clic en tarjeta de contenido</li><li>Clic en mensaje dentro de la aplicación</li><li>SMS Clic</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -49,7 +49,7 @@ En el enfoque "una plantilla para todos", la localización se aplica a una únic
 El enfoque de "una plantilla por país" separa las plantillas en diferentes locales de envío. Tras el envío, el panel de control informa de los análisis de envío en función de cada país por separado, y cualquier evento [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) posterior a nivel de usuario también estará vinculado a una campaña específica.
 
 - Las plantillas se benefician de la implantación de [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) con fines de mantenimiento y seguimiento.
-- Las campañas pueden heredar las configuraciones de la misma [plantilla Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) y de [los Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (como las [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) que contienen Liquid).
+- Las campañas pueden heredar las configuraciones de la misma [plantilla Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) y de [los Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (como las [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) que contienen Liquid).
 - Las campañas y plantillas preexistentes pueden [duplicarse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) para acelerar la obtención de valor.
 
 | Ventajas | Consideraciones |
@@ -77,7 +77,7 @@ Tras el envío de un Canvas, el panel de control proporciona [análisis agregado
 {% endtab %}
 {% tab Un recorrido por país %}
 
-En el enfoque de "un recorrido por país", el constructor de recorridos de [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) proporciona la flexibilidad de crear recorridos de usuario mediante múltiples [componentes Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). Estos componentes pueden [duplicarse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) a nivel de componente y de trayecto global.
+En el enfoque de "un recorrido por país", el constructor de recorridos de [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) proporciona la flexibilidad de crear recorridos de usuario mediante múltiples [componentes Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). Estos componentes pueden [duplicarse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) a nivel de componente y de trayecto global.
 
 La localización puede lograrse mediante los siguientes métodos:
 - Lienzos separados por país, lo que garantiza que los recorridos complejos de los usuarios se definan en la parte superior del embudo mediante filtros de audiencia.
