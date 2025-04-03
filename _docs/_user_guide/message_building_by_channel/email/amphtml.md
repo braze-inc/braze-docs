@@ -27,7 +27,7 @@ Braze is not responsible for users registering with Google or meeting the necess
 
 ### Supported email clients
 
-Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary from client to client. Follow the registration links for more information.
+Before you can send AMP emails to users, you must register with our email clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary from client to client. Follow the registration links for more information.
 
 | Client | Registration Link |
 | ------ | -------- |
