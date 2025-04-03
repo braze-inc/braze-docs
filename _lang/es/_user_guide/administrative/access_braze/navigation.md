@@ -27,7 +27,7 @@ Puede activar la nueva navegación en cualquier momento seleccionando **Cambiar 
 
 ## Qué esperar a continuación
 
-Podrás alternar entre la navegación nueva y la antigua hasta **enero de 2025**.
+Podrás alternar entre la navegación nueva y la antigua hasta **marzo de 2025**.
 
 ## Qué ha cambiado
 

@@ -26,7 +26,7 @@ Existen dos estados de suscripción para los usuarios de WhatsApp: `subscribed` 
 ### Cómo configurar los grupos de suscripción de WhatsApp de los usuarios
 
 - **API REST:** Los perfiles de usuario pueden establecerse mediante programación en [`/subscription/status/set` endpoint][4] utilizando la API REST de Braze.
-- **SDK Web:** Los usuarios pueden añadirse a un grupo de suscripción por correo electrónico, SMS o WhatsApp mediante el método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) o [Web][11].
+- **SDK Web:** Los usuarios pueden añadirse a un grupo de suscripción por correo electrónico, SMS o WhatsApp mediante el método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) o [Web][11].
 - **Importación de usuarios**: Los usuarios pueden añadirse a grupos de suscripción por correo electrónico o SMS mediante **Importar usuarios**. Al actualizar el estado del grupo de suscripción, debe tener estas dos columnas en su CSV: `subscription_group_id` y `subscription_state`. Consulte [Importación de usuarios]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) para obtener más información.
 
 ### Cómo comprobar el grupo de suscripción de WhatsApp de un usuario

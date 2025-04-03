@@ -43,14 +43,14 @@ Existen dos métodos para crear y gestionar tus objetos de negocio en Braze, los
 | Método | Descripción |
 | --- | --- |
 | [Catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Son objetos de datos independientes (objetos de datos complementarios) del perfil de usuario principal en Braze. En un contexto B2B, probablemente tendrías catálogos para tus cuentas y oportunidades. |
-| [Fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | Permiten a Braze consultar directamente tu almacén de datos. Es probable que ya estés sincronizando regularmente tus objetos de clientes potenciales, contactos, oportunidades y cuentas con tu almacén de datos, así que puedes dirigir la segmentación Braze directamente a ese almacén y activarla en un entorno de copia cero. |
+| [Fuentes conectadas]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Permiten a Braze consultar directamente tu almacén de datos. Es probable que ya estés sincronizando regularmente tus objetos de clientes potenciales, contactos, oportunidades y cuentas con tu almacén de datos, así que puedes dirigir la segmentación Braze directamente a ese almacén y activarla en un entorno de copia cero. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Opción 1: Utiliza catálogos para cuentas y oportunidades
 
 Los catálogos son tablas de datos que se alojan y gestionan en Braze. Aunque los datos de cuentas y oportunidades proceden del sistema CRM de ventas que hayas elegido, los duplicarías en Braze para utilizarlos con fines de marketing: segmentación basada en cuentas, marketing basado en cuentas, gestión de clientes potenciales, etc.
 
-Para esta opción, recomendamos crear un catálogo para tus cuentas y otro para tus oportunidades, y actualizarlos con frecuencia enviando actualizaciones de Braze a través de nuestra [API de catálogos]({{site.baseurl}}/api/endpoints/catalogs/) o de [la Ingesta de datos en la nube (CDI) de catálogos]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/). Al crear estos catálogos, asegúrate de que la `id` (primera columna) de tu catálogo coincide con la `id` de tu sistema CRM de ventas.
+Para esta opción, recomendamos crear un catálogo para tus cuentas y otro para tus oportunidades, y actualizarlos con frecuencia enviando actualizaciones de Braze a través de nuestra [API de catálogos]({{site.baseurl}}/api/endpoints/catalogs/) o de [la Ingesta de datos en la nube (CDI) de catálogos]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/). Al crear estos catálogos, asegúrate de que la `id` (primera columna) de tu catálogo coincide con la `id` de tu sistema CRM de ventas.
 
 #### Mapeado sobre tus campos CRM
 
@@ -145,7 +145,7 @@ Para configurar las fuentes conectadas, consulta [Integrar fuentes conectadas]({
 
 ## Paso 2: Relaciona los objetos de tu empresa con los perfiles de usuario
 
-Los perfiles de usuario son el objeto principal de Braze, que impulsa la mayor parte de tu segmentación demográfica, desencadenamiento y personalización. Los perfiles de usuario incluyen [datos de usuario predeterminados]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) recopilados por nuestro SDK y otras fuentes, incluidos [datos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), que adoptan la forma de atributos (datos demográficos), eventos (datos de comportamiento) o compras (datos de transacciones).
+Los perfiles de usuario son el objeto principal de Braze, que impulsa la mayor parte de tu segmentación demográfica, desencadenamiento y personalización. Los perfiles de usuario incluyen [datos de usuario predeterminados]({{site.baseurl}}/user_guide/data/user_data_collection/) recopilados por nuestro SDK y otras fuentes, incluidos [datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/), que adoptan la forma de atributos (datos demográficos), eventos (datos de comportamiento) o compras (datos de transacciones).
 
 ### Paso 2.1: Mapea ID de CRM de ventas a Braze
 

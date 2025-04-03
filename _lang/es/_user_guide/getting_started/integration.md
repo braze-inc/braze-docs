@@ -12,7 +12,7 @@ description: "Este artículo de referencia cubre brevemente los pasos de integra
 > Integrarse con Braze es un proceso que merece la pena. Pero eres inteligente. Estás **aquí**. Está claro que ya lo sabes. Pero lo que probablemente no sepa es que usted y sus desarrolladores están a punto de emprender juntos un viaje que requiere conocimientos técnicos, planificación estratégica y una comunicación coherente que les ayude a coordinarse.
 
 {% alert note %}
-Tenga en cuenta que el contenido de este artículo no se aplica al correo electrónico. Compruébelo en la sección [Configuración del correo electrónico]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).
+Tenga en cuenta que el contenido de este artículo no se aplica al correo electrónico. Compruébelo en la sección [Configuración del correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/).
 {% endalert %}
 
 ## El aspecto técnico del proceso de integración
@@ -27,7 +27,7 @@ El SDK (kit de desarrollo de software) de Braze es la manera en que enviamos y o
 
 * Sus [claves API]({{site.baseurl}}/api/api_key/)
 * El [punto final de tu SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze ya no proporciona puntos finales personalizados, así que utiliza los puntos finales SDK predefinidos. Si se le ha proporcionado un punto final personalizado preexistente, aquí puede encontrar los pasos de configuración necesarios para la integración de [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
+  * Braze ya no proporciona puntos finales personalizados, así que utiliza los puntos finales SDK predefinidos. Si se le ha proporcionado un punto final personalizado preexistente, aquí puede encontrar los pasos de configuración necesarios para la integración de [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
 
 Puedes darles esta información directamente o darles acceso a Braze creándoles una cuenta. 
 
@@ -45,9 +45,9 @@ Asegúrese de indicar a sus desarrolladores qué canales desea utilizar para gar
 |---|---|
 | Mensajes dentro de la aplicación | Requiere la implementación del SDK, así como estos pasos específicos del canal. |
 | Push | Requiere la implementación del SDK para proporcionar una gestión adecuada de las credenciales de mensajería y los tokens push. |
-| Correo electrónico | Se trata de un proceso totalmente distinto. Consulte la sección [Configuración del correo electrónico]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) para obtener más información sobre la integración. |
+| Correo electrónico | Se trata de un proceso totalmente distinto. Consulte la sección [Configuración del correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) para obtener más información sobre la integración. |
 | Tarjetas de contenido | Para empezar a utilizar [las tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), póngase en contacto con su gestor de éxito de clientes de Braze. |
-| SMS Y MMS | Consulta la sección [Configuración de SMS]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup) para obtener más detalles sobre la integración. |
+| SMS Y MMS | Consulta la sección [Configuración de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) para obtener más detalles sobre la integración. |
 | Webhooks | Requiere la implementación del SDK, así como estos pasos específicos del canal. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -62,11 +62,11 @@ Braze no se limita a una sola habilidad. No se trata solo de enviar correos elec
 Entonces, ¿qué hay que hacer para darles esta información?
 
 1. Colabore con su equipo de marketing para definir las campañas, los objetivos, los atributos y los eventos que necesita controlar. Defina esos casos de uso y compártalos con sus equipos.
-2. Defina sus requisitos de datos personalizados[(atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/), [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), etc.).
+2. Defina sus requisitos de datos personalizados[(atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), etc.).
 3. A partir de ahí, discute cómo deberían seguirse esos datos (desencadenados a través del SDK, etc.).
-4. Defina cuántos [espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/app_group_management/) necesita. Sus ingenieros necesitarán saber cómo [probar y configurar]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) estos espacios de trabajo.
+4. Defina cuántos [espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) necesita. Sus ingenieros necesitarán saber cómo [probar y configurar]({{site.baseurl}}/user_guide/getting_started/workspaces/) estos espacios de trabajo.
 
-Una vez que descubras toda esta información, compártela con tu ingeniero. Tomarán esa información e implementarán tus [datos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). Puede que incluso necesite [importar algunos usuarios]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). También debes conocer [las convenciones de nomenclatura de los eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Una vez que descubras toda esta información, compártela con tu ingeniero. Tomarán esa información e implementarán tus [datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/). Puede que incluso necesite [importar algunos usuarios]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/). También debes conocer [las convenciones de nomenclatura de los eventos]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
 ### Paso 4: Personalizan en función de lo que quieras
 
@@ -74,9 +74,9 @@ Si quieres cosas como el lanzamiento desencadenado por API y el contenido conect
 
 ### Paso 5: Ambos realizan el control de calidad de tu aplicación
 
-Colabora con tu ingeniero para asegurarte de que todo funciona correctamente. Envía [mensajes de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), utiliza nuestras [aplicaciones de prueba para Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) y [aplicaciones de prueba para iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/), ¡comprueba todas las casillas antes de empezar a enviar!
+Colabora con tu ingeniero para asegurarte de que todo funciona correctamente. Envía [mensajes de prueba]({{site.baseurl}}/developer_guide/sending_test_messages/), utiliza nuestras [aplicaciones de prueba para Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) y [aplicaciones de prueba para iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), ¡comprueba todas las casillas antes de empezar a enviar!
 
-Incluso tenemos instrucciones específicas para [probar su integración con Android o FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) y para probar [el push para iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/).
+Incluso tenemos instrucciones específicas para [probar su integración con Android o FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) y para probar [el push para iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 
 ## Después de la implementación
 
