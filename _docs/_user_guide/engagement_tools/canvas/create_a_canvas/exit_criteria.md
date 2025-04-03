@@ -10,7 +10,7 @@ tool: Canvas
 
 # Exit criteria
 
-> By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, your users can exit your Canvas as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience.
+> By adding exception events directly to your Canvas entry rules, your users can exit your Canvas as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience.
 
 ## Setting up exit criteria
 
@@ -20,7 +20,7 @@ The exit criteria includes an exception event, which is the specific action that
 
 ![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.][1]{: style="max-width:90%;"}
 
-### Selecting exception events
+### Selecting exception events {#exception-events}
 
 When a user performs the exception event, they will exit the Canvas. Note that exception events will only trigger exits when a user is in the Canvas and advancing through the user journey.
 

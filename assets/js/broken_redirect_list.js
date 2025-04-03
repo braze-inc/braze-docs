@@ -2372,4 +2372,6 @@ validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_
 validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
 validurls['/docs/developer_guide/analytics/logging_custom_events/'] = ['/docs/developer_guide/analytics/logging_events/'];
 
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
+
 // validurls['OLD'] = 'NEW';
