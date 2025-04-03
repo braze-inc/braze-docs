@@ -2373,4 +2373,12 @@ validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_
 validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
 validurls['/docs/developer_guide/analytics/logging_custom_events/'] = ['/docs/developer_guide/analytics/logging_events/'];
 
+validurls['/docs/api/endpoints/email/bounce/remove/'] = ['/docs/api/endpoints/email/post_remove_hard_bounces/'];
+validurls['/docs/developer_guide/platforms/swift/archived_updates/ios_14/'] = '/docs/developer_guide/platforms/swift/ios_18/';
+validurls['/docs/developer_guide/platforms/android/initial_sdk_setup/optional_gaid_collection/'] = '/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id';
+validurls['/docs/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity';
+validurls['/docs/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events/?tab=unity';
+validurls['/docs/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=unity';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/'] = '/docs/developer_guide/content_cards/embedding_gifs/?sdktab=android';
+
 // validurls['OLD'] = 'NEW';
