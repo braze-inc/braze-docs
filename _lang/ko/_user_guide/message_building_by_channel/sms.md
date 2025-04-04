@@ -29,7 +29,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
 - name: "SMS 메시지 만들기"
-  link: /docs/user_guide/message_building_by_channel/sms/create/
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
   image: /assets/img/braze_icons/table.svg
 - name: "링크 단축"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/

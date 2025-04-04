@@ -43,14 +43,14 @@ Braze에서 비즈니스 개체를 만들고 관리하는 방법에는 카탈로
 | 방법 | 설명 |
 | --- | --- |
 | [카탈로그]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | 이들은 Braze의 기본 사용자 프로필에 있는 독립적인 데이터 객체(보조 데이터 객체)입니다. B2B 환경에서는 계정과 기회에 대한 카탈로그가 있을 것입니다. |
-| [연결된 소스]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | 이를 통해 Braze는 데이터 웨어하우스에 직접 쿼리할 수 있습니다. 이미 리드, 연락처, 기회, 계정 개체를 데이터 웨어하우스에 정기적으로 동기화하고 있을 가능성이 높으므로 Braze 세분화를 해당 웨어하우스에 직접 지정하고 복사본이 없는 환경에서 활성화할 수 있습니다. |
+| [연결된 소스]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | 이를 통해 Braze는 데이터 웨어하우스에 직접 쿼리할 수 있습니다. 이미 리드, 연락처, 기회, 계정 개체를 데이터 웨어하우스에 정기적으로 동기화하고 있을 가능성이 높으므로 Braze 세분화를 해당 웨어하우스에 직접 지정하고 복사본이 없는 환경에서 활성화할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### 옵션 1: 계정 및 기회에 카탈로그 사용
 
 카탈로그는 Braze에서 호스팅 및 관리되는 데이터 테이블입니다. 계정 및 기회 데이터는 선택한 영업 CRM 시스템에서 생성되지만, 계정 기반 세분화, 계정 기반 마케팅, 리드 관리 등 마케팅 목적으로 사용하기 위해 Braze에서 이를 복제하게 됩니다.
 
-이 옵션의 경우, 계정용 카탈로그와 기회용 카탈로그를 각각 하나씩 생성하고 [카탈로그 API]({{site.baseurl}}/api/endpoints/catalogs/) 또는 [카탈로그 클라우드 데이터 수집(CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/)을 통해 Braze 업데이트를 전송하여 자주 업데이트하는 것을 권장합니다. 이러한 카탈로그를 생성할 때 카탈로그의 `id` (첫 번째 열)이 영업 CRM 시스템의 `id` 과 일치하는지 확인하세요.
+이 옵션의 경우, 계정용 카탈로그와 기회용 카탈로그를 각각 하나씩 생성하고 [카탈로그 API]({{site.baseurl}}/api/endpoints/catalogs/) 또는 [카탈로그 클라우드 데이터 수집(CDI)]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/)을 통해 Braze 업데이트를 전송하여 자주 업데이트하는 것을 권장합니다. 이러한 카탈로그를 생성할 때 카탈로그의 `id` (첫 번째 열)이 영업 CRM 시스템의 `id` 과 일치하는지 확인하세요.
 
 #### CRM 필드 위에 매핑
 
@@ -145,7 +145,7 @@ Braze에서 비즈니스 개체를 만들고 관리하는 방법에는 카탈로
 
 ## 2단계: 비즈니스 개체를 사용자 프로필과 연결
 
-사용자 프로필은 대부분의 인구통계학적 세분화, 트리거링 및 개인화를 지원하는 Braze의 주요 객체입니다. 사용자 프로필에는 속성(인구통계 데이터), 이벤트(행동 데이터) 또는 구매(트랜잭션 데이터)의 형태를 취하는 [사용자 지정 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/) 포함하여 SDK 및 기타 소스에서 수집한 [기본 사용자 데이터가]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) 포함됩니다.
+사용자 프로필은 대부분의 인구통계학적 세분화, 트리거링 및 개인화를 지원하는 Braze의 주요 객체입니다. 사용자 프로필에는 속성(인구통계 데이터), 이벤트(행동 데이터) 또는 구매(트랜잭션 데이터)의 형태를 취하는 [사용자 지정 데이터를]({{site.baseurl}}/user_guide/data/custom_data/) 포함하여 SDK 및 기타 소스에서 수집한 [기본 사용자 데이터가]({{site.baseurl}}/user_guide/data/user_data_collection/) 포함됩니다.
 
 ### 2.1단계: 영업 CRM ID를 Braze에 매핑
 

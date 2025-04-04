@@ -22,7 +22,7 @@ Android 10 또는 iOS 13 이상 버전을 사용하는 사용자는 기기 설�
 
 ## 어두운 모드 테마 설정
 
-[인앱 메시지 작성]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) 시 스타일 탭에 있는 새로운 다크 모드 옵션을 사용하면 기기에서 다크 모드로 설정된 사용자를 위해 대체 색상 테마를 쉽게 추가할 수 있습니다.
+The new Dark Mode option, located in the Style tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), lets you easily add an alternate color theme for users who are in Dark Mode on their device.
 
 ![인앱 메시지 작성 시 스타일 탭에서 라이트 모드 스타일과 다크 모드 스타일 간에 전환하는 사용자]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

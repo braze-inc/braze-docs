@@ -76,7 +76,7 @@ Braze가 Classic 및 Pro SQL 인스턴스에 연결될 때 2분에서 5분 정�
 
 {% tab Microsoft Fabric %}
 1. 서비스 주체를 만들고 통합에 사용할 Fabric 작업 영역에 대한 액세스를 허용합니다.   
-2. 귀하의 Fabric 작업 공간에서 소스 데이터를 설정하고 서비스 주체에 대한 권한을 부여하십시오. 
+2. In your Fabric workspace, set up the source data and grant permissions to your service principal 
 3. Braze 대시보드에서 새 연결 소스를 생성합니다.
 4. 통합을 테스트합니다.
 5. 연결된 소스를 사용하여 하나 이상의 CDI 세그먼트를 만드십시오.

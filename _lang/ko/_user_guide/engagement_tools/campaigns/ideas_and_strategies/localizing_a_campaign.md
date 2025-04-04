@@ -49,7 +49,7 @@ tool:
 "국가당 하나의 템플릿" 접근 방식은 템플릿을 여러 전송 로캘로 분리합니다. 전송 후에는 대시보드에서 각 국가별로 전송 분석을 개별적으로 보고하며, 모든 다운스트림 사용자 수준의 [커런츠]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) 이벤트도 특정 캠페인에 연결됩니다.
 
 - 템플릿은 유지 관리 및 추적 목적으로 [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) 구현하면 유용합니다.
-- 캠페인은 동일한 [Braze 템플릿]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) 및 [콘텐츠 블록]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (예: Liquid가 포함된 [이메일 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) )에서 구성을 상속할 수 있습니다.
+- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (such as [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) that contain Liquid).
 - 기존 캠페인과 템플릿을 [복제하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) 가치 창출 시간을 단축할 수 있습니다.
 
 | 장점 | 고려사항 |
@@ -77,7 +77,7 @@ tool:
 {% endtab %}
 {% tab 국가당 하나의 여정 %}
 
-"국가당 하나의 여정" 접근 방식에서 [캔버스]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) 여정 빌더는 여러 [캔버스 구성 요소]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)를 통해 사용자 여정을 유연하게 생성할 수 있는 기능을 제공합니다. 이러한 구성 요소는 구성 요소 및 전체 여정 수준에서 [복제]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)할 수 있습니다.
+In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 이러한 구성 요소는 구성 요소 및 전체 여정 수준에서 [복제]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)할 수 있습니다.
 
 현지화는 다음 방법을 통해 수행할 수 있습니다:
 - 국가별로 캔버스를 분리하여 오디언스 필터를 사용하여 복잡한 사용자 여정을 퍼널 상단에서 정의할 수 있습니다.

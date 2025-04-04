@@ -122,6 +122,10 @@ description: "이 참조 문서에서는 중첩 커스텀 속성을 커스텀 �
 }
 ```
 
+{% alert note %}
+This approach can't be used to delete a nested key inside an [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -441,7 +445,7 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 
 ## 데이터 포인트
 
-업데이트되는 모든 키는 데이터 포인트를 소비합니다. 예를 들어, 고객 프로필에서 초기화된 이 개체는 7개의 데이터 포인트로 계산됩니다.
+Any key that is sent consumes a data point. 예를 들어, 고객 프로필에서 초기화된 이 개체는 7개의 데이터 포인트로 계산됩니다.
 
 ```json
 {

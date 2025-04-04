@@ -42,7 +42,7 @@ Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감�
 {: start="2"}
 2\. **LINE**을 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가합니다.
+4\. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -71,9 +71,15 @@ Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감�
 
 ![미리 보기에 메시지가 표시된 LINE 작성기입니다.][1]
 
-{% alert tip %}
+### Tips
+
+#### Using Liquid
+
 Liquid를 사용하려는 경우 개인화에 대한 기본값을 포함해야 합니다. 이렇게 하면 고객 프로필이 불완전한 수신자가 빈 입력 안내를 받는 것을 방지할 수 있습니다. 예를 들어 사용자가 "안녕하세요, !"라는 메시지를 받는 대신 "안녕하세요, 신규 구독자 여러분!"이라는 메시지를 받을 수 있습니다.
-{% endalert %}
+
+#### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## 3단계: 메시지 미리보기 및 테스트
 

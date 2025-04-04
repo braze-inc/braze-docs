@@ -31,10 +31,10 @@ tool: Canvas
 | **캔버스 흐름 동작** | 캔버스의 모든 단계에서 `canvas_entry_properties` 을 참조할 수 있습니다. 출시 후 동작에 대해서는 [출시 후 캔버스 편집을]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties) 참조하세요. | \- 커스텀 이벤트 또는 구매 이벤트가 수행되는 [작업 경로][3] 단계 **뒤의** 첫 번째 메시지 단계에서 `event_properties`를 참조할 수 있습니다. <br> \- 작업 경로 단계의 다른 모든 사람 경로 뒤에 있을 수 없습니다. <br> \- 액션 경로와 메시지 단계 사이에 메시지 캔버스가 아닌 다른 구성 요소를 넣을 수 있습니다. 이러한 메시지 이외의 구성 요소 중 하나가 작업 경로 단계인 경우 사용자는 해당 작업 경로의 다른 모든 사람 경로를 통해 이동할 수 있습니다. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-캔버스 항목 프로퍼티는 Liquid에서만 참조할 수 있습니다. 캔버스 내 속성을 필터링하려면 대신 [이벤트 속성정보 세분화]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)를 사용하십시오.
+캔버스 항목 프로퍼티는 Liquid에서만 참조할 수 있습니다. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
-인앱 메시지 채널의 경우, 이전 얼리 액세스의 일부로 원래 편집기에서 [영구 항목 속성]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)을 활성화한 경우에만 캔버스 흐름과 원래 캔버스 편집기에서 `canvas_entry_properties`를 참조할 수 있습니다. 단, `event_properties`는 인앱 메시지 채널에 사용할 수 없습니다.
+For in-app message channels, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) enabled in the original editor as part of the previous early access. 단, `event_properties`는 인앱 메시지 채널에 사용할 수 없습니다.
 {% endalert %}
 
 행동 경로 단계에 "SMS 인바운드 메시지 보내기" 또는 "WhatsApp 인바운드 메시지 보내기" 트리거가 포함된 경우 후속 캔버스 단계에 SMS 또는 WhatsApp Liquid 속성정보를 포함할 수 있습니다. 이는 캔버스 플로우에서 이벤트 속성정보가 작동하는 방식을 반영합니다. 이렇게 하면 메시지를 활용하여 고객 프로필 및 대화 메시지에 대한 퍼스트파티 데이터를 저장하고 참조할 수 있습니다.

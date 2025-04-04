@@ -138,7 +138,7 @@ Braze는 지연을 `day of the week` + `calendar days`로 계산한 다음 `time
 
 | 정의 | 시간대 |
 | ---------- | --------- |
-| 사용자의 전환 여부를 판정함에 있어 사용자가 캠페인을 수신한 시점과 할당된 행동을 수행한 시점 사이에 최대 경과 시간입니다. 자세한 내용은 [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) 참조하세요. | N/A |
+| 사용자의 전환 여부를 판정함에 있어 사용자가 캠페인을 수신한 시점과 할당된 행동을 수행한 시점 사이에 최대 경과 시간입니다. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

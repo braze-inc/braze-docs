@@ -37,8 +37,8 @@ search_rank: 2
 2\. 웹훅을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우, 다채널을 선택하십시오.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
 4\. (선택 사항) 이 캠페인이 어떻게 사용될 것인지에 대한 설명을 추가하십시오.
-4\. 팀과 태그를 필요에 따라 추가하세요.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 변형에 대해 서로 다른 웹훅 템플릿을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
 {% alert tip %}
@@ -78,6 +78,8 @@ search_rank: 2
 URL과 요청 본문에서 [국제화가][16] 지원됩니다. 메시지를 국제화하려면 언어 추가를 선택하고 필수 필드를 작성하십시오. 
 
 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. 사용할 수 있는 전체 언어 목록은 지원되는 언어를 참조하십시오.
+
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### 웹훅 URL
 

@@ -15,7 +15,7 @@ tool: Canvas
 
 ## 필수 조건
 
-이 템플릿을 성공적으로 사용하려면 사용자가 기능을 사용한 시점을 참조하는 [사용자 지정 이벤트가]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) 필요합니다.
+이 템플릿을 성공적으로 사용하려면 사용자가 기능을 사용한 시점을 참조하는 [사용자 지정 이벤트가]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) 필요합니다.
 
 ## 필요에 맞게 템플릿 조정하기
 
