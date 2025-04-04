@@ -50,8 +50,8 @@ Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs d
 | Méthode d’addition | Description |
 | :------------- | :------------- |
 | Utilisateurs identifiés |Recherchez l’utilisateur par son ID utilisateur externe ou son adresse e-mail.|
-|Utilisateurs anonymes| Recherchez par adresse IP. Donnez ensuite un nom pour chaque utilisateur de test ajouté. Il s'agit du nom auquel tous les journaux des événements seront associés sur la page [Journal des événements utilisateurs.]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) |
-|Ajouter des utilisateurs en bloc|Copiez et collez une liste d’adresses e-mail ou d’ID externes dans la section fournie. Vous ne pouvez ajouter que des utilisateurs déjà connus dans le tableau de bord. Pour plus d'informations, consultez la section [Importation d'utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
+|Utilisateurs anonymes| Recherchez par adresse IP. Donnez ensuite un nom pour chaque utilisateur de test ajouté. Il s'agit du nom auquel tous les journaux des événements seront associés sur la page [Journal des événements utilisateurs.]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) |
+|Ajouter des utilisateurs en bloc|Copiez et collez une liste d’adresses e-mail ou d’ID externes dans la section fournie. Vous ne pouvez ajouter que des utilisateurs déjà connus dans le tableau de bord. Pour plus d'informations, consultez la section [Importation d'utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Groupes de test de contenu

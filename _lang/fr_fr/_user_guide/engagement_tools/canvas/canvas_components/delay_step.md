@@ -24,6 +24,30 @@ Plusieurs détails doivent être pris en compte lors de la création d’un dél
 - La limite de délai est de 30 jours.
 - Un composant de délai peut être uniquement relié à une étape suivante.
 
+### Délais personnalisés
+
+{% alert important %}
+Les délais personnalisés et les délais prolongés sont en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
+Sélectionnez la bascule **Personnaliser** le délai pour définir un délai personnalisé pour vos utilisateurs. Vous pouvez l'utiliser avec une [étape Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) pour sélectionner la variable contextuelle à retarder.
+
+Imaginons que nous souhaitions rappeler à nos clients d'acheter du dentifrice dans 30 jours. En combinant une étape Contexte et une étape Délai, nous pouvons sélectionner la variable contextuelle à retarder. Dans ce cas, notre étape Contexte comporterait les champs suivants :
+
+- **Nom de la variable contextuelle :** product_reminder_interval
+- **Type de données :** Date
+- **Valeur :** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![Le "product_reminder_interval" et sa valeur.][2]
+
+Ensuite, comme nous voulons rappeler à nos clients qu'ils n'auront que 30 jours à partir de maintenant, nous sélectionnerons **Jusqu'à un jour précis** comme option de délai et nous sélectionnerons **Personnaliser le délai** pour utiliser les informations de notre étape Contexte. Cela signifie que nos utilisateurs seront retardés jusqu'à la variable de contexte sélectionnée.
+
+![Exemple d'utilisation de variables contextuelles avec une étape Delay pour retarder les utilisateurs en fonction de l'"intervalle de rappel du produit".][3]
+
+#### Délais prolongés
+
+Vous pouvez désormais prolonger les délais jusqu'à deux ans. Par exemple, si vous intégrez de nouveaux utilisateurs à votre application, vous pouvez ajouter un délai prolongé de deux mois avant d'envoyer une étape Message pour inciter les utilisateurs qui n'ont pas encore démarré une session à le faire.
+
 ### Options de délai temporel
 
 Vous pouvez choisir le type de délai avant le message suivant dans votre Canvas. Vous pouvez définir une durée du délai pour vos utilisateurs jusqu’à une période désignée, ou une date et heure spécifiques.
@@ -85,3 +109,5 @@ Les délais disposent de trois statistiques disponibles dans la vue des analyses
 Les séries chronologiques pour ces éléments d'analyse sont disponibles dans la vue du composant développée.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}

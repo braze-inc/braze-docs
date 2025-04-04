@@ -17,7 +17,7 @@ Ce composant Canvas remplace la nécessité de créer des étapes complètes sup
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-Les Parcours d’audience sont identiques aux entonnoirs de tri avec des critères de classement. Les utilisateurs sont évalués pour chaque critère par ordre de priorité et sont dirigés vers le critère le plus élevé auquel ils répondent. Cela réduit l'ambiguïté quant à l'endroit où les utilisateurs se rendront et aux messages qu'ils recevront. Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Les Parcours d’audience sont identiques aux entonnoirs de tri avec des critères de classement. Les utilisateurs sont évalués pour chaque critère par ordre de priorité et sont dirigés vers le critère le plus élevé auquel ils répondent. Cela réduit l'ambiguïté quant à l'endroit où les utilisateurs se rendront et aux messages qu'ils recevront. Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/post-launch_edits/).
 
 Le parcours d’audience vous permet d’effectuer les actions suivantes :
 
@@ -54,7 +54,7 @@ Une fois l'étape Parcours d'audience terminée, chaque groupe d'audience dispos
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si vos groupes d'audience sont configurés comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer qu'il correspond aux critères d'audience. 
+Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si vos groupes d'audience sont configurés comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer qu'il correspond aux critères d'audience. 
 
 ## Utilisation de parcours d’audience
 
@@ -74,7 +74,7 @@ Vous pouvez également voir la performance de cette étape à l’aide des [anal
 
 Si votre canvas utilise une [limitation du débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (telle que la limitation du nombre total d’utilisateurs qui vont recevoir le canvas), Braze vous recommande de ne pas utiliser de numéro de compartiment aléatoire pour segmenter vos parcours d’audience. 
 
-Un [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) est un attribut de l'utilisateur qui peut être utilisé pour créer des segments uniformément distribués d'utilisateurs aléatoires. Braze utilise le numéro de compartiment aléatoire pour regrouper les utilisateurs durant la phase de segmentation d’entrée dans le Canvas et chaque groupe est traité séparément. Selon les groupes dont le traitement s’achève en premier, certains utilisateurs sont limités lors de l’entrée en raison de la limitation du taux qui pourrait entraîner une distribution non uniforme des utilisateurs quand ils atteignent l’étape du parcours d’audience.
+Un [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) est un attribut de l'utilisateur qui peut être utilisé pour créer des segments uniformément distribués d'utilisateurs aléatoires. Braze utilise le numéro de compartiment aléatoire pour regrouper les utilisateurs durant la phase de segmentation d’entrée dans le Canvas et chaque groupe est traité séparément. Selon les groupes dont le traitement s’achève en premier, certains utilisateurs sont limités lors de l’entrée en raison de la limitation du taux qui pourrait entraîner une distribution non uniforme des utilisateurs quand ils atteignent l’étape du parcours d’audience.
 
 Dans ce cas, essayez plutôt d'utiliser les [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
 

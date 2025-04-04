@@ -7,11 +7,9 @@ description: "Le présent article de référence explique comment créer et util
 
 # Sélections
 
-> Apprenez à créer et à utiliser des sélections dans vos catalogues.
+> Les sélections sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Lorsque vous utilisez une sélection, vous configurez essentiellement des filtres personnalisés basés sur des colonnes spécifiques de votre catalogue. Il peut s'agir de filtres pour la marque, la taille, l'emplacement, la date d'ajout, etc. Il vous permet de contrôler ce que vous montrez aux utilisateurs en définissant des critères auxquels les éléments doivent d'abord répondre.<br><br>Cette page explique comment créer et utiliser des sélections dans vos catalogues.
 
-Les sélections sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Lorsque vous utilisez une sélection, vous configurez essentiellement des filtres personnalisés basés sur des colonnes spécifiques de votre catalogue. Il peut s'agir de filtres pour la marque, la taille, l'emplacement, la date d'ajout, etc. Il vous permet de contrôler ce que vous montrez aux utilisateurs en définissant des critères auxquels les éléments doivent d'abord répondre.
-
-Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), vous pouvez référencer davantage les données de votre catalogue en incorporant des sélections dans vos campagnes ou recommandations Braze.
+Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), vous pouvez référencer davantage les données de votre catalogue en incorporant des sélections dans vos campagnes ou recommandations Braze.
 
 ![La section Sélections dans un exemple de catalogue.][1]
 
@@ -19,7 +17,7 @@ Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_a
 
 - Vous pouvez créer jusqu'à 30 sélections par catalogue.
 - Vous pouvez ajouter jusqu'à quatre filtres par sélection.
-- Les sélections sont idéales pour affiner les recommandations à partir des données du catalogue Braze. Si vous êtes à la recherche d'inspiration, consultez [À propos des recommandations de produits]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/) pour obtenir des exemples de cas d'utilisation.
+- Les sélections sont idéales pour affiner les recommandations à partir des données du catalogue Braze. Si vous êtes à la recherche d'inspiration, consultez [À propos des recommandations de produits]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) pour obtenir des exemples de cas d'utilisation.
 
 ## Création d'une sélection
 
@@ -48,13 +46,13 @@ L'utilisation de tout liquide dans les catalogues, comme les attributs personnal
 
 Après avoir créé votre sélection, personnalisez vos messages avec Liquid pour insérer les éléments filtrés de ce catalogue. Vous pouvez demander à Braze de générer le liquide pour vous à partir de la fenêtre de personnalisation qui se trouve dans les compositeurs de messages :
 
-1. Dans tous les compositeurs de messages qui prennent en charge la personnalisation, cliquez sur <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Ajouter une personnalisation"></i> pour ouvrir la fenêtre de personnalisation.
+1. Dans tous les compositeurs de messages qui prennent en charge la personnalisation, sélectionnez <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Ajouter une personnalisation"></i> pour ouvrir la fenêtre de personnalisation.
 2. Pour le **type de personnalisation**, sélectionnez **Articles de catalogue.**
 3. Sélectionnez le nom de votre catalogue.
 4. Pour la **méthode de sélection des éléments**, sélectionnez **Utiliser une sélection.**
 4. Sélectionnez votre choix dans la liste.
 5. Pour les **informations à afficher**, sélectionnez les champs du catalogue à inclure pour chaque article.
-6. Cliquez sur l'icône **Copier** et collez le liquide à l'endroit voulu dans votre message.
+6. Sélectionnez l'icône **Copier** et collez le liquide à l'endroit voulu dans votre message.
 
 ![Fenêtre modale de personnalisation avec les sélections suivantes : "Articles du catalogue" pour "Type de personnalisation", "Jeux" pour "Nom du catalogue", "Sélections" pour "Type de sélection", "game_selection" pour "Sélection", et "titre" et "description_fr" pour "Informations à afficher".][6]{: style="max-width:70%;"}
 
