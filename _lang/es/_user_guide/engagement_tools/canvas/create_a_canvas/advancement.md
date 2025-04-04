@@ -15,7 +15,7 @@ tool: Canvas
 A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este artículo está disponible como referencia para entender cómo sus usuarios avanzan a través de los componentes de Canvas en el editor original. <br><br>Para los componentes en el Flujo del lienzo, el **Comportamiento de avance** está configurado para que el público avance siempre inmediatamente, o **Avanzar inmediatamente público**. Esto también se aplicará a los [pasos desconectados]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
-> La función **Comportamiento de avance** le permite elegir los criterios de avance a través de su [componente Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
+> La función **Comportamiento de avance** le permite elegir los criterios de avance a través de su [componente Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
 ![Configuración del Comportamiento de avance con dos opciones: hacer avanzar a la audiencia cuando se envía el mensaje o hacer avanzar a la audiencia inmediatamente.][1]
 

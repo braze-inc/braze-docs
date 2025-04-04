@@ -13,7 +13,7 @@ alias: /line/user_management/
 
 > El ID de usuario de LINE se almacena en el atributo del perfil de usuario llamado `native_line_id`, que se utiliza para enviar mensajes a un usuario en el canal LINE. Este artículo explica cómo configurar y encontrar el atributo `native_line_id`.
 
-Los datos de usuario de los clientes se representan en un [perfil de usuario de Braze]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/). Un perfil de usuario almacena información y atributos sobre los usuarios de una empresa, como nombres de pila y direcciones de correo electrónico. 
+Los datos de usuario de los clientes se representan en un [perfil de usuario de Braze]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/). Un perfil de usuario almacena información y atributos sobre los usuarios de una empresa, como nombres de pila y direcciones de correo electrónico. 
 
 Cuando envías mensajes LINE a través de Braze, Braze utiliza el atributo `native_line_id` para identificar a qué usuarios enviar el mensaje. Cuando LINE envía eventos webhook Braze, como cuando un usuario sigue un canal o responde a un mensaje, se utiliza `native_line_id` para buscar el perfil de usuario correspondiente.
 

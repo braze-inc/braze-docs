@@ -10,7 +10,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > in-app メッセージのドラッグアンドドロップエディタを使用して、確認ページ付きの電子メールサインアップフォームを作成します。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
 
 ## 確認ページ付きの電子メールサインアップフォームの作成
 

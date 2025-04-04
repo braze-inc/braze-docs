@@ -70,7 +70,7 @@ Choose the percentage distribution for your experiment. As a best practice, you 
 
 ### Step 6: Assign conversions
 
-Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 ### Step 7: Review and launch
 

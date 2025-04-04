@@ -15,6 +15,10 @@ Los equipos pueden configurarse en función de la ubicación de la base de clien
 
 Los equipos no están disponibles en todos los contratos Braze. Si desea acceder a esta función, póngase en [contacto](mailto:success@braze.com) con su gestor de cuenta Braze o consúltenos.
 
+## ¿En qué se diferencian los equipos de los conjuntos de permisos y funciones?
+
+{% multi_lang_include permissions.md content="Diferencias" %}
+
 ## Creación de equipos
 
 Vaya a **Configuración** > **Equipos internos** y seleccione <i class="fas fa-plus"></i> **Añadir equipo**.
@@ -130,10 +134,6 @@ Seleccione uno o varios equipos para archivar. Si el equipo no está asociado a 
 ![Archivar un equipo asociado a un objeto en Braze][86]{: style="max-width:70%;"}
 
 Los administradores de Braze pueden desarchivar un equipo seleccionando el equipo archivado y seleccionando **Desarchivar**.
-
-## ¿En qué se diferencian los equipos de los conjuntos de permisos y funciones?
-
-Consulta [Usuarios de la empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) para ver un desglose de las diferencias entre equipos, conjuntos de permisos y funciones.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

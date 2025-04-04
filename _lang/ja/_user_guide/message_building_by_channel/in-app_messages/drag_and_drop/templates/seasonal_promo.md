@@ -38,9 +38,9 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ![][img3] 背景画像を選択するサイドメニューを備えたアプリ内メッセージエディター。]
 
-## 結果を分析する
+## 結果の分析
 
-{% multi_lang_include drag_and_drop/templates.md section='レポート' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 [img1]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %}
 [img2]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %}

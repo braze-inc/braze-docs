@@ -52,7 +52,7 @@ Your CRM team will plan out the messaging use cases that you'll launch in the ne
 * [Channel]({{site.baseurl}}/user_guide/message_building_by_channel) (for example, push notifications or in-app messages)
 * [Delivery method]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types) (for example, scheduled delivery or action-based delivery)
 * [Target audience]({{site.baseurl}}/user_guide/engagement_tools/segments)
-* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events)
+* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
@@ -196,6 +196,10 @@ Make sure your production and testing environments are set up before beginning Q
 |                           | Facilitate Connected Content (for example, AccuWeather). |
 |                           | Confirm all message channel integrations are working together properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
+{% endalert %}
 
 ### Passing Braze off to marketers
 

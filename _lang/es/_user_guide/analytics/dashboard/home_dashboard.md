@@ -62,7 +62,7 @@ Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales d
 ### Sesiones por ciclo de vida
 
 *Sesiones de por vida* es el recuento total de sesiones que Braze ha registrado desde la integración. En pocas palabras, una sesión es cada vez que un usuario utiliza la aplicación o visita su sitio web. Para una definición más precisa sobre cómo se definen las sesiones por plataforma, consulta el correspondiente
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android y FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), o artículos para desarrolladores sobre seguimiento de sesiones [web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), o artículos para desarrolladores sobre seguimiento de sesiones [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
 
 ### Usuarios activos al mes
 

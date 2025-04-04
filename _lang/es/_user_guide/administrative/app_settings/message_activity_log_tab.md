@@ -16,7 +16,7 @@ Puede ver las transacciones de campaña de la API, solucionar problemas de mensa
 Para acceder al registro, ve a **Configuración** > **Registro de actividad de mensajes**.
 
 {% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar el **Registro de actividad de mensajes** en **Configuración** > **Consola de desarrollador**.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes encontrar el **Registro de actividad de mensajes** en **Configuración** > **Consola para desarrolladores**.
 {% endalert %}
 
 ![Registro de actividad de mensajes][2]
@@ -37,6 +37,9 @@ Puede filtrar por el siguiente contenido registrado en el **Registro de activida
 - Errores de asignación de alias de usuario
 - Errores en las pruebas A/B
 - Errores SMS/MMS
+- Errores de WhatsApp
+- Errores de actividad en vivo
+- Errores de desencadenamiento del usuario malo
 
 Estos mensajes pueden proceder de nuestro propio sistema, de sus aplicaciones o plataformas, o de nuestros socios externos. Esto puede dar lugar a un número infinito de mensajes que pueden aparecer en este registro.
 
@@ -70,6 +73,23 @@ Por ejemplo, algunos posibles mensajes de "Bloqueo", además del enumerado en la
 - Mensaje rechazado debido a la política local.
 - El mensaje fue bloqueado por el receptor como spam.
 - Servicio no disponible, host del cliente [_IP_ADDRESS_] bloqueado mediante Spamhaus.
+
+## Periodo de retención del almacenamiento
+
+Los errores de las últimas 60 horas están disponibles en los Registros de actividad de mensajes. Los registros con más de 60 horas de antigüedad se limpian y ya no son accesibles. 
+
+### Número de registros de errores almacenados
+
+El número de registros guardados depende de varias condiciones. Por ejemplo, si se envía una campaña programada a miles de usuarios, podríamos ver una muestra de los errores en el Registro de actividad de mensajes en lugar de todos los errores.
+
+Aquí tienes un resumen de las condiciones que afectan al número de registros que se guardarán:
+- Se guardarán hasta 20 registros de errores de Contenido conectado para la misma campaña dentro de una hora de reloj fija.
+- Se guardarán hasta 100 registros de errores del mismo tipo de error en una hora de reloj fija por espacio de trabajo para los siguientes tipos de error:
+    - Errores de mensaje abortados
+    - Errores de webhook
+    - Errores en las notificaciones push
+    - Errores de actividad en vivo
+    - Errores de desencadenamiento del usuario malo
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

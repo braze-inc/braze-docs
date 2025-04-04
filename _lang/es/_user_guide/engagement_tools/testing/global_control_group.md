@@ -95,7 +95,7 @@ Puedes ver la pertenencia a un grupo de control global yendo a la sección **Var
 
 ## Informe
 
-Consulte [Informes de grupos de control global]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) para obtener información sobre las métricas de los informes.
+Consulte [Informes de grupos de control global]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) para obtener información sobre las métricas de los informes.
 
 ## Solución de problemas
 

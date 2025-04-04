@@ -15,8 +15,10 @@ Todos los datos persistentes asociados con un usuario se almacenan en su perfil 
 
 Estos parámetros incluyen:
 
-* `braze_id`
+* `braze_id` (asignado por Braze)
 * `external_id`
+* `email`
+* `phone`
 * Cualquier número de alias de usuario personalizados que establezca
 
 ## Perfiles de usuario anónimos
@@ -27,7 +29,7 @@ Inicialmente, cuando el SDK reconoce a un usuario, se crea un perfil de usuario 
 
 ## Perfiles de usuario identificados
 
-Después de que un usuario sea reconocible en tu aplicación (proporcionando una forma de ID de usuario o dirección de correo electrónico), te sugerimos que asignes un `external_id` al perfil de ese usuario utilizando el método `changeUser` [(Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). Un `external_id` permite identificar el mismo perfil de usuario en varios dispositivos. 
+Después de que un usuario sea reconocible en tu aplicación (proporcionando una forma de ID de usuario o dirección de correo electrónico), te sugerimos que asignes un `external_id` al perfil de ese usuario utilizando el método `changeUser` [(Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html)). Un `external_id` permite identificar el mismo perfil de usuario en varios dispositivos.
 
 Otras ventajas de utilizar `external_id` son las siguientes: 
 
@@ -36,11 +38,20 @@ Otras ventajas de utilizar `external_id` son las siguientes:
 - Habilita la importación de datos de usuario desde fuentes externas a la aplicación utilizando los [puntos finales de Datos de usuario]({{site.baseurl}}/api/endpoints/user_data/) y dirígete a los usuarios con mensajes transaccionales utilizando nuestros [puntos finales de mensajería]({{site.baseurl}}/api/endpoints/messaging/).
 - Busca usuarios individuales utilizando nuestros [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Pruebas" dentro del segmentador, y en la sección [**Buscar usuarios**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) página.
 
+### Consideraciones sobre los ID externos
+
 {% alert warning %}
 No asignes un `external_id` a un perfil de usuario antes de poder identificarlo de forma única. Después de identificar a un usuario, no puedes revertirlo a anónimo.
 <br><br>
 Además, un `external_id` no se puede modificar una vez que se ha establecido en un perfil de usuario. Cualquier intento de establecer un `external_id` diferente durante la sesión de un usuario creará un nuevo perfil de usuario con el nuevo `external_id` asociado. No se transmitirá ningún dato entre los dos perfiles.
 {% endalert %} 
+
+#### Riesgo de utilizar un correo electrónico o un correo con hash como ID externo
+
+Utilizar una dirección de correo electrónico o una dirección de correo electrónico con hash como ID externo de Braze puede simplificar la gestión de identidades en todos tus orígenes de datos; sin embargo, es importante tener en cuenta los riesgos potenciales para la privacidad de los usuarios y la seguridad de los datos.
+
+- **Información adivinable:** Las direcciones de correo electrónico son fáciles de adivinar, lo que las hace vulnerables a los ataques.
+- **Riesgo de explotación:** Si un usuario malintencionado altera su navegador web para enviar la dirección de correo electrónico de otra persona como ID externo, podría acceder potencialmente a mensajes confidenciales o a información de la cuenta.
 
 ### Qué ocurre cuando identificas a usuarios anónimos
 
@@ -73,7 +84,7 @@ A diferencia de `external_id`, un alias puede actualizarse con un nuevo nombre p
 
 ### Etiquetar usuarios anónimos
 
-Los alias de usuario también permiten etiquetar a los usuarios anónimos con un identificador. Por ejemplo, si un usuario proporciona a su sitio de comercio electrónico su dirección de correo electrónico pero aún no se ha registrado, la dirección de correo electrónico puede utilizarse como alias para ese usuario anónimo. A continuación, estos usuarios pueden exportarse utilizando sus alias o referenciarse mediante la API.
+Los alias de usuario también permiten etiquetar a los usuarios anónimos con un identificador. Por ejemplo, si un usuario proporciona a tu sitio de comercio electrónico su dirección de correo electrónico pero aún no se ha registrado, la dirección de correo electrónico puede utilizarse como alias para ese usuario anónimo. A continuación, estos usuarios pueden exportarse utilizando sus alias o referenciarse mediante la API.
 
 ### Comportamiento de los alias en los perfiles de usuario anónimos
 

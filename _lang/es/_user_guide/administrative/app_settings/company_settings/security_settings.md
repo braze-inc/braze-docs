@@ -103,63 +103,63 @@ Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su
 
 {% details Sucesos de seguridad notificados %}
 ### Iniciar sesión y cuenta 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Desarrollador eliminado
+- Desarrollador adicional añadido
+- Firmado en
+- Error al iniciar sesión
+- Configuración de la autenticación de dos factores completada
+- Reinicio de la autenticación de dos factores completado
+- Desarrollador autorizado 2FA
+- Desarrollador Suspendido
+- Desarrollador no suspendido
 
 ### Acceso elevado
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Iniciado Flujo de Acceso Elevado
+- Flujo de acceso elevado completado
+- Verificación 2FA fallida para acceso elevado
 
 ### Campaña
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- Campaña añadida
+- Campaña editada
 
 ### Canvas
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- Viaje añadido
+- Viaje editado
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Segmento añadido
+- Segmento editado
+- Datos exportados a CSV
+- Segmento exportado mediante API
 
 ### Clave de API REST
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- Añadida clave de API REST
+- Eliminada la clave de API REST
 
 ### Credencial de autenticación básica
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Añadida la credencial Basic Auth
+- Actualizada la credencial de Autenticación Básica
+- Eliminada la credencial de Autenticación Básica
 
 ### Permiso
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Desarrollador autorizado 2FA
+- Permiso de cuenta actualizado
 
 ### Configuración de la empresa
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- Grupo de aplicaciones añadido
+- Aplicación añadida
 
 ### Plantilla de correo electrónico
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- Plantilla de correo electrónico añadida
+- Plantilla de correo electrónico actualizada
 
 ### Push credenciales
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Credenciales push actualizadas
+- Credenciales push eliminadas
 
 ### Depurador de SDK
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Iniciada la sesión del depurador SDK
+- Registro del depurador SDK exportado
 {% enddetails %}
 
 ## Ver información personal identificable (PII) {#view-pii}
