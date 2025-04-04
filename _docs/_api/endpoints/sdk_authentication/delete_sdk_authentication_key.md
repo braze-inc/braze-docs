@@ -1,13 +1,11 @@
 ---
 nav_title: "DELETE: Remove SDK Authentication Key"
 article_title: "DELETE: Remove SDK Authentication Key"
-alias: /delete_sdk_authentication_key/
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Delete SDK Authentication Key Braze endpoint."
-platform: API
 ---
 
 {% api %}

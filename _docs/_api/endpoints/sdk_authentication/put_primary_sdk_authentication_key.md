@@ -1,13 +1,11 @@
 ---
 nav_title: "PUT: Set Primary SDK Authentication Key"
 article_title: "PUT: Set Primary SDK Authentication Key"
-alias: /put_primary_sdk_authentication_key/
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Set Primary SDK Authentication Key Braze endpoint."
-platform: API
 ---
 
 {% api %}

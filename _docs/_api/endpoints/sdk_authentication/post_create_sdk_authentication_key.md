@@ -1,13 +1,11 @@
 ---
 nav_title: "POST: Create SDK Authentication Key"
 article_title: "POST: Create SDK Authentication Key"
-alias: /post_create_sdk_authentication_key/
 search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Create SDK Authentication Key Braze endpoint."
-platform: API
 ---
 
 {% api %}
