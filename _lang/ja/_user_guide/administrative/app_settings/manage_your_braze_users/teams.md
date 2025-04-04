@@ -15,6 +15,10 @@ description: "このリファレンス記事では、ダッシュボードでの
 
 Braze の契約によっては、チームを使用できない場合があります。この機能にアクセスしたい場合は、Braze アカウントマネージャーに、またはコンサルティングを[お問い合わせ](mailto:success@braze.com)ください。
 
+## チームは権限セットや役割とどう違うのか？
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## チームの作成
 
 **設定」**＞「**社内チーム**」と進み、<i class="fas fa-plus"></i> 「**チームを追加**」を選択する。
@@ -130,10 +134,6 @@ Michelle にはワークスペースレベルの権限 [キャンペーン、キ
 ![Brazeのオブジェクトに関連付けられたチームをアーカイブする][86]{: style="max-width:70%;"}
 
 Braze 管理者は、アーカイブされたチームを選択し、[**アーカイブ解除**] を選択して、チームのアーカイブを解除できます。
-
-## チームは権限セットや役割とどう違うのか？
-
-チーム、権限セット、およびロールの違いの内訳については、[Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)を参照してください。
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

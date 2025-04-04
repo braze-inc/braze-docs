@@ -15,7 +15,7 @@ tool: Canvas
 
 ## 前提条件
 
-このテンプレートを正常に使用するには、ユーザーがこの機能を使用したときに参照する[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) が必要です。
+このテンプレートを正常に使用するには、ユーザーがこの機能を使用したときに参照する[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)が必要です。
 
 ## テンプレートをニーズに合わせる
 

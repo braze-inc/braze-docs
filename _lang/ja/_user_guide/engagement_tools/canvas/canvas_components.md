@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: キャンバスのフィーチャーフラグ
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: キャンバスオーディエンスの同期
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ guide_featured_list:
 
 [条件分岐][3]のコンポーネントは、単純な「はい / いいえ」のロジックを使用して、アクションやユーザー属性に基づいて、ユーザージャーニーに相互に排他的な 2 つのパスを作成します。これは、ユーザーグループの特定とターゲット設定に役立ちます。
 
-[延期期間][4]コンポーネントを使うと、キャンバス内の 1 つのステップを延期することができます。キャンバスのこのスタンドアロンの延期期間ステップは、特定の時刻にユーザーにメッセージを伝えるのに最適です。さらに、延期期間コンポーネントを使用すると、オーディエンスがコンポーネントの条件を満たすまでの時間を長くできるので、オーディエンスへの働きかけを増やすこともできます。 
+[延期期間][4]コンポーネントを使うと、キャンバス内の 1 つのステップを延期することができます。キャンバスのこのスタンドアロンの延期期間ステップは、特定の時刻にユーザーにメッセージを伝えるのに最適です。さらに、延期期間コンポーネントを使用すると、オーディエンスがコンポーネントの条件を満たすまでの時間を長くできるので、オーディエンスへの働きかけを増やすこともできます。
 
 ### テスト
 
@@ -62,7 +62,7 @@ guide_featured_list:
 
 ### 統合
 
-貴社ブランドのファーストパーティユーザーデータとの同期をご希望の場合には、[Facebook][6] と [Google][7] で利用できるオーディエンス同期オプションをご活用ください。<br><br>
+貴社ブランドのファーストパーティユーザーデータとの同期をご希望の場合には、[Facebook][6] と [Google][7] で利用できるオーディエンス同期オプションをご活用ください。
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

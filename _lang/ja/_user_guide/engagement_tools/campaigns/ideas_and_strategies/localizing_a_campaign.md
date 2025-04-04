@@ -49,7 +49,7 @@ tool:
 国ごとに1つのテンプレート」というアプローチは、送信ロケールごとにテンプレートを分けている。送信後、ダッシュボードは国別に送信分析を報告し、下流のユーザーレベルの[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents)イベントも特定のキャンペーンに関連付けられる。
 
 - テンプレートは、メンテナンスとトラッキングの目的で[タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags)実装することで恩恵を受ける。
-- キャンペーンは、同じ[Brazeテンプレートや]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) [コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks)（Liquidを含む[メールテンプレートなど]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template)）の設定を継承できる。
+- キャンペーンは、同じ[Brazeテンプレートや]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) [コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks)（Liquidを含む[メールテンプレートなど]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template)）の設定を継承できる。
 - 既存のキャンペーンやテンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/)することで、価値創出までの時間を短縮できます。
 
 | メリット | 考慮事項 |
@@ -77,7 +77,7 @@ tool:
 {% endtab %}
 {% tab 国につき1回の旅 %}
 
-「国ごとに 1 つのジャーニー」というアプローチでは、[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)ジャーニービルダーを使って複数の[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)を介してユーザージャーニーを柔軟に作成できます。これらのコンポーネントは、コンポーネントレベルおよびジャーニー全体で[複製]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)できます。
+「国ごとに 1 つのジャーニー」というアプローチでは、[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)ジャーニービルダーを使って複数の[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を介してユーザージャーニーを柔軟に作成できます。これらのコンポーネントは、コンポーネントレベルおよびジャーニー全体で[複製]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)できます。
 
 ローカライゼーションは、次の方法で実行できます。
 - 国ごとにキャンバスを分けることで、複雑なユーザージャーニーがオーディエンスフィルターを使用してファネルの一番上に定義されるようにする。
