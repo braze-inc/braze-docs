@@ -403,4 +403,4 @@ This feature improves delivery rates by always routing push tokens to the correc
 
 #### Can I disable this feature?
 
-Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support]({{site.baseurl}}/help/support).
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/).

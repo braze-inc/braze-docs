@@ -112,6 +112,15 @@ If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any othe
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
+## Managing consent for ad targeting
+
+As the advertiser, it is your responsibility to manage consent for ad tracking or targeting of your users.
+
+To send ads to your users, you must comply with all applicable laws and regulations, and the ad platform's policies and requirements. Only use Braze to target and sync users where you have obtained their consent. 
+
+To keep your audience lists in these ad platforms up-to-date and remove users who have revoked their consent, set up a Canvas to remove users from these existing audience lists using an Audience Sync step.
+
+
 [1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
 [2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}
 [3]: {% image_buster /assets/img/audience_sync/facebook_partner.png %}

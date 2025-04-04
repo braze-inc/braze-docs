@@ -51,7 +51,7 @@ glossaries:
   - name: Endpoint
     description: An end of a communication channel also known as an API <a href="https://www.braze.com/docs/api/endpoints/">endpoint</a> is used within the Braze messaging API for sending and scheduling messages.
   - name: Exception Events
-    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/">Exception events</a> occur when a user has reached the desired goal and do not receive a triggered message. This way, the triggered message is still relevant to the user.
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events">Exception events</a> occur when a user has reached the desired goal and do not receive a triggered message. This way, the triggered message is still relevant to the user.
   - name: Frequency Capping
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping">Frequency capping</a> allows you to manage communication without overwhelming your audience. It's an automated limit on messages to prevent users from receiving too many communications in a short period of time.
   - name: HIPAA
