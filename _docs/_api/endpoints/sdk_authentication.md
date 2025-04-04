@@ -1,18 +1,29 @@
 ---
 nav_title: "SDK Authentication"
+article_title: SDK Authentication Endpoints
+search_tag: Endpoint
 page_order: 14
-layout: api_page
+layout: dev_guide
+alias: /sdk_authentication/
 
-page_type: reference
-platform: API
-description: "This article outlines details about the SDK authentication endpoints within the Braze REST API."
+description: "This landing page lists the Braze SDK Authentication endpoints."
+page_type: landing
+
+guide_top_header: "SDK Authentication Endpoints"
+guide_top_text: "Use these endpoints to create and manage SDK Authentication keys for your app. SDK Authentication keys allow you to securely authenticate your mobile SDK instances with Braze."
+
+guide_featured_title: ""
+guide_featured_list:
+  - name: "POST: Create SDK Authentication Key"
+    link: /docs/post_create_sdk_authentication_key/
+    image: /assets/img/braze_icons/plus-circle.svg
+  - name: "GET: List SDK Authentication Keys"
+    link: /docs/get_sdk_authentication_keys/
+    image: /assets/img/braze_icons/eye.svg
+  - name: "PUT: Set Primary SDK Authentication Key"
+    link: /docs/put_primary_sdk_authentication_key/
+    image: /assets/img/braze_icons/pencil-01.svg
+  - name: "DELETE: Remove SDK Authentication Key"
+    link: /docs/delete_sdk_authentication_key/
+    image: /assets/img/braze_icons/trash-01.svg
 ---
-
-# SDK Authentication API Endpoints
-
-Use these endpoints to create and manage SDK Authentication keys for your workspace.
-
-{% apiref post %}/app_group/sdk_auth_key/create{% endapiref %} Create a new SDK Authentication key for your app.<br><br>
-{% apiref get %}/app_group/sdk_auth_keys{% endapiref %} Get all SDK Authentication keys for your app.<br><br>
-{% apiref put %}/app_group/sdk_auth_key/primary{% endapiref %} Mark an SDK Authentication key as the primary key.<br><br>
-{% apiref delete %}/app_group/sdk_auth_key/delete{% endapiref %} Delete an SDK Authentication key.
