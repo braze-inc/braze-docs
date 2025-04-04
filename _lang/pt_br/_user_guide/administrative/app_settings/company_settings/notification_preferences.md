@@ -27,10 +27,11 @@ A tabela a seguir lista as notificações disponíveis:
 
 | Notificação | Descrição | Canais de notificação disponíveis |
 |--------------|-------------|-----------------|
-| Erros de credenciais do AWS | Notifica os destinatários quando a Braze recebe um erro ao tentar usar suas credenciais do Amazon Web Services para uma exportação de dados. Isso também inclui notificações de erros de credenciais para o Google Cloud Services e o Azure (Microsoft Cloud Services). | e-mail, Webhook |
+| Erros de credenciais do AWS | Notifica os destinatários quando a Braze recebe um erro ao tentar usar suas credenciais do Amazon Web Services para uma exportação de dados. Isso inclui notificações de erros de credenciais para o Google Cloud Services e o Azure (Microsoft Cloud Services). | e-mail, Webhook |
 | Campanha interrompida automaticamente | Notifica os destinatários quando a Braze interrompe uma campanha. | E-mail |
 | Expiração da interação da campanha | Notifica os destinatários sobre qualquer campanha que esteja prestes a expirar os dados de interação da campanha, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que a referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
-| Campanha/canva atualizado | Notifica os destinatários quando uma campanha/canva ativa é atualizada ou desativada, assim como quando uma campanha/canva inativa é reativada ou quando rascunhos são lançados. | E-mail |
+| Campanha/canva atualizado | Notifica os destinatários quando uma campanha ou Canvas ativo é atualizado ou desativado, bem como quando uma campanha ou Canvas inativo é reativado ou rascunhos são lançados. | E-mail |
+| Limite de volume de envios de campanhas/canvas atingido | Notifica os destinatários quando uma campanha ou Canva atinge seu limite de volume de envios. | E-mail | 
 | Expiração da interação do canva | Notifica os destinatários sobre qualquer canva que esteja prestes a expirar os dados de interação do canva, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que o referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
 | Cartão do feed de notícias publicado/ativo | Notifica os destinatários quando os cards do feed de notícias são agendados ou publicados. | e-mail, Webhook |
 | Erros de credenciais de push | Notifica os destinatários quando as credenciais de push de um app são inválidas e quando elas estão prestes a expirar. | e-mail, Webhook |

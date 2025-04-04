@@ -16,7 +16,7 @@ table td {
 
 # Referência de tabela SQL
 
-Esta página é uma referência de tabelas e colunas disponíveis para consulta no [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) ou ao gerar [extensões de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+Esta página é uma referência de tabelas e colunas disponíveis para consulta no [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou ao gerar [extensões de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 ## Tabela de conteúdo
 

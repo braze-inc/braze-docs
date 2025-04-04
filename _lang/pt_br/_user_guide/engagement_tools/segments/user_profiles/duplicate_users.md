@@ -66,10 +66,10 @@ No exemplo a seguir, o Braze usa a ID externa do usuário para sinalizar perfis 
 {% tabs local %}
 {% tab exemplo de arquivo CSV %}
 | Endereço de e-mail | ID externo | Número de telefone | ID do Braze | Identificador da regra | Perfil a ser mantido | Perfil a ser mesclado
-\|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | e-mail | TRUE | FALSE |
-| alex@company.com | | | (555) 987-6543 | 65fcaa547f47d004d1348 | e-mail | FALSE | TRUE |
-| alex@company.com | | | (555) 321-0987 | 65fcaa547f47d0049135c | e-mail | FALSE | TRUE |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
+| alex@company.com | A8i3mkd99   | (555) 123-4567 | 65fcaa547f470494d1370 | e-mail               | TRUE            | FALSE            |
+| alex@company.com |             | (555) 987-6543 | 65fcaa547f47d004d1348 | e-mail               | FALSE           | TRUE             |
+| alex@company.com |             | (555) 321-0987 | 65fcaa547f47d0049135c | e-mail               | FALSE           | TRUE             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -111,6 +111,22 @@ Depois de salvar suas regras, você pode fazer uma prévia de como elas funciona
 ### Etapa 3: Mesclar perfis duplicados
 
 Se estiver satisfeito com os resultados de sua prévia, retorne à página **Gerenciar público** e selecione **Mesclar todas as duplicatas**.
+
+{% alert warning %}
+Os perfis de usuário duplicados não podem ser recuperados após a fusão.
+{% endalert %}
+
+## Mesclagem programada
+
+Semelhante à mesclagem baseada em regras, a mesclagem programada permite automatizar a mesclagem de perfis de usuários diariamente usando regras pré-configuradas.
+
+{% alert important %}
+A mesclagem programada está em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+{% endalert %}
+
+![A página "Gerenciar público" com o botão "Agendar".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+Depois que o recurso for ativado, o Braze atribuirá automaticamente um intervalo de tempo para realizar o processo de mesclagem diariamente. Você pode desativar a mesclagem programada a qualquer momento. O Braze notificará os administradores de seu espaço de trabalho 24 horas antes da mesclagem programada, fornecendo um lembrete e tempo para revisar a configuração.
 
 {% alert warning %}
 Os perfis de usuário duplicados não podem ser recuperados após a fusão.

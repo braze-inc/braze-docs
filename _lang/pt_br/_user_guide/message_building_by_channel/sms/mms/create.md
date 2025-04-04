@@ -13,7 +13,7 @@ search_rank: 1
 
 # Criação de uma campanha MMS
 
-> Este artigo contém informações específicas sobre a composição de MMS, que faz parte do criador de SMS. Para saber mais informações detalhadas sobre o criador de SMS/MMS, consulte o [criador de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).
+> Este artigo contém informações específicas sobre a composição de MMS, que faz parte do criador de SMS. Para saber mais informações detalhadas sobre o criador de SMS/MMS, consulte o [criador de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 
 ## Noções básicas de envio de MMS
 

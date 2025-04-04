@@ -35,6 +35,8 @@ Você pode acessar os dados aninhados em seu evento personalizado gerando um esq
 
 ![][6]{: style="max-width:80%;"}
 
+Se novas propriedades forem enviadas no futuro, elas não estarão no esquema até que seja regenerado. Os esquemas podem ser regenerados a cada 24 horas.
+
 ## Etapa 2: Use o objeto aninhado
 
 Depois de gerar um esquema, você pode referenciar os dados aninhados durante a segmentação e personalização. Consulte as seguintes seções para exemplos de uso:
@@ -102,6 +104,10 @@ O seguinte é um `/users/track` exemplo com um evento personalizado "Comprou". A
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Para propriedades de evento personalizado aninhadas, se o ano for menor que 0 ou maior que 3000, o Braze não armazena esses valores no usuário.
+{% endalert %}
+
 ### Modelos do Liquid
 
 O seguinte mostra como criar um modelo Liquid que referencia as propriedades aninhadas solicitadas da [solicitação de API anterior](#api-request-body).
@@ -166,6 +172,8 @@ Para segmentar usuários com base em propriedades de eventos aninhados, você de
 ![][4]
 
 A segmentação usa a mesma notação que o gatilho (veja [Gatilho de mensagem](#message-triggering)).
+
+Para editar ou criar extensões de segmento, você precisará da permissão "Editar Segmentos".
 
 ### Personalização
 

@@ -95,7 +95,7 @@ Os grupos de controle históricos não são preservados, portanto, só é possí
 
 ## Relatórios
 
-Consulte [Relatórios do grupo de controle global]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) para obter informações sobre métricas de relatórios.
+Consulte [Relatórios do grupo de controle global]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) para obter informações sobre métricas de relatórios.
 
 ## Solução de problemas
 

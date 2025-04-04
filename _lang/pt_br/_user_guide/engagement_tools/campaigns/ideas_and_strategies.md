@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name:  Práticas recomendadas
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/#high-ratings
     image: /assets/img/braze_icons/target-04.svg
   - name: Localização
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
@@ -39,4 +39,7 @@ guide_menu_list:
   - name: Links de Adicionar ao Calendário
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
     image: /assets/img/braze_icons/calendar-date.svg
+  - name: Criação de mensagens da direita para a esquerda
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/
+    image: /assets/img/braze_icons/globe-02.svg
 ---

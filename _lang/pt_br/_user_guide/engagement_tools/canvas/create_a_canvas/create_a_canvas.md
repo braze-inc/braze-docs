@@ -78,14 +78,14 @@ O construtor do Canvas o guiará passo a passo na configuração do Canva, desde
 Aqui, você nomeará seu Canvas, atribuirá [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) e criará ou adicionará [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Você também pode atribuir eventos de conversão para o Canva.
 
 {% alert tip %}
-Coloque tags em suas telas para que seja fácil encontrá-las e criar relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+Coloque tags em suas telas para que seja fácil encontrá-las e criar relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 {% endalert %}
 
 ![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.][53]
 
 #### Selecionar eventos de conversão
 
-Escolha o tipo de evento de conversão e, em seguida, selecione as conversões a serem registradas. Esses [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) medirão a eficiência de seu Canva. 
+Escolha o tipo de evento de conversão e, em seguida, selecione as conversões a serem registradas. Esses [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) medirão a eficiência de seu Canva. 
 
 ![Evento de conversão primária A com o tipo de evento de conversão Makes Purchase para registrar conversas de usuários que fazem qualquer compra dentro de um prazo de conversão de três dias.][52]
 
@@ -146,7 +146,7 @@ Evite configurar uma campanha baseada em ação ou o Canva com o mesmo disparo d
 
 #### Testar seu público
 
-Depois de adicionar segmentos e filtros ao seu público-alvo, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar se ele corresponde aos critérios do público.
+Depois de adicionar segmentos e filtros ao seu público-alvo, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
 
 ![O campo "User Lookup", que permite pesquisar por ID de usuário externo ou ID do Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
@@ -218,7 +218,7 @@ Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuári
 
 {% details Expandir para etapas %}
 
-1. Crie um atributo personalizado para armazenar seu número aleatório. Dê a ele um nome fácil de localizar, como "lottery_number" ou "random_assignment". Você pode criar a atribuição [em seu dashboard]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/) ou por meio de chamadas de API para nosso [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+1. Crie um atributo personalizado para armazenar seu número aleatório. Dê a ele um nome fácil de localizar, como "lottery_number" ou "random_assignment". Você pode criar a atribuição [em seu dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) ou por meio de chamadas de API para nosso [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Crie uma campanha de webhook no início de seu Canva. Essa campanha será o meio no qual você criará seu número aleatório e o armazenará como um atributo personalizado. Para obter mais informações, consulte [Criação de um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook). Defina o URL para nosso endpoint `/users/track`.<br><br>
 3. Crie o gerador de números aleatórios. Você pode fazer isso com o código [ descrito aqui](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aproveita a hora de entrada exclusiva de cada usuário para criar um número aleatório. Defina o número resultante como uma variável Liquid em sua campanha de webhook.<br><br>
 4. Formate a chamada `/users/track` em sua campanha webhook de modo que ela defina o atributo personalizado criado na etapa 1 como o número aleatório gerado no perfil do usuário atual. Quando essa etapa for executada, você terá criado com sucesso um número aleatório que muda cada vez que um usuário entra na sua campanha.<br><br>
@@ -336,7 +336,7 @@ Você também pode salvar seu Canva como rascunho se precisar voltar a ele.
 ![Um exemplo é o Canva no Braze.][19]
 
 {% alert tip %}
-Precisa fazer edições em seu Canva após o lançamento? Bem, você pode! Para saber mais, dê [uma]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) olhada no [Editing Canvas após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Precisa fazer edições em seu Canva após o lançamento? Bem, você pode! Para saber mais, dê [uma]({{site.baseurl}}/post-launch_edits/) olhada no [Editing Canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 
