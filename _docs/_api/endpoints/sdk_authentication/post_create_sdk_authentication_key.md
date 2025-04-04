@@ -11,7 +11,7 @@ description: "This article outlines details about the Create SDK Authentication 
 {% api %}
 # Create SDK Authentication Key
 {% apimethod post %}
-/app_group/sdk_authentication_key/create
+/app_group/sdk_authentication/create
 {% endapimethod %}
 
 > Use this endpoint to create a new SDK Authentication key for your app.
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Example request
 ```json
-curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication_key/create' \
+curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{

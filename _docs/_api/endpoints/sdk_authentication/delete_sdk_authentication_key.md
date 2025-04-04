@@ -11,7 +11,7 @@ description: "This article outlines details about the Delete SDK Authentication 
 {% api %}
 # Delete SDK Authentication Key
 {% apimethod delete %}
-/app_group/sdk_authentication_key/delete
+/app_group/sdk_authentication/delete
 {% endapimethod %}
 
 > Use this endpoint to delete an SDK Authentication key for your app.
@@ -31,7 +31,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ```json
 {
-  "app_id": "App API identifier",
+  "app_id": "App API key",
   "key_id": "key id"
 }
 ```
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Example request
 ```json
-curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication_key/delete' \
+curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{

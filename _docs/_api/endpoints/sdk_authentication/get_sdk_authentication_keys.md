@@ -11,7 +11,7 @@ description: "This article outlines details about the Get SDK Authentication Key
 {% api %}
 # List SDK Authentication Keys
 {% apimethod get %}
-/app_group/sdk_authentication_keys
+/app_group/sdk_authentication/keys
 {% endapimethod %}
 
 > Use this endpoint to retrieve all SDK Authentication keys for your app.
@@ -29,7 +29,7 @@ description: "This article outlines details about the Get SDK Authentication Key
 
 ## Example request
 ```json
-curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication_keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
+curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

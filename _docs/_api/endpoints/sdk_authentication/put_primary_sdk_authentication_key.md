@@ -11,7 +11,7 @@ description: "This article outlines details about the Set Primary SDK Authentica
 {% api %}
 # Set Primary SDK Authentication Key
 {% apimethod put %}
-/app_group/sdk_authentication_key/primary
+/app_group/sdk_authentication/primary
 {% endapimethod %}
 
 > Use this endpoint to mark an SDK Authentication key as the primary key for your app.
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Example request
 ```json
-curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication_key/primary' \
+curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
