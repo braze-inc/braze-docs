@@ -22,7 +22,7 @@ Cuando el Modo Oscuro está activado, los menús y pantallas nativos del disposi
 
 ## Configuración de un tema en modo oscuro
 
-La nueva opción Modo oscuro, situada en la pestaña Estilo al [crear un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), te permite añadir fácilmente un tema de color alternativo para los usuarios que estén en Modo oscuro en su dispositivo.
+La nueva opción Modo oscuro, situada en la pestaña Estilo al [crear un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), te permite añadir fácilmente un tema de color alternativo para los usuarios que estén en Modo oscuro en su dispositivo.
 
 ![Cambio de usuario entre los estilos Modo claro y Modo oscuro en la pestaña Estilo al crear un mensaje dentro de la aplicación.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

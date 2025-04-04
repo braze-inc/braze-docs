@@ -63,7 +63,7 @@ También puede hacer que el mensaje de cancelación registre algo en el registro
 
 ## Consulta de mensajes de cancelación
 
-Puedes utilizar [el Generador de consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) o tu propio almacén de datos, si está conectado a Braze, para consultar mensajes específicos de interrupción que se desencadenan cuando la lógica de Liquid hace que se interrumpa un mensaje.
+Puedes utilizar [el Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) o tu propio almacén de datos, si está conectado a Braze, para consultar mensajes específicos de interrupción que se desencadenan cuando la lógica de Liquid hace que se interrumpa un mensaje.
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}

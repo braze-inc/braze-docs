@@ -37,7 +37,7 @@ También puedes previsualizar los mensajes desde la pestaña **Prueba** como si 
 
 ## Depurar
 
-Una vez enviadas las tarjetas de contenido, puede desglosar o depurar cualquier problema desde el [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) de la consola de desarrollador. 
+Una vez enviadas las tarjetas de contenido, puede desglosar o depurar cualquier problema desde el [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) de la consola de desarrollador. 
 
 Un caso de uso común es tratar de depurar por qué un usuario no puede ver una tarjeta de contenido en particular. Para ello, puedes buscar en **los registros de usuarios del evento** las tarjetas de contenido entregadas al SDK al inicio de la sesión, pero antes de una impresión, y rastrearlas hasta una campaña específica:
 
