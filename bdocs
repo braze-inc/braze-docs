@@ -19,6 +19,14 @@ export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
+
+# Set the primary branch depending which Braze Docs repository.
+if [[ "$PROJECT_ROOT" == *"braze-docs-hidden"* ]]; then
+    export PRIMARY_BRANCH="main"
+else
+    export PRIMARY_BRANCH="master"
+fi
+
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
 export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
@@ -76,6 +84,22 @@ require_jq() {
         echo "  brew install jq"
         exit 1
     fi
+}
+
+# If yarn-related project dependencies are required, pass or fail.
+require_yarn() {
+    if [ ! -d "$PROJECT_ROOT/node_modules" ]; then
+        echo "Error: 'node_modules' are required to run this command. On MacOS, run:"
+        echo "  brew install yarn"
+        echo "  yarn install"
+        exit 1
+    fi
+}
+
+# Stop commands that are unsupported in the hidden repository.
+not_supported_for_hidden() {
+    echo "error: '$1' is not supported in the braze-docs-hidden repository."
+    exit 1
 }
 
 # Fetch the latest changes from the remote quietly.
@@ -160,6 +184,7 @@ case $1 in
         ;;
     fblinks)
         # require_git_fetch
+        require_yarn
         npx ts-node ./scripts/find_broken_links.ts
         ;;
     lredirects)
