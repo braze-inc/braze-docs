@@ -27,7 +27,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ```json
 {
-  "app_id": "App API key",
+  "app_id": "App API identifier",
   "rsa_public_key_str": "RSA public key string", 
   "description": "description", 
   "make_primary": false
