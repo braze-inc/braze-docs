@@ -113,13 +113,20 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge the fol
 
 ### Identifying users by email
 
-If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
+If an `email` is specified as an identifier, you must also include `prioritization` in the identifier. The `prioritization` must be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
 
-The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
+The allowed values for the array are:
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (refers to prioritizing the most recently updated user)
 
 Only one of the following options may exist in the prioritization array at a time:
+
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
+
+If you specify `identified` in the array, this would mean the user **must** have an `external_id` to be entered into the Canvas. If you want users with email addresses to enter the message, regardless of whether they are identified or not, only use the `most_recently_updated` parameter instead.
 
 ## Request example
 ```
