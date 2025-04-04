@@ -52,7 +52,7 @@ Your CRM team will plan out the messaging use cases that you'll launch in the ne
 * [Channel]({{site.baseurl}}/user_guide/message_building_by_channel) (for example, push notifications or in-app messages)
 * [Delivery method]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types) (for example, scheduled delivery or action-based delivery)
 * [Target audience]({{site.baseurl}}/user_guide/engagement_tools/segments)
-* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events)
+* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
