@@ -96,7 +96,7 @@ Note that disabled text fields (highlighted gray) cannot be edited as they are p
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a message. Any messages with missing Liquid variables will not be sent via WhatsApp.
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a message. Any messages with missing Liquid variables will not be sent by WhatsApp.
 {% endraw %}
 {% endalert %}
 
@@ -184,9 +184,9 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Footer text | Strings and variable parameters are supported. | — | — |
 | CTA links | Various call-to-action (CTA) types are supported. For more details, see [Call-to-action types](#ctas). | — | — |
 | Images | Images can be embedded within the body text. They must be 8-bit and use either an RGB or RGBA color model. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| Documents* | Documents can embedded within body text. Files must be hosted via URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Videos* | Videos can be embedded within body text. Files must be hosted via URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
-| Audio* | Audio is only supported through response messaging. Files must be hosted via URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| Documents* | Documents can embedded within body text. Files must be hosted through URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Videos* | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Audio* | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 <sup>_*Currently in early access. Contact your Braze account manager if you're interested in participating._</sup>
@@ -200,7 +200,7 @@ The following features are supported for inbound WhatsApp messages you receive t
 | Body text | Only standard strings are supported. | — |
 | Images | Images must be 8-bit and use either an RGB or RGBA color model. Files must be less than 5 MB. | `.jpg`, `.png` |
 | Audio | Only Ogg files encoded with the Opus codec are supported. Other Ogg formats are not. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
-| Documents | Documents are supported via message attachment. | `.txt`, `.pdf`, `.ppt`, `.doc`, `.xls`, `.docx`, `.pptx`, `.xlsx` |
+| Documents | Documents are supported through message attachment. | `.txt`, `.pdf`, `.ppt`, `.doc`, `.xls`, `.docx`, `.pptx`, `.xlsx` |
 | Video | Only H.264 video codec and AAC audio codec are supported. Videos must either have a single audio stream or no audio stream. | `.mp4`, `.3gp` |
 | CTA links | Various call-to-action (CTA) types are supported. For more details, see [Call-to-action types](#ctas). | — |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
