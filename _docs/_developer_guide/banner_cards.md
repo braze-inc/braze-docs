@@ -9,7 +9,7 @@ channel:
 
 # Banner Cards
 
-> With Banner Cards, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
+> With Banner Cards, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards](/docs/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
 
 {% alert important %}
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.

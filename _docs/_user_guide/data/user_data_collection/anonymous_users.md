@@ -1,5 +1,5 @@
 ---
-nav_title: Anonymous Users
+nav_title: Anonymous users
 article_title: Anonymous Users
 page_order: 0
 page_type: reference
@@ -21,13 +21,9 @@ You can do the following with captured anonymous users:
 - Complete a user’s profile when they log in, so that you can cancel messaging on other platforms (such as not sending a “free shipping on 1st app order” message when the user already has made app orders)
 - Engage with users who show an intent to exit by encouraging them to create a profile, checkout their cart, or take another action
 
-## How it works
-
-{% multi_lang_include anonymous_users/about_anonymous_users.md section='user_guide' %}
-
 ## Assigning user aliases
 
-{% multi_lang_include anonymous_users/about_user_aliases.md section='user_guide' %}
+Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: user aliases. This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
 
 ## Merging anonymous users  
 

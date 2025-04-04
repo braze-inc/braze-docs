@@ -7,7 +7,7 @@ guide_top_header: "Building Canvases"
 guide_top_text: "The articles in this section will guide you in creating and launching a multi-dimensional Canvas quickly from ideation to execution to your users. With its intuitive drag-and-drop interface and space for collaboration, you can leverage this visual programming environment to help drive the best results for your customer engagement goals."
 
 page_type: landing
-description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exit criteria, Canvas entry properties, and more."
+description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more."
 tool: Canvas
 
 guide_featured_title: "Section articles"
@@ -24,6 +24,9 @@ guide_featured_list:
   - name: Rate Limiting
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting
     image: /assets/img/braze_icons/alert-triangle.svg
+  - name: Exception Events
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     image: /assets/img/braze_icons/users-right.svg

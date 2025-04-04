@@ -309,7 +309,7 @@ WhatsApp messages now support [video, audio, and document outbound messages]({{s
 
 #### Right-to-left messages
 
-[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
+[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
  
 ### AI and ML automation
  
@@ -482,7 +482,7 @@ Segment your users by whether they soft bounced X times in Y days. For more info
 
 #### Anonymous users overview
 
-[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
+[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
 
 #### Global Control Group membership
 

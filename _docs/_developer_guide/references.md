@@ -68,7 +68,3 @@ Follow these instructions to build and run our test applications.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 {% endtab %}
 {% endtabs %}
-
-{% alert note %}
-While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
-{% endalert %}
