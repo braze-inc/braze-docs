@@ -15,7 +15,7 @@ In diesem Artikel führen wir Sie durch einen Anwendungsfall für die Vorlage **
 
 ## Voraussetzungen
 
-Um diese Vorlage erfolgreich zu verwenden, müssen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) erstellen, das darauf verweist, wenn Benutzer die Funktion verwendet haben.
+Um diese Vorlage erfolgreich zu verwenden, müssen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) erstellen, das darauf verweist, wenn Benutzer die Funktion verwendet haben.
 
 ## Anpassen des Templates an Ihre Bedürfnisse
 

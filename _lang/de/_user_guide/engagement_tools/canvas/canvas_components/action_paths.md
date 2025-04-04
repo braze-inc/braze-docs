@@ -77,7 +77,7 @@ Wenn Benutzer einen Aktionspfad mehrfach betreten und gleichzeitig mehrere Eintr
 | **Ein** | Alle Entrys werden am Ende des jeweiligen Bewertungsfensters nach vorne gerückt. Es findet keine Deduplizierung statt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) nicht [mehr geändert werden können]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/post-launch_edits/) nicht [mehr geändert werden können]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}

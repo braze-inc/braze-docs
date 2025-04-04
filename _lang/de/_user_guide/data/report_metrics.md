@@ -370,6 +370,7 @@ Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die 
 SMS
 {% endapitags %}
 
+
 {% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
 
 Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die Gründe für die fehlgeschlagene Zustellung zu erfahren.

@@ -8,7 +8,7 @@ description: "In diesem Artikel werden Benachrichtigungen über Preissenkungen i
 
 # Benachrichtigungen über Preissenkungen
 
-> Mit einer Kombination aus Preissenkungsbenachrichtigungen über Braze-Kataloge und einem Canvas können Sie Kunden benachrichtigen, wenn der Preis eines Artikels gesunken ist. Jedes Mal, wenn ein Kunde ein bestimmtes angepasstes Event ausführt, kann er automatisch benachrichtigt werden, wenn der Artikelpreis reduziert wird.
+> Verwenden Sie eine Kombination aus Preissenkungsbenachrichtigungen über Braze-Kataloge und einem Canvas, um Kund:in zu benachrichtigen, wenn der Preis eines Artikels gesunken ist. Jedes Mal, wenn ein Kunde ein bestimmtes angepasstes Event ausführt, kann er automatisch benachrichtigt werden, wenn der Artikelpreis reduziert wird.<br><br>Auf dieser Seite erfahren Sie, wie Benachrichtigungen über Preisrückgänge funktionieren und wie Sie sie einrichten und verwenden können.
 
 Wenn ein Benutzer ein benutzerdefiniertes Ereignis für einen Artikel auslöst, abonnieren wir ihn automatisch für den Erhalt von Benachrichtigungen über Preissenkungen für diesen Artikel. Wenn der Preis des Artikels Ihre Bestandsregel erfüllt (z.B. ein Preisrückgang von mehr als 50%), werden alle Abonnenten über eine Kampagne oder Canvas benachrichtigt. Allerdings erhalten nur diejenigen Personen eine Benachrichtigung, die deren Erhalt zugestimmt haben. 
 
@@ -32,7 +32,7 @@ Führen Sie diese Schritte aus, um Benachrichtigungen über Preissenkungen in ei
     <br> ![Katalogeinstellungen][2]{: style="max-width:70%;"}
     - **Ersatzkatalog:** Der Katalog, der für das Abonnement verwendet wird, wenn es keine `catalog_name` Eigenschaft im benutzerdefinierten Ereignis gibt.
     - **Angepasstes Event für Abonnements:** Das benutzerdefinierte Ereignis von Braze, das verwendet wird, um einen Benutzer für Katalogbenachrichtigungen zu abonnieren. Wenn das Ereignis eintritt, erhält dieser ein Abonnement.
-    - **Angepasstes Event zur Abmeldung:** Das benutzerdefinierte Ereignis von Braze, mit dem ein Benutzer von den Benachrichtigungen abgemeldet wird.
+    - **Angepasstes Event zur Abmeldung:** Das benutzerdefinierte Ereignis von Braze, mit dem ein Benutzer von den Benachrichtigungen abgemeldet wird. Dieses Ereignis ist optional. Wenn der Nutzer:innen dieses Ereignis nicht ausführt, wird er nach 90 Tagen abgemeldet oder wenn das Preissenkungsereignis triggert, je nachdem, was zuerst eintritt.
     - **Ereigniseigenschaft Artikelnummer:** Die Eigenschaft des obigen benutzerdefinierten Ereignisses, die verwendet wird, um das Element für ein Abonnement oder eine Abbestellung zu bestimmen. Diese Eigenschaft des angepassten Events sollte eine Artikelnummer enthalten, die in einem Katalog vorkommt. Das angepasste Event muss eine `catalog_name`-Eigenschaft enthalten, die angibt, in welchem Katalog sich der Artikel befindet.
    
     - Ein Beispiel für ein benutzerdefiniertes Ereignis würde wie folgt aussehen

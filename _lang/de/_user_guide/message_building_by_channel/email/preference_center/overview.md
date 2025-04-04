@@ -85,7 +85,7 @@ Um Ihre Präferenzzentren zu identifizieren, verwenden Sie den [Endpunkt „Deta
 
 ## Anpassung
 
-Braze verwaltet die Updates des Abo-Status vom Präferenzzentrum aus, wodurch das Präferenzzentrum synchronisiert wird. Sie können jedoch auch Ihr eigenes Einstellungszentrum erstellen und hosten, indem Sie die [APIs für Abonnementgruppen]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) mit den folgenden Optionen verwenden.
+Braze verwaltet die Updates des Abo-Status vom Präferenzzentrum aus, wodurch das Präferenzzentrum synchronisiert wird. Sie können jedoch auch Ihr eigenes Einstellungszentrum erstellen und hosten, indem Sie die [APIs für Abonnementgruppen]({{site.baseurl}}/api/endpoints/subscription_groups/) mit den folgenden Optionen verwenden.
 
 ### Option 1: Link mit String-Abfrageparametern
 

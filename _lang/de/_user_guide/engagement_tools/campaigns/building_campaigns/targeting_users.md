@@ -45,7 +45,7 @@ Für E-Mail-Kampagnen können Sie Seed-Gruppen unter dem Abschnitt **Seed-Gruppe
 
 ## Testen Sie Ihre Zielgruppe
 
-Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/), um zu überprüfen, ob er den Kriterien der Zielgruppe entspricht.
+Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Kriterien der Zielgruppe entspricht.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 

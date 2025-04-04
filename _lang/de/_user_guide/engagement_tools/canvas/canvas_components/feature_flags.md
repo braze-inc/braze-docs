@@ -13,7 +13,7 @@ local_redirect:
 
 > Mit Feature-Flags können Sie experimentieren und Ihre Hypothesen zu neuen Funktionen bestätigen. Marketingexperten können Feature-Flags verwenden, um Ihr Publikum in [Canvas][1] zu segmentieren und die Auswirkungen der Einführung von Features auf die Konversionen zu verfolgen. Darüber hinaus können Sie mit den [Experimentierpfaden][2] diese Konversionen optimieren, indem Sie verschiedene Botschaften oder Pfade gegeneinander testen und ermitteln, welche am effektivsten ist. Nutzen Sie den Winning Path, wenn Sie Ihr Feature nach und nach einer breiteren Zielgruppe zugänglich machen.
 
-Suchen Sie nach weiteren Informationen über Feature-Flags und wie sie in Braze verwendet werden können? Werfen Sie einen Blick auf unsere Artikel zu [den Feature Flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/).
+Suchen Sie nach weiteren Informationen über Feature-Flags und wie sie in Braze verwendet werden können? Werfen Sie einen Blick auf unsere Artikel zu [den Feature Flags]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Erstellen eines Feature-Flags
 

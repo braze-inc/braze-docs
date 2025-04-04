@@ -1,7 +1,7 @@
 ---
 nav_title: Nachrichtentypen
 article_title: LINE Nachrichtentypen
-page_order: 1
+page_order: 0
 description: "Dieser Artikel behandelt die verschiedenen Arten von LINE-Nachrichten."
 page_type: reference
 tool:

@@ -8,9 +8,9 @@ search_rank: 2
 
 # [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Einen API-Aufruf durchführen
 
-> Verwenden Sie Connected-Content, um alle über APIs zugänglichen Informationen direkt in Nachrichten einzufügen, die Sie an Nutzer:innen senden. Sie können Inhalte entweder direkt von Ihrem Webserver oder von öffentlich zugänglichen APIs beziehen.
+> Verwenden Sie Connected-Content, um alle über APIs zugänglichen Informationen direkt in Nachrichten einzufügen, die Sie an Nutzer:innen senden. Sie können Inhalte entweder direkt von Ihrem Webserver oder von öffentlich zugänglichen APIs beziehen.<br><br>Auf dieser Seite erfahren Sie, wie Sie Connected-Content API-Aufrufe tätigen, fortgeschrittene Connected-Content-Anwendungsfälle, Fehlerbehandlung und mehr.
 
-## Connected-Content-Tag
+## Senden eines Connected-Content-Aufrufs
 
 {% raw %}
 
@@ -61,16 +61,16 @@ Wenn Sie glauben, dass die Erkennung eines ungesunden Hosts Probleme verursacht,
 Besuchen Sie die Seite [Fehlerbehebung bei Webhook- und Connected Content-Anfragen]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection), um mehr darüber zu erfahren, wie Sie häufige Fehlercodes beheben können.
 {% endalert %}
 
-## Leistung
+## Zulässig für effiziente Performance
 
-Da Braze Nachrichten sehr schnell ausliefert, sollten Sie sicherstellen, dass Ihr Server Tausende von gleichzeitigen Verbindungen verarbeiten kann, damit die Server beim Abrufen von Inhalten nicht überlastet werden. Wenn Sie öffentliche APIs verwenden, stellen Sie sicher, dass Ihre Nutzung nicht gegen die Rate-Limits verstößt, die der API-Anbieter einsetzt. Braze verlangt aus Leistungsgründen, dass die Antwortzeit des Servers weniger als 2 Sekunden beträgt. Wenn der Server länger als 2 Sekunden braucht, um zu antworten, wird der Inhalt nicht eingefügt.
+Da Braze Nachrichten sehr schnell zustellt, sollten Sie sicherstellen, dass Ihr Server Tausende von gleichzeitigen Verbindungen verarbeiten kann, damit die Server beim Abrufen von Inhalten nicht überlastet werden. Wenn Sie öffentliche APIs verwenden, vergewissern Sie sich, dass Ihre Nutzung nicht gegen die Rate-Limits verstößt, die der API-Anbieter möglicherweise einsetzt. Braze verlangt aus Performance-Gründen, dass die Antwortzeit des Servers weniger als zwei Sekunden beträgt. Wenn der Server länger als zwei Sekunden braucht, um zu antworten, werden die Inhalte nicht eingefügt.
 
 Braze-Systeme können denselben Connected-Content-API-Aufruf mehr als einmal pro Empfänger:in tätigen. Das liegt daran, dass Braze möglicherweise einen Connected-Content-API-Aufruf tätigen muss, um eine Nachricht zu rendern, und dass Nachrichten für die Validierung, Wiederholungslogik oder andere interne Zwecke mehrmals pro Empfänger:in gerendert werden können. Ihre Systeme sollten in der Lage sein, denselben Connected-Content-Aufruf mehr als einmal pro Empfänger:in zuzulassen.
 
 ## Was Sie wissen sollten
 
 * Braze erhebt keine Gebühren für API-Aufrufe und wird nicht auf Ihr Datenpunkt-Kontingent angerechnet.
-* Es gibt ein Limit von 1 MB für Connected-Content-Antworten.
+* Es gibt ein Limit von einem MB für Connected-Content-Antworten.
 * Connected-Content-Aufrufe erfolgen, wenn die Nachricht gesendet wird, mit Ausnahme von In-App-Nachrichten, die diesen Aufruf tätigen, wenn die Nachricht angesehen wird.
 * Connected Content-Aufrufe folgen keinen Umleitungen.
 
@@ -81,12 +81,12 @@ Braze-Systeme können denselben Connected-Content-API-Aufruf mehr als einmal pro
 Wenn die URL eine grundlegende Authentifizierung erfordert, kann Braze für Sie Zugangsdaten zur grundlegenden Authentifizierung generieren, die Sie in Ihrem API-Aufruf verwenden können. Unter **Einstellungen** > **Verbundene Inhalte** können Sie vorhandene Anmeldedaten für die Basisauthentifizierung verwalten und neue hinzufügen.
 
 {% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Verbundene Inhalte** unter **Einstellungen verwalten**.
+Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Connected-Content** unter **Einstellungen verwalten**.
 {% endalert %}
 
 ![Die Einstellungen für 'Verbundene Inhalte' im Braze Dashboard.][34]
 
-Um eine neue Zugangsdaten hinzuzufügen, klicken Sie auf **Zugangsdaten hinzufügen**. Geben Sie Ihren Zugangsdaten einen Namen und geben Sie den Nutzernamen und das Passwort ein.
+Um eine neue Zugangsdaten hinzuzufügen, wählen Sie **Zugangsdaten hinzufügen**. Geben Sie Ihren Zugangsdaten einen Namen und geben Sie den Nutzernamen und das Passwort ein.
 
 ![Das Fenster „Neue Zugangsdaten erstellen“ mit der Option, einen Namen, einen Nutzernamen und ein Passwort einzugeben.][35]{: style="max-width:30%" }
 
@@ -115,7 +115,7 @@ Bei der Verwendung von Braze Connected Content kann es vorkommen, dass Sie für 
      :headers {
        "X-App-Id": "YOUR-APP-ID",
        "X-App-Token": "YOUR-APP-TOKEN"
-  }
+     }
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -127,7 +127,7 @@ Bei der Verwendung von Braze Connected Content kann es vorkommen, dass Sie für 
 
 Einige API-Konfigurationen erfordern den Abruf eines Tokens, das zur Authentifizierung des API-Endpunkts verwendet werden kann, auf den Sie zugreifen möchten.
 
-#### Zugriffstoken abrufen
+#### Schritt 1: Zugriffstoken abrufen
 
 Das folgende Beispiel veranschaulicht das Abrufen und Speichern eines Zugriffstokens in einer lokalen Variable, die dann zur Authentifizierung des nachfolgenden API-Aufrufs verwendet werden kann. Ein `:cache_max_age`-Parameter kann hinzugefügt werden, um die Gültigkeitsdauer des Tokens zu bestimmen und die Anzahl der ausgehenden Connected-Content-Aufrufe zu reduzieren. Weitere Informationen finden Sie unter [Konfigurierbares Caching][36] ].
 
@@ -139,14 +139,14 @@ Das folgende Beispiel veranschaulicht das Abrufen und Speichern eines Zugriffsto
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
-  }
+     }
      :cache_max_age 900
      :save token_response
 %}
 ```
 {% endraw %}
 
-#### Autorisieren Sie die API mit dem abgerufenen Zugriffstoken
+#### Schritt 2: Autorisieren Sie die API mit dem abgerufenen Zugriffstoken
 
 Jetzt, wo das Token gespeichert ist, kann es als dynamisches Template in den nachfolgenden Connected-Content-Aufruf eingefügt werden, um die Anfrage zu autorisieren:
 
@@ -157,7 +157,7 @@ Jetzt, wo das Token gespeichert ist, kann es als dynamisches Template in den nac
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "{{token_response}}"
-  }
+     }
      :body key1=value1&key2=value2
      :save response
 %}

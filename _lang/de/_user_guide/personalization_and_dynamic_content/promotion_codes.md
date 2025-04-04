@@ -9,7 +9,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Aktionscode-Listen
 
 # Aktionscodes
 
-> Promotion-Codes - auch Promo-Codes genannt - sind eine großartige Möglichkeit, Nutzer zu binden, indem sie zu Interaktionen anregen, wobei der Schwerpunkt auf Käufen liegt.
+> Promotion-Codes - auch Promo-Codes genannt - sind eine großartige Möglichkeit, Nutzer zu binden, indem sie zu Interaktionen anregen, wobei der Schwerpunkt auf Käufen liegt.<br><br>Auf dieser Seite erfahren Sie, wie Sie Listen mit Aktionscodes erstellen und diese zu Ihren Kampagnen und Canvase hinzufügen können.
 
 Mit der Braze Liquid-Funktionalität bieten wir Ihnen eine Möglichkeit, die Verwendung von Promotion-Codes zu einem Kinderspiel zu machen, indem Nachrichten automatisch und intuitiv aus der von Ihnen bereitgestellten Promotion-Liste gezogen werden können. Das Feature für Aktionscodes bietet Abläufe von bis zu sechs Monaten und Unterstützung für bis zu 20MM individuelle Codes pro Liste.
 
@@ -59,7 +59,7 @@ Sie haben auch die Möglichkeit, optionale und angepasste Schwellenwertwarnungen
 
 ### Schritt 4: Aktionscode hochladen
 
-Braze verwaltet weder die Erstellung noch die Einlösung von Codes, d.h. Sie müssen Ihre Promotion-Codes in einer CSV-Datei generieren und diese in Braze hochladen. Stellen Sie sicher, dass die CSV-Datei diesen Richtlinien entspricht:
+Braze verwaltet weder die Erstellung noch die Einlösung von Codes, d.h. Sie müssen Ihre Aktionscodes in einer CSV-Datei generieren und diese in Braze hochladen. Stellen Sie sicher, dass die CSV-Datei diesen Richtlinien entspricht:
 
 - Enthält eine Spalte für Aktionscodes.
 - Hat einen Aktionscode pro Zeile.

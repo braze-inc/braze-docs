@@ -11,7 +11,7 @@ description: "In diesem Artikel erfahren Sie, wie Sie das Location Targeting ein
 
 # CDI-Segmente
 
-> Mit Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI) können Sie eine direkte Verbindung von Ihrem Data Warehouse oder Dateispeichersystem zu Braze einrichten, um relevante Benutzer- oder Katalogdaten in regelmäßigen Abständen zu synchronisieren.
+> Mit Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI) können Sie eine direkte Verbindung von Ihrem Data Warehouse oder Dateispeichersystem zu Braze einrichten, um relevante Benutzer- oder Katalogdaten in regelmäßigen Abständen zu synchronisieren.
 
 {% alert warning %}
 Dieses Feature fragt Ihr Data Warehouse direkt ab, so dass Ihnen alle Kosten entstehen, die mit der Ausführung dieser Abfragen in Ihrem Data Warehouse verbunden sind. CDI-Segmente verbrauchen kein [SQL-Segmentguthaben]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), zählen nicht zu Ihrem Segmenterweiterungslimit und verbrauchen keine Datenpunkte.
@@ -19,13 +19,13 @@ Dieses Feature fragt Ihr Data Warehouse direkt ab, so dass Ihnen alle Kosten ent
 
 ## Voraussetzungen
 
-Um Ihre Data Warehouse-Daten für die Segmentierung in Ihrem Braze-Arbeitsbereich zu verwenden, müssen Sie eine [verbundene Quelle]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) erstellen und dann ein CDI-Segment innerhalb Ihrer [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) erstellen. CDI-Segmente ermöglichen es Ihnen, SQL zu schreiben, das Ihr eigenes Data Warehouse direkt abfragt, indem Sie Daten verwenden, die über Ihre CDI-Verbindungen zur Verfügung gestellt werden, und eine Gruppe von Benutzern zu erstellen, die in Braze gezielt angesprochen werden können.
+Um Ihre Data Warehouse-Daten für die Segmentierung in Ihrem Braze-Arbeitsbereich zu verwenden, müssen Sie eine [verbundene Quelle]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) erstellen und dann ein CDI-Segment innerhalb Ihrer [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) erstellen. CDI-Segmente ermöglichen es Ihnen, SQL zu schreiben, das Ihr eigenes Data Warehouse direkt abfragt, indem Sie Daten verwenden, die über Ihre CDI-Verbindungen zur Verfügung gestellt werden, und eine Gruppe von Benutzern zu erstellen, die in Braze gezielt angesprochen werden können.
 
 ## Ein CDI-Segment erstellen
 
 ### Schritt 1: Richten Sie Ihre Quelle ein
 
-Bevor Sie Ihr erstes CDI-Segment erstellen, richten Sie eine neue Connected Source mit Ihrem Data Warehouse ein, indem Sie die Schritte unter [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) ausführen.
+Bevor Sie Ihr erstes CDI-Segment erstellen, richten Sie eine neue Connected Source mit Ihrem Data Warehouse ein, indem Sie die Schritte unter [Connected Sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) ausführen.
 
 ### Schritt 2: Ein Segment erstellen
 

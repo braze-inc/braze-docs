@@ -133,7 +133,7 @@ Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. V
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 
 {% endapi %}
@@ -239,7 +239,7 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
@@ -610,7 +610,7 @@ Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort bes
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
