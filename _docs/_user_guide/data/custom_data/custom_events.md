@@ -23,7 +23,7 @@ Some common custom event use cases include:
 - Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
 - Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
 - Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- Setting up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users shouldn't advance to the next step of your Canvas
+- Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 ## Managing custom events
 

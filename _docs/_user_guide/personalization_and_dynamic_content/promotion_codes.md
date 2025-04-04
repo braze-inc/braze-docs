@@ -181,7 +181,9 @@ The same promotion code will be templated for all instances of the Liquid snippe
 
 ### What happens when a promotion code list is expired or empty?
 
-If the message should have contained a promotion code from an empty or expired list, the message will be canceled.
+Expired codes are deleted after six months.
+
+If the message should have contained a promotion code from an empty or expired list, the message will be canceled. 
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, message will send normally.
 

@@ -2381,5 +2381,6 @@ validurls['/docs/developer_guide/platform_integration_guides/unity/Analytics/log
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/'] = '/docs/developer_guide/content_cards/embedding_gifs/?sdktab=android';
 validurls['/docs/help/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/administrative/support/'] = '/docs/user_guide/administrative/access_braze/support';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
 
 // validurls['OLD'] = 'NEW';
