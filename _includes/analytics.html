@@ -71,6 +71,7 @@ try {
       braze.getUser().setCustomUserAttribute('username', developerData.username);
       braze.getUser().setEmail(developerData.email);
     }
+    window.localStorage.removeItem('braze_developer_data');
   }
 } catch (e) {
   console.error('Error setting user ID:', e);
