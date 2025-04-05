@@ -53,6 +53,10 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 ![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Heap cohort".][4]{: style="max-width:90%;"}
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 ## Integration details
 
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).

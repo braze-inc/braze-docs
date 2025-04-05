@@ -23,6 +23,10 @@ Navigate to the **Destination** page in your Hightouch workspace, search for **B
 ### Step 3: Sync a model (or audience) into Braze Cohorts
 In Hightouch, using your created [model](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) or [audience](https://hightouch.io/docs/audiences/usage/), create a new sync. Next, select the Braze Cohorts destination you created in the previous step. Lastly, in the Braze Cohorts destination configuration, select the identifier you want to match against and decide whether or not you want Hightouch to create a new Braze Cohort or update an existing one.<br><br>![][8]{: style="max-width:90%;"}
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 ### Step 4: Create a Braze segment from the Hightouch custom audience
 In Braze, navigate to **Segments**, create a new segment, and select **Hightouch Cohorts** as your filter. From here, you can choose which Hightouch cohort you wish to include. After your Hightouch cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.<br><br>![][9]{: style="max-width:90%;"}
 
