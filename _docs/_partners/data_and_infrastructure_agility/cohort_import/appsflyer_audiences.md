@@ -63,6 +63,10 @@ Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filte
 
 ![User attributes filter "AppsFlyer Cohorts" selected.][7]
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 ## User Matching
 
 Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. Identified users who were originally created as anonymous users can't be identified by their `device_id`, and must be identified by their `external_id` or `alias`.
