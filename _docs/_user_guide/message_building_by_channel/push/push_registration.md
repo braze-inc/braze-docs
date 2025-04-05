@@ -46,8 +46,8 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 
 Platforms deal with push token registration and push permissions in different ways:
 
-- **Android**:
-  - **Android 13**:<br>Push permission must be asked of and granted by the user. Receives a token after permission is granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically after your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
+- **Android**: Android will give a push token, even when push permission isn't granted. This is to allow for silent push notifications. A push cannot be displayed without the proper push permission.
+  - **Android 13**:<br>Push permission must be asked of and granted by the user.  Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically after your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
   - **Android 12 and earlier**:<br>All users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.<br><br>
 - **iOS**: Not automatically registered for push.
     - **iOS 12 (with Provisional Authorization)**: <br>Your app can request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) or authorized push. Authorized push requires explicit permission from a user before sending any notifications (receives a token after permission is granted by user), whereas [provisional push][provisional-blog] lets you send notifications __quietly__, directly to the notification center without any sound or alert.
