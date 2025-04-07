@@ -68,7 +68,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 3: Set up a postback from Kochava
 
-[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in Braze's dashboard.
+[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in the Braze dashboard.
 
 ### Step 4: Confirm the integration
 

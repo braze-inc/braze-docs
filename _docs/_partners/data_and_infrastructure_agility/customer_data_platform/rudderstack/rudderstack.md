@@ -54,7 +54,7 @@ Learn more about RudderStack's [connection modes](https://www.rudderstack.com/do
 
 With this mode, you can send your events to Braze using the Braze SDK set up on your website or mobile app.
 
-Set up the mappings to the RudderStack SDK for your platform on Braze's GitHub repository, as described under [supported methods](#supported-methods):
+Set up the mappings to the RudderStack SDK for your platform on the Braze GitHub repository, as described under [supported methods](#supported-methods):
 
 - [Android][android]
 - [iOS][ios]

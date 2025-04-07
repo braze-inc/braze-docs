@@ -60,7 +60,7 @@ Next, create your personalized in-app message by adding custom fonts and using L
 
 {% tabs local %}
 {% tab Fonts %}
-![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+![The IAM Studio UI showing the options to add Liquid. These options include making personalized sentence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})

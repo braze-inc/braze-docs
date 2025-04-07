@@ -232,7 +232,7 @@ Regal's [Reporting Webhooks guide][7] includes the complete list of Reporting ev
 
 ### Step 3: Transform Regal events into Braze events
 
-Braze's [Data Transformation]({{site.baseurl}}/data_transformation) feature allows you to map incoming Regal events into the format necessary to be added as attributes, events, or purchases in Braze.
+The Braze [Data Transformation]({{site.baseurl}}/data_transformation) feature allows you to map incoming Regal events into the format necessary to be added as attributes, events, or purchases in Braze.
 
 1. Name your Data Transformation. It is recommended to set up a Data Transformation per event webhook.
 
@@ -297,7 +297,7 @@ Below is a sample payload for a `call.completed` event in Regal.
 Below is a sample Data Transformation to map this to a custom event in Braze.
 
 ```
-// Braze's /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze must first be converted to ISO 8601. This can be done with the following code:
+// The Braze /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze must first be converted to ISO 8601. This can be done with the following code:
 let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();
@@ -442,7 +442,7 @@ Below is a sample payload for a `contact.experiment.assigned` event in Regal.
 Below is a sample Data Transformation to map this to a custom event in Braze.
 
 ```
-// Braze's /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze, it must first be converted to ISO 8601. This can be done with the following code:
+// The Braze /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze, it must first be converted to ISO 8601. This can be done with the following code:
 let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();

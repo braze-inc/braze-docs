@@ -121,7 +121,7 @@ The speed, performance, and cost of any query run on top of the data are determi
 
 ## Braze Benchmarks
 
-Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benchmarks), allows Braze prospects and customers to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
+Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benchmarks), allows Braze prospects and customers to see how they compare to top players in their industry by comparing their metrics against Braze industry benchmarks.
 
 The initial industries include:
 - Delivery services

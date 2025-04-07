@@ -30,7 +30,7 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 
 ## Integration
 
-To further enrich your customers' mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze's [`/users/track` endpoint][7]. 
+To further enrich your customers' mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through the Braze [`/users/track` endpoint][7]. 
 
 Examples of data to share from PassKit includes:
 - **Pass created**: when a customer clicks on a pass link and is first shown a pass.
@@ -265,7 +265,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 ## Retrieve pass details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze's [Connected Content][15] to incorporate personalized pass details within your messaging campaigns.
+In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze [Connected Content][15] to incorporate personalized pass details within your messaging campaigns.
 
 **PassKit Connected Content call**
 

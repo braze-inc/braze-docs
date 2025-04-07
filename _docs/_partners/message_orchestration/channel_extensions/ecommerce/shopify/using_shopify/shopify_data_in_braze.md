@@ -876,7 +876,7 @@ You can filter Shopify's events with all of the [existing custom filters]({{site
 
 ![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.][12]{: style="max-width:80%;"}
 
-In addition, you can also use Braze's breadth of purchase filter to create segments of users based on:
+In addition, you can use the breadth of purchase filter in Braze to create segments of users based on:
 - First/last purchase
 - First/last purchase for a specific app
 - Products they have previously purchased within the last 30 days
