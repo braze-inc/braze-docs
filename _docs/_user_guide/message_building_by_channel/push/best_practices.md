@@ -52,13 +52,13 @@ To avoid users turning off notifications at the device level, which completely r
 
 Push subscription state does not guarantee that a push will be delivered—users must also be push enabled to receive notifications. This is because a user profile may have multiple devices with different foreground push permissions but only a single push subscription state.
 
-If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be `Foreground Push Enabled for App` in Braze since the foreground push token is not valid.
+If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be `Push Enabled for App` in Braze since the foreground push token is not valid.
 
-Additionally, if a user profile has no valid or registered push token for any other apps, their `Foreground Push Enabled` filter in segmentation will also be false.
+Additionally, if a user profile has no valid or registered push token for any other apps, their `Push Enabled` filter in segmentation will also be false.
 
 ## Implement a sunset policy for unresponsive users
 
-Even when you send only relevant, timely push notifications, some users may still be unresponsive to them and find them spammy. Suppose a user shows a history of repeatedly ignoring your push notifications. In that case, it's a good idea to stop sending them pushes before they become annoyed with your app's communications or uninstall it altogether.
+Even when you send only relevant, timely push notifications, some users may still be unresponsive to them and find them spammy. Suppose a user shows a history of repeatedly ignoring your push notifications. In that case, it's a good idea to stop sending them pushes before they become annoyed with your app's communications or uninstall it altogether. 
 
 To do this, create a [sunset policy][9] that eventually stops sending push notifications to users who haven't had a direct or influenced open for a long time.
 
@@ -90,6 +90,7 @@ Didn't find what you were looking for? Check out these additional best practices
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
 [4]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/
+
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
 [8]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
