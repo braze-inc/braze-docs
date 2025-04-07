@@ -34,7 +34,7 @@ The Braze service worker file will automatically call `skipWaiting` upon install
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-## Unsubscribingn a user
+## Unsubscribing a user
 
 To unsubscribe a user, call `braze.unregisterPush()`.
 
