@@ -43,6 +43,14 @@ You can add a description to a custom attribute after it's created if you have t
 
 You can add tags to a custom attribute after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of attributes. 
 
+### Entitlements
+
+Braze will limit the number of custom attributes that can be created in each workspace in your account. Typically, the maximum capacity is 1,000 custom attributes per workspace, but may be increased upon request. Please reach out to your account team for more details.
+
+If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
+
+When a workspace has too many custom attributes, no new attributes may be created, and Braze will ignore any data received for custom attributes that do not already exist. (However, existing custom attributes may still be updated.) As a courtesy, Braze will provide a reasonable buffer to customers who exceed their entitlement, with the goal of preventing data loss.
+
 ### Removing custom attributes
 
 There are two ways you can remove custom attributes from user profiles:
