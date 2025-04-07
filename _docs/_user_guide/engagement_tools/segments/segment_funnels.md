@@ -97,6 +97,6 @@ This use case leverages the "Money Spent" filter to target users that have spent
 [7]: {% image_buster /assets/img/seg_filter_examples/push_engagement.png %}
 [8]: {% image_buster /assets/img/seg_filter_examples/recent_purchase.png %}
 [9]: {% image_buster /assets/img/seg_filter_examples/global_control.png %}
-[10]: {% image_buster /assets/img/seg_filter_examples/both.png %}
+[10]: {% image_buster /assets/img/seg_filter_examples/foreground_push_enabled.png %}
 [4]: #push-email
-[5]: {% image_buster /assets/img_archive/Wish_List_Email.png %}
+[5]: {% image_buster /assets/img/seg_filter_examples/wishlist.png %}
