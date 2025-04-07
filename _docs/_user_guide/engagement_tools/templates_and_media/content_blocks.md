@@ -44,7 +44,7 @@ There are two types of editors used to create a Content Block—classic and drag
 |---|---|
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
-| Content Size | Maximum of 50KB (kilobyte). |
+| Content Size | Maximum of 50 KB. |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

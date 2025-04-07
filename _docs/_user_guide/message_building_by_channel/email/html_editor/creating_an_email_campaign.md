@@ -163,7 +163,7 @@ Email extras allows you to send additional data back to other email service prov
 To add email extras, go to the **Sending Info** and select **Add New Extra**.
 
 {% alert warning %}
-The total key-value pairs added should not exceed 1&nbsp;KB. Otherwise, the messages will be aborted.
+The total key-value pairs added should not exceed 1 KB. Otherwise, the messages will be aborted.
 {% endalert %}
 
 Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
