@@ -123,7 +123,7 @@ As you fill out your questionnaire, consult your legal team, and consider how yo
 #### Braze default data collection
 **Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
 
-**Usage Data** - This can include Braze's session data, as well as any event or attribute collection you use to measure product interaction.
+**Usage Data** - This can include Braze session data, as well as any event or attribute collection you use to measure product interaction.
 
 #### Optional data collection
 Data you may optionally be collecting through your usage of Braze:
