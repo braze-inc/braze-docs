@@ -8,7 +8,9 @@ description: "This reference article explains why accessibility is important to 
 
 # Building accessible messages in Braze
 
-> Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
+> Understand why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze. For more detailed guidance, check out our [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations) course on Braze Learning.
+
+Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
 ## Why accessibility matters
 
@@ -21,7 +23,8 @@ description: "This reference article explains why accessibility is important to 
 
 *This section is partially adapted from [W3C: Diverse Abilities and Barriers](https://www.w3.org/WAI/people-use-web/abilities-barriers/).*
 
-### Visual
+{% tabs %}
+{% tab Visual %}
 
 Visual disabilities can range from mild or moderate vision loss in one or both eyes, to substantial or complete loss of vision in both eyes. Some people have reduced or lack sensitivity to certain colors or increased sensitivity to bright colors.
 
@@ -38,7 +41,8 @@ To interact with your content, these users need the ability to:
 - Around 1 in 12 men and 1 in 200 women have some degree of color vision deficiency, an estimated 300 million people in the world (see [NHS](https://www.nhs.uk/conditions/colour-vision-deficiency/))
 {% endalert %}
 
-### Hearing
+{% endtab %}
+{% tab Hearing %}
 
 Hearing or auditory disabilities can include mild to moderate hearing impairment in one or both ears. Even partial loss of hearing can be problematic in regards to audio content.
 
@@ -54,7 +58,8 @@ To understand your content, these users rely on:
 - Approximately 15% of American adults (37.5 million) aged 18 and over report some trouble hearing (see [NIH](https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing))
 {% endalert %}
 
-### Physical
+{% endtab %}
+{% tab Physical %}
 
 Physical disabilities can include weakness and limitations of muscle control or sensation, joint disorders, pain that impedes movement, and missing limbs.
 
@@ -69,7 +74,8 @@ These users rely on keyboard support to activate functionality (even if they are
 Almost 2 million people in the US live with limb loss (see [Amputee Coalition](https://www.amputee-coalition.org/limb-loss-resource-center/resources-filtered/resources-by-topic/limb-loss-statistics/limb-loss-statistics/#1))
 {% endalert %}
 
-### Cognitive
+{% endtab %}
+{% tab Cognitive %}
 
 Cognitive, learning, and neurological disabilities involve neurodiversity and neurological disorders, as well as behavioral and mental health disorders that aren't necessarily neurological. They may affect any part of the nervous system and impact how well people hear, move, see, speak, and understand information.
 
@@ -88,6 +94,9 @@ Depending on individual needs, these users rely on:
 - Roughly 10–20% of the global population is considered neurodivergent (see [Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html))
 - About 1 in 100 children has autism worldwide (see [WHO](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders))
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 ## Best practices
 
