@@ -18,6 +18,7 @@ You can use the **Media Library** to:
 
 * Upload multiple images at one time
 * Upload Virtual Contact Files (.vcf)
+* Upload video files for use in WhatsApp messages
 * Upload a folder with your images (maximum 50 images)
 * [Generate an image using AI](#generate-ai) and store it in the media library
 * Crop an existing image to create the right ratio for your messages
@@ -32,7 +33,7 @@ You can use the **Media Library** to:
 
 ## Image details
 
-Within the media library, you can see the image type, size, dimensions, URL, and date it was added to the library.
+Within the media library, you can see the asset type, size, dimensions, URL, the date it was added to the library, and other information. 
 
 ### Using the media library versus a CDN
 
@@ -63,6 +64,14 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 ##### More resources
 
 - [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
+
+### Video
+
+Videos that are uploaded to the media library can only be used in WhatsApp messages for now. For more information, refer to [Creating a Whatsapp Message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+
+{% alert important %}
+Adding videos to WhatsApp messages is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
 
 ## Accessing the media library from a message composer
 
