@@ -103,9 +103,9 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
-1. In AppsFlyer, navigate to the **Integrated Partners** page on the left bar. Next, search for **Braze** and click on Braze's logo to open up a configuration window.
+1. In AppsFlyer, navigate to the **Integrated Partners** page on the left bar. Next, search for **Braze** and select the Braze logo to open a configuration window.
 2. Within the **Integration** tab, switch on **Activate Partner**.
-3. Provide the data import key and REST endpoint that you found in Braze's dashboard. 
+3. Provide the data import key and REST endpoint that you found in the Braze dashboard. 
 4. Toggle **Advanced Privacy** off and save your configuration.
 
 Additional information on these instructions is available in [AppsFlyer's documentation][16].

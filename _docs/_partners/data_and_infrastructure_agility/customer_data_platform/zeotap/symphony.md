@@ -50,7 +50,7 @@ When the integration is successfully set, you can only create email campaigns ba
 
 ## Data flow to Braze and supported identifiers
 
-The data will flow from Zeotap to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). The following points summarise the data flow:
+The data will flow from Zeotap to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). The following points summarize the data flow:
 
 1. Zeotap sends user profile attributes, custom attributes, custom events, and purchase fields.
 2. You maps all the relevant Zeotap Catalogue fields to the Braze fields under the **Data To Send** tab.

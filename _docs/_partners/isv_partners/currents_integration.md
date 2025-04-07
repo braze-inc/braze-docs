@@ -425,7 +425,7 @@ If your Currents integration starts returning `4XX` errors, Braze will automatic
 Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
 
 {% alert warning %}
-If Braze's retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
+If the Braze retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
 {% endalert %}
 
 The following HTTP status codes will be recognized by our connector client:

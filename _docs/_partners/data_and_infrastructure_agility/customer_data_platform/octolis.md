@@ -84,7 +84,7 @@ Here is a specific definition of settings fields.
 
 | Field | Description |
 | --- | --- |
-| Where do you want to sync the audience to? | Braze's entity where you will create or update records. |
+| Where do you want to sync the audience to? | The Braze entity where you will create or update records. |
 | Which field is used to identify a record? | The field will use Octolis to identify a record if it already exists in Braze. |
 | How often do you want to send each record? | By default, the sync will be incremental for all integrations (API, database, FTP). This means that only new values since the last update will be updated. If necessary, you can also send whole tables at regular intervals. On initiation, Octolis will send the complete table. |
 | Which fields should be synced? | Octolis to Braze fields mapping. The list of all available fields appears in the dropdown menu. To send a computed field to Braze, you must first ensure that you created the corresponding column within your Braze entity. |

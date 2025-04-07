@@ -46,7 +46,7 @@ The custom HTTP connector is currently in beta. If you're interested in setting 
 4. Under **Credentials**, enter the following information you noted from [Step 1](#step-1-create-a-currents-source):
 - The API URL as the **Endpoint**
 - The Write Key as the **Bearer Token**<br><br>![Sections to input integration details and credentials.][4]<br><br>
-5. Select the message engagment events that you want to send to Zeotap.<br><br>![The "General Settings" tab with a section to select message engagement events.][5]
+5. Select the message engagement events that you want to send to Zeotap.<br><br>![The "General Settings" tab with a section to select message engagement events.][5]
 6. Select **Launch Current** to save the changes and start sending events to Zeotap.
 
 {% alert important %}
