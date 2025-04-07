@@ -90,7 +90,7 @@ A text rich message can contain up to 400 characters.
 
 ## Card-based (carousel)
 
-A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevent to them by selecting a card or a card's buttons.
+A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevant to them by selecting a card or a card's buttons.
 
 Use cases include:
 - Display promotions for specific menu items

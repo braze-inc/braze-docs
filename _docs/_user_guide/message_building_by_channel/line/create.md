@@ -20,7 +20,7 @@ alias: /line/create/
 Before creating a LINE message, do the following:
 
 1. Read the LINE overview.
-2. Acknolwedge policies, limits, and content rules.
+2. Acknowledge policies, limits, and content rules.
 3. [Set up your LINE connection]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Sending LINE messages from Braze will draw from your account's Message Credits.

@@ -59,7 +59,7 @@ After you've finished customizing your template, select the **Save template** bu
 
 There are two ways to use your template when composing a Canvas:
 
-- **From Messsaging**: Go to **Messaging** > **Canvas**. Select the **Create Canvas** button and **Use a Canvas Template**.
+- **From Messaging**: Go to **Messaging** > **Canvas**. Select the **Create Canvas** button and **Use a Canvas Template**.
 - **From Templates**: Go to **Templates** > **Canvas Templates** and find your desired template. Then, select the <i class="fas fa-ellipsis-vertical"></i> menu followed by **Apply template**. This will bring you to a new Canvas with the template applied in the Canvas composer.
 
 ### Available Braze templates

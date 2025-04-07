@@ -163,7 +163,7 @@ Have the affected user [clear their browser's cache and cookies](https://its.uio
 
 ### Did you set your RelayState?
 
-If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayState could be misconfigured or nonexistant. If you haven't already, you need to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). 
+If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayState could be misconfigured or nonexistent. If you haven't already, you need to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). 
 
 ### Is the user stuck in a sign-in loop between Okta and Braze?
 
