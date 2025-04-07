@@ -99,7 +99,7 @@ To quickly enable logging, you can add `?brazeLogging=true` as a parameter to yo
 
 {% tabs local %}
 {% tab before initialization %}
-Use `enableLogging` to log basic debugging messages to the javascript console before the SDK is initialized.
+Use `enableLogging` to log basic debugging messages to the JavaScript console before the SDK is initialized.
 
 ```javascript
 enableLogging: true
@@ -117,7 +117,7 @@ braze.openSession();
 {% endtab %}
 
 {% tab after initialization %}
-Use `braze.toggleLogging()` to log basic debugging messages to the javascript console after the SDK is initialized. Your method should be similar to the following:
+Use `braze.toggleLogging()` to log basic debugging messages to the JavaScript console after the SDK is initialized. Your method should be similar to the following:
 
 ```javascript
 braze.initialize('API-KEY', {
@@ -136,7 +136,7 @@ Basic logs are visible to all users, so consider disabling, or switch to [`setLo
 
 #### Custom logging
 
-Use `setLogger` to log custom debugging messages to the javascript console. Unlike basic logs, these logs are not visible to users.
+Use `setLogger` to log custom debugging messages to the JavaScript console. Unlike basic logs, these logs are not visible to users.
 
 ```javascript
 setLogger(loggerFunction: (message: STRING) => void): void
