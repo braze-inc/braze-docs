@@ -97,7 +97,7 @@ By default, the following attributes aren't collected. Each attribute needs to b
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-The Braze SDK doesn't collect or store any IP addresses locally.
+The Braze SDK doesn't store any IP addresses locally.
 {% endalert %}
 
 ## Personalized integration
