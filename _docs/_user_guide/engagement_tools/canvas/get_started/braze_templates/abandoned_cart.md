@@ -85,7 +85,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 Now, we’ll build our Canvas by customizing the templated steps:
 
 1. Select the Action Paths step, then select the **Made purchase** action group name.
-2. For **Make Purchase**, select **Make A Specific Purchase** and choose **Enormous Paper Plate** for the product. Similar to the exit critiera, users who purchase this product will exit the Canvas.
+2. For **Make Purchase**, select **Make A Specific Purchase** and choose **Enormous Paper Plate** for the product. Similar to the exit criteria, users who purchase this product will exit the Canvas.
 
 !["Made purchase" action group that will exit the Canvas if the user purchases the enormous paper plate.][5]
 

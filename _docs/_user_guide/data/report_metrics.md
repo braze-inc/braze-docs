@@ -996,7 +996,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibilty is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count should not increment the second time a user views a card. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count should not increment the second time a user views a card. 
 
 <span class="calculation-line">Calculation: Count</span>
 

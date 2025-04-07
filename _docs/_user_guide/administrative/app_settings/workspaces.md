@@ -149,7 +149,7 @@ By default, a segment targets all apps and websites in the workspace. To set up 
 2. For **Apps and websites targeted**, select **Users from specific apps**.
 3. In the **Specific apps** dropdown, select your app or site.
 
-![Segment that is targetting users from specific apps.][10]
+![Segment that is targeting users from specific apps.][10]
 
 You can then add this segment to your message and begin further refining your audience with additional segments and filters if needed.
 

@@ -57,7 +57,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
 
-![Segmentation criteria for users who performed a custom event, "# of aaa", more than 0 times in the date fage of August 1st, 2023 through August 10, 2023.][3]
+![Segmentation criteria for users who performed a custom event, "# of aaa", more than 0 times in the date range of August 1st, 2023 through August 10, 2023.][3]
 
 #### Event property segmentation
 
