@@ -44,7 +44,6 @@ If you are interested in this integration, reach out to your Braze Account or cu
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
-
 To set Secure Data Sharing with your Braze account, follow these steps.
 
 ### In the Braze Platform
@@ -54,15 +53,13 @@ To set Secure Data Sharing with your Braze account, follow these steps.
 4. Select **Create Datashare**.
 
 ### In Snowflake
-{% alert important %}
 For more details and troubleshooting tips, see Snowflake's documentation on [Consuming Shared Data](https://docs.snowflake.com/en/user-guide/data-share-consumers)
-{% endalert %}
 1. Within a few minutes of the successful Braze setup, an inbound share should appear in your Snowflake Account
 3. Create a database from the share so you can see and query the tables: `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>`
 4. Grant priviliges to query the new database
 
-{% alert error %}
-If you delete and recreate a share in the Braze dashboard, you must drop the database created for the share and recreate it to query the inbound share.
+{% alert warning %}
+If you delete and recreate a share in the Braze dashboard, you must drop the database created for the share and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
 {% endalert %}
 
 In the context of data sharing, Braze is a [data provider](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers)&#8212;any Snowflake account that creates shares and makes them available to other Snowflake accounts to consume. You are a [data consumer](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers)&#8212;any account that chooses to create a database from a share made available by a data provider.
