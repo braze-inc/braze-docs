@@ -34,9 +34,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
+| Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Required | String | The App API Identifier. |
+| `app_id` | Required | String | The app API identifier. |
 | `key_id` | Required | String | The ID of the SDK Authentication key to mark as primary. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -73,7 +73,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 ## Response parameters
 
-| Parameter | Data Type | Description |
+| Parameter | Data type | Description |
 | --------- | --------- | ----------- |
 | `keys` | Array | Array of all SDK Authentication key objects. |
 | `keys[].id` | String | The ID of the SDK Authentication key. |
@@ -86,8 +86,8 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 This endpoint has the following validation rules:
 
-- The key_id must be a valid SDK Authentication key ID
-- The app_id must be a valid App API Identifier
-- The SDK Authentication key must exist for the specified app
+- The `key_id` must be a valid SDK Authentication key ID.
+- The `app_id` must be a valid app API identifier.
+- The SDK Authentication key must exist for the specified app.
 
 {% endapi %}

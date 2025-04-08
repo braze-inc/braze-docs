@@ -36,15 +36,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
+| Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Required | String | The App API Identifier. |
+| `app_id` | Required | String | The app API identifier. |
 | `rsa_public_key_str` | Required | String | The RSA public key string. Must be a valid RSA public key or it will return an error. |
 | `description` | Required | String | Description for the SDK Authentication key. |
-| `make_primary` | Optional | Boolean | If set to true, this key will be made the primary SDK Authentication key when it is created. |
+| `make_primary` | Optional | Boolean | If set to `true`, this key will be made the primary SDK Authentication key when it is created. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
+
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
@@ -66,7 +67,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 
 ## Response parameters
 
-| Parameter | Data Type | Description |
+| Parameter | Data type | Description |
 | --------- | --------- | ----------- |
 | `id` | String | The ID of the newly created SDK Authentication key. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -75,9 +76,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 
 This endpoint has the following validation rules:
 
-- You can have a maximum of 3 SDK Authentication keys per app
-- The RSA public key string must be a valid RSA public key in the proper format
-- The app_id must be a valid App API Identifier
-- The description cannot be empty
+- You can have up to 3 SDK Authentication keys per app.
+- The RSA public key string must be a valid RSA public key in the proper format.
+- The `app_id` must be a valid app API identifier.
+- The description cannot be empty.
 
 {% endapi %}

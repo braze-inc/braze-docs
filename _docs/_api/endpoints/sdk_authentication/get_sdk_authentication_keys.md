@@ -22,18 +22,20 @@ description: "This article outlines details about the Get SDK Authentication Key
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
+| Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Required | String | The App API Identifier. |
+| `app_id` | Required | String | The app API identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
+
 ```json
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
+
 ```json
 {
   "keys": [
@@ -55,7 +57,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 ## Response parameters
 
-| Parameter | Data Type | Description |
+| Parameter | Data type | Description |
 | --------- | --------- | ----------- |
 | `keys` | Array | Array of SDK Authentication key objects. |
 | `keys[].id` | String | The ID of the SDK Authentication key. |
@@ -68,7 +70,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 This endpoint has the following validation rules:
 
-- The app_id parameter must be a valid App API Identifier
-- The app must exist in your workspace
+- The `app_id` parameter must be a valid app API identifier.
+- The app must exist in your workspace.
 
 {% endapi %}

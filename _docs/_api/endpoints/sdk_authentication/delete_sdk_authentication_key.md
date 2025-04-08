@@ -16,8 +16,8 @@ description: "This article outlines details about the Delete SDK Authentication 
 
 > Use this endpoint to delete an SDK Authentication key for your app.
 
-{% alert warning %}
-You cannot delete the primary key. If you attempt to delete the primary key, this endpoint will return an error.
+{% alert important %}
+The primary key can't be deleted. If you attempt to delete the primary key, this endpoint will return an error.
 {% endalert %}
 
 ## Rate limit
@@ -38,13 +38,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
+| Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Required | String | The App API Identifier. |
+| `app_id` | Required | String | The app API identifier. |
 | `key_id` | Required | String | The ID of the SDK Authentication key to delete. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
+
 ```json
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
@@ -56,6 +57,7 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 ```
 
 ## Response
+
 ```json
 {
   "keys": [
@@ -71,7 +73,7 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 ## Response parameters
 
-| Parameter | Data Type | Description |
+| Parameter | Data type | Description |
 | --------- | --------- | ----------- |
 | `keys` | Array | Array of remaining SDK Authentication key objects. |
 | `keys[].id` | String | The ID of the SDK Authentication key. |
@@ -84,9 +86,9 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 This endpoint has the following validation rules:
 
-- The key_id must be a valid SDK Authentication key ID
-- The app_id must be a valid App API Identifier
-- The SDK Authentication key must exist for the specified app
-- You cannot delete the primary SDK Authentication key
+- The `key_id` must be a valid SDK Authentication key ID.
+- The `app_id` must be a valid app API identifier.
+- The SDK Authentication key must exist for the specified app.
+- The primary SDK Authentication key can't be deleted.
 
 {% endapi %}
