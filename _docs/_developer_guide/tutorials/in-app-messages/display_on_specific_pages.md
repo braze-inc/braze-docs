@@ -1,5 +1,6 @@
 ---
 nav_title: Conditionally Display In-App Messages
+guide_top_header: Conditionally Display In-App Messages
 article_title: Conditionally Display In-App Messages
 page_order: 1
 layout: dev_guide
@@ -18,7 +19,6 @@ description: "A tutorial on how to conditionally control whether or not to show 
   padding: unset !important;
 }
 </style>
-# Conditionally Display In-App Messages
 
 {% tabs %}
 {% tab Web %}

@@ -17,6 +17,7 @@
   padding: 1rem;
   border-radius: 0;
   transition: border-color 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
 .scrolly-step[data-active="true"] {

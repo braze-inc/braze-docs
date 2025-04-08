@@ -1,6 +1,7 @@
 ---
 nav_title: Defer and Restore Triggered Messages
 article_title: Defer and Restore a Triggered In-App Message
+guide_top_header: Defer and Restore a Triggered In-App Message
 page_order: 1
 layout: dev_guide
 description: "A tutorial on how to defer a triggered in-app message for a subsequent page"
@@ -18,7 +19,6 @@ description: "A tutorial on how to defer a triggered in-app message for a subseq
   padding: unset !important;
 }
 </style>
-# Defer and Restore Triggered Messages
 
 {% tabs %}
 {% tab Web %}
