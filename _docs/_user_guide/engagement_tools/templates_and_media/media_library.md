@@ -84,7 +84,7 @@ The media library acts as your dashboard's centralized location for assets, as a
 You can generate images for your media library using [DALL·E 3](https://openai.com/index/dall-e-3/), an AI system from OpenAI, a Braze third-party provider. This system can create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
 
 1. From the media library, select <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator**.
-2. Enter a description of the image you want to generate, up to 300 characters. The more detailed the description, the better your result. Note that you can't upload an image for the AI to reference to generate an image.
+2. Enter a description of the image you want to generate, up to 300 characters. The more detailed the description, the better your result. This feature only supports text input—uploading an image as a reference isn’t available.
 3. Select **Generate Images**. It can take about a minute for images to generate.
 4. Select <i class="fas fa-download" title="Add image to Media Library"></i> on the images you would like to add to your media library.
 
