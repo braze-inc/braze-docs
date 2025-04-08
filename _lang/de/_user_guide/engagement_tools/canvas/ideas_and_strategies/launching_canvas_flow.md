@@ -77,7 +77,7 @@ Mit dem Schritt [Entscheidungsaufteilung]({{site.baseurl}}/user_guide/engagement
 
 ### Experimentpfade
 
-Ähnlich wie bei den Aktionspfaden können Sie die Schritte [der Experimentierpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) in Ihrem Canvas nutzen, um mehrere Canvas-Pfade zusammen mit einer Kontrollgruppe gegeneinander zu testen. So können Sie die Pfad-Performance verfolgen und fundierte Entscheidungen beim Aufbau Ihres Canvas-Journeys treffen. 
+Ähnlich wie bei den Aktionspfaden können Sie die Schritte [der Experimentierpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) in Ihrem Canvas nutzen, um mehrere Canvas-Pfade zusammen mit einer Kontrollgruppe gegeneinander zu testen. So können Sie die Pfad-Performance verfolgen und fundierte Entscheidungen beim Aufbau Ihres Canvas-Journeys treffen. 
 
 ## Testen vor dem Start
 

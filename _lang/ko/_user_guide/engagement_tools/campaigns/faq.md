@@ -52,7 +52,7 @@ tool: Campaigns
 
 Braze는 사용자의 기기에서 자동으로 사용자의 시간대를 결정합니다. 이것은 시간대 정확성과 사용자의 완전한 커버리지를 보장합니다. 사용자 API를 통해 생성된 사용자 또는 표준 시간대가 없는 사용자는 SDK에서 앱에서 인식할 때까지 회사의 표준 시간대가 기본 시간대로 사용됩니다. 
 
-대시보드에서 [회사 설정]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/)에서 회사의 시간대를 확인할 수 있습니다.
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) on the dashboard.
 
 ### Braze는 현지 시간대 전달을 위해 사용자를 언제 평가합니까?
 

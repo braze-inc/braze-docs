@@ -7,7 +7,7 @@ description: "This is a list of reference documentation, GitHub repositories, an
 
 # References, repositories, and sample apps
 
-> This is a list of reference documentation, GitHub repositories, and sample apps belonging to each Braze SDK. An SDK's reference documentation details its available classes, types, functions, and variables. While the Github repository provides insight into that SDK's function and attribute declarations, code changes, and versioning. Each repository also includes fully-buildable sample applications you can use to test Braze features or implement alongside your own applications.
+> This is a list of reference documentation, GitHub repositories, and sample apps belonging to each Braze SDK. An SDK's reference documentation details its available classes, types, functions, and variables. While the GitHub repository provides insight into that SDK's function and attribute declarations, code changes, and versioning. Each repository also includes fully-buildable sample applications you can use to test Braze features or implement alongside your own applications.
 
 ## List of resources
 

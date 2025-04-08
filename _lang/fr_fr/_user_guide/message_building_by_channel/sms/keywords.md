@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Traitement personnalisé des mots-clés
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Gestion des numéros de téléphone inconnus
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/

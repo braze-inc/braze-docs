@@ -16,6 +16,7 @@ Angepasste Events sind Aktionen oder Updates, die von Ihren Nutzer:innen durchge
 ## Anwendungsfälle
 
 Einige häufige Anwendungsfälle für angepasste Events sind:
+
 - Auslösen einer Kampagne oder eines Canvas auf der Grundlage eines angepassten Events mit [aktionsbasierter Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmentierung der Nutzer:innen danach, wie oft sie ein angepasstes Event durchgeführt haben, wann das letzte Mal das Event aufgetreten ist und ähnliches
 - Mit den [angepassten Analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) des Dashboards können Sie sich anzeigen lassen, wie oft jedes Ereignis aufgetreten ist.
@@ -36,7 +37,7 @@ Wählen Sie das Menü neben einem angepassten Event für die folgenden Aktionen 
 
 ### Wird auf Sperrliste gesetzt ...
 
-Sie können einzelne angepasste Events über das Aktionsmenü blockieren oder bis zu 10 Events auswählen und in einer Liste zusammenfassen. 
+Sie können einzelne angepasste Events über das Aktionsmenü blockieren oder bis zu 100 Events auswählen und in einer Liste zusammenfassen. 
 
 Wenn Sie ein angepasstes Event blockieren:
 
@@ -58,15 +59,11 @@ Sie können Tags zu einem angepassten Event hinzufügen, nachdem es erstellt wur
 
 Der Nutzungsbericht listet alle Canvase, Kampagnen und Segmente auf, die ein bestimmtes angepasstes Event verwenden. Die Liste enthält nicht die Verwendung von Liquid. 
 
-Sie können bis zu 10 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen für mehrere angepasste Events auswählen und dann **Nutzungsbericht anzeigen** wählen.
+Sie können bis zu 100 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen für mehrere angepasste Events auswählen und dann **Nutzungsbericht anzeigen** wählen.
 
 ## Daten exportieren
 
 Um die Liste der angepassten Events als CSV-Datei zu exportieren, wählen Sie den Button **Alle exportieren** oben auf der Seite. Die CSV-Datei wird generiert, und ein Download-Link wird Ihnen per E-Mail zugesandt.
-
-{% alert important %}
-Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an einem Vorabzugang interessiert sind.
-{% endalert %}
 
 ## Protokollierung angepasster Events
 
@@ -74,13 +71,13 @@ Angepasste Events erfordern zusätzliche Einstellungen. In der folgenden Liste f
 
 {% details Erweitern Sie für die Dokumentation nach Plattform %}
 
-- [Android und FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android und FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
+- [Internet]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
 
 {% enddetails %}
 
@@ -208,11 +205,16 @@ Eine vollständige Liste der Liquid-Tags, die dazu führen, dass In-App-Nachrich
 
 Verwenden Sie die Segmentierung von Event-Eigenschaften, um Nutzer:innen auf der Grundlage angepasster Events und der mit diesen Events verbundenen Eigenschaften zu targetieren. Dies erweitert Ihre Filtermöglichkeiten bei der Segmentierung nach Kauf-Events und angepassten Events.
 
-Event-Eigenschaften für angepasste Events werden für jedes Segment, das sie verwendet, in Realtime aktualisiert. Sie können die Eigenschaften anpassen, indem Sie zu **Dateneinstellungen** > **Angepasste Events** gehen und **Eigenschaften** für das zugehörige angepasste Event auswählen. Angepasste Event-Eigenschaften, die in bestimmten Filtern für Segmente verwendet werden, haben einen maximalen Verlauf von 30 Tagen.
+Event-Eigenschaften für angepasste Events werden für jedes Segment, das sie verwendet, in Realtime aktualisiert. Sie können Einstellungen verwalten, indem Sie zu **Dateneinstellungen** > **Angepasste Events** gehen und **Eigenschaften** für das entsprechende angepasste Event auswählen. Angepasste Event-Eigenschaften, die in bestimmten Filtern für Segmente verwendet werden, haben einen maximalen Verlauf von 30 Tagen.
 
-{% alert note %}
-Wenn Sie Segmente auf der Grundlage der Häufigkeit von Event-Eigenschaften erstellen möchten, wenden Sie sich an Ihren Customer-Success-Manager, um die Segmentierung für bestimmte angepasste Event-Eigenschaften zu aktivieren. Wenn diese Option aktiviert ist, können Sie bei der Segmentierung auf zusätzliche Filteroptionen zugreifen.
-{% endalert %}
+##### Hinzufügen von Event-Eigenschaften für die Segmentierung
+
+Sie benötigen die [Nutzerzustimmung]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Angepasste Event-Eigenschaft Segmentierung verwalten", um Segmente auf der Grundlage der Häufigkeit von Event-Eigenschaften zu erstellen.
+
+Um Event-Eigenschaften für die Segmentierung hinzuzufügen, gehen Sie wie folgt vor:
+
+1. Gehen Sie zu Ihrem angepassten Event und wählen Sie **Eigenschaften verwalten**.
+2. Wählen Sie die Option **Enablement** umschalten, um die Eigenschaft des Ereignisses für die Segmentierung hinzuzufügen. Sie können bei der Segmentierung auf zusätzliche Filteroptionen zugreifen.
 
 Die Filter für die Segmentierung der Eigenschaften von Ereignissen umfassen:
 

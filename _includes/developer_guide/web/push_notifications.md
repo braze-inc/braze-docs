@@ -34,7 +34,7 @@ The Braze service worker file will automatically call `skipWaiting` upon install
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-## Unsubscribingn a user
+## Unsubscribing a user
 
 To unsubscribe a user, call `braze.unregisterPush()`.
 
@@ -48,7 +48,7 @@ To integrate web push, your domain must be [secure](https://w3c.github.io/webapp
 
 ### Use cases
 
-If you can't meet all of the criteria outlined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations), you can use this method to add a push prompt dialog to your website instead. This can be helpful if you want to let your users opt-in from an `http` website or a browser extension popup thats preventing your push prompt from displaying.
+If you can't meet all of the criteria outlined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations), you can use this method to add a push prompt dialog to your website instead. This can be helpful if you want to let your users opt-in from an `http` website or a browser extension popup that's preventing your push prompt from displaying.
 
 ### Considerations
 

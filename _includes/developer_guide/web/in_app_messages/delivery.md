@@ -70,7 +70,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
   }
   
   // Display the in-app message. You could defer display here by pushing this message to code within your own application.
-  // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
+  // If you don't want to use the Braze built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
   
   if ( should_show_the_message_according_to_your_custom_logic ) {
       braze.showInAppMessage(inAppMessage);

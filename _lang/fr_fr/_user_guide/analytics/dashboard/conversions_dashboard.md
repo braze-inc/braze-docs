@@ -111,5 +111,5 @@ Pour télécharger les données de la série chronologique, sélectionnez <i cla
 
 | Terme | Définition |
 | --- | --- |
-| Toucher | Une interaction physique ou un point de contact avec un message.<br><br>Les touches peuvent inclure :<br>{::nomarkdown}<ul><li>Clics sur e-mails</li><li>Ouverture de notification push</li><li>Carte de contenu cliquée</li><li>Clic sur le in-app Message</li><li>Envoi SMS</li></ul>{:/} |
+| Toucher | Une interaction physique ou un point de contact avec un message.<br><br>Les touches peuvent inclure :<br>{::nomarkdown}<ul><li>Clics sur e-mails</li><li>Ouverture de notification push</li><li>Carte de contenu cliquée</li><li>Clic sur le in-app Message</li><li>SMS Click</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

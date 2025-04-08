@@ -43,14 +43,14 @@ Es gibt zwei Methoden zur Erstellung und Verwaltung Ihrer Geschäftsobjekte in B
 | Methode | Beschreibung |
 | --- | --- |
 | [Kataloge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Dies sind unabhängige Datenobjekte (ergänzende Datenobjekte) zum primären Benutzerprofil in Braze. In einem B2B-Kontext würden Sie wahrscheinlich Kataloge für Ihre Kunden und Opportunities haben. |
-| [Verbundene Quellen]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | Diese erlauben es Braze, Ihr Data Warehouse direkt abzufragen. Wahrscheinlich synchronisieren Sie Ihre Lead-, Kontakt-, Opportunity- und Account-Objekte bereits regelmäßig mit Ihrem Data Warehouse, sodass Sie die Segmentierung von Braze direkt auf dieses Data Warehouse verweisen und es in einer Null-Kopie-Umgebung aktivieren können. |
+| [Verbundene Quellen]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Diese erlauben es Braze, Ihr Data Warehouse direkt abzufragen. Wahrscheinlich synchronisieren Sie Ihre Lead-, Kontakt-, Opportunity- und Account-Objekte bereits regelmäßig mit Ihrem Data Warehouse, sodass Sie die Segmentierung von Braze direkt auf dieses Data Warehouse verweisen und es in einer Null-Kopie-Umgebung aktivieren können. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Option 1: Verwenden Sie Kataloge für Accounts und Opportunities
 
 Kataloge sind Datentabellen, die in Braze gehostet und verwaltet werden. Während Konto- und Opportunity-Daten aus dem CRM-System Ihrer Wahl stammen, würden Sie diese in Braze duplizieren, um sie für Marketingzwecke zu verwenden: Segmentierung auf der Basis von Konten, Marketing auf der Basis von Konten, Lead Management und mehr.
 
-Bei dieser Option empfehlen wir Ihnen, einen Katalog für Ihre Konten und einen für Ihre Opportunities zu erstellen und beide regelmäßig zu aktualisieren, indem Sie Braze-Updates über unsere [Katalog-API]({{site.baseurl}}/api/endpoints/catalogs/) oder [Kataloge Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/) senden. Stellen Sie bei der Erstellung dieser Kataloge sicher, dass die `id` (erste Spalte) Ihres Katalogs mit der `id` in Ihrem CRM-System übereinstimmt.
+Bei dieser Option empfehlen wir Ihnen, einen Katalog für Ihre Konten und einen für Ihre Opportunities zu erstellen und beide regelmäßig zu aktualisieren, indem Sie Braze-Updates über unsere [Katalog-API]({{site.baseurl}}/api/endpoints/catalogs/) oder [Kataloge Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/) senden. Stellen Sie bei der Erstellung dieser Kataloge sicher, dass die `id` (erste Spalte) Ihres Katalogs mit der `id` in Ihrem CRM-System übereinstimmt.
 
 #### Abbildung über Ihre CRM-Felder
 
@@ -145,7 +145,7 @@ Wie Sie angeschlossene Quellen einrichten, erfahren Sie unter [Einbindung angesc
 
 ## Schritt 2: Verknüpfen Sie Ihre Geschäftsobjekte mit Benutzerprofilen
 
-Nutzerprofile sind das wichtigste Objekt in Braze, das den Großteil Ihrer demografischen Segmentierung, Triggerung und Personalisierung ermöglicht. Zu den Nutzerprofilen gehören [Standard-Nutzerdaten]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/), die von unserem SDK und anderen Quellen erfasst werden, einschließlich [benutzerdefinierter Daten]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), die entweder in Form von Attributen (demografische Daten), Ereignissen (Verhaltensdaten) oder Käufen (Transaktionsdaten) vorliegen.
+Nutzerprofile sind das wichtigste Objekt in Braze, das den Großteil Ihrer demografischen Segmentierung, Triggerung und Personalisierung ermöglicht. Zu den Nutzerprofilen gehören [Standard-Nutzerdaten]({{site.baseurl}}/user_guide/data/user_data_collection/), die von unserem SDK und anderen Quellen erfasst werden, einschließlich [benutzerdefinierter Daten]({{site.baseurl}}/user_guide/data/custom_data/), die entweder in Form von Attributen (demografische Daten), Ereignissen (Verhaltensdaten) oder Käufen (Transaktionsdaten) vorliegen.
 
 ### Schritt 2.1: Vertriebs-CRM-IDs auf Braze abbilden
 

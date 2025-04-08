@@ -94,6 +94,8 @@ Adicione outro item à matriz usando o operador `$add`. O exemplo a seguir mostr
 
 Atualize os valores de objetos específicos em um vetor de objetos usando o parâmetro `_merge_objects` e o operador `$update`. Semelhante às atualizações de objetos simples [de atributos personalizados aninhados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body), essa ação realiza uma mesclagem profunda.
 
+Observe que o site `$update` não pode ser usado para remover uma propriedade aninhada de um objeto dentro de um vetor de objeto. Para fazer isso, você precisará remover todo o item do vetor e, em seguida, adicionar o objeto sem essa chave específica (usando uma combinação de `$remove` e `$add`).
+
 O exemplo a seguir mostra a atualização da propriedade `breed` para `goldfish` para o objeto com um `id` de `4`. Esse exemplo de solicitação também atualiza o objeto com `id` igual a `5` com um novo `name` de `Annette`. Como o parâmetro `_merge_objects` está definido como `true`, todos os outros campos desses dois objetos permanecem iguais.
 
 ```json

@@ -133,7 +133,7 @@ iOS 12에서 Apple은 [임시 승인][provisional-blog]를 도입하여 브랜�
 푸시 알림을 사용자에게 보내는 방법을 이해하는 데 필수적인 [푸시 토큰]][push-tokens]은 두 가지 방법으로 분류할 수 있습니다.
 
 1. **포그라운드 푸시**는 사용자 기기의 포그라운드로 정기적으로 눈에 보이는 푸시 알림을 보내는 기능을 제공합니다.
-2. **백그라운드 푸시**는 특정 기기가 해당 브랜드의 푸시 알림을 수신하도록 옵트인했는지 여부와 관계없이 사용할 수 있습니다. 백그라운드 푸시를 사용하면 브랜드가 의도적으로 표시되지 않는 알림인 무음 푸시 알림을 기기에 전송하여 [제거 추적]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/)과 같은 주요 기능을 지원할 수 있습니다.
+2. **백그라운드 푸시**는 특정 기기가 해당 브랜드의 푸시 알림을 수신하도록 옵트인했는지 여부와 관계없이 사용할 수 있습니다. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
 사용자 프로필에 앱과 연결된 유효한 포그라운드 푸시 토큰이 있는 경우, Braze는 해당 사용자가 해당 앱에 대해 "푸시 등록"된 것으로 간주합니다. 따라서 Braze는 이러한 사용자를 식별하는 데 도움이 되는 특정 세분화 필터(`Push Enabled for App,`)를 제공합니다.
 

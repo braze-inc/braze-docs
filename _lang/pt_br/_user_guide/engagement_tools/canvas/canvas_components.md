@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Feature Flags no canva
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Sincronização do público do Canva
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ Use [jornadas de ação][1] para dividir a jornada do usuário com base em açõ
 
 Os componentes de [divisão de decisão][3] usam uma lógica simples de "sim ou não" para criar duas jornadas mutuamente exclusivas para o usuário, com base em uma ação ou atribuição do usuário. Isso pode ajudar a identificar e direcionar seus grupos de usuários.
 
-Os componentes de [atraso][4] permitem a postergação de uma única etapa do Canva. Essa etapa autônoma de postergação no seu Canva é melhor usada para o envio de mensagens aos seus usuários em um momento específico. Além disso, os componentes de postergação também podem aumentar o alcance de seu público, permitindo mais tempo para que ele atenda aos critérios do componente. 
+Os componentes de [atraso][4] permitem a postergação de uma única etapa do Canva. Essa etapa autônoma de postergação no seu Canva é melhor usada para o envio de mensagens aos seus usuários em um momento específico. Além disso, os componentes de postergação também podem aumentar o alcance de seu público, permitindo mais tempo para que ele atenda aos critérios do componente.
 
 ### Testes
 
@@ -62,7 +62,7 @@ Ao criar as jornadas do usuário, convém testar também a jornada mais eficaz d
 
 ### Integração
 
-Deseja sincronizar-se com os dados primários de usuários da sua marca? Aproveite as opções de sincronização de público disponíveis para o [Facebook][6] e [o Google][7]. <br><br>
+Deseja sincronizar-se com os dados primários de usuários da sua marca? Aproveite as opções de sincronização de público disponíveis para o [Facebook][6] e [o Google][7].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

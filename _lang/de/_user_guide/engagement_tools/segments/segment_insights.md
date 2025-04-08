@@ -68,7 +68,7 @@ Um die Konversionsrate bei Sprechern anderer Sprachen als Englisch zu verbessern
 
 ### Indikatoren für höhere Einnahmen verstehen
 
-Es kann schwierig sein, Nutzer:innen zu Käufern und Käuferinnen umzuwandeln, und der Versuch, neue, inaktive oder uninteressierte Nutzer:innen direkt zum Kauf zu drängen, kann dazu führen, dass sie Ihre App deinstallieren. Segment-Insights können Ihnen helfen, Aktionen zu entdecken, die Nutzer:innen weiter in den Funnel führen, ohne dass sie gleich kaufen müssen, z. B. das Hinzufügen von Artikeln zu ihrer Wunschliste, das Teilen in Social Media oder das Favorisieren von Content. So können Sie zum Beispiel die Auswirkungen verschiedener Verhaltensweisen auf Käufe innerhalb einer E-Commerce-App aufzeigen.
+Es kann schwierig sein, Nutzer:innen zu Käufern und Käuferinnen umzuwandeln, und der Versuch, neue, inaktive oder uninteressierte Nutzer:innen direkt zum Kauf zu drängen, kann dazu führen, dass sie Ihre App deinstallieren. Segment-Insights können Ihnen helfen, Aktionen zu entdecken, die Nutzer:innen weiter in den Funnel führen, ohne dass sie gleich kaufen müssen, z. B. das Hinzufügen von Artikeln zu ihrer Wunschliste, das Teilen in Social Media oder das Favorisieren von Content. So können Sie zum Beispiel die Auswirkungen verschiedener Verhaltensweisen innerhalb einer E-Commerce App auf die Käufe in einem Chart darstellen.
 
 ![][7]
 

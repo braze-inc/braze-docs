@@ -128,7 +128,7 @@ Die Variablen umfassen:
 
 Es sind Daten für Zeiträume verfügbar, in denen beide Bedingungen erfüllt sind:
 
-1. Das [Analytics Tracking für Segmente]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) ist für die Segmente aktiviert, für die Sie Daten sehen möchten.
+1. Das [Analytics Tracking für Segmente]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ist für die Segmente aktiviert, für die Sie Daten sehen möchten.
 2. Das Feature Performance-Daten nach Segmenten ist eingeschaltet.
 
 Sie können nicht auf Daten aus Zeiträumen zugreifen, die vor dem Zeitpunkt liegen, an dem dieses Feature für Ihr Unternehmen aktiviert wurde. Wenn beispielsweise das Analytics Tracking für Segment A am 1\. Oktober eingeschaltet ist und dieses Feature für Ihr Unternehmen am 2\. Oktober aktiviert wird, dann können Sie nur Daten für Segment A für die Kampagnen und Canvase einsehen, die nach dem 2\. Oktober Metriken aufgezeichnet haben. 

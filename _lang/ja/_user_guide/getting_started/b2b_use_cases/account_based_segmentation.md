@@ -10,7 +10,7 @@ description: "B2Bアカウントベースのセグメンテーションのユー
 
 > このページでは、さまざまな Braze 機能を使用して B2B アカウントベースのセグメンテーションユースケースを強化する方法について説明します。
 
-[B2B データモデル]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/)の設定方法に応じて、次の2つの方法で B2B アカウントベースのセグメンテーションを実行できます。
+[B2B データモデル]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/)の設定方法に応じて、次の2つの方法で B2B アカウントベースのセグメンテーションを実行できます。
 
 - [ビジネスオブジェクトのカタログ](#option-1-when-using-catalogs-for-your-business-objects)を使用する場合
 - [ビジネスオブジェクトに接続ソース](#option-2-when-using-connected-sources-for-your-business-objects)を使用する場合

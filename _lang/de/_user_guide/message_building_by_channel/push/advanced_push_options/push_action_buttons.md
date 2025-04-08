@@ -38,7 +38,7 @@ Um Action-Buttons in Ihren iOS Push-Nachrichten zu verwenden, gehen Sie wie folg
 ![Dropdown-Menü der iOS-Benachrichtigungskategorie.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Aufgrund der Handhabung von Schaltflächen durch iOS müssen Sie bei der Einrichtung von Push-Aktionsschaltflächen zusätzliche Integrationsschritte durchführen, die in unserer [Entwicklerdokumentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/) beschrieben werden. Insbesondere müssen Sie entweder iOS-Kategorien konfigurieren oder aus bestimmten Standard-Schaltflächenoptionen auswählen. Bei Android-Integrationen funktionieren diese Schaltflächen automatisch.
+Aufgrund der Handhabung von Schaltflächen durch iOS müssen Sie bei der Einrichtung von Push-Aktionsschaltflächen zusätzliche Integrationsschritte durchführen, die in unserer [Entwicklerdokumentation]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/) beschrieben werden. Insbesondere müssen Sie entweder iOS-Kategorien konfigurieren oder aus bestimmten Standard-Schaltflächenoptionen auswählen. Bei Android-Integrationen funktionieren diese Schaltflächen automatisch.
 {% endalert %}
 
 ### Android {#android}

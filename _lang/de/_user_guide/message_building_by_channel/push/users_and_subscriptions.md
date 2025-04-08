@@ -133,7 +133,7 @@ Daher sollten Sie nur dann um Erlaubnis bitten, wenn ein Benutzer irgendwo auf I
 Es gibt zwei Möglichkeiten, wie ein [Push-Token][push-tokens] ] klassifiziert werden kann, die wichtig sind, um zu verstehen, wie eine Push-Benachrichtigung an Ihre Nutzer:innen gesendet werden kann.
 
 1. **Foreground Push** bietet die Möglichkeit, regelmäßig sichtbare Push-Benachrichtigungen in den Vordergrund des Geräts eines Benutzers zu senden.
-2. **Hintergrund-Push** ist unabhängig davon verfügbar, ob ein bestimmtes Gerät sich für den Empfang von Push-Benachrichtigungen der jeweiligen Marke entschieden hat. Per Hintergrund-Push können Sie stille Push-Benachrichtigungen, die absichtlich nicht angezeigt werden, für wichtige Funktionen wie [Uninstall-Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/) an Geräte senden.
+2. **Hintergrund-Push** ist unabhängig davon verfügbar, ob ein bestimmtes Gerät sich für den Empfang von Push-Benachrichtigungen der jeweiligen Marke entschieden hat. Per Hintergrund-Push können Sie stille Push-Benachrichtigungen, die absichtlich nicht angezeigt werden, für wichtige Funktionen wie [Uninstall-Tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/) an Geräte senden.
 
 Wenn ein Nutzerprofil ein gültiges Vordergrund-Push-Token enthält, das mit einer App verknüpft ist, betrachtet Braze es für die jeweilige App als "bei Push angemeldet". Um diese Nutzerprofile zu finden, gibt es in Braze daher den Segmentierungsfilter `Push Enabled for App,`.
 

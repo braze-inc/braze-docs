@@ -42,7 +42,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 {: start="2"}
 2\. Selecione **LINE** ou, para campanhas com direcionamento para vários canais, selecione **Multichannel Campaign (Campanha multicanal**).
 3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
+4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -71,9 +71,15 @@ Escreva sua mensagem usando personalização (como Liquid ou Connected Content) 
 
 ![Criador de LINE com uma mensagem exibida na prévia.][1]
 
-{% alert tip %}
+### Dicas
+
+#### Usando Liquid
+
 Se planeja usar o Liquid, certifique-se de incluir um valor padrão para sua personalização. Isso evitará que os destinatários com perfis de usuário incompletos recebam um espaço reservado em branco. Por exemplo, em vez de um usuário receber a mensagem "Olá, !", ele pode receber a mensagem "Olá, novo assinante!".
-{% endalert %}
+
+#### Criação de mensagens da direita para a esquerda
+
+A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Etapa 3: Pré-visualize e teste sua mensagem
 

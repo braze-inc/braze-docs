@@ -60,7 +60,7 @@ For example, if you wanted to send a group of users helpful food recommendations
 
 After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
-![Two Audience Paths with different groups for various cusines.][4]{: style="max-width:90%;margin-left:15px;"}
+![Two Audience Paths with different groups for various cuisines.][4]{: style="max-width:90%;margin-left:15px;"}
 
 ### Testing audience groups
 

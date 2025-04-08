@@ -50,6 +50,10 @@ In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and sele
 
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 ## Using this integration
 
 To use your Tinyclues segment, create a Braze campaign or Canvas and select the segment as your target audience. 

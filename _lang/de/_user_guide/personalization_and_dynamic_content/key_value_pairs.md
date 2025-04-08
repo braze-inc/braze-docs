@@ -12,7 +12,7 @@ channel:
 
 # Schlüssel-Wert-Paare
 
-> Mit Braze können Sie zusätzliche Nutzdaten mittels Schlüssel-Wert-Paaren an Benutzergeräte senden. Diese Funktion ist bei Push-, In-App-, E-Mail- und Content-Card-Nachrichten verfügbar. 
+> Auf dieser Seite erfahren Sie, wie Sie Schlüssel-Wert-Paare verwenden, um zusätzliche Daten an Nutzer:innen zu senden. Diese Funktion ist bei Push-, In-App-, E-Mail- und Content-Card-Nachrichten verfügbar.
 
 Mit Schlüssel-Wert-Paaren können Sie Ihren Nachrichten strukturierte Metadaten hinzufügen. Diese zusätzlichen Nutzdaten können Nachrichten um Kontextinformationen ergänzen, die beeinflussen können, wie eine Nachricht dargestellt oder verarbeitet wird.
 
@@ -41,7 +41,7 @@ Hier einige Anwendungsbeispiele für die Ergänzung von Metadaten mit Schlüssel
 
 Schlüssel-Wert-Paare können zu Android-, iOS- und Web-Push-Benachrichtigungen hinzugefügt werden. Sie können Schlüssel-Wert-Paare verwenden, um interne Metriken und App-Inhalte zu aktualisieren oder die Eigenschaften von Push-Benachrichtigungen wie Priorisierung, Lokalisierung und Töne anzupassen.
 
-Wählen Sie im Message Composer die Registerkarte **Einstellungen**, klicken Sie auf **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
+Wählen Sie im Nachrichten-Editor den Tab **Einstellungen**, wählen Sie **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
 
 ### iOS
 
@@ -109,11 +109,11 @@ Wenn Braze eine Push-Benachrichtigung an APNs sendet, wird die Payload als JSON 
 
 ##### Benutzerdefinierte Schlüssel-Wert-Paare
 
-Zusätzlich zu den Werten aus der ```aps```-Bibliothek können Sie auch benutzerdefinierte Schlüssel-Wert-Paare an das Benutzergerät senden. Die Werte in diesen Paaren sind auf primitive Typen beschränkt: dictionary (Objekt), array, string, number und Boolean.
+Zusätzlich zu den Werten aus der ```aps```-Bibliothek können Sie auch benutzerdefinierte Schlüssel-Wert-Paare an das Benutzergerät senden. Die Werte in diesen Paaren sind auf primitive Typen beschränkt: Wörterbuch (Objekt), Array, String, Zahl und Boolean.
 
 ![][17]
 
-Zu den Anwendungsfällen für benutzerdefinierte Schlüssel-Wert-Paare gehören u. a. die Speicherung interner Kennzahlen und die Festlegung des Kontexts für die Benutzeroberfläche. Braze ermöglicht es Ihnen, zusätzliche Schlüssel-Wert-Paare zusammen mit einer Push-Benachrichtigung zu senden, die Sie dann über Ihre Anwendung mit dem [Extras-Schlüssel][1] verwenden können. Wenn Sie einen anderen Schlüssel verwenden möchten, stellen Sie sicher, dass Ihre Anwendung mit diesem Schlüssel umgehen kann.
+Zu den Anwendungsfällen für angepasste Schlüssel-Wert-Paare gehören u.a. die Einhaltung interner Metriken und die Festlegung des Kontexts für die Benutzeroberfläche. Braze erlaubt es Ihnen, zusätzliche Schlüssel-Wert-Paare zusammen mit einer Push-Benachrichtigung zu senden, die von Ihrer Anwendung innerhalb des [Extras-Schlüssels][1] verwendet werden kann. Wenn Sie einen anderen Schlüssel verwenden möchten, vergewissern Sie sich, dass Ihre App mit diesem angepassten Schlüssel umgehen kann.
 
 {% alert warning %}
 Sie sollten es vermeiden, in Ihrer Anwendung einen Schlüssel oder ein Wörterbuch der obersten Ebene mit dem Namen "ab" zu verwenden.
@@ -122,7 +122,7 @@ Sie sollten es vermeiden, in Ihrer Anwendung einen Schlüssel oder ein Wörterbu
 Apple rät dazu, keine Kundeninformationen oder andere sensible Daten als benutzerdefinierte Payload zu verwenden. Darüber hinaus empfiehlt Apple, dass jede Aktion im Zusammenhang mit einer Warnmeldung keine Daten auf einem Gerät löschen sollte.
 
 {% alert warning %}
-Wenn Sie die HTTP/2-Anbieter-API verwenden, dürfen Payloads, die Sie an APNs senden, max. 4096 Bytes groß sein. Die bisherige Binärschnittstelle, die demnächst eingestellt wird, unterstützt nur 2048 Byte Payload.
+Wenn Sie die HTTP/2-Provider-API verwenden, darf jede einzelne Nutzlast, die Sie an APNs senden, eine Größe von 4096 Bytes nicht überschreiten. Die bisherige Binärschnittstelle, die demnächst eingestellt wird, unterstützt nur 2048 Byte Payload.
 {% endalert %}
 
 ###### Per API ausgelöste Kampagnen
@@ -167,7 +167,7 @@ Das iOS-Betriebssystem kann [Push-Benachrichtigungen]({{site.baseurl}}/developer
 
 ## In-App-Nachrichten
 
-Um einer In-App-Nachricht ein Schlüssel-Wert-Paar hinzuzufügen, wählen Sie die Registerkarte **Einstellungen** im Message Composer, klicken auf **Neues Paar hinzufügen** und geben Ihre Schlüssel-Wert-Paare an.
+Um einer In-App-Nachricht ein Schlüssel-Wert-Paar hinzuzufügen, wählen Sie im Nachrichten-Editor den Tab **Einstellungen**, wählen Sie **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
 
 ![][21]
 
@@ -187,7 +187,7 @@ Abgewiesene E-Mails geben keine Schlüssel-Wert-Paare an SparkPost oder SendGrid
 
 ## Content-Cards
 
-Um ein Schlüssel-Wert-Paar zu einer Inhaltskarte hinzuzufügen, gehen Sie im Braze Message Composer auf die Registerkarte **Einstellungen** und klicken Sie auf **Neues Paar hinzufügen**.
+Um ein Schlüssel-Wert-Paar zu einer Content-Card hinzuzufügen, gehen Sie im Nachrichten-Editor von Braze auf den Tab **Einstellungen** und wählen Sie **Neues Paar hinzufügen**.
 
 ![Schlüssel-Wert-Paar zur Content-Card hinzufügen][24]{: style="max-width:70%;"}
 

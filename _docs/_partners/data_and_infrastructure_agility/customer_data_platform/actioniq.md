@@ -83,7 +83,7 @@ A Braze REST API key with `campaigns.trigger.send` and `campaigns.list` permissi
 
 The following values must be sent in your ActionIQ export to Braze:
 - Consumer identifier (either `braze_id` or `external_id`)
-- Campagin ID
+- Campaign ID
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

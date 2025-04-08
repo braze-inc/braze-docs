@@ -29,7 +29,7 @@ Using the Punchh coupon framework and Braze, you can achieve the following scena
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![The form for creating a coupon campagin in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
+![The form for creating a coupon campaign in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Step 2: Generate signature and construct URL
 

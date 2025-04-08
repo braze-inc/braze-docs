@@ -128,7 +128,7 @@ Braze 대시보드의 **세그먼트** 페이지에는 모든 세그먼트에 �
 
 데이터는 이 두 가지 조건이 모두 충족되는 기간 동안 사용할 수 있습니다:
 
-1. 데이터를 보려는 세그먼트에 대해 [세그먼트 분석 추적]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/)이 켜져 있습니다.
+1. [Segment analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
 2. 세그먼트별 성능 데이터 기능이 켜져 있습니다.
 
 회사에서 이 기능을 사용 설정하기 이전의 기간의 데이터에는 액세스할 수 없습니다. 예를 들어 10월 1일에 세그먼트 A에 대해 애널리틱스 추적이 켜져 있고 10월 2일에 회사에 이 기능이 켜져 있는 경우, 10월 2일 이후에 지표를 기록한 캠페인 및 캔버스의 세그먼트 A에 대한 데이터만 볼 수 있습니다. 

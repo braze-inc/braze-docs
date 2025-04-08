@@ -61,7 +61,7 @@ Dans certains cas, un utilisateur peut potentiellement recevoir plusieurs messag
 
 ### Créer un groupe interne
 
-Au lieu de créer des utilisateurs test individuels, vous pouvez créer un [groupe de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), c'est-à-dire un groupe interne dont l'objectif est d'examiner le contenu de votre message. Cela inclut un groupe d’utilisateurs qui recevront des messages test des campagnes et des Canvas. Vous pouvez ensuite ajouter ce groupe de test dans le champ **Ajouter des groupes de test de contenu** sous **Destinataires du test**.
+Au lieu de créer des utilisateurs test individuels, vous pouvez créer un [groupe de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), c'est-à-dire un groupe interne dont l'objectif est d'examiner le contenu de votre message. Cela inclut un groupe d’utilisateurs qui recevront des messages test des campagnes et des Canvas. Vous pouvez ensuite ajouter ce groupe de test dans le champ **Ajouter des groupes de test de contenu** sous **Destinataires du test**.
 
 ### Délais réduits
 

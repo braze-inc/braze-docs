@@ -27,7 +27,7 @@ Vous pouvez activer la nouvelle navigation à tout moment en sélectionnant **Pa
 
 ## À quoi s’attendre ensuite
 
-Vous pourrez encore basculer entre l'ancienne et la nouvelle navigation jusqu'en **janvier 2025**.
+Vous pourrez encore passer de la nouvelle à l'ancienne navigation jusqu'en **mars 2025**.
 
 ## Ce qui a changé
 

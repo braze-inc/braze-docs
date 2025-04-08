@@ -201,7 +201,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **Integrations > Third-party Integrations** in the left sidebar and select **Braze**.
-2. Provide the data import key and REST endpoint that you found in Braze's dashboard.
+2. Provide the data import key and REST endpoint that you found in the Braze dashboard.
 3. Select the event type (Install Event or Install & Deeplink Open Event) and save.
 
 {% alert note %}

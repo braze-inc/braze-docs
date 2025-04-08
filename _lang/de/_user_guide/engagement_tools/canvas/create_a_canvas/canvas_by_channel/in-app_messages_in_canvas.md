@@ -4,7 +4,7 @@ article_title: In-App-Nachrichten in Canvas
 alias: "/canvas_in-app_messages/"
 page_order: 2
 page_type: reference
-description: "Dieser Referenzartikel beschreibt die Features und Nuancen von Canvas-In-App-Nachrichten, die Sie zu Ihrem Canvas hinzufügen können, um umfangreiche Nachrichten zu senden."
+description: "Dieser referenzierte Artikel beschreibt Features und Nuancen, die speziell für In-App-Nachrichten gelten und die Sie Ihrem Canvas hinzufügen können, um Rich Messaging anzuzeigen."
 tool: Canvas
 channel: in-app messages
 
@@ -12,19 +12,28 @@ channel: in-app messages
 
 # In-App-Nachrichten in Canvas
 
-> In-App-Nachrichten können als Teil Ihrer Canvas-Journey hinzugefügt werden, um Rich-Messaging anzuzeigen, wenn Ihr:e Kund:in eine Interaktion mit Ihrer App durchführt. Dieser Artikel beschreibt die Features und Feinheiten von Canvas In-App-Nachrichten.
+> Sie können In-App-Nachrichten als Teil Ihrer Canvas Journey hinzufügen, um reichhaltiges Messaging zu zeigen, wenn Ihr Kunde sich mit Ihrer App engagiert.
 
-Bevor Sie fortfahren, sollten Sie bereits [Ihr Canvas erstellt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) und die Optionen für Verzögerung und Zielgruppe eingerichtet haben. 
 
-Jetzt können Sie eine In-App-Nachricht zu Ihrem Canvas hinzufügen. Schritt [Nachricht]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) hinzufügen und wählen Sie **In-App-Nachricht** für Ihren **Nachrichtenkanal**. Nachdem alle Verzögerungen verstrichen sind und die Optionen für die Zielgruppe aktiviert wurden, wird die In-App-Nachricht live geschaltet und Nutzer:innen sehen sie, wenn sie die App öffnen. In-App-Nachrichten in Canvas können nur durch das Trigger-Ereignis `start session` ausgelöst werden – sie können nicht durch angepasste Ereignisse in einer Canvas-Komponente getriggert werden.
+## Funktionsweise
+
+Bevor Sie In-App-Nachrichten in Ihrem Canvas verwenden können, müssen Sie einen [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) mit Verzögerungs- und Zielgruppenoptionen einrichten.
+
+Nachdem alle Verzögerungen verstrichen sind und die Optionen für die Zielgruppe aktiviert wurden, wird die In-App-Nachricht live geschaltet und Nutzer:innen sehen sie, wenn sie die App öffnen. In-App-Nachrichten in Canvas können nur durch das Trigger-Ereignis `start session` ausgelöst werden - sie können nicht durch angepasste Events in einer Canvas-Komponente getriggert werden.
 
 Bei Canvas-Schritten mit einem durch eine Aktion getriggerter Entry können Nutzer:innen den Canvas mitten in der Sitzung betreten. Wie bereits erwähnt, werden In-App-Nachrichten jedoch erst bei Beginn der nächsten Sitzung getriggert. Diese Nutzer:innen würden also die erste In-App-Nachricht verpassen, da sie nicht berechtigt waren, den Canvas vor Beginn der Sitzung zu betreten.
 
-Sie können selbst bestimmen, [wann Ihre Nachricht abläuft](#in-app-message-expiration) und welches [Verhalten](#advancement-behavior-options) sie haben wird.
+## Hinzufügen einer In-App-Nachricht zu Ihrer Nutzer:innen-Reise
 
-## Ablauf von In-App-Nachrichten
+Um eine In-App-Nachricht zu Ihrem Canvas hinzuzufügen, gehen Sie wie folgt vor:
 
-Im In-App-Nachrichten-Editor können Sie festlegen, wann die In-App-Nachricht abläuft. Während dieser Zeit bleibt die In-App-Nachricht stehen und wartet darauf, angesehen zu werden, bis sie das Ablaufdatum erreicht hat. Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
+1. Fügen Sie Ihrer Nutzer:innen-Reise einen Schritt für [Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) hinzu.
+2. Wählen Sie **In-App-Nachricht** für Ihren **Messaging-Kanal**. 
+3. Legen Sie fest, [wann Ihre Nachricht abläuft](#in-app-message-expiration) und welches [Vorbringungsverhalten](#advancement-behavior-options) sie haben wird.
+
+### Ablauf von In-App-Nachrichten
+
+Im Editor für In-App-Nachrichten können Sie festlegen, wann die In-App-Nachricht abläuft. Während dieser Zeit bleibt die In-App-Nachricht "sitzen" und wartet darauf, angesehen zu werden, bis sie das Ablaufdatum erreicht hat. Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
 
 ![][1]
 
@@ -34,9 +43,9 @@ Im In-App-Nachrichten-Editor können Sie festlegen, wann die In-App-Nachricht ab
 | Nachricht läuft bis zu einem bestimmten Datum ab | Mit der zweiten Option können Sie ein bestimmtes Datum und eine bestimmte Uhrzeit wählen, zu der die In-App-Nachricht nicht mehr verfügbar sein wird. | Wenn Sie z.B. ein Angebot haben, das zu einem bestimmten Datum und einer bestimmten Uhrzeit endet, können Sie diese Option wählen, damit die Nutzer die zugehörige In-App-Nachricht nicht mehr sehen, wenn das Angebot endet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Anwendungsfälle
+## Anwendungsfälle
 
-Wann sollten Sie diese Funktion nutzen? Braze empfiehlt Ihnen dringend, dieses Feature in Ihren Canvase für Aktionen und Onboarding zu verwenden.
+Sie können In-App-Nachrichten in Ihren Canvase für Aktionen und Onboarding verwenden.
 
 {% tabs %}
   {% tab Aktionen %}
@@ -146,16 +155,14 @@ Wie Sie sehen können, sind die Push-Nachrichten um eine In-App-Nachricht herum 
   {% endtab %}
 {% endtabs %}
 
-## Optionen für Fortschrittsverhalten
+### Optionen für das Verhalten bei Fortschritt
 
-### Canvas Flow
+In Canvas bringen Messaging-Schritte automatisch alle Nutzer:innen voran, die den Schritt betreten. Um die Option **Vorbringen, wenn Nachricht gesendet wird** zu verwenden, fügen Sie einen separaten [Zielgruppen-Pfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) hinzu, um Nutzer:innen zu filtern, die den vorherigen Schritt nicht erhalten haben.
 
-In Canvas Flow bringen die Nachrichtenkomponenten automatisch alle Nutzer:innen voran, die den Schritt aufrufen. Es ist nicht erforderlich, das Verhalten des Nachrichtenfortschritts anzugeben, wodurch die Konfiguration des Gesamtschritts vereinfacht wird. Wenn Sie die Option **Weiterleiten, wenn Nachricht gesendet wurde** implementieren möchten, fügen Sie einen separaten [Zielgruppenpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) hinzu, um Benutzer zu filtern, die den vorherigen Schritt nicht erhalten haben.
-
-### Original Canvas Editor
+{% details Original Canvas Editor Verhalten %}
 
 {% alert important %}
-Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. In diesem Abschnitt können Sie referenzieren, wie das Fortschrittsverhalten bei Schritten mit In-App-Nachrichten funktioniert.
+Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder duplizieren. In diesem Abschnitt können Sie referenzieren, wie das Fortschrittsverhalten bei Schritten mit In-App-Nachrichten funktioniert.
 {% endalert %}
 
 Für Canvase, die im Original-Editor erstellt wurden, müssen Sie ein Fortschrittsverhalten festlegen – die Kriterien für den Fortschritt durch Ihre Canvas-Komponente. [Schritte mit ausschließlich In-App-Nachrichten](#steps-iam-only) haben andere Fortschrittsoptionen als [Schritte mit mehreren Nachrichtentypen](#steps-multiple-channels) (Push, E-Mail usw.). Für In-App-Nachrichten in einem Canvas Flow-Workflow ist diese Option so eingestellt, dass die Zielgruppe immer sofort weitergeschaltet wird.
@@ -190,13 +197,15 @@ Schritte mit einer In-App-Nachricht und einem anderen Kanal haben die folgenden 
 Wenn die Option **Gesamte Zielgruppe** ausgewählt ist, bleibt die In-App-Nachricht bis zum Ablauf der Frist verfügbar, auch wenn der Benutzer zu den nachfolgenden Schritten übergeht. Wenn Sie nicht möchten, dass die In-App-Nachricht live ist, wenn die nächsten Schritte im Canvas zugestellt werden, stellen Sie sicher, dass die Ablaufzeit kürzer ist als die Verzögerung der nachfolgenden Schritte.
 {% endalert %}
 
+{% enddetails %}
+
 ## Priorisierung von In-App-Nachrichten
 
 Ein Kunde kann gleichzeitig zwei In-App-Nachrichten in Ihrem Canvas auslösen. In diesem Fall hält sich Braze an die folgende Prioritätsreihenfolge, um zu bestimmen, welche In-App-Nachricht angezeigt wird. Ziehen Sie verschiedene Canvas-Schritte, um ihre Priorität neu zu ordnen. Standardmäßig werden frühere Schritte in einer Canvas-Variante vor späteren Schritten angezeigt.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
-Navigieren Sie zu den **Sendeeinstellungen** des Abschnitts Canvas, um In-App-Nachrichten von einem Canvas gegenüber In-App-Nachrichten von anderen Canvases und Kampagnen zu priorisieren.
+Gehen Sie zu den **Sendeeinstellungen** des Canvas-Bereichs, um In-App-Nachrichten von einem Canvas gegenüber In-App-Nachrichten von anderen Canvase und Kampagnen zu priorisieren.
 
 ![]({% image_buster /assets/img_archive/canvas_send_settings.png %})
 
@@ -210,7 +219,9 @@ Wenn Sie einen Entwurf eines aktiven Canvas bearbeiten, werden Änderungen an de
 
 ## Benutzerdefinierte Ereigniseigenschaften in einem Canvas
 
-Da die aktionsbasierte Zustellung für Canvas-Schritte mit In-App-Nachrichten nicht verfügbar ist, können Sie auch keine angepassten Event-Eigenschaften für diese Schritte verwenden. Zur Vorlage von Event-Eigenschaften in Canvas empfehlen wir Ihnen, Ihre Event-Eigenschaften als angepasste Attribute in Ihrem ersten Canvas-Schritt zu speichern und dann Ihre In-App-Nachricht im zweiten Schritt mit den angepassten Attributen zu personalisieren.
+Die aktionsbasierte Zustellung ist für Canvas-Schritte mit In-App-Nachrichten nicht verfügbar. Das bedeutet, dass Sie auch keine angepassten Event-Eigenschaften für diese Schritte verwenden können. 
+
+Zur Vorlage von Event-Eigenschaften in Canvas empfehlen wir Ihnen, Ihre Event-Eigenschaften als angepasste Attribute in Ihrem ersten Canvas-Schritt zu speichern und Ihre In-App-Nachricht im zweiten Schritt mit den angepassten Attributen zu personalisieren.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"

@@ -218,9 +218,9 @@ Lorsqu’un bloc de contenu sans valeur `lid` est inséré dans un nouveau messa
 Pour les blocs de contenu, Braze recommande de créer des copies des blocs de contenu existants à utiliser dans les nouveaux messages. Cela peut être fait en les dupliquant en masse pour éviter les scénarios où vous pourriez référencer un bloc de contenu qui n’a pas été activé pour l’aliasage de lien dans un nouveau message.
 {% endalert %}
 
-## Aliasage de lien pour les URL générées via Liquid
+## Aliasage de lien pour les URL générées par Liquid
 
-Pour les URL générées par une instruction `assign` dans le HTML ou dans un bloc de contenu, nous vous recommandons d’ajouter un point d’interrogation (?) dans la balise d’ancrage. Cela aidera Braze à ajouter les paramètres de requête (`lid = somevalue`) pour que l’aliasage de lien puisse fonctionner correctement. Si vous n'indiquez pas où les paramètres de requête doivent être ajoutés, l’aliasing de lien ne reconnaîtra pas ces URL.
+Pour les tags générés par une déclaration `assign` dans le code HTML ou dans un bloc de contenu, vous devez ajouter un point d'interrogation (`?`) à la balise d'ancrage. Cela permet à Braze d'ajouter des paramètres de requête (`lid = somevalue`) afin que l'aliasage de lien puisse fonctionner correctement. Si vous ne savez pas où ajouter les paramètres de requête, l'aliasage de lien ne reconnaîtra pas ces URL et les modèles de lien ne s'appliqueront pas.
 
 ### Exemple
 

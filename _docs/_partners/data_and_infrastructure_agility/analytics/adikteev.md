@@ -38,7 +38,7 @@ Refinement of your audience segments based on churn risk.<br> The names and valu
 {% tab Message targeting %}
 Customization of your Braze messaging campaigns based on the churn risk of the recipients.
 
-![A screenshot showing an exampe of how to use a custom attribute sent by Adikteev as a campaign targeting filter.]({% image_buster /assets/img/adikteev/campaign.png %})
+![A screenshot showing an example of how to use a custom attribute sent by Adikteev as a campaign targeting filter.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 

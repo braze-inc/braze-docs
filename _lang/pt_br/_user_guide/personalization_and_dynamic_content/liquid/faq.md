@@ -72,20 +72,17 @@ A lógica de aborto permite que você pare uma mensagem de ser enviada se as con
 
 Os loops for também são conhecidos como [tags de iteração](https://shopify.github.io/liquid/tags/iteration/). Usar a lógica do loop em seus trechos de Liquid permite que você percorra blocos de Liquid até que uma condição seja atendida. 
 
-No Braze, isso pode ser usado para verificar itens em um atributo personalizado de array, ou uma lista de valores e objetos retornados por uma [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) ou [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) resposta de chamada. Especificamente, você pode usar a lógica de loop for como parte do seu envio de mensagens para verificar se um produto está em estoque ou se um produto tem uma classificação mínima. 
+Na Braze, isso pode ser usado para verificar itens em um atributo personalizado de array, ou uma lista de valores e objetos retornados por uma resposta de [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [seleção]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) ou chamada de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Especificamente, você pode usar a lógica de loop for como parte do seu envio de mensagens para verificar se um produto está em estoque ou se um produto tem uma classificação mínima. 
 
-Por exemplo, se você quiser pesquisar um catálogo com 100 linhas e incluir todas as imagens para uma empresa de calçados chamada Get Going, você pode usar este trecho de Liquid:
+Por exemplo, digamos que você tenha um catálogo chamado "Jogos" que tem uma seleção chamada "jogos_baratos". Para puxar os títulos dos jogos em "jogos_baratos", você poderia usar este trecho Liquid:
 
 {% raw %}
-
 ```liquid
-{% for item in catalog %}
-{% if {{item.brand}} = "GetGoing %}
-{{item.image}}
-{% endif %}
+{% catalog_selection_items Games cheap_games %}
+{% for item in items %}
+ Get this game: {{ item.title }}
 {% endfor %}
 ```
-
 {% endraw %}
 
 Uma vez que as condições estabelecidas sejam atendidas, sua mensagem pode prosseguir. Usar essa lógica é uma maneira útil de economizar tempo, em vez de repetir blocos de Liquid para diferentes condições.

@@ -94,6 +94,8 @@ description: "이 참조 문서에서는 객체 배열을 커스텀 속성의 �
 
 `_merge_objects` 매개변수와 `$update` 연산자를 사용하여 배열 내의 특정 객체에 대한 값을 업데이트합니다. 단순 [중첩된 사용자 지정 속성]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) 개체에 대한 업데이트와 유사하게 심층 병합을 수행합니다.
 
+Note that `$update` can't be used to remove a nested property from an object inside an array. To do this, you'll need to remove the entire item from the array and then add the object without that specific key (using a combination of `$remove` and `$add`).
+
 다음 예제는 `id`가 `4`인 개체에 대해 `breed` 속성정보를 `goldfish`로 업데이트하는 것을 보여줍니다. 이 요청 예제는 또한 `id`의 개체를 `5`로 업데이트하여 `Annette`의 새로운 `name`으로 업데이트합니다. `_merge_objects` 매개 변수는 `true`로 설정되어 있으므로 이 두 개체의 다른 모든 필드는 동일하게 유지됩니다.
 
 ```json

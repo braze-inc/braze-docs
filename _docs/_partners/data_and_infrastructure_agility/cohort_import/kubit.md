@@ -40,6 +40,10 @@ Next, select the desired import cadence. One-time imports allow you to import on
 
 ![]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 #### Verify import status
 Once an import has been completed, an email notification will be sent to the recipients(s) specified in the import schedule. You can also check a cohort's import status under **Schedule** in Kubit. The schedule history will display every import execution time, outcome, and the total number of users in the cohort who were imported to Braze.<br><br>![]({% image_buster /assets/img/kubit/import_history.png %})<br><br>You can manually trigger an import by clicking on **Import to Braze** icon for that import schedule.
 

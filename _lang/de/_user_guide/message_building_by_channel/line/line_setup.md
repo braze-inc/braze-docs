@@ -65,7 +65,7 @@ Um konsistente Benutzeraktualisierungen einzurichten, übernehmen Sie die LINE-I
 
 Dieser Schritt ist notwendig, wenn Sie einen bestehenden und identifizierten LINE-Benutzer haben, da Braze später automatisch dessen Abonnementstatus abruft und das richtige Benutzerprofil aktualisiert. Wenn Sie die Nutzer:innen noch nicht mit ihrer LINE ID abgeglichen haben, überspringen Sie diesen Schritt. 
 
-Sie können Benutzer mit einer der von Braze unterstützten Methoden importieren oder aktualisieren, einschließlich dem [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/). 
+Sie können Benutzer mit einer der von Braze unterstützten Methoden importieren oder aktualisieren, einschließlich dem [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/). 
 
 Unabhängig von der Methode, die Sie verwenden, aktualisieren Sie die `native_line_id`, um die LINE ID des Nutzers:innen anzugeben. Weitere Informationen zu `native_line_id` finden Sie unter [Benutzereinrichtung](#user-setup).
 
@@ -230,7 +230,7 @@ Dies sind Anwendungsfälle, wie Nutzer:innen aktualisiert werden können, nachde
 1. Der Kanal erhält einen neuen LINE-Follower.
 2. Braze erstellt ein anonymes Benutzerprofil mit dem Attribut `native_line_id`, das auf die LINE-ID des Followers eingestellt ist, und einem Benutzer-Alias von `line_id`, das auf die LINE-ID des Followers eingestellt ist. Das Profil hat einen Abonnementstatus von `subscribed`.
 3. Der Benutzer wird durch den [Benutzerabgleich](#user-id-reconciliation) als Inhaber der LINE ID identifiziert.
-  - Das Profil des oder der anonymen Nutzers oder Nutzerin kann über den Endpunkt [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) identifiziert werden. Spätere Aktualisierungen (über den [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) zu diesem Benutzerprofil können den Benutzer über diese bekannte `external_id` ansprechen.
+  - Das Profil des oder der anonymen Nutzers oder Nutzerin kann über den Endpunkt [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) identifiziert werden. Spätere Aktualisierungen (über den [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/)) zu diesem Benutzerprofil können den Benutzer über diese bekannte `external_id` ansprechen.
 
 {% raw %}
 ```json
@@ -248,7 +248,7 @@ Dies sind Anwendungsfälle, wie Nutzer:innen aktualisiert werden können, nachde
 ```
 {% endraw %}
 
-  - Ein neues Nutzerprofil kann (über den Endpunkt [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), den [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder die [Datenaufnahme in der Cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) durch Festlegen der `native_line_id` erstellt werden. Dieses neue Profil erbt den Status des Abonnementstatus des bestehenden anonymen Benutzerprofils. Beachten Sie, dass dies dazu führt, dass sich mehrere Profile dieselbe `native_line_id` teilen. Diese können jederzeit über den Endpunkt `/users/merge` im Rahmen des in [Schritt 5](#step-5-merge-profiles-optional) beschriebenen Prozesses zusammengeführt werden.
+  - Ein neues Nutzerprofil kann (über den Endpunkt [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), den [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder die [Datenaufnahme in der Cloud]({{site.baseurl}}/user_guide/data/cloud_ingestion/)) durch Festlegen der `native_line_id` erstellt werden. Dieses neue Profil erbt den Status des Abonnementstatus des bestehenden anonymen Benutzerprofils. Beachten Sie, dass dies dazu führt, dass sich mehrere Profile dieselbe `native_line_id` teilen. Diese können jederzeit über den Endpunkt `/users/merge` im Rahmen des in [Schritt 5](#step-5-merge-profiles-optional) beschriebenen Prozesses zusammengeführt werden.
 
 ##### Die Erstellung des Benutzerprofils erfolgt vor dem LINE follow
 
@@ -287,7 +287,7 @@ Um die richtige LINE-ID für jeden Benutzer zu erhalten, richten Sie LINE Login 
 
 4. Speichern Sie die LINE ID des Benutzers (`native_line_id`) im Profil des Benutzers mit einer passenden E-Mail in Ihrer Datenbank, oder erstellen Sie ein neues Benutzerprofil mit der E-Mail und der LINE ID des Benutzers.
 
-5. Senden Sie die neuen oder aktualisierten Benutzerinformationen über den [Endpunkt`/user/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/) an Braze.
+5. Senden Sie die neuen oder aktualisierten Benutzerinformationen über den [Endpunkt`/user/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) an Braze.
 
 #### Workflows
 

@@ -27,7 +27,7 @@ You can revisit recently edited or created campaigns, Canvases, and segments. Ea
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.][6]
 
-## Peformance overview
+## Performance overview
 
 By default, the **Performance overview** section shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 

@@ -48,7 +48,7 @@ Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich 
 
 Tags können ein nützliches Organisations-Tool für das Tracking von Engagement-Taktiken sein. Sie können Segmente und Kampagnen mit Geschäftszielen, Funnel-Stufen und dergleichen verknüpfen.
 
-Im Folgenden finden Sie ein Beispiel für Tags, die für eine E-Commerce-App nützlich sein könnten:
+Im Folgenden finden Sie ein Beispiel für Tags, die für eine E-Commerce App nützlich sein könnten:
 
 <style>
 table td {

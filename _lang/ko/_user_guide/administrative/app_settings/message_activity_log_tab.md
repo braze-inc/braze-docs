@@ -16,7 +16,7 @@ API 캠페인 트랜잭션을 확인하고, 실패한 메시지에 대한 세부
 로그에 액세스하려면 **설정** > **메시지 활동 로그로** 이동합니다.
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정** > **개발자 콘솔에서** **메시지 활동 로그를** 찾을 수 있습니다.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** under **Settings** > **Developer Console**.
 {% endalert %}
 
 ![메시지 활동 로그][2]
@@ -37,6 +37,9 @@ API 캠페인 트랜잭션을 확인하고, 실패한 메시지에 대한 세부
 - 사용자 앨리어싱 오류
 - A/B 테스트 오류
 - SMS/MMS 오류
+- WhatsApp errors
+- Live Activity errors
+- Bad user trigger errors
 
 이러한 메시지는 Facebook 자체 시스템, 사용자의 앱 또는 플랫폼, 타사 파트너로부터 전송될 수 있습니다. 이로 인해 이 로그에 표시될 수 있는 메시지의 수가 무한대로 늘어날 수 있습니다.
 
@@ -70,6 +73,23 @@ API 캠페인 트랜잭션을 확인하고, 실패한 메시지에 대한 세부
 - 현지 정책으로 인해 메시지가 거부되었습니다.
 - 수신자가 이 메시지를 스팸으로 차단했습니다.
 - 서비스를 사용할 수 없음, 클라이언트 호스트 [_IP_ADDRESS_] ]가 스팸하우스를 사용하여 차단되었습니다.
+
+## Storage retention period
+
+Errors from the last 60 hours are available in the Message Activity Logs. Logs that are more than 60 hours old are cleaned and no longer accessible. 
+
+### Number of error logs stored
+
+The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors.
+
+Here's an overview of conditions affecting how many logs will be saved:
+- Up to 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
+- Up to 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
+    - 중단된 메시지 오류
+    - 웹훅 오류
+    - 푸시 알림 오류
+    - Live Activity errors
+    - Bad user trigger errors
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

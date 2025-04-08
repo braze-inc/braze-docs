@@ -65,8 +65,8 @@ Im folgenden Beispiel verwendet Braze die externe Benutzer-ID, um doppelte Profi
 
 {% tabs local %}
 {% tab Beispiel csv-Datei %}
-| E-Mail Adresse | Externe ID | Telefonnummer | Braze ID | Identifikator für Regel | Zu behaltendes Profil | Zusammenzuführendes Profil |
-\|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
+| E-Mail Adresse | Externe ID | Telefonnummer | Braze ID | Bezeichner für Regel | Zu behaltendes Profil | Zusammenzuführendes Profil |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | email | TRUE | FALSE |
 | alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | email | FALSE | TRUE |
 | alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | email | FALSE | TRUE |
@@ -111,6 +111,22 @@ Nachdem Sie Ihre Regeln gespeichert haben, können Sie eine Vorschau auf deren F
 ### Schritt 3: Duplikate zusammenführen
 
 Wenn Sie mit den Ergebnissen der Vorschau zufrieden sind, kehren Sie zur Seite **Zielgruppe verwalten** zurück und gehen Sie auf **Alle Doubletten zusammenführen**.
+
+{% alert warning %}
+Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestellt werden.
+{% endalert %}
+
+## Geplante Zusammenführung
+
+Ähnlich wie bei der regelbasierten Zusammenführung können Sie bei der zeitgesteuerten Zusammenführung die Zusammenführung von Nutzerprofilen auf täglicher Basis anhand vorkonfigurierter Regeln automatisieren.
+
+{% alert important %}
+Der Zeitplan für die Zusammenführung befindet sich im Early Access. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
+{% endalert %}
+
+![Die Seite "Zielgruppe verwalten" mit dem Button "Zeitplan".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+Nachdem das Feature aktiviert wurde, weist Braze automatisch einen Zeitschlitz zu, um den Zusammenführungsprozess täglich durchzuführen. Sie können die geplante Zusammenführung jederzeit deaktivieren. Braze benachrichtigt die Administratoren Ihres Workspace 24 Stunden vor der geplanten Zusammenführung und gibt Ihnen eine Erinnerung und Zeit, um die Konfiguration zu überprüfen.
 
 {% alert warning %}
 Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestellt werden.

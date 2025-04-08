@@ -8,6 +8,8 @@ search_rank: 1
 
 # Lokale Variablen für verknüpfte Inhalte
 
+> Diese Seite bietet eine Übersicht über die lokalen Connected-Content-Variablen und darüber, wie Sie diese verwenden und speichern können.
+
 Braze stellt zum Sendezeitpunkt eine standardmäßige GET-Anfrage an den im Tag `connected_content` angegebenen Endpunkt. Wenn der Endpunkt JSON zurückgibt, wird es automatisch geparst und in einer Variablen namens `connected` gespeichert. Wenn der Endpunkt Text zurückgibt, wird dieser direkt in die Nachricht anstelle des Tags `connected_content` eingefügt.
 
 Wenn Sie Ihre Antwort in einer Variablen speichern möchten, empfiehlt es sich, JSON-Objekte zurückzugeben. Und wenn Sie möchten, dass die Antwort von Connected-Content den Tag durch den Text ersetzt, stellen Sie sicher, dass die Antwort kein gültiges JSON ist (wie von [json.org][46] definiert)
@@ -97,7 +99,6 @@ Standardmäßig setzt Connected-Content einen `Content-Type` -Header auf eine GE
 Standardmäßig stellt Connected-Content eine HTTP GET-Anfrage an die angegebene URL. Um stattdessen eine POST-Anfrage zu stellen, geben Sie `:method post` an.
 
 Sie können optional einen POST-Body bereitstellen, indem Sie `:body` angeben, gefolgt von entweder einem Abfrage-String des Formats `key1=value1&key2=value2&...` oder einem Verweis auf erfasste Werte. Content-Type ist standardmäßig auf `application/x-www-form-urlencoded` eingestellt. Wenn Sie `:content_type application/json` angeben und einen form-url-codierten Body wie `key1=value1&key2=value2` bereitstellen, codiert Braze den Body vor dem Senden automatisch in JSON.
-
 
 #### Standard Content-Typ
 {% raw %}
@@ -198,7 +199,6 @@ Dieses Beispiel wird für 900 Sekunden (oder 15 Minuten) zwischengespeichert.
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
-
 
 #### Cache-Busting
 

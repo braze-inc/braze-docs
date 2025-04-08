@@ -122,6 +122,10 @@ Para excluir um objeto de atributo personalizado, envie um POST para `users/trac
 }
 ```
 
+{% alert note %}
+Essa abordagem não pode ser usada para excluir uma chave aninhada em um [vetor de objetos]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -441,7 +445,7 @@ Se os dados não aparecerem como esperado após a regeneração do esquema, a at
 
 ## Pontos de dados
 
-Qualquer chave que seja atualizada consome um ponto de dados. Por exemplo, esse objeto inicializado no perfil do usuário conta como sete (7) pontos de dados:
+Qualquer chave enviada consome um ponto de dados. Por exemplo, esse objeto inicializado no perfil do usuário conta como sete (7) pontos de dados:
 
 ```json
 {
