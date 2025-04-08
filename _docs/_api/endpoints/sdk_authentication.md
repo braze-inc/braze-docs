@@ -2,7 +2,7 @@
 nav_title: "SDK Authentication"
 article_title: SDK Authentication Endpoints
 search_tag: Endpoint
-page_order: 14
+page_order: 5.5
 layout: dev_guide
 
 description: "This landing page lists the Braze SDK Authentication endpoints."

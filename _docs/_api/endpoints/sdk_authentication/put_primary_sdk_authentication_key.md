@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Set Primary SDK Authentication Key Braze endpoint."
+description: "This article outlines details about the Set primary SDK Authentication key Braze endpoint."
 ---
 
 {% api %}
-# Set Primary SDK Authentication Key
+# Set primary SDK Authentication key
 {% apimethod put %}
 /app_group/sdk_authentication/primary
 {% endapimethod %}

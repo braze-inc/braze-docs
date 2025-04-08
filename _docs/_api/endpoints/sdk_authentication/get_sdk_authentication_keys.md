@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Get SDK Authentication Keys Braze endpoint."
+description: "This article outlines details about the List SDK Authentication keys Braze endpoint."
 ---
 
 {% api %}
-# List SDK Authentication Keys
+# List SDK Authentication keys
 {% apimethod get %}
 /app_group/sdk_authentication/keys
 {% endapimethod %}

@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete SDK Authentication Key Braze endpoint."
+description: "This article outlines details about the Delete SDK Authentication key Braze endpoint."
 ---
 
 {% api %}
-# Delete SDK Authentication Key
+# Delete SDK Authentication key
 {% apimethod delete %}
 /app_group/sdk_authentication/delete
 {% endapimethod %}

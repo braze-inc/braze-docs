@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create SDK Authentication Key Braze endpoint."
+description: "This article outlines details about the Create SDK Authentication key Braze endpoint."
 ---
 
 {% api %}
-# Create SDK Authentication Key
+# Create SDK Authentication key
 {% apimethod post %}
 /app_group/sdk_authentication/create
 {% endapimethod %}
