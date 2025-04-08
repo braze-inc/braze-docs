@@ -17,7 +17,8 @@ local_redirect: #optimizations
 
 ## Step 1: Create your campaign
 
-Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
+1. Go to **Messaging** > **Campaigns**.
+2. Select **Create campaign** and a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
 ## Step 2: Compose your variants
 
