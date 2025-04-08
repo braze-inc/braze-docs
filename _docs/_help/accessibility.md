@@ -23,7 +23,7 @@ Marketing content that excludes people with disabilities, even unintentionally, 
 
 *This section is partially adapted from [W3C: Diverse Abilities and Barriers](https://www.w3.org/WAI/people-use-web/abilities-barriers/).*
 
-{% tabs %}
+{% tabs local %}
 {% tab Visual %}
 
 Visual disabilities can range from mild or moderate vision loss in one or both eyes, to substantial or complete loss of vision in both eyes. Some people have reduced or lack sensitivity to certain colors or increased sensitivity to bright colors.
@@ -135,19 +135,225 @@ Similar to link text, write button text that clearly describes the action that w
 
 ### Images
 
-Some users aren't able to see the images in your marketing content. Without considering accessibility, images can become a barrier to all users receiving the same content.
+Some users aren’t able to see the images in your marketing content. Without thoughtful accessibility, images can inadvertently exclude part of your audience from receiving the same message.
 
 #### Alt text
 
-Alternative text is a short description of the content of the image that screen readers and other assistive technologies provide to their users.
+Alternative text (alt text) is a short description of the content or function of an image that screen readers and other assistive technologies provide to users. Write descriptive alt text for every meaningful image so users who can’t see the visuals still understand your message or call to action. Refer to the section adding alt text for more.
 
-- For every image, write alternative text that provides the information or function of the image.
-- If the image is [decorative](https://www.w3.org/WAI/tutorials/images/decorative/) (doesn't add to the content), use an empty alt attribute (`alt=""`).
-- Don't use the word "picture" or "image" in your alt text.
+For purely [decorative](https://www.w3.org/WAI/tutorials/images/decorative/) images (ones that don’t add information or context), use an empty alt attribute (`alt=""`). 
+
+##### Tips for writing alt text
+
+###### 1. Describe what's actually in the image
+
+Screen reader users rely on alt text to understand the content or function of an image. Avoid generic “marketing speak” that doesn’t match what’s visually shown.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Smiling woman wearing a blue denim jacket, holding a shopping bag."</td>
+      <td>"Time to treat yourself!" (No mention of what’s actually in the image)</td>
+    </tr>
+    <tr>
+      <td>"Man wearing a black T-shirt, leaning on a bike in a city street."</td>
+      <td>"Embrace your best life now!" (Ignores the bike and city setting)</td>
+    </tr>
+    <tr>
+      <td>"Blue apartment building with a 'For Rent' sign in front."</td>
+      <td>"The key to a better tomorrow!" (Doesn’t reflect the apartment or sign)</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 2. Keep it short, yet specific
+
+Concise alt text makes it easier for users to process. Include enough detail to convey purpose but skip any fluff.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Red running shoes on a white background"</td>
+      <td>"Running shoes that are extremely comfortable and perfect for your active lifestyle in a vibrant shade of red."</td>
+    </tr>
+    <tr>
+      <td>"Four laptops on a display stand"</td>
+      <td>"Discover the ultimate productivity booster that redefines how you work every day, in every way imaginable."</td>
+    </tr>
+    <tr>
+      <td>"Group of friends eating ice cream on a sunny day"</td>
+      <td>"Capture pure happiness with the sweetest treat—life is better with our brand of ice cream!"</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 3. Avoid “image of” or “picture of” 
+
+Screen readers already announce an image. Jump right into describing the subject.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Table set for brunch with pancakes, fruit, and coffee."</td>
+      <td>"Image of a table set for brunch"</td>
+    </tr>
+    <tr>
+      <td>"Roadside billboard with bold 'Grand Opening' text"</td>
+      <td>"Picture of a billboard on the side of a road"</td>
+    </tr>
+    <tr>
+      <td>"Snowy mountain landscape at sunset"</td>
+      <td>"Photo of snow and mountains"</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 4. Reflect text that appears in the image
+
+If an image includes essential text, put that info in the alt text so users don’t miss it.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Banner reading ‘Summer Sale—50% off all swimwear.’"</td>
+      <td>"Banner promoting a sale." (Fails to mention the actual discount)</td>
+    </tr>
+    <tr>
+      <td>"Logo with the text ‘Café Toscana’ in script font"</td>
+      <td>"Logo image for a café." (Doesn’t include text ‘Café Toscana’)</td>
+    </tr>
+    <tr>
+      <td>"Ad announcing ‘Concert Tickets Available Now—Starts June 5th’"</td>
+      <td>"Concert ad." (No event details)</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 5. Stick to relevant context—no extra marketing jargon
+
+Don’t pad alt text with SEO terms or calls to action not directly related to the image. Provide value for those who can’t see the image.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Laptop showing the Braze dashboard analytics chart"</td>
+      <td>"Boost conversions and skyrocket ROI with the best platform on earth!"</td>
+    </tr>
+    <tr>
+      <td>"Backyard patio set featuring four chairs and a glass table"</td>
+      <td>"Host an incredible summer party for all your friends and family now!"</td>
+    </tr>
+    <tr>
+      <td>"Mobile phone displaying a weather forecast app with 75°F in view"</td>
+      <td>"Experience real-time innovations in weather tracking that's a game-changer"</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 6. Consider the image's purpose
+
+If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” “Sign up,” Learn"), not just the label or product shown.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good examples</th>
+      <th style="width: 50%">Poor examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Shop the Fall Collection"</td>
+      <td>"Fall Collection"</td>
+    </tr>
+    <tr>
+      <td>"Get your free eBook"</td>
+      <td>"Free eBook"</td>
+    </tr>
+    <tr>
+      <td>"Sign up for the mailing list"</td>
+      <td>"Mailing list"</td>
+    </tr>
+  </tbody>
+</table>
+
+##### Adding alt text in Braze
+
+If you’re using a custom HTML or code-based editor, you’ll want to manually include the alt attribute in each `<img>` tag. For example:
+
+{% raw %}
+
+```html
+<img src="product.jpg" alt="Red shoes on display">
+```
+
+{% endraw %}
+
+If you're using a Braze drag-and-drop editor, you’ll find the **Alt text** field in a slightly different location depending on the editor. Here’s a quick breakdown.
+
+{% tabs local %}
+{% tab Email %}
+Select the image in your email to show the **Image Properties** panel. The **Alt text** field is near the **URL** field.
+{% endtab %}
+{% tab In-app message %}
+Select the image in your in-app message to show the **Actions** panel. **Alt text** is the first field in the panel.
+{% endtab %}
+{% tab Banner Card %}
+Select the image in your Banner Card to show the **Actions** panel. **Alt text** is the first field in the panel.
+{% endtab %}
+{% tab Content Card %}
+Currently, the Content Card editor doesn’t provide a way to add alt text directly. If you need alt text for your images, you can use **key-value pairs as a workaround (LINK NEEDED)** or explore other Braze channel options that do support alt text. This can help your messages remain inclusive for screen reader users and others who rely on accessibility features.
+{% endtab %}
+{% tab Landing page %}
+Select the image in your landing page to show the **Actions** panel. **Alt text** is the first field in the panel.
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+Current drag-and-drop editors are missing the option to mark an image as decorative. If you leave alt text blank, screen readers will announce the file name instead. For email and in-app messages, you can switch to the HTML or custom code editors and add `alt=""` to image tags to indicate the image is decorative and should be skipped.
+{% endalert %}
+
+Some messaging channels—like rich push, LINE, WhatsApp, and MMS— don’t allow Braze to include custom alt text. Typically, these channels provide only minimal metadata, so a screen reader may say something like “attachment” (for example, iOS VoiceOver does this for rich push images). If you need fully customized alt text, consider using channels that support it, or ensure any essential information is also included in text so everyone can access your message content.
 
 #### Images of text
 
-Avoid using images of text, as screen readers can't read text that's contained inside an image. Images of text also don't resize well, and can't be customized to the user's needs and preferences. With actual text, users can customize things like color and contrast, and resize the text without losing quality. When images of text are enlarged, they become pixelated and lower quality, making them difficult to read.
+Whenever possible, avoid placing text inside images—screen readers can’t read image-based text, and users can’t easily adjust font size or color for better visibility. Consider these tips:
+
+- **Remove text where you can:** Move any descriptive or promotional text from the image onto a text layer in your message instead. This way, users can resize or recolor it as needed using their device or browser preferences.
+- **Test for readability and contrast:** If you must keep text in the image, follow color contrast best practices and use a large enough font. Test to confirm it’s still legible on smaller screens.
+- **Provide alt text:** For essential text that must remain in the image, include [alt text](#alt-text) describing the words.
+
+When images contain text that can’t be edited, users with visual impairments lose the flexibility to make reading adjustments. By separating text from images, you help more users read and interact with your message comfortably.
 
 ### Videos
 
