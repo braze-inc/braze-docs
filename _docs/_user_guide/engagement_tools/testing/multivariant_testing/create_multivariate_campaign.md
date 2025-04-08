@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
-![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel  ][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Step 1: Create your campaign
 
@@ -22,7 +22,7 @@ local_redirect: #optimizations
 
 ## Step 2: Compose your variants
 
-You can create up to 8 variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test. An A/B test examines the effect of changing one variable, whereas a multivariate test examines two or more.
+You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test. An A/B test examines the effect of changing one variable, whereas a multivariate test examines two or more.
 
 For some ideas on how to get started differentiating your variants, refer to [Tips for different channels](#tips-different-channels).
 
