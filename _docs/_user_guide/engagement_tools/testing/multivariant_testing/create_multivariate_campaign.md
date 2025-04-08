@@ -75,17 +75,16 @@ On the confirmation page, review the details of your multivariate campaign and l
 
 ## Things to know
 
-{% alert important %}
-If your experiment has already started sending and you edit the message, the experiment will be invalidated, and any experiment results will be removed.<br><br>
-- We recommend avoiding message edits within an hour of the experiment campaign launch to prevent any interference with the expected experiment behavior.
+If your experiment has already started sending and you edit the message, the experiment will be invalidated, and any experiment results will be removed.
+
+- To prevent any interference with the expected experiment behavior, we recommend avoiding message edits within an hour of the experiment campaign launch.
 - If your experiment is completed and you edit the message post-send, the experiment results will remain available in your dashboard analytics. However, if you relaunch the campaign, the experiment results will be removed.
-{% endalert %}
 
 ### Tips for different channels {#tips-different-channels}
 
 Depending on which channel you select, you can test different components of your message. For example, you can try to compose variants with an idea of what you want to test and what you hope to prove. What levers do you have to pull, and what are the desired effects? While there are millions of possibilities that you can investigate using a multivariate and A/B test, we have some suggestions to get you started:
 
-| Channel | Aspects of Message You Can Change | Results To Look For |
+| Channel | Aspects of message you can change | Results to look for |
 | ---------------------| --------------- | ------------- |
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
