@@ -1,49 +1,49 @@
 ---
 page_order: 2.2
-nav_title: Banner Cards
-article_title: Banner Cards
-description: "This landing page is home to all things Banner Cards, including articles on how to create Banner Cards, and use cases."
+nav_title: Banners
+article_title: Banners
+description: "This landing page is home to all things Banners, including articles on how to create Banners, and use cases."
 channel:
 - Banners
 ---
 
-# Banner Cards
+# Banners
 
-> With Banner Cards, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
+> With Banners, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
 
 {% alert important %}
-Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
 ## Use cases
 
-Because Banner Cards never expire and are auto-personalized every time a user starts a new session, they’re great for:
+Because Banners never expire and are auto-personalized every time a user starts a new session, they’re great for:
 
 - Highlighting featured content
 - Notifying users about upcoming events
 - Sharing updates on loyalty programs
 
-## About Banner Cards
+## About Banners
 
 ### Card expiration
 
-By default, Banner Cards don't expire&#8212;however, you can choose an end date if needed.
+By default, Banners don't expire&#8212;however, you can choose an end date if needed.
 
 ### Placement IDs {#placement-ids}
 
-Banner Card placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner Card campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/) or [embed Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/).
+Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/) or [embed Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/).
 
 {% alert important %}
-Avoid modifying placement IDs after launching a Banner Card campaign.
+Avoid modifying placement IDs after launching a Banner campaign.
 {% endalert %}
 
 ### Card priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banner Cards are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#set-card-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
+When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#set-card-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
 
 ### Metrics
 
-These are the most important Banner Card metrics. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+These are the most important Banner metrics. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Metric | Definition |
 | --- | --- |
@@ -56,7 +56,7 @@ These are the most important Banner Card metrics. For a full list of metrics, de
 
 ## Next steps
 
-Now that you know about Banner Cards, you're ready for the next steps:
+Now that you know about Banners, you're ready for the next steps:
 
-- [Creating Banner Card campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/)
-- [Embedding Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/)
