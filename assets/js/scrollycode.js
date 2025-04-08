@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get narrative steps, tab buttons, and code panels within this block.
     const id = block.getAttribute("id");
     const steps = [...block.querySelectorAll(".scrolly-step")];
-    const tabButtons = [...block.querySelectorAll(".tab-selector button")];
+    const tabButtons = [...block.querySelectorAll(".scrolly-tab-selector button")];
     const codeBlocks = [...block.querySelectorAll(".code-blocks pre")];
 
     let currentIndex = 0; // active narrative step index for this block

@@ -1,31 +1,29 @@
+
 .scrolly-container {
   display: flex;
-  gap: 2rem;
-  margin: 3rem 0;
-  align-items: flex-start;
 }
 
 .scrolly-text {
   flex: 1;
-  max-height: 80vh; /* Fixed height (adjust as needed) */
-  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh;
+  overflow-y: auto;
   scroll-margin-top: 10vh;
   padding-bottom: 50vh;
+  margin-top: 45px;
 }
 
 .scrolly-step {
   background: #f9f9f9;
   color: #222;
   padding: 1rem;
-  border-left: 4px solid #ccc;
-  margin-bottom: 3rem;
-  border-radius: 8px;
+  border-radius: 0;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .scrolly-step[data-active="true"] {
-  border-color: #0070f3;
-  background: #eef6ff;
+  background: #f0f7ff;
+  border: solid 0px #310c66 !important;
+  border-left-width: 5px !important;
 }
 
 .step-title {
@@ -34,10 +32,10 @@
 }
 
 .scrolly-code {
-  width: 40vw;
-  max-width: 500px;
-  height: 80vh; /* Fixed height to allow internal scrolling */
-  overflow-y: auto; /* Vertical scroll within the container */
+  width: 100%;
+  max-width: 700px;
+  height: 80vh;
+  overflow-y: auto;
   position: sticky;
   top: 10vh;
   align-self: flex-start;
@@ -51,7 +49,7 @@
   background: #f9f9f9;
   padding: 1rem;
   min-height: 400px;
-  border-radius: 6px;
+  border-radius: 0 6px 6px 0;
   font-family: monospace;
   white-space: pre;
   transition: all 0.3s ease;
@@ -90,30 +88,41 @@ pre code.hljs {
   transition: top 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Tab container styling */
-.tab-selector {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+.code-blocks {
+  font-size: 14px;
 }
 
-.tab-selector button {
+.scrolly-tab {
   background: #0d1117;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #c9d1d9;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  color: white;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 20px;
+}
+.scrolly-tab i {
+  margin-right: 3px;
 }
 
-.tab-selector button.active {
+.scrolly-tab.scrolly-active-tab {
   font-weight: 500;
   background: #310c66;
-  color: #c9d1d9;
+  color: white;
 }
 
-.tab-selector button:hover {
+.scrolly-tab-selector {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 99;
+  padding: 0 0 15px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scrolly-tab-selector button:hover {
   background: #0d1117;
 }
 

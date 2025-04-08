@@ -1,12 +1,21 @@
 ---
 nav_title: Tutorial 1
 article_title: Developer Tutorials
-page_order: 5.6
-description: "Interactive, step-by-step coding tutorials using dynamic, scrollable code."
+page_order: 1
 layout: dev_guide
+description: "Interactive, step-by-step coding tutorials using dynamic, scrollable code."
 ---
+<style>
 
-## Setting Up Push Notifications
+@media (min-width: 1200px) {
+    #dev-main,#featured_main {
+        max-width:unset;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+</style>
+# Setting Up Push Notifications
 
 {% tabs %}
 {% tab Web %}

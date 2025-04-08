@@ -86,11 +86,11 @@ module Jekyll
 
       # Right side: Code tabs and panels.
       html << "    <div class=\"scrolly-code\">"
-      html << "      <div class=\"tab-selector\">"
+      html << "      <div class=\"scrolly-tab-selector\">"
       code_blocks.each_with_index do |cb, idx|
         file_attr = cb["file"].gsub('.', '-')
-        active_class = idx == 0 ? " active" : ""
-        html << "        <button class=\"tab#{active_class}\" data-file=\"#{file_attr}\">#{cb['file']}</button>"
+        active_class = idx == 0 ? "scrolly-active-tab" : ""
+        html << "        <button class=\"scrolly-tab #{active_class}\" data-file=\"#{file_attr}\"><i class=\"fa fa-file\"></i> #{cb['file']}</button>"
       end
       html << "      </div>"
       html << "      <div class=\"code-blocks\">"
