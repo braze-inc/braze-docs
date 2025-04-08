@@ -159,7 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const style = getComputedStyle(stepsContainer);
       const paddingBottom = parseFloat(style.paddingBottom) || 0;
       const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
-      const centerY = stepsContainer.scrollTop + effectiveHeight / 2;
+      // Move detection point up by 25% to pick up next step sooner
+      const centerY = stepsContainer.scrollTop + (effectiveHeight * 0.75);
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
