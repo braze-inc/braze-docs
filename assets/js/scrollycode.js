@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!activeFile) return;
       // Activate the corresponding tab in this block.
       tabButtons.forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.file === activeFile);
+        btn.classList.toggle("scrolly-active-tab", btn.dataset.file === activeFile);
       });
       codeBlocks.forEach((pre) => {
         pre.style.display = pre.dataset.file === activeFile ? "" : "none";
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const paddingBottom = parseFloat(style.paddingBottom) || 0;
       const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
       // Move detection point up by 25% to pick up next step sooner
-      const centerY = stepsContainer.scrollTop + (effectiveHeight * 0.75);
+      const centerY = stepsContainer.scrollTop + (effectiveHeight * 0.95);
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const fileKey = btn.dataset.file;
         tabButtons.forEach((b) => {
-          b.classList.toggle("active", b.dataset.file === fileKey);
+          b.classList.toggle("scrolly-active-tab", b.dataset.file === fileKey);
         });
         codeBlocks.forEach((pre) => {
           pre.style.display = pre.dataset.file === fileKey ? "" : "none";
