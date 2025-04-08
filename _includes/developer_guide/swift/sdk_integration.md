@@ -341,7 +341,7 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 
 #### Log levels
 
-The default log level for the Braze Swift SDK is `.error`&#8212;it's also the minimum supported level when logs are enabled. These are the full ist of log levels:
+The default log level for the Braze Swift SDK is `.error`&#8212;it's also the minimum supported level when logs are enabled. These are the full list of log levels:
 
 | Swift       | Objective-C              | Description                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |

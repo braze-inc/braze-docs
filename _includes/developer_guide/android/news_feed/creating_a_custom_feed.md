@@ -6,7 +6,7 @@
 
 ## Creating a custom feed
 
-You can create and display a custom feed by populating your own views with data from Braze's News Feed models.
+You can create and display a custom feed by populating your own views with data from Braze News Feed models.
 
 ### Step 1: Subscribe to feed updates
 
