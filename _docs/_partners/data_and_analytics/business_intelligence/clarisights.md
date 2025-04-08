@@ -2,7 +2,7 @@
 nav_title: Clarisights
 article_title: Clarisights
 description: "This reference article outlines the partnership between Braze and Clarisights, a self-serve performance marketing reporting platform, allowing you to import data from Braze campaigns and Canvases to help achieve a unified reporting interface of performance and CRM/retention marketing."
-alias: /partners/Clarisights/
+alias: /partners/clarisights/
 page_type: partner
 search_tag: Partner
 

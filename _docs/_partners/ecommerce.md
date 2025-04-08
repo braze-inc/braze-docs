@@ -12,12 +12,42 @@ search_tag: Partner
 partner_top_header: "eCommerce"
 
 valid_partner_list:
-- name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
-- name: Olo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
+- name: Lexer
+  url: /docs/partners/lexer/
+- name: Peak
+  url: /docs/partners/peak/
+- name: Personalize
+  url: /docs/partners/personalize/
+- name: Tangerine
+  url: /docs/partners/tangerine/
+- name: Wunderkind
+  url: /docs/partners/wunderkind/
+- name: Talon.One
+  url: /docs/partners/talonone/
+- name: ViralSweep
+  url: /docs/partners/viralsweep/
+- name: Voucherify
+  url: /docs/partners/voucherify/
+- name: Antavo
+  url: /docs/partners/antavo/
+- name: Kognitiv Inspire
+  url: /docs/partners/kognitiv/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+  url: /docs/partners/yotpo/
 - name: Narvar
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+  url: /docs/partners/narvar/
+- name: Olo
+  url: /docs/partners/olo/
+- name: Recurly
+  url: /docs/partners/recurly/
+- name: RevenueCat
+  url: /docs/partners/revenuecat
+- name: Transcend
+  url: /docs/partners/transcend/
+- name: Constructor
+  url: /docs/partners/constructor/
+- name: Stylitics
+  url: /docs/partners/stylitics/
+- name: Shopify
+  url: /docs/partners/shopify/
 ---

@@ -1,7 +1,7 @@
 ---
 nav_title: Tellius
 article_title: Tellius
-alias: /partners/Tellius/
+alias: /partners/tellius/
 description: "This reference article outlines the partnership between Braze and Tellius, a decision intelligence and augmented analytics platform, allowing you to leverage data, without relying on BI engineers, to build dashboards and generate insights to make better marketing decisions."
 page_type: partner
 search_tag: Partner

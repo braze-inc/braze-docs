@@ -2,7 +2,7 @@
 nav_title: MetaRouter
 article_title: MetaRouter
 description: "Elevate your customer data management in Braze, with MetaRouter.  This high-performance, server-side tag management solution offers maximum compliance and control with seamless deployment options, whether on a MetaRouter hosted private cloud or your own infrastructure."
-alias: /partners/MetaRouter/
+alias: /partners/metarouter/
 page_type: partner
 search_tag: Partner
 ---
