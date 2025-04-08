@@ -180,7 +180,9 @@ The `list_response_message` type allows you to send a list-based message in What
 
 ```json
 {
+  "header": (optional, string) the header of the message to send,
   "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
   "list": (required, object) the list object that contains:
     "list_button_text": (required, string) the text that will appear on the list button,
     "list_sections": (required, array) an array of List Section Objects
