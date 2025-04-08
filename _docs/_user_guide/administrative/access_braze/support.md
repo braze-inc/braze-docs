@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Support Portal
+nav_title: Support Portal
 article_title: About Braze support
 description: "Learn how to access the Braze support portal, submit detailed support cases, and manage your designated support contacts."
 alias: /braze_support/
@@ -24,13 +24,15 @@ To help us resolve your technical issues as quickly as possible, please submit a
 
 ### Step 1: Complete the questionnaire
 
-THIS...
+Complete the questionnaire...
+
+![ALT_TEXT.]()
 
 ### Step 2: Compose your message
 
 1. In the **Subject** field, enter a short description of the issue.
 2. From the dropdown, choose a severity level. Only select **Critical** if your production instance is down and all work within Braze has stopped.
-3. Compose your message. You can copy and paste this template into the message body to help get you started.
+3. Compose your message. To get started, copy and paste this template into the body of your message.
 
 ```plaintext
 Workspace details:
@@ -84,17 +86,17 @@ If..., then attach the following logs from your web browser.
 {% tabs %}
 {% tab Chrome %}
 1. From your developer tools, select the **Console** tab.
-2. Take a screenshot of all messages in the log.<br>![The "Console" tab in a Chrome browser.]()
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Chrome browser.]()
 {% endtab %}  
   
 {% tab Firefox %}
 1. From your developer tools, select the **Console** tab.
-2. Take a screenshot of all messages in the log.<br>![The "Console" tab in a Firefox browser.]()
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Firefox browser.]()
 {% endtab %}
 
 {% tab Safari %}
 1. From your developer tools, select the **Console** tab.
-2. Take a screenshot of all messages in the log.<br>![The "Console" tab in a Safari browser.]()
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Safari browser.]()
 {% endtab %}
 {% endtabs %}
 
@@ -105,19 +107,23 @@ Network logs (also known as HAR logs) contain a history of network requests made
 {% tabs %}
 {% tab Chrome %}
 1. From your developer tools, select **Network** > **Fetch/XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br>![The "Fetch/XHR" tab in a Chrome browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Chrome browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 {% endtab %}  
   
 {% tab Firefox %}
 1. From your developer tools, select **Network** > **XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br>![The "XHR" tab in a Firefox browser.]()
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "XHR" tab in a Firefox browser.]()
 {% endtab %}
 
 {% tab Safari %}
 1. From your developer tools, select **Network**, then select the filter dropdown and choose **Fetch/XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br>![The "Fetch/XHR" tab in a Safari browser.]()
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Safari browser.]()
 {% endtab %}
 {% endtabs %}
+
+### Step 5: Submit your support case
+
+When you're ready, select ... to submit your support case.
 
 ## Managing designated support contacts
 
@@ -127,11 +133,25 @@ Only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/a
 
 Designated support contacts can access and reply to any support cases submitted by members of your organization. Your maximum number of contacts is determined by your contract. To increase your limit, contact your customer success manager.
 
-To manage designated support contacts:
+{% tabs local %}
+{% tab another user %}
+To make another user a designated support contact:
 
 1. Go to **Settings** > **Company Users**.
 2. Search using the user's name or email address, then select them from the list.
 3. Under **Department**, select their department from the dropdown, then check **Set this user as a Designated Support Contact for Braze Support Portal**.
 4. When you're finished, select **Update user**. They'll be sent an email prompting them to finish setting up their account.
 
-![The checkbox for setting a user as a designated support contact.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
+![The checkbox for setting a user as a designated support contact.]()
+{% endtab %}
+
+{% tab yourself %}
+To make yourself a designated support contact:
+
+1. This.
+2. This.
+3. This.
+
+![ALT_TEXT.]()
+{% endtab %}
+{% endtabs %}
