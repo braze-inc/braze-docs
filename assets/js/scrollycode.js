@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get narrative steps, tab buttons, and code panels within this block.
     const id = block.getAttribute("id");
     const steps = [...block.querySelectorAll(".scrolly-step")];
-    const tabButtons = [...block.querySelectorAll(".scrolly-tab-selector button")];
+    const tabButtons = [
+      ...block.querySelectorAll(".scrolly-tab-selector button"),
+    ];
     const codeBlocks = [...block.querySelectorAll(".code-blocks pre")];
 
     let currentIndex = 0; // active narrative step index for this block
@@ -141,7 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!activeFile) return;
       // Activate the corresponding tab in this block.
       tabButtons.forEach((btn) => {
-        btn.classList.toggle("scrolly-active-tab", btn.dataset.file === activeFile);
+        btn.classList.toggle(
+          "scrolly-active-tab",
+          btn.dataset.file === activeFile
+        );
       });
       codeBlocks.forEach((pre) => {
         pre.style.display = pre.dataset.file === activeFile ? "" : "none";
@@ -156,11 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function getClosestStep() {
       // workaround to make sure the first step is selected while scrolling back up
       if (stepsContainer.scrollTop < 5) return 0;
+      // workaround to make sure the last step is selected while scrolling down
+      if (
+        stepsContainer.scrollTop >
+        stepsContainer.scrollHeight - stepsContainer.clientHeight - 5
+      )
+        return steps.length - 1;
       const style = getComputedStyle(stepsContainer);
       const paddingBottom = parseFloat(style.paddingBottom) || 0;
       const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
-      // Move detection point up by 25% to pick up next step sooner
-      const centerY = stepsContainer.scrollTop + (effectiveHeight * 0.95);
+      const centerY = stepsContainer.scrollTop + effectiveHeight * 0.5;
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
