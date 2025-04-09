@@ -306,6 +306,9 @@ $(document).ready(function() {
         }
       }
     }
+    var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+    mermaid.run({ nodes: mermaid_charts });
+    setPanZoom(mermaid_charts)
   }
 
   // see if a details tag should be auto-opened
@@ -416,6 +419,46 @@ $(document).ready(function() {
   if (Cookies.get('ln')) {
     $('#sidebar_toggle').trigger('click');
   }
+
+  function setPanZoom(mermaid_charts){
+    setTimeout(function() {
+      mermaid_charts.each(function() {
+        var svg_element = $(this).find('svg').first();
+        if (svg_element) {
+          const height = svg_element.outerHeight();
+          const width = svg_element.outerWidth();
+          window[svg_element.attr('id')] = svgPanZoom(`#${svg_element.attr('id')}`, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: false,
+            contain: true,
+            center: true,
+            minZoom: 0.1,
+            viewportSelector: `#${svg_element.attr('id')}`
+          });
+          svg_element.height(height)
+          svg_element.attr('dim_ratio', height/width);
+          window[svg_element.attr('id')].resize();
+        }
+      });
+    }, 500);
+  }
+  // Resize svg with dim_ration on window resize
+  $(window).on('resize', function() {
+    $('.language-mermaid').filter('[data-processed="true"]').each(function() {
+      const svg_element = $(this).find('svg').first();
+      const dimRatio = parseFloat(svg_element.attr('dim_ratio'));
+      if (!isNaN(dimRatio)) {
+        const newWidth = svg_element.outerWidth();
+        const newHeight = newWidth * dimRatio;
+        if (newHeight > 0) {
+          svg_element.height(newHeight);
+          window[svg_element.attr('id')].resize();
+        }
+      }
+    });
+  });
+
 
   function setTabClass(tabtype, prefix, postfix, curtab){
     var tab_selecter = '.' + tabtype + prefix +'tab_toggle_ul.' + tabtype + 'ab-' + prefix +'nav-' + prefix +'tabs';
@@ -747,8 +790,14 @@ $(document).ready(function() {
 
   // intialized mermaid
   mermaid.initialize({
-    startOnLoad:true,
+    startOnLoad: false,
     theme: "default",
   });
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+  mermaid.run({ nodes: mermaid_charts });
+
+  // Add svgPanZoom to the rendered Mermaid charts
+  setPanZoom(mermaid_charts)
+
+
 });
