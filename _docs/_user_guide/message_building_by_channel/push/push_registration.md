@@ -15,9 +15,13 @@ channel:
 
 ## About push tokens {#push-tokens}
 
-When an app requests push permissions from a device, the device's push service provider will generate a push token for that app. Each app is given its own unique, anonymous push token which is how it identifies the device and current app instance when sending a push notification. Keep in mind, push tokens aren't static identifiers that last forever&#8212;they can be updated and they can also [expire](#push-token-expire).
+When an app requests push permissions from a device, the device's push service provider will generate a push token for that app. Each app is given its own unique, anonymous push token which is how it identifies the device and current app instance when sending a push notification.
 
+Keep in mind, push tokens aren't static identifiers that last forever&#8212;they can be updated and they can [expire](#push-token-expire).
+
+{% alert tip %}
 For platform-specific details, see [Push token registration](#push-token-registration).
+{% endalert %}
 
 ### Foreground vs. background push {#foreground-vs-background}
 
@@ -81,11 +85,10 @@ You must request explicit opt-in from users via the native browser permission di
 
 ![User profile for John Doe with their push subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-There are two ways you can check a user's push subscription state with Braze:
+There's two ways you can check a user's push subscription state with Braze:
 
-1. **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
-<br>
-2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
+- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+- **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ### Checking push registration status
 
