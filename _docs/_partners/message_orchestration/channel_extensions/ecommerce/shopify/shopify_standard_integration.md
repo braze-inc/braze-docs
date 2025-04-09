@@ -141,18 +141,22 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 ## Step 4: Configure how you manage users
 
-First, you select your `external_id` from the dropdown. Next, you have the option to collect your email or SMS marketing opt-ins from Shopify. 
+First, select your `external_id` from the dropdown. 
 
-If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
+![“Collect subscribers” section.][10]
 
-### Risks of using email or hashed email as external ID 
-
-Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.
+{% alert important %}
+Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
 
 - **Guessable Information:** Email addresses are easily guessable, making them vulnerable to attacks.
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
+{% endalert %}
 
-![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][10]
+Second, you have the option to collect your email or SMS marketing opt-ins from Shopify. 
+
+If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
+
+![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.][13]
 
 {% alert note %}
 As mentioned in [Shopify overview]({{site.baseurl}}/shopify_integration_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
@@ -170,11 +174,11 @@ You can sync all products from your Shopify store to a Braze catalog for deeper 
 
 You can enable in-app messages without using a developer by configuring them in your setup.
 
+![Setup step to activate channels, with the available option being in-browser messaging.][13]
+
 ### Supporting additional SDK channels
 
 The Braze SDKs enable various messaging channels, including in-app messages and Content Cards.
-
-![Setup step to activate channels, with the available option being in-browser messaging.][13]
 
 #### Content Cards and Feature Flags
 
@@ -186,7 +190,7 @@ Web push currently isn't supported for the Shopify integration. If you want to s
 
 If you wish to see this supported in the future, submit a product request through the Braze [product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
-## Step 6: Finish setup
+## Step 7: Finish setup
 
 1. After you configure your setup, select **Finish Setup**.
 2. Enable the Braze app embed within your Shopify theme settings. Select **Open Shopify** to be redirected to your Shopify account to enable the app embed within your store’s theme settings. 
@@ -209,4 +213,4 @@ Confirm you can view your integration settings, the status of initial data sync,
 [10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
 [11]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}
 [12]: {% image_buster /assets/img/Shopify/configure_settings.png %}
-[13]: {% image_buster /assets/img/Shopify/activate_channels.png %}
+[13]: {% image_buster /assets/img/Shopify/collect_email_subscribers_2.png %}

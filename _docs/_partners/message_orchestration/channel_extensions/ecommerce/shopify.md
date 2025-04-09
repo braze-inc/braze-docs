@@ -21,6 +21,9 @@ guide_featured_list:
 - name: Shopify Data Features
   link: /docs/shopify_data_features/
   image: /assets/img/braze_icons/settings-01.svg
+- name: Shopify Product Sync
+  link: /docs/shopify_catalogs/
+  image: /assets/img/braze_icons/list.svg
 
 guide_menu_title: "Other articles"
 guide_menu_list:
