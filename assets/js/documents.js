@@ -426,20 +426,39 @@ $(document).ready(function() {
         var svg_element = $(this).find('svg').first();
         if (svg_element) {
           const height = svg_element.outerHeight();
-          const x = svgPanZoom(`#${svg_element.attr('id')}`, {
+          const width = svg_element.outerWidth();
+          window[svg_element.attr('id')] = svgPanZoom(`#${svg_element.attr('id')}`, {
             zoomEnabled: true,
             controlIconsEnabled: true,
             fit: false,
             contain: true,
             center: true,
             minZoom: 0.1,
+            viewportSelector: `#${svg_element.attr('id')}`
           });
           svg_element.height(height)
-          x.resize()
+          svg_element.attr('dim_ratio', height/width);
+          window[svg_element.attr('id')].resize();
         }
       });
     }, 500);
   }
+  // Resize svg with dim_ration on window resize
+  $(window).on('resize', function() {
+    $('.language-mermaid').filter('[data-processed="true"]').each(function() {
+      const svg_element = $(this).find('svg').first();
+      const dimRatio = parseFloat(svg_element.attr('dim_ratio'));
+      if (!isNaN(dimRatio)) {
+        const newWidth = svg_element.outerWidth();
+        const newHeight = newWidth * dimRatio;
+        if (newHeight > 0) {
+          svg_element.height(newHeight);
+          window[svg_element.attr('id')].resize();
+        }
+      }
+    });
+  });
+
 
   function setTabClass(tabtype, prefix, postfix, curtab){
     var tab_selecter = '.' + tabtype + prefix +'tab_toggle_ul.' + tabtype + 'ab-' + prefix +'nav-' + prefix +'tabs';
