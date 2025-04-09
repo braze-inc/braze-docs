@@ -8,7 +8,7 @@ page_type: reference
 
 # Creating Banner campaigns
 
-> Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banner_cards/).
+> Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -47,7 +47,7 @@ You can drag and drop blocks and rows into the canvas area to start building you
 
 When a customer clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your customer’s profile with custom data when they click the Banner.
 
-### Step 3: Set card priority {#set-card-priority}
+### Step 3: Set card priority {#set-priority}
 
 When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can manually set the priority to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
 

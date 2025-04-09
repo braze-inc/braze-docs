@@ -1,5 +1,5 @@
 ---
-nav_title: Embedding Cards
+nav_title: Embedding Banners
 article_title: Embedding Banners for the Braze SDK
 description: "Learn how to embed Banners for the Braze SDK."
 platform:
@@ -11,7 +11,7 @@ platform:
 
 # Embedding Banners
 
-> Learn how to embed banner cards using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banner_cards/).
+> Learn how to embed Banners using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -402,9 +402,9 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Send a test card (optional) {#handling-test-cards}
+### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/), you can send a test Banner to verify the integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test card.
+Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/), you can send a test Banner to verify the integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.
@@ -416,7 +416,7 @@ Braze automatically logs impressions when you use SDK methods to insert a Banner
 
 ## Dimensions and sizing
 
-Here's some things to know about Banner dimensions and sizing:
+Here are some things to know about Banner dimensions and sizing:
 
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.

@@ -27,11 +27,11 @@ Because Banners never expire and are auto-personalized every time a user starts 
 
 ### Card expiration
 
-By default, Banners don't expire&#8212;however, you can choose an end date if needed.
+By default, Banners don't expire. However, you can choose an end date if needed.
 
 ### Placement IDs {#placement-ids}
 
-Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/) or [embed Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/).
+Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [embed Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/).
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
@@ -39,7 +39,7 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Card priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#set-card-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
+When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
 
 ### Metrics
 
@@ -58,5 +58,5 @@ These are the most important Banner metrics. For a full list of metrics, definit
 
 Now that you know about Banners, you're ready for the next steps:
 
-- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/)
-- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards/)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
