@@ -23,7 +23,11 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
+There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [using the API][5].
+
+{% alert note %}
+Using HTML Content Blocks in drag-and-drop emails **or** drag-and-drop Content Blocks in HTML emails may result in unexpected rendering issues. This is because the drag-and-drop editor is generates HTML and CSS that dynamically renders the content whereas the HTML editor is more static.
+{% endalert %}
 
 {% tabs %}
 {% tab Drag-and-drop %}
@@ -50,7 +54,7 @@ There are two types of editors used to create a Content Block—classic and drag
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it can be beneficial to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
