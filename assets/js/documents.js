@@ -306,6 +306,7 @@ $(document).ready(function() {
         }
       }
     }
+    window.mermaid.init(undefined, $('.language-mermaid').not('[data-processed="true"]').filter(':visible'));
   }
 
   // see if a details tag should be auto-opened
@@ -747,8 +748,9 @@ $(document).ready(function() {
 
   // intialized mermaid
   mermaid.initialize({
-    startOnLoad:true,
+    startOnLoad: false,
     theme: "default",
   });
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  window.mermaid.init(undefined, $('.language-mermaid').not('[data-processed="true"]').filter(':visible'));
+
 });
