@@ -4,7 +4,7 @@ article_title: "Getting started with Shopify"
 description: "This reference article outlines how to implement the Braze Web SDK onto your Shopify website."
 page_type: partner
 search_tag: Partner
-alias: /getting_started_shopify/
+alias: /getting_started_shopify_legacy/
 page_order: 1
 ---
 
