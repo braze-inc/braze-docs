@@ -10,6 +10,28 @@ noindex: true
 
 > If you're having trouble contributing to Braze Docs, review these common issues first. If the issue you're experiencing isn't listed, [let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) so we can add it here.
 
+## Can't choose `braze-inc/braze-docs` as a base repository
+
+If you're using your web browser to [make a change in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change) and `braze-inc/braze-docs` is missing as an option in the **Choose a Base Repository** dropdown, then there may be a problem with your repository fork.
+
+![The 'Choose a Base Repsitory' dropdown in GitHub after selecting 'compare across forks'.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %})
+
+First, go to the [fork you created initially]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository) and verify that it was forked from `braze-inc/braze-docs`. If it's showing anything other than `braze-inc/braze-docs`, you'll need to delete this fork and create a new one. 
+
+![An example forked repository, correctly showing "fork from braze-inc/braze-docs".]()
+
+To do this:
+
+1. Locally back up any work that's currently only accessible on your old fork. When you delete the fork, you'll loose all work you've stored there.
+2. In the old fork, go to **Settings** > **General**.
+3. Under **Danger Zone**, select **Delete this repository** and follow the on-screen instructions.
+    ![The list of options found in a GitHub repository's "Danger Zone".]()
+4. Go back to the official [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork** to create a new fork.
+    ![The Braze Docs GitHub repository showing "Fork".]({% image_buster /assets/img/contributing/github/fork_the_repository.png %})
+5. Keep the default settings, then select **Create fork**.
+    ![The Braze Docs GitHub repository showing "Create fork".]({% image_buster /assets/img/contributing/github/create_a_new_fork.png %})
+6. Now you can try to [make your change again using GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change).
+
 ## Redirect isn't working
 
 {% multi_lang_include contributing/troubleshooting/redirects.md %}
