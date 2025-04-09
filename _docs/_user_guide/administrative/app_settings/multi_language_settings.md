@@ -43,14 +43,14 @@ For steps to use these locales in your email campaigns and Canvas, refer to [Usi
 
 - When setting up a locale, you can either select languages from the default user attributes or custom attributes. You can't select from both.
 - You can select up to two custom attributes in a single locale, or up to two default user attribute languages. In both cases, the second attribute is optional.
-- Make edits to the translated values in the CSV file. Avoid modifying any default values in the CSV file.
-- Your locale key in the uploaded file must match how it's configured in the multi-language settings.
+- When making edits to the translated values in the CSV file, avoid modifying any default values in the file.
+- The locale key in your uploaded file must match the one in your multi-language settings.
 
 ### Support and prioritization
 
 - Users that match a custom attribute locale get prioritized before users that match a default user attribute.
 - Custom attribute support is limited to string types and the `equals` comparison key.
-- If a custom attribute is deleted or the type is changed, the user can no longer fall into that locale and will either go down the priority list of locales they fall under or receive default marketing translations.
+- If a custom attribute is deleted or its type is changed, the user can no longer fall into that locale and will either go down the priority list of locales they fall under or receive default marketing translations.
 - If a locale is invalid (the custom attribute changed or is deleted), the error will appear on the **Multi-Language Support** page.
 
 ## Frequently asked questions
