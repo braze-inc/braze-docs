@@ -1,7 +1,7 @@
 ---
 nav_title: Tutorials
 article_title: Tutorials
-page_order: 3
+page_order: 1.9
 hide_toc: true
 layout: dev_guide
 guide_top_header: "Tutorials for Common Braze Integrations"
