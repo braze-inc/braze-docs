@@ -120,13 +120,14 @@ The allowed values for the array are:
 - `identified`
 - `unidentified`
 - `most_recently_updated` (refers to prioritizing the most recently updated user)
+- `least_recently_updated` (refers to prioritizing the least recently updated user)
 
 Only one of the following options may exist in the prioritization array at a time:
 
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
 
-If you specify `identified` in the array, this would mean the user **must** have an `external_id` to be entered into the Canvas. If you want users with email addresses to enter the message, regardless of whether they are identified or not, only use the `most_recently_updated` parameter instead.
+If you specify `identified` in the array, this would mean the user **must** have an `external_id` to be entered into the Canvas. If you want users with email addresses to enter the message, regardless of whether they're identified or not, only use the `most_recently_updated` or `least_recently_updated` parameter instead.
 
 ## Request example
 ```
