@@ -14,15 +14,6 @@ page_order: 0
 
 The Braze integration with Shopify provides a powerful solution for ecommerce businesses looking to enhance their customer engagement and drive personalized marketing efforts. This integration seamlessly connects Shopify's robust ecommerce capabilities with our advanced customer engagement platform, enabling you to deliver targeted, relevant, and timely messages to your users based on real-time shopping behaviors and transactional data.
 
-**Supported features**
-- Track onsite behavior and anonymous users using the Braze Web SDK and JavaScript SDK
-- Sync and reconcile Shopify user data in Braze
-- Collect email and SMS subscribers from Shopify
-- Backfill historical purchase data from Shopify
-- Sync your Shopify product catalog
-- eCommerce recommended events and eCommerce Canvas templates 
-- Default access to Braze in-app messages (standard integration only)
-
 ## Requirements
 
 | Requirement | Description |
