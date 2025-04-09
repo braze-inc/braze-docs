@@ -306,7 +306,8 @@ $(document).ready(function() {
         }
       }
     }
-    window.mermaid.init(undefined, $('.language-mermaid').not('[data-processed="true"]').filter(':visible'));
+    var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+    mermaid.run({ nodes: mermaid_charts });
   }
 
   // see if a details tag should be auto-opened
@@ -751,6 +752,8 @@ $(document).ready(function() {
     startOnLoad: false,
     theme: "default",
   });
-  window.mermaid.init(undefined, $('.language-mermaid').not('[data-processed="true"]').filter(':visible'));
+  var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+  mermaid.run({ nodes: mermaid_charts });
+
 
 });
