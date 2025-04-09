@@ -306,6 +306,9 @@ $(document).ready(function() {
         }
       }
     }
+    var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+    mermaid.run({ nodes: mermaid_charts });
+    setPanZoom(mermaid_charts)
   }
 
   // see if a details tag should be auto-opened
@@ -415,6 +418,27 @@ $(document).ready(function() {
   });
   if (Cookies.get('ln')) {
     $('#sidebar_toggle').trigger('click');
+  }
+
+  function setPanZoom(mermaid_charts){
+    setTimeout(function() {
+      mermaid_charts.each(function() {
+        var svg_element = $(this).find('svg').first();
+        if (svg_element) {
+          const height = svg_element.outerHeight();
+          const x = svgPanZoom(`#${svg_element.attr('id')}`, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: false,
+            contain: true,
+            center: true,
+            minZoom: 0.1,
+          });
+          svg_element.height(height)
+          x.resize()
+        }
+      });
+    }, 500);
   }
 
   function setTabClass(tabtype, prefix, postfix, curtab){
@@ -747,8 +771,14 @@ $(document).ready(function() {
 
   // intialized mermaid
   mermaid.initialize({
-    startOnLoad:true,
+    startOnLoad: false,
     theme: "default",
   });
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  var mermaid_charts = $('.language-mermaid').not('[data-processed="true"]').filter(':visible');
+  mermaid.run({ nodes: mermaid_charts });
+
+  // Add svgPanZoom to the rendered Mermaid charts
+  setPanZoom(mermaid_charts)
+
+
 });
