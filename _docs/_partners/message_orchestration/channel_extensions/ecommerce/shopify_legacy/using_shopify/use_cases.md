@@ -4,7 +4,7 @@ article_title: "Shopify Use Cases in Braze"
 description: "This reference article outlines common beginner and advanced Shopify use cases."
 page_type: partner
 search_tag: Partner
-alias: "/shopify_use_cases/"
+alias: "/shopify_use_cases_legacy/"
 page_order: 2
 ---
 

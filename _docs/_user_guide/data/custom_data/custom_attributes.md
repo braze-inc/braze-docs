@@ -164,9 +164,11 @@ When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the length of an array for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added.
+By default, the maximum length of an array for an attribute is set to 25, and can be increased to 100 for an individual array. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101st movie, the first movie will be removed from the array and the most recent movie will be added.
 
-Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page.
+
+Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
 {% alert note %}
 The option to increase the maximum length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.

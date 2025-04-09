@@ -4,7 +4,7 @@ article_title: "Using Shopify Data in Braze"
 description: "This reference article outlines how to use Shopify data in Braze for personalization and segmentation."
 page_type: partner
 search_tag: Partner
-alias: "/shopify_data/"
+alias: "/shopify_data_legacy/"
 page_order: 1
 ---
 
