@@ -23,7 +23,7 @@ The following table describes how you can use each editor block type.
 | Image | Inserts an image from the media library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Spacer | Adds space or padding between other blocks. |
-| Custom Code (early access) | Inserts raw HTML, CSS, and JS.  |
+| Custom Code | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Properties
