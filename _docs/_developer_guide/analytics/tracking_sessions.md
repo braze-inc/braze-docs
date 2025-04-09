@@ -24,7 +24,7 @@ A session refers to the period of time the Braze SDK tracks user activity in you
 If you've set up the [activity lifecycle callback]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) for Android, Braze will automatically call `openSession()` and `closeSession()` for each activity in your app.
 {% endalert %}
 
-By default, a session starts when `openSession()` is first called. If your app goes to the background, the session will remain active for `10` seconds (unless you [change the default session timeout](#changing-the-default-session-timeout)) or the user closes your app. Keep in mind, if the user closes your app while its in the background, session data may not be sent to Braze until they reopen the app.
+By default, a session starts when `openSession()` is first called. If your app goes to the background, the session will remain active for `10` seconds (unless you [change the default session timeout](#changing-the-default-session-timeout)) or the user closes your app. Keep in mind, if the user closes your app while it's in the background, session data may not be sent to Braze until they reopen the app.
 
 Calling `closeSession()` will not immediately end the session. Instead, it will end the session after 10 seconds if `openSession()` isn't called again by the user starting another activity.
 {% endtab %}
