@@ -5,7 +5,7 @@ description: "This reference article covers Shopify data features."
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 2
+page_order: 3
 ---
 
 # Shopify data features

@@ -21,5 +21,11 @@ guide_featured_list:
 - name: Shopify Data Features
   link: /docs/shopify_data_features/
   image: /assets/img/braze_icons/settings-01.svg
+
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: eCommerce Use Cases
+  link: /docs/ecommerce_use_cases/
+  image: /assets/img/braze_icons/users-01.svg
 ---
 <br><br>
