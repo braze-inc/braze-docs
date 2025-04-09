@@ -35,23 +35,6 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endsubtab %}
 {% endsubtabs %}
 
-If you've integrated [Infillion Beacons](https://infillion.com/software/beacons/) into your app, you can additionally use `visit.getPlace()` to log location-specific events. `requestImmediateDataFlush` verifies that your event will log even if your app is in the background.
-
-{% subtabs %}
-{% subtab java %}
-```java
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Braze.getInstance(context).requestImmediateDataFlush();
-```
-{% endsubtab %}
-
-{% subtab kotlin %}
-```kotlin
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
-Braze.getInstance(context).requestImmediateDataFlush()
-```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab swift %}
