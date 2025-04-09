@@ -2387,5 +2387,6 @@ validurls['/docs/developer_guide/banner_cards'] = '/docs/developer_guide/banners
 validurls['/docs/developer_guide/banner_cards/creating_campaigns'] = '/docs/developer_guide/banners/creating_campaigns';
 validurls['/docs/developer_guide/banner_cards/embedding_cards'] = '/docs/developer_guide/banners/embedding_banners';
 validurls['/developer_guide/banner_cards/creating_banner_cards/#set-card-priority'] = '/developer_guide/banners/creating_campaigns/#set-priority';
+validurls['/docs/create_banner_card'] = '/docs/create_banner';
 
 // validurls['OLD'] = 'NEW';
