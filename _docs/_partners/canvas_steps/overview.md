@@ -31,7 +31,7 @@ table td {
 }
 </style>
 
-| Destination | Time to update audience size in partner | Rate limit | Lookalike or actalike | Tips |
+| Destination | Time to update audience size in destination | Rate limit | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
 | [Criteo]({{site.baseurl}}/partners/canvas_steps/criteo_audience_sync) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
 | [Facebook or Instagram]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
