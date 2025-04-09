@@ -342,4 +342,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessionM
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
+- name: Tapcart
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
