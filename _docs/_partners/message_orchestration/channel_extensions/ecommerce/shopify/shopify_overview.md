@@ -22,7 +22,7 @@ A new version of the Shopify integration will be released in phases starting Apr
 
 ### New Braze customers
 
-Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify]({{site.baseurl}}/shopify_integration_overview/).
+Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify]({{site.baseurl}}/shopify_standard_integration/).
 
 ### Existing Braze customers
 
