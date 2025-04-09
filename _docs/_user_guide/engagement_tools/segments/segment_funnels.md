@@ -16,10 +16,10 @@ search_rank: 1
 Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters up to that point:
 
 - Total number of users targeted and the percentage of your audience base
-- LTV and LTV for paying users  
+- LTV and LTV for paying users
 - Number of users emailable
 - Number of users opted in to email
-- Number of users that are push enabled  
+- Number of users that are push enabled
 - Number of users opted in to push
 
 ![][1]
@@ -49,11 +49,11 @@ For example, let's say you have a group where all users who added items to a wis
 
 Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
-![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.][5]
+![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Foreground Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.][5]
 
 ### iOS or Android push opt-ins
 
-This use case leverages the "Push Enabled for App" filter to target iOS or Android users that have opted-in for push.
+This use case leverages the "Foreground Push Enabled for App" filter to target iOS or Android users that have opted-in for push.
 
 ![][11]
 
@@ -61,13 +61,13 @@ This use case leverages the "Push Enabled for App" filter to target iOS or Andro
 
 ### Full push-enabled audience
 
-This use case leverages the "Push Enabled" filter to target users that have opted-in for push.
+This use case leverages the "Foreground Push Enabled" filter to target users that have opted-in for push.
 
 ![][10]
 
 ### Global control group of push-enabled audience
 
-This use case leverages the "Push Enabled" and "Random Bucket #" filter to target users that are part of the global control group that have opted-in for push.
+This use case leverages the "Foreground Push Enabled" and "Random Bucket #" filter to target users that are part of the global control group that have opted-in for push.
 
 ![][9]
 
@@ -89,15 +89,14 @@ This use case leverages the "Money Spent" filter to target users that have spent
 
 ![][6]
 
-
-[1]: {% image_buster /assets/img_archive/segment_funnel_example.png %}
-[3]: {% image_buster /assets/img_archive/Wish_List_2.png %}
+[1]: {% image_buster /assets/img/seg_filter_examples/segment_funnel_example.png %}
+[3]: {% image_buster /assets/img/seg_filter_examples/wishlist.png %}
 [11]: {% image_buster /assets/img/seg_filter_examples/ios.png %}
 [12]: {% image_buster /assets/img/seg_filter_examples/android.png %}
 [6]: {% image_buster /assets/img/seg_filter_examples/moneyspent.png %}
 [7]: {% image_buster /assets/img/seg_filter_examples/push_engagement.png %}
 [8]: {% image_buster /assets/img/seg_filter_examples/recent_purchase.png %}
 [9]: {% image_buster /assets/img/seg_filter_examples/global_control.png %}
-[10]: {% image_buster /assets/img/seg_filter_examples/both.png %}
+[10]: {% image_buster /assets/img/seg_filter_examples/foreground_push_enabled.png %}
 [4]: #push-email
-[5]: {% image_buster /assets/img_archive/Wish_List_Email.png %}
+[5]: {% image_buster /assets/img/seg_filter_examples/wishlist2.png %}
