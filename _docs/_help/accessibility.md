@@ -12,12 +12,11 @@ description: "This reference article explains why accessibility is important to 
 
 Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
-## Why accessibility matters
+{% alert important %}
+This content is intended for general guidance and doesn’t guarantee compliance with accessibility standards such as WCAG. Braze offers tools that support the creation of more accessible messaging, but it’s your responsibility to ensure that your final content meets any applicable requirements. Any recommendations provided here are meant to help you get started and reflect the current capabilities of our platform.
+{% endalert %}
 
-- **Better usability:** Accessibility encourages you to think about the usability of your app or site because you're thinking about how the user interacts with your content. That means accessibility often improves the online experience for all users, not just those with a disability.
-- **Extend market reach:** The global market of people with disabilities is over 1 billion people with a spending power of nearly $7 trillion.
-   > "The market of people with disabilities is large and growing as the global population ages. In the UK, where the large disability market is known as the Purple Pound, people with disabilities and their families spend at least £249 billion every year. In the US, the annual discretionary spending of people with disabilities is over $200 billion. The global estimate of the disability market is nearly $7 trillion."<br>*Source: [W3C](https://www.w3.org/WAI/business-case/)*
-- **Minimize legal risk:** Many countries have laws requiring digital accessibility.
+If you have feedback about accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts.
 
 ## Areas of disability to consider
 
@@ -108,13 +107,59 @@ Depending on individual needs, these users rely on:
 - Use sans-serif fonts, which are easier to read on digital devices.
 - Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
 
+### Buttons
+
+Use **buttons** for clickable actions, such as sending a form or playing a carousel. Buttons generally indicate an action, like submitting a form. If you’re navigating to a new URL, consider using a [link](#links) instead.
+
+#### Write clear, action-oriented text
+
+Similar to link text, button labels should clearly describe the action. Effective button text is specific and action-oriented. For example, “Submit Order” clearly tells users what will happen when they click, whereas simply “Submit” can be ambiguous. Each label should precisely describe its intended action, so screen readers and all users can easily understand and predict the outcome when interacting with your buttons.
+
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">Good button text</th>
+      <th style="width: 50%">Poor button text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Submit Order"</td>
+      <td>"Submit"</td>
+    </tr>
+    <tr>
+      <td>"Create Account"</td>
+      <td>"Sign Up"</td>
+    </tr>
+    <tr>
+      <td>"Download Our Brochure"</td>
+      <td>"Download"</td>
+    </tr>
+    <tr>
+      <td>"View Product Details"</td>
+      <td>"Learn More"</td>
+    </tr>
+    <tr>
+      <td>"Subscribe for Updates"</td>
+      <td>"Subscribe"</td>
+    </tr>
+  </tbody>
+</table>
+
+Keep button text concise to prevent truncation. If a button’s text is too long, it may be cut off with an ellipsis instead of wrapping.
+
+#### Use sufficient color contrast
+
+Button text must be easy to read against the button’s background color. Check that your button text meets WCAG 2.2 AA [contrast minimums](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html):
+
+- 4.5:1 contrast ratio for normal-sized text (most buttons)
+- 3:1 contrast ration for large text (typically above 18pt)
+
+High contrast helps buttons remain readable and clickable for everyone, including users with visual impairments or viewing your message in challenging environments. For more guidance, see the [Color contrast](#color-contrast) section.
+
 ### Links
 
 Use links for navigation, like directing users to an external page.
-
-{% alert tip %}
-If you want something that looks and acts like a button, try to always use an actual button rather than styling a link like a button. Links and buttons may "feel" the same for average users—they can use their mouse to hover over the link or the button and click on them with their mouse—however, buttons and links have different controls (for example, buttons can be activated by pressing the <kbd>Space</kbd> key or the <kbd>Enter</kbd> key, but links can only be activated with the <kbd>Enter</kbd> key), which can lead to confusion if you style a link like a button.
-{% endalert %}
 
 Write link text that clearly describes where the link will take the user. Screen reader users often skip from link to link as a way of skimming through content, so make sure your link text can stand on its own. Avoid phrases like "click here," "more," and "click for details," as they are ambiguous when read out of context.
 
@@ -127,25 +172,108 @@ For example, consider how you might write a link to view a weather report.
 
 As with all content, keep it straightforward with as few extra words as possible.
 
-### Buttons
+#### Avoid styling links like buttons
 
-Use buttons for clickable actions, such as sending a form or playing a carousel.
+Braze drag-and-drop editors output semantic HTML by default, so links aren’t styled like buttons there. However, if you’re working with [custom HTML](#custom-html) or making code-level changes, keep this in mind:
 
-Similar to link text, write button text that clearly describes the action that will happen when a user presses it (for example, "Read the full story" rather than "Read more"). Test to ensure your button text isn't too long. If the button can't display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
+- **Links (`<a>`)** respond to the <kbd>Enter</kbd> key.
+- **Buttons (`<button>`)** respond to both the <kbd>Enter</kbd> or <kbd>Space</kbd> keys.
+
+Styling a link to look like a button can confuse people who navigate with a keyboard—they might try pressing <kbd>Space</kbd> and expect it to work.
+
+Use the right element for the action:
+
+- Use `<button>` for actions, like submitting a form or opening a modal.
+- Use `<a>` for navigation, such as linking to another page or file.
+
+{% raw %}
+
+```html
+<!-- Recommended: A true button for an action -->
+<button type="button">Download report</button>
+
+<!-- Not recommended: A link styled as a button -->
+<a href="#" class="btn">Download report</a>
+```
+
+{% endraw %}
 
 ### Images
 
-Some users aren’t able to see the images in your marketing content. Without thoughtful accessibility, images can inadvertently exclude part of your audience from receiving the same message.
+#### Provide alt text
 
-#### Alt text
+Alternative text (alt text) is a short description of the content or function of an image that screen readers and other assistive technologies provide to users. For every meaningful image, write descriptive alt text so users who can’t see the visuals still understand your message or call to action. Refer to the section [Adding alt text in Braze](#adding-alt-text-in-braze) for more.
 
-Alternative text (alt text) is a short description of the content or function of an image that screen readers and other assistive technologies provide to users. Write descriptive alt text for every meaningful image so users who can’t see the visuals still understand your message or call to action. Refer to the section adding alt text for more.
+#### Avoid images of text
 
-For purely [decorative](https://www.w3.org/WAI/tutorials/images/decorative/) images (ones that don’t add information or context), use an empty alt attribute (`alt=""`). 
+Whenever possible, avoid placing text inside images—screen readers can’t read image-based text, and users can’t easily adjust font size or color for better visibility. Consider these tips:
 
-##### Tips for writing alt text
+- **Remove text where you can:** Move any descriptive or promotional text from the image onto a text field in your message instead. This way, users can resize or recolor it as needed using their device or browser preferences.
+- **Test for readability and contrast:** If you must keep text in the image, follow [color contrast](#color-contrast) best practices and use a [large scale font](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-large-scale). This means text should be at least 18 points (about 24 pixels) for non-bold text or 14 points (about 18 pixels) if it’s bold. Using these sizes helps text remain legible without forcing users to zoom in, and it improves the overall contrast and readability of the content. Test to confirm it’s still legible on smaller screens.
+- **Provide alt text:** For essential text that must remain in the image, include alt text describing the words.
 
-###### 1. Describe what's actually in the image
+When images contain text that can’t be edited, users with visual impairments lose the flexibility to make reading adjustments. By separating text from images, you help more users read and interact with your message comfortably.
+
+#### How to add alt text in Braze
+
+##### Drag-and-drop editors
+
+If you're using a Braze drag-and-drop editor, you’ll find the **Alt text** field in a slightly different location depending on the editor. Here’s a quick breakdown.
+
+{% tabs local %}
+{% tab Email %}
+Select the image in your email to show the **Image Properties** panel. The **Alt text** field is near the **URL** field.
+{% endtab %}
+{% tab In-app message %}
+Select the image in your in-app message to show the **Actions** panel. **Alt text** is the first field in the panel.
+
+{% alert note %}
+The traditional editor for in-app messages is missing a field to add alt text directly. If you need alt text for your images, use the [Custom Code]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages) message type or compose your message in the drag-and-drop editor.
+{% endalert %}
+
+{% endtab %}
+{% tab Banner Card %}
+Select the image in your Banner Card to show the **Actions** panel. **Alt text** is the first field in the panel.
+{% endtab %}
+{% tab Content Card %}
+The Content Card editor is missing a field to add alt text directly. If you need alt text for your images, you can use **key-value pairs as a workaround (LINK NEEDED)** as a workaround or explore other Braze channel options that do support alt text.
+{% endtab %}
+{% tab Landing page %}
+Select the image in your landing page to show the **Actions** panel. **Alt text** is the first field in the panel.
+{% endtab %}
+{% endtabs %}
+
+Current drag-and-drop editors are missing the option to mark an image as decorative. If you leave alt text blank, screen readers will announce the file name instead. For email and in-app messages, you can switch to the HTML or custom code editors and add `alt=""` to image tags to indicate the image is decorative and should be skipped.
+
+##### HTML editors
+
+If you’re using a custom HTML or code-based editor, you’ll want to manually include the alt attribute in each `<img>` tag. For example:
+
+{% raw %}
+
+```html
+<img src="product.jpg" alt="Red shoes on display">
+```
+
+{% endraw %}
+
+For purely [decorative images](https://www.w3.org/WAI/tutorials/images/decorative/) (ones that don’t add information or context), use an empty alt attribute (`alt=""`). For example:
+
+{% raw %}
+
+```html
+<img src="logo.png" alt="">
+```
+
+{% endraw %}
+
+##### Note on missing channels
+
+Some messaging channels—like rich push, LINE, WhatsApp, and MMS— don’t surface a way for Braze to include custom alt text. Typically, these channels provide only minimal metadata, so a screen reader may say something like “attachment” (for example, iOS VoiceOver does this for rich push images). If you need fully customized alt text, consider using channels that support it, or ensure any essential information is also included in text so everyone can access your message content.
+
+#### Tips for writing alt text
+
+##### 1. Describe what's actually in the image
 
 Screen reader users rely on alt text to understand the content or function of an image. Avoid generic “marketing speak” that doesn’t match what’s visually shown.
 
@@ -172,9 +300,9 @@ Screen reader users rely on alt text to understand the content or function of an
   </tbody>
 </table>
 
-###### 2. Keep it short, yet specific
+##### 2. Keep it short, yet specific
 
-Concise alt text makes it easier for users to process. Include enough detail to convey purpose but skip any fluff.
+Concise alt text makes it easier for users to process. Include enough detail to convey purpose but skip any fluff. As a general rule, keep alt text to 125 characters or less. If anything more than a brief phrase or sentence is necessary, consider using one of the [long description methods](https://www.w3.org/WAI/tutorials/images/complex/) from W3C.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -199,7 +327,7 @@ Concise alt text makes it easier for users to process. Include enough detail to 
   </tbody>
 </table>
 
-###### 3. Avoid “image of” or “picture of” 
+##### 3. Avoid “image of” or “picture of” 
 
 Screen readers already announce an image. Jump right into describing the subject.
 
@@ -226,7 +354,7 @@ Screen readers already announce an image. Jump right into describing the subject
   </tbody>
 </table>
 
-###### 4. Reflect text that appears in the image
+##### 4. Reflect text that appears in the image
 
 If an image includes essential text, put that info in the alt text so users don’t miss it.
 
@@ -253,7 +381,7 @@ If an image includes essential text, put that info in the alt text so users don�
   </tbody>
 </table>
 
-###### 5. Stick to relevant context—no extra marketing jargon
+##### 5. Stick to relevant context—no extra marketing jargon
 
 Don’t pad alt text with SEO terms or calls to action not directly related to the image. Provide value for those who can’t see the image.
 
@@ -280,9 +408,9 @@ Don’t pad alt text with SEO terms or calls to action not directly related to t
   </tbody>
 </table>
 
-###### 6. Consider the image's purpose
+##### 6. Consider the image's purpose
 
-If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” “Sign up,” Learn"), not just the label or product shown.
+If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” Link to,"“Sign up” ), not just the label or product shown.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -297,7 +425,7 @@ If an image is functioning like a link or call-to-action, describe the intended 
       <td>"Fall Collection"</td>
     </tr>
     <tr>
-      <td>"Get your free eBook"</td>
+      <td>"Link to free eBook"</td>
       <td>"Free eBook"</td>
     </tr>
     <tr>
@@ -307,66 +435,34 @@ If an image is functioning like a link or call-to-action, describe the intended 
   </tbody>
 </table>
 
-##### Adding alt text in Braze
-
-If you’re using a custom HTML or code-based editor, you’ll want to manually include the alt attribute in each `<img>` tag. For example:
-
-{% raw %}
-
-```html
-<img src="product.jpg" alt="Red shoes on display">
-```
-
-{% endraw %}
-
-If you're using a Braze drag-and-drop editor, you’ll find the **Alt text** field in a slightly different location depending on the editor. Here’s a quick breakdown.
-
-{% tabs local %}
-{% tab Email %}
-Select the image in your email to show the **Image Properties** panel. The **Alt text** field is near the **URL** field.
-{% endtab %}
-{% tab In-app message %}
-Select the image in your in-app message to show the **Actions** panel. **Alt text** is the first field in the panel.
-{% endtab %}
-{% tab Banner Card %}
-Select the image in your Banner Card to show the **Actions** panel. **Alt text** is the first field in the panel.
-{% endtab %}
-{% tab Content Card %}
-Currently, the Content Card editor doesn’t provide a way to add alt text directly. If you need alt text for your images, you can use **key-value pairs as a workaround (LINK NEEDED)** or explore other Braze channel options that do support alt text. This can help your messages remain inclusive for screen reader users and others who rely on accessibility features.
-{% endtab %}
-{% tab Landing page %}
-Select the image in your landing page to show the **Actions** panel. **Alt text** is the first field in the panel.
-{% endtab %}
-{% endtabs %}
-
-{% alert note %}
-Current drag-and-drop editors are missing the option to mark an image as decorative. If you leave alt text blank, screen readers will announce the file name instead. For email and in-app messages, you can switch to the HTML or custom code editors and add `alt=""` to image tags to indicate the image is decorative and should be skipped.
-{% endalert %}
-
-Some messaging channels—like rich push, LINE, WhatsApp, and MMS— don’t allow Braze to include custom alt text. Typically, these channels provide only minimal metadata, so a screen reader may say something like “attachment” (for example, iOS VoiceOver does this for rich push images). If you need fully customized alt text, consider using channels that support it, or ensure any essential information is also included in text so everyone can access your message content.
-
-#### Images of text
-
-Whenever possible, avoid placing text inside images—screen readers can’t read image-based text, and users can’t easily adjust font size or color for better visibility. Consider these tips:
-
-- **Remove text where you can:** Move any descriptive or promotional text from the image onto a text layer in your message instead. This way, users can resize or recolor it as needed using their device or browser preferences.
-- **Test for readability and contrast:** If you must keep text in the image, follow color contrast best practices and use a large enough font. Test to confirm it’s still legible on smaller screens.
-- **Provide alt text:** For essential text that must remain in the image, include [alt text](#alt-text) describing the words.
-
-When images contain text that can’t be edited, users with visual impairments lose the flexibility to make reading adjustments. By separating text from images, you help more users read and interact with your message comfortably.
+If the image doesn't have a purpose, make that known too. Decorative images, like logos, should have an empty alt tag (`alt=""`) so screen readers know to skip announcing it. Without it, usually the image file name is read instead.
 
 ### Videos
 
-Provide closed captions for videos. They help people with vision loss, those watching in a noisy place, and those who speak a different language than the language in the video.
+#### Provide closed captions
+
+If you use videos in your messaging, provide closed captions so viewers can read a transcription of the audio content on-screen. This helps individuals who are hard of hearing, those in noisy environments, and non-native speakers who benefit from following text rather than sound. Closed captions can be turned on or off by users, making your content more accessible to everyone.
+
+{% alert note %}
+Braze doesn’t automatically generate or include closed captions for your videos. It’s your responsibility to provide accurate captions to make your content accessible.
+{% endalert %}
+
+#### Avoid auto-play
+
+Whenever possible, avoid playing videos automatically. Auto-play can disrupt users who rely on screen readers or catch them off-guard if they’re in a quiet space. Instead, let your audience choose when to start the video, so they remain in control of their experience.
 
 ### Color contrast
 
-Having sufficient color contrast can be a quick win for accessibility. The contrast ratio between foreground (text) and background colors should comply with [WCAG 2.1 AA level requirements](https://www.w3.org/TR/WCAG/#contrast-minimum):
+Sufficient color contrast helps ensure your messages are easy to read for everyone, including people with low vision or those viewing your content in bright or challenging conditions. Aim for contrast ratios that comply with [WCAG 2.2 AA level requirements](https://www.w3.org/TR/WCAG/#contrast-minimum):
 
-- Contrast ratio of 4.5:1 for normal text (think body text, buttons, and links)
-- Contrast ratio of 3:1 for large text (think headers)
+- 4.5:1 contrast ratio for normal text (think body text, buttons, and links)
+- 3:1 contrast ratio for large text (think headings and larger labels)
 
-You can use the [WebAim Contrast Checker Tool](https://webaim.org/resources/contrastchecker/) to see if your text is readable against background colors.
+You can test your color choices using the [WebAim Contrast Checker Tool](https://webaim.org/resources/contrastchecker/).
+
+{% alert note %}
+Braze editors allow you to select custom color combinations. Keep in mind that certain color choices can negatively affect accessibility. Choose your colors carefully to make sure your content is readabile and compliant with accessibility standards.
+{% endalert %}
 
 ### Forms
 
