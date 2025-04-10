@@ -86,12 +86,12 @@ On a tablet or desktop browser, a fullscreen in-app message will sit in the cent
 
 You can add an image to the background of your message from the **Message styles** tab. 
 
-1. In the canvas area, select the background container. This is the scrollable section of your message.
+1. In the canvas area, select the background container. This is the scrollable section of your message. If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
 2. In the **Message styles** tab, turn on **Background image**.
-3. Add an image from your media library, or enter the URL where your image is hosted.
+3. Add an image from your [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library), or enter the URL where your image is hosted.
 
 {% alert tip %}
-If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
+When using background images, keep [accessibility]({{site.baseurl}}/help/accessibility/) in mind. Avoid placing important text directly on the image unless you’ve tested for readability—especially with the close X button or other interactive elements. If you do use text on a background image, make sure there’s enough color contrast so all users can read it.
 {% endalert %}
 
 ### Adding Liquid
