@@ -1,6 +1,34 @@
 ## Integrating the Android SDK
 
-### Step 1: Configure `braze.xml`
+### Add Braze to `build.gradle`
+
+Add the following code to your `build.gradle`:
+
+```
+repositories {
+  mavenCentral()
+}
+```
+
+Next, add the library which you wish to use to your build.gradle():
+
+```
+dependencies {
+    implementation 'com.braze:android-sdk-base:CURRENT_SDK_VERSION'
+}
+```
+
+If you will be using any Braze UI components, instead add:
+
+```
+dependencies {
+    implementation 'com.braze:android-sdk-ui:CURRENT_SDK_VERSION'
+}
+```
+
+If you will be using Braze location services, additionally add `implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION'`.
+
+### Step 2: Configure `braze.xml`
 
 {% alert note %}
 As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
@@ -18,7 +46,7 @@ The contents of that file should resemble the following code snippet. Make sure 
 </resources>
 ```
 
-### Step 2: Add permissions to `AndroidManifest.xml`
+### Step 3: Add permissions to `AndroidManifest.xml`
 
 Next, add the following permissions to your `AndroidManifest.xml`:
 
@@ -31,7 +59,7 @@ Next, add the following permissions to your `AndroidManifest.xml`:
 With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
 {% endalert %}
 
-### Step 3: Enable user session tracking
+### Step 4: Enable user session tracking
 
 Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration are optionally handled automatically.
 
