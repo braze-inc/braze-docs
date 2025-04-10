@@ -23,7 +23,13 @@ description: "This article outlines details about the Identify users Braze endpo
 
 Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
 
-Identifying a user requires an `external_id` to be included in the `aliases_to_identify` or `emails_to_identify` or `phone_numbers_to_identify` object. If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
+Identifying a user requires an `external_id` to be included in the following objects:
+
+- `aliases_to_identify`
+- `emails_to_identify` 
+- `phone_numbers_to_identify`
+
+If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
 
 Note the following:
 
