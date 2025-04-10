@@ -267,7 +267,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 
 | Formatting | Input | Description |
 |---|---|---|
-|Color Profile | Apply from in-app message templates gallery. | Click **Apply Template** and select from the gallery. Then, click **Save**. |
+|[Color Profile]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Apply from in-app message templates gallery. | Click **Apply Template** and select from the gallery. Then, click **Save**. |
 |Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
 |Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
 |Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
