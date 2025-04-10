@@ -10,7 +10,7 @@ repositories {
 }
 ```
 
-Next, add the library which you wish to use to your build.gradle():
+Next, add the library which you wish to use to your `app/build.gradle`:
 
 ```
 dependencies {
