@@ -135,14 +135,14 @@ If `braze-inc/braze-docs` is missing from the list of available base branches wh
 
 ### Step 1: Verify the fork's origin
 
-Go to [your forked repository]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository) and verify it was forked from `braze-inc/braze-docs`. If wasn't, you'll need to delete this fork and create a new one.
+Go to [your forked repository]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository) and verify it was forked from `braze-inc/braze-docs`. If it isn't, you'll need to delete this fork and create a new one.
 
 ![An example forked repository, correctly showing "fork from braze-inc/braze-docs".]({% image_buster /assets/img/contributing/github/correct_forked_from.png %}){: style="max-width:85%;"}
 
 ### Step 2: Delete the old fork
 
 {% alert warning %}
-Deleted forks cannot be restored. Be sure back up work that's only accessible through your old fork.
+Deleted forks cannot be restored. Be sure to back up the work that's only accessible through your old fork.
 {% endalert %}
 
 In your old fork, go to **Settings** > **General**. Under **Danger Zone**, select **Delete this repository** and follow the on-screen instructions.
