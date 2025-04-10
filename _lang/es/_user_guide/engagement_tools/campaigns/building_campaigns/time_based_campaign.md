@@ -138,7 +138,7 @@ La limitación de la frecuencia se basa en días naturales, no en un periodo de 
 
 | Definición | Zona horaria |
 | ---------- | --------- |
-| Tiempo máximo que puede transcurrir entre que un usuario recibe una campaña y realiza la acción asignada para que se considere una conversión. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/A |
+| Tiempo máximo que puede transcurrir entre que un usuario recibe una campaña y realiza la acción asignada para que se considere una conversión. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

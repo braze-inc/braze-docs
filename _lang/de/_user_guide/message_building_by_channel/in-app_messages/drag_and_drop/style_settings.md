@@ -104,7 +104,7 @@ Als Nächstes nehmen Sie Ihr generiertes Liquid-Snippet und fügen es in Ihre Na
 
 ### Verwendung des KI-Copywriter
 
-Wenn ein Textblock in Ihrer In-App-Nachricht ausgewählt ist, klicken Sie auf <i class="fa-solid fa-wand-magic-sparkles" title="KI-Textschreiber"></i> in der Blocksymbolleiste, um den [KI-gestützten Texterstellungsassistenten]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) zu starten. Der KI-Copywriter übergibt einen kurzen Produktnamen oder eine kurze Beschreibung an das GPT3-Tool von OpenAI, um menschenähnliche Marketingtexte für Ihr Messaging zu erstellen.
+Wenn ein Textblock in Ihrer In-App-Nachricht ausgewählt ist, klicken Sie auf <i class="fa-solid fa-wand-magic-sparkles" title="KI-Textschreiber"></i> in der Blocksymbolleiste, um den [KI-gestützten Texterstellungsassistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) zu starten. Der KI-Copywriter übergibt einen kurzen Produktnamen oder eine kurze Beschreibung an das GPT3-Tool von OpenAI, um menschenähnliche Marketingtexte für Ihr Messaging zu erstellen.
 
 {% alert tip %}
 Sie können ein paar Klicks sparen, indem Sie den Text innerhalb des Blocks markieren, bevor Sie auf das Symbol klicken. Der markierte Text wird dem Werkzeug hinzugefügt und die Kopie wird sofort erstellt.

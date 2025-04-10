@@ -95,7 +95,7 @@ Vous pouvez consulter l'appartenance à un groupe de contrôle global en allant 
 
 ## Reporting
 
-Pour plus d'informations sur les indicateurs des rapports, reportez-vous à la section [Rapports des groupes de contrôle globaux]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/).
+Pour plus d'informations sur les indicateurs des rapports, reportez-vous à la section [Rapports des groupes de contrôle globaux]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/).
 
 ## Résolution des problèmes
 

@@ -307,7 +307,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Aplazamiento</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Aplazamiento' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
         </tr>
     </tbody>
 </table>

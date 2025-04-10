@@ -105,7 +105,7 @@ Once you have configured your Audience Sync to Snapchat, launch the Canvas! A ne
 
 You can view the audience in Snapchat by entering your ads manager account and selecting **Audiences** from the Assets section of the navigation. From the **Audiences** page, you can see the size of each audience after it reaches ~1,000.
 
-![Audience details for a given Snapchat audience that includes audience name, audience type, audience size, and audience renetion in days.][9]
+![Audience details for a given Snapchat audience that includes audience name, audience type, audience size, and audience retention in days.][9]
 
 ## User syncing and rate limit considerations
 

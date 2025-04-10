@@ -16,7 +16,7 @@ table td {
 
 # Referencia de tabla SQL
 
-Esta página es una referencia de las tablas y columnas disponibles para ser consultadas en el [Generador de Consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) o al generar [Extensiones de Segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+Esta página es una referencia de las tablas y columnas disponibles para ser consultadas en el [Generador de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) o al generar [Extensiones de Segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 ## Índice
 

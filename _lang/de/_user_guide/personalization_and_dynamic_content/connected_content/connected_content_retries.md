@@ -8,7 +8,9 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie mit Connected-Cont
 
 # Erneute Connected-Content-Versuche
 
-> Da Connected-Content auf den Empfang von Daten aus APIs angewiesen ist, besteht die Möglichkeit, dass eine API zeitweise nicht verfügbar ist, während Braze den Aufruf durchführt. In diesem Fall unterstützt Braze die Wiederholungslogik, um die Anfrage mit exponentiellem Backoff erneut zu versuchen. 
+> Da Connected-Content auf den Empfang von Daten aus APIs angewiesen ist, besteht die Möglichkeit, dass eine API zeitweise nicht verfügbar ist, während Braze den Aufruf durchführt. In diesem Fall unterstützt Braze die Wiederholungslogik, um die Anfrage mit exponentiellem Backoff erneut zu versuchen. <br><br> Auf dieser Seite erfahren Sie, wie Sie Ihren Connected-Content-Aufrufen Wiederholungsversuche hinzufügen können.
+
+## Enablement von Wiederholungsversuchen
 
 Um Wiederholungen zu ermöglichen, fügen Sie `:retry` in den Aufruf von Connected-Content ein, wie im folgenden Code Snippet gezeigt:
 {% raw %}
@@ -18,7 +20,13 @@ Um Wiederholungen zu ermöglichen, fügen Sie `:retry` in den Aufruf von Connect
 ```
 {% endraw %}
 
+## Ergebnisse der Wiederholungsversuche
+
+### Wenn der API-Aufruf fehlschlägt und Wiederholungsversuche aktiviert sind
+
 Wenn der API-Aufruf fehlschlägt und diese Funktion aktiviert ist, versucht Braze den Aufruf erneut, wobei das von Ihnen festgelegte [Ratenlimit][47] für jede erneute Übertragung eingehalten wird. Braze verschiebt alle fehlgeschlagenen Nachrichten an das Ende der Warteschlange und fügt gegebenenfalls zusätzliche Minuten zu den Gesamtminuten hinzu, die für den Versand Ihrer Nachricht erforderlich wären.
+
+### Wenn ein Wiederholungsversuch erfolgreich ist
 
 Wenn ein Wiederholungsversuch erfolgreich war, wird die Nachricht gesendet und es werden keine weiteren Wiederholungsversuche für diese Nachricht unternommen. Wenn der Aufruf von Connected-Content 5 Mal fehlschlägt, wird die Nachricht abgebrochen, ähnlich wie wenn ein [Tag für den Abbruch einer Nachricht][1] getriggert wurde.
 

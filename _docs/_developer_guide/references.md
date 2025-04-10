@@ -7,7 +7,7 @@ description: "This is a list of reference documentation, GitHub repositories, an
 
 # References, repositories, and sample apps
 
-> This is a list of reference documentation, GitHub repositories, and sample apps belonging to each Braze SDK. An SDK's reference documentation details its available classes, types, functions, and variables. While the Github repository provides insight into that SDK's function and attribute declarations, code changes, and versioning. Each repository also includes fully-buildable sample applications you can use to test Braze features or implement alongside your own applications.
+> This is a list of reference documentation, GitHub repositories, and sample apps belonging to each Braze SDK. An SDK's reference documentation details its available classes, types, functions, and variables. While the GitHub repository provides insight into that SDK's function and attribute declarations, code changes, and versioning. Each repository also includes fully-buildable sample applications you can use to test Braze features or implement alongside your own applications.
 
 ## List of resources
 
@@ -68,3 +68,7 @@ Follow these instructions to build and run our test applications.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
+{% endalert %}

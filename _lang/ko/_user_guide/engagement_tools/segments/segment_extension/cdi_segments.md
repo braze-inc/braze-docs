@@ -11,7 +11,7 @@ description: "이 방법 안내 기사는 위치 타겟팅 설정 방법을 안�
 
 # CDI 세그먼트
 
-> Braze [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI)를 사용하면 데이터 웨어하우스 또는 파일 저장 시스템에서 Braze로 직접 연결을 설정하여 관련 사용자 또는 카탈로그 데이터를 정기적으로 동기화할 수 있습니다.
+> With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
 이 기능은 데이터 웨어하우스에 직접 쿼리하기 때문에 데이터 웨어하우스에서 이러한 쿼리를 실행하는 것과 관련된 모든 비용은 사용자가 부담합니다. CDI 세그먼트는 [SQL 세그먼트 크레딧]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage)을 사용하지 않으며, 세그먼트 확장 한도에 포함되지 않고, 데이터 포인트를 사용하지 않습니다.
@@ -19,13 +19,13 @@ description: "이 방법 안내 기사는 위치 타겟팅 설정 방법을 안�
 
 ## 필수 조건
 
-세분화를 위해 Braze 작업 공간 내에서 데이터 웨어하우스 데이터를 사용하려면 [연결된 소스]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)를 생성한 다음 [세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) 내에서 CDI 세그먼트를 생성해야 합니다. CDI 세그먼트를 사용하면 CDI 연결을 통해 제공된 데이터를 사용하여 자체 데이터 웨어하우스를 직접 쿼리하는 SQL을 작성하고 Braze 내에서 타겟팅할 수 있는 사용자 그룹을 생성할 수 있습니다.
+To use your data warehouse data for segmentation within your Braze workspace, you'll need to create a [connected source]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), then create a CDI segment within your [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI 세그먼트를 사용하면 CDI 연결을 통해 제공된 데이터를 사용하여 자체 데이터 웨어하우스를 직접 쿼리하는 SQL을 작성하고 Braze 내에서 타겟팅할 수 있는 사용자 그룹을 생성할 수 있습니다.
 
 ## 세그먼트 생성
 
 ### 1단계: 소스 설정
 
-첫 번째 CDI 세그먼트를 만들기 전에 [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)의 단계를 따라 데이터 웨어하우스와 함께 새 연결된 소스를 설정하십시오.
+Before creating your first CDI Segment, set up a new Connected Source with your data warehouse by following the steps in [Connected Sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
 
 ### 2단계: 세그먼트를 생성
 

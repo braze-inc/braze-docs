@@ -114,7 +114,7 @@ Esta sección cubre las tres formas más comunes de colocar tarjetas de contenid
 - [Carrusel](#carousel)
 - [Banner](#banner)
 
-La lógica y la implementación de estas colocaciones no están predeterminadas en Braze, por lo que tu equipo de ingeniería debe suministrar y apoyar el trabajo para conseguir estos casos de uso. Para obtener un resumen sobre cómo implementar estas colocaciones, consulta [Crear una tarjeta de contenido personalizada]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+La lógica y la implementación de estas colocaciones no están predeterminadas en Braze, por lo que tu equipo de ingeniería debe suministrar y apoyar el trabajo para conseguir estos casos de uso. Para obtener un resumen sobre cómo implementar estas colocaciones, consulta [Crear una tarjeta de contenido personalizada]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
 
 ![3 tarjetas de contenido de ejemplo, que muestran las diferentes opciones de colocación: bandeja de entrada de mensajes, carrusel y banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -176,7 +176,7 @@ Los usuarios pueden ver y participar en los contenidos más relevantes para ello
 
 Tus desarrolladores integrarán las tarjetas de contenido cuando integren el SDK de Braze. Para obtener más información sobre cómo integrarse con las tarjetas de contenido, consulte los artículos de la guía para desarrolladores de su plataforma:
 
-- [ iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
+- [ iOSiOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guía de integración de la tarjeta de contenido")
 - [ AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
 - [ WebWeb]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
 

@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Appartenance à un segment
-    description: "Vous permet de filtrer en fonction de l'appartenance à un segment partout où des filtres sont utilisés (comme les segments, les campagnes et d'autres) et de cibler plusieurs segments différents au sein d'une même campagne. <br><br>Notez que les segments utilisant déjà ce filtre ne peuvent pas être inclus ou imbriqués dans d'autres segments. Vous devez recréer le segment que vous essayez d'inclure en utilisant les mêmes filtres."
+    description: "Vous permet de filtrer en fonction de l'appartenance à un segment partout où des filtres sont utilisés (comme les segments, les campagnes et d'autres) et de cibler plusieurs segments différents au sein d'une même campagne. <br><br>Notez que les segments utilisant déjà ce filtre ne peuvent pas être inclus ou imbriqués dans d'autres segments, car cela pourrait créer un cycle dans lequel le segment A inclurait le segment B, qui essaierait à son tour d'inclure le segment A. Dans ce cas, la segmentation ne cesserait de se référer à elle-même, ce qui rendrait impossible le calcul de la personne qui en fait partie. En outre, l'imbrication de segments de ce type ajoute de la complexité et peut ralentir les choses. Au lieu de cela, recréez le segment que vous essayez d'inclure en utilisant les mêmes filtres."
     tags:
       - Segment or CSV membership
   - name: Extension de segment Braze

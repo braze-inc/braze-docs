@@ -19,6 +19,14 @@ export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
+
+# Set the primary branch depending which Braze Docs repository.
+if [[ "$PROJECT_ROOT" == *"braze-docs-hidden"* ]]; then
+    export PRIMARY_BRANCH="main"
+else
+    export PRIMARY_BRANCH="master"
+fi
+
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
 export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
@@ -78,6 +86,22 @@ require_jq() {
     fi
 }
 
+# If yarn-related project dependencies are required, pass or fail.
+require_yarn() {
+    if [ ! -d "$PROJECT_ROOT/node_modules" ]; then
+        echo "Error: 'node_modules' are required to run this command. On MacOS, run:"
+        echo "  brew install yarn"
+        echo "  yarn install"
+        exit 1
+    fi
+}
+
+# Stop commands that are unsupported in the hidden repository.
+not_supported_for_hidden() {
+    echo "error: '$1' is not supported in the braze-docs-hidden repository."
+    exit 1
+}
+
 # Fetch the latest changes from the remote quietly.
 require_git_fetch() {
     git fetch origin develop --quiet
@@ -88,6 +112,40 @@ if [[ $# -eq 0 ]]; then
     display_help
     exit 1
 fi
+
+# Indicates that the current process is still running and not hung.
+logger() {
+    # Create a log file to capture command I/O.
+    local output_file="$TEMP_DIR/logger_output.log"
+
+    "$@" > "$output_file" 2>&1 &
+    local pid=$!
+
+    # A "loading spinner" to visually indicate process is running.
+    local spin='-\|/'
+    local i=0
+    while kill -0 "$pid" 2>/dev/null; do
+        i=$(( (i+1) % 4 ))
+        printf "\r[%c] Running..." "${spin:$i:1}"
+        sleep 0.1
+    done
+    wait $pid
+    local exit_code=$?
+
+    if [ $exit_code -eq 0 ]; then
+        printf "\r[✓] Complete. \n"
+    else
+        printf "\r[✗] Failed. \n"
+    fi
+
+    # Return any command-level logs if applicable
+    if [ -s "$output_file" ]; then
+        printf "\n"
+        cat "$output_file"
+    fi
+
+    return $exit_code
+}
 
 # Argument parsing
 case $1 in
@@ -120,11 +178,13 @@ case $1 in
         require_path_or_file "$2"
         touch "$REDIRECT_MATCHES"
         "$MRD"
-        "$ULINKS" "$2"
+        logger "$ULINKS" "$2"
+
         # rm "$REDIRECT_MATCHES"
         ;;
     fblinks)
         # require_git_fetch
+        require_yarn
         npx ts-node ./scripts/find_broken_links.ts
         ;;
     lredirects)

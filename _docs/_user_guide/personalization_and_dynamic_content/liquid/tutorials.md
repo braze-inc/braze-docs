@@ -15,7 +15,7 @@ When you’re finished with these tutorials, you’ll be able to:
 - Write Liquid code for common use cases
 - String together Liquid conditional logic to personalize messages based on user data
 - Use variables and filters to write equations that use the values of attributes
-- Recongize basic commands in Liquid code and form a general understanding about what the code is doing
+- Recognize basic commands in Liquid code and form a general understanding about what the code is doing
 
 | Tutorial | Learning objectives |
 | --- | --- |
@@ -334,7 +334,7 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="6"}
-6. Because the last purchase date and today's date are in seconds, we'll need to caculate how many seconds are in six months. Let's make an equation (approximately 6 months * 30.44 days * 24 hours * 60 minutes * 60 seconds) and assign it to the variable `six_months`. We'll use `times` to specify the multiplication of time units.
+6. Because the last purchase date and today's date are in seconds, we'll need to calculate how many seconds are in six months. Let's make an equation (approximately 6 months * 30.44 days * 24 hours * 60 minutes * 60 seconds) and assign it to the variable `six_months`. We'll use `times` to specify the multiplication of time units.
 
 {% raw %}
 ```liquid

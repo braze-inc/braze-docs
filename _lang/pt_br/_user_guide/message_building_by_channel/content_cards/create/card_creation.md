@@ -3,7 +3,7 @@ nav_title: Criação de cartões
 article_title: Criação de cartões
 alias: /card_creation/
 description: "Este artigo descreve as diferenças entre a criação do cartão de conteúdo no lançamento da campanha ou na entrada da etapa do Canva e na primeira impressão."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards

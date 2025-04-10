@@ -54,9 +54,18 @@ tool:
 
 ### 기기별 참여
 
-**기기별 참여** 보고서는 사용자가 이메일에 참여하는 데 사용하는 기기에 대한 분석을 제공합니다. 이 데이터는 모바일, 데스크톱, 태블릿 및 기타 기기 유형에서 이메일 인게이지먼트를 추적합니다. 
+**기기별 참여** 보고서는 사용자가 이메일에 참여하는 데 사용하는 기기에 대한 분석을 제공합니다. 이 데이터는 모바일, 데스크톱, 태블릿 및 기타 기기 유형에서 이메일 인게이지먼트를 추적합니다. This data is based on the user agent string passed from your users' devices.
 
-"기타" 범주에는 데스크탑, 모바일 또는 태블릿으로 식별할 수 없는 모든 사용자 문자열이 포함됩니다. 예를 들어 텔레비전, 자동차, 비디오 게임 콘솔, OTT(오버더톱 또는 스트리밍) 등이 이에 해당합니다. 이것은 null 또는 빈 값도 포함될 수 있습니다.
+{% alert note %}
+If you use CloudFront as your CDN, make sure your users' user agent is passed along to the ESP. Otherwise, every user agent will be "Amazon Cloudfront".
+{% endalert %}
+
+The “Other” category includes any user string that cannot be identified as desktop, mobile, or tablet. 예를 들어 텔레비전, 자동차, 비디오 게임 콘솔, OTT(오버더톱 또는 스트리밍) 등이 이에 해당합니다. 이것은 null 또는 빈 값도 포함될 수 있습니다.
+
+To better understand what is in this "Other" category, you can extract the user agents using either of these options:
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) will send you the exact user agent string that was retrieve from the your users' devices.
+2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
 ![기기별 인게이지먼트 보고서에는 모바일, 데스크톱, 태블릿 및 기타 기기의 클릭 수가 표시됩니다. 클릭 수가 가장 많은 것은 모바일 기기에서 발생합니다.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 

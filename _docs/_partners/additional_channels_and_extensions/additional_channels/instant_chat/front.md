@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Front's integration enables you to leverage Braze Data Transformation and webhooks from each platform to set up a two-way conversational SMS pipeline.
 
-The incoming webhook from Front will contain a payload that includes the message sent by the live agent. The request will need to be reformatted before it can be accepted by Braze’s endpoints. The Front Data Transformation template will reformat the payload and write a custom event to the user profile titled **Outbound SMS Sent,** with the message body being passed as an event property.
+The incoming webhook from Front will contain a payload that includes the message sent by the live agent. The request will need to be reformatted before it can be accepted by Braze endpoints. The Front Data Transformation template will reformat the payload and write a custom event to the user profile titled **Outbound SMS Sent,** with the message body being passed as an event property.
 
 Before setting up a new transformation in Braze, we recommend reviewing the support matrix for each tier in our [Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) documentation. Our Free and Pro tiers offer a different number of active transformations and incoming requests per month. Confirm the current plan you’re on can support your use case.
 
@@ -23,12 +23,12 @@ Before you start, you'll need the following:
 | Prerequisite             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Front account            | A Front account is required to take advantage of this partnership.|
-| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by Braze’s /users/track endpoint.|
+| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|
 | A Front REST API Key         | A Front REST API key will be used to make an outbound webhook request from Braze to Front. |
 
 ## Use cases
 
-- Streamline your lead generation process using Braze's automated SMS messaging to identify user preferences and enable live sales agents to follow up and close sales.
+- Streamline your lead generation process using Braze automated SMS messaging to identify user preferences and enable live sales agents to follow up and close sales.
 - Re-engage customers who abandoned their shopping carts by driving sales conversions through automated SMS responses and live chat support.
 
 ## Integrating Front

@@ -50,8 +50,8 @@ Nachdem Sie Ihre interne Gruppe erstellt haben, können Sie Testnutzer:innen als
 | Additionsmethode | Beschreibung |
 | :------------- | :------------- |
 | Identifizierte Nutzer:innen |Suchen Sie den Nutzer:innen anhand seiner externen ID oder seiner E-Mail Adresse.|
-|Anonyme Benutzer| Suche nach IP-Adresse. Geben Sie dann für alle Testnutzer:innen einen Namen ein. Dies ist der Name, mit dem alle [Event-Benutzerprotokolle]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) auf der Seite [Event-Benutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) verknüpft werden.|
-|Nutzer:innen per Masseneintrag hinzufügen|Kopieren Sie eine Liste von E-Mail-Adressen oder externen IDs und fügen Sie sie in den vorgesehenen Bereich ein. Sie können nur Nutzer:innen hinzufügen, die bereits auf dem Dashboard bekannt sind. Weitere Informationen finden Sie unter [Benutzerimport]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
+|Anonyme Benutzer| Suche nach IP-Adresse. Geben Sie dann für alle Testnutzer:innen einen Namen ein. Dies ist der Name, mit dem alle [Event-Benutzerprotokolle]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) auf der Seite [Event-Benutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) verknüpft werden.|
+|Nutzer:innen per Masseneintrag hinzufügen|Kopieren Sie eine Liste von E-Mail-Adressen oder externen IDs und fügen Sie sie in den vorgesehenen Bereich ein. Sie können nur Nutzer:innen hinzufügen, die bereits auf dem Dashboard bekannt sind. Weitere Informationen finden Sie unter [Benutzerimport]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Inhalt Testgruppen

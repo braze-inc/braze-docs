@@ -26,7 +26,7 @@ Bei WhatsApp gibt es den Abo-Status `subscribed` und `unsubscribed`.
 ### Einstellen der WhatsApp-Abonnementgruppen der Benutzer
 
 - **Rest-API:** Nutzerprofile können per Braze REST API über den [Endpunkt`/subscription/status/set`][4] programmbasiert eingestellt werden.
-- **Web SDK:** Benutzer können einer E-Mail-, SMS- oder WhatsApp-Abonnementgruppe über die Methode `addToSubscriptionGroup` für [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) oder [Web][11]] hinzugefügt werden.
+- **Web SDK:** Benutzer können einer E-Mail-, SMS- oder WhatsApp-Abonnementgruppe über die Methode `addToSubscriptionGroup` für [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) oder [Web][11]] hinzugefügt werden.
 - **Nutzerimport**: Benutzer können über **Benutzer importieren** zu E-Mail- oder SMS-Abonnementgruppen hinzugefügt werden. Wenn Sie den Status der Abonnementgruppe aktualisieren, müssen Sie diese beiden Spalten in Ihrer CSV-Datei haben: `subscription_group_id` und `subscription_state`. Weitere Informationen finden Sie unter [Benutzerimport]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
 
 ### Überprüfen der WhatsApp-Abonnementgruppe eines Benutzers

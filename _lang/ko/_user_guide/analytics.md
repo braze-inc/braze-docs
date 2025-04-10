@@ -23,7 +23,7 @@ guide_featured_list:
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: 카탈로그
-    link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+    link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
     image: /assets/img/braze_icons/list.svg
   - name: 퀴리 빌더
     link: /docs/user_guide/analytics/query_builder/

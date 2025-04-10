@@ -42,7 +42,7 @@ Let’s adjust the Canvas details to reflect our goal.
 
 ### Step 2: Assign your conversion events
 
-Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Convension Event - B** as the default of making any purchase.
+Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Conversion Event - B** as the default of making any purchase.
 
 !["Assign Conversion Events" section with a primary conversion even of a user starting a session in a specific app.][2]
 

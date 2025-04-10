@@ -144,6 +144,18 @@ iOS 푸시, Android 푸시
 
 {% api %}
 
+### Campaign analytics
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+The performance of the message across various channels. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
+
+{% endapi %}
+
+{% api %}
+
 ### 제출된 선택
 
 {% apitags %}
@@ -178,7 +190,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='확인된 배달' %} Braze 고객은 SMS 할당량에 따라 배달 요금이 청구됩니다. 
 
-<span class="calculation-line">계산: 카운트</span>
+{::nomarkdown}
+<span class="calculation-line">
+    계산:
+    <ul>
+        <li><i>Confirmed Deliveries</i>: 카운트</li>
+        <li><i>Confirmed Delivery Rate</i>: (Confirmed Deliveries) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ SMS
 
 {% api %}
 
+### Failed Delivery Rate
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
+
+배달 실패의 원인을 파악하는 데 도움이 필요하면 <a href="/docs/braze_support/">Braze 지원팀에</a> 문의하세요.
+
+<span class="calculation-line">계산: (Delivery Failures) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### 직접 열람 수
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} 실패는 <i>전송</i> 횟수에는 포함되지만 <i>배달</i> 횟수에는 포함되지 않습니다.</td>
 
 <span class="calculation-line">계산<i>(실패율</i>): (실패) / (전송)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Feature flag experiment performance
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+Performance metrics for the message in a Feature Flag experiment. The specific metrics shown will vary depending on the messaging channel, and whether or not the experiment was a multivariate test.
 
 {% endapi %}
 
@@ -604,6 +652,20 @@ WhatsApp
 
 {% api %}
 
+### Read Rate
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Read Rate' %}
+
+<span class="calculation-line">계산: (Reads with read receipts) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### 수신
 
 {% apitags %}
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='거부' %} Braze 고객의 경우, 거부 건수는 SMS 할당량으로 청구됩니다.
 
-<span class="calculation-line">계산: 카운트</span>
+{::nomarkdown}
+<span class="calculation-line">
+    계산:
+    <ul>
+        <li><i>Rejections</i>: 카운트</li>
+        <li><i>Rejection Rate</i>: (Rejections) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">계산: 카운트</span>
+{::nomarkdown}
+<span class="calculation-line">
+    계산:
+    <ul>
+        <li><i>Sends to Carrier</i>: 카운트</li>
+        <li><i>Sends to Carrier Rate</i>: (Sends to Carrier) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -783,7 +861,7 @@ SMS
 이메일, Content Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 클릭 수' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP 이메일의 경우, HTML 및 일반 텍스트 버전의 총 클릭 수입니다.
+{% multi_lang_include metrics.md metric='총 클릭 수' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +884,17 @@ SMS
 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} If a user receives two different cards from the same campaign and dismisses both, this count will increase by two. Re-eligibility allows you to increment _Total Dismissals_ once every time a user receives a card; each card is a different message.
 
-<span class="calculation-line">계산: 카운트</span>
+{::nomarkdown}
+<span class="calculation-line">
+    계산:
+    <ul>
+        <li><i>Total Dismissals:</i> 카운트</li>
+        <li><i>Total Dismissal Rate:</i> Total Dismissals / Total Impressions</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +957,7 @@ SMS
 이메일, Content Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='고유 클릭 수' %} 이메일의 경우 7일 동안 추적됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
+{% multi_lang_include metrics.md metric='Unique Clicks' %}  This includes clicks on Braze-provided unsubscribe links. This is tracked over a seven-day period for email. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">

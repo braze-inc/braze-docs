@@ -88,10 +88,10 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 3: Set up data feeds
 
-1. In Branch, under the **Exports** section, click **Data Feeds**.
-2. On the **Data Feeds Manager** page, click the **Data Integrations** tab at the top of the page. 
+1. In Branch, under the **Exports** section, select **Data Feeds**.
+2. On the **Data Feeds Manager** page, select the **Data Integrations** tab at the top of the page. 
 3. Select Braze from the list of available data partners. 
-4. On the Braze export page, provide the data import key and REST endpoint that you found in Braze's dashboard and click **Enable**.
+4. On the Braze export page, provide the data import key and REST endpoint that you found in the Braze dashboard and select **Enable**.
 
 ### Step 4: Confirm the integration
 

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
+{% alert important %}
+If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+{% endalert %}
+
 The Braze and Amazon S3 integration features two integration strategies:
 
 - Leverage [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), enabling you to store data there until you want to connect it to other platforms, tools, and locations.
@@ -67,7 +71,7 @@ Navigate to **Policies** > **Get Started** > **Create Policy** to add permission
 ![][12]
 
 {% alert note %}
-Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow Braze's backend to perform error handling.
+Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow the Braze backend to perform error handling.
 {% endalert %}
 
 Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
@@ -165,7 +169,7 @@ A notification will inform you whether your credentials have been successfully v
 
 ## AWS role ARN auth method
 
-This authentication method generates a role Amazon Resource Name (ARN) that enables Braze's Amazon account to authenticate as a member of the role you created to write data to your bucket.
+This authentication method generates a role Amazon Resource Name (ARN) that enables the Braze Amazon account to authenticate as a member of the role you created to write data to your bucket.
 
 ### Step 1: Create policy {#role-arn-1}
 
@@ -174,7 +178,7 @@ To get started, sign in to the AWS management console as an account administrato
 ![]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
 {% alert note %}
-Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow Braze's backend to perform error handling.
+Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow the Braze backend to perform error handling.
 {% endalert %}
 
 Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Select **Review Policy** when you're finished.

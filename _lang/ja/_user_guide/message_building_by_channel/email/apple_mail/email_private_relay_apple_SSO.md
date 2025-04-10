@@ -48,10 +48,8 @@ Apple Private Relayでメールアドレスを追加する際に使用するコ�
 SparkPost用のApple Private Relayを設定するには、以下の手順に従う： 
 
 1. Appleでサインインする。
-2. [Apple のドキュメント](https://developer.apple.com/sign-in-with-apple/get-started/) に基づいて、必要な検証ファイルを作成し、これらのファイルを指定されたドメインのアクセス可能なディレクトリにホストします。
-3. 検証ファイルがホストされているドメインを指す DNS 設定にレコードを追加します。これは、1回限りの検証プロセスです。
-4. Apple でメールドメインを追加します。
-5. Apple が自動的にドメインをチェックし、どのドメインが検証済みかを表示し、ドメインを再検証または削除するオプションを提供します。
+2. [Appleのドキュメント](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service)に従って、メールドメインを登録します。
+3. Apple が自動的にドメインをチェックし、どのドメインが検証済みかを表示し、ドメインを再検証または削除するオプションを提供します。
 
 {% alert important %}
 このプロセスは、検証ファイルが作成されてから2 ～3 日以内に完了するようにしてください。そうしないと、有効期限が切れます。Apple ではこの有効期間を開示していません。

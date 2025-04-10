@@ -20,28 +20,28 @@ Antes de empezar con los detalles más sutiles de la [configuración de Canvas](
   {% tab Canvas %}
   Canvas es una interfaz unificada en la que los profesionales del marketing elaboran campañas con múltiples mensajes. Es un poco como una herramienta de programación visual, que permite construir un recorrido de usuario coherente a partir de una serie de pasos.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![Un ejemplo de Canvas con un paso para la división de decisiones en dos recorridos de usuario diferentes dependiendo de si un usuario está habilitado para push.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Recorrido %}
 
-  Un recorrido, o comúnmente denominado recorrido del usuario, es la experiencia de un usuario individual dentro del Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  Un recorrido, o comúnmente denominado recorrido del usuario, es la experiencia de un usuario individual dentro del Canvas.<br><br> ![Un gráfico con el recorrido del cliente para un nuevo usuario. Un usuario anónimo instala una aplicación, Kat crea una cuenta, Kat no abre la aplicación durante una semana, una notificación push hace que Kat vuelva a la aplicación, entonces Kat utiliza la aplicación con regularidad.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Generador de Canvas %}
-  El constructor del lienzo le indica los pasos que debe seguir para crear su lienzo. Esto incluye aspectos básicos como poner nombre a tu Canvas y añadir equipos. Esencialmente, el Canvas Builder es la configuración crucial requerida antes de empezar a construir tu Canvas. Aquí puede controlar la forma en que sus usuarios inician y completan su recorrido como clientes, con opciones para editar el [calendario de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), el [público objetivo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) y [los ajustes de envío]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  El constructor del lienzo le indica los pasos que debe seguir para crear su lienzo. Esto incluye aspectos básicos como poner nombre a tu Canvas y añadir equipos. Esencialmente, el Canvas Builder es la configuración crucial requerida antes de empezar a construir tu Canvas. Aquí puede controlar la forma en que sus usuarios inician y completan su recorrido como clientes, con opciones para editar el [calendario de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), el [público objetivo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) y [los ajustes de envío]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![El constructor de Canvas en la sección Básicos para un Canvas llamado "Nuevo Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variantes %}
-  Una variante es el camino que sigue cada cliente en su recorrido. Canvas admite hasta ocho variantes con un grupo de control. Usted controla qué segmento de su audiencia seguirá cada variante.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  Una variante es el camino que sigue cada cliente en su recorrido. Canvas admite hasta ocho variantes con un grupo de control. Usted controla qué segmento de su audiencia seguirá cada variante.<br><br> ![Selecciona el botón "Añadir variante".]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Pasos %}
-  Un paso en Canvas es un punto de decisión de marketing: "si esto, entonces aquello". Aproveche los [componentes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para construir los pasos de un recorrido de usuario.<br>Dentro de un paso, puede establecer desencadenantes o programar la entrega, refinar la orientación añadiendo filtros o marcando [eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), y especificar diferentes canales como notificaciones push o eventos webhook.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  Un paso en Canvas es un punto de decisión de marketing: "si esto, entonces aquello". Aproveche los [componentes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para construir los pasos de un recorrido de usuario.<br><br> ![Ejemplo de añadir un paso en Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> Cuando un usuario entra en un Canvas, empieza por el primer paso. Cada paso tiene unas condiciones que determinan si un usuario puede pasar al siguiente. En un paso, puedes desencadenar o programar la entrega, afinar la orientación añadiendo filtros o marcando [eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), y especificar diferentes canales como notificaciones push o eventos webhook. En Canvas, los pasos se producen en una secuencia, lo que significa que el primer paso se produce antes de que pueda producirse el segundo. Supongamos que tenemos un Canvas con los siguientes pasos: Retrasa el paso A con un retraso de 24 horas, Mensajea el paso A con un mensaje push y Mensajea el paso B con un mensaje dentro de la aplicación. El usuario A es retenido en un retraso de 24 horas, después de 24 horas, recibirá un mensaje push y, a continuación, un mensaje dentro de la aplicación.
 
   {% endtab %}
 {% endtabs %}

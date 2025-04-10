@@ -15,7 +15,7 @@ tool: Canvas
 A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar canvas usando o editor original. Este artigo está disponível como referência para entender como seus usuários avançam pelos componentes do Canva no editor Origin. <br><br>Para componentes no Canvas Flow, o **comportamento de avanço** é definido como sempre avançar imediatamente o público, ou **Avançar imediatamente o público**. Isso também se aplica a [etapas desconectadas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
-> O recurso **Advancement Behavior (Comportamento de avanço)** permite que você escolha os critérios de avanço por meio do [componente do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
+> O recurso **Advancement Behavior (Comportamento de avanço)** permite que você escolha os critérios de avanço por meio do [componente do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
 ![Avanço Configurações de comportamento com duas opções para avançar o público quando a mensagem for enviada ou para avançar imediatamente o público.][1]
 

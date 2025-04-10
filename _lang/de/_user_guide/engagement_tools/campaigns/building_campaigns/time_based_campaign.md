@@ -138,7 +138,7 @@ Die Frequenzbegrenzung basiert auf Kalendertagen, nicht auf einem 24-Stunden-Zei
 
 | Definition | Zeitzone |
 | ---------- | --------- |
-| Die maximale Zeitspanne, die zwischen dem Erhalt einer Kampagne durch eine:n Nutzer:in und der Ausführung der zugewiesenen Aktion vergehen darf, damit diese als Konversion gewertet wird. Weitere Informationen finden Sie unter [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | -- |
+| Die maximale Zeitspanne, die zwischen dem Erhalt einer Kampagne durch eine:n Nutzer:in und der Ausführung der zugewiesenen Aktion vergehen darf, damit diese als Konversion gewertet wird. Weitere Informationen finden Sie unter [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | -- |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

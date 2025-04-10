@@ -17,7 +17,7 @@ tool: Canvas
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-オーディエンスパスは、ランキング基準を持つ並べ替えのファネルに似ています。ユーザーは、各基準について優先順位の高い順に評価され、最も高い順位の基準を満たすパスに送られます。これにより、ユーザーがどこに送られ、どのようなメッセージを受け取るのかを把握しやすくなります。なお、ランクを[開始後に編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)することはできません。
+オーディエンスパスは、ランキング基準を持つ並べ替えのファネルに似ています。ユーザーは、各基準について優先順位の高い順に評価され、最も高い順位の基準を満たすパスに送られます。これにより、ユーザーがどこに送られ、どのようなメッセージを受け取るのかを把握しやすくなります。なお、ランクを[開始後に編集]({{site.baseurl}}/post-launch_edits/)することはできません。
 
 オーディエンスパスを使用して、次のことを行えます。
 
@@ -54,7 +54,7 @@ tool: Canvas
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-オーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/)してオーディエンス基準に一致しているかを確認することで、オーディエンスグループが期待通りに設定されているかどうかをテストできます。 
+オーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンス基準に一致しているかを確認することで、オーディエンスグループが期待通りに設定されているかどうかをテストできます。 
 
 ## オーディエンスパスを使う
 
@@ -74,7 +74,7 @@ tool: Canvas
 
 キャンバスに[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (キャンバスを受け取るユーザーの総数を制限するなど) を使用する場合、Braze では、オーディエンスパスのセグメント化にランダムバケット番号を使用しないよう推奨しています。 
 
-[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)は、ランダムユーザーの均一分布セグメントを作成するために使用できるユーザー属性です。Braze は、キャンバスエントリのセグメンテーション段階で、ランダムバケット番号を使用してユーザーをグループ化し、各グループを個別に処理します。どのグループが先に処理を終えるかによって、レート制限のためにエントリ時に一部のユーザーがキャップされる可能性があり、オーディエンスパスのステップに到達した時点でユーザーの分布に偏りが出る可能性があります。
+[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/)は、ランダムユーザーの均一分布セグメントを作成するために使用できるユーザー属性です。Braze は、キャンバスエントリのセグメンテーション段階で、ランダムバケット番号を使用してユーザーをグループ化し、各グループを個別に処理します。どのグループが先に処理を終えるかによって、レート制限のためにエントリ時に一部のユーザーがキャップされる可能性があり、オーディエンスパスのステップに到達した時点でユーザーの分布に偏りが出る可能性があります。
 
 このような場合は、代わりに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を使用してみてください。
 

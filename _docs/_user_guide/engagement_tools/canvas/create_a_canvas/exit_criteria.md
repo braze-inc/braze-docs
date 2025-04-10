@@ -4,25 +4,30 @@ article_title: Exit Criteria
 page_order: 4.1
 alias: /exit_criteria/
 page_type: reference
-description: "This reference article covers the Exit Criteria feature for Canvas Flow."
+description: "This reference article covers exit criteria and how users can exit your Canvas based on the selected criteria."
 tool: Canvas
 ---
 
 # Exit criteria
 
-> By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, your users can exit your Canvas as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience.
+> By adding exception events directly to your Canvas entry rules, your users can exit your Canvas as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience.
 
-In the **Target Audience** step of the Canvas builder, you can set up exit criteria to identify which users you want to exit your Canvas. Add your exception event, then select **Add Trigger**. 
+## Setting up exit criteria
 
-You can also include segments and filters in the exit criteria, meaning users who match the segment or filter will exit the Canvas and will not receive any further messaging. If the first step in a Canvas is a Delay step with a five-day delay, then the exit criteria will apply at the end of this step. So, if a user meets the exit criteria, they will exit at the end of the five days.
+In the **Target Audience** step of the Canvas builder, you can set up exit criteria to identify which users you want to exit your Canvas. 
 
-{% alert note %}
-Array attributes aren’t currently supported as exit criteria on exception events.
-{% endalert %}
+The exit criteria includes an exception event, which is the specific action that can cause users to exit the Canvas.
 
-## Exception events
+![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.][1]{: style="max-width:90%;"}
+
+### Selecting exception events {#exception-events}
+
+When a user performs the exception event, they will exit the Canvas. Note that exception events will only trigger exits when a user is in the Canvas and advancing through the user journey.
+
+Let's say you have a Canvas set up to promote a new product. In this case, the purchase of the product would be the exception event. This way, after a user makes the purchase, they won't receive more messages about a product they already purchased. Exception events keep your messaging relevant and personalized.
 
 Additional exception events include:
+
 - Making a purchase
 - Starting a session
 - Performing a custom event
@@ -41,12 +46,28 @@ Additional exception events include:
 - Performing a checkout completed event
 - Performing a checkout started event
 
-## Use case
+### Using segments and filters
 
-Let's say you want to target users who haven't made any purchases at your company yet. First, select **Make Purchase** as the exception event. Next, select **Add Trigger**. When your Canvas launches, your audience will exclude users who have made any purchases with the following **Exit Criteria** settings. 
+You can also add segments and filters in the exit criteria. This means users who match the segment or filter will exit the Canvas and won't receive any further messaging. 
 
-In the following example, this exit criteria is also applied to the "Used in last day" segment for any user who has made exactly one purchase.
+For example, if the first step in a Canvas is a Delay step with a five-day delay, then the exit criteria will apply at the end of this step. So, if a user meets the exit criteria, they will exit at the end of the five days.
 
-![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.][1]
+{% alert note %}
+Array attributes aren’t currently supported as exit criteria on exception events.
+{% endalert %}
 
-[1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 
+## Example
+
+Let's say we want to target users who haven't made any purchases at our backpack supply company yet. To set up the exit criteria, we would:
+
+1. Select **Make Purchase** as the exception event.
+2. Select **Add Trigger**. 
+3. For **Segments**, select **Used in last day** so that when our Canvas launches, the audience will exclude users who have made any purchases.
+4. For **Filters**, select **Purchase behavior** > **Number of purchases** > **Purchased product**.
+5. Set the filter group to `backpack-example exactly 1`. This means that users who have purchased our backpack product would exit the Canvas.
+
+![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.][2]{: style="max-width:80%;"}
+
+
+[1]: {% image_buster /assets/img/exit_criteria.png %}
+[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

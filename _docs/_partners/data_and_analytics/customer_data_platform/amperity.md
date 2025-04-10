@@ -84,7 +84,7 @@ The data type used depends on the nature of the attribute. For example, an email
 
 ### Duplication of attributes
 
-Avoid sending custom attributes that duplicate default user profile fields. For example, birthdates should be sent to Braze as a user profile field named "dob" to match Braze’s standard attribute. If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created, and the values in the "dob" field will not be updated.
+Avoid sending custom attributes that duplicate default user profile fields. For example, birthdates should be sent to Braze as a user profile field named "dob" to match the Braze standard attribute. If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created, and the values in the "dob" field will not be updated.
 
 ### Data points
 

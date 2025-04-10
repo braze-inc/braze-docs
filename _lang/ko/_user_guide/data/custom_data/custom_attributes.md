@@ -33,7 +33,7 @@ Braze에 저장된 사용자 지정 속성을 사용하여 오디언스 세그�
 
 ### 차단 목록에 추가 중
 
-사용자 지정 속성은 작업 메뉴에서 개별적으로 차단 목록에 추가하거나 최대 10개까지 선택하여 일괄적으로 차단 목록에 추가할 수 있습니다. 커스텀 속성을 차단하면 해당 속성과 관련된 데이터가 수집되지 않으며, 다시 활성화하지 않는 한 기존 데이터를 사용할 수 없고, 차단된 속성은 필터나 그래프에 표시되지 않습니다. 또한 해당 속성이 현재 Braze 대시보드의 다른 영역에 있는 필터나 트리거에서 참조되고 있는 경우, 해당 속성을 참조하는 필터나 트리거의 모든 인스턴스가 제거되고 보관된다는 경고 모달이 표시됩니다.
+Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. 커스텀 속성을 차단하면 해당 속성과 관련된 데이터가 수집되지 않으며, 다시 활성화하지 않는 한 기존 데이터를 사용할 수 없고, 차단된 속성은 필터나 그래프에 표시되지 않습니다. 또한 해당 속성이 현재 Braze 대시보드의 다른 영역에 있는 필터나 트리거에서 참조되고 있는 경우, 해당 속성을 참조하는 필터나 트리거의 모든 인스턴스가 제거되고 보관된다는 경고 모달이 표시됩니다.
 
 ### 개인 식별 정보(PII)로 표시하기
 
@@ -58,7 +58,7 @@ Braze에 저장된 사용자 지정 속성을 사용하여 오디언스 세그�
 
 사용량 보고서에는 특정 커스텀 속성을 사용하는 모든 캔버스, 캠페인 및 세그먼트가 나열됩니다. 이 목록에는 Liquid의 사용법은 포함되어 있지 않습니다. 
 
-각 커스텀 속성 옆의 확인란을 선택한 다음 **사용량 보고서 보기**를 선택하면 한 번에 최대 10개의 사용량 보고서를 볼 수 있습니다.
+You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
 ### 데이터 내보내기
 
@@ -70,13 +70,13 @@ Braze에 저장된 사용자 지정 속성을 사용하여 오디언스 세그�
 
 {% details 플랫폼별 설명서 확장 %}
 
-- [Android 및 FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
 
 {% enddetails %}
 

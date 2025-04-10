@@ -14,7 +14,7 @@ tool: Canvas
 
 > O componente atualização de usuários permite atualizar as atribuições, os eventos e as compras de um usuário em um criador de JSON, portanto, não há necessidade de incluir informações confidenciais, como chaves de API.
 
-Com a atualização de usuário, as atualizações não contam para o limite de frequência de `/users/track` solicitações por minuto. Em vez disso, essas atualizações são agrupadas para que o Braze possa processá-las com mais eficiência do que um webhook de Braze para Braze. Note que esse componente não consome [pontos de dados]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) quando está sendo usado para atualizar pontos de dados não faturáveis (como grupos de inscrições).
+Com a atualização de usuário, as atualizações não contam para o limite de frequência de `/users/track` solicitações por minuto. Em vez disso, essas atualizações são agrupadas para que o Braze possa processá-las com mais eficiência do que um webhook de Braze para Braze. Note que esse componente não consome [pontos de dados]({{site.baseurl}}/user_guide/data/data_points/) quando está sendo usado para atualizar pontos de dados não faturáveis (como grupos de inscrições).
 
 Os usuários só avançarão para as próximas etapas do Canva depois que as atualizações relevantes do usuário tiverem sido concluídas. Se o envio de mensagens subsequentes depender das atualizações do usuário que você está fazendo, é possível garantir que essas atualizações tenham sido concluídas antes do envio das mensagens.
 
@@ -52,7 +52,7 @@ Ao incrementar um atributo personalizado que rastreia um evento, é possível ra
 
 ### Atualização de um vetor de objetos
 
-Um [vetor de objetos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) é um atributo personalizado armazenado no perfil de um usuário que é rico em dados. Isso permite que você crie um histórico das interações do usuário com a sua marca. Isso permite que você crie segmentos com base em um atributo personalizado que é um campo calculado, como histórico de compras ou valor total do tempo de vida.
+Um [vetor de objetos]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) é um atributo personalizado armazenado no perfil de um usuário que é rico em dados. Isso permite que você crie um histórico das interações do usuário com a sua marca. Isso permite que você crie segmentos com base em um atributo personalizado que é um campo calculado, como histórico de compras ou valor total do tempo de vida.
 
 A etapa de atualização do usuário pode adicionar ou remover atribuições a esse vetor de objetos. Para atualizar uma matriz, selecione o nome do atributo da matriz em sua lista de atribuições e digite o valor da chave.
 
@@ -91,7 +91,7 @@ Rastreie quando um usuário tem itens em seu carrinho de compras, quando adicion
 {% endraw %}
 
 {:start="2"}
-2\. Crie um [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) chamado `add_item_to_cart` que é registrado quando um usuário adiciona um item à cesta.
+2\. Crie um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) chamado `add_item_to_cart` que é registrado quando um usuário adiciona um item à cesta.
 3\. Crie uma tela com um público-alvo de usuários com esse evento personalizado. Agora, quando um usuário adiciona um item ao carrinho, esse Canva é disparado. Em seguida, é possível direcionar o envio de mensagens diretamente para esse usuário, oferecendo códigos de cupom quando ele atingir um determinado gasto, abandonar o carrinho por um determinado período de tempo ou qualquer outra coisa que se alinhe ao seu caso de uso. 
 
 O atributo `shopping_cart` contém o total de muitos eventos personalizados: o custo total de todos os itens, o número total de itens no carrinho, se o carrinho de compras contém um presente e assim por diante. Isso pode ser parecido com o seguinte:
@@ -129,7 +129,7 @@ O atributo `shopping_cart` contém o total de muitos eventos personalizados: o c
 Para armazenar a propriedade do evento de gatilho de um Canvas como uma atribuição, use o modal de personalização para extrair e armazenar a propriedade de entrada do Canvas. O User Update também oferece suporte aos seguintes recursos de personalização: 
 * [Conteúdo conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Blocos de conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [Propriedades de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [Propriedades de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * Lógica Liquid (incluindo [mensagens de aborto]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Várias atualizações de atribuições ou eventos por objeto
 

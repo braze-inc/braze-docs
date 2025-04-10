@@ -11,7 +11,7 @@ description: "この記事では、ロケーションターゲティングを設
 
 # CDIセグメント
 
-> Braze [クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/)を使用すると、データウェアハウスやファイルストレージシステムから Braze への直接接続を設定して、関連するユーザーデータやカタログデータを定期的に同期できます。
+> Braze [クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/)を使用すると、データウェアハウスやファイルストレージシステムから Braze への直接接続を設定して、関連するユーザーデータやカタログデータを定期的に同期できます。
 
 {% alert warning %}
 この機能はデータウェアハウスに直接クエリを実行するため、データウェアハウスでのこれらのクエリの実行に関連するすべてのコストが発生します。CDI セグメントは [SQL セグメントクレジット]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage)を消費せず、セグメントエクステンションの制限にカウントされず、データポイントを消費しません。
@@ -19,13 +19,13 @@ description: "この記事では、ロケーションターゲティングを設
 
 ## 前提条件
 
-データウェアハウスデータを Braze ワークスペース内のセグメンテーションに使用するには、[接続されたソース]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)を作成し、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)内に CDI セグメントを作成する必要があります。CDIセグメントを使用すると、CDI接続を介して利用可能になったデータを使用して、独自のデータウェアハウスに直接クエリするSQLを記述し、Braze内でターゲットにできるユーザーグループを作成できる。
+データウェアハウスデータを Braze ワークスペース内のセグメンテーションに使用するには、[接続されたソース]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/)を作成し、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)内に CDI セグメントを作成する必要があります。CDIセグメントを使用すると、CDI接続を介して利用可能になったデータを使用して、独自のデータウェアハウスに直接クエリするSQLを記述し、Braze内でターゲットにできるユーザーグループを作成できる。
 
 ## CDIセグメントを作成する
 
 ### ステップ 1: ソースを設定する
 
-最初の CDI セグメントを作成する前に、[接続されたソース]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)の手順に従って、データウェアハウスと新しい接続されたソースをセットアップします。
+最初の CDI セグメントを作成する前に、[接続されたソース]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/)の手順に従って、データウェアハウスと新しい接続されたソースをセットアップします。
 
 ### ステップ 2: セグメントを作成する
 

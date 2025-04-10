@@ -182,7 +182,7 @@ Next, pass the received push notifications along to Braze. This step is necessar
 
 {% subtabs %}
 {% subtab Swift %}
-To enable Braze's default push handling, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
+To enable the Braze default push handling, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
@@ -208,7 +208,7 @@ completionHandler()
 {% endsubtab %}
 
 {% subtab OBJECTIVE-C %}
-To enable Braze's default push handling, add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
+To enable the Braze default push handling, add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
 
 ```objc
 BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
@@ -403,4 +403,4 @@ This feature improves delivery rates by always routing push tokens to the correc
 
 #### Can I disable this feature?
 
-Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support]({{site.baseurl}}/help/support).
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/).

@@ -40,7 +40,7 @@ Braze ダッシュボードでジオフェンスを定義し、それを使用�
 
 ![ユーザーがハンブルク空港の地図上に半径 2,000 メートルの円を描画したドイツの空港のジオフェンスセット。][1]
 
-ジオフェンスセットを作成したら、地図上にジオフェンスを描画することで手動でジオフェンスを追加できます。最適な機能するために、半径 200 メートル以上のジオフェンスを作成することをお勧めします。設定可能なオプションの詳細については、 [ジオフェンスの設定]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/)を参照してください。
+ジオフェンスセットを作成したら、地図上にジオフェンスを描画することで手動でジオフェンスを追加できます。最適な機能するために、半径 200 メートル以上のジオフェンスを作成することをお勧めします。設定可能なオプションの詳細については、[ジオフェンスの設定]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/)を参照してください。
 
 ### 一括アップロードによるセットの作成 {#creating-geofence-sets-via-bulk-upload}
 

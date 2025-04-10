@@ -8,9 +8,11 @@ search_rank: 1
 
 # Variáveis de Conteúdo Local Conectado
 
+> Esta página fornece uma visão geral das variáveis locais do Connected Content e como usá-las e armazená-las.
+
 A Braze faz uma solicitação GET padrão no momento do envio para o endpoint especificado na tag `connected_content`. Se o endpoint retornar JSON, ele será automaticamente analisado e armazenado em uma variável chamada `connected`. Se o endpoint retornar texto, ele será inserido diretamente na mensagem no lugar da tag `connected_content`.
 
-Se você deseja salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do conteúdo conectado substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org][46])
+Se você deseja salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do Connected Content substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org][46])
 
 Você também pode especificar `:save your_variable_name` após o URL para salvar os dados como outra coisa. Por exemplo, a seguinte tag `connected_content` armazenará a resposta em uma variável local chamada `localweather` (você pode salvar várias variáveis JSON `connected_content`):
 
@@ -97,7 +99,6 @@ Por padrão, o conteúdo conectado definirá um `Content-Type` cabeçalho em uma
 Por padrão, o conteúdo conectado faz uma solicitação HTTP GET para a URL especificada. Para fazer uma solicitação POST, especifique `:method post`.
 
 Você pode opcionalmente fornecer um corpo POST especificando `:body` seguido por uma consulta string do formato `key1=value1&key2=value2&...` ou uma referência aos valores capturados. O tipo de conteúdo padrão é `application/x-www-form-urlencoded`. Se você especificar `:content_type application/json` e fornecer um corpo codificado em formulário, como `key1=value1&key2=value2`, a Braze codificará automaticamente o corpo em JSON antes de enviar.
-
 
 #### Tipo de conteúdo padrão
 {% raw %}
@@ -198,7 +199,6 @@ Este exemplo será armazenado em cache por 900 segundos (ou 15 minutos).
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
-
 
 #### Cache busting
 

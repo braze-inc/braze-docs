@@ -17,7 +17,7 @@ channel:
 
 ### Wählen Sie Ihre Abonnementgruppe
 
-SMS-Nachrichten müssen von einer [Abonnementgruppe]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/) gesendet werden. Eine Abo-Gruppe ist eine Sammlung von Absender-Telefonnummern (wie Shortcodes, Langcodes und/oder alphanumerische Sender-IDs), die für eine bestimmte Art von Messaging verwendet werden. Sie müssen eine Abo-Gruppe festlegen, um sicherzustellen, dass nur abonnierte Nutzer:innen zum Targeting herangezogen werden. Einige Kund:innen haben möglicherweise mehrere Abo-Gruppen für unterschiedliche Anwendungsfälle, z. B. für SMS-Nachrichten zu Transaktionszwecken und für SMS-Nachrichten zu Werbezwecken.<br><br>
+SMS-Nachrichten müssen von einer [Abonnementgruppe]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) gesendet werden. Eine Abo-Gruppe ist eine Sammlung von Absender-Telefonnummern (wie Shortcodes, Langcodes und/oder alphanumerische Sender-IDs), die für eine bestimmte Art von Messaging verwendet werden. Sie müssen eine Abo-Gruppe festlegen, um sicherzustellen, dass nur abonnierte Nutzer:innen zum Targeting herangezogen werden. Einige Kund:innen haben möglicherweise mehrere Abo-Gruppen für unterschiedliche Anwendungsfälle, z. B. für SMS-Nachrichten zu Transaktionszwecken und für SMS-Nachrichten zu Werbezwecken.<br><br>
 
 ### Körper der Nachricht eingeben
 

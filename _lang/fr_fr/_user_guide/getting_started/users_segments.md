@@ -19,7 +19,7 @@ Dans Braze, les informations relatives à votre audience sont stockées dans les
 
 En comprenant les profils utilisateurs, vous pouvez obtenir des informations sur votre audience et vous engager avec elle à un niveau personnalisé et ciblé. Le profil utilisateur contient de nombreuses informations, dont voici les principales :
 
-- **Identifiant de l'utilisateur :** Chaque profil utilisateur est identifié de manière unique par un ID utilisateur, appelé `external_id`. Cet identifiant permet à Braze de suivre et d'associer les données des utilisateurs sur différents canaux et appareils, offrant ainsi une vue unifiée des interactions de chaque utilisateur avec votre marque. Les [profils utilisateurs anonymes]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/) (les utilisateurs qui visitent votre site web ou votre application sans se connecter) n'ont pas de `external_id`, mais peuvent se voir attribuer des [alias d'utilisateur]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/#assigning-user-aliases) comme identifiant alternatif.
+- **Identifiant de l'utilisateur :** Chaque profil utilisateur est identifié de manière unique par un ID utilisateur, appelé `external_id`. Cet identifiant permet à Braze de suivre et d'associer les données des utilisateurs sur différents canaux et appareils, offrant ainsi une vue unifiée des interactions de chaque utilisateur avec votre marque. Les [profils utilisateurs anonymes]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (les utilisateurs qui visitent votre site web ou votre application sans se connecter) n'ont pas de `external_id`, mais peuvent se voir attribuer des [alias d'utilisateur]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) comme identifiant alternatif.
 - [Attributs](#attributes)**:** Il s'agit d'informations spécifiques sur l'utilisateur, telles que son nom, son âge, son emplacement/localisation ou toute autre information démographique. Vous pouvez utiliser ces attributs pour segmenter votre audience et personnaliser vos messages.
 - [Événements](#events)**:** Il s'agit des actions que l'utilisateur entreprend, comme effectuer un achat, cliquer sur un lien ou ouvrir une application. Braze suit ces événements pour vous aider à comprendre le comportement et l'engagement de l'utilisateur. À l'instar des attributs, vous pouvez également utiliser les événements pour segmenter et personnaliser.
 - **Achats :** Cette section enregistre l'historique des achats de l'utilisateur. C'est essentiel pour comprendre les habitudes d'achat et les préférences de l'utilisateur.
@@ -52,7 +52,7 @@ Les attributs standard sont des attributs prédéfinis que vous pouvez suivre av
 
 #### Attributs personnalisés
 
-Les [attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) sont des attributs que vous définissez en fonction des besoins spécifiques de votre entreprise. Ils vous permettent de suivre des informations qui sont uniques à votre appli ou à votre entreprise. 
+Les [attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) sont des attributs que vous définissez en fonction des besoins spécifiques de votre entreprise. Ils vous permettent de suivre des informations qui sont uniques à votre appli ou à votre entreprise. 
 
 Par exemple, une application de streaming musical peut suivre des attributs personnalisés tels que :
 
@@ -87,7 +87,7 @@ Les [événements standard]({{site.baseurl}}/user_guide/data_and_analytics/custo
 
 #### Événements personnalisés
 
-Les [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) sont des événements que vous définissez en fonction des actions spécifiques que vous souhaitez suivre au sein de votre app ou de votre site. Par exemple, une application de flux d'écoute de musique peut suivre des événements personnalisés tels que :
+Les [événements personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) sont des événements que vous définissez en fonction des actions spécifiques que vous souhaitez suivre au sein de votre app ou de votre site. Par exemple, une application de flux d'écoute de musique peut suivre des événements personnalisés tels que :
 
 - Chanson jouée
 - Liste de lecture créée
@@ -109,7 +109,7 @@ Les points de données sont consommés lorsque les données de profil d'un utili
 
 En réfléchissant bien aux informations à suivre en tant que points de données, vous ciblez les données ayant le plus d'impact sur l'expérience de vos utilisateurs. Votre gestionnaire de compte Braze vous aidera à recommander les meilleures pratiques en matière de données en fonction de vos besoins.
 
-Consultez notre article dédié pour en savoir plus sur les [points de données]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Consultez notre article dédié pour en savoir plus sur les [points de données]({{site.baseurl}}/user_guide/data/data_points/).
 
 ## Segments
 

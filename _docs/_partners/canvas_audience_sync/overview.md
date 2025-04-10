@@ -19,7 +19,7 @@ All Braze customers will immediately have access to Audience Sync to Google and 
 
 ## Use cases
 
-- Targeting high-value users via owned and paid channels to drive incremental purchases or engagement.
+- Targeting high-value users using owned and paid channels to drive incremental purchases or engagement.
 - Creating lookalike audiences of your high-value users to optimize new user acquisition costs and conversions.
 - Retargeting users with ads who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand.
@@ -32,11 +32,11 @@ table td {
 }
 </style>
 
-| Destination | Time to sync | Rate limit | Lookalike or actalike | Tips |
+| Destination | Time for destination to match audience members | Rate limit | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
 | [Criteo]({{site.baseurl}}/partners/canvas_steps/criteo_audience_sync) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
 | [Facebook or Instagram]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
-| [Google Ads or YouTube]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email adress or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
+| [Google Ads or YouTube]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email address or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
 | [LinkedIn]({{site.baseurl}}/partners/canvas_steps/linkedin_audience_sync) | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match the rate in the Braze dashboard.</li></ul>{:/} |
 | [Pinterest]({{site.baseurl}}/partners/canvas_steps/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. |
 | [Snapchat]({{site.baseurl}}/partners/canvas_steps/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
@@ -112,6 +112,15 @@ If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any othe
 ![A Canvas with an entry audience of "opted_in_marketing equals true".][1]
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
+
+## Managing consent for ad targeting
+
+As the advertiser, it is your responsibility to manage consent for ad tracking or targeting of your users.
+
+To send ads to your users, you must comply with all applicable laws and regulations, and the ad platform's policies and requirements. Only use Braze to target and sync users where you have obtained their consent. 
+
+To keep your audience lists in these ad platforms up-to-date and remove users who have revoked their consent, set up a Canvas to remove users from these existing audience lists using an Audience Sync step.
+
 
 [1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
 [2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}

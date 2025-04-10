@@ -42,7 +42,7 @@ Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), encontrará **
 {: start="2"}
 2\. Seleccione **LÍNEA** o, para campañas dirigidas a varios canales, seleccione **Campaña multicanal**.
 3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario.
+4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
    * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -71,9 +71,15 @@ Escribe tu mensaje utilizando la personalización (como Liquid o Contenido conec
 
 ![Compositor de LINE con un mensaje mostrado en la vista previa.][1]
 
-{% alert tip %}
+### Consejos
+
+#### Utilizar Liquid
+
 Si piensa utilizar Liquid, asegúrese de incluir un valor por defecto para su personalización. Esto evitará que los destinatarios con perfiles de usuario incompletos reciban un marcador de posición en blanco. Por ejemplo, en lugar de que un usuario reciba el mensaje "¡Hola, !", podría recibir el mensaje "¡Hola, nuevo abonado!".
-{% endalert %}
+
+#### Crear mensajes de derecha a izquierda
+
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Paso 3: Vista previa y prueba de tu mensaje
 

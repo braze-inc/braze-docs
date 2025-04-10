@@ -59,6 +59,10 @@ description: "이 참조 문서에서는 사용자 추가, 일시 중지 및 삭
 
 ![사용자 세부 정보를 편집할 때 사용자를 일시 중지합니다.][5]
 
+## Assigning user access and responsibilities
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Braze 사용자 삭제
 
 사용자를 삭제하려면 **설정** > **회사 사용자**로 이동하여 사용자 이름을 찾고 <i class="fa fa-trash-can"></i> **사용자 삭제**를 선택하십시오.

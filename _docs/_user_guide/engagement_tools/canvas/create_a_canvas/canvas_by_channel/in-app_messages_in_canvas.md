@@ -171,7 +171,7 @@ Select **Set exact priority** and drag different Canvas steps to reorder their p
 
 ### Making changes to drafts of active Canvases
 
-If you make changes to the in-app message priority in **Send Settings** of a draft of an active Canvas, these changes are applied directly to the active Canvas when the priority sorter is closed. However, in a Message step, the priority sorter wil be updated when the draft is launched since Canvas step settings apply at a step level. 
+If you make changes to the in-app message priority in **Send Settings** of a draft of an active Canvas, these changes are applied directly to the active Canvas when the priority sorter is closed. However, in a Message step, the priority sorter will be updated when the draft is launched since Canvas step settings apply at a step level. 
 
 ## Advancement behavior
 

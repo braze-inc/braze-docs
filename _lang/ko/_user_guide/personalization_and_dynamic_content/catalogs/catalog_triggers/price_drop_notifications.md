@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 Braze 카탈로그에서 가격 하락 
 
 # 가격 하락 알림
 
-> Braze 카탈로그와 캔버스를 통한 가격 하락 알림을 결합하여 사용하면 상품의 가격이 하락했을 때 고객에게 알릴 수 있습니다. 고객이 선택한 커스텀 이벤트를 수행할 때마다 항목의 가격이 인하될 때 자동으로 알림을 받을 수 있습니다.
+> Use a combination of price drop notifications through Braze catalogs and a Canvas to notify customers when an item's price has decreased. 고객이 선택한 커스텀 이벤트를 수행할 때마다 항목의 가격이 인하될 때 자동으로 알림을 받을 수 있습니다.<br><br>This page covers how price drop notifications work and how you can set up and use them.
 
 사용자가 항목에 대한 커스텀 이벤트를 트리거하면 해당 항목의 가격 하락 알림을 자동으로 가입합니다. 항목의 가격이 재고 규칙(예: 50% 이상의 하락)을 충족하면 모든 구독자는 캠페인 또는 캔버스를 통해 알림을 받을 수 있습니다. 그러나 알림을 선택한 사용자만 알림을 받게 됩니다. 
 
@@ -32,7 +32,7 @@ description: "이 참조 문서에서는 Braze 카탈로그에서 가격 하락 
     <br> ![카탈로그 설정 서랍.][2]{: style="max-width:70%;"}
     - **대체 카탈로그:** 구독에 사용되는 카탈로그는 커스텀 이벤트에 `catalog_name` 속성이 없는 경우입니다.
     - **구독을 위한 커스텀 이벤트:** Braze 커스텀 이벤트는 사용자가 카탈로그 알림에 가입하도록 사용됩니다. 이 이벤트가 발생하면 이벤트를 수행한 사용자가 구독됩니다.
-    - **구독 취소를 위한 커스텀 이벤트:** Braze 커스텀 이벤트는 사용자를 알림에서 탈퇴시키는 데 사용됩니다.
+    - **구독 취소를 위한 커스텀 이벤트:** Braze 커스텀 이벤트는 사용자를 알림에서 탈퇴시키는 데 사용됩니다. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the price drop event triggers, whichever occurs first.
     - **아이템 ID 이벤트 속성정보:** 위의 커스텀 이벤트에서 구독 또는 구독 취소 항목을 결정하는 데 사용되는 속성입니다. 이 속성은 커스텀 이벤트에 있는 항목 ID를 포함해야 합니다. 커스텀 이벤트에는 이 항목이 속한 카탈로그를 지정하는 `catalog_name` 속성이 포함되어야 합니다.
    
     - 샘플 커스텀 이벤트는 다음과 같습니다

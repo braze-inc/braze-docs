@@ -19,7 +19,7 @@ Linkverkürzung und Klickverfolgung können auf der [Ebene der Nachrichtenvarian
 
 Die Länge der URL hängt von der aktivierten Trackingmethode ab:
 - **Basic Tracking** ermöglicht die Verfolgung von Klicks auf Kampagnenebene. Statische URLs sind 20 Zeichen lang, dynamische 25.
-- **Erweitertes Tracking** ermöglicht Klick-Tracking auf Kampagnen- und Nutzerebene. Klicks erzeugen auch ein [SMS-Klickereignis]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/), das über Currents gesendet wird. Statische URLs mit erweitertem Tracking haben eine Länge von 27-28 Zeichen, so dass Sie Segmente von Benutzern erstellen können, die auf URLs geklickt haben. Dynamische URLs haben eine Länge von 32-33 Zeichen.
+- **Erweitertes Tracking** ermöglicht Klick-Tracking auf Kampagnen- und Nutzerebene. Klicks erzeugen auch ein [SMS-Klickereignis]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), das über Currents gesendet wird. Statische URLs mit erweitertem Tracking haben eine Länge von 27-28 Zeichen, so dass Sie Segmente von Benutzern erstellen können, die auf URLs geklickt haben. Dynamische URLs haben eine Länge von 32-33 Zeichen.
 
 Die Links werden über unsere Shared Short Domain (`brz.ai`) gekürzt. Eine Beispiel-URL könnte etwa so aussehen: `https://brz.ai/8jshX` (einfach, statisch) oder `https://brz.ai/8jshX/2dj8d` (erweitert, dynamisch). Weitere Informationen finden Sie unter [Testen](#testing).
 

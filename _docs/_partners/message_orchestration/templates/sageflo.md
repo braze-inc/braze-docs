@@ -16,7 +16,7 @@ _This integration is maintained by Sageflo._
 
 ## About the integration
 
-Give local teams the tools they need to market smarter, leveraging Braze's sophisticated capabilities including audience segmentation, frequency governance and dynamic content, all while including guardrails for your brand. 
+Give local teams the tools they need to market smarter by leveraging sophisticated capabilities in Braze that include audience segmentation, frequency governance and dynamic content, all while including guardrails for your brand. 
 
 ## Prerequisites
 

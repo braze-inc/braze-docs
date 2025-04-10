@@ -8,9 +8,9 @@ search_rank: 2
 
 # [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Effectuer un appel API
 
-> Utilisez le contenu connecté pour insérer toute information accessible via API directement dans les messages que vous envoyez aux utilisateurs. Vous pouvez extraire du contenu directement à partir de votre serveur Web ou des API accessibles au public.
+> Utilisez le contenu connecté pour insérer toute information accessible par API directement dans les messages que vous envoyez aux utilisateurs. Vous pouvez extraire du contenu directement à partir de votre serveur Web ou des API accessibles au public.<br><br>Cette page explique comment effectuer des appels à l'API du contenu connecté, les cas d'utilisation avancés du contenu connecté, la gestion des erreurs, etc.
 
-## Balise Contenu connecté
+## Envoi d'un appel de contenu connecté
 
 {% raw %}
 
@@ -61,16 +61,16 @@ Si vous pensez que la détection des hôtes malsains peut être à l'origine de 
 Consultez la page [Résolution des problèmes des demandes de webhook et de contenu connecté]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) pour en savoir plus sur la manière de résoudre les codes d'erreur courants.
 {% endalert %}
 
-## Performance
+## Permettre des performances efficaces
 
-Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite de débit que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
+Comme Braze envoie les messages à un rythme très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de l'extraction du contenu. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n'enfreindra pas les limites de débit que le fournisseur de l'API peut appliquer. Braze exige que le temps de réponse du serveur soit inférieur à deux secondes pour des raisons de performance ; si le serveur met plus de deux secondes à répondre, le contenu ne sera pas inséré.
 
 Les systèmes Braze peuvent effectuer le même appel API de contenu connecté plusieurs fois par destinataire. En effet, Braze peut avoir besoin d’un appel API de contenu connecté pour renvoyer une charge utile de message, et les charges utiles de message peuvent être renvoyées plusieurs fois par destinataire pour validation, logique de nouvelle tentative ou autres objectifs internes. Vos systèmes doivent être en mesure de tolérer le même appel de contenu connecté plus qu’une fois par destinataire.
 
 ## Choses à savoir
 
 * Braze ne facture pas les appels à l'API et ceux-ci ne sont pas pris en compte dans le calcul des points de données qui vous sont alloués.
-* Les réponses au contenu connecté sont limitées à 1 Mo.
+* Les réponses au contenu connecté sont limitées à un Mo.
 * Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’application, qui effectueront cet appel lorsque le message est affiché.
 * Les appels de contenu connectés ne suivent pas les redirections.
 
@@ -81,12 +81,12 @@ Les systèmes Braze peuvent effectuer le même appel API de contenu connecté pl
 Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les identifiants d'authentification de base existants et en ajouter de nouveaux à partir de **Paramètres** > **Contenu connecté**.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **contenu connecté** sous **Gérer les paramètres.**
+Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **contenu connecté** sous **Gérer les paramètres.**
 {% endalert %}
 
 ![Les paramètres du "contenu connecté" dans le tableau de bord de Braze.][34]
 
-Pour ajouter un nouvel identifiant, cliquez sur **Ajouter un identifiant**. Nommez vos identifiants et saisissez le nom d’utilisateur et le mot de passe.
+Pour ajouter un nouveau justificatif, sélectionnez **Ajouter un justificatif**. Nommez vos identifiants et saisissez le nom d’utilisateur et le mot de passe.
 
 ![La fenêtre "Create New Credential" (Créer un nouvel identifiant) vous permet de saisir un nom, un nom d'utilisateur et un mot de passe.][35]{: style="max-width:30%" }
 
@@ -115,7 +115,7 @@ Lorsque vous utilisez le contenu connecté de Braze, vous pouvez constater que c
      :headers {
        "X-App-Id": "YOUR-APP-ID",
        "X-App-Token": "YOUR-APP-TOKEN"
-  }
+     }
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -127,7 +127,7 @@ Lorsque vous utilisez le contenu connecté de Braze, vous pouvez constater que c
 
 Certaines configurations API nécessitent la récupération d’un jeton d’accès qui peut ensuite être utilisé pour authentifier l’endpoint API auquel vous souhaitez accéder.
 
-#### Récupérer le jeton d’accès
+#### Étape 1 : Récupérer le jeton d’accès
 
 L’exemple suivant illustre la récupération et l’enregistrement d’un jeton d’accès à une variable locale qui peut ensuite être utilisée pour authentifier l’appel API suivant. Un paramètre `:cache_max_age` peut être ajouté pour correspondre à l’heure à laquelle le jeton d’accès est valide et réduire le nombre d’appels de contenu connecté sortant. Pour plus d'informations, voir [Mise en cache configurable][36].
 
@@ -139,14 +139,14 @@ L’exemple suivant illustre la récupération et l’enregistrement d’un jeto
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
-  }
+     }
      :cache_max_age 900
      :save token_response
 %}
 ```
 {% endraw %}
 
-#### Autoriser l’API à l’aide du jeton d’accès récupéré
+#### Étape 2 : Autoriser l’API à l’aide du jeton d’accès récupéré
 
 Maintenant que le jeton est enregistré, il peut être placé dynamiquement dans l’appel de Contenu connecté suivant pour autoriser la demande :
 
@@ -157,7 +157,7 @@ Maintenant que le jeton est enregistré, il peut être placé dynamiquement dans
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "{{token_response}}"
-  }
+     }
      :body key1=value1&key2=value2
      :save response
 %}

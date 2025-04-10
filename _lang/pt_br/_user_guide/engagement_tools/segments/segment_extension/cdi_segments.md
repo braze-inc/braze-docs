@@ -11,7 +11,7 @@ description: "Este artigo explica como configurar o direcionamento por local, pe
 
 # Segmentos CDI
 
-> Com o Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), é possível configurar uma conexão direta do seu data warehouse ou sistema de armazenamento de arquivos com o Braze para sincronizar dados de usuários ou catálogos relevantes de forma recorrente.
+> Com o Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), é possível configurar uma conexão direta do seu data warehouse ou sistema de armazenamento de arquivos com o Braze para sincronizar dados de usuários ou catálogos relevantes de forma recorrente.
 
 {% alert warning %}
 Esse recurso consulta seu data warehouse diretamente, portanto, você incorrerá em todos os custos associados à execução dessas consultas em seu data warehouse. Os CDI Segments não consomem [créditos de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), não contam para o limite de extensão de segmento e não consomem pontos de dados.
@@ -19,13 +19,13 @@ Esse recurso consulta seu data warehouse diretamente, portanto, você incorrerá
 
 ## Pré-requisitos
 
-Para usar os dados do data warehouse para segmentação no espaço de trabalho do Braze, você precisará criar uma [fonte conectada]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) e, em seguida, criar um segmento CDI nas [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Os segmentos CDI permitem escrever consultas de SQL que consultam diretamente seu próprio data warehouse usando dados disponibilizados por meio de suas conexões CDI e criam um grupo de usuários que podem ser direcionados no Braze.
+Para usar os dados do data warehouse para segmentação no espaço de trabalho do Braze, você precisará criar uma [fonte conectada]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) e, em seguida, criar um segmento CDI nas [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Os segmentos CDI permitem escrever consultas de SQL que consultam diretamente seu próprio data warehouse usando dados disponibilizados por meio de suas conexões CDI e criam um grupo de usuários que podem ser direcionados no Braze.
 
 ## Criação de um segmento CDI
 
 ### Etapa 1: Configure sua fonte
 
-Antes de criar seu primeiro segmento CDI, configure uma nova fonte conectada com seu data warehouse seguindo as etapas em [Fontes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
+Antes de criar seu primeiro segmento CDI, configure uma nova fonte conectada com seu data warehouse seguindo as etapas em [Fontes conectadas]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
 
 ### Etapa 2: Criar um segmento
 

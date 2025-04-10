@@ -98,7 +98,7 @@ If a user is in a suppression list, they will still enter the Canvas but won't b
 
 For a segment to not be entered into a Canvas **at all**, you can configure that Canvas' Target settings to exclude that segment by following these steps:
 
-1. Build a segment using the same filters and criteria as your supression list.
+1. Build a segment using the same filters and criteria as your suppression list.
 2. In the **Target** step, use the **Segment Membership** filter to target users who aren't included in your segment.
 
 For example, let’s say you have a Canvas with an applied suppression list. The Canvas has a User Update step followed by a Message step. In this scenario, suppression list users will enter the Canvas, proceed through the User Update step (where the user may be updated, based on how that step is configured), and then exit at the Message step (at which point the user will be included in the “Exited” metrics). 

@@ -54,7 +54,7 @@ This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Da
 
 Celebrus captures and assigns unique identifiers to an individual such as email, phone, `external_id`or user alias and sends to Braze via CDI. This allows data to be synced to Braze for the same individual.
 
-Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that attribute names will be as defined in the Celebrus profile builder, so the attributes in Braze will mirror those in the Celebrus profile. These may need to be adjusted to conform to Braze naming conventions. For example, conforming to Braze's [standard attribute naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/).  
+Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that the attribute names defined in the Celebrus profile builder will be used in Braze by default. So be sure you update these names to adhere to [Braze naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
 {% alert important %}
 For now, this release doesn't support events and purchases.<br><br> This integration sends attributes as string values, so some attributes are lists (such as signals). For now, lists can't be converted to arrays. There are no nested attributes.

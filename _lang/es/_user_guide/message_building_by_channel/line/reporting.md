@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > Después de lanzar tu campaña o Canvas, puedes ver las métricas clave en la página de detalles de la campaña o en las analíticas de Canvas. Este artículo explica dónde puedes encontrar esas métricas y qué representan.
 
 {% alert tip %}
-¿Busca definiciones para los términos y métricas de su informe? Consulte el [glosario de métricas del informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+¿Busca definiciones para los términos y métricas de su informe? Consulte el [glosario de métricas del informe]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Análisis de campañas
@@ -34,7 +34,7 @@ Revise este panel para ver métricas generales como el número de mensajes envia
 
 #### Grupos de control
 
-Para medir el impacto de un mensaje LINE individual, puede añadir un [grupo de control]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) a una prueba A/B. El panel de **detalles de campaña** de nivel superior no incluye métricas de la variante Grupo de control.
+Para medir el impacto de un mensaje LINE individual, puede añadir un [grupo de control]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) a una prueba A/B. El panel de **detalles de campaña** de nivel superior no incluye métricas de la variante Grupo de control.
 
 ### Rendimiento de LINE
 
@@ -46,7 +46,7 @@ Si desea simplificar la vista, seleccione **\+ Añadir/Eliminar columnas** y bor
 
 #### Métrica LINE
 
-Estas son algunas de las métricas clave de LINE que puede ver en sus análisis. Para ver las definiciones de todas las métricas LINE utilizadas en Braze, consulte el [glosario de métricas de informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Estas son algunas de las métricas clave de LINE que puede ver en sus análisis. Para ver las definiciones de todas las métricas LINE utilizadas en Braze, consulte el [glosario de métricas de informes]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Plazo | Definición |
 | --- | --- |

@@ -18,9 +18,9 @@ tool: Campaigns
 
 ## 캠페인을 다른 워크스페이스로 복사하는 방법
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu with "Copy to workspace" option.][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-선택한 캠페인 옆의 <i class="fas fa-cog"></i> 톱니바퀴 아이콘을 선택하고 **워크스페이스에 복사를** 선택합니다. 복사한 후에는 캠페인을 검토하고 테스트하여 모든 필드가 제대로 작동하는지 확인하는 것이 좋습니다.
+Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to workspace**. 복사한 후에는 캠페인을 검토하고 테스트하여 모든 필드가 제대로 작동하는지 확인하는 것이 좋습니다.
 
 워크스페이스 간에 캠페인을 복사하면 캠페인 이름 및 설명, 배리언트, 전달 일정 유형 및 전환 행동과 같은 필드가 복사됩니다. 이메일 캠페인의 경우 이메일 본문, 제목, 프리헤더와 같은 필드도 대상 워크스페이스로 복사됩니다. 
 
@@ -154,6 +154,10 @@ Liquid 참조가 포함된 메시지 본문의 경우 참조가 대상 워크스
 - 바우처 및 프로모션 태그
 
 워크스페이스 간에 캠페인을 복사하는 경우 콘텐츠 블록은 복사되지 않습니다. 그러나 같은 이름의 블록이 있는 경우 대상 워크스페이스에서 콘텐츠 블록을 참조할 수 있습니다. 또는 대상 워크스페이스에서 콘텐츠 블록(또는 이러한 Liquid 참조)을 생성하여 캠페인을 시작할 때 오류를 방지할 수 있습니다.
+
+### Copying campaigns with feature flags
+
+To copy a feature flag campaign between workspaces, make sure the destination workspace has a [feature flag experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) configured with an ID that matches the feature flag referenced in the original campaign. If you copy a campaign but a matching feature flag ID doesn't exist in the destination workspace, the feature flag selection in the campaign will be blank when copied, and you'll have to select a different one.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

@@ -22,7 +22,7 @@ Se você selecionou **Sem otimização** ao configurar sua campanha, sua exibiç
 
 ![Seção Performance da análise de dados da campanha para uma campanha de e-mail com várias variantes. A tabela lista várias métricas de performance para cada variante, como destinatários, bounces, cliques e conversões.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-Para obter mais informações, consulte o artigo sobre [análise de dados da campanha]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) para seu canal de envio de mensagens.
+Para obter mais informações, consulte o artigo sobre [análise de dados da campanha]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) para seu canal de envio de mensagens.
 
 ### Variante vencedora
 
@@ -127,7 +127,7 @@ A tabela nesta página mostra as métricas de cada variante do envio de variante
 A confiança é a medida estatística da certeza que temos de que uma diferença nos dados, como taxas de conversão, é real e não se deve apenas ao acaso.
 
 {% alert note %}
-Não está confiando em seus resultados? A confiança só aparecerá se você tiver selecionado **Winning Variant** ou **Personalized Variant** como uma otimização.
+Não está confiando em seus resultados? A confiança só aparecerá se você tiver um grupo de controle.
 {% endalert %}
 
 É muito importante confiar em seus resultados. Por exemplo, e se o grupo de controle tivesse uma taxa de conversão de 20% e a variante A tivesse uma taxa de conversão de 25%? Isso parece indicar que o envio da Variante A é mais eficaz do que não enviar nenhuma mensagem. Ter uma confiança de 95% significa que a diferença entre as duas taxas de conversão provavelmente se deve a uma diferença real nas respostas dos usuários e que há apenas 5% de probabilidade de que a diferença tenha ocorrido por acaso.
@@ -183,4 +183,4 @@ Use os insights obtidos em testes anteriores para orientar seus testes futuros. 
 
 #### Comparar o impacto de longo prazo de diferentes variantes
 
-Se estiver fazendo testes A/B com mensagens de reengajamento, não se esqueça de comparar o impacto de longo prazo de diferentes variantes usando [os Relatórios de retenção]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). É possível usar os Relatórios de retenção para analisar como cada variante afetou o comportamento de qualquer usuário de sua escolha dias, semanas, um mês após o recebimento da mensagem, e ver se há aumento.
+Se estiver fazendo testes A/B com mensagens de reengajamento, não se esqueça de comparar o impacto de longo prazo de diferentes variantes usando [os Relatórios de retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/). É possível usar os Relatórios de retenção para analisar como cada variante afetou o comportamento de qualquer usuário de sua escolha dias, semanas, um mês após o recebimento da mensagem, e ver se há aumento.

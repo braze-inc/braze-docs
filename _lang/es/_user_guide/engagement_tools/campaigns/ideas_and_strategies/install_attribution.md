@@ -27,7 +27,7 @@ Ahora que tienes más información sobre tu usuario, puedes personalizar su proc
 
 ### Datos de referencia del anuncio
 
-Los usuarios pueden ser atraídos a su aplicación por una oferta promocional o un sorteo. El uso de datos de atribución de instalación le permite enviar campañas que contengan códigos de descuento u ofertas sólo a los usuarios que se instalaron gracias a estas promociones. Del mismo modo, si su anuncio contiene información sobre un producto concreto (como una película específica en una aplicación de vídeo o una venta en una aplicación de comercio electrónico), puede enviar campañas que dirijan a los usuarios a la página correcta de su aplicación.
+Los usuarios pueden ser atraídos a su aplicación por una oferta promocional o un sorteo. El uso de datos de atribución de instalación le permite enviar campañas que contengan códigos de descuento u ofertas sólo a los usuarios que se instalaron gracias a estas promociones. De forma similar, si tu anuncio contiene información sobre un producto concreto (como una película específica en una aplicación de video o una venta en una aplicación de comercio electrónico), puedes enviar campañas que dirijan a los usuarios a la página correcta de tu aplicación.
 
 ## Evaluar los esfuerzos publicitarios
 

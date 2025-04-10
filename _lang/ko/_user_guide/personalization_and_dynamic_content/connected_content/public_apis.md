@@ -7,12 +7,12 @@ description: "이 문서에서는 연결된 콘텐츠에 사용할 수 있는 �
 
 # 공개 API
 
-> 연결된 콘텐츠에 사용할 수 있는 공개적으로 사용 가능한 다양한 API가 있습니다. 공개 API를 사용하면 메시지에 사용자 지정 데이터를 삽입할 수 있습니다. 연결된 콘텐츠에 사용할 수 있는 공개 API 목록을 정리해 보았습니다. 그러나 더 많은 API를 통해 다양한 잠재적 연결된 콘텐츠 용도를 제공할 수 있습니다.  
+> 연결된 콘텐츠에 사용할 수 있는 공개적으로 사용 가능한 다양한 API가 있습니다. 공개 API를 사용하면 메시지에 사용자 지정 데이터를 삽입할 수 있습니다. This page compiles a list of public APIs that could be used for Connected Content. 그러나 더 많은 API를 통해 다양한 잠재적 연결된 콘텐츠 용도를 제공할 수 있습니다.  
 
 공유할 API가 있다면 [success@braze.com](mailto:success@braze.com)로 문의해 주세요!
 
 {% alert note %}
-퍼블릭 API는 사용 제한 및 요금 제한이 적용될 수 있습니다.  API 설명서를 읽고 사용 목적에 대해 API 제공업체에 문의하세요.
+퍼블릭 API는 사용 제한 및 요금 제한이 적용될 수 있습니다. API 설명서를 읽고 사용 목적에 대해 API 제공업체에 문의하세요.
 {% endalert %}
 
 ## 뉴스 및 정보

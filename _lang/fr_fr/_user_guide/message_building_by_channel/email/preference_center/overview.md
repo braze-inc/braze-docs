@@ -85,7 +85,7 @@ Pour identifier vos centres de préférences, utilisez le [point de terminaison 
 
 ## Personnalisation
 
-Braze gère les mises à jour du statut d’abonnement depuis le centre de préférences, ce qui le garde synchronisé. Cependant, vous pouvez également créer et héberger votre propre centre de préférences en utilisant les [API des groupes d'abonnement]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) avec les options suivantes.
+Braze gère les mises à jour du statut d’abonnement depuis le centre de préférences, ce qui le garde synchronisé. Cependant, vous pouvez également créer et héberger votre propre centre de préférences en utilisant les [API des groupes d'abonnement]({{site.baseurl}}/api/endpoints/subscription_groups/) avec les options suivantes.
 
 ### Option 1 : Lien avec des paramètres de requête sous forme de chaîne de caractères
 

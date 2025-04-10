@@ -35,6 +35,10 @@ First, to export users from Amplitude to Braze, create a [cohort](https://help.a
 
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
+{% alert important %}
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+{% endalert %}
+
 #### Defining sync cadence
 
 Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/data/data_points/).
