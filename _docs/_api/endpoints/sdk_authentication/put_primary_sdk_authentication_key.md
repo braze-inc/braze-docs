@@ -14,7 +14,7 @@ description: "This article outlines details about the Set primary SDK Authentica
 /app_group/sdk_authentication/primary
 {% endapimethod %}
 
-> Use this endpoint to mark an SDK Authentication key as the primary key for your app.
+> Use this endpoint to set an SDK Authentication key as the primary key for your app.
 
 ## Prerequisites
 
