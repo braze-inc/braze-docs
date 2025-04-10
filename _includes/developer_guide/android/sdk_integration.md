@@ -67,7 +67,9 @@ class MyApplication : Application() {
 
 See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
-### Step 4: Enable location tracking
+## Optional configurations
+
+### Location tracking
 
 To enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
 
@@ -79,7 +81,7 @@ To enable Braze location collection, update your `braze.xml` file to include `co
 Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
-### Step 5: Test session tracking (optional)
+### Test session tracking
 
 {% alert tip %}
 You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
@@ -92,8 +94,6 @@ If you experience issues while testing, enable [verbose logging](#android_enabli
 2. Open your app, then refresh the Braze dashboard. Verify that your metrics have increased by 1.
 3. Navigate through your app and verify that only one session has been logged to Braze.
 4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
-
-## Optional configurations
 
 ### Google Advertising ID
 
@@ -181,14 +181,14 @@ BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 
 Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded.
 
-| Constant    | Value          | Description                                                               |
-|-------------|----------------|---------------------------------------------------------------------------|
-| `VERBOSE`   | 2              | Logs the most detailed messages for debugging and development.            |
-| `DEBUG`     | 3              | Logs descriptive messages for debugging and development.                  |
-| `INFO`      | 4              | Logs informational messages for general highlights.                       |
-| `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
-| `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
-| `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
+| Constant    | Description                                                               |
+|-------------|---------------------------------------------------------------------------|
+| `VERBOSE`   | Logs the most detailed messages for debugging and development.            |
+| `DEBUG`     | Logs descriptive messages for debugging and development.                  |
+| `INFO`      | Logs informational messages for general highlights.                       |
+| `WARN`      | Logs warning messages for identifying potentially harmful situations.     |
+| `ERROR`     | Logs error messages for indicating application failure or serious issues. |
+| `ASSERT`    | Logs assertion messages when conditions are false during development.     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
@@ -217,14 +217,14 @@ To enable logs in the `braze.xml`, add the following to your file:
 
 Replace `MIN_LOG_LEVEL` with the **Value** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded.
 
-| Constant    | Value          | Description                                                               |
-|-------------|----------------|---------------------------------------------------------------------------|
-| `VERBOSE`   | 2              | Logs the most detailed messages for debugging and development.            |
-| `DEBUG`     | 3              | Logs descriptive messages for debugging and development.                  |
-| `INFO`      | 4              | Logs informational messages for general highlights.                       |
-| `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
-| `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
-| `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
+| Constant    | Description                                                               |
+|-------------|---------------------------------------------------------------------------|
+| `VERBOSE`   | Logs the most detailed messages for debugging and development.            |
+| `DEBUG`     | Logs descriptive messages for debugging and development.                  |
+| `INFO`      | Logs informational messages for general highlights.                       |
+| `WARN`      | Logs warning messages for identifying potentially harmful situations.     |
+| `ERROR`     | Logs error messages for indicating application failure or serious issues. |
+| `ASSERT`    | Logs assertion messages when conditions are false during development.     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
@@ -245,7 +245,7 @@ To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhe
 
 #### Suppressing logs
 
-The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
+To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
 
 {% tabs local %}
 {% tab JAVA %}
@@ -265,7 +265,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 
 The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
-To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. By default, new Android projects are configured with [`debug` and `release` build types](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types) and no product flavors.
+To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. By default, new Android projects are configured with [`debug` and `release` build types](https://developer.android.com/reference/tools/gradle-api/8.3/null/com/android/build/api/dsl/BuildType) and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` in the `src/<build variant name>/res/values/` directory. When the build variant is compiled, it will use the new API key.
 
