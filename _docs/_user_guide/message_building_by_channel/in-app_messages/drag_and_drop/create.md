@@ -131,11 +131,12 @@ Users can select the close X button to exit the message at any time. This button
 
 ## Step 4: Build and design your in-app message
 
-Here's where your message gets to strut down the runway, dressed in your brand's signature style. Using a combination of editor blocks and style settings, you can customize and design your in-app message.
+Here's where your message gets to strut down the runway, dressed in your brand's signature style. Using a combination of editor blocks and style settings, you can customize and design your in-app message. Check out these resources as your build your message:
 
-- For a list of available editor blocks and their properties, refer to [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
-- For help customizing the look and feel of your message, check out [Style settings]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
+- [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/): A list of available editor blocks and their properties
+- [Style settings]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/): How to customize the look and feel of your message
+- [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/): Best practices for creating right-to-left messages
+- [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility/): Accessibility best practices and considerations
 
 ## Step 5: Test your in-app message
 
