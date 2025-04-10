@@ -101,11 +101,52 @@ Depending on individual needs, these users rely on:
 
 ### Content
 
-- Keep your content on brand, but use plain language. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
-- Structure your content logically, and make sure headings follow the correct hierarchy. Don't skip heading levels.
-- Avoid center-aligned text for long chunks of content. This can be difficult for users with cognitive or learning disabilities to read. Content that wraps to more than two lines should be aligned left.
-- Use sans-serif fonts, which are easier to read on digital devices.
-- Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+#### Write short, clear sentences
+Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
+
+#### Break your content into sections
+Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. Clearly describe each section to help readers navigate easily and understand the content structure.
+
+#### Don't skip heading levels
+
+Headings give your content structure, helping readers quickly understand how sections relate to each other. When you skip heading levels (for example, jumping straight from an H2 to an H4), you break this logical structure. This makes it harder for users, especially those using screen readers, to navigate and understand your message clearly.
+
+Always follow a logical, sequential hierarchy of headings (H1 to H2 to H3, and so on) to make sure your content stays organized, accessible, and easy for everyone to follow.
+
+#### Avoid justified text
+Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for right-to-left languages.
+
+#### Give your text room to breathe
+Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
+
+#### Use bold, italic, and uppercase text sparingly
+Emphasizing too much text makes reading difficult—especially for people with dyslexia or visual impairments. Keep it simple.
+
+#### Clearly label links and buttons
+Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
+
+#### Don’t rely on color alone to communicate
+Color is great, but pair it with clear text labels or symbols so no one misses important information.
+
+#### Go easy on symbols and emojis
+Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
+
+#### Test for truncation
+Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+
+
+<!--
+- **Write short, clear sentences.** Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
+- **Break your content into sections.** Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. Don't skip heading levels.
+- **Use simple, descriptive headings.** Clearly describe each section to help readers navigate easily and understand the content structure.
+- **Avoid justified text.** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Content that wraps to more than two lines should be aligned left for left-to-right languages aligned right for right-to-left languages.
+- **Give your text room to breathe.** Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
+- **Use bold, italic, and uppercase text sparingly.** Emphasizing too much text makes reading difficult—especially for folks with dyslexia or visual impairments. Keep it simple.
+- **Clearly label links and buttons.** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
+- **Don’t rely on color alone to communicate.** Color is great, but pair it with clear text labels or symbols so no one misses important information.
+- **Go easy on symbols and emojis.** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
+- **Test for truncation.** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+-->
 
 ### Buttons
 

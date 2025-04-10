@@ -9,15 +9,15 @@ page_order: 3
 
 > The drag-and-drop editing experience is divided into two sections: **Build** and **Preview & Test**. This article covers what you need to know for working within the **Build** tab of the editor and assumes you've already [created an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
-![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
-
 ## Message-level styles
 
 You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
 
+![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+
 The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width.
 
-For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level.
+For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level. Remember to consider [accessibility]({{site.baseurl}}/help/accessibility/) when setting your message-level styles to help your content stay inclusive and usable by everyone.
 
 To return to the **Message Styles** tab at any time:
 
