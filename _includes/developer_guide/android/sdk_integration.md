@@ -1,34 +1,42 @@
 ## Integrating the Android SDK
 
-### Add Braze to `build.gradle`
+### Step 1: Update your `build.gradle`
 
-Add the following code to your `build.gradle`:
+In your `build.gradle`, add `mavenCentral()` to your list of repositories.
 
-```
+```kotlin
 repositories {
   mavenCentral()
 }
 ```
 
-Next, add the library which you wish to use to your `app/build.gradle`:
+Next, add Braze to your dependencies.
 
-```
+{% tabs local %}
+{% tab base only %}
+If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `CURRENT_SDK_VERSION` with the THIS:
+
+```kotlin
 dependencies {
-    implementation 'com.braze:android-sdk-base:CURRENT_SDK_VERSION'
+    implementation 'com.braze:android-sdk-base:CURRENT_SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
+    implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endtab %}
 
-If you will be using any Braze UI components, instead add:
+{% tab with ui components %}
+If you plan on using Braze UI components later, add the following code to your `build.gradle`. Replace `CURRENT_SDK_VERSION` with the THIS:
 
-```
+```kotlin
 dependencies {
-    implementation 'com.braze:android-sdk-ui:CURRENT_SDK_VERSION'
+    implementation 'com.braze:android-sdk-ui:CURRENT_SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-If you will be using Braze location services, additionally add `implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION'`.
-
-### Step 2: Configure `braze.xml`
+### Step 2: Configure your `braze.xml`
 
 {% alert note %}
 As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
@@ -61,9 +69,9 @@ With the release of Android M, Android switched from an install-time to a runtim
 
 ### Step 4: Enable user session tracking
 
-Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration are optionally handled automatically.
+When you enable user session tracking, calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration can be handled automatically.
 
-To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class:
+To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class. 
 
 {% tabs local %}
 {% tab JAVA %}
@@ -90,10 +98,10 @@ class MyApplication : Application() {
 }
 ```
 
+For the list of available parameters, see [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
+
 {% endtab %}
 {% endtabs %}
-
-See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
 ## Testing session tracking
 
@@ -110,18 +118,6 @@ If you experience issues while testing, enable [verbose logging](#android_enabli
 4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
 
 ## Optional configurations
-
-### Location tracking
-
-To enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
-
-```xml
-<bool name="com_braze_enable_location_collection">true</bool>
-```
-
-{% alert important %}
-Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
-{% endalert %}
 
 ### Google Advertising ID
 
@@ -173,6 +169,19 @@ suspend fun fetchAndSetAdvertisingId(
 
 {% alert important %}
 Google requires the Advertising ID to be collected on a non-UI thread.
+{% endalert %}
+
+
+### Location tracking
+
+To enable Braze location collection, set `com_braze_enable_location_collection` to `true` in your `braze.xml` file:
+
+```xml
+<bool name="com_braze_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
 ### Logging
@@ -308,7 +317,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 {% endalert %}
 
-### Enable exclusive in-app message TalkBack
+### Exclusive in-app message TalkBack
 
 In adherence to the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility), the Braze Android SDK offers Android Talkback by default. To ensure that only the contents of in-app messages are read out loud—without including other screen elements like the app title bar or navigation—you can enable exclusive mode for TalkBack.
 
