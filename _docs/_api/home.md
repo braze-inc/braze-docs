@@ -54,6 +54,7 @@ glossary_tags:
   - name: User Data
   - name: Live Activity
   - name: Cloud Data Ingestion
+  - name: SDK Authentication
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
