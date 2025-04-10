@@ -78,6 +78,9 @@ From the base repository dropdown, choose **braze-inc/braze-docs**, then select 
 
 ![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %})
 
+{% alert important %}
+If `braze-inc/braze-docs` is missing from the list of available base branches, there may be an issue with the origin of your forked repository. For detailed information, see [Troubleshooting]({{site.baseurl}}/contributing/troubleshooting/#missing-base-repository).
+{% endalert %}
 {% endtab %}
 
 {% tab local environment %}
