@@ -5,7 +5,7 @@ description: "This reference article outlines how to set up Shopify after integr
 page_type: partner
 search_tag: Partner
 alias: "/shopify_subscription_states/"
-alias: "/setting_up_shopify/"
+alias: "/setting_up_shopify_legacy/"
 page_order: 2
 ---
 
