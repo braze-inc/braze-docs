@@ -1,16 +1,20 @@
 ---
-nav_title: Use Cases
-article_title: "Shopify Use Cases in Braze"
-description: "This reference article outlines common beginner and advanced Shopify use cases."
+nav_title: Use Cases (Legacy)
+article_title: "Shopify Use Cases in Braze (Legacy)"
+description: "This reference article outlines common beginner and advanced legacy Shopify use cases."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_use_cases_legacy/"
 page_order: 2
 ---
 
-# Use cases
+# Shoipfy use cases in Braze (legacy)
 
 > Interested in seeing how you can leverage your Shopify integration to create timely and effective messaging for your users? Refer to the following sections on common [beginner](#beginner) and [advanced](#advanced) use cases to learn more!
+
+{% alert important %}
+A new version of the Shopify integration will be released in phases starting April, based on the type of Shopify store and the external ID used to set up the initial integration. <br><br>**The older version of the integration will be deprecated on August 28, 2025. You must update to the newer version of the integration before August 28, 2025.**<br><br>**New Braze customers:** Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/).<br><br>**Existing Braze customers:** Starting in February 2025, we will contact you with an upgrade guide to help you transition to the newer Shopify integration.  We will organize customers into groups (cohorts) based on your Shopify store and how you use Braze external IDs to facilitate a smooth and personalized upgrade experience. You will be notified when your cohort is ready to upgrade.<br><br>**Upgrading to this newer version will cause breaking changes.** You will be guided through a review process on the Braze dashboard to help you and your development team address these changes before you upgrade.
+{% endalert %}
 
 ## Beginner
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Shopify Overview
-article_title: "Shopify Overview"
+nav_title: Shopify Overview (Legacy)
+article_title: "Shopify Overview (Legacy)"
 description: "This reference article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze cross-channel strategies and Canvas to nudge customers to complete their purchases or retarget users based on their previous purchases."
 page_type: partner
 search_tag: Partner
@@ -8,12 +8,11 @@ alias: /shopify_overview_legacy/
 page_order: 0
 ---
 
-# Shopify overview
+# Shopify overview (legacy)
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
 The Shopify and Braze integration allows you to connect your Shopify store to seamlessly pass your Shopify data into Braze. You can leverage cross-channel strategies and Canvas in Braze to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchases.
-
 
 {% alert important %}
 A new version of the Shopify integration will be released in phases starting April, based on the type of Shopify store and the external ID used to set up the initial integration. <br><br>**The older version of the integration will be deprecated on August 28, 2025. You must update to the newer version of the integration before August 28, 2025.**<br><br>**New Braze customers:** Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/).<br><br>**Existing Braze customers:** Starting in February 2025, we will contact you with an upgrade guide to help you transition to the newer Shopify integration.  We will organize customers into groups (cohorts) based on your Shopify store and how you use Braze external IDs to facilitate a smooth and personalized upgrade experience. You will be notified when your cohort is ready to upgrade.<br><br>**Upgrading to this newer version will cause breaking changes.** You will be guided through a review process on the Braze dashboard to help you and your development team address these changes before you upgrade.
