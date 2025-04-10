@@ -16,6 +16,10 @@ description: "This article outlines details about the Set primary SDK Authentica
 
 > Use this endpoint to mark an SDK Authentication key as the primary key for your app.
 
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sdk_authentication.primary` permission.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -16,6 +16,10 @@ description: "This article outlines details about the List SDK Authentication ke
 
 > Use this endpoint to retrieve all SDK Authentication keys for your app.
 
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sdk_authentication.keys` permission.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

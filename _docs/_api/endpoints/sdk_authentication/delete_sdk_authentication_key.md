@@ -20,6 +20,10 @@ description: "This article outlines details about the Delete SDK Authentication 
 The primary key can't be deleted. If you attempt to delete the primary key, this endpoint will return an error.
 {% endalert %}
 
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sdk_authentication.delete` permission.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
