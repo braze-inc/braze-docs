@@ -81,7 +81,7 @@ To enable Braze location collection, update your `braze.xml` file to include `co
 Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
-### Test session tracking
+## Testing session tracking
 
 {% alert tip %}
 You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
