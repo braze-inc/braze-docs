@@ -60,8 +60,6 @@ This resets eligibility for people who already received the original campaign, s
 
 Drafts are great for making large-scale changes to active campaigns. By creating a draft, you're able to pilot planned changes before your next launch.
 
-![A draft of an active campaign with an option to view the active campaign.]({% image_buster /assets/img/campaign_draft.png %})
-
 {% alert note %}
 A campaign can only have one draft at a time. Additionally, analytics aren't available since the drafted changes haven't been launched yet.
 {% endalert %}
