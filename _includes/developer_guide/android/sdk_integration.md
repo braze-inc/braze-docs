@@ -81,7 +81,6 @@ If you experience issues while testing, enable [verbose logging](#android_enabli
 3. Navigate through your app and verify that only one session has been logged to Braze.
 4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
 
-
 ## Optional configurations
 
 ### Location tracking
