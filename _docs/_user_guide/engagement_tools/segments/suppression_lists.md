@@ -23,15 +23,14 @@ Suppression lists are dynamic and automatically apply to certain forms of messag
 ### Messages not affected by suppression lists
 
 As part of the beta, suppression lists will not apply to the following message types (in other words, suppression list users **will still** receive messages that belong to the following):
-- Feature Flags
-- Transactional use cases
-- API campaigns
-- Campaigns triggered by the Braze API (`/messages` and `/send`)
+- [Feature Flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/)
+- [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
+- [API campaigns]({{site.baseurl}}/api/api_campaigns/)
 
 You don't need to add an exception tag for any of these use cases, as suppression lists automatically won't apply to them. To exclude a group of users from a message within these use cases, you need to create a target segment that excludes these users.
 
 {% alert important %}
-During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional use cases.
+During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional emails.
 {% endalert %}
 
 ### Channels affected by suppression lists
