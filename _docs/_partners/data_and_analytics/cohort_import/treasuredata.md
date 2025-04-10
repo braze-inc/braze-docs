@@ -2,7 +2,7 @@
 nav_title: Treasure Data
 article_title: Treasure Data Cohort Import
 description: "This reference article outlines the cohort import functionality of Treasure Data."
-alias: /partners/treasure_data/
+alias: /partners/treasure_data_cohort_import/
 page_type: partner
 search_tag: Partner
 

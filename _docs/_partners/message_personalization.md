@@ -57,4 +57,34 @@ valid_partner_list:
   url: /docs/partners/wyng/
 - name: Yotpo
   url: /docs/partners/yotpo/
+- name: Crowdin
+  url: /docs/partners/crowdin/
+- name: Lokalise
+  url: /docs/partners/lokalise/
+- name: Phrase  
+  url: /docs/partners/phrase/
+- name: Smartling
+  url: /docs/partners/smartling/
+- name: Tangerine
+  url: /docs/partners/tangerine/
+- name: Transifex
+  url: /docs/partners/transifex/
+- name: AccuWeather
+  url: /docs/partners/accuweather/
+- name: Bluedot
+  url: /docs/partners/bluedot/
+- name: Foursquare
+  url: /docs/partners/foursquare/
+- name: Infillion
+  url: /docs/partners/infillion/
+- name: loplat
+  url: /docs/partners/loplat/
+- name: Radar
+  url: /docs/partners/radar/
+- name: Extole
+  url: /docs/partners/extole/
+- name: Friendbuy
+  url: /docs/partners/friendbuy/
+- name: ViralSweep
+  url: /docs/partners/viralsweep/
 ---
