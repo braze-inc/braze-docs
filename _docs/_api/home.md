@@ -47,6 +47,7 @@ glossary_tags:
   - name: Preference Center
   - name: Schedule Messages
   - name: SCIM
+  - name: SDK Authentication
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -54,7 +55,6 @@ glossary_tags:
   - name: User Data
   - name: Live Activity
   - name: Cloud Data Ingestion
-  - name: SDK Authentication
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
