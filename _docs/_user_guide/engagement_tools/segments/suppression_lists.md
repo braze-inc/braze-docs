@@ -97,7 +97,7 @@ While creating a campaign or Canvas, use **User Lookup** within the **Target Aud
 {% tab campaign %}
 If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Messages not affected by suppression lists](#messages-not-affected-by-suppression-lists) for cases when a suppression list won't apply.
 
-![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".][5]
+![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".]({% image_buster /assets/img/active_suppression_list.png %})
 {% endtab %}
 {% tab canvas %}
 If a user is in a suppression list, they will still enter the Canvas but won't be able to receive Message steps within the Canvas. When they advance to a Message step, they will be exited from the Canvas. However, a user in a suppression list is still able to receive non-Message steps prior to a Message step. 
@@ -112,10 +112,10 @@ For a segment to not be entered into a Canvas **at all**, you can configure that
 For example, let’s say you have a Canvas with an applied suppression list. The Canvas has a User Update step followed by a Message step. In this scenario, suppression list users will enter the Canvas, proceed through the User Update step (where the user may be updated, based on how that step is configured), and then exit at the Message step (at which point the user will be included in the “Exited” metrics). 
 {% endtab %}
 {% endtabs %}
+
 [1]: {% image_buster /assets/img/suppression_lists_home.png %}
 [2]: {% image_buster /assets/img/create_suppression_list.png %}
 [3]: {% image_buster /assets/img/suppression_list_filters.png %}
 [4]: {% image_buster /assets/img/exception_tags.png %}
-[5]: {% image_buster /assets/img/active_suppression_list.png %}
 [6]: {% image_buster /assets/img/suppression_list_checkbox.png %}
 [7]: {% image_buster /assets/img/suppression_list_user_lookup.png %}
