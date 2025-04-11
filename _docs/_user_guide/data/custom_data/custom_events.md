@@ -51,6 +51,14 @@ You can add a description to a custom event after it's created if you have the `
 
 You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events.
 
+### Entitlements
+
+Braze will limit the number of custom events that can be created in each workspace in your account. Typically, the maximum capacity is 2,000 custom events per workspace, but may be increased upon request. Please reach out to your account team for more details.
+
+If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
+
+When a workspace has too many custom events, no new events may be created, and Braze will ignore any data received for custom events that do not already exist. (However, existing custom events may still be received.) As a courtesy, Braze will provide a reasonable buffer to customers who exceed their entitlement, with the goal of preventing data loss.
+
 ### Viewing usage reports
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
