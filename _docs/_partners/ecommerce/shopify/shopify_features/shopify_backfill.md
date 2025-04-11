@@ -1,16 +1,18 @@
 ---
-nav_title: "Shopify Historical Backfill"
-article_title: "Shopify Historical Backfill"
-alias: "/shopify_historical_backfill_legacy/"
-description: "This reference article outlines how to set up Shopify historical backfill, including risks and supported data."
+nav_title: "Shopify Historical Backfill (Legacy)"
+article_title: "Shopify Historical Backfill (Legacy)"
+alias: "/shopify_historical_backfill/"
+description: "This reference article outlines how to set up the legacy Shopify historical backfill, including risks and supported data."
 page_type: partner
 search_tag: Partner
 page_order: 1
 ---
 
-# Shopify Historical Backfill 
+# Shopify Historical Backfill (legacy) 
 
 > The Shopify Historical Backfill feature allows brands to sync over customers and purchase data in an automated and seamless way, so you can immediately start engaging with one of your most valuable segments – purchasers. 
+
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 As part of this backfill, Braze will import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection. Note that this feature is ideal for newer customers that don't have any active messages running, given the implications explained in the next section. This feature will also count toward your data point usage.
 

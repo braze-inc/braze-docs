@@ -282,6 +282,28 @@ $(document).ready(function() {
   scrollHandler();
   $(window).scroll(scrollHandler);
 
+  // See if sdk tabs should be changed based on url hash
+  const sdk_hash = $(window.location.hash);
+  if (sdk_hash.is(':header')) {
+    const sdk_el = sdk_hash.closest("[data-sdk-tab]");
+    let sdk_tab = sdk_el.attr('data-sdk-tab');
+    // add sdk tab to query header
+    if (sdk_tab) {
+      sdk_tab = sdk_tab.replace('sdk-','');
+      let tab_replace = {
+        'sdktab': sdk_tab
+      };
+      let query_str = replaceParams(window.location.search, tab_replace, true) + '#' + sdk_hash.attr('id');
+      if (window.location.pathname.substr(-1) != '/')  {
+        window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
+      }
+      else {
+        window.history.replaceState(null, null,  window.location.pathname + query_str);
+      }
+    }
+  }
+
+
   function setTabState(curtab, query_name = 'tab'){
     let tab_norm = curtab.toLowerCase();
     let tab_replace = {};
@@ -574,6 +596,7 @@ $(document).ready(function() {
     setTabState($this.text(), tabstate);
   });
   $('.ab-sub_tab-content .ab-sub_tab-pane:first-child, .sdk-ab-sub_tab-content .sdk-ab-sub_tab-pane:first-child').addClass('sub_active');
+
 
   let tab_query = (new URLSearchParams(window.location.search).get('tab') || '').replace('_sub_tab','');
   let sub_tab_query = (new URLSearchParams(window.location.search).get('subtab') || '').replace('_sub_tab','');
