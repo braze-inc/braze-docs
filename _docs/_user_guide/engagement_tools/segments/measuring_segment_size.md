@@ -42,13 +42,51 @@ For each filter group, you can view estimated reachable users. Select **Expand e
 
 ![A filter group with a filter for a gender that isn't unknown.][2]{: style="max-width:80%;"}
 
-### Segment statistics
+### Reachable users
 
 For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by selecting **Calculate exact statistics**.
 
-Note that:
-- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
-- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+### Reachable users estimate
+
+You can view an entire segment's estimated reachable users, including estimated user counts for each channel, in the **Reachable users** side panel. This **estimation** shows you an approximate range for your segment size, and an estimate of what percentage of your overall user base falls into this segment. You can also view an exact count of reachable users (for both the segment overall and per channel) by selecting **Calculate exact statistics**. 
+
+#### Considerations for estimate counts
+
+Braze measures the number of estimated users by querying a subset of your users, and then extrapolating those results to your entire audience. Because the subset of users that Braze queries may differ each time we calculate this estimate, the estimate may also change in cases where your audience membership technically should have stayed the same. For example, if you re-order your filters or re-check the same segment at a different time, it’s possible that the estimated count changes (even though **Calculate exact stats** would reveal the same results if your segment didn't change).
+
+If you have a large user population in your workspace, you may see more variation between your estimated counts compared to your exact calculation counts, especially in cases where your segment is a very small percentage of your overall workspace population. This is because Braze measures the estimate by querying a subset of your users and extrapolating the results to your entire user base. For larger user bases, larger differences between estimated and exact counts are to be expected.
+
+Very small segments will have an estimated range that includes 0, and the percentage of total users may round to 0. In these cases, **Calculate exact stats** will help you see an accurate count of your segment size, which may not actually be 0.
+
+![The "Reachable users" side panel.][4]
+
+### Reachable users by channel
+
+Select **Show breakdown** in the **Reachable users** panel to view the number of users that are reachable for each message channel. This breakdown displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
+
+The *Total* metric in the first row represents unique users. For example, if a user has both Android push and iOS push, they will get counted for both of those rows, but will only count for one user in the _Total_ row. It's possible that the number of total users is different than the sum of users reachable by each channel. As mentioned previously, a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
+
+Also, not all channels are listed in the **Reachable users** table (such as Content Cards, webhooks, and WhatsApp). If you have users only reachable through Whatsapp, they will be reflected in the _Total_ but not in any of the channel-specific rows. This means that the total reachable users count can be different from the sum of the users for each displayed channel. In cases where the _Total_ is higher than the sum of the channels, the gap represents the number of users who qualified for the segment but aren't reachable through those communication channels.
+
+For a user to be listed as reachable through a certain channel, the user must have:
+- A valid email address or push token associated with their profile, and
+- Opted-in or subscribed to your app.
+
+## Calculating exact statistics 
+
+Select **Calculate exact stats** in the **Reachable users** panel to view an accurate count of the number of users in your segment. If you’ve previously run the calculation for this segment, you can see when that calculation was last run, and you can select **Refresh exact statistics** for the most updated stats. The accuracy with this calculation is 99.999% or greater; for large segments, it's normal to see slight variation even when calculating exact statistic.
+
+![The "Reachable users" panel with an option to show the breakdown.][5]
+
+The statistics on a per-filter level will always be estimated, even if you calculate exact stats. **Calculate exact stats** only calculates the exact statistics at the segment level, not at the filter or filter group level. This calculation may take a few minutes to run. You’ll can track your progress on the progress bar in the **Reachable users** panel. 
+
+Braze prioritizes one calculation at a time per workspace, so running multiple calculations at once will cause delays. You can select **View calculation queue** to see what segments are ahead of yours, their progress, and their initiator, and get an idea of when your calculation may be prioritized.
+
+![A calculation queue with one calculation.][6]
+
+You can cancel an exact statistics calculation by selecting **Cancel**. This can be beneficial if there are multiple calculations in the queue and you want to prioritize another calculation first. 
+
+![An active calculation with the option to cancel][7]{: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 ## Viewing historical segment membership size
 
@@ -81,3 +119,7 @@ The membership count may significantly change for a number of reasons, such as t
 [1]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [2]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [3]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
+[4]: {% image_buster /assets/img_archive/reachable_users_panel.png %}
+[5]: {% image_buster /assets/img_archive/reachable_users_breakdown.png %}
+[6]: {% image_buster /assets/img_archive/calculation_queue.png %}
+[7]: {% image_buster /assets/img_archive/cancel_calculation.png %}
