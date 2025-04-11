@@ -1,7 +1,7 @@
 ---
 nav_title: Setting User IDs
 article_title: Setting user IDs through the Braze SDK
-page_order: 1.2
+page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."
 
 ---
@@ -163,7 +163,7 @@ We recommend that you create user IDs using the [Universally Unique Identifier (
 
 Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
 
-While its essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
+While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
 | Recommended | Not Recommended |
 | ------------ | ----------- |
