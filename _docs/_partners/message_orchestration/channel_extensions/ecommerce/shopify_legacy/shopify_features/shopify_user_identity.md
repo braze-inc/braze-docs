@@ -12,9 +12,7 @@ page_order: 3
 
 > Braze will receive signals from your Shopify customers through their on-site behaviors and by listening to Shopify webhooks that you configured as part of your integration. For non-headless Shopify sites, Braze will assist with reconciling users from the checkout page. For headless Shopify sites, refer to our integration guidance on how to [reconcile users from checkout]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-checkout).
 
-{% alert important %}
-A new version of the Shopify integration will be released in phases starting April, based on the type of Shopify store and the external ID used to set up the initial integration. <br><br>**The older version of the integration will be deprecated on August 28, 2025. You must update to the newer version of the integration before August 28, 2025.**<br><br>**New Braze customers:** Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/).<br><br>**Existing Braze customers:** Starting in February 2025, we will contact you with an upgrade guide to help you transition to the newer Shopify integration.  We will organize customers into groups (cohorts) based on your Shopify store and how you use Braze external IDs to facilitate a smooth and personalized upgrade experience. You will be notified when your cohort is ready to upgrade.<br><br>**Upgrading to this newer version will cause breaking changes.** You will be guided through a review process on the Braze dashboard to help you and your development team address these changes before you upgrade.
-{% endalert %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Capturing information for user profiles 
 
