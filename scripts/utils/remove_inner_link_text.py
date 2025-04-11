@@ -28,7 +28,6 @@ def remove_inner_link_text(filepath):
     if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
-        print(f"Updated: {filepath}")
 
 if __name__ == '__main__':
     path = os.path.abspath(sys.argv[1])
