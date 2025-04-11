@@ -34,7 +34,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `BrazeKit`      | Main SDK library providing support for analytics and push notifications.                                                                                        |
 | `BrazeLocation` | Location library providing support for location analytics and geofence monitoring.                                                                              |
-| `BrazeUI`       | Braze-provided user interface library for in-app messages, Content Cards, and Banner Cards. Import this library if you intend to use the default UI components. |
+| `BrazeUI`       | Braze-provided user interface library for in-app messages, Content Cards, and Banners. Import this library if you intend to use the default UI components. |
 
 {: .ws-td-nw-1}
 
@@ -94,7 +94,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | Library               | Details                                                                                                                                                         |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `pod 'BrazeLocation'` | Location library providing support for location analytics and geofence monitoring.                                                                              |
-| `pod 'BrazeUI'`       | Braze-provided user interface library for in-app messages, Content Cards, and Banner Cards. Import this library if you intend to use the default UI components. |
+| `pod 'BrazeUI'`       | Braze-provided user interface library for in-app messages, Content Cards, and Banners. Import this library if you intend to use the default UI components. |
 
 {: .ws-td-nw-1}
 
@@ -144,7 +144,7 @@ The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives y
 | -------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BrazeKit`                 | Yes       | Main SDK library that provides support for analytics and push notifications.                                                                                                                                                                                                                                                         |
 | `BrazeLocation`            | No        | Location library that provides support for location analytics and geofence monitoring.                                                                                                                                                                                                                                               |
-| `BrazeUI`                  | No        | Braze-provided user interface library for in-app messages, Content Cards, and Banner Cards. Import this library if you intend to use the default UI components.                                                                                                                                                                      |
+| `BrazeUI`                  | No        | Braze-provided user interface library for in-app messages, Content Cards, and Banners. Import this library if you intend to use the default UI components.                                                                                                                                                                      |
 | `BrazeNotificationService` | No        | Notification service extension library that provides support for rich push notifications. Do not add this library directly to your main application target, instead [add the `BrazeNotificationService` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications).                 |
 | `BrazePushStory`           | No        | Notification content extension library that provides support for Push Stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                                 |
 | `BrazeKitCompat`           | No        | Compatibility library containing all the `Appboy` and `ABK*` classes and methods that were available in the `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/).            |
