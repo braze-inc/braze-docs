@@ -134,23 +134,9 @@ Special characters and emojis can make your content playful, but they can be con
 #### Test for truncation
 Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
 
-
-<!--
-- **Write short, clear sentences.** Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
-- **Break your content into sections.** Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. Don't skip heading levels.
-- **Use simple, descriptive headings.** Clearly describe each section to help readers navigate easily and understand the content structure.
-- **Avoid justified text.** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Content that wraps to more than two lines should be aligned left for left-to-right languages aligned right for right-to-left languages.
-- **Give your text room to breathe.** Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
-- **Use bold, italic, and uppercase text sparingly.** Emphasizing too much text makes reading difficult—especially for folks with dyslexia or visual impairments. Keep it simple.
-- **Clearly label links and buttons.** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
-- **Don’t rely on color alone to communicate.** Color is great, but pair it with clear text labels or symbols so no one misses important information.
-- **Go easy on symbols and emojis.** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
-- **Test for truncation.** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
--->
-
 ### Buttons
 
-Use **buttons** for clickable actions, such as sending a form or playing a carousel. Buttons generally indicate an action, like submitting a form. If you’re navigating to a new URL, consider using a [link](#links) instead.
+Use **buttons** to indicate an action, such as sending a form or playing a carousel. If you’re navigating to a new URL, consider using a [link](#links) instead.
 
 #### Write clear, action-oriented text
 
@@ -480,17 +466,39 @@ If the image doesn't have a purpose, make that known too. Decorative images, lik
 
 ### Videos
 
+Videos are engaging, but if they’re not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive.
+
 #### Provide closed captions
 
-If you use videos in your messaging, provide closed captions so viewers can read a transcription of the audio content on-screen. This helps individuals who are hard of hearing, those in noisy environments, and non-native speakers who benefit from following text rather than sound. Closed captions can be turned on or off by users, making your content more accessible to everyone.
+Include closed captions with your videos so users can follow along with the dialogue, sound effects, and other audio content. Captions help:
+
+- People who are Deaf or hard of hearing
+- Viewers watching in a sound-off environment
+- Non-native speakers who prefer to read along
+
+Closed captions can be toggled on or off, allowing users to choose what works best for them.
 
 {% alert note %}
-Braze doesn’t automatically generate or include closed captions for your videos. It’s your responsibility to provide accurate captions to make your content accessible.
+Braze doesn't automatically generate captions for your videos. It’s your responsibility to add accurate captions to your video files before including them in your message.
 {% endalert %}
+
+#### Provide playback controls
+
+Make sure your embedded video includes accessible playback controls—such as play, pause, mute, and seek—so users can interact with it in the way that works best for them.
 
 #### Avoid auto-play
 
-Whenever possible, avoid playing videos automatically. Auto-play can disrupt users who rely on screen readers or catch them off-guard if they’re in a quiet space. Instead, let your audience choose when to start the video, so they remain in control of their experience.
+Whenever possible, avoid setting videos to play automatically. Auto-play can be jarring or disorienting for:
+
+- Users relying on screen readers or keyboard navigation
+- People with motion sensitivity
+- Anyone in a quiet environment (like a workplace or late-night setting)
+
+Let users choose when to play a video by including clear controls.
+
+#### Avoid flashing or strobing content
+
+Don’t include videos with flashing or strobing effects, especially at a high frequency. These can trigger seizures in users with photosensitive epilepsy and cause discomfort for others.
 
 ### Color contrast
 

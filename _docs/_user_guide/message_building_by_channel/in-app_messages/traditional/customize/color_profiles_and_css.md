@@ -20,6 +20,10 @@ From this page, you can either edit existing templates or click **+ Create** and
 
 You can customize the color scheme of your message template by either entering a HEX color code or by clicking the colored box and selecting a color with the color picker.
 
+{% alert note %}
+Braze editors allow you to select custom color combinations. Keep in mind that certain color choices can negatively affect accessibility. Choose your colors carefully to make sure your content is readabile and compliant with accessibility standards. For more guidance, see [Building accessible messages]({{site.baseurl}}/help/accessibility/).
+{% endalert %}
+
 Click **Save Color Profile** when you're finished.
 
 ### Managing color profiles
