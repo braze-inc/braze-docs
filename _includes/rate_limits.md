@@ -138,6 +138,14 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "translation endpoints" %}
+
+This endpoint has a rate limit of 250,000 requests per minute.
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
 {% if include.category == "message send endpoint" %}
@@ -179,3 +187,4 @@ This endpoint has a shared rate limit of 50 requests per minute between all asyn
 This endpoint has a rate limit of 50,000 requests per minute.
 
 {% endif %}
+

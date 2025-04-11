@@ -36,3 +36,22 @@ guide_featured_list:
 {% alert important %}
 The Braze translation endpoints are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
+
+# How our translation endpoints work
+
+Braze Translation endpoints work with multi-language composition, where a message can have different versions that can be rendered depending on the user receiving the message.
+
+## Prerequisites
+
+Before using these endpoints, you must add your locales.
+
+### Step 1: Go to multi-language settings
+
+### Step 2: Create a message
+
+### Step 3: Add translation tags in your message
+
+### Step 4: Copy IDs for API use
+
+
+

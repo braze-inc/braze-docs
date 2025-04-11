@@ -27,7 +27,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 250,000 requests per hour.
+{% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
 ## Path parameters
 

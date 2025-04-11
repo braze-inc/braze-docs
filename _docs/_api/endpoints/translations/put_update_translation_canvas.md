@@ -27,7 +27,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 250,000 requests per hour.
+{% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
 ## Path parameters
 
@@ -43,7 +43,9 @@ There are no path parameters for this endpoint.
 |`workflow_id` | Required | String | The ID of the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% endalert %}
 
 ## Example request
 
@@ -102,17 +104,5 @@ The following table lists possible returned errors and their associated troubles
 |`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
 |`UNSUPPORTED_CHANNEL`| Only messages in email campaigns or Canvas messages with emails can be translated.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-
-          INVALID_CAMPAIGN_ID = "Invalid campaign or step ID"
-          INVALID_LOCALE_ID = "Invalid locale ID"
-          INVALID_MESSAGE_VARIATION_ID = "Invalid message ID"
-          INVALID_TRANSLATION_OBJECT = "Invalid translation object"
-          MESSAGE_NOT_FOUND = "Message not found"
-          LOCALE_NOT_FOUND = "Locale not found"
-          MISSING_TRANSLATIONS = "Missing translations from the request body"
-          MULTI_LANGUAGE_NOT_ENABLED = "Multi-language feature is not enabled on this company"
-          MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE = "This message does not have multi-language setup"
-          UNSUPPORTED_CHANNEL = "This message type does not support multi-language"
 
 {% endapi %}

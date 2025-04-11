@@ -12,7 +12,7 @@ description: "This article outlines details about the View translations for a ca
 {% api %}
 # View translations for a campaign
 {% apimethod get %}
-/campaigns/translations
+/campaigns/translations/source
 {% endapimethod %}
 
 > Use this endpoint to view all the translations for each message variant in a campaign.
@@ -27,17 +27,20 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 250,000 requests per hour.
+{% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
 ## Path parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
+| 
 |`campaign_id`| Required for translating a campaign | String | The ID of your campaign. |
 | `message_variation_id` | Required | String | The ID of your message. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+{% alert note %}
 Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% endalert %}
 
 ## Example request
 
