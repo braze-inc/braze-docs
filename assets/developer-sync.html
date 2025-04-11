@@ -10,11 +10,11 @@
         const isAllowedOrigin = /^https:\/\/.*\.braze\.(com|eu)$/.test(event.origin) || /^http:\/\/localhost:/.test(event.origin);
         // Check if the origin is from a braze.com or braze.eu domain
         if (isAllowedOrigin) {
-        // Process the message
-        if (event.data && event.data?.type === 'BRAZE_DEVELOPER_DATA') {
-            window.localStorage.setItem('braze_developer_data', JSON.stringify(event.data.payload));
+          // Process the message
+          if (event.data && event.data?.type === 'BRAZE_DEVELOPER_DATA') {
+              window.localStorage.setItem('braze_developer_data', JSON.stringify(event.data.payload));
+          }
         }
-      }
     });
     </script>
   </body>
