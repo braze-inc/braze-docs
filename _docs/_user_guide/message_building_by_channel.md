@@ -5,7 +5,7 @@ page_order: 5
 layout: dev_guide
 
 guide_top_header: "Message Building by Channel"
-guide_top_text: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the following sections listed. Or check out our Braze Learning courses on <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Messaging Channels</a>!<br><br>You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation."
+guide_top_text: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the following sections listed. Or check out our Braze Learning courses on <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Messaging Channels</a>!"
 description: "This landing page covers Braze messaging channels. Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more!"
 
 guide_featured_title: "Available channels"
@@ -33,6 +33,15 @@ guide_featured_list:
   image: /assets/img/braze_icons/whatsapp.svg
 ---
 
+## Accessibility resources
+
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you’d like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/help/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+If you have feedback about accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts. 
+
 ## Choosing a message channel
 
 When determining what message channel is best for your campaigns and Canvases, always think about the content and urgency of your message:
@@ -45,5 +54,7 @@ The following matrix illustrates the strengths and weaknesses of key messaging c
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
 To learn more about how you can leverage this matrix, check out our Braze Learning course on [Understanding the Messaging Matrix](https://learning.braze.com/understand-the-messaging-matrix).
+
+
 
 <br><br>
