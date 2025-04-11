@@ -127,6 +127,7 @@ case $1 in
         ;;
     mredirects)
         "$MREDIRECTS"
+        ;;
     fblinks)
         # require_git_fetch
         npx ts-node ./scripts/find_broken_links.ts
