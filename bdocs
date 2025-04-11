@@ -20,6 +20,12 @@ export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
 
+# Utility scripts that are not directly used in bdocs:
+export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
+export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
+export RILT="$PROJECT_ROOT/scripts/utils/remove_inner_link_text.py"
+
+
 # Set the primary branch depending which Braze Docs repository.
 if [[ "$PROJECT_ROOT" == *"braze-docs-hidden"* ]]; then
     export PRIMARY_BRANCH="main"
@@ -27,9 +33,6 @@ else
     export PRIMARY_BRANCH="master"
 fi
 
-# Utility scripts that are not directly used in bdocs:
-export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
-export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
 
 # Displays usage for bdocs
 display_help() {
@@ -177,7 +180,8 @@ case $1 in
         require_git_fetch
         require_path_or_file "$2"
         touch "$REDIRECT_MATCHES"
-        "$MRD"
+        "$MRD" "$2"
+        "$RILT" "$2"
         logger "$ULINKS" "$2"
 
         # rm "$REDIRECT_MATCHES"

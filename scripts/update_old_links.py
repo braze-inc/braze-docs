@@ -17,7 +17,6 @@ import os
 import json
 import re
 import sys
-from scripts.utils.remove_inner_link_text import remove_inner_link_text
 
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
 REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
@@ -35,9 +34,6 @@ def get_redirect_matches(json_file):
 
 # Update all old links found in a given file
 def update_old_links(filepath, redirects):
-    # Util script that removes inner text from '{{site.baseurl}}' links.
-    remove_inner_link_text(filepath)
-
     if not os.path.isfile(filepath):
         return 0
 
