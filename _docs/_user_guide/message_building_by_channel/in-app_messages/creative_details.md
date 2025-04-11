@@ -39,14 +39,21 @@ If you are using the newest generation of in-app messages (Generation 3), you'll
 
 Our guidelines for images are more structured than those for text, as we want to ensure your messages display as intended, and beautifully across phones, tablets, and computers of all models and sizes.
 
-In general, Braze recommends using images that fit into a 16:10 screen.
+#### Requirements
 
-- **All images must be less than 5&nbsp;MB.**
-- We only accept PNG, JPEG, and GIF file types.
-- We recommend hosting images in the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
-- For fullscreen messages, follow our guidelines for [image safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+- Image file size must be under 5 MB.
+- Accepted file formats are PNG, JPEG, and GIF.
 
-{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+#### Recommendations
+
+- Use a 16:10 aspect ratio for best results across device types.
+- Host images in the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) so the Braze SDK can download assets from our CDN for offline display.
+- Avoid placing important text inside images. Screen readers can’t access image-based text. If you need to share key information, include it in your live message text instead.
+- Add alt text to each image so screen reader users can understand the content. For best practices, see [Building accessible messages]({{site.baseurl}}/help/accessibility/#images).
+- Follow our [image safe zone guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone) to help prevent cropping on different screen sizes.
+- Use our templates to design with confidence across devices. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %})
+
+#### Asset size by message type
 
 {% tabs %}{% tab Fullscreen %}
 
