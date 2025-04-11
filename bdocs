@@ -180,7 +180,7 @@ case $1 in
         require_git_fetch
         require_path_or_file "$2"
         touch "$REDIRECT_MATCHES"
-        "$MRD" "$2"
+        "$MRD"
         "$RILT" "$2"
         logger "$ULINKS" "$2"
 
