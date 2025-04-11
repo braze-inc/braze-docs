@@ -1,16 +1,18 @@
 ---
-nav_title: Use Cases
-article_title: "Shopify Use Cases in Braze"
-description: "This reference article outlines common beginner and advanced Shopify use cases."
+nav_title: Use Cases (Legacy)
+article_title: "Shopify Use Cases in Braze (Legacy)"
+description: "This reference article outlines common beginner and advanced legacy Shopify use cases."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_use_cases_legacy/"
 page_order: 2
 ---
 
-# Use cases
+# Shoipfy use cases in Braze (legacy)
 
 > Interested in seeing how you can leverage your Shopify integration to create timely and effective messaging for your users? Refer to the following sections on common [beginner](#beginner) and [advanced](#advanced) use cases to learn more!
+
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Beginner
 

@@ -1,7 +1,7 @@
 ---
-nav_title: Setting Up Shopify
-article_title: "Setting up Shopify"
-description: "This reference article outlines how to set up Shopify after integrating it into your Braze Web SDK."
+nav_title: Setting Up Shopify (Legacy)
+article_title: "Setting up Shopify (Legacy)"
+description: "This reference article outlines how to set up the legacy Shopify integration after integrating it into your Braze Web SDK."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_subscription_states/"
@@ -9,9 +9,11 @@ alias: "/setting_up_shopify_legacy/"
 page_order: 2
 ---
 
-# Setting up Shopify in Braze
+# Setting up Shopify in Braze (legacy)
 
 > This article outlines how to finish setting up the Shopify integration with Braze. Follow these instructions after you have [implemented the Braze Web SDK]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) onto your Shopify website.
+
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Shopify integration setup in Braze
 

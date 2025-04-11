@@ -1,16 +1,18 @@
 ---
-nav_title: Shopify Data in Braze
-article_title: "Using Shopify Data in Braze"
-description: "This reference article outlines how to use Shopify data in Braze for personalization and segmentation."
+nav_title: Shopify Data in Braze (Legacy)
+article_title: "Using Shopify Data in Braze (Legacy)"
+description: "This reference article outlines how to use the legacy Shopify data in Braze for personalization and segmentation."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_data_legacy/"
 page_order: 1
 ---
 
-# Shopify data in Braze
+# Shopify data in Braze (legacy)
 
 > Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties.
+
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 After the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
