@@ -29,7 +29,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 {% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
-## Path parameters
+## Query parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
