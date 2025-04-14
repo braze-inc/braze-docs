@@ -6,9 +6,9 @@ search_tag: Partner
 page_order: 2 
 ---
 
-# Zoetap Symphony
+# Zeotap Symphony
 
-The Braze and Zoetap Symphony integration allows you to create real-time orchestrations and run email and push notification campaigns.
+The Braze and Zeotap Symphony integration allows you to create real-time orchestrations and run email and push notification campaigns.
 
 - Send first and last names through Zeotap, based on which users can send personalized emails through Braze.
 - Send custom events or a purchase event in real-time through Zeotap, based on which users can create campaign triggers within Braze to target their customers
