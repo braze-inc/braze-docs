@@ -714,7 +714,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 Live Activity, Push To Start Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity push to start token with the user
+This event occurs when Braze syncs Live Activity push to start token with the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -852,7 +852,7 @@ This event occurs when Braze syncs Live Activity push to start token with the us
 Live Activity, Update Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity update token with the user
+This event occurs when Braze syncs Live Activity update token with the user.
 
 {% tabs %}
 {% tab Amplitude %}
