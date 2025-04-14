@@ -33,7 +33,7 @@ First, to export users from Amplitude to Braze, create a [cohort](https://help.a
 - Device ID
 - User ID (External ID)
 
-You can set up multiple Braze connections in your Amplitude account. This allows you to configure one connection to sync User IDs for known users and another to sync Device IDs for anonymous users.
+You can set up multiple Braze connections in your Amplitude account. This allows you to configure one connection to sync user IDs for known users and another to sync device IDs for anonymous users.
 
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
