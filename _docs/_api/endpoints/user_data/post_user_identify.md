@@ -70,7 +70,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 You can add up to 50 user aliases per request. You can associate multiple additional user aliases with a single `external_id`.
 
 {% alert important %}
-One of the following is required: `aliases_to_identify`, `emails_to_identify`, `phone_numbers_to_identify` per request. For example, you can use this endpoint to identify users by email by using `emails_to_identify` in your request.
+One of the following is required: `aliases_to_identify`, `emails_to_identify`, or `phone_numbers_to_identify` per request. For example, you can use this endpoint to identify users by email by using `emails_to_identify` in your request.
 {% endalert %}
 
 | Parameter                   | Required | Data Type                           | Description                                                                                                                                                                 |
