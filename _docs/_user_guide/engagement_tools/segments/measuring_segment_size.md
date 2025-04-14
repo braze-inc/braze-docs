@@ -78,7 +78,7 @@ Select **Calculate exact stats** in the **Reachable users** panel to view an acc
 
 ![The "Reachable users" panel with an option to show the breakdown.][5]
 
-The statistics on a per-filter level will always be estimated, even if you calculate exact stats. **Calculate exact stats** only calculates the exact statistics at the segment level, not at the filter or filter group level. This calculation may take a few minutes to run. You’ll can track your progress on the progress bar in the **Reachable users** panel. 
+The statistics on a per-filter level will always be estimated, even if you calculate exact stats. **Calculate exact stats** only calculates the exact statistics at the segment level, not at the filter or filter group level. This calculation may take a few minutes to run. Larger workspaces in particular may require longer periods to complete calculations. You can track your progress on the progress bar in the **Reachable users** panel. When a calculation is expected to run more than five minutes, Braze will email you the results. 
 
 Braze prioritizes one calculation at a time per workspace, so running multiple calculations at once will cause delays. You can select **View calculation queue** to see what segments are ahead of yours, their progress, and their initiator, and get an idea of when your calculation may be prioritized.
 
