@@ -15,10 +15,10 @@ description: "This article outlines details about the View translation for a Can
 /canvas/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to view a translated message to see what this message looks like for a user.
+> Use this endpoint to preview a translated message for a Canvas.
 
 {% alert important %}
-Veiwing a translated message for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -33,10 +33,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
+|`workflow_id` | Required | String | The ID of the Canvas. |
 |`step_id`| Required | String | The ID of your Canvas step. |
 |`message_variation_id`| Required | String | The ID for your message variation. |
-|`locale_id`| Required | String | The ID of the locale. |
-|`workflow_id` | Required | String | The ID of the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
@@ -53,7 +52,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 
 There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
 
-## Example success response
+### Example success response
 
 The status code `200` could return the following response header and body.
 

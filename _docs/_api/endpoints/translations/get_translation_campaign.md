@@ -12,13 +12,13 @@ description: "This article outlines details about the View Translation for a cam
 {% api %}
 # View translation for a campaign
 {% apimethod get %}
-/campaign/translations/?locale_id={locale_id}
+/campaign/translations/?locale_id={locale_uuid}
 {% endapimethod %}
 
-> Use this endpoint to view a translated campaign message to see what this message looks like for a user.
+> Use this endpoint to preview a translated message for a campaign.
 
 {% alert important %}
-Viewing a translated campaign message via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -52,7 +52,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translatio
 
 There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
 
-## Example success response
+### Example success response
 
 The status code `200` could return the following response header and body.
 

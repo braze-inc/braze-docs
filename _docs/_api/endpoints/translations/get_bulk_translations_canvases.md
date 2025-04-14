@@ -18,7 +18,7 @@ description: "This article outlines details about the List translations for a Ca
 > Use this endpoint to view all the translations for a Canvas.
 
 {% alert important %}
-Viewing translations for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -52,7 +52,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 
 There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
 
-## Example success response
+### Example success response
 
 The status code `200` could return the following response header and body.
 
@@ -61,6 +61,19 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
+		{
+			"locale": {
+				"uuid": "0x123456",
+ 				"name": "es-MX",
+ 				"country": "Mexico",
+ 				"language": "Spanish",
+			},
+			"translation_map": {
+				"id_0": "Hello",
+				"id_1": "My name is Jacky",
+				"id_2": "Where is the library?"
+			}
+		},
 		{
 			"locale": {
  				"name": "zh-HK",
@@ -77,7 +90,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Example error response
+### Example error response
 
 The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
 

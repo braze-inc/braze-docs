@@ -43,15 +43,18 @@ Braze Translation endpoints work with multi-language composition, where a messag
 
 ## Prerequisites
 
-Before using these endpoints, you must add your locales.
+Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
 
-### Step 1: Go to multi-language settings
+## How to test your translations
 
-### Step 2: Create a message
+There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), and email templates:
 
-### Step 3: Add translation tags in your message
+- During composition (before launch)
+- After launch (using post-launch drafts)
 
-### Step 4: Copy IDs for API use
+Before testing updating translations, you must:
 
-
-
+1. [Add your locales]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
+2. Create a message and use translation tags where appropriate.
+3. Save the message.
+4. Select the locales to be included.
