@@ -38,7 +38,10 @@ To create a full refresh SQL Segment Extension:
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %})<br><br>
-4. Save your Segment Extension.
+4. If desired, select **Enable refresh**.<br><br>
+   ![Cycle icon with "Enable refresh" text.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:30%" }<br><br>
+   You can configure Braze to automatically update segment membership hourly, daily, weekly, monthly. This means that at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in seven days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
+5. Save your Segment Extension.
 
 {% endtab %}
 {% tab Incremental refresh %}
@@ -171,7 +174,7 @@ Select a SQL Segment Extension to archive the extension, manually [refresh the s
 
 ### Refreshing segment membership
 
-To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Only incremental refresh SQL Segment Extensions can automatically regenerate (if selected).
+To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. You can schedule automatic refreshes for any Segment Extension by selecting **Enable refresh** and configuring the refresh frequency (hourly, daily, weekly, or monthly).
 
 {% alert tip %}
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
