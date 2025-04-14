@@ -234,7 +234,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
     "timezone" : "(optional, string) Time zone of the user"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -272,7 +272,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -307,7 +307,7 @@ This event occurs when Braze receives a request to update the global subscriptio
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-          "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
+          "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -357,7 +357,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -389,7 +389,7 @@ This event occurs when Braze receives a request to update the global subscriptio
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -414,7 +414,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |
-| List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
+| Auto Opt-In By Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
@@ -458,7 +458,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
     "timezone" : "(optional, string) Time zone of the user"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -499,7 +499,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -539,7 +539,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_group_id" : "(required, string) Subscription group API ID",
-          "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
+          "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -592,7 +592,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -628,7 +628,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_group_id" : "(required, string) Subscription group API ID",
-  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed' or 'Opted In'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -671,7 +671,7 @@ This event occurs when a user does an action that has been set as a conversion e
 {% endalert %}
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as `0 = A`, `1 = B`, `2 = C`, `3 = D`.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 {% tabs %}
@@ -999,7 +999,7 @@ Canvas, Conversion
 This event occurs when a user does an action that has been set as a conversion event in Canvas.
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as `0 = A`, `1 = B`, `2 = C`, `3 = D`.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 {% tabs %}
@@ -3219,7 +3219,7 @@ This event occurs when a Content Card gets sent to a user.
 Abort, Email
 {% endapitags %}
 
-This event occurs if an email message was aborted, such as by a Liquid abort or Quiet Hours.
+This event occurs if an email message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
 {% tab Amplitude %}
