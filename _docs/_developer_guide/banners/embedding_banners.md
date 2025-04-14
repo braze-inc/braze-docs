@@ -1,7 +1,7 @@
 ---
-nav_title: Embedding Cards
-article_title: Embedding Banner Cards for the Braze SDK
-description: "Learn how to embed Banner Cards for the Braze SDK."
+nav_title: Embedding Banners
+article_title: Embedding Banners for the Braze SDK
+description: "Learn how to embed Banners for the Braze SDK."
 platform:
   - iOS
   - Android
@@ -9,21 +9,21 @@ platform:
   
 ---
 
-# Embedding Banner Cards
+# Embedding Banners
 
-> Learn how to embed banner cards using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards/).
+> Learn how to embed Banners using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
-Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
 ## Prerequisites
 
-These are the minimum SDK versions needed to start using Banner Cards:
+These are the minimum SDK versions needed to start using Banners:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## Embedding a Banner Card
+## Embedding a Banner
 
 {% multi_lang_include banner_cards/creating_placements.md %}
 
@@ -32,7 +32,7 @@ These are the minimum SDK versions needed to start using Banner Cards:
 Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
 {% alert tip %}
-Refresh placements as soon as possible to avoid delays in downloading or displaying banners.
+Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
 {% endalert %}
 
 {% tabs %}
@@ -256,7 +256,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner according to your use case.
     processContentUpdates: { result in
       switch result {
       case .success(let updates):
@@ -276,7 +276,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner according to your use case.
     processContentUpdates: { result in
       switch result {
       case .success(let updates):
@@ -298,7 +298,7 @@ To get the Banner in Java code, use:
 Banner globalBanner = Braze.getInstance(context).getBanner("global_banner");
 ```
 
-You can create Banner Cards in your Android views layout by including this XML:
+You can create Banners in your Android views layout by including this XML:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -347,7 +347,7 @@ If you're using [React Native's New Architecture](https://reactnative.dev/archit
 #endif
 ```
 
-To get the Banner Card's data model in React Native, use:
+To get the Banner's data model in React Native, use:
 
 ```javascript
 const banner = await Braze.getBanner("global_banner");
@@ -374,7 +374,7 @@ This feature is not currently supported on Cordova.
 ```
 {% endtab %}
 {% tab Flutter %}
-To get the Banner Card's data model in Flutter, use:
+To get the Banner's data model in Flutter, use:
 
 ```dart
 braze.getBanner("global_banner").then((banner) {
@@ -402,22 +402,22 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Send a test card (optional) {#handling-test-cards}
+### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you [launch a Banner Card campaign]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns/), you can send a test Banner Card to verify the integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test card.
+Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/), you can send a test Banner to verify the integration. Test cards will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
-Test Banner Cards are like any other banners, except they're removed at the next app session.
+Test Banners are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
 ## Logging analytics
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner Card&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
+Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
 
 ## Dimensions and sizing
 
-Here's some things to know about Banner Card dimensions and sizing:
+Here are some things to know about Banner dimensions and sizing:
 
-- While the composer let's you preview banners in different dimensions, that information is not saved or sent to the SDK.
+- While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.

@@ -1283,12 +1283,12 @@ validurls['/docs/help/help_articles/push/push_error_codes/'] = '/docs/user_guide
 
 validurls['/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/';
 
-validurls['/docs/developer_guide/platform_wide/banner_cards/integration'] = '/docs/developer_guide/banner_cards/integration';
-validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
+validurls['/docs/developer_guide/platform_wide/banner_cards/integration'] = '/docs/developer_guide/banners/embedding_banners';
+validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banners';
 validurls['/docs/developer_guide/feature_flags/about'] = '/docs/developer_guide/feature_flags';
 
 validurls['/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/mobile_push/';
-validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
+validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banners';
 
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/'] = '/docs/partners/message_personalization/dynamic_content/odicci/';
 
@@ -2363,9 +2363,9 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_c
 
 validurls['/docs/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/'] = '/docs/developer_guide/push_notifications/?sdktab=android';
 
-validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_guide/banner_cards/embedding_cards/';
-validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banner_cards/creating_campaigns/';
-validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banner_cards/#placement-ids';
+validurls['/docs/developer_guide/banner_cards/integration/'] = '/docs/developer_guide/banners/embedding_banners/';
+validurls['/docs/developer_guide/banner_cards/creating_banner_cards/'] = '/docs/developer_guide/banners/creating_campaigns/';
+validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/developer_guide/banners/#placement-ids';
 
 validurls['/docs/developer_guide/push_notifications/live_notifications/'] = '/docs/developer_guide/live_notifications/';
 validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local';
@@ -2382,5 +2382,11 @@ validurls['/docs/developer_guide/platform_integration_guides/android/content_car
 validurls['/docs/help/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/administrative/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
+
+validurls['/docs/developer_guide/banner_cards'] = '/docs/developer_guide/banners/';
+validurls['/docs/developer_guide/banner_cards/creating_campaigns'] = '/docs/developer_guide/banners/creating_campaigns';
+validurls['/docs/developer_guide/banner_cards/embedding_cards'] = '/docs/developer_guide/banners/embedding_banners';
+validurls['/developer_guide/banner_cards/creating_banner_cards/#set-card-priority'] = '/developer_guide/banners/creating_campaigns/#set-priority';
+validurls['/docs/create_banner_card'] = '/docs/create_banner';
 
 // validurls['OLD'] = 'NEW';
