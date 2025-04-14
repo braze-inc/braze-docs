@@ -20,3 +20,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 
 ---
+
+{% alert important %}
+If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+{% endalert %}

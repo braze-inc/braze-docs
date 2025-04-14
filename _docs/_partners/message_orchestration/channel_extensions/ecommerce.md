@@ -20,4 +20,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Tapcart
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
