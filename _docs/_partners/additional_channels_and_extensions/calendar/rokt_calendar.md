@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 
 layout: redirect
-redirect_to: /docs/partners/home
+redirect_to: /docs/partners/rokt
 ---
 
 # Rokt Calendar
