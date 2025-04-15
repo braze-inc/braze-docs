@@ -3,27 +3,14 @@ nav_title: Conditionally Display In-App Messages
 guide_top_header: Conditionally Display In-App Messages
 article_title: Conditionally Display In-App Messages
 page_order: 1
-layout: dev_guide
+layout: scrolly
 description: "A tutorial on how to conditionally control whether or not to show a triggered in-app message"
 ---
-<style>
-@media (min-width: 1200px) {
-    #dev-main,#featured_main {
-        max-width:unset;
-        margin-left: auto;
-        margin-right: auto
-    }
-}
-.ab-tab-content, .ab-sub_tab-content {
-  margin-bottom: unset !important;
-  padding: unset !important;
-}
-</style>
+# Conditionally Display In-App Messages
 
 {% tabs %}
 {% tab Web %}
 {% scrolly %}
-
 ```js file=index.js
 import * as braze from "@braze/web-sdk";
 // remove any calls to `automaticallyShowInAppMessages()`
@@ -53,7 +40,7 @@ lines-index.js=5,11
 
 #### 2. Subscribe to the in-app message callback handler
 
-Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage). 
+Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage).
 
 This method will be called whenever an in-app message has been triggered, with a `message` argument.
 
@@ -75,12 +62,9 @@ If you want to display the message, call the [`showInAppMessage`](https://js.app
 
 If you do not want to display the message, don't call `showInAppMessage`
 {% endscrolly %}
-
 {% endtab %}
 {% tab iOS %}
-
 {% scrolly %}
-
 ```swift file=delegate.swift
 let configuration = Braze.Configuration(
     apiKey: "YOUR-APP-IDENTIFIER-API-KEY",
@@ -90,7 +74,5 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endscrolly %}
-
 {% endtab %}
-
 {% endtabs %}
