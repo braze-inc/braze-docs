@@ -37,7 +37,7 @@ guide_featured_list:
 - name: "알 수 없는 전화번호 처리"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp 마케팅 실험"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "WhatsApp 신고"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/

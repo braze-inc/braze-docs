@@ -15,7 +15,7 @@ guide_top_text: "In den folgenden Artikeln finden Sie alles, was ausschließlich
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
 - name: "Push-Primer-Kampagne"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Anpassbare App-Symbole"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/

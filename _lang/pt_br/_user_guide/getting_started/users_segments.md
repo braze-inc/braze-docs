@@ -19,7 +19,7 @@ Na Braze, as informações sobre seu público são armazenadas em perfis de usu�
 
 Ao entender os perfis dos usuários, você pode obter insights sobre seu público e interagir com eles de maneira personalizada e direcionada. O perfil de um usuário contém muitas informações, mas aqui estão algumas das partes principais:
 
-- **Identificador do Usuário:** Cada perfil de usuário é identificado de forma única por um ID de usuário, chamado de `external_id`. Este identificador permite que a Braze rastreie e associe dados de usuários em diferentes canais e dispositivos, fornecendo uma visão unificada das interações de cada usuário com sua marca. Os [perfis de usuários anônimos]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/) (usuários que visitam seu site ou app sem registro) não têm um `external_id`, mas podem ser atribuídos [aliases de usuário]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/#assigning-user-aliases) como um identificador alternativo.
+- **Identificador do Usuário:** Cada perfil de usuário é identificado de forma única por um ID de usuário, chamado de `external_id`. Este identificador permite que a Braze rastreie e associe dados de usuários em diferentes canais e dispositivos, fornecendo uma visão unificada das interações de cada usuário com sua marca. Os [perfis de usuários anônimos]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (usuários que visitam seu site ou app sem registro) não têm um `external_id`, mas podem ser atribuídos [aliases de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) como um identificador alternativo.
 - [Atributos](#attributes)**:** Estas são informações específicas sobre o usuário, como seu nome, idade, local ou qualquer outra informação demográfica. Você pode usar esses atributos para segmentar seu público e personalizar seu envio de mensagens.
 - [Eventos](#events)**:** Estas são ações que o usuário realiza, como fazer uma compra, clicar em um link ou abrir um app. Braze rastreia esses eventos para ajudar você a entender o comportamento e o engajamento do usuário. Semelhante aos atributos, você também pode usar eventos para segmentar e personalizar.
 - **Compras:** Esta seção registra o histórico de compras do usuário. É crucial para entender os hábitos e preferências de compra do usuário.
@@ -52,7 +52,7 @@ Os atributos padrão são atributos predefinidos que você pode rastrear com o B
 
 #### Atributos personalizados
 
-[Atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) são atributos que você define com base nas suas necessidades específicas de negócios. Eles permitem que você acompanhe informações exclusivas do seu app ou negócio. 
+[Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) são atributos que você define com base nas suas necessidades específicas de negócios. Eles permitem que você acompanhe informações exclusivas do seu app ou negócio. 
 
 Por exemplo, um app de streaming de música pode rastrear atributos personalizados como:
 
@@ -87,7 +87,7 @@ Eventos representam ações ou comportamentos específicos realizados pelos usu�
 
 #### Eventos personalizados
 
-[Eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) são eventos que você define com base nas ações específicas que deseja rastrear no seu app ou site. Por exemplo, um app de streaming de música pode rastrear eventos personalizados como:
+[Eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) são eventos que você define com base nas ações específicas que deseja rastrear no seu app ou site. Por exemplo, um app de streaming de música pode rastrear eventos personalizados como:
 
 - Música Tocada
 - Playlist criada
@@ -109,7 +109,7 @@ Os pontos de dados são consumidos quando os dados do perfil de um usuário são
 
 Ao considerar cuidadosamente quais informações rastrear como pontos de dados, você está direcionando os dados de maior impacto para a experiência de seus usuários. Seu gerente de conta da Braze ajudará a recomendar as melhores práticas de dados para atender às suas necessidades.
 
-Acesse nosso artigo dedicado para saber mais sobre [pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Acesse nosso artigo dedicado para saber mais sobre [pontos de dados]({{site.baseurl}}/user_guide/data/data_points/).
 
 ## Segmentos
 

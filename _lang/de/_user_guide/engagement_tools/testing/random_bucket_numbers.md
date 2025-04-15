@@ -44,7 +44,7 @@ Sie können diese Art von Segmenten verwenden, wenn Sie einen Test mit drei vers
 
 Je nachdem, wie viele Segmente Sie wünschen und wie sich die Nutzer innerhalb der einzelnen Segmente verteilen, kann Ihr Plan anders aussehen.
 
-Schalten Sie für jedes Ihrer Segmente mit zufälligen Bucket-Nummern, einschließlich der Kontrollgruppe, das [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking) ein. Wenn Sie den Erfolg von Varianten im Vergleich zur Kontrollgruppe auswerten möchten, können Sie auf die Seite mit den [benutzerdefinierten Ereignissen]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) gehen und sehen, wie oft jedes Segment bestimmte benutzerdefinierte Ereignisse abgeschlossen hat.
+Schalten Sie für jedes Ihrer Segmente mit zufälligen Bucket-Nummern, einschließlich der Kontrollgruppe, das [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ein. Wenn Sie den Erfolg von Varianten im Vergleich zur Kontrollgruppe auswerten möchten, können Sie auf die Seite mit den [benutzerdefinierten Ereignissen]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) gehen und sehen, wie oft jedes Segment bestimmte benutzerdefinierte Ereignisse abgeschlossen hat.
 
 ### Zufälliger Wiedereintritt der Zielgruppe über zufällige Bucket-Nummern
 

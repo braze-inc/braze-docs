@@ -78,14 +78,14 @@ El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desd
 Aquí, nombrará su Lienzo, asignará [Equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) y creará o añadirá [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). También puede asignar eventos de conversión para el lienzo.
 
 {% alert tip %}
-Etiqueta tus lienzos para que sea fácil encontrarlos y crear informes a partir de ellos. Por ejemplo, al utilizar [el Generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puede filtrar por determinadas etiquetas.
+Etiqueta tus lienzos para que sea fácil encontrarlos y crear informes a partir de ellos. Por ejemplo, al utilizar [el Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por determinadas etiquetas.
 {% endalert %}
 
 ![La página de detalles del Canvas, con campos para el nombre, descripción, ubicación y etiquetas del Canvas.][53]
 
 #### Elegir eventos de conversión
 
-Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) medirán la eficacia de tu Canvas. 
+Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) medirán la eficacia de tu Canvas. 
 
 ![Evento de Conversión Principal A con el tipo de evento de conversión Realiza Compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.][52]
 
@@ -146,7 +146,7 @@ Evite configurar una campaña basada en acciones o Canvas con el mismo desencade
 
 #### Prueba tu audiencia
 
-Después de añadir segmentos y filtros a su público objetivo, puede comprobar si su público está configurado según lo esperado [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar si coincide con los criterios del público.
+Después de añadir segmentos y filtros a su público objetivo, puede comprobar si su público está configurado según lo esperado [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
 ![El campo "Búsqueda de usuarios", que te permite buscar por ID de usuario externo o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
@@ -218,7 +218,7 @@ Por defecto, la asignación de variantes del lienzo se bloquea cuando los usuari
 
 {% details Expandir por pasos %}
 
-1. Crea un atributo personalizado para almacenar tu número aleatorio. Ponle un nombre fácil de localizar, como "número_lotería" o "asignación_aleatoria". Puedes crear el atributo [en tu panel]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/) o a través de llamadas API a nuestro [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+1. Crea un atributo personalizado para almacenar tu número aleatorio. Ponle un nombre fácil de localizar, como "número_lotería" o "asignación_aleatoria". Puedes crear el atributo [en tu panel]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) o a través de llamadas API a nuestro [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Crea una campaña webhook al principio de tu Canvas. Esta campaña será el medio en el que creará su número aleatorio y lo almacenará como atributo personalizado. Consulte [Crear un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) para obtener más información. Establezca la URL de nuestro punto final `/users/track`.<br><br>
 3. Crea el generador de números aleatorios. Puede hacerlo con el código [ que se describe aquí](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aprovecha la hora de entrada única de cada usuario para crear un número aleatorio. Establezca el número resultante como una variable Liquid dentro de su campaña webhook.<br><br>
 4. Formatea la llamada `/users/track` en tu campaña webhook para que establezca el atributo personalizado que creaste en el paso 1 en el número aleatorio que has generado en el perfil de tu usuario actual. Cuando este paso se ejecute, habrá conseguido crear un número aleatorio que cambiará cada vez que un usuario entre en su campaña.<br><br>
@@ -336,7 +336,7 @@ También puedes guardar tu lienzo como borrador por si necesitas volver a él.
 ![Un ejemplo de Canvas en Braze.][19]
 
 {% alert tip %}
-¿Necesita modificar su lienzo después del lanzamiento? ¡Pues sí que puedes! Para más información, consulte [Editar lienzos después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+¿Necesita modificar su lienzo después del lanzamiento? ¡Pues sí que puedes! Para más información, consulte [Editar lienzos después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 

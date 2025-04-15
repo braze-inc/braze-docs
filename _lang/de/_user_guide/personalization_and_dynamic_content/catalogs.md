@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/
   image: /assets/img/braze_icons/users-01.svg
 - name: „Wieder verfügbar“-Benachrichtigungen
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Benachrichtigungen über Preissenkungen
   link: /docs/price_drop_notifications/
@@ -40,8 +40,8 @@ Sie können jede Art von Daten in einen Katalog einbringen. In der Regel handelt
 
 - **Saisonale Aktionen:** Importieren Sie saisonale Produktkollektionen und personalisieren Sie Nachrichten, um aktuelle Trends widerzuspiegeln.
 - **Lokalisierte Nachrichten:** Importieren Sie die Adressen, Öffnungszeiten und Dienstleistungen Ihres Standorts und personalisieren Sie dann die Benachrichtigungen auf der Grundlage der Nutzerstandorte.
-- **„Wieder verfügbar“-Benachrichtigungen:** Importieren Sie Produktinformationen einschließlich der Bestandsmenge und verwenden Sie dann [Back-in-Stock-Benachrichtigungen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/) und benutzerdefinierte Braze-Ereignisse, um eine Kampagne oder ein Canvas auszulösen, das Benutzern eine Benachrichtigung darüber sendet, dass ein Produkt jetzt auf Lager ist.
-- **Benachrichtigungen über Preissenkungen:** Importieren Sie Produktinformationen, die Produktpreise enthalten, und verwenden Sie dann [Benachrichtigungen über Preisrückgänge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications/) und benutzerdefinierte Braze-Ereignisse, um ein Canvas auszulösen, das Benutzern eine Benachrichtigung über den Preisrückgang eines Produkts sendet.
+- **„Wieder verfügbar“-Benachrichtigungen:** Importieren Sie Produktinformationen einschließlich der Bestandsmenge und verwenden Sie dann [Back-in-Stock-Benachrichtigungen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/) und benutzerdefinierte Braze-Ereignisse, um eine Kampagne oder ein Canvas auszulösen, das Benutzern eine Benachrichtigung darüber sendet, dass ein Produkt jetzt auf Lager ist.
+- **Benachrichtigungen über Preissenkungen:** Importieren Sie Produktinformationen, die Produktpreise enthalten, und verwenden Sie dann [Benachrichtigungen über Preisrückgänge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/) und benutzerdefinierte Braze-Ereignisse, um ein Canvas auszulösen, das Benutzern eine Benachrichtigung über den Preisrückgang eines Produkts sendet.
 
 ### Unterhaltung
 
@@ -61,3 +61,11 @@ Sie können jede Art von Daten in einen Katalog einbringen. In der Regel handelt
 Kataloge sind eine Funktion zur Datenspeicherung. Sie enthalten große Mengen an Daten, auf die Sie in Ihren Nachrichten zur Personalisierung verweisen können. Um die Daten tatsächlich zu referenzieren, verwenden Sie [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) als Templating-Sprache. Mit anderen Worten: Kataloge sind der Speicher, in dem die Daten aufbewahrt werden, und Liquid ist die Sprache, die die relevanten Daten aus dem Speicher abruft.
 
 Beispiele dafür, wie Sie Liquid zum Abrufen von Kataloginformationen verwenden können, finden Sie in den zusätzlichen Anwendungsfällen unter [Erstellen eines Katalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
+
+#### Einschränkungen bei der Speicherung von Daten
+
+Der Datenspeicher für Kataloge ist aufgrund der Größe der Artikel und Auswahlen begrenzt, die sich von der Größe der hochgeladenen CSV-Dateien unterscheiden kann.
+
+Bei der kostenlosen Version von Katalogen ist ein Speicherplatz von bis zu 100 MB zulässig. Sie können unbegrenzt Artikel haben, solange der Speicherplatz 100 MB nicht überschreitet. Auswahlen werden bei der Speichergröße berücksichtigt. Je komplexer sie sind, desto mehr Speicherplatz belegen sie.
+
+Für Catalogs Pro sind die Optionen für die Speichergröße wie folgt: 5 GB, 10 GB, 15 GB oder 50 GB. Beachten Sie, dass der Speicherplatz der kostenlosen Version (100 MB) in jedem dieser Tarife enthalten ist.

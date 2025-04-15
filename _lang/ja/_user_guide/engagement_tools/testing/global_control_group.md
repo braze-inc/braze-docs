@@ -95,7 +95,7 @@ CSV エクスポートを実行するには、[**グローバルコントロー�
 
 ## レポート
 
-レポートメトリックについては、「[グローバルコントロールグループのレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/)」を参照してください。
+レポートメトリックについては、「[グローバルコントロールグループのレポート]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/)」を参照してください。
 
 ## トラブルシューティング
 

@@ -8,7 +8,7 @@ description: "Dieser Referenzartikel behandelt einige Best Practices zum Abbrech
 
 # Abbrechen von Connected-Content {#aborting-connected-content}
 
-> Mit Liquid-Templating haben Sie die Möglichkeit, Nachrichten mit bedingter Logik abzubrechen. 
+> Wenn Sie Liquid Templating verwenden, haben Sie die Möglichkeit, Nachrichten mit bedingter Logik abzubrechen. Auf dieser Seite erfahren Sie, wie Sie dabei am besten vorgehen.
 
 Im folgenden Beispiel geben die Bedingungen `connected.recommendations.size < 5` und `connected.foo.bar == nil` Situationen an, die zum Abbruch der Nachricht führen würden.
 
@@ -21,6 +21,8 @@ Im folgenden Beispiel geben die Bedingungen `connected.recommendations.size < 5`
 ```
 {% endraw %}
 
+## Geben Sie einen Abbruchgrund an
+
 Sie können auch einen Grund für den Abbruch angeben, der im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) gespeichert wird. Dieser Abbruchgrund muss eine Zeichenkette sein und darf kein Liquid enthalten.
 
 {% raw %}
@@ -28,5 +30,5 @@ Sie können auch einen Grund für den Abbruch angeben, der im [Nachrichten-Aktiv
 {% endraw %}
 
 {% alert important %}
-Abgebrochene Nachrichten werden von Braze nicht auf die Anzahl der gesendeten Nachrichten in Ihrem Braze-Konto oder in Currents angerechnet.
+Braze zählt abgebrochene Nachrichten nicht zur Anzahl der gesendeten Nachrichten in Ihrem Braze-Konto oder in Currents.
 {% endalert %}

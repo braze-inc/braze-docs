@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Feature-Flags im Canvas
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas-Zielgruppensynchronisierung
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ Verwenden Sie [Aktionspfade][1], um Ihre Nutzer:innen auf der Grundlage von Akti
 
 [Decision Split-Komponenten][3] verwenden eine einfache "Ja oder Nein"-Logik, um zwei sich gegenseitig ausschließende Pfade für Ihre User Journeys zu erstellen, die auf einer Aktion oder einem Benutzerattribut basieren. So können Sie Ihre Benutzergruppen identifizieren und gezielt ansprechen.
 
-Mit [Verzögerungskomponenten][4] können Sie einen einzelnen Schritt in Ihrem Canvas verzögern. Dieser eigenständige Verzögerungsschritt in Ihrem Canvas eignet sich am besten für die Übermittlung von Nachrichten an Ihre Benutzer zu einem bestimmten Zeitpunkt. Darüber hinaus können Verzögerungskomponenten auch die Reichweite Ihrer Zielgruppe erhöhen, indem Sie ihr mehr Zeit geben, die Kriterien der Komponente zu erfüllen. 
+Mit [Verzögerungskomponenten][4] können Sie einen einzelnen Schritt in Ihrem Canvas verzögern. Dieser eigenständige Verzögerungsschritt in Ihrem Canvas eignet sich am besten für die Übermittlung von Nachrichten an Ihre Benutzer zu einem bestimmten Zeitpunkt. Darüber hinaus können Verzögerungskomponenten auch die Reichweite Ihrer Zielgruppe erhöhen, indem Sie ihr mehr Zeit geben, die Kriterien der Komponente zu erfüllen.
 
 ### Testen
 
@@ -62,7 +62,7 @@ Bei der Erstellung Ihrer Nutzer:innen sollten Sie auch testen, welcher Canvas-Pf
 
 ### Integration
 
-Möchten Sie mit den First-Party-Nutzerdaten Ihrer Marke synchronisieren? Nutzen Sie die verfügbaren Synchronisationsoptionen für [Facebook][6] und [Google][7]. <br><br>
+Möchten Sie mit den First-Party-Nutzerdaten Ihrer Marke synchronisieren? Nutzen Sie die verfügbaren Synchronisationsoptionen für [Facebook][6] und [Google][7].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

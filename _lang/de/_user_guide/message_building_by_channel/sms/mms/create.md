@@ -13,7 +13,7 @@ search_rank: 1
 
 # Eine MMS-Kampagne erstellen
 
-> Dieser Artikel enthält Informationen speziell zur MMS-Komposition, die Teil des SMS-Editors ist. Ausführlichere Informationen über den SMS/MMS-Editor finden Sie im [SMS-Editor]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).
+> Dieser Artikel enthält Informationen speziell zur MMS-Komposition, die Teil des SMS-Editors ist. Ausführlichere Informationen über den SMS/MMS-Editor finden Sie im [SMS-Editor]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 
 ## Grundlagen des MMS-Versands
 

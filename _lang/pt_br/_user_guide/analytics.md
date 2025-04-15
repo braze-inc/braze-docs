@@ -23,7 +23,7 @@ guide_featured_list:
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Catálogos
-    link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+    link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
     image: /assets/img/braze_icons/list.svg
   - name: Criador de consultas
     link: /docs/user_guide/analytics/query_builder/

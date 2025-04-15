@@ -50,7 +50,7 @@ Beschränken Sie die Länder auf Ihrer Allowlist auf die Länder, die Sie für I
 
 ## Sichtbarkeit von blockierten Sendungen
 
-Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebrochen. Abgebrochene Nachrichten werden im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) und im [Nachrichten-Engagement-Event „SMS-Abbruch“]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) protokolliert. 
+Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebrochen. Abgebrochene Nachrichten werden im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) und im [Nachrichten-Engagement-Event „SMS-Abbruch“]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) protokolliert. 
 
 Abgebrochene Nachrichten, die durch blockierte Sendungen verursacht wurden, werden als `Abort_Type = "blocked_recipient_country"` mit dem Abbruchprotokoll angezeigt, in dem das blockierte Land aufgeführt ist.
 

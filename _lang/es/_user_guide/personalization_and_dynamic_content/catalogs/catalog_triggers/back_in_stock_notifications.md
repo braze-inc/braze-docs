@@ -7,7 +7,7 @@ description: "Este artículo de referencia describe cómo crear notificaciones d
 
 # Notificaciones de existencias
 
-> Mediante una combinación de notificaciones de reposición de existencias a través de los catálogos Braze y un Canvas, puede notificar a los clientes cuándo un artículo vuelve a estar disponible. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reponga el artículo.
+> Utiliza una combinación de notificaciones de reposición de existencias a través de los catálogos Braze y un Canvas para notificar a los clientes cuándo un artículo vuelve a estar disponible. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reponga el artículo.<br><br>Esta página explica cómo funcionan las notificaciones de agotamiento de existencias y cómo puedes configurarlas y utilizarlas.
 
 Cuando un usuario active un evento personalizado para un artículo, lo suscribiremos automáticamente para que reciba notificaciones de reposición de existencias de ese artículo. Cuando la cantidad de inventario del artículo cumpla tu regla de inventario (como un inventario superior a 100), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
 
@@ -29,7 +29,7 @@ Siga estos pasos para configurar las notificaciones de agotado en un catálogo e
     <br> ![Cajón de configuración del catálogo.][2]{: style="max-width:70%;"}
     - **Catálogo alternativo** Éste es el catálogo que se utilizará para la suscripción de reserva, si no hay ninguna propiedad `catalog_name` presente en el evento personalizado.
     - **Evento personalizado para suscripciones** es el evento personalizado Braze que se utilizará para suscribir a un usuario a las notificaciones de reposición de existencias. Cuando se produzca este evento, se suscribirá el usuario que lo haya realizado.
-    - **Evento personalizado para darse de baja** es el evento personalizado Braze que se utilizará para dar de baja a un usuario de las notificaciones de reposición de existencias.
+    - **Evento personalizado para darse de baja** es el evento personalizado Braze que se utilizará para dar de baja a un usuario de las notificaciones de reposición de existencias. Este evento es opcional. Si el usuario no realiza este evento, se le cancelará la suscripción transcurridos 90 días o cuando se desencadene el evento de reposición de existencias, lo que ocurra primero.
     - **La propiedad del evento ID del artículo** es la propiedad del evento personalizado anterior que se utilizará para determinar el artículo para una suscripción o desuscripción de nuevo en stock. Esta propiedad del evento personalizado debe contener un ID de artículo, que esté presente en un catálogo. El evento personalizado también debe contener una propiedad `catalog_name`, para especificar en qué catálogo se encuentra este artículo.
     
     - Un ejemplo de evento personalizado sería el siguiente
@@ -84,7 +84,7 @@ Para crear una plantilla con detalles sobre el artículo del catálogo que vuelv
 
 El uso de {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} devolverá el ID del artículo que volvió a estar en stock. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} devolverá el valor de inventario del artículo antes de la actualización, y {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} devolverá el nuevo valor de inventario después de la actualización.
 
-Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} en la parte superior de su mensaje y, a continuación, utilice {%raw%}``{{ items[0].<field_name> }}``{%endraw%} para acceder a los datos sobre ese elemento a lo largo de todo el mensaje.
+Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} en la parte superior de su mensaje y, a continuación, utilice {%raw%}``{{ items[0].<field_name> }}``{%endraw%} para acceder a los datos sobre ese elemento a lo largo de todo el mensaje.
 
 ## Consideraciones
 

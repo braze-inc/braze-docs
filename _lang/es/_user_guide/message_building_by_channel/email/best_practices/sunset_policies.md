@@ -22,7 +22,7 @@ Los filtros de segmentación ayudan a evitar que tus mensajes parezcan spam, ya 
 - ¿Proporcionará campañas especiales a los usuarios antes de excluirlos de sus segmentos?
 - ¿A qué canales de mensajería se aplicará tu política de extinción? 
 
-Por ejemplo, si tiene usuarios que optan por [la protección de la privacidad del correo (MPP) de Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/), considere cómo puede afectar esto a sus campañas de correo electrónico y a las métricas de entregabilidad, y determine cuál es la mejor manera de estructurar su política de suspensión.
+Por ejemplo, si tiene usuarios que optan por [la protección de la privacidad del correo (MPP) de Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/), considere cómo puede afectar esto a sus campañas de correo electrónico y a las métricas de entregabilidad, y determine cuál es la mejor manera de estructurar su política de suspensión.
 
 Para incorporar políticas de bloqueo a tus campañas, crea un [segmento][19] que excluya automáticamente a los usuarios que hayan marcado tus correos como spam o que no hayan interactuado con tus mensajes durante un determinado periodo de tiempo.  
 

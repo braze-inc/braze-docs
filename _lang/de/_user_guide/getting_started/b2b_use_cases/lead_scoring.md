@@ -32,7 +32,7 @@ Die Erstellung eines Lead Scoring-Workflows in Braze besteht aus zwei wichtigen 
 1. Fahren Sie mit dem Schritt **Eingabezeitplan** fort und wählen Sie einen **aktionsbasierten** Eingabezeitplan aus. Dadurch werden Nutzer:innen in den Canvas aufgenommen, wenn sie bestimmte Aktionen ausführen.
 
 2. Fügen Sie unter **Aktionsbasierte Optionen** diese beiden Aktionen hinzu:
-    - **Ändern Sie den Wert des angepassten Attributs** mit dem Namen Ihres Lead Scoring-Attributs (z .B. `lead score`). Wenn Sie noch kein Lead Scoring-Attribut erstellt haben, folgen Sie den Schritten unter [Benutzerdefinierte Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). Dadurch werden Nutzer:innen in den Canvas aufgenommen, sobald sich ihr Lead Score ändert.
+    - **Ändern Sie den Wert des angepassten Attributs** mit dem Namen Ihres Lead Scoring-Attributs (z .B. `lead score`). Wenn Sie noch kein Lead Scoring-Attribut erstellt haben, folgen Sie den Schritten unter [Benutzerdefinierte Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Dadurch werden Nutzer:innen in den Canvas aufgenommen, sobald sich ihr Lead Score ändert.
     - **E-Mail-Adresse hinzufügen**
 
 ![Schritt 2 der Erstellung eines Canvas mit dem Entry-Plan „aktionsbasiert“ und aktionsbasierten Optionen zum Ändern eines nutzerdefinierten Attributs „Lead-Score“ und zum Hinzufügen einer E-Mail-Adresse.][2]{: style="max-width:80%;"}
@@ -132,13 +132,13 @@ Als Ihr Marketing-Tool enthält Braze äußerst relevante Daten, die das interne
 
 So können beispielsweise Daten über das Engagement eines Leads (z. B. Öffnen und Anklicken von E-Mails, Engagement auf der Landing Page usw.) den Grad seines Engagements bestimmen. Mit den Lösungen von Braze für den Daten-Streaming-Export können Sie diese Daten an Ihr Data Warehouse in der Cloud zurückgeben und sie als Input für Ihre Lead-Scoring-Modelle zur Verfügung stellen:
 
-- [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Braze-Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Sicherer Datenaustausch mit Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze als Ziel %}
 
-Nachdem Ihre internen Teams Ihr Lead-Scoring-Modell erstellt und ausgeführt haben, können Sie diese Daten wieder in Braze einspeisen, so dass Sie die Leads besser segmentieren und für relevante Botschaften ansprechen können. Sie können dies mit [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) tun. 
+Nachdem Ihre internen Teams Ihr Lead-Scoring-Modell erstellt und ausgeführt haben, können Sie diese Daten wieder in Braze einspeisen, so dass Sie die Leads besser segmentieren und für relevante Botschaften ansprechen können. Sie können dies mit [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) tun. 
 
 Mit Cloud Data Ingestion erstellen Ihre internen Teams eine neue Tabelle oder Ansicht mit Ihren Benutzerkennungen, den neuesten Lead-Bewertungen und den Zeitstempeln, wann die Bewertungen aktualisiert wurden. Braze übernimmt die Tabelle oder die Ansicht und fügt die Lead Scores zu den Benutzerprofilen hinzu.
 
@@ -182,7 +182,7 @@ Um den Lead-Datensatz in Salesforce mit dem Lead-Status von Braze zu aktualisier
 
 | Header | Content |
 | --- | --- |
-| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_aed5594b-fddb-4cbb-be97-751c612792d6/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_aa5e9c03-57ec-4724-b961-0144923f905b/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

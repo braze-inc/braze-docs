@@ -26,7 +26,7 @@ Cuando un usuario final introduce su dirección de correo electrónico en este f
     - Direcciones de correo electrónico válidas: 
         - `example@gmail.com`
         - `example@gnail.com` (con una errata)
-    - Para obtener más información sobre la validación de correo electrónico en Braze, consulte [Directrices y notas técnicas sobre correo electrónico]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
+    - Para obtener más información sobre la validación de correo electrónico en Braze, consulte [Directrices y notas técnicas sobre correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details Más sobre usuarios identificados frente a anónimos %}
 
@@ -36,7 +36,7 @@ Si un usuario anónimo introduce su correo electrónico en el formulario y lo en
 
 Si se llama a `changeUser` con un `external_id` existente, el perfil de usuario anónimo queda huérfano y se fusionan [los campos de datos específicos del perfil de usuario]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) que no existan ya en el usuario identificado, pero se pierden los campos que ya existan, incluida la dirección de correo electrónico.
 
-Para más información, consulte el [Ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Para más información, consulte el [Ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

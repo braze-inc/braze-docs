@@ -32,8 +32,8 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 {: start="2"}
 2\. Wählen Sie **SMS**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel**.
 3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
-   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Wählen Sie eine [Abonnementgruppe]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), um sicherzustellen, dass Sie Ihre Nachricht an die richtigen Benutzer senden. Wenn Sie eine Abo-Gruppe auswählen, fügt Braze automatisch einen Filter zur Segmentierung hinzu, der sicherstellt, dass nur Nutzer:innen die Kampagne erhalten. Nur lange Codes und kurze Codes, die zu dieser Abonnementgruppe gehören, werden für den Versand von SMS an die Zielbenutzer verwendet.
 
@@ -66,19 +66,27 @@ Bevor Sie fortfahren, lesen Sie unsere Richtlinien für [SMS-Nachrichtensegmente
 
 ![SMS-Editor in Braze mit der Nachricht „Hallo first_name, wir freuen uns über Ihre Unterstützung! Warum kommen Sie nicht in eine unserer Filialen und zeigen diese SMS vor, um einen exklusiven Rabatt zu erhalten? Antworten Sie STOP, um keine Nachrichten mehr von uns zu erhalten."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
-{% alert tip %}
+### Hinzufügen einer Kontaktkarte
+
+Sie können Ihrer SMS Nachricht eine Kontaktkarte hinzufügen, damit Ihre Kund:innen Ihr Unternehmen und Ihre Kontaktinformationen einfach zu ihren Kontakten hinzufügen können. Sie können diesen Karten allgemeine Eigenschaften zuweisen, z. B. den Namen Ihres Unternehmens, Telefonnummer, Adresse, E-Mail und ein kleines Foto. Weitere Informationen finden Sie unter [Kontaktkarten]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+
+### Tipps
+
+#### Liquid verwenden
+
 {% raw %}
 Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardwert für die von Ihnen gewählte Personalisierung angeben, damit der Empfänger im Falle eines unvollständigen Benutzerprofils nicht einen leeren Platzhalter `Hi, !` anstelle seines Namens oder eines zusammenhängenden Satzes erhält.
 {% endraw %}
-{% endalert %}
 
-Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
+#### KI-Kopie generieren
+
+Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
 ![Button „KI-Copywriter starten“, der sich im Nachrichten-Feld des SMS-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### Kontaktkarten
+#### Erstellen von Nachrichten von rechts nach links
 
-Wenn Sie möchten, können Sie Ihrer SMS-Nachricht eine Kontaktkarte hinzufügen, damit Ihre Kunden Ihr Unternehmen und Ihre Kontaktinformationen leicht zu ihren Kontakten hinzufügen können. Sie können diesen Karten allgemeine Eigenschaften zuweisen, z. B. den Namen Ihres Unternehmens, Telefonnummer, Adresse, E-Mail und ein kleines Foto. Weitere Informationen finden Sie unter [Kontaktkarten]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
 
 ## Schritt 3: Nachricht in der Vorschau anzeigen und testen
 

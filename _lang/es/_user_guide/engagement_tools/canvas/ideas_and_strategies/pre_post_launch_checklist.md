@@ -39,7 +39,13 @@ Si observa que su público objetivo es menor de lo esperado, pruebe a utilizar "
 
 ### Identifica la configuración de entrada y las condiciones de carrera
 
-Una condición de carrera puede producirse cuando has utilizado los mismos criterios de entrada tanto en la configuración **del horario de entrada** como en la de **la audiencia objetivo**. Si utiliza la entrada basada en acciones, compruebe que no ha utilizado aquí la misma acción desencadenante que en su público objetivo. Puede producirse una condición de carrera en la que el usuario no se encuentre entre el público en el momento de realizar el evento desencadenante, lo que significa que no entrará en el Canvas.
+Una condición de carrera puede producirse cuando has utilizado los mismos criterios de entrada tanto en la configuración **del horario de entrada** como en la de **la audiencia objetivo**. 
+
+Si utiliza la entrada basada en acciones, compruebe que no ha utilizado aquí la misma acción desencadenante que en su público objetivo. Puede producirse una condición de carrera en la que el usuario no se encuentre entre el público en el momento de realizar el evento desencadenante, lo que significa que no entrará en el Canvas.
+
+{% alert tip %}
+Consulta las [mejores prácticas]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) para evitar esta condición de carrera al configurar un Canvas basado en acciones con el mismo desencadenante que el filtro de audiencia.
+{% endalert %}
 
 ### Comprobar las propiedades de las entradas y eventos del lienzo
 
@@ -97,7 +103,7 @@ A continuación, es importante identificar estos ajustes que pueden afectar a cu
 - Horas tranquilas
 - Validaciones de entrega
 
-En general, elija la Temporización Inteligente o las Horas de Silencio para su Lienzo, no ambas. La misma sugerencia se aplica a utilizar la sincronización inteligente o [la limitación de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), no ambas. Para más información sobre la mejor manera de utilizar Intelligence Suite, lea nuestras [Preguntas frecuentes sobre Inteligencia]({{site.baseurl}}/user_guide/intelligence/faqs/).
+En general, elija la Temporización Inteligente o las Horas de Silencio para su Lienzo, no ambas. La misma sugerencia se aplica a utilizar la sincronización inteligente o [la limitación de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), no ambas. Para más información sobre la mejor manera de utilizar Intelligence Suite, lea nuestras [Preguntas frecuentes sobre Inteligencia]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Volúmenes de envío sospechosos entre rutas
 

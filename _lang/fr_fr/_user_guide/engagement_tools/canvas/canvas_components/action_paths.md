@@ -77,7 +77,7 @@ Si les utilisateurs entrent dans un parcours d'action plusieurs fois et ont plus
 | **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}

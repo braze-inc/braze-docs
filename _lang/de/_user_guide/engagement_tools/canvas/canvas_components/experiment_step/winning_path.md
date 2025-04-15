@@ -8,7 +8,7 @@ tool: Canvas
 
 # Gewinnerpfad in Experimentpfaden
 
-> Winning Path ist ähnlich wie [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in Kampagnen und ermöglicht Ihnen die Automatisierung Ihrer A/B-Tests.
+> Winning Path ist ähnlich wie [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) in Kampagnen und ermöglicht Ihnen die Automatisierung Ihrer A/B-Tests.
 
 Wenn der Winning Path in einem Experimentierpfad-Schritt aktiviert ist, werden alle nachfolgenden Benutzer nach einer bestimmten Zeitspanne auf den Pfad mit der höchsten Konversionsrate weitergeleitet.
 

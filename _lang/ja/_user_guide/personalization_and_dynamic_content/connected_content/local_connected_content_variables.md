@@ -8,6 +8,8 @@ search_rank: 1
 
 # コネクテッドコンテンツのローカル変数
 
+> このページでは、ローカルのコネクテッドコンテンツ変数の概要と、それらの使用方法と保存方法について説明します。
+
 Brazeは、`connected_content`タグ内に指定されたエンドポイントに送信時に標準のGETリクエストを行います。エンドポイントがJSONを返す場合、それは自動的に解析され、`connected`という変数に格納されます。エンドポイントがテキストを返す場合、それは`connected_content`タグの代わりにメッセージに直接挿入されます。
 
 応答を変数に保存したい場合は、JSONオブジェクトを返すことをお勧めします。そして、コネクテッドコンテンツの応答でタグをテキストに置き換える場合は、応答が有効な JSON ([json.org][46] が定義) ではないことを確認してください。
@@ -97,7 +99,6 @@ APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endr
 デフォルトでは、コネクテッドコンテンツは指定されたURLにHTTP GETリクエストを送信します。代わりにPOSTリクエストを行うには、`:method post`を指定します。
 
 指定された`:body`の後に`key1=value1&key2=value2&...`形式のクエリ文字列またはキャプチャされた値への参照を指定することで、オプションでPOSTボディを提供できます。Content-Typeのデフォルトは`application/x-www-form-urlencoded`です。`:content_type application/json`を指定し、`key1=value1&key2=value2`のようなフォームURLエンコードされた本文を提供すると、Brazeは送信前に自動的に本文をJSONエンコードします。
-
 
 #### デフォルトのコンテンツタイプ
 {% raw %}
@@ -198,7 +199,6 @@ Braze は、コネクテッドコンテンツの応答を永続的にログに�
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
-
 
 #### キャッシュバスティング
 

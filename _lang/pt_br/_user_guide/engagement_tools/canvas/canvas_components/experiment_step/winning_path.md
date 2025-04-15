@@ -8,7 +8,7 @@ tool: Canvas
 
 # Jornada vencedora entre as jornadas do experimento
 
-> A Jornada Vencedora é semelhante à [Variante Vencedora]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) em campanhas e permite automatizar seus Testes A/B.
+> A Jornada Vencedora é semelhante à [Variante Vencedora]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) em campanhas e permite automatizar seus Testes A/B.
 
 Quando o Winning Path é ativado em uma etapa da jornada experimental, após um período de tempo especificado, todos os usuários subsequentes serão enviados para a jornada com a maior taxa de conversão.
 

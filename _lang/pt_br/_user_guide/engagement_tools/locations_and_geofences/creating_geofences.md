@@ -40,7 +40,7 @@ Na página **Locais**, clique em **\+ Criar conjunto de geofences**.
 
 ![Conjunto de geofences de aeroportos alemães com um usuário desenhando um raio de dois mil metros no mapa para o Aeroporto de Hamburgo.][1]
 
-Depois de criar um conjunto de geofences, você pode adicionar geofences manualmente, desenhando-as no mapa. Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para saber mais sobre as opções configuráveis, consulte [Configuração de geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Depois de criar um conjunto de geofences, você pode adicionar geofences manualmente, desenhando-as no mapa. Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para saber mais sobre as opções configuráveis, consulte [Configuração de geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Criação de conjuntos via upload em massa {#creating-geofence-sets-via-bulk-upload}
 

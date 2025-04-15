@@ -7,12 +7,12 @@ description: "Dieser Artikel enthält eine Liste öffentlich zugänglicher APIs 
 
 # Öffentliche APIs
 
-> Es gibt eine Vielzahl öffentlich verfügbarer APIs, die für Connected-Content verwendet werden können. Über öffentliche APIs können Sie angepasste Daten in Nachrichten einfügen. Hier eine Liste öffentlicher APIs, die sich für Connected-Content eignen. Es gibt allerdings noch viele andere APIs mit zahlreichen Verwendungsmöglichkeiten für Connected-Content.  
+> Es gibt eine Vielzahl öffentlich verfügbarer APIs, die für Connected-Content verwendet werden können. Über öffentliche APIs können Sie angepasste Daten in Nachrichten einfügen. Auf dieser Seite finden Sie eine Liste der öffentlichen APIs, die für Connected-Content verwendet werden können. Es gibt allerdings noch viele andere APIs mit zahlreichen Verwendungsmöglichkeiten für Connected-Content.  
 
 Kontaktieren Sie uns unter [success@braze.com](mailto:success@braze.com) und verraten Sie uns Ihre API.
 
 {% alert note %}
-Öffentliche APIs können Nutzungsbeschränkungen und Tarifbegrenzungen unterliegen.  Lesen Sie sich unbedingt die API-Dokumentation durch und kontaktieren Sie die API-Anbieter mit Ihrer Verwendungsabsicht.
+Öffentliche APIs können Nutzungsbeschränkungen und Tarifbegrenzungen unterliegen. Lesen Sie sich unbedingt die API-Dokumentation durch und kontaktieren Sie die API-Anbieter mit Ihrer Verwendungsabsicht.
 {% endalert %}
 
 ## Neuigkeiten und Informationen

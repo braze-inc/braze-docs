@@ -13,7 +13,7 @@ tool: Campaigns
 > Les campagnes de livraison par événement ou les campagnes déclenchées par des événements sont très efficaces pour les messages transactionnels ou basés sur le résultat. Au lieu d’envoyer votre campagne certains jours, vous pouvez les déclencher pour qu’elles s’envoient après qu’un utilisateur a effectué un certain événement. 
 
 {% alert important %}
-La livraison basée sur l'action n'est pas disponible pour les [composants Canvas avec des messages intégrés à l'application]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Ces étapes doivent être planifiées.
+La livraison basée sur l'action n'est pas disponible pour les [composants Canvas avec des messages intégrés à l'application]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Ces étapes doivent être planifiées.
 {% endalert %}
 
 ## Configurer une campagne avec déclencheur

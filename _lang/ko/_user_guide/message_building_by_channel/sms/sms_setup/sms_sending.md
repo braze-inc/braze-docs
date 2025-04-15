@@ -17,7 +17,7 @@ channel:
 
 ### 구독 그룹 선택
 
-SMS 메시지는 [구독 그룹에서]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/) 보내야 합니다. 구독 그룹은 특정 유형의 메시징 목적에 사용되는 발신 전화번호(짧은 코드, 긴 코드 또는 영숫자 발신자 ID 등)의 모음입니다. 구독 그룹을 지정하여 구독한 사용자만 타겟팅하도록 해야 합니다. 일부 클라이언트는 트랜잭션 SMS 메시징 및 프로모션 SMS 메시징과 같은 다양한 사용 사례에 대해 여러 개의 구독 그룹을 보유하고 있을 수 있습니다.<br><br>
+SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). 구독 그룹은 특정 유형의 메시징 목적에 사용되는 발신 전화번호(짧은 코드, 긴 코드 또는 영숫자 발신자 ID 등)의 모음입니다. 구독 그룹을 지정하여 구독한 사용자만 타겟팅하도록 해야 합니다. 일부 클라이언트는 트랜잭션 SMS 메시징 및 프로모션 SMS 메시징과 같은 다양한 사용 사례에 대해 여러 개의 구독 그룹을 보유하고 있을 수 있습니다.<br><br>
 
 ### 메시지 본문 입력
 

@@ -80,7 +80,9 @@ Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas ut
 ![Les groupes de filtres du segmenteur avec l'opérateur AND.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Les segments utilisant déjà le filtre d'**appartenance à un segment** ne peuvent pas être inclus ou imbriqués dans d'autres segments.
+Les segments utilisant déjà le filtre d'**appartenance à un segment** ne peuvent pas être inclus ou imbriqués dans d'autres segments. Cela permet d'éviter un cycle dans lequel le segment A inclut le segment B, qui essaie ensuite d'inclure à nouveau le segment A. Dans ce cas, la segmentation ne cesserait de se référer à elle-même, ce qui rendrait impossible le calcul de la personne qui en fait partie.
+
+En outre, l'imbrication de segments de ce type ajoute de la complexité et peut ralentir les choses. Au lieu de cela, recréez le segment que vous essayez d'inclure en utilisant les mêmes filtres.
 {% endalert %}
 
 #### Groupes d'exclusion (facultatif) {#exclusion}

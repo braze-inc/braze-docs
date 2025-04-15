@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Drapeaux de fonctionnalité dans Canvas
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Synchronisation d’audience Canvas
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ Utilisez les [parcours d'action][1] pour diviser votre parcours utilisateur en f
 
 Les composants d'[arbre décisionnel][3] utilisent une simple logique "oui ou non" pour créer deux parcours mutuellement exclusifs pour vos voyages d'utilisateurs qui sont basés sur une action ou un attribut de l'utilisateur. Ce processus permet d’identifier et de cibler vos groupes d’utilisateurs.
 
-Les composants de [retardement][4] vous permettent de retarder une seule étape de votre canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant. 
+Les composants de [retardement][4] vous permettent de retarder une seule étape de votre canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant.
 
 ### Test
 
@@ -62,7 +62,7 @@ Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le
 
 ### Intégration
 
-Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Tirez parti des options de synchronisation d'audience disponibles pour [Facebook][6] et [Google][7]. <br><br>
+Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Tirez parti des options de synchronisation d'audience disponibles pour [Facebook][6] et [Google][7].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

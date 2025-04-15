@@ -8,7 +8,7 @@ description: "Cet article de référence décrit comment créer des notification
 
 # Notifications de baisse de prix
 
-> En combinant les notifications de baisse de prix via les catalogues de Braze et un Canvas, vous pouvez avertir les clients lorsque le prix d'un article a baissé. Chaque fois qu'un client effectue un événement personnalisé sélectionné, il peut être automatiquement abonné pour être informé lorsque le prix de l'article est réduit.
+> Utilisez une combinaison de notifications de baisse de prix par le biais des catalogues de Braze et d'un Canvas pour informer les clients de la baisse de prix d'un article. Chaque fois qu'un client effectue un événement personnalisé sélectionné, il peut être automatiquement abonné pour être informé lorsque le prix de l'article est réduit.<br><br>Cette page explique comment fonctionnent les notifications de baisse de prix et comment vous pouvez les configurer et les utiliser.
 
 Lorsqu'un utilisateur déclenche un événement personnalisé pour un produit, nous l'abonnons automatiquement pour qu'il reçoive des notifications de baisse de prix pour ce produit. Lorsque le prix du produit correspond à votre règle d'inventaire (par exemple, une baisse supérieure à 50 %), tous les abonnés pourront recevoir des notifications par le biais d'une campagne ou d'un canvas. Cependant, seuls les utilisateurs ayant opté pour les notifications recevront des notifications. 
 
@@ -32,7 +32,7 @@ Suivez ces étapes pour configurer les notifications de baisse de prix dans un c
     <br> ![Tiroir des paramètres du catalogue.][2]{: style="max-width:70%;"}
     - **Catalogue de secours :** Le catalogue utilisé pour l'abonnement s'il n'y a pas de propriété `catalog_name` dans l'événement personnalisé.
     - **Événement personnalisé pour s'abonner :** L'événement personnalisé de Braze utilisé pour abonner un utilisateur aux notifications du catalogue. Lorsque cet événement se produit, l'utilisateur qui l'a effectué est abonné.
-    - **Événement personnalisé pour la désinscription :** L'événement personnalisé de Braze utilisé pour désinscrire un utilisateur des notifications.
+    - **Événement personnalisé pour la désinscription :** L'événement personnalisé de Braze utilisé pour désinscrire un utilisateur des notifications. Cet événement est facultatif. Si l'utilisateur n'effectue pas cet événement, il sera désabonné au bout de 90 jours ou lorsque l'événement de baisse de prix se déclenchera, selon ce qui se produira en premier.
     - **Propriété d'événement de l’ID du produit :** La propriété de l'événement personnalisé ci-dessus utilisée pour déterminer l'élément d'un abonnement ou d'un désabonnement. Cette propriété de l'événement personnalisé doit contenir un ID d'article existant dans un catalogue. L'événement personnalisé doit contenir une propriété `catalog_name` pour spécifier le catalogue dans lequel se trouve cet article.
    
     - Un exemple d'événement personnalisé ressemblerait à ceci

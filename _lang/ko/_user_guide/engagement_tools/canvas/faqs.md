@@ -22,7 +22,7 @@ tool: Canvas
 
 각 단계마다 작업을 대기열에 추가하여 거의 동시에 실행하고 그 중 하나가 "승리"합니다. 실제로는 어느 정도 균등하게 정렬될 수 있지만, 적어도 먼저 생성된 단계에 약간의 편향이 있을 수 있습니다. 
 
-또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. 균등 분할을 원하면 [무작위 버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) 필터를 추가하세요.
+또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
 
 ### 캔버스를 중지하면 어떻게 되나요?
 
@@ -54,7 +54,7 @@ tool: Canvas
 
 다단계 캔버스의 일부 단계를 편집하는 경우 이미 오디언스에 속해 있지만 단계를 받지 않은 사용자는 업데이트된 버전의 메시지를 받게 됩니다. 아직 해당 단계에 대한 평가가 이루어지지 않은 경우에만 이런 일이 발생한다는 점에 유의하세요.
 
-실행 후 편집할 수 있는 항목에 대한 자세한 내용은 [실행 후 캔버스 변경하기]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/)를 참조하세요.
+For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/post-launch_edits/).
 
 ### 캔버스에서 사용자 전환은 어떻게 추적하나요?
 
@@ -95,7 +95,7 @@ tool: Canvas
 
 ### 컴포넌트와 스텝의 차이점은 무엇인가요?
 
-[구성 요소]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)는 캔버스의 효과를 결정하는 데 사용할 수 있는 캔버스의 개별 부분입니다. 구성 요소에는 사용자 여정 분할, 지연 추가, 여러 캔버스 경로 테스트와 같은 작업이 포함될 수 있습니다. 캔버스의 단계는 캔버스 브랜치에서 개인화된 사용자 여정을 의미합니다. 기본적으로 캔버스는 사용자 여정을 위한 단계를 생성하는 개별 구성 요소로 이루어져 있습니다.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. 구성 요소에는 사용자 여정 분할, 지연 추가, 여러 캔버스 경로 테스트와 같은 작업이 포함될 수 있습니다. 캔버스의 단계는 캔버스 브랜치에서 개인화된 사용자 여정을 의미합니다. 기본적으로 캔버스는 사용자 여정을 위한 단계를 생성하는 개별 구성 요소로 이루어져 있습니다.
 
 ### 각 캔버스 구성 요소에 대한 분석을 보려면 어떻게 해야 하나요?
 
@@ -111,7 +111,7 @@ tool: Canvas
 
 ### 익명 사용자는 캔버스 여정 중에 어떤 일이 발생하나요?
 
-익명 사용자는 캔버스에 들어오고 나갈 수 있지만, 식별될 때까지 특정 사용자 프로필과 연결되지 않으므로 분석에서 이들의 상호 작용이 완전히 추적되지 않을 수 있습니다. [쿼리 빌더를]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) 사용하여 이러한 메트릭에 대한 보고서를 생성할 수 있습니다.
+익명 사용자는 캔버스에 들어오고 나갈 수 있지만, 식별될 때까지 특정 사용자 프로필과 연결되지 않으므로 분석에서 이들의 상호 작용이 완전히 추적되지 않을 수 있습니다. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
 
 ### 내 캔버스 단계 전환율이 내 캔버스 이형 상품 총 전환율과 같지 않은 이유는 무엇인가요?
 

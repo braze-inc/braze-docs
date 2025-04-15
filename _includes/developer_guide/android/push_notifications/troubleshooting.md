@@ -1,6 +1,42 @@
-## Understanding the Braze workflow
+## Understanding the Braze push workflow
 
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
+
+```mermaid
+---
+config:
+  theme: mc
+---
+sequenceDiagram
+  participant Device as User Device
+  participant App as Android App
+  participant BrazeSDK as Braze SDK
+  participant BrazeAPI as Braze Server
+  participant Firebase as Google Firebase
+  Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
+  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  BrazeSDK ->> App: Get push token from Firebase Manager
+  BrazeSDK ->> BrazeAPI: Send push token to Braze Server
+  Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
+  Note over Device, Firebase: Register Option 2<br/>Manual registration.
+  App ->> BrazeSDK: App sets `Braze.registeredPushToken`
+  BrazeSDK ->> BrazeAPI: Send push token to Braze Server
+  Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.  
+  Note over Device, Firebase: Push permission
+  BrazeAPI ->> BrazeSDK: In-App Message containing push prompt
+  BrazeSDK -> App: In-App Message is displayed
+  App -> BrazeSDK: User requests permissions
+  BrazeSDK -> App: Displays the Push Authorization prompt
+  BrazeSDK -> BrazeAPI: If authorized and `com_braze_optin_when_push_authorized`, Opt-In value is sent.
+  Note over Device, Firebase: Push Notification Is Sent
+  BrazeAPI ->> Firebase: Sends push message 
+  Firebase ->> Device: Push message sent
+  Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
+  App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+
+```
+
 
 ### Step 1: Configuring your Google Cloud API key
 

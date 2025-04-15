@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > Nachdem Sie Ihre Kampagne oder Canvas gestartet haben, können Sie die wichtigsten Kennzahlen auf der Seite mit den Kampagnendetails oder der Canvas-Analyse einsehen. In diesem Artikel erfahren Sie, wo Sie diese Metriken finden können und was sie bedeuten.
 
 {% alert tip %}
-Suchen Sie nach Definitionen für die Begriffe und Kennzahlen in Ihrem Bericht? Weitere Informationen finden Sie im [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Suchen Sie nach Definitionen für die Begriffe und Kennzahlen in Ihrem Bericht? Weitere Informationen finden Sie im [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Kampagnen-Analysen
@@ -34,7 +34,7 @@ In diesem Bereich sehen Sie die Gesamtmetriken, wie z.B. die Anzahl der gesendet
 
 #### Kontrollgruppen
 
-Um die Wirkung einer einzelnen LINE-Botschaft zu messen, können Sie einem A/B-Test eine [Kontrollgruppe]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) hinzufügen. Der Bereich **Kampagnendetails** auf der obersten Ebene enthält keine Metriken aus der Variante Kontrollgruppe.
+Um die Wirkung einer einzelnen LINE-Botschaft zu messen, können Sie einem A/B-Test eine [Kontrollgruppe]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) hinzufügen. Der Bereich **Kampagnendetails** auf der obersten Ebene enthält keine Metriken aus der Variante Kontrollgruppe.
 
 ### LINE-Performance
 
@@ -46,7 +46,7 @@ Wenn Sie Ihre Ansicht vereinfachen möchten, wählen Sie **\+ Spalten hinzufüge
 
 #### LINE Metriken
 
-Hier sind einige wichtige LINE-Kennzahlen, die Sie in Ihren Analysen sehen können. Die Definitionen aller LINE-Metriken, die in Braze verwendet werden, finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Hier sind einige wichtige LINE-Kennzahlen, die Sie in Ihren Analysen sehen können. Die Definitionen aller LINE-Metriken, die in Braze verwendet werden, finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Begriff | Definition |
 | --- | --- |

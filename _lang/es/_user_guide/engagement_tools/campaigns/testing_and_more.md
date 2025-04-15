@@ -15,7 +15,7 @@ description: "En esta página de inicio encontrarás pruebas de campaña y conse
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
   - name: Cómo enviar mensajes de prueba
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+    link: /docs/developer_guide/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Campañas activadas por API y basadas en acciones
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
@@ -27,12 +27,12 @@ guide_featured_list:
 guide_menu_title: "Additional articles"
 guide_menu_list:
   - name: Análisis de la campaña
-    link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
+    link: /docs/user_guide/analytics/reporting/campaign_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Informes de retención
-    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/reporting/retention_reports/
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Informes de embudo
-    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reporting/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
 ---
