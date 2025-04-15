@@ -12,7 +12,7 @@ description: "This article outlines details about the View Translation for a cam
 {% api %}
 # View translation for a campaign
 {% apimethod get %}
-/campaign/translations/?locale_id={locale_uuid}
+/campaigns/translations/?locale_id={locale_uuid}
 {% endapimethod %}
 
 > Use this endpoint to preview a translated message for a campaign.
@@ -49,7 +49,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translations/?locale_id={locale_id}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations/?locale_id={locale_uuid}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
