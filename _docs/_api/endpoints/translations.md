@@ -37,15 +37,15 @@ guide_featured_list:
 The Braze translation endpoints are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-# How our translation endpoints work
+## How our translation endpoints work
 
 Braze Translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
 
-## Prerequisites
+### Prerequisites
 
 Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
 
-## How to test your translations
+### How to test your translations
 
 There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), and email templates:
 
