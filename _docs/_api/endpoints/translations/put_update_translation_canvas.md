@@ -91,7 +91,7 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
 	"errors": [
 		{
-			"message": "Something went wrong. Translation IDs are mismatched or translated text exceeds limits."
+			"message": "The provided locale code does not exist."
 		}
 	]
 }

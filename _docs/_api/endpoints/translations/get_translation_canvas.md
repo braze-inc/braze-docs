@@ -92,7 +92,7 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
 	"errors": [
 		{
-			"message": "Invalid locale ID"
+			"message": "The provided locale code does not exist."
 		}
 	]
 }
