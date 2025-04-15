@@ -70,9 +70,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 	"translations": [
 		{
 			"translation_map": {
-				"id_0": "Hello",
-				"id_1": "My name is Jacky",
-				"id_2": "Where is the library?"
+				"id_0": "¡Hola!",
+				"id_1": "Me llamo Jacky",
+				"id_2": "¿Dónde está la biblioteca?"
 			},
 			"locale": {
  				"name": "es-MX",
