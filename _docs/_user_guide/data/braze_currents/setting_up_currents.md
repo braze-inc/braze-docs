@@ -69,7 +69,7 @@ If needed, you can learn more about our events in our [event delivery semantics]
 You can use Currents field transformations to remove or hash a string field.
 
 - **Remove:** Replaces the string field with `[REDACTED]`. This is helpful if your partner rejects events with missing or empty fields.
-- **Hash:** Applys an SHA-256 hashing algorithm to the string field.
+- **Hash:** Applies an SHA-256 hashing algorithm to the string field.
 
 Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change events.
 

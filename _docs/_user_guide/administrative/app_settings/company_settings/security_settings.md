@@ -27,7 +27,7 @@ Select **Enforce complex passwords** to require passwords to include at least on
 - Number
 - Special character
 
-### Password reusability
+### Password re-usability
 
 Determines the minimum number of new passwords that must be set before a user can reuse a password. The default is three.
 

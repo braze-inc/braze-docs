@@ -359,7 +359,7 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Make sure the `UPDATED_AT` time isn't the same time as your sync
 
-Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as your previous sync time. This is because the CDI will choose an "inclusive boundary" when it spots any row that is the same time as the previous sync, and will make the rows viable to sync. The CDI will re-ingest those rows and create duplicate data. 
+Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as your previous sync time. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
 
 ### Separate `EXTERNAL_ID` from `PAYLOAD` column
 
@@ -617,7 +617,7 @@ We recommend that queries be completed within one hour for optimal performance a
 
 ## Product limitations
 
-| Limitations            | Description                                                                                                                                                                        |
+| Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
 | Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |

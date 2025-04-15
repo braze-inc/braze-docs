@@ -10,7 +10,7 @@ description: "Learn how to use Winning Variant or Personalized Variant when crea
 
 When [creating an A/B test][1] for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
-![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimization, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Both options work by sending an initial test to a percentage of your target segment. After the test ends, the remaining users in your audience are sent either the best performing variant (Winning Variant) or the variant they're most likely to engage with (Personalized Variant).
 

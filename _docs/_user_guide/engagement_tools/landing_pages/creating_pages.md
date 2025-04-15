@@ -71,7 +71,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Block Type     | Description |
 |---------------|-------------|
 | Email Capture | A form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
-| Phone Capture | A form field for phone numbers. When submitted, the user is subscribed to your SMS or Whatsapp subscription group. |
+| Phone Capture | A form field for phone numbers. When submitted, the user is subscribed to your SMS or WhatsApp subscription group. |
 | Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
@@ -83,7 +83,7 @@ After creating a landing page with a form, be sure to embed its [landing page Li
 
 #### Page container styles
 
-You can set styles to be applied across all relevent component blocks in your landing page from the **Page container** tab. These styles will be used everywhere on your page except where you override them with a specific block.
+You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles will be used everywhere on your page except where you override them with a specific block.
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 

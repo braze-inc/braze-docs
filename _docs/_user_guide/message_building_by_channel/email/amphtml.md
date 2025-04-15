@@ -25,18 +25,18 @@ Braze is not responsible for users registering with Google or meeting the necess
 | AMP email elements | A compelling AMP email includes the strategic use of various components. Refer to the Essentials tab in the [Components](#components) section below. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Supported clients
+### Supported email clients
 
-Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary from client to client. Follow the register links for more information.
+Before you can send AMP emails to users, you must register with our email clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary from client to client. Follow the registration links for more information.
 
-| Client | Register Link |
+| Client | Registration Link |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-For a full list of supported platforms, refer to [AMP documentation](https://amp.dev/support/faq/email-support). 
+For a full list of supported email clients, refer to [AMP documentation](https://amp.dev/support/faq/email-support).
 
 ### Enabling Gmail account
 

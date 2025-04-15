@@ -23,7 +23,7 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
+There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [using the API][5].
 
 {% tabs %}
 {% tab Drag-and-drop %}
@@ -44,13 +44,13 @@ There are two types of editors used to create a Content Block—classic and drag
 |---|---|
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
-| Content Size | Maximum of 50kB (kilobyte). |
+| Content Size | Maximum of 50 KB. |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it can be beneficial to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ After creating your Content Block, you can insert it in your messages by followi
 1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-{% alert note %}
-Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
-{% endalert %}
+### Things to know
+
+- Using HTML Content Blocks in drag-and-drop emails **or** drag-and-drop Content Blocks in HTML emails may result in unexpected rendering issues. This is because the drag-and-drop editor is generates HTML and CSS that dynamically renders the content whereas the HTML editor is more static.
+- Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 
 ### Updating and copying Content Blocks
 

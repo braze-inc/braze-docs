@@ -161,15 +161,15 @@ You can [turn off click tracking]({{site.baseurl}}/user_guide/message_building_b
 
 [Dynamic APNs gateway management]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_dynamic-apns-gateway-management) enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually select APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and BadDeviceToken errors.
 
-#### Flutter support for Banner Cards
+#### Flutter support for Banners
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Banner Cards now support Flutter. Additionally, all Banner Card documentation has been overhauled for easier usability. Check out the following articles to get started:
+Banners now support Flutter. Additionally, all Banner documentation has been overhauled for easier usability. Check out the following articles to get started:
 
-- [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards)
-- [Creating Banner Card campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
-- [Embedding Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
+- [About Banners]({{site.baseurl}}/developer_guide/banner_cards)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
 
 #### WhatsApp click tracking
 
@@ -309,7 +309,7 @@ WhatsApp messages now support [video, audio, and document outbound messages]({{s
 
 #### Right-to-left messages
 
-[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
+[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
  
 ### AI and ML automation
  
@@ -482,7 +482,7 @@ Segment your users by whether they soft bounced X times in Y days. For more info
 
 #### Anonymous users overview
 
-[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
+[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
 
 #### Global Control Group membership
 

@@ -89,7 +89,7 @@ After the integration process completes, Braze will automatically pull that chan
 | --- | --- |
 | Provider ID | Select your provider and then go to ***Settings** > **Basic information** |
 | Channel ID | Select your provider and then go to **Channels** > your channel > **Basic settings** |
-| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings** |
+| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings**. |
 | Channel access token | Select your provider and then go to **Channels** > your channel > **Messaging API**. If there isn't a channel access token, select **Issue**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -108,6 +108,10 @@ After the integration process completes, Braze will automatically pull that chan
    - Channel ID
    - Channel secret
    - Channel access token
+
+{% alert important %}
+During integration, be sure to check that your channel secret is correct. If it's incorrect, there may be inconsistencies in the subscription status.
+{% endalert %}
 
 ![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
 
@@ -168,7 +172,7 @@ Here is an example payload to `/users/track` that updates a user profile by the 
 
 ## Step 5: Merge profiles (optional)
 
-As described above, there's a possibilty for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
+As described above, there's a possibility for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
 
 Here's an example payload to `/users/merge` that targets an unidentified user profile by user alias `line_id`:
 

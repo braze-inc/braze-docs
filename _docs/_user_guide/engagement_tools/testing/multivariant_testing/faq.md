@@ -29,7 +29,7 @@ This is a separate test from the confidence score, which only describes the perf
 
 ## Running and concluding tests
 
-### When is the inital test over?
+### When is the initial test over?
 
 When using Winning Variant for single-send campaigns, the test is over when the Winning Variant Send Time arrives. Braze will deem a variant to be the winner if it shows the highest conversion rate by a statistically significant margin.
 

@@ -87,7 +87,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### Step 3a: Add your sending information
 
@@ -163,7 +163,7 @@ Email extras allows you to send additional data back to other email service prov
 To add email extras, go to the **Sending Info** and select **Add New Extra**.
 
 {% alert warning %}
-The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
+The total key-value pairs added should not exceed 1 KB. Otherwise, the messages will be aborted.
 {% endalert %}
 
 Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
@@ -250,7 +250,7 @@ With this configuration, don't include any filters in the **Target Users** step 
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
 
 - Opens app
 - Makes purchase (This can be a generic purchase or a specific item)
