@@ -12,7 +12,7 @@ description: "This article outlines details about the View translation for a Can
 {% api %}
 # View translation for a Canvas
 {% apimethod get %}
-/canvas/translations/?locale_id={locale_id}
+/canvas/translations/?locale_id={locale_uuid}
 {% endapimethod %}
 
 > Use this endpoint to preview a translated message for a Canvas.
@@ -28,6 +28,13 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
+
+## Path parameters
+
+| Parameter     | Required | Data Type | Description           |
+|---------------|----------|-----------|-----------------------|
+| `locale_uuid` | Required | String    | The ID of the locale. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Query parameters
 
@@ -62,15 +69,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
-			"locale": {
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			},
 			"translation_map": {
 				"id_0": "Hello",
 				"id_1": "My name is Jacky",
 				"id_2": "Where is the library?"
+			},
+			"locale": {
+ 				"name": "es-MX",
+ 				"country": "Mexico",
+ 				"language": "Spanish",
 			}
 		}
 	]

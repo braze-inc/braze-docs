@@ -6,13 +6,13 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List translations for a Canvas endpoint."
+description: "This article outlines details about the View translations for a Canvas endpoint."
 ---
 
 {% api %}
-# List translations for a Canvas
+# View translations for a Canvas
 {% apimethod get %}
-/canvas/translations/source
+/canvas/translations
 {% endapimethod %}
 
 > Use this endpoint to view all the translations for a Canvas.
@@ -62,28 +62,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
-			"locale": {
-				"uuid": "0x123456",
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			},
 			"translation_map": {
 				"id_0": "Hello",
 				"id_1": "My name is Jacky",
 				"id_2": "Where is the library?"
+			},
+			"locale": {
+				"uuid": "a1b2c3d4-e5f6-g7h8-123a-a1234bn5678d",
+ 				"name": "es-MX",
+ 				"country": "Mexico",
+ 				"language": "Spanish",
 			}
 		},
 		{
+			"translation_map": {
+				"id_0": "Hello",
+				"id_1": "My name is Jacky",
+				"id_2": "Where is the library?"
+			},
 			"locale": {
  				"name": "zh-HK",
  				"country": "Hong Kong",
  				"language": "Chinese (Traditional)",
-			},
-			"translation_map": {
-				"id_0": "Hello",
-				"id_1": "My name is Jacky",
-				"id_2": "Where is the library?"
 			}
 		}
 	]

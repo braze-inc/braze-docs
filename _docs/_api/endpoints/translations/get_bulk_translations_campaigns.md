@@ -44,7 +44,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translations' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -63,28 +63,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
-			"locale": {
-				"uuid": "0x123456",
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			},
 			"translation_map": {
 				"id_0": "Hello",
 				"id_1": "My name is Jacky",
 				"id_2": "Where is the library?"
+			},
+			"locale": {
+				"uuid": "a1b2c3d4-e5f6-g7h8-123a-a1234bn5678d",
+ 				"name": "es-MX",
+ 				"country": "Mexico",
+ 				"language": "Spanish",
 			}
 		},
 		{
+			"translation_map": {
+				"id_0": "Hello",
+				"id_1": "My name is Jacky",
+				"id_2": "Where is the library?"
+			},
 			"locale": {
  				"name": "zh-HK",
  				"country": "Hong Kong",
  				"language": "Chinese (Traditional)",
-			},
-			"translation_map": {
-				"id_0": "Hello",
-				"id_1": "My name is Jacky",
-				"id_2": "Where is the library?"
 			}
 		}
 	]
