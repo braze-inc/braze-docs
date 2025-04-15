@@ -40,7 +40,7 @@ There are no path parameters for this endpoint.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`step_id`| Required | String | The ID of your Canvas step. |
-|`message_variation_id`| Required | String | The ID of your message. |
+|`message_variation_id`| Required | String | The ID of your message variation. |
 |`locale_name`| Required | String | The name of the locale. |
 |`workflow_id` | Required | String | The ID of the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
