@@ -20,10 +20,10 @@ The following table describes how you can use each editor block type.
 
 | Name | Description |
 | --- | --- |
-| Title | Enters a title text into the message |
-| Paragraph | Enters a paragraph text into the message |
+| Title | Enters a title text into the message. |
+| Paragraph | Enters a paragraph text into the message. |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
-| Image | Inserts an image from the media library |
+| Image | Inserts an image from the media library. |
 | Link | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer | Adds space or padding between other blocks. |
 | Custom Code | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
@@ -40,8 +40,8 @@ Details for each editor block's actions are provided in the following tables.
 | Action | Description |
 | --- | --- |
 | Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
-| Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately |
-| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening the web URL, deeplinking into a specific page of the app, going to another page, or requesting push permission |
+| Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
+| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening the web URL, deeplinking into a specific page of the app, going to another page, or requesting push permission. |
 | Log custom attributes or events | Determines if clicking the button will update the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -51,8 +51,8 @@ Details for each editor block's actions are provided in the following tables.
 | --- | --- |
 | Alt text | The written copy that appears in place of an image if the image fails to load. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
 | Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
-| Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately |
-| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening the web URL, deeplinking into a specific page of the app, going to another page, or requesting push permission |
+| Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
+| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening the web URL, deeplinking into a specific page of the app, going to another page, or requesting push permission. |
 | Log custom attributes or events | Determines if clicking the image will update the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
