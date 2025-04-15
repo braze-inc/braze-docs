@@ -12,8 +12,9 @@ search_tag: Partner
 
 > [Lob.com][38] is an online service that allows you to send direct mail to your users.
 
-The Braze and Lob integration leverages Braze webhooks and the Lob API to send mail like letters, postcards, and checks through the mail.  
+The Braze and Lob integration leverages Braze webhooks and the Lob API to send mail like letters, postcards, and checks through the mail. 
 
+A Braze Data Transformation can now be used to recieve webhooks from Lob, allowing Lob events to be shared with Braze as custom attributes or custom events. 
 ## Prerequisites
 
 |Requirement| Description|
@@ -22,7 +23,7 @@ The Braze and Lob integration leverages Braze webhooks and the Lob API to send m
 | Lob API key | You Lob API key can be found under the settings section under your name in the Lob dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Integration
+## Braze Webhook Integration 
 
 ### Step 1: Select Lob endpoint
 
@@ -85,6 +86,64 @@ At this point, your campaign should be ready to test and send. Check the Lob das
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
+## Lob Webhook Integration 
+
+### Step 1: Create a Braze Data Transformation endpoint
+
+Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze. Each Transformation will have it's own unique endpoint, which can act as a destination for webhooks from other platforms like Lob.
+
+To facillitate this integration, we have created a Data Transformation template that is available through the Braze Dashboard under **Data Settings** >  **Data Transformations** > **Create Transformation** > **Use a template** > **search "Lob"**. Tick this template and then click "Create Transformation" to start working on your Data Transformation.
+
+The template has been designed to be updated by users to transform of any Lob event into a custom event or custom attribute in Braze. More information on the structure of Lob's webhook payloads can be found [here][41]. For more information on working with Braze Data Transformations, please see our [docs][42].
+
+```json
+// First, this code defines a variable, "brazecall", to build up a /users/track request
+// Everything from the incoming webhook is accessible via the special variable "payload". As such, you can template in desired values in your /users/track request with JavaScript dot notation, such as payload.x.y.z
+
+// In this example, this function removes the periods and underscores of the event_type.id sent in the Lob payload so that an event id that is formatted like: `letter.processed_for_delivery` will log an event to Braze with the name `letter processed for delivery`.
+
+function formatString(input) {
+    return input.replace(/[._]/g, ' ');
+}
+
+let braze_event = formatString(payload.event_type.id);
+
+// In this example, a metadata value passed in the Lob Webhook called 'external_ID' is being used to match the Event to the corresponding Braze user.
+
+let brazecall = {
+  "attributes": [
+    {
+      "external_id": payload.body.metadata.external_id,
+      "_update_existing_only": true,
+      "Most Recent Mailer": payload.body.description
+    }
+  ],
+  "events": [
+    {
+      "external_id": payload.body.metadata.external_id,
+      "_update_existing_only": true,
+      "name": braze_event,
+      "time": new Date().toISOString(),
+// Customize the properties to the Lob event you are syncing. Our example below pulls in the Tracking Events array of objects associated with certain Lob events.
+      "properties": {
+        "tracking_events": payload.body.tracking_events
+      }
+    }
+  ]
+};
+// After the /users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
+return brazecall;
+```
+### Step 2: Save your Data Transformation & retrieve the Webhook URL
+
+The Webhook URL for your transformation can be found on the left hand side of the Data Transformation UI, under "Webhook Details". This should be used to populate the URL field in the ["Create a New Webhook"][43] page within Lob.
+
+{% alert important %}
+The Data Transformation template will send events to your /users/track endpoint, consuming Data Points and contributing towards your rate-limit consumption. Lob allows you to set rate limits in their webhook settings, which users may want to consider when setting up this connection.
+{%endalert%}
+
+
+
 [33]: {% image_buster /assets/img_archive/lob_api_key.png %}
 [34]: {% image_buster /assets/img_archive/lob_success_response.png %}
 [35]: {% image_buster /assets/img_archive/lob_full_request.png %}
@@ -93,3 +152,6 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 [38]: https://lob.com
 [39]: https://lob.com/docs#intro
 [40]: https://lob.com/docs#auth
+[41]: https://help.lob.com/print-and-mail/getting-data-and-results/using-webhooks
+[42]: https://www.braze.com/docs/user_guide/data/data_transformation/creating_a_transformation/#prerequisites
+[43]: https://help.lob.com/print-and-mail/getting-data-and-results/using-webhooks#receiving-a-webhook-1
