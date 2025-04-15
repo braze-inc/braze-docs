@@ -38,9 +38,8 @@ To create a full refresh SQL Segment Extension:
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %})<br><br>
-4. If desired, select **Enable refresh**.<br><br>
+4. If desired, select [Enable refresh](#enable-refresh).<br><br>
    ![Cycle icon with "Enable refresh" text.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:30%" }<br><br>
-   You can configure Braze to automatically update segment membership hourly, daily, weekly, monthly. This means that at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in seven days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
 
 {% endtab %}
@@ -59,9 +58,8 @@ If you are using the [older navigation]({{site.baseurl}}/user_guide/administrati
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %})<br><br>
-4. If desired, select **Enable refresh**.<br><br>
+4. If desired, select [Enable refresh](#enable-refresh).<br><br>
    ![Cycle icon with "Enable refresh" text.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:30%" }<br><br>
-   You can configure Braze to automatically update segment membership hourly, daily, weekly, monthly. This means that at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in seven days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
 
 {% endtab %}
@@ -102,6 +100,10 @@ SQL queries that take longer than 20 minutes to run will time out.
 {% endalert %}
 
 When the extension finishes processing, you can [create a segment][4] using your Segment Extension and target this new segment with your campaigns and Canvases.
+
+### Designating refresh settings {#enable-refresh}
+
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Writing SQL
 
