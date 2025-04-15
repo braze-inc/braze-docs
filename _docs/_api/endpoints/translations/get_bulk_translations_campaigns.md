@@ -34,7 +34,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Required for translating a campaign | String | The ID of your campaign. |
-| `message_variation_id` | Required | String | The ID of your message. |
+| `message_variation_id` | Required | String | The ID of your message variation. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
