@@ -15,10 +15,10 @@ description: "This article outlines details about the View translation for a Can
 /canvas/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to view a translated message to see what this message looks like for a user.
+> Use this endpoint to preview a translated message for a Canvas.
 
 {% alert important %}
-Veiwing a translated message for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -27,16 +27,16 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 250,000 requests per hour.
+{% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
-## Path parameters
+## Query parameters
 
-| Parameter | Required | Data Type | Description |
-| --------- | ---------| --------- | ----------- |
-|`step_id`| Required | String | The ID of your Canvas step. |
-|`message_variation_id`| Required | String | The ID for your message variation. |
-|`locale_id`| Required | String | The ID of the locale. |
-|`workflow_id` | Required | String | The ID of the Canvas. |
+| Parameter              | Required | Data Type | Description                        |
+|------------------------|----------|-----------|------------------------------------|
+| `workflow_id`          | Required | String    | The ID of the Canvas.              |
+| `step_id`              | Required | String    | The ID of your Canvas step.        |
+| `message_variation_id` | Required | String    | The ID for your message variation. |
+| `locale_id`            | Required | String    | The ID of the locale.              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
@@ -44,7 +44,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_id}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_uuid}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -53,7 +53,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 
 There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
 
-## Example success response
+### Example success response
 
 The status code `200` could return the following response header and body.
 
@@ -63,15 +63,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
+			"translation_map": {
+				"id_0": "¡Hola!",
+				"id_1": "Me llamo Jacky",
+				"id_2": "¿Dónde está la biblioteca?"
+			},
 			"locale": {
  				"name": "es-MX",
  				"country": "Mexico",
  				"language": "Spanish",
-			},
-			"translation_map": {
-				"id_0": "Hello",
-				"id_1": "My name is Jacky",
-				"id_2": "Where is the library?"
 			}
 		}
 	]
@@ -86,7 +86,7 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
 	"errors": [
 		{
-			"message": "Invalid locale ID"
+			"message": "The provided locale code does not exist."
 		}
 	]
 }
