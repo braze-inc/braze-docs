@@ -13,10 +13,10 @@ guide_top_text: "La API de migración de ID externo te permite cambiar el nombre
 
 guide_featured_title: "Puntos finales de migración de ID externo"
 guide_featured_list:
-  - name: "POST: Renombrar ID externos"
+  - name: "POST: Renombrar identificadores externos"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
     image: /assets/img/braze_icons/users-01.svg
-  - name: "POST: Eliminar ID externos obsoletos"
+  - name: "POST: Eliminar identificadores externos obsoletos"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
     image: /assets/img/braze_icons/user-minus-01.svg
 ---

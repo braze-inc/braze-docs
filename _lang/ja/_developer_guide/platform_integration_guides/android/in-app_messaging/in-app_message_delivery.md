@@ -25,7 +25,7 @@ channel:
 
 ## 配信セマンティクス
 
-ユーザーが適格であるすべてのアプリ内メッセージは、[セッション開始]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle)でユーザーのデバイスに配信されます。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
+ユーザーが受信できるすべてのアプリ内メッセージは、[[セッション開始]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle)] 時にユーザーのデバイスに配信されます。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 
@@ -98,7 +98,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![キーと値のペアの2つのセット:IS_SERVER_EVENT が"true" に設定され、CAMPAIGN_NAME が&quot に設定されている;キャンペーン名とクォートの例;.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
+![キーと値のペアの2つのセット:IS_SERVER_EVENT は「true」に設定され、CAMPAIGN_NAME は「キャンペーン名の例」に設定されます。]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 前出のプッシュコールバックサンプルコードは、キーと値のペアを認識して、適切な SDK カスタムイベントをログに記録します。
 
@@ -110,7 +110,7 @@ Braze ダッシュボードで、ユーザーに表示されるアプリ内メ�
 
 以下の例では、イベントプロパティを最初のサイレントプッシュの一部として送信することで、トリガーされる特定のアプリ内メッセージが設定されています。
 
-![アクションベースの配信キャンペーンで、"campaign_name"equals "IAM キャンペーン名example."]({% image_buster /assets/img_archive/iam_event_trigger.png %}) のときにアプリ内メッセージがトリガされます。
+![アクションベースの配信キャンペーンで、「campaign_name」が「IAM キャンペーン名の例」と等しい場合にアプリ内メッセージがトリガーされます。]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 アプリがフォアグラウンドにないときにサーバー送信イベントがログに記録されると、イベントはログに記録されますが、アプリ内メッセージは表示されません。アプリケーションがフォアグラウンドになるまでイベントを遅延させたい場合は、カスタムプッシュレシーバーにチェックを含めて、アプリがフォアグラウンドになるまでイベントを無視または遅延させる必要があります。
 

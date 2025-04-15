@@ -23,7 +23,7 @@ description: "This article outlines details about the Edit catalog item Braze en
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `catalogs.update_item` permission.
 
-## Rate Limit
+## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 

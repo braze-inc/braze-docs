@@ -89,7 +89,7 @@ AI SQL ジェネレーターを使用するには、以下を実行します。
 - 過去1年間に購入回数が5回未満のユーザー
 
 ### ヒント
-- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
+- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
 - この機能の [SQL 記述ルール]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql)をよく理解してください。これらのルールに従わないと、エラーが発生します。たとえば、SQL コードでは `user_id` 列を選択する必要があります。プロンプトの冒頭に「user who」と入力すると役に立ちます。
 - AI SQL ジェネレーターでは、1分あたり最大20のプロンプトを送信できます。
 
@@ -107,7 +107,7 @@ SQL を生成するために、Braze はプロンプトを OpenAI の API プラ
 
 ## SQL の記述
 
-SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-reference.html)を使用して記述する必要があります。クエリ可能なテーブルとカラムの全リストについては、[テーブルリファレンス]({{site.baseurl}}/sql_segments_tables/)を参照してください。
+SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-reference.html)を使用して記述する必要があります。クエリ可能なテーブルとカラムの全リストについては、[テーブルリファレンス]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)を参照してください。
 
 {% alert important %}
 クエリに使用できるテーブルにはイベントデータのみが含まれていることに注意してください。ユーザー属性をクエリする場合は、SQL セグメントを[クラシックセグメンター]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)のカスタム属性フィルターと組み合わせる必要があります。

@@ -211,12 +211,6 @@ A continuación se muestra un ejemplo de respuesta que incluye mensajes Canvas e
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 

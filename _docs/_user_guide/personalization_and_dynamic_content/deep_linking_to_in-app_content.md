@@ -10,22 +10,21 @@ description: "This reference article covers guidance on how to add deep linking 
 
 ## What is deep linking?
 
-Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content.
+Deep linking is a way of launching a native app and providing additional information telling it to do a specific action or show specific content.
 
 There are three parts to this:
 
-1. Identify which app to launch
-2. Instruct the app on which action to perform
-3. Provide the action with any additional data it will need
+1. Identify which app to launch.
+2. Instruct the app on which action to perform.
+3. Provide the action with any additional data it will need.
 
 Deep links are custom URIs that link to a specific part of the app and contain all three of these parts. The key is defining a custom scheme. `http:` is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs or dots. Practically speaking, there is no central registry to prevent conflicts, so it is a best practice to include your domain name in the scheme. For example, `twitter://` is the iOS URI to launch the mobile app for X, formerly Twitter.
 
-Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (for example, `?foo=1&bar=2`). For the previous example, `twitter://user?screen_name=[id]` would be used to launch a specific profile in the app.
+Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation; however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (for example, `?foo=1&bar=2`). For the previous example, `twitter://user?screen_name=[id]` would be used to launch a specific profile in the app.
 
 {% alert important %}
-Braze does not support using a wrapper like Flutter to send deep links. To use this feature, you must configure deep links at the native layer.
+Braze doesn't support using a wrapper like Flutter to send deep links. To use this feature, you must configure deep links at the native layer.
 {% endalert %}
-
 
 ## UTM tags and campaign attribution
 
@@ -33,17 +32,17 @@ Braze does not support using a wrapper like Flutter to send deep links. To use t
 
 [UTM (Urchin Traffic Manager) tags][4] allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
 
-- `utm_source`: the identifier for the source of the traffic (for example,`my_app`)
-- `utm_medium`: the campaign medium (for example,`newsfeed`)
-- `utm_campaign`: the identifier for the campaign (for example,`spring_2016_campaign`)
-- `utm_term`: identifier for a paid search term that brought the user to your app or website (for example,`pizza`)
-- `utm_content`: an identifier for the specific link/content that the user clicked on (for example,`toplink` or `android_iam_button2`)
+- `utm_source`: The identifier for the source of the traffic (for example,`my_app`)
+- `utm_medium`: The campaign medium (for example,`newsfeed`)
+- `utm_campaign`: The identifier for the campaign (for example,`spring_2016_campaign`)
+- `utm_term`: Identifier for a paid search term that brought the user to your app or website (for example,`pizza`)
+- `utm_content`: An identifier for the specific link or content that the user clicked on (for example,`toplink` or `android_iam_button2`)
 
 UTM tags can be embedded into both regular HTTP (web) links and deep links and tracked using Google Analytics.
 
 ### Using UTM tags with Braze
 
-If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
+If you want to use UTM tags with regular HTTP (web) links (for example, to do campaign attribution for your email campaigns) and your organization already uses Google Analytics, you can use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
 
 To use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and correctly configured to handle deep links. Check with your developers if you're unsure about this.
 
@@ -72,9 +71,9 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/1033863?hl=en
+[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
 [5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://support.google.com/analytics/answer/1033867
+[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
 [8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
 [9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
 [10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}

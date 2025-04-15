@@ -34,7 +34,7 @@ description: "이 문서에서는 카탈로그 Braze 삭제 엔드포인트에 �
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants' \
@@ -44,7 +44,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `200` 및 `404` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `200` 와 `404` 두 가지입니다.
 
 ### 성공 응답의 예
 

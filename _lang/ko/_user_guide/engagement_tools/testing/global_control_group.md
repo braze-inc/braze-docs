@@ -79,17 +79,23 @@ Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 �
 
 ## 대조군 구성원 내보내기 {#export-group-members}
 
-글로벌 컨트롤 그룹에 어떤 사용자가 있는지 확인하려면 CSV 또는 API를 통해 그룹 구성원을 내보내면 됩니다. 
+글로벌 관리 그룹에 어떤 사용자가 있는지 확인하려면 CSV 또는 API로 그룹 구성원을 내보내면 됩니다. 
 
-CSV 내보내기를 실행하려면 **글로벌 제어 그룹 설정** 탭으로 이동하여 <i class="fas fa-download"></i> **내보내기를** 클릭합니다. API를 통해 내보내려면 [`/users/export/global_control_group` 엔드포인트]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)를 사용하세요.
+CSV 내보내기를 실행하려면 **글로벌 제어 그룹 설정** 탭으로 이동하여 <i class="fas fa-download"></i> **내보내기를** 클릭합니다. API로 내보내려면 [`/users/export/global_control_group` 엔드포인트를]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) 사용하세요.
 
 {% alert important %}
 과거 대조군은 보존되지 않으므로 현재 그룹의 구성원만 내보낼 수 있습니다. 대조군을 비활성화하기 전에 필요한 정보를 내보내야 합니다.
 {% endalert %}
 
+## 사용자가 글로벌 제어 그룹에 속해 있는지 보기
+
+개별 사용자 프로필의 **참여** 탭에서 **기타** 섹션으로 이동하여 글로벌 컨트롤 그룹 멤버십을 확인할 수 있습니다.
+
+!['기타' 섹션에서 사용자가 임의의 버킷 번호인 2030을 가지고 있으며 글로벌 관리 그룹에 속해 있다고 보고합니다.][1]{: style="max-width:60%;"}
+
 ## 보고
 
-보고서 측정기준에 대한 자세한 내용은 [글로벌 컨트롤 그룹 보고]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/)를 참조하세요.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## 문제 해결
 
@@ -163,6 +169,7 @@ CSV 내보내기를 실행하려면 **글로벌 제어 그룹 설정** 탭으로
 
 가장 관심 있는 지표에 대한 기준 동작을 고려하세요. 연간 단위로만 갱신되는 구독 플랜의 구매 요금에 관심이 있으신가요? 아니면 측정하려는 이벤트에 대한 고객의 주간 습관이 있나요? 사용자가 메시징으로 인해 잠재적으로 행동을 변경하는 데 걸리는 시간을 생각해 보세요. 실험을 실행할 시간을 결정한 후에는 실험을 일찍 종료하거나 최종 결과를 기록하지 않으면 결과가 편향될 수 있으므로 주의하세요.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

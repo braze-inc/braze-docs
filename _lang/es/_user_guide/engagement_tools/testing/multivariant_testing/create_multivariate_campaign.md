@@ -96,7 +96,7 @@ Dependiendo del canal que elija, podrá probar distintos componentes de su mensa
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Cuando ejecute pruebas A/B, no olvide generar [informes de embudo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) que le permitan comprender el impacto de cada variante en su embudo de conversión, especialmente si la "conversión" para su negocio implica realizar múltiples pasos o acciones.
+Cuando ejecute pruebas A/B, no olvide generar [informes de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) que le permitan comprender el impacto de cada variante en su embudo de conversión, especialmente si la "conversión" para su negocio implica realizar múltiples pasos o acciones.
 {% endalert %}
 
 Además, la duración ideal de su prueba también puede variar en función del canal. Tenga en cuenta el tiempo medio que la mayoría de los usuarios necesitan para interactuar con cada canal.
@@ -136,7 +136,7 @@ Si utiliza manualmente números de cubo aleatorios para los grupos de control, c
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
 [6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

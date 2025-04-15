@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics. This article covers where you can find those metrics and what they represent.
 
 {% alert tip %}
-Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Campaign analytics
@@ -34,7 +34,7 @@ Review this panel to see overall metrics such as the number of messages sent to 
 
 #### Control groups
 
-To measure the impact of an individual LINE message, you can add a [control group]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
+To measure the impact of an individual LINE message, you can add a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
 
 ### LINE performance
 
@@ -46,7 +46,7 @@ If you want to simplify your view, select **+ Add/Remove Columns** and clear any
 
 #### LINE metrics
 
-Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Term | Definition |
 | --- | --- |

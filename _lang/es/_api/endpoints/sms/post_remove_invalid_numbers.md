@@ -14,7 +14,7 @@ description: "En este artículo se describen los detalles del punto final Elimin
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-> Utilice este punto final para eliminar números de teléfono "inválidos" de nuestra lista de inválidos. 
+> Utilice este punto final para eliminar números de teléfono "inválidos" de nuestra lista de inválidos.
 
 Se puede utilizar para volver a validar números de teléfono después de haberlos marcado como no válidos.
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | ----------|-----------| ---------|------ |
 | `phone_number` | Obligatoria | Matriz de cadenas en formato e.164  | Un conjunto de hasta 50 números de teléfono para modificar. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 

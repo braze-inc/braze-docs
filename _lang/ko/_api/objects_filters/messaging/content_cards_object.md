@@ -1,10 +1,10 @@
 ---
 nav_title: "콘텐츠 카드 객체"
-article_title: 콘텐츠 카드 메시징 객체
+article_title: 콘텐츠 카드 메시징 개체
 page_order: 4
 page_type: reference
 channel: content cards
-description: "이 참조 문서에서는 Braze 콘텐츠 카드 객체의 다양한 구성 요소에 대해 설명합니다."
+description: "이 참조 문서에서는 브레이즈 콘텐츠 카드 객체의 다양한 구성 요소에 대해 설명합니다."
 
 ---
 

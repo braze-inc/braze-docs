@@ -16,7 +16,7 @@ description: "Este artigo de referência cobre a integração de notificação p
 
 Estas instruções são para integrar push com [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/).
 
-Consulte nossa documentação [do Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/) para obter instruções de integração do ADM.
+Consulte nossa documentação do [Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/) para obter instruções de integração do ADM.
 
 ## Etapa 1: ativar Firebase
 

@@ -11,10 +11,10 @@ description: "この参考記事では、Braze 受信者オブジェクトのさ
 
 > 受信者オブジェクトは、エンドポイントに情報を要求したり書き込んだりすることができる。
 
-このオブジェクトには、`external_user_id` 、`user_alias` 、`email` のいずれかが必要である。**リクエストでは 1 つだけ指定する必要があります。**
+このオブジェクトには `external_user_id` または `user_alias`、または `email` のいずれかが必要です。**リクエストでは 1 つだけ指定する必要があります。**
 
 {% alert important %}
-メールアドレスによる受信者の指定は、現在早期アクセス中である。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
+メールアドレスによる受信者の指定は、現在早期アクセス中です。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
 受信者オブジェクトは、[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[トリガープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、[キャンバスエントリプロパティオブジェクトを]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)組み合わせることができます。
@@ -33,7 +33,7 @@ description: "この参考記事では、Braze 受信者オブジェクトのさ
 ```
 
 - [ユーザーのエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [外部ユーザ ID]({{site.baseurl}}/api/basics/#user-ids)
+- [外部ユーザ ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [優先順位付け]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 
 ## 受信者オブジェクトのデデュープ

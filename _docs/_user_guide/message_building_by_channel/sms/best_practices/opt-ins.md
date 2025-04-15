@@ -19,7 +19,7 @@ Ask users to text "START", "UNSTOP", "YES", or a custom opt-in keyword to your n
 
 ## Option 2: Users opt-in via in-app message
 
-To allow users to opt into SMS from an in-app message, use the [phone number capture form]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) provided by Braze to create a branded form that allows you to collect phone numbers and grow your SMS list.
+To allow users to opt into SMS from an in-app message, use the [phone number capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) provided by Braze to create a branded form that allows you to collect phone numbers and grow your SMS list.
 
 ![][3]{: style="max-width:30%;"}
 

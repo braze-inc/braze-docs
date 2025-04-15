@@ -54,6 +54,82 @@ guide_featured_list:
 > <br>
 > Pour plus d'informations sur l'une des mises à jour répertoriées dans cette section, contactez votre gestionnaire de compte ou [ouvrez un ticket de support]({{site.baseurl}}/help/support/). Vous pouvez également consulter [nos journaux de modifications SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) pour voir plus d'informations sur nos versions mensuelles de SDK, mises à jour et améliorations.
 
+## 10 décembre 2024 libération
+
+### Emplacement/localisation des utilisateurs du SDK par adresse IP
+
+À partir du 26 novembre 2024, Braze détectera les emplacements/localisations des utilisateurs à partir du pays géolocalisé en utilisant l'adresse IP du début de la première session SDK. Braze utilisera l'adresse IP pour définir la valeur du pays sur les profils utilisateurs créés via le SDK, et ce paramètre de pays basé sur l'IP sera disponible pendant et après la première session. Pour plus d'informations, reportez-vous à la section [Emplacement/localisation]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/location_tracking/).
+
+### Cadre d'accès surélevé
+
+L['accès élevé]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#elevated-access) ajoute une couche de sécurité supplémentaire pour les actions sensibles dans votre tableau de bord de Braze. Lorsqu'il est actif, l'utilisateur doit revérifier son compte avant d'exporter un segment ou de consulter une clé API. Pour utiliser l'accès élevé, accédez à **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et basculez sur cette option.
+
+### Autorisation de consulter des informations personnelles identifiables (IPI)
+
+Pour les administrateurs, vous pouvez [autoriser les utilisateurs à afficher les IIP]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) définies par votre entreprise dans le tableau de bord, dans des aperçus de messages qui utilisent des variables Liquid pour accéder aux propriétés de l'utilisateur. 
+
+Pour les espaces de travail, vous pouvez autoriser les utilisateurs à afficher les IIP définies par votre entreprise dans le tableau de bord, ou afficher les profils utilisateurs mais expurger les champs que votre entreprise a identifiés comme étant des IIP.
+
+### Flexibilité des données
+
+#### Schémas de lac de données
+
+Les schémas suivants ont été ajoutés aux schémas des tables brutes :
+- `USERS_CANVASSTEP_PROGRESSION_SHARED` : Événements de progression d'un utilisateur dans un canvas
+- `CHANGELOGS_GLOBALCONTROLGROUP_SHARED` : Identifier les numéros de compartiment aléatoires présents dans le groupe de contrôle global actuel et dans le précédent.
+- `USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED` : Événements d'impression lorsqu'un utilisateur consulte un indicateur de fonctionnalité
+
+#### Segmentation basée sur les comptes
+
+Vous pouvez effectuer une [segmentation interentreprises (B2B) basée sur les comptes de]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/account_based_segmentation/) deux manières, en fonction de la façon dont vous avez configuré votre modèle de données B2B :
+
+- Lorsque vous utilisez des catalogues pour vos objets de gestion
+- Lorsque vous utilisez des sources connectées pour vos objets de gestion
+
+#### Filtres de segmentation
+
+Reportez-vous à la section [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) pour obtenir la liste complète des filtres de segmentation et leur description.
+
+##### Profil utilisateur créé à
+
+Segmentez vos utilisateurs en fonction de la date de création de leur profil. Si un utilisateur a été ajouté par CSV ou API, ce filtre reflète la date à laquelle il a été ajouté. Si l'utilisateur n'est pas ajouté par CSV ou API et que sa première session est suivie par le SDK, ce filtre reflète la date de cette première session.
+
+##### Envoi du numéro de téléphone
+
+Segmentez vos utilisateurs en fonction du champ du numéro de téléphone e.164. Vous pouvez utiliser des expressions régulières avec ce filtre pour segmenter les numéros de téléphone avec un code pays spécifique.
+
+### Nouveaux partenariats Braze
+
+#### Narvar - Commerce électronique
+
+L'intégration de Braze et [Narvar](https://corp.narvar.com/) permet aux marques d'exploiter les événements de notification de Narvar pour déclencher des messages directement depuis Braze, en tenant les clients informés grâce à des mises à jour opportunes.
+
+#### Zeotap pour Currents - plateforme de données client
+
+L'intégration de Braze et [Zeotap](https://zeotap.com/) vous permet d'étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients de Zeotap avec les profils d'utilisateurs de Braze. Avec [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), vous pouvez également connecter les données à Zeotap pour les rendre exploitables dans l'ensemble des outils de croissance.
+
+#### Notify - Contenu dynamique
+
+L'intégration de Braze et [Notify](https://notifyai.io/) permet aux marketeurs de stimuler efficacement l'engagement sur différentes plateformes. Au lieu de s'appuyer sur les méthodes de marketing traditionnelles, une campagne déclenchée par l'API de Braze peut exploiter les capacités de Notify pour diffuser des messages personnalisés par le biais de plusieurs canaux, notamment les e-mails, les SMS, les notifications push et bien plus encore.
+
+#### Contentful - Contenu dynamique
+
+L'intégration entre Braze et [Contentful](https://www.contentful.com/) vous permet d'utiliser dynamiquement le contenu connecté pour tirer du contenu de Contentful dans vos campagnes Braze.
+
+#### Dépassement - Capture de prospects 
+
+L'intégration de Braze et [Outgrow](https://outgrow.co/) vous permet de transférer automatiquement les données des utilisateurs d'Outgrow vers Braze, ce qui permet de réaliser des campagnes hautement personnalisées et ciblées.
+
+### Mises à jour SDK
+
+Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
+
+- [SDK Web 5.6.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [Flutter SDK 12.0.0](https://github.com/braze-inc/braze-flutter-sdk/releases/tag/12.0.0)
+    - Mise à jour du pont natif iOS [du SDK Swift de Braze 10.3.1 vers 11.3.0.](https://github.com/braze-inc/braze-swift-sdk/compare/10.3.1...11.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+    - Mise à jour du pont natif Android de Braze [Android SDK 32.1.0 à 33.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v32.1.0...v33.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+- [SDK Swift 11.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/11.0.1/CHANGELOG.md)
+
 ## Libération le 12 novembre 2024
  
 ### Flexibilité des données
@@ -97,7 +173,7 @@ Nous sommes en train d'apporter des améliorations majeures au [guide du dévelo
 
 |Avant|Après|
 |------|-----|
-|!["L'ancienne navigation pour le guide du développeur de Braze."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["La nouvelle navigation du guide du développeur de Braze"]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
+|!["L'ancienne navigation pour le guide du développeur de Braze."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["La nouvelle navigation pour le guide du développeur de Braze"]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
 
 ### Nouveaux partenariats Braze
  
@@ -217,11 +293,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 
 #### Braze Cloud Data Ingestion pour S3
 
-Vous pouvez utiliser [Cloud Data Ingestion (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) pour intégrer directement un ou plusieurs compartiments S3 de votre compte AWS à Braze. Lorsque de nouveaux fichiers sont publiés dans S3, un message est envoyé à SQS et Cloud Data Ingestion de Braze prend en charge ces nouveaux fichiers.
-
-#### Augmentation de la limite de débit
-
-La limite de débit pour le type de demande [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) est passée à 2 500 demandes par minute.
+Vous pouvez utiliser [Cloud Data Ingestion (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) pour intégrer directement un ou plusieurs compartiments S3 de votre compte AWS à Braze. Lorsque de nouveaux fichiers sont publiés sur S3, un message est envoyé à SQS et Braze Cloud Data Ingestion prend en charge ces nouveaux fichiers.
 
 #### Utilisateurs actifs par mois CY 24-25
 
@@ -233,7 +305,7 @@ Pour les clients qui ont acheté Utilisateurs actifs par mois - CY 24-25, Braze 
 
 {% multi_lang_include release_type.md release="Accès anticipé" %}
 
-Utilisez l'indicateur `:rerender` dans une étiquette Liquid pour [afficher le contenu liquide d'un article de catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid). Par exemple, si vous rendez le contenu liquide suivant :
+Utilisez l'indicateur `:rerender` dans une balise Liquid pour [afficher le contenu Liquid d'un article de catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid). Par exemple, si vous rendez le contenu Liquid suivant :
 
 {% raw %}
 ```liquid
@@ -264,7 +336,7 @@ Vous pouvez utiliser les [messages de réponse]({{site.baseurl}}/user_guide/mess
 
 {% multi_lang_include release_type.md release="Disponibilité générale" %}
 
-Créez des [modèles Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/) pour affiner votre envoi de messages en créant un cadre cohérent qui peut être facilement personnalisé pour s'adapter à vos objectifs spécifiques sur l'ensemble de vos Canvas.
+Créez des [modèles de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/) pour affiner votre envoi de messages en créant un cadre cohérent qui peut être facilement personnalisé pour s'adapter à vos objectifs spécifiques sur l'ensemble de vos Canvas.
 
 #### Landing pages
 
@@ -318,7 +390,7 @@ Le [tableau de bord de l'utilisation des messages]({{site.baseurl}}/message_usag
 
 #### Initialisation retardée pour le SDK Braze Swift
 
-Configurez l'[initialisation différée]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) pour initialiser votre SDK Braze Swift de manière asynchrone tout en veillant à ce que la gestion des notifications push soit préservée. Cela peut s'avérer utile lorsque vous devez configurer d'autres services avant d'initialiser le SDK, par exemple pour récupérer des données de configuration sur un serveur ou attendre le consentement de l'utilisateur.
+Configurez l'[initialisation différée]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) pour initialiser votre SDK Braze Swift de manière asynchrone tout en veillant à ce que la gestion des notifications push soit préservée. Cela peut être utile lorsque vous devez configurer d'autres services avant d'initialiser le SDK, par exemple pour récupérer des données de configuration sur un serveur ou attendre le consentement de l'utilisateur.
 
 ### Mises à jour SDK
 
@@ -330,7 +402,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [React Native SDK 12.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1210)
 - [Cordova SDK 10.0.0](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md#1000)
     - Cette version nécessite désormais Cordova Android 13.0.0.
-    - Reportez-vous à l'[annonce de la version de Cordova](https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html) pour obtenir la liste complète des exigences relatives aux dépendances du projet.- Mise à jour du pont Android natif de Braze [Android SDK 30.3.0 à 32.1.0.](https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+    - Reportez-vous à l'[annonce de la version de Cordova](https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html) pour une liste complète des exigences en matière de dépendances du projet.- Mise à jour du pont Android natif de Braze [Android SDK 30.3.0 à 32.1.0.](https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
     - Mise à jour du pont natif iOS [du SDK Swift de Braze 9.2.0 vers 10.1.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.2.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
 - [SDK Swift 10.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1020)
 - [Unity 7.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#700)
@@ -376,7 +448,7 @@ Créez votre transformation de données à l'aide de notre [bibliothèque de mod
 
 {% multi_lang_include release_type.md release="Disponibilité générale" %}
 
-Si vous rencontrez des profils utilisateurs en double, vous pouvez [fusionner]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) ces utilisateurs en [bloc]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) afin de rationaliser vos données.
+Si vous rencontrez des profils utilisateurs en double, vous pouvez [fusionner ces utilisateurs en bloc]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) afin de rendre vos données plus cohérentes.
 
 #### Exporter des attributs personnalisés
 
@@ -495,7 +567,7 @@ Il existe deux nouveaux paramètres d'autorisation pour les utilisateurs : **Vi
 
 L'ajout de pages à votre message in-app vous permet de guider les utilisateurs à travers un flux séquentiel, comme un flux d'onboarding ou un parcours de bienvenue. Pour en savoir plus, consultez la section [Créer un message in-app par glisser-déposer.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page)
 
-#### Lien entre le shortening et le liquide
+#### Raccourcissement de lien avec Liquid
 
 {% multi_lang_include release_type.md release="Disponibilité générale" %}
 
@@ -543,13 +615,13 @@ Désormais, avec Shopify, vous pouvez créer des notifications personnalisées p
 
 Auparavant, vous pouviez rechercher et fusionner les utilisateurs en double dans Braze, individuellement ou en masse. Vous pouvez désormais créer des règles pour contrôler la manière dont les doublons sont résolus, afin que l'utilisateur le plus pertinent soit conservé. Pour en savoir plus, consultez la section [Fusion basée sur des règles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
-#### Intelligence artificielle Assistant liquide
+#### Assistant Liquid avec IA
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-L'assistant liquide de l'intelligence artificielle est un assistant de chat alimenté par <sup>BrazeAITM</sup> qui aide à générer le liquide dont vous avez besoin pour personnaliser le contenu des messages. Vous pouvez générer des liquides à partir de modèles, recevoir des suggestions de liquides personnalisées et optimiser les liquides existants avec l'aide de <sup>BrazeAITM</sup>. L'assistant Liquid de l'intelligence artificielle fournit également des annotations expliquant le Liquid utilisé, ce qui vous permet d'améliorer votre compréhension du Liquid et d'apprendre à écrire le vôtre.
+L'assistant Liquid avec IA est un assistant de chat alimenté par BrazeAI<sup>TM</sup> qui aide à générer le code Liquid dont vous avez besoin pour personnaliser le contenu des messages. Vous pouvez générer du code Liquid à partir de modèles, recevoir des suggestions de balises Liquid personnalisées et optimiser les balises Liquid existantes avec l'aide de BrazeAI<sup>TM</sup>. L'assistant Liquid de l'intelligence artificielle fournit également des annotations expliquant le Liquid utilisé, ce qui vous permet d'améliorer votre compréhension du Liquid et d'apprendre à écrire le vôtre.
 
-Pour commencer, consultez l'[assistant liquide de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_liquid).
+Pour commencer, consultez l'[assistant Liquid avec IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_liquid).
  
 ### SDK
  
@@ -608,7 +680,7 @@ Migrez votre numéro de téléphone WhatsApp entre les comptes WhatsApp Business
 
 Le nouveau rapport sur l **'engagement par appareil** fournit une ventilation des appareils utilisés par vos utilisateurs pour s'engager dans votre e-mail. Ces données permettent de suivre l'engagement des e-mails sur les mobiles, les ordinateurs de bureau, les tablettes et d'autres types d'appareils. En savoir plus sur le [rapport et le tableau de bord des performances de l'e-mail]({{site.baseurl}}/user_guide/data_and_analytics/analytics/email_performance_dashboard).
 
-#### Propriétés liquides de WhatsApp et SMS dans le flux Canvas
+#### Propriétés Liquid de WhatsApp et SMS dans le flux Canvas
 
 {% multi_lang_include release_type.md release="Disponibilité générale" %}
 
@@ -624,7 +696,7 @@ Les parcours personnalisés dans les Canvas vous permettent de personnaliser n'i
 
 Travailler avec des segments ? Voici quelques [étapes de résolution des problèmes et considérations]({{site.baseurl}}/user_guide/engagement_tools/segments/troubleshooting) à garder à l'esprit.
 
-#### Surlignage liquide
+#### Surlignage Liquid
 
 Nous avons amélioré le [code couleur utilisé par Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) pour mieux prendre en compte les directives en matière d'accessibilité.
 
@@ -765,79 +837,3 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Web 5.3.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 - Xamarin SDK Version 5.0.0
     - Mise à jour de l’[interface de liaison iOS du SDK Swift de Braze 8.4.0 vers 9.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/8.4.0...9.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-
-## 30 avril 2024 sortie
-
-### Autorisations pour créer ou mettre à jour des listes de codes promotionnels
-
-À partir d'avril 2024, les utilisateurs auront besoin de l'autorisation « Accéder aux campagnes, canevas, cartes, segments, bibliothèque multimédia » pour créer ou mettre à jour des listes de codes promotionnels. Consultez [Gestion des autorisations limitées et des rôles d'équipe]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) pour une liste des noms d'autorisations et leurs descriptions.
-
-### Flexibilité des données
-
-#### Approvisionnement SAML juste-à-temps
-
-{% multi_lang_include release_type.md release="Accès anticipé" %}
-
-[La fourniture juste-à-temps]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit) fonctionne avec SAML SSO pour permettre aux nouveaux utilisateurs du tableau de bord de créer un compte Braze lors de leur première connexion. Cela élimine le besoin pour les administrateurs de créer manuellement un compte pour un nouvel utilisateur de tableau de bord, de choisir leurs autorisations, de les affecter à un espace de travail et d'attendre qu'ils activent leur compte.
-
-#### Ensembles d'autorisations et rôles
-
-Utilisez [des ensembles d'autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets-and-roles) pour regrouper les autorisations liées à des domaines ou actions spécifiques. Ces ensembles d'autorisations peuvent être appliqués aux utilisateurs de tableaux de bord qui ont besoin du même accès dans différents espaces de travail.
-
-#### Segments d'ingestion de données cloud
-
-Braze [segments d'ingestion de données cloud]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) vous permettent d'écrire des requêtes SQL qui interrogent directement votre propre entrepôt de données en utilisant les données mises à disposition via vos connexions CDI, et de créer un groupe d'utilisateurs pouvant être ciblés au sein de Braze.
-
-### Libérer la créativité
-
-### Modèles de générateur de requêtes
-
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
-
-En utilisant les modèles de Query Builder, vous pouvez créer des rapports en utilisant les données de Braze provenant de Snowflake. Pour accéder aux [modèles de générateur de requêtes]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/), sélectionnez **modèle de requête** lors de la création d'un rapport. Tous les modèles affichent des données des 60 derniers jours, mais vous pouvez modifier directement cette valeur et d'autres dans l'éditeur.
-
-### Données de performance par segment
-
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
-
-Vous pouvez décomposer les [données de performance par segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#performance-data-by-segment) dans les modèles de rapport de Query Builder pour les campagnes, les variantes, et les Canvases et les étapes de Canvas par segments.
-
-### Canaux robustes
-
-#### Raccourcissement automatique des liens pour la messagerie SMS
-
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
-
-Utilisez [le raccourcissement automatique des liens]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/?tab=manage%20responses#managing-keywords-and-auto-responses) pour raccourcir automatiquement les URL statiques dans votre réponse. Cela peut aider à façonner votre réponse car le compteur de caractères se mettra à jour pour afficher la longueur attendue de l'URL raccourcie.
-
-### Nouveaux partenariats Braze
-
-#### Friendbuy - Fidélité
-
-Tirez parti de l'intégration entre Braze et [Friendbuy]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/friendbuy/) pour étendre vos capacités d'email et de SMS tout en automatisant sans effort vos communications de programme de parrainage et de fidélité. Braze générera des profils clients pour tous les numéros de téléphone optés collectés via Friendbuy.
-
-### NiftyImages - Contenu Dynamique
-
-Le partenariat entre Braze et [NiftyImages]({{site.baseurl}}/partners/message_personalization/dynamic_content/niftyimages/) vous permet de créer des images dynamiques et personnalisées pour vos campagnes par e-mail en associant vos balises de personnalisation Braze existantes à vos URL NiftyImages.
-
-### Mises à jour SDK
-
-Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
-
-- [Android SDK 30.4.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-- [Plugin Swift Segment Braze 2.4.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md#240)
-- [SDK Flutter 9.0.0](https://pub.dev/packages/braze_plugin/changelog)
-    - Met à jour le pont iOS natif de [Braze Swift SDK 7.7.0 à 8.4.0](https://github.com/braze-inc/braze-swift-sdk/compare/7.7.0...8.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-        - La cible de déploiement iOS minimale a été mise à jour vers 12.0.
-    - Met à jour le pont Android natif de [Braze Android SDK 29.0.1 à 30.3.0](https://github.com/braze-inc/braze-android-sdk/compare/v29.0.1...v30.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-    - La version minimale de Dart prise en charge est 2.15.0.
-- [React Native SDK 9.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
-- [SDK Swift 8.3.0-8.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-- [SDK Swift 9.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-    - Supprime les domaines de suivi de la confidentialité par défaut du manifeste de confidentialité de BrazeKit.
-        - Si vous utilisez les [fonctionnalités de suivi des données]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/privacy_manifest/) de Braze, vous devrez ajouter manuellement votre point de suivi à votre manifeste de confidentialité au niveau de l'application.
-        - Reportez-vous au [tutoriel](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking) mis à jour pour obtenir des conseils sur l'intégration.
-    - Supprime le `BrazeDelegate.braze(_:sdkAuthenticationFailedWithError) method in favor of BrazeSDKAuthDelegate.braze(_:sdkAuthenticationFailedWithError)` obsolète.
-        - Cette méthode a été initialement déconseillée dans [la version 5.14.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/5.14.0).
-        - Ne pas passer à la nouvelle méthode de délégué ne déclenchera pas d'erreur de compilation ; à la place, la méthode `BrazeDelegate.braze(_:sdkAuthenticationFailedWithError)` que vous définissez ne sera tout simplement pas appelée.
-- [Version du SDK Xamarin 4.0.3](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#403)

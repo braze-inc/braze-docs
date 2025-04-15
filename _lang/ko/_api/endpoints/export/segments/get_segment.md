@@ -14,9 +14,9 @@ description: "이 문서에서는 세그먼트 목록 Braze 엔드포인트 내�
 /segments/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 세그먼트 목록을 내보내면 각 세그먼트의 이름, 세그먼트 API 식별자, 분석 추적이 사용 설정되어 있는지 여부가 포함됩니다.
+> 이 엔드포인트를 사용하여 세그먼트 목록을 내보내면 각 세그먼트의 이름, 세그먼트 API 식별자, 애널리틱스 추적이 사용 설정되어 있는지 여부가 포함됩니다.
 
-세그먼트는 생성 시간별로 정렬된 100개 그룹으로 반환됩니다(기본값으로 가장 오래된 것부터 가장 최근 것까지 정렬). 보관된 세그먼트는 포함되지 않습니다.
+세그먼트는 생성 시간별로 정렬된 100개 그룹으로 반환됩니다(기본적으로 가장 오래된 것부터 가장 최근 것까지). 보관된 세그먼트는 포함되지 않습니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

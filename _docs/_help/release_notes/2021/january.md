@@ -9,11 +9,11 @@ description: "This article contains release notes for January 2021."
 
 ## Canvas Report Builder
 
-The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
 
 ## In-app message iOS implementation guide
 
-This detailed guide covers how to leverage subclassing to create custom slideup in-app messages, custom modal in-app messages, and custom full in-app messages to add to your Braze campaigns and Canvases. Included are the necessary code consideration, detailed use cases built by our team, and accompanying code snippets. Visit our documentation [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) to read more. 
+This detailed guide covers how to leverage subclassing to create custom slideup in-app messages, custom modal in-app messages, and custom full in-app messages to add to your Braze campaigns and Canvases. Included are the necessary code consideration, detailed use cases built by our team, and accompanying code snippets. Visit our documentation [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/) to read more. 
 
 ## SMS custom keyword categories and retargeting options
 

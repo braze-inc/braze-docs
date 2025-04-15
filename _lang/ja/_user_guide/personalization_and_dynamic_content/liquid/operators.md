@@ -25,84 +25,198 @@ description: "このリファレンスページでは、Liquid がサポート�
 | 含む | 文字列または文字列配列に文字列が含まれているかどうかを調べる|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## ユースケース
+## チュートリアル
 
-これらのオペレーターがマーケティングキャンペーンに役立つユースケースをいくつか紹介しよう：
+いくつかのチュートリアルを通して、マーケティングキャンペーンにこれらのオペレーターを使う方法を学んでいこう：
 
 ### 整数カスタム属性でメッセージを選択する。
+
+購入したユーザーまたは購入していないユーザーに、パーソナライズされたプロモーション割引を含むプッシュ通知を送信しましょう。プッシュ通知では、`total_spend` という整数のカスタム属性を使用して、ユーザーの合計金額をチェックします。
+
+1. greater than (`>`) 演算子を使用して条件文を書き、ユーザーの合計金額が`0` より大きいかどうかをチェックします。これは、ユーザーが購入したことを示します。次に、これらのユーザーに送信するメッセージを作成します。
 
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+```
+{% endraw %}
+
+{: start="2"}
+2\.{% raw %}`{% else %}`{% endraw %} タグを追加し、合計金額が `0` と等しいか、存在しないユーザーをキャプチャします。次に、これらのユーザーに送信するメッセージを作成します。
+
+{% raw %}
+```liquid
 {% else %}
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+```
+{% endraw %}
+
+{: start="3"}
+3\.{% raw %}`{% endif %}`{% endraw %} タグで条件ロジックを閉じる。
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
-![][13]{: width="100%"}
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][13]{: width="100%"}
 
-このユースケースでは、顧客の "Total Spend "カスタム属性が`0` より大きい場合、顧客はメッセージを受け取る：
+{% details 完全な Liquid コード %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${total_spend}}} >0 %}
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+{% else %}
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+これで、ユーザーの "Total Spend "カスタム属性が`0` より大きい場合、メッセージが表示される：
 
 ```
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
 ```
-顧客の"Total Spend" カスタム属性が存在しないか、`0` と等しい場合、次のメッセージが表示されます。
+もしユーザーの "Total Spend "カスタム属性が存在しなかったり、`0` と等しい場合、以下のメッセージが表示される：
 
 ```
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
 ### 文字列カスタム属性でメッセージを選ぶ
 
-{% raw %}
+ユーザーにプッシュ通知を送り、各ユーザーが最近プレイしたゲームに基づいてメッセージをパーソナライズさせよう。これは、`recent_game` という文字列カスタム属性を使用して、ユーザーが最後にプレーしたゲームをチェックします。
 
+1. 等号 (`==`) 演算子を使った条件文を書き、ユーザーの最近のゲームが*「Awkward Dinner Party*」であるかどうかをチェックする。次に、これらのユーザーに送信するメッセージを作成します。
+
+{% raw %}
 ```liquid
-{% if {{custom_attribute.${Game}}} == 'Game1' %}
-You played our Game! We're so happy!
-{% elsif{{custom_attribute.${Game}}} == 'Game2' %}
-You played our other Game! Woop!{% else %}
-Hey! Get in here and play this Game!
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+```
+{% endraw %}
+
+{: start="2"}
+2\.`elsif` タグと equals (`==`) 演算子を使用して、ユーザーの最新のゲームが*Proxy War 3 であるかどうかをチェックする：War of Thirst』*のフィードバックを測定する。次に、これらのユーザーに送信するメッセージを作成します。
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+```
+{% endraw %}
+
+{: start="3"}
+3\.`elsif` タグと does not equal (`!=`) および "and" (`&&`) 演算子を使用して、ユーザーが最近のゲームを持っているかどうか (値が空白でないことを意味する)、そのゲームが*Awkward Dinner Party* または *Proxy War 3 でないことをチェックします：War of Thirst』*のフィードバックを測定する。次に、これらのユーザーに送信するメッセージを作成します。
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+{% endraw %}
+
+{: start="4"}
+4\.最近のゲームを持っていないユーザーをキャプチャするには{% raw %}`{% else %}`{% endraw %} タグを追加します。次に、これらのユーザーに送信するメッセージを作成します。
+
+{% raw %}
+```liquid
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+```
+{% endraw %}
+
+{: start="5"}
+5\.{% raw %}`{% endif %}`{% endraw %} タグで条件ロジックを閉じる。
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
-![][14]
+{% details 完全な Liquid コード %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
 
-このユースケースでは、あるゲームをプレーした場合、次のようなメッセージが表示される：
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][14]
+
+さて、ユーザーが最後に『*Awkward Dinner Party*』をプレイした場合、このようなメッセージが表示される：
 
 ```
-You played our Game! We're so happy!
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 ```
 
-別の指定されたゲームをプレイした場合は次のように表示されます。
+ユーザーの直近のゲームが*Proxy War 3の場合：War of Thirst* 、彼らはこのメッセージを受け取ります：
 
 ```
-You played our other Game! Woop!
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-ゲームをプレイしていない場合、またはそのカスタム属性がプロファイルに存在しない場合は、次のメッセージが表示されます。
+ユーザーが最近プレイしたゲームが*『気まずい晩餐会*』や『*代理戦争3』でない場合：War of Thirst*、彼らはこのメッセージを受け取ります：
 
 ```
-Hey! Get in here and play this Game!
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+
+もしユーザーがゲームをプレイしていなかったり、そのカスタム属性がプロファイルに存在しなかったりすると、このメッセージが表示される：
+
+```
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 
 ### 位置に基づいてメッセージをアボートする
 
-あらゆる条件に基づいてメッセージを中止することができます。次のサンプルは、ユーザーが指定された領域に基づいていない場合にメッセージをアボートする方法を示しています。これは、昇格、表示、または配信の対象外となる可能性があるためです。
+あらゆる条件に基づいてメッセージを中止することができます。ユーザーが指定された地域に住んでいない場合、プロモーションやショー、配信の対象にならない可能性があるため、メッセージを中止しよう。
+
+1. equals (`==`) 演算子を使った条件文を書いて、ユーザーのタイムゾーンが`America/Los_Angeles` かどうかをチェックし、それらのユーザーに送信するメッセージを作成する。 
 
 {% raw %}
 ```liquid
-{% if {{${time_zone.$}}} =='America/Los_Angeles' %}
+{% if {{${time_zone}}} == 'America/Los_Angeles' %}
 Stream now!
+```
+{% endraw %}
+
+{: start="2"}
+2\.`America/Los_Angeles` タイムゾーン外のユーザーへのメッセージの送信を避けるには、{% raw %}`{% else %}`{% endraw %} と{% raw %}`{% endif %}`{% endraw %} タグを{% raw %}`{% abort_message () %}`{% endraw %} タグで囲みます。
+
+{% raw %}
+```liquid
 {% else %}
 {% abort_message () %}
 {% endif %}
 ```
 {% endraw %}
 
-![][26]
+{% details 完全な Liquid コード %}
+{% raw %}
+```liquid
+{% if {{${time_zone}}} =='America/Los_Angeles' %}
+Stream now!
+{% else %}
+{% abort_message () %}
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][26]
 
 また、接続コンテンツに基づいて[メッセージ][1]をアボートすることもできます。
 

@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Optional|String|Email template body that may include HTML.|
 |`plaintext_body`|Optional|String|A plaintext version of the email template body.|
 |`preheader`|Optional|String|Email preheader used to generate previews in some clients.|
-|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist.|
+|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) must already exist.|
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

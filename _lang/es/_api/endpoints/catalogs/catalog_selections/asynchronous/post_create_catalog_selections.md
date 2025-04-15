@@ -83,7 +83,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 Existen tres respuestas de código de estado para este punto final: `202`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
@@ -95,7 +95,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -117,11 +117,11 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error                                | Solución de problemas                                                                               |
 |--------------------------------------|-----------------------------------------------------------------------------------------------|
-| `catalog-not-found`                  | Comprueba que el nombre del catálogo es válido.                                                         |
+| `catalog-not-found`                  | Compruebe que el nombre del catálogo es válido.                                                         |
 | `company-size-limit-already-reached` | Se ha alcanzado el límite de tamaño de almacenamiento del catálogo.                                                    |
 | `selection-limit-reached`            | Se ha alcanzado el límite de selecciones del catálogo.                                                      |
 | `invalid-selection`                  | Comprueba que la selección es válida.                                                            |

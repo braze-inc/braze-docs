@@ -38,7 +38,7 @@ Después de crear un evento personalizado o un producto, selecciona **Gestionar 
 
 ![Propiedades personalizadas para un evento personalizado.][73]{: style="max-width:80%"}
 
-Para que estos atributos personalizados, eventos, productos o propiedades de eventos añadidos sean rastreables, debe pedir a su equipo de desarrollo que lo cree en el SDK utilizando el nombre exacto que utilizó para añadirlo anteriormente. O puedes utilizar [la API]({{site.baseurl}}/api/basics/) de Braze para importar datos sobre ese atributo. Después de eso, el atributo personalizado, evento u otro será accionable y se aplicará a sus usuarios.
+Para que estos atributos personalizados, eventos, productos o propiedades del evento añadidos sean trazables, debes pedir a tu equipo desarrollador que los cree en el SDK utilizando el nombre exacto que utilizaste para añadirlos anteriormente. O puedes utilizar [la API]({{site.baseurl}}/api/basics/) de Braze para importar datos sobre ese atributo. Después de eso, el atributo personalizado, evento u otro será accionable y se aplicará a sus usuarios.
 
 {% alert note %}
 Todos los datos de los perfiles de usuario (eventos personalizados, atributos personalizados, datos personalizados) se almacenan mientras esos perfiles estén activos.
@@ -84,7 +84,7 @@ Los cambios en la lista de bloqueo pueden tardar unos minutos en propagarse. Pue
 
 ## Borrar datos personalizados
 
-A medida que construyas campañas y segmentos específicos, puede que te des cuenta de que ya no necesitas un evento personalizado o un atributo personalizado. Por ejemplo, si utilizaste un atributo personalizado específico como parte de una campaña única, puedes eliminar estos datos después de [bloquearlos](#blocklisting-custom-attributes-custom-events-and-products) y eliminar sus referencias de tu aplicación. 
+A medida que construyas campañas y segmentos específicos, puede que te des cuenta de que ya no necesitas un evento personalizado o un atributo personalizado. Por ejemplo, si utilizaste un atributo personalizado específico como parte de una campaña única, puedes eliminar estos datos después de [bloquearlos](#blocklisting-custom-attributes-custom-events-and-products) y eliminar sus referencias de tu aplicación. Puedes eliminar cualquier tipo de datos (como cadenas, números y atributos personalizados anidados).
 
 Para eliminar un evento personalizado o un atributo personalizado, haz lo siguiente:
 
@@ -116,7 +116,7 @@ Cuando elimines datos personalizados, ten en cuenta los siguientes detalles:
 
 ## Forzar la comparación de tipos de datos
 
-Braze reconoce automáticamente los tipos de datos de los atributos que se nos envían. Sin embargo, en el caso de que se apliquen varios tipos de datos a un mismo atributo, se puede forzar el tipo de datos de cualquier atributo para saber cuál es realmente. Selecciónalo en el desplegable de la columna **Tipo de datos**.
+Braze reconoce automáticamente los tipos de datos de los atributos que se nos envían. Sin embargo, en el caso de que se apliquen varios tipos de datos a un mismo atributo, puedes forzar el tipo de datos de cualquier atributo para que sepamos cuál es. Selecciónalo en el desplegable de la columna **Tipo de datos**.
 
 {% alert note %}
 Forzar tipos de datos no se aplica a las propiedades del evento, ni a las propiedades de la compra.

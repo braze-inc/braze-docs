@@ -1,8 +1,7 @@
 ---
+page_order: 2.2
 nav_title: Content Cards
-article_title: Content Card Customization
-layout: dev_guide
-page_order: 5
+article_title: Content Cards in the Braze SDK
 channel:
   - content cards
 platform:
@@ -10,26 +9,46 @@ platform:
   - FireOS
   - Swift
   - Web
-
-guide_top_header: "Content Card Customization"
-guide_top_text: "Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. You can also create new, completely custom Content Card types and log analytics to make sure that the Braze dashboard is tracking how successful your new types of cards are."
-description: "This landing page links to various ways to customize Braze SDK Content Cards for multiple platforms."
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Customizing Content Card Styles
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
-    image: /assets/img/braze_icons/brush-02.svg
-  - name: Customizing Content Card Behavior
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
-    image: /assets/img/braze_icons/settings-01.svg
-  - name: Customizing the Default Content Card Feed
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
-    image: /assets/img/braze_icons/book-closed.svg
-  - name: Logging Analytics 
-    link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
-    image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: Creating Custom Content Cards
-    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
-    image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---
+
+# Content Cards
+
+> Learn about Content Cards for the Braze SDK, including the different data models and card-specific properties available for your application.
+
+{% sdktabs %}
+{% sdktab android %}
+{% multi_lang_include developer_guide/android/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab swift %}
+{% multi_lang_include developer_guide/swift/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab cordova %}
+{% multi_lang_include developer_guide/cordova/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab tvos %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab unity %}
+{% multi_lang_include developer_guide/unity/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab xamarin %}
+{% multi_lang_include developer_guide/xamarin/content_cards.md %}
+{% endsdktab %}
+{% endsdktabs %}

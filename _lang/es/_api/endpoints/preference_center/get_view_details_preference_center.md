@@ -30,7 +30,8 @@ Este punto final tiene un límite de velocidad de 1000 solicitudes por minuto, p
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de tu centro de preferencias. |
+|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de su centro de preferencias. |
+{: role="presentation" }
 
 ## Parámetros de la solicitud
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Respuesta 
-```json 
+## Respuesta
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

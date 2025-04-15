@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Resposta
 
-Existem três respostas de código de status para este endpoint: `201`, `400` e `404`.
+Há três respostas de código de status para esse endpoint: `201`, `400` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 
@@ -118,7 +118,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `id-in-body` | Remova quaisquer IDs de item no corpo da solicitação. |
 | `ids-too-large` | O limite de caracteres para cada ID de item é de 250 caracteres. |
 | `invalid-ids` | Os caracteres compatíveis com os nomes de ID de item são letras, números, hífens e sublinhados. |
-| `invalid-fields` | Confirme que todos os campos que você está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo ID mencionado no erro. |
+| `invalid-fields` | Confirme se todos os campos que está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo ID mencionado no erro. |
 | `invalid-keys-in-value-object` | As chaves de objeto do item não podem incluir `.` ou `$`. |
 | `item-already-exists` | O item já existe no catálogo. |
 | `item-array-invalid` | `items` deve ser um vetor de objetos. |

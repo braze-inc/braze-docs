@@ -78,8 +78,8 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸(`sp
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>바운스</i>:카운트</li>
-        <li><i>이탈률</i><i>%</i> 또는 <i>이탈률 %</i>: (전송 - 반송) / (전송)</li>
+        <li><i>바운스</i>: 카운트</li>
+        <li><i>이탈률 %</i> 또는 <i>이탈률 %</i>: (바운스) / (전송)</li>
     </ul>
 </span>
 {:/}
@@ -896,7 +896,7 @@ SMS
 인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} 인앱 메시지의 경우, 재적격성이 켜져 있고 사용자가 트리거 액션을 수행하면 24시간 후에 고유 노출 수가 다시 증가할 수 있습니다. 재자격이 켜져 있으면 <i>고유 노출</i> <i>수</i>= <i>고유 수신자 수입니다</i>. <br><br>콘텐츠 카드의 경우 사용자가 카드를 두 번째로 볼 때마다 카운트가 증가해서는 안 됩니다. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} 인앱 메시지의 경우, 재적격성이 켜져 있고 사용자가 트리거 액션을 수행하면 24시간 후에 고유 노출 수가 다시 증가할 수 있습니다. 재자격이 켜져 있으면 <i>고유 노출</i> 수= <i>고유 수신자 수입니다</i>. <br><br>콘텐츠 카드의 경우 사용자가 카드를 두 번째로 볼 때마다 카운트가 증가해서는 안 됩니다. 
 
 <span class="calculation-line">계산: 카운트</span>
 
@@ -954,7 +954,7 @@ SMS
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>구독 취소</i> 또는 <i>구독</i> <i>취소</i>: 카운트</li>
+        <li><i>구독 취소</i> 또는 구독 <i>취소</i>: 카운트</li>
         <li><i>구독 취소자 %</i> 또는 <i>구독 취소율</i>: (구독 취소) / (배송)</li>
     </ul>
 </span>

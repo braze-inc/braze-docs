@@ -169,6 +169,29 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 3\. 네트워크 정책이 설정되어 있는 경우, Databricks 인스턴스에 대한 Braze 네트워크 액세스 권한을 부여해야 합니다. IP 목록은 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) 페이지를 참조하세요.
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+
+다음 필드를 사용하여 CDI 통합에 사용할 하나 이상의 테이블을 만드세요.
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. 부교장을 설정하고 적절한 권한을 부여하세요. 기존 동기화의 자격 증명이 이미 있는 경우 이를 재사용할 수 있으며, 카탈로그 소스 테이블에 대한 액세스 권한을 확장하기만 하면 됩니다. 새 서비스 계정 및 자격 증명을 만드는 방법에 대해 자세히 알아보려면 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) 페이지를 참조하세요. 
+
+{:start="3"}
+3\. 네트워크 정책이 설정되어 있는 경우 Braze 네트워크에 Microsoft 패브릭 인스턴스에 대한 액세스 권한을 부여해야 합니다. IP 목록은 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)을 참조하세요.
+
+{% endtab %}
 {% endtabs %}
 
 ## 통합 작동 방식
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}

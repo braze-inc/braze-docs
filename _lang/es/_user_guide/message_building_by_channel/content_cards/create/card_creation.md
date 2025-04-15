@@ -3,7 +3,7 @@ nav_title: Creación de tarjetas
 article_title: Creación de tarjetas
 alias: /card_creation/
 description: "En este artículo se describen las diferencias entre la creación de tarjetas de contenido en el momento del lanzamiento de la campaña o de la entrada en el paso Canvas y en la primera impresión."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards
@@ -51,6 +51,10 @@ Existen las siguientes opciones:
 
 Independientemente de la opción seleccionada, la cuenta atrás de la fecha de caducidad de la tarjeta de contenido comenzará cuando el usuario entre en el paso Lienzo.
 
+{% alert tip %}
+Si quieres que los usuarios anónimos vean una tarjeta de contenido en su primera sesión, utiliza una campaña en lugar de un Canvas. Esto se debe a que cuando un usuario anónimo entra en un Canvas, su sesión ya ha comenzado, por lo que no obtendrá la tarjeta de contenido hasta que inicie una nueva sesión.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -95,7 +99,7 @@ En esta sección se describen las principales diferencias entre la creación de 
   <tr>
     <td class="leftHeader">Análisis</td>
     <td class="tg-0pky"><em>Mensajes Enviados</em> se refiere al número de tarjetas creadas y disponibles para ser vistas. Esto no cuenta si los usuarios vieron la tarjeta.</td>
-    <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas mostradas a los usuarios. <br><br>Aunque sus usuarios alcanzables e impresiones no cambiarán, puede esperar ver una disminución en el volumen de envíos<em>(Mensajes Enviados</em>) cuando una tarjeta se crea en la primera impresión en comparación con si la misma tarjeta se creara en el lanzamiento de la campaña o en la entrada del paso Canvas.</td>
+    <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas enviadas a un usuario tras el inicio de una sesión. En Canvas, a los usuarios que entran en el paso sin iniciar una sesión no se les envía una tarjeta, por lo que esta métrica puede no coincidir con el número de usuarios que entran en un paso.<br><br>Aunque sus usuarios alcanzables e impresiones no cambiarán, puede esperar ver una disminución en el volumen de envíos<em>(Mensajes Enviados</em>) cuando una tarjeta se crea en la primera impresión en comparación con si la misma tarjeta se creara en el lanzamiento de la campaña o en la entrada del paso Canvas.</td>
   </tr>
   <tr>
     <td class="leftHeader">Tiempo de procesamiento</td>

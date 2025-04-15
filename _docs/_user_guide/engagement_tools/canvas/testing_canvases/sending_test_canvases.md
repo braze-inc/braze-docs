@@ -61,7 +61,7 @@ In some cases, a user can potentially receive multiple messages when going throu
 
 ### Create an Internal Group
 
-Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
+Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
 
 ### Reduce time delays
 

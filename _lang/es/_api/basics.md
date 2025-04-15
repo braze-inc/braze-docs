@@ -34,7 +34,7 @@ Lo que sigue es un resumen de los términos que puedes ver en la documentación 
 
 ### Puntos finales
 
-Braze gestiona varias instancias diferentes para nuestro panel y puntos finales REST. Cuando se aprovisione tu cuenta, accederás a una de las siguientes URL. Utiliza el punto final REST correcto en función de la instancia a la que estés aprovisionado. Si no estás seguro, abre un \[ticket de soporte]\[support] o utiliza la siguiente tabla para hacer coincidir la URL del panel que utilizas con el REST Endpoint correcto.
+Braze gestiona varias instancias diferentes para nuestro panel y puntos finales REST. Cuando se aprovisione tu cuenta, accederás a una de las siguientes URL. Utiliza el punto final REST correcto en función de la instancia a la que estés aprovisionado. Si no estás seguro, abre un [ticket de soporte][support] o utiliza la siguiente tabla para hacer coincidir la URL del panel que utilizas con el REST Endpoint correcto.
 
 {% alert important %}
 Cuando utilices puntos finales para las llamadas a la API, utiliza el punto final REST.
@@ -88,7 +88,7 @@ Para crear una nueva clave de API REST:
 1. Ve a **Configuración** > **API e identificadores**.
 
 {% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes crear una clave de API desde **Consola para desarrolladores** > Configuración de API.
+Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes crear una clave de API desde **Consola para desarrolladores** > **Configuración de API**.
 {% endalert %}
 
 {:start="2"}
@@ -215,9 +215,7 @@ Los permisos de clave de API son permisos que puedes asignar a un usuario o grup
 {% endtab %}
 {% tab Canal de noticias %}
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 | Permiso | Punto de conexión | Descripción |
 |---|---|---|
@@ -330,7 +328,7 @@ Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que 
 
 ### Gestión de claves de API REST
 
-Puedes ver los detalles de las claves de API REST existentes o eliminarlas desde **Configuración** > **API e identificadores** > pestaña Claves de API. Ten en cuenta que las claves de API REST no se pueden editar una vez creadas.
+Puedes ver los detalles de las claves de API REST existentes o eliminarlas desde **Configuración** > **API e identificadores** > pestaña **Claves de API**. Ten en cuenta que las claves de API REST no se pueden editar una vez creadas.
 
 La pestaña **Claves de API** incluye la siguiente información para cada clave:
 
@@ -345,11 +343,11 @@ La pestaña **Claves de API** incluye la siguiente información para cada clave:
 
 Para ver los detalles de una clave de API, pasa el ratón por encima de la clave y selecciona <i class="fa-solid fa-eye" alt="View"></i> **Ver**. Esto incluye todos los permisos que tiene esta clave, las IP de la lista blanca (si las hay), y si esta clave está incluida en la lista blanca de IP de Braze.
 
-![][30]
+![La lista de permisos de la clave de API en el panel Braze.][30]
 
 Ten en cuenta que, al [eliminar un]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) usuario, no se eliminarán las claves de API asociadas que haya creado. Para borrar una tecla, pasa el ratón sobre ella y selecciona <i class="fa-solid fa-trash-can" alt="Delete"></i> **Borrar**.
 
-![][29]{: style="max-width:30%;"}
+![Una clave de API llamada "Visto por última vez" con el icono de la papelera resaltado, mostrando "Eliminar".][29]{: style="max-width:30%;"}
 
 ### Seguridad de la clave de API REST
 
@@ -363,7 +361,7 @@ Una buena práctica de seguridad es asignar a un usuario sólo el acceso necesar
 Dado que las claves de API REST permiten acceder a puntos finales de API REST potencialmente sensibles, asegúrate de que se almacenan y utilizan de forma segura. Por ejemplo, no utilices esta clave para hacer llamadas AJAX desde tu sitio web ni la expongas de ninguna otra forma pública.
 {% endalert %}
 
-Si se produce una exposición accidental de una clave, puede borrarse desde la consola para desarrolladores. Si necesitas ayuda con este proceso, abre un \[ticket de soporte]\[support].
+Si se produce una exposición accidental de una clave, puede borrarse desde la consola para desarrolladores. Si necesitas ayuda con este proceso, abre un [ticket de soporte][support].
 
 ### Lista de direcciones IP permitidas de la API
 
@@ -399,7 +397,7 @@ Esta biblioteca cliente está actualmente en fase beta. ¿Quieres ayudarnos a me
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-\[soporte]: {{site.baseurl}}/braze_support/
+[soporte]: {{site.baseurl}}/braze_support/
 [28]: {% image_buster /assets/img_archive/create-new-key.png %}
 [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

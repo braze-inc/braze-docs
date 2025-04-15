@@ -33,7 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | Obligatoria | Cadena en formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Fecha de final del intervalo para recuperar las próximas campañas y Lienzos programados. La API lo considera medianoche en hora UTC. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```

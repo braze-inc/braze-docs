@@ -35,7 +35,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `start_date` | Opcional <br>(ver nota) | Cadena en formato AAAA-MM-DD| Fecha de inicio del intervalo para recuperar las bajas, debe ser anterior a end_date. La API lo considera medianoche en hora UTC. |
 | `end_date` | Opcional <br>(ver nota) | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar las bajas. La API lo considera medianoche en hora UTC. |
 | `limit` | Opcional | Entero | Campo opcional para limitar el número de resultados devueltos. De forma predeterminada, 100, el máximo es 500. |
-| `offset` | Opcional | Entero | Punto de inicio opcional de la lista desde el que recuperar. |
+| `offset` | Opcional | Entero | Punto de inicio opcional de la lista a recuperar. |
 | `sort_direction` | Opcional | Cadena | Introduce el valor `asc` para ordenar las bajas de la más antigua a la más reciente. Introduce `desc` para ordenar de más reciente a más antiguo. Si no se incluye `sort_direction`, el orden predeterminado es de más reciente a más antiguo. |
 | `email` | Opcional <br>(ver nota) | Cadena | Si se proporciona, devolveremos si el usuario se ha dado de baja o no. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

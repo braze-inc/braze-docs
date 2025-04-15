@@ -17,16 +17,17 @@ Prior to this feature, the entry properties could only be used in the first step
 ## Using entry properties
 
 Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+
 - [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag. For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/) instead.
+When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
-The Canvas entry properties object has a maximum size limit of 50 KB. 
+The Canvas entry properties object has a maximum size limit of 50 KB.
 {% endalert %}
 
 ## Updating Canvas to use entry properties
@@ -80,7 +81,7 @@ In this request, the global value for "food allergies" is "none". For Customer_1
 
 ## Use case
 
-If you have a Canvas that is triggered when a user browses an item in your ecommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 

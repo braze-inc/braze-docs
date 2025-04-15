@@ -9,7 +9,7 @@ page_order: 0
 
 > Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. 
 
-Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), instead.
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview]({{site.baseurl}}/user_guide/getting_started/web_sdk/), instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -29,7 +29,7 @@ The Braze SDK is designed to be very well-behaved, and not interfere with other 
 
 ## Default analytics and session handling
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point allotment.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point allotment.
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.
@@ -67,7 +67,7 @@ We highly recommend completely integrating the SDKs to take full advantage of ou
 {% tabs %}
 {% tab Web SDK %}
 
-You may either simply not integrate certain parts of the SDK, or use [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) for a user. This method will sync data logged prior to when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
+You may either simply not integrate certain parts of the SDK, or use [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) for a user. This method will sync data logged prior to when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web) article.
 
 {% endtab %}
 {% tab Android SDK %}
@@ -87,7 +87,7 @@ You can assign a set of eligible fields to [`configuration.devicePropertyAllowLi
 By default, all fields are collected by the Braze Swift SDK. Removing some device properties may disable SDK features.
 {% endalert %}
 
-For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage) in the Swift SDK documentation.
+For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/storage/?tab=swift) in the Swift SDK documentation.
 
 {% endtab %}
 {% endtabs %}
@@ -99,6 +99,6 @@ You can use the dashboard to see the SDK version of a particular app by visiting
 ![An app named Swifty in a workspace. The Live SDK version is 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
-If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
+If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
 {% endalert %}
 

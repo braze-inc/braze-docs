@@ -65,18 +65,18 @@ Braze에서 미리보기를 생성하여 이메일 주소로 CSV 파일로 전�
 
 {% tabs local %}
 {% tab 예제 CSV 파일 %}
-| 이메일 주소 | 외부 아이디 | 휴대폰 번호 | 브레이즈 아이디 | 규칙 식별자 | 보관할 프로필 | 병합할 프로필 |
-\|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | 이메일 | TRUE | FALSE |
-alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | 이메일 | 거짓 | 참 | 진실 |
-alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | 이메일 | 거짓 | 참 | 진실 |
+| Email Address    | External ID | Phone Number   | Braze ID              | Identifier for rule | Profile to keep | Profile to merge |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
+| alex@company.com | A8i3mkd99   | (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
+| alex@company.com |             | (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
+| alex@company.com |             | (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
 #### 병합 동작
 
-브레이즈는 유지된 프로필의 빈 필드를 병합된 프로필의 값으로 채울 것입니다. 채워질 필드 목록은 [병합 동작]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior)을 참조하십시오.
+브레이즈는 유지된 프로필의 빈 필드를 병합된 프로필의 값으로 채울 것입니다. 필드가 채워질 목록은 병합 동작을 참조하십시오.
 
 ### 3단계: 중복된 항목 병합
 
@@ -111,6 +111,22 @@ alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | 이메일 | 거짓
 ### 3단계: 병합이 중복됨
 
 미리 보기 결과가 만족스럽다면 **오디언스 관리** 페이지로 돌아가서 **모든 중복 항목 병합**을 선택합니다.
+
+{% alert warning %}
+병합 후에는 중복된 사용자 프로필을 복구할 수 없습니다.
+{% endalert %}
+
+## Scheduled merging
+
+Similar to rules-based merging, scheduled merging allows you to automate the merging of user profiles on a daily basis using preconfigured rules.
+
+{% alert important %}
+Scheduled merging is in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+![The "Manage Audience" page with "schedule" button.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+After the feature is turned on, Braze will automatically assign a timeslot to perform the merge process daily. You can turn off scheduled merging at any time. Braze will notify the admins of your workspace 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
 
 {% alert warning %}
 병합 후에는 중복된 사용자 프로필을 복구할 수 없습니다.

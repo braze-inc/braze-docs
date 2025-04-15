@@ -40,6 +40,7 @@ Both inactive users and dormant users will be archived unless the user is exclud
 - Can't receive SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Can't receive push. For example, they have uninstalled the app or disabled push permissions.
 - Can't receive a WhatsApp message. For example, they do not have a valid phone number or are unsubscribed from all WhatsApp subscription groups.
+- Can't receive a LINE message. For example, they do not have a LINE ID or are unsubscribed from all LINE subscription groups.
 - Haven't used any mobile app or visited a website in a workspace in more than six months.
 - Haven't received any messages from a workspace in more than six months.
 - Haven't been updated in more than six months.
@@ -60,7 +61,7 @@ Users in the Global Control Group will never be archived, even if they meet the 
 
 ### Treatment sample group
 
-Treatment sample group users are excluded from archiving within a Global Control Group report.
+Treatment sample group users in a Global Control Group Report are excluded from archiving.
 
 ## Test users
 
@@ -94,7 +95,9 @@ This allows you to:
 
 ### Steps
 
-1. Target users that meet archival criteria and that you'd like to retain.<br><br>
+1. Target users that meet your brand's archival criteria and that you'd like to retain. For example, you might retain users who:
+    - Last received a message more then 23 weeks ago or have never received a message<br>AND<br>
+    - Last used your app more than 23 weeks ago or had zero sessions in your app<br><br>
       ![Target users that last received any message more than 23 weeks ago, have never received a message from a campaign or Canvas step, last used these apps more than 23 weeks ago, and have used these apps exactly zero times.][2]<br><br>
 2. Set re-eligibility to be a little less than 6 months long.<br><br>
       ![Entry controls with re-eligibility turned on and the re-eligibility window set to 23 weeks.][3]<br><br>

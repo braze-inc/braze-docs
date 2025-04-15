@@ -85,14 +85,14 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 ```
 
 {% alert note %}
-Los operadores `$add` y `$remove` sólo son aplicables a campos de tipo array, y sólo son compatibles con los puntos finales PATCH.
+Los operadores `$add` y `$remove` sólo son aplicables a campos de tipo array, y sólo son compatibles con los extremos PATCH.
 {% endalert %}
 
 ## Respuesta
 
 Existen tres respuestas de código de estado para este punto final: `202`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
@@ -104,7 +104,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -126,23 +126,23 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
-| `catalog-not-found` | Comprueba que el nombre del catálogo es válido. |
+| `catalog-not-found` | Compruebe que el nombre del catálogo es válido. |
 | `ids-too-large` | Los ID de los artículos no pueden tener más de 250 caracteres. |
-| `ids-not-strings` | Los ID de los elementos deben ser de tipo cadena. |
+| `ids-not-strings` | Los ID de artículo deben ser de tipo cadena. |
 | `ids-not-unique` | Los ID de los artículos deben ser únicos en la solicitud. |
 | `invalid-ids` | Los ID de elementos solo pueden incluir letras, números, guiones y guiones bajos. |
-| `invalid-fields` | Confirma que todos los campos que estás enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
-| `invalid-keys-in-value-object` | Las claves de los objetos del artículo no pueden incluir `.` ni `$`. |
-| `items-missing-ids` | Hay artículos que no tienen ID de artículo. Comprueba que cada artículo tiene un ID de artículo. |
-| `item-array-invalid` | `items` debe ser una matriz de objetos. |
+| `invalid-fields` | Confirme que todos los campos que está enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
+| `invalid-keys-in-value-object` | Las claves de objeto de artículo no pueden incluir `.` ni `$`. |
+| `items-missing-ids` | Algunos artículos no tienen ID de artículo. Compruebe que cada artículo tiene un ID de artículo. |
+| `item-array-invalid` | `items` debe ser un array de objetos. |
 | `items-too-large` | Los valores de los elementos no pueden superar los 5.000 caracteres. |
-| `request-includes-too-many-items` | Tu solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |
-| `too-deep-nesting-in-value-object` | Los objetos elemento no pueden tener más de 50 niveles de anidamiento. |
-| `unable-to-coerce-value` | Los tipos de elementos no se pueden convertir. |
+| `request-includes-too-many-items` | Su solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |
+| `too-deep-nesting-in-value-object` | Los objetos item no pueden tener más de 50 niveles de anidamiento. |
+| `unable-to-coerce-value` | Los tipos de artículo no se pueden convertir. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

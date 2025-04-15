@@ -30,9 +30,9 @@ Braze は送信後14日間、送信分析を保存します。キャンペーン
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | 必須 | 文字列 | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `send_id` | 必須 | 文字列 | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |

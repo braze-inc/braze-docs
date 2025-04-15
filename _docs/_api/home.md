@@ -47,6 +47,7 @@ glossary_tags:
   - name: Preference Center
   - name: Schedule Messages
   - name: SCIM
+  - name: SDK Authentication
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -411,11 +412,11 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
-    description: Update an item in a catalog.
+    description: Replace an item in a catalog.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>
-    description: Update multiple items in a catalog.
+    description: Replace multiple items in a catalog.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>
@@ -439,7 +440,7 @@ glossaries:
     tags:
       - SCIM
   - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
-    description: Look up an existing dashboard user account by specifying their email.
+    description: Look up an existing dashboard user account by specifying their resource ID.
     tags:
       - SCIM
   - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>
@@ -466,4 +467,20 @@ glossaries:
     description: Return a list of sync statuses.
     tags:
       - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>
+    description: Create a new SDK Authentication key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>
+    description: List SDK Authentication keys for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>
+    description: Set an SDK Authentication key as the primary key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>
+    description: Delete an SDK Authentication key for your app.
+    tags:
+      - SDK Authentication  
 ---

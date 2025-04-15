@@ -109,8 +109,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: マイポストカード
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
-- name: ディクサ
+- name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
-- name: ナルバー
+- name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

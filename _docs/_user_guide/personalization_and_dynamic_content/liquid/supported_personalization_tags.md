@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Summary of supported tags
 
-As a convenience, a summary of supported personalization tags are provided. For more detail on each kind of tag and best practices, continue reading.
+As a convenience, a summary of supported personalization tags are provided. For more detail on each type of tag and best practices, continue reading.
 
 {% raw %}
 
@@ -29,37 +29,37 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
-| Canvas Entry Properties| `{{canvas_entry_properties}}` |
+| Canvas Context Variables | `{{context}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
 | [API trigger Properties][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+### Supported attributes
 
-{% alert important %}
 Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns).
-{% endalert %}
+
+Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 ### Canvas and campaign tag differences 
 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
-- `dispatch_id` behavior differs because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior][50].
+- `dispatch_id` behavior differs because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for entry steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior][50].
 - Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas component name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
 ## Most recently used device information
 
-You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (for example, you imported the user via REST API), then these values will all be `null`.
+You can template the following attributes for the user's most recent device across all platforms. If a user has not used your application (for example, you imported the user via REST API), then these values will all be `null`.
 
 {% raw %}
 
 |Tag | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
-|`{{most_recently_used_device.${id}}}` | The Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
+|`{{most_recently_used_device.${id}}}` | The Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms, it's a randomly generated UUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
 | `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
@@ -70,7 +70,7 @@ You can template in the following attributes for the user's most recent device a
 | `{{most_recently_used_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `kindle`, `android_china`, `web`, or `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
+Because there is such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
 ## Targeted app information
 
@@ -95,11 +95,11 @@ User is in list of apps
 
 ## Targeted device information
 
-For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes won't work for Content Cards. 
+For push notifications and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes won't work for Content Cards. 
 
 |Tag | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | This is the Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
+| `{{targeted_device.${id}}}` | This is the Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms, it is a randomly generated UUID. |
 | `{{targeted_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
 | `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with our [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
@@ -112,7 +112,7 @@ For push notification and in-app message channels, you can template in the follo
 
 {% endraw %}
 
-Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any logic that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device. 
+Because there is such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any logic that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device. 
 
 Furthermore, for push notifications, it's possible that Braze won't be able to discern the device attached to the push notification under certain circumstances such as if the push token was imported through API, resulting in values being `null` for those messages.
 
@@ -160,16 +160,16 @@ In this use case, a user with a blank or null first name will get the message "T
 
 ## Variable tags
 
-You can use the `assign` tag to create a variable in the message composer. After you create a variable, you can reference that variable in your messaging logic or message.
+You can use the `assign` tag to create a variable in the message composer. We recommend using a unique name for your variable. If you create a variable with a similar name to the supported personalization tags (such as `language`), this may affect your messaging logic.
 
-This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more in Shopify's documentation on [variable tags][31].
+After you create a variable, you can reference that variable in your messaging logic or message. This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more in Shopify's documentation on [variable tags][31].
 
 {% alert tip %}
 Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
 
 1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. Give your Content Block a name (no spaces or special characters).
-3. Click **Edit** at the bottom of the page.
+3. Select **Edit** at the bottom of the page.
 4. Type in your `assign` tags.
 
 As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
@@ -242,11 +242,11 @@ This key will only be automatically added to the Connected Content object if the
 
 ## Sending messages based on language, most recent locale, and time zone
 
-In some situations you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
+In some situations, you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
 
 ### Use case: Localize based on recent locale
 
-Here's a use case of how you can use most recent locale to further localize an internationalized message.
+Here's a use case of how you can use the most recent locale to further localize an internationalized message.
 
 {% raw %}
 

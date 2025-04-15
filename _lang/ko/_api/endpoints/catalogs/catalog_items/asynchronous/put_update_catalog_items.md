@@ -6,7 +6,7 @@ page_order: 4
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 여러 카탈로그 항목 업데이트 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
+description: "이 문서에서는 여러 카탈로그 항목 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -43,7 +43,7 @@ description: "이 문서에서는 여러 카탈로그 항목 업데이트 Braze 
 | `items` | 필수 | 배열 | 항목 객체가 포함된 배열입니다. 각 객체에는 ID가 있어야 합니다. 항목 객체에는 카탈로그에 존재하는 필드가 포함되어야 합니다. 요청당 최대 50개의 항목 개체가 허용됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
 ```
 curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -80,7 +80,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -125,7 +125,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 | `ids-not-unique` | 각 항목 ID가 고유한지 확인합니다. |
 | `ids-too-large` | 각 항목 ID의 글자 수 제한은 250자입니다. |
 | `item-array-invalid` | `items` 는 객체의 배열이어야 합니다. |
-| `items-missing-ids` | 각 항목에 ID가 있는지 확인합니다. |
+| `items-missing-ids` | 일부 품목에는 품목 ID가 없습니다. 각 항목에 ID가 있는지 확인합니다. |
 | `items-too-large` | 항목 값은 5,000자를 초과할 수 없습니다. |
 | `invalid-ids` | 항목 ID 이름에 지원되는 문자는 문자, 숫자, 하이픈, 밑줄입니다. |
 | `invalid-fields` | API 요청에서 전송하려는 모든 필드가 카탈로그에 이미 존재하는지 확인합니다. 이는 오류에 언급된 ID 필드와는 관련이 없습니다. |

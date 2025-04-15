@@ -46,7 +46,7 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 ### Ajouter des propriétés {#properties-purchases}
 Vous pouvez ajouter des métadonnées sur les achats en transmettant un dictionnaire contenant les valeurs `Int`, `Double`, `String`, `Bool` ou `Date`.
 
-Pour plus de détails, reportez-vous à la [documentation sur les classes iOS et à la [ achats](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "documentation sur les").
+Pour plus de détails, reportez-vous à la [documentation sur les classes iOS ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "(documentation logpurchase)").
 
 ### Ajout d’une quantité
 Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `Int` pour la quantité.
@@ -54,7 +54,7 @@ Vous pouvez ajouter une quantité à vos achats si les clients effectuent le mê
 * Une entrée de quantité doit être comprise dans la plage de [0, 100] pour que le SDK enregistre un achat.
 * Les méthodes sans entrée de quantité auront une valeur de quantité égale à 1 par défaut.
 
-Pour plus de détails, reportez-vous à la [documentation sur les classes iOS et à la [ achats](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "documentation sur les").
+Pour plus de détails, reportez-vous à la [documentation sur les classes iOS ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "(documentation logpurchase)").
 
 {% tabs %}
 {% tab swift %}

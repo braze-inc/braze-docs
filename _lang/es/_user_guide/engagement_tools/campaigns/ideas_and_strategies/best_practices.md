@@ -16,7 +16,7 @@ Braze recomienda que solo envíes datos de clientes que pretendas utilizar en la
 - **Dirígete a** tus audiencias creando [segmentos de audiencia]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Active** sus mensajes con envíos [basados en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) o [activados por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 - **Plantilla** y personaliza tus mensajes con [la lógica condicional de Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Controle** la eficacia de sus campañas con [el seguimiento de conversiones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Controle** la eficacia de sus campañas con [el seguimiento de conversiones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
 
 Esto le permite optimizar los datos que envía a Braze y agilizará su capacidad para enviar mensajes a sus usuarios, al tiempo que le garantiza que no rastreará puntos de datos que su equipo no considere útiles a largo plazo. 
 
@@ -73,7 +73,11 @@ Cuando edites programas de campaña o audiencias, toma nota de las siguientes bu
 - **Campañas de programación única:** Puedes editar la campaña hasta la hora de envío programada.
 - **Campañas programadas recurrentes:** Puedes editar la campaña hasta la hora de envío programada.
 - **Campañas locales de tiempo de envío:** No hagas ediciones 24 horas antes de la hora de envío programada.
-- **Campañas con tiempo de envío óptimo:** No hagas modificaciones 24 horas antes de la medianoche del día en que está previsto el envío de la campaña.
+- **Campañas con tiempo de envío óptimo:** No hagas ediciones 24 horas antes de la medianoche del día previsto para el envío de la campaña.
+
+{% alert note %}
+Editar una campaña en vivo y cambiar la entrega a **Hora de envío local** hará que se ponga en cola un nuevo lote de mensajes, lo que significa que tus usuarios recibirán el mensaje dos veces debido a que el mensaje se pondrá en cola dos veces. Para evitarlo, primero detén la campaña original y luego lanza un duplicado tras actualizar la programación.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

@@ -67,7 +67,7 @@ Braze.requestContentCardsRefresh();
 
 ## コンテンツカードデータモデル
 
-コンテンツカードのデータモデルは、React Native SDK で利用できます。コンテンツカードのデータモデルの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard)ドキュメントを参照のこと。
+コンテンツカードのデータモデルは、React Native SDK で利用できます。コンテンツカードのデータモデルの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard)] のドキュメントを参照してください。
 
 Braze React Native SDK には、**画像のみ**、**キャプション付き画像**、**クラシック**という、ベースモデルを共有する3種類のユニークなコンテンツカードのカードがあります。
 
@@ -108,7 +108,7 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 |`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。特定の状況ではプロパティが提供されない場合があることに注意してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-画像onlyカードの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct)ドキュメントを参照のこと。
+画像のみのカードの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct)] のドキュメントを参照してください。
 
 ### キャプション付き画像コンテンツカードモデルのプロパティ
 
@@ -148,7 +148,7 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 - `isControl` プロパティは`true` であることが保証されている。
 - `extras` プロパティは空であることが保証されます。
 
-コントロールカードの詳細については、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct)ドキュメントを参照のこと。
+コントロールカードの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct)] のドキュメントを参照してください。
 
 ## GIFサポート
 

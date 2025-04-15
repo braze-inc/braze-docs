@@ -24,7 +24,7 @@ Braze [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) は�
 - `Appboy-nodeps.unitypackage`
     - このパッケージは `Appboy.unitypackage` に似ていますが、[SDWebImage](https://github.com/SDWebImage/SDWebImage) フレームワークが存在しない点が異なります。このパッケージは、iOS アプリに SDWebImage フレームワークが存在しないようにする場合に便利です。
 
-**iOS**:iOS プロジェクトの[SDWebImage](https://github.com/SDWebImage/SDWebImage) 依存関係が必要かどうかを確認するには、[iOS in-app message documentation] を参照してください。{{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/).<br>
+**iOS**:iOS プロジェクトに [SDWebImage](https://github.com/SDWebImage/SDWebImage) の依存関係が必要かどうかを確認するには、[iOS アプリ内メッセージドキュメント]を参照してください。({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/).] <br>
 **Android**:Unity 2.6.0 以降、バンドルされた Braze Android SDK アーティファクトには [AndroidX](https://developer.android.com/jetpack/androidx) 依存関係が必要です。以前に`jetified unitypackage` を使用していた場合は、対応する`unitypackage` に安全に移行できます。
 
 ## ステップ2:パッケージをインポートする
@@ -98,7 +98,7 @@ Android Unity プロジェクトでは、アプリケーションを実行する
 
 ## ステップ4: グレードル依存関係の追加 {#unity-android-gradle-configuration}
 
-Unityプロジェクトにグレードル依存関係を追加するには、まず、公開設定で["Custom Main Gradle Template"](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing)を有効にします。これにより、プロジェクトで使用するテンプレートグラドルファイルが作成されます。gradle ファイルは、依存関係の設定やその他のビルド時のプロジェクト設定を処理します。詳細については、Braze Unity サンプルアプリの[mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle) を参照してください。
+Unity プロジェクトに gradle の依存関係を追加するには、まず公開設定で [[Custom Main Gradle テンプレート]](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) を有効にします。これにより、プロジェクトで使用するテンプレートグラドルファイルが作成されます。gradle ファイルは、依存関係の設定やその他のビルド時のプロジェクト設定を処理します。詳細については、Braze Unity サンプルアプリの[mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle) を参照してください。
 
 次の依存関係が必要です。
 

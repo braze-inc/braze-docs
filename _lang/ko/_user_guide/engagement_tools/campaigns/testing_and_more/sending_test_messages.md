@@ -23,7 +23,7 @@ description: "이 참고 문서에서는 다양한 Braze 채널에서 테스트 
 
 ### 선택 사항: 콘텐츠 테스트 그룹 만들기
 
-테스트 사용자를 편리하게 구성하는 방법은 캠페인에서 테스트 메시지를 수신할 사용자 그룹을 포함하는 [콘텐츠 테스트 그룹을]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) 만드는 것입니다. 캠페인의 **테스트 대상자** 아래의 **콘텐츠 테스트 그룹 추가** 필드에 이 테스트 그룹을 추가하고 개별 테스트 사용자를 만들거나 추가하지 않고도 테스트를 시작할 수 있습니다.
+A convenient way to organize your test users is by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. 캠페인의 **테스트 대상자** 아래의 **콘텐츠 테스트 그룹 추가** 필드에 이 테스트 그룹을 추가하고 개별 테스트 사용자를 만들거나 추가하지 않고도 테스트를 시작할 수 있습니다.
 
 ## 2단계: 채널별 테스트 메시지 보내기
 
@@ -116,9 +116,7 @@ SMS 또는 MMS 메시지를 작성한 후 휴대폰으로 테스트 메시지를
 {% endtab %}
 {% tab 뉴스 피드 %}
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 테스트 뉴스피드 카드를 보내려면 테스트 세그먼트를 설정한 후 테스트 캠페인을 보내야 합니다.
 
@@ -128,7 +126,7 @@ SMS 또는 MMS 메시지를 작성한 후 휴대폰으로 테스트 메시지를
 
 1. **세그먼트** 페이지로 이동하여 [새 세그먼트를 만듭니다]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. **필터 추가** 아래의 드롭다운 메뉴를 클릭하고 목록 하단에서 테스트 필터를 찾습니다. <br><br>![필터 테스트]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. 테스트 필터를 사용하여 특정 이메일 주소 또는 외부 [사용자 ID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/)를 가진 사용자를 선택합니다.<br><br>![필터 옵션 테스트]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/).<br><br>![필터 옵션 테스트]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>이러한 필터에는 다음과 같은 옵션이 있습니다:
 - **동등함**: 제공한 이메일 또는 사용자 아이디와 정확히 일치하는 것을 찾습니다. 단일 이메일 또는 사용자 ID와 연결된 기기로만 테스트 캠페인을 보내려는 경우 이 옵션을 사용합니다.
 - **동등하지 않음**: 특정 이메일 또는 사용자 ID를 테스트 캠페인에서 제외합니다.
@@ -225,7 +223,7 @@ iOS 푸시 캠페인을 테스트하는 경우, iOS는 현재 열려 있는 앱�
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

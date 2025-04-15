@@ -80,7 +80,9 @@ Braze no genera perfiles para los usuarios hasta que han utilizado la aplicació
 ![Grupos de filtros segmentadores con el operador AND.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Los segmentos que ya utilizan el filtro **Pertenencia a segmento** no pueden incluirse ni anidarse en otros segmentos.
+Los segmentos que ya utilizan el filtro **Pertenencia a segmento** no pueden incluirse ni anidarse en otros segmentos. Esto evita un ciclo en el que el segmento A incluye al segmento B, que a su vez intenta incluir de nuevo al segmento A. Si eso ocurriera, el segmento seguiría haciendo referencia a sí mismo, haciendo imposible calcular quién pertenece realmente a él.
+
+Además, anidar segmentos de este modo añade complejidad y puede ralentizar las cosas. En su lugar, recrea el segmento que intentas incluir utilizando los mismos filtros.
 {% endalert %}
 
 #### Grupos de exclusión (opcional) {#exclusion}

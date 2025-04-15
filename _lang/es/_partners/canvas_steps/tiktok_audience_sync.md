@@ -42,7 +42,7 @@ Debes asegurarte de que los siguientes elementos están creados, completados y/o
 
 ### Paso 1: Conéctate a TikTok
 
-En el salpicadero de Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **TikTok**. En Sincronizar audiencia de **TikTok**, selecciona **Conectar TikTok**.
+En el salpicadero de Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **TikTok**. En Sincronizar audiencia de TikTok, selecciona **Conectar TikTok**.
 
 {% alert note %}
 Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará a **los socios tecnológicos** en **Integraciones**.

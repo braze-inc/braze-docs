@@ -90,7 +90,7 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 {% tabs %}
   {% tab 必要なもの %}
 
-これらは、AMP HTMLemail...AMP'edを作るものである！これらの要素はすべて、AMPメールの本文に必要です。
+これらによって AMP HTML を email...AMP 対応にします。これらの要素はすべて、AMPメールの本文に必要です。
 
 | コンポーネント | 説明 | 例 |
 |---------|--------------|---------|
@@ -165,7 +165,7 @@ AMP コンポーネントの完全なリストについては、[AMP のドキ�
 
 `<amp-accordion>` コンポーネントを使用してコンテンツのセクションを展開表示します。このコンポーネントを使用すると、折りたたみと展開が可能なコンテンツセクションを表示でき、オーディエンスはコンテンツの概要を一目で確認し、任意のセクションにジャンプできるようになります。 
 
-長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、あるセクションの数センテンスでさえスクロールが必要なモバイルユーザーには特に役立つ。
+長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数行を入力するだけでもスクロールが必要なモバイルユーザーにとって特に便利です。
 {% endtab %}
 {% tab 画像の多いメール %}
 
@@ -211,7 +211,7 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
     <tbody>
         <tr>
             <td class="no-split">開封数の合計</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} AMPメールの場合、これはHTML版とプレーンテキスト版の合計開封数となる。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} AMPメールの HTML およびプレーンテキストバージョンの開封数の合計。</td>
         </tr>
         <tr>
             <td class="no-split">クリック数の合計</td>
@@ -219,11 +219,11 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
         </tr>
         <tr>
             <td class="no-split">AMPが開く</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split">AMP クリック数</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMPクリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>

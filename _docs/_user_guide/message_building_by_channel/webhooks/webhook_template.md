@@ -18,10 +18,6 @@ description: "This reference article covers how to create and customize webhook 
 
 In the Braze dashboard, go to **Templates** > **Webhook Templates**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Engagement** > **Templates & Media** > **Webhook Templates**.
-{% endalert %}
-
 ![The "Webhook Templates" page with predesigned and saved webhook templates.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Step 2: Choose your template
@@ -34,7 +30,7 @@ For example, if you're using [LINE]({{site.baseurl}}/user_guide/message_building
 
 1. Give your webhook template a unique name.
 2. (Optional) Add a template description to explain how this template is intended to be used.
-3. Add [teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed to help find and filter for your template.
+3. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed to help find and filter for your template.
 
 ## Step 4: Build your template
 

@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 Existen tres respuestas de código de estado para este punto final: `202`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
@@ -86,7 +86,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -108,12 +108,12 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error                                | Solución de problemas                                                                                        |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `arbitrary-error`                    | Se ha producido un error arbitrario. Inténtalo de nuevo o ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
-| `catalog-not-found`                  | Comprueba que el nombre del catálogo es válido.                                                                  |
+| `arbitrary-error`                    | Se ha producido un error arbitrario. Vuelva a intentarlo o póngase en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found`                  | Compruebe que el nombre del catálogo es válido.                                                                  |
 | `company-size-limit-already-reached` | Se ha alcanzado el límite de tamaño de almacenamiento del catálogo.                                                             |
 | `request-includes-too-many-fields`   | Cada solicitud puede admitir hasta 50 campos nuevos.                                                          |
 | `catalog-exceeds-fields-limit`       | El catálogo no puede tener más de 500 campos.                                                              |

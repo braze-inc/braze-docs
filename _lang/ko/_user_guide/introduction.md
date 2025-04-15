@@ -27,22 +27,22 @@ user_menu_list:
 
 popular_topic_list:
   - name: 사용자 가져오기
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+    link: /docs/user_guide/data/user_data_collection/user_import/
   - name: 사용자 지정 이벤트
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+    link: /docs/user_guide/data/custom_data/custom_events/
   - name: 사용자 구독 관리
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   - name: Braze 커런츠
-    link: /docs/user_guide/data_and_analytics/braze_currents/ 
+    link: /docs/user_guide/data/braze_currents/
   - name: 커스텀 속성
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
   - name: 인앱 메시지 커스텀
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
   - name: Liquid
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   - name: API 호출하기
     link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   - name: 메시지 참여 이벤트
-    link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
+    link: /docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/
 
 ---

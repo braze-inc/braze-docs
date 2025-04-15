@@ -149,5 +149,5 @@ Appboy의 `sharedInstance`(표준 구현)에 액세스하기 전에 `didFinishLa
 
 ## 추가 리소스
 
-[전체 iOS 클래스 문서 모든 SDK 메서드에 대한 추가 지침은 [전체](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "iOS 클래스 문서에서") 확인할 수 있습니다.
+[전체 iOS 클래스 문서 모든 SDK 메서드에 대한 추가 지침은 전체](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "iOS 클래스 문서에서") 확인할 수 있습니다.
 

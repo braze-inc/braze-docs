@@ -125,6 +125,8 @@ table td {
 | **502 Bad Gateway**           | The endpoint received an invalid response from the upstream server.                                                                                   |
 | **503 Service Unavailable**   | The endpoint is currently unable to handle the request due to a temporary overload or maintenance.                                                    |
 | **504 Gateway Timeout**       | The endpoint didn't receive a timely response from the upstream server.                                                                               |
+| **529 Host Overloaded**       | The endpoint host is overloaded and could not respond. |
+| **598 Host Unhealthy**        | Braze simulated the response because the endpoint host temporarily is marked as unhealthy. See [Unhealthy host detection](#unhealthy-host-detection) to learn more. |
 | **599 Connection Error**      | Braze experienced a network connect timeout error while trying to establish a connection to the endpoint, meaning the endpoint may be unstable or down. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -134,3 +136,50 @@ Here are tips for troubleshooting common `5XX` errors:
 
 - Review the error message for specific details available in the **Message Activity Log**. For webhooks, go to the **Performance Over Time** section on the Braze home page and select the statistics for webhooks. From here, you can find the timestamp that indicates when the errors occurred.
 - Make sure you're not sending too many requests that overload the endpoint. You can send in batches or adjust the rate limit to check if this reduces any errors.
+
+## Unhealthy host detection
+
+Braze webhooks and Connected Content employ an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
+
+In general, if the number of **failures exceeds 3,000 in any one-minute moving time window** (per unique combination of host name and app group&#8212;**not** per endpoint path), Braze temporarily will halt requests to the target host for one minute, instead simulating responses with a `598` error code to indicate the poor health. After one minute, Braze will resume requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+
+The following error codes contribute to the unhealthy host detector failure count: `408`, `429`, `502`, `503`, `504`, `529`.
+
+For webhooks, Braze will automatically retry HTTP requests that were halted by the unhealthy host detector. This automatic retry uses exponential backoff and will retry only a few times before failing. For more information on webhook errors, refer to [Errors, retry logic, and timeouts]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
+
+For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
+
+## Automated emails and Message Activity Log entries
+
+### Setting up automated emails
+
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+
+- Name of the workspace
+- A link to the Canvas or campaign
+- Endpoint URL
+- Error code
+- Time the error was last observed
+- Links to the Message Activity Log and related documentation
+
+{% alert note %}
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+The endpoint errors are:
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+These emails are only sent once per day at the workspace level. If no users sign up for these emails, then all company administrators will be notified.
+
+To sign up to receive these emails, do the following:
+
+1. Go to **Settings** > **Admin Settings** > **Notification Preferences**.
+2. Select **Connected Content Errors** and **Webhook Errors** in the **Canvas & Campaigns** section.
+
+### Message Activity Log entries
+
+There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.

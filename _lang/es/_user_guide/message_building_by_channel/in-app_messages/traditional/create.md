@@ -30,8 +30,8 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encont
 {:start="2"}
 2\. Seleccione **Mensaje en la aplicación**. Tenga en cuenta que los mensajes in-app no están disponibles en las campañas multicanal.
 3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario.
-   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
+4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -52,7 +52,7 @@ Si todos los mensajes de su campaña van a ser similares o van a tener el mismo 
 No puedes tener múltiples variantes de mensajes in-app en un solo paso.
 {% endalert %}
 
-Puedes encontrar más información específica de Canvas en [mensajes dentro de la aplicación en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
+Puedes encontrar más información específica de Canvas en [mensajes dentro de la aplicación en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -186,27 +186,33 @@ La pestaña **Redactar** te permite editar todos los aspectos del contenido y el
 
 El contenido de la pestaña **Redactar** varía en función de las opciones de mensaje elegidas en el paso anterior, pero puede incluir cualquiera de las siguientes opciones:
 
-#### Idioma
+### Idioma
 
 Selecciona **Añadir idiomas** y selecciona los idiomas que desees de la lista proporcionada. Esto insertará [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) en tu mensaje. Le recomendamos que seleccione sus idiomas antes de escribir el contenido para que pueda rellenar el texto donde corresponda en el Líquido. Consulte nuestra [lista completa de idiomas disponibles][18].
 
-#### Imagen
+### Imagen
 
 Dependiendo del tipo de mensaje, puedes **subir una imagen**, **elegir una insignia** o utilizar **Font Awesome**. Para cargar una imagen, haga clic en **Añadir imagen** o proporcione una URL de imagen. Al hacer clic en **Añadir imagen** se abre la **Biblioteca multimedia**, donde puede seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos; asegúrate de comprobarlos antes de encargar o crear una imagen desde cero.
 
-#### Cabecera y cuerpo
+### Cabecera y cuerpo
 
 ¡Escribe lo que quieras! Incluya textos totalmente personalizados (a menudo con funciones HTML personalizadas) con opciones para incluir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) y otros tipos de personalización. Cuanto antes transmita su mensaje y consiga que su cliente haga clic, ¡mejor! Recomendamos encabezados y contenidos de mensaje claros y concisos.
 
 Algunos tipos de mensaje no necesitan cabeceras y, por tanto, no las solicitan.
 
-{% alert tip %}
-¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
+#### Consejos 
+
+##### Generar copia de IA
+
+¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
 ![Inicia el botón de redactor de IA, situado en el campo Mensaje del compositor de SMS.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
-{% endalert %}
 
-#### Texto del botón {#buttons}
+##### Crear mensajes de derecha a izquierda
+
+¿Necesitas ayuda para crear mensajes de derecha a izquierda en idiomas como el árabe y el hebreo? Consulta [Crear mensajes de derecha a]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) izquierda para conocer las mejores prácticas.
+
+### Texto del botón {#buttons}
 
 Cuando esté disponible para su tipo de mensaje, puede hacer que aparezcan hasta dos botones debajo del cuerpo del texto. Puede crear y editar el texto y el color de los botones personalizados. También puede añadir un enlace a las Condiciones del servicio en los formularios de captura de correo electrónico.
 
@@ -214,11 +220,11 @@ Cuando esté disponible para su tipo de mensaje, puede hacer que aparezcan hasta
 
 Si decide utilizar un solo botón, éste se ajustará automáticamente para ocupar el espacio disponible en la parte inferior de su mensaje en lugar de dejar espacio para un botón adicional.
 
-##### Elegir un botón principal
+#### Elegir un botón principal
 
 Si decide dar formato a estos botones con sus propios colores, le recomendamos que utilice el Botón 2 para obtener el resultado que prefiera. En otras palabras, si quiere que su usuario haga clic en un botón más que en otro, asegúrese de que está a la derecha. El botón derecho suele tener más posibilidades de que se haga clic en él, sobre todo si tiene un color que contraste o destaque del resto del mensaje. Esto solo se acentúa cuando el botón de la izquierda se funde más visualmente con el mensaje.
 
-#### Comportamiento al hacer clic {#button-actions}
+### Comportamiento al hacer clic {#button-actions}
 
 Cuando su cliente pulsa un botón en su mensaje in-app, dispone de las siguientes acciones. 
 
@@ -227,35 +233,35 @@ Cuando su cliente pulsa un botón en su mensaje in-app, dispone de las siguiente
 | Redirigir a URL de página web | Abrir una página web no nativa. |
 | [Vínculo profundo a la aplicación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Enlace profundo a una pantalla existente en su aplicación. |
 | Cerrar mensaje | Cierra el mensaje activo en ese momento. |
-| Registrar evento personalizado | Elija un [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) para activar. Puede utilizarse para mostrar otro mensaje dentro de la aplicación o activar mensajes adicionales. |
-| Registrar atributo personalizado | Elija un [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) para establecer para el usuario actual. |
-| Solicitar permiso push | Muestra el permiso push nativo. Lee más sobre [la preparación para las notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/), así como sobre [las mejores prácticas]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) para preparar a los usuarios para el push. |
+| Registrar evento personalizado | Elija un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) para activar. Puede utilizarse para mostrar otro mensaje dentro de la aplicación o activar mensajes adicionales. |
+| Registrar atributo personalizado | Elija un [atributo personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) para establecer para el usuario actual. |
+| Solicitar permiso push | Muestra el permiso push nativo. Lee más sobre [la preparación para las notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/), así como sobre [las mejores prácticas]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) para preparar a los usuarios para el push. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Nota: las opciones __Request Push Permission__, __Log Custom Event__ y __Log Custom Attribute__ requieren las siguientes versiones mínimas del SDK:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-#### Opciones de dispositivos iOS
+### Opciones de dispositivos iOS
 
 Si lo deseas, puedes restringir tu mensaje in-app para que sólo se envíe a dispositivos iOS. Para ello, haz clic en **Cambiar** y selecciona **Sólo enviar a dispositivos iOS**.
 
-#### Cierre del mensaje
+### Cierre del mensaje
 
 Elija entre las siguientes opciones:
  
 - **Descartar automáticamente:** Seleccione cuántos segundos permanecerá el mensaje en la pantalla.
 - **Espere a que el usuario pase el dedo o lo toque:** Requiere una opción de despido o cierre.
 
-#### Posición de deslizamiento hacia arriba
+### Posición de deslizamiento hacia arriba
 
 Esta configuración solo se aplica al tipo de mensaje Deslizamiento hacia arriba. Elige si quieres que el slideup aparezca **en la parte inferior de la pantalla** o **en la parte superior**.
 
-#### HTML y activos
+### HTML y activos
 
 Este ajuste sólo se aplica al tipo de mensaje Código personalizado. Copia y pega HTML en el espacio disponible y sube tus activos mediante un archivo ZIP.
 
-#### Marcador de posición de entrada de datos de la captura de correo electrónico
+### Marcador de posición de entrada de datos de la captura de correo electrónico
 
 Esta configuración sólo se aplica al tipo de mensaje del formulario de captura de correo electrónico. Introduzca la copia personalizada que aparecerá como texto de marcador de posición para el campo de entrada de correo electrónico. La opción predeterminada es "Introduzca su dirección de correo electrónico".
 
@@ -318,7 +324,7 @@ La entrega de mensajes en la aplicación se basa totalmente en los siguientes de
 
 Debes seleccionar una fecha y hora de inicio; sin embargo, la fecha de finalización es opcional. Una fecha de finalización impedirá que ese mensaje in-app específico aparezca en los dispositivos después de la fecha/hora especificada.
 
-Consulte nuestra documentación para desarrolladores sobre [la activación de eventos en el servidor]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) y la [entrega local de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Consulte nuestra documentación para desarrolladores sobre [la activación de eventos en el servidor]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) y la [entrega local de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Activación en línea o fuera de línea
 
@@ -375,7 +381,7 @@ Braze le permite realizar un seguimiento de la frecuencia con la que los usuario
 
 Si aún no lo ha hecho, complete las secciones restantes de su componente Canvas. Para más detalles sobre cómo construir el resto de su Canvas, implementar pruebas multivariantes y Selección Inteligente, y más, consulte el paso [Construya su Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) de nuestra documentación de Canvas.
 
-Para obtener información sobre las opciones de mensajería dentro de la aplicación específicas de Canvas, consulta [Mensajes dentro de la aplicación en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
+Para obtener información sobre las opciones de mensajería dentro de la aplicación específicas de Canvas, consulta [Mensajes dentro de la aplicación en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}

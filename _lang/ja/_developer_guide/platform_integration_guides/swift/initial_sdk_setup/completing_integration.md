@@ -90,5 +90,5 @@ AppDelegate.braze = braze;
 
 ## その他のリソース
 
-[SDKリファレンス・ドキュメントfull](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOSクラス・ドキュメントは")、各SDKシンボルに関する追加情報とガイダンスを提供する。
+[SDK リファレンスドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOS クラスの完全なドキュメント")には、各 SDK シンボルに関する追加情報とガイダンスが記載されています。
 

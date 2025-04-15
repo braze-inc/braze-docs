@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Resposta
 
-Existem três respostas de código de status para este endpoint: `202`, `400` e `404`.
+Há três respostas de código de status para esse endpoint: `202`, `400` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 

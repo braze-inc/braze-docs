@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Look up an existing dashboard user account Braze endpoint."
+description: "This article outlines details about the Look up an existing dashboard user account resource ID Braze endpoint."
 ---
 
 {% api %}
-# Look up an existing dashboard user account
+# Look up an existing dashboard user account by resource ID
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use this endpoint to look up an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) method. 
+> Use this endpoint to look up an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) method. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

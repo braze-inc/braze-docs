@@ -25,7 +25,7 @@ tool:
 1. Ve a **Mensajería** > **Campañas** y, a continuación, selecciona **Crear campaña**.
 2. Para campañas dirigidas a varios canales, selecciona **Multicanal**. Si no, selecciona **Notificación push**. Si aún no estás seguro, consulta **Decidir entre una campaña push normal o multicanal** más abajo.
 3. Ponle a tu campaña un nombre claro y significativo.
-4. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario. **Consejo:** Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
+4. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario. **Consejo:** Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Decidir entre una campaña push normal o multicanal %}
@@ -101,11 +101,13 @@ El contenido de la pestaña **Redactar** varía en función del tipo de notifica
 
 #### Canal o grupo de notificaciones (iOS y Android)
 
-Para obtener más información sobre las opciones de notificación específicas de cada plataforma, consulte [Opciones de notificación de iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) u [Opciones de notificación de Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+Para obtener más información sobre las opciones de notificación específicas de cada plataforma, consulte [Opciones de notificación de iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) u [Opciones de notificación de Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/).
 
 #### Idioma
 
 Añada copias en varios idiomas con el botón **Añadir idiomas**. Le recomendamos que seleccione sus idiomas antes de escribir el contenido para que pueda rellenar el texto donde corresponda en el Líquido. Para consultar nuestra lista completa de lenguas disponibles que puedes utilizar, consulta [Lenguas admitidas][18].
+
+Si añades texto en un idioma escrito de derecha a izquierda, ten en cuenta que el aspecto final de los mensajes escritos de derecha a izquierda depende en gran medida de cómo los rendericen los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Título y cuerpo
 
@@ -122,13 +124,13 @@ Empieza a escribir en el cuadro de mensaje y observa cómo aparece una vista pre
 Para que tu push sea personalizado y dirigido, puedes incluir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert important %}
-**No puedes** enviar un mensaje push de Android sin un título; sin embargo, puedes introducir un solo espacio en su lugar. Ten en cuenta que si tu mensaje sólo contiene un espacio, se enviará como una notificación push silenciosa. Para más información, consulta [Notificaciones push silenciosas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+**No puedes** enviar un mensaje push de Android sin un título; sin embargo, puedes introducir un solo espacio en su lugar. Ten en cuenta que si tu mensaje sólo contiene un espacio, se enviará como una notificación push silenciosa. Para más información, consulta [Notificaciones push silenciosas]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
+¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
 ![Botón de Lanzar el redactor de IA, situado en la pestaña Cuerpo del compositor de correo electrónico.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}

@@ -3,7 +3,7 @@ nav_title: Preview User Paths
 article_title: Preview User Paths
 page_order: 0.3
 alias: /preview_user_paths/
-description: "This reference article covers how to preview user paths in Canvas."
+description: "This page covers how you can preview user paths in Canvas."
 Tool:
   - Canvas
 ---
@@ -12,7 +12,7 @@ Tool:
 
 > Experience the Canvas journey you've created for your users. This includes previewing the timing and messages they will receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending your Canvas.
 
-## Start a test run
+## Creating a test run
 
 Follow these steps to preview your user journey:
 
@@ -57,12 +57,15 @@ Message and Delay steps show the time at which a user would progress or receive 
 
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they're not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
+Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-- If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
-- If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
-- At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
-- Events, API triggers, custom attributes, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas.
+Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change.
+
+### Consideration
+
+If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered and the test run will end. 
+
+At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
 ## Experiment Paths and Canvas variants
 
@@ -72,13 +75,13 @@ Test users will enter the preview even if they are not eligible in real life. If
 
 ## Test sends
 
-You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
+You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their attributes by default, but you can override these with the test user’s attributes.
 
-To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab.
+To send all test messages in a Canvas at once, regardless of the path, and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab.
 
 ## Responsiveness
 
-Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow, but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
+Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
 Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path.
 
@@ -86,21 +89,23 @@ Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/cre
 
 ## Connected Content
 
-Connected Content will be executed if it’s included in the Canvas. If your Canvas includes Connected Content, remove the Connected Content that is configured to alter user profiles or data that is referenced in other Canvases or campaigns. Or, you can opt to not preview the user journey.
+Connected Content will be executed if it’s included in the Canvas. This means if you test a Canvas that has Connected Content calls or Content Blocks that contain Connected Content, the Canvas may send the Connected Content calls, which would modify the data referenced in other campaigns or Canvases.
+
+When previewing user paths, consider removing the Connected Content that alters user profiles or data referenced in other Canvases or campaigns.
 
 ## Webhooks
 
-Webhooks will execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that are configured to alter user profiles or data that is referenced in other Canvases or campaigns.
+Webhooks will execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that alter user profiles or data referenced in other Canvases or campaigns.
 
 ## Use case
 
 In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
 
-![][1]{:style="max-width:70%"}
+![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.][1]{:style="max-width:70%"}
 
 Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
-![][2]
+![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

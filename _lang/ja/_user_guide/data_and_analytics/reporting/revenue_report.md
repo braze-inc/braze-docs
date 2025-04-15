@@ -66,12 +66,12 @@ tool: Reports
             <td class="no-split">{% multi_lang_include metrics.md metric='ユーザあたりの寿命値' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日次収益</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='平均日次収益' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='平均日割り売上' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">日々の購入</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">日割り購入数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='日割り購入数' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">ユーザーあたりの日割り収益</a></td>

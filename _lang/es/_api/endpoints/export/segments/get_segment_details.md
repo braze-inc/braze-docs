@@ -30,8 +30,8 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 | Parámetro    | Obligatoria | Tipo de datos | Descripción            |
 | ------------ | -------- | --------- | ---------------------- |
-| `segment_id` | Obligatoria | Cadena | Ver [Identificador API de segmento]({{site.baseurl}}/api/identifier_types/).<br><br> Puedes encontrar la dirección `segment_id` para un segmento determinado en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) de tu cuenta Braze o puedes utilizar el [punto final Exportar lista de segmentos]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `segment_id` | Obligatoria | Cadena | Ver [Identificador API de segmento]({{site.baseurl}}/api/identifier_types/).<br><br> La dirección `segment_id` para un segmento determinado se puede encontrar en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) dentro de su cuenta Braze o puede utilizar el [punto final Exportar lista de segmentos]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 {% raw %}
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "updated_at" : (string) the date last updated as ISO 8601 date,
       "name" : (string) the segment name,
       "description" : (string) a human-readable description of filters,
-      "text_description" : (string) the segment description, 
+      "text_description" : (string) the segment description,
       "tags" : (array) the tag names associated with the segment formatted as strings,
       "teams" : (array) the names of the Teams associated with the campaign
 }

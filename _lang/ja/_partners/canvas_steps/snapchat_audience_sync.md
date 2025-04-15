@@ -43,13 +43,13 @@ Braze Audience Sync to Snapchat はAudience Sync Pro 統合です。この統合
 
 ### ステップ1:Snapchatに接続
 
-Brazeのダッシュボードで、**パートナー統合** > **テクノロジーパートナー** に移動し、**Snapchat** を選択します。Snapchat Audience Sync で、**Connect Snapchat** を選択します。
+Brazeのダッシュボードで、**パートナー統合** > **テクノロジーパートナー** に移動し、**Snapchat** を選択します。Snapchat オーディエンス同期で、[**Snapchat を接続**] を選択します。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-![「概要」セクションと「スナップショットオーディエンス同期」セクションと「接続されたスナップショット」ボタンを含む、Braze のスナップショットテクノロジーページ。][1]{: style="max-width:80%;"}
+![Braze の Snapchat テクノロジーページ。「概要」セクション、「Snapchat Audience Sync」セクション、「接続済みの Snapchat」ボタンが表示されている。][1]{: style="max-width:80%;"}
 
 次に、Snapchat OAuth ページにリダイレクトされ、Braze に Audience Sync 統合に関連するアクセス許可を承認します。
 

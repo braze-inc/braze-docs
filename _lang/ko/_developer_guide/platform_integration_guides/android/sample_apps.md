@@ -16,7 +16,7 @@ description: "이 참조 문서에서는 Android 샘플 앱을 사용하는 방�
 자체 애플리케이션 내 동작과 샘플 애플리케이션 내 예상 동작 및 코드 경로를 비교하여 테스트하는 것은 발생할 수 있는 문제를 디버깅하는 훌륭한 방법입니다.
 
 ## Droidboy 테스트 애플리케이션 빌드
-[Android SDK 깃허브 리포지토리 내 테스트 [애플리케이션브레이즈](https://github.com/braze-inc/braze-android-sdk "안드로이드 깃허브 리포지토리의") 이름은 Droidboy입니다. 다음 지침에 따라 프로젝트와 함께 모든 기능을 갖춘 사본을 빌드합니다.
+Android SDK 깃허브 리포지토리 내 테스트 [애플리케이션브레이즈](https://github.com/braze-inc/braze-android-sdk "안드로이드 깃허브 리포지토리의") 이름은 Droidboy입니다. 다음 지침에 따라 프로젝트와 함께 모든 기능을 갖춘 사본을 빌드합니다.
 
 1. 새 [워크스페이스]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration)를 생성하고Braze API 식별자 키를 기록합니다.<br><br>
 2. `/droidboy/res/values/braze.xml` 내의 적절한 위치(각각 `com_braze_push_fcm_sender_id` 및 `com_braze_api_key`라는 문자열의 태그 사이)에 FCM 발신자 ID와 Braze API 식별자 키를 복사합니다.<br><br>

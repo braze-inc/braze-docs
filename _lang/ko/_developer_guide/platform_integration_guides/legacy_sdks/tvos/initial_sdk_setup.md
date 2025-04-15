@@ -33,7 +33,7 @@ tvOS [CocoaPods](http://cocoapods.org/)를 통해 SDK를 설치하면 대부분�
 $ sudo gem install cocoapods
 ```
 
-- `rake` 실행 파일을 덮어쓰라는 메시지가 표시되면 자세한 내용은 [시작하기 ( CocoaPods.org )의 [코코아팟](http://guides.cocoapods.org/using/getting-started.html "설치 안내를") 참조하세요.
+- `rake` 실행 파일을 덮어쓰라는 메시지가 표시되면 자세한 내용은 CocoaPods.org에서 [시작하기의 코코아팟](http://guides.cocoapods.org/using/getting-started.html "설치 안내를")(  ) 참조하세요.
 - CocoaPods와 관련된 문제가 있는 경우 CocoaPods 문제 [해결 가이드CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html "문제 해결 가이드를") 참조하세요.
 
 ### 2단계: Podfile 구성

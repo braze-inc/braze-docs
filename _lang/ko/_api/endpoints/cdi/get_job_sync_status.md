@@ -6,7 +6,7 @@ page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
-description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 > 이 엔드포인트를 사용하여 주어진 통합에 대한 과거 동기화 상태 목록을 반환합니다.
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한이 있는 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한으로 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -66,7 +66,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 `200` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 {% alert note %}
-총 동기화가 10개 이하인 경우 `Link` 헤더가 존재하지 않습니다. 커서가 없는 통화의 경우 `prev`가 표시되지 않습니다. 항목의 마지막 페이지를 보면 `next`가 표시되지 않습니다.
+총 동기화 횟수가 10개 이하인 경우 `Link` 헤더는 존재하지 않습니다. 커서가 없는 통화의 경우 `prev`가 표시되지 않습니다. 항목의 마지막 페이지를 보면 `next` 이 표시되지 않습니다.
 {% endalert %}
 
 ```
@@ -108,6 +108,6 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `400 Invalid integration ID` | `integration_id` 주소가 유효한지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는[심각한 오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% endapi %}

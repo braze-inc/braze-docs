@@ -54,15 +54,15 @@ popular_topic_list:
   - name: POST&#58; Track Users Endpoint
     link: /docs/api/endpoints/user_data/post_user_track/
   - name: User Import
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+    link: /docs/user_guide/data/user_data_collection/user_import/
   - name: Web SDK Setup
-    link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=web
   - name: Custom Events
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+    link: /docs/user_guide/data/custom_data/custom_events/
   - name: Custom Attributes
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
   - name: Braze Currents
-    link: /docs/user_guide/data_and_analytics/braze_currents
+    link: /docs/user_guide/data/braze_currents/
 
 helpful_resources_list:
   - name: Innovation Statement

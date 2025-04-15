@@ -10,7 +10,7 @@ description: "この記事では、「API トリガーキャンペーンのス�
 ---
 {% api %}
 # API トリガー・キャンペーンのスケジュール
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|必須|文字列| [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください|
 | `send_id` | オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |

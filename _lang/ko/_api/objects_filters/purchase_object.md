@@ -3,27 +3,28 @@ nav_title: "구매 객체"
 article_title: API 구매 개체
 page_order: 8
 page_type: reference
-description: "이 참조 문서에서는 구매 객체의 다양한 구성 요소, 올바르게 사용하는 방법 및 사용할 수 있는 예제에 대해 설명합니다."
+description: "이 참고 문서에서는 구매 개체의 다양한 구성 요소, 올바른 사용 방법 및 참고할 수 있는 예시를 설명합니다."
 
 ---
 
 # 구매 객체
 
-> 이 문서에서는 구매 객체의 다양한 구성 요소, 올바르게 사용하는 방법, 모범 사례 및 사용 예에 대해 설명합니다.
+> 이 문서에서는 구매 개체의 다양한 구성 요소, 올바른 사용 방법, 모범 사례 및 참고할 수 있는 예시를 설명합니다.
 
 ## 구매 객체란 무엇인가요?
 
-구매 객체는 구매가 이루어졌을 때 API를 통해 전달되는 객체입니다. 각 구매 객체는 구매 배열 내에 있으며, 각 객체는 특정 시간에 특정 사용자가 단일 구매한 항목입니다. 구매 객체에는 Braze의 백엔드가 사용자 지정, 데이터 수집 및 개인화를 위해 이 정보를 저장하고 사용할 수 있는 다양한 필드가 있습니다.
+구매 객체는 구매가 이루어졌을 때 API를 통해 전달되는 객체입니다. 각 구매 개체는 구매 배열 내에 위치하며, 각 개체는 특정 시간에 특정 사용자가 구매한 단일 구매입니다. 구매 개체에는 사용자 지정, 데이터 수집 및 개인화를 위해 Braze의 백엔드에서 이 정보를 저장하고 사용할 수 있는 다양한 필드가 있습니다.
 
 ### 개체 본문
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -47,20 +48,20 @@ description: "이 참조 문서에서는 구매 객체의 다양한 구성 요�
 
 ## 구매 제품_id
 
-purchase 객체 내에서 `product_id`는 구매에 대한 식별자(예: `Product Name` 또는 `Product Category`)입니다.
+구매 개체 내에서 `product_id` 는 구매 식별자(예: `Product Name` 또는 `Product Category`)입니다:
 
-- Braze를 이용하면 대시보드에 `product_id`를 최대 5,000개 저장할 수 있습니다.
-- `product_id`는 최대 255자까지 입력할 수 있습니다.
+- Braze는 대시보드에 최대 5,000개의 `product_id`초를 저장할 수 있습니다.
+- `product_id` 은 최대 255자까지 입력할 수 있습니다.
 
 ### 제품 ID 명명 규칙
 
-Braze에서는 구매 개체에 대한 몇 가지 일반적인 이름 지정 규칙을 제공합니다 `product_id`. `product_id`를 선택할 때 Braze는 `product_id`로 기록된 모든 항목을 이 항목을 그룹화하기 위해 SKU 대신 제품 이름 또는 제품 카테고리와 같은 단순한 이름을 사용할 것을 제안합니다.
+Braze에서는 구매 개체에 대한 몇 가지 일반적인 이름 지정 규칙을 제공합니다 `product_id`. `product_id` 을 선택할 경우, Braze는 모든 로깅된 항목을 이 `product_id` 으로 그룹화하기 위해 SKU 대신 제품 이름 또는 제품 카테고리와 같은 간단한 이름을 사용할 것을 제안합니다.
 
 이렇게 하면 세분화 및 트리거를 위해 제품을 쉽게 식별할 수 있습니다.
 
 ### 주문 수준에서 구매 기록
 
-제품 수준 대신 주문 수준에서 구매를 기록하려면 주문 이름 또는 주문 카테고리를 `product_id`로(예: `Online Order` 또는 `Completed Order`) 사용할 수 있습니다.
+제품 수준이 아닌 주문 수준에서 구매를 기록하려면 주문 이름 또는 주문 카테고리를 `product_id` (예: `Online Order` 또는 `Completed Order`)로 사용하면 됩니다.
 
 예를 들어 웹 SDK의 주문 수준에서 구매를 기록하려면 다음을 수행합니다.
 
@@ -89,7 +90,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 구매 속성 개체
 
-사용자 지정 이벤트 및 구매에는 이벤트 속성이 있을 수 있습니다. "properties" 값은 키가 속성 이름이고 값이 속성 값인 객체여야 합니다. 속성 이름은 255자 이하의 비어 있지 않은 문자열이어야 하며 선행 달러 기호가 없어야 합니다. 
+사용자 지정 이벤트 및 구매에는 이벤트 속성이 있을 수 있습니다. "속성" 값은 키가 속성 이름이고 값이 속성 값인 객체여야 합니다. 속성 이름은 비어 있지 않은 255자 이하의 문자열이어야 하며 선행 달러 기호가 없어야 합니다. 
 
 속성 값은 다음 데이터 유형 중 하나를 사용할 수 있습니다.
 
@@ -101,19 +102,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 문자열 | 255자 이하. |
 | 배열 | 배열에는 날짜/시간을 포함할 수 없습니다. |
 | 개체 | 오브젝트는 문자열로 수집됩니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-배열 또는 객체 값을 포함하는 이벤트 속성 객체는 최대 50KB의 이벤트 속성 페이로드를 가질 수 있습니다.
+배열 또는 개체 값을 포함하는 이벤트 속정정보 개체는 최대 50KB의 이벤트 속정정보 페이로드를 가질 수 있습니다.
 
 ### 구매 등록정보
 
-[구매 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties)은 Liquid를 사용하여 메시지를 트리거하고 개인화하는 데 사용할 수 있으며, 이러한 속성을 기반으로 세분화할 수도 있습니다.
+[구매 속성을]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) 사용하여 메시지를 트리거하고 Liquid를 사용하여 개인화할 수 있으며, 이러한 속성을 기반으로 세분화할 수도 있습니다.
 
 ### 구매 속성 이름 지정 규칙
 
-이 기능은 구매 단위가 아닌 **제품 단위**로 활성화된다는 점에 유의해야 합니다. 예를 들어, 고객이 많은 수의 개별 제품을 보유하고 있지만 각각의 속성이 동일하다면 세분화는 의미가 없어집니다.
+이 기능은 구매 단위가 아닌 **제품 단위로** 활성화된다는 점에 유의하세요. 예를 들어, 고객이 많은 수의 개별 제품을 보유하고 있지만 각각의 속성이 동일하다면 세분화는 의미가 없어집니다.
 
-이 경우 데이터 구조를 설정할 때 세분화된 제품 이름 대신 "그룹 수준"의 제품 이름을 사용하는 것이 좋습니다. 예를 들어 기차표 회사는 "거래 123" 또는 "거래 046"과 같은 특정 거래가 아닌 "편도 여행", "왕복 여행", "다구간 여행"에 대한 제품을 보유해야 합니다. 또는 예를 들어 "음식" 구매 이벤트의 경우 속성은 "케이크" 및 "샌드위치"로 설정하는 것이 가장 좋습니다.
+이 경우 데이터 구조를 설정할 때 세분화된 제품 이름 대신 '그룹 수준'의 제품 이름을 사용하는 것이 좋습니다. 예를 들어 기차표 회사는 '거래 123' 또는 '거래 046'과 같은 특정 거래가 아닌 '단거리 여행', '왕복 여행', '다구간 여행'에 대한 상품을 보유하고 있어야 합니다. 예를 들어 '음식' 구매 이벤트의 경우 속성을 '케이크'와 '샌드위치'로 설정하는 것이 가장 좋습니다.
 
 ### 구매 개체 예시
 ```html
@@ -168,7 +169,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 제공된 예를 사용하면 누군가 색상, 모노그램, 결제 기간, 사이즈, 브랜드 속성을 가진 배낭을 구매했음을 알 수 있습니다. 그런 다음 [구매 이벤트 속성을][2] 사용하여 이러한 속성을 가진 세그먼트를 만들거나 Liquid를 사용하여 채널을 통해 사용자 지정 메시지를 보낼 수 있습니다. 예를 들어, "안녕하세요 **Ann F.**, **빨간색 중형 백팩을** **$40.00에** 구매해 주셔서 감사합니다! **백팩락커에서** 쇼핑해 주셔서 감사합니다!"
 
-세분화할 속성을 저장, 보관 및 추적하려면 커스텀 속성으로 설정해야 합니다. [세그먼트 확장을]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) 사용하면 해당 사용자 프로필의 수명 기간 동안 저장된 사용자 지정 이벤트 또는 구매 행동을 기반으로 사용자를 타겟팅할 수 있습니다.
+세그먼트할 속성을 저장, 저장 및 추적하려면 해당 속성을 사용자 지정 속성으로 설정해야 합니다. [세그먼트 확장을]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) 사용하면 해당 사용자 프로필의 수명 기간 동안 저장된 사용자 지정 이벤트 또는 구매 행동을 기반으로 사용자를 타겟팅할 수 있습니다.
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 통화 코드"

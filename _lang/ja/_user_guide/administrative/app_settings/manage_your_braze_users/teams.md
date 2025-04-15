@@ -15,6 +15,10 @@ description: "このリファレンス記事では、ダッシュボードでの
 
 Braze の契約によっては、チームを使用できない場合があります。この機能にアクセスしたい場合は、Braze アカウントマネージャーに、またはコンサルティングを[お問い合わせ](mailto:success@braze.com)ください。
 
+## チームは権限セットや役割とどう違うのか？
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## チームの作成
 
 **設定」**＞「**社内チーム**」と進み、<i class="fas fa-plus"></i> 「**チームを追加**」を選択する。
@@ -77,7 +81,7 @@ Braze 管理者と、会社レベルの権限「会社の設定を管理可能�
 Braze の Michelle という名前のマーケターについて、次の 2 つのシナリオを考えてみます。Michelle は「Development」というチームのメンバーです。彼女は、Development チームのチームレベルのすべての権限にアクセスできます。
 
 {% tabs %}
-{% tab シナリオ1：チーム権限のみ %}
+{% tab シナリオ1 - チーム権限のみ %}
 
 このシナリオでの Michelle は、ワークスペースレベルの権限を持たない限定ユーザーです。彼女の権限は次のようになります。
 
@@ -88,7 +92,7 @@ Braze の Michelle という名前のマーケターについて、次の 2 つ�
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab シナリオ2：チーム権限とワークスペース権限 %}
+{% tab シナリオ2 - チーム権限とワークスペース権限 %}
 
 このシナリオでの Michelle は引き続き Development チームのメンバーですが、さらにワークスペースレベルの権限も持っています。
 
@@ -130,10 +134,6 @@ Michelle にはワークスペースレベルの権限 [キャンペーン、キ
 ![Brazeのオブジェクトに関連付けられたチームをアーカイブする][86]{: style="max-width:70%;"}
 
 Braze 管理者は、アーカイブされたチームを選択し、[**アーカイブ解除**] を選択して、チームのアーカイブを解除できます。
-
-## チームは権限セットや役割とどう違うのか？
-
-チーム、権限セット、およびロールの違いの内訳については、[Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)を参照してください。
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

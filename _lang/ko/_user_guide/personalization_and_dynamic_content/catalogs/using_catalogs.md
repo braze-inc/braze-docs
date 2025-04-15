@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 그러면 다음과 같이 반환됩니다:
 
-> 지금 테일즈, 테슬라그라드, 아카라투스로 구성된 궁극의 트리오를 만나보세요!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 [선택 사항]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)을 확인하여 데이터 그룹을 생성하여 더욱 개인화된 메시징을 만들어 보세요!
@@ -72,24 +72,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 카탈로그 항목을 사용하여 조건문을 만들 수 있습니다. 예를 들어 캠페인에서 특정 아이템이 선택되면 특정 메시지를 표시하도록 트리거할 수 있습니다.
 
-이를 위해 다음과 같은 형식의 Liquid `if` 문을 사용합니다:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-`if` 문을 사용하기 전에 카탈로그 목록을 선언해야 합니다. 위의 예에서 `Test-list` 은 카탈로그 목록입니다.
-
-#### 사용 사례: Liquid `if` 스니펫
-
-이 시나리오에서는 커스텀 속성 `venue_name`이 10자를 초과하거나 10자 미만인 경우 다른 메시지가 표시됩니다. `venue_name` 이 `blank` 인 경우 아무것도 표시되지 않습니다.
+To do this, you'll use a Liquid `if` statement, such as in this example:
 
 {% raw %}
 ```liquid
@@ -103,6 +86,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. `venue_name` 이 `blank` 인 경우 아무것도 표시되지 않습니다. 
+
+Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
 
 ### 이미지 사용 {#using-images}
 
@@ -138,6 +125,10 @@ Liquid가 렌더링되었을 때의 모습은 다음과 같습니다.
     ]
 }
 ```
+
+{% alert note %}
+JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
+{% endalert %}
 
 Liquid 템플릿을 사용하면 위시리스트 ID를 동적으로 가져와서 메시지에서 사용할 수 있습니다. 이렇게 하려면 [사용자 지정 속성에][10] 변수를 지정한 다음 **개인화 추가** 모달을 사용하여 배열에서 특정 항목을 가져옵니다.
 
@@ -177,11 +168,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 
 [연결된 콘텐츠와]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) 마찬가지로, 카탈로그 항목의 리퀴드 콘텐츠를 렌더링하려면 리퀴드 태그에 `:rerender` 플래그를 사용해야 합니다. `:rerender` 플래그는 한 단계 깊이에 불과하므로 중첩된 Liquid 태그 호출에는 적용되지 않는다는 점에 유의하세요.
 
-{% alert important %}
-Liquid를 포함하는 카탈로그 항목 템플릿은 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
-{% endalert %}
-
-카탈로그 항목에 사용자 프로필 필드(Liquid 개인화 태그 내)가 포함된 경우, 이러한 값을 메시지 앞부분과 템플릿 전에 Liquid에서 정의해야 Liquid를 올바르게 렌더링할 수 있습니다. `:rerender` 플래그가 제공되지 않으면 원시 리퀴드 콘텐츠를 렌더링합니다.
+카탈로그 항목에 사용자 프로필 필드(Liquid 개인화 태그 내)가 포함된 경우, 이러한 값을 메시지 앞부분과 템플릿 지정 전에 Liquid에서 정의해야 Liquid를 올바르게 렌더링할 수 있습니다. `:rerender` 플래그가 제공되지 않으면 원시 리퀴드 콘텐츠를 렌더링합니다.
 
 예를 들어 "메시지"라는 이름의 카탈로그에 이 Liquid가 있는 항목이 있는 경우입니다.
 

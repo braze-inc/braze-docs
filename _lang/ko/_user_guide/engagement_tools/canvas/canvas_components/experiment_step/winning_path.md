@@ -8,7 +8,7 @@ tool: Canvas
 
 # 실험 경로에서의 위닝 경로
 
-> 위닝 경로는 캠페인의 [위닝 배리언트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations)와 유사하며, A/B 테스트를 자동화할 수 있습니다.
+> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) in campaigns, and lets you automate your A/B tests.
 
 실험 경로 단계에서 위닝 경로가 켜져 있으면 지정된 기간이 지나면 이후의 모든 사용자가 전환율이 가장 높은 경로로 전송됩니다.
 

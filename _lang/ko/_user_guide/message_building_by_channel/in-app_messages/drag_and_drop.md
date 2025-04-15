@@ -22,5 +22,29 @@ guide_menu_list:
 - name: 전화번호 캡처
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/
   image: /assets/img/braze_icons/phone-02.svg
+- name: 이메일 캡처
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture/
+  image: /assets/img/braze_icons/mail-01.svg
+- name: 이메일 가입 할인
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_discount/
+  image: /assets/img/braze_icons/sale-03.svg 
+- name: 이메일 가입과 특별 제안
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_offer/
+  image: /assets/img/braze_icons/shopping-bag-01.svg
+- name: 이메일 가입 배경 이미지와 함께
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_image/
+  image: /assets/img/braze_icons/image-04.svg
+- name: 이메일 가입 확인 페이지
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_confirmation_page/
+  image: /assets/img/braze_icons/message-check-square.svg
+- name: 온보딩 흐름
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding/
+  image: /assets/img/braze_icons/list.svg
+- name: 제품 발표
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/product_announcement/
+  image: /assets/img/braze_icons/announcement-02.svg
+- name: 계절 프로모션
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/seasonal_promo/
+  image: /assets/img/braze_icons/snowflake-01.svg
 ---
 <br><br>

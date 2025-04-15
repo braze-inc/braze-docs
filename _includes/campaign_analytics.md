@@ -5,12 +5,12 @@ Once you've launched your campaign, you can return to the details page for that 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
   {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards
-  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by in-app message
-  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push
-  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS
-  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by WhatsApp
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Content Cards
+  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by in-app message
+  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Push
+  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS
+  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by WhatsApp
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Webhook{% endif %}.
 {% endalert %}
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
@@ -151,11 +151,15 @@ If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remov
 
 #### Heatmaps
 
-Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Click **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can click the hyperlink in the variant name to view the heatmap.
+Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Select **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can select the hyperlink in the variant name to view the heatmap.
 
-In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, click the download button.
+In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, select the download button.
 
 ![Example of the Preview and Heatmap page that includes an email campaign, and a panel with link alias examples with their total clicks.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### Images
+
+We suggest enabling CORS for your image URLs to help prevent images from breaking in heatmap previews and exports.
 
 {% endif %}
 
@@ -260,7 +264,7 @@ Here are some key email-specific metrics that you won't see in other channels. T
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Unique Opens</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. This number should be between 10–20%. Anything greater than 20% is exceptional!
+                {% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. This number should be between 30–40%. Anything greater than 40% is exceptional!
             </td>
         </tr>
         <tr>
@@ -301,8 +305,20 @@ Here are some key email-specific metrics that you won't see in other channels. T
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft Bounce</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Deferral</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Deferrals
+
+Deferred or deferral is when an email was not immediately delivered, but Braze will retry the email for up to 72 hours after this temporary delivery failure to maximize the chances of successful delivery before attempts for that specific campaign are stopped. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, or DNS errors.
+
+_Deferrals_ differ from _Soft Bounces_. If no email was successfully delivered during this retry period, Braze will send one soft bounce event per attempted campaign sent. Before February 25, 2025, these retries were counted as multiple soft bounces for 1 campaign send.
+
+Note that _Deferrals_ are currently only available using Currents or Braze Snowflake features (such as Query Builder, SQL Segment, Snowflake Data Sharing). If you’d like to include this in campaign or Canvas analytics, please [submit product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
@@ -366,7 +382,11 @@ Here are some key in-app message metrics you may see in your analytics. To see t
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Conversion Rate</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Close Message</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -406,25 +426,37 @@ Here is a breakdown of some key metrics you may see while reviewing your message
     </tbody>
 </table>
 
+> Delivery of notifications is a “best effort” by Apple Push Notification services (APNs). It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
+
+##### Tracking unsubscribes
+
 Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
 
-{% alert tip %}
+##### Understanding opens
+
 Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
-{% endalert %}
 
-> Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
+##### Why push sends can exceed unique recipients
 
-#### Bounced push notifications {#bounced-push}
+The number of _Sends_ may exceed the number of _Unique Recipients_ due to the following reasons:
 
-##### Apple push notification service
+- **Re-eligibility is on:** When re-eligibility is enabled in your campaign or Canvas settings, users who meet the segment and delivery criteria can receive the same push notification multiple times. This results in a higher number of total sends.
+- **Users have multiple devices:** If re-eligibility is not enabled, the difference may be explained by users having multiple devices associated with their profile. For instance, a user could have both a smartphone and tablet, and the push notification is being sent to all registered devices. Each delivery counts as a send, but only one unique recipient is recorded.
+- **Users are assigned to multiple apps:** If users are associated with more than one app (such as when testing a new app), they may receive the same push notification on each app. This contributes to a higher number of sends.
 
-Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (such as at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
+##### Why bounces occur {#bounced-push}
+
+{% tabs %}
+{% tab Apple Push Notification service %}
+
+Bounces occur in Apple Push Notification services (APNs) when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (such as at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
 If a user disables push within their device settings on subsequent app open the SDK will detect that push has been disabled and notify Braze. At this point we will update the push enabled state to be disabled. When a disabled user receives a push campaign before having a new session, the campaign would successfully send and appear as delivered. The push will not bounce for this user. Following a subsequent session, when you attempt to send a push to the user Braze is already aware of whether we have a foreground token as such no notification is sent.
 
 Push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
 
-##### Firebase Cloud Messaging
+{% endtab %}
+{% tab Firebase Cloud Messaging %}
 
 Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
@@ -434,6 +466,10 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 | Backed up application | When an application is backed up, its registration ID could become invalid before the application is restored. In this case, FCM will no longer store the application's registration ID and the application will no longer receive messages. As such, registration IDs should **not** be saved when an application is backed up. |
 | Updated application | When an application is updated, the previous version's registration ID may no longer work. As such, an updated application should replace its existing registration ID. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 
 {% elsif include.channel == "SMS" %}
 
@@ -636,13 +672,13 @@ Inbound messages are truncated past 1,600 characters.
 
 ## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 

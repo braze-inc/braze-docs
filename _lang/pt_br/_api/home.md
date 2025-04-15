@@ -372,11 +372,11 @@ glossaries:
     description: Listar um item de catálogo e seus detalhes.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Edite vários itens em seu catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Crie vários itens em seu catálogo.
     tags:
       - Catalogs
@@ -400,7 +400,7 @@ glossaries:
     description: Editar um item em um catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Retorna vários itens de catálogo e seu conteúdo.
     tags:
       - Catalogs
@@ -440,11 +440,11 @@ glossaries:
     description: Procure uma conta de usuário existente no dashboard especificando seu e-mail.
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
     description: "Atualize uma conta de usuário do dashboard existente especificando e-mail, nomes e sobrenomes, permissões (para definir permissões no nível da empresa, do espaço de trabalho e da equipe)."
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>"
     description: Exclua permanentemente um usuário do dashboard existente.
     tags:
       - SCIM

@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | `event` | Obrigatória | String | O nome do evento personalizado para o qual retornar a análise de dados. |
 | `length` | Obrigatória | Inteiro | Número máximo de unidades (dias ou horas) antes de `ending_at` para incluir na série retornada. Deve estar entre 1 e 100 (inclusive). |
 | `unit` | Opcional | String | Unidade de tempo entre os pontos de dados. Pode ser `day` ou `hour`, o padrão é `day`.  |
-| `ending_at` | Opcional | Datetime <br>[(](https://en.wikipedia.org/wiki/ISO_8601) string[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Data em que a série de dados deve terminar. O padrão é a hora da solicitação. |
+| `ending_at` | Opcional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a série de dados deve terminar. O padrão é a hora da solicitação. |
 | `app_id` | Opcional | String | Identificador da API do aplicativo recuperado da página [Chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) para limitar a análise de dados a um aplicativo específico. |
 | `segment_id` | Opcional | String | Consulte [Identificador da API de segmento]({{site.baseurl}}/api/identifier_types/). ID do segmento que indica o segmento com análise de dados ativada para o qual a análise de eventos deve ser retornada. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -69,7 +69,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Para obter os códigos de status e as mensagens de erro associadas que serão retornadas se sua solicitação encontrar um erro fatal, consulte [Erros e respostas fatais]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
-Para obter ajuda com exportações de CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

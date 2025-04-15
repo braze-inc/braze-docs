@@ -25,7 +25,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
+{% multi_lang_include rate_limits.md endpoint='elemento de catálogo síncrono' %}
 
 ## Parámetros de la ruta
 
@@ -33,7 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 |---|---|---|---|
 | `catalog_name` | Obligatoria | Cadena | Nombre del catálogo. |
 | `item_id` | Obligatoria | Cadena | El ID del elemento del catálogo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Parámetros de la solicitud
 
@@ -100,8 +100,8 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 
 | Error | Solución de problemas |
 | --- | --- |
-| `catalog-not-found` | Comprueba que el nombre del catálogo es válido. |
-| `item-not-found` | Comprueba que el artículo está en el catálogo. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `catalog-not-found` | Compruebe que el nombre del catálogo es válido. |
+| `item-not-found` | Compruebe que el artículo está en el catálogo. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

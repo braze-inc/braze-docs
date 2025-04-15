@@ -1,24 +1,24 @@
 ---
-nav_title: "POST : Envoyez des campagnes via une réception/distribution déclenchée par l'API"
-article_title: "POST : Envoyez des campagnes via une réception/distribution déclenchée par l'API"
+nav_title: "POST : Envoyez des campagnes à l'aide de la réception/distribution déclenchée par l'API"
+article_title: "POST : Envoyez des campagnes à l'aide de la réception/distribution déclenchée par l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des campagnes via une livraison déclenchée par API."
+description: "Cet article présente les détails du point de terminaison Braze d'envoi de campagnes à l'aide d'une réception/distribution déclenchée par API."
 
 ---
 {% api %}
-# Envoyer des messages de campagne via une livraison déclenchée par API
+# Envoyez des messages de campagne à l'aide de la réception/distribution déclenchée par l'API.
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/send
 {% endapimethod %}
 
-> Utilisez cet endpoint pour envoyer des messages immédiats et ponctuels à des utilisateurs désignés via une réception/distribution déclenchée par l'API.
+> Utilisez cet endpoint pour envoyer des messages immédiats et ponctuels à des utilisateurs désignés en utilisant la réception/distribution déclenchée par l'API.
 
-La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
+La réception/distribution déclenchée par l'API vous permet d'héberger le contenu des messages dans le tableau de bord de Braze tout en dictant quand un message est envoyé, et à qui, à l'aide de votre API.
 
-Si vous souhaitez cibler un segment, un enregistrement de votre requête sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Pour envoyer des messages avec cet endpoint, vous devez disposer d'un [ID de campagne](https://www.braze.com/docs/api/identifier_types/) créé lorsque vous créez une [campagne déclenchée par l'API]({{site.baseurl}}/api/api_campaigns/).
+Si vous ciblez un segmentation, un enregistrement de votre demande sera stocké dans la [console de développement.](https://dashboard.braze.com/app_settings/developer_console/activitylog/) Pour envoyer des messages avec cet endpoint, vous devez disposer d'un [ID de campagne](https://www.braze.com/docs/api/identifier_types/) créé lorsque vous créez une [campagne déclenchée par l'API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`attachments`| Facultatif | Tableau | Si `broadcast` est défini comme vrai, la liste `attachments` ne peut pas être incluse. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- Le tableau des destinataires peut contenir jusqu’à 50 objets, avec chaque objet contenant une seule chaîne de caractères `external_user_id` et objet `trigger_properties`.
+- Le tableau d'objets peut contenir jusqu'à 50 objets, chaque objet contenant une chaîne de caractères `external_user_id` et un objet `trigger_properties`.
 - Quand `send_to_existing_only` est défini sur `true`, Braze envoie uniquement le message aux utilisateurs existants. Cependant, cet indicateur ne peut pas être utilisé avec les alias utilisateur.
 - Lorsque `send_to_existing_only` est `false`, un attribut doit être inclus. Braze créera un utilisateur avec le site `id` et les attributs avant d'envoyer le message.
 
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 La spécification d'un destinataire par son adresse e-mail est actuellement en accès anticipé. Contactez votre gestionnaire de satisfaction client si vous souhaitez participer à cet accès anticipé.
 {% endalert %}
 
-Le statut du groupe d'abonnement d'un utilisateur peut être mis à jour en incluant un paramètre `subscription_groups` dans l’objet `attributes`. Pour plus de détails, consultez [Objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+Le statut du groupe d'abonnement d'un utilisateur peut être mis à jour en incluant un paramètre `subscription_groups` dans l'objet `attributes`. Pour plus de détails, consultez [Objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Exemple de demande
 ```
@@ -179,10 +179,10 @@ Si votre demande rencontre une erreur fatale, reportez-vous à la section [Erreu
 
 ## Objet d'attributs pour les campagnes
 
-Braze dispose d'un objet d'envoi de messages appelé `attributes` qui vous permettra d'ajouter, de créer ou de mettre à jour les attributs et les valeurs d'un utilisateur avant de lui envoyer une campagne déclenchée par l'API. En utilisant l’endpoint `campaign/trigger/send` car cet appel d'API traitera l'objet Attributs d’utilisateur avant de traiter et d'envoyer la campagne. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/).
+Braze dispose d'un objet d'envoi de messages appelé `attributes` qui vous permettra d'ajouter, de créer ou de mettre à jour les attributs et les valeurs d'un utilisateur avant de lui envoyer une campagne déclenchée par l'API. En utilisant l’endpoint `campaign/trigger/send` car cet appel d'API traitera l'objet Attributs d’utilisateur avant de traiter et d'envoyer la campagne. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/). Toutefois, par défaut, les groupes d'abonnement ne peuvent pas être mis à jour de cette manière.
 
 {% alert important %}
-Vous recherchez la version Canvas de cet endpoint ? Consultez la rubrique [Envoi de messages canvas via la réception/distribution déclenchée par l'API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
+Vous recherchez la version Canvas de cet endpoint ? Consultez la rubrique [Envoi de messages canvas à l'aide de la réception/distribution déclenchée par l'API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
 {% endalert %}
 
 {% endapi %}

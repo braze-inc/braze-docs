@@ -91,10 +91,10 @@ guide_featured_list:
 
 ### GIF 및 비디오
 
-Braze는 현재 웹(포함), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/), iOS(포함) 인앱 메시징에 대해 GIF를 지원하며, 원하는 플랫폼 통합 중에 활성화된 경우에만 지원됩니다. 인앱 메시지의 비디오에 대한 자세한 내용은 [맞춤 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)를 참조하세요.
+Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. 인앱 메시지의 비디오에 대한 자세한 내용은 [맞춤 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)를 참조하세요.
 
 ## 추가 고려 사항
 
-Braze 인앱 메시지는 글로벌 및 개별 크리에이티브 사양을 모두 가지고 있습니다. 자세한 정보는 앱 내 메시지 완전 맞춤 설정에 대해 [맞춤 설정]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) 페이지로 이동하십시오.
+Braze 인앱 메시지는 글로벌 및 개별 크리에이티브 사양을 모두 가지고 있습니다. For more information about fully customizing in-app messages, go to our [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/) page.
 
 <br>

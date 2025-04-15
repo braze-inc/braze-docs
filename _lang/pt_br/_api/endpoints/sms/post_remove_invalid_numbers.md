@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Remover números de
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-> Use esse endpoint para remover números de telefone "inválidos" da nossa lista de inválidos. 
+> Use esse endpoint para remover números de telefone "inválidos" da nossa lista de inválidos.
 
 Isso pode ser usado para revalidar números de telefone depois de terem sido marcados como inválidos.
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | ----------|-----------| ---------|------ |
 | `phone_number` | Obrigatória | Matriz de strings no formato e.164  | Uma matriz de até 50 números telefônicos para modificar. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 

@@ -62,7 +62,7 @@ guide_featured_list:
 Brazeは現在、ShopifyのLiquidの100%をサポートしておらず、私たちのドキュメントで概要を説明しようとした特定の部分のみをサポートしています。すべてのメッセージを送信する前にLiquidを使用してテストすることを強くお勧めします。これにより、エラーのリスクやサポートされていないLiquidの使用を減らすことができます。
 {% endalert %}
 
-### 液体5支持体
+### Liquid 5のサポート
 
 Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートします。Liquid の実装では、構文パーソナライゼーションタグのタイプと空白コントロールがサポートされます。タグの詳細については、[構文タグs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags)を参照してください。
 
@@ -84,9 +84,9 @@ Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートしま�
 
 ![]({% image_buster /assets/img/liquid_color_code.png %})
 
-#### 予測液
+#### 入力予測 Liquid
 
-また、パーソナライズされたメッセージを構築する際に、カスタム属性、属性名などの予測リキッドを活用することもできます。
+また、パーソナライズされたメッセージを作成する際に、カスタム属性や属性名などに入力予測 Liquid を利用することもできます。
 
 ![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 

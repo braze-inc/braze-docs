@@ -44,7 +44,9 @@ if (site_language && (site_language != 'en')){
   function redirecturl(ky,uh,redirect) {
     var val_urls = validurls[ky];
     var hashes = val_urls.split('#');
-    var returl = hashes[0] + redirect;
+    var redirect_params = ((hashes[0].indexOf('?') > -1 ) ? '&' : '?') + redirect;
+    var returl = hashes[0] + redirect_params;
+
     if (hashes[1]) {
       returl += '#' + hashes[1];
     }
@@ -76,11 +78,13 @@ if (site_language && (site_language != 'en')){
   var urlhash = window.location.hash;
   var urlsearch = window.location.search;
 
-  if (window.location.href.indexOf('redirected=true') === -1) {
-    var redirected  = '?redirected=true';
-    if (urlsearch.indexOf('?') > -1 ) {
-      redirected = urlsearch + '&redirected=true';
-    }
+  var redirected_count = parseInt(query_params.get('redirected'),10) || 0;
+
+  if (redirected_count < max_redirects) {
+    redirected_count++
+    query_params.set('redirected',redirected_count );
+    redirected = query_params.toString();
+
     if (validurls[urlpath.toLowerCase() + '/' + urlhash] ) {
       return location.href = redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
     }
@@ -93,8 +97,8 @@ if (site_language && (site_language != 'en')){
     else if (validurls[urlpath.toLowerCase()] ) {
       return location.href = redirecturl(urlpath.toLowerCase(),urlhash,redirected);
     }
-    else if (urlpath.match(/\/docs\/[a-zA-Z]{2}\//)){
-      return location.href = urlpath.toLowerCase().replace(/\/docs\/[a-zA-Z]{2}\//,"/docs/");
+    else if (urlpath.match(/\/docs\/(\w{2}|\w{2}\-\w{2})\//)){
+      return location.href = urlpath.toLowerCase().replace(/\/docs\/(\w{2}|\w{2}\-\w{2})\//,"/docs/");
     }
   }
 

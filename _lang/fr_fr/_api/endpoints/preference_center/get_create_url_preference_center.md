@@ -62,5 +62,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-Ce point de terminaison génère uniquement des URL pour le nouveau centre de préférences (comme les centres de préférences créés via l'API ou l'éditeur par glisser-déposer).
+Cet endpoint génère uniquement des URL pour le nouveau centre de préférences (comme les centres de préférences créés à l'aide de notre API ou de l'éditeur par glisser-déposer).
 {% endalert %}

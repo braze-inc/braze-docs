@@ -63,11 +63,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Obrigatória|String| Ver [identificador de campanha]({{site.baseurl}}/api/identifier_types/)|
 | `send_id` | Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Opcional | Vetor de objetos de destinatários | Consulte [objeto de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `audience` | Opcional | Objeto do público conectado | Veja o [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como true ao enviar uma mensagem para um segmento inteiro que uma campanha ou Canva direciona. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois a definição não intencional desse sinalizador pode fazer com que sua mensagem seja enviada a um público maior do que o esperado. |
+| `recipients` | Opcional | Matriz de objetos de destinatários | Veja [objetos de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 | `trigger_properties` | Opcional | Objeto | Pares de valores-chave de personalização para todos os usuários nesse envio. Consulte [propriedades de gatilho]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
-| `schedule` | Obrigatória | Objeto de programação | Consulte [objeto de programação]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+| `schedule` | Obrigatória | Objeto de agendamento | Veja [objeto de agendamento]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação

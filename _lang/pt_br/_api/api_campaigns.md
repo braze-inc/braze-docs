@@ -26,7 +26,7 @@ Como as campanhas de API são normalmente transacionais, todos os usuários são
 
 ## Criar uma nova campanha
 
-Acesse **Envio de mensagens** > **Campanhas** e clique em **Criar campanha** e, em seguida, selecione **Campanhas de API**. Agora, você pode prosseguir com a configuração de sua campanha de API.
+Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha** e, em seguida, selecione **Campanhas de API**. Agora, você pode prosseguir com a configuração de sua campanha de API.
 
 Uma [campanha disparada por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) é diferente de uma campanha por API.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "豊富な通知の作成"
+nav_title: "リッチプッシュ通知の作成"
 article_title: "Androidのリッチプッシュ通知の作成"
 page_order: 3
 page_layout: tutorial
@@ -18,7 +18,7 @@ tool:
 
 ## 前提条件
 
-Android のリッチプッシュ通知を作成する前に、次の詳細に注意してください。
+Android のリッチプッシュ通知を作成する前に、次の点に注意してください。
 
 - クイックプッシュキャンペーンを作成する際、Androidのリッチ通知は利用できない。
 - Androidの拡張通知画像は2:1の比率でなければならないが、サイズ制限はない。
@@ -51,13 +51,13 @@ Android用のプッシュ通知を作成するための[キャンペーンを作
 
 サポートしている画像の詳細については、「[画像の仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)」を参照してください。
 
-![ユーザーがiOS のプッシュ通知を受け取ります。"Hi the"をタイトルと"をテキストとして、ロイヤルティプログラム!"を参加してくれてありがとうございます。][8]
+![ユーザーが iOS のプッシュ通知を受け取る。タイトルは「Hi there」、テキストは「Thanks for joining out loyalty program!」である。][8]
 
 ### ステップ4:キャンペーンの作成を続ける
 
 リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング][6]を続行できます。
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [8]: {% image_buster /assets/img_archive/android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}

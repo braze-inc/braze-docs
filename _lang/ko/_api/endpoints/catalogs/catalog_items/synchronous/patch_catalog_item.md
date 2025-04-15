@@ -6,7 +6,7 @@ page_order: 4
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 카탈로그 항목 Braze 엔드포인트 편집에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 카탈로그 항목 Braze 엔드포인트 편집에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -78,7 +78,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `200`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `200`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 

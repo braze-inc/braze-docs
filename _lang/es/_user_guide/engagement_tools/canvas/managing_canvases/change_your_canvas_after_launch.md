@@ -29,7 +29,7 @@ Tenga en cuenta las siguientes ediciones permitidas tras el lanzamiento del lien
 
 Puedes eliminar cualquiera de los siguientes elementos de tu recorrido de usuario:
 
-- [Pasos en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Pasos en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Variantes de Canvas 
 - Conexiones entre pasos en Canvas
 
@@ -81,7 +81,9 @@ Puedes editar las siguientes configuraciones e información del Canvas después 
 Después de lanzar un Canvas:
 
 - Los eventos de conversión no se pueden editar. 
-- Las [rutas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), las [rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) y las [rutas de experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) no pueden añadirse ni eliminarse de estos pasos y no pueden reordenarse para ajustar la clasificación. Como solución, edita el Canvas activo y duplica el paso, que será editable hasta que lances el borrador.
+- Los siguientes pasos no se pueden añadir ni eliminar, y no se pueden reordenar para ajustar la clasificación: [Rutas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) y [rutas de experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+  - **Solución:** Crea una nueva Ruta de audiencia, Ruta de acción o Ruta de experimentos y reconfigura las rutas hacia ese nuevo paso.
+  - **Solución 2:** Duplica el Canvas para hacer tus ediciones.
 
 ### Pasos individuales
 
@@ -119,13 +121,18 @@ Si tiene intención de realizar ediciones más extensas que conlleven la creaci�
 ### Borrar variantes
 
 Cuando se eliminan variantes de un Canvas, ocurre lo siguiente:
+
 - Se eliminarán los pasos dentro de la variante (incluidos los compartidos por otras variantes). 
 - Se eliminarán los análisis por pasos y los análisis de nivel superior del Canvas, como el _Total de entradas_, el _Total de salidas_ y la _Tasa de conversión_.
 - Los usuarios de las variantes eliminadas salen de los pasos y no se envían los mensajes siguientes.
 
+### Propiedades de entrada del lienzo
+
+Las propiedades de entrada en Canvas no están plantillas en los pasos cuando se envían. Esto significa que cuando se editen las propiedades de entrada al Canvas después de que se haya lanzado el Canvas, estos cambios sólo se aplicarán a los nuevos usuarios que entren en el Canvas. Si tu Canvas permite que los usuarios vuelvan a entrar en él, los usuarios que vuelvan a entrar estarán determinados por las propiedades de entrada al Canvas actualizadas.
+
 ## Buenas prácticas
 
-Echa un vistazo a estas mejores prácticas a tener en cuenta al editar o añadir a su lienzo después de que se ha puesto en marcha utilizando el flujo de lienzo.
+Echa un vistazo a estas prácticas recomendadas que debes tener en cuenta cuando edites o añadas algo a tu Canvas después de haberlo lanzado.
 
 ### Pasos desconectados
 

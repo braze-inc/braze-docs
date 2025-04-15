@@ -57,7 +57,7 @@ Haremos dos ajustes en este paso:
 
 1. Selecciona el catálogo que incluye información sobre nuestros vaqueros clásicos de pierna recta, que hemos denominado "Pantalones de pierna recta". 
 
-![Paso en Canvas "Programar entrada" para un Canvas basado en acciones.][3]
+![Paso en Canvas "Horario de entrada" para un Canvas basado en acciones.][3]
 
 {: start="2"}
 2\. Ajusta la **Hora de inicio (Obligatorio** ) a la fecha y hora de inicio que desees.

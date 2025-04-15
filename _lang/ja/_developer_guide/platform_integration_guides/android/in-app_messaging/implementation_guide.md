@@ -537,6 +537,6 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 {% endtabs %}
 
 #### アプリ内メッセージタッチのインターセプト
-![Androidデバイスが設定とトグルの行を表示しています。カスタムビューはボタンを処理し、ボタンコントロールの外側のタッチはアプリ内メッセージによって処理され、削除されます。]({% image_buster /assets/img/iam_implementation_guide_android.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![Androidデバイスが設定とトグルの行を表示しています。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide_android.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 カスタムフルアプリ内メッセージボタンを正しく機能させるには、アプリ内メッセージのタッチをインターセプトすることが重要です。デフォルトでは、すべてのアプリ内メッセージビューに`onClick`リスナーが追加されるため、ユーザーはボタンなしでメッセージを閉じることができます。カスタムボタンなど、ユーザー入力に応答するカスタムコントロールを追加する場合は、通常どおりビューに`onClick`リスナーを登録できます。カスタムコントロールの外側をタッチすると、通常通りアプリ内メッセージが閉じられ、カスタムコントロールが受け取ったタッチはあなたの`onClick`リスナーを呼び出します。 
 

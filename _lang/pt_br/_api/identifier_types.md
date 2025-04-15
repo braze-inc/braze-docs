@@ -23,19 +23,19 @@ O identificador de aplicativo ou `app_id` é um parâmetro que associa a ativida
 Há duas maneiras de localizar seu `app_id`:
 
 {% tabs local %}
-{% tab Identificadores de app %}
-Acesse **Settings** > **APIs and Identifiers** > **App Identifiers**. Sua chave de API para cada app está listada na coluna **Identificador**.
+{% tab Identificadores de App %}
+Acessar **Configurações** > **APIs e Identificadores** > **Identificadores de Aplicativos**. Sua chave de API para cada app está listada na coluna **Identificador**.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **o App Identifiers** está localizado em **Developer Console** > **API Settings**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Identificadores de App** está localizado em **console de desenvolvedor** > **Configurações de API**.
 {% endalert %}
 {% endtab %}
 
-{% tab Configurações do app %}
+{% tab Configurações do App %}
 Acessar **Configurações** > **Configurações do app**. Sua chave de API está listada ao lado do campo **Chave de API** na seção de configurações.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **as App Settings** estão localizadas em **Manage Settings** > **Settings**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Configurações do App** localizadas em **Gerenciar Configurações** > **Configurações**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -52,7 +52,7 @@ Os identificadores de aplicativos no Braze são usados na integração do SDK e 
 
 Durante a configuração do SDK, o caso de uso mais comum para vários identificadores de app é separar esses identificadores para variantes de compilação de depuração e lançamento.
 
-Para alternar facilmente entre vários identificadores de app em suas compilações, recomendamos a criação de um arquivo `braze.xml` separado para cada [variante de compilação](https://developer.android.com/studio/build/build-variants.html) relevante. Uma variante de compilação é uma combinação de tipo de compilação e sabor do produto. Por padrão, um novo projeto Android é configurado com os tipos de compilação `debug` e `release` e nenhum tipo de produto.
+Para alternar facilmente entre vários identificadores de app em suas compilações, recomendamos a criação de um arquivo `braze.xml` separado para cada [variante de compilação](https://developer.android.com/studio/build/build-variants.html) relevante. Uma variante de compilação é uma combinação de tipo de compilação e sabor do produto. Por padrão, um novo projeto Android é configurado com `debug` e `release` tipos de build e sem sabores de produto.
 
 Para cada variante de compilação relevante, crie um novo `braze.xml` para ela em `src/<build variant name>/res/values/`:
 
@@ -83,7 +83,7 @@ Acesse **Modelos**, selecione uma página de modelo e, em seguida, selecione um 
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar identificadores de API no **console do desenvolvedor** > **Configurações de API**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode encontrar identificadores de API em **console de desenvolvedor** > **Configurações da API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -97,14 +97,14 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 
 Um identificador de [tela]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID de tela é uma chave aleatória gerada pelo Braze para uma determinada tela dentro do dashboard. As IDs do Canvas são exclusivas para cada Canvas e podem ser usadas para fazer referência a Canvases por meio da API. 
 
-Lembre-se de que, se você tiver um Canvas com variantes, haverá um ID geral do Canvas, bem como IDs de Canvas de variantes individuais aninhados sob o Canvas principal. 
+Tenha em mente que, se você tiver um canva que possui variantes, existe um ID de canva geral, bem como IDs de canva de variantes individuais aninhados sob o canva principal. 
 
 ### Onde posso encontrá-lo?
 
 Você pode encontrar seu ID do canva no dashboard. Acesse **Envio de mensagens** > **Canvas** e selecione um Canvas pré-existente. Se o canva que você deseja ainda não existir, crie um e salve-o. Na parte inferior de uma página individual do Canvas, clique em **Analyze Variants (Analisar variantes**). Uma janela é exibida com o identificador da API do Canva localizado na parte inferior.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **o Canva** está localizado em **Engajamento**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **canva** está localizado sob **engajamento**.
 {% endalert %}
 
 ### Para que ele pode ser usado?
@@ -119,7 +119,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **o 
 
 Um identificador [de campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID de campanha é uma chave aleatória gerada pelo Braze para uma determinada campanha dentro do dashboard. Os IDs de campanha são exclusivos para cada campanha e podem ser usados para fazer referência a campanhas por meio da API. 
 
-Lembre-se de que, se você tiver uma campanha com variantes, haverá um ID de campanha geral e IDs de campanha variantes individuais aninhados sob a campanha principal. 
+Tenha em mente que, se você tiver uma campanha que possui variantes, há tanto um ID de campanha geral quanto IDs de campanha de variantes individuais aninhados sob a campanha principal. 
 
 ### Onde posso encontrá-lo?
 
@@ -130,7 +130,7 @@ Você pode encontrar seu ID de campanha de duas maneiras:
 Acesse **Envio de mensagens** > **Campanhas** e selecione uma campanha pré-existente. Se a campanha que você deseja ainda não existir, crie uma e salve-a. Na parte inferior da página da campanha individual, você poderá encontrar seu **Campaign API Identifier**.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Campaigns** está em **Engagement (Engajamento**).
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Campanhas** está sob **engajamento**.
 {% endalert %}
 {% endtab %}
 
@@ -138,7 +138,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Ca
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **as chaves de API** estão localizadas em **Console do desenvolvedor** > **Configurações de API**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -165,7 +165,7 @@ Você pode encontrar sua ID de segmento de duas maneiras:
 Acesse **Público** > **Segmentos** e selecione um segmento pré-existente. Se o segmento que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página de segmento individual, você poderá encontrar seu identificador de segmento.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Segments** está em **Engagement (Engajamento**).
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Segmentos** está sob **engajamento**.
 {% endalert %}
 {% endtab %}
 
@@ -173,7 +173,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Se
 Acesse **Configurações** > \*\*APIs**e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **as chaves de API** estão localizadas em **Console do desenvolvedor** > **Configurações de API**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -188,9 +188,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **as
 
 Um identificador de cartão ou ID de cartão é uma chave aleatória gerada pelo Braze para um determinado cartão de feed de notícias dentro do dashboard. Os IDs de cartão são exclusivos para cada cartão [do Feed de notícias]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) e podem ser usados para fazer referência a cartões por meio da API. 
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ### Onde posso encontrá-lo?
 
@@ -201,7 +199,7 @@ Você pode encontrar o ID do cartão de duas maneiras:
 Acesse **Envio de** **mensagens** > **Feed de notícias** e selecione um feed de notícias pré-existente. Se o Feed de notícias que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página individual do Feed de notícias, você poderá encontrar o identificador exclusivo do seu cartão.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **o Feed de notícias** está em **Engajamento**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **feed de notícias** está sob **engajamento**.
 {% endalert %}
 {% endtab %}
 
@@ -209,7 +207,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **o 
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **as chaves de API** estão localizadas em **Console do desenvolvedor** > **Configurações de API**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

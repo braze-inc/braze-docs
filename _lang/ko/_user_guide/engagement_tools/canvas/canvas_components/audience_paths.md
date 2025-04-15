@@ -17,7 +17,7 @@ tool: Canvas
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-오디언스 경로는 순위 기준이 있는 정렬 깔때기와 유사합니다. 사용자는 우선 순위 순서대로 각 기준에 대해 평가되며 자격을 갖춘 가장 높은 순위의 기준 경로로 보내집니다. 이것은 사용자가 어디로 갈지, 어떤 메시지를 받을지에 대한 모호성을 줄여줍니다. 순위는 출시 후 [편집할 수 없습니다]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+오디언스 경로는 순위 기준이 있는 정렬 깔때기와 유사합니다. 사용자는 우선 순위 순서대로 각 기준에 대해 평가되며 자격을 갖춘 가장 높은 순위의 기준 경로로 보내집니다. 이것은 사용자가 어디로 갈지, 어떤 메시지를 받을지에 대한 모호성을 줄여줍니다. Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 오디언스 경로를 사용하면 다음을 수행할 수 있습니다.
 
@@ -54,7 +54,7 @@ tool: Canvas
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-세그먼트와 필터를 오디언스에 추가한 후, [사용자를 조회하여]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) 오디언스 그룹이 예상대로 설정되었는지 확인할 수 있습니다. 
+After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm they match the audience criteria. 
 
 ## 오디언스 경로 사용
 
@@ -74,9 +74,19 @@ tool: Canvas
 
 캔버스가 [사용량 제한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)(예: 캔버스를 받을 총 사용자 수 제한)을 사용하는 경우, Braze는 오디언스 경로를 세그먼트하기 위해 무작위 버킷 번호를 사용하지 않기를 권장합니다. 
 
-[무작위 버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)는 무작위 사용자로 균일하게 분포된 세그먼트를 생성하는 데 사용할 수 있는 사용자 속성입니다. Braze는 세분화 단계에서 무작위 버킷 번호를 사용하여 사용자를 그룹화하고 각 그룹을 별도로 처리합니다. 어떤 그룹이 먼저 처리하느냐에 따라 일부 사용자는 사용량 제한으로 인해 입장이 제한될 수 있으며, 이는 사용자가 오디언스 경로 단계에 도달할 때 고르지 않은 분포를 초래할 수 있습니다.
+A [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) is a user attribute that can be used to create uniformly distributed segments of random users. Braze는 세분화 단계에서 무작위 버킷 번호를 사용하여 사용자를 그룹화하고 각 그룹을 별도로 처리합니다. 어떤 그룹이 먼저 처리하느냐에 따라 일부 사용자는 사용량 제한으로 인해 입장이 제한될 수 있으며, 이는 사용자가 오디언스 경로 단계에 도달할 때 고르지 않은 분포를 초래할 수 있습니다.
 
 이 시나리오에서는 대신 [실험 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)를 사용해 보십시오.
+
+### 인텔리전트 채널 필터와 오디언스 경로 사용
+
+오디언스 경로 단계와 인텔리전트 채널 필터의 조합을 사용하여 각 사용자의 선호도와 행동에 맞게 메시징 경험을 조정할 수 있습니다. 이렇게 하면 사용자가 적절한 채널을 통해 가장 관련성 높은 메시지를 받을 수 있습니다.
+
+예를 들어, 오디언스 경로 단계에서 세 개의 오디언스를 만들 수 있습니다: 이메일, 모바일 푸시, 그리고 다른 모든 사람들. 이메일 오디언스, 필터 `Intelligent Channel is Email`를 추가하세요. 모바일 푸시 오디언스를 위해 필터 `Intelligent Channel is Mobile Push`를 추가하세요. 그런 다음, 각 오디언스 경로에 대해 개인화된 관련 메시지를 전달하기 위해 메시지 단계를 추가할 수 있습니다.
+
+{% alert tip %}
+우리의 [Braze Canvas 템플릿]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates)을 확인하여 이러한 미리 만들어진 템플릿을 어떻게 유리하게 사용자 정의할 수 있는지에 대한 예를 찾아보세요.
+{% endalert %}
 
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}

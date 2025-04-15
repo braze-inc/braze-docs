@@ -46,8 +46,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id`| 필수 | 문자열 | [캠페인 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
-| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 생성에 대한 응답에서 얻음). |
+| `campaign_id`| 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 만들기 응답에서 얻은 값)입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 

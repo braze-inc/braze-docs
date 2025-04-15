@@ -13,9 +13,7 @@ channel: news feed
 
 > Este artículo explica cómo configurar la fuente de noticias para el SDK Web de Braze.
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 El Canal de noticias es una fuente de contenido totalmente personalizable dentro de la aplicación para tus usuarios. Nuestra orientación y segmentación te permiten crear un flujo de contenido adaptado individualmente a los intereses de cada usuario. Dependiendo de su posición en el ciclo de vida del usuario y de la naturaleza de tu aplicación, podría ser un servidor de contenidos de incorporación, un centro de anuncios, un centro de logros o un centro de noticias genérico.
 

@@ -56,7 +56,7 @@ Le comportement documenté ci-dessous est vrai pour toutes les fonctionnalités 
 Cet endpoint ne garantit pas que la séquence des objets `merge_updates` soit mise à jour.
 {% endalert %}
 
-Cet endpoint fusionnera n'importe lequel des champs suivants s'ils ne sont pas trouvés dans l'utilisateur cible :
+Cet endpoint fusionnera les champs suivants s'ils ne sont pas présents chez l'utilisateur cible.
 
 - Prénom
 - Nom
@@ -88,8 +88,7 @@ Cet endpoint fusionnera n'importe lequel des champs suivants s'ils ne sont pas t
 - Données d'interaction de la campagne (Braze choisira les champs de date les plus récents)
 - Résumés du flux de travail (Braze choisira les champs de date les plus récents)
 - Message et historique d’engagement du message
-
-Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs.
+- Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs.
 
 {% alert note %}
 Lors de la fusion d'utilisateurs, l'utilisation de l'endpoint `/users/merge` fonctionne de la même manière que la [méthode`changeUser()` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).

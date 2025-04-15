@@ -23,9 +23,9 @@ Braze は、組織、お客様、お客様の消費者のデータプライバ�
 
 ![ISO認証グラフィック]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_ろうそくは、2018年12月18日現在、[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)に準拠し、2024年8月20日に更新されています。有効期限2027年12月15日。_
+_Braze は、2018年12月18日付けで [[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)] の認証を取得し、2024年8月20日付けで更新しました。2027年12月15日まで有効です。_
 
-Braze の認証状況を独立して検証したい第三者は、[Schellman 証明書ディレクトリ](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8) または[ここの証明書を参照してください。
+Braze の認証状況を独自に確認する場合は、[[Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8)] または[[こちらの証明書]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf)] をご確認ください。
 
 ## SOC 2審査
 
@@ -33,7 +33,7 @@ Braze の認証状況を独立して検証したい第三者は、[Schellman 証
 
 _最終審査日/期間: 2023年7月1日～2024年6月30日_
 
-ろう付けは、_Security_および_Availability_についてのタイプ2 SOC 2検査を正常に完了し、独立したCPA企業[Schellman & Company, LLC](https://www.schellman.com/)によって実行されました。
+Braze は、_Security_および_Availability_についてのタイプ2 SOC 2検査を正常に完了し、独立したCPA企業[Schellman & Company, LLC](https://www.schellman.com/)によって実行されました。
 
 ## HIPAA
 

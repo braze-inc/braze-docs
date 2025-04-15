@@ -125,6 +125,8 @@ table td {
 | **502 Pasarela incorrecta**           | El punto final ha recibido una respuesta no válida del servidor ascendente.                                                                                   |
 | **503 Servicio no disponible**   | El punto final no puede gestionar actualmente la solicitud debido a una sobrecarga temporal o a mantenimiento.                                                    |
 | **504 Tiempo de espera de la puerta de enlace**       | El punto final no ha recibido una respuesta oportuna del servidor ascendente.                                                                               |
+| **529 Anfitrión sobrecargado**       | El host del punto final está sobrecargado y no ha podido responder. |
+| **598 Anfitrión no sano**        | Braze simuló la respuesta porque el host del punto final está marcado temporalmente como no saludable. Para saber más, consulta [Detección de host no sano](#unhealthy-host-detection). |
 | **599 Error de conexión**      | Braze experimentó un error de tiempo de espera de conexión de red al intentar establecer una conexión con el punto final, lo que significa que el punto final puede ser inestable o estar caído. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -134,3 +136,17 @@ Aquí tienes consejos para la solución de problemas comunes en `5XX`:
 
 - Revisa el mensaje de error para ver los detalles específicos disponibles en el **Registro de Actividad de Mensajes**. Para los webhooks, ve a la sección **Rendimiento en el tiempo** de la página de inicio de Braze y selecciona las estadísticas de los webhooks. Desde aquí, puedes encontrar la marca de tiempo que indica cuándo se produjeron los errores.
 - Asegúrate de no enviar demasiadas peticiones que sobrecarguen el endpoint. Puedes enviar por lotes o ajustar el límite de velocidad para comprobar si así se reducen los errores.
+
+## Detección de host no sano
+
+Los webhooks Braze y el Contenido conectado emplean un mecanismo de detección de host no saludable para detectar cuando el host de destino experimenta una alta tasa de lentitud significativa o una sobrecarga que provoca tiempos de espera, demasiadas solicitudes u otros resultados que impiden que Braze se comunique correctamente con el punto final de destino. Actúa como salvaguarda para reducir la carga innecesaria que pueda estar causando dificultades al host de destino. También sirve para estabilizar la infraestructura de Braze y mantener velocidades rápidas de mensajería.
+
+En general, si el número de **fallos supera los 3.000 en cualquier ventana de tiempo móvil de un minuto** (por combinación única de nombre de host y grupo de aplicaciones, **no** por ruta de punto final), Braze detendrá temporalmente las solicitudes al host de destino durante un minuto, simulando en su lugar respuestas con un código de error `598` para indicar la mala salud. Al cabo de un minuto, Braze reanudará las peticiones a toda velocidad si se comprueba que el anfitrión está sano. Si el anfitrión sigue sin estar sano, Braze esperará otro minuto antes de volver a intentarlo.
+
+Los siguientes códigos de error contribuyen al recuento de fallos del detector de host insalubre: `408`, `429`, `502`, `503`, `504`, `529`.
+
+Para los webhooks, Braze reintentará automáticamente las peticiones HTTP que fueron detenidas por el detector de host insalubre. Este reintento automático utiliza una retirada exponencial y sólo lo intentará unas pocas veces antes de fallar. Para más información sobre los errores de webhook, consulta [Errores, lógica de reintentos y tiempos de espera]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
+
+Para el Contenido conectado, si las solicitudes al anfitrión de destino se detienen por el detector de anfitrión insalubre, Braze continuará mostrando mensajes y seguirá su lógica Liquid como si hubiera recibido un código de respuesta de error. Si quieres asegurarte de que estas solicitudes de Contenido conectado se reintentan cuando son detenidas por el detector de host insalubre, utiliza la opción `:retry`. Para más información sobre la opción `:retry`, consulta [Reintentos de contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+Si crees que la detección de host no saludable puede estar causando problemas, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/support_contact/).

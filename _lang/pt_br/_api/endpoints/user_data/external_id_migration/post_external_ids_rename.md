@@ -34,7 +34,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='migração de id externo' %}
 
 ## Corpo da solicitação
 
@@ -54,11 +54,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Obrigatória | Vetor de objetos de renomeação de identificador externo | Veja o exemplo de solicitação e as seguintes limitações para a estrutura do objeto de renomeação do identificador externo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- O `current_external_id` deve ser o ID principal do usuário e não pode ser um ID obsoleto
-- O endereço `new_external_id` não deve estar em uso como ID principal ou ID obsoleto
-- Os sites `current_external_id` e `new_external_id` não podem ser os mesmos
+Observe o seguinte:
+
+- O `current_external_id` deve ser o ID principal do usuário e não pode ser um ID obsoleto.
+- O endereço `new_external_id` não deve estar em uso como ID primária ou ID obsoleta.
+- Os sites `current_external_id` e `new_external_id` não podem ser os mesmos.
 
 ## Exemplo de solicitação
 ```
@@ -75,7 +77,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 }'
 ```
 
-## Resposta 
+## Resposta
+
 A resposta confirmará todas as renomeações bem-sucedidas, bem como as renomeações malsucedidas com quaisquer erros associados. As mensagens de erro no campo `rename_errors` farão referência ao índice do objeto no vetor da solicitação original.
 
 ```
@@ -86,27 +89,28 @@ A resposta confirmará todas as renomeações bem-sucedidas, bem como as renomea
 }
 ```
 
-O campo `message` retornará `success` para qualquer solicitação válida. Erros mais específicos são capturados na matriz `rename_errors`. O campo `message` retorna um erro no caso de:
+O campo `message` retornará `success` para qualquer solicitação válida. Erros mais específicos são capturados no array `rename_errors`. O campo `message` retorna um erro no caso de:
+
 - Chave de API inválida
 - Matriz `external_id_renames` vazia
 - `external_id_renames` vetor de objetos com mais de 50 objetos
-- Limite de frequência atingido (mais de 1.000 solicitações/minuto)
+- Limite de frequência atingido (mais de 1.000 solicitações por minuto)
 
 ## Perguntas frequentes
 
-**Isso afeta o MAU?**<br>
+### Isso afeta o MAU?
 Não, como o número de usuários permanecerá o mesmo, eles terão apenas um novo `external_id`.
 
-**O comportamento do usuário muda historicamente?**<br>
+### O comportamento do usuário muda historicamente?
 Não, pois o usuário ainda é o mesmo, e todo o seu comportamento histórico ainda está conectado a ele.
 
-**Ele pode ser executado em espaços de trabalho de desenvolvimento/estágio?**<br>
+### Ele pode ser executado em espaços de trabalho de desenvolvimento ou de preparação?
 Sim. Na verdade, é altamente recomendável executar uma migração de teste em um espaço de trabalho de preparação ou desenvolvimento e garantir que tudo corra bem antes de executar nos dados de produção.
 
-**Isso consome pontos de dados?**<br>
+### Isso consome pontos de dados?
 Esse recurso não custa pontos de dados.
 
-**Qual é o período de depreciação recomendado?**<br>
+### Qual é o período de depreciação recomendado?
 Não temos um limite rígido de quanto tempo você pode manter IDs externas obsoletas, mas é altamente recomendável removê-las quando não houver mais necessidade de fazer referência aos usuários pela ID obsoleta.
 
 {% endapi %}

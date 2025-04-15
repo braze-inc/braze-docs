@@ -64,14 +64,14 @@ Por último, debes construir tus rutas descendentes. Seleccione **Hecho** y vuel
 Tenga en cuenta que las rutas y sus pasos descendentes no pueden eliminarse de un lienzo una vez creados. Sin embargo, cuando se lanza, puedes modificar la distribución de la audiencia entre las rutas según te convenga. Por ejemplo, si un día después de lanzar un Canvas, llega a la conclusión de que una ruta es superior al resto basándose en los análisis, puede establecer esa ruta al 100% y las demás al 0%. O, según tus necesidades, puedes seguir enviando a los usuarios por varias rutas.
 
 {% alert note %}
-Las Rutas de Experimento no se pueden editar después de lanzar un Lienzo. Si su experimento está en mitad del envío y edita el mensaje, la prueba quedará inutilizada y se eliminarán los resultados del experimento. Tampoco puede activar Rutas Personalizadas o Rutas Ganadoras para un Lienzo ya activo con un paso de Ruta de Experimento.<br><br> Para más información, consulta [Editar Canvas después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Las Rutas de Experimento no se pueden editar después de lanzar un Lienzo. Si su experimento está en mitad del envío y edita el mensaje, la prueba quedará inutilizada y se eliminarán los resultados del experimento. Tampoco puede activar Rutas Personalizadas o Rutas Ganadoras para un Lienzo ya activo con un paso de Ruta de Experimento.<br><br> Para más información, consulta [Editar Canvas después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Seguimiento del rendimiento
 
 En la página **Canvas Analytics**, haga clic en la ruta del experimento para abrir una [tabla detallada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idéntica a la pestaña **Analizar variantes** para comparar estadísticas detalladas de rendimiento y conversión entre rutas. También puede exportar la tabla mediante CSV y comparar los cambios porcentuales de las métricas de interés en relación con la ruta o el control que seleccione.
 
-Cada paso de cada ruta mostrará estadísticas en la vista [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/), igual que cualquier paso de Canvas. Sin embargo, ten en cuenta que el análisis de los pasos individuales **no** tiene en cuenta la estructura del experimento. El análisis en el Paso de Experimentos debe utilizarse para comparar entre rutas.
+Cada paso de cada ruta mostrará estadísticas en la vista [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), igual que cualquier paso de Canvas. Sin embargo, ten en cuenta que el análisis de los pasos individuales **no** tiene en cuenta la estructura del experimento. El análisis en el Paso de Experimentos debe utilizarse para comparar entre rutas.
 
 ### Rendimiento de la Ruta ganadora y las Rutas personalizadas
 

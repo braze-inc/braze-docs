@@ -11,9 +11,7 @@ hidden: true
 
 # News Feed best practices
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
 

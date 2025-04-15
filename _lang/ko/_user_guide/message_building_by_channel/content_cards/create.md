@@ -31,8 +31,8 @@ search_rank: 3.9
 {:start="2"}
 2\. **콘텐츠 카드를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가하세요.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 작성기를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용할 때 관련 태그를 기준으로 필터링할 수 있습니다.
+4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 작성기를]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) 사용할 때 관련 태그를 기준으로 필터링할 수 있습니다.
 5. 캠페인에 원하는 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 변형에 대한 자세한 내용은 [다변량 및 A/B 테스트를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 참조하세요.
 
 {% alert tip %}
@@ -81,6 +81,10 @@ search_rank: 3.9
 
 ![언어에 영어, 스페인어, 프랑스어가 선택되어 있고 국제화할 필드에 제목, 설명, 링크 텍스트가 선택되어 있는 창입니다.][2]{: style="max-width:70%;"}
 
+##### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 #### 제목 및 메시지
 
 원하는 것은 무엇이든 작성하세요. 제한은 없지만, 메시지를 더 빨리 전달하고 고객의 클릭을 유도할수록 좋습니다! 명확하고 간결한 제목과 메시지 내용을 권장합니다. 이러한 필드는 이미지 전용 카드에는 제공되지 않습니다.
@@ -105,8 +109,8 @@ search_rank: 3.9
 |---|---|
 | 웹 URL로 리디렉션 | 네이티브가 아닌 웹 페이지를 엽니다. |
 | [앱으로 딥링크]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | 앱의 기존 화면으로 딥링크를 연결합니다. |
-| 사용자 지정 이벤트 로그 | 트리거할 [사용자 지정 이벤트를]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) 선택합니다. 다른 콘텐츠 카드를 표시하거나 추가 메시지를 트리거하는 데 사용할 수 있습니다. |
-| 사용자 지정 속성 로그 | 현재 사용자에 대해 설정할 [사용자 지정 속성을]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) 선택합니다. |
+| 사용자 지정 이벤트 로그 | Choose a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) to trigger. 다른 콘텐츠 카드를 표시하거나 추가 메시지를 트리거하는 데 사용할 수 있습니다. |
+| 사용자 지정 속성 로그 | Choose a [custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) to set for the current user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **참고**: __로그 커스텀 이벤트__ 및 __로그 커스텀 속성__ 옵션을 사용하려면 다음 SDK 버전 호환성이 필요합니다.
@@ -117,9 +121,13 @@ search_rank: 3.9
 콘텐츠 카드 메시지 필드의 총 크기는 다음 필드의 바이트 크기 길이를 더하여 계산한 2KB로 제한됩니다. 제목, 메시지, 이미지 URL, 링크 텍스트, 링크 URL 및 키-값 쌍(이름 + 값). 이 크기를 초과하는 메시지는 전송되지 않습니다. 여기에는 이미지의 크기가 포함되지 않고 이미지 URL의 길이가 포함된다는 점에 유의하세요.
 {% endalert %}
 
+{% alert warning %}
+각 사용자는 언제든지 피드에 만료되지 않은 콘텐츠 카드를 최대 250개까지 보유할 수 있습니다. 이 한도를 초과하면 읽지 않은 카드라도 가장 오래된 카드의 반환이 중지됩니다. 해지된 카드도 이 250개 카드 한도에 포함되므로 해지된 카드가 많으면 새 카드를 만들 수 있는 공간이 줄어들 수 있습니다.
+{% endalert %}
+
 ## 4단계: 추가 설정 구성(선택 사항)
 
-[키-값 쌍을][19] 사용하여 카드의 카테고리를 만들고, [여러 콘텐츠 카드 피드를]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) 만들고, 카드 정렬 방식을 사용자 지정할 수 있습니다.
+[키-값 쌍을][19] 사용하여 카드의 카테고리를 만들고, [여러 개의 콘텐츠 카드 피드를]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) 만들고, 카드 정렬 방식을 사용자 지정할 수 있습니다.
 
 메시지에 키-값 쌍을 추가하려면 **설정** 탭으로 이동하여 **새 쌍 추가를** 선택합니다.
 
@@ -208,8 +216,10 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 콘텐츠 카드는 전송된 후에는 편집할 수 없습니다. 이미 전송된 카드를 변경해야 하는 경우 다음 옵션에 표시된 대로 [캠페인 재적격성을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) 사용하는 것이 좋습니다.
 
 {% alert note %}
-[최초 노출]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression)을 사용하는 콘텐츠 카드는 노출 시간을 사용하여 재적격성을 계산하지만, 다른 모든 콘텐츠 카드 유형은 전송 시간 또는 노출 시간 중 가장 최근의 시간을 사용합니다.
+When a Content Card becomes re-eligible, it may be sent again when the original card is still in a user's app. To avoid duplicate cards in a user's app, you can turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.
 {% endalert %}
+
+Also note that Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility. However, Content Cards created at campaign launch or Canvas step entry use whichever send time or impression time is latest.
 
 #### 옵션 1: 캠페인 복제하기
 
@@ -252,7 +262,7 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 * **기존 수신자:** 이미 카드를 받은 사용자는 다시 자격을 갖추기 전까지는 업데이트된 카드를 받을 수 없습니다. 재적격성이 해제되면 새 카드를 받을 수 없습니다.
 
 {% alert tip %}
-알림 센터 또는 메시지 받은 편지함의 고유 메시지(예: 프로모션)에 이 옵션을 사용하는 것이 좋으며, 분석을 통합하는 것이 중요하거나 메시지의 적시성이 문제가 되지 않는 경우(예: 기존 수신자가 업데이트된 카드를 보기 전에 자격 기간을 기다릴 수 있는 경우) 이 옵션을 사용하는 것이 좋습니다.
+알림 센터 또는 메시지 받은 편지함의 고유 메시지(예: 프로모션)에 이 옵션을 사용하는 것이 좋으며, 분석의 통합이 중요하거나 메시지의 적시성이 문제가 되지 않는 경우(예: 기존 수신자가 업데이트된 카드를 보기 전에 자격 기간을 기다릴 수 있는 경우) 이 옵션을 사용하는 것이 좋습니다.
 {% endalert %}
 
 #### 사용자 피드에 카드 보관

@@ -28,7 +28,7 @@ channel:
 
 ## 通知コンテンツアプリの拡張
 
-![並んで表示される2つのプッシュメッセージ。左側のメッセージは、デフォルトのUIでプッシュがどのように見えるかを示しています。右のメッセージは、カスタムプッシュUI を実装して作成されたコーヒーパンチカードプッシュを示しています。]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
+![並んで表示される2つのプッシュメッセージ。左側のメッセージは、デフォルトのUIでプッシュがどのように見えるかを示しています。右側のメッセージには、カスタムプッシュ UI を実装して作成したコーヒーパンチカードプッシュが表示されます。]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
 通知コンテンツアプリ拡張機能は、プッシュ通知のカスタマイズに最適なオプションを提供します。プッシュ通知を展開すると、通知コンテンツアプリ拡張機能によって、アプリの通知のカスタムインターフェイスが表示されます。 
 
@@ -59,7 +59,7 @@ channel:
 
 次の例は、ユーザーが拡張通知内でマッチゲームをプレイできるプッシュ通知を示しています。
 
-![インタラクティブなプッシュ通知のフェーズがどのように見えるかの図。シーケンスは、対話型の一致ゲームを表示するプッシュ通知をユーザが押し込むことを示します。]({% image_buster /assets/img/push_implementation_guide/push12.png %}){: style="border:0"}
+![インタラクティブなプッシュ通知のフェーズがどのように見えるかの図。シーケンスは、ユーザーがインタラクティブなマッチングゲームを表示するプッシュ通知を押す様子を示しています。]({% image_buster /assets/img/push_implementation_guide/push12.png %}){: style="border:0"}
 
 ### ダッシュボード設定
 
@@ -78,7 +78,7 @@ channel:
 [ログ分析セクション](#logging-analytics)にアクセスして、データの流れがどのように見えるかをよりよく理解してください。
 
 ## パーソナライズされたプッシュ通知
-![2台のiPhoneが並んで表示されています。最初の iPhone には、プッシュメッセージの展開されていないビューが表示されます。2番目のiPhoneは、"progress"を表示するプッシュメッセージの拡張バージョンを表示します。コースを通過する距離、次のセッションの名前、次のセッションを完了する必要がある場合のショットです。]({% image_buster /assets/img/push_implementation_guide/push6.png %}){: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![2台のiPhoneが並んで表示されています。最初の iPhone には、プッシュメッセージの展開されていないビューが表示されます。2台目の iPhone には、プッシュメッセージの展開されたバージョンが表示されます。コースの進行状況、次のセッションの名前、次のセッションの期限を示す「進捗」ショットが表示されます。]({% image_buster /assets/img/push_implementation_guide/push6.png %}){: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 プッシュ通知では、コンテンツ拡張の内部にユーザ固有の情報を表示できます。これにより、さまざまなプラットフォームで進捗を共有するオプションを追加したり、アンロックされた実績を表示したり、オンボーディングチェックリストを表示したりするなど、ユーザー中心のプッシュコンテンツを作成できます。この例は、ユーザーがBrazeラーニングコースで特定のタスクを完了した後に表示されるプッシュ通知を示しています。通知を展開することで、ユーザーは学習パスの進捗を確認できます。ここで提供される情報はユーザー固有であり、セッションが完了するか、API トリガーを利用して特定のユーザーアクションが実行されたときに呼び出すことができます。 
 
@@ -92,7 +92,7 @@ channel:
 4. **設定** タブで、標準の Liquid を使用してキーと値のペアを作成します。メッセージに表示したい適切なユーザー属性を設定します。これらのビューは、特定のユーザープロファイルの特定のユーザー属性に基づいてカスタマイズできます。
 5. 通知コンテンツ拡張ターゲットの`.plist`で、`UNNotificationExtensionCategory`属性をカスタムiOSカテゴリに設定します。ここに指定された値は、Brazeダッシュボードの**iOS通知カテゴリ**で設定されているものと一致する必要があります。 
 
-![4つのキーと値のペアのセットで、「next_session_name」と「next_session_complete_date」はLiquidを使用してAPIトリガープロパティとして設定され、「completed_session count」と「total_session_count」はLiquidを使用してカスタムユーザー属性として設定されます。]{% image_buster /assets/img/push_implementation_guide/push5.png %}
+![4つのキーと値のペアのセットで、「next_session_name」と「next_session_complete_date」はLiquidを使用してAPIトリガープロパティとして設定され、「completed_session count」と「total_session_count」はLiquidを使用してカスタムユーザー属性として設定されます。]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 ### キーと値のペアの処理
 
@@ -159,7 +159,7 @@ func didReceive(_ notification: UNNotification) {
 
 例に見られるように、プッシュ通知に画像を含めることもできます。これを行うには、[リッチプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/)を統合し、キャンペーンの通知スタイルをリッチプッシュ通知に設定し、リッチプッシュ画像を含める必要があります。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\."Cert_description" set as "Certified Braze マーケター drive..."..]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 ### ボタンアクションの処理
 
@@ -209,7 +209,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 ログ分析は、Braze API [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を使用してリアルタイムで実行できます。分析をログに記録するには、`braze_id` 値をキーと値のペアフィールド (次のスクリーンショットを参照) に送信し、更新するユーザープロファイルを識別します。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\."Cert_description" set as "Certified Braze マーケター drive..."..]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### 手動ロギング
 

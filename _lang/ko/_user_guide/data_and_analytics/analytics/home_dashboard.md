@@ -19,7 +19,7 @@ tool:
 
 ![홈 대시보드 in Braze.][1]
 
-홈 페이지에는 두 개의 주요 섹션이 있습니다:
+**홈** 페이지에는 두 개의 주요 섹션이 있습니다:
 - [중지한 위치에서 재개](#pick-up-where-you-left-off)
 - [성능 개요](#peformance-overview)
 

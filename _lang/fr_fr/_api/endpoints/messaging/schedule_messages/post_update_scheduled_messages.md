@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /messages/schedule/update
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour les messages planifiés. 
+> Utilisez cet endpoint pour mettre à jour les messages planifiés.
 
 Cet endpoint accepte les mises à jour du paramètre `schedule` ou du paramètre `messages` ou des deux. Votre demande doit contenir au moins une des deux clés.
 
@@ -51,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
-|`schedule` | Facultatif | Objet | Voir [objet de l'horaire]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`schedule` | Facultatif | Objet | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 |`messages` | Facultatif | Objet | Voir [les objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

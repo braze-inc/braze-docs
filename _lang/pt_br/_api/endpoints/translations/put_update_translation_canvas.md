@@ -31,7 +31,7 @@ Esse endpoint tem um limite de frequência de 250.000 solicitações por hora.
 
 ## Parâmetros da jornada
 
-Não há parâmetros de jornada para esse ponto de extremidade.
+Não há parâmetros de jornada para este endpoint.
 
 ## Parâmetros de solicitação
 
@@ -42,7 +42,7 @@ Não há parâmetros de jornada para esse ponto de extremidade.
 |`locale_id`| Obrigatória | String | O ID da localização. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações **do Suporte multilíngue** ou na resposta da solicitação GET.
+Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações do **Suporte multilíngue** ou na resposta da solicitação GET.
 
 ## Exemplo de solicitação
 
@@ -93,7 +93,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 |`INVALID_CAMPAIGN_ID`|Confirme se o ID da campanha corresponde à campanha que você está traduzindo.|
 |`INVALID_LOCALE_ID`|Confirme se o ID da localização existe na tradução da mensagem.|
 |`INVALID_MESSAGE_VARIATION_ID`|Confirme se o ID da mensagem está correto.|
-|`INVALID_TRANSLATION_OBJECT`|Os IDs de tradução são incompatíveis ou o texto traduzido excede os limites.|
+|`INVALID_TRANSLATION_OBJECT`|IDs de tradução não correspondem ou o texto traduzido excede os limites.|
 |`MESSAGE_NOT_FOUND`|Verifique se a mensagem a ser traduzida está correta.|
 |`LOCALE_NOT_FOUND`| Confirme se a localização existe em suas configurações de vários idiomas. |
 |`MISSING_TRANSLATIONS`|Os IDs de tradução devem corresponder à mensagem.|

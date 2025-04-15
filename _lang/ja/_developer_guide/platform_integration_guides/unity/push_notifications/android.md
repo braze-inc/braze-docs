@@ -16,7 +16,7 @@ description: "このリファレンス記事では、Unityプラットフォー�
 
 これらの手順は、[Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) とプッシュを統合するためのものである。
 
-ADM の統合手順については、[Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/)のドキュメントを参照してください。
+ADM 統合の手順については、[[Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/)] ドキュメントを 参照してください。
 
 ## ステップ 1:Firebaseを有効にする
 
@@ -38,7 +38,7 @@ Braze の**アプリ設定**ページの [**設定の管理**] で Android ア�
 
 Braze SDK は、Firebase Cloud メッセージングサーバーへのプッシュ登録を自動的に処理して、デバイスがプッシュ通知を受信できるようにすることができます。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity Android 統合を自動化する」、「プッシュ通知 Firebase プッシュ」、「プッシュ構成によりプッシュディープリンクを自動的に処理する」、「プッシュ構成プッシュ通知 HTML レンダリング有効化」、「プッシュDeleted/Opened/Received リスナーを設定」が設定されています。フィールド"Firebase Sender ID"、"Small/Large Icon Drawable"、"Default Notification Accent Color"も提供されます。]({% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %}"Android Push Settings")
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity Android 統合を自動化する」、「プッシュ通知 Firebase プッシュ」、「プッシュ構成によりプッシュディープリンクを自動的に処理する」、「プッシュ構成プッシュ通知 HTML レンダリング有効化」、「プッシュDeleted/Opened/Received リスナーを設定」が設定されています。「Firebase 送信者 ID」、「描画可能なアイコン (小/大)」、「デフォルト通知アクセントカラー」というフィールドも用意されています。]({% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %}「Android プッシュ設定」)
 
 - **Firebase Cloud メッセージングの自動登録が有効に**<br> デバイスの FCM プッシュトークンを自動的に取得して送信するように Braze SDK に指示します。 
 - **Firebase クラウドメッセージング送信者 ID**<br> Firebase コンソールの送信者 ID。
@@ -67,7 +67,7 @@ Braze の**アプリ設定**ページの [**設定の管理**] で Android ア�
 
 次の例では、コールバックメソッド名 `PushNotificationReceivedCallback`、`PushNotificationOpenedCallback`、および `PushNotificationDeletedCallback` をそれぞれ使用して、`BrazeCallback` ゲームオブジェクトを実装します。
 
-![この実装例のグラフィックは、前のセクションで説明したブレーズ設定オプションと、C# コードスニペットを示しています。]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %}"Android Full Listener Example")
+![この実装例の図は、前のセクションで述べた Braze の構成オプションと、C# のコードスニペットを示しています。]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %}「Android フルリスナーの例」)
 
 ```csharp
 public class MainMenu : MonoBehaviour {
@@ -111,8 +111,8 @@ public class MainMenu : MonoBehaviour {
 
 Braze はデフォルトで標準的なディープリンク (Web サイトのURL、Android の URI など) を処理できますが、カスタムディープリンクを作成するには、追加のマニフェスト設定が必要です。
 
-セットアップガイダンスについては、[In-App Resourcesへのディープリンク](https://developer.android.com/training/app-links/deep-linking)をご覧ください。
+設定ガイダンスについては、[[アプリ内リソースへのディープリンク](https://developer.android.com/training/app-links/deep-linking)] を参照してください。
 
-## ブレーズプッシュ通知アイコンの追加
+## Braze プッシュ通知アイコンの追加
 
-プロジェクトにプッシュアイコンを追加するには、アイコンイメージファイルを含むAndroid アーカイブ(AAR) プラグインまたはAndroid ライブラリを作成します。手順と情報については、Unityのドキュメントを参照してください。[AndroidライブラリプロジェクトとAndroidアーカイブプラグイン](https://docs.unity3d.com/Manual/AndroidAARPlugins.html)。
+プロジェクトにプッシュアイコンを追加するには、アイコンイメージファイルを含むAndroid アーカイブ(AAR) プラグインまたはAndroid ライブラリを作成します。手順と情報については、Unity のドキュメントを参照してください。[AndroidライブラリプロジェクトとAndroidアーカイブプラグイン](https://docs.unity3d.com/Manual/AndroidAARPlugins.html)。

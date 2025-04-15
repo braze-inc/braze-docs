@@ -10,7 +10,7 @@ tool: Reports
 
 # クエリビルダーのテンプレート
 
-> レポートを作成する際に[クエリビルダー]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/)テンプレートにアクセスするには、**クエリテンプレート**を選択します。すべてのテンプレートは過去60日間のデータを表示しますが、エディターでその値や他の値を直接編集できます。<br><br>Query Builderレポートに表示されるメトリクスの定義については、[Report Metrics Glossaryを]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics)参照し、それぞれのチャネルでフィルターをかける。
+> レポートを作成する際に[クエリビルダー]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/)テンプレートにアクセスするには、**クエリテンプレート**を選択します。すべてのテンプレートは過去60日間のデータを表示しますが、エディターでその値や他の値を直接編集できます。<br><br>Query Builder レポートに表示される指標の定義については、[レポート指標の用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics)を参照し、該当するチャネルで絞り込んでください。
 
 ## チャネルテンプレート
 

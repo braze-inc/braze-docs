@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 월간 활성 사용자 내보내기 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 기사는 Export 월간 활성 사용자 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
-# 지난 30일간 월간 활성 사용자 내보내기
+# 지난 30일 동안의 월간 활성 사용자 내보내기
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

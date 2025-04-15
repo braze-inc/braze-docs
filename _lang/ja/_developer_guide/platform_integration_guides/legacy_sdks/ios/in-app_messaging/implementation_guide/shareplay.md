@@ -27,7 +27,7 @@ iOS 15 更新の一部として Apple によってリリースされた新しい
 
 **同期されたメディアの再生**<br>
 同期されたメディア再生では、1人が SharePlay ビデオを一時停止すると、すべてのデバイスで一時停止されます。<br><br>
-![SharePlay]({% image_buster /assets/img/shareplay/shareplay7.png %}){: style="border:0"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay7.png %}({: style="border:0"})
 
 ## 統合
 
@@ -130,7 +130,7 @@ struct MediaItemActivity: GroupActivity {
 
 状態が `activationPreferred` に戻ったら、残りのグループアクティビティのライフサイクルをアクティブにする合図です。 
 
-![SharePlay]({% image_buster /assets/img/shareplay/shareplay.png %}){: style="border:0;"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay.png %}({: style="border:0;"})
 
 ### ステップ 4:SharePlay API からアプリ内メッセージを起動する
 

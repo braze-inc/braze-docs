@@ -31,6 +31,7 @@ Esse endpoint tem um limite de frequência de 1.000 solicitações por minuto, p
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Obrigatória | String | A ID de sua central de preferências. |
+{: role="presentation" }
 
 ## Parâmetros de solicitação
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Resposta 
-```json 
+## Resposta
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

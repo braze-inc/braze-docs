@@ -15,7 +15,7 @@ description: "This article outlines details about the Update existing dashboard 
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use this endpoint to update an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) method.
+> Use this endpoint to update an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) method.
 
 It allows you to update of given and family names, permissions (for setting permissions at the company, workspace, and team level) and department.
 

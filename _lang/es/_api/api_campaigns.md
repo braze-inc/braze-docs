@@ -26,7 +26,7 @@ Como las campañas API suelen ser transaccionales, todos los usuarios son elegib
 
 ## Crear una nueva campaña
 
-Ve a **Mensajería** > **Campañas** y haz clic en **Crear campaña**; a continuación, selecciona **Campañas API**. Ahora, puedes avanzar para configurar tu campaña de API.
+Ve a **Mensajería** > **Campañas** y selecciona **Crear campaña** y, a continuación, **Campañas API**. Ahora, puedes avanzar para configurar tu campaña de API.
 
 Una [campaña desencadenada por]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) API es diferente de una campaña de API.
 

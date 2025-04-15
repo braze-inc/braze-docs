@@ -9,7 +9,7 @@ description: "Este artículo de referencia explica cómo crear listas de código
 
 # Códigos de promoción
 
-> Los códigos promocionales -también llamados códigos de promoción- son una excelente forma de mantener el interés de los usuarios impulsando las interacciones con un fuerte énfasis en las compras.
+> Los códigos promocionales -también llamados códigos de promoción- son una excelente forma de mantener el interés de los usuarios impulsando las interacciones con un fuerte énfasis en las compras.<br><br>Esta página explica cómo crear listas de códigos promocionales y añadirlos a tus campañas y Lienzos.
 
 Con la funcionalidad Braze Liquid, ofrecemos una forma de hacer que el uso generalizado de códigos de promoción sea muy sencillo, permitiendo que los mensajes se extraigan ahora de la lista de promociones que usted proporcionó, de forma automática e intuitiva. La función de códigos promocionales ofrece fechas de caducidad de hasta seis meses y admite hasta 20 millones de códigos individuales por lista.
 
@@ -81,7 +81,7 @@ Tras seleccionar Guardar, aparecerá una nueva fila en el **Historial de importa
 ![][8]
 
 {% alert note %}
-Los archivos más grandes tardarán unos minutos en importarse. Mientras esperas, puedes salir de la página y trabajar en algo mientras se realiza la importación. Cuando finalice la importación, verá que el estado cambia a **Completado** en la tabla.
+Los archivos más grandes tardarán unos minutos en importarse. Mientras esperas, puedes salir de la página y trabajar en algo mientras se realiza la importación. Cuando finalice la importación, el estado cambiará a **Completado** en la tabla.
 {% endalert %}
 
 #### Actualizar una lista de códigos promocionales
@@ -178,6 +178,10 @@ El mismo código promocional será la plantilla para todas las instancias del fr
 Si el mensaje debería haber contenido un código promocional de una lista vacía o caducada, el mensaje se cancelará.
 
 Si el mensaje contiene Lógica líquida que inserta condicionalmente un código de promoción, el mensaje sólo se cancelará si debería haber contenido un código de promoción. Si el mensaje no debería haber contenido un código de promoción, el mensaje se enviará normalmente.
+
+### ¿Cómo guardo un código promocional en el perfil de un usuario para poder utilizarlo en mensajes de seguimiento?
+
+Para hacer referencia al mismo código promocional en mensajes posteriores, el código debe guardarse en el perfil de usuario como un atributo personalizado. Esto puede hacerse adjuntando un [Webhook Braze to Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) a la misma campaña o paso en Canvas de mensajería.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}

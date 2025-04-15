@@ -13,7 +13,7 @@ tool: Campaigns
 > Las campañas de entrega basadas en acciones o las campañas activadas por eventos son muy eficaces para los mensajes transaccionales o basados en logros. En lugar de enviar su campaña en determinados días, puede hacer que se envíen después de que un usuario complete un determinado evento. 
 
 {% alert important %}
-La entrega basada en acciones no está disponible para los [componentes Canvas con mensajes in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Estos pasos deben programarse.
+La entrega basada en acciones no está disponible para los [componentes Canvas con mensajes in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Estos pasos deben programarse.
 {% endalert %}
 
 ## Crear una campaña activada
@@ -96,11 +96,11 @@ También puede elegir enviar la campaña en un día específico de la semana (se
 
 ### Paso 3: Seleccionar eventos de excepción
 
-Seleccione un evento de excepción que descalificará a los usuarios para recibir esta campaña. Solo puedes hacer esto si tu mensaje desencadenado se envía tras un retardo de tiempo. Los eventos de excepción pueden ser la realización de una compra, el inicio de una sesión, la realización de uno de los [eventos de conversión] designados de una campaña][18], o la realización de un evento personalizado. Si un usuario completa el evento de activación, pero luego completa tu evento de excepción antes de que se envíe el mensaje debido al retraso, no recibirá la campaña. Los usuarios que no reciban la campaña debido al evento de excepción serán automáticamente elegibles para recibirla en el futuro, la próxima vez que completen el evento desencadenante, incluso si no eliges que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/).
+Seleccione un evento de excepción que descalificará a los usuarios para recibir esta campaña. Solo puedes hacer esto si tu mensaje desencadenado se envía tras un retardo de tiempo. Los eventos de excepción pueden ser la realización de una compra, el inicio de una sesión, la realización de uno de los [eventos de conversión] designados de una campaña][18], o la realización de un evento personalizado. Si un usuario completa el evento de activación, pero luego completa tu evento de excepción antes de que se envíe el mensaje debido al retraso, no recibirá la campaña. Los usuarios que no reciban la campaña debido al evento de excepción serán automáticamente elegibles para recibirla en el futuro, la próxima vez que completen el evento desencadenante, incluso si no eliges que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
 
 ![][20]
 
-Puedes leer más sobre cómo emplear eventos de excepción en nuestra sección sobre [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
+Puedes leer más sobre cómo emplear eventos de excepción en nuestra sección sobre [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
 > Si envía una campaña con un evento desencadenante que coincide con el evento de excepción, Braze cancelará la campaña y volverá a programar automáticamente una nueva campaña basada en la hora de entrega del mensaje del evento de excepción. Por ejemplo, si su primer evento de activación comienza a los cinco minutos y el evento de excepción comienza a los 10 minutos, se basaría en los 10 minutos del evento de excepción como tiempo de entrega del mensaje de la campaña oficial.
 
@@ -114,7 +114,7 @@ Asigne la duración de la campaña especificando una hora de inicio y una hora d
 
 ![][21]
 
-Si un usuario completa un evento desencadenante durante el plazo especificado, pero cumple los requisitos para recibir el mensaje fuera del plazo debido a un retraso programado, no recibirá la campaña. Por lo tanto, si establece un tiempo de retardo superior al plazo del mensaje, ningún usuario recibirá su campaña. Además, puede elegir enviar el mensaje en las [zonas horarias locales]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns) de los usuarios.
+Si un usuario completa un evento desencadenante durante el plazo especificado, pero cumple los requisitos para recibir el mensaje fuera del plazo debido a un retraso programado, no recibirá la campaña. Por lo tanto, si establece un tiempo de retardo superior al plazo del mensaje, ningún usuario recibirá su campaña. Además, puede elegir enviar el mensaje en las [zonas horarias locales]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns) de los usuarios.
 
 ### Paso 5: Selecciona el marco temporal
 
@@ -126,7 +126,7 @@ En el caso de que un usuario complete el evento desencadenante dentro del plazo,
 
 ![][31]
 
-Si un usuario no recibe el mensaje porque se le ha pasado el plazo, seguirá estando cualificado para recibirlo la próxima vez que complete el evento desencadenante, aunque no haya elegido que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/). Si decides que los usuarios vuelvan a ser elegibles, podrán recibir la campaña cada vez que completen el evento desencadenante, siempre que cumplan los requisitos durante el plazo especificado.
+Si un usuario no recibe el mensaje porque se le ha pasado el plazo, seguirá estando cualificado para recibirlo la próxima vez que complete el evento desencadenante, aunque no haya elegido que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Si decides que los usuarios vuelvan a ser elegibles, podrán recibir la campaña cada vez que completen el evento desencadenante, siempre que cumplan los requisitos durante el plazo especificado.
 
 Si también ha asignado a la campaña una duración determinada, entonces un usuario debe cumplir los requisitos tanto dentro de la duración como de la parte específica del día para recibir el mensaje.
 
@@ -189,7 +189,7 @@ Recomendamos cambiar el público objetivo para incluir a todos los usuarios, o c
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

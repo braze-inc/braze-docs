@@ -1,14 +1,35 @@
 #!/bin/bash
 
-# This is a bash script for interacting with the various files in './scripts/'.
+# This is a wrapper script for interacting with the files in './scripts/'.
 # 
 # Usage: ./bdocs [option]
 
 set -e
 
-# The project's root directory.
-export PROJECT_ROOT
-PROJECT_ROOT="$(dirname "$(realpath "$0")")"
+# The project's root directory and redirect file.
+export PROJECT_ROOT="$(dirname "$(realpath "$0")")"
+export REDIRECT_FILE="./assets/js/broken_redirect_list.js"
+export REDIRECT_MATCHES="./scripts/temp/redirect_matches.json"
+
+# All scripts exported so they can source bdocs and call each other if needed.
+export DEPLOY="$PROJECT_ROOT/scripts/create_deploy_text.sh"
+export RELEASE="$PROJECT_ROOT/scripts/create_release_text.sh"
+export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
+export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
+export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
+export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
+export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
+
+# Set the primary branch depending which Braze Docs repository.
+if [[ "$PROJECT_ROOT" == *"braze-docs-hidden"* ]]; then
+    export PRIMARY_BRANCH="main"
+else
+    export PRIMARY_BRANCH="master"
+fi
+
+# Utility scripts that are not directly used in bdocs:
+export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
+export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
 
 # Displays usage for bdocs
 display_help() {
@@ -19,14 +40,71 @@ USAGE:
   ./bdocs [option]
 
 OPTIONS:
-  deploy       Create the deploy body text for weekly deployments
-  release      Create the release body text for monthly releases
-  tlinks       Transform reference links to inline links on 1 or more pages
-  rlinks       Remove reference links that are not being used on 1 or more pages
-  redirects    List the old URLs for all new redirects in this branch
-  help         Display this help message and exit
+  deploy         Create the deploy body text for weekly deployments
+  release        Create the release body text for monthly releases
+  tlinks         Transform reference links to inline links on 1 or more pages
+  rlinks         Remove unused reference links on 1 or more pages
+  ulinks         Update old links using newest redirect on 1 or more pages
+  fblinks        Finds broken links throughout the docs site
+  lredirects     Test new redirects by listing old URLs in this branch
+  syntax         Print all unique Markdown syntax supported by Braze Docs
+  help           Display this help message and exit
 
 EOF
+}
+
+# If no './scripts/temp' directory, create one.
+if [ ! -d "$TEMP_DIR" ]; then
+    mkdir "$TEMP_DIR"
+fi
+
+# If a file or directory is required, pass or fail.
+require_path_or_file() {
+    if [[ -z "$1" ]]; then
+        echo "Error: A file or directory path is required."
+        exit 1
+    fi    
+}
+
+# If new merges into 'develop' are required, pass or fail.
+require_new_merges() {
+    LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/master ^origin/develop)
+    COMMIT_LOGS=$(git log --first-parent "$LATEST_COMMIT_HASH"..origin/develop)
+    if [ -z "$COMMIT_LOGS" ]; then
+        echo "Error: No new merges into 'develop' since the last deployment."
+        exit 1
+    fi
+}
+
+# If a the 'jq' package is required, pass or fail. This is needed to parse JSON.
+# For more info, see: https://jqlang.org/
+require_jq() {
+    if ! command -v jq &> /dev/null; then
+        echo "Error: 'jq' is required to run this command. On MacOS, run:"
+        echo "  brew install jq"
+        exit 1
+    fi
+}
+
+# If yarn-related project dependencies are required, pass or fail.
+require_yarn() {
+    if [ ! -d "$PROJECT_ROOT/node_modules" ]; then
+        echo "Error: 'node_modules' are required to run this command. On MacOS, run:"
+        echo "  brew install yarn"
+        echo "  yarn install"
+        exit 1
+    fi
+}
+
+# Stop commands that are unsupported in the hidden repository.
+not_supported_for_hidden() {
+    echo "error: '$1' is not supported in the braze-docs-hidden repository."
+    exit 1
+}
+
+# Fetch the latest changes from the remote quietly.
+require_git_fetch() {
+    git fetch origin develop --quiet
 }
 
 # Check if no arguments were provided
@@ -35,57 +113,90 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
+# Indicates that the current process is still running and not hung.
+logger() {
+    # Create a log file to capture command I/O.
+    local output_file="$TEMP_DIR/logger_output.log"
+
+    "$@" > "$output_file" 2>&1 &
+    local pid=$!
+
+    # A "loading spinner" to visually indicate process is running.
+    local spin='-\|/'
+    local i=0
+    while kill -0 "$pid" 2>/dev/null; do
+        i=$(( (i+1) % 4 ))
+        printf "\r[%c] Running..." "${spin:$i:1}"
+        sleep 0.1
+    done
+    wait $pid
+    local exit_code=$?
+
+    if [ $exit_code -eq 0 ]; then
+        printf "\r[✓] Complete. \n"
+    else
+        printf "\r[✗] Failed. \n"
+    fi
+
+    # Return any command-level logs if applicable
+    if [ -s "$output_file" ]; then
+        printf "\n"
+        cat "$output_file"
+    fi
+
+    return $exit_code
+}
+
 # Argument parsing
 case $1 in
     deploy)
+        require_git_fetch
+        require_new_merges
         if [[ $# -eq 3 ]]; then
-            "$PROJECT_ROOT/scripts/create_deploy_text.sh" "$2" "$3"
+            "$DEPLOY" "$2" "$3"
         else
-            "$PROJECT_ROOT/scripts/create_deploy_text.sh"
+            "$DEPLOY"
         fi
         ;;
     release)
-        "$PROJECT_ROOT/scripts/create_release_text.sh"
+        require_git_fetch
+        require_new_merges
+        require_jq
+        "$RELEASE"
         ;;
     tlinks)
-        if [[ -z "$2" ]]; then
-            echo "Error: A file or directory path is required."
-            exit 1
-        fi
-        python3 "$PROJECT_ROOT/scripts/transform_reference_links.py" "$2"
-        echo "Success!"
-        while true; do
-            echo "Do you want to remove the unused reference links? [Y/n]."
-            read -r opt
-            case $opt in
-                y*|Y*) 
-                    ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
-                    echo "Success!"
-                    break 
-                    ;;
-                n*|N*)
-                    echo "The unused reference links were left untouched."
-                    break
-                    ;;
-                *) echo "Error: Invalid choice."
-                    echo ""
-                    ;;
-            esac
-        done    
+        require_path_or_file "$2"
+        "$TLINKS" "$2"
+        "$RLINKS" "$2" # Run rlinks next, to clean up unused reference links.
         ;;
     rlinks)
-        if [[ -z "$2" ]]; then
-            echo "Error: The path to file or directory is required."
-            exit 1
-        fi
-        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
+        require_path_or_file "$2" 
+        "$RLINKS" "$2"
         ;;
-    redirects)
+    ulinks)
+        require_git_fetch
+        require_path_or_file "$2"
+        touch "$REDIRECT_MATCHES"
+        "$MRD"
+        logger "$ULINKS" "$2"
+
+        # rm "$REDIRECT_MATCHES"
+        ;;
+    fblinks)
+        # require_git_fetch
+        require_yarn
+        npx ts-node ./scripts/find_broken_links.ts
+        ;;
+    lredirects)
+        require_git_fetch
         if [[ $# -eq 2 ]]; then
-            "$PROJECT_ROOT/scripts/list_redirect_urls.sh" "$2"
+            "$LREDIRECTS" "$2"
         else
-            "$PROJECT_ROOT/scripts/list_redirect_urls.sh"
+            "$LREDIRECTS"
         fi
+        ;;
+    syntax)
+        "$SYNTAX"
         ;;
     help)
         display_help

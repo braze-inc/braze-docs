@@ -12,10 +12,6 @@ description: "This article covers how to create an event prediction within the B
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
-{% endalert %}
-
 On this page, you will see a list of current active event predictions and some basic information about them. Here, you can rename, archive, and create new predictions. Archived predictions are inactive and do not update user scores.
 
 ## Step 1: Create a new prediction
@@ -36,7 +32,7 @@ There is a limit of five concurrently active predictions. Before purchasing Pred
 
 ## Step 2: Specify event tracking {#event-tracking}
 
-Specify if your users' events are stored in Braze as [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
+Specify if your users' events are stored in Braze as [purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 Here, you'll see if the selected method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a prediction with the quantity of data available. If you believe you're incorrectly seeing this error, get in touch with your customer success manager.
 

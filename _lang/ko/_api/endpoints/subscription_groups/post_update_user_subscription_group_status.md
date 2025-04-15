@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 업데이트 사용자의 구독 그룹 상태 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
 ---
 {% api %}
 # 사용자의 구독 그룹 상태 업데이트
@@ -13,9 +13,9 @@ description: "이 문서에서는 업데이트 사용자의 구독 그룹 상태
 /subscription/status/set
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자 구독 상태를 일괄 업데이트할 수 있습니다. 
+> 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자의 구독 상태를 일괄 업데이트할 수 있습니다. 
 
-**구독 그룹 페이지**로 이동하여 구독 그룹 `subscription_group_id`에 액세스할 수 있습니다.
+구독 그룹의 `subscription_group_id`에 액세스하려면 **구독 그룹** 페이지로 이동하십시오.
 
 **이메일 구독 그룹에** 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음과 같이 하세요:
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    // SMS subscription group - one of external_id or phone is required
  }
 ```
-\* SMS 구독 그룹: `external_id` 또는 `phone`만 허용됩니다.
+\* SMS 구독 그룹: `external_id` 또는 `phone` 만 허용됩니다.
 
 {% endtab %}
 {% tab 이메일 %}
@@ -70,14 +70,14 @@ Authorization: Bearer YOUR-REST-API-KEY
    // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
-\* 이메일 구독 그룹: `email` 또는 `external_id` 중 하나가 필요합니다.
+\* 이메일 구독 그룹: `email` 또는 `external_id` 이메일 주소가 필요합니다.
 {% endtab %}
 {% endtabs %}
 
 이 속성은 사용자의 프로필 정보를 업데이트하는 데 사용해서는 안 됩니다. 대신 [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 속성을 사용하세요.
 
 {% alert tip %}
-[/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 통해 새 사용자를 만들 때 사용자 속성 개체 내에서 구독 그룹을 설정할 수 있으므로 한 번의 API 호출로 사용자를 만들고 구독 그룹 상태를 설정할 수 있습니다.
+[사용자/트랙]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 새 사용자를 만들 때 사용자 속성 개체 내에서 구독 그룹을 설정할 수 있으므로 한 번의 API 호출로 사용자를 만들고 구독 그룹 상태를 설정할 수 있습니다.
 {% endalert %}
 
 ## 요청 매개변수
@@ -134,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 ```
 
 {% alert important %}
-엔드포인트는 `email` 또는 `phone` 값만 받아들이고 둘 다 받아들이지는 않습니다. 둘 다 제공되면 `{"message":"Either an email address or a phone number should be provided, but not both."}`와 같은 응답을 받게 됩니다.
+엔드포인트는 `email` 또는 `phone` 값만 허용하며 둘 다 허용하지 않습니다. 두 가지를 모두 제공하면 이 응답을 받게 됩니다: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

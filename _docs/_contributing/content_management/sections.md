@@ -57,7 +57,7 @@ When you create a new section, you can configure it with or without a landing pa
 
 {% tabs %}
 {% tab with landing page %}
-Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/templates/).
+Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 ```markdown
 ---
@@ -165,3 +165,29 @@ page_order: 2
 The output is similar to the following:
 
 ![The left-side navigation on Braze Docs, with the 'Section B' landing page listed third.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
+
+## Forcing auto-expand
+
+When a landing page is selected, the section is auto-expanded in the navigation. However, you can force a section to always auto-expand even if its not selected.
+
+For example, when you go to the [developer guide]({{site.baseurl}}/developer_guide/), the **Platforms** section is always auto-expanded.
+
+![An example of the 'Platforms' section being forced to auto-expand in the Braze Developer Guide.]({% image_buster /assets/img/contributing/styling_examples/nav-auto-expand.png %}){: style="max-width:85%;"}
+
+To force a section to auto-expand, open the `_config.yml` in your text editor and add the section's relative URL path to the `nav_expand_list`.
+
+```yml
+# List of pages(path) to auto expand
+nav_expand_list:
+  - "/developer_guide/platforms"
+  - "/RELATIVE/URL/PATH/"
+```
+
+Replace `/RELATIVE/URL/PATH/` with URL path to your section with `braze.com/docs` removed. Your list should be similar to the following:
+
+```yaml
+# List of pages(path) to auto expand
+nav_expand_list:
+  - "/developer_guide/platforms"
+  - "/contributing/content_management/"
+```

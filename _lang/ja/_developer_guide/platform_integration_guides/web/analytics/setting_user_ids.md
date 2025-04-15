@@ -26,7 +26,7 @@ braze.changeUser(YOUR_USER_ID_STRING);
 
 ユーザーがログアウトした際にユーザーIDを変更することは、以前ログインしていたユーザーをターゲットとしたリエンゲージメントキャンペーンができなくなるため、お勧めしない。同じデバイスに複数のユーザーが存在することが予想されるものの、アプリがログアウト状態の間にそのうちの1ユーザーのみをターゲットにする場合は、ログアウト中にターゲットにするユーザー ID を個別に追跡し、アプリのログアウトプロセスの中でそのユーザー ID に戻すことをお勧めします。
 
-詳細については、[`changeUser()` documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs") を参照してください。
+詳細については、[`changeUser()` のドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs") を参照してください。
 
 ## 推奨されるユーザー ID の命名規則
 

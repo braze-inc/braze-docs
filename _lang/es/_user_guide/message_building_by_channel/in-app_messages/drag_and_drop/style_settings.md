@@ -104,7 +104,7 @@ A continuación, tome el fragmento de Liquid generado e insértelo en el mensaje
 
 ### Utilizar el redactor de IA
 
-Cuando seleccione un bloque de texto en su mensaje in-app, haga clic en <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque para iniciar el [asistente de redacción con inteligencia artificial]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). El asistente de redacción de textos de IA pasa un breve nombre o descripción del producto a la herramienta de generación de textos GPT3 de OpenAI para generar textos de marketing similares a los humanos para sus mensajes.
+Cuando seleccione un bloque de texto en su mensaje in-app, haga clic en <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque para iniciar el [asistente de redacción con inteligencia artificial]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). El asistente de redacción de textos de IA pasa un breve nombre o descripción del producto a la herramienta de generación de textos GPT3 de OpenAI para generar textos de marketing similares a los humanos para sus mensajes.
 
 {% alert tip %}
 Puede ahorrarse algunos clics resaltando el texto dentro del bloque antes de hacer clic en el icono. El texto resaltado se añadirá a la herramienta y se generará una copia inmediatamente.

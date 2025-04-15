@@ -31,7 +31,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 すべてのアプリ内メッセージは、`ABKInAppMessage` のサブクラスであり、すべてのアプリ内メッセージの基本動作と特徴を定義しています。アプリ内メッセージのクラス構造は以下の通りです。
 
-![ABKInAppMessageクラスがABKInAppMessageSlideup、ABKInAppMessageImmersive、ABKInAppMessageHTMLのルートクラスであることを示す図。ABKInAppMessage には、メッセージ、エクストラ、持続時間、クリックアクション、URI、閉じるアクション、アイコンの向き、テキストの配置などのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageSlideup には、シェブロンやスライドアップアンカーなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageImmersive には、ヘッダー、[閉じる] ボタン、フレーム、アプリ内メッセージボタンなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageHTML を使用すると、アプリ内のメッセージボタンを手動でログに記録できます。]({% image_buster /assets/img_archive/ABKInAppMessage-models.png %})
+![ABKInAppMessageクラスがABKInAppMessageSlideup、ABKInAppMessageImmersive、ABKInAppMessageHTMLのルートクラスであることを示す図。ABKInAppMessage には、メッセージ、エクストラ、持続時間、クリックアクション、URI、閉じるアクション、アイコンの向き、テキストの配置などのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageSlideup には、シェブロンやスライドアップアンカーなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageImmersive には、ヘッダー、[閉じる] ボタン、フレーム、アプリ内メッセージボタンなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageHTML を使えば、HTML のアプリ内メッセージボタンクリックを手動で記録できます。]({% image_buster /assets/img_archive/ABKInAppMessage-models.png %})
 
 {% alert important %}
 デフォルトでは、アプリ内メッセージは、GIF サポートを含む標準 SDK インテグレーションを完了した後に有効になります。

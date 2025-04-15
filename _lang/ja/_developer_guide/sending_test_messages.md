@@ -8,7 +8,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 # テストメッセージの送信
 
-> メッセージング キャンペーンをユーザー s に送信する際には、まず、正しく表示され、意図した方法で動作することを確認するために、テストを行うことができます。テストメッセージを作成して送信し、デバイスまたはチームメンバーを選択するのは、ダッシュボードのツールを使用すると非常に簡単です。
+> メッセージング キャンペーンをユーザーに送信する際には、まず、正しく表示され、意図した方法で動作することを確認するために、テストを行うことができます。テストメッセージを作成して送信し、デバイスまたはチームメンバーを選択するのは、ダッシュボードのツールを使用すると非常に簡単です。
 
 ## 指定されたテストセグメントの作成 <a class="margin-fix" name="test-segment"></a>
 
@@ -16,7 +16,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 テストセグメントを設定するには、ダッシュボードの**セグメント**ページに移動し、新しいセグメントを作成します。**フィルターを追加**をクリックして、ドロップダウンメニューの下部にあるテストフィルターのいずれかを選択します。
 
-![ターゲットステップで使用可能なフィルタを表示するろう付けテストキャンペーン。]({% image_buster /assets/img_archive/testmessages1.png %})
+![ターゲットステップで使用可能なフィルターを表示する Braze テストキャンペーン。]({% image_buster /assets/img_archive/testmessages1.png %})
 
 このような2 つのテストフィルタを使用すると、特定のメールアドレスまたは外部[ユーザID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids)を持つユーザを選択できます。
 
@@ -26,25 +26,25 @@ description: "このリファレンス記事では、さまざまなチャネル
 
   1) **"Equals"** -指定したメールまたはユーザー IDと完全に一致するものが検索されます。これは、1 つのメールまたはユーザー ID に関連付けられたデバイスにのみテストキャンペーンを送信する場合に使用します。
 
-  2) **"Does Not Equal"** \- 特定のメールまたはユーザー IDを試験キャンペーンsから除外する場合に使用します。
+  2) **"Does Not Equal"** \- 特定のメールまたはユーザー IDを試験キャンペーンから除外する場合に使用します。
 
-  3) **"Matches"** \- 指定した検索語の一部と一致するメールアドレスまたはユーザー ID を持つユーザーを検索します。これを使用すると、"@yourcompany.com" address を持つユーザーs のみを検索できます。これにより、自分のチームの全員にメールを送信できます。
+  3) **"Matches"** \- 指定した検索語の一部と一致するメールアドレスまたはユーザー ID を持つユーザーを検索します。これを使用すると、"@yourcompany.com" address を持つユーザーのみを検索できます。これにより、自分のチームの全員にメールを送信できます。
 
-"matches"オプションを使用して、メールの住所を| 文字で区切ることで、複数の特定のメールs を選択できます(たとえば、"matches" "email1@braze.com\|email2@braze.com")。
+"matches"オプションを使用して、メールの住所を| 文字で区切ることで、複数の特定のメールを選択できます(たとえば、"matches" "email1@braze.com\|email2@braze.com")。
 
 これらのフィルターを組み合わせて使用すると、テストユーザーのリストを絞り込むこともできます。例えば、テストセグメントには、「@braze.com」に「一致する」 メールアドレスフィルターと、「sales@braze.com」に「等しくない」別のフィルターを含めることができます。 
 
 テストフィルターをテストセグメントに追加した後、セグメントエディターの上部にある [**プレビュー**] をクリックするか、エディターの右上隅にある歯車アイコンをクリックし、ドロップダウンメニューから [**すべてのユーザーデータを CSV 形式でエクスポートする**] を選択して、セグメントのユーザーデータを CSV にエクスポートすることにより、意図したユーザーのみが選択されていることを確認できます。
 
-![セグメント詳細]({% image_buster /assets/img_archive/testmessages3.png %})というタイトルのブレーズキャンペーンのセクション
+![セグメント詳細]({% image_buster /assets/img_archive/testmessages3.png %})というタイトルの Braze キャンペーンのセクション
 
 >  セグメントのユーザーデータを CSV にエクスポートすると、そのセグメントに該当するユーザーを最も正確に把握できます。[**プレビュー**] タブはセグメント内のユーザーのサンプルにすぎないため、目的のメンバーがすべて選択されていないように見える場合があります。
 
 ## テストプッシュ通知またはアプリ内メッセージの送信 <a class="margin-fix" name="push-inapp-test"></a>
 
-テストプッシュ通知s またはアプリ内メッセージs を送信するには、以前に作成したテストSegmentを対象とする必要があります。まず、キャンペーンを作成し、通常のステップs に従います。**Target Users**ステップに到達したら、ドロップダウンメニューからテストSegmentを選択します。
+テストプッシュ通知またはアプリ内メッセージを送信するには、以前に作成したテストセグメントを対象とする必要があります。まず、キャンペーンを作成し、通常のステップに従います。**Target Users**ステップに到達したら、ドロップダウンメニューからテストセグメントを選択します。
 
-![ターゲットステップで使用可能なセグメントを表示するブレーズテストキャンペーン。]({% image_buster /assets/img_archive/test_segment.png %})
+![ターゲットステップで使用可能なセグメントを表示する Braze テストキャンペーン。]({% image_buster /assets/img_archive/test_segment.png %})
 
 キャンペーンの確認を完了し、それを起動してプッシュ通知とアプリ内メッセージをテストします。
 
@@ -52,9 +52,9 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 ## テストメールメッセージの送信
 
-メールをテストするだけの場合は、必ずしもテストSegmentを設定する必要はありません。キャンペーンのメールを作成するキャンペーンコンポーザーの最初のステップで、**Send Test**をクリックし、テストメールを送信したいメールを入力します。 
+メールをテストするだけの場合は、必ずしもテストセグメントを設定する必要はありません。キャンペーンのメールを作成するキャンペーンコンポーザーの最初のステップで、**Send Test**をクリックし、テストメールを送信したいメールを入力します。 
 
-![Test Send タブが選択されたろう付けキャンペーン]({% image_buster /assets/img_archive/testmessages45.png %})
+![[テスト送信] タブが選択された Braze キャンペーン]({% image_buster /assets/img_archive/testmessages45.png %})
 
 {% alert tip %}
 [TEST (または SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) がテストメッセージに追加されるのを有効または無効にすることもできます。
@@ -66,7 +66,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 ### cURL を使用した iOS アプリでのプッシュのテスト
 
-CURL および[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` - **設定**> **APIキー**で利用可能
 - `YOUR_EXTERNAL_USER_ID` - **Search Users**ページで利用可能
@@ -77,7 +77,7 @@ CURL および[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介�
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- [**API キー**] は [**開発者コンソール**] > [**API 設定**] にあります。<br>\- [**ユーザー検索**]は、[**ユーザー**] > [**ユーザー検索**] にあります。
 {% endalert %}
 
->  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスにいない場合は、[API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を参照して、リクエストを実行するエンドポイントを確認します。
+>  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスを使用していない場合は、[[API のドキュメント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)] を参照して、リクエストを行うエンドポイントを確認してください。
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -95,14 +95,14 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 ### cURL を使用した Android アプリでのプッシュのテスト
 
-cURL と[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` ([**設定**] > [**API キー**]に移動)
 - `YOUR_EXTERNAL_USER_ID` ([**ユーザーを検索**] ページでプロファイルを検索)
 - `YOUR_KEY1` (省略可能)
 - `YOUR_VALUE1` (省略可能)
 
->  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスにいない場合は、[API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を参照して、リクエストを実行するエンドポイントを確認します。
+>  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスを使用していない場合は、[[API のドキュメント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)] を参照して、リクエストを行うエンドポイントを確認してください。
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -119,9 +119,9 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-### Kindle アプリ s によるcURL によるプッシュのテスト
+### Kindle アプリによるcURL によるプッシュのテスト
 
-cURL と[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` - **Developer Console**ページで利用可能
 - `YOUR_EXTERNAL_USER_ID` - **ユーザー検索**ページで利用可能
@@ -145,7 +145,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 ## テストメッセージの制限
 
-テストメッセージに完全な機能パリティがなく、キャンペーンまたはキャンバスを実際のユーザーs の集合に起動できない場合があります。このような場合、この動作を検証するには、限られたテストユーザーに対してキャンペーンまたはキャンバスを開始する必要があります。
+テストメッセージに完全な機能パリティがなく、キャンペーンまたはキャンバスを実際のユーザーの集合に起動できない場合があります。このような場合、この動作を検証するには、限られたテストユーザーに対してキャンペーンまたはキャンバスを開始する必要があります。
 
 - Braze [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)を**Test Messages**で表示すると、送信ボタンがグレー表示になります
 - list-配信停止 ヘッダーは、テストメッセージ機能によって送信されるメールには含まれません

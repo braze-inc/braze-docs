@@ -20,7 +20,7 @@ platform:
 > Cet article traite des composants et capacités de base de la plateforme Braze. Les liens de cet article renvoient à des rubriques essentielles de Braze. 
 
 {% alert tip %}
-Consultez notre cours d'[apprentissage](https://learning.braze.com/path/developer) gratuit [pour les développeurs](https://learning.braze.com/path/developer) ainsi que ces articles.
+Consultez notre [parcours d'apprentissage gratuit pour les développeurs](https://learning.braze.com/path/developer) ainsi que ces articles.
 {% endalert %}
 
 ## Qu’est-ce que Braze ?

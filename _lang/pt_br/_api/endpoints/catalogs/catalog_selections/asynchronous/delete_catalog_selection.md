@@ -26,7 +26,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
+{% multi_lang_include rate_limits.md endpoint='seleções de catálogo assíncronas' %}
 
 ## Parâmetros da jornada
 
@@ -46,7 +46,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `202` e `404`.
+Existem dois códigos de status para este endpoint: `202` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 

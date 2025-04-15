@@ -15,9 +15,7 @@ description: "Este artículo de referencia trata de la integración del canal de
 
 > Este artículo explica cómo configurar una fuente de noticias para la plataforma Unity.
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ## Recepción de datos de fuentes de noticias en Unity
 

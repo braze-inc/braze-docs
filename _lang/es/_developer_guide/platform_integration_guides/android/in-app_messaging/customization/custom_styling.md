@@ -38,6 +38,10 @@ Si lo prefieres, puedes anular estos estilos para crear un aspecto que se adapte
 
 Para anular un estilo, cópialo en su totalidad en el archivo `styles.xml` de tu proyecto y haz modificaciones. Debes copiar todo el estilo en tu archivo local `styles.xml` para que todos los atributos estén correctamente configurados. Ten en cuenta que estos estilos personalizados son para cambios en elementos individuales de la interfaz de usuario, no para cambios generales en los diseños. Los cambios a nivel de diseño deben gestionarse con vistas personalizadas.
 
+{% alert note %}
+Puedes personalizar algunos colores directamente en tu campaña Braze sin modificar el XML. Ten en cuenta que los colores establecidos en el panel de Braze anularán los colores que establezcas en cualquier otro lugar.
+{% endalert %}
+
 ## Fuente personalizada
 
 Braze permite configurar una fuente personalizada utilizando la [guía de familias de fuentes]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). Para utilizarlo, anula el estilo para el texto del mensaje, los encabezados y el texto del botón y utiliza el atributo `fontFamily` para indicar a Braze que utilice tu familia de fuentes personalizada.

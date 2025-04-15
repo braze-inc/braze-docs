@@ -28,7 +28,7 @@ description: "この記事では、BrazeのExport custom attributesエンドポ�
 
 このエンドポイントへの各コールにより、50の属性が返されます。50を超える属性については、次のレスポンス例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `cursor` | オプション | 文字列 | カスタム属性のページネーションを決定する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

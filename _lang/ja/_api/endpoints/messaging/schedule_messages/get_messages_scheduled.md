@@ -30,10 +30,10 @@ description: "この記事では、「今後スケジュールされているキ
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | 必須 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 今後予定されているキャンペーンとキャンバスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 ```

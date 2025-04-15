@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: API를 통해서만 즉시 메시지 보내기"
-article_title: "POST: API를 통해서만 즉시 메시지 보내기"
+nav_title: "POST: API만 사용하여 즉시 메시지 보내기"
+article_title: "POST: API만 사용하여 즉시 메시지 보내기"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 API 전용 Braze 엔드포인트를 통해 즉시 메시지 보내기 기능에 대해 자세히 설명합니다."
+description: "이 문서에서는 API 전용 Braze 엔드포인트를 사용하여 즉시 메시지 보내기 기능에 대해 자세히 설명합니다."
 
 ---
 {% api %}
-# API를 통해서만 즉시 메시지 보내기
+# API만 사용하여 즉시 메시지 보내기
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 Braze API를 통해 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다.
+> 이 엔드포인트를 사용하면 Braze API를 사용하여 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다.
 
 요청을 완료하려면 메시징 객체를 본문에 포함시켜야 합니다.
 
@@ -157,6 +157,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 
 ## 응답 세부 정보
 
-메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id`가 포함됩니다. `dispatch_id`는 메시지 발송의 ID로, Braze에서 보낸 각 '전송'의 고유 ID를 의미합니다. 자세한 내용은 [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)을 참조하세요.
+메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id` 주소가 포함됩니다. `dispatch_id` 은 메시지 발송의 ID로, Braze에서 보낸 각 '전송'의 고유 ID를 의미합니다. 자세한 내용은 [디스패치 ID 동작을]({{site.baseurl}}/help/help_articles/data/dispatch_id/) 참조하세요.
 
 {% endapi %}

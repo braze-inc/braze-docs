@@ -360,7 +360,7 @@ glossaries:
     description: Cree un centro de preferencias que permita a los usuarios gestionar sus preferencias de notificación para las campañas de correo electrónico.
     tags:
       - Preference Center
-  - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
+  - name: "<a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
     description: Actualizar un centro de preferencias.
     tags:
       - Preference Center
@@ -372,11 +372,11 @@ glossaries:
     description: Enumerar un artículo del catálogo y sus detalles.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Edita varios elementos de tu catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Crea varios elementos en tu catálogo.
     tags:
       - Catalogs
@@ -388,27 +388,27 @@ glossaries:
     description: Crear un catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>"
     description: Enumera los catálogos de un espacio de trabajo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Crear un elemento en un catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Editar un elemento de un catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Devuelve varios elementos del catálogo y su contenido.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Eliminar un elemento de un catálogo.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Actualizar un elemento de un catálogo.
     tags:
       - Catalogs
@@ -440,11 +440,11 @@ glossaries:
     description: Busca una cuenta de usuario existente en el panel especificando su dirección de correo electrónico.
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Usuarios/{id}</a>"
+  - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Usuarios/{id}</a>"
     description: "Actualice una cuenta de usuario existente en el cuadro de mandos especificando el correo electrónico, los nombres y apellidos, y los permisos (para establecer permisos a nivel de empresa, espacio de trabajo y equipo)."
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Usuarios/{id}</a>"
+  - name: "<a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Usuarios/{id}</a>"
     description: Elimina de forma permanente a un usuario existente del panel.
     tags:
       - SCIM

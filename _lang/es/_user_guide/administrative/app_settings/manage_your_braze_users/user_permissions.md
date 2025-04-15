@@ -42,9 +42,9 @@ Las funciones permiten una mayor estructuración al agrupar los permisos persona
 {% endtab %}
 {% endtabs %}
 
-### ¿En qué se diferencian los conjuntos de permisos y funciones de los equipos?
+## ¿En qué se diferencian los conjuntos de permisos y funciones de los equipos?
 
-Consulta [Usuarios de la empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) para ver un desglose de las diferencias entre equipos, conjuntos de permisos y funciones.
+{% multi_lang_include permissions.md content="Diferencias" %}
 
 ## Editar los permisos de un usuario
 
@@ -127,34 +127,35 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Espacio de trabajo|Aprobar y denegar Canvas|Permite a los usuarios aprobar o denegar lienzos. El [flujo de trabajo de aprobación de Lienzos]({{site.baseurl}}/canvas_approval) debe estar activado para que se aplique este permiso.|
 |Espacio de trabajo|Editar integraciones de Currents|Permite a los usuarios modificar una conexión Currents, incluidas las credenciales. Por defecto, a los usuarios que tienen asignado el permiso "Integraciones externas" también se les asigna este permiso.|
 |Espacio de trabajo|Editar segmentos|Permite a los usuarios crear y editar segmentos. Puede seguir creando campañas con segmentos y filtros existentes sin este permiso. Necesita este permiso para generar un segmento a partir de los usuarios de un CSV o para volver a segmentar el grupo de usuarios del CSV.|
-|Espacio de trabajo|Exportar datos de usuario|Permite a los usuarios exportar sus datos de usuario desde segmentos, campañas y Canvases.|
+|Espacio de trabajo|Exportar datos de usuario|Permite a los usuarios exportar sus datos de usuario desde segmentos, campañas y Canvases. Este permiso incluye información sensible del usuario como nombres, direcciones de correo electrónico y otra información personal identificable (PII) recopilada. |
 |Espacio de trabajo|Importar y actualizar datos de usuario|Permite a los usuarios importar archivos CSV y de actualización de usuarios de aplicaciones, así como ver la página de importación de usuarios. Esto también le permite editar el estado de suscripción de un usuario y las reglas de inclusión/exclusión de su grupo de suscripción.|
 |Espacio de trabajo|Lanzar bloques de contenido|Permite a los usuarios lanzar [Bloques de Contenido]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
 |Espacio de trabajo|Lanzar centros de preferencias|Permite a los usuarios lanzar [centros de preferencias]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espacio de trabajo|Administrar aplicaciones|Permite a los usuarios editar **la configuración de la aplicación**.|
 |Espacio de trabajo|Administrar permisos para el dashboard de catálogos|Permite a los usuarios crear y gestionar catálogos.|
-|Espacio de trabajo|Administrar usuarios del dashboard|Permite a los usuarios ver, editar y gestionar la página **Usuarios de la empresa**. Los usuarios con este permiso pueden modificar los permisos de cualquier usuario, incluidos los suyos propios. Como tal, este permiso debe considerarse como un nivel de acceso administrativo. Este permiso no permite a los usuarios eliminar usuarios porque sólo los administradores pueden eliminar usuarios.|
+|Espacio de trabajo|Administrar usuarios del dashboard| Permite a los no administradores ver, editar y gestionar la página **Usuarios de la empresa**, y gestionar los usuarios del panel en su espacio de trabajo modificando los permisos de cualquier usuario, incluidos los suyos propios. Los usuarios con este permiso no pueden eliminar usuarios (sólo los administradores pueden eliminar usuarios).|
 |Espacio de trabajo|Administrar configuración del correo electrónico|Permite a los usuarios guardar los cambios de configuración del correo electrónico**(Configuración** > **Preferencias de correo electrónico**).|
 |Espacio de trabajo|Administrar eventos, atributos, compras|Permite a los usuarios editar atributos personalizados (los usuarios sin esta capacidad pueden seguir viendo atributos personalizados), editar y ver propiedades de eventos personalizados, y editar y ver propiedades de productos en **Configuración de datos**.|
 |Espacio de trabajo|Administrar integraciones externas|Permite acceder a todas las pestañas de **Socios tecnológicos** y sincronizar Braze con otras plataformas.|
-|Espacio de trabajo|Administrar conmutadores de características|Permite a los usuarios crear o editar [banderas de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
+|Espacio de trabajo|Administrar conmutadores de características|Permite a los usuarios crear o editar [banderas de características]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Espacio de trabajo|Administrar activos de biblioteca de medios|Permite a los usuarios añadir, editar y eliminar activos de la mediateca.|
 |Espacio de trabajo|Administrar grupos de suscripción|Permite a los usuarios crear y gestionar grupos de suscripción.|
 |Espacio de trabajo|Gestionar etiquetas|Permite a los usuarios editar o eliminar etiquetas (en **Gestión de etiquetas**). No necesita este permiso para añadir etiquetas a campañas o segmentos.|
 |Espacio de trabajo|Gestionar equipos|Permite a los usuarios gestionar **Equipos Internos**. La posibilidad de seleccionar este permiso depende de su contrato con Braze.|
 |Espacio de trabajo|Administrar transformaciones|Permite a los usuarios crear y gestionar Transformaciones de Datos.|
 |Espacio de trabajo|Publicar tarjetas|Este permiso solo es visible si tu cuenta está habilitada para el canal de noticias, que está quedando obsoleto. Esto no afecta a las tarjetas de contenido. Permite a los usuarios crear y editar tarjetas de noticias. Puedes seguir viendo las tarjetas de noticias sin este permiso. Si su cuenta está habilitada para News Feed y un usuario debe ser capaz de lanzar Bloques de Contenido existentes, necesita ambos permisos "Publicar Tarjetas" y "Lanzar Bloques de Contenido".|
-|Espacio de trabajo|Enviar campañas, Canvas|Permite a los usuarios editar, archivar y detener campañas y lienzos, crear campañas y lanzar lienzos.|
+|Espacio de trabajo|Enviar campañas, Canvas|Permite a los usuarios editar, archivar y detener campañas y lienzos, crear campañas y lanzar lienzos. |
 |Espacio de trabajo|Ver datos de facturación|Permite a los usuarios ver las suscripciones y la facturación.|
 |Espacio de trabajo|Ver la integración de las corrientes|Permite a los usuarios ver toda la información sobre una conexión Currents, excluyendo las credenciales. Por defecto, a los usuarios que tienen asignado el permiso "Acceder a campañas, lienzos, tarjetas, bloques de contenido, indicadores de características, segmentos, biblioteca multimedia, ubicaciones, códigos de promoción y centros de preferencias" también se les asigna este permiso.|
-|Espacio de trabajo|Ver atributos personalizados marcados como Información personal identificable (PII)|Permite a este usuario ver los atributos personalizados que están marcados como PII sin ser un administrador.|
-|Espacio de trabajo|Ver PII|Permite a los usuarios ver los campos de información de identificación personal definidos por su empresa dentro del panel de control.|
-|Espacio de trabajo|Ver perfiles de usuarios que cumplen las reglas de PII|Permite a los usuarios visualizar perfiles de usuario, pero suprime los campos que tu empresa haya definido como información personal identificable (PII).|
-|Espacio de trabajo|Ver transformaciones|Permite a los usuarios ver [las transformaciones de datos Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
+|Espacio de trabajo|Ver atributos personalizados marcados como Información personal identificable (PII)|Permite a los usuarios que no son administradores ver atributos personalizados que contienen información sensible y están marcados como información de identificación personal (PII).|
+|Espacio de trabajo|Ver PII|Permite a los usuarios ver los campos de información de identificación personal (PII) definidos por tu empresa dentro del panel. Los usuarios también pueden ver los campos PII en la pestaña **Vista previa como usuario** de las vistas previas de los mensajes.|
+|Espacio de trabajo|Ver perfiles de usuarios que cumplen las reglas de PII|Permite a los usuarios ver los perfiles de usuario que contienen campos que tu empresa ha definido como información de identificación personal (PII), pero redacta los campos PII. |
+|Espacio de trabajo|Ver transformaciones|Permite a los usuarios ver [las transformaciones de datos Braze]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Espacio de trabajo|Ver datos de consumo|Permite a los usuarios ver el uso de la aplicación, incluidos los paneles de rendimiento del canal.|
 |Espacio de trabajo|Fusionar usuarios duplicados|Permite a los usuarios fusionar perfiles de usuario duplicados.|
 |Espacio de trabajo|Vista previa de usuarios duplicados|Permite previsualizar qué perfiles de usuario están duplicados.|
 |Espacio de trabajo|Crear y editar plantillas de Canvas|Permite a los usuarios crear y editar plantillas Canvas.|
 |Espacio de trabajo|Ver plantillas de Canvas|Permite a los usuarios ver plantillas Canvas.|
 |Espacio de trabajo|Archivar plantillas de Canvas|Permite a los usuarios archivar plantillas de Canvas.|
+|Espacio de trabajo|Gestionar la segmentación de propiedades de eventos personalizados|Permite a los usuarios crear segmentos en función de la frecuencia y la recurrencia de las propiedades del evento.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

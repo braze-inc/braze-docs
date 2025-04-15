@@ -58,7 +58,7 @@ Hemos facilitado la selección de dónde van tus mensajes dentro de la aplicaci�
 {% alert update %}
 El comportamiento para `dispatch_id` difiere entre Canvas y las campañas porque Braze trata los pasos en Canvas (excepto los Pasos de entrada, que pueden programarse) como eventos desencadenados, incluso cuando están "programados". Más información sobre el [comportamiento de `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) en Canvas y las campañas.
 
-_Actualización de agosto de 2019._
+_Actualización anotada en agosto de 2019._
 {% endalert %}
 
 En nuestro esfuerzo por seguir mejorando las capacidades de Currents, vamos a añadir `dispatch_id` como campo a los eventos de correo electrónico de Currents en todos los tipos de conectores.
@@ -90,7 +90,7 @@ Puedes buscar estos términos actualizados en nuestro [glosario de métricas de 
 {% alert update %}
 El comportamiento de `dispatch_id` difiere entre Canvas y las campañas porque Braze trata los pasos en Canvas (excepto los Pasos de entrada, que pueden programarse) como eventos desencadenados, incluso cuando están "programados". [Más información sobre el [comportamiento de `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) en Canvas y en las campañas.
 
-_Actualización de agosto de 2019._
+_Actualización anotada en agosto de 2019._
 {% endalert %}
 
 

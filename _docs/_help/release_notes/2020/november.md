@@ -18,7 +18,7 @@ The [Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_bra
 
 ## iOS Content Card implementation guide
 
-Embracing developer-centered technical strategy, Braze has released its first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, check out our [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/). 
+Embracing developer-centered technical strategy, Braze has released its first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, check out our [implementation guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/implementation_guide/). 
 
 ## Swift Package Manager
 

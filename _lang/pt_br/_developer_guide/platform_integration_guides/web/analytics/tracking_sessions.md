@@ -21,7 +21,7 @@ Se precisar forçar uma nova sessão, basta mudar de usuário.
 
 ## Personalização do tempo limite da sessão
 
-Para personalizar o tempo limite da sessão, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) função. O valor mínimo para `sessionTimeoutInSeconds` é 1 segundo.
+Para personalizar o tempo limite da sessão, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize). O valor mínimo para `sessionTimeoutInSeconds` é 1 segundo.
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30

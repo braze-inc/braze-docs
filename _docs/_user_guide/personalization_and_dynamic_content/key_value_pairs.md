@@ -12,7 +12,7 @@ channel:
 
 # Key-value pairs
 
-> Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, email, and Content Card messaging channels. 
+> This page covers how to use key-value pairs to send extra data payloads to user devices. This feature is available across push, in-app, email, and Content Card messaging channels.
 
 Use key-value pairs to add structured metadata to messages. These extra data payloads can enrich messages with additional contextual information that can influence how a message is rendered or processed.
 
@@ -41,7 +41,7 @@ Here are some example use cases for adding metadata with key-value pairs:
 
 Key-value pairs can be added to Android, iOS, and web push notifications. You might use key-value pairs to update internal metrics and app content or customize push notification properties, such as alert prioritization, localization, and sounds.
 
-In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
+In the message composer, select the **Settings** tab, select **Add New Pair**, and specify your key-value pairs.
 
 ### iOS
 
@@ -109,11 +109,11 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 
 ##### Custom key-value pairs
 
-In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
+In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and boolean.
 
 ![][17]
 
-Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key.
+Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key][1]. If you prefer to use another key, confirm that your app can handle this custom key.
 
 {% alert warning %}
 You should avoid handling a top-level key or dictionary called ab in your application.
@@ -122,7 +122,7 @@ You should avoid handling a top-level key or dictionary called ab in your applic
 Apple advises clients to avoid including customer information or any sensitive data as custom payload data. Furthermore, Apple recommends that any action associated with an alert message should not delete data on a device.
 
 {% alert warning %}
-If you are using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. The legacy binary interface, which will soon be depreciated, only supports a payload size of 2048 bytes.
+If you're using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. The legacy binary interface, which will soon be depreciated, only supports a payload size of 2048 bytes.
 {% endalert %}
 
 ###### API-triggered campaigns
@@ -167,7 +167,7 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 ## In-app messages
 
-To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, click **Add New Pair**, and specify your key-value pairs.
+To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, select **Add New Pair**, and specify your key-value pairs.
 
 ![][21]
 
@@ -187,7 +187,7 @@ Bounced emails will not deliver key-value pairs to SparkPost or SendGrid.
 
 ## Content Cards
 
-To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.
+To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and select **Add New Pair**.
 
 ![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
 

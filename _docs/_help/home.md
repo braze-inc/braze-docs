@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze Learning Login
     link: https://learning.braze.com/
@@ -26,7 +26,7 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
-    link: /docs/braze_support/
+    link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
@@ -39,7 +39,7 @@ popular_topic_list:
   - name: Dispatch ID
     link: /docs/help/help_articles/data/dispatch_id/
   - name: Email Bounces
-    link: /docs/help/help_articles/email/email_bounces/
+    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
   - name: Changing Custom Data Type

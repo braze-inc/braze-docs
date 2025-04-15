@@ -39,9 +39,9 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 
 ### ステップ2:プッシュ機能を有効にする
 
-Xcode で、**署名 & 機能**ペインを使ってメインアプリのターゲットにプッシュ通知機能を追加します。
+Xcode で、メインアプリのターゲットの**署名 & 機能**セクションに移動しプッシュ通知機能を追加します。
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Xcode プロジェクトの「署名 & 機能」セクション]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## 自動プッシュ統合
 
@@ -78,7 +78,7 @@ SDK によって実行されるオートメーションステップは、コー�
 
 {% alert warning %}
 プッシュ通知の自動化を有効にするには、SDKをメインスレッドで初期化する必要がある。SDK の初期化は、アプリケーションの起動が完了する前、または AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) 実装で行う必要があります。
-SDKを初期化する前にアプリケーションの追加セットアップが必要な場合は、「[遅延初期化」の]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/)ドキュメントページを参照のこと。
+アプリケーションが SDK を初期化する前に追加の設定を必要とする場合は、[遅延初期化]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/)に関するドキュメントのページを参照してください。
 {% endalert %}
 
 ### 個々のコンフィギュレーションを上書きする
@@ -363,7 +363,7 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 {% endalert %}
 
 {% alert tip %}
-`application(_:didFinishLaunchingWithOptions:)` でプッシュ通知サブスクリプションを作成し、アプリが終了状態にある間にエンドツーエンドのユーザーが通知をタップした後にサブスクリプションがトリガーされるようにする。
+`application(_:didFinishLaunchingWithOptions:)` でプッシュ通知サブスクリプションを作成し、アプリが終了状態にある間にエンドユーザーが通知をタップした後にサブスクリプションがトリガーされるようにします。
 {% endalert %}
 
 ## {#push-testing} のテスト

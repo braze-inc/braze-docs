@@ -326,7 +326,7 @@ Android N 以降、色を使った小さな通知アイコンアセットは更�
 
 次の図の大小アイコンは、適切にデザインされたアイコンの例です。
 
-![大きなアイコンの下隅に、&quot と書かれたメッセージの横に小さなアイコンが表示されます。こんにちは、バーに行きますが。。"]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %}"大小の通知アイコン")
+![大きなアイコンの隣に「ねえ、バーに向かっているけど…」というメッセージが表示されると、右下に小さなアイコンが表示されます]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %}「大きい通知アイコンと小さい通知アイコン」)
 
 ### ステップ 3: 通知アイコンを設定する
 
@@ -392,7 +392,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-ディープリンクをカスタムで処理する場合は、Braze からのプッシュ受信およびオープンインテントをリッスンするプッシュコールバックを作成する必要があります。詳細については、[カスタム処理プッシュレシートを参照し、]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback)記事を開きます。
+ディープリンクをカスタムで処理する場合は、Braze からのプッシュ受信およびオープンインテントをリッスンするプッシュコールバックを作成する必要があります。詳しくは [[プッシュの受信と開封のカスタム処理]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback)] に関する記事をご覧ください。
 
 #### カスタムディープリンクの作成
 
@@ -402,7 +402,7 @@ Braze.configure(this, brazeConfig)
 
 Braze ダッシュボードは、通知がクリックされたときに開くプッシュ通知キャンペーンとキャンバスでのディープリンクまたは Web URL の設定をサポートしています。
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![Braze ダッシュボードの「On Click Behavior」設定。ドロップダウンから「Deep Link Into Application」を選択。]({% image_buster /assets/img_archive/deep_link_click_action.png %}"Deep Link Click Action")
 
 #### バックスタックの動作のカスタマイズ
 
@@ -444,11 +444,11 @@ Braze.configure(this, brazeConfig)
 
 ### ステップ5:通知チャネルを定義する
 
-Braze Android SDK は[Android 通知チャネル](https://developer.android.com/preview/features/notification-channels.html) をサポートしています。Braze の通知に通知チャネルの ID が含まれていない場合、または Braze の通知に無効なチャネル ID が含まれている場合、Braze は SDK で定義されているデフォルトの通知チャネルで通知を表示します。ブレーズユーザーは、プラットフォーム内で[Android 通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) を使用して通知をグループ化します。
+Braze Android SDK は[Android 通知チャネル](https://developer.android.com/preview/features/notification-channels.html) をサポートしています。Braze の通知に通知チャネルの ID が含まれていない場合、または Braze の通知に無効なチャネル ID が含まれている場合、Braze は SDK で定義されているデフォルトの通知チャネルで通知を表示します。Braze ユーザーは、プラットフォーム内で[Android 通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) を使用して通知をグループ化します。
 
-デフォルトのブレーズ通知チャネルのユーザーフェーシング名を設定するには、[`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html) を使用します。
+デフォルトの Braze 通知チャネルのユーザー向けの名前を設定するには、[`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html) を使用します。
 
-デフォルトのブレーズ通知チャネルのユーザーフェース記述を設定するには、[`BrazeConfig.setDefaultNotificationChannelDescription()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html) を使用します。
+デフォルトの Braze 通知チャネルのユーザー向けの説明を設定するには、[`BrazeConfig.setDefaultNotificationChannelDescription()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html) を使用します。
 
 [Android push object]({{site.baseurl}}/api/objects_filters/messaging/android_object/) パラメータを使用してAPI キャンペーンを更新し、`notification_channel` フィールドを含めます。このフィールドが指定されていない場合、Braze は[ダッシュボードフォールバック]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) チャネルID を持つ通知ペイロードを送信します。
 
@@ -467,7 +467,7 @@ Braze Android SDK は[Android 通知チャネル](https://developer.android.com/
 
 この時点で、Braze から送信された通知を表示できるはずです。これをテストするには、Braze ダッシュボードの [**キャンペーン**] ページにアクセスし、**プッシュ通知**キャンペーンを作成します。[**Android プッシュ**] を選択し、メッセージをデザインします。次に、作成画面で目のアイコンをクリックしてテスト送信者を取得します。現在のユーザーのユーザー ID またはメールアドレスを入力し、[**テストを送信**] をクリックします。デバイスにプッシュが表示されます。
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![Braze ダッシュボードのプッシュ通知キャンペーンの'Test' タブ。]({% image_buster /assets/img_archive/android_push_test.png %}"Android Push Test")
 
 プッシュ表示に関する問題については、[トラブルシューティングガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/)を参照してください。
 
@@ -505,7 +505,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-この例では、`US-01` インスタンスを使用しています。このインスタンスを使用していない場合は、`US-01` エンドポイントを[エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) に置き換えます。
+この例では、`US-01` インスタンスを使用しています。このインスタンスを使用していない場合は、`US-01` エンドポイントを [[自分のエンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)] に置き換えてください。
 
 ## 通知の表示のカスタマイズ
 

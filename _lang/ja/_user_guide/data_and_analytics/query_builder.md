@@ -9,7 +9,7 @@ tool: Reports
 
 # クエリビルダー
 
-> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートsを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
+> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
 
 クエリビルダーでは一部の顧客データに直接アクセスできるため、「PII を表示」[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/)がある場合にのみ、クエリビルダーにアクセスできます。
 
@@ -37,11 +37,11 @@ tool: Reports
 
 ### クエリテンプレート
 
-最初にレポートを作成する際に、**Create SQL Query**>**Query Templateを**選択してクエリテンプレートにアクセスする。
+クエリテンプレートにアクセスするには、最初にレポートを作成するときに [**SQL クエリを作成**] > [**クエリテンプレート**] を選択します。
 
 使用可能なテンプレートの一覧については、[クエリーテンプレートs]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)を参照してください。
 
-### データ期間
+### データの期間
 
 すべてのクエリーは過去60日間のデータを表示する。 
 
@@ -96,7 +96,7 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',CURRENT_DATE()));
 ```
 
-`CANVAS_ID` 、`CANVAS_VARIATION_API_ID` 、`CAMPAIGN_ID` のクエリを実行すると、それらに関連する名前カラムが自動的に結果テーブルに含まれる。`SELECT` クエリー自体に含める必要はない。
+`CANVAS_ID` 、`CANVAS_VARIATION_API_ID` 、`CAMPAIGN_ID` に対するクエリを実行すると、それらに関連付けられている名前列が自動的に結果テーブルに含まれます。`SELECT` クエリ自体にこれらを含める必要はありません。
 
 | ID名 | 関連する名前欄 |
 | --- | --- |
@@ -105,7 +105,7 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 | `CAMPAIGN_ID` | キャンペーン名 |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-このクエリーは、3つのIDすべてと、それに関連する名前カラムを、最大100行で検索する：
+このクエリは、3つのすべての ID と、それらに関連付けられている名前の列を検索します。行数の上限は100行です。
 
 ```sql
 SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID

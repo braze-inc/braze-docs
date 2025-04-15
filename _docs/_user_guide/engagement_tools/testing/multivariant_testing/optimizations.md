@@ -10,7 +10,7 @@ description: "Learn how to use Winning Variant or Personalized Variant when crea
 
 When [creating an A/B test][1] for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
-![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimization, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Both options work by sending an initial test to a percentage of your target segment. After the test ends, the remaining users in your audience are sent either the best performing variant (Winning Variant) or the variant they're most likely to engage with (Personalized Variant).
 
@@ -27,10 +27,9 @@ Sending the Winning Variant is similar to a standard A/B test. Users in this gro
 
 | Field | Description |
 | --- | --- | 
-| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
-| Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when the Winning Variant is sent to the remaining users.<br><br>When sending in users' local time or with Intelligent Timing, the Winning Variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Winning Variant group. |
-| Fallback | What happens if no variant wins by a statistically significant margin. Choose between sending the best performing variant anyway, or ending the test and not sending any further messages. |
+| Determine Winning Variant | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
+| Winning Variant Send Time | The date and time the winning variant is sent. |
+| If No Winning Variant Can Be Determined | What happens if no variant wins by a statistically significant margin. Choose between sending the best performing variant anyway, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Personalized Variant
@@ -44,10 +43,9 @@ To determine the best variant for each user, Braze will send an initial test to 
 
 | Field | Description |
 | --- | --- | 
-| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
-| Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when Personalized Variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for Personalized Variants shouldn't last any less than 4 hours.<br><br>When sending in users' local time or with Intelligent Timing, Personalized Variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Personalized Variant group. |
-| Fallback | What happens if no Personalized Variants are found. Choose between sending the Winning Variant instead, or ending the test and not sending any further messages. |
+| Determine Personalized Variant | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
+| Personalized Variant Send Time | The date and time the personalized variant is sent. |
+| If No personalized Variant Can Be Determined | What happens if no Personalized Variants are found. Choose between sending the Winning Variant instead, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Analytics

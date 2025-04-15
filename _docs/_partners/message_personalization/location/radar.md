@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences. These include pickup and delivery tracking, location-triggered notifications, contextual personalization, location verification, store locators, address autocomplete, and more.
+> [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining the Braze industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences. These include pickup and delivery tracking, location-triggered notifications, contextual personalization, location verification, store locators, address autocomplete, and more.
+
+_This integration is maintained by Radar._
+
+## About the integration
 
 The Braze and Radar integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. When Radar geofence or trip tracking events are generated, custom events and user attributes are sent to Braze in real-time. These events and attributes can then be used to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
 
-Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Prerequisites
 
@@ -178,5 +182,6 @@ near you!
 {% alert tip %}
 Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in Connected Content.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/radar_example.png %}

@@ -199,7 +199,7 @@ module Jekyll
 
             # if less then 2, then always show
             if (level < @minlevel)
-                navclass = ' show'
+              navclass = ' show'
             end
 
             nextlevel = level + 1
@@ -241,7 +241,7 @@ module Jekyll
                 end
 
                 # if it's an auto expand page, set to expanded
-                if (@nav_expand_list.include?(ma[@page_id_index]))
+                if (@nav_expand_list.include?(ma[@page_id_index]) || is_currentpage)
                   item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, (@minlevel - 1))
                 else
                   item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, nextlevel)
@@ -250,7 +250,7 @@ module Jekyll
                 ariaexpanded = false
                 # only set upto min level
 
-                if level  < (@minlevel - 1)
+                if level < (@minlevel - 1)
                   ariaexpanded = true
                 end
 
@@ -271,7 +271,7 @@ module Jekyll
                   end
                 end
                 # if it's an auto expand page, set to expanded
-                if (@nav_expand_list.include?(ma[@page_id_index]))
+                if (@nav_expand_list.include?(ma[@page_id_index]) || is_currentpage)
                   ariaexpanded = true
                 end
                 # build menu based on if item has a page or not. if it has no page, just show title, else add link

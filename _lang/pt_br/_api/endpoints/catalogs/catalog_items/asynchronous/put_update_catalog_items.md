@@ -40,7 +40,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
-| `items` | Obrigatória | Vetor | Um vetor que contém objetos de item. Cada objeto deve ter uma ID. Os objetos de item devem conter campos existentes no catálogo. São permitidos até 50 objetos de item por solicitação. |
+| `items` | Obrigatória | Vetor | Um vetor que contém objetos de item. Cada objeto deve ter uma ID. Os objetos de item devem conter campos existentes no catálogo. Até 50 objetos de item são permitidos por solicitação. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -80,7 +80,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Resposta
 
-Existem três respostas de código de status para este endpoint: `202`, `400` e `404`.
+Há três respostas de código de status para esse endpoint: `202`, `400` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 
@@ -125,7 +125,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `ids-not-unique` | Verifique se cada ID de item é exclusivo. |
 | `ids-too-large` | O limite de caracteres para cada ID de item é de 250 caracteres. |
 | `item-array-invalid` | `items` deve ser um vetor de objetos. |
-| `items-missing-ids` | Confirme se cada item tem um ID. |
+| `items-missing-ids` | Alguns itens não têm IDs de item. Confirme se cada item tem um ID. |
 | `items-too-large` | Os valores dos itens não podem exceder 5.000 caracteres. |
 | `invalid-ids` | Os caracteres compatíveis com os nomes de ID de item são letras, números, hífens e sublinhados. |
 | `invalid-fields` | Confirme se todos os campos que está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo ID mencionado no erro. |

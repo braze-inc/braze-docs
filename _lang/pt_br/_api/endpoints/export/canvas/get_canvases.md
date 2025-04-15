@@ -36,7 +36,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | --------- | -------- | --------- | ----------- |
 | `page` | Opcional | Número inteiro | A página dos canvas a ser retornada, retornará ao padrão `0` (retorna o primeiro conjunto de até 100) |
 | `include_archived` | Opcional | Booleano | Se deve ou não incluir canvas arquivados, o padrão é `false`. |
-| `sort_direction` | Opcional | String | \- Classificar o tempo de criação do mais novo para o mais antigo: passe o valor `desc`.<br> \- Classificar o tempo de criação do mais antigo para o mais recente: passe o valor `asc`. <br><br>Se `sort_direction` não estiver incluído, a ordem padrão é da mais antiga para a mais recente. |
+| `sort_direction` | Opcional | String | \- Classifique o tempo de criação do mais novo para o mais antigo: passe o valor `desc`.<br> \- Classifique o tempo de criação do mais antigo para o mais recente: passe o valor `asc`. <br><br>Se `sort_direction` não estiver incluído, a ordem padrão será da mais antiga para a mais recente. |
 | `last_edit.time[gt]` | Opcional | Horário | Filtra os resultados e retorna apenas canvas que foram editados depois do tempo fornecido até agora. O formato é `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Para obter ajuda com exportações CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

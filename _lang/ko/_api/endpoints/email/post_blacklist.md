@@ -16,7 +16,7 @@ description: "이 문서에서는 블랙리스트 이메일 Braze 엔드포인�
 {% endapimethod %}
 
 {% alert important %}
-Braze는 `/email/blacklist` 엔드포인트와 동일한 기능을 갖춘 [`/email/blocklist` 엔드포인트]({{site.baseurl}}/api/endpoints/email/post_blocklist/)를 출시했습니다. 대신 `/email/blocklist` 엔드포인트를 사용하는 것이 좋습니다.
+Braze는 `/email/blacklist` 엔드포인트와 동일한 기능을 갖춘 [`/email/blocklist` 엔드포인트를]({{site.baseurl}}/api/endpoints/email/post_blocklist/) 출시했습니다. 대신 `/email/blocklist` 엔드포인트를 사용하는 것이 좋습니다.
 {% endalert %}
 
 > 이 엔드포인트를 사용하여 사용자의 이메일 수신을 취소하고 하드 바운스로 표시할 수 있습니다.

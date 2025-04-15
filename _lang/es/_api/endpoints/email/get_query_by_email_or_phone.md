@@ -21,8 +21,8 @@ description: "Este artículo describe los detalles sobre el estado de suscripci�
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --- | --- | --- | --- |
-| `email` | Sí | Cadena | La dirección de correo electrónico del usuario (debe incluir al menos una dirección y como máximo 50 direcciones). |
-| `phone` | Sí | Cadena | El número de teléfono del usuario (debe incluir al menos un número de teléfono y como máximo 50 números de teléfono). Te recomendamos que lo proporciones en formato E.164. |
+| `email` | Sí | Cadena | La dirección de correo electrónico del usuario (debe incluir al menos una dirección y un máximo de 50 direcciones). |
+| `phone` | Sí | Cadena | El número de teléfono del usuario (debe incluir al menos un número de teléfono y como máximo 50 números de teléfono). Le recomendamos que lo facilite en formato E.164. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud

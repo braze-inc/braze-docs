@@ -16,7 +16,7 @@ This document is for informational purposes only. It is not intended to provide,
 
 ## Subscription states {#subscription-states}
 
-Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
+Braze has three global subscription states for email users (listed in the following table), which are the final gatekeepers between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -33,17 +33,17 @@ Braze does not count subscription state changes against your data points, global
 
 Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in your **Sending Configuration** settings, normal email sending will resume.
 
-If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
+If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refer to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
 
 {% alert tip %}
-Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
+Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
 {% endalert %}
 
 ### Bounces and invalid emails
 
 {% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
-If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ### Updating email subscription states
 
@@ -55,12 +55,12 @@ Use the Braze SDK to update a user's subscription state.
 
 #### REST API
 
-Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.
+Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the [`email_subscribe` attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object) for a given user.
 
 #### User profile
 
 1. Find the user through **Search Users**. 
-2. Under the **Engagement** tab, click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. 
+2. Under the **Engagement** tab, select the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. 
 
 If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 
@@ -70,14 +70,14 @@ If available, the user profile also displays a timestamp for when the user's sub
 
 ### Checking email subscription state
 
-![User profile for John Doe with their email subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 There are two ways you can check a user's email subscription state with Braze:
 
-1. **REST API export:** Use the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users][5] page, then select the **Engagement** tab to view and manually update a user's subscription state.
+1. **REST API export:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
+2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state. 
 
-When a user updates their email address, their subscription state will be set to subscribed, unless the updated email address already exists elsewhere in a Braze workspace. You can export individual user profiles in JSON format using the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints.
+When a user updates their email address, their subscription state will be set to subscribed, unless the updated email address already exists elsewhere in a Braze workspace.
 
 ## Subscription groups
 
@@ -85,59 +85,60 @@ Subscription groups are segment filters that can further narrow your audience fr
 
 For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
-Use the [Subscription Group endpoints][25] to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
+Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscription_groups) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
 ### Creating a subscription group
 
 1. Go to **Audience** > **Subscriptions**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
-2. Select **+ Create Email Subscription Group**. 
-3. Give your subscription group a name and description, and click **Save**. 
+2. Select **Create email subscription group**. 
+3. Give your subscription group a name and description.
+4. Select **Save**. 
 
 All subscription groups are automatically added to your preference center.
 
-![Fields to create a subscription group.][26]{: height="50%" width="50%"}
+![Fields to create a subscription group.][2]{: style="max-width:75%"}
 
 ### Segmenting with a subscription group
 
 When creating your segments, set the subscription group name as a filter. This will confirm that users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
 
-![GIF of a user setting a subscription group name as a filter.][27]{: style="max-width:80%"}
+![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.][3]{: style="max-width:90%"}
 
 ### Archiving subscription groups
 
 Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center. If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
-You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
+To archive your group from the **Subscription Groups** page, do the following:
 
-Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
+1. Find your group in the list of subscription groups. 
+2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;dropdown menu.
+
+Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is subscribed to it, they will remain "subscribed" to this group, even if they click an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
 
 #### Viewing subscription group sizes
 
-You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to see the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
+You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to view the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
 
-![][10]
+![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.][4]
 
 #### Viewing subscription groups in campaign analytics
 
 You can see the number of users who changed their subscription state (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
 
-From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
+1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
+2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
-![][30]
+![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.][5]
 
 ## Email preference center
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/).
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. 
+
+To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. We recommend including this Liquid tag: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users select the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. We recommend including this Liquid tag: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 Note that when a user selects "Unsubscribe from all of the above types of emails" in the email preference center, this updates their global email subscription status to `unsubscribed` and unsubscribes them from all subscription groups.
 
@@ -153,17 +154,24 @@ If you anticipate that your email recipients will have a Chinese IP address, the
 
 ### Creating a custom unsubscribe page
 
-When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
+When users select an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
+To create a custom landing page that users will be directed to (instead of the default page) upon subscribing:
 
-![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
+1. Go to **Email Preferences** > **Subscription Pages and Footers**.
+2. Provide the HTML for your custom landing page. 
+
+We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
+
+![Custom unsubscribe email in the Custom Unsubscribe Page panel.][6]
 
 ### Creating a custom opt-in page
 
 Instead of immediately subscribing a user to your email campaigns, creating a custom opt-in page can give your users the opportunity to acknowledge and control their notification preferences. This additional communication can also help your email campaigns stay out of the spam folder since your users will have chosen to be opted-in. 
 
-Go to **Email Preferences** > **Subscription Pages and Footers**, and customize the styling in the **Custom Opt-In Page** section to see how that indicates to your users that they've been subscribed.
+1. Go to **Settings** > **Email Preferences**.
+2. Select **Subscription Pages and Footers**.
+3. Customize the styling in the **Custom opt-in page** section to see how that indicates to your users that they've been subscribed.
 
 {% alert tip %}
 Braze recommends using a double opt-in process to help your email outreach. This process sends an additional confirmation email where a user would confirm their notification preferences again via a link in the email. At this point, the user is considered opted-in.
@@ -171,7 +179,7 @@ Braze recommends using a double opt-in process to help your email outreach. This
 
 ## Subscriptions and campaign targeting {#subscriptions-and-campaign-targeting}
 
-Campaigns with push or email messages are targeted at users who are subscribed or opted-in by default. You can change this targeting preference when editing a campaign by going to the **Target Audience** step and clicking the dropdown next to **Send to these users:**.
+By default, campaigns with push or email messages are targeted at users who are subscribed or opted-in by default. You can change this targeting preference when editing a campaign by going to the **Target Audience** step and selecting the dropdown next to **Send to these users:**.
 
 Braze supports three targeting states:
 
@@ -180,36 +188,22 @@ Braze supports three targeting states:
 - All users, including those who have unsubscribed.
 
 {% alert important %}
-It is your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
+It's your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
-
-![Audience targeting example for users who are subscribed or opted in the Targeting Options section of the Target Audience step.][17]
 
 ## Segmenting by user subscriptions {#segmenting-by-user-subscriptions}
 
-The `Email Subscription Status` and `Push Subscription Status` filters allow you to segment your users by their subscription status.
+The "Email Subscription Status" and "Push Subscription Status" filters allow you to segment your users by their subscription status.
 
-For example, this can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed, but not opted-in.
+This can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed, but not opted-in.
 
-![Email Subscription Status used as a segment filter.][18]
+![Email Subscription Status used as a segment filter.][8]
 
-[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
-[17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[18]: {% image_buster /assets/img_archive/not_optin.png %}
-[19]: {% image_buster /assets/img_archive/email_settings.png %}
-[25]: {{site.baseurl}}/api/endpoints/subscription_groups
-[26]: {% image_buster /assets/img/sub_group_create.png %}
-[27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{site.baseurl}}/api/endpoints/preference_center/
-[29]: {% image_buster /assets/img/user-sub-state-export.png %}
-[30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[3]: {% image_buster /assets/img/push_example.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
+[1]: {% image_buster /assets/img/push_example.png %}
+[2]: {% image_buster /assets/img/sub_group_create.png %}
+[3]: {% image_buster /assets/img/segment_sub_group.png %}
+[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
+[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
+[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
+[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
+[8]: {% image_buster /assets/img_archive/not_optin.png %}

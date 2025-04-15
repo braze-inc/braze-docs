@@ -6,7 +6,7 @@ page_order: 1
 alias: /landing_pages/connect_domain/
 ---
 
-# 도메인 연결하기
+# 도메인 연결
 
 > 자체 도메인을 Braze 작업 영역에 연결하여 브랜드에 맞게 랜딩 페이지 URL을 사용자 지정하세요.
 
@@ -28,7 +28,7 @@ alias: /landing_pages/connect_domain/
 도메인 인증이 완료되면 해당 도메인은 Braze에서 기본적으로 사용됩니다. 예를 들어 하위 도메인 `forms.example.com` 을 연결하면 랜딩 페이지 URL이 `forms.example.com/holiday-sale` 과 같이 업데이트됩니다.
 
 {% alert note %}
-사용자 정의 도메인 삭제 기능이 곧 출시됩니다. 하위 도메인을 제거해야 하는 경우 고객 성공 관리자에게 문의하세요.
+사용자 정의 도메인 삭제 기능이 곧 출시될 예정입니다. 하위 도메인을 제거해야 하는 경우 고객 성공 관리자에게 문의하세요.
 {% endalert %}
 
 ## 도메인 공급업체의 리소스

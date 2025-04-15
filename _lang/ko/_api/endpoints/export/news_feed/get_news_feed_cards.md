@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 내보내기 뉴스피드 카드 목록 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 내보내기 뉴스 피드 카드 목록 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -18,9 +18,7 @@ description: "이 문서에서는 내보내기 뉴스피드 카드 목록 Braze 
 
 카드는 생성 시간(기본적으로 가장 오래된 것부터 최신 것까지)에 따라 정렬된 100개 그룹으로 반환됩니다.
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객이 더 유연하고, 맞춤화 가능하며, 신뢰할 수 있는 콘텐츠 카드 메시징 채널로 이동할 것을 권장합니다. [마이그레이션 가이드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)를 확인해 보세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
@@ -67,7 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

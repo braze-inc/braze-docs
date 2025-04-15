@@ -2,7 +2,7 @@
 nav_title: バナーカードの統合
 article_title: バナーカードの統合
 hidden: true
-description: "このリファレンス記事では、バナーカードとこの機能をブレーズSDK に統合する方法について説明します。"
+description: "この参考記事では、バナーカードと、この機能を Braze SDK に統合する方法について説明します。"
 platform:
   - iOS
   - Android
@@ -15,7 +15,7 @@ platform:
 [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about)と同様に、バナーカードはあなたのアプリやウェブサイトに直接埋め込まれており、自然な感じの体験でユーザーを巻き込むことができます。これらは、他のチャネル(電子メールやプッシュ通知など)の到達範囲を拡張しながら、すべてのユーザにパーソナライズされたメッセージングを作成するための迅速かつシームレスなソリューションです。
 
 {% alert important %}
-Banner Cardは現在初期アクセス中です。早期アクセスに参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。
+バナーカードは現在、早期アクセス段階です。早期アクセスに参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。
 {% endalert %}
 
 この機能は、次の[SDK バージョン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) で使用できます。
@@ -24,33 +24,33 @@ Banner Cardは現在初期アクセス中です。早期アクセスに参加す
 
 ## ダッシュボードの前提条件
 
-### 配置の定義 {#define-placements}
+### 配置を定義する {#define-placements}
 
 アプリでバナーカードキャンペーンを起動する前に、Braze ダッシュボードに配置を設定する必要があります。配置は、バナーカードを表示できるアプリケーションで定義する場所です。
 
-#### ステップ1:新規配置の作成
+#### ステップ1:新規配置を作成する
 
 **Settings**> **Banner Cards Placements**に移動し、**Create Placement**を選択します。
 
 ![配置ID を作成するためのバナーカード配置セクション。]({% image_buster /assets/img/banner_cards/create_placement.png %})
 
-#### ステップ 2:詳細を記入する
+#### ステップ 2:詳細を入力する
 
 配置に名前を付け、**配置ID**を付けます。オプションで、配置の説明を追加できます。
 
 マーケティングチームと協力して、このID を作成します。これは、アプリのコードで参照するID です。マーケティングチームは、このID を使用して、アプリの場所にキャンペーンを割り当てます。 
 
 {% alert important %}
-起動後に配置ID を編集することは避けてください。これにより、アプリやウェブサイトとの統合が損なわれる可能性があります。
+開始後に配置 ID を編集しないでください。編集すると、アプリまたは Web サイトとの統合が損なわれる可能性があります。
 {% endalert %}
 
-![バナーカードを指定する配置詳細は、春の販売促進キャンペーンの左サイドバーに表示されます。]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
+![バナーカードを指定する配置の詳細は、春の販売促進キャンペーンの左側のサイドバーに表示されます。]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
 
 バナーカードキャンペーンの起動方法については、[バナーカードの作成]({{site.baseurl}}/create_banner_card/)を参照してください。
 
 ## アプリの配置を更新する {#requestBannersRefresh}
 
-配置は各セッションごとに要求でき、ユーザーのセッションが期限切れになったとき、または`changeUser` メソッドを使用して識別されたユーザーを変更したときに自動的にキャッシュされます。
+配置はセッションごとにリクエストでき、ユーザーのセッションの有効期限が切れたとき、または `changeUser` メソッドを使用して識別されたユーザーを変更したときに自動的にキャッシュされます。
 
 {% alert tip %}
 バナーのダウンロードや表示の遅延を避けるため、できるだけ早く配置を更新してください。
@@ -119,10 +119,10 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-## アップデートを聴く {#subscribeToBannersUpdates}
+## 更新をリッスンする {#subscribeToBannersUpdates}
 
 {% alert tip %}
-このガイドのSDK メソッドを使用してバナーを挿入すると、すべての分析イベントが自動的に処理されます。HTML を手動でレンダリングする場合は、[](mailto:banners-feedback@braze.com) を知らせてください。
+このガイドのSDK メソッドを使用してバナーを挿入すると、すべての分析イベントが自動的に処理されます。HTML を手動でレンダリングする場合は、[お知らせください](mailto:banners-feedback@braze.com)。
 {% endalert %}
 
 {% tabs %}
@@ -272,12 +272,12 @@ Banner globalBanner = Braze.getInstance(context).getBanner("global_banner");
 
 {% endtab %}
 {% tab Kotlin %}
-コットリンのバナーを取得するには、以下を使用します。
+Kotlin でバナーを取得するには、以下を使用します。
 ```kotlin
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
 
-Android ビューを使用している場合は、次のXML を使用します。
+Android ビューを使用している場合は、次の XML を使用します。
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -327,9 +327,11 @@ This feature is not currently supported on Roku.
 
 ## 分析
 
-Braze は、SDK メソッドを使用してBanner カードを挿入するときに、すべてのインプレッションロギングを自動的に処理します。 
+SDK メソッドを使用してバナーカードを挿入する場合、Braze はすべてのインプレッションログを自動的に処理するため、手動でインプレッションを追跡する必要はありません。
 
-HTML を解析してレンダリングする必要がある場合は、[ us](mailto:banners-feedback@braze.com) にお問い合わせください。以下の方法を使用して、インプレッションを追跡できます。
+カスタムビューでHTML を解析してレンダリングする必要がある場合は、[ こちらにお問い合わせください。](mailto:banners-feedback@braze.com) 
+
+{% details 手動でインプレッションを追跡するための詳細 %}
 
 {% alert important %}
 統合のカスタマイズは不要な場合があるため、次の手順を慎重に検討してください。
@@ -407,6 +409,8 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
+{% enddetails %}
+
 ## ベストプラクティス
 
 ### バナーカードの寸法とサイズ
@@ -418,4 +422,4 @@ This feature is not currently supported on Roku.
 {% endalert %}
 
 - HTML は、レンダリングされるコンテナの全幅を使用します。
-- ベストプラクティスとして、固定寸法要素を作成し、それらの寸法をコンポーザーでテストすることをお勧めします。
+- ベストプラクティスとして、固定ディメンションの要素を作成し、そのディメンションをコンポーザーでテストすることをお勧めします。

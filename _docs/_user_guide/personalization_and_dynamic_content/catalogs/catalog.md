@@ -8,9 +8,9 @@ description: "This reference article covers how to create catalogs that referenc
 
 # Creating a catalog
 
-> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.<br><br>This page covers how to prepare and upload a CSV file to create a catalog, how to manage catalogs, and more.
 
-Some common use cases for catalogs include:
+Commons use cases for catalogs include:
 
 - Products
 - Services
@@ -19,7 +19,7 @@ Some common use cases for catalogs include:
 - Music
 - Packages
 
-Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
+After this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 ## Preparing your CSV file
 
@@ -46,15 +46,11 @@ We also recommend formatting all text in your CSV files as lowercase. Make sure 
 
 To create a catalog, go to **Data Settings** > **Catalogs**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
-{% endalert %}
-
 Select **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV
 
-1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
 2. Select one of the following data types for each column: boolean, number, string, or time.
 <br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
@@ -62,10 +58,10 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores<br><br>
 4. (optional) Add a description for the catalog.
-5. Click **Process Catalog** to create the catalog.
+5. Select **Process Catalog** to create the catalog.
 
 {% alert note %}
-This data type cannot be edited after you set up your catalog.
+This data type cannot be edited after you set up your catalog. In addition, a `NULL` value isn't supported in CSV upload and will be treated as a string.
 {% endalert %}
 
 You can also use templates in a catalog name. For example, you can use the following:
@@ -82,9 +78,11 @@ You can also use templates in a catalog name. For example, you can use the follo
 Your CSV file can be rejected if you go above your [tier](#tiers). 
 {% endalert %}
 
-You can also update the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
+You can also update the CSV file after selecting to create a catalog in the browser. Select **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
 ### Method 2: Create in the browser
+
+To edit or create catalogs in the browser, you'll need "Manage Catalogs Dashboard" permission.
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
@@ -143,7 +141,7 @@ This data type cannot be edited after you set up your catalog.
 
 ![Four catalog column names: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
+Next, we'll name this catalog "games_catalog" and select the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
 ![A catalog named "games_catalog".][11]{: style="max-width:85%;"}
 
@@ -163,15 +161,7 @@ For example, if you want to edit an individual catalog item, you can use the [`/
 
 ## Catalog tiers {#tiers}
 
-The following table describes the differences between the free and pro version of catalogs:
-
-| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
-| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
-| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+The free version of catalogs supports CSV file sizes of up to 100 MB for all CSV files combined across your company, whereas the Catalogs Pro version supports CSV file sizes of up to 2 GB for a single CSV file.
 
 ### Catalog storage
 

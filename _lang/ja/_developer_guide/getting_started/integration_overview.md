@@ -92,7 +92,7 @@ Brazeダッシュボードは、私たちのウェブUIインターフェイス�
 
 
 ## 統合 {#integration}
-![]({% image_buster /assets/img/getting-started/data-graphic.png %}) データソースからユーザーデバイスへの情報の流れを表す抽象的なピラミッドグラフィック。{: style="max-width:45%;float:right;margin-left:15px;"} 
+![データソースからユーザー機器への情報の流れを表す抽象的なピラミッド図形。]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
 
 BrazeはiOSアプリ、Androidアプリ、ウェブアプリなどをサポートしている。また、React Native や Unity のようなクロスプラットフォームのラッパー SDK を使うこともできます。通常、顧客は1～6週間で統合されます。多くの顧客は、技術スキルと帯域幅の広さにもよりますが、たった1人のエンジニアで Braze を統合しています。これは、具体的な統合の範囲と、チームが Braze のプロジェクトに費やす時間に完全に依存します。 
 

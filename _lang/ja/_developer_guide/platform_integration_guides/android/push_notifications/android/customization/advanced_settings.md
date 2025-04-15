@@ -37,13 +37,13 @@ channel:
 
 画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
 
-![タイトル "Appboy!"、メッセージ "This is the message body..."、要約テキスト "and this is the Summary Text. "のAndroidメッセージ]({% image_buster /assets/img_archive/messagesummary.gif %})
+![タイトルが「Appboy!」、メッセージが「これはメッセージ本文です。」、要約テキストが「これは要約テキストです。」である Android メッセージ]({% image_buster /assets/img_archive/messagesummary.gif %})
 
 ## カスタム URI {#custom-uri}
 
 **カスタム URI** 機能を使用すると、通知がクリックされたときの誘導先 Web URL または Android リソースを指定できます。カスタム URI が指定されていない場合、通知をクリックするとユーザーはアプリに誘導されます。カスタム URI を使用してアプリ内でディープリンクし、アプリ外部のリソースにユーザーを誘導することができます。この設定は、[メッセージングAPI]({{site.baseurl}}/api/endpoints/messaging/)またはダッシュボードのプッシュ作成画面の「**詳細設定**」から行うことができる：
 
-![Brazeプッシュコンポーザーのディープリンク詳細設定]({% image_buster /assets/img_archive/deep_link.png %})
+![Braze プッシュコンポーザーのディープリンクの高度な設定。]({% image_buster /assets/img_archive/deep_link.png %})
 
 ## 通知の表示優先度 {#notification-priority}
 
@@ -76,9 +76,9 @@ Android O では、通知音は通知チャネルのプロパティになりま�
 
 Android O より前のバージョンを実行しているデバイスの場合、Braze を使用すると、ダッシュボードコンポーザーを通じて個々のプッシュメッセージのサウンドを設定できます。これを行うには、デバイスのローカルサウンドリソースを指定します (例: `android.resource://com.mycompany.myapp/raw/mysound`)。このフィールドに「default」を指定すると、デフォルトの通知音がデバイスで再生されます。これは、[メッセージングAPI]({{site.baseurl}}/api/endpoints/messaging/)またはダッシュボードのプッシュ作成画面の「**詳細設定**」で指定できる。
 
-![Brazeプッシュコンポーザーのサウンド詳細設定]({% image_buster /assets/img_archive/sound_android.png %})
+![Braze プッシュコンポーザーのサウンドの高度な設定。]({% image_buster /assets/img_archive/sound_android.png %})
 
 完全なサウンドリソース URI (例: `android.resource://com.mycompany.myapp/raw/mysound`) をダッシュ​​ボードプロンプトに入力します。
 
-特定のサウンドを全ユーザーにメッセージングするには、[通知チャネル](https://developer.android.com/training/notify-user/channels)設定で間接的にサウンドを指定し（O+デバイスをターゲットにする）*、*ダッシュボードから個々のサウンドを送信する（<Oデバイスをターゲットにする）ことを推奨する。
+特定のサウンドを指定したメッセージを全ユーザーベースに送信するには、[[通知チャネル設定](https://developer.android.com/training/notify-user/channels)] (O 以降のデバイスを対象とする) を通じて間接的にサウンドを指定し、*かつ*、ダッシュボードから個別のサウンドを送信する (O より前のデバイスを対象とする) ことをお勧めします。
 

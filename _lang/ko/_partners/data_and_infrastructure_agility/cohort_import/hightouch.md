@@ -33,9 +33,9 @@ Braze에서 **세그먼트로** 이동하여 새 세그먼트를 생성하고 �
 ### 이 통합 사용
 하이터치 세그먼트를 사용하려면 Braze 캠페인 또는 캔버스를 생성하고 세그먼트를 타겟 오디언스로 선택합니다.<br><br>![][10]{: style="max-width:90%;"}
 
-## 사용자 매칭
+## 사용자 일치
 
-식별된 사용자는 `external_id` 또는 `alias` 으로 일치시킬 수 있습니다. 익명 사용자는 `device_id`. 원래 익명 사용자로 생성된 식별된 사용자는 `device_id` 으로 식별할 수 없으며 `external_id` 또는 `alias` 으로 식별해야 합니다.
+식별된 사용자는 `external_id` 또는 `alias`로 일치할 수 있습니다. 익명 사용자는 `device_id`로 매칭될 수 있습니다. 익명 사용자로 처음 생성된 식별된 사용자는 `device_id`로 식별할 수 없으며, `external_id` 또는 `alias`로 식별해야 합니다.
 
 [1]: https://hightouch.io
 [6]: {% image_buster /assets/img/hightouch/data_import_key.png %}

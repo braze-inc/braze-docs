@@ -42,7 +42,7 @@ Braze Audience Sync to TikTok は Audience Sync Pro 統合です。この統合�
 
 ### ステップ1:TikTokに接続
 
-Brazeのダッシュボードで、**Partner Integrations** > **Technology Partners** に移動し、**TikTok** を選択します。TikTok Audience Syncで、**Connect TikTokを**選択する。
+Brazeのダッシュボードで、**Partner Integrations** > **Technology Partners** に移動し、**TikTok** を選択します。TikTok オーディエンス同期で、[**TikTok を接続**] を選択します。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。

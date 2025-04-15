@@ -58,6 +58,6 @@ Para más detalles sobre las imágenes compatibles, consulta [Especificaciones d
 Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña][6].
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [8]: {% image_buster /assets/img_archive/android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}

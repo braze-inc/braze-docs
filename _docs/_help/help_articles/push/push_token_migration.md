@@ -10,17 +10,23 @@ channel: push
 
 # Migrating push tokens
 
-A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. Braze connects with push service providers like Firebase Cloud Messaging Service (FCMs) for Android and Apple Push Notification Service (APNs) for iOS, and those providers send unique device tokens that identify your app. If you were sending push notifications prior to integrating Braze, either on your own or through another provider, push token migration allows you to continue sending push notifications to your users with registered push tokens.
+> A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. Braze connects with push service providers like Firebase Cloud Messaging Service (FCMs) for Android and Apple Push Notification Service (APNs) for iOS, and those providers send unique device tokens that identify your app. If you were sending push notifications prior to integrating Braze, either on your own or through another provider, push token migration allows you to continue sending push notifications to your users with registered push tokens.
 
 ## Automatic migration via SDK
 
-The Braze SDK will automatically migrate the push token of a user who has previously opted into your push notifications the first time they sign into your Braze-integrated app or site. If you integrate the Braze SDKs, you will not need to migrate push tokens using the API.
+After you [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/), push tokens for your opted-in users will be automatically migrated the next time they open your app. Until then, you won't be able to send those users push notifications through Braze.
 
-However, because push tokens migrate when a user first logs into your app, note that Braze will not be able to send push notifications to users who have not logged in after your SDK integration. You may still wish to manually migrate Android and iOS push tokens as a way to re-engage with these users.
+Alternatively, you can [migrate your push tokens manually](#manual-migration-via-api), allowing you to re-engage your users more promptly.
 
-{% alert note %}
-Due to the nature of web push tokens, every ~60 days the token expires and is reset. Anybody who does not have a session within that time period won't have an active web push token. Braze will not migrate expired web push tokens. These users will need to be re-engaged through [push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages).
-{% endalert %}
+### Web token considerations
+
+Due to the nature of web push tokens, be sure you consider the following when implementing push for web:
+
+|Consideration|Details|
+|----------------------|------------|
+| **Service workers**  | By default, the Web SDK will look for a service worker at `./service-worker` unless another option is specified, such as `manageServiceWorkerExternally` or `serviceWorkerLocation`. If your service worker isn't set up properly, it may lead to expired push tokens for your users. |
+| **Expired tokens**   | If a user hasn't started a web session within 60 days, their push token will expire. Since Braze can't migrate expired push tokens, you'll need to send a [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) to re-engage them. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Manual migration via API
 
@@ -39,7 +45,8 @@ It is not possible to migrate web push tokens through the API. This is because w
 As an alternative to API migration, we recommend that you integrate the SDK and allow your token base to repopulate naturally.
 {% endalert %}
 
-### Migration if external ID is present
+{% tabs local %}
+{% tab External ID present %}
 For identified users, set the `push_token_import` flag to `false` (or omit the parameter) and specify the `external_id`, `app_id`, and `token` values in the user `attributes` object. 
 
 For example:
@@ -63,8 +70,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
   ]
 }'
 ```
+{% endtab %}
 
-### Migration if external ID is not present
+{% tab External ID missing %}
 When importing push tokens from other systems, an `external_id` is not always available. In this circumstance, set your `push_token_import` flag as `true` and specify the `app_id` and `token` values. Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals. If the token already exists in Braze, the request is ignored.
 
 For example:
@@ -104,6 +112,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 After import, when the anonymous user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
 
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn't have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to log in to the device with said push token, we will do nothing.
+{% endtab %}
+{% endtabs %}
 
 ## Importing Android push tokens
 

@@ -360,7 +360,7 @@ glossaries:
     description: Créer un centre de préférences pour permettre aux utilisateurs de gérer leurs préférences de notification pour les campagnes par e-mail.
     tags:
       - Preference Center
-  - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
+  - name: "<a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
     description: Mettre à jour un centre de préférences.
     tags:
       - Preference Center
@@ -372,11 +372,11 @@ glossaries:
     description: Lister un produit du catalogue et ses détails.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Éditer plusieurs objets dans votre catalogue.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Créer plusieurs objets dans votre catalogue.
     tags:
       - Catalogs
@@ -388,27 +388,27 @@ glossaries:
     description: Créer un catalogue.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>"
     description: "Lister les catalogues d'un espace de travail."
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Créer un produit dans un catalogue.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Éditer un produit dans un catalogue.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: Retourner plusieurs produits du catalogue et leur contenu.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Supprimer un produit dans un catalogue.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: Mettre à jour un produit dans un catalogue.
     tags:
       - Catalogs
@@ -440,11 +440,11 @@ glossaries:
     description: Rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail.
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
     description: "Mettez à jour un compte utilisateur de tableau de bord existant en spécifiant l'e-mail, les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe)."
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>"
     description: Supprimer définitivement un utilisateur du tableau de bord existant.
     tags:
       - SCIM

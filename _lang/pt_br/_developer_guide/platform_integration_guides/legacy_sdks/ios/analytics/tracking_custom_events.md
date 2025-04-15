@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-Para saber mais, consulte a [documentação de nossa [classelogcustomevent](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 ":withproperties").
+Para saber mais, consulte a [documentação de nossa classelogcustomevent](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 ":withproperties").
 
 ### Chaves reservadas {#event-reserved-keys}
 
@@ -90,5 +90,5 @@ As seguintes chaves são reservadas e não podem ser usadas como propriedades de
 ## Recursos adicionais
 
 - Consulte a declaração do método no [arquivo](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) `Appboy.h`. 
-- Consulte a [`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "documentação de logcustomevent") para saber mais.
+- Consulte a [`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa " documentação de logcustomevent") para saber mais.
 

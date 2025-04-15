@@ -78,14 +78,14 @@ search_rank: 1
 여기에서 캔버스의 이름을 지정하고 [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams)을(를) 할당하며 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags)를 만들거나 추가합니다. 캔버스에 대한 전환 이벤트를 할당할 수도 있습니다.
 
 {% alert tip %}
-캔버스에 태그를 지정하여 쉽게 찾고 이를 이용하여 보고서를 작성할 수 있습니다. 예를 들어, [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그로 필터링할 수 있습니다.
+캔버스에 태그를 지정하여 쉽게 찾고 이를 이용하여 보고서를 작성할 수 있습니다. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![][53]
+![캔버스 이름, 설명, 위치 및 태그 필드가 있는 캔버스 세부 정보 페이지입니다.][53]
 
 #### 전환 이벤트 선택
 
-전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. 이 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)는 귀하의 캔버스 효율성을 측정할 것입니다. 
+전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![구매하기 전환 이벤트 유형의 주요 전환 이벤트 A는 3일의 전환 기한 내에 구매를 한 사용자의 대화를 기록합니다.][52]
 
@@ -103,7 +103,7 @@ search_rank: 1
 
     In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
 
-    ![]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab 실행 기반 전달 %}
     실행 기반 전달을 통해 사용자는 특정 작업을 수행할 때 캔버스에 들어가 메시지를 받기 시작합니다. 예를 들어, 앱을 열거나 구매를 하거나 커스텀 이벤트를 트리거하는 경우입니다.
@@ -146,15 +146,15 @@ search_rank: 1
 
 #### 오디언스를 테스트 중
 
-세그먼트와 필터를 타겟 오디언스에 추가한 후, [사용자를 조회하여]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) 오디언스 기준에 맞는지 확인함으로써 오디언스가 예상대로 설정되었는지 테스트할 수 있습니다.
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
+!['사용자 조회' 필드에서는 외부 사용자 아이디 또는 Braze 아이디로 검색할 수 있습니다.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
 #### 항목 컨트롤 선택
 
 진입 제어는 사용자가 캔버스에 다시 입장할 수 있는지 여부를 결정합니다. 또한 이 캔버스에 들어올 수 있는 사람의 수를 제한할 수 있습니다. 예를 들어, **이 캔버스에 잠재적으로 들어갈 수 있는 최대 사용자 수** 필드를 1,000명으로 설정하고 **캔버스가 예약될 때마다 제한** 체크박스를 선택하면, 캔버스는 하루에 1,000명의 사용자에게 전송됩니다.
 
-![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+!["항목 컨트롤" 페이지에 "사용자가 캔버스에 다시 입장할 수 있도록 허용" 및 "이 캔버스에 입장할 수 있는 사람 수 제한"에 대한 확인란이 표시됩니다. 후자를 사용하면 최대 사용자를 설정하고 캔버스를 예약할 때마다 제한할지 여부를 설정할 수 있습니다.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
 Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**을 사용하는 것을 권장하지 않습니다. 이는 발송량 증가로 이어질 수 있습니다.
 
@@ -173,7 +173,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 타겟 사용자의 평균 평생 수익과 같은 추가 통계를 보려면 **추가 통계** 보기를 선택합니다.
 
-![정확한 통계를 집계하는 옵션이 있는 타겟 인구 분석.][2]
+![정확한 통계를 계산하는 옵션이 있는 타겟 인구 분석.][2]
 
 ### 2d 단계: 전송 설정을 선택하세요
 
@@ -195,7 +195,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 원하는 경우 캔버스에 대한 방해금지 시간(메시지가 전송되지 않는 시간)을 지정하세요. **방해금지 시간 활성화**을(를) **보내기 설정**에서 확인하세요. 그런 다음 사용자의 로컬 시간에 방해금지 시간을 선택하고 메시지가 해당 방해금지 시간 내에 트리거될 경우 수행할 작업을 선택합니다.
 
-![][50]
+![조용한 시간을 활성화하는 확인란이 표시된 '조용한 시간' 페이지입니다. 활성화하면 시작 시간, 종료 시간 및 폴백 동작을 설정할 수 있습니다.][50]
 
 ## 3단계: 캔버스 비드
 
@@ -205,20 +205,20 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 ### 배리언트 추가
 
-![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![사용자가 '이형 상품 추가'를 선택한 다음 컨텍스트 메뉴에서 다시 '이형 상품 추가'를 선택하는 모습을 보여주는 GIF입니다.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 **배리언트 추가**를 선택한 다음 캔버스에 새 배리언트를 추가합니다. 변형은 사용자가 거칠 여정을 나타내며 여러 단계와 분기를 포함할 수 있습니다.
 
 추가 변형을 추가하려면 <i class="fas fa-plus-circle"></i> 플러스 버튼을 선택하십시오. 새 변형을 추가하면 사용자가 그들 사이에 어떻게 분배될지를 조정할 수 있으므로 다양한 참여 전략의 효율성을 비교 분석할 수 있습니다.
 
-![][12]
+![브레이즈 캔버스의 두 가지 변형 예시입니다.][12]
 
 {% alert tip %}
 기본값으로, 사용자가 캔버스에 들어갈 때 캔버스 배리언트 할당이 잠기게 됩니다. 즉, 사용자가 처음으로 배리언트에 들어가면, 그 후로 캔버스에 다시 들어갈 때마다 그 배리언트가 유지됩니다. 하지만 이러한 행동을 피할 수 있는 방법들이 있습니다. <br><br>이를 위해 Liquid을 사용하여 난수 생성기를 만들고 각 사용자의 캔버스 항목 시작 시 실행하여 값을 커스텀 속성으로 저장한 다음 해당 속성을 사용하여 사용자를 무작위로 나눌 수 있습니다.
 
 {% details 단계를 보려면 확장하세요 %}
 
-1. 랜덤 숫자를 저장할 커스텀 속성을 만드세요. 쉽게 찾을 수 있는 "lottery_number" 또는 "random_assignment"와 같은 이름을 지정하세요. 속성을 [대시보드]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/)에서 생성하거나 API 호출을 통해 [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)에서 생성할 수 있습니다.<br><br>
+1. 랜덤 숫자를 저장할 커스텀 속성을 만드세요. 쉽게 찾을 수 있는 "lottery_number" 또는 "random_assignment"와 같은 이름을 지정하세요. You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. 캔버스의 시작 부분에서 웹훅 캠페인을 만드세요. 이 캠페인은 사용자가 무작위 숫자를 생성하고 이를 커스텀 속성으로 저장하는 매개체가 될 것입니다. [웹훅 생성]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook)을 참조하십시오. URL을 우리 `/users/track` 엔드포인트로 설정하십시오.<br><br>
 3. 무작위 숫자 생성기를 만드세요. 사용자의 고유한 입장 시간을 활용하여 무작위 숫자를 생성하는 [여기에 설명된](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486) 코드를 사용할 수 있습니다. 결과 숫자를 Liquid 변수로 설정하여 웹훅 캠페인 내에서 사용하세요.<br><br>
 4. 웹훅 캠페인에서 `/users/track` 호출을 포맷하여 1단계에서 생성한 커스텀 속성을 현재 사용자의 프로필에 생성한 임의의 숫자로 설정하세요. 이 단계가 실행되면 사용자가 캠페인에 들어올 때마다 변경되는 무작위 숫자를 성공적으로 만들 수 있습니다.<br><br>
@@ -235,7 +235,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 단계를 추가하기 시작하면 세부 사항에 집중하거나 전체 사용자 여정을 파악하기 위해 확대/축소 수준을 변경할 수 있습니다. <kbd>Shift</kbd> + <kbd>+</kbd>를 사용하여 확대하거나 <kbd>Shift</kbd> + <kbd>-</kbd>를 사용하여 축소합니다
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
+![브레이즈 캔버스에 지연 단계를 추가하는 컴포넌트 검색 창.]({% image_buster /assets/img_archive/add_components_flow.png %})
 
 {% alert warning %}
 캔버스 흐름을 사용하여 만든 캔버스는 최대 200단계를 포함할 수 있습니다. 캔버스가 200 단계를 초과하면 로딩 문제가 발생합니다.
@@ -251,11 +251,11 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 캔버스 플로우 워크플로우의 모든 단계를 편집하려면 구성 요소를 선택하면 됩니다. 예를 들어, 워크플로우에서 첫 번째 단계인 [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) 구성 요소를 특정 날짜로 편집하고자 하는 경우입니다. 단계를 선택하여 설정을 보고 지연 시간을 3월 1일로 조정하십시오. 이는 3월 1일에 사용자가 캔버스의 다음 단계로 이동함을 의미합니다.
 
-![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
+![지연이 "특정 날짜까지"로 설정된 '지연' 단계 예시]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
 또는 **작업 설정**을(를) 빠르게 편집하고 조정하여 [작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) 단계에서 사용자를 일정 시간 동안 유지할 수 있습니다. 이 평가 기간 동안의 행동을 기반으로 다음 경로를 우선시합니다.
 
-![]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![캔버스의 두 번째 단계인 '작업 설정'에서 평가 기간을 1일로 설정합니다.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 캔버스의 가벼운 구성 요소는 간단한 편집 경험을 제공하므로 캔버스의 세부 사항을 조정하는 것이 더 쉬워집니다. 
 
@@ -270,7 +270,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 메시지 구성 요소는 사용자에게 전송된 메시지를 관리합니다. **메시징 채널**을 선택하고 **전달 설정**을 조정하여 캔버스 메시징을 최적화할 수 있습니다. 자세한 내용은 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)를 확인하세요.
 
-![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+!['메시지 설정' 단계에서 '메시징 채널'을 선택하면 안드로이드 푸시, 콘텐츠 카드, 이메일 등 사용 가능한 메시징 채널 목록이 표시됩니다.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 구성 요소 구성을 완료한 후 **완료**을(를) 선택하십시오.
 
@@ -313,7 +313,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 이 예에서는 캔버스를 두 가지 배리언트로 나누었습니다. 배리언트 1에는 사용자의 70%가 포함되어 있습니다. 두 번째 배리언트는 대조군이며, 나머지 30%의 사용자로 구성되어 있습니다.
 
-![]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
+![70%가 첫 번째 단계에서 하루 동안 지연된 후 두 번째 단계에서 메시지를 보내는 '변형 1'로 이동하는 브레이즈 캔버스의 변형 예시입니다. 나머지 30%는 후속 단계가 없는 '제어'로 이동합니다.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
 ### 캔버스를 위한 지능형 선택
 
@@ -321,7 +321,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 다변량 캔버스를 사용하면 카피뿐만 아니라 타이밍과 채널도 테스트할 수 있다는 점을 명심하세요. 지능형 선택을 통해 캔버스를 더 효율적으로 테스트하고 사용자가 최상의 캔버스 여정을 경험할 수 있도록 자신감을 가질 수 있습니다.
 
-![][18b]
+!['지능형 선택' 옵션은 '이형 상품 배포 편집' 페이지에서 활성화됩니다. 캔버스를 분석하고 최적화할 때 페이지 전체에 가로 막대가 표시되며, 이 가로 막대는 각각 색상과 크기가 다른 여러 섹션으로 나뉘어져 있습니다. 이는 시각적 표현일 뿐이며 특정 분석과 관련이 없습니다.][18b]
 
 캔버스용 지능형 선택은 각 배리언트로 분류된 사용자 분포를 점차 실시간으로 조정하여 캔버스 결과를 최적화합니다. 통계 알고리즘이 귀하의 변형들 중에서 결정적인 승자를 결정하면 성과가 저조한 변형들을 배제하고 향후 모든 적격 수신자를 캔버스의 승리 변형에 배정합니다. 
 
@@ -329,14 +329,14 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 ## 5단계: 캔버스 저장 및 실행
 
-캔버스 생성을 완료하면 **캔버스 실행**을 선택하여 캔버스를 저장하고 실행하세요. 캔버스를 시작한 후에는 **캔버스 세부 정보** 페이지에서 여정의 분석을 확인할 수 있습니다. 
+캔버스 생성을 완료한 후 **캔버스 시작을** 선택하여 캔버스를 저장하고 실행합니다. 캔버스를 시작한 후에는 **캔버스 세부 정보** 페이지에서 여정의 분석을 확인할 수 있습니다. 
 
 나중에 다시 작업해야 할 경우 캔버스를 초안으로 저장할 수도 있습니다.
 
-![][19]
+![Braze의 캔버스 예시.][19]
 
 {% alert tip %}
-이미 실행한 캔버스를 편집해야 한다고요? 당연히 가능합니다! [출시 후 캔버스 편집]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)에 대한 자세한 내용을 확인하세요.
+이미 실행한 캔버스를 편집해야 한다고요? 당연히 가능합니다! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
 

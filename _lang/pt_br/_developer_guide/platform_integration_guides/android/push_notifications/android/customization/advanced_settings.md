@@ -55,7 +55,7 @@ O nível de prioridade de uma notificação por push afeta como sua notificaçã
 
 No Android O, a prioridade de notificação se tornou uma propriedade dos canais de notificação. Você precisará trabalhar com seu desenvolvedor para definir a prioridade de um canal durante sua configuração e, em seguida, usar o dashboard para selecionar o canal adequado ao enviar seus sons de notificação. Para dispositivos executando versões do Android anteriores ao O, especificar um nível de prioridade para notificações do Android e FireOS é possível através do dashboard do Braze e da API de envio de mensagens. 
 
-Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que especifique indiretamente a prioridade por meio da [configuração do canal de envio de](https://developer.android.com/training/notify-user/channels#importance) mensagens (para direcionar dispositivos O+) *e* envie a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que especifique indiretamente a prioridade por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels#importance) (para direcionar dispositivos O+) *e* envie a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
 
 Os níveis de prioridade que você pode definir em notificações por push do Android ou Fire OS são:
 
@@ -68,7 +68,7 @@ Os níveis de prioridade que você pode definir em notificações por push do An
 | Mín.      | Informações contextuais ou de fundo. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Consulte a documentação [de notificação](http://developer.android.com/design/patterns/notifications.html) do [Android](http://developer.android.com/design/patterns/notifications.html) do Google para saber mais.
+Consulte a documentação de [notificação do Android](http://developer.android.com/design/patterns/notifications.html) do Google para saber mais.
 
 ## Sons {#sounds}
 

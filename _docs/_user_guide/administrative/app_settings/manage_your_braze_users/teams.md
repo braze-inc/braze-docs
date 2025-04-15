@@ -15,13 +15,13 @@ Teams can be set up across customer base location, language, and custom attribut
 
 Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
+## How do teams differ from permission sets and roles?
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Creating teams
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
-{% endalert %}
 
 ![Adding a new team][68]
 
@@ -34,10 +34,6 @@ If a team is defined by a custom attribute, language, or country, you can then u
 Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign team-level permissions to a dashboard user with limited access. When assigned to a team, dashboard users are limited to only read or write data available to their particular teams, such as user language, location, or custom attribute, as defined when the team was created.
 
 To assign a user to a team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and selecting **Manage Users**.
-{% endalert %}
 
 Then perform the following steps:
 
@@ -77,7 +73,7 @@ You can assign a team to Canvases, campaigns, cards, segments, email templates, 
 Consider the following two scenarios for a marketer in Braze named Michelle. Michelle is a member of a team called "Development". She has access to all of the team-level permissions for the Development team.
 
 {% tabs %}
-{% tab Scenario 1: Only team permissions %}
+{% tab Scenario 1 - Only team permissions %}
 
 In this scenario, Michelle is a limited user that has no workspace-level permissions. Her permissions look something like this:
 
@@ -88,7 +84,7 @@ Based on Michelle's assigned permissions, whenever she creates a campaign, she c
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab Scenario 2: Team permissions and workspace permissions %}
+{% tab Scenario 2 - Team permissions and workspace permissions %}
 
 In this scenario, Michelle is still a member of the Development team, but she also has an additional workspace-level permission.
 
@@ -130,10 +126,6 @@ Select one or many teams to archive. If the team is not associated with any obje
 ![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
 
 Braze admins can unarchive a team by selecting the archived team and selecting **Unarchive**.
-
-## How do teams differ from permission sets and roles?
-
-Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

@@ -62,7 +62,7 @@ guide_featured_list:
 
 guide_menu_title: "Send messages endpoints"
 guide_menu_list:
-  - name: "POST: ID 보내기 만들기"
+  - name: "POST: 보내기 ID 만들기"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
     image: /assets/img/braze_icons/user-square.svg
   - name: "POST: 즉시 메시지 보내기"

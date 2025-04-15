@@ -25,7 +25,7 @@ Braze Web SDK をブラウザーエクステンション内に統合し、分析
 
 ## サポートされていないもの
 
-* サービスワーカーは、Braze Web SDK ではサポートされていませんが、今後の検討のためにロードマップにあります。
+* サービスワーカーは Braze Web SDK ではサポートされていませんが、このサポートについては将来検討される予定です。
 
 ## 拡張子の種類
 
@@ -42,7 +42,7 @@ Braze は、エクステンションの以下の領域に含めることがで�
 
 Braze SDK (`braze.min.js`) をエクステンションとバンドルされたローカルファイルとして統合する場合、`manifest.json` で追加の権限は必要ありません。 
 
-ただし、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/),を使用するか、外部URL からBraze SDK を参照するか、拡張に厳密なコンテンツセキュリティポリシーを設定した場合は、`manifest.json` で[`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を調整してリモートスクリプトソースを許可する必要があります。
+ただし、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), を使用するか、外部 URL から Braze SDK を参照するか、拡張子に厳密なコンテンツセキュリティポリシーを設定した場合は、`manifest.json` の [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を調整して、リモートスクリプトソースを許可する必要があります。
 
 ## はじめに
 
@@ -52,7 +52,7 @@ Braze SDK (`braze.min.js`) をエクステンションとバンドルされた�
 
 Braze の Web SDK を統合するには、まず、最新の JavaScript ライブラリーのコピーをダウンロードする必要があります。これは、NPMを使用するか、[BrazeのCDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js)から直接的に読み込むすることで実行できます。
 
-または、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/)を使用するか、Braze SDKの外部ホストコピーを使用する場合は、`manifest.json`で[`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy)設定を調整する必要があることに留意してください。
+または、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) を使用するか、Braze SDK の外部でホストされたコピーを使用する場合は、外部リソースを読み込むには [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を `manifest.json` で調整する必要があることに注意してください。
 
 ダウンロードしたら、`braze.min.js` ファイルをエクステンションのディレクトリーの任意の場所にコピーします。
 
@@ -106,9 +106,9 @@ braze.initialize("YOUR-API-KEY-HERE", {
 });
 ```
 
-サポートされている初期化オプションの詳細については、[Web SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) を参照してください。
+サポートされている初期化オプションの詳細については、[[Web SDK リファレンス](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)] を参照してください。
 
 ## プッシュ
 
-拡張ポップアップダイアログでは、プッシュプロンプトは使用できません(ナビゲーションにURL バーはありません)。そのため、拡張のポップアップダイアログ内でプッシュ許可を登録して要求するには、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
+拡張ポップアップダイアログでは、プッシュプロンプトは使用できません(ナビゲーションにURL バーはありません)。このため、エクステンションのポップアップダイアログ内でプッシュ通知の権限を登録して要求するには、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain). で説明されているように、代替ドメインの回避策を使用する必要があります。
 

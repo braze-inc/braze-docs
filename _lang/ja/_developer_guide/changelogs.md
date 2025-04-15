@@ -1,6 +1,6 @@
 ---
 page_order: 90
-nav_title: 変更履歴
+nav_title: 変更ログ
 layout: dev_guide
 guide_top_header: "Braze SDK 変更ログ"
 guide_top_text: "Braze Docs または個々の GitHub リポジトリ内で、各 SDK の以下の変更ログを利用できます。"

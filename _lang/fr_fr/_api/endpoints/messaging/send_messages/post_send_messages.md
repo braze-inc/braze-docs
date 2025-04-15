@@ -1,20 +1,20 @@
 ---
-nav_title: "POST : Envoyer des messages immédiatement via API uniquement"
-article_title: "POST : Envoyer des messages immédiatement via API uniquement"
+nav_title: "POST : Envoyez des messages immédiatement en utilisant uniquement l'API"
+article_title: "POST : Envoyez des messages immédiatement en utilisant uniquement l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des messages immédiatement via API uniquement."
+description: "Cet article présente les détails de l'envoi de messages immédiatement à l'aide de l'API, uniquement l'endpoint Braze."
 
 ---
 {% api %}
-# Envoyer des messages immédiatement via API uniquement
+# Envoyez des messages immédiatement en utilisant uniquement l'API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés via l'API de Braze.
+> Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés à l'aide de l'API de Braze.
 
 Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
 

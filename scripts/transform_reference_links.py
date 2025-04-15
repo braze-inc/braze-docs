@@ -1,4 +1,6 @@
-# Converts Markdown reference links to in-line links. Created because 
+#!/usr/bin/env python3
+
+# Transforms Markdown reference links to in-line links. Created because
 # reference links cannot be placed inside Liquid {% tab %} tags.
 #
 # For more information, see:
@@ -13,6 +15,7 @@
 import os
 import sys
 import re
+
 
 # Create a dictionary with all reference links at the bottom of the file.
 def create_link_dictionary(file_path):
@@ -40,6 +43,7 @@ def create_link_dictionary(file_path):
 
     return link_dict
 
+
 # Use the dictionary to find and replace all references with the full link.
 def replace_links(file_path, link_dict):
     with open(file_path, 'r') as file:
@@ -57,6 +61,8 @@ def replace_links(file_path, link_dict):
     with open(file_path, 'w') as file:
         file.writelines(updated_lines)
 
+
+# TODO: Move this to bdocs directly for easier reuse.
 # Recursively convert links for all Markdown files in given directory.
 def process_directory(directory):
     for root, dirs, files in os.walk(directory):
@@ -65,6 +71,7 @@ def process_directory(directory):
                 file_path = os.path.join(root, file)
                 link_dict = create_link_dictionary(file_path)
                 replace_links(file_path, link_dict)
+
 
 # If arg == directory, convert links for all Markdown files in that directory.
 # If arg == file, convert links for that Markdown file only.
@@ -80,7 +87,7 @@ def main(path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python convert_reference_links.py <directory_or_file>")
+        print("Usage: ./bdocs ulinks <directory_or_file>")
     else:
         given_path = sys.argv[1]
         # Normalize the path to ensure correct traversal

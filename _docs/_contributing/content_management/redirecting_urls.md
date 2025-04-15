@@ -45,7 +45,7 @@ page_order: 3
 {% endtab %}
 
 {% tab new location %}
-After you move or rename the relevant Markdown file, navigate to the `assets/js/` directory and open the global redirect file.
+Move or rename the relevant Markdown file, then navigate to the `assets/js/` directory and open the global redirect file.
 
 ```bash
 braze-docs
@@ -53,6 +53,10 @@ braze-docs
     └── js
         └── broken_redirect_list.js
 ```
+
+{% alert tip %}
+If you don't plan on moving or renaming the file, you can also set up the redirect directly in your file's YAML front matter with [`layout: redirect`]({{site.baseur}}/contributing/yaml_front_matter/page_layouts/#redirect), instead of creating a new one in the global redirect file.
+{% endalert %}
 
 At the of the file, create a redirect on a new line using the following syntax:
 
@@ -137,3 +141,7 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 {% alert tip %}
 If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 {% endalert %}
+
+## Troubleshooting
+
+{% multi_lang_include contributing/troubleshooting/redirects.md %}

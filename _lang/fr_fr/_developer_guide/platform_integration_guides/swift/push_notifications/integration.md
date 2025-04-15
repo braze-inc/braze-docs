@@ -39,9 +39,9 @@ Si vous utilisez l'[ancienne version de la navigation]({{site.baseurl}}/navigati
 
 ### Étape 2 : Activer les fonctionnalités de notification push
 
-Dans Xcode, ajoutez la capacité Notifications push à l'aide du volet **Signature et capacités** pour la cible d’appli principale.
+Dans Xcode, accédez à la section **Signage et capacités de** la cible principale de l'app et ajoutez la capacité de notifications push.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![La section "Signing & Capabilities" dans un projet Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## Intégration automatique de la poussée
 
@@ -379,7 +379,7 @@ Si vous souhaitez tester des notifications push et in-app à l’aide de la lign
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), ces pages se trouvent à un emplacement/localisation différent : <br>\- Les **clés API** sont situées dans la **console de développement** > **Paramètres API**. <br>\- L’option **Rechercher des utilisateurs** est située dans **Utilisateurs** > **Recherche d'utilisateurs**
 {% endalert %}
 
-Dans l'exemple suivant, l'instance `US-01` est utilisée. Si vous n'êtes pas sur cette instance, reportez-vous à la [documentation de]({{site.baseurl}}/api/basics/) notre [API]({{site.baseurl}}/api/basics/) pour savoir à quel endpoint adresser vos requêtes.
+Dans l'exemple suivant, l'instance `US-01` est utilisée. Si vous n'êtes pas sur cette instance, reportez-vous à notre [documentation API]({{site.baseurl}}/api/basics/) pour savoir à quel endpoint adresser vos requêtes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{

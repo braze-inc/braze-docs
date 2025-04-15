@@ -8,7 +8,7 @@ page_order: 6
 
 > Voici les autres intégrations prises en charge dans le SDK Braze Cordova.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Envoi de messages in-app
 
@@ -20,9 +20,7 @@ Le SDK Cordova prend en charge par défaut les messages in-app sans modification
 
 ## Fil d’actualité
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Consultez les instructions d'intégration pour [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration/) pour savoir comment intégrer le fil d'actualité dans votre application Cordova. Sinon, notre plugin Cordova propose une méthode, `launchNewsFeed`, qui lancera un fil d’actualité modal sans intégration supplémentaire.
 

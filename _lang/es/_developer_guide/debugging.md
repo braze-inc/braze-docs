@@ -10,7 +10,7 @@ page_order: 13
 > Aprende a utilizar el depurador integrado del SDK de Braze, para que puedas solucionar problemas de tus canales con SDK, sin necesidad de habilitar el registro detallado en tu aplicación.
 
 {% alert important %}
-Actualmente, esta característica sólo está disponible para aplicaciones nativas de iOS y Android. Para habilitar la depuración para el SDK de la Web de Braze, puedes [utilizar]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) en su lugar [un parámetro URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
+Actualmente, esta característica sólo está disponible para aplicaciones nativas de iOS y Android. Para habilitar la depuración para el SDK de la Web de Braze, puedes [utilizar un parámetro URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) en su lugar.
 {% endalert %}
 
 ## Requisitos previos

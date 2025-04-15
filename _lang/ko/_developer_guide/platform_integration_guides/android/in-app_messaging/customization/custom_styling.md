@@ -38,6 +38,10 @@ channel:
 
 스타일을 재정의하려면 프로젝트의 `styles.xml` 파일에 전체 스타일을 복사한 후 수정합니다. 모든 속성을 올바르게 설정하려면 전체 스타일을 로컬 `styles.xml` 파일에 복사해야 합니다. 이러한 커스텀 스타일은 레이아웃을 일괄적으로 변경하는 것이 아니라 개별 UI 요소를 변경하기 위한 기능입니다. 레이아웃 수준 변경은 사용자 지정 보기로 처리해야 합니다.
 
+{% alert note %}
+XML을 수정하지 않고도 Braze 캠페인에서 직접 일부 색상을 사용자 지정할 수 있습니다. Braze 대시보드에서 설정한 색상은 다른 곳에서 설정한 색상보다 우선한다는 점을 기억하세요.
+{% endalert %}
+
 ## 사용자 지정 글꼴
 
 Braze에서는 [글꼴 패밀리 가이드를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization) 사용하여 사용자 지정 글꼴을 설정할 수 있습니다. 이를 사용하려면 메시지 텍스트, 헤더 및 버튼 텍스트의 스타일을 재정의하고 `fontFamily` 속성을 사용하여 사용자 지정 폰트 패밀리를 사용하도록 Braze에 지시하세요.

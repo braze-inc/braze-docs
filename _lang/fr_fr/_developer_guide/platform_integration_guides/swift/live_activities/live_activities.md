@@ -75,7 +75,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 Tout d'abord, choisissez le mode d'enregistrement de votre activité :
 
-- **À distance :** Utilisez la méthode [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>), puis lancez une activité à l'aide du endpoint [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start).
+- **À distance :** Le plus tôt possible dans le cycle de vie de votre application et de vos utilisateurs (et avant que le jeton Push to Start ne soit nécessaire), utilisez la méthode [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) méthode. Ensuite, démarrez une activité à l'aide du point de terminaison [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
 - **Localement :** Créez une instance de votre activité en direct, puis utilisez la méthode [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) pour créer des jetons de notifications push à gérer par Braze.
 
 {% tabs local %}

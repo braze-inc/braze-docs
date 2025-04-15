@@ -32,9 +32,9 @@ Here are guidelines to select the variables:
 | Variable field | Description |
 | --- | --- |
 | `Catalog` | The name of the catalog you’re using to target users. |
-| `Catalog field`| The field in your catalog that contains the same values as your `Custom event property`. This is often a type of ID. In the ecommerce use case, this would be `shopify_id`. |
-| `Custom event` | The name of your custom event, which is the same event that contains a property with values matching your `Catalog field`. In the ecommerce use case, this would be `Made Order`. |
-| `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the ecommerce example use case, this would be `Shopify_ID.`|
+| `Catalog field`| The field in your catalog that contains the same values as your `Custom event property`. This is often a type of ID. In the eCommerce use case, this would be `shopify_id`. |
+| `Custom event` | The name of your custom event, which is the same event that contains a property with values matching your `Catalog field`. In the eCommerce use case, this would be `Made Order`. |
+| `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the eCommerce example use case, this would be `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
@@ -98,7 +98,7 @@ Yes. In the same way SQL Segment Extensions count toward your Segment Extension 
 
 ### I have a catalog segment use case that the current template doesn't serve. How should I set that up?
 
-Reach out to your customer support manager or [Braze Support]({{site.baseurl}}/help/support/) for additional guidance.
+Reach out to your customer support manager or [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for additional guidance.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

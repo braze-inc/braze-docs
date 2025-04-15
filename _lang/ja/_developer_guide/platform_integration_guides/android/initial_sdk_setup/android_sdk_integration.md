@@ -42,15 +42,15 @@ dependencies {
 }
 ```
 
-次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、[Braze Android SDK リリース](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) をご覧ください。
+次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、[[Braze Android SDK リリース](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)] にアクセスしてください。
 
-![Android Studioが「build.gradle」を表示しています。このスクリーンショットでは、依存コードがファイルの下部に追加されます。]({% image_buster /assets/img_archive/androidstudio2.png %})
+!["build.gradle" を表示するAndroid studio。ファイルの末尾に依存コードが追加されます。]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Gradle 同期を実行する
 
 Gradle 同期を実行してプロジェクトをビルドし、[依存関係の追加](#add-braze-dependency)を組み込んでください。
 
-![Android Studioがアプリケーションの上部にバナーとボタンを表示して、「Gradleファイルが最後のプロジェクト同期以降に変更されました」と表示しています。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。"]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Android Studio のバナーで、次のように記述されています。「前回のプロジェクトの同期以降、Gradle ファイルが変更されました。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。"]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## ステップ 2:braze.xmlでBraze SDKを構成する
 
@@ -86,7 +86,7 @@ Android M のリリースにより、Android はインストール時権限モ�
 
 ### アクティビティライフサイクルコールバックの統合
 
-`openSession()`、`closeSession()`、[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)、`InAppMessageManager` 登録の呼び出しは、オプションで自動的に処理されます。
+`openSession()`、`closeSession()`、[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)、および `InAppMessageManager` 登録の呼び出しは、オプションで自動的に処理されます。
 
 #### アクティビティライフサイクルコールバックを登録する
 
@@ -120,7 +120,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-[`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html) で使用できるパラメータの詳細については、SDK リファレンスドキュメントを参照してください。
+[[`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html)] で使用できるパラメーターの詳細については、SDK リファレンスドキュメントを参照してください。
 
 ## ステップ5: 位置情報の追跡を有効にする
 

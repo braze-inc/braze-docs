@@ -114,13 +114,13 @@ Esta sección cubre las tres formas más comunes de colocar tarjetas de contenid
 - [Carrusel](#carousel)
 - [Banner](#banner)
 
-La lógica y la implementación de estas colocaciones no están predeterminadas en Braze, por lo que tu equipo de ingeniería debe suministrar y apoyar el trabajo para conseguir estos casos de uso. Para obtener un resumen sobre cómo implementar estas colocaciones, consulta [Crear una tarjeta de contenido personalizada]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+La lógica y la implementación de estas colocaciones no están predeterminadas en Braze, por lo que tu equipo de ingeniería debe suministrar y apoyar el trabajo para conseguir estos casos de uso. Para obtener un resumen sobre cómo implementar estas colocaciones, consulta [Crear una tarjeta de contenido personalizada]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 tarjetas de contenido de ejemplo, que muestran las diferentes opciones de colocación: bandeja de entrada de mensajes, carrusel y banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Buzón de entrada de mensajes
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Un ejemplo de tarjeta de contenido que utiliza la colocación "buzón de entrada de mensajes".]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Una bandeja de entrada de mensajes (también llamada centro de notificaciones o feed) es un lugar persistente en tu aplicación o sitio web donde puedes mostrar Tarjetas de contenido en el formato que prefieras. Cada mensaje de la bandeja de entrada es su propia tarjeta de contenido. 
 
@@ -142,7 +142,7 @@ Las tarjetas de contenido vienen con un estilo predeterminado, pero puedes elegi
 
 ### Carrusel
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Un ejemplo de tarjeta de contenido utilizando la colocación "carrusel".]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Los carruseles muestran varias piezas de contenido en un único espacio que sus clientes pueden deslizar para verlas. Pueden ser una presentación de imágenes, texto, video o una combinación de ellos. Esta es una implementación personalizada y requiere un poco de trabajo por parte de sus desarrolladores.
 
@@ -159,7 +159,7 @@ Dado que se trata de una implementación personalizada, tendrá que trabajar con
 
 ### Banner
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Un ejemplo de tarjeta de contenido que utiliza la colocación "banner".]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Las tarjetas de contenido pueden aparecer como un banner dinámico que se muestra de forma persistente en su página de inicio o en la parte superior de otras páginas designadas.
 
@@ -176,7 +176,7 @@ Los usuarios pueden ver y participar en los contenidos más relevantes para ello
 
 Tus desarrolladores integrarán las tarjetas de contenido cuando integren el SDK de Braze. Para obtener más información sobre cómo integrarse con las tarjetas de contenido, consulte los artículos de la guía para desarrolladores de su plataforma:
 
-- [ iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
+- [ iOSiOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guía de integración de la tarjeta de contenido")
 - [ AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
 - [ WebWeb]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
 

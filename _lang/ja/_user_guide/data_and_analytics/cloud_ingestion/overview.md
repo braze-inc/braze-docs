@@ -25,6 +25,7 @@ Braze のクラウドデータ取り込み (CDI) では、データウェアハ�
    - Amazon Redshift
    - Databricks 
    - Google BigQuery
+   - Microsoft Fabric
    - Snowflake
 
 - ファイルストレージソース 
@@ -358,11 +359,11 @@ CDI を使用したデータポイントの消費は、REST API や SDK など�
 
 ### `UPDATED_AT` の時刻が同期と同じでないことを確認します
 
-`UPDATED_AT` フィールドが前回の同期とまったく同じ時刻にある場合、CDI 同期に重複データがある可能性があります。これは、CDI が"inclusive boundary&quot を選択するためです。これは、前回の同期と同じ時間の行が見つかり、行が同期可能になる場合です。CDI は、これらの行を再取り込みし、重複データを作成します。 
+`UPDATED_AT` フィールドが前回の同期とまったく同じ時刻にある場合、CDI 同期に重複データがある可能性があります。これは、CDI は以前の同期と同じ時刻の行を検出すると「包含境界」を選択し、それらの行を同期可能にするためです。CDI はこれらの行を再度取り込み、重複データを作成します。 
 
 ### `EXTERNAL_ID` を`PAYLOAD` カラムから分離します
 
-`PAYLOAD` オブジェクトには、外部ID またはその他のID タイプを含めることはできません。 
+`PAYLOAD` オブジェクトには、external IDまたは他のIDタイプを含めないでください。 
 
 ### 属性を削除する
 
@@ -374,21 +375,21 @@ CDI を使用したデータポイントの消費は、REST API や SDK など�
 
 次の例では、ユーザーに2 つの属性があります。
 - 色:"グリーン&クォート;
-- サイズ:"Large"
+- サイズ:「大」
 
 次に、Braze は、そのユーザに対して次の2 つの更新を同時に受信します。
-- リクエスト1:色を"Red"に変更します。
-- リクエスト2:サイズを"Medium"に変更します。
+- リクエスト1:色を「赤」に変更する
+- リクエスト2:サイズを「中」に変更する
 
 Request 1 が最初に発生するため、ユーザーの属性は次のように更新されます。
-- 色:"Red"
-- サイズ:"Large"
+- 色:「赤」
+- サイズ:「大」
 
-ただし、Request 2 が発生すると、Braze は元の属性値("Green" および"Large") で開始し、ユーザーの属性を次のように更新します。
+ただし、リクエスト2が発生すると、Braze は元の属性値 (「グリーン」および「大」) で開始し、ユーザーの属性を次のように更新します。
 - 色:"グリーン&クォート;
-- サイズ:"Medium"
+- サイズ:「中」
 
-リクエストが終了すると、リクエスト2はリクエスト1からの更新を上書きします。このため、更新をずらしてリクエストが上書きされないようにすることをお勧めします。
+リクエストが終了すると、リクエスト2によりリクエスト1の更新が上書きされます。このため、更新をずらしてリクエストが上書きされないようにすることをお勧めします。
 
 ### 別のテーブルから JSON 文字列を作成する
 
@@ -481,6 +482,27 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE TABLE [braze].[users] (
+    attribute_1 VARCHAR,
+    attribute_2 VARCHAR,
+    attribute_3 VARCHAR,
+    attribute_4 VARCHAR,
+    user_id VARCHAR
+)
+GO
+
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    user_id as EXTERNAL_ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[users] ;
+```
+{% endtab %}
+
 {% endtabs %}
 
 ### `UPDATED_AT` タイムスタンプを使用する

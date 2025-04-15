@@ -1,20 +1,20 @@
 ---
-nav_title: "POST:APIのみでメッセージを即座に送信する"
-article_title: "POST:APIのみでメッセージを即座に送信する"
+nav_title: "POST:APIのみを使用してメッセージを即座に送信する"
+article_title: "POST:APIのみを使用してメッセージを即座に送信する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「API のみでメッセージを即座に送信する」Braze エンドポイントに関する詳細を説明します。"
+description: "この記事では、APIのみを使用したBrazeエンドポイントによるメッセージの即時送信についての詳細を概説する。"
 
 ---
 {% api %}
-# APIのみでメッセージを即座に送信する
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+# APIのみを使用してメッセージを即座に送信する
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> このエンドポイントを使用して、Braze API経由で指定したユーザーに即時メッセージを送信する。
+> このエンドポイントを使用して、Braze APIを使用して指定したユーザーに即時メッセージを送信する。
 
 リクエストを完了させるために、必ずメッセージング・オブジェクトを本文に含めること。
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
 |`external_user_ids` | オプション | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。 |

@@ -18,7 +18,7 @@ noindex: true
 
 `Appboy` 인터페이스에서 `requestContentCardsRefresh:` 방법을 사용하여 사용자의 콘텐츠 카드를 새로 고치도록 Braze에 수동으로 요청할 수 있습니다:
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] requestContentCardsRefresh];

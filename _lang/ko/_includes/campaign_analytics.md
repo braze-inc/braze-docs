@@ -4,7 +4,7 @@
 
 {% alert tip %}
 보고서에 나열된 용어와 측정기준에 대한 정의를 찾고 계십니까? 참고:
-  {% if include.channel == "email" %}[]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)이메일 분석 용어집]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
+  {% if include.channel == "email" %}[이메일 분석 용어집]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
   {% elsif include.channel == "Content Card" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 콘텐츠 카드로 필터링
   {% elsif include.channel == "in-app message" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 인앱 메시지로 필터링
   {% elsif include.channel == "push" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 푸시로 필터링
@@ -75,7 +75,7 @@ WhatsApp 채널에는 읽기 비율이 포함됩니다. 이 측정기준은 읽�
 
 #### 대조군 {#whatsapp-control-group}
 
-개별 WhatsApp [메시지][2]의 영향을 측정하기 위해 A/B 테스트에 [대조군][2]을 추가할 수 있습니다. 최상위 **캠페인 세부정보** 패널에는 대조군 배리언트의 측정기준이 포함되어 있지 않습니다.
+개별 WhatsApp 메시지의 영향을 측정하기 위해 A/B 테스트에 [대조군][2]을 추가할 수 있습니다. 최상위 **캠페인 세부정보** 패널에는 대조군 배리언트의 측정기준이 포함되어 있지 않습니다.
 
 {% elsif include.channel == "webhook" %}
 
@@ -151,11 +151,15 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### 히트맵
 
-히트맵을 사용하여 단일 이메일 캠페인에서 다양한 링크가 얼마나 성공적인지 확인할 수 있습니다. **메시지 분석** 섹션에서 **이메일 성능** 패널로 이동하세요. 클릭 **미리보기 & 히트맵**를 클릭하여 이메일 캠페인과 히트맵의 미리보기를 확인하세요. 대안적으로, 변형 이름의 하이퍼링크를 클릭하여 히트맵을 볼 수 있습니다.
+히트맵을 사용하여 단일 이메일 캠페인에서 다양한 링크가 얼마나 성공적인지 확인할 수 있습니다. **메시지 분석** 섹션에서 **이메일 성능** 패널로 이동하세요. **미리보기 및 히트맵**을 선택하여 이메일 캠페인의 미리보기와 히트맵을 확인하세요. 대안적으로, 배리언트 이름의 하이퍼링크를 선택하여 히트맵을 볼 수 있습니다.
 
-이 보기에서는 **Show Heatmap** 토글을 사용하여 캠페인의 수명 동안 클릭의 전반적인 빈도와 위치를 보여주는 이메일의 시각적 보기를 가져올 수 있습니다. **링크 테이블 총 클릭 수** 패널에서 이메일 캠페인의 모든 링크를 보고 총 클릭 수로 정렬할 수 있습니다. 이것은 사용자가 어디로 이동하는지에 대한 추가 인사이트를 제공할 수 있습니다. 참고용으로 히트맵의 복사본을 저장하려면 다운로드 버튼을 클릭하세요.
+이 보기에서는 **Show Heatmap** 토글을 사용하여 캠페인의 수명 동안 클릭의 전반적인 빈도와 위치를 보여주는 이메일의 시각적 보기를 가져올 수 있습니다. **링크 테이블 총 클릭 수** 패널에서 이메일 캠페인의 모든 링크를 보고 총 클릭 수로 정렬할 수 있습니다. 이것은 사용자가 어디로 이동하는지에 대한 추가 인사이트를 제공할 수 있습니다. 참고용으로 히트맵의 복사본을 저장하려면 다운로드 버튼을 선택하세요.
 
 ![미리보기 및 히트맵 페이지의 예로, 이메일 캠페인과 총 클릭 수가 포함된 링크 별칭 예시 패널이 포함되어 있습니다.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### 이미지
+
+이미지 URL에 대한 CORS를 활성화하여 히트맵 미리보기 및 내보내기에서 이미지가 깨지는 것을 방지하는 것을 권장합니다.
 
 {% endif %}
 
@@ -196,7 +200,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">고유 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Impressions' %} <span style="white-space: nowrap">이 수치</span>는 사용자가 카드를 두 번째로 볼 때 증가하지 않습니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">이 수치</span>는 사용자가 카드를 두 번째로 볼 때 증가하지 않습니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">고유 수신자</a></td>
@@ -204,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='고유 클릭 수' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">고유 무시 수</a></td>
@@ -260,7 +264,7 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">고유 열람</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다. 이 숫자는 10–20% 사이여야 합니다. 20%를 초과하는 것은 예외적입니다!
+                {% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다. 이 숫자는 30–40% 사이여야 합니다. 40%보다 큰 것은 예외적입니다!
             </td>
         </tr>
         <tr>
@@ -301,8 +305,20 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">소프트바운스</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">연기</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### 연기
+
+지연 또는 연기는 이메일이 즉시 전달되지 않았을 때를 의미하지만, Braze는 이 임시 전달 실패 후 최대 72시간 동안 이메일을 재전송하여 특정 캠페인에 대한 시도가 중단되기 전에 성공적인 전달 가능성을 극대화합니다. 전형적인 연기 사유에는 받은편지함 제공자의 평판 기반 이메일 볼륨 속도 제한, 일시적인 연결 문제 또는 DNS 오류가 포함됩니다.
+
+_연기(Deferrals)_는 _소프트 반송(Soft Bounces)_과 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인당 하나의 소프트 바운스 이벤트를 보낼 것입니다. 2025년 2월 25일 이전에, 이러한 재시도는 1개의 캠페인 발송에 대해 여러 번의 소프트 반송으로 계산되었습니다.
+
+_Deferrals_는 현재 Currents 또는 Braze Snowflake 기능(예: Query Builder, SQL Segment, Snowflake Data Sharing)을 사용하여만 사용할 수 있습니다. 캠페인 또는 캔버스 분석에 포함하고 싶으시다면, [제품 피드백]({{site.baseurl}}/user_guide/administrative/access_braze/portal)을 제출해 주시기 바랍니다.
 
 ##### 추정된 실제 열람율 {#estimated-real-open-rate}
 
@@ -366,7 +382,11 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">전환율</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">닫기 메시지</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='닫기 메시지' %}</td>
         </tr>
     </tbody>
 </table>
@@ -406,25 +426,37 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
     </tbody>
 </table>
 
+> 알림의 전달은 Apple Push Notification 서비스(APNs)에 의한 "최선의 노력"입니다. 사용자에게 새로운 데이터가 사용 가능하다는 것을 알리기 위한 것이지, 앱에 데이터를 전달하기 위한 것이 아닙니다. 중요한 구별은 우리가 APN에 성공적으로 전달한 메시지 수를 표시할 것이며, 반드시 APN가 기기에 성공적으로 전달한 수는 아닙니다.
+
+##### 추적 구독 취소
+
 푸시 구독 취소는 캠페인 분석에서 측정기준으로 포함되지 않습니다. [추적 푸시 구독 취소]({{site.baseurl}}/help/help_articles/push/push_unsubscribes)의 단계를 참조하여 이 측정기준을 수동으로 추적하는 방법을 알아보세요.
 
-{% alert tip %}
+##### 이해는 열린다
+
 비록 _Direct Opens_와 _Influenced Opens_가 "opens"라는 단어를 포함하고 있지만, 실제로는 서로 다른 측정기준입니다. _직접 열기_는 위의 표에 명시된 대로 푸시 알림의 직접 열기를 의미합니다. _영향을 받은 열람_은 푸시 알림을 받은 후 특정 시간 내에 푸시 알림을 열지 않고 앱을 여는 것을 의미합니다. 그래서 _Influenced Opens_는 푸시 알림 오픈이 아닌 앱 오픈을 의미합니다.
-{% endalert %}
 
-> 알림의 전달은 APN의 "최선의 노력"입니다. 사용자에게 새로운 데이터가 사용 가능하다는 것을 알리기 위한 것이지, 앱에 데이터를 전달하기 위한 것이 아닙니다. 중요한 구별은 우리가 APN에 성공적으로 전달한 메시지 수를 표시할 것이며, 반드시 APN가 기기에 성공적으로 전달한 수는 아닙니다.
+##### 푸시 전송이 고유 수신자를 초과할 수 있는 이유
 
-#### 반송된 푸시 알림 {#bounced-push}
+_Sends_의 수는 다음과 같은 이유로 _Unique Recipients_의 수를 초과할 수 있습니다:
 
-##### 애플 푸시 알림 서비스
+- **재자격 부여는 다음과 같습니다:** 캠페인 또는 캔버스 설정에서 재자격 부여가 활성화되면, 세그먼트 및 전달 기준을 충족하는 사용자에게 동일한 푸시 알림을 여러 번 받을 수 있습니다. 이로 인해 총 발송 수가 증가합니다.
+- **사용자는 여러 장치를 가지고 있습니다.** 재자격이 활성화되지 않은 경우, 차이는 사용자가 자신의 프로필과 연결된 여러 장치를 가지고 있기 때문일 수 있습니다. 예를 들어, 사용자가 스마트폰과 태블릿을 모두 가지고 있을 수 있으며, 푸시 알림이 모든 등록된 장치로 전송되고 있습니다. 각 전달은 발송으로 계산되지만, 고유한 수신자만 기록됩니다.
+- **사용자는 여러 앱에 할당됩니다:** 사용자가 여러 앱(예: 새 앱을 테스트할 때)과 연결되어 있는 경우, 각 앱에서 동일한 푸시 알림을 받을 수 있습니다. 이것은 더 많은 전송에 기여합니다.
 
-APN에서 푸시 알림이 설치된 앱이 없는 기기로 전달을 시도할 때 바운스가 발생합니다. APN는 또한 기기의 토큰을 임의로 변경할 권리가 있습니다. Braze가 앞서 사용자 토큰을 등록했을 때(예: Braze가 사용자 푸시 토큰을 등록할 경우 각 세션의 시작 시점)와 실제 전송 시점 사이에 푸시 토큰의 변경이 이루어진 사용자 기기를 대상으로 발송을 시도하면, 반송이 발생하게 됩니다.
+##### 왜 바운스가 발생하나요 {#bounced-push}
+
+{% tabs %}
+{% tab 애플 푸시 알림 서비스 %}
+
+바운스는 Apple Push Notification 서비스(APNs)에서 푸시 알림이 설치된 앱이 없는 기기로 전달을 시도할 때 발생합니다. APN는 또한 기기의 토큰을 임의로 변경할 권리가 있습니다. Braze가 앞서 사용자 토큰을 등록했을 때(예: Braze가 사용자 푸시 토큰을 등록할 경우 각 세션의 시작 시점)와 실제 전송 시점 사이에 푸시 토큰의 변경이 이루어진 사용자 기기를 대상으로 발송을 시도하면, 반송이 발생하게 됩니다.
 
 사용자가 기기 설정에서 푸시를 비활성화하면 이후 앱을 열 때 SDK가 푸시가 비활성화되었음을 감지하고 Braze에 알립니다. 이 시점에서 우리는 푸시 활성화 상태를 비활성화로 업데이트할 것입니다. 장애인 사용자가 새로운 세션을 시작하기 전에 푸시 캠페인을 받으면, 캠페인은 성공적으로 전송되어 배달된 것으로 나타납니다. 이 사용자는 푸시가 튕기지 않을 것입니다. 후속 세션에서 사용자가 푸시를 보내려고 할 때, Braze는 우리가 포그라운드 토큰을 가지고 있는지 이미 알고 있으므로 알림이 전송되지 않습니다.
 
 푸시 알림은 전달 전에 만료되면 실패로 간주되지 않으며 반송으로 기록되지 않습니다.
 
-##### 파이어베이스 클라우드 메시징
+{% endtab %}
+{% tab 파이어베이스 클라우드 메시징 %}
 
 Firebase Cloud Messaging(FCM) 바운스는 세 가지 경우에 발생할 수 있습니다.
 
@@ -434,6 +466,10 @@ Firebase Cloud Messaging(FCM) 바운스는 세 가지 경우에 발생할 수 �
 | 백업된 애플리케이션 | 애플리케이션이 백업될 때, 등록 ID는 애플리케이션이 복원되기 전에 유효하지 않을 수 있습니다. 이 경우, FCM은 더 이상 애플리케이션의 등록 ID를 저장하지 않으며 애플리케이션은 더 이상 메시지를 수신하지 않습니다. 따라서, 등록 ID는 애플리케이션이 백업될 때 **저장되지** 않아야 합니다. |
 | 업데이트된 애플리케이션 | 애플리케이션이 업데이트되면 이전 버전의 등록 ID가 더 이상 작동하지 않을 수 있습니다. 따라서 업데이트된 애플리케이션은 기존 등록 ID를 대체해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 
 {% elsif include.channel == "SMS" %}
 

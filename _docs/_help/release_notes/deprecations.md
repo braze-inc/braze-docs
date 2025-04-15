@@ -34,7 +34,7 @@ Support for Shopify `checkout.liquid` will begin deprecation in August 2024 and 
 
 **Support withdrawn**: October 2022
 
-Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) instead.
+Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) instead.
 
 ### Grouparoo partnership
 
@@ -128,9 +128,9 @@ If you need assistance with your Eclipse integration prior to migration, contact
 ### The Raw Event Stream (RES)
 
 **Support withdrawn**: July 2018<br>
-**Replaced by**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Replaced by**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and was deprecated to make room for the future of Braze data.
 
 ### Delay while idle - GCM feature
 

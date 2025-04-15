@@ -6,7 +6,7 @@ page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
 page_type: reference
-description: "이 문서에서는 동기화 트리거 Braze 엔드포인트에 대한 세부정보를 설명합니다."
+description: "이 문서에서는 트리거 동기화 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ description: "이 문서에서는 동기화 트리거 Braze 엔드포인트에 �
 > 이 엔드포인트를 사용하여 지정된 통합에 대한 동기화를 트리거할 수 있습니다.
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_sync` 권한이 있는 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_sync` 권한으로 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -63,6 +63,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 | `429 Another job is in progress` | 현재 이 통합을 위해 동기화가 진행 중입니다. 동기화가 완료된 후 다시 시도하세요. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는[심각한 오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% endapi %}

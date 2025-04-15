@@ -8,7 +8,7 @@ channel:
 search_rank: 4
 ---
 
-# [![Braze 학습 과정]](https://learning.braze.com/content-cards) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} 콘텐츠 카드 정보
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} 콘텐츠 카드 정보
 
 > 콘텐츠 카드는 앱이나 웹사이트에 직접 임베드되므로 자연스럽고 매끄러운 사용자 경험을 통해 사용자의 참여를 유도할 수 있습니다. 이를 통해 앱 또는 웹사이트 환경을 더 잘 제어할 수 있으며 메시지 받은 편지함, 캐러셀, 배너를 만들고 다른 채널(예: 이메일 또는 푸시 알림)의 도달 범위를 확장할 수 있습니다.
 
@@ -114,13 +114,13 @@ search_rank: 4
 - [캐러셀](#carousel)
 - [배너](#banner)
 
-이러한 배치의 로직과 구현은 Braze의 기본값이 아니므로 엔지니어링 팀에서 이러한 사용 사례를 달성하기 위한 작업을 제공하고 지원해야 합니다. 이러한 배치를 구현하는 방법에 대한 개요는 [사용자 지정 콘텐츠 카드 만들기를]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards) 참조하세요.
+이러한 배치의 로직과 구현은 Braze의 기본값이 아니므로 엔지니어링 팀에서 이러한 사용 사례를 달성하기 위한 작업을 제공하고 지원해야 합니다. 이러한 배치를 구현하는 방법에 대한 개요는 [사용자 지정 콘텐츠 카드 만들기를]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/) 참조하세요.
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![메시지 받은 편지함, 캐러셀, 배너 등 다양한 배치 옵션을 보여주는 3개의 콘텐츠 카드 예시.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### 메시지 받은편지함
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!['메시지 받은 편지함' 배치를 사용한 콘텐츠 카드 예시.]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 메시지 받은 편지함(알림 센터 또는 피드라고도 함)은 앱이나 웹사이트에서 원하는 형식으로 콘텐츠 카드를 표시할 수 있는 영구적인 공간입니다. 받은편지함의 각 메시지는 고유한 콘텐츠 카드입니다. 
 
@@ -142,7 +142,7 @@ search_rank: 4
 
 ### 캐러셀
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["캐러셀" 배치를 사용한 콘텐츠 카드 예시.]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 캐러셀은 고객이 스와이프하여 볼 수 있는 여러 콘텐츠를 단일 공간에 표시합니다. 이미지, 텍스트, 동영상 또는 이들의 조합으로 구성된 슬라이드쇼가 될 수 있습니다. 이는 사용자 정의 구현이며 개발자의 약간의 작업이 필요합니다.
 
@@ -159,7 +159,7 @@ search_rank: 4
 
 ### 배너
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!['배너' 배치를 사용한 콘텐츠 카드 예시.]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 콘텐츠 카드는 홈페이지 또는 다른 지정된 페이지 상단에 지속적으로 표시되는 동적 배너로 표시될 수 있습니다.
 
@@ -176,7 +176,7 @@ search_rank: 4
 
 개발자는 Braze SDK를 통합할 때 콘텐츠 카드를 통합하게 됩니다. 콘텐츠 카드와 통합하는 방법에 대한 자세한 내용은 해당 플랫폼의 개발자 가이드 문서를 참조하세요.
 
-- [iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "콘텐츠 카드 통합 가이드")
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS Content Card Integration Guide")
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android 콘텐츠 카드 통합 가이드")
 - [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "웹 콘텐츠 카드 통합 가이드")
 

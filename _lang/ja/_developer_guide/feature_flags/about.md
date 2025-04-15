@@ -28,9 +28,9 @@ Brazeでフィーチャーフラグを作成する方法に関するステップ
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## フィーチャーフラグ sの使用
+## フィーチャーフラグの使用
 
-フィーチャーフラグ s を使用して:
+フィーチャーフラグを使用して:
 
 - [段階的なロールアウトを導入する](#gradual-rollouts)
 - [アプリ変数をリモートでコントロールする](#remotely-control-app-variables)
@@ -42,7 +42,7 @@ Brazeでフィーチャーフラグを作成する方法に関するステップ
 
 フィーチャーフラグを使用して、サンプルの母集団に対して徐々に機能を有効にします。たとえば、最初に VIP ユーザーに新しい機能をソフトローンチできます。この戦略は、新しい機能を一度に全ユーザーに配布することに伴う危険性を軽減するのに役立ち、バグの早期発見に役立ちます。
 
-![ロールアウトトラフィックスライダの移動イメージは0% から100% です。]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![ロールアウトのトラフィックスライダーが0% から100% に変化する様子を示すアニメーション。]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 たとえば、顧客サービスを迅速に行うために、新しい「ライブチャットサポート」リンクをアプリに追加することにしたとします。この機能をすべての顧客に一度にリリースすることもできます。しかし、幅広くリリースすることには、次のようなリスクがあります。 
 
@@ -59,7 +59,7 @@ Braze フィーチャーフラグを使用することで、機能を段階的�
 
 この機能を段階的にロールアウトするには、「ライブチャットウィジェット」という名前のフィーチャーフラグを[作成します]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/)。
 
-![Live Chat Widget という名前の例の機能フラグの詳細。ID はenable_live_chat です。この機能フラグの説明は、ライブチャットウィジェットがサポートページに表示されることを読み取ります。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Live Chat Widget という名前の例の機能フラグの詳細。ID はenable_live_chat です。このフィーチャーフラグの説明には、ライブチャットウィジェットがサポートページに表示されることが記載されています。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 このアプリ コードでは、Braze フィーチャーフラグが有効になっている場合、**Live Chat**ボタンのみを表示します。
 
@@ -123,23 +123,23 @@ return (<>
 
 これで、感謝祭の前日には、Braze ダッシュボードでこれらのプロパティ値を変更するだけで済みます。
 
-![Thanksgiving sales page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})に向けたリンクとテキストプロパティを持つ機能フラグ
+![感謝祭の販売ページに向けたリンクとテキストプロパティを持つフィーチャーフラグ。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 その結果、次回誰かがアプリを読み込むと、新しい感謝祭セールが表示されます。
 
 ### メッセージの調整
 
-フィーチャーフラグを使用して、機能のロールアウトとメッセージングを同期します。これにより、ユーザーエクスペリエンスと関連メッセージングの両方の信頼できる情報源として Braze を使用できるようになります。これを実現するには、新しい機能の対象をオーディエンスの特定のセグメントまたはフィルター処理された部分にします。次に、そのSegmentのみを対象とするキャンペーンまたはキャンバスを作成します。 
+フィーチャーフラグを使用して、機能のロールアウトとメッセージングを同期します。これにより、ユーザーエクスペリエンスと関連メッセージングの両方の信頼できる情報源として Braze を使用できるようになります。これを実現するには、新しい機能の対象をオーディエンスの特定のセグメントまたはフィルター処理された部分にします。次に、そのセグメントのみを対象とするキャンペーンまたはキャンバスを作成します。 
 
 たとえば、ユーザー向けに新しいロイヤルティ報酬プログラムを開始するとします。マーケティングチームと製品チームが、プロモーションメッセージングのタイミングと機能のロールアウトのタイミングを完璧に調整するのは難しいかもしれません。キャンバスのフィーチャーフラグを使用すると、選択したオーディエンスに対して機能を有効にし、その同じユーザーに対して関連するメッセージングをコントロールする際に、高度なロジックを適用できます。
 
 機能のロールアウトとメッセージングを効率的に調整するために、`show_loyalty_program` という新しいフィーチャーフラグを作成します。最初の段階的リリースでは、フィーチャーフラグを有効にするタイミングと対象をキャンバスでコントロールします。この時点では、ロールアウトのパーセンテージは0% のままにし、ターゲットセグメントは選択しません。
 
-![ロイヤルティ報酬プログラムという名前のフィーチャーフラグ。ID はshow_loyalty_program で、これは新しいロイヤルティ報酬プログラムをホーム画面とプロファイルページに表示します。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![ロイヤルティ報酬プログラムという名前のフィーチャーフラグ。ID は show_loyalty_program で、これはホーム画面とプロファイルページに新しいロイヤルティ報酬プログラムが表示されるということを説明しています。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 次に、キャンバスフローで、「高価値顧客」セグメントの `show_loyalty_program` フィーチャーフラグを有効にする[フィーチャーフラグステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/)を作成します。
 
-![高価値顧客セグメントがshow_loyalty_program 機能フラグをオンにするAudience Split ステップを持つキャンバスの例。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![高価値顧客セグメントが show_loyalty_program フィーチャーフラグをオンにする、オーディエンス分割ステップを含むキャンバスの例。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 これで、このセグメントのユーザーに対して新しいロイヤルティプログラムが表示され始め、有効にした後、メールと調査が自動的に送信され、チームがフィードバックを収集できるようになります。
 
@@ -169,7 +169,7 @@ if (featureFlag?.enabled) {
 
 A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) で設定します。
 
-さて、50%のユーザー sが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントを分析して、どのチェックアウトフローが高い変換率をもたらしたかを判断することができます。{% multi_lang_include metrics.md metric='Conversion Rate' %}
+さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントを分析して、どのチェックアウトフローが高い変換率をもたらしたかを判断することができます。{% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![トラフィックを2 つの50 パーセントグループに分割する機能フラグ実験。]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -181,7 +181,7 @@ A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/pl
 
 ![]({% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %})
 
-Segment s でのフィルター ing の詳細については、[Segmentの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
+セグメントでのフィルタリングの詳細については、[セグメントの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
 
 {% alert note %}
 再帰的なセグメントを防ぐため、他のフィーチャーフラグを参照するセグメントを作成することはできない。

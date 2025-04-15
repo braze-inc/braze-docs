@@ -34,7 +34,7 @@ tool:
 
 ![][1]
 
-다시 자격을 설정한 트리거 캠페인의 경우, 트리거 이벤트를 완료했음에도 불구하고 [실제로 캠페인 메시지를 받지 못한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) 사용자는 사용자를 다시 자격을 설정하지 않아도 다음에 트리거 이벤트를 완료할 때 자동으로 메시지를 받을 자격을 얻게 됩니다. 이는 캠페인 참여가 아닌 메시지 수신을 기준으로 재자격이 부여되기 때문입니다. 사용자가 트리거된 캠페인에 다시 참여할 수 있도록 하면 단순히 메시지를 트리거하는 것이 아니라 실제로 메시지를 두 번 이상 수신할 수 있게 됩니다.
+다시 자격을 설정한 트리거 캠페인의 경우, 트리거 이벤트를 완료했음에도 불구하고 [실제로 캠페인 메시지를 받지 못한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) 사용자는 사용자를 다시 자격을 설정하지 않아도 다음에 트리거 이벤트를 완료할 때 자동으로 메시지를 받을 자격을 얻게 됩니다. 이는 캠페인 참여가 아닌 메시지 수신을 기준으로 재자격이 부여되기 때문입니다. 사용자가 트리거된 캠페인에 다시 참여할 수 있도록 하면 단순히 메시지를 트리거하는 것이 아니라 실제로 메시지를 두 번 이상 수신할 수 있게 됩니다.
 
 또한 0분의 재자격으로 즉시 메시지를 보내려는 경우, 사용자가 이전 버전의 캠페인이나 캔버스를 어떻게 수신했는지에 관계없이 항상 바로 예약을 시도합니다.
 

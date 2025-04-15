@@ -46,7 +46,7 @@ Evita editar tu ID de ubicación después del lanzamiento, ya que esto puede rom
 
 ![Los detalles de colocación que designan una Tarjeta Banner se mostrarán en la barra lateral izquierda para las campañas de promoción de ventas de primavera.]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
 
-Para saber cómo lanzar una campaña con una [tarjeta Banner]({{site.baseurl}}/create_banner_card/), consulta [Crear una tarjeta Banner]({{site.baseurl}}/create_banner_card/).
+Para saber cómo lanzar una campaña con una tarjeta Banner, consulta [Crear una tarjeta Banner]({{site.baseurl}}/create_banner_card/).
 
 ## Actualiza las ubicaciones en tu aplicación {#requestBannersRefresh}
 
@@ -327,9 +327,11 @@ This feature is not currently supported on Roku.
 
 ## Análisis
 
-Braze se encargará automáticamente de todos los registros de impresiones cuando utilices los métodos del SDK para insertar tarjetas Banner. 
+No tienes que preocuparte de hacer un seguimiento manual de las impresiones porque Braze gestiona automáticamente todo el registro de impresiones cuando utilizas los métodos del SDK para insertar tarjetas Banner.
 
-Si necesitas parsear y renderizar el HTML, [ponte en contacto con nosotros](mailto:banners-feedback@braze.com). Puedes utilizar el siguiente método para hacer un seguimiento de las impresiones:
+Si necesitas analizar y representar el HTML en una vista personalizada, [ponte en contacto con nosotros](mailto:banners-feedback@braze.com).
+
+{% details Más información para el seguimiento manual de las impresiones %}
 
 {% alert important %}
 Es probable que la personalización de tu integración sea innecesaria, así que considera detenidamente el siguiente paso.
@@ -406,6 +408,8 @@ This feature is not currently supported on Roku.
 ```
 {% endtab %}
 {% endtabs %}
+
+{% enddetails %}
 
 ## Buenas prácticas
 

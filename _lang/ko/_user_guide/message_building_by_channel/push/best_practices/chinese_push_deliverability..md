@@ -21,7 +21,7 @@ channel: push
 이를 해결하려면 [AutoStarter](https://github.com/judemanutd/AutoStarter)와 같은 라이브러리를 애플리케이션에 통합하십시오. AutoStarter는 여러 제조업체를 지원하여 다양한 기기에서 시작 권한 매니저를 쉽게 호출할 수 있는 방법을 제공합니다. AutoStarter를 통합한 후, `AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)`을 호출하여 최종사용자의 기기에서 시작 권한 매니저를 불러옵니다. 이 작업을 앱의 "자동 시작"을 활성화하도록 최종 사용자에게 권장하는 메시지와 결합하세요. 귀하의 마케팅 팀이 이 메시지를 작성할 것입니다. 다음 섹션을 참조하십시오!
 
 ## 마케터를 위한 단계
-사용자가 푸시 알림을 받도록 선택한 후, 이러한 기기의 메시지 전달을 개선하기 위해 추가로 취할 수 있는 단계가 있습니다. 푸시 프라이머 메시지[푸시 프라이머 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)를 중국 OEM 기기 사용자에게 타겟팅된 인앱 메시지로 후속 조치하는 것을 권장합니다. 추가 단계는 다음과 같습니다.
+사용자가 푸시 알림을 받도록 선택한 후, 이러한 기기의 메시지 전달을 개선하기 위해 추가로 취할 수 있는 단계가 있습니다. We recommend you follow up your [push primer message]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) with an in-app message targeted to users on Chinese OEM devices with these additional steps:
 
 - 앱의 "자동 시작"을 활성화하십시오
 - 앱의 배터리 최적화를 비활성화합니다

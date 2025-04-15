@@ -22,7 +22,7 @@ If you selected **No optimization** when setting up your campaign, your analytic
 
 ![Performance section of the Campaign Analytics for an email campaign with multiple variants. The table lists various performance metrics for each variant, such as recipients, bounces, clicks, and conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) article for your messaging channel.
+For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) article for your messaging channel.
 
 ### Winning Variant
 
@@ -127,7 +127,7 @@ The table on this page shows the metrics for each variant from the Personalized 
 Confidence is the statistical measure of how certain we are that a difference in data, like conversion rates, is real and not just due to random chance.
 
 {% alert note %}
-Don't see confidence in your results? Confidence will only appear if you selected **Winning Variant** or **Personalized Variant** as an optimization.
+Don't see confidence in your results? Confidence will only appear if you have a control group.
 {% endalert %}
 
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users' responses and that there is only a 5% likelihood that the difference has occurred by chance.
@@ -183,4 +183,4 @@ Use the insights you gather from past tests to guide your future ones. Does a pr
 
 #### Compare the long-term impact of different variants
 
-If you're A/B testing re-engagement messages, don't forget to compare the long-term impact of different variants using [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there is uplift.
+If you're A/B testing re-engagement messages, don't forget to compare the long-term impact of different variants using [Retention Reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there is uplift.

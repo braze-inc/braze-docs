@@ -3,7 +3,7 @@ nav_title: Card Creation
 article_title: Card Creation
 alias: /card_creation/
 description: "This article describes the differences between Content Card creation at campaign launch or Canvas step entry versus at first impression."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards
@@ -99,7 +99,7 @@ This section describes the main differences between card creation at campaign la
   <tr>
     <td class="leftHeader">Analytics</td>
     <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards created and available to be seen. This doesn't count whether the users viewed the card.</td>
-    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards displayed to users. <br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch or Canvas step entry.</td>
+    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards sent to a user after a session start. In Canvas, users entering the step without starting a session will not have a card sent, which is why this metric may not align with the number of users entering a step.<br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch or Canvas step entry.</td>
   </tr>
   <tr>
     <td class="leftHeader">Processing time</td>

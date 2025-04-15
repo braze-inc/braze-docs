@@ -1,8 +1,0 @@
----
-hidden: true
-nav_title: Méthodes d’installation
-page_order: 1
-config_only: true
-noindex: true
-layout: blank_config
----

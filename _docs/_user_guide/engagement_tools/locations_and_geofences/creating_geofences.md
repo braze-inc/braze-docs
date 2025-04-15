@@ -19,10 +19,6 @@ You can define geofences on the Braze dashboard and use them to trigger campaign
 
 Manage geofences from **Audience** > **Locations**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Engagement**.
-{% endalert %}
-
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
 You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
@@ -40,7 +36,7 @@ From the **Locations** page, click **+ Create Geofence Set**.
 
 ![Geofence set of German airports with a user drawing a radius of two thousand meters on the map for Hamburg Airport.][1]
 
-Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Creating sets via bulk upload {#creating-geofence-sets-via-bulk-upload}
 

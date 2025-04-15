@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:API トリガー配信でトランザクションメールを送信する"
-article_title: "POST:API トリガー配信でトランザクションメールを送信する"
+nav_title: "POST:API トリガー配信を使用してトランザクションメールを送信する"
+article_title: "POST:API トリガー配信を使用してトランザクションメールを送信する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -10,7 +10,7 @@ description: "この記事では、API トリガー配信 Braze エンドポイ�
 ---
 
 {% api %}
-# API トリガー配信でトランザクションメールを送信する
+# API トリガー配信を使用してトランザクションメールを送信する
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
@@ -37,7 +37,7 @@ description: "この記事では、API トリガー配信 Braze エンドポイ�
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `campaign_id` | 必須 | 文字列 | キャンペーンのID |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| オプション | 文字列 |  Base64互換の文字列。以下の正規表現に対して検証される：<br><br> `/^[a-zA-Z0-9-_+\/=]+$/`<br><br>このオプションのフィールドを使用すると、この特別な送信の内部識別子を渡すことができます。この識別子は、トランザクション HTTP イベントポストバックから送信されるイベントに含まれます。渡されると、この識別子は重複排除キーとしても使用され、Brazeはこれを24時間保存する。<br><br>別のリクエストで同じ識別子を渡すと、24時間はBrazeによる新しい送信インスタンスは生成されない。|
 |`trigger_properties`|オプション|オブジェクト|[トリガープロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)を参照してください。このリクエストでユーザーに適用されるパーソナライゼーションのキーと値のペア。 |
@@ -133,7 +133,7 @@ Brazeのほとんどのエンドポイントにはレートリミットが実装
 トランザクションHTTPイベントポストバックの使用を開始するには、Brazeダッシュボードの**「設定」**>「**メール設定**」を開き、「**トランザクションイベントステータスポストバック**」のセクションを見つける。ポストバックを受け取りたいURLを入力する。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは \[**設定の管理**] > \[**メール設定**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは**設定の管理**> **メール設定**にあります。
 {% endalert %}
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})

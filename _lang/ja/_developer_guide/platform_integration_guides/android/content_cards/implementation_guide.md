@@ -502,7 +502,7 @@ ContentCardsList(
 
 ## カードの却下
 
-Swipe-to-Dismiss機能の無効化は、以下のメソッドによってカードごとに行われる。 [`card.isDismissibleByUser()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html)メソッドで行う。カードは表示される前に [`ContentCardsFragment.setContentCardUpdateHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)メソッドを使う。
+スワイプして閉じる機能を無効にするには、[[`card.isDismissibleByUser()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html)] メソッドを使用してカードごとに行います。カードは、[[`ContentCardsFragment.setContentCardUpdateHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)] メソッドを使って表示前にインターセプトできます。
 
 ## ダークテーマのカスタマイズ
 

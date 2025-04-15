@@ -30,19 +30,19 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Obrigatória | String | Consulte o [identificador da API do Canva]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Obrigatória | Data e hora <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Data em que a exportação de dados deve terminar. O padrão é a hora da solicitação. |
-| `starting_at` | Opcional* | Data e hora <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Data em que a exportação de dados deve começar. <br><br>\*É necessário ter o endereço `length` ou `starting_at`. |
-| `length` | Opcional* | String | Número máximo de dias antes de `ending_at` para incluir na série retornada. Deve estar entre 1 e 14 (inclusive). <br><br>\*É necessário ter o endereço `length` ou `starting_at`. |
-| `include_variant_breakdown` | Opcional | Booleano | Se deve ou não incluir estatísticas de variantes (o padrão é `false`).  |
-| `include_step_breakdown` | Opcional | Booleano | Se deve ou não incluir estatísticas de etapas (o padrão é `false`). |
-| `include_deleted_step_data` | Opcional | Booleano | Se deve ou não incluir estatísticas de etapas excluídas (o padrão é `false`). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `canvas_id` | Obrigatória | String | Veja [identificador da API canva]({{site.baseurl}}/api/identifier_types/). |
+| `ending_at` | Obrigatória | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a exportação de dados deve terminar. Padrões para o momento da solicitação. |
+| `starting_at` | Opcional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a exportação de dados deve começar. <br><br>\* Ou `length` ou `starting_at` é necessário. |
+| `length` | Opcional* | String | Número máximo de dias antes de `ending_at` para incluir na série retornada. Deve estar entre 1 e 14 (inclusive). <br><br>\* Ou `length` ou `starting_at` é necessário. |
+| `include_variant_breakdown` | Opcional | Booleano | Incluir ou não estatísticas variantes (padrão é `false`).  |
+| `include_step_breakdown` | Opcional | Booleano | Se deve ou não incluir estatísticas de etapa (padrão é `false`). |
+| `include_deleted_step_data` | Opcional | Booleano | Se deve ou não incluir estatísticas de etapa para etapas excluídas (padrão é `false`). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 {% raw %}
 ```
-curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-05:00&starting_at=2018-05-28T23:59:59-05:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
@@ -97,7 +97,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Para obter ajuda com exportações CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

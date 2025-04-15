@@ -96,7 +96,7 @@ AB テストでレート制限を使用する場合、コントロールグル�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-AB テストを実施する際は、各バリアントがコンバージョンファネルにどのような影響を与えたかを把握できる[ファネルレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)を生成することを忘れないでください。特に、ビジネスの「コンバージョン」に複数のステップやアクションが必要である場合は特にそうです。
+AB テストを実施する際は、各バリアントがコンバージョンファネルにどのような影響を与えたかを把握できる[ファネルレポート]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)を生成することを忘れないでください。特に、ビジネスの「コンバージョン」に複数のステップやアクションが必要である場合は特にそうです。
 {% endalert %}
 
 さらに、テストの理想的な長さもチャネルによって異なる場合があります。ほとんどのユーザーが各チャネルと関わるのに要する平均時間を覚えておいてください。
@@ -136,7 +136,7 @@ AB テストを実施する際は、各バリアントがコンバージョン�
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
 [6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

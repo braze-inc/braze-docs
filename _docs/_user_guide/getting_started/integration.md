@@ -12,7 +12,7 @@ description: "This reference article briefly covers the integration steps requir
 > Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly, you already know that. But what you probably don't know is that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
 
 {% alert note %} 
-Note that the contents of this article don't apply to email. Check that out in the [Email setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section.
+Note that the contents of this article don't apply to email. Check that out in the [Email setup]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) section.
 {% endalert %}
 
 ## The technical side of the integration process
@@ -27,7 +27,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
@@ -45,9 +45,9 @@ Be sure to tell your developers which channels you want to use to ensure that im
 |---|---|
 | In-app messages | Requires SDK implementation as well as these channel-specific steps. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
-| Email | This is an entirely different process. Check out the [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section for more details on integration. |
+| Email | This is an entirely different process. Check out the [Email Setup]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) section for more details on integration. |
 | Content Cards | To get started with [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), reach out to your Braze customer success manager. |
-| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup) section for more details on integration. |
+| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) section for more details on integration. |
 | Webhooks | Requires SDK implementation as well as channel-specific steps. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -62,11 +62,11 @@ Braze isn't a one-trick pony. This isn't about just sending emails or sending pu
 So, what do you need to do to get them this information?
 
 1. Work with your marketing team to define campaigns, goals, attributes, and events you need to track. Define those use cases and share them with your teams.
-2. Define your custom data requirements ([custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), etc.).
+2. Define your custom data requirements ([custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), etc.).
 3. From there, discuss how that data should be tracked (triggered through the SDK, etc.).
-4. Define how many [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/app_group_management/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) these workspaces.
+4. Define how many [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/user_guide/getting_started/workspaces/) these workspaces.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
 ### Step 4: They customize based on what you want
 
@@ -74,9 +74,9 @@ If you want things like API-triggered launching and Connected Content, discuss t
 
 ### Step 5: You both perform QA on your implementation
 
-Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/), check every box before you start sending!
+Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/references/?tab=android) and [test apps for iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), check every box before you start sending!
 
-We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/).
+We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 
 ## After implementation
 

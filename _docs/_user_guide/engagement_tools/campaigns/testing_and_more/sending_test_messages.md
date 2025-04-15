@@ -23,7 +23,7 @@ Before testing your messaging campaign, it's important to identify your test use
 
 ### Optional: Create a Content Test Group
 
-A convenient way to organize your test users is by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. You can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
+A convenient way to organize your test users is by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. You can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
 
 ## Step 2: Send channel-specific test messages
 
@@ -116,9 +116,7 @@ After creating your webhook, you can do a test send to check the webhook respons
 {% endtab %}
 {% tab News Feed %}
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 
@@ -128,7 +126,7 @@ Once you set up a test segment, you can use these messaging channels. The proces
 
 1. Go to the **Segments** page and [create a new segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Click the dropdown menu under **Add Filter** and locate the testing filters at the bottom of the list <br><br>![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/).<br><br>![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift).<br><br>![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>These filters have the following options:
 - **Equals**: Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
 - **Does not equal**: Excludes a particular email or user ID from test campaigns.
@@ -225,7 +223,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

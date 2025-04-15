@@ -54,11 +54,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Requis | Tableau des objets Renommer des identifiants externes | Afficher l’exemple de demande et les limitations suivantes pour la structure de l’objet Renommer des identifiants externes. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- Le `current_external_id` doit être l’ID principal de l’utilisateur et ne peut pas être un ID obsolète
-- Le `new_external_id` ne doit pas déjà être utilisé comme ID principal ou ID obsolète
-- Les `current_external_id` et `new_external_id` ne peuvent pas être identiques
+Notez ce qui suit :
+
+- L'adresse `current_external_id` doit être l'ID principal de l'utilisateur et ne peut pas être un ID obsolète.
+- Le site `new_external_id` ne doit pas être déjà utilisé en tant qu'ID primaire ou ID déprécié.
+- Les sites `current_external_id` et `new_external_id` ne peuvent pas être les mêmes.
 
 ## Exemple de demande
 ```
@@ -75,7 +77,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 }'
 ```
 
-## Réponse 
+## Réponse
+
 La réponse confirmera tous les renommages réussis et les renommages infructueux avec toutes les erreurs associées. Les messages d’erreur dans le champ `rename_errors` référenceront l’index de l’objet dans le tableau de la demande d’origine.
 
 ```
@@ -87,26 +90,27 @@ La réponse confirmera tous les renommages réussis et les renommages infructueu
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `rename_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
+
 - Clé API non valide
 - Tableau `external_id_renames` vide
 - Tableau `external_id_renames` avec plus de 50 objets
-- Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
+- Limite de débit atteinte (plus de 1 000 demandes par minute)
 
 ## Foire aux questions
 
-**Cela a-t-il un impact sur le MAU ?**<br>
+### Cela a-t-il un impact sur le MAU ?
 Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement un nouvel `external_id`.
 
-**Le comportement des utilisateurs change-t-il au cours du temps ?**<br>
+### Le comportement des utilisateurs change-t-il au cours du temps ?
 Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
 
-**Est-il possible de l’exécuter sur des espaces de travail de développement/préproduction ?**<br>
+### Peut-il être exécuté sur des espaces de travail de développement ou de mise à l'essai ?
 Oui. En fait, nous vous recommandons vivement d'effectuer un test de migration sur un espace de travail de développement ou de mise à disposition, et de vous assurer que tout s'est bien déroulé avant d'exécuter la migration sur les données de production.
 
-**Est-ce que cela consomme des points de données ?**<br>
+### Est-ce que cela consomme des points de données ?
 Cette fonctionnalité ne coûte pas de points de données.
 
-**Quel est le délai d’obsolescence recommandé ?**<br>
+### Quel est le délai d’obsolescence recommandé ?
 Nous n'avons pas de limite stricte quant à la durée pendant laquelle vous pouvez conserver des ID externes dépréciés, mais nous vous recommandons vivement de les supprimer lorsqu'il n'est plus nécessaire de référencer les utilisateurs par l'ID déprécié.
 
 {% endapi %}

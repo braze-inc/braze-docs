@@ -158,3 +158,6 @@ This filter allows you to segment based on when was the last time the user used 
 - **Allowed comparisons:** `after`, `before`
 - **Allowed values:** datetime (ISO 8601 string)
 
+### Considerations
+
+Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).

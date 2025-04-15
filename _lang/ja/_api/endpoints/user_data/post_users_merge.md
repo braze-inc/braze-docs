@@ -43,20 +43,20 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `merge_updates` | 必須 | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
+| `merge_updates` | required | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### マージ動作
 
-以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、\[セグメント拡張]、\[クエリビルダー]、および\[カレント]では、ユーザーのマージが反映されない。
+以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、[セグメント拡張]、[クエリビルダー]、および[カレント]では、ユーザーのマージが反映されない。
 
 {% alert important %}
 エンドポイントは、`merge_updates` オブジェクトが更新される順序を保証しない。
 {% endalert %}
 
-このエンドポイントは、以下のフィールドがターゲット・ユーザーに見つからない場合、それらをマージする：
+このエンドポイントは、ターゲットユーザーで見つからない場合、次のフィールドをマージします。
 
 - 名
 - 姓
@@ -88,8 +88,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - キャンペーンのインタラクションデータ（Brazeは最新の日付フィールドを選ぶ）
 - ワークフローのサマリー（Brazeは最新の日付フィールドを選ぶ）
 - メッセージとメッセージのエンゲージメント履歴
-
-セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
+- セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
 
 {% alert note %}
 ユーザーをマージする場合、`/users/merge` エンドポイントを使用すると、[`changeUser()` メソッドを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)使用した場合と同じように機能します。

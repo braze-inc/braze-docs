@@ -2,7 +2,8 @@
 nav_title: Formulario de inscripción SMS y WhatsApp
 article_title: Formulario de inscripción SMS y WhatsApp
 alias: "/phone_number_capture/"
-description: "Esta página de referencia explica cómo crear un formulario de registro de SMS y WhatsApp con el editor de arrastrar y soltar mensajes de la aplicación."
+page_order: 1
+description: "Esta página explica cómo crear un formulario de registro de SMS y WhatsApp con el editor de arrastrar y soltar mensajes dentro de la aplicación."
 ---
 
 # Formulario de inscripción SMS y WhatsApp
@@ -11,39 +12,23 @@ description: "Esta página de referencia explica cómo crear un formulario de re
 
 ![Tres ejemplos de mensajes in-app creados con la plantilla de formulario de registro telefónico.][img7]
 
-## Requisitos del SDK
-
-### Versiones mínimas del SDK
-
-Los mensajes creados con el editor de arrastrar y soltar sólo pueden enviarse a usuarios de las siguientes versiones mínimas del SDK. Consulte la sección [Requisitos previos][1] de [Creación de un mensaje in-app con arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) para obtener más detalles y matices a tener en cuenta.
-
-{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
-
-### Versiones del SDK para enlaces de texto
-
-Si desea incluir enlaces de texto que no descarten el mensaje, los usuarios deben estar en las siguientes versiones mínimas del SDK:
-
-{% sdk_min_versions swift:6.2.0 android:26.0.0 %}
-
-{% alert warning %}
-Si incluyes un enlace en tu mensaje in-app que redirige a una URL y el usuario final no está en las versiones SDK mínimas especificadas, al hacer clic en el enlace se cerrará el mensaje y el usuario no podrá volver al mensaje para enviar el formulario.
-{% endalert %}
+{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
 
 ## Crear un formulario de registro de número de teléfono
 
-Cuando crees un mensaje dentro de la aplicación de arrastrar y soltar, selecciona **Registro SMS** o **Registro WhatsApp** para tu plantilla.
+### Paso 1: Elige tu plantilla
+
+Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro de SMS** o **Registro de WhatsApp** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Estas plantillas son compatibles tanto con aplicaciones móviles como con navegadores web.
 
 ![Modal para seleccionar el registro de SMS o el registro de WhatsApp como plantilla al crear un mensaje dentro de la aplicación.][img2]{: style="max-width:70%"}
 
-Estas plantillas son compatibles tanto con aplicaciones móviles como con navegadores web.
+### Paso 2: Configura tus estilos de mensaje
 
-### Paso 1: Configura tus estilos de mensaje
-
-Antes de empezar a personalizar tu plantilla, puedes establecer estilos a nivel de mensaje para todo el mensaje utilizando el menú lateral. Por ejemplo, puede que desee personalizar el tipo de letra de todo el texto o el color de todos los enlaces incluidos en su mensaje. También puede hacer que el mensaje sea de tipo modal o de pantalla completa.
+{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
 
 ![Flujo de trabajo de carga y selección de una fuente personalizada.][img6]
 
-### Paso 2: Personaliza el componente de entrada del número de teléfono
+### Paso 3: Personaliza el componente de entrada del número de teléfono
 
 Para empezar a crear su formulario de inscripción, seleccione el componente de entrada de número de teléfono en el editor.
 
@@ -61,7 +46,7 @@ Por defecto, recopilamos números de todo el mundo, pero puede limitar el númer
 
 Si sus usuarios introducen un número de teléfono que incluye caracteres especiales no aceptados, verán un indicador de error genérico no personalizable y no podrán enviar el formulario. Puede ver el comportamiento del error en la pestaña **Vista previa y prueba** y en su dispositivo de prueba. Consulte este artículo para saber [cómo formatea Braze los números de teléfono][2].
 
-### Paso 3: Añadir una cláusula de exención de responsabilidad (para formularios de inscripción por SMS)
+### Paso 4: Añadir una cláusula de exención de responsabilidad (para formularios de inscripción por SMS)
 
 Para los formularios de inscripción por SMS, es importante comunicar claramente el tipo de SMS que se va a enviar. Asegúrate de que el crecimiento de tu lista cumple la normativa incluyendo la siguiente información en tu formulario:
 
@@ -79,21 +64,19 @@ Esta documentación no pretende proporcionar asesoramiento jurídico completo, n
 
 Para obtener más información sobre el cumplimiento de los SMS, consulte [Leyes y normativas sobre SMS][4].
 
-### Paso 4: Estiliza tu mensaje
+### Paso 5: Estiliza tu mensaje
 
-Puedes personalizar el aspecto de tu mensaje arrastrando y soltando [los componentes del mensaje dentro de la aplicación][3].
+Personaliza el aspecto de tu mensaje utilizando los [componentes de arrastrar y soltar de los mensajes dentro de la aplicación][3].
 
-## Informe
+## Analizar los resultados
 
-Una vez lanzada la campaña, puede analizar los resultados en tiempo real para ver cuántos usuarios han interactuado con ella. Para ver cuántos usuarios han optado por el grupo de suscripción, puede [crear un segmento][5] de usuarios suscritos al grupo de suscripción filtrando por los usuarios que han recibido el mensaje in-app y enviado el formulario.
+{% multi_lang_include drag_and_drop/templates.md section='informes' %}
 
 ![Panel de rendimiento de los mensajes dentro de la aplicación que muestra los clics de cada enlace del mensaje dentro de la aplicación.][img8]
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}

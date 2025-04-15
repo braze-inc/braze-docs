@@ -44,7 +44,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `200` e `404`.
+Existem dois códigos de status para este endpoint: `200` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 

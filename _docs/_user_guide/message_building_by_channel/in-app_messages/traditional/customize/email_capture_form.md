@@ -26,7 +26,7 @@ When an end-user enters their email address to this form, the email address will
     - Valid email addresses: 
         - `example@gmail.com`
         - `example@gnail.com` (with a typo)
-    - For more information on email validation in Braze, refer to [Email technical guidelines and notes]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
+    - For more information on email validation in Braze, refer to [Email technical guidelines and notes]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details More on identified versus anonymous users %}
 
@@ -36,7 +36,7 @@ If an anonymous user enters their email in the form and submits it, Braze adds t
 
 If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and [specific user profile data fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that do not already exist on the identified user are merged, but any fields that do already exist are lost, including the email address.
 
-For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

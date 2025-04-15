@@ -58,7 +58,7 @@ AppDelegate.braze?.requestImmediateDataFlush()
 
 ### 起動時のリクエストポリシーの設定
 
-これらのポリシーは、アプリの起動時に Braze 構成を初期化する際に設定できます。`configuration` 。 [`Braze.Configuration.Api.RequestPolicy`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum))を設定する：
+これらのポリシーは、アプリの起動時に Braze 構成を初期化する際に設定できます。`configuration` オブジェクトで、次のコードスニペットに示すように [[`Braze.Configuration.Api.RequestPolicy`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum)] を設定します:
 
 {% tabs %}
 {% tab SWIFT %}

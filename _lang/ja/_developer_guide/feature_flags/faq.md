@@ -103,9 +103,9 @@ else {
 
 これをコントロールするには、フィーチャーフラグの[更新をリッスン]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates)し、変更されたフィーチャーフラグに基づいてアプリを再レンダリングするかどうかを決定します。 
 
-### Global Control Group のユーザーが機能フラグの実験を受信しないのはなぜですか?
+### グローバルコントロールグループのユーザーがフィーチャーフラグ実験を受信しないのはなぜですか?
 
-[Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)では、ユーザーの機能フラグを有効にすることはできません。つまり、グローバルコントロールグループのユーザーは、機能フラグの実験に参加できません。
+[Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)では、ユーザーの機能フラグを有効にすることはできません。これは、グローバルコントロールグループのユーザーもフィーチャーフラグ実験に参加できないことを意味します。
 
 ## その他の質問は？
 

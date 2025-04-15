@@ -33,7 +33,7 @@ Otras ventajas de utilizar `external_id` son las siguientes:
 
 - Proporcionar una experiencia de usuario coherente en múltiples dispositivos y plataformas (por ejemplo, no enviar notificaciones de usuario caducas a la tableta Android de un usuario cuando es un usuario fiel de la aplicación para iPhone).
 - Mejore la precisión de sus análisis confirmando que los usuarios no están creando un nuevo perfil de usuario cada vez que desinstalan y vuelven a instalar, o instalan la aplicación en un dispositivo diferente.
-- Habilita la importación de datos de usuario desde fuentes externas a la aplicación utilizando los [puntos finales de]({{site.baseurl}}/api/endpoints/messaging/) [Datos de usuario]({{site.baseurl}}/api/endpoints/user_data/) y dirígete a los usuarios con mensajes transaccionales utilizando nuestros [puntos finales de mensajería]({{site.baseurl}}/api/endpoints/messaging/).
+- Habilita la importación de datos de usuario desde fuentes externas a la aplicación utilizando los [puntos finales de Datos de usuario]({{site.baseurl}}/api/endpoints/user_data/) y dirígete a los usuarios con mensajes transaccionales utilizando nuestros [puntos finales de mensajería]({{site.baseurl}}/api/endpoints/messaging/).
 - Busca usuarios individuales utilizando nuestros [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Pruebas" dentro del segmentador, y en la sección [**Buscar usuarios**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) página.
 
 {% alert warning %}

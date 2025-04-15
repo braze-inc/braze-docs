@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Membresía de Segment
-    description: "Le permite filtrar en función de la pertenencia a un segmento en cualquier lugar en el que se utilicen filtros (como segmentos, campañas y otros) y dirigirse a varios segmentos diferentes dentro de una misma campaña. <br><br>Tenga en cuenta que los segmentos que ya utilizan este filtro no pueden incluirse ni anidarse en otros segmentos. Debe volver a crear el segmento que intenta incluir utilizando los mismos filtros."
+    description: "Le permite filtrar en función de la pertenencia a un segmento en cualquier lugar en el que se utilicen filtros (como segmentos, campañas y otros) y dirigirse a varios segmentos diferentes dentro de una misma campaña. <br><br>Ten en cuenta que los segmentos que ya utilizan este filtro no pueden incluirse más ni anidarse en otros segmentos, porque esto puede crear un ciclo en el que el segmento A incluya al segmento B, que a su vez intentará incluir de nuevo al segmento A. Si eso ocurriera, el segmento seguiría haciendo referencia a sí mismo, haciendo imposible calcular quién pertenece realmente a él. Además, anidar segmentos de este modo añade complejidad y puede ralentizar las cosas. En su lugar, recrea el segmento que intentas incluir utilizando los mismos filtros."
     tags:
       - Segment or CSV membership
   - name: Extensiones de segmento de Braze
@@ -50,6 +50,10 @@ glossaries:
     description: "Determina si un usuario coincide o no con un valor de atributo registrado personalizado. (período de 24 horas) <br><br>Zona horaria:<br>Zona horaria de la empresa"
     tags:
       - Custom attributes
+  - name: Creado el
+    description: "Segmenta a los usuarios en función de cuándo se creó su perfil de usuario. Si un usuario se añadió por CSV o API, este filtro refleja la fecha en que se añadió. Si el usuario no está añadido por CSV o API y tiene su primera sesión seguida por el SDK, entonces este filtro refleja la fecha de esa primera sesión."
+    tags:
+      - Other Filters
   - name: Atributos personalizados anidados
     description: "Atributos que son las propiedades de los atributos personalizados.<br><br>Al filtrar un atributo personalizado de hora anidado, puede elegir filtrar en función del \"Día del año\" o de la \"Hora\". \"Día del año\" comprobará sólo el mes y el día para la comparación. \"Hora\" comparará la marca de tiempo completa, incluido el año."
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Último mensaje recibido de un paso de Canvas concreto
-    description: Segmenta a sus usuarios según el momento en que recibieron un componente Canvas específico.
+    description: Segmenta a sus usuarios según el momento en que recibieron un componente Canvas específico. Este filtro no tiene en cuenta si los usuarios han recibido otros componentes Canvas.
     tags:
       - Retargeting
   - name: Último mensaje recibido de una campaña concreta
-    description: Segmenta a tus usuarios en función de si han recibido o no una campaña concreta.
+    description: Segmenta a tus usuarios en función de si han recibido o no una campaña concreta. Este filtro no tiene en cuenta si los usuarios han recibido otras campañas.
     tags:
       - Retargeting
   - name: Mensaje recibido de una campaña o Canvas con etiqueta
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Último mensaje recibido de una campaña o de Canvas con una etiqueta concreta
-    description: Segmenta a tus usuarios en función de cuándo recibieron una campaña o un Canvas concreto con una etiqueta específica. (período de 24 horas)
+    description: Segmenta a tus usuarios en función de cuándo recibieron una campaña o un Canvas concreto con una etiqueta específica. Este filtro no tiene en cuenta si los usuarios han recibido otras campañas o Lienzos. (período de 24 horas)
     tags:
       - Retargeting
   - name: Jamás recibió un mensaje de campaña o de paso en Canvas
@@ -214,6 +218,10 @@ glossaries:
     description: "Segmente a sus usuarios en función de si su dirección de correo electrónico ha rebotado o no (por ejemplo, si la dirección de correo electrónico no es válida)."
     tags:
       - Retargeting
+  - name: Rebote blando
+    description: "Segmenta a tus usuarios en función de si han rebotado blando X veces en Y días. Los filtros de segmento sólo pueden mirar 30 días atrás, pero puedes mirar más atrás con las extensiones de segmento.<br><br>Este filtro funciona de forma diferente a un evento de rebote blando en Currents. El filtro de segmento Rebote blando contabiliza un rebote blando si no hubo una entrega correcta durante el periodo de reintento de 72 horas. En Currents, cada reintento fallido se envía como un evento de rebote blando." 
+    tags:
+      - Retargeting
   - name: Te marcó como correo no deseado
     description: Segmenta a tus usuarios en función de si han marcado o no tus mensajes como spam.
     tags:
@@ -243,7 +251,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Últimos inscritos en cualquier grupo de control
-    description: "Segmenta a tus usuarios por la última vez que cayeron en el grupo de control en una campaña. (período de 24 horas)<br><br>Zona horaria:<br>Zona horaria de la empresa"
+    description: "Segmenta a tus usuarios por la última vez que cayeron en el grupo de control en una campaña. <br><br>Zona horaria:<br>Zona horaria de la empresa"
     tags:
       - Retargeting
   - name: Variación de Canvas ingresada
@@ -263,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Conmutador de características
-    description: "Segmento de usuarios que tienen activada una determinada <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">función</a>."
+    description: "Segmento de usuarios que tienen activada una determinada <a href=\"/docs/developer_guide/feature_flags/\">función</a>."
     tags:
       - Retargeting
   - name: Grupo de suscripción

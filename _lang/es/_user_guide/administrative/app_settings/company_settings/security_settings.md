@@ -81,6 +81,14 @@ Los usuarios que tengan problemas para iniciar sesión con la autenticación de 
 
 Un restablecimiento puede resolver problemas comunes de autenticación, como problemas con aplicaciones de autenticación, verificación de correo electrónico que no se envía, fallo de inicio de sesión debido a interrupciones de SMS o error del usuario, y más.
 
+## Acceso elevado
+
+El Acceso Elevado añade una capa extra de seguridad para las acciones sensibles en tu panel Braze. Cuando están activos, los usuarios tienen que volver a verificar su cuenta antes de exportar un segmento o ver una clave de API. Para utilizar el Acceso Elevado, ve a **Configuración** > **Configuración de administrador** > **Configuración de seguridad** y altérnalo. 
+
+Si un usuario no puede volver a verificar, será redirigido al punto donde lo dejó y no podrá continuar con la acción sensible. Después de volver a verificar con éxito, no tendrán que volver a hacerlo durante la siguiente hora, a menos que cierren la sesión antes.
+
+![Alterna el Acceso Elevado.][5]
+
 ## Descargar un informe de incidentes de seguridad
 
 El informe de eventos de seguridad es un informe CSV de eventos de seguridad como invitaciones a cuentas, eliminaciones de cuentas, intentos de inicio de sesión fallidos y exitosos, y otras actividades. Puedes utilizarlo para realizar auditorías internas.
@@ -95,63 +103,63 @@ Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su
 
 {% details Sucesos de seguridad notificados %}
 ### Iniciar sesión y cuenta 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Desarrollador eliminado
+- Desarrollador adicional añadido
+- Firmado en
+- Error al iniciar sesión
+- Configuración de la autenticación de dos factores completada
+- Reinicio de la autenticación de dos factores completado
+- Desarrollador autorizado 2FA
+- Desarrollador Suspendido
+- Desarrollador no suspendido
 
 ### Acceso elevado
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Iniciado Flujo de Acceso Elevado
+- Flujo de acceso elevado completado
+- Verificación 2FA fallida para acceso elevado
 
 ### Campaña
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- Campaña añadida
+- Campaña editada
 
 ### Canvas
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- Viaje añadido
+- Viaje editado
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Segmento añadido
+- Segmento editado
+- Datos exportados a CSV
+- Segmento exportado mediante API
 
 ### Clave de API REST
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- Añadida clave de API REST
+- Eliminada la clave de API REST
 
 ### Credencial de autenticación básica
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Añadida la credencial Basic Auth
+- Actualizada la credencial de Autenticación Básica
+- Eliminada la credencial de Autenticación Básica
 
 ### Permiso
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Desarrollador autorizado 2FA
+- Permiso de cuenta actualizado
 
 ### Configuración de la empresa
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- Grupo de aplicaciones añadido
+- Aplicación añadida
 
 ### Plantilla de correo electrónico
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- Plantilla de correo electrónico añadida
+- Plantilla de correo electrónico actualizada
 
 ### Push credenciales
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Credenciales push actualizadas
+- Credenciales push eliminadas
 
 ### Depurador de SDK
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Iniciada la sesión del depurador SDK
+- Registro del depurador SDK exportado
 {% enddetails %}
 
 ## Ver información personal identificable (PII) {#view-pii}
@@ -214,12 +222,12 @@ Establezca las preferencias por defecto marcando las casillas de los campos que 
 
 Para personalizar las preferencias por área de trabajo, puede añadir grupos de preferencias con ajustes diferentes de los predeterminados. Aplicamos la configuración predeterminada a todos los espacios de trabajo que no se hayan añadido a un grupo de preferencias adicional, incluidos los espacios de trabajo que se creen en el futuro.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![Sección Preferencias de borrado de datos con alternar activado para personalizar las preferencias de borrado de datos por espacio de trabajo.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "perfil de usuario ofuscado1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "perfil de usuario ofuscado2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "perfil de usuario ofuscado3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

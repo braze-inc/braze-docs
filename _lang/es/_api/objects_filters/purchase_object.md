@@ -19,11 +19,12 @@ Un objeto de compra es un objeto que se pasa a través de la API cuando se ha re
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -101,7 +102,7 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 | Cadenas | 255 caracteres o menos. |
 | Matrices | Las matrices no pueden incluir fechas. |
 | Objetos | Los objetos se ingestarán como cadenas. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 50 KB.
 

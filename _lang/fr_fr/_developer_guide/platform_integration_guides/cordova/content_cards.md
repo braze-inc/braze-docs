@@ -8,7 +8,7 @@ page_order: 2
 
 > Découvrez comment intégrer les cartes de contenu au SDK Braze Cordova.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Flux de cartes
 

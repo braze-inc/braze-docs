@@ -8,7 +8,7 @@ description: "このリファレンス記事では、Shopify から Braze カタ
 
 # Shopify 製品の同期 
 
-> Shopify ストアの製品を Braze [カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)に同期し、製品データの取り込み方法を自動化して、メッセージのパーソナライゼーションを強化できます。 
+> Shopify ストアの全商品を Braze[ カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)に同期し、より深いメッセージングパーソナライゼーションを実現できます。 
 
 Shopify ストア内の製品に編集や変更を加えると、Shopify カタログがほぼリアルタイムで更新されます。最新の製品詳細や情報を使用して、カート放棄や注文確認などを強化できます。
 
@@ -82,15 +82,19 @@ Shopify カタログを任意の方法で変更すると、意図せずにリア
 
 ##### `product_handle` または `product_url`
 
-`product_handle` と`product_url` にアクセスし使用するには、以下の方法で Shopify カタログを切断し、再接続する。
+`product_handle` と`product_url` にアクセスして使用するには、以下の方法で Shopify カタログを切断し、再接続します。
 
-1. Shopifyの統合ページ >**設定を編集する**。<br><br>![Shopifyの統合ページ。]({% image_buster /assets/img/Shopify/edit_config.png %})
+1. Shopify の統合ページに行き、[**構成を編集**] を選択します。
+
+![Shopifyの統合ページ。]({% image_buster /assets/img/Shopify/edit_config.png %})
 
 {: start="2"}
 2\.**カタログを同期する**ステップで、カタログをオフに切り替えてから設定を更新する。
-3\.カタログを切り替え、設定を更新する。<br><br>![Shopify「カタログを同期」ステップをカタログトグルで切り替える]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+3\.カタログを切り替え、設定を更新する。
 
-## 再入荷と値下げのユースケース 
+![Shopify「カタログを同期」ステップをカタログトグルで切り替える]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+
+## 再入荷と値下げのユースケース
 
 再入荷通知を設定するには、[こちら]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications)の手順に従ってください。
 
@@ -98,14 +102,13 @@ Shopify カタログを任意の方法で変更すると、意図せずにリア
 
 Shopifyインテグレーションでは、ユースケースごとにユーザーのサブスクリプション ステータスをカタログにキャプチャするカスタムイベントを作成する必要があります。カスタムイベントには、Shopifyプロダクトシンクの一部として選択した[SKU またはShopify バリアント ID]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier) のいずれかにマップされるイベントプロパティが必要です。 
 
-
 ## カタログ番号を変更する
 
-Shopify カタログのプロダクト識別子を変更するには、シンクを無効にする必要があります。まず、この Shopify カタログデータを使用するすべての送信を停止したことを確認します。Shopify カタログの初回同期を再実行し、[製品の同期](#setting-up)の手順に従って目的の製品識別子を選択します。
+Shopify カタログのプロダクト識別子を変更するには、シンクを無効にする必要があります。まず、この Shopify カタログデータを使用したメッセージの送信を停止していることを確認します。Shopify カタログの初回同期を再実行し、[製品の同期](#setting-up)の手順に従って目的の製品識別子を選択します。
 
 ## 製品の同期の非アクティブ化 {#deactivate}
 
-Shopify 製品の同期機能を非アクティブにすると、カタログと製品がすべて削除されます。この操作は、このカタログの製品データをアクティブに使用している可能性があるすべての送信に影響する可能性もあります。非アクティブ化する前に、これらの送信を更新または一時停止していることを確認してください。非アクティブ化により、製品の詳細がメッセージ送信に含まれなくなる可能性があります。カタログページで Shopify カタログを直接削除しないでください。
+Shopify 製品の同期機能を非アクティブにすると、カタログと製品がすべて削除されます。この操作は、このカタログの製品データをアクティブに使用している可能性があるすべてのメッセージに影響する可能性もあります。商品詳細のないメッセージが送信される可能性があるため、無効化する前にキャンペーンまたはキャンバスを更新または一時停止していることを確認する。カタログページで Shopify カタログを直接削除しないでください。
 
 ## トラブルシューティング
 Shopify 製品の同期でエラーが発生した場合は、次のいずれかのエラーが原因である可能性があります。問題を修正し、同期を解決する方法については、次の手順に従ってください。

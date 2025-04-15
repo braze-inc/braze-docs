@@ -7,11 +7,9 @@ description: "이 참조 문서에서는 카탈로그를 사용하여 Braze 캠�
 
 # 선택
 
-> 카탈로그로 선택 항목을 만들고 사용하는 방법을 배우세요.
+> 선택 항목은 캠페인에서 각 사용자에게 메시지를 개인화하는 데 사용할 수 있는 데이터 그룹입니다. 선택을 사용할 때, 본질적으로 카탈로그의 특정 열을 기반으로 커스텀 필터를 설정하는 것입니다. 여기에는 브랜드, 크기, 위치, 추가된 날짜 등을 위한 필터가 포함될 수 있습니다. 이것은 항목이 먼저 충족해야 하는 기준을 정의할 수 있도록 함으로써 사용자에게 표시하는 내용을 제어할 수 있게 해줍니다.<br><br>This page covers how to create and use selections with your catalogs.
 
-선택 항목은 캠페인에서 각 사용자에게 메시지를 개인화하는 데 사용할 수 있는 데이터 그룹입니다. 선택을 사용할 때, 본질적으로 카탈로그의 특정 열을 기반으로 커스텀 필터를 설정하는 것입니다. 여기에는 브랜드, 크기, 위치, 추가된 날짜 등을 위한 필터가 포함될 수 있습니다. 이것은 항목이 먼저 충족해야 하는 기준을 정의할 수 있도록 함으로써 사용자에게 표시하는 내용을 제어할 수 있게 해줍니다.
-
-[카탈로그]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/)를 만든 후 Braze 캠페인 또는 추천에 선택 항목을 포함하여 카탈로그 데이터를 참조할 수 있습니다.
+After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
 
 ![예제 카탈로그의 선택 섹션입니다.][1]
 
@@ -19,7 +17,7 @@ description: "이 참조 문서에서는 카탈로그를 사용하여 Braze 캠�
 
 - 카탈로그당 최대 30개의 선택 항목을 만들 수 있습니다.
 - 선택당 최대 네 개의 필터를 추가할 수 있습니다.
-- 선택은 Braze 카탈로그 데이터에서 추천을 세분화하는 데 좋습니다. 영감을 찾고 있다면 예시 사용 사례에 대한 [항목 추천 정보]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/)를 확인해 보세요.
+- 선택은 Braze 카탈로그 데이터에서 추천을 세분화하는 데 좋습니다. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) for example use cases.
 
 ## 선택 만들기
 
@@ -28,11 +26,15 @@ description: "이 참조 문서에서는 카탈로그를 사용하여 Braze 캠�
 1. **카탈로그**로 이동하여 목록에서 카탈로그를 선택하십시오.
 2. **선택** 탭을 선택하고 **선택 만들기**를 클릭합니다.
 3. 선택 항목에 이름과 선택적 설명을 지정하십시오.
-4. **필터 필드**에서 필터링할 카탈로그 열을 선택합니다. 문자열 필드는 1,000자 이상일 경우 필터로 선택할 수 없습니다.
+4. **필터 필드**에서 필터링할 카탈로그 열을 선택합니다. 1,000자 이상의 문자열 필드는 필터에 선택할 수 없습니다.
 5. 필터 기준을 정의하려면 관련 연산자(예: "같음" 또는 "같지 않음") 및 속성을 선택하세요.
 6. **정렬 유형** 섹션에서 결과가 정렬되는 방식을 결정합니다. 기본값으로, 결과는 특정한 순서 없이 반환됩니다. 특정 필드로 정렬을 지정하려면 **정렬 순서 무작위화**를 끄고 **정렬 필드** 및 **정렬 순서**(오름차순 또는 내림차순)을 지정하십시오.
-7. **결과 제한** 섹션에서 최대 50개까지 결과의 최대 수를 입력합니다.
-8. **선택 생성**을 클릭합니다.
+7. **결과 제한** 섹션에 결과를 입력하세요(최대 50개).
+8. **선택 만들기**.
+
+### 테스트 및 미리보기
+
+선택을 만든 후, **미리보기 사용자** 섹션을 사용하여 선택이 무작위 사용자 또는 특정 사용자에게 반환할 내용을 볼 수 있습니다. 개인화를 사용하는 선택의 경우, 사용자를 선택한 후에만 미리보기를 볼 수 있습니다.
 
 ### Liquid 선택 결과
 
@@ -44,13 +46,13 @@ description: "이 참조 문서에서는 카탈로그를 사용하여 Braze 캠�
 
 선택을 만든 후, Liquid을 사용하여 해당 카탈로그에서 필터링된 항목을 삽입하여 메시지를 개인화하세요. 메시지 작성기에서 찾을 수 있는 개인화 창에서 Braze가 Liquid를 생성하도록 할 수 있습니다.
 
-1. 개인화를 지원하는 모든 메시지 작성기에서 <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="개인화 추가"></i>을 클릭하여 개인화 창을 엽니다.
+1. In any message composers that support personalization, select <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
 2. **개인화 유형**의 경우 **카탈로그 항목**을 선택하십시오.
 3. 카탈로그 이름을 선택하세요.
 4. **항목 선택 방법**에서 **선택 사용**을 선택합니다.
 4. 목록에서 선택 항목을 선택하십시오.
 5. **표시할 정보**에 대해 카탈로그에서 각 항목에 포함할 필드를 선택하십시오.
-6. 클릭 the **Copy** icon and paste the Liquid wherever it needs to go in your 메시지.
+6. Select the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
 ![다음 선택 항목이 있는 개인화 모달 추가: "카탈로그 항목"은 "개인화 유형", "게임"은 "카탈로그 이름", "선택"은 "선택 유형", "game_selection"은 "선택", 그리고 "title"과 "description_en"은 "표시할 정보"입니다.][6]{: style="max-width:70%;"}
 
