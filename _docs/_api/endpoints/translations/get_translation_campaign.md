@@ -12,7 +12,7 @@ description: "This article outlines details about the View Translation for a cam
 {% api %}
 # View translation for a campaign
 {% apimethod get %}
-/campaigns/translations/?locale_id={locale_uuid}
+/campaigns/translations/?locale_id={locale_id}
 {% endapimethod %}
 
 > Use this endpoint to preview a translated message for a campaign.
@@ -29,19 +29,13 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 {% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
-## Path parameters
-
-| Parameter   | Required | Data Type | Description           |
-|-------------|----------|-----------|-----------------------|
-| `locale_uuid` | Required | String    | The ID of the locale. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
 ## Query parameters
 
-| Parameter | Required | Data Type | Description |
-| --------- | ---------| --------- | ----------- |
-|`campaign_id`| Required | String | The ID of your campaign. |
-|`message_variation_id`| Required | String | The ID for your message variation. |
+| Parameter              | Required | Data Type | Description                        |
+|------------------------|----------|-----------|------------------------------------|
+| `campaign_id`          | Required | String    | The ID of your campaign.           |
+| `message_variation_id` | Required | String    | The ID for your message variation. |
+| `locale_id`            | Required | String    | The ID of the locale.              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
