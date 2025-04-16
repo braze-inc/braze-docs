@@ -12,10 +12,6 @@ tool: Reports
 
 Um einen Bericht über Ihre Einnahmen auf dem Dashboard anzuzeigen, gehen Sie zu **Analytics** > **Umsatzbericht**. 
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Daten**.
-{% endalert %}
-
 ## Umsatzberichte anpassen
 
 Sie können Ihren Umsatzbericht anpassen, indem Sie einen Datumsbereich, Apps und Parameter auswählen.
