@@ -1,20 +1,20 @@
 ---
-nav_title: "Objekt Canvas Entry Properties"
-article_title: API Canvas Eintrag Eigenschaften Objekt
+nav_title: "Canvas Eingangs-Eigenschaften Objekt"
+article_title: API Canvas Eingang-Eigenschaften Objekt
 page_order: 2
 page_type: reference
 tool:
   - Canvas
-description: "Dieser Artikel erklärt das Objekt Braze Canvas entry properties."
+description: "Dieser Artikel erläutert das Objekt Braze-Canvas Eingang-Eigenschaften."
 
 ---
 
-# Canvas Eintrag Eigenschaften Objekt
+# Canvas Entry Eigenschaften Objekt
 
-> Wenn Sie einen der Endpunkte zum Auslösen oder Planen eines Canvas über die API verwenden, können Sie im Namespace `canvas_entry_properties` eine Zuordnung von Schlüsseln und Werten bereitstellen, um die von den ersten Schritten Ihres Canvas gesendeten Nachrichten anzupassen.
+> Wenn Sie einen der Endpunkte zum Triggern oder Zeitplanen eines Canvas über die API verwenden, können Sie im Namensraum `canvas_entry_properties` eine Abbildung von Schlüsseln und Werten bereitstellen, um Nachrichten anzupassen, die von den ersten Schritten Ihres Canvas gesendet werden.
 
 {% alert note %}
-Das Objekt Canvas entry properties hat eine maximale Größe von 50 KB.
+Das Objekt Canvas Entry-Eigenschaften hat eine maximale Größe von 50 KB.
 {% endalert %}
 
 ## Objektkörper
