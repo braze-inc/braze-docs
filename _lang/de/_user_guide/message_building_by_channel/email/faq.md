@@ -25,6 +25,14 @@ API-abhängige Kampagnen werden dedupliziert oder versenden Duplikate – je nac
 - **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Wenn dieselbe E-Mail in mehreren `External_user_IDs` erscheint, auf die das Objekt `recipients`` verweist, wird die E-Mail zweimal gesendet.
 - **Szenario 3: Doppelte E-Mails aufgrund von doppelten user_ids im Empfängerobjekt:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
 
+### 
+
+ 
+
+ 
+
+  
+
 ### Werden Aktualisierungen meiner Einstellungen für ausgehende E-Mails rückwirkend angewendet?
 
 Nein. Aktualisierungen der Einstellungen für ausgehende E-Mails wirken sich nicht rückwirkend auf bestehende Sendungen aus. Wenn Sie beispielsweise Ihren Standard-Anzeigenamen in den E-Mail-Einstellungen ändern, wird der bestehende Standard-Anzeigename in Ihren aktiven Kampagnen oder Canvases nicht automatisch ersetzt. 
@@ -59,6 +67,12 @@ Es kann sein, dass Sie aus einem der folgenden Gründe mehr Klicks als Öffnunge
 - Die Benutzer führen mehrere Klicks auf den Text der E-Mail aus, wenn sie diese nur einmal öffnen.
 - Benutzer klicken auf einige E-Mail-Links im Vorschaufenster ihres Telefons. In diesem Fall protokolliert Braze, dass die E-Mail angeklickt, aber nicht geöffnet wurde.
 - Benutzer öffnen eine E-Mail erneut, die sie zuvor in der Vorschau angesehen haben.
+
+### 
+
+ 
+- 
+- 
 
 ### Welche potenziellen Risiken birgt das Auslösen von Serverklicks?
 
