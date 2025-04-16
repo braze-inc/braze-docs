@@ -5,12 +5,12 @@ Sobald Sie Ihre Kampagne gestartet haben, können Sie zur Detailseite dieser Kam
 {% alert tip %}
 Suchen Sie nach Definitionen für die in Ihrem Bericht aufgeführten Begriffe und Kennzahlen? Siehe unser
   {% if include.channel == "email" %}[Glossar E-Mail-Analytics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach Content-Cards
-  {% elsif include.channel == "in-app message" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach In-App-Nachricht
-  {% elsif include.channel == "push" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach Push
-  {% elsif include.channel == "SMS" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach SMS
-  {% elsif include.channel == "whatsapp" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach WhatsApp
-  {% elsif include.channel == "webhook" %}[Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) und Filter nach Webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach Content-Cards
+  {% elsif include.channel == "in-app message" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach In-App-Nachricht
+  {% elsif include.channel == "push" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach Push
+  {% elsif include.channel == "SMS" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach SMS
+  {% elsif include.channel == "whatsapp" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach WhatsApp
+  {% elsif include.channel == "webhook" %}[Bericht Metriken Glossar]({{site.baseurl}}/user_guide/data/report_metrics/) und Filter nach Webhook{% endif %}.
 {% endalert %}
 
 Auf der Registerkarte **Kampagnenanalyse** können Sie Ihre Berichte in einer Reihe von Panels einsehen. Es kann sein, dass Sie mehr oder weniger als die in den folgenden Abschnitten aufgelisteten sehen, aber jede hat ihren eigenen nützlichen Zweck.
@@ -672,13 +672,13 @@ Eingehende Nachrichten werden nach 1.600 Zeichen abgeschnitten.
 
 ## Bindungsbericht
 
-Retentionsberichte zeigen Ihnen die Raten, mit denen Ihre Benutzer ein ausgewähltes Retentionsereignis über Zeiträume in einer bestimmten Kampagne oder einem Canvas durchgeführt haben. Weitere Informationen finden Sie unter [Aufbewahrungsberichte]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Retentionsberichte zeigen Ihnen die Raten, mit denen Ihre Benutzer ein ausgewähltes Retentionsereignis über Zeiträume in einer bestimmten Kampagne oder einem Canvas durchgeführt haben. Weitere Informationen finden Sie unter [Aufbewahrungsberichte]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Funnel-Bericht
 
 Die Funnel-Berichterstattung bietet einen visuellen Bericht, mit dem Sie die Reise Ihrer Kunden nach Erhalt einer Kampagne oder eines Canvas analysieren können. Wenn Ihre Kampagne oder Ihr Canvas eine Kontrollgruppe oder mehrere Varianten verwendet, können Sie auf einer detaillierteren Ebene nachvollziehen, wie sich die verschiedenen Varianten auf den Konversionstrichter ausgewirkt haben, und auf der Grundlage dieser Daten optimieren.
 
-Weitere Informationen finden Sie unter [Trichterberichte]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+Weitere Informationen finden Sie unter [Funnel-Berichte]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 
