@@ -39,9 +39,11 @@ In manchen Fällen wird jedoch das zweite Ereignis zuerst ausgelöst. Dies bedeu
 
 #### Verzögerungen einführen
 
-Nachdem ein neuer Nutzer:innen erstellt wurde, können Sie eine Verzögerung hinzufügen, bevor Sie Targeting Kampagnen oder Canvase versenden. Diese Zeitverzögerung erlaubt es, das Nutzerprofil zu erstellen und alle relevanten Attribute zu aktualisieren, die die Berechtigung zum Empfang der Nachricht bestimmen können. 
+Nachdem ein neuer Nutzer:innen erstellt wurde, können Sie eine Verzögerung hinzufügen, bevor Sie Targeting Kampagnen oder Canvase versenden. Diese Zeitverzögerung erlaubt es, das Nutzerprofil zu erstellen und alle relevanten Attribute zu aktualisieren, die die Berechtigung zum Empfang der Nachricht bestimmen können.
 
 Nachdem sich ein Nutzer:innen für Ihre App registriert hat, können Sie zum Beispiel nach 24 Stunden ein Aktionsangebot versenden. Wenn Sie einen Nutzer:innen anlegen oder ein angepasstes Attribut protokollieren, können Sie auch eine einminütige Verzögerung einfügen, bevor Sie mit Ihrem Prozess fortfahren, um diese Race-Condition zu vermeiden.
+
+ 
 
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
