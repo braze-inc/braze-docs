@@ -34,8 +34,8 @@ Sie können eine unbegrenzte Anzahl von Linkvorlagen erstellen, um Ihre verschie
 1. Gehen Sie zu **Vorlagen** > **E-Mail-Link-Vorlagen**. 
 2. Wählen Sie **E-Mail-Link-Template erstellen**.
 3. Geben Sie Ihrer Link-Template einen Namen.
-4. 
-5.  Dies gilt für das Hinzufügen eines neuen Links zu einer neuen oder bestehenden E-Mail.
+4. (optional) Fügen Sie eine Beschreibung, ein Team oder einen Tag hinzu, um Details zur Link-Vorlage hinzuzufügen.
+5. (optional) Wählen Sie das Umschalten, um die Link-Vorlage automatisch zu Links in E-Mail Kampagnen und Canvase hinzuzufügen. Dies gilt für das Hinzufügen eines neuen Links zu einer neuen oder bestehenden E-Mail.
 
 Es gibt zwei Arten von Linkvorlagen, die Sie erstellen können:
 
@@ -52,7 +52,7 @@ Um einen String oder eine URL vor den Links in Ihrer E-Mail-Nachricht einzufüge
 2. Setzen Sie die **Template-Position** auf **Vor URL**. 
 3. Geben Sie einen String ein, der Ihrer URL immer vorangestellt wird. 
 
-
+Die **Vorschau des Templates** dient dazu, Ihnen ein Beispiel dafür zu geben, wie das Link-Template vor einer URL eingefügt wird.
 
 ![Felder Template-Position, URL vorangestellt und Template-Vorschau für den Prozess des Einfügens von Link-Templates vor einer URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
