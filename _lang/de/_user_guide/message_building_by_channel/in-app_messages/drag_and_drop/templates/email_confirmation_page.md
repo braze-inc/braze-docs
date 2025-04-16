@@ -16,9 +16,9 @@ description: "Auf dieser Seite erfahren Sie, wie Sie den In-App-Nachricht Drag-a
 
 ### Schritt 1: Wählen Sie Ihr Template
 
- Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
+Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie **E-Mail-Registrierung mit Bestätigungsseite** für Ihr Template und dann **Nachricht erstellen**. Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
 
-
+![Der In-App-Nachricht-Editor mit dem Template für eine E-Mail-Registrierung mit Bestätigungsseite.][img1]
 
 ### Schritt 2: Nachrichtenstile festlegen
 
