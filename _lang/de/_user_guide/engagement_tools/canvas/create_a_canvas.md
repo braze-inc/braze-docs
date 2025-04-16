@@ -7,7 +7,7 @@ guide_top_header: "Erstellen von Canvases"
 guide_top_text: "Die Artikel in diesem Abschnitt helfen Ihnen dabei, ein mehrdimensionales Canvas zu erstellen und es Ihren Benutzern schnell zur Verfügung zu stellen - von der Idee bis zur Ausführung. Mit seiner intuitiven Drag-and-Drop-Oberfläche und dem Bereich für Zusammenarbeit können Sie diese visuelle Programmierumgebung nutzen, um die besten Ergebnisse für Ihre Ziele im Bereich Customer-Engagement zu erzielen."
 
 page_type: landing
-description: ""
+description: "Auf dieser Landing Page finden Sie Ressourcen, die Ihnen helfen, ein mehrdimensionales Canvas zu erstellen und zu starten, z.B. wie man ein Canvas erstellt, Ausstiegskriterien, Eigenschaften für den Eingang in das Canvas und vieles mehr."
 tool: Canvas
 
 guide_featured_title: "Abschnittsartikel"
@@ -48,7 +48,7 @@ guide_menu_list:
   - name: KI-Copywriting-Assistent
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: ""
+  - name: Arten der Zustellung
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Vorschau der Benutzerpfade
