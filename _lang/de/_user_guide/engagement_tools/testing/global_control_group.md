@@ -25,11 +25,15 @@ Ihre Globale Kontrollgruppe wird auf alle Kanäle, Kampagnen und Canvases angewe
 
 ### Weisen Sie Benutzer zufällig der Globalen Kontrollgruppe zu
 
-Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit [zufälligen Bucket-Nummern]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) aus und schließt Benutzer aus diesen ausgewählten Buckets ein. Wenn Sie derzeit Random Bucket Numbers für andere Zwecke verwenden, lesen Sie bitte die Hinweise, [auf die Sie achten sollten](#things-to-watch-for). 
+Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit [zufälligen Bucket-Nummern]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) aus und schließt Benutzer aus diesen ausgewählten Buckets ein.  
 
-### Datenverfolgung für die Berichterstattung
+   
 
-Braze misst das Nutzerverhalten in der Kontrollgruppe und in der Stichprobe. Die Stichprobe ist eine zufällige Nutzermenge, die nicht zu der Kontrollgruppe gehört und mit derselben Random-Bucket-Number-Methode erstellt wurde.
+### 
+
+  
+
+   
 
 ### Nutzer:innen von Feature-Flags ausschließen
 
@@ -41,15 +45,11 @@ Sie können keine [Funktionsflags]({{site.baseurl}}/user_guide/engagement_tools/
 
 Gehen Sie auf dem Dashboard zu **Zielgruppe** > **Globale Kontrollgruppe**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Globale Nachrichteneinstellungen** > **Globale Kontrollgruppeneinstellungen**.
-{% endalert %}
-
 ### Schritt 2: Weisen Sie dieser Kontrollgruppe einen Prozentsatz aller Benutzer zu
 
-Geben Sie einen Prozentsatz für Ihre Kontrollgruppe ein und klicken Sie auf **Speichern**. Nach der Eingabe zeigt Ihnen Braze eine Schätzung an, wie viele Nutzer:innen in Ihre Globale Kontrolle, Behandlung und Behandlungsstichprobe fallen werden. Beachten Sie, dass diese Schätzung umso genauer ist, je mehr Benutzer Sie in Ihrem Arbeitsbereich haben. 
+ Nach der Eingabe zeigt Ihnen Braze eine Schätzung an, wie viele Nutzer:innen in Ihre Globale Kontrolle, Behandlung und Behandlungsstichprobe fallen werden. Beachten Sie, dass diese Schätzung umso genauer ist, je mehr Benutzer Sie in Ihrem Arbeitsbereich haben. 
 
-Die Anzahl der Nutzer:innen in Ihrer globalen Kontrollgruppe wird nach der Ersteinrichtung automatisch aktualisiert, damit sie proportional zu diesem Prozentsatz der Zielgruppe bleibt, wenn weitere Nutzer:innen zu Ihrem Workspace hinzugefügt werden. Wenn zum Beispiel die Zahl der Nutzer:innen in Ihrem Workspace wächst, wächst auch die Zahl der Nutzer:innen in Ihrer globalen Kontrollgruppe, so dass Ihre Kontrollgruppe einen konstanten Prozentsatz Ihrer Zielgruppe im Workspace behält. Die Richtlinien für den Prozentsatz finden Sie im folgenden [Abschnitt über bewährte Verfahren](#percentage-guidelines).
+Die Anzahl der Nutzer:innen in Ihrer globalen Kontrollgruppe wird nach der Ersteinrichtung automatisch aktualisiert, damit sie proportional zu diesem Prozentsatz der Zielgruppe bleibt, wenn weitere Nutzer:innen zu Ihrem Workspace hinzugefügt werden.   Die Richtlinien für den Prozentsatz finden Sie im folgenden [Abschnitt über bewährte Verfahren](#percentage-guidelines).
 
 ![Die globalen Kontrollgruppeneinstellungen mit den Zielgruppeneinstellungen auf "Fünf Prozent der globalen Kontrollgruppenpopulation zuweisen".][4]
 
@@ -67,7 +67,9 @@ Wenn Sie transaktionsbezogene Nachrichten haben, die an alle Nutzer:innen gesend
 
 An diesem Punkt generiert Braze eine zufällig ausgewählte Gruppe von Benutzern, die den ausgewählten Prozentsatz Ihrer gesamten Benutzerbasis ausmachen. Nach dem Speichern werden alle derzeit aktiven und zukünftigen Kampagnen und Canvases nicht mehr an Benutzer in dieser Gruppe gesendet, außer für Kampagnen oder Canvases, die eines der Tags in Ihren Ausschlusseinstellungen enthalten.
 
-## Deaktivieren Sie Ihre Globale Kontrollgruppe
+## 
+
+  
 
 Sie können Ihre Globale Kontrollgruppe jederzeit auf der Registerkarte **Einstellungen für Globale Kontrollgruppen** deaktivieren. Beachten Sie jedoch, dass Benutzer in dieser Gruppe dann sofort für Kampagnen und Leinwände zugelassen werden.
 
