@@ -43,8 +43,8 @@ Ein häufiger Anwendungsfall ist die Fehlersuche, wenn ein:e Nutzer:in eine best
 
 1. Gehen Sie zu **Einstellungen** > **Ereignisbenutzerprotokoll**.
 2. Suchen Sie die SDK-Anfrage für Ihren Testbenutzer und erweitern Sie sie.
-3. 
-4.  Im Folgenden sehen Sie einen Beispielauszug:
+3. Klicken Sie auf **Rohdaten**.
+4. Finden Sie die `id` für Ihre Sitzung. Im Folgenden sehen Sie einen Beispielauszug:
 
     ```json
     [
