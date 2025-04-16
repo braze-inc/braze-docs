@@ -31,3 +31,12 @@ Die häufigste Namensstruktur ist `group_noun_action`. Ereignisse sollten alle k
 ### Eigenschaften
 
 Markieren Sie ein Ereignis und identifizieren Sie dann Unterschiede anhand von Eigenschaften. Dies ist hilfreich bei Ereignissen, die an sich gleich sind, aber kleine Unterschiede aufweisen, wie z. B. Kanäle für eine Kampagne. Wir können auch leicht sehen, wie Nutzer:innen durch die Ereignisse fließen. Im [Objekt Event-Eigenschaften]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) finden Sie ein Beispiel und zusätzlichen Kontext.
+
+## 
+
+ 
+
+- 
+- 
+
+  
