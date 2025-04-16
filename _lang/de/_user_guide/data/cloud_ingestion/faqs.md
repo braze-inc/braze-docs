@@ -41,7 +41,9 @@ Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data
 
 ### Fehler bei der Verbindung zur Snowflake Instanz: Eingehende Anfrage mit IP ist für den Zugriff auf Snowflake nicht zulässig
 
-Versuchen Sie, die offiziellen IPs von Braze zu Ihrer IP-Zulassungsliste hinzuzufügen. Weitere Informationen finden Sie unter [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Versuchen Sie, die offiziellen IPs von Braze zu Ihrer IP-Zulassungsliste hinzuzufügen. 
+
+
 
 ### Fehler bei der Ausführung von SQL aufgrund der Kund:in-Konfiguration: 002003 (42S02): SQL Kompilierungsfehler: existiert nicht oder ist nicht autorisiert
 
@@ -156,7 +158,7 @@ Die Reihenfolge der Bearbeitung ist nicht 100%ig vorhersehbar. Wenn zum Beispiel
 
 ## Welche Sicherheitsmaßnahmen gibt es für CDI?
 
-### Die Maßnahmen von Braze
+### 
 
 Braze hat die folgenden Maßnahmen gegen CDI ergriffen:
 
