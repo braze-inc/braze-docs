@@ -389,7 +389,7 @@ Bei Anfrage 2 beginnt Braze jedoch mit den ursprünglichen Attributwerten ("Grü
 - Farbe: "Rot"
 - Größe: "Mittel"
 
-
+Wenn die Anfragen abgeschlossen sind, überschreibt Anfrage 2 das Update von Anfrage 1\. Daher ist es am besten, wenn Sie Ihre Updates zeitlich staffeln, um zu verhindern, dass Anfragen überschrieben werden.
 
 ### Erstellen eines JSON-Strings aus einer anderen Tabelle
 
@@ -553,7 +553,7 @@ Sie können verschachtelte angepasste Attribute in die Payload-Spalte für eine 
 {% tab Event %}
 Um Ereignisse zu synchronisieren, ist ein Ereignisname erforderlich. Das Feld `time` sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder wie `app_id` und `properties` sind optional. 
 
-
+Beachten Sie, dass Sie nur ein Ereignis pro Zeile synchronisieren können.
 
 ```json
 {
@@ -569,9 +569,9 @@ Um Ereignisse zu synchronisieren, ist ein Ereignisname erforderlich. Das Feld `t
 
 {% endtab %}
 {% tab Käufe %}
- Das Feld `time`, das optional ist, sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder, einschließlich `app_id`, `quantity` und `properties` sind optional.
+Um Kauf-Events zu synchronisieren, sind `product_id`, `currency` und `price` erforderlich. Das Feld `time`, das optional ist, sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder, einschließlich `app_id`, `quantity` und `properties` sind optional.
 
-
+Beachten Sie, dass Sie nur ein Kauf-Ereignis pro Zeile synchronisieren können.
 
 ```json
 {
