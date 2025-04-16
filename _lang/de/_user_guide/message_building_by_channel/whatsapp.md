@@ -48,7 +48,7 @@ guide_featured_list:
 - name: "WhatsApp Bewährte Praktiken"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: ""
+- name: "Angepasste Domains"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
 - name: "WhatsApp FAQ"
