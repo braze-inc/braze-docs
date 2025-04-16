@@ -21,12 +21,12 @@ Wenn ein Benutzer beschließt, die E-Mail-Weiterleitung an die Relay-E-Mail Ihre
 
 Wenn Sie SendGrid als E-Mail-Anbieter verwenden, können Sie E-Mails an Apple senden, ohne DNS-Änderungen vornehmen zu müssen. 
 
-1. 
-2. 
-3. 
-4. 
+1. Loggen Sie sich in das [Apple Entwickler:in Portal](https://developer.apple.com/) ein.
+2. Gehen Sie auf die Seite **Zertifikate, Bezeichner & Profile**.
+3. Wählen Sie **Dienste** > **Mit Apple für E-Mail-Kommunikation anmelden**.
+4. Fügen Sie im Abschnitt **E-Mail-Quellen** die Domains und Subdomains hinzu.
 
- 
+Wenn Ihre gewünschte „Von“-Adresse eine `abmail`-Adresse ist, fügen Sie diese in Ihre Subdomain ein. Verwenden Sie zum Beispiel `abmail.docs.braze.com` anstelle von `docs.braze.com`.
 
 ## Versenden von E-Mails für SparkPost
 
@@ -34,7 +34,7 @@ Um Apple Private Relay für SparkPost einzurichten, gehen Sie wie folgt vor:
 
 1. Melden Sie sich mit Apple an.
 2. Folgen Sie der [Dokumentation von Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service), um die E-Mail Domains zu registrieren.
-3. 
+3. Apple überprüft automatisch die Domains, zeigt an, welche davon überprüft sind, und bietet die Möglichkeit, die Domains erneut zu überprüfen oder zu löschen.
 
 ### Überlegungen
 
@@ -49,7 +49,7 @@ Wenn eine sendende Domain auch als Bounce-Domain verwendet wird, können Sie kei
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-
+Um SPF-Fehler zu vermeiden, müssen Sie die MX- und TXT-Einträge erstellen und sie im DNS propagieren lassen **, bevor Sie** den CNAME-Eintrag löschen.
 {% endalert %}
 
 {:start="2"}
