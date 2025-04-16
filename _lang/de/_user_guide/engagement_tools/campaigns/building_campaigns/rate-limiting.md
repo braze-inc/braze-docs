@@ -19,7 +19,7 @@ Braze ermöglicht es Ihnen, den Druck im Marketing zu kontrollieren, indem Sie I
 1. [**Nutzerzentriertes Rate-Limiting:**](#user-centric-rate-limiting) Konzentriert sich darauf, den Nutzer:innen das beste Erlebnis zu bieten.
 2. [**Begrenzung der Liefergeschwindigkeit:**](#delivery-speed-rate-limiting) Berücksichtigt die Bandbreite Ihrer Server.
 
- 
+Braze wird versuchen, die gesendeten Nachrichten gleichmäßig über die Minute zu verteilen, kann dies aber nicht garantieren. Wenn Sie beispielsweise eine Kampagne mit einem Rate-Limit von 5.000 Nachrichten pro Minute haben, versuchen wir, die 5.000 Anfragen gleichmäßig über die Minute zu verteilen (etwa 84 Nachrichten pro Sekunde), aber die Rate pro Sekunde kann variieren.
 
 ### Benutzerzentrierte Ratenbegrenzung
 
@@ -117,9 +117,9 @@ Wenn Sie ein Canvas mit einem Rate-Limit senden, wird das Rate-Limit zwischen de
 
 #### Ratenbegrenzung und Wiederholungsversuche für Connected Content
 
-  
+Wenn die Funktion [Connected-Content-Wiederholung][19] ] aktiviert ist, wiederholt Braze fehlgeschlagene Anrufe unter Einhaltung des von Ihnen festgelegten Rate-Limits für jede erneute Sendung. Betrachten wir das Szenario des Versands von 75.000 Nachrichten mit einem Rate-Limit von 10.000 pro Minute. Stellen Sie sich vor, dass der Anruf in der ersten Minute fehlschlägt oder langsam ist und nur 4.000 Nachrichten versendet.
 
-
+Anstatt zu versuchen, die Verzögerung auszugleichen und die verbleibenden 6.000 Nachrichten in der zweiten Minute zu senden oder sie zu den 10.000 Nachrichten hinzuzufügen, die bereits zum Senden eingestellt sind, verschiebt Braze diese 6.000 Nachrichten in die "hintere Warteschlange" und fügt gegebenenfalls eine Minute zu den Gesamtminuten hinzu, die für das Senden Ihrer Nachricht erforderlich wären.
 
 | Minute | Kein Misserfolg | 6.000 Versagen in Minute 1 |
 |--------|------------|---------------------------|
@@ -134,7 +134,7 @@ Wenn Sie ein Canvas mit einem Rate-Limit senden, wird das Rate-Limit zwischen de
 | (9 %)      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-   
+Connected-Content-Anfragen sind nicht unabhängig voneinander Rate-Limits unterworfen und folgen dem Rate-Limit des Webhooks. Das bedeutet, dass Sie bei einem Connected-Content-Aufruf an einen eindeutigen Endpunkt pro Webhook mit 5.000 Webhooks und auch 5.000 Connected-Content-Aufrufen pro Minute rechnen müssen. Beachten Sie, dass die Zwischenspeicherung dies beeinflussen und die Anzahl der Connected-Content-Aufrufe reduzieren kann. Außerdem können Wiederholungsversuche die Connected-Content-Aufrufe erhöhen. Wir empfehlen daher zu überprüfen, ob der Connected-Content-Endpunkt hier mit einer gewissen Fluktuation umgehen kann.
 
 ## Über Frequency-Capping
 
@@ -156,9 +156,9 @@ Jede Frequency-Capping-Zeile wird mit dem Operator `AND` verbunden, und Sie kön
 
 ![Abschnitt zur Frequenzbegrenzung mit Listen von Kampagnen und Leinwänden, für die die Regeln gelten und nicht gelten werden.][14]
 
-#### 
+#### Verhalten bei Frequency-Capping von Nutzer:innen in einem Canvas-Schritt
 
- 
+Wenn ein Canvas-Nutzer:innen aufgrund globaler Einstellungen für Frequency-Capping mit einem Frequency-Capping belegt ist, wird der Nutzer:innen sofort zum nächsten Canvas-Schritt vorgebracht. Der Nutzer:innen wird den Canvas wegen des Frequency-Cappings nicht verlassen.
 
 ### Zustellungsregeln
 
