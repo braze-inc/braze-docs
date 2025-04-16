@@ -8,9 +8,9 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: ""
+description: "Auf dieser Landing Page finden Sie Ideen und Strategien für Canvas, darunter bewährte Praktiken, eine Checkliste für die Zeit vor und nach dem Start und eine Anleitung für den Start mit Canvas."
 
-guide_featured_title: ""
+guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Bewährte Praktiken
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
@@ -36,10 +36,10 @@ guide_menu_list:
   - name: Lead Scoring
     link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
-  - name: ""
+  - name: Buchungserinnerung E-Mail System
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: ""
+  - name: E-Commerce Anwendungsfälle
     link: /docs/ecommerce_use_cases/
     image: /assets/img/braze_icons/users-01.svg
 
