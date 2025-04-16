@@ -1,23 +1,23 @@
 ---
-nav_title: "POST: Benutzer verfolgen"
-article_title: "POST: Benutzer verfolgen"
+nav_title: "POST: Nutzer:innen tracken"
+article_title: "POST: Nutzer:innen tracken"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Tracking-Endpunkt von Braze."
+description: "Dieser Artikel beschreibt die Details des Tracking Nutzer:innen Endpunkts."
 
 ---
 {% api %}
-# Benutzer verfolgen
+# Nutzer:innen tracken
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/track
+/benutzer:innen/track
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um benutzerdefinierte Ereignisse und Käufe zu erfassen und Benutzerprofilattribute zu aktualisieren.
+> Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils zu aktualisieren.
 
 {% alert note %}
-Braze verarbeitet die über die API übermittelten Daten zum Nennwert. Kunden sollten nur Deltas (sich ändernde Daten) übermitteln, um den Verbrauch unnötiger Datenpunkte zu minimieren. Weitere Informationen finden Sie unter [Datenpunkte]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Braze verarbeitet die über die API übergebenen Daten zum Nennwert, und Kunden sollten nur Deltas (sich ändernde Daten) übergeben, um den Verbrauch unnötiger Datenpunkte zu minimieren. Um mehr zu erfahren, referenzieren Sie auf [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -26,13 +26,13 @@ Braze verarbeitet die über die API übermittelten Daten zum Nennwert. Kunden so
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.track`.
 
-Kunden, die die API für Server-zu-Server-Aufrufe verwenden, müssen möglicherweise die Liste `rest.iad-01.braze.com` zulassen, wenn sie sich hinter einer Firewall befinden.
+Kund:innen, die die API für Server-zu-Server-Aufrufe verwenden, müssen möglicherweise die Liste `rest.iad-01.braze.com` zulassen, wenn sie sich hinter einer Firewall befinden.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -47,24 +47,24 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### Parameter anfordern
+### Parameter der Anfrage
 
 {% alert important %}
-Für jede in der folgenden Tabelle aufgeführte Anforderungskomponente ist eine der folgenden Angaben erforderlich: `external_id`, `user_alias`, `braze_id`, `email`, oder `phone`.
+Für jede in der folgenden Tabelle aufgeführte Komponente einer Anfrage ist eine der folgenden Angaben erforderlich: `external_id`, `user_alias`, `braze_id`, `email` oder `phone`.
 {% endalert %}
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Optional | Array von Attributobjekten | Siehe [Objekt Benutzerattribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `attributes` | Optional | Array der Attribute Objekte | Siehe [Nutzer:innen Attribute Objekt]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | Optional | Array von Ereignisobjekten | Siehe [Objekt Ereignisse]({{site.baseurl}}/api/objects_filters/event_object/) |
-| `purchases` | Optional | Array von Kaufobjekten | Siehe [Einkäufe Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/) |
+| `purchases` | Optional | Array von Kauf-Objekten | Siehe [Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfragen
+## Beispiel-Anfragen
 
-### Ein Benutzerprofil nach E-Mail-Adresse aktualisieren
+### Update eines Nutzerprofils über eine E-Mail Adresse
 
-Über den Endpunkt `/users/track` können Sie ein Benutzerprofil nach E-Mail-Adresse aktualisieren. 
+Über den Endpunkt `/users/track` können Sie ein Nutzerprofil per E-Mail aktualisieren. 
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -135,12 +135,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### Ein Benutzerprofil nach Telefonnummer aktualisieren
+### Update eines Nutzerprofils nach Rufnummer
 
-Über den Endpunkt `/users/track` können Sie ein Benutzerprofil nach Telefonnummer aktualisieren. Dieser Endpunkt funktioniert nur, wenn Sie eine gültige Telefonnummer angeben.
+Über den Endpunkt `/users/track` können Sie ein Nutzerprofil nach Telefonnummer aktualisieren. Dieser Endpunkt funktioniert nur, wenn Sie eine gültige Telefonnummer angeben.
 
 {% alert important %}
-Wenn Sie eine Anfrage sowohl mit `email` als auch mit `phone` stellen, verwendet Braze die E-Mail als Identifikator.
+Wenn Sie eine Anfrage sowohl mit `email` als auch mit `phone` stellen, verwendet Braze die E-Mail als Bezeichner.
 {% endalert %}
 
 ```
@@ -162,11 +162,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ],
 }'
 ```
-### Abonnementgruppen festlegen
+### Abo-Gruppen festlegen
 
-Dieses Beispiel zeigt, wie Sie einen Benutzer erstellen und seine Abonnementgruppe im Objekt Benutzerattribute festlegen. 
+Dieses Beispiel zeigt, wie Sie einen Nutzer:innen anlegen und seine Abo-Gruppe im Objekt Benutzerattribute festlegen. 
 
-Wenn Sie den Abonnementstatus mit diesem Endpunkt aktualisieren, wird der durch seine `external_id` angegebene Benutzer (z.B. User1) aktualisiert und der Abonnementstatus aller Benutzer mit der gleichen E-Mail wie dieser Benutzer (User1) aktualisiert.
+Das Aktualisieren des Abo-Status mit diesem Endpunkt aktualisiert den durch seine `external_id` angegebenen Nutzer (z.B. User1) und aktualisiert den Abo-Status aller Nutzer:innen mit der gleichen E-Mail wie dieser Nutzer (User1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -196,9 +196,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### Beispielanfrage zur Erstellung eines Alias-Benutzers
+### Beispiel für eine Anfrage zur Erstellung eines Nutzers:in, der nur einen Alias hat
 
-Sie können den Endpunkt `/users/track` verwenden, um einen neuen Nur-Alias-Benutzer zu erstellen, indem Sie den Schlüssel `_update_existing_only` mit dem Wert `false` im Text der Anfrage angeben. Wenn dieser Wert weggelassen wird, wird das Alias-Benutzerprofil nicht erstellt. Die Verwendung eines reinen Alias-Benutzers garantiert, dass ein Profil mit diesem Alias existiert. Dies ist besonders hilfreich, wenn Sie eine neue Integration erstellen, da es die Erstellung von doppelten Benutzerprofilen verhindert.
+Sie können den Endpunkt `/users/track` verwenden, um einen neuen Nutzer:innen mit einem Alias zu erstellen, indem Sie den Schlüssel `_update_existing_only` mit dem Wert `false` im Textkörper der Anfrage angeben. Wenn dieser Wert weggelassen wird, wird das Nutzerprofil, das nur einen Alias enthält, nicht erstellt. Die Verwendung eines Nutzers:innen mit Alias garantiert, dass nur ein Profil mit diesem Alias existiert. Dies ist besonders hilfreich, wenn Sie eine neue Integration erstellen, da es die Erstellung doppelter Nutzer:innen-Profile verhindert.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Antworten
 
-Wenn Sie eine der oben genannten API-Anfragen verwenden, sollten Sie eine der folgenden drei allgemeinen Antworten erhalten: eine [erfolgreiche Nachricht](#successful-message), eine [erfolgreiche Nachricht mit nicht fatalen Fehlern](#successful-message-with-non-fatal-errors) oder eine [Nachricht mit fatalen Fehlern](#message-with-fatal-errors).
+Wenn Sie eine der oben genannten API-Anfragen verwenden, sollten Sie eine der folgenden drei allgemeinen Antworten erhalten: eine [erfolgreiche Nachricht](#successful-message), eine [erfolgreiche Nachricht mit nicht schwerwiegenden Fehlern](#successful-message-with-non-fatal-errors) oder eine [Nachricht mit schwerwiegenden Fehlern](#message-with-fatal-errors).
 
 ### Erfolgreiche Nachricht
 
@@ -237,9 +237,9 @@ Erfolgreiche Nachrichten werden mit der folgenden Antwort beantwortet:
 }
 ```
 
-### Erfolgreiche Nachricht mit nicht-tödlichen Fehlern
+### Erfolgreiche Nachricht mit nicht schwerwiegenden Fehlern
 
-Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, wie z.B. ein ungültiges Ereignisobjekt aus einer langen Liste von Ereignissen, dann erhalten Sie die folgende Antwort:
+Wenn Ihre Nachricht erfolgreich ist, aber nicht-schwerwiegende Fehler aufweist, wie z.B. ein ungültiges Ereignisobjekt aus einer langen Liste von Ereignissen, dann erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -252,7 +252,7 @@ Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, 
 }
 ```
 
-Bei Erfolgsmeldungen werden alle Daten, die nicht von einem Fehler im Array `errors` betroffen sind, weiterhin verarbeitet. 
+Bei Erfolgsnachrichten werden alle Daten, die nicht von einem Fehler im Array `errors` betroffen sind, weiterhin verarbeitet. 
 
 ### Nachricht mit schwerwiegenden Fehlern
 
@@ -269,38 +269,38 @@ Wenn Ihre Nachricht einen schwerwiegenden Fehler enthält, erhalten Sie die folg
 }
 ```
 
-### Antwortcodes für schwerwiegende Fehler
+### Schwerwiegende Fehler Antwortcodes
 
-Statuscodes und zugehörige Fehlermeldungen, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, finden Sie unter [Schwerwiegende Fehler und Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
 
-Wenn Sie die Fehlermeldung "provided external_id is blacklisted and disallowed" erhalten, hat Ihre Anfrage möglicherweise einen "Dummy-Benutzer" enthalten. Weitere Informationen finden Sie unter [Spam-Blockierung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+Wenn Sie die Fehlermeldung "provided external_id is blacklisted and disallowed" erhalten, hat Ihre Anfrage möglicherweise eine "Nutzer:innen-Attrappe" enthalten. Weitere Informationen finden Sie unter [Spam-Blockierung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
 
 ## Häufig gestellte Fragen
 
 {% multi_lang_include email-via-sms-warning.md %}
 
-### Was passiert, wenn mehrere Profile mit der gleichen E-Mail-Adresse gefunden werden?
-Wenn die `external_id` existiert, wird das zuletzt aktualisierte Profil mit einer externen ID bei Aktualisierungen bevorzugt. Wenn das `external_id` nicht existiert, wird das zuletzt aktualisierte Profil bei der Aktualisierung bevorzugt.
+### Was passiert, wenn mehrere Profile mit derselben E-Mail Adresse gefunden werden?
+Wenn die `external_id` existiert, wird das zuletzt aktualisierte Profil mit einer externen ID bei Updates bevorzugt behandelt. Wenn das `external_id` nicht existiert, wird das zuletzt aktualisierte Profil für Updates bevorzugt.
 
-### Was passiert, wenn derzeit kein Profil mit der E-Mail-Adresse existiert?
-Ein neues Profil wird erstellt und ein Benutzer, der nur per E-Mail erreichbar ist, wird angelegt. Ein Alias wird nicht erstellt. Das E-Mail-Feld wird auf test@braze.com gesetzt, wie in der Beispielanfrage für die Aktualisierung eines Benutzerprofils nach E-Mail-Adresse angegeben.
+### Was passiert, wenn kein Profil mit der E-Mail Adresse existiert?
+Es wird ein neues Profil erstellt und ein Nutzer:in, der nur per E-Mail erreichbar ist. Ein Alias wird nicht erstellt. Das Feld E-Mail wird auf test@braze.com gesetzt, wie in der Beispielanfrage zum Update eines Nutzerprofils über die E-Mail-Adresse angegeben.
 
-### Wie verwenden Sie `/users/track`, um alte Benutzerdaten zu importieren?
-Sie können über die Braze API Daten für einen Benutzer übermitteln, der Ihre mobile App noch nicht verwendet hat, um ein Benutzerprofil zu erstellen. Wenn der Benutzer anschließend die Anwendung nutzt, werden alle Informationen, die auf seine Identifizierung mit dem SDK folgen, mit dem bestehenden Benutzerprofil zusammengeführt, das Sie mit dem API-Aufruf erstellt haben. Jegliches Benutzerverhalten, das vom SDK vor der Identifizierung anonym aufgezeichnet wurde, geht bei der Zusammenführung mit dem bestehenden, von der API generierten Benutzerprofil verloren.
+### Wie verwenden Sie `/users/track`, um alte Nutzer:innen-Daten zu importieren?
+Sie können über die Braze API Daten für einen Nutzer:innen übermitteln, der Ihre mobile App noch nicht verwendet hat, um ein Nutzerprofil zu erstellen. Wenn der Nutzer:innen die Anwendung später nutzt, werden alle Informationen, die auf seine Identifizierung mit dem SDK folgen, mit dem bestehenden Nutzerprofil zusammengeführt, das Sie mit dem API-Aufruf erstellt haben. Jegliches Nutzerverhalten, das vom SDK vor der Identifizierung anonym aufgezeichnet wurde, geht bei der Zusammenführung mit dem bestehenden, von der API generierten Nutzerprofil verloren.
 
-Das Segmentierungstool berücksichtigt diese Nutzer unabhängig davon, ob sie die App genutzt haben oder nicht. Wenn Sie Benutzer ausschließen möchten, die mit der Benutzer-API hochgeladen wurden und noch nicht mit der App gearbeitet haben, fügen Sie den Filter `Session Count > 0` hinzu.
+Das Segmentierungs-Tool berücksichtigt diese Nutzer:innen unabhängig davon, ob sie sich mit der App beschäftigt haben. Wenn Sie Nutzer:innen ausschließen möchten, die über die User API hochgeladen wurden und sich noch nicht mit der App beschäftigt haben, fügen Sie den Filter `Session Count > 0` hinzu.
 
-### Wie geht `/users/track` mit doppelten Ereignissen um?
+### Wie behandelt `/users/track` doppelte Ereignisse?
 
-Jedes Ereignisobjekt im Ereignis-Array steht für ein einzelnes Auftreten eines benutzerdefinierten Ereignisses durch einen Benutzer zu einem bestimmten Zeitpunkt. Das bedeutet, dass jedes Ereignis, das in Braze aufgenommen wird, seine eigene Ereignis-ID hat, so dass "doppelte" Ereignisse als separate, einzigartige Ereignisse behandelt werden.
+Jedes Event-Objekt im Event-Array repräsentiert ein einzelnes Vorkommen eines angepassten Events durch einen Nutzer:in zu einem bestimmten Zeitpunkt. Das bedeutet, dass jedes Ereignis, das in Braze aufgenommen wird, seine eigene ID hat, so dass "doppelte" Ereignisse als separate, eindeutige Ereignisse behandelt werden.
 
-## Monatlich aktive Nutzer CY 24-25
-Für Kunden, die Monthly Active Users - CY 24-25 erworben haben, verwaltet Braze auf seinem Endpunkt `/users/track` verschiedene Tarifgrenzen:
-- Die stündlichen Ratenlimits werden entsprechend der erwarteten Datenübernahmeaktivität auf Ihrem Konto festgelegt, die der Anzahl der monatlich aktiven Nutzer, die Sie erworben haben, der Branche, der Saisonalität oder anderen Faktoren entsprechen kann.
-- Zusätzlich zur Begrenzung der Anfragen pro Stunde legt Braze auch ein Burst-Limit für die Anzahl der pro Sekunde zulässigen Anfragen fest.
-- Jede Anfrage kann bis zu 50 Aktualisierungen für Attribut-, Ereignis- oder Kaufobjekte enthalten.
+## Monatlich aktive Nutzer:innen CY 24-25
+Für Kunden, die Monatlich aktive:r Nutzer:innen - CY 24-25 erworben haben, verwaltet Braze verschiedene Rate-Limits auf seinem Endpunkt `/users/track`:
+- Die stündlichen Rate-Limits richten sich nach der erwarteten Aktivität der Datenaufnahme auf Ihrem Konto, die von der Anzahl der monatlich aktiven Nutzer:innen, der Branche, der Saisonalität oder anderen Faktoren abhängen kann.
+- Zusätzlich zum stündlichen Limit setzt Braze ein Burst-Limit für die Anzahl der Anfragen durch, die alle drei Sekunden gesendet werden können.
+- Jede Anfrage kann bis zu 50 Updates für Attribute, Ereignisse oder Kauf-Objekte zusammenfassen.
 
-Die aktuellen Grenzwerte, die auf der erwarteten Ingestion basieren, finden Sie im Dashboard unter **Einstellungen** > **APIs und Identifikatoren** > **API-Grenzwerte**. Wir können Ratenbeschränkungen ändern, um die Systemstabilität zu schützen oder einen höheren Datendurchsatz auf Ihrem Konto zu ermöglichen. Wenden Sie sich bitte an den Braze-Support oder Ihren Customer Success Manager, wenn Sie Fragen oder Bedenken bezüglich der stündlichen oder sekündlichen Anfragebegrenzung und den Anforderungen Ihres Unternehmens haben.
+Aktuelle Grenzwerte auf der Grundlage der erwarteten Ingestion finden Sie im Dashboard unter **Einstellungen** > **APIs und Bezeichner** > **API-Nutzungs-Dashboard**. Wir können Rate-Limits ändern, um die Systemstabilität zu schützen oder einen höheren Datendurchsatz auf Ihrem Konto zu ermöglichen. Wenden Sie sich bitte an den Braze Support oder Ihren Customer-Success-Manager:in, wenn Sie Fragen oder Bedenken bezüglich der stündlichen oder sekündlichen Begrenzung von Anfragen und den Anforderungen Ihres Unternehmens haben.
 
 
 
