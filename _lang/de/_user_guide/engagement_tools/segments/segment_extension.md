@@ -2,8 +2,7 @@
 nav_title: Segmenterweiterungen
 article_title: Segmenterweiterungen
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "In diesem Artikel erfahren Sie, wie Sie eine Segmenterweiterung einrichten und verwenden, um Ihre Segmentierungsfunktionen zu verbessern."
 tool: Segments
 ---
@@ -32,10 +31,6 @@ Um eine Segment-Erweiterung zu erstellen, erstellen Sie einen Filter zur Verfein
 
 Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenterweiterungen**.
-{% endalert %}
-
 Wählen Sie in der Tabelle Segment-Erweiterungen die Option **Neue Erweiterung erstellen** und wählen Sie dann Ihre Erfahrung bei der Erstellung von Segment-Erweiterungen aus:
 
 - **Einfache Erweiterung:** Erstellen Sie eine Segmenterweiterung, die sich auf ein einzelnes Event konzentriert, indem Sie ein geführtes Formular verwenden.
@@ -44,7 +39,7 @@ Am besten geeignet, wenn Sie kein SQL verwenden möchten.
 - **Inkrementelle Aktualisierung:** Schreiben Sie ein Snowflake-SQL-Segment, das automatisch die Daten der letzten 2 Tage aktualisiert oder aktualisieren Sie sie bei Bedarf manuell. Die beste Lösung für ein ausgewogenes Verhältnis zwischen Genauigkeit und Kosteneffizienz.
 - **Vollständige Auffrischung:** Schreiben Sie ein Snowflake-SQL-Segment, das die gesamte Zielgruppe bei einer manuellen Aktualisierung neu berechnet. Am besten geeignet, wenn Sie einen vollständigen, aktuellen Überblick über Ihre Zielgruppe benötigen.
 
-![""][20]{: style="max-width:50%"}
+
 
 Wenn Sie eine Erfahrung auswählen, die SQL verwendet, finden Sie weitere Informationen unter [SQL-Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
 
@@ -62,7 +57,7 @@ Wählen Sie zwischen den Kriterien Kauf, Nachrichteninteraktion oder benutzerdef
 
 Die Segmentierung auf der Grundlage von Event-Daten aus mehr als 730 Tagen kann mit anderen Filtern unter **Segmente** vorgenommen werden. Bei der Auswahl Ihres Zeitraums können Sie einen relativen Datumsbereich (z.B. die letzten X Tage), ein Startdatum, ein Enddatum oder einen genauen Datumsbereich (Datum A bis Datum B) angeben.
 
-![""][3]
+
 
 #### Segmentierung der Eigenschaften von Events
 
@@ -131,45 +126,74 @@ Segmente können aufgrund von Datenverarbeitungszeiten bis zu 60 Minuten für di
 - Für eine bestimmte Segmenterweiterung kann jeweils nur eine Aktualisierung erfolgen. Wenn es einen Konflikt gibt, bei dem eine neue Anfrage zur Aktualisierung gestartet wird, während die Verarbeitung einer bestehenden Aktualisierung bereits begonnen hat, bricht Braze die neue Anfrage zur Aktualisierung ab und setzt die laufende Verarbeitung fort.
 {% endalert %}
 
+#### 
+
+ 
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+ 
+
+
+
 ### Schritt 5: Speichern Sie Ihre Segmenterweiterung
 
 Sobald Sie **Speichern** auswählen, beginnt die Verarbeitung Ihrer Erweiterung. Wie lange es dauert, Ihre Erweiterung zu generieren, hängt davon ab, wie viele Nutzer:innen Sie haben, wie viele angepasste Events oder Kauf-Events Sie erfassen und wie viele Tage Sie im Verlauf zurückblicken wollen.
 
 Während Ihre Erweiterung in Bearbeitung ist, sehen Sie eine kleine Animation neben dem Namen der Erweiterung und das Wort "In Bearbeitung" in der Spalte **"Zuletzt bearbeitet"** in der Erweiterungsliste. Beachten Sie, dass Sie eine Erweiterung nicht bearbeiten können, solange sie in Bearbeitung ist.
 
-![""][5]
+
 
 ### Schritt 6: Verwenden Sie Ihre Erweiterung in einem Segment
 
 Sobald Sie eine Erweiterung erstellt haben, können Sie sie als Filter verwenden, wenn Sie ein Segment erstellen oder eine Zielgruppe für eine Kampagne oder ein Canvas definieren. Beginnen Sie mit der Auswahl von **Braze Segment Extension** aus der Filterliste unter dem Abschnitt **Benutzerattribute**.
 
-![""][6]
+
 
 Wählen Sie in der Filterliste Braze-Segmenterweiterung die Erweiterung aus, die Sie in dieses Segment aufnehmen oder ausschließen möchten.
 
-![""][7]
+
 
 Um die Kriterien der Erweiterung anzuzeigen, wählen Sie **Erweiterungsdetails anzeigen**, um die Details in einem modalen Popup anzuzeigen.
 
-![""][8]{: style="max-width:70%;"}
+
 
 Jetzt können Sie wie gewohnt mit der [Erstellung Ihrer Segmente][11] fortfahren.
 
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+## 
+
+### 
+
+  
+
+ 
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
