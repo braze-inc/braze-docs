@@ -76,7 +76,7 @@ Wir definieren unsere Zielgruppe als Nutzer, von denen wir annehmen, dass sie mi
 {: start="3"}
 3\. Passen Sie die Eingangskontrollen so an, dass Nutzer:innen nach der maximalen Dauer des Canvas wieder in den Canvas eintreten können, um zu verhindern, dass sie denselben Schritt gleichzeitig triggern.
 
-
+!["Eingangskontrollen" mit einem Kontrollkästchen, das es Nutzern:innen erlaubt, diesen Canvas mit einer maximalen Dauer des Canvas erneut zu betreten.][6]
 
 {: start="4"}
 4\. Passen Sie die Ausstiegskriterien an, um Nutzer:innen zu entfernen, die das angepasste Event der Ablehnung der Classic Straight Leg Jeans durchgeführt haben.
