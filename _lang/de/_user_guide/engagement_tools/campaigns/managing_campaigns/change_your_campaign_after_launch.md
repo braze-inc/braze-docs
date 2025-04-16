@@ -14,27 +14,27 @@ description: "Dieser Referenzartikel gibt einen Überblick über das Ergebnis de
 
 ## Stoppen Sie Ihre Kampagne
 
-Um eine Kampagne zu stoppen, öffnen Sie Ihre **Kampagnendetailseite** und wählen Sie die Schaltfläche **Kampagne stoppen** unten rechts auf der Seite. Wenn eine Kampagne gestoppt wird:
-- Nachrichten, die für den Versand geplant sind, werden abgebrochen
-- A/B-Tests, bei denen der ursprüngliche Test bereits versendet wurde, werden dauerhaft abgebrochen.
-- Ereignisse für bereits gesendete Nachrichten (z. B. Klicks zum Öffnen) werden weiterhin verfolgt.
-- Kampagnen können neu gestartet werden, indem Sie auf **Fortsetzen**
+ Wenn eine Kampagne gestoppt wird:
 
-Sobald die Kampagne wieder aufgenommen wird, werden weiterhin Nachrichten und A/B-Tests versendet, aber verpasste Nachrichten werden nicht erneut versendet oder geplant.
+- 
+- 
+- 
+
+ 
 
 ## Ausgelöste Kampagnen
 
-Alle Änderungen an aktionsbasierten Zustellungskampagnen und API-getriggerten Zustellungskampagnen werden sofort für Weiterleitungen wirksam.
+ 
 
-Wenn diese Kampagnen ausgelöst, aber noch nicht versendet wurden (z. B. eine aktionsbasierte Zustellungskampagne mit einer 1-tägigen Verzögerung wird während des 1-tägigen Verzögerungszeitraums bearbeitet), beachten Sie die folgende Anleitung für geplante Kampagnen.
 
-## Geplante Kampagnen
+
+### Geplante Kampagnen
 
 Wenn Sie nach dem Start Änderungen an einer Kampagne vornehmen müssen, sollten Sie bei der Bearbeitung Ihrer Kampagne die folgenden Punkte beachten, um sicherzustellen, dass Ihre Änderungen die gewünschten Auswirkungen haben.
 
 ### Nachrichteninhalt
 
-Alle Änderungen am Inhalt der Nachrichten (einschließlich Titel, Textkörper, Bilder usw.) werden sofort nach dem Speichern für alle zukünftigen Nachrichten wirksam. Es ist nicht möglich, den Inhalt von Nachrichten zu ändern, die bereits versendet wurden.
+ 
 
 ### Zeitplan und Zielgruppe
 
@@ -55,3 +55,27 @@ Wenn Sie möchten, dass Änderungen sofort wirksam werden, gehen Sie wie folgt v
 {% alert important %}
 Dadurch wird die Teilnahmeberechtigung für Personen, die bereits die ursprüngliche Kampagne erhalten haben, zurückgesetzt. Sie müssen also möglicherweise die doppelte Kampagne für Personen filtern, die die ursprüngliche Kampagne nicht erhalten haben.
 {% endalert %}
+
+## 
+
+ 
+
+
+ 
+{% endalert %}
+
+
+
+1. 
+2. 
+3.  
+
+
+
+ 
+
+
+
+### 
+
+
