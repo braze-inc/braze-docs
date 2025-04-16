@@ -81,7 +81,7 @@ For more on using uninstall tracking, see our blog post [Uninstall Tracking: An 
 
 If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency.
 
-### Why are the number of app uninstalls different from what's in the APNs?
+### Why are the number of app uninstalls different from what's in APNs?
 
 The difference is expected. APNs will start returning a 410 status for these tokens on a fuzzy schedule.
 

@@ -161,15 +161,15 @@ You can [turn off click tracking]({{site.baseurl}}/user_guide/message_building_b
 
 [Dynamic APNs gateway management]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_dynamic-apns-gateway-management) enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually select APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and BadDeviceToken errors.
 
-#### Flutter support for Banner Cards
+#### Flutter support for Banners
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Banner Cards now support Flutter. Additionally, all Banner Card documentation has been overhauled for easier usability. Check out the following articles to get started:
+Banners now support Flutter. Additionally, all Banner documentation has been overhauled for easier usability. Check out the following articles to get started:
 
-- [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards)
-- [Creating Banner Card campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
-- [Embedding Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
+- [About Banners]({{site.baseurl}}/developer_guide/banner_cards)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
 
 #### WhatsApp click tracking
 
