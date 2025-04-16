@@ -1,12 +1,12 @@
 ---
-nav_title: ""
+nav_title: Connected-Content-Aufrufe tätigen
 article_title: Aufruf einer Connected-Content-API
 page_order: 0
 description: "In diesem Referenzartikel erfahren Sie, wie Sie einen Connected-Content-API-Aufruf durchführen. Zudem erhalten Sie hier hilfreiche Beispiele und fortgeschrittene Anwendungsfälle für Connected Content."
 search_rank: 2
 ---
 
-# 
+# [![Braze-Lernkurs]](https://learning.braze.com/connected-content) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Aufruf einer Connected-Content API
 
 > Verwenden Sie Connected-Content, um alle über APIs zugänglichen Informationen direkt in Nachrichten einzufügen, die Sie an Nutzer:innen senden. Sie können Inhalte entweder direkt von Ihrem Webserver oder von öffentlich zugänglichen APIs beziehen.<br><br>Auf dieser Seite erfahren Sie, wie Sie Connected-Content API-Aufrufe tätigen, fortgeschrittene Connected-Content-Anwendungsfälle, Fehlerbehandlung und mehr.
 
@@ -144,7 +144,7 @@ Das folgende Beispiel veranschaulicht das Abrufen und Speichern eines Zugriffsto
 
 #### Schritt 2: Autorisieren Sie die API mit dem abgerufenen Zugriffstoken
 
-
+Nachdem das Token gespeichert wurde, kann es als dynamisches Template in den nachfolgenden Connected-Content-Aufruf eingefügt werden, um die Anfrage zu autorisieren:
 
 {% raw %}
 ```
@@ -168,7 +168,7 @@ Braze sendet Anfragen zu Connected Content von den folgenden IP-Bereichen. Die a
 
 Braze verfügt über einen reservierten Satz von IPs, die für alle Dienste verwendet werden, von denen nicht alle zu einem bestimmten Zeitpunkt aktiv sind. So kann Braze bei Bedarf von einem anderen Rechenzentrum aus senden oder Wartungsarbeiten durchführen, ohne die Kunden zu beeinträchtigen. Braze kann eine, eine Teilmenge oder alle der folgenden IPs verwenden, wenn Sie Connected-Content-Anfragen stellen.
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ## Fehlersuche
 
@@ -179,22 +179,22 @@ Verwenden Sie [Webhook.site](https://webhook.site/), um Fehlerbehebungen für Ih
 
 Mit diesem Tool können Sie Probleme mit den Anfrage-Headern, dem Anfragetext und anderen Informationen, die beim Aufruf gesendet werden, diagnostizieren.
 
-## 
+## Häufig gestellte Fragen
 
-###  
+### Warum gibt es mehr Connected-Content-Aufrufe als Nutzer:innen oder Sendungen? 
 
- 
+Es kann sein, dass Braze denselben Connected-Content-API-Aufruf mehr als einmal pro Empfänger:in tätigt, da wir möglicherweise einen Connected-Content-API-Aufruf tätigen müssen, um eine Nachricht zu rendern. Nachrichten können für Validierung, Wiederholungslogik oder andere interne Zwecke mehrmals pro Empfänger:in gerendert werden.
 
- 
+Es wird erwartet, dass ein Connected-Content API-Aufruf mehr als einmal pro Empfänger:in erfolgen kann, auch wenn die Wiederholungslogik nicht in dem Aufruf verwendet wird. Wir empfehlen, das Rate-Limits für Nachrichten mit Connected-Content einzustellen oder Ihre Server so zu konfigurieren, dass sie das erwartete Volumen besser bewältigen können.
 
-### 
+### Wie funktioniert das Rate-Limiting bei Connected-Content?
 
-    
+Connected-Content hat kein eigenes Rate-Limit. Stattdessen basiert das Rate-Limit auf der Rate, mit der Nachrichten versendet werden. Wir empfehlen, das Rate-Limits für Messaging unter das von Ihnen beabsichtigte Rate-Limits für Connected-Content zu setzen, wenn mehr Connected-Content-Anrufe als Nachrichten gesendet werden.  
 
-### 
+### Was ist Caching-Verhalten?
 
- 
- 
+Standardmäßig werden POST-Anfragen nicht zwischengespeichert. Sie können jedoch den Parameter `:cache_max_age` hinzufügen, um den POST-Aufruf in den Cache zu zwingen.
+Caching kann dazu beitragen, doppelte Connected-Content-Aufrufe zu vermeiden. Es ist jedoch nicht garantiert, dass dies immer zu einem einzigen Connected-Content-Aufruf pro Nutzer:in führt.
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
