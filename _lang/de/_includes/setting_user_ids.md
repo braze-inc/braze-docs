@@ -9,7 +9,7 @@ Wenn eine solche Kennung nicht verfügbar ist, weist Braze Ihren Benutzern eine 
 {% endalert %}
 
 {% alert warning %}
-Wenn Sie einen identifizierbaren Wert als Ihre Benutzer-ID angeben möchten, **empfehlen wir Ihnen dringend,** unser [SDK-Authentifizierungsfeature]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) hinzuzufügen, um Identitätswechsel von Nutzer:innen zu verhindern.
+Wenn Sie einen identifizierbaren Wert als Nutzer:innen-ID verwenden möchten, **empfehlen wir Ihnen,** zur zusätzlichen Sicherheit unser [SDK-Authentifizierungs-Feature]({{site.baseurl}}/developer_guide/authentication/) hinzuzufügen, um Identitätswechsel zu verhindern.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
