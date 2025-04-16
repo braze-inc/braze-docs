@@ -74,7 +74,7 @@ Bei bestimmten Feldern kann es länger dauern, bis der neueste Stand angezeigt w
 Wenn eine vollständige Konsistenz erforderlich ist, empfehlen wir, eine Stunde nach dem letzten Update dieser Felder zu warten, bevor Sie Ihre Nachrichten an Ihre Nutzer:innen versenden.
 {% endalert %}
 {% api %}
-
+## Ereignisse deinstallieren
 
 {% apitags %}
 Deinstallation
@@ -87,7 +87,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Uninstall (users.behaviors.Uninstall)
 
@@ -106,7 +106,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Uninstall (users.behaviors.Uninstall)
 
@@ -203,7 +203,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 {% endapi %}
 
 {% api %}
-## 
+## Globale Ereignisse zur Änderung des Abo-Status
 
 {% apitags %}
 Abo
@@ -212,7 +212,7 @@ Abo
 Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-Status des Nutzers erhält, auch wenn die Anfrage den aktuellen Abo-Status des Nutzers nicht ändert.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Global Subscription State Change (users.behaviors.subscription.GlobalStateChange)
 
@@ -245,7 +245,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Global Subscription State Change (users.behaviors.subscription.GlobalStateChange)
 
@@ -409,13 +409,13 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
 | Migration | Wenn ein Nutzer:innen durch interne Migrationen oder Wartungsskripte aktualisiert wird |
 | Nutzer:in zusammenführen | Wenn ein Nutzer:innen durch das Zusammenführen von Nutzern aktualisiert wird |
 | Canvas-Schritt „Nutzeraktualisierung“ | Wenn ein Nutzer:innen durch den Canvas-Schritt Update aktualisiert wird |
-|  |  |
+| Automatisches Opt-in durch Token-Registrierung | Wenn ein Nutzer:innen durch den [Prozess der Token-Registrierung]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) aktualisiert wird |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
-## 
+## Abo Gruppe Statusänderung Ereignisse
 
 {% apitags %}
 Abo
@@ -428,7 +428,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS und WhatsApp verfügb
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Subscription Group State Change (users.behaviors.subscriptiongroup.StateChange)
 
@@ -463,7 +463,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS und WhatsApp verfügb
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Subscription Group State Change (users.behaviors.subscriptiongroup.StateChange)
 
@@ -643,7 +643,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS und WhatsApp verfügb
 {% endapi %}
 
 {% api %}
-## 
+## Kampagne Konversions-Events
 
 {% apitags %}
 Kampagne, Konversion
@@ -660,7 +660,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Campaign Conversion (users.campaigns.Conversion)
 
@@ -687,7 +687,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Campaign Conversion (users.campaigns.Conversion)
 
@@ -817,7 +817,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 {% endapi %}
 
 {% api %}
-## 
+## Kampagne Kontrollgruppe Einschreibeereignisse
 
 {% apitags %}
 Kampagne, Eingang
@@ -830,7 +830,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Campaign Control Group Enrollment (users.campaigns.EnrollInControl)
 
@@ -855,7 +855,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Campaign Control Group Enrollment (users.campaigns.EnrollInControl)
 
@@ -977,7 +977,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 {% endapi %}
 
 {% api %}
-## 
+## Canvas Konversions-Ereignisse
 
 {% apitags %}
 Canvas, Konversion
@@ -986,11 +986,11 @@ Canvas, Konversion
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Aktion ausführt, die als Konversions-Event in Canvas festgelegt wurde.
 
 {% alert important %}
-Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodiert wird, das die Art des Konversions-Ereignisses, das Fenster (Zeitrahmen) und zusätzliche Informationen je nach Art des Konversions-Ereignisses enthält. 
-
+Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodiert wird, das die Art des Konversions-Ereignisses, das Fenster (Zeitrahmen) und zusätzliche Informationen je nach Art des Konversions-Ereignisses enthält. Das Feld `conversion_behavior_index` gibt an, welches Konversions-Event, wie `0 = A`, `1 = B`, `2 = C`, `3 = D`.
+{% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Conversion (users.canvas.Conversion)
 
@@ -1017,7 +1017,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Conversion (users.canvas.Conversion)
 
@@ -1147,7 +1147,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 {% endapi %}
 
 {% api %}
-## 
+## Canvas Eingang Ereignisse
 
 {% apitags %}
 Canvas, Eingang
@@ -1156,7 +1156,7 @@ Canvas, Eingang
 Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereignis teilt Ihnen mit, in welche Variante der Nutzer:in eingetreten ist.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Entry (users.canvas.Entry)
 
@@ -1181,7 +1181,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereign
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Entry (users.canvas.Entry)
 
@@ -1304,7 +1304,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereign
 {% endapi %}
 
 {% api %}
-## 
+## Exit Match Publikumsveranstaltungen
 
 {% apitags %}
 Exit, Canvas
@@ -1313,7 +1313,7 @@ Exit, Canvas
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, indem er eine Zielgruppe gefunden hat.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Exit Match Audience (users.canvas.exit.MatchedAudience)
 
@@ -1336,7 +1336,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, ind
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Exit Match Audience (users.canvas.exit.MatchedAudience)
 
@@ -1453,7 +1453,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, ind
 {% endapi %}
 
 {% api %}
-## 
+## Exit Perform Event-Ereignisse
 
 {% apitags %}
 Exit, Canvas
@@ -1462,7 +1462,7 @@ Exit, Canvas
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführung eines Ereignisses verlassen hat.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Exit Perform Event (users.canvas.exit.PerformedEvent)
 
@@ -1485,7 +1485,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführun
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Exit Perform Event (users.canvas.exit.PerformedEvent)
 
@@ -1602,7 +1602,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführun
 {% endapi %}
 
 {% api %}
-## 
+## Experiment Schritt Konversions-Ereignisse
 
 {% apitags %}
 Canvas-Experiment-Schritt, Canvas
@@ -1611,7 +1611,7 @@ Canvas-Experiment-Schritt, Canvas
 Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schritt konvertiert.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Experiment Step Conversion (users.canvas.experimentstep.Conversion)
 
@@ -1639,7 +1639,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schri
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Experiment Step Conversion (users.canvas.experimentstep.Conversion)
 
@@ -1771,7 +1771,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schri
 {% endapi %}
 
 {% api %}
-## 
+## Experiment Split Eingang Ereignisse
 
 {% apitags %}
 Canvas-Experiment-Schritt, Canvas
@@ -1780,7 +1780,7 @@ Canvas-Experiment-Schritt, Canvas
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt-Pfad betritt.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Experiment Split Entry (users.canvas.experimentstep.SplitEntry)
 
@@ -1806,7 +1806,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Experiment Split Entry (users.canvas.experimentstep.SplitEntry)
 
@@ -1931,7 +1931,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt
 {% endapi %}
 
 {% api %}
-## 
+## Canvas-Schritt Progression Ereignisse
 
 {% apitags %}
 CanvasStep, Progression
@@ -1940,7 +1940,7 @@ CanvasStep, Progression
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas mit einem bestimmten Ergebnis durchläuft. Beachten Sie, dass dieses Ereignis nicht eintritt, wenn Schritte betreten oder verlassen werden. Gegenwärtig erzeugen nur geteilte Schritte (Zielgruppen-Pfade, Decision-Split, Aktions-Pfade, Experiment) und vorgebrachte Ergebnisse Schrittfortschrittsereignisse.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Step Progression (users.canvasstep.Progression)
 
@@ -1969,7 +1969,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Step Progression (users.canvasstep.Progression)
 
@@ -2108,16 +2108,16 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
 {% endapi %}
 
 {% api %}
-## 
+## Content-Card Abbruch-Ereignisse
 
 {% apitags %}
 Abbruch, Content-Cards
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-Abbrüchen etc. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Abort (users.messages.contentcard.Abort)
 
@@ -2149,7 +2149,7 @@ Abbruch, Content-Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Abort (users.messages.contentcard.Abort)
 
@@ -2302,7 +2302,7 @@ Abbruch, Content-Cards
 {% endapi %}
 
 {% api %}
-## 
+## Content-Card Klick-Ereignisse
 
 {% apitags %}
 Content-Cards, Klicks
@@ -2315,7 +2315,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Click (users.messages.contentcard.Click)
 
@@ -2355,7 +2355,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Click (users.messages.contentcard.Click)
 
@@ -2530,12 +2530,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Content-Card Entlassungsereignisse
 
 {% apitags %}
 Content-Cards, Entlassung
@@ -2548,7 +2548,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Dismiss (users.messages.contentcard.Dismiss)
 
@@ -2588,7 +2588,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Dismiss (users.messages.contentcard.Dismiss)
 
@@ -2763,12 +2763,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Content-Card Impression Ereignisse
 
 {% apitags %}
 Content-Cards, Impressionen
@@ -2781,7 +2781,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Impression (users.messages.contentcard.Impression)
 
@@ -2821,7 +2821,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Impression (users.messages.contentcard.Impression)
 
@@ -2996,12 +2996,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Content-Card Sendeereignisse
 
 {% apitags %}
 Content-Cards, Sendungen
@@ -3014,7 +3014,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Send (users.messages.contentcard.Send)
 
@@ -3046,7 +3046,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Send (users.messages.contentcard.Send)
 
@@ -3201,16 +3201,16 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail-Ereignisse abbrechen
 
 {% apitags %}
 Abbrechen, E-Mail
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Abort (users.messages.email.Abort)
 
@@ -3244,7 +3244,7 @@ Abbrechen, E-Mail
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Abort (users.messages.email.Abort)
 
@@ -3406,7 +3406,7 @@ Abbrechen, E-Mail
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Bounce-Ereignisse
 
 {% apitags %}
 E-Mail, Bounce
@@ -3415,7 +3415,7 @@ E-Mail, Bounce
 Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurückschickt. Ein Hard Bounce bedeutet einen dauerhaften Zustellbarkeitsfehler.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Bounce (users.messages.email.Bounce)
 
@@ -3451,7 +3451,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Bounce (users.messages.email.Bounce)
 
@@ -3622,7 +3622,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Klick-Ereignisse
 
 {% apitags %}
 E-Mail, Klicks
@@ -3631,7 +3631,7 @@ E-Mail, Klicks
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es können mehrere Ereignisse für dieselbe Kampagne erzeugt werden, wenn ein Nutzer:innen mehrfach klickt oder verschiedene Links in der E-Mail anklickt.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Click (users.messages.email.Click)
 
@@ -3675,7 +3675,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Click (users.messages.email.Click)
 
@@ -3878,16 +3878,16 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Aufschiebung von Ereignissen
 
 {% apitags %}
-
+E-Mail, Aufschub
 {% endapitags %}
 
- 
+Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an eine nicht hart gebouncte E-Mail-Adresse zustellt und Braze die E-Mail bis zu 72 Stunden lang erneut versucht. Typische Gründe für Aufschübe sind reputationsbasierte Rate-Limiting des Posteingangs-Anbieters für das E-Mail-Volumen, vorübergehende Verbindungsprobleme, ein volles Postfach des Empfängers oder DNS-Fehler.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Deferral (users.messages.email.Deferral)
 
@@ -3924,7 +3924,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Deferral (users.messages.email.Deferral)
 
@@ -4095,7 +4095,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail-Zustellung Ereignisse
 
 {% apitags %}
 E-Mail, Zustellung
@@ -4104,7 +4104,7 @@ E-Mail, Zustellung
 Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang des Endnutzers:in angekommen ist.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Delivery (users.messages.email.Delivery)
 
@@ -4138,7 +4138,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Delivery (users.messages.email.Delivery)
 
@@ -4301,7 +4301,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Als Spam markieren Ereignisse
 
 {% apitags %}
 E-Mail, Spam
@@ -4310,7 +4310,7 @@ E-Mail, Spam
 Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-Mail drückt. Beachten Sie, dass dies nicht bedeutet, dass die E-Mail im Spam-Ordner gelandet ist, da Braze dies nicht trackt.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Mark As Spam (users.messages.email.MarkAsSpam)
 
@@ -4345,7 +4345,7 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Mark As Spam (users.messages.email.MarkAsSpam)
 
@@ -4511,7 +4511,7 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Öffentliche Veranstaltungen
 
 {% apitags %}
 E-Mail, Öffnungen
@@ -4524,7 +4524,7 @@ Es ist ein bekanntes Verhalten, dass die Felder für die Öffnung von E-Mails `d
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Open (users.messages.email.Open)
 
@@ -4566,7 +4566,7 @@ Es ist ein bekanntes Verhalten, dass die Felder für die Öffnung von E-Mails `d
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Open (users.messages.email.Open)
 
@@ -4762,7 +4762,7 @@ Es ist ein bekanntes Verhalten, dass die Felder für die Öffnung von E-Mails `d
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Ereignisse senden
 
 {% apitags %}
 E-Mail, Sendet
@@ -4771,7 +4771,7 @@ E-Mail, Sendet
 Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang des Endnutzers:in eingegangen ist.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Send (users.messages.email.Send)
 
@@ -4804,7 +4804,7 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Send (users.messages.email.Send)
 
@@ -4967,7 +4967,7 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Soft Bounce-Ereignisse
 
 {% apitags %}
 E-Mail, Bounce
@@ -4976,7 +4976,7 @@ E-Mail, Bounce
 Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurückschickt. Ein Soft Bounce bedeutet, dass eine E-Mail aufgrund einer vorübergehenden Störung der Zustellbarkeit nicht zugestellt werden konnte.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Soft Bounce (users.messages.email.SoftBounce)
 
@@ -5011,7 +5011,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Soft Bounce (users.messages.email.SoftBounce)
 
@@ -5178,7 +5178,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
 {% endapi %}
 
 {% api %}
-## 
+## E-Mail Abmelden von Ereignissen
 
 {% apitags %}
 E-Mail, Abo
@@ -5191,7 +5191,7 @@ Das Ereignis `Unsubscribe` ist eigentlich ein spezielles Klick-Ereignis, das aus
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Unsubscribe (users.messages.email.Unsubscribe)
 
@@ -5223,7 +5223,7 @@ Das Ereignis `Unsubscribe` ist eigentlich ein spezielles Klick-Ereignis, das aus
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Unsubscribe (users.messages.email.Unsubscribe)
 
@@ -5377,7 +5377,7 @@ Das Ereignis `Unsubscribe` ist eigentlich ein spezielles Klick-Ereignis, das aus
 {% endapi %}
 
 {% api %}
-## 
+## Feature-Flag Experiment Impressionen Ereignisse
 
 {% apitags %}
 FeatureFlags, Impression
@@ -5389,7 +5389,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Feature Flag Experiment Impression (users.messages.featureflag.Impression)
 
@@ -5424,7 +5424,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Feature Flag Experiment Impression (users.messages.featureflag.Impression)
 
@@ -5590,7 +5590,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 {% endapi %}
 
 {% api %}
-## 
+## In-App-Nachricht Klick-Ereignisse
 
 {% apitags %}
 In-App-Nachrichten, Klicks
@@ -5603,7 +5603,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine In-App-Nachricht klick
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // In-App Message Click (users.messages.inappmessage.Click)
 
@@ -5644,7 +5644,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine In-App-Nachricht klick
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // In-App Message Click (users.messages.inappmessage.Click)
 
@@ -5823,12 +5823,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine In-App-Nachricht klick
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## In-App-Nachricht Impressionen Ereignisse
 
 {% apitags %}
 In-App-Nachrichten, Impressionen
@@ -5841,7 +5841,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // In-App Message Impression (users.messages.inappmessage.Impression)
 
@@ -5882,7 +5882,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // In-App Message Impression (users.messages.inappmessage.Impression)
 
@@ -6061,21 +6061,21 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Push-Benachrichtigung Abbruchereignisse
 
 {% apitags %}
 Abbrechen, Push
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-Abbrüchen usw. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Abort (users.messages.pushnotification.Abort)
 
@@ -6109,7 +6109,7 @@ Abbrechen, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Abort (users.messages.pushnotification.Abort)
 
@@ -6270,7 +6270,7 @@ Abbrechen, Push
 {% endapi %}
 
 {% api %}
-## 
+## Push-Benachrichtigung Bounce-Ereignisse
 
 {% apitags %}
 Push, Sendet, Prellen
@@ -6279,7 +6279,7 @@ Push, Sendet, Prellen
 Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification Service oder von Fire Cloud Messaging empfangen wird. Dies bedeutet, dass die Push Nachricht abgelehnt wurde und daher dem Gerät des Nutzers:innen nicht zugestellt werden konnte.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Bounce (users.messages.pushnotification.Bounce)
 
@@ -6316,7 +6316,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Bounce (users.messages.pushnotification.Bounce)
 
@@ -6484,7 +6484,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
 {% endapi %}
 
 {% api %}
-## 
+## Push-Benachrichtigung iOS Foreground Offene Ereignisse
 
 {% apitags %}
 Push, iOS, Sendet
@@ -6493,7 +6493,7 @@ Push, iOS, Sendet
 Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) nicht unterstützt und ist jetzt mit unserem [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) veraltet.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification iOS Foreground Open (users.messages.pushnotification.IosForeground)
 
@@ -6532,7 +6532,7 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification iOS Foreground Open (users.messages.pushnotification.IosForeground)
 
@@ -6647,12 +6647,12 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Push-Benachrichtigung Offene Ereignisse
 
 {% apitags %}
 Push, Öffnet
@@ -6661,7 +6661,7 @@ Push, Öffnet
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen direkt auf die Push-Benachrichtigung klickt, um die Anwendung zu öffnen. Derzeit referenzieren Push Open Events auf "Direkte Öffnungen" und nicht auf "Gesamte Öffnungen". Dazu gehören nicht die auf Kampagnenebene angezeigten Statistiken über "beeinflusste Öffnungen", da diese nicht auf der Ebene der Nutzer:innen attributiert werden.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Open (users.messages.pushnotification.Open)
 
@@ -6700,7 +6700,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen direkt auf die Push-Benachricht
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Open (users.messages.pushnotification.Open)
 
@@ -6874,12 +6874,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen direkt auf die Push-Benachricht
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Push-Benachrichtigung Ereignisse senden
 
 {% apitags %}
 Push, sendet
@@ -6888,7 +6888,7 @@ Push, sendet
 Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:innen verarbeitet und diese an den Apple Push Notification Service oder Fire Cloud Messaging weiterleitet. Das bedeutet nicht, dass der Push dem Gerät zugestellt wurde, sondern nur, dass eine Nachricht gesendet wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Send (users.messages.pushnotification.Send)
 
@@ -6926,7 +6926,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Send (users.messages.pushnotification.Send)
 
@@ -7094,22 +7094,22 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. 
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 - `message_extras` ermöglichen es Ihnen, Ihre Sende-Events mit dynamischen Daten aus Connected-Content, angepassten Attributen (z.B. Sprache, Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Extras für Nachrichten]({{site.baseurl}}/message_extras_tag/).
 {% endapi %}
 
 {% api %}
-## 
+## SMS-Abbruch-Ereignisse
 
 {% apitags %}
 Abbrechen, SMS
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Abort (users.messages.sms.Abort)
 
@@ -7139,7 +7139,7 @@ Abbrechen, SMS
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Abort (users.messages.sms.Abort)
 
@@ -7281,7 +7281,7 @@ Abbrechen, SMS
 {% endapi %}
 
 {% api %}
-## 
+## SMS-Träger senden Ereignisse
 
 {% apitags %}
 SMS, Sendet
@@ -7294,7 +7294,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Carrier Send (users.messages.sms.CarrierSend)
 
@@ -7327,7 +7327,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Carrier Send (users.messages.sms.CarrierSend)
 
@@ -7484,7 +7484,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 {% endapi %}
 
 {% api %}
-## 
+## SMS-Zustellung Ereignisse
 
 {% apitags %}
 SMS, Zustellung
@@ -7493,7 +7493,7 @@ SMS, Zustellung
 Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nutzers:innen zugestellt wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Delivery (users.messages.sms.Delivery)
 
@@ -7526,7 +7526,7 @@ Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nut
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Delivery (users.messages.sms.Delivery)
 
@@ -7683,7 +7683,7 @@ Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nut
 {% endapi %}
 
 {% api %}
-## 
+## SMS-Zustellungsfehlerereignisse
 
 {% apitags %}
 SMS, Zustellung
@@ -7692,7 +7692,7 @@ SMS, Zustellung
 Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Delivery Failure (users.messages.sms.DeliveryFailure)
 
@@ -7726,7 +7726,7 @@ Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Delivery Failure (users.messages.sms.DeliveryFailure)
 
@@ -7887,7 +7887,7 @@ Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden
 {% endapi %}
 
 {% api %}
-## 
+## Eingehende SMS Empfangene Ereignisse
 
 {% apitags %}
 SMS, EingehendEmpfangen
@@ -7901,7 +7901,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Inbound Received (users.messages.sms.InboundReceive)
 
@@ -7934,7 +7934,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Inbound Received (users.messages.sms.InboundReceive)
 
@@ -8088,7 +8088,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 {% endapi %}
 
 {% api %}
-## 
+## SMS Ablehnungsereignisse
 
 {% apitags %}
 SMS, Ablehnung
@@ -8097,7 +8097,7 @@ SMS, Ablehnung
 Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dies kann aus verschiedenen Gründen geschehen. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Rejection (users.messages.sms.Rejection)
 
@@ -8132,7 +8132,7 @@ Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dies 
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Rejection (users.messages.sms.Rejection)
 
@@ -8297,7 +8297,7 @@ Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dies 
 {% endapi %}
 
 {% api %}
-## 
+## SMS-Sendeereignisse
 
 {% apitags %}
 SMS, Sendet
@@ -8306,7 +8306,7 @@ SMS, Sendet
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Send (users.messages.sms.Send)
 
@@ -8340,7 +8340,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Send (users.messages.sms.Send)
 
@@ -8503,7 +8503,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 {% endapi %}
 
 {% api %}
-## 
+## SMS Short Link Klick-Ereignisse
 
 {% apitags %}
 SMS, Klicks
@@ -8512,7 +8512,7 @@ SMS, Klicks
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Short Link Click (users.messages.sms.ShortLinkClick)
 
@@ -8544,7 +8544,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Short Link Click (users.messages.sms.ShortLinkClick)
 
@@ -8697,16 +8697,16 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 {% endapi %}
 
 {% api %}
-## 
+## Webhook Abbruch-Ereignisse
 
 {% apitags %}
 Abbrechen, Webhooks
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Webhook Abort (users.messages.webhook.Abort)
 
@@ -8738,7 +8738,7 @@ Abbrechen, Webhooks
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Webhook Abort (users.messages.webhook.Abort)
 
@@ -8891,7 +8891,7 @@ Abbrechen, Webhooks
 {% endapi %}
 
 {% api %}
-## 
+## Webhook Ereignisse senden
 
 {% apitags %}
 Webhooks, Sendungen
@@ -8900,7 +8900,7 @@ Webhooks, Sendungen
 Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Webhook angegebene Drittpartei gesendet wurde. Beachten Sie, dass dies keine Aussage darüber macht, ob die Anfrage empfangen wurde oder nicht.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Webhook Send (users.messages.webhook.Send)
 
@@ -8931,7 +8931,7 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Webhook Send (users.messages.webhook.Send)
 
@@ -9080,16 +9080,16 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp Abbruch-Ereignisse
 
 {% apitags %}
 WhatsApp, Abbrechen
 {% endapitags %}
 
-
+Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Abort (users.messages.whatsapp.Abort)
 
@@ -9122,7 +9122,7 @@ WhatsApp, Abbrechen
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Abort (users.messages.whatsapp.Abort)
 
@@ -9281,7 +9281,7 @@ WhatsApp, Abbrechen
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp Zustellung Ereignisse
 
 {% apitags %}
 WhatsApp, Zustellung
@@ -9290,7 +9290,7 @@ WhatsApp, Zustellung
 Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich auf dem Gerät des Endnutzers:in angekommen ist.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Delivery (users.messages.whatsapp.Delivery)
 
@@ -9322,7 +9322,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Delivery (users.messages.whatsapp.Delivery)
 
@@ -9477,7 +9477,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp-Ausfallereignisse
 
 {% apitags %}
 WhatsApp, Scheitern
@@ -9486,7 +9486,7 @@ WhatsApp, Scheitern
 Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zugestellt werden kann. Ein Hard Bounce bedeutet einen dauerhaften Zustellbarkeitsfehler.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
 
@@ -9520,7 +9520,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
 
@@ -9683,7 +9683,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
 {% endapi %}
 
 {% api %}
-## 
+## Eingehende WhatsApp-Ereignisse
 
 {% apitags %}
 WhatsApp, InboundReceived
@@ -9692,7 +9692,7 @@ WhatsApp, InboundReceived
 Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze WhatsApp sendet.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
 
@@ -9727,7 +9727,7 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
 
@@ -9893,7 +9893,7 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp Ereignisse lesen
 
 {% apitags %}
 WhatsApp, Lesen
@@ -9902,7 +9902,7 @@ WhatsApp, Lesen
 Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Endnutzer:in gelesen wird.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Read (users.messages.whatsapp.Read)
 
@@ -9934,7 +9934,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Endnutzer:in g
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Read (users.messages.whatsapp.Read)
 
@@ -10102,13 +10102,13 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Endnutzer:in g
 | Migration | Wenn ein Nutzer:innen durch interne Migrationen oder Wartungsskripte aktualisiert wird |
 | Nutzer:in zusammenführen | Wenn ein Nutzer:innen durch das Zusammenführen von Nutzern aktualisiert wird |
 | Canvas-Schritt „Nutzeraktualisierung“ | Wenn ein Nutzer:innen durch den Canvas-Schritt Update aktualisiert wird |
-|  |  |
+| List-Unsubscribe | Wenn sich ein Nutzer:innen über Braze mailto oder die Kopfzeile Liste-abmelden mit einem Klick abmeldet |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp Ereignisse senden
 
 {% apitags %}
 WhatsApp, Sendet
@@ -10117,7 +10117,7 @@ WhatsApp, Sendet
 Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und WhatsApp übermittelt wurde. Dies bedeutet jedoch nicht, dass die Nachricht bei den Endnutzer:innen angekommen ist.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Send (users.messages.whatsapp.Send)
 
@@ -10150,7 +10150,7 @@ Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Send (users.messages.whatsapp.Send)
 
