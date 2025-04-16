@@ -43,7 +43,7 @@ Braze erkennt nur URLs, die mit `http://` oder `https://` beginnen. Wenn eine UR
 
 ### Hinzufügen von UTM-Parametern
 
-
+{% multi_lang_include click_tracking.md section='UTM-Parameter' %}
 
 ## Flüssige Personalisierung in URLs
 
@@ -116,9 +116,9 @@ Die Diagramme **Historische Leistung** und **SMS/MMS-Leistung** enthalten auch e
 
 Eine Anleitung zum Retargeting finden Sie unter [SMS-Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
+{% multi_lang_include click_tracking.md section='Angepasste Domains' %}
 
-
-
+{% multi_lang_include click_tracking.md section='Häufig gestellte Fragen' %}
 
 ### Kann ich wissen, welche einzelnen Benutzer auf eine URL klicken?
 
