@@ -13,11 +13,11 @@ Wenn ein Benutzer ein benutzerdefiniertes Ereignis für einen Artikel auslöst, 
 
 ## So funktionieren „Wieder verfügbar“-Benachrichtigungen
 
-Sie richten ein angepasstes Event ein, das Sie als Abo-Event verwenden können, z. B. ein `product_clicked`-Event. Dieses Event muss eine Eigenschaft der Artikel-ID enthalten (Katalogartikel-IDs). Wir schlagen vor, dass Sie einen Katalognamen angeben, aber das ist nicht erforderlich. Sie geben auch den Namen eines Feldes für die Bestandsmenge an, das ein Zahlendatentyp sein muss.
+Sie richten ein angepasstes Event ein, das Sie als Abo-Event verwenden können, z. B. ein `product_clicked`-Event. Dieses Event muss eine Eigenschaft der Artikel-ID enthalten (Katalogartikel-IDs). Wir schlagen vor, dass Sie einen Katalognamen angeben, aber das ist nicht erforderlich. Sie geben auch den Namen eines Feldes für die Bestandsmenge an, das ein Zahlendatentyp sein muss. 
 
-Wenn ein Artikel eine Bestandsmenge aufweist, die Ihrer Bestandsregel entspricht, suchen wir alle Nutzer:innen, die diesen Artikel abonniert haben (Nutzer:innen, die das Abo-Event ausgelöst haben) und senden ein angepasstes Event, das Sie zum Triggern einer Kampagne oder eines Canvas verwenden können.
+ Wenn ein Artikel eine Bestandsmenge aufweist, die Ihrer Bestandsregel entspricht, suchen wir alle Nutzer:innen, die diesen Artikel abonniert haben (Nutzer:innen, die das Abo-Event ausgelöst haben) und senden ein angepasstes Event, das Sie zum Triggern einer Kampagne oder eines Canvas verwenden können.
 
-Die Event-Eigenschaften werden zusammen mit Ihrem Nutzer:innen gesendet, sodass Sie die Details des Artikels als Template in die Kampagne oder das Canvas einfügen können, mit der oder dem die Nachricht versendet wird!
+
 
 ## Einrichten von „Wieder verfügbar“-Benachrichtigungen
 
@@ -50,8 +50,8 @@ Führen Sie diese Schritte aus, um eine Benachrichtigung über einen nicht vorr�
     }
     ```
 {% alert note %}
-Das gleiche Event wird für die Benachrichtigung des Benutzers bei wieder verfügbaren Produkten und bei Preissenkungen verwendet. Sie können also das `type`-Array verwenden, um sowohl Preisnachlass- als auch „Wieder verfügbar“-Benachrichtigungen für dasselbe Event festzulegen.
-{% endalert %}
+ 
+
 
 {: start="4"}
 4\. Wählen Sie **Speichern** und fahren Sie mit der Seite **Einstellungen** des Katalogs fort.
