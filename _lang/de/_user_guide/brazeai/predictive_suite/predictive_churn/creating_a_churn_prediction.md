@@ -14,10 +14,6 @@ page_order: 1
 
 Gehen Sie in Braze zu **Analytics** > **Predictive Churn**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Vorhersagen** unter **Engagement**.
-{% endalert %}
-
 Eine Prognose ist eine Instanz eines trainierten Modells des maschinellen Lernens und aller Parameter und Daten, die es verwendet. Auf dieser Seite sehen Sie eine Liste aktueller aktiver Vorhersagen zusammen mit einigen grundlegenden Informationen über sie. Hier können Sie Vorhersagen umbenennen, archivieren und neue erstellen. Archivierte Vorhersagen sind inaktiv und aktualisieren die Bewertungen der Benutzer nicht. 
 
 Um eine neue Vorhersage zu erstellen, wählen Sie **Vorhersage erstellen** und wählen eine neue **Churn-Vorhersage**.
