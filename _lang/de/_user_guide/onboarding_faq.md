@@ -436,7 +436,7 @@ Wenn Sie einen Canvas anhalten, werden Nutzer:innen, die in einem Schritt warten
 Canvase
 {% endapitags %}
 
- Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
+Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
 
 Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -569,13 +569,13 @@ So richten Sie regelmäßige Engagement-Berichte ein:
 
 1. Navigieren Sie in Ihrem Dashboard-Konto unter **Daten** zu **Engagement Reports**.
 2. Klicken Sie auf **\+ Neuen Bericht erstellen**.
-3. 
-4. 
+3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
+4. [Nehmen Sie Statistiken]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
 5. Wählen Sie die Komprimierung und den Deliminator für Ihren Bericht.
 6. Geben Sie die E-Mail-Adressen der Braze-Benutzer ein, die diesen Bericht erhalten sollen.
-7. 
-8. 
-9. 
+7. Wählen Sie den [Zeitraum]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
+8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
+9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).
 10. Führen Sie den Bericht aus, und öffnen Sie ihn in Ihrer E-Mail, wenn er ankommt!
 
 {% endapi %}
