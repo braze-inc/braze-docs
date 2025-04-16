@@ -21,42 +21,42 @@ local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segme
 layout: dev_guide
 
 #Required
-description: "Diese Landing Page listet die Braze Messaging-Endpunkte auf."
+description: "Diese Landing Page listet die Messaging Endpunkte von Braze auf."
 page_type: landing
 
 guide_top_header: "Messaging Endpunkte"
-guide_top_text: "Die Braze Messaging API bietet Ihnen zwei verschiedene Optionen für den Versand von Nachrichten an Ihre Benutzer. Sie können den Inhalt der Nachricht und die Konfiguration in der API-Anfrage mit der Option <code class='highlighter-rouge'>/messages/send</code> und `/messages/schedule` Endpunkte. Alternativ können Sie die Details Ihrer Nachricht mit einer API-ausgelösten Kampagne im Braze-Dashboard verwalten und mit den Endpunkten `/campaigns/trigger/send` und `/campaigns/trigger/schedule` lediglich steuern, wann und an wen sie gesendet wird. In den folgenden Abschnitten werden die Anfragespezifikationen für beide Methoden erläutert. <br> <br> Ähnlich wie bei anderen Kampagnen können Sie die Anzahl der Male, die ein bestimmter Benutzer eine Messaging-API-Kampagne erhalten kann, begrenzen, indem Sie [Wiederzulassungseinstellungen](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) im Braze Dashboard konfigurieren. Braze liefert keine API-Nachrichten an Benutzer, die sich nicht wieder für die Kampagne qualifiziert haben, unabhängig davon, wie viele API-Anfragen gesendet werden. <br> <br> Mit den Endpunkten zum Senden von Nachrichten können Sie Sofortnachrichten an bestimmte Benutzer senden. Wenn Sie auf ein Segment abzielen, wird eine Aufzeichnung Ihrer Anfrage im **Message Activity Log** gespeichert. Verwenden Sie die Endpunkte Nachricht planen, um Nachrichten zu einem bestimmten Zeitpunkt zu versenden und bereits geplante Nachrichten zu ändern oder abzubrechen."
+guide_top_text: "Die Braze Messaging API bietet Ihnen zwei verschiedene Optionen für den Versand von Nachrichten an Ihre Nutzer:innen. Sie können den Inhalt der Nachrichten und die Konfiguration in der API-Anfrage mit dem <code class='highlighter-rouge'>/messages/send</code> und `/messages/schedule` Endpunkte. Alternativ können Sie die Details Ihrer Nachricht mit einer API-getriggerten Kampagne im Braze-Dashboard verwalten und mit den Endpunkten `/campaigns/trigger/send` und `/campaigns/trigger/schedule` einfach kontrollieren, wann und an wen sie gesendet wird. In den folgenden Abschnitten wird die Spezifikation der Anfrage für beide Methoden erläutert. <br> <br> Ähnlich wie bei anderen Kampagnen können Sie die Anzahl der Male, die ein bestimmter Nutzer eine Messaging-API-Kampagne erhalten kann, begrenzen, indem Sie im Braze-Dashboard [Wiederzulassungseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) konfigurieren. Braze wird keine API Nachrichten an Nutzer:innen zustellen, die sich nicht wieder für die Kampagne qualifiziert haben, unabhängig davon, wie viele Anfragen an die API gesendet werden. <br> <br> Mit den Endpunkten für das Senden von Nachrichten können Sie sofortige Nachrichten an bestimmte Nutzer:innen senden. Wenn Sie ein Segment Targeting betreiben, wird eine Aufzeichnung Ihrer Anfrage im **Messaging Activity Log** gespeichert. Verwenden Sie die Endpunkte Nachricht planen, um Nachrichten zu einem bestimmten Zeitpunkt zu versenden und bereits geplante Nachrichten zu ändern oder abzubrechen."
 
-guide_featured_title: "Endpunkte für Nachrichten planen"
+guide_featured_title: "Zeitplan für Nachrichten Endpunkte"
 guide_featured_list:
-  - name: "GET: Liste geplanter Kampagnen und Werbemittel"
+  - name: "GET: Liste geplanter Kampagnen und Canvase"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
   - name: "POST: Geplante Nachrichten löschen"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Geplante API-getriggerte Kampagnen löschen"
+  - name: "POST: Geplante, API-getriggerte Kampagnen löschen"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Geplante API-getriggerte Canvases löschen"
+  - name: "POST: Geplante, API-getriggerte Canvase löschen"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Zeitplan-Nachrichten"
+  - name: "POST: Zeitplan Nachrichten"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
     image: /assets/img/braze_icons/calendar-plus-01.svg
-  - name: "POST: Planen von API-gesteuerten Kampagnennachrichten"
+  - name: "POST: Zeitplan für API-getriggerte Kampagnen-Nachrichten"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: "POST: Planen von API-gesteuerten Canvas-Nachrichten"
+  - name: "POST: Zeitplan für API-getriggerte Canvas Nachrichten"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: "POST: Geplante Nachrichten aktualisieren"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Geplante API-ausgelöste Kampagnenmeldungen aktualisieren"
+  - name: "POST: Aktualisieren Sie die Zeitpläne für API-getriggerte Kampagnen-Nachrichten"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Geplante API-ausgelöste Canvas-Nachrichten aktualisieren"
+  - name: "POST: Update von API-getriggerten Canvas Nachrichten nach Zeitplan"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
 
@@ -65,13 +65,13 @@ guide_menu_list:
   - name: "POST: Sende-IDs erstellen"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
     image: /assets/img/braze_icons/user-square.svg
-  - name: "POST: Nachrichten sofort senden"
+  - name: "POST: Nachrichten sofort versenden"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     image: /assets/img/braze_icons/send-01.svg
-  - name: "POST: Senden Sie API-ausgelöste Kampagnennachrichten sofort"
+  - name: "POST: Sofortige Versendung von API-getriggerten Nachrichten für Kampagnen"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
     image: /assets/img/braze_icons/inbox-01.svg
-  - name: "POST: API-ausgelöste Canvas-Nachrichten sofort senden"
+  - name: "POST: Senden Sie API-getriggerte Canvas Nachrichten sofort"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
