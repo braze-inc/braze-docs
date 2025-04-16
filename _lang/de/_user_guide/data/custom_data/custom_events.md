@@ -23,7 +23,7 @@ Einige häufige Anwendungsfälle für angepasste Events sind:
 - Zusätzliche Analytics mit [Funnel-]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) und [Bindung-Berichten]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) finden
 - Nutzung von [persistenten Eingangs-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) zur Verwendung von Metadaten aus Ihrem Kund:in Event zur Personalisierung in Ihren Canvas-Schritten
 - Erstellen Sie mit [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) anspruchsvollere Analytics
-- 
+- Einrichten von [Ausstiegskriterien]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria), um festzulegen, wann Nutzer:innen Ihren Canvas verlassen sollen
 
 ## Angepasste Events verwalten
 
@@ -67,13 +67,13 @@ Angepasste Events erfordern zusätzliche Einstellungen. In der folgenden Liste f
 
 {% details Erweitern Sie für die Dokumentation nach Plattform %}
 
-- 
-- 
-- 
+- [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- 
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- 
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -203,7 +203,7 @@ Event-Eigenschaften für angepasste Events werden für jedes Segment, das sie ve
 
 Sie benötigen die [Nutzerzustimmung]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Angepasste Event-Eigenschaft Segmentierung verwalten", um Segmente auf der Grundlage der Häufigkeit von Event-Eigenschaften zu erstellen.
 
- 
+Standardmäßig können Sie 20 segmentierbare Event-Eigenschaften pro Workspace haben. Wenden Sie sich an Ihren Braze-Konto Manager:in, um dieses Limit zu erhöhen.
 
 Um Event-Eigenschaften für die Segmentierung hinzuzufügen, gehen Sie wie folgt vor:
 
