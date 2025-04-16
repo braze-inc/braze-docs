@@ -43,16 +43,16 @@ Bestimmte Ereignisse geben einen `platform`-Wert zurück, der die Plattform des 
 Speicherschemata gelten für die Flat File-Event-Daten, die wir an Data Warehouse-Speicherpartner (wie Google Cloud Storage, Amazon S3 und Microsoft Azure Blob Storage) senden. Einige der hier aufgeführten Kombinationen von Veranstaltungen und Zielen sind noch nicht allgemein verfügbar. Informationen darüber, welche Veranstaltungen von verschiedenen Partnern unterstützt werden, finden Sie in unserer Liste der [verfügbaren Partner]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) und auf den jeweiligen Seiten.<br><br>Beachten Sie außerdem, dass Currents Events mit übermäßig großen Nutzlasten von mehr als 900 KB löscht.
 {% endalert %}
 {% api %}
-## 
+## Zufällige Bucket-Nummer Update-Ereignisse
 
 {% apitags %}
 Zufällige Bucket-Nummer
 {% endapitags %}
 
-Dieses Nutzer-Event wird jedes Mal gestartet, wenn ein:e neue:r Nutzer:in in seinem oder ihrem Workspace erstellt wird.  
+Dieses Nutzer-Event wird jedes Mal gestartet, wenn ein:e neue:r Nutzer:in in seinem oder ihrem Workspace erstellt wird. Dabei wird jedem neuen Nutzer:innen eine zufällige Bucket-Nummer zugewiesen, mit der Sie dann gleichmäßig verteilte Segmente aus zufälligen Nutzer:innen erstellen können. Verwenden Sie diese Funktion, um eine Reihe zufälliger Bucket-Nummern zu gruppieren und die Performance Ihrer Kampagnen und Kampagnenvarianten zu vergleichen.
 
 {% alert important %}
-
+Dieses Currents-Ereignis ist nur für Kund:innen verfügbar, die einen "All Events Connector" erworben haben, und ist nur für Storage Event Connectors (wie Amazon S3, Microsoft Azure und Google Cloud Storage) verfügbar.
 <br><br>Wenden Sie sich an Ihren Customer-Success-Manager, um dieses Event zu aktivieren und den Zeitplan für das Auffüllen der zufälligen Bucket-Nummern bestehender Nutzer:innen in Ihrem Workspace anzupassen.
 {% endalert %}
 
@@ -86,7 +86,7 @@ Angepasste Events
 Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. Verwenden Sie dies, um zu verfolgen, wann Nutzer:innen angepasste Events in Ihrer Anwendung ausführen.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // [Braze Custom Event] (users.behaviors.CustomEvent)
 
@@ -113,7 +113,7 @@ Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. V
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // [Braze Custom Event] (users.behaviors.CustomEvent)
 
@@ -167,12 +167,12 @@ Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. V
 
 #### Merkmale der Eigenschaft
 
--  
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Install-Attribution Ereignisse
 
 {% apitags %}
 Attribution
@@ -181,7 +181,7 @@ Attribution
 Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributiert wird. Verwenden Sie dieses Tracking, um zu verfolgen, woher die Installationen Ihrer Apps kommen.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Install Attribution (users.behaviors.InstallAttribution)
 
@@ -200,7 +200,7 @@ Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributier
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Install Attribution (users.behaviors.InstallAttribution)
 
@@ -239,7 +239,7 @@ Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributier
 {% endapi %}
 
 {% api %}
-## 
+## Standort Ereignisse
 
 {% apitags %}
 Standorte
@@ -248,7 +248,7 @@ Standorte
 Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort besucht. Verwenden Sie dieses Event, um Nutzer:innen zu tracken, die Standort-Events in Ihrer App triggern.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Location (users.behaviors.Location)
 
@@ -280,7 +280,7 @@ Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort bes
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Location (users.behaviors.Location)
 
@@ -341,12 +341,12 @@ Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort bes
 
 #### Merkmale der Eigenschaft
 
--  
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Kauf-Events
 
 {% apitags %}
 Käufe
@@ -359,7 +359,7 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Purchase (users.behaviors.Purchase)
 
@@ -389,7 +389,7 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Purchase (users.behaviors.Purchase)
 
@@ -447,12 +447,12 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 
 #### Merkmale der Eigenschaft
 
--  
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
-## 
+## Ereignisse der ersten Sitzung
 
 {% apitags %}
 Sitzungen
@@ -465,7 +465,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // First Session (users.behaviors.app.FirstSession)
 
@@ -488,7 +488,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // First Session (users.behaviors.app.FirstSession)
 
@@ -541,7 +541,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endapi %}
 
 {% api %}
-## 
+## End-to-End-Ereignisse der Sitzung
 
 {% apitags %}
 Sitzungen
@@ -550,7 +550,7 @@ Sitzungen
 Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre aktuelle Sitzung beendet. Verwenden Sie diese Daten, um zu verfolgen, wann Sitzungen enden, und berechnen Sie zusammen mit dem entsprechenden Sitzungsbeginn die Dauer der Teilnahme an einer Sitzung.
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Session End (users.behaviors.app.SessionEnd)
 
@@ -574,7 +574,7 @@ Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre 
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Session End (users.behaviors.app.SessionEnd)
 
@@ -624,7 +624,7 @@ Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre 
 {% endapi %}
 
 {% api %}
-## 
+## Session Start Ereignisse
 
 {% apitags %}
 Sitzungen
@@ -637,7 +637,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Session Start (users.behaviors.app.SessionStart)
 
@@ -660,7 +660,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Session Start (users.behaviors.app.SessionStart)
 
