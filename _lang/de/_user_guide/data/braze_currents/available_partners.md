@@ -36,7 +36,7 @@ Diese Customer Data Platform (CDP) sammelt Daten aus verschiedenen Quellen und l
 * [Treasure Data][10]
 * [RudderStack][9]
 * [Adobe][12]
-* 
+* [Amperity][13]
 
 ## Verhaltensanalysen (Behavioral Analytics)
 
