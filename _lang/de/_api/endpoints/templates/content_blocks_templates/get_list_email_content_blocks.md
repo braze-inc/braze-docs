@@ -1,38 +1,38 @@
 ---
-nav_title: "GET: Verfügbare Inhaltsblöcke auflisten"
-article_title: "GET: Verfügbare Inhaltsblöcke auflisten"
+nav_title: "GET: Verfügbare Content-Blöcke auflisten"
+article_title: "GET: Verfügbare Content-Blöcke auflisten"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten über den Braze-Endpunkt Verfügbare Inhaltsblöcke auflisten."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Liste verfügbarer Content-Blöcke Braze."
 
 ---
 {% api %}
-# Verfügbare Inhaltsblöcke auflisten
+# Liste der verfügbaren Content-Blöcke
 {% apimethod get %}
-/content_blocks/list
+/inhalt_blöcke/liste
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Ihre vorhandenen [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) Informationen aufzulisten.
+> Verwenden Sie diesen Endpunkt, um Ihre vorhandenen [Content-Blöcke]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) aufzulisten.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `content_blocks.list`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `modified_after`  | Optional | Zeichenkette im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Inhaltsblöcke ab, die zum oder nach dem angegebenen Zeitpunkt aktualisiert wurden. |
-| `modified_before`  |  Optional | Zeichenkette im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Inhaltsblöcke ab, die zum oder vor dem angegebenen Zeitpunkt aktualisiert wurden. |
-| `limit` | Optional | Positive Zahl | Maximale Anzahl der abzurufenden Inhaltsblöcke. Standardmäßig 100, wenn nicht angegeben, mit einem maximal zulässigen Wert von 1000. |
-| `offset`  |  Optional | Positive Zahl | Anzahl der Inhaltsblöcke, die übersprungen werden sollen, bevor der Rest der Vorlagen, die den Suchkriterien entsprechen, zurückgegeben wird. |
+| `modified_after`  | Optional | String im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Content-Blöcke ab, die zum oder nach dem angegebenen Zeitpunkt aktualisiert wurden. |
+| `modified_before`  |  Optional | String im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Content-Blöcke ab, die zum oder vor dem angegebenen Zeitpunkt aktualisiert wurden. |
+| `limit` | Optional | Positive Zahl | Maximale Anzahl der abzurufenden Content-Blöcke. Standardmäßig 100, wenn nicht angegeben, mit einem maximal zulässigen Wert von 1000. |
+| `offset`  |  Optional | Positive Zahl | Anzahl der Content-Blöcke, die übersprungen werden sollen, bevor der Rest der Templates zurückgegeben wird, die den Suchkriterien entsprechen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -69,8 +69,8 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 
 | Fehler | Fehlersuche |
 | --- | --- |
-| `Modified after time is invalid` | Das angegebene Datum ist kein gültiges oder analysierbares Datum. Formatieren Sie diesen Wert als Zeichenkette im ISO 8601-Format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| `Modified before time is invalid` | Das angegebene Datum ist kein gültiges oder analysierbares Datum. Formatieren Sie diesen Wert als Zeichenkette im ISO 8601-Format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified after time is invalid` | Das angegebene Datum ist kein gültiges oder analysierbares Datum. Formatieren Sie diesen Wert als String im ISO 8601-Format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified before time is invalid` | Das angegebene Datum ist kein gültiges oder analysierbares Datum. Formatieren Sie diesen Wert als String im ISO 8601-Format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
 | `Modified after time must be earlier than or the same as modified before time.` | Ändern Sie den Wert `modified_after` auf eine Zeit, die vor der Zeit von `modified_before` liegt. |
 | `Content Block number limit is invalid` | Der Parameter `limit` muss eine Ganzzahl (positive Zahl) größer als 0 sein. |
 | `Content Block number limit must be greater than 0` | Ändern Sie den Parameter `limit` in eine ganze Zahl größer als 0. |
