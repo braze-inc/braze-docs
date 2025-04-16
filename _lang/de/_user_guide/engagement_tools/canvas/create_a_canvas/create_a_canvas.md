@@ -12,9 +12,9 @@ search_rank: 1
 
 > Dieser Referenzartikel behandelt die notwendigen Schritte zur Erstellung, Pflege und Prüfung eines Canvas. Folgen Sie diesem Leitfaden oder schauen Sie sich unseren [Canvas Braze Learning-Kurs](https://learning.braze.com/quick-overview-canvas-setup) an.
 
-
- 
-
+{% details Original Canvas Editor %}
+Sie können Canvase nicht mehr mit dem ursprünglichen Canvas-Experiment erstellen oder duplizieren. Braze empfiehlt, [Ihre Canvase in Canvas Flow zu klonen]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Schritt 1: Erstellen Sie eine neue Leinwand 
 
@@ -77,11 +77,11 @@ Hier benennen Sie Ihr Canvas, weisen [Teams]({{site.baseurl}}/user_guide/adminis
 Markieren Sie Ihre Canvases, damit Sie sie leicht finden und Berichte daraus erstellen können. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 {% endalert %}
 
-
+![Die Canvas-Detailseite mit Feldern für den Canvas-Namen, die Beschreibung, den Standort und die Tags.][53]{: style="max-width:70%;"}
 
 #### Konversions-Events auswählen
 
-Wählen Sie den Typ Ihres Konversions-Events und wählen Sie dann die Konversionen aus, die Sie aufzeichnen möchten.  
+Wählen Sie den Typ Ihres Konversions-Events und wählen Sie dann die Konversionen aus, die Sie aufzeichnen möchten. Diese [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) messen die Effizienz Ihres Canvas. 
 
 ![Primäres Konversions-Event A mit dem Konversions-Event-Typ „Kauf tätigen“, um Konversationen für Nutzer:innen aufzuzeichnen, die innerhalb einer dreitägigen Konversionsfrist einen Kauf tätigen.][52]
 
@@ -144,18 +144,18 @@ Vermeiden Sie es, eine aktionsbasierte Kampagne oder ein Canvas mit demselben Au
 
 Nachdem Sie Segmente und Filter zu Ihrer Zielgruppe hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [einen Nutzer oder eine Nutzerin suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) und überprüfen, ob er oder sie den Zielgruppen-Kriterien entspricht.
 
-
+![Das Feld "Nutzer:innen", das Ihnen die Suche nach der externen ID oder der Braze ID ermöglicht.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Entry-Kontrollen auswählen
 
-Entry-Kontrollen bestimmen, ob Nutzer:innen ein Canvas erneut aufrufen dürfen.  
+Entry-Kontrollen bestimmen, ob Nutzer:innen ein Canvas erneut aufrufen dürfen. Sie können auch die Anzahl der Personen, die dieses Canvas betreten können, durch eine ausgewählte Kadenz begrenzen (täglich, Lifetime des Canvas oder jedes Mal, wenn das Canvas geplant ist). 
 
+Wenn Sie beispielsweise **Eingangsvolumen begrenzen** auswählen und das Feld **Maximale Einträge** auf 5.000 Nutzer:innen mit **Täglich** als Grenzkadenz festlegen, sendet das Canvas nur an 5.000 Nutzer:innen pro Tag.
 
-
- 
+![Die Seite "Eingangskontrollen" zeigt Kontrollkästchen für "Nutzer:innen den erneuten Eintritt in Canvas erlauben" und "Eintrittsvolumen begrenzen" an. Letzteres ermöglicht es Ihnen, die maximalen Eingänge festzulegen und zu bestimmen, ob Sie täglich, die Lifetime des Canvas oder jedes Mal, wenn der Zeitplan für den Canvas erstellt wird, eine Begrenzung vornehmen möchten.]({% image_buster /assets/img_archive/entry_controls.png %})
 
 {% alert tip %}
-
+Braze empfiehlt nicht, das Feature **Jedes Mal, wenn der Canvas auf dem Zeitplan steht** für IP-Warming zu verwenden, da dies zu einem erhöhten Sendevolumen führen kann.
 {% endalert %}
 
 #### Ausstiegskriterien festlegen
@@ -205,7 +205,7 @@ Sparen Sie Zeit und rationalisieren Sie Ihre Canvas-Erstellung mit den [Braze Ca
 
 ### Variante hinzufügen
 
-
+![Der Button "Variante hinzufügen" wurde ausgewählt, um ein Kontextmenü mit der Option "Variante hinzufügen" anzuzeigen.][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Wählen Sie **Variante hinzufügen** und fügen Sie dann eine neue Variante zu Ihrem Canvas hinzu. Varianten stellen eine Journey dar, die Ihre Nutzer:innen unternehmen werden, und können mehrere Schritte und Verzweigungen enthalten.
 
@@ -235,7 +235,7 @@ Sie können Ihrem Canvas-Workflow weitere Schritte hinzufügen, indem Sie Kompon
 Wenn Sie weitere Schritte hinzufügen, können Sie die Zoomstufe erhöhen, um sich auf Details zu konzentrieren oder die gesamte Nutzer-Journey zu betrachten. Vergrößern Sie mit <kbd>Umschalt</kbd> + <kbd>+</kbd> oder verkleinern Sie mit <kbd>Umschalt</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-
+![Das Fenster für die Komponentensuche fügt dem Braze-Canvas einen Verzögerungsschritt hinzu.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Ein mit Canvas Flow erstelltes Canvas kann bis zu 200 Schritte enthalten. Wenn Ihr Canvas mehr als 200 Schritte umfasst, kommt es zu Ladeproblemen.
@@ -277,9 +277,9 @@ Wählen Sie **Fertig**, nachdem Sie die Konfiguration Ihrer Canvas-Komponente ab
 {% tabs local %}
 {% tab Canvas-Entry-Eigenschaften %}
 
-Die `canvas_entry_properties` werden im Entry-Zeitplan bei der Erstellung eines Canvas konfiguriert und geben den Trigger an, mit dem ein:e Nutzer:in einen Canvas aufrufen kann. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen.  
+Die `canvas_entry_properties` werden im Entry-Zeitplan bei der Erstellung eines Canvas konfiguriert und geben den Trigger an, mit dem ein:e Nutzer:in einen Canvas aufrufen kann. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen. Beachten Sie, dass das Objekt `canvas_entry_properties` bis zu 50 KB groß sein kann. 
 
- Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
+Verwenden Sie das folgende Liquid, wenn Sie auf diese Entry-Eigenschaften verweisen: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
 
 {% raw %}
 Betrachten Sie zum Beispiel die folgende Anfrage: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Mit diesem ``{{canvas_entry_properties.${product_name}}}``-Liquid können Sie das Wort „Schuhe“ in eine Nachricht einfügen.
@@ -315,13 +315,13 @@ In diesem Beispiel haben wir unser Canvas in zwei Varianten unterteilt. Variante
 
 ### Intelligente Auswahl für Canvas
 
-In multivariaten Canvase sind jetzt intelligente Auswahlmöglichkeiten verfügbar. Ähnlich wie die Funktion [Intelligente Auswahl][18a] ] für multivariate Kampagnen analysiert die Intelligente Auswahl für Canvas die Leistung jeder Canvas-Variante und passt den Prozentsatz der Nutzer an, die durch jede Variante geleitet werden. 
+In multivariaten Canvase sind jetzt intelligente Auswahlmöglichkeiten verfügbar. Ähnlich wie die Funktion [Intelligente Auswahl][18a] ] für multivariate Kampagnen analysiert die Intelligente Auswahl für Canvas die Leistung jeder Canvas-Variante und passt den Prozentsatz der Nutzer an, die durch jede Variante geleitet werden. Diese Verteilung basiert auf den Performance-Metriken der einzelnen Varianten, um die erwartete Gesamtzahl der Konversionen zu maximieren.
 
 Denken Sie daran, dass Sie mit multivariaten Canvase nicht nur Texte, sondern auch Timing und Kanäle testen können. Mit der intelligenten Auswahl können Sie Canvase effizienter testen und darauf vertrauen, dass Ihre Nutzer:innen auf die bestmögliche Canvas-Journey geschickt werden.
 
 ![Die Option „Intelligente Auswahl“ ist auf der Seite „Variantenverteilung bearbeiten“ aktiviert. Bei der Analyse und Optimierung des Canvas wird ein horizontaler Balken quer über die Seite angezeigt, der in mehrere Abschnitte unterteilt ist, die jeweils in Farbe und Größe variieren. Dies ist nur eine visuelle Darstellung und steht in keinem Zusammenhang mit bestimmten Analysen.][18b]
 
-Intelligent Selection for Canvas optimiert Ihre Canvas-Ergebnisse, indem es schrittweise Echtzeit-Anpassungen an der Verteilung der in jede Variante sortierten Benutzer vornimmt.  
+Intelligent Selection for Canvas optimiert Ihre Canvas-Ergebnisse, indem es schrittweise Echtzeit-Anpassungen an der Verteilung der in jede Variante sortierten Benutzer vornimmt. Wenn der statistische Algorithmus einen entscheidenden Gewinner unter Ihren Varianten ermittelt, schließt er die leistungsschwächeren Varianten aus und ordnet alle zukünftigen in Frage kommenden Empfänger:innen des Canvas den Gewinnervarianten zu. 
 
 Aus diesem Grund funktioniert die intelligente Auswahl am besten auf Canvase, bei denen häufig neue Nutzer:innen hinzukommen.
 
