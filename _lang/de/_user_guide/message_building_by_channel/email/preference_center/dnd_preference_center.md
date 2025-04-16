@@ -14,10 +14,6 @@ page_order: 2
 
 Erstellen Sie ein Präferenzcenter, indem Sie zu **Zielgruppe** > **Abonnements** > **E-Mail-Präferenzcenter** navigieren.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, gehen Sie zu **Benutzer** > **Abonnementgruppen** > **E-Mail-Präferenzcenter**.
-{% endalert %}
-
 Hier wird eine Liste der benutzerdefinierten Einstellungszentren angezeigt. Wählen Sie **Neu erstellen**, um ein neues Einstellungszentrum zu erstellen, oder wählen Sie den Namen eines bestehenden, um Änderungen vorzunehmen.
 
 ![Eine Liste der benutzerdefinierten Einstellungszentren mit Name, Beschreibung, Typ, Status, Datum der letzten Bearbeitung und Erstellung durch den Benutzer.][1]
