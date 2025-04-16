@@ -42,7 +42,7 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 ### Schritt 2: Konversions-Events zuweisen
 
-Aktualisieren Sie das **primäre Konversionsereignis - A**, um Nutzer aus unserer App (MovieCanon) anzusprechen, und belassen Sie das **primäre Konversionsereignis - B** als Standard für einen Kauf.
+
 
 ![Abschnitt „Konversions-Events zuweisen mit einem primären Konversions-Event eines Nutzers oder einer Nutzerin, der oder die eine Sitzung in einer bestimmten App beginnt.][2]
 
