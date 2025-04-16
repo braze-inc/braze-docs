@@ -18,7 +18,7 @@ channel: in-app messages
 
 Bevor Sie In-App-Nachrichten in Ihrem Canvas verwenden können, müssen Sie einen [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) mit Verzögerungs- und Zielgruppenoptionen einrichten.
 
- 
+Fügen Sie im Canvas-Builder einen [Nachrichten-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) hinzu und wählen Sie **In-App-Nachricht** als Ihren **Messaging-Kanal**. Sie können selbst bestimmen, [wann Ihre Nachricht abläuft](#in-app-message-expiration) und welches [Verhalten](#advancement-behavior) sie haben wird.
 
 ## Hinzufügen einer In-App-Nachricht zu Ihrer Nutzer:innen-Reise
 
@@ -28,34 +28,34 @@ Um eine In-App-Nachricht zu Ihrem Canvas hinzuzufügen, gehen Sie wie folgt vor:
 2. Wählen Sie **In-App-Nachricht** für Ihren **Messaging-Kanal**. 
 3. Legen Sie fest, [wann Ihre Nachricht abläuft](#in-app-message-expiration) und welches [Vorbringungsverhalten](#advancement-behavior-options) sie haben wird.
 
-## 
+## Getriggerte In-App-Nachrichten
 
+Sie können einen Auslöser für Ihre In-App-Nachrichten auswählen, der bei Sitzungsbeginn oder durch angepasste Events und Käufe getriggert wird.
 
+Nachdem alle Verzögerungen verstrichen sind und die Optionen für die Zielgruppe aktiviert wurden, werden In-App-Nachrichten aktiviert, sobald ein Nutzer:innen den Schritt Nachricht erreicht. Wenn ein Nutzer eine Sitzung startet und das Trigger-Ereignis für die In-App-Nachricht ausführt, sieht der Nutzer:in die In-App-Nachricht. 
 
-  
-
-Bei Canvas-Schritten mit einem durch eine Aktion getriggerter Entry können Nutzer:innen den Canvas mitten in der Sitzung betreten. 
+Bei Canvas-Schritten mit einem durch eine Aktion getriggerter Entry können Nutzer:innen den Canvas mitten in der Sitzung betreten. In-App-Nachrichten werden erst dann aktiv, wenn eine Sitzung beginnt. Befindet sich ein Nutzer:innen also mitten in der Sitzung, wenn er den Schritt Nachricht erreicht, erhält er die In-App-Nachricht erst, wenn er eine weitere Sitzung beginnt und den entsprechenden Trigger ausführt.
 
 ## Ablauf von In-App-Nachrichten
 
-  Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
+Im In-App-Nachrichten-Editor können Sie festlegen, wann die In-App-Nachricht abläuft. Während dieser Zeit bleibt die In-App-Nachricht stehen und wartet darauf, angesehen zu werden, bis sie das Ablaufdatum erreicht hat. Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
 
-
+![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
 
 | Option | Beschreibung | Beispiel |
 |---|---|---|
-|  |  |  Sie wäre dann für 2 Tage (48 Stunden) verfügbar und während dieser zwei Tage könnten die Nutzer die In-App-Nachricht sehen, wenn sie die App öffnen. |
-|  |  |  |
+| **Es ist eine Zeitspanne nach dem Schritt verfügbar.** | Legt fest, dass die In-App-Nachricht relativ zu dem Zeitpunkt abläuft, an dem der Schritt für den Nutzer:innen verfügbar wird. | Eine In-App-Nachricht, die zwei Tage lang gültig ist, wird verfügbar, nachdem die Verzögerung des Schritts verstrichen ist und die Optionen für die Zielgruppe überprüft wurden. Sie wäre dann für 2 Tage (48 Stunden) verfügbar und während dieser zwei Tage könnten die Nutzer die In-App-Nachricht sehen, wenn sie die App öffnen. |
+| **Zu bestimmten Datum und bestimmter Uhrzeit** | Wählen Sie ein bestimmtes Datum und eine Uhrzeit aus, zu der die In-App-Nachricht nicht mehr verfügbar sein wird. | Wenn Sie einen Verkauf haben, der am 30\. November 2024 endet, wählen Sie diese Option aus, damit Nutzer:innen die zugehörige In-App-Nachricht nicht mehr sehen, wenn der Verkauf endet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Anwendungsfälle
 
-
+Braze empfiehlt, dass Sie dieses Feature in Ihren Canvase für Aktionen und Onboarding verwenden.
 
 {% tabs %}
   {% tab Aktionen %}
 
-Aktionen, Gutscheine und Verkäufe haben oft ein festes Verfallsdatum. Die folgende Leinwand soll Ihre Nutzer zu den günstigsten Zeitpunkten auf eine Werbeaktion aufmerksam machen, die sie nutzen und vielleicht zu einem Kauf führen kann. 
+Aktionen, Gutscheine und Verkäufe haben oft ein festes Verfallsdatum. Die folgende Leinwand soll Ihre Nutzer zu den günstigsten Zeitpunkten auf eine Werbeaktion aufmerksam machen, die sie nutzen und vielleicht zu einem Kauf führen kann. Diese Aktion läuft am 28\. Februar 2019 um 11:15 Uhr in der Zeitzone Ihres Unternehmens ab.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -105,7 +105,7 @@ Aktionen, Gutscheine und Verkäufe haben oft ein festes Verfallsdatum. Die folge
 </tbody>
 </table>
 
-
+Die In-App-Nachrichten verfallen, wenn die Aktion abläuft, um Diskrepanzen zwischen dem Messaging und dem Kundenerlebnis zu vermeiden.
 
   {% endtab %}
   {% tab Onboarding von Nutzer:innen %}
@@ -155,7 +155,7 @@ Der erste Eindruck, den Sie bei einem Benutzer hinterlassen, ist vielleicht der 
 </tbody>
 </table>
 
- 
+Diese Push-Nachrichten sind um eine In-App-Nachricht herum angeordnet, um sicherzustellen, dass der Nutzer:innen die App besucht und sein Onboarding begonnen hat. Auf diese Weise vermeiden Sie Spam oder unpassende Nachrichten, die Nutzer:innen davon abhalten könnten, Ihre App zu besuchen, und schaffen stattdessen eine fließende, sinnvolle Reihenfolge für ihre ersten Erfahrungen mit Ihrer App.
 
   {% endtab %}
 {% endtabs %}
@@ -163,29 +163,29 @@ Der erste Eindruck, den Sie bei einem Benutzer hinterlassen, ist vielleicht der 
 
 ## Priorisierung von In-App-Nachrichten
 
- In diesem Fall hält sich Braze an die folgende Prioritätsreihenfolge, um zu bestimmen, welche In-App-Nachricht angezeigt wird. 
+Ein Nutzer:innen kann in Ihrem Canvas zwei In-App-Nachrichten gleichzeitig triggern. In diesem Fall hält sich Braze an die folgende Prioritätsreihenfolge, um zu bestimmen, welche In-App-Nachricht angezeigt wird. 
 
- Standardmäßig werden frühere Schritte in einer Canvas-Variante vor späteren Schritten angezeigt. 
+Wählen Sie **Exakte Priorität festlegen** und ziehen Sie verschiedene Canvas-Schritte, um ihre Priorität für den Canvas neu zu ordnen. Standardmäßig werden frühere Schritte in einer Canvas-Variante vor späteren Schritten angezeigt. Nachdem Ihre Schritte in der von Ihnen gewünschten Reihenfolge angeordnet sind, wählen Sie **Sortierung anwenden**.
 
+![Der Prioritätssortierer mit zwei Schritten "Erster IAM" und "Anderer IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
+### Änderungen an Entwürfen von aktiven Canvase vornehmen
 
-### 
+Wenn Sie in den **Sendeeinstellungen** eines Entwurfs eines aktiven Canvas Änderungen an der Priorität der In-App-Nachrichten vornehmen, werden diese Änderungen direkt auf das aktive Canvas angewendet, wenn die Prioritätssortierung geschlossen wird. In einem Nachrichten-Schritt wird der Prioritätssortierer jedoch aktualisiert, wenn der Entwurf gestartet wird, da die Einstellungen des Canvas-Schritts auf Schrittebene gelten. 
 
-  
+## Verhalten bei Fortschritt
 
-## 
+Nachrichten-Schritte bringen automatisch alle Nutzer:innen voran, die den Schritt betreten. Beachten Sie, dass es nicht darauf wartet, dass die In-App-Nachricht ausgelöst oder angezeigt wird. Es ist nicht erforderlich, das Verhalten des Nachrichtenfortschritts anzugeben, wodurch die Konfiguration des Gesamtschritts vereinfacht wird.
 
-  
+Wenn ein Nutzer:in eine In-App-Nachricht eintritt, bringt er sie sofort voran, anstatt das Ablauffenster abzuwarten. In diesem Fall kann ein Verzögerungsschritt in Ihrer Nutzer:in hilfreich sein.
 
- 
+Um die Option **Vorbringen, wenn Nachricht gesendet wird** zu verwenden, fügen Sie einen separaten [Zielgruppen-Pfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) hinzu, um Nutzer:innen zu filtern, die den vorherigen Schritt nicht erhalten haben.
 
-
-
-
+{% details Original Canvas Editor %}
 
 Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder duplizieren. In diesem Abschnitt können Sie referenzieren, wie das Fortschrittsverhalten bei Schritten mit In-App-Nachrichten funktioniert.
 
-Für Canvase, die im Original-Editor erstellt wurden, müssen Sie ein Fortschrittsverhalten festlegen – die Kriterien für den Fortschritt durch Ihre Canvas-Komponente.  Für In-App-Nachrichten in einem Canvas Flow-Workflow ist diese Option so eingestellt, dass die Zielgruppe immer sofort weitergeschaltet wird.
+Für Canvase, die im Original-Editor erstellt wurden, müssen Sie ein Fortschrittsverhalten festlegen – die Kriterien für den Fortschritt durch Ihre Canvas-Komponente. Für [Schritte, die nur In-App-Nachrichten enthalten](#steps-iam-only), gibt es andere Möglichkeiten des Fortschritts als für [Schritte mit mehreren Arten von Nachrichten](#steps-multiple-channels) (wie Push oder E-Mail). Für In-App-Nachrichten in einem Canvas Flow-Workflow ist diese Option so eingestellt, dass die Zielgruppe immer sofort weitergeschaltet wird.
 
 Die aktionsbasierte Zustellung ist für Canvas-Schritte mit In-App-Nachrichten nicht verfügbar. Canvas-Schritte mit In-App-Nachrichten müssen geplant werden. Stattdessen erscheinen die In-App-Nachrichten von Canvas das erste Mal, wenn Ihr:e Nutzer:in die App öffnet (getriggert durch die Startsitzung), nachdem die geplante Nachricht in der Canvas-Komponente an ihn oder sie gesendet wurde.
 
@@ -211,34 +211,34 @@ Wenn die Option **Gesamte Zielgruppe** ausgewählt ist, bleibt die In-App-Nachri
 
 {% enddetails %}
 
-## 
+## Trigger-Aktionen
 
+Sie können aus den folgenden Aktionen triggern, um Ihre Nutzer:innen zu targetieren:
 
+- **Kaufen Sie:** Targeting Nutzer:innen zusammenstellen, die einen beliebigen Kauf oder einen bestimmten Kauf tätigen
+- **Sitzung beginnen:** Targeting Nutzer:innen, die eine Sitzung in einer beliebigen App oder einer bestimmten App beginnen
+- **Angepasstes Event:** Targeting von Nutzern:innen, die das ausgewählte angepasste Event durchführen
 
--  
--  
--  
+Ein Nutzer:innen muss den Canvas-Schritt eingeben, eine Sitzung starten und dann den Trigger ausführen, um eine In-App-Nachricht zu erhalten. Das bedeutet, dass Updates mitten in der Sitzung nicht unterstützt werden. Wenn der Auslöser zum Beispiel der Start einer Sitzung ist, muss der Nutzer:innen nur den Canvas-Schritt betreten und eine Sitzung starten, um die In-App-Nachricht zu erhalten. Wenn der Auslöser nicht der Start einer Sitzung ist, muss der Nutzer:innen den Canvas-Schritt betreten, eine Sitzung starten und dann den Trigger ausführen, um die In-App-Nachricht zu erhalten.
 
-   
+!["Einen bestimmten Kauf tätigen" als triggernde Aktion ausgewählt.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
 
+Die folgenden Canvas Features sind bei In-App-Nachrichten nicht verfügbar. Sie werden also nicht auf Ihre In-App-Nachrichten angewendet, selbst wenn sie aktiviert sind.
 
-
-
-
-- 
-- 
-- 
-- 
-- 
+- Intelligentes Timing
+- Rate-Limiting
+- Frequency-Capping
+- Ausstiegskriterien
+- Ruhezeiten
 
 ## Benutzerdefinierte Ereigniseigenschaften in einem Canvas
 
- 
+Angepasste Event-Eigenschaften in In-App-Nachrichten für Canvas werden unterstützt. Diese Eigenschaften stammen jedoch von dem angepassten Event oder dem Kauf, der die In-App-Nachricht auslöst, die sich im Schritt Nachricht befindet, und nicht vom vorhergehenden Aktions-Pfad.
 
-## 
+## Überlegungen
 
+Im Folgenden finden Sie einige Überlegungen zum Versenden von In-App-Nachrichten in einem Canvas.
 
-
-- 
-- 
--  
+- Wenn der Nutzer die App nie neu startet oder nie eine Sitzung beginnt, kann die App nicht herausfinden, ob der Nutzer für die In-App-Nachricht berechtigt ist, d.h. es wird keine In-App-Nachricht versendet.
+- Wenn der erste Klick erfolgt und es eine Canvas-Kontextvariable gibt (Canvas-Eingangs-Eigenschaften) und ein Nutzer:innen fünfmal in ein Canvas eintritt, nimmt Braze den fünften Eingang und verwendet diese Kontextvariable in der In-App-Nachricht.
+- Ein Nutzer:innen kann jeweils nur 10 In-App-Nachrichten erhalten. Wenn ein Nutzer:innen zum Beispiel für 10 In-App-Nachrichten verschiedene Canvas-Schritte durchläuft, können Sie nur bis zu 10 dieser Schritte haben.
