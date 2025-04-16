@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Zusammenfassung der unterstützten Tags
 
-Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Personalisierungs-Tags. Wenn Sie mehr über die einzelnen Arten von Tags und die Best Practices erfahren möchten, lesen Sie weiter.
+Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Personalisierungs-Tags. 
 
 {% raw %}
 
@@ -29,37 +29,37 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Karten-Attribute | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing-Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event-Eigenschaften <br> (Diese sind an Ihren Workspace angepasst.)| `{{event_properties.${your_custom_event_property}}}` |
-| Entry-Eigenschaften für Canvas| `{{canvas_entry_properties}}` |
+|  |  |
 | Angepasste Attribute <br> (Diese sind an Ihren Workspace angepasst.) | `{{custom_attribute.${your_custom_attribute}}}` |
 | [API-Trigger-Eigenschaften][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-In diesem Hilfeartikel erfahren Sie mehr darüber, [wie sich einige dieser Attribute zwischen den Quellen in Braze unterscheiden]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+### 
 
-{% alert important %}
-Die Attribute „Kampagne“, „Karte“ und „Canvas“ werden nur in den entsprechenden Nachrichten-Templates unterstützt (z. B. ist `dispatch_id` in In-App-Nachrichtenkampagnen nicht verfügbar).
-{% endalert %}
+
+
+In diesem Hilfeartikel erfahren Sie mehr darüber, [wie sich einige dieser Attribute zwischen den Quellen in Braze unterscheiden]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 ### Unterschiede zwischen Canvas- und Kampagnen-Tags 
 
 Das Verhalten für die folgenden Tags unterscheidet sich zwischen Canvas und Kampagnen:
 {% raw %}
-- `dispatch_id` Das Verhalten unterscheidet sich, da Braze Canvas-Schritte als getriggerte Events behandelt, auch wenn sie „geplant“ sind (mit Ausnahme von Entry-Schritten, die geplant werden können). Weitere Informationen finden Sie unter [Versand-ID-Verhalten][50].
+-  Weitere Informationen finden Sie unter [Versand-ID-Verhalten][50].
 - Wenn Sie das Tag `{{campaign.${name}}}` mit Canvas verwenden, wird der Name der Canvas-Komponente angezeigt. Wenn Sie dieses Tag mit Kampagnen verwenden, wird der Name der Kampagne angezeigt.
 {% endraw %}
 
 ## Zuletzt verwendete Geräteinformationen
 
-Sie können die folgenden Attribute für das letzte Gerät des Nutzers oder der Nutzerin für alle Plattformen vorgeben. Wenn eine Nutzer:in Ihre Anwendung nicht verwendet hat (z. B. weil Sie den oder die Nutzer:in über die REST-API importiert haben), dann lauten diese Werte alle `null`.
+ Wenn eine Nutzer:in Ihre Anwendung nicht verwendet hat (z. B. weil Sie den oder die Nutzer:in über die REST-API importiert haben), dann lauten diese Werte alle `null`.
 
 {% raw %}
 
 |Taggen | Beschreibung |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Der zuletzt verwendete Browser auf dem Gerät des Benutzers. Beispiele sind "Chrome" und "Safari". |
-|`{{most_recently_used_device.${id}}}` | Der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
+|`{{most_recently_used_device.${id}}}` | Der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein.  |
 | `{{most_recently_used_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Ob auf dem Gerät die Anzeigenverfolgung aktiviert ist oder nicht. Dies ist ein boolescher Wert (`true` oder `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertising (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung konfiguriert ist][40]. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
@@ -70,7 +70,7 @@ Sie können die folgenden Attribute für das letzte Gerät des Nutzers oder der 
 | `{{most_recently_used_device.${platform}}}` | Die Plattform des Geräts, falls verfügbar. Falls festgelegt, ist der Wert einer von `ios`, `android`, `kindle`, `android_china`, `web` oder `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Da es eine so große Bandbreite an Geräteträgern, Modellnamen und Betriebssystemen gibt, raten wir Ihnen, jeden Liquid-Code, der von einem dieser Werte abhängt, gründlich zu testen. Diese Werte werden unter `null` angezeigt, wenn sie auf einem bestimmten Gerät nicht verfügbar sind.
+ Diese Werte werden unter `null` angezeigt, wenn sie auf einem bestimmten Gerät nicht verfügbar sind.
 
 ## Informationen zur jeweiligen App
 
@@ -95,11 +95,11 @@ User is in list of apps
 
 ## Informationen zum jeweiligen Gerät
 
-Für Push-Benachrichtigungen und In-App-Nachrichtenkanäle können Sie die folgenden Attribute für das Gerät, an das eine Nachricht gesendet wird, vorgeben. Das heißt, eine Push-Benachrichtigung oder In-App-Nachricht kann Geräteattribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
+ Das heißt, eine Push-Benachrichtigung oder In-App-Nachricht kann Geräteattribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
 
 |Taggen | Beschreibung |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
+| `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein.  |
 | `{{targeted_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
 | `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertising (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung konfiguriert ist][40]. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
 | `{{targeted_device.${google_ad_id}}}` | Bei Android-Geräten ist dieser Wert der Google Play Advertising Identifier, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID-Sammlung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
@@ -112,7 +112,7 @@ Für Push-Benachrichtigungen und In-App-Nachrichtenkanäle können Sie die folge
 
 {% endraw %}
 
-Da es eine so große Bandbreite an Gerätebetreibern, Modellnamen und Betriebssystemen gibt, raten wir Ihnen, jede Logik, die von einem dieser Werte abhängt, gründlich zu testen. Diese Werte werden unter `null` angezeigt, wenn sie auf einem bestimmten Gerät nicht verfügbar sind. 
+ Diese Werte werden unter `null` angezeigt, wenn sie auf einem bestimmten Gerät nicht verfügbar sind. 
 
 Darüber hinaus ist es möglich, dass Braze bei Push-Benachrichtigungen unter bestimmten Umständen nicht in der Lage ist, das mit der Push-Benachrichtigung verbundene Gerät zu erkennen, z.B. wenn das Push-Token über die API importiert wurde, was dazu führt, dass die Werte für diese Nachrichten `null` sind.
 
@@ -160,16 +160,16 @@ In diesem Anwendungsfall erhält ein:e Nutzer:in mit einem nicht ausgefüllten o
 
 ## Variablen-Tags
 
-Sie können das Tag `assign` verwenden, um eine Variable im Nachrichten-Editor zu erstellen. Nachdem Sie eine Variable erstellt haben, können Sie diese Variable in Ihrer Nachrichtenlogik oder Nachricht referenzieren.
+Sie können das Tag `assign` verwenden, um eine Variable im Nachrichten-Editor zu erstellen.  
 
-Dieses Tag ist nützlich, wenn Sie Content, der von unserer Funktion [Connected-Content][4] zurückgegeben wird, neu formatieren möchten. Weitere Informationen finden Sie in der Shopify-Dokumentation über [variable Tags][31].
+Nachdem Sie eine Variable erstellt haben, können Sie diese Variable in Ihrer Nachrichtenlogik oder Nachricht referenzieren. Dieses Tag ist nützlich, wenn Sie Content, der von unserer Funktion [Connected-Content][4] zurückgegeben wird, neu formatieren möchten. Weitere Informationen finden Sie in der Shopify-Dokumentation über [variable Tags][31].
 
 {% alert tip %}
 Haben Sie das Gefühl, dass Sie in jeder Nachricht die gleichen Variablen zuweisen? Anstatt den `assign` Tag immer wieder auszuschreiben, können Sie diesen Tag als Inhaltsblock speichern und ihn stattdessen am Anfang Ihrer Nachricht einfügen.
 
 1. [Erstellen Sie einen Content-Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. Geben Sie Ihrem Inhaltsblock einen Namen (keine Leerzeichen oder Sonderzeichen).
-3. Klicken Sie unten auf der Seite auf **Bearbeiten**.
+3. 
 4. Geben Sie Ihre `assign`-Tags ein.
 
 Solange sich der Inhaltsblock am Anfang Ihrer Nachricht befindet, wird die Variable jedes Mal, wenn sie als Objekt in Ihre Nachricht eingefügt wird, auf das von Ihnen gewählte benutzerdefinierte Attribut verweisen!
@@ -242,11 +242,11 @@ Dieser Schlüssel wird dem Connected-Content-Objekt nur dann automatisch hinzuge
 
 ## Senden von Nachrichten basierend auf Sprache, letztem Gebietsschema und Zeitzone
 
-In manchen Situationen möchten Sie vielleicht Nachrichten versenden, die für bestimmte Regionen bestimmt sind. Das brasilianische Portugiesisch zum Beispiel unterscheidet sich typischerweise vom europäischen Portugiesisch.
+ Das brasilianische Portugiesisch zum Beispiel unterscheidet sich typischerweise vom europäischen Portugiesisch.
 
 ### Anwendungsfall: Basierend auf dem aktuellen Gebietsschema lokalisieren
 
-Hier sehen Sie einen Anwendungsfall, wie Sie das neueste Gebietsschema verwenden können, um eine internationalisierte Nachricht weiter zu lokalisieren.
+
 
 {% raw %}
 
