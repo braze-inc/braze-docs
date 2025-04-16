@@ -87,7 +87,7 @@ For example, users won't receive steps or messages in these scenarios:
   
 ##### Users will exit if a subsequent Delay step is within a prior Delay step's timeline
 
-If the Canvas has two delay steps using "Wait until Exact Date" but the first Delay step is longer than the second Delay step, users will also exit the Canvas. 
+If the Canvas has two Delay steps using "Wait until Exact Date" but the first Delay step is longer than the second Delay step, users will also exit the Canvas. 
 
 For example, let's say a Canvas has these steps:
 - Step 1: Message step
