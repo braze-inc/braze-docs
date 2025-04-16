@@ -159,6 +159,6 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 |Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
 |Workspace|Access Landing Pages|Allows users to view landing pages, but not create or publish them.|
-|Workspace|Create Landing Page Drafts|Allows users to create landing pages, but not publish them. Also requires Access Landing Pages permission|
+|Workspace|Create Landing Page Drafts|Allows users to create landing pages, but not publish them. Also requires Access Landing Pages permission. |
 |Workspace|Publish Landing Pages|Allows users to publish landing pages. Also requires Access and Create Landing Pages permissions.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
