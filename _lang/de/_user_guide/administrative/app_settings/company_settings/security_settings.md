@@ -27,7 +27,7 @@ Wählen Sie **Komplexe Passwörter erzwingen**, um zu verlangen, dass die Passw�
 - Zahl
 - Sonderzeichen
 
-### 
+### Wiederverwendbarkeit von Passwörtern
 
 Legt die Mindestanzahl neuer Kennwörter fest, die festgelegt werden müssen, bevor ein Benutzer ein Kennwort erneut verwenden kann. Die Standardeinstellung ist drei.
 
