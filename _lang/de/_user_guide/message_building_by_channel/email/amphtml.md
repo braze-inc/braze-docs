@@ -11,7 +11,7 @@ channel:
 
 # AMP für E-Mail
 
-> Mit [AMP für E-Mails](https://amp.dev/about/email) können Sie interaktive Elemente in Ihre E-Mails einfügen und die Kommunikation mit Ihren Kunden aufwerten, indem Sie ein umfassendes Erlebnis direkt in den Posteingang Ihrer Nutzer liefern.  Tools wie diese können Opportunitäten zur Steigerung des Engagements und der Bindung bieten.
+> Mit [AMP für E-Mails](https://amp.dev/about/email) können Sie interaktive Elemente in Ihre E-Mails einfügen und die Kommunikation mit Ihren Kunden aufwerten, indem Sie ein umfassendes Erlebnis direkt in den Posteingang Ihrer Nutzer liefern. AMP macht dies durch die Verwendung verschiedener Komponenten möglich, mit denen sich spannende E-Mail-Angebote wie Umfragen, Feedback-Fragebögen, Abstimmungskampagnen, Rezensionen, Abo-Center und mehr erstellen lassen. Tools wie diese können Opportunitäten zur Steigerung des Engagements und der Bindung bieten.
 
 ## Anforderungen
 
@@ -19,24 +19,24 @@ Braze ist nicht dafür verantwortlich, dass sich Benutzer bei Google registriere
 
 | Anforderung   | Beschreibung |
 | --------------| ----------- |
-| AMP für E-Mail aktiviert |  |
+| AMP für E-Mail aktiviert | AMP ist für alle Nutzer:innen verfügbar. |
 | Aktivierung des Gmail-Kontos | Siehe [Aktivieren des Google Mail-Kontos](#enabling-gmail-account). |
 | Google Absender-Authentifizierung | Gmail [authentifiziert den Sender](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) von AMP-E-Mails mit DKIM, SPF und DMARC. Diese müssen für Ihr Konto eingerichtet werden. <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domänenbasierte Nachrichtenauthentifizierung, Berichterstattung und Konformität](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | AMP-E-Mail-Elemente | Zu einer überzeugenden AMP-E-Mail gehört der strategische Einsatz verschiedener Komponenten. Siehe die Registerkarte Essentials im Abschnitt [Komponenten](#components) weiter unten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 
+### Unterstützte E-Mail Clients
 
- Der Registrierungsprozess beinhaltet das Versenden einer AMP HTML-Test E-Mail, um zugelassen zu werden.  
+Bevor Sie AMP-E-Mails an Nutzer:innen senden können, müssen Sie sich bei unseren E-Mail Clients registrieren. Der Registrierungsprozess beinhaltet das Versenden einer AMP HTML-Test E-Mail, um zugelassen zu werden. Die Genehmigungszeiten variieren von Client zu Client. Folgen Sie den Links zur Registrierung für weitere Informationen.
 
-| Kunde |  |
+| Kunde | Registrierung Link |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-
+Eine vollständige Liste der unterstützten E-Mail Clients finden Sie in der [AMP Dokumentation](https://amp.dev/support/faq/email-support).
 
 ### Aktivieren des Gmail-Kontos
 
@@ -87,7 +87,7 @@ Beziehen Sie sich auf diese zusätzlichen Ressourcen:
 
 ### Komponenten
 
-
+Bei der Erstellung der AMP-Elemente empfehlen wir Ihnen, sich mit Ihrem Entwicklerteam abzustimmen und Design-Ressourcen und -Elemente für einen zusätzlichen Feinschliff einzubeziehen.
 
 {% tabs %}
   {% tab Grundlegendes %}
@@ -243,11 +243,11 @@ Damit Ihre AMP-E-Mail einem beliebigen Google Mail-Konto zugestellt werden kann,
 - Die E-Mail sollte den AMP-MIME-Teil vor dem HTML-MIME-Teil enthalten.
 - Der AMP-MIME-Teil muss kleiner als 100 KB sein.
 
-
+Wenn keine dieser Bedingungen den Fehler verursacht, wenden Sie sich an den [Support]({{site.baseurl}}/support_contact/).
 
 ### Häufig gestellte Fragen
 
-#### 
+#### Sollte ich mit AMP E-Mails segmentieren?
 
 Wir plädieren dafür, nicht zu segmentieren, um an alle verschiedenen Nutzer:innen zu senden. Das liegt daran, dass wir AMP-Nachrichten mehrteilig versenden, d. h. dass verschiedene Versionen in der ursprünglichen E-Mail enthalten sind. Wenn ein Nutzer:innen die AMP-Version nicht sehen kann, wird der Standard wieder auf HTML zurückgesetzt. 
 
