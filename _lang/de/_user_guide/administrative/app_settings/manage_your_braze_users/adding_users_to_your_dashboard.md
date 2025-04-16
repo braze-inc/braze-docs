@@ -12,7 +12,7 @@ description: "In diesem Artikel wird die Nutzerverwaltung in Ihrem Firmenkonto e
 > Hier erfahren Sie, wie die Nutzerverwaltung in Ihrem Firmenkonto einschließlich Hinzufügen, Sperren und Löschen von Personen funktioniert.
 
 {% alert note %}
-Mehrere Abschnitte auf dieser Seite verweisen auf die Seite **Benutzer des Unternehmens**. Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt **Company Users** **Benutzer verwalten** und befindet sich unter Ihrem Kontosymbol.
+Mehrere Abschnitte auf dieser Seite verweisen auf die Seite **Benutzer des Unternehmens**. 
 {% endalert %}
 
 ## Hinzufügen von Braze-Benutzern
@@ -84,6 +84,19 @@ Braze speichert die folgenden Kontodaten:
 
 - Benutzerdefinierte Attribute oder Testdaten, die mit ihrem Konto verbunden sind
 - Kampagnen oder Canvases, die sie erstellt haben (der Name des Benutzers erscheint jedoch nicht darin, z. B. in der Spalte **Zuletzt bearbeitet von** )
+
+## 
+
+### 
+
+
+
+
+
+1. 
+2.  
+
+ 
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
