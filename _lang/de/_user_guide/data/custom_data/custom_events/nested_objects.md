@@ -10,7 +10,7 @@ description: "Dieser Artikel beschreibt, wie Sie verschachtelte JSON-Daten als E
 
 > Auf dieser Seite erfahren Sie, wie Sie verschachtelte JSON-Daten als Eigenschaften von angepassten Events und Käufen senden und wie Sie diese verschachtelten Objekte in Ihren Nachrichten verwenden können.
 
-Sie können verschachtelte Objekte - Objekte, die sich innerhalb eines anderen Objekts befinden - verwenden, um verschachtelte JSON-Daten als Eigenschaften von angepassten Events und Käufen zu senden. Diese verschachtelten Daten können als Template für personalisierte Informationen in Nachrichten, zum Triggern von Nachrichtensendungen und zur Segmentierung von Nutzer:innen verwendet werden.
+Sie können verschachtelte Objekte - Objekte, die sich innerhalb eines anderen Objekts befinden - verwenden, um verschachtelte JSON-Daten als Eigenschaften von angepassten Events und Käufen zu senden. 
 
 ## Beschränkungen
 
@@ -39,7 +39,7 @@ Wenn in Zukunft neue Eigenschaften gesendet werden, sind sie erst dann im Schema
 
 ## Schritt 2: Verwenden Sie das verschachtelte Objekt
 
-Nachdem Sie ein Schema erstellt haben, können Sie die verschachtelten Daten bei der Segmentierung und Personalisierung referenzieren. Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
+  Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
 
 - [Körper der API-Anfrage](#api-request-body)
 - [Liquid-Templates](#liquid-templating)
