@@ -29,10 +29,6 @@ Zunächst müssen Sie Ihre HTML-E-Mail-Vorlage erstellen. Dies muss eine ZIP-Dat
 
 Gehen Sie zu **Vorlagen** > **E-Mail-Vorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **E-Mail-Vorlagen**.
-{% endalert %}
-
 ### Schritt 2: Öffnen Sie den Uploader
 
 Wählen Sie unter dem Abschnitt **Vorlagentyp** die Option **HTML-Editor** und scrollen Sie nach unten zum Abschnitt **Von einer einfachen HTML-Vorlage ausgehen**. Wählen Sie **Aus Datei**.
