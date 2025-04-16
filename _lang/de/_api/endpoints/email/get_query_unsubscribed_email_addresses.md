@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Abfrage der Liste der nicht abonnierten E-Mail-Adressen"
-article_title: "GET: Abfrage der Liste der nicht abonnierten E-Mail-Adressen"
+nav_title: "GET: Abfrage der Liste der abgemeldeten E-Mail-Adressen"
+article_title: "GET: Abfrage der Liste der abgemeldeten E-Mail-Adressen"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Retrieve list of or query email unsubscribes."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Retrieve list of or query email unsubscribes von Braze."
 
 ---
 {% api %}
 # Abfrage der Liste der abgemeldeten E-Mail-Adressen
 {% apimethod get %}
-/email/unsubscribes
+/email/abgemeldet
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die letzten E-Mails zurückzugeben, die im Zeitraum von `start_date` bis `end_date` abgemeldet wurden. Für einen vollständigen Verlauf des Abonnementstatus verwenden Sie [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents), um diese Daten zu verfolgen.
+> Verwenden Sie diesen Endpunkt, um die letzten E-Mails zurückzugeben, die im Zeitraum von `start_date` bis `end_date` abgemeldet wurden. Um einen vollständigen Verlauf des Abo-Status zu erhalten, verwenden Sie [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), um diese Daten zu verfolgen.
 
 Sie können diesen Endpunkt verwenden, um eine bidirektionale Synchronisierung zwischen Braze und anderen E-Mail-Systemen oder Ihrer eigenen Datenbank einzurichten.
 
@@ -24,20 +24,20 @@ Sie können diesen Endpunkt verwenden, um eine bidirektionale Synchronisierung z
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `email.unsubscribe`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | ----------|-----------| ---------|------ |
-| `start_date` | Optional <br>(siehe Anmerkung) | Zeichenfolge im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abrufen von Abmeldungen, muss vor dem Enddatum liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
-| `end_date` | Optional <br>(siehe Anmerkung) | Zeichenfolge im Format JJJJ-MM-TT | Enddatum des Bereichs zum Abrufen der abgemeldeten Personen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
-| `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Der Standardwert ist 100, das Maximum ist 500. |
-| `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, von dem aus abgerufen werden soll. |
-| `sort_direction` | Optional | String | Geben Sie den Wert `asc` ein, um die Abmeldungen vom ältesten bis zum neuesten Eintrag zu sortieren. Geben Sie `desc` ein, um vom neuesten zum ältesten zu sortieren. Wenn `sort_direction` nicht enthalten ist, ist die Standardreihenfolge die neueste bis zur ältesten. |
-| `email` | Optional <br>(siehe Anmerkung) | String | Falls angegeben, geben wir zurück, ob der Benutzer sich abgemeldet hat oder nicht. |
+| `start_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abrufen der Abmeldungen, muss vor dem Enddatum liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `end_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT | Enddatum des Bereichs zum Abrufen der Abmeldungen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Standardmäßig sind es 100, maximal 500. |
+| `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, ab dem abgerufen werden soll. |
+| `sort_direction` | Optional | String | Geben Sie den Wert `asc` ein, um die Abmeldungen von den ältesten bis zu den neuesten zu sortieren. Geben Sie `desc` ein, um vom neuesten zum ältesten zu sortieren. Wenn `sort_direction` nicht enthalten ist, ist die Standardreihenfolge die neueste nach der ältesten. |
+| `email` | Optional <br>(siehe Anmerkung) | String | Falls angegeben, geben wir zurück, ob sich der Nutzer:in abgemeldet hat oder nicht. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -54,7 +54,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 
 ## Antwort
 
-Die Einträge sind in absteigender Reihenfolge aufgeführt.
+Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
 Content-Type: application/json
