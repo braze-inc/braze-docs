@@ -10,4 +10,4 @@ description: "Dies sind die Codes der Nutzer:innen, die derzeit von Braze unters
 
 > Dies sind die derzeit von Braze unterstützten Sprachcodes.
 
-{% multi_lang_include unterstützte_Sprachcodes.md %}
+{% multi_lang_include supported_language_codes.md %}
