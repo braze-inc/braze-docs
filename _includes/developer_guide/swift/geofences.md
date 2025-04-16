@@ -82,7 +82,7 @@ This description will be shown when the system location prompt requests authoriz
 
 {% alert note %}
 Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's Developer Documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
-{% end alert %}
+{% endalert %}
 
 ### Step 5: Request authorization {#step-5}
 
