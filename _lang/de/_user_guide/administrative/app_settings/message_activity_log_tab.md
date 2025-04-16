@@ -15,10 +15,6 @@ Sie können API-Kampagnentransaktionen einsehen, Details zu fehlgeschlagenen Nac
 
 Um auf das Protokoll zuzugreifen, gehen Sie zu **Einstellungen** > **Nachrichtenaktivitätsprotokoll**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie das **Protokoll der Nachrichtenaktivitäten** unter **Einstellungen** > **Entwicklungskonsole**.
-{% endalert %}
-
 ![Nachrichten-Aktivitätsprotokoll][2]
 
 {% alert tip %}
