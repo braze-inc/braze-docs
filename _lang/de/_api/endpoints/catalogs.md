@@ -5,11 +5,11 @@ page_order: 0
 layout: dev_guide
 
 search_tag: Endpoint
-description: "Diese Landing Page listet die Endpunkte der Braze-Kataloge auf."
+description: "Diese Landing Page listet die Endpunkte der Braze Kataloge auf."
 page_type: landing
 
 guide_top_header: "Kataloge Endpunkte"
-guide_top_text: "Verwenden Sie die Braze Catalogs Endpoints, um Ihre Kataloge und Katalogartikeldetails hinzuzufügen, zu bearbeiten und zu verwalten. Für Massenänderungen an Ihrem Katalog verwenden Sie die asynchronen Katalogendpunkte. <br><br> Sie suchen eine Anleitung zur Erstellung eines Katalogs? Lesen Sie unseren Artikel zur <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>Erstellung und Verwendung von Katalogen</a>."
+guide_top_text: "Verwenden Sie die Braze Catalogs Endpunkte, um Ihre Kataloge und die Details Ihrer Artikel hinzuzufügen, zu bearbeiten und zu verwalten. Für Massenänderungen an Ihrem Katalog verwenden Sie die asynchronen Katalog-Endpunkte. <br><br> Sie suchen eine Anleitung zur Erstellung eines Katalogs? Lesen Sie unseren Artikel zur <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>Erstellung und Verwendung von Katalogen</a>."
 
 guide_featured_title: "Endpunkte für die Katalogverwaltung"
 guide_featured_list:
@@ -25,7 +25,7 @@ guide_featured_list:
 
 guide_menu_title2: "Asynchronous catalog items endpoints"
 guide_menu_list2:
-  - name: "LÖSCHEN: Mehrere Katalogobjekte löschen Endpunkte"
+  - name: "LÖSCHEN: Mehrere Katalogartikel Endpunkte löschen"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
     image: /assets/img/braze_icons/edit-05.svg
   - name: "PATCH: Mehrere Katalogartikel bearbeiten"
@@ -46,7 +46,7 @@ guide_menu_list3:
   - name: "GET: Liste Katalog Artikel Details"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
     image: /assets/img/braze_icons/list.svg
-  - name: "GET: Details zu mehreren Katalogartikeln auflisten"
+  - name: "GET: Mehrere Katalogartikel auflisten Details"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
     image: /assets/img/braze_icons/list.svg
   - name: "PATCH: Katalogartikel bearbeiten"
@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST: Katalogartikel erstellen"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT: Katalogartikel aktualisieren"
+  - name: "PUT: Katalogartikel ersetzen"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 
