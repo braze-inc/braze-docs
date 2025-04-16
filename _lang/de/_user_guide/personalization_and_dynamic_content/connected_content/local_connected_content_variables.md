@@ -100,7 +100,7 @@ Standardmäßig stellt Connected-Content eine HTTP GET-Anfrage an die angegebene
 
 Sie können optional einen POST-Body bereitstellen, indem Sie `:body` angeben, gefolgt von entweder einem Abfrage-String des Formats `key1=value1&key2=value2&...` oder einem Verweis auf erfasste Werte. Content-Type ist standardmäßig auf `application/x-www-form-urlencoded` eingestellt. Wenn Sie `:content_type application/json` angeben und einen form-url-codierten Body wie `key1=value1&key2=value2` bereitstellen, codiert Braze den Body vor dem Senden automatisch in JSON.
 
- 
+Connected-Content zwischenspeichert standardmäßig auch keine POST-Aufrufe. Sie können dieses Verhalten aktualisieren, indem Sie `:cache_max_age` zum Connected-Content-POST-Aufruf hinzufügen.
 
 #### Standard Content-Typ
 
