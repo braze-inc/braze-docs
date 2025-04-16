@@ -82,10 +82,6 @@ table td {
 
 Sie können dieselben Tags für Kampagnen, Canvases und Segmente verwenden. Um Tags in Ihrem Dashboard effizient umzubenennen, zu entfernen oder hinzuzufügen, gehen Sie zu **Einstellungen** > **Tag Management**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Einstellungen** > **Einstellungen verwalten** > **Tags**.
-{% endalert %}
-
 ![Tab Tags auf der Seite Einstellungen verwalten][8]
 
 Um Ihre Tags noch besser zu organisieren, verschachteln Sie Ihre Tags unter einem übergeordneten Tag. Sie können z.B. alle Feiertags-Tags unter einem übergeordneten Tag `Holidays` oder alle Tags, die sich auf eine Phase Ihres Marketing-Trichters beziehen, unter einem übergeordneten Tag `Funnel` unterbringen. 
