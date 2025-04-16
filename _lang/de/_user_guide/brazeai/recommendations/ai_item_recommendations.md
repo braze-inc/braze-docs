@@ -364,7 +364,7 @@ Dies geschieht unter einigen besonderen Bedingungen:
 
 ### Werden bestehende Empfehlungen nach dem Upgrade auf Item Recommendations Pro wöchentlich trainiert?
 
-   
+Ja, aber erst nach ihrem nächsten geplanten Update. Bestehende Empfehlungen schalten beim Upgrade auf Artikel-Empfehlungen Pro nicht sofort auf wöchentliches Training und tägliche Prognosen um. Sie werden den neuen Zeitplan jedoch automatisch bei ihrem nächsten Umschulungszyklus übernehmen. Wenn eine Empfehlung zum Beispiel zuletzt am 1\. Februar trainiert wurde und so eingestellt ist, dass sie alle 30 Tage neu trainiert wird, übernimmt sie den neuen wöchentlichen Zeitplan nach dem nächsten Update am 2\. März.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
