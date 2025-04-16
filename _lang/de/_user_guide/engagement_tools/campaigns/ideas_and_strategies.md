@@ -10,7 +10,7 @@ tool: Campaigns
 page_type: landing
 description: "Auf dieser Landing Page finden Sie Ideen und Strategien für Kampagnen. Hier finden Sie Artikel zu Themen wie Lokalisierung, Retargeting, bewährte Praktiken und mehr."
 
-guide_featured_title: ""
+guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Kampagnen für aktive Benutzer
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
@@ -33,7 +33,7 @@ guide_featured_list:
   - name: Retargeting-Kampagnen
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
-  - name: ""
+  - name: Zoom-Registrierung automatisieren
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom
     image: /assets/img/braze_icons/line-chart-up-01.svg
 
@@ -45,7 +45,7 @@ guide_menu_list:
   - name: Erstellen von Nachrichten von rechts nach links
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/
     image: /assets/img/braze_icons/globe-02.svg
-  - name: ""
+  - name: Buchungserinnerung E-Mail System
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
 ---
