@@ -12,10 +12,6 @@ description: "In diesem Artikel erfahren Sie, wie Sie im Braze-Dashboard eine Ev
 
 Gehen Sie in Braze zu **Analytics** > **Prädiktive Ereignisse**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Vorhersagen** unter **Engagement**.
-{% endalert %}
-
 Auf dieser Seite sehen Sie eine Liste aktueller aktiver Ereignisprognosen und einige grundlegende Informationen über sie. Hier können Sie Vorhersagen umbenennen, archivieren und neue erstellen. Archivierte Vorhersagen sind inaktiv und aktualisieren die Bewertungen der Benutzer nicht.
 
 ## Schritt 1: Erstellen Sie eine neue Vorhersage
