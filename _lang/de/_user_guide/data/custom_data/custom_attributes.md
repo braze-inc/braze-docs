@@ -66,13 +66,13 @@ Im Folgenden finden Sie eine Liste von Methoden für verschiedene Plattformen, m
 
 {% details Erweitern Sie für die Dokumentation nach Plattform %}
 
-- 
-- 
-- 
+- [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- 
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- 
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 
