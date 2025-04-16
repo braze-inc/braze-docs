@@ -364,7 +364,7 @@ Dies geschieht unter einigen besonderen Bedingungen:
 
 ### Werden bestehende Empfehlungen nach dem Upgrade auf Item Recommendations Pro wöchentlich trainiert?
 
-Nein, bestehende Empfehlungen werden nach dem Upgraden nicht automatisch auf wöchentliches Trainieren oder tägliche Prognosen aktualisiert. Sie können die nächsten Trainings- und Prognosezeiten im Bereich **Empfehlung** überprüfen, indem Sie eine Empfehlung auswählen. Für aktualisierte Zeitpläne empfehlen wir Ihnen, Ihre Empfehlungen neu zu erstellen.
+   
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
