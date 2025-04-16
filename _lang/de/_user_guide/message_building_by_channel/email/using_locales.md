@@ -46,6 +46,33 @@ Alle Änderungen an den IDs oder Lokalisierungen in der CSV-Datei werden nicht a
 
 Wählen Sie im Bereich **Vorschau & Test** die Option **Nutzer:innen in mehreren Sprachen** aus, um zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
 
+## 
+
+### 
+
+  
+
+
+
+1. 
+2. 
+3. 
+4. 
+
+
+
+### 
+
+  
+
+### 
+
+
+
+#### 
+
+
+
 ## Häufig gestellte Fragen
 
 #### Ich möchte eine Änderung an der übersetzten Kopie in einer meiner Sprachversionen vornehmen. Wie kann ich das tun?
@@ -71,3 +98,4 @@ Ja Achten Sie jedoch darauf, dass das HTML-Design nicht mitübersetzt wird.
 | Die Übersetzungsdatei enthält Textblöcke, die in der aktuellen Nachricht nicht vorkommen (wie den Entwurfsstand beim Upload der Übersetzungen). | Textblöcke, die in der Nachricht fehlen, werden nicht aus der Übersetzungsdatei übernommen und in Braze gespeichert. |
 | Ein Gebietsschema wird aus einer Nachricht entfernt, nachdem es als Teil der Übersetzungsdatei in die Nachricht übernommen worden ist.                           | Wenn Sie das Gebietsschema entfernen, werden alle damit verbundenen Übersetzungen in der Nachricht entfernt.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
