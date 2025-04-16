@@ -86,9 +86,20 @@ Nachdem Sie die Feinheiten Ihres Canvas überprüft haben, sehen Sie sich unter 
 ## Fehlersuche
 
 {% details Warum erhalten meine Benutzer meine Canvas-Nachrichten nicht? %}
-- Überprüfen Sie, ob der Status ihres Push-Abonnements „abonniert“ oder „bestätigt“ lautet **und** ob der Status **Push aktiviert** auf „wahr“ gesetzt ist. Wenn Sie diese als Canvas-Entry-Regeln hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen der Eingabe Ihres Canvas und dem Erhalt der Nachricht abgemeldet wurden.
-- Wenn die globale Frequenzbegrenzung für Ihr Canvas aktiviert ist, kann dies je nach Ihren spezifischen Regeln begrenzen, wie oft jeder Benutzer eine Nachricht von einem bestimmten Kanal erhalten soll. 
-- Wenn die Ruhezeiten aktiviert sind, kann sich dies auf die Sendezeit Ihrer Nachricht auswirken. Das bedeutet, dass Ihre Nachricht möglicherweise zum nächsten verfügbaren Zeitpunkt (wenn die Ruhezeiten enden) gesendet wird oder die Nachricht ganz abgebrochen wird.
+
+- 
+-  Wenn Sie diese als Canvas-Entry-Regeln hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen der Eingabe Ihres Canvas und dem Erhalt der Nachricht abgemeldet wurden.
+-  
+-  
+- 
+
+
+- 
+- 
+- 
+-  
+- 
+- 
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}
