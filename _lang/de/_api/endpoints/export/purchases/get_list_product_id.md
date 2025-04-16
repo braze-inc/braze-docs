@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Produkt-IDs exportieren"
-article_title: "GET: Produkt-IDs exportieren"
+nav_title: "GET: Produkt IDs exportieren"
+article_title: "GET: Produkt IDs exportieren"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze Endpunkt Export product IDs."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export von Produkt IDs Braze."
 
 ---
 {% api %}
-# Produkt-IDs exportieren
+# Produkt IDs exportieren
 {% apimethod get %}
-/purchases/product_list
+/Einkäufe/Produkt_liste
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine paginierte Liste von Produkt-IDs zurückzugeben.
+> Verwenden Sie diesen Endpunkt, um eine paginierte Liste von Produkt IDs zurückzugeben.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
@@ -22,15 +22,15 @@ description: "Dieser Artikel beschreibt Details zum Braze Endpunkt Export produc
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `purchases.product_list`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `page` | Optional | String | Die Seite Ihrer Produktliste, die Sie anzeigen möchten. |
+| `page` | Optional | String | Die Seite Ihrer Produktliste, die Sie ansehen möchten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -57,5 +57,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
