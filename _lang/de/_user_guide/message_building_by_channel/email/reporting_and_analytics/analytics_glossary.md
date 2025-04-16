@@ -177,7 +177,9 @@ Anzahl
 Anzahl
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} Wenn eine E-Mail einen Soft Bounce erhält, versuchen wir es normalerweise innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} Wenn eine E-Mail einen Soft Bounce erhält, versuchen wir es normalerweise innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger. 
+
+ 
 
 <span class="calculation-line">Kalkulation: Zählen</span>
 
