@@ -69,7 +69,7 @@ Bei Bedarf erfahren Sie mehr über unsere Ereignisse in unserem Artikel [zur Sem
 Sie können Currents Feldtransformationen verwenden, um ein String-Feld zu entfernen oder zu hashen.
 
 - **Entfernen:** Ersetzt das String-Feld durch `[REDACTED]`. Dies ist hilfreich, wenn Ihr Partner Ereignisse mit fehlenden oder leeren Feldern ablehnt.
-- **Hash:** 
+- **Hash:** Wendet einen SHA-256-Hashing-Algorithmus auf das String-Feld an.
 
 Wenn Sie ein Feld für eine dieser Transformationen auswählen, wird diese Transformation auf alle Ereignisse angewendet, in denen dieses Feld vorkommt. Wenn Sie zum Beispiel `email_address` für die Hash-Funktion auswählen, wird das Feld `email_address` in den Ereignissen E-Mail-Versand, E-Mail-Öffnung, E-Mail-Bounce und Statusänderung der Abo-Gruppe gehasht.
 
@@ -102,4 +102,4 @@ Um Ihren Test Currents-Konnektor zu upgraden, bearbeiten Sie die Integration im 
 
 Braze sendet Currents-Daten von den aufgeführten IPs:
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
