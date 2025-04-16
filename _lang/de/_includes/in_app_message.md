@@ -36,7 +36,7 @@ Der gesamte Inhalt der In-App-Nachrichten wird in einer WKWebView angezeigt und 
 
 ### In-App-Nachrichten (ausgelöst)
 
-Die folgende Dokumentation bezieht sich auf das Produkt `In-App Messaging` von Braze, auch bekannt als „getriggerte In-App-Nachrichten“, die wie unten im Dropdown-Menü „Kampagne erstellen“ hervorgehoben sind:
+Die folgende Dokumentation bezieht sich auf das Produkt Braze `In-App Messaging`, auch bekannt als "getriggerte In-App-Nachrichten", die wie unten in der Dropdown-Liste "Kampagne erstellen" hervorgehoben sind:
 
 ![In-App Messaging Composer][in_app_message_13]
 
