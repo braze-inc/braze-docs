@@ -23,8 +23,8 @@ Es liegt in Ihrer Verantwortung, sicherzustellen, dass Ihre benutzerdefinierte F
 Um Ihre benutzerdefinierte Fußzeile zu erstellen oder zu bearbeiten, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **E-Mail-Voreinstellungen**.
-2. 
-3. 
+2. Gehen Sie zum Abschnitt **Benutzerdefinierte Fußzeilen** und aktivieren Sie die benutzerdefinierten Fußzeilen.
+3. Bearbeiten Sie Ihre Fußzeile im Bereich **Verfassen**.
 4. Senden Sie eine Testnachricht. 
 
 ![Ein Beispiel für eine benutzerdefinierte Fußzeile.][20]
