@@ -19,6 +19,8 @@ Braze ermöglicht es Ihnen, den Druck im Marketing zu kontrollieren, indem Sie I
 1. [**Nutzerzentriertes Rate-Limiting:**](#user-centric-rate-limiting) Konzentriert sich darauf, den Nutzer:innen das beste Erlebnis zu bieten.
 2. [**Begrenzung der Liefergeschwindigkeit:**](#delivery-speed-rate-limiting) Berücksichtigt die Bandbreite Ihrer Server.
 
+ 
+
 ### Benutzerzentrierte Ratenbegrenzung
 
 Wenn Sie mehr Segmente erstellen, wird es Fälle geben, in denen sich die Mitgliedschaft in diesen Segmenten überschneidet. Wenn Sie Kampagnen an diese Segmente versenden, sollten Sie darauf achten, dass Sie Ihre Nutzer nicht zu oft anschreiben. Wenn ein Benutzer zu viele Nachrichten innerhalb eines kurzen Zeitraums erhält, wird er sich überfordert fühlen und entweder die Push-Benachrichtigungen deaktivieren oder Ihre App deinstallieren.
@@ -115,9 +117,9 @@ Wenn Sie ein Canvas mit einem Rate-Limit senden, wird das Rate-Limit zwischen de
 
 #### Ratenbegrenzung und Wiederholungsversuche für Connected Content
 
-Wenn das Feature [Connected-Content-Wiederholung][19] aktiviert ist, wiederholt Braze fehlgeschlagene Aufrufe unter Einhaltung des von Ihnen festgelegten Rate-Limits für jede erneute Sendung. Betrachten wir das Szenario von 75.000 Nachrichten mit einem Rate-Limit von 10.000 pro Minute. In der ersten Minute schlägt der Anruf fehl oder ist langsam und sendet nur 4.000 Nachrichten.
+  
 
-Anstatt zu versuchen, die Verzögerung auszugleichen und die verbleibenden 4.000 Nachrichten in der zweiten Minute zu senden oder sie zu den 10.000 hinzuzufügen, die bereits gesendet werden sollen, verschiebt Braze diese 6.000 fehlgeschlagenen Nachrichten an das Ende der Warteschlange und fügt gegebenenfalls eine weitere Minute zu den Gesamtminuten hinzu, die für den Versand Ihrer Nachricht erforderlich wären.
+
 
 | Minute | Kein Misserfolg | 6.000 Versagen in Minute 1 |
 |--------|------------|---------------------------|
@@ -132,6 +134,8 @@ Anstatt zu versuchen, die Verzögerung auszugleichen und die verbleibenden 4.000
 | (9 %)      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+   
+
 ## Über Frequency-Capping
 
 Wenn Ihre Nutzerbasis weiter wächst und Ihre Nachrichten auf Lebenszyklus-, Trigger-, Transaktions- und Konversionskampagnen ausgeweitet werden, ist es wichtig, dass Ihre Benachrichtigungen nicht als „Spam“ oder störend empfunden werden. Durch eine bessere Kontrolle über die Erfahrung Ihrer Nutzer ermöglicht Ihnen die Frequenzbegrenzung die Erstellung der gewünschten Kampagnen, ohne Ihr Publikum zu überfordern.
@@ -139,10 +143,6 @@ Wenn Ihre Nutzerbasis weiter wächst und Ihre Nachrichten auf Lebenszyklus-, Tri
 ### Übersicht über die Features {#freq-cap-feat-over}
 
 Die Frequenzbegrenzung wird auf der Ebene der Kampagne oder der Canvas-Komponente angewendet und kann für jeden Arbeitsbereich unter **Einstellungen** > **Frequenzbegrenzungsregeln** eingerichtet werden.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt diese Seite **Globale Nachrichteneinstellungen** und befindet sich unter **Engagement**.
-{% endalert %}
 
 Standardmäßig ist das Frequency-Capping aktiviert, wenn neue Kampagnen erstellt werden. Von hier aus können Sie Folgendes auswählen:
 
@@ -155,6 +155,10 @@ Dieser Zeitrahmen kann in Minuten, Tagen, Wochen (sieben Tage) oder Monaten geme
 Jede Frequency-Capping-Zeile wird mit dem Operator `AND` verbunden, und Sie können bis zu 10 Regeln pro Workspace hinzufügen. Außerdem können Sie mehrere Obergrenzen für dieselben Nachrichtenarten festlegen. So können Sie beispielsweise die Anzahl der Nutzer auf einen Push pro Tag und drei Pushs pro Woche begrenzen.
 
 ![Abschnitt zur Frequenzbegrenzung mit Listen von Kampagnen und Leinwänden, für die die Regeln gelten und nicht gelten werden.][14]
+
+#### 
+
+ 
 
 ### Zustellungsregeln
 
