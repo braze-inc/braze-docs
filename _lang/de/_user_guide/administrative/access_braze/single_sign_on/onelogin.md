@@ -21,10 +21,6 @@ Bei der Einrichtung werden Sie aufgefordert, eine Anmelde-URL und eine ACS-URL (
 | RelayState API-Schlüssel | Um die IdP-Anmeldung zu aktivieren, gehen Sie zu **Einstellungen** > **API-Schlüssel** und erstellen Sie einen API-Schlüssel mit `sso.saml.login` Berechtigungen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie Ihre API-Schlüssel unter **Einstellungen** unter **Entwicklerkonsole** > **API-Einstellungen**.
-{% endalert %}
-
 ## IdP-initiierte Anmeldung bei OneLogin
 
 ### Schritt 1: Konfigurieren Sie die Braze App
@@ -41,10 +37,6 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 Sobald Sie Braze in Ihrem OneLogin eingerichtet haben, erhalten Sie eine Ziel-URL (`SAML 2.0 Endpoint (HTTP)`) und ein `x.509` Zertifikat, das Sie in Ihr Braze-Konto eingeben.
 
 Nachdem Ihr Kontomanager SAML SSO für Ihr Konto aktiviert hat, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und schalten Sie den Abschnitt SAML SSO auf **EIN**
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Kontosymbol und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**, um den Abschnitt SAML SSO zu finden.
-{% endalert %}
 
 Geben Sie auf dieser Seite Folgendes ein:
 
