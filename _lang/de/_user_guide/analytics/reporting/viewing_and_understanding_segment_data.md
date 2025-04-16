@@ -79,7 +79,7 @@ Der Abschnitt **Messaging-Nutzung** zeigt, welche Segmente, derzeit aktivierten 
 
 Der Abschnitt **Historische Mitgliedschaft** zeigt, wie sich die Größe Ihres Segments im Laufe der Zeit verändert hat. Verwenden Sie das Dropdown-Menü, um die Segmentzugehörigkeit nach Datumsbereich zu filtern.
 
-
+Wenn Sie mehr über die Überwachung der Mitgliedschaft und Größe Ihres Segments erfahren möchten, referenzieren Sie auf [Messung der Segmentgröße]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Nutzervorschau
 
@@ -144,3 +144,4 @@ Wenn Ihr Unternehmen diese Funktion am 2\. Oktober aktiviert hat und das Analyti
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
+[11]:{% image_buster /assets/img_archive/variables_panel.png %}
