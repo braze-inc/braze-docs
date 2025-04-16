@@ -1,6 +1,5 @@
 ---
 nav_title: mParticle
-noindex: true
 layout: dev_guide
 guide_top_header: "mParticle"
 alias: /partners/mparticle_overview/
@@ -13,7 +12,5 @@ guide_featured_list:
 - name: mParticle for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/
   image: /assets/img/braze_icons/building-01.svg
-
 ---
-
 <br> 
