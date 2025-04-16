@@ -27,10 +27,6 @@ In einer App kann das Tracking für bis zu 25 Segmente aktiviert werden. Braze e
 
 Gehen Sie zu **Analytics** > **Umsatzbericht**, um Daten zu [Umsatz und Käufen im Zeitverlauf für dieses Segment][14] anzuzeigen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Revenue** unter **Data**.
-{% endalert %}
-
 ![Daten zu den Einnahmen nach Segmenten][17]
 
 Um die Daten der Segmente für jeden angepassten Zeitraum visuell zu vergleichen, fügen Sie dem Diagramm Segmente hinzu oder entfernen sie. Wählen Sie in der Dropdown-Liste **Aufschlüsselung** die Option **Nach Segmenten** und wählen Sie dann Ihre Segmente in **Aufschlüsselung Werte** aus.
@@ -42,10 +38,6 @@ Wählen Sie einen beliebigen Segmentnamen oberhalb des Diagramms aus, um die Sic
 ## Sitzungen im Laufe der Zeit
 
 Auf ähnliche Weise finden Sie auf der **Startseite** Daten über [Sitzungen im Zeitverlauf für dieses bestimmte Segment][13].
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, ist dies Ihre **Übersichtsseite**.
-{% endalert %}
 
 ![Sitzungsdaten nach Segmenten][18]
 
