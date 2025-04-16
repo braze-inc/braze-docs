@@ -81,7 +81,7 @@ Fügen Sie in `AppDelegate.swift` folgendes Snippet zu Ihrem `application(applic
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**Anmerkung**: Das Singleton `sharedInstance` von Braze wird vor dem Aufruf von `startWithApiKey:` auf Null gesetzt, da dies eine Voraussetzung für die Nutzung aller Braze-Funktionen ist.
+**Anmerkung**: Das Singleton von Braze `sharedInstance` ist null, bevor `startWithApiKey:` aufgerufen wird, da dies eine Voraussetzung für die Nutzung aller Braze-Funktionen ist.
 
 {% endtab %}
 {% endtabs %}
@@ -104,12 +104,12 @@ Beachten Sie, dass ab Dezember 2019 keine benutzerdefinierten Endpunkte mehr ver
 Ihre Braze-Vertretung sollte Sie bereits über den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/ informiert haben.administrative/access_braze/sdk_endpoints/).
 
 #### Endpunktkonfiguration zur Kompilierzeit (empfohlen)
-Wenn ein bereits vorhandener benutzerdefinierter Endpunkt...
+Wenn ein bereits vorhandener angepasster Endpunkt...
 - Ab Braze iOS SDK v3.0.2 können Sie einen angepassten Endpunkt mithilfe der Datei `Info.plist` festlegen. Fügen Sie das Wörterbuch `Appboy` zu Ihrer Datei Info.plist hinzu. Fügen Sie im Wörterbuch `Appboy` den Untereintrag `Endpoint` string hinzu und setzen Sie den Wert auf die Autorität Ihrer benutzerdefinierten Endpunkt-URL (zum Beispiel `sdk.iad-01.braze.com`, nicht `https://sdk.iad-01.braze.com`).
 
 #### Laufzeit-Endpunkt-Konfiguration
 
-Wenn ein bereits vorhandener benutzerdefinierter Endpunkt...
+Wenn ein bereits vorhandener angepasster Endpunkt...
 - Ab Braze iOS SDK v3.17.0+ können Sie Ihren Endpunkt über den `ABKEndpointKey` innerhalb des `appboyOptions` Parameters, der an `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` übergeben wird, überschreiben. Setzen Sie den Wert auf die Autorität Ihrer angepassten Endpunkt-URL (z. B. `sdk.iad-01.braze.com`, nicht `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
