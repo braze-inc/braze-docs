@@ -19,12 +19,8 @@ Bei der Einrichtung werden Sie aufgefordert, eine Anmelde-URL und eine ACS-URL (
 |---|---|
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Für Domains in der Europäischen Union lautet die ASC-URL `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Bei einigen Identitätsanbietern wird dies auch als Reply-URL, Sign-On URL, Audience-URL oder Audience-URI bezeichnet. |
 | Entitäts-ID | `braze_dashboard` |
-| RelayState API-Schlüssel | Gehen Sie zu **Einstellungen** > **API-Schlüssel** und erstellen Sie einen API-Schlüssel mit `sso.saml.login` Berechtigungen und geben Sie dann den generierten API-Schlüssel als `RelayState` Parameter in Ihren IdP ein. |
+| RelayState API-Schlüssel | Gehen Sie zu **Einstellungen** > **API-Schlüssel** und erstellen Sie einen API-Schlüssel mit `sso.saml.login` Berechtigungen und geben Sie dann den generierten API-Schlüssel als `RelayState` Parameter in Ihren IdP ein.  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie Ihre API-Schlüssel unter **Einstellungen** unter **Entwicklerkonsole** > **API-Einstellungen**.
-{% endalert %}
 
 ## SAML SSO einrichten
 
@@ -52,10 +48,6 @@ Wenn Sie die Einrichtung von Braze in Ihrem Identitätsanbieter abgeschlossen ha
 
 Nachdem Ihr Account Manager SAML SSO für Ihr Konto aktiviert hat, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und schalten Sie den Abschnitt SAML SSO auf **EIN**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Kontosymbol und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**, um den Abschnitt SAML SSO zu finden.
-{% endalert %}
-
 Geben Sie auf derselben Seite Folgendes ein:
 
 | Anforderung | Details |
@@ -80,6 +72,16 @@ Achten Sie darauf, dass Ihr `x.509`-Zertifikat diesem Format entspricht, wenn Si
 Speichern Sie Ihre Sicherheitseinstellungen und melden Sie sich ab. Melden Sie sich dann wieder bei Ihrem Identitätsanbieter an.
 
 ![Dashboard-Anmeldebildschirm mit aktiviertem SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## 
+
+1. 
+2. 
+3. 
+4. <br><br><br><br>
+5. 
+6. 
+7. 
 
 ## SSO-Verhalten
 
@@ -119,3 +121,56 @@ Wählen Sie den SAML-Tracer in der Navigationsleiste Ihres Browsers aus. Vergewi
 Wählen Sie **Exportieren**. Für **Cookie-Filter-Profil auswählen** wählen Sie **Keine**. Wählen Sie dann **Exportieren**. Nun wird eine JSON-Datei generiert, die Sie zur weiteren Fehlerbehebung an den Braze-Support senden können.
 
 ![Menü "SAML-Trace-Einstellungen exportieren" mit der Auswahl "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## 
+
+### 
+
+  
+
+
+
+
+-  
+-  
+-  
+
+### 
+
+ 
+
+### 
+
+ 
+
+### 
+
+
+
+ 
+
+
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### 
+
+
+
+### 
+
+   
+
+### 
+
+ 
+
+
+
+### 
+
+ 
