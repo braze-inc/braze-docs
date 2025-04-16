@@ -143,7 +143,7 @@ Wenn Sie verschiedene Arbeitsbereiche mit demselben Snowflake-Konto verbinden, m
 
 Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie die folgenden IP-Adressen in Ihrer Snowflake-Netzwerkrichtlinie zulassen. Weitere Informationen hierzu finden Sie in der entsprechenden Snowflake Dokumentation zur [Änderung einer Netzwerkrichtlinie](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 {% endtab %}
 
 {% tab Redshift %}
@@ -171,7 +171,7 @@ Möglicherweise müssen Sie auch Ihre Sicherheitsgruppen ändern, um Braze den Z
 
 Wenn Sie nicht möchten, dass Ihr Redshift-Cluster öffentlich zugänglich ist, können Sie eine VPC und eine EC2-Instanz einrichten, die einen ssh-Tunnel für den Zugriff auf die Redshift-Daten verwenden. Weitere Informationen finden Sie unter [AWS: Wie greife ich von meinem lokalen Rechner aus auf einen privaten Amazon Redshift-Cluster zu?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 
@@ -198,7 +198,7 @@ Wenn Sie das Dienstkonto erstellt und die Berechtigungen erteilt haben, erzeugen
 
 Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff auf Ihre Big Query-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 
@@ -226,7 +226,7 @@ Bewahren Sie das Token an einem sicheren Ort auf, bis Sie es im Braze-Dashboard 
 
 Wenn Sie Netzwerkrichtlinien aufgestellt haben, müssen Sie Braze Netzwerkzugriff auf Ihre Databricks-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 
@@ -265,7 +265,7 @@ Sie benötigen den SQL-Endpunkt für Ihr Warehouse, damit Braze eine Verbindung 
 
 Je nach Konfiguration Ihres Microsoft Fabric-Kontos müssen Sie möglicherweise die folgenden IP-Adressen in Ihrer Firewall zulassen, um den Datenverkehr von Braze zuzulassen. Weitere Informationen zum Enablement finden Sie in der entsprechenden Dokumentation zu [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 
