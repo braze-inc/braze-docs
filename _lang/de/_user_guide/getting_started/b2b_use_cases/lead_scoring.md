@@ -45,7 +45,7 @@ Alle Benutzer kommen für die Lead-Bewertung in Frage. Sie können also unterneh
 
 ![Schritt 3: Erstellen eines Canvas mit Optionen zur Auswahl von Segmenten und Filtern, um die Entry-Zielgruppe einzugrenzen.][3]{: style="max-width:80%;"}
 
-#### Schritt 3b: 
+#### Schritt 3b: Canvas Wiederzulassung festlegen
 
 Ein Benutzer wird diesen Canvas im Laufe seines Lebenszyklus mit Ihnen viele Male durchlaufen. Stellen Sie also sicher, dass er so schnell wieder einsteigen kann, wie er beim letzten Mal ausgestiegen ist. Dies kann durch die Einstellungen für die erneute Qualifizierung erreicht werden. 
 
@@ -83,7 +83,7 @@ Fügen Sie die folgenden Gruppen zu Ihrem Aktionspfad hinzu:
 - **Gruppe 3:** Alle Ereignisse, die für einer 1-Punkte-Verringerung zählen.
 - **Alle anderen:** Aktions-Pfade ermöglichen es Ihnen, das Fenster zu definieren, in dem gewartet wird, ob ein Nutzer:innen eine Aktion ausführt, bevor er in eine Gruppe "Alle anderen" eingeordnet wird. Für das Lead Scoring ist dies eine Opportunity, um die Punktzahl für „Inaktivität“ zu verringern.
 
-
+![Aktions-Pfad mit Aktionsgruppen für das Hinzufügen von einem Punkt, fünf Punkten und zehn Punkten, das Abziehen von einem Punkt und zehn Punkten und "Alle anderen".][7]
 
 #### Schritt 4c: Jede Gruppe so konfigurieren, dass sie die relevanten Event enthält
 
