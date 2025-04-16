@@ -43,7 +43,7 @@ Wenn Sie in diesem Abschnitt eine E-Mail-Adresse hinzufügen, können Sie diese 
 In diesem Bereich können Sie BCC-Adressen hinzufügen und verwalten, die an ausgehende E-Mail-Nachrichten von Braze angehängt werden können. Wenn Sie eine BCC-Adresse an eine E-Mail-Nachricht anhängen, wird eine identische Kopie der Nachricht, die Ihr Benutzer erhält, an Ihren BCC-Posteingang gesendet. Dies ist ein nützliches Tool, um Kopien von Nachrichten aufzubewahren, die Sie Ihren Benutzern aus Gründen der Compliance oder des Kundensupports geschickt haben. BCC-E-Mails sind in den E-Mail-Berichten und -Analysen nicht enthalten.
 
 {% alert important %}
-
+Wenn Sie eine BCC-Adresse an Ihre Kampagne oder Ihr Canvas anhängen, verdoppeln sich Ihre abrechenbaren E-Mails für die Kampagne oder die Canvas-Komponente, da Braze eine Nachricht an Ihren Nutzer:innen und eine an Ihre BCC-Adresse sendet.
 {% endalert %}
 
 ![BCC-Adresse auf dem Tab „E-Mail-Einstellungen“.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -125,7 +125,7 @@ Wenn die Kopfzeile in der Rohfassung der E-Mail enthalten ist, aber nicht angeze
 
 Wenn das Feature zum Abmelden von E-Mails aktiviert ist, gilt diese Einstellung für den gesamten Workspace, nicht für die Unternehmensebene. Sie wird zu Kampagnen und Canvases hinzugefügt, die so eingerichtet sind, dass sie an abonnierte oder eingeloggte Benutzer gesendet werden, oder an eingeloggte Benutzer im Schritt **Zielgruppen** der Kampagnen- und Canvas-Ersteller.
 
- 
+Wenn Sie den "Workspace Standard" verwenden, fügt Braze die Kopfzeile zum Abmelden mit einem Klick nicht für Kampagnen hinzu, die als transaktional gelten und so konfiguriert sind, dass sie an alle Nutzer:innen gesendet werden, auch an nicht abgemeldete Nutzer:innen. Um dies außer Kraft zu setzen und die Kopfzeile zum Abmelden mit einem Klick hinzuzufügen, wenn Sie an abgemeldete Nutzer:innen senden, können Sie in den Einstellungen für die Ein-Klick-Liste zum Abmelden auf Nachrichtenebene die Option **Global abmelden aus allen Nachrichten** auswählen.
 
 ### Standard-Listenabmelde-Header
 
