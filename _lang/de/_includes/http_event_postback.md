@@ -15,8 +15,6 @@ In Ihrem Braze-Dashboard:
 2. Geben Sie unter **Transaktionsereignis-Status-Postback** die URL ein, an die Braze Status-Updates für Ihre Transaktions-E-Mails senden soll.
 3. Testen Sie das Postback.
 
-{% Warnhinweis %} Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich diese Seite unter **Einstellungen verwalten** > E-Mail-Einstellungen **.**{% endalert %}
-
 \![\]({% image\_buster /assets/img/transactional\_webhook\_url.png %})
 
 ### Körper der Rückmeldung
