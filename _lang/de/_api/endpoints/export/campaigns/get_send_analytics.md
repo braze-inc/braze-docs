@@ -1,22 +1,22 @@
 ---
-nav_title: "GET: Exportieren Senden von Analysen"
-article_title: "GET: Exportieren Senden von Analysen"
+nav_title: "GET: Senden von Analytics exportieren"
+article_title: "GET: Senden von Analytics exportieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Export send analytics."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export sendet Analytics Braze."
 
 ---
 {% api %}
-# Exportieren Sie die Sendeanalyse
+# Exportieren Sie Analytics
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine tägliche Reihe verschiedener Statistiken für eine verfolgte `send_id` für API-Kampagnen abzurufen.
+> Verwenden Sie diesen Endpunkt, um eine tägliche Reihe verschiedener Statistiken für eine getrackte `send_id` für API Kampagnen abzurufen.
 
-Braze speichert die Sendeanalyse für 14 Tage nach dem Versand. Kampagnenkonversionen werden der letzten `send_id` zugeschrieben, die ein bestimmter Nutzer von der Kampagne erhalten hat.
+Braze speichert die gesendeten Analytics für 14 Tage nach dem Versand. Konversionen von Kampagnen werden der letzten `send_id` zugeschrieben, die ein bestimmter Nutzer:innen von der Kampagne erhalten hat.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
@@ -24,18 +24,18 @@ Braze speichert die Sendeanalyse für 14 Tage nach dem Versand. Kampagnenkonvers
 
 Dieser Endpunkt ist nur für API-Kampagnen gedacht. Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `sends.data_series`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | Erforderlich | String | Siehe [API-Kennung der Kampagne]({{site.baseurl}}/api/identifier_types/). |
-| `send_id` | Erforderlich | String | Siehe [API-Kennung senden]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Erforderlich | String | Siehe [API-Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/). |
+| `send_id` | Erforderlich | String | Siehe [API Bezeichner senden]({{site.baseurl}}/api/identifier_types/). |
 | `length` | Erforderlich | Integer | Maximale Anzahl der Tage vor `ending_at`, die in der zurückgegebenen Serie enthalten sein sollen. Muss zwischen 1 und 100 (einschließlich) liegen. |
-| `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) Zeichenfolge) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
+| `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -99,7 +99,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
