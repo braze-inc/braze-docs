@@ -136,7 +136,7 @@ Wenn Sie verschiedene Arbeitsbereiche mit demselben Snowflake-Konto verbinden, m
 
 Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie möglicherweise die folgenden IP-Adressen in Ihrer Snowflake-Netzwerkrichtlinie zulassen. Weitere Informationen zum Enablement finden Sie in der entsprechenden Snowflake Dokumentation zum [Ändern einer Netzwerkrichtlinie](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Redshift %}
@@ -199,7 +199,7 @@ Einige wichtige Dinge zu wissen:
  
 Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab BigQuery %}
@@ -271,7 +271,7 @@ Wenn Sie das Dienstkonto erstellt und die Berechtigungen erteilt haben, erzeugen
 
 Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff auf Ihre Big Query-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Databricks %}
@@ -344,7 +344,7 @@ Bewahren Sie das Token an einem sicheren Ort auf, bis Sie es im Braze-Dashboard 
 
 Wenn Sie Netzwerkrichtlinien aufgestellt haben, müssen Sie Braze Netzwerkzugriff auf Ihre Databricks-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Microsoft Fabric %}
@@ -418,7 +418,7 @@ Sie benötigen den SQL-Endpunkt für Ihr Warehouse, damit Braze eine Verbindung 
 
 Je nach Konfiguration Ihres Microsoft Fabric-Kontos müssen Sie möglicherweise die folgenden IP-Adressen in Ihrer Firewall zulassen, um den Datenverkehr von Braze zuzulassen. Weitere Informationen zum Enablement finden Sie in der entsprechenden Dokumentation zu [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
-
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 
