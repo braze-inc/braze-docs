@@ -1,25 +1,27 @@
 ---
-nav_title: "POST: Benutzer löschen"
-article_title: "POST: Benutzer löschen"
+nav_title: "POST: Nutzer:innen löschen"
+article_title: "POST: Nutzer:innen löschen"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten zum Braze-Endpunkt Benutzer löschen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen löschen."
 
 ---
 {% api %}
-# Benutzer löschen
+# Nutzer:innen löschen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/delete
+/benutzer:innen/löschen
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein beliebiges Benutzerprofil zu löschen, indem Sie einen bekannten Benutzeridentifikator angeben.
+> Verwenden Sie diesen Endpunkt, um ein beliebiges Nutzerprofil zu löschen, indem Sie einen bekannten Bezeichner für Nutzer:in angeben.
 
-Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, oder `email_addresses` können in einer einzigen Anfrage enthalten sein. Nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids` oder `email_addresses` kann in einer einzigen Anfrage enthalten sein.
+Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, oder `phone_numbers` können in einer einzigen Anfrage enthalten sein. In einer Anfrage kann nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` enthalten sein. 
+
+Wenn Sie einen Anwendungsfall haben, der nicht mit der Massenlöschung von Nutzer:innen über die API gelöst werden kann, wenden Sie sich bitte an das [Braze Support Team]({{site.baseurl}}/user_guide/administrative/access_braze/support/), um Hilfe zu erhalten.
 
 {% alert warning %}
-Das Löschen von Benutzerprofilen kann nicht rückgängig gemacht werden. Es entfernt dauerhaft Benutzer, die Unstimmigkeiten in Ihren Daten verursachen können. Erfahren Sie mehr darüber, was passiert, wenn Sie [ein Benutzerprofil über die API löschen]({{site.baseurl}}/help/help_articles/api/delete_user/), in unserer Hilfe-Dokumentation.
+Das Löschen von Benutzerprofilen kann nicht rückgängig gemacht werden. Es entfernt dauerhaft Benutzer, die Unstimmigkeiten in Ihren Daten verursachen könnten. Erfahren Sie mehr darüber, was passiert, wenn Sie [ein Nutzerprofil über die API löschen]({{site.baseurl}}/help/help_articles/api/delete_user/), in unserer Dokumentation Hilfe.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
@@ -28,11 +30,11 @@ Das Löschen von Benutzerprofilen kann nicht rückgängig gemacht werden. Es ent
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.delete`.
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='users delete' %}
+{% multi_lang_include rate_limits.md endpunkt='nutzer:innen löschen' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -41,32 +43,34 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External IDs for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
-### Parameter anfordern
+### Parameter der Anfrage
 
-| Parameter         | Erforderlich | Daten Typ                  | Beschreibung                                                                                      |
+| Parameter         | Erforderlich | Datentyp                  | Beschreibung                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | Optional | Array von Zeichenketten           | Externe Identifikatoren für die zu löschenden Benutzer.                                                    |
-| `user_aliases`    | Optional | Array mit Benutzer-Alias-Objekt | [Benutzer-Aliase]({{site.baseurl}}/api/objects_filters/user_alias_object/) für die zu löschenden Benutzer. |
-| `braze_ids`       | Optional | Array von Zeichenketten           | Braze-Benutzerkennungen für die zu löschenden Benutzer.                                                  |
-| `email_addresses` | Optional | Array von Zeichenketten           | Benutzer-E-Mails, die die Benutzer löschen können. Weitere Informationen finden Sie unter [Löschen von Benutzern per E-Mail](#deleting-users-by-email).                                                             |
+| `external_ids`    | Optional | String-Array           | Zu löschende externe Bezeichner.                                                    |
+| `user_aliases`    | Optional | Array des Nutzer:in-Alias-Objekts | Zu löschende [Nutzer:innen]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `braze_ids`       | Optional | String-Array           | Zu löschende Braze Nutzer:innen-Bezeichner.                                                  |
+| `email_addresses` | Optional | String-Array           | Zu löschende Nutzer:innen-E-Mails. Weitere Informationen finden Sie unter [Löschen von Nutzer:innen per E-Mail](#deleting-users-by-email).                                                             |
+| `phone_numbers` | Optional | String-Array | Zu löschende Nutzer:innen-Telefonnummern. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Löschen von Benutzern per E-Mail
+### Löschen von Nutzer:innen per E-Mail
 
-Wenn ein `email` als Bezeichner angegeben wird, ist ein zusätzlicher `prioritization` Wert im Bezeichner erforderlich. Die `prioritization` ist ein geordnetes Array und sollte angeben, welcher Benutzer gelöscht werden soll, wenn mehrere Benutzer gefunden werden. Das bedeutet, dass das Löschen von Benutzern nicht erfolgt, wenn mehr als ein Benutzer einer Priorisierung entspricht.
+Wenn ein `email` als Bezeichner angegeben wird, ist ein zusätzlicher `prioritization` Wert im Bezeichner erforderlich. Die `prioritization` ist ein geordnetes Array und sollte angeben, welcher Nutzer:in gelöscht werden soll, wenn mehrere Nutzer:innen gefunden werden. Das bedeutet, dass Nutzer:innen nicht gelöscht werden, wenn mehr als ein Nutzer einer Priorisierung entspricht.
 
-Die zulässigen Werte für das Array sind: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` bezieht sich auf die Priorisierung des zuletzt aktualisierten Benutzers.
+Die zulässigen Werte für das Array sind: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` bezieht sich auf die Priorisierung des zuletzt aktualisierten Nutzer:innen.
 
 Es kann jeweils nur eine der folgenden Optionen im Prioritätsfeld vorhanden sein:
 
-- `identified` bezieht sich auf die Priorisierung eines Benutzers mit einer `external_id`
-- `unidentified` bezieht sich auf die Priorisierung eines Benutzers ohne `external_id`
+- `identified` bezieht sich auf die Priorisierung eines Nutzer:innen mit einem `external_id`
+- `unidentified` bezieht sich auf die Priorisierung eines Nutzer:in ohne ein `external_id`
 
 ## Beispiel Anfrage
 
