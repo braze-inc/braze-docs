@@ -118,13 +118,13 @@ Dies wird verwendet, um das Einstellungscenter zu rendern, wenn das alte Liquid 
 
 Wenn Sie in einer neuen Nachricht erneut auf {%raw%}`${preference_center_url}`{%endraw%} verweisen, wird erneut ein Einstellungscenter mit dem Namen "PreferenceCenterBrazeDefault" erstellt.
 
-### 
+### Unterstützen die Präferenzzentren mehrere Sprachen?
 
-  
+Nein. Sie können jedoch Liquid nutzen, wenn Sie das HTML für angepasste Opt-in und Opt-out Seiten schreiben. Wenn Sie dynamische Links verwenden, um Abmeldungen zu verwalten, ist dies ein einzelner Link. 
 
+Wenn Sie z.B. die Abmelderate für spanischsprachige Nutzer:innen tracken möchten, müssen Sie entweder separate Kampagnen verwenden oder Analytics rund um Currents nutzen (z.B. nachsehen, wann sich ein Nutzer:innen abmeldet und die bevorzugte Sprache dieses Nutzers überprüfen).
 
-
-
+Ein weiteres Beispiel: Um die Abmelderaten spanischsprachiger Nutzer zu tracken, könnten Sie der Abmelde-URL einen Query-Parameter-String wie `?Spanish=true` hinzufügen, wenn die Sprache der Nutzer:innen Deutsch ist, und einen regulären Abmeldelink verwenden, wenn dies nicht der Fall ist:
 
 {% raw %}
 ```liquid
@@ -135,8 +135,8 @@ ${unsubscribe_url}
 ```
 {% endraw %}
 
+Dann könnten Sie über Currents herausfinden, welche Nutzer:innen Spanisch sprechen und wie viele Klicks auf den Abmeldelink erfolgten.
 
+### Sind sowohl Abmelde-Links als auch E-Mail-Präferenzzentren für den Versand erforderlich?
 
-### 
-
-
+Nein. Wenn Sie beim Verfassen einer E-Mail-Kampagne die Nachricht "Ihr E-Mail-Text enthält keinen Abmeldelink" sehen, wird diese Warnung erwartet, wenn sich Ihr Abmeldelink in einem Content-Block befindet.
