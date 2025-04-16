@@ -10,13 +10,13 @@ description: "Auf dieser Landing Page finden Sie alles rund um Connected Content
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: ""
+- name: Aufruf einer Connected-Content-API
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Lokal verknüpfte Inhaltsvariablen
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
-- name: ""
+- name: Caching von Connected-Content-Antworten
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/edit-05.svg
 - name: Abbrechen von Connected-Content
@@ -31,7 +31,7 @@ guide_featured_list:
 - name: Fehlerbehebung bei Anfragen für verbundene Inhalte 
   link: /docs/help/help_articles/api/webhook_connected_content_errors/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: ""
+- name: Öffentliche APIs verwenden
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
   image: /assets/img/braze_icons/target-05.svg
 ---
