@@ -20,17 +20,17 @@ Nehmen wir an, Sie haben eine mobile App, die Push-Benachrichtigungen an Nutzer:
 
 ## Liste der Datenzentren
 
-### 
+### Australien
 
+{% multi_lang_include data_centers.md datacenters='AU' %}
 
+### Europäische Union
 
-### 
+{% multi_lang_include data_centers.md datacenters='EU' %}
 
+### Vereinigte Staaten
 
-
-### 
-
-
+{% multi_lang_include data_centers.md datacenters='US' %}
 
 ## Registrierung für regionalspezifische Datenzentren
 
