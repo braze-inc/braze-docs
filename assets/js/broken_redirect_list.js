@@ -2618,4 +2618,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/support'] = '/docs/par
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation'] = '/docs/partners/ecommerce';
 validurls['/docs/partners/canvas_steps'] = '/docs/partners/canvas_audience_sync';
 
+validurls['/docs/_partners/data_and_analytics/wrapper_sdks/'] = '/docs/developer_guide/sdk_integration/';
+
 // validurls['OLD'] = 'NEW';
