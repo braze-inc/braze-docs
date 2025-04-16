@@ -1,27 +1,27 @@
 ---
-nav_title: "POST: Status der Abonnementgruppe eines Benutzers aktualisieren"
-article_title: "POST: Status der Abonnementgruppe eines Benutzers aktualisieren"
+nav_title: "POST: Update des Abo-Gruppenstatus eines Nutzers"
+article_title: "POST: Update des Abo-Gruppenstatus eines Nutzers"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Update user's subscription group status."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Update Nutzer:innen Abo-Gruppenstatus Braze."
 ---
 {% api %}
-# Status der Abonnementgruppe des Benutzers aktualisieren
+# Update des Abo-Gruppenstatus des Nutzers:in
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /subscription/status/set
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um den Abonnementstatus von bis zu 50 Benutzern auf dem Braze-Dashboard im Stapel zu aktualisieren. 
+> Verwenden Sie diesen Endpunkt, um das Update des Abo-Status von bis zu 50 Nutzer:innen auf dem Braze-Dashboard im Stapelverfahren durchzuführen. 
 
-Sie können auf die `subscription_group_id` einer Abonnementgruppe zugreifen, indem Sie zur Seite **Abonnementgruppe** navigieren.
+Sie können auf die `subscription_group_id` einer Abo-Gruppe zugreifen, indem Sie zur Seite **Abo-Gruppe** navigieren.
 
-Wenn Sie Beispiele sehen oder diesen Endpunkt für **E-Mail-Abonnementgruppen** testen möchten:
+Wenn Sie Beispiele sehen oder diesen Endpunkt für **E-Mail Abo-Gruppen** testen möchten:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-Wenn Sie Beispiele sehen oder diesen Endpunkt für **SMS-Abonnementgruppen** testen möchten:
+Wenn Sie Beispiele sehen oder diesen Endpunkt für **SMS Abo-Gruppen** testen möchten:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -29,11 +29,11 @@ Wenn Sie Beispiele sehen oder diesen Endpunkt für **SMS-Abonnementgruppen** tes
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `subscription.status.set`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 {% tabs %}
 {% tab SMS %}
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    // SMS subscription group - one of external_id or phone is required
  }
 ```
-\* SMS-Abonnementgruppen: Nur `external_id` oder `phone` werden akzeptiert.
+\* SMS Abo-Gruppen: Nur `external_id` oder `phone` werden akzeptiert.
 
 {% endtab %}
 {% tab E-Mail %}
@@ -70,28 +70,28 @@ Authorization: Bearer YOUR-REST-API-KEY
    // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
-\* E-Mail-Abonnementgruppen: Entweder `email` oder `external_id` ist erforderlich.
+\* Abo-Gruppen per E-Mail: Entweder `email` oder `external_id` ist erforderlich.
 {% endtab %}
 {% endtabs %}
 
-Diese Eigenschaft sollte nicht für die Aktualisierung der Profilinformationen eines Benutzers verwendet werden. Verwenden Sie stattdessen die Eigenschaft [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+Diese Eigenschaft sollte nicht zum Update der Profil-Informationen eines Nutzers:innen verwendet werden. Verwenden Sie stattdessen die Eigenschaft [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 {% alert tip %}
-Bei der Erstellung neuer Benutzer über den Endpunkt [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) können Sie Abonnementgruppen innerhalb des Objekts für die Benutzerattribute festlegen. So können Sie in einem einzigen API-Aufruf einen Benutzer erstellen und den Status der Abonnementgruppe festlegen.
+Wenn Sie neue Nutzer:innen über den Endpunkt [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) erstellen, können Sie Abo-Gruppen innerhalb des Objekts für die Nutzer-Attribute festlegen. So können Sie in einem einzigen API-Aufruf einen Nutzer erstellen und den Status der Abo-Gruppe festlegen.
 {% endalert %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Erforderlich | String | Die `id` Ihrer Abonnementgruppe. |
-| `subscription_state` | Erforderlich | String | Verfügbare Werte sind `unsubscribed` (nicht in der Abonnementgruppe) oder `subscribed` (in der Abonnementgruppe). |
-| `external_id` | Erforderlich* | Array von Zeichenketten | Die `external_id` des Nutzers oder der Nutzer, kann bis zu 50 `id`s umfassen. |
-| `email` | Erforderlich* | String oder Array von Strings | Die E-Mail-Adresse des Benutzers, kann als Array von Strings übergeben werden. Sie müssen mindestens eine E-Mail-Adresse angeben (maximal 50). <br><br>Wenn mehrere Benutzer (`external_id`) im selben Arbeitsbereich dieselbe E-Mail-Adresse haben, werden alle Benutzer, die dieselbe E-Mail-Adresse haben, mit den Änderungen der Abonnementgruppe aktualisiert. |
-| `phone` | Erforderlich* | Zeichenkette im [E.164](https://en.wikipedia.org/wiki/E.164) Format | Die Telefonnummer des Benutzers, kann als Array von Strings übergeben werden. Muss mindestens eine Telefonnummer enthalten (maximal 50). |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Erforderlich | String | Die `id` Ihrer Abo-Gruppe. |
+| `subscription_state` | Erforderlich | String | Verfügbare Werte sind `unsubscribed` (nicht in Abo-Gruppe) oder `subscribed` (in Abo-Gruppe). |
+| `external_id` | Erforderlich* | String-Array | Die `external_id` des Nutzers oder der Nutzer:innen kann bis zu 50 `id`s umfassen. |
+| `email` | Erforderlich* | String oder String-Array | Die E-Mail Adresse des Nutzers:innen, kann als String-Array übergeben werden. Sie müssen mindestens eine E-Mail Adresse angeben (maximal 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace dieselbe E-Mail Adresse haben, werden alle Nutzer:innen mit den Änderungen der Abo-Gruppe aktualisiert. |
+| `phone` | Erforderlich* | String in [E.164](https://en.wikipedia.org/wiki/E.164) Format | Die Telefonnummer des Nutzers:innen, kann als String-Array übergeben werden. Muss mindestens eine Telefonnummer enthalten (bis zu 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace dieselbe Telefonnummer haben, werden alle Nutzer:innen mit denselben Änderungen der Abo-Gruppe aktualisiert. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfragen
+## Beispiel-Anfragen
 
 ### E-Mail
 
@@ -125,7 +125,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 
 ## Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `201` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `201` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
