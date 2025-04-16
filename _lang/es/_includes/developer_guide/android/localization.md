@@ -1,0 +1,196 @@
+# Localización
+
+> La localización es compatible con el SDK para Android de Braze. Además del inglés, Braze admite varios idiomas para los mensajes de nuestro SDK integrado. Pertenecen a los mensajes predeterminados que se muestran en las aplicaciones integradas con Braze, como los lugares de la aplicación en los que hay problemas de conectividad (por ejemplo, "No se puede establecer conexión de red. Vuelve a intentarlo más tarde.") 
+
+Si el idioma del teléfono está configurado en uno de los idiomas admitidos, cualquiera de las cadenas predeterminadas de Braze desencadenadas dentro de una aplicación integrada aparecerá automáticamente en ese idioma.
+
+Si buscas una lista completa de los idiomas admitidos que puedes atribuir a tus usuarios en sus perfiles, consulta nuestra [lista de idiomas de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/language_codes/).
+
+## Lenguas admitidas
+
+- Afrikáans
+- Aghem
+- Akan
+- Albanés 
+- Amárico
+- Árabe
+- Armenio
+- Asamés
+- Asu
+- Aimara
+- Azerbaiyano
+- Bafia
+- Bambara
+- Basaa
+- Vasco
+- Bielorruso
+- Bemba
+- Bena
+- Bengalí
+- Bodo
+- Bosnio
+- Bretón
+- Búlgaro
+- Birmano
+- Camboyano
+- Catalán
+- atlas central tamazight
+- Cheroqui
+- Kiga
+- Chino
+- Congo swahili
+- Córnico
+- Criollo
+- Croata
+- Checo
+- Danés
+- Taita
+- Douala
+- Holandés
+- Dzongkha
+- Ekugusii
+- Inglés
+- Esperanto
+- Estonio
+- Ewé
+- Ewondo
+- Feroés
+- Farsi
+- Filipino
+- Finlandés
+- Francés
+- Gallego
+- Ganda
+- Georgiano
+- Alemán
+- Suizo alemán
+- Griego
+- Groenlandés
+- Guaraní
+- Guyaratí
+- Hausa
+- Hawaiano
+- Hebreo
+- Hindi
+- Húngaro
+- Islandés
+- Igbo
+- Indonesio
+- Inuit
+- Irlandés
+- Italiano
+- Japonés
+- Javanés
+- Jola fonyi
+- Cabilio
+- Kalenjin
+- Kamba
+- Kannada
+- Cachemir
+- Kazajo
+- Embu
+- Kikuyu
+- Kinyarwanda
+- Kirguís
+- Konkani
+- Coreano
+- Koyraboro senni
+- Kurdo
+- Laosiano
+- Latín
+- Letón
+- Lingala
+- Lituano
+- Luba katanga
+- Luo
+- Luxemburgués
+- Luyia
+- Macedonio
+- Machame
+- Makhuwa meetto
+- Makonde
+- Malgache
+- Malayo
+- Malabar
+- Maltés
+- Manés
+- Marati
+- Masai
+- Meru
+- Moldavo
+- Mongol
+- Criollo mauriciano
+- Mundang
+- Nama
+- Nepalí
+- Norte ndebele
+- Noruego
+- Nuer
+- Nyankole
+- Nynorsk
+- Oriya
+- Oromo
+- Pastún
+- Fula
+- Polaco
+- Portugués
+- Punyabí
+- Quechua
+- Raeto romántico
+- Rumano
+- Rombo
+- Kirundi
+- Ruso
+- Rwa
+- Samburu
+- Sami
+- Sango
+- Sánscrito
+- Escocés
+- Sena
+- Serbio
+- Shambala
+- Shona
+- Sichuan yi
+- Sindhi
+- Cingalés
+- Eslovaco
+- Esloveno
+- Soga
+- Somali
+- Songhay
+- Español
+- Sondanés
+- Suajili
+- Sueco
+- Tashelhit
+- Tagalo
+- Tayiko
+- Tamil
+- Tasawaq
+- Tatar
+- Telugu
+- Teso
+- Tailandés
+- Tibetano
+- Tigriña
+- Tongano
+- Turco
+- Turkmeno
+- Uigur
+- Ucraniano
+- Urdu
+- Uzbeko
+- Vai
+- Vietnamita
+- Vunjo
+- Galés
+- Xhosa
+- Yangben
+- Ídish
+- Yoruba
+- Zarma
+- Zulú
+
+Para más información, consulta nuestro artículo sobre [localización en Android](http://developer.android.com/guide/topics/resources/localization.html).
+
