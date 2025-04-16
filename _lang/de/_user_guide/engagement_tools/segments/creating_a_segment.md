@@ -124,9 +124,9 @@ Braze verfügt über Testfilter, um bestimmte Nutzer:innen nach Nutzer-ID oder E
 
 Wählen Sie **Speichern**. Jetzt können Sie Nachrichten an Ihre Benutzer senden!
 
-## 
+## Messung der Größe eines Segments
 
-
+Wenn Sie wissen möchten, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können, lesen Sie den Abschnitt [Messung der Segmentierung]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Segmente archivieren
 
@@ -163,11 +163,12 @@ Sie können festlegen, dass an jede:n Nutzer:in nur eine Push-Benachrichtigung g
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-
-
-
-
-
-
-
-
+[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
+[6]: {% image_buster /assets/img_archive/user_lookup.png %}
+[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
+[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
+[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
+[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
+[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
+[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
+[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}
