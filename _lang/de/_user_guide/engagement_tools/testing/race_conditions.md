@@ -43,7 +43,7 @@ Nachdem ein neuer Nutzer:innen erstellt wurde, können Sie eine Verzögerung hin
 
 Nachdem sich ein Nutzer:innen für Ihre App registriert hat, können Sie zum Beispiel nach 24 Stunden ein Aktionsangebot versenden. Wenn Sie einen Nutzer:innen anlegen oder ein angepasstes Attribut protokollieren, können Sie auch eine einminütige Verzögerung einfügen, bevor Sie mit Ihrem Prozess fortfahren, um diese Race-Condition zu vermeiden.
 
- 
+Sie können diese Verzögerung auch im [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration) für das spezifische angepasste Event hinzufügen, das einen neuen Nutzer:innen zum Betreten eines Canvas triggert. 
 
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
