@@ -45,7 +45,7 @@ Alle Benutzer kommen für die Lead-Bewertung in Frage. Sie können also unterneh
 
 ![Schritt 3: Erstellen eines Canvas mit Optionen zur Auswahl von Segmenten und Filtern, um die Entry-Zielgruppe einzugrenzen.][3]{: style="max-width:80%;"}
 
-#### Schritt 3b: Erneute Canvans-Qualifizierung festlegen
+#### Schritt 3b: Canvas Wiederzulassung festlegen
 
 Ein Benutzer wird diesen Canvas im Laufe seines Lebenszyklus mit Ihnen viele Male durchlaufen. Stellen Sie also sicher, dass er so schnell wieder einsteigen kann, wie er beim letzten Mal ausgestiegen ist. Dies kann durch die Einstellungen für die erneute Qualifizierung erreicht werden. 
 
@@ -83,7 +83,7 @@ Fügen Sie die folgenden Gruppen zu Ihrem Aktionspfad hinzu:
 - **Gruppe 3:** Alle Ereignisse, die für einer 1-Punkte-Verringerung zählen.
 - **Alle anderen:** Aktions-Pfade ermöglichen es Ihnen, das Fenster zu definieren, in dem gewartet wird, ob ein Nutzer:innen eine Aktion ausführt, bevor er in eine Gruppe "Alle anderen" eingeordnet wird. Für das Lead Scoring ist dies eine Opportunity, um die Punktzahl für „Inaktivität“ zu verringern.
 
-![Aktionspfad mit Aktionsgruppen für das Hinzufügen von einem Punkt, fünf Punkten und zehn Punkten, das Abziehen von einem Punkt und zehn Punkten und „Alle anderen“.][7]
+![Aktions-Pfad mit Aktionsgruppen für das Hinzufügen von einem Punkt, fünf Punkten und zehn Punkten, das Abziehen von einem Punkt und zehn Punkten und "Alle anderen".][7]
 
 #### Schritt 4c: Jede Gruppe so konfigurieren, dass sie die relevanten Event enthält
 
@@ -182,7 +182,7 @@ Um den Lead-Datensatz in Salesforce mit dem Lead-Status von Braze zu aktualisier
 
 | Header | Content |
 | --- | --- |
-| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_aa5e9c03-57ec-4724-b961-0144923f905b/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_16a016e6-3018-4ee3-b1bf-881a4a46c0a3/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

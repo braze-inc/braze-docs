@@ -13,10 +13,6 @@ tool:
 
 > Das Dashboard für die Kanal-Performance zeigt die aggregierten Metriken für einen gesamten Kanal, sowohl für Kampagnen als auch für Canvase. Diese Dashboards sind derzeit für E-Mail und SMS verfügbar.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie die Dashboards für die Channel Performance unter **Übersicht**.
-{% endalert %}
-
 ![Das Dashboard für die Performance von E-Mails, das das Engagement der letzten dreißig Tage für den E-Mail Kanal anzeigt.][1]
 
 Sie können die folgenden Dashboards einsehen:
@@ -41,7 +37,7 @@ Jede Kachel zeigt zuerst die Metrik für die Rate an, gefolgt von der Zählung (
 | Sendungen | Anzahl | Gesamtzahl der Sendungen für jeden Tag im Datumsbereich |
 | Zustellrate | Rate | (Gesamtzahl der Zustellungen an jedem Tag des Datumsbereichs) / (Gesamtzahl der Sendungen an jedem Tag des Datumsbereichs) |
 | Absprungrate | Rate | (Gesamtzahl der Bounces an jedem Tag im Datumsbereich) / (Gesamtzahl der Sendungen an jedem Tag im Datumsbereich) |
-| Abmeldungsrate | Rate | (Gesamtzahl der eindeutigen Abmeldungen für jeden Tag im Datumsbereich) / (Gesamtzahl der Zustellungen für einen Datumsbereich)<br><br>Dies verwendet eindeutige Abmeldungen, die auch in Campaign Analytics, Übersicht und Berichts-Builder verwendet werden. |
+| Abmeldungsrate | Rate | (Gesamtzahl der eindeutigen Abmeldungen für jeden Tag im Datumsbereich) / (Gesamtzahl der Zustellungen für einen Datumsbereich)<br><br>Dies verwendet eindeutige Abmeldungen, die auch in Campaign Analytics, Übersicht und Berichts-Builder verwendet werden. Diese Abmeldungen werden über alle Quellen hinweg protokolliert (z. B. SDK, REST API, CSV-Importe, E-Mails und Abmeldungen von Listen). Die Abmelderaten in Campaign und Canvas Analytics sind Abmeldungen, die auf einen Klick auf eine zugestellte E-Mail zurückzuführen sind.  |
 | Eindeutige Öffnungsrate | Rate | (Gesamtzahl der eindeutigen Öffnungen an jedem Tag im Datumsbereich) / (Gesamtzahl der Zustellungen für einen Datumsbereich) |
 | Andere Öffnungsrate | Rate | (Gesamtzahl der sonstigen Öffnungen an jedem Tag im Datumsbereich) / (Gesamtzahl der Zustellungen im Datumsbereich)<br><br>Andere Öffnungen umfassen E-Mails, die nicht als maschinell geöffnet identifiziert wurden, z.B. wenn ein Nutzer:innen eine E-Mail öffnet. Diese Metrik ist nicht eindeutig und ist eine Untermetrik der gesamten Öffnungen.  |
 | Eindeutige Klickrate | Rate | (Gesamtzahl der eindeutigen Klicks an jedem Tag im Datumsbereich) / (Gesamtzahl der Zustellungen für einen Datumsbereich) |
@@ -81,7 +77,7 @@ Der Bericht **Engagement nach Postfachanbieter** zeigt die wichtigsten Postfacha
 
 ### Engagement-Zeitpunkt
 
-Der Bericht **"Zeitpunkt des Engagements** " zeigt Daten darüber an, wann Nutzer:innen auf Ihre E-Mails zugreifen. Dies kann Ihnen helfen, Fragen zu beantworten, z. B. an welchem Wochentag oder zu welcher Uhrzeit das Engagement Ihrer Kund:in am höchsten ist. Mit diesen Insights können Sie mit dem besten Tag oder der besten Uhrzeit für den Versand Ihrer Nachrichten experimentieren, um ein höheres Engagement zu erzielen. Beachten Sie, dass sich diese Zeiten nach der Zeitzone Ihres Workspace richten.
+Der Bericht **"Zeitpunkt des Engagements** " zeigt Daten darüber an, wann Nutzer:innen auf Ihre E-Mails zugreifen. Dies kann Ihnen helfen, Fragen zu beantworten, z. B. an welchem Wochentag oder zu welcher Uhrzeit das Engagement Ihrer Kund:in am höchsten ist. Mit diesen Insights können Sie mit dem besten Tag oder der besten Uhrzeit für den Versand Ihrer Nachrichten experimentieren, um ein höheres Engagement zu erzielen. Beachten Sie, dass sich diese Zeiten nach der Zeitzone Ihres Unternehmens richten.
 
 Der Engagement-Bericht für **den Wochentag** schlüsselt die Öffnungen oder Klicks nach Wochentag auf. 
 

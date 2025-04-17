@@ -6,7 +6,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Katalogfelder erstellen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogfelder erstellen in Braze."
 
 ---
 {% api %}
@@ -16,28 +16,25 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Katalogf
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um mehrere Felder in Ihrem Katalog zu erstellen.
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an diesem frühen Zugang interessiert sind.
-{% endalert %}
 
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.create_fields`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog fields' %}
 
 ## Pfad-Parameter
 
-| Parameter      | Erforderlich | Daten Typ | Beschreibung          |
+| Parameter      | Erforderlich | Datentyp | Beschreibung          |
 | -------------- | -------- | --------- | -------------------- |
 | `catalog_name` | Erforderlich | String    | Name des Katalogs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung                                                                                                  |
+| Parameter | Erforderlich | Datentyp | Beschreibung                                                                                                  |
 | --------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------ |
 | `fields`  | Erforderlich | Array     | Ein Array, das Feldobjekte enthält. Die Feldobjekte sollten den Namen und den Typ der neuen Felder enthalten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -72,11 +69,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Antwort
 
-Es gibt drei Statuscode-Antworten für diesen Endpunkt: `202`, `400`, und `404`.
+Es gibt drei Status Code Antworten für diesen Endpunkt: `202`, `400`, und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -86,7 +83,7 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {

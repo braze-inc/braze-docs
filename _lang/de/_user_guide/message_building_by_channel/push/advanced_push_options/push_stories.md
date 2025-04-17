@@ -33,7 +33,11 @@ Die folgenden SDK-Versionen sind für den Empfang von Push Stories erforderlich:
 
 ![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-Um Push Stories zu verwenden, erstellen Sie eine [Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) und wählen Sie **Push Stories** als **Benachrichtigungstyp**.
+Um Push-Storys zu verwenden, gehen Sie wie folgt vor:
+
+1. Erstellen Sie eine [Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/).
+2. Wählen Sie für Ihren **Benachrichtigungstyp** **Push-Stories** aus.
+3. Wählen Sie **iOS** oder **Android**. Beachten Sie, dass, wenn Sie beides für eine Push-Nachricht auswählen, die Option zum Erstellen einer Push-Story nicht angezeigt wird. 
 
 ### Push Story Komponist
 

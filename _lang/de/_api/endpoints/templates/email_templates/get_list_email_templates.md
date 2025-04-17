@@ -1,38 +1,38 @@
 ---
-nav_title: "GET: Verfügbare E-Mail-Vorlagen auflisten"
-article_title: "GET: Verfügbare E-Mail-Vorlagen auflisten"
+nav_title: "GET: Liste verfügbarer E-Mail Templates"
+article_title: "GET: Liste verfügbarer E-Mail Templates"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zu den in der Liste verfügbaren E-Mail-Vorlagen des Braze-Endpunkts."
+description: "Dieser Artikel beschreibt die Liste der verfügbaren E-Mail Templates für den Braze Endpunkt."
 
 ---
 {% api %}
-# Verfügbare E-Mail-Vorlagen auflisten
+# Liste der verfügbaren E-Mail Templates
 {% apimethod get %}
 /templates/email/list
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Liste der verfügbaren E-Mail-Vorlagen in Ihrem Braze-Konto zu erhalten.
+> Verwenden Sie diesen Endpunkt, um eine Liste der verfügbaren E-Mail-Templates in Ihrem Braze-Konto abzurufen.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `templates.email.list`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `modified_after`  | Optional | Zeichenkette im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Vorlagen ab, die zum oder nach dem angegebenen Zeitpunkt aktualisiert wurden. |
-| `modified_before`  |  Optional | Zeichenkette im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Rufen Sie nur Vorlagen ab, die zum oder vor dem angegebenen Zeitpunkt aktualisiert wurden. |
-| `limit` | Optional | Positive Zahl | Maximale Anzahl der abzurufenden Vorlagen. Standardmäßig 100, wenn nicht angegeben, mit einem maximal zulässigen Wert von 1000. |
-| `offset`  |  Optional | Positive Zahl | Anzahl der Vorlagen, die übersprungen werden sollen, bevor der Rest der Vorlagen, die den Suchkriterien entsprechen, zurückgegeben wird. |
+| `modified_after`  | Optional | String im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Templates ab, die zum oder nach dem angegebenen Zeitpunkt aktualisiert wurden. |
+| `modified_before`  |  Optional | String im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Ruft nur Templates ab, die zum oder vor dem angegebenen Zeitpunkt aktualisiert wurden. |
+| `limit` | Optional | Positive Zahl | Maximale Anzahl der abzurufenden Templates. Standardmäßig 100, wenn nicht angegeben, mit einem maximal zulässigen Wert von 1000. |
+| `offset`  |  Optional | Positive Zahl | Anzahl der Templates, die übersprungen werden sollen, bevor der Rest der Templates, die den Suchkriterien entsprechen, zurückgegeben wird. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -44,7 +44,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Antwort 
 
 {% alert important %}
-Vorlagen, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, sind in dieser Antwort nicht enthalten.
+Templates, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, werden in dieser Antwort nicht bereitgestellt.
 {% endalert %}
 
 ```json

@@ -114,7 +114,7 @@ In diesem Abschnitt finden Sie die drei gängigsten Möglichkeiten, Content-Card
 - [Karussell](#carousel)
 - [Banner](#banner)
 
-Die Logik und die Implementierung dieser Platzierungen sind in Braze nicht voreingestellt, so dass Ihr Entwicklungsteam die Arbeit zur Erreichung dieser Anwendungsfälle liefern und unterstützen muss. Einen Überblick über die Implementierung dieser Platzierungen finden Sie unter [Erstellen einer benutzerdefinierten Inhaltskarte]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
+Die Logik und die Implementierung dieser Platzierungen sind in Braze nicht voreingestellt, so dass Ihr Entwicklungsteam die Arbeit zur Erreichung dieser Anwendungsfälle liefern und unterstützen muss. Einen Überblick über die Implementierung dieser Platzierungen finden Sie unter [Erstellen einer benutzerdefinierten Inhaltskarte]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 Beispiel-Content-Cards, die die verschiedenen Platzierungsoptionen zeigen: Posteingang, Karussell und Banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 

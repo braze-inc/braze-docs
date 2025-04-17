@@ -15,10 +15,6 @@ channel: email
 
 Die **E-Mail-Einstellungen** finden Sie unter **Einstellungen** im Dashboard.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt diese Seite **E-Mail-Einstellungen** und befindet sich unter **Einstellungen** > **Einstellungen verwalten** > **E-Mail-Einstellungen**.
-{% endalert %}
-
 ## Konfiguration senden
 
 Die E-Mail-Einstellungen im Abschnitt **Sendekonfiguration** bestimmen, welche Details in Ihren E-Mail-Kampagnen enthalten sind. Diese Einstellungen beziehen sich vor allem darauf, was Ihr Benutzer sieht, wenn er eine E-Mail von Braze erhält.
@@ -34,8 +30,6 @@ In diesem Abschnitt können Sie die Namen und E-Mail-Adressen hinzufügen, die v
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-Achten Sie bei der Einstellung Ihrer „Von“-Adressen darauf, dass Ihre „Von“-E-Mail-Domain mit Ihrer Absender-Domain übereinstimmt (z. B. marketing.yourdomain.com). Wenn Sie dies nicht tun, kann dies zu einer falschen Ausrichtung von SPF und DKIM führen. E-Mails mit dynamischen Absenderadressen werden aus dem IP-Pool der entsprechenden Absenderdomäne gesendet. Alle Antwort-E-Mails können auf Ihre Stammdomäne eingestellt werden.
-
 {% endtab %}
 {% tab Antwortadresse %}
 
@@ -49,7 +43,7 @@ Wenn Sie in diesem Abschnitt eine E-Mail-Adresse hinzufügen, können Sie diese 
 In diesem Bereich können Sie BCC-Adressen hinzufügen und verwalten, die an ausgehende E-Mail-Nachrichten von Braze angehängt werden können. Wenn Sie eine BCC-Adresse an eine E-Mail-Nachricht anhängen, wird eine identische Kopie der Nachricht, die Ihr Benutzer erhält, an Ihren BCC-Posteingang gesendet. Dies ist ein nützliches Tool, um Kopien von Nachrichten aufzubewahren, die Sie Ihren Benutzern aus Gründen der Compliance oder des Kundensupports geschickt haben. BCC-E-Mails sind in den E-Mail-Berichten und -Analysen nicht enthalten.
 
 {% alert important %}
-Das Anhängen einer BBC-Adresse an Ihre Kampagne oder Ihr Canvas führt zu einer Verdoppelung Ihrer abrechenbaren E-Mails für die Kampagne oder die Canvas-Komponente, da Braze eine Nachricht an Ihren Benutzer und eine an Ihre BCC-Adresse sendet.
+Wenn Sie eine BCC-Adresse an Ihre Kampagne oder Ihr Canvas anhängen, verdoppeln sich Ihre abrechenbaren E-Mails für die Kampagne oder die Canvas-Komponente, da Braze eine Nachricht an Ihren Nutzer:innen und eine an Ihre BCC-Adresse sendet.
 {% endalert %}
 
 ![BCC-Adresse auf dem Tab „E-Mail-Einstellungen“.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -82,10 +76,6 @@ So ändern Sie den Standort:
 1. Gehen Sie in Braze zu **Einstellungen** > **E-Mail-Voreinstellungen**.
 2. Klicken Sie auf das Kontrollkästchen unter **Benutzerdefinierte Einstellungen für offene Tracking-Pixel**. 
 3. Drücken Sie **Speichern**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese unter **Einstellungen verwalten** > **E-Mail-Einstellungen**.
-{% endalert %}
 
 Nach der Speicherung sendet Braze spezielle Anweisungen an den ESP, um das Tracking-Pixel für die Öffnung oben in allen HTML-E-Mails zu platzieren.
   
@@ -135,7 +125,7 @@ Wenn die Kopfzeile in der Rohfassung der E-Mail enthalten ist, aber nicht angeze
 
 Wenn das Feature zum Abmelden von E-Mails aktiviert ist, gilt diese Einstellung für den gesamten Workspace, nicht für die Unternehmensebene. Sie wird zu Kampagnen und Canvases hinzugefügt, die so eingerichtet sind, dass sie an abonnierte oder eingeloggte Benutzer gesendet werden, oder an eingeloggte Benutzer im Schritt **Zielgruppen** der Kampagnen- und Canvas-Ersteller.
 
-Braze fügt den Header nicht hinzu, wenn es sich um eine Transaktion handelt. Wenn also eine Nachricht so eingestellt ist, dass sie an alle Benutzer, einschließlich der abgemeldeten Benutzer, gesendet wird, wird der List-unsubscribe-Header nicht an die Nachricht angehängt, es sei denn, in der One-Click-List-unscribe-Einstellung auf Nachrichtenebene wurde etwas anderes festgelegt. Außerdem wird der Header für Nachrichten, die über Testsendung zugestellt werden, nicht hinzugefügt, da der Listenabmelde-Header nur für Targeting-Nutzerprofile in Braze erstellt und hinzugefügt wird.
+Wenn Sie den "Workspace Standard" verwenden, fügt Braze die Kopfzeile zum Abmelden mit einem Klick nicht für Kampagnen hinzu, die als transaktional gelten und so konfiguriert sind, dass sie an alle Nutzer:innen gesendet werden, auch an nicht abgemeldete Nutzer:innen. Um dies außer Kraft zu setzen und die Kopfzeile zum Abmelden mit einem Klick hinzuzufügen, wenn Sie an abgemeldete Nutzer:innen senden, können Sie in den Einstellungen für die Ein-Klick-Liste zum Abmelden auf Nachrichtenebene die Option **Global abmelden aus allen Nachrichten** auswählen.
 
 ### Standard-Listenabmelde-Header
 

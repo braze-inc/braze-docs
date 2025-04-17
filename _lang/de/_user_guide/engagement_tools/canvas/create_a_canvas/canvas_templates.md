@@ -59,7 +59,7 @@ Wenn Sie die Anpassung Ihrer Vorlage abgeschlossen haben, klicken Sie auf die Sc
 
 Es gibt zwei Möglichkeiten, Ihr Template beim Erstellen eines Canvas zu verwenden:
 
-- **Über Messsaging**: Gehen Sie zu **Messaging** > **Canvas**. Wählen Sie die Schaltfläche **Leinwand erstellen** und **Verwenden Sie eine Leinwandvorlage**.
+- **Aus Messaging**: Gehen Sie zu **Messaging** > **Canvas**. Wählen Sie die Schaltfläche **Leinwand erstellen** und **Verwenden Sie eine Leinwandvorlage**.
 - **Über Templates**: Gehen Sie zu **Vorlagen** > **Canvas-Vorlagen** und suchen Sie die gewünschte Vorlage. Wählen Sie dann das Menü <i class="fas fa-ellipsis-vertical"></i>, gefolgt von **Vorlage anwenden**. Dies führt Sie zu einem neuen Canvas mit der im Canvas Composer angewendeten Vorlage.
 
 ### Verfügbare Lötvorlagen

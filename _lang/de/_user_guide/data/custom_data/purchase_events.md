@@ -19,13 +19,13 @@ Sie können Einkäufe protokollieren, indem Sie ein [Kauf-Objekt]({{site.baseurl
 
 Im Folgenden finden Sie eine Liste der Methoden, die auf verschiedenen Plattformen zur Protokollierung von Einkäufen verwendet werden. Auf diesen Seiten finden Sie auch eine Dokumentation darüber, wie Sie Eigenschaften und Mengen zu Ihrem Kauf-Event hinzufügen können. Sie können Ihre Nutzer:innen auf der Grundlage dieser Eigenschaften weiter zusammenstellen.
 
-- [Android und FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Internet]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Kaufdaten ansehen
 
@@ -256,10 +256,6 @@ So lassen sich Produkte für die Segmentierung und das Triggern leicht identifiz
 Gelegentlich werden Sie Kauf-Events identifizieren, die entweder zu viele Datenpunkte verbrauchen, für Ihre Marketing Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie das angepasste Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
 
 Im Braze-Dashboard können Sie das Blocklisting unter **Dateneinstellungen** > Produkte verwalten. Weitere Informationen finden Sie unter [Verwalten angepasster Daten]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie **Produkte** unter **Einstellungen verwalten** finden.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

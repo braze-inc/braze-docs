@@ -41,7 +41,9 @@ Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data
 
 ### Fehler bei der Verbindung zur Snowflake Instanz: Eingehende Anfrage mit IP ist für den Zugriff auf Snowflake nicht zulässig
 
-Versuchen Sie, die offiziellen IPs von Braze zu Ihrer IP-Zulassungsliste hinzuzufügen. Weitere Informationen finden Sie unter [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Versuchen Sie, die offiziellen IPs von Braze zu Ihrer IP-Zulassungsliste hinzuzufügen. Weitere Informationen finden Sie unter [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), oder erlauben Sie die entsprechenden IPs:
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Fehler bei der Ausführung von SQL aufgrund der Kund:in-Konfiguration: 002003 (42S02): SQL Kompilierungsfehler: existiert nicht oder ist nicht autorisiert
 
@@ -152,11 +154,11 @@ Um dieses Verhalten in Zukunft zu vermeiden, empfehlen wir, monoton ansteigende 
 
 ## Wird bei einer Synchronisierung die Reihenfolge beibehalten, wenn mehrere Datensätze dieselbe ID haben?
 
-Die Reihenfolge der Bearbeitung ist nicht 100%ig vorhersehbar. Wenn zum Beispiel während einer Synchronisierung mehrere Zeilen mit demselben `EXTERNAL_ID` in der Tabelle vorhanden sind, können wir nicht garantieren, welcher Wert im endgültigen Profil landet. 
+Die Reihenfolge der Bearbeitung ist nicht 100%ig vorhersehbar. Wenn zum Beispiel während einer Synchronisierung mehrere Zeilen mit demselben `EXTERNAL_ID` in der Tabelle vorhanden sind, können wir nicht garantieren, welcher Wert im endgültigen Profil landet. Wenn Sie dasselbe `EXTERNAL_ID` mit verschiedenen Attributen in der Nutzlastspalte aktualisieren, werden alle Änderungen übernommen, wenn die Synchronisierung abgeschlossen ist.
 
 ## Welche Sicherheitsmaßnahmen gibt es für CDI?
 
-### Die Maßnahmen von Braze
+### Unsere Maßnahmen
 
 Braze hat die folgenden Maßnahmen gegen CDI ergriffen:
 

@@ -27,7 +27,7 @@ Wir verwenden das Braze-SDK (Software-Development-Kit), um Informationen mit Ihr
 
 * Ihre [API-Schlüssel]({{site.baseurl}}/api/api_key/)
 * Ihr [SDK-Endpunkt]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze stellt keine benutzerdefinierten Endpunkte mehr zur Verfügung. Verwenden Sie daher die vordefinierten SDK-Endpunkte. Wenn Sie einen bereits existierenden benutzerdefinierten Endpunkt erhalten haben, finden Sie hier die Einrichtungsschritte für die [Android-]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS-]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) und [Web-Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
+  * Braze stellt keine benutzerdefinierten Endpunkte mehr zur Verfügung. Verwenden Sie daher die vordefinierten SDK-Endpunkte. Wenn Sie einen bereits existierenden benutzerdefinierten Endpunkt erhalten haben, finden Sie hier die Einrichtungsschritte für die [Android-]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS-]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) und [Web-Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
 
 Sie können diese Informationen entweder direkt weitergeben oder Sie können ihnen Zugang zu Braze geben, indem Sie ein Konto für sie erstellen. 
 
@@ -74,7 +74,7 @@ Wenn Sie Dinge wie API-getriggerte Starts und Connected-Content beabsichtigen, b
 
 ### Schritt 5: Sie beide führen eine QA für Ihre Implementierung durch
 
-Arbeiten Sie mit Ihrem Engineering zusammen, um sicherzustellen, dass alles funktioniert. Versenden Sie [Testnachrichten]({{site.baseurl}}/developer_guide/sending_test_messages/), nutzen Sie unsere [Test-Apps für Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) und [Test-Apps für iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/) und gehen Sie auf Nummer sicher, bevor Sie mit dem Versand beginnen.
+Arbeiten Sie mit Ihrem Engineering zusammen, um sicherzustellen, dass alles funktioniert. Versenden Sie [Testnachrichten]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), nutzen Sie unsere [Test-Apps für Android]({{site.baseurl}}/developer_guide/references/?tab=android) und [Test-Apps für iOS]({{site.baseurl}}/developer_guide/references/?tab=swift) und gehen Sie auf Nummer sicher, bevor Sie mit dem Versand beginnen.
 
 Wir haben sogar spezielle Anweisungen zum [Testen Ihrer Android- oder FireOS-Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) und zum Testen von [Push für iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 

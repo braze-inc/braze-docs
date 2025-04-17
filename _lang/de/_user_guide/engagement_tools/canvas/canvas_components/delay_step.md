@@ -32,6 +32,12 @@ Personalisierte Verzögerungen und erweiterte Verzögerungen sind bereits verfü
 
 Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten.
 
+Braze beendet einen Nutzer:innen bei diesem Schritt, wenn:
+
+- Die Kontextvariable kehrt zu keinem Wert zurück.
+- Ein eingebetteter Connected-Content-Aufruf schlägt fehl.
+- Die Typen der Kontextvariablen stimmen nicht überein.
+
 Nehmen wir an, wir möchten unsere Kund:innen daran erinnern, in 30 Tagen Zahnpasta zu kaufen. Mit einer Kombination aus einem Kontextschritt und einem Verzögerungsschritt können wir diese Kontextvariable auswählen, um die wir verzögern wollen. In diesem Fall würde unser Schritt Context die folgenden Felder enthalten:
 
 - **Name der Kontextvariablen:** product_reminder_interval

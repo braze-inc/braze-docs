@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Geplante Nachrichten löschen."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Löschen geplanter Nachrichten in Braze."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Geplante Nach
 /messages/schedule/delete
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Nachricht abzubrechen, die Sie zuvor geplant haben, bevor sie gesendet wurde.
+> Verwenden Sie diesen Endpunkt, um eine Nachricht abzubrechen, die Sie zuvor im Zeitplan vorgesehen haben, bevor sie gesendet wurde.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
@@ -22,11 +22,11 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Geplante Nach
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `messages.schedule.delete`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -39,11 +39,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | Erforderlich | String | Die zu löschende `schedule_id` (erhalten aus der Antwort auf Zeitplan erstellen). |
+| `schedule_id` | Erforderlich | String | Die `schedule_id` zum Löschen (erhalten aus der Antwort auf den Zeitplan erstellen). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

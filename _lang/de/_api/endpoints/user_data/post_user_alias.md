@@ -1,26 +1,26 @@
 ---
-nav_title: "POST: Neuen Benutzer-Alias erstellen"
-article_title: "POST: Neuen Benutzer-Alias erstellen"
+nav_title: "POST: Neuen Nutzer-Alias erstellen"
+article_title: "POST: Neuen Nutzer-Alias erstellen"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Neuen Benutzer-Alias erstellen."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Neue Nutzer:in erstellen Braze."
 
 ---
 {% api %}
-# Neuen Benutzer-Alias erstellen
+# Neuen Nutzer:in-Alias erstellen
 {% apimethod post %}
 /users/alias/new
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um neue Benutzer-Aliase für bestehende identifizierte Benutzer hinzuzufügen oder um neue nicht identifizierte Benutzer zu erstellen.
+> Verwenden Sie diesen Endpunkt, um neue User-Alias für bestehende identifizierte Nutzer:innen hinzuzufügen oder um neue nicht identifizierte Nutzer:innen zu erstellen.
 
-Pro Anfrage können bis zu 50 Benutzer-Aliase angegeben werden.
+Pro Anfrage können bis zu 50 Nutzer:innen angegeben werden.
 
-**Um einen Benutzer-Alias für einen bestehenden Benutzer hinzuzufügen**, muss ein `external_id` in das neue Benutzer-Alias-Objekt aufgenommen werden. Wenn der `external_id` im Objekt vorhanden ist, es aber keinen Benutzer mit diesem `external_id` gibt, wird der Alias keinem Benutzer hinzugefügt. Wenn ein `external_id` nicht vorhanden ist, wird ein Benutzer trotzdem erstellt, muss aber später identifiziert werden. Sie können dies über den Endpunkt "Benutzer identifizieren" und den `users/identify` tun.
+**Um einen Nutzer-Alias für einen bestehenden Nutzer:in hinzuzufügen**, muss ein `external_id` in das neue Nutzer-Alias-Objekt aufgenommen werden. Wenn der `external_id` im Objekt vorhanden ist, es aber keinen Nutzer mit diesem `external_id` gibt, wird der Alias keinem Nutzer:innen hinzugefügt. Wenn `external_id` nicht vorhanden ist, wird ein Nutzer:innen trotzdem angelegt, muss aber später identifiziert werden. Dazu verwenden Sie den Endpunkt "Nutzer:innen identifizieren" und den Endpunkt `users/identify`.
 
-**Wenn Sie einen neuen, reinen Alias-Benutzer anlegen**, müssen Sie die `external_id` im neuen Alias-Objekt des Benutzers weglassen. Nachdem der Benutzer erstellt wurde, verwenden Sie den Endpunkt `/users/track`, um den Nur-Alias-Benutzer mit Attributen, Ereignissen und Käufen zu verknüpfen, und den Endpunkt `/users/identify`, um den Benutzer mit einem `external_id` zu identifizieren.
+Bei **der Erstellung eines neuen Nutzers:innen, der nur über einen Alias verfügt**, muss die `external_id` im neuen Nutzer-Alias-Objekt weggelassen werden. Nachdem der Nutzer erstellt wurde, verwenden Sie den Endpunkt `/users/track`, um den Nutzer:innen mit Attributen, Ereignissen und Käufen zu verknüpfen, und den Endpunkt `/users/identify`, um den Nutzer mit einem `external_id` zu identifizieren.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
@@ -28,11 +28,11 @@ Pro Anfrage können bis zu 50 Benutzer-Aliase angegeben werden.
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.alias.new`.
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='users alias new' %}
+{% multi_lang_include rate_limits.md endpunkt='nutzer:innen alias neu' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -45,14 +45,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### Parameter anfordern
+### Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `user_aliases` | Erforderlich | Array mit neuen Benutzer-Alias-Objekten | Siehe [Benutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Weitere Informationen über `alias_name` und `alias_label` finden Sie in unserer Dokumentation über [Benutzer-Aliase]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).|
+| `user_aliases` | Erforderlich | Array mit neuen Nutzer:in-Alias-Objekten | Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Weitere Informationen zu `alias_name` und `alias_label` finden Sie in unserer Dokumentation zu [User-Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Endpunkt-Anfragekörper mit Angabe des neuen Benutzer-Aliasobjekts
+### Körper der Anfrage des Endpunkts mit Angabe des neuen Nutzer:in-Objekts für den Nutzer-Alias
 
 ```json
 {

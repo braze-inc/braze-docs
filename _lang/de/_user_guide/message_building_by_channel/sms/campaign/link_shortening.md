@@ -13,7 +13,9 @@ channel:
 
 # Link-Verkürzung
 
-> Linkverkürzung und Klickverfolgung ermöglichen es Ihnen, in SMS-Nachrichten enthaltene URLs automatisch zu verkürzen und die Klickrate zu analysieren. So erhalten Sie zusätzliche Kennzahlen, die Ihnen helfen zu verstehen, wie Ihre Nutzer mit Ihren SMS-Kampagnen umgehen. <br><br> Auf dieser Seite erfahren Sie, wie Sie die Linkverkürzung in Ihren SMS-Nachrichten aktivieren, verkürzte Links testen, Ihre benutzerdefinierte Domain in verkürzten Links verwenden und vieles mehr.
+> Auf dieser Seite erfahren Sie, wie Sie die Linkverkürzung in Ihren SMS-Nachrichten aktivieren, verkürzte Links testen, Ihre benutzerdefinierte Domain in verkürzten Links verwenden und vieles mehr.
+
+Linkverkürzung und Klickverfolgung ermöglichen es Ihnen, in SMS-Nachrichten enthaltene URLs automatisch zu verkürzen und die Klickrate zu analysieren. So erhalten Sie zusätzliche Kennzahlen, die Ihnen helfen zu verstehen, wie Ihre Nutzer mit Ihren SMS-Kampagnen umgehen.
 
 Linkverkürzung und Klickverfolgung können auf der [Ebene der Nachrichtenvariante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) sowohl in Kampagnen als auch in Canvases aktiviert werden. 
 
@@ -41,15 +43,7 @@ Braze erkennt nur URLs, die mit `http://` oder `https://` beginnen. Wenn eine UR
 
 ### Hinzufügen von UTM-Parametern
 
-Während Sie mit Linkverkürzungen Ihre URLs automatisch verfolgen können, können Sie auch UTM-Parameter zu Ihren URLs hinzufügen, um die Leistung von Kampagnen in Analysetools von Drittanbietern, wie Google Analytics, zu verfolgen.
-
-Um UTM-Parameter zu Ihrer URL hinzuzufügen, gehen Sie wie folgt vor:
-
-1. Beginnen Sie mit Ihrer Basis-URL. Dies ist die URL der Seite, die Sie verfolgen möchten (z. B. `https://www.example.com`).
-2. Fügen Sie ein Fragezeichen (?) nach Ihrer Basis-URL ein.
-3. Fügen Sie jeden UTM-Parameter durch ein kaufmännisches Und (&) getrennt hinzu.
-
-Ein Beispiel ist `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
+{% multi_lang_include click_tracking.md section='UTM-Parameter' %}
 
 ## Flüssige Personalisierung in URLs
 
@@ -122,35 +116,15 @@ Die Diagramme **Historische Leistung** und **SMS/MMS-Leistung** enthalten auch e
 
 Eine Anleitung zum Retargeting finden Sie unter [SMS-Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-## Benutzerdefinierte Domänen
+{% multi_lang_include click_tracking.md section='Angepasste Domains' %}
 
-Die Verkürzung von Links ermöglicht es Ihnen auch, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein konsistentes Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+{% multi_lang_include click_tracking.md section='Häufig gestellte Fragen' %}
 
-## Häufig gestellte Fragen
-
-### Link-Verkürzung
-
-#### Sind die Links, die ich beim Testversand erhalte, echte URLs?
-
-Wenn die Kampagne vor dem Testversand als Entwurf gespeichert wurde, ja. Andernfalls handelt es sich um einen Platzhalter-Link. Beachten Sie, dass sich die bei der tatsächlichen Kampagne übermittelte URL von der in der Testsendung unterscheiden kann.
-
-#### Muss das Braze SDK installiert sein, um Links zu kürzen?
-
-Nein. Die Linkverkürzung funktioniert ohne SDK-Integration.
-
-#### Kann ich wissen, welche einzelnen Benutzer auf eine URL klicken?
+### Kann ich wissen, welche einzelnen Benutzer auf eine URL klicken?
 
 Ja Wenn das **erweiterte Tracking** aktiviert ist, können Sie Nutzer, die auf URLs geklickt haben, erneut ansprechen, indem Sie die [SMS-Retargeting-Filter]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) oder die von Currents gesendeten SMS-Klick-Ereignisse (`users.messages.sms.ShortLinkClick`) nutzen.
 
-#### Kann ich UTM-Parameter zu einer URL hinzufügen, bevor sie gekürzt wird?
-
-Ja Es können sowohl statische als auch dynamische Parameter hinzugefügt werden. 
-
-#### Wie lange bleiben verkürzte URLs gültig?
-
-Statische URLs sind ab der URL-Registrierung etwa beim ersten Versand ein Jahr lang gültig. Dynamische URLs sind ab der URL-Registrierung zwei Monate lang gültig.
-
-#### Funktioniert die Linkverkürzung mit Deep Links oder universellen Links?
+### Funktioniert die Linkverkürzung mit Deep Links oder universellen Links?
 
 Deeplinks können nicht gekürzt werden. Sie können universelle Links von Anbietern wie Branch oder Appsflyer kürzen, aber Braze ist nicht in der Lage, Probleme zu beheben, die dabei auftreten können (z. B. die Unterbrechung der Attribution oder eine Umleitung).
 

@@ -117,7 +117,7 @@ So löschen Sie Ihren Workspace oder Ihre App-Instanz:
 1. Gehen Sie zu **Einstellungen** > **App-Einstellungen**.
 2. Wählen Sie **Workspace löschen**, um den jeweiligen Workspace zu löschen, oder wählen Sie das Mülleimer-Symbol neben der jeweiligen App-Instanz.
 
-Sie können keine App-Instanzen oder Workspaces löschen, die derzeit für das Targeting von Nutzern:innen verwendet werden oder die mehr als 1.000 Nutzer:innen haben. Wenn Sie dies versuchen, erhalten Sie eine Fehlermeldung. Um fortzufahren und sie zu löschen, [erstellen Sie einen Support-Fall]({{site.baseurl}}/help/support/), der einen Dashboard-Link und den Namen der zu löschenden App-Instanz oder des Workspace enthält.
+Sie können keine App-Instanzen oder Workspaces löschen, die derzeit für das Targeting von Nutzern:innen verwendet werden oder die mehr als 1.000 Nutzer:innen haben. Wenn Sie dies versuchen, erhalten Sie eine Fehlermeldung. Um fortzufahren und sie zu löschen, [erstellen Sie einen Support-Fall]({{site.baseurl}}/user_guide/administrative/access_braze/support/), der einen Dashboard-Link und den Namen der zu löschenden App-Instanz oder des Workspace enthält.
 
 {% alert warning %}
 Seien Sie vorsichtig beim Löschen von Arbeitsbereichen! Nachdem ein Workspace gelöscht wurde, kann er nicht wiederhergestellt werden.
@@ -149,7 +149,7 @@ Standardmäßig zielt ein Segment auf alle Apps und Websites im Workspace ab. So
 2. Für **gezielte Apps und Websites** wählen Sie **Benutzer aus bestimmten Apps**.
 3. Wählen Sie in der Dropdown-Liste **Spezifische Apps** Ihre App oder Website aus.
 
-![Segment, das Nutzer:innen aus bestimmten Apps zusammenstellt.][10]
+![Segmente, die Nutzer:innen aus bestimmten Apps zusammenstellen.][10]
 
 Sie können dieses Segment dann zu Ihrer Nachricht hinzufügen und Ihre Zielgruppe bei Bedarf mit zusätzlichen Segmenten und Filtern weiter verfeinern.
 

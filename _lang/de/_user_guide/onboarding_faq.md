@@ -47,10 +47,6 @@ Um zuvor identifizierte Nutzer:innen zu importieren, können Sie eine CSV-Datei 
 
 Sie können Benutzerprofile über CSV-Dateien unter **Publikum** > **Benutzer importieren** hochladen und aktualisieren. Wenn Sie Kundendaten importieren, müssen Sie jeweils die eindeutige Kundennummer in Form der `external_id` angeben.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Funktion unter **Benutzer** > **Benutzerimport**.
-{% endalert %}
-
 Bevor Sie mit dem CSV-Import beginnen, sollten Sie mit Ihrem Entwicklerteam klären, wie die Nutzer:innen in Braze identifiziert werden sollen. In der Regel handelt es sich dabei um eine intern verwendete Datenbank-ID. Diese sollte mit dem Identifizierungsverfahren der Braze SDK auf Mobilgeräten und im Internet übereinstimmen, sodass das jeweilige Nutzerprofil in Braze auf allen Geräten identisch ist. Erfahren Sie mehr über den [Lebenszyklus]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) des Braze [Benutzerprofils]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 Wenn Sie in Ihrem Import einen `external_id` angeben, aktualisiert Braze alle vorhandenen Nutzer:innen mit demselben `external_id` oder erstellt einen neu identifizierten Nutzer:in mit diesem `external_id` Satz, wenn kein solcher gefunden wird.
@@ -440,7 +436,7 @@ Wenn Sie einen Canvas anhalten, werden Nutzer:innen, die in einem Schritt warten
 Canvase
 {% endapitags %}
 
-[Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) triggern nur während der Wartezeit auf die verknüpfte Canvas-Komponente. Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
+Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
 
 Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -573,13 +569,13 @@ So richten Sie regelmäßige Engagement-Berichte ein:
 
 1. Navigieren Sie in Ihrem Dashboard-Konto unter **Daten** zu **Engagement Reports**.
 2. Klicken Sie auf **\+ Neuen Bericht erstellen**.
-3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
-4. [Nehmen Sie Statistiken]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
+3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
+4. [Nehmen Sie Statistiken]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
 5. Wählen Sie die Komprimierung und den Deliminator für Ihren Bericht.
 6. Geben Sie die E-Mail-Adressen der Braze-Benutzer ein, die diesen Bericht erhalten sollen.
-7. Wählen Sie den [Zeitraum]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
-8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
-9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).
+7. Wählen Sie den [Zeitraum]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
+8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
+9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).
 10. Führen Sie den Bericht aus, und öffnen Sie ihn in Ihrer E-Mail, wenn er ankommt!
 
 {% endapi %}

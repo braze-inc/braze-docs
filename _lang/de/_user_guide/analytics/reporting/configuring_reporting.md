@@ -22,7 +22,3 @@ Sie können diesen Bericht über die Seite **Benachrichtigungspräferenzen** abo
 ## Hinzufügen angepasster Events zu Berichten
 
 Wenn Sie angepasste Events verwenden, können Sie außerdem bis zu fünf wichtige Events auf der Seite **Angepasste Events** auswählen, die in Ihren Wochenbericht aufgenommen werden sollen. Gehen Sie zu **Dateneinstellungen** > **Angepasste Events**, um diese Events jederzeit zu aktualisieren.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befinden sich diese Seiten an einem anderen Standort. <br>\- Die Einstellungen für Benachrichtigungen finden Sie unter Ihrem Kontosymbol > **Unternehmenseinstellungen** > **Einstellungen für Benachrichtigungen**.<br>- **Angepasste Events** finden Sie unter **Einstellungen verwalten**.
-{% endalert %}

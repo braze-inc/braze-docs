@@ -1,6 +1,6 @@
 {% tabs %}
 {% tab Android %}
-Standardmäßig bietet das native [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk) keine Unterstützung für animierte GIFs für Content Cards. Sie können jedoch eine Bildbibliothek eines Drittanbieters verwenden, um stattdessen GIFs anzuzeigen. Weitere Informationen finden Sie unter [Android Content Cards: GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
+Standardmäßig bietet das native [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk) keine Unterstützung für animierte GIFs für Content Cards. Sie können jedoch eine Bildbibliothek eines Drittanbieters verwenden, um stattdessen GIFs anzuzeigen. Weitere Informationen finden Sie unter [Android Content Cards: GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android).
 {% endtab %}
 
 {% tab iOS %}

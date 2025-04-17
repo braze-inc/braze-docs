@@ -1,11 +1,11 @@
 ---
-nav_title: Öffentliche APIs
+nav_title: Öffentliche APIs verwenden
 article_title: Öffentliche APIs für verknüpfte Inhalte
-page_order: 4
+page_order: 10
 description: "Dieser Artikel enthält eine Liste öffentlich zugänglicher APIs für Connected-Content."
 ---
 
-# Öffentliche APIs
+# Öffentliche APIs für Connected-Content verwenden
 
 > Es gibt eine Vielzahl öffentlich verfügbarer APIs, die für Connected-Content verwendet werden können. Über öffentliche APIs können Sie angepasste Daten in Nachrichten einfügen. Auf dieser Seite finden Sie eine Liste der öffentlichen APIs, die für Connected-Content verwendet werden können. Es gibt allerdings noch viele andere APIs mit zahlreichen Verwendungsmöglichkeiten für Connected-Content.  
 

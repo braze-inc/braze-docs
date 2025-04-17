@@ -1,8 +1,7 @@
 ---
 nav_title: Dokumentation Feedback
 permalink: /feedback/
-hide_toc: true
----
+hide_toc: true---
 
 <fieldset style="margin-top: 60px;">
 <legend style="font-size: 2.5rem;color: #212123;font-weight:bold;">Dokumentation Feedback</legend>

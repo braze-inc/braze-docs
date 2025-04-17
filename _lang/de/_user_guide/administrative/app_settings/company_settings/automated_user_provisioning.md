@@ -14,15 +14,11 @@ alias: /scim/automated_user_provisioning/
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **SCIM Provisioning**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie das Dropdown-Menü Ihres Kontos und gehen Sie zu **Unternehmenseinstellungen** > **Automatisierte Benutzerbereitstellung**.
-{% endalert %}
-
 ## Wie Sie Ihr SCIM-Token erhalten
 
 Um Ihren SCIM Token zu erhalten, müssen Sie die folgenden Informationen angeben:
 
-1. Wählen Sie einen Standardarbeitsbereich aus, zu dem neue Dashboard-Entwickler hinzugefügt werden sollen. Wenn Sie beim [SCIM-API-Aufruf Nutzer:innen erstellen](/docs/post_create_user_account/) keinen Workspace angeben, werden sie hier hinzugefügt.
+1. Wählen Sie einen Standardarbeitsbereich aus, zu dem neue Dashboard-Entwickler hinzugefügt werden sollen. Wenn Sie beim [SCIM-API-Aufruf Nutzer:innen erstellen]({{site.baseurl}}/post_create_user_account/) keinen Workspace angeben, werden sie hier hinzugefügt.
 2. Bieten Sie eine Herkunft für Dienste an. Anhand des Service-Ursprungs kann Braze erkennen, woher die Anfrage kommt.
 3. Geben Sie optional eine kommagetrennte Liste oder einen Bereich von IP-Adressen an, die für SCIM-Anfragen zulässig sind. Der `X-Origin-Request` -Header in jeder Anfrage wird verwendet, um die IP-Adresse der Anfrage mit der Zulassen-Liste zu vergleichen.<br><br>
 

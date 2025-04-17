@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Benutzerdefinierte Ereignisse exportieren Analytik"
-article_title: "GET: Benutzerdefinierte Ereignisanalyse exportieren"
+nav_title: "GET: Exportieren Sie angepasste Events Analytics"
+article_title: "GET: Exportieren Sie angepasste Event Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Exportieren von benutzerdefinierten Ereignisanalysen."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Export angepasster Events Analytics Braze."
 
 ---
 {% api %}
-# Exportieren Sie die Analyse von benutzerdefinierten Ereignissen
+# Exportieren Sie angepasste Events Analytics
 {% apimethod get %}
-/events/data_series
+/ereignisse/daten_serien
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Reihe von Ereignissen in Ihrer App abzurufen, die in einem bestimmten Zeitraum aufgetreten sind.
+> Verwenden Sie diesen Endpunkt, um eine Reihe von Vorkommen eines angepassten Events in Ihrer App über einen bestimmten Zeitraum abzurufen.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
@@ -22,20 +22,20 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Exportieren v
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `events.data_series`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter| Erforderlich | Daten Typ | Beschreibung |
+| Parameter| Erforderlich | Datentyp | Beschreibung |
 | -------- | -------- | --------- | ----------- |
-| `event` | Erforderlich | String | Der Name des benutzerdefinierten Ereignisses, für das Analysen zurückgegeben werden sollen. |
+| `event` | Erforderlich | String | Der Name des angepassten Events, für das Analytics zurückgegeben werden soll. |
 | `length` | Erforderlich | Integer | Maximale Anzahl der Einheiten (Tage oder Stunden) vor `ending_at`, die in die zurückgegebene Serie aufgenommen werden sollen. Muss zwischen 1 und 100 (einschließlich) liegen. |
-| `unit` | Optional | String | Zeiteinheit zwischen Datenpunkten. Kann `day` oder `hour` sein, die Standardeinstellung ist `day`.  |
-| `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) Zeichenfolge) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
-| `app_id` | Optional | String | App-API-Kennung, die von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird, um Analysen auf eine bestimmte App zu beschränken. |
-| `segment_id` | Optional | String | Siehe [Segment-API-Bezeichner]({{site.baseurl}}/api/identifier_types/). Segment-ID, die das analytikfähige Segment angibt, für das die Ereignisanalyse zurückgegeben werden soll. |
+| `unit` | Optional | String | Zeiteinheit zwischen Datenpunkten. Kann `day` oder `hour` sein, der Standard ist `day`.  |
+| `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
+| `app_id` | Optional | String | Bezeichner der App-API, der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird, um Analytics auf eine bestimmte App zu beschränken. |
+| `segment_id` | Optional | String | Siehe [Segment API Bezeichner]({{site.baseurl}}/api/identifier_types/). Segment ID, die das analytics-aktivierte Segment angibt, für das Event Analytics zurückgegeben werden soll. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -64,12 +64,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Antwortcodes für schwerwiegende Fehler {#fatal-export}
+### Schwerwiegende Fehler Antwortcodes {#fatal-export}
 
-Statuscodes und zugehörige Fehlermeldungen, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, finden Sie unter [Schwerwiegende Fehler und Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

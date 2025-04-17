@@ -29,10 +29,6 @@ Braze sammelt automatisch eine Basisebene an Deinstallationsinformationen aus Ih
 
 Sie können das Tracking der Deinstallation auf der Seite **App-Einstellungen** unter **Einstellungen** für jede App, die Sie verfolgen möchten, aktivieren.
 
-{% alert note %}
-Wenn Sie die ältere Navigation verwenden, lautet **App-Einstellungen** **Einstellungen** und befindet sich unter **Einstellungen verwalten**.
-{% endalert %}
-
 Wenn das Uninstall-Tracking für eine App aktiviert ist, werden nachts im Hintergrund Push-Nachrichten an Nutzer:innen gesendet, die in den letzten 24 Stunden keine Sitzung aufgezeichnet oder eine Push-Nachricht erhalten haben.
 
 ### Konfiguration

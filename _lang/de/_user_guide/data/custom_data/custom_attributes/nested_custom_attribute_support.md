@@ -40,6 +40,7 @@ Angepasste Attribut-Objekte können [Datentypen][1] enthalten, wie z.B.:
 - Objekte haben eine maximale Größe von 100 KB.
 - Schlüsselnamen und String-Werte dürfen maximal 255 Zeichen lang sein.
 - Schlüsselnamen dürfen keine Leerzeichen enthalten.
+- Punkte (`.`) und Dollarzeichen (`$`) sind keine unterstützten Zeichen in einer API-Nutzlast, wenn Sie versuchen, ein verschachteltes angepasstes Attribut an ein Nutzerprofil zu senden.
 - Nicht alle Braze Partner unterstützen verschachtelte angepasste Attribute. Schauen Sie in der [Dokumentation des Partners]({{site.baseurl}}/partners/home) nach, ob bestimmte Partnerintegrationen dieses Feature unterstützen.
 - Verschachtelte angepasste Attribute können nicht als Filter verwendet werden, wenn Sie eine Connected Audience API aufrufen.
 
@@ -357,10 +358,6 @@ Nehmen wir für dieses Beispiel an, dass wir ein Objekt-Array `accounts` haben, 
 ```
 
 Gehen Sie im Braze-Dashboard zu **Dateneinstellungen** > Angepasste Attribute.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Angepasste Attribute** unter **Einstellungen verwalten**.
-{% endalert %}
 
 Suchen Sie nach Ihrem Objekt oder Objekt-Array. Wählen Sie in der Spalte **Attributname** die Option **Schema generieren** aus.
 

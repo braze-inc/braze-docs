@@ -14,10 +14,6 @@ channel:
 
 Gehen Sie zu **Vorlagen** > **In-App Nachrichtenvorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Vorlagen & Medien**.
-{% endalert %}
-
 Auf dieser Seite können Sie entweder vorhandene Vorlagen bearbeiten oder auf **\+ Erstellen** klicken und **Farbprofil** oder **CSS-Vorlage** wählen, um neue Vorlagen für Ihre In-App-Nachrichten zu erstellen.
 
 ## Farbprofil

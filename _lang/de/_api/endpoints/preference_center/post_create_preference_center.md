@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Einstellungszentrum erstellen."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Einstellungszentrum erstellen Braze."
 
 ---
 {% api %}
 # Präferenzzentrum erstellen
 {% apimethod post %}
-/preference_center/v1
+/präferenz_zentrum/v1
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein Einstellungszentrum zu erstellen, mit dem Benutzer ihre Benachrichtigungspräferenzen für Ihre E-Mail-Kampagnen verwalten können. Unter [Erstellen eines Einstellungscenters mit API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) erfahren Sie, wie Sie ein API-generiertes Einstellungscenter erstellen.
+> Verwenden Sie diesen Endpunkt, um ein Einstellungszentrum zu erstellen, mit dem Nutzer:innen ihre Benachrichtigungspräferenzen für Ihre E-Mail Kampagnen verwalten können. Unter [Erstellen eines Einstellungscenters mit API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) finden Sie Schritte, wie Sie ein API-generiertes Einstellungscenter erstellen.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -22,11 +22,11 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Einstell
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `preference_center.update`.
 
-## Preisgrenze
+## Rate-Limit
 
-Dieser Endpunkt hat ein Ratenlimit von 10 Anfragen pro Minute und Arbeitsbereich.
+Für diesen Endpunkt gilt ein Rate-Limits von 10 Anfragen pro Minute und Workspace.
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -55,15 +55,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 } 
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`name`| Erforderlich | String | Der Name des Präferenzzentrums, das die folgenden Anforderungen erfüllt: <br>\- Enthält nur Buchstaben, Zahlen, Bindestriche und Unterstriche <br>\- Enthält keine Leerzeichen |
 |`preference_center_title`| Optional | String | Der Titel für das Einstellungscenter und die Bestätigungsseiten. Wenn kein Titel angegeben wird, lautet der Titel der Seiten standardmäßig "Einstellungscenter". |
 |`preference_center_page_html`| Erforderlich | String | Der HTML-Code für die Seite des Einstellungszentrums. |
 |`confirmation_page_html`| Erforderlich | String | Der HTML-Code für die Bestätigungsseite. |
-|`state` | Optional | String | Wählen Sie `active` oder `draft`. Der Standardwert ist `active`, wenn nicht angegeben. |
+|`state` | Optional | String | Wählen Sie `active` oder `draft`. Der Standardwert ist `active`, wenn nichts angegeben wird. |
 |`options` | Optional | Objekt | Attribute: <br>`meta-viewport-content`: Wenn vorhanden, wird der Seite ein `viewport` Meta-Tag mit `content= <value of attribute>` hinzugefügt.<br><br> `link-tags`: Legen Sie ein Favicon für die Seite fest. Wenn diese Option aktiviert ist, wird der Seite ein `<link>` Tag mit einem rel-Attribut hinzugefügt.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -71,26 +71,26 @@ Authorization: Bearer YOUR-REST-API-KEY
 Der Name des Einstellungszentrums kann nach seiner Erstellung nicht mehr geändert werden.
 {% endalert %}
 
-### Flüssige Tags
+### Liquid-Tags
 
-Beachten Sie die folgenden Liquid-Tags, die Sie in Ihr HTML einfügen können, um den Abonnementstatus eines Benutzers auf der Seite des Einstellungszentrums zu generieren.
+Beachten Sie die folgenden Liquid-Tags, die Sie in Ihr HTML einfügen können, um den Status des Abos eines Nutzers:innen auf der Seite des Einstellungszentrums zu generieren.
 
 {% raw %}
 
-#### Status des Benutzerabonnements
+#### Status des Nutzer:in
 
-| Flüssigkeit | Beschreibung |
+| Liquid | Beschreibung |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Rufen Sie den globalen E-Mail-Abonnementstatus für den Benutzer ab (z. B. "opted_in", "subscribed" oder "unsubscribed"). |
-|`{{subscribed_state.${<subscription_group_id>}}}`| Ermittelt den Abonnementstatus der angegebenen Abonnementgruppe für den Benutzer (z.B. "abonniert" oder "abgemeldet"). |
+|`{{subscribed_state.${email_global}}}`| Ermittelt den globalen Status des Nutzers:in Bezug auf die abonnierten E-Mails (z.B. "opted_in", "subscribed" oder "unsubscribed"). |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Ermittelt den Status des Abonnements der angegebenen Abo-Gruppe für den Nutzer:in (z.B. "abonniert" oder "abgemeldet"). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Formulareingaben und Aktionen
 
-| Flüssigkeit | Beschreibung |
+| Liquid | Beschreibung |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement dem globalen E-Mail-Abonnementstatus des Benutzers entspricht. Der Auswahlstatus des Benutzers sollte "opted_in", "subscribed" oder "unsubscribed" sein, wenn das Formular mit Auswahldaten für den globalen E-Mail-Abonnementstatus übermittelt wird. Wenn es sich um ein Kontrollkästchen handelt, wird der Benutzer entweder "angemeldet" oder "abgemeldet". Bei einer versteckten Eingabe gilt auch der Status "abonniert". |
-|`{% form_field_name :subscription_group <subscription_group_id> %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement einer bestimmten Abonnementgruppe entspricht. Der Auswahlstatus des Benutzers sollte entweder "abonniert" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für eine bestimmte Abonnementgruppe übermittelt wird. |
+|`{% form_field_name :email_global_state %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement dem globalen E-Mail-Abonnement des Nutzers:in entspricht. Der Auswahlstatus des Nutzers:in sollte "opted_in", "Abonnent:in" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für den globalen E-Mail-Abonnentenstatus übermittelt wird. Wenn es sich um ein Kontrollkästchen handelt, wird der Nutzer:in entweder "opted_in" oder "abgemeldet". Bei einer ausgeblendeten Eingabe gilt auch der Status "abonniert". |
+|`{% form_field_name :subscription_group <subscription_group_id> %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement einer bestimmten Abo-Gruppe entspricht. Der Auswahlstatus des Nutzers sollte entweder "abonniert" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für eine bestimmte Abo-Gruppe übermittelt wird. |
 |`{{preference_center_submit_url}}`| Erzeugt die URL für die Formularübermittlung. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

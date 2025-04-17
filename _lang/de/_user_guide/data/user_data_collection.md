@@ -12,7 +12,7 @@ description: "Auf dieser Landing Page finden Sie Artikel zur Nutzer:innen-Datene
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: SDK Datenerfassung
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Nutzerprofil-Lebenszyklus
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: "Anonyme Nutzer:innen"
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: "Nutzer:innen Codes für Sprachen"
     link: /docs/user_guide/data/user_data_collection/language_codes/

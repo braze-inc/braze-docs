@@ -15,12 +15,8 @@ tool:
 
 Sie finden den **Umsatzbericht** unter **Analytics**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Revenue** unter **Data**.
-{% endalert %}
-
 {% alert tip %}
-Suchen Sie nach weiteren Möglichkeiten, Daten über Ihre Einnahmen zu erhalten? Versuchen Sie, Kaufverhalten (sowie den Kauf eines Produkts) als [Konversions-Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) zu Kampagnen oder Canvase hinzuzufügen.
+Suchen Sie nach weiteren Möglichkeiten, Daten über Ihre Einnahmen zu erhalten? Versuchen Sie, Kaufverhalten (sowie den Kauf eines Produkts) als [Konversions-Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) zu Kampagnen oder Canvase hinzuzufügen.
 {% endalert %}
 
 Um Ihre Umsatzdaten zu exportieren, wählen Sie <i class="fas fa-bars" title="Chart Kontextmenü"></i> im Diagramm **Performance im Zeitverlauf** und wählen Sie Ihre Exportoption.

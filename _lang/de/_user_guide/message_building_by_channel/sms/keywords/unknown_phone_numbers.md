@@ -14,7 +14,7 @@ channel:
 > Nachdem Sie SMS mit Braze zum Laufen gebracht haben, werden Sie möglicherweise Nachrichten von unbekannten Benutzern erhalten. Die folgenden Schritte beschreiben, wie ein:e nicht identifizierte:r Nutzer:in und eine Nummer verarbeitet werden.
 
 {% alert important %}
-Sind Sie derzeit ein nicht-einheimischer SMS-Kunde? Wenn dies der Fall ist, lesen Sie den entsprechenden Artikel zum Umgang mit unbekannten Telefonnummern in der [Dokumentation zu nicht-nativen SMS](/docs/user_guide/message_building_by_channel/sms/non_native/).
+Sind Sie derzeit ein nicht-einheimischer SMS-Kunde? Wenn dies der Fall ist, lesen Sie den entsprechenden Artikel zum Umgang mit unbekannten Telefonnummern in der [Dokumentation zu nicht-nativen SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 {% endalert %}
 
 ## Opt-in/out und benutzerdefinierter Schlüsselwort-Workflow für unbekannte Nummern

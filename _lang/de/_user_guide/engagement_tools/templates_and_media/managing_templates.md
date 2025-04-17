@@ -42,10 +42,6 @@ Doppelte Vorlagen können Sie finden, indem Sie die Spalte **Letzte Bearbeitung*
 
 ## Vorlagen archivieren
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, ist **Templates** **Vorlagen & Medien**.
-{% endalert %}
-
 ![Erweitertes Einstellungs-Dropdown-Menü, das drei Optionen anzeigt: Bearbeiten, Archivieren und Duplizieren, wobei die Option Archivieren hervorgehoben ist.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 Um eine einzelne Vorlage zu archivieren, klicken Sie auf das Einstellungssymbol im Vorlagengitter und wählen Sie **Archivieren**. Wenn eine Template archiviert wird, beachten Sie die folgenden unterschiedlichen Szenarien:

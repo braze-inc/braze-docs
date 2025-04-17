@@ -3,7 +3,7 @@ nav_title: Braze Übersicht
 article_title: "Erste Schritte: Braze Übersicht"
 page_order: 1
 page_type: reference
-description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie für die Arbeit mit Braze benötigen."
+description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie bei der Arbeit mit Braze kennen müssen."
 
 ---
 

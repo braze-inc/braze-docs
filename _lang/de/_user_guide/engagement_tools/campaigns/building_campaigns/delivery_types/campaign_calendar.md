@@ -13,10 +13,6 @@ description: "Diese Referenzseite schlüsselt die Komponenten des Inhaltskalende
 
 Sie können Messaging-Daten analysieren sowie Ihre geplanten Kampagnen anzeigen und verwalten. Um den Kalender zu öffnen, wählen Sie **Messaging** > **Content-Kalender** aus.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie **Engagement** > **Kampagnen** > **Kalender**.
-{% endalert %}
-
 ## Messaging-Analyse
 
 Der Bereich Messaging-Analyse enthält zwei Berichte für Ihre letzten und kommenden geplanten Kampagnen:

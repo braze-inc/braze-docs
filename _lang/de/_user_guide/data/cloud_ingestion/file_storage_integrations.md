@@ -11,35 +11,44 @@ page_type: reference
 
 > Auf dieser Seite erfahren Sie, wie Sie die Unterstützung für die Datenaufnahme in der Cloud einrichten und die relevanten Daten von S3 mit Braze synchronisieren.
 
+## Funktionsweise
+
 Sie können Cloud Data Ingestion (CDI) für S3 verwenden, um einen oder mehrere S3-Buckets in Ihrem AWS-Konto direkt in Braze zu integrieren. Wenn neue Dateien in S3 veröffentlicht werden, wird eine Nachricht an SQS gesendet, und Braze Cloud Data Ingestion nimmt diese neuen Dateien auf. 
 
-Cloud Data Ingestion unterstützt JSON-, CSV- und Parquet-Dateien sowie Attribute, Ereignis-, Kauf- und Nutzer:innen-Daten.
+Die Datenaufnahme in der Cloud unterstützt Folgendes:
+
+- JSON-Dateien
+- CSV-Dateien
+- Parkett Dateien
+- Attribute, Ereignis-, Kauf- und Nutzer:in-Daten löschen
+
+## Voraussetzungen
 
 Für die Integration benötigen Sie die folgenden Ressourcen:
+
  - S3-Bucket für die Speicherung von Daten 
  - SQS-Warteschlange für Benachrichtigungen über neue Dateien 
  - IAM-Rolle für Braze-Zugriff  
 
-
-## AWS-Definitionen
+### AWS-Definitionen
 
 Lassen Sie uns zunächst einige der in dieser Aufgabe verwendeten Begriffe definieren.
 
-| Text | Definition |
+| Begriff | Definition |
 | --- | --- |
 | Amazon Ressourcen-Name (ARN) | Der ARN ist ein eindeutiger Bezeichner für AWS-Ressourcen. |
 | Identitäts- und Zugriffsmanagement (IAM) | IAM ist ein Internet-Dienst, mit dem Sie den Zugriff auf AWS-Ressourcen sicher kontrollieren können. In dieser Anleitung erstellen Sie eine IAM-Richtlinie und weisen sie einer IAM-Rolle zu, um Ihr S3-Bucket mit Braze Cloud Data Ingestion zu integrieren. |
 | Amazon Simple Queue Service (SQS) | SQS ist eine gehostete Warteschlange, mit der Sie verteilte Softwaresysteme und Komponenten integrieren können. |
-{: .reset-td-br-1 .reset-td-br-2 }
- 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Einrichten der Datenaufnahme in der Cloud in AWS
 
 ### Schritt 1: Erstellen Sie einen Quell-Bucket
 
-Erstellen Sie ein allgemeines S3-Bucket mit Standardeinstellungen in Ihrem AWS-Konto. 
+Erstellen Sie ein allgemeines S3-Bucket mit Standardeinstellungen in Ihrem AWS-Konto. S3-Buckets können über Synchronisierungen hinweg wiederverwendet werden, solange der Ordner eindeutig ist.
 
 Die Standardeinstellungen sind:
+
   - ACLs Deaktiviert
   - Sperren Sie den öffentlichen Zugang
   - Bucket Versionierung deaktivieren
@@ -49,15 +58,17 @@ Notieren Sie sich die Region, in der Sie den Bucket erstellt haben, da Sie im n�
 
 ### Schritt 2: SQS-Warteschlange erstellen
 
-Erstellen Sie eine SQS Warteschlange, um zu verfolgen, wann Objekte zu dem von Ihnen erstellten Bucket hinzugefügt werden. Verwenden Sie vorerst die Standard-Konfigurationseinstellungen.
+Erstellen Sie eine SQS Warteschlange, um zu verfolgen, wann Objekte zu dem von Ihnen erstellten Bucket hinzugefügt werden. Verwenden Sie vorerst die Standard-Konfigurationseinstellungen. 
+
+Eine SQS-Warteschlange muss global eindeutig sein (z.B. kann nur eine für eine CDI-Synchronisierung verwendet werden und kann nicht in einem anderen Workspace wiederverwendet werden).
 
 {% alert important %}
 Stellen Sie sicher, dass Sie diese SQS in derselben Region anlegen, in der Sie auch den Bucket angelegt haben.
 {% endalert %}
 
 Notieren Sie sich unbedingt den ARN und die URL der SQS, da Sie sie während dieser Konfiguration häufig verwenden werden.
-<br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
-<br><br>
+
+![Auswählen von "Erweitert" mit einem JSON-Beispielobjekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
 ### Schritt 3: Zugriffsrichtlinie einrichten
 
@@ -88,16 +99,18 @@ Fügen Sie die folgende Anweisung an die Richtlinie für den Zugriff auf die War
 ### Schritt 4: Hinzufügen einer Ereignisbenachrichtigung zum S3-Bucket
 
 1. Gehen Sie in dem in Schritt 1 erstellten Bucket zu **Eigenschaften** > **Ereignisbenachrichtigungen**.
-
 2. Geben Sie der Konfiguration einen Namen. Geben Sie optional ein Präfix oder Suffix für das Targeting an, wenn nur eine Teilmenge der Dateien von Braze aufgenommen werden soll.
-
 3. Wählen Sie unter **Ziel** die **SQS Warteschlange** aus und geben Sie den ARN der SQS an, die Sie in Schritt 2 erstellt haben.
+
+{% alert note %}
+Wenn Sie Ihre Dateien in den Stammordner eines S3-Buckets hochladen und dann einige der Dateien in einen bestimmten Ordner im Bucket verschieben, kann ein unerwarteter Fehler auftreten. Stattdessen können Sie die Ereignisbenachrichtigungen so ändern, dass sie nur für die Dateien im Präfix gesendet werden, vermeiden, dass Dateien außerhalb dieses Präfixes in den S3-Bucket gelegt werden, oder die Integration ohne Präfix aktualisieren, die dann alle Dateien einliest.
+{% endalert %}
 
 ### Schritt 5: Erstellen Sie eine IAM-Richtlinie
 
 Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Bucket zu erlauben. Um loszulegen, melden Sie sich bei der AWS Verwaltungskonsole als Account Administrator an. 
 
-1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>![]({{site.baseurl}}/assets/img/create_policy_1_list.png)<br><br>
+1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>![Der Button "Richtlinie erstellen" in der AWS-Konsole.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
 
 2. Öffnen Sie den Tab **JSON** und geben Sie den folgenden Code-Snippet in den Abschnitt **Policy Document** ein. Achten Sie darauf, `YOUR-BUCKET-NAME-HERE` durch Ihren Bucket-Namen und `YOUR-SQS-ARN-HERE` durch den Namen Ihrer SQS Warteschlange zu ersetzen: 
 
@@ -135,21 +148,32 @@ Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Buc
 
 4. Geben Sie der Richtlinie einen Namen und eine Beschreibung und wählen Sie **Richtlinie erstellen**.  
 
-![]({{site.baseurl}}/assets/img/create_policy_3_name.png)
+![Eine Beispielrichtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
 
-![]({{site.baseurl}}/assets/img/create_policy_4_created.png)
+![Das Beschreibungsfeld für die Richtlinie.]({% image_buster /assets/img/create_policy_4_created.png %})
 
 ### Schritt 6: Eine IAM-Rolle erstellen
 
 Um die Einrichtung auf AWS abzuschließen, erstellen Sie eine IAM-Rolle und fügen ihr die IAM-Richtlinie aus Schritt 4 zu. 
 
-1. Gehen Sie in demselben IAM-Bereich der Konsole, in dem Sie die IAM-Richtlinie erstellt haben, zu **Rollen** > **Rolle erstellen**. <br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
+1. Gehen Sie in demselben IAM-Bereich der Konsole, in dem Sie die IAM-Richtlinie erstellt haben, zu **Rollen** > **Rolle erstellen**. 
 
-2. Kopieren Sie die ID des Braze-Kontos für AWS von Ihrem Braze-Dashboard. Gehen Sie zu **Cloud Datenaufnahme**, klicken Sie auf **Neue Datensynchronisation erstellen** und wählen Sie **S3 Import**. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
+<br><br>![Der Button "Rolle erstellen".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
-3. Wählen Sie in AWS **ein anderes AWS-Konto** als SELEKTOR-Typ für vertrauenswürdige Entitäten aus. Geben Sie die ID Ihres Braze-Kontos an, wählen Sie das Kontrollkästchen **Externe ID erforderlich** und geben Sie eine externe ID ein, die Braze verwenden soll. Wählen Sie nach Abschluss **Weiter** aus. <br><br> ![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({{site.baseurl}}/assets/img/create_role_2_another.png)
+2. Kopieren Sie die ID des Braze-Kontos für AWS von Ihrem Braze-Dashboard. Gehen Sie zu **Cloud Datenaufnahme**, wählen Sie **Neue Datensynchronisation erstellen** und wählen Sie **S3 Import**.
 
-4. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.<br><br>![Rollen-ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>Geben Sie der Rolle einen Namen und eine Beschreibung, und klicken Sie auf **Rolle erstellen**.<br><br>![Rollen-ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
+3. Wählen Sie in AWS **ein anderes AWS-Konto** als SELEKTOR-Typ für vertrauenswürdige Entitäten aus. Geben Sie die ID Ihres Braze-Kontos an, wählen Sie das Kontrollkästchen **Externe ID erforderlich** und geben Sie eine externe ID ein, die Braze verwenden soll. Wählen Sie nach Abschluss **Weiter** aus. 
+
+<br><br> ![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+
+{: start="4"}
+4\. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.
+
+<br><br>![Rollen-ARN mit ausgewähltem new-policy-name.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+
+Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle erstellen**.
+
+<br><br>![Eine Beispielrolle mit dem Namen "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
 5\. Notieren Sie sich den ARN der soeben erstellten Rolle und die externe ID, die Sie erzeugt haben, da Sie diese für die Integration der Datenaufnahme in der Cloud verwenden werden.  
@@ -157,44 +181,54 @@ Um die Einrichtung auf AWS abzuschließen, erstellen Sie eine IAM-Rolle und füg
 ## Einrichten der Datenaufnahme in der Cloud in Braze
 
 1. Um eine neue Integration zu erstellen, gehen Sie zu **Dateneinstellungen** > **Datenaufnahme in der Cloud**, wählen Sie **Neue Datensynchronisation erstellen** und wählen Sie **S3-Import** aus dem Abschnitt Dateiquellen. 
-
 2. Geben Sie die Informationen aus dem AWS-Einrichtungsprozess ein, um eine neue Synchronisierung zu erstellen. Geben Sie Folgendes an:
-- Rollen-ARN
-- Externe ID
-- SQS URL (muss für jede neue Integration eindeutig sein)
-- Bucket-Name
-- Ordnerpfad (optional)
-- Region  
 
-![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+  - Rollen-ARN
+  - Externe ID
+  - SQS URL (muss für jede neue Integration eindeutig sein)
+  - Bucket-Name
+  - Ordnerpfad (optional, muss bei allen Synchronisierungen in einem Workspace eindeutig sein)
+  - Region
+
+![Beispiel für Sicherheits-Zugangsdaten, wie sie in S3 angezeigt werden, um eine neue Importsynchronisation zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
-3\. Geben Sie Ihrer Integration einen Namen, und wählen Sie den Datentyp für diese Integration aus. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+3\. Benennen Sie Ihre Integration und wählen Sie den Datentyp für diese Integration aus. 
 
-4. Fügen Sie eine E-Mail für Benachrichtigungen hinzu, wenn die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Schalten Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen ein. <br><br> ![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+<br><br>![Einrichten von Synchronisierungsdetails für "cdi-s3-as-source-integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+
+{: start="4"}
+4\. Fügen Sie eine E-Mail für Benachrichtigungen hinzu, wenn die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Schalten Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen ein. 
+
+<br><br> ![Einrichten von Benachrichtigungseinstellungen für Synchronisationsfehler-Benachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
-5\. Testen Sie schließlich die Verbindung und speichern Sie die Synchronisierung. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+5\. Testen Sie schließlich die Verbindung und speichern Sie die Synchronisierung. 
 
+<br><br>![Eine Option zum Testen der Verbindung mit einer Vorschau der Daten.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Erforderliche Dateiformate
 
-Cloud Data Ingestion unterstützt JSON-, CSV- und Parquet-Dateien. Jede Datei muss eine oder mehrere der unterstützten Bezeichner-Spalten und eine Nutzdaten-Spalte als JSON String enthalten. 
+Cloud Data Ingestion unterstützt JSON-, CSV- und Parquet-Dateien. Jede Datei muss eine oder mehrere der unterstützten Bezeichner-Spalten und eine Nutzdaten-Spalte als JSON String enthalten.
 
-- Nutzer:innen Bezeichner. Ihre Quelldatei kann eine oder mehrere Spalten oder Schlüssel mit Nutzer:innen enthalten. Jede Zeile sollte nur einen Bezeichner enthalten, aber eine Quelldatei kann mehrere Arten von Bezeichnern enthalten. 
-    - `EXTERNAL_ID` - Dies ist der Bezeichner der Nutzerin oder des Nutzers, den oder die Sie aktualisieren möchten. Dies sollte dem in Braze verwendeten Wert `external_id` entsprechen. 
-    - `ALIAS_NAME` und `ALIAS_LABEL` \- Diese beiden Spalten erstellen ein Benutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt die Art des Alias an. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`.
-    - `BRAZE_ID` - Die Braze-Benutzerkennung. Diese wird vom Braze SDK generiert und neue Nutzer:innen können nicht mit einer Braze ID über Cloud Data Ingestion erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an.
-    - `EMAIL` - Die E-Mail-Adresse des Benutzers. Wenn mehrere Profile mit derselben E-Mail-Adresse vorhanden sind, wird das zuletzt aktualisierte Profil bei der Aktualisierung bevorzugt. Wenn Sie sowohl E-Mail als auch Telefon angeben, verwenden wir die E-Mail als primäre Kennung.
-    - `PHONE` - Die Telefonnummer der Nutzerin oder des Nutzers. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei der Aktualisierung bevorzugt. 
-- `PAYLOAD` - Dies ist ein JSON String mit den Feldern, die Sie mit dem Nutzer:innen in Braze synchronisieren möchten.
+Braze erzwingt keine zusätzlichen Anforderungen an Dateinamen, die über die von AWS erzwungenen hinausgehen. Dateinamen sollten eindeutig sein. Wir empfehlen, zur Eindeutigkeit einen Zeitstempel hinzuzufügen.
+
+### Nutzer:innen Bezeichner
+
+Ihre Quelldatei kann eine oder mehrere Spalten oder Schlüssel mit Nutzer:innen enthalten. Jede Zeile sollte nur einen Bezeichner enthalten, aber eine Quelldatei kann mehrere Arten von Bezeichnern enthalten.
+
+| Bezeichner | Beschreibung |
+| --- | --- |
+| `EXTERNAL_ID` | Dies ist der Bezeichner des Nutzers:innen, den Sie aktualisieren möchten. Dies sollte dem in Braze verwendeten Wert `external_id` entsprechen. |
+| `ALIAS_NAME` und `ALIAS_LABEL` | Diese beiden Spalten erstellen ein Nutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt den Typ des Alias an. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`. |
+| `BRAZE_ID` | Der Braze Nutzer:innen Bezeichner. Diese wird vom Braze SDK generiert und neue Nutzer:innen können nicht mit einer Braze ID über Cloud Data Ingestion erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
+| `EMAIL` | Die E-Mail Adresse des Nutzers:innen. Wenn mehrere Profile mit derselben E-Mail-Adresse vorhanden sind, wird das zuletzt aktualisierte Profil bei der Aktualisierung bevorzugt. Wenn Sie sowohl E-Mail als auch Telefon angeben, verwenden wir die E-Mail als primäre Kennung. |
+| `PHONE` | Die Telefonnummer der Nutzer:in. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei der Aktualisierung bevorzugt. |
+|`PAYLOAD` | Dies ist ein JSON String mit den Feldern, die Sie mit dem Nutzer:innen in Braze synchronisieren möchten. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Anders als bei Data Warehouse-Quellen ist die Spalte `UPDATED_AT` weder erforderlich noch wird sie unterstützt.
-{% endalert %}
-
-{% alert note %}
-Die zum S3-Bucket hinzugefügten Dateien sollten 512 MB nicht überschreiten. Dateien, die größer als 512 MB sind, führen zu einer Fehlermeldung und werden nicht mit Braze synchronisiert.
 {% endalert %}
 
 {% tabs %}
@@ -242,3 +276,24 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 {% endtabs %}  
 
 Beispiele für alle unterstützten Dateitypen finden Sie in den Beispieldateien in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+
+## Was Sie wissen sollten
+
+- Die zum S3-Bucket hinzugefügten Dateien sollten 512 MB nicht überschreiten. Dateien, die größer als 512 MB sind, führen zu einer Fehlermeldung und werden nicht mit Braze synchronisiert.
+- Es gibt keine zusätzliche Begrenzung für die Anzahl der Zeilen pro Datei.
+- Es gibt keine zusätzliche Begrenzung für die Anzahl der Dateien, die in einem bestimmten Zeitraum hochgeladen werden können.
+- Das Bestellen in oder zwischen Dateien wird nicht unterstützt. Wir empfehlen, Updates in regelmäßigen Abständen durchzuführen, wenn Sie auf zu erwartende Race-Conditions achten.
+
+## Fehlersuche
+
+### Hochladen von Dateien und Verarbeitung
+
+CDI verarbeitet nur Dateien, die nach der Erstellung der Synchronisierung hinzugefügt werden. Bei diesem Prozess sucht Braze nach neuen Dateien, die hinzugefügt werden sollen, was eine neue Nachricht an SQS triggert. Dadurch wird eine neue Synchronisierung gestartet, um die neue Datei zu verarbeiten.
+
+Vorhandene Dateien können zur Validierung der Datenstruktur in der Testverbindung verwendet werden, werden aber nicht mit Braze synchronisiert. Bestehende Dateien, die synchronisiert werden sollen, müssen erneut auf S3 hochgeladen werden, damit sie von CDI verarbeitet werden können.
+
+### Umgang mit unerwarteten Dateifehlern
+
+Wenn Sie eine hohe Anzahl von Fehlern oder fehlgeschlagenen Dateien beobachten, ist es möglich, dass Sie einen anderen Prozess haben, der dem S3-Bucket Dateien in einem anderen Ordner als dem Zielordner für CDI hinzufügt.
+
+Wenn Dateien in den Quell-Bucket hochgeladen werden, sich aber nicht im Quellordner befinden, verarbeitet CDI zwar die SQS-Benachrichtigung, führt aber keine Aktion für die Datei durch, so dass dies als Fehler erscheinen kann.

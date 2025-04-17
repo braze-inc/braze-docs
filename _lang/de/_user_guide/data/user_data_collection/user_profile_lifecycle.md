@@ -23,7 +23,7 @@ Diese Parameter umfassen:
 
 ## Anonyme Nutzer:in-Profile
 
-Jeder Nutzer:innen ohne einen bestimmten `external_id` wird als anonymer Nutzer:in bezeichnet. Das können zum Beispiel Nutzer sein, die Ihre Website besucht, sich aber nicht angemeldet haben, oder Nutzer, die Ihre mobile App heruntergeladen, aber kein Profil erstellt haben.
+Jeder Nutzer:innen ohne einen bestimmten `external_id` wird als [anonymer Nutzer]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/):in bezeichnet. Das können zum Beispiel Nutzer sein, die Ihre Website besucht, sich aber nicht angemeldet haben, oder Nutzer, die Ihre mobile App heruntergeladen, aber kein Profil erstellt haben.
 
 Wenn ein Benutzer vom SDK erkannt wird, wird zunächst ein anonymes Benutzerprofil mit einer `braze_id` erstellt – einer eindeutigen gerätespezifischen Kennung, die von Braze automatisch zugewiesen wird und nicht bearbeitet werden kann. Dieser Bezeichner kann verwendet werden, um das Nutzerprofil über die [API]({{site.baseurl}}/api/endpoints/user_data/) zu aktualisieren.
 

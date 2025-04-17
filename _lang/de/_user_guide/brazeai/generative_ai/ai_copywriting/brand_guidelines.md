@@ -11,7 +11,7 @@ description: "Dieser Referenzartikel behandelt die Markenrichtlinien für den KI
 
 ## Erstellen von Markenrichtlinien {#steps}
 
-Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistenten zu erstellen.
+Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistenten zu erstellen. Sie können Markenrichtlinien auch auf der Einstellungsseite für [Markenrichtlinien]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/) erstellen.
 
 ### Schritt 1: Markenrichtlinie erstellen
 
@@ -20,6 +20,7 @@ Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistent
 2. Wählen Sie **Markenrichtlinien anwenden** und dann **Markenrichtlinien erstellen**.
 3. Geben Sie einen Namen für diese Leitlinie ein. Es handelt sich um die Beschriftung, die Sie in der vorherigen Auswahl sehen.
 4. Fügen Sie bei **Wann werden Sie diese Markenrichtlinien verwenden?** Details hinzu, um Ihren Kollegen (und Ihnen in Zukunft) den Kontext für die Verwendung dieser Richtlinien zu erläutern.
+5. Wenn Sie möchten, dass dies der Standard-Markenleitfaden für den aktuellen Workspace ist, markieren Sie **Als Standard-Markenleitfaden verwenden**.
 
 ![Ansicht zur Erstellung von Markenrichtlinien.][1]
 

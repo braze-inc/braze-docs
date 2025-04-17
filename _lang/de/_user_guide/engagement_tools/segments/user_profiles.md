@@ -24,10 +24,6 @@ Um auf das Profil eines Benutzers zuzugreifen, gehen Sie auf die Seite **Benutze
 - Push-Token
 - Benutzer-Alias mit dem Format "[user_alias]:[alias_name]", wie z.B. "amplitude_id:user_123"
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt **die Benutzersuche** **Benutzersuche** und ist unter **Benutzer** zu finden.
-{% endalert %}
-
 Wenn eine Übereinstimmung gefunden wird, können Sie die Informationen, die Sie für diese Nutzer:innen erfasst haben, mit dem Braze SDK einsehen. Andernfalls, wenn Ihre Suche mehrere Nutzerprofile ergibt, können Sie jedes Profil einzeln zusammenführen oder eine Massen-Zusammenführung von Nutzer:innen durchführen. Eine vollständige Anleitung finden Sie unter [Doppelte Benutzer]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Suchergebnisse mit einem Banner mit der Aufschrift "Mehrere Nutzer:innen entsprechen Ihren Suchkriterien" und zwei Buttons mit der Aufschrift Zurück und Weiter.][1]
@@ -128,10 +124,6 @@ Abbruchereignisse sind derzeit nicht für In-App-Nachrichten und Inhaltskarten v
 ##### Frequency-Capping-Ereignisse
 
 Ein Frequency-Capping-Ereignis tritt ein, wenn ein Nutzer:innen für den Empfang einer Nachricht qualifiziert ist, diese aber aufgrund der [Frequency-Capping-Einstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) nicht erhält. Sie können die Einstellungen für die Frequenzbegrenzung unter **Einstellungen** > **Frequenzbegrenzungsregeln** anpassen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie die Frequenzbegrenzung unter **Engagement** > **Globale Nachrichteneinstellungen** verwalten.
-{% endalert %}
 
 ##### Leere Ziele
 

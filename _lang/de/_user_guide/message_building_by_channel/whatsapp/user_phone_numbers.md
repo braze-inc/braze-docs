@@ -38,7 +38,7 @@ In der folgenden Tabelle sehen Sie die Unterschiede zwischen der Formatierung lo
 | Land | Lokal | Ländercode | `E.164` |
 |---|---|---|---|
 | USA | `4155552671` | (1 %) | `+14155552671` |
-| Großbritannien | `2071838750` | 44 | `+442071838750` |
+| Großbritannien | `02071838750` | 44 | `+442071838750` |
 | Brasilien | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
 

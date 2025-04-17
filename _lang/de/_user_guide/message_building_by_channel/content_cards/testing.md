@@ -42,14 +42,9 @@ Nachdem Ihre Content Cards versendet wurden, können Sie im [Ereignisbenutzerpro
 Ein häufiger Anwendungsfall ist die Fehlersuche, wenn ein:e Nutzer:in eine bestimmte Content-Card nicht sehen kann. Dazu können Sie in den **Event-Nutzerprotokollen** nach den Content-Cards suchen, die dem SDK beim Sitzungsstart, aber vor einer Impression zugestellt wurden, und diese zu einer bestimmten Kampagne zurückverfolgen:
 
 1. Gehen Sie zu **Einstellungen** > **Ereignisbenutzerprotokoll**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie das **Event-Nutzerprotokoll** in der **Entwicklungskonsole**.
-{% endalert %}
-
-{:start="2"}
-2\. Suchen Sie die SDK-Anfrage für Ihren Testbenutzer und erweitern Sie sie.
-3\. Klicken Sie auf **Rohdaten**.
-4\. Finden Sie die `id` für Ihre Sitzung. Im Folgenden sehen Sie einen Beispielauszug:
+2. Suchen Sie die SDK-Anfrage für Ihren Testbenutzer und erweitern Sie sie.
+3. Klicken Sie auf **Rohdaten**.
+4. Finden Sie die `id` für Ihre Sitzung. Im Folgenden sehen Sie einen Beispielauszug:
 
     ```json
     [

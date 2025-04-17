@@ -25,6 +25,14 @@ API-abhängige Kampagnen werden dedupliziert oder versenden Duplikate – je nac
 - **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Wenn dieselbe E-Mail in mehreren `External_user_IDs` erscheint, auf die das Objekt `recipients`` verweist, wird die E-Mail zweimal gesendet.
 - **Szenario 3: Doppelte E-Mails aufgrund von doppelten user_ids im Empfängerobjekt:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
 
+### Wie prüfe ich, ob eine E-Mail Adresse bereits mit einer Nutzer:in verknüpft ist?
+
+Bevor Sie einen Nutzer:innen über die API oder das SDK anlegen, rufen Sie den [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) Endpunkt auf und geben Sie die `email_address` des Nutzers:innen an. Wenn es ein Nutzerprofil zurückgibt, ist dieser Nutzer:in bereits mit dieser E-Mail verknüpft.
+
+Wir empfehlen Ihnen dringend, bei der Erstellung neuer Nutzer:innen auf eindeutige E-Mail-Adressen zu achten und die Weitergabe oder den Import von Nutzer:innen mit der gleichen E-Mail-Adresse zu vermeiden. Andernfalls kann es zu unbeabsichtigten Konsequenzen kommen, die sich auf den Versand von Nachrichten, Targeting, Berichte und andere Features auswirken.
+
+Nehmen wir an, Sie haben doppelte Profile, aber bestimmte angepasste Events oder Attribute befinden sich nur in einem Profil. Wenn Sie versuchen, Kampagnen oder Canvase mit mehreren Kriterien zu triggern, kann Braze den Nutzer:innen nicht als geeignet identifizieren, da es zwei Nutzerprofile gibt. Oder wenn eine Kampagne auf eine E-Mail Adresse abzielt, die von zwei Nutzern geteilt wird, zeigt die Seite **Nutzer:innen suchen** an, dass beide Nutzerprofile die Kampagne erhalten haben.
+
 ### Werden Aktualisierungen meiner Einstellungen für ausgehende E-Mails rückwirkend angewendet?
 
 Nein. Aktualisierungen der Einstellungen für ausgehende E-Mails wirken sich nicht rückwirkend auf bestehende Sendungen aus. Wenn Sie beispielsweise Ihren Standard-Anzeigenamen in den E-Mail-Einstellungen ändern, wird der bestehende Standard-Anzeigename in Ihren aktiven Kampagnen oder Canvases nicht automatisch ersetzt. 
@@ -59,6 +67,12 @@ Es kann sein, dass Sie aus einem der folgenden Gründe mehr Klicks als Öffnunge
 - Die Benutzer führen mehrere Klicks auf den Text der E-Mail aus, wenn sie diese nur einmal öffnen.
 - Benutzer klicken auf einige E-Mail-Links im Vorschaufenster ihres Telefons. In diesem Fall protokolliert Braze, dass die E-Mail angeklickt, aber nicht geöffnet wurde.
 - Benutzer öffnen eine E-Mail erneut, die sie zuvor in der Vorschau angesehen haben.
+
+### Warum werden meine E-Mails weder geöffnet noch angeklickt?
+
+Es kann sein, dass Sie keine Öffnungen und Klicks per E-Mail erhalten, wenn Ihre Tracking Domain falsch konfiguriert ist. Dafür kann es einen der folgenden Gründe geben:
+- Es gibt ein SSL-Problem, bei dem Tracking-URLs `http` statt `https` sind.
+- Es gibt ein Problem mit Ihrem CDN, bei dem der Nutzer:in String bei den Öffnungs- oder Klick-Ereignissen oder bei beiden nicht ausgefüllt wird.
 
 ### Welche potenziellen Risiken birgt das Auslösen von Serverklicks?
 

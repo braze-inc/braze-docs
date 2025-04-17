@@ -1,3 +1,3 @@
 ## Voraussetzungen
 
-Bevor Sie beginnen, müssen Sie das [Cordova Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/integration/) in Ihre iOS- oder Android-App integrieren.
+Bevor Sie beginnen, müssen Sie das [Cordova Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=cordova) in Ihre iOS- oder Android-App integrieren.

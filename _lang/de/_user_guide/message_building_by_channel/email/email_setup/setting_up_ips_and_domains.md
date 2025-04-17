@@ -57,10 +57,6 @@ Um das SB-E-Mail-Setup zu nutzen, müssen Sie die folgenden Voraussetzungen erf�
 2. Wählen Sie dann die Registerkarte **Absenderüberprüfung**. Um diese Registerkarte sehen zu können, müssen Sie über die Berechtigung "Unternehmenseinstellungen verwalten können" auf Unternehmensebene verfügen.
 3. Klicken Sie auf die Schaltfläche **Einrichtung starten**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie die **Senderüberprüfung** finden, indem Sie auf Ihr Profilsymbol klicken.
-{% endalert %}
-
 ### Schritt 2: Sender-Domain hinzufügen und überprüfen
 
 Eine Sender-Domain wird in der „Von“-Adresse verwendet, wenn eine E-Mail gesendet wird. Geben Sie eine Senderdomäne ein und klicken Sie auf **Senden**. 

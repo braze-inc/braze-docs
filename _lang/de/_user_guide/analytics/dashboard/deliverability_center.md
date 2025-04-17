@@ -108,7 +108,7 @@ Weitere Anregungen zur Verbesserung der Zustellbarkeit finden Sie unter [Häufig
 Wenn Sie Ihr Hauptpostfach bei Microsoft haben, können Sie diese Integration nutzen, um auf Ihre Microsoft-Reputationsdaten zuzugreifen. Auf diese Weise können Sie den Zustand Ihrer IPs überwachen, um festzustellen, wie Ihre E-Mails ankommen.
 
 {% alert important %}
-Wenn Sie Ihre Daten nicht im Deliverability Center sehen, kontaktieren Sie den [Support]({{site.baseurl}}/help/support/) mit einer Liste Ihrer IP-Adressen.
+Wenn Sie Ihre Daten nicht im Deliverability Center sehen, kontaktieren Sie den [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) mit einer Liste Ihrer IP-Adressen.
 {% endalert %}
 
 ![][8]
