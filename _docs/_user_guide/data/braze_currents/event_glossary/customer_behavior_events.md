@@ -714,7 +714,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 Live Activity, Push To Start Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity push to start token with the user.
+This event occurs when Braze syncs Live Activity push to start token with the user
 
 {% tabs %}
 {% tab Amplitude %}
@@ -725,6 +725,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type"
@@ -747,6 +749,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
   "properties" : {
     "$partner_id" : "braze",
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
@@ -774,6 +778,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
       "data" : {
         "custom_attributes" : {
           "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
           "push_to_start_token" : "(optional, string) Live Activity push to start token",
@@ -811,6 +817,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
@@ -829,6 +837,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
 
 {
   "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
@@ -852,7 +862,7 @@ This event occurs when Braze syncs Live Activity push to start token with the us
 Live Activity, Update Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity update token with the user.
+This event occurs when Braze syncs Live Activity update token with the user
 
 {% tabs %}
 {% tab Amplitude %}
@@ -863,6 +873,8 @@ This event occurs when Braze syncs Live Activity update token with the user.
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "update_token" : "(optional, string) Live Activity update token"
@@ -885,6 +897,8 @@ This event occurs when Braze syncs Live Activity update token with the user.
   "properties" : {
     "$partner_id" : "braze",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
@@ -912,6 +926,8 @@ This event occurs when Braze syncs Live Activity update token with the user.
       "data" : {
         "custom_attributes" : {
           "activity_id" : "(optional, string) Live Activity identifier",
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
           "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
@@ -949,6 +965,8 @@ This event occurs when Braze syncs Live Activity update token with the user.
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
@@ -967,6 +985,8 @@ This event occurs when Braze syncs Live Activity update token with the user.
 
 {
   "activity_id" : "(optional, string) Live Activity identifier",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
@@ -999,6 +1019,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 
 {
   "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "platform" : "(optional, string) Platform of the device",
     "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
@@ -1028,6 +1050,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
     "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
@@ -1062,6 +1086,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
     {
       "data" : {
         "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
           "push_token" : "(optional, string) Push token of the event",
           "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
@@ -1105,6 +1131,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "push_token" : "(optional, string) Push token of the event",
     "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
@@ -1129,6 +1157,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 // users.behaviors.pushnotification.TokenStateChange
 
 {
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
