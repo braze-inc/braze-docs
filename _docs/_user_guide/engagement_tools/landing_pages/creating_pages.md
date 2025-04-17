@@ -43,11 +43,41 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 ![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/template.png %})
 
+#### Page container styles
+
+You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles will be used everywhere on your page except where you override them with a specific block.
+
+We recommend setting up page container-level styles before you customize styles at the block level. 
+
+You can also add a background image for the entire page. If you use a background image, double-check that text placed over it is still readable for a wide range of users. You may need to use a high-contrast color for your text. Refer to [Accessibility considerations](#accessibility-considerations) in this article for more.
+
+![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%" }
+
+{% alert note %}
+Braze editors allow you to select custom color combinations. Keep in mind that certain color choices can negatively affect accessibility. Choose your colors carefully to make sure your content is readabile and compliant with accessibility standards.
+{% endalert %}
+
+#### Landing page blocks
+
 The editor uses two types of components for landing page composition: [basic blocks](#basic-blocks) and [form blocks](#form-blocks). All blocks must be placed in a row.
 
-![The 'Build' section containing 'Rows' and 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+<table style="width: 100%; table-layout: fixed;">
+    <tr>
+        <th style="width: 50%;">Basic blocks</th>
+        <th style="width: 50%;">Form blocks</th>
+    </tr>
+    <tr>
+        <td style="text-align: center;">
+            <img src="{% image_buster /assets/img/landing_pages/landing_page_blocks.png %}" alt="Landing page blocks." style="max-width: 90%; height: auto; border:none;">
+        </td>
+        <td style="text-align: center;">
+            <img src="{% image_buster /assets/img/landing_pages/landing_page_form_blocks.png %}" alt="Landing page form blocks" style="max-width: 90%; height: auto; border:none;">
+        </td>
+    </tr>
+</table>
+{: .reset-td-br-1 role="presentation"}
 
-#### Basic blocks
+##### Basic blocks
 
 You can use these blocks to add content and customize the layout of your landing page.
 
@@ -56,13 +86,13 @@ You can use these blocks to add content and customize the layout of your landing
 | Title       | A text block for adding a heading or title to your content. Useful for structuring sections and improving readability. |
 | Paragraph   | A text block for longer descriptions or additional context. Supports rich text formatting. |
 | Button      | A clickable element that directs users to a specified action, such as opening a link or submitting a form. |
-| Image       | A block for displaying images. You can upload an image or provide a URL to reference an external source. |
+| Image       | A block for displaying images. You can upload an image or provide a URL to reference an external source. Remember to provide [alt text](#alt-text) for all meaningful images.  |
 | Link        | A hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer      | An invisible block that adds vertical spacing between elements for improved layout and readability. |
 | Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### Form blocks
+##### Form blocks
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
@@ -77,24 +107,15 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert important %}
-After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
-{% endalert %}
+{% alert note %}
+Form blocks in landing pages are a flexible way to collect information—but they currently have some accessibility limitations. For example, there’s no built-in way to group related fields or programmatically associate field labels with inputs. We are actively tracking and planning remediations for these issues. In the meantime, we recommend reviewing our [accessibility best practices](#best-practices) to help guide your content choices.
+{% endalert%}
 
-![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="float:right;max-width:30%;margin-left:15px" }
+### Step 4: Create a confirmation page (optional)
 
-#### Page container styles
+If you added a [form](#form-block) to your landing page in the previous step, create an additional landing page for the confirmation state. Then, add the **Open web URL** link to the button that submits the form. Map this button to your confirmation page.
 
-You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles will be used everywhere on your page except where you override them with a specific block.
-
-We recommend setting up page container-level styles before you customize styles at the block level. 
-
-You can also add a background image for the entire page. If you use a background image, double-check that text placed over it is still readable for a wide range of users. You may need to use a high-contrast color for your text. Refer to [Accessibility considerations](#accessibility-considerations) in this article for more.
-
-
-### Step 4: Create a confirmation page
-
-If you added a [form](#form-block) to your landing page in the previous step, create an additional landing page for the confirmation state, then add the **Open web URL** link to the button that submits the form. Otherwise, continue to the next step.
+Be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 
 ### Step 5: Preview the page
 
@@ -126,7 +147,7 @@ In the meantime, there are still meaningful steps you can take to improve access
 
 ### Best practices
 
-#### Add alt text to meaningful images
+#### Add alt text to meaningful images {#alt-text}
 
 Alt text is a short description of an image that screen readers announce to users who can’t see the screen. If your image is meaningful—like a visual of a product, chart, or call to action—include clear and concise alt text so everyone understands what’s being shown. This supports users who are blind, have low vision, or rely on text-to-speech tools. (WCAG 1.1.1)
 
