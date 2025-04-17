@@ -135,7 +135,7 @@ Hier kann Ihre Botschaft über den Laufsteg stolzieren, gekleidet in den typisch
 
 - Eine Liste der verfügbaren Editorblöcke und ihrer Eigenschaften finden Sie unter [Editorblöcke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Hilfe bei der Anpassung des Aussehens Ihrer Nachricht finden Sie unter [Stil-Einstellungen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- Bewährte Verfahren zur Erstellung von Nachrichten von rechts nach links finden Sie unter [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- Bewährte Verfahren zur Erstellung von Nachrichten von rechts nach links finden Sie unter [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Schritt 5: Testen Sie Ihre In-App-Nachricht
 

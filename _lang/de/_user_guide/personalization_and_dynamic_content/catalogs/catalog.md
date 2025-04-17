@@ -46,10 +46,6 @@ Wir empfehlen außerdem, den gesamten Text Ihrer CSV-Dateien in Kleinbuchstaben 
 
 Um einen Katalog zu erstellen, gehen Sie zu **Dateneinstellungen** > **Kataloge**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kataloge** unter **Daten**.
-{% endalert %}
-
 Wählen Sie **Neuen Katalog erstellen** und wählen Sie dann entweder **CSV hochladen** oder **Im Browser erstellen**.
 
 ### Methode 1: CSV hochladen

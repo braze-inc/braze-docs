@@ -18,10 +18,6 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Webhook-Templates 
 
 Gehen Sie im Dashboard von Braze zu **Vorlagen** > **Webhook-Vorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **Webhook-Vorlagen**.
-{% endalert %}
-
 ![Die Seite "Webhook-Vorlagen" mit vordefinierten und gespeicherten Webhook-Vorlagen.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Schritt 2: Wählen Sie Ihre Vorlage

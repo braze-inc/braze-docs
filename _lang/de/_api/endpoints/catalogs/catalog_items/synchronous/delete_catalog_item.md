@@ -6,11 +6,11 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogartikel löschen von Braze."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogartikel löschen in Braze."
 
 ---
 {% api %}
-# Einen Katalogartikel löschen
+# Einen Artikel im Katalog löschen
 {% apimethod delete %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
@@ -23,19 +23,19 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogartikel
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.delete_item`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `catalog_name` | Erforderlich | String | Name des Katalogs. |
 | `item_id` | Erforderlich | String | Die ID des Katalogartikels. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 Für diesen Endpunkt gibt es keinen Anfragetext.
 
@@ -49,11 +49,11 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Antwort
 
-Es gibt drei Statuscode-Antworten für diesen Endpunkt: `202`, `400`, und `404`.
+Es gibt drei Status Code Antworten für diesen Endpunkt: `202`, `400`, und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -63,7 +63,7 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {

@@ -40,7 +40,7 @@ Die Änderungen werden wirksam, nachdem Sie **Speichern** ausgewählt haben. Wen
 
 In bestimmten Ländern besteht ein höheres Risiko, dass der SMS-Verkehr gepumpt wird. Diese Länder sind in der Dropdown-Liste mit einem **hohen Risiko** gekennzeichnet.
 
-![Das Land Aserbaidschan ist mit einem „hohen Risiko“ eingestuft.][4]{: style="max-width:80%;"}
+![Das Länder-Dropdown mit Aserbaidschan mit dem Tag "Hohes Risiko".][4]{: style="max-width:80%;"}
 
 Wenn Sie den Versand in diese Länder zulassen, müssen Sie zunächst das damit verbundene Risiko anerkennen, bevor das Land in Ihre Zulassungsliste aufgenommen wird.
 

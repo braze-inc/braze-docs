@@ -228,6 +228,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "email_address" : "(optional, string) [PII] Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -264,6 +265,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(optional, string) [PII] Email address of the user",
@@ -301,6 +303,7 @@ This event occurs when Braze receives a request to update the global subscriptio
           "canvas_step_name" : "(optional, string) Name of the Canvas step",
           "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "channel" : "(optional, string) Channel this event belongs to",
           "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
@@ -352,6 +355,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
@@ -414,7 +418,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |
-| Auto Opt-In By Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
+| Push Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
@@ -450,6 +454,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(optional, string) [PII] Email address of the user",
@@ -488,6 +493,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -530,6 +536,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
           "canvas_step_name" : "(optional, string) Name of the Canvas step",
           "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "channel" : "(optional, string) Channel this event belongs to",
           "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -584,6 +591,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "channel" : "(optional, string) Channel this event belongs to",
     "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -6341,6 +6349,8 @@ This event occurs when Braze receives a response from a third party provider (e.
   "event_properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
     "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
@@ -6365,6 +6375,8 @@ This event occurs when Braze receives a response from a third party provider (e.
     "$partner_id" : "braze",
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
@@ -6391,6 +6403,8 @@ This event occurs when Braze receives a response from a third party provider (e.
         "custom_attributes" : {
           "activity_attributes_type" : "(optional, string) Live Activity attribute type",
           "activity_id" : "(optional, string) Live Activity identifier",
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
           "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
           "push_to_start_token" : "(optional, string) Live Activity push to start token",
@@ -6429,6 +6443,8 @@ This event occurs when Braze receives a response from a third party provider (e.
   "properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
     "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
@@ -6448,6 +6464,8 @@ This event occurs when Braze receives a response from a third party provider (e.
 {
   "activity_attributes_type" : "(optional, string) Live Activity attribute type",
   "activity_id" : "(optional, string) Live Activity identifier",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
@@ -6481,6 +6499,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
   "event_properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
     "update_token" : "(optional, string) Live Activity update token"
@@ -6504,6 +6524,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
     "$partner_id" : "braze",
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
@@ -6529,6 +6551,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
         "custom_attributes" : {
           "activity_attributes_type" : "(optional, string) Live Activity attribute type",
           "activity_id" : "(optional, string) Live Activity identifier",
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
           "push_to_start_token" : "(optional, string) Live Activity push to start token",
           "source_request_id" : "(required, string) Globally unique ID for this event",
@@ -6566,6 +6590,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
   "properties" : {
     "activity_attributes_type" : "(optional, string) Live Activity attribute type",
     "activity_id" : "(optional, string) Live Activity identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
     "push_to_start_token" : "(optional, string) Live Activity push to start token",
     "update_token" : "(optional, string) Live Activity update token"
@@ -6584,6 +6610,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
 {
   "activity_attributes_type" : "(optional, string) Live Activity attribute type",
   "activity_id" : "(optional, string) Live Activity identifier",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",

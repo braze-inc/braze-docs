@@ -286,7 +286,7 @@ A time stamp of when an event took place. [Time][13] values must have a [math fi
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
 [5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
+[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings

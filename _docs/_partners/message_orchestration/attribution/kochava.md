@@ -117,7 +117,7 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
+[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [4]: {% image_buster /assets/img/attribution/kochava.png %}

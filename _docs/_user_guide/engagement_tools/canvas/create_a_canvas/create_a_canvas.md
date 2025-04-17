@@ -64,7 +64,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Summary %}
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the listed Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) turned on, you can approve the listed Canvas details before launching.
 
   {% endtab %}
 {% endtabs %}

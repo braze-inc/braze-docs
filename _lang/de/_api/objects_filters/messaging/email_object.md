@@ -1,18 +1,18 @@
 ---
-nav_title: "E-Mail-Objekt"
-article_title: E-Mail-Nachrichtenobjekt
+nav_title: "E-Mail Objekt"
+article_title: E-Mail Messaging Objekt
 page_order: 5
 page_type: reference
 channel: email
-description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des E-Mail-Objekts von Braze."
+description: "In diesem referenzierten Artikel werden die verschiedenen Komponenten des E-Mail-Objekts von Braze erläutert."
 
 ---
 
-# E-Mail-Objekt
+# E-Mail Objekt
 
-> Mit dem Objekt `email` können Sie E-Mails über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) ändern oder erstellen.
+> Mit dem Objekt `email` können Sie über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) E-Mails ändern oder erstellen.
 
-## E-Mail-Objekt
+## E-Mail Objekt
 
 ```json
 {
@@ -35,20 +35,20 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
 }
 ```
 
-- [App Kennung]({{site.baseurl}}/api/identifier_types/)
-- Weitere Informationen und Best Practices zu Preheadern finden Sie in unserem Hilfeartikel zu [email body styling][46].
+- [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
+- Weitere Informationen und bewährte Verfahren für Preheader finden Sie in unserem Hilfeartikel zu [email body styling][46].
 
 {% alert warning %}
-Braze empfiehlt, die Verwendung von Google Drive-Links für Ihre Anhänge `url` zu vermeiden, da dies die Aufrufe unserer Server zum Abrufen der Datei blockieren und dazu führen kann, dass die E-Mail-Nachricht nicht gesendet wird.
+Braze empfiehlt, die Verwendung von Google Drive-Links für Ihre Anhänge `url` zu vermeiden, da dies die Aufrufe unserer Server zum Abrufen der Datei blockieren und dazu führen kann, dass die Nachricht nicht gesendet wird.
 {% endalert %}
 
-Gültige Anhangtypen sind: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf`, und `pkpass`.
+Gültige Anhangstypen sind: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf`, und `pkpass`.
 
-Eine `email_template_id` kann vom unteren Rand jeder mit dem HTML-Editor erstellten E-Mail-Vorlage abgerufen werden. Im Folgenden sehen Sie ein Beispiel dafür, wie diese ID aussieht:
+Eine `email_template_id` kann am Ende jeder mit dem HTML-Editor erstellten E-Mail-Vorlage abgerufen werden. Im Folgenden sehen Sie ein Beispiel dafür, wie diese ID aussieht:
 
-![Abschnitt "API-Kennung" einer HTML-E-Mail-Vorlage][31]
+![API Bezeichner Abschnitt einer HTML E-Mail Vorlage][31]
 
-## Beispiel E-Mail-Objekt mit Anhang
+## Beispiel für ein E-Mail-Objekt mit Anhang
 
 ```json
 {
@@ -65,15 +65,15 @@ Eine `email_template_id` kann vom unteren Rand jeder mit dem HTML-Editor erstell
 }
 ```
 
-## Authentifizierung für E-Mail-Dateianhänge
+## Authentifizierung für E-Mail Dateianhänge
 
 {% alert important %}
-Die Authentifizierung für E-Mail-Dateianhänge in diesem Endpunkt befindet sich derzeit noch im Anfangsstadium. Wenden Sie sich an Ihren Braze-Kundenbetreuer, wenn Sie sich für die Teilnahme am Early Access interessieren.
+Die Authentifizierung für E-Mail Dateianhänge in diesem Endpunkt befindet sich derzeit in der Early Access Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
 {% endalert %}
 
-1. Navigieren Sie zu **Einstellungen** > **Verbundene Inhalte** und klicken Sie auf **Zugangsdaten hinzufügen**, um Ihre Authentifizierungsdaten hinzuzufügen.
+1. Navigieren Sie zu **Einstellungen** > **Connected-Content** und klicken Sie auf **Zugangsdaten hinzufügen**, um Ihre Zugangsdaten hinzuzufügen.
 2. Geben Sie einen Namen ein, und fügen Sie einen Benutzernamen und ein Passwort hinzu.
-3. Fügen Sie in das E-Mail-Objekt des Endpunkts `/messages/send` eine Eigenschaft `basic_auth_credential` ein, die den Namen des Berechtigungsnachweises in den Anlagedetails angibt. Sehen Sie sich das folgende Beispiel mit dem Berechtigungsnamen `company_basic_auth_credential_name` an:
+3. Fügen Sie in das E-Mail-Objekt des Endpunkts `/messages/send` eine Eigenschaft `basic_auth_credential` ein, die den Namen der Zugangsdaten in den Anlagedetails angibt. Referenzieren Sie auf das folgende Beispiel mit dem Zugangsdaten-Namen `company_basic_auth_credential_name`:
 
 ```json
 {

@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Audience Sync
-    link: /docs/partners/canvas_steps/
+    link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 

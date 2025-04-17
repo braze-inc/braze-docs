@@ -2,7 +2,7 @@
 nav_title: Schnelle Push-Nachrichten
 article_title: Schnelle Push-Nachrichten
 alias: "/quick_push/"
-description: "Dieser Artikel beschreibt, was Sie bei der Erstellung einer Push-Kampagne oder Cavnas mit der Push-Schnellbearbeitung beachten sollten."
+description: "Dieser Artikel beschreibt, was Sie bei der Erstellung einer Push-Kampagne oder eines Canvas mit der Push-Schnellbearbeitung beachten sollten."
 ---
 
 # Schnelle Push-Nachrichten
@@ -62,9 +62,9 @@ Wenn Sie mehrere Geräte für mobile Plattformen also z. B. sowohl iOS als auch 
 
 ### Gerätespezifische Einstellungen
 
-Sie können plattformspezifische Einstellungen im Editor bearbeiten. Dazu gehören Einstellungen wie [Push-Action-Tasten]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), Benachrichtigungskanäle und -gruppen, TTL, Anzeigepriorität, Töne und mehr.
+Sie können plattformspezifische Einstellungen im Editor bearbeiten. Dazu gehören Einstellungen wie [Push-Action-Tasten]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), Benachrichtigungskanäle und -gruppen, TTL, Anzeigepriorität, Töne und mehr. 
 
-Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den folgenden Artikelsammlungen:
+Beachten Sie, dass Push-Action-Buttons beim Targeting von Quick-Push-Kampagnen sowohl für iOS als auch für Android nicht unterstützt werden. Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den folgenden Artikelsammlungen:
 
 - [iOS-Optionen][6]
 - [Android-Optionen][7]

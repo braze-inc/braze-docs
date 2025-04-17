@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Details zum Exportsegment"
-article_title: "GET: Details zum Exportsegment"
+nav_title: "GET: Details zum Segment Export"
+article_title: "GET: Details zum Segment Export"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Segmentdetails exportieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export Segmente Braze."
 
 ---
 {% api %}
-# Details zum Exportsegment
+# Details zum Segment Export
 {% apimethod get %}
-/segments/details
+/segmente/details
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um relevante Informationen über ein Segment abzurufen, das durch die `segment_id` identifiziert werden kann.
+> Verwenden Sie diesen Endpunkt, um relevante Informationen über ein Segment abzurufen, das durch den Bezeichner `segment_id` identifiziert werden kann.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
@@ -22,15 +22,15 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Segmentd
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `segments.details`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter    | Erforderlich | Daten Typ | Beschreibung            |
+| Parameter    | Erforderlich | Datentyp | Beschreibung            |
 | ------------ | -------- | --------- | ---------------------- |
-| `segment_id` | Erforderlich | String | Siehe [Segment-API-Bezeichner]({{site.baseurl}}/api/identifier_types/).<br><br> Die `segment_id` für ein bestimmtes Segment finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) in Ihrem Braze-Konto oder Sie können den [Endpunkt Segmentliste exportieren]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) verwenden.  |
+| `segment_id` | Erforderlich | String | Siehe [Segment API Bezeichner]({{site.baseurl}}/api/identifier_types/).<br><br> Die `segment_id` für ein bestimmtes Segment finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) in Ihrem Braze-Konto oder Sie können den [Endpunkt Segmentliste exportieren]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) verwenden.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -24,14 +24,9 @@ Sie sind sich nicht sicher, ob Ihre Nachricht mit einer Kampagne oder einem Canv
 {% tab Kampagne %}
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Wählen Sie **Content-Cards** oder, für Kampagnen, die auf mehrere Kanäle zielen, **Multichannel** aus.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+2. Wählen Sie **Content-Cards** oder, für Kampagnen, die auf mehrere Kanäle zielen, **Multichannel** aus.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach den entsprechenden Tags filtern.
 5. Fügen Sie beliebig viele Varianten für Ihre Kampagne hinzu und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Mehr über Varianten erfahren Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -83,7 +78,7 @@ Wählen Sie **Sprachen hinzufügen**, um die gewünschten Sprachen aus der vorge
 
 ##### Erstellen von Nachrichten von rechts nach links
 
-Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 #### Titel und Nachricht
 
@@ -158,7 +153,7 @@ Als nächstes können Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_
 
 #### Wählen Sie Konversions-Events aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 {% endtab %}
 
@@ -213,7 +208,7 @@ Sie können mehrere benutzerdefinierte Ereignisse und Käufe angeben, die eine K
 
 ### Aktualisieren der gestarteten Karten
 
-Inhaltskarten können nach dem Versenden nicht mehr bearbeitet werden. Wenn Sie feststellen, dass Sie Änderungen an bereits versendeten Karten vornehmen müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) in Betracht ziehen, wie in den folgenden Optionen beschrieben.
+Inhaltskarten können nach dem Versenden nicht mehr bearbeitet werden. Wenn Sie feststellen, dass Sie Änderungen an bereits versendeten Karten vornehmen müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) in Betracht ziehen, wie in den folgenden Optionen beschrieben.
 
 {% alert note %}
 Wenn eine Content-Card wieder zugelassen wird, kann sie erneut gesendet werden, wenn sich die ursprüngliche Karte noch in der App eines Nutzers:innen befindet. Um doppelte Karten in der App eines Nutzers zu vermeiden, können Sie die Wiederzulassung deaktivieren oder das Wiederzulassungsfenster verlängern, so dass Nutzer:innen erst dann eine neue Karte erhalten, wenn die ursprüngliche abgelaufen ist.

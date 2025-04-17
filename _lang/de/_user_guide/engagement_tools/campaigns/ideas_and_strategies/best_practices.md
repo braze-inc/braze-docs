@@ -16,7 +16,7 @@ Braze empfiehlt Ihnen, nur Kundendaten zu senden, die Sie auf der Braze-Plattfor
 - **Targeting** Ihrer Zielgruppen durch [Segmentierung der Zielgruppen]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Triggern Sie** Ihre Nachrichten mit [aktionsbasierter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) oder [API-gesteuerter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) Zustellung.
 - **Erstellen Sie Vorlagen** und personalisieren Sie Ihre Nachrichten mit [Liquid Conditional Logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Auf diese Weise können Sie die Daten, die Sie an Braze senden, optimieren und Ihre Nutzer besser informieren, während Sie gleichzeitig sicherstellen, dass Sie keine Datenpunkte verfolgen, die für Ihr Team langfristig nicht hilfreich sind. 
 

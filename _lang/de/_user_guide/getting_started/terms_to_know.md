@@ -51,7 +51,7 @@ glossaries:
   - name: Endpunkt
     description: "Ein Endpunkt eines Kommunikationskanals, der auch als <a href=\"https://www.braze.com/docs/api/endpoints/\">API-Endpunkt</a> bezeichnet wird, wird innerhalb der Messaging-API von Braze zum Senden und Planen von Nachrichten verwendet."
   - name: Ausnahme-Events
-    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">Ausnahmeereignisse</a> treten auf, wenn ein Benutzer das gewünschte Ziel erreicht hat und keine ausgelöste Nachricht erhält. Auf diese Weise ist die getriggerte Nachricht für den Nutzer:innen immer noch relevant."
+    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">Ausnahmeereignisse</a> treten auf, wenn ein Benutzer das gewünschte Ziel erreicht hat und keine ausgelöste Nachricht erhält. Auf diese Weise ist die getriggerte Nachricht für den Nutzer:innen immer noch relevant."
   - name: Frequency-Capping
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">Frequency-Capping</a> ermöglicht es Ihnen, die Kommunikation zu steuern, ohne Ihre Zielgruppe zu überfordern. Es handelt sich um eine automatische Begrenzung der Nachrichten, um zu verhindern, dass Nutzer:innen zu viele Nachrichten in kurzer Zeit erhalten."
   - name: HIPAA

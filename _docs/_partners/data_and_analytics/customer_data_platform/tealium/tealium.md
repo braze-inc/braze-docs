@@ -16,7 +16,7 @@ search_tag: Partner
 ![A Tealium overview graphic showing how the different Tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.][22]{: style="border:0;"}
 
 The Braze and Tealium integration allows you to track your users and route data to various user analytics providers. Tealium allows you to:
-- Sync Tealium audiences with [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) to Braze for use in personalizing Braze campaigns and Canvases or building segments.
+- Sync Tealium audiences with [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) to Braze for use in personalizing Braze campaigns and Canvases or building segments.
 - [Import data across platforms](#choose-your-integration-type). Braze offers both a [side-by-side](#side-by-side-sdk-integration) SDK integration for your Android, iOS, and web applications and a [server-to-server](#server-to-server-integration) integration that can be used within any platform that can report event data.<br><br>
 
 {% tabs %}
@@ -31,7 +31,7 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 {% endtab %}
 {% tab AudienceStream %}
 
-Tealium AudienceStream is an omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. Refer to our [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) article for set up steps.
+Tealium AudienceStream is an omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. Refer to our [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) article for set up steps.
 
 {% endtab %}
 {% tab iQ Tag Management %}

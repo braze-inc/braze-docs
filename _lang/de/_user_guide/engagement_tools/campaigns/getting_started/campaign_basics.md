@@ -56,7 +56,7 @@ Sie können vordefinierte [Segmente]({{site.baseurl}}/user_guide/engagement_tool
 
 > Warum führen Sie diese Kampagne durch? 
 
-Man sollte immer ein klares Ziel vor Augen haben – und mit Kampagnen können Sie Ihre Performance anhand von KPIs wie Engagement, Käufe und angepasste Events beurteilen. Wenn Sie mindestens ein [Konversions-Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) auswählen, können Sie die Kampagnenperformance genauer nachvollziehen.
+Man sollte immer ein klares Ziel vor Augen haben – und mit Kampagnen können Sie Ihre Performance anhand von KPIs wie Engagement, Käufe und angepasste Events beurteilen. Wenn Sie mindestens ein [Konversions-Event]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) auswählen, können Sie die Kampagnenperformance genauer nachvollziehen.
 
 ### Das "Wo": Meine Zielgruppe finden
 

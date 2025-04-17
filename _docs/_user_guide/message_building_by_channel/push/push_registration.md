@@ -87,7 +87,7 @@ You must request explicit opt-in from users via the native browser permission di
 
 There's two ways you can check a user's push subscription state with Braze:
 
-- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
 - **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ### Checking push registration status

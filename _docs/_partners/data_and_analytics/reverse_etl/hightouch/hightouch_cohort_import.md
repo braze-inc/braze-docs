@@ -8,7 +8,7 @@ search_tag: Partner
 ---
 # Hightouch cohort import
 
-> This article describes how to import user cohorts from [Hightouch][1] to Braze so you can send targeted campaigns based on data that may only exist in your warehouse. For more information on integrating Hightouch and its other functionalities, see the main [Hightouch article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/).
+> This article describes how to import user cohorts from [Hightouch][1] to Braze so you can send targeted campaigns based on data that may only exist in your warehouse. For more information on integrating Hightouch and its other functionalities, see the main [Hightouch article]({{site.baseurl}}/partners/data_and_analytics/reverse_etl/hightouch/hightouch/).
 
 ## Data import integration
 

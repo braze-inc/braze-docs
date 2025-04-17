@@ -13,7 +13,7 @@ tool:
 
 > Install attribution tracking is a great way to improve your initial relationship with your user. Knowing how, where, and even more importantly, why a user installs your app allows you to get a better understanding of who your user is and how you should introduce them to your app. 
 
-While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/attribution) such as Branch and AppsFlyer to seamlessly provide you with install data.
+While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/) such as Branch and AppsFlyer to seamlessly provide you with install data.
 
 ## Segment your users
 

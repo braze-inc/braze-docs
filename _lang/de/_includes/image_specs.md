@@ -28,7 +28,7 @@ Modale In-App-Nachrichten sind so konzipiert, dass sie sich bestmöglich und mit
 
 Es gibt zwar keine Beschränkungen für die Anzahl der Textzeichen, die Sie in einer In-App-Nachricht (sowie in Buttons, in der Überschrift, im Hauptteil und in anderen Teilen) verwenden können, aber wir begrenzen die Anzahl der Textzeichen, die Sie verwenden. Zu viel Text führt dazu, dass die Nutzer die Nachricht erweitern und scrollen müssen.
 
-Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPG und GIF.
+Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF.
 
 {% tabs %}
 {% tab Porträt %}
@@ -103,7 +103,7 @@ table td {
     <td>2:1 (empfohlen)</td>
     <td>1038 x 1038 px maximal</td>
     <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
+    <td>PNG, JPEG, GIF</td>
     <td>Ab Januar 2020 können iOS Rich-Push-Benachrichtigungen Bilder mit einer Größe von 1038 x 1038 px verarbeiten, solange sie unter 10 MB liegen. Wir empfehlen jedoch, eine möglichst kleine Dateigröße zu verwenden. In der Praxis kann das Versenden großer Dateien sowohl unnötigen Stress für das Netzwerk verursachen als auch dazu führen, dass es häufiger zu Timeouts beim Herunterladen kommt.<br><br>Weitere Informationen finden Sie unter <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS Rich Notifications</a>.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ table td {
     <td>1:1</td>
     <td>--</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td></td>
   </tr>
   <tr>
@@ -119,7 +119,7 @@ table td {
     <td>2:1</td>
     <td>Klein: 512 x 256 px<br>Medium: 1024 x 512 px<br>Groß: 2048 x 1024 px</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Wird in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android Rich Notifications</a> verwendet.</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ table td {
     <td>3:2</td>
     <td>--</td>
     <td>--</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Weitere Einzelheiten finden Sie unter <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android-Inline-Image-Push</a>.</td>
   </tr>
 </table>
@@ -147,7 +147,7 @@ table td {
 | --- | --- | 
 | Größe | 5 MB |
 | Breite | Überschrift: 600 px<br>Text: 480 px |
-| Dateitypen | PNG, JPG, GIF |
+| Dateitypen | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text Spezifikationen | Empfohlene maximale Eigenschaften |
