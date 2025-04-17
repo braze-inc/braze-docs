@@ -361,7 +361,7 @@ To create a [Custom Events report]({{site.baseurl}}/user_guide/data_and_analytic
 
 To gain insights into the trends related to orders placed from your launched Canvases, you will need to set up a [Conversions Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) and specify your Canvases.
 
-For more advanced reporting use cases, you can use the Braze [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) to generate custom reports. 
+For more advanced reporting use cases, you can use the Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate custom reports. 
 
 [2]: {% image_buster /assets/img_archive/apply_template.png %}
 [3]: {% image_buster /assets/img_archive/abandoned_browse.png %}

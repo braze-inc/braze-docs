@@ -11,7 +11,7 @@ guide_featured_list:
   link: /docs/partners/appsflyer/
   image: /assets/img/braze_icons/user-circle.svg
 - name: AppsFlyer Audiences
-  link: /docs/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/
+  link: /docs/partners/data_and_analytics/cohort_import/appsflyer_audiences/
   image: /assets/img/braze_icons/users-01.svg
 
 ---

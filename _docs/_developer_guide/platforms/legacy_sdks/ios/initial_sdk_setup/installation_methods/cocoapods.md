@@ -22,10 +22,10 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide").
+If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html).
 
 {% alert note %}
-If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") directions on CocoaPods.org for more details.
+If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html) directions on CocoaPods.org for more details.
 {% endalert %}
 
 ## Step 2: Constructing the Podfile

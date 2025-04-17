@@ -176,9 +176,9 @@ Users can view and engage the most relevant content they are eligible for. Becau
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS Content Card Integration Guide")
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android Content Card Integration Guide")
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web Content Card Integration Guide")
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/)
 
 ## Sources
 
