@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Heap analytics
 
-> This article describes how to automatically send engagement events from Braze to Heap for analysis. For more information on integrating Heap and its other functionalities, such as [syncing Heap cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/#data-import-integration) to Braze, see the main [Heap article]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/).
+> This article describes how to automatically send engagement events from Braze to Heap for analysis. For more information on integrating Heap and its other functionalities, such as [syncing Heap cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/#data-import-integration) to Braze, see the main [Heap article]({{site.baseurl}}/partners/data_and_analytics/analytics/heap/heap_cohort_import/).
 
 ## Data export integration
 

@@ -200,7 +200,7 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 </script>
 ```
 
-For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/).
+For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
 ## Other integration methods
 

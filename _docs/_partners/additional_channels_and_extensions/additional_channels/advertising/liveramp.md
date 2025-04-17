@@ -36,7 +36,7 @@ Snowflake's [Secure Data Shares](https://docs.snowflake.com/en/user-guide/data-s
 
 First, reach out to your Braze account manager or customer success manager to purchase a Snowflake Data Share Connector for your Braze account. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
 
-For a full walkthrough, see [Snowflake integration guide with Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/).
+For a full walkthrough, see [Snowflake integration guide with Braze]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/).
 
 ### Step 2: Set up the LiveRamp app in Snowflake 
 

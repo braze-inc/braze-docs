@@ -21,7 +21,7 @@ A troubleshooting doc detailing common CSV and API errors has been added to the 
 
 ## EduMe partnership
 
-EduMe is a mobile-based training tool that gives your workforce the knowledge they need to succeed. Use Connected Content in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality. For more information, check out our [EduMe]({{site.baseurl}}/partners/message_orchestration/learning/edume/) documentation.
+EduMe is a mobile-based training tool that gives your workforce the knowledge they need to succeed. Use Connected Content in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality. For more information, check out our [EduMe]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/learning/edume/) documentation.
 
 ## Pypestream partnership
 
@@ -29,7 +29,7 @@ Pypestream is a full-stack, conversational AI platform offering patented, all-in
 
 ## Dyspatch partnership
 
-With Dyspatch, use the intuitive drag-and-drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of steps! For more information, check out our [Dyspatch]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/dyspatch/) documentation.
+With Dyspatch, use the intuitive drag-and-drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of steps! For more information, check out our [Dyspatch]({{site.baseurl}}/partners/message_orchestration/templates/dyspatch/) documentation.
 
 ## RudderStack partnership
 

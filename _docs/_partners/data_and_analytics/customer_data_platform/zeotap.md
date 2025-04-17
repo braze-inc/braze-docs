@@ -11,13 +11,13 @@ description: "This landing page is home to everything Zeotap including how to in
 
 guide_featured_list:
 - name: Zeotap
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap/
+  link: /docs/partners/data_and_analytics/customer_data_platform/zeotap/zeotap/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Zeotap Symphony
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/symphony/
+  link: /docs/partners/data_and_analytics/customer_data_platform/zeotap/symphony/
   image: /assets/img/braze_icons/building-01.svg
 - name: Zeotap for Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/zeotap/zeotap_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
 

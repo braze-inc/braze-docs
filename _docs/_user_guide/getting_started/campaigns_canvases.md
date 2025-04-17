@@ -48,7 +48,7 @@ In this way, Canvases are great for casting a net to capture users who fall off 
 
 When you create a Canvas, you follow many of the same steps as setting up a campaign: specifying an overall audience, entry conditions, and send settings. Your Canvas starts when someone matches your trigger condition. Then they move through a path in the Canvas until they meet your exit conditions.
 
-Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), and more. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_steps/overview/) such as Facebook, Google, or TikTok.
+Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), and more. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_audience_sync/overview/) such as Facebook, Google, or TikTok.
 
 Check out these additional resources to learn more about Canvas Flow:
 
