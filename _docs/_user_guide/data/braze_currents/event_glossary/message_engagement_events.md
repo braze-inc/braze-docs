@@ -414,7 +414,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |
-| Auto Opt-In By Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
+| Push Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}

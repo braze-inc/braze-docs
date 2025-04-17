@@ -59,10 +59,6 @@ Braze benötigt für die Autorisierung einen HTTP-Header, der Ihren API-Schlüss
 
 Ersetzen Sie `YOUR_API_KEY` durch einen Braze API-Schlüssel mit `users.track` Berechtigungen. Sie können einen API-Schlüssel innerhalb des Braze-Dashboards unter **Einstellungen** > **API-Schlüssel** erstellen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie einen API-Schlüssel unter **Entwicklerkonsole** > **API-Einstellungen** erstellen.
-{% endalert %}
-
 ![Die Registerkarte "Einstellungen" mit den Anfrage-Headern für den Webhook.][1]
 
 #### Anfragetext
@@ -114,10 +110,6 @@ Braze benötigt für die Autorisierung einen HTTP-Header, der Ihren API-Schlüss
 - **HTTP-Methode:** POST
 
 Ersetzen Sie `YOUR_API_KEY` durch einen Braze API-Schlüssel mit `canvas.trigger.send` Berechtigungen. Sie können einen API-Schlüssel innerhalb des Braze-Dashboards unter **Einstellungen** > **API-Schlüssel** erstellen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie einen API-Schlüssel unter **Entwicklerkonsole** > **API-Einstellungen** erstellen.
-{% endalert %}
 
 ![Die Registerkarte "Einstellungen" mit den Anfrage-Headern für den Webhook.][1]
 

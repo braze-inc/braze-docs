@@ -20,7 +20,7 @@ Wenn Sie sich dafür entscheiden, eine Nachricht zu versenden, sobald sie gestar
 
 Diese Art von Zeitplan ist für einmalige Kampagnen gedacht, die Sie sofort versenden möchten, wie z. B. Nachrichten über ein aktuelles Event. Eine Sport-App kann mit dieser Option zum Beispiel Push-Benachrichtigungen über Spielstandsaktualisierungen planen. Außerdem können Sie mit dieser Option Testnachrichten, die nur an Sie selbst oder Ihr Team gerichtet sind, sofort versenden. 
 
-Wenn Sie vorhaben, die Kampagne zu bearbeiten und nach dem Test erneut zu versenden, müssen Sie das Kontrollkästchen aktivieren, das die Nutzer:innen für den Erhalt der Kampagne [erneut qualifiziert]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Standardmäßig sendet Braze eine Kampagne nur einmal an eine:n Nutzer:in, es sei denn, dieses Kästchen ist aktiviert.
+Wenn Sie vorhaben, die Kampagne zu bearbeiten und nach dem Test erneut zu versenden, müssen Sie das Kontrollkästchen aktivieren, das die Nutzer:innen für den Erhalt der Kampagne [erneut qualifiziert]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Standardmäßig sendet Braze eine Kampagne nur einmal an eine:n Nutzer:in, es sei denn, dieses Kästchen ist aktiviert.
 
 ## Option 2: Zu bestimmter Zeit senden
 

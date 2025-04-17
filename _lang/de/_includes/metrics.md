@@ -215,7 +215,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> ist die Gesamtzahl der zugestellten E-Mails, die als Spam markiert wurden. Braze meldet Benutzer, die eine E-Mail als Spam markiert haben, automatisch ab, so dass diese Benutzer nicht mehr von zukünftigen E-Mails angesprochen werden.
+<i>Spam</i> ist die Gesamtzahl der zugestellten E-Mails, die vom Empfänger:in als "Spam" markiert wurden. Braze ändert zwar nicht den Abo-Status dieser Nutzer:innen, aber diese Nutzer:innen werden in zukünftigen E-Mails automatisch ausgeschlossen, es sei denn, Sie senden eine Transaktions-E-Mail, die so konfiguriert ist, dass sie an alle Nutzer:innen gesendet wird, einschließlich Abmelden.
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}

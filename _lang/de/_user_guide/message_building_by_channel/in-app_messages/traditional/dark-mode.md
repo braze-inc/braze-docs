@@ -36,10 +36,6 @@ Sie können dieses Feature auch dann nutzen, wenn Ihre App kein eigenes dunkles 
 
 Um den dunklen Modus für alle In-App-Nachrichten zu verwenden, gehen Sie zu **Vorlagen** > **In-App-Nachrichtenvorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Vorlagen & Medien**.
-{% endalert %}
-
 Wählen Sie dort die Option [Farbprofil erstellen][2] aus dem Dropdown-Menü. Erstellen Sie ein Farbprofil, das auf Ihr Dark-Mode-Thema abgestimmt ist. Dann können Sie jedes Mal, wenn Sie eine Version einer In-App-Nachricht im dunklen Modus erstellen, dieses Farbprofil auswählen und das Aussehen Ihrer In-App-Nachrichten konsistent halten.
 
 ## Kompatibilität

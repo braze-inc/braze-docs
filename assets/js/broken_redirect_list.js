@@ -288,7 +288,8 @@ validurls['/docs/partners/advertising_technologies/attribution/kochava/'] = '/do
 validurls['/docs/partners/advertising_technologies/attribution/singular/'] = '/docs/partners/message_orchestration/attribution/singular/';
 validurls['/docs/partners/advertising_technologies/retargeting/jampp/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/jampp/';
 validurls['/docs/partners/advertising_technologies/retargeting/remerge/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/remerge/';
-validurls['/docs/partners/advertising_technologies/social/facebook/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/facebook/';
+validurls['/docs/partners/advertising_technologies/social/facebook/'] = '/docs/partners/message_orchestration/retargeting/facebook/';
+validurls['/docs/partners/message_orchestration/additional_channels/retargeting/facebook/'] = '/docs/partners/message_orchestration/retargeting/facebook/';
 validurls['/docs/partners/advertising_technologies/social/canvas_steps/facebook_audience_sync/'] = '/docs/partners/canvas_steps/facebook_audience_sync/';
 validurls['/docs/partners/advertising_technologies/social/'] = '/docs/partners/home';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/email_orchestration/taxi_for_email/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/';
@@ -2569,6 +2570,7 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_personalization/dynamic_content/contentful'] = '/docs/partners/message_orchestration/cms_dam/contentful';
 validurls['/docs/partners/message_orchestration/attribution/appsflyer/appsflyer'] = '/docs/partners/message_orchestration/deeplinking/appsflyer/appsflyer';
 validurls['/docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking'] = '/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking';
+validurls['/docs/partners/message_orchestration/attribution/branch/branch_for_attribution'] = '/docs/partners/message_orchestration/attribution/branch_for_attribution';
 validurls['/docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking'] = '/docs/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/adikteev'] = '/docs/partners/message_orchestration/retargeting/adikteev';
 validurls['/docs/partners/message_orchestration/channel_extensions/email_templates/alpaco'] = '/docs/partners/message_orchestration/templates/alpaco';
@@ -2617,8 +2619,11 @@ validurls['/docs/partners/data_and_infrastructure_agility/support'] = '/docs/par
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation'] = '/docs/partners/ecommerce';
 validurls['/docs/partners/canvas_steps'] = '/docs/partners/canvas_audience_sync';
 
+validurls['/docs/_partners/data_and_analytics/wrapper_sdks/'] = '/docs/developer_guide/sdk_integration/';
+
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_standard_integration'] = '/docs/partners/ecommerce/shopify/shopify_standard_integration/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/'] = '/docs/shopify_user_identity';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/'] = '/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze';
 
 // validurls['OLD'] = 'NEW';
+

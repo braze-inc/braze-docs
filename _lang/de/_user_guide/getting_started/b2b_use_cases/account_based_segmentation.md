@@ -49,7 +49,7 @@ Wählen Sie die folgenden Variablen für einen Anwendungsfall der kontobasierten
 
 Für eine ausgefeiltere oder komplexere Segmentierung lesen Sie bitte die [SQL-Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). Um Ihnen den Einstieg zu erleichtern, finden Sie hier einige SQL-Templates, die Ihnen den Einstieg in die B2B-Kontosegmentierung erleichtern:
 
-1. Erstellen Sie ein Segment, das zwei Filter in einem einzigen Katalog vergleicht (z.B. Nutzer:innen, die in der Gastronomie arbeiten, für ein Unternehmenskonto).
+1. Erstellen Sie ein Segment, das zwei Filter in einem einzigen Katalog vergleicht (z.B. Nutzer:innen, die in der Gastronomie arbeiten, für ein Unternehmenskonto). Sie müssen die Katalog-ID und die ID des Artikels angeben.
 
 ```sql
 WITH salesforce_accounts AS (

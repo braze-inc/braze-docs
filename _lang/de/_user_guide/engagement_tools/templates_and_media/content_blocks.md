@@ -23,7 +23,7 @@ Mit Content-Blöcken haben Sie folgende Möglichkeiten:
 
 ## Content-Block erstellen
 
-Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können Ihre Content-Blöcke auch [über API][5] erstellen und verwalten.
+Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können auch Ihre Content-Blöcke erstellen und verwalten [mit der API][5].
 
 {% tabs %}
 {% tab Ziehen und Ablegen %}
@@ -44,13 +44,13 @@ Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen kön
 |---|---|
 | Name | Pflichtfeld mit maximal 100 Zeichen. Dieses Feld kann nicht umbenannt werden, nachdem der Content-Block gespeichert wurde. Außerdem können Sie einem neuen Content-Block nicht denselben Namen geben wie einem früheren Content-Block, selbst wenn der vorherige archiviert wurde. |
 | Beschreibung | (optional) Maximal 250 Zeichen. Beschreiben Sie den Content-Block, damit andere Nutzer:innen von Braze wissen, wofür er gedacht ist und wo er verwendet wird. |
-| Content-Größe | Maximal 50kB (Kilobyte). |
+| Content-Größe | Maximal 50 KB. |
 | Platzierung | Inhaltsblöcke können nicht in einer E-Mail-Fußzeile verwendet werden. |
 | Erstellung | HTML-Editor oder Drag-and-Drop-Editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Bei der Erstellung von Content-Blöcken hilft es manchmal, HTML und Liquid durch Hinzufügen von Zeilenumbrüchen zu visualisieren. Wenn diese Zeilenumbrüche beim Senden nicht berücksichtigt werden, riskieren Sie überflüssige Leerzeichen, die die Darstellung des Blocks beeinträchtigen können. Um dies zu vermeiden, verwenden Sie das Tag **Erfassen** in Ihrem Block zusammen mit dem Filter **| strip**.
+Bei der Erstellung von Content-Blöcken kann es von Vorteil sein, HTML und Liquid durch Hinzufügen von Zeilenumbrüchen zu visualisieren. Wenn diese Zeilenumbrüche beim Senden nicht berücksichtigt werden, riskieren Sie überflüssige Leerzeichen, die die Darstellung des Blocks beeinträchtigen können. Um dies zu vermeiden, verwenden Sie das Tag **Erfassen** in Ihrem Block zusammen mit dem Filter **| strip**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ Nachdem Sie Ihren Content-Block erstellt haben, können Sie ihn in Ihre Nachrich
 1. Kopieren Sie das **Content Block Liquid Tag** aus dem Abschnitt **Content Block Details**.
 2. Fügen Sie das Liquid-Tag für Content-Block in die Nachricht ein. Sie können auch mit der Eingabe der Flüssigkeit beginnen und den Tag automatisch ausfüllen lassen.
 
-{% alert note %}
-Canvas Event-Eigenschaften werden nur in einem Canvas unterstützt. Wenn Sie einen Content-Block mit Canvas-Eingangs-Eigenschaften in einer Kampagne referenzieren, wird er nicht aufgefüllt.
-{% endalert %}
+### Was Sie wissen sollten
+
+- Die Verwendung von HTML Content-Blöcken in E-Mails per Drag-and-Drop **oder von** Content-Blöcken in HTML-E-Mails kann zu unerwarteten Darstellungsproblemen führen. Das liegt daran, dass der Drag-and-Drop-Editor HTML und CSS generiert, die den Inhalt dynamisch wiedergeben, während der HTML-Editor eher statisch ist.
+- Canvas Event-Eigenschaften werden nur in einem Canvas unterstützt. Wenn Sie einen Content-Block mit Canvas-Eingangs-Eigenschaften in einer Kampagne referenzieren, wird er nicht aufgefüllt.
 
 ### Aktualisieren und Kopieren von Inhaltsblöcken
 
