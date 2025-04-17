@@ -2571,7 +2571,7 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_personalization/dynamic_content/contentful'] = '/docs/partners/message_orchestration/cms_dam/contentful';
 validurls['/docs/partners/message_orchestration/attribution/appsflyer/appsflyer'] = '/docs/partners/message_orchestration/deeplinking/appsflyer/appsflyer';
 validurls['/docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking'] = '/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking';
-validurls['/docs/partners/message_orchestration/attribution/branch/branch_for_attribution'] = '/docs/partners/message_orchestration/attribution/branch_for_attribution/';
+validurls['/docs/partners/message_orchestration/attribution/branch/branch_for_attribution'] = '/docs/partners/message_orchestration/attribution/branch_for_attribution';
 validurls['/docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking'] = '/docs/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/adikteev'] = '/docs/partners/message_orchestration/retargeting/adikteev';
 validurls['/docs/partners/message_orchestration/channel_extensions/email_templates/alpaco'] = '/docs/partners/message_orchestration/templates/alpaco';
