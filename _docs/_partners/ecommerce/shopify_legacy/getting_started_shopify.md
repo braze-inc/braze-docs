@@ -10,19 +10,19 @@ page_order: 1
 
 # Getting started with Shopify
 
-> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
+> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview) to learn how to finish setting up the Shopify integration with Braze.
 
 ## Integration setup checklist
 
 1. [Implement the Braze Web SDK](#implement-web-sdk)
-2. [Set up Shopify in Braze]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
+2. [Set up Shopify in Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview)
 3. Test the Shopify integration
 
 ## Implementing the Web SDK on your Shopify website {#implement-web-sdk}
 
 The [Braze Web SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. You can also unlock native messaging channels like in-browser messages.
 
-Although the Shopify integration offers a robust set of default features, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
+Although the Shopify integration offers a robust set of default features, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
 
 Before you begin onboarding the integration, please review the following with your team on which path you want to take to implement the Web SDK.
 
@@ -70,7 +70,7 @@ We’ll also add pre-defined scripts if you have selected product viewed, produc
 
 #### How to enable
 
-To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
+To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview). 
 
 From the Shopify setup composer, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
 

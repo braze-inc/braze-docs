@@ -80,7 +80,7 @@ This table contains the data that will be initially loaded through the backfill.
 As your Shopify customer records are loaded into Braze, the Shopify customer ID will be used as the Braze external ID. 
 
 {% alert note %}
-If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/shopify_data_features/#historical-backfill) for more details. 
+If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) for more details. 
 {% endalert %}
 
 ### (Advanced) Custom data tracking setup
