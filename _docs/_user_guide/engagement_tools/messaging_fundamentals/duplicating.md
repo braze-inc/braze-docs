@@ -44,3 +44,7 @@ Braze recommends that customers who use the original Canvas experience move to C
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
+
+{% alert tip %}
+You can copy your [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace) across workspaces. The copy will remain as a draft until you edit and launch.
+{% endalert %}
