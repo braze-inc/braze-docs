@@ -50,15 +50,15 @@ Wenn Sie einen Delegaten für In-App-Nachrichten so eingestellt haben, dass er d
 
 1. Die Synchronisierung der Auslöser mit dem Gerät beim Start der Sitzung nimmt einige Zeit in Anspruch, so dass es zu einer Race-Condition kommen kann, wenn Benutzer ein Event oder einen Kauf direkt nach dem Start einer Sitzung protokollieren. Ein möglicher Ausweg könnte darin bestehen, die Kampagne so zu ändern, dass sie beim Start der Sitzung getriggert wird, und dann nach dem beabsichtigten Event oder Kauf zu segmentieren. Beachten Sie, dass dies die In-App-Nachricht beim nächsten Sitzungsstart nach Eintreten des Events liefern würde.
 
-2. Wenn die Kampagne durch den Beginn einer Sitzung oder ein benutzerdefiniertes Ereignis ausgelöst wird, müssen Sie sicherstellen, dass dieses Ereignis oder diese Sitzung häufig genug stattfindet, um die Nachricht auszulösen. Überprüfen Sie diese Daten auf den Seiten [Übersicht][1] (für Sitzungsdaten) oder [Benutzerdefinierte Ereignisse][2]:
+2. Wenn die Kampagne durch den Beginn einer Sitzung oder ein benutzerdefiniertes Ereignis ausgelöst wird, müssen Sie sicherstellen, dass dieses Ereignis oder diese Sitzung häufig genug stattfindet, um die Nachricht auszulösen. Überprüfen Sie diese Daten auf den Seiten [Übersicht]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (für Sitzungsdaten) oder [Angepasste Events]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![Die Seite mit den benutzerdefinierten Ereignissen zeigt in einem Diagramm, wie oft das benutzerdefinierte Ereignis Zu den Favoriten hinzugefügt in einem Monat aufgetreten ist.][14]
+![Die Seite mit den angepassten Events zeigt in einem Diagramm an, wie oft das angepasste Event Zu den Favoriten hinzugefügt innerhalb eines Monats aufgetreten ist]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Die Impressionen sind geringer als früher
 
 1. Stellen Sie sicher, dass niemand das Segment oder die Kampagne seit dem Start unbeabsichtigt verändert hat. Unsere Änderungsprotokolle für Segmente und Kampagnen geben Ihnen einen Einblick in die Änderungen, die vorgenommen wurden, wer die Änderung vorgenommen hat und wann sie erfolgt ist.
 
-![Link zur Anzeige des Änderungsprotokolls auf der Seite Kampagnendetails mit sieben Änderungen seit der letzten Ansicht der Kampagne durch den Benutzer][10]
+![Link zur Anzeige des Changelogs auf der Seite Kampagnendetails mit sieben Änderungen seit der letzten Ansicht der Kampagne durch den Nutzer:innen]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Vergewissern Sie sich, dass Sie Ihr Trigger-Event nicht in einer separaten In-App-Nachrichtenkampagne mit einer höheren Priorität wiederverwendet haben.
 
@@ -126,7 +126,3 @@ Wenn Ihre App erfolgreich In-App-Nachrichten anfordert und empfängt, diese aber
 {% endcase %}
 7. Wenn Ihre In-App-Nachricht durch den Sitzungsstart getriggert wird und Sie ein verlängertes Sitzungs-Timeout eingestellt haben, wirkt sich dies darauf aus, wie schnell Sie Nachrichten anzeigen können. Wenn Ihr Sitzungszeitlimit beispielsweise auf 300 Sekunden eingestellt ist, wird die Sitzung durch Schließen und erneutes Öffnen der App in weniger als dieser Zeit nicht aktualisiert, sodass eine durch einen Sitzungsstart getriggerte In-App-Nachricht nicht angezeigt wird.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}
