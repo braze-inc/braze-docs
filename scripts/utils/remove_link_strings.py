@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""
-remove_link_strings.py
-Strips optional "title" strings from Markdown links in the path supplied
-(by default under the repo root) and prints a per‑run summary.
-"""
+
+# A simple utility script that removes strings from within Markdown links.
+# It doesn't remove any links from image links or similar--only URLs.
+#
+# Usage: ./scripts/utils/remove_link_strings.py [FILE|DIRECTORY]
+#
+# Options:
+#   FILE              Remove Markdown link strings in a single file.
+#   DIRECTORY         Recursively remove Markdown link strings in a directory.
 
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-# ── repo root ────────────────────────────────────────────────────────────────
+# Constants
 PROJECT_ROOT = Path(
     subprocess.check_output(
         ["git", "rev-parse", "--show-toplevel"],
@@ -18,7 +22,7 @@ PROJECT_ROOT = Path(
     ).strip()
 )
 
-# ── path argument ────────────────────────────────────────────────────────────
+# Return error if path isn't given.
 if len(sys.argv) < 2:
     print("Error: path required. Usage: ./remove_link_strings.py <dir_or_file>")
     sys.exit(1)
@@ -26,7 +30,7 @@ if len(sys.argv) < 2:
 REL_PATH = Path(sys.argv[1].lstrip("/"))
 SEARCH_PATH = PROJECT_ROOT / REL_PATH
 
-# ── regexes ───────────────────────────────────────────────────────────────────
+# Regex's for different Markdown link types.
 _inline = re.compile(
     r'(?<!!)\[([^\]]+?)\]\(\s*([^\s)]+?)(?:\s+(?:"[^"]*"|\'[^\']*\'|\([^)]*\)))\s*\)'
 )
@@ -43,7 +47,7 @@ def clean(text: str) -> tuple[str, int]:
     text, n2 = _refdef.subn(r'\1', text)
     return text, n1 + n2
 
-# ── iterate files ────────────────────────────────────────────────────────────
+# Recursively iterate through given files.
 files = (
     [SEARCH_PATH]
     if SEARCH_PATH.is_file()
