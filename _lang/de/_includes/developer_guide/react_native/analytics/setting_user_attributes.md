@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/react_native.md %}
+{% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
 ## Benutzerdefinierte Attribute protokollieren
 
