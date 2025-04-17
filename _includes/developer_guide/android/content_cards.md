@@ -27,9 +27,9 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getExpiredAt()` | Gets the expiration date of the card.|
 |`isRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`isDismissibleByUser()`  | Returns a boolean that reflects whether the card is dismissible by the user.|
-|`isClicked()` | Returns the clicked state of this card.|
-|`isDismissed()` | Returns if this card has been dismissed.|
-|`isControl()` | Returns if this card is a control card and should not be rendered.|
+|`isClicked()` | Returns a boolean that reflects the clicked state of this card.|
+|`isDismissed()` | Returns a boolean if this card has been dismissed.|
+|`isControl()` | Returns a boolean if this card is a control card and should not be rendered.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image only {#banner-image-card-for-android}
