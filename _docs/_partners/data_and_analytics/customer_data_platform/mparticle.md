@@ -1,6 +1,5 @@
 ---
 nav_title: mParticle
-noindex: true
 layout: dev_guide
 guide_top_header: "mParticle"
 alias: /partners/mparticle_overview/
