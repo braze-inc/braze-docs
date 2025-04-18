@@ -53,7 +53,7 @@ Here are some links you might need to consult as you build up your SMS campaign:
 
 A customer's privacy is key to a meaningful and respectful relationship. Respecting a customer's privacy and information is just another opportunity to create a bond between them and your brand. Sometimes, using marketing tools can put data and privacy last.
 
-Luckily for you, Braze follows the guidelines of many [security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications "Braze security qualifications"), including [GDPR]({{site.baseurl}}/dp-technical-assistance/).
+Luckily for you, Braze follows the guidelines of many [security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{site.baseurl}}/dp-technical-assistance/).
 
 The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
 
@@ -61,7 +61,7 @@ The [CTIA](https://www.ctia.org/) (a trade association representing the wireless
 
 Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
-The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991 "Wikipedia:Telephone Consumer Protection Act of 1991")) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
+The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991)) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
@@ -69,7 +69,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 ### Spam and cadence
 
-Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf "PDF: Federal Trade Commission Act Section 5") to ensure compliance (in the U.S.).
+Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) to ensure compliance (in the U.S.).
 
 Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze rate limits. However, you should still consider compliance laws when planning your campaigns.
 

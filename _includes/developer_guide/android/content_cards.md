@@ -6,7 +6,7 @@ Before you can use Braze Content Cards, you'll need to integrate the [Braze Andr
 
 In Android, the Content Cards feed is implemented as a [fragment](https://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
-To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments").
+To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding).
 
 ## Card types and properties
 
@@ -22,11 +22,14 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getViewed()` | Returns a boolean reflects if the card is read or unread by the user.|
 |`getExtras()` | Returns a map of key-value extras for this card.|
 |`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
-|`getIsPinned` | Returns a boolean that reflects whether the card is pinned.|
+|`isPinned` | Returns a boolean that reflects whether the card is pinned.|
 |`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in the Braze WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
-|`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
-|`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
+|`isRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
+|`isDismissibleByUser()`  | Returns a boolean that reflects whether the card is dismissible by the user.|
+|`isClicked()` | Returns a boolean that reflects the clicked state of this card.|
+|`isDismissed()` | Returns a boolean if this card has been dismissed.|
+|`isControl()` | Returns a boolean if this card is a control card and should not be rendered.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image only {#banner-image-card-for-android}

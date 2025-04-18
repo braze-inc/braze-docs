@@ -35,6 +35,6 @@ Appboy.sharedInstance()?.requestFeedRefresh()
 {% endtab %}
 {% endtabs %}
 
-For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File").
+For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
 
 

@@ -21,7 +21,7 @@ Customers will be able to simply search and select Braze within [OneLogin]({{sit
 
 ## Passkit partnership
 
-With [Passkit]({{site.baseurl}}/partners/message_orchestration/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
+With [Passkit]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
 
 ## Dispatch ID value return via messaging endpoints
 

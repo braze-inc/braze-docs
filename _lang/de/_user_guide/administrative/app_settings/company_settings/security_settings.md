@@ -13,10 +13,6 @@ description: "Dieser Referenzartikel behandelt allgemeine unternehmensübergreif
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Konto-Dropdown und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**.
-{% endalert %}
-
 ## Regeln für die Authentifizierung
 
 ### Passwortlänge
@@ -31,7 +27,7 @@ Wählen Sie **Komplexe Passwörter erzwingen**, um zu verlangen, dass die Passw�
 - Zahl
 - Sonderzeichen
 
-### Passwortwiederverwendung
+### Wiederverwendbarkeit von Passwörtern
 
 Legt die Mindestanzahl neuer Kennwörter fest, die festgelegt werden müssen, bevor ein Benutzer ein Kennwort erneut verwenden kann. Die Standardeinstellung ist drei.
 

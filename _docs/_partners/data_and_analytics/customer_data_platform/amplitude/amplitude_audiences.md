@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude bi-directional integration allows you to [import your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/), user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to [import your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/), user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ The Braze and Amplitude bi-directional integration allows you to [import your Am
 Amplitude and Braze offer two different integration methods. Read through the following documentation to decide which methods will fit your needs:
 
 - Braze Event Streaming: An integration that allows you to forward raw Amplitude event data straight to Braze.
-- [Cohort import]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/): An integration that allows you to forward Amplitude cohorts to Braze.
+- [Cohort import]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/): An integration that allows you to forward Amplitude cohorts to Braze.
 
 ## Braze Event Streaming
 
@@ -108,4 +108,4 @@ Lastly, define the frequency of your sync.
 
 ## Amplitude user profile API endpoints
 
-To check out some of the common Amplitude API endpoints that can be used with Connected Content, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
+To check out some of the common Amplitude API endpoints that can be used with Connected Content, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/).

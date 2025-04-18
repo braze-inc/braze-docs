@@ -8,13 +8,13 @@ description: "This landing page is home to all things related to Segment—the c
 
 guide_featured_list:
 - name: Segment
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/
+  link: /docs/partners/data_and_analytics/customer_data_platform/segment/segment/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Segment Engage
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/
+  link: /docs/partners/data_and_analytics/customer_data_platform/segment/segment_engage/
   image: /assets/img/braze_icons/users-01.svg
 - name: Segment for Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 
 ---

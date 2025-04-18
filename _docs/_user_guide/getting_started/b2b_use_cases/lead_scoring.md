@@ -133,7 +133,7 @@ As your marketing tool, Braze contains extremely relevant data that could supple
 For example, messaging engagement data (such as email opens and clicks, landing page engagement, and others) can determine a lead’s engagement level. You can pass this data back to your cloud data warehouse and make it available as input for your lead scoring models by using Braze streaming export data solutions:
 
 - [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
+- [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze as a destination %}

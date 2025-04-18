@@ -15,13 +15,13 @@ This article will walk you through a use case for the **Lapsed User** template, 
 
 ## Prerequisites
 
-To successfully use the lapsed user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
+To successfully use the lapsed user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## Tailoring the template to your needs
 
 Let’s say we’re working for MovieCanon, a streaming service that has exclusive content for movies and shows. We can use the lapsed user template to promote perks and premium content for users who haven’t visited our app in 30 days.
 
-Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
+Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 To access the lapsing user template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Lapsing User**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 

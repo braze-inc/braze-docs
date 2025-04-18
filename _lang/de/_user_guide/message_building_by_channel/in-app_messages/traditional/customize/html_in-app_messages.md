@@ -246,10 +246,10 @@ Sie können auch neue benutzerdefinierte Schaltflächennamen verfolgen - bis zu 
 
    | Vor | Nach |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_ccbe0376-7103-497b-9ecd-8ec949152f22/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_514e6fb3-bc3b-4fd6-88a1-2cb8dcc2b5af/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_9e2c9d3e-e741-472a-a8e3-bc157350f9f5/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_61813b2d-3b0e-42fa-b1e2-1d3e04863763/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_baa05946-018c-4fac-a7e8-42f59245d42b/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_b3ac9b9a-1e67-447b-ae88-0a5e31690c18/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_6b3a38d7-4d09-4521-9203-cbbfeec2596f/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_a91c3faa-3a4d-4126-827b-a010e6091bd6/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_2706b934-ec15-4441-b5a6-1f5f0403fb4d/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_a1d3e2cf-b927-4d01-a548-bae775c1b9c5/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates

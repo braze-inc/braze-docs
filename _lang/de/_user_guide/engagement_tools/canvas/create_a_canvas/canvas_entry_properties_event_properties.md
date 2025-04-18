@@ -12,16 +12,12 @@ tool: Canvas
 > Dieser Referenzartikel enthält Informationen zu `canvas_entry_properties` und `event_properties`, einschließlich der Frage, wann Sie welche Eigenschaft verwenden sollten und welche Unterschiede im Verhalten bestehen. <br><br> Informationen über benutzerdefinierte Ereigniseigenschaften im Allgemeinen finden Sie unter [Benutzerdefinierte Ereigniseigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
-Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Artikel steht als Referenz zur Verfügung, wenn Sie `canvas_entry_properties` und `event_properties` für den ursprünglichen Canvas-Workflow verwenden.
+Wenn Sie an der [Context-Komponente Early Access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) teilnehmen, sind die Eigenschaften der Eingänge in Canvas Teil der Canvas-Kontextvariablen. Das bedeutet, dass `canvas_entry_properties` jetzt als `context` referenziert wird. Jede `context` Variable enthält einen Namen, einen Datentyp und einen Wert, der Liquid enthalten kann.
 {% endalert %}
 
-Canvas-Eingabeeigenschaften und Ereigniseigenschaften funktionieren innerhalb Ihrer Canvas-Workflows unterschiedlich. Eigenschaften von Events oder API-Aufrufen, die den Entry eines Nutzers oder einer Nutzerin in ein Canvas triggern, werden als `canvas_entry_properties` bezeichnet. Eigenschaften von Events, die auftreten, wenn sich ein:e Nutzer:in durch eine Canvas-Journey bewegt, werden als `event_properties` bezeichnet. Der Hauptunterschied besteht darin, dass `canvas_entry_properties` sich nicht nur auf Events konzentriert, sondern auch auf die Eigenschaften von Entry-Nutzdaten in API-getriggerten Canvase zugreift.
+Canvas-Eingabeeigenschaften und Ereigniseigenschaften funktionieren innerhalb Ihrer Canvas-Workflows unterschiedlich. Eigenschaften von Events oder API-Aufrufen, die den Entry eines Nutzers oder einer Nutzerin in ein Canvas triggern, werden als `canvas_entry_properties` bezeichnet. Eigenschaften von Events, die auftreten, wenn sich ein:e Nutzer:in durch eine Canvas-Journey bewegt, werden als `event_properties` bezeichnet. Der Hauptunterschied besteht darin, dass `canvas_entry_properties` sich auf mehr als nur Ereignisse konzentriert, indem es auch auf die Eigenschaften von Eingangs-Nutzlasten in API-getriggerten Canvase zugreift.
 
-Für den ursprünglichen Canvas-Editor und Canvas Flow können Sie `event_properties` nicht im Hauptschritt „Nachricht“ verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen „Aktionspfade“-Schritt mit dem entsprechenden Event **vor dem** Schritt „Nachricht“ hinzufügen, der `event_properties` enthält.
-
-Das Verhalten variiert auch zwischen Workflows, die mit Canvas Flow und dem Original-Editor erstellt wurden. Im ursprünglichen Canvas-Editor können Sie zum Beispiel `event_properties` im ersten vollständigen Schritt verwenden, wenn es sich um einen aktionsbasierten Schritt handelt. In Canvas Flow werden keine vollständigen Schritte unterstützt, sodass dies nicht zutrifft.
-
-In der folgenden Tabelle finden Sie eine Zusammenfassung der Unterschiede zwischen `canvas_entry_properties` und `event_properties`.
+In der folgenden Tabelle finden Sie eine Zusammenfassung der Unterschiede zwischen den Eingangs-Eigenschaften von Canvas und den Event-Eigenschaften.
 
 | | Entry-Eigenschaften für Canvas | Event-Eigenschaften
 |----|----|----|
@@ -31,17 +27,37 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Unterschiede zwisch
 | **Canvas Flow-Verhalten** | Kann in jedem Schritt eines Canvas auf `canvas_entry_properties` verweisen. Wie Sie sich nach dem Start verhalten, erfahren Sie unter [Bearbeiten von Leinwänden nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | \- Kann `event_properties` im ersten „Nachricht“-Schritt **nach** einem [Aktionspfade][3]-Schritt referenzieren, bei dem die durchgeführte Aktion ein angepasstes Event oder Kauf-Event ist. <br> \- Kann nicht nach dem Pfad Everyone Else des Schritts Action Paths stehen. <br> \- Zwischen den Schritten „Aktionspfade“ und „Nachricht“ können andere Canvas-Komponenten, die keine Nachrichten sind, eingefügt werden. Wenn eine dieser Nicht-Nachrichten-Komponenten ein „Aktionspfade“-Schritt ist, kann der oder die Nutzer:in den Pfad „Alle anderen“ dieses Aktionspfads durchlaufen. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Beachten Sie, dass die Canvas-Entry-Eigenschaften nur in Liquid referenziert werden können. Um nach den Eigenschaften innerhalb des Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+{% details Original Canvas Editor Details %}
+Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Artikel steht als Referenz zur Verfügung, wenn Sie `canvas_entry_properties` und `event_properties` für den ursprünglichen Canvas-Workflow verwenden.
 
-{% alert note %}
-Für In-App-Nachricht-Kanäle kann `canvas_entry_properties` nur dann in Canvas Flow und im ursprünglichen Canvas-Editor referenziert werden, wenn Sie [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) im ursprünglichen Editor als Teil des früheren Early Access aktiviert haben. `event_properties` kann jedoch nicht für In-App-Nachricht-Kanäle verwendet werden.
-{% endalert %}
+Für den ursprünglichen Canvas-Editor und Canvas Flow können Sie `event_properties` nicht im Hauptschritt „Nachricht“ verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen „Aktionspfade“-Schritt mit dem entsprechenden Event **vor dem** Schritt „Nachricht“ hinzufügen, der `event_properties` enthält.
+{% enddetails %}
 
-Wenn ein „Aktionspfad“-Schritt einen Trigger vom Typ „Eingehende SMS-Nachricht gesendet“ oder „Eingehende WhatsApp-Nachricht gesendet“ enthält, können die nachfolgenden Canvas-Schritte eine SMS- oder WhatsApp-Liquid-Eigenschaft enthalten. Dies spiegelt wider, wie Event-Eigenschaften in Canvas Flow funktionieren. Auf diese Weise können Sie Ihre Nachrichten nutzen, um First-Party-Daten zu Nutzerprofilen und Gesprächs-Messaging zu speichern und zu referenzieren.
+### Was Sie wissen sollten
+
+- Die Eigenschaften von Canvas-Eingängen sind nur in Liquid referenzierbar. Um nach den Eigenschaften innerhalb des Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+- Für In-App Nachrichten-Kanäle kann `canvas_entry_properties` nur in einem Canvas referenziert werden. `event_properties` kann nicht für In-App Nachrichten-Kanäle verwendet werden.
+- Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen „Aktionspfade“-Schritt mit dem entsprechenden Event **vor dem** Schritt „Nachricht“ hinzufügen, der `event_properties` enthält. 
+- Wenn ein „Aktionspfad“-Schritt einen Trigger vom Typ „Eingehende SMS-Nachricht gesendet“ oder „Eingehende WhatsApp-Nachricht gesendet“ enthält, können die nachfolgenden Canvas-Schritte eine SMS- oder WhatsApp-Liquid-Eigenschaft enthalten. Dies spiegelt die Funktionsweise der Event-Eigenschaften in Canvase wider. Auf diese Weise können Sie Ihre Nachrichten nutzen, um First-Party-Daten zu Nutzerprofilen und Gesprächs-Messaging zu speichern und zu referenzieren.
+
+### Zeitstempel für Event-Eigenschaften
+
+Wenn Sie `event_properties` in einem Canvas verwenden, werden die Zeitstempel auf UTC normalisiert, mit einigen Ausnahmen, die im Folgenden beschrieben werden. Angesichts dieses Verhaltens empfiehlt Braze dringend die Verwendung eines Liquid Zeitzonen-Filters wie dem folgenden Beispiel, um zu gewährleisten, dass Ihre Nachrichten in der von Ihnen [bevorzugten Zeitzone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) gesendet werden.
+
+{% raw %}
+```liquid
+{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
+```
+{% endraw %}
+
+#### Ausnahmen
+
+- Zeitstempel werden im ersten Schritt eines Canvas nicht auf UTC normalisiert, wenn dieser Schritt ein Nachrichten-Schritt ist.
+- Zeitstempel werden in jedem Nachrichten-Schritt, der den In-App-Nachrichten-Kanal verwendet, nicht auf UTC normalisiert, unabhängig von der Reihenfolge im Canvas.
 
 ## Anwendungsfall
 
-![][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Ein Aktions-Pfad, gefolgt von einem Verzögerungsschritt und einem Nachrichten-Schritt für Nutzer:innen, die einen Artikel zu ihrer Wunschliste hinzugefügt haben, und ein Pfad für alle anderen.][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Um die Unterschiede zwischen `canvas_entry_properties` und `event_properties` besser zu verstehen, lassen Sie uns dieses Szenario betrachten, in dem Benutzer ein aktionsbasiertes Canvas betreten, wenn sie das benutzerdefinierte Ereignis "Artikel zur Wunschliste hinzufügen" ausführen. 
 
