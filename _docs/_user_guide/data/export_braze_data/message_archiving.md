@@ -16,7 +16,7 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS or MMS, or push). 
+When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
@@ -107,7 +107,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS or MMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -168,7 +168,7 @@ Modifications done after the message leaves Braze won't be reflected in the file
 
 ### What are messages under the "unassociated" value in the campaign path?
 
-When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS or MMS auto-responses, or when messages sent through the API do not specify a campaign ID.
+When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS/MMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send?
 
