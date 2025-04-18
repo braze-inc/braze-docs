@@ -28,6 +28,10 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 {% multi_lang_include data_centers.md datacenters='EU' %}
 
+### Indonesia
+
+{% multi_lang_include data_centers.md datacenters='ID' %}
+
 ### United States
 
 {% multi_lang_include data_centers.md datacenters='US' %}
