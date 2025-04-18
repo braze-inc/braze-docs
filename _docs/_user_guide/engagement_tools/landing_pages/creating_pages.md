@@ -89,6 +89,14 @@ We recommend setting up page container-level styles before you customize styles 
 
 ![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
 
+#### Optional & Required fields
+
+You can choose whether a form field is required or optional. Required fields must be filled out before the form can be submitted. Optional fields can be left blank or unselected by the user. 
+
+For example, to enforce consnet capture before form submission, you can set a checkbox to required with the appropriate disclaimer text. 
+
+![A checkbox form field with the required option toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %})
+
 ### Step 4: Create a confirmation page
 
 If you added a [form](#form-block) to your landing page in the previous step, create an additional landing page for the confirmation state, then add the **Open web URL** link to the button that submits the form. Otherwise, continue to the next step.
