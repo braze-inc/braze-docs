@@ -81,6 +81,10 @@ Details for each editor block's properties are provided in the following tables.
 | Text color | Modifies the color of the text |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Currently, the in-app message drag-and-drop editor doesn’t support marking images as decorative. If you leave alt text blank, screen readers will typically read out the image file name instead.
+{% endalert %}
+
 ### Button
 
 | Property | Description |

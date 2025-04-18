@@ -37,5 +37,15 @@ To support iOS devices:
 - You must include the `playsinline` attribute because full screen playback is not supported at this time.
 - iOS does not support auto-play by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 
+## Accessibility considerations
+
+When adding video to an in-app message, keep the following best practices in mind to support a more inclusive experience:
+
+- **Avoid auto-play.** Automatically playing video can be disruptive for users with motion sensitivity, screen reader users, or anyone who prefers to control playback themselves.
+- **Always include playback controls.** Users should be able to start and stop videos on their own terms.
+- **Provide captions or subtitles.** Captions ensure that Deaf and hard-of-hearing users—and anyone in a sound-off environment—can access your video content.
+
+For more tips on making your messages accessible, see our [Building accessible messages]({{site.baseurl}}/help/accessibility/) guide.
+
 
 [9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
