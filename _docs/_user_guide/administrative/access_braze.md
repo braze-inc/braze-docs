@@ -37,29 +37,4 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 ---
 
-## Supported browsers
-
-The Braze dashboard supports the following browsers:
-- Chrome (version 87 or newer)
-- Firefox (version 85 or newer)
-- Safari (version 15.4 or newer)
-- Edge (version 87 or newer)
-
-If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and reinstall your browser.
-
-### Browser cache and cookies
-
-If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser.
-
-{% alert important %}
-Clearing cookies will log you out, so unsaved work will be lost.
-{% endalert %}
-
-- [Clear cache & cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
-- [Clear cookies in Safari on Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
-- [Clear cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
-- [Delete all cookies in Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
-
-If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
-
 <br><br>
