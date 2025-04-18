@@ -5620,6 +5620,10 @@ Feature flag impressions are only logged once per session.
 {% api %}
 ## In-App Message Abort events
 
+{% apitags %}
+In-App Messages, Abort
+{% endapitags %}
+
 {% tabs %}
 {% tab Amplitude %}
 ```json
@@ -6485,7 +6489,7 @@ This event occurs when Braze receives a response from a third party provider (e.
 ## Live Activity Send events
 
 {% apitags %}
-Live Activity, Send
+Live Activity, Sends
 {% endapitags %}
 
 This event occurs when Braze backend makes a request to its provider regarding Live Activity
