@@ -8,13 +8,13 @@ description: "This landing page is home to all things Tealium including integrat
 
 guide_featured_list:
 - name: Tealium
-  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium/
+  link: /docs/partners/tealium/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Tealium AudienceStream
-  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/
+  link: /docs/partners/tealium_audience_stream/
   image: /assets/img/braze_icons/users-01.svg
 - name: Tealium for Currents
-  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium_for_currents/
+  link: /docs/partners/tealium_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
 <br>
