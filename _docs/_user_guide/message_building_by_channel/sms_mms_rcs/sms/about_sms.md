@@ -38,15 +38,7 @@ Before you start sending SMS, there are some things you need. Refer to the follo
 
 ## Terms to know
 
-- **Short code:** A 5 to 6-digit code, that's shorter than a full phone number. This code is used to address and send SMS messages.<br><br>
-- **Long codes:** A 10-digit code that is used to address SMS messages. Most average phone numbers are considered long codes (e.g 123-456-7891). These codes are used to address and send SMS messages.<br><br>
-- **Subscription group:** A collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.<br><br>
-- **Message segment and character limits:** A message segment refers to how many segments your initial SMS message will be split into. Each message has a character limit that if exceeded, will cause the message to be broken into segments. Based on what encoding standards you use (UTF-2 or GSM-7), there are varying character limits. Reference our [message copy limits][2] for more information on messaging segmentation and message character limits.<br><br>
-- **Common SMS campaign metrics:** <br>*Sent*, *Sends to Carrier*, *Delivery Failure*, *Confirmed Delivery*, *Rejections*, *Opt-Out*, and *Help*. <br>For information on these and other SMS metrics, refer to [SMS reporting][1]. Note that *Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
-
-<br><br>
-
-For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/terms/).
+For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/terms/).
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
