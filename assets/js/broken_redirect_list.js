@@ -2625,5 +2625,8 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/'] = '/docs/shopify_user_identity';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/'] = '/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze';
 
+validurls['/docs/help/help_articles/account/locked_out'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
+validurls['/docs/help/help_articles/account'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
+
 // validurls['OLD'] = 'NEW';
 
