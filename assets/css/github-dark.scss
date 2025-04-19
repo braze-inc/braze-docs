@@ -1,0 +1,164 @@
+$color_1: #c9d1d9;
+$color_2: #ff7b72;
+$color_3: #d2a8ff;
+$color_4: #79c0ff;
+$color_5: #a5d6ff;
+$color_6: #ffa657;
+$color_7: #8b949e;
+$color_8: #7ee787;
+$color_9: #1f6feb;
+$color_10: #f2cc60;
+$color_11: #aff5b4;
+$color_12: #ffdcd7;
+$background-color_1: #033a16;
+$background-color_2: #67060c;
+
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+pre {
+  code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+  }
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  color: $color_1;
+  background: #0d1117;
+}
+.hljs-doctag {
+  color: $color_2;
+}
+.hljs-keyword {
+  color: $color_2;
+}
+.hljs-meta {
+  .hljs-keyword {
+    color: $color_2;
+  }
+  color: $color_4;
+  .hljs-string {
+    color: $color_5;
+  }
+}
+.hljs-template-tag {
+  color: $color_2;
+}
+.hljs-template-variable {
+  color: $color_2;
+}
+.hljs-type {
+  color: $color_2;
+}
+.hljs-variable.language_ {
+  color: $color_2;
+}
+.hljs-title {
+  color: $color_3;
+}
+.hljs-title.class_ {
+  color: $color_3;
+}
+.hljs-title.class_.inherited__ {
+  color: $color_3;
+}
+.hljs-title.function_ {
+  color: $color_3;
+}
+.hljs-attr {
+  color: $color_4;
+}
+.hljs-attribute {
+  color: $color_4;
+}
+.hljs-literal {
+  color: $color_4;
+}
+.hljs-number {
+  color: $color_4;
+}
+.hljs-operator {
+  color: $color_4;
+}
+.hljs-selector-attr {
+  color: $color_4;
+}
+.hljs-selector-class {
+  color: $color_4;
+}
+.hljs-selector-id {
+  color: $color_4;
+}
+.hljs-variable {
+  color: $color_4;
+}
+.hljs-regexp {
+  color: $color_5;
+}
+.hljs-string {
+  color: $color_5;
+}
+.hljs-built_in {
+  color: $color_6;
+}
+.hljs-symbol {
+  color: $color_6;
+}
+.hljs-code {
+  color: $color_7;
+}
+.hljs-comment {
+  color: $color_7;
+}
+.hljs-formula {
+  color: $color_7;
+}
+.hljs-name {
+  color: $color_8;
+}
+.hljs-quote {
+  color: $color_8;
+}
+.hljs-selector-pseudo {
+  color: $color_8;
+}
+.hljs-selector-tag {
+  color: $color_8;
+}
+.hljs-subst {
+  color: $color_1;
+}
+.hljs-section {
+  color: $color_9;
+  font-weight: 700;
+}
+.hljs-bullet {
+  color: $color_10;
+}
+.hljs-emphasis {
+  color: $color_1;
+  font-style: italic;
+}
+.hljs-strong {
+  color: $color_1;
+  font-weight: 700;
+}
+.hljs-addition {
+  color: $color_11;
+  background-color: $background-color_1;
+}
+.hljs-deletion {
+  color: $color_12;
+  background-color: $background-color_2;
+}
