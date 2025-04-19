@@ -1,7 +1,7 @@
 ---
 nav_title: Query Templates
 article_title: Query Builder Templates
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "This reference article lists the types of reports you can create using Braze data from Snowflake in the Query Builder."
