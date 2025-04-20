@@ -36,7 +36,7 @@ For **Brand personality**, think about what makes your brand unique. Include tra
 
 For **Exclusions**, list any language or style that doesn’t align with your brand. For example, you might want to avoid "sarcasm," "negative attitudes," or "condescending" tones.
 
-![The "Create brand guideline" window with fields to enter the name, description, personality, exclusions, and tone.][1]
+![The "Create brand guideline" window with fields to enter the name, description, personality, exclusions, and tone.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### Step 4: Test your guidelines
 
@@ -54,18 +54,12 @@ You can change the output language regardless of what language your copy is in, 
 
 You can edit brand guidelines by selecting them on the **Brand Guidelines** page. Archive a brand guideline to make it inactive and remove it from the AI copywriting assistant. To make it active and selectable again, you can filter for archived brand guidelines and then unarchive it.
 
-![The "Brand Guidelines" page filtered for archived brand guidelines.][4]
+![The "Brand Guidelines" page filtered for archived brand guidelines.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## Using brand guidelines
 
 When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, it will automatically be selected in the dropdown, but you can choose a different guideline. 
 
-!["AI copywriting assistant with "Important Alerts!!" selected as the brand guideline.][2]
+!["AI copywriting assistant with "Important Alerts!!" selected as the brand guideline.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
-## How is my data used and sent to OpenAI?
-
-To generate copy using a brand guideline, Braze will send your query including the content of your guideline to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide or in your past campaign data when enabling the option labeled "Reference past campaign data". Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API using Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
-
-[1]: {% image_buster /assets/img/guidelines_create.png %}
-[2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
-[4]: {% image_buster /assets/img/unarchive_brand_guideline.png %}
+{% multi_lang_include generative_ai/policy.md %}

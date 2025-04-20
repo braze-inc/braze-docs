@@ -1,0 +1,7 @@
+## How is my data used and sent to OpenAI? {#ai-policy} 
+<!-- Braze Legal must approve any changes to this content. -->
+<!-- Note: Avoid moving these comments above the H2 heading to avoid breaking how headings on certain pages using this include. -->
+
+Between you and Braze, any content generated using OpenAI's GPT or DALL·E 3 models is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
+
+When generating content, Braze will send your query to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy).

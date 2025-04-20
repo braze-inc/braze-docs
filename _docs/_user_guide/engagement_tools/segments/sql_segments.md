@@ -12,10 +12,12 @@ tool: Segments
 # SQL Segment Extensions
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
+>
+> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
 
-Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
+## Creating a Segment Extension
 
-## Types of SQL Segment Extensions
+### Step 1: Choose an editor
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
@@ -25,8 +27,6 @@ There are two types of SQL editors to choose from when creating your SQL Segment
 {% alert tip %}
 You can do a manual full refresh on all SQL Segments created in either SQL editor.
 {% endalert %}
-
-## Creating SQL Segment Extensions
 
 {% tabs local %}
 {% tab Full refresh %}
@@ -79,18 +79,16 @@ To use the AI SQL generator, do the following:
 2. Type in your prompt and click **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then save your segment.
 
-### Example prompts
+#### Example prompts
 - Users who received an email in the last month
 - Users who made less than five purchases in the last year
 
-### Tips
+#### Tips
 - Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
 - Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 
-### How is my data used and sent to OpenAI?
-
-In order to generate your SQL, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
+##{% multi_lang_include generative_ai/policy.md %}
 {% endtab %}
 {% endtabs %}
 
@@ -98,9 +96,9 @@ In order to generate your SQL, Braze will send your prompts to OpenAI’s API Pl
 SQL queries that take longer than 20 minutes to run will time out.
 {% endalert %}
 
-When the extension finishes processing, you can [create a segment][4] using your Segment Extension and target this new segment with your campaigns and Canvases.
+When the extension finishes processing, you can [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) using your Segment Extension and target this new segment with your campaigns and Canvases.
 
-## Writing SQL
+### Step 2: Write your SQL
 
 Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
@@ -144,7 +142,7 @@ In the following example, the resulting segment would contain users that perform
 
 ![SQL preview of an incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
-### Additional rules
+#### Additional rules
 
 Your incremental refresh query must additionally adhere to the following rules:
 
@@ -159,21 +157,21 @@ Incremental refresh segments take into account late events, which are events tha
 {% endtab %}
 {% endtabs %}
 
-## Previewing results
+### Step 3: Preview the query
 
 Before saving, you can run a preview of your query. Query previews are automatically limited to 100 rows and will timeout after 60 seconds. The `user_id` column requirement does not apply when running a preview.
 
 For incremental SQL Segment Extensions, the preview will not include the additional criteria from your operator, number of times, and time period fields.
 
-## Managing SQL Segment Extensions
+## Managing your Segment Extensions
 
 On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
 
 Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
 
-![Messaging Use section of the SQL editor showing where the SQL segment is being used.][3]
+![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %})
 
-### Refreshing segment membership
+## Refreshing segment membership
 
 To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Only incremental refresh SQL Segment Extensions can automatically regenerate (if selected).
 
@@ -181,7 +179,7 @@ To refresh the segment membership of any Segment Extension created using SQL, op
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
 {% endalert %}
 
-## Monitoring your SQL Segments usage
+## Snowflake credits
 
 Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 
@@ -195,7 +193,7 @@ To save on credits, preview your query to ensure it is correct before saving the
 
 Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credit usage throughout the month within the credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
-![SQL Credit Usage panel in the SQL Segment Extensions page][5]{: style="max-width:60%"}
+![SQL Credit Usage panel in the SQL Segment Extensions page]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 The following will happen when your credits reach zero:
 
@@ -205,18 +203,3 @@ The following will happen when your credits reach zero:
 All company users who created a SQL Segment and your company admins will receive a notification email when you have used up 50%, 80%, and 100% of your credits. After your credits reset at the start of the next month, you can create more SQL Segments, and automatic refreshes will resume.
 
 If you want to purchase more SQL Segment credits or additional Segment Extensions, please contact your account manager.
-
-## Troubleshooting
-
-Your query may fail for any of the following reasons:
-
-- Syntax errors in your SQL query
-- SQL does not adhere to the [SQL rules](#writing-sql)
-- Processing timeout (after 20 minutes)
-
-[1]: {% image_buster /assets/img_archive/sql_segments_create.png %}
-[2]: {% image_buster /assets/img_archive/sql_segments_editor.png %}
-[3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment
-[5]: {% image_buster /assets/img_archive/sql_segments_credits.png %}
-[6]: {% image_buster /assets/img/ai_sql_generator.png %}
