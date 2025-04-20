@@ -11,7 +11,7 @@
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
 - **Full Refresh:** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
-- **Incremental refresh:** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
+- **Incremental refresh:** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. This let's you set your segment to automatically refresh membership daily, which helps reduce the cost of a daily data refresh for SQL Segment Extensions.
 - **AI SQL generator:** The AI SQL Generator lets you write a prompt in plain language and turns it into a SQL query for your segment. It's a quick way to get started without needing to write the SQL yourself.
 
 {% alert tip %}
