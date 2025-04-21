@@ -102,13 +102,13 @@ List messages appear as a body message with a list of clickable options. Each li
 
 ### Configure the list message experience in Canvas
 
-#### Step 1: Create an action-based Canvases
+#### Step 1: Create or edit an existing action-based Canvases
 
 You can only add WhatsApp list messages to Canvases that are action-based, as they need to be in response to a user message.
 
-#### Step 2: Build your Canvas
+#### Step 2: Create a WhatsApp Message step
 
-Create a Canvas with a WhatsApp [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), and then select the response message layout of **List Message**.
+Add a WhatsApp [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), and then select the response message layout of **List Message**.
 
 ![A selectable collection of the different types of WhatsApp response messages you can create, including "List Message".][6]{: style="max-width:70%;"}
 
@@ -136,7 +136,7 @@ Continue to build out your Canvas.
 
 ### Creating actions paths for long descriptions
 
-If you have long descriptions, you can use **Matches regex** to specify a row (list items) that contain a certain phrase. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you can use [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) with "ankle boots".
+If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) with "ankle boots".
 
 ![A WhatsApp trigger using the filter for "Matches regex" to capture response messages with "ankle boots".][10]
 
