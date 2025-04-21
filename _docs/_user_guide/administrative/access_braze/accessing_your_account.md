@@ -32,8 +32,8 @@ After you log into Braze with SSO, you can no longer use your password to log in
 
 ## Resetting your password
 
-To reset your password, click the **Forgot your password?** link on the dashboard login page. You will then be prompted to input your email to receive a link to reset your password.
+To reset your password, select the **Forgot your password?** link on the dashboard login page. You'll be prompted to input your email to receive a link to reset your password.
 
-![Reset Password Button][45]
+![Dashboard login with "Forgot your password?" prompt.][1]{: style="max-width:60%"}
 
-[45]: {% image_buster /assets/img_archive/enable_reset.png %}
+[1]: {% image_buster /assets/img_archive/enable_reset.png %}
