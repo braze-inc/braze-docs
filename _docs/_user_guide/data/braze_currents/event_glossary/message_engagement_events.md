@@ -418,7 +418,9 @@ This event occurs when Braze receives a request to update the global subscriptio
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |
-| Push Token Registration | When a user is updated by the [token registration process]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
+| Push Token Registration | When a user is updated by the token registration process |
+| List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
+| Other | Includes any other sources, such as demo or provider sync jobs, or SMS and Whatsapp event callbacks |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
@@ -5620,6 +5622,12 @@ Feature flag impressions are only logged once per session.
 {% api %}
 ## In-App Message Abort events
 
+{% apitags %}
+In-App Messages, Abort
+{% endapitags %}
+
+This event occurs when an originally scheduled in-app message was aborted.
+
 {% tabs %}
 {% tab Amplitude %}
 ```json
@@ -6485,7 +6493,7 @@ This event occurs when Braze receives a response from a third party provider (e.
 ## Live Activity Send events
 
 {% apitags %}
-Live Activity, Send
+Live Activity, Sends
 {% endapitags %}
 
 This event occurs when Braze backend makes a request to its provider regarding Live Activity

@@ -76,9 +76,13 @@ Braze syncs geofences to devices using background push notifications. Follow the
 
 ### Step 4: Update your `Info.plist`
 
-Add the key `NSLocationAlwaysUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
+Add the key `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
+
+{% alert note %}
+Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's developer documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
+{% endalert %}
 
 ### Step 5: Request authorization {#step-5}
 
