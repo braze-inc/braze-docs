@@ -49,7 +49,7 @@ Braze will limit the number of custom attributes that can be created in each wor
 
 If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
 
-When a workspace has too many custom attributes, no new attributes may be created, and Braze will ignore any data received for custom attributes that do not already exist. (However, existing custom attributes may still be updated.) As a courtesy, Braze will provide a reasonable buffer to customers who exceed their entitlement, with the goal of preventing data loss.
+When a workspace has too many custom attributes, no new attributes may be created, and Braze will ignore any data received for custom attributes that do not already exist. (However, existing custom attributes may still be updated.)
 
 ### Removing custom attributes
 

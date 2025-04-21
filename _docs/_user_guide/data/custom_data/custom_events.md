@@ -57,7 +57,7 @@ Braze will limit the number of custom events that can be created in each workspa
 
 If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
 
-When a workspace has too many custom events, no new events may be created, and Braze will ignore any data received for custom events that do not already exist. (However, existing custom events may still be received.) As a courtesy, Braze will provide a reasonable buffer to customers who exceed their entitlement, with the goal of preventing data loss.
+When a workspace has too many custom events, no new events may be created, and Braze will ignore any data received for custom events that do not already exist. (However, existing custom events may still be received.)
 
 ### Viewing usage reports
 
