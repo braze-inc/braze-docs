@@ -57,10 +57,6 @@ Para utilizar el autoservicio de configuración de correo electrónico, debe cum
 2. A continuación, seleccione la pestaña **Verificación del remitente**. Para ver esta pestaña, debes tener el permiso de nivel de empresa "Puede administrar configuración de empresa".
 3. Haga clic en el botón **Iniciar configuración**.
 
-{% alert note %}
-Si utiliza la [navegación más antigua]({{site.baseurl}}/navigation), puede encontrar la **Verificación del remitente** seleccionando el icono de su perfil.
-{% endalert %}
-
 ### Paso 2: Añadir y verificar un dominio de envío
 
 Un dominio de envío se utiliza en la dirección "de" al enviar un correo electrónico. Introduzca un dominio de envío y haga clic en **Enviar**. 
