@@ -86,9 +86,20 @@ Después de revisar los detalles de su lienzo, consulte [Enviar lienzos de prueb
 ## Solución de problemas
 
 {% details ¿Por qué mis usuarios no reciben mis mensajes Canvas? %}
-- Comprueba que su estado de suscripción push es "suscrito" u "adhesión voluntaria" **y** que su estado **Notificaciones push habilitadas** es "true". Si las ha añadido como reglas de entrada en el lienzo, es posible que los usuarios se hayan dado de baja entre el momento en que entraron en el lienzo y recibieron el paso Mensaje.
-- Si la limitación de frecuencia global está activada para tu Canvas, dependiendo de tus reglas específicas, esto puede limitar cuántas veces cada usuario debe recibir un mensaje de un canal específico. 
-- Si se habilitan las Horas tranquilas, esto puede afectar a la hora de envío de tu mensaje, lo que significa que tu mensaje puede enviarse a la siguiente hora disponible (cuando terminen las Horas tranquilas) o cancelar el mensaje por completo.
+
+- 
+-  Si las ha añadido como reglas de entrada en el lienzo, es posible que los usuarios se hayan dado de baja entre el momento en que entraron en el lienzo y recibieron el paso Mensaje.
+-  
+-  
+- 
+
+
+- 
+- 
+- 
+-  
+- 
+- 
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}
