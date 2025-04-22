@@ -43,7 +43,7 @@ Braze は、`http://` または`https://` で始まるURL のみを認識しま�
 
 ### UTMパラメータの追加
 
-{% multi_lang_include click_tracking.md section='UTMパラメータ' %}
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## URL での Liquid パーソナライゼーション
 
@@ -116,9 +116,9 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 リターゲティングに関するガイダンスについては、[SMSリターゲティング]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)をご覧ください。
 
-{% multi_lang_include click_tracking.md section='顧客ドメイン' %}
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='よくある質問' %}
+{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
 
 ### URL をクリックしている個々のユーザーを特定することはできますか?
 
