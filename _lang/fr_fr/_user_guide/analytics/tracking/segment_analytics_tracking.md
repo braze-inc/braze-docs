@@ -27,10 +27,6 @@ Le suivi peut être activé pour 25 segments maximum dans une application. Braz
 
 Allez dans **Analyse/analytique** > **Rapport sur les recettes** pour consulter les données sur les [recettes et les achats au fil du temps pour ce segment][14].
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **chiffres d'affaires** sous **Données**.
-{% endalert %}
-
 ![Données de revenus par segment][17]
 
 Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **Par segment** dans le menu déroulant **Répartition**, puis sélectionnez vos segments dans **Valeurs de répartition**.
@@ -42,10 +38,6 @@ Sélectionnez un nom de segment au-dessus du graphique pour activer ou désactiv
 ## Sessions au cours du temps
 
 De même, vous pouvez trouver des données sur les [sessions dans le temps pour ce segment particulier][13] sur la page d **'accueil**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), il s'agit de votre page d'**aperçu.**
-{% endalert %}
 
 ![Données de session par segment][18]
 
