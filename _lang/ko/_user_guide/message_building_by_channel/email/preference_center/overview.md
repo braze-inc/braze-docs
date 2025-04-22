@@ -13,10 +13,6 @@ channel:
 
 Braze 대시보드에서 **오디언스** > **구독** > **이메일 환경 설정 센터**로 이동합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **사용자** > **가입 그룹** > **이메일 환경설정 센터에** 있습니다.
-{% endalert %}
-
 여기에서 각 구독 그룹을 관리하고 볼 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 여러 개의 선호 센터를 만들 수 있습니다.
 
 {% alert important %}
@@ -38,10 +34,6 @@ Liquid을 사용하면 구독 그룹의 이름과 각 사용자의 상태를 검
 | 유효한 사용자 | 이메일 주소와 외부 ID를 가진 사용자. |
 | 환경설정 권한으로 생성된 API 키 | Braze 대시보드에서 **설정** > **API 키**로 이동하여 환경 설정 센터 권한이 있는 API 키에 액세스할 수 있는지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **개발자 콘솔** > **API 설정**에서 API 키를 만들 수 있습니다.
-{% endalert %}
 
 ### 1단계: 환경설정 센터 엔드포인트 만들기 사용
 
@@ -125,3 +117,26 @@ My encoded string is: {{my_string}}
 이는 레거시 Liquid {%raw%}`${preference_center_url}`{%endraw%} 를 사용할 때 환경 설정 센터를 렌더링하는 데 사용되므로 {%raw%}`${preference_center_url}` 또는 `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} 를 참조하는 캔버스 단계 또는 템플릿이 작동하지 않습니다. 이는 메시지의 일부로 레거시 리퀴드 또는 "PreferenceCenterBrazeDefault"가 포함된 이전에 전송된 메시지에 대해서도 적용됩니다. 
 
 새 메시지에서 {%raw%}`${preference_center_url}`{%endraw%} 을 다시 참조하면 "PreferenceCenterBrazeDefault"라는 이름의 환경설정 센터가 다시 만들어집니다.
+
+### 
+
+  
+
+
+
+
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+
+
+### 
+
+
