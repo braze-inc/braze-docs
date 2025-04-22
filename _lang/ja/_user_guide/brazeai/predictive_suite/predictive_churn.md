@@ -40,10 +40,6 @@ guide_featured_list:
 
 [**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**予測**] は [**エンゲージメント**] の下にあります。
-{% endalert %}
-
 この機能は、購入前にプレビューモードで使用できます。これにより、合成データを使用した解約予測のデモを見ることができ、お客様のユーザーデータに基づいて、解約予測モデルを一度に 1 つ作成できます。このプレビューでは、解約リスクに応じてユーザーをメッセージングのターゲットにすることはできず、作成後に定期的に更新されることもありません。
 
 このプレビューを使用すると、1つの予測を編集して再作成したり、アーカイブして他の予測を作成したりして、さまざまな[定義の]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)[予測品質]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/)をテストできます。
