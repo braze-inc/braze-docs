@@ -10,7 +10,7 @@ tool: Campaigns
 page_type: landing
 description: "このランディングページには、キャンペーンのアイデアや戦略が掲載されています。ここでローカライゼーション、リターゲティング、ベストプラクティスなどのトピックに関する記事を見つけることができます。"
 
-guide_featured_title: ""
+guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: アクティブユーザーのキャンペーン
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
@@ -33,7 +33,7 @@ guide_featured_list:
   - name: リターゲティングキャンペーン
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
-  - name: ""
+  - name: Zoom の登録を自動化する
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom
     image: /assets/img/braze_icons/line-chart-up-01.svg
 
@@ -45,7 +45,7 @@ guide_menu_list:
   - name: 右から左へのメッセージを作成する
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/
     image: /assets/img/braze_icons/globe-02.svg
-  - name: ""
+  - name: 予約リマインダーメールシステム
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
 ---
