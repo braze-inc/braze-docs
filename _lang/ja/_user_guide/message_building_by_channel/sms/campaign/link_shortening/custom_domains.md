@@ -11,4 +11,4 @@ channel:
   - SMS
 ---
 
-{% multi_lang_include custom_domains.mdチャネル='SMS' %}
+{% multi_lang_include custom_domains.md channel='SMS' %}
