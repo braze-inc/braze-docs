@@ -18,11 +18,24 @@ Como en cualquier Canvas, sólo un usuario puede editar un borrador a la vez, y 
 
 ![Un ejemplo de borrador de lienzo con un banner que indica al usuario que está editando un borrador de lienzo con una opción para ver el lienzo activo. El pie de página tiene opciones para volver a la vista de análisis, guardar como borrador o iniciar el borrador.][1]
 
-Para crear un borrador, vaya a un lienzo activo y seleccione el botón **Guardar como borrador** en el pie de página del lienzo. Tenga en cuenta que no se pueden realizar ediciones en el lienzo activo mientras exista un borrador de un lienzo. Puede actualizar el lienzo para aplicar los cambios o descartar el borrador.
+## 
+
+
+
+1. 
+2.  
+
+Tenga en cuenta que no se pueden realizar ediciones en el lienzo activo mientras exista un borrador de un lienzo. Puede actualizar el lienzo para aplicar los cambios o descartar el borrador.
+
+## 
 
 Para hacer referencia al lienzo activo, seleccione **Ver lienzo activo** en el pie de página de la vista de análisis o en la cabecera del lienzo del borrador. Para volver a un lienzo activo, seleccione **Editar borrador** en la vista de análisis o en la vista del lienzo activo.
 
 Sólo puedes hacer referencia a pasos que ya se hayan lanzado antes de crear el borrador. Esto significa que si creaste un paso o canal **después ** de que se creara el borrador, no se podrá hacer referencia a él en tu borrador.
+
+
+ 
+
 
 ### Priorización de mensajes en la aplicación
 
