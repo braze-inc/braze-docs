@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [IAM Studio](https://www.inappmessage.com) は、カスタマイズされたリッチなアプリ内エクスペリエンスを作成し、Braze を通じてそのエクスペリエンスを提供できる、ノーコードのメッセージパーソナライゼーションプラットフォームです。
 
-
+_この統合はIAM Studio.\*sによって維持されている。_
 
 ## 統合について
 
@@ -60,7 +60,7 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 
 {% tabs ローカル %}
 {% tab フォント %}
-![Liquid を追加するオプションが表示されている IAM Studio のUI。
+![Liquid を追加するオプションが表示されている IAM Studio のUI。これらのオプションには、パーソナライズされた文章を作成することも含まれる。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
