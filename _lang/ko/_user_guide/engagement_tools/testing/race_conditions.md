@@ -39,9 +39,11 @@ Braze에서 가장 일반적인 경합 조건 중 하나는 새로 생성된 사
 
 #### Introduce delays
 
-After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message. 
+After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message.
 
 For example, after a user registers for your app, you can send a promotional offer after 24 hours. Or, if you're creating a user or logging a custom attribute, you can add a one-minute delay before proceeding in your process to avoid this race condition.
+
+ 
 
 ## Scenario 2: 여러 API 엔드포인트 사용
 
