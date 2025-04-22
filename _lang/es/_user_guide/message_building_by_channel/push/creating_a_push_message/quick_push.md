@@ -2,7 +2,7 @@
 nav_title: Mensajes push rápidos
 article_title: Mensajes push rápidos
 alias: "/quick_push/"
-description: "Este artículo describe las cosas que hay que saber al crear una campaña push o Cavnas utilizando la experiencia de edición push rápida."
+description: ""
 ---
 
 # Mensajes push rápidos
@@ -62,9 +62,9 @@ Si selecciona varios dispositivos para plataformas móviles, como iOS y Android,
 
 ### Ajustes específicos del dispositivo
 
-Puedes editar la configuración específica de la plataforma en el editor. Esto incluye ajustes como [pulsadores de acción]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canales y grupos de notificación, TTL, prioridad de visualización, sonidos y mucho más.
+Puedes editar la configuración específica de la plataforma en el editor. Esto incluye ajustes como [pulsadores de acción]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canales y grupos de notificación, TTL, prioridad de visualización, sonidos y mucho más. 
 
-Para más información sobre los ajustes específicos de cada dispositivo, consulte las siguientes colecciones de artículos:
+ Para más información sobre los ajustes específicos de cada dispositivo, consulte las siguientes colecciones de artículos:
 
 - [Opciones iOS][6]
 - [Opciones de Android][7]
