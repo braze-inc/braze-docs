@@ -12,10 +12,6 @@ tool: Reports
 
 Para ver un informe de sus ingresos desde el panel de control, vaya a **Análisis** > **Informe de ingresos**. 
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Datos**.
-{% endalert %}
-
 ## Personalización del informe de ingresos
 
 Puede personalizar su informe de ingresos seleccionando un intervalo de fechas, las aplicaciones sobre las que informar y los parámetros.
