@@ -39,7 +39,7 @@ SQL を使用しない場合に最適です。
 - **増分更新:**過去2日間のデータを自動的に更新するか、必要に応じて手動で更新する Snowflake SQL セグメントを作成します。精度とコスト効率のバランスをとるのに最適です。
 - **完全更新:**手動更新時にオーディエンス全体を再計算する Snowflake SQL セグメントを作成します。オーディエンスに関する完全な最新のビューが必要な場合に最適です。
 
-
+![さまざまなセグメントエクステンションの作成経験を選択できるテーブル。][20]{: style="max-width:50%"}
 
 SQL を使用するエクスペリエンスを選択した場合の詳細は、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を参照してください。
 
@@ -57,7 +57,7 @@ SQL を使用するエクスペリエンスを選択した場合の詳細は、[
 
 730日を超えるイベントデータに基づくセグメンテーションは、**セグメント**にある他のフィルターを使用して実行できます。期間を選択するときは、相対的な日付範囲 (過去 X 日間など)、開始日、終了日、または正確な日付範囲 (日付 A ～ B) を指定できます。
 
-
+![2023年8月1日から2023年8月10日までの期間に、カスタムイベント「# of aaa」を0回以上実行したユーザーのセグメンテーション基準。][3]
 
 #### イベントプロパティのセグメンテーション
 
@@ -126,21 +126,21 @@ SQL を使用するエクスペリエンスを選択した場合の詳細は、[
 - 特定のセグメントエクステンションの更新は一度に1回だけ実行できます。既存の更新の処理がすでに開始されている場合に新しい更新が開始される競合的な状況では、Braze は新しい更新リクエストをキャンセルして、進行中の処理を続行します。
 {% endalert %}
 
-#### 
+#### 古くなった拡張機能を自動的に無効にする基準
 
+セグメントエクステンションが古くなると、スケジュールされたリフレッシュは自動的に無効になる。セグメントエクステンションは、以下の条件を満たす場合、古くなる：
 
+- アクティブなキャンペーンまたはキャンバスでは使用されていない
+- アクティブなキャンペーンまたはキャンバス内のセグメントでは使用されていない
+- [分析トラッキングを]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking)オンにしているセグメンテーションでは使用しない。
+- 7日以上変更されていない
+- キャンペーン、キャンバス（下書きを含む）、セグメンテーションに7日以上追加されていない。
 
-- 
-- 
-- 
-- 
-- 
+セグメントエクステンションでスケジュールされたリフレッシュが無効になっている場合、そのエクステンションにはその旨の通知が表示される。
 
+![このエクステンションは、アクティブなキャンペーン、キャンバス、セグメントで使用されていないため、スケジュールされたリフレッシュはオフになっています。セグメントエクステンションは2025年2月23日午前12時に無効となった。"][1]
 
-
-
-
-
+古くなったセグメントエクステンションを使用する準備ができたら、[リフレッシュ設定を確認](#step-4-designate-refresh-settings-optional)し、ユースケースに合ったリフレッシュスケジュールを選択し、変更を保存する。
 
 ### ステップ 5: セグメントエクステンションを保存する
 
@@ -148,52 +148,52 @@ SQL を使用するエクスペリエンスを選択した場合の詳細は、[
 
 エクステンションが処理されている間、エクステンションの名前の横に小さなアニメーションが表示され、エクステンションリストの [**最終処理日**] 列に 「処理中」 という単語が表示されます。処理中はエクステンションを編集できないことに注意してください。
 
-
+!["セグメントエクステンション "ページには、2つのアクティブなエクステンションがある。][5]
 
 ### ステップ 6:エクステンションをセグメントで使用する
 
 エクステンションを作成したら、セグメントを作成したり、キャンペーンやキャンバスのオーディエンスを定義したりする際のフィルターとして使用できます。まず、[**ユーザー属性**] セクションのフィルターリストから [**Braze セグメントエクステンション**] を選択します。
 
-
+!["フィルター "セクションに "Brazeセグメントエクステンション "のドロップダウンフィルターが追加された。][6]
 
 Braze セグメントエクステンションフィルターリストから、このセグメントに含める、または除外したいエクステンションを選択します。
 
-
+![セグメント「Online Shoppers Ext...」を含む「Brazeセグメントエクステンション」フィルター。][7]
 
 エクステンションの基準を表示するには、**「エクステンションの詳細を表示**」を選択し、詳細をモーダルポップで表示する。
 
-
+![オンライン・ショッパーズ・エクステンション - 90日間」のエクステンション詳細。][8]{: style="max-width:70%;"}
 
 これで、通常どおりに [セグメントを作成][11] できます。
 
-## 
+## よくある質問
 
-### 
+### 複数のカスタムイベントを使用するセグメント・エクステンションを作成できるか？
 
- 
+はい。[SQLセグメントエクステンションを]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)使用する場合、複数のイベントを追加したり、複数のSnowflakeテーブルを参照したりすることができる。 
 
+**シンプルエクステンションセグメントエクステンションを**使用する場合、カスタムイベントを1つ、購入イベントを1つ、またはチャネルインタラクションを1つ選択できる。ただし、セグメントを作成するときに、複数のセグメントエクステンションをANDまたはORで組み合わせることができる。
 
+### アクティブなキャンペーンにセグメントエクステンションが存在する場合、アーカイブすることは可能か？
 
-### 
+セグメントエクステンションをアーカイブする前に、そのセグメントエクステンションをすべてのアクティブなメッセージングから削除する必要がある。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
+[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
+[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
+[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
+[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
+[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
+[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
+[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
+[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
+[12]: {% image_buster /assets/img/segment/property1.png %}
+[13]: {% image_buster /assets/img/segment/property2.png %}
+[13.5]: {% image_buster /assets/img/segment/property5.png %}
+[14]: {% image_buster /assets/img/segment/property3.png %}
+[15]: {% image_buster /assets/img/segment/property4.png %}
+[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
+[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
+[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
+[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
+[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
