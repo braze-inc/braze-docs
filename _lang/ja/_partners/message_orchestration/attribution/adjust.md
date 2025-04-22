@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Adjust](https://www.adjust.com/) は、モバイルアトリビューションおよび分析を扱う企業です。広告ソースのアトリビューションと高度な分析を組み合わせ、総合的なビジネスインテリジェンスを提供しています。
 
-
+_この統合はAdjustによって維持されている。_
 
 ## 統合について
 
@@ -56,7 +56,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 iOSアプリがあれば、IDFVはAdjustによって収集され、Brazeに送信される。このIDは、Brazeで一意のデバイスIDにマッピングされる。
 
-このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
+[iOSアップグレードガイドに]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/)記載されているように、IDFAをBrazeで収集している場合、BrazeはオプトインしたユーザーのIDFA値を引き続き保存する。このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
 
 {% endtab %}
 {% tab Swift %}
