@@ -89,7 +89,7 @@ Depois que o processo de integração for concluído, o Braze puxará automatica
 | --- | --- |
 | ID do provedor | Selecione seu provedor e acesse **\*Configurações** > **Informações básicas** |
 | ID do canal | Selecione seu provedor e, em seguida, acesse **Canais** > seu canal > **Configurações básicas** |
-| Segredo do canal | Selecione seu provedor e, em seguida, acesse **Canais** > seu canal > **Configurações básicas** |
+| Segredo do canal |  |
 | Token de acesso ao canal | Selecione seu provedor e acesse **Canais** > seu canal > **API de envio de mensagens**. Se não houver um token de acesso ao canal, selecione **Problema**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -108,6 +108,10 @@ Depois que o processo de integração for concluído, o Braze puxará automatica
    - ID do canal
    - Segredo do canal
    - Token de acesso ao canal
+
+{% alert important %}
+ 
+{% endalert %}
 
 ![Página de integração de envio de mensagens do LINE com a seção de integração do LINE.][3]{: style="max-width:80%;"}
 
@@ -168,7 +172,7 @@ Aqui está um exemplo de carga útil para `/users/track` que atualiza um perfil 
 
 ## Etapa 5: Mesclar perfis (opcional)
 
-Conforme descrito acima, existe a possibilidade de existirem vários perfis de usuário com o mesmo `native_line_id`. Se os seus métodos de atualização criarem perfis de usuário duplicados, você poderá mesclar perfis de usuário não identificados a perfis de usuário identificados com o ponto de extremidade `/user/merge`. 
+ Se os seus métodos de atualização criarem perfis de usuário duplicados, você poderá mesclar perfis de usuário não identificados a perfis de usuário identificados com o ponto de extremidade `/user/merge`. 
 
 Aqui está um exemplo de carga útil para `/users/merge` que direciona um perfil de usuário não identificado pelo alias de usuário `line_id`:
 
@@ -207,7 +211,7 @@ Para ajudar a gerenciar isso, a Braze oferece ferramentas e lógica que suportam
 1. **Ferramenta de sincronização de inscrições:** Essa ferramenta é implantada automaticamente após uma integração bem-sucedida do canal LINE. Use-o para atualizar perfis existentes e criar novos perfis.<br><br>Todos os perfis de usuário do Braze que tenham um `native_line_id` que siga o canal LINE serão atualizados para ter um status de grupo de inscrições de `subscribed`. Qualquer seguidor do canal LINE que não tenha um perfil de usuário Braze com o `native_line_id` terá:<br><br>\- Um perfil de usuário anônimo criado com `native_line_id` definido como o ID LINE do usuário que segue o canal <br>\- Um alias de usuário `line_id` definido para o ID do LINE do usuário após o canal <br>\- Um status de grupo de inscrições de `subscribed`
 
 {: start="2"}
-2\. **Atualizações do evento:** São usados para atualizar o status da inscrição de um usuário. Quando o Braze receber atualizações de eventos do usuário para o canal LINE integrado e o evento for um follow, o perfil do usuário terá um status de grupo de inscrições de `subscribed`. Se o evento for um unfollow, o perfil do usuário terá um status de grupo de inscrições de `unsubscribed`.<br><br>\- Todos os perfis de usuário do Braze com um `native_line_id` correspondente serão atualizados automaticamente. <br>\- Se não houver um perfil de usuário correspondente para um evento, o Braze criará um [usuário anônimo](https://www.braze.com/docs/line/user_management/).
+2\. **Atualizações do evento:** São usados para atualizar o status da inscrição de um usuário. Quando o Braze receber atualizações de eventos do usuário para o canal LINE integrado e o evento for um follow, o perfil do usuário terá um status de grupo de inscrições de `subscribed`. Se o evento for um unfollow, o perfil do usuário terá um status de grupo de inscrições de `unsubscribed`.<br><br>\- Todos os perfis de usuário do Braze com um `native_line_id` correspondente serão atualizados automaticamente. <br>
 
 ## Casos de uso
 
