@@ -12,10 +12,10 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/push_notifications/examples.md%}
+{% multi_lang_include developer_guide/android/push_notifications/examples.md%}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/push_notifications/examples.md %}
+guide/swift/push_notifications/examples.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
