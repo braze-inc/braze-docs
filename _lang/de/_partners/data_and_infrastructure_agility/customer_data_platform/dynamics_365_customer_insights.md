@@ -42,9 +42,9 @@ Navigieren Sie in Customer Insights zu **Admin > Verbindungen**. Wählen Sie dan
 
 ### Schritt 2: Erstellen eines Braze Segments
 
-1. Gehen Sie in Braze zu **Zielgruppe** > Segmente.
+1. Gehen Sie in Braze zu **Zielgruppe** > **Segmente**.
 2. Erstellen Sie ein Segment der Nutzer:innen, die Microsoft über Dynamics 365 Customer Insights aktualisieren soll.
-3. Erfassen Sie den API-Bezeichner des Segments
+3. Erfassen Sie den **API-Bezeichner** des Segments
 
 ### Schritt 3: Konfigurieren Sie einen Export
 
@@ -58,7 +58,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugang zu einer Verbindung die
   b. Wenn Sie ein anderes ID-Feld, das nicht der `external_id` eines Datensatzes in Braze entspricht, oder ein leeres Feld abbilden, werden beim Exportieren neue Datensätze in Braze erstellt.
 5. Wählen Sie schließlich die Segmente aus, die Sie exportieren möchten, und wählen Sie **Speichern**. 
 
-Beachten Sie, dass durch das Speichern eines Exports der Export nicht sofort ausgeführt wird. Dieser Export wird bei jeder [geplanten Aktualisierung](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab) ausgeführt. Sie können [Daten](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand) auch [auf Anfrage exportieren](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
+Beachten Sie, dass durch das Speichern eines Exports der Export nicht sofort ausgeführt wird. Dieser Export wird bei jeder [geplanten Aktualisierung](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab) ausgeführt. Zudem können Sie [Daten auf Anfrage exportieren](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
 
 
 ### Verwendung dieser Integration
