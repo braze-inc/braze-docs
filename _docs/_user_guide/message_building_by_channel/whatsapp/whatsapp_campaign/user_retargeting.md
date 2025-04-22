@@ -25,11 +25,11 @@ When building audiences with user retargeting, you may wish to include or exclud
 Users can be filtered by when they last received a WhatsApp or if they have received a WhatsApp from a specific WhatsApp campaign. Filters can be set in the Target Users step of the campaign builder.
 
 **Filter by last received WhatsApp**<br>
-![][5]{: style="max-width:75%"}
+![Filter for last receiving a WhatsApp message on April 22, 2025.][5]{: style="max-width:75%"}
 
 **Filter by received messages from WhatsApp campaign**<br>
 Filters users who have received a message from a specific WhatsApp campaign. With this filter, you also have the option to filter off those that have not received messages from a WhatsApp campaign.<br>
-![][4]
+![Filter for receiving a WhatsApp campaign.][4]
 
 ### Filter by engagement
 Retarget users who have, or have not, read a WhatsApp campaign or Canvas step. 
@@ -39,18 +39,19 @@ Retarget users who have, or have not, read a WhatsApp campaign or Canvas step.
 2. Select **read WhatsApp message**.
 3. Choose the desired campaign.<br>
 
-![][3]
+![Filter for having read a WhatsApp message.][3]
 
 **Retarget users who have opened/read a specific Canvas Step**
 1. Create a segment using the **Clicked/Opened Step** filter.
 2. Select **read WhatsApp message**.
 3. Choose the desired Canvas and Canvas steps.<br>
 
-![][2]
+![Filter for reading a WhatsApp step.][2]
 
 **Filter by campaign or Canvas attribution**<br>
 Filter for users who have opened/read to a specific WhatsApp campaign or Canvas component or tag.
-![][1]
+
+![Filter for opening a specific WhatsApp message.][1]
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %} 

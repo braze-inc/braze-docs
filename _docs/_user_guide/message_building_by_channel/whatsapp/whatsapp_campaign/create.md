@@ -121,13 +121,13 @@ There are three response message layouts you can use:
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![A preview message for an existing user named Suzanne.][3]{: style="max-width:80%;"}
+![A preview message for a custom user named Max.][3]{: style="max-width:80%;"}
 
 {% alert note %}
 A conversation window is required to send response messages, including test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
 {% endalert %}
 
-![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 217-582-9414. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
 
 ### Step 4: Build the remainder of your campaign or Canvas
 
