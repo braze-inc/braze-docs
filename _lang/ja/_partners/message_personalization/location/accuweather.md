@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [AccuWeather](https://www.accuweather.com/) は、世界中で気象予報サービスを提供するメディア企業です。AccuWeather を使用すると、マーケティングキャンペーンを強化、パーソナライズし、Braze [コネクテッドコンテンツ][60]]を使用して翻訳を自動化できます。 
 
-
+_この統合はAccuWeatherによって維持されている。_
 
 ## 前提条件
 
