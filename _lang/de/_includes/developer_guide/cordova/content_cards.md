@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/cordova.md %}
+{% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
 ## Kartenzuführungen
 
