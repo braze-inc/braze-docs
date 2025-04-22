@@ -64,8 +64,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: メール・ラブ
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
-- name: ""
+- name: タップカート
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
