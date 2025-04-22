@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Contentsquare](https://contentsquare.com/) は、カスタマーエクスペリエンスを今までにない方法で理解できるようにするデジタルエクスペリエンス分析プラットフォームです。
 
-
+_この統合はContentsquareによって維持されている。_
 
 ## 統合について
 
