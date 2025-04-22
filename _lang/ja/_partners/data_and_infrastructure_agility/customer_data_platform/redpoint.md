@@ -11,6 +11,10 @@ search_tag: Redpoint
 
 > [Redpoint][2] は、完全に統合されたキャンペーンオーケストレーションプラットフォームをマーケターに提供するテクノロジープラットフォームです。Redpoint のセグメンテーション、スケジュール、およびオートメーション機能を活用して、CDP データが Braze にインポートされる方法とタイミングをコントロールします。
 
+
+
+## 統合について
+
 Braze と Redpoint の統合により、Redpoint CDP データに基づいて Braze セグメントを作成できます。Redpoint には、データを Braze に渡すための2種類のモードがあります。 
 
 1. **Braze Onboarding and Upsert** モード:"Upserts" RedpointからBrazeへのユーザープロファイル。これは、データが変更されたときに、ユーザーレコードを登録または更新するために使用されるものです。 
@@ -30,10 +34,6 @@ Braze と Redpoint の統合により、Redpoint CDP データに基づいて Br
 | Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Redpoint Data Management アーティファクト | Braze 統合は、一連の Redpoint Data Management アーティファクトによりサポートされています。ご使用の Redpoint Data Management バージョンに対応したアーティファクトをリクエストするには、[Redpoint Support][3] にお問い合わせください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
-{% endalert %}
 
 ## RedpointCDPカスタム属性
 
@@ -161,6 +161,7 @@ RPI Audience 出力を Braze に同期するには、アウトバウンド配信
 Redpoint関連のプロパティーは、ユーザープロファイルで表示できます。
 
 ![][15]{: style="max-width:80%;"}
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com
