@@ -1,4 +1,4 @@
-guide/prerequisites/unreal_engine.md developer_ %}
+{% multi_lang_include developer_ %}
 
 ## Initialisierung des SDK
 
