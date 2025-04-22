@@ -11,10 +11,10 @@ description: "This landing page is home to everything RudderStack including how 
 
 guide_featured_list:
 - name: RudderStack
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack
+  link: /docs/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack/
   image: /assets/img/braze_icons/user-circle.svg
 - name: RudderStack for Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
 

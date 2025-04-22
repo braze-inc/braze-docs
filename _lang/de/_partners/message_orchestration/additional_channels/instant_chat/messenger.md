@@ -21,7 +21,7 @@ Die Facebook Messenger-Plattform ist für "nicht werbliche Nachrichten gedacht, 
 Bestätigen Sie die folgenden Punkte, bevor Sie mit der Integration fortfahren:
 - Facebook lässt die Nutzung der Messenger-Plattform zum Versenden von Marketing Nachrichten nicht zu. 
 - Sie benötigen die ausdrückliche Zustimmung des Nutzers:innen für Nachrichten von Ihrer Seite. 
-- Um Nachrichten an Nutzer:innen zu senden, die keine Testnutzer:innen Ihrer Facebook App sind, muss Ihre App die App-Prüfung von Facebook bestehen.<br><br>
+- Um Nachrichten an Nutzer:innen zu senden, die keine Testnutzer:innen Ihrer Facebook App sind, muss Ihre App die [App-Prüfung](https://developers.facebook.com/docs/messenger-platform/app-review) von Facebook bestehen.<br><br>
 
 | Anforderung| Herkunft| Zugang| Beschreibung|
 | ---| ---| ---|

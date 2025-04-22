@@ -51,7 +51,7 @@ To configure the connection between BlueConic and Braze, you must add your Braze
 1. In BlueConic, select **Set up and run** in the **Setup** section in the left panel.<br><br>
 2. In the Braze authentication page that opens, enter your Braze REST API endpoint and Braze API key.<br>
 ![]({% image_buster /assets/img/blueconic/braze2.png %}){: style="max-width:80%;"}<br><br>
-3. In the S3 setup and authentication section, enter these credentials: Amazon Web Services (S3) access key ID, secret access key, and S3 bucket. They need to be the [same credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/) you configured when setting up your Braze and Amazon S3 integration. Save your settings. <br>![]({% image_buster /assets/img/blueconic/braze3.png %}){: style="max-width:80%;"}
+3. In the S3 setup and authentication section, enter these credentials: Amazon Web Services (S3) access key ID, secret access key, and S3 bucket. They need to be the [same credentials]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) you configured when setting up your Braze and Amazon S3 integration. Save your settings. <br>![]({% image_buster /assets/img/blueconic/braze3.png %}){: style="max-width:80%;"}
 
 ### Step 3: Creating import or export goals (import mapping)
 

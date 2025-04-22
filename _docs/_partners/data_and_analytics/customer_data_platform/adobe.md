@@ -11,12 +11,12 @@ description: "This landing page is home to everything Adobe including how to int
 
 guide_featured_list:
 - name: Adobe
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe/
+  link: /docs/partners/data_and_analytics/customer_data_platform/adobe/adobe/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Event Forwarding Extension
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/event_forwarding_extension/
+  link: /docs/partners/data_and_analytics/customer_data_platform/adobe/event_forwarding_extension/
   image: /assets/img/braze_icons/arrow-square-right.svg
 - name: Adobe for Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/adobe/adobe_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---

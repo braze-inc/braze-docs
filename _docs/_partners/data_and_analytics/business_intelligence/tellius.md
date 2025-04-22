@@ -29,7 +29,7 @@ The Braze and Tellius integration empowers users to leverage data, without relyi
 
 Braze stores granular customer data in Snowflake. You can leverage your Braze data to generate insights through the Braze Snowflake Data Sharing program or by obtaining a Snowflake reader account. 
 
-Follow the [Snowflake integration]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to get set up. 
+Follow the [Snowflake integration]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) to get set up. 
 
 ### Step 2: Connect Tellius to Braze data in Snowflake
 

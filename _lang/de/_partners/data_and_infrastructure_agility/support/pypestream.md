@@ -32,7 +32,7 @@ Die Integration von Braze und Pypestream erlaubt es Ihnen, den End-to-End Kunden
 Die Partnerschaft zwischen Braze und Pypestream kann in Ihren Canvase genutzt werden, um gängige Anwendungsfälle zu realisieren:
 * **Intelligentes Retargeting**: Retargeting von Nutzern:innen mit Braze-Canvas nach ihrem Engagement mit Ihrer Marke, indem Sie alle über Pypestream erfassten Datenpunkte nutzen.
 * **Dynamisches Targeting**: Sprechen Sie bestehende und potenzielle Kunden auf der Grundlage ihrer spezifischen Kohorten und Segmente an und bedienen Sie sie mit maßgeschneiderten Konversationserlebnissen über Pypestream.
-* **Kontextuelle Insights für Kund**:**innen**: Nachdem ein Endnutzer (bestehender oder potenzieller Kunde) sich auf Ihrer Website engagiert hat, kombinieren Sie die vom Pypestream Event Listener aufgenommenen Webseiten-Tags mit den in Braze gespeicherten Kundendaten, um eine vollständig personalisierte und kontextuelle Interaktion zu ermöglichen.
+* **Kontextuelle Insights für Kund:innen**: Nachdem ein Endnutzer (bestehender oder potenzieller Kunde) sich auf Ihrer Website engagiert hat, kombinieren Sie die vom Pypestream Event Listener aufgenommenen Webseiten-Tags mit den in Braze gespeicherten Kundendaten, um eine vollständig personalisierte und kontextuelle Interaktion zu ermöglichen.
 
 ## Integration
 
@@ -165,7 +165,7 @@ In diesem [Pypestream-Artikel](https://pypestream.atlassian.net/servicedesk/cust
 
 ## Integration Anwendungsfall
 
-Nachdem die Voraussetzungen erfüllt sind und eine Aktionsknotenstruktur erstellt wurde, steht dem Entwickler:in ein leeres Canvas zur Verfügung, von dem aus er mit den Endpunkten der Braze API arbeiten kann. Dieses Beispiel zeigt die Schritte, die für die Integration eines Aktionsknotens in den [Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) von Braze [`/user/track` erforderlich sind]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) [, insbesondere]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) für die Erstellung eines Nutzerprofils zum Tracking eines bestimmten Nutzers:innen, der einen Pypestream-Konversationsfluss betritt.
+Nachdem die Voraussetzungen erfüllt sind und eine Aktionsknotenstruktur erstellt wurde, steht dem Entwickler:in ein leeres Canvas zur Verfügung, von dem aus er mit den Endpunkten der Braze API arbeiten kann. Dieses Beispiel zeigt die Schritte, die für die Integration eines Aktionsknotens in den [`/user/track`Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) von Braze  erforderlich sind, insbesondere für die Erstellung eines Nutzerprofils zum Tracking eines bestimmten Nutzers:innen, der einen Pypestream-Konversationsfluss betritt.
 
 ### Schritt 1: Sammeln Sie Daten vom Nutzer:innen im Gespräch
 

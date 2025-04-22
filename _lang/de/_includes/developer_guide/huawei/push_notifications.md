@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/android.md %}
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Push-Benachrichtigungen einrichten
 

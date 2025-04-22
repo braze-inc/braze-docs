@@ -41,7 +41,7 @@ If you've already set up and turned on historical backfill in your configuration
 Following the initial data sync, Braze will continuously track new data and updates, directly from Shopify and Braze SDKs.
 
 {% alert note %}
-If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]({{site.baseurl}}/shopify_features#historical-backfill) for important information. To see what specific customer data is being backfilled, refer to [Shopify features]({{site.baseurl}}/shopify_features/#shopify-data).
+If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) for important information. To see what specific customer data is being backfilled, refer to [Shopify features]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/).
 {% endalert %}
 
 ### User and data syncing

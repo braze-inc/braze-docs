@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Census cohort import
 
-> This article describes how to import user cohorts from [Census][1] to Braze. For more information on integrating Census, see the main [Census article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/census/).
+> This article describes how to import user cohorts from [Census][1] to Braze. For more information on integrating Census, see the main [Census article]({{site.baseurl}}/partners/data_and_analytics/reverse_etl/census/).
 
 ## Cohort import integration
 

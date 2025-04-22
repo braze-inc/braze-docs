@@ -17,7 +17,7 @@ _This integration is maintained by Branch._
 
 ## About the integration
 
-The Braze and Branch integration will help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/).
+The Braze and Branch integration will help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/).
 
 ## Prerequisites
 
@@ -140,5 +140,5 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 {% endalert %}
 
 
-[22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"
+[22]: https://docs.branch.io/pages/exports/ua-webhooks/
 [4]: {% image_buster /assets/img/attribution/branch.png %}

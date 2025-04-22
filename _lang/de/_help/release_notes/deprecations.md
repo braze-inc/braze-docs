@@ -110,7 +110,7 @@ Das Braze SDK stellte ein Feedback-Widget zur Verfügung, das zu Ihrer App hinzu
 **Unterstützung zurückgezogen**: Entfernen Sie die Stütze mit Braze: Juli 2018, Google stellt die Unterstützung ein: Mai 29, 2019<br>
 **Ersetzt durch**: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
-Google hat [die Unterstützung für GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) ab dem 29\. Mai 2019 [eingestellt](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html). Braze hat die Unterstützung für GCM in den Android SDKs im Juli 2018 eingestellt, was in unseren [SDK Changelogs für Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) vermerkt wurde. Das bedeutet, dass bestehende GCM Token weiterhin funktionieren und Sie Ihren bestehenden Nutzer:innen Nachrichten schicken können. Allerdings können Sie neuen Nutzer:innen keine Nachrichten schicken.
+Ab dem 29\. Mai 2019 hat Google hat [die Unterstützung für GCM eingestellt](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html). Braze hat die Unterstützung für GCM in den Android SDKs im Juli 2018 eingestellt, was in unseren [SDK Changelogs für Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) vermerkt wurde. Das bedeutet, dass bestehende GCM Token weiterhin funktionieren und Sie Ihren bestehenden Nutzer:innen Nachrichten schicken können. Allerdings können Sie neuen Nutzer:innen keine Nachrichten schicken.
 
 Kunden:in, die noch nicht auf [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) migriert sind, können von dieser Änderung betroffen sein.
 
@@ -121,7 +121,7 @@ Wenn Sie nicht auf FCM umgestellt haben, werden alle Registrierungen von GCM Pus
 **Unterstützung zurückgezogen**: 2014-2015<br>
 **Ersetzt durch**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
-Braze hat die Unterstützung für die Eclipse IDE eingestellt, da Google [die Unterstützung](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) für das Eclipse Android Developer Tools (ADT) Plugin [Sunsetting](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). 
+Braze hat die Unterstützung für die Eclipse IDE eingestellt, da Google für das Eclipse Android Developer Tools (ADT) Plugin [den Support schrittweise beendet](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). 
 
 Wenn Sie vor der Migration Unterstützung bei Ihrer Eclipse Integration benötigen, wenden Sie sich an den [Support]({{site.baseurl}}/support_contact/).
 

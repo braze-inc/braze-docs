@@ -50,7 +50,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
-Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties class documentation") for additional details.
+Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc) for additional details.
 
 ### Adding quantity
 You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in an `NSUInteger` for the quantity.
@@ -59,7 +59,7 @@ You can add a quantity to your purchases if customers make the same purchase mul
 * Methods without a quantity input will have a default quantity value of 1.
 * Methods with a quantity input have no default value, and **must** receive a quantity input for the SDK to log a purchase.
 
-Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity class documentation") for additional details.
+Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa) for additional details.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

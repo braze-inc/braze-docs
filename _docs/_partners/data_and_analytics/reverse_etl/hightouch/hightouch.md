@@ -13,7 +13,7 @@ search_tag: Partner
 
 The Braze and Hightouch integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. By automatically syncing customer data into Braze, you no longer need to worry about data consistency and can focus on building world-class customer experiences. 
 
-This integration also allows you to [import user cohorts to Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/hightouch/), sending targeted campaigns based on data that may only exist in your warehouse.
+This integration also allows you to [import user cohorts to Braze]({{site.baseurl}}/partners/data_and_analytics/reverse_etl/hightouch/hightouch_cohort_import/), sending targeted campaigns based on data that may only exist in your warehouse.
 
 ## Prerequisites
 

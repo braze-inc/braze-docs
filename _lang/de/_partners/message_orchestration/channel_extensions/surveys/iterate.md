@@ -71,7 +71,7 @@ Ihre Umfrage kann auf zwei Arten weitergegeben werden: indem Sie die erste Frage
 
 - **Den Code einbetten**
   - Kopieren Sie den Code-Snippet unter **E-Mail-Einbettungscode** im Abschnitt Integration von Braze auf dem Tab **Umfrage senden**. Fügen Sie den Code in den HTML-Code Ihrer Braze E-Mail an der Stelle ein, an der der Anfang der Umfrage erscheinen soll. 
-  - Wenn Sie Probleme mit der Darstellung der Umfragen haben oder wenn diese falsch formatiert sind, müssen Sie im **Nachrichten-Editor** auf den Tab **Sendeinfo** gehen und die Option **Inline CSS** deaktivieren.
+  - Wenn Sie Probleme mit der Darstellung der Umfragen haben oder wenn diese falsch formatiert sind, müssen Sie im Nachrichten-Editor auf den Tab **Sendeinfo** gehen und die Option **Inline CSS** deaktivieren.
 - **Einen Link einfügen**
   - Kopieren Sie den Link unter **Umfrage-Link** im Abschnitt Integration von Braze auf dem Tab **Umfrage senden**. Beachten Sie, dass das Liquid, das im Link {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} enthalten ist, für jeden Nutzer:innen beim Senden automatisch ersetzt wird.
 

@@ -124,7 +124,7 @@ Nachdem Sie eine neue Richtlinie erstellt haben, gehen Sie zu **Nutzer:innen** u
 {% tabs %}
 {% tab Braze-Currents %}
 
-Gehen Sie in Braze zu **Partnerintegrationen** > Datenexport.
+Gehen Sie in Braze zu **Partnerintegrationen** > **Datenexport**.
 
 Wählen Sie dann **Create Current** und anschließend **Amazon S3 Data Export**.
 
@@ -237,7 +237,7 @@ Wählen Sie in demselben IAM-Bereich der Konsole **Rollen** > **Rolle erstellen*
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Rufen Sie die ID Ihres Braze-Kontos und Ihre externe ID von Ihrem Braze-Konto ab:
-- **Currents**: Gehen Sie in Braze zu **Partnerintegrationen** > Datenexport. Wählen Sie dann **Create Current** und anschließend **Amazon S3 Data Export**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen.
+- **Currents**: Gehen Sie in Braze zu **Partnerintegrationen** > **Datenexport**. Wählen Sie dann **Create Current** und anschließend **Amazon S3 Data Export**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen.
 - **Dashboard Daten exportieren**: Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Amazon S3**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen.
 
 Wählen Sie in der AWS-Konsole **ein anderes AWS-Konto** als SELEKTOR-Typ für die vertrauenswürdige Entität aus. Geben Sie Ihre Braze-Konto ID an, markieren Sie das Feld **Externe ID erforderlich** und geben Sie die externe ID von Braze ein. Wählen Sie nach Abschluss **Weiter** aus.
