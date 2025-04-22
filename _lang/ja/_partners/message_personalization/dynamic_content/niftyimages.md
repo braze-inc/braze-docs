@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [NiftyImages](https://niftyimages.com) は、マーケターが関連性のある最新情報を含むメールをより効率的に送信し、かつエンゲージメントを強化し収益を増やすことができるリアルタイムのメールパーソナライゼーションソフトウェアです。それはマーケティング担当者が簡単かつ迅速にメールにダイナミックなコンテンツを追加できるユーザーに優しいセルフサービングツールです。
 
+
+
 ## 前提条件
 
 NiftyImages はデフォルトの Braze プラットフォームで動作し、統合は不要です。使用を開始するために必要なものは、[NiftyImages アカウント](https://niftyimages.com/Signup)だけです。
@@ -58,5 +60,6 @@ NiftyImagesでマージタグを選択し、デフォルト値を入力します
 ### ステップ 3:Brazeに画像URLを追加
 
 Braze でキャンペーンまたはキャンバスを開き、NiftyImage URL を貼り付けます。必要に応じて、変更をプレビューして Liquid タグを確認できます。
+
 
 ![代替テキスト]({% image_buster /assets/img/niftyimages/6.png %})
