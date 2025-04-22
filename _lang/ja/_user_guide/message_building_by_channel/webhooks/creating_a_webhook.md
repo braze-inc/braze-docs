@@ -28,10 +28,10 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 **ステップ:**
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-2. 
+2. [**Webhook**] を選択するか、複数のチャネルをターゲットにしたキャンペーンの場合は [**マルチチャネル**] を選択します。
 3. キャンペーンに、明確で意味のある名前を付けます。
 4. (オプション）このキャンペーンがどのように使用されるかを説明するために説明を追加する。
-4. 
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加された各バリアントに対して、異なるWebhookテンプレートを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
@@ -73,7 +73,7 @@ Webhookをゼロから作成するか、既存のテンプレートを使用す�
 
 コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。利用可能なすべての言語のリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
-右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。
+右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 #### Webhook URL
 
@@ -176,7 +176,7 @@ Webhook は、スケジュールされた時刻、アクション、または AP
 
 #### コンバージョンイベントを選択する
 
-ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 
@@ -231,7 +231,7 @@ Brazeは次のIPからwebhookを送信します。リストされる IP は、�
 Braze-to-Braze Webhook を作成していて、許可リストを使用している場合は、`127.0.0.1` を含む次のすべての IP を許可リストに追加する必要があります。
 {% endalert %}
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 ### Brazeパートナー{#utilizing-webhooks}とwebhookを使用する
 
