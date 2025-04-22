@@ -43,7 +43,7 @@ CDI の認証情報が正しくないか、データウェアハウスの設定�
 
 IP許可リストにBrazeの公式IPを追加してみる。詳細については、[Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/)を参照するか、関連するIP を許可してください。
 
-{% multi_lang_include data_centers.mdデータセンター='ips' %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### 顧客設定による SQL 実行エラー: 002003 (42S02):SQLコンパイルエラー：存在しないか、認証されていない
 
