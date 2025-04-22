@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Lokaliseは](https://lokalise.com)アジャイルチームのための翻訳管理サービスである。
 
-
+_この統合はLokalise によって維持されます。_
 
 ## 統合について
 
