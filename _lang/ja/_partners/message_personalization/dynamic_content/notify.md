@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Notify
 
-> [Notify](https://notifyai.io/) は、カスタマーリレーションシップマネジメントツールとシームレスに統合し、マーケティング戦略を強化し、複数のチャネルにわたってエンゲージメントを促進する AI 主導のソフトウェアソリューションです。
+> [Notify](https://fr.notify-group.com/) は、カスタマーリレーションシップマネジメントツールとシームレスに統合し、マーケティング戦略を強化し、複数のチャネルにわたってエンゲージメントを促進する AI 主導のソフトウェアソリューションです。
 
 Braze と Notify の統合により、マーケターは様々なプラットフォームで効果的にエンゲージメントを促進できるようになります。従来のマーケティング手法に依存する代わりに、Braze API によってトリガーされたキャンペーンでは、Notify の機能を活用して、メール、SMS、プッシュ通知などを含む複数のチャネルを通じてパーソナライズされたメッセージングを配信できます。
 
@@ -28,7 +28,7 @@ Braze と Notify の統合により、マーケターは様々なプラットフ
 
 ### ステップ1:キャンペーンを作成
 
-Braze で[API トリガーキャンペーン](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery)を作成します。そして、キャンペーン`api_identifier` を Notify と共有します。
+Braze で[API トリガーキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery)を作成します。そして、キャンペーン`api_identifier` を Notify と共有します。
 
 ### ステップ 2: Braze でセグメントを作成する
 
