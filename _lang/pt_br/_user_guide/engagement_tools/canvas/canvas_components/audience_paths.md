@@ -15,7 +15,9 @@ tool: Canvas
 
 Este componente de canva substitui a necessidade de criar etapas completas baseadas em público excessivo, permitindo que você combine o que poderia ter sido oito componentes completos em um. Isso ajuda você a simplificar o direcionamento do usuário enquanto limpa seus canvas de desordem e complexidade desnecessárias. 
 
-![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
+
+
+## 
 
 Os caminhos do público são semelhantes a funis de classificação com critérios de classificação. Os usuários são avaliados para cada critério em ordem de prioridade e enviados pela jornada dos critérios de maior classificação para os quais se qualificam. Isso reduz a ambiguidade de onde os usuários irão e quais mensagens eles receberão. Nota que os rankings não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
@@ -27,14 +29,24 @@ Com as jornadas do público, você pode:
 - Direcione usuários de forma precisa em grande escala.
   - Crie até oito grupos de público (dois padrões e seis grupos adicionais) por componente, mas você pode querer conectar várias Etapas de Caminhos de Público para classificar ainda mais seus usuários. 
 
+### 
+
+  
+
+
+
+  
+
+ 
+
 ## Criando uma jornada do público
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+
 
 Para adicionar uma etapa de Jornadas do público, faça o seguinte: 
 
 1. Adicione uma etapa ao seu canva. 
-2. Arraste e solte o componente da barra lateral ou clique em <i class="fas fa-plus-circle"></i> **Adicionar** na parte inferior de uma etapa e selecione **Caminhos do Público**.
+2. 
 
 O componente de Caminhos de Público padrão contém dois grupos de público padrão, **Grupo 1** e **Todos os Outros**. O grupo **Todos os Outros** inclui qualquer usuário que não se enquadre em um grupo de público definido. Este grupo sempre será o último na classificação.
 
@@ -44,15 +56,15 @@ A captura de tela a seguir mostra o layout de uma etapa de Caminhos do público 
 
 Por exemplo, se você quiser enviar recomendações úteis de alimentos para um grupo de usuários, pode selecionar filtros de atributo personalizado que você já criou, como "Ama a Culinária Asiática", "Ama a Culinária Latina" e "Ama a Culinária Europeia". 
 
-![][3]{: style="max-width:90%;margin-left:15px;"}
+
 
 Depois que a etapa Jornada do público estiver concluída, cada grupo de público terá um ramo separado. Você pode continuar usando os Caminhos do Público para filtrar ainda mais seu público, ou continuar sua jornada no Canva com as etapas padrão do Canva. 
 
-![][4]{: style="max-width:90%;margin-left:15px;"}
+
 
 ### Testando grupos de público
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+
 
 Depois de adicionar segmentos e filtros ao seu público, você pode testar se seus grupos de público estão configurados conforme o esperado [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se eles correspondem aos critérios do público. 
 
@@ -62,7 +74,7 @@ O verdadeiro poder dos Caminhos do público reside na capacidade de atribuir pri
 
 Ao atribuir alta prioridade a esses grupos, você pode direcionar usuários que se enquadram em filtros e segmentos específicos, enquanto ainda direciona usuários que podem não se encaixar nesses critérios específicos—tudo em uma única etapa do canva.
 
-![][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+
 
 Por exemplo, digamos que você queria enviar a um grupo de usuários anúncios de novos produtos. Você começaria classificando os filtros que se enquadram nesses produtos no topo da jornada do público. Se você estivesse criando uma campanha de marketing para a empresa "Big Brand" e uma nova marca de sapatos tivesse acabado de ser lançada, você poderia selecionar filtros como "Gosta de Sapatos Big Brand" ou "Gosta de Big Brand", e enviar diferentes mensagens de e-mail com base no grupo filtrado em que eles se enquadram. 
 
@@ -93,3 +105,4 @@ Confira nossos [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
 [3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
 [4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
+
