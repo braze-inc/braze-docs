@@ -42,7 +42,7 @@ API呼び出しにエンドポイントを使用する場合は、RESTエンド�
 SDK 統合には、REST エンドポイントではなく [SDKエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)を使用します。
 {% endalert %}
 
-{% multi_lang_include data_centers.mdデータセンター='インスタンス' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API制限
 
