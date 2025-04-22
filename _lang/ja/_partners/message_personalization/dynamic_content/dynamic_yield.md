@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Mastercardの子会社である[Dynamic Yieldは](https://www.dynamicyield.com/)、パーソナライズされ、最適化され、同期化されたデジタル顧客体験を提供できるよう、さまざまな業種の企業を支援している。Dynamic Yieldの[Experience OSにより](http://www.dynamicyield.com/experience-os)、マーケティング担当者、プロダクトマネージャー、開発者、デジタルチームは、コンテンツ、製品、オファーを各顧客にアルゴリズムでマッチングさせ、収益と顧客ロイヤルティを加速させることができる。
 
-
+_この統合はダイナミック・イールドによって維持されている。_
 
 ## 統合について
 
