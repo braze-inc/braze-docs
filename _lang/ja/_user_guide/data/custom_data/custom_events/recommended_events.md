@@ -24,7 +24,7 @@ Brazeはすべての推奨イベントに特別なバリデーションを適用
 
 ### eコマース推奨イベント
 
-[eコマースの推奨イベントは]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/)、推奨イベントに基づいている。これらのeコマース推奨イベントは、商品の閲覧、カートの更新、チェックアウトの開始など、顧客のアクションを追跡する。 
+[eコマースの推奨イベントは]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/)、推奨イベントに基づいている。これらのeコマース推奨イベントは、商品を見たり、カートを更新したり、チェックアウトを開始したりといった顧客のアクションを追跡する。 
 
 - `ecommerce.product_viewed`
 - `ecommerce.cart_updated`
