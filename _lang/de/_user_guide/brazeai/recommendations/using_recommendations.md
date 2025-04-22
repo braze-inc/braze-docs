@@ -10,7 +10,7 @@ page_order: 20
 > Nachdem Ihre Empfehlung trainiert wurde, können Sie Liquid verwenden, um empfohlene Artikel in Ihren Nachrichten abzurufen und anzuzeigen. Der Schlüssel dazu ist die direkte Arbeit mit dem Objekt `product_recommendation` Liquid. Dieser Artikel behandelt das Objekt `product_recommendation` Liquid und enthält eine Anleitung, die Ihnen hilft, dieses Wissen in die Praxis umzusetzen.
 
 {% alert tip %}
-Dieser Artikel beschreibt die Syntax des Liquid-Objekts im Detail. Sie können jedoch [vorformatierte Variablen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) mit Standardwerten über das Modal **Personalisierung hinzufügen** [einfügen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables), das sich rechts oben in jedem Textfeld des Templates befindet.
+Dieser Artikel beschreibt die Syntax des Liquid-Objekts im Detail. Sie können jedoch [vorformatierte Variablen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) mit Standardwerten über das Modal **Personalisierung hinzufügen** einfügen, das sich rechts oben in jedem Textfeld des Templates befindet.
 {% endalert %}
 
 Weitere Anleitungen zur Verwendung von KI-Artikel-Empfehlungen in Braze finden Sie in unserem [Braze-Lernkurs zur Erstellung personalisierter Erlebnisse mit KI][1]. Dieser Kurs umfasst Anwendungsfälle aus der Branche, Schritt-für-Schritt-Anleitungen und einen zusätzlichen Anwendungsfall für die Erstellung einer In-App-Nachricht mit KI-gesteuerten Empfehlungen.
