@@ -261,7 +261,7 @@ Zum Beispiel:
 <a href=”https://www.example.com” data-msys-sublink="open-in-app">
 ```
 
-Stellen Sie dann sicher, dass Ihre App so eingerichtet ist, dass sie den angepassten Pfad richtig verarbeiten kann. Lesen Sie den SparkPost-Artikel über die [Verwendung von SparkPost Click Tracking für Deeplinks](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Dieser Artikel enthält Beispiel-Code für [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) und [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).
+Stellen Sie dann sicher, dass Ihre App so eingerichtet ist, dass sie den angepassten Pfad richtig verarbeiten kann. Lesen Sie den SparkPost-Artikel über die [Verwendung von SparkPost Click Tracking für Deeplinks](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Dieser Artikel enthält Beispiel-Code für [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost) und Android.
 
 ### Deaktivieren des Trackings von Klicks auf einer Link-zu-Link-Basis
 
