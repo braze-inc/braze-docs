@@ -76,7 +76,7 @@ Definiremos nosso público-alvo como os usuários que, em nossa opinião, têm m
 {: start="3"}
 3\. Ajuste os controles de entrada para permitir que os usuários entrem novamente no Canvas após a duração máxima do Canvas, para evitar a probabilidade de os usuários dispararem a mesma etapa simultaneamente.
 
-![Seção "Controles de entrada" com uma caixa de seleção para permitir que os usuários entrem novamente nesse Canvas com uma duração máxima do Canvas.][6]
+
 
 {: start="4"}
 4\. Ajuste os critérios de saída para remover os usuários que realizaram o evento personalizado de desfavorecer o jeans Classic Straight Leg.
