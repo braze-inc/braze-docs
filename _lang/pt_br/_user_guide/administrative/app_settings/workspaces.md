@@ -117,7 +117,7 @@ Para excluir seu espaço de trabalho ou instância do app:
 1. Acesse **Configurações** > **Configurações do app**.
 2. Selecione **Excluir espaço de trabalho** para excluir o respectivo espaço de trabalho ou selecione o ícone da lixeira ao lado da respectiva instância do app.
 
-Não é possível excluir instâncias do app ou espaços de trabalho que estejam sendo usados atualmente para direcionamento de usuários ou que tenham mais de 1.000 usuários. Se tentar fazer isso, você receberá uma mensagem de erro. Para prosseguir e excluí-los, [crie um caso de suporte]({{site.baseurl}}/help/support/) que inclua um link do dashboard e o nome da instância do app ou do espaço de trabalho a ser excluído.
+Não é possível excluir instâncias do app ou espaços de trabalho que estejam sendo usados atualmente para direcionamento de usuários ou que tenham mais de 1.000 usuários. Se tentar fazer isso, você receberá uma mensagem de erro. 
 
 {% alert warning %}
 Tenha cuidado ao excluir espaços de trabalho! Depois que um espaço de trabalho é excluído, ele não pode ser restaurado.
@@ -149,7 +149,7 @@ Por padrão, um segmento direciona todos os apps e sites no espaço de trabalho.
 2. Para **aplicativos e sites direcionados**, selecione **Usuários de aplicativos específicos**.
 3. No menu suspenso **Aplicativos específicos**, selecione seu aplicativo ou site.
 
-![Segmento que direciona usuários de apps específicos.][10]
+
 
 Em seguida, você pode adicionar esse segmento à sua mensagem e começar a refinar ainda mais seu público com segmentos e filtros adicionais, se necessário.
 
