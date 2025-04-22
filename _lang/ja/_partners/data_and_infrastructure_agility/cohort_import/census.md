@@ -44,7 +44,7 @@ Census プラットフォームで Census を統合するには、[**Connections
 Census と Braze の統合を使用する場合、Census は Braze との同期のたびに差分 (変更データ) のみを送信します。
 {% endalert %}
 
-
+{% alert important %}
 Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
 {% endalert %}
 
