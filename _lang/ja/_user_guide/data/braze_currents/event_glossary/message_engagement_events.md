@@ -74,7 +74,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 完全な一貫性が必要な場合は、これらのフィールドの最終更新から1時間待ってからユーザーにメッセージングを送信することを推奨する。
 {% endalert %}
 {% api %}
-
+## アンインストールイベント
 
 {% apitags %}
 アンインストール
@@ -87,7 +87,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Uninstall (users.behaviors.Uninstall)
 
@@ -106,7 +106,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Uninstall (users.behaviors.Uninstall)
 
@@ -203,7 +203,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 {% endapi %}
 
 {% api %}
-## 
+## グローバルサブスクリプション状態変更イベント
 
 {% apitags %}
 Subscription
@@ -212,7 +212,7 @@ Subscription
 このイベントは、Brazeが、リクエストがユーザーの現行のサブスクリプションステートを変更しない場合でも、ユーザーのグローバルサブスクリプションステートを更新するリクエストを受信したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Global Subscription State Change (users.behaviors.subscription.GlobalStateChange)
 
@@ -245,7 +245,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Global Subscription State Change (users.behaviors.subscription.GlobalStateChange)
 
@@ -409,13 +409,13 @@ Subscription
 | 移行 | ユーザーが内部移行または保守スクリプトによって更新されている場合 |
 | ユーザーマージ | ユーザーのマージプロセスによってユーザーが更新された場合 |
 | Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップによってユーザーが更新された場合 |
-|  |  |
+| トークン登録による自動オプトイン | [トークン登録プロセスで更新した場合]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
-## 
+## サブスクリプショングループの状態変更イベント
 
 {% apitags %}
 Subscription
@@ -428,7 +428,7 @@ Subscription
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Subscription Group State Change (users.behaviors.subscriptiongroup.StateChange)
 
@@ -463,7 +463,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Subscription Group State Change (users.behaviors.subscriptiongroup.StateChange)
 
@@ -643,7 +643,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## キャンペーンコンバージョンイベント
 
 {% apitags %}
 キャンペーン、コンバージョン
@@ -660,7 +660,7 @@ Subscription
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Campaign Conversion (users.campaigns.Conversion)
 
@@ -687,7 +687,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Campaign Conversion (users.campaigns.Conversion)
 
@@ -817,7 +817,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## キャンペーンコントロールグループ登録イベント
 
 {% apitags %}
 キャンペーン、エントリー
@@ -830,7 +830,7 @@ Subscription
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Campaign Control Group Enrollment (users.campaigns.EnrollInControl)
 
@@ -855,7 +855,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Campaign Control Group Enrollment (users.campaigns.EnrollInControl)
 
@@ -977,7 +977,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## キャンバス変換イベント
 
 {% apitags %}
 キャンバス、変換
@@ -986,11 +986,11 @@ Subscription
 このイベントは、キャンバスにコンバージョンイベントとして設定されたアクションをユーザーが実行したときに発生します。
 
 {% alert important %}
-コンバージョンイベントは `conversion_behavior` フィールドにエンコードされ、コンバージョンイベントのタイプ、ウィンドウ (期間)、およびコンバージョンイベントのタイプに応じた追加情報が含まれます。
-
+コンバージョンイベントは `conversion_behavior` フィールドにエンコードされ、コンバージョンイベントのタイプ、ウィンドウ (期間)、およびコンバージョンイベントのタイプに応じた追加情報が含まれます。`conversion_behavior_index` フィールドは、`0 = A`、`1 = B`、`2 = C`、`3 = D` などの変換イベントを表します。
+{% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Conversion (users.canvas.Conversion)
 
@@ -1017,7 +1017,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Conversion (users.canvas.Conversion)
 
@@ -1147,7 +1147,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## キャンバスエントリイベント
 
 {% apitags %}
 キャンバス、エントリ
@@ -1156,7 +1156,7 @@ Subscription
 このイベントは、ユーザーがキャンバスに入ったときに発生します。このイベントは、ユーザーがどのバリアントに入ったかを示します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Entry (users.canvas.Entry)
 
@@ -1181,7 +1181,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Entry (users.canvas.Entry)
 
@@ -1304,7 +1304,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## マッチオーディエンスイベントの終了
 
 {% apitags %}
 出口、キャンバス
@@ -1313,7 +1313,7 @@ Subscription
 このイベントは、ユーザーがオーディエンスを照合してキャンバスを離脱したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Exit Match Audience (users.canvas.exit.MatchedAudience)
 
@@ -1336,7 +1336,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Exit Match Audience (users.canvas.exit.MatchedAudience)
 
@@ -1453,7 +1453,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## Exit Perform イベントイベント
 
 {% apitags %}
 出口、キャンバス
@@ -1462,7 +1462,7 @@ Subscription
 このイベントは、ユーザーがイベントを実行してキャンバスを離脱したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Exit Perform Event (users.canvas.exit.PerformedEvent)
 
@@ -1485,7 +1485,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Exit Perform Event (users.canvas.exit.PerformedEvent)
 
@@ -1602,7 +1602,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## 実験ステップ変換イベント
 
 {% apitags %}
 実験ステップ、キャンバス
@@ -1611,7 +1611,7 @@ Subscription
 このイベントは、キャンバスの実験ステップでユーザーのコンバージョンが起きたときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Experiment Step Conversion (users.canvas.experimentstep.Conversion)
 
@@ -1639,7 +1639,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Experiment Step Conversion (users.canvas.experimentstep.Conversion)
 
@@ -1771,7 +1771,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## Experiment 分割エントリイベント
 
 {% apitags %}
 実験ステップ、キャンバス
@@ -1780,7 +1780,7 @@ Subscription
 このイベントは、ユーザーがキャンバスの実験ステップパスに入ったときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Experiment Split Entry (users.canvas.experimentstep.SplitEntry)
 
@@ -1806,7 +1806,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Experiment Split Entry (users.canvas.experimentstep.SplitEntry)
 
@@ -1931,7 +1931,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## キャンバスのStep Progression イベント
 
 {% apitags %}
 キャンバスステップ、進行
@@ -1940,7 +1940,7 @@ Subscription
 このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。このイベントは、ステップの開始または終了時には発生しないことに注意してください。現在、分岐ステップ (オーディエンスパス、条件分岐、アクションパス、実験) と（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）と Advance の結果のみがステップの進行イベントを生成します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Canvas Step Progression (users.canvasstep.Progression)
 
@@ -1969,7 +1969,7 @@ Subscription
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Canvas Step Progression (users.canvasstep.Progression)
 
@@ -2108,16 +2108,16 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 
+## コンテンツカードアボートイベント
 
 {% apitags %}
 Abort, Content Cards
 {% endapitags %}
 
-
+このイベントは、Liquid aborts などに基づいてContent Card メッセージが中止された場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Abort (users.messages.contentcard.Abort)
 
@@ -2149,7 +2149,7 @@ Abort, Content Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Abort (users.messages.contentcard.Abort)
 
@@ -2302,7 +2302,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## 
+## コンテンツカードのクリックイベント
 
 {% apitags %}
 コンテンツカード、クリック
@@ -2315,7 +2315,7 @@ Abort, Content Cards
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Click (users.messages.contentcard.Click)
 
@@ -2355,7 +2355,7 @@ Abort, Content Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Click (users.messages.contentcard.Click)
 
@@ -2530,12 +2530,12 @@ Abort, Content Cards
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## コンテンツカード却下イベント
 
 {% apitags %}
 コンテンツカード、解雇
@@ -2548,7 +2548,7 @@ Abort, Content Cards
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Dismiss (users.messages.contentcard.Dismiss)
 
@@ -2588,7 +2588,7 @@ Abort, Content Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Dismiss (users.messages.contentcard.Dismiss)
 
@@ -2763,12 +2763,12 @@ Abort, Content Cards
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## コンテンツカードインプレッションイベント
 
 {% apitags %}
 コンテンツカード、インプレッション
@@ -2781,7 +2781,7 @@ Abort, Content Cards
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Impression (users.messages.contentcard.Impression)
 
@@ -2821,7 +2821,7 @@ Abort, Content Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Impression (users.messages.contentcard.Impression)
 
@@ -2996,12 +2996,12 @@ Abort, Content Cards
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## コンテンツカード送信イベント
 
 {% apitags %}
 コンテンツカード、送信
@@ -3014,7 +3014,7 @@ Abort, Content Cards
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Content Card Send (users.messages.contentcard.Send)
 
@@ -3046,7 +3046,7 @@ Abort, Content Cards
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Content Card Send (users.messages.contentcard.Send)
 
@@ -3201,16 +3201,16 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## 
+## メールアボートイベント
 
 {% apitags %}
 Abort, Email
 {% endapitags %}
 
-
+このイベントは、液体アボートなどに基づいて電子メールメッセージがアボートされた場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Abort (users.messages.email.Abort)
 
@@ -3244,7 +3244,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Abort (users.messages.email.Abort)
 
@@ -3406,7 +3406,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メールバウンスイベント
 
 {% apitags %}
 メール、バウンス
@@ -3415,7 +3415,7 @@ Abort, Email
 このイベントは、インターネットサービスプロバイダーがハードバウンスを返したときに発生します。ハードバウンスとは、永続的な配信の失敗です。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Bounce (users.messages.email.Bounce)
 
@@ -3451,7 +3451,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Bounce (users.messages.email.Bounce)
 
@@ -3622,7 +3622,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## Eメールクリックイベント
 
 {% apitags %}
 電子メール、クリック
@@ -3631,7 +3631,7 @@ Abort, Email
 このイベントは、ユーザーがメールをクリックしたときに発生します。ユーザーがメールを複数回クリックしたり、メール内の異なるリンクをクリックしたりすると、同じキャンペーンについて複数のイベントが生成される場合があります。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Click (users.messages.email.Click)
 
@@ -3675,7 +3675,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Click (users.messages.email.Click)
 
@@ -3878,16 +3878,16 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メール遅延イベント
 
 {% apitags %}
-
+電子メール、延期
 {% endapitags %}
 
-
+このイベントは、インターネットサービスプロバイダがEメールをハードバウンスされていないEメールアドレスにすぐに配信せず、BrazeがEメールを最大72時間再試行した場合に発生します。遅延の典型的な理由には、受信トレイプロバイダーからのレピュテーションベースのメールボリュームレート制限、一時的な接続の問題、受信者のメールボックスがいっぱいになった、またはDNS エラーなどがあります。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Deferral (users.messages.email.Deferral)
 
@@ -3924,7 +3924,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Deferral (users.messages.email.Deferral)
 
@@ -4095,7 +4095,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メール配信イベント
 
 {% apitags %}
 電子メール、配信
@@ -4104,7 +4104,7 @@ Abort, Email
 このイベントは、送信されたメールがエンドユーザーの受信トレイで正常に受信された場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Delivery (users.messages.email.Delivery)
 
@@ -4138,7 +4138,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Delivery (users.messages.email.Delivery)
 
@@ -4301,7 +4301,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## スパムメールとしてマークするイベント
 
 {% apitags %}
 電子メール、スパム
@@ -4310,7 +4310,7 @@ Abort, Email
 このイベントは、エンドユーザーがメールの [スパム] ボタンを押したときに発生します。Braze はこれを追跡しないため、このイベントはメールがスパムフォルダーに入れられた事実を表すものではないことに注意してください。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Mark As Spam (users.messages.email.MarkAsSpam)
 
@@ -4345,7 +4345,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Mark As Spam (users.messages.email.MarkAsSpam)
 
@@ -4511,7 +4511,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メールオープンイベント
 
 {% apitags %}
 メール、オープン
@@ -4524,7 +4524,7 @@ Abort, Email
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Open (users.messages.email.Open)
 
@@ -4566,7 +4566,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Open (users.messages.email.Open)
 
@@ -4762,7 +4762,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メール送信イベント
 
 {% apitags %}
 メール、送信
@@ -4771,7 +4771,7 @@ Abort, Email
 このイベントは、Braze と SendGrid の間でメール送信リクエストが正常に通信されたときに発生します。ただし、これは、メールがエンドユーザーの受信トレイに受信されたことを意味しません。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Send (users.messages.email.Send)
 
@@ -4804,7 +4804,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Send (users.messages.email.Send)
 
@@ -4967,7 +4967,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メールソフトバウンスイベント
 
 {% apitags %}
 メール、バウンス
@@ -4976,7 +4976,7 @@ Abort, Email
 このイベントは、インターネットサービスプロバイダーがソフトバウンスを返したときに発生します。ソフトバウンスは、一時的な配信到達性のエラーによりメールを配信できなかったことを意味します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Soft Bounce (users.messages.email.SoftBounce)
 
@@ -5011,7 +5011,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Soft Bounce (users.messages.email.SoftBounce)
 
@@ -5178,7 +5178,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## メールアンサブスクライブイベント
 
 {% apitags %}
 メール、サブスクリプション
@@ -5191,7 +5191,7 @@ Abort, Email
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Email Unsubscribe (users.messages.email.Unsubscribe)
 
@@ -5223,7 +5223,7 @@ Abort, Email
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Email Unsubscribe (users.messages.email.Unsubscribe)
 
@@ -5377,7 +5377,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 
+## 特徴フラグ実験印象事象
 
 {% apitags %}
 FeatureFlags, インプレッション
@@ -5389,7 +5389,7 @@ FeatureFlags, インプレッション
 
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Feature Flag Experiment Impression (users.messages.featureflag.Impression)
 
@@ -5424,7 +5424,7 @@ FeatureFlags, インプレッション
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Feature Flag Experiment Impression (users.messages.featureflag.Impression)
 
@@ -5590,7 +5590,7 @@ FeatureFlags, インプレッション
 {% endapi %}
 
 {% api %}
-## 
+## アプリ内メッセージクリックイベント
 
 {% apitags %}
 アプリ内メッセージ、クリック
@@ -5603,7 +5603,7 @@ FeatureFlags, インプレッション
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // In-App Message Click (users.messages.inappmessage.Click)
 
@@ -5644,7 +5644,7 @@ FeatureFlags, インプレッション
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // In-App Message Click (users.messages.inappmessage.Click)
 
@@ -5823,12 +5823,12 @@ FeatureFlags, インプレッション
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## アプリ内メッセージ印象イベント
 
 {% apitags %}
 アプリ内メッセージ、印象
@@ -5841,7 +5841,7 @@ FeatureFlags, インプレッション
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // In-App Message Impression (users.messages.inappmessage.Impression)
 
@@ -5882,7 +5882,7 @@ FeatureFlags, インプレッション
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // In-App Message Impression (users.messages.inappmessage.Impression)
 
@@ -6061,21 +6061,21 @@ FeatureFlags, インプレッション
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## プッシュ通知アボートイベント
 
 {% apitags %}
 Abort, Push
 {% endapitags %}
 
-
+このイベントは、液体アボートなどに基づいてプッシュ通知メッセージがアボートされた場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Abort (users.messages.pushnotification.Abort)
 
@@ -6109,7 +6109,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Abort (users.messages.pushnotification.Abort)
 
@@ -6270,7 +6270,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## 
+## プッシュ通知バウンスイベント
 
 {% apitags %}
 プッシュ、送信、バウンス
@@ -6279,7 +6279,7 @@ Abort, Push
 このイベントは、Apple Push Notification Service または Fire Cloud Messaging からエラーを受信した場合に発生します。これは、プッシュメッセージがバウンスされたため、ユーザーのデバイスに配信されなかったことを意味します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Bounce (users.messages.pushnotification.Bounce)
 
@@ -6316,7 +6316,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Bounce (users.messages.pushnotification.Bounce)
 
@@ -6484,7 +6484,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## 
+## プッシュ通知iOS フォアグラウンドオープンイベント
 
 {% apitags %}
 プッシュ、iOS、送信
@@ -6493,7 +6493,7 @@ Abort, Push
 このイベントは [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) ではサポートされておらず、 [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) では非推奨になりました。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification iOS Foreground Open (users.messages.pushnotification.IosForeground)
 
@@ -6532,7 +6532,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification iOS Foreground Open (users.messages.pushnotification.IosForeground)
 
@@ -6647,12 +6647,12 @@ Abort, Push
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## プッシュ通知オープンイベント
 
 {% apitags %}
 プッシュ、オープン
@@ -6661,7 +6661,7 @@ Abort, Push
 このイベントは、ユーザーがプッシュ通知を直接クリックしてアプリケーションを開いたときに発生します。現在、プッシュオープンイベントは、厳密に言うと「オープン数の合計」ではなく「直接オープン数」を指します。キャンペーンレベルの「誘発された開封数」に表示される統計情報は、ユーザーレベルで寄与していないため、これに含まれません。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Open (users.messages.pushnotification.Open)
 
@@ -6700,7 +6700,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Open (users.messages.pushnotification.Open)
 
@@ -6874,12 +6874,12 @@ Abort, Push
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 {% endapi %}
 
 {% api %}
-## 
+## プッシュ通知送信イベント
 
 {% apitags %}
 プッシュ、送信
@@ -6888,7 +6888,7 @@ Abort, Push
 このイベントは、Braze がユーザー宛てのプッシュメッセージを処理し、Apple Push Notification Service または Fire Cloud Messaging に伝達したときに発生します。これは、プッシュがデバイスに配信されたという意味ではなく、単にメッセージが送信されたことを意味します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Push Notification Send (users.messages.pushnotification.Send)
 
@@ -6926,7 +6926,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Push Notification Send (users.messages.pushnotification.Send)
 
@@ -7094,22 +7094,22 @@ Abort, Push
 {% endtabs %}
 
 #### プロパティの詳細
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 - `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
 {% endapi %}
 
 {% api %}
-## 
+## SMSアボートイベント
 
 {% apitags %}
 中止、SMS
 {% endapitags %}
 
-
+このイベントは、液体アボートなどに基づいてSMSメッセージがアボートされた場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Abort (users.messages.sms.Abort)
 
@@ -7139,7 +7139,7 @@ Abort, Push
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Abort (users.messages.sms.Abort)
 
@@ -7281,7 +7281,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## 
+## SMSキャリア送信イベント
 
 {% apitags %}
 SMS、送信
@@ -7294,7 +7294,7 @@ SMS、送信
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Carrier Send (users.messages.sms.CarrierSend)
 
@@ -7327,7 +7327,7 @@ SMS、送信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Carrier Send (users.messages.sms.CarrierSend)
 
@@ -7484,7 +7484,7 @@ SMS、送信
 {% endapi %}
 
 {% api %}
-## 
+## SMS送達通知
 
 {% apitags %}
 SMS、配信
@@ -7493,7 +7493,7 @@ SMS、配信
 このイベントは、SMSがユーザーの携帯電話に正常に配信されたときに発生する。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Delivery (users.messages.sms.Delivery)
 
@@ -7526,7 +7526,7 @@ SMS、配信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Delivery (users.messages.sms.Delivery)
 
@@ -7683,7 +7683,7 @@ SMS、配信
 {% endapi %}
 
 {% api %}
-## 
+## SMS配信失敗イベント
 
 {% apitags %}
 SMS、配信
@@ -7692,7 +7692,7 @@ SMS、配信
 このイベントは、SMS で配信エラーが発生したときに発生します。このイベントと提供されたエラーコードを使用すると、SMS 配信に関する問題のトラブルシューティングに役立ちます。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Delivery Failure (users.messages.sms.DeliveryFailure)
 
@@ -7726,7 +7726,7 @@ SMS、配信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Delivery Failure (users.messages.sms.DeliveryFailure)
 
@@ -7887,7 +7887,7 @@ SMS、配信
 {% endapi %}
 
 {% api %}
-## 
+## SMS受信イベント
 
 {% apitags %}
 SMS、受信済み
@@ -7901,7 +7901,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Inbound Received (users.messages.sms.InboundReceive)
 
@@ -7934,7 +7934,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Inbound Received (users.messages.sms.InboundReceive)
 
@@ -8088,7 +8088,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 {% endapi %}
 
 {% api %}
-## 
+## SMS拒否イベント
 
 {% apitags %}
 SMS、拒否
@@ -8097,7 +8097,7 @@ SMS、拒否
 このイベントは、SMS 送信が通信事業者によって拒否された場合に発生し、いくつかの理由で発生する可能性があります。このイベントと提供されたエラーコードを使用すると、SMS 配信に関する問題のトラブルシューティングに役立ちます。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Rejection (users.messages.sms.Rejection)
 
@@ -8132,7 +8132,7 @@ SMS、拒否
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Rejection (users.messages.sms.Rejection)
 
@@ -8297,7 +8297,7 @@ SMS、拒否
 {% endapi %}
 
 {% api %}
-## 
+## SMS送信イベント
 
 {% apitags %}
 SMS、送信
@@ -8306,7 +8306,7 @@ SMS、送信
 このイベントは、ユーザーが SMS を送信したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Send (users.messages.sms.Send)
 
@@ -8340,7 +8340,7 @@ SMS、送信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Send (users.messages.sms.Send)
 
@@ -8503,7 +8503,7 @@ SMS、送信
 {% endapi %}
 
 {% api %}
-## 
+## SMS ショートリンククリックイベント
 
 {% apitags %}
 SMS、クリック
@@ -8512,7 +8512,7 @@ SMS、クリック
 このイベントは、ユーザーが SMS の短縮リンクをクリックしたときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // SMS Short Link Click (users.messages.sms.ShortLinkClick)
 
@@ -8544,7 +8544,7 @@ SMS、クリック
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // SMS Short Link Click (users.messages.sms.ShortLinkClick)
 
@@ -8697,16 +8697,16 @@ SMS、クリック
 {% endapi %}
 
 {% api %}
-## 
+## Webhook Abort イベント
 
 {% apitags %}
 中止、Webhook
 {% endapitags %}
 
-
+このイベントは、液体アボートなどに基づいてWebhook メッセージがアボートされた場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Webhook Abort (users.messages.webhook.Abort)
 
@@ -8738,7 +8738,7 @@ SMS、クリック
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Webhook Abort (users.messages.webhook.Abort)
 
@@ -8891,7 +8891,7 @@ SMS、クリック
 {% endapi %}
 
 {% api %}
-## 
+## Webhook 送信イベント
 
 {% apitags %}
 Webhook、送信
@@ -8900,7 +8900,7 @@ Webhook、送信
 このイベントは、Webhook が処理され、その Webhook に指定されたサードパーティに送信されたときに発生します。これは、リクエストが受信されたかどうかを示していないことに注意してください。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Webhook Send (users.messages.webhook.Send)
 
@@ -8931,7 +8931,7 @@ Webhook、送信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Webhook Send (users.messages.webhook.Send)
 
@@ -9080,16 +9080,16 @@ Webhook、送信
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp Abort イベント
 
 {% apitags %}
 WhatsApp、中止
 {% endapitags %}
 
-
+このイベントは、WhatsApp メッセージが液体アボートなどに基づいてアボートされた場合に発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Abort (users.messages.whatsapp.Abort)
 
@@ -9122,7 +9122,7 @@ WhatsApp、中止
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Abort (users.messages.whatsapp.Abort)
 
@@ -9281,7 +9281,7 @@ WhatsApp、中止
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp配信イベント
 
 {% apitags %}
 WhatsApp、配信
@@ -9290,7 +9290,7 @@ WhatsApp、配信
 このイベントは、送信された WhatsApp メッセージがエンドユーザーデバイスに正常に着信したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Delivery (users.messages.whatsapp.Delivery)
 
@@ -9322,7 +9322,7 @@ WhatsApp、配信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Delivery (users.messages.whatsapp.Delivery)
 
@@ -9477,7 +9477,7 @@ WhatsApp、配信
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp 障害イベント
 
 {% apitags %}
 WhatsApp、失敗
@@ -9486,7 +9486,7 @@ WhatsApp、失敗
 このイベントは、WhatsApp がユーザーにメッセージを配信できないときに発生します。ハードバウンスとは、永続的な配信の失敗です。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
 
@@ -9520,7 +9520,7 @@ WhatsApp、失敗
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
 
@@ -9683,7 +9683,7 @@ WhatsApp、失敗
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp 受信イベント
 
 {% apitags %}
 WhatsApp、インバウンド受信
@@ -9692,7 +9692,7 @@ WhatsApp、インバウンド受信
 このイベントは、ユーザーの 1 人が Braze WhatsApp サブスクリプショングループのいずれかの電話番号に WhatsApp メッセージを送信したときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
 
@@ -9727,7 +9727,7 @@ WhatsApp、インバウンド受信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
 
@@ -9893,7 +9893,7 @@ WhatsApp、インバウンド受信
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp 読み取りイベント
 
 {% apitags %}
 WhatsApp、既読
@@ -9902,7 +9902,7 @@ WhatsApp、既読
 このイベントは、WhatsApp メッセージがエンドユーザーによって既読になったときに発生します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Read (users.messages.whatsapp.Read)
 
@@ -9934,7 +9934,7 @@ WhatsApp、既読
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Read (users.messages.whatsapp.Read)
 
@@ -10102,13 +10102,13 @@ WhatsApp、既読
 | 移行 | ユーザーが内部移行または保守スクリプトによって更新されている場合 |
 | ユーザーマージ | ユーザーのマージプロセスによってユーザーが更新された場合 |
 | Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップによってユーザーが更新された場合 |
-|  |  |
+| リスト購読解除 | ユーザーが Braze の宛先またはワンクリックリスト - 購読解除ヘッダーを使用して購読解除した場合 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
-## 
+## WhatsApp 送信イベント
 
 {% apitags %}
 WhatsApp、送信
@@ -10117,7 +10117,7 @@ WhatsApp、送信
 このイベントは、Braze と WhatsApp の間で送信リクエストが正常に通信されたときに発生します。ただし、これはメッセージがエンドユーザーによって受信されたことを意味しません。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // WhatsApp Send (users.messages.whatsapp.Send)
 
@@ -10150,7 +10150,7 @@ WhatsApp、送信
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // WhatsApp Send (users.messages.whatsapp.Send)
 
