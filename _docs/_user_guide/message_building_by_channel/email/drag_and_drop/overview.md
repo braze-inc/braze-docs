@@ -159,6 +159,10 @@ Under the **Preview as a User** tab, you can select the following user types to 
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
+You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
+
+![Email preview with a button to "Copy preview link" and copy the generated link.][15]
+
 #### Use Inbox Vision
 
 Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and select **Run Inbox Vision**.
@@ -270,3 +274,4 @@ Alternatively, you can integrate with one of our attribution partners, such as [
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
 [14]: {% image_buster /assets/img/rtl_button.png %}
+[15]: {% image_buster /assets/img/dnd_email_link_preview.png %}
