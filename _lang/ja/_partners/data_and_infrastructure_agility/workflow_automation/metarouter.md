@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [MetaRouter](https://www.metarouter.io/) は、強力なサーバーサイドタグ管理プラットフォームとしてシームレスに統合して、Braze エクスペリエンスを向上させます。これにより、最大30 %強化される信頼性の高いファーストパーティデータ収集から、パーソナライズされたジャーニーのリアルタイムのイベントストリームアクティベーションまで、Braze 内で完全な顧客データジャーニーをオーケストレーションできます。さらに ＭetaRouter は、Braze タグやその他のサードパーティタグの必要性を解消することで実装を合理化し、Braze へのデータ流入をより細かくパラメーター単位で制御できるようにします。
 
+_この統合はMetarouterによって維持されている。_
+
 ## サポートされている機能
 
 - リトライを組み込むこともできる。
@@ -31,10 +33,6 @@ search_tag: Partner
 | Braze REST API キー    | `users.track` 権限を持つ Braze REST API キー。作成するには、**「設定」**>「**APIキー**」を選択する。                                                |
 | Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] で API キーを作成できます。
-{% endalert %}
 
 ## MetaRouterをセットアップする
 
@@ -60,3 +58,4 @@ Enterprise MetaRouter で [**Integrations**] > [**New Integration**] > [**Braze*
 各ID出力にイベントマッピングを追加し、Brazeに送信したいイベントを設定する。終了したら、[**Save as New Revision**] を選択します。
 
 ![ID 出力ごとにイベントマッピングを追加する。]({% image_buster /assets/img/metarouter/img2.png %})
+

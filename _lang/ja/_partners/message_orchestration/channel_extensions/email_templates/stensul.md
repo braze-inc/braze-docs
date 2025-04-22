@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stensul](https://stensul.com/) では、メールマーケターがキャンペーン作成のためにリアルタイムで Braze にメールをダウンストリーム送信する前に、ブランドらしさのあるモバイル対応のメールを簡単に作成できます。
 
+_この統合はStensulによって維持されます。_
+
+## 統合について
+
 Braze と Stensul の統合により、HTML 形式の Stensul メールをエクスポートし、Braze 内でテンプレートとしてアップロードできます。
 
 ## 前提条件
@@ -49,5 +53,6 @@ Stensul プラットフォームで Stensul メールを作成し、[**Complete*
 ## 使用
 
 アップロードした Stensul テンプレートを、Braze アカウントの**[テンプレートとメディア] > [メールテンプレート]** セクションで確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

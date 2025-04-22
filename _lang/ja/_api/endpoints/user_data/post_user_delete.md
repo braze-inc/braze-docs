@@ -16,7 +16,9 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 
 > 既知のユーザー識別子を指定してユーザー・プロファイルを削除するには、このエンドポイントを使用する。
 
-1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、または `email_addresses` を含めることができます。1 つのリクエストには、`external_ids`、`user_aliases`、`braze_ids`、または `email_addresses` のいずれかを含めることができます。
+1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または `phone_numbers` を含めることができます。単一のリクエストに含めることができるのは、`external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または`phone_numbers`のいずれか1つだけです。 
+
+API を使用した一括ユーザ削除では解決できないユースケースがある場合は、[ブレーズサポートチーム]({{site.baseurl}}/user_guide/administrative/access_braze/support/) にお問い合わせください。
 
 {% alert warning %}
 ユーザープロファイルの削除は元に戻せません。ユーザーを完全に削除するため、データの矛盾が発生する可能性があります。[API を使用してユーザープロファイルを削除する]({{site.baseurl}}/help/help_articles/api/delete_user/)場合の詳細については、ヘルプドキュメントを参照してください。
@@ -41,20 +43,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External IDs for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
 ### リクエストパラメーター
 
 | パラメーター         | required | データ型                  | 説明                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | オプション | 文字列の配列           | 削除するユーザーの外部識別子。                                                    |
-| `user_aliases`    | オプション | ユーザー別名オブジェクトの配列 | 削除するユーザーの[ユーザーのエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
-| `braze_ids`       | オプション | 文字列の配列           | 削除するユーザーの Braze ユーザー ID。                                                  |
-| `email_addresses` | オプション | 文字列の配列           | 削除するユーザーのメールアドレス。詳細については、[電子メールによるユーザーの削除](#deleting-users-by-email)を参照してください。                                                             |
+| `external_ids`    | オプション | 文字列の配列           | 削除する外部識別子。                                                    |
+| `user_aliases`    | オプション | ユーザー別名オブジェクトの配列 | [削除するユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
+| `braze_ids`       | オプション | 文字列の配列           | 削除するブレーズユーザー識別子。                                                  |
+| `email_addresses` | オプション | 文字列の配列           | 削除するユーザメール。詳細については、[電子メールによるユーザーの削除](#deleting-users-by-email)を参照してください。                                                             |
+| `phone_numbers` | オプション | 文字列の配列 | 削除するユーザー電話番号。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### メールでユーザーを削除する

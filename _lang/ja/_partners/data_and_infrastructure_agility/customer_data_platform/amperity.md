@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Amperity](https://amperity.com/) は、包括的な企業向け顧客データプラットフォームであり、ブランドが顧客を理解し、戦略的な意思決定を行い、消費者により良いサービスを提供するために常に適切な措置を取れるよう支援します。Amperity は、データ管理の統合、分析、インサイト、およびアクティベーションにおけるインテリジェントな機能を提供します。
 
+_この統合はAmperityによって維持されています。_
+
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 Braze と Amperity の統合により、2つのプラットフォームにわたる顧客の統合ビューが提供されます。この統合により、以下のことが可能になる：
@@ -48,7 +50,7 @@ Braze と Amperity の統合により、2つのプラットフォームにわた
 
 ### カスタム属性 
 
-Braze の[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)は、ブランドが決定するフィールドです。Brazeにすでに存在するカスタム属性をAmperityで管理したい場合は、Amperityから送信される出力を、Brazeワークスペースにすでにある名前に合わせる。これには次のものが含まれます。
+Braze の[カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)は、ブランドが決定するフィールドです。Brazeにすでに存在するカスタム属性をAmperityで管理したい場合は、Amperityから送信される出力を、Brazeワークスペースにすでにある名前に合わせる。これには次のものが含まれます。
 - 購入履歴
 - ロイヤルティステータス
 - 価値階層
@@ -82,7 +84,7 @@ AmperityからBrazeに同期されたオーディエンスは、カスタム属�
 
 ### 属性の重複
 
-デフォルトのユーザープロファイルフィールドと重複するカスタム属性の送信は避ける。たとえば、Braze の標準属性に一致するように、誕生日を「dob」という名前のユーザープロファイルフィールドとして Braze に送信する必要があるとします。birthday"、"Birthdate"、またはその他の文字列として送信された場合、カスタム属性が作成され、"dob "フィールドの値は更新されない。
+デフォルトのユーザープロファイルフィールドと重複するカスタム属性の送信は避ける。たとえば、Braze 標準属性に一致するように、誕生日を"dob" という名前のユーザープロファイルフィールドとしてBraze に送信する必要があります。birthday"、"Birthdate"、またはその他の文字列として送信された場合、カスタム属性が作成され、"dob "フィールドの値は更新されない。
 
 ### データポイント
 
@@ -94,7 +96,7 @@ Amperity は、Braze との同期間に行われた変更と、送信のステ�
 
 1. [**User Data**] で、`users.track` 権限を持つ Braze ワークスペースの Braze REST APIキーを作成します。`users.track` エンドポイントは、Amperity オーディエンスをカスタム属性として Braze に同期します。
 2. Brazeインスタンスの[REST APIエンドポイントを]({{site.baseurl}}/api/basics#endpoints)決定する。例えば、BrazeのURLが`https://dashboard-03.braze.com` 、REST APIのエンドポイントが`https://rest.iad-03.braze.com` 、インスタンスが "US-03 "の場合。
-3. Amperity から Braze に送信できる一連の[ユーザープロファイルフィールド]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields)と[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)を決定します。
+3. Amperity から Braze に送信できる一連の[ユーザープロファイルフィールド]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields)と[カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)を決定します。
 
 ### ステップ2:Braze を宛先として設定する - DataGrid オペレーター
 
@@ -187,9 +189,10 @@ Brazeにセグメントを送信するためにキャンペーンを実行する
 
 ### Amperity と Braze Currents を組み合わせて使用する
 Braze CurrentsのデータをAmperityに送信する：
-1. Amazon S3バケットにデータを送信するために[Braze Currentをセットアップ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/)する。
+1. Amazon S3バケットにデータを送信するために[Braze Currentをセットアップ]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/)する。
 2. [そのAmazon S3バケットからApache Avroファイルを読み込む](https://docs.amperity.com/datagrid/source_amazon_s3.html)ようにAmperityを設定する。
 3. フィードを設定し、標準的なワークフローを使用してデータロードを自動化する。
+
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}

@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Adobe](https://www.adobe.com/) は、ブランドが自身の Adobe データ (カスタム属性とセグメント) をリアルタイムで Braze に接続してマッピングできる顧客データプラットフォームです。
 
-Braze と Adobe の統合により、2つのシステム間の情報の流れをシームレスにコントロールすることができます。[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) では、データを Adobe に接続し、グローススタック全体で実用的なデータにすることもできます。 
+Braze と Adobe の統合により、2つのシステム間の情報の流れをシームレスにコントロールすることができます。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを Adobe に接続し、グローススタック全体で実用的なデータにすることもできます。 
 
 ## 前提条件
 

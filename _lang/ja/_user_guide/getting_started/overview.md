@@ -3,7 +3,7 @@ nav_title: Braze の概要
 article_title: "開始:Braze の概要"
 page_order: 1
 page_type: reference
-description: "Braze で作業する際に知っておく必要がある主要な概念について理解します。"
+description: "Brazeを使用する際に必要となるコアコンセプトを学ぶ。"
 
 ---
 

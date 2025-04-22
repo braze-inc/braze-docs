@@ -74,10 +74,6 @@ Brazeで **[Currents] > [+ Current を作成] > [Azure Blob データエクス�
 
 Braze で [**パートナー連携**] >[**テクノロジーパートナー**] > [**Microsoft Azure**] に移動し、接続文字列、Azure ストレージコンテナー名、Azure ストレージ接頭辞を入力します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 次に、[**これをデフォルトのデータエクスポート先にする**] ボックスがオンになっていることを確認します。これにより、エクスポートしたデータが確実に Azure に送信されます。完了したら、統合を保存する。
 
 ![BrazeのMicrosoft Azureデータエクスポートページ。このページには、接続文字列、コンテナー名、接頭辞のフィールドがある。]({% image_buster /assets/img/azure_data_export.png %})

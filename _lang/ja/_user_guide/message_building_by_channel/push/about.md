@@ -37,9 +37,9 @@ channel:
 
 Braze を使用してプッシュ通知メッセージの作成および送信を行うには、開発者と協力してプッシュ通知を Web サイトまたはアプリに統合する必要があります。詳細なステップについては、プラットフォームごとのインテグレーションガイドを参照してください。
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
+- [Web]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## プッシュメッセージ規定
 

@@ -39,7 +39,7 @@ SEEN API は現在、1時間に1,000コールを受け入れます。
 
 ### ステップ1: Webhook キャンペーンの作成
 
-Brazeで新しい[Webhookキャンペーンを](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks)作成する。キャンペーン名をつけ、以下の表を参考にWebhookを作成する：
+Brazeで新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks)作成する。キャンペーン名をつけ、以下の表を参考にWebhookを作成する：
 
 {% raw %}
 <table>
@@ -84,8 +84,8 @@ Brazeで新しい[Webhookキャンペーンを](https://www.braze.com/docs/user_
 
 ### ステップ2: データ変換を作成する
 
-1. `landing_page_url` と`email_thumbnail_url` の[カスタム属性](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)フィールドを新規作成する。これが、この例で使用する2つの属性である。
-2. [**データ設定**] で [[データ変換](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites)] を開き、 [**変換の作成**] を選択します。
+1. `landing_page_url` と`email_thumbnail_url` の[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)フィールドを新規作成する。これが、この例で使用する2つの属性である。
+2. [**データ設定**] で [[データ変換]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites)] を開き、 [**変換の作成**] を選択します。
 3. 変換に名前を付けてから、[**ゼロから作成**] を選択し、[**送信先**] を [**POST:ユーザーを追跡] に設定します。ユーザーを追跡** 。
 4. [**Webhook の UR Lを SEEN と共有する**] を選択します。
 5. 以下のコードを変換の出発点として使うことができる：

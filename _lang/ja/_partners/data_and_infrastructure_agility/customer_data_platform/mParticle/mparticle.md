@@ -1,6 +1,6 @@
 ---
-nav_title: mParticle
-article_title: mParticle
+nav_title: mParticle by Rokt
+article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "このリファレンス記事では、Braze と mParticle のパートナーシップについて説明します。mParticle は、マーケティングスタックのソース間で情報を収集してルーティングする顧客データプラットフォームです。"
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# mParticle
+# mParticle by Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,7 +24,7 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
-| ブレイズインスタンス | Brazeインスタンスは[API概要ページ]({{site.baseurl}}/api/basics/#endpoints)にあります。例えば：US-01、US-02 など) |
+| ブレイズインスタンス | あなたのBrazeインスタンスは、[API概要ページ]({{site.baseurl}}/api/basics/#endpoints)（例えば、`US-01` や`US-02` ）で確認できる。 |
 | Brazeアプリ識別子キー | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > 設定の管理 > API キー**内にあります。 |
 | ワークスペース REST APIキー | （サーバー間）Braze REST APIキー<br><br>これは、**Braze ダッシュボード > 開発者コンソール > API 設定 > API キー**内で作成できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -147,14 +147,14 @@ mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、*
 | External identity type | external ID として Braze に転送する mParticle のユーザー ID タイプ。これはデフォルト値の Customer ID のままにすることをお勧めします。 |
 | Email identity type | メールとして Braze に転送する mParticle のユーザー ID タイプ。これはデフォルト値の Email のままにすることをお勧めします。 |
 | ブレイズインスタンス | Brazeデータが転送されるクラスター。これは、ダッシュボードがあるクラスターと同じである必要があります。 |
-| イベントストリーム転送を有効にする | （サーバー間）有効にすると、すべてのイベントがリアルタイムで転送されます。そうでない場合、すべてのイベントが一括で転送されます。イベントストリーム転送を有効にする場合、Braze に渡すデータが[レート制限]({{site.baseurl}}/api/basics/#api-limits)を尊重することを確認してください。 |
+| イベントストリーム転送を有効にする | （サーバー間）有効にすると、すべてのイベントがリアルタイムで転送されます。そうでない場合、すべてのイベントが一括で転送されます。イベントストリーム転送を有効にする場合、Braze に渡すデータが[レート制限]({{site.baseurl}}/api/api_limits/)を尊重することを確認してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][10]
 
 ### 組み込みキットの統合
 
-mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。mParticleのメソッドを使用してユーザーデータを追跡すると、自動的にBrazeのSDKメソッドにマッピングされます。 
+mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。ユーザーデータのトラッキングに使用するmParticleメソッドは、自動的にBraze SDKのメソッドにマッピングされる。 
 
 これらのmParticleのSDKの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/Appboy/integration-appboy)のマッピングはオープンソースであり、[mParticleのGitHubページ](https://github.com/mparticle-integrations)で見つけることができます。 
 
@@ -212,8 +212,8 @@ mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]
 
 #### データ型
 両方のプラットフォーム間でサポートされているデータ型はすべてではありません。
-- [カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)は、文字列、数値、ブール値、または日付オブジェクトをサポートします。配列やネストされたオブジェクトはサポートされていません。
-- [カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)は文字列、数値、ブール値、日付オブジェクト、および配列をサポートしますが、オブジェクトやネストされたオブジェクトはサポートしません。 
+- [カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)は、文字列、数値、ブール値、または日付オブジェクトをサポートします。配列やネストされたオブジェクトはサポートされていません。
+- [カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)は文字列、数値、ブール値、日付オブジェクト、および配列をサポートしますが、オブジェクトやネストされたオブジェクトはサポートしません。 
 
 {% alert note %}
 Braze は `Time` タイプのカスタム属性で0年以前または3000年以降のタイムスタンプをサポートしていません。Braze は、これらの値が mParticle によって送信されると値を取り込みますが、値は文字列として保存されます。

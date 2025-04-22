@@ -29,10 +29,6 @@ channel:
 
 [**テンプレート**] > [**メールテンプレート**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは**Engagement**> **Templates & Media**> **Email Templates** にあります。
-{% endalert %}
-
 ### ステップ 2: アップローダーを開く
 
 **Template Type**セクションで**HTML Editorを**選択し、**Start from a Basic HTML Template**セクションまでスクロールダウンする。[**元のファイル**] を選択します。
