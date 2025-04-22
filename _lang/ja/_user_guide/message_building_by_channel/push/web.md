@@ -42,7 +42,7 @@ Web プッシュは、スマートフォンでのアプリのプッシュ通知�
 
 ## Web プッシュを使用するための前提条件
 
-Braze を使用してプッシュメッセージの作成および送信を行うには、開発者と協力してプッシュを Web サイトに統合する必要があります。
+Braze を使用してプッシュメッセージの作成および送信を行うには、開発者と協力してプッシュを Web サイトに統合する必要があります。ステップの詳細については、[Webプッシュインテグレーションガイド]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)を参照してください。
 
 ### プッシュ許可
 
@@ -65,7 +65,7 @@ Braze を使用してプッシュメッセージの作成および送信を行�
 プッシュプロトコル標準とブラウザーのサポートの詳細については、ブラウザーに基づくリソースを確認してください。
 
 - [Safari(デスクトップ)](https://developer.apple.com/notifications/safari-push-notifications/)
-- 
+- [Safari (モバイル)]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=safari)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
