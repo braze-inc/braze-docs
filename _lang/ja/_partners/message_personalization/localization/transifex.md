@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Transifex は、あらゆる言語で、ユーザー群にわたる強力なローカライゼーションを支援しています。
 
+
+
+## 統合について
+
 BrazeとTransifexの統合は、Connected Contentを活用することで、リソース文字列コレクションを引き出し、言語ベースの条件付き書式の行の代わりに、関連する翻訳をメッセージに含めることができる。これにより、翻訳が自動化され、チームは優れたカスタマー・エクスペリエンスの提供に集中することができる。
 
 {% alert important %}
@@ -35,7 +39,7 @@ Transifex 統合では、Transifex の[リソース翻訳 API](https://developer
 curl --request GET \
      --url 'https://rest.api.transifex.com/resource_translations?filter\[resource\]=o:<ORGANIZATION_NAME>:p:<PROJECT_NAME>:r:<RESOURCE_NAME>&filter\[language\]=l:<LANGUAGE>' \
      --header 'Accept: application/vnd.api+json' \
-     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475ed68d90a2295302'
+     --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
 例えば、Transifexプロジェクトが`https://www.transifex.com/appboy-3/french2/french_translationspo/` にある場合、`project_name` は "french2"、`resource_name` は "french_translationspo "となる。
@@ -69,6 +73,7 @@ curl --request GET \
 {% endif %}
 ```
 {% endraw %}
+
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
