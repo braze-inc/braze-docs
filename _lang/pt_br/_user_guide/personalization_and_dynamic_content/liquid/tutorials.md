@@ -15,7 +15,7 @@ Quando terminar de ler estes tutoriais, você será capaz de:
 - Escreva código Liquid para casos de uso comuns
 - String together Liquid conditional logic to personalize messages based on user data
 - Use variáveis e filtros para escrever equações que usem os valores das atribuições
-- Reconhecer os comandos básicos no código Liquid e formar um entendimento geral sobre o que o código está fazendo
+- 
 
 | Tutorial | Objetivos de aprendizado |
 | --- | --- |
@@ -334,7 +334,7 @@ Vamos promover o produto favorito de um usuário se a data da última compra tiv
 {% endraw %}
 
 {: start="6"}
-6\. Como a data da última compra e a data de hoje estão em segundos, precisaremos calcular quantos segundos existem em seis meses. Vamos criar uma equação (aproximadamente 6 meses * 30,44 dias * 24 horas * 60 minutos * 60 segundos) e atribuí-la à variável `six_months`. Usaremos o endereço `times` para especificar a multiplicação de unidades de tempo.
+6\.  Vamos criar uma equação (aproximadamente 6 meses * 30,44 dias * 24 horas * 60 minutos * 60 segundos) e atribuí-la à variável `six_months`. Usaremos o endereço `times` para especificar a multiplicação de unidades de tempo.
 
 {% raw %}
 ```liquid
