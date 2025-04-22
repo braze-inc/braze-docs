@@ -77,10 +77,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/seen
 - name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
-- name: ""
+- name: オディクシ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
-- name: ""
+- name: トラストパイロット
   url: /docs/partners/message_personalization/dynamic_content/trustpilot/
-- name: ""
+- name: コンストラクタ
   url: /docs/partners/message_personalization/dynamic_content/constructor/
 ---
