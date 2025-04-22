@@ -15,12 +15,8 @@ tool:
 
 Encontrará el **Informe de ingresos** en **Análisis**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Ingresos** en **Datos**.
-{% endalert %}
-
 {% alert tip %}
-¿Busca más formas de obtener datos sobre ingresos? Pruebe a añadir el comportamiento de compra (así como la compra de un producto) a las campañas o a los Canvases como [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+¿Busca más formas de obtener datos sobre ingresos? 
 {% endalert %}
 
 Para exportar tus datos de ingresos, selecciona <i class="fas fa-bars" title="Menú contextual del gráfico"></i> en el gráfico **Rendimiento en el tiempo** y selecciona tu opción de exportación.
