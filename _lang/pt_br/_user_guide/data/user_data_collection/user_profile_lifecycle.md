@@ -23,7 +23,7 @@ Esses parâmetros incluem:
 
 ## Perfis de usuários anônimos
 
-Qualquer usuário sem um `external_id` designado é chamado de usuário anônimo. Por exemplo, esses podem ser usuários que visitaram seu site, mas não inscreveram-se, ou usuários que baixaram seu app para dispositivos móveis, mas não criaram um perfil.
+ Por exemplo, esses podem ser usuários que visitaram seu site, mas não inscreveram-se, ou usuários que baixaram seu app para dispositivos móveis, mas não criaram um perfil.
 
 Inicialmente, quando um usuário é reconhecido pelo SDK, um perfil de usuário anônimo é criado com um `braze_id` associado: um identificador exclusivo que é atribuído automaticamente pelo Braze, não pode ser editado e é específico do dispositivo. Esse identificador pode ser usado para atualizar o perfil do usuário por meio da [API]({{site.baseurl}}/api/endpoints/user_data/).
 
