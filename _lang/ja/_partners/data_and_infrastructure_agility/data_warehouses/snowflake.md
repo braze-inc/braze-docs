@@ -32,45 +32,45 @@ Snowflakeの[Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/
 
 さらに、Snowflake の組み込みの役割と権限の機能を使用すると、Snowflake アカウントとアカウント内のデータに対してすでに適用されているアクセス制御を使用して、Braze から共有されるデータへのアクセスを制御および管理できます。アクセスは、あなた自身のデータと同じ方法で制限および監視できます。
 
-
+Snowflakeのデータ共有の詳細については、[安全なデータ共有の紹介を](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work)参照のこと。
 
 ## 前提条件
 
-
+この機能を使用する前に、以下を完了しておく必要がある：
 
 | 要件 | 説明 |
 | ----------- | ----------- |
-|  |  |
-| Snowflakeアカウント |  |
+| Brazeアクセス | Brazeでこの機能にアクセスするには、Brazeアカウントマネージャーまたはカスタマーサクセスマネージャーに連絡する必要がある。 |
+| Snowflakeアカウント | `admin` の権限を持つ Snowflake アカウント。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 
+## 安全なデータ共有の設定
 
+Snowflakeでは、データ共有は[データ提供](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers)者と[データ消費者の](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers)間で行われる。この文脈では、データシェアを作成して送信するため、Brazeアカウントはデータプロバイダーであり、データシェアを使用してデータベースを作成するため、Snowflakeアカウントはデータ消費者である。詳細は[Snowflakeを参照のこと：共有データの消費](https://docs.snowflake.com/en/user-guide/data-share-consumers).
 
+### ステップ1:Brazeからデータシェアを送信する。
 
-### ステップ1:
-
-1. 
-2. 
+1. Brazeで、**Partner Integrations**>**Data Sharingに**進む。
+2. Snowflakeアカウントの詳細とロケーターを入力する。アカウントロケータを取得するには、送信先アカウントで`SELECT CURRENT_ACCOUNT()` 。
 3. CRR 共有をご利用の場合は、クラウドプロバイダーとリージョンを指定してください。
-4. 
+4. 完了したら、**Create Datashareを**選択する。これでデータシェアがSnowflakeアカウントに送信される。
 
-### ステップ2:
+### ステップ2:Snowflakeでデータベースを作成する
 
-1. 
-2. 以下に例を示します。
+1. 数分後、Snowflakeアカウントに受信データシェアが届くはずだ。
+2. インバウンドデータシェアを使用して、テーブルを表示しクエリするためのデータベースを作成する。以下に例を示します。
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. 
+3. 新しいデータベースに問い合わせる権限を与える。
 
-
-
+{% alert warning %}
+ダッシュボードで共有を削除して再作成する場合は、以前に作成したデータベースを削除し、`CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` を使用して再作成して、受信共有に問い合わせる必要がある。
 {% endalert %}
 
 ## 使用と視覚化
 
-ただし共有データは読み取り専用であり、クエリのみ可能で、変更や削除は一切できないことにご注意ください。
+データ共有のプロビジョニングが完了したら、受信したデータ共有からデータベースを作成し、共有されたすべてのテーブルをSnowflakeインスタンスに表示させ、インスタンスに保存している他のデータと同様にクエリ可能にする必要がある。ただし共有データは読み取り専用であり、クエリのみ可能で、変更や削除は一切できないことにご注意ください。
 
 Currents と同様に、Snowflake セキュアデータシェアリングを使用して次のことができます:。
 
@@ -139,7 +139,7 @@ Braze に保管されているほぼすべてのイベントレコードには�
 
 ## Braze Benchmarks
 
-
+Benchmarksは、[Brazeが構築したデータツールで](https://www.braze.com/perspectives/benchmarks)、Brazeの見込み客や顧客は、Brazeの業界ベンチマークと指標を比較することで、業界のトッププレーヤーとの比較を確認することができる。
 
 初期設定の業界には以下のものがあります。
 
