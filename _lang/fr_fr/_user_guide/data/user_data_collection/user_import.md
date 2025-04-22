@@ -195,10 +195,6 @@ La valeur `braze_id` peut être étiquetée comme `Appboy ID` dans les exportati
 
 ### Importation d'adresses e-mail et de numéros de téléphone
 
-{% alert important %}
-L'importation d'un fichier CSV contenant des adresses e-mail et des numéros de téléphone est actuellement en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
-{% endalert %}
-
 Vous pouvez omettre un ID externe ou un alias utilisateur et utiliser une adresse e-mail ou un numéro de téléphone pour importer des utilisateurs. Avant d'importer un fichier CSV contenant des adresses e-mail ou des numéros de téléphone, vérifiez les points suivants :
 
 - Vérifiez que vous n'avez pas d'ID externe ou d'aliasing de l'utilisateur pour ces profils dans votre fichier CSV. Si vous le faites, Braze utilisera en priorité l'ID externe ou l'alias d'utilisateur avant l'adresse e-mail pour identifier les profils.
@@ -297,22 +293,32 @@ Le filtre utilisé pour créer le segment sélectionne les utilisateurs qui ont 
 
 ## Résolution des problèmes
 
-### Lignes manquantes
+###  
 
-Plusieurs raisons peuvent expliquer pourquoi le nombre d’utilisateurs importés ne correspond pas forcément au total de lignes dans votre fichier CSV :
-
-- **ID externes en double :** Si des colonnes d'ID externe sont dupliquées, cela peut entraîner des lignes mal formées ou non importées, même si les lignes sont correctement formatées. Dans certains cas, cela n’indique pas une erreur spécifique. Vérifiez si des ID externes dupliqués sont présents dans votre CSV. Si c’est le cas, retirez les doublons et essayez de les charger à nouveau.
-- **Caractères accentués :** Votre CSV peut comporter des noms ou des attributs qui contiennent des accents. Assurez-vous que votre fichier est encodé UTF-8 pour éviter tout problème.
-
-### Ligne mal formée
+#### Ligne mal formée
 
 Il doit y avoir une ligne d'en-tête pour que les données soient correctement importées. Chaque ligne doit avoir le même nombre de cellules que la ligne d’en-tête. Les lignes qui ont plus, ou moins, de valeurs que la ligne d’en-tête seront exclues de l’importation. Les virgules dans une valeur seront interprétées comme un séparateur et peuvent conduire à cette erreur. De plus, toutes les données doivent être encodées en UTF-8.
 
 Si votre fichier CSV contient des lignes vides et importe moins de lignes que le nombre total de lignes du fichier CSV, cela n’indique pas forcément un problème puisque les lignes vides n’ont pas besoin d’être importées. Vérifiez le nombre de lignes correctement importées et assurez-vous qu’elles correspondent au nombre d’utilisateurs que vous essayez d’importer.
 
-### Plusieurs types de données
+#### 
 
-Braze s’attend à ce que toutes les valeurs d’une colonne soient du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut entraîneront des erreurs de segmentation.
+ 
+
+-   
+-    
+
+### Lignes manquantes
+
+Plusieurs raisons peuvent expliquer pourquoi le nombre d’utilisateurs importés ne correspond pas forcément au total de lignes dans votre fichier CSV :
+
+-  Si des colonnes d'ID externe sont dupliquées, cela peut entraîner des lignes mal formées ou non importées, même si les lignes sont correctement formatées.  Vérifiez si des ID externes dupliqués sont présents dans votre CSV. Si c’est le cas, retirez les doublons et essayez de les charger à nouveau.
+- **Caractères accentués :** Votre CSV peut comporter des noms ou des attributs qui contiennent des accents. Assurez-vous que votre fichier est encodé UTF-8 pour éviter tout problème.
+-   
+-    
+-   
+-   
+-   
 
 ### Dates incorrectement formatées
 
@@ -325,6 +331,32 @@ Les valeurs encapsulées dans des guillemets simples (`''`) ou doubles (`""`) se
 ### Données importées comme attribut personnalisé
 
 Si une donnée utilisateur par défaut (telle que `email` ou `first_name`) est importée en tant qu'attribut personnalisé, vérifiez la casse et l'espacement de votre fichier CSV. Par exemple, `First_name` serait importé comme attribut personnalisé, alors que `first_name` serait correctement importé dans le champ « prénom » sur le profil d’un utilisateur.
+
+### Plusieurs types de données
+
+Braze s’attend à ce que toutes les valeurs d’une colonne soient du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut entraîneront des erreurs de segmentation.
+
+    
+
+### 
+
+ 
+
+  
+
+```
+external_id,email,email_subscribe,push_subscribe
+brazetest1,test1@braze.com,unsubscribed,unsubscribed
+brazetest2,test2@braze.com,Unsubscribed,Unsubscribed
+```
+
+### 
+
+
+
+-    
+-  
+-  
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
