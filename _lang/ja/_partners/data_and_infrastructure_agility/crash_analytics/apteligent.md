@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) は、開発者と製品マネージャーにツールとインサイトを提供するモバイルアプリケーションパフォーマンスプラットフォームです。 
 
-
+_この統合はApteligentによって維持されている。_
 
 ## 統合について
 
