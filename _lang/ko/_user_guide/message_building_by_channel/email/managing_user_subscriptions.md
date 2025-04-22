@@ -16,7 +16,7 @@ channel:
 
 ## 구독 상태 {#subscription-states}
 
-Braze는 이메일 사용자를 위한 세 가지 글로벌 구독 상태(다음 표에 나열됨)를 제공하며, 이는 메시지와 사용자 사이의 최종 게이트키퍼 역할을 합니다. 예를 들어 `unsubscribed`로 간주되는 사용자는 `subscribed` 또는 `opted-in`의 글로벌 구독 상태를 대상으로 하는 메시지를 수신하지 않습니다.
+ 예를 들어 `unsubscribed`로 간주되는 사용자는 `subscribed` 또는 `opted-in`의 글로벌 구독 상태를 대상으로 하는 메시지를 수신하지 않습니다.
 
 | 상태 | 정의 |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze는 데이터 포인트, 전 세계 및 구독 그룹에 대한 구독 상�
 
 Braze는 [커스텀 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer)을 통해 수동으로 이메일 구독을 취소하는 모든 사용자의 구독을 자동으로 취소합니다. 사용자가 이메일 주소를 업데이트하고 **전송 구성** 설정에서 **이메일 업데이트 시 사용자 재구독이** 활성화되어 있으면 정상적인 이메일 전송이 재개됩니다.
 
-사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 의미합니다.
+사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
@@ -90,15 +90,9 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 ### 구독 그룹 만들기
 
 1. **오디언스** > **구독**으로 이동합니다.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
-2\. Select **Create email subscription group**.
-3\. Give your subscription group a name and description.
-4\. Select **Save**. 
+2.  
+3. Give your subscription group a name and description.
+4.  
 
 모든 구독 그룹은 환경설정 센터에 자동으로 추가됩니다.
 
