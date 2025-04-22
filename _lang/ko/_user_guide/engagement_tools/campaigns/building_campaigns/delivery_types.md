@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: 캠페인 재자격 부여
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/clock.svg
   - name: 캠페인 캘린더
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/
