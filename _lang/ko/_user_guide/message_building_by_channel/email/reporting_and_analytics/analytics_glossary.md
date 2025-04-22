@@ -177,7 +177,9 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='소프트 바운스' %} 이메일이 소프트 바운스를 받으면, 우리는 보통 72시간 이내에 재시도를 하지만, 재시도 횟수는 수신자마다 다릅니다.
+{% multi_lang_include metrics.md metric='소프트 바운스' %} 이메일이 소프트 바운스를 받으면, 우리는 보통 72시간 이내에 재시도를 하지만, 재시도 횟수는 수신자마다 다릅니다. 
+
+ 
 
 <span class="calculation-line">계산: 카운트 </span>
 
