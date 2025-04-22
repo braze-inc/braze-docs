@@ -35,9 +35,9 @@ These are the minimum SDK versions to start using Banners:
 
 ### Step 2: Compose a message
 
-To compose your Banner, select **Edit message**. Here, you can style the banner and define on-click behavior.
+To compose your Banner, select **Edit message**. Here, you can style the Banner and define on-click behavior.
 
-#### Step 2.1: Style the banner {#styles}
+#### Step 2.1: Style the Banner {#styles}
 
 You can drag and drop blocks and rows into the canvas area to start building your message. To customize your message's background properties, border settings, and more, select **Styles**. If you only want to customize the style for a specific block or row, select it to make changes.
 
@@ -47,11 +47,11 @@ You can drag and drop blocks and rows into the canvas area to start building you
 
 When a customer clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your customer’s profile with custom data when they click the Banner.
 
-### Step 3: Set banner priority {#set-priority}
+### Step 3: Set Banner priority {#set-priority}
 
-When multiple campaigns reference the same placement ID, banners are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can manually set the priority to high, medium, or low. If multiple banners share the same priority level, the newest banner will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can manually set the priority to high, medium, or low. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
-To set priority for a banner:
+To set the priority for a Banner:
 
 1. Select **Priority sorter**.
 2. Drag and drop the campaigns to order them with the correct priority.
