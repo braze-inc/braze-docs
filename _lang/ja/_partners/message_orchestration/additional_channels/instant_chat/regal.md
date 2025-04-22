@@ -232,7 +232,7 @@ Regalの [Reporting Webhooks ガイド][7]には、公開する Reporting イベ
 
 ### ステップ3:Regal イベントを Braze イベントに変換する
 
-
+Braze[データ変換]({{site.baseurl}}/data_transformation)機能により、受信したRegalイベントを、Brazeでアトリビューション、イベント、または購入として追加するために必要なフォーマットにマッピングすることができる。
 
 1. Data Transformation に名前を付けてください。イベント Webhook ごとに Data Transformation を設定することをお勧めします。
 
