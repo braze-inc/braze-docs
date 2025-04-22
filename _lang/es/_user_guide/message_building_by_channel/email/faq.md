@@ -25,6 +25,14 @@ Las campañas desencadenadas por la API deduplicarán o enviarán deduplicados e
 - **Escenario 2: Correos duplicados en diferentes `user_ids` dentro del objeto destinatarios:** Si el mismo correo electrónico aparece dentro de varios `External_user_IDs` referenciados por el objeto `recipients``, el correo electrónico se enviará dos veces.
 - **Escenario 3: Correos duplicados debido a user_ids duplicados en el objeto destinatario:** Si intenta añadir el mismo perfil de usuario dos veces, sólo uno de los perfiles recibirá el correo electrónico.
 
+### 
+
+ 
+
+ 
+
+  
+
 ### ¿Se aplicarán retroactivamente las actualizaciones de mi configuración de correo electrónico saliente?
 
 No. Las actualizaciones realizadas en la configuración del correo electrónico saliente no afectan retroactivamente a los envíos existentes. Por ejemplo, cambiar el nombre de visualización predeterminado en la configuración de correo electrónico no sustituirá automáticamente el nombre de visualización predeterminado existente en sus campañas activas o lienzos. 
@@ -59,6 +67,12 @@ Puede que veas más clics que aperturas por alguna de las siguientes razones:
 - Los usuarios hacen varios clics en el cuerpo del correo electrónico con una sola apertura.
 - Los usuarios hacen clic en algunos enlaces de correo electrónico dentro del panel de vista previa de sus teléfonos. En este caso, Braze registra este correo electrónico como pulsado pero no abierto.
 - Los usuarios vuelven a abrir un correo electrónico que habían previsualizado anteriormente.
+
+### 
+
+ 
+- 
+- 
 
 ### ¿Cuáles son los riesgos potenciales de provocar clics en el servidor?
 
