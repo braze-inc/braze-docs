@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment gérer les utilisateur
 > Apprenez à gérer les utilisateurs dans le compte de votre entreprise, y compris l'ajout, la suspension et la suppression d'utilisateurs.
 
 {% alert note %}
-Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), la rubrique **Utilisateurs de l'entreprise** s'appelle **Gérer les utilisateurs** et se trouve sous l'icône de votre compte.
+Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. 
 {% endalert %}
 
 ## Ajouter des utilisateurs à Braze
@@ -84,6 +84,19 @@ Braze conservera les données de compte suivantes :
 
 - Attributs personnalisés ou données de test associés à leur compte
 - Les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
+
+## 
+
+### 
+
+
+
+
+
+1. 
+2.  
+
+ 
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
