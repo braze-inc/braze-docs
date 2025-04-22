@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/xamarin.md %}
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Nutzer:innen Attribute einstellen
 
