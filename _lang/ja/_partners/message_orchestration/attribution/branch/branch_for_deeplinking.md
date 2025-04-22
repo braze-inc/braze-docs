@@ -14,9 +14,11 @@ search_tag: Partner
 
 > [Branch][1] はあらゆるデバイス、チャネル、プラットフォームでの獲得、エンゲージメント、測定を支援するモバイルリンクプラットフォームで、すべてのユーザータッチポイントの一元的なビューを提供しています。
 
-Braze とBranch の統合により、ユーザージャーニー開始を適切に[紐づける]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/)ことができるようにして、より優れたエクスペリエンスを顧客に提供し、ディープリンクを使用して目的のロケーションに顧客を接続できます。
 
-コールリンク (`href=tel:`) を含む場合、
+
+## 統合について
+
+Braze とBranch の統合により、ユーザージャーニー開始を適切に[紐づける]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_attribution/)ことができるようにして、より優れたエクスペリエンスを顧客に提供し、ディープリンクを使用して目的のロケーションに顧客を接続できます。
 
 ## 統合
 
@@ -31,8 +33,8 @@ BrazeからiOSユニバーサルリンクをディープリンクとして送信
 
 ### 電子メールでのディープリンク
 
-[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/help/help_articles/email/universal_links/)に関するドキュメントを参照するか、
-[Branch のドキュメント](https://docs.branch.io/pages/integrations/braze/)を参照して、Braze 経由で送信されるメールからのディープリンクを設定します。
+[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)に関するドキュメントを参照するか、
+[Branch のドキュメント](https://help.branch.io/developers-hub/docs/ios-universal-links#apps-that-always-work)を参照して、Braze 経由で送信されるメールからのディープリンクを設定します。
 
 ユーザーがアプリにコール権限を付与しない限り、iOS 用の Gmail アプリでは電話番号へのリンク (`tel` を`href` に付加) はサポートされません。
 
@@ -40,6 +42,7 @@ ESPによっては、クリックトラッキングされたユニバーサル�
 
 - [SendGrid][7]
 - [SparkPost][9]
+
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
