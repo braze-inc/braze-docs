@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/web.md %}
+guide/prerequisites/web.md developer_ %}
 
 ## Nachrichten triggern
 
