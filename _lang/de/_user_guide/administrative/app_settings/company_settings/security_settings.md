@@ -209,7 +209,7 @@ Sie sind für die Festlegung der richtigen Einstellungen für Ihren Workspace ve
 | Nachricht senden | message_extras | Mehrere Event-Typen enthalten ein message_extras-Feld. Die Einstellung gilt für alle Event-Typen zum Senden von Nachrichten, die message_extras unterstützen, einschließlich der in Zukunft hinzukommenden Event-Typen. |
 
 {% alert warning %}
-**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, **können** die Daten **nicht wiederhergestellt werden**.
+**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, können die Daten **nicht wiederhergestellt werden**.
 {% endalert %}
 
 ### Einstellungen konfigurieren
