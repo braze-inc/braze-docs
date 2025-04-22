@@ -40,9 +40,9 @@ Kubit で[コホートを作成](https://www.kubit.ai/doc/fundamentals#cohort)�
 
 ![]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}
 
-
+{% alert important %}
 Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
-
+{% endalert %}
 
 #### インポートステータスを確認する
 インポートが完了すると、インポートスケジュールで指定された受信者にEメール通知が送信される。また、Kubit の [**Schedule**] でコホートのインp－トステータスを確認することもできます。スケジュール履歴には、すべてのインポート実行時間、結果、Brazeにインポートされたコホート内のユーザー総数が表示される。<br><br>![]({% image_buster /assets/img/kubit/import_history.png %})<br><br>そのインポートスケジュールの**Import to Braze**アイコンをクリックすることで、手動でインポートをトリガーすることができる。
