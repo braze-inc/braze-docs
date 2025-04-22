@@ -1,12 +1,12 @@
 ---
-nav_title: Como fazer uma chamada à API
+nav_title: ""
 article_title: Como fazer uma chamada para a API Connected Content
 page_order: 0
 description: "Este artigo de referência aborda como fazer uma chamada à API Connected Content, bem como exemplos úteis e casos de uso avançados da conteúdo conectado."
 search_rank: 2
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/connected-content) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazer uma chamada API
+# 
 
 > Use o Connected Content para inserir qualquer informação acessível pela API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.<br><br>Esta página aborda como fazer chamadas à Connected Content API, casos de uso avançados da Connected Content, tratamento de erros e muito mais.
 
@@ -80,10 +80,6 @@ Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de u
 
 Se o URL exigir autenticação básica, a Braze poderá gerar uma credencial de autenticação básica para você usar em sua chamada de API. Você pode gerenciar as credenciais de autenticação básica existentes e adicionar novas credenciais em **Settings** > **Connected Content**.
 
-{% alert note %}
-Se você estiver usando a [navegação antiga]({{site.baseurl}}/navigation), poderá encontrar **Conteúdo conectado** em **Gerenciar configurações**.
-{% endalert %}
-
 ![As configurações de "Connected Content" no dashboard do Braze.][34]
 
 Para adicionar uma nova credencial, selecione **Adicionar credencial**. Dê um nome à sua credencial e digite o nome de usuário e a senha.
@@ -148,7 +144,7 @@ O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso 
 
 #### Etapa 2: Autorizar a API usando o token de acesso recuperado
 
-Agora que o token está salvo, ele pode ser modelado dinamicamente na chamada subsequente do conteúdo conectado para autorizar a solicitação:
+
 
 {% raw %}
 ```
@@ -172,49 +168,7 @@ A Braze enviará solicitações de conteúdo conectado dos seguintes intervalos 
 
 A Braze tem um conjunto reservado de IPs usados para todos os serviços, sendo que nem todos estão ativos em um determinado momento. Isso foi projetado para que a Braze envie de um data center diferente ou faça manutenção, se necessário, sem afetar os clientes. A Braze poderá usar um, um subconjunto ou todos os seguintes IPs listados ao fazer solicitações de conteúdo conectado.
 
-| Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
-|---|
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
 
-| Para as instâncias `EU-01` e `EU-02`: |
-|---|
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88`
-
-| Por exemplo, `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
 
 ## Solução de problemas
 
@@ -224,6 +178,24 @@ Use [Webhook.site](https://webhook.site/) para solucionar problemas em suas cham
 2. Faça uma prévia e teste sua campanha ou etapa do canva para ver as solicitações que chegam a este site.
 
 Usando essa ferramenta, você pode diagnosticar problemas com os cabeçalhos de solicitação, o corpo da solicitação e outras informações que estão sendo enviadas na chamada.
+
+## 
+
+###  
+
+ 
+
+ 
+
+### 
+
+    
+
+### 
+
+ 
+ 
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
