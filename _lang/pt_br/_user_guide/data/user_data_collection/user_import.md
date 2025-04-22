@@ -195,10 +195,6 @@ O valor `braze_id` pode ser rotulado como `Appboy ID` nas exportações CSV do d
 
 ### Importação com endereços de e-mail e números de telefone
 
-{% alert important %}
-A importação de um arquivo CSV com endereços de e-mail e números de telefone está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
-
 É possível omitir uma ID externa ou um alias de usuário e usar um endereço de e-mail ou número de telefone para importar usuários. Antes de importar um arquivo CSV com endereços de e-mail ou números de telefone, verifique o seguinte:
 
 - Verifique se não há IDs externos ou aliases de usuário para esses perfis no arquivo CSV. Se o fizer, o Braze priorizará o uso da ID externa ou do alias do usuário antes do endereço de e-mail para identificar perfis.
@@ -297,22 +293,32 @@ O filtro usado para criar o segmento seleciona usuários que foram criados ou at
 
 ## Solução de problemas
 
-### Linhas ausentes
+###  
 
-Há algumas razões pelas quais o número de usuários importados pode não corresponder ao total de linhas no seu arquivo CSV:
-
-- **IDs externos duplicados:** Se houver colunas de ID externas duplicadas, isso poderá causar linhas malformadas ou não importadas, mesmo que as linhas estejam formatadas corretamente. Em alguns casos, isso pode não relatar um erro específico. Verifique se há IDs externos duplicados no seu CSV. Se for o caso, remova os duplicados e tente fazer o upload novamente.
-- **Caracteres acentuados:** Seu CSV pode ter nomes ou atributos que incluem acentos. Certifique-se de que seu arquivo esteja codificado em UTF-8 para evitar quaisquer problemas.
-
-### Linha malformada
+#### Linha malformada
 
 Deve haver uma linha de cabeçalho para importar os dados corretamente. Cada linha deve ter o mesmo número de células que a linha de cabeçalho. Linhas com um comprimento de mais ou menos valores do que a linha de cabeçalho serão excluídas da importação. As vírgulas em um valor serão interpretadas como um separador e podem levar a esse erro. Além disso, todos os dados devem ser codificados em UTF-8.
 
 Se o seu arquivo CSV tiver linhas em branco e importar menos linhas do que o total de linhas no arquivo CSV, isso pode não indicar um problema com a importação, pois as linhas em branco não precisariam ser importadas. Verifique o número de linhas que foram importadas corretamente e certifique-se de que corresponde ao número de usuários que você está tentando importar.
 
-### Múltiplos tipos de dados
+#### 
 
-Braze espera que cada valor em uma coluna seja do mesmo tipo de dado. Os valores que não corresponderem ao tipo de dados do atributo causarão erros na segmentação.
+ 
+
+-   
+-    
+
+### Linhas ausentes
+
+Há algumas razões pelas quais o número de usuários importados pode não corresponder ao total de linhas no seu arquivo CSV:
+
+-  Se houver colunas de ID externas duplicadas, isso poderá causar linhas malformadas ou não importadas, mesmo que as linhas estejam formatadas corretamente.  Verifique se há IDs externos duplicados no seu CSV. Se for o caso, remova os duplicados e tente fazer o upload novamente.
+- **Caracteres acentuados:** Seu CSV pode ter nomes ou atributos que incluem acentos. Certifique-se de que seu arquivo esteja codificado em UTF-8 para evitar quaisquer problemas.
+-   
+-    
+-   
+-   
+-   
 
 ### Datas formatadas incorretamente
 
@@ -325,6 +331,32 @@ Os valores encapsulados entre aspas simples (`''`) ou duplas (`""`) serão lidos
 ### Dados importados como atributo personalizado
 
 Se uma parte dos dados padrão de usuários (como `email` ou `first_name`) for importada como um atributo personalizado, verifique as letras maiúsculas e minúsculas e o espaçamento do arquivo CSV. Por exemplo, `First_name` seria importado como um atributo personalizado, enquanto `first_name` seria corretamente importado no campo "first name" no perfil de um usuário.
+
+### Múltiplos tipos de dados
+
+Braze espera que cada valor em uma coluna seja do mesmo tipo de dado. Os valores que não corresponderem ao tipo de dados do atributo causarão erros na segmentação.
+
+    
+
+### 
+
+ 
+
+  
+
+```
+external_id,email,email_subscribe,push_subscribe
+brazetest1,test1@braze.com,unsubscribed,unsubscribed
+brazetest2,test2@braze.com,Unsubscribed,Unsubscribed
+```
+
+### 
+
+
+
+-    
+-  
+-  
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
