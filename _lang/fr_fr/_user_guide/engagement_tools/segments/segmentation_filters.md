@@ -83,7 +83,7 @@ glossaries:
     tags:
       - Custom events
   - name: Adresse e-mail 
-    description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle pour mener des tests. Il peut également être utilisé pour envoyer des e-mails transactionnels à tous vos utilisateurs (y compris les utilisateurs désabonnés) à l’aide du spécificateur « Email Address is not Blank (Adresse e-mail non vide) » dans le filtre.
+    description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle pour mener des tests.  <br><br>
     tags:
       - Other Filters
   - name: ID utilisateur externe
@@ -191,15 +191,15 @@ glossaries:
     tags:
       - Retargeting
   - name: Campagne cliquée/ouverte
-    description: "Filtrer par interaction avec une campagne spécifique. <br><br> Pour l'e-mail, si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, provenant d'une campagne donnée."
+    description: "Filtrer par interaction avec une campagne spécifique. <br><br>  Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, provenant d'une campagne donnée."
     tags:
       - Retargeting
   - name: Campagne ou Canvas avec balise cliqué(e)/ouvert(e)
-    description: "Filtrer par interaction avec une campagne spécifique qui a une étiquette spécifique. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>Lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une campagne ou d'une étape de Canvas donnée avec une balise."
+    description: "Filtrer par interaction avec une campagne spécifique qui a une étiquette spécifique. <br><br>  Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>Lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une campagne ou d'une étape de Canvas donnée avec une balise."
     tags:
       - Retargeting
   - name: Étape cliquée/ouverte
-    description: "Filtrer par interaction avec un composant Canvas spécifique.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures. <br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une étape de canvas donnée."
+    description: "Filtrer par interaction avec un composant Canvas spécifique. <br><br><br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures. <br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une étape de canvas donnée."
     tags:
       - Retargeting
   - name: Alias cliqué dans la campagne
@@ -263,7 +263,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Dernière interaction avec un message
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils ont cliqué ou ouvert l'un de vos canaux de messagerie (Carte de contenu, e-mail, in-app, SMS, push, WhatsApp). Inclut l'option de filtrage par ouvertures automatiques ou autres pour les e-mails. (période de 24 heures)<br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée). Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé spécifique est mis à jour. <br>- Lorsque l'e-mail est livré, ou si l'utilisateur ouvre ensuite l'e-mail ou un lien dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail sembleront avoir reçu le message.<br><br>Pour les SMS, c'est lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message avec le suivi des clics activé.<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmentez vos utilisateurs par la dernière fois qu'ils ont cliqué ou ouvert l'un de vos canaux de messagerie (Carte de contenu, e-mail, in-app, SMS, push, WhatsApp).  (période de 24 heures)<br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée).  Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé spécifique est mis à jour. <br>- Lorsque l'e-mail est livré, ou si l'utilisateur ouvre ensuite l'e-mail ou un lien dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail sembleront avoir reçu le message.<br><br>Pour les SMS, c'est lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message avec le suivi des clics activé.<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Retargeting
   - name: Carte cliquée 
@@ -279,7 +279,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Adresse e-mail disponible
-    description: "Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Adresse e-mail disponible vérifie trois critères : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un échec d'envoi définitif, et si l’e-mail a été marqué comme courrier indésirable. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment."
+    description: "  Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment.<br><br> <code>false</code>   <br><br>"
     tags:
       - Channel subscription behavior
   - name: Date d’abonnement aux e-mails
@@ -386,8 +386,8 @@ glossaries:
     description: "Segmente vos utilisateurs en fonction de leur sexe, comme indiqué dans votre application."
     tags:
       - Demographic attributes
-  - name: Numéro de téléphone
-    description: "Segmente vos utilisateurs en fonction de leur numéro de téléphone. N'utilisez que des chiffres [0-9]. N'incluez pas de parenthèses, de tirets et similaires."
+  - name: ""
+    description: " "
     tags:
       - Demographic attributes
   - name: Prénom
@@ -566,8 +566,8 @@ glossaries:
     description: "Segmentez vos utilisateurs en fonction du nombre de followers qu'ils ont sur X (anciennement Twitter)."
     tags:
       - Social activity
-  - name: "Numéro de téléphone de l'expéditeur"
-    description: "Segmente vos utilisateurs en fonction du champ du numéro de téléphone d'envoi e.164.<br><br>Lorsqu'un numéro de téléphone est envoyé à Braze, Braze tente de le contraindre au <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">format e.164</a> qui est utilisé pour l'envoi à travers les canaux SMS et WhatsApp. Le processus de coercition peut échouer si le numéro n'est pas formaté correctement, ce qui fait que le profil utilisateur a un numéro de téléphone mais pas de numéro d'envoi.<br><br>Cas d'utilisation :<br> - Utilisez des expressions régulières (regex) avec ce filtre pour segmenter les numéros de téléphone avec un code pays spécifique. <br>- Utilisez ce filtre pour segmenter les utilisateurs en fonction des numéros de téléphone qui n'ont pas passé le processus de coercition e.164."
+  - name: Numéro de téléphone
+    description: "<br><br> Lorsqu'un numéro de téléphone est envoyé à Braze, Braze tente de le contraindre au <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">format e.164</a> qui est utilisé pour l'envoi à travers les canaux SMS et WhatsApp.  <br><br>Cas d'utilisation :<br>   <br>- Utilisez des expressions régulières (regex) avec ce filtre pour segmenter les numéros de téléphone avec un code pays spécifique. <br>- Utilisez ce filtre pour segmenter les utilisateurs en fonction des numéros de téléphone qui n'ont pas passé le processus de coercition e.164."
     tags:
       - Other filters
 ---
