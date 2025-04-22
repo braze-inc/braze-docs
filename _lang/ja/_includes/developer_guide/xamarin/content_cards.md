@@ -2,7 +2,7 @@
 
 Braze Xamarin SDK には、コンテンツカードの使用を開始するためのデフォルトのカードフィードが含まれています。Braze SDKに含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードのすべてのアナリティクスのトラッキング、却下、レンダリングを処理する。
 
-{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
+guide/prerequisites/xamarin.md developer_ %}
 
 ## カードの種類とプロパティ
 
