@@ -19,7 +19,7 @@ Braze will notify the company contact and creator of the extension if this setti
 
 #### Selecting your refresh settings
 
-![Refresh Interval Settings with a weekly refresh frequency, start time of 10 am, and Monday selected as a day.]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:60%;"}
+![Refresh Interval Settings with a weekly refresh frequency, start time of 10 am, and Monday selected as a day.]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:50%;"}
 
 Within the **Refresh Interval Settings** panel, you can select the frequency at which this segment extension will refresh: hourly, daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
 
