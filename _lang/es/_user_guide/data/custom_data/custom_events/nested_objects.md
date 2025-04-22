@@ -10,7 +10,7 @@ description: "En este artículo se describe cómo enviar datos JSON anidados com
 
 > Esta página explica cómo enviar datos JSON anidados como propiedades de eventos personalizados y compras, y cómo utilizar esos objetos anidados en tu mensajería.
 
-Puede utilizar objetos anidados -objetos que están dentro de otro objeto- para enviar datos JSON anidados como propiedades de eventos y compras personalizados. Estos datos anidados pueden utilizarse para plantillas de información personalizada en los mensajes, desencadenar envíos de mensajes y segmentar a los usuarios.
+Puede utilizar objetos anidados -objetos que están dentro de otro objeto- para enviar datos JSON anidados como propiedades de eventos y compras personalizados. 
 
 ## Limitaciones
 
@@ -39,7 +39,7 @@ Si se envían nuevas propiedades en el futuro, no estarán en el esquema hasta q
 
 ## Paso 2: Utilizar el objeto anidado
 
-Después de generar un esquema, puede hacer referencia a los datos anidados durante la segmentación y la personalización. Consulte los siguientes apartados para ver ejemplos de uso:
+  Consulte los siguientes apartados para ver ejemplos de uso:
 
 - [Cuerpo de la solicitud API](#api-request-body)
 - [Plantillas de Liquid](#liquid-templating)
