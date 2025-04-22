@@ -11,7 +11,7 @@ description: "This reference article explains the different components of the Br
 
 > The recipients object allows you to request or write information in our endpoints.
 
-Either `external_user_id`, `user_alias`, `braze_id` or `email` is required in this object. **Requests must specify only one.**
+Either `external_user_id`, `user_alias`, `braze_id`, or `email` is required in this object. **Requests must specify only one.**
 
 The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
