@@ -15,43 +15,43 @@ page_order: 2.0
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/sdk_integration.md %}
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/sdk_integration.md %}
+guide/swift/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include 開発者guide/web/sdk_integration.md %}
+guide/web/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-{% multi_lang_include 開発者guide/cordova/sdk_integration.md %}
+guide/cordova/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-{% multi_lang_include 開発者guide/flutter/sdk_integration.md %}
+guide/flutter/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab react native %}
-{% multi_lang_include 開発者guide/react_native/sdk_integration.md %}
+guide/react_native/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab roku %}
-{% multi_lang_include 開発者guide/roku/sdk_integration.md %}
+guide/roku/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include 開発者guide/unity/sdk_integration.md %}
+guide/unity/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-{% multi_lang_include 開発者guide/unreal_engine/sdk_integration.md %}
+guide/unreal_engine/sdk_integration.md developer_ %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-{% multi_lang_include 開発者guide/xamarin/sdk_integration.md %}
+guide/xamarin/sdk_integration.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
 
