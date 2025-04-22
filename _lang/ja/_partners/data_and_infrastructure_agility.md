@@ -137,10 +137,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 - name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
-- name: ""
+- name: オディッチ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
-- name: ""
+- name: オプティマイズリー
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/optimizely/
-- name: ""
+- name: ジャストゥーノ
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/ 
 ---
