@@ -41,7 +41,9 @@ toc_headers: h2
 
 ### Snowflake 인스턴스에 연결하는 동안 오류가 발생했습니다. IP로 들어오는 요청은 Snowflake에 액세스할 수 없습니다.
 
-공식 Braze IP를 IP 허용 목록에 추가해 보세요. 자세한 내용은 [데이터 웨어하우스 통합을]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) 참조하세요.
+공식 Braze IP를 IP 허용 목록에 추가해 보세요. 
+
+
 
 ### 고객 구성으로 인해 SQL 실행 중 오류가 발생했습니다. 002003 (42S02): SQL 컴파일 오류: 존재하지 않거나 권한이 없습니다.
 
@@ -156,7 +158,7 @@ CDI는 `UPDATED_AT`을 사용하여 동기화 중에 어떤 레코드를 가져�
 
 ## CDI의 보안 대책은 무엇인가요?
 
-### Braze의 조치
+### 
 
 Braze는 CDI에 대해 다음과 같은 조치를 취하고 있습니다:
 
