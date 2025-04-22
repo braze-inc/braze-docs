@@ -12,10 +12,10 @@ description: "Braze SDKによるアンインストール追跡方法を学習す
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/analytics/tracking_uninstalls.md %}
+{% multi_lang_include developer_guide/android/analytics/tracking_uninstalls.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/analytics/tracking_uninstalls.md %}
+guide/swift/analytics/tracking_uninstalls.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
