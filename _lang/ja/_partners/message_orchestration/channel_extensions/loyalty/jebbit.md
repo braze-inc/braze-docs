@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jebbit](https://www.jebbit.com/) は、ユーザーがファーストパーティデータを取得するための魅力的なエクスペリエンスを構築できる PaaS です。
 
-
+_この統合はJebbitによって管理されている。_
 
 ## 統合について
 
