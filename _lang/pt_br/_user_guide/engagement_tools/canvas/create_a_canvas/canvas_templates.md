@@ -59,7 +59,7 @@ Depois de terminar de personalizar seu modelo, selecione o botão **Salvar model
 
 Há duas maneiras de usar seu modelo ao criar um canva:
 
-- **Do envio de mensagens**: Acesse **Envio de mensagens** > **Canva**. Selecione o botão **Create Canvas** e **Use a Canvas Template**.
+-  Acesse **Envio de mensagens** > **Canva**. Selecione o botão **Create Canvas** e **Use a Canvas Template**.
 - **Dos modelos**: Acesse **Modelos** > **Modelos de tela** e localize o modelo desejado. Em seguida, selecione o menu <i class="fas fa-ellipsis-vertical"></i> seguido de **Apply template (Aplicar modelo**). Isso levará você a um novo canva com o modelo aplicado no criador de canvas.
 
 ### Modelos de Braze disponíveis
