@@ -13,6 +13,10 @@ search_tag: Partner
 
 > [Voucherifyは](https://www.voucherify.io/)、パーソナライズされたキャンペーンとロイヤルティプログラムを可能にするオールインワンのプロモーションプラットフォームであり、ユーザーのエンゲージメントとリテンションを促進します。 
 
+
+
+## 統合について
+
 <iframe src="https://player.vimeo.com/video/745340934?h=17ceae8c3c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 Braze と Voucherify の統合により、以下の機能を使用して独自のコードを送信することで、プロモーションキャンペーンを拡大できます。
@@ -35,3 +39,4 @@ Voucherify 統合に関するその他のリソースについては、次の記
 - [Braze コネクテッドコンテンツ を使用したデータの取得]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content)
 - [Brazeのカスタム属性を使ったディストリビューション]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes)
 - [Brazeのプロモーションコードを使用する]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list)
+
