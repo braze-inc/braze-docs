@@ -12,14 +12,14 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/push_notifications/silent.md %}
+{% multi_lang_include developer_guide/android/push_notifications/silent.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/push_notifications/silent.md %}
+guide/swift/push_notifications/silent.md developer_ %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-{% multi_lang_include 開発者guide/android/push_notifications/silent.md %}
+guide/android/push_notifications/silent.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
