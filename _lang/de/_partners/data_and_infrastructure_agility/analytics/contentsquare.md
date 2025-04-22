@@ -48,7 +48,7 @@ Weitere Informationen finden Sie unter [Anfrage für die Integration von Content
 
 ## Verwendung dieser Integration
 
-Sobald die Integration abgeschlossen ist, stehen Ihnen angepasste Events von Contentsquare zur Verwendung in Ihren Kampagnen und Canvase zur Verfügung. Sie können unter **Dateneinstellungen** > Angepasste Events überprüfen, welche Events an Braze gesendet werden.
+Sobald die Integration abgeschlossen ist, stehen Ihnen angepasste Events von Contentsquare zur Verwendung in Ihren Kampagnen und Canvase zur Verfügung. Sie können unter **Dateneinstellungen** > **Angepasste Events** überprüfen, welche Events an Braze gesendet werden.
 
 ![Inhaltquare Live Signals Daten im Braze Tab angepasste Events][1]
 

@@ -62,7 +62,7 @@ PII ベースのテーブルを準備する前に、ジョブで実行される 
 
 #### ブレイズ識別子
 
-Brazeのイベントログには、LiveRampネイティブアプリ内で使用できる識別子が含まれている。各イベントタイプで使用可能な識別子の完全なリストについては、[Braze イベントのスキーマと識別子](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt)をダウンロードしてください。
+Brazeのイベントログには、LiveRampネイティブアプリ内で使用できる識別子が含まれている。各イベントタイプで使用可能な識別子の完全なリストについては、[Braze イベントのスキーマと識別子]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt)をダウンロードしてください。
 
 | 識別子の種類 | 説明  |
 |-----------------|--------------|

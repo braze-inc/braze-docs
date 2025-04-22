@@ -41,7 +41,7 @@ MyPostcard と統合するには、[ログインするかサインアップ][2]�
 Brazeプラットフォームの**Templates**>**Webhook Templatesから**、今後のキャンペーンやCanvasで使用するMyPostcard Webhookテンプレートを作成する。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation/)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
+[古いナビゲーションを]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
 {% endalert %}
 
 単発のMyPostcard Webhookキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新規キャンペーン作成時にBrazeで**Webhookを**選択する。以下のフィールドに入力します。
@@ -104,6 +104,6 @@ B2B 管理ツールに表示されているリクエスト本文をコピーし�
 
 [1]: https://www.mypostcard.com
 [2]: https://www.mypostcard.com/b2b/admin/
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
 [4]: {% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %}
 [5]: {% image_buster /assets/img/mypostcard/mypostcard_test.jpg %}

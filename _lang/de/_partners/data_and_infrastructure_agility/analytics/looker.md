@@ -8,11 +8,11 @@ search_tag: Partner
 
 ---
 
-# [![Braze Lernangebote]](https://learning.braze.com/looker-integration-with-braze/) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Braze Lernangebote]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/), eine Business-Intelligence- und Big-Data-Analytics-Plattform, ermöglicht es Ihnen, Realtime Business Analytics nahtlos zu erforschen, zu analysieren und zu teilen.
 
-Die Integration von Braze und Looker erlaubt es Nutzern:innen von Braze, die Markierung von [Looker Blocks](#looker-blocks) und [Looker-Aktionen](#looker-actions) durch Nutzer:innen über die REST API zu nutzen. Diese markierten Nutzer:innen können zu Segmenten hinzugefügt werden, um zukünftige Kampagnen oder Canvase [zu targetieren](#segment-users). Um Looker mit Braze zu verwenden, empfehlen wir Ihnen, Ihre Braze-Daten [mit Braze-Currents][6] an ein [Data Warehouse][6] zu senden und dann die Looker Blocks von Braze zu verwenden, um Ihre Braze-Daten in Looker schnell zu modellieren und zu visualisieren.
+Die Integration von Braze und Looker erlaubt es Nutzern:innen von Braze, die Markierung von [Looker Blocks](#looker-blocks) und [Looker-Aktionen](#looker-actions) durch Nutzer:innen über die REST API zu nutzen. Diese markierten Nutzer:innen können zu Segmenten hinzugefügt werden, um zukünftige Kampagnen oder Canvase [zu targetieren](#segment-users). Um Looker mit Braze zu verwenden, empfehlen wir Ihnen, Ihre Braze-Daten [mit Braze-Currents an ein Data Warehouse zu senden][6] und dann die Looker Blocks von Braze zu verwenden, um Ihre Braze-Daten in Looker schnell zu modellieren und zu visualisieren.
 
 ## Voraussetzungen
 

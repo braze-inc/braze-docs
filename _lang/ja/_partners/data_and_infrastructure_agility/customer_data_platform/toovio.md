@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Toovio](https://toovio.com/) は、人工知能を採用している data-as-a-service企業であり、実用的なデータを検出し、最も重要な要素を使用して事前に定義されている目標に基づき段階的に成果を上げることを支援します。
 
+_この統合はToovioによって維持されている。_
+
+## 統合について
+
 Braze と Toovio のパートナーシップにより、ほぼリアルタイムでのメッセージトリガー、増分パフォーマンスを促進するツール、Toovio の高度なキャンペーン測定ツールが利用可能になります。
 
 ## 前提条件
@@ -38,6 +42,7 @@ Toovio がターゲットとする顧客イベントに基づいて、Braze [API
 ### ステップ3:Tovioアカウントを設定する
 
 アカウントを設定するには、「New Customer Request」という件名のメールで Toovio ([info@toovio.com](mailto:info@toovio.com?subject=New%20Customer%20Request)) にご連絡ください。Toovio はクライアントと協力して、トリガーおよび基盤となるモデルを設定します。
+
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/
 [2]: {{site.baseurl}}/api/api_key/

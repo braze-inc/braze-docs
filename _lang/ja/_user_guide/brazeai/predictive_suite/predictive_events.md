@@ -37,10 +37,6 @@ guide_featured_list:
 
 [**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**予測**] は [**エンゲージメント**] の下にあります。
-{% endalert %}
-
 この機能を購入する前に、プレビューモードで使用できます。これにより、合成データを使用してデモ予測を表示したり、一度に1 つのプレビュー予測モデルを作成したりできます。この予測は、実際のユーザーデータに基づいて作成されますが、ユーザーの可能性スコアに従ってメッセージングのターゲットを設定することはできません。また、作成後も定期的に更新されません。
 
 プレビューでは、この1 つの予測を編集して再構築したり、アーカイブしたりして、期待される[予測品質]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality) of [異なるオーディエンス]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience) をテストし、アナリティクスに精通するように他のユーザを作成することもできます。

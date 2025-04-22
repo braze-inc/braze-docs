@@ -219,7 +219,7 @@ Sobald die AASA-Datei gehostet wird, muss für jede Änderung Ihrer OneLink-Konf
 {% endalert %}
 
 #### Schritt 2b: Leiten Sie Ihre Click-Tracking Domain auf Ihren AASA Filehost um
-Bei der [Konfiguration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) Ihrer [E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) haben Sie einen CNAME-Eintrag in Ihrem DNS Server erstellt. Führen Sie die folgenden Schritte aus, nachdem Sie Ihre Click-Tracking Domain in Braze überprüft haben. 
+Bei der [Konfiguration Ihrer E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) haben Sie einen CNAME-Eintrag in Ihrem DNS Server erstellt. Führen Sie die folgenden Schritte aus, nachdem Sie Ihre Click-Tracking Domain in Braze überprüft haben. 
 
 1. Löschen Sie den CNAME-Eintrag, der Ihre Subdomain auf die SparkPost Domain umleitet.
 2. Erstellen Sie einen CNAME-Eintrag, der Ihre Click Tracking Domain auf das CDN umleitet, das Ihre App AASA-Datei hostet, anstatt des Eintrags, den Sie oben gelöscht haben.
@@ -243,7 +243,7 @@ Sobald die Datei mit den digitalen Asset-Links gehostet wird, muss für jede Än
 {% endalert %}
 
 #### Schritt 2b: Leiten Sie Ihre Domain für das Klick-Tracking auf den Dateihoster für Ihre digitalen Assets um.
-Bei der [Konfiguration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) Ihrer [E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) haben Sie einen CNAME-Eintrag in Ihrem DNS Server erstellt. Führen Sie die folgenden Schritte aus, nachdem Sie Ihre Click-Tracking Domain in Braze überprüft haben. 
+Bei der [Konfiguration Ihrer E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) haben Sie einen CNAME-Eintrag in Ihrem DNS Server erstellt. Führen Sie die folgenden Schritte aus, nachdem Sie Ihre Click-Tracking Domain in Braze überprüft haben. 
 
 1. Löschen Sie den CNAME-Eintrag, der Ihre Subdomain auf die SparkPost Domain umleitet.
 2. Erstellen Sie einen CNAME-Eintrag, der Ihre Click Tracking Domain auf das CDN umleitet, in dem Ihre App Digital Asset Links-Datei gehostet wird, und nicht auf den Eintrag, den Sie oben gelöscht haben.
@@ -263,7 +263,7 @@ Bei der [Konfiguration]({{site.baseurl}}/user_guide/message_building_by_channel/
 Nachdem Sie die AASA-Datei in Ihrer Domain für die Aufzeichnung von Klicks gehostet haben, konfigurieren Sie Ihr AppsFlyer SDK für die Unterstützung der AASA-Datei.
 
 1. Wählen Sie in Xcode Ihr Projekt aus.
-2. **Fähigkeiten** auswählen **.**
+2. Wählen Sie **Fähigkeiten** aus.
 3. Aktivieren Sie **Assoziierte Domains.**
 4. Klicken Sie auf **+**, und geben Sie Ihre Klick Domain ein. Zum Beispiel: `applinks:click.example.com`.
 Wenn ein Klick auf den universellen Link erfolgt, wird Ihre App geöffnet und das SDK gestartet. Um die App in die Lage zu versetzen, den OneLink hinter der Klick Domain zu extrahieren und den Deeplink aufzulösen, gehen Sie wie folgt vor:
@@ -307,7 +307,7 @@ Wenn Sie auf einen App-Link klicken, wird Ihre App geöffnet und das SDK wird ge
 Nachdem Sie die AASA-Datei in Ihrer Domain für die Aufzeichnung von Klicks gehostet haben, konfigurieren Sie Ihr SDK für die Unterstützung der AASA-Datei.
 
 1. Wählen Sie in Xcode Ihr Projekt aus.
-2. **Fähigkeiten** auswählen **.**
+2. Wählen Sie **Fähigkeiten** aus.
 3. Aktivieren Sie **Assoziierte Domains.**
 4. Klicken Sie auf **+**, und geben Sie Ihre Klick Domain ein. Zum Beispiel: `applinks:click.example.com`.
 

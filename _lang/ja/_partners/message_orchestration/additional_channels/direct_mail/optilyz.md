@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [optilyz][1] はダイレクトメールオートメーションプラットフォームです。顧客中心型で持続可能かつ収益性の高いダイレクトメールキャンペーンを実施できます。 
 
+_この統合はoptilyzによって維持されている。_
+
+## 統合について
+
 optilyzとBrazeのウェブフック統合を使用して、手紙、はがき、セルフメーラーなどのダイレクトメールを顧客に送信する。
 
 ## 前提条件
@@ -37,10 +41,6 @@ optilyz と統合するには、[optilyz API][2] を使用して受信者デー�
 ### ステップ1:BrazeのWebhookテンプレートを作成する
 
 将来のキャンペーンやCanvasで使用するoptilyzウェブフックテンプレートを作成するには、Brazeプラットフォームで「**Templates**>**Webhook Templates**」に移動する。 
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 1回限りの optilyz Webhook キャンペーンを作成するか、既存のテンプレートを使用する場合は、新しいキャンペーンを作成する際に Braze で **Webhook** を選択します。
 
@@ -95,6 +95,7 @@ optilyz には、認証用の HTTP ヘッダーと HTTP メソッドが必要で
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
+
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/

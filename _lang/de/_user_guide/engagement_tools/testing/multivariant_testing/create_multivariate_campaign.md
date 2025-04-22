@@ -127,7 +127,7 @@ Es gibt einige häufige Fehler, die den Anschein von Unterschieden je nach Messa
 Wenn Sie zum Beispiel eine Push-Nachricht an eine breite Zielgruppe mit einer Kontrollgruppe senden, wird die Testgruppe nur Nachrichten an Nutzer:innen mit einem Push-Token senden. Die Kontrollgruppe umfasst jedoch sowohl Nutzer:innen, die einen Push-Token haben, als auch Nutzer:innen, die keinen Push-Token haben. In diesem Fall muss Ihre ursprüngliche Zielgruppe für die Kampagne oder das Canvas nach einem Push-Token filtern (`Push Enabled` ist `true`). Das Gleiche gilt für die Berechtigung zum Empfang von Nachrichten auf anderen Kanälen: Opt-in, Push-Token, Abonnement usw.
 
 {% alert note %}
-Wenn Sie manuell zufällige Bucket-Nummern für Kontrollgruppen verwenden, lesen Sie, [worauf Sie]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) bei Ihren Kontrollgruppen [achten müssen]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
+Wenn Sie manuell zufällige Bucket-Nummern für Kontrollgruppen verwenden, lesen Sie, worauf Sie bei Ihren Kontrollgruppen [achten müssen]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/

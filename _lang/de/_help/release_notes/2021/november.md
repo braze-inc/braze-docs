@@ -18,7 +18,7 @@ Auf den Canvas- und Kampagnen Analytics-Seiten für E-Mails steht eine neue Metr
 Die Liste der [unterstützten Liquid-Variablen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) für die Personalisierung von Nachrichten wurde um die Variable `random_bucket_number` erweitert. 
 
 ## Richtlinien für Rich-Push-Benachrichtigungen in iOS 15
-Die Rich-Docs für [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) wurden um neue [Richtlinien für Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) erweitert, darunter Informationen über Benachrichtigungszustände und eine Aufschlüsselung der Variablen für die Textkürzung.
+Die Rich-Docs für iOS wurden um neue [Richtlinien für Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) erweitert, darunter Informationen über Benachrichtigungszustände und eine Aufschlüsselung der Variablen für die Textkürzung.
 
 ## IPs, die in der EU für Webhooks und Connected-Content auf die Whitelist gesetzt werden sollen
 Weitere IPs, die in der EU für Webhooks und Connected-Content auf die Whitelist gesetzt werden können, wurden zu unserem Artikel über [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) und [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) hinzugefügt. Zu diesen neuen IPs gehören `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188` und `3.70.107.88`.

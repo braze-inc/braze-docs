@@ -46,10 +46,6 @@ NSDictionary *brazeInfo = @{
 
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyer テクノロジーページの「コホートインポートを使用したデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][5]{: style="max-width:90%;"}
 
 ### ステップ3:AppsFlyer オーディエンスでのBraze コネクションの設定
@@ -66,6 +62,10 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**A
 AppsFlyer オーディエンスがアップロードされてBrazeされると、**AppsFlyer Cohorts**フィルターを選択して、BrazeでSegmentsを定義するときにフィルターとして使用できます。
 
 ![ユーザー属性フィルター「AppsFlyer Cohorts」アが選択されている。][7]
+
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
 
 ## ユーザーマッチング
 

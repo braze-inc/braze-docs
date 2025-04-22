@@ -278,7 +278,7 @@ Der Inhalt der Registerkarte **Stil** hängt von den im vorherigen Schritt gewä
 |Guillemets oder andere "Nachricht schließen"-Option | HEX-Farbcode. | Ihre gewünschte HEX-Farbe wird angezeigt. Sie können auch die Deckkraft der Farbe auswählen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[Testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) Sie Ihre Nachricht immer [in der Vorschau,]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) bevor Sie sie versenden.
+[Testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) Sie Ihre Nachricht immer in der Vorschau, bevor Sie sie versenden.
 
 {% alert important %}
 Einige In-App-Nachrichtentypen haben keine Möglichkeit zur Gestaltung, die über das Hochladen von benutzerdefiniertem HTML (oder CSS oder JavaScript) und Assets in einer ZIP-Datei hinausgeht. Im [Web-Modal mit CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) können Sie eigene CSS hochladen oder schreiben, um individuell gestaltete Nachrichten zu erstellen.

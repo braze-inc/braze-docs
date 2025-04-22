@@ -48,6 +48,9 @@ guide_featured_list:
 - name: "WhatsAppのベストプラクティス"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: "カスタムドメイン"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
+  image: /assets/img/braze_icons/link-03.svg
 - name: "WhatsAppに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

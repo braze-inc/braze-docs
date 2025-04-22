@@ -10,11 +10,11 @@ search_tag: Partner
 
 ---
 
-# [![Braze-Lernkurs]](https://learning.braze.com/amplitude-integration-with-braze) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Braze-Lernkurs] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
 
 > [Amplitude](https://amplitude.com/) ist eine Plattform für Produkt-Analytik und Business-Intelligence.
 
-Die bidirektionale Integration von Braze und Amplitude ermöglicht es Ihnen, [Ihre Amplitude-Kohorten]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/), Benutzermerkmale und Ereignisse in Braze [zu importieren]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/) und Segmente zu erstellen, die Nutzer:innen in zukünftigen Kampagnen oder Canvase ansprechen können. Sie können Braze-Currents auch nutzen, um [Ihre Braze-Ereignisse nach Amplitude zu exportieren]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) und so tiefere Analysen Ihrer Produkt- und Marketingdaten durchzuführen.
+Die bidirektionale Integration von Braze und Amplitude ermöglicht es Ihnen, [Ihre Amplitude-Kohorten]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/), Benutzermerkmale und Ereignisse in Braze zu importieren und Segmente zu erstellen, die Nutzer:innen in zukünftigen Kampagnen oder Canvase ansprechen können. Sie können Braze-Currents auch nutzen, um [Ihre Braze-Ereignisse nach Amplitude zu exportieren]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) und so tiefere Analysen Ihrer Produkt- und Marketingdaten durchzuführen.
 
 ## Voraussetzungen
 

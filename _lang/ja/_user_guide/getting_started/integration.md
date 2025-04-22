@@ -27,7 +27,7 @@ Braze SDK (ソフトウェア開発キット) は、アプリまたはサイト�
 
 * [API キー]({{site.baseurl}}/api/api_key/)
 * [SDK エンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Brazeはカスタムエンドポイントを提供しなくなったので、定義済みの SDK エンドポイントを使用します。既存のカスタムエンドポイントが与えられている場合は、こちらで [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup)、[iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) 統合の設定ステップを確認できます。
+  * Brazeはカスタムエンドポイントを提供しなくなったので、定義済みの SDK エンドポイントを使用します。既存のカスタムエンドポイントが与えられている場合は、こちらで [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup)、[iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) 統合の設定ステップを確認できます。
 
 この情報を直接相手に渡すか、そのユーザーのアカウントを作成して Braze にアクセスできるようにすることもできます。 
 
@@ -74,7 +74,7 @@ API トリガーによる起動や Connected Content などが必要な場合は
 
 ### ステップ 5: 二人とも実装のQAを行う
 
-エンジニアと協力して、すべてが機能していることを確認します。[テストメッセージ]({{site.baseurl}}/developer_guide/sending_test_messages/)を送信し、[Android 用のテストアプリ]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/)と [iOS 用のテストアプリ]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/)を使用して、送信を開始する前にすべてのボックスを確認します。
+エンジニアと協力して、すべてが機能していることを確認します。[テストメッセージ]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/)を送信し、[Android 用のテストアプリ]({{site.baseurl}}/developer_guide/references/?tab=android)と [iOS 用のテストアプリ]({{site.baseurl}}/developer_guide/references/?tab=swift)を使用して、送信を開始する前にすべてのボックスを確認します。
 
 [Android や FireOS との統合をテスト]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration)したり、[iOS のプッシュ]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/)をテストするための具体的なステップまでもあります。
 

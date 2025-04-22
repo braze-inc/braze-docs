@@ -34,7 +34,7 @@ Weitere Informationen über Stories, die Movable Ink Customer Data API und darü
 
 #### Schritt 1a: Erstellen Sie eine neue Kampagne
 
-1. [Erstellen Sie][1] in Braze [eine Webhook-Kampagne][1].
+1. [Erstellen Sie eine Webhook-Kampagne][1] in Braze.
 2. Geben Sie Ihrer Kampagne einen Namen und eine optionale Beschreibung.
 3. Wählen Sie als Template die **leere Vorlage** aus.
 
@@ -99,7 +99,7 @@ Um sicherzustellen, dass die Daten in Echtzeit zu Movable Ink gestreamt werden, 
 
 #### Schritt 2b: Bestimmen Sie Ihre Zielgruppe
 
-Bestimmen Sie als nächstes, welche Nutzer:innen Sie für diese Kampagne anvisieren möchten. Einzelheiten finden Sie unter [Targeting Nutzer][4]: [innen][4].
+Bestimmen Sie als nächstes, welche Nutzer:innen Sie für diese Kampagne anvisieren möchten. Einzelheiten finden Sie unter [Targeting Nutzer:innen][4].
 
 Stellen Sie sicher, dass Sie keine A/B-Tests in Ihrer Kampagne verwenden, indem Sie das **Kontrollgruppen-Kontrollkästchen** deaktivieren. Wenn eine Kontrollgruppe enthalten ist, werden bei einem bestimmten Prozentsatz der Nutzer:innen keine Daten an Movable Ink gesendet. Alle Ihre Zielgruppen sollten sich für die Variante und nicht für die Kontrollgruppe entscheiden.
 

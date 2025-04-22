@@ -177,7 +177,9 @@ SendGrid を使用している顧客のメールバウンスには、ハード�
 カウント
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。
+{% multi_lang_include metrics.md metric='Soft Bounce' %} メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。 
+
+ソフトバウンスはキャンペーンアナリティクスでは追跡されませんが、[Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) でソフトバウンスを監視したり、[Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) でこれらのユーザを送信から除外することができます。メッセージアクティビティログでは、ソフトバウンスの理由を確認し、メールキャンペーンの「送信」と「配信」の間に発生する可能性のある不一致を理解することもできます。
 
 <span class="calculation-line">計算式: カウント </span>
 
