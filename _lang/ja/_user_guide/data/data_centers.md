@@ -22,11 +22,11 @@ Brazeは、世界中の異なる地域にある複数のデータセンターを
 
 ### オーストラリア
 
-{% multi_lang_include data_centers.mdデータ・センター='AU' %}
+{% multi_lang_include data_centers.md datacenters='AU' %}
 
 ### 欧州連合
 
-{% multi_lang_include data_centers.mdデータ・センター='EU' %}
+{% multi_lang_include data_centers.md datacenters='EU' %}
 
 ### アメリカ合衆国
 
