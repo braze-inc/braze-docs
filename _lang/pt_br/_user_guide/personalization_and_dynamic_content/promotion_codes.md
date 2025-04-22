@@ -2,16 +2,20 @@
 nav_title: Códigos de promoção
 article_title: Códigos de promoção
 page_order: 5
+toc_headers: h2
 alias: "/promotion_codes/"
 description: "Este artigo de referência ensina como criar listas de códigos de promoção e adicioná-las às suas campanhas e canvas."
-
 ---
 
 # Códigos promocionais
 
-> Códigos promocionais—também chamados de códigos de promoção—são uma ótima maneira de manter os usuários engajados, incentivando interações com forte ênfase em compras.<br><br>Esta página aborda como criar listas de códigos promocionais e adicioná-los a suas campanhas e Canvas.
+> Esta página aborda como criar listas de códigos promocionais e adicioná-los a suas campanhas e Canvas.
 
-Com a funcionalidade Liquid da Braze, oferecemos uma maneira de facilitar o uso generalizado de códigos promocionais, permitindo que as mensagens agora sejam extraídas da lista de promoções que você forneceu, de forma automática e intuitiva. O recurso de códigos promocionais oferece datas de vencimento de até seis meses e suporte para até 20MM de códigos individuais por lista.
+## 
+
+Códigos promocionais—também chamados de códigos de promoção—são uma ótima maneira de manter os usuários engajados, incentivando interações com forte ênfase em compras.  
+
+  
 
 {% alert important %}
 Códigos promocionais não podem ser enviados em mensagens no app.
@@ -19,66 +23,63 @@ Códigos promocionais não podem ser enviados em mensagens no app.
 
 ## Criando uma lista de códigos promocionais
 
-### Etapa 1: Navegue até a seção Código de Promoção
+### Etapa 1: 
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-No dashboard, Acessar **Configurações de Dados** > **Códigos Promocionais**, depois selecione **Criar Lista de Códigos Promocionais**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Códigos de Promoção** em **Integrações**.
-{% endalert %}
+1. 
+2. 
 
-### Etapa 2: Como nomear e criar seu código de promoção
+### Etapa 2: 
 
-Nomeie sua lista de códigos promocionais e adicione uma descrição opcional.
+1. Nomeie sua lista de códigos promocionais e adicione uma descrição opcional.
+2. Em seguida, crie um trecho de código para o código de promoção. 
 
-![][2]{: style="max-width:90%"}
 
-Em seguida, crie um trecho de código para o código de promoção. Este trecho de código será o que você irá referenciar no Liquid para exibir este conjunto específico de códigos promocionais. Certifique-se de que é um trecho de código que não está sendo usado em outra lista.
 
-{% alert important %}
-Trechos são sensíveis a maiúsculas e minúsculas. Por exemplo, "Birthday_promo" e "birthday_promo" serão reconhecidos como dois trechos diferentes.
-{% endalert %}
+- 
+- Trechos são sensíveis a maiúsculas e minúsculas. Por exemplo, "Birthday_promo" e "birthday_promo" serão reconhecidos como dois trechos diferentes.
+- 
+- 
 
-![][3]{: style="max-width:90%"}
 
-{% alert warning %}
-Você não pode alterar o trecho de código após salvá-lo!
-{% endalert %}
 
-### Etapa 3: Opções de código promocional
+### Etapa 3: 
 
-Cada lista de códigos promocionais tem uma data e hora de expiração correspondente que é definida no momento da criação. O comprimento máximo de expiração é de seis meses no futuro a partir do dia em que você está criando ou editando sua lista. Dentro desse período, você pode alterar e atualizar a data de expiração repetidamente. Esta data de expiração se aplicará a todos os códigos adicionados a esta lista. Após a expiração, os códigos serão excluídos do sistema Braze e quaisquer mensagens que chamarem o trecho de código dessa lista não serão enviadas.
+Cada lista de códigos promocionais tem uma data e hora de expiração correspondente que é definida no momento da criação. O comprimento máximo de expiração é de seis meses no futuro a partir do dia em que você está criando ou editando sua lista. 
 
-![][4]{: style="max-width:90%"}
+Dentro desse período, você pode alterar e atualizar a data de expiração repetidamente. Esta data de expiração se aplicará a todos os códigos adicionados a esta lista. Após a expiração, os códigos serão excluídos do sistema Braze e quaisquer mensagens que chamarem o trecho de código dessa lista não serão enviadas.
+
+
 
 Você também tem a opção de configurar alertas de limite opcionais e personalizados. Se configurados, esses alertas enviarão um e-mail ao destinatário designado quando a lista estiver com poucos códigos promocionais disponíveis nesta lista ou quando sua lista de códigos promocionais estiver próxima do vencimento. O destinatário será notificado uma vez por dia.
 
-![][5]
 
-### Etapa 4: Upload do código de promoção
 
-O Braze não gerencia a criação ou o resgate de códigos, o que significa que você deve gerar seus códigos promocionais em um arquivo CSV e fazer upload deles no Braze. Certifique-se de que o arquivo CSV siga estas diretrizes:
+### Etapa 4: 
+
+O Braze não gerencia a criação ou o resgate de códigos, o que significa que você deve gerar seus códigos promocionais em um arquivo CSV e fazer upload deles no Braze. 
+
+
 
 - Inclui uma coluna para códigos de promoção.
 - Tem um código de promoção por linha.
 
 Você pode usar nossa integração embutida com [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) para criar e exportar códigos de promoção.
 
-{% alert note %}
+{% alert important %}
 O tamanho máximo do arquivo é 100 MB e o tamanho máximo da lista é 20MM de códigos não utilizados. Se você descobrir que o arquivo errado foi carregado, carregue um novo para substituir o anterior.
 {% endalert %}
 
-![][6]
+1. Após o fazer upload ser concluído, selecione **Salvar Lista** para salvar todos os detalhes e códigos que você acabou de inserir.
 
-Após o fazer upload ser concluído, selecione **Salvar Lista** para salvar todos os detalhes e códigos que você acabou de inserir.
 
-![][7]
 
-Depois de selecionar salvar, uma nova linha aparecerá no **Histórico de Importação**. Para atualizar a tabela para ver se sua importação foi concluída, selecione <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sincronizar** no topo da tabela.
 
-![][8]
+ 
+ 
+
+
 
 {% alert note %}
 Arquivos maiores levarão alguns minutos para importar. Enquanto você espera, pode sair da página e trabalhar em outra coisa enquanto a importação está em andamento. Quando a importação for concluída, o status será alterado para **Complete** na tabela.
@@ -92,19 +93,24 @@ Todos os códigos da lista terão a mesma expiração, independentemente da data
 
 ### Etapa 5: Use códigos promocionais
 
-Para enviar códigos promocionais em mensagens, selecione **Copiar Trecho** para copiar o trecho de código que você definiu ao criar sua lista de códigos promocionais.
 
-![][9]{: style="max-width:70%"}
 
-A partir daí, você pode colar este código em uma mensagem dentro do dashboard.
+1. 
 
-![][10]{: style="max-width:70%"}
 
-Usando [Liquid][11], você pode inserir um dos códigos de promoção únicos do arquivo CSV carregado em uma mensagem. Esse código será marcado como enviado no backend do Braze para garantir que nenhuma outra mensagem envie o mesmo código. 
+
+
+ A partir daí, você pode colar este código em uma mensagem dentro do dashboard.
+
+
+
+ Esse código será marcado como enviado no backend do Braze para garantir que nenhuma outra mensagem envie o mesmo código.
+
+#### 
 
 Quando um trecho de código é usado em uma campanha multicanal ou etapa do canva, cada usuário sempre recebe um código único. Para diferentes etapas em uma canva, cada usuário recebe vários códigos de promoção.
 
-Se um usuário específico for elegível para receber um código por mais de um canal, esse usuário receberá o mesmo código por cada canal. Por exemplo, se um usuário receber duas mensagens por dois canais, ele receberá apenas um código. O mesmo se aplica para fins de relatório: um código será enviado e o usuário receberá esse código através dos dois canais. Por exemplo, para uma etapa do canva multicanal, apenas um código seria usado pelo usuário.
+  O mesmo se aplica para fins de relatório: um código será enviado e o usuário receberá esse código através dos dois canais. Por exemplo, para uma etapa do canva multicanal, apenas um código seria usado pelo usuário.
 
 {% alert important %}
 Se não houver mais códigos de promoção disponíveis ao enviar mensagens de teste ou ao vivo de uma campanha que utiliza códigos de promoção, a mensagem não será enviada.
@@ -116,13 +122,13 @@ Os envios de teste e os envios de e-mail do grupo de teste usarão códigos de p
 
 ## Determinando quantos códigos foram usados
 
-Você pode encontrar a contagem de códigos restantes na coluna **Restante** da lista de códigos promocionais, localizada na página **Códigos Promocionais**.
 
-![][12]{: style="max-width:90%"}
 
-Este código de contagem também pode ser encontrado ao revisitar uma página de lista de códigos de promoção pré-existente. 
 
-![][13]{: style="max-width:50%"}
+
+Este código de contagem também pode ser encontrado ao revisitar uma página de lista de códigos de promoção pré-existente.  
+
+
 
 ## Envios multicanal e de canal único
 
@@ -175,7 +181,9 @@ O mesmo código de promoção será modelado para todas as instâncias do trecho
 
 ### O que acontece quando uma lista de códigos de promoção está expirada ou vazia?
 
-Se a mensagem deveria ter contido um código de promoção de uma lista vazia ou expirada, a mensagem será cancelada.
+
+
+Se a mensagem deveria ter contido um código de promoção de uma lista vazia ou expirada, a mensagem será cancelada. 
 
 Se a mensagem contiver lógica Liquid que insere condicionalmente um código de promoção, a mensagem só será cancelada se ela deveria ter contido um código de promoção. Se a mensagem não deveria conter um código de promoção, a mensagem será enviada normalmente.
 
@@ -184,15 +192,12 @@ Se a mensagem contiver lógica Liquid que insere condicionalmente um código de 
 Para fazer referência ao mesmo código de promoção em mensagens subsequentes, o código deve ser salvo no perfil do usuário como um atributo personalizado. Isso pode ser feito anexando um [webhook Braze-to-Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) à mesma campanha ou etapa do Canva Message.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[2]:{% image_buster /assets/img/promocodes/promocode2.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[6]:{% image_buster /assets/img/promocodes/promocode6.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}
+
+
+
+
+
+
+
+
+
