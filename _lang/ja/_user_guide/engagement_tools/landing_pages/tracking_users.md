@@ -33,7 +33,7 @@ Braze はランディングページのURL を使用して、独自のLiquid タ
 
 ![Braze.] ({% image_buster /assets/img/landing_pages/url-handle-example.png %}) のランディングページの例のページURL{: style="max-width:80%;"}
 
-### ステップ2:Liquid タグの生成
+### ステップ2: Liquid タグの生成
 
 **Messaging**> **Campaigns**に移動し、キャンペーンを選択します。メッセージエディタで、**Personalization** を選択します。
 
