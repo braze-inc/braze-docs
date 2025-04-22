@@ -16,22 +16,22 @@ platform:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/in_app_messages/customization.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/in_app_messages/customization.md %}
+guide/swift/in_app_messages/customization.md developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include 開発者guide/web/in_app_messages/customization.md %}
+guide/web/in_app_messages/customization.md developer_ %}
 {% endsdktab %}
 
 {% sdktab react native %}
-{% multi_lang_include 開発者guide/react_native/analytics/logging_iam_data.md %}
+guide/react_native/analytics/logging_iam_data.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include 開発者guide/unity/in_app_messages/customization.md %}
+guide/unity/in_app_messages/customization.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
