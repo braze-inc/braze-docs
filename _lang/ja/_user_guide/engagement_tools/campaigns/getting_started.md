@@ -21,7 +21,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: ""
+  - name: メッセージングの基礎
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/
     image: /assets/img/braze_icons/mail-01.svg
 ---
