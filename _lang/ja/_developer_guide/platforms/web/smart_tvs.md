@@ -15,7 +15,7 @@ description: "この記事では、Braze Web SDKを使用してスマートテ�
 完全なテクニカル・リファレンスについては、[JavaScriptドキュメンテーションや](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)、TV上で動作するWeb SDKを確認するための[サンプル・アプリケーションを](https://github.com/Appboy/smart-tv-sample-apps)チェックしてほしい。
 {% endalert %}
 
-{% multi_lang_include 開発者guide/prerequisites/web.md %}
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## Web Braze SDKの設定
 
