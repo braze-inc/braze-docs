@@ -43,16 +43,16 @@ search_rank: 7
 ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storageなど）に送信するフラットファイルのイベントデータに適用される。ここにリストされているいくつかのイベントと宛先の組み合わせは、まだ一般的には利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
 {% endalert %}
 {% api %}
-## 
+## ランダムバケット番号更新イベント
 
 {% apitags %}
 ランダムバケット番号
 {% endapitags %}
 
-このユーザーイベントは、ワークスペース内で新規ユーザーが作成されるたびに発生します。
+このユーザーイベントは、ワークスペース内で新規ユーザーが作成されるたびに発生します。このイベントでは、各新規ユーザーにランダムバケット番号が割り当てられ、これを使用してランダムユーザーの均一に分散されたセグメントを作成できます。これを使用して、ランダムバケット番号の値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。
 
 {% alert important %}
-
+このCurrents イベントは、&quot を購入した顧客のみが使用でき、すべてのイベントconnector&quot を購入し、ストレージイベントコネクタ(Amazon S3、Microsoft Azure、Google Cloud Storage など) でのみ使用できます。
 <br><br>このイベントを有効にして、ワークスペース内の既存ユーザーのランダムバケット番号の埋め戻しをスケジュールする方法については、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
@@ -86,7 +86,7 @@ search_rank: 7
 このイベントは、特定のカスタムイベントがトリガーされたときに発生します。これを使用して、ユーザーがアプリケーションでカスタムイベントを実行したタイミングを追跡します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // [Braze Custom Event] (users.behaviors.CustomEvent)
 
@@ -113,7 +113,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // [Braze Custom Event] (users.behaviors.CustomEvent)
 
@@ -167,12 +167,12 @@ search_rank: 7
 
 #### プロパティの詳細
 
-- 
+- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 {% endapi %}
 
 {% api %}
-## 
+## 属性イベントのインストール
 
 {% apitags %}
 アトリビューション
@@ -181,7 +181,7 @@ search_rank: 7
 このイベントは、アプリのインストールがソースに起因する場合に発生します。これを使用して、アプリのインストール元を追跡します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Install Attribution (users.behaviors.InstallAttribution)
 
@@ -200,7 +200,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Install Attribution (users.behaviors.InstallAttribution)
 
@@ -239,7 +239,7 @@ search_rank: 7
 {% endapi %}
 
 {% api %}
-## 
+## ロケーションイベント
 
 {% apitags %}
 ロケーション
@@ -248,7 +248,7 @@ search_rank: 7
 このイベントは、ユーザーが特定のロケーションに移動したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Location (users.behaviors.Location)
 
@@ -280,7 +280,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Location (users.behaviors.Location)
 
@@ -341,12 +341,12 @@ search_rank: 7
 
 #### プロパティの詳細
 
-- 
+- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 {% endapi %}
 
 {% api %}
-## 
+## 購入イベント
 
 {% apitags %}
 購入
@@ -359,7 +359,7 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Purchase (users.behaviors.Purchase)
 
@@ -389,7 +389,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Purchase (users.behaviors.Purchase)
 
@@ -447,12 +447,12 @@ search_rank: 7
 
 #### プロパティの詳細
 
-- 
+- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
 {% endapi %}
 
 {% api %}
-## 
+## 第1セッションイベント
 
 {% apitags %}
 セッション
@@ -465,7 +465,7 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // First Session (users.behaviors.app.FirstSession)
 
@@ -488,7 +488,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // First Session (users.behaviors.app.FirstSession)
 
@@ -541,7 +541,7 @@ search_rank: 7
 {% endapi %}
 
 {% api %}
-## 
+## セッション終了イベント
 
 {% apitags %}
 セッション
@@ -550,7 +550,7 @@ search_rank: 7
 これは、ユーザーがアプリケーションを離脱したとき、つまり現在のセッションを終了したときに発生します。このデータを使用して、セッションの終了時点をを追跡し、対応するセッション開始イベントとあわせてセッション時間の長さを計算します。
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Session End (users.behaviors.app.SessionEnd)
 
@@ -574,7 +574,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Session End (users.behaviors.app.SessionEnd)
 
@@ -624,7 +624,7 @@ search_rank: 7
 {% endapi %}
 
 {% api %}
-## 
+## セッション開始イベント
 
 {% apitags %}
 セッション
@@ -637,7 +637,7 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-
+{% tab Amplitude %}
 ```json
 // Session Start (users.behaviors.app.SessionStart)
 
@@ -660,7 +660,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-
+{% tab Mixpanel %}
 ```json
 // Session Start (users.behaviors.app.SessionStart)
 
