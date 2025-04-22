@@ -19,12 +19,8 @@ description: "이 문서에서는 Braze 계정에 SAML SSO을 활성화하는 �
 |---|---|
 | 어설션 소비자 서비스(ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> 유럽 연합 도메인의 경우 ASC URL은 `https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 입니다. <br><br> 일부 IdP의 경우 이를 회신 URL, 로그인 URL, 오디언스 URL 또는 오디언스 URI라고도 합니다. |
 | 엔티티 ID | `braze_dashboard` |
-| RelayState API 키 | **설정** > **API 키**로 이동하여 `sso.saml.login` 권한으로 API 키를 생성한 다음 생성된 API 키를 IdP 내에서 `RelayState` 매개변수로 입력합니다. |
+| RelayState API 키 | **설정** > **API 키**로 이동하여 `sso.saml.login` 권한으로 API 키를 생성한 다음 생성된 API 키를 IdP 내에서 `RelayState` 매개변수로 입력합니다.  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **설정**에서 **개발자 콘솔** > **API 설정** 아래에 API 키를 찾을 수 있습니다.
-{% endalert %}
 
 ## SAML SSO 설정
 
@@ -52,10 +48,6 @@ ID 제공업체에서 Braze 설정을 완료하면, ID 공급업체에서 Braze 
 
 계정 매니저가 계정에 대해 SAML SSO를 켜면 **설정** > **관리자** > **보안 설정**으로 이동하여 SAML SSO 섹션을 **켜기**로 전환합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 계정 아이콘을 선택하고 **회사 설정** > **보안 설정**으로 이동하여 SAML SSO 섹션을 찾으십시오.
-{% endalert %}
-
 같은 페이지에서 다음을 입력합니다:
 
 | 요구 사항 | 세부 정보 |
@@ -80,6 +72,16 @@ ID 제공업체에서 Braze 설정을 완료하면, ID 공급업체에서 Braze 
 보안 설정을 저장하고 로그아웃합니다. 그런 다음 ID 공급업체를 통해 다시 로그인합니다.
 
 ![SSO가 활성화된 대시보드 로그인 화면]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## 
+
+1. 
+2. 
+3. 
+4. <br><br><br><br>
+5. 
+6. 
+7. 
 
 ## SSO 동작
 
@@ -119,3 +121,56 @@ Braze 대시보드로 이동하여 SSO를 사용하여 로그인을 시도합니
 **내보내기를** 선택합니다. **쿠키 필터 프로필 선택에서** **없음을** 선택합니다. 그런 다음 **내보내기를** 선택합니다. 이렇게 하면 추가 문제 해결을 위해 Braze 지원팀에 보낼 수 있는 JSON 파일이 생성됩니다.
 
 !["SAML 추적 환경설정 내보내기" 메뉴에서 "없음" 옵션을 선택합니다.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## 
+
+### 
+
+  
+
+
+
+
+-  
+-  
+-  
+
+### 
+
+ 
+
+### 
+
+ 
+
+### 
+
+
+
+ 
+
+
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### 
+
+
+
+### 
+
+   
+
+### 
+
+ 
+
+
+
+### 
+
+ 
