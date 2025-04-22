@@ -13,10 +13,10 @@ description: "アプリにBraze JavaScriptインターフェイスを追加す�
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/in_app_messages/html_messages.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/html_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/in_app_messages/html_messages.md %}
+guide/swift/in_app_messages/html_messages.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
