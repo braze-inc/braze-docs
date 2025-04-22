@@ -16,7 +16,7 @@ Este documento es meramente informativo. No pretende proporcionar, ni puede cons
 
 ## Estados de suscripción {#subscription-states}
 
-Braze tiene tres estados de suscripción global para usuarios de correo electrónico (enumerados en la siguiente tabla), que son el último guardián entre sus mensajes y sus usuarios. Por ejemplo, los usuarios considerados `unsubscribed` no recibirán mensajes dirigidos al estado de suscripción global `subscribed` o `opted-in`.
+ Por ejemplo, los usuarios considerados `unsubscribed` no recibirán mensajes dirigidos al estado de suscripción global `subscribed` o `opted-in`.
 
 | Estado | Definición |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze no cuenta los cambios de estado de suscripción en sus puntos de datos, gl
 
 Braze cancelará automáticamente la suscripción de cualquier usuario que se dé de baja manualmente de su correo electrónico a través de un [pie de página personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Si el usuario actualiza su dirección de correo electrónico y la opción **Reinscribir usuarios cuando actualicen su correo** electrónico está activada en los ajustes de **Configuración de envío**, se reanudará el envío normal de correo electrónico.
 
-Si un usuario ha marcado uno o más de sus correos electrónicos como spam, Braze sólo enviará correos electrónicos transaccionales a este usuario. En este caso, los correos electrónicos transaccionales se refieren a la opción seleccionada **Enviar a todos los usuarios, incluidos los usuarios dados de baja**, en el paso **Público objetivo**.
+Si un usuario ha marcado uno o más de sus correos electrónicos como spam, Braze sólo enviará correos electrónicos transaccionales a este usuario. 
 
 {% alert tip %}
 Consulta nuestras buenas prácticas de [calentamiento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) para saber cómo reactivar la interacción de tus usuarios con eficacia.
@@ -90,15 +90,9 @@ Utiliza los [puntos finales de Grupo de suscripción]({{site.baseurl}}/api/endpo
 ### Crear un grupo de suscripción
 
 1. Vaya a **Audiencia** > **Suscripciones**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Usuarios** > **Grupos de suscripción**.
-{% endalert %}
-
-{: start="2"}
-2\. Selecciona **Crear grupo de suscripción por correo electrónico**.
-3\. Dale un nombre y una descripción a tu grupo de suscripción.
-4\. Seleccione **Guardar**. 
+2.  
+3. Dale un nombre y una descripción a tu grupo de suscripción.
+4.  
 
 Todos los grupos de suscripción se añaden automáticamente a su centro de preferencias.
 
