@@ -50,16 +50,16 @@ guide_menu_list:
 - name: ベストプラクティス
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: ""
+- name: メッセージング内のロケール
   link: /docs/user_guide/message_building_by_channel/push/using_locales/
   image: /assets/img/braze_icons/translate-01.svg
-- name: ""
+- name: 一般的なプッシュ・エラー・メッセージ
   link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
   image: /assets/img/braze_icons/alert-triangle.svg
-- name: ""
+- name: トラブルシューティング
   link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
-- name: ""
+- name: よくある質問
   link: /docs/user_guide/message_building_by_channel/push/faq/
   image: /assets/img/braze_icons/annotation-question.svg
 ---
