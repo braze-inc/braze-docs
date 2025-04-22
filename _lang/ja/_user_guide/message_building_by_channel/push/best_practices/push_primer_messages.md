@@ -114,7 +114,7 @@ android.permission.POST_NOTIFICATIONS
 
 ## ステップ 6:コンバージョンイベント
 
-
+Brazeは、コンバージョンのデフォルト設定を提案しているが、プッシュ・プライマーを取り巻く[コンバージョンイベントを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)設定したい場合もあるだろう。
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
