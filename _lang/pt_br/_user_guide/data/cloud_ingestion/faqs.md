@@ -41,7 +41,9 @@ O Test Connection está sendo executado em seu data warehouse, portanto, aumenta
 
 ### Erro ao conectar-se à instância do Snowflake: A solicitação de entrada com IP não tem permissão para acessar o Snowflake
 
-Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. Para saber mais, consulte [Integrações de data warehouse]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. 
+
+
 
 ### Erro ao executar o SQL devido à configuração do cliente: 002003 (42S02): Erro de compilação SQL: não existe ou não está autorizado
 
@@ -156,7 +158,7 @@ A ordem de processamento não é 100% previsível. Por exemplo, se houver vária
 
 ## Quais são as medidas de segurança do CDI?
 
-### Medidas do Braze
+### 
 
 A Braze tem as seguintes medidas em vigor para CDI:
 
