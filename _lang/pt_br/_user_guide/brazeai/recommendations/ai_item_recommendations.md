@@ -364,7 +364,7 @@ Isso acontece em algumas condições específicas:
 
 ### As recomendações existentes treinam semanalmente após a atualização para Item Recommendations Pro?
 
-Não, as recomendações existentes não serão atualizadas automaticamente para treinar semanalmente ou prever diariamente após a atualização. Você pode verificar os próximos horários de treinamento e previsão na seção **Recomendação** selecionando uma recomendação. Para horários atualizados, sugerimos recriar suas recomendações.
+   
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
