@@ -13,11 +13,11 @@ Lorsqu'un utilisateur déclenche un événement personnalisé pour un produit, n
 
 ## Comment fonctionnent les notifications de rupture de stock ?
 
-Vous définirez un événement personnalisé à utiliser comme événement d'abonnement, tel que l'événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous indiquerez également le nom d'un champ de quantité d’inventaire, qui doit être de type numérique.
+Vous définirez un événement personnalisé à utiliser comme événement d'abonnement, tel que l'événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous indiquerez également le nom d'un champ de quantité d’inventaire, qui doit être de type numérique. 
 
-Lorsqu'un produit a une quantité en stock qui correspond à votre règle d'inventaire, nous recherchons tous vos utilisateurs qui sont abonnés à ce produit (les utilisateurs qui ont effectué l'événement d'abonnement) et nous envoyons un événement personnalisé Braze que vous pouvez utiliser pour déclencher une campagne ou un canvas.
+ Lorsqu'un produit a une quantité en stock qui correspond à votre règle d'inventaire, nous recherchons tous vos utilisateurs qui sont abonnés à ce produit (les utilisateurs qui ont effectué l'événement d'abonnement) et nous envoyons un événement personnalisé Braze que vous pouvez utiliser pour déclencher une campagne ou un canvas.
 
-Les propriétés d'événement sont envoyées en même temps que l'utilisateur, ce qui vous permet d'intégrer les détails du produit dans la campagne ou le canvas qui effectue l’envoi !
+
 
 ## Mise en place de notifications de retour en stock
 
@@ -50,8 +50,8 @@ Suivez ces étapes pour configurer les notifications de rupture de stock dans un
     }
     ```
 {% alert note %}
-Les déclencheurs de rupture de stock et de baisse de prix utilisent le même événement pour abonner l'utilisateur à la notification. Vous pouvez donc utiliser le tableau `type` pour définir les notifications de rupture de stock et de baisse de prix dans le même événement.
-{% endalert %}
+ 
+
 
 {: start="4"}
 4\. Sélectionnez **Enregistrer** et continuez vers la page **Paramètres** du catalogue.
