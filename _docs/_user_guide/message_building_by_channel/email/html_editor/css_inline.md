@@ -16,7 +16,7 @@ For some email clients, CSS inlining can improve the way that emails render and 
 
 ## Using CSS inlining
 
-You can control whether CSS inlining is turned on or off for any email message by selecting a checkbox in the **Sending Info** tab of the HTML editor.
+You can control whether CSS inlining is turned on or off for any email message using the **Enable inline CSS** toggle in the **Sending Info** tab of the HTML editor.
 
 ![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:40%;"}
 
