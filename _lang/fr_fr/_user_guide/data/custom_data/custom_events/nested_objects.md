@@ -10,7 +10,7 @@ description: "Cet article décrit comment envoyer des données JSON imbriquées 
 
 > Cette page explique comment envoyer des données JSON imbriquées en tant que propriétés d'événements personnalisés et d'achats, et comment utiliser ces objets imbriqués dans votre envoi de messages.
 
-Vous pouvez utiliser des objets imbriqués (c.-à-d. des objets qui se trouvent à l’intérieur d’un autre objet) pour envoyer des données JSON imbriquées en tant que propriétés d’événements personnalisés et d’achats. Ces données imbriquées peuvent être utilisées pour créer des modèles d'informations personnalisées dans les messages, déclencher l'envoi de messages et segmenter les utilisateurs.
+Vous pouvez utiliser des objets imbriqués (c.-à-d. des objets qui se trouvent à l’intérieur d’un autre objet) pour envoyer des données JSON imbriquées en tant que propriétés d’événements personnalisés et d’achats. 
 
 ## Restrictions
 
@@ -39,7 +39,7 @@ Si de nouvelles propriétés sont envoyées à l'avenir, elles ne figureront pas
 
 ## Étape 2 : Utiliser l'objet imbriqué
 
-Après avoir généré un schéma, vous pouvez référencer les données imbriquées lors de la segmentation et de la personnalisation. Vous trouverez des exemples d'utilisation dans les sections suivantes :
+  Vous trouverez des exemples d'utilisation dans les sections suivantes :
 
 - [Corps de la requête API](#api-request-body)
 - [Modèles Liquid](#liquid-templating)
