@@ -89,13 +89,13 @@ We recommend setting up page container-level styles before you customize styles 
 
 ![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
 
-#### Optional & Required fields
+#### Optional and required fields
 
-You can choose whether a form field is required or optional. Required fields must be filled out before the form can be submitted. Optional fields can be left blank or unselected by the user. 
+You can choose whether a form field is required or optional. Required fields must be filled out before the form can be submitted. Optional fields can be left blank or unselected by a user.
 
-For example, to enforce consnet capture before form submission, you can set a checkbox to required with the appropriate disclaimer text. 
+For example, to enforce consent capture before form submission, you can toggle on **Required field input** to set a checkbox to be required with the appropriate disclaimer text.
 
-![A checkbox form field with the required option toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %})
+![A checkbox form field with the "Required input field" toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:70%;"}
 
 ### Step 4: Create a confirmation page
 
