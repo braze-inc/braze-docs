@@ -40,17 +40,17 @@ If you are using the same machine you usually do to log in, Braze should automat
 
 ### Account suspension	
 
-This doesn't happen very often, but we take account suspension and deletions very seriously. If you find this error, your best bet is to reach out to your company's Braze administrator, Braze account manager, or [Support][support].
+This doesn't happen very often, but we take account suspension and deletions very seriously. If you encounter this error, we recommend reaching out to your company's Braze administrator, Braze account manager, or [Support][support].
 
 ## Braze dashboard won't load or work as expected 
 
 Your dashboard may not load or work because of the following:
 
-- **You're accessing the wrong cluster.** Make sure you're logging into the cluster that is assigned to your company. For example, you may be assigned to US-03, but you're logging into US-01.
-- **Your connection quality is poor.** Try logging into your Braze dashboard on a different device.
-- **Your local browser needs to be refreshed.** [Clear your cookies and browser cache]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#browser-cache-and-cookies), then try to log into your dashboard again.
-- **Your browser is outdated.** Update your browser to the latest [supported browser]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#supported-browsers), then try to log into your dashboard.
-- **You're using incompatible plugins or third-party tools.** Ad-blockers or security software may prevent the Braze dashboard from loading. Test this by disabling an ad-blocker, then logging into your Braze dashboard.
+- **You're accessing the wrong cluster:** Make sure you're logging into the cluster that is assigned to your company. For example, you may be assigned to US-03, but you're logging into US-01.
+- **Your connection quality is poor:** Try logging into your Braze dashboard on a different device.
+- **Your local browser needs to be refreshed:** [Clear your cookies and browser cache]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#browser-cache-and-cookies), then try to log into your dashboard again.
+- **Your browser is outdated:** Update your browser to the latest [supported browser]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#supported-browsers), then try to log into your dashboard.
+- **You're using incompatible plugins or third-party tools:** Ad-blockers or security software may prevent the Braze dashboard from loading. Test this by disabling an ad-blocker, then logging into your Braze dashboard.
 
 If you've solved the prior issues and your dashboard still won't load or work as expected, contact [Support][support].
 
