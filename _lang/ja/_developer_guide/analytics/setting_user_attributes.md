@@ -15,22 +15,22 @@ description: "Braze SDKを通してユーザー属性を設定する方法を学
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/analytics/setting_user_attributes.md %}
+{% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/analytics/setting_user_attributes.md %}
+guide/swift/analytics/setting_user_attributes.md developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include 開発者guide/web/analytics/setting_user_attributes.md %}
+guide/web/analytics/setting_user_attributes.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include 開発者guide/unity/analytics/setting_user_attributes.md %}
+guide/unity/analytics/setting_user_attributes.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-{% multi_lang_include 開発者guide/unreal_engine/analytics/setting_user_attributes.md %}
+guide/unreal_engine/analytics/setting_user_attributes.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
