@@ -658,7 +658,7 @@ WhatsApp
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Read Rate' %} 
+{% multi_lang_include metrics.md métrica='Tasa de lectura' %}
 
 <span class="calculation-line">Cálculo: (Lecturas con recibos de lectura) / (Envíos)</span>
 
@@ -805,6 +805,8 @@ Correo electrónico
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro.
 
+  
+
 {% endapi %}
 
 {% api %}
@@ -884,7 +886,7 @@ Correo electrónico, tarjetas de contenido, SMS, LINE
 Tarjetas de contenido
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad te permite incrementar _el Total de Descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
+{% multi_lang_include metrics.md metric='Descartes totales' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad te permite incrementar _el Total de Descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -957,7 +959,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, W
 Correo electrónico, Tarjetas de contenido, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze. Se realiza un seguimiento durante un periodo de siete días para el correo electrónico. En el caso de LINE, el seguimiento se realiza una vez alcanzado un umbral mínimo de 20 mensajes diarios.
+{% multi_lang_include metrics.md metric='Clics únicos' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze. Se realiza un seguimiento durante un periodo de siete días para el correo electrónico. En el caso de LINE, el seguimiento se realiza una vez alcanzado un umbral mínimo de 20 mensajes diarios.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -994,7 +996,7 @@ Tarjetas de contenido
 Mensaje en la aplicación, tarjetas de contenido
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} En el caso de los mensajes dentro de la aplicación, las impresiones únicas pueden incrementarse de nuevo al cabo de 24 horas si la reelecibilidad está activada y un usuario realiza la acción desencadenante. Si la reeligibilidad está activada, <i>Impresiones únicas</i> = <i>Destinatarios únicos</i>. <br><br>Para las tarjetas de contenido, el recuento no debe incrementarse la segunda vez que un usuario ve una tarjeta. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} En el caso de los mensajes dentro de la aplicación, las impresiones únicas pueden incrementarse de nuevo al cabo de 24 horas si la reelecibilidad está activada y un usuario realiza la acción desencadenante.  <br><br>Para las tarjetas de contenido, el recuento no debe incrementarse la segunda vez que un usuario ve una tarjeta. 
 
 <span class="calculation-line">Cálculo: Recuento</span>
 
