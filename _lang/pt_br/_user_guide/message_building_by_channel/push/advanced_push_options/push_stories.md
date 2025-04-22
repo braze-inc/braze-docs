@@ -33,7 +33,11 @@ As seguintes versões do SDK são necessárias para receber o Push Stories:
 
 ![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-Para usar o Push Stories, crie uma [campanha push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) e selecione **Push Stories** como seu **tipo de notificação**.
+
+
+1. 
+2. 
+3.   
 
 ### Criador do story por push
 
