@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Quikly][1]、緊急性マーケティングプラットフォームは、心理学を活用して消費者を動機付け、ブランドが主要なマーケティングイニシアチブに対する反応を即座に高めることができます。
 
+
+
+## 統合について
+
 BrazeとQuiklyのパートナーシップにより、Brazeのカスタマージャーニー内のイベントでコンバージョンを加速させることができます。Quiklyは、緊急性の心理学を利用して、消費者を楽しく、そして即座に動機付けることでこれを実現します。たとえば、ブランドが Quikly を使用して、新しいメールや SMS サブスクライバーを Braze にすぐに直接取り込んだり、モバイルアプリのダウンロードなどの他の重要なマーケティング目標達成を促進したりできます。
 
 ## 前提条件
@@ -52,7 +56,7 @@ Quiklyのアクティベーションが顧客のメールアドレスやプロ�
     - 新しいプロファイルを作成しません。
     - 必要に応じて、Quiklyはユーザーがアクティベーションに参加したことを示すために、ユーザーのプロファイルにカスタム属性を記録できます。
   - ユーザーが存在しない場合:
-    - QuiklyはBrazeの[`/users/track`エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を介してエイリアスのみのプロファイルを作成し、ユーザーのメールをユーザーエイリアスとして設定して、将来そのユーザーを参照します（ユーザーにはexternal IDがないため）。
+    - 
     - 必要に応じて、Quikly はカスタムイベントをログに記録して、このプロファイルが Quikly アクティベーションに参加したことを示すことができます。
 
 {% details /users/track request %}
@@ -90,10 +94,10 @@ Quikly は顧客の電話番号を使用してサブスクリプション検索�
 
 顧客が Quikly で携帯電話番号と同意を提供する際の全体的なワークフローは次のとおりです:
 1. Quiklyは、[サブスクリプショングループステータス]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)を使用してサブスクリプション検索を実行し、指定された`phone`が`subscription_group_id`にサブスクライブされているかどうかを確認します。サブスクリプションが存在する場合、Quikly アクティベーションでユーザーにクレジットを付与します。さらなるアクションは必要ありません。
-2. Quiklyは、[識別子エンドポイントによるユーザープロファイルのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)を使用してユーザー検索を実行し、指定された`email_address`でユーザープロファイルが存在するかどうかを確認します。ユーザーが存在しない場合、Braze の [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を介してエイリアスのみのプロファイルを作成し、ユーザーのメールをユーザーエイリアスとして設定して、将来そのユーザーを参照できるようにします（ユーザーには external ID がないため）。
+2. Quiklyは、[識別子エンドポイントによるユーザープロファイルのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)を使用してユーザー検索を実行し、指定された`email_address`でユーザープロファイルが存在するかどうかを確認します。
 3. [ユーザーのサブスクリプショングループステータスの更新エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を使用してサブスクリプションのステータスを更新します。
 
-既存のダブルオプトインSMSサブスクリプションワークフローをサポートするために、Quiklyは上記のワークフローの代わりにカスタムイベントをBrazeに送信できます。この場合、サブスクリプションステータスを直接更新するのではなく、[カスタムイベントによってダブルオプトインプロセスがトリガーされ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/non_native/double_opt_in/)、サブスクリプションステータスが定期的に監視され、ユーザーが完全にオプトインしたことを確認してから Quikly アクティベーションが実行されます。
+既存のダブルオプトインSMSサブスクリプションワークフローをサポートするために、Quiklyは上記のワークフローの代わりにカスタムイベントをBrazeに送信できます。この場合、サブスクリプションステータスを直接更新するのではなく、[カスタムイベントによってダブルオプトインプロセスがトリガーされ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/)、サブスクリプションステータスが定期的に監視され、ユーザーが完全にオプトインしたことを確認してから Quikly アクティベーションが実行されます。
 
 {% alert important %}
 Braze は、`/users/track` エンドポイントを使用して新しいユーザーを作成する場合、Braze がユーザープロファイルを完全に作成できる時間を確保するために、関連するサブスクリプショングループにユーザーを追加するまでに約2分の遅延が必要であることをアドバイスしています。
@@ -132,10 +136,6 @@ Webhook を使用して、カスタマージャーニーの特定のイベント
 ### BrazeでQuiklyのWebhookを作成する
 
 将来のキャンペーンやキャンバスのためにQuiklyのWebhookテンプレートを作成するには、Brazeプラットフォームの**テンプレート** > **Webhookテンプレート**に移動します。 
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 新しいキャンペーンを作成する際に、QuiklyのWebhookキャンペーンを一度だけ作成するか、既存のテンプレートを使用する場合は、Brazeで**Webhook**を選択してください。
 
@@ -176,6 +176,7 @@ Quikly では認証に `HTTP Header` が必要です。
 
 ## サポート
 ご質問がある場合は、Quiklyのクライアントサクセスマネージャーにお問い合わせください。
+
 
 [1]: https://www.quikly.com
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
