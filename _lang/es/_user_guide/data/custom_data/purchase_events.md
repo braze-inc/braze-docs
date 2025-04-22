@@ -19,13 +19,13 @@ Puedes registrar las compras pasando un [objeto de compra]({{site.baseurl}}/api/
 
 A continuación se enumeran los métodos utilizados en diversas plataformas para registrar las compras. En estas páginas también encontrarás documentación sobre cómo añadir propiedades y cantidades a tu evento de compra. En función de estas propiedades, puede segmentar aún más a sus usuarios.
 
-- [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- 
+- 
+- 
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- 
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- 
 
 ## Ver datos de compra
 
@@ -256,10 +256,6 @@ Esto ayuda a que los productos sean fáciles de identificar para su segmentació
 Es posible que en ocasiones identifique eventos de compra que consumen demasiados puntos de datos, que ya no son útiles para su estrategia de marketing o que se registraron por error. Para impedir que estos datos se envíen a Braze, puede bloquear el objeto de datos personalizados mientras su equipo de ingeniería trabaja para eliminarlo del backend de su aplicación o sitio web.
 
 En el panel de control de Braze, puede gestionar las listas de bloqueo desde **Configuración de datos** > **Productos**. Consulte la sección [Gestión de datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para obtener más información.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Productos** en **Administrar configuración**.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}
