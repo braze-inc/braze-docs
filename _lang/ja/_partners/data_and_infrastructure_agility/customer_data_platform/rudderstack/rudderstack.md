@@ -54,7 +54,7 @@ RudderStack の[接続モード](https://www.rudderstack.com/docs/destinations/r
 
 このモードでは、Web サイトまたはモバイルアプリで設定した Braze SDK を使用して、イベントを Braze に送信できます。
 
-
+BrazeのGitHubリポジトリで、[対応する方法の](#supported-methods)説明に従って、プラットフォーム用のRudderStack SDKへのマッピングを設定する：
 
 - [Android][android]
 - [iOS][ios]
@@ -128,7 +128,7 @@ RudderStack [Data Regulation API](https://www.rudderstack.com/docs/api/data-regu
 RudderStackの[`track` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#track)、すべてのユーザー・アクティビティと、それらのアクティビティに関連するプロパティをキャプチャする。
 
 **Order completed**<br>
-
+RudderStack eCommerce API][20] ] を使用して、`Order Completed` という名前のイベントの track メソッドを呼び出すと、RudderStack はそのイベントにリストされている商品を [`purchases`][21]] として Braze に送信する。
 
 {% endtab %}
 {% tab スクリーン %}
