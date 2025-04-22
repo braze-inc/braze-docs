@@ -31,3 +31,12 @@ La structure de nommage la plus courante est `group_noun_action`. Les événemen
 ### Propriétés
 
 Sélectionnez un événement, puis identifiez les différences en utilisant les propriétés. C’est utile pour les événements qui sont fondamentalement identiques mais qui présentent des différences mineures (au niveau des canaux de la campagne, par exemple). Cela permet également de voir facilement le cheminement des utilisateurs dans les événements. Reportez-vous à l'[objet propriétés d'événement]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) pour un exemple et un contexte supplémentaire.
+
+## 
+
+ 
+
+- 
+- 
+
+  
