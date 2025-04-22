@@ -90,7 +90,7 @@ Un mensaje de texto enriquecido puede contener hasta 400 caracteres.
 
 ## Basado en tarjetas (carrusel)
 
-Una mensajería basada en tarjetas de LINE permite a los usuarios desplazarse por varios mensajes, como en un carrusel, y actuar sobre los mensajes más relevantes para ellos seleccionando una tarjeta o los botones de una tarjeta.
+
 
 Los casos de uso incluyen:
 - Mostrar promociones para elementos de menú específicos
