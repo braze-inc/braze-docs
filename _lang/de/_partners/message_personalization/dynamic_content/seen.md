@@ -56,7 +56,7 @@ Erstellen Sie eine neue [Webhook-Kampagne]({{site.baseurl}}/user_guide/message_b
     </tr>
     <tr>
       <td><strong>HTTP-Methode</strong></td>
-      <td>Verwenden Sie die <code>POST</code> Methode.</td>
+      <td>Verwenden Sie die <code>POST</code> Methode:</td>
     </tr>
     <tr>
       <td><strong>Anfragetext</strong></td>
@@ -71,7 +71,7 @@ Erstellen Sie eine neue [Webhook-Kampagne]({{site.baseurl}}/user_guide/message_b
     </tr>
     <tr>
       <td><strong>Anfrage-Header</strong></td>
-      <td>Verwenden Sie die folgenden Informationen, um Ihre Anfrage-Header auszufüllen:<br>- <strong>Autorisierung:</strong> <code>Token {token}</code><br>- Content-Typ <strong>:</strong> <code>application/json</code><br><br>Sie erhalten Ihren Authentifizierungs-Token von SEEN.</td>
+      <td>Verwenden Sie die folgenden Informationen, um Ihre Anfrage-Header auszufüllen:<br><strong>Autorisierung</strong>: <code>Token {token}</code><br>- <strong>Content-Typ:</strong> <code>application/json</code><br><br>Sie erhalten Ihren Authentifizierungs-Token von SEEN.</td>
     </tr>
   </tbody>
 </table>
