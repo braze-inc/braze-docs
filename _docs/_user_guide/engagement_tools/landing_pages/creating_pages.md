@@ -93,7 +93,7 @@ We recommend setting up page container-level styles before you customize styles 
 
 You can choose whether a form field is required or optional. Required fields must be filled out before the form can be submitted. Optional fields can be left blank or unselected by a user.
 
-For example, to enforce consent capture before form submission, you can toggle on **Required field input** to set a checkbox to be required with the appropriate disclaimer text.
+For example, to enforce consent capture before form submission, you can turn on **Required field input** to set a checkbox to be required with the appropriate disclaimer text.
 
 ![A checkbox form field with the "Required input field" toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:70%;"}
 
