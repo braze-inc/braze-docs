@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者guide/prerequisites/swift.md %}
+guide/prerequisites/swift.md developer_ %}
 
 ## メッセージトリガー
 
