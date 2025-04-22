@@ -38,7 +38,11 @@ Depois de criar uma seleção, é possível usar a seção **Pré-visualização
 
 ### Liquid nos resultados da seleção
 
-O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos personalizados, pode resultar em resultados diferentes retornados para cada usuário em sua seleção.
+O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos personalizados, pode resultar em resultados diferentes retornados para cada usuário em sua seleção. 
+
+
+
+
 
 ![Configurações de filtro para seleção de catálogo em que o atributo está definido como um atributo personalizado Liquid.][7]
 
@@ -70,7 +74,7 @@ Para usar esse catálogo e essa seleção em uma campanha, use o modal **Adicion
 
 Por exemplo, digamos que você tenha um usuário cuja categoria visualizada mais recentemente seja "Frango". Usando a personalização definida e uma campanha de cartão de conteúdo, é possível enviar três recomendações de refeições que incluam frango para esse usuário.
 
-![Um cartão de conteúdo com uma imagem de frango grelhado com limão e uma lista de três recomendações de refeições que incluem frango com base na categoria visualizada mais recentemente pelo usuário.][4]{: style="max-width:90%;"}
+
 
 Usando a mesma personalização, você também pode enviar três recomendações de refeições para um usuário cuja categoria visualizada mais recentemente seja "Carne bovina".
 
