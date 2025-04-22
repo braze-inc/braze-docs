@@ -17,10 +17,10 @@ Tool:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include 開発者guide/android/geofences.md %}
+{% multi_lang_include developer_guide/android/geofences.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include 開発者guide/swift/geofences.md %}
+guide/swift/geofences.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
