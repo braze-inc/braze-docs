@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) は、モバイル属性、インクリメンタルリスト測定、マーケティングミックスモデリングを通じて、真の成長の源泉を発見できる統一モバイル測定プラットフォームです。
 
-
+_この統合はAirbridgeによって維持されます。_
 
 ## 統合について
 
@@ -201,7 +201,7 @@ Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] �
 ### ステップ3:Airbridge のダッシュボードで Braze を設定する
 
 1. Airbridgeで、左サイドバーの **[Integrations] > [Third-party Integrations]** に移動し、[**Braze**] を選択します。
-2. 
+2. Braze ダッシュボードで見つけたデータインポートキーとREST エンドポイントを指定します。
 3. イベントタイプ ([Install Event] または [Install & Deeplink Open Event]) を選択し、保存します。
 
 {% alert note %}
