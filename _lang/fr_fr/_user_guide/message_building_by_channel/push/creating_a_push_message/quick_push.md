@@ -2,7 +2,7 @@
 nav_title: Envoi rapide de messages
 article_title: Envoi rapide de messages
 alias: "/quick_push/"
-description: "Cet article décrit les choses à savoir lors de la création d'une campagne push ou d'un Cavnas en utilisant l'expérience d'édition push rapide."
+description: ""
 ---
 
 # Envoi rapide de messages
@@ -62,9 +62,9 @@ Si vous sélectionnez plusieurs appareils pour les plateformes mobiles, comme iO
 
 ### Paramètres spécifiques à l'appareil
 
-Vous pouvez modifier les paramètres spécifiques à la plate-forme dans l'éditeur. Cela inclut des paramètres tels que les [boutons d'action push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), les canaux et groupes de notification, le TTL, la priorité d'affichage, les sons, etc.
+Vous pouvez modifier les paramètres spécifiques à la plate-forme dans l'éditeur. Cela inclut des paramètres tels que les [boutons d'action push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), les canaux et groupes de notification, le TTL, la priorité d'affichage, les sons, etc. 
 
-Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-vous aux collections d'articles suivantes :
+ Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-vous aux collections d'articles suivantes :
 
 - [Options iOS][6]
 - [Options Android][7]
