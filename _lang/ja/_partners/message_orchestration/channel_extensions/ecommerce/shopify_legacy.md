@@ -1,15 +1,15 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: Shopify(レガシー)
+article_title: Shopify(レガシー)
 alias: /shopify/
 alias: /partners/shopify_legacy/
 layout: dev_guide
 noindex: true
-guide_top_header: ""
+guide_top_header: "Shopify(レガシー)"
 guide_top_text: |
   
-  Shopifyは、あらゆる規模の小売ビジネスを開始し、成長させ、マーケティングし、管理するための信頼できるツールを提供する、世界有数のコマース企業である。Shopifyは、信頼性のために設計されたプラットフォームとサービスによって、すべての人にとってより良い商取引を実現し、あらゆる消費者により良いショッピング体験を提供する。
-description: ""
+  Shopifyは、あらゆる規模の小売ビジネスを開始し、成長させ、マーケティングし、管理するための信頼できるツールを提供する、世界有数のコマース企業である。Shopifyは、信頼性のために設計されたプラットフォームとサービスによって、すべての人にとってより良い商取引を実現し、あらゆる消費者により良いショッピング体験を提供する。このランディングページは、<b>legacy</b> Shopify 整合のすべての機能のホームページです。現在のShopify 統合の詳細については、<a href="/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/">Shopify</a>を参照してください。
+description: "このランディングページは、概要、セットアップガイド、Shopify データ処理など、レガシーのShopify 統合のすべての機能のホームページです。"
 
 guide_featured_title: "注目の記事"
 guide_featured_list:
