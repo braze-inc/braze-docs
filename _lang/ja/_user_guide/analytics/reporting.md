@@ -24,7 +24,7 @@ guide_featured_list:
   - name: レポートビルダー
     link: /docs/user_guide/analytics/reporting/report_builder/
     image: /assets/img/braze_icons/tool-01.svg
-  - name: ""
+  - name: ダッシュボードビルダー
     link: /docs/user_guide/analytics/reporting/dashboard_builder/
     image: /assets/img/braze_icons/tool-01.svg
 
