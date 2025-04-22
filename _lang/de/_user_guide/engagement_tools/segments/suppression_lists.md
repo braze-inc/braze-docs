@@ -98,7 +98,7 @@ Wenn sich ein Nutzer:innen auf einer Unterdrückungsliste befindet, kann er zwar
 
 Damit ein Segment **überhaupt** nicht in ein Canvas aufgenommen wird, können Sie die Zieleinstellungen dieses Canvas so konfigurieren, dass dieses Segment ausgeschlossen wird. Gehen Sie dazu folgendermaßen vor:
 
-1. Erstellen Sie ein Segment mit denselben Filtern und Kriterien wie Ihre Verdrängungsliste.
+1. Erstellen Sie ein Segment mit denselben Filtern und Kriterien wie Ihre Unterdrückungsliste.
 2. Im Schritt **Target** verwenden Sie den Filter **Segment Membership**, um Nutzer:innen anzusprechen, die nicht in Ihrem Segment enthalten sind.
 
 Nehmen wir zum Beispiel an, Sie haben ein Canvas mit einer Unterdrückungsliste angelegt. Der Canvas besteht aus einem Nutzer:innen-Update-Schritt gefolgt von einem Nachrichten-Schritt. In diesem Szenario betreten Nutzer:innen der Unterdrückungsliste das Canvas, durchlaufen den Schritt Benutzer:innen aktualisieren (wo der Nutzer je nach Konfiguration dieses Schritts aktualisiert werden kann) und verlassen es dann im Schritt Nachricht (wobei der Nutzer in die Metriken "Verlassen" aufgenommen wird). 
