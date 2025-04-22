@@ -16,9 +16,6 @@ description: "この記事では、「カタログセレクションの作成」
 {% endapimethod %}
 
 > このエンドポイントを使用して、カタログにセレクションを作成する。
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
 
 ## 前提条件
 
@@ -32,14 +29,14 @@ description: "この記事では、「カタログセレクションの作成」
 
 | パラメータ      | required | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | 必須 | 文字列    | カタログ名。 |
+| `catalog_name` | required | 文字列    | カタログ名。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメーター   | required | データ型 | 説明                                                                                                                                                        |
+| パラメーター   | 必須 | データ型 | 説明                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | 必須 | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
+| `selection` | required | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエスト例
