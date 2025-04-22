@@ -80,7 +80,7 @@ Schalten Sie schließlich unter **Zustellungssteuerung** die Wiederzulassung ein
 
 ### Schritt 3: Erstellen Sie einen Trigger in Zendesk, um Antworten von Agenten an Braze weiterzuleiten.
 
-Gehen Sie zu **Objekte und Regeln** > **Geschäftsregeln** > Triggers (Auslöser).
+Gehen Sie zu **Objekte und Regeln** > **Geschäftsregeln** > **Triggers** (Auslöser).
 
 1. Erstellen Sie eine neue **Kategorie** (z.B. **Eine Nachricht triggern**).
 2. Erstellen Sie einen neuen **Trigger** (z.B. **Reagieren per SMS Braze**).
