@@ -31,3 +31,12 @@ La estructura de nombres más común es `group_noun_action`. Los eventos deben i
 ### Propiedades
 
 Etiquete un evento y luego identifique las diferencias mediante el uso de propiedades. Esto es útil para eventos que son intrínsecamente iguales pero tienen pequeñas diferencias, como los canales de una campaña. También podemos ver fácilmente cómo fluyen los usuarios a través de los eventos. Consulte el [objeto de propiedades de eventos]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) para ver un ejemplo y contexto adicional.
+
+## 
+
+ 
+
+- 
+- 
+
+  
