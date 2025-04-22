@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Playable][1] では、自動再生動画をBraze メール キャンペーンs に追加できます。
 
-
+_この統合はPlayable によって維持されます。_
 
 ## 統合について
 
