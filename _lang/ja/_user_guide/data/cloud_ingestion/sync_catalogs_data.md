@@ -187,7 +187,7 @@ GO
 
 {:start="2"}
 
-2. 既存の同期からの認証情報をすでに持っている場合はそれらを再利用できますが、必ずアクセスをカタログソーステーブルに拡張してください。新しいサービスプリンシパルと認証情報を作成する方法については、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)のページを参照のこと。 
+2. サービスプリンシパルを設定し、適切な権限を与える。既存の同期からの認証情報をすでに持っている場合はそれらを再利用できますが、必ずアクセスをカタログソーステーブルに拡張してください。新しいサービスプリンシパルと認証情報を作成する方法については、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)のページを参照のこと。 
 
 {:start="3"}
 3\.ネットワークポリシーを設定している場合は、BrazeにMicrosoft Fabricインスタンスへのネットワークアクセスを許可する必要がある。IP のリストについては、[「クラウド データの取り込み」]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)を参照してください。
