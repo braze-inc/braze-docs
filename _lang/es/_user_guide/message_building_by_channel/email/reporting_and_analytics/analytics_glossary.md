@@ -177,7 +177,9 @@ Recuento
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Rebote blando' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro.
+{% multi_lang_include metrics.md metric='Rebote blando' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. 
+
+ 
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
