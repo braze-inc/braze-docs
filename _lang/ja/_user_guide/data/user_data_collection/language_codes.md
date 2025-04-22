@@ -10,4 +10,4 @@ description: "Brazeが現在サポートしているユーザー言語コード�
 
 > これらは現在Brazeがサポートしている言語コードである。
 
-{% multi_lang_include 対応言語コード.md %}
+{% multi_lang_include supported_language_codes.md %}
