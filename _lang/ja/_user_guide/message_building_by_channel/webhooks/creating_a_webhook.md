@@ -231,7 +231,7 @@ Brazeは次のIPからwebhookを送信します。リストされる IP は、�
 Braze-to-Braze Webhook を作成していて、許可リストを使用している場合は、`127.0.0.1` を含む次のすべての IP を許可リストに追加する必要があります。
 {% endalert %}
 
-{% multi_lang_include data_centers.mdデータセンター='ips' %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Brazeパートナー{#utilizing-webhooks}とwebhookを使用する
 
