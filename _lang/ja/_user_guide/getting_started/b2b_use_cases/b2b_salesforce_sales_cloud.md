@@ -92,7 +92,7 @@ Braze から Salesforce にマップするキーと値のペアごとに、[**+�
  
 ## Salesforce Sales Cloud でリードを更新する{#updating-lead}
 
-Salesforce でリードを更新する Braze Salesforce Sales Cloud webhook を設定するには、Salesforce Sales Cloud と Braze の間に共通の識別子が必要です。以下の例では、Salesforce `lead_id` を Braze `external_id` として使用していますが、`user_alias` を使用することでもこれを実現できます。
+Salesforce でリードを更新する Braze Salesforce Sales Cloud webhook を設定するには、Salesforce Sales Cloud と Braze の間に共通の識別子が必要です。以下の例では、Salesforce `lead_id` を Braze `external_id` として使用していますが、`user_alias` を使用することでもこれを実現できます。これの詳細については、[B2B データ]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)を参照してください。
 
 この例では、リードが一定のリードしきい値を超えた後、リードのリードステージを「MQL」 (マーケティング適格リード) に更新する方法を具体的に示しています。これは、私たちの[B2B リードスコアリングワークフロー]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/)のユースケースの核となる部分です。
 
@@ -158,7 +158,7 @@ Salesforce でリードを更新する Braze Salesforce Sales Cloud webhook を�
 
 ### マーケティング適格リード（MQL）の閾値を超えるためのリードスコアリングキャンバス {#lead-scoring}
 
- 
+このWebhookは[リードスコアリングの]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff)ユースケースで取り上げているが、リードスコアリングキャンバス内でMQLをチェックし、Salesforceを直接更新することもできる（Webhookキャンペーンを別途作成するのとは対照的）： 
 
 ユーザー更新に後続ステップを追加し、ユーザーが定義したMQLしきい値を超えたかどうかをチェックする。もしユーザーがしきい値を超えた場合、そのユーザーのステータスを「MQL」に更新し、その後、この Webhook テンプレートを使用して同じ「MQL」ステータスで Salesforce を更新します。Salesforce は、定義されたリードルーティングルールを使用して、このリードを適切な営業チームにルーティングすることで、残りの処理を行います。  
 
