@@ -11,7 +11,7 @@ channel:
 
 # メール用 AMP
 
-> メール用[AMP](https://amp.dev/about/email)を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。AMP は、アンケート、フィードバック質問票、投票キャンペーン、レビュー、購読センターなど、エキサイティングなメールオファリングの作成に役立つさまざまなコンポーネントを使用することで、これを可能にします。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
+> メール用[AMP](https://amp.dev/about/email)を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
 
 ## 要件
 
@@ -19,24 +19,24 @@ Brazeは、Googleで登録するユーザーや必要なセキュリティ要件
 
 | 必要条件   | 説明 |
 | --------------| ----------- |
-| メール用 AMP がオンになっている | AMPは誰でも利用できます。この機能を有効にしたい場合は、アカウントマネージャーに連絡してください。 |
+| メール用 AMP がオンになっている |  |
 | Gmail アカウントの有効化 | [Gmailアカウントの有効化](#enabling-gmail-account)を参照してください。 |
 | Google送信者認証 | Gmail は DKIM、SPF、および DMARC を使用して AMP メールの[送信者を認証](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication)します。お客様のアカウントにこれらが設定されている必要があります。<br><br>- [ドメインキー識別メール](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [送信者ポリシーフレームワーク](https://en.wikipedia.org/wiki/Sender_Policy_Framework) (SPF)<br>- [ドメインベースのメッセージ認証、レポート、および準拠](https://en.wikipedia.org/wiki/DMARC) (DMARC)
 | AMP メール要素 | 説得力のある AMP メールでは、さまざまなコンポーネントが戦略的に使用されます。以下の[コンポーネント](#components)セクションの必須タブを参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### サポートされているクライアント
+### 
 
-ユーザーにAMPメールを送信する前に、クライアントに登録する必要があります。登録プロセスには、承認を得るためにテストAMP HTMLメールを送信することが含まれます。承認の所要時間はクライアントごとに異なります。詳細については、登録リンクに従ってください。
+登録プロセスには、承認を得るためにテストAMP HTMLメールを送信することが含まれます。
 
-| クライアント | 登録リンク |
+| クライアント |  |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
 | ヤフー | [ヤフー](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-サポートされているプラットフォームの完全なリストについては、[AMPドキュメント](https://amp.dev/support/faq/email-support)を参照してください。 
+
 
 ### Gmailアカウントを有効にする
 
@@ -87,10 +87,12 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 
 ### コンポーネント
 
+
+
 {% tabs %}
   {% tab 必要なもの %}
 
-これらによって AMP HTML を email...AMP 対応にします。これらの要素はすべて、AMPメールの本文に必要です。
+これらの要素はすべて、AMPメールの本文に必要です。
 
 | コンポーネント | 説明 | 例 |
 |---------|--------------|---------|
@@ -235,22 +237,19 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
 送信する前に、AMPメールをこれらの[Gmailガイドライン](https://developers.google.com/gmail/ampemail/testing-dynamic-email)に従ってテストすることをお勧めします。
 
 AMP メールを任意の Gmail アカウントに配信するには、メールが次の条件を満たしている必要があります。
+
 - メールのセキュリティ要件のための AMP を満たしていること。
 - AMP MIMEパートには有効なAMPドキュメントが含まれている必要があります。
 - メールの HTML MIME 部分の前に AMP MIME 部分が含まれていること。
 - AMP MIME パートは 100 KB 未満である必要があります。
 
-これらの条件のいずれもエラーを引き起こしていない場合は、[サポート][support]に連絡してください。
+
 
 ### よくある質問
 
-{% details AMP メールはセグメント化する必要がありますか? %}
-私たちは、すべての異なるタイプのユーザーに送信するためにセグメント化しないことを提唱しています。これは、元のメールに含まれる異なるバージョンを持つマルチパートでAMPメッセージを送信するためです。ユーザーがAMPバージョンを表示できない場合、デフォルトでHTMLに戻ります。
-{% enddetails %}
+#### 
 
-{% details AMP メールを作成するための追加のヒントはありますか? %}
-AMP 要素を作成する際は、担当の開発チームと協力してください。これらの要素を設定したら、デザインリソースと要素を含めてさらに磨きをかけることをお勧めします。
-{% enddetails %}
+私たちは、すべての異なるタイプのユーザーに送信するためにセグメント化しないことを提唱しています。これは、元のメールに含まれる異なるバージョンを持つマルチパートでAMPメッセージを送信するためです。ユーザーがAMPバージョンを表示できない場合、デフォルトでHTMLに戻ります。 
+
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-[support]: {{site.baseurl}}/support_contact/
