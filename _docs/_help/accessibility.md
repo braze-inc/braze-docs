@@ -16,7 +16,7 @@ Marketing content that excludes people with disabilities, even unintentionally, 
 This content is intended to help you get started with building more accessible messages and doesn’t guarantee compliance with accessibility standards like WCAG. Braze offers tools that support creating accessible messaging, but it’s your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
 {% endalert %}
 
-If you have feedback about accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts.
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Areas of disability to consider
 
@@ -455,17 +455,6 @@ You can test your color choices using the [WebAim Contrast Checker Tool](https:/
 {% alert note %}
 Braze editors allow you to select custom color combinations. Keep in mind that certain color choices can negatively affect accessibility. Choose your colors carefully to make sure your content is readabile and compliant with accessibility standards.
 {% endalert %}
-
-### Forms
-
-**Chunk longer forms into smaller sections** <br>To reduce cognitive load, break long forms into smaller sections. This is known as chunking, a progressive disclosure pattern used to make the information easier to consume. This benefits all users but is especially helpful for people with cognitive disabilities.
-
-**Don't hide important content in tooltips or other hover states** <br>Content contained in hover states is less discoverable and mobile-friendly, and screen-magnifier users will struggle to view content that's only available on hover.
-
-**Avoid blocking invalid characters in fields** <br>Don't prevent certain character types from being input in form fields. It's better to allow users to enter whatever they want and then provide an error message as to what's wrong. Blocking keyboard input poses a particular problem for assistive technology users, as they rely heavily on inline validation to determine if they've filled in the form correctly.
-
-**Write clear error messages** <br>A good error message is made up of three parts: what's happened, what went wrong, and how they can fix it. Error messaging should be clear and easy to understand. Try to speak in simple language. There's no need for fancy jargon.
-<br>
 
 ### Custom HTML
 
