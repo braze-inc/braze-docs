@@ -1,0 +1,1 @@
+If you have feedback about accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts.
