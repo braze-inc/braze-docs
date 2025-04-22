@@ -33,7 +33,7 @@ Für Shopify Plus Kunden werden alle angepassten SDK Code Snippets, die `checkou
 
 #### Nicht-Shopify Plus
 
-Für Kunden:in, die nicht Shopify Plus sind, [müssen](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) Sie, wenn Sie die Informations-, Zahlungs- und Versandseiten anpassen möchten, [auf Shopify Plus upgraden](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) und dann den [Anweisungen der Entwickler:in](#developer-guidance) folgen.
+Für Kunden:in, die nicht Shopify Plus sind, müssen Sie, wenn Sie die Informations-, Zahlungs- und Versandseiten anpassen möchten, [auf Shopify Plus upgraden](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) und dann den [Anweisungen der Entwickler:in](#developer-guidance) folgen.
 
 ### Phase zwei: August 28, 2025
 
