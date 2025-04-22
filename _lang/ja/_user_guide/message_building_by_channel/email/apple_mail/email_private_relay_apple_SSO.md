@@ -21,12 +21,12 @@ Apple のプライベートメールリレーにメールを送信するには�
 
 SendGrid をメールプロバイダーとして使用している場合、DNS を変更せずに Apple にメールを送信することができます。 
 
-1. 
-2. 
-3. 
-4. 
+1. [Apple Developer Portalにログインします](https://developer.apple.com/)
+2. **Certificates, Identifiers & Profiles** ページに移動します。
+3. **Services**> **Apple でサインインしてE メール通信を行います**。
+4. **Email Sources** セクションで、ドメインとサブドメインを追加します。
 
-
+希望する "From "アドレスが`abmail` の場合、サブドメインにそのアドレスを含める。例えば、`docs.braze.com` の代わりに`abmail.docs.braze.com` を使う。
 
 ## SparkPostのメールを送信する
 
@@ -34,7 +34,7 @@ SparkPost用のApple Private Relayを設定するには、以下の手順に従�
 
 1. Appleでサインインする。
 2. [Appleのドキュメント](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service)に従って、メールドメインを登録します。
-3. 
+3. Appleは自動的にドメインをチェックし、どのドメインが検証されているかを表示し、ドメインを元に戻すか削除するオプションを提供します。
 
 ### 考慮事項
 
@@ -49,7 +49,7 @@ SparkPost用のApple Private Relayを設定するには、以下の手順に従�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-
+SPF の障害を回避するには、MX レコードとTXT レコードを作成し、CNAME レコードを削除する前にDNS ** に伝播させる必要があります。
 {% endalert %}
 
 {:start="2"}
