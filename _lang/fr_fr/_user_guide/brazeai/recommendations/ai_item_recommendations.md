@@ -364,7 +364,7 @@ Cela se produit dans quelques conditions spécifiques :
 
 ### Les recommandations existantes font-elles l'objet d'une formation hebdomadaire après la mise à niveau vers Item Recommendations Pro ?
 
-Non, les recommandations existantes ne seront pas automatiquement mises à jour pour s'entraîner chaque semaine ou prédire chaque jour après la mise à niveau. Vous pouvez vérifier les prochaines heures d'entraînement et de prédictions dans la section **Recommandation** en sélectionnant une recommandation. Pour les planifications mises à jour, nous vous suggérons de recréer vos recommandations.
+   
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
