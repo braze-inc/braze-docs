@@ -100,7 +100,7 @@ Vous pouvez insérer des variables préformatées avec des valeurs par défaut p
 
 Le message modal insère votre valeur par défaut spécifiée dans Liquid à l’endroit où se trouvait votre curseur. Le point d'insertion est également spécifié par la boîte de prévisualisation, qui contient le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte mis en surbrillance sera remplacé.
 
-![Une image GIF de la fenêtre modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la fenêtre modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.][45]
+
 
 {% endraw %}
 
