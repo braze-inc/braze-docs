@@ -2,7 +2,7 @@
 
 Das Braze Xamarin SDK enthält einen Standard-Card-Feed, um Ihnen den Einstieg in Content-Cards zu erleichtern. Der im Braze SDK enthaltene Standard-Kartenfeed verarbeitet das gesamte Analytics-Tracking, Ausblendungen und die Darstellung der Content-Cards.
 
-{% multi_lang_include Entwickler_guide/prerequisites/xamarin.md %}
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Kartentypen und Eigenschaften
 
