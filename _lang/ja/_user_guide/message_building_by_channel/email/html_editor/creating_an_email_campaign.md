@@ -30,9 +30,9 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 {% tab キャンペーン %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-2. 
+2. [**メール**] を選択するか、複数のチャネルを対象とするキャンペーンの場合は、［**マルチチャネル**] を選択します。
 3. キャンペーンに、明確で意味のある名前を付けます。
-4. 
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
@@ -87,7 +87,7 @@ Brazeは、属性として参照されているHTMLイベントハンドラを�
 ![メール作成画面の [本文] タブにある [AI コピーライターを起動] ボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？
+アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
 
 ### ステップ 3a: 送信情報の追加
 
@@ -163,7 +163,7 @@ Braze には、高度なユースケースで必要に応じてメールヘッ�
 メール・エクストラを追加するには、「**送信情報**」から**「新しいエクストラを追加**」を選択する。
 
 {% alert warning %}
-それ以外の場合、メッセージは中止されます。
+追加されるキーと値のペアの合計は1KBを超えてはならない。それ以外の場合、メッセージは中止されます。
 {% endalert %}
 
 Eメールの余分な値は、CurrentsやSnowflakeには公開されない。追加のメタデータやダイナミックな値を Currents や Snowflake に送信する場合は、代わりに [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/)を使用してください。
@@ -250,7 +250,7 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 
 #### コンバージョンイベントを選択する
 
-コンバージョンイベントとして、次のアクションをいずれでも選択できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。コンバージョンイベントとして、次のアクションをいずれでも選択できます。
 
 - アプリを開く
 - 購入する（これは一般的な購入でも、特定の商品でも構わない）
