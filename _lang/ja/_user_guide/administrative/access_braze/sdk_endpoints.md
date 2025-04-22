@@ -15,7 +15,7 @@ Braze は、ダッシュボード、SDK、REST エンドポイントのさまざ
 
 [dashboard.braze.com](https://dashboard.braze.com) にログインすると、自動的に適切なクラスターアドレスに移動します。
 
-{% multi_lang_include data_centers.mdデータセンター='インスタンス' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 {% alert important %}
 SDK を連携する場合は、SDK エンドポイントを使用してください。REST API を呼び出す場合は、REST エンドポイントを使用してください。
