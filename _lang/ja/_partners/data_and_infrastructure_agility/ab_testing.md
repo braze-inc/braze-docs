@@ -13,6 +13,6 @@ partner_top_header: "A/B Testing"
 valid_partner_list:
 - name: Jacquard
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
-- name: ""
+- name: オプティマイズリー
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/optimizely/
 ---
