@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Digioh](https://www.digioh.com/) は、リストの拡大、ファーストパーティデータの取り込み、Braze キャンペーンでのデータの利用を支援します。
 
-
+_この統合はDigioh によって維持されています。_
 
 ## 統合について
 
