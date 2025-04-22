@@ -15,7 +15,9 @@ tool: Canvas
 
 Este componente Canvas sustituye la necesidad de crear excesivos pasos completos basados en el público, permitiéndole combinar lo que podrían haber sido ocho componentes completos en uno solo. Esto le ayuda a simplificar la orientación de los usuarios al tiempo que despeja sus lienzos de desorden y complejidad innecesarios. 
 
-![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
+
+
+## 
 
 Las rutas de audiencia son similares a los embudos de clasificación con criterios de clasificación. Los usuarios son evaluados para cada criterio en orden de prioridad y enviados por la vía del criterio de mayor rango que cumplan. Esto reduce la ambigüedad de dónde irán los usuarios y qué mensajes recibirán. Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 
@@ -27,14 +29,24 @@ Con las Rutas de audiencia, puedes:
 - Dirigirse con precisión a los usuarios a gran escala.
   - Cree hasta ocho grupos de destinatarios (dos predeterminados y seis adicionales) por componente, pero es posible que desee conectar varios Pasos de rutas de destinatarios para clasificar mejor a sus usuarios. 
 
+### 
+
+  
+
+
+
+  
+
+ 
+
 ## Crear una ruta de audiencia
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+
 
 Para añadir un paso de Rutas de audiencia, haz lo siguiente: 
 
 1. Añade un paso a tu Canvas. 
-2. Arrastre y suelte el componente desde la barra lateral, o haga clic en <i class="fas fa-plus-circle"></i> **Añadir** en la parte inferior de un paso y seleccione **Rutas de audiencia**.
+2. 
 
 El componente por defecto Rutas de público contiene dos grupos de público por defecto, **Grupo 1** y **Todos los demás**. El grupo **Todos los demás** incluye a cualquier usuario que no pertenezca a un grupo de audiencia definido. Este grupo siempre irá último.
 
@@ -44,15 +56,15 @@ La siguiente captura de pantalla muestra el diseño de un paso Ampliado de Rutas
 
 Por ejemplo, si desea enviar a un grupo de usuarios recomendaciones útiles sobre comida, puede seleccionar filtros de atributos personalizados que ya haya creado, como "Le gusta la cocina asiática", "Le gusta la cocina latina" y "Le gusta la cocina europea". 
 
-![][3]{: style="max-width:90%;margin-left:15px;"}
+
 
 Una vez completado el paso Rutas de audiencia, cada grupo de audiencia tendrá una rama independiente. Puedes seguir utilizando las Rutas de audiencia para filtrar aún más tu audiencia, o continuar tu recorrido en Canvas con los pasos en Canvas estándar. 
 
-![][4]{: style="max-width:90%;margin-left:15px;"}
+
 
 ### Probar los grupos de audiencia
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+
 
 Después de añadir segmentos y filtros a su público, puede probar si sus grupos de público están configurados como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar que coincide con los criterios del público. 
 
@@ -62,7 +74,7 @@ El verdadero poder de las Rutas de audiencia reside en la capacidad de asignar p
 
 Al asignar una prioridad alta a estos grupos, puede dirigirse a los usuarios que entran en filtros y segmentos específicos y, al mismo tiempo, dirigirse a los usuarios que podrían no encajar en esos criterios específicos, todo en un único paso de Canvas.
 
-![][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+
 
 Por ejemplo, supongamos que desea enviar a un grupo de usuarios anuncios de nuevos productos. Empezarías por clasificar los filtros que corresponden a esos productos en la parte alta de la ruta de audiencia. Si estuviera creando una campaña de marketing para la empresa "Big Brand" y acabara de lanzarse una nueva marca de zapatos, podría seleccionar filtros como "Le gustan los zapatos de Big Brand" o "Le gusta Big Brand", y enviar diferentes mensajes de correo electrónico en función del grupo filtrado en el que se encuentren. 
 
@@ -93,3 +105,4 @@ Echa un vistazo a nuestras [plantillas Braze Canvas]({{site.baseurl}}/user_guide
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
 [3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
 [4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
+
