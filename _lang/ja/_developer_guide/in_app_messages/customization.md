@@ -16,7 +16,7 @@ platform:
 
 {% sdktabs %}
 {% sdktab android %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/android/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
