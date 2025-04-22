@@ -21,27 +21,12 @@ Si un usuario decide desactivar el reenvío de correo electrónico al correo ele
 
 Si utiliza SendGrid como proveedor de correo electrónico, puede enviar correos electrónicos a Apple sin realizar cambios en los DNS. 
 
-1. Vaya a su página **de certificados de Apple** y permita la dirección de correo electrónico que desea utilizar para el envío a través del servicio de retransmisión de correo electrónico de Apple (la dirección "De" que desee).
-- La dirección debe tener el formato : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(un ejemplo es: `bounces+1234567@braze.online.docs.com`). 
+1. 
+2. 
+3. 
+4. 
 
-![Opción para permitir direcciones de correo electrónico individuales en la página de certificados de Apple.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
-
-{:start="2"}
-2\. Una vez añadida la dirección a la página de certificados de Apple, los correos electrónicos de este dominio se enviarán a través del sistema de retransmisión privada de Apple.
-
-{% alert important %}
-Si su dirección "De" deseada es una dirección `abmail`, inclúyala en su subdominio. Por ejemplo, utilice `abmail.docs.braze.com` en lugar de `docs.braze.com`.
-{% endalert %}
-
-### Valores de la dirección de origen
-
-Consulte en esta tabla los componentes utilizados al añadir direcciones de correo electrónico con Apple Private Relay.
-
-| Valor | Descripción |
-|---|---|
-| UID | Este valor se proporciona en sus registros DNS proporcionados por Braze (de SendGrid). No incluyas la letra "u" de tu UID en la dirección de correo electrónico. Por ejemplo, si tu UID se presenta en SendGrid como `u1234567.wl134.sendgrid.net`, entonces `1234567` es el valor del UID. <br><br> Si no tiene acceso a sus registros DNS, póngase en contacto con su gestor de éxito de clientes de Braze para que le proporcione su UID. |
-| Subdominio y dominio con etiqueta blanca | El dominio y subdominio iniciales que introdujo en SendGrid. También puede utilizar el **valor HOST** en sus registros DNS en SendGrid. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+ 
 
 ## Envío de correos electrónicos para SparkPost
 
@@ -49,11 +34,7 @@ Para configurar Apple Private Relay para SparkPost, siga estos pasos:
 
 1. Inicia sesión con Apple.
 2. Sigue [la documentación de Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) para registrar los dominios de correo electrónico.
-3. Apple comprobará automáticamente los dominios y mostrará cuáles están verificados, además de ofrecer la opción de reverificar o eliminar los dominios.
-
-{% alert important %}
-Asegúrate de completar este proceso en los dos o tres días siguientes a la creación de los archivos de verificación, o de lo contrario caducarán. Apple no revela durante cuánto tiempo son válidos.
-{% endalert %}
+3. 
 
 ### Consideraciones
 
@@ -68,7 +49,7 @@ Si un dominio de envío también se utiliza como dominio de rebote, no podrás a
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-Para evitar fallos SPF, debes crear los registros MX y TXT y hacer que se propaguen en el DNS **antes de** eliminar el registro CNAME.
+
 {% endalert %}
 
 {:start="2"}
