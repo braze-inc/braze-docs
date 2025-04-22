@@ -8,7 +8,7 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Braze のクラウドデータ取り込み"
-guide_top_text: "<h2>内容</h2>Braze に同期すると、このデータをパーソナライゼーションやセグメンテーションなどのユースケースに活用できます。<br><br>:**Braze のクラウドデータ取り込みの機能:**<br> - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな連携を直接構築できます。所要時間はわずか数分です。<br>- 属性、イベント、購入などのユーザーデータを、データウェアハウスから Braze に安全に同期します。<br>- クラウドデータ取り込みを Currents または Snowflake のデータ共有と組み合わせることで、Braze でデータループを閉じます。<br><br>:**クラウドデータ取り込みは、以下からのデータを同期できます。**<br> - アマゾン・レッドシフト<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - スノーフレーク"
+guide_top_text: "<h2>内容</h2>Braze Cloud Data Ingestion (CDI) を使用すると、データストレージソリューションから直接接続をセットアップして、関連するユーザーまたはカタログデータを同期し、ユーザーを削除することができます。Braze に同期すると、このデータをパーソナライゼーションやセグメンテーションなどのユースケースに活用できます。Cloud Data Ingestion の柔軟な統合は、ネストされたJSON やオブジェクトの配列などの複雑なデータ構造をサポートします。<br><br>:**Braze のクラウドデータ取り込みの機能:**<br> - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな連携を直接構築できます。所要時間はわずか数分です。<br>- 属性、イベント、購入などのユーザーデータを、データウェアハウスから Braze に安全に同期します。<br>- クラウドデータ取り込みを Currents または Snowflake のデータ共有と組み合わせることで、Braze でデータループを閉じます。<br><br>:**クラウドデータ取り込みは、以下からのデータを同期できます。**<br> - アマゾン・レッドシフト<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - スノーフレーク"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
