@@ -124,9 +124,9 @@ Braze には、ユーザー ID またはメールアドレスで特定のユー�
 
 [**保存**] を選択します。これで、ユーザーへのメッセージ送信を開始する準備が整った！
 
-## 
+## 測定セグメントサイズ
 
-
+セグメントのメンバーシップとサイズのモニタリングについては、[セグメントサイズの測定]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/)を参照してください。
 
 ## セグメントのアーカイブ
 
@@ -163,11 +163,12 @@ Braze には、ユーザー ID またはメールアドレスで特定のユー�
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-
-
-
-
-
-
-
-
+[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
+[6]: {% image_buster /assets/img_archive/user_lookup.png %}
+[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
+[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
+[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
+[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
+[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
+[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
+[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}
