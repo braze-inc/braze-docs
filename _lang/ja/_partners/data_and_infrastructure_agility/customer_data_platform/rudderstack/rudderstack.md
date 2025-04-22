@@ -54,7 +54,7 @@ RudderStack の[接続モード](https://www.rudderstack.com/docs/destinations/r
 
 このモードでは、Web サイトまたはモバイルアプリで設定した Braze SDK を使用して、イベントを Braze に送信できます。
 
-「[サポートされているメソッド](#supported-methods)」で説明するように、Braze の GitHub リポジトリでご使用のプラットフォームに対応した RudderStack SDK へのマッピングを設定します。
+
 
 - [Android][android]
 - [iOS][ios]
@@ -95,7 +95,7 @@ RudderStackのサーバーサイドSDK（Java、Python、Node.js 、Go、Ruby）
 初期設定完了後、Brazeでデータを正しく受信するために以下の設定を行う：
 
 - **グループ通話でサブスクリプショングループを有効にする**：グループイベントでサブスクリプショングループのステータスを送信するには、この設定を有効にします。詳細については、[Group](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group) を参照してください。
-- **Use Custom Attributes Operation**:Brazeの[ネストされたカスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)機能を使用してセグメントを作成し、カスタム属性オブジェクトを使用してメッセージをパーソナライズする場合は、この設定を有効にする。詳細については、[ネストされたカスタム属性としてユーザー特性を送信するを](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes)参照のこと。
+- **Use Custom Attributes Operation**:Brazeの[ネストされたカスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/)機能を使用してセグメントを作成し、カスタム属性オブジェクトを使用してメッセージをパーソナライズする場合は、この設定を有効にする。詳細については、[ネストされたカスタム属性としてユーザー特性を送信するを](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes)参照のこと。
 - **Track events for anonymous users**:この設定を有効にすると、匿名のユーザーの活動が追跡され、その情報がBrazeに送信される。
 
 ### デバイスモード設定
@@ -128,7 +128,7 @@ RudderStack [Data Regulation API](https://www.rudderstack.com/docs/api/data-regu
 RudderStackの[`track` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#track)、すべてのユーザー・アクティビティと、それらのアクティビティに関連するプロパティをキャプチャする。
 
 **Order completed**<br>
-[RudderStack Ecommerce API][20] を使用して `Order Completed` という名前のイベントに対して track メソッドを呼び出すと、RudderStack はそのイベントにリストされている製品を [`purchases`][21] として Braze に送信します。
+
 
 {% endtab %}
 {% tab スクリーン %}
@@ -253,7 +253,7 @@ rudderanalytics.track("Product Viewed", {
 ```
 
 {% alert note %}
-更新と削除の操作では、`identifier` が必須キーとなる。add、update、remove操作が入れ子配列に存在しない場合、RudderStackはデフォルトでcreate操作を使用してプロパティを作成する。階層化カスタム属性の送信の詳細については、「[オブジェクト配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)」を参照してください。
+更新と削除の操作では、`identifier` が必須キーとなる。add、update、remove操作が入れ子配列に存在しない場合、RudderStackはデフォルトでcreate操作を使用してプロパティを作成する。階層化カスタム属性の送信の詳細については、「[オブジェクト配列]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/)」を参照してください。
 {% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
