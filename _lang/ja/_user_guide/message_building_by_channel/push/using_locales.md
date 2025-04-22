@@ -33,4 +33,4 @@ description: "この記事では、プッシュ通知でロケールを使用す
 
 **Preview message as user** ドロップダウンの**Test** タブで、**Custom user** を選択し、メッセージが期待どおりに翻訳されるかどうかを確認するために、メッセージをプレビューするために異なる言語を入力します。
 
-{% multi_lang_include locales.md section=" よくある質問とクォート; %}
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}
