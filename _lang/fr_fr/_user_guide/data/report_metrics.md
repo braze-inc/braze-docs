@@ -805,6 +805,8 @@ E-mail
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre.
 
+  
+
 {% endapi %}
 
 {% api %}
@@ -994,7 +996,7 @@ Cartes de contenu
 Message in-app, cartes de contenu
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} Pour les messages in-app, les impressions uniques peuvent être à nouveau incrémentées après 24 heures si la rééligibilité est activée et qu'un utilisateur effectue l'action déclenchante. Si la rééligibilité est activée, <i>Impressions uniques</i> = <i>Destinataires uniques</i>. <br><br>Pour les cartes de contenu, le décompte ne doit pas s'incrémenter la deuxième fois qu'un utilisateur consulte une carte. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} Pour les messages in-app, les impressions uniques peuvent être à nouveau incrémentées après 24 heures si la rééligibilité est activée et qu'un utilisateur effectue l'action déclenchante.  <br><br>Pour les cartes de contenu, le décompte ne doit pas s'incrémenter la deuxième fois qu'un utilisateur consulte une carte. 
 
 <span class="calculation-line">Calcul : Total</span>
 
