@@ -3,7 +3,7 @@ nav_title: Visão geral do Braze
 article_title: "Primeiros passos: Visão geral do Braze"
 page_order: 1
 page_type: reference
-description: "Familiarize-se com os principais conceitos que você precisará conhecer ao trabalhar no Braze."
+description: ""
 
 ---
 
