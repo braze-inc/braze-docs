@@ -12,7 +12,7 @@ description: "이 랜딩 페이지는 사용자 데이터 수집에 관한 기�
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: SDK 데이터 수집
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: 고객 프로필 수명주기
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: 익명 사용자
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: 사용자 언어 코드
     link: /docs/user_guide/data/user_data_collection/language_codes/
