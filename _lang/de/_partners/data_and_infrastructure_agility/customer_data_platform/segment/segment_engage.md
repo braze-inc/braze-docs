@@ -23,7 +23,7 @@ Die Integration von Braze und Segment erlaubt es Ihnen, mit [Engage](https://seg
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
 | Segmente Konto | Um die Vorteile dieser Partnerschaft zu nutzen, ist ein [Segment-Konto](https://app.segment.com/login) erforderlich. |
-| Braze Cloud Ziel | Sie müssen [Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) bereits [als Ziel]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in Ihrer Segment Integration [eingerichtet]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) haben.<br><br>Dazu gehört die Angabe des richtigen Braze Datenzentrums und des REST API-Schlüssels in Ihren [Verbindungseinstellungen]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Braze Cloud Ziel | Sie müssen bereits in Ihrer Segment-Integration [Braze als Zie eingerichtet]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) haben.<br><br>Dazu gehört die Angabe des richtigen Braze Datenzentrums und des REST API-Schlüssels in Ihren [Verbindungseinstellungen]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Braze Datenimport-Schlüssel | Um die Zielgruppen von Engage als Kohorten mit Braze zu synchronisieren, müssen Sie einen Datenimport-Schlüssel erstellen.<br><br>Der Kohortenimport befindet sich im Frühstadium. Wenden Sie sich an Ihren Customer-Success-Manager:in, um Zugriff auf dieses Feature zu erhalten. |
 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -73,7 +73,7 @@ Sie können wählen, welche Methode Sie verwenden möchten (oder Sie verwenden b
 
 Sie können berechnete Attribute und Zielgruppen als `identify` -Aufrufe an Braze senden, um angepasste Attribute in Braze zu erstellen. 
 
-Wenn Sie z.B. ein von Engage berechnetes Attribut für "Zuletzt gesehener Artikel" haben, finden Sie `last_product_viewed_item` im Profil des Nutzers:in unter Angepasste Attribute. Wäre dies stattdessen eine Engage-Zielgruppe, würden Sie Ihre Zielgruppe unter **Angepasste Attribute** als `true` aufgeführt finden.
+Wenn Sie z.B. ein von Engage berechnetes Attribut für "Zuletzt gesehener Artikel" haben, finden Sie `last_product_viewed_item` im Profil des Nutzers:in unter **Angepasste Attribute**. Wäre dies stattdessen eine Engage-Zielgruppe, würden Sie Ihre Zielgruppe unter **Angepasste Attribute** als `true` aufgeführt finden.
 
 | Berechnetes Merkmal | Zielgruppen |
 | -------------- | --------- |
@@ -109,7 +109,7 @@ Obwohl die Standardeinstellung für die Verbindung von Braze zu Segment Engage `
 
 Das Dashboard von Segmente bietet ein "Debugger"-Feature, mit dem Kunden testen können, ob die Daten von einer "Quelle" wie erwartet an ein "Ziel" übertragen werden.
 
-Dieses Feature stellt eine Verbindung zum [Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [`/users/track` her, d.h. es kann nur für identifizierte Nutzer:innen verwendet werden (Nutzer:innen, die bereits eine ID für ihr Braze Nutzerprofil haben).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
+Dieses Feature stellt eine Verbindung zum [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) von Braze  her, d.h. es kann nur für identifizierte Nutzer:innen verwendet werden (Nutzer:innen, die bereits eine ID für ihr Braze Nutzerprofil haben).
 
 Dies funktioniert nicht bei einer Side-by-side-Integration von Braze. Es werden keine Daten des Servers übertragen, wenn Sie nicht die richtigen Braze REST API-Informationen eingegeben haben.
 
