@@ -34,7 +34,7 @@ Braze und Survicate arbeiten zusammen, um eine Reihe von Feedback-Anwendungsfäl
 
 Die Integration von Survicate und Braze bietet eine Realtime-Datensynchronisation, so dass die aktuellsten Informationen aus Survicate-Umfragen sofort in Braze verfügbar sind. Auf der Grundlage der Antworten auf Umfragen können Sie diese Daten nutzen, um zeitnahe, personalisierte Maßnahmen zu ergreifen.
 
-- **Senden Sie Umfragen an Braze als angepasste Attribute für Nutzer**:**innen**: Reichern Sie die Nutzerprofile von Braze mit Daten aus Umfragen an.
+- **Senden Sie Umfragen an Braze als angepasste Attribute für Nutzer:innen**: Reichern Sie die Nutzerprofile von Braze mit Daten aus Umfragen an.
 - **Triggern Sie angepasste Events in Braze**: Nutzen Sie Ereignisse, die auf den Antworten auf Umfragen basieren, um bestimmte Gruppen zu targeting oder Folgekampagnen zu initiieren.
 - **Erstellen Sie detaillierte Segmente**: Erstellen Sie Segmente in Braze anhand von Daten aus Survicate-Umfragen, um Ihre Reichweite weiter zu personalisieren.
 
