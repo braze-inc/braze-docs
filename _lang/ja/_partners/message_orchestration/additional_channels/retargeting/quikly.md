@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Quikly][1]、緊急性マーケティングプラットフォームは、心理学を活用して消費者を動機付け、ブランドが主要なマーケティングイニシアチブに対する反応を即座に高めることができます。
 
-
+_この統合はQuiklyによって維持されます。_
 
 ## 統合について
 
@@ -56,7 +56,7 @@ Quiklyのアクティベーションが顧客のメールアドレスやプロ�
     - 新しいプロファイルを作成しません。
     - 必要に応じて、Quiklyはユーザーがアクティベーションに参加したことを示すために、ユーザーのプロファイルにカスタム属性を記録できます。
   - ユーザーが存在しない場合:
-    - 
+    - Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を使用してエイリアスのみのプロファイルをすばやく作成し、ユーザのメールをユーザエイリアスとして将来そのユーザを参照するように設定します(ユーザには外部ID がないため)。
     - 必要に応じて、Quikly はカスタムイベントをログに記録して、このプロファイルが Quikly アクティベーションに参加したことを示すことができます。
 
 {% details /users/track request %}
@@ -94,7 +94,7 @@ Quikly は顧客の電話番号を使用してサブスクリプション検索�
 
 顧客が Quikly で携帯電話番号と同意を提供する際の全体的なワークフローは次のとおりです:
 1. Quiklyは、[サブスクリプショングループステータス]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)を使用してサブスクリプション検索を実行し、指定された`phone`が`subscription_group_id`にサブスクライブされているかどうかを確認します。サブスクリプションが存在する場合、Quikly アクティベーションでユーザーにクレジットを付与します。さらなるアクションは必要ありません。
-2. Quiklyは、[識別子エンドポイントによるユーザープロファイルのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)を使用してユーザー検索を実行し、指定された`email_address`でユーザープロファイルが存在するかどうかを確認します。
+2. Quiklyは、[識別子エンドポイントによるユーザープロファイルのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)を使用してユーザー検索を実行し、指定された`email_address`でユーザープロファイルが存在するかどうかを確認します。ユーザが存在しない場合は、Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を使用してエイリアスのみのプロファイルを作成し、ユーザのメールをユーザエイリアスとして将来そのユーザを参照するように設定します(ユーザには外部ID がないため)。
 3. [ユーザーのサブスクリプショングループステータスの更新エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を使用してサブスクリプションのステータスを更新します。
 
 既存のダブルオプトインSMSサブスクリプションワークフローをサポートするために、Quiklyは上記のワークフローの代わりにカスタムイベントをBrazeに送信できます。この場合、サブスクリプションステータスを直接更新するのではなく、[カスタムイベントによってダブルオプトインプロセスがトリガーされ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/)、サブスクリプションステータスが定期的に監視され、ユーザーが完全にオプトインしたことを確認してから Quikly アクティベーションが実行されます。
