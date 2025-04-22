@@ -46,6 +46,33 @@ Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atua
 
 Na seção **Prévia e teste**, selecione **Usuário multilíngue** para verificar se a mensagem foi traduzida conforme o esperado.
 
+## 
+
+### 
+
+  
+
+
+
+1. 
+2. 
+3. 
+4. 
+
+
+
+### 
+
+  
+
+### 
+
+
+
+#### 
+
+
+
 ## Perguntas frequentes
 
 #### Quero fazer uma alteração no texto traduzido em uma de minhas localizações. Como posso fazer isso?
@@ -71,3 +98,4 @@ Sim. No entanto, confira se o estilo HTML não está traduzido com o conteúdo.
 | O arquivo de tradução inclui blocos de texto que não existem na mensagem atual (como o rascunho atual no momento em que as traduções são feitas upload). | Os blocos de texto que não existirem em sua mensagem atual não serão salvos do arquivo de tradução para o Braze. |
 | Remoção de uma localização da mensagem depois que essa localização já tiver sido carregada para a mensagem como parte do arquivo de tradução.                           | A remoção da localidade removerá todas as traduções associadas à localidade em sua mensagem.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
