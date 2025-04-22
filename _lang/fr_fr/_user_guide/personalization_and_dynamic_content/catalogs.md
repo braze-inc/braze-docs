@@ -52,13 +52,13 @@ Vous pouvez ajouter n’importe quel type de données à un catalogue. Général
 ### Voyages et hôtellerie
 
 - **Destinations :** Importez des destinations de voyage et leurs attractions, restaurants et activités les plus populaires, puis personnalisez des recommandations à vos utilisateurs en fonction de leurs voyages précédents.
-- **Hébergement :** Importez des établissements hôteliers et leurs équipements, types de chambres et tarifs, puis envoyez des promotions à vos utilisateurs en fonction des préférences qu'ils ont sélectionnées.
+-  Importez des établissements hôteliers et leurs équipements, types de chambres et tarifs, puis envoyez des promotions à vos utilisateurs en fonction des préférences qu'ils ont sélectionnées.
 - **Modes de voyage** : Importez des offres et des promotions pour les modes de voyage (vols, trains, voitures de location et autres), puis envoyez-les à vos utilisateurs en fonction de l'historique de leurs recherches récentes.
 - **Préférences en matière de repas :** Importer des informations sur les offres de repas et utiliser les [sélections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) pour envoyer des messages personnalisés aux utilisateurs qui ont des préférences spécifiques en matière de repas, en fonction de la catégorie d'aliments qu'ils ont consultée le plus récemment.
 
 ## Comment les catalogues et Liquid fonctionnent-ils ensemble ?
 
-Les catalogues sont une fonctionnalité de stockage de données. Ils contiennent de vastes ensembles de données qui peuvent être référencés dans vos messages à des fins de personnalisation. Pour faire référence aux données, vous utiliserez [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) comme langage de modélisation. En d'autres termes, les catalogues sont le lieu de stockage des données, et Liquid est le langage qui extrait les données pertinentes du lieu de stockage.
+Les catalogues sont une fonctionnalité de stockage de données. Ils contiennent de vastes ensembles de données qui peuvent être référencés dans vos messages à des fins de personnalisation. Pour faire référence aux données, vous utiliserez [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) comme langage de modélisation. 
 
 Pour des exemples de la façon dont vous pouvez utiliser Liquid pour extraire des informations de catalogue, voir les cas d'utilisation supplémentaires dans [Création d'un catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
 
