@@ -1,6 +1,6 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: mParticle by Rokt
+article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "このリファレンス記事では、Braze と mParticle のパートナーシップについて説明します。mParticle は、マーケティングスタックのソース間で情報を収集してルーティングする顧客データプラットフォームです。"
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# 
+# mParticle by Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,7 +24,7 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
-| ブレイズインスタンス |  |
+| ブレイズインスタンス | あなたのBrazeインスタンスは、[API概要ページ]({{site.baseurl}}/api/basics/#endpoints)（例えば、`US-01` や`US-02` ）で確認できる。 |
 | Brazeアプリ識別子キー | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > 設定の管理 > API キー**内にあります。 |
 | ワークスペース REST APIキー | （サーバー間）Braze REST APIキー<br><br>これは、**Braze ダッシュボード > 開発者コンソール > API 設定 > API キー**内で作成できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -154,7 +154,7 @@ mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、*
 
 ### 組み込みキットの統合
 
-mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。 
+mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。ユーザーデータのトラッキングに使用するmParticleメソッドは、自動的にBraze SDKのメソッドにマッピングされる。 
 
 これらのmParticleのSDKの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/Appboy/integration-appboy)のマッピングはオープンソースであり、[mParticleのGitHubページ](https://github.com/mparticle-integrations)で見つけることができます。 
 
