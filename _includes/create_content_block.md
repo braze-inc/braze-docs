@@ -7,7 +7,7 @@
 5. After creating your Content Block, select **Done**.
 6. Give your Content Block a name. This name will auto-populate as part of the **Content Block Liquid Tag**.
 7. (Optional) Add a description.
-8. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a sharable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> !["Preview" tab for the drag-and-drop Content Block composer.]({% image_buster /assets/img_archive/dnd_content_block_preview_link.png %})<br><br>
+8. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> !["Preview" tab for the drag-and-drop Content Block composer.]({% image_buster /assets/img_archive/dnd_content_block_preview_link.png %})<br><br>
 9. Select **Launch Content Block**.
 
 {% elsif include.location == "html" %}
@@ -17,7 +17,7 @@
 4. After creating your Content Block, select **Done**.
 5. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
 6. (Optional) Add a description.
-7. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a sharable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> !["Preview" tab for the HTML Content Block composer.]({% image_buster /assets/img_archive/content_block_html_preview_link.png %})<br><br>
+7. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> !["Preview" tab for the HTML Content Block composer.]({% image_buster /assets/img_archive/content_block_html_preview_link.png %})<br><br>
 8. Select **Launch Content Block**.
 
 {% endif %}

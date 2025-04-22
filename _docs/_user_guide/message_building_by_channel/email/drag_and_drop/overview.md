@@ -159,7 +159,7 @@ Under the **Preview as a User** tab, you can select the following user types to 
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
-You can also select **Copy preview link** to generate and copy a sharable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
+You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 ![Email preview with a button to "Copy preview link" and copy the generated link.][15]
 
