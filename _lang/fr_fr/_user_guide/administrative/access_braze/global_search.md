@@ -10,7 +10,7 @@ description: "Découvrez la recherche globale dans Braze."
 
 Vous pouvez utiliser la barre de recherche pour trouver votre travail et d'autres informations dans votre tableau de bord Braze. La barre de recherche se trouve en haut de votre tableau de bord de Braze. Cliquez sur la barre de recherche ou appuyez sur <kbd>Ctrl</kbd> + <kbd>K</kbd> sous Windows ou <kbd>⌘</kbd> + <kbd>K</kbd> sur un Mac pour accéder directement à la barre de recherche.
 
-![][3]
+
 
 ## Que pouvez-vous rechercher ?
 
@@ -66,11 +66,13 @@ Chaque résultat de recherche est associé à des balises qui indiquent le type 
 
 Vous pouvez revoir le contenu récemment consulté depuis le menu de recherche. L'interface de recherche affiche vos résultats récemment ouverts sous la barre de recherche, y compris les éléments avec lesquels vous avez interagi sur l'ensemble de la plateforme Braze. Cela vous permet de revenir aux pages, campagnes, Canvases, segments ou modèles d'e-mails précédemment consultés afin que vous puissiez reprendre exactement là où vous vous étiez arrêté avec moins de clics.
 
-![][1]
+
 
 ### Trouver des pages qui ont été renommées
 
-La recherche comprend les synonymes pour les pages qui ont été renommées dans notre [navigation mise à jour]({{site.baseurl}}/navigation). Par exemple, elle trouvera « Exportation de données » lorsque vous recherchez « Currents », étant donné que cette page a été renommée.
+ Par exemple, elle trouvera « Exportation de données » lorsque vous recherchez « Currents », étant donné que cette page a été renommée.
+
+
 
 <!---
 
@@ -78,7 +80,7 @@ La recherche comprend les synonymes pour les pages qui ont été renommées dans
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
-![][2]
+![][X]
 
 --->
 
@@ -93,7 +95,8 @@ Vous pouvez inclure du contenu actif et en brouillon dans vos résultats de rech
 Utilisez-vous des emojis lorsque vous nommez votre travail dans Braze ? Recherchez-les ! Vous pouvez utiliser des emojis comme requêtes de recherche. 😎
 
 
-[1]: {% image_buster /assets/img/global_search/global_search.png %}
-[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
-[3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}
+
+
+
+
+
