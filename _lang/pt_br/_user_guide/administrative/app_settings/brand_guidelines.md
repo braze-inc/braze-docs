@@ -3,7 +3,7 @@ nav_title: Diretrizes da marca
 article_title: Diretrizes da marca
 page_order: 1
 page_type: reference
-description: "Este artigo de referência descreve como criar, gerenciar e usar as diretrizes da marca que podem ser aplicadas às suas mensagens por meio do Assistente de Copywriting IA."
+description: "Este artigo de referência descreve como criar, gerenciar e usar buidelines de marca que podem ser aplicados às suas mensagens por meio do Assistente de Copywriting IA."
 ---
 
 # Diretrizes da marca
