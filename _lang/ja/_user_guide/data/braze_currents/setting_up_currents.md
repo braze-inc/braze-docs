@@ -102,4 +102,4 @@ Currents のテストコネクターをアップグレードするには、ダ�
 
 Braze は、リストされた IP から Currents データを送信します。
 
-{% multi_lang_include data_centers.mdデータセンター='ips' %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
