@@ -46,6 +46,33 @@ Cualquier cambio en las ID o localizaciones del archivo CSV no se actualizará a
 
 En la sección **Vista previa y prueba**, selecciona **Usuario multilingüe** para comprobar si tu mensaje se traduce como esperabas.
 
+## 
+
+### 
+
+  
+
+
+
+1. 
+2. 
+3. 
+4. 
+
+
+
+### 
+
+  
+
+### 
+
+
+
+#### 
+
+
+
 ## Preguntas más frecuentes
 
 #### Quiero hacer un cambio en la copia traducida en una de mis configuraciones regionales. ¿Cómo puedo hacerlo?
@@ -71,3 +98,4 @@ Sí. Sin embargo, asegúrate de que el estilo HTML no se traduce con el contenid
 | El archivo de traducción incluye bloques de texto que no existen en el mensaje actual (como el borrador actual en el momento de cargar las traducciones). | Los bloques de texto que no existan en el mensaje actual no se guardarán del archivo de traducción a Braze. |
 | Eliminar una configuración regional del mensaje después de que esa configuración ya se haya cargado en el mensaje como parte del archivo de traducción.                           | Al eliminar la configuración regional, se eliminarán todas las traducciones asociadas a dicha configuración en tu mensaje.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
