@@ -48,7 +48,7 @@ tool: Canvas
 
 ### 例外イベントはいつトリガーされますか?
 
-[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)がトリガーされるのは、ユーザーがそれに関連するキャンバスコンポーネントの受信を待つ間だけです。ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。特定のイベントを事前に実行したユーザーを除外したい場合は、代わりに[フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を使用してください。
+ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。
 
 ### キャンバスの編集は、すでにキャンバスに入っているユーザーにどのような影響を与えますか?
 
