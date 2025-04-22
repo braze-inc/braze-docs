@@ -12,7 +12,7 @@ description: "En este artículo de referencia se explica cómo gestionar los usu
 > Aprenda a gestionar usuarios en su cuenta de empresa, incluyendo añadir, suspender y eliminar usuarios.
 
 {% alert note %}
-Varias secciones de esta página remiten a la página **Usuarios de la empresa**. Si utiliza la [navegación más antigua]({{site.baseurl}}/navigation), **Usuarios de la empresa** se llama **Gestionar usuarios** y se encuentra debajo del icono de su cuenta.
+Varias secciones de esta página remiten a la página **Usuarios de la empresa**. 
 {% endalert %}
 
 ## Añadir usuarios Braze
@@ -84,6 +84,19 @@ Braze conservará los siguientes datos de la cuenta:
 
 - Atributos personalizados o datos de prueba asociados a su cuenta
 - Campañas o Lienzos creados por ellos (pero el nombre del usuario no aparecerá en ellos, como por ejemplo en la columna **Último editado por** )
+
+## 
+
+### 
+
+
+
+
+
+1. 
+2.  
+
+ 
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
