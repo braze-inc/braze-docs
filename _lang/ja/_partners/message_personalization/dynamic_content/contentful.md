@@ -23,10 +23,6 @@ search_tag: Partner
 | Braze アカウント | コネクテッドコンテンツ機能にアクセスできる Braze アカウントが必要です。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation/)を使用している場合は、[**開発者コンソール**] > [**API 設定**] で API キーを作成できます。
-{% endalert %}
-
 ## 統合
 
 ### ステップ1: Contentful API 認証情報を取得する
