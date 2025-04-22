@@ -23,8 +23,8 @@ Warning! Don't make any changes to this document without approval from the legal
 Braze ermöglicht es seinen Kund:innen, komplette Nutzerprofile und Attribut-Daten selbst aus ihrem Workspace zu löschen.
 
 Das heißt, Sie können: 
-- Löschen von Nutzerprofilen mit dem [Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) der Braze [Delete user API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
-- Löschen (null) oder Ändern von Attributen in Nutzerprofilen über den [Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) der Braze [Track Nutzer:innen API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
+- Löschen von Nutzerprofilen mit dem Braze [Endpunkt Delete user API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+- Löschen (null) oder Ändern von Attributen in Nutzerprofilen über den Braze [Endpunkt Track user API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Verhaltensbezogene Events können nicht aus einem Nutzerprofil gelöscht werden (angepasste Events, Sitzungen, Kampagnen, Käufe). Um diese Ereignisse zu entfernen, müssen Sie das gesamte Profil der Nutzer:in löschen.
 
