@@ -15,7 +15,7 @@ description: "Essa landing page contém dicas e testes de campanha. Aqui, você 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
   - name: Envio de mensagens de teste
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Campanhas baseadas em ação e disparadas por API
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
