@@ -13,10 +13,6 @@ channel:
 
 No dashboard do Braze, acesse **Público** > **Inscrições** > **Central de Preferências de E-mail**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Usuários** > **Grupos de inscrições **> **Central de Preferências de E-mail**.
-{% endalert %}
-
 É aqui que você pode gerenciar e visualizar cada grupo de inscrições. Cada grupo de inscrições que você cria é adicionado a essa lista da Central de Preferências. Você pode criar várias Centrais de Preferências.
 
 {% alert important %}
@@ -38,10 +34,6 @@ O uso do Liquid ativa a recuperação dos nomes dos seus grupos de inscrições 
 | Usuário válido | Um usuário com um endereço de e-mail e uma ID externa. |
 | Chave de API gerada com permissões do centro de preferências | No dashboard do Braze, acesse **Settings** > **API Keys** para confirmar que você tem acesso a uma chave de API com permissões da Central de Preferências. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá criar uma chave de API no **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 
 ### Etapa 1: Use o ponto de extremidade Criar centro de preferências
 
@@ -125,3 +117,26 @@ Essa abordagem não requer pares de valores de string de consulta incorporados n
 Isso é usado para renderizar a Central de Preferências quando o Liquid {%raw%}`${preference_center_url}`{%endraw%} legado é usado, o que significa que as etapas do canva ou os modelos que fazem referência a {%raw%}`${preference_center_url}` ou `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} não funcionarão. Isso também se aplica a mensagens enviadas anteriormente que incluíam o Liquid legado ou "PreferenceCenterBrazeDefault" como parte da mensagem. 
 
 Se você fizer referência a {%raw%}`${preference_center_url}`{%endraw%} em uma nova mensagem novamente, uma Central de Preferências chamada "PreferenceCenterBrazeDefault" será criada novamente.
+
+### 
+
+  
+
+
+
+
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+
+
+### 
+
+
