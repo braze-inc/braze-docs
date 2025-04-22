@@ -301,7 +301,7 @@ Web SDK 統合に以下が含まれていることを確認します。
 
 #### ユーザー照合のためにShopifyフォームを設定する
 
-
+eコマースブランドは、Shopifyのサイトで、電子メールキャプチャフォームのように、チェックアウトの前に顧客から識別可能な情報を取得する経験を持っている可能性が高い。
 
 Web SDK は、Shopify のサイト上での行動と匿名ユーザーを`device_id` で追跡する。メールアドレスが匿名ユーザープロフィールに追加されていることを確認するには、ニュースレターまたはメール収集フォームのいずれかに以下を追加する： 
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) 
