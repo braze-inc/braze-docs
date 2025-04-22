@@ -296,7 +296,7 @@ Liquid とコネクテッドブロックの依存関係が少ない SheetDB を�
 | de | Hallo | 4 | Hallo2 | 8 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 
-#### ステップ2:コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
+#### ステップ2: コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
 
 次に、コネクテッドコンテンツの呼び出しに Liquid タグ {% raw %}`{{${language}}}`{% endraw %} を実装します。ここで SheetDB はスプレッドシートの作成時に `sheet_id` を自動生成することに注意してください。
 
