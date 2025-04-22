@@ -4,9 +4,9 @@
 	<div class="container">
 		<div class="row flex-xl-nowrap">
 			<div class="col-12">
-				{%- include.urlsearch -%} 以外
+				{%- unless include.urlsearch -%}
 				<h1 style="padding-top: 40px; color: #212123">詳細検索</h1>
-				{%- -% でない場合は終了}
+				{%- endunless -%}
 				<div
 					id="search_box"
 					value=""
@@ -435,7 +435,7 @@
 		text-align: center;
 	"
 >
-	{% include feedback.html title="探しているものが見つかりましたか?"%}
+	{% include feedback.html title="Did you find what you're looking for?"%}
 </div>
 <style type="text/css">
 	#footer_div {
