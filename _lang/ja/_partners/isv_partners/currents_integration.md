@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# パートナーのカスタム Currents コネクター
+# 
 
-## シリアライズとデータ形式
+> 
 
-対象となるデータ形式はJSON over HTTPSです。イベントはデフォルトで100イベントのバッチにグループ化され、すべてのイベントを含むJSON配列としてエンドポイントに送信される。バッチは以下のフォーマットで送られる：
+## 前提条件
 
-`{"events": [event1, event2, event3, etc...]}`
 
-events "をキーとするトップレベルのJSONオブジェクトが存在し、それぞれが1つのイベントを表す、さらなるJSONオブジェクトの配列にマップされる。
 
-以下の例は、_個々の_イベントに対するものである（JSONオブジェクトの大きな配列の一部となるようなもので、各JSONオブジェクトはバッチ内の1つのイベントを表す）。
+
+
+## 
+
+### 
+
+
+
+
+
+### 
+
+
+
+
+
+
+
+
+
+## 
+
+対象となるデータ形式はJSON over HTTPSです。
+
+- 
+- 
+
+
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+
+
+## 
+
+
+
+
+
+|名前|説明|
+|----|-----------|
+|||
+|||
+
+
+
 
 ### キャンペーン関連イベント
 
 以下は、キャンペーンに関連付けられた場合に表示される、様々なイベントのイベントペイロードの例である：
 
-```
+#### アプリ内メッセージのクリック
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### メール開封
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### SMS 配信
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 
 以下は、キャンバスに関連付けられた場合に表示される、様々なイベントのイベントペイロードの例である：
 
-```
+#### アプリ内メッセージのクリック
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### メール開封
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### SMS 配信
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 
 以下は、キャンペーンにもキャンバスにも関連しない、その他の様々なイベ ントのイベントペイロードの例である：
 
-```
+#### カスタムイベント
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### 購入イベント
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 }
 ```
 
-```
+#### セッション開始
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,50 +380,105 @@ events "をキーとするトップレベルのJSONオブジェクトが存在�
 
 ## 認証
 
-必要に応じて、[RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1) で指定されているように、`Bearer` 認可スキームを介して HTTP `Authorization` ヘッダーにトークンを渡すことで認証が実行されます。将来、Braze は、`Authorization` ヘッダーを使用して、[RFC 7235](https://tools.ietf.org/html/rfc7235) に準拠したカスタムの (Braze 独自の) キーと値のペアの認証スキームを実装することを選択できます (これは、たとえば、AWS のカスタム認証スキームがどのように機能するかです)。
 
-RFC 6750 に従い、トークンは1文字以上からなる Base64 エンコード値である必要があります。RFC 6750の特筆すべき点は、通常のBase64文字に加えて、トークンに「-」、「。」、「_」、および「~」を使用できることです。パートナーとお客様は、これらの文字をトークンに含めるかどうかを自由に決定できます。顧客はこのトークンをBase64形式で提供する必要があることに注意。Brazeではこのエンコーディングは行わない。
 
-RFC 6750 に従い、ヘッダーが存在する場合、そのヘッダーは以下の形式で構成されます。
 
-`"Authorization: Bearer " + <token>`
 
-たとえば API トークンが `0p3n5354m3==` の場合、Authorization ヘッダーは次のようになります。
 
-`Authorization: Bearer 0p3n5354m3==`
+
+```plaintext
+"Authorization: Bearer " + <token>
+```
+
+
+
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+
+
+
 
 ## バージョニング
 
-当社の統合可能なHTTPコネクターからのすべてのリクエストは、Currentsリクエストのバージョンを指定するカスタムヘッダとともに送信される：
 
-`Braze-Currents-Version: 1`
 
-リクエストのペイロードやセマンティクスに重大な後方互換性のない変更を加えない限り、バージョンは常に`1`になります。この数値を頻繁に増加することは想定されていません。
+```plaintext
+Braze-Currents-Version: 1
+```
 
-個々のイベントは、Currents データエクスポート用の既存のS3 Avroスキーマと同じ進化ルールに従います。つまり、すべてのイベントのフィールドは、以下のルールを含む、 Avro の後方互換性の定義に従って、以前のバージョンのイベント ペイロードとの後方互換性が保証される：
 
-- 特定のイベントフィールドは、常に同じデータ型を持つことが保証される。
-- 時間の経過とともにペイロードに追加される新しいフィールドは、すべての関係者がオプションと見なす必要があります。
-- 必須項目が削除されることはない。
+
+
+
+1. 特定のイベントフィールドは、常に同じデータ型を持つことが保証される。
+2. 時間の経過とともにペイロードに追加される新しいフィールドは、すべての関係者がオプションと見なす必要があります。
+3. 必須項目が削除されることはない。
 
 ## エラー処理と再試行のメカニズム
 
-エラーの場合、Brazeは受け取ったHTTPリターンコードに基づいてリクエストをキューに入れ、再試行する。以下にリストされていないHTTPエラーコードは、HTTP 5XXエラーとして扱われる。
 
-{% alert important %}
-再試行メカニズムが24時間以上イベントをエンドポイントに配信できない場合、データが失われます。
+
+
+
+
+
+
+
 {% endalert %}
 
 以下の HTTP ステータスコードがコネクタークライアントによって認識されます。
-- **2XX**\- 成功
-  - イベントデータは再送されない。<br><br>
-- **5XX**\- サーバーサイドエラー
-  - イベントデータは、ジッターを伴う指数バックオフパターンで再送される。24時間以内にデータが正常に送信されなかった場合、データは破棄されます。<br><br>
-- **400**\- クライアント側のエラー
-  - コネクターから1つ以上の不正な形式のイベントが送信されました。この場合、イベントデータはサイズ1のバッチに分割され、再送信される。追加の HTTP 400応答を受け取るサイズ1のバッチ内のイベントはすべて、完全に破棄されます。パートナーや顧客は、このような現象が発生したことを発見した場合、私たちに知らせるよう奨励されている。<br><br>
-- **401**（許可されていない）、**403**（禁止）、**404**
-  - コネクタが無効な認証情報で構成された。イベントデータは、2分から5分の遅延後に再送信されます。この問題が48時間以内に顧客によって解決されない場合、イベントデータは破棄されます。<br><br>
-- **413** — Payload Too Large
-  - イベントデータは小さなバッチに分割され、再送信される。<br><br>
-- **429** — Too Many Requests
-  - レート制限を示す。イベントデータは、ジッターを伴う指数バックオフパターンで再送される。24時間以内にデータが正常に送信されなかった場合、データは破棄されます。
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>応答</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>成功</td>
+      <td>イベントデータは再送されない。</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td></td>
+      <td>イベントデータは、ジッターを伴う指数バックオフパターンで再送される。24時間以内にデータが正常に送信されなかった場合、データは破棄されます。</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td></td>
+      <td> <code>400</code> </td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td></td>
+      <td>コネクタが無効な認証情報で構成された。</td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td></td>
+      <td>コネクタが無効な認証情報で構成された。</td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td></td>
+      <td>コネクタが無効な認証情報で構成された。</td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td></td>
+      <td>イベントデータは小さなバッチに分割され、再送信される。</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td></td>
+      <td>レート制限を示す。イベントデータは、ジッターを伴う指数バックオフパターンで再送される。</td>
+    </tr>
+  </tbody>
+</table>
+
