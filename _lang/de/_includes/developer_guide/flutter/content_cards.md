@@ -2,7 +2,7 @@
 
 Das Braze SDK enthält einen Standard-Kartenfeed, der Ihnen den Einstieg in die Arbeit mit Content-Cards erleichtert. Sie können den Kartenfeed mit der Methode `braze.launchContentCards()` anzeigen. Der im Braze SDK enthaltene Standard-Kartenfeed verarbeitet das gesamte Analytics-Tracking, Ausblendungen und die Darstellung der Content-Cards.
 
-{% multi_lang_include Entwickler_guide/prerequisites/flutter.md %}
+{% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
 ## Karten-Methoden
 
