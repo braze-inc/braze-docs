@@ -38,7 +38,7 @@ Weitere Informationen zu Schemas finden Sie in der Dokumentation von Adobe zur [
 ### Schritt 2: Verbinden Sie Braze mit der Adobe Experience Platform
 
 1. Gehen Sie in Adobe Experience Platform zu **Quellen** > **Katalog** > **Marketing-Automatisierung**.
-2. Wählen Sie **Daten** für Braze-Currents **hinzufügen**.
+2. Wählen Sie **Daten hinzufügen** für Braze-Currents.
 3. Laden Sie die [Braze-Currents Beispieldatei](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json) hoch.<br><br>![Adobe "Seite mit Daten hinzufügen".][2]<br><br>
 4. Nachdem Sie Ihre Datei hochgeladen haben, geben Sie Ihre Datenflussdetails an, einschließlich Informationen über Ihren Datensatz und das Schema, auf das Sie abbilden wollen. 
     - Wenn Sie zum ersten Mal eine Braze-Currents-Quelle anschließen, erstellen Sie einen neuen Datensatz und stellen Sie sicher, dass Sie das in [Schritt 1](#step-1-create-an-xdm-schema-in-adobe) erstellte Schema verwenden. 
