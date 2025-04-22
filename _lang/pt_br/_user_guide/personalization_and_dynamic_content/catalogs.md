@@ -52,13 +52,13 @@ Você pode trazer qualquer tipo de dados para um catálogo. Normalmente, os dado
 ### Viagens e hospitalidade
 
 - **Destinos:** Importe destinos de viagem e suas atrações, restaurantes e atividades mais populares e, em seguida, personalize as recomendações para seus usuários com base em suas viagens anteriores.
-- **Acomodações:** Importe propriedades de hotéis e suas comodidades, tipos de quartos e preços e, em seguida, envie promoções para seus usuários com base nas preferências selecionadas.
+-  Importe propriedades de hotéis e suas comodidades, tipos de quartos e preços e, em seguida, envie promoções para seus usuários com base nas preferências selecionadas.
 - **Métodos de viagem**: Importe ofertas e promoções para modos de viagem (como voos, trens, aluguel de carros e outros) e, em seguida, envie-as aos seus usuários com base no histórico de pesquisa recente deles.
 - **Preferências de refeições:** Importação de informações sobre ofertas de refeições e uso de [seleções]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para enviar mensagens personalizadas aos usuários que têm preferências específicas de refeições com base na categoria de alimentos visualizada mais recentemente.
 
 ## Como os catálogos e o Liquid funcionam juntos
 
-Os catálogos são um recurso de armazenamento de dados. Eles contêm grandes conjuntos de dados que podem ser referenciados em suas mensagens para personalização. Para realmente fazer referência aos dados, você usará [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) como linguagem de modelo. Em outras palavras, os catálogos são o armazenamento onde os dados são mantidos, e Liquid é a linguagem que extrai os dados relevantes do armazenamento.
+Os catálogos são um recurso de armazenamento de dados. Eles contêm grandes conjuntos de dados que podem ser referenciados em suas mensagens para personalização. Para realmente fazer referência aos dados, você usará [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) como linguagem de modelo. 
 
 Para obter exemplos de como você pode usar o Liquid para extrair informações do catálogo, consulte os casos de uso adicionais em [Criação de um catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
 
