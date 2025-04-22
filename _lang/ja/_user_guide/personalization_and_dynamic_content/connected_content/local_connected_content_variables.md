@@ -100,7 +100,7 @@ APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endr
 
 指定された`:body`の後に`key1=value1&key2=value2&...`形式のクエリ文字列またはキャプチャされた値への参照を指定することで、オプションでPOSTボディを提供できます。Content-Typeのデフォルトは`application/x-www-form-urlencoded`です。`:content_type application/json`を指定し、`key1=value1&key2=value2`のようなフォームURLエンコードされた本文を提供すると、Brazeは送信前に自動的に本文をJSONエンコードします。
 
-
+また、接続されたコンテンツは、デフォルトではPOST 呼び出しをキャッシュしません。この動作を更新するには、`:cache_max_age` をConnected Content POST コールに追加します。
 
 #### デフォルトのコンテンツタイプ
 
