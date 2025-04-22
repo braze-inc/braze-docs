@@ -1,8 +1,8 @@
 ---
-nav_title: トランザクションメールの追跡
-article_title: トランザクションメールの追跡
+nav_title: トラッキング、取引メールの追跡
+article_title: トラッキング、取引メールの追跡
 page_order: 1
-description: "このリファレンス記事では、トランザクションメールキャンペーンのリアルタイムトラッキングの設定方法について説明します。"
+description: "この参考記事では、トランザクションメールキャンペーンのリアルタイムトラッキングの設定方法について説明する。"
 page_type: reference
 tool:
   - Campaigns
