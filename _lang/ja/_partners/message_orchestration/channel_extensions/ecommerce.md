@@ -1,10 +1,10 @@
 ---
 nav_title: e コマース
-article_title: ""
+article_title: eコマース・パートナー
 page_order: 9
 
 page_type: landing
-description: ""
+description: "このランディングページには、Eコマースプラットフォームとの連携を許可しているBrazeパートナー（Alloys）がリストアップされている。"
 
 layout: partner_page
 search_tag: Partner
@@ -20,6 +20,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: タップカート
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
