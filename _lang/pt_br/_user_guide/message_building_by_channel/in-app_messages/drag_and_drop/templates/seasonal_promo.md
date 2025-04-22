@@ -26,7 +26,7 @@ Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Promoção s
 
 ### Etapa 3: Personalize seu componente de botão
 
-Para começar a criar sua promoção sazonal, selecione o componente de botão no editor. Em seguida, use o menu lateral para selecionar para onde os usuários serão levados quando selecionarem o botão. O padrão do modelo é fechar a mensagem, mas você pode optar por navegar para uma página específica em seu app (como o produto que está promovendo).
+Para começar a criar sua promoção sazonal, selecione o componente de botão no editor. Em seguida, use o menu lateral para selecionar para onde os usuários serão levados quando selecionarem o botão. 
 
 ![O editor de mensagens no app com um menu lateral para personalizar o elemento do botão.][img2]
 
