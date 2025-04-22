@@ -58,7 +58,7 @@ Die folgenden angepassten Attribute von Redpoint können zu einem Nutzerprofil v
 
 Erstellen Sie in Redpoint Interaction (RPI) eine neue Exportvorlage und nennen Sie sie **Braze Onboarding and Upsert**. Diese Vorlage definiert die wichtigsten Abbildungen zwischen dem Redpoint CDP und dem Braze Benutzerprofil, zusammen mit allen zusätzlichen angepassten Attributen, die Sie Ihren Nutzerprofilen in Braze hinzufügen möchten.
 
-Ziehen Sie Redpoint CDP-Attribute in die Spalte **Attribute**. Setzen Sie den **Wert** jeder **Kopfzeile** auf das entsprechende Braze [Nutzer:in-Attribut][17]. 
+Ziehen Sie Redpoint CDP-Attribute in die Spalte **Attribute**. Setzen Sie den **Wert jeder Kopfzeile** auf das entsprechende Braze [Nutzer:in-Attribut][17]. 
 
 In der folgenden Tabelle sind die CDP-Attribute von Redpoint und die entsprechenden Attribute von Braze aufgeführt:
 
