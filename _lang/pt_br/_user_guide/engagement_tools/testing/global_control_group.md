@@ -25,11 +25,15 @@ Seu Grupo de controle global é aplicado a todos os canais, campanhas e Canvas, 
 
 ### Atribuir usuários aleatoriamente ao Grupo de Controle Global
 
-O Braze seleciona aleatoriamente vários intervalos de [números de buckets aleatórios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e inclui usuários desses buckets selecionados. Se estiver usando o Random Bucket Numbers para qualquer outra finalidade, consulte [Coisas a serem observadas](#things-to-watch-for). 
+O Braze seleciona aleatoriamente vários intervalos de [números de buckets aleatórios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e inclui usuários desses buckets selecionados.  
 
-### Rastreamento de dados para relatórios
+   
 
-O Braze mede os comportamentos dos usuários do seu grupo de controle e dos usuários da sua amostra do grupo de tratamento. A amostra do grupo de tratamento é uma seleção aleatória de usuários que não fazem parte do grupo de controle, gerada usando o mesmo método Random Bucket Number.
+### 
+
+  
+
+   
 
 ### Excluir usuários de feature flags
 
@@ -41,15 +45,11 @@ Não é possível ativar [sinalizadores de recursos]({{site.baseurl}}/user_guide
 
 No dashboard, acesse **Público** > **Grupo de controle global**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Configurações de mensagens globais** > **Configurações de grupos de controle globais**.
-{% endalert %}
-
 ### Etapa 2: Atribuir uma porcentagem de todos os usuários a esse grupo de controle
 
-Insira uma porcentagem para o grupo de controle e clique em **Save (Salvar)**. Quando inserido, o Braze mostra uma estimativa de quantos usuários se enquadrarão no seu Controle Global, tratamento e amostra de tratamento. Lembre-se de que quanto mais usuários houver em seu espaço de trabalho, mais precisa será essa estimativa. 
+ Quando inserido, o Braze mostra uma estimativa de quantos usuários se enquadrarão no seu Controle Global, tratamento e amostra de tratamento. Lembre-se de que quanto mais usuários houver em seu espaço de trabalho, mais precisa será essa estimativa. 
 
-O número de usuários no seu Grupo de Controle Global é atualizado automaticamente após a configuração inicial para permanecer proporcional a essa porcentagem de público quando mais usuários são adicionados ao seu espaço de trabalho. Por exemplo, se o número de usuários no espaço de trabalho aumentar, o número de usuários no Grupo de Controle Global também aumentará, de modo que o Grupo de Controle permaneça com uma porcentagem constante do público do espaço de trabalho. Para obter diretrizes de porcentagem, consulte a [seção de práticas recomendadas](#percentage-guidelines) a seguir.
+O número de usuários no seu Grupo de Controle Global é atualizado automaticamente após a configuração inicial para permanecer proporcional a essa porcentagem de público quando mais usuários são adicionados ao seu espaço de trabalho.   Para obter diretrizes de porcentagem, consulte a [seção de práticas recomendadas](#percentage-guidelines) a seguir.
 
 ![As Configurações do Grupo de Controle Global com as Configurações de Público definidas como "Atribuir cinco por cento de todos os usuários ao Grupo de Controle Global".][4]
 
@@ -67,7 +67,9 @@ Você pode querer adicionar configurações de exclusão se tiver mensagens tran
 
 Nesse ponto, o Braze gera um grupo de usuários selecionados aleatoriamente para compor a porcentagem selecionada da sua base total de usuários. Quando salvas, todas as campanhas e Canvas ativas e futuras não serão mais enviadas aos usuários desse grupo, exceto para campanhas ou Canvas que contenham qualquer uma das tags em suas configurações de exclusão.
 
-## Desativar o grupo de controle global
+## 
+
+  
 
 É possível desativar o grupo de controle global a qualquer momento na guia **Configurações do grupo de controle global**, mas lembre-se de que isso fará com que os usuários desse grupo se tornem imediatamente elegíveis para campanhas e telas.
 
