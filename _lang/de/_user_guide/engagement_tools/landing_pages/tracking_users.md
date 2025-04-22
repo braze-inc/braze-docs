@@ -39,7 +39,7 @@ Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie dann eine Kampagne au
 
 ![Der Button 'Personalisierung hinzufügen' im Drag-and-Drop-Editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
-Braze generiert automatisch einen Liquid-Tag mit der [URL](#page-url) Ihrer [Landing Page](#page-url). Beziehen Sie sich auf die folgende Tabelle, um Ihren Tag zu erstellen:
+Braze generiert automatisch einen Liquid-Tag mit der [URL Ihrer Landing Page](#page-url). Beziehen Sie sich auf die folgende Tabelle, um Ihren Tag zu erstellen:
 
 \|**Art der** Personalisierung| Wählen Sie **Landing Page**.|
 \|**Wählen Sie** die Landing Page, [die Sie zuvor erstellt haben](#prerequisites).

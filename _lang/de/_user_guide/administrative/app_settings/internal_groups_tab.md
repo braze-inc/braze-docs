@@ -41,7 +41,7 @@ Um eine interne Gruppe zu erstellen, gehen Sie wie folgt vor:
 
 Nachdem Sie Ihre interne Gruppe erstellt haben, können Sie Testnutzer:innen als Mitglieder dieser Gruppe hinzufügen. 
 
-1. Wählen Sie auf der Verwaltungsseite Ihrer internen Gruppe **Testnutzer**: **in hinzufügen**.
+1. Wählen Sie auf der Verwaltungsseite Ihrer internen Gruppe **Testnutzer:in hinzufügen**.
 2. Wählen Sie eine der folgenden Methoden zum Suchen und Auswählen Ihrer Testnutzer:innen.
 
 | Methode                  | Beschreibung                                                                                                                                                                                                                                          |
@@ -77,7 +77,7 @@ Seed-Gruppen sind für API-Kampagnen nicht verfügbar, aber Sie können Seed-Gru
 
 Nachdem Sie eine interne Gruppe erstellt und mit Tags versehen haben, um sie als Seed-Gruppe zu verwenden, können Sie sie im Schritt **Zielgruppen** des Kampagnen-Editors oder im Schritt **Sendeeinstellungen** in einem Canvas auswählen. 
 
-Bei gesendeten E-Mails wird `[SEED]` an den Anfang der Betreffzeile der E-Mail angehängt. Beachten Sie, dass **dies** bei E-Mails **nicht der Fall ist**:
+Bei gesendeten E-Mails wird `[SEED]` an den Anfang der Betreffzeile der E-Mail angehängt. Beachten Sie, dass dies bei E-Mails **nicht der Fall ist**:
 
 - Increment sendet in Dashboard Analytics.
 - Auswirkungen auf E-Mail Analytics oder Retargeting. 

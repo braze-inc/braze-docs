@@ -89,7 +89,7 @@ Standardmäßig sendet Extole Reward-Ereignisse im Status `FULFILLED` an Braze, 
 
 ### Nutzer:innen in Braze finden und erstellen
 
-Für bestimmte Anwendungsfälle, wie z.B. ein neues E-Mail- oder SMS-Abonnement, für das Extole keine externe ID (Benutzer-ID) hat, kann Extole über den [Endpunkt]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) Braze [Export Benutzerprofil nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) nach dem Profil des Nutzers suchen. Extole fügt alle Attribute des Profils hinzu und aktualisiert sie, wenn der Nutzer:in in Braze existiert. Wenn die Anfrage kein Nutzerprofil zurückgibt, verwendet Extole den Endpunkt `/users/track`, um einen Nutzer-Alias mit der E-Mail Adresse des Nutzers als Alias-Namen zu erstellen.
+Für bestimmte Anwendungsfälle, wie z.B. ein neues E-Mail- oder SMS-Abonnement, für das Extole keine externe ID (Benutzer-ID) hat, kann Extole über den Braze-Endpunkt [Export Benutzerprofil nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) nach dem Profil des Nutzers suchen. Extole fügt alle Attribute des Profils hinzu und aktualisiert sie, wenn der Nutzer:in in Braze existiert. Wenn die Anfrage kein Nutzerprofil zurückgibt, verwendet Extole den Endpunkt `/users/track`, um einen Nutzer-Alias mit der E-Mail Adresse des Nutzers als Alias-Namen zu erstellen.
 
 ## Verwendung dieser Integration
 

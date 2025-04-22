@@ -28,7 +28,7 @@ search_tag: Partner
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) verwenden, können Sie einen API-Schlüssel unter **Entwickler:in** > API-Einstellungen erstellen.
+Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) verwenden, können Sie einen API-Schlüssel unter **Entwickler:in** > **API-Einstellungen** erstellen.
 {% endalert %} 
 
 ## Anwendungsfälle
@@ -55,7 +55,7 @@ Erstellen Sie in Braze ein Segment von Nutzer:innen für das Targeting mit Sessi
 
 Erstellen Sie zunächst eine Webhook-Kampagne in Braze und setzen Sie die Webhook-URL auf {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Verwenden Sie Liquid, um die `user_id` innerhalb der URL zu definieren. 
 
-Stellen Sie den **Body** des Webhooks mit Hilfe eines Rohtextes **für die Anfrage** so zusammen, dass er die gewünschten Tags, die dem Nutzerprofil in SessionM hinzugefügt werden sollen, und die gewünschte Zeitspanne enthält. Ein Beispiel ist:
+Stellen Sie den **Body für die Anfrage** des Webhooks mit Hilfe eines Rohtextes so zusammen, dass er die gewünschten Tags, die dem Nutzerprofil in SessionM hinzugefügt werden sollen, und die gewünschte Zeitspanne enthält. Ein Beispiel ist:
 
  ```
  {
@@ -77,7 +77,7 @@ Auf dem Tab **Einstellungen** fügen Sie die Schlüssel-Wert-Paare für jedes An
 Planen Sie Ihre Zustellung, legen Sie Ihre **Zielgruppen** für das Targeting des [zuvor erstellten](#step-1-create-a-segment-in-braze) Segments fest und starten Sie dann Ihre Kampagne.
 
 {% alert important %}
-Dieser Vorgang kann auch über einen API Client, wie z.B. Postman, durchgeführt werden, indem Sie eine Anfrage direkt an den [SessionM Tag Endpunkt](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) stellen und dabei den Kunden, den Tag-Namen und eine Zeitspanne für jeden Nutzer [:](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) in des Anrufs angeben (ein Nutzer pro Anruf).
+Dieser Vorgang kann auch über einen API Client, wie z.B. Postman, durchgeführt werden, indem Sie eine Anfrage direkt an den [SessionM Tag Endpunkt](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) stellen und dabei den Kunden, den Tag-Namen und eine Zeitspanne für jeden Nutzer: in des Anrufs angeben (ein Nutzer pro Anruf).
 <br><br>
 Die folgende Beispielanfrage verwendet cURL. 
 

@@ -33,7 +33,7 @@ Braze zählt keine Änderungen des Abo-Status für Ihre Datenpunkte, global und 
 
 Braze meldet jeden Benutzer, der sich manuell von Ihrer E-Mail abmeldet, automatisch über eine [benutzerdefinierte Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer) ab. Wenn der Benutzer seine E-Mail-Adresse aktualisiert und die Option **Benutzer bei Aktualisierung der E-Mail-Adresse erneut anmelden** in den Einstellungen für **die Sendekonfiguration** aktiviert ist, wird der normale E-Mail-Versand wieder aufgenommen.
 
-Wenn ein Benutzer eine oder mehrere Ihrer E-Mails als Spam markiert hat, sendet Braze nur Transaktions-E-Mails an diesen Benutzer. In diesem Fall referenzieren Transaktions-E-Mails auf die im Schritt **Targeting** ausgewählte Option **An alle Nutzer:innen senden, auch an nicht abgemeldete Nutzer**: **innen**.
+Wenn ein Benutzer eine oder mehrere Ihrer E-Mails als Spam markiert hat, sendet Braze nur Transaktions-E-Mails an diesen Benutzer. In diesem Fall referenzieren Transaktions-E-Mails auf die im Schritt **Targeting** ausgewählte Option **An alle Nutzer:innen senden, auch an nicht abgemeldete Nutzer:innen**.
 
 {% alert tip %}
 In unseren [IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)-Best Practices finden Sie Hinweise, wie Sie Ihre Nutzer:innen effektiv erneuern können.

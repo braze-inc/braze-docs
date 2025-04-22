@@ -68,7 +68,7 @@ Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schl체ssel f�
 
 ### Schritt 3: Einrichten eines Postbacks von Kochava
 
-[F체gen Sie ein Postback][18] in Ihrem Kochava Dashboard [hinzu][18]. Sie werden zur Eingabe des Datenimport-Schl체ssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
+F체gen Sie ein [Postback][18] in Ihrem Kochava Dashboard hinzu. Sie werden zur Eingabe des Datenimport-Schl체ssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
 
 ### Schritt 4: Best채tigen Sie die Integration
 

@@ -27,7 +27,7 @@ Aktionscodes können nicht in In-App-Nachrichten versendet werden.
 
 ![Button zum Erstellen eines Aktionscodes.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-1. Gehen Sie auf dem Dashboard zu **Dateneinstellungen** > Aktionscodes.
+1. Gehen Sie auf dem Dashboard zu **Dateneinstellungen** > **Aktionscodes**.
 2. Wählen Sie **Aktionscode-Liste erstellen**.
 
 ### Schritt 2: Nennen Sie den Aktionscode

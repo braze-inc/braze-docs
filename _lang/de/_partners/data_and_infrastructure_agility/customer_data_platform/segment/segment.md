@@ -39,7 +39,7 @@ Nachdem Sie Ihre Quellen erfolgreich eingerichtet haben, müssen Sie Braze als [
 
 ### Schritt 2: Wählen Sie den Zielrahmen und die Verbindungsart {#integration-options}
 
-Navigieren Sie in Segmente zu **Ziele** > **Braze** > **Braze konfigurieren** > **Wählen Sie Ihre Quelle aus** > Einrichtung.
+Navigieren Sie in Segmente zu **Ziele** > **Braze** > **Braze konfigurieren** > **Wählen Sie Ihre Quelle aus** > **Einrichtung**.
 
 ![Die Seite zur Einrichtung der Quelle. Diese Seite enthält Einstellungen, um das Ziel-Framework als "Aktionen" oder "klassisch" und den Verbindungsmodus als "Cloud-Modus" oder "Geräte-Modus" festzulegen.][42]
 
@@ -78,7 +78,7 @@ Welches Braze SDK Sie verwenden, hängt davon ab, welches Segment SDK Sie verwen
 
 | Segmente | Segment SDK | Braze SDK | Segmentierung
 | - | ----------- | --------- |
-| Bevorzugt | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) | [Segmente](https://github.com/braze-inc/braze-segment-kotlin) 
+| Bevorzugt | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
 | Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -102,7 +102,7 @@ Welches Braze SDK Sie verwenden, hängt davon ab, welches Segment SDK Sie verwen
 
 | Segmente | Segment SDK | Braze SDK | Segmentierung
 | - | ----------- | --------- |
-| Bevorzugt | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) | [Segmentierung](https://github.com/braze-inc/braze-segment-swift) 
+| Bevorzugt | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
 | Legacy | [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
@@ -232,11 +232,11 @@ Obwohl Nutzer-Alias als Bezeichner im Ziel Braze Cloud Mode (Actions) unterstüt
 
 Das Ziel Cloud-Modus (Aktionen) bietet eine [Aktion Alias erstellen](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#create-alias), mit der Sie einen reinen Alias-Nutzer:in erstellen oder einen Alias zu einem bestehenden Profil `external_id` hinzufügen können. Die [Aktion Nutzer:innen identifizieren](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#identify-user) kann zusammen mit der Aktion Bezeichner erstellen verwendet werden, um einen Nutzer:innen, der nur einen Bezeichner hat, mit einer `external_id` zusammenzuführen, nachdem ein Bezeichner für den Nutzer:innen verfügbar geworden ist. 
 
-Es ist auch möglich, eine Umgehung zu entwickeln und `braze_id` zu verwenden, um anonyme Nutzer:in-Daten im Cloud-Modus zu senden. Dies erfordert die manuelle Aufnahme der Nutzer:innen `braze_id` in alle Ihre Segment API-Aufrufe. In der [Dokumentation von Segmente](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users) erfahren Sie mehr darüber, wie Sie diese Umgehung einrichten können [.](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users)
+Es ist auch möglich, eine Umgehung zu entwickeln und `braze_id` zu verwenden, um anonyme Nutzer:in-Daten im Cloud-Modus zu senden. Dies erfordert die manuelle Aufnahme der Nutzer:innen `braze_id` in alle Ihre Segment API-Aufrufe. In der [Dokumentation von Segmente](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users) erfahren Sie mehr darüber, wie Sie diese Umgehung einrichten können.
 
 An Braze gesendete Ziele Daten können im Rahmen von Cloud-Modus-Aktionen gebündelt werden. Die Chargengröße ist auf 75 Ereignisse begrenzt, und diese Chargen sammeln sich über einen Zeitraum von 30 Sekunden an, bevor sie gespült werden. Das Stapeln von Anfragen erfolgt pro Aktion. Zum Beispiel werden Identify Calls (Attribute) in einer Anfrage und Tracking Calls (angepasste Events) in einer zweiten Anfrage zusammengefasst. Braze empfiehlt, dieses Feature zu aktivieren, da es die Anzahl der Anfragen reduziert, die von Segmenten an Braze gesendet werden. Dadurch verringert sich das Risiko, dass das Ziel auf die Rate-Limits von Braze stößt und Anfragen wiederholt werden müssen. 
 
-Sie können die Stapelverarbeitung für eine Aktion aktivieren, indem Sie zu Ihrem Braze Ziel > Abbildungen navigieren. Klicken Sie dort auf das 3-Punkte-Symbol rechts neben der Abbildung und wählen Sie **Abbildung bearbeiten**. Blättern Sie zum Ende des Abschnitts **Abbildungen auswählen** und vergewissern Sie sich, dass die Option **Daten zu Braze stapeln** auf **Ja** gesetzt ist.
+Sie können die Stapelverarbeitung für eine Aktion aktivieren, indem Sie zu Ihrem Braze Ziel > **Abbildungen** navigieren. Klicken Sie dort auf das 3-Punkte-Symbol rechts neben der Abbildung und wählen Sie **Abbildung bearbeiten**. Blättern Sie zum Ende des Abschnitts **Abbildungen auswählen** und vergewissern Sie sich, dass die Option **Daten zu Braze stapeln** auf **Ja** gesetzt ist.
 
 
 {% tabs local %}
@@ -405,7 +405,7 @@ Wenn Sie eine Server-zu-Server-Integration (Cloud-Modus) verwenden, funktioniere
 
 ## Nutzer:in löschen und unterdrücken 
 
-Wenn Sie Nutzer:innen löschen oder unterdrücken müssen, beachten Sie, dass [das Feature zum Löschen von Nutzern:innen von Segmente](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) auf den [Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [`/users/delete` abgebildet]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) **wird**. Beachten Sie, dass die Überprüfung dieser Löschungen bis zu 30 Tage dauern kann.
+Wenn Sie Nutzer:innen löschen oder unterdrücken müssen, beachten Sie bitte Folgendes: Das [Feature zum Löschen von Nutzern:innen](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) von Segmente **wird** auf den Braze[`/users/delete` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) abgebildet. Beachten Sie, dass die Überprüfung dieser Löschungen bis zu 30 Tage dauern kann.
 
 Sie müssen sicherstellen, dass Sie einen gemeinsamen Bezeichner für Nutzer:innen von Braze und Segmenten auswählen (wie in `external_id`). Nachdem Sie eine Anfrage zur Löschung mit Segment initiiert haben, können Sie den Status auf dem Tab Löschanfragen in Ihrem Segment Dashboard einsehen.
 

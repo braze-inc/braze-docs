@@ -54,7 +54,7 @@ Wählen Sie den von Ihnen erstellten Rahmen aus und fügen Sie Komponenten (Kopf
 
 ### Schritt 6: Bearbeiten Sie Ihre E-Mail in Braze
 
-Gehen Sie in Braze zu **Templates** > **Vorlagen bearbeiten** > Nachricht bearbeiten. Im Template-Editor können Sie entweder Ihre E-Mail im HTML-Format bearbeiten oder den **Rich-Text-Editor** auf dem Tab **Klassisch** verwenden.
+Gehen Sie in Braze zu **Templates** > **Vorlagen bearbeiten** > **Nachricht bearbeiten**. Im Template-Editor können Sie entweder Ihre E-Mail im HTML-Format bearbeiten oder den **Rich-Text-Editor** auf dem Tab **Klassisch** verwenden.
 
 ## Unterstützung und Fehlerbehebung
 

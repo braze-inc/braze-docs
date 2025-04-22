@@ -43,6 +43,6 @@ Narvar ist für die Konfiguration der Push-Benachrichtigungen für jede Nachrich
 1. **Kontaktieren Sie Ihren Narvar CSM**, um Ihr Interesse an der Integration zu bekunden.
 2. **Bestimmen Sie Braze-Umgebungen** für Staging und Produktion.
 3. **Generieren Sie API-Schlüssel** in Braze für die Verwendung durch Narvar.
-4. **Erzeugen Sie** nach Bedarf **Kampagnenschlüssel** in Braze.
-5. **Stellen Sie** Narvar **API- und Kampagnen-Schlüssel** über einen sicheren, einmaligen Link zur **Verfügung**.
+4. **Erzeugen Sie Kampagnenschlüssel** nach Bedarf in Braze.
+5. **Stellen Sie Narvar API- und Kampagnen-Schlüssel bereit** – über einen sicheren, einmaligen Link.
 6. **Teilen Sie die Details der Push-Benachrichtigung**, um die Einrichtung abzuschließen.

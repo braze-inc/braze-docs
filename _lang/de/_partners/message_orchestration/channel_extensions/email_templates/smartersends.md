@@ -24,7 +24,7 @@ Die Partnerschaft zwischen Braze und SmarterSends erlaubt es Ihnen, die leistung
 | SmarterSends-Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein [SmarterSends-Konto][2]. |
 | Braze REST API-Schlüssel | Ein REST-API-Schlüssel von Braze mit diesen Berechtigungen: {::nomarkdown}<ul><li><code>users.track</code></li><li><code>users.export.ids</code></li><li><code>messages.schedule.create</code></li><li><code>messages.schedule.update</code></li> <li><code>messages.schedule.delete</code></li><li><code>sends.id.create</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>sends.data_series</code></li></ul>{:/} Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. Für zusätzliche Sicherheit lassen Sie die IP-Adresse von SmarterSends zu (verfügbar in Ihrer Instanz). |
 | Braze REST Endpunkt | [Ihre URL für den REST-Endpunkt][1]. Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab. |
-| Braze API Kampagnen ID | Die [API-Kampagnen-ID von Braze]({{site.baseurl}}/api/api_campaigns/) ist der eindeutige Bezeichner für alle Kampagnen, die über SmarterSends gesendet werden. Diese kann im Braze-Dashboard unter **Messaging** > Kampagnen erstellt werden. |
+| Braze API Kampagnen ID | Die [API-Kampagnen-ID von Braze]({{site.baseurl}}/api/api_campaigns/) ist der eindeutige Bezeichner für alle Kampagnen, die über SmarterSends gesendet werden. Diese kann im Braze-Dashboard unter **Messaging** > **Kampagnen** erstellt werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Anwendungsfälle
@@ -68,7 +68,7 @@ Mit der Integration von Braze und SmarterSends können Sie die Vorteile des vert
 
 Eine API-Kampagne ermöglicht das Tracking von Metriken für alle SmarterSends-Mails innerhalb von Braze und erlaubt es SmarterSends, diese API-basierten Kampagnen zu triggern.
 
-1. [Erstellen Sie]({{site.baseurl}}/api/api_campaigns/#create-a-new-campaign) in Braze [eine API-Kampagne]({{site.baseurl}}/api/api_campaigns/#create-a-new-campaign).
+1. Erstellen Sie in Braze eine [API-Kampagne]({{site.baseurl}}/api/api_campaigns/#create-a-new-campaign).
 2. Klicken Sie auf **E-Mail** unter **Nachrichten-Kanal auswählen**, um einen Messaging-Kanal hinzuzufügen und mit dem Tracking von Metriken zu beginnen.
 3. Kopieren Sie dann die ID der Kampagne aus Braze und fügen Sie sie in das Feld **Kampagnen ID** in SmarterSends ein. 
 4. Kopieren Sie die ID der Nachrichtenvariante aus Braze und fügen Sie sie in das Feld **ID der Nachrichtenvariante** in SmarterSends ein. Dies ist die Standard ID für Nachrichten, die Sie verwenden, wenn Sie nicht für jede Gruppe in SmarterSends eine ID für Nachrichten erstellen möchten.

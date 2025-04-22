@@ -9,11 +9,11 @@ search_tag: Partner
 
 ---
 
-# [![Braze-Lernkurs]](https://learning.braze.com/amplitude-integration-with-braze) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude für Currents
+# [![Braze-Lernkurs] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude für Currents
 
 > [Amplitude](https://amplitude.com/) ist eine Plattform für Produkt-Analytik und Business-Intelligence.
 
-Die bidirektionale Integration von Braze und Amplitude erlaubt es Ihnen, [Ihre Amplitude-Kohorten]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/), Benutzermerkmale und Ereignisse mit Braze [zu synchronisieren]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/) und Braze-Currents zu nutzen, um [Ihre Braze-Ereignisse nach Amplitude zu exportieren](#data-export-integration) und so tiefere Analysen Ihrer Produkt- und Marketingdaten durchzuführen.
+Die bidirektionale Integration von Braze und Amplitude erlaubt es Ihnen, Ihre [Amplitude-Kohorten]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/), Benutzermerkmale und Ereignisse mit Braze zu synchronisieren und Braze-Currents zu nutzen, um [Ihre Braze-Ereignisse nach Amplitude zu exportieren](#data-export-integration) und so tiefere Analysen Ihrer Produkt- und Marketingdaten durchzuführen.
 
 ## Voraussetzungen
 

@@ -6,7 +6,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie einen Connected-Co
 search_rank: 2
 ---
 
-# [![Braze-Lernkurs]](https://learning.braze.com/connected-content) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Aufruf einer Connected-Content API
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Aufruf einer Connected-Content API
 
 > Verwenden Sie Connected-Content, um alle über APIs zugänglichen Informationen direkt in Nachrichten einzufügen, die Sie an Nutzer:innen senden. Sie können Inhalte entweder direkt von Ihrem Webserver oder von öffentlich zugänglichen APIs beziehen.<br><br>Auf dieser Seite erfahren Sie, wie Sie Connected-Content API-Aufrufe tätigen, fortgeschrittene Connected-Content-Anwendungsfälle, Fehlerbehandlung und mehr.
 

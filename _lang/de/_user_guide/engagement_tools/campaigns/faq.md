@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### Wie erstelle ich eine Multichannel-Kampagne?
 
-Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > Kampagnen. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, webhook oder WhatsApp.
+Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > **Kampagnen**. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, webhook oder WhatsApp.
 
 ### Kann ich eine Kontrollgruppe zu meiner Multichannel-Kampagne hinzufügen?
 
@@ -112,7 +112,7 @@ Sie können Änderungen an Nachrichten innerhalb der folgenden Sicherheitszonen 
 - **Einmalig geplante Kampagnen** können bis zum geplanten Sendezeitpunkt bearbeitet werden.
 - **Wiederkehrende geplante Kampagnen** können bis zur geplanten Sendezeit bearbeitet werden.
 - **Kampagnen mit lokaler Sendezeit** können bis zu 24 Stunden vor der geplanten Sendezeit bearbeitet werden.
-- **Kampagnen zur optimalen Sendezeit** können bis zu 24 Stunden vor dem Tag bearbeitet werden, an dem der **Zeitplan** für den Versand der Kampagne gilt.
+- **Kampagnen zur optimalen Sendezeit** können bis zu 24 Stunden vor dem Tag bearbeitet werden, an dem der Zeitplan für den Versand der Kampagne gilt.
 
 ### Was passiert, wenn ich die Sendezeit innerhalb der "sicheren Zone" ändere?
 

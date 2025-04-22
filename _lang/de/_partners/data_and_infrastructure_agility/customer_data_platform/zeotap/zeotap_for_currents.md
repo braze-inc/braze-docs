@@ -40,7 +40,7 @@ Der angepasste HTTP-Konnektor befindet sich derzeit in der Betaphase. Wenn Sie d
 
 ### Schritt 2: Konfigurieren Sie das Daten streamen von in Currents
 
-1. Gehen Sie in Braze zu **Partnerintegrationen** > Datenexport.
+1. Gehen Sie in Braze zu **Partnerintegrationen** > **Datenexport**.
 2. Wählen Sie **Neue Currents erstellen** und **Angepasste Currents exportieren**.<br><br>![Der Button "Neue Currents erstellen" mit einem Dropdown-Menü, das "Custom Currents Export" enthält.][3]{: style="max-width:60%;"}<br><br>
 3. Geben Sie einen Namen für die Integration und eine E-Mail ein, um bei Fehlern mit der Integration kontaktiert zu werden.
 4. Geben Sie unter **Zugangsdaten** die folgenden Informationen ein, die Sie in [Schritt 1](#step-1-create-a-currents-source) notiert haben:
