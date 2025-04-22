@@ -27,7 +27,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: ""
+  - name: 承認ワークフロー
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: キャンペーンのアーカイブ
