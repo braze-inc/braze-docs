@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Nexla](https://www.nexla.com) は統合データ運用分野のリーダーであり、2021年の Gartner Cool Vender に選出されています。Nexla プラットフォームでは、誰でも簡単にスケーラブルなデータフローを作成でき、ビジネスチームとデータチームにフリクションのない制御されたデータ運用、コラボレーションの向上、アジリティをもたらします。データを扱うチームは、ノーコード / ローコードの統一されたエクスペリエンスで、あらゆるユースケースのデータを統合、変換、プロビジョニング、監視することができます。 
 
-Braze と Nexla の統合により、[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) を利用しているお客様は、Nexla を活用してデータレイクデータを抽出、変換し、カスタムフォーマットで他の場所に読み込むことができ、エコシステム全体でデータに簡単にアクセスできるようになります。
+Braze と Nexla の統合により、[Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) を利用しているお客様は、Nexla を活用してデータレイクデータを抽出、変換し、カスタムフォーマットで他の場所に読み込むことができ、エコシステム全体でデータに簡単にアクセスできるようになります。
 
 ## 前提条件
 
