@@ -16,7 +16,7 @@ tool:
 **収益レポート**は [**分析**] の下にあります。
 
 {% alert tip %}
-収益データを取得する他の方法を探している場合は、
+収益データを取得する他の方法を探している場合は、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)として、キャンペーンやキャンバスに (製品購入に加えて) 購入行動を追加してみてください。
 {% endalert %}
 
 収益データをエクスポートするには、**Performance Over Time**グラフの<i class="fas fa-bars" title="チャートコンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。
