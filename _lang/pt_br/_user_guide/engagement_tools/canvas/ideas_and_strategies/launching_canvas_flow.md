@@ -86,9 +86,20 @@ Depois de revisar os detalhes mais finos da sua canva, confira [Enviando canvas 
 ## Solução de problemas
 
 {% details Por que meus usuários não estão recebendo minhas mensagens do canva? %}
-- Verifique se o estado da inscrição push deles está "inscrito" ou "optado" **e** se o status **Push ativado** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
-- Se a limitação de frequência global estiver ativada para sua canva, dependendo de suas regras específicas, isso pode limitar quantas vezes cada usuário deve receber uma mensagem de um canal específico. 
-- Se o horário de silêncio estiver ativado, isso pode impactar o tempo de envio da sua mensagem, o que significa que sua mensagem pode ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelar a mensagem completamente.
+
+- 
+-  Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
+-  
+-  
+- 
+
+
+- 
+- 
+- 
+-  
+- 
+- 
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}
