@@ -109,6 +109,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: タッカート
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
