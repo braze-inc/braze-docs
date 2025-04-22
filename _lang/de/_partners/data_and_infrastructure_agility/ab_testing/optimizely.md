@@ -35,7 +35,7 @@ Die Integration von Braze und Optimizely ist eine bidirektionale Integration, di
 1. Wählen Sie im **App-Verzeichnis** von Optimizely Data Platform (ODP) die App **Braze** aus und wählen Sie dann **App installieren**.
 2. Gehen Sie auf den Tab **Einstellungen**. Gehen Sie im Abschnitt **Autorisierung** wie folgt vor:
     1. Geben Sie den Braze **REST API-Schlüssel** ein.
-    2. Wählen Sie die **URL** Ihrer **Braze-Instanz** aus.
+    2. Wählen Sie die **URL Ihrer Braze-Instanz** aus.
     2. Wählen Sie **API-Schlüssel überprüfen**.
 3. Gehen Sie in Braze zu **[Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/)**.
 4. Wählen Sie **Neue Currents erstellen** > **Angepasste Currents exportieren**.
@@ -100,7 +100,7 @@ Nachdem Sie die Integration konfiguriert haben, können Sie eine Aktivierung in 
     - Wählen Sie in jeder Dropdown- Liste **Feld #** das Braze-Feld aus, das Sie auffüllen möchten. 
     - Geben Sie in jedes entsprechende **Feld # Wert** das ODP-Feld ein, das Sie an das ausgewählte Braze-Feld senden möchten. Wenn Sie z.B. **Firmenname** aus der Dropdown- Liste **Feldnummer** ausgewählt haben, geben Sie `{{customer.company_name}}` für den entsprechenden **Feldnummerwert** ein.
 9. Wählen Sie **Speichern** und wählen Sie dann Ihren Aktivierungsnamen im Breadcrumb-Pfad aus.
-10. Wählen Sie **Startzeit und Zeitplan** im Abschnitt **Touchpoints** aus, wenn Sie **Kunden** ausgewählt haben **, die einem Segment** für die Anmeldung **entsprechen**.
+10. Wählen Sie **Startzeit und Zeitplan** im Abschnitt **Touchpoints** aus, wenn Sie für die Anmeldung **Kunden, die einem Segment entsprechen** ausgewählt haben.
 11. Nehmen Sie die folgenden Einstellungen vor:
     - **Wiederkehrend oder fortlaufend:** Wählen Sie **Wiederkehrend**.
     - **Startdatum:** Geben Sie das Datum ein, an dem Sie die Daten an Braze senden möchten.
