@@ -100,7 +100,7 @@ Puedes insertar variables preformateadas con valores predeterminados a través d
 
 El modal insertará Liquid con el valor por defecto especificado en el punto en el que se encontraba el cursor. El punto de inserción también se especifica mediante el cuadro de vista previa, que tiene el texto anterior y posterior. Si se resalta un bloque de texto, se sustituirá el texto resaltado.
 
-![Un GIF del modal Añadir personalización que muestra al usuario insertando "compañero de viaje" como valor predeterminado, y al modal sustituyendo el texto resaltado "nombre" en el compositor por el fragmento de código de Liquid.][45]
+
 
 {% endraw %}
 
