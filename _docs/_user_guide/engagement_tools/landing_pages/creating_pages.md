@@ -105,15 +105,15 @@ When you're ready, select **Publish Landing Page**.
 
 If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior on the landing page preview.
 
-## Landing Page Templates
+## Using landing page templates
 
-Landing Page templates can be used to easily create templates for use in later campaigns. Landing Page templates can be accessed and managed in both the Landing Page creation flow and the Templates section of the dashboard (**Templates** > **Landing Page Templates**). Landing Page templates require a name and optionally require a description. 
+Use landing page templates to create templates for your next campaigns. These templates can be accessed and managed in both the landing page editor and the **Templates** section of the dashboard (**Templates** > **Landing Page Templates**). Landing page templates require a name and optionally require a description. 
 
-### Managing Landing Page Templates
+### Managing templates
 
-Landing Page templates can be **Previewed**, **Archived**, **Edited** or **Duplicated**. While editing a Landing page, you can also **Save** your landing page as a template, **Change** the template or **Delete** the content of the landing page. 
+You can preview, archive, edit, or duplicate landing page templates. When editing a landing page, you can also save your landing page as a template, make changes to the template, or delete the content of the landing page. 
 
-![A dropdown showing the options to manage a landing page - save, change, delete.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %})
+![A dropdown with options to save, change, and delete a landing page.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %})
 
 ## Viewing analytics
 
