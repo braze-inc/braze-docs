@@ -41,6 +41,15 @@ Ceci donne le résultat suivant :
 
 > Obtenez Tales pour seulement 7,49 euros !
 
+## 
+
+ 
+
+-  
+-  
+
+ 
+
 ## Scénarios d’utilisation supplémentaires
 
 ### Plusieurs articles
