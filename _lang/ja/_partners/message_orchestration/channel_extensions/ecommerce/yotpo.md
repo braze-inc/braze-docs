@@ -2,16 +2,16 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: ""
+description: "この参考記事では、何千ものフォワード・シンキング・ブランドがダイレクト・トゥ・コンシューマの成長を加速させるのに役立つ、主要なeコマース・マーケティング・プラットフォームであるBrazeとYotpoのパートナーシップについて概説する。"
 page_type: partner
 search_tag: Partner
 ---
 
 # Yotpo
 
-> Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
+> eコマース・マーケティングの主要プラットフォームである[Yotpo](https://www.yotpo.com/)は、何千ものフォワード・シンキング・ブランドがダイレクト・トゥ・コンシューマの成長を加速させるのを助けている。Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
 
-
+_この統合はYotpoによって維持されます。_
 
 ## 統合について
 
@@ -69,7 +69,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 ![YOTPO-API-KEYをあなたのYotpo Reviews APIキーに置き換える。][2]
 
@@ -92,7 +92,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 メールエディターのスニペットはこんな感じになる：
 
@@ -121,7 +121,7 @@ Image return NULL
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 スニペットは次のようになります。
 
