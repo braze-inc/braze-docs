@@ -97,7 +97,7 @@ Je nach individuellem Bedarf verlassen sich diese Nutzer:innen auf:
 - Strukturieren Sie Ihre Inhalte logisch und achten Sie darauf, dass die Überschriften der richtigen Hierarchie folgen. Überspringen Sie keine Überschriftenebenen.
 - Vermeiden Sie mittig ausgerichteten Text für lange Inhaltsabschnitte. Dies kann für Nutzer:innen mit kognitiven oder Lernangeboten schwierig zu lesen sein. Inhalte, die sich über mehr als zwei Zeilen erstrecken, sollten linksbündig ausgerichtet werden.
 - Verwenden Sie serifenlose Schriftarten, die auf digitalen Geräten besser lesbar sind.
-- Testen Sie Ihren Text immer, indem Sie [eine Testnachricht]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) an ein Gerät [senden]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), um sicherzustellen, dass Ihr Text nicht abgeschnitten wird. Wenn Ihre Nachricht abgeschnitten wird, schadet dies sowohl Ihnen als auch dem Nutzer, da Ihre Inhalte die Nutzer:innen nicht erreichen.
+- Testen Sie Ihren Text immer, indem Sie an ein Gerät [eine Testnachricht senden]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), um sicherzustellen, dass Ihr Text nicht abgeschnitten wird. Wenn Ihre Nachricht abgeschnitten wird, schadet dies sowohl Ihnen als auch dem Nutzer, da Ihre Inhalte die Nutzer:innen nicht erreichen.
 
 ### Links
 
