@@ -23,7 +23,7 @@ search_rank: 2
 - [ファンネル]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) および[retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) レポートを使用した追加の分析の検索
 - [永続的なエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)を活用し、キャンバスステップで顧客イベントのメタデータをパーソナライゼーションに使用します。
 - [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を使用してより高度な分析を行う
-- 
+- ユーザーがキャンバスから退出するタイミングを定義する[退出基準の]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria)設定
 
 ## カスタムイベントの管理
 
@@ -67,13 +67,13 @@ search_rank: 2
 
 {% details プラットフォーム別のドキュメントの拡張 %}
 
-- 
-- 
-- 
+- [Android と FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- 
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- 
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -203,7 +203,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 イベントプロパティの再帰性と頻度に基づいてセグメンテーションを作成するには、「カスタムイベントプロパティのセグメンテーションを管理する」[ユーザー権限が]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage)必要です。
 
-
+デフォルトでは、1つのワークスペースにつき20のセグメンテーション可能なイベント・プロパティを持つことができる。この制限を増やすには、Brazeアカウントマネージャーに連絡する。
 
 セグメンテーションのためにイベントプロパティを追加するには、以下のようにする：
 
