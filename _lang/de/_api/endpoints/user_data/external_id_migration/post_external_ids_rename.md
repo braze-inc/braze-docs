@@ -20,7 +20,7 @@ Sie können bis zu 50 Umbenennungsobjekte pro Anfrage senden.
 
 Dieser Endpunkt legt eine neue (primäre) `external_id` für den Nutzer:innen fest und veraltet seine bestehende `external_id`. Das bedeutet, dass der Nutzer:innen durch einen der beiden `external_id` identifiziert werden kann, bis der veraltete Bezeichner entfernt wird. Mehrere externe IDs sind für eine Migration zulässig, so dass ältere Versionen Ihrer Apps, die das vorherige Namensschema für externe IDs verwenden, nicht beschädigt werden. 
 
-Nachdem Ihr altes Namensschema nicht mehr verwendet wird, empfehlen wir dringend, veraltete externe IDs über den [Endpunkt`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) zu entfernen.
+Nachdem Ihr altes Namensschema nicht mehr verwendet wird, empfehlen wir dringend, veraltete externe IDs über den [Endpunkt `/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) zu entfernen.
 
 {% alert warning %}
 Stellen Sie sicher, dass Sie veraltete externe IDs mit dem Endpunkt `/users/external_ids/remove` anstelle von `/users/delete` entfernen. Wenn Sie eine Anfrage an `/users/delete` mit der veralteten externen ID senden, wird das Nutzerprofil vollständig gelöscht und kann nicht rückgängig gemacht werden.
