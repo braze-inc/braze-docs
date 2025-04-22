@@ -19,12 +19,8 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 |---|---|
 | URL del Servicio de Consumidor de Afirmaciones (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Para los dominios de la Unión Europea, la URL ASC es `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Para algunos IdP, también puede denominarse URL de respuesta, URL de inicio de sesión, URL de audiencia o URI de audiencia. |
 | ID de la entidad | `braze_dashboard` |
-| Clave API RelayState | Ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`, y luego introduce la clave de API generada como parámetro `RelayState` dentro de tu IdP. |
+| Clave API RelayState | Ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`, y luego introduce la clave de API generada como parámetro `RelayState` dentro de tu IdP.  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar tus claves de API en **Configuración** en **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
 
 ## Configuración de SAML SSO
 
@@ -52,10 +48,6 @@ Cuando termine de configurar Braze en su proveedor de identidad, éste le propor
 
 Después de que su administrador de cuenta active SAML SSO para su cuenta, vaya a **Configuración** > **Configuración de administración** > **Configuración de seguridad** y **active la** sección SAML SSO.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione el icono de su cuenta y vaya a **Configuración de la empresa** > **Configuración de seguridad** para encontrar la sección SAML SSO.
-{% endalert %}
-
 En la misma página, introduce lo siguiente:
 
 | Requisito | Detalles |
@@ -80,6 +72,16 @@ Asegúrese de que su certificado `x.509` sigue este formato cuando lo añada al 
 Guarde su configuración de seguridad y cierre la sesión. A continuación, vuelve a iniciar sesión con tu proveedor de identidad.
 
 ![Pantalla de inicio de sesión con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## 
+
+1. 
+2. 
+3. 
+4. <br><br><br><br>
+5. 
+6. 
+7. 
 
 ## Comportamiento del SSO
 
@@ -119,3 +121,56 @@ Ve a tu panel de Braze e intenta iniciar sesión mediante SSO. Si encuentras un 
 Selecciona **Exportar**. Para **Seleccionar perfil de filtrado de cookies**, selecciona **Ninguno**. A continuación, selecciona **Exportar**. Esto generará un archivo JSON que puedes enviar al soporte de Braze para una mayor solución de problemas.
 
 ![Menú "Exportar preferencias de rastreo SAML" con la opción "Ninguna" seleccionada.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## 
+
+### 
+
+  
+
+
+
+
+-  
+-  
+-  
+
+### 
+
+ 
+
+### 
+
+ 
+
+### 
+
+
+
+ 
+
+
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### 
+
+
+
+### 
+
+   
+
+### 
+
+ 
+
+
+
+### 
+
+ 
