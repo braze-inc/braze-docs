@@ -103,9 +103,9 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**A
 
 ### ステップ 3:AppsFlyerのダッシュボードでBrazeを設定する
 
-1. AppsFlyer で、左側のバーの [**Integrated Partners**] ページに移動します。
+1. AppsFlyer で、左側のバーの [**Integrated Partners**] ページに移動します。次に**Brazeを**検索し、Brazeのロゴを選択すると設定ウィンドウが開封される。
 2. [**Integration**] タブで [**Activate Partner**] をオンにします。
-3.  
+3. ダッシュボードで見つけたデータインポートキーとRESTエンドポイントを入力する。 
 4. [**Advanced Privacy**] をオフに切り替え、設定を保存します。
 
 これらの手順に関する追加情報は、[AppsFlyer のドキュメント][16]に掲載されています。
