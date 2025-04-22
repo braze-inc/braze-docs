@@ -27,7 +27,7 @@ Kunden:in können nun ein Segment aus Nutzern:innen erstellen, die [nicht in ein
 
 ## Canvas Empfänger:in CSV-Exporte
 
-Kund:innen können jetzt [Daten]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/) über die Nutzer:innen eines Canvas [exportieren]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/). Die erzeugte CSV-Datei wird der CSV-Datei der Kampagne ähneln.
+Kund:innen können jetzt über die Nutzer:innen eines Canvas [Daten exportieren]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/). Die erzeugte CSV-Datei wird der CSV-Datei der Kampagne ähneln.
 
 ## Vorläufig genehmigter iOS 12 Segmente Filter
 

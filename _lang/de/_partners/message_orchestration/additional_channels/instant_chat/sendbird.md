@@ -87,7 +87,7 @@ Gehen Sie in Braze unter **Templates und Medien** zu **Webhook-Vorlagen** und w�
 
 ### Kampagnen
 
-1. Klicken Sie im Braze-Dashboard auf der Seite **Kampagnen** auf **Kampagne erstellen** > Webhook.
+1. Klicken Sie im Braze-Dashboard auf der Seite **Kampagnen** auf **Kampagne erstellen** > **Webhook**.
 2. Wählen Sie das Webhook Template aus, das Sie oben erstellt haben. Es wird dringend empfohlen, den Endpunkt Batch für Kampagnen zu verwenden.
 3. Passen Sie das Template an, indem Sie seine Variablen auf dem Tab **Verfassen** bearbeiten.
 

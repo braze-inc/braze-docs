@@ -15,7 +15,7 @@ description: "このランディングページでは、キャンペーンのテ
 guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: テストメッセージの送信
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API トリガーキャンペーンとアクションベースのキャンペーン
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

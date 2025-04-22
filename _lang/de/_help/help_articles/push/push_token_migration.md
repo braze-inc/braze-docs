@@ -10,13 +10,13 @@ channel: push
 
 # Migration von Push-Tokens
 
-> Ein [Push-Token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) ist ein eindeutiger anonymer Bezeichner, der angibt, wohin die [Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) einer App gesendet werden sollen. Braze stellt eine Verbindung zu Anbietern von Push-Diensten wie Firebase Cloud Messaging Service (FCMs) für Android und Apple Push Notification Service (APNs) für iOS her. Diese Anbieter senden eindeutige Geräte-Token, die Ihre App identifizieren. Wenn Sie vor der Integration von Braze bereits Push-Benachrichtigungen versendet haben, entweder selbst oder über einen anderen Anbieter, ist es mit der Push-Token Migration zulässig, weiterhin Push-Benachrichtigungen an Ihre Nutzer:innen mit registrierten Push-Token zu senden.
+> Ein [Push-Token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) ist ein eindeutiger anonymer Bezeichner, der angibt, wohin die Push-Benachrichtigungen einer App gesendet werden sollen. Braze stellt eine Verbindung zu Anbietern von Push-Diensten wie Firebase Cloud Messaging Service (FCMs) für Android und Apple Push Notification Service (APNs) für iOS her. Diese Anbieter senden eindeutige Geräte-Token, die Ihre App identifizieren. Wenn Sie vor der Integration von Braze bereits Push-Benachrichtigungen versendet haben, entweder selbst oder über einen anderen Anbieter, ist es mit der Push-Token Migration zulässig, weiterhin Push-Benachrichtigungen an Ihre Nutzer:innen mit registrierten Push-Token zu senden.
 
 ## Automatische Migration über SDK
 
 Nachdem Sie [das Braze SDK integriert haben]({{site.baseurl}}/developer_guide/sdk_integration/), werden die Push-Token für Ihre Opt-in Nutzer:innen automatisch migriert, wenn sie Ihre App das nächste Mal öffnen. Bis dahin können Sie diesen Nutzer:innen keine Push-Benachrichtigungen über Braze senden.
 
-Alternativ können Sie [Ihre Push-Token](#manual-migration-via-api) auch [manuell migrieren](#manual-migration-via-api), was eine schnellere erneute Interaktion mit Ihren Nutzer:innen zulässt.
+Alternativ können Sie [Ihre Push-Token auch manuell migrieren](#manual-migration-via-api), was eine schnellere erneute Interaktion mit Ihren Nutzer:innen zulässt.
 
 ### Überlegungen zum Internet Token
 

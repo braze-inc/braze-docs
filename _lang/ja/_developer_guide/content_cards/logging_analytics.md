@@ -1,7 +1,7 @@
 ---
 nav_title: 分析のロギング  
 article_title: 分析のロギング 
-page_order: 4
+page_order: 1
 description: "この記事では、カスタマイズしたコンテンツカードのクリック、イベント、分析を手動で記録する方法について説明します。"
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # 分析のロギング 
 
-> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)一般的な方法がわかります。 
+> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)一般的な方法がわかります。 
 
 ## カード更新のリスニング
 
@@ -20,7 +20,7 @@ toc_headers: "h2"
 * **`id`**:コンテンツカード ID の文字列を表します。これは、カスタムコンテンツカードの分析を記録するために使用される一意の識別子です。
 * **`extras`**:Braze ダッシュボードのすべてのキーと値のペアが含まれます。 
 
-カスタムコンテンツカードでは`id`および`extras`以外のすべてのプロパティの解析は任意です。データモデルの詳細については、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/) の各プラットフォームの統合記事を参照してください。
+カスタムコンテンツカードでは`id`および`extras`以外のすべてのプロパティの解析は任意です。データモデルの詳細については、[Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android)、[iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift)、[Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web) の各プラットフォームの統合記事を参照してください。
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-コンテンツカードは、`openSession()`の前にサブスクライブリクエストが呼び出された場合にのみ、セッション開始時に更新されます。[フィードを手動で更新]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed)することもいつでも選択できます。
+コンテンツカードは、`openSession()`の前にサブスクライブリクエストが呼び出された場合にのみ、セッション開始時に更新されます。[フィードを手動で更新]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)することもいつでも選択できます。
 {% endalert %}
 
 {% endtab %}

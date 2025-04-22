@@ -61,7 +61,7 @@ optilyz benötigt außerdem einen HTTP-Header für die Autorisierung und eine HT
 
 #### Anfragetext
 
-In der folgenden Anfrage können Sie beliebige Liquid-Tags zur Personalisierung verwenden und ein angepasstes Template für die Anfrage gemäß der API-Dokumentation von Optilyz erstellen.
+In der folgenden Anfrage können Sie beliebige Liquid-Tags zur Personalisierung verwenden und ein angepasstes Template für die Anfrage gemäß der [API-Dokumentation][2] von Optilyz erstellen.
 
 Das Feld `variation` ist optional und kann festlegen, welcher Entwurf innerhalb der Automatisierung verwendet werden soll. Wird eine Variante ausgelassen, weist Optilyz eine der definierten Varianten nach dem Zufallsprinzip zu.
 

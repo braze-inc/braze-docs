@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [eduMe](https://edume.com)はモバイルベースのトレーニングツールであり、従業員はどこからでも必要なときに、成功するために必要な知識を習得できます。 
 
+_この統合は、eduMe によって維持されます。_
+
+## 統合について
+
 Braze と eduMe の統合では、Braze [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)を利用して、ユーザーが Braze キャンペーンで eduMe のコースやレッスンにアクセスできるようにします。個人とグループの進捗状況は、eduMe レポート機能で追跡できます。
 
 ## 前提条件
@@ -53,3 +57,4 @@ Access your onboarding course at:
 3. このリンクを通じてeduMeに到着したユーザーは、選択したeduMeチームまたはグループに追加されます。`groupId` を関連するチームID またはeduMe グループID に置き換えます。通常、チームID を使用しますが、登録が必要なコースはグループID を使用する必要があります<br><br>
 4. `externalUserId` フィールドのマッピング先として適切なフィールドを含めます。コネクテッドコンテンツ呼び出しの例では、`driver_id` を使用しますが、フィールドは異なっている可能性があります。このID は eduMe レポートで利用可能になり、システムと相関付けることができるようになります。<br><br>
 5. 最後に、必要に応じてメッセージをカスタマイズしてテストします。少なくとも1つのテストメッセージを送信し、eduMe コンテンツにアクセスし、レッスンまたはコースを修了し、eduMe 分析が記録されていることを確認することをお勧めします。 
+

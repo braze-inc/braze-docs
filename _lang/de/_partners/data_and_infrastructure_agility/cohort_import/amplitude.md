@@ -22,7 +22,7 @@ Nach der Generierung können Sie einen neuen Schlüssel erstellen oder einen bes
 
 ### Schritt 2: Einrichten der Braze Integration in Amplitude
 
-Navigieren Sie in Amplitude zu **Quellen & Ziele** > **[Projektname]** > **Ziele** > Braze. Geben Sie in der daraufhin angezeigten Aufforderung den Datenimport-Schlüssel und den REST-Endpunkt von Braze an und klicken Sie auf **Speichern**.
+Navigieren Sie in Amplitude zu **Quellen & Ziele** > **[Projektname]** > **Ziele** > **Braze**. Geben Sie in der daraufhin angezeigten Aufforderung den Datenimport-Schlüssel und den REST-Endpunkt von Braze an und klicken Sie auf **Speichern**.
 
 ![]({% image_buster /assets/img/amplitude.png %})
 

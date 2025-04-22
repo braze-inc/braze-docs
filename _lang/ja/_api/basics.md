@@ -42,19 +42,7 @@ API呼び出しにエンドポイントを使用する場合は、RESTエンド�
 SDK 統合には、REST エンドポイントではなく [SDKエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)を使用します。
 {% endalert %}
 
-|インスタンス|URL|RESTエンドポイント|SDKエンドポイント|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API制限
 
@@ -86,15 +74,9 @@ REST API キーに加えて、識別子キーと呼ばれるタイプのキー�
 新しいREST APIキーを作成する：
 
 1. [**設定**] ＞ [**API と識別子**] に進みます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
-{% endalert %}
-
-{:start="2"}
-2\.[**API キーを作成**] を選択します。
-3\.一目で識別できるように、新しいキーに名前をつける。
-4\.新しいキーに対して[許可リストに登録済みの IPアドレス](#api-ip-allowlisting)とサブネットを指定します。
+2. [**API キーを作成**] を選択します。
+3. 一目で識別できるように、新しいキーに名前をつける。
+4. 新しいキーに対して[許可リストに登録済みの IPアドレス](#api-ip-allowlisting)とサブネットを指定します。
 5. 新しいキーに関連付ける[権限](#rest-api-key-permissions)を選択します。
 
 {% alert important %}
@@ -383,7 +365,7 @@ Ruby を使用してBrazeを実装している場合は、[Ruby クライアン�
 
 Ruby クライアントライブラリは、[ユーザーエンドポイント]({{site.baseurl}}/api/endpoints/user_data)をサポートしています。
 
-{% alert note %}
+{% alert important %}
 このクライアントライブラリは現在ベータ版です。このライブラリをより良いものにするために協力してくれませんか?ご意見、ご感想は[smb-product@braze.com](mailto:smb-product@braze.com) まで。
 {% endalert %}
 

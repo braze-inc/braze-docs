@@ -73,7 +73,7 @@ Braze Currents から Amplitude に送信されたイベントは、Amplitude �
 
 ## サポートされている Currents イベント
 
-Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベント用語集にある次のデータを Amplitude にエクスポートすることがサポートされています。
+Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)イベント用語集にある次のデータを Amplitude にエクスポートすることがサポートされています。
 
 ### 行動
 - カスタムイベント: `users.behaviors.CustomEvent`

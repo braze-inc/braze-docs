@@ -44,7 +44,7 @@ Der Filter "Nur meine anzeigen" auf der Seite **Kampagnen** hat sich als äußer
 
 ### Verhalten bei Fortschritt
 
-Sie können jetzt festlegen, [wann ein Nutzer]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/): [innen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) von einem Canvas-Schritt zum nächsten [vorbringt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Zu diesen Optionen gehören "Nachricht gesendet" und "Gesamte Zielgruppe nach Verzögerung".
+Sie können jetzt festlegen, [wann ein:e Nutzer:in]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) von einem Canvas-Schritt zum nächsten voranschreitet. Zu diesen Optionen gehören "Nachricht gesendet" und "Gesamte Zielgruppe nach Verzögerung".
 
 ### In-App-Nachrichten in Canvas
 
@@ -66,7 +66,7 @@ Connected-Content-Aufrufe an externe Server erfolgen, wenn eine Karte tatsächli
 
 Kunden:in können jetzt einen `null` Wert für die "Antwort-an"-Adresse einer E-Mail-Nachricht über die Seite **E-Mail-Einstellungen** in Braze oder über die [API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification) festlegen.  Wenn Sie diese Option verwenden, werden die Antworten an die angegebene Absenderadresse gesendet.  Sie können das Adressfeld "Von" jetzt als `dan@emailaddress.com` anpassen, und Ihre Kund:in haben die Möglichkeit, direkt an Dan zu antworten.
 
-Um einen `null` -Wert für die "Antwort-an"-Adresse einer E-Mail-Nachricht von Braze festzulegen, gehen Sie in der Navigation auf **Einstellungen verwalten** und dann auf den Tab **E-Mail-Einstellungen**. Blättern Sie zum Abschnitt **Einstellungen für ausgehende E-Mails** und wählen Sie **"Reply-To" ausschließen und Antworten an "Von"** als Standardadresse **senden**.
+Um einen `null` -Wert für die "Antwort-an"-Adresse einer E-Mail-Nachricht von Braze festzulegen, gehen Sie in der Navigation auf **Einstellungen verwalten** und dann auf den Tab **E-Mail-Einstellungen**. Blättern Sie zum Abschnitt **Einstellungen für ausgehende E-Mails** und wählen Sie **"Reply-To" ausschließen und Antworten an "Von" senden** als Standardadresse aus.
 
 ## Vergleiche der Kampagnen
 

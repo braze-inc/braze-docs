@@ -131,7 +131,7 @@ Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine
 - Details zu einer bestimmten Kampagne abrufen
 - Mit Currents, um Daten auf Nutzer:innen-Ebene in Kampagnen einfließen zu lassen, die ein "größeres Bild" ergeben.
 - Mit API-getriggerter Zustellung, um Statistiken für transaktionale Nachrichten zu sammeln
-- So [suchen Sie]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/#search-syntax) auf der Seite **Kampagnen** mithilfe des Filters [nach einer bestimmten Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/#search-syntax)  `api_id:YOUR_API_ID`
+- Zum [Suchen nach einer bestimmten Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/#search-syntax) auf der Seite **Kampagnen** mithilfe des Filters `api_id:YOUR_API_ID`
 
 ## Bezeichner des Segments
 

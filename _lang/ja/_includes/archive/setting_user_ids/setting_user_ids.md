@@ -9,7 +9,7 @@
 {% endalert %}
 
 {% alert warning %}
-ユーザーIDとして識別可能な値を含めたい場合は、さらなるセキュリティのため、ユーザーの偽装やなりすましを防ぐ[SDK認証]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/)機能を追加する**ことを強く推奨する**。
+ユーザーIDとして識別可能な値を含めたい場合は、さらなるセキュリティのため、ユーザーの偽装やなりすましを防ぐ[SDK認証]({{site.baseurl}}/developer_guide/authentication/)機能を追加する**ことを強く推奨する**。
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

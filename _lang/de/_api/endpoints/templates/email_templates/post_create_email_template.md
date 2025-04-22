@@ -15,7 +15,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts E-Mail-Vorlage
 
 > Verwenden Sie diesen Endpunkt, um E-Mail-Templates auf dem Braze-Dashboard zu erstellen.
 
-Diese Templates werden auf der **Seite Templates und Medien** verfügbar sein **.**  Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zum Update des Templates in nachfolgenden API-Aufrufen verwendet werden kann.
+Diese Templates werden auf der Seite **Templates und Medien** verfügbar sein. Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zum Update des Templates in nachfolgenden API-Aufrufen verwendet werden kann.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 

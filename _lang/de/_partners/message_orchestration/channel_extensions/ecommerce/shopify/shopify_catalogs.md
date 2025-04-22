@@ -50,7 +50,7 @@ Beachten Sie, dass Braze keine weiteren Produkte mehr synchronisieren wird, wenn
 
 Sie erhalten eine Benachrichtigung auf dem Dashboard und eine E-Mail, nachdem die Synchronisierung erfolgreich war. Auf der Partnerseite von Shopify wird außerdem der Status unter Shopify-Kataloge auf "Synchronisierung" aktualisiert. Sie können sich Ihre Produkte ansehen, indem Sie auf der Shopify Partnerseite auf den Katalognamen klicken.
 
-[Weitere Anwendungsfälle]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) finden Sie unter [Kataloge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases), um mehr darüber zu erfahren, wie Sie Katalogdaten zur Personalisierung Ihrer Nachrichten nutzen können.
+[Weitere Anwendungsfälle finden Sie unter Kataloge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases), um mehr darüber zu erfahren, wie Sie Katalogdaten zur Personalisierung Ihrer Nachrichten nutzen können.
 
 #### Unterstützte Shopify Katalogdaten
 

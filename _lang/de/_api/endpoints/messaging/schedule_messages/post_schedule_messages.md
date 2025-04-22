@@ -77,7 +77,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
-| `external_user_ids` | Optional | String-Array | Siehe [externer Bezeichner für Nutzer]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields): [innen]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
+| `external_user_ids` | Optional | String-Array | Siehe [externer Bezeichner für Nutzer:innen]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Optional | Array von Nutzer:innen-Alias-Objekten | Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
