@@ -108,7 +108,7 @@ IP の信頼度の評価を解釈するには、次の表を参照してくだ�
 Microsoft がメインのメールボックスプロバイダーである場合、この連携を使用すると Microsoft の信頼度データにアクセスして表示できます。これにより、IP の健全性を監視し、メールの受信状況の判断に役立てることができます。
 
 {% alert important %}
-
+配信センターにデータが表示されない場合は、IP アドレスのリストを添えて[サポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 {% endalert %}
 
 ![][8]
