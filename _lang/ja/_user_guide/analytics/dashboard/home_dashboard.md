@@ -13,10 +13,6 @@ tool:
 
 > ダッシュボードの [**ホーム**] ページでは、アプリや Web サイトのパフォーマンスを追跡して解釈するための主要な指標を提供するので、ユーザーベースの概要情報を一目で把握できます。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、これは**Overview** ページです。
-{% endalert %}
-
 ![Braze のホームダッシュボード。][1]
 
 **Home** ページには、2 つの主なセクションがあります。
@@ -31,7 +27,7 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 
 ![[中断したところから再開] セクションのキャンバスの下書き、アクティブなセグメント、およびキャンペーンの下書き。][6]
 
-## パフォーマンスの概要
+## 
 
 デフォルトでは、**Performance overview** セクションには、すべてのアプリおよびサイトの過去30 日間のデータが表示されます。指標はすべて、選択した日付範囲に基づいて計算されます。
 
@@ -62,7 +58,7 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 ### 生涯セッション数
 
 *生涯セッション数*は、Braze が統合以降に記録したセッションの総数です。簡潔に言うと、セッションとはユーザーによるアプリの使用や、Web サイトの表示が行われている個々の期間です。プラットフォーム別のより正確なセッションの定義については、対応する
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/)、[Android、FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/)、または [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) のセッション追跡の開発者向け記事を参照してください。
+
 
 ### 1 か月あたりのアクティブユーザー数
 
