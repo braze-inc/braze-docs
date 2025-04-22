@@ -44,10 +44,6 @@ Braze Audience Sync to TikTok は Audience Sync Pro 統合です。この統合�
 
 Brazeのダッシュボードで、**Partner Integrations** > **Technology Partners** に移動し、**TikTok** を選択します。TikTok オーディエンス同期で、[**TikTok を接続**] を選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ![BrazeのTikTokテクノロジーページには、概要セクションとTikTokオーディエンス同期セクションがあり、Connected TikTokボタンがある。][1]{: style="max-width:75%;"}
 
 その後、TikTokのOAuthページにリダイレクトされ、Brazeの広告アカウント管理およびオーディエンス管理を承認するよう求められます。**確認**を選択すると、Brazeに戻り、同期するTikTok広告アカウントを選択します。 
@@ -135,28 +131,34 @@ TikTok の Segment API レート制限では、1秒あたり50件のクエリと
 一括フラッシャーと13時間の再試行のために、同期されたユーザーとエラーが発生したユーザーの指標のレポートに遅延が発生することに注意してください。
 {% endalert %}
 
-## トラブルシューティング
+## よくある質問
 
-{% details 無効なトークンエラーが発生した場合には次に何をすべきですか？ %}
+### 
+
 TikTokパートナーページでTikTokアカウントを切断して再接続できます。TikTokビジネスセンターの管理者に、同期したい広告アカウントに対する適切な権限があることを確認してください。
-{% enddetails %}
 
-{% details キャンバスを起動できないのはなぜですか? %}
-TikTokパートナーページでTikTokアカウントをBrazeに正常に接続してください。
-広告アカウントを選択し、新しいオーディエンスの名前を入力し、一致するフィールドを選択したことを確認してください。
-{% enddetails %}
+### 
 
-{% details ユーザーをTikTokに渡した後、ユーザーが一致したかどうかを確認するにはどうすればよいですか？ %}
+
+
+### 
+
 TikTokはデータプライバシーポリシーに関するこの情報を提供していません。
-{% enddetails %}
 
-{% details 私のオーディエンスがTikTokに表示されるまでどのくらいかかりますか？ %}
+### 
+
 オーディエンスのサイズは、TikTokの広告マネージャーのオーディエンスページで24〜48時間以内に更新されます。
-{% enddetails %}
 
-{% details 私のTikTok広告アカウントで持てる最大のオーディエンス数はどれくらいですか？ %}
-400
-{% enddetails %}
+### 
+
+
+
+### 
+
+ 
+
+
+
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
 [2]: {% image_buster /assets/img/tiktok/tiktok2.png %}
