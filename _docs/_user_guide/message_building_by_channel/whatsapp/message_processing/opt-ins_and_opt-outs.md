@@ -102,7 +102,7 @@ You can set up a campaign or Canvas that allows users who message in particular 
 
 When selecting keyword triggers, include words like "Stop" or "No Message". If you choose this method, ensure your customers know your opt-out words. For example, after receiving the initial opt-in, include a follow-up response like "To opt-out of these messages, message "Stop" at any time." 
 
-![Message step to send a WhatsApp inbound message where the message body is "STOP" or "NO MESSAGE".][7]
+![Message step to send a WhatsApp inbound message where the message body is "STOP" or "NO MESSAGE".][7]{: style="max-width:85%;"}
 
 #### Step 2: Update the user's profile
 
@@ -136,7 +136,7 @@ The User Update step avoids race conditions because the user won't progress to t
 For "STOP" messages, invert the message step confirming the opt-out and the User Update step. If you don't, the user will be opted out of the subscription group first, and then will not be eligible to receive the confirmation message.
 {% endalert %}
 
-![A WhatsApp message step where the message body is "START".][13]{: style="max-width:70%;"}
+![A WhatsApp message step where the message body is "START".][13]{: style="max-width:80%;"}
 
 {: start="2"}
 2. In the Canvas, create a **Set Up User Update** step and for **Action** select **Advanced JSON Editor**. <br><br>![User Update step with an action of "Advanced JSON Editor".][14]<br><br>
@@ -160,7 +160,7 @@ For "STOP" messages, invert the message step confirming the opt-out and the User
 {% endraw %}
 
 {: start="4"}
-4. Add a subsequent WhatsApp message step. <br><br>![User Update step in a Canvas.][15]{: style="max-width:20%;"}
+4. Add a subsequent WhatsApp message step. <br><br>![User Update step in a Canvas.][15]{: style="max-width:25%;"}
 
 #### Considerations
 
@@ -174,8 +174,8 @@ A Webhook campaign can trigger entry into a second campaign after adding the use
 You do not need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
 {% endalert %}
 
-1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![WhatsApp message step where the message body is "START".][13]{: style="max-width:70%;"}<br><br>
-2. In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text**.<br><br>![Message step for a webhook.][16]<br><br>
+1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![WhatsApp message step where the message body is "START".][13]{: style="max-width:85%;"}<br><br>
+2. In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text**.<br><br>![Message step for a webhook.][16]{: style="max-width:85%;"}<br><br>
 3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![Webhook URL field under the "Compose Webhook" section.][19]{: style="max-width:70%;"}<br><br>
 4. In the raw text, enter the following JSON payload and replace `XXXXXXXXXXX` with your subscription group ID. You will need to replace the `campaign_id` after creating your second campaign.
 

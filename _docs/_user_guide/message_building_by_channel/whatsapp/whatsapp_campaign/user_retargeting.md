@@ -29,7 +29,7 @@ Users can be filtered by when they last received a WhatsApp or if they have rece
 
 **Filter by received messages from WhatsApp campaign**<br>
 Filters users who have received a message from a specific WhatsApp campaign. With this filter, you also have the option to filter off those that have not received messages from a WhatsApp campaign.<br>
-![Filter for receiving a WhatsApp campaign.][4]
+![Filter for receiving a WhatsApp campaign.][4]{: style="max-width:75%"}
 
 ### Filter by engagement
 Retarget users who have, or have not, read a WhatsApp campaign or Canvas step. 
@@ -39,19 +39,19 @@ Retarget users who have, or have not, read a WhatsApp campaign or Canvas step.
 2. Select **read WhatsApp message**.
 3. Choose the desired campaign.<br>
 
-![Filter for having read a WhatsApp message.][3]
+![Filter for having read a WhatsApp message.][3]{: style="max-width:75%"}
 
 **Retarget users who have opened/read a specific Canvas Step**
 1. Create a segment using the **Clicked/Opened Step** filter.
 2. Select **read WhatsApp message**.
 3. Choose the desired Canvas and Canvas steps.<br>
 
-![Filter for reading a WhatsApp step.][2]
+![Filter for reading a WhatsApp step.][2]{: style="max-width:75%"}
 
 **Filter by campaign or Canvas attribution**<br>
 Filter for users who have opened/read to a specific WhatsApp campaign or Canvas component or tag.
 
-![Filter for opening a specific WhatsApp message.][1]
+![Filter for opening a specific WhatsApp message.][1]{: style="max-width:75%"}
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %} 
