@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Storyly](https://www.storyly.io/) は、アプリや Web サイトにストーリーをもたらす軽量 SDK です。直感的なデザインスタジオ、洞察に満ちた分析、シームレスな接続性を備えたStorylyは、視聴者の体験を豊かにする強力なツールだ。 
 
-
+_この統合はStorylyによって維持されている。_
 
 ## 統合について
 
