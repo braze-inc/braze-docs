@@ -3,7 +3,7 @@ nav_title: Markenrichtlinien
 article_title: Markenrichtlinien
 page_order: 1
 page_type: reference
-description: "Dieser referenzierte Artikel beschreibt, wie Sie mit dem KI-Texterstellungsassistenten Marken-Buidelines erstellen, verwalten und verwenden, die Sie auf Ihre Nachrichten anwenden können."
+description: "Dieser referenzierte Artikel beschreibt, wie Sie Markenrichtlinien erstellen, verwalten und verwenden, die Sie mit dem KI Copywriting Assistant auf Ihre Nachrichten anwenden können."
 ---
 
 # Markenrichtlinien
