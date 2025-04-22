@@ -30,7 +30,7 @@ Braze では、[キャンペーン](#campaigns)または[キャンバス](#canva
 定期的なキャンペーンや AB テストキャンペーンをスケジュールすることも (予定されているイベントについてユーザーのリストに通知するなど)、ユーザーのアクションに応じて自動的に送信する (ニュースレターを購読したときにメールを送信するなど) こともできます。[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)の詳細をご覧ください。
 {% endalert %}
 
-作成するキャンペーンの種類にかかわらず、キャンペーンはユーザーのニーズに耳を傾け、思慮深くパーソナライズされた対応を提供できます。
+作成するキャンペーンの種類にかかわらず、キャンペーンはユーザーのニーズに耳を傾け、思慮深くパーソナライズされた対応を提供できます。キャンペーンを送信したら、[組み込みの分析ツール]({{site.baseurl}}/user_guide/analytics/reporting/)を使用して、キャンペーンのパフォーマンスと、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)に基づいてコンバージョンしたユーザーの数を確認します。
 
 Braze のキャンペーンの詳細については、以下の追加リソースをご覧ください。
 
