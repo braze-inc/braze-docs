@@ -32,7 +32,7 @@ noindex: true
 
 ## ステップ1:APNトークンをアップロードする。
 
-{% multi_lang_include 開発者guide/swift/apns_token.md %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## ステップ2: プッシュ機能を有効にする
 
