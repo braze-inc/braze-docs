@@ -16,9 +16,9 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 ### Paso 1: Elige tu plantilla
 
-Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico con página de confirmación** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
+ Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con página de confirmación.][img1]
+
 
 ### Paso 2: Configura tus estilos de mensaje
 
