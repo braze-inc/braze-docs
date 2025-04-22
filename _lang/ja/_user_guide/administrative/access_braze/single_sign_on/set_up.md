@@ -22,10 +22,6 @@ description: "この記事では、Braze アカウントの SAML シングルサ
 | RelayState APIキー | **Settings（設定）**＞**API Keys（APIキー**）に進み、`sso.saml.login` 権限を持つAPIキーを作成し、生成されたAPIキーをIdP内の`RelayState` パラメータとして入力する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
-{% endalert %}
-
 ## SAML SSOの設定
 
 ### ステップ 1: ID プロバイダーの設定
@@ -52,10 +48,6 @@ ID プロバイダーでの Braze の設定が完了すると、Braze アカウ�
 
 アカウントマネージャーがアカウントの SAML SSO をオンにしたら、[**設定**] > [**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを [**オン**] に切り替えます。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
-{% endalert %}
-
 そのページで、次の項目を入力します。
 
 | 必要条件 | 詳細 |
@@ -80,6 +72,16 @@ ID プロバイダーでの Braze の設定が完了すると、Braze アカウ�
 セキュリティ設定を保存してログアウトします。次に、ID プロバイダーにサインインし直します。
 
 ![SSOを有効にしたダッシュボードのログイン画面]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## 
+
+1. 
+2. 
+3. 
+4. <br><br><br><br>
+5. 
+6. 
+7. 
 
 ## SSO の動作
 
@@ -119,3 +121,56 @@ Brazeのダッシュボードに行き、SSOを使ってサインインを試み
 [**エクスポート**] を選択します。**Select Cookie-filter profile "**で "**None "**を選択する。次に [**エクスポート**] を選択します。これでJSONファイルが生成され、Brazeサポートに送信してさらにトラブルシューティングを行うことができる。
 
 ![[Export SAML-trace preferences] メニューで [None] オプションが選択されている。]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## 
+
+### 
+
+
+
+
+
+
+- 
+- 
+- 
+
+### 
+
+
+
+### 
+
+
+
+### 
+
+
+
+ 
+
+
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### 
+
+
+
+### 
+
+ 
+
+### 
+
+ 
+
+
+
+### 
+
+
