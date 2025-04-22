@@ -25,7 +25,7 @@ In Braze, select **Audience** > **User Search**.
 
 Enter a unique identifier, such as an email address or phone number, for the duplicate profile, then select **Search**.
 
-![The "User Search" page in the Braze dashboard with an email entered in the search bar.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![The "User Search" page in the Braze dashboard.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### Step 2: Merge duplicates
 

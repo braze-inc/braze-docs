@@ -20,7 +20,7 @@ Catalog segments use SQL to join data from catalogs and data from custom events 
 
 ## Creating a catalog segment
 
-1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select the template **Catalog segment**. <br>![Modal with "Catalog segment" selected as the template to create.][1]{: style="max-width:70%" }
+1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events or purchases.][1]{: style="max-width:70%" }
 
 {: start="2"}
 2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.][2]{: style="max-width:70%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
