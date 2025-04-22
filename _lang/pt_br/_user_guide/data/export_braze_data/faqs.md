@@ -29,4 +29,4 @@ Este é o comportamento esperado para espaços de trabalho com muitos usuários.
 
 ### Por que vejo duplicatas quando exporto usuários por segmento por meio da API REST?
 
-Essa é uma ocorrência muito rara causada pela arquitetura subjacente do provedor de banco de dados. Os duplicados são limpos toda semana; no entanto, na maioria das semanas, nenhum duplicado é removido.
+ Os duplicados são limpos toda semana; no entanto, na maioria das semanas, nenhum duplicado é removido.
