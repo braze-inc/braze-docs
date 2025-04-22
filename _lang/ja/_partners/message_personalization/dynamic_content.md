@@ -41,8 +41,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
@@ -53,4 +51,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/seen
 - name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: ""
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
+- name: ""
+  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+- name: ""
+  url: /docs/_partners/message_personalization/dynamic_content/constructor/
 ---
