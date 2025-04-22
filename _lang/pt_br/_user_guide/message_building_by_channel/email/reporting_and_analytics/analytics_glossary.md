@@ -177,7 +177,9 @@ Contagem
 Contagem
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, normalmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de receptor para receptor.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, normalmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de receptor para receptor. 
+
+ 
 
 <span class="calculation-line">Cálculo: Contagem </span>
 
