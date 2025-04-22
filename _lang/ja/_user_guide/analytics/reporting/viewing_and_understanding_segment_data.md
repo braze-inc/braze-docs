@@ -79,7 +79,7 @@ Braze ダッシュボードの [**セグメント**] ページには、すべて
 
 [**過去のメンバーシップ**] セクションには、セグメントのサイズの経時的な変化が表示されます。セグメントのメンバーシップに期間のフィルターを適用するには、ドロップダウンを使用します。
 
-
+セグメンテーションのメンバーシップとサイズのモニタリングについては、「[セグメンテーションのサイズを測定する]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/)」を参照のこと。
 
 ### ユーザープレビュー
 
@@ -144,3 +144,4 @@ Braze ダッシュボードの [**セグメント**] ページには、すべて
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
+[11]:{% image_buster /assets/img_archive/variables_panel.png %}
