@@ -2,8 +2,7 @@
 nav_title: 세그먼트 확장
 article_title: 세그먼트 확장
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "이 도움말 문서에서는 세그먼트 확장 기능을 설정하고 사용하여 세분화 기능을 향상시키는 방법을 안내합니다."
 tool: Segments
 ---
@@ -32,10 +31,6 @@ To create a Segment Extension, you will create a filter to refine a segment of y
 
 **대상** > **세그먼트 확장으로** 이동합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **인게이지먼트** > **세그먼트** > **세그먼트 확장**에서 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
 From the Segment Extensions table, select  **Create New Extension**, then select your Segment Extension creation experience:
 
 - **단순 확장:** 안내 양식을 사용하여 단일 이벤트에 초점을 맞춘 세그먼트 확장을 생성합니다.
@@ -44,7 +39,7 @@ SQL을 사용하고 싶지 않을 때 가장 적합합니다.
 - **증분 새로 고침:** 최근 2일간의 데이터를 자동으로 새로 고치거나 필요에 따라 수동으로 새로 고치는 Snowflake SQL 세그먼트를 작성합니다. 정확성과 비용 효율성의 균형을 맞추는 데 가장 적합합니다.
 - **전체 새로 고침:** 수동으로 새로 고칠 때 전체 오디언스를 다시 계산하는 Snowflake SQL 세그먼트를 작성합니다. 오디언스를 위한 완벽한 최신 보기가 필요한 경우에 가장 적합합니다.
 
-![""][20]{: style="max-width:50%"}
+
 
 SQL을 사용하는 경험을 선택하는 경우 자세한 내용은 [SQL 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)을 참조하세요.
 
@@ -62,7 +57,7 @@ SQL을 사용하는 경험을 선택하는 경우 자세한 내용은 [SQL 세�
 
 730일 이상의 이벤트 데이터를 기반으로 **세그먼트**에 있는 다른 필터를 사용하여 세그먼테이션을 수행할 수 있습니다. 기간을 선택할 때 상대적인 날짜 범위(예: 지난 X일), 시작 날짜, 종료 날짜 또는 정확한 날짜 범위(날짜 A~날짜 B)를 지정할 수 있습니다.
 
-![""][3]
+
 
 #### 이벤트 속성 세분화
 
@@ -131,45 +126,74 @@ Braze will notify the company contact and creator of the extension if this setti
 - 특정 세그먼트 확장에 대해 한 번에 하나의 새로고침만 발생할 수 있습니다. 기존 새로고침이 이미 처리 중일 때 새 새로고침이 시작되면, Braze는 새 새로고침 요청을 취소하고 진행 중인 처리를 계속합니다.
 {% endalert %}
 
+#### 
+
+ 
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+ 
+
+
+
 ### 5단계: 세그먼트 확장 저장
 
 Once you select **Save**, your extension will begin processing. 확장 프로그램을 생성하는 데 걸리는 시간은 사용자 수, 캡처하는 커스텀 이벤트 또는 구매 이벤트의 수, 기록에서 되돌아보는 일수에 따라 달라집니다.
 
 확장 프로그램이 처리되는 동안 확장 프로그램 이름 옆에 작은 애니메이션이 표시되고 확장 프로그램 목록의 **마지막 처리된** 열에 "처리 중"이라는 단어가 표시됩니다. 처리 중일 때는 확장자를 편집할 수 없다는 점에 유의하세요.
 
-![""][5]
+
 
 ### 6단계: 세그먼트에서 확장 프로그램 사용
 
 확장을 생성한 후에는 세그먼트를 만들거나 캠페인 또는 캔버스의 오디언스를 정의할 때 필터로 사용할 수 있습니다. 먼저 **사용자 속성** 섹션의 필터 목록에서 **Braze 세그먼트 확장**을 선택합니다.
 
-![""][6]
+
 
 Braze 세그먼트 확장자 필터 목록에서 이 세그먼트에 포함하거나 제외할 확장자를 선택합니다.
 
-![""][7]
+
 
 To view the extension criteria, select **View Extension Details** to show the details in a modal popup.
 
-![""][8]{: style="max-width:70%;"}
+
 
 이제 평소와 같이 [세그먼트 만들기][11]를 진행할 수 있습니다.
 
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+## 
+
+### 
+
+  
+
+ 
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
