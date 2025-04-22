@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Sheetlabs][1] は、スプレッドシートを、強力で明確に文書化された API に変換できるプラットフォームです。Google SheetsやExcelからデータをインポートしてAPI化し、そのAPIをBrazeなどの他のアプリケーションで使うことができる。
 
-
+_この統合はSheetlabsによって維持されている。_
 
 ## 統合について
 
