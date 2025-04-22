@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adikteev](https://www.adikteev.com/churn-prediction) は、解約予測とサービス全般を取り扱うアプリリターゲティングを組み合わせたユーザーリテンションエンジンです。
 
+
+
+## 統合について
+
 Braze と Adikteev の統合により、Braze CRM キャンペーン内で Adikteev の解約予測技術を活用し、リスクの高いユーザーセグメントを優先的にターゲットにすることで、ユーザーリテンションを高めることができます。
 
 ## 前提条件
@@ -34,7 +38,7 @@ Braze と Adikteev の統合により、Braze CRM キャンペーン内で Adikt
 {% tab メッセージ・ターゲティング %}
 受信者の解約リスクに基づいてBrazeメッセージングキャンペーンをカスタマイズ。
 
-![Adikteev により送信されるカスタム属性をキャンペーンターゲティングフィルターとして使用する例。]({% image_buster /assets/img/adikteev/campaign.png %})
+
 {% endtab %}
 {% endtabs %}
 
@@ -80,3 +84,4 @@ Adikteev から Braze に送信されるペイロードはカスタマイズ可�
 ## サポートとトラブルシューティング
 
 統合に関するご質問や、ユースケースに関するサポートについては、Adikteev アカウントマネージャーにお問い合わせください。
+
