@@ -27,7 +27,7 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 
 ![[中断したところから再開] セクションのキャンバスの下書き、アクティブなセグメント、およびキャンペーンの下書き。][6]
 
-## 
+## パフォーマンスの概要
 
 デフォルトでは、**Performance overview** セクションには、すべてのアプリおよびサイトの過去30 日間のデータが表示されます。指標はすべて、選択した日付範囲に基づいて計算されます。
 
@@ -58,7 +58,7 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 ### 生涯セッション数
 
 *生涯セッション数*は、Braze が統合以降に記録したセッションの総数です。簡潔に言うと、セッションとはユーザーによるアプリの使用や、Web サイトの表示が行われている個々の期間です。プラットフォーム別のより正確なセッションの定義については、対応する
-
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift)、[Android、FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android)、または [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) のセッション追跡の開発者向け記事を参照してください。
 
 ### 1 か月あたりのアクティブユーザー数
 
