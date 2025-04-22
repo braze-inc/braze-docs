@@ -16,10 +16,10 @@ description: "Braze SDK で位置を追跡する方法について説明しま�
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
+guide/swift/analytics/tracking_location.md developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/tracking_location.md %}
+guide/web/analytics/tracking_location.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
