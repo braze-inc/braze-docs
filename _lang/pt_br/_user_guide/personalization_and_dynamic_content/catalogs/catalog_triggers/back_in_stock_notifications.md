@@ -13,11 +13,11 @@ Quando um usuário dispara um evento personalizado para um item, nós o inscreve
 
 ## Como funcionam as notificações de estoque em espera
 
-Você configurará um evento personalizado para usar como um evento de inscrição, como um evento `product_clicked`. Este evento deve conter uma propriedade do ID do item (IDs dos itens do catálogo). Sugerimos que você inclua um nome de catálogo, mas isso não é obrigatório. Você também fornecerá o nome de um campo de quantidade de estoque, que deve ser um tipo de dado numérico.
+Você configurará um evento personalizado para usar como um evento de inscrição, como um evento `product_clicked`. Este evento deve conter uma propriedade do ID do item (IDs dos itens do catálogo). Sugerimos que você inclua um nome de catálogo, mas isso não é obrigatório. Você também fornecerá o nome de um campo de quantidade de estoque, que deve ser um tipo de dado numérico. 
 
-Quando um item tiver uma quantidade de estoque que atenda à sua regra de estoque, procuraremos todos os seus usuários que estão inscritos nesse item (usuários que fizeram o evento de gatilho) e enviaremos um evento personalizado da Braze que poderá ser usado para disparar uma campanha ou canva.
+ Quando um item tiver uma quantidade de estoque que atenda à sua regra de estoque, procuraremos todos os seus usuários que estão inscritos nesse item (usuários que fizeram o evento de gatilho) e enviaremos um evento personalizado da Braze que poderá ser usado para disparar uma campanha ou canva.
 
-As propriedades do evento são enviadas junto com seu usuário, para que você possa fazer um modelo com os detalhes do item na campanha ou canva que envia!
+
 
 ## Configurando notificações de estoque em espera
 
@@ -50,8 +50,8 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
     }
     ```
 {% alert note %}
-Os disparadores de queda de preço e de volta ao estoque usam o mesmo evento para inscrever o usuário na notificação, portanto, é possível usar a matriz `type` para definir notificações de queda de preço e de volta ao estoque no mesmo evento.
-{% endalert %}
+ 
+
 
 {: start="4"}
 4\. Selecione **Salvar** e continue para a página de **Configurações** do catálogo.
