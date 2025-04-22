@@ -100,7 +100,7 @@ Você pode inserir variáveis pré-formatadas com padrões por meio do modal **A
 
 O modal inserirá o Liquid com o valor padrão especificado no ponto em que o cursor estava. O ponto de inserção também é especificado pela caixa de prévia, que tem o texto antes e depois. Se um bloco de texto for destacado, o texto destacado será substituído.
 
-![Um GIF do modal Add Personalization que mostra o usuário inserindo "fellow traveler" como um valor padrão e o modal substituindo o texto destacado "name" no criador pelo snippet do Liquid.][45]
+
 
 {% endraw %}
 
