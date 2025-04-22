@@ -25,6 +25,14 @@ Les campagnes déclenchées par l'API dédupliqueront ou enverront des messages 
 - **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l'objet `recipients`, l'e-mail sera envoyé deux fois.
 - **Scénario 3 : E-mails dupliqués en raison d'identifiants utilisateur en double dans l'objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
 
+### 
+
+ 
+
+ 
+
+  
+
 ### Les mises à jour de mes paramètres de messagerie sortante s'appliqueront-elles rétroactivement ?
 
 Non. Les mises à jour des paramètres de messagerie sortante n'affectent pas rétroactivement les envois existants. Par exemple, changer votre nom d'affichage par défaut dans les paramètres de messagerie ne remplacera pas automatiquement le nom d'affichage par défaut existant dans vos campagnes actives ou vos Canvases. 
@@ -59,6 +67,12 @@ Vous pourriez constater plus de clics que d’ouvertures pour une des raisons su
 - Les utilisateurs effectuent plusieurs clics sur le corps de l’e-mail pour une seule ouverture.
 - Les utilisateurs cliquent sur certains liens de l’e-mail dans le panneau de prévisualisation sur leur téléphone. Dans ce cas, Braze enregistre que cet e-mail a été cliqué et pas ouvert.
 - Les utilisateurs ouvrent à nouveau un e-mail qu’ils ont prévisualisé auparavant.
+
+### 
+
+ 
+- 
+- 
 
 ### Quels sont les risques potentiels de déclencher des clics sur le serveur ?
 
