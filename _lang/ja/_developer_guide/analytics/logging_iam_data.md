@@ -12,22 +12,22 @@ description: "Braze SDKを通してアプリ内メッセージ（IAM）データ
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include 開発者guide/web/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/web/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-{% multi_lang_include 開発者guide/flutter/analytics/logging_iam_data.md %}
+guide/flutter/analytics/logging_iam_data.md developer_ %}
 {% endsdktab %}
 
 {% sdktab react native %}
-{% multi_lang_include 開発者guide/react_native/analytics/logging_iam_data.md %}
+guide/react_native/analytics/logging_iam_data.md developer_ %}
 {% endsdktab %}
 
 {% sdktab roku %}
-{% multi_lang_include 開発者guide/roku/analytics/logging_iam_data.md %}
+guide/roku/analytics/logging_iam_data.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include 開発者guide/unity/analytics/logging_iam_data.md %}
+guide/unity/analytics/logging_iam_data.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
