@@ -25,6 +25,14 @@ As campanhas disparadas pela API desduplicarão ou enviarão desduplicações, d
 - **Cenário 2: Envio de e-mails duplicados em diferentes `user_ids` dentro do objeto de destinatários:** Se o mesmo e-mail aparecer em vários `External_user_IDs` referenciados pelo objeto `recipients``, o e-mail será enviado duas vezes.
 - **Cenário 3: Envio de e-mails duplicados devido a user_ids duplicados no objeto de destinatários:** Se você tentar adicionar o mesmo perfil de usuário duas vezes, apenas um dos perfis receberá o e-mail.
 
+### 
+
+ 
+
+ 
+
+  
+
 ### As atualizações das minhas configurações de envio de e-mail serão aplicadas retroativamente?
 
 Não. As atualizações feitas nas configurações de e-mail de saída não afetam retroativamente os envios existentes. Por exemplo, a alteração de seu nome de exibição padrão nas configurações de e-mail não substituirá automaticamente o nome de exibição padrão existente em suas campanhas ativas ou Canvas. 
@@ -59,6 +67,12 @@ Você pode estar vendo mais cliques do que aberturas por qualquer um dos seguint
 - Os usuários estão realizando vários cliques no corpo do e-mail em uma única abertura.
 - Os usuários clicam em alguns links de e-mail no painel de visualização de seus telefones. Nesse caso, a Braze registra esse e-mail como tendo sido clicado, mas não aberto.
 - Os usuários reabrem um e-mail cuja prévia foi feita.
+
+### 
+
+ 
+- 
+- 
 
 ### Quais são os possíveis riscos de disparar cliques no servidor?
 
