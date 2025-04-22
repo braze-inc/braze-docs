@@ -10,7 +10,7 @@ description: "Braze のグローバル検索について学習しましょう。
 
 検索バーを使用して、Braze ダッシュボード内で作業やその他の情報を検索できます。検索バーは Braze ダッシュボードの最上部にあります。検索バーをクリックするか、Windows の場合は <kbd>Ctrl</kbd>+<kbd>K</kbd> キー、Mac の場合は <kbd>⌘</kbd>+<kbd>K</kbd> を押すと、検索バーに直接ジャンプします。
 
-![][3]
+
 
 ## 検索できる項目
 
@@ -66,11 +66,13 @@ table td {
 
 検索メニューから、最近アクセスしたコンテンツに再度アクセスできます。検索インターフェイスに、Braze プラットフォーム全体にわたって操作したアイテムを含め、最近開いた結果が検索バーの下に表示されます。これにより、以前に表示したページ、キャンペーン、キャンバス、セグメント、またはメールテンプレートに戻ることができるため、少ないクリック回数で、中断したところから再開できます。
 
-![][1]
+
 
 ### 名前が変更されたページの検索
 
-検索では、[更新されたナビゲーション]({{site.baseurl}}/navigation)で名前が変更されたページの同義語が認識されます。例えば、「Currents」を検索すると、そのページの名前が変更されたため、「データのエクスポート」が表示されます。
+例えば、「Currents」を検索すると、そのページの名前が変更されたため、「データのエクスポート」が表示されます。
+
+
 
 <!---
 
@@ -78,7 +80,7 @@ table td {
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
-![][2]
+![][X]
 
 --->
 
@@ -93,7 +95,8 @@ Search for channels to see quick create options among your top 10 results. For e
 Braze で作業に名前を付けるときに絵文字を使用している場合、絵文字を検索できます。絵文字を検索クエリとして使用できます。😎
 
 
-[1]: {% image_buster /assets/img/global_search/global_search.png %}
-[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
-[3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}
+
+
+
+
+
