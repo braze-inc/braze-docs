@@ -14,27 +14,27 @@ description: "Este artigo de referência apresenta uma visão geral do resultado
 
 ## Interromper sua campanha
 
-Para interromper uma campanha, abra a página **Detalhes da campanha** e selecione o botão **Interromper campanha** no canto inferior direito da página. Quando uma campanha é interrompida:
-- O envio de mensagens programadas para serem enviadas será cancelado
-- Os Testes A/B em que o teste inicial já foi enviado serão permanentemente cancelados
-- Os eventos para mensagens que já foram enviadas (por exemplo, cliques abertos) ainda serão rastreados
-- As campanhas podem ser reiniciadas clicando em **Resume**
+ Quando uma campanha é interrompida:
 
-Uma vez retomada, essa campanha continuará enviando mensagens e Testes A/B, mas as mensagens perdidas não serão reenviadas ou reagendadas.
+- 
+- 
+- 
+
+ 
 
 ## Campanhas disparadas
 
-Todas as alterações nas campanhas de entrega baseada em ação e nas campanhas de entrega disparada por API entram em vigor imediatamente para envios futuros.
+ 
 
-Se essas campanhas tiverem sido disparadas, mas ainda não tiverem sido enviadas (por exemplo, uma campanha de entrega baseada em ação com uma postergação de 1 dia é editada durante o período de 1 dia de postergação), consulte a seguinte orientação para campanhas programadas.
 
-## Campanhas programadas
+
+### Campanhas programadas
 
 Se precisar fazer alterações em uma campanha após o lançamento, observe os seguintes itens ao editar sua campanha para verificar se as alterações têm os efeitos desejados.
 
 ### Conteúdo das mensagens
 
-Todas as alterações no conteúdo da mensagem (incluindo títulos, corpos, imagens etc.) entram em vigor imediatamente ao serem salvas para todos os envios de mensagens futuros. Não é possível alterar o conteúdo das mensagens que já foram enviadas.
+ 
 
 ### Programação e público
 
@@ -55,3 +55,27 @@ Se você precisar que as alterações entrem em vigor imediatamente, faça o seg
 {% alert important %}
 Isso redefine a elegibilidade para as pessoas que já receberam a campanha original, portanto, talvez seja necessário filtrar a campanha duplicada para as pessoas que não receberam a original.
 {% endalert %}
+
+## 
+
+ 
+
+
+ 
+{% endalert %}
+
+
+
+1. 
+2. 
+3.  
+
+
+
+ 
+
+
+
+### 
+
+
