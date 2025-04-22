@@ -2,7 +2,7 @@
 
 Braze SDK には、コンテンツカードを使い始めるためのデフォルトのカードフィードが含まれています。カードフィードを表示するには、`braze.launchContentCards()` メソッドを使用できます。Braze SDK に含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードの分析トラッキング、却下、レンダリングをすべて処理します。
 
-{% multi_lang_include developer_guide/prerequisites/flutter.md %}
+guide/prerequisites/flutter.md developer_ %}
 
 ## カードメソッド
 
