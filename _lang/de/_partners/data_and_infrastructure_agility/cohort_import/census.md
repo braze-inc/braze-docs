@@ -17,7 +17,7 @@ search_tag: Partner
 
 Um Census in die Census-Plattform zu integrieren, navigieren Sie zum Tab **Verbindungen** und wählen Sie **Neues Ziel**, um eine neue Braze Serviceverbindung zu erstellen.
 
-In der daraufhin angezeigten Eingabeaufforderung geben Sie dieser Verbindung einen Namen und die URL des Braze-Endpunkts, den REST-API-Schlüssel von Braze und den Datenimport-Schlüssel an. Der Datenimport-Schlüssel ist für die Synchronisierung von Kohorten erforderlich und kann in Braze unter **Partnerintegrationen** > **Technologiepartner** > Census gefunden werden.
+In der daraufhin angezeigten Eingabeaufforderung geben Sie dieser Verbindung einen Namen und die URL des Braze-Endpunkts, den REST-API-Schlüssel von Braze und den Datenimport-Schlüssel an. Der Datenimport-Schlüssel ist für die Synchronisierung von Kohorten erforderlich und kann in Braze unter **Partnerintegrationen** > **Technologiepartner** > **Census gefunden werden**.
 
 ![][8]{: style="max-width:60%;"}
 
