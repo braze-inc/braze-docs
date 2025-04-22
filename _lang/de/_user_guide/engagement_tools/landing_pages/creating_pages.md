@@ -71,19 +71,19 @@ Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen ü
 | Block Typ     | Beschreibung |
 |---------------|-------------|
 | E-Mail-Erfassung | Ein Formularfeld für E-Mail-Adressen. Nach der Übermittlung wird die E-Mail Adresse dem Profil des Nutzers:in in Braze hinzugefügt. |
-| Erfassung von Telefonnummern | Ein Formularfeld für Telefonnummern. Nach dem Absenden ist der Nutzer:in Ihrer SMS- oder Whatsapp-Abo-Gruppe angemeldet. |
+| Erfassung von Telefonnummern | Ein Formularfeld für Telefonnummern. Nach dem Absenden ist der Nutzer:in Ihrer SMS- oder WhatsApp-Abo-Gruppe angemeldet. |
 | Eingabefeld   | Ein Formularfeld, das Standardattribute (z.B. Vor- und Nachname) oder einen angepassten Attribut String Ihrer Wahl unterstützt. |
 | Dropdown      | Nutzer:innen können einen Artikel aus einer vordefinierten Liste auswählen. Sie können der Liste beliebige angepasste Attribute Strings hinzufügen. |
 | Kontrollkästchen      | Wenn ein Nutzer:innen das Kästchen markiert, wird das Attribut des Blocks auf `true` gesetzt. Wenn es nicht markiert ist, wird sein Attribut auf `false` gesetzt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Nachdem Sie eine Landing Page mit einem Formular erstellt haben, sollten Sie den [Liquid-Tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) der [Landing Page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) in Ihre Nachricht einbetten. Mit diesem Tag kann Braze bestehende Nutzer:innen-Profile automatisch identifizieren und aktualisieren, wenn sie das Formular abschicken.
+Nachdem Sie eine Landing Page mit einem Formular erstellt haben, sollten Sie den [Liquid-Tag der Landing Page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) in Ihre Nachricht einbetten. Mit diesem Tag kann Braze bestehende Nutzer:innen-Profile automatisch identifizieren und aktualisieren, wenn sie das Formular abschicken.
 {% endalert %}
 
 #### Stile für Seitencontainer
 
-Auf der Registerkarte **Seitencontainer** können Sie Stile festlegen, die auf alle relevanten Komponentenblöcke in Ihrer Landing Page angewendet werden. Diese Stile werden überall auf Ihrer Seite verwendet, es sei denn, Sie setzen sie mit einem bestimmten Block außer Kraft.
+Auf dem Tab **Seitencontainer** können Sie Stile festlegen, die auf alle relevanten Komponentenblöcke Ihrer Landing Page angewendet werden. Diese Stile werden überall auf Ihrer Seite verwendet, es sei denn, Sie setzen sie mit einem bestimmten Block außer Kraft.
 
 Wir empfehlen, die Stile auf der Ebene der Seitencontainer einzurichten, bevor Sie die Stile auf der Blockebene anpassen. Sie können auch ein Hintergrundbild für die gesamte Seite hinzufügen.
 
