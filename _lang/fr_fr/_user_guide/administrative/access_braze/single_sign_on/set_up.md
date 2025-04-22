@@ -19,12 +19,8 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 |---|---|
 | URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Pour les domaines de l'Union européenne, l'URL ASC est `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Pour certains IdP, il peut également s'agir de l'URL de réponse, de l'URL de connexion, de l'URL d'audience ou de l'URI d'audience. |
 | Entity ID | `braze_dashboard` |
-| RelayState API key | Sélectionnez **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` dans votre IdP. |
+| RelayState API key | Sélectionnez **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` dans votre IdP.  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver vos clés API sous **Paramètres** dans **Console Développeur** > **Paramètres API**.
-{% endalert %}
 
 ## Configuration de l'authentification unique SAML (SSO)
 
@@ -52,10 +48,6 @@ Lorsque vous aurez fini de configurer Braze dans votre fournisseur d'identité, 
 
 Une fois que votre gestionnaire de compte a activé l'authentification SAML pour votre compte, allez dans **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et basculez la section SAML SSO sur **ON (activé)**.
 
-{% alert note %}
-Si vous utilisez l[a navigation plus ancienne]({{site.baseurl}}/navigation), sélectionnez l'icône de votre compte et allez dans **Paramètres de l'entreprise** > **Paramètres de sécurité** pour trouver la section SSO SAML.
-{% endalert %}
-
 Sur la même page, saisissez les données suivantes :
 
 | Condition | Détails |
@@ -80,6 +72,16 @@ Assurez-vous que votre certificat `x.509` respecte ce format lorsque vous l'ajou
 Enregistrez vos paramètres de sécurité et déconnectez-vous. Ensuite, reconnectez-vous avec votre fournisseur d'identité.
 
 ![Écran de connexion du tableau de bord avec authentification unique activée]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## 
+
+1. 
+2. 
+3. 
+4. <br><br><br><br>
+5. 
+6. 
+7. 
 
 ## Comportement d’authentification unique (SSO)
 
@@ -119,3 +121,56 @@ Rendez-vous sur votre tableau de bord de Braze et essayez de vous connecter à l
 Sélectionnez **Exporter**. Pour **Sélectionner un profil de filtrage des cookies**, sélectionnez **Aucun.** Sélectionnez ensuite **Exporter**. Cela générera un fichier JSON que vous pourrez envoyer à l'assistance de Braze pour une résolution des problèmes plus poussée.
 
 ![Menu "Export SAML-trace preferences" avec l'option "None" sélectionnée.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## 
+
+### 
+
+  
+
+
+
+
+-  
+-  
+-  
+
+### 
+
+ 
+
+### 
+
+ 
+
+### 
+
+
+
+ 
+
+
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### 
+
+
+
+### 
+
+   
+
+### 
+
+ 
+
+
+
+### 
+
+ 
