@@ -16,7 +16,7 @@ search_tag: Partner
 
 > [Segment](https://segment.com) は、顧客データの収集、クリーンアップ、およびアクティブ化を支援する顧客データプラットフォームです。このリファレンス記事では、[Braze と Segment Engage](https://segment.com/docs/destinations/braze/#Engage) の接続について概説し、適切な実装と利用のための要件とプロセスを説明します。
 
-BrazeとSegmentの統合により、Segmentに組み込まれたオーディエンス・ビルダーである[Engageを使って](https://segment.com/docs/engage/)、様々なソースから収集したデータを基にユーザーのセグメントを作成することができる。これらのオーディエンスは、コホートとしてBrazeに同期されるか、[カスタム属性や]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) [カスタムイベントを通じて]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)ユーザープロファイルに示され、キャンペーンやキャンバスリターゲティングで使用するBrazeセグメントを作成するために使用できる。
+BrazeとSegmentの統合により、Segmentに組み込まれたオーディエンス・ビルダーである[Engageを使って](https://segment.com/docs/engage/)、様々なソースから収集したデータを基にユーザーのセグメントを作成することができる。これらのオーディエンスは、コホートとしてBrazeに同期されるか、[カスタム属性や]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) [カスタムイベントを通じて]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)ユーザープロファイルに示され、キャンペーンやキャンバスリターゲティングで使用するBrazeセグメントを作成するために使用できる。
 
 ## 前提条件
 
@@ -39,10 +39,6 @@ BrazeとSegmentの統合により、Segmentに組み込まれたオーディエ�
 ### ステップ2:コホートデータインポートキーをキャプチャする
 
 Brazeで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Segment**] を選択します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
 
 ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。
 
