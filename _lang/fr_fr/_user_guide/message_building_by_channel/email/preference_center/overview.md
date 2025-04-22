@@ -13,10 +13,6 @@ channel:
 
 Dans le tableau de bord de Braze, allez dans **Audience** > **Abonnements** > **Centre de préférences e-mail.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page est située dans **Utilisateurs** > **Groupes d'abonnement** > **Centre de préférences e-mail.**
-{% endalert %}
-
 C'est ici que vous pouvez gérer et visualiser chaque groupe d'abonnements. Chaque groupe d'abonnement que vous créez est ajouté à cette liste de centres de préférences. Vous pouvez créer plusieurs centres de préférence.
 
 {% alert important %}
@@ -38,10 +34,6 @@ L'utilisation de Liquid vous permet de retrouver les noms de vos groupes d'abonn
 | Utilisateur valide | Un utilisateur avec une adresse e-mail et un ID externe. |
 | Clé API générale avec des permissions de centre de préférence | Dans le tableau de bord de Braze, allez dans **Paramètres** > **Clés API** pour confirmer que vous avez accès à une clé API avec des autorisations de centre de préférences. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
-{% endalert %}
 
 ### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
 
@@ -125,3 +117,26 @@ Cette approche ne nécessite pas de paires de valeur de chaîne de requête inco
 Il est utilisé pour afficher le centre de préférences lorsque l'ancien Liquid {%raw%}`${preference_center_url}`{%endraw%} est utilisé, ce qui signifie que les étapes du canvas ou les modèles qui font référence à {%raw%}`${preference_center_url}` ou `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} ne fonctionneront pas. Ceci s'applique également aux messages envoyés précédemment qui comprenaient l'ancien Liquid ou "PreferenceCenterBrazeDefault" dans le message. 
 
 Si vous faites à nouveau référence à {%raw%}`${preference_center_url}`{%endraw%} dans un nouveau message, un centre de préférences nommé "PreferenceCenterBrazeDefault" sera à nouveau créé.
+
+### 
+
+  
+
+
+
+
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+
+
+### 
+
+
