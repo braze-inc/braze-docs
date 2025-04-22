@@ -41,7 +41,7 @@ Wenn Sie die Integration von Simon und Braze verwenden, sendet Simon bei jeder S
 Um die Braze-Integration zu nutzen, authentifizieren Sie zunächst Ihr Braze-Konto in Simon:
 
 1. Klicken Sie in der linken Navigation auf **Integrationen** und scrollen Sie dann zu Braze.
-2. Geben Sie Ihren Braze [REST API-Schlüssel][2] und die [URL][3] Ihres [Dashboards][3] ein.
+2. Geben Sie Ihren Braze [REST API-Schlüssel][2] und Ihre [Dashboard-URL][3] ein.
 3. Klicken Sie auf **Änderungen speichern**.
 
 Bei einer erfolgreichen Verbindung wird im Fenster **Verbunden** angezeigt.
