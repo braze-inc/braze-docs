@@ -10,7 +10,7 @@ description: "Aprenda a utilizar Variante ganadora o Variante personalizada al c
 
 Al [crear una prueba A/B][1] para campañas de correo electrónico, push, webhook, SMS y WhatsApp programadas para enviarse una vez, puede seleccionar una optimización. Hay dos opciones de optimización: **Variante Ganadora** y **Variante Personalizada**.
 
-![Opciones de optimización enumeradas en la sección Pruebas A/B al elegir tu audiencia objetivo. Hay tres opciones: Sin optimización, Variante ganadora y Variante personalizada. Variante personalizada seleccionada.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Opciones de optimización enumeradas en la sección Pruebas A/B al elegir tu audiencia objetivo. Hay tres opciones:  Variante personalizada seleccionada.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Ambas opciones funcionan enviando una prueba inicial a un porcentaje de su segmento objetivo. Una vez finalizada la prueba, se envía a los usuarios restantes la variante con mejores resultados (variante ganadora) o la variante con la que es más probable que interactúen (variante personalizada).
 
@@ -27,7 +27,7 @@ El envío de la Variante Ganadora es similar a una prueba A/B estándar. Los usu
 
 | Campo | Descripción |
 | --- | --- | 
-| Determinar variante ganadora | La métrica para la que optimizar. Elija entre *Aperturas Únicas* o *Clics* para correo electrónico, *Aperturas* para push, o *Tasa de Conversión Primaria* para todos los canales. Seleccionar *Aperturas* o *Clics* para determinar el ganador no afecta a lo que elija para los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) de la campaña. <br><br>Tenga en cuenta que si utiliza un grupo de control, los usuarios del grupo de control no pueden realizar *Aperturas* ni *Clics*, por lo que el rendimiento del grupo de control está garantizado en `0`. Como resultado, el grupo de control no puede ganar la prueba A/B. Sin embargo, es posible que aún desee utilizar un grupo de control para realizar un seguimiento de otras métricas para los usuarios que no reciben un mensaje. |
+| Determinar variante ganadora | La métrica para la que optimizar. Elija entre *Aperturas Únicas* o *Clics* para correo electrónico, *Aperturas* para push, o *Tasa de Conversión Primaria* para todos los canales.  <br><br>Tenga en cuenta que si utiliza un grupo de control, los usuarios del grupo de control no pueden realizar *Aperturas* ni *Clics*, por lo que el rendimiento del grupo de control está garantizado en `0`. Como resultado, el grupo de control no puede ganar la prueba A/B. Sin embargo, es posible que aún desee utilizar un grupo de control para realizar un seguimiento de otras métricas para los usuarios que no reciben un mensaje. |
 | Hora de envío de variante ganadora | La fecha y hora de envío de la variante ganadora. |
 | Si no se puede determinar una variante ganadora | Qué ocurre si ninguna variante gana por un margen estadísticamente significativo. Elija entre enviar de todos modos la variante con mejores resultados o finalizar la prueba y no enviar más mensajes. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
