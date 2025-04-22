@@ -33,7 +33,7 @@ SalesWings erlaubt es Marketing Teams und Marketing Operations Managern, Leads u
 {% tabs %}
 {% tab Lead Scoring %}
 
-SalesWings bietet Kund:innen von Braze [eine flexible Möglichkeit, Leads, Kontakte und Konten mit hochmodernen Lead Scoring-](https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs) und Lead Grading-Funktionen [zu qualifizieren](https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs). Alle Ihre Daten zur Lead-Qualifizierung werden nativ an Salesforce CRM und andere Systeme gepusht, in denen Sie Leads, Kontakte, Accounts und Opportunities verwalten und darüber berichten möchten.
+SalesWings bietet Kund:innen von Braze [eine flexible Möglichkeit, Leads, Kontakte und Konten mit hochmodernen Lead Scoring- und Lead Grading-Funktionen zu qualifizieren](https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs). Alle Ihre Daten zur Lead-Qualifizierung werden nativ an Salesforce CRM und andere Systeme gepusht, in denen Sie Leads, Kontakte, Accounts und Opportunities verwalten und darüber berichten möchten.
 
 ![Beispiel für ein einfaches Lead-Scoring-Modell mit Klick-nicht-Code in SalesWings]({% image_buster /assets/img/saleswings/example_lead_scoring_builder_braze_lead_scoring.png %})
 
@@ -85,7 +85,7 @@ _Ein Beispiel für ein Dashboard, das mit dem E-Mail- und Marketing-Engagement v
 ### Schritt 2: Installieren Sie Behavioral Tracking auf Ihrer Website oder App
 
 Derzeit haben Sie zwei Möglichkeiten, in SalesWings Verhaltensdaten für Lead Scoring und Insights zu sammeln:
-* [Setzen Sie das SalesWings Tracking JavaScript][5] auf den Websites und Apps [ein][5], auf denen Sie Leads verfolgen und identifizieren möchten.
+* [Setzen Sie das SalesWings Tracking JavaScript ein][5] auf den Websites und Apps, auf denen Sie Leads verfolgen und identifizieren möchten.
 * Senden Sie verhaltensbezogene Lead-Aktivitätsdaten (und Lead-Profil-Daten) über die SalesWings Integration mit Segment.com
 
 ### Schritt 3: Verbindung zwischen SalesWings und Braze
@@ -125,7 +125,7 @@ Sie können Nutzer:innen automatisch identifizieren, wenn sie auf eine trackbare
 
 Die Variable `braze_id` wird auf einen von Braze erzeugten Bezeichner der Nutzer:innen gesetzt und ist immer verfügbar. Die Variable `br_user_id` wird auf den Bezeichner des Nutzers in Ihrem System gesetzt und kann in bestimmten Szenarien fehlen (z.B. bei anonymen Nutzer:innen, die mit dem Braze SDK erstellt wurden). Wenn sowohl `braze_id` als auch `br_user_id` in einem Link verwendet werden, wird SalesWings nur den Parameter `braze_id` berücksichtigen.
 
-Für die Konfiguration und weitere Fehlerbehebungen wenden Sie sich bitte an das [SalesWings Team][1] für [Serviceleistungen][1]; Onboarding Support.
+Für die Konfiguration und weitere Fehlerbehebungen beim Onboarding Support wenden Sie sich bitte an das [SalesWings Team für Serviceleistungen][1].
 
 
 [1]: https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs
