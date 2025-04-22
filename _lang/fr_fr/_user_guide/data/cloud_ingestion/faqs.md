@@ -41,7 +41,9 @@ Le test de connexion est en cours d'exécution sur votre entrepôt de données, 
 
 ### Erreur de connexion à l'instance Snowflake : La demande entrante avec l'IP n'est pas autorisée à accéder à Snowflake
 
-Essayez d'ajouter les IP officielles de Braze à votre liste d'autorisation IP. Pour plus d'informations, reportez-vous à la section [Intégrations d'entrepôts de données]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Essayez d'ajouter les IP officielles de Braze à votre liste d'autorisation IP. 
+
+
 
 ### Erreur lors de l'exécution de SQL en raison de la configuration du client : 002003 (42S02): Erreur de compilation SQL : n'existe pas ou n'est pas autorisé
 
@@ -156,7 +158,7 @@ L'ordre de traitement n'est pas prévisible à 100%. Par exemple, s'il y a plusi
 
 ## Quelles sont les mesures de sécurité pour CDI ?
 
-### Les mesures de Braze
+### 
 
 Braze dispose des mesures suivantes pour CDI :
 
