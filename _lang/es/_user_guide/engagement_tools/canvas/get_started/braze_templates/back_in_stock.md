@@ -76,7 +76,7 @@ Definiremos nuestra audiencia objetivo como los usuarios que pensamos que tienen
 {: start="3"}
 3\. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas's maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-![Sección "Controles de entrada" con una casilla de verificación para permitir a los usuarios volver a entrar en este Canvas con una duración máxima del Canvas.][6]
+
 
 {: start="4"}
 4\. Ajusta los criterios de salida para eliminar a los usuarios que realizaron el evento personalizado de desfavorecer los vaqueros Classic Straight Leg.
