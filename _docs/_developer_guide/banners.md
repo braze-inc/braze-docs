@@ -9,7 +9,7 @@ channel:
 
 # Banners
 
-> With Banners, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
+> With Banners, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed banners directly in your app or website which let's you engage with users through an experience that feels natural.
 
 {% alert important %}
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -37,9 +37,9 @@ Banner placements are unique to each workspace and can be used across 10 campaig
 Avoid modifying placement IDs after launching a Banner campaign.
 {% endalert %}
 
-### Card priority {#card-priority}
+### Banner priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
+When multiple campaigns reference the same placement ID, banners are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low. If multiple banners share the same priority level, the newest banner will be displayed first.
 
 ### Metrics
 
