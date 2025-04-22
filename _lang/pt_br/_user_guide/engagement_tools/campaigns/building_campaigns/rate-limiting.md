@@ -19,6 +19,8 @@ O Braze permite que você controle a pressão do marketing limitando a frequênc
 1. [**Limite de frequência centrado no usuário:**](#user-centric-rate-limiting) Concentra-se em fornecer a melhor experiência para o usuário.
 2. [**Limite de frequência da velocidade de entrega:**](#delivery-speed-rate-limiting) Leva em consideração a largura de banda de seus servidores.
 
+ 
+
 ### Limite de frequência centrado no usuário
 
 À medida que você cria mais segmentos, haverá casos em que a associação desses segmentos se sobrepõe. Se estiver enviando campanhas para esses segmentos, queira mesmo ter certeza de que não está enviando mensagens com muita frequência para seus usuários. Se um usuário receber muitas mensagens em um curto período de tempo, ele se sentirá sobrecarregado e desativará as notificações por push ou desinstalará o app.
@@ -115,9 +117,9 @@ Ao enviar uma tela com um limite de frequência de velocidade, o limite de frequ
 
 #### Limite de frequência e novas tentativas do Connected Content
 
-Quando o recurso [Connected Content Retry][19] estiver ativado, o Braze tentará novamente as falhas de chamada, respeitando o limite de frequência que você definiu para cada reenvio. Vamos considerar o cenário de 75.000 mensagens com um limite de frequência de 10.000 por minuto. No primeiro minuto, a chamada falha ou fica lenta e envia apenas 4.000 mensagens.
+  
 
-Em vez de tentar compensar a postergação e enviar as 4.000 mensagens restantes no segundo minuto ou adicioná-las às 10.000 que já estão programadas para serem enviadas, o Braze moverá essas 6.000 mensagens que falharam para o "final da fila" e adicionará um minuto adicional, se necessário, ao total de minutos que seriam necessários para enviar sua mensagem.
+
 
 | Minuto | Sem falhas | 6.000 falhas no minuto 1 |
 |--------|------------|---------------------------|
@@ -132,6 +134,8 @@ Em vez de tentar compensar a postergação e enviar as 4.000 mensagens restantes
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+   
+
 ## Sobre o limite de frequência
 
 À medida que sua base de usuários continua a crescer e seu envio de mensagens é ampliado para incluir campanhas de ciclo de vida, disparadas, transacionais e de conversão, é importante evitar que suas notificações pareçam "spam" ou perturbadoras. Ao proporcionar maior controle sobre a experiência dos usuários, a capacitação de frequência ativa a criação das campanhas desejadas sem sobrecarregar o público.
@@ -139,10 +143,6 @@ Em vez de tentar compensar a postergação e enviar as 4.000 mensagens restantes
 ### Visão geral dos recursos {#freq-cap-feat-over}
 
 O limite de frequência é aplicado no nível de envio da campanha ou do componente do Canva e pode ser configurado para cada espaço de trabalho em **Configurações** > **Regras de limite de frequência**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página se chama **Configurações de mensagens globais** e está localizada em **Engajamento**.
-{% endalert %}
 
 Por padrão, o limite de frequência é ativado quando novas campanhas são criadas. A partir daí, você pode escolher o seguinte:
 
@@ -155,6 +155,10 @@ Esse período de tempo pode ser medido em minutos, dias, semanas (sete dias) ou 
 Cada linha de limites de frequência será conectada usando o operador `AND`, e você pode adicionar até 10 regras por espaço de trabalho. Além disso, você pode incluir vários limites para os mesmos tipos de mensagens. Por exemplo, você pode limitar os usuários a não mais do que um push por dia e a não mais do que três pushs por semana.
 
 ![Seção de limite de frequência com listas de campanhas e telas às quais as regras se aplicam e não se aplicam.][14]
+
+#### 
+
+ 
 
 ### Regras de entrega
 
