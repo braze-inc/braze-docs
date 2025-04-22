@@ -12,7 +12,7 @@ search_rank: 1
 
 ## 지원되는 태그 요약
 
-편의를 위해 지원되는 개인화 태그에 대한 요약이 제공됩니다. 각 태그 종류와 모범 사례에 대한 자세한 내용은 계속 읽어보세요.
+편의를 위해 지원되는 개인화 태그에 대한 요약이 제공됩니다. 
 
 {% raw %}
 
@@ -29,37 +29,37 @@ search_rank: 1
 | 카드 속성 | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | 지오펜싱 이벤트 | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | 이벤트 등록정보 <br> (워크스페이스에 맞게 커스텀됩니다.)| `{{event_properties.${your_custom_event_property}}}` |
-| 캔버스 진입 등록정보| `{{canvas_entry_properties}}` |
+|  |  |
 | 커스텀 속성 <br> (워크스페이스에 맞게 커스텀됩니다.) | `{{custom_attribute.${your_custom_attribute}}}` |
 | [API 트리거 속성][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-이 도움말 문서를 참조하여 [Braze에서 이러한 속성 중 일부가 소스마다 어떻게 다른지]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/) 자세히 알아보세요.
+### 
 
-{% alert important %}
-캠페인, 카드 및 캔버스 속성은 해당 메시징 템플릿에서만 지원됩니다(예: `dispatch_id` 는 인앱 메시지 캠페인에서 사용할 수 없음).
-{% endalert %}
+
+
+이 도움말 문서를 참조하여 [Braze에서 이러한 속성 중 일부가 소스마다 어떻게 다른지]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/) 자세히 알아보세요.
 
 ### 캔버스와 캠페인 태그의 차이점 
 
 다음 태그의 동작은 캔버스와 캠페인 간에 다릅니다:
 {% raw %}
-- `dispatch_id` 동작이 다른 이유는 Braze가 캔버스 단계를 '예약된' 경우에도 트리거된 이벤트로 취급하기 때문입니다(예약 가능한 엔트리 단계는 제외). 자세한 내용은 [디스패치 ID 동작][50] 을 참조하세요.
+-  자세한 내용은 [디스패치 ID 동작][50] 을 참조하세요.
 - 캔버스에 `{{campaign.${name}}}` 태그를 사용하면 캔버스 구성 요소 이름이 표시됩니다. 이 태그를 캠페인에 사용하면 캠페인 이름이 표시됩니다.
 {% endraw %}
 
 ## 가장 최근에 사용한 기기 정보
 
-모든 플랫폼에서 사용자의 가장 최근 기기에 대해 다음 속성을 템플릿으로 만들 수 있습니다. 사용자가 애플리케이션을 사용하지 않은 경우(예: REST API를 통해 사용자를 가져온 경우) 이 값은 모두 `null`입니다.
+ 사용자가 애플리케이션을 사용하지 않은 경우(예: REST API를 통해 사용자를 가져온 경우) 이 값은 모두 `null`입니다.
 
 {% raw %}
 
 |태그 | 설명 |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | 사용자 디바이스에서 가장 최근에 사용한 브라우저입니다. 예를 들어 'Chrome'과 'Safari'가 있습니다. |
-|`{{most_recently_used_device.${id}}}` | Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다. Android 및 기타 플랫폼의 경우 무작위로 생성된 UUID입니다. |
+|`{{most_recently_used_device.${id}}}` | Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다.  |
 | `{{most_recently_used_device.${carrier}}}` | 가장 최근에 사용한 디바이스의 전화 서비스 통신사(가능한 경우). 예를 들면 "Verizon" 및 "Orange" 등이 있습니다. |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | 기기에서 광고 추적이 활성화되어 있는지 여부. 이 값은 부울 값입니다(`true` 또는 `false`). |
 | `{{most_recently_used_device.${idfa}}}` | iOS 기기의 경우, 애플리케이션이 [선택 사항 IDFA 컬렉션][40]]으로 구성된 경우 이 값은 광고용 식별자(IDFA)가 됩니다. iOS가 아닌 기기의 경우 이 값은 null이 됩니다. |
@@ -70,7 +70,7 @@ search_rank: 1
 | `{{most_recently_used_device.${platform}}}` | 디바이스의 플랫폼(사용 가능한 경우). 설정된 경우 값은 `ios`, `android`, `kindle`, `android_china`, `web` 또는 `tvos` 중 하나가 됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-기기 사업자, 모델명, 운영 체제가 매우 다양하므로 이러한 값에 조건부로 의존하는 모든 Liquid를 철저하게 테스트하는 것이 좋습니다. 이 값은 특정 기기에서 사용할 수 없는 경우 `null`입니다.
+ 이 값은 특정 기기에서 사용할 수 없는 경우 `null`입니다.
 
 ## 타겟팅 앱 정보
 
@@ -95,11 +95,11 @@ User is in list of apps
 
 ## 타겟 기기 정보
 
-푸시 알림 및 인앱 메시지 채널의 경우 메시지가 전송되는 기기에 대해 다음 속성을 템플릿으로 만들 수 있습니다. 즉, 푸시 알림 또는 인앱 메시지에는 메시지를 읽고 있는 기기의 기기 속성이 포함될 수 있습니다. 이러한 속성은 콘텐츠 카드에는 작동하지 않습니다. 
+ 즉, 푸시 알림 또는 인앱 메시지에는 메시지를 읽고 있는 기기의 기기 속성이 포함될 수 있습니다. 이러한 속성은 콘텐츠 카드에는 작동하지 않습니다. 
 
 |태그 | 설명 |
 |------------------|---|
-| `{{targeted_device.${id}}}` | 이것은 Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다. Android 및 기타 플랫폼의 경우 무작위로 생성된 UUID입니다. |
+| `{{targeted_device.${id}}}` | 이것은 Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다.  |
 | `{{targeted_device.${carrier}}}` | 가장 최근에 사용한 디바이스의 전화 서비스 통신사(가능한 경우). 예를 들면 "Verizon" 및 "Orange" 등이 있습니다. |
 | `{{targeted_device.${idfa}}}` | iOS 기기의 경우, 애플리케이션이 [선택 사항 IDFA 컬렉션][40]]으로 구성된 경우 이 값은 광고용 식별자(IDFA)가 됩니다. iOS가 아닌 기기의 경우 이 값은 null이 됩니다. |
 | `{{targeted_device.${google_ad_id}}}` | Android 기기의 경우, 애플리케이션이 선택 사항인 Google Play 광고 ID 컬렉션]으로 구성된 경우 이 값은 Google Play 광고 식별자가 됩니다. Android 이외의 기기의 경우 이 값은 null이 됩니다. |
@@ -112,7 +112,7 @@ User is in list of apps
 
 {% endraw %}
 
-기기 사업자, 모델명, 운영 체제가 매우 다양하므로 이러한 값에 조건부로 의존하는 로직을 철저하게 테스트하는 것이 좋습니다. 이 값은 특정 기기에서 사용할 수 없는 경우 `null`입니다. 
+ 이 값은 특정 기기에서 사용할 수 없는 경우 `null`입니다. 
 
 또한, 푸시 알림의 경우 푸시 토큰을 API를 통해 가져온 경우와 같이 특정 상황에서 Braze가 푸시 알림에 연결된 디바이스를 식별하지 못해 해당 메시지에 대해 `null` 값이 표시될 수 있습니다.
 
@@ -160,16 +160,16 @@ User is in list of apps
 
 ## 가변 태그
 
-`assign` 태그를 사용하여 메시지 작성기에서 변수를 만들 수 있습니다. 변수를 만든 후에는 메시징 로직이나 메시지에서 해당 변수를 참조할 수 있습니다.
+`assign` 태그를 사용하여 메시지 작성기에서 변수를 만들 수 있습니다.  
 
-이 태그는 [연결된 콘텐츠][4] ] 기능에서 반환된 콘텐츠의 형식을 다시 지정하려는 경우에 유용합니다. [가변 태그에][31] 대한 자세한 내용은 Shopify 문서에서 확인할 수 있습니다.
+변수를 만든 후에는 메시징 로직이나 메시지에서 해당 변수를 참조할 수 있습니다. 이 태그는 [연결된 콘텐츠][4] ] 기능에서 반환된 콘텐츠의 형식을 다시 지정하려는 경우에 유용합니다. [가변 태그에][31] 대한 자세한 내용은 Shopify 문서에서 확인할 수 있습니다.
 
 {% alert tip %}
 모든 메시지에 동일한 변수를 할당하고 계신가요? `assign` 태그를 반복해서 작성하는 대신 해당 태그를 콘텐츠 블록으로 저장하여 메시지 상단에 넣을 수 있습니다.
 
 1. [콘텐츠 블록을 생성합니다]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. 콘텐츠 블록에 이름을 지정합니다(공백이나 특수 문자 제외).
-3. 페이지 하단의 **편집**을 클릭합니다.
+3. 
 4. `assign` 태그를 입력합니다.
 
 콘텐츠 블록이 메시지 상단에 있는 한, 변수가 객체로 메시지에 삽입될 때마다 선택한 커스텀 속성을 참조합니다!
@@ -242,11 +242,11 @@ Sale on Converse!
 
 ## 언어, 가장 최근 로캘 및 시간대를 기준으로 메시지 보내기
 
-특정 로캘에 한정된 메시지를 보내야 하는 경우도 있습니다. 예를 들어 브라질 포르투갈어는 일반적으로 유럽식 포르투갈어와 다릅니다.
+ 예를 들어 브라질 포르투갈어는 일반적으로 유럽식 포르투갈어와 다릅니다.
 
 ### 사용 사례: 최근 로캘을 기반으로 현지화
 
-다음은 가장 최신 로캘을 사용하여 국제화된 메시지를 더욱 현지화하는 방법에 대한 사용 사례입니다.
+
 
 {% raw %}
 
