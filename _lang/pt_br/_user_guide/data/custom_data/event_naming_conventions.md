@@ -31,3 +31,12 @@ A estrutura de nomes mais comum é `group_noun_action`. Os eventos devem ser tod
 ### Propriedades
 
 Tag um evento e, em seguida, identifique as diferenças usando as propriedades. Isso é útil para eventos que são inerentemente iguais, mas têm pequenas diferenças, como canais para uma campanha. Também podemos ver facilmente como os usuários fluem pelos eventos. Consulte o [objeto de propriedades do evento]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) para obter um exemplo e contexto adicional.
+
+## 
+
+ 
+
+- 
+- 
+
+  
