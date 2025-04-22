@@ -2,8 +2,7 @@
 nav_title: セグメントエクステンション
 article_title: セグメントエクステンション
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "この操作方法に関する記事では、セグメントエクステンションをセットアップして使用し、セグメンテーション機能を強化する方法について説明します。"
 tool: Segments
 ---
@@ -32,10 +31,6 @@ Brazeセグメントは、ダイナミックなユーザーグループを作成
 
 [**オーディエンス**] > [**セグメントエクステンション**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**セグメント**] > [**セグメントエクステンション**] でこのページを見つけることができます。
-{% endalert %}
-
 [セグメントエクステンション] テーブルから、[**エクステンションを新規作成**] をクリックし、セグメントエクステンションの作成方法を選択します。
 
 - **シンプルなエクステンション:**ガイド付きフォームを使用して、単一のイベントに焦点を当てたセグメントエクステンションを作成します。
@@ -44,7 +39,7 @@ SQL を使用しない場合に最適です。
 - **増分更新:**過去2日間のデータを自動的に更新するか、必要に応じて手動で更新する Snowflake SQL セグメントを作成します。精度とコスト効率のバランスをとるのに最適です。
 - **完全更新:**手動更新時にオーディエンス全体を再計算する Snowflake SQL セグメントを作成します。オーディエンスに関する完全な最新のビューが必要な場合に最適です。
 
-![""][20]{: style="max-width:50%"}
+
 
 SQL を使用するエクスペリエンスを選択した場合の詳細は、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を参照してください。
 
@@ -62,7 +57,7 @@ SQL を使用するエクスペリエンスを選択した場合の詳細は、[
 
 730日を超えるイベントデータに基づくセグメンテーションは、**セグメント**にある他のフィルターを使用して実行できます。期間を選択するときは、相対的な日付範囲 (過去 X 日間など)、開始日、終了日、または正確な日付範囲 (日付 A ～ B) を指定できます。
 
-![""][3]
+
 
 #### イベントプロパティのセグメンテーション
 
@@ -131,45 +126,74 @@ SQL を使用するエクスペリエンスを選択した場合の詳細は、[
 - 特定のセグメントエクステンションの更新は一度に1回だけ実行できます。既存の更新の処理がすでに開始されている場合に新しい更新が開始される競合的な状況では、Braze は新しい更新リクエストをキャンセルして、進行中の処理を続行します。
 {% endalert %}
 
+#### 
+
+
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+
+
+
+
 ### ステップ 5: セグメントエクステンションを保存する
 
 [**保存**] を選択すると、エクステンションの処理が開始されます。エクステンションの生成にかかる時間は、ユーザーの数、キャプチャするカスタムイベントまたは購入イベントの数、履歴を振り返る日数によって異なります。
 
 エクステンションが処理されている間、エクステンションの名前の横に小さなアニメーションが表示され、エクステンションリストの [**最終処理日**] 列に 「処理中」 という単語が表示されます。処理中はエクステンションを編集できないことに注意してください。
 
-![""][5]
+
 
 ### ステップ 6:エクステンションをセグメントで使用する
 
 エクステンションを作成したら、セグメントを作成したり、キャンペーンやキャンバスのオーディエンスを定義したりする際のフィルターとして使用できます。まず、[**ユーザー属性**] セクションのフィルターリストから [**Braze セグメントエクステンション**] を選択します。
 
-![""][6]
+
 
 Braze セグメントエクステンションフィルターリストから、このセグメントに含める、または除外したいエクステンションを選択します。
 
-![""][7]
+
 
 エクステンションの基準を表示するには、**「エクステンションの詳細を表示**」を選択し、詳細をモーダルポップで表示する。
 
-![""][8]{: style="max-width:70%;"}
+
 
 これで、通常どおりに [セグメントを作成][11] できます。
 
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+## 
+
+### 
+
+ 
+
+
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
