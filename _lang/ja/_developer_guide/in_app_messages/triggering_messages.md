@@ -29,7 +29,7 @@ platform:
 Brazeでキャンペーンを作成する際、キーと値のペアを`extras` 、アプリ内メッセージングオブジェクトがアプリにデータを送信する際に使用できるように設定できる。
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
 ```java
@@ -106,7 +106,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 デフォルトでは、アプリ内メッセージは自動的にトリガーされる。これを無効にする：
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 1. 自動統合イニシャライザーを使用していることを確認する。これは、`2.2.0` 以降のバージョンでデフォルトでイネーブルメントになっている。
 2. 次の行を `braze.xml` ファイルに追加することで、アプリ内メッセージ操作のデフォルトを `DISCARD` に設定します。
     ```xml
@@ -147,7 +147,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 {% endalert %}
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 {% subtabs %}
 {% subtab Android %}
 Androidの場合は、Brazeの設定エディターで「**アプリ内メッセージを自動的に表示する**」の選択を解除する。あるいは、Unityプロジェクトの`braze.xml` で、`com_braze_inapp_show_inapp_messages_automatically` を`false` に設定することもできる。
@@ -169,7 +169,7 @@ iOSの場合、Brazeコンフィギュレーションエディターでゲーム
 デフォルトでは、アプリ内メッセージは30秒に1回送信できる。これをオーバーライドするには、Brazeインスタンスが初期化される前に、以下のプロパティを設定ファイルに追加する。この値が新しいレート制限（秒）として使用される。
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 ```xml
 <integer name="com_braze_trigger_action_minimum_time_interval_seconds">5</integer>
 ```
@@ -218,7 +218,7 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 ### サーバー側イベントを使う
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 サーバー送信イベントを使用してアプリ内メッセージをトリガーするには、サイレントプッシュ通知をデバイスに送信し、カスタムプッシュコールバックがSDKベースのイベントをログに記録できるようにする。このイベントがユーザー向けアプリ内メッセージのトリガーとなる。
 
 #### ステップ1:サイレントプッシュを受信するプッシュコールバックを作成する
@@ -364,7 +364,7 @@ Braze ダッシュボードで、ユーザーに表示されるアプリ内メ�
 事前に定義したアプリ内メッセージを手動で表示するには、以下の方法を使用する：
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
 
@@ -403,7 +403,7 @@ braze.requestInAppMessageDisplay();
 また、ダッシュボードで利用できるのと同じカスタマイズオプションを使って、アプリ内メッセージをリアルタイムで作成・表示することもできる。そのために必要なことだ：
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
 
@@ -475,7 +475,7 @@ customInAppMessage.themes = @{
 ```
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 スタックの次のメッセージを表示するには、`DisplayNextInAppMessage()` メソッドを使う。アプリ内メッセージ表示アクションとして`DISPLAY_LATER` または`BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` が選択された場合、メッセージはこのスタックに保存される。
 
 ```csharp
