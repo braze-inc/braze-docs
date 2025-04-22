@@ -12,7 +12,7 @@ search_tag: Partner
 
 > ビジネスインテリジェンスとビッグデータ分析のプラットフォームである [Looker](https://looker.com/) は、リアルタイムのビジネス分析の探索、分析、共有をシームレスに行えるようにしています。
 
-Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。
+Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。ブレーズ付きルーカーを使用するには、ブレーズ電流を使用して[データウェアハウスにブレーズデータを送信し、次にブレーズルーカーブロックを使用して、ルーカー内のブレーズデータをすばやくモデル化して視覚化することをお勧めします。
 
 ## 前提条件
 
