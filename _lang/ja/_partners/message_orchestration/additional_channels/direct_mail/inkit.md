@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Inkit][1] と Braze により、デジタルでもダイレクトメールでも、企業が安全に文書を作成して配布することができます。
 
+
+
+## 統合について
+
 Braze と Inkit の統合により、文書を生成し、Braze Webhook を使用して Braze ユーザーに直接メールで送信できます。
 
 ## 前提条件
@@ -33,10 +37,6 @@ Inkitプラットフォーム上で、Brazeキャンペーンで使用するテ�
 ### ステップ2:BrazeのWebhookテンプレートを作成する
 
 今後のキャンペーンやCanvasで使用するInkitウェブフックテンプレートを作成するには、Brazeプラットフォームの**「テンプレート**」>「**ウェブフックテンプレート**」に移動する。 
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 単発のInkitウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
@@ -93,6 +93,7 @@ Liquid が、以下の必須フィールドとオプションフィールドに�
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
+
 
 [1]: https://www.inkit.com
 [2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration
