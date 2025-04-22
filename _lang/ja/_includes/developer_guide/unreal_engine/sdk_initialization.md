@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者guide/prerequisites/unreal_engine.md %}
+guide/prerequisites/unreal_engine.md developer_ %}
 
 ## SDKを初期化する
 
