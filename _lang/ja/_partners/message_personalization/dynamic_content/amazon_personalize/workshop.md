@@ -11,7 +11,11 @@ search_tag: Partner
 
 > このリファレンス記事では、コネクテッドコンテンツを使用して Amazon Personalize を設定し、Braze 環境に統合するプロセスについて説明します。これは、s をデプロイしてトレーニング Amazon Personalize ソリューションし、それらをBraze メール キャンペーンに統合するために必要なすべてのステップについて説明する実践的なワークショップを使用して行われます。
 
-以下の例は、Retail Demo Store という名前の完全に機能するサンプル e コマースサイトで展開されています。このチュートリアルのリソースとコードは、[ AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/) に公開されています。このリファレンスアーキテクチャインプリメンテーションをアウトラインとして使用して、独自の環境にAmazon Personalizeをインプリメントできます。
+
+
+## 統合について
+
+このチュートリアルのリソースとコードは、[ AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/) に公開されています。このリファレンスアーキテクチャインプリメンテーションをアウトラインとして使用して、独自の環境にAmazon Personalizeをインプリメントできます。
 
 ## 要件
 
@@ -19,7 +23,7 @@ search_tag: Partner
 
 ## 統合アーキテクチャ
 
-パーソナライズされたメッセージをユーザーに送信するように Braze を設定する前に、Retail Demo Store アーキテクチャを例に、一般的な e コマース Web サイトに必要な関連コンポーネントを確認します。
+
 
 ![さまざまなコンポーネントの相互作用を示すBraze パーソナライゼーションアーキテクチャの分解図。]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
@@ -71,6 +75,7 @@ Amazon Personalize ソリューションとキャンペーンを導入するこ�
 ### ステップ4:リソースのクリーンアップ
 
 今後料金が発生しないようにするため、作成した Retail Demo Store プロジェクトの AWS リソースを削除します。このためには、ステップ1で作成した AWS CloudFormation スタックを削除します。
+
 
 [1]: {% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}
 [2]: {% image_buster /assets/img/amazon_personalize/region.png %}
