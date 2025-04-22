@@ -7,7 +7,7 @@ guide_top_header: "キャンバスの作成"
 guide_top_text: "このセクションの記事では、アイデアからユーザーに向けた実行まで、多次元のキャンバスを迅速に作成して実施する方法について説明します。直感的なドラッグアンドドロップインターフェイスとコラボレーションのためのスペースを備えたこのビジュアルプログラミング環境を活用して、カスタマーエンゲージメント目標の最良の結果を促進することができます。"
 
 page_type: landing
-description: ""
+description: "このランディングページには、キャンバスの作成方法、終了基準、キャンバスエントリプロパティなど、多次元キャンバスの作成と立ち上げに役立つリソースが掲載されている。"
 tool: Canvas
 
 guide_featured_title: "セクションの記事"
@@ -48,7 +48,7 @@ guide_menu_list:
   - name: AIコピーライティングアシスタント
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: ""
+  - name: 配達タイプ
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: ユーザーパスのプレビュー
