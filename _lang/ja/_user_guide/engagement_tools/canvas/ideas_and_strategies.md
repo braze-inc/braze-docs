@@ -8,9 +8,9 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: ""
+description: "このランディングページには、ベストプラクティス、立ち上げ前後のチェックリスト、キャンバスでの立ち上げに関するガイダンスなど、キャンバスのアイデアや戦略が掲載されている。"
 
-guide_featured_title: ""
+guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: ベストプラクティス
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
@@ -36,10 +36,10 @@ guide_menu_list:
   - name: リード・スコアリング
     link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
-  - name: ""
+  - name: 予約リマインダーメールシステム
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: ""
+  - name: eコマースのユースケース
     link: /docs/ecommerce_use_cases/
     image: /assets/img/braze_icons/users-01.svg
 
