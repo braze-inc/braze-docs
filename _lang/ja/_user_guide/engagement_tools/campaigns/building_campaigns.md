@@ -27,7 +27,7 @@ guide_menu_list:
   - name: AIコピーライティング・アシスタント
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: ""
+  - name: 承認ワークフロー
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: コンバージョンイベント
