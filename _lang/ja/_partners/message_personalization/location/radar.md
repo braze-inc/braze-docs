@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
+> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Braze業界をリードするエンゲージメントプラットフォームと、レーダー業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い製品やサービス体験を通じて、収益とロイヤルティを推進することができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
 
-
+_この統合はレーダーによって維持されます。_
 
 ## 統合について
 
