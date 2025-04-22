@@ -90,7 +90,7 @@ Un message riche en texte peut contenir jusqu'à 400 caractères.
 
 ## À base de cartes (carrousel)
 
-Un message basé sur une carte LINE permet aux utilisateurs de faire défiler plusieurs messages, comme dans un carrousel, et de prendre des mesures sur les messages les plus pertinents pour eux en sélectionnant une carte ou les boutons d'une carte.
+
 
 Les cas d'utilisation sont les suivants :
 - Afficher des promotions pour des produits spécifiques du menu
