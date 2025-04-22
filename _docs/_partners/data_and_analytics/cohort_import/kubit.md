@@ -8,7 +8,7 @@ search_tag: Partner
 
 # Kubit cohort import
 
-> This article describes how to import user cohorts from [Kubit](https://kubit.ai/) to Braze. For more information on integrating Kubit and its other functionalities, see the main [Kubit article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
+> This article describes how to import user cohorts from [Kubit](https://kubit.ai/) to Braze. For more information on integrating Kubit and its other functionalities, see the main [Kubit article]({{site.baseurl}}/partners/data_and_analytics/analytics/kubit/).
 
 ## Data import integration
 

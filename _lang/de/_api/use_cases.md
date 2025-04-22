@@ -1,26 +1,26 @@
 ---
 nav_title: API Anwendungsfälle
 article_title: API Anwendungsfälle
-description: "Ganz gleich, ob Sie ein erfahrener Entwickler oder ein Vermarkter mit minimalen Entwicklerressourcen sind, dieser Referenzartikel soll Ihnen helfen zu verstehen, wie Sie die Leistungsfähigkeit der Braze REST API nutzen können, um verschiedene Aufgaben zu erfüllen und Ihre Strategie zur Kundenbindung zu verbessern."
+description: "Ganz gleich, ob Sie ein erfahrener Entwickler:in oder ein Marketer mit minimalen Entwicklerressourcen sind, dieser referenzierte Artikel soll Ihnen zeigen, wie Sie die leistungsstarke REST API von Braze nutzen können, um verschiedene Aufgaben zu erfüllen und Ihre Customer-Engagement-Strategie zu verbessern."
 page_type: reference
 page_order: 4.8
 ---
 
 # API Anwendungsfälle
 
-> Die [REST-API von Braze]({{site.baseurl}}/api/basics/) bietet eine Vielzahl von Endpunkten, die Sie bei der Verwaltung und Optimierung Ihrer Kundenbindungsstrategie unterstützen. In diesem Artikel werden wir verschiedene Anwendungsfälle für jede Endpunktsammlung untersuchen: Kataloge, E-Mail-Listen und -Adressen, Export, Nachrichten, Einstellungscenter, SMS, Abonnementgruppen, Vorlagen und Benutzerdaten.<br><br>In jedem Abschnitt wird ein Szenario mit einer Schritt-für-Schritt-Anleitung, einem Codebeispiel und dem erwarteten Ergebnis vorgestellt. Am Ende dieses Artikels werden Sie besser verstehen, wie Sie die REST-API von Braze nutzen können, um Ihre Bemühungen zur Kundenbindung zu verbessern.
+> Die [REST API von Braze]({{site.baseurl}}/api/basics/) bietet eine breite Palette von Endpunkten, die Sie bei der Verwaltung und Optimierung Ihrer Customer-Engagement-Strategie unterstützen. In diesem Artikel werden wir verschiedene Anwendungsfälle für jede Endpunkt-Sammlung untersuchen: Kataloge, E-Mail-Listen und -Adressen, Export, Nachrichten, Einstellungscenter, SMS, Abo-Gruppen, Templates und Nutzerdaten.<br><br>In jedem Abschnitt wird ein Szenario mit einer Schritt-für-Schritt-Anleitung, einem Code-Beispiel und dem erwarteten Ergebnis vorgestellt. Am Ende dieses Artikels werden Sie besser verstehen, wie Sie die REST API von Braze nutzen können, um Ihr Customer-Engagement zu verbessern.
 
 ## Mehrere Artikel aus einem Katalog löschen
 
-Ein neues Jahr begrüßt neue Produkteinführungen bei Kitchenerie, einer Einzelhandelsmarke, die sich auf Küchenartikel spezialisiert hat. Im Dashboard von Braze hat Kitchenerie einen Katalog für seine Geschirrkollektion mit dem Namen "Geschirr" eingerichtet. Dieses neue Jahr bedeutet auch, dass wir die folgenden Produkte aus unserer Geschirrkollektion entfernen.
+Ein neues Jahr begrüßt die Einführung neuer Produkte bei Kitchenerie, einer Einzelhandelsmarke, die sich auf Küchenartikel spezialisiert hat. Im Braze-Dashboard hat Kitchenerie einen Katalog für seine Geschirrkollektion mit dem Namen "Dishware" eingerichtet. Dieses neue Jahr bedeutet auch, dass wir die folgenden Produkte aus unserer Geschirrkollektion entfernen.
 
 * Flaches Biskuit
 * Perlenporzellan
 * Rosa Schimmer
 
-Um diese Produkte aus seinem Katalog zu entfernen, kann Kitchener den [Endpunkt`/catalogs/{catalog_name}/items` ]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) verwenden, um die Artikel-IDs zu übergeben.
+Um diese Produkte aus seinem Katalog zu entfernen, kann Kitchener den [Endpunkt `/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) verwenden, um die IDs der Artikel zu übergeben.
 
-Hier ein Beispiel für eine Anfrage:
+Hier ist die Beispielanfrage:
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishware/items' \
@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Nach dem Senden dieser Nutzlast bestätigt die folgende Antwort, dass die drei Kollektionen erfolgreich aus dem Geschirrkatalog von Kitchenerie entfernt wurden.
+Nach dem Senden dieses Payloads bestätigt die folgende Antwort, dass die drei Kollektionen erfolgreich aus dem Geschirrkatalog von Kitchenerie entfernt wurden.
 
 ```json
 {
@@ -43,9 +43,9 @@ Nach dem Senden dieser Nutzlast bestätigt die folgende Antwort, dass die drei K
 }
 ```
 
-## Entfernen von E-Mails aus der Braze-Spamliste
+## Entfernen von E-Mails aus der Braze Spam-Liste
 
-Bei MovieCanon, einem Unternehmen für Streaming-Dienste, ist das Entwicklerteam dafür verantwortlich, die E-Mail-Listen regelmäßig zu überprüfen, um die Benutzer zu identifizieren und zu behalten, die die E-Mail-Kampagnen abonniert haben. Im Rahmen dieser Prüfung möchte MovieCanon diese Liste von E-Mails aus seiner Spam-Liste entfernen:
+Bei MovieCanon, einem Unternehmen für Serviceleistungen; Dienste, ist das Entwickler:in Team dafür verantwortlich, die E-Mail-Listen regelmäßig zu überprüfen, um die Nutzer:in zu identifizieren, die für die Kampagnen abonniert sind. Im Rahmen dieser Prüfung möchte MovieCanon diese Liste von E-Mails aus seiner Spam-Liste entfernen:
 
 - august.author.example.com
 - betty.benson@example.com
@@ -53,7 +53,7 @@ Bei MovieCanon, einem Unternehmen für Streaming-Dienste, ist das Entwicklerteam
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Um diese Aufgabe zu bewältigen, benötigt das Entwicklerteam einen API-Schlüssel mit der Berechtigung `email.spam.remove` zur Verwendung des Endpunkts `/email/spam/remove`. Dieser Endpunkt entfernt E-Mail-Adressen aus der Spam-Liste von Braze und aus der Spam-Liste des E-Mail-Anbieters von MovieCanon.
+Um diese Aufgabe zu erfüllen, benötigt das Entwickler:in Team einen API-Schlüssel mit der Berechtigung `email.spam.remove` zur Nutzung des Endpunkts `/email/spam/remove`. Dieser Endpunkt entfernt E-Mail-Adressen aus der Spam-Liste von Braze und aus der Spam-Liste des E-Mail-Anbieters von MovieCanon.
 
 Um diese Anfrage zu senden, geben Sie entweder eine String-E-Mail-Adresse oder ein Array mit bis zu 50 zu ändernden E-Mail-Adressen an. Da die Liste der zu entfernenden E-Mails unter 50 liegt, kann MovieCanon diese Aufgabe mit dem folgenden Anfragetext erledigen:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Nach dem erfolgreichen Versand dieser Nutzlast bestätigt diese Antwort, dass die E-Mails aus der Spamliste von MovieCanon entfernt wurden.
+Nach erfolgreichem Versand dieser Nutzlast bestätigt diese Antwort, dass die E-Mails aus der Spam-Liste von MovieCanon entfernt wurden.
 
 ```json
 {
@@ -76,15 +76,15 @@ Nach dem erfolgreichen Versand dieser Nutzlast bestätigt diese Antwort, dass di
 }
 ```
 
-## Prüfen aller Leinwände
+## Prüfen aller Canvase
 
-Siege Valley Health ist ein Krankenhaussystem, das 10 operative Krankenhäuser und Forschungszentren mit Tausenden von Patienten umfasst. Das Marketingteam möchte die Canvases, die an Patienten geschickt werden, um sie an einen Termin für eine Grippeimpfung zu erinnern, mit den letzten 3 Jahren der Nutzung von Braze vergleichen. Das Marketingteam von Siege Valley Health wünscht sich außerdem eine schnelle und effiziente Möglichkeit, sowohl die Liste der Canvases als auch die Analyseübersicht zu sehen.
+Siege Valley Health ist ein Krankenhaussystem, zu dem 10 Betreiber von Krankenhäusern und Forschungszentren mit Tausenden von Patienten gehören. Das Team des Marketers möchte die Canvase, die an Patienten verschickt wurden, um sie an einen Zeitplan für die Grippeimpfung zu erinnern, mit den Ergebnissen der letzten 3 Jahre vergleichen, in denen Braze verwendet wurde. Das Marketing Team von Siege Valley Health wünscht sich außerdem eine schnelle und effiziente Möglichkeit, sowohl die Liste der Canvase als auch die Analytics-Zusammenfassung einzusehen.
 
-Sehen wir uns an, wie Siege Valley Health diese beiden Aufgaben mit einer Kombination von Endpunkten erfüllen kann, anstatt sie über das Braze Dashboard zu filtern.
+Sehen wir uns an, wie Siege Valley Health diese beiden Aufgaben mit einer Kombination von Endpunkten erfüllen kann, anstatt über das Braze-Dashboard zu filtern.
 
-Für die erste Aufgabe der Überprüfung von Canvases verwenden Sie den [Endpunkt`/canvas/list` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/), um eine Liste von Canvases zu exportieren, die den Namen und die Tags enthält. Hier ist ein Beispiel für eine Anfrage:
+Für die erste Aufgabe der Prüfung von Canvase verwenden Sie den [Endpunkt `/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/), um eine Liste der Canvase zu exportieren, die den Namen und die Tags enthält. Hier ein Beispiel für eine Anfrage:
 
-{% details Hier ist die Antwort, die das Marketingteam von Siege Valley Health erhalten würde. %}
+{% details Hier ist die Antwort, die das Marketing Team von Siege Valley Health erhalten würde. %}
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -113,44 +113,44 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% enddetails %}
 
-Lassen Sie uns als nächstes die Analysezusammenfassung für das erste Canvas aus der Liste der Canvases von Siege Valley Health anzeigen. Dazu würden wir den [Endpunkt`/canvas/data_summary` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) mit den folgenden Anfrageparametern verwenden:
+Lassen Sie uns als nächstes die Analytics-Zusammenfassung für den ersten Canvas aus der Liste der Canvase von Siege Valley Health anzeigen. Dazu verwenden wir den [Endpunkt `/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) mit den folgenden Anfrage-Parametern:
 
 * `canvas_id`: "canvas_identifier_2"
 * `ending_at`: 2023-07-10T23:59:59
 * `starting_at`: 2020-07-10T23:59:59
 
-Hier ist ein Beispiel für eine Anfrage:
+Hier ein Beispiel für eine Anfrage:
 
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_identifier_2}}&ending_at=2023-07-10T23:59:59&starting_at=2020-07-10T23:59:59&length=5&include_variant_breakdown=false&include_step_breakdown=false&include_deleted_step_data=false' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Prüfen von geplanten Kampagnen und Leinwänden
+## Prüfen der anstehenden geplanten Kampagnen und Canvase
 
-Für Flash & Thread, eine Einzelhandelsmarke, die Kleidung und Schönheitsprodukte online und in Geschäften verkauft, rückt die geschäftigste Zeit des Jahres schnell näher. Ihr Marketingteam möchte die kommenden Kampagnen und Canvases vor dem 31\. März 2024 um 12 Uhr auf dem Braze-Dashboard überprüfen. Dies kann mit Hilfe des [Endpunkts`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) erreicht werden. 
+Die geschäftigste Zeit des Jahres steht Flash & Thread bevor, einer Einzelhandelsmarke, die Kleidung und Schönheitsprodukte online und in Shops verkauft. Sein Marketing Team möchte die anstehenden Kampagnen und Canvase vor dem 31\. März 2024 um 12 Uhr auf dem Braze-Dashboard überprüfen. Dies kann über den [Endpunkt `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) erfolgen. 
 
-Hier ein Beispiel für eine Anfrage:
+Hier ist die Beispielanfrage:
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2024-03-31T12:00:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Dieser Endpunkt gibt die Liste der kommenden Kampagnen und Leinwände zurück. Von hier aus kann das Marketingteam die Liste der Nachrichten bestätigen, indem es auf das Feld `name` für die Kampagnen und Canvases in der Antwort verweist.
+Dieser Endpunkt gibt die Liste der kommenden Kampagnen und Canvase zurück. Von hier aus kann das Marketing Team seine Liste der Nachrichten bestätigen, indem es sich auf das Feld `name` für die Kampagnen und Canvase in der Antwort bezieht.
 
 ## Anzeigen eines älteren Einstellungszentrums
 
-PoliterWeekly ist eine digitale Zeitschrift, deren Abonnenten per E-Mail erreichbar sind. In dem Bestreben, die Benutzerführung seiner Abonnenten besser zu verstehen, möchte das Marketingteam die Details für das Einstellungszentrum von PoliterWeekly überprüfen, um festzustellen, wann es erstellt und zuletzt aktualisiert wurde.
+PoliterWeekly ist eine digitale Zeitschrift, deren Abonnent:innen per E-Mail erreichbar sind. Um die Nutzer:innen seiner Abonnent:innen besser zu verstehen, möchte das Marketing Team die Details des Präferenzzentrums von PoliterWeekly überprüfen, um festzustellen, wann es erstellt und zuletzt aktualisiert wurde.
 
-Wenn Sie den [Endpunkt`/preference_center/v1/{preferenceCenterExternalID}` ]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) verwenden, muss das Marketingteam nur die externe ID des Einstellungszentrums als Pfadparameter einfügen, was wie folgt aussehen würde:
+Bei Verwendung des [Endpunkts `/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) muss das Marketing Team lediglich die externe ID des Einstellungszentrums als Pfadparameter einfügen, was wie folgt aussehen würde:
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/politer_weekly_preference_center_api_id \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Hier ist die Antwort, die das Marketingteam von PoliterWeekly erhalten würde. %}
+{% details Hier ist die Antwort, die das PoliterWeekly Marketing Team erhalten würde. %}
 
 ```json
 {
@@ -169,20 +169,20 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 }
 ```
 
-Anhand dieser Antwort kann das Marketingteam erkennen, dass das Einstellungscenter 3 Jahre vor der letzten Aktualisierung erstellt wurde. Mit diesen Informationen im Hinterkopf könnte das Marketingteam ein neues Präferenzcenter erstellen und einführen.
+Anhand dieser Antwort kann das Marketing Team erkennen, dass das Präferenzzentrum 3 Jahre vor dem letzten Update erstellt wurde. Mit diesen Informationen im Hinterkopf könnte das Marketing Team ein neues Präferenzzentrum erstellen und einführen.
 
 {% enddetails %}
 
 ## Entfernen von ungültigen Telefonnummern
 
-Das Hauptziel von CashBlastr ist es, die Art und Weise, wie Menschen schnelle Zahlungen senden und empfangen können, zu optimieren. Als Finanzdienstleister möchte CashBlastr die Liste der Telefonnummern seiner Kunden aktuell und korrekt halten. Das Entwicklerteam wurde beauftragt, die folgende Liste der als "ungültig" markierten Telefonnummern zu entfernen, damit die SMS-Nachrichten des Marketingteams die entsprechenden CashBlastr-Kunden erreichen können.
+Das Hauptziel von CashBlastr ist es, die Art und Weise, wie Menschen schnelle Zahlungen senden und empfangen können, zu optimieren. Als Unternehmen für Serviceleistungen im Finanzbereich möchte CashBlastr die Liste der Telefonnummern für seine Kund:in aktuell und korrekt halten. Das Entwickler:in Team wurde beauftragt, die folgende Liste der als "ungültig" markierten Telefonnummern zu entfernen, damit die SMS-Nachrichten des Marketing-Teams die entsprechenden CashBlastr-Kunden erreichen können.
 
 - 12223135467
 - 12183095514
 - 14235662245
 - 14324567892
 
-Um eine Anfrage mit dem [Endpunkt`/sms/invalid_phone_numbers/remove` ]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) zu senden, müssen die Telefonnummern in einem Array von Strings im [Formate.164 ](https://en.wikipedia.org/wiki/E.164) vorliegen, mit bis zu 50 Telefonnummern pro Anfrage. Da die Liste nicht mehr als 50 Telefonnummern enthält, sehen Sie hier ein Beispiel für den Anfragetext, den das Entwicklerteam von CashBlastr senden würde:
+Um eine Anfrage mit dem [Endpunkt `/sms/invalid_phone_numbers/remove`]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) zu senden, müssen die Telefonnummern in einem String-Array im [Format e.164](https://en.wikipedia.org/wiki/E.164) vorliegen, mit bis zu 50 Telefonnummern pro Anfrage. Da die Liste nicht mehr als 50 Telefonnummern umfasst, hier ein Beispiel für den Text der Anfrage, die das Entwickler:in Team von CashBlastr senden würde:
 
 ```json
 Content-Type: application/json
@@ -200,9 +200,9 @@ Nach dem Senden dieser Nutzlast bestätigt die folgende Antwort, dass die ungül
 }
 ```
 
-## Anzeigen des Status der Abonnementgruppe eines Benutzers
+## Anzeigen des Abo-Gruppenstatus eines Nutzers:innen
 
-SandwichEmperor ist eine Schnellrestaurantkette in den Vereinigten Staaten, deren Marketingteam den Status der Abonnementgruppen für eine zufällig ausgewählte Liste ihrer Benutzer per SMS überprüfen möchte. Mit dem [Endpunkt`/subscription/status/get` ]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) kann SandwichEmperor diese Aufgabe für einen einzelnen Benutzer mit der folgenden Beispielanfrage erfüllen:
+SandwichEmperor ist eine Schnellrestaurantkette in den Vereinigten Staaten, deren Marketing Team die Abo-Gruppenstatus für eine zufällige Liste ihrer Nutzer:innen per SMS überprüfen möchte. Mit dem [Endpunkt `/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) kann SandwichEmperor diese Aufgabe für einen einzelnen Nutzer:innen mit der folgenden Beispielanfrage erfüllen:
 
 {% raw %}
 ```
@@ -211,15 +211,15 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Dieser Endpunkt listet auch die Abonnementgruppen-Status eines Benutzers für E-Mails auf und kann verwendet werden, um den Abonnementgruppen-Status für mehrere Benutzer zu sehen.
+Dieser Endpunkt listet auch die Abo-Gruppenstatus eines Nutzers für E-Mails auf und kann verwendet werden, um den Abo-Gruppenstatus für mehrere Nutzer:innen zu sehen.
 
-## Prüfen einer HTML-Vorlage für E-Mail-Nachrichten
+## Prüfen eines HTML Templates für E-Mail Messaging
 
-Bei WorkFriends, einem sozialen Netzwerk, das den Aufbau von Kontakten zwischen Arbeitnehmern aus verschiedenen Branchen unterstützt, ist das Marketingteam für den Versand von E-Mail-Kampagnen an seine Nutzer verantwortlich. Diese Kampagnen beinhalten oft Erinnerungen an lokale Veranstaltungen, wöchentliche Newsletter und Highlights der Profilaktivitäten.
+Bei WorkFriends, einem sozialen Netzwerk, das den Aufbau von Verbindungen zwischen Arbeitnehmern aus verschiedenen Branchen unterstützt, ist das Marketing Team für den Versand von E-Mail Kampagnen an seine Nutzer:innen verantwortlich. Diese Kampagnen beinhalten häufig Erinnerungen an lokale Veranstaltungen, wöchentliche Newsletter und die Hervorhebung von Profilaktivitäten.
 
-In diesem Szenario hat WorkFriends in der Vergangenheit eine einzige HTML-Vorlage mit seinem alten Branding verwendet. In dem Bestreben, seine Markenidentität anzupassen, möchte WorkFriends überprüfen, ob es in dieser HTML-Vorlage hilfreiche Informationen gibt, die man nutzen kann, bevor man auf eine neue Vorlage umsteigt.
+In diesem Szenario hat WorkFriends in der Vergangenheit ein singuläres HTML Template mit seinem alten Branding verwendet. In dem Bestreben, seine Markenidentität anzugleichen, möchte WorkFriends überprüfen, ob diese HTML-Vorlage hilfreiche Informationen enthält, die es zu nutzen gilt, bevor es auf ein neues Template umsteigt.
 
-{% details Hier ist die Antwort, die das WorkFriends-Team erhalten würde. %}
+{% details Hier ist die Antwort, die das WorkFriends Team erhalten würde. %}
 
 ```json
 Content-Type: application/json
@@ -239,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-Nachdem Sie diese Vorlageninformationen überprüft haben, kann WorkFriends auch den [Endpunkt`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) verwenden, um die E-Mail-Vorlage über die API zu aktualisieren. Die E-Mail-Vorlage im Braze Dashboard wird diese Änderungen widerspiegeln.
+Nach Überprüfung dieser Template-Informationen kann WorkFriends auch den [Endpunkt `/templates/email/update`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) verwenden, um das E-Mail Template über die API zu aktualisieren. Die E-Mail-Vorlage im Braze-Dashboard wird diese Änderungen widerspiegeln.

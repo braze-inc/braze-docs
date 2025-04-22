@@ -6,7 +6,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogauswahl erstellen von Braze."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogauswahl erstellen Braze."
 
 ---
 {% api %}
@@ -15,29 +15,26 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogauswahl
 /catalogs/{catalog_name}/selections
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Auswahl in Ihrem Katalog zu erstellen.
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an diesem frühen Zugang interessiert sind.
-{% endalert %}
+> Verwenden Sie diesen Endpunkt, um eine Auswahl in Ihrem Katalog zu treffen.
 
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.create_selection`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
 
 ## Pfad-Parameter
 
-| Parameter      | Erforderlich | Daten Typ | Beschreibung          |
+| Parameter      | Erforderlich | Datentyp | Beschreibung          |
 | -------------- | -------- | --------- | -------------------- |
 | `catalog_name` | Erforderlich | String    | Name des Katalogs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter   | Erforderlich | Daten Typ | Beschreibung                                                                                                                                                        |
+| Parameter   | Erforderlich | Datentyp | Beschreibung                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `selection` | Erforderlich | Objekt    | Ein Objekt, das Auswahlkriterien enthält. Die Auswahlobjekte könnten `name`, `description`, `filters`, `results_limit`, `sort_field` und `sort_order` enthalten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -68,7 +65,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }'
 ```
 
-### Operatoren filtern
+### Filteroperatoren
 
 | Feldtyp | Unterstützte Operatoren                                     |
 | ---------- | ------------------------------------------------------- |
@@ -81,11 +78,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Antwort
 
-Es gibt drei Statuscode-Antworten für diesen Endpunkt: `202`, `400`, und `404`.
+Es gibt drei Status Code Antworten für diesen Endpunkt: `202`, `400`, und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -95,7 +92,7 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {
@@ -123,12 +120,12 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 |--------------------------------------|-----------------------------------------------------------------------------------------------|
 | `catalog-not-found`                  | Prüfen Sie, ob der Katalogname gültig ist.                                                         |
 | `company-size-limit-already-reached` | Das Limit für die Katalogspeichergröße ist erreicht.                                                    |
-| `selection-limit-reached`            | Das Limit für die Katalogauswahlen ist erreicht.                                                      |
+| `selection-limit-reached`            | Das Limit für die Katalogauswahl ist erreicht.                                                      |
 | `invalid-selection`                  | Prüfen Sie, ob die Auswahl gültig ist.                                                            |
 | `too-many-filters`                   | Prüfen Sie, ob die Auswahl zu viele Filter enthält.                                                  |
 | `selection-name-already-exists`      | Prüfen Sie, ob der Name der Auswahl bereits im Katalog vorhanden ist.                                    |
 | `selection-has-invalid-filter`       | Prüfen Sie, ob der Auswahlfilter gültig ist.                                                       |
-| `selection-invalid-results-limit`    | Prüfen Sie, ob das Limit für die Auswahlergebnisse gültig ist.                                                |
+| `selection-invalid-results-limit`    | Prüfen Sie, ob die Ergebnisgrenze der Auswahl gültig ist.                                                |
 | `invalid-sorting`                    | Prüfen Sie, ob die Auswahlsortierung gültig ist.                                                      |
 | `invalid-sort-field`                 | Prüfen Sie, ob das Feld für die Auswahlsortierung gültig ist.                                                   |
 | `invalid-sort-order`                 | Prüfen Sie, ob die Sortierreihenfolge der Auswahl gültig ist.                                                   |

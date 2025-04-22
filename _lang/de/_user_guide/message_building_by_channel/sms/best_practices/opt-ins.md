@@ -19,7 +19,7 @@ Bitten Sie die Nutzer:innen, eine SMS mit „START“, „UNSTOP“, „YES“ o
 
 ## Option 2: Nutzer:innen melden sich per In-App-Nachricht an
 
-Um Nutzern die Möglichkeit zu geben, sich in einer In-App-Nachricht für SMS zu entscheiden, verwenden Sie das von Braze bereitgestellte [Formular zur Erfassung von Telefonnummern]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/), mit dem Sie Telefonnummern sammeln und Ihre SMS-Liste erweitern können.
+Um Nutzern die Möglichkeit zu geben, sich in einer In-App-Nachricht für SMS zu entscheiden, verwenden Sie das von Braze bereitgestellte [Formular zur Erfassung von Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/), mit dem Sie Telefonnummern sammeln und Ihre SMS-Liste erweitern können.
 
 ![][3]{: style="max-width:30%;"}
 

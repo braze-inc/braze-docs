@@ -18,18 +18,12 @@ Da der Abfrage-Builder den direkten Zugriff auf einige Kundendaten erlaubt, kön
 So führen Sie einen Query Builder-Bericht aus:
 
 1. Gehen Sie zu **Analytics** > **Query Builder**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Query Builder** unter **Daten**.
-{% endalert %}
-
-{:start="2"}
-2\. Wählen Sie **SQL-Abfrage erstellen**. Wenn Sie Inspiration oder Hilfe bei der Gestaltung Ihrer Anfrage benötigen, wählen Sie **Abfragevorlage** und wählen Sie eine Vorlage aus der Liste. Andernfalls wählen Sie **SQL Editor**, um direkt zum Editor zu gelangen.
-3\. Ihr Bericht erhält automatisch einen Namen mit dem aktuellen Datum und der Uhrzeit. Bewegen Sie den Mauszeiger über den Namen und wählen Sie <i class="fas fa-pencil" alt="Edit"></i>, um Ihrer SQL-Abfrage einen aussagekräftigen Namen zu geben.
-4\. Verfassen Sie Ihre SQL-Abfrage im Editor oder [lassen Sie sich von der KI](#ai-query-builder) im Tab **Abfrage-Builder** helfen. Wenn Sie Ihr eigenes SQL schreiben, finden Sie unter Anforderungen und Ressourcen unter [Anpassen von SQL-Anfragen](#custom-sql).
-5\. Wählen Sie **Abfrage ausführen**.
-6\. Speichern Sie Ihre Anfrage.
-7\. Um eine CSV-Datei mit Ihrem Bericht herunterzuladen, wählen Sie **Exportieren**.
+2. Wählen Sie **SQL-Abfrage erstellen**. Wenn Sie Inspiration oder Hilfe bei der Gestaltung Ihrer Anfrage benötigen, wählen Sie **Abfragevorlage** und wählen Sie eine Vorlage aus der Liste. Andernfalls wählen Sie **SQL Editor**, um direkt zum Editor zu gelangen.
+3. Ihr Bericht erhält automatisch einen Namen mit dem aktuellen Datum und der Uhrzeit. Bewegen Sie den Mauszeiger über den Namen und wählen Sie <i class="fas fa-pencil" alt="Edit"></i>, um Ihrer SQL-Abfrage einen aussagekräftigen Namen zu geben.
+4. Verfassen Sie Ihre SQL-Abfrage im Editor oder [lassen Sie sich von der KI](#ai-query-builder) im Tab **Abfrage-Builder** helfen. Wenn Sie Ihr eigenes SQL schreiben, finden Sie unter Anforderungen und Ressourcen unter [Anpassen von SQL-Anfragen](#custom-sql).
+5. Wählen Sie **Abfrage ausführen**.
+6. Speichern Sie Ihre Anfrage.
+7. Um eine CSV-Datei mit Ihrem Bericht herunterzuladen, wählen Sie **Exportieren**.
 
 ![Der Abfrage-Builder zeigt die Ergebnisse zur Template-Abfrage "Engagement und Umsatz auf diesem Kanal in den letzten 30 Tagen".]({% image_buster /assets/img_archive/query_builder.png %})
 
@@ -429,7 +423,7 @@ Wenn ein Bericht eine Zeitüberschreitung aufweist oder auch nach erneuten Versu
 
 ## Daten und Ergebnisse
 
-Ergebnisse und Ergebnisexporte sind Tabellen mit bis zu 1.000 Zeilen. Für Berichte, die größere Datenmengen erfordern, verwenden Sie ein anderes Tool wie [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) oder die [Export-APIs]({{site.baseurl}}/api/endpoints/export) von Braze.
+Ergebnisse und Ergebnisexporte sind Tabellen mit bis zu 1.000 Zeilen. Für Berichte, die größere Datenmengen erfordern, können Sie Tools wie [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) oder den [Endpunkt der Export-API]({{site.baseurl}}/api/endpoints/export) verwenden.
 
 ## Überwachung Ihrer Query Builder-Nutzung
 

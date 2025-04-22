@@ -18,7 +18,7 @@ _This integration is maintained by Branch._
 
 ## About the integration
 
-The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
+The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/message_orchestration/attribution/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
 
 ## Integration
 

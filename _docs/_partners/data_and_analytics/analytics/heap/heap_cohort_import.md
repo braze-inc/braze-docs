@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Heap](https://heap.io/), a digital insights platform, focuses you on opportunities in your digital experience that most impact your business, eliminating friction, delighting your customers, and accelerating revenue.
 
-The Braze and Heap integration enables you to [import Heap data to Braze](#data-import-integration), create user cohorts, as well as [export Braze data to Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/heap/) to create segments.
+The Braze and Heap integration enables you to [import Heap data to Braze](#data-import-integration), create user cohorts, as well as [export Braze data to Heap]({{site.baseurl}}/partners/data_and_analytics/analytics/heap/) to create segments.
 
 ## Prerequisites
 

@@ -89,7 +89,7 @@ Nachdem der Integrationsprozess abgeschlossen ist, zieht Braze automatisch die L
 | --- | --- |
 | Anbieter-ID | Wählen Sie Ihren Anbieter und gehen Sie dann zu **\*Einstellungen** > **Grundlegende Informationen** |
 | Kanal-ID | Wählen Sie Ihren Anbieter und gehen Sie dann zu **Kanäle** > Ihr Kanal > **Grundeinstellungen** |
-| Kanalgeheimnis | Wählen Sie Ihren Anbieter und gehen Sie dann zu **Kanäle** > Ihr Kanal > **Grundeinstellungen** |
+| Kanalgeheimnis | Wählen Sie Ihren Anbieter aus und gehen Sie dann zu **Kanäle** > Ihr Kanal > **Grundeinstellungen**. |
 | Kanalzugriffs-Token | Wählen Sie Ihren Anbieter aus und gehen Sie dann zu **Kanäle** > Ihr Kanal > **Messaging-API**. Wenn es kein Token für den Kanalzugang gibt, wählen Sie **Fehler** aus. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -108,6 +108,10 @@ Nachdem der Integrationsprozess abgeschlossen ist, zieht Braze automatisch die L
    - Kanal-ID
    - Kanalgeheimnis
    - Kanalzugriffs-Token
+
+{% alert important %}
+Vergewissern Sie sich während der Integration, dass Ihr Kanalgeheimnis korrekt ist. Wenn sie nicht korrekt ist, gibt es möglicherweise Unstimmigkeiten im Abo-Status.
+{% endalert %}
 
 ![LINE-Messaging-Integrationsseite mit Abschnitt „LINE-Integration“.][3]{: style="max-width:80%;"}
 
@@ -207,7 +211,7 @@ Um diese Aufgabe zu bewältigen, bietet Braze Tools und eine Logik, die eine gut
 1. **Abo-Synchronisationstool:** Dieses Tool wird automatisch nach einer erfolgreichen LINE-Kanalintegration eingesetzt. Verwenden Sie es, um bestehende Profile zu aktualisieren und neue Profile zu erstellen.<br><br>Alle Nutzerprofile von Braze, die ein `native_line_id` haben, das dem Kanal LINE folgt, werden auf den Abo-Gruppenstatus `subscribed` aktualisiert. Jeder Follower des LINE-Kanals, der kein Nutzerprofil von Braze mit der Adresse `native_line_id` hat, wird es haben:<br><br>\- Ein anonymes Benutzerprofil, das mit `native_line_id` erstellt wurde und auf die LINE ID des Benutzers nach dem Kanal eingestellt ist <br>\- Ein Benutzer-Alias `line_id`, der auf die dem Kanal folgende Benutzer-LINE-ID eingestellt ist <br>\- Ein Abo-Gruppenstatus von `subscribed`
 
 {: start="2"}
-2\. **Event-Updates:** Diese werden verwendet, um den Status des Abos eines Nutzers:innen zu aktualisieren. Wenn Braze-Updates von Nutzer-Events für den integrierten LINE-Kanal empfängt und es sich um ein Follow-Event handelt, hat das Nutzerprofil den Abo-Gruppenstatus `subscribed`. Wenn es sich um ein Unfollow-Event handelt, hat das Nutzerprofil einen Abo-Gruppenstatus von `unsubscribed`.<br><br>\- Alle Braze-Benutzerprofile mit einem passenden `native_line_id` werden automatisch aktualisiert. <br>\- Wenn für ein Event kein passendes Nutzerprofil existiert, [erstellt Braze eine:n anonyme:n Nutzer:in](https://www.braze.com/docs/line/user_management/).
+2\. **Event-Updates:** Diese werden verwendet, um den Status des Abos eines Nutzers:innen zu aktualisieren. Wenn Braze-Updates von Nutzer-Events für den integrierten LINE-Kanal empfängt und es sich um ein Follow-Event handelt, hat das Nutzerprofil den Abo-Gruppenstatus `subscribed`. Wenn es sich um ein Unfollow-Event handelt, hat das Nutzerprofil einen Abo-Gruppenstatus von `unsubscribed`.<br><br>\- Alle Braze-Benutzerprofile mit einem passenden `native_line_id` werden automatisch aktualisiert. <br>\- Wenn für ein Event kein passendes Nutzerprofil existiert, [erstellt Braze eine:n anonyme:n Nutzer:in]({{site.baseurl}}/line/user_management/).
 
 ## Anwendungsfälle
 

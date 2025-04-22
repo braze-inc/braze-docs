@@ -17,9 +17,9 @@ search_tag: Partner
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
 
-- Sync [Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
+- Sync [Segment Engage]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to the Braze REST APIs
-- [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
+- [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/). 
 
 ## Prerequisites
 

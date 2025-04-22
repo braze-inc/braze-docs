@@ -1,17 +1,17 @@
 ---
-nav_title: "PUT: Präferenzzentrum aktualisieren"
-article_title: "PUT: Präferenzzentrum aktualisieren"
+nav_title: "PUT: Update Preference Center"
+article_title: "PUT: Update Preference Center"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Update a preference center."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Update a preference center Braze."
 
 ---
 {% api %}
-# Präferenzzentrum aktualisieren
+# Update des Einstellungszentrums
 {% apimethod put %}
-/preference_center/v1/{preferenceCenterExternalID}
+/Präferenz_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um ein Einstellungszentrum zu aktualisieren.
@@ -22,19 +22,19 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Update a
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `preference_center.update`.
 
-## Preisgrenze
+## Rate-Limit
 
-Dieser Endpunkt hat ein Ratenlimit von 10 Anfragen pro Minute und Arbeitsbereich.
+Für diesen Endpunkt gilt ein Rate-Limits von 10 Anfragen pro Minute und Workspace.
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Präferenzzentrum. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -64,9 +64,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 } 
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_page_html`| Erforderlich | String | Der HTML-Code für die Seite des Einstellungszentrums. |
 |`preference_center_title`| Optional | String | Der Titel für das Einstellungscenter und die Bestätigungsseiten. Wenn kein Titel angegeben wird, lautet der Titel der Seiten standardmäßig "Einstellungscenter". |

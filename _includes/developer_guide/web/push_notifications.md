@@ -4,7 +4,7 @@
 
 ## Push protocols
 
-Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support. For more information on specific push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications") [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility") and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API").
+Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support. For more information on specific push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/) [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility) and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/).
 
 ## Setting up push notifications
 

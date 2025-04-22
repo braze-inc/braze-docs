@@ -1,7 +1,7 @@
 ---
 nav_title: Feature Awareness und neue App-Version
 article_title: Feature Awareness und neue App-Version
-page_order: 7
+page_order: 9
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie Sie Ihre Nutzer:innen auf dem Laufenden halten, wenn Sie neue Funktionen oder Versionen veröffentlichen."
 tool: Campaigns

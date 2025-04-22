@@ -43,7 +43,40 @@ Bestimmte Ereignisse geben einen `platform`-Wert zurück, der die Plattform des 
 Speicherschemata gelten für die Flat File-Event-Daten, die wir an Data Warehouse-Speicherpartner (wie Google Cloud Storage, Amazon S3 und Microsoft Azure Blob Storage) senden. Einige der hier aufgeführten Kombinationen von Veranstaltungen und Zielen sind noch nicht allgemein verfügbar. Informationen darüber, welche Veranstaltungen von verschiedenen Partnern unterstützt werden, finden Sie in unserer Liste der [verfügbaren Partner]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) und auf den jeweiligen Seiten.<br><br>Beachten Sie außerdem, dass Currents Events mit übermäßig großen Nutzlasten von mehr als 900 KB löscht.
 {% endalert %}
 {% api %}
+## Zufällige Bucket-Nummer Update-Ereignisse
 
+{% apitags %}
+Zufällige Bucket-Nummer
+{% endapitags %}
+
+Dieses Nutzer-Event wird jedes Mal gestartet, wenn ein:e neue:r Nutzer:in in seinem oder ihrem Workspace erstellt wird. Dabei wird jedem neuen Nutzer:innen eine zufällige Bucket-Nummer zugewiesen, mit der Sie dann gleichmäßig verteilte Segmente aus zufälligen Nutzer:innen erstellen können. Verwenden Sie diese Funktion, um eine Reihe zufälliger Bucket-Nummern zu gruppieren und die Performance Ihrer Kampagnen und Kampagnenvarianten zu vergleichen.
+
+{% alert important %}
+Dieses Currents-Ereignis ist nur für Kund:innen verfügbar, die einen "All Events Connector" erworben haben, und ist nur für Storage Event Connectors (wie Amazon S3, Microsoft Azure und Google Cloud Storage) verfügbar.
+<br><br>Wenden Sie sich an Ihren Customer-Success-Manager, um dieses Event zu aktivieren und den Zeitplan für das Auffüllen der zufälligen Bucket-Nummern bestehender Nutzer:innen in Ihrem Workspace anzupassen.
+{% endalert %}
+
+{% tabs %}
+{% tab Cloud-Speicher %}
+```json
+// users.RandomBucketNumberUpdate
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
+  "random_bucket_number" : "(required, int) New random bucket number",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
 ## Angepasste Events
 
 {% apitags %}
@@ -53,22 +86,49 @@ Angepasste Events
 Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. Verwenden Sie dies, um zu verfolgen, wann Nutzer:innen angepasste Events in Ihrer Anwendung ausführen.
 
 {% tabs %}
+{% tab Amplitude %}
+```json
+// [Braze Custom Event] (users.behaviors.CustomEvent)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
 {% tab Mixpanel %}
 ```json
-// [Braze Custom Event] custom event name: users.behaviors.CustomEvent
+// [Braze Custom Event] (users.behaviors.CustomEvent)
 
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
     "$partner_id" : "braze",
-    "ad_id" : "(optional, string) Advertising identifier",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "$device" : "(optional, string) Model of the device",
-    "distinct_id" : "(required, string) External ID of the user",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
@@ -81,17 +141,17 @@ Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. V
 
 {% tab Cloud-Speicher %}
 ```json
-// [Braze Custom Event] custom event name: users.behaviors.CustomEvent
+// users.behaviors.CustomEvent
 
 {
-  "ad_id" : "(optional, string) Advertising identifier",
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
   "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) External ID of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "name" : "(required, string) Name of the custom event",
   "os_version" : "(optional, string) Version of the operating system of the device",
@@ -103,43 +163,190 @@ Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. V
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Merkmale der Eigenschaft
+
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
+{% endapi %}
+
+{% api %}
+## Install-Attribution Ereignisse
+
+{% apitags %}
+Attribution
+{% endapitags %}
+
+Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributiert wird. Verwenden Sie dieses Tracking, um zu verfolgen, woher die Installationen Ihrer Apps kommen.
+
+{% tabs %}
 {% tab Amplitude %}
 ```json
-// [Braze Custom Event] custom event name: users.behaviors.CustomEvent
+// Install Attribution (users.behaviors.InstallAttribution)
 
 {
-  "adid" : "(optional, string) Advertising identifier",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "source" : "(optional, string) The source of the attribution"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Install Attribution (users.behaviors.InstallAttribution)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "source" : "(optional, string) The source of the attribution",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab Cloud-Speicher %}
+```json
+// users.behaviors.InstallAttribution
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "source" : "(required, string) The source of the attribution",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Standort Ereignisse
+
+{% apitags %}
+Standorte
+{% endapitags %}
+
+Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort besucht. Verwenden Sie dieses Event, um Nutzer:innen zu tracken, die Standort-Events in Ihrer App triggern.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Location (users.behaviors.Location)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+    "altitude" : "(optional, float) [PII] Altitude of recorded location",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "device_model" : "(optional, string) Model of the device",
+    "latitude" : "(required, float) [PII] Latitude of recorded location",
+    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+    "longitude" : "(required, float) [PII] Longitude of recorded location",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "idfa" : "(optional, string) Advertising identifier",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Location (users.behaviors.Location)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+    "altitude" : "(optional, float) [PII] Altitude of recorded location",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "$device" : "(optional, string) Model of the device",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "latitude" : "(required, float) [PII] Latitude of recorded location",
+    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+    "longitude" : "(required, float) [PII] Longitude of recorded location",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab Cloud-Speicher %}
+```json
+// users.behaviors.Location
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+  "altitude" : "(optional, float) [PII] Altitude of recorded location",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "latitude" : "(required, float) [PII] Latitude of recorded location",
+  "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+  "longitude" : "(required, float) [PII] Longitude of recorded location",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
-
 {% endapi %}
-{% api %}
 
-## Kauf-Event
+{% api %}
+## Kauf-Events
 
 {% apitags %}
 Käufe
@@ -152,23 +359,53 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 {% endalert %}
 
 {% tabs %}
+{% tab Amplitude %}
+```json
+// Purchase (users.behaviors.Purchase)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "currency" : "(required, string) Currency of the purchase",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "price" : "(required, float) Price of the purchase",
+  "productId" : "(required, string) ID of the product purchased",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
 {% tab Mixpanel %}
 ```json
-// Purchase: users.behaviors.Purchase
+// Purchase (users.behaviors.Purchase)
 
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
     "$partner_id" : "braze",
-    "ad_id" : "(optional, string) Advertising identifier",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "currency" : "(required, string) Currency of the purchase",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "distinct_id" : "(required, string) External ID of the user",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
@@ -183,10 +420,10 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 
 {% tab Cloud-Speicher %}
 ```json
-// Purchase: users.behaviors.Purchase
+// users.behaviors.Purchase
 
 {
-  "ad_id" : "(optional, string) Advertising identifier",
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
   "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
@@ -194,7 +431,7 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
   "currency" : "(required, string) Currency of the purchase",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) External ID of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
@@ -206,47 +443,16 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 }
 ```
 {% endtab %}
-
-{% tab Amplitude %}
-```json
-// Purchase: users.behaviors.Purchase
-
-{
-  "adid" : "(optional, string) Advertising identifier",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "currency" : "(required, string) Currency of the purchase",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "idfa" : "(optional, string) Advertising identifier",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "price" : "(required, float) Price of the purchase",
-  "productId" : "(required, string) ID of the product purchased",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
-
 {% api %}
-
-## „Erste Sitzung“-Event
+## Ereignisse der ersten Sitzung
 
 {% apitags %}
 Sitzungen
@@ -259,19 +465,42 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endalert %}
 
 {% tabs %}
+{% tab Amplitude %}
+```json
+// First Session (users.behaviors.app.FirstSession)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
 {% tab Mixpanel %}
 ```json
-// First Session: users.behaviors.app.FirstSession
+// First Session (users.behaviors.app.FirstSession)
 
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
     "$partner_id" : "braze",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "$device" : "(optional, string) Model of the device",
-    "distinct_id" : "(required, string) External ID of the user",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
@@ -285,48 +514,25 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 
 {% tab Cloud-Speicher %}
 ```json
-// First Session: users.behaviors.app.FirstSession
+// users.behaviors.app.FirstSession
 
 {
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "country" : "(optional, string) Country of the user",
+  "country" : "(optional, string) [DEPRECATED]",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) External ID of the user",
-  "gender" : "(optional, string) Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [DEPRECATED]",
   "id" : "(required, string) Globally unique ID for this event",
-  "language" : "(optional, string) Language of the user",
+  "language" : "(optional, string) [DEPRECATED]",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "sdk_version" : "(optional, string) [DEPRECATED]",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-
-{% tab Amplitude %}
-```json
-// First Session: users.behaviors.app.FirstSession
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
 }
 ```
 {% endtab %}
@@ -335,8 +541,90 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endapi %}
 
 {% api %}
+## End-to-End-Ereignisse der Sitzung
 
-## Bei einem Sitzungsstart-Event
+{% apitags %}
+Sitzungen
+{% endapitags %}
+
+Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre aktuelle Sitzung beendet. Verwenden Sie diese Daten, um zu verfolgen, wann Sitzungen enden, und berechnen Sie zusammen mit dem entsprechenden Sitzungsbeginn die Dauer der Teilnahme an einer Sitzung.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Session End (users.behaviors.app.SessionEnd)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "device_model" : "(optional, string) Model of the device",
+    "duration" : "(optional, float) Duration of the session in seconds",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Session End (users.behaviors.app.SessionEnd)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "$device" : "(optional, string) Model of the device",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "duration" : "(optional, float) Duration of the session in seconds",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab Cloud-Speicher %}
+```json
+// users.behaviors.app.SessionEnd
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "duration" : "(optional, float) Duration of the session in seconds",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "session_id" : "(required, string) UUID of the session",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Session Start Ereignisse
 
 {% apitags %}
 Sitzungen
@@ -349,19 +637,42 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 {% endalert %}
 
 {% tabs %}
+{% tab Amplitude %}
+```json
+// Session Start (users.behaviors.app.SessionStart)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
 {% tab Mixpanel %}
 ```json
-// Session Start: users.behaviors.app.SessionStart
+// Session Start (users.behaviors.app.SessionStart)
 
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
     "$partner_id" : "braze",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "$device" : "(optional, string) Model of the device",
-    "distinct_id" : "(required, string) External ID of the user",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
@@ -375,14 +686,14 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 
 {% tab Cloud-Speicher %}
 ```json
-// Session Start: users.behaviors.app.SessionStart
+// users.behaviors.app.SessionStart
 
 {
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) External ID of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
@@ -392,327 +703,6 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 }
 ```
 {% endtab %}
-
-{% tab Amplitude %}
-```json
-// Session Start: users.behaviors.app.SessionStart
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
-}
-```
-{% endtab %}
 {% endtabs %}
-
-{% endapi %}
-
-{% api %}
-
-## „Sitzung beenden“-Event
-
-{% apitags %}
-Sitzungen
-{% endapitags %}
-
-Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre aktuelle Sitzung beendet. Verwenden Sie diese Daten, um zu verfolgen, wann Sitzungen enden, und berechnen Sie zusammen mit dem entsprechenden Sitzungsbeginn die Dauer der Teilnahme an einer Sitzung.
-
-{% alert tip %}
-Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Event `FirstSession` als auch das Event `SessionStart` Ereignis ausgelöst.
-{% endalert %}
-
-{% tabs %}
-{% tab Mixpanel %}
-```json
-// Session End: users.behaviors.app.SessionEnd
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "$device" : "(optional, string) Model of the device",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "distinct_id" : "(required, string) External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "$os" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token"
-  }
-}
-```
-{% endtab %}
-
-{% tab Cloud-Speicher %}
-```json
-// Session End: users.behaviors.app.SessionEnd
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "duration" : "(optional, float) Duration of the session in seconds",
-  "external_user_id" : "(optional, string) External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-
-{% tab Amplitude %}
-```json
-// Session End: users.behaviors.app.SessionEnd
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_model" : "(optional, string) Model of the device",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
-
-## Standort-Event
-
-{% apitags %}
-Standorte
-{% endapitags %}
-
-Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort besucht. Verwenden Sie dieses Event, um Nutzer:innen zu tracken, die Standort-Events in Ihrer App triggern.
-
-{% tabs %}
-{% tab Mixpanel %}
-```json
-// Location: users.behaviors.Location
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "$device" : "(optional, string) Model of the device",
-    "distinct_id" : "(required, string) External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "$os" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token"
-  }
-}
-```
-{% endtab %}
-
-{% tab Cloud-Speicher %}
-```json
-// Location: users.behaviors.Location
-
-{
-  "ad_id" : "(optional, string) Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-  "altitude" : "(optional, float) Altitude of recorded location",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "latitude" : "(required, float) Latitude of recorded location",
-  "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-  "longitude" : "(required, float) Longitude of recorded location",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-
-{% tab Amplitude %}
-```json
-// Location: users.behaviors.Location
-
-{
-  "adid" : "(optional, string) Advertising identifier",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_model" : "(optional, string) Model of the device",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "idfa" : "(optional, string) Advertising identifier",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-#### Merkmale der Eigenschaft
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die Identifier for Advertisers (IDFA) für iOS und die Google Ad-ID für Android explizit über die nativen SDKs erfassen. Erfahren Sie mehr über sie hier: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
-{% endapi %}
-
-{% api %}
-
-## „Attribution“-Event
-
-{% apitags %}
-Attribution
-{% endapitags %}
-
-Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributiert wird. Verwenden Sie dieses Tracking, um zu verfolgen, woher die Installationen Ihrer Apps kommen.
-
-{% tabs %}
-{% tab Mixpanel %}
-```json
-// Install Attribution: users.behaviors.InstallAttribution
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "distinct_id" : "(required, string) External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "source" : "(optional, string) The source of the attribution",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token"
-  }
-}
-```
-{% endtab %}
-
-{% tab Cloud-Speicher %}
-```json
-// Install Attribution: users.behaviors.InstallAttribution
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "external_user_id" : "(optional, string) External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "source" : "(required, string) The source of the attribution",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-
-{% tab Amplitude %}
-```json
-// Install Attribution: users.behaviors.InstallAttribution
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "source" : "(optional, string) The source of the attribution"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) External ID of the user"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
-
-## „Zufällige Bucket-Nummer“-Event
-
-{% apitags %}
-Zufällige Bucket-Nummer
-{% endapitags %}
-
-Dieses Nutzer-Event wird jedes Mal gestartet, wenn ein:e neue:r Nutzer:in in seinem oder ihrem Workspace erstellt wird. Dabei wird jedem neuen Nutze oder jeder neuen Nutzerin eine zufällige Bucket-Nummer zugewiesen, mit der Sie dann gleichmäßig verteilte Segmente aus zufälligen Nutzer:innen erstellen können. Verwenden Sie dies, um eine Reihe von zufälligen Bucket-Nummern zu gruppieren und die Leistung Ihrer Kampagnen und Kampagnenvarianten zu vergleichen.
-
-{% tabs %}
-{% tab Cloud-Speicher %}
-```json
-// Random Bucket Number Update: users.RandomBucketNumberUpdate
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "external_user_id" : "(optional, string) External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
-  "random_bucket_number" : "(required, int) New random bucket number",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% alert important %}
-Dieses Currents-Even ist nur für Kund:innen verfügbar, die einen „Alle Events-Konnektor“ erworben haben, und ist nur für Speicher-Event-Konnektoren (Amazon S3, Microsoft Azure und Google Cloud Storage) verfügbar.
-<br><br>Wenden Sie sich an Ihren Customer-Success-Manager, um dieses Event zu aktivieren und den Zeitplan für das Auffüllen der zufälligen Bucket-Nummern bestehender Nutzer:innen in Ihrem Workspace anzupassen.
-{% endalert %}
 
 {% endapi %}

@@ -254,7 +254,7 @@ Another common use case is to flag specific links as universal links. Universal 
 
 To set up universal links, refer to [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
-Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
+Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}

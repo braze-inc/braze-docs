@@ -69,7 +69,7 @@ Wie die Conversions wird auch der Umsatz technisch auf der Canvas-Ebene verfolgt
 Wenn ein Benutzer beispielsweise zwei Schritte durchläuft und dann einen Kauf tätigt, wird dieser Umsatz der zweiten Komponente und der von ihm eingegebenen Variante zugeordnet. Wenn sie das Canvas betreten, aber einen Kauf tätigen, bevor sie die erste Canvas-Komponente erhalten, wird dieser Umsatz der eingegebenen Variante zugerechnet, aber keiner Komponente.
 {% endalert %}
 
-Darüber hinaus können Sie eine genauere Aufschlüsselung der [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) sehen, einschließlich der folgenden:
+Darüber hinaus können Sie eine genauere Aufschlüsselung der [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) sehen, einschließlich der folgenden:
 
 - Konversionssummen und Konversionsraten für jedes Konversionsereignis
 - Aufschwung gegenüber der Kontrollvariante

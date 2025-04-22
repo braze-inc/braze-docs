@@ -52,13 +52,13 @@ Sie können jede Art von Daten in einen Katalog einbringen. In der Regel handelt
 ### Reisen und Gastgewerbe
 
 - **Ziele:** Importieren Sie Reiseziele und deren beliebteste Attraktionen, Restaurants und Aktivitäten, und personalisieren Sie dann die Empfehlungen für Ihre Benutzer auf der Grundlage ihrer früheren Reisen.
-- **Unterbringung:** Importieren Sie Hotelimmobilien und deren Ausstattung, Zimmertypen und Preise und senden Sie dann Werbeangebote an Ihre Nutzer auf der Grundlage ihrer ausgewählten Präferenzen.
+- **Unterkünfte:** Importieren Sie Hotelimmobilien und deren Ausstattung, Zimmertypen und Preise und senden Sie dann Werbeangebote an Ihre Nutzer auf der Grundlage ihrer ausgewählten Präferenzen.
 - **Reisemethoden**: Importieren Sie Angebote und Aktionen für Reisearten (z.B. Flüge, Züge, Mietwagen und andere) und senden Sie diese dann an Ihre Nutzer auf der Grundlage ihres jüngsten Suchverlaufs.
 - **Bevorzugte Mahlzeiten:** Importieren Sie Informationen über das Essensangebot und verwenden Sie die [Auswahl]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), um personalisierte Nachrichten an Benutzer zu senden, die bestimmte Essensvorlieben haben, basierend auf ihrer zuletzt angesehenen Essenskategorie.
 
 ## Wie Kataloge und Liquid zusammenarbeiten
 
-Kataloge sind eine Funktion zur Datenspeicherung. Sie enthalten große Mengen an Daten, auf die Sie in Ihren Nachrichten zur Personalisierung verweisen können. Um die Daten tatsächlich zu referenzieren, verwenden Sie [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) als Templating-Sprache. Mit anderen Worten: Kataloge sind der Speicher, in dem die Daten aufbewahrt werden, und Liquid ist die Sprache, die die relevanten Daten aus dem Speicher abruft.
+Kataloge sind eine Funktion zur Datenspeicherung. Sie enthalten große Mengen an Daten, auf die Sie in Ihren Nachrichten zur Personalisierung verweisen können. Um die Daten tatsächlich zu referenzieren, verwenden Sie [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) als Templating-Sprache. Mit anderen Worten: Kataloge sind der Speicher, in dem die Daten aufbewahrt werden, und Liquid ist die Sprache, die die relevanten Daten aus dem Speicher holt.
 
 Beispiele dafür, wie Sie Liquid zum Abrufen von Kataloginformationen verwenden können, finden Sie in den zusätzlichen Anwendungsfällen unter [Erstellen eines Katalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
 

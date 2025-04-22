@@ -9,16 +9,16 @@ description: "This landing page is home to all things Amplitude, including Ampli
 
 guide_featured_list:
 - name: Amplitude Cohort Import
-  link: /docs/partners/data_and_infrastructure_agility/cohort_import/amplitude/
+  link: /docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/
   image: /assets/img/braze_icons/users-01.svg
 - name: Amplitude for Currents
-  link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: Amplitude Recommend
-  link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/
+  link: /docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_audiences/
   image: /assets/img/braze_icons/lightbulb-02.svg
 - name: Amplitude and Connected Content
-  link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
+  link: /docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/
   image: /assets/img/braze_icons/user-circle.svg
 ---
 

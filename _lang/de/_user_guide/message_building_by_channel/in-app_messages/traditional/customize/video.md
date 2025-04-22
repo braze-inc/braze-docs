@@ -28,7 +28,7 @@ Video-Content ist nur verfügbar, wenn das Gerät über eine angemessene Netzwer
 
 ## Überlegungen zu Android
 
-Um Videos und anderen HTML5-Content in HTML-In-App-Nachrichten auf Android einzubetten, muss die Hardwarebeschleunigung in der Aktivität aktiviert werden, in der die In-App-Nachricht angezeigt wird. Weitere Informationen finden Sie im [Android-Entwicklerhandbuch]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+Um Videos und anderen HTML5-Content in HTML-In-App-Nachrichten auf Android einzubetten, muss die Hardwarebeschleunigung in der Aktivität aktiviert werden, in der die In-App-Nachricht angezeigt wird. Weitere Informationen finden Sie im [Android-Entwicklerhandbuch]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## Überlegungen zu iOS
 

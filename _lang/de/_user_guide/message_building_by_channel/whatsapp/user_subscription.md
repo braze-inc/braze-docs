@@ -33,10 +33,6 @@ Bei WhatsApp gibt es den Abo-Status `subscribed` und `unsubscribed`.
 
 - **Benutzerprofil:** Auf einzelne Benutzerprofile können Sie über das Braze Dashboard unter **Publikum** > **Benutzer suchen** zugreifen. Hier können Sie Benutzerprofile nach E-Mail-Adresse, Telefonnummer oder externer Benutzer-ID abrufen. Wenn Sie sich in einem Benutzerprofil befinden, können Sie auf der Registerkarte **Engagement** die WhatsApp-Abonnementgruppe eines Benutzers und seinen Status einsehen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Benutzer** > **Benutzersuche**.
-{% endalert %}
-
 - **Rest-API:** Die  Abo-Gruppen einzelner Nutzerprofile können über den [Endpunkt Nutzerspezifische Abo-Gruppen auflisten][9] oder [Endpunkt Nutzerspezifischen Abo-Gruppen-Status auflisten][8] über die REST API von Braze eingesehen werden. 
 
 ## Opt-in und Opt-out bei WhatsApp

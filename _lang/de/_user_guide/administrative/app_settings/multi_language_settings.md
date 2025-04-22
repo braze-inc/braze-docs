@@ -41,26 +41,30 @@ Wie Sie diese Gebietsschemata in Ihren E-Mail-Kampagnen und Canvas verwenden kö
 
 ## Überlegungen
 
-Beim Einrichten eines Gebietsschemas können Sie entweder Sprachen aus den Standardattributen den angepassten Attributen für Nutzer:innen auswählen. Sie können nicht aus beiden wählen.
-
-Sie können bis zu zwei angepasste Attribute in einem einzigen Gebietsschema oder bis zu zwei Standard-Nutzerattribute in einer Sprache auswählen. In beiden Fällen ist das zweite Attribut optional.
+- Beim Einrichten eines Gebietsschemas können Sie entweder Sprachen aus den Standardattributen den angepassten Attributen für Nutzer:innen auswählen. Sie können nicht aus beiden wählen.
+- Sie können bis zu zwei angepasste Attribute in einem einzigen Gebietsschema oder bis zu zwei Standard-Nutzerattribute in einer Sprache auswählen. In beiden Fällen ist das zweite Attribut optional.
+- Wenn Sie Änderungen an den übersetzten Werten in der CSV-Datei vornehmen, vermeiden Sie es, die Standardwerte in der Datei zu ändern.
+- Der Lokalisierungsschlüssel in Ihrer hochgeladenen Datei muss mit dem Schlüssel in Ihren Mehrspracheneinstellungen übereinstimmen.
 
 ### Unterstützung und Prioritätensetzung
 
 - Benutzer, die mit einem benutzerdefinierten Attribut locale übereinstimmen, werden vor Benutzern bevorzugt, die mit einem Standardbenutzerattribut übereinstimmen.
 - Die Unterstützung für benutzerdefinierte Attribute ist auf String-Typen und den Vergleichsschlüssel `equals` beschränkt.
-- Wenn ein angepasstes Attribut vom Support gelöscht oder der Typ geändert wird, kann der oder die Nutzer:in nicht mehr in dieses Gebietsschema fallen und wird entweder in der Prioritätenliste der Gebietsschemas, unter die er oder sie fällt, nach unten verschoben oder erhält Standard-Marketingübersetzungen.
+- Wenn ein angepasstes Attribut gelöscht oder sein Typ geändert wird, kann der Nutzer:innen nicht mehr in diese Lokalisierung fallen und wird entweder in der Prioritätsliste der Lokalisierungen nach unten rutschen oder Standardübersetzungen für das Marketing erhalten.
 - Wenn ein Gebietsschema ungültig ist (das benutzerdefinierte Attribut hat sich geändert oder wurde gelöscht), wird der Fehler auf der Seite **Mehrsprachiger Support** angezeigt.
 
 ## Häufig gestellte Fragen
 
 #### Wie viele Gebietsschemata kann ich hinzufügen?
+
 Sie können bis zu 200 Gebietsschemata hinzufügen.
 
 #### Wo werden die Übersetzungsdateien in Braze gespeichert?
+
 Die Übersetzungsdateien werden auf Kampagnen-Ebene gespeichert, d. h. für jede Variante der Nachricht müssen Übersetzungen hochgeladen werden.
 
 #### Muss der Name des Gebietsschemas einem bestimmten Muster oder Format folgen?
+
 Nein. Sie können Ihre bevorzugte Benennungskonvention verwenden. Der Name des Gebietsschemas wird bei der Auswahl des Gebietsschemas im Editor verwendet und erscheint in den Überschriften der Datei, die Sie mit den Übersetzungs-IDs herunterladen.
 
 [1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

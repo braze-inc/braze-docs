@@ -41,6 +41,15 @@ Dies bedeutet Folgendes:
 
 > Holen Sie sich Tales für nur 7.49!
 
+## Kataloge exportieren
+
+Es gibt zwei Möglichkeiten, wie Sie Kataloge aus dem Dashboard exportieren können: 
+
+- Bewegen Sie den Mauszeiger über die Katalogzeile im Bereich **Kataloge**. Wählen Sie dann den Button **Katalog exportieren** aus.
+- Wählen Sie Ihren Katalog aus. Wählen Sie dann den Button **Katalog exportieren** auf dem Tab **Vorschau** des Katalogs aus.
+
+Sie erhalten eine E-Mail zum Herunterladen der CSV-Datei, nachdem Sie den Export gestartet haben. Sie haben bis zu vier Stunden Zeit, diese Datei abzurufen.
+
 ## Zusätzliche Anwendungsfälle
 
 ### Mehrere Artikel

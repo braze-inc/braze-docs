@@ -17,7 +17,7 @@ description: "This article outlines details about the Update translation in a Ca
 
 > Use this endpoint to update multiple translations for a Canvas.
 
-If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch) first.
+If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.

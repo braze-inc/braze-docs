@@ -40,10 +40,6 @@ Die Aktualisierung der Risikobewertungen für die Zielgruppe der Prognosen kann 
 
 Die Seite **Prognosen** befindet sich im Bereich **Analysen**. Für einen vollständigen Zugang wenden Sie sich bitte an Ihren Kundenbetreuer.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Vorhersagen** unter **Engagement**.
-{% endalert %}
-
 Bevor Sie dieses Feature kaufen, ist es in der Vorschau verfügbar. Dies erlaubt Ihnen, eine Demo-Prognose der Abwanderung mit synthetischen Daten zu sehen und jeweils ein Prognosemodell für die Abwanderung auf der Grundlage Ihrer Nutzerdaten zu erstellen. Diese Vorschau erlaubt es Ihnen nicht, Nutzer:innen für Messaging nach dem Abwanderungsrisiko zusammenzustellen und wird nach der Erstellung nicht regelmäßig aktualisiert.
 
 Mit der Vorschau können Sie auch Ihre eine Vorhersage bearbeiten und neu erstellen oder sie archivieren und weitere erstellen, um die erwartete [Vorhersagequalität]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) verschiedener [Definitionen]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn) zu testen.

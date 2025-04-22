@@ -17,6 +17,7 @@ Vor diesem Feature konnten die Entry-Eigenschaften nur im ersten Schritt von Can
 ## Eingabeeigenschaften verwenden
 
 Eingabeeigenschaften können in aktionsbasierten und API-gesteuerten Canvases verwendet werden. Diese Entry-Eigenschaften werden definiert, wenn ein Canvas durch ein angepasstes Event, einen Kauf oder einen API-Aufruf getriggert wird. Weitere Informationen finden Sie in den folgenden Artikeln:
+
 - [Canvas Entry Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event-Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

@@ -8,7 +8,7 @@ search_tag: Partner
 
 # Mixpanel cohort import
 
-> This article describes how to import user cohorts from [Mixpanel](https://mixpanel.com/) to Braze. For more information on integrating Mixpanel and its other functionalities, see the main [Mixpanel article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/).
+> This article describes how to import user cohorts from [Mixpanel](https://mixpanel.com/) to Braze. For more information on integrating Mixpanel and its other functionalities, see the main [Mixpanel article]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/).
 
 ## Data import integration
 

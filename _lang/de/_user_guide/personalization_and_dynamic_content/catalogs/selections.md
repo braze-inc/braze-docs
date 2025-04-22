@@ -38,7 +38,11 @@ Nachdem Sie eine Auswahl erstellt haben, können Sie im Bereich **Vorschau für 
 
 ### Liquid in den Auswahlergebnissen
 
-Die Verwendung von Liquid in Katalogen, wie z.B. benutzerdefinierte Attribute und benutzerdefinierte Ereignisse, kann dazu führen, dass Sie für jeden Benutzer in Ihrer Auswahl unterschiedliche Ergebnisse erhalten.
+Die Verwendung von Liquid in Katalogen, wie z.B. benutzerdefinierte Attribute und benutzerdefinierte Ereignisse, kann dazu führen, dass Sie für jeden Benutzer in Ihrer Auswahl unterschiedliche Ergebnisse erhalten. 
+
+{% alert note %}
+Connected Content Liquid wird in diesen Filter-Einstellungen nicht unterstützt.
+{% endalert %}
 
 ![Filtereinstellungen für die Katalogauswahl, wenn das Attribut auf ein benutzerdefiniertes Liquid-Attribut eingestellt ist.][7]
 
@@ -70,7 +74,7 @@ Um diesen Katalog und die Auswahl in einer Kampagne zu verwenden, verwenden Sie 
 
 Nehmen wir an, Sie haben eine:n Nutzer:in, deren:dessen zuletzt angesehene Kategorie "Huhn" ist. Mit der eingestellten Personalisierung und einer Content Card-Kampagne können Sie diesem Nutzer drei Essensempfehlungen mit Huhn schicken.
 
-![Eine Inhaltskarte mit einem Bild von gegrilltem Zitronenhühnchen und einer Liste von drei Essensempfehlungen, die Hühnchen enthalten, basierend auf der Kategorie, die der Benutzer zuletzt angesehen hat.][4]{: style="max-width:90%;"}
+![Eine Content-Card mit einem Bild von gegrilltem Zitronenhähnchen und einer Liste von drei Essensempfehlungen, die Hähnchen enthalten, basierend auf der zuletzt angesehenen Kategorie des Nutzers:innen.][4]{: style="max-width:90%;"}
 
 Mit der gleichen Personalisierung können Sie auch drei Essensempfehlungen an einen Nutzer senden, dessen zuletzt angesehene Kategorie "Rindfleisch" ist.
 

@@ -14,12 +14,12 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Externe IDs en
 /users/external_ids/remove
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die alten, veralteten externen IDs Ihrer Benutzer zu entfernen. 
+> Verwenden Sie diesen Endpunkt, um die alten, veralteten externen IDs Ihrer Nutzer:innen zu entfernen. 
 
 Sie können bis zu 50 externe IDs pro Anfrage senden. 
 
 {% alert warning %}
-Dieser Endpunkt entfernt die veraltete ID vollständig und kann nicht rückgängig gemacht werden. Wenn Sie diesen Endpunkt verwenden, um veraltete `external_ids` zu entfernen, die noch mit Benutzern in Ihrem System verknüpft sind, können Sie dauerhaft verhindern, dass Sie die Daten dieser Benutzer finden.
+Dieser Endpunkt löscht die veraltete ID vollständig und kann nicht rückgängig gemacht werden. Wenn Sie diesen Endpunkt verwenden, um veraltete `external_ids` zu entfernen, die noch mit Nutzern:innen in Ihrem System verbunden sind, können Sie die Daten dieser Nutzer:innen nicht mehr finden.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
@@ -28,11 +28,11 @@ Dieser Endpunkt entfernt die veraltete ID vollständig und kann nicht rückgäng
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.external_ids.remove`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -45,14 +45,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Parameter anfordern
+### Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | Erforderlich | Array von Zeichenketten | Externe Identifikatoren für die Benutzer zum Entfernen. |
+| `external_ids` | Erforderlich | String-Array | Externe Bezeichner für die Nutzer:innen zum Entfernen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel anfordern
+## Beispiel für eine Anfrage
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
@@ -72,7 +72,7 @@ Nur veraltete IDs können entfernt werden. Der Versuch, eine primäre externe ID
 
 ## Antwort
 
-Die Antwort bestätigt alle erfolgreichen Umzüge sowie die nicht erfolgreichen Umzüge mit den dazugehörigen Fehlern. Fehlermeldungen im Feld `removal_errors` verweisen auf den Index im Array der ursprünglichen Anfrage.
+Die Antwort bestätigt alle erfolgreichen Entfernungen sowie erfolglose Entfernungen mit den dazugehörigen Fehlern. Fehlermeldungen im Feld `removal_errors` referenzieren den Index im Array der ursprünglichen Anfrage.
 
 ```
 {
@@ -82,10 +82,10 @@ Die Antwort bestätigt alle erfolgreichen Umzüge sowie die nicht erfolgreichen 
 }
 ```
 
-Das Feld `message` gibt `success` für jede gültige Anfrage zurück. Spezifischere Fehler werden im Array `removal_errors` festgehalten. Das Feld `message` gibt einen Fehler zurück, wenn der Fall eintritt:
+Das Feld `message` gibt für jede gültige Anfrage `success` zurück. Spezifischere Fehler werden im Array `removal_errors` festgehalten. Das Feld `message` gibt einen Fehler zurück, wenn der Fall eintritt:
 - Ungültiger API-Schlüssel
 - Leeres `external_ids` Array
-- `external_ids` Array mit mehr als 50 Elementen
-- Ratenlimit erreicht (mehr als 1.000 Anfragen/Minute)
+- `external_ids` Array mit mehr als 50 Artikeln
+- Erreichen des Rate-Limits (mehr als 1.000 Anfragen/Minute)
 
 {% endapi %}

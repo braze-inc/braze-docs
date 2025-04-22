@@ -3,7 +3,7 @@ nav_title: Wrapper SDKs
 article_title: Wrapper SDKs
 page_order: 200
 
-description: "The following wrapper SDKs can be used to aid developers in app development across multiple platforms."
+description: "Die folgenden Wrapper SDKs können Entwicklern:in bei der Entwicklung von Apps für mehrere Plattformen helfen."
 page_type: partner
 platform: 
   - cordova
@@ -14,7 +14,7 @@ platform:
 layout: dev_guide
  
 guide_top_header: "Wrapper SDKs"
-guide_top_text: "The following wrapper SDKs can be used to aid developers in app development across multiple platforms."
+guide_top_text: "Die folgenden Wrapper SDKs können Entwicklern:in bei der Entwicklung von Apps für mehrere Plattformen helfen."
 
 guide_featured_list:
   - name: Cordova Android

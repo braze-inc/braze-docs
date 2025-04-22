@@ -22,15 +22,9 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 {% tab Kampagne %}
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Wählen Sie **In-App-Nachricht**. Beachten Sie, dass In-App-Nachrichten bei Multichannel-Kampagnen nicht möglich sind.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+2. Wählen Sie **In-App-Nachricht**. Beachten Sie, dass In-App-Nachrichten bei Multichannel-Kampagnen nicht möglich sind.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -210,7 +204,7 @@ Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es m
 
 ##### Erstellen von Nachrichten von rechts nach links
 
-Benötigen Sie Hilfe bei der Erstellung von Nachrichten von rechts nach links für Sprachen wie Arabisch und Hebräisch? Lesen Sie den Abschnitt [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) für bewährte Verfahren.
+Benötigen Sie Hilfe bei der Erstellung von Nachrichten von rechts nach links für Sprachen wie Arabisch und Hebräisch? Lesen Sie den Abschnitt [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) für bewährte Verfahren.
 
 ### Button-Text {#buttons}
 
@@ -273,7 +267,7 @@ Der Inhalt der Registerkarte **Stil** hängt von den im vorherigen Schritt gewä
 
 | Formatieren | Eingabe | Beschreibung |
 |---|---|---|
-|Farbprofil | Übernehmen Sie aus der Galerie der In-App-Nachricht-Vorlagen. | Klicken Sie auf **Vorlage anwenden** und wählen Sie aus der Galerie. Klicken Sie dann auf **Speichern**. |
+|[Farbprofil]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Übernehmen Sie aus der Galerie der In-App-Nachricht-Vorlagen. | Wählen Sie **Template anwenden** und wählen Sie aus der Galerie. Wählen Sie dann **Speichern**. |
 |Textausrichtung | Links, Mitte, oder Rechts.  | Nur für neuere Braze SDK-Versionen verfügbar. |
 |Header | HEX-Farbcode. | Ihre gewünschte HEX-Farbe wird angezeigt. Sie können auch die Deckkraft der Farbe auswählen.  |
 |Text | HEX-Farbcode. | Ihre gewünschte HEX-Farbe wird angezeigt. Sie können auch die Deckkraft der Farbe auswählen. |
@@ -284,7 +278,7 @@ Der Inhalt der Registerkarte **Stil** hängt von den im vorherigen Schritt gewä
 |Guillemets oder andere "Nachricht schließen"-Option | HEX-Farbcode. | Ihre gewünschte HEX-Farbe wird angezeigt. Sie können auch die Deckkraft der Farbe auswählen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[Testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) Sie Ihre Nachricht immer [in der Vorschau,]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) bevor Sie sie versenden.
+[Testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) Sie Ihre Nachricht immer in der Vorschau, bevor Sie sie versenden.
 
 {% alert important %}
 Einige In-App-Nachrichtentypen haben keine Möglichkeit zur Gestaltung, die über das Hochladen von benutzerdefiniertem HTML (oder CSS oder JavaScript) und Assets in einer ZIP-Datei hinausgeht. Im [Web-Modal mit CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) können Sie eigene CSS hochladen oder schreiben, um individuell gestaltete Nachrichten zu erstellen.
@@ -324,7 +318,7 @@ Die Zustellung von In-App-Nachrichten basiert ausschließlich auf den folgenden 
 
 Anfangsdatum und Uhrzeit müssen ausgewählt werden, das Abschlussdatum ist optional. Ein Abschlussdatum verhindert, dass die In-App-Nachricht nach dem angegebenen Datum/Uhrzeit auf den Geräten angezeigt wird.
 
-Informationen zur [serverseitigen Auslösung von Ereignissen]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) und zur [lokalen Zustellung von In-App-Nachrichten]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages) finden Sie in unserer Entwicklerdokumentation.
+Informationen zur [serverseitigen Auslösung von Ereignissen]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) und zur [lokalen Zustellung von In-App-Nachrichten]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages) finden Sie in unserer Entwicklerdokumentation.
 
 ##### Online- und Offlinetrigger
 
@@ -374,7 +368,7 @@ Verwenden Sie diese Option nicht für Nachrichten, die ausgelöst werden können
 
 #### Wählen Sie Konversionsereignisse aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 {% endtab %}
 {% tab Canvas %}

@@ -5,7 +5,7 @@ Sie können diese Updates über eindeutige Bezeichner mit einzelnen Nachrichten 
 - `dispatch_id`: Eine eindeutige ID, die Braze automatisch für jede Nachricht generiert.
 - `external_send_id`: Ein angepasster Bezeichner, den Sie angeben, z.B. eine Bestellnummer, um Updates mit Ihren internen Systemen abzugleichen.
 
-Wenn Sie zum Beispiel `external_send_id einschließen: 1234` in der Anfrage beim Versenden einer E-Mail zur Auftragsbestätigung enthalten, werden alle nachfolgenden Event-Postbacks für diese E-Mail - wie `Sent` oder `Delivered -` `external\_send\_id enthalten: 1234`. Damit können Sie bestätigen, ob der Kund:in für die Bestellung #1234 seine E-Mail zur Bestellbestätigung erhalten hat.
+Wenn Sie beispielsweise `external_send_id: 1234` in die Anfrage beim Versenden einer E-Mail zur Auftragsbestätigung aufnehmen, werden alle nachfolgenden Ereignis-Postbacks für diese E-Mail - wie `Sent` oder `Delivered`- `external_send_id: 1234` enthalten. Damit können Sie bestätigen, ob der Kund:in für die Bestellung #1234 seine E-Mail zur Bestellbestätigung erhalten hat.
 
 ### Einrichten von Postbacks
 
@@ -15,30 +15,104 @@ In Ihrem Braze-Dashboard:
 2. Geben Sie unter **Transaktionsereignis-Status-Postback** die URL ein, an die Braze Status-Updates für Ihre Transaktions-E-Mails senden soll.
 3. Testen Sie das Postback.
 
-{% Warnhinweis %} Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich diese Seite unter **Einstellungen verwalten** > E-Mail-Einstellungen **.**{% endalert %}
-
-\![\]({% image\_buster /assets/img/transactional\_webhook\_url.png %})
+![]({% image_buster /assets/img/transactional_webhook_url.png %})
 
 ### Körper der Rückmeldung
 
-```json { "dispatch_id": (String, eine zufällig erzeugte eindeutige ID der Instanz dieses Sendens), "status": (String, Aktueller Status der Nachricht aus der folgenden Nachrichtenstatustabelle, "metadata" : (Objekt, zusätzliche Informationen zur Ausführung eines Ereignisses) { "external_send_id" : (String, Wenn zum Zeitpunkt der Anfrage angegeben, übergibt Braze Ihren internen Bezeichner für diese Sendung für alle Postbacks), "campaign_api_id" : (String, API-Bezeichner dieser transaktionalen Kampagne), "received_at": (ISO 8601 DateTime String, Zeitstempel des Eingangs der Anfrage bei Braze, nur bei Ereignissen mit dem Status "gesendet" enthalten), "enqueued\_at": (ISO 8601 DateTime String, Zeitstempel des Zeitpunkts, zu dem die Anfrage von Braze in die Warteschlange gestellt wurde, nur für Ereignisse mit dem Status "gesendet"), "executed\_at": (ISO 8601 DateTime String, Zeitstempel des Zeitpunkts, zu dem die Anfrage von Braze verarbeitet wurde, nur bei Ereignissen mit dem Status "gesendet" enthalten), "sent\_at": (ISO 8601 DateTime String, Zeitstempel des Zeitpunkts, zu dem die Anfrage von Braze an den ESP gesendet wurde, nur für Ereignisse mit dem Status "gesendet" enthalten), "processed\_at" : (ISO 8601 DateTime String, Zeitstempel, zu dem das Ereignis vom ESP verarbeitet wurde, nur für Ereignisse mit dem Status "verarbeitet"), "delivered\_at" : (ISO 8601 DateTime String, Zeitstempel, zu dem das Ereignis dem Posteingang des Nutzers zugestellt wurde, nur bei Ereignissen mit dem Status "verarbeitet" enthalten), "bounced\_at" : (ISO 8601 DateTime String, Zeitstempel, an dem das Ereignis vom Posteingang des Nutzers:innen abgelehnt wurde, nur bei Ereignissen mit dem Status "abgelehnt" enthalten), "aborted\_at" : (ISO 8601 DateTime String, Zeitstempel, an dem das Ereignis von Braze abgebrochen wurde, nur bei Ereignissen mit dem Status "abgebrochen" enthalten), "reason" : (String, Der Grund, warum Braze oder der Posteingang-Anbieter diese Nachricht an den Nutzer:in nicht verarbeiten konnte, nur bei Ereignissen mit dem Status "abgebrochen" oder "geprellt" enthalten), } } ```
+```json
+{
+  "dispatch_id": (string, a randomly-generated unique ID of the instance of this send),
+  "status": (string, Current status of message from the following message status table,
+  "metadata" : (object, additional information relating to the execution of an event)
+   {
+     "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
+     "campaign_api_id" : (string, API identifier of this transactional campaign),
+     "received_at": (ISO 8601 DateTime string, Timestamp of when the request was received by Braze, only included for events with "sent" status),
+     "enqueued_at": (ISO 8601 DateTime string, Timestamp of when the request was enqueued by Braze, only included for events with "sent" status),
+     "executed_at": (ISO 8601 DateTime string, Timestamp of when the request was processed by Braze, only included for events with "sent" status),
+     "sent_at": (ISO 8601 DateTime string, Timestamp of when the request was sent to the ESP by Braze, only included for events with "sent" status),
+     "processed_at" : (ISO 8601 DateTime string, Timestamp the event was processed by the ESP, only included for events with "processed" status),
+     "delivered_at" : (ISO 8601 DateTime string, Timestamp the event was delivered to the user's inbox provider, only included for events with "processed" status),
+     "bounced_at" : (ISO 8601 DateTime string, Timestamp the event was bounced by the user's inbox provider, only included for events with "bounced" status),
+     "aborted_at" : (ISO 8601 DateTime string, Timestamp the event was Aborted by Braze, only included for events with "aborted" status),
+     "reason" : (string, The reason Braze or the Inbox provider was unable to process this message to the user, only included for events with "aborted" or "bounced" status),
+   }
+}
+```
 
 #### Status der Nachrichten
 
-| Status | Beschreibung | | ------------ | ----------- | | `gesendet` | Nachricht erfolgreich an einen Partner für den E-Mail-Versand von Braze gesendet | | `verarbeitet` | Der Partner für den E-Mail-Versand hat die Nachricht erfolgreich empfangen und für den Versand an den Posteingang des Nutzers vorbereitet | | `abgebrochen` | Braze konnte die Nachricht nicht erfolgreich versenden, da der Nutzer:innen keine E-Mail-Adresse hat oder die Liquid-Abbruchlogik im Nachrichtentext aufgerufen wurde. Alle abgebrochenen Ereignisse enthalten ein `Grundfeld` im Metadatenobjekt, das angibt, warum die Nachricht abgebrochen wurde | `|delivered|` Nachricht wurde vom Anbieter des E-Mail Posteingangs des Nutzers zugestellt | `|bounced|` Nachricht wurde vom Anbieter des E-Mail Posteingangs des Nutzers abgelehnt. Alle Bounce-Ereignisse enthalten im Metadaten-Objekt ein `Grundfeld`, das den vom Posteingang-Anbieter bereitgestellten Fehlercode widerspiegelt | {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+|  Status | Beschreibung |
+| ------------ | ----------- |
+| `sent` | Nachricht erfolgreich an einen Braze E-Mail sendenden Partner versendet |
+| `processed` | Der Partner für das Versenden von E-Mails hat die Nachricht erfolgreich empfangen und für den Versand an den Posteingang des Nutzers:innen vorbereitet. |
+| `aborted` | Braze konnte die Nachricht nicht erfolgreich versenden, da der Nutzer:innen keine E-Mail Adresse hat oder die Liquid Abbruchlogik im Nachrichtentext aufgerufen wurde. Alle abgebrochenen Ereignisse enthalten ein `reason` Feld innerhalb des Metadatenobjekts, das angibt, warum die Nachricht abgebrochen wurde. |
+|`delivered`| Nachricht wurde vom Anbieter des Posteingangs des Nutzers akzeptiert |
+|`bounced`| Nachricht wurde vom Anbieter des Posteingangs des Nutzers abgelehnt. Alle Bounce-Ereignisse enthalten ein Feld `reason` im Metadaten-Objekt, das den vom Posteingang-Anbieter bereitgestellten Fehlercode wiedergibt. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Beispiel Postback
-\`\`\`json
+```json
 
-// Gesendetes Ereignis { "dispatch\_id": "acf471119f7449d579e8089032003ded", "status": "sent", "metadata": { "received\_at": "2020-08-31T18:58:41.000+00:00", "enqueued\_at": "2020-08-31T18:58:41.000+00:00", "executed\_at": "2020-08-31T18:58:41.000+00:00", "sent\_at": "2020-08-31T18:58:42.000+00:00", "campaign\_api\_id": "417220e4-5a2a-b634-7f7d-9ec891532368", "external\_send\_id" : "34a2ceb3cf6184132f3d816e9984269a" } }
+// Sent Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "sent",
+    "metadata": {
+      "received_at": "2020-08-31T18:58:41.000+00:00",
+      "enqueued_at": "2020-08-31T18:58:41.000+00:00",
+      "executed_at": "2020-08-31T18:58:41.000+00:00",
+      "sent_at": "2020-08-31T18:58:42.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
 
-// Verarbeitetes Ereignis { "dispatch\_id": "acf471119f7449d579e8089032003ded", "status": "processed", "metadata": { "processed\_at": "2020-08-31T18:58:42.000+00:00", "campaign\_api\_id": "417220e4-5a2a-b634-7f7d-9ec891532368", "external\_send\_id" : "34a2ceb3cf6184132f3d816e9984269a" } }
+// Processed Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "processed",
+    "metadata": {
+      "processed_at": "2020-08-31T18:58:42.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
 
-// Abgebrochen { "dispatch\_id": "acf471119f7449d579e8089032003ded", "status": "aborted", "metadata": { "Grund": "Nutzer:innen nicht per E-Mail erreichbar", "aborted\_at": "2020-08-31T19:04:51.000+00:00", "campaign\_api\_id": "417220e4-5a2a-b634-7f7d-9ec891532368", "external\_send\_id" : "34a2ceb3cf6184132f3d816e9984269a" } }
+// Aborted
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "aborted",
+    "metadata": {
+      "reason": "User not emailable",
+      "aborted_at": "2020-08-31T19:04:51.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
 
-// Zugestelltes Ereignis { "dispatch\_id": "acf471119f7449d579e8089032003ded", "status": "delivered", "metadata": { "delivered\_at": "2020-08-31T18:27:32.000+00:00", "campaign\_api\_id": "417220e4-5a2a-b634-7f7d-9ec891532368", "external\_send\_id" : "34a2ceb3cf6184132f3d816e9984269a" } }
+// Delivered Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "delivered",
+    "metadata": {
+      "delivered_at": "2020-08-31T18:27:32.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
 
-// Geprelltes Ereignis { "dispatch\_id": "acf471119f7449d579e8089032003ded", "status": "geprellt", "metadata": { "bounced\_at": "2020-08-31T18:58:43.000+00:00", "reason": "550 5.1.1 Das E-Mail-Konto, das Sie zu erreichen versucht haben, existiert nicht", "campaign\_api\_id": "417220e4-5a2a-b634-7f7d-9ec891532368", "external\_send\_id" : "34a2ceb3cf6184132f3d816e9984269a" } }
+// Bounced Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "bounced",
+    "metadata": {
+      "bounced_at": "2020-08-31T18:58:43.000+00:00",
+      "reason": "550 5.1.1 The email account that you tried to reach does not exist",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
 
-\`\`\`
+```
 

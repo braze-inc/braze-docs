@@ -8,13 +8,13 @@ description: "This landing page is home to all things Hightouch including integr
 
 guide_featured_list:
 - name: Hightouch
-  link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/
+  link: /docs/partners/data_and_analytics/reverse_etl/hightouch/hightouch/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Hightouch Cohort Import
-  link: /docs/partners/data_and_infrastructure_agility/cohort_import/hightouch/
+  link: /docs/partners/data_and_analytics/reverse_etl/hightouch/hightouch_cohort_import/
   image: /assets/img/braze_icons/users-01.svg
 - name: Hightouch Personalization API
-  link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch_personalization_api/
+  link: /docs/partners/data_and_analytics/reverse_etl/hightouch/hightouch_personalization_api/
   image: /assets/img/braze_icons/building-01.svg
 ---
 

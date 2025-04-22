@@ -149,5 +149,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 ## Additional resources
 
-Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation") is available to provide additional guidance on any SDK methods.
+Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html) is available to provide additional guidance on any SDK methods.
 

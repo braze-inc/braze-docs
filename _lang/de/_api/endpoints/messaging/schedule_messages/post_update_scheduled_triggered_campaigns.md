@@ -1,25 +1,27 @@
 ---
-nav_title: "POST: Geplante API-ausgelöste Kampagnen aktualisieren"
-article_title: "POST: Geplante API-ausgelöste Kampagnen aktualisieren"
+nav_title: "POST: Geplante API-getriggerte Kampagnen aktualisieren"
+article_title: "POST: Geplante API-getriggerte Kampagnen aktualisieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Geplante API-ausgelöste Kampagnen aktualisieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Update geplanter Kampagnen, die durch APIs getriggert werden, von Braze."
 
 ---
 {% api %}
-# Geplante API-ausgelöste Kampagnen aktualisieren
+# Aktualisieren Sie geplante, durch APIs getriggerte Kampagnen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um geplante, über die API ausgelöste Kampagnen, die im Dashboard erstellt wurden, zu aktualisieren. So können Sie entscheiden, welche Aktion den Versand der Nachricht auslösen soll.
+> Verwenden Sie diesen Endpunkt, um geplante Kampagnen mit API-Auslösung zu aktualisieren, die im Dashboard erstellt wurden. So können Sie entscheiden, welche Aktion den Versand der Nachricht triggern soll.
 
-Sie können `trigger_properties` übergeben, das als Vorlage in die Nachricht selbst eingefügt wird.
+Sie können `trigger_properties` übergeben, das als Template in die Nachricht selbst eingefügt wird.
 
-Beachten Sie, dass Sie zum Versenden von Nachrichten über diesen Endpunkt eine Kampagnen-ID benötigen, die Sie beim Erstellen einer [API-gesteuerten Kampagne]({{site.baseurl}}/api/api_campaigns/) erstellt haben.
+Beachten Sie, dass Sie zum Versenden von Nachrichten mit diesem Endpunkt eine ID für die Kampagne benötigen, die Sie beim Erstellen einer [API-getriggerten Kampagne]({{site.baseurl}}/api/api_campaigns/) erstellt haben.
 
-Jeder Zeitplan überschreibt den Zeitplan, den Sie in der Anfrage zum Erstellen eines Zeitplans oder in früheren Anfragen zum Aktualisieren eines Zeitplans angegeben haben, vollständig. Wenn Sie z.B. ursprünglich `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` angegeben haben und dann in Ihrer Aktualisierung `"schedule" : {"time" : "2015-02-20T14:14:47"}` angeben, wird Ihre Nachricht jetzt zur angegebenen Zeit in UTC und nicht in der Ortszeit des Benutzers gesendet. Geplante Auslöser, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisiert werden, werden so gut wie möglich aktualisiert, so dass Änderungen in letzter Sekunde auf alle, einige oder keinen Ihrer Zielbenutzer angewendet werden können.
+Jeder Zeitplan überschreibt den Zeitplan, den Sie in der Anfrage zum Erstellen des Zeitplans oder in früheren Anfragen zum Update des Zeitplans angegeben haben, vollständig. Wenn Sie den Zeitplan beispielsweise ursprünglich auf `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` eingestellt haben und ihn später auf `"schedule" : {"time" : "2015-02-20T14:14:47"}` aktualisieren, wird die Nachricht nun zur angegebenen Zeit in UTC und nicht in der Ortszeit des Nutzers:in gesendet.
+
+Geplante Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisiert werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Änderungen in letzter Sekunde auf alle, einige oder keinen Ihrer Nutzer:innen angewendet werden können. Updates werden nicht übernommen, wenn der ursprüngliche Zeitplan die Ortszeit verwendete und die ursprüngliche Zeit in einer beliebigen Zeitzone bereits vergangen ist.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
@@ -27,11 +29,11 @@ Jeder Zeitplan überschreibt den Zeitplan, den Sie in der Anfrage zum Erstellen 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.trigger.schedule.update`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -48,13 +50,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Erforderlich|String| Siehe [Kennung der Kampagne]({{site.baseurl}}/api/identifier_types/)|
+|`campaign_id`|Erforderlich|String| Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/)|
 | `schedule_id` | Erforderlich | String | Die zu aktualisierende `schedule_id` (erhalten aus der Antwort zum Erstellen eines Zeitplans). |
-|`schedule` | Erforderlich | Objekt | Siehe [Schedule-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`schedule` | Erforderlich | Objekt | Siehe [Zeitplan-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

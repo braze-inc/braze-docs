@@ -15,10 +15,6 @@ search_rank: 5
 
 Um zur Seite **Abrechnung** zu navigieren, gehen Sie zu **Einstellungen** > **Abrechnung**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie diese Seite finden, indem Sie auf Ihr Kontosymbol und dann auf **Abonnements und Nutzung** klicken.
-{% endalert %}
-
 Die Seite **Abrechnung** enthält die folgenden Registerkarten:
 
 - [Abos und Nutzung](#subscriptions-and-usage)

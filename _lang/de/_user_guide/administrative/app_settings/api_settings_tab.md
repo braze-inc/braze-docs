@@ -13,10 +13,6 @@ description: "Dieser Artikel behandelt die Seite APIs und Identifikatoren, auf d
 
 Die Seite **APIs und Identifikatoren** finden Sie unter **Einstellungen**.
 
-{% alert note %}
-Wenn Sie die ältere Navigation verwenden, heißt diese Seite **API-Einstellungen** und befindet sich unter **Einstellungen** > **Einstellungen verwalten**.
-{% endalert %}
-
 ### API-Schlüssel
 
 In diesem Abschnitt finden Sie Ihre REST API-Schlüssel für den Workspace, die eindeutigen Bezeichner, die Ihnen den Zugriff auf Ihre Daten für einen Workspace ermöglichen. Bei jeder Anfrage an die Braze-API ist ein REST-API-Schlüssel erforderlich. Weitere Informationen zur Erstellung und Verwendung von API-Schlüsseln finden Sie in unserer [Übersicht über REST-API-Schlüssel]({{site.baseurl}}/api/api_key/).

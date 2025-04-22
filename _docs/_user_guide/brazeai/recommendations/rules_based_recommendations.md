@@ -118,7 +118,7 @@ Let’s say you have a health food app and want to create a Content Card campaig
 1. Create a Connected Content endpoint in one of the following ways:
 - Convert a spreadsheet into a JSON API endpoint by using a service like SheetDP, and take note of the API URL this generates
 - Build, host, and maintain a custom-built in-house endpoint
-- Buy a recommendations engine via a third-party partner, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/dynamic_content/), including [Amazon Personalise]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/certona/), [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and others
+- Buy a recommendations engine via a third-party partner, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/), including [Amazon Personalise]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/certona/), [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and others
 
 2. Write Connected Content Liquid into the message body or Content Block HTML editor that will call your endpoint to search your database.
 3. Align the Liquid with a custom attribute value it finds in a given user's profile.
