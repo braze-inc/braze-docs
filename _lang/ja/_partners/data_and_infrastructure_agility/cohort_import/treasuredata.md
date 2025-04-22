@@ -19,7 +19,7 @@ search_tag: Partner
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | トレジャーデータのアカウント | このパートナーシップを利用するには、[トレジャーデータ](https://www.treasuredata.com/)のアカウントが必要です。 |
-| Braze データインポートキー |  |
+| Braze データインポートキー | これは、**Partner Integrations**> **Technology Partners**からBrazeダッシュボードにキャプチャされ、**Treasure Data**を選択します。 |
 | Braze REST エンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 | トレジャーデータの静的IPアドレス | トレジャーデータの静的 IP アドレスは、この統合のリンクのアクセスポイントおよびソースです。静的 IP アドレスを確認するには、トレジャーデータのカスタマーサクセス担当者またはトレジャーデータの技術サポートにご連絡ください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
