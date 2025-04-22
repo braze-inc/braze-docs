@@ -2,8 +2,7 @@
 nav_title: Extensões de segmento
 article_title: Extensões de segmento
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "Este artigo de instruções irá guiá-lo sobre como configurar e usar uma extensão de segmento para aprimorar suas capacidades de segmentação."
 tool: Segments
 ---
@@ -32,10 +31,6 @@ Para criar uma extensão de segmento, você criará um filtro para refinar um se
 
 Acesse **Público** > **Extensões de segmento**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > **Segmentos** > **Extensões de segmento**.
-{% endalert %}
-
 Na tabela Extensões de segmento, selecione **Criar nova extensão** e, em seguida, selecione sua experiência de criação de extensão de segmento:
 
 - **Extensão simples:** Crie uma extensão de segmento focada em um único evento usando um formulário guiado.
@@ -44,7 +39,7 @@ Melhor para quando você não quer usar SQL.
 - **Atualização incremental:** Formule um segmento do Snowflake SQL que recarregue automaticamente os 2 últimos dias de dados ou faça um recarregamento manual conforme necessário. Ideal para equilibrar precisão e custo-benefício.
 - **Atualização completa:** Formule um segmento do Snowflake SQL que recalcule todo o público com atualização manual. Ideal para quando você precisa ter uma visão completa e atualizada do seu público.
 
-![""][20]{: style="max-width:50%"}
+
 
 Se você selecionar uma experiência que usa SQL, consulte [extensões de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) para mais informações.
 
@@ -62,7 +57,7 @@ Selecione entre critérios de compra, engajamento com mensagem ou evento persona
 
 A segmentação baseada em dados de eventos de mais de 730 dias pode ser feita usando outros filtros localizados em **Segmentos**. Ao escolher seu período de tempo, você pode especificar um intervalo de datas relativo (como os últimos X dias), uma data de início, uma data de término ou um intervalo de datas exato (data A a data B).
 
-![""][3]
+
 
 #### Segmentação de propriedade de evento
 
@@ -131,45 +126,74 @@ Os segmentos podem levar até 60 minutos para serem atualizados devido ao tempo 
 - Somente uma atualização pode ocorrer de cada vez em uma extensão de segmento específica. Se houver um conflito em que uma nova atualização seja iniciada quando uma atualização existente já tiver começado a ser processada, o Braze cancelará a nova solicitação de atualização e continuará o processamento em andamento.
 {% endalert %}
 
+#### 
+
+ 
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+ 
+
+
+
 ### Etapa 5: Salve sua extensão de segmento
 
 Depois de selecionar **Salvar**, sua extensão começará a ser processada. O tempo necessário para gerar sua extensão depende de quantos usuários você tem, quantos eventos personalizados ou eventos de compra você está capturando e quantos dias você está olhando para trás na história.
 
 Enquanto sua extensão está processando, você verá uma pequena animação ao lado do nome da extensão e a palavra "Processando" na coluna **Último Processado** na lista de extensões. Observe que você não poderá editar uma extensão enquanto ela estiver em processamento.
 
-![""][5]
+
 
 ### Etapa 6: Use sua extensão em um segmento
 
 Depois de criar uma extensão, você pode usá-la como um filtro ao criar um segmento ou definir um público para uma campanha ou canva. Comece escolhendo **extensão de segmento Braze** da lista de filtros na seção **Atributos do Usuário**.
 
-![""][6]
+
 
 Na lista de filtros da extensão de segmento do Braze, escolha a extensão que deseja incluir ou excluir neste segmento.
 
-![""][7]
+
 
 Para visualizar os critérios da extensão, selecione **Exibir detalhes da extensão** para mostrar os detalhes em um modal pop-up.
 
-![""][8]{: style="max-width:70%;"}
+
 
 Agora você pode prosseguir como de costume com [a criação do seu segmento][11]].
 
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13,5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+## 
+
+### 
+
+  
+
+ 
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
