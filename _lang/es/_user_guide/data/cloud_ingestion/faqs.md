@@ -41,7 +41,9 @@ Test Connection se ejecuta en su almacén de datos, por lo que aumentar la capac
 
 ### Error al conectar con la instancia Snowflake: Solicitud entrante con IP no autorizada para acceder a Snowflake
 
-Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. Para más información, consulta [Integración de almacenes de datos]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. 
+
+
 
 ### Error al ejecutar SQL debido a la configuración del cliente: 002003 (42S02): Error de compilación SQL: no existe o no está autorizado
 
@@ -156,7 +158,7 @@ El orden de procesamiento no es 100% predecible. Por ejemplo, si hay varias fila
 
 ## ¿Cuáles son las medidas de seguridad del CDI?
 
-### Medidas de Braze
+### 
 
 Braze cuenta con las siguientes medidas para la CDI:
 
