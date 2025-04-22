@@ -143,7 +143,7 @@ Brazeと接続情報を共有し、後のステップでユーザーに付加す
 
 Snowflake アカウントの設定によっては、Snowflake のネットワークポリシー内で以下の IP アドレスを許可する必要があります。この方法の詳細については、[ネットワークポリシーの変更](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies)に関する Snowflake の関連ドキュメントを参照してください。
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 {% endtab %}
 
 {% tab Redshift %}
@@ -171,7 +171,7 @@ Braze でセグメントを更新する前に、Braze が CDI セグメントの
 
 Redshift クラスターにパブリックアクセスを許可しない場合は、ssh トンネルを使用して Redshift データにアクセスするように VPC と EC2 インスタンスを設定できます。詳しくは、[AWSを参照のこと：ローカルマシンからAmazon Redshiftのプライベートクラスタにアクセスするには？](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 
@@ -198,7 +198,7 @@ Braze でセグメントを更新する前に、Braze が CDI セグメントの
 
 ネットワークポリシーを設定している場合は、Braze に Big Query インスタンスへのネットワークアクセスを許可する必要があります。Braze ダッシュボードの地域に対応する以下の IP からのアクセスを許可します。  
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 
@@ -226,7 +226,7 @@ Braze でセグメントを更新する前に、Braze が CDI セグメントの
 
 ネットワークポリシーを設定している場合は、Brazeに Databricks インスタンスへのネットワークアクセスを許可する必要があります。Braze ダッシュボードの地域に対応する以下の IP からのアクセスを許可します。  
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 
@@ -265,7 +265,7 @@ Brazeを接続するには、倉庫のSQLエンドポイントが必要である
 
 Microsoft Fabric アカウントの設定によっては、Braze からのトラフィックを許可するように、ファイアウォールで以下の IP アドレスを許可する必要があります。これを有効にする方法の詳細については、[Entra Conditional Access ](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access)の関連ドキュメントを参照してください。
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 
