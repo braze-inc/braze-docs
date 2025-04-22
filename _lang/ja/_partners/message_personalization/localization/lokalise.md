@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Lokaliseは](https://lokalise.com)アジャイルチームのための翻訳管理サービスである。
 
+
+
+## 統合について
+
 Braze と Lokalise の統合により、コネクテッドコンテンツを活用し、ユーザーの言語設定に基づいて翻訳されたコンテンツを Braze キャンペーンに簡単に挿入できるようになります。
 
 ## 前提条件
@@ -121,6 +125,7 @@ Brazeの対応する文字列はもう翻訳を持たない。
 
 **Lokalise で翻訳ファイルを更新した後、Braze に翻訳コンテンツの変更が表示されないのはなぜですか?**<br>
 Braze では翻訳コンテンツがキャッシュされ、その更新には数分かかることがあります。キャンペーンをテストしていて、翻訳の結果をすぐに確認する必要がある場合は、このリファレンス記事で説明されているように、`:cache_max_age` パラメーターを使用できます。
+
 
 [1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
 [2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}
