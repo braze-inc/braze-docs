@@ -11,11 +11,11 @@ search_tag: Partner
 
 > このリファレンス記事では、コネクテッドコンテンツを使用して Amazon Personalize を設定し、Braze 環境に統合するプロセスについて説明します。これは、s をデプロイしてトレーニング Amazon Personalize ソリューションし、それらをBraze メール キャンペーンに統合するために必要なすべてのステップについて説明する実践的なワークショップを使用して行われます。
 
-
+_この統合はAmazon Personalizeによって維持されている。_
 
 ## 統合について
 
-このチュートリアルのリソースとコードは、[ AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/) に公開されています。このリファレンスアーキテクチャインプリメンテーションをアウトラインとして使用して、独自の環境にAmazon Personalizeをインプリメントできます。
+以下の例は、リテール・デモ・ストアと呼ばれる、完全に機能するサンプルeコマース・サイトに展開されている。このチュートリアルのリソースとコードは、[ AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/) に公開されています。このリファレンスアーキテクチャインプリメンテーションをアウトラインとして使用して、独自の環境にAmazon Personalizeをインプリメントできます。
 
 ## 要件
 
@@ -23,7 +23,7 @@ search_tag: Partner
 
 ## 統合アーキテクチャ
 
-
+ユーザーにパーソナライズされたメッセージを送信するためにBrazeを設定する前に、リテールデモストアのアーキテクチャを例にして、一般的なEコマースサイトに必要な関連コンポーネントを確認する。
 
 ![さまざまなコンポーネントの相互作用を示すBraze パーソナライゼーションアーキテクチャの分解図。]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
