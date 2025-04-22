@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者guide/prerequisites/android.md %}
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## デフォルトのユーザー属性
 
