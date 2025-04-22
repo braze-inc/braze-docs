@@ -18,25 +18,25 @@ guide_top_text: "以下のラッパー SDK は、複数のプラットフォー�
 
 guide_featured_list:
   - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=android
     image: /assets/img/cordova.png
   - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios
     image: /assets/img/cordova.png
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=react%20native
     image: /assets/img/reactnative_icon.png
   - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
+    link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
   - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+    link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
     image: /assets/img/xamarin.png
   - name: Flutter
-    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+    link: /docs/developer_guide/sdk_integration/?sdktab=flutter
     image: /assets/img/flutter_icon.png
 
 ---
