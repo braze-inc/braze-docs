@@ -22,7 +22,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: "테스트 메시지 보내기"
-  link: /docs/developer_guide/sending_test_messages/
+  link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
 ---
 
