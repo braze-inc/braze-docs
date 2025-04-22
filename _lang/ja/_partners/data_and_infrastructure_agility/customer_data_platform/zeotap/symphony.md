@@ -50,7 +50,7 @@ BrazeとZoetap Symphonyの統合により、リアルタイムのオーケスト
 
 ## Brazeへのデータフローとサポートされる識別子
 
-
+データは、[`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を使用してZeotap からBraze に流れます。以下のポイントは、データフローをまとめたものです。
 
 1. Zeotapはユーザープロファイル属性、カスタム属性、カスタムイベント、購入フィールドを送信する。
 2. 関連するすべての Zeotap Catalogue フィールドを、[**Data To Send**] タブの Braze フィールドにマッピングします。
@@ -64,7 +64,7 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 
 #### 新しい宛先を追加する
 新しい宛先を追加するには、次の手順を実行します。
-1. 
+1. **Add New Destination**を選択します。
 2. **Braze** を検索します。
 3. [**Client Name**]、[**API Key**]、および [**Instance**] を追加し、宛先を保存します。
 
