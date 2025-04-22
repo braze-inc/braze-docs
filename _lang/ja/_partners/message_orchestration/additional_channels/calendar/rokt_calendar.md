@@ -14,7 +14,7 @@ redirect_to: /docs/partners/home
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) は、ブランドがカレンダーイベントや通知の形式で1:1イベントやプロモーションコミュニケーションをプッシュできるようにするダイナミックなカレンダーマーケティングテクノロジーです。
 
-
+_この統合は、Rokt カレンダーによって維持されます。_
 
 ## 統合について
 
