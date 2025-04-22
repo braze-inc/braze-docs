@@ -14,7 +14,7 @@ search_tag: Partner
 
 Braze と Hightouch の統合により、[Braze コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)とこの API を使用して、送信時に最新の顧客またはオブジェクトのデータをキャンペーンまたはキャンバスに取り込むことができます。
 
-Hightouch の Personalization API は、Braze の設定で使用する REST エンドポイントを提供します。この API によって公開されるデータは、顧客、製品、またはその他のオブジェクトデータを表す場合があります。 
+Hightouch の Personalization API は、Braze の設定で使用する REST エンドポイントを提供します。具体的には、Braze Connected Content オファリングを使用して、Personalization API へのGET 要求を行い、特定の識別子に関連するすべての情報を取得できます。この API によって公開されるデータは、顧客、製品、またはその他のオブジェクトデータを表す場合があります。 
 
 ![][2]
 
