@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) は、Braze キャンペーンに位置情報データターゲティング機能を提供する位置情報データプラットフォームです。iOSとAndroidアプリでFoursquareのPilgrim SDKを使用して、位置情報に基づいたリアルタイムのイベントトリガーを提供し、Foursquareの強力なジオターゲティング機能を利用して、Brazeで関連性の高いパーソナライズされたメッセージを送信できる。
 
-
+_この統合はFoursquare によって維持されます。_
 
 ## 前提条件
 
