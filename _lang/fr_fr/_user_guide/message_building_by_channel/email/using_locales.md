@@ -46,6 +46,33 @@ Toute modification des ID ou des lieux dans le fichier CSV ne sera pas automatiq
 
 Dans la section **Aperçu et test**, sélectionnez **Utilisateur multilingue** pour vérifier si votre message est traduit comme prévu.
 
+## 
+
+### 
+
+  
+
+
+
+1. 
+2. 
+3. 
+4. 
+
+
+
+### 
+
+  
+
+### 
+
+
+
+#### 
+
+
+
 ## Foire aux questions
 
 #### Je souhaite apporter une modification à la version traduite dans l'un de mes pays. Comment faire ?
@@ -71,3 +98,4 @@ Oui. Toutefois, veillez à vérifier que le style HTML n'est pas traduit avec le
 | Le fichier de traduction comprend des blocs de texte qui n'existent pas dans le message actuel (comme le brouillon actuel au moment où les traductions sont chargées). | Les blocs de texte qui n'existent pas dans votre message actuel ne seront pas enregistrés du fichier de traduction vers Braze. |
 | Suppression d'un paramètre régional du message alors que ce paramètre régional a déjà été chargé dans le message en tant que partie du fichier de traduction.                           | En supprimant le paramètre régional, vous supprimez toutes les traductions associées à celui-ci dans votre message.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
