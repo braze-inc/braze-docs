@@ -21,7 +21,7 @@ Die Integration von Braze und Segment erlaubt es Ihnen, Braze-Currents zu nutzen
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
 | Segmente Konto | Um die Vorteile dieser Partnerschaft zu nutzen, ist ein [Segment-Konto](https://app.segment.com/login) erforderlich. |
-| Braze Ziel | Sie müssen [Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) bereits [als Ziel]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in Ihrer Segment Integration [eingerichtet]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) haben.<br><br>Dazu gehört die Angabe des richtigen Braze Datenzentrums und des REST API-Schlüssels in Ihren [Verbindungseinstellungen]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Braze Ziel | Sie müssen [Braze bereits als Ziel]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in Ihrer Segment Integration eingerichtet haben.<br><br>Dazu gehört die Angabe des richtigen Braze Datenzentrums und des REST API-Schlüssels in Ihren [Verbindungseinstellungen]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Currents | Um Daten zurück in Segmente zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
