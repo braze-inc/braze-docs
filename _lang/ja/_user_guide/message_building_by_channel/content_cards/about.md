@@ -114,7 +114,7 @@ search_rank: 4
 - [カルーセル](#carousel)
 - [バナー](#banner)
 
-これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。
+これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)を参照してください。
 
 ![メッセージインボックス、カルーセル、およびバナー(banner.]({% image_buster /assets/img_archive/cc_placements.png %})という異なる配置オプションを示す3 つのコンテンツカードの例{: style="border:0px;"}
 
