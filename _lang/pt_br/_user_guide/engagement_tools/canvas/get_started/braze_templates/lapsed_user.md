@@ -42,7 +42,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 ### Etapa 2: Atribua seus eventos de conversão
 
-Atualize o **evento de conversão primária - A** para direcionar os usuários do nosso app (MovieCanon) e deixe **o evento de conversão primária - B** como o padrão para fazer qualquer compra.
+
 
 ![Seção "Atribuir eventos de conversão" com uma conversão primária, até mesmo de um usuário que inicia uma sessão em um app específico.][2]
 
