@@ -436,7 +436,7 @@ Canvases
 Canvases
 {% endapitags %}
 
-ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。
+例外イベントは、ユーザーが関連するキャンバス・コンポーネントの受信を待っている間だけトリガーされる。ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。
 
 事前に特定のイベントを実行したユーザーを除外したい場合は、代わりに[フィルターを]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)使用する。
 
@@ -569,13 +569,13 @@ Braze の Currents ツールは、メッセージングエンゲージメント�
 
 1. ダッシュボードアカウントで、[**エンゲージメントレポート**] ([**データ**] の下) に移動します。
 2. [**\+ 新しいレポートを作成**] をクリックします。
-3. 
-4. 
+3. レポートにまとめたい[キャンペーンとキャンバスメッセージを]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases)（個別または[タグごとに]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)）追加する。
+4. レポートに[統計を追加する]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report)。
 5. レポートの圧縮とデリミネーターを選択する。
 6. このレポートを受け取るBrazeユーザーのEメールアドレスを入力する。
-7. 
-8. 
-9. 
+7. レポートでデータを実行する [[期間]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame)] を選択します。
+8. データの内訳を確認したい[間隔（毎日、毎週など）を]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display)選択する。
+9. レポートを[すぐに送信]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately)するか、[将来の時刻を指定]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time)して送信するかを設定します。
 10. レポートを実行し、Eメールが届いたらそれを開く！
 
 {% endapi %}
