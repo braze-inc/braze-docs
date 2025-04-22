@@ -136,7 +136,7 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 Snowflake アカウントの設定によっては、Snowflake のネットワークポリシー内で以下の IP アドレスを許可する必要があります。これを有効にする方法の詳細については、[ネットワークポリシーの変更](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies)に関する Snowflake の関連ドキュメントを参照してください。
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 {% tab Redshift %}
@@ -199,7 +199,7 @@ GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
  
 Brazeダッシュボードの地域に対応する以下のIPからのアクセスを許可する。
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 {% tab BigQuery %}
@@ -271,7 +271,7 @@ GCP で、Braze がテーブルに接続してデータを読み取るために�
 
 ネットワークポリシーを設定している場合は、Braze に Big Query インスタンスへのネットワークアクセスを許可する必要があります。Braze ダッシュボードの地域に対応する以下の IP からのアクセスを許可します。  
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 {% tab Databricks %}
@@ -344,7 +344,7 @@ Braze が Databricks にアクセスするには、パーソナルアクセス�
 
 ネットワークポリシーを設定している場合は、Brazeに Databricks インスタンスへのネットワークアクセスを許可する必要があります。Braze ダッシュボードの地域に対応する以下の IP からのアクセスを許可します。  
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 {% tab Microsoft Fabric %}
@@ -418,7 +418,7 @@ Brazeを接続するには、倉庫のSQLエンドポイントが必要である
 
 Microsoft Fabric アカウントの設定によっては、Braze からのトラフィックを許可するように、ファイアウォールで以下の IP アドレスを許可する必要があります。これを有効にする方法の詳細については、[Entra Conditional Access ](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access)の関連ドキュメントを参照してください。
 
-
+{% multi_lang_include data_centers.mdデータセンター='ips' %}
 
 {% endtab %}
 
