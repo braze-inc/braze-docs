@@ -2632,8 +2632,9 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/help/help_articles/account/locked_out'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
 validurls['/docs/help/help_articles/account'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
 
-validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'] = 'docs/partners/dynamic_yield/';
+validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'] = '/docs/partners/dynamic_yield/';
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
 // validurls['OLD'] = 'NEW';
 
