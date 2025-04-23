@@ -13,7 +13,7 @@ tool: Canvas
 
 > Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. 
 
-Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Create a delay
 
@@ -127,9 +127,9 @@ Delays have three statistics available in the analytics view of an active or pre
 
 | Metric | Description |
 |---|---|
-| `Entered` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Delay step twice, two entries will be recorded. |
-| `Proceeded to Next Step` | Reflects the number of entries that proceeded to the next step in the Canvas. |
-| `Exited Canvas` | Reflects the number of entries that exited the Canvas and did not proceed to the next step. |
+| _Entered_ | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Delay step twice, two entries will be recorded. |
+| _Proceeded to Next Step_ | Reflects the number of entries that proceeded to the next step in the Canvas. |
+| _Exited Canvas_ | Reflects the number of entries that exited the Canvas and did not proceed to the next step. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Time series for these analytics are available in the expanded component view.
