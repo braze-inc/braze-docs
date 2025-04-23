@@ -11,7 +11,7 @@ page_order: 2
 
 # Setting up Shopify in Braze
 
-> This article outlines how to finish setting up the Shopify integration with Braze. Follow these instructions after you have [implemented the Braze Web SDK]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) onto your Shopify website.
+> This article outlines how to finish setting up the Shopify integration with Braze. Follow these instructions after you have [implemented the Braze Web SDK]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk) onto your Shopify website.
 
 ## Shopify integration setup in Braze
 
@@ -57,7 +57,7 @@ After connecting your Shopify store, proceed to Step 2 and select the events to 
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_2_events.png %}){: style="max-width:70%"}
 
-Selecting **Product Viewed**, **Product Clicked**, or **Abandoned Cart** events will require the Braze Web SDK for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the tracking scripts and load onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk), you must manually turn on tracking for these events. 
+Selecting **Product Viewed**, **Product Clicked**, or **Abandoned Cart** events will require the Braze Web SDK for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the tracking scripts and load onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk), you must manually turn on tracking for these events. 
 
 #### Backfill historical data (optional)
 
@@ -87,7 +87,7 @@ You can optionally use an additional channel on your Shopify store for in-browse
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_5_channels.png %}){: style="max-width:70%"}
 
-If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=web). 
+If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=web). 
 
 ### Step 6: Finish setup
 
@@ -152,9 +152,9 @@ There are two ways to uninstall Braze from your Shopify store:
 
 {% details I am struggling to reconcile my users. What might be the reason? %}
 
-The type of support you'll need for user reconciliation is determined by how you implemented the Web SDK. For more information, refer to [Getting started with Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/). 
+The type of support you'll need for user reconciliation is determined by how you implemented the Web SDK. For more information, refer to [Getting started with Shopify]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/). 
 
-- If you're on a Shopify headless site, check out [headless implementation]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features) to make sure you've enabled checkout user reconciliation.
+- If you're on a Shopify headless site, check out [headless implementation]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=headless%20shopify%20site#supported-features) to make sure you've enabled checkout user reconciliation.
 - If you're encountering duplicate user profiles with the same email or phone number, you can use the following Braze tools to merge the duplicates into one profile: 
     - [`users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint
     - [Bulk merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging)
