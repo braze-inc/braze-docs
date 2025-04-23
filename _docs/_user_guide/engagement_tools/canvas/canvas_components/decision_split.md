@@ -53,9 +53,9 @@ Refer to the following table for descriptions of analytics for this step:
 
 | Metric | Description |
 |---|---|
-| Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split step twice, two entries will be recorded. |
-| Yes | The number of entries that met the specified criteria and proceeded down the "yes" path. |
-| No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
+| _Entered_ | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split step twice, two entries will be recorded. |
+| _Yes_ | The number of entries that met the specified criteria and proceeded down the "yes" path. |
+| _No_ | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: {% image_buster /assets/img/decision-split-1.png %}
