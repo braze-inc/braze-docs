@@ -1455,7 +1455,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED: when we send a push notification to
 	IS_SAMPLED (VARCHAR(16777216)): Indicates whether the push send was sampled and expected a delivery event
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled sms message was aborted for some reason.
+USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled SMS message was aborted.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
