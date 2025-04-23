@@ -3,6 +3,11 @@ layout: documents
 hide_toc: true
 ---
 
+{%- css_asset_tag -%}
+- /assets/css/scrollycode.scss
+- /assets/css/github-dark.scss
+{%- endcss_asset_tag -%}
+
 <style type="text/css">
   @media (min-width: 1200px) {
     #dev-main,
@@ -22,5 +27,11 @@ hide_toc: true
     max-width: unset !important;
   }
 </style>
+
+<script src="{{site.baseurl}}/assets/js/scrollycode.js"></script>
+<script src="{{site.baseurl}}/assets/js/scrolly-highlight.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
 
 {{ content }}
