@@ -39,7 +39,13 @@ module Jekyll
         if file.nil? || file.strip.empty?
           raise "Error in scrolly block: Code blocks must include a file name. Use syntax: ```#{lang} file=script.js"
         end
-        code_blocks << { "language" => lang, "file" => file.strip, "code" => code_content.strip }
+        original_file = file.strip
+        code_blocks << {
+          "language" => lang,
+          "file" => original_file.downcase,
+          "label" => original_file,
+          "code" => code_content.strip
+        }
       end
 
       # Remove all code blocks from the content so that narrative steps aren’t affected.
@@ -58,7 +64,7 @@ module Jekyll
         lines_line, *narrative_lines = block.lines
         lines_line = lines_line.to_s.strip
         if lines_line =~ /^lines-([\w\.\-]+)=\s*(\d[\d,-]*)\s*$/
-          file_key = $1.strip
+          file_key = $1.strip.downcase
           range_value = $2.strip
         else
           raise "Error in scrolly block: Invalid lines setting syntax: #{lines_line.inspect}. Use 'lines-<filename>=<range>' (e.g., lines-index.js=1-3)."
@@ -88,14 +94,14 @@ module Jekyll
       html << "    <div class=\"scrolly-code\">"
       html << "      <div class=\"scrolly-tab-selector\">"
       code_blocks.each_with_index do |cb, idx|
-        file_attr = cb["file"].gsub('.', '-')
+        file_attr = cb["file"].downcase.gsub('.', '-')
         active_class = idx == 0 ? "scrolly-active-tab" : ""
-        html << "        <button class=\"scrolly-tab #{active_class}\" data-file=\"#{file_attr}\"><i class=\"fa fa-file\"></i> #{cb['file']}</button>"
+        html << "        <button class=\"scrolly-tab #{active_class}\" data-file=\"#{file_attr}\"><i class=\"fa fa-file\"></i> #{cb['label']}</button>"
       end
       html << "      </div>"
       html << "      <div class=\"code-blocks\">"
       code_blocks.each_with_index do |cb, idx|
-        file_attr = cb["file"].gsub('.', '-')
+        file_attr = cb["file"].downcase.gsub('.', '-')
         style = idx == 0 ? "" : " style=\"display: none;\""
         html << "        <pre class=\"code-animate hljs language-#{cb['language']}\" data-file=\"#{file_attr}\"#{style}><code data-full-code=\"#{CGI.escapeHTML(cb['code'])}\"></code></pre>"
       end
