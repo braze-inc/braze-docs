@@ -27,16 +27,13 @@ Ensure that your trigger word matches what you are expecting from users.
 {% tabs %}
 {% tab Campaign %}
 
-![]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
-
-![]({% image_buster /assets/img/whatsapp/whatsapp26.png %})
+![Action-based campaign scheduling options.]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![]({% image_buster /assets/img/whatsapp/whatsapp25.png %})
+![Action-based Canvas scheduling options.]({% image_buster /assets/img/whatsapp/whatsapp25.png %})
 
-![]({% image_buster /assets/img/whatsapp/whatsapp24.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -72,7 +69,7 @@ You can build the Canvas before receiving the approval on your message template.
 
 Next, build a Canvas with a message step that includes your created template. 
 
-![][14]
+![WhatsApp step message composer with a populated quick reply template.][14]
 
 Create an action step that follows the message step. Create one group per quick reply option in this action step.
 
