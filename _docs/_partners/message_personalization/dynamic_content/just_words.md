@@ -1,4 +1,11 @@
-# Just Words + Braze Integration Guide
+---
+nav_title: Just_Words
+article_title: Just_Words
+description: "This reference article outlines the partnership between Braze and Just Words, an AI-based SaaS business platform that creates personalized versions of existing campaigns and optimizes subject lines, creative content, and HTML email layouts over time."
+alias: /justwords/
+page_type: partner
+---
+# Just Words Integration Guide
 
 Just Words hyper-personalizes messaging at scale on Lifecycle Marketing channels. You can dynamically test 100s of variations and auto-refresh underperforming content on the fly.
 
