@@ -10,7 +10,7 @@ alias: /scim/automated_user_provisioning/
 
 # Automated user provisioning
 
-> Use SCIM provisioning to automatically create and manage Braze users via API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
+> Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
 ## Step 1: Access SCIM privioning settings
 
