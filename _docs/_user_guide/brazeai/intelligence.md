@@ -76,4 +76,4 @@ After Intelligent Selection gathers enough data to determine the best-performing
 With both Intelligent Timing and Intelligent Selection, we've set up our Royal Roast promotions to be optimized for timing and messaging. We can launch our Canvas and watch as our sends shift to accommodate user preferences.
 
 [1]: {% image_buster /assets/img/intelligence_suite1.png %}
-[3]: {% image_buster /assets/img/intelligent_selection_canvas.png %}
+[3]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}

@@ -25,12 +25,18 @@ Intelligent Selection is ideal for campaigns that are scheduled to send multiple
 ## How do I add Intelligent Selection to my campaigns?
 
 ### Campaign Intelligent Selection
+
 Intelligent Selection can be added to any multi-send campaign in the **Target Audiences** step of the Braze campaign composer. Campaigns that send only once are unable to leverage this feature.
 
 ### Canvas Intelligent Selection
-When adding variants into your Canvas, click on one of the variant percentages. This allows you to edit the variant distribution and turn on Intelligent Selection.
+
+Add at least one conversion event and two variants to your Canvas. Then, select one of the variant percentages in the Build step. 
 
 ![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.][2]
+
+This allows you to edit the variant distribution and turn on Intelligent Selection. 
+
+![Intelligent Selection option turned on for a Canvas][4]
 
 Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant.
 
@@ -51,5 +57,6 @@ It's possible for Intelligent Selection to stop optimizing without picking a sin
 [1]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/
 [2]: {% image_buster /assets/img/intelligent_selection.png %}
 [3]: {% image_buster /assets/img/intelligent_selection1.png %}
+[4]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
 
