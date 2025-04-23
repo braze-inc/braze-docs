@@ -337,7 +337,7 @@ valid_partner_list:
 - name: TikTok
   url: /docs/partners/canvas_steps/tiktok_audience_sync/
 - name: Trustpilot
-  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+  url: /docs/partners/trustpilot/
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessionM
