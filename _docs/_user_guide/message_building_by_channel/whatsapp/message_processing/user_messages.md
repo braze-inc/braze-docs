@@ -114,7 +114,7 @@ Add a WhatsApp [Message step]({{site.baseurl}}/user_guide/engagement_tools/canva
 
 Add a **List button** name that users will select to display your list. Then, use the fields in **List content** to create your list:
 
-- **Section:** Add up to 10 sections to organize your list. For example, a clothing retailer could use sections to organize seasonal styles (e.g, winter/autumn and spring/summer) or clothing items (e.g., tops, bottoms, shoes).
+- **Section:** Add up to 10 sections to group and organize your list items. For example, a clothing retailer could use sections to organize by seasonal styles (like spring, summer, autumn, and winter) or clothing items (like tops, bottoms, and shoes).
 - **Row:** Add up to 10 rows, or list items, across all sections.
 - **Row description (optional):** Add an optional description to all rows (list items).
 
