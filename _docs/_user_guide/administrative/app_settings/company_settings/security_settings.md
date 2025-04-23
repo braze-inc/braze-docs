@@ -55,7 +55,7 @@ Two-factor authentication is required for all Braze users. It adds a second leve
 
 When two-factor authentication is turned on:
 
-- In addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS. 
+- In addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent through an authenticator app, email, or SMS. 
 - The **Remember this account for 30 days** checkbox becomes available to users.
 
 Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
