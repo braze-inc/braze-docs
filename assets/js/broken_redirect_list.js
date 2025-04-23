@@ -739,7 +739,7 @@ validurls['/docs/partners/braze_currents/data_storage_events/event_delivery_sema
 validurls['/docs/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage';
 validurls['/docs/partners/braze_currents/setting_up_currents/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 validurls['/docs/user_guide/data_and_analytics/currents'] = '/docs/user_guide/data_and_analytics/braze_currents';
-validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/'] = '/docs/partners/message_personalization/dynamic_content/playable#playable';
+validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/'] = '/docs/partners/message_personalization/dynamic_content/playable';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/movable_ink/';
 validurls['/docs/partners/channel_extensions/email_orchestration/taxi_for_email/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/';
 validurls['/docs/partners/channel_extensions/workflow_automation/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation';
@@ -2618,6 +2618,8 @@ validurls['/docs/partners/data_and_infrastructure_agility/payments'] = '/docs/pa
 validurls['/docs/partners/data_and_infrastructure_agility/support'] = '/docs/parners/additional_channels_and_extensions';
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation'] = '/docs/partners/ecommerce';
 validurls['/docs/partners/canvas_steps'] = '/docs/partners/canvas_audience_sync';
+validurls['/docs/partners/message_personalization/dynamic_content/trustpilot'] = '/docs/partners/trustpilot';
+validurls['/docs/partners/message_personalization/dynamic_content/playable'] = '/docs/partners/playable/';
 
 validurls['/docs/_partners/data_and_analytics/wrapper_sdks/'] = '/docs/developer_guide/sdk_integration/';
 
