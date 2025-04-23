@@ -175,7 +175,7 @@ valid_partner_list:
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
 - name: OfferFit
-  url: /docs//partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
+  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
