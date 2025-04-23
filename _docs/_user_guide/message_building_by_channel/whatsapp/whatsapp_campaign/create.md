@@ -219,6 +219,7 @@ The following call-to-action types are supported for WhatsApp messages you send 
 | Marketing opt-out button | By default, subscription statuses are not automatically updated. For a full walkthrough, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). |
 | Coupon code message templates | Available for message templates only. <br>These can be opened and edited like other message templates, and are compatible with Liquid and Braze promotion codes. |
 | CTA response messages  | Create a response message that includes a call to action button. |
+| [List response messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Create a response message that includes a list of up to 10 options for users to pick from. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
