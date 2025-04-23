@@ -185,7 +185,7 @@ Starting with the Swift SDK 12.0.0, you should always select **Embed & Sign** fo
 {% endalert %}
 
 {% alert tip %}
-To enable GIF support, add `SDWebImage.xcframework`, located in `braze-swift-sdk-prebuilt/dynamic`.
+To enable GIF support, add `SDWebImage.xcframework`, located in either `braze-swift-sdk-prebuilt/static` or `braze-swift-sdk-prebuilt/dynamic`.
 {% endalert %}
 
 #### Common errors for Objective-C projects
