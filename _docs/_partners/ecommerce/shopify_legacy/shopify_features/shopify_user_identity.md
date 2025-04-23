@@ -10,19 +10,19 @@ page_order: 3
 
 # Shopify user identity management
 
-> Braze will receive signals from your Shopify customers through their on-site behaviors and by listening to Shopify webhooks that you configured as part of your integration. For non-headless Shopify sites, Braze will assist with reconciling users from the checkout page. For headless Shopify sites, refer to our integration guidance on how to [reconcile users from checkout]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-checkout).
+> Braze will receive signals from your Shopify customers through their on-site behaviors and by listening to Shopify webhooks that you configured as part of your integration. For non-headless Shopify sites, Braze will assist with reconciling users from the checkout page. For headless Shopify sites, refer to our integration guidance on how to [reconcile users from checkout]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#headless-checkout).
 
 ## Capturing information for user profiles 
 
 ### Shopify user tracking
 
-If your store visitors are guests (that is, anonymous), Braze will capture the `device_id` for those particular customers’ sessions. After you set up user reconciliation for Shopify forms during your [implementation of the Web SDK]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk), customer emails will be added to anonymous user profiles whenever customers enter their information into a form. 
+If your store visitors are guests (that is, anonymous), Braze will capture the `device_id` for those particular customers’ sessions. After you set up user reconciliation for Shopify forms during your [implementation of the Web SDK]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk), customer emails will be added to anonymous user profiles whenever customers enter their information into a form. 
 
 When store visitors enter their email into a Shopify newsletter or email capture form, Braze will receive a Shopify webhook event to create the user profile. Braze then merges this user profile with the anonymous user profile tracked by the Web SDK and assigns the Shopify customer ID as the user alias on the user profile. 
 
 As customers progress to checkout and provide other identifiable information, like phone numbers, Braze must capture the relevant user data from Shopify webhooks and merge it with the anonymous user with the `device_id`.
 - If you implemented the Web SDK via Shopify ScriptTag, on a non-headless Shopify site, or via Google Tag Manager, Braze will automatically ensure that the user data from the checkout page and the session data from the anonymous user profile are merged to the user alias profile with the assigned Shopify customer ID.
-- If you have implemented the Web SDK on a Shopify headless site, you must ensure that user data submitted within the checkout page is appropriately assigned to the correct user profile through either the Web SDK or API. For more information, check out [Implementing the Web SDK directly onto your headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-site).
+- If you have implemented the Web SDK on a Shopify headless site, you must ensure that user data submitted within the checkout page is appropriately assigned to the correct user profile through either the Web SDK or API. For more information, check out [Implementing the Web SDK directly onto your headless Shopify site]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#headless-site).
 
 As customers continue the checkout process, Braze checks if their entered email address, phone number, or Shopify customer ID matches an existing user profile. If there is a match, Braze syncs the Shopify user data to that profile.
 
@@ -45,7 +45,7 @@ To prevent duplicate user profiles, it is critical you review the user reconcili
 ## User profile merging 
 
 {% alert note %}
-The default Shopify integration provides tooling to assist with merging your anonymous user profile and the Shopify alias profile. If you are implementing the integration to a headless Shopify site, review [Implementing the Web SDK directly onto your headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features) to confirm you are properly reconciling your users. <br><br> If you encounter duplicate user profiles, you can use our [bulk merging tool]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging/) to help streamline your data.
+The default Shopify integration provides tooling to assist with merging your anonymous user profile and the Shopify alias profile. If you are implementing the integration to a headless Shopify site, review [Implementing the Web SDK directly onto your headless Shopify site]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/?tab=headless%20shopify%20site#supported-features) to confirm you are properly reconciling your users. <br><br> If you encounter duplicate user profiles, you can use our [bulk merging tool]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging/) to help streamline your data.
 {% endalert %}
 
 Braze merges the fields from the anonymous user profile to the identified user profile when we find a match with one of the following:

@@ -296,7 +296,7 @@ validurls['/docs/partners/channel_extensions/creative_and_personalization/email_
 validurls['/docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stripo/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/stripo/';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stensul/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/stensul/';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/';
-validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/movable_ink/';
+validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/'] = '/docs/partners/message_personalization/dynamic_content/playable/';
 validurls['/docs/partners/advertising_technologies/attribution/appsflyer/'] = '/docs/partners/message_orchestration/attribution/appsflyer/';
 validurls['/docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/'] = '/docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/';
@@ -675,7 +675,7 @@ validurls['/docs/user_guide/data_and_analytics/analytics/understanding_your_app_
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/conversions_dashboard/';
 
-validurls['/docs/developer_guide/eu01_us3_sdk_implementation_differences'] = '/docs/docs/developer_guide/home';
+validurls['/docs/developer_guide/eu01_us3_sdk_implementation_differences'] = '/docs/developer_guide/home';
 validurls['/docs/developer_guide/platform_integration'] = '/docs/developer_guide/home';
 validurls['/docs/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_types'] = '/docs/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-message-types';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/html_rendered_push/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push';
@@ -725,7 +725,7 @@ validurls['/docs/help/best_practices/email/'] = '/docs/user_guide/message_buildi
 validurls['/docs/help/best_practices/in-app_messages/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices';
 validurls['/docs/help/gdpr_compliance/'] = '/docs/api/data_retention#braze-data-retention-information';
 validurls['/docs/hidden/private_betas/adobe/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe#adobe';
-validurls['/docs/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/movable_ink#movable-ink';
+validurls['/docs/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';
 validurls['/docs/partners/additional_channels/calendar/'] = '/docs/partners/message_orchestration/additional_channels/calendar';
 validurls['/docs/partners/additional_channels/sms/twilio'] = '/docs/help/release_notes/deprecations/twilio/';
 validurls['/docs/partners/additional_channels/mobile_wallet/'] = '/docs/partners/message_orchestration/additional_channels/mobile_wallet';
@@ -739,8 +739,10 @@ validurls['/docs/partners/braze_currents/data_storage_events/event_delivery_sema
 validurls['/docs/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage';
 validurls['/docs/partners/braze_currents/setting_up_currents/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 validurls['/docs/user_guide/data_and_analytics/currents'] = '/docs/user_guide/data_and_analytics/braze_currents';
+
+validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/';
 validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/'] = '/docs/partners/message_personalization/dynamic_content/playable';
-validurls['/docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/'] = '/docs/partners/message_personalization/dynamic_content/movable_ink/';
+
 validurls['/docs/partners/channel_extensions/email_orchestration/taxi_for_email/'] = '/docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/';
 validurls['/docs/partners/channel_extensions/workflow_automation/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
@@ -1030,11 +1032,11 @@ validurls['/docs/user_guide/engagement_tools/landing_pages/connect_subdomain/'] 
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
 
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/#requirements';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/ecommerce/shopify/shopify_overview/#requirements';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#shopify-setup-within-braze'] = '/docs/partners/ecommerce/shopify_legacy/setting_up_shopify/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_features/shopify_backfill/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing/'] = '/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/ecommerce/shopify/shopify_overview/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/ecommerce/shopify/shopify_catalogs/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/ecommerce/shopify/shopify_catalogs/#troubleshooting/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/ecommerce/shopify/shopify_catalogs/#back-in-stock-and-price-drop-use-cases'
@@ -2483,8 +2485,8 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop'] = '/docs/partners/data_and_analytics/customer_data_platform/growthloop';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer'] = '/docs/partners/data_and_analytics/customer_data_platform/lexer';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics'] = '/docs/partners/data_and_analytics/customer_data_platform/lytics';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle'] = '/docs/partners/data_and_analytics/customer_data_platform/mParticle/mparticle';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents'] = '/docs/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle'] = '/docs/partners/data_and_analytics/customer_data_platform/mparticle';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents'] = '/docs/partners/data_and_analytics/customer_data_platform/mparticle/mparticle_for_currents';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/merkury'] = '/docs/partners/data_and_analytics/customer_data_platform/merkury';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle'] = '/docs/partners/data_and_analytics/customer_data_platform/mparticle';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis'] = '/docs/partners/data_and_analytics/customer_data_platform/octolis';
@@ -2592,18 +2594,18 @@ validurls['/docs/partners/data_and_infrastructure_agility'] = '/docs/partners/da
 validurls['/docs/partners/message_personalization/location'] = '/docs/partners/message_personalization/';
 validurls['/docs/partners/message_personalization/dynamic_content'] = '/docs/partners/message_personalization/';
 validurls['/docs/partners/message_personalization/localization'] = '/docs/partners/message_personalization/';
-validurls['/docs/partners/message_orchestration/additional_channels'] = '/docs/parners/additional_channels_and_extensions';
-validurls['/docs/partners/message_orchestration/additional_channels/instant_chat'] = '/docs/parners/additional_channels_and_extensions';
-validurls['/docs/partners/message_orchestration/additional_channels/retargeting'] = '/docs/parners/additional_channels_and_extensions';
-validurls['/docs/partners/message_orchestration/additional_channels/mobile_wallet'] = '/docs/parners/additional_channels_and_extensions';
-validurls['/docs/partners/message_orchestration/additional_channels/calendar'] = '/docs/parners/additional_channels_and_extensions';
-validurls['/docs/partners/message_orchestration/channel_extensions'] = '/docs/parners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/additional_channels'] = '/docs/partners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/additional_channels/instant_chat'] = '/docs/partners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/additional_channels/retargeting'] = '/docs/partners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/additional_channels/mobile_wallet'] = '/docs/partners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/additional_channels/calendar'] = '/docs/partners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/channel_extensions'] = '/docs/partners/additional_channels_and_extensions';
 validurls['/docs/partners/message_orchestration/channel_extensions/email_templates'] = '/docs/partners/message_orchestration';
 validurls['/docs/partners/message_orchestration/channel_extensions/loyalty'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce'] ='/docs/partners/ecommerce';
-validurls['/docs/partners/message_orchestration/channel_extensions/surveys'] = '/docs/parners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/channel_extensions/surveys'] = '/docs/partners/additional_channels_and_extensions';
 validurls['/docs/partners/message_orchestration/attribution/'] = '/docs/partners/message_orchestration';
-validurls['/docs/partners/message_orchestration/learning'] = '/docs/parners/additional_channels_and_extensions';
+validurls['/docs/partners/message_orchestration/learning'] = '/docs/partners/additional_channels_and_extensions';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/cohort_import'] = '/docs/partners/data_and_analytics';
@@ -2615,7 +2617,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/data_privacy'] = '/doc
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/leads_capture'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/payments'] = '/docs/partners/ecommerce';
-validurls['/docs/partners/data_and_infrastructure_agility/support'] = '/docs/parners/additional_channels_and_extensions';
+validurls['/docs/partners/data_and_infrastructure_agility/support'] = '/docs/partners/additional_channels_and_extensions';
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation'] = '/docs/partners/ecommerce';
 validurls['/docs/partners/canvas_steps'] = '/docs/partners/canvas_audience_sync';
 validurls['/docs/partners/message_personalization/dynamic_content/trustpilot'] = '/docs/partners/trustpilot';
@@ -2629,6 +2631,9 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 
 validurls['/docs/help/help_articles/account/locked_out'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
 validurls['/docs/help/help_articles/account'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
+
+validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'] = 'docs/partners/dynamic_yield/';
+validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 // validurls['OLD'] = 'NEW';
 

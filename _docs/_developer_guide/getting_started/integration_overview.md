@@ -111,7 +111,7 @@ You'll need developers who are familiar with:
 
 ### CDP integration partners
 
-Many customers use Braze onboarding as an opportunity to also integrate with a customer data platform (CDP) as an integration partner. Braze provides data tracking and analytics, while a CDP can provide additional data routing and orchestration. Braze offers seamless integration with many CDPs, such as [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle/) and [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/). 
+Many customers use Braze onboarding as an opportunity to also integrate with a customer data platform (CDP) as an integration partner. Braze provides data tracking and analytics, while a CDP can provide additional data routing and orchestration. Braze offers seamless integration with many CDPs, such as [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/) and [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/). 
 
 If you are performing side-by-side integration with a CDP, you will map the calls from your CDP's SDK to the Braze SDK. Essentially, you will:
 * Map identifying calls to `changeUser` ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)) and set attributes.
