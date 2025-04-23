@@ -70,7 +70,7 @@ This is an estimate of how many actual churners will be correctly targeted. Of c
 
 ### Users expected not to churn 
 
-This is an estimate of how many users who wouldn't have actually churned will be incorrectly targeted. All machine learning models make errors. There may be users in your selection who have a high _Churn Risk Score_ but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion is those who will be incorrectly targeted using the current slider position.
+This is an estimate of how many users who wouldn't have churned will be incorrectly targeted. All machine learning models make errors. There may be users in your selection who have a high _Churn Risk Score_ but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion represents those who will be incorrectly targeted using the current slider position.
 
 ## Churn correlation table {#correlation_table}
 
