@@ -39,11 +39,11 @@ See [Query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_
 
 All queries surface data from the last 60 days.
 
-### Query Builder timezone
+### Query Builder time zone
 
-The default timezone for querying our Snowflake database is UTC. As a result, there may be some data discrepancies between your **Email Channel Engagement** page (which follows your company timezone) and your Query Builder results.
+The default time zone for querying our Snowflake database is UTC. As a result, there may be some data discrepancies between your **Email Channel Engagement** page (which follows your company's time zone) and your Query Builder results.
 
-To convert the timezone in your query results, add the following SQL to your query and customize it for your company timezone:
+To convert the time zone in your query results, add the following SQL to your query and customize it for your company's time zone:
 
 {% raw %}
 ```sql
