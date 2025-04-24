@@ -1,3 +1,18 @@
+{% if include.section == "Prerequisites" %}
+## Prerequisites
+
+To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## Preview your locales
+
+In the **Preview message as user** dropdown within the **Test** tab, select **Custom user** and enter different languages to preview the message to check if your message translates as expected.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Frequently asked questions
