@@ -2636,5 +2636,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
-// validurls['OLD'] = 'NEW';
 
+validurls['/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'] = '/docs/user_guide/message_building_by_channel/content_cards';
+
+// validurls['OLD'] = 'NEW';

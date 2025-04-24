@@ -13,11 +13,7 @@ tool:
 
 > By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards. 
+Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns and Canvases. 
 
 Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
 
@@ -25,13 +21,7 @@ Each of these retargeting filters provides you with several options after you ad
 
 ## Retargeting filters
 
-You can use the retargeting filters in this section for your users within your campaigns, Canvases, and News Feed cards.
-
-### Clicked Card
-
-Use the filter to find users who have and have not clicked a specific News Feed card.
-
-![][2]
+You can use the retargeting filters in this section for your users within your campaigns and Canvases.
 
 ### Clicked/Opened Campaign
 
@@ -118,7 +108,7 @@ Retargeting is particularly effective when the original segment also included a 
 - Money Spent in App is exactly 0
 - Last Used App less than 14 days ago
 
-The total number of users in the segment is 100,000 and you know from the News Feed stats that 60,000 unique users viewed the card and 20,000 unique users clicked the card. Through the segmenter we can see how many of those users who clicked the card actually made a purchase:
+The total number of users in the segment is 100,000 and you know from the Content Card stats that 60,000 unique users viewed the card and 20,000 unique users clicked the card. Through the segmenter we can see how many of those users who clicked the card actually made a purchase:
 
 - Money Spent in App is more than 0
 - Clicked Card is Name of Card
@@ -128,7 +118,7 @@ After examining those stats, we can make a segment of users who clicked the card
 - Money Spent in App is exactly than 0
 - Clicked Card is Name of Card
 
-We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they're most likely to respond, thus increasing the effectiveness of your campaigns.
+We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with a messaging campaign. A multichannel approach allows you to reach users where they're most likely to respond, thus increasing the effectiveness of your campaigns.
 
 [1]: {% image_buster /assets/img_archive/retarget.png %}
 [2]: {% image_buster /assets/img_archive/clickedcard.png %}

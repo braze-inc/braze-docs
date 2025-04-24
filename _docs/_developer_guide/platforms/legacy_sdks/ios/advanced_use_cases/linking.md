@@ -3,7 +3,7 @@ nav_title: Deep Linking
 article_title: Deep Linking for iOS
 platform: iOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings."
 
 noindex: true
 ---
@@ -13,10 +13,6 @@ noindex: true
 # Deep linking for iOS
 
 For introductory information on deep links, refer to our [User Guide article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.
-
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
 
 ## Step 1: Register a scheme
 
@@ -139,11 +135,11 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 Refer to [Apple](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html) for more information.
 
 {% alert note %}
-The default universal link integration is not compatible with Braze push notifications, in-app messages, or News Feed. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
+The default universal link integration is not compatible with Braze push notifications or in-app messages. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications and in-app messages.
 {% endalert%}
 
 ## App transport security (ATS)
-iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, News Feed cards, and push notifications.
+iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, and push notifications.
 
 ### ATS requirements
 From [Apple's documentation](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14): "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
@@ -168,7 +164,7 @@ ATS compliance is enforced for links opened within the mobile app (our default h
 You can handle ATS in one of the following three ways:
 
 #### Confirm all links are ATS compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, we recommended checking that all linked URLs are ATS compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, we recommended checking that all linked URLs are ATS compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
 An SSL tool can help you pinpoint web server security issues. This [SSL server test](https://www.ssllabs.com/ssltest/index.html) from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
 
@@ -293,7 +289,7 @@ For more information, see [`ABKURLDelegate.h`](https://github.com/Appboy/appboy-
 
 ### Deep linking to app settings
 
-iOS can take users from your app into its page in the iOS settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to settings from push notifications, in-app messages, and the News Feed.
+iOS can take users from your app into its page in the iOS settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to settings from push notifications and in-app messages.
 
 1. First, make sure your application is set up for either [scheme-based deep links](#deep-links) or [universal links](#universal-links).
 2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).

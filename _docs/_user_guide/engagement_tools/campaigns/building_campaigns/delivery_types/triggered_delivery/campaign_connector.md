@@ -9,11 +9,9 @@ description: "This how-to article goes over what Campaign Connector is and how t
 ---
 # Campaign Connector
 
-> Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. 
+> Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns. You can deliver targeted, relevant content at the right time.
 
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+## How it works
 
 This feature allows you to target users who complete the following interactions with active campaigns:
 
@@ -37,14 +35,9 @@ This feature allows you to target users who complete the following interactions 
 - Click content card
 - Dismiss content card
 
-As well as users who complete the following interactions with active News Feed Cards:
+### Delivery rules
 
-- View
-- Click
-
-## Delivery rules
-
-The Campaign Connector feature only works with active campaigns. In addition, you cannot use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you are a running a marketing campaign for nine weeks and you set up a follow-on campaign that utilizes Campaign Connector at the beginning of week four, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
+Note that you can't use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you're running a marketing campaign for nine weeks and set up a follow-on campaign that uses Campaign Connector at the beginning of week four, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
 
 - Set up your original campaign as a draft
 - Set up and publish your follow-on campaign
@@ -52,29 +45,21 @@ The Campaign Connector feature only works with active campaigns. In addition, yo
 
 These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an email or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your email and/or push notification before the follow-on campaign is published.
 
-## How to use the Campaign Connector feature
+## Using Campaign Connector with your campaigns
 
 ### Step 1: Create a new campaign
 
-Compose the messages that you wish to send to your users. You can select a classic campaign or a single channel campaign, depending on your use case.
+Compose the messages that you wish to send to your users. You can select a single channel or multi-channel campaign, depending on your use case.
 
 ### Step 2: Select interaction and target campaign
 
-You can target users who interact with an active campaign, or users who interact with an active News Feed Card.
-
-#### Targeting users who interact with a campaign
-
-Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you'll select the active campaign that you'd like to target.
+1. Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger to target users who interact with an active campaign. 
+2. Choose the trigger interaction. 
+3. Next, you'll select the active campaign that you'd like to target.
 
 ![][4]
 
-#### Targeting users who interact with a News Feed card (deprecating)
-
-Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then choose whether you'd like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you'd like to target.
-
-![][5]
-
-### Step 3: Set schedule delay and add exceptions if necessary
+### Step 3: Set schedule delay and add exceptions (optional)
 
 If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original email.  In this scenario, you can choose "Received email" as the trigger and set a schedule delay of one week. Then, you can add "Open email" as an exception. Now, you'll resend the email to users who did not open the original email within a week of receiving it.
 
