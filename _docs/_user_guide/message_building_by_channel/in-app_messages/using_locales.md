@@ -1,7 +1,8 @@
 ---
 nav_title: Locales in Messages
 article_title: Locales in Messages
-page_order: 18
+page_order: 4
+alias: /iam_locales/
 description: "This article provides steps on how to use locales in your in-app messages."
 ---
 
@@ -13,15 +14,56 @@ description: "This article provides steps on how to use locales in your in-app m
 
 ## Using locales
 
-To use locales in your messaging, compose an in-app message campaign or Canvas, then complete the following:
+To use locales in your messaging, compose an in-app message campaign or Canvas. Select either the drag-and-drop editor or the HTML editor, then follow the steps based on your editor.
 
-1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated.<br><br>![Push notification composer with translation tags added to the title and message fields.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})<br><br>
-2. Save your message as a draft.
-3. Select **Manage language** and add your locales for the message using the dropdown.
-4. Select **Download template**, then fill in the translations within the CSV template. <br><br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})<br><br>
-5. To upload the completed CSV template, select **Upload translations**. <br><br>![The "Multi-language messages" window with two locales selected and buttons to download a template or upload translations.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
+{% tabs %}
+{% tab HTML editor %}
 
-To update the translations, update the CSV and re-upload the file. This means any changes to the IDs or locales in the CSV will not automatically update in your message.
+1. Select the **Custom Code** message type and add text. 
+2. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated. 
+3. Add an ID tag to each translation tag. An example is: {% raw %}`{% translation id_1 %}`{% endraw %}
+
+![HTML editor with a translation ID.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
+
+{: start="4"}
+4. After adding the tags, save your message as a draft.
+5. Select **Manage languages** and add your locales for the message using the dropdown.
+
+!["Manage languages" modal with one selected locale.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
+
+{: start="6"}
+6. Select **Download template** to download the translation template as a CSV file. Then, fill in the translations in the CSV file.
+
+![An example of a translation CSV file.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+
+{: start="7"}
+7. Select **Upload translations** to upload the CSV file with the completed translations.
+
+{% endtab %}
+{% tab Drag-and-drop editor %}
+
+1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated. 
+2. Add an ID tag to each translation tag. An example is: {% raw %}`{% translation id_1 %}`{% endraw %} 
+
+![Drag-and-drop editor with two translation IDs.]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+3. After adding the tags, save your message as a draft, and then open the editor again.
+4. In the **Build** panel, select **Multi-language** and add your locales for the message using the dropdown.
+5. Select **Download template** to download the translation template as a CSV file. 
+
+!["Multi-language" panel with button to download the template.]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
+
+{: start="6"}
+6. Fill in the translations in the CSV file. If you've copied and pasted the translation tags directly from Step 1, you may need to remove `<code>` from the **Translation tags** column of the CSV file.
+7. Select **Upload translations** to upload the CSV file with the completed translations.
+
+!["Multi-language" panel with buttons to download the template and upload translations.]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
+
+{% endtab %}
+{% endtabs %}
+
+Any changes to the IDs or locales in the CSV file will not automatically update in your message. To update the translations, update the CSV file and re-upload the file.
 
 {% alert tip %}
 Check out our [Translation API]({{site.baseurl}}/api/endpoints/translations) to manage and update translations in your campaigns and Canvases.
