@@ -40,7 +40,7 @@ alias: "/sms_geographic_permissions/"
 
 一部の国では、SMSトラフィックポンプのリスクが高くなっています。これらの国は、国ドロップダウンの**High Risk** タグで示されます。
 
-![アゼルバイジャンに「High Risk」タグが付いている国のドロップダウン。][4]{: style="max-width:80%;"}
+![アゼルバイジャンの国名ドロップダウンには "高リスク "タグが付いている。][4]{: style="max-width:80%;"}
 
 これらの国での送信を許可する場合は、まずそのリスクを認識してから許可リストに国を追加する必要があります。
 
@@ -50,7 +50,7 @@ alias: "/sms_geographic_permissions/"
 
 ## ブロックされた送信の可視性
 
-許可リストにない国への送信を試行すると、中止されます。中止されたメッセージは、[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)と[SMS メッセージ中止エンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)に記録されます。 
+許可リストにない国への送信を試行すると、中止されます。中止されたメッセージは、[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)と[SMS メッセージ中止エンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)に記録されます。 
 
 送信のブロックによって中止されたメッセージは `Abort_Type = "blocked_recipient_country"` と表示され、ブロックされた国の詳細を示す中止ログもともに表示されます。
 

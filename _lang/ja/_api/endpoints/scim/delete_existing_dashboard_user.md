@@ -15,15 +15,15 @@ description: "この記事では、ダッシュボードのユーザーアカウ
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定することによって、既存のダッシュボードユーザーを永続的に削除します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定することによって、既存のダッシュボードユーザーを永続的に削除します。 
 
-これは、Brazeダッシュボードの**Company Users**セクションでユーザーを削除するのと同様である。SCIM トークンの取得方法については、[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)を参照してください。
+これは、Brazeダッシュボードの**Company Users**セクションでユーザーを削除するのと同様である。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使うには、SCIMトークンが必要だ。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
+このエンドポイントを使うには、SCIMトークンが必要だ。`X-Request-Origin` ヘッダーとしてサービス Origin を使用します。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
 
 ## レート制限
 
@@ -31,7 +31,7 @@ description: "この記事では、ダッシュボードのユーザーアカウ
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `id` | 必須 | 文字列 | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

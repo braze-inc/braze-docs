@@ -116,7 +116,7 @@ Toda solicitação de API enviada à Braze retorna as seguintes informações no
 Essas informações são incluídas intencionalmente no cabeçalho da resposta à solicitação da API, e não no dashboard da Braze. Isso permite que seu sistema reaja melhor em tempo real à medida que você interage com nossa API. Por exemplo, se o valor de `X-RateLimit-Remaining` cair abaixo de um determinado limite, talvez você queira diminuir a velocidade de envio para garantir que todos os e-mails de transação sejam enviados. Ou, se chegar a zero, talvez você queira pausar todos os envios até que passe o tempo especificado em `X-RateLimit-Reset`.
 
 {% alert note %}
-Os cabeçalhos HTTP serão retornados com todos os caracteres em minúsculas. Esse comportamento está alinhado com o protocolo HTTP/2, que exige que todos os nomes de campos de cabeçalho sejam em letras minúsculas. Isso difere do HTTP/1.X, em que os nomes de cabeçalho não diferenciavam maiúsculas de minúsculas, mas eram comumente escritos em várias maiúsculas.
+Os cabeçalhos HTTP serão retornados com todos os caracteres em minúsculas. Esse comportamento está alinhado com o protocolo HTTP/2, que exige que todos os nomes de campos de cabeçalho sejam minúsculos. Isso difere do HTTP/1.X, em que os nomes de cabeçalho não diferenciavam maiúsculas de minúsculas, mas eram comumente escritos em várias maiúsculas.
 {% endalert %}
 
 Se tiver dúvidas sobre os limites da API, entre em contato com o gerente de sucesso do cliente ou abra um [tíquete de suporte][support].

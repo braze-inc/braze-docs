@@ -52,7 +52,7 @@ Por ejemplo, una empresa con sede en Londres que envíe una campaña a las 12 de
 
 Braze determinará automáticamente la zona horaria del usuario a partir de su dispositivo. Esto garantiza la precisión de la zona horaria y la cobertura total de tus usuarios. Los usuarios creados a través de la API de usuario o de otro modo sin zona horaria tendrán la zona horaria de su empresa como zona horaria por defecto hasta que sean reconocidos en su aplicación por el SDK. 
 
-Puede comprobar la zona horaria de su empresa en [los ajustes de su empresa]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) en el panel de control.
+Puede comprobar la zona horaria de su empresa en [los ajustes de su empresa]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) en el panel de control.
 
 ### ¿Cuándo evalúa Braze a los usuarios para la entrega según la zona horaria local?
 

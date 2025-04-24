@@ -10,7 +10,7 @@ tool: Currents
 
 # 사용 가능한 파트너
 
-> 이 페이지에서는 Braze 커런츠와 통합하는 데 사용할 수 있는 데이터 파트너의 사용 사례를 간략하게 설명하고 설명합니다.
+> 이 페이지에는 브레이즈 커런츠와 통합할 수 있는 데이터 파트너가 나열되어 있으며 사용 사례에 대한 개요가 나와 있습니다. 
 
 {% alert note %}
 Braze에서 한 파트너를 위해 흐르는 이벤트의 이름 지정 규칙이 다른 파트너와 일치하지 않을 수 있습니다. 예를 들어, Segment의 커런츠 이메일 열기 이벤트는 `Email Opened`이며, Mixpanel에서는 `Email Open`입니다.
@@ -18,7 +18,7 @@ Braze에서 한 파트너를 위해 흐르는 이벤트의 이름 지정 규칙�
 
 ## 데이터 웨어하우스 스토리지
 [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-데이터 웨어하우스 스토리지는 Currents에서 스트리밍되는 모든 정보에 대한 수집 소스를 제공합니다. 이러한 파트너는 플랫 파일 스토리지를 위한 창고 역할을 하거나 비즈니스 인텔리전스 도구, 머신 러닝 알고리즘을 강화하고 마케팅 성과에 대한 인사이트를 얻는 데 사용할 수 있습니다.
+데이터 웨어하우스 스토리지는 Currents에서 스트리밍되는 모든 정보에 대한 수집 소스를 제공합니다. 이러한 파트너는 플랫 파일 스토리지를 위한 창고 역할을 하거나 비즈니스 인텔리전스 도구 및 머신 러닝 알고리즘을 강화하고 마케팅 성과에 대한 인사이트를 얻는 데 사용할 수 있습니다.
 
 * [Amazon S3][1]
 * [Google Cloud Storage][2]

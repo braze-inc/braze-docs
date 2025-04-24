@@ -23,7 +23,7 @@ Antes de probar su campaña de mensajería, es importante identificar a sus usua
 
 ### Opcional: Crear un grupo de prueba de contenidos
 
-Una forma práctica de organizar a los usuarios de prueba es crear un [Grupo de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), que incluye un grupo de usuarios que recibirán mensajes de prueba de las campañas. Puede añadir este grupo de prueba en el campo **Añadir grupos de prueba de contenido** bajo **Destinatarios de prueba** en su campaña, y lanzar sus pruebas sin crear o añadir usuarios de prueba individuales.
+Una forma práctica de organizar a los usuarios de prueba es crear un [Grupo de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que incluye un grupo de usuarios que recibirán mensajes de prueba de las campañas. Puede añadir este grupo de prueba en el campo **Añadir grupos de prueba de contenido** bajo **Destinatarios de prueba** en su campaña, y lanzar sus pruebas sin crear o añadir usuarios de prueba individuales.
 
 ## Paso 2: Enviar mensajes de prueba específicos del canal
 
@@ -116,9 +116,7 @@ Después de crear tu webhook, puedes hacer un envío de prueba para comprobar la
 {% endtab %}
 {% tab Canal de noticias %}
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Para enviar una tarjeta de noticias de prueba es necesario configurar un segmento de prueba y enviar una campaña de prueba.
 
@@ -128,7 +126,7 @@ Una vez configurado un segmento de prueba, puede utilizar estos canales de mensa
 
 1. Vaya a la página **Segmentos** y [cree un nuevo segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Haga clic en el menú desplegable de **Añadir filtro** y localice los filtros de comprobación en la parte inferior de la lista <br><br>![Prueba de filtros]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Utilice los filtros de comprobación para seleccionar usuarios con direcciones de correo electrónico específicas o [ID de usuario]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) externos.<br><br>![Prueba de las opciones de filtro]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Utilice los filtros de comprobación para seleccionar usuarios con direcciones de correo electrónico específicas o [ID de usuario]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) externos.<br><br>![Prueba de las opciones de filtro]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>Estos filtros tienen las siguientes opciones:
 - **Es igual**: Busca una coincidencia exacta con el correo electrónico o el ID de usuario que proporcione. Utilízalo si solo quieres enviar las campañas de prueba a dispositivos asociados a un único correo electrónico o ID de usuario.
 - **No es igual**: Excluye un determinado correo electrónico o ID de usuario de las campañas de prueba.
@@ -225,7 +223,7 @@ Alternativamente, si guardas ID de usuario personalizadas, también puedes proba
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

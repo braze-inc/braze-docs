@@ -53,6 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \
@@ -64,11 +65,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
   ]
 }'
 ```
+
 {% alert important %}
 Seuls les ID obsolètes peuvent être supprimés ; la tentative de suppression d’un ID externe principal entraînera une erreur.
 {% endalert %}
 
-## Réponse 
+## Réponse
+
 La réponse confirmera toutes les suppressions réussies et les suppressions infructueuses avec les erreurs associées. Les messages d’erreur dans le champ `removal_errors` référenceront l’index dans le tableau de la demande d’origine.
 
 ```

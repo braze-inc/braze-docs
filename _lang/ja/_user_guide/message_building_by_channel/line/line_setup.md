@@ -25,7 +25,7 @@ LINE と Braze を統合するには、以下が必要です。
 - [LINE 開発者アカウント](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE メッセージング API チャネル](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-BrazeからLINEメッセージを送信すると、アカウントのメッセージクレジットが消費される。
+Braze から LINE メッセージを送信すると、アカウントのメッセージクレジットが消費されます。
 
 ## LINE アカウントのタイプ
 
@@ -36,7 +36,7 @@ BrazeからLINEメッセージを送信すると、アカウントのメッセ�
 | プレミアムアカウント | LINE Yahoo の審査に合格したアカウント。このアカウントは緑色のバッジで表示され、LINE アプリ内の検索結果に表示されます。このアカウントタイプは、LINE の判断で審査時に自動的に付与されます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 必要な口座タイプ
+### 必要なアカウントタイプ
 
 フォロワーを Braze に同期するには、LINE アカウントが認証済みかプレミアムである必要があります。アカウントを作成すると、デフォルトのステータスは「未認証」になります。アカウント認証を申請する必要があります。
 
@@ -57,17 +57,17 @@ BrazeからLINEメッセージを送信すると、アカウントのメッセ�
 
 1. [既存の既知ユーザーをインポートまたは更新する](#step-1-import-or-update-existing-line-users)
 2. [LINEチャンネルを統合する](#step-2-integrate-line-channel)
-3. [サブスクリプション・ステータスの同期をリクエストする](#step-3-request-a-subscription-status-sync)
-4. [ユーザーの更新方法](#step-4-change-your-user-update-methods)
-5. [(オプション）ユーザーをマージする](#step-5-merge-profiles-optional)
+3. [ユーザーIDを照合する](#step-3-reconcile-user-ids)
+4. [ユーザー更新方法の変更](#step-4-change-your-user-update-methods)
+5. [(オプション) ユーザープロファイルのマージ](#step-5-merge-profiles-optional)
 
 ## ステップ 1: 既存のLINEユーザーをインポートまたは更新する
 
-Brazeが自動的にサブスクリプションの状態を取得し、正しいユーザープロファイルを更新するからだ。過去にユーザーとLINE IDを照合していない場合は、このステップをスキップする。 
+Braze は LINE ユーザーのサブスクリプションステータスを後から自動的に取得して正しいユーザープロファイルを更新するので、すでに存在している識別済みの LINE ユーザーがいる場合には、このステップを行う必要があります。過去にユーザーとLINE IDを照合していない場合は、このステップをスキップする。 
 
-エンドポイント、CSVインポート、Cloud Data Ingestionなど、Brazeがサポートするどの方法でもユーザーをインポートまたは更新できる。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)含む。 
+エンドポイント、CSVインポート、Cloud Data Ingestionなど、Brazeがサポートするどの方法でもユーザーをインポートまたは更新できる。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/cloud_ingestion/)含む。 
 
-どの方法を使うにせよ、`native_line_id` 、ユーザーのLINE IDを提供するように更新する。`native_line_id` の詳細については、[ユーザー設定を](#user-setup)参照のこと。
+どの方法を使用している場合でも、ユーザーの LINE ID を提供するように `native_line_id` を更新します。`native_line_id` の詳細については、[ユーザー設定を](#user-setup)参照のこと。
 
 {% alert note %}
 サブスクリプショングループの状態は指定すべきではなく、無視される。LINEはユーザーのサブスクリプションステータスの真実の情報源であり、サブスクリプション同期ツールまたはイベント更新によってBrazeに同期される。
@@ -89,7 +89,7 @@ Brazeが自動的にサブスクリプションの状態を取得し、正しい
 | --- | --- |
 | プロバイダー ID | プロバイダーを選択し、[**設定**] > [**基本情報**] の順に進みます。 |
 | チャネル ID | プロバイダーを選択し、[**チャネル**] > [チャネル] > [**基本設定**] の順に進みます。 |
-| チャネルシークレット | プロバイダーを選択し、[**チャネル**] > [チャネル] > [**基本設定**] の順に進みます。 |
+| チャネルシークレット | プロバイダを選択し、**Channels** > your channel > **Basic settings** に移動します。 |
 | チャネルアクセストークン | プロバイダーを選択し、[**チャネル**] > [チャネル] > [**メッセージング API**] の順に進みます。チャネルアクセストークンがない場合は、[**発行**] を選択してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -109,6 +109,10 @@ Brazeが自動的にサブスクリプションの状態を取得し、正しい
    - チャネルシークレット
    - チャネルアクセストークン
 
+{% alert important %}
+統合中は、チャネルシークレットが正しいことを確認してください。間違っている場合は、サブスクリプションステータスに不整合がある可能性があります。
+{% endalert %}
+
 ![LINE 統合セクションが掲載された、LINE メッセージング統合ページ。][3]{: style="max-width:80%;"}
 
 {: start="2"}
@@ -118,17 +122,17 @@ Brazeが自動的にサブスクリプションの状態を取得し、正しい
 
 ## ステップ 3:ユーザーIDを照合する
 
-ユーザー[ID照合の](#user-id-reconciliation)ステップに従い、ユーザーのLINE IDと既存のBrazeユーザープロファイルを統合する。
+[ユーザー ID の照合](#user-id-reconciliation)の手順に従って、ユーザーの LINE ID と既存の Braze ユーザープロファイルを組み合わせます。
 
 ## ステップ4:ユーザーの更新方法を変更する 
 
-Brazeにユーザーアップデートを提供するメソッドがすでにあると仮定すると、それを更新して新しいフィールド`native_line_id` 、Brazeに送信される後続のユーザーアップデートにそのフィールドが含まれるようにする必要がある。
+Braze にユーザー更新を提供する方法がすでに確立されている場合、その方法を更新して新しいフィールド `native_line_id` を含める必要があります。これにより、Braze にその後送信されるユーザー更新にはそのフィールドが含まれるようになります。
 
 サブスクリプションステータスの同期プロセスの一環として、または新しいフォロワーがあなたのチャネルをフォローしたときに作成された、`native_line_id` を持つ未確認のユーザープロファイルがBrazeに存在する可能性がある。 
 
-[ユーザー照合などで](#user-id-reconciliation)アプリケーションにLINEユーザーが識別子として登録された場合、Brazeで未登録の可能性があるユーザープロファイルをターゲットにすることができる。 [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)エンドポイントを使用する。`native_line_id` を持つすべての未確認ユーザープロファイルは、ユーザーエイリアス`line_id` も持っており、これを使用してユーザープロファイルを特定することができる。
+アプリケーションで、[ユーザー照合](#user-id-reconciliation)などの方法で LINE ユーザーが識別される場合は、[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) エンドポイントを使用して、Braze で未確認ユーザープロファイルをターゲットに設定できます。`native_line_id` が含まれるすべての未確認ユーザープロファイルには、ユーザーエイリアス`line_id` も含まれています。このユーザーエイリアスを使用して、ユーザープロファイルを識別対象として設定できます。
 
-以下は、`/users/identify` に対するペイロードの例である。このペイロードは、ユーザーエイリアス`line_id` 、未確認のユーザープロファイルをターゲットとしている： 
+以下に、ユーザーエイリアス `line_id` を使用して未確認ユーザープロファイルをターゲットに設定する `/users/identify` のペイロードの例を示します。 
 
 {% raw %}
 ```json
@@ -146,11 +150,11 @@ Brazeにユーザーアップデートを提供するメソッドがすでにあ
 ```
 {% endraw %}
 
-提供された`external_id` に対して既存のユーザープロファイルが存在しない場合、そのユーザープロファイルは未確認のユーザープロファイルに追加され、識別される。`external_id` に対してユーザープロファイルが存在する場合、未確認のユーザープロファイルにのみ存在するすべての属性は、`native_line_id` およびユーザーのサブスクリプションステータスを含め、既知のユーザープロファイルにコピーされる。
+指定された `external_id` に対応する既存のユーザープロファイルが存在しない場合、これは未確認ユーザープロファイルに追加され、これにより識別されるようになります。`external_id` に対応するユーザープロファイルが存在する場合、未確認ユーザープロファイルにのみ存在するすべての属性は、既知のユーザープロファイルにコピーされます (`native_line_id` およびユーザーのサブスクリプションステータスを含む)。
 
-アプリケーションで既知のLINEユーザーを更新するには、そのユーザーの外部識別子をエンドポイントに渡す。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)`native_line_id`エンドポイントから更新することができる。あるユーザーに対して未確認ユーザープロファイルがすでに存在し、同じ`native_line_id` が`/users/track` を通じて別のユーザープロファイルに追加された場合、そのユーザーは未確認ユーザープロファイルのすべてのサブスクリプション状態を継承する。ただし、ユーザープロファイルは、同じ`native_line_id` で重複して存在する。イベント更新によるその後のサブスクリプション更新は、それに応じてすべてのプロファイルを更新する。 
+アプリケーションで既知の LINE ユーザーを [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントから更新するには、それらのユーザーの外部 ID と `native_line_id` を渡します。あるユーザーに対して未確認ユーザープロファイルがすでに存在し、同じ`native_line_id` が`/users/track` を通じて別のユーザープロファイルに追加された場合、そのユーザーは未確認ユーザープロファイルのすべてのサブスクリプション状態を継承する。ただし、同じ `native_line_id` に対してユーザープロファイルが重複して存在することになります。イベント更新からの後続のサブスクリプション更新によって、すべてのプロファイルが更新されます。 
 
-`native_line_id` を追加するために、外部ユーザーIDによってユーザープロファイルを更新する、`/users/track` へのペイロードの例を以下に示す： 
+以下に、`native_line_id` を追加するために外部ユーザー ID でユーザープロファイルを更新する `/users/track` のペイロードの例を示します。 
 
 {% raw %}
 ```json
@@ -166,11 +170,11 @@ Brazeにユーザーアップデートを提供するメソッドがすでにあ
 ```
 {% endraw %}
 
-## ステップ 5: プロファイルのマージ（オプション）
+## ステップ 5: プロファイルをマージする (省略可）
 
-上記のように、同じ`native_line_id` で複数のユーザープロファイルが存在する可能性がある。更新方法によって重複したユーザープロファイルが作成される場合、`/user/merge` エンドポイントを使用して、識別子未設定のユーザープロファイルを識別済みのユーザープロファイルにマージすることができる。 
+前述のように、同じ`native_line_id` で複数のユーザープロファイルが存在する可能性があります。更新方法によって重複するユーザープロファイルが作成される場合は、`/user/merge` エンドポイントを使用して、未確認ユーザープロファイルを識別されているユーザープロファイルにマージできます。 
 
-以下は、ユーザーエイリアス`line_id` による未確認のユーザープロファイルをターゲットとする、`/users/merge` へのペイロードの例である：
+以下に、ユーザーエイリアス `line_id` により未確認ユーザープロファイルをターゲットに設定する `/users/merge` のペイロードの例を示します。
 
 {% raw %}
 ```json
@@ -193,7 +197,7 @@ Brazeにユーザーアップデートを提供するメソッドがすでにあ
 {% endraw %}
 
 {% alert tip %}
-Brazeでの重複ユーザーの管理については、[重複ユーザーを]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users)参照。
+Braze での重複するユーザーの管理については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users)」を参照してください。
 {% endalert %}
 
 ## ユーザー設定
@@ -204,10 +208,10 @@ LINEは、ユーザーのサブスクリプション状態の真実の情報源�
 
 ### サブスクリプションの同期とイベントロジック
 
-1. **サブスクリプション同期ツール：**このツールは、LINEチャネル統合が成功すると自動的に導入される。既存のプロファイルの更新や新規プロファイルの作成に使用する。<br><br>LINEチャネルをフォローする`native_line_id` を持つすべてのBrazeユーザープロファイルは、サブスクリプショングループのステータスが`subscribed` に更新される。LINEチャンネルのフォロワーで、Brazeのユーザープロファイルを持っていない人は、`native_line_id` ：<br><br>-`native_line_id` 、チャンネルに続くユーザーLINE IDに設定された匿名ユーザープロファイルが作成される。 <br>\- ユーザーエイリアス`line_id` チャンネルに続くユーザーLINE IDに設定される。 <br>\- サブスクリプショングループのステータスは以下のとおりである。 `subscribed`
+1. **サブスクリプション同期ツール：**このツールは、LINEチャネル統合が成功すると自動的に導入される。既存のプロファイルの更新や新規プロファイルの作成に使用する。<br><br>LINEチャネルをフォローする`native_line_id` を持つすべてのBrazeユーザープロファイルは、サブスクリプショングループのステータスが`subscribed` に更新される。LINE チャネルのフォロワーのうち、`native_line_id` を持つ Braze ユーザープロファイルがないフォロワーには、次のものが提供されます。<br><br>- `native_line_id` を、チャネルをフォローしているユーザー LINE ID に設定して作成された匿名ユーザープロファイル <br>\- ユーザーエイリアス`line_id` チャンネルに続くユーザーLINE IDに設定される。 <br>\- サブスクリプショングループステータス `subscribed`
 
 {: start="2"}
-2\.**イベントの更新**これらはユーザーのサブスクリプションステータスを更新するために使用される。Brazeが統合LINEチャネルのユーザーイベント更新を受信し、そのイベントがフォローである場合、ユーザープロファイルのサブスクリプショングループステータスは`subscribed` 。イベントがフォロー解除の場合、ユーザープロファイルのサブスクリプショングループのステータスは`unsubscribed` となる。<br><br>-`native_line_id` が一致するすべてのBrazeユーザープロファイルが自動的に更新される。<br>\- イベントに一致するユーザープロファイルが存在しない場合、Brazeは[匿名ユーザーを作成する](https://www.braze.com/docs/line/user_management/)。
+2\.**イベントの更新:**これらはユーザーのサブスクリプションステータスを更新するために使用される。Brazeが統合LINEチャネルのユーザーイベント更新を受信し、そのイベントがフォローである場合、ユーザープロファイルのサブスクリプショングループステータスは`subscribed` 。イベントがフォロー解除の場合、ユーザープロファイルのサブスクリプショングループのステータスは`unsubscribed` となる。<br><br>-`native_line_id` が一致するすべてのBrazeユーザープロファイルが自動的に更新される。<br>\- イベントに一致するユーザープロファイルが存在しない場合、Brazeは[匿名ユーザーを作成する]({{site.baseurl}}/line/user_management/)。
 
 ## ユースケース
 
@@ -215,22 +219,22 @@ LINEは、ユーザーのサブスクリプション状態の真実の情報源�
 
 ##### 既存のBrazeユーザープロファイルがすでにLINEチャネルをフォローしている
 
-1. Brazeユーザープロファイルが`native_line_id` 属性で更新される。デフォルトのサブスクリプション・ステータスは`unsubscribed` である。
-2. サブスクリプション同期ツールを実行し、ユーザーがLINEチャネルをフォローしていることを確認し、ユーザープロファイルのサブスクリプションステータス`subscribed` を更新する。
+1. Brazeユーザープロファイルが`native_line_id` 属性で更新される。デフォルトのサブスクリプションステータスは `unsubscribed` です。
+2. サブスクリプション同期ツールが実行され、ユーザーが LINE チャネルをフォローしていることが確認され、ユーザープロファイルがサブスクリプションステータス `subscribed` で更新されます。
 3. サブスクリプションのステータスが変更された場合（ユーザーがチャンネルをブロック、友だち解除、リフォローなど）、BrazeはLINEから更新情報を受信し、それに応じてユーザープロファイルを更新する（`native_line_id` ）。
 
 ##### 既存のユーザープロファイルがLINEチャネルをブロック、友だち解除、フォロー解除している 
 
-1. Brazeユーザープロファイルが`native_line_id` 属性で更新される。デフォルトのサブスクリプション・ステータスは`unsubscribed` である。
+1. Brazeユーザープロファイルが`native_line_id` 属性で更新される。デフォルトのサブスクリプションステータスは `unsubscribed` です。
 2. サブスクリプション同期ツールは、ユーザーがLINEチャネルをフォローしていることを検出せず、ユーザーのサブスクリプションステータスは`unsubscribed` のままである。
 3. その後、ユーザーがチャンネルをフォローすると、BrazeはLINEからの更新を受信し、ユーザープロファイルにサブスクリプションステータス`subscribed` を更新する。
 
 ##### ユーザープロファイル作成はLINEフォロー後に行われる
 
 1. チャネルに新しいLINEフォロワーが増える。
-2. Brazeは、`native_line_id` 属性をフォロワーのLINE ID に設定し、`line_id` のユーザーエイリアスをフォロワーのLINE ID に設定した匿名ユーザープロファイルを作成する。プロファイルのサブスクリプション・ステータスは`subscribed` である。
-3. ユーザーは、[ユーザー照合によって](#user-id-reconciliation)LINE IDを持つことが識別される。
-  - 匿名ユーザープロファイルは、エンドポイント [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)エンドポイントを使う。その後の更新（エンドポイント、CSVインポート、またはクラウド・データ・インジェストを通じて）は、この既知の。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSV ユーザーインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータインジェスチョンを通じて]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)）、このユーザープロファイルは、この既知の`external_id` によってユーザーをターゲットにすることができる。
+2. Brazeは、`native_line_id` 属性をフォロワーのLINE ID に設定し、`line_id` のユーザーエイリアスをフォロワーのLINE ID に設定した匿名ユーザープロファイルを作成する。プロファイルのサブスクリプションステータスは `subscribed` です。
+3. [ユーザーの照合](#user-id-reconciliation)により、ユーザーに LINE ID があることが確認されます。
+  - 匿名ユーザープロファイルは、[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) エンドポイントを使用して識別できます。このユーザープロファイルに対する ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)による) その後の更新では、この既知の `external_id` でユーザーをターゲットに設定できます。
 
 {% raw %}
 ```json
@@ -248,16 +252,16 @@ LINEは、ユーザーのサブスクリプション状態の真実の情報源�
 ```
 {% endraw %}
 
-  - 新しいユーザープロファイルは、 を設定することで（エンドポイント、CSVインポート、またはクラウドデータ・インジェストを通じて）作成できる。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウド・データ・インジェストによって]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/))、新しいユーザー・プロファイルを作成するには、`native_line_id` を設定する。この新しいプロファイルは、既存の匿名ユーザープロファイルのサブスクリプションステータスの状態を継承する。この場合、複数のプロファイルが同じ`native_line_id` を共有することになる。これらは、[ステップ5で](#step-5-merge-profiles-optional)説明したプロセスで、`/users/merge` エンドポイントを使用して、いつでも統合することができる。
+  - `native_line_id` を設定して、新しいユーザープロファイルを ([`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイント、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)により) 作成できます。この新しいプロファイルは、既存の匿名ユーザープロファイルのサブスクリプションステータスの状態を継承する。この場合、複数のプロファイルが同じ`native_line_id` を共有することになる。これらはいつでもマージできます。マージするには、[ステップ5](#step-5-merge-profiles-optional)で説明したプロセスで `/users/merge` エンドポイントを使用します。
 
 ##### ユーザープロファイルの作成はLINEのフォローより先に行われる
 
 1. 新しいユーザーを獲得し、その情報をBrazeに送信する。新しいユーザープロファイルが作成される（プロファイル1）。
 2. ユーザーはあなたのLINEアカウントをフォローしている。
 3. Brazeはフォローイベントを受信し、匿名ユーザープロファイル（プロファイル2）を作成する。
-4. ユーザーは、[ユーザー照合によって](#user-id-reconciliation)LINE IDを持つことが識別される。
-5. プロファイル1を更新し、`native_line_id` 属性を設定する。このプロファイルは、プロファイル2のサブスクリプション・ステータス状態を継承する。
-  - これで、同じ`native_line_id` を持つ2つのユーザープロファイルが存在することになる。これらは、[ステップ5で](#step-5-merge-profiles-optional)説明したプロセスで、`/users/merge` エンドポイントを使用して、いつでも統合することができる。
+4. [ユーザーの照合](#user-id-reconciliation)により、ユーザーに LINE ID があることが確認されます。
+5. プロファイル1を更新し、`native_line_id` 属性を設定する。このプロファイルは、プロファイル2のサブスクリプションステータスを継承します。
+  - これで、同じ`native_line_id` を持つ2つのユーザープロファイルが存在することになる。これらはいつでもマージできます。マージするには、[ステップ5](#step-5-merge-profiles-optional)で説明したプロセスで `/users/merge` エンドポイントを使用します。
 
 ## ユーザーIDの照合 
 
@@ -265,7 +269,7 @@ LINE IDは、ユーザーがあなたのチャネルをフォローしたとき�
 
 LINE IDと既存のBrazeユーザープロファイルを組み合わせるには、2つの方法がある：
 
-- [LINEログイン](#line-login)
+- [LINE ログイン](#line-login)
 - [ユーザーアカウントのリンク](#user-account-linking)
 
 ### LINEログイン
@@ -279,43 +283,43 @@ LINE IDと既存のBrazeユーザープロファイルを組み合わせるに�
 1. LINE Developer Consoleにアクセスし、LINEログインでアプリにログインしたユーザーの[メールアドレスを取得する権限を申請する](https://developers.line.biz/en/docs/line-login/integrate-line-login/#applying-for-email-permission)。
 
 2. LINEが提供する適切なステップに従って、LINEログインを実施する：<br><br>
-  - [ウェブアプリの方向性](https://developers.line.biz/en/docs/line-login/integrate-line-login/)
-  - [ネイティブアプリの案内](https://developers.line.biz/en/docs/line-login/secure-login-process/#using-openid-to-register-new-users)<br><br>検証依頼のために[設定したスコープには](https://developers.line.biz/en/docs/line-login/integrate-line-login/#scopes)、必ず`email` 。 
+  - [Web アプリの手順](https://developers.line.biz/en/docs/line-login/integrate-line-login/)
+  - [ネイティブアプリの手順](https://developers.line.biz/en/docs/line-login/secure-login-process/#using-openid-to-register-new-users)<br><br>検証依頼のために[設定したスコープには](https://developers.line.biz/en/docs/line-login/integrate-line-login/#scopes)、必ず`email` 。 
 
 {: start="3"}
-3\.[Verify IDトークン・コールを](https://developers.line.biz/en/reference/line-login/#verify-id-token)使用して、ユーザーのメールを取得する。 
+3\.[ID トークン検証呼び出し](https://developers.line.biz/en/reference/line-login/#verify-id-token)を使用して、ユーザーのメールを取得します。 
 
 4. ユーザーのLINE ID (`native_line_id`)を、データベースにあるメールと一致するユーザープロファイルに保存するか、ユーザーのメールとLINE IDで新しいユーザープロファイルを作成する。
 
-5. [`/user/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/)、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータインジェストを]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)使用して、新規または更新ユーザー情報をBrazeに送信する。
+5. [`/user/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/)、[CSV インポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/)を使用して、新しいユーザー情報または更新されたユーザー情報を Braze に送信します。
 
 #### ワークフロー
 
 ##### 既存フォロワーがLINEログインを利用する
 
-**シナリオはこうだ：**匿名ユーザーは、最初のサブスクライバー同期中、または統合後に "フォロー "イベントを通じて作成された。
+**シナリオ:**最初のサブスクライバー同期または「follow」イベントによる統合の後に、匿名ユーザーが作成されました。
 
 1. ユーザーはLINEログインを使ってアプリにログインする。
 2. LINEはユーザーのメールを提供する。
 3. Brazeに更新ユーザー（LINE IDを追加するためにそのメールを既存のユーザープロファイルに送る）、または匿名ユーザーにそのメールを更新する。
 
-##### 新規フォロワーはLINEログインを使用する
+##### 新規フォロワーが LINE ログインを使用する
 
-**シナリオはこうだ：**ユーザーIDのユーザープロファイルがBrazeに存在しない。
+**シナリオ:**ユーザーの LINE ID のユーザープロファイルが Braze に存在していません。
 
 1. ユーザーはLINEログインを使ってアプリにログインする。
 2. LINEはユーザーのメールを提供する。
-3. どちらかだ：
+3. 次のいずれかを行います。
   - 既存のユーザープロファイルを更新し、そのメールのユーザーIDをLINE IDとして登録する。
   - メールとLINE IDで新しいユーザープロファイルを作成する。
 4. ユーザーがLINE公式アカウントをフォローすると、Brazeはフォローイベントを受信し、ユーザーのサブスクリプションステータスを`subscribed` に更新する。
 
 ### ユーザーアカウントのリンク 
 
-この方法によって、ユーザーはLINEアカウントとアプリのユーザーアカウントをリンクさせることができる。その後、BrazeのパーソナライズされたURL（{% raw %}`{{line_id}}`{% endraw %} など）を作成し、ユーザーのLINE IDをWebサイトやアプリに渡すことで、既知のユーザーと関連付けることができる。
+この方法によって、ユーザーはLINEアカウントとアプリのユーザーアカウントをリンクさせることができる。その後、Braze で {% raw %}`{{line_id}}`{% endraw %} などの Liquid を使用して、ユーザーの LINE ID を Web サイトまたはアプリに渡すユーザーのためにパーソナライズされた URL を作成します。渡された LINE ID は、既知のユーザーに関連付けることができます。
 
 1. サブスクリプションの状態変化に基づき、ユーザーがLINEチャネルにサブスクライブしたときにトリガーされるアクションベースのキャンバスを作成する。<br>![][9]
-2. ユーザーのLINE IDをクエリーパラメーターとして（Liquidを通して）渡し、Webサイトやアプリへのログインを促すメッセージを作成する：
+2. (Liquid を使用して) ユーザーの LINE ID をクエリパラメーターとして渡し、Web サイトやアプリへのログインを促す次のようなメッセージを作成します。
 
 ```
 Thanks for following Flash n' Thread on LINE! For personalized offers and 20% off your next purchase, sign-in to your account: https://flashandthread.com/sign_in?line_user_id={{line_id}}
@@ -327,7 +331,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 #### 仕組み
 
-ユーザーがログインした後、Webサイトやアプリを変更し、ユーザーIDをBrazeに送り返し、URLの一部として渡されたLINE IDと関連付ける：
+ユーザーのログイン後に、Web サイトまたはアプリに対して変更が行われます。この変更により、ユーザー ID が Braze に再び送信され、URL の一部として渡された LINE ID に関連付けられます。次にコードの例を示します。
 
 ```json
 const currentUrl = new URL(window.location.href)
@@ -357,13 +361,13 @@ if (user && isLoggedIn && lineUserId) {
 
 ##### 既存ユーザーがあなたのLINEチャネルをフォローしている
 
-**シナリオはこうだ：**Brazeの既存ユーザーがLINEであなたのチャネルをフォローしている。
+**シナリオ:**Brazeの既存ユーザーがLINEであなたのチャネルをフォローしている。
 
 1. LINEはBrazeにフォローイベントを送る。
-2. Brazeは、LINE ID、`line_id` ユーザーエイリアス、`subscribed` のLINEサブスクリプショングループステータスを持つ匿名ユーザープロファイルを作成する。
-3. ユーザーは、あなたのWebサイトやアプリへのリンクが記載されたLINEメッセージを受け取り、ログインする。ユーザープロファイルが判明した。
-4. 作成された匿名ユーザープロファイルは識別され、[/users/identifyエンドポイントを通じて]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)ユーザーの既知のユーザープロファイルにマージされる。既知のユーザープロファイルにはLINE IDが含まれ、サブスクリプションのステータスは`subscribed` となっている。
-5. (オプション) ユーザーはクーポンコードのLINEメッセージを受信し、Brazeはユーザープロファイルに送信をメッセージングする。
+2. Braze により、LINE ID、`line_id` ユーザーエイリアス、および LINE サブスクリプショングループステータス `subscribed` を持つ匿名ユーザープロファイルが作成されます。
+3. ユーザーは、あなたのWebサイトやアプリへのリンクが記載されたLINEメッセージを受け取り、ログインする。これでユーザープロファイルが既知になりました。
+4. 作成された匿名ユーザープロファイルが識別され、[/users/identify エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)によってユーザーの既知のユーザープロファイルにマージされます。既知のユーザープロファイルにはLINE IDが含まれ、サブスクリプションのステータスは`subscribed` となっている。
+5. (省略可) クーポンコードが含まれている LINE メッセージをユーザーが受信し、Braze がその送信を Braze ユーザープロファイルに記録します。
 
 ## BrazeでLINEテストユーザーを作成する
 

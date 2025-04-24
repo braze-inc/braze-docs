@@ -10,22 +10,21 @@ description: "Este artículo de referencia explica cómo añadir enlaces profund
 
 ## ¿Qué es la vinculación en profundidad?
 
-La vinculación profunda es una forma de lanzar una aplicación nativa y proporcionar información adicional que le indique que realice una acción específica o muestre un contenido concreto.
+La vinculación en profundidad es una forma de lanzar una aplicación nativa y proporcionar información adicional indicándole que realice una acción concreta o muestre un contenido específico.
 
 Esto tiene tres partes:
 
-1. Identificar qué aplicación lanzar
-2. Indica a la aplicación qué acción debe realizar
-3. Facilite a la acción cualquier dato adicional que necesite
+1. Identifica qué aplicación iniciar.
+2. Indica a la aplicación qué acción debe realizar.
+3. Proporciona a la acción cualquier dato adicional que necesite.
 
 Los enlaces profundos son URI personalizados que enlazan con una parte específica de la aplicación y contienen estas tres partes. La clave está en definir un esquema personalizado. `http:` es el esquema con el que casi todo el mundo está familiarizado, pero los esquemas pueden empezar por cualquier palabra. Un esquema debe empezar por una letra, pero puede contener letras, números, signos más, signos menos o puntos. En la práctica, no existe un registro central que evite los conflictos, por lo que es una buena práctica incluir su nombre de dominio en el esquema. Por ejemplo, `twitter://` es la URI de iOS para lanzar la aplicación móvil de X, antes Twitter.
 
-Todo lo que aparece después de los dos puntos dentro de un enlace profundo es texto libre. La definición de su estructura e interpretación depende del usuario, aunque una convención común es modelarla a partir de las URL de `http:`, incluyendo un `//` inicial y parámetros de consulta (por ejemplo, `?foo=1&bar=2`). En el ejemplo anterior, `twitter://user?screen_name=[id]` se utilizaría para lanzar un perfil específico en la aplicación.
+Todo lo que aparece después de los dos puntos dentro de un enlace profundo es texto libre. Depende de ti definir su estructura e interpretación; sin embargo, una convención común es modelarla según las URL de `http:`, incluyendo un `//` inicial y parámetros de consulta (por ejemplo, `?foo=1&bar=2`). En el ejemplo anterior, `twitter://user?screen_name=[id]` se utilizaría para lanzar un perfil específico en la aplicación.
 
 {% alert important %}
 Braze no admite el uso de un envoltorio como Flutter para enviar vínculos profundos. Para utilizar esta característica, debes configurar los vínculos en profundidad en la capa nativa.
 {% endalert %}
-
 
 ## Etiquetas UTM y atribución de campañas
 
@@ -33,17 +32,17 @@ Braze no admite el uso de un envoltorio como Flutter para enviar vínculos profu
 
 [Las etiquetas UTM (Urchin Traffic Manager)][4] le permiten incluir detalles de atribución de campañas directamente en los enlaces. Las etiquetas UTM son utilizadas por Google Analytics para recopilar datos de atribución de campañas y pueden utilizarse para realizar un seguimiento de las siguientes propiedades:
 
-- `utm_source`: el identificador de la fuente del tráfico (por ejemplo,`my_app`)
-- `utm_medium`el soporte de la campaña (por ejemplo,`newsfeed`)
-- `utm_campaign`: el identificador de la campaña (por ejemplo,`spring_2016_campaign`)
-- `utm_term`identificador de un término de búsqueda de pago que llevó al usuario a tu aplicación o sitio web (por ejemplo,`pizza`)
-- `utm_content`identificador del enlace/contenido específico en el que ha hecho clic el usuario (por ejemplo,`toplink` o `android_iam_button2`)
+- `utm_source`: El identificador de la fuente del tráfico (por ejemplo,`my_app`)
+- `utm_medium`: El medio de la campaña (por ejemplo,`newsfeed`)
+- `utm_campaign`: El identificador de la campaña (por ejemplo,`spring_2016_campaign`)
+- `utm_term`: Identificador de un término de búsqueda de pago que llevó al usuario a tu aplicación o sitio web (por ejemplo,`pizza`)
+- `utm_content`: Un identificador del enlace o contenido específico sobre el que el usuario ha hecho clic (por ejemplo,`toplink` o `android_iam_button2`)
 
 Las etiquetas UTM pueden incrustarse tanto en enlaces HTTP (web) normales como en enlaces profundos y rastrearse mediante Google Analytics.
 
 ### Usar etiquetas UTM con Braze
 
-Si desea utilizar etiquetas UTM con enlaces HTTP (web) normales -por ejemplo, para realizar la atribución de campañas para sus campañas de correo electrónico- y su organización ya utiliza Google Analytics, puede utilizar simplemente [el generador de URL de Google][6] para generar enlaces UTM. Estos enlaces pueden incrustarse fácilmente en el texto de la campaña Braze como cualquier otro enlace.
+Si quieres utilizar etiquetas UTM con enlaces HTTP (Web) normales (por ejemplo, para hacer la atribución de campañas para tus campañas de correo electrónico) y tu organización ya utiliza Google Analytics, puedes utilizar [el creador de URL de Google][6] para generar enlaces UTM. Estos enlaces pueden incrustarse fácilmente en el texto de la campaña Braze como cualquier otro enlace.
 
 Para utilizar etiquetas UTM en los vínculos profundos de tu aplicación, ésta debe tener el [SDK de Google Analytics][5] correspondiente integrado y correctamente configurado para gestionar los vínculos profundos. Consulta a tus desarrolladores si tienes dudas al respecto.
 
@@ -72,9 +71,9 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/1033863?hl=en
+[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
 [5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://support.google.com/analytics/answer/1033867
+[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
 [8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
 [9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
 [10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}

@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name:  모범 사례
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/#high-ratings
     image: /assets/img/braze_icons/target-04.svg
   - name: 현지화
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
@@ -39,4 +39,7 @@ guide_menu_list:
   - name: 캘린더에 추가 링크
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
     image: /assets/img/braze_icons/calendar-date.svg
+  - name: Creating Right-to-Left Messages
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/
+    image: /assets/img/braze_icons/globe-02.svg
 ---

@@ -10,7 +10,7 @@ description: "This article contains release notes for September 2020."
 
 ## Funnel Reporting
 
-Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports).
+Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a [campaign]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) or [Canvas]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ## iOS 14 upgrade guide
 
@@ -22,11 +22,11 @@ In iOS 14, users must decide if they want to opt-in to ad tracking and let apps 
 
 ## Email validation
 
-This new email syntax validation process is an upgrade to Braze's existing one. This is a check to verify that emails updated or imported into Braze are correct. For more information, take a look at [these guidelines and notes]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation).
+This new email syntax validation process is an upgrade to Braze's existing one. This is a check to verify that emails updated or imported into Braze are correct. For more information, take a look at [these guidelines and notes]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 ## Random bucket user event in Currents
 
-The random bucket number (such as RBN) occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. To see if this event is available to you, take a look at the Currents [customer behavior events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/).
+The random bucket number (such as RBN) occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. To see if this event is available to you, take a look at the Currents [customer behavior events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
 
 ## Canvas components - Coming soon!
 
@@ -36,4 +36,4 @@ Braze has added four new Canvas components to help make increase the flexibility
 
 ## SMS inbound received events
 
-A new messaging engagement event has been added to Currents. This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. For more information, check out our Currents [messaging and engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
+A new messaging engagement event has been added to Currents. This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. For more information, check out our Currents [messaging and engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

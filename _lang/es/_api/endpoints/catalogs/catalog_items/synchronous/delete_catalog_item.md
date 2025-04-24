@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Elimin
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utiliza este punto final para eliminar un elemento de tu catálogo. 
+> Utiliza este punto final para eliminar un elemento de tu catálogo.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
@@ -25,7 +25,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
+{% multi_lang_include rate_limits.md endpoint='elemento de catálogo síncrono' %}
 
 ## Parámetros de la ruta
 
@@ -33,7 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 |---|---|---|---|
 | `catalog_name` | Obligatoria | Cadena | Nombre del catálogo. |
 | `item_id` | Obligatoria | Cadena | El ID del elemento del catálogo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Parámetros de la solicitud
 
@@ -51,7 +51,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 Existen tres respuestas de código de estado para este punto final: `202`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
@@ -63,7 +63,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -85,13 +85,13 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
-| `arbitrary-error` | Se ha producido un error arbitrario. Inténtalo de nuevo o ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
-| `catalog-not-found` | Comprueba que el nombre del catálogo es válido. |
+| `arbitrary-error` | Se ha producido un error arbitrario. Vuelva a intentarlo o póngase en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Compruebe que el nombre del catálogo es válido. |
 | `item-not-found` | Comprueba que el elemento a eliminar existe en tu catálogo. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

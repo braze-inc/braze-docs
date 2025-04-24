@@ -1,9 +1,5 @@
 In the Braze dashboard, go to **Data Settings** > **Data Transformation**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Transformations** under **Data**.
-{% endalert %}
-
 Select **Create Transformation** to name your transformation, then choose your editing experience.
 
 ![Transformation details with the option to choose "Use a template" or "Start from scratch" for your editing experience.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})

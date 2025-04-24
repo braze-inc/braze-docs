@@ -8,9 +8,9 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "このランディングページには、ベストプラクティス、リリース前後のチェックリスト、キャンバスフローでの開始に関するガイダンスなど、キャンバスのアイデアと戦略が掲載されています。"
+description: "このランディングページには、ベストプラクティス、立ち上げ前後のチェックリスト、キャンバスでの立ち上げに関するガイダンスなど、キャンバスのアイデアや戦略が掲載されている。"
 
-guide_featured_title: "記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: ベストプラクティス
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
@@ -21,17 +21,26 @@ guide_featured_list:
   - name: キャンバスフローで開始する
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
-  - name: ろう付けキャンバステンプレートの使用
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: ローカライゼーション
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
+    image: /assets/img/braze_icons/globe-02.svg
+  - name: Braze キャンバステンプレートの使用
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: ローカライゼーション
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
-    image: /assets/img/braze_icons/globe-02.svg
   - name: テストキャンバスの送信
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: リード・スコアリング
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lead_scoring/
+    link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
+  - name: 予約リマインダーメールシステム
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
+    image: /assets/img/braze_icons/channel-email.svg
+  - name: eコマースのユースケース
+    link: /docs/ecommerce_use_cases/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

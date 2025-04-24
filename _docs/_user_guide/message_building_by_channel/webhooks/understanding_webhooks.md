@@ -30,7 +30,7 @@ Some more specific use cases include the following:
 
 - If a user unsubscribes from email, you could have a webhook update your analytics database or CRM with that same information, ensuring a holistic view of that user's behavior.
 - Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
-- Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
+- Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/).
 - If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
 - If you're an airline, you can use webhooks and your existing API setup to credit a customer's account with a discount after they've booked a certain number of flights.
 - Endless "If This Then That" ([IFTTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
@@ -55,7 +55,7 @@ The following table describes the four different HTTP methods you can specify in
 | HTTP method | Description |
 | ----------- | ----------- |
 | POST | This method writes new information on the receiving server. A common example of the POST method in real world application is a [contact form](https://www.braze.com/company/contact) on a website. Whatever information you put into the form becomes part of a request body and is sent to a receiver. This is most common method used when sending data.
-| GET | This method retrieves existing information, as opposed to writing new information. This is the most common method used when asking for data from a server. For example, consider the [`/segments/list` endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). If you were to make a GET request, it would return a list of your segments.
+| GET | This method retrieves existing information, as opposed to writing new information. By definition, a GET request does not support a request body. This is the most common method used when asking for data from a server. For example, consider the [`/segments/list` endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). If you were to make a GET request, it would return a list of your segments.
 | PUT | This method updates information on the endpoint, replacing any existing information with what's in the request body. 
 | DELETE | This method deletes the resource in the HTTP URL. 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

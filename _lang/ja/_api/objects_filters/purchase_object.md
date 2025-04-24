@@ -13,17 +13,18 @@ description: "この参考記事では、購入オブジェクトのさまざま
 
 ## 購入オブジェクトとは何ですか？
 
-購入オブジェクトは、購入が行われたときにAPIを通じて渡されるオブジェクトです。各購入オブジェクトは購入配列内にあり、各オブジェクトは特定のユーザーが特定の時間に行った単一の購入です。購入オブジェクトにはさまざまなフィールドがあり、Braze のバックエンドはこの情報を保存して、カスタマイズ、データ収集、パーソナライゼーションに使用できます。
+購入オブジェクトは、購入が行われたときにAPIを通じて渡されるオブジェクトです。各購入オブジェクトは購入配列内にあり、各オブジェクトは特定のユーザーが特定の時間に行った単一の購入です。購入オブジェクトには、Braze バックエンドがカスタマイズ、データ収集、パーソナライズのためにこの情報を保存して使用できるようにするさまざまな項目があります。
 
 ### オブジェクト本体
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -45,14 +46,14 @@ description: "この参考記事では、購入オブジェクトのさまざま
 - [ISO 4217 通貨コード Wiki][20]
 - [ISO 8601 時間コード Wiki][22]
 
-## Purchase product_id
+## 購入製品ID
 
 購入オブジェクト内では、`product_id` は購入の識別子です (`Product Name` や `Product Category` など)。
 
 - Braze では、ダッシュボードに最大 5,000 個の `product_id` を保存できます。
 - `product_id` は最大 255 文字までです。
 
-### 製品ID命名規則
+### 命名規則
 
 Brazeでは、購入オブジェクト`product_id`の一般的な命名規則を提供しています。`product_id` を選択する場合、Braze は、記録されたすべての項目をこの `product_id` でグループ化することを目的として、(SKU ではなく) 製品名や製品カテゴリなどの単純な名前を使用することを提案します。
 
@@ -95,13 +96,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | データ型 | 説明 |
 | --- | --- |
-| 数値 | 整数または浮動小数点数のいずれかとして |
+| 数値 | [整数](https://en.wikipedia.org/wiki/Integer)または[浮動小数点数として](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | ブール値 |  |
-| 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列。配列内ではサポートされていません。 |
+| 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としてフォーマットされる。アレイ内ではサポートされていない。 |
 | 文字列 | 255 文字以下。 |
-| 配列 | 配列には日付時刻を含めることはできません。 |
+| 配列 | 配列に日時を含めることはできない。 |
 | オブジェクト | オブジェクトは文字列として取り込まれます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 50 KB のイベントプロパティペイロードを設定できます。
 
@@ -109,13 +110,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 [購入プロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties)は、Liquid を使用したメッセージのトリガーやパーソナライゼーションに使用でき、これらのプロパティに基づいてセグメント化することもできます。
 
-### プロパティ命名規則の購入
+#### 命名規則
 
-この機能は購入ごとではなく、**製品ごとに**有効であることに注意することが重要です。例えば、顧客が多数の異なる製品を所有していても、それぞれの製品が同じ特性を持っている場合には、セグメンテーションはほとんど意味がありません。
+この機能は、購入ごとではなく、製品ごとに**オンになっていることに注意してください。たとえば、異なる製品の量が多いが、それぞれが同じプロパティを持っている場合、セグメンテーションは不要になることがあります。
 
-この場合、データ構造を設定する際には、詳細なものではなく「グループレベル」で製品名を使用することをお勧めします。例えば、トレーニングチケット企業では、「片道」、「往復」、「複数市区町村」の製品を持つべきであり、「取引123」や「取引046」などの特定の取引ではありません。または、たとえば、「食べ物」の購入イベントでは、プロパティは「ケーキ」と「サンドイッチ」に設定するのが最適です。
+この例では、データ構造を設定するときに、細かいものではなく、"group-level"で製品名を使用することをお勧めします。例えば、トレーニングチケット企業では、「片道」、「往復」、「複数市区町村」の製品を持つべきであり、「取引123」や「取引046」などの特定の取引ではありません。別の例として、購入イベント"food"では、プロパティは"cake"および"sandwich"として設定されます。
+
+{% alert important %}
+Braze REST API を使用して製品を追加することができます。たとえば、`/users/track` エンドポイントにコールを送信し、新しい購入ID を含めると、ダッシュボードの**Data Settings** > **Products** セクションに製品が自動的に作成されます。
+{% endalert %}
 
 ### 購入オブジェクトの例
+
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -164,14 +170,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 購入オブジェクト、イベントオブジェクト、およびwebhook
+### 購入オブジェクト、イベントオブジェクト、およびwebhook
 
-提供された例を使用すると、誰かが色、モノグラム、チェックアウト期間、サイズ、およびブランドのプロパティを持つバックパックを購入したことがわかります。次に、[購入イベントプロパティ][2]を使用してこれらのプロパティを持つセグメントを作成したり、Liquidを使用してチャネルを通じてカスタムメッセージを送信したりできます。例えば、「こんにちは **Ann F.**、**赤のミディアムバックパック** を購入していただきありがとうございます。価格は **$40.00** です！」お買い物は**Backpack Locker**でありがとうございました！
+提供された例を使用すると、誰かが色、モノグラム、チェックアウト期間、サイズ、およびブランドのプロパティを持つバックパックを購入したことがわかります。次に、[購入イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties)を使用してこれらのプロパティを持つセグメントを作成したり、Liquidを使用してチャネルを通じてカスタムメッセージを送信したりできます。例えば、「こんにちは **Ann F.**、**赤のミディアムバックパック** を購入していただきありがとうございます。価格は **$40.00** です！」お買い物は**Backpack Locker**でありがとうございました！
 
 セグメント化に使用するプロパティを保存、保管、追跡する場合は、それらをカスタム属性として設定する必要があります。これは[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用して行うことができ、カスタムイベントやそのユーザープロファイルの生涯にわたって保存される購入行動に基づいてユーザーをターゲットにすることができます。
 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
+
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 通貨コード"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 時間コード"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

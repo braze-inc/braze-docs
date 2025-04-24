@@ -130,7 +130,7 @@ Amazon Fire TVデバイスと統合するには、Braze Fire OS SDKを使用し�
 以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
-- プッシュ通知([&quot として知られる;Heads Up Notifications"](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup))
+- プッシュ通知 ([[「ヘッドアップ通知」](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup)] とも呼ばれる)
   - これらが表示されるためには、優先度を「高」に設定する必要があります。すべての通知はFire TVの設定メニューに表示されます。
 - コンテンツカード
 - フィーチャーフラグ
@@ -210,7 +210,7 @@ Braze Roku SDKを使用して、[Rokuテレビ](https://developer.roku.com/docs/
   - RokuプラットフォームではWebviewがサポートされていないため、アプリ内メッセージのHTMLはサポートされていません。
 - フィーチャーフラグ
 
-詳細については、[Roku integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)を参照してください。
+詳細については、[[Roku 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)] をご覧ください。
 
 ### Apple TV OS {#tvos}
 
@@ -269,10 +269,10 @@ Braze SWIFT SDKを使用してvisionOSと統合します。iOSで利用可能な
 
 **SWIFT SDK**
 - [アプリ内メッセージ カスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
-- [ヘッドレスUI サンプルアプリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
+- [ヘッドレス UI サンプルアプリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
 - [コンテンツカードのカスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**
 - [アプリ内メッセージ カスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
-- [コンテンツカードのカスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
+- [コンテンツカードのカスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
 

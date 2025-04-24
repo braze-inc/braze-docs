@@ -30,7 +30,7 @@ Aunque las campañas pueden construirse de forma única dependiendo del canal, h
 Las campañas regulares y de prueba A/B pueden programarse (como informar a una lista de usuarios sobre un próximo evento) o automatizarse para que se envíen en respuesta a una acción del usuario (como enviar un correo electrónico cuando alguien se suscribe a su boletín). Más información sobre [la programación de campañas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Independientemente del tipo de campaña que cree, sus campañas pueden escuchar las necesidades de sus usuarios y ofrecer una respuesta pensada y personalizada. Una vez que haya enviado su campaña, utilice nuestras [herramientas de análisis integradas]({{site.baseurl}}/user_guide/data_and_analytics/reporting) para ver cómo ha funcionado y cuántos usuarios se han convertido en función de sus [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Independientemente del tipo de campaña que cree, sus campañas pueden escuchar las necesidades de sus usuarios y ofrecer una respuesta pensada y personalizada. Una vez que haya enviado su campaña, utilice nuestras [herramientas de análisis integradas]({{site.baseurl}}/user_guide/analytics/reporting/) para ver cómo ha funcionado y cuántos usuarios se han convertido en función de sus [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 
 Consulta estos recursos adicionales para saber más sobre las campañas en Braze:
 
@@ -73,7 +73,7 @@ En la tabla siguiente se describen los canales que admitimos.
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)                   | Enviar mensajes de texto a los teléfonos móviles de los usuarios.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Envía mensajes a través de la popular plataforma de mensajería, WhatsApp, para llegar a tus usuarios e interactuar con ellos.                                                   |
 | [Tarjetas de contenido*]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)       | Proporcione una bandeja de entrada dentro de su aplicación o sitio web donde los usuarios puedan recibir mensajes e interactuar con ellos, o muestre los mensajes en un carrusel, como un banner, etc. |
-| [TV conectada]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | Interactúe con los usuarios en plataformas de televisión conectadas.                                                                                                   |
+| [TV conectada]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Interactúe con los usuarios en plataformas de televisión conectadas.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Habilite la comunicación en tiempo real y la integración con sistemas externos mediante retrollamadas HTTP personalizadas.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

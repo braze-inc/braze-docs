@@ -15,6 +15,10 @@ description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용�
 
 모든 Braze 계약에서 팀을 사용할 수 있는 것은 아닙니다. 이 기능을 이용하고 싶으시면 Braze 계정 매니저에게 [문의하거나](mailto:success@braze.com) 상담을 요청하세요.
 
+## 팀은 권한 집합 및 역할과 어떻게 다른가요?
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## 팀 만들기
 
 **설정** > **내부 팀**으로 이동하여 <i class="fas fa-plus"></i> **팀 추가**를 선택합니다.
@@ -77,7 +81,7 @@ description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용�
 다음 두 가지 시나리오는 Braze의 마케터 미셸의 경우를 가정한 것입니다. Michelle은 '개발'이라는 팀의 일원입니다. 미셸은 개발팀에 대한 모든 팀 수준의 권한에 액세스할 수 있습니다.
 
 {% tabs %}
-{% tab 시나리오 1: 팀 권한만 %}
+{% tab 시나리오 1 - 팀 권한만 %}
 
 이 시나리오에서 Michelle은 워크스페이스 수준 권한이 없는 제한된 사용자입니다. 그녀의 권한은 다음과 같습니다:
 
@@ -88,7 +92,7 @@ Michelle에게 할당된 권한에 따라 캠페인을 만들 때마다 해당 �
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab 시나리오 2: 팀 권한 및 워크스페이스 권한 %}
+{% tab 시나리오 2 - 팀 권한 및 워크스페이스 권한 %}
 
 이 시나리오에서 Michelle은 여전히 개발 팀의 멤버이지만 추가 워크스페이스 수준 권한도 가지고 있습니다.
 
@@ -130,10 +134,6 @@ Michelle은 "캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, �
 ![Braze에서 개체에 연결된 팀 보관하기][86]{: style="max-width:70%;"}
 
 Braze 매니저는 보관된 팀을 선택하고 **아카이브 해제**를 선택하여 팀을 아카이브 해제할 수 있습니다.
-
-## 팀은 권한 집합 및 역할과 어떻게 다른가요?
-
-팀, 권한 집합 및 역할 간의 차이점에 대한 자세한 내용은 [회사 사용자를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) 참조하세요.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

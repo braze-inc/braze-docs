@@ -14,9 +14,7 @@ noindex: true
 
 # Estilo personalizado
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 La integración de `SDWebImage` es necesaria si planeas utilizar nuestra interfaz de usuario Braze para mostrar imágenes dentro de los mensajes dentro de la aplicación, la fuente de noticias o las tarjetas de contenido de iOS.
 

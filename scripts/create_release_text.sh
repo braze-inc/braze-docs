@@ -16,7 +16,7 @@ main() {
     LAST_RELEASE_TIMESTAMP=$(git log -1 --pretty=format:"%cI" "$LAST_RELEASE_TAG")
 
     # Convert Git logs to JSON and sort by date.
-    COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/master \
+    COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/$PRIMARY_BRANCH \
     --pretty=format:'{%n  <commit>: <%H>,%n  <date>: <%cI>,%n  <title>: <%s>,%n  <body>: <%b>%n},' \
     | perl -pe 'BEGIN{print "["}; END{print "]\n"}' \
     | perl -pe 's/},]/}]/' \
@@ -44,9 +44,9 @@ main() {
         COMMIT_TITLE=$(echo "$commit" | jq -r '.title')
         COMMIT_BODY=$(echo "$commit" | jq -r '.body')
 
-        # Print the deploy text for each deployment.
+        # Print the deploy text for each deployment using the sourced DEPLOY.
         echo "## $COMMIT_BODY"
-        ./scripts/create_deploy_text.sh "$PREV_COMMIT_DATE" "$COMMIT_DATE"
+        "$DEPLOY" "$PREV_COMMIT_DATE" "$COMMIT_DATE"
         echo ""
 
         # Get the next range of commits by increasing 'PREV_COMMIT_DATE'.

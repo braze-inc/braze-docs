@@ -27,7 +27,7 @@ channel: email
 
 탈퇴 페이지에 대한 리디렉션 옵션이 있습니다.
 
-{% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %}에서 사용자 ID를 포함하는 쿼리 매개변수가 있는 링크로 {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %}의 커스텀 바닥글의 탈퇴 링크를 변경할 수 있습니다. 예를 들면 다음과 같습니다:
+사용자 ID를 포함하는 쿼리 매개변수가 있는 링크로 {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %}의 커스텀 바닥글의 탈퇴 링크를 변경할 수 있습니다. 예를 들면 다음과 같습니다:
 {% raw %} 
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
@@ -41,7 +41,7 @@ channel: email
 
 ### 캠페인에서 현재 사용 중인 이메일 템플릿을 편집하면 어떻게 되나요?
 
-기존 템플릿에 대한 수정 사항은 해당 템플릿의 이전 버전을 사용하여 생성된 캠페인에 반영되지 않습니다.
+기존 템플릿에 대한 수정 사항은 해당 템플릿의 이전 버전을 사용하여 생성된 캠페인에 반영되지 않습니다. REST API 본문에 템플릿을 사용하는 API 캠페인의 경우, Braze는 전송 시점에 최신 버전의 템플릿을 사용합니다.  
 
 ## 링크 템플릿
 
@@ -51,13 +51,13 @@ channel: email
 
 ### 내 링크를 모든 태그가 적용된 상태로 미리 보려면 어떻게 해야 하나요?
 
-링크를 미리 보는 여러 가지 방법이 있습니다. [링크 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/)을 적용한 후, 모든 링크를 확인하기 위해 [테스트 이메일]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/)을 자신에게 보낼 수 있습니다. 
+링크를 미리 보는 여러 가지 방법이 있습니다. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/sending_test_messages/) to yourself to view all the links. 
 
 새 탭의 미리보기 창에서 링크를 열어 링크를 볼 수도 있습니다. 미리보기 창에서 링크 위에 마우스를 올리면 브라우저 하단에서 링크를 볼 수 있습니다.
 
 ### 링크 템플릿은 Liquid와 어떻게 작동합니까?
 
-링크 템플릿은 Liquid 확장이 발생하기 전에 각 URL에 확장되어 추가됩니다. URL의 일부가 Liquid 스니펫을 사용하여 생성된 경우 링크 템플릿이 올바르게 확장되도록 URL 기본값과 물음표(?)를 하드코딩하는 것이 좋습니다. 
+링크 템플릿은 Liquid 확장이 일어나기 전에 각 URL에 확장 및 추가됩니다. URL의 일부가 Liquid 스니펫을 사용하여 생성된 경우 링크 템플릿이 올바르게 확장되도록 URL 기반과 물음표(?)를 하드코딩하는 것이 좋습니다. 
 
 Liquid에 물음표(?)를 추가하지 마십시오. 이렇게 하면 링크 템플릿이 먼저 물음표(?)를 추가한 다음 Liquid 확장 프로세스가 두 번째 물음표(?)를 추가하게 됩니다.
 

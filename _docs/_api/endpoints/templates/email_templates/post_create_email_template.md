@@ -15,9 +15,7 @@ description: "This article outlines details about the Create email templates Bra
 
 > Use this endpoint to create email templates on the Braze dashboard.
 
-These templates will be available on the **Templates & Media** page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
-
-Users' email subscription status can be updated and retrieved with Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
+These templates will be available on the **Templates & Media** page. The response from this endpoint includes a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -56,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Required|String|Email template body that may include HTML.|
 |`plaintext_body`|Optional|String|A plaintext version of the email template body.|
 |`preheader`|Optional|String|Email preheader used to generate previews in some clients.|
-|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist.|
+|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) must already exist.|
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the app group. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -76,7 +74,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## Possible errors
+## Example response
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 

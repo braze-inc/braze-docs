@@ -27,14 +27,15 @@ description: "이 참고 문서에서는 회사 계정의 메시징 및 활동�
 
 | 알림 | 설명 | 사용 가능한 알림 채널 |
 |--------------|-------------|-----------------|
-| AWS 자격증명정보 오류 | Braze가 데이터 내보내기를 위해 Amazon Web Services 자격증명정보를 사용하는 중에 오류 메시지를 받을 때 수신자에게 알립니다. | 이메일, 웹훅 |
+| AWS 자격증명정보 오류 | Braze가 데이터 내보내기를 위해 Amazon Web Services 자격증명정보를 사용하는 중에 오류 메시지를 받을 때 수신자에게 알립니다. This includes credential error notifications for Google Cloud Services and Azure (Microsoft Cloud Services). | 이메일, 웹훅 |
 | 캠페인 자동 중단 | Braze가 캠페인을 중단했을 때 수신자에게 알립니다. | 이메일 |
 | 캠페인 상호작용 만료 | 캠페인 상호작용 데이터 만기가 다가온 캠페인, 리타겟팅 필터에서 참조하고 30일 이내에 메시지 발송에 활용된 세그먼트, 캠페인, 캔버스에 대한 정보를 수신자에게 알립니다. | 이메일 |
-| 캠페인/캔버스 업데이트됨 | 활성 캠페인/캔버스가 업데이트되거나 비활성화될 때, 비활성 캠페인/캔버스가 다시 활성화되거나 초안이 시작될 때 수신자에게 알림을 보냅니다. | 이메일 |
+| 캠페인/캔버스 업데이트됨 | Notifies recipients when an active campaign or Canvas is updated or deactivated, as well as when an inactive campaign or Canvas is reactivated or drafts are launched. | 이메일 |
+| Campaign/Canvas Volume Limit Met | Notifies recipients when a campaign or Canvas meets its volume limit. | 이메일 | 
 | 캔버스 상호작용 만료 | 캔버스 상호작용 데이터 만기가 다가온 캔버스, 리타겟팅 필터에서 참조하고 30일 이내에 메시지 발송에 활용된 세그먼트, 캠페인, 캔버스에 대한 정보를 수신자에게 알립니다. | 이메일 |
 | 뉴스 피드 카드 게시/라이브 | 뉴스피드 카드가 예약되거나 게시될 때 수신자에게 알립니다. | 이메일, 웹훅 |
 | 푸시 자격증명정보 오류 | 앱의 푸시 인증정보가 유효하지 않은 경우와 앱의 푸시 인증정보가 곧 만료되는 경우 수신자에게 알림을 보냅니다. | 이메일, 웹훅 |
-| 예정된 캠페인 발송/미발송 | 예정된 캠페인 발송이 시작되거나 시도되지만 발송할 적격한 사용자가 없을 때 수신자에게 알립니다. | 이메일, 웹훅 |
+| 예정된 캠페인 발송/미발송 | 예약된 캠페인이 전송을 시작하거나 예약된 캠페인이 전송을 시도했지만 전송할 적격 사용자가 없는 경우 수신자에게 알립니다. | 이메일, 웹훅 |
 | 예정 캠페인 한도 도달 | 반복되는 예정 캠페인의 한도에 도달했을 때 수신자에게 알립니다. | 이메일, 웹훅 |
 | 예정된 캠페인 발송 종료 | 예정된 캠페인 발송이 종료될 때 수신자에게 알립니다. | 이메일, 웹훅 |
 | 주간 분석 보고서 | 지난 주 워크스페이스 활동 요약을 매주 월요일 수신자에게 발송합니다. 수신자는 소속 워크스페이스에 대한 요약서를 수신합니다. | 이메일 |
@@ -66,8 +67,7 @@ Slack에는 외부 소스에서 Slack으로 메시지를 게시할 수 있는 [�
     ![활성화하려면 Slack 알림을 선택합니다.][65]{: style="max-width:60%;"}<br><br>
 5. Slack에서 생성한 URL을 입력합니다.
 
-끝입니다! 이 Slack 채널로 회사에 대한 알림을 받기 시작해야 합니다. [수신 웹훅을 사용하여 메시지 보내기][62] 주제에 대한 Slack의 도움말 문서도 확인할 수 있습니다.
-
+끝입니다! 이 Slack 채널에서 회사에 대한 알림을 받기 시작해야 합니다. [수신 웹훅을 사용하여 메시지 보내기][62] 주제에 대한 Slack의 도움말 문서도 확인할 수 있습니다.
 
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [63]: {% image_buster /assets/img_archive/slack_f.png %}

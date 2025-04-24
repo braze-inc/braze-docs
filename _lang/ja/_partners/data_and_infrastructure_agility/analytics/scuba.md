@@ -11,13 +11,15 @@ search_tag: Partner
 
 >[Scuba Analytics][1] は、高速時系列データ向けに設計された、機械学習を採用したフルスタックのデータコラボレーションプラットフォームです。Scuba では、ユーザー (アクターとも呼ばれます) を選択的にエクスポートし、Braze プラットフォームにそれらのユーザーを読み込むことができます。Scuba では、カスタムアクタープロパティを使用して動作トレンドを分析し、さまざまなプラットフォーム間でデータを有効化し、マシンラーニングを使用して予測モデリングを実行します。
 
+_この統合はScuba Analyticsによって維持されている。_
+
 ## 前提条件
 
 Braze で Scuba Analytics を使用するには、以下が必要です。
 
 | 必要条件 | 説明 |
 |---|---|
-|スキューバ API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
+|Scuba API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -96,6 +98,7 @@ Braze で、**Audience** > **Segments** に移動し、**Segmentの作成** を�
 アクタープロパティ名の横で、演算子と値を選択します (該当する場合)。これらの値は、Scuba で定義したアクタープロパティによって決定されます。完了したら、[**保存**] を選択します。
 
 ![選択されているプロパティ名に対する演算子と値の選択。][504]
+
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table

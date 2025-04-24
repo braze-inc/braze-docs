@@ -16,11 +16,10 @@ description: "Este artículo de referencia explica cómo pueden y deben utilizar
 Una etiqueta debe ir envuelta en `{% %}`.
 {% endraw %}
 
-{% alert tip %}
 Para hacerte la vida un poco más fácil, Braze ha incluido un formateo por colores que se activará en verde y morado si has formateado correctamente tu sintaxis Liquid. El formato verde puede ayudar a identificar las etiquetas, mientras que el formato morado destaca las áreas que contienen personalización.
-<br><br>
+
 Si le resulta difícil utilizar la mensajería condicional, intente escribir la sintaxis condicional antes de insertar sus atributos personalizados y otros elementos Liquid.
-<br><br>
+
 Por ejemplo, añada primero lo siguiente en el campo de mensaje:  
 {% raw %}
 ```liquid
@@ -40,11 +39,10 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## Lógica condicional
 
-Puedes incluir muchos tipos de [lógica inteligente dentro de los mensajes][1], como una declaración condicional. Mira el siguiente ejemplo que utiliza [condicionales][8] para internacionalizar una campaña:
+Puedes incluir muchos tipos de [lógica inteligente dentro de los mensajes][1], como una declaración condicional. El siguiente ejemplo utiliza [condicionales][8] para internacionalizar una campaña:
 {% raw %}
 
 ```liquid
@@ -59,39 +57,93 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Ejemplo paso a paso
+### Etiquetas condicionales
 
-En este ejemplo, utilizamos etiquetas con sentencias "if", "elsif" y "else" para entregar contenido internacionalizado.
+#### `if` y `elsif`
+
+La lógica condicional comienza con la etiqueta `if`, que establece la primera condición a comprobar. Las condiciones posteriores utilizan la etiqueta `elsif` y se comprobarán si no se cumplen las condiciones anteriores. En este ejemplo, si el dispositivo de un usuario no está configurado en inglés, este código comprobará si el dispositivo del usuario está configurado en español y, si eso falla, comprobará si el dispositivo está configurado en. Si el dispositivo del usuario cumple una de estas condiciones, el usuario recibirá un mensaje en el idioma correspondiente.
+
+#### `else`
+
+Tienes la opción de incluir una declaración `{% else %}` en tu lógica condicional. Si no se cumple ninguna de las condiciones que has establecido, la declaración `{% else %}` especifica el mensaje que debe enviarse. En este ejemplo, predeterminamos el inglés si el idioma del usuario no es inglés, español o chino.
+
+#### `endif`
+
+La etiqueta `{% endif %}` indica que has terminado tu lógica condicional. Debes incluir la etiqueta `{% endif %}` en cualquier mensaje con lógica condicional. Si no incluyes una etiqueta `{% endif %}` en tu lógica condicional, obtendrás un error, ya que Braze no podrá analizar tu mensaje.
+
+### Tutorial: Entrega contenidos basados en la ubicación
+
+Cuando termines este tutorial, serás capaz de utilizar etiquetas con sentencias "if", "elsif" y "else" para entregar contenido basado en la ubicación de un usuario.
+
+1. Empieza con una etiqueta `if` para establecer qué mensaje debe enviarse cuando la ciudad del usuario esté en Nueva York. Si la ciudad del usuario es Nueva York, se cumple esta primera condición y el usuario recibirá un mensaje especificando su identidad neoyorquina.
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${city} == "New York" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at your local Sandwich Emperor. 
+  Just show this message at the counter to redeem your offer!
 ```
-Si el idioma del usuario es el inglés, se cumple la primera condición y el usuario recibirá un mensaje en inglés.
+
+{: start="2"}
+2\. A continuación, utiliza la etiqueta `elseif` para establecer qué mensaje debe enviarse si la ciudad del usuario está en Los Ángeles.
 
 ```liquid
-{% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
-{% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
 ```
 
-Puede especificar tantas sentencias condicionales como desee. Las condiciones posteriores se comprobarán si no se cumplen las anteriores. En este ejemplo, si el dispositivo de un usuario no está configurado en inglés, este código comprobará si el dispositivo del usuario está configurado en español o chino. Si el dispositivo del usuario cumple una de estas condiciones, el usuario recibirá un mensaje en el idioma correspondiente.
+{: start="3"}
+3\. Utilicemos otra etiqueta `elseif` para establecer qué mensaje debe enviarse si la ciudad del usuario está en Chicago.
+
+```liquid
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+```
+
+{: start="4"}
+4\. Ahora, utilicemos la etiqueta `{% else %}` para especificar qué mensaje debe enviarse si la ciudad del usuario no está en San Francisco, Nueva York o Chicago.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+ 🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
 ```
 
-Tienes la opción de incluir una declaración `{% else %}` en tu lógica condicional. Si no se cumple ninguna de las condiciones establecidas, la sentencia `{% else %}` especifica el mensaje que debe enviarse. En este caso, predeterminamos el inglés si el idioma del usuario no es inglés, español o chino.
+{: start="5"}
+5\. Por último, utilizaremos la etiqueta `{% endif %}` para especificar que nuestra lógica condicional está terminada.
 
 ```liquid
 {% endif %}
 ```
 
-La etiqueta `{% endif %}` indica que has terminado tu lógica condicional. Debes incluir la etiqueta `{% endif %}` en cualquier mensaje con lógica condicional. Si no incluyes una etiqueta `{% endif %}` en tu lógica condicional, obtendrás un error, ya que Braze no podrá analizar tu mensaje.
-
 {% endraw %}
+
+{% details Código completo de Liquid %}
+
+{% raw %}
+```liquid
+{% if ${city} == "New York City" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at our New York location. 
+  Just show this message at the counter to redeem your offer!
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+{% else %}
+  🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## Contabilización de valores de atributos null, nil y blank
 
@@ -113,7 +165,7 @@ La siguiente etiqueta permite especificar un mensaje para los usuarios con un at
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![Un mensaje de ejemplo en el panel de Braze, utilizando un atributo "nombre" nulo.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

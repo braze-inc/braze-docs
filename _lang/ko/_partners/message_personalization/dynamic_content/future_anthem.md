@@ -102,7 +102,7 @@ search_tag: Partner
 | 하위 카테고리 | 예시 | 데이터 유형 |
 | ------- | ----------- |----------- |
 | 위험 점수 | 0.5| 숫자 |
-| 위험한 플레이어 | True | 부울 |
+| 위험한 플레이어 | 참 | 부울 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}

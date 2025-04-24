@@ -22,7 +22,7 @@ It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_artic
 
 1. Import the tokens via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. Perform quality assurance on the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) have been completed.
+3. Perform quality assurance on the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) have been completed.
 
 If your user profiles and push tokens happen to be stored in separate locations, we recommend importing push tokens anonymously and then a subsequent migration of your existing user profiles. It is not necessary to map them together since the Braze iOS SDK will handle the token resolution upon successful integration.
 

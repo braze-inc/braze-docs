@@ -9,7 +9,7 @@ description: "이 문서에서는 객체 사양을 식별하는 별칭에 대해
 
 # 개체 식별을 위한 별칭
 
-속성 객체에 필드가 있는 API 요청은 지정된 고객 프로필에 지정된 값으로 해당 이름의 속성을 만들거나 업데이트합니다. 
+속성 객체에 필드가 있는 API 요청은 지정된 사용자 프로필에 지정된 값으로 해당 이름의 속성을 만들거나 업데이트합니다. 
 
 대시보드의 사용자 프로필에서 이러한 특수 값을 업데이트하거나 사용자에 대한 사용자 지정 속성 데이터를 추가하려면 Braze [사용자]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 프로필 필드 이름(아래와 같이 나열되거나 [Braze 사용자 프로필 필드]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 섹션에 나열된 것)을 사용하세요.
 

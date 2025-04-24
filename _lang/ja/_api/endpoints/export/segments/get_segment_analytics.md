@@ -28,7 +28,7 @@ description: "この記事では、エクスポートセグメント分析Braze�
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `segment_id` | 必須 | 文字列 | [セグメントAPI 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 特定のSegmentの`segment_id` は、Braze アカウントの[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページにあります。または、[エクスポートSegment一覧エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) を使用できます。  |
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

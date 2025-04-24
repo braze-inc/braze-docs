@@ -41,7 +41,7 @@ guide_menu_list:
     link: /docs/catalog_segments/
     image: /assets/img/braze_icons/users-01.svg
   - name: User Profiles
-    link: /docs/user_guide/engagement_tools/segments/using_user_search/
+    link: /docs/user_guide/engagement_tools/segments/user_profiles/
     image: /assets/img/braze_icons/users-01.svg
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
@@ -49,6 +49,12 @@ guide_menu_list:
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg
+  - name: Suppression Lists
+    link: /docs/user_guide/engagement_tools/segments/suppression_lists/
+    image: /assets/img/braze_icons/list.svg 
+  - name: Measuring Segment Size
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: Troubleshooting
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
@@ -56,7 +62,7 @@ guide_menu_list:
 guide_menu_title2: "Other"
 guide_menu_list2:
   - name: Custom Attributes
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
     image: /assets/img/braze_icons/table.svg
 
 ---

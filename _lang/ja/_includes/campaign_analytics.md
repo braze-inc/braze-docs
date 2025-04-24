@@ -5,12 +5,12 @@
 {% alert tip %}
 レポートに記載されている用語や指標の定義をお探しですか？以下を参照してください。
   {% if include.channel == "email" %}[メール分析用語集]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)コンテンツカードによるフィルター
-  {% elsif include.channel == "in-app message" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)とアプリ内メッセージによるフィルタリング
-  {% elsif include.channel == "push" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)とプッシュによるフィルタリング
-  {% elsif include.channel == "SMS" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と SMS によるフィルタリング
-  {% elsif include.channel == "whatsapp" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と WhatsApp によるフィルタリング
-  {% elsif include.channel == "webhook" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と Webhook によるフィルタリング{% endif %}
+  {% elsif include.channel == "Content Card" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)コンテンツカードによるフィルター
+  {% elsif include.channel == "in-app message" %}[レポートメトリクス用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)アプリ内メッセージによるフィルター
+  {% elsif include.channel == "push" %}[レポート指標 用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)フィルター 押す
+  {% elsif include.channel == "SMS" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)SMSによるフィルター
+  {% elsif include.channel == "whatsapp" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)WhatsAppによるフィルター
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/)and filter by Webhook{% endif %}.
 {% endalert %}
 
 **キャンペーン分析**タブから、一連のパネルでレポートを見ることができる。以下のセクションに列挙されているものよりも多く見たり少なく見たりするかもしれないが、それぞれに有用な目的がある。
@@ -151,11 +151,15 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### ヒートマップ
 
-ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**クリックする。または、バリアント名のハイパーリンクをクリックしてヒートマップを表示することもできます。
+ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**選択する。または、バリアント名のハイパーリンクを選択してヒートマップを表示することもできます。
 
-このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンをクリックする。
+このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンを選択する。
 
 ![メールキャンペーンを含むプレビューとヒートマップページの例と、リンクエイリアスの例とその総クリック数のパネル。]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### 画像
+
+ヒートマップのプレビューやエクスポートで画像が壊れるのを防ぐために、画像URLのCORSをイネーブルメントにすることをお勧めする。
 
 {% endif %}
 
@@ -260,7 +264,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Unique Opens</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は10から20% の範囲内でなければなりません。20%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は30から40% の範囲内でなければなりません。40%を超えるものは例外です。
             </td>
         </tr>
         <tr>
@@ -301,8 +305,20 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">ソフトバウンス</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">延期</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### 延期
+
+「Deferred」または「deferral」とは、メールがすぐに配信されなかったが、Braze がこの一時的な配信エラーの後、その特定のキャンペーンの試行が停止される前に配信成功の可能性を最大化するために、最大72時間メールを再試行することです。「deferrals (延期)」の一般的な理由には、受信トレイプロバイダーからのレピュテーションに基づくメールボリュームのレート制限、一時的な接続の問題、DNS エラーなどがあります。
+
+_延期は_ _ソフトバウンスとは_異なる。この再試行期間中にメールが正常に配信されなかった場合、Brazeは送信されたキャンペーンごとに1つのソフトバウンスイベントを送信する。2025年2月25日以前は、これらの再試行は1回のキャンペーン送信に対して複数のソフトバウンスとしてカウントされていた。
+
+_延期は_現在、CurrentsまたはBraze Snowflake機能（Query Builder、SQLセグメンテーション、Snowflakeデータ共有など）を使用した場合のみ利用可能であることに注意。キャンペーンやキャンバスの分析にこれを含めたい場合は、[製品フィードバックを送信して]({{site.baseurl}}/user_guide/administrative/access_braze/portal)ください。
 
 ##### 推定実質開封率 {#estimated-real-open-rate}
 
@@ -366,7 +382,11 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">コンバージョン率</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">メッセージを閉じる</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -406,25 +426,37 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
     </tbody>
 </table>
 
+> 通知の配信は、Appleプッシュ通知サービス（APN）による「ベストエフォート」である。アプリにデータを配信することは意図しておらず、ユーザーに新しいデータが利用可能であることを通知することだけを目的としている。重要な違いは、デバイスに正常に配信された APNs の数ではなく、APNs に正常に配信されたメッセージの数が表示されることです。
+
+##### 配信停止のトラッキング
+
 プッシュの配信停止は、キャンペーン分析の指標として含まれません。この指標を手動で追跡するステップについては、[プッシュ配信停止の追跡]({{site.baseurl}}/help/help_articles/push/push_unsubscribes)を参照してください。
 
-{% alert tip %}
+##### 開封を把握する
+
 _直接開封数_と_誘発された開封数_には「開封」という言葉が含まれていますが、実際には異なる指標です。_ダイレクト開封とは_、上の表にあるように、プッシュ通知を直接開封することを指す。_誘発された開封数_とは、プッシュ通知を受け取った後、特定の時間内にプッシュ通知を開かずにアプリを開封することを指します。つまり、_Influenced Opensとは_アプリ開封のことであり、プッシュ通知開封のことではない。
-{% endalert %}
 
-> 通知の配信は APN による「ベストエフォート」です。アプリにデータを配信することは意図しておらず、ユーザーに新しいデータが利用可能であることを通知することだけを目的としている。重要な違いは、デバイスに正常に配信された APNs の数ではなく、APNs に正常に配信されたメッセージの数が表示されることです。
+##### プッシュ通知の送信数がユニーク受信者数を超える可能性がある理由
 
-#### バウンスしたプッシュ通知 {#bounced-push}
+以下の理由により、_送信_数が_ユニーク受信者_数を上回る場合があります。
 
-##### Apple プッシュ通知サービス
+- **再適格性がオンになっています:**キャンペーンまたはキャンバスの設定で再適格性が有効になっている場合、セグメントと配信条件を満たすユーザーは、同じプッシュ通知を複数回受け取ることができます。その結果、総送信数が多くなります。
+- **ユーザーは複数のデバイスを持っている：**再適格性が有効になっていない場合は、ユーザーが複数のデバイスをプロフィールに関連付けていることで、その違いが説明されることがあります。例えば、ユーザーがスマートフォンとタブレットの両方を持っていて、プッシュ通知が登録されたすべてのデバイスに送信される。各配信は送信としてカウントされるが、1人のユニークな受信者だけが記録されます。
+- **ユーザーは複数のアプリに割り当てられます。**ユーザーが複数のアプリに関連付けられている場合（新しいアプリのテスト時など）、それぞれのアプリで同じプッシュ通知を受け取ることがある。これが送信数の増加につながります。
 
-バウンスは、プッシュ通知が、意図したアプリがインストールされていないデバイスに配信しようとしたときにAPNで発生する。APNはまた、デバイスのトークンを恣意的に変更する権利も持っている。以前にトークンを登録した時 (ユーザーに対してプッシュトークンを登録する各セッションの開始時など) から送信時刻までの間にプッシュトークンが変更されたユーザーのデバイスに送信しようとすると、バウンスが発生します。
+##### バウンスが起こる理由 {#bounced-push}
+
+{% tabs %}
+{% tab Appleプッシュ通知サービス %}
+
+バウンスは、Appleのプッシュ通知サービス（APN）において、プッシュ通知が目的のアプリがインストールされていないデバイスに配信されようとするときに発生する。APNはまた、デバイスのトークンを恣意的に変更する権利も持っている。以前にトークンを登録した時 (ユーザーに対してプッシュトークンを登録する各セッションの開始時など) から送信時刻までの間にプッシュトークンが変更されたユーザーのデバイスに送信しようとすると、バウンスが発生します。
 
 ユーザーが次回アプリ開封時に端末設定でプッシュを無効にした場合、SDKはプッシュが無効にされたことを検知し、Brazeに通知する。この時点で、プッシュ有効状態を無効に更新します。無効化されたユーザーが新しいセッションを持つ前にプッシュキャンペーンを受信すると、キャンペーンは正常に送信され、配信されたように表示される。このユーザーに対してプッシュがバウンスすることはない。その後のセッションで、ユーザーにプッシュを送信しようとすると、Braze はフォアグラウンドトークンがあるかどうかを既に認識しているため、通知は送信されません。
 
 配信前に期限切れとなったプッシュ通知は失敗とはみなされず、バウンスとして記録されることもない。
 
-##### Firebaseクラウドメッセージング
+{% endtab %}
+{% tab Firebaseクラウドメッセージング %}
 
 Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する可能性があります。
 
@@ -434,6 +466,10 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
 | バックアップされたアプリケーション | アプリケーションがバックアップされると、アプリケーションが復元される前に登録 ID が無効になる可能性があります。この場合、FCMはアプリケーションの登録IDを保存しなくなり、アプリケーションはメッセージを受信しなくなる。そのため、アプリケーションのバックアップ時に登録 ID を保存すべきでは**ありません**。 |
 | 更新されたアプリケーション | アプリケーションが更新されると、以前のバージョンの登録IDが使えなくなることがある。そのため、更新されたアプリケーションは、既存の登録 ID を置き換える必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 
 {% elsif include.channel == "SMS" %}
 
@@ -636,13 +672,13 @@ Brazeの分析に加え、WhatsAppビジネスマネージャーではテンプ�
 
 ## リテンションレポート
 
-リテンションレポートには、特定のキャンペーンまたはキャンバスにおいて、指定した期間に選択したリテンションイベントをユーザーが実行した割合が表示されます。詳細については、「[リテンションレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/)」を参照してください。
+リテンションレポートには、特定のキャンペーンまたはキャンバスにおいて、指定した期間に選択したリテンションイベントをユーザーが実行した割合が表示されます。詳しくは[リテンションレポートを]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)参照のこと。
 
 ## 目標到達プロセスレポート
 
 ファネルレポートは、キャンペーンやキャンバスを受け取った後の顧客のジャーニーを分析できるビジュアルレポートを提供する。キャンペーンやキャンバスでコントロールグループや複数のバリアントを使用している場合、異なるバリアントがコンバージョンファネルにどのような影響を与えたかをより細かいレベルで理解し、このデータに基づいて最適化することができる。
 
-詳細については、「[目標到達プロセスレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)」を参照してください。
+詳細は[ファンネルレポートを]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)参照のこと。
 
 {% endif %}
 

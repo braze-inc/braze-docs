@@ -83,7 +83,7 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
-| The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to the [GIF support tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
+| The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to [GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to the [GIF support tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
@@ -94,4 +94,4 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
+[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | Obrigatória | String no formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Data de ponta a ponta do intervalo para recuperar as próximas campanhas e telas programadas. Isso é tratado como meia-noite no horário UTC pela API. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```

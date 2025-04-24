@@ -104,7 +104,7 @@ page_order: 3
 
 ### AI 카피라이터 사용
 
-인앱 메시지에서 텍스트 블록을 선택하면 블록 도구 모음에서 <i class="fa-solid fa-wand-magic-sparkles" title="AI 카피라이터"></i>를 클릭하여 [AI 기반 카피라이팅 도우미]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)를 실행하세요. AI 카피라이팅 어시스턴트는 간단한 제품명이나 설명을 OpenAI의 GPT3 카피 생성 도구에 전달하여 메시징에 사람과 유사한 마케팅 카피를 생성합니다.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). AI 카피라이팅 어시스턴트는 간단한 제품명이나 설명을 OpenAI의 GPT3 카피 생성 도구에 전달하여 메시징에 사람과 유사한 마케팅 카피를 생성합니다.
 
 {% alert tip %}
 아이콘을 클릭하기 전에 블록 안의 텍스트를 강조 표시하여 몇 번의 클릭을 저장할 수 있습니다. 하이라이트된 텍스트가 도구에 추가되고 복사본이 즉시 생성됩니다.

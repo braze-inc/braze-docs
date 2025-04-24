@@ -21,7 +21,7 @@ To generate copy using the AI copywriting assistant, follow these steps:
 5. (Optional) Choose a message tone from the available options. This will determine the style of the copy generated.
 6. (Optional) Available for push notifications: Select **Reference past campaign data** to use your previous mobile push messages (campaigns and Canvas steps) as a stylistic reference for generating new copy. When selected, the output will mimic the style of your previous messages.
 7. Select the output language. This can be different from your input language.
-8. Click **Generate**.
+8. Select **Generate**.
 
 We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
 

@@ -23,7 +23,7 @@ page_order: 5
 
 이들 객체에서 전달된 속성은 `canvas_entry_properties` Liquid 태그를 사용하여 참조할 수 있습니다. 예를 들어, `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`가 포함된 요청은 Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}를 추가하여 메시지에 "shoes"라는 단어를 추가할 수 있습니다.
 
-캔버스에 `canvas_entry_properties` Liquid 태그가 포함된 메시지가 포함된 경우, 해당 속성에 연결된 값은 사용자가 캔버스를 탐색하는 동안 저장되고 사용자가 캔버스를 종료할 때 삭제됩니다. 캔버스 항목 속성은 Liquid에서 참조용으로만 사용할 수 있습니다. 캔버스 내 속성을 필터링하려면 대신 [이벤트 속성정보 세분화]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)를 사용하십시오.
+캔버스에 `canvas_entry_properties` Liquid 태그가 포함된 메시지가 포함된 경우, 해당 속성에 연결된 값은 사용자가 캔버스를 탐색하는 동안 저장되고 사용자가 캔버스를 종료할 때 삭제됩니다. 캔버스 항목 속성은 Liquid에서 참조용으로만 사용할 수 있습니다. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
 캔버스 항목 속성 객체의 최대 크기 제한은 50KB입니다.
@@ -80,7 +80,7 @@ url -X POST \
 
 ## 사용 사례
 
-사용자가 이커머스 사이트에서 항목을 검색하지만 장바구니에 추가하지 않을 때 트리거되는 캔버스가 있는 경우, 캔버스의 첫 번째 단계는 항목 구매에 관심이 있는지 묻는 푸시 알림일 수 있습니다. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 제품 이름을 참조할 수 있습니다
+If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 제품 이름을 참조할 수 있습니다
 
 ![][1]{: style="border:0;margin-left:15px;"}
 

@@ -30,7 +30,7 @@ The transactional email campaign type is purpose-built for sending automated, no
 In short, you can use transactional emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
 
 {% alert important %}
-Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) for more information. 
+Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) for more information. 
 {% endalert %}
 
 ## Step 1: Create a new campaign

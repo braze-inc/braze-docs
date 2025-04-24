@@ -35,7 +35,7 @@ Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), **App Id
 Allez dans **Réglages** > **Réglages de l'application**. Votre clé API est indiquée à côté du champ **Clé API** dans la section des paramètres.
 
 {% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), l' **emplacement/localisation des applications** se trouve dans **Gérer les paramètres** > Paramètres.
+Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez  accéder aux **paramètres des applications** en sélectionnant **Gérer les paramètres** > **Paramètres**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -188,9 +188,7 @@ Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **cl
 
 Un identifiant de carte ou ID de carte est une clé générée aléatoirement générée par Braze pour une carte de fil d’actualité donnée dans le tableau de bord. Les ID des cartes sont uniques à chaque carte de [fil d'actualité]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) et peuvent être utilisés pour référencer les cartes par le biais de l'API. 
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ### Où puis-je le trouver ?
 

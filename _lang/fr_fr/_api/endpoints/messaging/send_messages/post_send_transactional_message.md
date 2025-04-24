@@ -1,16 +1,16 @@
 ---
-nav_title: "POST : Envoyer des e-mails transactionnels via une livraison déclenchée par API"
-article_title: "POST : Envoyer des e-mails transactionnels via une livraison déclenchée par API"
+nav_title: "POST : Envoyez des e-mails transactionnels à l'aide de la réception/distribution déclenchée par l'API"
+article_title: "POST : Envoyez des e-mails transactionnels à l'aide de la réception/distribution déclenchée par l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des e-mails transactionnels via une livraison déclenchée par API."
+description: "Cet article présente les détails du point de terminaison Braze Send transactional e-mail messages using API-triggered delivery (Envoyer des messages e-mail transactionnels en utilisant la réception/distribution déclenchée par l'API)."
 
 ---
 
 {% api %}
-# Envoyer des e-mails transactionnels via une livraison déclenchée par API
+# Envoyez des e-mails transactionnels en utilisant la réception/distribution déclenchée par l'API.
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}

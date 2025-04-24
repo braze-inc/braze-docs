@@ -15,7 +15,7 @@ page_order: 13
 
 ## 前提条件
 
-Braze SDK デバッガを使用するには、SDK が少なくとも次の最小バージョンで最新であることを確認します。
+Braze SDK デバッガーを使用するには、少なくとも以下の最小バージョン以上の最新の SDK を使用するようにしてください。
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,15 +29,15 @@ Braze SDK デバッガを使用するには、SDK が少なくとも次の最小
 
 Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger** を選択します。
 
-![The "Setup and Testing" section with "SDK Debugger" highlighted.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![「SDK デバッガー」が強調表示された「設定およびテスト」セクション。]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 **デバッグセッションの作成**を選択します。
 
-![The "SDK Debugger" page.]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![「SDK デバッガー」ページ。]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
 ### ステップ3: ユーザーを選択
 
-メールアドレス、`external_id`、ユーザエイリアス、またはプッシュトークンを使用してユーザを検索します。セッションを開始する準備ができたら、**Select User**を選択します。
+メールアドレス、`external_id`、ユーザーエイリアス、またはプッシュトークンを使用してユーザーを検索します。セッションを開始する準備ができたら、**Select User**を選択します。
 
 ![選択したユーザーのデバッグページ。]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
@@ -57,7 +57,7 @@ Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger*
 
 再現手順が完了したら、**End Session**> **Close**を選択します。
 
-!["End Session" button.]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %})を示すデバッグセッション{: style="max-width:85%;"}
+![「セッションを終了」ボタンが表示されているデバッグセッション。]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 セッションの長さとネットワーク接続に応じて、ログの生成に数分かかる場合があります。
@@ -65,6 +65,6 @@ Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger*
 
 ### ステップ 7:セッションを共有またはエクスポートする(オプション)
 
-セッション後、セッションログをCSV ファイルとしてエクスポートできます。また、**セッションID**を使用してデバッグセッションを検索できるため、ログを直接送信する必要はありません。
+セッション終了後、セッションログを CSV ファイルとしてエクスポートできます。また、他のユーザーは [**セッション ID**] を使用してデバッグセッションを検索できるため、ログを直接送信する必要はありません。
 
-!["Export Logs"および"Copy Session ID"を含むデバッグページ。セッションの後に表示されます。]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![セッション後に表示される「ログをダウンロード」と「セッション ID をコピー」を含むデバッグページ。]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

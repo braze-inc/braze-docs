@@ -1,7 +1,7 @@
 ---
 nav_title: Feature Awareness and New App Version
 article_title: Feature Awareness and New App Version
-page_order: 7
+page_order: 9
 page_type: reference
 description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
 tool: Campaigns
@@ -20,7 +20,7 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 Braze SDKs automatically track a user's most recent app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
 
-![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".][1]
+![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".][1]{: style="max-width:90%;"}
 
 ### App version number
 

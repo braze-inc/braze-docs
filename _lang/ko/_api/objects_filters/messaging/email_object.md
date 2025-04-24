@@ -36,15 +36,15 @@ description: "이 참조 문서에서는 Braze 이메일 객체의 다양한 구
 ```
 
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
-- 프리헤더에 대한 자세한 내용과 모범 사례는 \[이메일 본문 스타일 지정][46]] 도움말 문서를 참조하세요.
+- 프리헤더에 대한 자세한 내용과 모범 사례는 [이메일 본문 스타일 지정][46]] 도움말 문서를 참조하세요.
 
 {% alert warning %}
-파일을 가져오기 위한 서버의 호출이 차단되어 이메일 메시지가 전송되지 않을 수 있으므로 `url` Braze에서는 첨부파일에 Google Drive 링크를 사용하지 않는 것을 권장합니다.
+첨부파일의 `url` 에 Google 드라이브 링크를 사용하면 파일을 가져오기 위한 서버의 호출이 차단되어 이메일 메시지가 전송되지 않을 수 있으므로 사용하지 않는 것이 좋습니다.
 {% endalert %}
 
-유효한 첨부 파일 유형: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf`, `pkpass`.
+유효한 첨부 파일 유형은 다음과 같습니다: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf`, `pkpass`, 그리고 .
 
-`email_template_id`는 HTML 편집기로 만든 이메일 템플릿의 하단에서 검색할 수 있습니다. 다음은 이 ID가 어떻게 보이는지 보여주는 예입니다:
+`email_template_id` 은 HTML 편집기로 만든 이메일 템플릿의 하단에서 검색할 수 있습니다. 다음은 이 ID가 어떻게 보이는지 보여주는 예입니다:
 
 ![HTML 이메일 템플릿의 API 식별자 섹션][31]
 
@@ -71,7 +71,7 @@ description: "이 참조 문서에서는 Braze 이메일 객체의 다양한 구
 이 엔드포인트에서 이메일 첨부 파일에 대한 인증은 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
-1. **설정** > **연결된 콘텐츠**로 이동하여 **자격 증명 추가**를 클릭하여 인증 자격 증명을 추가합니다.
+1. **설정** > **연결된 콘텐츠로** 이동하고 **자격 증명 추가를** 클릭하여 인증 자격 증명을 추가합니다.
 2. 이름을 입력하고 사용자 아이디와 비밀번호를 추가합니다.
 3. `/messages/send` 엔드포인트의 이메일 개체에 첨부 파일 세부 정보에 자격 증명 이름을 지정하는 `basic_auth_credential` 속성을 포함하세요. 자격증명 이름이 `company_basic_auth_credential_name` 인 다음 예시를 참조하세요:
 

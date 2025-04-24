@@ -15,7 +15,7 @@ Braze によって構築された2 つのGoogle タグマネージャテンプ�
 
 どちらのタグも、[Googleのコミュニティ・ギャラリーから](https://tagmanager.google.com/gallery/#/?filter=braze)、またはコミュニティ・テンプレートから新しいタグを追加する際にBrazeを検索することで、ワークスペースに追加することができる。
 
-![ギャラリー検索の画像,]({% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %})
+![ギャラリー検索の画像]({% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %})
 
 ## 更新された Google EU ユーザー同意ポリシー
 
@@ -52,7 +52,7 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 
 コミュニティーテンプレートギャラリーでBrazeを検索し、**Braze初期化タグ**を選択します。
 
-![Braze 初期化タグの構成設定を示すダイアログボックス。設定項目は、「タグタイプ」、「APIキー」、「APIエンドポイント」、「SDKバージョン」、「外部ユーザーID」、「Safari WebプッシュID」である。]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
+![Braze 初期化タグの構成設定を示すダイアログボックス。含まれる設定は、「タグのタイプ」、「API キー」、「API エンドポイント」、「SDK バージョン」、「外部ユーザー ID」、「Safari Web プッシュ ID」です。]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
 
 ### ステップ3: 設定の構成
 
@@ -60,7 +60,7 @@ Braze API アプリ 識別子キーとSDKエンドポイントを入力します
 
 ### ステップ 4:初期化オプションの選択
 
-初期設定]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) ガイド)】に記載されている追加初期設定オプションセットから選択する。
+[初期設定]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) ガイドで説明されている追加の初期化オプションのオプションセットから選択します。
 
 ### ステップ5: 検証とQA
 
@@ -83,7 +83,7 @@ Braze アクションタグテンプレートを使用すると、カスタム�
 
 現行のユーザーの一意のID を**外部ユーザー ID** フィールドに入力してください。通常は、Web サイトから送信されたデータレイヤー変数を使用して入力します。
 
-![Braze アクションタグ構成設定を示すダイアログボックス。設定項目は「タグタイプ」と「外部ユーザーID」である。]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+![Braze アクションタグ構成設定を示すダイアログボックス。含まれる設定は、「タグのタイプ」と「外部ユーザーID」です。]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 
 ### カスタムイベントをログに記録する{#custom-events}
 
@@ -99,7 +99,7 @@ Braze アクションタグテンプレートを使用すると、カスタム�
 
 ### e コマースイベント {#ecommerce}
 
-もし、あなたのサイトがGoogle Tag Managerの標準[eコマースイベントデータレイヤーアイテムを](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm)使用して購入ログを記録するなら、**Eコマース購入**タグタイプを使用することができる。このアクションタイプでは、`items` のリストで送信されたアイテムごとに個別の「購入」を Braze に記録します。
+サイトで標準の [[e コマースイベント](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm)] データ層アイテムを使用して購入を Google Tag Manager に記録する場合は、**e コマース購入**タグタイプを使用できます。このアクションタイプでは、`items` のリストで送信されたアイテムごとに個別の「購入」を Braze に記録します。
 
 購入プロパティリストでキーを指定することで、購入プロパティとして含める追加のプロパティの名前を指定することもできます。Brazeは、一覧に追加した購入プロパティーのログに記録されている個々の`item` 内を検索します。
 
@@ -115,7 +115,7 @@ items: [{
 }]
 ```
 
-`item_brand` と `item_name` だけを購入プロパティとして渡す場合は、これら2つのフィールドを購入プロパティテーブルに追加するだけです。プロパティを提供しない場合、Brazeのコールで購入プロパティは送信されない。 [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)を呼び出す。
+`item_brand` と `item_name` だけを購入プロパティとして渡す場合は、これら2つのフィールドを購入プロパティテーブルに追加するだけです。プロパティを指定しない場合、[[`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)] Braze の呼び出しで購入プロパティは送信されません。
 
 ### 購入の追跡 {#purchases}
 
@@ -153,7 +153,7 @@ GTM テンプレートでは、イベントまたは購買のネストされた�
 
 ### 標準ユーザー属性 {#standard-attributes}
 
-ユーザーの名などの標準ユーザー属性は、カスタムユーザー属性と同じ方法でログに記録する必要があります。標準属性項目に渡す値が、[Userクラスの](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)ドキュメントで指定されている期待されるフォーマットと一致していることを確認する。
+ユーザーの名などの標準ユーザー属性は、カスタムユーザー属性と同じ方法でログに記録する必要があります。標準属性項目に渡す値が、[[ユーザークラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)] のドキュメントで指定されている予期される形式と一致していることを確認します。
 
 たとえば、性別属性は、値として次のいずれかを使用できます。`"m" | "f" | "o" | "u" | "n" | "p"`したがって、ユーザーの性別を女性に設定するには、次の内容のカスタムHTML タグを作成します。
 
@@ -205,7 +205,7 @@ Braze Web SDK の最新バージョンにアップグレードするには、Goo
 
 1. **タグテンプレートを更新する**<br>ワークスペース内の**Templates** ページに移動します。更新が利用可能であることを示すアイコンが表示されます。<br><br>![更新があることを示すテンプレートページ]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>そのアイコンをクリックし、変更を確認した後、**Accept Update**をクリックします。<br><br>![新旧タグテンプレートの比較画面と「更新を受け入れる」ボタン]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
 2. **バージョン番号を更新する**<br>タグテンプレートが更新されたら、Braze 初期化タグを編集し、SDK バージョンを最新の `major.minor` バージョンに更新します。たとえば、最新バージョンが`4.1.2` の場合、`4.1` と入力します。SDKのバージョン一覧は[変更履歴で](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)見ることができる。<br><br>![SDKバージョンを変更するための入力フィールドを持つBraze初期化テンプレート]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
-3. **QA および公開**<br>タグコンテナの更新を公開する前に、Google Tagマネージャーの[デバッグツールを](https://support.google.com/tagmanager/answer/6107056?hl=en)使用して、新しいSDKバージョンが動作することを確認する。
+3. **QA および公開**<br>Google Tag Manager の [[デバッグツール](https://support.google.com/tagmanager/answer/6107056?hl=en)] を使用して、新しい SDK バージョンが動作していることを確認してから、タグコンテナーに更新を公開します。
 
 ## トラブルシューティングのステップ {#troubleshooting}
 
@@ -217,11 +217,11 @@ Braze Web SDK の最新バージョンにアップグレードするには、Goo
 
 ### デバッグモードに入る
 
-Googleタグマネージャーとの統合をデバッグするもう一つの方法は、Googleの[プレビューモード](https://support.google.com/tagmanager/answer/6107056)機能を使うことだ。
+Google Tag Manager の統合をデバッグするもう1つの方法は、Google の [[プレビューモード](https://support.google.com/tagmanager/answer/6107056)] 機能を使用することです。
 
 これにより、Web ページのデータレイヤーから、トリガーされた Braze 各タグに送信されている値を特定できるほか、トリガーされたタグとトリガーされなかったタグについても確認できます。
 
-![Braze初期化タグのサマリーページには、どのタグがトリガーされたかという情報を含む、タグの概要が表示される。]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
+![Braze 初期化タグの概要ページには、トリガーされたタグに関する情報など、タグの概要が表示されます。]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
 
 ### 詳細ログの有効化
 
@@ -229,6 +229,6 @@ Braze テクニカルサポートがテスト中にログにアクセスでき�
 
 Google Tag Manager 統合で、Braze 初期化タグに移動し、[**Web SDK ログを有効にする**] を選択します。
 
-![Web SDKのログをイネーブルにするオプションをオンにしたBraze初期化タグのサマリーページ]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
+![Web SDK ログを有効にするオプションがオンになっている Braze 初期化タグの概要ページ。]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
 
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md

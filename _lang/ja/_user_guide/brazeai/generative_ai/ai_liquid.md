@@ -77,7 +77,7 @@ BrazeAI<sup>TM</sup> AI Liquid アシスタントの使用中に、Liquid の使
 
 ## データはどのように使用されて、OpenAI に送信されるのですか?
 
-メッセージ内容の変更または作成を行うために、Braze ではユーザーが BrazeAI<sup>TM</sup> AI アシスタントに送信したプロンプト、メッセージ、コンテンツ、および / またはブランドガイドライン (ユーザーが作成することを決定した場合) が OpenAI の API プラットフォームに送信されます。Braze から OpenAI に送信されるすべてのクエリは匿名化されます。つまり、提供するコンテンツに一意に識別できる情報を含めない限り、OpenAI はクエリの送信元を特定できません。[OpenAI の API プラットフォームのコミットメント](https://openai.com/policies/api-data-usage-policies)に詳述されているように、Braze 経由で OpenAI の API に送信されたデータは、モデルのトレーニングや改善には使用されず、30 日後に削除されます。お客様に関連する OpenAI のポリシーを必ず遵守してください。これには、OpenAI の使用ポリシーや共有および公開ポリシーが含まれる場合があります。Braze は AI が生成したコンテンツに関していかなる種類の保証も行いません。
+メッセージ内容の変更または作成を行うために、Braze ではユーザーが BrazeAI<sup>TM</sup> AI アシスタントに送信したプロンプト、メッセージ、コンテンツ、および / またはブランドガイドライン (ユーザーが作成することを決定した場合) が OpenAI の API プラットフォームに送信されます。Braze から OpenAI に送信されるすべてのクエリは匿名化されます。つまり、提供するコンテンツに一意に識別できる情報を含めない限り、OpenAI はクエリの送信元を特定できません。[OpenAI の API プラットフォームのコミットメント](https://openai.com/policies/api-data-usage-policies)に詳述されているように、Braze 経由で OpenAI の API に送信されたデータは、モデルのトレーニングや改善には使用されず、30 日後に削除されます。お客様に関連する OpenAI のポリシーを必ず遵守してください。これには、OpenAI の[使用ポリシー](https://openai.com/policies/usage-policies)や[共有および公開ポリシー](https://openai.com/policies/sharing-publication-policy)が含まれる場合があります。Braze は AI が生成したコンテンツに関していかなる種類の保証も行いません。
 
 [1]: {% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}
 [2]: {% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}

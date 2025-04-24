@@ -22,7 +22,7 @@ Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/test
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
-![][1]{: style="max-width:75%;"}
+![An Action-Based Canvas that enters users when they make any purchase during a user's local time from April 30, 2025 at 12 pm to May 7, 2025 at 12 pm.][1]{: style="max-width:75%;"}
 
 Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
 
@@ -77,7 +77,7 @@ The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_
 
 ### Experiment Paths
 
-Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
+Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
 
 ## Testing before launch
 
@@ -86,9 +86,20 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 ## Troubleshooting
 
 {% details Why are my users not receiving my Canvas messages? %}
-- Check that their push subscription state is "subscribed" or "opted-in" **and** that their **Push Enabled** status is set to "true". If you added these as Canvas entry rules, it's possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
-- If global frequency capping is enabled for your Canvas, depending on your specific rules, this can limit how many times each user should receive a message from a specific channel. 
-- If Quiet Hours are enabled, this can impact your message send time, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancel the message entirely.
+**Check user availability**
+- Make sure they meet your segmentation criteria.
+- Confirm their push subscription state is "subscribed" or "opted-in" **and** their **Push Enabled** status is set to "true". If you added these as Canvas entry rules, it's possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
+- Confirm they match your Canvas send settings. (If users are "subscribed" but the settings are "Opted-in", users won't be enabled for the channel.)
+- If global frequency capping is enabled for your Canvas, check if your rules are limiting how many times each user can receive a message from a specific channel. 
+- If Quiet Hours are enabled, your message send time could be affected, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancelled entirely.
+
+**Check user availability for additional filters in your Canvas step**
+- Confirm that they performed the prerequisite custom event or purchase.
+- Check if there's a [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), which impacts the messages users receive if they trigger multiple actions at the same time.
+- Make sure there aren't specific filters in the step that could have blocked users from receiving the message.
+- Search for conflicts between different steps within the same Canvas. For example, users who didn't receive the message might be stopped by a filter that requires the completion of another step on a different branch.
+- Confirm that users meet additional validation rules.
+- Confirm that the Canvas step was connected to the preceding step at the time of send.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

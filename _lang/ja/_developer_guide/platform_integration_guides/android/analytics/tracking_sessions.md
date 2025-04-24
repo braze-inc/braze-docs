@@ -15,7 +15,7 @@ description: "このリファレンス記事では、Android または FireOS �
 
 ## セッションライフサイクル
 
-私たちが推奨する[アクティビティライフサイクルのコールバック統合]]を使ってBrazeを統合した場合（{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android), `openSession()` 、`closeSession()` ）、アプリ内の各アクティビティごとに自動的に呼び出される。デフォルトでは、Android のセッションは`openSession()`への最初の呼び出し時に開かれ、アプリがフォアグラウンドから10秒以上離れると閉じられます。`closeSession()`を呼び出しても、すぐにセッションを閉じるわけではないことに注意してください。むしろ、ユーザーが途中で`openSession()`を呼び出さないと (別のアクティビティに移動するなど)、10秒でセッションを閉じます。
+推奨の [アクティビティライフサイクルコールバック統合]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android),] を使用して Braze を統合している場合は、アプリのアクティビティごとに `openSession()` と `closeSession()` が自動的に呼び出されます。デフォルトでは、Android のセッションは`openSession()`への最初の呼び出し時に開かれ、アプリがフォアグラウンドから10秒以上離れると閉じられます。`closeSession()`を呼び出しても、すぐにセッションを閉じるわけではないことに注意してください。むしろ、ユーザーが途中で`openSession()`を呼び出さないと (別のアクティビティに移動するなど)、10秒でセッションを閉じます。
 
 Android セッションは、ホストアプリケーションからの通信がない状態で10秒後にタイムアウトします。つまり、ユーザーがアプリをバックグラウンドにして9秒後に戻ってきた場合、同じセッションが継続されます。なお、ユーザーがアプリをバックグラウンドで起動している間にセッションが終了してしまうと、アプリを再度開くまでそのデータがサーバーにフラッシュされないことがあります。
 
@@ -24,7 +24,7 @@ Android セッションは、ホストアプリケーションからの通信が
 {% endalert %}
 
 ## セッションタイムアウトをカスタマイズする
-セッション・タイムアウトをカスタマイズするには、`braze.xml`]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml) ) ファイルに`com_braze_session_timeout` を追加する。`NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT` の最小値は 1 秒です。
+セッションタイムアウトをカスタマイズするには、[`braze.xml`]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml)] ファイルに `com_braze_session_timeout` を追加します。`NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT` の最小値は 1 秒です。
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
@@ -35,7 +35,7 @@ Android セッションは、ホストアプリケーションからの通信が
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![セッション数、アプリの最初の使用日、最後の使用日を示すユーザープロファイル・コンポーネント。]({% image_buster /assets/img_archive/test_session.png %})
+![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]({% image_buster /assets/img_archive/test_session.png %})
 
 ## セッション更新の購読
 

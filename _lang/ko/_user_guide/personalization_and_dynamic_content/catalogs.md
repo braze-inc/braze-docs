@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/
   image: /assets/img/braze_icons/users-01.svg
 - name: 재고 부족 알림
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: 가격 인하 알림
   link: /docs/price_drop_notifications/
@@ -36,12 +36,12 @@ guide_featured_list:
 
 모든 유형의 데이터를 카탈로그로 가져올 수 있습니다. 일반적으로 데이터는 제품, 할인, 프로모션, 이벤트 등과 같은 오퍼링에 대한 메타데이터입니다. 이 데이터를 사용하여 관련성이 높은 메시지로 사용자를 타겟팅하는 방법에 대한 몇 가지 예는 아래 사용 사례를 참조하세요.
 
-### 소매 및 이커머스
+### Retail and eCommerce
 
 - **시즌별 프로모션:** 시즌별 제품 컬렉션을 가져오고 최신 트렌드를 반영하여 메시지를 개인화하세요.
 - **현지화된 메시지:** 실제 위치 주소, 시간, 서비스를 가져온 다음 사용자 위치를 기반으로 알림을 개인화하세요.
-- **품절 알림:** 재고 수량이 포함된 제품 정보를 가져온 다음, [품절 알림]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/) 및 Braze 커스텀 이벤트를 사용하여 사용자에게 제품이 입고되었다는 알림을 보내는 캠페인 또는 캔버스를 트리거하세요.
-- **가격 인하 알림:** 제품 가격이 포함된 제품 정보를 가져온 다음 [가격 인하 알림]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications/) 및 Braze 사용자 지정 이벤트를 사용하여 사용자에게 제품 가격이 인하되었다는 알림을 보내는 캔버스를 트리거할 수 있습니다.
+- **품절 알림:** Import product information that includes inventory quantity, then use [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/) and Braze custom events to trigger a campaign or Canvas that sends users a notification that a product is now stocked.
+- **가격 인하 알림:** Import product information that includes product prices, then use [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/) and Braze custom events to trigger a Canvas that sends users a notification that a product's price dropped.
 
 ### 엔터테인먼트
 
@@ -61,3 +61,11 @@ guide_featured_list:
 카탈로그는 데이터 저장 기능입니다. 여기에는 개인화를 위해 메시지에서 참조할 수 있는 대규모 데이터 세트가 포함되어 있습니다. 실제로 데이터를 참조하기 위해서는 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 템플릿 언어로 사용하게 됩니다. 즉, 카탈로그는 데이터가 저장되는 저장소이고 Liquid는 저장소에서 릴리스된 데이터를 가져오는 언어입니다.
 
 Liquid를 사용하여 카탈로그 정보를 가져오는 방법에 대한 예는 [카탈로그 만들기]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/)의 추가 사용 사례를 참조하세요.
+
+#### Data storage limitations
+
+Data storage for catalogs is limited based on the size of the catalog items and selections, which may be different from the sizes of uploaded CSV files.
+
+For the free version of catalogs, the amount of storage allowed is up to 100 MB. You can have unlimited items as long as the storage space does not exceed 100 MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
+
+For Catalogs Pro, The storage size options are: 5 GB, 10 GB, 15 GB or 50 GB. Note that the free version's storage (100 MB) is included in each of these plans.

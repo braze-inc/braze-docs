@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [mParticle](https://www.mparticle.com) は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォームです。
 
-BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)使えば、データをmParticleに接続して、成長スタック全体でアクション可能にすることもできる。 
+BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを mParticle に接続し、グローススタック全体で実用的なデータにすることもできます。 
 
 ## 前提条件
 
@@ -21,7 +21,7 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 | ----------- | ----------- |
 | Currents | mParticle にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
 | mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
-| mParticleのサーバー間キーとシークレット | これらを取得するには、mParticle ダッシュボードに移動し、mParticle が iOS、Android、および Web プラットフォームの Braze インタラクションデータを受信できるようにするために[必要なフィード](#step-1-create-feeds)を作成します。|
+| mParticle のサーバー間キーとシークレット | これらを取得するには、mParticle ダッシュボードに移動し、mParticle が iOS、Android、および Web プラットフォームの Braze インタラクションデータを受信できるようにするために[必要なフィード](#step-1-create-feeds)を作成します。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## mParticle認証情報について
@@ -29,9 +29,9 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 mParticleには、アプリレベルとワークスペースレベルの認証情報があり、イベントの送信方法に影響を与える。
 
 - **アプリレベル：**mParticleは各アプリごとにイベントを分離するため、iOSアプリに与えるアプリレベルの認証情報は、iOS固有のイベントを送信するためにのみ使用できる。
-- **ワークスペースレベル：**mParticleは、（アプリ固有**ではない**）すべてのイベントをグループ化する。つまり、アプリグループに与えるワークスペースレベルの認証情報は、アプリ固有ではないすべてのイベントの送信に使用される。
+- **ワークスペースレベル：**mParticle は、(アプリ固有**ではない**) すべてのイベントをグループ化します。つまり、アプリグループに与えるワークスペースレベルの認証情報は、アプリ固有ではないすべてのイベントの送信に使用されます。
 
-これは、mParticleが個々のアプリに基づいた「フィード」をインジェストしていると考えることができる。例えば、iOS用、Android用、Web用のアプリを1つずつ用意すると、イベントがバラバラになってしまう。つまり、各アプリに同じ認証情報を提供すると、1つのmParticleフィードが、重複することなく、すべてのアプリのすべてのデータを受信するために使用される。
+これは、mParticle が個々のアプリに基づいて「フィード」を取り込んでいると考えることができます。例えば、iOS用、Android用、Web用のアプリを1つずつ用意すると、イベントがバラバラになってしまう。つまり、各アプリに同じ認証情報を提供すると、1つのmParticleフィードが、重複することなく、すべてのアプリのすべてのデータを受信するために使用される。
 
 ## 統合
 
@@ -63,7 +63,7 @@ mParticleに送信されるすべてのイベントには、ユーザーの `ext
 
 ## サポートされている Currents イベント
 
-Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメントイベントの]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)用語集に記載されている以下のデータをmParticleにエクスポートすることをサポートしている：
+Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメントイベントの]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)用語集に記載されている以下のデータをmParticleにエクスポートすることをサポートしている：
 
 ### 行動
 - アンインストール: `users.behaviors.Uninstall`

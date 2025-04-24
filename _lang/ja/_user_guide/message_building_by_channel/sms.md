@@ -29,7 +29,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
 - name: "SMSメッセージを作成する"
-  link: /docs/user_guide/message_building_by_channel/sms/create/
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
   image: /assets/img/braze_icons/table.svg
 - name: "リンク短縮"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
@@ -52,6 +52,9 @@ guide_featured_list:
 - name: "SMSレポート"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "メッセージ利用ダッシュボード"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "SMSに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

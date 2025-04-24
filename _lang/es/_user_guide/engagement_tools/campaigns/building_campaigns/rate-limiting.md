@@ -86,6 +86,8 @@ Otro ejemplo: si intentas enviar 75.000 mensajes con un límite de tasa de 10.00
 
 Ten en cuenta que los mensajes con tasa limitada pueden no enviarse uniformemente a lo largo de cada minuto. Utilizando el ejemplo de un límite de tasa de 10.000 por minuto, esto significa que Braze se asegura de que no se envían más de 10.000 mensajes por minuto. Esto podría significar que un mayor porcentaje de los 10.000 mensajes se envían en el primer medio minuto frente al último medio minuto. 
 
+Además, ten en cuenta que el límite de velocidad se aplica al inicio del intento de envío del mensaje. Cuando hay fluctuaciones en el tiempo que tarda en completarse el envío, el número de envíos completados puede superar ligeramente el límite de velocidad en algunos minutos. Con el tiempo, el número de envíos por minuto no superará el límite de velocidad.
+
 {% alert important %}
 Tenga cuidado con retrasar los mensajes sensibles al tiempo con esta forma de limitación de velocidad. Si el segmento contiene 30 millones de usuarios, pero fijamos el límite de velocidad en 10.000 por minuto, una gran parte de tu base de usuarios no recibirá el mensaje hasta el día siguiente.
 {% endalert %}

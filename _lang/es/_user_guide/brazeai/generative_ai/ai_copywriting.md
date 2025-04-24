@@ -21,7 +21,7 @@ Para generar textos utilizando el asistente de redacción de IA, sigue estos pas
 5. (Opcional) Elige un tono de mensaje de entre las opciones disponibles. Esto determinará el estilo de la copia generada.
 6. (Opcional) Disponible para notificaciones push: Selecciona **Referencia a datos de campañas anteriores** para utilizar tus mensajes push para móvil anteriores (campañas y pasos en Canvas) como referencia estilística para generar una nueva copia. Cuando se selecciona, la salida imitará el estilo de tus mensajes anteriores.
 7. Selecciona el idioma de salida. Puede ser diferente de tu lengua de entrada.
-8. Haga clic en **Generar**.
+8. Seleccione **Generar**.
 
 Utilizamos la información que nos proporcionas para pedir a GPT que escriba textos para ti. La respuesta se obtendrá de OpenAI y se te proporcionará. 
 

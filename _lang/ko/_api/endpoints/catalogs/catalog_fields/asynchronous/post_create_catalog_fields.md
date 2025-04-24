@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -112,7 +112,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 | 오류                                | 문제 해결                                                                                        |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `arbitrary-error`                    | 임의의 오류가 발생했습니다. 다시 시도하거나 [지원]({{site.baseurl}}/support_contact/)에 문의하십시오. |
+| `arbitrary-error`                    | 임의의 오류가 발생했습니다. 다시 시도하거나 [지원팀에]({{site.baseurl}}/support_contact/) 문의하세요. |
 | `catalog-not-found`                  | 카탈로그 이름이 유효한지 확인합니다.                                                                  |
 | `company-size-limit-already-reached` | 카탈로그 저장소 크기 제한에 도달했습니다.                                                             |
 | `request-includes-too-many-fields`   | 각 요청은 최대 50개의 새 필드를 지원할 수 있습니다.                                                          |

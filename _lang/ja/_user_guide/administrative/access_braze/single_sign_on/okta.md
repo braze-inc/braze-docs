@@ -24,19 +24,11 @@ description: "この記事では、シングルサインオンに Okta を使用
 | RelayState API キー | IdP ログインを有効にするには、[**設定**] > [**API キー**] に移動し、`sso.saml.login` 権限を持つ API キーを作成します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
-{% endalert %}
-
 ## ステップ 1: Braze の設定
 
 ### ステップ 1a: Braze の [セキュリティ設定] に移動
 
 アカウントマネージャーがアカウントの SAML SSO を有効にした後、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、SAML SSO セクションを [**オン**] に切り替えます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
-{% endalert %}
 
 ![[セキュリティ設定] ページで、Okta SAML SSO が有効になっています。][1]
 

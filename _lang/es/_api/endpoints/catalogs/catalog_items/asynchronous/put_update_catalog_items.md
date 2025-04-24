@@ -82,7 +82,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 Existen tres respuestas de código de estado para este punto final: `202`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
@@ -94,7 +94,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -116,23 +116,23 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
-| `catalog-not-found` | Comprueba que el nombre del catálogo es válido. |
+| `catalog-not-found` | Compruebe que el nombre del catálogo es válido. |
 | `ids-not-string` | Confirma que el ID de cada elemento es una cadena. |
 | `ids-not-unique` | Comprueba que el ID de cada artículo es único. |
 | `ids-too-large` | El límite de caracteres para cada ID de artículo es de 250 caracteres. |
-| `item-array-invalid` | `items` debe ser una matriz de objetos. |
-| `items-missing-ids` | Confirma que cada elemento tiene un ID. |
+| `item-array-invalid` | `items` debe ser un array de objetos. |
+| `items-missing-ids` | Algunos artículos no tienen ID de artículo. Confirma que cada elemento tiene un ID. |
 | `items-too-large` | Los valores de los elementos no pueden superar los 5.000 caracteres. |
-| `invalid-ids` | Los caracteres admitidos para los nombres de ID de artículo son letras, números, guiones y guiones bajos. |
-| `invalid-fields` | Confirma que todos los campos que estás enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
-| `invalid-keys-in-value-object` | Las claves de los objetos del artículo no pueden incluir `.` ni `$`. |
-| `too-deep-nesting-in-value-object` | Los objetos elemento no pueden tener más de 50 niveles de anidamiento. |
-| `request-includes-too-many-items` | Tu solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |
-| `unable-to-coerce-value` | Los tipos de elementos no se pueden convertir. |
+| `invalid-ids` | Los caracteres admitidos para los nombres de ID de artículos son letras, números, guiones y guiones bajos. |
+| `invalid-fields` | Confirme que todos los campos que está enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
+| `invalid-keys-in-value-object` | Las claves de objeto de artículo no pueden incluir `.` ni `$`. |
+| `too-deep-nesting-in-value-object` | Los objetos item no pueden tener más de 50 niveles de anidamiento. |
+| `request-includes-too-many-items` | Su solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |
+| `unable-to-coerce-value` | Los tipos de artículo no se pueden convertir. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

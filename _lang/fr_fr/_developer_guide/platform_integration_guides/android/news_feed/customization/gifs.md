@@ -15,9 +15,7 @@ channel:
 
 > Cet article de référence traite de la mise en œuvre des GIF dans votre fil d'actualité pour votre application Android ou FireOS.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% multi_lang_include archive/android/gifs.md channel="Fil d'actualité" %}
 

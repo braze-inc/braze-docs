@@ -54,7 +54,7 @@ Se você tiver adicionado suas credenciais do [S3][1], [Azure][2] ou [Google Clo
 | `RANDOM_UUID` | Um UUID aleatório gerado pelo Braze no momento da solicitação. | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | Hora Unix (segundos desde 2017-01-01:00:00:00Z) em que a exportação foi solicitada em UTC. | `1556044807` |
 | `filename` | Aleatório por arquivo. | `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
@@ -88,10 +88,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |---|---|---|---|
 |`segment_id` | Obrigatória | String | Identificador do segmento a ser exportado. Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/).<br><br>O [endereço]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) `segment_id` para um determinado segmento pode ser encontrado na página de [chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) em sua conta Braze ou você pode usar o [ponto de extremidade da lista de segmentos]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Opcional | String | Ponto de extremidade para postar uma URL de download quando a exportação estiver disponível. |
-|`fields_to_export` | Necessário* | Matriz de strings | Nome dos campos de dados de usuários a serem exportados. Você também pode exportar todos os atributos personalizados incluindo `custom_attributes` nesse parâmetro. <br><br>\*A partir de abril de 2021, as novas contas devem especificar campos específicos para exportação. |
+|`fields_to_export` | Obrigatório* | Matriz de strings | Nome dos campos de dados de usuários a serem exportados. Você também pode exportar todos os atributos personalizados incluindo `custom_attributes` nesse parâmetro. <br><br>\*A partir de abril de 2021, as novas contas devem especificar campos específicos para exportação. |
 | `custom_attributes_to_export` | Opcional | Matriz de strings | Nome do atributo personalizado específico a ser exportado. Até 500 atributos personalizados podem ser exportados. Para criar e gerenciar atributos personalizados no dashboard, acesse **Configurações de dados** > Atributos personalizados. |
 |`output_format` | Opcional | String | O formato de saída de seu arquivo. O padrão é o formato de arquivo `zip`. Se estiver usando seu próprio bucket S3, você poderá especificar `zip` ou `gzip`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Se `custom_attributes` estiver incluído no parâmetro `fields_to_export`, todos os atributos personalizados serão exportados, independentemente do que estiver em `custom_attributes_to_export`. Se seu objetivo for exportar atribuições específicas, `custom_attributes` não deve ser incluído no parâmetro `fields_to_export`. Em vez disso, use o parâmetro `custom_attributes_to_export`.
@@ -140,7 +140,7 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 | `created_at` | String | Data e hora em que o perfil do usuário foi criado, no formato ISO 8601. |
 | `custom_attributes` | Objeto | Pares de valores-chave de atributos personalizados para esse usuário. |
 | `custom_events` | Vetor | Eventos personalizados atribuídos a esse usuário nos últimos 90 dias. |
-| `devices` | Vetor | Informações sobre o dispositivo do usuário, que podem incluir o seguinte, dependendo da plataforma:<br><br>- `model`: Nome do modelo do dispositivo<br>- `os`: Sistema operacional do dispositivo<br>- `carrier`: Operadora de serviço do dispositivo, se disponível<br>- `idfv`: (iOS) identificador do dispositivo Braze, o identificador da Apple para o fornecedor, se houver<br>- `idfa`: (iOS) identificador para publicidade, se houver<br>- `device_id`: (Android) Identificador do dispositivo Braze<br>- `google_ad_id`: (Android) Identificador de publicidade do Google Play, se houver<br>- `roku_ad_id`: (Roku) Identificador de publicidade da Roku<br>- `ad_tracking_enabled`: Se o rastreamento de anúncios estiver ativado no dispositivo, pode ser verdadeiro ou falso. |
+| `devices` | Vetor | Informações sobre o dispositivo do usuário, que podem incluir o seguinte, dependendo da plataforma:<br><br>- `model`: Nome do modelo do dispositivo<br>- `os`: Sistema operacional do dispositivo<br>- `carrier`: Operadora de serviço do dispositivo, se disponível<br>- `idfv`: (iOS) identificador do dispositivo Braze, o identificador da Apple para o fornecedor, se houver<br>- `idfa`: (iOS) Identificador para publicidade, se houver<br>- `device_id`: (Android) Identificador do dispositivo Braze<br>- `google_ad_id`: (Android) Identificador de publicidade do Google Play, se houver<br>- `roku_ad_id`: (Roku) Identificador de publicidade da Roku<br>- `ad_tracking_enabled`: Se o rastreamento de anúncios estiver ativado no dispositivo, pode ser verdadeiro ou falso. |
 | `dob` | String | Data de nascimento do usuário no formato `YYYY-MM-DD`. |
 | `email` | String | Endereço de e-mail do usuário. |
 | `external_id` | String | Identificador de usuário exclusivo para usuários identificados. |
@@ -155,10 +155,10 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 | `push_tokens` | Vetor | Informações sobre os tokens por push do usuário. |
 | `random_bucket` | Inteiro | [Número de bucket aleatório]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) do usuário, usado para criar segmentos uniformemente distribuídos de usuários aleatórios. |
 | `time_zone` | String | Fuso horário do usuário no mesmo formato do banco de dados de fuso horário da IANA. |
-| `total_revenue` | Flutuação | Receita total atribuída a esse usuário. A receita total é calculada com base nas compras que o usuário fez durante as janelas de conversão para as campanhas e Canvas que recebeu. |
+| `total_revenue` | Float | Receita total atribuída a esse usuário. A receita total é calculada com base nas compras que o usuário fez durante as janelas de conversão para as campanhas e Canvas que recebeu. |
 | `uninstalled_at` | Data e hora | Data e hora em que o usuário desinstala o app. Omitido se o app não tiver sido desinstalado. |
 | `user_aliases` | Objeto | [Objeto de aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contendo `alias_name` e `alias_label`, se houver. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Lembretes importantes
 
@@ -245,7 +245,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -253,7 +253,9 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -274,16 +276,16 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "last_received" : (string) date,
         "engaged" : 
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -294,7 +296,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {
@@ -468,7 +470,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
 {% endtabs %}
 
 {% alert tip %}
-Para obter ajuda com exportações CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 [1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3

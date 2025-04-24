@@ -17,13 +17,13 @@ description: "En este artículo se describen los detalles del punto final Elimin
 
 > Utiliza este punto final para eliminar de forma permanente un usuario existente del panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
 
-Esto es similar a eliminar un usuario en la sección **Usuarios de la empresa** del panel de Braze. Para obtener información sobre cómo obtener un token SCIM, visita [Aprovisionamiento automatizado de usuarios]({{site.baseurl}}/scim/automated_user_provisioning/).
+Esto es similar a eliminar un usuario en la sección **Usuarios de la empresa** del panel de Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás un token SCIM. Para más información, consulta [Aprovisionamiento automatizado de usuarios]({{site.baseurl}}/scim/automated_user_provisioning/).
+Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el origen de tu servicio como cabecera de `X-Request-Origin`. Para más información, consulta [Aprovisionamiento automatizado de usuarios]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Límite de velocidad
 

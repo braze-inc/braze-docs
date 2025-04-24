@@ -10,11 +10,11 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージを更新する
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
-> スケジュールされたメッセージを更新するには、このエンドポイントを使う。 
+> スケジュールされたメッセージを更新するには、このエンドポイントを使う。
 
 このエンドポイントは、`schedule` または `messages` パラメーターのいずれか、あるいはその両方に対する更新を受け入れます。リクエストには、これら 2 つのキーのうち、少なくとも 1 つが含まれている必要があります。
 
@@ -48,12 +48,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | 必須 | 文字列 | 更新する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
 |`schedule` | オプション | オブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
 |`messages` | オプション | オブジェクト | [利用可能なメッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 ```

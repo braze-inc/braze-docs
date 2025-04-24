@@ -28,11 +28,11 @@ description: "この記事では、「ハードバウンスメールアドレス
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ----------|----- |
-| `start_date` | オプション<br>（注を参照） | YYYY-MM-DD形式の文字列| ハードバウンドを取得する範囲の開始日であり、`end_date` より前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
-| `end_date` | オプション<br>（注を参照） | YYYY-MM-DD形式の文字列 | ハードバウンスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
-| `limit` | オプション | 整数 | 結果の数を制限するためのオプションのフィールド。デフォルトは100で、最大は500です。 |
+| `start_date` | オプション<br>(注を参照) | YYYY-MM-DD形式の文字列| ハードバウンドを取得する範囲の開始日であり、`end_date` より前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `end_date` | オプション<br>(注を参照) | YYYY-MM-DD形式の文字列 | ハードバウンスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
 | `email` | オプション<br>（注を参照） | 文字列 | 指定されると、ユーザーがハードバウンスしたかどうかを返します。Eメールの文字列が正しくフォーマットされているか確認する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -59,15 +59,15 @@ Authorization: Bearer YOUR-REST-API-KEY
   "emails": [
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"

@@ -77,7 +77,7 @@ El paso para [la división de decisiones]({{site.baseurl}}/user_guide/engagement
 
 ### Recorridos de experimentos
 
-De forma similar a las Rutas de acción, puede aprovechar los pasos de [las Rutas de experimentación]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) en su lienzo para probar varias rutas del lienzo entre sí, junto con un grupo de control. De este modo se realiza un seguimiento del rendimiento de la ruta, lo que le permite tomar decisiones fundamentadas a la hora de construir su recorrido Canvas. 
+De forma similar a las Rutas de acción, puede aprovechar los pasos de [las Rutas de experimentación]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) en su lienzo para probar varias rutas del lienzo entre sí, junto con un grupo de control. De este modo se realiza un seguimiento del rendimiento de la ruta, lo que le permite tomar decisiones fundamentadas a la hora de construir su recorrido Canvas. 
 
 ## Pruebas antes del lanzamiento
 

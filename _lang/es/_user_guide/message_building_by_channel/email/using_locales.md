@@ -20,33 +20,31 @@ Para utilizar las localizaciones en sus mensajes, redacte una campaña de correo
 {% tabs %}
 {% tab Editor HTML %}
 
-1. Resalta el texto que quieres traducir. Selecciona **Insertar etiqueta de traducción**. Esto envolverá tu texto con etiquetas de traducción. <br>![]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. Resalta el texto que quieres traducir. Selecciona **Insertar etiqueta de traducción**. Esto envolverá tu texto con etiquetas de traducción. <br>![Editor HTML con una localización seleccionada.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Guarda el mensaje como borrador.
 3. Seleccione **Multilenguaje** y añada sus idiomas para el mensaje utilizando el menú desplegable.
-4. Seleccione **Descargar plantilla** para descargar la plantilla de traducción en formato CSV. Después, rellena las traducciones en el CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. Selecciona **Descargar plantilla** para descargar la plantilla de traducción como archivo CSV. Después, rellena las traducciones en el archivo CSV. <br>![Un ejemplo de archivo CSV de traducción.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. Seleccione **Cargar traducciones** para cargar el archivo CSV con las traducciones realizadas.
 
 {% endtab %}
 {% tab Editor de arrastrar y soltar %}
 
-1. Añada etiquetas de traducción {% raw %}`{% translation %}` y `{% endtranslation %}`{% endraw %} para envolver todo el texto y las URL de imágenes o enlaces que se vayan a traducir.<br>![]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
-2. Después de añadir las etiquetas, guarda tu mensaje como borrador.
-3. Seleccione **Multilenguaje** y añada sus idiomas para el mensaje utilizando el menú desplegable.
-4. Seleccione **Descargar plantilla** para descargar la plantilla de traducción en formato CSV. Después, rellena las traducciones en el CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-5. Seleccione **Cargar traducciones** para cargar el archivo CSV con las traducciones realizadas.
+1. Añada etiquetas de traducción {% raw %}`{% translation %}` y `{% endtranslation %}`{% endraw %} para envolver todo el texto y las URL de imágenes o enlaces que se vayan a traducir. 
+2. Añade una etiqueta ID a cada etiqueta de traducción. Un ejemplo es: {% raw %}`{% translation id_1 %}`{% endraw %} <br>![Editor de arrastrar y soltar con dos ID de traducción.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
+3. Después de añadir las etiquetas, guarda tu mensaje como borrador.
+4. Seleccione **Multilenguaje** y añada sus idiomas para el mensaje utilizando el menú desplegable.
+5. Selecciona **Descargar plantilla** para descargar la plantilla de traducción como archivo CSV. 
+6. Rellena las traducciones en el archivo CSV. Si has copiado y pegado las etiquetas de traducción directamente desde el Paso 1, puede que tengas que eliminar `<code>` de la columna **Etiquetas de traducción** del archivo CSV.
+7. Seleccione **Cargar traducciones** para cargar el archivo CSV con las traducciones realizadas.
 
 {% endtab %}
 {% endtabs %}
 
-Para actualizar las traducciones, actualiza el CSV y vuelve a subir el archivo. Esto significa que cualquier cambio en los ID o locales del CSV no se actualizará automáticamente en su mensaje.
-
-{% alert tip %}
-Echa un vistazo a nuestra [API de traducción]({{site.baseurl}}/api/endpoints/translations) para gestionar y actualizar las traducciones en tus campañas y Canvases.
-{% endalert %}
+Cualquier cambio en las ID o localizaciones del archivo CSV no se actualizará automáticamente en tu mensaje. Para actualizar las traducciones, actualiza el archivo CSV y vuelve a subir el archivo.
 
 ## Vista previa de tus configuraciones regionales
 
-En la sección **Vista previa y prueba**, seleccione **Usuario multilingüe** para previsualizar el mensaje y comprobar si se traduce como se espera.
+En la sección **Vista previa y prueba**, selecciona **Usuario multilingüe** para comprobar si tu mensaje se traduce como esperabas.
 
 ## Preguntas más frecuentes
 
@@ -56,10 +54,13 @@ Realiza la edición en el CSV y, a continuación, vuelve a subir el archivo para
 #### ¿Puedo anidar etiquetas de traducción?
 No.
 
+#### ¿Puedo utilizar localizaciones en mis plantillas de correo electrónico?
+No. Las localizaciones sólo se admiten en el editor de correo electrónico para campañas y pasos de mensajería en Canvas.
+
 #### ¿Puedo añadir estilos HTML en las etiquetas de traducción?
 Sí. Sin embargo, asegúrate de que el estilo HTML no se traduce con el contenido.
 
-#### ¿Qué validaciones o comprobaciones adicionales realiza Braze?
+#### ¿Qué validaciones o comprobaciones adicionales hace Braze para las traducciones?
 
 | Escenario                                                                                                                                                 | Validación en Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|

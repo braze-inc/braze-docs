@@ -26,7 +26,7 @@ channel:
     - 유효한 이메일 주소: 
         - `example@gmail.com`
         - `example@gnail.com`(오타 포함)
-    - Braze의 이메일 유효성 검사에 대한 자세한 내용은 [이메일 기술 가이드라인 및 참고 사항]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/)을 참조하세요.
+    - For more information on email validation in Braze, refer to [Email technical guidelines and notes]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details 식별된 사용자와 익명 사용자에 대해 자세히 알아보기 %}
 
@@ -36,7 +36,7 @@ channel:
 
 `changeUser`가 기존 `external_id`와 함께 호출되는 경우 익명 사용자 프로필은 고아가 되고 식별된 사용자에 아직 존재하지 않는 [특정 고객프로필 데이터 필드]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior)는 병합되지만 이메일 주소를 포함하여 이미 존재하는 필드는 모두 손실됩니다.
 
-자세한 내용은 [사용자 프로필 수명 주기를]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) 참조하세요.
+For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

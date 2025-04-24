@@ -28,7 +28,7 @@ description: "この記事では、エクスポートカスタムイベントBra
 
 このエンドポイントへの各呼び出しは50のイベントを返すことに注意してください。50を超えるイベントについては、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `cursor` | オプション | 文字列 | カスタムイベントのページネーションを決定します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 リクエストが致命的なエラーに遭遇した場合に返されるステータスコードと関連するエラーメッセージについては、[致命的なエラー]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

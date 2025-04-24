@@ -30,9 +30,9 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 必須 | 文字列 | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
+| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -285,7 +285,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

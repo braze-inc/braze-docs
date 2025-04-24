@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 6
 ---
 
-ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルのイベントデータに適用される。他のパートナーに適用されるスキーマについては、 [利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
+ストレージスキーマは、データウェアハウスストレージパートナー (Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage) に送信するフラットファイルイベントデータに適用されます。他のパートナーに適用されるスキーマについては、 [利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
 
 その他のイベントの種類にアクセスする必要がある場合は、アカウントマネージャーに問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。必要な情報がこの記事に見つからない場合は、 [顧客行動イベント ライブラリ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)または [Currents サンプルデータの例](https://github.com/Appboy/currents-examples/tree/master/sample-data)をご覧ください。
 
@@ -52,11 +52,11 @@ search_rank: 6
 {% enddetails %}
 
 {% alert important %}
-Currents は、900 KB を超える過度に大きなペイロードを持つイベントをドロップすることに注意してください。
+Currents は、900 KB を超える過度に大きなペイロードを持つイベントをドロップします。
 {% endalert %}
 
 {% alert note %}
-キャンバスフローに関連するオブジェクトは、グループ化に使用できるIDを持ち、[キャンバスの詳細をエクスポートするエンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)経由して人間が読める名前に変換される。
+キャンバスフローに関連するオブジェクトの ID は、グループ化に使用でき、[「キャンバスの詳細をエクスポートする」エンドポイントによ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)って人間が読める名前に変換されます。
 {% endalert %}
 
 {% alert note %}
@@ -886,7 +886,7 @@ WhatsApp、中止
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -917,7 +917,7 @@ WhatsApp、中止
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -957,7 +957,7 @@ WhatsApp、中止
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1000,7 +1000,7 @@ WhatsApp、中止
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1040,7 +1040,7 @@ WhatsApp、中止
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1294,7 +1294,7 @@ Abort, Content Cards
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1324,7 +1324,7 @@ Abort, Content Cards
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1363,7 +1363,7 @@ Abort, Content Cards
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1404,7 +1404,7 @@ Abort, Content Cards
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1441,7 +1441,7 @@ Abort, Content Cards
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1487,7 +1487,7 @@ Abort, Email
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1519,7 +1519,7 @@ Abort, Email
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1560,7 +1560,7 @@ Abort, Email
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1603,7 +1603,7 @@ Abort, Email
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1644,7 +1644,7 @@ Abort, Email
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1691,7 +1691,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1723,7 +1723,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1765,7 +1765,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1807,7 +1807,7 @@ Abort, Push
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1848,7 +1848,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1896,7 +1896,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1924,7 +1924,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1958,7 +1958,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1996,7 +1996,7 @@ Abort, Push
 {
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2032,7 +2032,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2076,7 +2076,7 @@ Abort, Push
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2106,7 +2106,7 @@ Abort, Push
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -2145,7 +2145,7 @@ Abort, Push
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -2186,7 +2186,7 @@ Abort, Push
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2223,7 +2223,7 @@ Abort, Push
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -3090,7 +3090,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 - `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
   {% endapi %}
   {% api %}
@@ -3318,7 +3318,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
 
@@ -3487,7 +3487,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
 
@@ -3702,7 +3702,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
   {% endapi %}
   {% api %}
 
@@ -3906,7 +3906,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `dispatch_id` の動作は、キャンバスとキャンペーンで異なります。これは、Braze がキャンバスのステップ (スケジュール可能なエントリステップを除く) を、スケジュール済みの場合でもトリガーされたイベントとして扱うためです。詳細については、「[ディスパッチ ID の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)」を参照してください。
-- `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
+- `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、または国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
   {% endapi %}
 
 
@@ -4127,7 +4127,7 @@ Abort, Push
 このイベントは、ユーザーがメールを開封したときに発生します。ユーザーが複数回メールを開封すると、同じキャンペーンについて複数のイベントが生成される場合があります。
 
 {% alert important %}
-メール開封イベントのフィールド`device_model` と`mailbox_provider` が空であることは既知の動作である。今は無視して構わない。
+メール開封イベントのフィールド `device_model` と`mailbox_provider` が空であることは、既知の動作です。現時点ではこれは無視できます。
 {% endalert %}
 
 {% tabs %}
@@ -5272,7 +5272,7 @@ Abort, Push
 このイベントは、エンドユーザーがメールの [配信停止] をクリックしたときに発生します。
 
 {% alert important %}
-`Unsubscribe` イベントは実質的に特殊なクリックイベントであり、ユーザーが配信停止状態に変更したときではなく、ユーザーがメール内の配信停止リンク (メールの本文またはフッターにある通常の配信停止リンク、または [list-unsubscribe ヘッダー]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)を使用したもの) をクリックしたときに発生します。サブスクリプションの状態変更がAPI経由で送信された場合、またはカスタム(非Braze)サブスクリプション解除リンク経由で送信された場合、Currentsのイベントはトリガーされない。
+`Unsubscribe` イベントは実質的に特殊なクリックイベントであり、ユーザーが配信停止状態に変更したときではなく、ユーザーがメール内の配信停止リンク (メールの本文またはフッターにある通常の配信停止リンク、または [list-unsubscribe ヘッダー]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)を使用したもの) をクリックしたときに発生します。サブスクリプションの状態の変更が API またはカスタム (Braze 以外) サブスクリプション解除リンク経由で送信された場合、Currents ではイベントはトリガーされません。
 {% endalert %}
 
 {% tabs %}
@@ -5495,7 +5495,7 @@ Abort, Push
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5532,7 +5532,7 @@ Abort, Push
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5580,7 +5580,7 @@ Abort, Push
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
@@ -5626,7 +5626,7 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
@@ -5674,7 +5674,7 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
@@ -5696,7 +5696,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 {% api %}
@@ -5735,7 +5735,7 @@ Abort, Push
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "$device" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -5772,7 +5772,7 @@ Abort, Push
   "card_id" : "(optional, string) API ID of the card",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "dispatch_id" : "null",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -5820,7 +5820,7 @@ Abort, Push
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "card_id" : "(optional, string) API ID of the card",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "dispatch_id" : "null",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)"
@@ -5866,7 +5866,7 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_model" : "(optional, string) Model of the device",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "os_version" : "(optional, string) Version of the operating system of the device",
@@ -5914,7 +5914,7 @@ Abort, Push
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "card_id" : "(optional, string) API ID of the card",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "dispatch_id" : "null",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
@@ -5931,7 +5931,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -6545,7 +6545,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 {% api %}
@@ -6774,7 +6774,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -7004,7 +7004,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -8425,7 +8425,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 FeatureFlags, インプレッション
 {% endapitags %}
 
-このイベントは、ユーザーがあなたの機能とインタラクションする機会があったとき、または機能が無効になっている場合（A/Bテストのコントロールグループの場合）にインタラクションできたときに発生する。
+ユーザーが機能を操作する機会があった場合、または機能が無効になっているとき (AB テストのコントロールグループの場合) にユーザーが操作した可能性がある場合には、常にこのイベントが発生します。
 
 フィーチャーフラグのインプレッションは、1セッションにつき1回のみ記録されます。
 
@@ -9130,10 +9130,10 @@ FeatureFlags, インプレッション
 ## キャンバスのステップ進行イベント
 
 {% apitags %}
-キャンバスステップ、プログレッション
+キャンバスステップ、進行
 {% endapitags %}
 
-このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。現在、スプリットステップ（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）とアドバンス結果のみがステッププログレッションイベントを生成する。
+このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。現在、分岐ステップ (オーディエンスパス、条件分岐、アクションパス、実験) と（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）と Advance の結果のみがステップの進行イベントを生成します。
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9676,7 +9676,7 @@ Subscription
 | 受信メッセージ | ユーザーが更新の場合、エンドユーザーsからSMSなどのチャネルsを経由した着信メッセージ |
 | 移行 | ユーザーが内部移行または保守スクリプトによって更新されている場合 |
 | ユーザーマージ | ユーザー結合処理で更新した場合 |
-| Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップでユーザーが更新された場合 |
+| Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップによってユーザーが更新された場合 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}

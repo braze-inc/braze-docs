@@ -47,7 +47,7 @@ Cette base de données de profil utilisateur centrée sur la personne permet une
 {% endalert %}
 
 ### Sources de données backend via l'API Braze
-[Braze]({{site.baseurl}}/api/endpoints/user_data) peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
+Braze peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
 
 ### Sources de données frontend via le SDK Braze
 Braze capture automatiquement des données first-party à partir de sources de données frontales, telles que les appareils des utilisateurs, par le biais du [SDK Braze]({{site.baseurl}}/user_guide/getting_started/web_sdk/). Le SDK gère les nouveaux utilisateurs (anonymes) et gère les données de leur profil utilisateur tout au long de leur cycle de vie. 
@@ -80,7 +80,7 @@ Les campagnes déclenchées par API sont idéales pour des cas d'utilisation tra
 
 
 ### Drapeaux de fonctionnalité
-Braze vous permet d'activer ou de désactiver à distance des fonctionnalités pour une sélection d'utilisateurs au moyen de [drapeaux de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/). Cela permet à vos marketeurs de cibler le bon segment de votre base d'utilisateurs avec des messages pour des fonctionnalités que vous n'avez pas encore déployées à l'ensemble de votre audience. Mais plus que cela, les drapeaux de fonctionnalité peuvent être utilisés pour activer et désactiver une fonctionnalité en production sans déploiement de code supplémentaire ni mises à jour de l'App Store. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance.
+Braze vous permet d'activer ou de désactiver à distance des fonctionnalités pour une sélection d'utilisateurs au moyen de [indicateurs de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/). Cela permet à vos marketeurs de cibler le bon segment de votre base d'utilisateurs avec des messages pour des fonctionnalités que vous n'avez pas encore déployées à l'ensemble de votre audience. Mais plus que cela, les drapeaux de fonctionnalité peuvent être utilisés pour activer et désactiver une fonctionnalité en production sans déploiement de code supplémentaire ni mises à jour de l'App Store. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance.
 
 ## Personnalisation {#personalization}
 La couche de personnalisation représente la capacité à fournir du contenu dynamique dans vos messages. En utilisant Liquid, un langage de personnalisation largement utilisé, votre équipe peut extraire dynamiquement des données existantes pour afficher le message adapté à chaque destinataire. En outre, vous pouvez insérer toute information accessible sur votre serveur web ou via l'API directement dans les messages que vous envoyez, comme les notifications push ou les e-mails, en utilisant le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Le contenu connecté s’appuie sur Liquid et utilise une syntaxe que vous connaissez déjà.

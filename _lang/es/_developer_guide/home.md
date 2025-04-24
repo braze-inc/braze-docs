@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Guía del desarrollador de Braze"
-guide_top_text: "Aquí es donde los desarrolladores pueden encontrar todas las integraciones disponibles con Braze.<br>Para obtener recursos adicionales y unirte a la comunidad de desarrolladores de Braze, visita el <a href='https://www.braze.com/dev-portal'>portal para desarrolladores de Braze</a>."
+guide_top_text: "Aquí es donde los desarrolladores pueden encontrar todas las integraciones disponibles con Braze. Para conectar, aprender e inspirarte con otros desarrolladores que construyen con Braze, únete a la <a href='https://www.braze.com/dev-portal'>comunidad de desarrolladores de Braze</a>."
 article_title: Guía del desarrollador de Braze
 description: "Esta página de inicio es donde los desarrolladores pueden encontrar todas las integraciones disponibles con Braze."
 

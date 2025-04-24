@@ -18,7 +18,7 @@ platform:
 
 ## キーと値のペア
 
-Braze では、キーと値のペアを使用して、コンテンツカードを介して追加のデータペイロードをユーザーデバイスに送信することができます。これらは、内部メトリクスの追跡、アプリコンテンツの更新、およびプロパティのカスタマイズに役立ちます。[ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional)を使用してキーと値のペアを追加します。 
+Braze では、キーと値のペアを使用して、コンテンツカードを介して追加のデータペイロードをユーザーデバイスに送信することができます。これらは、内部指標の追跡、アプリコンテンツの更新、プロパティのカスタマイズに役立ちます。[ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional)を使用してキーと値のペアを追加します。 
  
 {% alert note %}
 ネストされた JSON 値をキーと値のペアとして送信することは推奨しません。その代わりに、送信する前に JSON を平坦化します。

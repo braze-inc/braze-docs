@@ -101,7 +101,7 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 
 앱에 Google Tag Manager를 설치한 후 Google Tag Manager 내에서 구성한 태그를 기반으로 Braze SDK 메서드를 호출하기 위해 커스텀 태그 제공자를 추가합니다. 
 
-"클래스 경로"를 파일에 기록해 두십시오. 이는 Google Tag Manager[](https://tagmanager.google.com/) 콘솔에서 태그를 설정할 때 입력할 내용입니다.
+"클래스 경로"를 파일에 기록해 두십시오. 이는 [Google Tag Manager](https://tagmanager.google.com/) 콘솔에서 태그를 설정할 때 입력할 내용입니다.
 
 이 예제에서는 커스텀 태그 공급자를 구성하는 여러 가지 방법 중 하나를 보여줍니다. 여기서는 Google Tag Manager에서 전송된 `actionType` 키-값 페어에 따라 호출할 Braze SDK 메서드를 결정합니다.
 

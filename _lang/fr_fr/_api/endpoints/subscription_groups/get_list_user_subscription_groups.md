@@ -45,7 +45,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `phone` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Le numéro de téléphone de l’utilisateur. Doit inclure au moins un numéro de téléphone (maximum 50). |
 | `limit` | Facultatif | Entier | La limite du nombre maximum de résultats renvoyés. La `limit` par défaut (et au maximum) est de 100. |
 | `offset`  |  Facultatif | Entier | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert tip %}
 S’il existe plusieurs utilisateurs (plusieurs `external_ids`) qui partagent la même adresse e-mail, tous les utilisateurs seront renvoyés en tant qu’utilisateurs distincts (même s’ils ont la même adresse e-mail ou le même groupe d’abonnement).

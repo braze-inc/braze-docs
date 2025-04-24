@@ -31,7 +31,7 @@ Para configurar tu propio entorno, realiza los siguientes pasos:
 
 1. En la pestaña **Espacios de trabajo**, seleccione **Entornos**.
 2. Haz clic en el botón **+** más para crear un nuevo entorno.
-3. Asigne un nombre a este entorno (por ejemplo, "Solicitudes de API Braze") y añada claves para `instance_url` y `api_key` con los valores correspondientes a su \[instancia Braze][7] y \[clave de API REST Braze][8].
+3. Asigne un nombre a este entorno (por ejemplo, "Solicitudes de API Braze") y añada claves para `instance_url` y `api_key` con los valores correspondientes a su [instancia Braze][7] y [clave de API REST Braze][8].
 4. Haga clic en **Guardar**.
 
 {% alert note %}

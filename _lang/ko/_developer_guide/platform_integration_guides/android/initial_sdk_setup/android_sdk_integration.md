@@ -44,13 +44,13 @@ dependencies {
 
 다음 예제에서는 `build.gradle`에 종속성 줄을 배치할 위치를 보여줍니다. 예제에서 사용된 버전은 오래된 버전을 사용하고 있음을 유의하십시오. 최신 버전의 Braze 안드로이드 SDK를 확인하려면 Braze 안드로이드 SDK [릴리스를](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) 방문하세요.
 
-![Android 스튜디오가 "build.gradle"을(를) 표시하고 있습니다. 이 스크린샷에서는 종속성 코드가 파일 하단에 추가되어 있습니다.]({% image_buster /assets/img_archive/androidstudio2.png %})
+![파일 끝에 종속성 코드가 추가된 "build.gradle"가 표시되는 안드로이드 스튜디오]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Gradle 동기화 수행
 
 Gradle 동기화를 수행하여 프로젝트를 구축하고 [종속성 추가 사항](#add-braze-dependency)을 통합하십시오.
 
-![애플리케이션 상단에 배너와 버튼을 표시하는 Android Studio. 이와 함께 다음 메시지도 표시됩니다. 'Gradle 파일이 마지막 프로젝트 동기화 이후 변경되었습니다. IDE가 제대로 작동하려면 프로젝트 동기화가 필요할 수 있습니다. 지금 동기화."]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Android 스튜디오의 배너 "마지막 프로젝트 동기화 이후 Gradle 파일이 변경되었습니다. IDE가 제대로 작동하려면 프로젝트 동기화가 필요할 수 있습니다. 지금 동기화."]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## 2단계: braze.xml에서 Braze SDK 구성
 

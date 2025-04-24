@@ -18,7 +18,7 @@ Content QA with AI offers the following key features to enhance the quality of y
 - **Spelling and grammar check:** Automatically checks for spelling and grammar mistakes in your message. It suggests corrections and provides recommendations to improve the overall accuracy of the content.
 - **Tone analysis:** Evaluates the tone of the message to identify any potential issues. It helps ensure that the intended tone aligns with the desired communication style and helps avoid misunderstandings or unintended offenses.
 - **Offensive language detection:** Scans your message for any potentially offensive or inappropriate language, allowing you to revise your content and maintain respectful communication.
-- **Accidental content check:** Detects any inclusion of code, markup language, or test messages that might have been added unintentionally.
+- **Accidental content check:** Detects any inclusion of code, markup language, or test messages that might have been added unintentionally, including any Liquid code that didn't render for a test user.
 
 ## Accessing Content QA with AI
 

@@ -4,7 +4,7 @@ To update your Currents connector after launching, do the following:
 2. Locate and your Currents connector in the list.
 3. Select <i class="fas fa-pencil"></i>&nbsp;**Edit**.
 4. Make your changes.
-5. Click **Update Current**.
+5. Select **Update Current**.
 
 This will not stop your existing export and will begin sending events according to your new selection.
 

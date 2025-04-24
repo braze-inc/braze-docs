@@ -63,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |

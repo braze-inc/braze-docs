@@ -1,18 +1,18 @@
 ---
-nav_title: 10DLC 신청
-article_title: 10DLC 신청에 필요한 정보
+nav_title: 10DLC 애플리케이션
+article_title: 10DLC 신청을 위한 필수 정보
 alias: /10dlc_application/
 page_type: reference
-description: "이 문서에서는 10DLC를 등록하기 위해 Braze와 협력할 때 필요한 회사 및 SMS 캠페인 정보를 다룹니다."
+description: "이 기사에서는 Braze가 10DLC를 등록하기 위해 저희와 함께 작업할 경우 필요한 회사 및 SMS 캠페인 정보를 다룹니다."
 channel:
   - SMS
 ---
 
 # 10DLC 신청에 필요한 정보
 
-10DLC를 등록하기 위해 Braze의 도움을 구매한 경우, 계약에 동의한 대로 아래 이메일 주소로 모든 필수 정보를 보내야 합니다.
+Braze에서 10DLC 등록을 위해 도움을 구매하셨다면, 계약서에 명시된 대로 아래 이메일로 필요한 모든 정보를 보내주셔야 합니다.
 
-관련 스크린샷과 첨부 파일을 모두 포함하여 [smsapplications@braze.com](mailto:smsapplications@braze.com) 으로 보내주세요. 10DLC에 대해 궁금한 점이 있으면 [Braze SMS 10DLC 가이드를]({{site.baseurl}}/assets/pdf/SMS_10DLC_Guide.pdf) 확인하거나 Braze 고객 성공 관리자에게 문의하세요.
+관련된 스크린샷과 첨부파일을 포함하여 모든 것을 smsapplications@로 보내주세요. 10DLC에 대한 질문이 있으시면 Braze SMS 10DLC 가이드를 확인하거나 Braze 고객 성공 매니저에게 문의하세요.
 
 
 ## 회사 정보(10DLC)

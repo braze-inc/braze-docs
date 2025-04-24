@@ -8,7 +8,7 @@ hidden: true
 
 ## Serialización y formato de los datos
 
-El formato de los datos de destino será JSON sobre HTTPS. Los eventos se agruparán en lotes de eventos, cuyo tamaño es configurable, y se enviarán al endpoint como una matriz JSON que contiene todos los eventos. Los lotes se enviarán en el siguiente formato:
+El formato de datos de destino es JSON sobre HTTPS. Los eventos se agruparán por predeterminado en lotes de 100 eventos, y se enviarán al punto final como una matriz JSON que contiene todos los eventos. Los lotes se enviarán en el siguiente formato:
 
 `{"events": [event1, event2, event3, etc...]}`
 
@@ -313,9 +313,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 
 ## Autenticación
 
-Si es necesario, la autenticación se realizará pasando un token en la cabecera HTTP `Authorization`, mediante el esquema de autorización `Bearer`, tal y como se especifica en [el RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Esto también es automáticamente compatible con cualquier esquema de autenticación personalizado que decidamos implementar en el futuro, ya que el uso del encabezado `Authorization` nos permitiría cambiar a un esquema de autorización de par clave-valor personalizado (exclusivo de Braze) conforme a [RFC 7235](https://tools.ietf.org/html/rfc7235) (que es cómo funciona, por ejemplo, el esquema de autenticación personalizado de AWS) si así lo decidimos en el futuro.
+Si es necesario, la autenticación se realizará pasando un token en la cabecera de `Authorization` HTTP, mediante el esquema de autorización `Bearer`, tal y como se especifica en [el RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). En el futuro, Braze puede optar por utilizar el encabezado `Authorization` para implantar un esquema de autorización personalizado (único para Braze) de par clave-valor conforme [al RFC 7235](https://tools.ietf.org/html/rfc7235) (que es como funciona, por ejemplo, el esquema de autenticación personalizado de AWS).
 
-Según la RFC 6750, el token será un valor codificado en Base64 de al menos un carácter. (Aunque, obviamente, debemos investigar a nuestros socios y clientes para saber que es poco probable que elijan tokens increíblemente débiles). Una peculiaridad notable del RFC 6750 es que permite que el token contenga los siguientes caracteres además de los caracteres normales de Base64: '-', '.', '_' y '~'. Dado que el contenido exacto del token no supone absolutamente ninguna diferencia para ninguno de nuestros sistemas, no nos importará si nuestros socios deciden incluir o no estos caracteres en su token.
+Según la RFC 6750, el token será un valor codificado en Base64 de al menos un carácter. Una peculiaridad notable del RFC 6750 es que permite que el token contenga los siguientes caracteres además de los caracteres normales de Base64: '-', '.', '_' y '~'. Los socios y clientes son libres de decidir si incluyen o no estos personajes en su token. Ten en cuenta que los clientes deben proporcionar este token en formato Base64; Braze no realizará esta codificación por nuestra parte.
 
 Según el RFC 6750, la cabecera se construirá con el siguiente formato:
 
@@ -331,14 +331,13 @@ Todas las solicitudes de nuestros Conectores HTTP integrables se enviarán con u
 
 `Braze-Currents-Version: 1`
 
-La versión siempre será 1 a menos que realicemos cambios gravemente incompatibles con el pasado en la carga útil o la semántica de la solicitud. No tenemos previsto incrementar este número muy a menudo, si es que lo hacemos alguna vez. 
+La versión siempre será `1` a menos que realicemos cambios gravemente incompatibles con el pasado en la carga útil o la semántica de la solicitud. No tenemos previsto incrementar este número muy a menudo, si es que lo hacemos alguna vez.
 
-Los eventos individuales seguirán las mismas reglas de evolución que nuestros esquemas Avro existentes. Es decir, se garantizará que los campos de cada evento sean compatibles con versiones anteriores de las cargas útiles de los eventos según la definición Avro de compatibilidad con versiones anteriores, incluidas las siguientes reglas:
+Los eventos individuales seguirán las mismas reglas de evolución que nuestros esquemas S3 Avro existentes para la Exportación de Datos Currents. Es decir, se garantizará que los campos de cada evento sean compatibles con versiones anteriores de las cargas útiles de los eventos según la definición Avro de compatibilidad con versiones anteriores, incluidas las siguientes reglas:
 
 - Se garantiza que los campos de eventos específicos tengan siempre el mismo tipo de datos a lo largo del tiempo.
 - Cualquier nuevo campo que se añada a la carga útil con el tiempo debe ser considerado opcional por todas las partes.
 - Los campos obligatorios nunca se eliminarán.
-  - Lo que se considere "obligatorio" se especificará mediante documentación que probablemente querremos autogenerar a partir de nuestros esquemas Avro como fuente central de verdad. Para ello tendremos que anotar los campos del esquema Avro con algunos metadatos, y un script especial que pueda leer esos metadatos para generar la documentación.
 
 ## Tratamiento de errores y mecanismo de reintento
 
@@ -356,7 +355,7 @@ Los siguientes códigos de estado HTTP serán reconocidos por nuestro cliente co
 - **400** \- Error del lado del cliente
   - Nuestro conector de alguna manera envió al menos un evento malformado. Si esto ocurre, los datos del evento se dividirán en lotes de tamaño 1 y se volverán a enviar. Todos los eventos de estos lotes de tamaño 1 que reciban una respuesta HTTP 400 adicional se eliminarán de forma permanente. Animamos a nuestros socios y/o clientes a que nos informen si detectan que esto está ocurriendo.<br><br>
 - **401** (No autorizado), **403** (Prohibido), **404**
-  - El conector se ha configurado con credenciales no válidas. La tarea del conector detendrá el envío y se marcará como "Fallida". Los datos de los eventos se reenviarán tras un retraso de entre 2 y 5 minutos (de esto se encarga el Reiniciador de Tareas de Conexión). Si el cliente no resuelve este problema en un plazo de 48 horas, se eliminarán los datos del evento.<br><br>
+  - El conector se ha configurado con credenciales no válidas. Los datos del suceso se reenviarán tras un retraso de entre 2 y 5 minutos. Si el cliente no resuelve este problema en un plazo de 48 horas, se eliminarán los datos del evento.<br><br>
 - **413** \- Carga útil demasiado grande
   - Los datos del evento se dividirán en lotes más pequeños y se volverán a enviar.<br><br>
 - **429** \- Demasiadas peticiones

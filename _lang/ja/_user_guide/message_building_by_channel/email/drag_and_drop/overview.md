@@ -12,7 +12,7 @@ tool:
 
 # ドラッグ＆ドロップでメールを作成する
 
-> ドラッグ＆ドロップエディターを使えば、HTMLを使わずに、キャンペーンやキャンバス用にパーソナライズされたメールを作成することができる。
+> ドラッグ＆ドロップエディターを使用すると、キャンペーンまたはキャンバスのいずれか用に、完全にカスタムでパーソナライズされたメールメッセージを作成できます。この際に、HTML を使用してメール本文を作成する必要は一切ありません。
 
 ## 編集者について
 
@@ -28,7 +28,7 @@ tool:
             <img src="{% image_buster /assets/img/dnd/dnd_content.png %}" alt="行」タブには、メールレイアウトのためのさまざまな構造の組み合わせが含まれている。" style="max-width: 100%; height: auto;">
         </td>
         <td style="text-align: center;">
-            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="コンテンツ」タブには、基本ブロック、メディア、アドバンスが含まれる。" style="max-width: 100%; height: auto;">
+            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="BASIC BLOCKS、MEDIA、ADVANCED が表示されている「コンテンツ」タブ" style="max-width: 100%; height: auto;">
         </td>
     </tr>
 </table>
@@ -71,7 +71,7 @@ tool:
 
 メールメッセージをキャンペーンとキャンバスのどちらで送るべきか迷っている？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
-メッセージを作成する場所を選んだら、ドラッグ＆ドロップでメールを作成するステップに入ろう。
+メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでメールを作成します。
 
 ### ステップ 1: テンプレートを選択する
 
@@ -87,19 +87,15 @@ tool:
 
 また、**「テンプレート」**セクションからすべてのテンプレートにアクセスすることもできる。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、テンプレートは「**テンプレート＆メディア**」の下にある。
-{% endalert %}
-
 テンプレートを選択すると、[**メールのバリアント**] の下に送信情報とメール本文を含むメールの概要が表示されます。 
 
-次に、**Eメール本文の編集を**選択し、ドラッグ＆ドロップエディターでメールの構造を設計し始める。 
+[**メール本文を編集**] を選択して、ドラッグ＆ドロップエディターでメール構造のデザインを開始します。 
 
 ![メールのバリアント」セクションには、メール本文の例が掲載されている。][8]
 
 ### ステップ2:メールの作成
 
-ドラッグ＆ドロップによる編集は3つのセクションに分かれている：**送信設定**、**コンテンツ**、**プレビューとテスト**。メール本文の作成は、**コンテンツ**セクションで行われる。Eメールを作成する前に、Eメール作成の指針となる重要な要素を理解することが重要である。レビューが必要な場合は、[編集者についてを](#about-the-editor)参照のこと。
+ドラッグ＆ドロップによる編集は3つのセクションに分かれている：**送信設定**、**コンテンツ**、**プレビューとテスト**。メール本文の作成は、**コンテンツ**セクションで行われる。Eメールを作成する前に、Eメール作成の指針となる重要な要素を理解することが重要である。レビューが必要な場合は、「[編集者について](#about-the-editor)」を参照してください。
 
 準備ができたら、ドラッグ＆ドロップのコンテンツブロックを使ってメールを作成しよう。
 
@@ -115,7 +111,7 @@ tool:
 メールを作成する際、デスクトップとモバイルのビューを切り替えて、ユーザーグループに対してどのようにメールメッセージが表示されるかをプレビューすることができる。これにより、コンテンツがレスポンシブであることが確認され、随時必要な調整ができます。
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![[コピーライター] ボタン。ドラッグ＆ドロップエディターで、 [コンテンツ] パネルの [スタイルの設定] の横にあります。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -165,7 +161,7 @@ tool:
 
 #### 受信トレイビジョンの使用
 
-受信トレイビジョンを使用すると、さまざまなメールクライアントやモバイルデバイスでの表示でメールキャンペーンを確認できます。Inbox Visionを使用してメールメッセージをテストするには、**プレビュー＆テスト**セクションで**Inbox Visionを**選択し、**Inbox Visionの実行を**選択する。
+受信トレイビジョンを使用すると、さまざまなメールクライアントやモバイルデバイスでの表示でメールキャンペーンを確認できます。受信トレイビジョンを使用してメールメッセージをテストするには、[**プレビュー後にテスト**] セクションで [**受信トレイビジョン**] を選択し、[**受信トレイビジョンの実行**] を選択します。
 
 {% alert tip %}
 メールメッセージの背景画像は、画像と画像の間に白い線や途切れが生じることがあるため、メールメッセージの細かい部分をテストして確認することが重要である。
@@ -232,6 +228,14 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 画像ソース属性に Liquid を含めることで、メールメッセージにダイナミックな画像を含めることができます。例えば、静止画像の代わりに、{% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} を画像 URL として挿入することで、ユーザーの名を画像に含めることができます。これは、各ユーザーに応じたメールのパーソナライゼーションに役立ちます。
 
+### テキストの方向を変更する
+
+メッセージを作成するときに、それぞれの [**テキストの方向**] ボタンを選択して、テキストの方向を左から右または右から左に切り替えることができます。このオプションは、アラビア語やヘブライ語などのメッセージを作成するときに使うことができる。
+
+![ドラッグ＆ドロップでテキストの配置を右から左、または左から右に切り替えるボタンが付いたメールエディタメニュー。][1]{: style="max-width:50%;"}
+
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
+
 ### リンクにHTML属性を追加する
 
 ![アトリビューション」セクションで、リンクの属性「clicktracking」がオフになっている。][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -248,7 +252,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 * **SendGrid:** `universal = "true"`
 * **SparkPost：** `data-msys-sublink = "open-in-app"` ([カスタムサブパスを](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths)設定する必要がある)
 
-ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/help/help_articles/email/universal_links/)を参照してください。
+ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)を参照してください。
 
 あるいは、[Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) や[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) などのアトリビューションパートナーのいずれかと連携して、ユニバーサルリンクを管理することもできます。
 
@@ -265,3 +269,4 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

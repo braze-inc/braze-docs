@@ -19,6 +19,8 @@ Braze allows you to control marketing pressure by rate limiting your campaigns, 
 1. [**User-centric rate limiting:**](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
 2. [**Delivery speed rate limiting:**](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
 
+Braze will try to evenly distribute the message sends throughout the minute, but can't guarantee this. For example, if you have a campaign with a rate limit of 5,000 messages per minute, we'll try to distribute the 5,000 requests evenly through the minute (about 84 messages per second), but there may be some variation in the per-second rate.
+
 ### User-centric rate limiting
 
 As you create more segments, there are going to be cases where the membership of those segments overlaps. If you're sending out campaigns to those segments, you want to be sure that you are not messaging your users too often. If a user receives too many messages within a short time period, they will feel over-encumbered and either turn off push notifications or uninstall your app.
@@ -86,6 +88,8 @@ As another example, if you are trying to send out 75,000 messages with a 10,000-
 
 Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute. This could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute. 
 
+Also, note that the rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
+
 {% alert important %}
 Be wary of delaying time-sensitive messages with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
 {% endalert %}
@@ -113,9 +117,9 @@ When sending a Canvas with a speed rate limit, the rate limit is shared between 
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content Retry][19] feature is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content retry][19] is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
 
-Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the “back of the queue” and add an additional minute, if necessary, to the total minutes it would take to send your message.
+Instead of trying to make up for the delay and send the remaining 6,000 messages in the second minute or add them to the 10,000 that are already set to send, Braze will move those 6,000 messages to the “back of the queue” and add a minute, if necessary, to the total minutes it would take to send your message.
 
 | Minute | No Failure | 6,000 Failure in Minute 1 |
 |--------|------------|---------------------------|
@@ -130,6 +134,8 @@ Instead of attempting to make up for the delay and send the remaining 4,000 mess
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+Connected Content requests are not rate limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
+
 ## About frequency capping
 
 As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing "spammy" or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
@@ -138,21 +144,21 @@ As your user base continues to grow and your messaging scales to include lifecyc
 
 Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace from **Settings** > **Frequency Capping Rules**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is called **Global Message Settings** and is located under **Engagement**.
-{% endalert %}
-
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, or any of those five.
 - How many times each user should receive a campaign or Canvas component sends from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sends by [tag](#frequency-capping-by-tag) within a certain time frame.
 
-This time frame can be measured in minutes, days, weeks (seven days), or months, with a maximum duration of 30 days.
+This time frame can be measured in minutes, days, or weeks (seven days), with a maximum duration of 30 days.
 
 Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
 ![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.][14]
+
+#### Behavior when users are frequency capped on a Canvas step
+
+If a Canvas user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
 
 ### Delivery rules
 

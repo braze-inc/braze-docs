@@ -33,7 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `start_date` | Opcional<br>(ver nota) | Cadena en formato AAAA-MM-DD| Fecha de inicio del rango para recuperar rebotes duros, debe ser anterior a `end_date`. La API lo considera medianoche en hora UTC. |
 | `end_date` | Opcional<br>(ver nota) | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar rebotes duros. La API lo considera medianoche en hora UTC. |
 | `limit` | Opcional | Entero | Campo opcional para limitar el número de resultados devueltos. De forma predeterminada, 100, el máximo es 500. |
-| `offset` | Opcional | Entero | Punto de inicio opcional de la lista desde el que recuperar. |
+| `offset` | Opcional | Entero | Punto de inicio opcional de la lista a recuperar. |
 | `email` | Opcional<br>(ver nota) | Cadena | Si se proporciona, devolveremos si el usuario es un rebote duro o no. Comprueba que las cadenas de correo electrónico tienen el formato adecuado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

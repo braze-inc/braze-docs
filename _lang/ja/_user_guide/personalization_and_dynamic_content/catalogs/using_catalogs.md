@@ -41,6 +41,15 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 > 「Tales」をわずか 7.49 ドルでゲットしよう!
 
+## カタログのエクスポート
+
+ダッシュボードからカタログをエクスポートするには、次の2つの方法があります。 
+
+- **Catalogs** セクションのカタログ行にカーソルを合わせます。次に、**Export catalog**ボタンを選択します。
+- カタログを選択します。次に、カタログの**Preview**タブで**Export catalog**ボタンを選択します。
+
+エクスポートを開始すると、CSV ファイルをダウンロードするための電子メールが送信されます。このファイルを取得するのに最大4 時間かかります。
+
 ## その他の使用例
 
 ### 複数の項目
@@ -62,7 +71,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 これは以下のように返される：
 
-> 究極のトリオ「Tales」、「Teslagrad」、「Acaratus」を今すぐゲット!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 さらにパーソナライズされたメッセージングのために、データグループを作成するには、[セレクション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)を参照してください。
@@ -72,24 +81,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 カタログ項目を使って条件文を作ることができる。例えば、キャンペーンで特定の項目が選択されたときに、特定メッセージの表示をトリガーできます。
 
-これを行うには、次のような形式で Liquid の `if` ステートメントを使用します。
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-`if` ステートメントを使用する前に、カタログリストを宣言する必要があることに注意してください。上の例では、`Test-list` がカタログ・リストである。
-
-#### ユースケース:Liquid の `if` スニペット
-
-このシナリオでは、カスタム属性`venue_name` の文字数が10文字以上か10文字未満かで、異なるメッセージが表示される。`venue_name` が `blank` の場合、何も表示されません。
+これを行うには、次の例のように、Liquid `if` ステートメントを使用します。
 
 {% raw %}
 ```liquid
@@ -103,6 +95,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+この例では、カスタム属性`venue_name` の文字数が10 文字を超えているか、10 文字未満である場合、異なるメッセージが表示されます。`venue_name` が `blank` の場合、何も表示されません。 
+
+`if` ステートメントを使用する前に、カタログリストと、該当する場合はセレクションを宣言する必要があることに注意してください。この例では、`item-list` がカタログリストで、`selections` が選択名です。
 
 ### 画像の使用 {#using-images}
 
@@ -138,6 +134,10 @@ Liquid がレンダリングされると、次のように表示されます。
     ]
 }
 ```
+
+{% alert note %}
+カタログ内のJSONオブジェクトは、APIを介してのみ取り込まれます。CSV ファイルを使用してJSON オブジェクトをアップロードすることはできません。
+{% endalert %}
 
 Liquid テンプレートを使用することで、ウィッシュリストから ID をダイナミックに取り出し、メッセージで使用できます。そのためには、[変数][10] をカスタム属性に割り当て、**パーソナライゼーションの追加**モーダルを使用して、配列から特定のアイテムを取り出す。
 
@@ -175,13 +175,9 @@ Liquid ロジックを手動で作成することもできます。ただし、�
 
 #### リキッドを含むカタログアイテムのテンプレート化
 
-[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) と同様に、Liquid タグで`:rerender` フラグを使用してカタログアイテムのLiquid コンテンツをレンダリングする必要があります。`:rerender` フラグはレベル1の深さしかないことに注意してください。つまり、階層化 Liquid タグ 呼び出しには適用されません。
+[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)と同様に、Liquid タグで `:rerender` フラグを使用してカタログアイテムの Liquid コンテンツをレンダリングする必要があります。`:rerender` フラグはレベル1の深さしかないことに注意してください。つまり、階層化 Liquid タグ 呼び出しには適用されません。
 
-{% alert important %}
-Liquid を含むカタログアイテムのテンプレート化は、早期アクセス段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
-{% endalert %}
-
-カタログアイテムにユーザープロファイルフィールド(リキッドパーソナライゼーションタグ内)が含まれている場合、これらの値は、リキッドを適切にレンダリングするために、メッセージの前とテンプレートの前にリキッドで定義する必要があります。`:rerender` フラグが指定されていない場合、生のLiquid コンテンツがレンダリングされます。
+カタログアイテムにユーザープロファイルフィールド (Liquid パーソナライゼーションタグ内) が含まれている場合は、Liquid を適切にレンダリングするために、テンプレート作成の前にメッセージでこれらの値を Liquid で事前に定義する必要があります。`:rerender` フラグが指定されていない場合、生の Liquid コンテンツがレンダリングされます。
 
 たとえば、「Messages」という名前のカタログに、この Liquid を含むアイテムがあるとします。
 

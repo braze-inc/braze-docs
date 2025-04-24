@@ -18,7 +18,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Editar 
 
 > Use este endpoint para editar vários itens existentes em seu catálogo.
 
-Cada solicitação pode suportar até 50 itens. Este endpoint é assíncrono.
+Cada solicitação pode suportar até 50 itens. Esse ponto de extremidade é assíncrono.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 
@@ -85,16 +85,16 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 ```
 
 {% alert note %}
-Os operadores `$add` e `$remove` são aplicáveis apenas a campos do tipo array e são suportados apenas por endpoints PATCH.
+Os operadores `$add` e `$remove` são aplicáveis somente a campos do tipo matriz e são compatíveis apenas com os pontos de extremidade PATCH.
 {% endalert %}
 
 ## Resposta
 
-Existem três respostas de código de status para este endpoint: `202`, `400` e `404`.
+Há três respostas de código de status para esse endpoint: `202`, `400` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 
-O código de status `202` pode retornar o seguinte corpo de resposta.
+O código de status `202` poderia retornar o seguinte corpo de resposta.
 
 ```json
 {
@@ -104,7 +104,7 @@ O código de status `202` pode retornar o seguinte corpo de resposta.
 
 ### Exemplo de resposta de erro
 
-O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [Resolução de problemas](#troubleshooting) para saber mais sobre os erros que você pode encontrar.
+O código de status `400` poderia retornar o seguinte corpo de resposta. Consulte [Solução de problemas](#troubleshooting) para obter mais informações sobre os erros que você pode encontrar.
 
 ```json
 {
@@ -126,23 +126,23 @@ O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [
 
 ## Solução de problemas
 
-A tabela a seguir lista os possíveis erros retornados e suas etapas de solução de problemas associadas.
+A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas.
 
 | Erro | Solução de problemas |
 | --- | --- |
 | `catalog-not-found` | Verifique se o nome do catálogo é válido. |
-| `ids-too-large` | IDs de itens não podem ter mais de 250 caracteres. |
-| `ids-not-strings` | Os IDs dos itens devem ser do tipo string. |
-| `ids-not-unique` | Os IDs dos itens devem ser únicos na solicitação. |
+| `ids-too-large` | Os IDs de item não podem ter mais de 250 caracteres. |
+| `ids-not-strings` | As IDs de item devem ser do tipo string. |
+| `ids-not-unique` | As IDs de item devem ser exclusivas na solicitação. |
 | `invalid-ids` | Os IDs de itens só podem conter letras, números, hifens e underscores. |
-| `invalid-fields` | Confirme que todos os campos que você está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo de ID mencionado no erro. |
-| `invalid-keys-in-value-object` | As chaves do objeto de item não podem incluir `.` ou `$`. |
-| `items-missing-ids` | Existem itens que não possuem IDs de itens. Verifique se cada item tem um ID de item. |
-| `item-array-invalid` | `items` deve ser um array de objetos. |
+| `invalid-fields` | Confirme se todos os campos que está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo ID mencionado no erro. |
+| `invalid-keys-in-value-object` | As chaves de objeto do item não podem incluir `.` ou `$`. |
+| `items-missing-ids` | Alguns itens não têm IDs de item. Verifique se cada item tem um ID de item. |
+| `item-array-invalid` | `items` deve ser um vetor de objetos. |
 | `items-too-large` | Os valores dos itens não podem exceder 5.000 caracteres. |
-| `request-includes-too-many-items` | Sua solicitação tem muitos itens. O limite de itens por solicitação é 50. |
-| `too-deep-nesting-in-value-object` | Objetos de item não podem ter mais de 50 níveis de aninhamento. |
-| `unable-to-coerce-value` | Tipos de itens não podem ser convertidos. |
+| `request-includes-too-many-items` | Sua solicitação tem muitos itens. O limite de itens por solicitação é de 50. |
+| `too-deep-nesting-in-value-object` | Os objetos de item não podem ter mais de 50 níveis de aninhamento. |
+| `unable-to-coerce-value` | Os tipos de itens não podem ser convertidos. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

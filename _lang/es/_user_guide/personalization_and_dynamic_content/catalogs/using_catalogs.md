@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 El resultado es el siguiente:
 
-> ¡Consigue hoy mismo el trío definitivo Tales, Teslagrad y Acaratus!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Echa un vistazo a [las selecciones]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para crear grupos de datos y recibir mensajes más personalizados.
@@ -72,24 +72,7 @@ Echa un vistazo a [las selecciones]({{site.baseurl}}/user_guide/personalization_
 
 Puede utilizar elementos de catálogo para crear sentencias condicionales. Por ejemplo, puede hacer que se muestre un mensaje determinado cuando se selecciona un artículo específico en su campaña.
 
-Para ello, utilizarás una declaración Liquid `if` con un formato como este:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Tenga en cuenta que debe declarar la lista de catálogos antes de utilizar las sentencias `if`. En el ejemplo anterior, `Test-list` es la lista del catálogo.
-
-#### Caso de uso: Fragmento de código de Liquid `if`
-
-En este caso, se mostrarán mensajes diferentes si el atributo personalizado `venue_name` tiene más de 10 caracteres o menos de 10 caracteres. Si `venue_name` es `blank`, no se mostrará nada.
+Para ello, utilizarás una declaración Liquid `if`, como en este ejemplo:
 
 {% raw %}
 ```liquid
@@ -103,6 +86,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+En este ejemplo, se mostrarán mensajes diferentes si el atributo personalizado `venue_name` tiene más de 10 caracteres o menos de 10 caracteres. Si `venue_name` es `blank`, no se mostrará nada. 
+
+Ten en cuenta que debes declarar la lista de catálogos y, si procede, la selección antes de utilizar las declaraciones `if`. En el ejemplo, `item-list` es la lista del catálogo, y `selections` es el nombre de la selección.
 
 ### Utilizar imágenes {#using-images}
 
@@ -138,6 +125,10 @@ También puede utilizar plantillas para extraer dinámicamente elementos del cat
     ]
 }
 ```
+
+{% alert note %}
+Los objetos JSON de los catálogos sólo se ingieren a través de la API. No puedes subir un objeto JSON utilizando un archivo CSV.
+{% endalert %}
 
 Utilizando la plantilla Liquid, puede extraer dinámicamente los ID de la lista de deseos y utilizarlos en su mensaje. Para ello, [asigne una variable][10] a su atributo personalizado y, a continuación, utilice el modal **Añadir personalización** para extraer un elemento específico de la matriz.
 
@@ -176,10 +167,6 @@ Actualmente, Liquid no puede utilizarse dentro de los catálogos. Si la personal
 #### Elementos del catálogo de plantillas, incluido Liquid
 
 De forma similar al [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), debes utilizar la bandera `:rerender` en una etiqueta de Liquid para representar el contenido Liquid de un elemento del catálogo. Ten en cuenta que la flag `:rerender` solo tiene un nivel de profundidad, lo que significa que no se aplicará a ninguna llamada anidada a la etiqueta de Liquid.
-
-{% alert important %}
-La plantilla de elementos de catálogo que incluye Liquid está en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
 
 Si un elemento del catálogo contiene campos de perfil de usuario (dentro de una etiqueta de personalización de Liquid), estos valores deben definirse en Liquid antes en el mensaje y antes de la plantilla para que Liquid se muestre correctamente. Si no se indica la bandera `:rerender`, se mostrará el contenido sin procesar de Liquid.
 

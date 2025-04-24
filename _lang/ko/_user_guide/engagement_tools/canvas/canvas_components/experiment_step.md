@@ -64,14 +64,14 @@ tool: Canvas
 경로와 그 하위 단계는 생성된 후에는 캔버스에서 제거할 수 없다는 점에 유의하세요. 그러나 시작하면 경로 전반에 걸친 오디언스 분포를 원하는 대로 수정할 수 있습니다. 예를 들어, 캔버스를 시작한 지 하루가 지난 후 분석 결과 한 경로가 다른 경로보다 우수하다고 결론을 내린 경우 해당 경로를 100%로 설정하고 다른 경로를 0%로 설정할 수 있습니다. 또는 필요에 따라 여러 경로로 사용자를 계속 보낼 수도 있습니다.
 
 {% alert note %}
-캔버스가 시작된 후에는 실험 경로를 편집할 수 없습니다. 실험이 전송 중일 때 메시지를 수정하면 실험이 쓸모없어지고 실험 결과가 모두 제거됩니다. 또한 실험 경로 단계가 있는 이미 활성화된 캔버스에 대해서는 개인화된 경로 또는 위닝 경로를 켤 수 없습니다.<br><br> 자세한 내용은 [출시 후 캔버스 편집하기]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/)를 참조하세요.
+캔버스가 시작된 후에는 실험 경로를 편집할 수 없습니다. 실험이 전송 중일 때 메시지를 수정하면 실험이 쓸모없어지고 실험 결과가 모두 제거됩니다. 또한 실험 경로 단계가 있는 이미 활성화된 캔버스에 대해서는 개인화된 경로 또는 위닝 경로를 켤 수 없습니다.<br><br> For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## 성과 추적
 
 **캔버스 애널리틱스** 페이지에서 실험 경로를 클릭하여 **변형 분석** 탭과 동일한 [세부 테이블을]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) 열어 경로 전반의 세부 성과 및 전환 통계를 비교합니다. 또한 CSV를 통해 테이블을 내보내고 선택한 경로 또는 컨트롤을 기준으로 관심 있는 지표의 변경 비율을 비교할 수도 있습니다.
 
-각 경로의 각 단계는 다른 캔버스 단계와 마찬가지로 [캔버스 애널리틱스]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) 보기에 통계를 표시합니다. 그러나 개별 단계에 대한 분석은 실험의 구조를 **고려하지 않는다는** 점에 유의하세요. 실험 단계의 분석은 여러 경로를 비교하는 데 사용해야 합니다.
+Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. 그러나 개별 단계의 분석은 실험의 구조를 **고려하지 않는다는** 점에 유의하세요. 실험 단계의 분석은 여러 경로를 비교하는 데 사용해야 합니다.
 
 ### 우승 경로 및 개인화된 경로 성과
 

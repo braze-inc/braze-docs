@@ -68,7 +68,7 @@ These are the least intrusive message type, though they can be more or less atte
 
 ## Web
 
-This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 {% details Email capture message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.

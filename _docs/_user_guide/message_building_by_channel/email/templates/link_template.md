@@ -12,29 +12,30 @@ channel:
 
 # Link templates
 
-> Link templates allow you to append parameters or prepend URLs to all links in an email message.
-
-Link templates are most often used in these following use cases:
-
-1. Appending Google Analytics query parameters to all links in a given email message
-2. Prepending a URL to all links in a given email message
+> With link templates, you can create dynamic and reusable links for your email campaigns by appending parameters or prepending URLs. This can create consistency in the URLs across your campaigns and messages. 
 
 {% alert note %}
 Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, reach out to your account manager to turn on the feature.
 {% endalert %}
 
+## How it works
+
+Link templates are most often used in these following use cases:
+
+- Appending Google Analytics query parameters to all links in a given email message
+- Prepending a URL to all links in a given email message
+
+Let's say you're running a promotional email campaign for a new product launch. You can use a link template that directs users to the product page and personalize the link to include your user's name or a specific promotional code. This can allow you to track how many users have clicked on the link and have made a purchase. This way, you can create consistency across your links and better track your analytics.
+
 ## Creating a link template
 
-![][11]{: style="float:right;max-width:20%;"}
-
-You can create an unlimited number of link templates to support your various needs. To create a link template:
+You can create an unlimited number of link templates to support your various needs. To create a link template, do the following:
 
 1. Go to **Templates** > **Email Link Templates**. 
-2. Click **Create Link Template**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
-{% endalert %}
+2. Select **Create email link template**.
+3. Give your link template a name.
+4. (optional) Add a description, team, or tag to add details about the link template.
+5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
 
 There are two types of link templates you can create:
 
@@ -45,17 +46,23 @@ When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalizati
 
 ### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
 
-If you want to add a string or URL before the links in your email message, create a new link template and set the **Template Position** to **Before URL**. Next, enter a string that will always get prepended to your URL. 
+To add a string or URL before the links in your email message, do the following:
 
-A preview section is provided to give you an example of the insertion process.
+1. Create a new link template.
+2. Set the **Template Position** to **Before URL**. 
+3. Enter a string that will always get prepended to your URL. 
+
+The **Template preview** is provided to give you an example of how the link template will be inserted before a URL.
 
 ![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### Append: Create a link template that inserts after a URL {#append-link-template}
 
-If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**. Next, enter query parameters (`value=something`) to the end of each URL.
+If you want to add query parameters after a URL in your email message:
 
-You can have multiple parameters appended to the end of a URL.
+1. Create a new link template.
+2. Set the **Template Position** to **After URL**. 
+3. Enter the query parameters (`value=example`) to the end of each URL. You can have multiple parameters appended to the end of a URL.
 
 ![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
@@ -77,11 +84,11 @@ To access the **Link Management** tab in the updated HTML email editor, you must
 Link templates aren't applied to plain text. This means Currents may show clicks that don't include the parameters from the link templates as those clicks may come from the plain text version of the email.
 {% endalert %}
 
-As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added.
+As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added. If existing links within an email already have a link template added, newly added links will also have the link template added by default.
 
 ## Managing link templates
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) link templates. Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) link templates. Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 Archiving templates is not currently available for link templates.

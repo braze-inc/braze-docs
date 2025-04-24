@@ -34,7 +34,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la campagne.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `campaign_id` pour les campagnes API sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et la page **Détails de la campagne** dans votre tableau de bord, ou vous pouvez utiliser l'[endpoint Liste des campagnes.]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) |
 | `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
-| `ending_at` | Facultatif | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `ending_at` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande 

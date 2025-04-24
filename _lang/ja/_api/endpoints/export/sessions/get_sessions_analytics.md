@@ -28,7 +28,7 @@ description: "この記事では、「アプリセッション分析の時間ご
 
 ## リクエストパラメーター
 
-| パラメータ| 必須 | データ型 | 説明 |
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
 | `unit` | オプション | 文字列 | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

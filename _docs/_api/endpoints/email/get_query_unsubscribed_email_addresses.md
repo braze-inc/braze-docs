@@ -14,7 +14,7 @@ description: "This article outlines the details about the Retrieve list of or qu
 /email/unsubscribes
 {% endapimethod %}
 
-> Use this endpoint to return the latest emails that have unsubscribed during the time period from `start_date` to `end_date`. For a full subscription state history, use [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) to track this data.
+> Use this endpoint to return the latest emails that have unsubscribed during the time period from `start_date` to `end_date`. For a full subscription state history, use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track this data.
 
 You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.
 

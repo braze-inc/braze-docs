@@ -42,15 +42,15 @@ dependencies {
 }
 ```
 
-El siguiente ejemplo muestra dónde colocar la línea de dependencia en tu `build.gradle`. Ten en cuenta que la versión utilizada en el ejemplo es una versión antigua. Visita [Lanzamientos del SDK para Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) de [Braze](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) para obtener la versión más actualizada del SDK para Android de Braze.
+El siguiente ejemplo muestra dónde colocar la línea de dependencia en tu `build.gradle`. Ten en cuenta que la versión utilizada en el ejemplo es una versión antigua. Visita [Lanzamientos del SDK para Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) de Braze para obtener la versión más actualizada del SDK para Android de Braze.
 
-![Android studio muestra el "build.gradle". En esta captura de pantalla, el código de dependencia se añade al final del archivo.]({% image_buster /assets/img_archive/androidstudio2.png %})
+![Android studio mostrando el "build.gradle", con el código de dependencia añadido al final del archivo.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Realiza la sincronización de Gradle
 
 Asegúrate de realizar una sincronización Gradle para construir tu proyecto e incorporar las [adiciones de dependencia](#add-braze-dependency).
 
-![Android studio muestra un banner y un botón en la parte superior de la aplicación que dice: "Los archivos Gradle han cambiado desde la última sincronización del proyecto. Puede ser necesaria una sincronización del proyecto para que el IDE funcione correctamente. Sincroniza ahora."]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Un banner en Android Studio que dice: "Los archivos Gradle han cambiado desde la última sincronización del proyecto. Puede ser necesaria una sincronización del proyecto para que el IDE funcione correctamente. Sincroniza ahora."]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## Paso 2: Configura el SDK de Braze en braze.xml
 

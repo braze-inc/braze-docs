@@ -16,10 +16,6 @@ search_rank: 3
 
 Go to **Audience** > **Segments**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Segments** under **Engagement**.
-{% endalert %}
-
 ## Step 2: Name your segment
 
 Select **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will help you identify the segment when you want to target it for your campaigns or Canvases. Vague segment titles can be confusing.
@@ -29,7 +25,7 @@ Optionally, you can do the following:
 - Add a [team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to your segment.
 - Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for further organization.
 
-![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
+![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][5]{: style="max-width:80%;"}
 
 ## Step 3: Choose your app or platform
 
@@ -37,7 +33,7 @@ Choose which apps or platforms you'd like to target by selecting **Users from al
 
 For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]{: style="max-width:70%;"}
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][2]{: style="max-width:80%;"}
 
 ## Step 4: Add filters to your segment
 
@@ -51,7 +47,7 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**. Edit the filter group name by selecting the icon that appears when you hover next to it.
 
-![Filter group with an editing icon next to its name.][14]{: style="max-width:70%;"}
+![Filter group with an editing icon next to its name.][14]
 
 Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
 
@@ -77,10 +73,12 @@ Depending on the specific filter you select, you will have different operators f
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segmenter filter groups with the AND operator.][9]{: style="max-width:70%;"}
+![Segmenter filter groups with the AND operator.][9]
 
 {% alert important %}
-Segments already using the **Segment Membership** filter cannot be further included or nested into other segments.
+Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
+
+Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
 {% endalert %}
 
 #### Exclusion groups (optional) {#exclusion}
@@ -93,13 +91,13 @@ Create an exclusion group by adding filters like you would for filter groups. Th
 
 Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
 
-![An exclusion group with two filters.][12]{: style="max-width:70%;"}
+![An exclusion group with two filters.][12]
 
 #### Testing segments
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section.
 
-![User Lookup section with a search field.][6]{: style="max-width:80%;"}
+![User Lookup section with a search field.][6]
 
 User lookup is available when:
 - Creating a segment
@@ -108,11 +106,11 @@ User lookup is available when:
 
 When a user matches the segment, filter, and app criteria, an alert will state so.
 
-![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:80%;"}
+![A user lookup of "testuser" triggers an alert stating, "testuser matches all of the segments, filters, and apps.][7]
 
 When a user doesn’t match part or all of the segment, filter, or app criteria, the missing criteria is listed for troubleshooting purposes.
 
-![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:80%;"}
+![A user lookup with an alert stating, "test1 does not match the following targeting criteria:" and displays missing criteria.][8]
 
 #### Single-user segments
 
@@ -122,43 +120,13 @@ However, the segmentation stats or preview may not show this individual user bec
 
 Braze has testing filters to target specific users by user ID or email address.
 
-### Step 5: Save your segment
+## Step 5: Save your segment
 
 Select **Save**. Now you're ready to start sending messages to your users!
 
-## Segment membership calculation {#segment-membership-calculation}
+## Measuring segment size
 
-Braze updates the user's segment membership as data is sent back to our servers and processed, typically instantaneously. A user's segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
-
-### Total reachable users calculation
-
-Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel.
-
-![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][10]
-
-For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
-
-A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable via those communication channels.
-
-### Statistics for segment size
-
-Braze provides the following statistics on segment size. All estimated statistics are within 1% above or below the actual value, and the exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
-
-#### Filter statistics
-
-For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
-
-![A filter group with a filter for a gender that isn't unknown.][4]{: style="max-width:80%;"}
-
-#### Segment statistics
-
-For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by selecting **Calculate exact statistics**.
-
-Note that:
-- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
-- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+To learn about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Archiving segments
 
@@ -182,7 +150,7 @@ When segmenting with device-dependent filters (device model, device OS, and app 
 
 You can specify that only one push notification is sent to each user. When [composing your message]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
 
-![][13]{: style="max-width:60%;"}
+!["Addional settings" with a checkbox for only sending to the user's last used device.][13]{: style="max-width:60%;"}
 
 ### Considerations
 
@@ -195,13 +163,11 @@ You can specify that only one push notification is sent to each user. When [comp
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}

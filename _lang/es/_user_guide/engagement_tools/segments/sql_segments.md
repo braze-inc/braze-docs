@@ -89,7 +89,7 @@ Para utilizar el generador de SQL con IA, haz lo siguiente:
 - Usuarios que realizaron menos de cinco compras en el último año
 
 ### Consejos
-- Familiarícese con las [tablas de datos Snowflake]({{site.baseurl}}/sql_segments_tables/) disponibles. Pedir datos que no existen en estas tablas puede hacer que ChatGPT invente una tabla falsa.
+- Familiarícese con las [tablas de datos Snowflake]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) disponibles. Pedir datos que no existen en estas tablas puede hacer que ChatGPT invente una tabla falsa.
 - Familiarízate con las [reglas de escritura SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) para esta característica. El incumplimiento de estas normas provocará un error. Por ejemplo, tu código SQL debe seleccionar la columna `user_id`. Empezar tu pregunta con "usuarios que" puede ayudar.
 - Puedes enviar hasta 20 consultas por minuto con el generador de SQL con IA.
 
@@ -107,7 +107,7 @@ Cuando la extensión termine de procesarse, puede [crear un segmento][4] utiliza
 
 ## Escribir SQL
 
-Su consulta SQL debe escribirse utilizando [la sintaxis Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte la [referencia de la tabla]({{site.baseurl}}/sql_segments_tables/) para obtener una lista completa de las tablas y columnas disponibles para su consulta.
+Su consulta SQL debe escribirse utilizando [la sintaxis Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte la [referencia de la tabla]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) para obtener una lista completa de las tablas y columnas disponibles para su consulta.
 
 {% alert important %}
 Nota que las tablas disponibles para consulta solo contienen datos de eventos. Si desea consultar los atributos de los usuarios, deberá combinar su segmento SQL con filtros de atributos personalizados del [segmentador clásico]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).

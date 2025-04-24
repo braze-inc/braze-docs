@@ -9,10 +9,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 # Okta 
 
-![Braze dashboard login with Okta SSO enabled.][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
-
 > Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, your IT team can manage any employee's access to any application or device.
-<br>
 
 ## Requirements
 
@@ -24,19 +21,11 @@ description: "This article will walk you through how to configure Braze to use O
 | RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
-{% endalert %}
-
 ## Step 1: Configure Braze
 
 ### Step 1a: Navigate to Security Settings in Braze
 
 After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
-{% endalert %}
 
 ![Okta SAML SSO enabled on the Security Settings page.][1]
 
@@ -72,6 +61,8 @@ If you want your Braze account users to only sign in with SAML SSO, you can [res
 ## Step 3: Log in
 
 You should now be able to log in to Braze using Okta!
+
+![Braze dashboard login with Okta SSO enabled.][4]{: style="max-width:60%"}
 
 [1]: {% image_buster/assets/img/Okta/okta1.png %}
 [2]: {% image_buster /assets/img/Okta/okta2.png %}

@@ -13,9 +13,7 @@ channel: news feed
 
 > 이 문서에서는 Braze SDK를 통해 뉴스피드 카드에서 읽음 및 읽지 않음 표시기를 설정하는 방법에 대해 설명합니다.
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Braze는 다음 이미지와 같이 뉴스피드 카드에 읽지 않음 및 읽음 표시기를 제공합니다:
 

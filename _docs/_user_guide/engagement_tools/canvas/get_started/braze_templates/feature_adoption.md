@@ -15,7 +15,7 @@ In this article, we'll walk you through a use case for the **Feature Adoption** 
 
 ## Prerequisites
 
-To successfully use this template, you'll need to a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) that references when users have used the feature.
+To successfully use this template, you'll need to a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) that references when users have used the feature.
 
 ## Tailoring the template to your needs
 

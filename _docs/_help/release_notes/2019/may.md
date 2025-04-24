@@ -25,7 +25,7 @@ You will need to update to a supported Braze SDK version:
 - Android: 2.6.0 or later
 - Web: 2.2.0 or later
 
-[Learn more about Content Cards here!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
+[Learn more about Content Cards here!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
 
 {% alert update %}
 Content Cards for Currents and our API documentation for Content Cards will be launched later this week. Stay tuned!
@@ -35,7 +35,7 @@ Content Cards for Currents and our API documentation for Content Cards will be l
 
 Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
 
-You can now [retrieve data from Roku devices]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) for data enrichment and custom event tracking.
+You can now [retrieve data from Roku devices]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku) for data enrichment and custom event tracking.
 
 ## Notification preferences for Canvas or campaign updates
 
@@ -45,7 +45,7 @@ This [new notification]({{site.baseurl}}/user_guide/administrative/company_setti
 
 Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
 
-Braze customers can [integrate with Jampp]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
+Braze customers can [integrate with Jampp]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
 ## Platform picker for in-app messages
 
@@ -85,7 +85,7 @@ Using `dispatch_id` allows for recurring messages to reflect the true unique ope
 
 Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  SendGrid customers should see no difference.
 
-You can search for these updated terms in our [report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+You can search for these updated terms in our [report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) in Canvas and campaigns.
@@ -97,7 +97,7 @@ _Update noted in August 2019._
 ## Most engaged channel
 
 {% alert update %}
-As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
+As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/).
 {% endalert %}
 
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select email, web push, or mobile push (which includes any available mobile OS or device) as a channel.

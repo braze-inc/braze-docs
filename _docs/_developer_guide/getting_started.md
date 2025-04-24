@@ -10,18 +10,18 @@ description: "This section will help you and your marketing team get set up and 
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+  - name: SDK Overview
+    link: /docs/developer_guide/getting_started/sdk_overview/
+    image: /assets/img/braze_icons/edit-04.svg
   - name: Platform Overview
-    link: /docs/developer_guide/platform_wide/getting_started/platform_overview/
+    link: /docs/developer_guide/getting_started/platform_overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: Integration Overview
-    link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
+    link: /docs/developer_guide/getting_started/integration_overview/
     image: /assets/img/braze_icons/chevron-up-double.svg
   - name: Architecture Overview
-    link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
+    link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Analytics Overview
-    link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
-    image: /assets/img/braze_icons/check-done-02.svg
 
 search_rank: 4
 ---

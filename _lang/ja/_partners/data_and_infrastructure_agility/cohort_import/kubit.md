@@ -16,10 +16,6 @@ search_tag: Partner
 
 Brazeで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Kubit**] を選択します。ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Kubit のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。
 
 ![Braze の Kubit テクノロジーパートナーページ.]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
@@ -44,6 +40,10 @@ Kubit で[コホートを作成](https://www.kubit.ai/doc/fundamentals#cohort)�
 
 ![]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}
 
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
+
 #### インポートステータスを確認する
 インポートが完了すると、インポートスケジュールで指定された受信者にEメール通知が送信される。また、Kubit の [**Schedule**] でコホートのインp－トステータスを確認することもできます。スケジュール履歴には、すべてのインポート実行時間、結果、Brazeにインポートされたコホート内のユーザー総数が表示される。<br><br>![]({% image_buster /assets/img/kubit/import_history.png %})<br><br>そのインポートスケジュールの**Import to Braze**アイコンをクリックすることで、手動でインポートをトリガーすることができる。
 
@@ -54,4 +54,4 @@ Braze にコホートをインポートしたら、それらのコホートを�
 
 ## ユーザーマッチング
 
-識別されたユーザは、`external_id` または`alias` のいずれかで照合できます。匿名ユーザは、`device_id` と照合できます。最初に匿名ユーザーとして作成された識別済みユーザーは、`device_id` で識別できず、`external_id` または`alias` で識別する必要があります。
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。

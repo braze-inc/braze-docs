@@ -89,12 +89,12 @@ The following data types can be stored as a custom attribute:
 | Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
 | Floats | Float custom attributes are positive or negative numbers with a decimal point. For example, you can use floats to store account balances or user ratings for products or services. |
 | Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you want to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| Nested custom attributes | Nested custom attributes define a set of attributes as a property of another attribute. When you define a custom attribute object, you define a set of additional attributes for that object. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support). |
+| Nested custom attributes | Nested custom attributes define a set of attributes as a property of another attribute. When you define a custom attribute object, you define a set of additional attributes for that object. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/). |
 | Strings | String custom attributes are sequences of characters used to store text data. For example, you can use strings to store first and last names, email addresses, or preferences. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-For information on when you should use a custom event versus a custom attribute, see our respective documentation on [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+For information on when you should use a custom event versus a custom attribute, see our respective documentation on [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 {% endalert %}
 
 ##### Array of objects example 
@@ -148,7 +148,7 @@ Language values that are explicitly set through this API will take precedence ov
 
 ####  User attribute example request
 
-This example contains two user attribute objects with the allowed 75 requests per API call.
+This example contains four user attribute objects, out of a total of 75 allowed attribute objects per API call.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -187,8 +187,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 [3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
-[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
+[17]: http://en.wikipedia.org/wiki/ISO_3166-1
+[19]: http://en.wikipedia.org/wiki/ISO_8601
+[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 [27]: #braze-user-profile-fields

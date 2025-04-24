@@ -21,21 +21,21 @@ If a user search returns duplicate profiles, you can merge each profile individu
 
 In Braze, select **Audience** > **User Search**.
 
-![The "User Search" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
+![The "User Search" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Enter a unique identifier, such as an email address or phone number, for the duplicate profile, then select **Search**.
 
-![The "User Search" page in the Braze dashboard with an email entered in the search bar.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![The "User Search" page in the Braze dashboard.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### Step 2: Merge duplicates
 
 To begin the merge process, select **Merge duplicates**.
 
-![One of the duplicate user's profiles.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
+![One of the duplicate user's profiles.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Choose which user profile to keep and which to merge, then select **Merge profiles**. Repeat this process until you've merged all duplicate profiles.
 
-![The individual merge page for a duplicate profile.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![The individual merge page for a duplicate profile.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Duplicate user profiles cannot be recovered after merging.
@@ -49,7 +49,7 @@ When you bulk merge duplicate users, Braze finds profiles with matching identifi
 
 In the Braze dashboard, select **Audience** > **Manage Audience**.
 
-![The "Manage Audience" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![The "Manage Audience" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### Step 2: Preview the results (optional)
 
@@ -65,11 +65,11 @@ In the following example, Braze uses the user's external ID to flag duplicate pr
 
 {% tabs local %}
 {% tab example csv file %}
-| Email Address        | External ID | Phone Number | Braze ID                 | Identifier for rule | Profile to keep | Profile to merge |
-|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com     |   A8i3mkd99          |      (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
-| alex@company.com |  |      (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
-| alex@company.com |   |      (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
+| Email Address    | External ID | Phone Number   | Braze ID              | Identifier for rule | Profile to keep | Profile to merge |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
+| alex@company.com | A8i3mkd99   | (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
+| alex@company.com |             | (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
+| alex@company.com |             | (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -100,7 +100,7 @@ You can use rules to control how duplicate profiles are resolved when running a 
 - **Resolve ties using**: Created date, Updated date, Last session
 - **Prioritization**: Newest, Oldest
 
-![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 For example, you could keep the profile that has a phone number. If multiple users have the same phone number, you could resolve ties using the **Updated date** field and prioritize the most recently updated user.
 
@@ -111,6 +111,18 @@ After saving your rules, you can preview how they'll work by selecting **Generat
 ### Step 3: Merge duplicates
 
 If you're satisfied with the results of your preview, return to the **Manage Audience** page and select **Merge all duplicates**.
+
+{% alert warning %}
+Duplicate user profiles cannot be recovered after merging.
+{% endalert %}
+
+## Scheduled merging
+
+Similar to rules-based merging, scheduled merging allows you to automate the merging of user profiles on a daily basis using preconfigured rules.
+
+![The "Manage Audience" page with "schedule" button.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+After the feature is turned on, Braze will automatically assign a timeslot to perform the merge process daily. You can turn off scheduled merging at any time. Braze will notify the admins of your workspace 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
 
 {% alert warning %}
 Duplicate user profiles cannot be recovered after merging.

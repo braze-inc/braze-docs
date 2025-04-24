@@ -10,11 +10,11 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze para atual
 ---
 {% api %}
 # Atualizar envios de mensagens programadas
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
-> Use esse endpoint para atualizar os envios de mensagens programadas. 
+> Use esse endpoint para atualizar os envios de mensagens programadas.
 
 Esse endpoint aceita atualizações do parâmetro `schedule` ou `messages` ou de ambos. Sua solicitação deve conter pelo menos uma dessas duas chaves.
 
@@ -51,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Obrigatória | String | O endereço `schedule_id` a ser atualizado (obtido da resposta para criar cronograma). |
-|`schedule` | Opcional | Objeto | Consulte [objeto de programação]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`schedule` | Opcional | Objeto | Consulte [objeto de agendamento]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 |`messages` | Opcional | Objeto | Consulte os [objetos de envio de mensagens disponíveis]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```

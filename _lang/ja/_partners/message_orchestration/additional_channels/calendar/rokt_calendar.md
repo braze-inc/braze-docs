@@ -1,16 +1,22 @@
 ---
 nav_title: Rokt Calendar
 article_title: Rokt Calendar
-alias: /partners/rokt_calendar/
+alias: /partners/rokt_calendar
 description: "この参考記事では、BrazeとRokt Calendarの提携について概説している。Rokt Calendarは、ダイナミックなカレンダー・マーケティング・テクノロジーで、ブランドはカレンダー・イベントや通知の形で、1:1のイベントやプロモーション・コミュニケーションをプッシュすることができる。"
 page_type: partner
 search_tag: Partner
 
+layout: redirect
+redirect_to: /docs/partners/home
 ---
 
 # Rokt Calendar
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) は、ブランドがカレンダーイベントや通知の形式で1:1イベントやプロモーションコミュニケーションをプッシュできるようにするダイナミックなカレンダーマーケティングテクノロジーです。
+
+_この統合は、Rokt カレンダーによって維持されます。_
+
+## 統合について
 
 Braze と Rokt Calendar の統合により、Rokt Calendar のサブスクライバーとそのデータを Braze Webhook 経由で Braze にプッシュできます。その後、Braze キャンバスでこのデータを使用して、以下のカスタム [Rokt Calendar 属性](#audience-segmentation)を使用したジャーニーターゲティングとオーディエンスセグメンテーションを行うことができます。 
 
@@ -80,10 +86,6 @@ Braze では、次のいずれかを行うために Webhook キャンペーン�
 - パーソナライズされたイベントを更新する：サブスクライバーのカレンダーにある既存のイベントを更新できるようにします。
 
 今後のキャンペーンやCanvasで使用するRokt Calendarウェブフックテンプレートを作成するには、Brazeプラットフォームの**「テンプレート**」>「**ウェブフックテンプレート**」に移動する。 
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 単発のRokt Calendar Webhookキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**Webhookを**選択する。
 
@@ -197,3 +199,4 @@ Rokt Calendar では、認証のために Rokt Calendar コネクテッドコン
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
+

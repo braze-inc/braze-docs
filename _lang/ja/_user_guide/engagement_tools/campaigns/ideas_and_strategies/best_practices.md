@@ -16,7 +16,7 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 - [オーディエンスセグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/)を構築してオーディエンスを**ターゲティング**するため
 - [アクションベース]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery)または [API トリガーの]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)配信でメッセージを**トリガー**するため
 - [Liquid の条件付きロジック]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid)でメッセージを**テンプレート化**し、パーソナライズするため
-- [コンバージョントラッキング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events)でキャンペーンの効果を**トラッキング**するため
+- [コンバージョントラッキング]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)でキャンペーンの効果を**トラッキング**するため
 
 これにより、Braze に送信されるデータを最適化して、チームにとって長期的に有用であると思われないトラッキングデータポイントを避けながら、ユーザーにメッセージを送る機能を合理化することができます。 
 
@@ -66,14 +66,18 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 
 アプリストアへの訪問は、ユーザーの時間を消費します。余分な労力をかけてもらえる可能性を最大限にするには、ユーザーがアプリでポジティブな体験をした後に評価やレビューを依頼します。例えば、ゲームレベルを超えたり、割引コードを使って買い物をした後などに尋ねてみます。[データのオプトイン]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)に関する記事に、ユーザーのワークフローの期待にあなたのリクエストを確実に一致させるための詳細が掲載されています。
 
-## キャンペーンをスケジュールされた
+## キャンペーンのスケジュール設定
 
 キャンペーンのスケジュールやオーディエンスを編集する際は、以下のベストプラクティスに注意すること：
 
 - **1回限りのスケジュールキャンペーン：**スケジュールされた送信時間までキャンペーンを編集できる。
-- **スケジュールされたキャンペーン：**スケジュールされた送信時間までキャンペーンを編集できる。
-- **ローカル送信時間キャンペーン：**スケジュールされた送信時刻の24時間前には編集を行わないこと。
-- **最適な送信時間キャンペーン：**キャンペーンがスケジュールされた日の深夜24時間前には編集を行わないこと。
+- **定期的なスケジュールされたキャンペーン:**スケジュールされた送信時間までキャンペーンを編集できる。
+- **ローカル送信時刻キャンペーン:**送信予定時刻の24時間前から送信予定時刻までの間は編集を行わないでください。
+- **最適送信時刻キャンペーン:**キャンペーン送信予定日の午前0時までの24時間以内には編集を行わないでください。
+
+{% alert note %}
+ライブキャンペーンを編集し、配信を**ローカライゼーションに**変更すると、メッセージの新しいバッチがエンキューされ、メッセージが2回エンキューされるため、ユーザーはメッセージを2回受け取ることになる。これを防ぐには、まず元のキャンペーンを停止し、スケジュールの更新後に複製を立ち上げる。
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

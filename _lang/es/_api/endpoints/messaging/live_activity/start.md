@@ -59,14 +59,14 @@ Para utilizar este punto final, tendrás que completar lo siguiente:
 | `activity_id` | Obligatoria | Cadena  | Define una cadena personalizada como tu `activity_id`. Utilizarás este ID cuando desees enviar eventos de actualización o finalización a tu Actividad en vivo.  |
 | `activity_attributes_type`  | Obligatoria | Cadena | El tipo de atributos de actividad que defines en `liveActivities.registerPushToStart` en tu aplicación.  |
 | `activity_attributes` | Obligatoria | Objeto  | Los valores estáticos de los atributos de la clase de actividad (como los nombres de los equipos deportivos, que no cambian). |
-| `content_state` | Obligatoria | Objeto  | Defines los parámetros de `ContentState` cuando creas tu Actividad en vivo. Pasa los valores actualizados de tu `ContentState` utilizando este objeto.<br><br>El formato de esta petición debe coincidir con la forma que definiste inicialmente. |
+| `content_state` | Obligatoria | Objeto  | Los parámetros de `ContentState` se definen al crear la Live Activity. Pase los valores actualizados para su `ContentState` utilizando este objeto.<br><br>El formato de esta solicitud debe coincidir con la forma que definió inicialmente. |
 | `dismissal_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro define el tiempo para eliminar la Actividad en vivo de la IU del usuario. |
-| `stale_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro indica al sistema cuándo el contenido de la Actividad en vivo se marca como desactualizado en la IU del usuario. |
-| `notification` | Obligatoria | Objeto | Incluye un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir una notificación push. El comportamiento de esta notificación push depende de si el usuario está activo o si está utilizando un dispositivo proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> y el usuario está activo en su iPhone cuando se entrega la actualización, la IU de Actividad en vivo actualizada se deslizará hacia abajo y se mostrará como una notificación push.</li><li>Si un <code>notification</code> y el usuario no está activo en su iPhone, su pantalla se iluminará para mostrar la IU de Actividad en vivo actualizada en su pantalla de bloqueo.</li><li>La <code>notification alert</code> no se mostrará como una notificación push estándar. Además, si un usuario tiene un dispositivo proxy, como un Apple Watch, la <code>alert</code> se mostrará allí.</li></ul>{:/} |
+| `stale_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro indica al sistema cuándo el contenido de la Actividad en Directo se marca como obsoleto en la interfaz de usuario. |
+| `notification` | Obligatoria | Objeto | Incluya un objeto [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir una notificación push. El comportamiento de esta notificación push depende de si el usuario está activo o si está utilizando un dispositivo proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> y el usuario está activo en su iPhone cuando se envía la actualización, la interfaz de usuario actualizada de Live Activity se deslizará hacia abajo y se mostrará como una notificación push.</li><li>Si un <code>notification</code> se incluye y el usuario no está activo en su iPhone, su pantalla se iluminará para mostrar la IU de Actividad en Directo actualizada en su pantalla de bloqueo.</li><li>La <code>notification alert</code> no se mostrará como una notificación push estándar. Además, si un usuario tiene un dispositivo proxy, como un Apple Watch, la <code>alert</code> se mostrará allí.</li></ul>{:/} |
 | `external_user_ids` | Opcional si se proporciona `segment_id` o `audience`  | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Opcional si se proporciona `external_user_ids` o `audience`  | Cadena    | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Opcional si se proporciona `external_user_ids` o `segment_id`  | Objeto de audiencia conectado  | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 
@@ -105,9 +105,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 Hay dos respuestas de código de estado para este punto final: `201` y `4XX`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
-Se devuelve un código de estado `201` si la solicitud se formateó correctamente y la recibimos. El código de estado `201` podría devolver el siguiente cuerpo de respuesta.
+Se devuelve un código de estado `201` si la solicitud se ha formateado correctamente y la hemos recibido. El código de estado `201` podría devolver el siguiente cuerpo de respuesta.
 
 ```json
 {
@@ -117,7 +117,7 @@ Se devuelve un código de estado `201` si la solicitud se formateó correctament
 
 ### Ejemplo de respuesta de error
 
-La clase de código de estado `4XX` indica un error del cliente. Consulta [el artículo Errores y respuestas de la API]({{site.baseurl}}/api/errors/) para obtener más información sobre los errores que puedes encontrarte.
+La clase de código de estado `4XX` indica un error del cliente. Consulte el [artículo Errores y respuestas de la API]({{site.baseurl}}/api/errors/) para obtener más información sobre los errores que puede encontrar.
 
 El código de estado `400` podría devolver el siguiente cuerpo de respuesta. 
 

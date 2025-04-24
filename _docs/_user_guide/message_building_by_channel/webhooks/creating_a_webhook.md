@@ -28,17 +28,11 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Webhook**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. (Optional) Add a description to describe how this campaign will be used.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different webhook templates for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -78,6 +72,8 @@ The **Compose** tab consists of the following fields:
 [Internationalization][16] is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
 
 We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Webhook URL
 
@@ -176,11 +172,11 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 {% endtab %}
 
@@ -222,7 +218,7 @@ The following table summarizes the different responses the server may send, how 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-For `5XX` errors, Braze will retry the webhook send up to 5 times over 30 minutes using exponential backoff. For all other errors, Braze will continue to retry for up to 24 hours.<br><br>Each webhook is allowed 90 seconds before it times out.
+Braze retries the above status codes up to five times within 30 minutes using exponential backoff. If we can't reach your endpoint, retries may be spread over a 24-hour period.<br><br>Each webhook is allowed 90 seconds before it times out.
 {% endalert %}
 
 ### IP allowlisting {#ip-allowlisting}
@@ -235,60 +231,16 @@ Braze will send webhooks from the following IPs. The listed IPs are automaticall
 If you're making a Braze-to-Braze webhook and using allowlisting, you should allowlist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
-|---|
-| `127.0.0.1`
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| For Instances `EU-01` and `EU-02`: |
-|---|
-| `127.0.0.1`
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88` 
-
-| For Instance `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
 There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
-* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
+* [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
 * [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
-* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
 

@@ -16,11 +16,10 @@ description: "This reference article covers how tags can and should be used in y
 A tag must be wrapped in `{% %}`.
 {% endraw %}
 
-{% alert tip %}
 To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you've correctly formatted your Liquid syntax. Green formatting can help identify tags, while purple formatting highlights areas that contain personalization.
-<br><br>
+
 If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
-<br><br>
+
 For example, add the following into the message field first:  
 {% raw %}
 ```liquid
@@ -40,11 +39,10 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## Conditional logic
 
-You can include many types of [intelligent logic within messages][1], such as a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+You can include many types of [intelligent logic within messages][1], such as a conditional statement. The following example uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -59,39 +57,93 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Step by step example
+### Conditional tags
 
-In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
+#### `if` and `elsif`
+
+Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English, this code will check to see if the user's device is set to Spanish, and if that fails, it will check if the device is set to. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
+
+#### `else`
+
+You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}` statement specifies the message that should be sent. In this example, we default to English if a user’s language is not English, Spanish, or Chinese.
+
+#### `endif`
+
+The `{% endif %}` tag signals that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
+
+### Tutorial: Deliver location-based content
+
+When you're finished with this tutorial, you'll be able to use tags with "if", "elsif", and "else" statements to deliver content based on a user's location.
+
+1. Begin with an `if` tag to establish what message should be sent when the user's city is in New York. If the user's city is New York, this first condition is met and the user will receive a message specifying their New Yorker identity.
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${city} == "New York" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at your local Sandwich Emperor. 
+  Just show this message at the counter to redeem your offer!
 ```
-If the user's language is English, the first condition is met and the user will receive a message in English.
+
+{: start="2"}
+2. Next, use the `elseif` tag to establish what message should be sent if the user's city is in Los Angeles.
 
 ```liquid
-{% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
-{% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
 ```
 
-You can specify as many conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this example, if a user's device is not set to English this code will check to see if the user's device is set to Spanish or Chinese. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
+{: start="3"}
+3. Let's use another `elseif` tag to establish what message should be sent if the user's city is in Chicago.
+
+```liquid
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+```
+
+{: start="4"}
+4. Now, let's use the `{% else %}` tag to specify what message should be sent if the user's city isn't in San Francisco, New York, or Chicago.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+ 🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
 ```
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a user's language is not English, Spanish, or Chinese.
+{: start="5"}
+5. Finally, we'll use the `{% endif %}` tag to specify that our conditional logic is done.
 
 ```liquid
 {% endif %}
 ```
 
-The `{% endif %}` tag signals that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
-
 {% endraw %}
+
+{% details Full Liquid code %}
+
+{% raw %}
+```liquid
+{% if ${city} == "New York City" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at our New York location. 
+  Just show this message at the counter to redeem your offer!
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+{% else %}
+  🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## Accounting for null, nil, and blank attribute values
 
@@ -113,7 +165,7 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![An example message in the Braze dashboard, using a null 'first name' attribute.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -234,7 +286,7 @@ A time stamp of when an event took place. [Time][13] values must have a [math fi
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
 [5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
+[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings

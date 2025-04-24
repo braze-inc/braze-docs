@@ -5,20 +5,20 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Enviar campañas mediante entrega desencadenada por API de Braze."
+description: "Este artículo describe en detalle el punto final Braze de envío de campañas mediante entrega desencadenada por API."
 
 ---
 {% api %}
-# Envía mensajes de campaña mediante entrega desencadenada por API
+# Envía mensajes de campaña utilizando la entrega desencadenada por API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/send
 {% endapimethod %}
 
-> Utiliza este punto final para enviar mensajes inmediatos y puntuales a usuarios designados mediante la entrega desencadenada por la API.
+> Utiliza este punto final para enviar mensajes inmediatos y puntuales a usuarios designados utilizando la entrega desencadenada por la API.
 
-La entrega desencadenada por API te permite alojar el contenido de los mensajes dentro del panel Braze, al tiempo que dictas cuándo se envía un mensaje y a quién a través de tu API.
+La entrega desencadenada por API te permite alojar el contenido de los mensajes dentro del panel Braze, al tiempo que dictas cuándo se envía un mensaje y a quién mediante tu API.
 
-Si te estás dirigiendo a un segmento específico, se almacenará un registro de tu solicitud en la [consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Para enviar mensajes con este punto final, debes tener un [ID de campaña](https://www.braze.com/docs/api/identifier_types/) creado al crear una [campaña desencadenada por la API]({{site.baseurl}}/api/api_campaigns/).
+Si te diriges a un segmento, se almacenará un registro de tu solicitud en la [Consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Para enviar mensajes con este punto final, debes tener un [ID de campaña](https://www.braze.com/docs/api/identifier_types/) creado al crear una [campaña desencadenada por la API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`attachments`| Opcional | Matriz | Si `broadcast` está configurado como verdadero, no se puede incluir la lista `attachments`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- La cadena de destinatarios puede contener hasta 50 objetos, cada uno de ellos con una única cadena `external_user_id` y un objeto `trigger_properties`.
+- La matriz de destinatarios puede contener hasta 50 objetos, cada uno de ellos con una única cadena `external_user_id` y un objeto `trigger_properties`.
 - Cuando `send_to_existing_only` es `true`, Braze sólo enviará el mensaje a los usuarios existentes. Sin embargo, esta bandera no puede utilizarse con alias de usuario.
 - Cuando `send_to_existing_only` es `false`, debe incluirse un atributo. Braze creará un usuario con la dirección `id` y los atributos antes de enviar el mensaje.
 
@@ -179,10 +179,10 @@ Si tu solicitud encuentra un error fatal, consulta [Errores y respuestas]({{site
 
 ## Objeto de atribución para campañas
 
-Braze tiene un objeto de mensajería llamado `attributes` que te permitirá añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Utilizando el punto final `campaign/trigger/send` como esta llamada API procesará el objeto de atributos de usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/help/best_practices/race_conditions/).
+Braze tiene un objeto de mensajería llamado `attributes` que te permitirá añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Utilizando el punto final `campaign/trigger/send` como esta llamada API procesará el objeto de atributos de usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/help/best_practices/race_conditions/). Sin embargo, por defecto, los grupos de suscripción no pueden actualizarse de esta forma.
 
 {% alert important %}
-¿Buscas la versión Canvas de este punto final? Consulta [Envío de mensajes de Canvas mediante entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
+¿Buscas la versión Canvas de este punto final? Echa un vistazo a [Enviar mensajes Canvas utilizando la entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
 {% endalert %}
 
 {% endapi %}

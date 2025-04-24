@@ -55,11 +55,11 @@ SDK のログに記録されたカスタムイベントの記録にプッシュ�
 
 サーバー送信イベントを介してトリガーされる[サイレントプッシュキャンペーン]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)を作成します。 
 
-![ユーザプロファイルにカスタムイベント"server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})があるユーザに配信されるアクションベースの配信アプリ内メッセージキャンペーン
+![カスタムイベント「server_event」を持つユーザープロファイルのユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンです。]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。"CAMPAIGN_NAME"set as "In-app message name example"および"IS_SERVER_EVENT"set to "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。「キャンペーン_NAME」を「アプリ内メッセージ名の例」に設定し、「IS_SERVER_EVENT」を「true」に設定します。]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内のコードはキー `IS_SERVER_EVENT` をチェックし、SDK カスタムイベントがあればログに記録します。
 
@@ -71,7 +71,7 @@ Braze ダッシュボードで、ユーザーに表示されるアプリ内メ�
 
 以下の例では、イベントプロパティを最初のサイレントプッシュの一部として送信することで、トリガーされる特定のアプリ内メッセージが設定されています。
 
-![カスタムイベント&quot を実行するユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーン。アプリ内メッセージトリガ" where " campaign_name" equals " IAM Campaign Name Example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![カスタムイベント「アプリ内メッセージトリガー」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンで、「campaign_name」が「IAM Campaign Name Example」と等しい場合に配信されます。]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 なお、これらのアプリ内メッセージは、アプリケーションがフォアグラウンドにある間にサイレントプッシュが受信された場合にのみトリガーされます。

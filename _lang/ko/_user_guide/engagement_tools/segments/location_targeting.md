@@ -46,9 +46,9 @@ description: "이 도움말 문서에서는 위치 타겟팅을 설정하는 방
 
 기존의 비콘 또는 지오펜스 지원과 타겟팅 및 메시징 기능을 결합하면 사용자의 실제 행동에 대한 더 많은 정보를 얻을 수 있으므로 그에 맞는 메시지를 보낼 수 있습니다. 일부 파트너와 함께 위치 추적을 활용할 수 있습니다: 
 
-- [레이더][6]
-- [짐벌][10]
-- [포스퀘어][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

@@ -57,10 +57,6 @@ To use self-service email setup, you must meet the following prerequisites:
 2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Can Manage Company Settings" company-level permission.
 3. Click the **Start setup** button.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Sender Verification** by selecting your profile icon.
-{% endalert %}
-
 ### Step 2: Add and verify a sending domain
 
 A sending domain is used in the "from" address when sending an email. Enter a sending domain and click **Submit**. 

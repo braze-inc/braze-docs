@@ -312,4 +312,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Contenido
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Supera a
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

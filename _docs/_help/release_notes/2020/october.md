@@ -16,7 +16,7 @@ The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the 
 
 ## iOS 14 upgrade guide
 
-The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) to read more. 
+The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) to read more. 
 
 ## Android 11 upgrade guide
 
@@ -32,7 +32,7 @@ Users can now add descriptions to campaigns and Canvases! This new field can be 
 
 ## Canvas exception events
 
-New documentation has been added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
+New documentation has been added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) in Canvases. 
 
 ## User delete updates
 

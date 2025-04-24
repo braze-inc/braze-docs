@@ -33,8 +33,11 @@ Este punto final tiene un límite de velocidad de 250 000 solicitudes por hora.
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| Necesario para traducir una campaña | Cadena | El ID de tu campaña. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`campaign_id`| Necesario para traducir una campaña | Cadena | El ID de su campaña. |
+| `message_variation_id` | Obligatoria | Cadena | El ID de tu mensaje. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.
 
 ## Ejemplo de solicitud
 
@@ -48,7 +51,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translatio
 
 Hay cuatro respuestas de código de estado para este punto final: `200`, `400`, `404` y `429`.
 
-## Ejemplo de respuesta satisfactoria
+## Ejemplo de respuesta positiva
 
 El código de estado `200` podría devolver la siguiente cabecera y cuerpo de respuesta.
 
@@ -75,7 +78,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -89,16 +92,16 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Mensaje de error                           | Solución de problemas                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirma que el ID de la campaña coincide con la campaña que estás traduciendo.                   |
 | `INVALID_MESSAGE_VARIATION_ID`          | Confirma que el ID de tu mensaje es correcto.                                                |
 | `MESSAGE_NOT_FOUND`                     | Comprueba el mensaje para traducir.                                           |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada en tu espacio de trabajo.                       |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada para tu espacio de trabajo.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Solo se pueden traducir las campañas de correo electrónico o los mensajes de Canvas con correos electrónicos.             |
 | `UNSUPPORTED_CHANNEL`                   | Solo se pueden traducir los mensajes de las campañas de correo electrónico o los mensajes de Canvas con correos electrónicos. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

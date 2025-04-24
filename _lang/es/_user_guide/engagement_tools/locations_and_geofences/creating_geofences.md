@@ -40,7 +40,7 @@ En la página **Ubicaciones**, haga clic en **\+ Crear conjunto de geovallas**.
 
 ![Conjunto de geovallas de aeropuertos alemanes con un usuario que dibuja un radio de dos mil metros en el mapa para el aeropuerto de Hamburgo.][1]
 
-Una vez que hayas creado un conjunto de geovallas, puedes añadir geovallas manualmente dibujándolas en el mapa. Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para más información sobre las opciones configurables, consulta [Configuración de geovallas]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Una vez que hayas creado un conjunto de geovallas, puedes añadir geovallas manualmente dibujándolas en el mapa. Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para más información sobre las opciones configurables, consulta [Configuración de geovallas]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Creación de conjuntos mediante carga masiva {#creating-geofence-sets-via-bulk-upload}
 

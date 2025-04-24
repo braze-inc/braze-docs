@@ -2,24 +2,17 @@
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
 
 (function(){
-
-
-  var urlpath = removeleadingslash(window.location.pathname);
-
-  //lower case name => path name
-  function removeleadingslash(str){
-    var rstr = str;
-    if (rstr.slice(-1) === "/") {
-      rstr = rstr.slice(0, -1);
-    }
-    return rstr;
-  }
-
-
   function redirecturl(ky,uh,redirect) {
     var val_urls = validurls[ky];
+    if (site_language && (site_language != 'en')){
+      if (!val_urls.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
+        val_urls = val_urls.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
+      }
+    }
+
     var hashes = val_urls.split('#');
-    var returl = hashes[0] + redirect;
+    var redirect_params = ((hashes[0].indexOf('?') > -1 ) ? '&' : '?') + redirect;
+    var returl = hashes[0] + redirect_params;
     if (hashes[1]) {
       returl += '#' + hashes[1];
     }
@@ -30,16 +23,15 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
   }
   var urlhash = window.location.hash;
   var urlsearch = window.location.search;
-
-  if (window.location.href.indexOf('redirected=true') == -1) {
+  var redirected_count = parseInt(query_params.get('redirected'),10) || 0;
+  if (!redirected_count) {
     if (urlhash) {
+      redirected_count++;
       urlhash = urlhash.replace('#','')
-      var redirected  = '?redirected=true' ;
-      if (urlsearch.indexOf('?') > -1 ) {
-        redirected = urlsearch + '&redirected=true';
-      }
+      query_params.set('redirected',redirected_count );
+      var redirected  = query_params.toString();
       if (validurls[urlhash] ) {
-        window.location  =  redirecturl(urlhash,urlhash,redirected);
+        window.location = redirecturl(urlhash,urlhash,redirected);
       }
       else {
 

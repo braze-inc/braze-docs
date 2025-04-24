@@ -9,13 +9,9 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 # セキュリティ設定
 
-> 管理者として、セキュリティはあなたの懸念事項の中で最優先事項である。**セキュリティ設定**ページでは、認証ルール、IP許可リスト、2 要素認証など、一般的な企業横断的セキュリティ設定の管理に役立つ。
+> 管理者にとって、セキュリティは懸念事項のリストで優先順位の高い項目です。**セキュリティ設定**ページでは、認証ルール、IP許可リスト、2 要素認証など、一般的な企業横断的セキュリティ設定の管理に役立つ。
 
 このページにアクセスするには、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントのドロップダウンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動します。
-{% endalert %}
 
 ## 認証ルール
 
@@ -31,7 +27,7 @@ description: "このリファレンス記事では、認証ルール、IP の許
 - 数値
 - 特殊文字
 
-### パスワードの再利用可能性
+### パスワードの再利用性
 
 ユーザーがあるパスワードを再利用できるようになるまでに、設定しなければならない新しいパスワードの最小の個数を指定します。デフォルトは 3 個です。
 
@@ -81,9 +77,17 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 リセットすることで、認証アプリのトラブル、メール認証が送信されない、SMS の停止やユーザーエラーによるログイン失敗など、よくある認証の問題を解決できます。
 
+## Elevated アクセス
+
+Elevated Accessは、Brazeダッシュボードで機密性の高いアクションを行う際のセキュリティをさらに強化する。アクティブユーザーである場合、ユーザーはセグメンテーションをエクスポートしたりAPIキーを表示したりする前に、アカウントを再確認する必要がある。Elevated アクセスを使用するには、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、[オン] に切り替えます。 
+
+ユーザーが再確認できない場合、中断した場所にリダイレクトされ、機密性の高いアクションを続けることができない。再認証に成功すると、ログアウトしない限り、次の1時間は再認証の必要はない。
+
+![Elevated アクセスのトグル。][5]
+
 ## セキュリティイベントレポートのダウンロード
 
-セキュリティイベントレポートは、アカウントの招待、アカウントの削除、ログイン試行の失敗と成功、その他のアクティビティなどのセキュリティイベントを含む CSV レポートです。内部監査に利用できる。
+セキュリティイベントレポートは、アカウントの招待、アカウントの削除、ログイン試行の失敗と成功、その他のアクティビティなどのセキュリティイベントを含む CSV レポートです。これは内部監査を実施するときに利用できます。
 
 このレポートをダウンロードするには、次の手順を実行します。
 
@@ -93,72 +97,72 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 このレポートには、自分のアカウントの最新 10,000 件のセキュリティイベントのみが含まれます。特定のイベントデータが必要な場合は、テクニカルサポートにお問い合わせください。
 
-{% details セキュリティ・イベントのレポート %}
+{% details 報告されるセキュリティイベント %}
 ### ログインとアカウント 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- 削除された開発者
+- 開発者の追加
+- サインイン
+- ログインに失敗
+- 二要素認証の設定が完了した
+- 二要素認証のリセットが完了した
+- 開発者2FAをクリアした
+- 開発者が謹慎処分を受けた
+- 開発者が謹慎処分解除
 
-### 高架アクセス
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+### Elevated アクセス
+- Elevated アクセスフローを開始
+- Elevated アクセスフローが完了
+- 昇格アクセスで2FA認証に失敗した
 
 ### Campaign
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- キャンペーン追加
+- 編集されたキャンペーン
 
 ### キャンバス
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- 追加されたジャーニー
+- 編集されたジャーニー
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- 追加されたセグメンテーション
+- 編集されたセグメント
+- CSV にエクスポートされたデータ
+- API 経由でセグメントをエクスポートした
 
 ### REST APIキー
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- REST APIキーの追加
+- REST API キーを削除した。
 
 ### 基本認証情報
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- ベーシック認証情報の追加
+- ベーシック認証情報を更新した
+- ベーシック認証情報を削除した
 
 ### 許可
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- 開発者2FAをクリアした
+- アカウント権限の更新
 
 ### 会社設定
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- アプリグループの追加
+- アプリ追加
 
 ### メールテンプレート
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- メールテンプレート追加
+- 更新メールテンプレート
 
 ### 認証情報をプッシュする
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- プッシュ認証情報の更新
+- 削除されたプッシュ認証情報
 
 ### SDK デバッガー
-- STARTED_SDK_DEBUGGER_SESSION。
-- EXPORTED_SDK_DEBUGGER_LOGS
+- SDKデバッガセッション開始
+- エクスポートされたSDKデバッガログ
 {% enddetails %}
 
 ## PII (個人を特定できる情報) の表示{#view-pii}
 
-[**PII を表示**] 権限には、一部の Braze ユーザーのみがアクセスできます。既存のチーム権限機能については、[ユーザー権限の設定を]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions)参照のこと。
+[**PII を表示**] 権限には、一部の Braze ユーザーのみがアクセスできます。既存のチーム権限機能については、「[ユーザー権限の設定]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions)」を参照してください。
 
-デフォルトでは、すべての管理者は[ユーザー権限で]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions) **PIIの表示**権限をオンにしている。つまり、ダッシュボード全体で以下の標準属性とカスタム属性を確認できます。ユーザーに対してこの権限をオフにすると、そのユーザーはこの情報を見ることができなくなる。
+デフォルトで、すべての管理者は [[ユーザー権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions)] で [**PII を表示**］ 権限が有効になっています。つまり、ダッシュボード全体で以下の標準属性とカスタム属性を確認できます。ユーザーに対してこの権限をオフにすると、そのユーザーはこの情報を見ることができなくなる。
 
 ### PII の定義
 
@@ -177,9 +181,9 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 | ダッシュボードナビゲーション | 結果: | メモ |
 | -------------------- | ------ | ----- |
-| ユーザ検索 | ログインしたユーザーはメールアドレス、電話番号、名、または姓で検索できません。{::nomarkdown}<ul> <li> ユーザープロファイルを表示する際に、直前の標準属性とカスタム属性が表示されない。</li> <li> Brazeダッシュボードからユーザープロファイルの先行標準属性項目を編集できない。</li> </ul> {:/} | このセクションにアクセスするには、ユーザープロファイルを表示するためのアクセス権が引き続き必要です。 |
+| ユーザ検索 | ログインしたユーザーはメールアドレス、電話番号、名、または姓で検索できません。{::nomarkdown}<ul> <li> ユーザープロファイルを表示する際に、直前の標準属性とカスタム属性が表示されない。</li> <li> Braze ダッシュボードからユーザープロファイルの上記の標準属性項目を編集することはできません。</li> </ul> {:/} | このセクションにアクセスするには、ユーザープロファイルを表示するためのアクセス権が引き続き必要です。 |
 | ユーザーインポート | ユーザーは [**ユーザーインポート**] ページからファイルをダウンロードできません。 | |
-| {::nomarkdown}<ul> <li> セグメント </li> <li> キャンペーン </li> <li> キャンバス </li> </ul> {:/} | [**ユーザーデータ**] ドロップダウンでは次のようになります。<ul> <li> ユーザーは [<b>メールアドレスを CSV 形式でエクスポート</b>] オプションを使用できません。</li> <li> [<b>ユーザーデータの CSV エクスポート</b>] を選択した場合、ユーザーの CSV ファイルには上記の標準属性項目と顧客属性が出力されません。</li> </ul> {:/} | |
+| {::nomarkdown}<ul> <li> セグメント </li> <li> キャンペーン </li> <li> キャンバス </li> </ul> {:/} | [**ユーザーデータ**] ドロップダウンでは次のようになります。{::nomarkdown}<ul> <li> ユーザーは [<b>メールアドレスを CSV 形式でエクスポート</b>] オプションを使用できません。</li> <li> [<b>ユーザーデータの CSV エクスポート</b>] を選択した場合、ユーザーの CSV ファイルには上記の標準属性項目と顧客属性が出力されません。</li> </ul> {:/} | |
 | 内部テストグループ | ユーザーは、内部テストグループに追加されたユーザーの上記の標準属性項目にアクセスできません。 | |
 | メッセージアクティビティログ | ユーザーは、メッセージアクティビティログで特定されたユーザーの上記の標準属性項目にアクセスできません。 | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -190,7 +194,7 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 ## データ削除設定 
 
-この設定を使用して、イベントのユーザー削除プロセス中に特定のフィールドを削除するかどうかのプリファレンスを設定することができる。これらの環境設定は、Braze から削除されたユーザーのデータにのみ影響します。 
+この設定を使用して、イベントのユーザー削除プロセス中に特定のフィールドを削除するかどうかの環境設定を設定できます。これらの環境設定は、Braze から削除されたユーザーのデータにのみ影響します。 
 
 ユーザーが削除されると、BrazeはすべてのPIIをイベントデータから削除しますが、分析のために匿名データを保持します。エンドユーザー情報をBrazeに送信する場合、一部のユーザー定義フィールドにPIIが含まれている可能性があります。これらのフィールドに PII が含まれている場合は、削除されたユーザーのイベントデータが匿名化されたときにデータの削除を選択できます。フィールドに PII が含まれていない場合は、分析用にデータを保持できます。
 
@@ -214,12 +218,12 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 ワークスペースごとに環境設定をカスタマイズするには、デフォルトとは異なる設定を持つ環境設定グループを追加します。デフォルト 設定sを、将来作成されるワークスペースsを含め、追加のプリファレンスグループに追加されない任意のワークスペースsにアプリします。  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![]({% image_buster /assets/img/deletion_preferences_1.png %}) ワークスペースごとにデータ削除設定をカスタマイズするためのトグルがオンになっている [データ削除設定] セクション。
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} 「ユーザープロファイルの難読化 2」
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} 「ユーザープロファイルの難読化 3」
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

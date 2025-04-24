@@ -56,7 +56,7 @@ O comportamento documentado abaixo é verdadeiro para todos os recursos da Braze
 O endpoint não garante que a sequência de objetos `merge_updates` seja atualizada.
 {% endalert %}
 
-Esse endpoint mesclará qualquer um dos seguintes campos se eles não forem encontrados no usuário segmentado:
+Esse ponto de extremidade mesclará os seguintes campos se eles não forem encontrados no usuário de direcionamento.
 
 - Nome
 - Sobrenome
@@ -88,8 +88,7 @@ Esse endpoint mesclará qualquer um dos seguintes campos se eles não forem enco
 - Dados de interação da campanha (o Braze escolherá os campos de data mais recentes)
 - Resumos do fluxo de trabalho (o Braze escolherá os campos de data mais recentes)
 - Histórico de mensagens e de engajamento com mensagens
-
-Os dados de sessão só serão mesclados se o app existir em ambos os perfis de usuário.
+- Os dados de sessão só serão mesclados se o app existir em ambos os perfis de usuário.
 
 {% alert note %}
 Ao mesclar usuários, o uso do endpoint `/users/merge` funciona da mesma forma que o [método`changeUser()` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
@@ -233,7 +232,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `202` e `400`.
+Existem dois códigos de status para este endpoint: `202` e `400`.
 
 ### Exemplo de resposta bem-sucedida
 

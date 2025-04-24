@@ -3,7 +3,7 @@ nav_title: "수신자 개체"
 article_title: API 수신자 개체
 page_order: 9
 page_type: reference
-description: "이 참조 문서에서는 Braze 수신자 객체의 다양한 구성 요소에 대해 설명합니다."
+description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양한 구성 요소에 대해 설명합니다."
 
 ---
 
@@ -17,7 +17,7 @@ description: "이 참조 문서에서는 Braze 수신자 객체의 다양한 구
 이메일 주소로 수신자를 지정하는 기능은 현재 얼리 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
 {% endalert %}
 
-수신자 객체를 사용하면 [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/), [트리거 속성 객체]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 및 [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)를 결합할 수 있습니다.
+수신자 객체를 사용하면 [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/), [트리거 속성 객체]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 및 [캔버스 항목 속성 객체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) 결합할 수 있습니다.
 
 ## 개체 본문
 
@@ -33,14 +33,14 @@ description: "이 참조 문서에서는 Braze 수신자 객체의 다양한 구
 ```
 
 - [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
+- [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [우선순위 지정]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 
 ## 수신자 개체 중복 제거
 
-수신자 개체로 API 호출을 할 때 **동일한 주소(이메일, 푸시)를 타겟팅으로 하는 중복된 수신자가 있는 경우, 중복 제거**가 이루어집니다. 이는 중복된 사용자가 제거되고 한 명만 남는다는 의미입니다. 
+수신자 개체로 API 호출을 할 때 **동일한 주소(이메일, 푸시)를 대상으로 하는 중복된 수신자가 있는 경우, 중복 제거(중복된** 사용자가 제거되고 한 명만 남는다는 의미)가 이루어집니다. 
 
-예를 들어 동일한 `external_user_id`를 사용하는 경우 하나의 메시지만 수신됩니다. 이 동작에 대한 해결 방법이 필요한 경우 여러 번 API를 호출하는 것을 고려하세요.
+예를 들어 동일한 `external_user_id` 을 사용하는 경우 하나의 메시지만 수신됩니다. 이 동작에 대한 해결 방법이 필요한 경우 여러 번 API를 호출하는 것을 고려하세요.
 
 ```json
 {"campaign_id":"#####","recipients":[

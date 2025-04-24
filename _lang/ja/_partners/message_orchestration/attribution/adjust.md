@@ -1,6 +1,6 @@
 ---
-nav_title: 調整する
-article_title: 調整する
+nav_title: Adjust
+article_title: Adjust
 alias: /partners/adjust/
 description: "この参考記事では、Brazeとモバイルアトリビューション・アナリティクス企業のAdjustとの提携について概説している。Adjustは、オーガニックインストール以外のアトリビューションデータをインポートし、ライフサイクルキャンペーン内でよりインテリジェントにセグメントすることを可能にする。"
 page_type: partner
@@ -8,9 +8,13 @@ search_tag: Partner
 
 ---
 
-# 調整する
+# Adjust
 
 > [Adjust](https://www.adjust.com/) は、モバイルアトリビューションおよび分析を扱う企業です。広告ソースのアトリビューションと高度な分析を組み合わせ、総合的なビジネスインテリジェンスを提供しています。
+
+_この統合はAdjustによって維持されている。_
+
+## 統合について
 
 BrazeとAdjustの統合により、オーガニックインストール以外のアトリビューションデータをインポートし、ライフサイクルキャンペーン内でよりインテリジェントにセグメント化できる。
 
@@ -52,12 +56,12 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 iOSアプリがあれば、IDFVはAdjustによって収集され、Brazeに送信される。このIDは、Brazeで一意のデバイスIDにマッピングされる。
 
-[iOS14アップグレードガイドに]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/)記載されているように、BrazeでIDFAを収集している場合、BrazeはオプトインしたユーザーのIDFA値を引き続き保存する。このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
+[iOSアップグレードガイドに]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/)記載されているように、IDFAをBrazeで収集している場合、BrazeはオプトインしたユーザーのIDFA値を引き続き保存する。このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
 
 {% endtab %}
 {% tab Swift %}
 
-iOSアプリを使用している場合は、`useUUIDAsDeviceId` フィールドを`false` に設定することで、IDFV を収集することを選択できます。設定されていない場合、iOSのアトリビューションはAdjustからBrazeに正確にマッピングされない可能性が高い。詳細については、「[IDFV の収集]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/)」を参照してください。
+iOSアプリを使用している場合は、`useUUIDAsDeviceId` フィールドを`false` に設定することで、IDFV を収集することを選択できます。設定されていない場合、iOSのアトリビューションはAdjustからBrazeに正確にマッピングされない可能性が高い。詳細については、「[IDFV の収集]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)」を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -69,10 +73,6 @@ AdjustからBrazeにインストール後のイベントを送信する予定が
 ### ステップ2:Braze データインポートキーを取得する
 
 Brazeで [**統合**] > [**テクノロジーパートナー**] に移動し、[**Adjust**] を選択します。 
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
 
 ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Adjustのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![Adjust テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][1]{: style="max-width:90%;"}
 
@@ -112,7 +112,7 @@ Brazeキャンペーンでクリックトラッキングリンクを使用する
 
 {% tabs ローカル %}
 {% tab Android %}
-Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection)にオプトインできます。GAID はまた、Adjust SDK 統合によってネイティブに収集されます。以下のリキッドロジックを利用することで、GAIDをAdjustクリックトラッキングリンクに含めることができる：
+Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id)にオプトインできます。GAID はまた、Adjust SDK 統合によってネイティブに収集されます。以下のリキッドロジックを利用することで、GAIDをAdjustクリックトラッキングリンクに含めることができる：
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -139,6 +139,7 @@ idfv={{most_recently_used_device.${id}}}
 **この推奨事項は完全に任意です**<br>
 現在、IDFV やGAID などのデバイス識別子をクリックトラッキングリンクで使用していない場合、または今後使用する予定がない場合でも、Adjust は確率モデリングを介してこれらのクリックを属性化できます。
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/attribution/adjust.png %}
 [2]: {% image_buster /assets/img/attribution/adjust2.png %}

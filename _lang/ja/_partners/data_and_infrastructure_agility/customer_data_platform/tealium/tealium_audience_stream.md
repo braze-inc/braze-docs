@@ -16,7 +16,7 @@ search_tag: Partner
 Brazeと Tealium の統合には、AudienceStream の訪問者プロファイルが利用されています。共有された行動は、オーディエンスと呼ばれる共通の特徴を持つ訪問者のセットを作成するために、これらのプロファイルをセグメント化する。これらのオーディエンスは、コネクターを介してリアルタイムでマーケティングテクノロジースタックにデータを提供できます。 
 
 {% alert important %}
-TealiumのAudienceStreamsとEventStreamsは、バッチと非バッチの両方のコネクターアクションを提供する。非バッチコネクターは、リアルタイムリクエストがユースケースにとって重要であり、Braze の API レート制限指定に達する懸念がない場合にのみ使用してください。ご質問がある場合は、Braze [サポート]({{site.baseurl}}/braze_support/)またはカスタマーサクセスマネージャーにお問い合わせください。
+TealiumのAudienceStreamsとEventStreamsは、バッチと非バッチの両方のコネクターアクションを提供する。非バッチコネクターは、リアルタイムリクエストがユースケースにとって重要であり、Braze APIレート制限仕様に当たる懸念がない場合に使用すべきである。ご質問がある場合は、Braze [サポート]({{site.baseurl}}/braze_support/)またはカスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
 ## 前提条件
@@ -144,14 +144,14 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 {% endalert %}
 
 {% tabs local %}
-{% tab トラッキングユーザー - バッチと非バッチ %}
+{% tab ユーザーの追跡 (バッチと非バッチ) %}
 
 このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。Track User アクションは AudienceStream と EventStream の両方で同じですが、Tealium はAudienceStream アクションでユーザー属性のマッピングを設定し、EventStream アクションでイベントと購入のマッピングを設定することを推奨しています。
 
 | パラメーター | 説明 |
 | ---------- | ----------- |
 | ユーザー ID | このフィールドを使用して、Tealium のユーザー ID フィールドを Braze の対応するフィールドにマッピングします。1 つ以上のユーザー ID 属性をマップします。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br><br>\- プッシュトークンs をインポートする場合は、外部ID とBraze ID を指定しないでください。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を参照してください。 |
-| ユーザ属性 | Braze の既存のユーザープロファイルのフィールド名を使用して、Braze ダッシュボードのユーザープロファイル値を更新するか、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加します。<br><br>\- デフォルトでは、新規ユーザーが存在しない場合は作成されます。<br>\- 設定では、** 更新 Existing Only** to `true` で、存在するユーザーs のみが更新d になり、新しいユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
+| ユーザ属性 | 既存のBrazeユーザープロファイルのフィールド名を使用して、ダッシュボードのユーザープロファイル値を更新したり、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加する。<br><br>\- デフォルトでは、新規ユーザーが存在しない場合は作成されます。<br>\- 設定では、** 更新 Existing Only** to `true` で、存在するユーザーs のみが更新d になり、新しいユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
 | Modify user attributes | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
 | イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
 | Event template | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
@@ -237,6 +237,6 @@ Braze Web SDK タグを使用して Tealium と統合するユーザーの場合
 
 [1]: https://docs.tealium.com/server-side/attributes/about/
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [21]: https://docs.tealium.com/server-side/connectors/trace/about/
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}

@@ -10,7 +10,7 @@ description: "この記事では、スケジュールされたAPIトリガーキ
 ---
 {% api %}
 # スケジュールされた API トリガーキャンペーンを削除
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id`| 必須 | 文字列 | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `schedule_id` | 必須 | 文字列 | 削除する`schedule_id`（スケジュールの作成に対する応答から取得）。 |

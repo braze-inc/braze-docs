@@ -14,13 +14,9 @@ page_order: 2
 
 **Audience** > **Subscriptions** > **E メールユーザー設定センター** に移動して、ユーザー設定センターを作成します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**Users**> **Subscription Groups**> **Email Preference Center** に移動します。
-{% endalert %}
-
 ここには、カスタムユーザー設定センターが一覧表示されます。**Create New**を選択して新しいユーザー設定センターを作成するか、既存の名前を選択して変更します。
 
-![][1]
+![名前、説明、タイプ、ステータス、最終編集日、および作成者が含まれるカスタムユーザー設定センターのリスト。][1]
 
 ## ステップ 2:メールユーザー設定センターの命名
 
@@ -28,7 +24,7 @@ page_order: 2
 
 このリキッドタグは、任意の送信メール キャンペーンs またはキャンバスステップs に含めることができ、ユーザーをユーザー設定センターに送信します。
 
-![][2]
+![ユーザー設定センターの Liquid の例。][2]
 
 ## ステップ 3:ユーザー設定センターへの購読グループの追加
 
@@ -45,7 +41,7 @@ page_order: 2
 - [**すべてを購読**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループに登録されます。
 - [**すべて購読解除**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループから削除されます。
 
-![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![ユーザー設定センターの例で、すべてのメッセージ、マーケティング、ニュースレター、ウィークリーメールの購読、またはすべての配信停止のオプションがある。][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
 
 テンプレートの下部にある [**すべて購読解除**] ボタンは削除できず、ユーザーが受信しているすべてのメールメッセージを[グローバルに購読解除]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)します。
 
@@ -55,7 +51,7 @@ page_order: 2
 
 [**共通のスタイル**] タブから、ユーザー設定センター内の関連するすべてのブロックに適用する特定のスタイルを設定できます。この項で設定したスタイルは、指定したブロックで上書きする場合を除き、メッセージ内のあらゆる場所で使用されます。より簡単にデザインするために、ページレベルのスタイルを設定してから、ブロックレベルでスタイルをカスタマイズすることをお勧めします。
 
-![][5]{: style="max-width:45%;"}
+![テキスト、ボタン、リンクの一般的なスタイル設定の例。][5]{: style="max-width:45%;"}
 
 {% alert tip %}
 [共通のスタイル] に戻るには、個々のブロックプロパティにある [X] ボタンを選択します。次に、メッセージコンテナー、メッセージの [X] ボタン、またはエディターの背景を選択します。
@@ -70,13 +66,11 @@ page_order: 2
 
 行は、セルを使用してメッセージのセクションの水平方向の構成を定義する構造単位です。
 
-![]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
+![メッセージの行のタイプを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
 
-行を選択すると、列カスタマイズセクションに必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。
+行を選択すると、列カスタマイズセクションに必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。スライドして、既存の列のサイズを調整することもできます。
 
-スライドして、既存の列のサイズを調整することもできます。
-
-![]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
+![背景色、ボーダースタイル、ボーダー半径、パディングなど、列のプロパティをカスタマイズするオプション。]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
 
 ベストプラクティスとして、行および列のプロパティーを書式設定してから、行内のブロックを書式設定します。間隔と配置は、さまざまな場所で調整できるため、基礎から始めると簡単に編集できます。
 
@@ -85,7 +79,7 @@ page_order: 2
 
 ブロックは、メッセージで使用できるさまざまなタイプのコンテンツを表します。既存の行Segmentの内側に1 つドラッグすると、セルの幅に自動的に調整されます。
 
-![]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+![タイトル、段落、ボタン、画像、スペーサーなどのブロックを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 すべてのブロックには、パディング上の粒状コントロールなど、独自の設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 
@@ -98,7 +92,7 @@ page_order: 2
 
 確認ページをカスタマイズするのを忘れないでください!ドラッグアンドドロップエディタウィンドウの上部にある**Confirmation Page**を選択すると、このページを編集できます。このページは、ユーザー設定センターを使用してユーザーが自分の設定を更新すると表示されます。上記と同じスタイル設定機能は、このページにもアプリします。
 
-![][9]{: style="max-width:65%;"}
+![ユーザーの好みが更新されたことを伝える確認ページの例。][9]{: style="max-width:65%;"}
 
 ## ステップ 6:ユーザー設定センターのプレビューと起動
 
@@ -114,9 +108,9 @@ page_order: 2
 
 ユーザー設定センターへのリンクをメールs に配置するには、**Copy Liquid** アイコンを選択して、目的のユーザー設定センターのLiquid タグをコピーします。
 
-![][10]{: style="max-width:75%;"}
+![ユーザー設定センターの行にある [Liquid をコピー] オプション。][10]{: style="max-width:75%;"}
 
-[ 配信停止 URL]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer) の挿入方法と同様に、リキッドタグをメールの任意の位置に追加します。
+[ 配信停止 URL]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) の挿入方法と同様に、リキッドタグをメールの任意の位置に追加します。
 
 ## エラーの処理
 

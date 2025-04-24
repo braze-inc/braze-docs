@@ -27,7 +27,7 @@ Android용 리치 푸시 알림을 만들기 전에 다음 세부 정보를 참�
   - **중간:** 1024x512 
   - **큼:** 2048x1024
 - 현재 Android 리치 알림은 JPEG 및 PNG 이미지 형식을 포함한 정적 이미지 만 허용합니다. GIF 및 기타 이미지 형식은 아직 지원되지 않습니다.
-- 푸시 알림에 작업 버튼을 추가하면 표시할 수 있는 이미지 영역에 영향을 미칠 수 있습니다. 대시보드 미리보기 및 라이브 디바이스로 테스트하여 결과가 예상대로 나오는지 확인합니다.
+- 푸시 알림에 작업 버튼을 추가하면 표시할 수 있는 이미지 영역에 영향을 미칠 수 있습니다. 대시보드 미리 보기와 라이브 디바이스로 테스트하여 결과가 예상대로 나오는지 확인하세요.
 
 {% alert note %}
 Braze는 리치 푸시 설정 방법에 대한 지침을 제공하지만, 리치 푸시 알림의 실제 렌더링은 기기 종횡비, Android 버전, OEM별 제약 조건 등 외부 요인에 따라 달라질 수 있습니다. 여러 Android 기기에 전송 테스트를 수행하여 리치 푸시 알림이 의도한 대로 표시되는지 확인하는 것이 좋습니다.
@@ -58,6 +58,6 @@ Braze는 리치 푸시 설정 방법에 대한 지침을 제공하지만, 리치
 리치 알림 콘텐츠가 대시보드에 업로드된 후, [캠페인을 예약][6]할 수 있습니다.
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [8]: {% image_buster /assets/img_archive/android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}

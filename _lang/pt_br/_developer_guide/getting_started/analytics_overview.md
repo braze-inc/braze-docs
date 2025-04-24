@@ -42,7 +42,7 @@ Braze registra o número de vezes que esses eventos ocorreram, bem como a últim
 
 ![Um gráfico de análise de dados de evento personalizado mostrando estatísticas sobre usuários que adicionaram um cartão de crédito e fizeram uma pesquisa em um período de trinta dias.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
-> [O incremento de atributos personalizados]({{site.baseurl}}/api/endpoints/messaging/) pode ser usado para manter um contador em uma ação do usuário semelhante a um evento personalizado. No entanto, você não poderá visualizar os dados do atributo personalizado em uma série temporal. Ações do usuário que não precisam ser analisadas em séries temporais devem ser registradas por meio deste método.
+> O [incremento de atributos personalizados]({{site.baseurl}}/api/endpoints/messaging/) pode ser usado para manter um contador em uma ação do usuário semelhante a um evento personalizado. No entanto, você não poderá visualizar os dados do atributo personalizado em uma série temporal. Ações do usuário que não precisam ser analisadas em séries temporais devem ser registradas por meio deste método.
 
 ### armazenamento de evento personalizado
 
@@ -56,7 +56,7 @@ Por exemplo, se um aplicativo de comércio eletrônico quisesse enviar uma mensa
 
 ![Um exemplo de evento personalizado que enviará uma campanha a um usuário que abandonou seu carrinho e deixou o valor do carrinho em mais de 100 e menos de 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-As propriedades do evento personalizado também podem ser usadas para personalização dentro do modelo de envio de mensagens. Qualquer campanha que use [a Entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com um evento de gatilho pode usar propriedades de evento personalizado desse evento para personalização de envio de mensagens. Se um aplicativo de jogos quisesse enviar uma mensagem aos usuários que completaram um nível, ele poderia personalizar ainda mais a mensagem com uma propriedade para o tempo que os usuários levaram para completar esse nível. Neste exemplo, a mensagem é personalizada para três segmentos diferentes usando [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). A propriedade do evento personalizado chamada ``time_spent``, pode ser incluída na mensagem chamando ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+As propriedades do evento personalizado também podem ser usadas para personalização dentro do modelo de envio de mensagens. Qualquer campanha que use a [Entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com um evento de gatilho pode usar propriedades de evento personalizado desse evento para personalização de envio de mensagens. Se um aplicativo de jogos quisesse enviar uma mensagem aos usuários que completaram um nível, ele poderia personalizar ainda mais a mensagem com uma propriedade para o tempo que os usuários levaram para completar esse nível. Neste exemplo, a mensagem é personalizada para três segmentos diferentes usando [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). A propriedade do evento personalizado chamada ``time_spent``, pode ser incluída na mensagem chamando ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
@@ -279,7 +279,7 @@ Adicionar esses atributos lhe daria a capacidade de enviar campanhas para os usu
 Os IDs de usuário devem ser definidos para cada um de seus usuários. Esses devem ser imutáveis e acessíveis quando um usuário abre o app. Recomendamos **fortemente** fornecer este identificador, pois isso permitirá que você:
 
 - Acompanhe seus usuários em dispositivos e plataformas, melhorando a qualidade de seus dados comportamentais e demográficos.
-- Importe dados [de]({{site.baseurl}}/api/endpoints/user_data/) seus usuários usando nossa [API de dados de usuários]({{site.baseurl}}/api/endpoints/user_data/).
+- Importe dados de seus usuários usando nossa [API de dados de usuários]({{site.baseurl}}/api/endpoints/user_data/).
 - Direcione-se a usuários específicos com nossa [API de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) para mensagens gerais e transacionais.
 
 Os IDs de usuário devem ter menos de 512 caracteres e devem ser privados e não facilmente obtidos (por exemplo, não um endereço de e-mail simples ou nome de usuário). Se tal identificador não estiver disponível, a Braze atribuirá um identificador único aos seus usuários, mas você não terá as capacidades listadas para IDs de usuário. Você deve evitar definir IDs de usuário para usuários para os quais você não possui um identificador exclusivo que esteja vinculado a eles como indivíduos. Passar um identificador de dispositivo não oferece nenhum benefício em comparação com o rastreamento anônimo automático de usuários que o Braze oferece por padrão. A seguir estão alguns exemplos de IDs de usuário adequados e inadequados.

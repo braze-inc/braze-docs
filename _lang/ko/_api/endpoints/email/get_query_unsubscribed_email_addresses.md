@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: 구독취소된 이메일 주소 목록 조회하기"
-article_title: "GET: 구독취소된 이메일 주소 목록 조회하기"
+nav_title: "GET: 수신 거부된 이메일 주소 목록 조회하기"
+article_title: "GET: 수신 거부된 이메일 주소 목록 조회하기"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "이 문서에서는 Braze 엔드포인트의 목록 검색 또는 구독취소된 이메일 조회에 대한 자세한 내용을 간략하게 설명합니다."
+description: "이 문서에서는 Braze 엔드포인트의 목록 검색 또는 구독 취소 이메일 조회에 대한 자세한 내용을 간략하게 설명합니다."
 
 ---
 {% api %}
-# 구독취소된 이메일 주소 목록 조회하기
+# 수신 거부된 이메일 주소 목록 조회하기
 {% apimethod get %}
 /email/unsubscribes
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 `start_date`에서 `end_date`까지의 기간 동안 구독을 취소한 최신 이메일을 반환합니다. 전체 구독 상태 기록을 보려면 [커런츠]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)를 사용하여 이 데이터를 추적하세요.
+> 이 엔드포인트를 사용하여 `start_date` 에서 `end_date` 까지의 기간 동안 구독을 취소한 최신 이메일을 반환합니다. 전체 구독 상태 기록을 보려면 [Currents를]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) 사용하여 이 데이터를 추적하세요.
 
 이 엔드포인트를 사용하여 Braze와 다른 이메일 시스템 또는 자체 데이터베이스 간의 양방향 동기화를 설정할 수 있습니다.
 
@@ -41,10 +41,10 @@ description: "이 문서에서는 Braze 엔드포인트의 목록 검색 또는 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-`end_date` 이메일 주소와 `email` 또는 `start_date` 중 하나를 제공해야 합니다.
+`end_date` 이메일 주소와 `email` 또는 `start_date` 이메일 주소를 제공해야 합니다.
 {% endalert %}
 
-날짜 범위에 `limit` 이상의 구독 취소 횟수가 있는 경우, 호출이 `limit`보다 적거나 결과가 0이 될 때까지 매번 `offset`을 늘려가며 여러 번 API 호출을 수행해야 합니다.
+날짜 범위에 `limit` 이상의 구독 취소 횟수가 있는 경우, 호출이 `limit` 보다 적거나 결과가 0이 될 때까지 매번 `offset` 을 늘려가며 여러 번 API 호출을 수행해야 합니다.
 
 ## 예시 요청
 ```

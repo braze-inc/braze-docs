@@ -3,7 +3,7 @@ nav_title: 사용자 경로 미리보기
 article_title: 사용자 경로 미리보기
 page_order: 0.3
 alias: /preview_user_paths/
-description: "이 참조 문서에서는 캔버스에서 사용자 경로를 미리 보는 방법에 대해 설명합니다."
+description: "이 페이지에서는 캔버스에서 사용자 경로를 미리 보는 방법에 대해 설명합니다."
 Tool:
   - Canvas
 ---
@@ -12,7 +12,7 @@ Tool:
 
 > 사용자를 위해 만든 캔버스 여정을 경험하세요. 여기에는 수신할 타이밍과 메시지를 미리 보는 것도 포함됩니다. 이러한 테스트 실행은 캔버스를 보내기 전에 메시지가 올바른 오디언스에게 전송되는지 확인하는 품질 보증 역할을 합니다.
 
-## 테스트 실행 시작
+## Creating a test run
 
 사용자 여정을 미리 보려면 다음 단계를 따르세요:
 
@@ -45,6 +45,8 @@ Tool:
 
 실제 테스트 메시지를 보내지 않더라도 테스트 실행 중에 Liquid 로직이 처리됩니다. 즉, [중단 메시지 로직]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages)과 기타 Liquid 로직이 반영되어 캔버스 사용자 여정에 영향을 미칠 수 있습니다.
 
+미리보기가 사용자 여정의 마지막 단계를 중단하는 대신 전송하는 경우, 미리보기는 캔버스 입력 시간을 기준으로 사용자가 실제 단계에 있는 시간이 아닌 현재 시간을 Liquid 평가를 위해 테스트 중인 시간으로 사용할 수 있습니다.
+
 ## 타이밍을 위한 미리보기
 
 예약된 캔버스의 경우, 테스트 사용자는 다음 예약된 입장 시간에 입장하게 됩니다. 시작 날짜가 있는 작업 기반 캔버스의 경우 테스트 사용자가 시작 날짜와 시간을 입력합니다. 
@@ -55,12 +57,15 @@ Tool:
 
 ## 사용자가 들어오고 나갈 때
 
-테스트 사용자는 실제 이용 자격이 없더라도 미리 보기에 참여할 수 있습니다. 자격이 없는 경우 기준을 충족하지 못한 이유를 확인할 수 있습니다. 사용자가 캔버스에 들어오고 나갈 때 사이드바에서 결과를 확인할 수 있습니다.
+Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-- 종료 기준(이벤트 속성정보 포함)에 해당하는 작업으로 행동 경로를 테스트하면 종료 기준이 트리거되고 테스트 실행이 종료됩니다.
-- 종료 기준에 해당하는 메시지 단계를 테스트하는 경우 종료 기준이 트리거되고 테스트 실행이 종료됩니다.
-- 현재로서는 행동 경로 내에서 특정 이벤트나 속성을 선택하여 종료 기준을 트리거할 수 없습니다(경로 전체만 트리거할 수 있습니다). 사용자가 잠재적으로 여러 종료 기준을 충족할 수 있는 경우, 가장 먼저 처리되어 충족하는 기준이 결과로 표시됩니다.
-- 이벤트, API 트리거 및 캔버스 항목 속성은 캔버스 항목에 따라 적용되지 않습니다. 후속 단계의 결과에는 영향을 미치지 않습니다.
+이벤트, API 트리거, 사용자 지정 속성 및 캔버스 항목 속성은 캔버스 항목에 따라 적용됩니다. 테스트 실행은 이러한 요소를 적용하지 않고 사용자 여정을 시뮬레이션하여 실제 사용자 프로필이나 캔버스의 흐름을 변경합니다. 예를 들어, 테스트 중에 사용자 지정 속성을 캔버스 트리거로 사용하면 사용자 지정 속성 변경을 트리거한 **것처럼** 트리거 기준이 사용자의 미리 보기에 적용됩니다.
+
+### Consideration
+
+If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered and the test run will end. 
+
+현재로서는 행동 경로 내에서 특정 이벤트나 속성을 선택하여 종료 기준을 트리거할 수 없습니다(경로 전체만 트리거할 수 있습니다). 사용자가 잠재적으로 여러 종료 기준을 충족할 수 있는 경우, 가장 먼저 처리되어 충족하는 기준이 결과로 표시됩니다.
 
 ## 실험 경로 및 캔버스 변형
 
@@ -70,7 +75,7 @@ Tool:
 
 ## 테스트 전송
 
-테스트 실행이 채워질 때 내부 테스트 그룹 또는 개별 사용자에게 테스트 메시지를 보내도록 선택할 수 있습니다. 즉, 테스트 경로를 따라 사용자가 마주치는 메시지만 전송됩니다. 수신자는 기본적으로 고유한 속성을 가진 메시지를 받게 되지만 테스트 사용자의 속성으로 이를 재정의할 수 있습니다.
+테스트 실행이 채워질 때 내부 테스트 그룹 또는 개별 사용자에게 테스트 메시지를 보내도록 선택할 수 있습니다. 즉, 테스트 경로를 따라 사용자가 마주치는 메시지만 전송됩니다. 수신자는 기본적으로 해당 속성이 포함된 메시지를 받게 되지만 테스트 사용자의 속성으로 이를 재정의할 수 있습니다.
 
 경로에 관계없이 경로를 미리 보지 않고 캔버스에 있는 모든 테스트 메시지를 한 번에 보내려면 **테스트 보내기** 탭에서 **모든 테스트 메시지 보내기를** 선택하면 됩니다.
 
@@ -84,21 +89,23 @@ Tool:
 
 ## 연결된 콘텐츠
 
-연결된 콘텐츠가 캔버스에 포함되어 있으면 실행됩니다. 캔버스에 연결된 콘텐츠가 포함되어 있는 경우 다른 캔버스 또는 캠페인에서 참조되는 고객 프로필 또는 데이터를 변경하도록 구성된 연결된 콘텐츠를 제거합니다. 또는 사용자 여정을 미리 보지 않도록 선택할 수도 있습니다.
+연결된 콘텐츠가 캔버스에 포함되어 있으면 실행됩니다. 즉, 커넥티드 콘텐츠 호출이 있는 캔버스 또는 커넥티드 콘텐츠가 포함된 콘텐츠 블록을 테스트하는 경우 캔버스가 커넥티드 콘텐츠 호출을 전송하여 다른 캠페인이나 캔버스에서 참조된 데이터를 수정할 수 있습니다.
+
+사용자 경로를 미리 볼 때 다른 캔버스 또는 캠페인에서 참조된 사용자 프로필이나 데이터를 변경하는 연결된 콘텐츠를 제거하는 것을 고려하세요.
 
 ## 웹훅
 
-웹훅은 테스트 메시지가 전송될 때 실행되지만 테스트 실행 중에는 실행되지 않습니다. 연결된 콘텐츠와 마찬가지로, 다른 캔버스 또는 캠페인에서 참조되는 사용자 프로필이나 데이터를 변경하도록 구성된 웹훅을 제거하는 것이 좋습니다.
+웹훅은 테스트 메시지가 전송될 때 실행되지만 테스트 실행 중에는 실행되지 않습니다. 커넥티드 콘텐츠와 마찬가지로, 다른 캔버스나 캠페인에서 참조된 사용자 프로필이나 데이터를 변경하는 웹훅을 제거하는 것이 좋습니다.
 
 ## 사용 사례
 
 이 시나리오에서 캔버스는 앱에서 세션이 없는 사용자를 타겟팅하도록 설정되어 있습니다. 이 여정에는 환영 이메일이 포함된 메시지 단계, 하루 동안 설정된 지연 단계, 세션이 하나 이상 있는 사용자와 그 외의 모든 사용자로 분할되는 오디언스 경로 단계가 포함됩니다. 사용자가 어느 오디언스 경로에 속해 있는지에 따라 후속 메시지 단계가 전송됩니다.
 
-![][1]{:style="max-width:70%"}
+![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.][1]{:style="max-width:70%"}
 
 테스트 사용자는 캔버스 진입 기준을 충족하므로 캔버스에 들어가서 사용자 여정을 진행할 수 있습니다. 그러나 테스트 사용자가 지난 달력 날짜에 앱을 열지 않았기 때문에 "다른 모든 사용자" 경로로 계속 이동하여 다음과 같은 푸시 알림을 받게 됩니다. "마지막 기회! 첫 번째 과제를 완료하면 특별 보너스를 받을 수 있습니다."
 
-![][2]
+![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

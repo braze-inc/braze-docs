@@ -27,7 +27,7 @@ Braze는 설치 경로 추적을 제공하지 않지만, Branch 및 AppsFlyer와
 
 ### 광고의 참조 데이터
 
-사용자는 프로모션 제안이나 경품을 통해 앱에 매력을 느낄 수 있습니다. 설치 어트리뷰션 데이터를 사용하면 이러한 프로모션으로 인해 설치한 사용자에게만 할인 코드나 오퍼가 포함된 캠페인을 보낼 수 있습니다. 비슷한 방식으로 광고에 특정 제품에 대한 정보(예: 동영상 앱의 특정 영화 또는 전자상거래 앱의 세일)가 포함되어 있는 경우, 사용자를 앱의 올바른 페이지로 안내하는 캠페인을 보낼 수 있습니다.
+사용자는 프로모션 제안이나 경품을 통해 앱에 매력을 느낄 수 있습니다. 설치 어트리뷰션 데이터를 사용하면 이러한 프로모션으로 인해 설치한 사용자에게만 할인 코드나 오퍼가 포함된 캠페인을 보낼 수 있습니다. In a similar manner, if your ad contains information on a particular product (such as a specific movie in a video app or sale in an eCommerce app), you can send campaigns directing users to the correct page of your app.
 
 ## 광고 활동 평가
 

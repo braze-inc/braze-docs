@@ -34,11 +34,11 @@ Esse endpoint tem um limite de frequência de 250.000 solicitações por hora.
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 |`step_id`| Obrigatória | String | O ID de sua etapa do canva. |
-|`message_variation_id`| Obrigatória | String | O ID para a sua variação de mensagem. |
-|`locale_id`| Obrigatória | String | O ID do local. |
+|`message_variation_id`| Obrigatória | String | A ID de sua variação de mensagem. |
+|`locale_id`| Obrigatória | String | O ID da localização. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Nota todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados em **Suporte Multilíngue** configurações ou na resposta da solicitação.
+Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações do **Suporte multilíngue** ou na resposta da solicitação.
 
 ## Exemplo de solicitação
 
@@ -54,7 +54,7 @@ Há quatro respostas de código de status para esse endpoint: `200`, `400`, `404
 
 ## Exemplo de resposta bem-sucedida
 
-O código de status `200` pode retornar o seguinte cabeçalho e corpo de resposta.
+O código de status `200` poderia retornar o seguinte cabeçalho e corpo de resposta.
 
 ```json
 Content-Type: application/json
@@ -79,7 +79,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Exemplo de resposta de erro
 
-O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [Resolução de problemas](#troubleshooting) para saber mais sobre os erros que você pode encontrar.
+O código de status `400` poderia retornar o seguinte corpo de resposta. Consulte [Solução de problemas](#troubleshooting) para obter mais informações sobre os erros que você pode encontrar.
 
 ```json
 {
@@ -93,16 +93,16 @@ O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [
 
 ## Solução de problemas
 
-A tabela a seguir lista os possíveis erros retornados e suas etapas de solução de problemas associadas.
+A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas.
 
 | Mensagem de erro                           | Solução de problemas                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirme se o ID da campanha corresponde à campanha que você está traduzindo.                   |
-| `INVALID_LOCALE_ID`                     | Confirme se o seu ID de localidade existe na sua tradução.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirme que seu ID de mensagem está correto.                                                |
+| `INVALID_LOCALE_ID`                     | Confirme se o ID da localização existe na tradução da mensagem.                         |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirme se o ID da mensagem está correto.                                                |
 | `MESSAGE_NOT_FOUND`                     | Verifique se a mensagem a ser traduzida está correta.                                           |
-| `LOCALE_NOT_FOUND`                      | Confirme se o local existe em suas configurações multilíngues.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | As configurações multilíngues não estão ativadas para o seu espaço de trabalho.                       |
+| `LOCALE_NOT_FOUND`                      | Confirme se a localização existe em suas configurações de vários idiomas.                         |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | As configurações de vários idiomas não estão ativadas em seu espaço de trabalho.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Somente as campanhas de e-mail ou as mensagens de canva com e-mails podem ser traduzidas.             |
 | `UNSUPPORTED_CHANNEL`                   | Somente mensagens em campanhas de mensagens ou mensagens de canvas com e-mails podem ser traduzidas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

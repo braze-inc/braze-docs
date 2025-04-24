@@ -36,7 +36,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 추천에 이름과 선택적 설명을 제공하세요.
 
-![][1]
+!["Recommendation details" step with the name and description fields.][1]
 
 ### 2단계: 추천 정의 {#recommendation-type}
 
@@ -55,7 +55,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 사용자가 이미 구매했거나 상호작용한 항목을 추천하지 않으려면 **사용자가 이전에 상호작용한 항목을 추천하지 않음**을 선택하세요. 이 옵션은 추천 **유형**이 **AI 개인화**로 설정된 경우에만 사용할 수 있습니다.
 
-![][2-3]
+!["Define your recommendation" step with "Most popular" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
 
 이 설정은 추천이 최근에 업데이트된 경우 사용자가 이미 구매했거나 상호작용한 항목을 메시지가 재사용하지 않도록 방지합니다. 추천 업데이트 사이에 구매하거나 상호작용한 항목은 여전히 나타날 수 있습니다. 항목 추천의 무료 버전에서는 업데이트가 매주 이루어집니다. AI 항목 추천의 프로 버전에서는 업데이트가 24시간마다 이루어집니다.
 
@@ -69,7 +69,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 추천에 대한 더 많은 제어를 원하시면, [선택]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)를 선택하여 커스텀 필터를 적용하세요. 선택 항목은 카탈로그의 특정 열, 예를 들어 브랜드, 크기 또는 위치에 따라 추천을 필터링합니다. Liquid이 포함된 선택 항목은 추천에 사용할 수 없습니다.
 
-![][2-2]
+![An example of the "in-stock" selection selected for the recommendation.][2-2]
 
 {% alert tip %}
 선택 항목을 찾을 수 없는 경우 먼저 카탈로그에 설정되어 있는지 확인하세요.
@@ -87,7 +87,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 **커스텀 이벤트**을 선택하면 목록에서 이벤트를 선택하세요.
 
-![][3]
+![The "Completed Purchase" custom event selected as how events are currently tracked.][3]
 
 ### 4단계: 해당 속성 이름을 선택하세요{#property-name}
 
@@ -97,7 +97,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 **속성정보 이름** 필드는 SDK를 통해 Braze로 전송된 필드 목록으로 미리 채워집니다. 충분한 데이터가 제공되면 이러한 속성도 올바른 속성정보일 확률에 따라 순위가 매겨집니다. 카탈로그의 `id` 필드에 해당하는 것을 선택하세요.
 
-![][4]
+![The property name "purchase_item" selected that corresponds to the item IDs in the catalog.][4]
 
 #### 요구 사항 {#requirements}
 
@@ -179,7 +179,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 ##### 예제 커스텀 이벤트 객체와 제품 배열
 
-이벤트 속성에 여러 제품이 배열로 포함되어 있는 경우, 각 제품 ID는 별도의 순차적 이벤트로 처리됩니다. 이 이벤트는 샘플 카탈로그에서 첫 번째 및 세 번째 항목과 일치시키기 위해 속성 `products.sku`을 사용할 수 있습니다.
+이벤트 속성에 여러 제품이 배열로 포함되어 있는 경우, 각 제품 ID는 별도의 순차적 이벤트로 처리됩니다. 이 이벤트는 샘플 카탈로그의 첫 번째 및 세 번째 항목과 일치시키기 위해 속성을 사용할 수 있습니다.
 
 ```json
 {
@@ -203,7 +203,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 ##### 예제 커스텀 이벤트 객체와 제품 ID 배열을 포함하는 중첩 객체
 
-배열의 값으로 제품 ID가 객체가 아닌 경우, 동일한 표기법을 사용할 수 있으며 각 제품 ID는 별도의 순차적 이벤트로 처리됩니다. 이것은 샘플 카탈로그의 첫 번째 및 세 번째 항목과 일치하도록 속성을 `purchase.product_skus`로 구성하여 다음 이벤트에서 중첩된 객체와 유연하게 결합될 수 있습니다.
+제품 ID가 객체 대신 배열의 값인 경우 동일한 표기법을 사용할 수 있으며 각 제품 ID는 별도의 순차적 이벤트로 처리됩니다. 이것은 샘플 카탈로그의 첫 번째 및 세 번째 항목과 일치하도록 속성을 구성하여 다음 이벤트에서 중첩된 객체와 유연하게 결합될 수 있습니다.
 
 ```json
 {
@@ -302,7 +302,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 
 페이지 상단에서 추천에 대한 통계, 예를 들어 정밀도와 범위를 찾을 수 있습니다.
 
-![][5]
+![Recommendation audience metrics showing precision (21.1%), coverage (83.0%), and recommendation types split between personalized and most popular items.][5]
 
 이 측정기준은 다음 표에 정의되어 있습니다. 
 
@@ -318,15 +318,15 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 - **개인화된 항목** 또는 **가장 최근 항목:** 이 열은 사용자에게 가장 자주 추천되는 순서대로 카탈로그의 각 항목을 나열합니다. 이 열은 모델에 의해 각 항목에 할당된 사용자 수를 보여줍니다.
 - **가장 인기 있는 항목:** 이 열은 카탈로그의 각 항목을 인기 순으로 내림차순으로 나열합니다. 인기란 전체 워크스페이스에서 사용자가 가장 자주 상호작용하는 카탈로그의 항목을 의미합니다. 가장 인기 있는 것은 개인화된 또는 가장 최근의 것을 개별 사용자에 대해 계산할 수 없을 때 대체로 사용됩니다.
 
-![][6]
+![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.][6]
 
 **추천 개요**는 추천 구성이 마지막으로 업데이트된 시점을 포함하여 선택한 추천 구성의 요약을 보여줍니다.
 
-![][7]{: style="max-width:45%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:45%" }
 
 ## 메시징에서 추천 사용
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+!["Add Personalization" modal with item recommendation as the personalization type.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 추천이 완료되면 Liquid를 사용하여 해당 카탈로그에서 가장 인기 있는 제품을 삽입하여 메시지를 개인화할 수 있습니다. Liquid은 메시지 작성기에서 찾을 수 있는 개인화 창에 의해 생성될 수 있습니다:
 
@@ -345,7 +345,7 @@ AI 항목 추천을 사용하여 가장 인기 있는 제품을 계산하거나 
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
 | 사용자 업데이트 빈도<sup>1</sup>   | 주별                                | 일별                                    |
 | 모델 재훈련 빈도  | 월별                               | 월별                                   |
-| 최대 추천 모델 | 타입당 1 모델<sup>2</sup> | 100종류의 모델<sup>2</sup> |
+| 최대 추천 모델 | 타입당 1개 모델 | 100 모델당 2종 |
 
 <sup>1\. 사용자별 항목 추천이 업데이트되는 빈도입니다(모델이 재훈련될 때 업데이트되는 가장 인기 있는 항목 제외). 예를 들어, 사용자가 AI 항목 추천을 기반으로 추천된 항목을 구매하면, 추천된 항목은 이 빈도</sup>에 따라 업데이트됩니다.<br>
 <sup>2\. 사용 가능한 추천 유형은 AI 개인화된, 가장 최근, 가장 인기 있는, 그리고 트렌딩입니다.</sup>
@@ -361,6 +361,10 @@ Braze의 추천 엔진이 목록을 큐레이트할 때, 먼저 선택한 특정
 - 모델은 사용자의 기준에 맞는 항목을 30개 미만으로 찾습니다.
 - 관련 항목은 더 이상 사용 가능하거나 재고가 없습니다.
 - 항목이 현재 선택 기준을 충족하지 않으며, 이는 재고 변경 또는 사용자 선호도 변경 때문일 수 있습니다.
+
+### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
+
+No, existing recommendations won’t automatically update to train weekly or predict daily after upgrading. You can check the next training and prediction times in the **Recommendation** section by selecting a recommendation. For updated schedules, we suggest recreating your recommendations.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}

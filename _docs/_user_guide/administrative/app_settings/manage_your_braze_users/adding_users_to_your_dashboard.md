@@ -12,7 +12,7 @@ description: "This reference article covers how to manage users in your company 
 > Learn how to manage users in your company account, including adding, suspending, and deleting users.
 
 {% alert note %}
-Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
+Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
 ## Adding Braze users
@@ -59,13 +59,17 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ![Suspend a user when editing the user details.][5]
 
+## Assigning user access and responsibilities
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Deleting Braze users
 
 To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
 
 ![Delete a user][34]
 
-After a user is deleted, Braze does not keep any of the following data:
+After a user is deleted, Braze does not keep any of the following account data:
 
 - Any attributes that the user had
 - Email address
@@ -75,6 +79,24 @@ After a user is deleted, Braze does not keep any of the following data:
 - Country
 - Language
 - Other similar data
+
+Braze will keep the following account data:
+
+- Custom attributes or test data associated with their account
+- Campaigns or Canvases they created (but the user's name won't appear in them, such as appearing in the **Last edited by** column)
+
+## Troubleshooting
+
+### "Email is already taken" when trying to add a user
+
+If you try to add a new user and receive an error saying the email is already taken, but can't find them in your user list, that user most likely exists within a different instance of the same Braze dashboard cluster.
+
+To create this new user, you can do either of the following:
+
+1. Delete the user from the other instance before you can create them in the new one, or
+2. Create the user with a different email string (such as `testing+01@braze.com`) or another email alias. 
+
+If you don't receive the message activation on your inbox when using `testing+01@braze.com`, confirm with your IT team that you can accept messages from that kind of email address. Some administrators filter messages sent to email addresses with a `+`.
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

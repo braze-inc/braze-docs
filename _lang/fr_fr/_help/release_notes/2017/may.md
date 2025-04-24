@@ -30,7 +30,7 @@ Vous pouvez maintenant améliorer votre engagement en utilisant des boutons d’
 
 ## Mise à jour de la personnalisation Liquid
 
-Nous avons simplifié la personnalisation de Liquid avec une fenêtre contextuelle qui vous permet d’insérer facilement les données client dans vos messages. En savoir plus sur la [personnalisation liquide][38].
+Nous avons simplifié la personnalisation du code Liquid avec une fenêtre contextuelle qui vous permet d’insérer facilement les données client dans vos messages. En savoir plus sur la [personnalisation du code Liquid][38].
 
 ## Mises à jour de l’IU du tableau de bord
 

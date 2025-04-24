@@ -18,7 +18,7 @@ Braze 플랫폼에서 하는 모든 작업은 작업 공간 내에서 이루어�
 - **별개의 활동을 분리합니다.** 또한 워크스페이스는 브랜드나 활동을 분리할 수 있는 수단을 제공합니다. 예를 들어 사용자 기반이 다른 여러 개의 하위 브랜드가 있는 경우 각각에 대해 별도의 워크스페이스를 만드는 것이 좋습니다.
 
 {% alert tip %}
-이 접근 방식은 각 게임마다 개별 작업 공간을 관리할 수 있는 모바일 게임 회사나 운영 지역마다 별도의 작업 공간을 원하는 전자상거래 사이트와 같은 회사에 특히 유용합니다.
+This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or eCommerce sites that want separate workspaces for each region they operate in.
 {% endalert %}
 
 ## 워크스페이스 계획
@@ -188,24 +188,24 @@ Braze 플랫폼에서 하는 모든 작업은 작업 공간 내에서 이루어�
         <td>빈도 제한은 앱 단위가 아닌 모든 캠페인에 적용되므로 고객에게 과도한 메시지를 보내는 것을 방지하기가 더 어렵습니다.</td>
     </tr>
     <tr>
-        <td>구독 상태</td>
-        <td>각 사용자 프로필의 구독 상태는 각 앱 인스턴스마다 고유합니다.</td>
+        <td>Subscription status for user profiles</td>
+        <td>Each user profile's subscription status is unique to each app instance.</td>
         <td>N/A</td>
         <td>N/A</td>
-        <td>앱 인스턴스 전반의 구독 상태가 사용자 프로필에 결합됩니다.<br><br><b>팁:</b> 대신 사용자 지정 속성을 사용하여 구독을 관리할 수 있습니다.</td>
+        <td>A user profile's subscription statuses are combined across app instances.<br><br><b>팁:</b> You could use <a href='/docs/user_guide/data/custom_data/custom_attributes'>custom attributes</a> to manage your users' subscriptions instead.</td>
     </tr>
     <tr>
-        <td>사용자 권한</td>
+        <td>Braze 사용자 권한</td>
         <td>N/A</td>
-        <td>대시보드 사용자의 사용자 권한 업데이트는 사용자가 액세스해야 하는 각 워크스페이스에 대해 개별적으로 수행해야 합니다.</td>
-        <td>사용자 권한은 대시보드 사용자에 대해 한 번만 설정할 수 있으며 워크스페이스의 모든 앱 인스턴스에 대해 동일한 권한을 갖게 됩니다.</td>
+        <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
+        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
         <td>N/A</td>
     </tr>
     <tr>
         <td>콘텐츠 복제</td>
         <td>N/A</td>
-        <td>세그먼트, 캠페인 또는 캔버스를 여러 워크스페이스에 복제할 수 없습니다.</td>
-        <td>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
+        <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
+        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
         <td>N/A</td>
     </tr>
     <tr>

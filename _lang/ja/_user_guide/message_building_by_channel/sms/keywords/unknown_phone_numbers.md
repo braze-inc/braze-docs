@@ -14,7 +14,7 @@ channel:
 > BrazeでSMSを設定して稼働させた後、見知らぬユーザーからメッセージを受け取ることがあるかもしれません。次の手順は、未確認のユーザーと番号がどのように処理されるかを説明しています。
 
 {% alert important %}
-現在、非ネイティブSMSクライアントですか？その場合は、[非ネイティブ SMS ドキュメント](/docs/user_guide/message_building_by_channel/sms/non_native/)で、対応する不明な電話番号の処理の記事を参照してください。
+現在、非ネイティブSMSクライアントですか？その場合は、[非ネイティブ SMS ドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/)で、対応する不明な電話番号の処理の記事を参照してください。
 {% endalert %}
 
 ## オプトイン/アウトおよび不明な番号のカスタムキーワードワークフロー
