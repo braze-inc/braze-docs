@@ -15,7 +15,7 @@ tool: Canvas
 
 Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-## Create a delay
+## Creating a delay
 
 To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
 
