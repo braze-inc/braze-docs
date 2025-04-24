@@ -57,17 +57,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
 	"step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
-	"message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
-	"locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
-	"translations": [
-		{
-			"translation_map": {
-				"id_0": "¡Hola!",
-				"id_1": "Me llamo Jacky",
-				"id_2": "¿Dónde está la biblioteca?"
-			}
-		}
-	]
+    "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
+    "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
+    "translation_map": {
+       "id_3": "Ein Absatz ohne Formatierung"
+    }
 }
 ```
 
