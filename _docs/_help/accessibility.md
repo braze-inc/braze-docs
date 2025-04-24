@@ -13,7 +13,7 @@ description: "This reference article explains why accessibility is important to 
 Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
 {% alert important %}
-This content is intended to help you get started with building more accessible messages and doesn’t guarantee compliance with accessibility standards like WCAG. Braze offers tools that support creating accessible messaging, but it’s your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
+This content is intended for general guidance and doesn’t guarantee compliance with accessibility standards such as WCAG. Braze offers tools that support the creation of more accessible messages, but it’s your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
 {% endalert %}
 
 {% multi_lang_include accessibility/feedback.md %}
@@ -116,7 +116,9 @@ Always follow a logical, sequential hierarchy of headings (H1 to H2 to H3, and s
 #### Avoid justified text
 Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for right-to-left languages.
 
-#### Give your text room to breathe
+#### Choose readable font sizes and spacing
+Text that’s too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. 
+
 Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
 
 #### Use bold, italic, and uppercase text sparingly
@@ -184,6 +186,10 @@ Button text must be easy to read against the button’s background color. Check 
 
 High contrast helps buttons remain readable and clickable for everyone, including users with visual impairments or viewing your message in challenging environments. For more guidance, see the [Color contrast](#color-contrast) section.
 
+#### Make buttons easy to tap
+
+Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded tap targets can be frustrating or impossible for users with motor disabilities to interact with.  
+
 ### Links
 
 Use links for navigation, like directing users to an external page.
@@ -243,15 +249,26 @@ When images contain text that can’t be edited, users with visual impairments l
 
 #### Tips for writing alt text
 
-##### 1. Describe what's actually in the image
+1. [Describe what's actually in the image](#tip-1)
+2. [Keep it short, yet specific](#tip-2)
+3. [Avoid “image of” or “picture of”](#tip-3) 
+4. [Reflect text that appears in the image](#tip-4)
+5. [Stick to relevant context—no extra marketing jargon](#tip-5)
+6. [Consider the image's purpose](#tip-6)
+
+##### Describe what's actually in the image {#tip-1}
 
 Screen reader users rely on alt text to understand the content or function of an image. Avoid generic “marketing speak” that doesn’t match what’s visually shown.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -270,15 +287,19 @@ Screen reader users rely on alt text to understand the content or function of an
   </tbody>
 </table>
 
-##### 2. Keep it short, yet specific
+##### Keep it short, yet specific {#tip-2}
 
 Concise alt text makes it easier for users to process. Include enough detail to convey purpose but skip any fluff. As a general rule, keep alt text to 125 characters or less. If anything more than a brief phrase or sentence is necessary, consider using one of the [long description methods](https://www.w3.org/WAI/tutorials/images/complex/) from W3C.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -297,15 +318,19 @@ Concise alt text makes it easier for users to process. Include enough detail to 
   </tbody>
 </table>
 
-##### 3. Avoid “image of” or “picture of” 
+##### Avoid “image of” or “picture of” {#tip-3}
 
 Screen readers already announce an image. Jump right into describing the subject.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -324,15 +349,19 @@ Screen readers already announce an image. Jump right into describing the subject
   </tbody>
 </table>
 
-##### 4. Reflect text that appears in the image
+##### Reflect text that appears in the image {#tip-4}
 
 If an image includes essential text, put that information in the alt text so users don’t miss it.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -351,15 +380,19 @@ If an image includes essential text, put that information in the alt text so use
   </tbody>
 </table>
 
-##### 5. Stick to relevant context—no extra marketing jargon
+##### Stick to relevant context—no extra marketing jargon {#tip-5}
 
 Don’t pad alt text with SEO terms or calls to action not directly related to the image. Provide value for those who can’t see the image.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -378,15 +411,19 @@ Don’t pad alt text with SEO terms or calls to action not directly related to t
   </tbody>
 </table>
 
-##### 6. Consider the image's purpose
+##### Consider the image's purpose {#tip-6}
 
 If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” Link to,"“Sign up” ), not just the label or product shown.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good examples</th>
-      <th style="width: 50%">Poor examples</th>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -409,9 +446,14 @@ If the image doesn't have a purpose, make that known too. Decorative images, lik
 
 ### Videos
 
-Videos are engaging, but if they’re not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive.
+Videos are engaging, but if they’re not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive:
 
-#### Provide closed captions
+1. [Provide closed captions](#closed-captions)
+2. [Provide playback controls](#playback-controls)
+3. [Avoid auto-play](#no-auto-play)
+4. [Avoid flashing or strobing content](#no-seizures)
+
+#### Provide closed captions {#closed-captions}
 
 Include closed captions with your videos so users can follow along with the dialogue, sound effects, and other audio content. Captions help:
 
@@ -425,11 +467,11 @@ Closed captions can be toggled on or off, allowing users to choose what works be
 Braze doesn't automatically generate captions for your videos. It’s your responsibility to add accurate captions to your video files before including them in your message.
 {% endalert %}
 
-#### Provide playback controls
+#### Provide playback controls {#playback-controls}
 
 Make sure your embedded video includes accessible playback controls—such as play, pause, mute, and seek—so users can interact with it in the way that works best for them.
 
-#### Avoid auto-play
+#### Avoid auto-play {#no-auto-play}
 
 Whenever possible, avoid setting videos to play automatically. Auto-play can be jarring or disorienting for:
 
@@ -439,7 +481,7 @@ Whenever possible, avoid setting videos to play automatically. Auto-play can be 
 
 Let users choose when to play a video by including clear controls.
 
-#### Avoid flashing or strobing content
+#### Avoid flashing or strobing content {#no-seizures}
 
 Don’t include videos with flashing or strobing effects, especially at a high frequency. These can trigger seizures in users with photosensitive epilepsy and cause discomfort for others.
 
@@ -469,3 +511,79 @@ If you use any custom HTML in your messaging:
 ```
 {% endraw %}
 
+- Use [ARIA attributes](#aria-attributes) to give extra context. These attributes provide additional information to assistive technologies, helping to clarify the role, state, or properties of UI elements that may otherwise be unclear. 
+
+### ARIA attributes
+
+When you’re using custom code in Braze editors, you can use Accessible Rich Internet Applications ([ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) to provide extra accessibility support for users who rely on assistive technology. ARIA roles and attributes help screen readers interpret your content more clearly, especially when you’re using elements that don’t convey meaning on their own (like `<div>` or `<span>`).
+
+{% alert important %}
+While ARIA is designed to make web content more accessible, if used incorrectly, it can do more harm than good. ARIA doesn’t replace semantic HTML, it supplements it—so only use ARIA when native HTML elements won’t meet your needs. 
+{% endalert %}
+
+Here are a few examples that are especially useful in messaging contexts:
+
+- [aria-label](#aria-label)
+- [aria-labelledby](#aria-labelledby)
+- [aria-hidden="true"](#aria-hiddentrue)
+- [role="presentation"](#rolepresentation)
+- [aria-live="polite"](#aria-livepolite)
+
+#### aria-label
+
+`aria-label` adds an accessible name to elements that don’t have visible text. If you’re using an icon with no text (like a trash can or “X” for close), someone using a screen reader won’t know what it does—unless you label it. `aria-label` gives that icon a voice.
+
+{% raw %}
+```html
+<button aria-label="Close message">
+  <svg ...></svg>
+</button>
+```
+{% endraw %}
+
+#### aria-labelledby
+
+`aria-labelledby` connects an element to something that already has a visible label. So if you have a banner or region that should be read out loud with a title, you can use `aria-labelledby` to tell assistive technology, “Hey, use that heading over there to name this part.”
+
+{% raw %}
+```html
+<h2 id="banner-title">Important Update</h2>
+<div role="region" aria-labelledby="banner-title">...</div>
+```
+{% endraw %}
+
+#### aria-hidden="true"
+
+`aria-hidden="true"` hides things from screen readers.  It’s helpful for text or visuals that don’t convey important meaning—like a sparkle, checkmark, or emoji used purely for style.
+
+This keeps the experience cleaner for screen reader users, who otherwise might hear redundant or confusing content. It’s also useful for hiding things like offscreen accordion content that hasn’t been expanded yet.
+
+{% raw %}
+```html
+<span aria-hidden="true">✔️</span>
+```
+{% endraw %}
+
+In general, it's better to use `alt=""` for [decorative images](#images) and icons rather than `aria-hidden="true"`. While semantic HTML is widely supported by all screen readers and assistive software, ARIA support varies. Even if you use `aria-hidden` you should still include an empty alt attribute.
+
+#### role="presentation"
+
+`role="presentation"` tells assistive tech to ignore layout-only elements, like design tables. For example, emails often use tables just to line things up. Without this role, screen readers might assume your layout is a data table and start reading out row and column numbers.  
+
+{% raw %}
+```html
+<table role="presentation">...</table>
+```
+{% endraw %}
+
+Emails created in the email drag-and-drop editor have presentational elements automatically marked with the ARIA attribute `role="presentation"`.
+
+#### aria-live="polite"
+
+`aria-live="polite"` announces updates when content changes without needing user interaction. Use it when you display dynamic updates within a message, like successes, errors, or other notifications.
+
+{% raw %}
+```html
+<div aria-live="polite">Your preferences have been saved.</div>
+```
+{% endraw %}
