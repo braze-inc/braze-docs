@@ -8,13 +8,19 @@ description: "This reference article explains why accessibility is important to 
 
 # Building accessible messages in Braze
 
-> Understand why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze. For more detailed guidance, check out our [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations) course on Braze Learning.
+> Understand why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze. For more guidance, check out our [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations) course on Braze Learning.
 
-Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
+Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. 
+
+When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
 {% alert important %}
 This content is intended for general guidance and doesn’t guarantee compliance with accessibility standards such as WCAG. Braze offers tools that support the creation of more accessible messages, but it’s your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
 {% endalert %}
+
+## Accessibility at Braze
+
+Supporting accessible communication means staying open, curious, and willing to learn. At Braze, we care about helping people connect—and we know that making room for everyone is part of doing that well. Accessibility is not something we ever consider “done,” and we welcome the chance to keep learning.
 
 {% multi_lang_include accessibility/feedback.md %}
 
@@ -99,42 +105,33 @@ Depending on individual needs, these users rely on:
 
 ## Best practices
 
+Creating accessible content doesn’t have to be overwhelming. Small, thoughtful choices can make a big difference. This section walks through practical tips that help more people successfully read, navigate, and interact with your messages. Whether you’re adjusting your copy, styling your buttons, or adding alt text to images, each tweak adds up to a more inclusive experience. Let’s dig in.
+
 ### Content
 
-#### Write short, clear sentences
-Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
+#### Structure and flow
 
-#### Break your content into sections
-Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. Clearly describe each section to help readers navigate easily and understand the content structure.
+Let’s start with the foundation. When your content has a clear structure, it’s easier for everyone to follow—especially people who rely on screen readers or keyboard navigation.
 
-#### Don't skip heading levels
+- **Break your content into sections:** Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. 
+- **Don't skip heading levels:** Headings give your content structure, helping readers quickly understand how sections relate to each other. When you skip heading levels (for example, jumping straight from an H2 to an H4), you break this logical structure. This makes it harder for users, especially those using screen readers, to navigate and understand your message clearly. Always follow a logical, sequential hierarchy of headings (H1 to H2 to H3, and so on) to make sure your content stays organized, accessible, and easy for everyone to follow.
 
-Headings give your content structure, helping readers quickly understand how sections relate to each other. When you skip heading levels (for example, jumping straight from an H2 to an H4), you break this logical structure. This makes it harder for users, especially those using screen readers, to navigate and understand your message clearly.
+#### Readability
 
-Always follow a logical, sequential hierarchy of headings (H1 to H2 to H3, and so on) to make sure your content stays organized, accessible, and easy for everyone to follow.
+Once your structure is in place, the next step is making sure your words are actually easy to read. This means keeping things simple, scannable, and comfortable to read across devices and user needs.
 
-#### Avoid justified text
-Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for right-to-left languages.
+- **Write short, clear sentences:** Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
+- **Choose readable font sizes and spacing:** Text that’s too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
+- **Avoid justified text:** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for [right-to-left languages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
+- **Use bold, italic, and uppercase text sparingly:** Emphasizing too much text makes reading difficult—especially for people with dyslexia or visual impairments. Keep it simple.
 
-#### Choose readable font sizes and spacing
-Text that’s too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. 
+#### Clarity and usability
 
-Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
+Finally, let’s talk about the finer details—the things that help users not just see your content, but understand and interact with it. 
 
-#### Use bold, italic, and uppercase text sparingly
-Emphasizing too much text makes reading difficult—especially for people with dyslexia or visual impairments. Keep it simple.
-
-#### Clearly label links and buttons
-Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
-
-#### Don’t rely on color alone to communicate
-Color is great, but pair it with clear text labels or symbols so no one misses important information.
-
-#### Go easy on symbols and emojis
-Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
-
-#### Test for truncation
-Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+- **Clearly label links and buttons:** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
+- **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
+- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
 
 ### Buttons
 
@@ -147,8 +144,12 @@ Similar to link text, button labels should clearly describe the action. Effectiv
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">Good button text</th>
-      <th style="width: 50%">Poor button text</th>
+      <th style="width: 50%">
+        Good button text <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor button text <span aria-hidden="true">🚫</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -193,6 +194,11 @@ Make sure your buttons (and links) are big enough and spaced far enough apart fo
 ### Links
 
 Use links for navigation, like directing users to an external page.
+
+- Write descriptive link text
+- Avoid styling links like buttons
+
+#### Write descriptive link text
 
 Write link text that clearly describes where the link will take the user. Screen reader users often skip from link to link as a way of skimming through content, so make sure your link text can stand on its own. Avoid phrases like "click here," "more," and "click for details," as they are ambiguous when read out of context.
 
@@ -249,12 +255,12 @@ When images contain text that can’t be edited, users with visual impairments l
 
 #### Tips for writing alt text
 
-1. [Describe what's actually in the image](#tip-1)
-2. [Keep it short, yet specific](#tip-2)
-3. [Avoid “image of” or “picture of”](#tip-3) 
-4. [Reflect text that appears in the image](#tip-4)
-5. [Stick to relevant context—no extra marketing jargon](#tip-5)
-6. [Consider the image's purpose](#tip-6)
+- [Describe what's actually in the image](#tip-1)
+- [Keep it short, yet specific](#tip-2)
+- [Avoid “image of” or “picture of”](#tip-3) 
+- [Reflect text that appears in the image](#tip-4)
+- [Stick to relevant context—no extra marketing jargon](#tip-5)
+- [Consider the image's purpose](#tip-6)
 
 ##### Describe what's actually in the image {#tip-1}
 
@@ -448,10 +454,10 @@ If the image doesn't have a purpose, make that known too. Decorative images, lik
 
 Videos are engaging, but if they’re not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive:
 
-1. [Provide closed captions](#closed-captions)
-2. [Provide playback controls](#playback-controls)
-3. [Avoid auto-play](#no-auto-play)
-4. [Avoid flashing or strobing content](#no-seizures)
+- [Provide closed captions](#closed-captions)
+- [Provide playback controls](#playback-controls)
+- [Avoid auto-play](#no-auto-play)
+- [Avoid flashing or strobing content](#no-seizures)
 
 #### Provide closed captions {#closed-captions}
 
@@ -463,9 +469,7 @@ Include closed captions with your videos so users can follow along with the dial
 
 Closed captions can be toggled on or off, allowing users to choose what works best for them.
 
-{% alert note %}
-Braze doesn't automatically generate captions for your videos. It’s your responsibility to add accurate captions to your video files before including them in your message.
-{% endalert %}
+{% multi_lang_include accessibility/video.md %}
 
 #### Provide playback controls {#playback-controls}
 
@@ -494,9 +498,7 @@ Sufficient color contrast helps ensure your messages are easy to read for everyo
 
 You can test your color choices using the [WebAim Contrast Checker Tool](https://webaim.org/resources/contrastchecker/).
 
-{% alert note %}
-Braze editors allow you to select custom color combinations. Keep in mind that certain color choices can negatively affect accessibility. Choose your colors carefully to make sure your content is readabile and compliant with accessibility standards.
-{% endalert %}
+{% multi_lang_include accessibility/color.md %}
 
 ### Custom HTML
 
