@@ -2,7 +2,7 @@
 
 ### Step 1: Update your `build.gradle`
 
-In your `build.gradle`, add `mavenCentral()` to your list of repositories.
+In your `build.gradle`, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
 
 ```kotlin
 repositories {
