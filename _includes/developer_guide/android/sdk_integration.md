@@ -14,23 +14,23 @@ Next, add Braze to your dependencies.
 
 {% tabs local %}
 {% tab base only %}
-If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `CURRENT_SDK_VERSION` with the THIS:
+If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
-    implementation 'com.braze:android-sdk-base:CURRENT_SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
-    implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
+    implementation 'com.braze:android-sdk-base:SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
+    implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
 {% endtab %}
 
 {% tab with ui components %}
-If you plan on using Braze UI components later, add the following code to your `build.gradle`. Replace `CURRENT_SDK_VERSION` with the THIS:
+If you plan on using Braze UI components later, add the following code to your `build.gradle`.  Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
-    implementation 'com.braze:android-sdk-ui:CURRENT_SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
-    implementation 'com.braze:android-sdk-location:CURRENT_SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
+    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
 {% endtab %}
