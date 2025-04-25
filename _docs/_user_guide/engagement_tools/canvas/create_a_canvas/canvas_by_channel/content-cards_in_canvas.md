@@ -17,7 +17,7 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 
 ![][1]
 
-Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
+Two options that will change how the Content Card step will interact with Canvas are its [expiration](#content-card-expiration) and [removal](#removal).
 
 ## Content Card expiration {#content-card-expiration}
 
@@ -45,18 +45,6 @@ The Content Card remains available in the user's feed until it reaches its expir
 
 After a Content Card expires, it will automatically be removed from the user's feed during the next refresh, even if they haven't viewed it yet.
 
-## Advancement Behavior options {#advancement-behavior-options}
-
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with Content Cards.
-{% endalert %}
-
-{% alert note %}
-In Canvas Flow, Message components automatically advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
-{% endalert %}
-
-The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.). For Content Cards in a Canvas Flow workflow, this option is set to always immediately advance the audience.
-
 ### Steps with Content Cards only {#steps-with-in-content-cards-only}
 
 If a step contains only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
@@ -80,6 +68,12 @@ Canvas components with a Content Card and another messaging channel have the fol
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][3]
+
+## Content Card removal {#removal}
+
+Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Make Purchase**. Then, select **Add Event**.
+
+!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who make a specific purchase for "Bracelet".][5]
 
 ## Reporting and analytics
 
@@ -110,5 +104,6 @@ You can separate your Content Cards into multiple feeds based on categories such
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
 [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
+[5]: {% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %}
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds
