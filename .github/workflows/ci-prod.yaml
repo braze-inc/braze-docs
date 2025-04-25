@@ -1,0 +1,35 @@
+name: "CI: Deploy Languages for Main"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deployDocsLanguages:
+    name: Deploy Docs Languages
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language:
+          - ko
+          - ja
+          - es
+          - de
+          - pt-br
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Deploy ${{ matrix.language | upper }} Docs
+        run: |
+          vercel link --yes --token=${{ env.VERCEL_TOKEN }} --project=braze-docs-${{ matrix.language }}
+          vercel deploy --prod --token=${{ env.VERCEL_TOKEN }}
+          echo "Deployed ${{ matrix.language }} Docs"
