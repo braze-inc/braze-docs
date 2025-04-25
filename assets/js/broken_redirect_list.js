@@ -2383,4 +2383,7 @@ validurls['/docs/help/support/'] = '/docs/user_guide/administrative/access_braze
 validurls['/docs/user_guide/administrative/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
 
+validurls['/docs/developer_guide/analytics/logging_iam_data'] = '/docs/developer_guide/analytics/logging_channel_data/in_app_messages/';
+validurls['/docs/developer_guide/analytics/logging_push_data'] = '/docs/developer_guide/analytics/logging_channel_data/push_notifications/';
+
 // validurls['OLD'] = 'NEW';
