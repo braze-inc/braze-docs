@@ -649,7 +649,7 @@ The SDK must be initialized (listening for activity) on a user’s device to log
 
 #### Step 6.1: Create a custom `external_id`
 
-First, go to Shopify create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
+First, go to Shopify and create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
 
 After creating the metafield, listen to [`customer/create` webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) so that you can write the metafield when a new customer is created. Then, use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to backfill all of your previously created customers with this metafield.
 
