@@ -23,13 +23,15 @@ Two options that will change how the Content Card step will interact with Canvas
 
 When composing a new Content Card you can choose when it should expire from the user’s feed based on its send time. The countdown for a Content Card's expiration starts when the user reaches the Message step in the Canvas where the card is sent. The card will be active in the user's feed from this point until it expires. A card can exist in a user's feed for up to 30 days. 
 
-### Relative versus absolute expiration dates
+![Expiration settings for a Content Card for a Message step that will be removed after three hours in a user's feed.][2]
 
-You have two ways to set when a card should disappear from a user's feed: a relative date or an absolute date. Here's how each works:
+### Types of expiration
+
+You have two ways to set when a card should disappear from a user's feed: a relative date or an absolute date.
 
 #### Relative dates
 
-When you choose a relative date, like "Remove sent cards after 5 days in a user's feed", you can set a maximum expiration date of 30 days.
+When you choose a relative date, like "Remove sent cards after 5 days in a user's feed", you can set an expiration date of up to 30 days.
 
 #### Absolute dates
 
@@ -45,30 +47,6 @@ The Content Card remains available in the user's feed until it reaches its expir
 
 After a Content Card expires, it will automatically be removed from the user's feed during the next refresh, even if they haven't viewed it yet.
 
-### Steps with Content Cards only {#steps-with-in-content-cards-only}
-
-If a step contains only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
-
-| Option | Description |
-|---|---|
-| Advance When Message Sent | Users will advance to the next steps of the Canvas when the Content Card has been successfully sent. Use this option when you want users to advance only if the card will be sent and not aborted. |
-| Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][2]
-
-### Components with multiple channels {#steps-with-multiple-message-channels}
-
-Canvas components with a Content Card and another messaging channel have the following advancement options:
-
-| Option | Description |
-|---|---|
-| Advance When Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
-| Immediately Advance Audience | When this option is selected, everyone in the component's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the component's segment and filter criteria to advance to next steps._ |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][3]
-
 ## Content Card removal {#removal}
 
 Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Make Purchase**. Then, select **Add Event**.
@@ -79,7 +57,7 @@ Content Cards can be removed when users complete a purchase or perform a custom 
 
 After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
 
-![][4]
+![Analytics for a Message step with the Content Card message performance.][4]
 
 For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
 
@@ -101,8 +79,7 @@ You can separate your Content Cards into multiple feeds based on categories such
 
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
+[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
 [5]: {% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %}
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
