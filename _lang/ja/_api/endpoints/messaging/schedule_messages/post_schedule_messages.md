@@ -16,7 +16,11 @@ description: "この記事では、「スケジュールされたメッセージ
 
 > このエンドポイントを使用して、指定した時刻に送信されるようにキャンペーン、キャンバス、または他のメッセージをスケジュールし、更新時にそのメッセージを参照するための識別子を提供します。
 
-セグメントををターゲットにする場合、スケジュールされたすべてのメッセージが送信された後、リクエストのレコードが[開発者コンソール](https://dashboard.braze.com/app_settings/developer_console/activitylog/)に保存されます。
+セグメントをターゲットとしている場合は、スケジュールされたすべてのメッセージが送信された後で、リクエストのレコードが[Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) に保存されます。
+
+{% alert tip %}
+指定したユーザにすぐにメッセージを送信する場合は、代わりに[`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) を使用します。
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 

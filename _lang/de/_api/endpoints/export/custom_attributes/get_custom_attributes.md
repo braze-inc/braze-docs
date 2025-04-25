@@ -1,39 +1,39 @@
 ---
-nav_title: "GET: Benutzerdefinierte Attribute exportieren"
-article_title: "GET: Benutzerdefinierte Attribute exportieren"
+nav_title: "GET: Angepasste Attribute exportieren"
+article_title: "GET: Angepasste Attribute exportieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Benutzerdefinierte Attribute exportieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export angepasster Attribute Braze."
 
 ---
 {% api %}
-# Benutzerdefinierte Attribute exportieren
+# Angepasste Attribute exportieren
 {% apimethod get %}
 /custom_attributes
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Liste der für Ihre App aufgezeichneten benutzerdefinierten Attribute zu exportieren. Die Attribute werden in Gruppen von 50 zurückgegeben, alphabetisch sortiert.
+> Verwenden Sie diesen Endpunkt, um eine Liste der angepassten Attribute zu exportieren, die für Ihre App erfasst wurden. Die Attribute werden in Gruppen von 50, alphabetisch sortiert, zurückgegeben.
 
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `custom_attributes.get`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='custom_attributes' %}
 
-## Parameter abfragen
+## Abfrageparameter
 
 Beachten Sie, dass jeder Aufruf dieses Endpunkts 50 Attribute zurückgibt. Bei mehr als 50 Attributen verwenden Sie die Kopfzeile `Link`, um die Daten auf der nächsten Seite abzurufen, wie in der folgenden Beispielantwort gezeigt.
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `cursor` | Optional | String | Bestimmt die Paginierung der benutzerdefinierten Attribute. |
+| `cursor` | Optional | String | Bestimmt die Paginierung der angepassten Attribute. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfragen
+## Beispiel-Anfragen
 
 ### Ohne Cursor
 
@@ -72,12 +72,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Antwortcodes für schwerwiegende Fehler {#fatal-export}
+### Schwerwiegende Fehler Antwortcodes {#fatal-export}
 
-Statuscodes und zugehörige Fehlermeldungen, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, finden Sie unter [Schwerwiegende Fehler]({{site.baseurl}}/api/errors/#fatal-errors).
+Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

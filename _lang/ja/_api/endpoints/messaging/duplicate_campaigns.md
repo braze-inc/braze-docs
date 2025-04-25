@@ -55,11 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 応答
 
-このエンドポイントは `202` ステータスコードを返し、キャンペーン作成は非同期に行われます。[セキュリティイベントのダウンロード][2]を使えば、キャンペーンがいつ複製されたか、どの API キーによって複製されたかの記録を見ることができます。
-
+このエンドポイントは `202` ステータスコードを返し、キャンペーン作成は非同期に行われます。[セキュリティ・イベント・ダウンロードを][2]使えば、いつ、どのAPIキーによってキャンペーンが複製されたかの記録を見ることができる。
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/?redirected=true#security-event-download
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report
 
 {% endapi %}

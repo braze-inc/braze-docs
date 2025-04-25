@@ -1,23 +1,19 @@
 ---
-nav_title: "Empfänger Objekt"
-article_title: API-Empfänger Objekt
+nav_title: "Empfänger:innen Objekt"
+article_title: "API Empfänger:innen Objekt"
 page_order: 9
 page_type: reference
-description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des Objekts Braze."
+description: "Dieser referenzierte Artikel erläutert die verschiedenen Komponenten des Objekts Empfänger:innen von Braze."
 
 ---
 
-# Objekt Empfänger
+# Empfänger:innen Objekt
 
-> Mit dem Empfängerobjekt können Sie Informationen in unseren Endpunkten anfordern oder schreiben.
+> Das Empfänger:innen-Objekt erlaubt es Ihnen, Informationen in unseren Endpunkten anzufragen oder zu schreiben.
 
-Entweder `external_user_id`, `user_alias` oder `email` ist in diesem Objekt erforderlich. **In der Anfrage darf nur eine Option angegeben werden.**
+Entweder `external_user_id`, `user_alias` oder `email` ist in diesem Objekt erforderlich. **In der Anfrage darf nur eine Angabe gemacht werden.**
 
-{% alert important %}
-Die Angabe eines Empfängers über die E-Mail-Adresse ist derzeit in einer frühen Phase. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an diesem frühen Zugang interessiert sind.
-{% endalert %}
-
-Mit dem Empfänger-Objekt können Sie das [Benutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/), das [Objekt mit den Auslösereigenschaften]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) und das [Objekt mit den Eigenschaften des Canvas-Eintrags]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) kombinieren.
+Mit dem Empfänger:innen-Objekt können Sie das [Nutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/), das [Objekt für die triggernden Eigenschaften]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) und das [Objekt für die Eingangs-Eigenschaften von Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) kombinieren.
 
 ## Objektkörper
 
@@ -32,13 +28,15 @@ Mit dem Empfänger-Objekt können Sie das [Benutzer-Alias-Objekt]({{site.baseurl
 }]
 ```
 
-- [Benutzer-Aliase]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [Externe Benutzer-ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+Wenn `send_to_existing_only` auf `true` steht, sendet Braze die Nachricht nur an bestehende Nutzer:innen. Dieses Flag kann jedoch nicht mit Nutzer:innen verwendet werden. Wenn `send_to_existing_only` `false` ist, muss ein Attribut angegeben werden. Braze erstellt einen Nutzer:innen mit der `id` und den Attributen, bevor die Nachricht gesendet wird.
+
+- [User:in alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [Externe Nutzer:innen ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Prioritätensetzung]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 
-## Deduplizierung von Empfängerobjekten
+## Deduplizierung von Empfänger:in-Objekten
 
-Wenn bei einem API-Aufruf mit dem Empfängerobjekt **ein doppelter Empfänger existiert, der auf dieselbe Adresse abzielt (d.h. E-Mail, Push), wird der Benutzer dedupliziert**, d.h. identische Benutzer werden entfernt, so dass einer übrig bleibt. 
+Wenn bei einem API-Aufruf mit dem Empfänger-Objekt **ein doppelter Empfänger:in existiert, der auf dieselbe Adresse targetiert (d.h. E-Mail, Push), wird der Nutzer:in dedupliziert**, d.h. identische Nutzer:in werden entfernt, so dass einer übrig bleibt. 
 
 Wenn zum Beispiel dieselbe `external_user_id` verwendet wird, wird nur eine Nachricht empfangen. Ziehen Sie mehrere API-Aufrufe in Betracht, wenn Sie eine Abhilfe für dieses Verhalten benötigen.
 

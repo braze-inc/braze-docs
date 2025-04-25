@@ -1,22 +1,22 @@
 ---
-nav_title: "GET: Liste geplanter Kampagnen und Werbemittel"
-article_title: "GET: Liste geplanter Kampagnen und Werbemittel"
+nav_title: "GET: Liste geplanter Kampagnen und Canvase"
+article_title: "GET: Liste geplanter Kampagnen und Canvase"
 search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten über den Endpunkt Liste der geplanten Kampagnen und Canvases Braze."
+description: "Dieser Artikel enthält Einzelheiten über den Endpunkt Liste der geplanten Kampagnen und Canvase Braze."
 
 ---
 {% api %}
-# Liste der bevorstehenden geplanten Kampagnen und Canvases
+# Liste der anstehenden geplanten Kampagnen und Canvase
 {% apimethod get %}
-/messages/scheduled_broadcasts
+/nachrichten/geplante_ausstrahlungen
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine JSON-Liste mit Informationen über geplante Kampagnen und Eintragsvideos zwischen jetzt und einem in der Anfrage angegebenen `end_time` zurückzugeben.
+> Verwenden Sie diesen Endpunkt, um eine JSON-Liste mit Informationen über geplante Kampagnen und Eingänge Canvase zwischen jetzt und einem in der Anfrage angegebenen `end_time` zurückzugeben.
 
-Täglich wiederkehrende Nachrichten werden nur einmal bei ihrem nächsten Auftreten angezeigt. Die über diesen Endpunkt zurückgegebenen Ergebnisse umfassen Kampagnen und Canvases, die im Braze Dashboard erstellt und geplant wurden.
+Tägliche, wiederkehrende Nachrichten erscheinen nur einmal bei ihrem nächsten Vorkommen. Die über diesen Endpunkt zurückgegebenen Ergebnisse umfassen Kampagnen und Canvase, die im Braze-Dashboard erstellt und geplant wurden.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
@@ -24,15 +24,15 @@ Täglich wiederkehrende Nachrichten werden nur einmal bei ihrem nächsten Auftre
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `messages.schedule_broadcasts`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `end_time` | Erforderlich | Zeichenkette im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Enddatum des Bereichs zum Abrufen der nächsten geplanten Kampagnen und Leinwände. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `end_time` | Erforderlich | String im [ISO-8601-Format](https://en.wikipedia.org/wiki/ISO_8601)  | Enddatum des Bereichs zum Abrufen der nächsten geplanten Kampagnen und Canvase. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

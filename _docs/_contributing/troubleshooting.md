@@ -4,6 +4,7 @@ article: Troubleshooting
 description: "Troubleshooting steps for common issues you may experience while contributing to Braze Docs."
 page_order: 9
 noindex: true
+toc_headers: h2
 ---
 
 # Troubleshooting
@@ -125,3 +126,35 @@ permalink: /docs/developer_guide/second_best_sdk
 ```
 {% endtab %}
 {% endtabs %}
+
+## Can't choose `braze-inc/braze-docs` as a base repository {#missing-base-repository}
+
+If `braze-inc/braze-docs` is missing from the list of available base branches when [making a change in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change), there may be an issue with the origin of your forked repository.
+
+![The 'Choose a Base Repository' dropdown in GitHub after selecting 'compare across forks'.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %}){: style="max-width:85%;"}
+
+### Step 1: Verify the fork's origin
+
+Go to [your forked repository]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository) and verify it was forked from `braze-inc/braze-docs`. If it isn't, you'll need to delete this fork and create a new one.
+
+![An example forked repository, correctly showing "fork from braze-inc/braze-docs".]({% image_buster /assets/img/contributing/github/correct_forked_from.png %}){: style="max-width:85%;"}
+
+### Step 2: Delete the old fork
+
+{% alert warning %}
+Deleted forks cannot be restored. Be sure to back up the work that's only accessible through your old fork.
+{% endalert %}
+
+In your old fork, go to **Settings** > **General**. Under **Danger Zone**, select **Delete this repository** and follow the on-screen instructions.
+
+![The list of options found in a GitHub repository's "Danger Zone".]({% image_buster /assets/img/contributing/github/delete_repository.png %}){: style="max-width:65%;"}
+
+### Step 3: Create a new fork
+
+Go back to the official [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork** to create a new fork.
+
+![The Braze Docs GitHub repository showing "Fork".]({% image_buster /assets/img/contributing/github/fork_the_repository.png %}){: style="max-width:75%;"}
+
+Keep the default settings, then select **Create fork**. Now you'll be able to choose `braze-inc/braze-docs` as the base repository when [making changes in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change).
+
+![The Braze Docs GitHub repository showing "Create fork".]({% image_buster /assets/img/contributing/github/create_a_new_fork.png %}){: style="max-width:75%;"}

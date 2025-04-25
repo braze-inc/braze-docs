@@ -10,7 +10,7 @@ description: "このランディングページには、Currents という名前
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"
-guide_top_text: "エンゲージメント戦略の影響を理解することは、ユーザーとのコミュニケーションの反復と最適化に関する情報を提供するうえで重要です。この貴重なエンゲージメントデータを以降の作戦と緊密に統合し、データサイエンスへの投資効果が増幅されるようにするため、Braze プラットフォームでは、連携から幅広いイベントデータを追跡し、分析、リターゲティング、およびお客様のシステム内の他のユースケースに使用します。<br> <br>Currentsツールは、エンゲージメントイベントのリアルタイムデータストリームであり、Brazeプラットフォームからの最も堅牢でありながら詳細なエクスポートです。それは、Avroファイルタイプのデータを多くの<a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>データパートナー</a>の1つに提供し、Brazeが作成するユニークで価値のあるデータを使用して、他の最高クラスのプラットフォームでビジネスインテリジェンス (BI) および分析の取り組みを強化することを可能にします。"
+guide_top_text: "エンゲージメント戦略の影響を理解することは、ユーザーとのコミュニケーションの反復と最適化に関する情報を提供するうえで重要です。この貴重なエンゲージメントデータを残りのオペレーションと緊密に統合し、データサイエンスへの投資を増幅するために、Brazeプラットフォームは、分析、リターゲット、および独自のシステム内の他の場所でのその他のユースケースのために、統合から広範囲のイベントデータを追跡します。<br> <br>Currentsツールは、エンゲージメントイベントのリアルタイムデータストリームであり、Brazeプラットフォームからの最も堅牢でありながら詳細なエクスポートです。それは、Avroファイルタイプのデータを多くの<a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>データパートナー</a>の1つに提供し、Brazeが作成するユニークで価値のあるデータを使用して、他の最高クラスのプラットフォームでビジネスインテリジェンス (BI) および分析の取り組みを強化することを可能にします。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -38,7 +38,9 @@ guide_featured_list:
 - name: "Redshift へのデータ転送"
   link: /docs/user_guide/data/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
-
+- name: "カレンツFAQ"
+  link: /docs/user_guide/data/braze_currents/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Currents の機能

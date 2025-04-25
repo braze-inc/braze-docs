@@ -41,7 +41,9 @@ CDI の認証情報が正しくないか、データウェアハウスの設定�
 
 ### Snowflakeインスタンスへの接続エラー：IP を含む着信リクエストが Snowflake へのアクセスを許可されていない
 
-IP許可リストにBrazeの公式IPを追加してみる。詳細については、[データウェアハウスの連携]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/)を参照してください。
+IP許可リストにBrazeの公式IPを追加してみる。詳細については、[Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/)を参照するか、関連するIP を許可してください。
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### 顧客設定による SQL 実行エラー: 002003 (42S02):SQLコンパイルエラー：存在しないか、認証されていない
 
@@ -152,11 +154,11 @@ CDI は `UPDATED_AT` を使用して、同期中に取得するレコードを�
 
 ## 同期中、複数のレコードが同じIDを共有する場合、順序は保持されるか？
 
-処理順序は100％予測できるものではない。例えば、同期中にテーブル内に同じ`EXTERNAL_ID` を持つ複数の行がある場合、最終的にどの値がプロファイルに入るかは保証できない。 
+処理順序は100％予測できるものではない。例えば、同期中にテーブル内に同じ`EXTERNAL_ID` を持つ複数の行がある場合、最終的にどの値がプロファイルに入るかは保証できない。同じ`EXTERNAL_ID` をペイロード列の異なる属性で更新している場合、同期が完了するとすべての変更が反映されます。
 
 ## CDIのセキュリティ対策はどうなっているのか？
 
-### Braze の対策
+### 当社の取り組み
 
 Braze では CDI に関して以下の対策を講じています。:
 

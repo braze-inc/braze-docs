@@ -23,15 +23,11 @@ Einige häufige Anwendungsfälle für angepasste Events sind:
 - Zusätzliche Analytics mit [Funnel-]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) und [Bindung-Berichten]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) finden
 - Nutzung von [persistenten Eingangs-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) zur Verwendung von Metadaten aus Ihrem Kund:in Event zur Personalisierung in Ihren Canvas-Schritten
 - Erstellen Sie mit [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) anspruchsvollere Analytics
-- Einrichten von [Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) im Canvas, um festzulegen, wann Nutzer:innen nicht zum nächsten Schritt Ihres Canvas voranbringen sollen
+- Einrichten von [Ausstiegskriterien]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria), um festzulegen, wann Nutzer:innen Ihren Canvas verlassen sollen
 
 ## Angepasste Events verwalten
 
 Sie können angepasste Events im Dashboard verwalten, erstellen oder blockieren, indem Sie zu **Dateneinstellungen** > Angepasste Events gehen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **angepasste Events** unter **Einstellungen verwalten**.
-{% endalert %}
 
 Wählen Sie das Menü neben einem angepassten Event für die folgenden Aktionen aus:
 
@@ -71,13 +67,13 @@ Angepasste Events erfordern zusätzliche Einstellungen. In der folgenden Liste f
 
 {% details Erweitern Sie für die Dokumentation nach Plattform %}
 
-- [Android und FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
-- [Internet]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
+- [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -106,10 +102,6 @@ Die folgende Tabelle zeigt die Filter, die für die Segmentierung der Nutzer:inn
 ## Analytics
 
 Braze merkt sich für die Segmentierung, wie oft angepasste Events aufgetreten sind und wann sie von den einzelnen Nutzer:innen zuletzt ausgeführt wurden. Sehen Sie sich diese Analytics an, indem Sie zu **Analytics** > Bericht über angepasste Events gehen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie den Bericht **Angepasste Events** unter **Daten**.
-{% endalert %}
 
 Auf der Seite **Bericht über angepasste Events** im Dashboard können Sie sich ansehen, wie oft jedes angepasste Event auftritt. Die grauen Linien, die die Zeitreihe überlagern, zeigen an, wann zum letzten Mal eine Kampagne gesendet wurde. Dies ist nützlich, um zu sehen, wie sich Ihre Kampagnen auf die Aktivität angepasster Events ausgewirkt haben.
 
@@ -210,6 +202,8 @@ Event-Eigenschaften für angepasste Events werden für jedes Segment, das sie ve
 ##### Hinzufügen von Event-Eigenschaften für die Segmentierung
 
 Sie benötigen die [Nutzerzustimmung]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Angepasste Event-Eigenschaft Segmentierung verwalten", um Segmente auf der Grundlage der Häufigkeit von Event-Eigenschaften zu erstellen.
+
+Standardmäßig können Sie 20 segmentierbare Event-Eigenschaften pro Workspace haben. Wenden Sie sich an Ihren Braze-Konto Manager:in, um dieses Limit zu erhöhen.
 
 Um Event-Eigenschaften für die Segmentierung hinzuzufügen, gehen Sie wie folgt vor:
 

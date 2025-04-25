@@ -51,7 +51,7 @@ glossaries:
   - name: エンドポイント
     description: "通信チャネルの終端 (API <a href=\"https://www.braze.com/docs/api/endpoints/\">エンドポイント</a>とも呼ばれます) で、メッセージの送信とスケジューリングのために Braze メッセージング API 内で使用されます。"
   - name: 例外イベント
-    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">例外イベントは</a>、ユーザーが希望するゴールに到達し、トリガーされたメッセージを受け取らなかった場合に発生する。これにより、トリガーメッセージがユーザーに関連していることが保証されます。"
+    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">例外イベントは</a>、ユーザーが希望するゴールに到達し、トリガーされたメッセージを受け取らなかった場合に発生する。これにより、トリガーメッセージがユーザーに関連していることが保証されます。"
   - name: フリークエンシーキャップ
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">頻度に上限を設けること</a>で、聴衆を圧倒することなくコミュニケーションを管理することができる。これは、ユーザーが短期間に大量の通信を受信しないようにするためのメッセージの自動制限です。"
   - name: HIPAA

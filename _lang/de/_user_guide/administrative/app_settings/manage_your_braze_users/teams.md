@@ -23,10 +23,6 @@ Teams sind nicht für alle Braze-Verträge verfügbar. Wenn Sie diese Funktion n
 
 Gehen Sie zu **Einstellungen** > **Interne Teams** und wählen Sie <i class="fas fa-plus"></i> **Team hinzufügen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Interne Teams** unter **Einstellungen verwalten** > **Teams verwalten**.
-{% endalert %}
-
 ![Ein neues Team hinzufügen][68]
 
 Geben Sie den **Teamnamen** ein. Falls gewünscht, verwenden Sie das Feld **Team definieren**, um ein benutzerdefiniertes Attribut, einen Standort oder eine Sprache auszuwählen, um weiter zu definieren, auf welche Benutzerdaten das Team Zugriff hat. Ein möglicher Anwendungsfall ist beispielsweise die Durchführung von [Tests mit Teams](#testing-with-teams), indem Sie ein Entwicklungsteam erstellen, das nur Zugriff auf Testbenutzer hat, die durch ein benutzerdefiniertes Attribut identifiziert werden. Ein weiterer Anwendungsfall ist die Einschränkung der Benutzerkommunikation nach Produkt.
@@ -38,10 +34,6 @@ Wenn ein Team durch ein benutzerdefiniertes Attribut, eine Sprache oder ein Land
 Braze-Administratoren und eingeschränkte Benutzer mit der Unternehmensberechtigung "Kann Unternehmenseinstellungen verwalten" können einem Dashboard-Benutzer mit eingeschränktem Zugriff Berechtigungen auf Teamebene zuweisen. Wenn Sie einem Team zugewiesen sind, können Dashboard-Benutzer nur die Daten lesen oder schreiben, die für ihr jeweiliges Team verfügbar sind, z. B. Benutzersprache, Standort oder benutzerdefinierte Attribute, die bei der Erstellung des Teams festgelegt wurden.
 
 Um einen Benutzer einem Team zuzuweisen, navigieren Sie zu **Einstellungen** > **Unternehmensbenutzer** und wählen einen Benutzer aus, den Sie Ihrem Team hinzufügen möchten.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite, indem Sie auf Ihr Kontosymbol und dann auf **Benutzer verwalten** klicken.
-{% endalert %}
 
 Führen Sie dann die folgenden Schritte aus:
 

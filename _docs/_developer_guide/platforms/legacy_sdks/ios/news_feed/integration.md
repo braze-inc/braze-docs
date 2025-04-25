@@ -67,7 +67,7 @@ private func feedUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller").
+If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html).
 
 ## News Feed model
 

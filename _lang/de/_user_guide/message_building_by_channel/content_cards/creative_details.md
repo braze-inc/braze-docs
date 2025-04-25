@@ -83,7 +83,7 @@ Sorgen Sie dafür, dass Content-Cards relevant bleiben, indem Sie sie ausblenden
 
 | Inhaltskarten für Android | Inhaltskarten für iOS | Content-Cards für das Internet |
 | --- | --- |---|
-| Das Android-SDK bietet standardmäßig keine Unterstützung für animierte GIFs. Weitere Einzelheiten zur Aktivierung der GIF-Unterstützung finden Sie unter [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | Das Swift-SDK bietet standardmäßig keine Unterstützung für animierte GIFs. Weitere Einzelheiten zur Aktivierung der GIF-Unterstützung finden Sie in der [Anleitung zur GIF-Unterstützung](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | Die GIF-Unterstützung ist standardmäßig in der Web SDK-Integration enthalten. |
+| Das Android-SDK bietet standardmäßig keine Unterstützung für animierte GIFs. Weitere Einzelheiten zur Aktivierung der GIF-Unterstützung finden Sie unter [GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | Das Swift-SDK bietet standardmäßig keine Unterstützung für animierte GIFs. Weitere Einzelheiten zur Aktivierung der GIF-Unterstützung finden Sie in der [Anleitung zur GIF-Unterstützung](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | Die GIF-Unterstützung ist standardmäßig in der Web SDK-Integration enthalten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>

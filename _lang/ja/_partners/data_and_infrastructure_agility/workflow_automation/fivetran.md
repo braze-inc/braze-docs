@@ -34,7 +34,7 @@ Braze とFivetran の統合により、ユーザーはメンテナンス不要�
 
 #### ステップ1:external ID を確認する {#step-one}
 
-[Fivetran ダッシュボード](https://fivetran.com/dashboard)で、**\+ Connector**をクリックし、**Braze**コネクタを選択してセットアップフォームを起動します。次に、**Amazon S3**を選択します。ここに示されている external ID に注意してください。これは、Fivetran が S3 バケットにアクセスできるようにするために必要です。 
+[Fivetranダッシュボードで](https://fivetran.com/dashboard)、**＋コネクタを**選択し、**Braze**コネクタを選択してセットアップフォームを起動する。次に、**Amazon S3**を選択します。ここに示されている external ID に注意してください。これは、Fivetran が S3 バケットにアクセスできるようにするために必要です。 
 
 ![Fivetran の Braze コネクター設定フォーム。このステップに必要なexternal IDフィールドは、ページの中央にある薄い灰色のボックスにあります。]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
@@ -44,9 +44,9 @@ Braze とFivetran の統合により、ユーザーはメンテナンス不要�
 
 [Amazon IAM コンソール](https://console.aws.amazon.com/iam/home#home)を開封し、**ポリシー > ポリシーの作成**に移動します。
 
-![]({% image_buster /assets/img/fivetran_as3_iam.png %})
+![Amazon IAMコンソールとポリシーのリスト。]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
-次に、**JSON**タブをクリックして、次のポリシーを貼り付けます。`{your-bucket-name}` を S3 バケットの名前に置き換えてください。
+次に、**JSON**タブを開封し、以下のポリシーを貼り付ける。`{your-bucket-name}` を S3 バケットの名前に置き換えてください。
 
 {% raw %}
 ```json
@@ -74,25 +74,25 @@ Braze とFivetran の統合により、ユーザーはメンテナンス不要�
 ```
 {% endraw %}
 
-最後に、**ポリシーを確認**をクリックし、ポリシーに一意の名前と説明を付けます。[**Create Policy**] をクリックしてポリシーを作成します。 
+最後に、**Review Policyを**選択し、ポリシーに固有の名前と説明を付ける。**ポリシーの作成]**を選択して、ポリシーを作成する。 
 
-![]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
+![]({% image_buster /assets/img/fivetran_iam_policy_meta.png %}) ポリシーの名前と説明を記述するフィールド。
 
 ##### IAMロールを作成する {#step-two}
 
 AWS で、**ロール** に移動し、**新しいロールを作成** を選択します。
 
-![]({% image_buster /assets/img/fivetran_iam_new_role.png %})
+![] （{% image_buster /assets/img/fivetran_iam_new_role.png %} ）。
 
 [**Another AWS Account**] を選択し、FivetranアカウントID `834469178297` を入力します。必ず**Require external ID**チェックボックスを確認してください。ここでは、ステップ1で見つかったexternal IDを提供します。
 
-![]({% image_buster /assets/img/fivetran_another_aws_account.png %})
+![アカウントID」を入力するフィールド、外部IDを要求するチェックボックス、「外部ID」を入力する空白のテキストボックス。]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
-次に、[**Next:権限**を選択して、作成したポリシーを選択します。
+次に、**Nextを選択する：権限**を選択して、作成したポリシーを選択します。
 
 ![]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
-[**Next:Review**] をクリックして、新しいロールに名前を付け (Fivetran など)、[**Create Role**] をクリックします。ロールが作成された後、それをクリックして表示されるロールARNをメモします。
+**Nextを選択する：** を確認し、新しいロールに名前を付け（Fivetranなど）、**Create Roleを**選択する。ロールが作成されたら、それを選択し、表示されているロールARNをメモする。
 
 ![ロールに記載されているAmazon S3 ARNです。]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
@@ -102,51 +102,51 @@ Fivetran に指定するロール ARN の権限を指定できます。このロ
 
 #### ステップ3:Fivetran コネクターの設定を完了する
 
-Fivetranで [**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
+Fivetranで、**\+ Connectorを**選択し、**Braze**コネクタを選択してセットアップフォームを起動する。フォーム内で、指定されたフィールドに適切な値を入力してください:
 - `Destination schema`:一意のスキーマ名。
 - `API URL`:あなたのBraze REST APIエンドポイント。
 - `API Key`:あなたのBraze REST APIキー。 
 - `External ID`:Currentsセットアップ手順の[ステップ2](#step-two)で設定されたexternal ID。このIDは固定値です。
-- `Bucket`:これは、**[Integration] > [Currents] > [Your Currents name]> [Bucket Name]** に移動して、Braze アカウントで確認できます。
+- `Bucket`:Brazeアカウントで、**Partner Integrations**>**Data Export**> Your Currents nameの順にナビゲートする。
 - `Role ARN`:現在のセットアップ手順の[ステップ1](#step-one)にロールARNが見つかります。
 
 {% alert important %}
 **Amazon S3** が **クラウドストレージ** の選択肢として選ばれていることを確認してください。
 {% endalert %}
 
-最後に、**保存してテスト**をクリックすると、FivetranがBrazeアカウントのデータと同期して残りの作業を行います！
+最後に、**Save & Testを**選択すれば、あとはFivetranがBrazeアカウントのデータと同期してくれる！
 
 ### Google Cloud Storage 向けの Braze Currents の設定
 
 #### ステップ1:Google Cloud Storage から Fivetran メールアドレスを取得する {#step-one2}
 
-[Fivetranダッシュボード](https://fivetran.com/dashboard)で、**\+ Connector**をクリックし、**Braze**コネクタを選択してセットアップフォームを起動します。次に、**Google Cloud Storage**を選択します。表示されるメールアドレスに注意してください。
+[Fivetranダッシュボードで](https://fivetran.com/dashboard)、**＋コネクタを**選択し、**Braze**コネクタを選択してセットアップフォームを起動する。次に、**Google Cloud Storage**を選択します。表示されるメールアドレスに注意してください。
 
 ![Fivetran の Braze コネクター設定フォーム。このステップに必要なメールフィールドは、ページの中央にある薄い灰色のボックスにあります。]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 #### ステップ2:バケットアクセスを許可する
 
-[Google Storage Console](https://console.cloud.google.com/storage/browser) に移動し、Braze Currents で設定したバケットを選択して、**バケットの権限を編集** をクリックします。
+[Google Storage Consoleに](https://console.cloud.google.com/storage/browser)移動し、Braze Currentsを設定したバケットを選択し、**バケット権限を編集を**選択する。
 
-![Google Storage Console で利用可能なバケット。バケットを見つけて、縦の3点シンボルをクリックして、バケットの権限を編集できるドロップダウンを開きます。]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
+![Google Storage Console で利用可能なバケット。バケツを見つけ、縦に並んだ3つの点のアイコンを選択すると、バケツの権限を編集できるドロップダウンが開封される。]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 次に、[ステップ1](#step-one2)のメールアドレスに `Storage Object Viewer` アクセス権を付与するため、メールアドレスをメンバーとして追加します。バケット名をメモしておいてください。次のステップで Fivetran を設定するときに必要となります。
 
-![]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
+![権限付きバケット]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
 #### ステップ3:Fivetran コネクターの設定を完了する
 
-Fivetranで [**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
+Fivetranで、**\+ Connectorを**選択し、**Braze**コネクタを選択してセットアップフォームを起動する。フォーム内で、指定されたフィールドに適切な値を入力してください:
 - `Destination schema`:一意のスキーマ名。
 - `API URL`:あなたのBraze REST APIエンドポイント。
 - `API Key`:あなたのBraze REST APIキー。 
-- `Bucket Name`:これは、**[Integration] > [Currents] > [Your Currents name]> [Bucket Name]** に移動して、Braze アカウントで確認できます。
-- `Folder`:Brazeアカウントで、**Integration > Currents > [Your Current name] > Prefix**に移動して見つけることができます。
+- `Bucket Name`:Brazeアカウントで、**Partner Integrations**>**Data Export**> Your Currents nameの順にナビゲートする。
+- `Folder`:Brazeアカウントで、**Partner Integrations**>**Data Export**> Your Currents nameの順にナビゲートする。
 
 {% alert important %}
 **Google Cloud Storage** が **Cloud Storage** の選択肢として選択されていることを確認してください。
 {% endalert %}
 
-最後に、**保存してテスト**をクリックすると、FivetranがBrazeアカウントのデータと同期して残りの作業を行います！
+最後に、**Save & Testを**選択すれば、あとはFivetranがBrazeアカウントのデータと同期してくれる！
 
 [1]: {{site.baseurl}}/api/basics/#api-definitions

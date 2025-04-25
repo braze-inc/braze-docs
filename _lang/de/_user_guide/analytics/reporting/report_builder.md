@@ -2,185 +2,108 @@
 nav_title: Berichts-Builder
 article_title: Berichts-Builder
 alias: /report_builder/
-page_order: 4
 page_type: reference
-description: "Auf dieser Seite erfahren Sie, wie Sie mit dem Berichts-Builder einen Bericht ausführen, einschließlich der Erstellung von Kampagnen und Canvas, Vergleichsberichten und der Erstellung von Berichten und Charts."
-tool: 
-  - Reports
-
+description: "Dieser referenzierte Artikel beschreibt das Feature Report Builder."
+tool:
+    - Reports
+page_order: 6.2
 ---
 
 # Berichts-Builder
 
-> Der Report-Builder erlaubt es Ihnen, die Ergebnisse mehrerer Kampagnen oder Canvase in einer einzigen Ansicht zu vergleichen, so dass Sie leicht feststellen können, welche Engagement-Strategien Ihre wichtigsten Metriken am meisten beeinflusst haben. Sowohl für Kampagnen als auch für Canvase können Sie Ihre Daten exportieren und Ihren Bericht speichern, um ihn in Zukunft einzusehen.<br><br>Eine beschreibende Liste der Metriken, die Sie in Ihren Berichten finden, finden Sie im [Glossar der Berichtsmetriken][16].
+> Auf dieser Seite erfahren Sie, wie Sie mit dem Berichts-Builder granulare Berichte mit Braze-Daten erstellen und anzeigen und wie Sie Berichte zu Dashboards hinzufügen.
 
-![Kampagne Vergleich Beispiel][5]{: style="max-width:80%;"}
+## Verwendung einer Berichtsvorlage
 
-Nutzen Sie diesen Bericht, um wichtige Fragen zum Engagement zu beantworten, zum Beispiel:
+1. Gehen Sie zu **Analytics** > **Berichts-Builder (Neu)**.
+2. Klicken Sie auf den Pfeil für **weitere Optionen** neben dem Button **Neuen Bericht erstellen** und wählen Sie dann **eine Berichtsvorlage verwenden**.<br><br>![Der Button "Neuen Bericht erstellen" bietet Ihnen die Möglichkeit, einen angepassten Bericht zu erstellen oder eine Vorlage zu verwenden.][9]{: style="max-width:40%;"}<br><br>
+3. Wählen Sie eine der Berichtsvorlagen aus der Bibliothek für Braze-Vorlagen aus.
+    - Verwenden Sie das Dropdown-Menü **Artikel** und **Tags**, um relevante Berichte für Ihre Anwendungsfälle zu finden.<br><br>![Fenster "Braze-Berichtsvorlagen" mit einer Liste von Braze-Templates zum Auswählen.][8]{: style="max-width:90%;"}<br><br>
+4. Folgen Sie Schritt 3 und weiter unter [Erstellen eines Berichts](#creating-a-report), um den Bericht weiter an Ihren Anwendungsfall anzupassen.
 
-- Welches waren die Kampagnen oder Canvase mit der besten Performance für einen bestimmten Tag oder Kanal?
-- Welche Varianten von multivariaten Kampagnen hatten den größten Uplift gegenüber der Kontrolle?  
-- Welche saisonale Kampagne führte zu einer höheren Kaufrate? Der Sommerschlussverkauf, der Herbstschlussverkauf oder der Winterschlussverkauf?
-- Welche Push-Benachrichtigungen innerhalb dieses Canvas hatten die höchsten Öffnungsraten?
-- Welche Schritte in dieser Gruppe von Canvase hatten die meisten Konversionen?
-- Hat Version 1 einer Willkommens-E-Mail oder Version 2 einer Willkommens-E-Mail zu höherem Engagement und höherer Konversion geführt? Haben die Änderungen funktioniert?
-- Wie wirken sich unterschiedliche Zustellungsmethoden (z. B. 3 geplante Pushs, 3 aktionsbasierte Pushs und 3 API-getriggerte Pushs) auf Ihre Öffnungs-, Konversionsraten oder Kaufraten aus?
-- Haben sich die laufenden Verbesserungen bei den Nachrichten von passiven Nutzer:innen im Laufe der Zeit positiv auf Ihre KPIs ausgewirkt?
+## Einen Bericht erstellen
+
+1. Gehen Sie zu **Analytics** > **Berichts-Builder (Neu)**.
+2. Wählen Sie **Neuen Bericht erstellen**.
+3. Wählen Sie in der Dropdown-Liste **Zeilen** eine der folgenden Möglichkeiten, um einen Bericht zu erstellen:
+    - Kampagnen
+    - Canvase
+    - Kampagnen und Canvase
+    - Kanäle
+    - Tags
+
+![Der Bereich "Zeilen und Spalten" mit Feldern zum Auswählen der Zeilen und Gruppierungen für Ihren Bericht.][1]{: style="width:90%;"}
+
+{: start="4"}
+4\. (Optional) Wählen Sie **Drilldown hinzufügen**, um Ihre Daten in detailliertere Ansichten aufzuschlüsseln:
+    \- Kanäle
+    \- Datum
+        \- Verwenden Sie dies, um Ihre Daten in kleinere Zeitbereiche aufzuteilen. Wenn Sie sich zum Beispiel für die Performance Ihrer Kampagnen pro Tag interessieren, wählen Sie die folgende Konfiguration aus:
+            - **Reihen**: Kampagnen
+            - **Gruppierung:** Datum
+            - **Intervall:** Tage
+    \- Varianten
+    \- Kampagnen und Canvase
 
 {% alert tip %}
-Versuchen Sie, in allen Kampagnen und Canvase, die Sie vergleichen möchten, dieselben Konversions-Events für Konversion A, B usw. zu verwenden, damit Sie diese Konversionen in Ihren Berichten des Berichts-Builders aneinanderreihen können.
+Probieren Sie verschiedene Konfigurationen von Drilldown-Optionen aus, um die vielen Möglichkeiten zu erkunden, wie Sie Ihre Daten aufschlüsseln können.
 {% endalert %}
 
-## Ausführen eines Berichts
+{: start="5"}
+5\. Wählen Sie im Abschnitt **Spalten** die Option **Metriken anpassen**.
 
-### Schritt 1: Neuen Bericht erstellen
+![Der Bereich "Metriken anpassen" mit Optionen zum Auswählen mehrerer Metriken.][2]{: style="width:90%;"}
 
-Navigieren Sie auf dem Dashboard zu **Analytics** > **Berichts-Builder.**
+{: start="6"}
+6\. Durchsuchen Sie Metriken nach Kategorien und wählen Sie das entsprechende Kontrollkästchen aus, um eine Metrik zu Ihrem Bericht hinzuzufügen.
+    \- Ordnen Sie die Metriken und Spalten neu an, indem Sie das gepunktete Symbol nach oben oder unten ziehen.
+7\. In **Berichtsinhalt** konfigurieren Sie den Datumsbereich, für den Sie Daten in Ihren Bericht aufnehmen möchten.
+8\. Wählen Sie dann je nach Ihrer Auswahl in Schritt 3, ob Sie Ihrem Bericht manuell oder automatisch Kampagnen, Canvase oder beides hinzufügen möchten.
+    - **Manuell hinzufügen:** Wählen Sie die einzelnen Kampagnen oder Canvas aus, die in den Bericht aufgenommen werden sollen, indem Sie die Filter für das Datum der **letzten Sendung** und die Tags oder Kanäle verwenden oder den Namen der Kampagne oder des Canvas suchen.<br><br>![Der Bereich "Manuelles Hinzufügen von Kampagnen und Canvases" mit einer Liste von Kampagnen zum Auswählen.][3]{: style="width:90%;"}<br><br>
+    - **Automatisch hinzufügen:** Legen Sie Regeln dafür fest, welche Kampagnen oder Canvase in den Bericht aufgenommen werden sollen. Sie müssen auf dieser Seite nur ein Feld auswählen.
+        \- Beachten Sie, dass zusätzliche Kampagnen oder Canvase, die die Bedingungen erfüllen, die Sie auf diesem Bildschirm festgelegt haben, automatisch zu zukünftigen Ausführungen Ihres Berichts hinzugefügt werden.<br><br>![Der Abschnitt "Kampagnen und Canvase automatisch hinzufügen" mit Feldern zum Festlegen von Regeln, welche Kampagnen und Canvase dem Bericht hinzugefügt werden sollen.][4]{: style="width:90%;"}<br><br>
+9\. Führen Sie den Bericht aus, indem Sie **Speichern & Ausführen** auswählen.
 
 {% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie den **Berichts-Builder** unter **Daten**.
+Die Ausführung des Berichts kann bis zu einigen Minuten dauern, je nach Datumsbereich und Anzahl der Kampagnen oder Canvase, die Sie in der Konfigurationsphase ausgewählt haben.
 {% endalert %}
 
-Wählen Sie **Neuen Bericht erstellen** und wählen Sie entweder einen Kampagnen-Vergleichsbericht oder einen Canvas-Vergleichsbericht.
+## Anzeigen eines Berichts
 
-Wenn Sie einen Bericht über Kampagnen ausführen möchten, können Sie zwischen einem **manuellen** und einem **automatisierten** Bericht auswählen. Berichte können entweder Kampagnen oder Canvases enthalten, aber nicht beides. Alle Kampagnen und Canvase, die innerhalb der letzten 12 Monate zuletzt Nachrichten gesendet haben, kommen für einen Bericht in Frage.
+Nachdem Sie Ihren Bericht ausgeführt haben, können Sie die Ergebnisse in Tabellenform auf der Berichtsseite einsehen. 
 
-![Dashboard für Kampagnen][6]{: style="max-width:80%;"}
+![Eine Tabelle mit den Berichtsdaten für die Metriken jeder Kampagne.][5]{: style="width:90%;"}
 
-Im Folgenden finden Sie die Unterschiede zwischen diesen beiden Optionen:
+### Erstellen eines Berichts-Charts
 
-| **Aktion** | **Manuell** | **Automatisch** |
-| ---- | ---------- | ------------- |
-| **Bericht erstellen** | Sie können Ihre Kampagnenliste mit Hilfe von Filtern eingrenzen und dann bestimmte Kampagnen abhaken. | Sie erstellen Ihren Bericht, indem Sie die Filteroptionen verwenden, um die Kampagnenliste einzugrenzen. |
-| **Bericht speichern und ansehen** | Sie können Ihren Bericht speichern. Wenn Sie sie das nächste Mal aufrufen, können Sie dieselbe Kampagne sehen, die Sie zuvor hinzugefügt haben, da diese Kampagnen immer noch unter Ihren "Zuletzt gesendet"-Filter fallen. | Sie können Ihren Bericht speichern. Wenn Sie ihn das nächste Mal aufrufen, wird der Bericht automatisch aktualisiert und enthält alle Kampagnen, die Ihren Filtern entsprechen. |
-| **Bericht bearbeiten** | Sie können **Bericht bearbeiten** auswählen, um Kampagnen aus Ihrem Bericht hinzuzufügen oder zu löschen. | Sie können Ihren Bericht bearbeiten, indem Sie die Filterkriterien anpassen. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+Unten auf der Seite können Sie ein Chart für Ihre Daten erstellen, indem Sie einen **Chart-Typ** auswählen und die Metriken des Charts konfigurieren. Standardmäßig sehen Sie die erste Metrik.
+
+![Ein Chart der Berichtsdaten mit Optionen zur Konfiguration der x-Achse, der y-Achse, des Chart-Typs und mehr.][6]{: style="max-width:90%;"}
 
 {% alert note %}
-Sowohl **manuelle** als auch **automatisierte** Berichte können bis zu 250 Kampagnen in einem Bericht enthalten.
+Um ein Liniendiagramm zu erstellen, wählen Sie bei der Konfiguration des Berichts **Datum** als Drilldown-Option aus. Dies zeigt Trends im Laufe der Zeit an.
 {% endalert %}
 
-Canvas-Berichte funktionieren ähnlich wie ein manueller Kampagnenbericht, da die Auswahl von Canvas und die Aktualisierung von Berichten ebenfalls manuell erfolgen muss. Sie können maximal fünf Canvase in einen Bericht aufnehmen.
+#### Herunterladen eines Berichts-Charts
 
-### Schritt 2: Wählen Sie Ihre Metriken
+Um ein Bild des Berichts-Charts herunterzuladen, wählen Sie das gepunktete Symbol und dann eine Download-Option.
 
-Nachdem Sie Ihren Bericht erstellt haben, finden Sie in jeder Zeile eine leere Tabelle mit Kampagnen. Die Tabelle füllt sich, nachdem Sie **Spalten bearbeiten** ausgewählt und die Metriken ausgewählt haben, die Sie hinzufügen möchten.
+![Ein Menü mit Download-Optionen für verschiedene Dateiformate.][7]{: style="max-width:30%;"}
 
-![Kampagnenoptionen][15]{: style="max-width:80%;"}
+## Einem Dashboard einen Bericht hinzufügen
 
-Ihre Tabelle wird mit den von Ihnen gewählten Metriken aufgefüllt. Definitionen zu diesen Metriken finden Sie im [Glossar der Berichtsmetriken][16]. Einige Metriken sind nur für Kampagnen-Vergleichsberichte verfügbar.
+1. Wählen Sie das gepunktete Symbol am oberen Rand der Berichtstabelle aus.
+2. Wählen Sie **Zum Dashboard hinzufügen**.
+3. Wählen Sie aus, ob Sie ein neues Dashboard erstellen oder zu einem bestehenden Dashboard hinzufügen möchten.<br><br>![Fenster mit Optionen zum Auswählen, ob Sie den Bericht zu einem neuen oder bestehenden Dashboard hinzufügen möchten.][10]{: style="width:90%;"}<br><br>
+4. Folgen Sie den Schritten in [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/), um mehr über die Erstellung eines Dashboards zu erfahren.
 
-Sie können auch die Berechnungen für den **Durchschnitt** einer beliebigen Rate oder numerischen Metrik und für die **Summe** einer beliebigen numerischen Metrik umschalten.
-
-### Schritt 3: Wählen Sie eine Zeitspanne
-
-Sie können einen bestimmten Zeitraum auswählen, für den Berichtsdaten angezeigt werden sollen. Wenn für eine bestimmte Kampagne, ein Canvas, eine Canvas-Variante oder eine Canvas-Komponente keine Daten für den von Ihnen ausgewählten Zeitraum vorliegen, sind die Ergebnisse für diese Zeile leer. 
-
-![Numerische Metrik der Kampagne][4]{: style="max-width:60%;"}
-
-### Schritt 4: Benennen und speichern Sie Ihren Bericht
-
-Benennen Sie Ihren Bericht, bevor Sie ihn speichern. Wenn ein Bericht ohne Namen gespeichert wird, verwendet Braze den Standardnamen "Kampagnenvergleichsbericht".
-
-![Anmerkung zur Kampagne][7]{: style="max-width:60%;"}
-
-Wenn Sie fertig sind, wählen Sie **Speichern**. Gespeicherte Berichte können zu einem späteren Zeitpunkt auf der Seite **Berichts-Builder** angezeigt werden.
-
-## Kampagnenvergleichsbericht mit multivariaten Kampagnen
-
-Bei allen multivariaten Kampagnen können Sie diese Metriken nach Varianten und Kontrollgruppen aufgeschlüsselt anzeigen, indem Sie auf den Pfeil neben dem Namen der Kampagne klicken. Die Zeilen mit Ihren Varianten enthalten die Performance-Ergebnisse für diese Variante, und die Zeile mit Ihrer Kontrolle enthält nur die Ergebnisse für Ihre Konversions-Events. 
-
-![Anmerkung zur Kampagne][3]{: style="float:right;max-width:15%;margin-left:15px;"}
-
-Die Metriken, die die Zeile für Ihre gesamte Kampagne auffüllen, spiegeln die Performance der Varianten wider, enthalten aber nicht die Performance der Kontrolle. Zum Beispiel ist das primäre Konversions-Event A für Ihre gesamte Kampagne die Summe des primären Konversions-Events A für Ihre Varianten, und dies beinhaltet nicht das primäre Konversions-Event A für Ihre Kontrolle.
-
-{% alert important %}
-Wenn Sie eine Variante aus einer multivariaten Kampagne löschen, stehen die Daten dieser Variante nicht mehr zur Verwendung in einem zukünftigen Bericht zur Verfügung.
-{% endalert %}
-
-## Aufschlüsselung des Canvas-Vergleichsberichts
-
-Innerhalb eines Canvas-Berichts können Sie Ihre Canvase nach Varianten, Schritten oder Nachrichten aufschlüsseln.
-
-### Variante
-
-Wenn Sie die **Aufschlüsselung nach Variante** auswählen, können Sie die Statistiken für Ihre Canvase insgesamt sowie die Statistiken für die einzelnen Varianten einsehen, die durch Auswählen des Pfeils neben dem Namen des Canvas erweitert werden können.
-
-![Varianten][12]{: style="max-width:90%;"}
-
-### Schritte 
-
-Wenn Sie die **Aufschlüsselung nach Schritten** auswählen, können Sie Metriken auf Schrittebene anzeigen, wobei jede Zeile des Berichts die Zeile eines Schritts enthält.
-
-![Schritte][13]{: style="max-width:90%;"}
-
-### Nachricht
-
-Ähnlich wie bei der Aufschlüsselung auf Schrittebene zeigt das **Auswählen** der **Aufschlüsselung nach Nachrichten** die Namen der Schritte in jeder Zeile an. Innerhalb der **Bearbeitungsspalten** haben Sie jedoch Zugriff auf Metriken auf Nachrichtenebene, wie z.B. kanalspezifische Statistiken wie E-Mail-Klicks und Push-Öffnungen.
-
-![Bericht][14]{: style="max-width:90%;"}
-
-Beachten Sie, dass Sie im Braze-Dashboard eine Vorschau der ersten 50 Zeilen Ihres Canvas-Berichts sehen können. Sie können auf den vollständigen Bericht zugreifen, wenn Sie eine CSV-Datei exportieren.
-
-## Zugriff auf gespeicherte Berichte
-
-Wenn Sie auf einen gespeicherten **manuellen Bericht** zugreifen, können Sie dieselben Kampagnen sehen, die Sie zuvor hinzugefügt haben, da diese Kampagnen immer noch unter Ihren "Zuletzt gesendet"-Filter fallen.
-
-Wenn Sie auf einen gespeicherten **automatischen Bericht** zugreifen, wird der Bericht automatisch aktualisiert und enthält alle Kampagnen, die Ihren Filtern entsprechen. Wenn Ihr Bericht beispielsweise Kampagnen mit dem Tag "Promotion" gefiltert hat, können Sie jedes Mal, wenn Sie diesen Bericht aufrufen, alle Kampagnen mit dem Tag "Promotion" sehen, auch wenn diese Kampagnen nach der Erstellung dieses Berichts erstellt wurden.
-
-## Berichte bearbeiten
-
-In einem **manuellen Bericht** können Sie einen Bericht bearbeiten, indem Sie **Bearbeiten** auswählen. Von dort aus können Sie Kampagnen auswählen oder die Auswahl aufheben, um sie in Ihren Bericht aufzunehmen.
-
-In einem **automatischen Bericht** schalten Sie einfach die Filter um, um die Ergebnisse in Ihrem Bericht einzugrenzen.
-
-## Berichte exportieren
-
-Sie können auch **Export** auswählen, um Ihren Bericht als CSV-Datei herunterzuladen.
-
-Wenn Ihr Bericht Kampagnen mit mehreren Varianten enthält, enthält der Export zwei CSV-Dateien: 
-
-- Eine Datei, die nur die Metriken der obersten Ebene für jede Kampagne enthält
-- Eine Datei, die Metriken auf Variantenebene enthält
-
-Die Datei mit den Metriken für die einzelnen Varianten enthält `variant_` am Anfang des Dateinamens. Wenn Sie zum ersten Mal einen automatisierten Bericht exportieren, erscheint ein Popup-Fenster, in dem Sie aufgefordert werden, das Herunterladen mehrerer Dateien zuzulassen - klicken Sie auf **Zulassen**.
-
-![Kampagne herunterladen][8]{: style="max-width:60%;"}
-
-### Canvas-Vergleichsberichte exportieren
-
-Ihr CSV-Export spiegelt die Aufschlüsselungsansicht wider, die Sie beim Auswählen von **Export** gewählt haben. Wenn Sie z.B. die Aufschlüsselung auf Schrittsebene gewählt haben, enthält Ihr Export Daten zu Ihren Metriken für die einzelnen Schritte. Um Daten aus einer anderen Aufschlüsselung zu exportieren, müssen Sie zunächst zu dieser Aufschlüsselung navigieren und dort **Export** auswählen.
-
-Wenn Sie einen Canvas-Bericht zur Aufschlüsselung von Varianten herunterladen, erhalten Sie zwei CSV-Dateien:
-
-- Eine Datei, die nur Metriken der obersten Ebene für jeden Canvas enthält
-- Eine Datei, die Metriken auf Variantenebene enthält
-
-## Charts bauen 
-
-Verwenden Sie Diagramme, um eine ausgewählte Kennzahl in Ihrem Bericht zu visualisieren. Diagramme sind für Berichte zu Kampagnen verfügbar, wenn die Spalten mindestens eine Kennzahl enthalten.
-
-![Kampagne Performance Chart mit ausgewählter Metrik Gesendete Nachrichten][17]
-
-Standardmäßig zeigt das Chart in jedem Bericht die Metrik in der ersten Spalte des Berichts an. Weitere Kennzahlen für die Grafik finden Sie im Dropdown-Menü. Jede Metrik in Ihrer Berichtstabelle kann in Ihrem Chart angezeigt werden.
-
-Sie können maximal drei Metriken grafisch darstellen. Die Einheiten für alle Metriken müssen die gleichen sein. Wenn Sie beispielsweise in der ersten Dropdown-Liste einen Kurs auswählen, stehen in der zweiten Dropdown-Liste nur Kurse zur Auswahl.
-
-Wenn Ihr Chart nur eine Metrik enthält, werden bis zu 30 Kampagnen in absteigender Reihenfolge angezeigt, basierend auf der von Ihnen ausgewählten Metrik. Wenn die Metrik Ihres Charts beispielsweise E-Mail-Klicks sind, dann zeigt Ihr Chart die 30 E-Mail Kampagnen mit den meisten Klicks an, geordnet von den meisten bis zu den wenigsten Klicks. Wenn Ihr Bericht mehr als 30 Kampagnen enthält, werden nur die 30 besten im Chart angezeigt. Wenn Sie mehr als eine Metrik auswählen, werden in Ihrem Diagramm nur die fünf besten Kampagnen auf der Grundlage der zuerst ausgewählten Metrik angezeigt.
-
-Diagramme werden derzeit nicht gespeichert, wenn Sie einen Bericht speichern.
-
-
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
-
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[1]: {% image_buster /assets/img/report_builder_2/rows_and_columns.png %}
+[2]: {% image_buster /assets/img/report_builder_2/customize_metrics.png %}
+[3]: {% image_buster /assets/img/report_builder_2/manually_add.png %}
+[4]: {% image_buster /assets/img/report_builder_2/automatically_add.png %}
+[5]: {% image_buster /assets/img/report_builder_2/report_table.png %}
+[6]: {% image_buster /assets/img/report_builder_2/visualize_table.png %}
+[7]: {% image_buster /assets/img/report_builder_2/download_options.png %}
+[8]: {% image_buster /assets/img/report_builder_2/report_templates.png %}
+[9]: {% image_buster /assets/img/report_builder_2/create_new_report.png %}
+[10]: {% image_buster /assets/img/report_builder_2/add_to_dashboard.png %} 

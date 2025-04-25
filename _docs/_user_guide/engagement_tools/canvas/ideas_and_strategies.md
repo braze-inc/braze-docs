@@ -39,5 +39,8 @@ guide_menu_list:
   - name: Booking Reminder Email System
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
+  - name: eCommerce Use Cases
+    link: /docs/ecommerce_use_cases/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

@@ -18,13 +18,13 @@ This article will walk you through a use case for the **Post-Purchase Feedback**
 To successfully use this template, you'll need the following:
 
 - A [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) to reference for feedback survey results.
-- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
+- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## Tailoring the template to your needs
 
 Let's say we're working for Decorumsoft, a mobile video game developer. We'll use the post-purchase feedback template to gauge feedback for our latest video game launch, Proxy War 3: War of Thirst. Using this feedback, we'll inform our development plans for the expansion pack, Liquid Mirage.
 
-Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
+Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 To access the post-purchase feedback template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Post-Purchase Feedback**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 

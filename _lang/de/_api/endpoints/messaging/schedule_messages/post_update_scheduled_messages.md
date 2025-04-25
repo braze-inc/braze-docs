@@ -5,18 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Braze-Endpunkt Geplante Nachrichten aktualisieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Update geplanter Nachrichten Braze."
 
 ---
 {% api %}
-# Geplante Nachrichten aktualisieren
+# Update der geplanten Nachrichten
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um geplante Nachrichten zu aktualisieren.
 
-Dieser Endpunkt akzeptiert Aktualisierungen entweder des Parameters `schedule` oder `messages` oder beider. Ihre Anfrage muss mindestens einen dieser beiden Schlüssel enthalten.
+Dieser Endpunkt akzeptiert Updates entweder für den Parameter `schedule` oder `messages` oder für beide. Ihre Anfrage muss mindestens einen dieser beiden Schlüssel enthalten.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
@@ -24,7 +24,7 @@ Dieser Endpunkt akzeptiert Aktualisierungen entweder des Parameters `schedule` o
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `messages.schedule.update`.
 
-## Preisgrenze
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -46,12 +46,12 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Erforderlich | String | Die zu aktualisierende `schedule_id` (erhalten aus der Antwort auf Zeitplan erstellen). |
-|`schedule` | Optional | Objekt | Siehe [Schedule-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`schedule` | Optional | Objekt | Siehe [Zeitplan-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 |`messages` | Optional | Objekt | Siehe [verfügbare Messaging-Objekte]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

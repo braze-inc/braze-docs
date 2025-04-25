@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「既存のダッシュボードユーザーアカウントの検索」Braze エンドポイントの詳細について説明します。"
+description: "この記事では、既存のダッシュボードユーザーアカウントリソースID Brazeエンドポイントを検索するについての詳細を概説する。"
 ---
 
 {% api %}
-# 現行のダッシュボード ユーザー口座を検索する
+# リソースIDで既存のダッシュボードユーザーアカウントを検索する
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

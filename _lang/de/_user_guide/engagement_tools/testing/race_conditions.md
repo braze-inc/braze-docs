@@ -39,9 +39,11 @@ In manchen Fällen wird jedoch das zweite Ereignis zuerst ausgelöst. Dies bedeu
 
 #### Verzögerungen einführen
 
-Nachdem ein neuer Nutzer:innen erstellt wurde, können Sie eine Verzögerung hinzufügen, bevor Sie Targeting Kampagnen oder Canvase versenden. Diese Zeitverzögerung erlaubt es, das Nutzerprofil zu erstellen und alle relevanten Attribute zu aktualisieren, die die Berechtigung zum Empfang der Nachricht bestimmen können. 
+Nachdem ein neuer Nutzer:innen erstellt wurde, können Sie eine Verzögerung hinzufügen, bevor Sie Targeting Kampagnen oder Canvase versenden. Diese Zeitverzögerung erlaubt es, das Nutzerprofil zu erstellen und alle relevanten Attribute zu aktualisieren, die die Berechtigung zum Empfang der Nachricht bestimmen können.
 
 Nachdem sich ein Nutzer:innen für Ihre App registriert hat, können Sie zum Beispiel nach 24 Stunden ein Aktionsangebot versenden. Wenn Sie einen Nutzer:innen anlegen oder ein angepasstes Attribut protokollieren, können Sie auch eine einminütige Verzögerung einfügen, bevor Sie mit Ihrem Prozess fortfahren, um diese Race-Condition zu vermeiden.
+
+Sie können diese Verzögerung auch im [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration) für das spezifische angepasste Event hinzufügen, das einen neuen Nutzer:innen zum Betreten eines Canvas triggert. 
 
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
@@ -86,7 +88,7 @@ Eine weitere häufige Race Condition kann auftreten, wenn Sie eine aktionsbasier
 
 #### Prüfen Sie Ihre Zielgruppe nach einer Verzögerung
 
-Um die Verwendung von Zielgruppen-Filtern zu vermeiden, die die Trigger-Kriterien enthalten, empfehlen wir, Ihre Zielgruppe vor der Zustellung zu überprüfen. So können Sie beispielsweise [Zustellungsvalidierungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#edit-delivery-settings) in Canvas-Schritten für Nachrichten als zusätzliche Prüfung [verwenden]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#edit-delivery-settings), um zu bestätigen, dass Ihre Zielgruppe die Zustellungskriterien beim Senden der Nachricht erfüllt. Sie können auch Ausstiegskriterien für Canvas nutzen, um Nutzer:innen zu einem beliebigen Zeitpunkt während der User Journey aussteigen zu lassen, wenn sie Ihre Kriterien erfüllen.
+Um die Verwendung von Zielgruppen-Filtern zu vermeiden, die die Trigger-Kriterien enthalten, empfehlen wir, Ihre Zielgruppe vor der Zustellung zu überprüfen. So können Sie beispielsweise [Zustellungsvalidierungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#edit-delivery-settings) in Canvas-Schritten für Nachrichten als zusätzliche Prüfung verwenden, um zu bestätigen, dass Ihre Zielgruppe die Zustellungskriterien beim Senden der Nachricht erfüllt. Sie können auch Ausstiegskriterien für Canvas nutzen, um Nutzer:innen zu einem beliebigen Zeitpunkt während der User Journey aussteigen zu lassen, wenn sie Ihre Kriterien erfüllen.
 
 Für Kampagnen können Sie Exit-Ereignisse verwenden, um zu ermöglichen, dass Kampagnen mit einem triggernden Ereignis Nachrichten an Nutzer:innen abbrechen, die das Exit-Ereignis während der Verzögerung ausführen.
 

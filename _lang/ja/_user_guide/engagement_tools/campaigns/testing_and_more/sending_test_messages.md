@@ -126,7 +126,7 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 1. [**セグメント**] ページに移動して、[新しいセグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)します。 
 2. [**フィルターを追加**] の下のドロップダウンメニューをクリックし、リストの下部にあるテストフィルターを探します。 <br><br>![フィルターのテスト]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. テストフィルターを使用して、特定のメールアドレスまたは外部 [ユーザー ID]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) を持つユーザーを選択します。<br><br>![フィルター・オプションのテスト]({% image_buster /assets/img_archive/testmessages2.png %})
+3. テストフィルターを使用して、特定のメールアドレスまたは外部 [ユーザー ID]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) を持つユーザーを選択します。<br><br>![フィルター・オプションのテスト]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>これらのフィルターには次のオプションがあります。
 - **完全一致**: 指定したメールアドレスまたはユーザー ID と完全に一致するものを探します。これは、1 つのメールまたはユーザー ID に関連付けられたデバイスにのみテストキャンペーンを送信する場合に使用します。
 - **一致しない**: 特定のメールまたはユーザー ID をテストキャンペーンから除外します。

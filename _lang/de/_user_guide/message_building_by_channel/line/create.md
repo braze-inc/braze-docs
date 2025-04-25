@@ -20,7 +20,7 @@ alias: /line/create/
 Bevor Sie eine LINE-Nachricht erstellen, gehen Sie wie folgt vor:
 
 1. Lesen Sie die LINE-Übersicht.
-2. Acknolwedge Richtlinien, Grenzen und Inhaltsregeln.
+2. Erkennen Sie Richtlinien, Einschränkungen und Inhaltsregeln an.
 3. [Richten Sie Ihre LINE-Verbindung ein]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben Ihres Kontos verbraucht.
@@ -35,14 +35,9 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 **Schritte:**
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{: start="2"}
-2\. Wählen Sie **LINE**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel-Kampagne**.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+2. Wählen Sie **LINE**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel-Kampagne**.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -79,7 +74,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 
 #### Erstellen von Nachrichten von rechts nach links
 
-Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 ## Schritt 3: Vorschau und Test Ihrer Nachricht
 
@@ -108,7 +103,7 @@ Wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen Sie die
 
 ### Wählen Sie Konversions-Events aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 Konversions-Events helfen Ihnen, den Erfolg Ihrer Kampagnen zu messen. Zum Beispiel:
 
@@ -120,7 +115,7 @@ Sie können auch benutzerdefinierte Konvertierungsereignisse für Ihren speziell
 {% endtab %}
 {% tab Canvas %}
 
-Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihres Canvas aus. Weitere Einzelheiten zum Aufbau des restlichen Canvas, zur Verwendung von multivariaten Tests und intelligenter Auswahl und mehr finden Sie unter [Erstellen eines Canvas](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihres Canvas aus. Weitere Einzelheiten zum Aufbau des restlichen Canvas, zur Verwendung von multivariaten Tests und intelligenter Auswahl und mehr finden Sie unter [Erstellen eines Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -129,7 +124,7 @@ Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihre
 
 Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details, testen Sie sie und senden Sie sie ab!
 
-Sehen Sie sich als nächstes die [LINE-Berichterstattung](https://www.braze.com/docs/line/reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer LINE-Kampagnen zugreifen können.
+Sehen Sie sich als nächstes die [LINE-Berichterstattung]({{site.baseurl}}/line/reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer LINE-Kampagnen zugreifen können.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

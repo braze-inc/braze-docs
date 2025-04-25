@@ -16,24 +16,21 @@ description: "This page covers how to use suppression lists to specify which use
 Suppression lists are currently in beta. If you're interested in being part of this beta, reach out to your customer success manager. During the beta, functionality may change, and you can have up to five active suppression lists at a time, but let your customer success manager know if you need more. 
 {% endalert %}
 
-## How it works
+## Why use suppression lists?
 
 Suppression lists are dynamic and automatically apply to certain forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
 
 ### Messages not affected by suppression lists
 
 As part of the beta, suppression lists will not apply to the following message types (in other words, suppression list users **will still** receive messages that belong to the following):
-- Feature Flags
-- Transactional use cases
-- API campaigns
-- API-triggered campaigns
-- API-triggered Canvases
-- Campaigns triggered by the Braze API (`/messages` and `/send`)
+- [Feature Flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/)
+- [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
+- [API campaigns]({{site.baseurl}}/api/api_campaigns/)
 
 You don't need to add an exception tag for any of these use cases, as suppression lists automatically won't apply to them. To exclude a group of users from a message within these use cases, you need to create a target segment that excludes these users.
 
 {% alert important %}
-During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional use cases.
+During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional emails.
 {% endalert %}
 
 ### Channels affected by suppression lists
@@ -49,6 +46,10 @@ Suppression lists are dynamic and will automatically apply to all of the followi
 - Webhook
 - WhatsApp
 - LINE
+
+By default, suppression lists will apply to any API-triggered campaigns and API-triggered Canvases. You can change this by checking **Do not apply this suppression list to all API-triggered campaigns and API-triggered Canvases** in the **Exception Settings** section.
+
+![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.][6]{: style="max-width:70%;"}
 
 ## Setting up suppression lists
 
@@ -80,18 +81,25 @@ You can deactivate or archive suppression lists when you no longer need them.
 
 ## Suppression list usage
 
-### For campaigns
+To check if your suppression list prevented a user from receiving a message, use **User Lookup** in the **Target Audience** step within your campaign or Canvas. Here, you'll be able to see which suppression list they're part of.
 
-![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".][5]
+!["User Lookup" window showing that a user is in a suppression list.][7]{: style="max-width:70%;"}
 
+{% alert tip %}
+You can also find applied suppression lists in the **Summary** step.
+{% endalert %}
+
+While creating a campaign or Canvas, use **User Lookup** within the **Target Audience** step to search for a user, and if they aren't in the target audience, you can see the suppression list they're part of. 
+
+!["User Lookup" window showing that a user is in a suppression list.][7]{: style="max-width:70%;"}
+
+{% tabs local %}
+{% tab campaign %}
 If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Messages not affected by suppression lists](#messages-not-affected-by-suppression-lists) for cases when a suppression list won't apply.
 
-#### Checking which suppression lists are applied
-
-To check for suppression list usage within a campaign, go to the **Suppression List** section on the **Target Audience** page to view which suppression lists are being applied to that campaign.
-
-### For Canvases
-
+![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".]({% image_buster /assets/img/active_suppression_list.png %})
+{% endtab %}
+{% tab canvas %}
 If a user is in a suppression list, they will still enter the Canvas but won't be able to receive Message steps within the Canvas. When they advance to a Message step, they will be exited from the Canvas. However, a user in a suppression list is still able to receive non-Message steps prior to a Message step. 
 
 #### Preventing segments from entering a Canvas
@@ -102,13 +110,12 @@ For a segment to not be entered into a Canvas **at all**, you can configure that
 2. In the **Target** step, use the **Segment Membership** filter to target users who aren't included in your segment.
 
 For example, let’s say you have a Canvas with an applied suppression list. The Canvas has a User Update step followed by a Message step. In this scenario, suppression list users will enter the Canvas, proceed through the User Update step (where the user may be updated, based on how that step is configured), and then exit at the Message step (at which point the user will be included in the “Exited” metrics). 
-
-#### Checking which suppression lists are applied
-
-To check for suppression list usage within a Canvas, go to the **Suppression List** section on the **Target Audience** page to view which suppression lists are being applied to that Canvas. You can also view applied suppression lists in the **Summary** step.
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/suppression_lists_home.png %}
 [2]: {% image_buster /assets/img/create_suppression_list.png %}
 [3]: {% image_buster /assets/img/suppression_list_filters.png %}
 [4]: {% image_buster /assets/img/exception_tags.png %}
-[5]: {% image_buster /assets/img/active_suppression_list.png %}
+[6]: {% image_buster /assets/img/suppression_list_checkbox.png %}
+[7]: {% image_buster /assets/img/suppression_list_user_lookup.png %}

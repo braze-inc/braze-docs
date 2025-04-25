@@ -23,10 +23,6 @@ Bei der Einrichtung werden Sie aufgefordert, eine Anmelde-URL und eine ACS-URL (
 | RelayState API-Schlüssel | Um die Anmeldung beim Identitätsanbieter zu aktivieren, gehen Sie zu **Einstellungen** > **API-Schlüssel** und erstellen Sie einen API-Schlüssel mit `sso.saml.login` Berechtigungen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie Ihre API-Schlüssel unter **Einstellungen** unter **Entwicklerkonsole** > **API-Einstellungen**.
-{% endalert %}
-
 ## Vom Service Provider (SP) initiierte Anmeldung innerhalb von Microsoft Entra SSO
 
 ### Schritt 1: Braze aus der Galerie hinzufügen
@@ -96,13 +92,7 @@ Wenn Sie Braze im Microsoft Entra Admin Center eingerichtet haben, erstellt Micr
 Wenn Ihr Account Manager SAML SSO für Ihr Konto aktiviert hat, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und schalten Sie den Abschnitt SAML SSO auf **EIN**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Kontosymbol und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**, um den Abschnitt SAML SSO zu finden.
-{% endalert %}
-
-{: start="2"}
-2\. Fügen Sie auf derselben Seite Folgendes hinzu:
+2. Fügen Sie auf derselben Seite Folgendes hinzu:
 
 | Anforderung | Details |
 |---|---|

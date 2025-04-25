@@ -10,27 +10,30 @@ description: "Auf dieser Landing Page finden Sie alles rund um Connected Content
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: Einen API-Aufruf tätigen
+- name: Aufruf einer Connected-Content-API
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Lokal verknüpfte Inhaltsvariablen
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
+- name: Caching von Connected-Content-Antworten
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Abbrechen von Connected-Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   image: /assets/img/braze_icons/stop-circle.svg
-- name: Wiederholungen verbundener Inhalte
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  image: /assets/img/braze_icons/refresh-ccw-01.svg
-- name: Öffentliche APIs
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  image: /assets/img/braze_icons/target-05.svg
 - name: Abrufen von Benutzerprofildaten
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg
+- name: Wiederholungen verbundener Inhalte
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Fehlerbehebung bei Anfragen für verbundene Inhalte 
   link: /docs/help/help_articles/api/webhook_connected_content_errors/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Öffentliche APIs verwenden
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
+  image: /assets/img/braze_icons/target-05.svg
 ---
 
 <br><br>

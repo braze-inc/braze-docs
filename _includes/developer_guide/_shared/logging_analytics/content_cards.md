@@ -13,7 +13,7 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 {% subtabs local %}
 {% subtab Java %}
 
@@ -93,7 +93,7 @@ Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscribe
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 To access the Content Cards data model, call [`contentCards.cards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/cards) on your `braze` instance.
 
@@ -144,7 +144,7 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Register a callback function to subscribe for updates when cards are refreshed.
 
@@ -182,7 +182,7 @@ Content Cards will only refresh on session start if a subscribe request is calle
 Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call the Braze logging methods. Use the `ContentCardable` base class to easily reference and provide data to the `BrazeManager`. 
 
@@ -235,7 +235,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 To handle control variant Content Cards in your custom UI, pass in your [`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.{% endalert %}
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. This delegate will handle passing the data of your custom object back to Braze to be logged. For an example, see [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/).
 
@@ -280,7 +280,7 @@ To handle control variant Content Cards in your custom UI, pass in your [`Braze.
 {% endalert %}
 {% endtab %}
 
-{% tab Web %}
+{% tab web %}
 
 Log impression events when cards are viewed by users using [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
 

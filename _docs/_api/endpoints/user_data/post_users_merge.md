@@ -102,9 +102,15 @@ These merged fields will update "for X events in Y days" filters. For purchase e
 
 If an `email` or `phone` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
 
-The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
+The allowed values for the array are:
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (refers to prioritizing the most recently updated user)
+- `least_recently_updated` (refers to prioritizing the least recently updated user)
 
 Only one of the following options may exist in the prioritization array at a time:
+
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
 
@@ -159,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Merging unidentified user
 
-The following request would merge the most recently updated unidentified user with email address "john.smith@braze.com" into the user with `external_id` "john". Using `most_recently_updated` filters the query to just one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user with `external_id` "john".
+The following request would merge the most recently updated unidentified user with email address "john.smith@braze.com" into the user with `external_id` "john". Using `most_recently_updated` or `least_recently_updated` filters the query to just one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user with `external_id` "john".
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -183,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Merging unidentified user into identified user
 
-This next example merges the most recently updated unidentified user with email address "john.smith@braze.com" into the most recently updated identified user with email address "john.smith@braze.com". Using `most_recently_updated` filters the queries to just one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
+This next example merges the most recently updated unidentified user with email address "john.smith@braze.com" into the most recently updated identified user with email address "john.smith@braze.com". Using `most_recently_updated` or `least_recently_updated` filters the queries to just one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -195,11 +201,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
       }
     }
   ]

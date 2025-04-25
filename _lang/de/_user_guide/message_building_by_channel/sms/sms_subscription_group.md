@@ -30,10 +30,6 @@ Es gibt zwei Abonnementstatus für SMS-Benutzer: `subscribed` und `unsubscribed`
 - **Wird automatisch beim Opt-in/Opt-out des Nutzers oder der Nutzerin verarbeitet:** Wenn Nutzer:innen ein Standard Opt-in oder Opt-out [Schlüsselwort][7]] eingeben, setzt und aktualisiert Braze automatisch ihren Abo-Status.
 - **Nutzerimport**: Benutzer können über **Benutzer importieren** zu E-Mail- oder SMS-Abonnementgruppen hinzugefügt werden. Wenn Sie den Status der Abonnementgruppe aktualisieren, müssen Sie diese beiden Spalten in Ihrer CSV-Datei haben: `subscription_group_id` und `subscription_state`. Weitere Informationen finden Sie unter [Benutzerimport]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt diese Seite **Benutzerimport** und befindet sich unter **Benutzer**.
-{% endalert %}
-
 Wenn eine Rufnummer in einem Nutzerprofil aktualisiert wird, erbt die neue Rufnummer den Abo-Gruppenstatus des Nutzers oder der Nutzerin. Wenn die Telefonnummer auf eine Nummer aktualisiert wird, die bereits in Braze existiert, wird der Abonnementstatus dieser bestehenden Telefonnummer übernommen.
 
 Wenn beispielsweise Nutzer:in A eine Telefonnummer hat, die mehreren Abonnementgruppen zugeordnet ist, und diese Telefonnummer dann zu Nutzer:in B hinzugefügt wird, wird Nutzer:in B denselben Abonnementgruppen zugeordnet. Um zu verhindern, dass ein Nutzer die bestehenden Abos erbt, können Sie die Abo-Gruppen der alten Nummer über die REST API zurücksetzen, wenn ein Nutzer:innen seine Nummer ändert. Wenn sich mehrere Nutzer:innen diese Telefonnummer teilen, werden sie alle abgemeldet.

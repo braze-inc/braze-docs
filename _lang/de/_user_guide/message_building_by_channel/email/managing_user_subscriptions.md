@@ -16,7 +16,7 @@ Dieses Dokument dient nur zu Informationszwecken. Sie dienen nicht der Rechtsber
 
 ## Abo-Status {#subscription-states}
 
-Braze verfügt über drei globale Abo-Status für E-Mail Nutzer:innen (in der folgenden Tabelle aufgeführt), die der letzte Gatekeeper zwischen Ihren Nachrichten und Ihren Nutzer:innen sind. Nutzer:innen, die als `unsubscribed` gelten, erhalten zum Beispiel keine Nachrichten, die auf den globalen Abo-Status `subscribed` oder `opted-in` ausgerichtet sind.
+Braze verfügt über drei globale Abo-Status für E-Mail-Nutzer:innen (in der folgenden Tabelle aufgeführt), die die endgültigen Gatekeeper zwischen Ihren Nachrichten und Ihren Nutzer:innen sind. Nutzer:innen, die als `unsubscribed` gelten, erhalten zum Beispiel keine Nachrichten, die auf den globalen Abo-Status `subscribed` oder `opted-in` ausgerichtet sind.
 
 | Status | Definition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze zählt keine Änderungen des Abo-Status für Ihre Datenpunkte, global und 
 
 Braze meldet jeden Benutzer, der sich manuell von Ihrer E-Mail abmeldet, automatisch über eine [benutzerdefinierte Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer) ab. Wenn der Benutzer seine E-Mail-Adresse aktualisiert und die Option **Benutzer bei Aktualisierung der E-Mail-Adresse erneut anmelden** in den Einstellungen für **die Sendekonfiguration** aktiviert ist, wird der normale E-Mail-Versand wieder aufgenommen.
 
-Wenn ein Benutzer eine oder mehrere Ihrer E-Mails als Spam markiert hat, sendet Braze nur Transaktions-E-Mails an diesen Benutzer. In diesem Fall beziehen sich Transaktions-E-Mails auf die Option **An alle Benutzer senden, auch an nicht angemeldete Benutzer**, die Sie im Schritt **Zielgruppe** ausgewählt haben.
+Wenn ein Benutzer eine oder mehrere Ihrer E-Mails als Spam markiert hat, sendet Braze nur Transaktions-E-Mails an diesen Benutzer. In diesem Fall referenzieren Transaktions-E-Mails auf die im Schritt **Targeting** ausgewählte Option **An alle Nutzer:innen senden, auch an nicht abgemeldete Nutzer:innen**.
 
 {% alert tip %}
 In unseren [IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)-Best Practices finden Sie Hinweise, wie Sie Ihre Nutzer:innen effektiv erneuern können.
@@ -90,15 +90,9 @@ Verwenden Sie die [Endpunkte für Abo-Gruppen]({{site.baseurl}}/api/endpoints/su
 ### Erstellen einer Abonnementgruppe
 
 1. Gehen Sie zu **Publikum** > **Abonnements**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich diese Seite unter **Nutzer:innen** > **Abo-Gruppen**.
-{% endalert %}
-
-{: start="2"}
-2\. Wählen Sie **E-Mail Abo-Gruppe erstellen**.
-3\. Geben Sie Ihrer Abo-Gruppe einen Namen und eine Beschreibung.
-4\. Wählen Sie **Speichern**. 
+2. Wählen Sie **E-Mail Abo-Gruppe erstellen**. 
+3. Geben Sie Ihrer Abo-Gruppe einen Namen und eine Beschreibung.
+4. Wählen Sie **Speichern**. 
 
 Alle Abonnementgruppen werden automatisch zu Ihrem Präferenzcenter hinzugefügt.
 

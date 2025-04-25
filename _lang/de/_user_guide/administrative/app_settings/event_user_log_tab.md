@@ -17,10 +17,6 @@ Zusätzlich zu diesem Artikel empfehlen wir Ihnen auch unseren Braze Learning-Ku
 
 Um auf das Protokoll zuzugreifen, gehen Sie zu **Einstellungen** > **Event-Nutzerprotokoll.**
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie das **Ereignisbenutzerprotokoll** unter **Einstellungen** > **Entwicklerkonsole**.
-{% endalert %}
-
 Um Ihre Protokolle leicht zu finden, können Sie nach folgenden Kriterien filtern:
 
 * SDK oder API

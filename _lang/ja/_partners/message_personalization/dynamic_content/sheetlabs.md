@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Sheetlabs][1] は、スプレッドシートを、強力で明確に文書化された API に変換できるプラットフォームです。Google SheetsやExcelからデータをインポートしてAPI化し、そのAPIをBrazeなどの他のアプリケーションで使うことができる。
 
+_この統合はSheetlabsによって維持されている。_
+
+## 統合について
+
 SheetlabsとBrazeの統合により、[Connected Contentを][2]活用して、BrazeのマーケティングキャンペーンにSheetlabsのAPIを含めることができる。これは、Googleスプレッドシート（マーケティングチームが直接更新する）とBrazeテンプレートの橋渡しによく使われる。これにより、翻訳やカスタム属性の大規模なセットなど、Brazeテンプレートでより多くのことを実現できる。
 
 ## 前提条件
@@ -67,6 +71,7 @@ API にアクセスできるようになったので、コネクテッドコン�
 {% alert tip %}
 Sheetlabs との統合に関する詳しい例やアドバイスについては、[Sheetlabs のドキュメント](https://app.sheetlabs.com/docs/producers/braze/)を参照してください。
 {% endalert %}
+
 
 
 [1]: https://sheetlabs.com/

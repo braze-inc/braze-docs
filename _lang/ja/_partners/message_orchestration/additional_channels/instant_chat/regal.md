@@ -232,7 +232,7 @@ Regalの [Reporting Webhooks ガイド][7]には、公開する Reporting イベ
 
 ### ステップ3:Regal イベントを Braze イベントに変換する
 
-Braze の [Data Transformation]({{site.baseurl}}/data_transformation) 機能を使用すると、受信した Regal イベントを、Braze で属性、イベント、または購入として追加するのに必要な形式にマッピングできます。
+Braze[データ変換]({{site.baseurl}}/data_transformation)機能により、受信したRegalイベントを、Brazeでアトリビューション、イベント、または購入として追加するために必要なフォーマットにマッピングすることができる。
 
 1. Data Transformation に名前を付けてください。イベント Webhook ごとに Data Transformation を設定することをお勧めします。
 
@@ -297,7 +297,7 @@ Braze の [Data Transformation]({{site.baseurl}}/data_transformation) 機能を�
 以下は、これをBrazeのカスタムイベントにマッピングするためのサンプルデータ変換です。
 
 ```
-// Braze's /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze must first be converted to ISO 8601. This can be done with the following code:
+// The Braze /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze must first be converted to ISO 8601. This can be done with the following code:
 let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();
@@ -442,7 +442,7 @@ return brazecall;
 以下は、これをBrazeのカスタムイベントにマッピングするためのサンプルデータ変換です。
 
 ```
-// Braze's /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze, it must first be converted to ISO 8601. This can be done with the following code:
+// The Braze /users/track endpoint expects timestamps in an ISO 8601 format. To use the Unix timestamp within Regal's call.completed event payload as the event timestamp in Braze, it must first be converted to ISO 8601. This can be done with the following code:
 let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();

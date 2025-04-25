@@ -18,10 +18,6 @@ description: "In diesem Artikel erfahren Sie, wie Sie das Location Targeting ein
 
 Navigieren Sie zur Seite **Segmente** unter **Zielgruppe**, um alle Ihre aktuellen Benutzersegmente anzuzeigen. Auf dieser Seite können Sie neue Segmente erstellen und benennen. Um zu beginnen, klicken Sie auf **Segment erstellen** und geben Sie Ihrem Segment einen Namen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich **Segmente** unter **Engagement**.
-{% endalert %}
-
 ![][1]{: style="max-width:70%;"}
 
 ## Schritt 2: Standort anpassen

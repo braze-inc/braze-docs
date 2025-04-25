@@ -25,10 +25,6 @@ Lesen Sie den Abschnitt [Verbrauchszählung](#consumption-count) in diesem Artik
 
 Um Ihre Datenpunkt-Nutzung einzusehen, gehen Sie zu **Einstellungen** > **Abrechnung** und wählen Sie den Tab **Gesamtdatenpunkt-Nutzung**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite, indem Sie Ihr Kontosymbol > **Abonnements und Nutzung** > **Datenpunkte-Nutzung insgesamt** auswählen.
-{% endalert %}
-
 Weitere Informationen zu den Komponenten des Dashboards für Datenpunkte finden Sie unter [Abrechnung]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}

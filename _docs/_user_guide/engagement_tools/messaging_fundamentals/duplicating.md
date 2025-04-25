@@ -17,6 +17,10 @@ tool:
 
 After you duplicate a campaign or Canvas, the new message will be automatically titled `"Copy of [Original Name]"` and you'll be brought to its editing page. These duplicates will remain as drafts until you edit and launch them.
 
+{% alert tip %}
+You can also [copy your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace) across workspaces. The copy will remain as a draft until you edit and launch.
+{% endalert %}
+
 {% tabs %}
 {% tab campaign %}
 To duplicate a campaign:
@@ -32,8 +36,6 @@ To duplicate a Canvas:
 1. Go to **Messaging** > **Canvas**.
 2. Hover over the Canvas row and select <i class="fas fa-ellipsis-vertical"></i> **More actions**.
 3. Select **Duplicate**.
-
-![Canvas list page with the option to duplicate a Canvas named "api_triggered_canvas 3".]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
 {% details Original Canvas editor %}
 

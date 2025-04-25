@@ -1,12 +1,12 @@
 ---
-nav_title: "GET: Job-Synchronisierungsstatus auflisten"
-article_title: "GET: Job-Synchronisierungsstatus auflisten"
+nav_title: "GET: Job-Synchronisationsstatus auflisten"
+article_title: "GET: Job-Synchronisationsstatus auflisten"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Job-Synchronisierungsstatus auflisten."
+description: "Dieser Artikel beschreibt Details zum Braze Endpunkt Job-Synchronisierungsstatus auflisten."
 
 ---
 {% api %}
@@ -21,22 +21,22 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Job-Synchroni
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `cdi.integration_job_status` erstellen.
 {% endalert %}
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='cdi job sync status' %}
+{% multi_lang_include rate_limits.md endpunkt='cdi job sync status' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `integration_id` | Erforderlich | String | Integrations-ID. |
+| `integration_id` | Erforderlich | String | Integration ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter abfragen
+## Abfrageparameter
 
-Jeder Aufruf dieses Endpunkts gibt 10 Einträge zurück. Bei einer Integration mit mehr als 10 Synchronisierungen verwenden Sie die Kopfzeile `Link`, um die Daten auf der nächsten Seite abzurufen, wie in der folgenden Beispielantwort gezeigt.
+Jeder Aufruf dieses Endpunkts gibt 10 Artikel zurück. Bei einer Integration mit mehr als 10 Synchronisierungen verwenden Sie die Kopfzeile `Link`, um die Daten auf der nächsten Seite abzurufen, wie in der folgenden Beispielantwort gezeigt.
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `cursor` | Optional | String | Bestimmt die Paginierung des Synchronisationsstatus. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -63,7 +63,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `200` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `200` könnte den folgenden Antwortkörper zurückgeben.
 
 {% alert note %}
 Die Kopfzeile `Link` existiert nicht, wenn es insgesamt weniger als oder gleich 10 Synchronisierungen gibt. Bei Anrufen ohne Cursor wird `prev` nicht angezeigt. Wenn Sie sich die letzte Seite der Artikel ansehen, wird `next` nicht angezeigt.
@@ -89,13 +89,13 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-| job_status | Erläuterung |
+| job_status | Erklärung |
 | --- | --- |
 | `running` | Der Auftrag wird gerade ausgeführt. |
 | `success` | Alle Zeilen wurden erfolgreich synchronisiert. |
 | `partial` | Einige Zeilen konnten aufgrund von Fehlern nicht synchronisiert werden. |
 | `error` | Es wurden keine Zeilen synchronisiert. |
-| `config_error` | Es ist ein Fehler in der Integrationskonfiguration aufgetreten. Überprüfen Sie Ihre Integrationseinstellungen. |
+| `config_error` | Es ist ein Fehler in der Konfiguration der Integration aufgetreten. Überprüfen Sie Ihre Integrationseinstellungen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Fehlersuche
@@ -108,6 +108,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid integration ID` | Prüfen Sie, ob Ihre `integration_id` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Fehlermeldungen finden Sie unter [Schwerwiegende Fehler und Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}

@@ -3,7 +3,6 @@ nav_title: 接続されたコンテンツを中止する
 article_title: 接続されたコンテンツを中止する
 page_order: 2
 description: "この参考記事では、コネクテッド・コンテンツにおけるメッセージ中止のベスト・プラクティスをいくつか取り上げている。"
-
 ---
 
 # コネクテッドコンテンツの中止{#aborting-connected-content}

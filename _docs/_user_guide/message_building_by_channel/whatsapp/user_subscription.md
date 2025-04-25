@@ -47,7 +47,7 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API, such as in the following example:
 
-![][1]{: style="max-width:90%;"}
+![Webhook composer with a message using the POST method.][1]{: style="max-width:90%;"}
 
 To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (such as a user has entered a Canvas variation and is in a WhatsApp subscription group).
 
@@ -75,7 +75,7 @@ To avoid race conditions, any follow-up messaging after the webhook should be co
 	}
 	```
 
-![][2]{: style="max-width:90%;"}
+![User Update step with an Advanced JSON Editor step.][2]{: style="max-width:90%;"}
 
 {% alert note %}
 Updates to a user's subscription status may take up to 60 seconds.
