@@ -54,11 +54,11 @@ The default settings are:
   - Disable bucket versioning
   - SSE-S3 encryption
 
-Take note of the region you’ve created the bucket in, as you will create an SQS queue in the same region in the next step.
+Take note of the region you've created the bucket in, as you will create an SQS queue in the same region in the next step.
 
 ### Step 2: Create SQS queue
 
-Create an SQS queue to track when objects are added to the bucket you’ve created. Use the default configuration settings for now. 
+Create an SQS queue to track when objects are added to the bucket you've created. Use the default configuration settings for now. 
 
 An SQS queue must be unique globally (for example, only one can be used for a CDI sync and cannot be reused in another workspace).
 
@@ -66,7 +66,7 @@ An SQS queue must be unique globally (for example, only one can be used for a CD
 Be sure to create this SQS in the same region you created the bucket in.
 {% endalert %}
 
-Make sure you take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration.
+Make sure you take note of the ARN and the URL of the SQS as you'll be using it frequently during this configuration.
 
 ![Selecting "Advanced" with an example JSON object to define who can access a queue.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
@@ -176,7 +176,7 @@ Give the role a name and a description, and select **Create Role**.
 <br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5. Take note of the ARN of the role you just created and the external-id you generated, as you’ll use them to create the Cloud Data Ingestion integration.  
+5. Take note of the ARN of the role you just created and the external-id you generated, as you'll use them to create the Cloud Data Ingestion integration.  
 
 ## Setting up Cloud Data Ingestion in Braze
 
@@ -190,9 +190,10 @@ Give the role a name and a description, and select **Create Role**.
   - Folder path (optional, must be unique across syncs in a workspace)
   - Region
 
-![Example security credentials as displayed in S3 to create a new import sync.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+{% alert important %}
+Each S3-based Cloud Data Ingestion sync requires its own unique SQS queue URL and external ID (and, if used, a unique folder prefix). Reusing the same credentials or SQS ARN across multiple syncs will result in a sync creation failure.
+{% endalert %}
 
-{: start="3"}
 3. Name your integration, and select the data type for this integration. 
 
 <br><br>![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
@@ -211,7 +212,7 @@ Give the role a name and a description, and select **Create Role**.
 
 Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string.
 
-Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
+Braze doesn't enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
 
 ### User identifiers
 
@@ -282,7 +283,7 @@ For examples of all supported file types, refer to the sample files in [braze-ex
 - Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and won't be synced to Braze.
 - There's no additional limit on the number of rows per file.
 - There's no additional limit on the number of files uploaded in a given period of time.
-- Ordering isn't suppoerted in or between files. We recommende batching updates periodically if you're monitoring for any expected race conditions.
+- Ordering isn't supported within or between files—CDI does not guarantee row ordering. We recommend batching updates periodically if you're monitoring for race conditions.
 
 ## Troubleshooting
 
@@ -294,6 +295,13 @@ Existing files can be used to validate the data structure in test connection, bu
 
 ### Handling unexpected file errors
 
-If you're observing a high number of errors or failed files, it’s possible that you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
+If you're observing a high number of errors or failed files, it's possible that you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
 
 When files are uploaded to the source bucket but not in the source folder, CDI will process the SQS notification but does not take any action on the file, so this may appear as an error.
+
+### Partial or missing data
+
+If only some of your attributes or events are syncing, check the following:
+- Ensure your file schema matches the supported format (no extra header rows or unsupported columns).
+- In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **Sync Log** to review row-level errors.
+- Common issues include schema mismatches (field type differences) and null values for required columns.

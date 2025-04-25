@@ -193,11 +193,11 @@ If you have a firewall or other network policies, you must give Braze network ac
 
 Some important things to know:
 - You may also need to change your security groups to allow Braze to access your data in Redshift.
-- Make sure to explicitly allow inbound traffic on the IPs in the table and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to “allow all”.
+- Make sure to explicitly allow inbound traffic on the IPs in the table and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all".
 - The endpoint for the Redshift cluster must be publicly accessible for Braze to connect to your cluster.
      - If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an SSH tunnel to access the Redshift data. Check out this [AWS Knowledge Center post](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine) for more information.
  
-Allow access from the following IPs corresponding to your Braze dashboard’s region.
+Allow access from the following IPs corresponding to your Braze dashboard's region.
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
@@ -334,7 +334,7 @@ For Braze to access Databricks, a personal access token needs to be created.
 
 1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the dropdown.
 2. On the Access tokens tab, select **Generate new token**.
-3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
+3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token's lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
 4. Select **Generate**.
 5. Copy the displayed token, and then select **Done**.
 
@@ -578,6 +578,11 @@ By default, contact emails will only receive notifications of global or sync-lev
 - (For catalogs syncs only) Catalog tier is out of space
 
 You may also configure alerts for row-level issues, or choose to receive an alert every time a sync runs successfully. 
+
+- **Row-level issues**: sends an email listing individual record failures.
+- **Sync success**: sends a summary email after each successful run.
+
+To update these settings, select **Edit** on your integration, scroll to **Notification preferences**, and toggle the appropriate options.
 
 ![The "Create new import sync" page for Microsoft Fabric in the Braze dashboard, set to Step 3: "Set up notification preferences".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
 
