@@ -122,3 +122,11 @@ Deleting user profiles cannot be undone. It will permanently remove users which 
 {% endalert %}
 
 <br><br>
+## Removing or clearing individual attributes
+
+The **Delete Users** data type sync permanently removes entire user profiles and **cannot** be used to unset or clear single custom attributes on a profile. To remove or clear an individual attribute, you can:
+
+- Run a **standard attribute sync** in Cloud Data Ingestion, setting the attribute's value to `null` or an empty string in your payload.
+- Use the [User Track API](https://www.braze.com/docs/api/endpoints/users/post_track/) to send an attribute update with a `null` value for the field you want to clear.
+
+<br><br>

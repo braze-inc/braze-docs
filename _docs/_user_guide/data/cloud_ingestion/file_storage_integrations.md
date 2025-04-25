@@ -284,6 +284,7 @@ For examples of all supported file types, refer to the sample files in [braze-ex
 - There's no additional limit on the number of rows per file.
 - There's no additional limit on the number of files uploaded in a given period of time.
 - Ordering isn't supported within or between files—CDI does not guarantee row ordering. We recommend batching updates periodically if you're monitoring for race conditions.
+- PGP-encrypted files are not supported by Cloud Data Ingestion. To protect data at rest or in transit, use S3 SSE-S3 or SSE-KMS encryption and grant decrypt permissions to the Braze IAM role.
 
 ## Troubleshooting
 
