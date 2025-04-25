@@ -6,7 +6,6 @@ page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
 page_order: 2
-toc_headers: h2
 ---
 
 # Shopify custom integration setup
@@ -20,7 +19,7 @@ To integrate your Shopify headless store with Braze, you need to complete these 
 1. **Initialize and load the Braze Web SDK to enable onsite tracking**<br><br> Manually add code into your Shopify website to enable Braze onsite tracking. By implementing the Braze SDK on your Shopify headless store, you can track onsite activities, including sessions, anonymous user behavior, pre-checkout shopper actions, and any [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) or [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) you choose to include with your development team. You can also add any channels supported by the SDKs, such as in-app messages or Content Cards. 
 
 {: start="2"}
-2. **Connect your store to the Braze native integration**<br><br> After you connect your Shopify store to Braze, you'll gain access to customer, checkout, order, and product data through Shopify webhooks.
+2. **Install the Braze Shopify integration**<br><br> After you connect your Shopify store to Braze, you'll gain access to customer, checkout, order, and product data through Shopify webhooks.
 
 {% alert important %}
 Before starting your integration, confirm you have correctly set up the checkout subdomain for your Shopify storefront. For more information, refer to [Migrate from the online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate).<br><br> If this setup isn't done correctly, Braze can't process Shopify checkout webhooks. It also won't be possible to test the integration in a local development environment, because that relies on a shared domain between your storefront and the checkout page.
@@ -28,7 +27,9 @@ Before starting your integration, confirm you have correctly set up the checkout
 
 To complete these goals, follow these steps:
 
-## Step 1: Create a Braze website app {#step-1}
+## Initialize and load the Braze Web SDK
+
+### Step 1: Create a Braze website app {#step-1}
 
 In Braze, go to **Settings** > **App Settings** > and then select **Add App**. Name the app as "Shopify".
 
@@ -36,7 +37,7 @@ In Braze, go to **Settings** > **App Settings** > and then select **Add App**. N
 The shop must be named “Shopify” or the integration may not work properly.
 {% endalert %}
 
-## Step 2: Add subdomain and environmental variables {#step-2}
+### Step 2: Add subdomain and environmental variables {#step-2}
 
 1. Set up your Shopify subdomain to [redirect traffic from your online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic/).  
 2. Add a [callback URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) for login. (The URI will automatically be added when the domain is added.)
@@ -45,7 +46,7 @@ The shop must be named “Shopify” or the integration may not work properly.
     - `BRAZE_API_KEY` 
     - `BRAZE_API_URL`
 
-## Step 3: Enable onsite tracking
+### Step 3: Enable onsite tracking
 
 The first step is to initialize the Braze Web SDK. We recommend doing that by installing our NPM package:
 
@@ -132,7 +133,7 @@ export async function loader(args) {
 Content security policies (usually located in the `entry.server.jsx` Hydrogen file) can impact the functionality of Braze scripts both in local and production environments. We suggest testing through preview builds sent to Shopify through Oxygen or custom deployments. If you encounter issues, you’ll need to configure your CSP to allow our JavaScript to function.
 {% endalert %}
 
-## Step 4: Add a Shopify Account Login event 
+### Step 4: Add a Shopify Account Login event 
 
 Track when a shopper signs into their account and syncs their user information to Braze. This includes calling our `changeUser` method to identify customers with a Braze external ID. 
 
@@ -303,9 +304,9 @@ export async function loader(args) {
 }
 ```
 
-## Step 5: Add tracking for Product Viewed and Cart Updated events
+### Step 5: Add tracking for Product Viewed and Cart Updated events
 
-### Product Viewed events
+#### Product Viewed events
 
 1. Add this function to your `Tracking.jsx` file:
 
@@ -385,7 +386,7 @@ async function loadCriticalData({context, params, request}) {
 }
 ```
 
-### Cart Updated events
+#### Cart Updated events
 
 In addition to tracking the `cart_updated` event, you need to send the cart token value over to Braze. We use the cart token value to process order webhooks received from Shopify. This is done by creating a user alias with the Shopify cart token as its name. 
 
@@ -568,15 +569,15 @@ function CartLineUpdateButton({children, lines}) {
 }
 ```
 
-## Step 6: Install the Braze Shopify integration
+## Install the Braze Shopify integration
 
-### Step 6.1: Connect your Shopify store
+### Step 1: Connect your Shopify store
 
 Go to the Shopify partner page to start your setup. First, select **Begin Setup** to install the Braze application from the Shopify App Store. Follow the guided steps to complete the installation process.
 
 ![Shopify integration setup page on the Braze dashboard.][2]
 
-### Step 6.2: Enable Braze SDKs 
+### Step 2: Enable Braze SDKs 
 
 For Shopify Hydrogen or headless stores, select the **Custom setup** option. 
 
@@ -584,13 +585,13 @@ Before continuing with the onboarding process, confirm that you've enabled the B
 
 ![Setup step to enable Braze SDKs.][3]
 
-### Step 6.3: Track Shopify data 
+### Step 3: Track Shopify data 
 
 Enhance your integration by adding more Shopify events and attributes, which will be powered by Shopify webhooks. For detailed information on the data tracked through this integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/). 
 
 ![Setup step to track Shopify data.][4]
 
-### Step 6.4: Historical backfill (optional)
+### Step 4: Historical backfill (optional)
 
 Through the custom setup, you have the option to load your Shopify customers and orders from the past 90 days before connecting your Shopify integration. To include this initial data load, check the box for the initial data load option.
 
@@ -605,7 +606,7 @@ This table contains the data that will be initially loaded through the backfill.
 | {::nomarkdown}<ul><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-### Step 6.5: Custom data tracking setup (advanced) 
+### Step 5: Custom data tracking setup (advanced) 
 
 With the Braze SDKs, you can track custom events or custom attributes that go beyond supported data for this integration. Custom events capture unique interactions in your store, such as:
 
@@ -644,9 +645,35 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
 
 The SDK must be initialized (listening for activity) on a user’s device to log events or custom attributes. To learn more about logging custom data, refer to [User object](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) and [logCustomEvent](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-### Step 6.6: Configure how you manage users (optional)
+### Step 6: Configure how you manage users (optional)
 
-First, select your `external_id` from the dropdown. 
+#### Step 6.1: Create a custom `external_id`
+
+First, go to Shopify create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
+
+After creating the metafield, listen to [`customer/create` webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) so that you can write the metafield when a new customer is created. Then, use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to backfill all of your previously created customers with this metafield.
+
+#### Step 6.2: Create an endpoint
+
+You need a public GET endpoint to retrieve your external ID. If Shopify can't provide the metafield, Braze will call that endpoint to retrieve the external ID.
+
+An example endpoint is: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+
+##### Response
+
+Braze expects a 200 status code. Any other code is considered an endpoint failure. The response should be:
+
+{% raw %}
+```json
+{ "external_id": "my_external_id" }
+```
+{% endraw %}
+
+Vaidate the `shopify_customer_id` and email address by using the Admin API or Customer API to confirm that the parameter values match the customer values in Shopify. After validating, you could also use the APIs to retrieve the `braze.external_id` metafield and return the external ID value.
+
+#### Step 6.3: Select your `external_id` 
+
+Back in the Braze dashboard, select your custom `external_id` from the dropdown.
 
 ![“Collect subscribers” section.][6]
 
@@ -669,13 +696,13 @@ As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you w
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
 {% endalert %}
 
-### Step 6.7: Sync products (optional)
+### Step 7: Sync products (optional)
 
 You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/shopify_catalogs/).
 
 ![Setup step to sync product data to Braze.][7]
 
-### Step 6.8: Activate channels
+### Step 8: Activate channels
 
 To activate in-app messages, Content Cards, and Feature Flags using the Shopify direct integration, add each channel to your SDK. Follow the documentation links provided for each channel below:
 
@@ -683,13 +710,13 @@ To activate in-app messages, Content Cards, and Feature Flags using the Shopify 
 - **Content Cards:** For enabling Content Cards for inbox or website banner use cases, refer to [Content Cards]({{site.baseurl}}/developer_guide/content_cards/).
 - **Feature flags:** For enabling Feature Flags for site experimentation use cases, refer to [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/).
 
-### Step 6.9: Finish setup
+### Step 9: Finish setup
 
 After you've gone through all the steps, select **Finish Setup** to return to the partner page. Then, enable the Braze app embed in your Shopify admin page as indicated by the banner that displays.
 
 ![Banner that says to activate the Braze app embed in Shopify so that you can finish setting up your integration.][8]
 
-### Example code
+#### Example code
 
 [shopify-hydrogen-example](https://github.com/braze-inc/shopify-hydrogen-example/) is an example Hydrogen app that contains all the code covered in the prior steps. 
 
