@@ -14,30 +14,29 @@ description: "This article provides steps on how to use locales in your in-app m
 
 ## Using locales
 
-To use locales in your messaging, compose an in-app message campaign or Canvas. Select either the drag-and-drop editor or the HTML editor, then follow the steps based on your editor.
+To use locales in your messaging, compose an in-app message campaign or Canvas. Select either the drag-and-drop editor or the traditional editor, then follow the steps based on your editor.
 
 {% tabs %}
-{% tab HTML editor %}
+{% tab traditional editor %}
 
-1. Select the **Custom Code** message type and add text. 
-2. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated. 
-3. Add an ID tag to each translation tag. An example is: {% raw %}`{% translation id_1 %}`{% endraw %}
+1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated. 
+2. Add an ID tag to each translation tag. An example is: {% raw %}`{% translation id_1 %}`{% endraw %}
 
-![HTML editor with a translation ID.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
+![Traditional editor with translation IDs.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
 
-{: start="4"}
-4. After adding the tags, save your message as a draft.
-5. Select **Manage languages** and add your locales for the message using the dropdown.
+{: start="3"}
+3. After adding the tags, save your message as a draft.
+4. Select **Manage languages** and add your locales for the message using the dropdown.
 
 !["Manage languages" modal with one selected locale.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
 
-{: start="6"}
-6. Select **Download template** to download the translation template as a CSV file. Then, fill in the translations in the CSV file.
+{: start="5"}
+5. Select **Download template** to download the translation template as a CSV file. Then, fill in the translations in the CSV file.
 
 ![An example of a translation CSV file.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
-{: start="7"}
-7. Select **Upload translations** to upload the CSV file with the completed translations.
+{: start="6"}
+6. Select **Upload translations** to upload the CSV file with the completed translations.
 
 {% endtab %}
 {% tab Drag-and-drop editor %}
