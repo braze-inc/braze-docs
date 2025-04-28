@@ -1,7 +1,5 @@
 ---
-nav_title: 설명서 피드백
-permalink: /feedback/
-hide_toc: true
+내비게이션 제목 설명서 피드백 퍼머링크: /feedback/ 숨기기\_toc: true
 ---
 
 <fieldset style="margin-top: 60px;">
