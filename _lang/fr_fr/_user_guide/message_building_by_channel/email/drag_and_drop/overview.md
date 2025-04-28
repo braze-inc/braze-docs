@@ -87,10 +87,6 @@ Pour utiliser un modèle HTML personnalisé existant ou des modèles créés par
 
 Vous pouvez également accéder à tous les modèles depuis la section **Modèles**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les modèles se trouvent sous **Modèles et médias.**
-{% endalert %}
-
 Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail sous **Variantes d'e-mails** qui inclut les informations d'envoi et le corps de l'e-mail. 
 
 Ensuite, sélectionnez **Modifier le corps de l'e-mail** pour commencer à concevoir la structure de l'e-mail dans l'éditeur par glisser-déposer. 
@@ -238,7 +234,7 @@ Lors de la rédaction de votre message, vous pouvez basculer la direction du tex
 
 ![Menu de l'éditeur glisser-déposer de l'e-mail avec bouton permettant de basculer l'alignement du texte entre la droite et la gauche et la gauche et la droite.][1]{: style="max-width:50%;"}
 
-L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)
+L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)
 
 ### Ajouter des attributs HTML aux liens
 
@@ -256,7 +252,7 @@ Un autre cas d’utilisation courant consiste à marquer des liens spécifiques 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (un [sub-chemin personnalisé](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) doit être configuré)
 
-Pour configurer des liens universels, consultez [Liens universels et liens d'application]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Pour configurer des liens universels, consultez [Liens universels et liens d'application]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 Vous pouvez également vous intégrer à l'un de nos partenaires d'attribution, tels que [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) ou [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), pour gérer les liens universels.
 
