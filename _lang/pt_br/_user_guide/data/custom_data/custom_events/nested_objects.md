@@ -10,7 +10,7 @@ description: "Este artigo descreve como enviar dados JSON aninhados como proprie
 
 > Esta página aborda como enviar dados JSON aninhados como propriedades de eventos personalizados e compras, e como usar esses objetos aninhados em seu envio de mensagens.
 
-Você pode usar objetos aninhados—objetos que estão dentro de outro objeto—para enviar dados JSON aninhados como propriedades de eventos personalizados e compras. Esses dados aninhados podem ser usados para modelar informações personalizadas em mensagens, acionar envios de mensagens e segmentar usuários.
+Você pode usar objetos aninhados—objetos que estão dentro de outro objeto—para enviar dados JSON aninhados como propriedades de eventos personalizados e compras. Esses dados aninhados podem ser usados para modelar informações personalizadas em mensagens, disparar envios de mensagens e segmentar usuários.
 
 ## Limitações
 
@@ -39,7 +39,7 @@ Se novas propriedades forem enviadas no futuro, elas não estarão no esquema at
 
 ## Etapa 2: Use o objeto aninhado
 
-Depois de gerar um esquema, você pode referenciar os dados aninhados durante a segmentação e personalização. Consulte as seguintes seções para exemplos de uso:
+Você pode referenciar os dados aninhados durante a segmentação e personalização. Observe que um esquema não é necessário. Consulte as seguintes seções para exemplos de uso:
 
 - [Corpo da solicitação da API](#api-request-body)
 - [Modelos do Liquid](#liquid-templating)
