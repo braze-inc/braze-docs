@@ -92,7 +92,7 @@ Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encab
  
 ## Actualizar un cliente potencial en Salesforce Sales Cloud {#updating-lead}
 
-Para configurar un webhook Braze Salesforce Sales Cloud que actualice los clientes potenciales en Salesforce, necesitas un identificador común entre Salesforce Sales Cloud y Braze. El ejemplo siguiente utiliza el `lead_id` de Salesforce como el `external_id` de Braze, pero también puedes conseguirlo utilizando un `user_alias`. Para más detalles, consulta [Datos B2B](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+Para configurar un webhook Braze Salesforce Sales Cloud que actualice los clientes potenciales en Salesforce, necesitas un identificador común entre Salesforce Sales Cloud y Braze. El ejemplo siguiente utiliza el `lead_id` de Salesforce como el `external_id` de Braze, pero también puedes conseguirlo utilizando un `user_alias`. Para más detalles, consulta [Datos B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
 
 Este ejemplo muestra específicamente cómo actualizar la etapa de un cliente potencial a "MQL" (cliente potencial cualificado para marketing) después de que un cliente potencial supere un determinado umbral de clientes potenciales. Se trata de una parte esencial de nuestro caso de uso [de flujo de trabajo de puntuación de clientes potenciales B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/).
 
@@ -158,7 +158,7 @@ Para crear un cliente potencial en Salesforce cuando un usuario proporcione su d
 
 ### Lead scoring Canvas para superar el umbral de Lead Cualificado en Marketing (MQL) {#lead-scoring}
 
-Este webhook se trata en el caso de uso de la puntuación de [clientes potenciales]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff), pero también puedes comprobar los MQL y actualizar directamente Salesforce dentro del Canvas de puntuación de clientes potenciales (en lugar de crear una campaña de webhook independiente): 
+Este webhook se trata en el caso de uso de la puntuación de [clientes potenciales]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff), pero también puedes comprobar los MQL y actualizar directamente Salesforce dentro del Canvas de puntuación de clientes potenciales (en lugar de crear una campaña de webhook independiente): 
 
 Añade un paso posterior a tu actualización de usuarios para comprobar si un usuario ha superado el umbral MQL que hayas definido. Si se han cruzado, actualiza el estado del usuario a "MQL", y luego actualiza Salesforce con el mismo estado "MQL" utilizando esta plantilla webhook. Salesforce se encarga del resto, enrutando este cliente potencial a los equipos de ventas adecuados mediante las reglas de enrutamiento de clientes potenciales que hayas definido.  
 
