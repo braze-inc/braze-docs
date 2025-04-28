@@ -24,14 +24,9 @@ Não tem certeza se sua mensagem deve ser enviada com uma campanha ou um canva? 
 {% tab Campanha %}
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecione **Cartões de Conteúdo** ou, para campanhas de direcionamento em múltiplos canais, selecione **Multicanal**.
-3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+2. Selecione **Cartões de Conteúdo** ou, para campanhas de direcionamento em múltiplos canais, selecione **Multicanal**.
+3. Dê à sua campanha um nome claro e significativo.
+4. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Construtor de Relatórios]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar pelos tags relevantes.
 5. Adicione e nomeie quantas variantes desejar para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para mais informações sobre variantes, consulte [multivariante e Testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -83,7 +78,7 @@ Selecione **Adicionar Idiomas** para adicionar os idiomas desejados da lista for
 
 ##### Criação de mensagens da direita para a esquerda
 
-A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Título e mensagem
 
@@ -158,7 +153,7 @@ Em seguida, [usuários-alvo]({{site.baseurl}}/user_guide/engagement_tools/campai
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 {% endtab %}
 
@@ -213,7 +208,7 @@ Dentro de uma campanha ou mensagem de canva, você pode opcionalmente adicionar 
 
 ### Atualização de cartões lançados
 
-Os cartões de conteúdo não podem ser editados após serem enviados. Se você perceber que precisa fazer alterações em cartões que já foram enviados, considere usar [reelegibilidade da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) conforme mostrado nas opções a seguir.
+Os cartões de conteúdo não podem ser editados após serem enviados. Se você perceber que precisa fazer alterações em cartões que já foram enviados, considere usar [reelegibilidade da campanha]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) conforme mostrado nas opções a seguir.
 
 {% alert note %}
 Quando um cartão de conteúdo se torna reelegível, ele pode ser enviado novamente quando o cartão original ainda estiver no app do usuário. Para evitar cartões duplicados no app de um usuário, é possível desativar a reelegibilidade ou estender a janela de reelegibilidade para que os usuários não recebam um novo cartão até que o original tenha expirado.
