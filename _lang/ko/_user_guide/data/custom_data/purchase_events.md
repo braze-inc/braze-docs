@@ -19,13 +19,13 @@ search_rank: 3
 
 다음은 구매를 기록하는 데 사용되는 다양한 플랫폼의 방법을 나열한 것입니다. 이 페이지에서는 구매 이벤트에 속성 및 수량을 추가하는 방법에 대한 설명서도 확인할 수 있습니다. 이러한 속성을 기반으로 사용자를 추가로 타겟팅할 수 있습니다.
 
-- [Android 및 FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
 
 ## 구매 데이터 보기
 
@@ -175,7 +175,7 @@ Braze에는 사용자의 LTV를 이해하기 위해 참조할 수 있는 두 가
 
 구매 이벤트 속성정보를 사용하면 트리거 조건에 대한 추가 자격을 부여하고, 메시징의 개인화를 강화하며, 원시 데이터 내보내기를 통해 보다 정교한 분석을 생성하는 데 사용할 수 있는 구매에 대한 속성을 설정할 수 있습니다. 속성정보 값 유형(문자열, 숫자, 부울, 날짜)은 플랫폼마다 다르며 키-값 페어로 할당되는 경우가 많습니다.
 
-예를 들어, 전자상거래 애플리케이션이 있고 구매 후 사용자에게 메시지를 보내려는 경우, 구매 이벤트 속성을 `brand_name` 으로 추가하여 타겟 오디언스를 개선하고 캠페인 개인화를 강화할 수 있습니다.
+For example, if you have an eCommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
 **구매 이벤트 속성을 기반으로 트리거하는 예시입니다:**
 

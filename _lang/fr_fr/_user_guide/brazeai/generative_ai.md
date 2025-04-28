@@ -22,7 +22,7 @@ guide_featured_list:
   link: /docs/user_guide/brazeai/generative_ai/ai_liquid/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Générateur de requêtes SQL
-  link: /docs/user_guide/data_and_analytics/query_builder/
+  link: /docs/user_guide/analytics/query_builder/
   image: /assets/img/braze_icons/tool-01.svg
 - name: Segments SQL
   link: /docs/sql_segments/

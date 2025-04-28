@@ -6,13 +6,13 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Endpunkt Katalog löschen von Braze."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Katalog löschen Braze."
 
 ---
 {% api %}
 # Katalog löschen
 {% apimethod delete %}
-/catalogs/{catalog_name}
+/Kataloge/{Katalog_name}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um einen Katalog zu löschen.
@@ -23,13 +23,13 @@ description: "Dieser Artikel enthält Details zum Endpunkt Katalog löschen von 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.delete`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `catalog_name` | Erforderlich | String | Name des Katalogs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -44,11 +44,11 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Antwort
 
-Es gibt zwei Statuscode-Antworten für diesen Endpunkt: `200` und `404`.
+Für diesen Endpunkt gibt es zwei Status Code Antworten: `200` und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `200` könnte den folgenden Antwortkörper zurückgeben:
+Der Status Code `200` könnte den folgenden Antwortkörper zurückgeben:
 
 ```json
 {
@@ -58,7 +58,7 @@ Der Statuscode `200` könnte den folgenden Antwortkörper zurückgeben:
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `404` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `404` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {

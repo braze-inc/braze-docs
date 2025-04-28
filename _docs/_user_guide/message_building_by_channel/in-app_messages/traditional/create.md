@@ -204,7 +204,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 
 ##### Creating right-to-left messages
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### Button text {#buttons}
 
@@ -267,7 +267,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 
 | Formatting | Input | Description |
 |---|---|---|
-|Color Profile | Apply from in-app message templates gallery. | Click **Apply Template** and select from the gallery. Then, click **Save**. |
+|[Color Profile]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Apply from in-app message templates gallery. | Select **Apply Template** and choose from the gallery. Then, select **Save**. |
 |Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
 |Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
 |Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
@@ -318,7 +318,7 @@ In-app message delivery is entirely based on the following action triggers:
 
 A start date and time must be selected; however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Online versus offline triggering
 
@@ -344,7 +344,7 @@ The high, medium, and low options for triggered message priorities are buckets, 
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 {% alert note %} 
 If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.
@@ -368,7 +368,7 @@ Do not use this option for messages that can be triggered while a user is offlin
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 {% endtab %}
 {% tab Canvas %}

@@ -12,7 +12,7 @@ description: "This landing page is home to articles on user data collection. Her
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: SDK Data Collection
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: User Profile Lifecycle
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: Anonymous Users
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: User Language Codes
     link: /docs/user_guide/data/user_data_collection/language_codes/

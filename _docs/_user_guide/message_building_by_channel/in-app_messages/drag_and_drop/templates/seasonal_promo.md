@@ -26,7 +26,7 @@ When creating a drag-and-drop in-app message, select **Seasonal promotion with b
 
 ### Step 3: Customize your button component
 
-To get started building your seasonal promotion, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specifc page in your app (such as the product you're promoting).
+To get started building your seasonal promotion, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specific page in your app (such as the product you're promoting).
 
 ![The in-app message editor with a side menu for customizing the button element.][img2]
 

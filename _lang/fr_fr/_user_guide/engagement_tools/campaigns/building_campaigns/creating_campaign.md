@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/braze_icons/channel-email.svg
 - name: Campagne de messages in-app
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/
   image: /assets/img/braze_icons/channel-in-app-messages.svg
 - name: Campagne de notification push
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/

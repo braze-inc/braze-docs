@@ -62,7 +62,7 @@ tool:
 ### 평생 세션
 
 *평생 세션은* 통합 이후 Braze가 기록한 총 세션 수입니다. 간단히 말해, 세션은 사용자가 앱을 사용하거나 웹사이트를 방문할 때마다 발생합니다. 플랫폼별로 세션이 정의되는 방식에 대한 보다 정확한 정의는 해당 플랫폼의
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android 및 FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/) 또는 [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) 세션 추적 개발자 문서.
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) session tracking developer articles.
 
 ### 월간 활성 사용자
 

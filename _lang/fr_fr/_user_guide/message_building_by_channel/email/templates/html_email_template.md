@@ -12,7 +12,7 @@ channel:
 
 # Téléchargement d’un modèle d’e-mail HTML
 
-> Le tableau de bord de Braze vous permet de télécharger vos propres modèles d’e-mail HTML et de les enregistrer pour une utilisation ultérieure dans vos campagnes. Vous pouvez également [créer un modèle d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) à l'aide de notre éditeur.
+> Le tableau de bord de Braze vous permet de télécharger vos propres modèles d’e-mail HTML et de les enregistrer pour une utilisation ultérieure dans vos campagnes. Vous pouvez également [créer un modèle d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) à l'aide de notre éditeur.
 
 ## Conditions préalables {#upload-requirements}
 
@@ -72,7 +72,7 @@ Pour utiliser votre e-mail dans une campagne API, vous avez besoin de `email_tem
 
 ## Gestion des modèles d’e-mail
 
-Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) modèles d'e-mail ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles d'e-mail ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ## Foire aux questions
 

@@ -14,10 +14,6 @@ page_order: 2
 
 **Audience** > **Subscriptions** > **E メールユーザー設定センター** に移動して、ユーザー設定センターを作成します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**Users**> **Subscription Groups**> **Email Preference Center** に移動します。
-{% endalert %}
-
 ここには、カスタムユーザー設定センターが一覧表示されます。**Create New**を選択して新しいユーザー設定センターを作成するか、既存の名前を選択して変更します。
 
 ![名前、説明、タイプ、ステータス、最終編集日、および作成者が含まれるカスタムユーザー設定センターのリスト。][1]

@@ -28,7 +28,7 @@ search_tag: Partner
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
 {% endalert %} 
 
 ## ユースケース

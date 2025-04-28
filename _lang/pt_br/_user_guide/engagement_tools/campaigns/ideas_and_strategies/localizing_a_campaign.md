@@ -49,7 +49,7 @@ Na abordagem "um modelo para todos", a localização é aplicada a um único mod
 A abordagem "um modelo por país" separa a modelagem em diferentes locais de envio. Após o envio, o dashboard relata a análise de dados com base em cada país separadamente, e quaisquer eventos de nível de usuário [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) downstream também estarão vinculados a uma campanha específica.
 
 - Os modelos se beneficiam da implementação de [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) para fins de manutenção e rastreamento.
-- As campanhas podem herdar as configurações do mesmo [Braze modelo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) e [Blocos de Conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (como [modelos de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) que contêm Liquid).
+- As campanhas podem herdar as configurações do mesmo [Braze modelo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) e [Blocos de Conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (como [modelos de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) que contêm Liquid).
 - Campanhas e modelos pré-existentes podem ser [duplicados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) para permitir um tempo mais rápido para obter valor.
 
 | Vantagens | Considerações |
@@ -77,7 +77,7 @@ Depois que um canva é enviado, o dashboard fornece [análise de dados do canva]
 {% endtab %}
 {% tab Uma jornada por país %}
 
-Na abordagem "uma jornada por país", o [canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder oferece a flexibilidade de criar jornadas de usuário através de múltiplos [componentes de canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). Esses componentes podem ser [duplicados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) no nível do componente e da jornada geral.
+Na abordagem "uma jornada por país", o [canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder oferece a flexibilidade de criar jornadas de usuário através de múltiplos [componentes de canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). Esses componentes podem ser [duplicados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) no nível do componente e da jornada geral.
 
 A localização pode ser alcançada através dos seguintes métodos:
 - Separe canvas por país, isso garante que as jornadas complexas do usuário sejam definidas no topo do funil usando filtros de público

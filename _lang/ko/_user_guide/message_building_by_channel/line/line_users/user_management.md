@@ -13,7 +13,7 @@ alias: /line/user_management/
 
 > LINE 사용자 ID는 `native_line_id` 라는 사용자 프로필 속성에 저장되며, 이 속성은 LINE 채널에서 사용자에게 메시지를 보낼 때 사용됩니다. 이 문서에서는 `native_line_id` 속성을 설정하고 찾는 방법에 대해 설명합니다.
 
-고객 사용자 데이터는 [Braze 사용자 프로필에]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) 표시됩니다. 사용자 프로필에는 이름, 이메일 주소 등 회사 사용자에 대한 정보와 속성이 저장됩니다. 
+고객 사용자 데이터는 [Braze 사용자 프로필에]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) 표시됩니다. 사용자 프로필에는 이름, 이메일 주소 등 회사 사용자에 대한 정보와 속성이 저장됩니다. 
 
 Braze를 통해 LINE 메시지를 보낼 때, Braze는 `native_line_id` 속성을 사용하여 메시지를 보낼 사용자를 식별합니다. 사용자가 채널을 팔로우하거나 메시지에 답장하는 등 LINE에서 Braze 웹훅 이벤트를 전송할 때, `native_line_id` 을 사용하여 해당 사용자 프로필을 조회합니다.
 

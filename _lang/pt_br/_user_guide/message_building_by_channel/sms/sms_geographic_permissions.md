@@ -50,7 +50,7 @@ Limite os países em sua lista de permissões apenas àqueles necessários para 
 
 ## Visibilidade de envios bloqueados
 
-As tentativas de envio para países que não estão em sua lista de permissões serão abortadas. As mensagens abortadas serão registradas no [Evento de engajamento de mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) e no [evento de engajamento com mensagem de aborto de SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+As tentativas de envio para países que não estão em sua lista de permissões serão abortadas. As mensagens abortadas serão registradas no [Evento de engajamento de mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) e no [evento de engajamento com mensagem de aborto de SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 As mensagens abortadas causadas por envios bloqueados serão exibidas como `Abort_Type = "blocked_recipient_country"` com o registro de aborto detalhando o país bloqueado.
 

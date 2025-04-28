@@ -1,4 +1,4 @@
-You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/).
+You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
 
 {% details Show template %}
 {% raw %}

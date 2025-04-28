@@ -49,6 +49,6 @@ We currently do not support the display of custom HTML in-app messages in an iFr
 {% endsubtabs %}
 
 {% alert tip %}
-You can also define custom in-app message views for your app. For a full walkthrough, see [Custom view factory]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in_app_messages/customization/custom_listeners/#custom-view-factory).
+You can also define custom in-app message views for your app. For a full walkthrough, see [Setting custom factories]({{site.baseurl}}/developer_guide/in_app_messages/customization#android_setting-custom-factories).
 {% endalert %}
 {% endtab %}

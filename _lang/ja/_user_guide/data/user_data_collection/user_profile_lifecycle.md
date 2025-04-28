@@ -15,19 +15,21 @@ description: "このリファレンス記事では、Braze のユーザープロ
 
 これらのパラメーターには以下のものが含まれます。
 
-* `braze_id`
+* `braze_id` (担当：Braze）
 * `external_id`
+* `email`
+* `phone`
 * 設定した任意の数のカスタムユーザーエイリアス
 
 ## 匿名ユーザープロファイル
 
-`external_id` が指定されていないユーザーは匿名ユーザーと呼ばれます。例えば、Webサイトを訪問したがサインアップしなかったユーザーや、モバイルアプリをダウンロードしたがプロファイルを作成しなかったユーザーなどである。
+指定された`external_id` のないユーザーは[匿名ユーザーと]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/)呼ばれる。例えば、Webサイトを訪問したがサインアップしなかったユーザーや、モバイルアプリをダウンロードしたがプロファイルを作成しなかったユーザーなどである。
 
 最初に、SDK によりユーザーが認識されると、匿名ユーザープロファイルが作成され、Braze によって自動的に割り当てられた一意の識別子 `braze_id` が関連付けられます。この識別子は編集できず、デバイスに固有です。この識別子を使用して、[API]({{site.baseurl}}/api/endpoints/user_data/) を介してそのユーザープロファイルを更新できます。
 
 ## 識別されたユーザープロファイル
 
-ユーザー ID またはメールアドレスを入力することにより、アプリでユーザーが認識されたら、`changeUser` メソッドを使用してそのユーザープロファイルに `external_id` を割り当てることをお勧めします ([Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)、[iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69)、[Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-))。`external_id` により、複数のデバイスで同じユーザープロファイルを識別できます。 
+ユーザー ID またはメールアドレスを入力することにより、アプリでユーザーが認識されたら、`changeUser` メソッドを使用してそのユーザープロファイルに `external_id` を割り当てることをお勧めします ([Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)、[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:))、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html))。`external_id` により、複数のデバイスで同じユーザープロファイルを識別できます。
 
 `external_id` を使用すると、さらに次のような利点があります。 
 
@@ -36,11 +38,20 @@ description: "このリファレンス記事では、Braze のユーザープロ
 - [ユーザーデータエンドポイント]({{site.baseurl}}/api/endpoints/user_data/)を使用して、アプリ外のソースからユーザーデータをインポートできるようになり、また[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging/)を使用して、トランザクションメッセージのターゲットユーザーを設定できるようになります。
 - セグメンター内で「テスト」[フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を使用するか、または [[**ユーザー検索**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)] ページを使用して、個々のユーザーを検索できます。
 
+### 外部IDに関する考察
+
 {% alert warning %}
 ユーザープロファイルを一意に識別する前に、`external_id` を割り当てないこと。ユーザーを識別した後、匿名ユーザーに戻すことはできません。
 <br><br>
 さらに、`external_id` は、ユーザープロファイルに設定した後に変更することができません。あるユーザーのセッション中に異なる `external_id` を設定しようとすると、新規のユーザープロファイルが作成され、新しい `external_id` が関連付けられます。2 つのプロファイル間でデータは渡されません。
 {% endalert %} 
+
+#### メールやハッシュ化されたメールを外部IDとして使用するリスク
+
+メールアドレスまたはハッシュ化されたメールアドレスをBraze外部IDとして使用すると、データソース全体のID管理を簡素化できますが、ユーザープライバシーとデータセキュリティに対する潜在的なリスクを考慮することが重要です。
+
+- **推測可能な情報:**メールアドレスは推測されやすく、攻撃されやすい。
+- **悪用のリスク:**悪意のあるユーザーがWebブラウザーを改ざんし、他人のメールアドレスを外部IDとして送信した場合、機密メッセージやアカウント情報にアクセスされる可能性がある。
 
 ### 匿名ユーザーを識別するとどうなるか
 

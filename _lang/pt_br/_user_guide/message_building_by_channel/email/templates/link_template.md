@@ -90,11 +90,11 @@ Para acessar a guia **Gerenciamento de Links** no editor de e-mail HTML atualiza
 Os modelos de link não são aplicados a texto simples. Isso significa que o Currents pode mostrar cliques que não incluem os parâmetros dos modelos de link, pois esses cliques podem vir da versão de texto simples do e-mail.
 {% endalert %}
 
-À medida que você adiciona modelos de link na guia **Gerenciamento de Links**, role para a direita para ver os modelos que você adicionou.
+À medida que você adiciona modelos de link na guia **Gerenciamento de Links**, role para a direita para ver os modelos que você adicionou. Se os links existentes em um e-mail já tiverem um modelo de link adicionado, os links recém-adicionados também terão o modelo de link adicionado por padrão.
 
 ## Gerenciamento de modelos de links
 
-Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) modelos de link. Saiba mais sobre como criar e gerenciar modelos e conteúdos criativos em [modelos e mídias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos de link. Saiba mais sobre como criar e gerenciar modelos e conteúdos criativos em [modelos e mídias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 O recurso de arquivar modelos não está disponível atualmente para modelos de link.

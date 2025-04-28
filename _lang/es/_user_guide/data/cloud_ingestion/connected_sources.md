@@ -76,7 +76,7 @@ Puede haber de dos a cinco minutos de tiempo de calentamiento cuando Braze se co
 
 {% tab Microsoft Fabric %}
 1. Crea un principal de servicio y permite el acceso al espacio de trabajo de Fabric que se utilizará para tu integración.   
-2. En tu espacio de trabajo de Fabric, configura los datos de origen y concede permisos a tu director de servicio 
+2. En tu espacio de trabajo de Fabric, configura los datos de origen y concede permisos al director de tu servicio 
 3. Crea una nueva fuente conectada en el panel de Braze.
 4. Pruebe la integración.
 5. Utilice la fuente conectada para crear uno o más segmentos CDI.

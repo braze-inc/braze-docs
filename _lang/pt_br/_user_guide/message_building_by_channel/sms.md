@@ -29,7 +29,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
 - name: "Criar um envio de mensagens SMS"
-  link: /docs/user_guide/message_building_by_channel/sms/create/
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
   image: /assets/img/braze_icons/table.svg
 - name: "Encurtamento de link"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/

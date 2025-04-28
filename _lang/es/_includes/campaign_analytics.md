@@ -305,8 +305,20 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Rebote suave</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Aplazamiento</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Aplazamientos
+
+Diferido o aplazamiento es cuando un correo electrónico no se entregó inmediatamente, pero Braze volverá a intentar el correo electrónico durante un máximo de 72 horas después de este fallo de entrega temporal para maximizar las posibilidades de éxito en la entrega antes de que se detengan los intentos para esa campaña específica. Las razones típicas de los aplazamientos incluyen la limitación de la tasa de volumen de correo electrónico basada en la reputación por parte del proveedor de correo electrónico de entrada, problemas temporales de conectividad o errores de DNS.
+
+_Los aplazamientos_ difieren de _los rebotes blandos_. Si no se entregó correctamente ningún correo electrónico durante este periodo de reintento, Braze enviará un evento de rebote blando por cada intento de envío de campaña. Antes del 25 de febrero de 2025, estos reintentos se contabilizaban como múltiples rebotes blandos para 1 envío de campaña.
+
+Ten en cuenta que actualmente _los Aplazamientos_ sólo están disponibles utilizando las características Currents o Braze Snowflake (como Generador de consultas, Segmento SQL, Compartir datos Snowflake). Si quieres incluirlo en los análisis de campaña o de Canvas, [envía tus comentarios sobre el producto]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Estimación de la tarifa abierta real {#estimated-real-open-rate}
 

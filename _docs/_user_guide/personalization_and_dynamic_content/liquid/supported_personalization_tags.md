@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Summary of supported tags
 
-As a convenience, a summary of supported personalization tags are provided. For more detail on each kind of tag and best practices, continue reading.
+As a convenience, a summary of supported personalization tags are provided. For more detail on each type of tag and best practices, continue reading.
 
 {% raw %}
 
@@ -36,11 +36,11 @@ As a convenience, a summary of supported personalization tags are provided. For 
 
 {% endraw %}
 
-Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+### Supported attributes
 
-{% alert important %}
 Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns).
-{% endalert %}
+
+Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 ### Canvas and campaign tag differences 
 
@@ -160,9 +160,9 @@ In this use case, a user with a blank or null first name will get the message "T
 
 ## Variable tags
 
-You can use the `assign` tag to create a variable in the message composer. After you create a variable, you can reference that variable in your messaging logic or message.
+You can use the `assign` tag to create a variable in the message composer. We recommend using a unique name for your variable. If you create a variable with a similar name to the supported personalization tags (such as `language`), this may affect your messaging logic.
 
-This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more in Shopify's documentation on [variable tags][31].
+After you create a variable, you can reference that variable in your messaging logic or message. This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more in Shopify's documentation on [variable tags][31].
 
 {% alert tip %}
 Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.

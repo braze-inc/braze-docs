@@ -21,17 +21,17 @@ platform:
 ### Step 1: Create a custom UI 
 
 {% tabs local %}
-{% tab Android %}
+{% tab android %}
 
 First, create your own custom fragment. The default [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) is only designed to handle our default Content Card types, but is a good starting point.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 First, create your own custom view controller component. The default [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) is only designed to handle our default Content Card types, but is a good starting point.
 
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 First, create your custom HTML component that will be used to render the cards. 
 
@@ -103,7 +103,7 @@ Key-value pairs for a new subscriber coupon:
 
 {% details Additional information for Android %}
 
-In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) method, you can filter and identify these class types.
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) method, you can filter and identify these class types.
 
 {% tabs local %}
 {% tab Kotlin %}

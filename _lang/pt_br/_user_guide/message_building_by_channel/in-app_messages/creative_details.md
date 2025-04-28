@@ -91,10 +91,10 @@ Em geral, a Braze recomenda o uso de imagens que caibam em uma tela 16:10.
 
 ### GIFs e vídeos
 
-Atualmente, a Braze suporta GIFs para mensagens pela internet (inclusive), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) e iOS (inclusive) no app, uma vez que a capacitação foi ativada durante a integração da plataforma desejada. Para saber mais sobre vídeos em mensagens no app, consulte nossa [documentação de personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Atualmente, a Braze suporta GIFs para mensagens pela internet (inclusive), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/) e iOS (inclusive) no app, uma vez que a capacitação foi ativada durante a integração da plataforma desejada. Para saber mais sobre vídeos em mensagens no app, consulte nossa [documentação de personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Considerações adicionais
 
-As mensagens no app da Braze têm especificações criativas globais e individuais. Para saber mais sobre como personalizar totalmente as mensagens no app, acesse nossa página [Personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+As mensagens no app da Braze têm especificações criativas globais e individuais. Para saber mais sobre como personalizar totalmente as mensagens no app, acesse nossa página [Personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 <br>

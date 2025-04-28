@@ -81,7 +81,7 @@ Swift プロジェクトでの Objective-C コードの使用方法について�
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**注**:Braze の `sharedInstance` シングルトンは、Braze 機能を使用するための前提条件であるため、`startWithApiKey:` が呼び出される前に nil になります。
+**注**:Brazeの`sharedInstance` シングルトンは、`startWithApiKey:` が呼び出される前にnilになる。これは、Brazeの機能を使用するための前提条件だからである。
 
 {% endtab %}
 {% endtabs %}

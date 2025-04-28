@@ -29,7 +29,7 @@ Occasionally, we'll make non-breaking changes to Braze Currents schemas. Non-bre
 We typically give a two-week notice for these changes, but sometimes this isn't possible. Its essential that you design your integration to handle unrecognized fields or event types, otherwise it will likely lead to data loss.
 
 {% alert tip %}
-For the full list of Currents event schemas, [Message Engagement Events](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+For the full list of Currents event schemas, [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
 {% endalert %}
 
 ## Batching and serialization
@@ -51,7 +51,7 @@ There will be a top-level JSON object with the key `"events"` that maps to an ar
 
 The following examples show payloads for individual events, meaning the payloads would belong to a larger array of JSON objects, where each JSON object represents a single event in the batch.
 
-Additionally, their structure varies slightly from the flat structure found in [Message Engagement Events](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events). In particular, they contain two sub-objects:
+Additionally, their structure varies slightly from the flat structure found in [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events). In particular, they contain two sub-objects:
 
 |Name|Description|
 |----|-----------|
@@ -425,7 +425,7 @@ If your Currents integration starts returning `4XX` errors, Braze will automatic
 Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
 
 {% alert warning %}
-If Braze's retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
+If the Braze retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
 {% endalert %}
 
 The following HTTP status codes will be recognized by our connector client:

@@ -16,11 +16,10 @@ description: "이 참조 문서에서는 캠페인에서 태그를 사용할 수
 태그는 `{% %}`로 묶어야 합니다.
 {% endraw %}
 
-{% alert tip %}
 조금 더 쉽게 사용할 수 있도록 Braze에는 Liquid 구문을 올바르게 포맷한 경우 녹색과 보라색으로 활성화되는 색상 포맷이 포함되어 있습니다. 녹색 서식은 태그를 식별하는 데 도움이 되며 보라색 서식은 개인화가 포함된 영역을 강조 표시합니다.
-<br><br>
+
 조건부 메시징을 사용하는 데 어려움이 있다면 사용자 지정 속성 및 기타 Liquid 요소를 삽입하기 전에 조건부 구문을 작성해 보세요.
-<br><br>
+
 예를 들어 메시지 필드에 먼저 다음을 추가합니다:  
 {% raw %}
 ```liquid
@@ -40,11 +39,10 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## 조건부 논리
 
-조건문과 같은 다양한 유형의 [메시지 내 지능형 논리][1]를 포함할 수 있습니다. [조건문][8]을 사용하여 캠페인을 글로벌화하는 다음 예시를 참조하세요.
+조건문과 같은 다양한 유형의 [메시지 내 지능형 논리][1]를 포함할 수 있습니다. The following example uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -59,39 +57,93 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### 단계별 예시
+### Conditional tags
 
-이 예에서는 "if", "elsif" 및 "else" 문이 포함된 태그를 사용하여 국제화된 콘텐츠를 전달합니다.
+#### `if` and `elsif`
+
+Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English, this code will check to see if the user's device is set to Spanish, and if that fails, it will check if the device is set to. 사용자의 디바이스가 이러한 조건 중 하나를 충족하면 해당 언어로 된 메시지를 받게 됩니다.
+
+#### `else`
+
+조건부 논리에 `{% else %}` 문을 포함할 수 있습니다. If none of the conditions that you set are met, the `{% else %}` statement specifies the message that should be sent. In this example, we default to English if a user’s language is not English, Spanish, or Chinese.
+
+#### `endif`
+
+`{% endif %}` 태그는 조건부 로직이 완료되었음을 알립니다. 조건부 논리가 포함된 모든 메시지에는 `{% endif %}` 태그를 포함해야 합니다. 조건부 로직에 `{% endif %}` 태그를 포함하지 않으면 Braze가 메시지를 구문 분석할 수 없으므로 오류가 발생합니다.
+
+### Tutorial: Deliver location-based content
+
+When you're finished with this tutorial, you'll be able to use tags with "if", "elsif", and "else" statements to deliver content based on a user's location.
+
+1. Begin with an `if` tag to establish what message should be sent when the user's city is in New York. If the user's city is New York, this first condition is met and the user will receive a message specifying their New Yorker identity.
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${city} == "New York" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at your local Sandwich Emperor. 
+  Just show this message at the counter to redeem your offer!
 ```
-사용자의 언어가 영어인 경우 첫 번째 조건이 충족되며 사용자는 영어로 된 메시지를 받게 됩니다.
+
+{: start="2"}
+2\. Next, use the `elseif` tag to establish what message should be sent if the user's city is in Los Angeles.
 
 ```liquid
-{% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
-{% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
 ```
 
-조건문을 원하는 만큼 지정할 수 있습니다. 이전 조건이 충족되지 않으면 후속 조건이 확인됩니다. 이 예제에서는 사용자의 디바이스가 영어로 설정되어 있지 않은 경우 이 코드가 사용자의 디바이스가 스페인어 또는 중국어로 설정되어 있는지 확인합니다. 사용자의 디바이스가 이러한 조건 중 하나를 충족하면 해당 언어로 된 메시지를 받게 됩니다.
+{: start="3"}
+3\. Let's use another `elseif` tag to establish what message should be sent if the user's city is in Chicago.
+
+```liquid
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+```
+
+{: start="4"}
+4\. Now, let's use the `{% else %}` tag to specify what message should be sent if the user's city isn't in San Francisco, New York, or Chicago.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+ 🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
 ```
 
-조건부 논리에 `{% else %}` 문을 포함할 수 있습니다. 설정한 조건 중 어느 것도 충족되지 않으면 `{% else %}` 문이 전송할 메시지를 지정합니다. 이 경우 사용자의 언어가 영어, 스페인어 또는 중국어가 아닌 경우 기본값은 영어로 설정됩니다.
+{: start="5"}
+5\. Finally, we'll use the `{% endif %}` tag to specify that our conditional logic is done.
 
 ```liquid
 {% endif %}
 ```
 
-`{% endif %}` 태그는 조건부 로직이 완료되었음을 알립니다. 조건부 논리가 포함된 모든 메시지에는 `{% endif %}` 태그를 포함해야 합니다. 조건부 로직에 `{% endif %}` 태그를 포함하지 않으면 Braze가 메시지를 구문 분석할 수 없으므로 오류가 발생합니다.
-
 {% endraw %}
+
+{% details Full Liquid code %}
+
+{% raw %}
+```liquid
+{% if ${city} == "New York City" %}
+  🎉 Hey there, New Yorker! We're excited to offer you a special deal! 
+  Get 20% off your next sandwich at our New York location. 
+  Just show this message at the counter to redeem your offer!
+{% elsif ${city} == "Los Angeles" %}
+  🌞 Hello, Los Angeles! Enjoy a sunny day with a delicious sandwich! 
+  Present this message at our LA restaurant for a 20% discount on your next order!
+{% elsif ${city} == "Chicago" %}
+  🍕 Chicago, we have a treat for you! 
+  Swing by our restaurant and get 20% off your favorite sandwich. 
+  Just show this message to our staff!
+{% else %}
+  🥪 Craving a sandwich? Visit us at any of our locations for a delicious meal! 
+  Check our website for the nearest restaurant to you!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## null, nil 및 빈 속성 값에 대한 설명
 

@@ -13,7 +13,7 @@ tool: Campaigns
 > 실행 기반 전달 캠페인 또는 이벤트 트리거 캠페인은 트랜잭션 또는 업적 기반 메시지에 매우 효과적입니다. 특정 날짜에 캠페인을 전송하는 대신 사용자가 특정 이벤트를 완료한 후에 캠페인을 전송하도록 트리거할 수 있습니다. 
 
 {% alert important %}
-[인앱 메시지가 있는 캔버스 구성요소에는 실행 기반 전달을 사용할 수 없습니다. 이러한 단계는 반드시 예약해야 합니다.
+Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). 이러한 단계는 반드시 예약해야 합니다.
 {% endalert %}
 
 ## 트리거된 캠페인 설정하기

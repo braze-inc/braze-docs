@@ -305,8 +305,20 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft bounce</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Adiamentos</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Prorrogações
+
+O adiamento ou a prorrogação é quando um e-mail não foi entregue imediatamente, mas o Braze tentará reenviar o e-mail por até 72 horas após essa falha temporária de entrega para maximizar as chances de entrega bem-sucedida antes que as tentativas para essa campanha específica sejam interrompidas. As razões típicas para adiamentos incluem limitação de taxa de volume de e-mail baseada na reputação do provedor de caixa de entrada, problemas temporários de conectividade ou erros de DNS.
+
+Os _adiamentos_ diferem dos _Soft Bounces_. Se nenhum e-mail foi entregue com sucesso durante este período de nova tentativa, a Braze enviará um evento de soft bounce por campanha enviada. Antes de 25 de fevereiro de 2025, essas tentativas foram contadas como múltiplos soft bounces para 1 envio de campanha.
+
+Observe que os _adiamentos_ estão atualmente disponíveis apenas usando os recursos Snowflake Currents ou Braze (como o Construtor de Consultas, Segmento SQL, Compartilhamento de Dados Snowflake). Se você gostaria de incluir isso na análise de campanhas ou do canva, [envie um feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Taxa de abertura real estimada {#estimated-real-open-rate}
 

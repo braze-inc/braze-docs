@@ -19,7 +19,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 Wenn Sie Ihre vorhandenen benutzerdefinierten HTML-Vorlagen oder von Dritten erstellte Vorlagen verwenden möchten, müssen diese im Drag-and-Drop-Editor neu erstellt werden.
 
-Sie sind sich nicht sicher, ob Ihre In-App-Nachricht über eine Kampagne oder ein [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) gesendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind. Nachdem Sie den Ort ausgewählt haben, an dem Sie Ihre Nachricht erstellen möchten, lassen Sie uns nun die einzelnen Schritte zur Erstellung einer In-App-Nachricht per Drag-and-Drop erläutern.
+Sie sind sich nicht sicher, ob Ihre In-App-Nachricht über eine Kampagne oder ein [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) gesendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind. Nachdem Sie den Ort ausgewählt haben, an dem Sie Ihre Nachricht erstellen möchten, lassen Sie uns nun die einzelnen Schritte zur Erstellung einer In-App-Nachricht per Drag-and-Drop erläutern.
 
 ## Voraussetzungen
 
@@ -135,6 +135,7 @@ Hier kann Ihre Botschaft über den Laufsteg stolzieren, gekleidet in den typisch
 
 - Eine Liste der verfügbaren Editorblöcke und ihrer Eigenschaften finden Sie unter [Editorblöcke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Hilfe bei der Anpassung des Aussehens Ihrer Nachricht finden Sie unter [Stil-Einstellungen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
+- Bewährte Verfahren zur Erstellung von Nachrichten von rechts nach links finden Sie unter [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Schritt 5: Testen Sie Ihre In-App-Nachricht
 

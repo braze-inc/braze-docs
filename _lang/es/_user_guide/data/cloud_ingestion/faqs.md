@@ -7,7 +7,7 @@ description: "Esta página responde a las preguntas más frecuentes sobre la ing
 toc_headers: h2
 ---
 
-# Preguntas más frecuentes (FAQ)
+# Preguntas más frecuentes
 
 > Esta página contiene respuestas a algunas preguntas frecuentes sobre la Ingesta de datos en la nube.
 

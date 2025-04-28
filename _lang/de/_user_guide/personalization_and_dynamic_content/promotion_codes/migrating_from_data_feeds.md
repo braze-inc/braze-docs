@@ -11,7 +11,7 @@ description: "Dieser referenzierte Artikel enthält eine Anleitung zur Migration
 Die Daten-Feed-Funktion ist veraltet. Braze empfiehlt Kund:innen, die Daten-Feeds verwenden, den Übergang zu Aktionscode-Listen.
 {% endalert %}
 
-> Die Migration von Daten-Feeds zu Aktionscodes ist ein unkomplizierter Prozess. Dazu müssen Sie manuell Aktionscode-Listen mit den Informationen aus Ihren Daten-Feeds erstellen und Ihre Nachrichten-Referenzen entsprechend aktualisieren.
+> Diese Seite führt Sie durch die Migration von Daten-Feeds zu Aktionscodes. Dies ist ein unkomplizierter Prozess, bei dem Sie manuell Aktionscode-Listen mit den Informationen aus Ihren Daten-Feeds erstellen und Ihre Nachrichten-Referenzen entsprechend aktualisieren.
 
 ## Merkmale und Funktionalität
 

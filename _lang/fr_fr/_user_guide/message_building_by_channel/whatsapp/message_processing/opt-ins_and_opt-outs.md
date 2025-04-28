@@ -30,7 +30,7 @@ Les abonnements peuvent provenir de sources externes ou de méthodes Braze telle
 ## Configurez les abonnements pour votre canal WhatsApp Braze 
 
 Pour les abonnements WhatsApp, vous devez vous conformer aux [exigences de WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Vous devrez également fournir à Braze les informations suivantes  :
-- Une adresse `external_id`, un [numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) et un statut d'abonnement mis à jour pour chaque utilisateur. Pour ce faire, utilisez le [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou l'[endpoint `/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) pour mettre à jour le numéro de téléphone et le statut de l'abonnement. 
+- Une adresse `external_id`, un [numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) et un statut d'abonnement mis à jour pour chaque utilisateur. Pour ce faire, utilisez le [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) ou l'[endpoint `/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) pour mettre à jour le numéro de téléphone et le statut de l'abonnement.
 
 {% alert note %}
 Braze a amélioré l'endpoint `/users/track` pour permettre la mise à jour du statut de l'abonnement, que vous pouvez découvrir dans [Groupes d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status). Cependant, si vous avez déjà créé des protocoles d’abonnement à l’aide de [l’endpoint `/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), vous pouvez continuer à le faire à cet endroit.
@@ -40,7 +40,7 @@ Braze a amélioré l'endpoint `/users/track` pour permettre la mise à jour du s
 
 Votre application ou votre site Web (enregistrement de compte, page de paiement, paramètres de compte, terminal de carte de crédit) vers Braze.
 
-Chaque fois que vous avez déjà un consentement marketing pour les e-mails ou les SMS, incluez une section supplémentaire pour WhatsApp. Une fois qu'un utilisateur s'est abonné, il a besoin d'une adresse `external_id`, d'un [numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) et d'une mise à jour de son statut d'abonnement. Pour ce faire, en fonction de la configuration de votre installation de Braze, vous pouvez soit exploiter l'[endpoint`/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/), soit utiliser le [SDK.](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)
+Chaque fois que vous avez déjà un consentement marketing pour les e-mails ou les SMS, incluez une section supplémentaire pour WhatsApp. Une fois qu'un utilisateur s'est abonné, il a besoin d'une adresse `external_id`, d'un [numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) et d'une mise à jour de son statut d'abonnement. Pour ce faire, en fonction de la configuration de votre installation de Braze, vous pouvez soit exploiter l'[endpoint`/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/), soit utiliser le [SDK.](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)
 
 #### Liste d’abonnements créée en externe
 
@@ -54,8 +54,8 @@ Dans votre canal de support client, effectuez un suivi des problèmes résolus a
 2. Fournissez des [actions de réponse rapide]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies) pour lesquelles le client répond « Oui » pour indiquer son accord
 3. Configurez un déclencheur de mot-clé personnalisé.
 4. Pour l’une ou l’autre de ces idées, vous devrez probablement terminer le parcours avec les éléments suivants :
-	- Appelez l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) pour mettre à jour ou créer un utilisateur. 
-	- Tirez parti de l'[endpoint `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) ou utilisez le [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287). 
+	- Appelez l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) pour mettre à jour ou créer un utilisateur.
+	- Tirez parti de l'[endpoint `/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) ou utilisez le [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/).
 
 #### Message WhatsApp entrant 
 

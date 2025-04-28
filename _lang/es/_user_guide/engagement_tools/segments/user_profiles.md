@@ -18,6 +18,7 @@ description: "Este artículo de referencia describe cómo acceder al perfil de u
 Para acceder al perfil de un usuario, vaya a la página **Buscar usuarios** y busque un usuario por cualquiera de los siguientes criterios:
 
 - ID de usuario externo
+- ID de Braze
 - Correo electrónico
 - Número de teléfono
 - Token de notificaciones push
@@ -37,7 +38,7 @@ Los perfiles de usuario son un gran recurso para solucionar problemas y realizar
 
 Por ejemplo, si un usuario informa de un problema y no estás seguro de qué dispositivo y sistema operativo está utilizando, puedes utilizar la [pestaña Descripción general](#overview-tab) para encontrar esta información (siempre que tengas su correo electrónico o ID de usuario). También puedes ver el idioma de un usuario, lo que podría ser útil si estás solucionando problemas de una [campaña multilingüe][13] que no se ha comportado como esperabas.
 
-Puede utilizar la [pestaña Compromiso](#engagement-tab) para verificar si un determinado usuario ha recibido una campaña. Además, si este usuario concreto recibió la campaña, puede ver cuándo la recibió. También puede comprobar si un usuario pertenece a un segmento determinado y si ha optado por recibir push, correo electrónico o ambos. Esta información es útil para solucionar problemas. Por ejemplo, debe comprobar esta información si un usuario no recibe una campaña que esperaba que recibiera o recibe una campaña que no esperaba que recibiera.
+Puede utilizar la [pestaña Compromiso](#engagement-tab) para verificar si un determinado usuario ha recibido una campaña. Además, si este usuario concreto recibió la campaña, puede ver cuándo la recibió. También puedes verificar si un usuario está en un segmento determinado y si ha optado por la adhesión voluntaria al push, al correo electrónico o a ambos. Esta información es útil para solucionar problemas. Por ejemplo, debe comprobar esta información si un usuario no recibe una campaña que esperaba que recibiera o recibe una campaña que no esperaba que recibiera.
 
 ## Elementos del perfil de usuario
 
@@ -76,9 +77,9 @@ La pestaña **Compromiso** contiene información sobre las interacciones de un u
 | Segmentos | Segmentos en los que está incluido este usuario. Seleccione un segmento de la lista para verlo. |
 | Estadísticas de comunicación | Cuándo fue la última vez que este usuario recibió mensajes tuyos de cada canal. |
 | Atribución de instalación | Información sobre cómo y cuándo un usuario instaló su aplicación. Más información sobre [cómo entender las instalaciones de los usuarios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Varios | El [número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) del usuario. |
+| Varios | El [número de cubo aleatorio]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) del usuario. |
 | Mensajes recibidos en Canvas | Mensajes en lienzo que este usuario ha recibido y cuándo. Seleccione un mensaje de la lista para verlo. |
-| Predicciones | Puntuaciones de [predicción de churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) y [predicción de eventos]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) para este usuario. |
+| Predicciones | Puntuaciones de [predicción de churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) y [predicción de eventos]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) para este usuario. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![La pestaña de interacción de un perfil de usuario que muestra su configuración de contactos y estadísticas de comunicación.][3]
@@ -88,7 +89,7 @@ La pestaña **Compromiso** contiene información sobre las interacciones de un u
 La pestaña **Historial de mensajes** del perfil de usuario muestra los eventos recientes relacionados con la mensajería (unos 40) de un usuario individual de los últimos 30 días. Estos eventos incluyen los mensajes que el usuario ha enviado, recibido, con los que ha interactuado, etc. Tenga en cuenta que los datos de esta pestaña no se actualizan después de fusionar un usuario.
 
 {% alert note %}
-Si tiene algún comentario sobre esta tabla o desea ver eventos específicos, envíe un correo electrónico a [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) con el asunto "Comentarios sobre la pestaña Historial de mensajes".
+Si tienes algún comentario sobre esta tabla o quieres ver eventos concretos, envía un correo electrónico a [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) con el asunto "Comentarios sobre la pestaña del historial de mensajes".
 {% endalert %}
 
 ![La pestaña Historial de mensajería muestra las campañas y Lienzos que ha recibido un usuario.][5]
@@ -99,7 +100,7 @@ Para cada evento de la tabla **Historial de mensajería**, puede ver el canal de
 
 ##### Eventos de participación en mensajes
 
-Los siguientes eventos de compromiso de mensajes están disponibles para correo electrónico, SMS, push, mensajes dentro de la aplicación, tarjetas de contenido y webhooks. Para obtener más información sobre cómo se realiza el seguimiento de eventos específicos, consulte el [glosario de eventos de compromiso de mensajes]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+Los siguientes eventos de compromiso de mensajes están disponibles para correo electrónico, SMS, push, mensajes dentro de la aplicación, tarjetas de contenido y webhooks. Para obtener más información sobre cómo se realiza el seguimiento de eventos específicos, consulte el [glosario de eventos de compromiso de mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Canal | Actos de compromiso disponibles |
 | --- | --- |
@@ -126,7 +127,7 @@ Actualmente, los eventos de cancelación no están disponibles para los mensajes
 
 ##### Eventos de limitación de frecuencia
 
-Un evento de limitación de frecuencia se produce cuando un usuario está cualificado para recibir un mensaje, pero en realidad no lo recibió debido a la configuración [de limitación de frecuencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Puede personalizar los ajustes de limitación de frecuencia desde **Configuración** > **Reglas de limitación de frecuencia**.
+Se produce un evento de limitación de frecuencia cuando un usuario está cualificado para recibir un mensaje, pero en realidad no lo recibe debido a la [configuración de limitación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) de frecuencia. Puede personalizar los ajustes de limitación de frecuencia desde **Configuración** > **Reglas de limitación de frecuencia**.
 
 {% alert note %}
 Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes gestionar la limitación de frecuencia desde **Compromiso** > **Configuración global de mensajes**.
@@ -140,9 +141,9 @@ Los envíos de tarjetas de contenido se registran cuando la tarjeta está dispon
 
 #### Nota sobre el evento abierto por correo electrónico {#note-on-email-open-event}
 
-El seguimiento de las aperturas de correo electrónico es propenso a errores en cualquier herramienta, incluida Braze. Con una variedad de funciones de protección de la privacidad ofrecidas por diferentes clientes de correo electrónico que bloquean la carga automática de imágenes o las cargan proactivamente en el servidor, los eventos de apertura de correo electrónico son susceptibles tanto de falsos positivos como de falsos negativos.
+El seguimiento de apertura de correo electrónico es propenso a errores en cualquier herramienta, incluida Braze. Con una variedad de funciones de protección de la privacidad ofrecidas por diferentes clientes de correo electrónico que bloquean la carga automática de imágenes o las cargan proactivamente en el servidor, los eventos de apertura de correo electrónico son susceptibles tanto de falsos positivos como de falsos negativos.
 
-Aunque las estadísticas de apertura de correo electrónico pueden ser útiles en conjunto, por ejemplo para comparar la eficacia de diferentes líneas de asunto, no debe asumir que un evento de apertura individual para un usuario individual es significativo.
+Aunque las estadísticas de apertura de correo electrónico pueden ser útiles en conjunto, por ejemplo, para comparar la eficacia de diferentes líneas del asunto, no debes asumir que un evento de apertura individual para un usuario individual es significativo.
 
 
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

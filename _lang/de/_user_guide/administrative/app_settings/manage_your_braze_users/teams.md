@@ -15,13 +15,13 @@ Teams können nach Kundenstandort, Sprache und benutzerdefinierten Attributen ei
 
 Teams sind nicht für alle Braze-Verträge verfügbar. Wenn Sie diese Funktion nutzen möchten, wenden Sie sich an Ihren Braze-Kundenbetreuer oder [kontaktieren Sie uns](mailto:success@braze.com) für ein Beratungsgespräch.
 
+## Wie unterscheiden sich Teams von Berechtigungsgruppen und Rollen?
+
+{% multi_lang_include permissions.md content="Unterschiede" %}
+
 ## Teams bilden
 
 Gehen Sie zu **Einstellungen** > **Interne Teams** und wählen Sie <i class="fas fa-plus"></i> **Team hinzufügen**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Interne Teams** unter **Einstellungen verwalten** > **Teams verwalten**.
-{% endalert %}
 
 ![Ein neues Team hinzufügen][68]
 
@@ -34,10 +34,6 @@ Wenn ein Team durch ein benutzerdefiniertes Attribut, eine Sprache oder ein Land
 Braze-Administratoren und eingeschränkte Benutzer mit der Unternehmensberechtigung "Kann Unternehmenseinstellungen verwalten" können einem Dashboard-Benutzer mit eingeschränktem Zugriff Berechtigungen auf Teamebene zuweisen. Wenn Sie einem Team zugewiesen sind, können Dashboard-Benutzer nur die Daten lesen oder schreiben, die für ihr jeweiliges Team verfügbar sind, z. B. Benutzersprache, Standort oder benutzerdefinierte Attribute, die bei der Erstellung des Teams festgelegt wurden.
 
 Um einen Benutzer einem Team zuzuweisen, navigieren Sie zu **Einstellungen** > **Unternehmensbenutzer** und wählen einen Benutzer aus, den Sie Ihrem Team hinzufügen möchten.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite, indem Sie auf Ihr Kontosymbol und dann auf **Benutzer verwalten** klicken.
-{% endalert %}
 
 Führen Sie dann die folgenden Schritte aus:
 
@@ -130,10 +126,6 @@ Wählen Sie ein oder mehrere Teams zum Archivieren aus. Wenn das Team mit keinem
 ![Teams archivieren, die mit einem Braze-Objekt verbunden sind][86]{: style="max-width:70%;"}
 
 Braze-Administratoren können die Archivierung eines Teams aufheben, indem sie das archivierte Team auswählen und die Option **Archivierung aufheben** wählen.
-
-## Wie unterscheiden sich Teams von Berechtigungsgruppen und Rollen?
-
-Eine Aufschlüsselung der Unterschiede zwischen Teams, Berechtigungssätzen und Rollen finden Sie unter [Unternehmensbenutzer]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/).
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

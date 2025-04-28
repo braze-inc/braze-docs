@@ -12,7 +12,7 @@ channel: email
 
 > While you may be tempted to send campaigns to as many users as you can, there are situations when it's actually advantageous to stop messages to disengaged users. 
 
-For emails, your sending IP has a reputation score that factors in engagement, spam reporting, blocklisting, and more. You can use tools like [Sender Score](https://www.senderscore.org/ "Sender Score") or [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/ "Outlook's Smart Network Data Service") to monitor your reputation score. If your reputation score is consistently low, ISP and mailbox filters might automatically sort your emails into a spam or low priority folder for all recipients, even engaged ones. Creating a sunset policy helps to deliver your emails to only active recipients. 
+For emails, your sending IP has a reputation score that factors in engagement, spam reporting, blocklisting, and more. You can use tools like [Sender Score](https://www.senderscore.org/) or [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/) to monitor your reputation score. If your reputation score is consistently low, ISP and mailbox filters might automatically sort your emails into a spam or low priority folder for all recipients, even engaged ones. Creating a sunset policy helps to deliver your emails to only active recipients. 
 
 Segmentation filters help prevent your messaging from appearing like spam by letting you easily implement sunset policies for emails, push, and in-app notifications. Here are some things to consider when you create a sunset policy:
 

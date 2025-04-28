@@ -50,7 +50,7 @@ Limitez les pays de votre liste d'autorisation aux seuls pays nécessaires pour 
 
 ## Visibilité des envois bloqués
 
-Les tentatives d'envoi vers des pays qui ne figurent pas sur votre liste d'autorisation seront interrompues. Les messages interrompus seront consignés dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) et dans l'[événement d'engagement aux messages interrompus par SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+Les tentatives d'envoi vers des pays qui ne figurent pas sur votre liste d'autorisation seront interrompues. Les messages interrompus seront consignés dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) et dans l'[événement d'engagement aux messages interrompus par SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 Les messages interrompus en raison d'envois bloqués s'affichent à l'adresse `Abort_Type = "blocked_recipient_country"` et le journal d'interruption indique en détail le pays bloqué.
 

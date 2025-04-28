@@ -114,7 +114,7 @@ In diesem Abschnitt finden Sie die drei gängigsten Möglichkeiten, Content-Card
 - [Karussell](#carousel)
 - [Banner](#banner)
 
-Die Logik und die Implementierung dieser Platzierungen sind in Braze nicht voreingestellt, so dass Ihr Entwicklungsteam die Arbeit zur Erreichung dieser Anwendungsfälle liefern und unterstützen muss. Einen Überblick über die Implementierung dieser Platzierungen finden Sie unter [Erstellen einer benutzerdefinierten Inhaltskarte]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+Die Logik und die Implementierung dieser Platzierungen sind in Braze nicht voreingestellt, so dass Ihr Entwicklungsteam die Arbeit zur Erreichung dieser Anwendungsfälle liefern und unterstützen muss. Einen Überblick über die Implementierung dieser Platzierungen finden Sie unter [Erstellen einer benutzerdefinierten Inhaltskarte]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 Beispiel-Content-Cards, die die verschiedenen Platzierungsoptionen zeigen: Posteingang, Karussell und Banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -176,7 +176,7 @@ Die Nutzer können die für sie relevanten Inhalte anzeigen und nutzen. Da es si
 
 Ihre Entwickler:innen werden Content-Cards integrieren, wenn sie das Braze-SDK integrieren. Weitere Einzelheiten zur Integration von Content-Cards finden Sie in den Entwicklerartikeln für Ihre Plattform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "Content-Card-Integrationsleitfaden für iOS")
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Content-Card-Integrationsleitfaden für iOS")
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Content-Card-Integrationsleitfaden für Android")
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Content-Card-Integrationsleitfaden für Web")
 

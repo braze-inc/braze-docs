@@ -1,7 +1,7 @@
 ---
 nav_title: Nachrichtentypen
 article_title: LINE Nachrichtentypen
-page_order: 1
+page_order: 0
 description: "Dieser Artikel behandelt die verschiedenen Arten von LINE-Nachrichten."
 page_type: reference
 tool:
@@ -90,7 +90,7 @@ Eine Rich-Text-Nachricht kann bis zu 400 Zeichen enthalten.
 
 ## Kartenbasiert (Karussell)
 
-Mit einer kartenbasierten LINE-Nachricht können Benutzer wie in einem Karussell durch mehrere Nachrichten blättern und die für sie wichtigsten Nachrichten auswählen, indem sie eine Karte oder die Schaltflächen einer Karte auswählen.
+Mit einem kartenbasierten Messaging von LINE können Nutzer:innen wie in einem Karussell durch mehrere Nachrichten blättern und die für sie wichtigsten Nachrichten auswählen, indem sie eine Karte oder die Buttons einer Karte auswählen.
 
 Zu den Anwendungsfällen gehören:
 - Rabatte auf bestimmte Artikel

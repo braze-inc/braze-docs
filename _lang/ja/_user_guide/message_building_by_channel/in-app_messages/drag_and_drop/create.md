@@ -19,7 +19,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
-アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
+アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
 
 ## 前提条件
 
@@ -135,6 +135,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 - 利用可能なエディターブロックとそのプロパティのリストについては、[エディターブロック]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 - メッセージの外観と感触をカスタマイズするためのヘルプについては、[スタイル設定]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)をチェックしてください。
+- 右から左へのメッセージの作成に関するベストプラクティスについては、[右から左へのメッセージの作成]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ## ステップ 5: アプリ内メッセージをテストする
 

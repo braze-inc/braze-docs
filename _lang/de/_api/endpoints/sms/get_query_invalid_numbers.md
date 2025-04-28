@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Abfrage ungültiger Telefonnummern."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Query invalid phone numbers Braze."
 ---
 {% api %}
 # Abfrage ungültiger Telefonnummern
@@ -13,7 +13,7 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Abfrage ungü
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Liste von Telefonnummern abzurufen, die innerhalb eines bestimmten Zeitraums als "ungültig" markiert wurden. Weitere Informationen finden Sie in der Dokumentation [Behandlung ungültiger Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers).
+> Verwenden Sie diesen Endpunkt, um eine Liste der Telefonnummern abzurufen, die innerhalb eines bestimmten Zeitraums als "ungültig" markiert wurden. Weitere Informationen finden Sie in der Dokumentation [Behandlung ungültiger Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
@@ -21,18 +21,18 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Abfrage ungü
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `sms.invalid_phone_numbers`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | ----------|-----------| ----------|----- |
-| `start_date` | Optional <br>(siehe Anmerkung) | Zeichenfolge im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abrufen ungültiger Telefonnummern, muss vor `end_date` liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
-| `end_date` | Optional <br>(siehe Anmerkung) | Zeichenfolge im Format JJJJ-MM-TT | Enddatum des Bereichs zum Abrufen ungültiger Telefonnummern. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
-| `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Der Standardwert ist 100, das Maximum ist 500. |
-| `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, von dem aus abgerufen werden soll. |
+| `start_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abrufen ungültiger Telefonnummern, muss vor `end_date` liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `end_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT | Enddatum des Bereichs zum Abrufen ungültiger Telefonnummern. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Standardmäßig sind es 100, maximal 500. |
+| `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, ab dem abgerufen werden soll. |
 | `phone_numbers` | Optional <br>(siehe Anmerkung) | Array von Strings im Format e.164  | Wenn Sie eine Telefonnummer angeben, werden wir diese zurückschicken, wenn sie sich als ungültig erweist. |
 | `reason` | Optional <br>(siehe Anmerkung) | String | Verfügbare Werte sind "provider_error" (Providerfehler zeigt an, dass das Telefon keine SMS empfangen kann) oder "deactivated" (die Telefonnummer wurde deaktiviert). Wenn Sie diese Option auslassen, werden alle Gründe zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -50,7 +50,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 ```
 
 ## Antwort
-Die Einträge sind in absteigender Reihenfolge aufgeführt.
+Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
 Content-Type: application/json

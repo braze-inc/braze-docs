@@ -90,11 +90,11 @@ Para acceder a la pestaña **Gestión de enlaces** en el editor de correo electr
 Las plantillas de enlaces no se aplican al texto sin formato. Esto significa que Currents puede mostrar clics que no incluyan los parámetros de las plantillas de enlace, ya que esos clics pueden proceder de la versión de texto sin formato del correo electrónico.
 {% endalert %}
 
-A medida que añada plantillas de enlaces en la pestaña **Gestión de enlaces**, desplácese a la derecha para ver las plantillas que ha añadido.
+A medida que añada plantillas de enlaces en la pestaña **Gestión de enlaces**, desplácese a la derecha para ver las plantillas que ha añadido. Si los enlaces existentes dentro de un correo electrónico ya tienen una plantilla de enlace añadida, los enlaces recién añadidos también tendrán la plantilla de enlace añadida de forma predeterminada.
 
 ## Gestión de plantillas de enlaces
 
-También puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) plantillas de enlaces. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+También puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas de enlaces. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 El archivado de plantillas no está disponible actualmente para las plantillas de enlaces.

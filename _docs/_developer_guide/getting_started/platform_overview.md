@@ -117,6 +117,7 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 
 | Resource | What You'll Learn|
 |---|---|
+| [Debugging the SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | When troubleshooting your integration, the SDK debugging tool will be a helpful tool. Make sure you have it on hand! |
 | [Braze Public GitHub](https://github.com/braze-inc/) | You'll find detailed integration information and sample code in our GitHub repository. |
 | [Android SDK GitHub Repository](https://github.com/braze-inc/braze-android-sdk/) | The Android SDK GitHub repository. |
 | [Android SDK Reference](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Class documentation for the Android SDK. |

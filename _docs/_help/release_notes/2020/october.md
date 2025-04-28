@@ -32,7 +32,7 @@ Users can now add descriptions to campaigns and Canvases! This new field can be 
 
 ## Canvas exception events
 
-New documentation has been added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
+New documentation has been added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) in Canvases. 
 
 ## User delete updates
 

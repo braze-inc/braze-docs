@@ -1,7 +1,7 @@
 ---
 nav_title: Fehlersuche
 article_title: Segmente zur Fehlerbehebung
-page_order: 8
+page_order: 10
 page_type: reference
 tool: 
   - Segments

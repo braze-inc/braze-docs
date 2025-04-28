@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: Hard Bounced Emails entfernen"
-article_title: "POST: Hard Bounced Emails entfernen"
+nav_title: "POST: Hard Bounced E-Mails entfernen"
+article_title: "POST: Hard Bounced E-Mails entfernen"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Remove hard bounced email addresses."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Remove hard bounced email addresses Braze."
 
 ---
 {% api %}
-# Entfernen Sie hartnäckig abgelehnte E-Mails
+# Hartnäckig gebouncte E-Mails entfernen
 {% apimethod post %}
 /email/bounce/remove
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um E-Mail-Adressen aus Ihrer Braze Bounce-Liste und der Bounce-Liste Ihres E-Mail-Anbieters zu entfernen.
+> Verwenden Sie diesen Endpunkt, um E-Mail-Adressen aus Ihrer Braze Bounce-Liste und der von Ihrem E-Mail-Anbieter geführten Bounce-Liste zu entfernen.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
@@ -22,11 +22,11 @@ description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Remove h
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `email.bounce.remove`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -39,11 +39,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | ----------|-----------| ---------|------ |
-| `email` | Erforderlich | String oder Array | String-E-Mail-Adresse, die geändert werden soll, oder ein Array mit bis zu 50 zu ändernden E-Mail-Adressen. |
+| `email` | Erforderlich | String oder Array | Zu ändernde String-E-Mail-Adresse oder ein Array mit bis zu 50 zu ändernden E-Mail-Adressen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

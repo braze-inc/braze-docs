@@ -25,7 +25,7 @@ Badges are a great way to call attention to new content awaiting your users in t
 - Unread News Feed cards for the current user
 - Total viewable News Feed cards for the current user
 
-The following method declarations in [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller") describe this in detail:
+The following method declarations in [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html) describe this in detail:
 
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
@@ -103,5 +103,5 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File").
+For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
 

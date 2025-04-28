@@ -15,6 +15,10 @@ description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용�
 
 모든 Braze 계약에서 팀을 사용할 수 있는 것은 아닙니다. 이 기능을 이용하고 싶으시면 Braze 계정 매니저에게 [문의하거나](mailto:success@braze.com) 상담을 요청하세요.
 
+## 팀은 권한 집합 및 역할과 어떻게 다른가요?
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## 팀 만들기
 
 **설정** > **내부 팀**으로 이동하여 <i class="fas fa-plus"></i> **팀 추가**를 선택합니다.
@@ -130,10 +134,6 @@ Michelle은 "캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, �
 ![Braze에서 개체에 연결된 팀 보관하기][86]{: style="max-width:70%;"}
 
 Braze 매니저는 보관된 팀을 선택하고 **아카이브 해제**를 선택하여 팀을 아카이브 해제할 수 있습니다.
-
-## 팀은 권한 집합 및 역할과 어떻게 다른가요?
-
-팀, 권한 집합 및 역할 간의 차이점에 대한 자세한 내용은 [회사 사용자를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) 참조하세요.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

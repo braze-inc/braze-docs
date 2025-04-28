@@ -47,6 +47,7 @@ glossary_tags:
   - name: Preference Center
   - name: Schedule Messages
   - name: SCIM
+  - name: SDK Authentication
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -466,4 +467,20 @@ glossaries:
     description: Return a list of sync statuses.
     tags:
       - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>
+    description: Create a new SDK Authentication key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>
+    description: List SDK Authentication keys for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>
+    description: Set an SDK Authentication key as the primary key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>
+    description: Delete an SDK Authentication key for your app.
+    tags:
+      - SDK Authentication  
 ---

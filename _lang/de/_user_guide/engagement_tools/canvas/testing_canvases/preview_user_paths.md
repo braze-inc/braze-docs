@@ -12,7 +12,7 @@ Tool:
 
 > Erleben Sie Canvas so wie Ihre Benutzer. Dazu gehört auch eine Vorschau auf den Zeitpunkt und die Nachrichten, die sie erhalten werden. Diese Testläufe dienen der Qualitätssicherung, um sicherzustellen, dass Ihre Nachrichten an die richtige Zielgruppe gesendet werden, bevor Sie Ihre Canvas versenden.
 
-## Starten Sie einen Testlauf
+## Erstellen eines Testlaufs
 
 Befolgen Sie diese Schritte, um eine Vorschau der User Journey zu erhalten:
 
@@ -57,12 +57,15 @@ Die Schritte "Nachricht" und "Verzögerung" geben den Zeitpunkt an, zu dem der B
 
 ## Ein- und Ausstieg von Benutzern
 
-Testbenutzer nehmen an der Vorschau teil, auch wenn sie eigentlich nicht teilnahmeberechtigt sind. Wenn sie nicht förderfähig sind, können Sie verstehen, warum sie die Kriterien nicht erfüllt haben. Sie können die Ergebnisse in der Seitenleiste sehen, wenn Benutzer das Canvas betreten und verlassen.
+Testnutzer:in nehmen an der Vorschau teil, auch wenn sie im wirklichen Leben nicht teilnahmeberechtigt sind. Wenn sie nicht in Frage kommen, können Sie sehen, warum sie die Kriterien nicht erfüllt haben. Wenn ein Testnutzer:in die Vorschau eintritt, gehen wir davon aus, dass der Testnutzer:in die Targeting-Kriterien passt und die Kriterien zum Auslösen der Aktion erfüllt. Bei einem Canvas, das angepasste Events in den Eingangskriterien verwendet, wird beispielsweise davon ausgegangen, dass der Testnutzer:in den Eingangskriterien das angepasste Event wie erwartet ausgeführt hat. Wenn jedoch dasselbe angepasste Event an anderer Stelle im Canvas verwendet wird (z.B. bei den Ausstiegskriterien), sollten Sie bedenken, wie sich dies auf den Pfad Ihrer Nutzer:innen auswirken könnte.
 
-- Wenn Sie einen Aktionspfad mit Aktionen testen, auf den Ausstiegskriterien (einschl. Ereigniseigenschaften) zutreffen, werden diese Ausstiegskriterien ausgelöst und der Testlauf wird beendet.
-- Wenn Sie einen Kommunikationsschritt testen, auf die Ausstiegskriterien zutreffen, werden diese Ausstiegskriterien ausgelöst und der Testlauf wird beendet.
-- Aktuell können Sie keine bestimmten Ereignisse oder Eigenschaften innerhalb von Aktionspfaden auswählen, um Ausstiegskriterien auszulösen (nur den kompletten Pfad). Erfüllt ein Benutzer potenziell mehrere Ausstiegskriterien, wird das erste, das verarbeitet wird und das er erfüllt, als Ergebnis angezeigt.
-- Ereignisse, API-Trigger, angepasste Attribute und Canvas-Entry-Eigenschaften werden auf der Grundlage des Canvas-Entry angewendet. Der Testlauf simuliert die User Journey, ohne diese Elemente zur Änderung des Benutzerprofils oder des Canvas-Ablaufs anzuwenden. Wenn zum Beispiel beim Test ein angepasstes Attribut als Canvas-Trigger verwendet wird, werden die Triggerkriterien so auf die Nutzervorschau angewendet, **als wäre** die Änderung des angepassten Attributs getriggert worden. 
+Ereignisse, API-Trigger, angepasste Attribute und Canvas-Entry-Eigenschaften werden auf der Grundlage des Canvas-Entry angewendet. Der Testlauf simuliert die User Journey, ohne diese Elemente zur Änderung des Benutzerprofils oder des Canvas-Ablaufs anzuwenden. Wenn zum Beispiel beim Test ein angepasstes Attribut als Canvas-Trigger verwendet wird, werden die Triggerkriterien so auf die Nutzervorschau angewendet, **als wäre** die Änderung des angepassten Attributs getriggert worden.
+
+### Betrachtung
+
+Wenn Sie einen Aktions-Pfad mit Aktionen testen, die Exit-Kriterien (einschließlich Event-Eigenschaften) entsprechen, werden die Exit-Kriterien ausgelöst und der Testlauf wird beendet. Wenn Sie einen Nachrichtenschritt testen, der den Exit-Kriterien entspricht, werden die Exit-Kriterien ausgelöst und der Testlauf wird beendet. 
+
+Aktuell können Sie keine bestimmten Ereignisse oder Eigenschaften innerhalb von Aktionspfaden auswählen, um Ausstiegskriterien auszulösen (nur den kompletten Pfad). Erfüllt ein Benutzer potenziell mehrere Ausstiegskriterien, wird das erste, das verarbeitet wird und das er erfüllt, als Ergebnis angezeigt.
 
 ## Experimentierpfade und Canvas-Varianten
 
@@ -98,11 +101,11 @@ Webhooks werden ausgeführt, wenn Testnachrichten gesendet werden, nicht aber be
 
 In diesem Szenario wird das Canvas so eingerichtet, dass es Nutzer anspricht, die noch keine Sitzung in einer App hatten. Diese Journey enthält einen Nachrichtenschritt mit einer Begrüßungsmail, eine Verzögerung um einen Tag und den Schritt "Zielgruppenpfade", der sich wiederum in zwei Pfade gliedert: Benutzer mit mindestens einer Sitzung und alle anderen. Je nach Zielgruppenpfadzugehörigkeit des Benutzers wird der nächste Nachrichtenschritt gesendet.
 
-![][1]{:style="max-width:70%"}
+![Ein Beispiel für ein Canvas mit einem Nachrichten-Schritt, einem Verzögerungs-Schritt, einem Zielgruppen-Pfad-Schritt und zwei Nachrichten-Schritten.][1]{:style="max-width:70%"}
 
 Da der Testbenutzer die Zulassungskriterien für den Canvas erfüllt, kann er diesen betreten und die User Journey durchlaufen. Da unser Testbenutzer die App jedoch seit einem Kalendertag nicht mehr geöffnet hat, wird er den Weg über "Alle anderen" fortsetzen und eine Push-Benachrichtigung mit folgendem Inhalt erhalten: "Letzte Chance! Erledigen Sie Ihre erste Aufgabe und erhalten Sie einen exklusiven Bonus."
 
-![][2]
+![Der Abschnitt "Testergebnisse", der anzeigt, dass der Testnutzer:innen die Eingangskriterien erfüllt hat, bietet eine Zusammenfassung seiner Reise, einschließlich der Schritte, die er gesendet wurde.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

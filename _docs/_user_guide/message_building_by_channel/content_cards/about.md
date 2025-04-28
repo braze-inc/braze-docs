@@ -114,7 +114,7 @@ This section covers the three most common ways to place Content Cards within you
 - [Carousel](#carousel)
 - [Banner](#banner)
 
-The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
+The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 example content cards, showing the different placement options: message inbox, carousel, and banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -176,9 +176,9 @@ Users can view and engage the most relevant content they are eligible for. Becau
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS Content Card Integration Guide")
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android Content Card Integration Guide")
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web Content Card Integration Guide")
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/)
 
 ## Sources
 

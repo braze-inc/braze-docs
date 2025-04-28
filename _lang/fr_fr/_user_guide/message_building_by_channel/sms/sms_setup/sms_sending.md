@@ -17,7 +17,7 @@ channel:
 
 ### Sélectionnez votre groupe d'abonnement
 
-Les messages SMS doivent être envoyés à partir d'un [groupe d'abonnement]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Un groupe d'abonnement est un ensemble de numéros de téléphone d'envoi (tels que des codes courts, des codes longs et/ou des ID d'expéditeur alphanumériques) qui sont utilisés pour un type d'envoi de messages spécifique. Vous devez désigner un groupe d’abonnement pour vous assurer que seuls les utilisateurs abonnés sont ciblés. Certains clients peuvent envisager d’avoir plusieurs groupes d’abonnement pour différents cas d’utilisation, tels que la messagerie SMS transactionnelle et la messagerie SMS promotionnelle.<br><br>
+Les messages SMS doivent être envoyés à partir d'un [groupe d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). Un groupe d'abonnement est un ensemble de numéros de téléphone d'envoi (tels que des codes courts, des codes longs et/ou des ID d'expéditeur alphanumériques) qui sont utilisés pour un type d'envoi de messages spécifique. Vous devez désigner un groupe d’abonnement pour vous assurer que seuls les utilisateurs abonnés sont ciblés. Certains clients peuvent envisager d’avoir plusieurs groupes d’abonnement pour différents cas d’utilisation, tels que la messagerie SMS transactionnelle et la messagerie SMS promotionnelle.<br><br>
 
 ### Corps du message d'entrée
 

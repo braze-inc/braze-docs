@@ -18,14 +18,11 @@ description: "この参考記事では、ダッシュボードでユーザーの
 ユーザーのプロファイルにアクセスするには、「**ユーザーの検索**」ページに移動し、次のいずれかでユーザーを検索します。
 
 - 外部ユーザー ID
+- Braze ID
 - メールアドレス
 - 電話番号
 - プッシュトークン
 - 「[user_alias] [alias_name]」という形式のユーザーエイリアス (「amplitude_id: user_123」など)
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**ユーザーの検索**] は [**ユーザー検索**」 で、[**ユーザー**] の下にあります。
-{% endalert %}
 
 一致するものが見つかった場合は、Braze SDK を使用してこのユーザーについて記録した情報を表示できます。それ以外の場合、検索で複数のユーザープロファイルが返される場合は、各プロファイルを個別にマージするか、ユーザーの一括マージを実行できます。詳細な手順については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)」を参照してください。
 
@@ -76,19 +73,19 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | セグメント | このユーザーはセグメントに含まれています。一覧からセグメントを選択して表示します。 |
 | コミュニケーション統計 | このユーザーが各チャネルから御社からのメッセージを最後に受信した時期。 |
 | アトリビューションのインストール | ユーザーがアプリをインストールした方法と日時に関する情報。[ユーザーインストールの理解]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)について詳しく説明します。 |
-| その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)。 |
+| その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/)。 |
 | 受信したキャンバスメッセージ | このユーザーが受信したキャンバスメッセージとその時期。リストからメッセージを選択して表示します。 |
-| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn)および[イベント予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases)のスコア。 |
+| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/)および[イベント予測]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/)のスコア。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。][3]
 
 ### [メッセージ履歴] タブ
 
-ユーザープロファイルの [**メッセージ履歴**] タブには、過去30日間の個々のユーザーの最近のメッセージング関連イベント (約40件) が表示されます。これらのイベントには、ユーザーに送られたメッセージ、ユーザーが受信したメッセージ、ユーザーが処理したメッセージなどが含まれます。このタブのデータは、ユーザーがマージされた後は更新されないことに注意してください。
+ユーザープロファイルの「**メッセージ履歴」**タブには、ユーザー個人の過去30日間の最近のメッセージング関連イベント（約40件）が表示される。これらのイベントには、ユーザーに送られたメッセージ、ユーザーが受信したメッセージ、ユーザーが処理したメッセージなどが含まれます。このタブのデータは、ユーザーがマージされた後は更新されないことに注意してください。
 
 {% alert note %}
-このテーブルにフィードバックがある場合、または具体的なイベントを表示したい場合は、件名行"Messaging History Tab フィードバック" で[ユーザー-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) をメールしてください。
+この表についてフィードバックがある場合、または特定のイベントを見たい場合は、[user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback)に件名を「メッセージング履歴タブのフィードバック」としてメールを送ってほしい。
 {% endalert %}
 
 ![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。][5]
@@ -99,7 +96,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ##### メッセージエンゲージメントイベント
 
-次のメッセージエンゲージメントイベントは、メール、SMS、プッシュ、アプリ内メッセージ、コンテンツカード、Webhook で使用できます。特定のイベントの追跡方法の詳細については、[メッセージエンゲージメントイベントの用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events)を参照してください。
+次のメッセージエンゲージメントイベントは、メール、SMS、プッシュ、アプリ内メッセージ、コンテンツカード、Webhook で使用できます。特定のイベントの追跡方法の詳細については、[メッセージエンゲージメントイベントの用語集]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)を参照してください。
 
 | チャネル | 利用可能な参加イベント |
 | --- | --- |
@@ -126,11 +123,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ##### フリークエンシーキャップイベント
 
-フリークエンシーキャップイベントは、ユーザーがメッセージを受信する資格はあるが、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)の設定により実際には受信しなかった場合に発生します。フリークエンシーキャップ設定は、[**設定**] > [**フリークエンシーキャップルール**] からカスタマイズできます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**グローバルメッセージの設定]** からフリークエンシーキャップを管理できます。
-{% endalert %}
+フリークエンシーキャップイベントは、ユーザーがメッセージを受信する資格があるにもかかわらず、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)設定のために実際にメッセージを受信しなかった場合に発生する。フリークエンシーキャップ設定は、[**設定**] > [**フリークエンシーキャップルール**] からカスタマイズできます。
 
 ##### 空白の送信先
 
@@ -142,7 +135,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 メールの開封追跡は、Braze を含むどのツールでもエラーが発生しやすくなります。さまざまなメールクライアントが提供するさまざまなプライバシー保護機能により、画像の自動読み込みをブロックしたり、サーバーに積極的に読み込んだりするため、メール開封イベントは誤検知と誤陰性の両方の影響を受けやすくなります。
 
-メールの開封統計は、たとえばさまざまな件名の有効性を比較する場合など、概して役立つ場合がありますが、個々のユーザーの個別の開封イベントに意味があると考えるべきではありません。
+メールの開封統計は、例えば異なる件名の効果を比較するために集計することは有用であるが、個々のユーザーの開封イベントを意味のあるものと仮定すべきではない。
 
 
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

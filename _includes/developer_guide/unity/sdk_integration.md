@@ -1,10 +1,6 @@
 ## About the Unity Braze SDK
 
-For a full list of types, functions, variables, and more, see [Unity Declaration File](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
-
-{% alert tip %}
-If you've already integrated Unity manually for iOS, you can switch to an automated integration instead. For a full walkthrough, see [Switch to an automated integration](#switch-to-an-automated-integration-swift-only).
-{% endalert %}
+For a full list of types, functions, variables, and more, see [Unity Declaration File](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs). Additionally, if you've already integrated Unity manually for iOS, you can [switch to an automated integration](#unity_automated-integration) instead.
 
 ## Integrating the Unity SDK
 
@@ -121,7 +117,7 @@ To fullo [`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifes
 ```
 
 {% alert important %}
-All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK, otherwise your analytics won't be collected. If you add your own Activity class, be sure you [extend the Braze Unity player](#extending-the-braze-unity-player-android-only) so you can prevent this.
+All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK, otherwise your analytics won't be collected. If you add your own Activity class, be sure you [extend the Braze Unity player](#unity_extend-unity-player) so you can prevent this.
 {% endalert %}
 
 #### Step 3.2: Update `AndroidManifest.xml` with your package name
@@ -227,14 +223,14 @@ If you experience any issues after running these commands, refer to [Unity: Comm
 2. If there's any files you don't want want to import, deselect them now.
 3. Customize the exported Unity package located in `Assets/Editor/Build.cs`.
 
-## Switch to an automated integration (Swift only)
+## Switch to an automated integration (Swift only) {#automated-integration}
 
 To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
 1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
 2. Remove Braze iOS libraries from your Unity or Xcode project (such as `Appboy_iOS_SDK.framework` and `SDWebImage.framework`).
-3. Import the Braze Unity package into your project again. For a full walkthrough, see [Step 2: Import the package](#step-2-import-the-package).
-4. Set your API key again. For a full walkthrough, see [Step 3.1: Set your API key](#step-31-set-your-api-key).
+3. Import the Braze Unity package into your project again. For a full walkthrough, see [Step 2: Import the package](#unity_step-2-import-the-package).
+4. Set your API key again. For a full walkthrough, see [Step 3.1: Set your API key](#unity_step-31-set-your-api-key).
 
 ## Optional configurations
 
@@ -255,7 +251,7 @@ To use the Braze Unity plugin with Prime31 plugins, edit your project's `Android
 
 Braze supports integrating [ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating ADM with Braze, visit our [ADM push integration instructions]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=unity).
 
-### Extending the Braze Unity player (Android only)
+### Extending the Braze Unity player (Android only) {#extend-unity-player}
 
 The example `AndroidManifest.xml` file provided has one Activity class registered, [`BrazeUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e804cb3a10ae68364b354b52abf1bef8a0d1a9dc/android-sdk-unity/src/main/java/com/braze/unity/BrazeUnityPlayerActivity.kt). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
 

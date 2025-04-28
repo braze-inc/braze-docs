@@ -115,7 +115,7 @@ Consulta [Otras personalizaciones](#other-customizations) para conocer otras for
 A medida que construyes tu correo electrónico, puedes alternar entre una vista de escritorio y una vista móvil para previsualizar cómo se verá tu mensaje de correo electrónico para tus grupos de usuarios. Esto comprobará que tu contenido es responsivo, y podrás hacer los ajustes necesarios sobre la marcha.
 
 {% alert tip %}
-¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
+¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
 ![Botón Copywriter, situado en el panel Contenido junto a Ajustes de estilo en el editor de arrastrar y soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -232,6 +232,14 @@ La personalización líquida no es compatible con los bloques de imágenes y los
 
 Puede optar por incluir imágenes dinámicas en sus mensajes de correo electrónico incluyendo Liquid en su atributo de fuente de imagen. Por ejemplo, en lugar de una imagen estática, puede insertar {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL de la imagen para incluir el nombre de pila de un usuario en la imagen. Esto ayuda a personalizar sus correos electrónicos para cada usuario.
 
+### Cambiar la dirección del texto
+
+Al redactar tu mensaje, puedes alternar la dirección del texto entre izquierda-derecha y derecha-izquierda seleccionando el botón **Dirección del texto** correspondiente. Puedes utilizar esta opción cuando crees mensajes en idiomas como el árabe y el hebreo.
+
+![Menú del editor de arrastrar y soltar de correo electrónico con botón para alternar la alineación del texto entre derecha-izquierda e izquierda-derecha.][1]{: style="max-width:50%;"}
+
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 ### Añadir atributos HTML a los enlaces
 
 ![La sección "Atributos" con el atributo "clicktracking" desactivado para un enlace.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -265,3 +273,4 @@ También puede integrarse con uno de nuestros socios de atribución, como [Branc
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

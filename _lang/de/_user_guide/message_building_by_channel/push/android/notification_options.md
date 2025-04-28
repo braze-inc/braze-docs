@@ -17,7 +17,7 @@ channel:
 
 ## Stille Benachrichtigungen
 
-Wenn Sie [Ihre Push-Benachrichtigung verfassen]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message), **können** Sie eine Android-Push-Nachricht **nicht** ohne Titel versenden - Sie können stattdessen ein einzelnes Leerzeichen eingeben. Denken Sie daran: Wenn Ihre Nachricht nur ein einziges Leerzeichen enthält, wird sie als stille Push-Benachrichtigung gesendet. Weitere Informationen finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+Wenn Sie [Ihre Push-Benachrichtigung verfassen]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message), **können** Sie eine Android-Push-Nachricht **nicht** ohne Titel versenden - Sie können stattdessen ein einzelnes Leerzeichen eingeben. Denken Sie daran: Wenn Ihre Nachricht nur ein einziges Leerzeichen enthält, wird sie als stille Push-Benachrichtigung gesendet. Weitere Informationen finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
 ## Benachrichtigungsgruppen
 

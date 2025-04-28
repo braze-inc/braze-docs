@@ -1,16 +1,27 @@
 ---
 nav_title: Wiederholungen verbundener Inhalte
 article_title: Wiederholungen verbundener Inhalte
-page_order: 3
+page_order: 5
 description: "In diesem Referenzartikel erfahren Sie, wie Sie mit Connected-Content-Wiederholungen umgehen können."
 
 ---
 
-# Erneute Connected-Content-Versuche
+# Wiederholungslogik für Connected-Content verwenden
 
-> Da Connected-Content auf den Empfang von Daten aus APIs angewiesen ist, besteht die Möglichkeit, dass eine API zeitweise nicht verfügbar ist, während Braze den Aufruf durchführt. In diesem Fall unterstützt Braze die Wiederholungslogik, um die Anfrage mit exponentiellem Backoff erneut zu versuchen. 
+> Auf dieser Seite erfahren Sie, wie Sie Ihren Connected-Content-Aufrufen Wiederholungsversuche hinzufügen können.
 
-Um Wiederholungen zu ermöglichen, fügen Sie `:retry` in den Aufruf von Connected-Content ein, wie im folgenden Code Snippet gezeigt:
+## Wie Wiederholungen funktionieren 
+
+Da Connected-Content auf den Empfang von Daten aus APIs angewiesen ist, kann eine API zeitweise nicht verfügbar sein, während Braze den Aufruf durchführt. In diesem Fall unterstützt Braze die Wiederholungslogik, um die Anfrage mit exponentiellem Backoff erneut zu versuchen.
+
+{% alert note %}
+Connected-Content `:retry` ist für In-App-Nachrichten nicht verfügbar.
+{% endalert %}
+
+## Wiederholungslogik verwenden
+
+Um die Wiederholungslogik zu verwenden, fügen Sie den Tag `:retry` zum Aufruf von Connected-Content hinzu, wie im folgenden Code-Snippet gezeigt:
+
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}
@@ -18,15 +29,16 @@ Um Wiederholungen zu ermöglichen, fügen Sie `:retry` in den Aufruf von Connect
 ```
 {% endraw %}
 
-Wenn der API-Aufruf fehlschlägt und diese Funktion aktiviert ist, versucht Braze den Aufruf erneut, wobei das von Ihnen festgelegte [Ratenlimit][47] für jede erneute Übertragung eingehalten wird. Braze verschiebt alle fehlgeschlagenen Nachrichten an das Ende der Warteschlange und fügt gegebenenfalls zusätzliche Minuten zu den Gesamtminuten hinzu, die für den Versand Ihrer Nachricht erforderlich wären.
+Wenn ein `:retry` Tag im Connected-Content-Aufruf enthalten ist, wird Braze versuchen, den Aufruf bis zu fünf Mal zu wiederholen.
 
-Wenn ein Wiederholungsversuch erfolgreich war, wird die Nachricht gesendet und es werden keine weiteren Wiederholungsversuche für diese Nachricht unternommen. Wenn der Aufruf von Connected-Content 5 Mal fehlschlägt, wird die Nachricht abgebrochen, ähnlich wie wenn ein [Tag für den Abbruch einer Nachricht][1] getriggert wurde.
+### Ergebnisse der Wiederholungsversuche
 
-{% alert note %}
-Connected-Content `:retry` ist für In-App-Nachrichten nicht verfügbar.
-{% endalert %}
+#### Wenn ein Wiederholungsversuch erfolgreich ist
 
+Wenn ein Wiederholungsversuch erfolgreich ist, wird die Nachricht gesendet und es werden keine weiteren Wiederholungsversuche für diese Nachricht unternommen.
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[16]: [success@braze.com](mailto:success@braze.com)
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+#### Wenn der API-Aufruf fehlschlägt und Wiederholungsversuche aktiviert sind
+
+Wenn der API-Aufruf fehlschlägt und diese Funktion aktiviert ist, versucht Braze den Aufruf erneut, wobei das von Ihnen festgelegte [Ratenlimit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) für jede erneute Übertragung eingehalten wird. Braze verschiebt alle fehlgeschlagenen Nachrichten an das Ende der Warteschlange und fügt gegebenenfalls zusätzliche Minuten zu den Gesamtminuten hinzu, die für den Versand Ihrer Nachricht erforderlich wären.
+
+Wenn der Aufruf von Connected-Content mehr als fünf Mal fehlschlägt, wird die Nachricht abgebrochen, ähnlich wie ein [Tag für den Abbruch einer Nachricht]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) getriggert wird.

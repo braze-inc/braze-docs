@@ -27,7 +27,7 @@ Você pode ativar a nova navegação a qualquer momento, selecionando **Mudar pa
 
 ## O que esperar a seguir
 
-Você ainda poderá alternar entre a navegação nova e a antiga até **janeiro de 2025**.
+Você ainda poderá alternar entre a navegação nova e a antiga até **março de 2025**.
 
 ## O que mudou
 

@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, Braze requires an external image library to display animated GIFs.
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Using runtime configuration
 
@@ -47,7 +47,7 @@ Another example can be found in our [Hello Braze sample app](https://github.com/
 
 You can initialize, configure, and implement the [Google Tag Manager](https://tagmanager.google.com/) into your Android or FireOS app.
 
-In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for Android, they can control which of Braze's third-party vendors receive this event, and create tags specific to Braze.
+In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for Android, they can control which of the Braze third-party vendors receive this event, and create tags specific to Braze.
 
 ### Step 1: Create a trigger for custom events
 

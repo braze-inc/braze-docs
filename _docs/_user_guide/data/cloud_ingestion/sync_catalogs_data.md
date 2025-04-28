@@ -187,7 +187,7 @@ GO
 
 {:start="2"}
 
-2. Set up a sevice principal and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the catalog source table. To learn more about how to create a new service principal and credentials, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page. 
+2. Set up a service principal and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the catalog source table. To learn more about how to create a new service principal and credentials, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page. 
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).

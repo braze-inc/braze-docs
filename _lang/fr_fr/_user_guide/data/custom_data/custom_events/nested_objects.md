@@ -35,6 +35,8 @@ Vous pouvez accéder aux données imbriquées dans votre événement personnalis
 
 ![][6]{: style="max-width:80%;"}
 
+Si de nouvelles propriétés sont envoyées à l'avenir, elles ne figureront pas dans le schéma tant qu'il n'aura pas été régénéré. Les schémas peuvent être régénérés toutes les 24 heures.
+
 ## Étape 2 : Utiliser l'objet imbriqué
 
 Après avoir généré un schéma, vous pouvez référencer les données imbriquées lors de la segmentation et de la personnalisation. Vous trouverez des exemples d'utilisation dans les sections suivantes :
@@ -102,6 +104,10 @@ Voici un exemple d’événement personnalisé `/users/track` « Commandé ».
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Pour les propriétés d'événement personnalisé imbriquées, si l'année est inférieure à 0 ou supérieure à 3000, Braze ne stocke pas ces valeurs sur l'utilisateur.
+{% endalert %}
+
 ### Modèles Liquid
 
 L'exemple suivant montre comment créer un modèle Liquid qui fait référence aux propriétés imbriquées demandées dans la [requête API précédente.](#api-request-body)
@@ -166,6 +172,8 @@ Pour segmenter les utilisateurs en fonction des propriétés d'événements imbr
 ![][4]
 
 La segmentation utilise la même notation que le déclenchement (voir [Déclenchement des messages](#message-triggering)).
+
+Pour modifier ou créer des extensions de segments, vous devez disposer de l'autorisation "Modifier les segments".
 
 ### Personnalisation
 

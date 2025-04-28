@@ -19,14 +19,16 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ## How it works
 
-Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be be accessed using the Liquid `context`.
+Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be accessed using the Liquid `context`.
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 There are two ways to set context variables:
 
-- **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variable.
+- **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variables.
 - **Using a Context step:** You can create or update context variables in the step editor.
+
+Note that any variables included in the context variable aren't automatically stored in the user profile.
 
 ## Creating a Context step
 
@@ -34,19 +36,19 @@ To create a Context step, add a step to your Canvas. Then, drag and drop the com
 
 ### Defining context variables
 
-1. Give your Context variable a name.
+1. Give your context variable a name.
 2. Select a data type.
-3. Enter a Liquid expression or select the **Add Personalization** button. This generates a Liquid snippet to use in your Liquid expression.
+3. Enter a Liquid expression or select the **Add Personalization** button.
 4. Select **Preview** to view the context variable.
 5. Select **Done** to save the step.
 
-You can use Context variables anywhere you can use Liquid, such as in Message and User Update steps, with the **Add Personalization** button.
+You can use context variables anywhere you can use Liquid, such as in Message and User Update steps, with the **Add Personalization** button.
 
 ## Context variable types
 
-Canvas Context variables that are created or updated in the step can be assigned types. Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated.
+Context variables that are created or updated in the step can be assigned types. Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated.
 
-For example, if the context variable data type is set to **Date** but the value isn’t a date, then the variable won’t be updated. This means the following will occur:
+For example, if the context variable data type is set to **Date** but the value isn’t that type, then the variable won’t be updated. This means the following will occur:
 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
 - In your Canvas step analytics, this will be counted as *Not Updated*.

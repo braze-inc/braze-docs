@@ -34,7 +34,7 @@ Braze 대시보드에서 **템플릿** > **웹훅 템플릿으로** 이동합니
 
 1. 웹훅 템플릿에 고유한 이름을 지정하세요.
 2. (선택 사항) 템플릿 설명을 추가하여 이 템플릿의 사용 방법을 설명합니다.
-3. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가하여 템플릿을 찾고 필터링할 수 있습니다.
+3. 템플릿을 찾고 필터링하는 데 도움이 필요하면 [팀]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) 및 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)를 추가하세요.
 
 ## 4단계: 템플릿 구축
 

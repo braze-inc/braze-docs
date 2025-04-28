@@ -32,7 +32,7 @@ Hay dos pasos clave para crear un flujo de trabajo de puntuación de clientes po
 1. Vaya al paso **Programa de entrada** y seleccione un programa de entrada **basado en acciones**. Esto introducirá a los usuarios en el Canvas cuando realicen acciones específicas.
 
 2. En **Opciones basadas en acciones**, añada estas dos acciones:
-    - **Cambia el valor del atributo personalizado** por el nombre de tu atributo de puntuación de clientes potenciales (como `lead score`). Si aún no ha creado un atributo de puntuación de clientes potenciales, siga los pasos de [Atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). Esto introducirá a los usuarios en el Canvas cada vez que cambie su puntuación de cliente potencial.
+    - **Cambia el valor del atributo personalizado** por el nombre de tu atributo de puntuación de clientes potenciales (como `lead score`). Si aún no ha creado un atributo de puntuación de clientes potenciales, siga los pasos de [Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Esto introducirá a los usuarios en el Canvas cada vez que cambie su puntuación de cliente potencial.
     - **Agregar una dirección de correo electrónico**
 
 ![Paso 2 de la creación de un Canvas con el horario de entrada de "Basado en la acción" y las opciones basadas en la acción de cambiar un atributo personalizado "puntuación de clientes potenciales" y añadir una dirección de correo electrónico.][2]{: style="max-width:80%;"}
@@ -132,13 +132,13 @@ Como herramienta de marketing, Braze contiene datos extremadamente relevantes qu
 
 Por ejemplo, los datos de participación en la mensajería (como aperturas y clics de correos electrónicos, participación en la página de destino y otros) pueden determinar el nivel de participación de un cliente potencial. Puede devolver estos datos a su almacén de datos en la nube y hacer que estén disponibles como entrada para sus modelos de puntuación de clientes potenciales utilizando las soluciones de exportación de datos en flujo Braze:
 
-- [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Intercambio seguro de datos Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze como destino %}
 
-Después de que sus equipos internos hayan creado y ejecutado su modelo de puntuación de clientes potenciales, puede volver a introducir esos datos en Braze para poder segmentar y dirigir mejor a los clientes potenciales los mensajes pertinentes. Puedes hacerlo con [la Ingesta de datos en la nube Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
+Después de que sus equipos internos hayan creado y ejecutado su modelo de puntuación de clientes potenciales, puede volver a introducir esos datos en Braze para poder segmentar y dirigir mejor a los clientes potenciales los mensajes pertinentes. Puedes hacerlo con [la Ingesta de datos en la nube Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
 Con Cloud Data Ingestion, sus equipos internos crearán una nueva tabla o vista con sus identificadores de usuario, las últimas puntuaciones de clientes potenciales y las marcas de tiempo en las que se actualizaron las puntuaciones. Braze recogerá la tabla o vista y añadirá las puntuaciones de los clientes potenciales a los perfiles de usuario.
 
@@ -182,7 +182,7 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 | Encabezado | Contenido |
 | --- | --- |
-| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_feb305f4-e0a7-425e-964e-f3772014dcfb/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_a5e52bae-063e-4969-a48a-fbffd4ee769b/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

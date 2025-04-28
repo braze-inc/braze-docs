@@ -31,8 +31,8 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encont
 {:start="2"}
 2\. Selecciona **Tarjetas de contenido** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
 3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario.
-   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puedes filtrar por las etiquetas correspondientes.
+4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puedes filtrar por las etiquetas correspondientes.
 5. Añade y nombra tantas variantes como quieras para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre las variantes, consulta [Pruebas multivariantes y A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -81,6 +81,10 @@ Selecciona **Añadir idiomas** para añadir los idiomas que desees de la lista p
 
 ![Una ventana con el inglés, el español y el francés seleccionados para los idiomas, y el título, la descripción y el texto del enlace seleccionados para los campos a internacionalizar.][2]{: style="max-width:70%;"}
 
+##### Crear mensajes de derecha a izquierda
+
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 #### Título y mensaje
 
 Escribe lo que quieras. No hay límites, pero cuanto más rápido transmitas tu mensaje y consigas que tu cliente haga clic, ¡mejor! Recomendamos títulos y contenidos de mensajes claros y concisos. Ten en cuenta que estos campos no se proporcionan para las tarjetas de sólo imagen.
@@ -105,8 +109,8 @@ Las siguientes acciones están disponibles para los enlaces de la tarjeta de con
 |---|---|
 | Redirigir a URL de página web | Abrir una página web no nativa. |
 | [Vínculo profundo a la aplicación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Enlace profundo a una pantalla existente en su aplicación. |
-| Registrar evento personalizado | Elija un [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) para activar. Puede utilizarse para mostrar otra tarjeta de contenido o activar mensajes adicionales. |
-| Registrar atributo personalizado | Elija un [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) para establecer para el usuario actual. |
+| Registrar evento personalizado | Elija un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) para activar. Puede utilizarse para mostrar otra tarjeta de contenido o activar mensajes adicionales. |
+| Registrar atributo personalizado | Elija un [atributo personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) para establecer para el usuario actual. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Nota**: Las opciones __Log Custom Event__ y __Log Custom Attribute__ requieren la compatibilidad con la siguiente versión del SDK:
@@ -212,8 +216,10 @@ Puede especificar varios eventos personalizados y compras que deben eliminar una
 Las tarjetas de contenido no se pueden editar una vez enviadas. Si necesitas hacer cambios en tarjetas que ya han sido enviadas, considera la posibilidad de [volver a ser elegible para la campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/), como se muestra en las siguientes opciones.
 
 {% alert note %}
-Las tarjetas de contenido que se utilizan [en la primera impresión]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilizan la hora de impresión para calcular la reelegibilidad; sin embargo, todos los demás tipos de tarjetas de contenido utilizan la hora de envío o de impresión más tardía.
+Cuando una tarjeta de contenido vuelve a ser elegible, puede enviarse de nuevo cuando la tarjeta original aún está en la aplicación de un usuario. Para evitar la duplicación de tarjetas en la aplicación de un usuario, puedes desactivar la reelegibilidad o ampliar la ventana de reelegibilidad para que no se envíe a los usuarios una nueva tarjeta hasta que la original haya caducado.
 {% endalert %}
+
+Ten en cuenta también que las tarjetas de contenido que se utilizan [en la primera impresión]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilizan el tiempo de impresión para calcular la nueva elegibilidad. Sin embargo, las tarjetas de contenido creadas en el lanzamiento de la campaña o en la entrada en Canvas utilizan la hora de envío o de impresión que sea más tardía.
 
 #### Opción 1: Duplicar la campaña
 

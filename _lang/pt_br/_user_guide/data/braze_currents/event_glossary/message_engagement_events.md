@@ -1,6 +1,7 @@
 ---
 nav_title: Evento de engajamento com mensagem
 layout: message_engagement_events_glossary
+alias: /message_events_glossary/
 page_order: 5
 excerpt_separator: ""
 page_type: glossary
@@ -3089,7 +3090,7 @@ Esse evento ocorre quando a Braze processa uma mensagem push para um usuário, c
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados [do Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
 - `message_extras` permite que você anote seus eventos de envio com dados dinâmicos do conteúdo conectado, atributos personalizados (como idioma, país) e propriedades de entrada nos canvas. Consulte [Envio de mensagens extras]({{site.baseurl}}/message_extras_tag/) para saber mais.
   {% endapi %}
@@ -3317,7 +3318,7 @@ Esse evento ocorre quando um usuário clica diretamente na notificação por pus
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
   {% api %}
@@ -3486,7 +3487,7 @@ Esse evento não é compatível com nosso [Swift SDK](https://github.com/braze-i
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
   {% api %}
@@ -5470,6 +5471,10 @@ Mensagens no app, impressões
 
 Esse evento ocorre quando um usuário visualiza uma mensagem no app.
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -5695,7 +5700,7 @@ O campo `message_extras` estará ativo em 4 de abril de 2024.
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
 
@@ -5708,6 +5713,10 @@ Mensagens no app, cliques
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em uma mensagem no app.
+
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -5930,7 +5939,7 @@ Esse evento ocorre quando um usuário clica em uma mensagem no app.
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
 
@@ -6134,6 +6143,10 @@ Cartões de conteúdo, envios
 
 Esse evento ocorre quando um cartão de conteúdo é enviado a um usuário.
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6328,6 +6341,10 @@ Cartões de conteúdo, impressões
 
 Esse evento ocorre quando um usuário visualiza um cartão de conteúdo.
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6544,7 +6561,7 @@ Esse evento ocorre quando um usuário visualiza um cartão de conteúdo.
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
 
@@ -6557,6 +6574,10 @@ Cartões de conteúdo, cliques
 
 Esse evento ocorre quando um usuário clica em um cartão de conteúdo.
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6773,7 +6794,7 @@ Esse evento ocorre quando um usuário clica em um cartão de conteúdo.
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
 
@@ -6787,6 +6808,10 @@ Cartões de conteúdo, descarte de cartão
 
 Esse evento ocorre quando um usuário descarta um cartão de conteúdo.
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -7003,7 +7028,7 @@ Esse evento ocorre quando um usuário descarta um cartão de conteúdo.
 
 #### Detalhes da propriedade
 
-- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de publicidade do Google do Android por meio dos SDKs nativos. Saiba mais sobre essa configuração para [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) e [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Se estiver usando o Kafka para ingerir dados do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com o gerente de sucesso do cliente para ativar o envio de `ad_id`.
   {% endapi %}
 
@@ -8643,6 +8668,10 @@ Esse evento ocorre quando um usuário realiza uma ação que foi definida como u
 Note que o evento de conversão é codificado no campo `conversion_behavior`, que inclui o tipo de evento de conversão, a janela (período) e informações adicionais, dependendo do tipo de evento de conversão. O campo `conversion_behavior_index` representa qual evento de conversão, como 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9308,6 +9337,10 @@ Campanha, Entrada
 {% endapitags %}
 
 Esse evento ocorre quando um usuário é inscrito em um conjunto de variantes de controle em uma campanha com várias variantes. Esse evento é gerado porque não haverá nenhum evento de envio de canal para esse usuário.
+
+{% alert note %}
+`dispatch_id` está obsoleto e será removido na próxima versão do Currents.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}

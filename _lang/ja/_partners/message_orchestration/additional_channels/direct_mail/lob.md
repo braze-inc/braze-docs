@@ -37,10 +37,6 @@ Webhook で要求する HTTP URL は、Lob に対して実行できるアクシ�
 
 今後のキャンペーンやCanvasで使用するLobウェブフックテンプレートを作成するには、Brazeプラットフォームの**Templates**>**Webhook Templatesに**移動する。 
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
-
 単発のLob Webhookキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeで**Webhookを**選択する。
 
 新しいWebhookテンプレートで、以下のフィールドに記入する：

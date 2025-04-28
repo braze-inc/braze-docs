@@ -1,198 +1,66 @@
 ---
-nav_title: Navigation
-article_title: Braze Navigation
-alias: /navigation/
+nav_title: Navigieren in Braze
+article_title: Navigieren in Braze
+alias: /navigating_braze/
 page_order: 0
 page_type: reference
-description: "Dieser Artikel beschreibt die Änderungen in der Braze-Navigation."
+description: "Diese Anleitung erklärt, wie Sie die aktualisierte Navigation verwenden."
 ---
 
-# Braze Navigation
+# Navigieren in Braze
 
-> Wir aktualisieren die Navigation in Braze, damit Sie Ihre Inhalte schneller und effizienter erstellen und darauf zugreifen können. Um Ihnen und Ihrem Team die Umstellung zu erleichtern, erfahren Sie in diesem Leitfaden, was sich geändert hat und was Sie als nächstes erwarten können.
+Die Navigation von Braze wurde entwickelt, um Ihnen den effizienten Zugriff auf Features und Inhalte auf allen Geräten zu ermöglichen. Lassen Sie uns herausfinden, wie Sie das Beste daraus machen können.
 
-![Die Seitenleiste von Braze demonstriert das Untermenü, das angezeigt wird, wenn Sie den Mauszeiger über einen Hauptabschnitt bewegen.]({% image_buster /assets/img/navigation/sidebar_behavior.gif %}){: style="max-width:50%;float:right;margin-left:15px"}
+- **Vereinfachte Menüs:** Navigieren Sie intuitiv mit einer vertikalen Menüstruktur, die die Tools in gestapelten Untermenüs organisiert.
+- **Leistungsstarke Suche:** Suchen Sie Seiten oder Artikel nach Name, Typ oder sogar früheren Namen mit der globalen Suchleiste.
+- **Mobilfreundliches Design:** Greifen Sie auf die volle Funktionalität von Braze Navigation auf jedem Gerät zu.
 
-Die neue Navigation von Braze bietet eine völlig neu gestaltete Informationsarchitektur (wie Informationen organisiert, gruppiert und präsentiert werden), um jeden Teil von Braze besser durchsuchbar und verständlich zu machen.
+{% alert note %}
+Dieses Update vereinfacht Ihr Erlebnis, indem es alle Nutzer:innen auf eine einheitliche Navigation umstellt. Die Option, zwischen den Navigationsversionen zu wechseln, ist nicht mehr verfügbar.
+{% endalert %}
 
-Die Funktionen sind jetzt in intuitive Kategorien eingeteilt, die für den Arbeitsablauf eines Marketers in Braze vertraut und relevant sind. Bewegen Sie den Mauszeiger über einen Hauptbereich in der Seitenleiste, um das Untermenü zu öffnen und alle verfügbaren Seiten in diesem Bereich anzuzeigen.
+## Verwendung des Menüs
 
-Einige Seiten wurden umbenannt, um ihren Inhalt besser darzustellen. Eine vollständige Liste der neuen Funktionen finden Sie auf der Registerkarte **Änderungen** im Abschnitt [Sidebar](#sidebar) dieses Artikels.
+Dank der vertikalen Menüstruktur sind die von Ihnen am häufigsten verwendeten Tools nur einen Tastendruck entfernt. Wählen Sie einen Artikel des Hauptmenüs aus, um seine Optionen in einem gestapelten vertikalen Layout anzuzeigen. 
 
-## Wechseln Sie zur neuen Navigation
+![Nutzer:innen wählen die Seite "Einstellungen", um das Untermenü als gestapeltes vertikales Menü nach rechts zu öffnen.][1]
 
-Sie können die neue Navigation jederzeit einschalten, indem Sie in der globalen Kopfzeile **Zu neuer Navigation wechseln** wählen.
+## Globale Suche
 
-![Globaler Header von Braze mit einem Button zum Wechseln zur neuen Navigation.]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="max-width:70%"}
+Die globale Suche in der Kopfzeile ist der schnellste Weg, um etwas in Braze zu finden. Wählen Sie die Suchleiste aus oder drücken Sie Strg + K unter Windows oder ⌘ + K auf dem Mac, um direkt dorthin zu springen. 
 
-## Was Sie als nächstes erwartet
+![Die globale Suche ist ohne Eingabe von Suchbegriffen geöffnet und zeigt die zuletzt geöffneten Seiten an.][2]
 
-Sie werden noch bis **Januar 2025** zwischen der neuen und der alten Navigation hin- und herwechseln können.
+Die Suche versteht Synonyme für Seiten, die in unserer aktualisierten Navigation umbenannt worden sind. Zum Beispiel findet es "Datenexport", wenn Sie nach "Currents" suchen, da diese Seite umbenannt wurde.
 
-## Was sich geändert hat
+![Ergebnisse für die Suche nach "currents" werden angezeigt: "Daten exportieren". Zuvor 'Currents'."][3]
 
-### App-Gruppe umbenennen
+## Minimierung der Seitennavigation
 
-Im Rahmen unserer Änderungen an der Navigation und Informationsarchitektur haben wir "App-Gruppe" in "Arbeitsbereich" umbenannt. Wir sind uns darüber im Klaren, dass die Bezeichnung "App-Gruppe" nicht die Art und Weise widerspiegelt, wie viele Benutzer die Braze-Plattform betreten, sich ihr nähern und sie nutzen. Um die vielen Anwendungsfälle von Braze besser widerzuspiegeln, heißt „App-Gruppe“ jetzt „Workspace“.
+Um die visuelle Unordnung zu reduzieren und sich auf Ihren Workspace zu konzentrieren, können Sie das seitliche Navigationspanel minimieren. Drücken Sie auf **Menü minimieren**, um die Navigation auszublenden. Dies ist besonders hilfreich, wenn Sie in Canvas arbeiten, um Nutzer:in zu entwerfen. 
 
-Wenn Sie unsere aktualisierte Navigation verwenden, wird diese Änderung überall auf der Plattform angezeigt.
+![Nutzer:in erweitert und reduziert das Navigationsmenü auf der linken Seite in Braze-Canvas und schaltet zwischen Volltextbeschriftung und reiner Symbolansicht um.][4]
 
-### Schnelle Links
+Selbst im minimierten Zustand können Sie mit dem Mauszeiger über die Symbole fahren, um Tooltips mit den Namen der Artikel für den schnellen Zugriff anzuzeigen.
 
-**Segments**Greifen Sie ganz einfach auf die Seiten **Canvas**, **Kampagnen** und **Segmente** zu, indem Sie die Schnelllinks in der Seitenleiste nutzen.
+![Die Navigation in Braze ist minimiert und zeigt einen Tooltip für "Zielgruppe" an, wenn der Fokus auf den Artikel im Menü "Zielgruppe" gesetzt wird.][5]{:style="max-width:50%"}
 
-![Seitenleiste von Braze mit schnellen Links zu den Seiten Kampagnen, Canvas und Segmente.]({% image_buster /assets/img/navigation/quick_links.png %}){: style="max-width:70%"}
+## Responsive Navigation
 
-### Globale Kopfzeile
+Die Navigation passt sich nahtlos an alle Gerätegrößen an. Auf kleineren Bildschirmen wird die Seitennavigation automatisch eingeklappt. Drücken Sie <i class="fa-solid fa-bars" aria-label="Navigationsmenü öffnen"></i> um das Menü bei Bedarf zu öffnen. 
 
-{% tabs %}
-{% tab Neue Navigation %}
+![Auf kleineren Bildschirmen wird die Seitennavigation automatisch eingeklappt. Das Tippen auf das Menüsymbol öffnet die Navigationsoptionen.][6]
 
-![]({% image_buster /assets/img/navigation/global_header_new.png %}){: style="border:0"}
+## Feedback teilen
 
-1. **SELEKTOR** – Der Name des Workspace, in dem Sie sich gerade befinden. Wählen Sie dieses Dropdown-Menü, um den Arbeitsbereich zu wechseln.
-2. **Tour durch die neue Navigation** \- Gehen Sie erneut auf die Navigationstour oder erweitern Sie das Dropdown-Menü, um auf die Optionen für die Dokumentation zuzugreifen oder uns Feedback zur neuen Navigation zu senden.
-3. **Suchen** \- Suchen Sie nach Seiten und finden Sie Ihre Arbeit anhand des Namens oder der API-ID.
-4. **Support** \- Überprüfen Sie unseren Systemstatus und greifen Sie auf Links zur Braze-Dokumentation und zu Braze Learning zu oder lassen Sie sich vom Support helfen.
-5. **Community** \- Zugriff auf Links zur Braze Bonfire-Community, unserem Blog, Fallstudien und der Produkt-Roadmap.
-6. **Sprache** \- Wählen Sie dieses Dropdown-Menü, um die Sprache Ihres Braze-Dashboards zu ändern.
-7. **Benachrichtigungen** \- Zeigen Sie Ihre Dashboard-Benachrichtigungen an.
-8. **Ihr Profil** \- Sehen Sie sich Ihr Kontoprofil an, ändern Sie die Sprache, in der das Dashboard angezeigt wird, oder melden Sie sich ab.
+Sie können Ihr Feedback zu Themen wie Navigation, Benutzerfreundlichkeit, Zugänglichkeit, visuelle Attraktivität oder zu allem anderen, was Ihnen wichtig ist, abgeben. Öffnen Sie das Menü **Support** in der globalen Kopfzeile und wählen Sie **Share feedback**, um uns Ihre Meinung mitzuteilen. Ihr Beitrag hilft uns, Braze zu verbessern, und wir freuen uns, von Ihnen zu hören!
 
-{% endtab %}
-{% tab Alte Navigation %}
+![Das Support-Menü öffnet sich und zeigt die Optionen für Braze Dokumentation, Braze Lernangebote, Feedback teilen und Hilfe holen.][7]{:style="max-width:50%"}
 
-![]({% image_buster /assets/img/navigation/global_header_old.png %}){: style="border:0"}
-
-1. **Braze-Logo** \- Wählen Sie diese Option, um zur Braze-Homepage zu gelangen.
-2. **Seitenname** \- Der Name der Seite, auf der Sie sich gerade befinden.
-3. **Zur neuen Navigation wechseln** \- Schalten Sie Ihre Ansicht auf die neue Navigation um oder erweitern Sie das Dropdown, um auf die Dokumentation zuzugreifen.
-3. **Ressourcen** \- Hier finden Sie Links zu Braze Learning, zur Dokumentation, zur Braze Bonfire Community, zu unserem Blog, zu Fallstudien und zur Produkt-Roadmap.
-4. **Hilfe** \- Prüfen Sie den Systemstatus, besuchen Sie die Hilfeartikel oder holen Sie sich Hilfe vom Support.
-5. **SELEKTOR** – Wählen Sie die Sprache aus, die Sie für Braze verwenden möchten.
-6. **Ihr Profil** \- Sehen Sie sich Ihr Profil, Ihre Unternehmenseinstellungen, Abonnements und Nutzung, Unternehmensnutzer an oder melden Sie sich ab.
-7. **Administrator-Symbol** \- Erscheint neben Ihrem Profil, wenn Sie ein Administrator für Ihr Unternehmen sind.
-
-{% endtab %}
-{% tab Änderungen %}
-
-![]({% image_buster /assets/img/navigation/global_header_compare.png %}){: style="border:0"}
-
-- Unsere Community
-   - **Ressourcen** ist jetzt **Gemeinschaft**
-- Support
-   - **Hilfe holen** heißt jetzt **Support** 
-   - **Braze Learning** und **Dokumentation** finden Sie jetzt hier
-   - **Braze-Support** ist jetzt **Hilfe** 
-- Ihr Profil
-   - **Kontoeinstellungen** ist jetzt **Manage Your Account**:in
-   - **Abonnements und Nutzung** ist jetzt **Abrechnung**
-   - **Benutzer verwalten** heißt jetzt **Unternehmensbenutzer**
-
-{% endtab %}
-{% endtabs %}
-
-### Seitenleiste
-
-<style>
-#navigation td {
-    word-break: break-word;
-    width: 50%;
-    font-size: 16px;
-}
-</style>
-
-{% tabs %}
-{% tab Neue Navigation %}
-
-<table id="navigation">
-<tbody>
-  <tr>
-    <td><img src="{% image_buster /assets/img/navigation/sidebar_new.png %}"></td>
-    <td><b>1. Home</b> - Die Startseite von Braze. Nach Ihrer Ersteinrichtung ist dies Ihr <b>Übersichts-Dashboard</b>.<br><br><b>2. Messaging</b> – Erstellen und verwalten Sie Ihre Kampagnen und Canvase, und greifen Sie auf eine Kalenderansicht Ihrer anstehenden geplanten Nachrichten zu.<br><br><b>3. Zielgruppe</b> - Enthält alles, was mit Ihren Nutzern zu tun hat, z. B. die Suche oder den Import von Nutzern, die Verwaltung Ihrer Segmente, die globale Kontrollgruppe, Abo-Gruppen und mehr.<br><br><b>4. Templates</b> – Enthält Ihre Nachrichten-Templates, Content-Blöcke und eine Bibliothek mit Medien.<br><br><b>5. Analytics</b> - Enthält Ihre Berichte, das Analyse-Dashboard und Vorhersagen.<br><br><b>6. Partnerintegrationen</b> – Enthält die Integrationen unserer Technologiepartner, Lösungspartner und den Datenexport (Currents).<br><br><b>7. Dateneinstellungen</b> – Enthält Einstellungen, die sich auf Nutzerdaten beziehen, wie angepasste Attribute, angepasste Events, Kataloge, Produkte und mehr.<br><br><b>8. Einstellungen</b> – Verwalten Sie Ihre Workspace-Integration, Unternehmenseinstellungen, Rechnungen und mehr.<br></td>
-  </tr>
-</tbody>
-</table>
-
-{% endtab %}
-{% tab Alte Navigation %}
-
-<table id="navigation">
-<tbody>
-  <tr>
-    <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td><b>1. App-Gruppenauswahl</b> - Sehen Sie, in welcher App-Gruppe Sie sich gerade befinden oder wechseln Sie zwischen App-Gruppen.<br><br><b>2. Daten</b> - Enthält verschiedene Berichte, Dashboards und Einstellungen in Bezug auf die Benutzerdaten in Braze.<br><br><b>3. Engagement</b> – Enthält Seiten zum Thema Messaging, z. B. Ihre Segmentkampagnen, Canvase, Nachrichten-Templates und mehr.<br><br><b>4. Benutzer</b> - Suchen oder importieren Sie Benutzer, oder verwalten Sie Ihre Abonnementgruppen.<br><br><b>5. Integrationen</b> - Enthält Integrationen, einschließlich unserer Technologiepartner, Currents und Aktionscodes.<br><br><b>6. Einstellungen</b> - Enthält Arbeitsbereichseinstellungen, verschiedene Dateneinstellungen, Protokolle und mehr.</td>
-  </tr>
-</tbody>
-</table>
-
-{% endtab %}
-{% tab Änderungen %}
-
-Die Kategorien der obersten Ebene sind jetzt standardmäßig zusammengeklappt, so dass Sie die einzelnen Abschnitte besser auf einen Blick sehen können.
-
-In der folgenden Tabelle sehen Sie, wo sich die einzelnen Seiten in der neuen Navigation befinden. Einige Seiten wurden umbenannt, und der neue Name ist in der Spalte „Neuer Standort“ referenziert.
-
-| Seitenname                     | Neuer Seitenname               | Neuer Standort                                                     |
-| ----------------------------- | --------------------------- | ---------------------------------------------------------------- |
-| API-Einstellungen                  | API-Schlüssel                    | **Einstellungen** > **Einrichten und Testen** > **API-Schlüssel**              |
-| App-Einstellungen                  | --                         | **Einstellungen** > **Einrichten und Testen** > **App-Einstellungen**          |
-| Genehmigungs-Workflow             | --                         | **Einstellungen** > **Workspace** > **Genehmigungs-Workflow**             |
-| Abrechnung                       | --                         | **Einstellungen** > **Unternehmen** > **Rechnungsstellung**                         |
-| Kampagnen                     | --                         | **Messaging** > **Kampagnen**                                    |
-| Kalender                      | Content-Kalender            | **Nachrichten** > **Inhaltskalender**                             |
-| Canvas                        | --                         | **Messaging** > Canvas                                       |
-| Kataloge                      | --                         | **Dateneinstellungen** > **Kataloge**                                 |
-| Unternehmenseinstellungen              | Admin-Einstellungen              | **Einstellungen** > **Unternehmen** > **Admin-Einstellungen**                  |
-| Connected-Content             | --                         | **Einstellungen** > **Arbeitsbereich** > **Verbundene Inhalte**             |
-| Content-Block-Bibliothek        | Content-Blöcke              | **Templates** > **Content-Blöcke**                               |
-| Konversionen                   | --                         | **Analytics** > **Analytics-Dashboards** > **Konversionen**       |
-| Currents                      | Datenexport                 | **Partner-Integrationen** > **Datenexport**                       |
-| Angepasste Attribute             | --                         | **Dateneinstellungen** > **Benutzerdefinierte Attribute**                        |
-| Benutzerdefinierte Ereignisse (Bericht)        | Benutzerdefinierte Ereignisberichte       | **Analyse** > **Berichte** > **Benutzerdefinierte Ereignisberichte**          |
-| Angepasste Events                 | --                         | **Dateneinstellungen** > **Benutzerdefinierte Ereignisse**                            |
-| Daten-Feeds                    | --                         | **Dateneinstellungen** > **Dateneinspeisungen**                               |
-| Data Services                 | --                         | **Analysen** > **Analyse-Dashboards** > **Datenservices**     |
-| Datentransformation           | --                         | **Dateneinstellungen** > **Datenumwandlung**                      |
-| Entwicklungskonsole             | --                         | **Einstellungen** > **Einrichten und Testen**                             |
-| E-Mail-Performance             | --                         | **Analyse** > **Analyse-Dashboards** > **E-Mail-Leistung** |
-| E-Mail-Einstellungen                | E-Mail-Präferenzen           | **Einstellungen** > **Arbeitsbereich** > **E-Mail-Voreinstellungen**             |
-| E-Mail-Templates               | --                         | **Templates** > **E-Mail-Vorlagen**                              |
-| Engagement-Berichte            | Engagement                  | **Analysen** > **Berichte** > **Engagement**                     |
-| Event-Nutzerprotokoll                | --                         | **Einstellungen** > **Einrichtung und Tests** > **Event-Benutzerprotokoll**        |
-| Feature-Flags                 | --                         | **Messaging** > **Feature-Flags**                                |
-| Global Control (Bericht)       | Globale Kontrollgruppe              | **Analysen** > **Berichte** > **Globale Kontrolle**                 |
-| Globale Einstellungen der Kontrollgruppe | Globale Kontrollgruppe        | **Publikum** > **Globale Kontrollgruppe**                          |
-| Globale Nachrichteneinstellungen       | Frequency-Capping-Regeln     | **Einstellungen** > **Arbeitsbereich** > **Regeln zur Frequenzbegrenzung**       |
-| In-App-Templates      | --                         | **Vorlagen** > **In-App Nachrichtenvorlagen**                     |
-| Interne Gruppen               | --                         | **Einstellungen** > **Einrichten und Testen** > **Interne Gruppen**       |
-| Link-Vorlagen                | E-Mail-Link-Templates        | **Vorlagen** > **Vorlagen für E-Mail-Links**                         |
-| Standorte                     | --                         | **Zielgruppe** > **Standorte**                                     |
-| Einstellungen verwalten               | --                         | **Einstellungen** > **Arbeitsbereich**                                     |
-| Teams verwalten                  | Interne Teams              | **Einstellungen** > **Arbeitsbereich** > **Interne Teams**                |
-| Nutzer:innen verwalten                  | Unternehmensnutzer:innen               | **Einstellungen** > **Unternehmen** > **Benutzer des Unternehmens**                   |
-| Medienbibliothek                 | --                         | **Templates** > **Medienbibliothek**                                |
-| Nachrichten-Aktivitätsprotokoll          | --                         | **Einstellungen** > **Einrichtung und Tests** > **Nachrichtenaktivitätsprotokoll**  |
-| Newsfeed                     | --                         | **Nachrichten** > **News Feed**                                    |
-| Übersicht                      | --                         | **Home**                                                         |
-| Prognosen                   | --                         | **Analytik** > **Vorhersagen**                                  |
-| Präferenzzentrum             | --                         | **Zielgruppe** > **Abonnements** > **Präferenzzentrum**         |
-| Produkte                      | --                         | **Dateneinstellungen** > **Produkte**                                 |
-| Aktionscodes               | --                         | **Dateneinstellungen** > **Promotion-Codes**                          |
-| Push TTL-Einstellungen             | Push-Time-to-Live (TTL)     | **Einstellungen** > **Arbeitsbereich** > **Push Time-To-Live (TTL)**       |
-| Berichts-Builder                | --                         | **Analysen** > **Berichte** > **Report Builder**                 |
-| Umsatz                       | --                         | **Analytik** > **Berichte** > **Umsatzerlöse**                        |
-| Segmente                      | --                         | **Zielgruppe** > **Segmente**                                      |
-| Segmenterweiterungen            | --                         | **Zielgruppe** > **Segmenterweiterungen**                            |
-| Segment-Insights              | --                         | **Analytik** > **Berichte** > **Segmenteinblicke**               |
-| SMS-Performance               | --                         | **Analytics** > **Analytics Dashboards** > **SMS Performance**   |
-| Abo-Gruppen           | --                         | **Zielgruppe** > **Abonnements** > **Abonnementgruppen**       |
-| Tags                          | Tag-Management              | **Einstellungen** > **Workspace** > **Tag-Management**                |
-| Technologie-Partner           | --                         | **Partner-Integrationen** > **Technologie-Partner**               |
-| Nutzerimport                   | Nutzer:innen importieren                | **Zielgruppe** > **Nutzer:innen importieren**                                  |
-| Nutzersuche                   | Nutzer:innen suchen                | **Zielgruppe** > **Nutzer:innen suchen**                                  |
-| Webhook-Templates             | --                         | **Templates** > **Webhook-Vorlagen**                            |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
-{% endtabs %}
+[1]: {% image_buster /assets/img/navigation/vertical_menu.gif %}
+[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
+[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
+[4]: {% image_buster /assets/img/navigation/expand_collapse_menu.gif %}
+[5]: {% image_buster /assets/img/navigation/minimized_menu_tooltip.png %}
+[6]: {% image_buster /assets/img/navigation/navigation_small_screens.png %}
+[7]: {% image_buster /assets/img/navigation/share_feedback.png %}

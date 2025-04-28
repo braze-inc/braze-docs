@@ -26,7 +26,7 @@ Wenn ein Endbenutzer seine E-Mail-Adresse in dieses Formular eingibt, wird die E
     - Gültige E-Mail-Adressen: 
         - `example@gmail.com`
         - `example@gnail.com` (mit einem Tippfehler)
-    - Weitere Informationen zur E-Mail-Validierung in Braze finden Sie in den [technischen Richtlinien und Hinweisen zu E-Mails]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
+    - Weitere Informationen zur E-Mail-Validierung in Braze finden Sie in den [technischen Richtlinien und Hinweisen zu E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details Mehr über identifizierte versus anonyme Benutzer %}
 
@@ -36,7 +36,7 @@ Wenn ein anonymer Benutzer seine E-Mail-Adresse in das Formular eingibt und es a
 
 Wenn `changeUser` mit einem existierenden `external_id` aufgerufen wird, wird das anonyme Benutzerprofil verwaist und [bestimmte Datenfelder des Benutzerprofils]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior), die noch nicht für den identifizierten Benutzer existieren, werden zusammengeführt, aber alle Felder, die bereits existieren, gehen verloren, einschließlich der E-Mail-Adresse.
 
-Weitere Informationen finden Sie im [Lebenszyklus des Benutzerprofils]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Weitere Informationen finden Sie im [Lebenszyklus des Benutzerprofils]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

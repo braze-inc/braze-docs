@@ -18,6 +18,7 @@ description: "Cet article de référence décrit comment accéder à un profil u
 Pour accéder au profil d'un utilisateur, accédez à la page **Recherche d'utilisateurs** et recherchez un utilisateur à l'aide de l'un des éléments suivants :
 
 - ID utilisateur externe
+- ID Braze
 - E-mail
 - Numéro de téléphone
 - Jeton de notification push
@@ -37,7 +38,7 @@ Les profils utilisateur sont une excellente option pour résoudre des problèmes
 
 Par exemple, si un utilisateur signale un problème et que vous n'êtes pas sûr de l'appareil et du système d'exploitation qu'il utilise, vous pouvez utiliser l' [onglet Aperçu](#overview-tab) pour trouver ces informations (à condition d'avoir son e-mail ou son ID utilisateur). Vous pouvez également afficher la langue de l'utilisateur, ce qui peut s'avérer utile lors de la résolution des problèmes d'une [campagne multilingue][13] qui ne s'est pas déroulée comme prévu.
 
-Vous pouvez utiliser l'[onglet Engagement](#engagement-tab) pour vérifier si un certain utilisateur a reçu une campagne. De plus, si cet utilisateur a effectivement reçu la campagne, vous pouvez voir quand il l’a reçue. Vous pouvez également vérifier si un utilisateur se trouve dans un certain segment, et si un utilisateur s’est abonné aux notifications push, aux communications par e-mail ou les deux. Ces informations sont utiles pour la résolution des problèmes. Par exemple, vous devez vérifier ces informations si un utilisateur n’a pas reçu une campagne qu’il devait recevoir ou s’il reçoit une campagne qui ne lui était pas destinée.
+Vous pouvez utiliser l'[onglet Engagement](#engagement-tab) pour vérifier si un certain utilisateur a reçu une campagne. De plus, si cet utilisateur a effectivement reçu la campagne, vous pouvez voir quand il l’a reçue. Vous pouvez également vérifier si un utilisateur fait partie d'un certain segment et s'il a opté pour le push, l'e-mail ou les deux. Ces informations sont utiles pour la résolution des problèmes. Par exemple, vous devez vérifier ces informations si un utilisateur n’a pas reçu une campagne qu’il devait recevoir ou s’il reçoit une campagne qui ne lui était pas destinée.
 
 ## Éléments d’un profil utilisateur
 
@@ -76,9 +77,9 @@ L'onglet **Engagement** contient des informations sur les interactions d'un util
 | Segments | Segments dans lesquels est inclus cet utilisateur. Sélectionnez un segment dans la liste pour l’afficher. |
 | Statistiques de communication | Quand cet utilisateur a reçu des messages de votre part depuis chaque canal pour la dernière fois. |
 | Attribution d’installation | Informations concernant comment et quand un utilisateur a installé votre application. Apprenez-en plus sur [les installations par les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Divers | Le [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) de l'utilisateur. |
+| Divers | Le [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) de l'utilisateur. |
 | Messages Canvas reçus | Messages Canvas reçus par l’utilisateur et quand il les a reçus. Sélectionnez un message dans la liste pour l’afficher. |
-| Prédictions | Les scores de [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) et de [prédiction des événements]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) pour cet utilisateur. |
+| Prédictions | Les scores de [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) et de [prédiction des événements]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) pour cet utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![L'onglet Engagement d'un profil utilisateur affichant ses paramètres de contact et ses statistiques de communication.][3]
@@ -88,7 +89,7 @@ L'onglet **Engagement** contient des informations sur les interactions d'un util
 L'onglet **Historique des messages** du profil utilisateur montre les événements récents liés aux messages (environ 40) pour un utilisateur individuel au cours des 30 derniers jours. Ces événements comprennent les messages que l’utilisateur a envoyés, reçus, avec lesquels il a interagi, etc. Notez que les données de cet onglet ne sont pas mises à jour après la fusion d'un utilisateur.
 
 {% alert note %}
-Si vous avez des commentaires sur ce tableau, ou si vous souhaitez voir des événements spécifiques, veuillez envoyer un e-mail à [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) avec comme ligne d'objet "Messaging History Tab Feedback".
+Si vous avez des commentaires sur ce tableau ou si vous souhaitez voir des événements spécifiques, veuillez envoyer un e-mail à [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) avec comme ligne d'objet "Messaging History Tab Feedback".
 {% endalert %}
 
 ![L'onglet "Historique des messages" indique les campagnes et les canvas qu'un utilisateur a reçues.][5]
@@ -99,7 +100,7 @@ Pour chaque événement du tableau **Historique des messages**, vous pouvez voir
 
 ##### Événements d’engagement par message
 
-Les événements d’engagement par message suivants sont disponibles pour l’e-mail, les SMS, le push, les messages in-app, les cartes de contenu et les webhooks. Pour en savoir plus sur le suivi d'événements spécifiques, consultez le [glossaire des événements d’engagement lié aux messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+Les événements d’engagement par message suivants sont disponibles pour l’e-mail, les SMS, le push, les messages in-app, les cartes de contenu et les webhooks. Pour en savoir plus sur le suivi d'événements spécifiques, consultez le [glossaire des événements d’engagement lié aux messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Canal | Événements d’engagement disponibles |
 | --- | --- |
@@ -126,7 +127,7 @@ Les événements d’interruption ne sont pas disponibles actuellement pour les 
 
 ##### Événements de limite de fréquence
 
-Un événement de limitation de fréquence se produit lorsqu'un utilisateur est qualifié pour recevoir un message, mais ne l'a pas reçu en raison des paramètres de [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Vous pouvez personnaliser les paramètres de limitation de fréquence à partir de **Paramètres** > **Règles de limitation de fréquence**.
+Un événement de limitation de fréquence se produit lorsqu'un utilisateur est qualifié pour recevoir un message, mais ne le reçoit pas en raison des paramètres de [limitation de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Vous pouvez personnaliser les paramètres de limitation de fréquence à partir de **Paramètres** > **Règles de limitation de fréquence**.
 
 {% alert note %}
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez gérer la limite de fréquence à partir de **Engagement** > Paramètres généraux messages **.**
@@ -140,9 +141,9 @@ Les envois de cartes de contenu sont enregistrés lorsque la carte peut être co
 
 #### Note sur l’événement e-mail ouvert{#note-on-email-open-event}
 
-Le suivi de l’ouverture d’e-mails est sujet à des erreurs, quel que soit l’outil utilisé, y compris Braze. Grâce à une variété de fonctions de protection de la vie privée offertes par différents clients de messagerie qui bloquent le chargement automatique des images ou les chargent de manière proactive sur le serveur, les événements d’ouverture des e-mails sont susceptibles d’entraîner à la fois des faux positifs et des faux négatifs.
+Le suivi de l'ouverture des e-mails est source d'erreurs, quel que soit l'outil utilisé, y compris Braze. Grâce à une variété de fonctions de protection de la vie privée offertes par différents clients de messagerie qui bloquent le chargement automatique des images ou les chargent de manière proactive sur le serveur, les événements d’ouverture des e-mails sont susceptibles d’entraîner à la fois des faux positifs et des faux négatifs.
 
-Si les statistiques d’ouverture des e-mails peuvent être utiles dans leur ensemble, par exemple pour comparer l’efficacité de différentes lignes d’objet, vous ne devez pas supposer qu’un événement d’ouverture individuel pour un utilisateur individuel est significatif.
+Si les statistiques d'ouverture des e-mails peuvent être utiles dans l'ensemble, par exemple pour comparer l'efficacité de différentes lignes d'objet, vous ne devez pas supposer qu'un événement d'ouverture individuel pour un utilisateur donné est significatif.
 
 
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

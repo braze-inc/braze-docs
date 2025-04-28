@@ -28,17 +28,11 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 **Schritte:**
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Wählen Sie **Webhook** aus. Wählen Sie für Kampagnen, die auf mehrere Kanäle abzielen, **Multichannel** aus.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. (Optional) Fügen Sie eine Beschreibung hinzu, um zu beschreiben, wie diese Kampagne verwendet werden soll.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
-   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+2. Wählen Sie **Webhook** aus. Wählen Sie für Kampagnen, die auf mehrere Kanäle abzielen, **Multichannel** aus.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. (Optional) Fügen Sie eine Beschreibung hinzu, um zu beschreiben, wie diese Kampagne verwendet werden soll.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede Ihrer hinzugefügten Varianten unterschiedliche Webhook-Vorlagen wählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -78,6 +72,8 @@ Die Registerkarte **Verfassen** besteht aus den folgenden Feldern:
 Die [Internationalisierung][16] wird in der URL und im Anfragetext unterstützt. Um Ihre Nachricht zu internationalisieren, wählen Sie **Sprachen hinzufügen** aus und füllen Sie die erforderlichen Felder aus. 
 
 Wählen Sie die Sprachen am besten aus, bevor Sie den Content verfassen, damit Sie den Text dort einfügen können, wo er im Liquid hingehört. Eine vollständige Liste der Sprachen, die Sie verwenden können, finden Sie unter [Unterstützte Sprachen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+
+Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieben ist, beachten Sie, dass das endgültige Aussehen von Nachrichten von rechts nach links weitgehend davon abhängt, wie die Dienste sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 #### Webhook-URL
 
@@ -172,7 +168,7 @@ Webhooks können auf der Grundlage eines Zeitplans, einer Aktion oder eines API-
 
 Für die aktionsbasierte Zustellung können Sie auch die Dauer der Kampagne und die [Ruhezeiten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) festlegen.
 
-In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass Nutzer:innen [wieder für]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) den Empfang der Kampagne [zugelassen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) werden oder [Frequency-Capping-Regeln]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) aktiviert werden.
+In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass Nutzer:innen wieder für den Empfang der Kampagne [zugelassen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) werden oder [Frequency-Capping-Regeln]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) aktiviert werden.
 
 #### Wählen Sie Benutzer als Zielgruppe aus
 
@@ -180,7 +176,7 @@ Als Nächstes müssen Sie mithilfe von Segmenten oder Filtern eine [Zielgruppe e
 
 #### Wählen Sie Konversions-Events aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 {% endtab %}
 
@@ -235,51 +231,7 @@ Braze sendet Webhooks von den folgenden IPs. Die aufgelisteten IPs werden automa
 Wenn Sie einen Braze-to-Braze-Webhook erstellen und Allowlisting verwenden, sollten Sie alle folgenden IPs zulassen, einschließlich `127.0.0.1`.
 {% endalert %}
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` und `US-07`: |
-|---|
-| `127.0.0.1`
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| Für die Instanzen `EU-01` und `EU-02`: |
-|---|
-| `127.0.0.1`
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88` 
-
-| Zur Instanz `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Verwendung von Webhooks mit Braze-Partnern {#utilizing-webhooks}
 

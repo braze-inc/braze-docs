@@ -13,10 +13,6 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie auf das Braze-Prod
 
 Das Produktportal finden Sie unter **Community** > **Product Roadmap**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie die **Produkt-Roadmap** unter **Ressourcen**.
-{% endalert %}
-
 ## Was in dem Portal steht
 
 | Abschnitt | Beschreibung |

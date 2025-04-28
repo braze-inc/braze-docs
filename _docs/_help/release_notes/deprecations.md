@@ -34,7 +34,7 @@ Support for Shopify `checkout.liquid` will begin deprecation in August 2024 and 
 
 **Support withdrawn**: October 2022
 
-Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) instead.
+Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) instead.
 
 ### Grouparoo partnership
 

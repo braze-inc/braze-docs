@@ -19,13 +19,13 @@ You can log purchases by passing a [purchase object]({{site.baseurl}}/api/object
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Viewing purchase data
 

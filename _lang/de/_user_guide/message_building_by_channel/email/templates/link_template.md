@@ -33,15 +33,9 @@ Sie können eine unbegrenzte Anzahl von Linkvorlagen erstellen, um Ihre verschie
 
 1. Gehen Sie zu **Vorlagen** > **E-Mail-Link-Vorlagen**. 
 2. Wählen Sie **E-Mail-Link-Template erstellen**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich diese Seite unter **Engagement** > **Templates und Medien** > **Link-Templates**.
-{% endalert %}
-
-{:start="3"}
-3\. Geben Sie Ihrer Link-Template einen Namen.
-4\. (optional) Fügen Sie eine Beschreibung, ein Team oder einen Tag hinzu, um Details zur Link-Template hinzuzufügen.
-5\. (optional) Wählen Sie den Umschalter, um die Link-Template automatisch zu Links in E-Mail-Kampagnen und Canvases hinzuzufügen. Dies gilt für das Hinzufügen eines neuen Links zu einer neuen oder bestehenden E-Mail.
+3. Geben Sie Ihrer Link-Template einen Namen.
+4. (optional) Fügen Sie eine Beschreibung, ein Team oder einen Tag hinzu, um Details zur Link-Vorlage hinzuzufügen.
+5. (optional) Wählen Sie das Umschalten, um die Link-Vorlage automatisch zu Links in E-Mail Kampagnen und Canvase hinzuzufügen. Dies gilt für das Hinzufügen eines neuen Links zu einer neuen oder bestehenden E-Mail.
 
 Es gibt zwei Arten von Linkvorlagen, die Sie erstellen können:
 
@@ -58,7 +52,7 @@ Um einen String oder eine URL vor den Links in Ihrer E-Mail-Nachricht einzufüge
 2. Setzen Sie die **Template-Position** auf **Vor URL**. 
 3. Geben Sie einen String ein, der Ihrer URL immer vorangestellt wird. 
 
-Es gibt einen Vorschaubereich, in dem Sie den Einfügevorgang anhand eines Beispiels nachvollziehen können.
+Die **Vorschau des Templates** dient dazu, Ihnen ein Beispiel dafür zu geben, wie das Link-Template vor einer URL eingefügt wird.
 
 ![Felder Template-Position, URL vorangestellt und Template-Vorschau für den Prozess des Einfügens von Link-Templates vor einer URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
@@ -90,11 +84,11 @@ Um auf die Registerkarte **Linkverwaltung** im aktualisierten HTML-E-Mail-Editor
 Linkvorlagen werden nicht auf reinen Text angewendet. Das bedeutet, dass Currents möglicherweise Klicks anzeigt, die nicht die Parameter aus den Linkvorlagen enthalten, da diese Klicks möglicherweise aus der reinen Textversion der E-Mail stammen.
 {% endalert %}
 
-Wenn Sie auf der Registerkarte **Linkverwaltung** Linkvorlagen hinzufügen, scrollen Sie nach rechts, um die von Ihnen hinzugefügten Vorlagen anzuzeigen.
+Wenn Sie auf der Registerkarte **Linkverwaltung** Linkvorlagen hinzufügen, scrollen Sie nach rechts, um die von Ihnen hinzugefügten Vorlagen anzuzeigen. Wenn bestehende Links in einer E-Mail bereits mit einem Link-Template versehen sind, wird bei neu hinzugefügten Links standardmäßig auch das Link-Template hinzugefügt.
 
 ## Verwalten von Link-Templates
 
-Sie können auch Link-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Sie können auch Link-Templates [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 Die Archivierung von Vorlagen ist derzeit nicht für Linkvorlagen verfügbar.

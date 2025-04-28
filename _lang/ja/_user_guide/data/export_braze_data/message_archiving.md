@@ -28,13 +28,17 @@ description: "このリファレンス記事では、ユーザーに送信する
 
 JSON は、次のキー構造を使用してストレージバケットに保存されます。
 
-`sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
+`sent_messages/{channel, one of: email, push, sms}/{MD5 digest of downcased: email address, push token, or E.164 phone number}/{campaign or Canvas step API ID}/{dispatch ID}.json.gz`
 
 ファイルの例を以下に示します。
 
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert note %}
+MD5 ダイジェストは、既知のダウンケースメールアドレス、プッシュトークン、E.164 電話番号を使ってのみ計算できます。既知の MD5 ダイジェストを逆にして、小文字のメールアドレス、プッシュトークン、または E.164 電話番号を取得することはできません。
+{% endalert %}
+
+{% alert tip %}
 **バケット内でのプッシュトークンの検出に苦労している場合のヒント**<br>
 Braze は、プッシュトークンをハッシュする前にその大文字を小文字にします。これにより、プッシュトークン `Test_Push_Token12345` はキーパス内で小文字の `test_push_token12345` になり、ハッシュは `32b802170652af2b5624b695f34de089` です。
 {% endalert %}
@@ -136,7 +140,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
   "version" : 1, //numerical version of the json structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
-  "platform": ios/android/web/kindle,
+  "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,

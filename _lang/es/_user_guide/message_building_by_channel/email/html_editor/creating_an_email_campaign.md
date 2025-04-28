@@ -38,8 +38,8 @@ Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encont
 {:start=“2"}
 2\. Selecciona **Correo electrónico** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
 3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario.
-   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
+4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -61,7 +61,7 @@ Si todos los mensajes de su campaña van a ser similares o van a tener el mismo 
 
 Braze ofrece dos experiencias de edición al crear una campaña de correo electrónico: nuestro [editor de arrastrar y soltar]({{site.baseurl}}/dnd/) y nuestro editor HTML estándar. Elige la ficha adecuada para la experiencia de edición que prefieras. 
 
-![Elige entre el editor de arrastrar y soltar o el editor HTML para tu experiencia de edición de correo electrónico.][3]{: style="max-width:75%" }
+![Elige entre el editor de arrastrar y soltar, el editor HTML o las plantillas para tu experiencia de edición de correo electrónico.][3]{: style="max-width:75%" }
 
 A continuación, puede seleccionar una [plantilla de correo electrónico][10] existente, [cargar una plantilla][18] desde un archivo (sólo editor HTML) o utilizar una plantilla en blanco. 
 
@@ -71,7 +71,11 @@ Recomendamos seleccionar una experiencia de edición por campaña de correo elec
 
 ## Paso 3: Redacte su correo electrónico
 
-Una vez seleccionada la plantilla, verá un resumen de su correo electrónico en el que podrá acceder directamente al editor a pantalla completa para redactar el mensaje, cambiar la información de envío y ver las advertencias sobre la capacidad de entrega o el cumplimiento de la ley. 
+Una vez seleccionada la plantilla, verá un resumen de su correo electrónico en el que podrá acceder directamente al editor a pantalla completa para redactar el mensaje, cambiar la información de envío y ver las advertencias sobre la capacidad de entrega o el cumplimiento de la ley. Puedes cambiar entre las pestañas HTML, clásico, texto sin formato y [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) mientras redactas. 
+
+![El botón "Regenerar a partir de HTML".][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+La versión en texto plano de tu correo electrónico siempre se actualizará automáticamente a partir de la versión HTML hasta que se detecte una edición en la versión en texto plano. Cuando se detecte una edición, Braze dejará de actualizar el texto sin formato, ya que suponemos que hiciste cambios intencionados que no deberían sobrescribirse. Puedes volver a la sincronización automática en la pestaña Texto sin **formato** seleccionando el icono **Regenerar a partir de HTML**, que sólo aparece si el texto sin formato no se está sincronizando.
 
 {% alert tip %}
 Para añadir movimiento en un correo electrónico con una previsualización precisa, utilice GIF en lugar de elementos que requieran JavaScript, ya que la mayoría de las bandejas de entrada no admiten JavaScript.
@@ -84,10 +88,12 @@ Braze eliminará automáticamente los manejadores de eventos HTML referenciados 
 {% endalert %}
 
 {% alert tip %}
-¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
+¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
 ![Inicia el botón AI Copywriter, situado en la pestaña Cuerpo del compositor de correo electrónico.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+¿Necesitas ayuda para crear mensajes de derecha a izquierda en idiomas como el árabe y el hebreo? Consulta [Crear mensajes de derecha a]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) izquierda para conocer las mejores prácticas.
 
 ### Paso 3a: Añade tu información de envío
 
@@ -271,6 +277,7 @@ La sección final te ofrecerá un resumen de la campaña que acabas de diseñar.
 
 Para saber cómo puedes acceder a los resultados de tus campañas por correo electrónico, consulta [Informes por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

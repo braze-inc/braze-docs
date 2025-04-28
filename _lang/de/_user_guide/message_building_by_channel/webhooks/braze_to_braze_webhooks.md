@@ -59,10 +59,6 @@ Braze benötigt für die Autorisierung einen HTTP-Header, der Ihren API-Schlüss
 
 Ersetzen Sie `YOUR_API_KEY` durch einen Braze API-Schlüssel mit `users.track` Berechtigungen. Sie können einen API-Schlüssel innerhalb des Braze-Dashboards unter **Einstellungen** > **API-Schlüssel** erstellen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie einen API-Schlüssel unter **Entwicklerkonsole** > **API-Einstellungen** erstellen.
-{% endalert %}
-
 ![Die Registerkarte "Einstellungen" mit den Anfrage-Headern für den Webhook.][1]
 
 #### Anfragetext
@@ -86,7 +82,7 @@ Nachfolgend finden Sie ein Beispiel für das erforderliche Liquid und den Reques
 {% endraw %}
 
 {% alert note %}
-Jedes Mal, wenn ein benutzerdefinierter Attributzähler aktualisiert (erhöht oder verringert) wird, verbraucht er einen [Datenpunkt]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/), der zu Ihrem Gesamtverbrauch zählt.
+Jedes Mal, wenn ein benutzerdefinierter Attributzähler aktualisiert (erhöht oder verringert) wird, verbraucht er einen [Datenpunkt]({{site.baseurl}}/user_guide/data/data_points/), der zu Ihrem Gesamtverbrauch zählt.
 {% endalert %}
 
 ### Anwendungsfall: Triggern Sie ein zweites Canvas von einem ersten Canvas aus
@@ -115,10 +111,6 @@ Braze benötigt für die Autorisierung einen HTTP-Header, der Ihren API-Schlüss
 
 Ersetzen Sie `YOUR_API_KEY` durch einen Braze API-Schlüssel mit `canvas.trigger.send` Berechtigungen. Sie können einen API-Schlüssel innerhalb des Braze-Dashboards unter **Einstellungen** > **API-Schlüssel** erstellen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie einen API-Schlüssel unter **Entwicklerkonsole** > **API-Einstellungen** erstellen.
-{% endalert %}
-
 ![Die Registerkarte "Einstellungen" mit den Anfrage-Headern für den Webhook.][1]
 
 #### Anfragetext
@@ -144,7 +136,7 @@ Fügen Sie Ihre `canvas/trigger/send` Anfrage in das Textfeld ein. Weitere Einze
 - Updates des Nutzerprofils führen zu zusätzlichen [Datenpunkten]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count), während das Triggern einer weiteren Nachricht über die Messaging-Endpunkte dies nicht tut.
 - Wenn Sie [anonyme Nutzer:innen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles) als Zielgruppe zusammenstellen möchten, können Sie `braze_id` anstelle von `external_id` im Textkörper der Anfrage Ihres Webhooks verwenden.
 - Sie können Ihren Braze-to-Braze-Webhook als [Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) speichern, um ihn erneut zu verwenden.
-- Sie können das [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) überprüfen, um Webhook-Fehler anzuzeigen und zu beheben.
+- Sie können das [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) überprüfen, um Webhook-Fehler anzuzeigen und zu beheben.
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}

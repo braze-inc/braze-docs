@@ -18,13 +18,13 @@ In this article, we'll walk you through a use case for the **Abandoned Intent** 
 To successfully use this template, you'll need the following:
 
 - A separate post-purchase user journey Canvas since making a purchase in this Canvas will cause users to exit the Canvas.
-- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
+- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## Tailoring the template to your needs
 
 Let's say we work at Kitchenerie, a retail brand specializing in kitchenware, and our goal is to reengage users who have added the latest product "Enormous Paper Plate" to their carts but haven't made their purchases.
 
-Before creating the Canvas, we set up the [Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) integration so that we can add user data from Braze to Facebook Audiences to send advertisements based on behavioral triggers, segmentation, and more.
+Before creating the Canvas, we set up the [Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) integration so that we can add user data from Braze to Facebook Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 To access the abandoned intent template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Abandoned Intent**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
@@ -85,7 +85,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 Now, we’ll build our Canvas by customizing the templated steps:
 
 1. Select the Action Paths step, then select the **Made purchase** action group name.
-2. For **Make Purchase**, select **Make A Specific Purchase** and choose **Enormous Paper Plate** for the product. Similar to the exit critiera, users who purchase this product will exit the Canvas.
+2. For **Make Purchase**, select **Make A Specific Purchase** and choose **Enormous Paper Plate** for the product. Similar to the exit criteria, users who purchase this product will exit the Canvas.
 
 !["Made purchase" action group that will exit the Canvas if the user purchases the enormous paper plate.][5]
 

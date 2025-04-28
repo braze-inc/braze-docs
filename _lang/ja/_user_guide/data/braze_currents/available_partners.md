@@ -36,6 +36,7 @@ Braze から配信するイベントの命名規則が、パートナーによ�
 * [トレジャーデータ][10]
 * [RudderStack][9]
 * [Adobe][12]
+* [アンペア][13]
 
 ## 行動分析
 
@@ -61,3 +62,4 @@ Braze から配信するイベントの命名規則が、パートナーによ�
 [10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
 [11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
 [12]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
+[13]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/#using-amperity-with-braze-currents

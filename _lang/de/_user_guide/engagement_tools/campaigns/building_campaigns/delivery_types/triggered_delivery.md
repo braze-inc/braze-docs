@@ -12,10 +12,6 @@ tool: Campaigns
 
 > Aktionsbasierte Zustellungskampagnen oder Event-gesteuerte Kampagnen sind sehr effektiv für transaktions- oder leistungsbezogene Nachrichten. Anstatt Ihre Kampagne an bestimmten Tagen zu versenden, können Sie sie auslösen, wenn ein Nutzer ein bestimmtes Ereignis abgeschlossen hat. 
 
-{% alert important %}
-Die aktionsbasierte Bereitstellung ist für [Canvas-Komponenten mit In-App-Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas) nicht verfügbar. Diese Schritte müssen geplant werden.
-{% endalert %}
-
 ## Eine ausgelöste Kampagne einrichten
 
 ### Schritt 1: Wählen Sie ein Trigger-Event aus
@@ -96,7 +92,7 @@ Sie können die Kampagne auch entweder an einem bestimmten Wochentag (indem Sie 
 
 ### Schritt 3: Ausnahme-Events auswählen
 
-Wählen Sie ein Ausnahme-Event aus, durch das Nutzer:innen von dieser Kampagne ausgeschlossen werden. Sie können dies nur tun, wenn Ihre getriggerte Nachricht zeitverzögert gesendet wird. Ausnahme-Events können ein Kauf, der Beginn einer Sitzung, die Durchführung eines der für eine Kampagne vorgesehenen [Konversions-Events][18] oder die Durchführung eines angepassten Events sein. Wenn ein:e Nutzer:in das Trigger-Event ausführt, dann aber aufgrund der Zeitverzögerung Ihr Ausnahme-Event ausführt, bevor die Nachricht gesendet wird, erhält er die Kampagne nicht. Nutzer:innen, die die Kampagne aufgrund des Ausnahme-Events nicht erhalten haben, sind automatisch berechtigt, sie in der Zukunft zu erhalten, wenn sie das nächste Mal das triggernde Event abschließen, auch wenn Sie nicht festlegen, dass Nutzer:innen [erneut berechtigt sind]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
+Wählen Sie ein Ausnahme-Event aus, durch das Nutzer:innen von dieser Kampagne ausgeschlossen werden. Sie können dies nur tun, wenn Ihre getriggerte Nachricht zeitverzögert gesendet wird. [Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) können ein Kauf, der Beginn einer Sitzung, die Durchführung eines der für eine Kampagne vorgesehenen [Konversions-Events][18] oder die Durchführung eines angepassten Events sein. Wenn ein:e Nutzer:in das Trigger-Event ausführt, dann aber aufgrund der Zeitverzögerung Ihr Ausnahme-Event ausführt, bevor die Nachricht gesendet wird, erhält er die Kampagne nicht. Nutzer:innen, die die Kampagne aufgrund des Ausnahme-Events nicht erhalten haben, sind automatisch berechtigt, sie in der Zukunft zu erhalten, wenn sie das nächste Mal das triggernde Event abschließen, auch wenn Sie nicht festlegen, dass Nutzer:innen [erneut berechtigt sind]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ![][20]
 
@@ -126,7 +122,7 @@ Für den Fall, dass ein Benutzer das auslösende Ereignis innerhalb des Zeitrahm
 
 ![][31]
 
-Wenn ein:e Nutzer:in die Nachricht nicht erhält, weil er den Zeitrahmen verpasst hat, ist er dennoch qualifiziert, sie zu erhalten, wenn er das nächste Mal das Trigger-Event abschließt, auch wenn Sie nicht gewählt haben, dass Nutzer:innen [erneut qualifiziert]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) werden. Wenn Sie sich dafür entscheiden, dass Nutzer:innen erneut teilnahmeberechtigt werden, können sie die Kampagne jedes Mal erhalten, wenn sie das Trigger-Event abschließen, vorausgesetzt, sie qualifizieren sich innerhalb des festgelegten Zeitraums.
+Wenn ein:e Nutzer:in die Nachricht nicht erhält, weil er den Zeitrahmen verpasst hat, ist er dennoch qualifiziert, sie zu erhalten, wenn er das nächste Mal das Trigger-Event abschließt, auch wenn Sie nicht gewählt haben, dass Nutzer:innen [erneut qualifiziert]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) werden. Wenn Sie sich dafür entscheiden, dass Nutzer:innen erneut teilnahmeberechtigt werden, können sie die Kampagne jedes Mal erhalten, wenn sie das Trigger-Event abschließen, vorausgesetzt, sie qualifizieren sich innerhalb des festgelegten Zeitraums.
 
 Wenn Sie der Kampagne auch eine bestimmte Dauer zugewiesen haben, muss sich ein Benutzer sowohl innerhalb der Dauer als auch innerhalb des bestimmten Teils des Tages qualifizieren, um die Nachricht zu erhalten.
 

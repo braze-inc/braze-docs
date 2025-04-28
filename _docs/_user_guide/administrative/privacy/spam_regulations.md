@@ -117,6 +117,6 @@ In Android, your users can assume to be opted-in by the implied opt-in that is s
 [1]: #can-spam
 [2]: #casl
 [3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Email spam legislation by country"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM Act: A Compliance Guide for Business"
+[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country
+[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

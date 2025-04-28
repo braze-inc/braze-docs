@@ -94,6 +94,8 @@ Añade otro elemento a la matriz utilizando el operador `$add`. El siguiente eje
 
 Actualice los valores de objetos específicos dentro de una matriz utilizando el parámetro `_merge_objects` y el operador `$update`. De forma similar a las actualizaciones de objetos de [atributos personalizados anidados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples, esto realiza una fusión profunda.
 
+Ten en cuenta que `$update` no puede utilizarse para eliminar una propiedad anidada de un objeto dentro de una matriz. Para ello, tendrás que eliminar todo el elemento de la matriz y luego añadir el objeto sin esa clave específica (utilizando una combinación de `$remove` y `$add`).
+
 El siguiente ejemplo muestra la actualización de la propiedad `breed` a `goldfish` para el objeto con un `id` de `4`. Este ejemplo de solicitud también actualiza el objeto con `id` igual a `5` con un nuevo `name` de `Annette`. Dado que el parámetro `_merge_objects` se establece en `true`, todos los demás campos de estos dos objetos siguen siendo los mismos.
 
 ```json

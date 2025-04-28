@@ -22,7 +22,7 @@ Os filtros de segmentação ajudam a evitar que seu envio de mensagens pareça s
 - Você entregará alguma campanha especial aos usuários antes de excluí-los de seus segmentos?
 - A quais canais de envio de mensagens sua política de descontinuação se aplicará? 
 
-Por exemplo, se você tem usuários que optam pela [proteção de privacidade de e-mail (MPP) da Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/), considere como isso pode impactar suas campanhas de e-mail e métricas de entregabilidade e determine a melhor forma de estruturar sua política de sunset.
+Por exemplo, se você tem usuários que optam pela [proteção de privacidade de e-mail (MPP) da Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/), considere como isso pode impactar suas campanhas de e-mail e métricas de entregabilidade e determine a melhor forma de estruturar sua política de sunset.
 
 Para incorporar políticas de sunset em suas campanhas, crie um [segmento][19] que exclua automaticamente os usuários que marcaram seus e-mails como spam ou que não interagiram com suas mensagens por um determinado período de tempo.  
 

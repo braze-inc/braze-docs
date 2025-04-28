@@ -16,9 +16,9 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 ### Step 1: Choose your template
 
-When creating a drag-and-drop in-app message, select **Email sign-up with comfirmation page** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with confirmation page** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
-![The in-app message editor with the template for an email sign-up form with comfirmation page.][img1]
+![The in-app message editor with the template for an email sign-up form with confirmation page.][img1]
 
 ### Step 2: Set up your message styles
 

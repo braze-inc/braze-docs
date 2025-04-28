@@ -29,7 +29,7 @@ Gardez à l’esprit les éditions Canvas après lancement autorisées en foncti
 
 Vous pouvez supprimer tous les éléments suivants au sein de votre parcours utilisateur :
 
-- [Étapes du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Étapes du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Variantes de Canvas 
 - Connexions entre les étapes de Canvas
 

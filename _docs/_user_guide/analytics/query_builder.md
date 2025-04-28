@@ -37,7 +37,34 @@ See [Query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_
 
 ### Data timeframe
 
-All queries surface data from the last 60 days. 
+All queries surface data from the last 60 days.
+
+### Query Builder time zone
+
+The default time zone for querying our Snowflake database is UTC. As a result, there may be some data discrepancies between your **Email Channel Engagement** page (which follows your company's time zone) and your Query Builder results.
+
+To convert the time zone in your query results, add the following SQL to your query and customize it for your company's time zone:
+
+{% raw %}
+```sql
+SELECT
+DATE_TRUNC(
+'day',
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME))
+) AS send_date_sydney,
+COUNT(ID) AS emails_sent
+USERS_MESSAGES_EMAIL_SEND_SHARED
+WHERE
+-- Apply the date range in Sydney time as well
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) >= '2025-03-25 00:00:00'
+AND CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) < '2025-03-29 00:00:00'
+AND APP_GROUP_ID = 'your app group ID'
+GROUP BY
+send_date_sydney
+ORDER BY
+send_date_sydney;
+```
+{% endraw %}
 
 ## Generating SQL with the AI Query Builder
 
@@ -423,7 +450,7 @@ If a report times out or runs into errors even after retrying, contact [Support]
 
 ## Data and results
 
-Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
+Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or the [export API endpoint]({{site.baseurl}}/api/endpoints/export).
 
 ## Monitoring your Query Builder usage
 

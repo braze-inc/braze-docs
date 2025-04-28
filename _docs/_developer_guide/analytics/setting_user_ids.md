@@ -1,7 +1,7 @@
 ---
 nav_title: Setting User IDs
 article_title: Setting user IDs through the Braze SDK
-page_order: 1.2
+page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."
 
 ---
@@ -13,6 +13,10 @@ description: "Learn how to set user IDs through the Braze SDK."
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endalert %}
+
+## About anonymous users
+
+{% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
 ## Setting a user ID
 
@@ -52,9 +56,17 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endtab %}
 
 {% tab WEB %}
+For a standard Web SDK implementation, you can use the following method:
+
 ```javascript
 braze.changeUser(YOUR_USER_ID_STRING);
 ```
+
+If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
+
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 {% endtab %}
 
 {% tab CORDOVA %}
@@ -86,11 +98,15 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 **Do not assign a static default ID or call `changeUser()` when a user logs out.** Doing so will prevent you from re-engaging any previously logged-in users on shared devices. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze will automatically refresh the data for the newly-active profile.
 {% endalert %}
 
-## Setting a user alias
+## User aliases
 
-You can use a [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) to assign third-party IDs to a Braze user, so you can more-easily manage external data.
+### How they work
 
-They consists of two parts: a name and a label. The name refers to the identifier itself, while the label refers to the type of identifier it belongs to. For example, if you have a user in a third-party customer support platform with the external ID `987654`, you can assign them an alias in Braze with the name `987654` and the label `support_id`, so you can track them across platforms.
+{% multi_lang_include anonymous_users/about_user_aliases.md %}
+
+### Setting a user alias
+
+A user alias consists of two parts: a name and a label. The name refers to the identifier itself, while the label refers to the type of identifier it belongs to. For example, if you have a user in a third-party customer support platform with the external ID `987654`, you can assign them an alias in Braze with the name `987654` and the label `support_id`, so you can track them across platforms.
 
 {% tabs local %}
 {% tab android %}
@@ -147,7 +163,7 @@ We recommend that you create user IDs using the [Universally Unique Identifier (
 
 Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
 
-While its essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
+While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
 | Recommended | Not Recommended |
 | ------------ | ----------- |
@@ -159,18 +175,4 @@ While its essential that you correctly name your user IDs from the start, you ca
 
 {% alert warning %}
 Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data removal.
-{% endalert %}
-
-## Preserving anonymous user history
-
-You can only preserve anonymous user history in the following cases. For more information, see [Identified user profiles]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles).
-
-| Case | Explanation |
-| ---------------------- | -------------------------- |
-| User **has not** been previously identified | Anonymous history **is merged** with user profile upon identification. |
-| User **has been** previously identified in-app or via API | Anonymous history **is not merged** with user profile upon identification. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-After you set a user ID, that profile cannot be reverted to an anonymous user.
 {% endalert %}

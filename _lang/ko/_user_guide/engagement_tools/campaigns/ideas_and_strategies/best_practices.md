@@ -16,7 +16,7 @@ Braze는 Braze 플랫폼에서 활용할 의도가 있는 고객 데이터만 �
 - **타겟** 오디언스를 구축하여 [오디언스 세그먼트]({{site.baseurl}}/user_guide/engagement_tools/segments/)를 만드세요.
 - 메시지를 [실행 기반]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) 또는 [API 트리거된]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) 전달로 **트리거**합니다.
 - **템플릿** 및 [Liquid 조건 로직]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid)으로 메시지를 개인화하세요.
-- 캠페인의 효율성을 [전환 추적]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events)으로 **추적**하세요.
+- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
 
 이렇게 하면 Braze에 보내는 데이터를 최적화하고 사용자가 추적하지 않는 데이터 포인트를 장기적으로 유용하지 않다고 생각할 수 있는 경우에도 메시지를 보낼 수 있는 기능을 간소화할 수 있습니다. 
 
@@ -71,9 +71,13 @@ Braze는 Braze 플랫폼에서 활용할 의도가 있는 고객 데이터만 �
 캠페인 일정 또는 오디언스를 편집할 때는 다음 모범 사례를 참고하세요:
 
 - **일회성 일정 캠페인:** 예약된 전송 시간까지 캠페인을 수정할 수 있습니다.
-- **반복 예약 캠페인:** 예약된 전송 시간까지 캠페인을 수정할 수 있습니다.
-- **현지 전송 시간 캠페인:** 예정된 전송 시간 24시간 전에는 수정하지 마세요.
-- **최적의 전송 시간 캠페인:** 캠페인이 전송될 예정일 자정 24시간 전에는 수정하지 마세요.
+- **Recurring scheduled campaigns:** 예약된 전송 시간까지 캠페인을 수정할 수 있습니다.
+- **현지 전송 시간 캠페인:** Don't make edits 24 hours before the scheduled send time.
+- **최적의 전송 시간 캠페인:** Don't make edits 24 hours before midnight of the day the campaign is scheduled to be sent on.
+
+{% alert note %}
+Editing a live campaign and changing the delivery to **Local Send Time** will cause a new batch of messages to be enqueued, meaning your users will receive the message twice due to the message being enqueued twice. To prevent this, first stop the original campaign, then launch a duplicate after updating the schedule.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

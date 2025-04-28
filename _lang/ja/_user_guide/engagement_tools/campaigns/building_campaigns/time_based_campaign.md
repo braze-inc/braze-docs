@@ -138,7 +138,7 @@ Braze は遅延を `day of the week` + `calendar days` として計算し、`tim
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| ユーザーがキャンペーンを受け取ってから指定されたアクションを実行するまでに、コンバージョンとみなされるまでの最大時間。詳細については、「[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)」を参照してください。 | 該当なし |
+| ユーザーがキャンペーンを受け取ってから指定されたアクションを実行するまでに、コンバージョンとみなされるまでの最大時間。詳細については、「[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)」を参照してください。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

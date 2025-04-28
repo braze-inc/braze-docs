@@ -20,7 +20,7 @@ Les formules, en particulier lorsqu'elles sont associées à des événements pe
 Voici quelques exemples de types de comportements qui peuvent être détectés grâce aux formules :
 
 - **Applications de co-voiturage :** Si vous disposez d'un événement personnalisé pour l'annulation d'un trajet par l'utilisateur, vous pouvez configurer une fonction pour les trajets annulés / DAU afin de déterminer si certains segments d'utilisateurs ont tendance à annuler plus de trajets que d'autres.
-- **Applications d’e-commerce :** En configurant une fonction pour les achats d'un certain ID de produit / MAU, vous pouvez comparer la popularité d'un produit récemment promu entre les segments, même si toutes les promotions n'ont pas pu être suivies à l'aide de Braze.
+- **Applications de commerce électronique :** En configurant une fonction pour les achats d'un certain ID de produit / MAU, vous pouvez comparer la popularité d'un produit récemment promu entre les segments, même si toutes les promotions n'ont pas pu être suivies à l'aide de Braze.
 - **Applications média utilisant des publicités :** Si l’expérience des utilisateurs est interrompue par des publicités entre des clips vidéo ou audio, enregistrer en tant qu’événement personnalisé les sorties pendant la publicité et calculer le ratio Sorties mi-publicité/Utilisateurs actifs par jour peut aider à identifier les meilleurs segments à cibler avec une campagne pour des abonnements premium sans publicité.
 
 ## Création de formules

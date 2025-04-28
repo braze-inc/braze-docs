@@ -50,8 +50,8 @@ Depois de criar o grupo interno, é possível adicionar usuários de teste como 
 | Método de adição | Descrição |
 | :------------- | :------------- |
 | Usuários identificados |Pesquise o usuário pelo seu ID de usuário externo ou endereço de e-mail.|
-|Usuários anônimos| Pesquise por endereço IP. Em seguida, forneça um nome para cada usuário teste adicionado. Esse é o nome ao qual todos os registros de eventos serão associados na página [Registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/).|
-|Adicionar usuários em massa|Copie e cole uma lista de endereços de e-mail ou IDs externos na seção fornecida. Só é possível adicionar usuários que já sejam conhecidos no dashboard. Para saber mais, consulte [Importação de usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
+|Usuários anônimos| Pesquise por endereço IP. Em seguida, forneça um nome para cada usuário teste adicionado. Esse é o nome ao qual todos os registros de eventos serão associados na página [Registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/).|
+|Adicionar usuários em massa|Copie e cole uma lista de endereços de e-mail ou IDs externos na seção fornecida. Só é possível adicionar usuários que já sejam conhecidos no dashboard. Para saber mais, consulte [Importação de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Grupos de teste de conteúdo

@@ -59,7 +59,7 @@ Quando um evento ou atribuição é colocado em uma lista de bloqueio, qualquer 
 Para interromper o rastreamento de um atributo personalizado, evento ou produto específico, siga estas etapas:
 
 1. Procure por ele nas páginas **Atributos personalizados**, **Eventos personalizados** ou **Produtos**.
-2. Selecione o atributo personalizado, o evento ou o produto. Para atributos e eventos personalizados, você pode selecionar até 10 para colocar na lista de bloqueio de cada vez.
+2. Selecione o atributo personalizado, o evento ou o produto. Para atributos e eventos personalizados, você pode selecionar até 100 para colocar em uma lista de bloqueio por vez.
 3. Selecione **Blocklist**.
 
 ![Vários atributos personalizados selecionados que estão em uma lista de bloqueio na página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -78,13 +78,21 @@ Para isso, a Braze envia as informações de lista de bloqueio para cada disposi
 
 ### Considerações sobre listas de bloqueio
 
-É possível colocar em uma lista de bloqueio um grande número de eventos e atribuições, mas não é aconselhável. Isso ocorre porque toda vez que um evento é performado ou uma atribuição é (potencialmente) enviada ao Braze, esse evento ou atribuição precisa ser verificado em relação a toda a lista de bloqueio. Se aparecer na lista, não será enviado. Essa operação leva tempo e, se a lista for grande o suficiente, seu app poderá começar a ficar lento. Se não houver necessidade de usar o evento ou atribuição no futuro, ele deverá ser removido do código do app na próxima versão.
+É possível colocar em uma lista de bloqueio um grande número de eventos e atribuições, mas não é aconselhável. Isso ocorre porque toda vez que um evento é performado ou uma atribuição é (potencialmente) enviada ao Braze, esse evento ou atribuição precisa ser verificado em relação a toda a lista de bloqueio.
 
-As alterações na lista de bloqueio podem levar alguns minutos para serem propagadas. Você pode reabilitar qualquer evento ou atribuição da lista de bloqueio a qualquer momento.
+Até 300 itens são enviados ao SDK para inclusão na lista de bloqueio. Se você colocar mais de 300 itens na lista de bloqueio, esses dados serão enviados pelo SDK. Se não for necessário usar o evento ou atribuição no futuro, considere removê-lo do código do app durante a próxima versão. As alterações na lista de bloqueio podem levar alguns minutos para serem propagadas. Você pode reabilitar qualquer evento ou atribuição da lista de bloqueio a qualquer momento.
 
 ## Exclusão de dados personalizados
 
+{% alert important %}
+A exclusão de dados personalizados está atualmente em acesso antecipado. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar do acesso antecipado. Para obter mais ajuda com a exclusão de dados personalizados, entre em contato com o gerente de sucesso do cliente ou com a equipe de Suporte.
+{% endalert %}
+
 À medida que você cria campanhas e segmentos direcionados, pode descobrir que não precisa mais de um evento personalizado ou atributo personalizado. Por exemplo, se você usou um atributo personalizado específico como parte de uma campanha única, poderá excluir esses dados depois de [colocá-los na lista de bloqueio](#blocklisting-custom-attributes-custom-events-and-products) e remover suas referências do app. Você pode excluir qualquer tipo de dados (como strings, números e atributos personalizados aninhados).
+
+{% alert important %}
+Você deve ser um [administrador do Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para excluir dados personalizados.
+{% endalert %}
 
 Para excluir um evento personalizado ou atributo personalizado, faça o seguinte:
 
@@ -99,7 +107,7 @@ Quando você exclui dados personalizados, ocorre o seguinte:
 - **Para atributos personalizados:** Remove permanentemente os dados de atribuição do perfil de cada usuário.
 - **Para eventos personalizados:** Remove permanentemente os metadados do evento do perfil de cada usuário.
 
-Quando um atributo ou evento é selecionado para exclusão, seu status é alterado para **Lixeira**. Nos próximos sete dias, é possível restaurar a atribuição ou o evento. Se você não restaurar após sete dias, os dados serão excluídos permanentemente. Se você restaurar a atribuição ou o evento, ele voltará ao estado de lista de bloqueio.
+Quando um atributo ou evento é selecionado para exclusão, seu status é alterado para **Lixeira**. Nos próximos sete dias, é possível restaurar a atribuição ou o evento. Se você não restaurá-lo após sete dias, os dados serão excluídos permanentemente. Se você restaurar a atribuição ou o evento, ele voltará ao estado de lista de bloqueio.
 
 A exclusão não impede a gravação adicional dos objetos de dados personalizados nos perfis de usuários, portanto, certifique-se de que os dados personalizados não estejam mais sendo registrados antes de excluir o evento ou atributo.
 
@@ -123,7 +131,7 @@ Forçar tipos de dados não se aplica a propriedades de eventos ou propriedades 
 ![Menu suspenso de tipo de dados de atributos personalizados][75]
 
 {% alert warning %}
-Se você optar por forçar o tipo de dados de uma atribuição, todos os dados recebidos que não sejam do tipo especificado serão ignorados.
+Se você optar por forçar o tipo de dados de uma atribuição, todos os dados recebidos que não forem do tipo especificado serão coagidos a esse tipo. Se essa coerção for impossível (por exemplo, uma string contendo letras sendo coerciva em um número), os dados serão ignorados. Todos os dados ingeridos antes da alteração do tipo continuarão a ser armazenados como o tipo antigo (e, portanto, podem não ser segmentáveis), e um aviso aparecerá ao lado da atribuição nos perfis dos usuários afetados.
 {% endalert %}
 
 ### Coerção de tipos de dados

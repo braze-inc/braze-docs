@@ -122,6 +122,10 @@ Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `
 }
 ```
 
+{% alert note %}
+Cette approche ne peut pas être utilisée pour supprimer une clé imbriquée dans un [tableau d'objets]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -441,7 +445,7 @@ Si les données n'apparaissent pas comme prévu après la régénération du sch
 
 ## Points de données
 
-Toute clé mise à jour consomme un point de données. Par exemple, cet objet initialisé dans le profil utilisateur consomme sept (7) points de données :
+Toute clé envoyée consomme un point de données. Par exemple, cet objet initialisé dans le profil utilisateur consomme sept (7) points de données :
 
 ```json
 {

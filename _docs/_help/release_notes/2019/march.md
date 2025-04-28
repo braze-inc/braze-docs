@@ -23,7 +23,7 @@ Our [new in-app messages]({{site.baseurl}}/user_guide/message_building_by_channe
 
 ### What you need to do
 
-We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/), and [Android]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
+We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 
 After that, you're good to go!
 
@@ -37,4 +37,4 @@ You can now use [Inkit]({{site.baseurl}}/partners/inkit/) as a predesigned webho
 
 ## Google Cloud Storage
 
-[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/) is no longer in beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to **Technology Partners** in your Braze account and search for Google Cloud Storage.
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) is no longer in beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to **Technology Partners** in your Braze account and search for Google Cloud Storage.

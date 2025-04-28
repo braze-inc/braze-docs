@@ -70,11 +70,18 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endtab %}
 
 {% tab web %}
+For a standard Web SDK implementation, you can use the following method:
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);
 ```
 
+If you'd like to use Google Tag Manager instead, you can use the **Purchase** tag type to call the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase). Use this tag to track purchases to Braze, optionally including purchase properties. To do so:
+
+1. The **Product ID** and **Price** fields are required.
+2. Use the **Add Row** button to add purchase properties.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quantity", and "purchase properties".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
 {% endtab %}
 
 {% tab cordova %}
@@ -129,7 +136,7 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 {% endtabs %}
 
 {% alert warning %}
-`productID` can only have a maximum of 255 characters. Addtionally, if the product identifier is empty, the purchase will not be logged to Braze.
+`productID` can only have a maximum of 255 characters. Additionally, if the product identifier is empty, the purchase will not be logged to Braze.
 {% endalert %}
 
 ### Adding properties
@@ -185,11 +192,29 @@ NSDictionary *purchaseProperties = @{@"key": @"value"};
 {% endtab %}
 
 {% tab web %}
+For a standard Web SDK implementation, you can use the following method:
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
 ```
 
+If your site logs purchases using the standard [eCommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+
+You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
+
+For example, given the following eCommerce payload:
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) call to Braze.
 {% endtab %}
 
 {% tab cordova %}
@@ -252,7 +277,7 @@ UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quanti
 
 ### Adding quantity
 
-By default, `quantity` is set to `1`. However, you can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. To add a quantity, pass an `Int` value to `quantity` that's within the range of `[0, 100]`.
+By default, `quantity` is set to `1`. However, you can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. To add a quantity, pass an `Int` value to `quantity`.
 
 ### Using the REST API
 

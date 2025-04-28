@@ -13,10 +13,6 @@ description: "Dieser Referenzartikel behandelt allgemeine unternehmensübergreif
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Konto-Dropdown und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**.
-{% endalert %}
-
 ## Regeln für die Authentifizierung
 
 ### Passwortlänge
@@ -31,7 +27,7 @@ Wählen Sie **Komplexe Passwörter erzwingen**, um zu verlangen, dass die Passw�
 - Zahl
 - Sonderzeichen
 
-### Passwortwiederverwendung
+### Wiederverwendbarkeit von Passwörtern
 
 Legt die Mindestanzahl neuer Kennwörter fest, die festgelegt werden müssen, bevor ein Benutzer ein Kennwort erneut verwenden kann. Die Standardeinstellung ist drei.
 
@@ -103,63 +99,63 @@ Dieser Bericht enthält nur die letzten 10.000 Sicherheitsereignisse für Ihr Ko
 
 {% details Gemeldete Sicherheitsereignisse %}
 ### Anmeldung und Konto 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Entfernte Entwickler:in
+- Zusätzlicher Entwickler:in
+- Eingetragen
+- Anmeldung fehlgeschlagen
+- Einrichtung der Zwei-Faktoren-Authentifizierung abgeschlossen
+- Zurücksetzen der Zwei-Faktor-Authentifizierung abgeschlossen
+- Freigegebene Entwickler:in 2FA
+- Entwickler:in suspendiert
+- Entwickler:in Unsuspended
 
 ### Erhöhter Zugang
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Elevated Access Flow gestartet
+- Erhöhter Zugang fertiggestellt
+- Fehlgeschlagene 2FA-Überprüfung für erweiterten Zugang
 
 ### Kampagne
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- Kampagne hinzugefügt
+- Bearbeitete Kampagne
 
 ### Canvas
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- Hinzugefügte Reise
+- Bearbeitete Reise
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Hinzugefügtes Segment
+- Bearbeitetes Segment
+- Exportierte Daten in CSV
+- Exportierte Segmente über API
 
 ### REST-API-Schlüssel
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- REST API-Schlüssel hinzugefügt
+- Entfernter REST API-Schlüssel
 
 ### Zugangsdaten für die Basisauthentifizierung
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Zugangsdaten für Basic Auth hinzugefügt
+- Aktualisierte Basic Auth Zugangsdaten
+- Zugangsdaten für Basic Auth entfernt
 
 ### Erlaubnis
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Freigegebene Entwickler:in 2FA
+- Aktualisierte Kontoberechtigung
 
 ### Einstellungen des Unternehmens
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- App-Gruppe hinzugefügt
+- App hinzugefügt
 
 ### E-Mail-Vorlage
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- E-Mail Template hinzugefügt
+- Aktualisierte E-Mail Template
 
 ### Push-Zugangsdaten
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Aktualisierte Push-Zugangsdaten
+- Entfernte Push-Zugangsdaten
 
 ### SDK-Debugger
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Gestartete SDK Debugger Sitzung
+- Exportiertes SDK Debugger Protokoll
 {% enddetails %}
 
 ## Anzeige von persönlich identifizierbaren Informationen (PII) {#view-pii}
@@ -213,7 +209,7 @@ Sie sind für die Festlegung der richtigen Einstellungen für Ihren Workspace ve
 | Nachricht senden | message_extras | Mehrere Event-Typen enthalten ein message_extras-Feld. Die Einstellung gilt für alle Event-Typen zum Senden von Nachrichten, die message_extras unterstützen, einschließlich der in Zukunft hinzukommenden Event-Typen. |
 
 {% alert warning %}
-**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, **können** die Daten **nicht wiederhergestellt werden**.
+**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, können die Daten **nicht wiederhergestellt werden**.
 {% endalert %}
 
 ### Einstellungen konfigurieren

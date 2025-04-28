@@ -27,7 +27,7 @@ You can revisit recently edited or created campaigns, Canvases, and segments. Ea
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.][6]
 
-## Peformance overview
+## Performance overview
 
 By default, the **Performance overview** section shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 
@@ -58,7 +58,7 @@ A low MAU-to-user ratio may indicate that you need to diversify your messaging c
 ### Lifetime sessions
 
 *Lifetime sessions* is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app or visits your website. For a more precise definition on how sessions are defined by platform, view the corresponding 
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) session tracking developer articles.
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), or [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) session tracking developer articles.
 
 ### Monthly active users
 

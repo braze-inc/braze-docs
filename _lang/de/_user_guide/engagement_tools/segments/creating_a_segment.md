@@ -8,17 +8,13 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Braze-Lernkurs]](https://learning.braze.com/segmentation-course)([{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Erstellen eines Segments
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Erstellen eines Segments
 
 > Die Segmentierung ermöglicht es Ihnen, Benutzer auf der Grundlage ihrer demografischen, verhaltensbezogenen oder technischen Merkmale und Aktionen anzusprechen. Durch den kreativen und intelligenten Einsatz von Segmentierung und Nachrichtenautomatisierung können Sie Ihre Nutzer nahtlos vom Erstkontakt zum langfristigen Kunden machen. Segmente werden in Echtzeit aktualisiert, wenn sich Daten ändern. Sie können so viele Segmente erstellen, wie Sie für Ihre Targeting- und Messaging-Zwecke benötigen.
 
 ## Schritt 1: Zum Abschnitt „Segmente“ navigieren
 
 Gehen Sie zu **Zielgruppe** > **Segmente**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Segmente** unter **Engagement**.
-{% endalert %}
 
 ## Schritt 2: Benennen Sie Ihr Segment
 
@@ -80,7 +76,9 @@ Braze erstellt erst dann Profile für Benutzer, wenn diese die App zum ersten Ma
 ![Segmenter-Filtergruppen mit dem Operator AND.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Segmente, die bereits den Filter **Segmentzugehörigkeit** verwenden, können nicht weiter einbezogen oder in andere Segmente verschachtelt werden.
+Segmente, die bereits den Filter **Segmentzugehörigkeit** verwenden, können nicht weiter einbezogen oder in andere Segmente verschachtelt werden. Dadurch wird ein Zyklus verhindert, bei dem Segment A Segment B einschließt, das dann wiederum versucht, Segment A einzuschließen. In diesem Fall würde das Segment immer wieder auf sich selbst verweisen, so dass es unmöglich wäre, zu berechnen, wer tatsächlich dazugehört.
+
+Außerdem wird die Verschachtelung von Segmenten auf diese Weise komplizierter und kann die Arbeit verlangsamen. Erstellen Sie stattdessen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu.
 {% endalert %}
 
 #### Ausschlussgruppen (optional) {#exclusion}
@@ -122,43 +120,13 @@ In der Segmentierungsstatistik oder der Vorschau wird dieser einzelne Benutzer j
 
 Braze verfügt über Testfilter, um bestimmte Nutzer:innen nach Nutzer-ID oder E-Mail-Adresse anzusprechen.
 
-### Schritt 5: Segment speichern
+## Schritt 5: Segment speichern
 
 Wählen Sie **Speichern**. Jetzt können Sie Nachrichten an Ihre Benutzer senden!
 
-## Berechnung der Segmentzugehörigkeit {#segment-membership-calculation}
+## Messung der Größe eines Segments
 
-Braze aktualisiert die Segmentzugehörigkeit des oder der Nutzer:in, wenn die Daten an unsere Server zurückgesendet und verarbeitet werden, in der Regel sofort. Die Segmentzugehörigkeit eines Nutzers oder einer Nutzerin ändert sich erst, wenn die Sitzung verarbeitet wurde. So wird beispielsweise ein:e Nutzer:in, der oder die beim ersten Start der Sitzung in ein Segment für passive Nutzer:innen fällt, sofort aus dem Segment für passive Nutzer:innen verschoben, wenn die Sitzung verarbeitet wird.
-
-### Berechnung der insgesamt erreichbaren Benutzer
-
-Jedes Segment zeigt die Gesamtzahl der Nutzer:innen an, die zu diesem Segment gehören. Wenn Sie nach **Benutzern aus allen Apps** filtern, werden auch alle verschiedenen Kanäle angezeigt, die zur Kommunikation mit diesen Benutzern zur Verfügung stehen, z. B. Web-Push oder E-Mail. Es ist möglich, dass die Anzahl der Gesamtnutzer:innen von der Anzahl der Nutzer:innen abweicht, die über jeden Kanal erreichbar sind.
-
-![Eine Tabelle mit der Gesamtzahl der erreichbaren Nutzer:innen, aufgeschlüsselt nach Nutzer:innen, die per E-Mail, iOS Push, Android Push, Web Push, Kindle Push und Android China Push erreichbar sind.][10]
-
-Damit ein:e Nutzer:in als über einen bestimmten Kanal erreichbar aufgeführt wird, muss er oder sie über beides verfügen:
-* Eine gültige E-Mail-Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist; und
-* Sie haben sich für Ihre App angemeldet oder abonniert.
-
-Ein einzelner Benutzer kann zu verschiedenen erreichbaren Benutzergruppen gehören. So kann eine Nutzer:in beispielsweise sowohl eine gültige E-Mail-Adresse als auch ein gültiges Android-Push-Token haben und für beide angemeldet sein, aber kein zugehöriges iOS-Push-Token besitzen. Die Lücke zwischen den insgesamt erreichbaren Nutzern und der Summe der verschiedenen Kanäle ist die Anzahl der Nutzer, die sich für das Segment qualifiziert haben, aber über diese Kommunikationskanäle nicht erreichbar sind.
-
-### Statistik für Segmentgröße
-
-Braze liefert die folgenden Statistiken zur Segmentgröße. Alle geschätzten Statistiken liegen innerhalb von 1% über oder unter dem tatsächlichen Wert, und die genaue Segmentzugehörigkeit wird immer berechnet, bevor ein Segment von einer in einer Kampagne oder einem Canvas gesendeten Nachricht betroffen ist.
-
-#### Statistiken filtern
-
-Für jede Filtergruppe können Sie die geschätzten erreichbaren Benutzer anzeigen. Wählen Sie **Zusätzliche Trichterstatistiken erweitern**, um eine Aufschlüsselung nach Kanälen zu sehen.
-
-![Eine Filtergruppe mit einem Filter für ein Geschlecht, das nicht unbekannt ist.][4]{: style="max-width:80%;"}
-
-#### Segment-Statistiken
-
-Für ein ganzes Segment können Sie unten auf der Seite die geschätzten erreichbaren Nutzer sowie die geschätzten Nutzerzahlen für jeden Kanal anzeigen. Sie können auch die genaue Anzahl der erreichbaren Nutzer anzeigen (sowohl für das Segment insgesamt als auch pro Kanal), indem Sie die Option **Exakte Statistik berechnen** wählen.
-
-Beachten Sie Folgendes:
-- Die Berechnung der genauen Statistiken kann einige Minuten in Anspruch nehmen. Diese Funktion berechnet die genauen Statistiken nur auf Segmentebene, nicht auf Filter- oder Filtergruppenebene.
-- Bei großen Segmenten ist es normal, dass selbst bei der Berechnung exakter Statistiken leichte Abweichungen auftreten. Es wird erwartet, dass die Genauigkeit dieses Features 99,999 % oder mehr beträgt.
+Wenn Sie wissen möchten, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können, lesen Sie den Abschnitt [Messung der Segmentierung]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Segmente archivieren
 
@@ -195,13 +163,11 @@ Sie können festlegen, dass an jede:n Nutzer:in nur eine Push-Benachrichtigung g
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}

@@ -77,7 +77,7 @@ Se os usuários entrarem em uma jornada de ação várias vezes e tiverem vária
 | **On** | Todas as entradas avançarão no final da janela de avaliação relevante. Nenhuma desduplicação ocorrerá. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Nota que as classificações não são [editáveis após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Nota que as classificações não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}

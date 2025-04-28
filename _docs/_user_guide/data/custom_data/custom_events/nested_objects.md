@@ -10,7 +10,7 @@ description: "This article describes how to send nested JSON data as properties 
 
 > This page covers how to send nested JSON data as properties of custom events and purchases, and how to use those nested objects in your messaging.
 
-You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmentating users.
+You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmenting users.
 
 ## Limitations
 
@@ -39,7 +39,7 @@ If new properties are sent in the future, they won't be in the schema until it i
 
 ## Step 2: Use the nested object
 
-After generating a schema, you can reference the nested data during segmentation and personalization. Refer to the following sections for usage examples:
+You can reference the nested data during segmentation and personalization. Note that a schema is not required. Refer to the following sections for usage examples:
 
 - [API request body](#api-request-body)
 - [Liquid templating](#liquid-templating)

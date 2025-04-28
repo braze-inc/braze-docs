@@ -40,7 +40,7 @@ Changes will take effect after you select **Save**. Removing countries from your
 
 Certain countries have a higher risk of SMS traffic pumping. These countries are indicated by a **High Risk** tag in the country dropdown.
 
-![The country downdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
+![The country dropdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
 
 If you allow sending in these countries, you must first acknowledge the risk of doing so before the country is added to your allowlist.
 

@@ -246,10 +246,10 @@ HTMLエディター内で<kbd>Ctrl</kbd>+<kbd>F</kbd>（Windows）または<kbd>
 
    | 前 | その後 |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_dacc92e9-dbbb-4b2b-8db4-7af35a43e638/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_41010184-55ec-40c7-a047-23f991a8b50e/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_2bb71100-6163-42b7-a837-3eddbf88a2aa/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_2fa66fd9-c5e3-4486-92d8-5b1b66b2ca6d/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_8ecfe0bd-dcb1-4fbb-90de-c37b5646bd80/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_e190c958-9413-497e-a8d4-e85c7bad2671/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_a6f1276f-d4d7-4cdb-b2ca-54afeea8fa59/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_72d93e8b-7f35-40f4-84b6-17fa8123450c/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_e40c50fb-b4c3-4ce9-a3c0-658dcee7b4c4/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_25c2b721-5550-4b80-8857-985ffe253351/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates

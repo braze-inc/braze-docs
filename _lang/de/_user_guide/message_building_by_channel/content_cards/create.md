@@ -24,15 +24,10 @@ Sie sind sich nicht sicher, ob Ihre Nachricht mit einer Kampagne oder einem Canv
 {% tab Kampagne %}
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Wählen Sie **Content-Cards** oder, für Kampagnen, die auf mehrere Kanäle zielen, **Multichannel** aus.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
-   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach den entsprechenden Tags filtern.
+2. Wählen Sie **Content-Cards** oder, für Kampagnen, die auf mehrere Kanäle zielen, **Multichannel** aus.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
+   * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach den entsprechenden Tags filtern.
 5. Fügen Sie beliebig viele Varianten für Ihre Kampagne hinzu und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Mehr über Varianten erfahren Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -81,6 +76,10 @@ Wählen Sie **Sprachen hinzufügen**, um die gewünschten Sprachen aus der vorge
 
 ![Ein Fenster mit den ausgewählten Sprachen Englisch, Spanisch und Französisch sowie Titel, Beschreibung und Linktext, die für die Internationalisierung der Felder ausgewählt wurden.][2]{: style="max-width:70%;"}
 
+##### Erstellen von Nachrichten von rechts nach links
+
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
+
 #### Titel und Nachricht
 
 Werden Sie kreativ. Es gibt keine Grenzen, aber je schneller Sie Ihre Botschaft übermitteln und Ihren Kunden zum Klicken bringen können, desto besser! Wir empfehlen klare und prägnante Titel und Nachrichteninhalte. Beachten Sie, dass diese Felder bei Nur-Bild-Karten nicht vorhanden sind.
@@ -105,8 +104,8 @@ Die folgenden Aktionen sind für Inhaltskarten-Links verfügbar:
 |---|---|
 | Weiterleitung zu Web-URL | Öffnen Sie eine nicht-native Webseite. |
 | [Deeplink in die App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Setzt einen Deeplink in einen Bildschirminhalt der App. |
-| Angepasstes Event protokollieren | Wählen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) zum Auslösen. Kann verwendet werden, um eine andere Inhaltskarte anzuzeigen oder zusätzliche Nachrichten auszulösen. |
-| Angepasstes Attribut protokollieren | Wählen Sie ein [benutzerdefiniertes Attribut]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/), das für den aktuellen Benutzer festgelegt werden soll. |
+| Angepasstes Event protokollieren | Wählen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) zum Auslösen. Kann verwendet werden, um eine andere Inhaltskarte anzuzeigen oder zusätzliche Nachrichten auszulösen. |
+| Angepasstes Attribut protokollieren | Wählen Sie ein [benutzerdefiniertes Attribut]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), das für den aktuellen Benutzer festgelegt werden soll. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Anmerkung**: Die Optionen __Benutzerdefiniertes Ereignis protokollieren__ und __Benutzerdefiniertes Attribut protokollieren__ erfordern die folgende SDK-Versionskompatibilität:
@@ -154,7 +153,7 @@ Als nächstes können Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_
 
 #### Wählen Sie Konversions-Events aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 {% endtab %}
 
@@ -209,11 +208,13 @@ Sie können mehrere benutzerdefinierte Ereignisse und Käufe angeben, die eine K
 
 ### Aktualisieren der gestarteten Karten
 
-Inhaltskarten können nach dem Versenden nicht mehr bearbeitet werden. Wenn Sie feststellen, dass Sie Änderungen an bereits versendeten Karten vornehmen müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) in Betracht ziehen, wie in den folgenden Optionen beschrieben.
+Inhaltskarten können nach dem Versenden nicht mehr bearbeitet werden. Wenn Sie feststellen, dass Sie Änderungen an bereits versendeten Karten vornehmen müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) in Betracht ziehen, wie in den folgenden Optionen beschrieben.
 
 {% alert note %}
-Bei Inhaltskarten, die [beim ersten Abdruck]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) verwendet werden, wird die Abdruckzeit zur Berechnung der Wiederzulässigkeit verwendet. Bei allen anderen Inhaltskartentypen wird die späteste Sende- oder Abdruckzeit verwendet.
+Wenn eine Content-Card wieder zugelassen wird, kann sie erneut gesendet werden, wenn sich die ursprüngliche Karte noch in der App eines Nutzers:innen befindet. Um doppelte Karten in der App eines Nutzers zu vermeiden, können Sie die Wiederzulassung deaktivieren oder das Wiederzulassungsfenster verlängern, so dass Nutzer:innen erst dann eine neue Karte erhalten, wenn die ursprüngliche abgelaufen ist.
 {% endalert %}
+
+Beachten Sie auch, dass Content-Cards, die [bei der ersten Impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) verwendet werden, die Impressionszeit zur Berechnung der Wiederzulässigkeit verwenden. Content-Cards, die beim Start einer Kampagne oder beim Eingang in den Canvas-Schritt erstellt werden, verwenden jedoch den spätesten Sende- oder Impressionszeitpunkt.
 
 #### Option 1: Duplizieren der Kampagne
 

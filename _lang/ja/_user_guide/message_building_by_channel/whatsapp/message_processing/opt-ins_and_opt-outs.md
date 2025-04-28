@@ -30,7 +30,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ## Braze WhatsAppチャンネルのオプトインを設定する
 
 WhatsApp のオプトインについては、[WhatsApp の要件](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/)を満たす必要があります。また、Braze に以下の情報を提供する必要があります。
-- 各ユーザーの`external_id` 、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、更新された購読状況。これは、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)を使用するか、[`/users/track` エンドポイント](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)経由で、電話番号と購読ステータスを更新することで実行できます。 
+- 各ユーザーの`external_id` 、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、更新された購読状況。これは、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)を使用するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)経由で、電話番号と購読ステータスを更新することで実行できます。
 
 {% alert note %}
 Braze が改良してリリースした `/users/track` エンドポイントでは購読ステータスの更新が可能になり、[購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)で確認できます。ただし、すでに [`/v2/subscription/status/set` エンドポイントを]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)使用してオプトインプロトコルを作成している場合は、引き続きそれを使用できます。
@@ -40,7 +40,7 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 
 お客様のアプリまたはウェブサイト（アカウント登録、チェックアウトページ、アカウント設定、クレジットカード端末）をBrazeに提供する。
 
-既にEメールやテキストでのマーケティング同意を得ている場合は、WhatsApp用のセクションを追加する。オプトインしたユーザーには、`external_id`、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、および更新後の購読ステータスが必要です。これを行うには、Braze のインストール方法に応じて、[`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を活用するか、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)を使用します。
+既にEメールやテキストでのマーケティング同意を得ている場合は、WhatsApp用のセクションを追加する。オプトインしたユーザーには、`external_id`、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、および更新後の購読ステータスが必要です。これを行うには、Braze のインストール方法に応じて、[`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を活用するか、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)を使用します。
 
 #### 外部に作成されたオプトインリスト
 
@@ -54,8 +54,8 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 2. 顧客が「はい」を返信すると、オプトインが表明される[クイック返信アクション]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies)を指定します。
 3. カスタムキーワードトリガーを設定する。
 4. どちらのアイディアにせよ、おそらく次のようなパスが必要だろう：
-	- [`/users/track` エンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)呼び出して、ユーザーを更新するか、作成します。 
-	- [`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を利用するか、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) を使用します。 
+	- [`/users/track` エンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)呼び出して、ユーザーを更新するか、作成します。
+	- [`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を利用するか、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) を使用します。
 
 #### WhatsAppのインバウンドメッセージ 
 

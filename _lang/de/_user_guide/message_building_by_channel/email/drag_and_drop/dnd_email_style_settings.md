@@ -16,10 +16,6 @@ tool:
 
 Um Ihre globalen Stileinstellungen zu bearbeiten, gehen Sie zu **Einstellungen** > **E-Mail-Voreinstellungen** > **Drag-and-Drop-E-Mail-Voreinstellungen**. Nachdem Sie die Stile im Drag-and-Drop-E-Mail-Editor bearbeitet haben, klicken Sie auf **Speichern**. Um Ihre E-Mail-Kampagnen und Canvase weiter anzupassen, sehen Sie sich an, wie Sie [Drag-and-Drop-Editor-Blöcke][8] einbinden können.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Einstellungen verwalten** > **E-Mail-Einstellungen** > **Drag-and-Drop-E-Mail-Editor-Einstellungen**.
-{% endalert %}
-
 ![][1]
 
 {% alert note %}

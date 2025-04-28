@@ -48,10 +48,8 @@ Apple 비공개 릴레이로 이메일 주소를 추가할 때 사용되는 구�
 SparkPost용 Apple 비공개 릴레이를 설정하려면 다음 단계를 따르세요. 
 
 1. Apple로 로그인합니다.
-2. [Apple의 설명서에](https://developer.apple.com/sign-in-with-apple/get-started/) 따라 필요한 인증 파일을 만들고 해당 도메인에 액세스할 수 있는 디렉토리에 이 파일을 호스팅합니다.
-3. DNS 설정에 인증 파일이 호스팅되는 도메인을 가리키는 A 레코드를 추가합니다. 이 인증 절차는 일회성 인증 프로세스입니다.
-4. Apple에서 이메일 도메인을 추가합니다.
-5. Apple은 자동으로 도메인을 확인하여 확인된 도메인을 표시하고 도메인을 다시 확인하거나 삭제할 수 있는 옵션을 제공합니다.
+2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
+3. Apple은 자동으로 도메인을 확인하여 확인된 도메인을 표시하고 도메인을 다시 확인하거나 삭제할 수 있는 옵션을 제공합니다.
 
 {% alert important %}
 인증 파일이 생성된 후 2~3일 이내에 이 프로세스를 완료해야 하며, 그렇지 않으면 만료됩니다. Apple은 유효 기간을 공개하지 않습니다.

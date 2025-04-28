@@ -25,9 +25,9 @@ Avant de commencer, assurez-vous d'avoir travaillé avec votre équipe et votre 
 
 Vous pouvez créer de nouveaux espaces de travail ou passer d'un espace de travail à l'autre à partir de la liste déroulante de l'espace de travail dans l'en-tête global.
 
-1. Sélectionnez le menu déroulant de l'espace de travail et cliquez sur <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Créer un espace de travail**.
+1. Sélectionnez la liste déroulante Espace de travail, puis <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Créer un espace de travail**.
 
-![][1]
+![La liste déroulante de l'espace de travail avec le bouton "Créer un espace de travail".][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. Donnez un nom à votre espace de travail.
@@ -39,29 +39,29 @@ Vous pouvez adopter une convention de dénomination afin que les autres membres 
 {:start="3"}
 3\. Sélectionnez **Créer**. La création de votre espace de travail par Braze peut prendre quelques secondes.
 
-![][2]
+![Modale "Create Workspace" avec le nom "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 Vous accéderez à la page **Paramètres de l'application** pour commencer à ajouter vos instances d'application. Vous pouvez accéder à cette page à tout moment à partir de **Réglages** > **Réglages de l'application.**
 
-![][3]
+![Page "App Settings" pour l'espace de travail Upon Voyage US - Staging avec un bouton pour ajouter une application.][3]
 
 ### Étape 3 : Ajoutez vos instances d'application
 
 Les différents sites et applications rassemblés au sein d'un espace de travail sont appelés des « instances d’applications ».
 
-1. Dans la page **Paramètres de l'application**, cliquez sur **\+ Ajouter une application**.
+1. Dans la page **Paramètres de l'application**, sélectionnez **\+ Ajouter une application.**
 2. Donnez un nom à votre instance d'application et sélectionnez la ou les plateformes sur lesquelles cette instance d'application est utilisée. Si vous sélectionnez plusieurs plateformes, Braze créera une instance d'application pour chaque plateforme.
 
-![][4]{: style="max-width:60%" }
+!["Fenêtre modale/boîte de dialogue de Upon Voyage US - Staging" avec des options pour sélectionner les détails de l'application.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. Cliquez sur **Ajouter une application** pour confirmer.
+3\. Sélectionnez **Ajouter une application** pour confirmer.
 
 #### Clés API de l'application
 
 Après avoir ajouté votre instance d'application, vous aurez accès à sa clé API. La clé API est utilisée lors des requêtes entre votre instance d'application et l'API de Braze. La clé API est également importante pour l'intégration du SDK Braze à votre application ou à votre site Web.
 
-![][5]
+![Page de paramètres pour l'application iOS Upon Voyage avec des champs pour la clé API et le point de terminaison SDK.][5]
 
 {% alert note %}
 Vous devez créer des instances d’application distinctes pour chaque version de votre application sur chaque plateforme. Par exemple, si vous avez des versions gratuite et pro de votre app sur iOS et Android, créez quatre instances d'app au sein de votre espace de travail (app iOS gratuite, app Android gratuite, app iOS pro et app Android pro). Cela vous donnera quatre clés API à utiliser, une pour chaque instance d’application.
@@ -73,7 +73,7 @@ La version du SDK affichée sur la page Paramètres des applications pour une ap
 
 Ce champ apparaît une fois que vous avez intégré le SDK de Braze à votre application ou site web. Si une version plus récente du SDK Braze est disponible pour votre plateforme, elle sera notée ici avec l'étiquette « Une version plus récente est disponible ».
 
-![][6]
+![La section "Live SDK Version" avec une valeur de champ de "5.4.0" et une icône qui indique qu'une nouvelle version est disponible.][6]
 
 ### Étape 4 : Répétez l'opération si nécessaire
 
@@ -89,7 +89,7 @@ Répétez les étapes 2 et 3 pour configurer autant d'espaces de travail que vot
 
 Vous pouvez ajouter des espaces de travail favoris pour accéder encore plus rapidement aux espaces de travail que vous utilisez le plus.
 
-![][7]
+![Espace de travail avec l'onglet "Espaces de travail favoris".][7]{: style="max-width:50%;"}
 
 Pour ajouter des espaces de travail favoris :
 
@@ -108,21 +108,22 @@ Pour renommer votre espace de travail :
 2. Survolez le nom de votre espace de travail et sélectionnez <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Donnez un nouveau nom à votre espace de travail, puis sélectionnez <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Enregistrer**.
 
-![][8]
+![L'icône du crayon apparaît à côté du nom de l'espace de travail.][8]{: style="max-width:50%;"}
 
-### Suppression des espaces de travail
+### Suppression d'espaces de travail et d'instances d'applications
 
-
-Pour supprimer votre espace de travail :
+Pour supprimer votre espace de travail ou votre instance d'application :
 
 1. Allez dans **Réglages** > **Réglages de l'application**.
-2. Sélectionnez **Supprimer l'espace de travail**.
+2. Sélectionnez **Supprimer l'** espace de travail pour supprimer l'espace de travail correspondant, ou sélectionnez l'icône de la corbeille à côté de l'instance de l'application concernée.
+
+Vous ne pouvez pas supprimer les instances d'app ou les espaces de travail qui sont actuellement utilisés pour le ciblage des utilisateurs ou qui comptent plus de 1 000 utilisateurs. Si vous essayez de le faire, vous recevrez un message d'erreur. Pour procéder et les supprimer, [créez un cas d'assistance]({{site.baseurl}}/help/support/) qui inclut un lien vers le tableau de bord et le nom de l'instance d'app ou de l'espace de travail à supprimer.
 
 {% alert warning %}
 Soyez prudent lorsque vous supprimez des espaces de travail ! Lorsqu'un espace de travail est supprimé, il ne peut plus être restauré.
 {% endalert %}
 
-![][9]
+![La page Paramètres de l'application avec un bouton pour supprimer un espace de travail et une icône de corbeille pour supprimer une application.][9]
 
 ## Foire aux questions
 
@@ -148,7 +149,7 @@ Par défaut, un segment cible toutes les applications et tous les sites Web de l
 2. Pour les **Apps et sites web ciblés**, sélectionnez les **utilisateurs d'apps spécifiques.**
 3. Dans le menu déroulant **Applications spécifiques**, sélectionnez votre application ou votre site.
 
-![][10]{: style="max-width:75%" }
+![Segmentation qui consiste à cibler les utilisateurs d'apps spécifiques.][10]
 
 Vous pouvez ensuite ajouter ce segment à votre message et commencer à affiner votre audience avec d'autres segments et filtres si nécessaire.
 

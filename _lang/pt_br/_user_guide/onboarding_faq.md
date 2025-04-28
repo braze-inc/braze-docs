@@ -30,7 +30,7 @@ Se um perfil de usuário anônimo com um pseudônimo for posteriormente reconhec
 
 Para usuários de alias que você deseja mesclar com usuários identificados, você pode mesclar quaisquer campos que sejam pertinentes ao perfil real que você deseja manter. Você teria que exportar esses dados antes de excluí-los do perfil de alias usando nosso [endpoint Exportar perfil de usuário por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). Você pode então usar nosso [endpoint de Rastreamento de usuários]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para postar esses eventos no perfil que você manteve. Isso preservará quaisquer dados que você queira manter, como atributos que foram previamente registrados em um perfil, mas não no outro.
 
-Para uma análise completa dos diferentes métodos de coleta de novos e existentes dados de usuários no Braze, confira [as melhores práticas de coleta de dados]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/).
+Para uma análise completa dos diferentes métodos de coleta de novos e existentes dados de usuários no Braze, confira [as melhores práticas de coleta de dados]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/).
 
 {% endapi %}
 {% api %}
@@ -51,7 +51,7 @@ Você pode fazer upload e atualizar perfis de usuários via arquivos CSV de **p�
 Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), isso está localizado em **Usuários** > **importação de usuário**.
 {% endalert %}
 
-Antes de iniciar sua importação de CSV, é importante entender com sua equipe de engenharia como os usuários serão identificados no Braze. Normalmente, isso seria um ID de banco de dados usado internamente. Isso deve estar alinhado com a forma como os usuários serão identificados pelo SDK da Braze em dispositivos móveis e web, para que cada cliente tenha um único perfil de usuário na Braze em todos os seus dispositivos. Saiba mais sobre o [ciclo de vida do perfil de usuário da Braze]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Antes de iniciar sua importação de CSV, é importante entender com sua equipe de engenharia como os usuários serão identificados no Braze. Normalmente, isso seria um ID de banco de dados usado internamente. Isso deve estar alinhado com a forma como os usuários serão identificados pelo SDK da Braze em dispositivos móveis e web, para que cada cliente tenha um único perfil de usuário na Braze em todos os seus dispositivos. Saiba mais sobre o [ciclo de vida do perfil de usuário da Braze]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 Quando você fornece um `external_id` na sua importação, a Braze atualizará qualquer usuário existente com o mesmo `external_id` ou criará um novo usuário identificado com esse conjunto de `external_id` se não for encontrado nenhum.
 
@@ -188,7 +188,7 @@ Você pode criar até 10 extensões de segmento por espaço de trabalho. Depois 
 
 Para aumentar a precisão do direcionamento, você pode selecionar **Adicionar Filtros de Propriedade** e segmentar com base nas propriedades específicas da sua compra ou evento personalizado. A Braze é compatível com segmentação de propriedades de eventos com base em string, numéricos, booleanos e objetos de tempo.
 
-Também suportamos a segmentação com base em [propriedades de eventos aninhados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Também suportamos a segmentação com base em [propriedades de eventos aninhados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 Extensões de segmento dependem do armazenamento de longo prazo das propriedades do evento e não têm o limite de armazenamento de propriedades de evento personalizado de 30 dias. Isso significa que você pode olhar para trás nas propriedades do evento rastreadas no último ano, e o rastreamento não espera até que a extensão tenha sido configurada primeiro.
 
@@ -272,7 +272,7 @@ Campanhas
 
 Braze determinará automaticamente o fuso horário de um usuário a partir de seu dispositivo. Isso é projetado para suportar a precisão do fuso horário e a cobertura total de seus usuários. Os usuários criados através da API de Usuário ou de outra forma sem um fuso horário terão o fuso horário da sua empresa como seu fuso horário padrão até serem reconhecidos em seu app pelo SDK.
 
-Você pode verificar o fuso horário da sua empresa nas [configurações da empresa]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/).
+Você pode verificar o fuso horário da sua empresa nas [configurações da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/).
 
 {% endapi %}
 {% api %}
@@ -410,7 +410,7 @@ Canvas
 
 Nós enfileiramos um trabalho para cada etapa—eles são executados aproximadamente ao mesmo tempo, e um deles "vence". Na prática, isso pode ser classificado de forma um pouco uniforme, mas é provável que tenha pelo menos uma leve tendência para a etapa que foi criada primeiro.
 
-Além disso, não podemos garantir exatamente como será essa distribuição. Se você quiser garantir uma divisão uniforme, adicione um filtro de [número de bucket aleatório]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/).
+Além disso, não podemos garantir exatamente como será essa distribuição. Se você quiser garantir uma divisão uniforme, adicione um filtro de [número de bucket aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
 
 {% endapi %}
 {% api %}
@@ -455,7 +455,7 @@ Canvas
 
 Se você editar algumas das etapas de um canva de várias etapas, os usuários que já estavam no público, mas não receberam as etapas, receberão a versão atualizada da mensagem. Observe que isso só acontecerá se eles ainda não tiverem sido avaliados para a etapa.
 
-Para saber mais sobre o que você pode ou não pode editar após o lançamento, confira [Alterando seu Canva após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Para saber mais sobre o que você pode ou não pode editar após o lançamento, confira [Alterando seu Canva após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
 {% endapi %}
 {% api %}
@@ -532,7 +532,7 @@ O número de usuários que entram em uma canva pode diferir do número esperado 
 Análise de dados
 {% endapitags %}
 
-Dependendo do canal, a Braze mede uma variedade de métricas para ativar você a determinar o sucesso de uma campanha e informar as futuras. Você pode encontrar uma lista abrangente em nosso [glossário de métricas de relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
+Dependendo do canal, a Braze mede uma variedade de métricas para ativar você a determinar o sucesso de uma campanha e informar as futuras. Você pode encontrar uma lista abrangente em nosso [glossário de métricas de relatório]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 {% endapi %}
 {% api %}
@@ -558,7 +558,7 @@ Análise de dados
 
 Nossa ferramenta Currents transmite continuamente tanto o envio de mensagens quanto os dados de engajamento e comportamento do cliente para um de nossos muitos parceiros de dados, capacitando você a usar os dados únicos e valiosos que a Braze cria para impulsionar seus esforços de business intelligence e análise de dados em outros parceiros de melhor qualidade.
 
-Esses dados vão além das métricas de engajamento de envio de mensagens e também podem incluir números mais complexos, como atributo personalizado e performance de eventos. Para mais informações, acesse nosso [glossário de eventos do Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events).
+Esses dados vão além das métricas de engajamento de envio de mensagens e também podem incluir números mais complexos, como atributo personalizado e performance de eventos. Para mais informações, acesse nosso [glossário de eventos do Currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
 
 {% endapi %}
 {% api %}
@@ -595,6 +595,6 @@ Relatórios de engajamento fornecem a você CSVs de estatísticas de engajamento
 
 O Construtor de Relatórios permite que você compare os resultados de várias campanhas ou canvas em uma única visualização, para que você possa determinar facilmente quais estratégias de engajamento mais impactaram suas métricas principais. Para ambas as campanhas e canvas, você pode exportar seus dados e salvar seu relatório para visualizar no futuro.
 
-Para saber mais sobre os usos de relatórios e análise de dados na Braze, consulte [visão geral dos relatórios]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/).
+Para saber mais sobre os usos de relatórios e análise de dados na Braze, consulte [visão geral dos relatórios]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/).
 
 {% endapi %}

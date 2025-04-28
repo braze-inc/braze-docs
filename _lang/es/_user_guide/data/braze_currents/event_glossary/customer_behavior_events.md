@@ -133,7 +133,7 @@ Este evento se produce cuando se activa un evento personalizado específico. Uti
 {% endtabs %}
 
 #### Detalles de la propiedad
-- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, tendrá que recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, tendrá que recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data/braze_currents/), ponte en contacto con tu administrador del éxito del cliente o director de cuentas para habilitar la función de aleteo para el envío de `ad_id`.
 
 {% endapi %}
@@ -239,7 +239,7 @@ Las compras son eventos personalizados especiales y vienen con una cadena codifi
 {% endtabs %}
 
 #### Detalles de la propiedad
-- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data/braze_currents/), ponte en contacto con tu director del éxito del cliente o tu administrador de cuentas para habilitar la función para el envío de `ad_id`.
 {% endapi %}
 
@@ -610,7 +610,7 @@ Este evento se activa cuando un usuario visita un lugar determinado. Utilícelo 
 {% endtabs %}
 
 #### Detalles de la propiedad
-- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data/braze_currents/), ponte en contacto con tu director del éxito del cliente o tu administrador de cuentas para habilitar la función para el envío de `ad_id`.
 {% endapi %}
 

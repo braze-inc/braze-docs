@@ -16,6 +16,7 @@ Los eventos personalizados son acciones realizadas por tus usuarios o actualizac
 ## Ejemplos
 
 Algunos casos habituales de uso de eventos personalizados son:
+
 - Desencadenar una campaña o Canvas basada en un evento personalizado utilizando [la entrega basada en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmentar a los usuarios por el número de veces que realizaron un evento personalizado, cuándo se produjo el evento por última vez y similares
 - Utilizar el panel de [análisis de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) para ver un agregado de la frecuencia con la que se ha producido cada evento
@@ -36,7 +37,7 @@ Seleccione el menú situado junto a un evento personalizado para realizar las si
 
 ### Agregando a la lista de bloqueo
 
-Puedes bloquear eventos personalizados individuales a través del menú de acciones, o seleccionar y bloquear hasta 10 eventos en bloque. 
+Puedes bloquear eventos personalizados individuales a través del menú de acciones, o seleccionar y bloquear hasta 100 eventos en bloque. 
 
 Cuando bloqueas un evento personalizado:
 
@@ -58,15 +59,11 @@ Puedes añadir etiquetas a un evento personalizado después de crearlo si tienes
 
 El informe de uso enumera todos los Canvases, campañas y segmentos que utilizan un evento personalizado específico. La lista no incluye los usos de Liquid. 
 
-Puedes ver hasta 10 informes de uso a la vez seleccionando las casillas de verificación de varios eventos personalizados y, a continuación, seleccionando **Ver informe de uso**.
+Puedes ver hasta 100 informes de uso a la vez seleccionando las casillas de verificación de varios eventos personalizados y, a continuación, seleccionando **Ver informe de uso**.
 
 ## Exportar datos
 
 Para exportar la lista de eventos personalizados como un archivo CSV, selecciona el botón **Exportar todo** en la parte superior de la página. Se generará el archivo CSV y se le enviará por correo electrónico un enlace de descarga.
-
-{% alert important %}
-Esta función se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
-{% endalert %}
 
 ## Registro de eventos personalizados
 
@@ -74,13 +71,13 @@ Los eventos personalizados requieren una configuración adicional. Consulta la l
 
 {% details Ampliar para documentación por plataforma %}
 
-- [Android y FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
 
 {% enddetails %}
 
@@ -210,9 +207,14 @@ Utiliza la segmentación de propiedades de eventos para dirigirte a los usuarios
 
 Las propiedades de los eventos personalizados se actualizan en tiempo real para cualquier segmento que los utilice. Puedes administrar propiedades yendo a **Configuración de datos** > **Eventos personalizados** y seleccionando **Administrar propiedades** para el evento personalizado asociado. Las propiedades de eventos personalizadas utilizadas en determinados filtros de segmentos tienen un historial retrospectivo máximo de 30 días.
 
-{% alert note %}
-Si desea crear segmentos basados en la recurrencia y frecuencia de las propiedades de eventos, póngase en contacto con su gestor de éxito de clientes para habilitar la segmentación para propiedades de eventos personalizadas específicas. Cuando está activada, puede acceder a opciones de filtrado adicionales al segmentar.
-{% endalert %}
+##### Añadir propiedades del evento para la segmentación
+
+Necesitarás [permisos de usuario]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) de "Gestionar la segmentación de propiedades de eventos personalizados" para crear segmentos basados en la recencia y frecuencia de las propiedades de los eventos.
+
+Para añadir propiedades del evento para la segmentación, haz lo siguiente:
+
+1. Ve a tu evento personalizado y selecciona **Gestionar propiedades**.
+2. Selecciona el conmutador **Habilitar segmentación** para añadir la propiedad del evento para la segmentación. Puedes acceder a opciones de filtrado adicionales al segmentar.
 
 Los filtros de segmentación de propiedades del evento incluyen:
 

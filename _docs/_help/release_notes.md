@@ -55,23 +55,169 @@ guide_featured_list:
 > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.
 > <br>
 > <br>
-> For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
 
-## Deferrals
+> For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
+ 
+## April 1, 2025 release
+
+### Updates to Braze navigation
+
+The updated navigation in Braze is designed to help you efficiently access features and content across devices. Note that the option to switch between navigation versions is no longer available. Learn more at our dedicated [Navigating Braze]({{site.baseurl}}/user_guide/administrative/access_braze/navigation) article.
+
+### Developer Guide detangle
+
+Previously, many platform-level tasks were split across multiple pages, such as integrating the Swift SDK being split across six pages. Additionally, shared features were individually documented for each platform, meaning searching for a topic like “Setting Up Push Notifications” would return 10 different pages.
+
+**Before:**
+
+![The previous Swift documentation located in the Platform Integration Guides section.]({% image_buster /assets/img/before_swift.png %})
+
+Now, platform-level tasks have been merged into single pages and shared SDK features now exist on the same page (with the help of our new SDK-tabbing feature). For example, now there’s  only one page for Integrating the Braze SDK, where you can switch between platforms by selecting a tab at the top of the page. When you do, even the in-page table of contents will update to reflect the currently-selected tab.
+
+**After:**
+
+![The updated Swift documentation located in the Swift tab of the Integrating the SDK article.]({% image_buster /assets/img/after_swift.png %})
+
+![The updated Android documentation located in the Android tab of the Integrating the SDK article.]({% image_buster /assets/img/after_android.png %})
+
+### Contributing to Braze Docs
+
+If you didn’t know, our docs are fully open-source! You can learn how in our [Contributing Guide]({{site.baseurl}}/contributing/home). This month, we documented some site functionality, like [forcing sections to auto-expand]({{site.baseurl}}/contributing/content_management/sections#forcing-auto-expand) and [rendering API-generated content]({{site.baseurl}}/contributing/generating_a_preview#step-2-start-a-local-server).
+
+### Data flexibility
+
+#### Update to Canvas entry properties
+
+Canvas entry properties are now part of [Canvas context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties). Each context variable includes a name, data type, and a value that can include Liquid. For more information, refer to the [Context component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context).
+
+#### Updates to segmentation filters for phone number filters
+
+Segmentation filters have been updated to reflect changes to two phone number filters:
+
+- [Unformatted Phone Number]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#unformatted-phone-number) (formerly **Phone Number**): Segments your users by their unformatted phone number.
+- [Phone Number]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#phone-number) (formerly **Sending Phone Number**): Segments your users by the E.164 formatted phone number field.
+
+#### Delete custom data
+
+As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. You can now [delete this custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data#deleting-custom-data) and remove its references from your app.
+
+#### Import users with email addresses and phone numbers
+
+You can now use an email address or phone number to [import users]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#importing-with-email-addresses-and-phone-numbers) and omit an external ID or user alias.
+
+#### Service Provider initiated login troubleshooting
+
+Service Provider (SP) initiated login now has a [troubleshooting section]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#troubleshooting) to help you work through issues with SAML and single-sign on issues.
+
+#### User import troubleshooting
+
+The [User Import troubleshooting section]({{site.baseurl}}/user_guide/data/user_data_collection/user_import#troubleshooting) has new and updated entries, including how to troubleshoot missing rows in your imported CSV files.
+
+#### Frequently asked questions for Segment Extensions
+
+Check out our [frequently asked questions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#frequently-asked-questions) for Segment Extensions, including how you can create a Segment Extension that uses multiple custom events.
+
+#### Personalized and extended delays
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+You can set up a [personalized delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step#personalized-delays) for your users and use this with a Context step to select the context variable to delay by.
+
+You can also now extend Delay steps up to two years. For example, if you’re onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven’t started a session.
+
+#### Default user profile attributes for Snowflake
+
+{% multi_lang_include release_type.md release="Beta" %}
+
+There are now three [default user profile attributes]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/user_attributes/) in Snowflake. Each view is designed for a specific use case with its own performance considerations. For example, you can be provided a periodic snapchat of a user profile's default attributes.
+
+### Robust channels
+
+#### Messaging fundamentals
+
+[Messaging Fundamentals]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals) is a new section in Engagement Tools that houses the shared concepts and terms for campaigns and Canvases, such as archiving and localizing messages.
+
+#### WhatsApp custom domains
+
+You can now assign [custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/) to one or multiple WhatsApp subscription groups.
+
+#### Triggered in-app messages for Canvas
+
+You can now select a [trigger for your in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas) to be triggered on session start, or by custom events and purchases. After any delays pass and the audience options are checked, in-app messages are set to live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
+
+#### Limit entrance volume for Canvas
+
+You can limit the number of people who would potentially enter this Canvas by a selected cadence (daily, lifetime of the Canvas, or every time the Canvas is scheduled). For example, you can [set the entry controls]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas?tab=action-based%20delivery#step-2c-set-your-target-entry-audience) to allow the Canvas to only send to 5,000 users per day.
+
+#### New use case: Booking reminder email system
+
+Learn how you can use Braze features to [build a booking reminder email messaging service]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case). The service will allow users to book appointments and will message users with reminders of their upcoming appointments. Though this use case uses email messages, you can send messages in any, or multiple, channels based on a single update to a user profile.
+
+#### Click tracking for specific links
+
+You can [turn off click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links#turning-off-click-tracking-on-a-link-to-link-basis) for specific links by adding HTML code to your email message in the HTML editor or to components in the drag-and-drop editor.
+
+#### Dynamic Apple Push Notification Service gateway management
+
+[Dynamic APNs gateway management]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_dynamic-apns-gateway-management) enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually select APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and BadDeviceToken errors.
+
+#### Flutter support for Banners
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+Banners now support Flutter. Additionally, all Banner documentation has been overhauled for easier usability. Check out the following articles to get started:
+
+- [About Banners]({{site.baseurl}}/developer_guide/banners/)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
+
+#### WhatsApp click tracking
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+[Click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) lets you measure when someone taps a link in your WhatsApp message—giving you a clear view into what content is driving engagement. Braze shortens your URLs, adds tracking behind the scenes, and logs click events as they happen.
+
+#### Frequently asked questions for push
+
+Check out our new [Push FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/push/faq) article that addresses some of the most frequently asked questions that arise when setting up push campaigns.
+
+#### Push troubleshooting
+
+[Push troubleshooting]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting) provides a number of steps to help you navigate delivery challenges with push notifications. For example, if you're experiencing delivery challenges with push notifications, we've compiled steps you can take to troubleshoot the issue.
+
+### New Braze partnerships
+
+#### Movable Ink Da Vinci - Dynamic Content
+
+The Braze and Movable Ink [Da Vinci]({{site.baseurl}}/partners/movable_ink_da_vinci) integration empowers brands to deliver highly personalized messaging by leveraging Da Vinci’s AI-driven content decisioning engine. Da Vinci curates the most relevant content for each user and seamlessly deploys messages through Braze.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Flutter SDK 13.0.0](https://pub.dev/packages/braze_plugin/changelog)
+    - Updates the native Android bridge from [Braze Android SDK 33.0.0 to 35.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v33.0.0...v35.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+        - The minimum required Android SDK version is 25. See more details [here](https://github.com/braze-inc/braze-android-sdk?tab=readme-ov-file#version-information).
+- [Swift SDK v11.8.0-11.9.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+- [Web SDK v5.8.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
+## March 4, 2025 release
+
+### Deferrals
 
 Braze has updated our definition for what is a soft bounce and is sending a new event called [deferrals]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) starting February 25, 2025 at 10 am EST.
 
 For Sendgrid customers, we made a change to separate out deferral events from our soft bounce events. We count deferred events as a soft bounce event. This impacts any Sendgrid customer using Currents, Query Builder, SQL Extension, Snowflake Data Sharing, or our Transactional Email product.
 
-### Prior behavior
+#### Prior behavior
 
 Before February 25, 2025, a deferred event for an email address on a campaign or Canvas logs a soft bounce event every time. As a result, deferrals are included as part of soft bounce data. This can result in a user or a campaign reporting more soft bounce events than expected. 
 
-### New behavior
+#### New behavior
 
 Starting February 25, 2025, a deferred event will no longer log a soft bounce event every time. Instead, we'll log a soft bounce event once per send for the email address, no matter how many times the email is retried or deferred.
 
-### What this means
+#### What this means
 
 You'll notice a sizable drop in the volume of soft bounce events starting on February 25, 2025, resulting in the following potential changes:
 
@@ -81,9 +227,6 @@ You'll notice a sizable drop in the volume of soft bounce events starting on Feb
 - Drop in the number of soft bounces for Transactional Email product
 
 For Sparkpost customers, there is no impact on your soft bounce event data, instead you'll start receiving a new email event, deferral, in Currents and Snowflake.
-
- 
-## March 4, 2025 release
 
 ### Developer Guide detangle
 
@@ -154,7 +297,7 @@ When [composing an email message]({{site.baseurl}}/user_guide/message_building_b
 #### Android Live Updates
 
 Although Live Updates won’t be officially available until 
-[Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), our [Live Updates for Android]({{site.baseurl}}/developer_guide/platforms/android/live_updates) page shows you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/platforms/swift/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
+[Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), our [Live Updates for Android]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local) page shows you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift). Unlike official Live Updates, this functionality can be implemented for older Android versions.
 
 #### Copying campaigns with feature flags across workspaces
 
@@ -166,7 +309,7 @@ WhatsApp messages now support [video, audio, and document outbound messages]({{s
 
 #### Right-to-left messages
 
-[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
+[Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) covers best practices for crafting messages in languages that read right-to-left so that your messages display accurately as much as possible.
  
 ### AI and ML automation
  
@@ -178,11 +321,11 @@ WhatsApp messages now support [video, audio, and document outbound messages]({{s
  
 #### Email Love - Channel Extensions
  
-The Braze and [Email Love]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates) partnership leverages Email Love’s Export to Braze feature and the Braze API to upload your email templates to Braze seamlessly.
+The Braze and [Email Love]({{site.baseurl}}/partners/message_orchestration/) partnership leverages Email Love’s Export to Braze feature and the Braze API to upload your email templates to Braze seamlessly.
 
 #### VWO - A/B Testing
  
-The Braze and [VWO]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/vwo) integration allows you to leverage VWO experiment data to create targeted segments and deliver personalized campaigns.
+The Braze and [VWO]({{site.baseurl}}/partners/data_and_analytics/ab_testing/vwo/) integration allows you to leverage VWO experiment data to create targeted segments and deliver personalized campaigns.
  
 ### SDK updates
  
@@ -210,7 +353,7 @@ We've done a huge cleanup of all docs across the [Braze Developer Guide]({{site.
 There's also a new [SDK reference page]({{site.baseurl}}/developer_guide/references) that lists all of the reference documentation and repositories for each Braze SDK.
 
 ##### Unreal Engine Braze SDK
-We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/platforms/unreal_engine/sdk_integration).
+We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=unreal%20engine).
 
 ### Data flexibility
 
@@ -240,7 +383,7 @@ The following endpoints are now generally available:
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
+You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
 
 #### Using a phone number to identify a user via the API
 
@@ -293,7 +436,7 @@ One way B2B marketers can use Braze is through an integration with the Salesforc
 ### New Braze partnerships
 
 #### Constructor - Dynamic content
-[Constructor]({{site.baseurl}}/partners/message_personalization/dynamic_content/constructor) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
+[Constructor]({{site.baseurl}}/partners/ecommerce/product_search_recommendations/constructor/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
  
 #### Trustpilot - Dynamic content
 [Trustpilot]({{site.baseurl}}/partners/message_personalization/dynamic_content/trustpilot) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
@@ -339,7 +482,7 @@ Segment your users by whether they soft bounced X times in Y days. For more info
 
 #### Anonymous users overview
 
-[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
+[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
 
 #### Global Control Group membership
 
@@ -349,7 +492,7 @@ You can [view Global Control Group membership]({{site.baseurl}}/user_guide/engag
 
 #### Justuno - Leads capture
 
-[Justuno]({{site.baseurl}}/partners/data_and_infrastructure_agility/leads_capture/justuno/) lets you create fully optimized visitor experiences for all of your audiences with dynamic segments, offering the most advanced targeting available&#8212;all without impacting site speed or increasing dev work.
+[Justuno]({{site.baseurl}}/partners/data_and_analytics/leads_capture/justuno/) lets you create fully optimized visitor experiences for all of your audiences with dynamic segments, offering the most advanced targeting available&#8212;all without impacting site speed or increasing dev work.
 
 #### Odicci - Customer data platform
 
@@ -357,7 +500,7 @@ Integrate Braze with [Odicci]({{site.baseurl}}/partners/message_personalization/
 
 #### Optimizely - A/B testing
 
-The Braze and [Optimizely]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/optimizely/) integration is a two-way integration that allows you to:
+The Braze and [Optimizely]({{site.baseurl}}/partners/data_and_analytics/ab_testing/optimizely/) integration is a two-way integration that allows you to:
 
 - Sync your Braze customer segments and events to Optimizely Data Platform (ODP) nightly to enrich Optimizely customer profiles, reports, and segmentation.
 - Send Braze Currents events from Braze to Optimizely’s reporting tool.
@@ -474,7 +617,7 @@ To get started, see our [LINE documentation]({{site.baseurl}}/user_guide/message
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
+You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
  
 ### Improving the developer guide
  
@@ -488,7 +631,7 @@ We're in the process of making major improvements to the [Braze Developer Guide]
  
 #### MyPostcard
 
-[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/mypostcard/).
+[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/mypostcard/).
  
 ### SDK updates
  
@@ -546,7 +689,7 @@ We added [Adding UTM parameters]({{site.baseurl}}/user_guide/message_building_by
 
 #### Landing pages
 
-[Connect your own domain]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/connect_domain/) to your Braze workspace to customize your landing page URLs with your brand.
+[Connect your own domain]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/customizing_urls/) to your Braze workspace to customize your landing page URLs with your brand.
 
 #### LINE and Braze
 
@@ -665,11 +808,11 @@ You can view the number of updates to your [Canvases]({{site.baseurl}}/user_guid
 
 #### Inbox Monster - Analytics
 
-[Inbox Monster]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/inbox_monster/) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
+[Inbox Monster]({{site.baseurl}}/partners/data_and_analytics/analytics/inbox_monster/) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
 
 #### SessionM - Loyalty
 
-[SessionM]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/sessionm/) is a customer engagement and loyalty platform that provides campaign management features and loyalty management solutions to help marketers drive targeted outreach to increase engagement and profitability.
+[SessionM]({{site.baseurl}}/partners/data_and_analytics/loyalty/sessionm/) is a customer engagement and loyalty platform that provides campaign management features and loyalty management solutions to help marketers drive targeted outreach to increase engagement and profitability.
 
 ### AI and ML automation
 
@@ -699,7 +842,7 @@ The [message usage dashboard]({{site.baseurl}}/user_guide/message_building_by_ch
 
 #### Delayed initialization for the Braze Swift SDK
 
-Set up [delayed initialization]({{site.baseurl}}/developer_guide/platforms/swift/initialization/delayed_initialization/) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
+Set up [delayed initialization]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=swift) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
 
 ### SDK updates
 
@@ -728,114 +871,3 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Swift SDK 10.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1030)
 - [Unity 7.1.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#710)
 - [React Native SDK 12.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1220)
-
-## August 20, 2024 release
-
-### New use cases
-
-#### Catalogs
-
-You can bring in any type of data into a catalog. Typically, the data is metadata about offerings, such as products, discounts, promotions, events, and similar. Read our [use cases]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) and learn how you can use this data to target users with highly relevant messaging.
-
-#### Intelligence Suite
-
-The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewership, and conversions. For a few examples of how these features can benefit different industries, check out our [use cases]({{site.baseurl}}/user_guide/brazeai/intelligence).
-
-### Home dashboard update
-
-You can [pick up where you left off]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off) in the Braze dashboard with easy access to files you've recently edited or created. This section appears at the top of the **Home** page of the Braze dashboard.
-
-### Data flexibility
-
-#### Data Transformation templates and new destination
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Build your Data Transformation using our dedicated [template library]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation#step-2-create-a-transformation) to help you get started with certain external platforms, instead of default code. You can now select **POST: Send messages immediately via API Only** as your destination to transform webhooks from a source platform to send immediate messages to your users.
-
-#### Merge users in bulk
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-If you encounter duplicate user profiles, you can [bulk merge]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) these users to help streamline your data.
-
-#### Export custom attributes
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can [export the list of custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#exporting-data) as a CSV file by selecting **Export all** on the **Custom Attributes** page. The CSV file will be generated, and a download link will be emailed to you.
-
-#### Currents IP allowlisting
-
-Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for [allowlisting]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/).
-
-### Robust channels
-
-#### New segment builder experience
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Build a segment using our [updated experience]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment). Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
-
-#### Metrics by segments
-
-Use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
-
-#### Phone number acquisition
-
-To use the WhatsApp messaging channel, you'll need a phone number that meets WhatsApp’s requirements for its [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) or [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers). 
-
-You must acquire your phone number yourself, as Braze won't provision the number for you. You can either purchase a physical phone with a SIM card through your business phone provider or use one of our partners: Twilio or Infoblip. **You must have your own Twilio or Infobip account because this cannot be done through Braze.**
-
-### New Braze partnerships
-
-#### Zendesk Chat - Instant Chat
-
-The Braze and [Zendesk Chat]({{site.baseurl}}/partners/zendesk_chat/) integration uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Android SDK 32.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-- [Swift SDK 10.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-    - The following changes have been made when subscribing to Push events with [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)):
-        - The `update` closure will now be triggered by both "Push Opened" and "Push Received" events by default. Previously, it would only be triggered by "Push Opened" events.
-            - To continue subscribing only to "Push Opened" events, pass in `[.opened]` for the parameter `payloadTypes`. Alternatively, implement your `update` closure to check that the `type` from the `Braze.Notifications.Payload` is `.opened`.
-        - When receiving a push notification with `content-available: true`, the [`Braze.Notifications.Payload.type`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/payload/type) will now be `.received` instead of `.opened`.
-    - Marks the following deprecated APIs as unavailable:
-        - `Braze.Configuration.Api.Flavor`
-        - `Braze.Configuration.Api.flavor`
-        - `Braze.Configuration.Api.SdkMetadata`
-        - `Braze.Configuration.Api.addSdkMetadata(_:)`
-        - `Braze.ContentCard.ClickAction.uri(_:useWebview:)`
-        - `Braze.ContentCard.ClickAction.uri`
-        - `Braze.InAppMessage.ClickAction.uri(_:useWebview:)`
-        - `Braze.InAppMessage.ClickAction.uri`
-        - `Braze.InAppMessage.ModalImage.imageUri`
-        - `Braze.InAppMessage.Full.imageUri`
-        - `Braze.InAppMessage.FullImage.imageUri`
-        - `Braze.InAppMessage.Themes.default`
-        - `Braze.deviceId(queue:completion:)`
-        - `Braze._objc_deviceId(completion:)`
-        - `Braze.deviceId()`
-        - `Braze.User.setCustomAttributeArray(key:array:fileID:line:)`
-        - `Braze.User.addToCustomAttributeArray(key:value:fileID:line:)`
-        - `Braze.User.removeFromCustomAttributeArray(key:value:fileID:line:)`
-        - `Braze.User._objc_addToCustomAttributeArray(key:value:)`
-        - `Braze.User._objc_removeFromCustomAttributeArray(key:value:)`
-        - `gifViewProvider`
-        - `GifViewProvider.default`
-    - Removes the deprecated APIs:
-        - `Braze.Configuration.DeviceProperty.pushDisplayOptions`
-        - `Braze.InAppMessageRaw.Context.Error.extraProcessClickAction`
-    - Removes the deprecated `BrazeLocation` class in favor of `BrazeLocationProvider`.
-- [Xamarin SDK Version 6.0.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)
-    - Added support for .NET 8.0 for the iOS and Android bindings as .NET 7.0 has reached end of life support.
-        - This removes support for .NET 7.0.
-    - Updated the Android binding from [Braze Android 30.4.0 to 32.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v30.4.0...v32.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-    - Updated the iOS binding from [Braze Swift SDK 9.0.0 to 10.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-        - When subscribing to push notification events, the subscription will be triggered on iOS for both "Push Received" and "Push Opened", instead of only for "Push Opened" events.
-- [React Native SDK 12.0.0](https://github.com/braze-inc/braze-react-native-sdk/blob/12.0.0/CHANGELOG.md)
-    - Updates the native iOS version bindings from [Braze Swift SDK 9.0.0 to 10.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-        - When subscribing to push notification events, the subscription will be triggered on iOS for both `push_received` and `push_opened`, instead of only for `push_opened` events.

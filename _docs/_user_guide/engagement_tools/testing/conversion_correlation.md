@@ -17,7 +17,7 @@ tool:
 
 ## Overview
 
-For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
+For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
 
 To run a conversion correlation analysis, select the conversion event of interest from the dropdown menu.
 

@@ -95,7 +95,7 @@ CSV 내보내기를 실행하려면 **글로벌 제어 그룹 설정** 탭으로
 
 ## 보고
 
-보고서 측정기준에 대한 자세한 내용은 [글로벌 컨트롤 그룹 보고]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/)를 참조하세요.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## 문제 해결
 

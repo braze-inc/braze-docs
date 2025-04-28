@@ -32,7 +32,7 @@ La création d'un flux de travail de notation des prospects dans Braze se fait e
 1. Passez à l'étape **Planification d’entrée** et sélectionnez une planification d’entrée **par événement**. Cela permettra aux utilisateurs d'entrer dans le Canvas lorsqu'ils effectueront des actions spécifiques.
 
 2. Dans **Options basées sur l'action**, ajoutez ces deux actions :
-    - **Remplacez la valeur de l'attribut personnalisé** par le nom de votre attribut d'évaluation des prospects (par exemple `lead score`). Si vous n'avez pas encore créé d'attribut de lead scoring, suivez les étapes de la section [Attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). Ceci permet aux utilisateurs d'entrer dans le canvas chaque fois que leur notation de prospect change.
+    - **Remplacez la valeur de l'attribut personnalisé** par le nom de votre attribut d'évaluation des prospects (par exemple `lead score`). Si vous n'avez pas encore créé d'attribut de lead scoring, suivez les étapes de la section [Attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Ceci permet aux utilisateurs d'entrer dans le canvas chaque fois que leur notation de prospect change.
     - **Ajouter une adresse e-mail**
 
 ![Étape 2 de la création d'un canvas avec la planification d'entrée « Par événement » et les options par événement de modification d'un attribut personnalisé « notation des prospects » et d'ajout d'une adresse e-mail.][2]{: style="max-width:80%;"}
@@ -132,13 +132,13 @@ En tant qu'outil marketing, Braze contient des données extrêmement pertinentes
 
 Par exemple, les données d'engagement des messages (telles que les ouvertures et les clics d'e-mail, l'engagement des pages de renvoi et autres) peuvent déterminer le niveau d'engagement d'un lead. Vous pouvez retransmettre ces données à votre entrepôt de données en nuage et les mettre à disposition en tant que données d'entrée pour vos modèles d'évaluation des prospects en utilisant les solutions de flux de données en continu de Braze :
 
-- [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Currents Braze]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Partage sécurisé des données avec Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze en tant que destination %}
 
-Une fois que vos équipes internes ont créé et exécuté votre modèle d'évaluation des prospects, vous pouvez récupérer ces données dans Braze afin de mieux segmenter et cibler les prospects pour leur envoyer des messages pertinents. Vous pouvez le faire avec [Cloud Data Ingestion de Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
+Une fois que vos équipes internes ont créé et exécuté votre modèle d'évaluation des prospects, vous pouvez récupérer ces données dans Braze afin de mieux segmenter et cibler les prospects pour leur envoyer des messages pertinents. Vous pouvez le faire avec [Cloud Data Ingestion de Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
 Avec Cloud Data Ingestion, vos équipes internes créeront un nouveau tableau ou une nouvelle vue avec vos identifiants d'utilisateur, les derniers scores des prospects et les horodatages de mise à jour des scores. Braze reprendra le tableau ou la vue et ajoutera les scores des prospects aux profils utilisateurs.
 
@@ -182,7 +182,7 @@ Pour mettre à jour l'enregistrement du prospect dans Salesforce avec le statut 
 
 | En-tête | Contenu |
 | --- | --- |
-| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_db408ae2-5619-45ad-95e0-0ce6e23aedaa/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_dba9068e-ead9-4112-9cbc-f71f22fe4c96/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Type_de_contenu | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

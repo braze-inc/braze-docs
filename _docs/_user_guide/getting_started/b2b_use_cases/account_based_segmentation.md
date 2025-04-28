@@ -49,7 +49,7 @@ Select the following variables for a B2B account-based segmentation use case:
 
 For more sophisticated or complex segmentation, refer to [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). To help you get started, here are a few SQL templates you can use to help you get a head start with B2B account-based segmentation:
 
-1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account).
+1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account). You must include the catalog ID and item ID.
 
 ```sql
 WITH salesforce_accounts AS (

@@ -3,7 +3,7 @@ nav_title: Braze Overview
 article_title: Getting Started&#58; Braze Overview
 page_order: 1
 page_type: reference
-description: "Get acquianted with the core concepts you'll need to know when working in Braze."
+description: "Get acquainted with the core concepts you'll need to know when working in Braze."
 
 ---
 

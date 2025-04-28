@@ -12,18 +12,18 @@ description: "Learn how to manage data collection for the Braze SDK."
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/analytics/disabling_data_collection.md %}
+{% multi_lang_include developer_guide/android/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/analytics/disabling_data_collection.md %}
+{% multi_lang_include developer_guide/swift/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/disabling_data_collection.md %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/disabling_data_collection.md %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/managing_data_collection.md %}
 {% endsdktab %}
 {% endsdktabs %}

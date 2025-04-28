@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
 
+_This integration is maintained by Singular._
+
+## About the integration
+
 The Braze and Singular integration allows you to import paid install attribution data to segment intelligently within your lifecycle campaigns.
 
 ## Prerequisites
@@ -122,6 +126,5 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Singular will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-*This integration is maintained by Singular.*
 
 [4]: {% image_buster /assets/img/attribution/singular.png %}

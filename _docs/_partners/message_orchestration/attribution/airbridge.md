@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementalist measurement, and marketing mix modeling.
 
+_This integration is maintained by Airbridge._
+
+## About the integration
+
 The Braze and Airbridge integration lets you pass all non-organic install attribution data from Airbridge to Braze to build personalized marketing campaigns.
 
 ## Prerequisites
@@ -197,7 +201,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **Integrations > Third-party Integrations** in the left sidebar and select **Braze**.
-2. Provide the data import key and REST endpoint that you found in Braze's dashboard.
+2. Provide the data import key and REST endpoint that you found in the Braze dashboard.
 3. Select the event type (Install Event or Install & Deeplink Open Event) and save.
 
 {% alert note %}
@@ -269,7 +273,6 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-*This integration is maintained by Airbridge.*
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
 [2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

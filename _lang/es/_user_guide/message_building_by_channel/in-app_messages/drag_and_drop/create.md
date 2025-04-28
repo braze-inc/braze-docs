@@ -19,7 +19,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 Si desea utilizar sus plantillas HTML personalizadas existentes o plantillas creadas por terceros, deberá volver a crearlas en el editor de arrastrar y soltar.
 
-¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.
+¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.
 
 ## Requisitos previos
 
@@ -135,6 +135,7 @@ Aquí es donde su mensaje se pavonea por la pasarela, vestido con el estilo cara
 
 - Para obtener una lista de los bloques de edición disponibles y sus propiedades, consulte [Bloques de edición]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Si necesitas ayuda para personalizar el aspecto de tu mensaje, consulta [Configuración de estilo]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
+- Para conocer las mejores prácticas para crear mensajes de derecha a izquierda, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Paso 5: Prueba tu mensaje in-app
 

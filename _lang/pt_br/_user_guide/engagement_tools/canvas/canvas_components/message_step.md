@@ -61,7 +61,7 @@ Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% r
 Por exemplo, considere a seguinte solicitação: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Você poderia adicionar a palavra "sapatos" a uma mensagem com o Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-Também é possível aproveitar [as propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) em qualquer etapa do Message para orientar os usuários por meio de etapas personalizadas em todo o fluxo de trabalho do Canva.
+Também é possível aproveitar [as propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) em qualquer etapa do Message para orientar os usuários por meio de etapas personalizadas em todo o fluxo de trabalho do Canva.
 
 #### Fluxo de trabalho original
 

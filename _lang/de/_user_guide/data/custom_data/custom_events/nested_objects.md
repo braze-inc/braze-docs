@@ -35,9 +35,11 @@ Sie können auf die verschachtelten Daten in Ihrem angepassten Event zugreifen, 
 
 ![][6]{: style="max-width:80%;"}
 
+Wenn in Zukunft neue Eigenschaften gesendet werden, sind sie erst dann im Schema enthalten, wenn es neu generiert wird. Schemas können alle 24 Stunden neu generiert werden.
+
 ## Schritt 2: Verwenden Sie das verschachtelte Objekt
 
-Nachdem Sie ein Schema erstellt haben, können Sie die verschachtelten Daten bei der Segmentierung und Personalisierung referenzieren. Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
+Sie können die verschachtelten Daten bei der Segmentierung und Personalisierung referenzieren. Beachten Sie, dass ein Schema nicht erforderlich ist. Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
 
 - [Körper der API-Anfrage](#api-request-body)
 - [Liquid-Templates](#liquid-templating)
@@ -101,6 +103,10 @@ Im Folgenden finden Sie ein `/users/track` Beispiel mit einem angepassten Event 
 ```
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+Wenn bei verschachtelten Event-Eigenschaften das Jahr kleiner als 0 oder größer als 3000 ist, speichert Braze diese Werte nicht beim Nutzer:in.
+{% endalert %}
 
 ### Liquid-Templates
 
@@ -166,6 +172,8 @@ Um Nutzer:innen auf der Grundlage verschachtelter Event-Eigenschaften zu segment
 ![][4]
 
 Die Segmentierung verwendet die gleiche Notation wie die Triggerung (siehe [Triggerung von Nachrichten](#message-triggering)).
+
+Um Segment-Erweiterungen zu bearbeiten oder zu erstellen, benötigen Sie die Berechtigung "Segmente bearbeiten".
 
 ### Personalisierung
 

@@ -64,7 +64,7 @@ Use cases include:
 - Present an interactive menu that starts an combo order by selecting an item
 - Lay out multiple promotions for users to choose by selecting a grid square
 
-![A four-square rich message with photos of different sandwiches in the composer editor.][3]
+![A six-square rich message with a photo of a black-and-white grid that users can tap to receive a random offer.][3]
 
 ### Image map 
 
@@ -90,14 +90,14 @@ A text rich message can contain up to 400 characters.
 
 ## Card-based (carousel)
 
-A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevent to them by selecting a card or a card's buttons.
+A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevant to them by selecting a card or a card's buttons.
 
 Use cases include:
 - Display promotions for specific menu items
 - Highlight this season's best-selling jackets
 - Present a sampling of cooking tools and gadgets that are included in a kit
 
-![A card-based message with at least two cards that promote bread and sandwiches in the composer editor.][4]
+![A card-based message with at least two cards that promote sandwiches in the composer editor.][4]
 
 ### Message
 

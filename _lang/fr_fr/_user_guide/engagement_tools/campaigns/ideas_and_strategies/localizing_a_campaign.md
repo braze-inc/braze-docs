@@ -49,7 +49,7 @@ Dans l’approche « un modèle pour tous », la localisation est appliquée �
 L’approche « un modèle par pays » sépare les modèles en différents paramètres régionaux d’envoi. Après l'envoi, le tableau de bord présente des analyses d'envoi basées sur chaque pays séparément, et tout événement [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) au niveau de l'utilisateur en aval sera également lié à une campagne spécifique.
 
 - Les modèles bénéficient de la mise en place de [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) à des fins de maintenance et de suivi.
-- Les campagnes peuvent hériter des configurations du même [modèle Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) et des [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (tels que les [modèles d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) qui contiennent Liquid).
+- Les campagnes peuvent hériter des configurations du même [modèle Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) et des [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (tels que les [modèles d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) qui contiennent Liquid).
 - Les campagnes et les modèles préexistants peuvent être [dupliqués]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) pour permettre un délai de rentabilité plus rapide.
 
 | Avantages | Considérations |
@@ -77,7 +77,7 @@ Après l'envoi d'un canvas, le tableau de bord fournit une [analyse agrégée du
 {% endtab %}
 {% tab Un voyage par pays %}
 
-Dans l’approche « un parcours par pays », le générateur de parcours [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) offre la flexibilité de créer des parcours utilisateur à l’aide de plusieurs [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). Ces composants peuvent être [dupliqués]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) au niveau des composants et de l'ensemble du parcours.
+Dans l’approche « un parcours par pays », le générateur de parcours [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) offre la flexibilité de créer des parcours utilisateur à l’aide de plusieurs [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). Ces composants peuvent être [dupliqués]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) au niveau des composants et de l'ensemble du parcours.
 
 La localisation peut être obtenue par les méthodes suivantes :
 - Des Canvas séparés par pays, ce qui garantit que les parcours utilisateur complexes sont définis en haut de l’entonnoir à l’aide de filtres d’audience

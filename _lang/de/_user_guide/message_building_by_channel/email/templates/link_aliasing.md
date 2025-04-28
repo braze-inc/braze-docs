@@ -121,7 +121,7 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 Wählen Sie auf der Registerkarte **Linkverwaltung** aus, welche Aliase für die Segmentierung "verfolgt" werden und in den Segmentierungsfiltern vorhanden sein sollen. Beachten Sie, dass verfolgte Aliase nur der Segmentierung dienen und keinen Einfluss darauf haben, dass Ihr Link zu Berichtszwecken getrackt wird.
 
 {% alert tip %}
-Um Metriken für die Link-Interaktion zu verfolgen, stellen Sie sicher, dass Ihr Link entweder mit HTTP oder HTTPS beginnt.
+Um Metriken für die Link-Interaktion zu verfolgen, stellen Sie sicher, dass Ihr Link entweder mit HTTP oder HTTPS beginnt. Um das Tracking von Klicks für bestimmte Links zu deaktivieren, referenzieren Sie auf [Universal Links und App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
 {% endalert %}
 
 Mit Braze können Sie eine unbegrenzte Anzahl von Links zum Nachverfolgen auswählen. Allerdings können Sie nur die zuletzt geöffneten Links nachverfolgen. Die Benutzerprofile enthalten die 100 zuletzt angeklickten Links. Wenn Sie beispielsweise 500 Links verfolgen und ein Nutzer auf alle 500 klickt, können Sie ein Retargeting durchführen oder Segmente erstellen, die auf den 100 zuletzt angeklickten Links basieren.
@@ -145,7 +145,7 @@ Braze verfolgt nur bis zu den letzten 100 angeklickten Link-Aliasen auf Profileb
 
 ### Aktionsbasierte Filter
  
-Sie können aktionsbasierte Nachrichten erstellen, die auf einen beliebigen Link (getrackt oder nicht getrackt) abzielen, oder Benutzer erneut ansprechen, wenn sie in einer beliebigen E-Mail-Kampagne oder Canvas-Komponente auf einen Alias geklickt haben.
+Sie können aktionsbasierte Nachrichten erstellen, die auf einen beliebigen Link (mit oder ohne Tracking) abzielen, oder Nutzer:innen anhand eines Klicks auf einen Alias in einer beliebigen E-Mail-Kampagne oder Canvas-Komponente retargeten.
 
 ![Aktionsbasierte Optionen, um Nutzer anzusprechen, die auf einen Alias in einer Canvas-Komponente geklickt oder mit einer Kampagne interagiert haben.][6]
 
@@ -153,11 +153,11 @@ Sie können aktionsbasierte Nachrichten erstellen, die auf einen beliebigen Link
 
 Wenn Sie in Braze einen Link-Alias in Ihrer E-Mail haben und ein Benutzer darauf klickt, wird das Ereignis im Profil des Benutzers mit dem Alias aufgezeichnet.
 
-Wenn Sie den Segmentierungsfilter "Geklickter Alias in einer beliebigen Kampagne oder einem beliebigen Canvas-Schritt" verwenden und später beschließen, diesen Link-Alias umzubenennen, werden die vorherigen Klickdaten im Benutzerprofil **nicht** aktualisiert, d.h. er wird weiterhin als der vorherige Link-Alias angezeigt. Wenn Sie also Benutzer auf der Grundlage des neuen Link-Alias ansprechen, werden die Daten des vorherigen Link-Alias nicht berücksichtigt.
+Wenn Sie den Segmentierungsfilter "Geklickter Alias in einer beliebigen Kampagne oder einem beliebigen Canvas-Schritt" verwenden und später beschließen, diesen Link-Alias umzubenennen, werden die vorherigen Klickdaten im Benutzerprofil **nicht** aktualisiert, d.h. er wird weiterhin als der vorherige Link-Alias angezeigt. Wenn Sie also Nutzer:innen auf der Grundlage des neuen Link-Alias zusammenstellen, werden die Daten des vorherigen Link-Alias nicht berücksichtigt.
 
 Wenn Sie den Segmentierungsfilter "Alias in Kampagne angeklickt" oder "Alias in Canvas angeklickt" verwenden, werden Ihre Benutzer danach gefiltert, ob sie einen bestimmten Alias in einer bestimmten Kampagne oder einem Canvas angeklickt haben. Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden und der Alias-Link angeklickt wird, werden die Benutzerprofile aller anderen Benutzer, die dieselbe E-Mail-Adresse verwenden, aktualisiert. 
 
-Die folgenden Filter für die Segmentierung gelten für Klick-Events, die zum Zeitpunkt der Verarbeitung des Events getrackt werden. Das bedeutet, dass das Aufheben der Verfolgung von Links die vorhandenen Daten nicht löscht und die Verfolgung eines Links die Daten nicht wieder auffüllt. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Die folgenden Filter für die Segmentierung gelten für Klick-Events, die zum Zeitpunkt der Verarbeitung des Events getrackt werden. Das bedeutet, dass nicht getrackte Links vorhandene Daten nicht löschen und dass das Tracking eines Links die Daten nicht wieder auffüllt. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Tracking für Links aufheben
 
@@ -218,13 +218,13 @@ Wenn ein Inhaltsblock ohne einen `lid` Wert in eine neue Nachricht eingefügt wi
 Für Content-Blöcke empfiehlt Braze die Erstellung von Kopien bestehender Content-Blöcke zur Verwendung in neuen Nachrichten. Dies kann durch Massenvervielfältigung erfolgen, um Szenarien zu vermeiden, in denen Sie auf einen Content-Block verweisen, der in einer neuen Nachricht nicht für Link Aliasing aktiviert wurde.
 {% endalert %}
 
-## Link-Aliasing für über Liquid generierte URLs
+## Link-Aliasing für von Liquid generierte URLs
 
-Für URLs, die durch eine `assign`-Anweisung im HTML oder in einem Content-Block erzeugt werden, empfehlen wir, ein Fragezeichen (?) in den Anker-Tag einzufügen. Dies hilft Braze, Abfrageparameter anzuhängen (`lid = somevalue`), damit Link Aliasing richtig funktioniert. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt das Link-Aliasing diese URLs nicht.
+Für URLs, die von Liquid generiert werden, z.B. `assign` Anweisungen im HTML oder von einem Content-Block, müssen Sie ein Fragezeichen (`?`) an den Liquid-Tag anfügen. Dies erlaubt Braze das Anhängen von Abfrageparametern (`lid = somevalue`), so dass Link-Aliasing richtig funktionieren kann. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt Link-Aliasing diese URLs nicht und die Link-Templates können nicht angewendet werden.
 
 ### Beispiel
 
-Sehen Sie sich dieses Link Aliasing-Beispiel für die empfohlene Formatierung des Anker-Tags an:
+Sehen Sie sich dieses Link-Aliasing-Beispiel für die empfohlene Formatierung des Links an:
 
 {% raw %}
 ```liquid

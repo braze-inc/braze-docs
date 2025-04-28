@@ -62,8 +62,8 @@ The base card model provides foundational behavior for all cards.
 |`pinned`      | Whether the card is pinned.                                                                                            |
 |`dismissed`   | Whether the user has dismissed this card. Marking a card as dismissed that has already been dismissed will be a no-op. |
 |`dismissible` | Whether the card is dismissible by the user.                                                                           |
-|`url`         | (Optional) The url string associated with the card click action.                                                       |
-|`openURLInWebView` | Whether URLs for this card should be opened in Braze's WebView or not.                                            |
+|`url`         | (Optional) The URL string associated with the card click action.                                                       |
+|`openURLInWebView` | Whether URLs for this card should be opened in the Braze WebView or not.                                            |
 |`isControl`   | Whether this card is a control card. Control cards should not be displayed to the user.                                |
 |`extras`      | The map of key-value extras for this card.                                                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

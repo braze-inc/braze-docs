@@ -48,7 +48,7 @@ Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich 
 
 Tags können ein nützliches Organisations-Tool für das Tracking von Engagement-Taktiken sein. Sie können Segmente und Kampagnen mit Geschäftszielen, Funnel-Stufen und dergleichen verknüpfen.
 
-Im Folgenden finden Sie ein Beispiel für Tags, die für eine E-Commerce-App nützlich sein könnten:
+Im Folgenden finden Sie ein Beispiel für Tags, die für eine E-Commerce App nützlich sein könnten:
 
 <style>
 table td {
@@ -81,10 +81,6 @@ table td {
 </table>
 
 Sie können dieselben Tags für Kampagnen, Canvases und Segmente verwenden. Um Tags in Ihrem Dashboard effizient umzubenennen, zu entfernen oder hinzuzufügen, gehen Sie zu **Einstellungen** > **Tag Management**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Einstellungen** > **Einstellungen verwalten** > **Tags**.
-{% endalert %}
 
 ![Tab Tags auf der Seite Einstellungen verwalten][8]
 

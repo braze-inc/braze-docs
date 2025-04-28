@@ -55,7 +55,7 @@ When using **Most recent** or **AI Personalized**, users with insufficient data 
 
 To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-!["Define your recommendation" step with "Most popular" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
+!["Define your recommendation" step with "AI Personalized" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
 
 This setting prevents messages from reusing the items a user has already bought or interacted with, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
@@ -302,7 +302,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![Recommendation audience metrics showing precision (21.1%), coverage (83.0%), and recommendation types split between personalized and most popular items.][5]
+![Recommendation audience metrics showing precision (25.3%), coverage (54.3%), and recommendation types split between personalized and most popular items.][5]
 
 These metrics are defined in the following table. 
 
@@ -322,7 +322,7 @@ The next section shows a breakdown of items in the catalog, split into two possi
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:45%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:50%" }
 
 ## Using recommendations in messaging
 
@@ -364,7 +364,7 @@ This happens under a few specific conditions:
 
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
-No, existing recommendations won’t automatically update to train weekly or predict daily after upgrading. You can check the next training and prediction times in the **Recommendation** section by selecting a recommendation. For updated schedules, we suggest recreating your recommendations.
+Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}

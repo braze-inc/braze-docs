@@ -103,63 +103,63 @@ Ce rapport contient uniquement les 10 000 événements de sécurité les plus 
 
 {% details Événements signalés en matière de sécurité %}
 ### Identifiant et compte 
-- ÉVÉNEMENT_DÉVELOPPEUR_SUPPRIMÉ
-- ÉVÉNEMENT_DÉVELOPPEUR_AJOUTÉ
-- ÉVÉNEMENT_SIGNÉ
-- ÉVÉNEMENT_DE_LOGIN_ÉCHEC
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- ÉVÉNEMENT_DÉVELOPPEUR_DEUX_FACTEURS_AUTH
-- ÉVÉNEMENT_SUSPENDU_DÉVELOPPEUR
-- DEVELOPER_UNSUSPENDED_EVENT
+- Développeur supprimé
+- Ajout d'un développeur supplémentaire
+- Signé en
+- Échec de l'identifiant
+- Configuration de l'authentification à deux facteurs terminée
+- Réinitialisation de l'authentification à deux facteurs terminée
+- Autorisé Développeur 2FA
+- Suspension du développeur
+- Développeur non suspendu
 
 ### Accès surélevé
-- ÉVÉNEMENT DE DÉBUT DE FLUX D'ACCÈS ÉLEVÉ
-- ÉVÉNEMENT_DE_FLUX_D'ACCÈS_ÉLEVÉ_COMPLÉTÉ
-- ÉVÉNEMENT D'ÉCHEC DU FLUX D'ACCÈS ÉLEVÉ (ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT)
+- Début de l'accès en hauteur
+- Achevé Flux d'accès surélevés
+- Échec de la vérification 2FA pour l'accès élevé
 
 ### Campagne arrêtée
-- ÉVÉNEMENT_DE_CAMPAGNE_AJOUTÉ
-- ÉVÉNEMENT_CAMPAGNE_ÉDITÉ
+- Campagne ajoutée
+- Campagne modifiée
 
 ### Canvas
-- ÉVÉNEMENT_DE_TRAVAIL_AJOUTÉ
-- ÉVÉNEMENT_DE_TRAVAIL_ÉDITÉ
+- Ajout d'un voyage
+- Parcours modifié
 
 ### Segment
-- ÉVÉNEMENT_SEGMENT_AJOUTÉ
-- ÉVÉNEMENT_SEGMENT_ÉDITÉ
-- SEGMENT_EXPORTÉ_VERS_CSV
-- SEGMENT_EXPORTÉ_VIA_API
+- Segmentation ajoutée
+- Segment modifié
+- Données exportées au format CSV
+- Segment exporté via API
 
 ### Clé d'API REST
-- CLÉ_REST_API_AJOUTÉE
-- REMOVE_REST_API_KEY
+- Ajout d'une clé API REST
+- Suppression de la clé API REST
 
 ### Certificat d'authentification de base
-- CODE D'ACCÈS À LA BASE AJOUTÉE
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- RETIRÉ_BASIC_AUTH_CREDENTIAL
+- Ajout d'un identifiant Basic Auth
+- Mise à jour de l'identifiant Basic Auth
+- Suppression de l'identifiant Basic Auth
 
 ### Autorisation
-- ÉVÉNEMENT_DÉVELOPPEUR_DEUX_FACTEURS_AUTH
-- ÉVÉNEMENT_DEVELOPER_PERMISSION_MISE_À_JOUR
+- Autorisé Développeur 2FA
+- Mise à jour de l'autorisation du compte
 
 ### Paramètres de l’entreprise
-- GROUPE_APP_AJOUTÉ
-- ÉVÉNEMENT_APP_AJOUTÉ
+- Ajout d'un groupe d'applications
+- Ajout d'une application
 
 ### Modèle d'e-mail
-- MODÈLE_DE_COURRIEL_AJOUTÉ
-- UPDATED_EMAIL_TEMPLATE
+- Ajout d'un modèle d'e-mail
+- Modèle d'e-mail mis à jour
 
 ### Pousser la lettre de créance
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Mise à jour de l'identifiant Push
+- Suppression de l'identifiant de poussée
 
 ### Outil de débogage du SDK
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Démarrage de la session du débogueur SDK
+- Journal du débogueur SDK exporté
 {% enddetails %}
 
 ## Affichage des données d'identification {#view-pii}

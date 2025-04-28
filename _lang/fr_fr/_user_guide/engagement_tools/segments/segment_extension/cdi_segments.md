@@ -11,7 +11,7 @@ description: "Cet article pratique vous explique comment configurer le ciblage d
 
 # segments CDI
 
-> Avec Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), vous pouvez configurer une connexion directe depuis votre entrepôt de données ou votre système de stockage de fichiers vers Braze pour synchroniser les données utilisateur ou de catalogue pertinentes de manière récurrente.
+> Avec Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), vous pouvez configurer une connexion directe depuis votre entrepôt de données ou votre système de stockage de fichiers vers Braze pour synchroniser les données utilisateur ou de catalogue pertinentes de manière récurrente.
 
 {% alert warning %}
 Cette fonctionnalité interroge directement votre entrepôt de données, vous devrez donc supporter tous les coûts associés à l'exécution de ces requêtes dans votre entrepôt de données. Les segments CDI ne consommeront pas de [crédits de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), ne comptent pas dans votre limite d'extension de segment et ne consomment pas de points de données.
@@ -19,13 +19,13 @@ Cette fonctionnalité interroge directement votre entrepôt de données, vous de
 
 ## Conditions préalables
 
-Pour utiliser les données de votre entrepôt de données pour la segmentation dans votre espace de travail Braze, vous devrez créer une [source connectée]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/), puis créer un segment CDI dans vos [Extensions de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Les segments CDI vous permettent d'écrire des requêtes SQL qui interrogent directement votre propre entrepôt de données en utilisant les données mises à disposition via vos connexions CDI, et de créer un groupe d'utilisateurs pouvant être ciblés au sein de Braze.
+Pour utiliser les données de votre entrepôt de données pour la segmentation dans votre espace de travail Braze, vous devrez créer une [source connectée]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), puis créer un segment CDI dans vos [Extensions de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Les segments CDI vous permettent d'écrire des requêtes SQL qui interrogent directement votre propre entrepôt de données en utilisant les données mises à disposition via vos connexions CDI, et de créer un groupe d'utilisateurs pouvant être ciblés au sein de Braze.
 
 ## Création d'un segment CDI
 
 ### Étape 1 : Configurez votre source
 
-Avant de créer votre premier segment CDI, configurez une nouvelle source connectée avec votre entrepôt de données en suivant les étapes dans [Sources connectées]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
+Avant de créer votre premier segment CDI, configurez une nouvelle source connectée avec votre entrepôt de données en suivant les étapes dans [Sources connectées]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
 
 ### Étape 2 : Créer un segment
 

@@ -22,7 +22,7 @@ Wenn Sie beim Einrichten Ihrer Kampagne die Option **Keine Optimierung** gewähl
 
 ![Performance-Abschnitt der Campaign Analytics für eine E-Mail-Kampagne mit mehreren Varianten. In der Tabelle sind verschiedene Performance-Metriken für jede Variante aufgeführt, wie Empfänger:innen, Bounces, Klicks und Konversionen.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-Weitere Einzelheiten finden Sie in dem Artikel [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) für Ihren Messaging-Kanal.
+Weitere Einzelheiten finden Sie in dem Artikel [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) für Ihren Messaging-Kanal.
 
 ### Gewinnervariante
 
@@ -127,7 +127,7 @@ Die Tabelle auf dieser Seite zeigt die Metriken für jede Variante aus dem perso
 Konfidenz ist das statistische Maß dafür, wie sicher wir sind, dass ein Unterschied in den Daten, z. B. bei den Konversionsraten, real ist und nicht nur auf Zufall beruht.
 
 {% alert note %}
-Haben Sie kein Vertrauen in Ihre Ergebnisse? Vertrauen wird nur angezeigt, wenn Sie **Gewinnvariante** oder **Personalisierte Variante** als Optimierung ausgewählt haben.
+Haben Sie kein Vertrauen in Ihre Ergebnisse? Vertrauen wird nur angezeigt, wenn Sie eine Kontrollgruppe haben.
 {% endalert %}
 
 Ein wichtiger Teil Ihrer Ergebnisse ist das Vertrauen in Ihre Ergebnisse. Was wäre zum Beispiel, wenn die Kontrollgruppe eine Konversionsrate von 20 % hätte und Variante A eine Konversionsrate von 25 %? Dies scheint darauf hinzudeuten, dass das Senden von Variante A effektiver ist als das Senden keiner Nachricht. Eine Konfidenz von 95 % bedeutet, dass der Unterschied zwischen den beiden Konversionsraten wahrscheinlich auf einen tatsächlichen Unterschied in den Antworten der Nutzer zurückzuführen ist und dass es nur eine Wahrscheinlichkeit von 5 % gibt, dass der Unterschied zufällig entstanden ist.
@@ -183,4 +183,4 @@ Nutzen Sie die Insights, die Sie aus vergangenen Tests gewonnen haben, um Ihre z
 
 #### Vergleichen Sie die langfristigen Auswirkungen der verschiedenen Varianten
 
-Wenn Sie A/B-Tests mit Re-Engagement-Botschaften durchführen, vergessen Sie nicht, die langfristigen Auswirkungen der verschiedenen Varianten mithilfe von [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/) zu vergleichen. Mithilfe von Retention Reports können Sie analysieren, wie sich jede Variante Tage, Wochen oder einen Monat nach Erhalt der Nachricht auf ein beliebiges Nutzerverhalten Ihrer Wahl ausgewirkt hat, und feststellen, ob es einen Uplift gibt.
+Wenn Sie A/B-Tests mit Re-Engagement-Botschaften durchführen, vergessen Sie nicht, die langfristigen Auswirkungen der verschiedenen Varianten mithilfe von [Retention Reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) zu vergleichen. Mithilfe von Retention Reports können Sie analysieren, wie sich jede Variante Tage, Wochen oder einen Monat nach Erhalt der Nachricht auf ein beliebiges Nutzerverhalten Ihrer Wahl ausgewirkt hat, und feststellen, ob es einen Uplift gibt.

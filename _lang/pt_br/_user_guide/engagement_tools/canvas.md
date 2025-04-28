@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Componentes do Canva
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
     image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Gerenciamento de canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/

@@ -31,3 +31,12 @@ Die häufigste Namensstruktur ist `group_noun_action`. Ereignisse sollten alle k
 ### Eigenschaften
 
 Markieren Sie ein Ereignis und identifizieren Sie dann Unterschiede anhand von Eigenschaften. Dies ist hilfreich bei Ereignissen, die an sich gleich sind, aber kleine Unterschiede aufweisen, wie z. B. Kanäle für eine Kampagne. Wir können auch leicht sehen, wie Nutzer:innen durch die Ereignisse fließen. Im [Objekt Event-Eigenschaften]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) finden Sie ein Beispiel und zusätzlichen Kontext.
+
+## Beispiele
+
+Nehmen wir an, Sie sind Teil eines E-Commerce-Unternehmens und daran interessiert, zu tracken, wann sich Kunden für Ihre App angemeldet und wann sie Ihren Newsletter abonniert haben. Hier finden Sie Beispiele für wirkungsvolle Veranstaltungsnamen:
+
+- `user_signup`
+- `newsletter_sunscribed`
+
+Diese beiden Ereignisnamen zeigen deutlich, welches Ereignis sie tracken. Wenn Sie weitere angepasste Events erstellen, sollten Sie darauf achten, dass Ihre Namenskonventionen verständlich sind. Vermeiden Sie beispielsweise die Verwendung von Ereignisnamen wie `signup_event_1`, da dies im Vergleich zu `user_signup` unklar ist und nicht vermittelt, worum es bei dem Ereignis geht.

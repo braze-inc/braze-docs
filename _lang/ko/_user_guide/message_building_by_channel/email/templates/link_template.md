@@ -90,11 +90,11 @@ URL 뒤에 쿼리 매개변수를 추가하려면 이메일 메시지에서:
 링크 템플릿은 일반 텍스트에 적용되지 않습니다. 이것은 커런츠가 링크 템플릿의 매개변수를 포함하지 않는 클릭을 표시할 수 있음을 의미합니다. 이러한 클릭은 이메일의 일반 텍스트 버전에서 올 수 있습니다.
 {% endalert %}
 
-**링크 관리** 탭에 링크 템플릿을 추가하면 추가한 템플릿을 보려면 오른쪽으로 스크롤하십시오.
+**링크 관리** 탭에 링크 템플릿을 추가하면 추가한 템플릿을 보려면 오른쪽으로 스크롤하십시오. If existing links within an email already have a link template added, newly added links will also have the link template added by default.
 
 ## 링크 템플릿 관리
 
-링크 템플릿을 [복제]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/)할 수도 있습니다. [템플릿 및 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) link templates. [템플릿 및 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
 {% alert important %}
 링크 템플릿에 대한 템플릿 보관은 현재 사용할 수 없습니다.

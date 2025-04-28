@@ -12,7 +12,7 @@ channel:
 
 # Paires clé-valeur
 
-> Braze vous permet d’envoyer des charges utiles de données supplémentaires aux appareils utilisateur via des paires clé-valeur. Cette fonctionnalité est disponible sur les canaux de communication de notifications push, de messages in-app, d’e-mail et de cartes de contenu. 
+> Cette page explique comment utiliser des paires clé-valeur pour envoyer des données supplémentaires aux appareils des utilisateurs. Cette fonctionnalité est disponible sur les canaux de communication de notifications push, de messages in-app, d’e-mail et de cartes de contenu.
 
 Utilisez des paires clé-valeur pour ajouter des métadonnées structurées aux messages. Ces données supplémentaires peuvent enrichir les messages d'informations contextuelles supplémentaires susceptibles d'influencer le rendu ou le traitement d'un message.
 
@@ -41,7 +41,7 @@ Voici quelques exemples de cas d'utilisation pour l'ajout de métadonnées avec 
 
 Les paires clé-valeur peuvent être ajoutées aux notifications push Android, iOS et web. Vous pourriez utiliser des paires clé-valeur pour mettre à jour les indicateurs internes et le contenu de l'app ou personnaliser les propriétés des notifications push, telles que la priorisation des alertes, la localisation et les sons.
 
-Dans le compositeur de messages, sélectionnez l'onglet **Paramètres**, cliquez sur **Ajouter une nouvelle paire** et spécifiez vos paires clé-valeur.
+Dans le compositeur de messages, sélectionnez l'onglet **Paramètres**, puis **Ajouter une nouvelle paire** et spécifiez vos paires clé-valeur.
 
 ### iOS
 
@@ -109,11 +109,11 @@ Lorsque Braze envoie une notification push aux APN, la charge utile sera format�
 
 ##### Accéder aux paires clé-valeur personnalisées
 
-En plus des valeurs de la charge utile de la bibliothèque ```aps```, vous pouvez envoyer des paires clé-valeur personnalisées à l’appareil d’un utilisateur. Les valeurs de ces paires sont limitées aux types de primitives : dictionnaire (objet), tableau, chaîne de caractère, nombre et booléen.
+En plus des valeurs de la charge utile de la bibliothèque ```aps```, vous pouvez envoyer des paires clé-valeur personnalisées à l’appareil d’un utilisateur. Les valeurs de ces paires sont limitées aux types primitifs : dictionnaire (objet), tableau d'objets, chaîne de caractères, nombre et booléen.
 
 ![][17]
 
-Les scénarios d’utilisation pour les paires clé-valeur personnalisées comprennent, sans s’y limiter, les indicateurs internes et la définition du contexte de l’interface utilisateur. Braze vous permet d'envoyer des paires clé-valeur supplémentaires avec une notification push à utiliser comme bon vous semble via votre application dans la [clé d'extras.][1] Si vous préférez utiliser une autre clé, assurez-vous que votre application peut gérer cette clé personnalisée.
+Les cas d'utilisation des paires clé-valeur personnalisées comprennent, sans s'y limiter, la conservation des indicateurs internes et la définition du contexte de l'interface utilisateur. Braze vous permet d'envoyer des paires clé-valeur supplémentaires accompagnées d'une notification push à utiliser via votre application au sein de la [clé extras][1]. Si vous préférez utiliser une autre clé, confirmez que votre application peut gérer cette clé personnalisée.
 
 {% alert warning %}
 Vous devez éviter de gérer une clé ou un dictionnaire de niveau supérieur appelé ab dans votre application.
@@ -122,7 +122,7 @@ Vous devez éviter de gérer une clé ou un dictionnaire de niveau supérieur ap
 Apple conseille aux clients d’éviter les informations client ou les données sensibles en tant que données de charge utile personnalisées. En outre, Apple recommande que toute action associée à un message d’alerte ne supprime pas les données sur un appareil.
 
 {% alert warning %}
-Si vous utilisez l’API du fournisseur HTTP/2, toute charge utile individuelle que vous envoyez aux APN ne peut pas dépasser une taille de 4 096 octets. L’interface binaire héritée, qui sera bientôt dépréciée, prend en charge une taille de charge utile de 2 048 octets seulement.
+Si vous utilisez l'API du fournisseur HTTP/2, toute charge utile individuelle que vous envoyez aux APN ne peut pas dépasser une taille de 4096 octets. L’interface binaire héritée, qui sera bientôt dépréciée, prend en charge une taille de charge utile de 2 048 octets seulement.
 {% endalert %}
 
 ###### Campagnes déclenchées par API
@@ -167,7 +167,7 @@ Le système d'exploitation iOS peut [porter des notifications]({{site.baseurl}}/
 
 ## in-app Messages
 
-Pour ajouter une paire clé-valeur à un message in-app, sélectionnez l'onglet **Paramètres** dans le compositeur de messages, cliquez sur **Ajouter une nouvelle paire** et spécifiez vos paires clé-valeur.
+Pour ajouter une paire clé-valeur à un message in-app, sélectionnez l'onglet **Paramètres** dans le compositeur de messages, sélectionnez **Ajouter une nouvelle paire** et spécifiez vos paires clé-valeur.
 
 ![][21]
 
@@ -187,7 +187,7 @@ Les e-mails ayant rebondi ne fournissent pas de paires clé-valeur à SparkPost 
 
 ## Cartes de contenu
 
-Pour ajouter une paire clé-valeur à une carte de contenu, accédez à l'onglet **Paramètres** du compositeur de messages de Braze et cliquez sur **Ajouter une nouvelle paire.**
+Pour ajouter une paire clé-valeur à une carte de contenu, accédez à l'onglet **Paramètres** du compositeur de messages de Braze et sélectionnez **Ajouter une nouvelle paire.**
 
 ![Ajouter une paire clé-valeur à la carte de contenu][24]{: style="max-width:70%;"}
 

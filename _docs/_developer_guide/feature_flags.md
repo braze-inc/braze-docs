@@ -143,7 +143,7 @@ Use feature flags to experiment and confirm your hypotheses around your new feat
 
 An [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) is a powerful tool that compares users' responses to multiple versions of a variable.
 
-In this example, our team has built a new checkout flow for our ecommerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
+In this example, our team has built a new checkout flow for our eCommerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
 
 To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use a feature flag experiment to split traffic, enable the feature, and measure the outcome.
 

@@ -23,7 +23,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 
 ### オプション: コンテンツテストグループを作成する
 
-テストユーザーを整理する便利な方法として、キャンペーンからテストメッセージを受け取るユーザーのグループを含む[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/)を作成することができます。このテストグループをキャンペーンの [**テスト受信者**] の [**コンテンツテストグループの追加**] フィールドに追加すると、個々のテストユーザーを作成または追加せずにテストを開始できます。
+テストユーザーを整理する便利な方法として、キャンペーンからテストメッセージを受け取るユーザーのグループを含む[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/)を作成することができます。このテストグループをキャンペーンの [**テスト受信者**] の [**コンテンツテストグループの追加**] フィールドに追加すると、個々のテストユーザーを作成または追加せずにテストを開始できます。
 
 ## ステップ 2: チャネル固有のテストメッセージを送信する
 
@@ -126,7 +126,7 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 1. [**セグメント**] ページに移動して、[新しいセグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)します。 
 2. [**フィルターを追加**] の下のドロップダウンメニューをクリックし、リストの下部にあるテストフィルターを探します。 <br><br>![フィルターのテスト]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. テストフィルターを使用して、特定のメールアドレスまたは外部 [ユーザー ID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) を持つユーザーを選択します。<br><br>![フィルター・オプションのテスト]({% image_buster /assets/img_archive/testmessages2.png %})
+3. テストフィルターを使用して、特定のメールアドレスまたは外部 [ユーザー ID]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) を持つユーザーを選択します。<br><br>![フィルター・オプションのテスト]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>これらのフィルターには次のオプションがあります。
 - **完全一致**: 指定したメールアドレスまたはユーザー ID と完全に一致するものを探します。これは、1 つのメールまたはユーザー ID に関連付けられたデバイスにのみテストキャンペーンを送信する場合に使用します。
 - **一致しない**: 特定のメールまたはユーザー ID をテストキャンペーンから除外します。

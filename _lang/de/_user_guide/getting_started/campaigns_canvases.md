@@ -30,7 +30,7 @@ Obwohl Kampagnen je nach Kanal unterschiedlich gestaltet werden können, gibt es
 Regelmäßige Kampagnen und A/B-Testkampagnen können geplant werden (z. B. um eine Liste von Nutzern über eine bevorstehende Veranstaltung zu informieren) oder automatisch als Reaktion auf eine Nutzeraktion versendet werden (z. B. um eine E-Mail zu senden, wenn jemand Ihren Newsletter abonniert hat). Erfahren Sie mehr über die [Planung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Unabhängig von der Art der Kampagne, die Sie erstellen, können Ihre Kampagnen auf die Bedürfnisse Ihrer Nutzer eingehen und eine durchdachte, personalisierte Antwort liefern. Nachdem Sie Ihre Kampagne verschickt haben, können Sie mit unseren [integrierten Analysetools]({{site.baseurl}}/user_guide/data_and_analytics/reporting) sehen, wie sie abgeschnitten hat und wie viele Nutzer auf der Grundlage Ihrer [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) konvertiert haben.
+Unabhängig von der Art der Kampagne, die Sie erstellen, können Ihre Kampagnen auf die Bedürfnisse Ihrer Nutzer eingehen und eine durchdachte, personalisierte Antwort liefern. Nachdem Sie Ihre Kampagne verschickt haben, können Sie mit unseren [integrierten Analysetools]({{site.baseurl}}/user_guide/analytics/reporting/) sehen, wie sie abgeschnitten hat und wie viele Nutzer auf der Grundlage Ihrer [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) konvertiert haben.
 
 Hier erfahren Sie mehr über Braze-Kampagnen:
 
@@ -73,7 +73,7 @@ Die folgende Tabelle gibt einen Überblick über die von uns unterstützten Kan�
 | [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)                   | Senden Sie Textnachrichten an die Mobiltelefone der Benutzer.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Senden Sie Nachrichten über die beliebte Messaging-Plattform WhatsApp, um Ihre Nutzer zu erreichen und mit ihnen in Kontakt zu treten.                                                   |
 | [Content-Cards*]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)       | Bieten Sie einen Posteingang in Ihrer App oder Website an, in dem Benutzer Nachrichten empfangen und mit ihnen interagieren können, oder zeigen Sie Nachrichten in einem Karussell, als Banner und mehr an. |
-| [TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | Interagieren Sie mit Nutzern auf vernetzten Fernsehplattformen.                                                                                                   |
+| [TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Interagieren Sie mit Nutzern auf vernetzten Fernsehplattformen.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Ermöglichen Sie Echtzeitkommunikation und Integration mit externen Systemen durch benutzerdefinierte HTTP-Callbacks.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

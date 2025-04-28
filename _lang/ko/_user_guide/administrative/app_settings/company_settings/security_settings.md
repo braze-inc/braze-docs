@@ -103,63 +103,63 @@ description: "이 참조 문서에서는 인증 규칙, IP 허용 목록, PII, 2
 
 {% details 보고된 보안 이벤트 %}
 ### 로그인 및 계정 
-- 제거된_개발자_이벤트
-- 추가된_개발자_이벤트
-- 로그인_이벤트
-- 실패_로그인_이벤트
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- 클리어_개발자_두_요인_인증_이벤트
-- 개발자_중단된_이벤트
-- 개발자_유예_이벤트
+- Removed Developer
+- Added Additional Developer
+- Signed In
+- Failed Login
+- Two-Factor Auth Setup Completed
+- Two-Factor Auth Reset Completed
+- Cleared Developer 2FA
+- Developer Suspended
+- Developer Unsuspended
 
 ### 향상된 액세스
-- 상승된_액세스_흐름_시작_이벤트
-- 상승된_액세스_흐름_완료_이벤트
-- 상승된_액세스_흐름_2FA_실패한_이벤트
+- Started Elevated Access Flow
+- Completed Elevated Access Flow
+- Failed 2FA Verification For Elevated Access
 
 ### 캠페인
-- 추가된_캠페인_이벤트
-- 편집된_캠페인_이벤트
+- Added Campaign
+- Edited Campaign
 
 ### 캔버스
-- 추가된_워크플로우_이벤트
-- 편집된_워크플로우_이벤트
+- Added Journey
+- Edited Journey
 
 ### 세그먼트
-- 추가된_세그먼트_이벤트
-- 편집된_세그먼트_이벤트
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Added Segment
+- Edited Segment
+- Exported data to CSV
+- Exported Segment via API
 
 ### REST API 키
-- 추가된_REST_API_KEY
-- 제거된_REST_API_KEY
+- Added REST API key
+- Removed REST API key
 
 ### 기본 인증 자격증명
-- 추가된_기본_인증_크레덴셜
-- 업데이트된_기본_인증_크레덴셜
-- 제거된_기본_인증_크레덴셜
+- Added Basic Auth credential
+- Updated Basic Auth credential
+- Removed Basic Auth credential
 
 ### 권한
-- 클리어_개발자_두_요인_인증_이벤트
-- 업데이트_개발자_퍼미션_이벤트
+- Cleared Developer 2FA
+- Updated Account Permission
 
 ### 회사 설정
-- 추가된_앱_그룹
-- 추가된_앱_이벤트
+- Added App Group
+- Added App
 
 ### 이메일 템플릿
-- 추가된_이메일_템플릿
-- 업데이트된_이메일 템플릿
+- Added Email Template
+- Updated Email Template
 
 ### 푸시 자격증명
-- 업데이트_푸시_크레덴셜
-- 제거된_푸시_자격증명
+- Updated Push Credential
+- Removed Push Credential
 
 ### SDK 디버거
-- 시작된_SDK_디버거_세션
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Started SDK Debugger Session
+- Exported SDK Debugger Log
 {% enddetails %}
 
 ## 개인 식별 정보(PII) 보기 {#view-pii}

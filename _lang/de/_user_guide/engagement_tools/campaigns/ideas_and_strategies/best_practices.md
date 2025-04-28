@@ -16,7 +16,7 @@ Braze empfiehlt Ihnen, nur Kundendaten zu senden, die Sie auf der Braze-Plattfor
 - **Targeting** Ihrer Zielgruppen durch [Segmentierung der Zielgruppen]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Triggern Sie** Ihre Nachrichten mit [aktionsbasierter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) oder [API-gesteuerter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) Zustellung.
 - **Erstellen Sie Vorlagen** und personalisieren Sie Ihre Nachrichten mit [Liquid Conditional Logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Auf diese Weise können Sie die Daten, die Sie an Braze senden, optimieren und Ihre Nutzer besser informieren, während Sie gleichzeitig sicherstellen, dass Sie keine Datenpunkte verfolgen, die für Ihr Team langfristig nicht hilfreich sind. 
 
@@ -74,6 +74,10 @@ Beachten Sie bei der Bearbeitung von Kampagnenplänen oder Zielgruppen die folge
 - **Wiederkehrende geplante Kampagnen:** Sie können die Kampagne bis zur geplanten Sendezeit bearbeiten.
 - **Lokale Kampagnen zur Sendezeit:** Nehmen Sie keine Änderungen 24 Stunden vor der geplanten Sendezeit vor.
 - **Optimale Kampagnen zur Sendezeit:** Nehmen Sie keine Änderungen 24 Stunden vor Mitternacht des Tages vor, an dem die Kampagne versendet werden soll.
+
+{% alert note %}
+Wenn Sie eine Live-Kampagne bearbeiten und die Zustellung auf **Lokale Sendezeit** ändern, wird ein neuer Stapel von Nachrichten in die Warteschlange gestellt. Das bedeutet, dass Ihre Nutzer:innen die Nachricht zweimal erhalten, da die Nachricht zweimal in die Warteschlange gestellt wird. Um dies zu verhindern, stoppen Sie zunächst die Originalkampagne und starten dann nach dem Update des Zeitplans eine zweite Kampagne.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

@@ -18,14 +18,11 @@ description: "Dieser Referenzartikel beschreibt, wie Sie im Dashboard auf das Pr
 Um auf das Profil eines Benutzers zuzugreifen, gehen Sie auf die Seite **Benutzer suchen** und suchen Sie nach einem Benutzer anhand einer der folgenden Möglichkeiten:
 
 - Externe Benutzer-ID
+- Braze-ID
 - E-Mail
 - Telefonnummer
 - Push-Token
 - Benutzer-Alias mit dem Format "[user_alias]:[alias_name]", wie z.B. "amplitude_id:user_123"
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt **die Benutzersuche** **Benutzersuche** und ist unter **Benutzer** zu finden.
-{% endalert %}
 
 Wenn eine Übereinstimmung gefunden wird, können Sie die Informationen, die Sie für diese Nutzer:innen erfasst haben, mit dem Braze SDK einsehen. Andernfalls, wenn Ihre Suche mehrere Nutzerprofile ergibt, können Sie jedes Profil einzeln zusammenführen oder eine Massen-Zusammenführung von Nutzer:innen durchführen. Eine vollständige Anleitung finden Sie unter [Doppelte Benutzer]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
@@ -37,7 +34,7 @@ Benutzerprofile sind eine großartige Ressource für die Fehlersuche und das Tes
 
 Wenn zum Beispiel ein Benutzer ein Problem meldet und Sie nicht sicher sind, welches Gerät und Betriebssystem er verwendet, können Sie die [Registerkarte Übersicht](#overview-tab) verwenden, um diese Informationen zu finden (vorausgesetzt, Sie haben die E-Mail oder die Benutzer-ID des Benutzers). Sie können auch die Sprache eines Benutzers anzeigen, was bei der Fehlersuche in einer [mehrsprachigen Kampagne][13] ], die sich nicht wie erwartet verhalten hat, hilfreich sein kann.
 
-Auf der [Registerkarte Engagement](#engagement-tab) können Sie überprüfen, ob ein bestimmter Benutzer eine Kampagne erhalten hat. Wenn dieser Nutzer die Kampagne erhalten hat, können Sie außerdem sehen, wann er sie erhalten hat. Sie können auch überprüfen, ob jemand in einem bestimmten Segment enthalten ist und Push-Benachrichtigungen, E-Mails oder beidem zugestimmt hat. Diese Informationen sind für die Fehlersuche nützlich. Sie sollten diese Informationen zum Beispiel überprüfen, wenn ein Benutzer eine Kampagne nicht erhält, die Sie erwartet haben, oder eine Kampagne erhält, die Sie nicht erwartet haben.
+Auf der [Registerkarte Engagement](#engagement-tab) können Sie überprüfen, ob ein bestimmter Benutzer eine Kampagne erhalten hat. Wenn dieser Nutzer die Kampagne erhalten hat, können Sie außerdem sehen, wann er sie erhalten hat. Sie können auch überprüfen, ob ein Nutzer:in einem bestimmten Segment ist und ob ein Nutzer:in für Push, E-Mail oder beides opt-in ist. Diese Informationen sind für die Fehlersuche nützlich. Sie sollten diese Informationen zum Beispiel überprüfen, wenn ein Benutzer eine Kampagne nicht erhält, die Sie erwartet haben, oder eine Kampagne erhält, die Sie nicht erwartet haben.
 
 ## Elemente des Benutzerprofils
 
@@ -76,19 +73,19 @@ Die Registerkarte **Engagement** enthält Informationen über die Interaktionen 
 | Segmente | Segmente, in denen dieser Benutzer enthalten ist. Wählen Sie ein Segment aus der Liste aus, um es anzuzeigen. |
 | Kommunikationsstatistiken | Wann dieser Benutzer zuletzt Nachrichten von Ihnen aus jedem Kanal erhalten hat. |
 | Install-Attribution | Informationen darüber, wie und wann ein Benutzer Ihre App installiert hat. Erfahren Sie mehr über das [Verständnis von Benutzerinstallationen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Verschiedenes | Die zufällig generierte nutzerspezifische [Bucket-Nummer]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) |
+| Verschiedenes | Die zufällig generierte nutzerspezifische [Bucket-Nummer]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) |
 | Empfangene Canvas-Nachrichten | Canvas-Nachrichten, die dieser Benutzer erhalten hat und wann. Wählen Sie eine Nachricht aus der Liste aus, um sie anzusehen. |
-| Prognosen | Werte für die [Abwanderungsvorhersage]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) und die [Ereignisvorhersage]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) für diesen Benutzer. |
+| Prognosen | Werte für die [Abwanderungsvorhersage]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) und die [Ereignisvorhersage]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) für diesen Benutzer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Die Registerkarte Engagement eines Benutzerprofils, auf der die Kontakteinstellungen und Kommunikationsstatistiken angezeigt werden.][3]
 
 ### Registerkarte Nachrichtenverlauf
 
-Die Registerkarte **Nachrichtenverlauf** des Benutzerprofils zeigt die jüngsten Ereignisse (etwa 40) im Zusammenhang mit Nachrichten für einen einzelnen Benutzer aus den letzten 30 Tagen. Zu diesen Ereignissen gehören die Nachrichten, die der Benutzer gesendet oder empfangen hat, mit denen er interagiert hat, und vieles mehr. Beachten Sie, dass die Daten in diesem Tab bei einer Nutzerzusammenführung nicht aktualisiert werden.
+Der Tab **Nachrichtenverlauf** des Nutzerprofils zeigt die jüngsten Ereignisse im Zusammenhang mit Messaging (etwa 40) für einen einzelnen Nutzer:innen aus den letzten 30 Tagen. Zu diesen Ereignissen gehören die Nachrichten, die der Benutzer gesendet oder empfangen hat, mit denen er interagiert hat, und vieles mehr. Beachten Sie, dass die Daten in diesem Tab bei einer Nutzerzusammenführung nicht aktualisiert werden.
 
 {% alert note %}
-Wenn Sie Feedback zu dieser Tabelle haben oder bestimmte Ereignisse sehen möchten, senden Sie bitte eine E-Mail an [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) mit der Betreffzeile "Messaging History Tab Feedback".
+Wenn Sie Feedback zu dieser Tabelle haben oder bestimmte Ereignisse sehen möchten, mailen Sie bitte [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) mit der Betreffzeile "Messaging History Tab Feedback".
 {% endalert %}
 
 ![Die Registerkarte Nachrichtenverlauf zeigt an, welche Kampagnen und Canvases ein Benutzer erhalten hat.][5]
@@ -99,7 +96,7 @@ Für jedes Ereignis in der Tabelle **Nachrichtenverlauf** können Sie den Nachri
 
 ##### Nachrichtenengagement-Events
 
-Die folgenden Ereignisse zum Nachrichtenengagement sind bei E-Mail, SMS, Push-Benachrichtigungen, In-App-Nachrichten, Content-Cards und Webhooks verfügbar. Wenn Sie genauer wissen möchten, wie bestimmte Ereignisse verfolgt werden, lesen Sie bitte das [Glossar Nachrichten-Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+Die folgenden Ereignisse zum Nachrichtenengagement sind bei E-Mail, SMS, Push-Benachrichtigungen, In-App-Nachrichten, Content-Cards und Webhooks verfügbar. Wenn Sie genauer wissen möchten, wie bestimmte Ereignisse verfolgt werden, lesen Sie bitte das [Glossar Nachrichten-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Kanal | Engagement-Events verfügbar |
 | --- | --- |
@@ -126,11 +123,7 @@ Abbruchereignisse sind derzeit nicht für In-App-Nachrichten und Inhaltskarten v
 
 ##### Frequency-Capping-Ereignisse
 
-Ein Frequenzbegrenzungsereignis tritt ein, wenn ein Benutzer für den Empfang einer Nachricht qualifiziert ist, diese aber aufgrund von [Frequenzbegrenzungseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) tatsächlich nicht erhalten hat. Sie können die Einstellungen für die Frequenzbegrenzung unter **Einstellungen** > **Frequenzbegrenzungsregeln** anpassen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie die Frequenzbegrenzung unter **Engagement** > **Globale Nachrichteneinstellungen** verwalten.
-{% endalert %}
+Ein Frequency-Capping-Ereignis tritt ein, wenn ein Nutzer:innen für den Empfang einer Nachricht qualifiziert ist, diese aber aufgrund der [Frequency-Capping-Einstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) nicht erhält. Sie können die Einstellungen für die Frequenzbegrenzung unter **Einstellungen** > **Frequenzbegrenzungsregeln** anpassen.
 
 ##### Leere Ziele
 
@@ -140,9 +133,9 @@ Der Versand von Content-Cards wird protokolliert, wenn die Karte zur Ansicht ver
 
 #### Ereignis E-Mail öffnen {#note-on-email-open-event}
 
-Die Verfolgung von Öffnungsereignissen ist grundsätzlich fehleranfällig. Und das gilt auch für Braze. Da die verschiedenen E-Mail-Clients eine Vielzahl von Datenschutzfunktionen anbieten, die entweder das automatische Laden von Bildern blockieren oder sie proaktiv auf den Server laden, sind Ereignisse beim Öffnen von E-Mails sowohl für falsch positive als auch für falsch negative Ergebnisse anfällig.
+Das Tracking der Öffnung von E-Mails ist in jedem Tool fehleranfällig, auch in Braze. Da die verschiedenen E-Mail-Clients eine Vielzahl von Datenschutzfunktionen anbieten, die entweder das automatische Laden von Bildern blockieren oder sie proaktiv auf den Server laden, sind Ereignisse beim Öffnen von E-Mails sowohl für falsch positive als auch für falsch negative Ergebnisse anfällig.
 
-Auch wenn E-Mail-Öffnungsstatistiken in ihrer Gesamtheit nützlich sein können, z. B. um die Effektivität verschiedener Betreffzeilen zu vergleichen, sollten Sie nicht davon ausgehen, dass ein einzelnes Öffnungsereignis für einen einzelnen Nutzer aussagekräftig ist.
+Auch wenn Statistiken über die Öffnung von E-Mails in ihrer Gesamtheit nützlich sein können, z.B. um die Effektivität verschiedener Betreffzeilen zu vergleichen, sollten Sie nicht davon ausgehen, dass ein einzelnes Öffnungsereignis für einen einzelnen Nutzer:innen aussagekräftig ist.
 
 
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

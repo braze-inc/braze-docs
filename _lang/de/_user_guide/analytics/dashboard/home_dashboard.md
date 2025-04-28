@@ -13,10 +13,6 @@ tool:
 
 > Auf der **Startseite** des Dashboards finden Sie die wichtigsten Metriken, mit denen Sie die Performance Ihrer App oder Website tracken und verstehen können, und Sie erhalten auf einen Blick einen Überblick über Ihre Nutzerbasis.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, ist dies Ihre **Übersichtsseite**.
-{% endalert %}
-
 ![Home-Dashboard in Braze.][1]
 
 Die **Startseite** hat zwei Hauptbereiche:
@@ -31,7 +27,7 @@ Sie können die zuletzt bearbeiteten oder erstellten Kampagnen, Canvase und Segm
 
 ![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".][6]
 
-## Übersicht über die Leistung
+## Performance-Übersicht
 
 Standardmäßig zeigt die **Übersicht über die Performance** die Daten der letzten 30 Tage für alle Apps und Websites. Ihre Metriken werden alle auf der Grundlage des ausgewählten Datumsbereichs berechnet.
 
@@ -62,7 +58,7 @@ Ein niedriges MAU-zu-Nutzer-Verhältnis kann darauf hinweisen, dass Sie Ihre Mes
 ### Lifetime-Sitzungen
 
 *Lifetime-Sitzungen* ist die Gesamtzahl der Sitzungen, die Braze seit der Integration aufgezeichnet hat. Einfach ausgedrückt: Eine Sitzung findet jedes Mal statt, wenn ein Nutzer:innen die App verwendet oder Ihre Website besucht. Eine genauere Definition, wie Sitzungen nach Plattform definiert werden, finden Sie in der entsprechenden
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android und FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), oder [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) Session Tracking Entwickler:in Artikel.
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), oder [Internet]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) Session Tracking Entwickler:in Artikel.
 
 ### Monatlich aktive Nutzer:innen
 

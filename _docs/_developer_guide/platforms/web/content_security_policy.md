@@ -2,7 +2,7 @@
 nav_title: Content Security Policy Headers
 article_title: Content Security Policy Headers for Web
 platform: Web
-page_order: 25
+page_order: 21
 page_type: reference
 description: "This article covers content security policy headers needed with the Braze Web SDK."
 

@@ -128,7 +128,7 @@ Las variables incluyen:
 
 Se dispone de datos para los periodos de tiempo en los que se cumplen ambas condiciones:
 
-1. El [seguimiento de análisis por segmentos]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) está activado para los segmentos de los que quieres ver datos.
+1. El [seguimiento de análisis por segmentos]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) está activado para los segmentos de los que quieres ver datos.
 2. La función de datos de rendimiento por segmento está activada.
 
 No puedes acceder a datos de periodos de tiempo anteriores a la activación de esta característica para tu empresa. Por ejemplo, si el seguimiento de análisis está activado para el segmento A el 1 de octubre y esta característica está activada para tu empresa el 2 de octubre, entonces sólo podrás ver los datos del segmento A para las campañas y los lienzos que registraron métricas después del 2 de octubre. 

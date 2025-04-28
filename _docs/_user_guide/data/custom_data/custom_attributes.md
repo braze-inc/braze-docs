@@ -66,13 +66,13 @@ The following lists methods across various platforms that are used to set custom
 
 {% details Expand for documentation by platform %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

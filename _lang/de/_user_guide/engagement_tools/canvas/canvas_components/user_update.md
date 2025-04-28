@@ -14,9 +14,9 @@ tool: Canvas
 
 > Mit der Komponente User Update können Sie die Attribute, Events und Käufe einer Nutzerin oder eines Nutzers in einem JSON-Composer aktualisieren, so dass Sie keine sensiblen Informationen wie API-Schlüssel eingeben müssen.
 
-Bei der Benutzeraktualisierung werden die Aktualisierungen nicht auf Ihr Limit für `/users/track` Anfragen pro Minute angerechnet. Stattdessen werden diese Updates gebündelt, damit Braze sie effizienter verarbeiten kann als ein Braze-to-Braze-Webhook. Beachten Sie, dass diese Komponente keine [Datenpunkte]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) verbraucht, wenn sie zum Update von nicht abrechenbaren Datenpunkten (wie Abo-Gruppen) verwendet wird.
+Bei der Benutzeraktualisierung werden die Aktualisierungen nicht auf Ihr Limit für `/users/track` Anfragen pro Minute angerechnet. Stattdessen werden diese Updates gebündelt, damit Braze sie effizienter verarbeiten kann als ein Braze-to-Braze-Webhook. Beachten Sie, dass diese Komponente keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/) verbraucht, wenn sie zum Update von nicht abrechenbaren Datenpunkten (wie Abo-Gruppen) verwendet wird.
 
-Die Benutzer gelangen erst dann zu den nächsten Canvas-Schritten, wenn die entsprechenden Benutzeraktualisierungen abgeschlossen sind. Wenn Ihre nachfolgenden Nachrichten von den Benutzeraktualisierungen abhängen, die Sie vornehmen, können Sie sicherstellen, dass diese Aktualisierungen abgeschlossen sind, bevor die Nachrichten gesendet werden.
+Die Benutzer gelangen erst dann zu den nächsten Canvas-Schritten, wenn die entsprechenden Benutzeraktualisierungen abgeschlossen sind. Das bedeutet, dass alle nachfolgenden Messaging-Nachrichten, die sich auf diese Nutzer:innen-Updates stützen, auf dem neuesten Stand sind, wenn der nächste Schritt ausgeführt wird.
 
 ## Erstellen eines Nutzerupdates
 
@@ -52,7 +52,7 @@ Indem Sie ein angepasstes Attribut erhöhen, das ein Event verfolgt, können Sie
 
 ### Aktualisieren eines Arrays von Objekten
 
-Ein [Array von Objekten]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) ist ein benutzerdefiniertes Attribut, das im Profil eines Benutzers gespeichert ist und viele Daten enthält. So können Sie eine Historie der Interaktionen des Benutzers mit Ihrer Marke erstellen. Damit können Sie Segmente erstellen, die auf einem angepassten Attribut basieren, das ein berechnetes Feld ist, wie z. B. der Kaufverlauf oder der Lifetime-Value.
+Ein [Array von Objekten]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) ist ein benutzerdefiniertes Attribut, das im Profil eines Benutzers gespeichert ist und viele Daten enthält. So können Sie eine Historie der Interaktionen des Benutzers mit Ihrer Marke erstellen. Damit können Sie Segmente erstellen, die auf einem angepassten Attribut basieren, das ein berechnetes Feld ist, wie z. B. der Kaufverlauf oder der Lifetime-Value.
 
 Der Schritt Benutzeraktualisierung kann diesem Array von Objekten Attribute hinzufügen oder entfernen. Um ein Array zu aktualisieren, wählen Sie den Namen des Array-Attributs aus Ihrer Liste der Attribute aus und geben den Schlüsselwert ein.
 
@@ -91,7 +91,7 @@ Verfolgen Sie, wann ein Benutzer Artikel in seinem Einkaufswagen hat, wann er ne
 {% endraw %}
 
 {:start="2"}
-2\. Erstellen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) namens `add_item_to_cart`, das protokolliert wird, wenn ein Benutzer einen Artikel in den Warenkorb legt.
+2\. Erstellen Sie ein [benutzerdefiniertes Ereignis]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) namens `add_item_to_cart`, das protokolliert wird, wenn ein Benutzer einen Artikel in den Warenkorb legt.
 3\. Erstellen Sie mit diesem benutzerdefinierten Ereignis ein Canvas mit einer Zielgruppe von Benutzern. Wenn nun ein:e Nutzer:in einen Artikel in seinen Warenkorb legt, wird dieses Canvas getriggert. Sie können dann gezielt Nachrichten an diese Benutzer senden und ihnen Gutscheincodes anbieten, wenn sie einen bestimmten Betrag ausgegeben haben, ihren Einkaufswagen eine bestimmte Zeit lang nicht benutzt haben oder alles andere, was zu Ihrem Anwendungsfall passt. 
 
 Das Attribut `shopping_cart` enthält die Summe vieler benutzerdefinierter Ereignisse: die Gesamtkosten aller Artikel, die Gesamtzahl der Artikel im Einkaufswagen, ob der Einkaufswagen ein Geschenk enthält, und so weiter. Dies kann etwa wie folgt aussehen:
@@ -129,7 +129,7 @@ Mit dem Schritt Nutzer:innen aktualisieren können Sie eine `canvas_entry_proper
 Um die Eigenschaft des Trigger-Events für ein Canvas als Attribut zu speichern, verwenden Sie das Personalisierungsmodal, um die Eigenschaft des Canvas-Entrys zu extrahieren und zu speichern. Nutzer:innen Update unterstützt außerdem die folgenden Features zur Personalisierung: 
 * [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content-Blöcke]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * Liquid-Logik (einschließlich [Abbruch von Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Mehrere Attribut- oder Ereignisaktualisierungen pro Objekt
 

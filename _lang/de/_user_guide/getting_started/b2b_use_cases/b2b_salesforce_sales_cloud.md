@@ -92,7 +92,7 @@ Wählen Sie **\+ Neuen Header hinzufügen** für jeden der folgenden Anfrage-Hea
  
 ## Update eines Leads in Salesforce Sales Cloud {#updating-lead}
 
-Um einen Braze Salesforce Sales Cloud Webhook einzurichten, der Leads in Salesforce aktualisiert, benötigen Sie einen gemeinsamen Bezeichner zwischen Salesforce Sales Cloud und Braze. Im folgenden Beispiel wird die Salesforce `lead_id` als Braze `external_id` verwendet, aber Sie können dies auch durch die Verwendung eines `user_alias` erreichen. Einzelheiten hierzu finden Sie unter [B2B Daten](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+Um einen Braze Salesforce Sales Cloud Webhook einzurichten, der Leads in Salesforce aktualisiert, benötigen Sie einen gemeinsamen Bezeichner zwischen Salesforce Sales Cloud und Braze. Im folgenden Beispiel wird die Salesforce `lead_id` als Braze `external_id` verwendet, aber Sie können dies auch durch die Verwendung eines `user_alias` erreichen. Einzelheiten hierzu finden Sie unter [B2B Daten]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
 
 Dieses Beispiel zeigt speziell, wie Sie die Lead-Stufe eines Leads auf "MQL" (Marketing Qualified Lead) aktualisieren, nachdem ein Lead einen bestimmten Schwellenwert überschritten hat. Dies ist ein zentraler Bestandteil unseres [B2B-Lead-Scoring-Workflow-Anwendungsfalls]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/).
 
@@ -158,7 +158,7 @@ Um einen Lead in Salesforce zu erstellen, wenn ein Nutzer:innen seine E-Mail Adr
 
 ### Lead Scoring Canvas für das Überschreiten der Marketing Qualified Lead (MQL)-Schwelle {#lead-scoring}
 
-Dieser Webhook wird im Anwendungsfall [Lead Scoring]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) behandelt, aber Sie können auch nach MQLs suchen und Salesforce direkt innerhalb des Lead Scoring Canvas aktualisieren (im Gegensatz zur Erstellung einer separaten Webhook-Kampagne): 
+Dieser Webhook wird im Anwendungsfall [Lead Scoring]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) behandelt, aber Sie können auch nach MQLs suchen und Salesforce direkt innerhalb des Lead Scoring Canvas aktualisieren (im Gegensatz zur Erstellung einer separaten Webhook-Kampagne): 
 
 Fügen Sie Ihrer Nutzer:innen-Aktualisierung einen weiteren Schritt hinzu, um zu prüfen, ob ein Nutzer:in die von Ihnen definierte MQL-Schwelle gelangt ist. Wenn sie sich gekreuzt haben, aktualisieren Sie den Status des Nutzers:innen auf "MQL" und aktualisieren dann Salesforce mit demselben "MQL"-Status, indem Sie dieses Webhook Template verwenden. Salesforce kümmert sich um den Rest, indem es diesen Lead anhand der von Ihnen definierten Lead-Routing-Regeln an die entsprechenden Teams weiterleitet.  
 

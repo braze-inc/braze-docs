@@ -13,7 +13,7 @@ tool: Canvas
 Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kunden, die die klassische Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow.
 {% endalert %}
 
-> Wenn Sie ein bestehendes Canvas aus dem ursprünglichen Editor haben, können Sie dieses Canvas klonen, um eine Kopie in Canvas Flow zu erstellen. Wenn Sie zum Canvas Flow-Workflow wechseln, erhalten Sie Zugriff auf schlanke [Canvas-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) und die [Bearbeitung nach dem Start]({{site.baseurl}}/post-launch_edits). Ihr Original-Canvas wird nicht verändert oder gelöscht.
+> Wenn Sie ein bestehendes Canvas aus dem ursprünglichen Editor haben, können Sie dieses Canvas klonen, um eine Kopie in Canvas Flow zu erstellen. Wenn Sie zum Canvas Flow-Workflow wechseln, erhalten Sie Zugriff auf schlanke [Canvas-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) und die [Bearbeitung nach dem Start]({{site.baseurl}}/post-launch_edits). Ihr Original-Canvas wird nicht verändert oder gelöscht.
 
 Um Ihr Canvas zu klonen, gehen Sie wie folgt vor:
 

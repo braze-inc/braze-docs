@@ -49,7 +49,7 @@ If you select **Simple extension**, continue to the steps below.
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension named "Online Shoppers Extension - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days".][2]
 
 ### Step 3: Choose your criteria
 
@@ -57,7 +57,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
 
-![Segmentation criteria for users who performed a custom event, "# of aaa", more than 0 times in the date fage of August 1st, 2023 through August 10, 2023.][3]
+![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.][3]
 
 #### Event property segmentation
 
@@ -85,66 +85,11 @@ You don't need Segment Extensions to use event properties or nested custom attri
 
 ### Step 4: Designate refresh settings (optional)
 
-If you don't need your extension to refresh on a regular schedule, you can save it without using refresh settings, and Braze will default to generating your Segment Extension based on your user membership at that moment. Use the default behavior if you only want to generate the audience once and then target it with a one-off campaign.
-
-Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. This can help your recurring campaigns reach the most relevant users.
-
-#### Setting up a recurring refresh
-
-To set up a recurring schedule, select **Refresh Settings** in the upper right corner of your specific extension. The option to designate refresh settings is available for all types of Segment Extensions, including SQL segments, CDI segments, and simple form-based Segment Extensions.
-
-{% alert important %}
-To optimize your data management, refresh settings are automatically turned off for unused Segment Extensions. Segment Extension are considered unused when they're:
-
-- Not used in any active or inactive (draft, stopped, archived) campaigns, Canvases, or segments; or
-- Have not been modified in over 7 days
-
-Braze will notify the company contact and creator of the extension if this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
-{% endalert %}
-
-#### Selecting your refresh settings
-
-![Refresh Interval Settings with a weekly refresh frequency, start time of 10 am, and Monday selected as a day.][21]{: style="max-width:60%;"}
-
-Within the **Refresh Settings** panel, you can select the frequency at which this segment extension will refresh: hourly, daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
-
-- If you have an email campaign that is sent every Monday at 11 am company time, and you want to ensure your segment is refreshed right before it's sent, you should choose a refresh schedule of weekly at 10 am on Mondays.
-- If you’d like your segment to refresh every day, select the daily refresh frequency and then choose the time of day to refresh.
-
-{% alert note %}
-The ability to set an hourly refresh schedule isn't available for form-based Segment Extensions (but you can set daily, weekly, or monthly schedules). 
-{% endalert %}
-
-#### Credit consumption and additional costs
-
-Because refreshes re-run your segment’s query, each refresh for SQL segments will consume SQL segment credits, and each refresh for CDI segments will incur a cost within your third-party data warehouse.
-
-{% alert note %}
-Segments could require up to 60 minutes to refresh because of data processing times. Segments that are currently in the process of refreshing will have a “Processing” status within your Segment Extensions list. This has a couple of implications:
-
-- To finish processing your segment before a specific time, choose a refresh time that is 60 minutes earlier. 
-- Only one refresh can occur at a time for a specific Segment Extension. If there is a conflict where a new refresh is initiated when an existing refresh has already begun processing, Braze will cancel the new refresh request and continue the in-progress processing. 
-{% endalert %}
-
-#### Criteria to automatically disable stale extensions
-
-Scheduled refreshes are automatically disabled once a Segment Extension is stale. A Segment Extension is stale if it meets the following criteria:
-
-- Not used in any active campaigns or Canvases
-- Not used in any segment that is in an active campaign or Canvas
-- Not used in any segment that has [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) turned on
-- Hasn't been modified in over seven days
-- Hasn't been added to a campaign or Canvas (including drafts), or segment in over seven days
-
-If the scheduled refresh is disabled for a Segment Extension, that extension will have a notification that says so.
-
-![A notification stating that "Scheduled refreshes have been turned off for this extension because it's not used in any active campaigns, Canvases, or segments. The segment extension was disabled February 23, 2025 at 12:00 AM."][1]
-
-When you're ready to use a stale Segment Extension, [review the refresh settings](#step-4-designate-refresh-settings-optional), select the refresh schedule that matches your use case, and then save any modifications.
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ### Step 5: Save your Segment Extension
 
-Once you select **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
+After you select **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 
 While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
 
@@ -152,17 +97,17 @@ While your extension is processing, you will see a small animation next to the n
 
 ### Step 6: Use your extension in a segment
 
-Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
+After you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
 !["Filters" section with a filter dropdown showing "Braze Segment Extensions".][6]
 
 From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
 
-![A "Braze Segment Extensions" filter that includes a segment "Online Shoppers Ext...".][7]
+![A "Braze Segment Extensions" filter that includes a segment "1 email click in the last 56 days".][7]
 
-To view the extension criteria, select **View Extension Details** to show the details in a modal popup.
+To view the extension criteria, select **View Extension Details** to show the details in a new window.
 
-![Extension details for the "Online Shoppers Extension - 90 Days".][8]{: style="max-width:70%;"}
+![Extension for "1 email click in the last 56 days".][8]{: style="max-width:70%;"}
 
 Now you can proceed as usual with [creating your segment][11].
 

@@ -16,12 +16,12 @@ Learn more about how Braze collects data:
 
 - `braze_id`: A Braze-assigned identifier that is unchangeable and associated with a particular user when created within our database.
 - `external_id`: A customer-assigned identifier, typically a UUID. We recommend customers assign the `external_id` when the user can be uniquely identified. After a user is identified, they cannot be reverted to anonymous.
-- `user_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through Braze’s [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+- `user_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through the Braze [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
     - Within the [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint the `merge_behavior` field can be used to specify what data from the user alias profile should persist on the known user profile.
     - Note that for the user alias to be a sendable profile, you must still include email and/or phone as a standard attribute on the profile.
 - `device_id`: An automatically generated, device-specific identifier. A user profile can have a number of `device_ids` associated with it. For example, a user who has logged in to their account on their work computer, home computer, tablet, and iOS app would have 4 `device_ids` associated with their profile.
 - Email Address & Phone Number:
-    - Supported as an identifier in Braze’s track user endpoint. 
+    - Supported as an identifier in the Braze track user endpoint. 
     - When using the email address or phone numbers as the identifier within a request, there are three possible outcomes:
         1. If a user with this email/phone does not exist within Braze, an email-only/phone-only user profile will be created, and any data in the request will be added to the profile.
         2. If a profile with this email/phone already exists within Braze, it will be updated to include any data sent within the request.
@@ -110,7 +110,7 @@ This functionality is currently in early access.
 ## Sending audiences of users to Braze
 
 [Cohort import sync partner documentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Audiences of users can be synced to Braze as a cohort using Braze’s Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
 - Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s workspace rate limits. 
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -125,7 +125,7 @@ This functionality is currently in early access.
 
 ### Currents
 
-Currents are Braze's near real-time message engagement analytics streaming tool. This will stream user-level data on all sends, deliveries, opens, clicks, etc., for campaigns and Canvases sent from the customer's workspace. A couple of things to note: Currents are priced per connector for the customer, so all-new Currents Partners must go through an EA process. We ask that our Partners have five customers as part of the EA before we build the custom-branded UI and publicly make the connector available. 
+Currents are a near real-time message engagement analytics streaming tool in Braze. This will stream user-level data on all sends, deliveries, opens, clicks, etc., for campaigns and Canvases sent from the customer's workspace. A couple of things to note: Currents are priced per connector for the customer, so all-new Currents Partners must go through an EA process. We ask that our Partners have five customers as part of the EA before we build the custom-branded UI and publicly make the connector available. 
 - [Partner documentation]({{site.baseurl}}/partners/isv_partners/currents_integration/)
 - [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) - all customers who purchase a Currents connector will have access to these events.
 - [User Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) - not all customers who purchase a Current connector will purchase an "all events" connector that will include these events. 
@@ -162,7 +162,7 @@ When creating API campaigns (different from the API-triggered campaigns referenc
 - [Schedule an API campaign]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
 
 ### Send IDs
-Use Braze's endpoint to generate a send ID which can be used to break down campaign analytics by send. For example, if a `campaign_id` (API campaign) is created per location, a send ID could be generated per send to track how well different messaging is performing for a particular location. 
+Use the Braze endpoint to generate a send ID which can be used to break down campaign analytics by send. For example, if a `campaign_id` (API campaign) is created per location, a send ID could be generated per send to track how well different messaging is performing for a particular location. 
 - [Send IDs]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)
 
 ## Connected Content

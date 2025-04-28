@@ -64,14 +64,14 @@ Und schließlich müssen Sie Ihre nachgelagerten Pfade erstellen. Wählen Sie **
 Denken Sie daran, dass Pfade und ihre nachgelagerten Schritte nicht mehr aus einem Canvas entfernt werden können, nachdem sie erstellt wurden. Nach dem Start können Sie jedoch die Verteilung der Zielgruppe auf die Pfade nach Belieben ändern. Wenn Sie beispielsweise einen Tag nach dem Start eines Canvas zu dem Schluss kommen, dass ein Pfad aufgrund der Analysen besser ist als die anderen, können Sie diesen Pfad auf 100 % und die anderen auf 0 % festlegen. Je nach Bedarf können Sie die Nutzer:innen auch weiterhin auf mehrere Pfade schicken.
 
 {% alert note %}
-Experimentpfade können nicht mehr bearbeitet werden, nachdem ein Canvas gestartet wurde. Wenn Sie die Nachricht während des Versands Ihres Experiments bearbeiten, wird der Test unbrauchbar und alle Ergebnisse des Experiments werden entfernt. Sie können auch keine personalisierten Pfade oder Gewinnerpfade für eine bereits aktive Leinwand mit einem Experimentierpfadschritt aktivieren.<br><br> Weitere Informationen finden Sie unter [Bearbeiten von Leinwänden nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Experimentpfade können nicht mehr bearbeitet werden, nachdem ein Canvas gestartet wurde. Wenn Sie die Nachricht während des Versands Ihres Experiments bearbeiten, wird der Test unbrauchbar und alle Ergebnisse des Experiments werden entfernt. Sie können auch keine personalisierten Pfade oder Gewinnerpfade für eine bereits aktive Leinwand mit einem Experimentierpfadschritt aktivieren.<br><br> Weitere Informationen finden Sie unter [Bearbeiten von Leinwänden nach dem Start]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Leistung nachverfolgen
 
 Klicken Sie auf der Seite **Canvas Analytics** auf den Experimentierpfad, um eine [detaillierte Tabelle]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) zu öffnen, die mit der Registerkarte **Varianten analysieren** identisch ist, um detaillierte Leistungs- und Konversionsstatistiken für verschiedene Pfade zu vergleichen. Sie können die Tabelle auch als CSV-Datei exportieren und die prozentualen Änderungen für Metriken von Interesse im Verhältnis zu dem von Ihnen ausgewählten Pfad oder der Kontrolle vergleichen.
 
-Jeder Schritt in jedem Pfad zeigt Statistiken in der [Canvas-Analytics-Ansicht]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) an, genau wie jeder andere Canvas-Schritt. Beachten Sie jedoch, dass die Analysen der einzelnen Schritte die Struktur des Experiments **nicht** berücksichtigen. Die Analysen im Schritt Experiment sollten zum Vergleich der verschiedenen Pfade verwendet werden.
+Jeder Schritt in jedem Pfad zeigt Statistiken in der [Canvas-Analytics-Ansicht]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) an, genau wie jeder andere Canvas-Schritt. Beachten Sie jedoch, dass die Analysen der einzelnen Schritte die Struktur des Experiments **nicht** berücksichtigen. Die Analysen im Schritt Experiment sollten zum Vergleich der verschiedenen Pfade verwendet werden.
 
 ### Performance des Gewinnerpfad und der personalisierten Pfade
 

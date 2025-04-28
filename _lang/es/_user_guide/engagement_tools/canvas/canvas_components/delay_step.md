@@ -24,6 +24,30 @@ Hay varios detalles que debes tener en cuenta al crear un retraso en tu recorrid
 - El límite de retraso es de 30 días.
 - Un componente de retardo sólo puede conectarse a un paso siguiente.
 
+### Retrasos personalizados
+
+{% alert important %}
+Los retrasos personalizados y los retrasos ampliados están en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+{% endalert %}
+
+Selecciona el alternador **Personalizar retraso** para establecer un retraso personalizado para tus usuarios. Puedes utilizarlo con un [paso Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para seleccionar la variable contextual por la que retrasar.
+
+Supongamos que queremos recordar a nuestros clientes que compren pasta de dientes dentro de 30 días. Utilizando una combinación de un paso Contexto y un paso Retraso, podemos seleccionar esta variable de contexto para retrasarla. En este caso, nuestro paso Contexto tendría los siguientes campos:
+
+- **Nombre de la variable contextual:** intervalo_recordatorio_producto
+- **Tipo de datos:** Tiempo
+- **Valor:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![El "intervalo_recordatorio_producto" y su valor.][2]
+
+A continuación, como queremos recordárselo a nuestros clientes dentro de 30 días, seleccionaremos **Hasta un día concreto** como opción de retraso y seleccionaremos **Personalizar retraso** para utilizar la información de nuestro paso Contexto. Esto significa que nuestros usuarios se retrasarán hasta la variable Contexto seleccionada.
+
+![Ejemplo de uso de variables de contexto con un paso de Retraso para retrasar a los usuarios en función del "intervalo_recordatorio_producto".][3]
+
+#### Retrasos prolongados
+
+Ahora puedes prolongar los pasos de Retraso hasta dos años. Por ejemplo, si estás incorporando nuevos usuarios a tu aplicación, puedes añadir un retraso de dos meses antes de enviar un paso de Mensaje para animar a los usuarios que no han iniciado una sesión.
+
 ### Opciones de temporización
 
 Puedes elegir el tipo de retraso antes del siguiente mensaje en tu Canvas. Puedes establecer un retraso para que tus usuarios duren hasta después de un periodo de tiempo designado, o retrasar a tus usuarios hasta una fecha y hora específicas.
@@ -85,3 +109,5 @@ Los retrasos tienen tres estadísticas disponibles en la vista de análisis de u
 Las series temporales de estos análisis están disponibles en la vista ampliada de componentes.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}

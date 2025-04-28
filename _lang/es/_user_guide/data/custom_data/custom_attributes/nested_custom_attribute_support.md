@@ -122,6 +122,10 @@ Para eliminar un objeto de atributo personalizado, envíe un POST a `users/track
 }
 ```
 
+{% alert note %}
+Este método no puede utilizarse para eliminar una clave anidada dentro de una [matriz de objetos]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -441,7 +445,7 @@ Si los datos no aparecen como se esperaba tras regenerar el esquema, puede que e
 
 ## Puntos de datos
 
-Cualquier clave que se actualice consume un punto de datos. Por ejemplo, este objeto inicializado en el perfil de usuario cuenta como siete (7) puntos de datos:
+Cualquier clave que se envíe consume un punto de datos. Por ejemplo, este objeto inicializado en el perfil de usuario cuenta como siete (7) puntos de datos:
 
 ```json
 {

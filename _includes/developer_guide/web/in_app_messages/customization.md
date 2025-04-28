@@ -2,7 +2,7 @@
 
 ## Custom styles
 
-Braze UI elements come with a default look and feel that create a neutral in-app message experience and aim for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. 
+Braze UI elements come with a default look and feel that create a neutral in-app message experience and aim for consistency with other Braze mobile platforms. The default Braze styles are defined in CSS within the Braze SDK. 
 
 ### Setting a default style
 

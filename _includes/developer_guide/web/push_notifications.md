@@ -4,7 +4,7 @@
 
 ## Push protocols
 
-Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support. For more information on specific push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications") [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility") and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API").
+Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support. For more information on specific push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/) [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility) and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/).
 
 ## Setting up push notifications
 
@@ -20,7 +20,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 ### Step 2: Register the browser
 
-To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if if push is supported in their browser first, call `braze.isPushSupported()`.
+To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if push is supported in their browser first, call `braze.isPushSupported()`.
 
 You can also [send a soft push prompt]({{site.baseurl}}/developer_guide/push_notifications/soft_push_prompts/?sdktab=web) to the user before requesting push permission to show your own push-related UI.
 
@@ -34,7 +34,7 @@ The Braze service worker file will automatically call `skipWaiting` upon install
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-## Unsubscribingn a user
+## Unsubscribing a user
 
 To unsubscribe a user, call `braze.unregisterPush()`.
 
@@ -48,7 +48,7 @@ To integrate web push, your domain must be [secure](https://w3c.github.io/webapp
 
 ### Use cases
 
-If you can't meet all of the criteria outlined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations), you can use this method to add a push prompt dialog to your website instead. This can be helpful if you want to let your users opt-in from an `http` website or a browser extension popup thats preventing your push prompt from displaying.
+If you can't meet all of the criteria outlined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations), you can use this method to add a push prompt dialog to your website instead. This can be helpful if you want to let your users opt-in from an `http` website or a browser extension popup that's preventing your push prompt from displaying.
 
 ### Considerations
 

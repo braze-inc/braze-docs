@@ -189,11 +189,11 @@
 	      content += "...";
 	    }
 	    var url = hit.url;
-	    if (heading){
-	      url += '#' + string_to_slug(heading);
+	    if (hit.anchor){
+	      url += '#' + hit.anchor;
 	    }
 	    var snippet = hit?._highlightResult?.html?.value || '';
-		
+
 	    return `<div class="hit">
 			<a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} >
 				<div class="hit-content">

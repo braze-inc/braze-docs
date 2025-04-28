@@ -71,7 +71,7 @@ In the following example, the feature flag shows an out-of-stock banner for an e
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-There is no limit to the number of properties you can add. However, a feature flag's properties are limited to a total of 10kB. Both property values and keys are limited to 255 characters in length.
+There is no limit to the number of properties you can add. However, a feature flag's properties are limited to a total of 10 KB. Both property values and keys are limited to 255 characters in length.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

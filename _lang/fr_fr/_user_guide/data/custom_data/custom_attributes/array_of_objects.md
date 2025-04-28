@@ -94,6 +94,8 @@ Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’ex
 
 Mettez à jour les valeurs pour des objets spécifiques dans un tableau en utilisant le paramètre `_merge_objects` et l’opérateur `$update`. Cela effectue une fusion profonde (deep merge) comme pour les mises à jour d’objets d’[attributs personnalisés imbriqués]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples.
 
+Notez que `$update` ne peut pas être utilisé pour supprimer une propriété imbriquée d'un objet à l'intérieur d'un tableau. Pour ce faire, vous devez supprimer l'élément entier du tableau, puis ajouter l'objet sans cette clé spécifique (en utilisant une combinaison de `$remove` et `$add`).
+
 L’exemple suivant montre la mise à jour de propriété `breed` sur `goldfish` pour l’objet avec un `id` de `4`. Cet exemple de requête met également à jour l’objet avec `id` égal à `5` et un nouveau `name` de `Annette`. Comme le paramètre `_merge_objects` est défini sur `true`, tous les autres champs de ces deux objets restent les mêmes.
 
 ```json

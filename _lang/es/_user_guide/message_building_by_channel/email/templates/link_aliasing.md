@@ -218,9 +218,9 @@ Cuando se inserta un Content Block sin valor `lid` en un mensaje nuevo, los enla
 Para los Bloques de contenido, Braze recomienda crear copias de los Bloques de contenido existentes para utilizarlos en los nuevos mensajes. Esto se puede hacer mediante la duplicación masiva para evitar situaciones en las que podría hacer referencia a un Bloque de Contenido que no ha sido habilitado para el alias de enlace en un nuevo mensaje.
 {% endalert %}
 
-## Alias de enlaces para URL generadas mediante Liquid
+## aliasing de enlaces para URL generadas por Liquid
 
-Para las URL generadas por una sentencia `assign` en el HTML o en un Content Block, recomendamos añadir un signo de interrogación (?) en la etiqueta anchor. Esto ayudará a Braze a añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL.
+Para las URL generadas por una declaración `assign` en el HTML o en un bloque de contenido, debes añadir un signo de interrogación (`?`) a la etiqueta de anclaje. Esto permite a Braze añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL y no se aplicarán las plantillas de enlaces.
 
 ### Ejemplo
 

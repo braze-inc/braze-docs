@@ -18,11 +18,17 @@ description: "Cet article propose un aperçu du Timing Intelligent (appelé aupa
 
 ## Fonctionnement
 
-Braze calcule l’heure d’envoi optimale en fonction d’une analyse statistique des dernières interactions de votre utilisateur avec votre application ainsi que leurs interactions avec chaque canal de communication.
+Braze calcule l’heure d’envoi optimale en fonction d’une analyse statistique des dernières interactions de votre utilisateur avec votre application ainsi que leurs interactions avec chaque canal de communication. Les données d'interaction suivantes sont utilisées : 
+
+- Horaires des sessions
+- Ouverture directe par poussée
+- Ouvertures influencées de notification push
+- Clics des e-mails
+- Ouvertures d'e-mail (à l'exclusion des [ouvertures de machines)]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens)
 
 Par exemple, Sam peut ouvrir régulièrement vos e-mails le matin, mais elle préfère ouvrir votre application et interagir avec les notifications en soirée. Ceci veut dire que Sam recevrait une campagne e-mail avec un timing intelligent le matin, alors qu’elle recevrait les campagnes avec notifications push ou messages in-app en soirée, quand elle a plus de chance d’interagir.
 
-Si un utilisateur ne dispose pas de suffisamment de données d'engagement pour que Braze calcule l'heure d'envoi optimale, vous pouvez spécifier une [heure de repli](#fallback-time). De plus, les ouvertures automatiques sont exclues de la prise en compte dans le but de calculer un temps optimal.
+Si un utilisateur ne dispose pas de suffisamment de données d'engagement pour que Braze calcule l'heure d'envoi optimale, vous pouvez spécifier une [heure de repli](#fallback-time).
 
 ## Utiliser le Timing Intelligent
 
@@ -90,7 +96,7 @@ Apprenez-en plus sur [le moment où Braze vérifie les critères d'éligibilité
 
 ##### Tests A/B avec des optimisations
 
-Si vous tirez parti des [tests A/B avec une optimisation]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), par exemple en envoyant automatiquement la variante gagnante une fois le test A/B terminé, la durée de la campagne augmentera. Par défaut, les campagnes de timing intelligent envoient la variante gagnante aux utilisateurs restants le lendemain du test initial, mais vous pouvez modifier cette date d'envoi.
+Si vous tirez parti des [tests A/B avec une optimisation]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), par exemple en envoyant automatiquement la variante gagnante une fois le test A/B terminé, la durée de la campagne augmentera. Par défaut, les campagnes de timing intelligent envoient la variante gagnante aux utilisateurs restants le lendemain du test initial, mais vous pouvez modifier cette date d'envoi.
 
 Si vous utilisez à la fois le timing intelligent et les tests A/B, nous vous recommandons de planifier l'envoi de la variante gagnante deux jours après le test initial au lieu d'un jour.
 
@@ -195,7 +201,7 @@ Braze a besoin d’un certain nombre de données d’engagement pour réaliser u
 
 ### Envoyer au-delà de la date planifiée
 
-Il se peut que votre campagne de timing intelligent soit envoyée après la date prévue si vous utilisez des [tests A/B avec une optimisation.]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) Les campagnes utilisant les optimisations des tests A/B peuvent envoyer automatiquement la variante gagnante une fois le test initial terminé, ce qui augmente la durée de la campagne. Par défaut, les campagnes avec optimisation enverront la variante gagnante aux utilisateurs restants le lendemain du test initial, mais vous pouvez modifier cette date d'envoi.
+Il se peut que votre campagne de timing intelligent soit envoyée après la date prévue si vous utilisez des [tests A/B avec une optimisation.]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) Les campagnes utilisant les optimisations des tests A/B peuvent envoyer automatiquement la variante gagnante une fois le test initial terminé, ce qui augmente la durée de la campagne. Par défaut, les campagnes avec optimisation enverront la variante gagnante aux utilisateurs restants le lendemain du test initial, mais vous pouvez modifier cette date d'envoi.
 
 Si vous utilisez le timing intelligent, nous vous recommandons de laisser plus de temps pour que le test A/B se termine et de planifier l'envoi de la variante gagnante 2 jours après le test initial au lieu d'un jour.
 

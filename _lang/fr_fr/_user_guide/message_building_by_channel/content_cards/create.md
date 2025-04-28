@@ -31,8 +31,8 @@ Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous tro
 {:start="2"}
 2\. Sélectionnez **Cartes de contenu** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
 3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire.
-   * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer par les étiquettes pertinentes.
+4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
+   * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer par les étiquettes pertinentes.
 5. Ajoutez et nommez autant de variantes que vous le souhaitez pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour en savoir plus sur les variantes, reportez-vous au [test multivarié et au test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -81,6 +81,10 @@ Sélectionnez **Ajouter des langues** pour ajouter les langues de votre choix da
 
 ![Une fenêtre avec l'anglais, l'espagnol et le français sélectionnés pour les langues, et le titre, la description et le texte du lien sélectionnés pour les champs à internationaliser.][2]{: style="max-width:70%;"}
 
+##### Création d'envois de messages de droite à gauche
+
+L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)
+
 #### Titre et message
 
 Écrivez ce que vous voulez. Il n'y a pas de limites, mais plus vite vous pouvez faire passer votre message et faire cliquer votre client, mieux c'est ! Nous recommandons d’utiliser du contenu et des titres clairs et concis dans vos messages. Notez que ces champs ne sont pas fournis pour les cartes à image seule.
@@ -105,8 +109,8 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 |---|---|
 | Rediriger vers une URL Web | Ouvrir une page Web non native. |
 | [Lien profond dans l'application]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Lien profond vers un écran existant de votre appli. |
-| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) à déclencher. Peut être utilisé pour afficher une autre carte de contenu ou déclencher des envois de messages supplémentaires. |
-| Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) à définir pour l'utilisateur actuel. |
+| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) à déclencher. Peut être utilisé pour afficher une autre carte de contenu ou déclencher des envois de messages supplémentaires. |
+| Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) à définir pour l'utilisateur actuel. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Remarque** : Les options __Log Custom Event__ et __Log Custom Attribute__ requièrent la compatibilité avec la version suivante du SDK :
@@ -212,8 +216,10 @@ Vous pouvez spécifier plusieurs événements personnalisés ou achats avant qu�
 Les cartes de contenu ne peuvent pas être modifiées après leur envoi. Si vous constatez que vous devez apporter des modifications à des cartes déjà envoyées, envisagez de recourir à la [réadmissibilité de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/), comme indiqué dans les options suivantes.
 
 {% alert note %}
-Les cartes de contenu utilisant l’option [À la première impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilisent l'heure d'impression pour calculer la rééligibilité. En revanche, tous les autres types de cartes de contenu utilisent l'heure d'envoi ou l'heure d'impression la plus tardive.
+Lorsqu'une carte de contenu devient rééligible, elle peut être envoyée à nouveau lorsque la carte originale se trouve encore dans l'appli d'un utilisateur. Pour éviter les cartes en double dans l'application d'un utilisateur, vous pouvez désactiver la rééligibilité ou prolonger la fenêtre de rééligibilité de sorte que les utilisateurs ne reçoivent pas de nouvelle carte tant que la première n'a pas expiré.
 {% endalert %}
+
+Notez également que les cartes de contenu utilisant la [première impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilisent le temps d'impression pour calculer la réadmissibilité. Toutefois, les cartes de contenu créées au moment du lancement de la campagne ou de l'étape du canvas utilisent l'heure d'envoi ou d'impression la plus tardive.
 
 #### Option 1 : Duplication de la campagne
 

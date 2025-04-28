@@ -43,6 +43,6 @@ Tealium URL を最新の状態に保つことが重要です。コネクタのUR
 
 ## 統合の詳細
 
-Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) を Tealium にエクスポートできます。
+Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) を Tealium にエクスポートできます。
 
 エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。

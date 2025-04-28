@@ -114,7 +114,7 @@ Esta seção aborda as três maneiras mais comuns de colocar cartões de conteú
 - [Carrossel](#carousel)
 - [Banner](#banner)
 
-A lógica e a implementação desses posicionamentos não são padrão no Braze, portanto, sua equipe de engenharia deve fornecer e apoiar o trabalho para alcançar esses casos de uso. Para obter uma visão geral sobre como implementar esses posicionamentos, consulte [Criação de cartão de conteúdo personalizado]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+A lógica e a implementação desses posicionamentos não são padrão no Braze, portanto, sua equipe de engenharia deve fornecer e apoiar o trabalho para alcançar esses casos de uso. Para obter uma visão geral sobre como implementar esses posicionamentos, consulte [Criação de cartão de conteúdo personalizado]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
 
 ![3 exemplos de cartões de conteúdo de conteúdo, mostrando as diferentes opções de posicionamento: caixa de entrada de mensagens, carrossel e banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -176,7 +176,7 @@ Os usuários podem visualizar e interagir com o conteúdo mais relevante para o 
 
 Seus desenvolvedores irão integrar os Cartões de Conteúdo quando integrarem o SDK da Braze. Para mais detalhes sobre como integrar com os cartões de conteúdo, consulte os artigos do guia do desenvolvedor para sua plataforma:
 
-- []({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "Guia de Integração de Cartão de Conteúdo do iOS")
+- []({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guia de Integração de Cartão de Conteúdo do iOS")
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guia de Integração do Cartão de Conteúdo do Android")
 - []({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guia de Integração de Cartão de Conteúdo da Web")
 

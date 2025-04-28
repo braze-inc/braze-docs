@@ -22,7 +22,7 @@ guide_featured_list:
   link: /docs/user_guide/brazeai/generative_ai/ai_liquid/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: SQL 쿼리 빌더
-  link: /docs/user_guide/data_and_analytics/query_builder/
+  link: /docs/user_guide/analytics/query_builder/
   image: /assets/img/braze_icons/tool-01.svg
 - name: SQL 세그먼트
   link: /docs/sql_segments/

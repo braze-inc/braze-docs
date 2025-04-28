@@ -2,10 +2,6 @@
 
 Integrating the React Native Braze SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
-## Sample app
-
-To see a React Native app running the Braze SDK, checkout [our sample app on GitHub](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). For usage examples of the Braze Expo plugin, checkout [our Expo sample on GitHub](https://github.com/braze-inc/braze-expo-plugin/tree/main/example).
-
 ## New Architecture compatibility
 
 The following minimum SDK version is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page):
@@ -15,7 +11,7 @@ The following minimum SDK version is compatible with all apps using [React Nativ
 Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which is compatible with both the New Architecture and legacy bridge architecture&#8212;meaning no additional setup is required.
 
 {% alert warning %}
-If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
+If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#reactnative_step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
 {% endalert %}
 
 ## Integrating the React Native SDK

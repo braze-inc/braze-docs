@@ -18,8 +18,8 @@ The WhatsApp embedded signup workflow is accessed when you first [integrate What
 
 Go to **Partner Integrations** > **Technology Partners**, then search for and select **WhatsApp**. Your next selection depends on your use case:
 
-- If you're integrating WhatsApp into your workspace, select **Begin Integration**. <br><br>![][10]{: style="max-width:80%;"}<br><br>
-- If you're adding a WhatsApp Business account to an existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>![][11]{: style="max-width:80%;"}
+- If you're integrating WhatsApp into your workspace, select **Begin Integration**. <br><br>![WhatsApp partner page with a button to begin the integration.][10]{: style="max-width:80%;"}<br><br>
+- If you're adding a WhatsApp Business account to an existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>!["WhatsApp Messaging Integration" with options to add a WhatsApp Business Account or a subscription group and number.][11]{: style="max-width:80%;"}
 
 The workflow from here is the same for both use cases.
 

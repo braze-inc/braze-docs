@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Nachrichten-Feed-Karte Details exportieren"
-article_title: "GET: Nachrichten-Feed-Karte Details exportieren"
+nav_title: "GET: Newsfeed-Kartendetails exportieren"
+article_title: "GET: Newsfeed-Kartendetails exportieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Export News Feed card details Braze Endpunkts."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export Newsfeed-Karte Details Braze."
 
 ---
 {% api %}
-# Details der News Feed Karte exportieren
+# Newsfeed-Kartendetails exportieren
 {% apimethod get %}
 /feed/details
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um relevante Informationen über eine Karte abzurufen, die durch die `card_id` identifiziert werden kann.
+> Verwenden Sie diesen Endpunkt, um relevante Informationen über eine Karte abzurufen, die durch den Bezeichner `card_id` identifiziert werden kann.
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
@@ -24,15 +24,15 @@ description: "Dieser Artikel beschreibt die Details des Export News Feed card de
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `feed.details`.
 
-## Preisgrenze
+## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpunkt='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` | Erforderlich | String | Siehe [Karten-API-Kennung]({{site.baseurl}}/api/identifier_types/). <br><br> Die `card_id` für eine bestimmte Karte finden Sie auf der Seite mit [den API-Schlüsseln]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite mit den Kartendetails in Ihrem Dashboard, oder Sie können den [Endpunkt Exportieren der News Feed-Kartenliste]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) verwenden.|
+| `card_id` | Erforderlich | String | Siehe [Bezeichner der Karten-API]({{site.baseurl}}/api/identifier_types/). <br><br> Die `card_id` für eine bestimmte Karte finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite mit den Kartendetails in Ihrem Dashboard, oder Sie können den [Endpunkt Liste der Newsfeed-Karten exportieren]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) verwenden.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -13,7 +13,7 @@ tool: Canvas
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
   - name: Editar lienzos después del lanzamiento
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+    link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Aprobaciones y permisos de Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/

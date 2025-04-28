@@ -43,14 +43,14 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 | 方法 | 説明 |
 | --- | --- |
 | [カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | これらは、Braze のプライマリユーザプロファイルの独立したデータオブジェクト (補足データオブジェクト) です。B2B のコンテキストでは、アカウントと案件のカタログがある可能性があります。 |
-| [接続されたソース]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | これにより、Braze はデータウェアハウスに直接クエリを実行できます。すでにリード、連絡先、案件、アカウントの各オブジェクトをデータウェアハウスと定期的に同期している可能性があるため、Braze セグメンテーションをそのウェアハウスに直接ポイントし、ゼロコピー環境で有効化することができます。 |
+| [接続されたソース]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | これにより、Braze はデータウェアハウスに直接クエリを実行できます。すでにリード、連絡先、案件、アカウントの各オブジェクトをデータウェアハウスと定期的に同期している可能性があるため、Braze セグメンテーションをそのウェアハウスに直接ポイントし、ゼロコピー環境で有効化することができます。 |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### オプション 1: アカウントと案件のカタログを使用する
 
 カタログは、Braze でホストおよび管理されるデータテーブルです。アカウントデータと案件データは、使用している営業用 CRM システムから作成されますが、Braze でこれらのデータを複製して、マーケティング目的 (アカウントベースのセグメント化、アカウントベースのマーケティング、リード管理など) で使用できます。
 
-このオプションでは、アカウントと商談のカタログを1 つ作成し、[catalogs API]({{site.baseurl}}/api/endpoints/catalogs/) または[catalogs Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/) を通じてBraze の更新を送信することで、頻繁に更新することをお勧めします。これらのカタログを作成するときは、カタログの`id`(最初の列)が販売用CRMシステムの`id`と一致していることを確認してください。
+このオプションでは、アカウントと商談のカタログを1 つ作成し、[catalogs API]({{site.baseurl}}/api/endpoints/catalogs/) または[catalogs Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/) を通じてBraze の更新を送信することで、頻繁に更新することをお勧めします。これらのカタログを作成するときは、カタログの`id`(最初の列)が販売用CRMシステムの`id`と一致していることを確認してください。
 
 #### CRM フィールドにマップする
 
@@ -145,7 +145,7 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ## ステップ2:ビジネス・オブジェクトをユーザー・プロファイルに関連付ける
 
-ユーザープロファイルは、Braze の主要なオブジェクトです。ユーザー層のセグメンテーション、トリガー、パーソナライゼーションの大部分の処理に使用されます。ユーザープロファイルには、SDK によって収集された[デフォルトのユーザーデータ]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) と、[カスタムデータ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/) が含まれます。これらのデータは、属性(人口統計データ)、イベント(行動データ)、購入(トランザクションデータ) のいずれかの形式になります。
+ユーザープロファイルは、Braze の主要なオブジェクトです。ユーザー層のセグメンテーション、トリガー、パーソナライゼーションの大部分の処理に使用されます。ユーザープロファイルには、SDK によって収集された[デフォルトのユーザーデータ]({{site.baseurl}}/user_guide/data/user_data_collection/) と、[カスタムデータ]({{site.baseurl}}/user_guide/data/custom_data/) が含まれます。これらのデータは、属性(人口統計データ)、イベント(行動データ)、購入(トランザクションデータ) のいずれかの形式になります。
 
 ### ステップ 2.1:営業用 CRM の ID を Braze にマッピングする
 

@@ -25,7 +25,7 @@ tool:
 1. **Messaging**> **Campaigns**に進み、**Create Campaign**を選択します。
 2. 複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel** を選択します。それ以外の場合は、**プッシュ通知**を選択します。それでもわからない場合は、以下の**正規またはマルチチャネルのプッシュキャンペーン**の決定を参照してください。
 3. キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。**ヒント:**タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。**ヒント:**タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% details 通常キャンペーンかマルチチャネルプッシュキャンペーンかを決める %}
@@ -101,11 +101,13 @@ tool:
 
 #### 通知チャンネルまたはグループ（iOSおよびAndroid）
 
-プラットフォーム固有の通知オプションの詳細については、[iOS通知オプション]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/)または[Android通知]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/)オプションを参照のこと。
+プラットフォーム固有の通知オプションの詳細については、[iOS通知オプション]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/)または[Android通知]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/)オプションを参照のこと。
 
 #### 言語
 
 **Add Languages**ボタンを使って複数の言語でコピーを追加する。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語][18]を参照してください。
+
+右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 #### タイトルと本文
 
@@ -122,13 +124,13 @@ tool:
 プッシュをパーソナライズされターゲットを絞ったものにするには、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) を含めることができます。
 
 {% alert important %}
-Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1 つしか含まれていない場合、メッセージはサイレントプッシュ通知として送信されることに注意してください。詳細については、[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/)を参照してください。
+Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1 つしか含まれていない場合、メッセージはサイレントプッシュ通知として送信されることに注意してください。詳細については、[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android)を参照してください。
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![プッシュ作成画面の本文フィールドにある「AI コピーライターを起動」ボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -218,7 +220,7 @@ iOS の場合、iPad デバイスにのみプッシュ通知を送信したり�
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 

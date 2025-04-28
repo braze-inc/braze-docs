@@ -85,7 +85,7 @@ Para identificar sus centros de preferencias, utilice el [punto final Ver detall
 
 ## Personalización
 
-Braze gestiona las actualizaciones del estado de suscripción desde el centro de preferencias, lo que lo mantiene sincronizado. Sin embargo, también puede crear y alojar su propio centro de preferencias utilizando [las API de grupos de suscripción]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) con las siguientes opciones.
+Braze gestiona las actualizaciones del estado de suscripción desde el centro de preferencias, lo que lo mantiene sincronizado. Sin embargo, también puede crear y alojar su propio centro de preferencias utilizando [las API de grupos de suscripción]({{site.baseurl}}/api/endpoints/subscription_groups/) con las siguientes opciones.
 
 ### Opción 1: Enlace con parámetros de consulta de cadena
 

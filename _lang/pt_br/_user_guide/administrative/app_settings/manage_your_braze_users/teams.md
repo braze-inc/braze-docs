@@ -15,6 +15,10 @@ As equipes podem ser configuradas de acordo com o local, o idioma e os atributos
 
 As equipes não estão disponíveis em todos os contratos Braze. Se quiser acessar esse recurso, entre em contato com o gerente da sua conta Braze ou [entre em contato conosco](mailto:success@braze.com) para uma consulta.
 
+## Como as equipes diferem dos conjuntos de permissões e funções?
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Criação de equipes
 
 Acesse **Configurações** > **Equipes internas** ) e selecione <i class="fas fa-plus"></i> ** Adicionar equipe**.
@@ -130,10 +134,6 @@ Selecione uma ou várias equipes para arquivar. Se a equipe não estiver associa
 ![Arquivamento de uma equipe associada a um objeto no Braze][86]{: style="max-width:70%;"}
 
 Os administradores do Braze podem desarquivar uma equipe selecionando a equipe arquivada e selecionando **Desarquivar**.
-
-## Como as equipes diferem dos conjuntos de permissões e funções?
-
-Consulte [Usuários da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) para uma análise das diferenças entre equipes, conjuntos de permissões e funções.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

@@ -27,7 +27,7 @@ description: "이 문서에서는 Braze 탐색 기능의 변경 사항을 설명
 
 ## 다음에 기대할 수 있는 사항
 
-**2025년 1월까지**는 새 내비게이션과 이전 내비게이션을 계속 전환할 수 있습니다.
+You will still be able to switch back and forth between the new and old navigation until **March 2025**.
 
 ## 변경된 사항
 

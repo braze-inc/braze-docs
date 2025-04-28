@@ -34,9 +34,9 @@ description: "このページでは、魅力的なアクションプランを使
 
 ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、オンボーディングフローの外観と感触をカスタマイズします。
 
-## 結果を分析する
+## 結果の分析
 
-{% multi_lang_include drag_and_drop/templates.md section='レポート' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 [img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 

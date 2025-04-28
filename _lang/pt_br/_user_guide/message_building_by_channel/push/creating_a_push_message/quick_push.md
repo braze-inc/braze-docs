@@ -1,38 +1,38 @@
 ---
-nav_title: Campanhas push rápidas
-article_title: Campanhas push rápidas
+nav_title: Mensagens de Push Rápidas
+article_title: Mensagens de Push Rápidas
 alias: "/quick_push/"
-description: "Este artigo descreve o que você deve saber ao criar uma campanha push usando a experiência de edição rápida de push."
+description: "Este artigo descreve coisas a saber ao criar uma campanha de push ou Canvas usando a experiência de edição rápida de push."
 ---
 
-# Campanhas push rápidas
+# Mensagens de push rápidas
 
-Ao criar uma campanha de mensagens push no Braze, você pode selecionar várias plataformas e dispositivos para criar uma mensagem para todas as plataformas em uma única experiência de edição chamada quick push.
-
-{% alert important %}
-Essa funcionalidade está disponível apenas para campanhas.
-{% endalert %}
+Ao criar uma campanha de push ou Canvas no Braze, você pode selecionar várias plataformas e dispositivos para criar uma mensagem para todas as plataformas em uma única experiência de edição chamada push rápido.
 
 ## Casos de uso
 
 Essa experiência de edição é melhor para os seguintes casos de uso:
 
-- Campanhas push para celular que precisam ser enviadas para vários tipos de dispositivos (como iOS e Android).
+- Campanhas de push móvel e etapas de mensagem do Canvas que precisam ser enviadas para vários tipos de dispositivos (como iOS e Android).
 - Notificações por push sensíveis ao tempo que precisam ser direcionadas a várias plataformas de forma rápida e precisa, onde o conteúdo é o mesmo em todas as plataformas (como notícias de última hora ou atualizações de jogos ao vivo).
 
-## Criação de uma campanha push rápida
+## Criando uma campanha de push rápida ou Canvas
 
 Para criar uma campanha com direcionamento para várias plataformas e dispositivos:
 
-1. Acesse **Campaigns (Campanhas** ) e clique em **Create Campaign (Criar campanha**).
-2. Selecione **Notificações por push**.
+1. Crie uma campanha ou adicione uma [etapa de Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) a um canva.  
+2. Selecione **Notificação por push**.
 3. Selecione as plataformas desejadas (Mobile, Web, Kindle) e os dispositivos móveis (iOS, Android). Se você selecionar vários dispositivos, os testes multivariantes não estarão disponíveis para sua campanha.
 
+### Selecionando plataformas para uma campanha
 ![Opções para selecionar várias plataformas para uma campanha push, como Mobile, Web e Kindle, e vários dispositivos, como iOS e Android.][1]
 
+### Selecionando plataformas para uma etapa do Canvas
+![Opções para selecionar várias plataformas para uma etapa de Mensagem por push, como Móvel, Web e Kindle, e vários dispositivos, como iOS e Android.][8]
+
 {:start="4"}
-4\. Clique em **Avançar**. Após clicar em **Next**, não será possível alterar as plataformas ou dispositivos selecionados.
-5\. Continue configurando sua campanha push.
+4\. Selecione **Confirmar**. Após selecionar **Confirmar**, você não poderá alterar suas plataformas ou dispositivos selecionados.
+5\. Continue configurando sua campanha ou Canvas.
 
 Seu criador terá uma aparência ligeiramente diferente da habitual. Continue lendo para ver o que há de diferente.
 
@@ -73,6 +73,7 @@ Para saber mais sobre as configurações específicas do dispositivo, consulte a
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
+[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios

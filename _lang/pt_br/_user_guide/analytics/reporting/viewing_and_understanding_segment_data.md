@@ -128,7 +128,7 @@ As variáveis incluem:
 
 Os dados estão disponíveis para períodos de tempo em que essas duas condições são atendidas:
 
-1. [O rastreamento da análise de dados do segmento]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) está ativado para os segmentos para os quais você deseja ver os dados.
+1. [O rastreamento da análise de dados do segmento]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) está ativado para os segmentos para os quais você deseja ver os dados.
 2. O recurso de dados de performance por segmento está ativado.
 
 Não é possível acessar dados de períodos de tempo anteriores à ativação desse recurso para sua empresa. Por exemplo, se o rastreamento de análises for ativado para o Segmento A em 1º de outubro e esse recurso for ativado para sua empresa em 2 de outubro, só será possível visualizar os dados do Segmento A para as campanhas e Canvas que registraram métricas após 2 de outubro. 

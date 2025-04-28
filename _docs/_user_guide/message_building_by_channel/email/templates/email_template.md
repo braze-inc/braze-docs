@@ -57,19 +57,25 @@ Here's a list of errors that are accounted for in our editor:
 
 After you finish composing your template, you can test it before sending it out.
 
-From the bottom of the overview screen, click **Preview and Test**. Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+From the bottom of the overview screen, select **Preview and Test**. Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should. 
+
+Then, you can **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
+
+{% alert tip %}
+Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (drag-and-drop editor only).
+{% endalert %}
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
 ![Example email preview to be sent for testing.][6]
 
-If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
+If you see any issues with your template or want to make any changes, select **Edit Email** to return to the editor.
 
 ## Step 6: Save your template
 
-Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose. To access your template, select the editing experience you built it with, and then select it from the list of available templates.
+Be sure to save your template by selecting **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose. To access your template, select the editing experience you built it with, and then select it from the list of available templates.
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
@@ -89,11 +95,11 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 You can collaborate and comment on email templates in the drag-and-drop editor. 
 
-1. Click the Content Block or row in the email body that you’d like to comment on.
+1. Select the Content Block or row in the email body that you’d like to comment on.
 2. Select the <i class="fas fa-comment"></i> comment icon.
-3. Enter your comment in the sidebar, then click **Submit**.
-4. After entering your comments, click **Done**.
-5. Click **Save Template** to save your comments.
+3. Enter your comment in the sidebar, then select **Submit**.
+4. After entering your comments, select **Done**.
+5. Select **Save Template** to save your comments.
 
 After your template is saved, users can see icons over unaddressed comments. Select **Resolve** to resolve these comments.
 

@@ -24,7 +24,6 @@ Bestätigen Sie die folgenden Punkte, bevor Sie mit der Integration fortfahren:
 - **Compliance:** Beachten Sie alle geltenden Braze- und Meta-Dokumentationen sowie alle geltenden [Meta-Richtlinien](https://www.whatsapp.com/legal/?lang=en).
 - **24-Stunden-Konversationslimits:** Nachdem ein Unternehmen eine erste vorgefertigte Nachricht gesendet hat oder ein Benutzer eine Nachricht gesendet hat, gibt es ein 24-Stunden-Fenster, in dem die beiden Parteien Nachrichten hin und her senden können. 
 - **Ein Gespräch beginnen:** Benutzer können jederzeit ein Gespräch beginnen. Ein Unternehmen kann eine Konversation nur über eine genehmigte Nachrichtenvorlage einleiten.
-- **Kontobeschränkungen:** Jeder Workspace von Braze kann ein WhatsApp Business-Konto, eine Abo-Gruppe und eine Telefonnummer enthalten. Außerdem kann jedes WhatsApp Business-Konto nur [eine Integration eines Drittanbieters](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047) enthalten. Ein WhatsApp Business-Konto kann nur in einem Arbeitsbereich existieren und kann nicht über Arbeitsbereiche hinweg geteilt werden.
 <br><br>
 
 | Anforderung| Beschreibung|
@@ -39,10 +38,6 @@ Bestätigen Sie die folgenden Punkte, bevor Sie mit der Integration fortfahren:
 ### Schritt 1: WhatsApp Messenger mit Braze verbinden
 
 Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und suchen Sie nach **WhatsApp**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Technologiepartner** unter **Integrationen**.
-{% endalert %}
 
 Auf der WhatsApp-Partnerseite wählen Sie **Integration beginnen**.
 

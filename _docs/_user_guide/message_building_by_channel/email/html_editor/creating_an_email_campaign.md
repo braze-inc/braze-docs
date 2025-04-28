@@ -87,7 +87,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### Step 3a: Add your sending information
 
@@ -163,7 +163,7 @@ Email extras allows you to send additional data back to other email service prov
 To add email extras, go to the **Sending Info** and select **Add New Extra**.
 
 {% alert warning %}
-The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
+The total key-value pairs added should not exceed 1 KB. Otherwise, the messages will be aborted.
 {% endalert %}
 
 Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
@@ -172,7 +172,9 @@ Email extra values are not published to Currents or Snowflake. If you're looking
 
 After you finish composing your perfect email, you need to test it before sending it out. From the bottom of the overview screen, select **Preview and Test**. 
 
-Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should. 
+
+Then, you can **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
@@ -228,7 +230,7 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
@@ -250,7 +252,7 @@ With this configuration, don't include any filters in the **Target Users** step 
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
 
 - Opens app
 - Makes purchase (This can be a generic purchase or a specific item)

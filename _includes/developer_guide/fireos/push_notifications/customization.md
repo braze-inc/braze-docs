@@ -38,7 +38,7 @@ The priority level of a push notification affects how your notification is displ
 
 In Android O, notification priority became a property of notification channels. You will need to work with your developer to define the priority for a channel during its configuration and then use the dashboard to select the proper channel when sending your notification sounds. For devices running versions of Android before O, specifying a priority level for FireOS notifications is possible via the Braze dashboard and messaging API. 
 
-To message your full userbase with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance) (to target O+ devices) *and* send the individual priority from the dashboard (to target &#60;O devices).
+To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance) (to target O+ devices) *and* send the individual priority from the dashboard (to target &#60;O devices).
 
 The priority levels that you can set on Fire OS push notifications are:
 
@@ -63,4 +63,4 @@ For devices running versions of Android before O, Braze allows you to set the so
 
 Enter the full sound resource URI (for example, `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
-To message your full userbase with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration](https://developer.android.com/training/notify-user/channels) (to target O+ devices) *and* send the individual sound from the dashboard (to target &#60;O devices).
+To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration](https://developer.android.com/training/notify-user/channels) (to target O+ devices) *and* send the individual sound from the dashboard (to target &#60;O devices).

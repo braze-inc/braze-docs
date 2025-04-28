@@ -59,6 +59,10 @@ Les administrateurs peuvent également suspendre un utilisateur en sélectionnan
 
 ![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.][5]
 
+## Attribution de l'accès et des responsabilités des utilisateurs
+
+{% multi_lang_include permissions.md content="Différences" %}
+
 ## Suppression d'utilisateurs de Braze
 
 Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa fa-trash-can"></i> **Supprimer l'utilisateur**.

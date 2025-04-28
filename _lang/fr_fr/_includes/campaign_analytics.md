@@ -305,8 +305,20 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Échec provisoire de livraison</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Report</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md indicateurs="Report %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Reports
+
+On parle de report ou d'ajournement lorsqu'un e-mail n'a pas été livré immédiatement, mais que Braze relance l'e-mail jusqu'à 72 heures après cet échec temporaire de la réception/distribution afin de maximiser les chances de réussite avant l'arrêt des tentatives pour cette campagne spécifique. Les raisons habituelles de ces reports sont la limitation du débit du volume d'e-mails basée sur la réputation par le fournisseur de la boîte de réception, des problèmes temporaires de connectivité ou des erreurs de DNS.
+
+Les _reports_ diffèrent des échecs provisoires _d'envoi_. Si aucun e-mail n'a été délivré avec succès pendant cette période de réessai, Braze enverra un événement d'échec provisoire d'envoi par tentative de campagne envoyée. Avant le 25 février 2025, ces tentatives étaient comptabilisées comme plusieurs échecs provisoires d'envoi pour une même campagne.
+
+Notez que les _requêtes SQL_ ne sont actuellement disponibles qu'en utilisant les fonctionnalités de Braze Currents ou de Braze Snowflake (telles que Query Builder, SQL Segment, Snowflake Data Sharing). Si vous souhaitez l'inclure dans l'analyse/analytique des campagnes ou de Canvas, veuillez [nous faire part de vos commentaires sur le produit]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Taux d'ouverture réel estimé {#estimated-real-open-rate}
 

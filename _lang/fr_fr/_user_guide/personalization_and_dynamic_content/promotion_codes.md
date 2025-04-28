@@ -9,7 +9,7 @@ description: "Cet article de référence explique comment créer des listes de c
 
 # Codes de promotion
 
-> Les codes de promotion également appelés codes promo, sont un excellent moyen de maintenir l’engagement des utilisateurs en conduisant des interactions en soulignant les achats.
+> Les codes de promotion également appelés codes promo, sont un excellent moyen de maintenir l’engagement des utilisateurs en conduisant des interactions en soulignant les achats.<br><br>Cette page explique comment créer des listes de codes de promotion et les ajouter à vos campagnes et Canvas.
 
 Avec la fonctionnalité Braze Liquid, nous offrons un moyen de généraliser l'utilisation des codes de promotion en un clin d'œil, en permettant aux messages de puiser dans la liste de promotions que vous avez fournie, de manière automatique et intuitive. La fonctionnalité de codes de promotion offre des dates d’expiration allant jusqu’à six mois et prend en charge jusqu’à 20 MM de codes individuels par liste.
 
@@ -59,7 +59,7 @@ Vous avez également la possibilité de mettre en place des alertes de seuil fac
 
 ### Étape 4 : Téléchargement du code de promotion
 
-Braze ne gère pas la création ou la rédemption des codes, ce qui signifie que vous devez générer vos codes de promotion dans un fichier CSV et les télécharger dans Braze. Veillez à ce que le fichier CSV respecte ces directives :
+Braze ne gère pas la création ou l'échange de codes, ce qui signifie que vous devez générer vos codes de promotion dans un fichier CSV et les télécharger dans Braze. Veillez à ce que le fichier CSV respecte ces directives :
 
 - Comprend une colonne pour les codes de promotion.
 - Chaque ligne contient un code de promotion.
@@ -81,7 +81,7 @@ Lorsque vous cliquez sur Enregistrer, une nouvelle ligne apparaît dans l'**hist
 ![][8]
 
 {% alert note %}
-Les fichiers plus volumineux prendront quelques minutes à importer. Pendant que vous attendez, vous pouvez quitter la page et travailler sur autre chose pendant que l'importation est en cours. Lorsque l'importation est terminée, vous verrez le statut passer à **Terminé** dans le tableau.
+Les fichiers plus volumineux prendront quelques minutes à importer. Pendant que vous attendez, vous pouvez quitter la page et travailler sur autre chose pendant que l'importation est en cours. Lorsque l'importation est terminée, le statut devient **Complet** dans le tableau.
 {% endalert %}
 
 #### Mettre à jour une liste de codes de promotion

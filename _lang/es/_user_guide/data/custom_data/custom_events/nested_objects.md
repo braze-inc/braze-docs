@@ -35,6 +35,8 @@ Puedes acceder a los datos anidados de tu evento personalizado generando un esqu
 
 ![][6]{: style="max-width:80%;"}
 
+Si se envían nuevas propiedades en el futuro, no estarán en el esquema hasta que se regenere. Los esquemas pueden regenerarse cada 24 horas.
+
 ## Paso 2: Utilizar el objeto anidado
 
 Después de generar un esquema, puede hacer referencia a los datos anidados durante la segmentación y la personalización. Consulte los siguientes apartados para ver ejemplos de uso:
@@ -102,6 +104,10 @@ A continuación se muestra un ejemplo de `/users/track` con un evento personaliz
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Para las propiedades de eventos personalizados anidados, si el año es menor que 0 o mayor que 3000, Braze no almacena estos valores en el usuario.
+{% endalert %}
+
 ### Plantillas de Liquid
 
 A continuación se muestra cómo crear una plantilla Liquid que haga referencia a las propiedades anidadas solicitadas en la [petición API anterior](#api-request-body).
@@ -166,6 +172,8 @@ Para segmentar usuarios basándose en propiedades de eventos anidados, debe util
 ![][4]
 
 La segmentación utiliza la misma notación que la activación (véase [Activación de mensajes](#message-triggering)).
+
+Para editar o crear extensiones de segmento, necesitarás el permiso "Editar segmentos".
 
 ### Personalización
 

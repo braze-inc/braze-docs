@@ -8,7 +8,7 @@ description: "Learn how to track uninstalls through the Braze SDK."
 
 # Tracking uninstalls
 
-> Learn how to set up uninstall tracking through the Braze SDK. For general information, see [User Guide: Unistall tracking](/user_guide/analytics/tracking/uninstall_tracking).
+> Learn how to set up uninstall tracking through the Braze SDK. For general information, see [User Guide: Uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 {% sdktabs %}
 {% sdktab android %}

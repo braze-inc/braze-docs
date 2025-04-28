@@ -17,7 +17,7 @@ channel:
 
 ## サイレント通知
 
-[プッシュ通知メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message)際、Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1つしか含まれていない場合、無音のプッシュ通知として送信されることを覚えておいてほしい。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/)通知を参照のこと。
+[プッシュ通知メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message)際、Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1つしか含まれていない場合、無音のプッシュ通知として送信されることを覚えておいてほしい。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android)通知を参照のこと。
 
 ## 通知グループ
 

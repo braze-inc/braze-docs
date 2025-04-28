@@ -32,7 +32,7 @@ There can be some latency for in-app messages that display immediately on delive
 
 ## Minimum time interval between triggers
 
-By default, we rate limit in-app messages to once every 30 seconds to faciliate a quality user experience.
+By default, we rate limit in-app messages to once every 30 seconds to facilitate a quality user experience.
 
 You can override this value via the `ABKMinimumTriggerTimeIntervalKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the `ABKMinimumTriggerTimeIntervalKey` to the integer value you want as your minimum time in seconds between in-app messages:
 

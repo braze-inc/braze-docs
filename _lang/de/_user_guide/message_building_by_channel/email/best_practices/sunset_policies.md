@@ -22,7 +22,7 @@ Mit Segmentierungsfiltern können Sie verhindern, dass Ihre Nachrichten wie Spam
 - Werden Sie Nutzern spezielle Kampagnen zukommen lassen, bevor Sie sie aus Ihren Segmenten ausschließen?
 - Für welche Messaging-Kanäle gilt Ihre Sunsetting-Richtlinie? 
 
-Wenn Sie beispielsweise Benutzer haben, die sich für [Apples Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/) entscheiden, sollten Sie überlegen, wie sich dies auf Ihre E-Mail-Kampagnen und Zustellbarkeitskennzahlen auswirken kann und wie Sie Ihre Sunset Policy am besten strukturieren.
+Wenn Sie beispielsweise Benutzer haben, die sich für [Apples Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/) entscheiden, sollten Sie überlegen, wie sich dies auf Ihre E-Mail-Kampagnen und Zustellbarkeitskennzahlen auswirken kann und wie Sie Ihre Sunset Policy am besten strukturieren.
 
 Um Sunset-Richtlinien in Ihre Kampagnen einzubauen, erstellen Sie ein [Segment][19], das automatisch Nutzer ausschließt, die Ihre E-Mails als Spam markiert haben oder die eine bestimmte Zeit lang nicht mit Ihren Nachrichten interagiert haben.  
 

@@ -49,7 +49,7 @@ Store360管理者マネージャーWebコンソールを使用して、Brazeア�
 
 Snowflakeの安全なデータ共有を利用して、Brazeの生のキャンペーンおよびインプレッションデータをStore360のインサイト分析と共有し、オンラインからオフラインまでのユーザーのライフサイクルと活動の全体像を提供します。
 
-参考までに、Store360分析に組み込むことができるすべての[Brazeフィールド](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?ffbc5f5ca7092bc9ae26268aa0e711df)を以下に示します。このステップの詳細は顧客によって大きく異なり、特別な設定を必要とします。詳細については、Store360 のアカウントマネージャーまたは support@tangerine.io までお問い合わせください。
+参考までに、Store360分析に組み込むことができるすべての[Brazeフィールド]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ffbc5f5ca7092bc9ae26268aa0e711df)を以下に示します。このステップの詳細は顧客によって大きく異なり、特別な設定を必要とします。詳細については、Store360 のアカウントマネージャーまたは support@tangerine.io までお問い合わせください。
 
 ## 重要な情報と制限
 

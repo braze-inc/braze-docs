@@ -78,7 +78,7 @@ Select **Add Languages** to add your desired languages from the provided list. T
 
 ##### Creating right-to-left messages
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Title and message
 
@@ -149,11 +149,11 @@ For Content Card campaigns with scheduled delivery, you can choose when Braze ev
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 {% endtab %}
 
@@ -208,7 +208,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ### Updating launched cards
 
-Content Cards can't be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [campaign re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) as shown in the following options.
+Content Cards can't be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [campaign re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) as shown in the following options.
 
 {% alert note %}
 When a Content Card becomes re-eligible, it may be sent again when the original card is still in a user's app. To avoid duplicate cards in a user's app, you can turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.

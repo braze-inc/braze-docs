@@ -9,7 +9,7 @@ description: "This article covers the features supported on visionOS."
 
 # visionOS support
 
-> Starting with [Braze Swift SDK 8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), you can leverage Braze with [visionOS](https://developer.apple.com/visionos/), Apple's spacial-computing platform for the Apple Vision Pro. For a sample visionOS app using Braze, see [Sample Apps]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/).
+> Starting with [Braze Swift SDK 8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), you can leverage Braze with [visionOS](https://developer.apple.com/visionos/), Apple's spacial-computing platform for the Apple Vision Pro. For a sample visionOS app using Braze, see [Sample Apps]({{site.baseurl}}/developer_guide/references/?tab=swift).
 
 ## Fully supported features
 

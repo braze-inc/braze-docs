@@ -115,7 +115,7 @@ Consulte [Outras personalizações](#other-customizations) para ver outras manei
 Ao criar seu e-mail, é possível alternar entre a visualização para desktop e para dispositivos móveis para fazer uma prévia de como será o envio de mensagens por e-mail para seus grupos de usuários. Isso verificará se o seu conteúdo é responsivo e você poderá fazer os ajustes necessários ao longo do processo.
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Botão Copywriter, localizado no painel Content (Conteúdo) ao lado de Style Settings (Configurações de estilo) no editor de arrastar e soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -232,6 +232,14 @@ A personalização Liquid não é compatível com blocos de imagens e campos do 
 
 Você pode optar por incluir imagens dinâmicas em seu envio de mensagens por e-mail, incluindo Liquid no atributo de origem da imagem. Por exemplo, em vez de uma imagem estática, é possível inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL da imagem para incluir o nome de um usuário na imagem. Isso ajuda a personalizar seus e-mails para cada usuário.
 
+### Alterar a direção do texto
+
+Ao ser o criador da mensagem, você pode alternar a direção do texto entre a esquerda para a direita e a direita para a esquerda selecionando o respectivo botão **Direção do texto**. Você pode usar essa opção ao criar mensagens em idiomas como árabe e hebraico.
+
+![Menu do editor de arrastar e soltar do e-mail com botão para alternar o alinhamento do texto entre direita para esquerda e esquerda para direita.][1]{: style="max-width:50%;"}
+
+A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 ### Adicionar atribuições HTML a links
 
 ![A seção "Atribuições" com o atributo "clicktracking" desativado para um link.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -265,3 +273,4 @@ Como alternativa, você pode fazer a integração com um de nossos parceiros de 
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

@@ -42,7 +42,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trou
 {: start="2"}
 2\. Sélectionnez **LINE** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanale**.
 3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire.
+4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d'informations sur ce sujet, consultez [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -71,9 +71,15 @@ Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid
 
 ![LINE avec un message affiché dans l'aperçu.][1]
 
-{% alert tip %}
+### Conseils
+
+#### Utilisation de Liquid
+
 Si vous prévoyez d'utiliser Liquid, assurez-vous d'inclure une valeur par défaut pour votre personnalisation. Cela empêchera les destinataires ayant des profils utilisateur incomplets de recevoir un espace réservé vide. Par exemple, au lieu de recevoir le message « Salut ! », l’utilisateur pourrait recevoir le message « Salut, nouvel abonné ! ».
-{% endalert %}
+
+#### Création d'envois de messages de droite à gauche
+
+L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)
 
 ## Étape 3 : Prévisualiser et tester votre message
 

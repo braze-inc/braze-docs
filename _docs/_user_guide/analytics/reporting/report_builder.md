@@ -2,181 +2,108 @@
 nav_title: Report Builder
 article_title: Report Builder
 alias: /report_builder/
-page_order: 4
 page_type: reference
-description: "This page covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
-tool: 
-  - Reports
-
+description: "This reference article describes the Report Builder feature."
+tool:
+    - Reports
+page_order: 6.2
 ---
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
+> This page covers how to use Report Builder to create and view granular reports using Braze data, and how to add reports to dashboards.
 
-![Campaign Comparison Example][5]{: style="max-width:80%;"}
+## Using a report template
 
-Use this report to answer key engagement questions, for example:
+1. Go to **Analytics** > **Report Builder (New)**.
+2. Select the **More options** arrow next to the **Create New Report** button, and then select **Use a report template**.<br><br>!["Create New Report" button dropdown with options to create a custom report or use a template.][9]{: style="max-width:40%;"}<br><br>
+3. Select one of the report templates from the Braze template library.
+    - Use the **Row items** and **Tags** dropdown to find relevant reports to your use cases.<br><br>!["Braze report templates" window with list of Braze templates to select from.][8]{: style="max-width:90%;"}<br><br>
+4. Follow step 3 and onward in [Creating a report](#creating-a-report) to further customize the report to fit your use case.
 
-- Which were the best performing campaigns or Canvases for a specific tag or channel?
-- Which variants of multivariant campaigns had the most uplift over the control?  
-- Which seasonal promotion campaign led to a higher purchase rate—the summer sale, fall sale, or winter sale?
-- Which push notifications within this Canvas had the highest open rates?
-- Which steps in this group of Canvases had the most conversions?
-- Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion? Did the changes work?
-- How do different delivery methods (for example, 3 scheduled pushes, 3 action-based pushes, and 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
-- Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
+## Creating a report
+
+1. Go to **Analytics** > **Report Builder (New)**.
+2. Select **Create New Report**.
+3. In the **Rows** dropdown, select one of the following to create a report:
+    - Campaigns
+    - Canvases
+    - Campaigns and Canvases
+    - Channels
+    - Tags
+
+![The "Rows and columns" section with fields to select the rows and groupings for your report.][1]{: style="width:90%;"}
+
+{: start="4"}
+4. (Optional) Select **Add drilldown** to break down your data into more granular views:
+    - Channels
+    - Date
+        - Use this to split your data into smaller time ranges. For example, if you're interested in how your campaigns performed by day, select the following configuration:
+            - **Rows**: Campaigns
+            - **Grouping:** Date
+            - **Interval:** Days
+    - Variants
+    - Campaigns and Canvases
 
 {% alert tip %}
-Try to use the same conversion events for conversion A, B, and so on across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
+Try out different configurations of drilldown options to explore the many ways you can break down your data. 
 {% endalert %}
 
-## Running a report
+{: start="5"}
+5. In the **Columns** section, select **Customize Metrics**.
 
-### Step 1: Create a new report
+![The "Customize Metrics" section with options to select multiple metrics.][2]{: style="width:90%;"}
 
-Within the dashboard, navigate to **Analytics** > **Report Builder**.
+{: start="6"}
+6. Browse metrics by category and select the corresponding checkbox to add a metric to your report. 
+    - Reorder the metrics and columns by dragging the dotted icon up or down. 
+7. In **Report content**, configure the date range for which you’d like to include data in your report.
+8. Then, depending on your selections in step 3, choose to manually or automatically add campaigns, Canvases, or both to your report.
+    - **Add manually:** Choose each campaign or Canvas to include in the report by using the filters for **Last Sent** dates and tags or channels, or searching the campaign or Canvas name.<br><br>![The "Manually add campaigns and canvases" section with a list of campaigns to select.][3]{: style="width:90%;"}<br><br>
+    - **Add automatically:** Set rules for which campaigns or Canvases to include in the report. You're only required to select one field on this page.
+        - Note that as additional campaigns or Canvases satisfy the conditions you set on this screen, they will automatically be added to future runs of your report.<br><br>![The "Automatically add campaigns and canvases" section with fields to set rules for which campaigns and Canvases should be added to the report.][4]{: style="width:90%;"}<br><br>
+9. Run the report by selecting **Save & Run**.
 
-Select **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
-
-If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
-
-![Campaign dashboard][6]{: style="max-width:80%;"}
-
-The following are the differences between these two options:
-
-| **Action** | **Manual** | **Automated** |
-| ---- | ---------- | ------------- |
-| **Building Report** | You will be able to narrow down your campaign list using filters, and then check off specific campaigns. | You will build your report by using the filter options to narrow down your campaign list. |
-| **Saving and Viewing Report** | You can save your report. The next time you view it, you will be able to view the same campaign you previously added, as these campaigns still fall under your "Last Sent" filter. | You can save your report. The next time you view it, the report will automatically update to include all campaigns that currently match your filters. |
-| **Editing Report** | You can select **Edit Report** to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% alert note %} 
-Both **Manual** and **Automated** reports can include a maximum of 250 campaigns in a report. 
+{% alert note %}
+The report may take up to a few minutes to run, depending on the date range and number of campaigns or Canvases you selected in the configuration stage.
 {% endalert %}
 
-Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually. You can include at most five Canvases in one report.
+## Viewing a report
 
-### Step 2: Choose your metrics
+After running your report, you can view your results in table format on the report page. 
 
-After you've created your report, you'll find a blank table containing campaigns in each row. The table will populate after you select **Edit Columns** and choose the metrics you'd like to add.
+![A table of the report data for each campaign's metrics.][5]{: style="width:90%;"}
 
-![Campaign Options][15]{: style="max-width:80%;"}
+### Creating a report chart
 
-Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary][16]. Some metrics are only available for campaign comparison reports.
+At the bottom of the page you can create a chart of your data by selecting a **Chart type** and configuring the chart metrics. By default, you'll see the first metric.
 
-You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
+![A chart of the report data with options to configure the chart's x-axis, y-axis, chart type, and more.][6]{: style="max-width:90%;"}
 
-### Step 3: Choose a time period
-
-You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas component doesn't have any data for your selected time period, the results for that row will be blank. 
-
-![Campaign numerical metric][4]{: style="max-width:60%;"}
-
-### Step 4: Name and save your report
-
-Name your report before saving it. If a report is saved without being named, Braze will apply a default name of "Campaign Comparison Report".
-
-![Campaign Note][7]{: style="max-width:60%;"}
-
-When you're ready, select **Save**. Saved reports can be viewed at a later point on the **Report Builder** page.
-
-## Campaign comparison report with multivariate campaigns
-
-For any multivariate campaigns, you can view these metrics broken down by your variants and control group by clicking the arrow next to the campaign name. The rows containing your variants will include performance results for that variant, and the row containing your control will include just the results for your conversion events. 
-
-![Campaign Note][3]{: style="float:right;max-width:15%;margin-left:15px;"}
-
-The metrics populating the row for your overall campaign will reflect the performance of its variants, but won't include the performance of the control. For example, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this won't include the Primary Conversion Event A for your control.
-
-{% alert important %} 
-If you delete a variant from a multivariant campaign, the data from that variant won't be available for use in a future report. 
+{% alert note %}
+To create a line chart, select **Date** as a drilldown option when configuring the report. This will display trends over time.
 {% endalert %}
 
-## Canvas comparison report breakdown
+#### Downloading a report chart
 
-Within a Canvas report, you can view your Canvases broken down by variant, steps, or message.
+To download an image of the report chart, select the dotted icon then choose a download option.
 
-### Variant
+![A menu with download options for different file formats.][7]{: style="max-width:30%;"}
 
-Selecting **breakdown by variant** allows you to view the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by selecting the arrow next to the Canvas name.
+## Adding a report to a dashboard
 
-![Variants][12]{: style="max-width:90%;"}
+1. Select the dotted icon at the top of the report table.
+2. Select **Add to dashboard**.
+3. Select whether you want to create a new dashboard or add to an existing dashboard.<br><br>![Window with options to select if you want to add the report to a new or existing dashboard.][10]{: style="width:90%;"}<br><br>
+4. Follow the steps in [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) to learn more about building a dashboard.
 
-### Steps 
-
-Selecting **breakdown by steps** allows you to view step-level metrics, with each row of the report containing the row of a step.
-
-![Steps][13]{: style="max-width:90%;"}
-
-### Message
-
-Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. However, within **edit columns**, you'll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
-
-![Report][14]{: style="max-width:90%;"}
-
-Note that within the Braze dashboard, you can preview the first 50 rows of your Canvas report. You can access the full report when you export a CSV.
-
-## Accessing saved reports
-
-When you access a saved **Manual Report**, you can view the same campaigns you previously added, as these campaigns still fall under your "Last Sent" filter.
-
-When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For example, if your report filtered campaigns with the tag "Promotion," then each time you view this report, you will be able to see all campaigns with the "Promotion" tag, even if these campaigns were created after you made this report.
-
-## Editing reports
-
-In a **Manual Report**, you can edit a report by selecting **Edit**. From there, you can select or deselect campaigns to include in your report.
-
-In an **Automatic Report**, simply toggle your filters to narrow down the results in your report.
-
-## Exporting reports
-
-You can also select **Export** to download your report to CSV.
-
-If your report contains any multivariant campaigns, your export will include two CSV files: 
-
-- One file containing only the top-level metrics for each campaign
-- One file that contains variant-level metrics
-
-The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you'll receive a pop-up asking you to grant permission for downloading multiple files—click **Allow**.
-
-![Campaign Download][8]{: style="max-width:60%;"}
-
-### Exporting Canvas comparison reports
-
-Your CSV export will reflect whichever breakdown view you were on when you selected **Export**. For example, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you'll need to navigate to that breakdown first, and select **Export** from there.
-
-If you download a variant breakdown Canvas report, you'll receive two CSV files:
-
-- One file containing only top-level metrics for each Canvas
-- One file that contains variant-level metrics
-
-## Building Charts 
-
-Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
-
-![Campaign Performance chart with metric Message Sent selected][17]
-
-By default, the chart on each report will display the metric in the first column of the report. To select a different metric to graph, choose your metric from the dropdown. Any metric in your report table will be available to display in your chart.
-
-You can graph at most three metrics. The units for all metrics must be the same—for instance, if you choose a rate in the first dropdown, then only rates will be available for selection in the second dropdown.
-
-If your chart contains only one metric, then it will display up to 30 campaigns in descending order based on the metric you've selected. For example, if your chart's metric is email clicks, then your chart will display the 30 email campaigns with the most clicks, ordered from most to fewest clicks. If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart. If you select more than one metric, then your graph will only display the top five campaigns based on the first metric selected.
-
-Charts are currently not saved when you save your report.
-
-
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
-
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[1]: {% image_buster /assets/img/report_builder_2/rows_and_columns.png %} 
+[2]: {% image_buster /assets/img/report_builder_2/customize_metrics.png %} 
+[3]: {% image_buster /assets/img/report_builder_2/manually_add.png %} 
+[4]: {% image_buster /assets/img/report_builder_2/automatically_add.png %} 
+[5]: {% image_buster /assets/img/report_builder_2/report_table.png %} 
+[6]: {% image_buster /assets/img/report_builder_2/visualize_table.png %} 
+[7]: {% image_buster /assets/img/report_builder_2/download_options.png %} 
+[8]: {% image_buster /assets/img/report_builder_2/report_templates.png %} 
+[9]: {% image_buster /assets/img/report_builder_2/create_new_report.png %} 
+[10]: {% image_buster /assets/img/report_builder_2/add_to_dashboard.png %} 

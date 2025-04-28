@@ -41,7 +41,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
+  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking exception events, and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ You can add tags and name the steps and variants in a Canvas. For more on custom
 
 It's always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
 
-Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
+Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
 
 * **Start Session**: I want my users coming back and engaging with the app.
 * **Make Purchase**: I want my users to buy.
@@ -78,7 +78,7 @@ Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement
 Your answer will determine the details of when and how your Canvas is delivered to your customer. Users can enter your Canvas in one of two ways: scheduled or action-based triggers.
 
 {% alert tip %}
-Check out [Time-based functionalities]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) for Canvas for more strategies and answers to common questions.
+Check out [Time-based functionalities]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/) for Canvas for more strategies and answers to common questions.
 {% endalert %}
 
 Scheduled delivery allows you to send a Canvas immediately to your target audience. You can also have it sent regularly, or schedule it for a specific time in the future. Action-based Canvases respond to specific customer behaviors as they happen. For example, an action-based trigger can include opening an app, making a purchase, interacting with another campaign, or triggering any custom event. At the point of the action occurring, you can have the Canvas send to your users.

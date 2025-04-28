@@ -43,5 +43,5 @@ For more information, refer to [API identifier types]({{site.baseurl}}/api/ident
 [4]: {{site.baseurl}}/api/endpoints/messaging/
 [5]: {{site.baseurl}}/api/endpoints/email/
 [6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
+[12]: https://en.wikipedia.org/wiki/UTF-8
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

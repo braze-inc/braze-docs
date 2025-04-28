@@ -302,7 +302,7 @@ Your cross-reference link should be similar to the following:
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+Before continuing, [create your SSH token]({{site.baseurl}}/dev_guide/auth).
 ```
 {% endraw %}
 

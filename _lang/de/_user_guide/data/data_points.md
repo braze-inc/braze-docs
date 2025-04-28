@@ -25,10 +25,6 @@ Lesen Sie den Abschnitt [Verbrauchszählung](#consumption-count) in diesem Artik
 
 Um Ihre Datenpunkt-Nutzung einzusehen, gehen Sie zu **Einstellungen** > **Abrechnung** und wählen Sie den Tab **Gesamtdatenpunkt-Nutzung**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite, indem Sie Ihr Kontosymbol > **Abonnements und Nutzung** > **Datenpunkte-Nutzung insgesamt** auswählen.
-{% endalert %}
-
 Weitere Informationen zu den Komponenten des Dashboards für Datenpunkte finden Sie unter [Abrechnung]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}
@@ -74,6 +70,10 @@ Angepasste Attribute, die über den CSV-Import hochgeladen werden, zählen für 
 Da Änderungen des Abo-Status keine Datenpunkte verbrauchen, fallen auch beim Update der Felder `email_subscribe`, `push_subscribe`, `subscription_group_id` oder `subscription_state` in Ihrer CSV-Datei keine Gebühren an.
 
 ## Datenpunkte
+
+{% alert note %}
+Die folgenden Tabellen sind zur Veranschaulichung gedacht. Die genauen Namenskonventionen, die Großschreibung und die akzeptierten Werte für bestimmte Felder finden Sie in der entsprechenden Dokumentation für Ihre Ingestionsmethode.
+{% endalert %}
 
 {% tabs %}
 {% tab Nicht fakturierbar %}
@@ -166,3 +166,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

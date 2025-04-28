@@ -23,7 +23,7 @@ Some common custom event use cases include:
 - Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
 - Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
 - Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- Setting up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users shouldn't advance to the next step of your Canvas
+- Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 ## Managing custom events
 
@@ -67,13 +67,13 @@ Custom events require additional setup. Refer to the list below for documentatio
 
 {% details Expand for documentation by platform %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -156,9 +156,9 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `item price` to improve your target audience and allow for increased campaign personalization.
 
-![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
+![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a item price between 100 and 200 dollars][16]
 
 Nested custom event properties are also supported in [action-based delivery][19].
 
@@ -216,7 +216,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
-![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendar days.][3]
+![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.][3]
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 

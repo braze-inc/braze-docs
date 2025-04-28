@@ -29,4 +29,4 @@ This is expected behavior for workspaces with a lot of users. Braze will split y
 
 ### Why do I see duplicates when I export users by segment through REST API?
 
-This is a very rare occurence caused by the underlying architecture of the database provider. Duplicates are cleaned out every week; however, most weeks, no duplicates are cleared.
+This is a very rare occurrence caused by the underlying architecture of the database provider. Duplicates are cleaned out every week; however, most weeks, no duplicates are cleared.

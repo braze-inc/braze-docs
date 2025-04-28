@@ -65,7 +65,7 @@ description: "次の記事は、新しいユーザーデータと既存のユー
 
 ## その他のリソース
 - 追加のコンテキストについては、Braze の「[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)」の記事を参照してください。<br>
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention)、および [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) でのユーザー ID の設定および `changeUser()` メソッドの呼び出しに関するドキュメントを参照してください。
+- [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention)、および [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) でのユーザー ID の設定および `changeUser()` メソッドの呼び出しに関するドキュメントを参照してください。
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}

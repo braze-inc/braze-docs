@@ -13,7 +13,7 @@ search_rank: 1
 
 # MMS 캠페인 만들기
 
-> 이 문서에는 SMS 작곡가의 일부인 MMS 구성에 대한 특정 정보가 포함되어 있습니다. SMS/MMS 작성기에 대한 자세한 정보는 SMS 작성기를 참조하십시오.
+> 이 문서에는 SMS 작곡가의 일부인 MMS 구성에 대한 특정 정보가 포함되어 있습니다. SMS/MMS 작성기에 대한 자세한 내용은 [SMS 작성기를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/) 참조하세요.
 
 ## MMS 전송 기본 사항
 

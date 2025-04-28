@@ -117,7 +117,7 @@ To delete your workspace or app instance:
 1. Go to **Settings** > **App Settings**.
 2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
 
-You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/help/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
+You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/user_guide/administrative/access_braze/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
 {% alert warning %}
 Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored. 
@@ -149,7 +149,7 @@ By default, a segment targets all apps and websites in the workspace. To set up 
 2. For **Apps and websites targeted**, select **Users from specific apps**.
 3. In the **Specific apps** dropdown, select your app or site.
 
-![Segment that is targetting users from specific apps.][10]
+![Segment that is targeting users from specific apps.][10]
 
 You can then add this segment to your message and begin further refining your audience with additional segments and filters if needed.
 
@@ -157,14 +157,14 @@ You can then add this segment to your message and begin further refining your au
 
 For campaigns, add your segment to the **Target Users** step of the composer.
 
-#### Canvas Flow
+#### Canvas
 
-In Canvas Flow, add your segment to your Message steps, in the **Delivery Validations** section. Delivery validations double-check that your audience meets your delivery criteria at message send. Remember to specify delivery validations for each Message step to make sure it will be delivered to the correct app. There's no need to segment at the entry level.
+In Canvas, add your segment to your Message steps, in the **Delivery Validations** section. Delivery validations double-check that your audience meets your delivery criteria at message send. Remember to specify delivery validations for each Message step to make sure it will be delivered to the correct app. There's no need to segment at the entry level.
 
 {% details Expand for steps in the original Canvas workflow %}
 
 {% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This content is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This content is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience clone their Canvases to the updated editor to better build and manage Canvases. Learn more about [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 In the original Canvas workflow, add your segment to the Canvas component level in the **Audience** section. There's no need to segment at the entry level.

@@ -27,7 +27,7 @@ Da Sie nun mehr Informationen über Ihre Nutzer:innen haben, können Sie deren O
 
 ### Referenzdaten aus der Anzeige
 
-Benutzer können durch ein Werbeangebot oder eine Werbeaktion zu Ihrer App gelockt werden. Die Verwendung von Installationsattributionsdaten ermöglicht es Ihnen, Kampagnen mit Rabattcodes oder Angeboten nur an die Benutzer zu senden, die aufgrund dieser Werbeaktionen installiert haben. Wenn Ihre Anzeige Informationen über ein bestimmtes Produkt enthält (z. B. einen bestimmten Film in einer Video-App oder einen Verkauf in einer E-Commerce-App), können Sie auf ähnliche Weise Kampagnen senden, die Nutzer auf die richtige Seite Ihrer App leiten.
+Benutzer können durch ein Werbeangebot oder eine Werbeaktion zu Ihrer App gelockt werden. Die Verwendung von Installationsattributionsdaten ermöglicht es Ihnen, Kampagnen mit Rabattcodes oder Angeboten nur an die Benutzer zu senden, die aufgrund dieser Werbeaktionen installiert haben. Wenn Ihre Anzeige Informationen über ein bestimmtes Produkt enthält (z.B. einen bestimmten Film in einer Video App oder einen Verkauf in einer E-Commerce App), können Sie Kampagnen senden, die Nutzer:innen auf die richtige Seite Ihrer App leiten.
 
 ## Werbemaßnahmen auswerten
 

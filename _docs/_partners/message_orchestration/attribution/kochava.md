@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Kochava offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
 
+_This integration is maintained by Kochava._
+
+## About the integration
+
 The Braze and Kochava integration helps power a more holistic understanding of your campaigns by sending attribution data to Braze to better understand what campaigns are driving installs, in-app activity, and more.
 
 ## Prerequisites
@@ -64,7 +68,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 3: Set up a postback from Kochava
 
-[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in Braze's dashboard.
+[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in the Braze dashboard.
 
 ### Step 4: Confirm the integration
 
@@ -112,9 +116,8 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Kochava will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-*This integration is maintained by Kochava.*
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
+[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [4]: {% image_buster /assets/img/attribution/kochava.png %}

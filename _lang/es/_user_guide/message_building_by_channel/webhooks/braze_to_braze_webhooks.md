@@ -86,7 +86,7 @@ Lo siguiente es un ejemplo tanto del Liquid requerido como del cuerpo de la soli
 {% endraw %}
 
 {% alert note %}
-Cada vez que un contador de atributos personalizado se actualiza (aumenta o disminuye) consumirá un [punto de datos]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/), que cuenta para el consumo total.
+Cada vez que un contador de atributos personalizado se actualiza (aumenta o disminuye) consumirá un [punto de datos]({{site.baseurl}}/user_guide/data/data_points/), que cuenta para el consumo total.
 {% endalert %}
 
 ### Caso de uso: Activar un segundo lienzo a partir de un lienzo inicial
@@ -144,7 +144,7 @@ Añada su solicitud `canvas/trigger/send` en el campo de texto. Para obtener má
 - Las actualizaciones del perfil de usuario conllevarán [puntos de datos]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count) adicionales, mientras que la activación de otro mensaje a través de los puntos finales de mensajería no lo hará.
 - Si desea dirigirse a [usuarios anónimos]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), puede utilizar `braze_id` en lugar de `external_id` en el cuerpo de la solicitud de su webhook.
 - Puedes guardar tu webhook Braze to Braze como [plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) para volver a utilizarlo.
-- Puede consultar el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) para ver y solucionar los fallos de los webhooks.
+- Puede consultar el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) para ver y solucionar los fallos de los webhooks.
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}

@@ -22,7 +22,7 @@ Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas 
 
 Nous mettons en file d’attente un travail pour chaque étape, ils sont exécutés à peu près simultanément et l’un d’entre eux « gagne ». En pratique ce processus peut être quelque peu uniforme, mais il y a parfois une légère distorsion par rapport à l’étape créée en premier. 
 
-De plus, nous ne pouvons pas garantir avec précision ce à quoi ressemblera cette répartition. Si vous souhaitez une répartition égale, ajoutez un filtre de [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/).
+De plus, nous ne pouvons pas garantir avec précision ce à quoi ressemblera cette répartition. Si vous souhaitez une répartition égale, ajoutez un filtre de [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
 
 ### Que se passe-t-il lorsque vous arrêtez un Canvas ?
 
@@ -54,7 +54,7 @@ Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canv
 
 Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
 
-Pour plus d'informations sur ce que vous pouvez modifier après le lancement, consultez la rubrique [Modifier votre canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Pour plus d'informations sur ce que vous pouvez modifier après le lancement, consultez la rubrique [Modifier votre canvas après le lancement]({{site.baseurl}}/post-launch_edits/).
 
 ### Comment le suivi des conversions utilisateur est-il effectué dans Canvas ?
 
@@ -95,7 +95,7 @@ Il existe un Canvas à une seule étape avec les heures calmes activées :
 
 ### Quelle est la différence entre un composant et une étape ?
 
-Un [composant]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) est une partie individuelle de votre Canvas que vous pouvez utiliser pour déterminer l'efficacité de votre Canvas. Les composants peuvent comprendre des actions telles que découper votre parcours utilisateur, ajouter un délai et même tester plusieurs parcours Canvas. Une étape du Canvas fait référence au parcours utilisateur personnalisé dans les branches du Canvas. Pour simplifier, votre Canvas est constitué de composants individuels qui créent des étapes dans votre parcours utilisateur.
+Un [composant]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) est une partie individuelle de votre Canvas que vous pouvez utiliser pour déterminer l'efficacité de votre Canvas. Les composants peuvent comprendre des actions telles que découper votre parcours utilisateur, ajouter un délai et même tester plusieurs parcours Canvas. Une étape du Canvas fait référence au parcours utilisateur personnalisé dans les branches du Canvas. Pour simplifier, votre Canvas est constitué de composants individuels qui créent des étapes dans votre parcours utilisateur.
 
 ### Comment puis-je afficher les analyses pour chacun des composants de mon Canvas ?
 
@@ -111,7 +111,7 @@ Le nombre d’utilisateurs accédant à un Canvas peut être différent du nombr
 
 ### Qu'advient-il des utilisateurs anonymes au cours de leur parcours dans Canvas ?
 
-Bien que les utilisateurs anonymes puissent entrer et sortir de Canvases, leurs actions ne sont pas associées à un profil utilisateur spécifique jusqu'à ce qu'ils soient identifiés, de sorte que leurs interactions peuvent ne pas être entièrement suivies dans votre analyse/analytique. Vous pouvez utiliser le [générateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) pour générer un rapport sur ces indicateurs.
+Bien que les utilisateurs anonymes puissent entrer et sortir de Canvases, leurs actions ne sont pas associées à un profil utilisateur spécifique jusqu'à ce qu'ils soient identifiés, de sorte que leurs interactions peuvent ne pas être entièrement suivies dans votre analyse/analytique. Vous pouvez utiliser le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/query_builder/) pour générer un rapport sur ces indicateurs.
 
 ### Pourquoi est-ce que le taux de conversion de mon étape Canvas est différent du taux de conversion total de ma variante de Canvas ?
 

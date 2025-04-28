@@ -25,7 +25,7 @@ tool:
 1. **메시징** > **캠페인으로** 이동한 다음 **캠페인 만들기를** 선택합니다.
 2. 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다. 그렇지 않으면 **푸시 알림을** 선택합니다. 그래도 잘 모르겠다면 아래의 **일반 푸시 캠페인과 멀티채널 푸시 캠페인 중 결정하기를** 참조하세요.
 3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가합니다. **팁:** 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. **팁:** 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
 {% details 일반 푸시 캠페인과 멀티채널 푸시 캠페인 중 결정하기 %}
@@ -101,11 +101,13 @@ tool:
 
 #### 알림 채널 또는 그룹(iOS 및 Android)
 
-플랫폼별 알림 옵션에 대한 자세한 내용은 [iOS 알림 옵션]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) 또는 [Android 알림 옵션]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/)을 참조하세요.
+For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/).
 
 #### 언어
 
 **언어 추가** 버튼을 사용하여 여러 언어로 사본을 추가합니다. 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. 사용 가능한 전체 언어 목록은 [지원 언어][18] 를 참조하세요.
+
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### 제목 및 본문
 
@@ -122,13 +124,13 @@ tool:
 푸시를 개인화 및 타겟팅하기 위해 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 포함할 수 있습니다.
 
 {% alert important %}
-제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/) 참조하세요.
+제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) 참조하세요.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![푸시 작성기의 본문 필드에 있는 AI 카피라이터 실행 버튼을 누릅니다.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}

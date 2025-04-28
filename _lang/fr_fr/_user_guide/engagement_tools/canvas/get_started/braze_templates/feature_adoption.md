@@ -15,7 +15,7 @@ Dans cet article, nous allons vous présenter un cas d'utilisation du modèle **
 
 ## Conditions préalables
 
-Pour utiliser ce modèle avec succès, vous devez créer un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) qui indique que les utilisateurs ont utilisé la fonctionnalité.
+Pour utiliser ce modèle avec succès, vous devez créer un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) qui indique que les utilisateurs ont utilisé la fonctionnalité.
 
 ## Adapter le modèle à vos besoins
 

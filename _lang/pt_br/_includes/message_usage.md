@@ -2,10 +2,6 @@
 
 > O dashboard de uso de mensagens fornece insights de autoatendimento sobre o uso de créditos de SMS e WhatsApp para uma visão abrangente do uso histórico e atual em comparação com as atribuições do contrato. Essas percepções podem reduzir sua confusão e ajudá-lo a fazer ajustes para prevenir riscos de excedente.
 
-{% alert important %}
-O dashboard Message Usage está atualmente em acesso antecipado. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
-
 O **Message Usage** dashboard é dividido em três seções:
 - [Visão Geral do Uso de Crédito](#credit-usage-overview)
 - [SMS/MMS](#smsmms) 

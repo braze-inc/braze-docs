@@ -94,13 +94,13 @@ If you use Liquid in your email messages, be sure to:
 
 ### Inserting pre-formatted variables
 
-You can insert pre-formatted variables with defaults through the **Add Personalization** modal located on the top-right of any templated text field.
+You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax][44]{: style="max-width:70%;"}
+![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax][44]{: style="max-width:90%;"}
 
 The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified by the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
-![A GIF of the Add Personalization modal that shows the user insertting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.][45]
+![A GIF of the Add Personalization modal that shows the user inserting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.][45]
 
 {% endraw %}
 

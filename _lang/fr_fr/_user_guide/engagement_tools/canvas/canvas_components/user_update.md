@@ -14,7 +14,7 @@ tool: Canvas
 
 > Le composant User Update (Mise à jour de l’utilisateur) vous permet de mettre à jour les attributs, événements et achats d’un utilisateur dans un éditeur JSON. Il n’est donc pas nécessaire d’inclure des informations sensibles, par exemple des clés API.
 
-Avec Mise à jour utilisateur, les mises à jour ne sont pas prises en compte dans votre limite de débit de requêtes par minute `/users/track`. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
+Avec Mise à jour utilisateur, les mises à jour ne sont pas prises en compte dans votre limite de débit de requêtes par minute `/users/track`. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
 
 Les utilisateurs ne passeront à l’étape Canvas suivante qu’une fois les mises à jour pertinentes de l’utilisateur effectuées. Si votre message suivant repose sur les mises à jour de l’utilisateur que vous effectuez, vous pouvez vous assurer que ces mises à jour ont été effectuées avant que les messages ne soient envoyés.
 
@@ -52,7 +52,7 @@ En incrémentant un attribut personnalisé qui suit un événement, vous pouvez 
 
 ### Mise à jour d'un tableau d'objets
 
-Un [tableau d'objets]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) est un attribut personnalisé stocké sur le profil d'un utilisateur et riche en données. Cela vous permet de créer un historique des interactions de l'utilisateur avec votre marque. Cela vous permet de créer des segments sur la base d'un attribut personnalisé qui est un champ calculé, comme l'historique des achats ou la valeur vie totale.
+Un [tableau d'objets]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) est un attribut personnalisé stocké sur le profil d'un utilisateur et riche en données. Cela vous permet de créer un historique des interactions de l'utilisateur avec votre marque. Cela vous permet de créer des segments sur la base d'un attribut personnalisé qui est un champ calculé, comme l'historique des achats ou la valeur vie totale.
 
 L'étape de mise à jour de l'utilisateur peut ajouter ou supprimer des attributs à ce tableau d'objets. Pour mettre à jour un tableau, sélectionnez le nom de l'attribut du tableau dans votre liste d'attributs et saisissez la valeur de la clé.
 
@@ -91,7 +91,7 @@ Déterminez quand un utilisateur a des articles dans son panier, quand il en ajo
 {% endraw %}
 
 {:start="2"}
-2\. Créez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) nommé `add_item_to_cart` qui est enregistré lorsqu'un utilisateur ajoute un article au panier.
+2\. Créez un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) nommé `add_item_to_cart` qui est enregistré lorsqu'un utilisateur ajoute un article au panier.
 3\. Créez un canvas avec une audience ciblée d'utilisateurs grâce à cet événement personnalisé. Désormais, lorsqu'un utilisateur ajoute un article à son panier, ce canvas est déclenché. Vous pouvez ensuite cibler votre communication directement sur cet utilisateur, en lui proposant des codes de réduction lorsqu'il a atteint un certain montant de dépenses, lorsqu’il a abandonné son panier pendant un certain temps, ou tout autre facteur en adéquation avec votre cas d'utilisation. 
 
 L'attribut `shopping_cart` contient le total de nombreux événements personnalisés : le coût total de tous les articles, le nombre total d'articles dans le panier, si le panier contient un cadeau, etc. Ceci peut ressembler à ce qui suit :
@@ -129,7 +129,7 @@ Vous pouvez utiliser l’étape de mise à jour de l’utilisateur pour faire pe
 Pour stocker la propriété de l’événement déclencheur d’un Canvas comme un attribut, utilisez le modal de personnalisation pour extraire et stocker la propriété d’entrée de Canvas. La mise à jour de l’utilisateur prend également en charge les fonctionnalités de personnalisation suivantes : 
 * [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [Propriétés d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [Propriétés d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * Logique Liquid (y compris l'[annulation de messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Plusieurs mises à jour d’attribut ou d’événement par objet
 

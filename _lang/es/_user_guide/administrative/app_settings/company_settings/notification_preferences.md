@@ -27,10 +27,11 @@ La siguiente tabla enumera las notificaciones disponibles:
 
 | Notificación | Descripción | Canales de notificación disponibles |
 |--------------|-------------|-----------------|
-| Errores de credenciales de AWS | Notifica a los destinatarios cuando Braze recibe un error mientras intenta usar tus credenciales de Amazon Web Services para una exportación de datos. Esto también incluye notificaciones de error de credenciales para Google Cloud Services y Azure (Microsoft Cloud Services). | Correo electrónico, Webhook |
+| Errores de credenciales de AWS | Notifica a los destinatarios cuando Braze recibe un error mientras intenta usar tus credenciales de Amazon Web Services para una exportación de datos. Esto incluye notificaciones de error de credenciales para Google Cloud Services y Azure (Microsoft Cloud Services). | Correo electrónico, Webhook |
 | La campaña se ha detenido automáticamente | Notifica a los destinatarios cuando Braze ha detenido una campaña. | Correo electrónico |
 | Caducidad de interacciones de la campaña | Notifica a los destinatarios sobre cualquier campaña que esté a punto de caducar, junto con cualquier información sobre segmentos, campañas o lienzos que hagan referencia a ella en un filtro de retargeting y que se hayan utilizado para enviar un mensaje en los 30 días anteriores. | Correo electrónico |
-| La campaña/El Canvas se ha actualizado | Notifica a los destinatarios cuando se actualiza o desactiva una campaña/lienzo activo, así como cuando se reactiva una campaña/lienzo inactivo o cuando se lanzan borradores. | Correo electrónico |
+| La campaña/El Canvas se ha actualizado | Notifica a los destinatarios cuando se actualiza o desactiva una campaña o Canvas activo, así como cuando se reactiva una campaña o Canvas inactivo o se lanzan borradores. | Correo electrónico |
+| Límite de volumen de campaña/lienzo alcanzado | Notifica a los destinatarios cuando una campaña o Canvas alcanza su límite de volumen. | Correo electrónico | 
 | Caducidad de interacciones del Canvas | Notifica a los destinatarios la caducidad de los datos de interacción de cualquier lienzo, junto con cualquier información sobre segmentos, campañas o lienzos a los que se haga referencia en un filtro de retargeting y que se hayan utilizado para enviar un mensaje en los 30 días anteriores. | Correo electrónico |
 | Tarjeta de canal de noticias publicado/en vivo | Notifica a los destinatarios cuando se programan o publican tarjetas de noticias. | Correo electrónico, Webhook |
 | Errores de credenciales de notificaciones push | Notifica a los destinatarios el momento en que las credenciales de inserción de una aplicación dejan de ser válidas y cuando se acerca su caducidad. | Correo electrónico, Webhook |

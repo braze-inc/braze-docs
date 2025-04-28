@@ -40,7 +40,7 @@ Braze provides the following statistics on segment size.
 
 For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for a gender that isn't unknown.][2]{: style="max-width:80%;"}
+![A filter group with a filter for users who had exactly one session count.][2]{: style="max-width:80%;"}
 
 ### Segment statistics
 
@@ -64,7 +64,7 @@ Braze estimates the segment membership count by querying a subset of your users,
 All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces are to be expected.
 {% endalert %}
 
-### Reasons for signficant changes
+### Reasons for significant changes
 
 The membership count may significantly change for a number of reasons, such as those in this table.
 

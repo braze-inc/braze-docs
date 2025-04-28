@@ -27,22 +27,22 @@ user_menu_list:
 
 popular_topic_list:
   - name: Importation d’utilisateurs
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+    link: /docs/user_guide/data/user_data_collection/user_import/
   - name: Événements personnalisés
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+    link: /docs/user_guide/data/custom_data/custom_events/
   - name: Gérer les inscriptions des utilisateurs
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   - name: Currents Braze
-    link: /docs/user_guide/data_and_analytics/braze_currents/ 
+    link: /docs/user_guide/data/braze_currents/
   - name: Attributs personnalisés
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
   - name: Personnaliser les messages in-app
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
   - name: Liquid
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   - name: Effectuer un appel API
     link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   - name: Événements d’engagement liés aux messages
-    link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
+    link: /docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/
 
 ---

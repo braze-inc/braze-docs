@@ -25,10 +25,6 @@ search_rank: 6
 
 データポイント使用量を確認するには、[**設定**] > [**請求**] に移動し、[**データポイント使用量の合計**] タブを選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[アカウント] アイコン > [**サブスクリプションと使用法**] > [**データポイント使用量の合計**] を選択すると、このページが表示されます。
-{% endalert %}
-
 データポイントダッシュボードコンポーネントの詳細については、「[請求]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/)」を参照してください。
 
 {% alert tip %}
@@ -74,6 +70,10 @@ CSV 経由でアップロードされたカスタム属性は、データポイ�
 また、サブスクリプション状態を変更してもデータポイントを消費しないため、CSV ファイルの `email_subscribe`、`push_subscribe`、`subscription_group_id` または `subscription_state` のフィールドを更新してもコストは発生しません。
 
 ## データポイント
+
+{% alert note %}
+以下の表は、説明を目的としたものです。特定のフィールドの厳密な命名規則、大文字化、および受け入れられた値については、取り込み方法に関連するドキュメントを参照してください。
+{% endalert %}
 
 {% tabs %}
 {% tab 請求対象外 %}
@@ -166,3 +166,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

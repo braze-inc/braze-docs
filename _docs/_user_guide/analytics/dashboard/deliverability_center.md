@@ -24,8 +24,8 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 2. In the bottom right, select the <i class="fas fa-plus-circle"></i> plus icon.
 3. Enter your root domain or subdomain to authenticate your email. If you're adding and verifying the root domain, this will allow the verification to be applied downstream to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com` and other subdomains without having to verify these individually.
 4. Google will generate a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
-5. Select **Next**. <br>![][9]
-6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. <br> ![][10]
+5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.][9]
+6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. <br> ![A prompt to verify ownership of the domain "demo.braze.com".][10]
 
 {% alert tip %}
 Be sure the TXT record is tied at the parent domain, not the subdomain you're using through Braze.
@@ -42,13 +42,13 @@ Before setting up your Deliverability Center, check that your domains have been 
 Follow these steps to integrate with Google Postmaster and set up your Deliverability Center:
 
 1. Go to **Analytics** > **Email Performance**.
-2. Select the **Deliverability Center** tab. <br>![][3]
+2. Select the **Deliverability Center** tab. <br>![A Deliverability Center with Google Postmaster unconnected.][3]
 3. Select **Connect with Google Postmaster**. 
 4. Select your Google Account and then select **Allow** to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools. 
 
 Your verified domains will display in the Deliverability Center. 
 
-![][5]
+![Two verified domains for Google Postmaster with a medium and low reputation.][5]
 
 You can also access Google Postmaster in the Braze dashboard by going to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
@@ -108,10 +108,10 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
 {% alert important %}
-If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/help/support/) with a list of your IP addresses.
+If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) with a list of your IP addresses.
 {% endalert %}
 
-![][8]
+![An example of results from Microsoft SNDS, including sample IPs, recipients, RCPT commands, data commands, filter result, complaint rate, trap message period start and end, and spam trap hits.][8]
 
 ### Metrics and definitions
 
