@@ -122,7 +122,7 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 | Context variable | Liquid | Description |
 |---|---|---|
 |`favorite_restaurants`| {% raw %}`{{user.favorite_categories}}`{% endraw %} | A user's favorite restaurant category. |
-|`promo_code`| {% raw %}`{{user.favorite_categories}}`{% endraw %} | The available discount code for the user. |
+|`promo_code`| {% raw %}`{{user.favorite_categories}}`{% endraw %} | The available discount code for a user. |
 |`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_restaurants}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
