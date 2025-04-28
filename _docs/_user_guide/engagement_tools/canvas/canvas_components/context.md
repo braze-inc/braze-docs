@@ -59,7 +59,7 @@ Canvas Context variables that are created or updated in the step can be assigned
 - Time
 - Object
 
-Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated. For example, if the context variable data type is set to Number but the value isn’t a number and is a string instead, the variable won’t be updated, and the following will occur:
+Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated. For example, if the context variable data type is set to **Number** but the value can’t be parsed as a number and is a string instead, the variable won’t be updated, and the following will occur:
 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas. 
 - For the Canvas step analytics, this is counted as _Not Updated_. 
@@ -68,7 +68,7 @@ Note that if the Liquid expression at runtime returns a value that doesn’t mat
 
 Users can exit a Canvas for the following reasons:
 
-- The context variable doesn't return any value.
+- The context variable doesn't return any value (is null).
 - A call to an embedded Connected Content fails.
 - The context variable types don't match.
 
@@ -113,7 +113,22 @@ You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_
 
 ### How do context variables differ from Canvas entry properties?
 
-If you’re participating in the Context step early access, `canvas_entry_properties` has been updated to `context`. This means you can send properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you’re participating in the Context step early access, Canvas entry properties are now part of Canvas context variables, meaning `canvas_entry_properties` is now referenced as `context`. This also means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+
+### Can variables reference each other in a singular Context step?
+
+Yes. All variables in a Context step are evaluated in a sequence, meaning you could have the following context variables setup:
+
+| Context variable | Liquid | Description |
+|---|---|---|
+|`favorite_restaurants`| {% raw %}`{{user.favorite_categories}}`{% endraw %} | A user's favorite restaurant category. |
+|`promo_code`| {% raw %}`{{user.favorite_categories}}`{% endraw %} | The available discount code for the user. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_restaurants}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalize_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user.
+
+This also applies to multiple Context steps. For example, if Context step A defines Variable A, and Message step A uses Variable A, then Context step C updates Variable A to B, then all subsequent steps referencing Variable A will have the value of B.
 
 [1]: {% image_buster /assets/img/context_step3.png %}
 [2]: {% image_buster /assets/img/context_example1.png %}
