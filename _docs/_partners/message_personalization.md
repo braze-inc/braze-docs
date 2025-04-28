@@ -75,7 +75,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: SEEN
   url: /docs/partners/message_personalization/dynamic_content/seen
-- name: Just Help
+- name: Just Words
   url: /docs/partners/justwords/
 - name: Transifex
   url: /docs/partners/transifex/
