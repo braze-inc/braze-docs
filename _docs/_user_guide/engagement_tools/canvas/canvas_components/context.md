@@ -128,7 +128,7 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 
 In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalize_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user.
 
-This also applies to multiple Context steps. For example, if Context step A defines Variable A, and Message step A uses Variable A, then Context step C updates Variable A to B, then all subsequent steps referencing Variable A will have the value of B.
+This also applies to multiple Context steps. For example, if Context step A defines Variable A as `job_title`, and Message step A uses Variable A, then Context step C updates Variable A to be `job_description`, then all subsequent steps referencing Variable A will have the value of `job_description`.
 
 [1]: {% image_buster /assets/img/context_step3.png %}
 [2]: {% image_buster /assets/img/context_example1.png %}
