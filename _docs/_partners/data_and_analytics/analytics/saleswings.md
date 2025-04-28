@@ -151,7 +151,7 @@ The following table shows the Braze event types supported by SalesWings and thei
 | Customer Behavior Events | Purchase Events | `[Purchase] Customer purchased $product_id for $price $currency` |
 | Message Events | Content Card Click | `[Content Card engagement] Clicked on $campaign_name content card` |
 | Message Events | Email Bounce | `[Alerting or negative] Email hard-bounced. This person's email appears to be no longer valid` |
-| Message Events | Email Click | `[Email campaign engagement] Clicked in email $campaign_name` |
+| Message Events | Email Click | `[Email campaign engagement] Clicked in email $campaign_name on $url` |
 | Message Events | Email Delivery | `[Nurturing] Received email $campaign_name` |
 | Message Events | Email Open | `[Email campaign engagement] Opened email $campaign_name` |
 | Message Events | Email Unsubscribe | `[Subscription status change] Unsubscribed from $campaign_name` |
@@ -165,9 +165,9 @@ The following table shows the Braze event types supported by SalesWings and thei
 | Subscriptions | Subscription Group State Change | `[Subscription status change] $subscription_status to/from $campaign_name` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-You can then configure **Custom Event > Event Name** conditions for SalesWings tags and scores against the SalesWings event names from the table above:
+You can then configure **Custom Event > Event Name** and **Custom Event > Event Property** conditions for SalesWings tags and scores against the SalesWings event names from the table above. The list of event properties available for conditions is prefilled with some of the commonly used entries, and you can always add new ones in the **Event Property** section of the [Rule Engine configuration page][12].
 
-![Example of an Event Name condition]({% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_event_name_condition.png %})
+![Example of an Event Name condition]({% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_custom_event_condition.png %})
 
 For configuration and further troubleshooting, contact the [SalesWings services team][1] for onboarding support.
 
@@ -183,3 +183,4 @@ For configuration and further troubleshooting, contact the [SalesWings services 
 [9]: {{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents
 [10]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events
 [11]: {{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events
+[12]: https://helium.saleswings.pro/falcon
