@@ -56,7 +56,7 @@ A entrega programada envolve o ajuste de suas campanhas para envio em um horári
 
 > Por que você está criando essa campanha? 
 
-É sempre importante ter uma meta definida em mente, e as campanhas o ajudam a entender sua performance em relação aos KPIs, como engajamento em sessões, compras e eventos personalizados. A seleção de pelo menos um [evento de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) permitirá que você entenda a performance de sua campanha.
+É sempre importante ter uma meta definida em mente, e as campanhas o ajudam a entender sua performance em relação aos KPIs, como engajamento em sessões, compras e eventos personalizados. A seleção de pelo menos um [evento de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) permitirá que você entenda a performance de sua campanha.
 
 ### O "onde": Encontrar meu público
 
