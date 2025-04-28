@@ -1,7 +1,5 @@
 ---
-nav_title: Documentación Feedback
-permalink: /feedback/
-hide_toc: true
+nav\_title: Documentación Feedback permalink: /feedback/ hide\_toc: true
 ---
 
 <fieldset style="margin-top: 60px;">
