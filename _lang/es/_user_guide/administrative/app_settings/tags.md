@@ -82,10 +82,6 @@ table td {
 
 Puede utilizar las mismas etiquetas en todas las campañas, Canvases y segmentos. Para renombrar, eliminar o añadir etiquetas de forma eficaz en tu panel de control, ve a **Configuración** > **Gestión de etiquetas**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), esta página se encuentra en **Configuración** > **Administrar configuración** > **Etiquetas**.
-{% endalert %}
-
 ![Pestaña Etiquetas de la página Administrar configuración][8]
 
 Para organizar mejor tus etiquetas, anídalas bajo una etiqueta padre. Por ejemplo, puede mantener todas las etiquetas de vacaciones anidadas bajo una etiqueta padre `Holidays`, o todas las etiquetas relacionadas con una etapa de su embudo de marketing bajo una etiqueta padre `Funnel`. 
