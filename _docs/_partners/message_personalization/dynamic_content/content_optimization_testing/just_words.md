@@ -1,8 +1,8 @@
 ---
-nav_title: Just_Words
-article_title: Just_Words
+nav_title: Just Words
+article_title: Just Words
 description: "This reference article outlines the partnership between Braze and Just Words, an AI-based SaaS business platform that creates personalized versions of existing campaigns and optimizes subject lines, creative content, and HTML email layouts over time."
-alias: /partners/justwords/
+alias: /partners/just_words/
 page_type: partner
 ---
 
@@ -19,12 +19,12 @@ When you use Just Words with Braze Connected Content to personalize your existin
 | Just Words Account | A [Just Words](https://www.justwords.ai/) account is required to take advantage of this partnership. If you don’t have a Just Words account, [schedule a 30-minute onboarding call](https://www.justwords.ai/book-demo). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Integration 
+## Integrating Just Words with Braze
 
 ### Step 1: Create a Just Words template
 
 1. Go to your Just Words console and [create a new template](https://console.justwords.ai/new).
-2. Choose an easy-to-remember ID that uses alphanumerics and underscores.
+2. Choose an easy-to-remember ID that uses letters, numbers, and underscores only.
 3. Fill out basic campaign details.
 4. Use AI to generate personalized variations.
 
@@ -45,7 +45,7 @@ Just Words works with Canvases and campaigns by using Connected Content.
 
 Each email step in the Canvas should correspond to a unique Just Words template.
 
-##### Set up your A/B test:
+#### Step 3.1: Set up your A/B test
 
 1. In a Canvas, select **Add Variant** > **Add Variant**, and add steps to each variant (like an email Message step).
 2. Split the audience traffic in half (make each variant 50%).
@@ -70,7 +70,7 @@ Each email step in the Canvas should correspond to a unique Just Words template.
 ```
 {% endraw %}
 
-##### Add personalization with custom attributes (optional)
+#### Step 3.2:  Add personalization with custom attributes (optional)
 
 To personalize your messages with custom attributes (such as `industry`), use the following Liquid format:
 

@@ -76,7 +76,7 @@ valid_partner_list:
 - name: SEEN
   url: /docs/partners/seen
 - name: Just Words
-  url: /docs/partners/justwords/
+  url: /docs/partners/just_words/
 - name: Transifex
   url: /docs/partners/transifex/
 - name: AccuWeather

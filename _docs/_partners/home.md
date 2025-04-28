@@ -345,5 +345,5 @@ valid_partner_list:
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 - name: Just Words
-  url: /docs/partners/justwords/
+  url: /docs/partners/just_words/
 ---
