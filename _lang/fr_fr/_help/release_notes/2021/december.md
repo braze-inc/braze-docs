@@ -17,7 +17,7 @@ alias: "/help/release_notes/2022/january/"
 
 ## Nouvelles propriétés pour les événements d’engagement sur les messages Currents
 
-De nouvelles propriétés ont été ajoutées pour sélectionner [les événements d'engagement des messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Cette mise à jour s’applique aux événements d’engagement sur les messages Currents suivants et à tous les partenaires qui les utilisent :
+De nouvelles propriétés ont été ajoutées pour sélectionner [les événements d'engagement des messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). Cette mise à jour s’applique aux événements d’engagement sur les messages Currents suivants et à tous les partenaires qui les utilisent :
 
 - Ajouter `LINK_ID`, `LINK_ALIAS` à :
   - Clic sur E-mail (toutes les destinations)
@@ -51,7 +51,7 @@ Si vous souhaitez en savoir plus, consultez notre nouvel article [Amazon Persona
 
 ## Nouveaux partenariats Braze
 
-### Yotpo – Commerce électronique
+### Yotpo – eCommerce
 
 L'intégration [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) et Braze vous permet de récupérer et d'afficher dynamiquement les évaluations par étoiles, les meilleures critiques et le contenu visuel généré par les utilisateurs sur les produits dans les e-mails et autres canaux de communication au sein de Braze. Vous pouvez également inclure les données de fidélisation des clients dans les e-mails et autres méthodes de communication pour créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
 
