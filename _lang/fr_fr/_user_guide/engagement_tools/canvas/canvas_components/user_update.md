@@ -16,7 +16,7 @@ tool: Canvas
 
 Avec Mise à jour utilisateur, les mises à jour ne sont pas prises en compte dans votre limite de débit de requêtes par minute `/users/track`. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
 
-Les utilisateurs ne passeront à l’étape Canvas suivante qu’une fois les mises à jour pertinentes de l’utilisateur effectuées. Si votre message suivant repose sur les mises à jour de l’utilisateur que vous effectuez, vous pouvez vous assurer que ces mises à jour ont été effectuées avant que les messages ne soient envoyés.
+Les utilisateurs ne passeront à l’étape Canvas suivante qu’une fois les mises à jour pertinentes de l’utilisateur effectuées. Cela signifie que tout envoi de messages ultérieurs reposant sur ces mises à jour de l'utilisateur sera à jour lors de l'exécution de l'étape suivante.
 
 ## Création d'une mise à jour de l'utilisateur
 
