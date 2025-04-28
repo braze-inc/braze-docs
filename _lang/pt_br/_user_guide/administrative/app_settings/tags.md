@@ -82,10 +82,6 @@ table td {
 
 Você pode usar as mesmas tags em campanhas, Canvas e segmentos. Para renomear, remover ou adicionar tags com eficiência em seu dashboard, acesse **Configurações** > **Gerenciamento de tags**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Configurações** > **Gerenciar configurações** > **Tags**.
-{% endalert %}
-
 ![Guia Tags na página Gerenciar configurações][8]
 
 Para organizar ainda mais suas tags, aninhe-as em uma tag principal. Por exemplo, você pode manter todas as tags de feriados aninhadas em uma tag principal `Holidays`, ou todas as tags relacionadas a um estágio do seu funil de marketing em uma tag principal `Funnel`. 
