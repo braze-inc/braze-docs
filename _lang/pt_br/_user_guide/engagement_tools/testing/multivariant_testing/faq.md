@@ -29,7 +29,7 @@ Esse é um teste separado da pontuação de confiança, que descreve apenas a pe
 
 ## Execução e conclusão de testes
 
-### Quando o teste inicial termina?
+### Quando termina o teste inicial?
 
 Ao usar a Variante vencedora para campanhas de envio único, o teste termina quando chega a hora de envio da Variante vencedora. O Braze considerará uma variante como vencedora se ela apresentar a maior taxa de conversão por uma margem estatisticamente significativa.
 
