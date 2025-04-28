@@ -364,7 +364,7 @@ Cela se produit dans quelques conditions spécifiques :
 
 ### Les recommandations existantes font-elles l'objet d'une formation hebdomadaire après la mise à niveau vers Item Recommendations Pro ?
 
-Non, les recommandations existantes ne seront pas automatiquement mises à jour pour s'entraîner chaque semaine ou prédire chaque jour après la mise à niveau. Vous pouvez vérifier les prochaines heures d'entraînement et de prédictions dans la section **Recommandation** en sélectionnant une recommandation. Pour les planifications mises à jour, nous vous suggérons de recréer vos recommandations.
+Oui, mais seulement après la prochaine mise à jour planifiée. Les recommandations existantes ne passent pas à l'entraînement hebdomadaire et aux prédictions quotidiennes immédiatement après la mise à niveau vers Item Recommendations Pro. Toutefois, ils adopteront automatiquement la nouvelle planification lors de leur prochain cycle de recyclage. Par exemple, si une recommandation a été formée pour la dernière fois le 1er février et qu'elle est configurée pour se recycler tous les 30 jours, elle adoptera la nouvelle planification hebdomadaire après sa prochaine mise à jour, le 2 mars.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
