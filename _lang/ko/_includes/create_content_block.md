@@ -1,9 +1,5 @@
 1. **템플릿** > **콘텐츠 블록으로** 이동합니다. <i class="fas fa-plus"></i> **콘텐츠 블록 만들기**를 클릭하고 **콘텐츠 블록 끌어서 놓기**를 선택합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **참여** > **템플릿 및 미디어** > **콘텐츠 블록 라이브러리에** 있습니다.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}
