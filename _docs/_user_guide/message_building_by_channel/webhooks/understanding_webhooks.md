@@ -37,9 +37,7 @@ Some more specific use cases include the following:
 
 ## Anatomy of a webhook
 
-A webhook consists of the following three parts:
-
-![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.][2]
+A webhook consists of the following three parts.
 
 | Part of Webhook | Description |
 | --- | --- |
@@ -47,6 +45,8 @@ A webhook consists of the following three parts:
 | HTTP URL | The URL address of your webhook endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. |
 | Request body | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Example webhook with an HTTP method, HTTP URL, and request body.][2]
 
 ### HTTP methods {#methods}
 

@@ -26,7 +26,7 @@ For example, if you have users who opt in to [Apple's Mail Privacy Protection (M
 
 To incorporate sunset policies into your campaigns, create a [segment][19] that automatically excludes users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
 
-To set up these segments, choose the `Has Marked You As Spam` and `Last Engaged With Message` filters located under the **Marketing Activity** section in the filter dropdown. 
+To set up these segments, choose the `Has Marked You As Spam` and `Last Engaged With Message` filters located under the **Retargeting** section in the filter dropdown. 
 
 When you apply the `Last Engaged With Message` filter, specify the type of messaging (push, email, or in-app notification) that the user has or has not interacted with, as well as the number of days it has been since the user last interacted. After you create a segment, choose to target this segment with any [messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/).
 
