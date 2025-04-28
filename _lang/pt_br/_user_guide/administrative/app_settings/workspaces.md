@@ -117,7 +117,7 @@ Para excluir seu espaço de trabalho ou instância do app:
 1. Acesse **Configurações** > **Configurações do app**.
 2. Selecione **Excluir espaço de trabalho** para excluir o respectivo espaço de trabalho ou selecione o ícone da lixeira ao lado da respectiva instância do app.
 
-Não é possível excluir instâncias do app ou espaços de trabalho que estejam sendo usados atualmente para direcionamento de usuários ou que tenham mais de 1.000 usuários. Se tentar fazer isso, você receberá uma mensagem de erro. Para prosseguir e excluí-los, [crie um caso de suporte]({{site.baseurl}}/help/support/) que inclua um link do dashboard e o nome da instância do app ou do espaço de trabalho a ser excluído.
+Não é possível excluir instâncias do app ou espaços de trabalho que estejam sendo usados atualmente para direcionamento de usuários ou que tenham mais de 1.000 usuários. Se tentar fazer isso, você receberá uma mensagem de erro. Para prosseguir e excluí-los, [crie um caso de suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/) que inclua um link do dashboard e o nome da instância do app ou do espaço de trabalho a ser excluído.
 
 {% alert warning %}
 Tenha cuidado ao excluir espaços de trabalho! Depois que um espaço de trabalho é excluído, ele não pode ser restaurado.
