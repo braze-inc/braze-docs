@@ -12,6 +12,18 @@ page_type: partner
 
 When you use Just Words with Braze Connected Content to personalize your existing Braze campaigns and Canvases, Just Words will use Braze Currents to optimize the content dynamically—so you don’t have to.
 
+## What are the benefits?
+
+After your integration is complete, you can leverage the Just Works platform to:
+
+- See real-time experiment results
+- Dynamically edit copy
+- View performance insights
+
+{% alert note %}
+Questions? Contact Just Words on their [booking page](https://www.justwords.ai/book-demo) or through the shared Slack channel.
+{% endalert %}
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -49,11 +61,7 @@ Each email step in the Canvas should correspond to a unique Just Words template.
 
 1. In a Canvas, select **Add Variant** > **Add Variant**, and add steps to each variant (like an email Message step).
 2. Split the audience traffic in half (make each variant 50%).
-3. In the composers for the Message steps that you want to use with Connected Content, paste in the Connected Content snippet from Just Words Console.
-
-![Braze A/B test Canvas setup.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
-
-##### Example Connected Content snippet
+3. In the composers for the Message steps that you want to use with Connected Content, paste in the Connected Content snippet from Just Words Console, such as the following snippet.
 
 {% raw %}
 ```liquid
@@ -69,6 +77,8 @@ Each email step in the Canvas should correspond to a unique Just Words template.
 {% message_extras :key copy_id :value {{jw.copy.id }} %}
 ```
 {% endraw %}
+
+![Braze A/B test Canvas setup.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 #### Step 3.2:  Add personalization with custom attributes (optional)
 
@@ -121,12 +131,4 @@ Braze Currents enables performance tracking and optimization over time.
 {: start="5" }
 5. Launch the Braze Current.
 
-You're all set! Now you can access the Just Words platform to:
-
-- See real-time experiment results
-- Dynamically edit copy
-- View performance insights
-
-{% alert note %}
-Questions? Contact Just Words on their [booking page](https://www.justwords.ai/book-demo) or through the shared Slack channel.
-{% endalert %}
+You're all set! Now you can use Just Words with Braze Connected Content.
