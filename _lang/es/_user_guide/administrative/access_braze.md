@@ -32,6 +32,9 @@ guide_featured_list:
 - name: Portal de productos
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Soporte de Braze
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 ## Navegadores compatibles
