@@ -11,24 +11,28 @@ tool: Canvas
 
 # Context
 
-> Use Context steps to create or update a set of variables that represent the context of a user (or insights into that user's behavior) as they move through a Canvas. Each context variable includes a name, data type, and a value that can include Liquid. By setting context as part of your user journey, you can do things like delay messages or filter users based on context variables.
+> Use Context steps to create or update a set of dynamic variables that represent the context of a user (or insights into that user’s behavior) as they move through a Canvas. Each context variable includes a name, data type, and a value that can include Liquid. By setting context as part of your user journey, you can do things like delay messages or filter users based on context variables.
 
 {% alert important %}
 Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
-## How it works
+## How context works
 
-Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be accessed using the Liquid `context`.
+Each Context step is composed of a variable name and associated data type, or context variables. These variables will follow a user through their Canvas journey and can be accessed using the Liquid `context`.
+
+{% alert note %}
+You can define up to 10 context variables for each Context step.
+{% endalert %}
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 There are two ways to set context variables:
 
-- **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variables.
+- **At Canvas entry:** Variables of events or API calls that trigger a user’s entry into a Canvas are stored as context variables.
 - **Using a Context step:** You can create or update context variables in the step editor.
 
-Note that any variables included in the context variable aren't automatically stored in the user profile.
+Any variables included in the context variable aren’t automatically stored in the user profile, as context variables exist only within the context of a user’s journey through a Canvas. This means a user can have different context variables each time they enter a Canvas. For example, if you have a Canvas that manages flight bookings, you could use a context variable to store a different flight confirmation code each time a user enters the Canvas.
 
 ## Creating a Context step
 
@@ -42,26 +46,35 @@ To create a Context step, add a step to your Canvas. Then, drag and drop the com
 4. Select **Preview** to view the context variable.
 5. Select **Done** to save the step.
 
-You can use context variables anywhere you can use Liquid, such as in Message and User Update steps, with the **Add Personalization** button.
+You can use Context variables anywhere you can use Liquid, such as in Message and User Update steps, with the **Add Personalization** button.
 
-## Context variable types
+#### Context variable types
 
-Context variables that are created or updated in the step can be assigned types. Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated.
+Canvas Context variables that are created or updated in the step can be assigned the following data types:
 
-For example, if the context variable data type is set to **Date** but the value isn’t that type, then the variable won’t be updated. This means the following will occur:
+- Boolean
+- Number
+- String
+- Array
+- Time
+- Object
 
-- The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
-- In your Canvas step analytics, this will be counted as *Not Updated*.
+Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated. For example, if the context variable data type is set to Number but the value isn’t a number and is a string instead, the variable won’t be updated, and the following will occur:
 
-Braze will exit a user at the step if:
+- The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas. 
+- For the Canvas step analytics, this is counted as _Not Updated_. 
+
+### How users exit Context steps
+
+Users can exit a Canvas for the following reasons:
 
 - The context variable doesn't return any value.
 - A call to an embedded Connected Content fails.
 - The context variable types don't match.
 
-### JSON types and Connected Content responses
+## JSON types and Connected Content responses
 
-Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. To prevent context variables from being evaluated as strings, enter these results into this Liquid filter: `as_json_string`. An example is:
+For consistency and error prevention, JSON returned by a Connected Content call will be evaluated as a string data type. If you want to convert this string into JSON, convert it by using `as_json_string`. An example is:
 
 {%raw%}
 ```liquid
@@ -70,8 +83,38 @@ Braze evaluates context variables that are expected to be JSON (or Object)-type 
 ```
 {%endraw%}
 
-## Using context variables with Delay steps
+## Using context variables
+
+For example, let's say you want to send your users personalized recommendations about discounts for cosmetic products in your retail brand. These users will enter the Canvas if they haven't made a purchase yet. The first step of the user journey will be a Delay step for one day to allow time for users to consider their purchase.
+
+To provide these recommendations based on their preferences, we'll create two context variables in the Context step to reference in the subsequent steps of the user journey:
+
+- `favorite_category`
+- `discount_code`
+
+![Two context variables set up to track a user's favorite category and the associated discount code.][2]{: style="max-width:90%"}
+
+Next, we'll set up a Message step for push notifications that includes the discount code for their favorite product category. The Liquid snippets for the context variables will be:
+
+{% raw %}
+- `{{context.${discount_code} | default: 'SPRING10'}}` 
+- `{{context.${favorite_category} | default: 'sitewide'}}`
+{% endraw %}
+
+![A Message step for a push notification with a discount code for a user's favorite product category.][3]{: style="max-width:90%"}
+
+Based on the user's favorite category, they'll receive an exclusive discount code to use.
+
+### Using context variables with Delay steps
 
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 
+## Frequently asked questions
+
+### How do context variables differ from Canvas entry properties?
+
+If you’re participating in the Context step early access, `canvas_entry_properties` has been updated to `context`. This means you can send properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+
 [1]: {% image_buster /assets/img/context_step3.png %}
+[2]: {% image_buster /assets/img/context_example1.png %}
+[3]: {% image_buster /assets/img/context_example2.png %}
