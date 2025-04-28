@@ -52,6 +52,21 @@ To define Context step's variable:
 
 Now you can use your Context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using a context variable](#using-context-variables).
 
+### Context variable types {#context-variable-types}
+
+Canvas Context variables that are created or updated in the step can be assigned the following data types:
+
+- Boolean
+- Number
+- String
+- Array
+- Time
+- Object
+
+{% alert note %}
+If the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated. For example, if the data type is set to **Number** but is set to a string instead, the variable won’t be updated, meaning the user will either advance to the next step or exit if it’s the last step in the Canvas. For the Canvas step analytics, it will be counted as _Not Updated_.
+{% endalert %}
+
 ### Step 3: Test exit criteria (optional)
 
 If the context variable is valid, then you can reference the variables throughout your Canvas. However, your users can exit the steps in a user journey after a Context step for the following reasons:
@@ -88,24 +103,9 @@ Based on the user's favorite category, they'll receive an exclusive discount cod
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 {% endalert %}
 
-## Context variable types {#context-variable-types}
-
-Canvas Context variables that are created or updated in the step can be assigned the following data types:
-
-- Boolean
-- Number
-- String
-- Array
-- Time
-- Object
-
-{% alert note %}
-If the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated. For example, if the data type is set to **Number** but is set to a string instead, the variable won’t be updated, meaning the user will either advance to the next step or exit if it’s the last step in the Canvas. For the Canvas step analytics, it will be counted as _Not Updated_.
-{% endalert %} 
-
 ## Converting strings to JSON
 
-For consistency and error prevention, JSON returned by a Connected Content call will be evaluated as a string data type. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
+For consistency and error prevention, JSON returned by a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) will be evaluated as a string data type. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
 
 {%raw%}
 ```liquid
