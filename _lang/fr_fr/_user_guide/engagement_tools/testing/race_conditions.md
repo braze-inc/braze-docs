@@ -39,9 +39,11 @@ Cependant, dans certains cas, le deuxième événement se déclenchera d’abord
 
 #### Introduire des retards
 
-Après la création d'un nouvel utilisateur, vous pouvez ajouter un délai avant l'envoi de toute campagne de ciblage ou de Canevas. Ce délai permet la création du profil utilisateur et la mise à jour de tout attribut pertinent susceptible de déterminer l'admissibilité de l'utilisateur à recevoir le message. 
+Après la création d'un nouvel utilisateur, vous pouvez ajouter un délai avant l'envoi de toute campagne de ciblage ou de Canevas. Ce délai permet la création du profil utilisateur et la mise à jour de tout attribut pertinent susceptible de déterminer l'admissibilité de l'utilisateur à recevoir le message.
 
 Par exemple, lorsqu'un utilisateur s'inscrit à votre application, vous pouvez lui envoyer une offre promotionnelle après 24 heures. Par ailleurs, si vous créez un utilisateur ou enregistrez un attribut personnalisé, vous pouvez ajouter un délai d'une minute avant de poursuivre votre processus afin d'éviter cette condition de concurrence.
+
+Vous pouvez également ajouter ce délai dans le [SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration) pour l'événement personnalisé spécifique qui déclenche l'entrée d'un nouvel utilisateur dans un Canvas. 
 
 ## Scénario 2 : Utiliser plusieurs endpoints API
 
