@@ -91,13 +91,13 @@ To personalize your messages with custom attributes (such as `industry`), use th
 
 Note that the custom attribute of `industry` is indicated by {% raw %}```&attrs.industry={{ custom_attribute.industry }}```{% endraw %}. 
 
-![Braze Liquid Logic](https://imagedelivery.net/lLhosygWiKIAdQXdGdijjg/f94640cc-82f6-4099-a9b2-fcd1d47a3900/public){: style="max-width:80%;"}
+![Braze Liquid logic in an HTML message composer.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
 
 ### Step 4: Preview the email
 
 Make sure to preview the email in Braze to confirm that the personalized content correctly renders.
 
-![Braze Preview](https://imagedelivery.net/lLhosygWiKIAdQXdGdijjg/deaf4216-ca1f-4775-6964-0e14d8e6d900/public){: style="max-width:80%;"}
+![Braze message preview for a Just Words email.]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
 
 ### Step 5: Set up Braze Currents
 
