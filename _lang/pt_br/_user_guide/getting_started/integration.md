@@ -27,7 +27,7 @@ Então, o que eles estão fazendo quando integram o Braze ao seu app ou site? Qu
 
 * Suas [chaves de API]({{site.baseurl}}/api/api_key/)
 * Seu [endpoint de SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * A Braze não fornece mais endpoints personalizados, portanto, use os endpoints predefinidos do SDK. Se você tiver recebido um endpoint personalizado pré-existente, Aqui, você pode encontrar as etapas de configuração envolvidas para integração [com Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) e [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
+  * A Braze não fornece mais endpoints personalizados, portanto, use os endpoints predefinidos do SDK. Se você tiver recebido um endpoint personalizado pré-existente, Aqui, você pode encontrar as etapas de configuração envolvidas para integração [com Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) e [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
 
 Você pode fornecer essas informações diretamente a eles ou dar-lhes acesso à Braze criando uma conta para eles. 
 
@@ -74,7 +74,7 @@ Se quiser coisas como lançamentos disparados por API e Connected Content, discu
 
 ### Etapa 5: Ambos realizam o controle de qualidade em sua implementação
 
-Trabalhe em conjunto com seu engenheiro para garantir que tudo esteja funcionando. Envie [mensagens de teste]({{site.baseurl}}/developer_guide/sending_test_messages/), use nossos [aplicativos de teste para Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) e [aplicativos de teste para iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), verifique todas as caixas antes de começar a enviar!
+Trabalhe em conjunto com seu engenheiro para garantir que tudo esteja funcionando. Envie [mensagens de teste]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), use nossos [aplicativos de teste para Android]({{site.baseurl}}/developer_guide/references/?tab=android) e [aplicativos de teste para iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), verifique todas as caixas antes de começar a enviar!
 
 Temos até instruções específicas para [testar sua integração com o Android ou FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) e testar o [push para iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 
