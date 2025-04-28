@@ -11,7 +11,7 @@ tool: Canvas
 
 # Context
 
-> Use Context steps to create or update a set of dynamic variables that represent the context of a user (or insights into that user’s behavior) as they move through a Canvas. Each context variable includes a name, data type, and a value that can include Liquid. By setting context as part of your user journey, you can do things like delay messages or filter users based on context variables.
+> Use Context steps to create or update a set of variables that represent the context of a user (or insights into that user’s behavior) as they move through a Canvas. Each context variable includes a name, data type, and a value that can include Liquid. By setting context as part of your user journey, you can delay messages or filter users based on context variables.
 
 {% alert important %}
 Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
