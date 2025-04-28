@@ -34,16 +34,11 @@ Vous pouvez effectuer une actualisation complète manuelle sur tous les segments
 Pour créer une extension de segments SQL entièrement actualisée :
 
 1. Sélectionnez **Audience** > **Extensions de segments**.
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Engagement** > **Segments** > **Extensions de segments**.
-{% endalert %}
-
-{:start="2"}
-2\. Cliquez sur **Créer une nouvelle extension** et sélectionnez **Actualiser complètement**.<br><br>
+2. Cliquez sur **Créer une nouvelle extension** et sélectionnez **Actualiser complètement**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\. Ajoutez un nom pour votre Segment Extension et saisissez votre SQL. Pour connaître les exigences et les ressources, reportez-vous à la section [Écriture de code SQL](#writing-sql).<br><br>
+3. Ajoutez un nom pour votre Segment Extension et saisissez votre SQL. Pour connaître les exigences et les ressources, reportez-vous à la section [Écriture de code SQL](#writing-sql).<br><br>
    ![Éditeur SQL montrant un exemple d'extension de segmentation SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\. Enregistrer votre Segment Extension.
+4. Enregistrer votre Segment Extension.
 
 {% endtab %}
 {% tab Actualisation incrémentielle %}
@@ -53,7 +48,7 @@ L'éditeur SQL d'actualisation incrémentale permet à l'utilisateur d'effectuer
 1. Sélectionnez **Audience** > **Extensions de segments**.
 {% alert note %}
 
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Engagement** > **Segments** > **Extensions de segments**.
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), vous trouverez cette page sous **Engagement** > **Segments** > **Extensions de segments**.
 {% endalert %}
 
 {:start="2"}
