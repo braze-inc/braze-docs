@@ -66,15 +66,15 @@ valid_partner_list:
 - name: Smartling
   url: /docs/partners/smartling/
 - name: Tangerine
-  url: /docs/partners/message_personalization/location/tangerine/
+  url: /docs/partners/tangerine/
 - name: Stylitics
-  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  url: /docs/partners/stylitics/
 - name: NiftyImages
-  url: /docs/partners/message_personalization/dynamic_content/niftyimages/
+  url: /docs/partners/niftyimages/
 - name: Future Anthem
-  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+  url: /docs/partners/future_anthem
 - name: SEEN
-  url: /docs/partners/message_personalization/dynamic_content/seen
+  url: /docs/partners/seen
 - name: Just Words
   url: /docs/partners/justwords/
 - name: Transifex
