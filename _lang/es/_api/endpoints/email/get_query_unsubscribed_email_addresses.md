@@ -14,7 +14,7 @@ description: "En este artículo se describen los detalles sobre el punto final B
 /email/unsubscribes
 {% endapimethod %}
 
-> Utiliza este endpoint para devolver los últimos correos electrónicos que se han dado de baja durante el periodo de tiempo comprendido entre `start_date` y `end_date`. Para obtener un historial completo del estado de la suscripción, utiliza [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) para hacer un seguimiento de estos datos.
+> Utiliza este endpoint para devolver los últimos correos electrónicos que se han dado de baja durante el periodo de tiempo comprendido entre `start_date` y `end_date`. Para obtener un historial completo del estado de la suscripción, utiliza [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) para hacer un seguimiento de estos datos.
 
 Puedes utilizar este punto final para configurar una sincronización bidireccional entre Braze y otros sistemas de correo electrónico o tu propia base de datos.
 
