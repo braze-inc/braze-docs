@@ -25,7 +25,7 @@ Tenga en cuenta que cuando el parámetro de consulta está codificado en URL se 
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás un token SCIM. Para más información, consulta [Aprovisionamiento automatizado de usuarios]({{site.baseurl}}/scim/automated_user_provisioning/).
+Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el origen de tu servicio como cabecera de `X-Request-Origin`. Para más información, consulta [Aprovisionamiento automatizado de usuarios]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Límite de velocidad
 

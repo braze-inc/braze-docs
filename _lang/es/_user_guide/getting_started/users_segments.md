@@ -19,7 +19,7 @@ En Braze, la información sobre su público se almacena en perfiles de usuario. 
 
 Si conoce los perfiles de los usuarios, podrá conocer mejor a su audiencia y relacionarse con ella de forma personalizada y específica. El perfil de un usuario contiene mucha información, pero he aquí algunas de las partes clave:
 
-- **Identificador de usuario:** Cada perfil de usuario se identifica unívocamente mediante un identificador de usuario, denominado `external_id`. Este identificador permite a Braze rastrear y asociar los datos de los usuarios a través de diferentes canales y dispositivos, proporcionando una visión unificada de las interacciones de cada usuario con su marca.
+- **Identificador de usuario:** Cada perfil de usuario se identifica unívocamente mediante un identificador de usuario, denominado `external_id`. Este identificador permite a Braze rastrear y asociar los datos de los usuarios a través de diferentes canales y dispositivos, proporcionando una visión unificada de las interacciones de cada usuario con su marca. [Los perfiles de usuario anónimos]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (usuarios que visitan tu sitio web o aplicación sin iniciar sesión) no tienen un `external_id`, pero se les pueden asignar [alias de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) como identificador alternativo.
 - [Atributos](#attributes)**:** Son datos específicos sobre el usuario, como su nombre, edad, ubicación o cualquier otra información demográfica. Puede utilizar estos atributos para segmentar su audiencia y personalizar sus mensajes.
 - [Eventos](#events)**:** Son acciones que realiza el usuario, como comprar, hacer clic en un enlace o abrir una aplicación. Braze realiza un seguimiento de estos eventos para ayudarle a comprender el comportamiento y la participación del usuario. De forma similar a los atributos, también puede utilizar los eventos para segmentar y personalizar.
 - **Compras:** Esta sección registra el historial de compras del usuario. Es crucial para comprender los hábitos de compra y las preferencias del usuario.
@@ -37,7 +37,7 @@ Los atributos son características o propiedades específicas asociadas a un usu
 
 #### Atributos estándar
 
-Los atributos estándar son atributos predefinidos que proporciona Braze. Braze realiza un seguimiento automático una vez integrado el SDK en su aplicación. Se trata de información común sobre los usuarios que la mayoría de las aplicaciones consideran útil, como datos demográficos y del dispositivo. Algunos ejemplos de atributos estándar son:
+Los atributos estándar son atributos predefinidos que puedes seguir con Braze tras integrar el SDK en tu aplicación. Se trata de información común sobre los usuarios que la mayoría de las aplicaciones consideran útil, como datos demográficos y del dispositivo. Algunos ejemplos son:
 
 - Nombre
 - Apellido
@@ -52,7 +52,7 @@ Los atributos estándar son atributos predefinidos que proporciona Braze. Braze 
 
 #### Atributos personalizados
 
-[Los atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) son atributos que usted define en función de sus necesidades empresariales específicas. Permiten realizar un seguimiento de la información exclusiva de su aplicación o negocio. 
+[Los atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) son atributos que usted define en función de sus necesidades empresariales específicas. Permiten realizar un seguimiento de la información exclusiva de su aplicación o negocio. 
 
 Por ejemplo, una aplicación de streaming de música puede hacer un seguimiento de atributos personalizados como:
 
@@ -87,7 +87,7 @@ Los eventos representan acciones o comportamientos específicos realizados por l
 
 #### Eventos personalizados
 
-[Los eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) son eventos que usted define en función de las acciones específicas que desea rastrear dentro de su aplicación o sitio. Por ejemplo, una aplicación de streaming de música podría rastrear eventos personalizados como:
+[Los eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) son eventos que usted define en función de las acciones específicas que desea rastrear dentro de su aplicación o sitio. Por ejemplo, una aplicación de streaming de música podría rastrear eventos personalizados como:
 
 - Canción reproducida
 - Lista de reproducción creada
@@ -109,7 +109,7 @@ Los puntos de datos se consumen cuando se actualizan los datos del perfil de un 
 
 Al considerar cuidadosamente qué información rastrear como puntos de datos, está apuntando a los datos de mayor impacto para la experiencia de sus usuarios. Su gestor de cuenta Braze le ayudará a recomendar las mejores prácticas de datos que se adapten a sus necesidades.
 
-Visita nuestro artículo dedicado para saber más sobre [los puntos de datos]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Visita nuestro artículo dedicado para saber más sobre [los puntos de datos]({{site.baseurl}}/user_guide/data/data_points/).
 
 ## Segmentos
 

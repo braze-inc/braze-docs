@@ -13,9 +13,7 @@ channel: news feed
 
 > この記事では、未読のニュースフィードカード数をリクエストし、その情報を使用して Web アプリケーションのバッジを強化する方法について説明します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ## 未読のニュースフィードカードカウントのリクエスト
 

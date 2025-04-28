@@ -4,7 +4,7 @@ article_title: Creative Details
 page_order: 4
 layout: dev_guide
 guide_top_header: "Creative Details"
-guide_top_text: "Before you get creative with our in-app messages, you should know some of the guidelines. All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. To ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching. <br><br> Check out the following message type Creative Specs or the global Creative Details article."
+guide_top_text: "Before you get creative with our in-app messages, you should know some of the guidelines. All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. To ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching."
 description: "This landing hub covers the design and content requirements for the three types of in-app messages, modal, slideup, and fullscreen."
 
 channel:
@@ -91,10 +91,10 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 ### GIFs and videos
 
-Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Additional considerations
 
-Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
+Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/) page.
 
 <br>

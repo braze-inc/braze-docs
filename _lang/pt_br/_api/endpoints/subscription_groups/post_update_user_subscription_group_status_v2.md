@@ -28,7 +28,7 @@ Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscriçã
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-Se você quiser ver exemplos ou testar este endpoint para **Grupos de WhatsApp**:
+Se você quiser ver exemplos ou testar este endpoint para **Grupos do WhatsApp**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 \* Você não pode incluir ambos os parâmetros `emails` e `phones`. Além disso, `emails`, `phones` e `external_ids` podem ser enviados individualmente.
 
 {% alert tip %}
-Ao criar novos usuários através do [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), você pode definir grupos de inscrições dentro do objeto de atributos do usuário, o que permite criar um usuário e definir o estado do grupo de inscrições em uma única chamada de API.
+Ao criar novos usuários usando o [endpoint `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), é possível definir grupos de inscrições no objeto de atribuições do usuário, o que permite criar um usuário e definir o estado do grupo de inscrições em uma única chamada de API.
 {% endalert %}
 
 ## Parâmetros de solicitação

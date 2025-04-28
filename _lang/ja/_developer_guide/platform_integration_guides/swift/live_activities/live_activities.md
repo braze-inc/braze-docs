@@ -25,7 +25,7 @@ description: "この記事では、Braze を使用して、Swift SDK のライ�
 
 - ライブアクティビティは、iOS 16.1 以降のiPhone およびiPad でのみ使用できます。この機能を使用するには、プロジェクトがこのiOS バージョンをターゲットとしていることを確認します。
 - `Push Notification` 資格を、Xcode プロジェクトの [**署名 & 機能**] の下に追加する必要があります。
-- Live Activities では、`.p8` キーを使用して通知を送信する必要があります。`.p12` や`.pem` などの古いファイルはサポートされません。
+- ライブアクティビティでは、通知を送信するために `.p8` キーを使用する必要があります。`.p12` や`.pem` などの古いファイルはサポートされません。
 - Braze Swift SDK のバージョン8.2.0以降は、[ライブアクティビティをリモートで登録](#step-2-start-the-activity)できます。この機能を使用するには、iOS 17.2 以降が必要です。
 
 {% alert note %}
@@ -75,7 +75,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 まず、アクティビティの登録方法を選択します。
 
-- **リモート:**[`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) メソッドを使用し、[`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) エンドポイントを使用してアクティビティを起動します。
+- **リモート:**アプリケーションとユーザーのライフサイクルのできるだけ早い段階 (およびP ush to Start トークンが必要になる前) に、[`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) メソッドを使用します。次に、[`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) エンドポイントを使用してアクティビティを開始します。
 - **ローカル:**Live Activity のインスタンスを作成し、[`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) メソッドを使用して、管理するBrazeのプッシュトークンs を作成します。
 
 {% tabs local %}

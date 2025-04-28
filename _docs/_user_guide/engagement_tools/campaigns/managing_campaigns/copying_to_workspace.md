@@ -18,9 +18,9 @@ Copying campaigns across workspaces is generally available for the following sup
 
 ## How to copy a campaign to a different workspace
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu with "Copy to workspace" option.][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to Workspace**. After copying, we recommend reviewing and testing your campaign to confirm that all fields work properly.
+Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to workspace**. After copying, we recommend reviewing and testing your campaign to confirm that all fields work properly.
 
 When you copy a campaign across workspaces, fields such as campaign name and description, variants, delivery schedule type, and conversion behaviors are copied. For email campaigns, fields such as email body, subject, and preheader are also copied over to the destination workspace. 
 
@@ -154,6 +154,10 @@ Note the following Liquid references with dependencies when copying campaigns ac
 - Voucher and promotion tags
 
 When you copy a campaign across workspaces, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
+
+### Copying campaigns with feature flags
+
+To copy a feature flag campaign between workspaces, make sure the destination workspace has a [feature flag experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) configured with an ID that matches the feature flag referenced in the original campaign. If you copy a campaign but a matching feature flag ID doesn't exist in the destination workspace, the feature flag selection in the campaign will be blank when copied, and you'll have to select a different one.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

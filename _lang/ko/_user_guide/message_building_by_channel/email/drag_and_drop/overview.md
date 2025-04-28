@@ -25,10 +25,10 @@ tool:
     </tr>
     <tr>
         <td style="text-align: center;">
-            <img src="{% image_buster /assets/img/dnd/dnd_content.png %}" alt="당신의 이메일 레이아웃을 위한 다양한 구조 조합을 포함하는 &apos;행&apos; 탭입니다." style="max-width: 100%; height: auto;">
+            <img src="{% image_buster /assets/img/dnd/dnd_content.png %}" alt="The &apos;Rows&apos; tab that includes different structural combinations for your email layout." style="max-width: 100%; height: auto;">
         </td>
         <td style="text-align: center;">
-            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="기본 블록, 미디어 및 고급 기능이 포함된 &apos;콘텐츠&apos; 탭" style="max-width: 100%; height: auto;">
+            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="The &apos;Content&apos; tab that includes basic blocks, media, and advanced" style="max-width: 100%; height: auto;">
         </td>
     </tr>
 </table>
@@ -82,24 +82,24 @@ tool:
 - 저장된 끌어서 놓기 이메일 템플릿을 사용합니다.
 
 {% alert note %}
-기존의 커스텀 HTML 템플릿이나 제3자가 만든 템플릿을 사용하려면 **템플릿** > **이메일 템플릿**으로 이동하여 **드래그 앤 드롭 편집기**를 편집 경험으로 선택하여 템플릿을 재생성해야 합니다.
+기존의 커스텀 HTML 템플릿이나 제3자가 만든 템플릿을 사용하려면, **템플릿**  >** 이메일 템플릿으로** 이동하여 **드래그 앤  드롭 편집기를 **편집 경험으로 선택하여 템플릿을 재생성해야 합니다.
 {% endalert %}
 
 **템플릿** 섹션에서 모든 템플릿에 액세스할 수도 있습니다.
 
 {% alert note %}
-만약 당신이 [구형 탐색]({{site.baseurl}}/navigation)을 사용하고 있다면, 템플릿은 **템플릿 및 미디어** 아래에 있습니다.
+[이전 탐색을 사용하는]({{site.baseurl}}/navigation) 경우 템플릿은 **템플릿 및 미디어** 아래에 있습니다.
 {% endalert %}
 
 템플릿을 선택하면 **이메일 변형** 아래에 전송 정보 및 이메일 본문이 포함된 이메일 개요가 표시됩니다. 
 
-그런 다음 **편집 이메일 본문**을 선택하여 드래그 앤 드롭 편집기에서 이메일 구조를 디자인하기 시작합니다. 
+Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
 
-!["이메일 변형" 섹션과 예시 이메일 본문.][8]
+![The "Email Variants" section with an example email body.][8]
 
 ### 2단계: 이메일 작성
 
-드래그 앤 드롭 편집 환경은 세 가지 섹션으로 나뉩니다: **보내기 설정**, **콘텐츠**, **미리보기 및 테스트**. 이메일 본문 작성의 마법은 **콘텐츠** 섹션에서 이루어집니다. 이메일을 작성하기 전에 이메일 작성 환경을 안내하는 주요 구성 요소를 이해하는 것이 중요합니다. 검토가 필요하면 [편집자에 대하여](#about-the-editor)를 참조하십시오.
+드래그 앤 드롭 편집 환경은 세 가지 섹션으로 나뉩니다: **보내기 설정**, **콘텐츠**, **미리보기 및 테스트**. 이메일 본문 작성의 마법은 **콘텐츠** 섹션에서 이루어집니다. 이메일을 작성하기 전에 이메일 작성 환경을 안내하는 주요 구성 요소를 이해하는 것이 중요합니다. If you need to review, see [About the editor](#about-the-editor).
 
 준비가 되면 드래그 앤 드롭 콘텐츠 블록을 사용하여 이메일을 구축하세요.
 
@@ -110,12 +110,12 @@ tool:
 - **콘텐츠** 타일을 기본 편집기로 드래그할 수도 있습니다. 이렇게 하면 타일에 대한 행이 생성됩니다.
 - 타일을 선택하고 **콘텐츠 속성** 및 **블록 옵션**에서 필드를 조정하여 타일을 더 세분화할 수 있습니다. 여기에는 글자 간격, 패딩, 줄 높이 등을 편집하는 것이 포함됩니다.
 
-드래그 앤 드롭 이메일을 추가로 사용자 정의할 수 있는 다른 방법은 [기타 사용자 정의](#other-customizations)를 확인하세요.
+드래그 앤 드롭 이메일을 더욱 사용자 정의할 수 있는 다른 방법에 대한 다른 [사용자 정의를 확인하세요.](#other-customizations)
 
 이메일을 작성할 때 데스크톱 보기와 모바일 보기를 전환하여 사용자 그룹에 대한 이메일 메시지가 어떻게 표시되는지 미리 볼 수 있습니다. 이렇게 하면 콘텐츠가 반응형인지 확인하고 필요한 경우 조정할 수 있습니다.
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![드래그 앤 드롭 편집기의 스타일 설정 옆 콘텐츠 패널에 있는 카피라이터 버튼.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -131,7 +131,7 @@ tool:
 
 오른쪽 패널의 미리보기가 추가한 전송 정보로 채워집니다. 이 정보는 **설정** > **이메일 환경설정** > **보내기 구성으로** 이동하여 업데이트할 수도 있습니다.
 
-#### 개인화된 이메일 헤더(고급)
+#### 개인화된 이메일 헤더 (고급)
 
 **전송 설정**에서 이메일 헤더 및 이메일 추가 정보에 대한 개인 설정을 추가하여 다른 이메일 서비스 제공업체에 추가 데이터를 다시 보낼 수 있습니다. 받는 사람의 이름을 포함하는 등 이메일 헤더를 커스텀하는 것도 이메일이 열릴 가능성을 높이는 데 도움이 될 수 있습니다.
 
@@ -165,7 +165,7 @@ tool:
 
 #### Inbox Vision 사용
 
-받은편지함 비전을 사용하면 이메일 클라이언트 및 모바일 기기의 관점에서 이메일 캠페인을 볼 수 있습니다. 이메일 메시지를 Inbox Vision을 사용하여 테스트하려면 **Inbox Vision**을 **미리보기 및 테스트** 섹션에서 선택하고 **Run Inbox Vision**을 선택하세요.
+받은편지함 비전을 사용하면 이메일 클라이언트 및 모바일 기기의 관점에서 이메일 캠페인을 볼 수 있습니다. 받은편지함 비전을 사용하여 이메일 메시지를 테스트하려면 **미리 보기 및 테스트** 섹션에서 **받은편지함** 비전을 선택하고 **받은편지함 비전 실행**을 클릭합니다.
 
 {% alert tip %}
 이메일 메시지의 배경 이미지로 인해 이미지 사이에 흰색 선이나 끊김 현상이 나타날 수 있으므로 이메일 메시지의 세부적인 내용을 테스트하고 확인하는 것이 중요합니다.
@@ -232,6 +232,14 @@ tool:
 
 이미지 소스 속성에 Liquid를 포함하여 이메일 메시지에 동적 이미지를 포함하도록 선택할 수 있습니다. 예를 들어 정적 이미지 대신 {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %}를 이미지 URL로 삽입하여 이미지에 사용자의 이름을 포함할 수 있습니다. 이렇게 하면 각 사용자에게 맞춤화된 이메일을 보낼 수 있습니다.
 
+### Change text direction
+
+When composing your message, you can toggle the text direction between left-to-right to right-to-left by selecting the respective **Text direction** button. You might use this option when creating messages in languages like Arabic and Hebrew.
+
+![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.][1]{: style="max-width:50%;"}
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 ### 링크에 HTML 속성 추가
 
 ![링크에 대해 "클릭 추적" 속성이 꺼진 "속성" 섹션.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -265,3 +273,4 @@ tool:
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

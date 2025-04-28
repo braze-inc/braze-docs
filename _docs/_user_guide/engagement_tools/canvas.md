@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Canvas Components
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
     image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Managing Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
@@ -32,6 +32,9 @@ guide_featured_list:
     image: /assets/img/braze_icons/target-04.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
+    image: /assets/img/braze_icons/annotation-question.svg
+  - name: Troubleshooting Canvases
+    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 

@@ -100,7 +100,7 @@ La siguiente tabla enumera los posibles errores devueltos y los pasos asociados 
 | `ids-too-large` | Los ID de los artículos no pueden tener más de 250 caracteres. |
 | `ids-not-unique` | Comprueba que los ID de los elementos sean únicos en la solicitud. |
 | `ids-not-strings` | Los ID de artículo deben ser de tipo cadena. |
-| `items-missing-ids` | Hay artículos que no tienen ID de artículo. Compruebe que cada artículo tiene un ID de artículo. |
+| `items-missing-ids` | Algunos artículos no tienen ID de artículo. Compruebe que cada artículo tiene un ID de artículo. |
 | `invalid-ids` | Los ID de elementos solo pueden incluir letras, números, guiones y guiones bajos. |
 | `request-includes-too-many-items` | Su solicitud tiene demasiados elementos. El límite de elementos por solicitud es de 50. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

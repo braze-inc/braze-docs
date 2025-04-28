@@ -96,7 +96,7 @@ A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-A/B 테스트를 실행할 때, 특히 비즈니스의 '전환'에 여러 단계나 액션이 포함되는 경우 각 변형이 전환 퍼널에 어떤 영향을 미쳤는지 파악할 수 있는 [퍼널 보고서를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) 생성하는 것을 잊지 마세요.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 또한 채널에 따라 이상적인 테스트 길이도 달라질 수 있습니다. 대부분의 사용자가 각 채널에 참여하는 데 걸리는 평균 시간을 염두에 두세요.
@@ -136,7 +136,7 @@ A/B 테스트를 실행할 때, 특히 비즈니스의 '전환'에 여러 단계
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
 [6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

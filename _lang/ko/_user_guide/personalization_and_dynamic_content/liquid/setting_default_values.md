@@ -20,7 +20,7 @@ description: "이 참조 문서에서는 메시지에서 사용하는 개인화 
 | default: 'Insert Your Desired Default Here'
 ```
 
-기본값이 제공되지 않고 필드가 누락되었거나 사용자에게 설정되지 않은 경우 메시지에서 필드가 비워집니다.
+기본값이 제공되지 않고 필드가 누락되었거나 사용자에게 설정되지 않은 경우 메시지에서 해당 필드가 비워집니다.
 
 다음 예는 기본값을 추가하는 올바른 구문을 보여줍니다. 이 경우 사용자의 `first_name` 필드가 비어 있거나 사용할 수 없는 경우 "Valued User"라는 단어가 `{{ ${first_name} }}` 속성을 대체합니다.
 
@@ -61,7 +61,7 @@ Hi Valued User, thanks for using the App!
 ```
 
 {: start="2"}
-2\. 그런 다음 조건부 논리를 사용하여 `is_premium_user` 이 `true` 일 경우 보낼 메시지를 지정합니다. 즉, `premium_user` 이 `true` 인 경우 전송할 내용입니다. 또한 사용자 이름이 없는 경우를 대비하여 사용자 이름에 기본값을 할당합니다.
+2\. 그런 다음 조건부 논리를 사용하여 `is_premium_user` 가 `true` 일 경우 보낼 메시지를 지정합니다. 즉, `premium_user` 이 `true` 인 경우 전송할 내용입니다. 또한 사용자 이름이 없는 경우를 대비하여 사용자 이름에 기본값을 할당합니다.
 
 ```liquid
 {% if is_premium_user %}

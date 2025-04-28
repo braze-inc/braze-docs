@@ -34,16 +34,11 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 完全更新 SQL セグメントエクステンションを作成するには:
 
 1. [**オーディエンス**] > [**セグメントエクステンション**] に移動します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**セグメント**] > [**セグメントエクステンション**] でこのページを見つけることができます。
-{% endalert %}
-
-{:start="2"}
-2\.[**エクステンションを新規作成**] をクリックし、[**完全に更新**] を選択します。<br><br>
+2. [**エクステンションを新規作成**] をクリックし、[**完全に更新**] を選択します。<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\.セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
+3. セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
    ![SQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\.セグメントエクステンションを保存します。
+4. セグメントエクステンションを保存します。
 
 {% endtab %}
 {% tab 増分更新 %}
@@ -53,7 +48,7 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 1. [**オーディエンス**] > [**セグメントエクステンション**] に移動します。
 {% alert note %}
 
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**セグメント**] > [**セグメントエクステンション**] でこのページを見つけることができます。
+[古いナビゲーション]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)を使用している場合は、[**エンゲージメント**] > [**セグメント**] > [**セグメントエクステンション**] でこのページを見つけることができます。
 {% endalert %}
 
 {:start="2"}
@@ -89,7 +84,7 @@ AI SQL ジェネレーターを使用するには、以下を実行します。
 - 過去1年間に購入回数が5回未満のユーザー
 
 ### ヒント
-- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
+- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
 - この機能の [SQL 記述ルール]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql)をよく理解してください。これらのルールに従わないと、エラーが発生します。たとえば、SQL コードでは `user_id` 列を選択する必要があります。プロンプトの冒頭に「user who」と入力すると役に立ちます。
 - AI SQL ジェネレーターでは、1分あたり最大20のプロンプトを送信できます。
 
@@ -107,7 +102,7 @@ SQL を生成するために、Braze はプロンプトを OpenAI の API プラ
 
 ## SQL の記述
 
-SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-reference.html)を使用して記述する必要があります。クエリ可能なテーブルとカラムの全リストについては、[テーブルリファレンス]({{site.baseurl}}/sql_segments_tables/)を参照してください。
+SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-reference.html)を使用して記述する必要があります。クエリ可能なテーブルとカラムの全リストについては、[テーブルリファレンス]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)を参照してください。
 
 {% alert important %}
 クエリに使用できるテーブルにはイベントデータのみが含まれていることに注意してください。ユーザー属性をクエリする場合は、SQL セグメントを[クラシックセグメンター]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)のカスタム属性フィルターと組み合わせる必要があります。

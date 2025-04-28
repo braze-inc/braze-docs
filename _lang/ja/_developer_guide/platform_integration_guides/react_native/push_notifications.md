@@ -116,7 +116,7 @@ Braze.requestPushPermission(permissionOptions);
 さらに、Braze が受信プッシュ通知を検出して処理したイベントをサブスクライブすることもできます。リスナーキー `Braze.Events.PUSH_NOTIFICATION_EVENT` を使用します。
 
 {% alert important %}
-iOSプッシュ受信イベントは、フォアグラウンド通知および`content-available`バックグラウンド通知に対してのみトリガーされます。終了中に受信した通知や、`content-available` フィールドのないバックグラウンド通知ではトリガーされない。
+iOS プッシュ受信イベントは、フォアグラウンド通知と `content-available` バックグラウンド通知に対してのみトリガーされます。終了中に受信した通知や、`content-available` フィールドのないバックグラウンド通知ではトリガーされない。
 {% endalert %}
 
 ```javascript
@@ -227,7 +227,7 @@ macOS 13以降の特定のデバイスでは、Xcode 14以降で実行されて�
 2. [**キャンペーン**] に移動し、新しいプッシュ通知キャンペーンを作成します。テストしたいプラットフォームを選択します。
 3. テスト通知を作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスに通知が届くはずです。
 
-![テスト受信者として独自のユーザID を追加して、プッシュ通知をテストできることを示すブレーズプッシュキャンペーン。]({% image_buster /assets/img/react-native/push-notification-test.png %}"Push Campaign Test")
+![テスト受信者として独自のユーザID を追加して、プッシュ通知をテストできることを示す Braze プッシュキャンペーン。]({% image_buster /assets/img/react-native/push-notification-test.png %}"Push Campaign Test")
 
 ## Androidプッシュを追加FMSに転送する
 

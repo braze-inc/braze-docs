@@ -61,7 +61,7 @@ tool: Canvas
 예를 들어 다음 요청을 고려해 보세요: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Liquid `{{canvas_entry_properties.${product_name}}}`를 사용하여 메시지에 "신발"이라는 단어를 추가할 수 있습니다.
 {% endraw %}
 
-또한 메시지 단계의 [영구 항목 속성]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)을 활용하여 캔버스 워크플로 전체에서 사용자에게 개인화된 단계를 안내할 수도 있습니다.
+You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
 
 #### 오리지널 워크플로
 

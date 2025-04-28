@@ -65,11 +65,11 @@ En el siguiente ejemplo, Braze utiliza el ID externo del usuario para marcar per
 
 {% tabs local %}
 {% tab ejemplo de fichero csv %}
-| Dirección de correo electrónico | ID externo | Número de teléfono | Braze ID | Identificador para la regla | Perfil para mantener | Perfil para fusionar |
-\|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | email | TRUE | FALSE |
-| alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | email | FALSE | TRUE |
-| alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | email | FALSE | TRUE |
+| Dirección de correo electrónico | ID externo | Número de teléfono | ID de Braze | Identificador para la regla | Perfil para conservar | Perfil para fusionar |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
+| alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | correo electrónico | TRUE | FALSE |
+| alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | correo electrónico | FALSE | TRUE |
+| alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | correo electrónico | FALSE | TRUE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -111,6 +111,22 @@ Después de guardar sus reglas, puede previsualizar cómo funcionarán seleccion
 ### Paso 3: Fusionar duplicados
 
 Si está satisfecho con los resultados de la vista previa, vuelva a la página **Gestionar público** y seleccione **Fusionar todos los duplicados**.
+
+{% alert warning %}
+Los perfiles de usuario duplicados no pueden recuperarse tras la fusión.
+{% endalert %}
+
+## Fusión programada
+
+Similar a la fusión basada en reglas, la fusión programada te permite automatizar la fusión de perfiles de usuario diariamente mediante reglas preconfiguradas.
+
+{% alert important %}
+La fusión programada está en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+{% endalert %}
+
+![La página "Gestionar audiencia" con el botón "programar".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+Una vez activada la característica, Braze asignará automáticamente una franja horaria para realizar el proceso de fusión diariamente. Puedes desactivar la fusión programada en cualquier momento. Braze notificará a los administradores de tu espacio de trabajo 24 horas antes de que se produzca la fusión programada, proporcionando un recordatorio y tiempo para revisar la configuración.
 
 {% alert warning %}
 Los perfiles de usuario duplicados no pueden recuperarse tras la fusión.

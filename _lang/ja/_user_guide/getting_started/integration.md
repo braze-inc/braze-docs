@@ -12,7 +12,7 @@ description: "この参考記事では、エンジニアや開発者に必要な
 > Braze との統合は価値あるプロセスだ。でも、お客様は賢いです。お客様は**ここに**います。明らかに、お客様はすでにそれを知っています。しかし、おそらくお客様が知らないことは、お客様と開発者が一緒に旅に出ようとしているということだ。この旅には、技術的な専門知識、戦略的な計画、そして両者間の調整に役立つ一貫したコミュニケーションが必要です。
 
 {% alert note %}
-なお、この記事の内容はメールには当てはまりません。[メール設定]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/)のセクションで確認してください。
+なお、この記事の内容はメールには当てはまりません。[メール設定]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/)のセクションで確認してください。
 {% endalert %}
 
 ## 統合プロセスの技術的側面
@@ -27,7 +27,7 @@ Braze SDK (ソフトウェア開発キット) は、アプリまたはサイト�
 
 * [API キー]({{site.baseurl}}/api/api_key/)
 * [SDK エンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Brazeはカスタムエンドポイントを提供しなくなったので、定義済みの SDK エンドポイントを使用します。既存のカスタムエンドポイントが与えられている場合は、こちらで [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) 統合の設定ステップを確認できます。
+  * Brazeはカスタムエンドポイントを提供しなくなったので、定義済みの SDK エンドポイントを使用します。既存のカスタムエンドポイントが与えられている場合は、こちらで [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup)、[iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) 統合の設定ステップを確認できます。
 
 この情報を直接相手に渡すか、そのユーザーのアカウントを作成して Braze にアクセスできるようにすることもできます。 
 
@@ -45,9 +45,9 @@ Braze にはユーザーと連絡を取るための多くのオプションが�
 |---|---|
 | アプリ内メッセージ | SDK の実装とチャネル固有のステップが必要である。 |
 | プッシュ | メッセージング認証情報とプッシュトークンに関する適切な処理を提供するSDK実装が必要である。 |
-| メール | これはまったく別のプロセスである。統合の詳細については、[Eメール設定]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/)セクションをチェックする。 |
+| メール | これはまったく別のプロセスである。統合の詳細については、[Eメール設定]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/)セクションをチェックする。 |
 | コンテンツカードによって促進された | [コンテンツカードを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)使い始めるには、Brazeのカスタマーサクセスマネージャーにご連絡を。 |
-| SMS & MMS | 統合の詳細については、[SMSセットアップの]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup)セクションを参照のこと。 |
+| SMS & MMS | 統合の詳細については、[SMSセットアップの]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/)セクションを参照のこと。 |
 | Webhook | SDKの実装とチャンネル固有のステップが必要である。 | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -62,11 +62,11 @@ Brazeは1つの機能しかないのではありません。これは、単に�
 では、彼らにこの情報を提供するにはどうすればいいのでしょうか?
 
 1. マーケティングチームと協力して、キャンペーン、目標、属性、追跡が必要なイベントを定義します。それらのユースケースを定義し、チームと共有します。
-2. カスタムデータ要件 ([カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)など) を定義します。
+2. カスタムデータ要件 ([カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)、[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)など) を定義します。
 3. そこから、そのデータがどのように追跡されるべきか (SDKを通じてトリガーされるなど) について議論します。
-4. 必要な[ワークスペース]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/app_group_management/)の数を定義します。エンジニアは、これらのワークスペースを[テストおよび設定する]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/)方法を知っておく必要があります。
+4. 必要な[ワークスペース]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)の数を定義します。エンジニアは、これらのワークスペースを[テストおよび設定する]({{site.baseurl}}/user_guide/getting_started/workspaces/)方法を知っておく必要があります。
 
-これらの情報をすべて発見したら、エンジニアと共有します。彼らはその情報をもとに、あなたの[カスタムデータ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/)を実装します。[ユーザーをインポートする]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)必要さえある場合があります。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)にも注意する必要があります。
+これらの情報をすべて発見したら、エンジニアと共有します。彼らはその情報をもとに、あなたの[カスタムデータ]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)を実装します。[ユーザーをインポートする]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)必要さえある場合があります。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/)にも注意する必要があります。
 
 ### ステップ 4: 希望に応じてカスタマイズしてくれる
 
@@ -74,9 +74,9 @@ API トリガーによる起動や Connected Content などが必要な場合は
 
 ### ステップ 5: 二人とも実装のQAを行う
 
-エンジニアと協力して、すべてが機能していることを確認します。[テストメッセージ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)を送信し、[Android 用のテストアプリ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/)と [iOS 用のテストアプリ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/)を使用して、送信を開始する前にすべてのボックスを確認します。
+エンジニアと協力して、すべてが機能していることを確認します。[テストメッセージ]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/)を送信し、[Android 用のテストアプリ]({{site.baseurl}}/developer_guide/references/?tab=android)と [iOS 用のテストアプリ]({{site.baseurl}}/developer_guide/references/?tab=swift)を使用して、送信を開始する前にすべてのボックスを確認します。
 
-[Android や FireOS との統合をテスト]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration)したり、[iOS のプッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/)をテストするための具体的なステップまでもあります。
+[Android や FireOS との統合をテスト]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration)したり、[iOS のプッシュ]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/)をテストするための具体的なステップまでもあります。
 
 ## 実装後
 

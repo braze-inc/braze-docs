@@ -12,10 +12,6 @@ tool: Campaigns
 
 > アクションベースの配信キャンペーンまたはイベントトリガーキャンペーンは、トランザクションベースまたはアチーブメントベースのメッセージに非常に効果的です。特定の日にキャンペーンを送信する代わりに、ユーザーが特定のイベントを完了した後に送信するようにトリガーできます。 
 
-{% alert important %}
-アクションベースの配信は、[アプリ内メッセージを含むキャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas)では使用できません。これらのステップはスケジュールする必要があります。
-{% endalert %}
-
 ## トリガーキャンペーンの設定
 
 ### ステップ 1: トリガーイベントを選択する
@@ -96,11 +92,11 @@ Braze [カスタムイベントプロパティ][32] を使用してトリガー�
 
 ### ステップ 3: 例外イベントを選択する
 
-ユーザーがこのキャンペーンを受け取らないようにする例外イベントを選択します。これを実行できるのは、トリガーされたメッセージが一定時間遅れて送信される場合だけです。例外イベントには、購入、セッションの開始、キャンペーンで指定された [コンバージョンイベント][18] のいずれかの実行、またはカスタムイベントの実行があります。ユーザーがトリガーイベントを完了したが、遅延時間によりメッセージが送信される前に例外イベントを完了した場合、そのユーザーはキャンペーンを受け取りません。例外イベントが原因でキャンペーンを受け取れなかったユーザーは、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/)するよう設定しなくても、次回にトリガーイベントを完了したときに自動的にキャンペーンの受け取りが可能になります。
+ユーザーがこのキャンペーンを受け取らないようにする例外イベントを選択します。これを実行できるのは、トリガーされたメッセージが一定時間遅れて送信される場合だけです。[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) は、購入、セッションの開始、キャンペーンの指定された[conversion events][18]、またはカスタムイベントの実行を行うことができます。ユーザーがトリガーイベントを完了したが、遅延時間によりメッセージが送信される前に例外イベントを完了した場合、そのユーザーはキャンペーンを受け取りません。例外イベントが原因でキャンペーンを受け取れなかったユーザーは、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)するよう設定しなくても、次回にトリガーイベントを完了したときに自動的にキャンペーンの受け取りが可能になります。
 
 ![][20]
 
-例外イベントの使用方法の詳細については、[ユースケース]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases)のセクションをご覧ください。
+例外イベントの使用方法の詳細については、[ユースケース]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases)のセクションをご覧ください。
 
 > 例外イベントと一致するトリガーイベントを含むキャンペーンを送信すると、Braze はキャンペーンをキャンセルし、例外イベントのメッセージ配信時間に基づいて新しいキャンペーンを自動的に再スケジュールします。たとえば、最初のトリガーイベントが 5 分から始まり、例外イベントが 10 分に始まる場合、公式キャンペーンのメッセージ配信時間は例外イベントの 10 分となります。
 
@@ -114,7 +110,7 @@ Braze [カスタムイベントプロパティ][32] を使用してトリガー�
 
 ![][21]
 
-ユーザーが指定された時間枠内にトリガーイベントを完了したが、スケジュールされた遅延により時間枠外にメッセージを受け取る資格を得た場合、そのユーザーはキャンペーンを受け取りません。そのため、メッセージの時間枠よりも長い時間遅延を設定すると、キャンペーンを受け取るユーザーはなくなります。さらに、ユーザーの[ローカルタイムゾーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns)でメッセージを送信するように選択できます。
+ユーザーが指定された時間枠内にトリガーイベントを完了したが、スケジュールされた遅延により時間枠外にメッセージを受け取る資格を得た場合、そのユーザーはキャンペーンを受け取りません。そのため、メッセージの時間枠よりも長い時間遅延を設定すると、キャンペーンを受け取るユーザーはなくなります。さらに、ユーザーの[ローカルタイムゾーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)でメッセージを送信するように選択できます。
 
 ### ステップ 5: 期間の選択
 
@@ -126,7 +122,7 @@ Braze [カスタムイベントプロパティ][32] を使用してトリガー�
 
 ![][31]
 
-期間を逃したためにユーザーがメッセージを受信しなかった場合、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/)するよう設定していなくても、次回にトリガーイベントを完了したときにキャンペーンの受け取りが可能になります。ユーザーを再有効化するよう選択した場合、ユーザーは指定された期間内に条件を満たしていれば、トリガーイベントを完了するたびにキャンペーンを受け取ることができます。
+期間を逃したためにユーザーがメッセージを受信しなかった場合、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)するよう設定していなくても、次回にトリガーイベントを完了したときにキャンペーンの受け取りが可能になります。ユーザーを再有効化するよう選択した場合、ユーザーは指定された期間内に条件を満たしていれば、トリガーイベントを完了するたびにキャンペーンを受け取ることができます。
 
 キャンペーンに特定の期間も割り当てている場合、ユーザーがメッセージを受け取るには、その期間とその日の特定の時間帯の両方で条件を満たす必要があります。
 
@@ -189,7 +185,7 @@ Braze [カスタムイベントプロパティ][32] を使用してトリガー�
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

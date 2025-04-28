@@ -1,4 +1,4 @@
-You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/).
+You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
 
 {% details Show template %}
 {% raw %}
@@ -31,10 +31,6 @@ Before you start, you'll need the following:
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                 |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
 
 <!-- An optional section you can use to outline the typical or atypical use cases for your integration. -->
 ## Use cases

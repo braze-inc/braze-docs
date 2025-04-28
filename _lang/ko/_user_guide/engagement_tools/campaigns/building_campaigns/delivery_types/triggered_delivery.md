@@ -13,7 +13,7 @@ tool: Campaigns
 > 실행 기반 전달 캠페인 또는 이벤트 트리거 캠페인은 트랜잭션 또는 업적 기반 메시지에 매우 효과적입니다. 특정 날짜에 캠페인을 전송하는 대신 사용자가 특정 이벤트를 완료한 후에 캠페인을 전송하도록 트리거할 수 있습니다. 
 
 {% alert important %}
-[인앱 메시지가 있는 캔버스 구성요소에는 실행 기반 전달을 사용할 수 없습니다. 이러한 단계는 반드시 예약해야 합니다.
+Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). 이러한 단계는 반드시 예약해야 합니다.
 {% endalert %}
 
 ## 트리거된 캠페인 설정하기
@@ -96,11 +96,11 @@ tool: Campaigns
 
 ### 3단계: 예외 이벤트 선택
 
-사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. 예외 이벤트는 구매, 세션 시작, 캠페인에서 지정한 [전환 이벤트][18]를 수행하거나 커스텀 이벤트를 수행하는 것일 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
+사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. 예외 이벤트는 구매, 세션 시작, 캠페인에서 지정한 [전환 이벤트][18]를 수행하거나 커스텀 이벤트를 수행하는 것일 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
 
 ![][20]
 
-예외 이벤트를 사용하는 방법에 대한 자세한 내용은 [사용 사례]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases) 섹션에서 확인할 수 있습니다.
+예외 이벤트를 사용하는 방법에 대한 자세한 내용은 [사용 사례]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases) 섹션에서 확인할 수 있습니다.
 
 > 예외 이벤트와 일치하는 트리거 이벤트가 포함된 캠페인을 전송하면 Braze는 캠페인을 취소하고 예외 이벤트의 메시지 전송 시간에 따라 자동으로 새 캠페인을 다시 예약합니다. 예를 들어 첫 번째 트리거 이벤트가 5분에 시작되고 예외 이벤트가 10분에 시작되는 경우 예외 이벤트의 10분을 공식 캠페인의 메시지 전달 시간으로 사용합니다.
 
@@ -114,7 +114,7 @@ tool: Campaigns
 
 ![][21]
 
-사용자가 지정된 기간 동안 트리거 이벤트를 완료했지만 예정된 지연으로 인해 해당 기간 외에는 메시지를 받을 자격이 없는 경우 캠페인을 받지 못합니다. 따라서 메시지 시간보다 긴 시간 지연을 설정하면 캠페인을 수신할 사용자가 없습니다. 또한 사용자의 [현지 시간]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns)대로 메시지를 보내도록 선택할 수 있습니다.
+사용자가 지정된 기간 동안 트리거 이벤트를 완료했지만 예정된 지연으로 인해 해당 기간 외에는 메시지를 받을 자격이 없는 경우 캠페인을 받지 못합니다. 따라서 메시지 시간보다 긴 시간 지연을 설정하면 캠페인을 수신할 사용자가 없습니다. 또한 사용자의 [현지 시간]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)대로 메시지를 보내도록 선택할 수 있습니다.
 
 ### 5단계: 기간 선택
 
@@ -126,7 +126,7 @@ tool: Campaigns
 
 ![][31]
 
-사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
+사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
 
 캠페인에 특정 기간도 지정한 경우 사용자는 해당 기간과 하루 중 특정 시간대에 자격을 갖추어야 메시지를 받을 수 있습니다.
 
@@ -189,7 +189,7 @@ tool: Campaigns
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

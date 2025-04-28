@@ -15,7 +15,7 @@ description: "This article outlines details about the Update Live Activity endpo
 /messages/live_activity/update
 {% endapimethod %}
 
-> Use this endpoint to update and end [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed by your iOS app. This endpoint requires additional setup.
+> Use this endpoint to update and end [Live Activities]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) displayed by your iOS app. This endpoint requires additional setup.
 
 After you register a Live Activity, you can pass a JSON payload to update your Apple Push Notification service (APNs). See Apple's documentation on [updating your Live Activity with push notification payloads](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) for more information.
 
@@ -26,7 +26,7 @@ After you register a Live Activity, you can pass a JSON payload to update your A
 To use this endpoint, you'll need to complete the following:
 
 - Generate an API key with the `messages.live_activity.update` permission.
-- Register a Live Activity [remotely]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) or [locally]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) using the Braze Swift SDK.
+- Register a Live Activity [remotely]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) or [locally]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) using the Braze Swift SDK.
 
 ## Rate limit
 

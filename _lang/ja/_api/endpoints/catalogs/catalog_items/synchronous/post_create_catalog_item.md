@@ -29,7 +29,7 @@ description: "この記事では、Create catalog item Brazeエンドポイン�
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `catalog_name` | 必須 | 文字列 | カタログ名。 |
 | `item_id` | 必須 | 文字列 | カタログ項目のID。 |
@@ -37,12 +37,12 @@ description: "この記事では、Create catalog item Brazeエンドポイン�
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `items` | 必須 | 配列 | アイテム・オブジェクトを含む配列。アイテムオブジェクトは、`id` フィールドを除く、カタログのすべてのフィールドを含むべきである。1つのリクエストにつき、1つのアイテムオブジェクトのみが許可される。 |
+| `items` | required | 配列 | アイテム・オブジェクトを含む配列。アイテムオブジェクトは、`id` フィールドを除く、カタログのすべてのフィールドを含むべきである。1つのリクエストにつき、1つのアイテムオブジェクトのみが許可される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |

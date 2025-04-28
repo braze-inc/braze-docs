@@ -34,7 +34,7 @@ Braze REST API のドキュメントで使用される用語の概要を次に�
 
 ### エンドポイント
 
-Brazeは、ダッシュボードとRESTエンドポイント用のさまざまなインスタンスを管理している。アカウントのプロビジョニングが完了したら、以下のURLのいずれかにログインする。どのインスタンスにプロビジョニングされるかに基づいて、正しいRESTエンドポイントを使用する。不明な場合は、\[サポートチケット] \[サポート] を開くか、以下の表を使用して、使用するダッシュボードの URL を正しい REST エンドポイントに一致させてください。
+Brazeは、ダッシュボードとRESTエンドポイント用のさまざまなインスタンスを管理している。アカウントのプロビジョニングが完了したら、以下のURLのいずれかにログインする。どのインスタンスにプロビジョニングされるかに基づいて、正しいRESTエンドポイントを使用する。不明な場合は、[サポートチケット] [サポート] を開くか、以下の表を使用して、使用するダッシュボードの URL を正しい REST エンドポイントに一致させてください。
 
 {% alert important %}
 API呼び出しにエンドポイントを使用する場合は、RESTエンドポイントを使用する。
@@ -42,19 +42,7 @@ API呼び出しにエンドポイントを使用する場合は、RESTエンド�
 SDK 統合には、REST エンドポイントではなく [SDKエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)を使用します。
 {% endalert %}
 
-|インスタンス|URL|RESTエンドポイント|SDKエンドポイント|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API制限
 
@@ -71,11 +59,11 @@ SDK 統合には、REST エンドポイントではなく [SDKエンドポイン
 
 REST Application Programming Interface キー （REST APIキー） は、API 呼び出しを認証し、呼び出し元のアプリケーションまたはユーザーを識別するために API に渡される一意のコードです。APIアクセスは、御社のREST APIエンドポイントへのHTTPSウェブリクエストを使って行われる。Brazeでは、REST APIキーをApp Identifierキーと組み合わせて使用し、データの追跡、アクセス、送信、エクスポート、分析を行い、お客様とBrazeの両エンドですべてがスムーズに進むようサポートする。
 
-ワークスペースとAPIキーはBrazeでは密接な関係にある。ワークスペースは、複数のプラットフォームにまたがる同じアプリケーションのバージョンを収容するように設計されている。また、多くの顧客はワークスペースを使用して、無料版とプレミアム版のアプリケーションを同じプラットフォーム上に格納しています。お気づきかもしれませんが、これらのワークスペースも REST API を利用しており、独自の REST API キーが存在します。これらのキーは、API上の特定のエンドポイントへのアクセスを含むように、個別にスコープすることができる。API の各呼び出しには、エンドポイントヒットへのアクセス権を持つキーを含める必要があります。
+ワークスペースとAPIキーはBrazeでは密接な関係にあります。ワークスペースは、複数のプラットフォームにまたがる同じアプリケーションのバージョンを収容するように設計されている。また、多くの顧客はワークスペースを使用して、無料版とプレミアム版のアプリケーションを同じプラットフォーム上に格納しています。お気づきかもしれませんが、これらのワークスペースも REST API を利用しており、独自の REST API キーが存在します。これらのキーは、API上の特定のエンドポイントへのアクセスを含むように、個別にスコープすることができる。API の各呼び出しには、エンドポイントヒットへのアクセス権を持つキーを含める必要があります。
 
 REST API キーとワークスペース API キーの両方を`api_key` と呼ぶ。`api_key` はリクエストヘッダーとして各リクエストに含まれ、REST API を使用するための認証キーとして機能します。これらの REST API は、ユーザーの追跡、メッセージの送信、ユーザーデータのエクスポートなどに使用されます。新しい REST API キーを作成する際には、そのキーに特定のエンドポイントへのアクセス権を与える必要があります。API キーに特定の権限を割り当てることで、API キーが認証できる呼び出しを厳密に制限できます。
 
-![API KeysタブのREST APIキーパネル。][27]
+![API キータブにある REST API キーのパネル。][27]
 
 {% alert tip %}
 REST API キーに加えて、識別子キーと呼ばれるタイプのキーも存在し、API からアプリ、テンプレート、キャンバス、キャンペーン、コンテンツカード、セグメントといった特定のものを参照するために使用できます。詳細については、「[API 識別子のタイプ]({{site.baseurl}}/api/identifier_types/)」を参照してください。
@@ -85,25 +73,19 @@ REST API キーに加えて、識別子キーと呼ばれるタイプのキー�
 
 新しいREST APIキーを作成する：
 
-1. \[**設定**] ＞ \[**API と識別子**] に進みます。
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、**Developer Console**>**API Settingsから**APIキーを作成できる。
-{% endalert %}
-
-{:start="2"}
-2\.\[**API キーを作成**] を選択します。
-3\.一目で識別できるように、新しいキーに名前をつける。
-4\.新しいキーに対して[許可リストに登録済みの IPアドレス](#api-ip-allowlisting)とサブネットを指定します。
+1. [**設定**] ＞ [**API と識別子**] に進みます。
+2. [**API キーを作成**] を選択します。
+3. 一目で識別できるように、新しいキーに名前をつける。
+4. 新しいキーに対して[許可リストに登録済みの IPアドレス](#api-ip-allowlisting)とサブネットを指定します。
 5. 新しいキーに関連付ける[権限](#rest-api-key-permissions)を選択します。
 
 {% alert important %}
-新しい API キーを作成した後は、権限の範囲や許可リストに登録済みの IP を編集できないことに留意してください。この制限はセキュリティ上の理由から設けられている。キーのスコープを変更する必要がある場合は、更新されたパーミッションを持つ新しいキーを作成し、古いキーの代わりにそのキーを実装する。実装が完了したら、古いキーを削除することができる。
+新しい API キーを作成した後は、権限の範囲や許可リストに登録済みの IP を編集できないことに留意してください。この制限はセキュリティ上の理由から設けられている。キーのスコープを変更する必要がある場合は、更新されたパーミッションを持つ新しいキーを作成し、古いキーの代わりにそのキーを実装する。実装が完了したら、古いキーを削除できます。
 {% endalert %}
 
 ### REST APIキーのパーミッション
 
-APIキーのパーミッションは、特定のAPIコールへのアクセスを制限するために、ユーザーまたはグループに割り当てることができるパーミッションである。APIキーの権限のリストを表示するには、**設定**>**APIと識別子と**進み、APIキーを選択する。
+APIキーのパーミッションは、特定のAPIコールへのアクセスを制限するために、ユーザーまたはグループに割り当てることができるパーミッションである。API キーのパーミッションのリストを表示するには、[**設定**] > [**API および識別子**] と進み、API キーを選択します。
 
 {% tabs %}
 {% tab ユーザーデータ %}
@@ -215,9 +197,7 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 {% endtab %}
 {% tab ニュースフィード %}
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 | 許可 | エンドポイント | 説明 |
 |---|---|---|
@@ -330,7 +310,7 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 
 ### REST API キーを管理する
 
-**設定**＞**APIと識別子**＞**APIキー**タブから、既存のREST APIキーの詳細を見たり、削除したりできる。REST APIキーは、作成後に編集することはできない。
+**設定**＞**APIと識別子**＞**APIキー**タブから、既存のREST APIキーの詳細を見たり、削除したりできる。REST API キーは、作成後に編集できないことに注意してください。
 
 **APIキー]**タブには、各キーについて以下の情報が含まれている：
 
@@ -343,13 +323,13 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 | 最終閲覧日    | このキーが最後に使われた日付。使用されていないキーの場合、このフィールドには「N/A」と表示されます。                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-APIキーの詳細を表示するには、キーにカーソルを合わせ、<i class="fa-solid fa-eye" alt="View"></i> **Viewを**選択する。これには、このキーが持つすべての権限、ホワイトリストに登録されているIP（もしあれば）、このキーがIPホワイトリストに登録されているかどうかが含まれる。
+API キーの詳細を表示するには、キーにカーソルを合わせて [<i class="fa-solid fa-eye" alt="View">**表示**] を選択します。これには、このキーが持つすべての権限、ホワイトリストに登録されている IP (もしあれば)、このキーが Braze IP ホワイトリストに登録されているかどうかが含まれます。
 
-![][30]
+![Braze ダッシュボードの API キー権限のリスト。][30]
 
-[ユーザーを削除しても]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/)、そのユーザーが作成したAPIキーは削除されない。キーを削除するには、キーにカーソルを合わせ、<i class="fa-solid fa-trash-can" alt="Delete"></i> **Deleteを**選択する。
+[ユーザーを削除]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/)する場合、そのユーザーが作成した関連 API キーは削除されません。キーを削除するには、キーにカーソルを合わせ、[<i class="fa-solid fa-trash-can" alt="Delete"></i> **削除**] を選択します。
 
-![][29]{: style="max-width:30%;"}
+![ゴミ箱のアイコンが強調表示され、「削除」を示す「最終閲覧日」という API キー。][29]{: style="max-width:30%;"}
 
 ### REST APIキーのセキュリティ
 
@@ -363,13 +343,13 @@ REST API キーによって潜在的に機密性の高い REST API エンドポ�
 REST APIキーは、潜在的にセンシティブなREST APIエンドポイントへのアクセスを可能にするものであることを考慮し、それらが安全に保管され、使用されることを確認すること。例えば、このキーを使ってウェブサイトからAJAXコールを行ったり、その他の一般的な方法で公開したりしてはならない。
 {% endalert %}
 
-キーが誤って公開された場合は、開発者コンソールから削除できます。このプロセスに関するヘルプについては、\[サポートチケット] \[サポート] を開きます。
+キーが誤って公開された場合は、開発者コンソールから削除できます。このプロセスに関するヘルプについては、[サポートチケット] [サポート] を開きます。
 
 ### API IP の許可リスト
 
 セキュリティをさらに強化するため、特定の REST API キーに対して REST API 要求を実行できる IP アドレスやサブネットのリストを指定できます。これは、許可リストまたはホワイトリストと呼ばれます。特定のIPアドレスやサブネットを許可するには、新しいREST APIキーを作成する際に、**Whitelist IPs**セクションに追加する：
 
-![APIキーの作成時にIPのリストを許可するオプション。][26]
+![API キーの作成時に IP を許可リストに登録するオプション][26]
 
 何も指定しない場合、すべての IP アドレスからリクエストを送信できます。
 
@@ -383,9 +363,9 @@ Braze to Braze webhook を作成し、許可リストを使用する場合は、
 
 Ruby を使用してBrazeを実装している場合は、[Ruby クライアントライブラリ](https://github.com/braze-inc/braze-api-client-ruby) を使用してデータのインポート時間を短縮できます。クライアント・ライブラリとは、あるプログラミング言語（この場合はRuby）に特化したコードの集まりで、APIを使いやすくするものだ。
 
-Rubyクライアント・ライブラリーは、[ユーザー・エンドポイントを]({{site.baseurl}}/api/endpoints/user_data)サポートしている。
+Ruby クライアントライブラリは、[ユーザーエンドポイント]({{site.baseurl}}/api/endpoints/user_data)をサポートしています。
 
-{% alert note %}
+{% alert important %}
 このクライアントライブラリは現在ベータ版です。このライブラリをより良いものにするために協力してくれませんか?ご意見、ご感想は[smb-product@braze.com](mailto:smb-product@braze.com) まで。
 {% endalert %}
 
@@ -399,7 +379,7 @@ Rubyクライアント・ライブラリーは、[ユーザー・エンドポイ
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-\[support] ： {{site.baseurl}}/braze_support/
+[support] ： {{site.baseurl}}/braze_support/
 [28]: {% image_buster /assets/img_archive/create-new-key.png %}
 [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

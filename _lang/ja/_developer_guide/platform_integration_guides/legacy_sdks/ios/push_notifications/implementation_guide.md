@@ -22,7 +22,7 @@ noindex: true
 
 ## 通知コンテンツアプリの拡張
 
-![2つのプッシュ・メッセージが並んで表示されている。右側のメッセージは、デフォルトのUI でプッシュがどのように表示されるかを示しています。右のメッセージは、カスタムプッシュUIを実装して作られたコーヒーのパンチカードプッシュである。]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
+![2つのプッシュ・メッセージが並んで表示されている。右側のメッセージは、デフォルトのUI でプッシュがどのように表示されるかを示しています。右側のメッセージには、カスタムプッシュ UI を実装して作成したコーヒーパンチカードプッシュが表示されます。]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
 プッシュ通知は、さまざまなプラットフォームで標準のように思われるものの、デフォルトの UI に通常実装されているものを超えて、膨大なカスタマイズオプションが提供されています。プッシュ通知が展開されると、コンテンツ通知拡張により、展開されたプッシュ通知のカスタムビューが有効になります。 
 
@@ -154,7 +154,7 @@ func didReceive(_ notification: UNNotification) {
 
 ダッシュボードで情報キャプチャ対応プッシュを設定するには、カスタムカテゴリーを登録および設定し、必要なキーと値のペアを指定する必要があります。例にあるように、プッシュに画像を含めることもできます。これを行うには、[リッチプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/)を統合し、キャンペーンの通知スタイルをリッチプッシュ通知に設定し、リッチプッシュ画像を含める必要があります。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\."Cert_description "を "Certified Brazeマーケター・ドライブ... "に設定]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### ボタンアクションの処理
 
@@ -195,7 +195,6 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 2. `completion(.doNotDismiss)` - 通知は開いたままです
 3. `completion(.dismissAndForward)` - プッシュが解除され、ユーザーがアプリケーションに転送されます。
 
-
 #### その他のユースケース
 
 プッシュ通知を介してユーザー入力を要求することは、多くの企業が利用していない魅力的な機会です。これらのプッシュメッセージでは、名前、メール、または番号などの基本的な情報を要求できるだけでなく、ユーザープロファイルが未完了の場合は完了するようにユーザーに促したり、フィードバックを送信するように促すこともできます。 
@@ -209,7 +208,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 ロギング分析は、[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントに到達する顧客のサーバーの助けを借りて、リアルタイムでのみ実行できます。分析をログに記録するには、`braze_id` 値をキーと値のペアフィールド (次のスクリーンショットを参照) に送信し、更新するユーザープロファイルを識別します。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\."Cert_description "を "Certified Brazeマーケター・ドライブ... "に設定]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### 手動ロギング
 
@@ -217,7 +216,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 また、モバイルアプリケーションが後で起動されるまで、分析は Braze に送信されないことに注意してください。つまり、削除設定に応じて、プッシュ通知が破棄されてモバイルアプリが起動し、分析が取得されるまでに不確定な期間が存在することがよくあります。この時間バッファーがすべてのユースケースに影響するとは限りませんが、ユーザーは影響を考慮し、必要に応じて、アプリケーションを開いてこの問題に対処するようにユーザー体験を調整する必要があります。 
 
-![Brazeで分析がどのように処理されるかを説明する図。1\.分析データが作成されます。2\.分析データが保存されます。3\.プッシュ通知を解除します。4\.プッシュ通知が解除されてからモバイルアプリが起動するまでの不確定な期間。5\.モバイルアプリが起動します。6\.分析データを受信します。7. 分析データはBrazeに送られる。]({% image_buster /assets/img/push_implementation_guide/push13.png %})
+![Brazeで分析がどのように処理されるかを説明する図。1\.分析データが作成されます。2\.分析データが保存されます。3\.プッシュ通知を解除します。4\.プッシュ通知が解除されてからモバイルアプリが起動するまでの不確定な期間。5\.モバイルアプリが起動します。6\.分析データを受信します。7. 分析データは Braze に送信されます。]({% image_buster /assets/img/push_implementation_guide/push13.png %})
 
 #### ステップ1:Xcode 内でのアプリケーショングループの設定
 機能 `App Groups` を追加します。アプリにアプリグループがない場合は、メインアプリターゲットの機能に移動し、`App Groups` をオンにして、「+」をクリックします。アプリのバンドル ID を使用してアプリグループを作成します。たとえば、アプリのバンドル ID が`com.company.appname` の場合、アプリグループに `group.com.company.appname.xyz` という名前を付けることができます。メインアプリターゲットとコンテンツ拡張ターゲットの両方で `App Groups` がオンになっていることを確認します。

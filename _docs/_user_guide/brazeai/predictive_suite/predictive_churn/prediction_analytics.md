@@ -22,7 +22,7 @@ As soon as the prediction is done training and this page is populated, you can j
 
 The distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of _Churn Risk Score_ or category.
 
-![][4]{: style="max-width:90%"}
+![][4]
 
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire prediction audience would be targeted.
 
@@ -52,17 +52,25 @@ Here's what we recommend for various ranges of _Prediction Quality_:
 
 The prediction will be trained again every two weeks and updated alongside the prediction quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the predictions list page as well as on your prediction's analytics page.
 
-## Estimated results {#estimated_results}
-
-![][6]{: style="float:right;max-width:30%;margin-left:15px;"}
+## Estimated accuracy {#estimated_results}
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the prediction audience. Based on data about users in the prediction audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users on that past data, these progress bars estimate for a future potential message using the audience highlighted with the slider:
 
-1. An estimate of how many actual churners will be correctly targeted <br><br> Of course, we don't know the future perfectly, so we don't know precisely which users from the prediction audience will churn in the future. But the prediction is a reliable inference. Based on past performance, this progress bar indicates how many of the total "actual" or "true" churners expected in the prediction Audience (based on prior churn rates) will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging. <br><br>
+![][6]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted<br><br>All machine learning models make errors. There may be users in your selection who have a high _Churn Risk Score_ but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion is those who will be incorrectly targeted using the current slider position.
+- How many selected users are expected to churn
+- How many selected users are expected **not** to churn
+
 
 Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
+
+### Users expected to churn
+
+This is an estimate of how many actual churners will be correctly targeted. Of course, we don't know the future perfectly, so we don't know precisely which users from the prediction audience will churn in the future. But the prediction is a reliable inference. Based on past performance, this progress bar indicates how many of the total "actual" or "true" churners expected in the prediction Audience (based on prior churn rates) will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging.
+
+### Users expected not to churn 
+
+This is an estimate of how many users who wouldn't have churned will be incorrectly targeted. All machine learning models make errors. There may be users in your selection who have a high _Churn Risk Score_ but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion represents those who will be incorrectly targeted using the current slider position.
 
 ## Churn correlation table {#correlation_table}
 

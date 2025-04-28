@@ -25,7 +25,7 @@ platform:
 
 ### Braze 권한
 
-대시보드에서 기능 플래그를 관리하려면 관리자 [권한이]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) 있거나 다음 [권한이]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) 있어야 합니다:
+대시보드에서 기능 플래그를 관리하려면 관리자 [권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)이 있거나 다음 권한이 있어야 합니다:
 
 | 권한                                                                    | 할 수 있는 작업                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|

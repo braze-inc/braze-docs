@@ -12,9 +12,7 @@ hidden: true
 
 # 뉴스피드 카테고리
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > 뉴스피드 카테고리를 사용하면 뉴스피드의 여러 인스턴스를 애플리케이션에 통합할 수 있습니다. 다양한 창 내에서 특정 카테고리의 뉴스피드 카드를 표시하는 피드를 통합하는 것이 가능합니다.
 

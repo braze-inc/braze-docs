@@ -26,8 +26,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: LINE
@@ -40,6 +38,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: MyPostcard
   url: /docs/partners/message_orchestration/additional_channels/messaging/mypostcard/      
-- name: ディクサ
+- name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 ---

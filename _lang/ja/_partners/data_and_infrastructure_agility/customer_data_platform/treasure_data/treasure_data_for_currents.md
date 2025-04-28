@@ -26,7 +26,7 @@ Braze とトレジャーデータの統合により、2 つのシステム間の
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-トレジャーデータは各イベントを一括してログに記録する。トレジャーデータに照会してイベント数を取得する方法については、[Braze Currents Import Integrationを](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration)参照。
+トレジャーデータは各イベントを一括してログに記録します。トレジャーデータを照会してイベントカウントを取得する方法の詳細については、「[Braze Currents のインポート統合](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration)」を参照してください。
 {% endalert %}
 
 ## 統合
@@ -39,7 +39,7 @@ Braze とトレジャーデータの統合により、2 つのシステム間の
 
 ### ステップ1:Braze を使用してトレジャーデータの Postback API を設定する
 
-Postback APIの作成方法は、[トレジャーデータのWeb][3]サイトに掲載されている。Brazeは、event-collectorによる取り込みを例外として、更新イベントをリアルタイムでトレジャーデータに直接送信する。完了すると、トレジャーデータからデータソース URL が提供されます。この URL をコピーして、次のステップで使用します。
+Postback API の作成方法については、[トレジャーデータ][3]の Web サイトを参照してください。Braze は、イベントコレクターによる取り込みを除き、更新されたイベントをリアルタイムでトレジャーデータに直接送信します。完了すると、トレジャーデータからデータソース URL が提供されます。この URL をコピーして、次のステップで使用します。
 
 ### ステップ2:Current を作成する
 
@@ -83,7 +83,7 @@ Braze で [**Currents**] > [**\+ Current を作成**] > [**トレジャーデー
 
 ## 統合の詳細
 
-Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) をトレジャーデータにエクスポートできます。
+Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) をトレジャーデータにエクスポートできます。
 
 エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。
 

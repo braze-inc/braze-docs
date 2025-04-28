@@ -7,7 +7,7 @@ description: "This reference article covers creating a custom Broadcast Receiver
 # Custom handling for push receipts, opens, dismissals, and key-value pairs via Broadcast Receiver {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
-Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) instead.
+Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) instead.
 {% endalert %}
 
 Braze also broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
@@ -150,4 +150,4 @@ For documentation on Braze push data keys, refer to the [Android SDK](https://br
 {% endalert %}
 
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml

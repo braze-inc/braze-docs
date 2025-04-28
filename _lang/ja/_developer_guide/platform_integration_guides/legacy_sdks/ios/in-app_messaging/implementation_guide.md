@@ -224,13 +224,13 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 ダッシュボードでモーダルアプリ内メッセージを設定するには、コンマ区切り文字列として書式設定された項目のリストを指定する必要があります。この例では、コネクテッドコンテンツを使用してチーム名の JSON リストを取得し、それに応じてフォーマットします。
 
-![in-アプリ メッセージ作成画面には、アプリ内メッセージの外観のプレビューが表示されますが、代わりにBrazeに指定したアイテムの一覧が表示されます。ブレーズUI は、電話に送信されない限り、カスタムのアプリ内メッセージUI を表示しないため、プレビューにはメッセージの外観が表示されないため、送信前にテストすることをお勧めします。]({% image_buster /assets/img/iam_implementation/dashboard1.png %})
+![in-アプリ メッセージ作成画面には、アプリ内メッセージの外観のプレビューが表示されますが、代わりにBrazeに指定したアイテムの一覧が表示されます。スマートフォンに送信されない限り、Braze UI にはカスタムアプリ内メッセージ UI が表示されないため、プレビューではメッセージがどのように表示されるかを示すものではないので、送信前にテストすることをお勧めします。]({% image_buster /assets/img/iam_implementation/dashboard1.png %})
 
 キーと値のペアに `attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
 `ABKInAppMessage` オブジェクト内の `extras` ディクショナリを使用して、表示すべき正しいビューを示す `view_type` キー (存在する場合) をクエリできます。アプリ内メッセージはメッセージごとに設定されるため、カスタムとデフォルトのモーダルビューが調和して機能することに注意してください。
 
-![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアには"attribute_key"set as "Favorite Team"2番目には"view_type"set as "picker".]({% image_buster /assets/img/iam_implementation/dashboard2.png %})があります{: style="max-width:65%;"}
+![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアでは「attribute_key」が「お気に入りチーム」に設定され、2番目のペアでは「view_type」が「ピッカー」に設定されています。]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -367,9 +367,9 @@ override func viewDidLoad() {
 
 キーと値のペアに、`attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
-![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア"attribute_key"が"Push Tags"2番目の"subtitle_text"が"が"有効化通知も。。"3番目の"view_type"が"table_list".](<meta id{: style="max-width:65%;"}
+![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア「attribute_key」は「プッシュタグ」として設定され、2番目の「subtitle_text」は「通知を有効にすると...」、として設定され、3番目の「view_type」は「テーブルリスト」として設定されます。]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### アプリ内メッセージタッチのインターセプト
-![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側のタッチはアプリ内メッセージによって処理され、削除されます。]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 カスタムフルアプリ内メッセージボタンを正しく機能させるには、アプリ内メッセージのタッチをインターセプトすることが重要です。デフォルトでは、`ABKInAppMessageImmersive` はメッセージにタップジェスチャ認識機能を追加するので、ユーザーはボタンなしでメッセージを閉じることができます。`UISwitch` またはボタンを `UITableViewCell` ビュー階層に追加すると、タッチはカスタムビューによって処理されるようになります。iOS 6 以降、ジェスチャー認識機能を使用する場合はボタンやその他のコントロールが優先され、カスタムのフルアプリ内メッセージが正常に機能するようになりました。 
 

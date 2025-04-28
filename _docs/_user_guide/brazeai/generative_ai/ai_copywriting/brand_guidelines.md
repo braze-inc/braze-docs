@@ -11,15 +11,20 @@ description: "This reference article covers the brand guidelines for AI copywrit
 
 ## Creating brand guidelines {#steps}
 
-Follow these steps to create brand guidelines in the AI copywriting assistant.
+Follow these steps to create brand guidelines in the AI copywriting assistant. You can also create brand guidelines on the [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/) settings page.
 
 ### Step 1: Create a brand guideline
 
-1. From your message composer, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Launch AI Copywriter**.
-   * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
+1. From your message composer, find and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> to [open the AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Select **Apply brand guideline** and then **Create a brand guideline**.
+
+![Dropdown for "Apply brand guidelines" expanded with the button "Create a brand guideline" in focus.][3]{:style="max-width:75%"}
+
+{: start="3"}
+
 3. Enter a name for this guideline. It will be the label you see in the previous selection.
 4. For **When will you use these brand guidelines?**, add details to help your colleagues (and future you) understand the context for using this guideline.
+5. If you want this to be the default brand guideline for the current workspace, check **Use as default brand guideline**.
 
 ![Brand guideline creation view.][1]
 
@@ -45,6 +50,8 @@ For **Exclusions**, list any language or style that doesn’t align with your br
 
 Test your guidelines to see how they perform. Expand **Test your guidelines** to generate example copy and adjust as needed.
 
+![Testing brand guidelines with a promotion about a spring sale for email subject lines.][2]
+
 ### Step 5: Save your guidelines
 
 When you're happy with your guidelines, select **Save brand guideline**. Your new guidelines will be saved in your workspace for future use.
@@ -67,3 +74,5 @@ In order to generate copy using a brand guideline, Braze will send your query in
 
 
 [1]: {% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines"
+[2]: {% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %} 
+[3]: {% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %} 

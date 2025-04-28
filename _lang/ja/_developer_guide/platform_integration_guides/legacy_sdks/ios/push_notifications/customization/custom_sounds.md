@@ -37,9 +37,9 @@ QuickTime Player でサウンドを開き、[**ムービー**] メニューか�
 
 ## ステップ2:ダッシュボードにサウンドのプロトコル URL を指定する
 
-サウンドはアプリ内でローカルにホストする必要があります。プッシュコンポーザーの [**サウンド**] フィールドで、アプリ内のサウンドファイルにリダイレクトするプロトコル URL を指定する必要があります。このフィールドに「default」を指定すると、デフォルトの通知音がデバイスで再生されます。これは、[メッセージングAPI]({{site.baseurl}}/api/endpoints/messaging/)またはダッシュボードのプッシュ作成画面の**「設定**」で指定できる：
+サウンドはアプリ内でローカルにホストする必要があります。プッシュコンポーザーの [**サウンド**] フィールドで、アプリ内のサウンドファイルにリダイレクトするプロトコル URL を指定する必要があります。このフィールドに「default」を指定すると、デフォルトの通知音がデバイスで再生されます。これは、以下のスクリーンショットに示すように、プッシュコンポーザーの [[messaging API]({{site.baseurl}}/api/endpoints/messaging/)] または [**設定**] にあるダッシュボードを使用して指定できます。
 
 ![]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードの他に、[メッセージングAPIを使って]({{site.baseurl}}/api/endpoints/messaging/)サウンドを設定することもできる。詳細については、[カスタムアラートサウンドの準備に関する](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html)Apple Developer Documentationを参照のこと。
+指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、[[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] でサウンドを設定することもできます。詳細については、[[カスタムアラートサウンドの準備](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html)] に関する Apple 開発者のドキュメントを参照してください。
 

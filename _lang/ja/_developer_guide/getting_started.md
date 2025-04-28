@@ -10,18 +10,18 @@ description: "このセクションは、あなたとあなたのマーケティ
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
+  - name: SDK の概要
+    link: /docs/developer_guide/getting_started/sdk_overview/
+    image: /assets/img/braze_icons/edit-04.svg
   - name: プラットフォームの概要
-    link: /docs/developer_guide/platform_wide/getting_started/platform_overview/
+    link: /docs/developer_guide/getting_started/platform_overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: 統合の概要
-    link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
+    link: /docs/developer_guide/getting_started/integration_overview/
     image: /assets/img/braze_icons/chevron-up-double.svg
   - name: アーキテクチャの概要
-    link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
+    link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: アナリティクスの概要
-    link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
-    image: /assets/img/braze_icons/check-done-02.svg
 
 search_rank: 4
 ---

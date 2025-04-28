@@ -41,6 +41,15 @@ This renders as the following:
 
 > Get Tales for just 7.49!
 
+## Exporting catalogs
+
+There are two ways you can export catalogs from the dashboard: 
+
+- Hover over the catalog row in the **Catalogs** section. Then, select the **Export catalog** button.
+- Select your catalog. Then, select the **Export catalog** button in the **Preview** tab of the catalog.
+
+You'll receive an email to download the CSV file after initiating the export. You'll have up to four hours to retrieve this file.
+
 ## Additional use cases
 
 ### Multiple items
@@ -62,7 +71,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 This returns as the following:
 
-> Get the ultimate trio Tales, Teslagrad, and Acaratus today!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
@@ -72,24 +81,7 @@ Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_c
 
 You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
 
-To do this, you'll use a Liquid `if` statement in a format like this:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
-
-#### Use case: Liquid `if` snippet
-
-In this scenario, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+To do this, you'll use a Liquid `if` statement, such as in this example:
 
 {% raw %}
 ```liquid
@@ -103,6 +95,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. If `venue_name` is `blank`, nothing will display. 
+
+Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
 
 ### Using images {#using-images}
 
@@ -138,6 +134,10 @@ You can also use templating to dynamically pull catalog items based on custom at
     ]
 }
 ```
+
+{% alert note %}
+JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
+{% endalert %}
 
 Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
 
@@ -176,10 +176,6 @@ Liquid currently can't be used inside catalogs. If Liquid personalization is lis
 #### Templating catalog items including Liquid
 
 Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
-
-{% alert important %}
-Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined in Liquid earlier in the message and before the templating in order to render the Liquid properly. If the `:rerender` flag isn't provided, it will render the raw Liquid content.
 

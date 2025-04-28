@@ -28,9 +28,10 @@ description: "この記事では、「ユーザー設定センターの詳細を
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 必須 | 文字列 | ユーザー設定センターの ID。 |
+{: role="presentation" }
 
 ## リクエストパラメーター
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## 応答 
-```json 
+## 応答
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

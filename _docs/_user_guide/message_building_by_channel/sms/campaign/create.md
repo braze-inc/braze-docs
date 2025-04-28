@@ -25,15 +25,10 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{: start="2"}
 2. Select **SMS**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Select a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
 
@@ -66,19 +61,27 @@ Before proceeding, read our guidelines for [SMS message segments and copy limits
 
 ![SMS composer in Braze with the message "Hi first_name, we appreciate your support! Why not stop by one of our stores and show them this SMS for an exclusive discount? Reply STOP to stop receiving messages from us."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
-{% alert tip %}
+### Adding a contact card
+
+You can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
+
+### Tips
+
+#### Using Liquid
+
 {% raw %}
 If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
 {% endraw %}
-{% endalert %}
 
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+#### Generating AI copy
+
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Message field of the SMS composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### Contact cards
+#### Creating right-to-left messages
 
-If desired, you can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Step 3: Preview and test your message
 
@@ -107,7 +110,7 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your segments, and narrow that segment further with our Filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your segments, and narrow that segment further with our Filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 {% alert tip %}
 Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more. 
@@ -115,7 +118,7 @@ Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseu
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 Conversion events help you measure the success of your campaign. For example:
 

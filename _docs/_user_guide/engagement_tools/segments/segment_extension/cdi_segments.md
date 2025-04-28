@@ -11,7 +11,7 @@ description: "This how-to article will walk you through how to set up Location t
 
 # CDI segments
 
-> With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
+> With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
 This feature queries your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segments won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not consume data points.
@@ -19,23 +19,23 @@ This feature queries your data warehouse directly, so you will incur all costs a
 
 ## Prerequisites
 
-To use your data warehouse data for segmentation within your Braze workspace, you'll need to create a [connected source]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/), then create a CDI segment within your [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI segments allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
+To use your data warehouse data for segmentation within your Braze workspace, you'll need to create a [connected source]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), then create a CDI segment within your [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI segments allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
 
 ## Creating a CDI segment
 
 ### Step 1: Set up your source
 
-Before creating your first CDI Segment, set up a new Connected Source with your data warehouse by following the steps in [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
+Before creating your first CDI Segment, set up a new Connected Source with your data warehouse by following the steps in [Connected Sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
 
 ### Step 2: Create a segment
 
 First, create a new [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), then select **Full refresh**.
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 For your data source, choose **CDI Data Tables**.
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 As part of your CDI setup, you can select from different connections to use in CDI segments. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup.
 

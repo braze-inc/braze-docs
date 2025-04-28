@@ -59,13 +59,17 @@ description: "이 참조 문서에서는 사용자 추가, 일시 중지 및 삭
 
 ![사용자 세부 정보를 편집할 때 사용자를 일시 중지합니다.][5]
 
+## Assigning user access and responsibilities
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Braze 사용자 삭제
 
 사용자를 삭제하려면 **설정** > **회사 사용자**로 이동하여 사용자 이름을 찾고 <i class="fa fa-trash-can"></i> **사용자 삭제**를 선택하십시오.
 
 ![사용자 삭제][34]
 
-사용자가 삭제된 후 Braze는 다음 데이터 중 어느 것도 보관하지 않습니다.
+사용자가 삭제된 후 Braze는 다음 계정 데이터를 보관하지 않습니다:
 
 - 사용자가 가지고 있던 모든 속성
 - 이메일 주소
@@ -75,6 +79,11 @@ description: "이 참조 문서에서는 사용자 추가, 일시 중지 및 삭
 - 국가
 - 언어
 - 다른 유사한 데이터
+
+Braze는 다음 계정 데이터를 보관합니다:
+
+- 계정과 연결된 사용자 지정 속성 또는 테스트 데이터
+- 사용자가 만든 캠페인 또는 캔버스(단, **마지막으로 편집한** 사람 열에 표시되는 등 사용자 이름이 표시되지 않음)
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

@@ -31,7 +31,7 @@ description: "この記事では、「メールテンプレートの参照」Bra
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `email_template_id`  | 必須 | 文字列 | [メールテンプレート API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

@@ -28,7 +28,7 @@ description: "この記事では、「カスタムイベント分析のエクス
 
 ## リクエストパラメーター
 
-| パラメータ| 必須 | データ型 | 説明 |
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `event` | 必須 | 文字列 | アナリティクスを返すカスタムイベントの名前。 |
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
@@ -69,7 +69,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

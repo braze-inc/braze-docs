@@ -32,7 +32,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 |---|---|---|---|
 | `catalogs` | Obligatoria | Matriz | Una matriz que contiene objetos de catálogo. Sólo se permite un objeto de catálogo para esta solicitud. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Parámetros del objeto del catálogo
 
@@ -41,7 +41,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `name` | Obligatoria | Cadena | El nombre del catálogo que quieres crear. |
 | `description` | Obligatoria | Cadena | La descripción del catálogo que quieres crear. |
 | `fields` | Obligatoria | Matriz | Una matriz de objetos en la que el objeto contiene las claves `name` y `type`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```
@@ -158,7 +158,7 @@ El código de estado `201` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -180,11 +180,11 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
-| `catalog-array-invalid` | `catalogs` debe ser una matriz de objetos. |
+| `catalog-array-invalid` | `catalogs` debe ser un array de objetos. |
 | `catalog-name-already-exists` | Ya existe un catálogo con ese nombre. |
 | `catalog-name-too-large`  | El límite de caracteres para el nombre de un catálogo es de 250. |
 | `description-too-long` | El límite de caracteres para la descripción es de 250. |
@@ -197,6 +197,6 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 | `invalid-fields` | `fields` no está formateado correctamente. |
 | `too-many-catalog-atoms` | Sólo puedes crear un catálogo por solicitud. |
 | `too-many-fields` | El límite de campos es 500. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

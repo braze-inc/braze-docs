@@ -12,36 +12,36 @@ channel:
 
 # 키-값 쌍
 
-> Braze는 키-값 페어를 통해 사용자 기기에 추가 데이터 페이로드를 보낼 수 있게 합니다. 이 기능은 푸시, 인앱, 이메일 및 콘텐츠 카드 메시징 채널에서 사용할 수 있습니다. 
+> This page covers how to use key-value pairs to send extra data payloads to user devices. 이 기능은 푸시, 인앱, 이메일 및 콘텐츠 카드 메시징 채널에서 사용할 수 있습니다.
 
-메시지에 구조화된 메타데이터를 추가하려면 키-값 쌍을 사용하세요. 이러한 추가 데이터 페이로드는 메시지를 추가적인 상황별 정보로 풍부하게 하여 메시지가 렌더링되거나 처리되는 방식에 영향을 줄 수 있습니다.
+키-값 쌍을 사용하여 메시지에 구조화된 메타데이터를 추가할 수 있습니다. 이러한 추가 데이터 페이로드는 메시지가 렌더링되거나 처리되는 방식에 영향을 줄 수 있는 추가 컨텍스트 정보로 메시지를 강화할 수 있습니다.
 
-키-값 쌍은 메타데이터이기 때문에 이 데이터는 반드시 수신자에게 보이지 않지만, 연결된 시스템이나 프로세스에서 메시지 처리를 사용자 정의하는 데 사용할 수 있습니다. 
+키-값 쌍은 메타데이터이므로 이 데이터는 수신자에게 반드시 표시되지는 않지만 연결된 시스템이나 프로세스에서 메시지 처리를 사용자 지정하는 데 사용할 수 있습니다. 
 
 각 쌍은 다음으로 구성됩니다:
 
-- 키 식별자 (예: `utm_source`)
-- 값 연관된 데이터 (예: `newsletter`)
+- **키:** 식별자(예: `utm_source`)
+- **값:** 관련 데이터(예: `newsletter`)
 
 ## 사용 사례
 
-메타데이터를 키-값 쌍으로 추가하는 몇 가지 예제 사용 사례는 다음과 같습니다:
+다음은 키-값 쌍으로 메타데이터를 추가하는 사용 사례의 몇 가지 예입니다:
 
-1. **추적 매개변수:** 분석 목적으로 UTM 매개변수 첨부
-   - 키: `utm_campaign`
-   - 값: `spring_sale`
-2. **커스텀 태그:** 내부 라우팅 또는 분류를 위한 태그 추가
-   - 키: `priority`
-   - 값: `high`
-3. 행동 유발기:** 앱 내 동작을 트리거하거나 사용자 정의하는 데 사용되는 메타데이터
-   - 키: `deep_link`
-   - 값: `app://promo-page`
+1. **추적 매개변수:** 분석 목적으로 UTM 매개변수 첨부하기
+   - Key: `utm_campaign`
+   - 가치: `spring_sale`
+2. **사용자 지정 태그:** 내부 라우팅 또는 분류를 위한 태그 추가하기
+   - Key: `priority`
+   - 가치: `high`
+3. **행동 유발기:** 인앱 동작을 트리거하거나 사용자 지정하는 데 사용되는 메타데이터
+   - Key: `deep_link`
+   - 가치: `app://promo-page`
 
 ## 푸시 알림
 
-키-값 쌍은 Android, iOS 및 웹 푸시 알림에 추가할 수 있습니다. 내부 측정기준 및 앱 콘텐츠를 업데이트하거나 푸시 알림 속성(예: 알림 우선 순위, 현지화 및 소리)을 사용자 지정하기 위해 키-값 쌍을 사용할 수 있습니다.
+키-값 쌍을 Android, iOS 및 웹 푸시 알림에 추가할 수 있습니다. 키-값 쌍을 사용하여 내부 메트릭 및 앱 콘텐츠를 업데이트하거나 알림 우선순위 지정, 현지화 및 소리와 같은 푸시 알림 속성을 사용자 지정할 수 있습니다.
 
-메시지 작성기에서 **설정** 탭을 선택하고, **새 쌍 추가**를 클릭한 다음, 키-값 쌍을 지정합니다.
+In the message composer, select the **Settings** tab, select **Add New Pair**, and specify your key-value pairs.
 
 ### iOS
 
@@ -109,11 +109,11 @@ Braze가 APNs에 푸시 알림을 보낼 때, 페이로드는 JSON 형식으로 
 
 ##### 커스텀 키-값 쌍
 
-```aps``` 라이브러리 페이로드 값 외에도 사용자 기기에 커스텀 키-값 페어를 보낼 수 있습니다. 이 쌍의 값은 원시 타입으로 제한됩니다: 사전 (객체), 배열, 문자열, 숫자 및 불리언.
+```aps``` 라이브러리 페이로드 값 외에도 사용자 기기에 커스텀 키-값 페어를 보낼 수 있습니다. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and boolean.
 
 ![][17]
 
-커스텀 키-값 페어의 사용 사례에는 내부 측정기준 유지 및 사용자 인터페이스의 컨텍스트 설정 등이 포함되지만 이에 국한되지는 않습니다. Braze는 [extras key][1] 내에서 애플리케이션을 통해 원하는 방식으로 사용할 수 있도록 푸시 알림과 함께 추가 키-값 페어를 보낼 수 있게 해줍니다. 다른 키를 사용하려면 앱이 이 커스텀 키를 처리할 수 있는지 확인하세요.
+Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key][1]. If you prefer to use another key, confirm that your app can handle this custom key.
 
 {% alert warning %}
 응용 프로그램에서 ab라는 최상위 키 또는 사전을 다루는 것을 피해야 합니다.
@@ -122,7 +122,7 @@ Braze가 APNs에 푸시 알림을 보낼 때, 페이로드는 JSON 형식으로 
 Apple은 클라이언트에게 고객 정보나 민감한 데이터를 커스텀 페이로드 데이터로 포함하지 않도록 권장합니다. 게다가 Apple은 경고 메시지와 관련된 모든 작업이 기기의 데이터를 삭제하지 않도록 권장합니다.
 
 {% alert warning %}
-HTTP/2 제공자 API를 사용하는 경우 APNs에 보내는 개별 페이로드는 4096바이트를 초과할 수 없습니다. 레거시 이진 인터페이스는 곧 사용 중단될 예정이며, 2048바이트의 페이로드 크기만 지원합니다.
+If you're using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. 레거시 이진 인터페이스는 곧 사용 중단될 예정이며, 2048바이트의 페이로드 크기만 지원합니다.
 {% endalert %}
 
 ###### API로 트리거된 캠페인
@@ -167,7 +167,7 @@ iOS 운영 체제는 일부 기능(제거 추적, 지오펜스 및 푸시 스토
 
 ## 인앱 메시지
 
-인앱 메시지에 키-값 페어를 추가하려면 메시지 작성기의 **설정** 탭을 선택하고, **새 페어 추가**를 클릭한 다음 키-값 페어를 지정합니다.
+To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, select **Add New Pair**, and specify your key-value pairs.
 
 ![][21]
 
@@ -187,7 +187,7 @@ SparkPost와 SendGrid는 이메일에서 키-값 페어를 지원합니다. Send
 
 ## 콘텐츠 카드
 
-콘텐츠 카드에 키-값 페어를 추가하려면 Braze 메시지 작성기의 **설정** 탭으로 이동하여 **새 페어 추가**를 클릭하세요.
+To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and select **Add New Pair**.
 
 ![콘텐츠 카드에 키-값 페어 추가][24]{: style="max-width:70%;"}
 

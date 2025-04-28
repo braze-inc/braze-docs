@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 세그먼트 세부 사항 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 기사는 Export 세그먼트 세부정보 Braze 엔드포인트에 대한 세부정보를 설명합니다."
 
 ---
 {% api %}
@@ -30,8 +30,8 @@ description: "이 문서에서는 세그먼트 세부 사항 내보내기 Braze 
 
 | 매개변수    | 필수 | 데이터 유형 | 설명            |
 | ------------ | -------- | --------- | ---------------------- |
-| `segment_id` | 필수 | 문자열 | [세그먼트 API 식별자]({{site.baseurl}}/api/identifier_types/)<br><br> 지정된 세그먼트의 `segment_id`는 Braze 계정 내 [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 찾을 수 있으며, [세그먼트 목록 내보내기 엔드포인트]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)를 사용할 수도 있습니다.  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `segment_id` | 필수 | 문자열 | [세그먼트 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오.<br><br> 지정된 세그먼트의 `segment_id`는 Braze 계정 내 [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 찾을 수 있으며, [세그먼트 목록 내보내기 엔드포인트]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)를 사용할 수도 있습니다.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 {% raw %}
@@ -52,14 +52,14 @@ Authorization: Bearer YOUR-REST-API-KEY
       "updated_at" : (string) the date last updated as ISO 8601 date,
       "name" : (string) the segment name,
       "description" : (string) a human-readable description of filters,
-      "text_description" : (string) the segment description, 
+      "text_description" : (string) the segment description,
       "tags" : (array) the tag names associated with the segment formatted as strings,
       "teams" : (array) the names of the Teams associated with the campaign
 }
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

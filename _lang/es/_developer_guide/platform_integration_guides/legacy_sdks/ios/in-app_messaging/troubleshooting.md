@@ -26,7 +26,7 @@ Los desencadenantes tardan en sincronizarse con el dispositivo al iniciar la ses
 
 ## No se ha mostrado el mensaje dentro de la aplicación esperado.
 
-La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar el problema de que un mensaje dentro [de la](#troubleshooting-in-app-message-delivery) aplicación no se muestre en tu dispositivo, primero debes asegurarte de que el [mensaje dentro de la aplicación se entregó al dispositivo](#troubleshooting-in-app-message-delivery) y, a continuación, [solucionar el problema de la visualización del mensaje](#troubleshooting-in-app-message-display).
+La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar el problema de que un mensaje dentro de la aplicación no se muestre en tu dispositivo, primero debes asegurarte de que el [mensaje dentro de la aplicación se entregó al dispositivo](#troubleshooting-in-app-message-delivery) y, a continuación, [solucionar el problema de la visualización del mensaje](#troubleshooting-in-app-message-display).
 
 ### Entrega de mensajes dentro de la aplicación {#troubleshooting-in-app-message-delivery}
 

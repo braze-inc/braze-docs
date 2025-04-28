@@ -13,7 +13,7 @@ guide_top_text: "Usando os endpoints de modelo, você pode criar e gerenciar seu
 
 guide_featured_title: "Endpoints de modelo de e-mail"
 guide_featured_list:
-  - name: "OBTER: Listar Modelos de E-mail Disponíveis"
+  - name: "OBTER: Lista de modelos de e-mail disponíveis"
     link: /docs/api/endpoints/templates/email_templates/get_list_email_templates/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "OBTER: Veja Informações de Modelos de e-mail"
@@ -28,7 +28,7 @@ guide_featured_list:
 
 guide_menu_title: "Content Block template endpoints"
 guide_menu_list:
-  - name: "OBTER: Listar Blocos de Conteúdo Disponíveis"
+  - name: "OBTER: Listar blocos de conteúdo disponíveis"
     link: /docs/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "OBTER: Ver Informações Disponíveis do Bloco de Conteúdo"

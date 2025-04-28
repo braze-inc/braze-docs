@@ -39,7 +39,7 @@ Webhookに以下のフィールドを記入する：
 - **Webhook URL**: `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
 - **リクエスト本文**:Raw Text
 
-さらなるユースケースは、[Zendesk support APIs][4] を使って処理することができる。この場合、Webhook URL の末尾にある`/api/v2/` エンドポイントを適宜変更することになる。
+その他のユースケースは、[Zendesk support API][4] を使用して対処できます。これにより、Webhook URL の末尾の `/api/v2/` エンドポイントが変更されます。
 
 #### リクエストヘッダーとメソッド
 
@@ -103,22 +103,22 @@ Braze と Zendesk の間に共通の識別子がある場合は、それを `req
 - ウェブフックの名前と説明を入力する。
 - Webhookが使用するBrazeエンドポイントURLを入力する。{% raw %}この例では`https://{{instance_url}}/users/track` を使用する。{% endraw %}
 - ウェブフックのリクエスト・メソッドとしてPOSTを選択し、リクエスト・フォーマットをJSONに設定する。
-- Webhook にベアラートークン認証方式を選択し、[Braze API キー](https://www.braze.com/docs/api/basics/#creating-and-managing-rest-api-keys)を入力します。
-  - 使用する API キーに、Webhook が使用する Braze エンドポイントに対して[正しい権限](https://www.braze.com/docs/api/basics/#rest-api-key-permissions)があることを確認します。<br><br>
+- Webhook にベアラートークン認証方式を選択し、[Braze API キー]({{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys)を入力します。
+  - 使用する API キーに、Webhook が使用する Braze エンドポイントに対して[正しい権限]({{site.baseurl}}/api/basics/#rest-api-key-permissions)があることを確認します。<br><br>
 5. (推奨）Webhookをテストし、正しく動作していることを確認する。<br><br>
-6. トリガーとオートメーションのウェブフックについては、セットアップを終了する前に、ウェブフックをトリガーまたはオートメーションに接続する必要がある。Webhookのトリガーを作成する例については、次のステップを参照のこと。トリガーが作成されたら、このページに戻り、**Finish setupを**選択する。
+6. トリガーとオートメーションのウェブフックについては、セットアップを終了する前に、ウェブフックをトリガーまたはオートメーションに接続する必要がある。Webhookのトリガーを作成する例については、次のステップを参照のこと。トリガーが作成されたら、このページに戻り、[**設定完了**] を選択します。
 
-### ステップ2:トリガーまたはオートメーションを作成する
+### ステップ2: トリガーまたはオートメーションを作成する
 
 [Zendesk の指示に従って](https://support.zendesk.com/hc/en-us/articles/4408839108378#topic_bwm_1tv_dpb)、Webhook をトリガーまたはオートメーションに接続する。
 
 以下の例では、サポートケースのステータスが "Solved"（解決済み）または "Closed"（クローズ済み）に変更されたときに、Webhookを呼び出すトリガーを使用している。 
 
 1. **Admin Center** で、サイドバーにある [**Objects and rules**] をクリックし、**[Business rules] > [Triggers]** を選択します。<br><br>
-2. **トリガーの追加を**選択する。<br><br>
+2. ［**トリガーを追加**] を選択します。<br><br>
 3. トリガーに名前を付け、カテゴリーを選択する。<br><br>
-4. **Add conditionを**選択して、Webhookをトリガーする条件を設定する。たとえば、「Status category changed to closed」や「Status category changed to solved」などです。![][8]{: style="max-width:70%;"}<br><br>
-5. **Add actionを**選択し、**Notify active webhookを**選択し、前のステップで作成したWebhookをドロップダウンから選択する。<br><br>
+4. [**条件の追加**] を選択して、Webhook をトリガーする条件を設定します。たとえば、「Status category changed to closed」や「Status category changed to solved」などです。![][8]{: style="max-width:70%;"}<br><br>
+5. [**アクションの追加**] を選択し、[**アクティブな webhook に通知**] を選択し、前のステップで作成した Webhook をドロップダウンから選択します。<br><br>
 6. Brazeのエンドポイントに適合するようにJSON本体を定義し、Zendeskの変数プレースホルダを使用して、関連するフィールドに動的に入力する。<br>![][10]{: style="max-width:70%;"}<br><br>
 7. [**作成**] を選択します。<br><br>
 8. Webhook に戻り、[**Finish setup**] をクリックします。

@@ -28,7 +28,7 @@ description: "この記事では、購入数のエクスポートに関するBra
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `ending_at` | オプション | 日時 ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
 | `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
@@ -64,5 +64,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}

@@ -139,9 +139,9 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 ### Opción 2: Utiliza fuentes conectadas para cuentas y oportunidades
 
-Los orígenes conectados son tablas de datos alojadas por ti en tu propio almacén de datos y consultadas por [segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). A diferencia de los catálogos, en lugar de duplicar tus objetos de negocio (cuentas y oportunidades) en Braze, los mantendrías en tu almacén de datos y utilizarías tu almacén como fuente de verdad.
+Los orígenes conectados son tablas de datos alojadas por ti en tu propio almacén de datos y consultadas por [segmentos CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) de Braze. A diferencia de los catálogos, en lugar de duplicar tus objetos de negocio (cuentas y oportunidades) en Braze, los mantendrías en tu almacén de datos y utilizarías tu almacén como fuente de verdad.
 
-Para configurar las [fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources), consulta [Integrar fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
+Para configurar las fuentes conectadas, consulta [Integrar fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
 ## Paso 2: Relaciona los objetos de tu empresa con los perfiles de usuario
 

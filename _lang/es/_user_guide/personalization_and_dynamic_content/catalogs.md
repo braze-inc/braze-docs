@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/
   image: /assets/img/braze_icons/users-01.svg
 - name: Notificaciones de existencias
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Notificaciones de bajada de precios
   link: /docs/price_drop_notifications/
@@ -40,8 +40,8 @@ Puede introducir cualquier tipo de datos en un catálogo. Normalmente, los datos
 
 - **Promociones de temporada:** Importe colecciones de productos de temporada y personalice los mensajes para reflejar las tendencias actuales.
 - **Mensajes localizados:** Importe las direcciones, horarios y servicios de su ubicación física y, a continuación, personalice las notificaciones en función de la ubicación de los usuarios.
-- **Notificaciones de existencias:** Importe información de productos que incluya la cantidad de existencias y, a continuación, utilice [las notificaciones de reposición de existencias]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/) y los eventos personalizados Braze para activar una campaña o Canvas que envíe a los usuarios una notificación de que un producto ya está en existencias.
-- **Notificaciones de bajada de precios:** Importe información de productos que incluya precios de productos y, a continuación, utilice [notificaciones de bajada de precios]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications/) y eventos personalizados Braze para activar un Canvas que envíe a los usuarios una notificación de que el precio de un producto ha bajado.
+- **Notificaciones de existencias:** Importe información de productos que incluya la cantidad de existencias y, a continuación, utilice [las notificaciones de reposición de existencias]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/) y los eventos personalizados Braze para activar una campaña o Canvas que envíe a los usuarios una notificación de que un producto ya está en existencias.
+- **Notificaciones de bajada de precios:** Importe información de productos que incluya precios de productos y, a continuación, utilice [notificaciones de bajada de precios]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/) y eventos personalizados Braze para activar un Canvas que envíe a los usuarios una notificación de que el precio de un producto ha bajado.
 
 ### Entretenimiento
 
@@ -61,3 +61,11 @@ Puede introducir cualquier tipo de datos en un catálogo. Normalmente, los datos
 Los catálogos son una característica del almacenamiento de datos. Contienen grandes conjuntos de datos a los que puede hacer referencia en sus mensajes para personalizarlos. Para hacer referencia a los datos, utilizarás [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) como lenguaje de plantilla. En otras palabras, los catálogos son el almacenamiento donde se guardan los datos, y Liquid es el lenguaje que extrae los datos pertinentes del almacenamiento.
 
 Para ver ejemplos de cómo puede utilizar Liquid para extraer información del catálogo, consulte los casos de uso adicionales en [Creación de un catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
+
+#### Limitaciones de almacenamiento de datos
+
+El almacenamiento de datos para los catálogos está limitado en función del tamaño de los elementos y selecciones del catálogo, que puede ser diferente de los tamaños de los archivos CSV cargados.
+
+Para la versión gratuita de los catálogos, la cantidad de almacenamiento permitida es de hasta 100 MB. Puedes tener elementos ilimitados siempre que el espacio de almacenamiento no supere los 100 MB. Las selecciones contribuirán a su almacenamiento. Cuanto más compleja sea una selección, más espacio ocupará.
+
+Para Catálogos Pro, las opciones de tamaño de almacenamiento son: 5 GB, 10 GB, 15 GB o 50 GB. Ten en cuenta que el almacenamiento de la versión gratuita (100 MB) está incluido en cada uno de estos planes.

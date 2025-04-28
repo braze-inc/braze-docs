@@ -43,20 +43,20 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `merge_updates` | 必須 | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
+| `merge_updates` | required | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### マージ動作
 
-以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、\[セグメント拡張]、\[クエリビルダー]、および\[カレント]では、ユーザーのマージが反映されない。
+以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、[セグメント拡張]、[クエリビルダー]、および[カレント]では、ユーザーのマージが反映されない。
 
 {% alert important %}
 エンドポイントは、`merge_updates` オブジェクトが更新される順序を保証しない。
 {% endalert %}
 
-このエンドポイントは、以下のフィールドがターゲット・ユーザーに見つからない場合、それらをマージする：
+このエンドポイントは、ターゲットユーザーで見つからない場合、次のフィールドをマージします。
 
 - 名
 - 姓
@@ -88,8 +88,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - キャンペーンのインタラクションデータ（Brazeは最新の日付フィールドを選ぶ）
 - ワークフローのサマリー（Brazeは最新の日付フィールドを選ぶ）
 - メッセージとメッセージのエンゲージメント履歴
-
-セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
+- セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
 
 {% alert note %}
 ユーザーをマージする場合、`/users/merge` エンドポイントを使用すると、[`changeUser()` メソッドを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)使用した場合と同じように機能します。
@@ -103,9 +102,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 識別子として `email` または `phone` が指定された場合、識別子にはさらに `prioritization` の値が必要になります。`prioritization` は、複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する配列でなければならない。`prioritization` は順序付き配列である。つまり、優先順位付けから複数のユーザーがマッチした場合、マージは行われない。
 
-配列に使用できる値は、`identified`、`unidentified`、`most_recently_updated` です。`most_recently_updated` は、最も最近更新されたユーザーを優先することを意味します。
+配列に指定できる値は次のとおりです。
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (最新の更新されたユーザの優先順位付けを参照)
+- `least_recently_updated` (最新のユーザーの優先順位付けを参照)
 
 優先配列には、一度に以下のオプションのうち1つしか存在できません。
+
 - `identified` を持つユーザーを優先することである。 `external_id`
 - `unidentified` のないユーザーを優先することである。 `external_id`
 
@@ -160,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーをマージする
 
-以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` を使用して、クエリを1人のみの未確認ユーザーに絞り込みます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
+以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは1 人の識別されていないユーザーにのみフィルタリングされます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -184,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーを識別されたユーザーにマージする
 
-この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` を使用して、クエリを1人のみのユーザーに絞り込みます (`identifier_to_merge` の場合は未確認ユーザー1人、`identifier_to_keep` の場合は識別されたユーザー1人）。
+この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは1 人のユーザー(`identifier_to_merge` では1 人のユーザー、`identifier_to_keep` では1 人のユーザー) にのみフィルタリングされます。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -196,11 +201,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
       }
     }
   ]
@@ -263,7 +268,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 | --- |
 | `'merge_updates' must be an array of objects` | `merge_updates` がオブジェクトの配列であることを確認する。 |
 | `a single request may not contain more than 50 merge updates` | 1回のリクエストで指定できるマージ更新は50件までです。 |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | リクエストの識別子をチェックする。 |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, 'email' property that is a string, or 'phone' property that is a string` | リクエストの識別子をチェックする。 |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | `merge_updates` に `identifier_to_merge` と `identifier_to_keep` という2つのオブジェクトしか含まれていないことを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

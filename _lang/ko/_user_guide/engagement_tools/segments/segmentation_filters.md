@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: 세그먼트 구성원
-    description: "세그먼트, 캠페인 등 필터가 사용되는 모든 곳에서 세그먼트 멤버십을 기준으로 필터링하고 하나의 캠페인 내에서 여러 개의 서로 다른 세그먼트를 타겟팅할 수 있습니다. <br><br>이미 이 필터를 사용하고 있는 세그먼트는 다른 세그먼트에 추가로 포함하거나 중첩할 수 없습니다. 동일한 필터를 사용하여 포함하려는 세그먼트를 다시 만들어야 합니다."
+    description: "세그먼트, 캠페인 등 필터가 사용되는 모든 곳에서 세그먼트 멤버십을 기준으로 필터링하고 하나의 캠페인 내에서 여러 개의 서로 다른 세그먼트를 타겟팅할 수 있습니다. <br><br>Note that segments already using this filter cannot be further included or nested into other segments because this may create a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it. Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters."
     tags:
       - Segment or CSV membership
   - name: Braze 세그먼트 확장
@@ -50,6 +50,10 @@ glossaries:
     description: "사용자가 사용자 지정 기록된 속성 값과 일치하는지 여부를 결정합니다. (24시간 기간) <br><br>시간대:<br>회사 표준 시간대"
     tags:
       - Custom attributes
+  - name: 생성 시간
+    description: 사용자 프로필이 생성된 시점을 기준으로 사용자를 분류합니다. 사용자가 CSV 또는 API를 통해 추가된 경우 이 필터는 사용자가 추가된 날짜를 반영합니다. 사용자가 CSV 또는 API로 추가되지 않았고 SDK에서 첫 번째 세션을 추적하는 경우 이 필터는 첫 번째 세션의 날짜를 반영합니다.
+    tags:
+      - Other Filters
   - name: 중첩 사용자 지정 속성
     description: "사용자 지정 속성의 속성입니다.<br><br>중첩된 시간 커스텀 속성을 필터링할 때 \"요일\" 또는 \"시간\"을 기준으로 필터링하도록 선택할 수 있습니다. '연도'는 비교를 위해 월과 일만 확인합니다. '시간'은 연도를 포함한 전체 타임스탬프를 비교합니다."
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: 특정 캔버스 단계에서 마지막으로 수신한 메시지
-    description: 특정 캔버스 구성 요소를 받은 시점을 기준으로 사용자를 세분화합니다.
+    description: 특정 캔버스 구성 요소를 받은 시점을 기준으로 사용자를 세분화합니다. 이 필터는 사용자가 다른 캔버스 구성 요소를 받은 시기는 고려하지 않습니다.
     tags:
       - Retargeting
   - name: 특정 캠페인에서 마지막으로 수신한 메시지
-    description: 특정 캠페인을 수신했는지 여부에 따라 사용자를 세분화합니다.
+    description: 특정 캠페인을 수신했는지 여부에 따라 사용자를 세분화합니다. 이 필터는 사용자가 다른 캠페인을 수신한 시기는 고려하지 않습니다.
     tags:
       - Retargeting
   - name: 태그가 포함된 캔버스 또는 캠페인에서 메시지 수신
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: 태그가 포함된 캠페인 또는 캔버스에서 마지막으로 수신한 메시지
-    description: 특정 캠페인이나 특정 태그가 포함된 캔버스를 수신한 시점을 기준으로 사용자를 세분화합니다. (24시간 기간)
+    description: 특정 캠페인이나 특정 태그가 포함된 캔버스를 수신한 시점을 기준으로 사용자를 세분화합니다. 이 필터는 사용자가 다른 캠페인이나 캔버스를 수신한 시기는 고려하지 않습니다. (24시간 기간)
     tags:
       - Retargeting
   - name: 캠페인 또는 캔버스 단계에서 메시지를 수신한 적이 없는 사용자
@@ -214,6 +218,10 @@ glossaries:
     description: "이메일 주소가 하드 반송되었는지 여부(예: 이메일 주소가 유효하지 않은 경우)에 따라 사용자를 세분화하세요."
     tags:
       - Retargeting
+  - name: 소프트 바운스
+    description: Y일 동안 소프트 바운스 횟수별로 사용자를 세분화하세요. 세그먼트 필터는 30일만 되돌아볼 수 있지만 세그먼트 확장을 사용하면 더 오래 되돌아볼 수 있습니다.<br><br>이 필터는 커런츠의 소프트 바운스 이벤트와는 다르게 작동합니다. 소프트 반송 세그먼트 필터는 72시간의 재시도 기간 동안 배달에 성공하지 못한 경우 소프트 반송으로 계산합니다. Currents에서는 재시도에 실패할 때마다 소프트 바운스 이벤트로 전송됩니다. 
+    tags:
+      - Retargeting
   - name: 발송자를 스팸으로 표시함
     description: 사용자가 메시지를 스팸으로 표시했는지 여부에 따라 사용자를 분류합니다.
     tags:
@@ -243,7 +251,7 @@ glossaries:
     tags:
       - Retargeting
   - name: 대조군에 등록된 마지막 시간
-    description: "캠페인에서 마지막으로 대조군에 속했던 시간별로 사용자를 세분화합니다. (24시간 기간)<br><br>시간대:<br>회사 표준 시간대"
+    description: "캠페인에서 마지막으로 대조군에 속했던 시간별로 사용자를 세분화합니다. <br><br>시간대:<br>회사 표준 시간대"
     tags:
       - Retargeting
   - name: 캔버스 변형 진입
@@ -263,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: 피처 플래그
-    description: "현재 특정 <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">기능 플래그가</a> 활성화된 사용자 세그먼트입니다."
+    description: "현재 특정 <a href=\"/docs/developer_guide/feature_flags/\">기능 플래그가</a> 활성화된 사용자 세그먼트입니다."
     tags:
       - Retargeting
   - name: 구독 그룹
@@ -558,8 +566,8 @@ glossaries:
     description: 사용자가 보유한 팔로워 수 X(옛 트위터)에 따라 사용자를 세분화합니다.
     tags:
       - Social activity
-  - name: 전화번호 전송
-    description: "사용자의 세그먼트를 e.164 발신 전화번호 필드로 나눕니다.<br><br>전화번호가 Braze로 전송되면, Braze는 SMS 및 WhatsApp 채널을 통해 전송되는 <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164 형식</a>으로 강제 변환하려고 시도합니다. 강제 변환 프로세스는 숫자가 올바르게 형식화되지 않으면 실패할 수 있으며, 이로 인해 고객 프로필에는 전화번호가 있지만 발신 전화번호는 없는 결과가 발생합니다.<br><br>사용 사례:<br> - 이 필터로 정규식을 사용하여 특정 국가 코드로 전화번호를 세그먼트합니다. <br>- 이 필터를 사용하여 e.164 강제 변환 프로세스에 실패한 전화번호로 사용자를 세그먼트합니다."
+  - name: 전화번호 보내기
+    description: "e.164 발신 전화번호 필드를 기준으로 사용자를 세분화합니다.<br><br>전화번호가 Braze로 전송되면 Braze는 SMS 및 WhatsApp 채널에서 전송하는 데 사용되는 <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164 형식으로</a> 강제로 전송하려고 합니다. 번호 형식이 제대로 지정되지 않은 경우 강제 프로세스가 실패하여 사용자 프로필에 전화번호는 있지만 발신 전화번호가 없는 결과가 발생할 수 있습니다.<br><br>사용 사례:<br> - 이 필터와 함께 정규식(정규식)을 사용하여 특정 국가 코드가 포함된 전화번호를 기준으로 세분화할 수 있습니다. <br>- 이 필터를 사용하여 e.164 강제 프로세스에 실패한 전화번호를 기준으로 사용자를 분류할 수 있습니다."
     tags:
       - Other filters
 ---

@@ -38,7 +38,7 @@ Para utilizar botones de acción en tus mensajes push de iOS, haz lo siguiente:
 ![Menú desplegable de categorías de notificaciones de iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.
+Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.
 {% endalert %}
 
 ### Android {#android}

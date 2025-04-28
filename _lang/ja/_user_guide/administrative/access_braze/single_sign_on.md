@@ -17,7 +17,7 @@ guide_featured_list:
 - name: SAML SSOに制限する
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction
   image: /assets/img/braze_icons/lock-01.svg
-- name: マイクロソフトEntra SSO
+- name: Microsoft Entra SSO
   link: /docs/user_guide/administrative/access_braze/single_sign_on/entra/
   image: /assets/img/entra.png
 - name: Okta

@@ -13,9 +13,7 @@ channel: news feed
 
 > Cet article explique comment utiliser les paires clé-valeur dans vos cartes de fil d’actualités via le SDK Braze.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Les objets `Card` peuvent éventuellement porter des paires clé-valeur comme `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez `card.extras` pour accéder à ces valeurs.
 

@@ -36,7 +36,7 @@ You can also choose to create a recommendation straight from an individual catal
 
 Give your recommendation a name and optional description.
 
-![][1]
+!["Recommendation details" step with the name and description fields.][1]
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
@@ -55,7 +55,7 @@ When using **Most recent** or **AI Personalized**, users with insufficient data 
 
 To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-![][2-3]
+!["Define your recommendation" step with "AI Personalized" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
 
 This setting prevents messages from reusing the items a user has already bought or interacted with, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
@@ -69,7 +69,7 @@ If not already populated, select the [catalog][catalog] that this recommendation
 
 If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
-![][2-2]
+![An example of the "in-stock" selection selected for the recommendation.][2-2]
 
 {% alert tip %}
 If you can't find your selection, make sure it's set up in your catalog first.
@@ -87,7 +87,7 @@ You can optimize for:
 
 If you choose **Custom Event**, select your event from the list.
 
-![][3]
+![The "Completed Purchase" custom event selected as how events are currently tracked.][3]
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
@@ -97,7 +97,7 @@ Select this field for the **Property Name**.
 
 The **Property Name** field will pre-populate with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
-![][4]
+![The property name "purchase_item" selected that corresponds to the item IDs in the catalog.][4]
 
 #### Requirements {#requirements}
 
@@ -302,7 +302,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![][5]
+![Recommendation audience metrics showing precision (25.3%), coverage (54.3%), and recommendation types split between personalized and most popular items.][5]
 
 These metrics are defined in the following table. 
 
@@ -318,15 +318,15 @@ The next section shows a breakdown of items in the catalog, split into two possi
 - **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
 - **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user.
 
-![][6]
+![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.][6]
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![][7]{: style="max-width:45%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:50%" }
 
 ## Using recommendations in messaging
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+!["Add Personalization" modal with item recommendation as the personalization type.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
@@ -361,6 +361,10 @@ This happens under a few specific conditions:
 - The model finds fewer than 30 items that match your criteria.
 - Relevant items are no longer available or in stock.
 - Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
+
+### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
+
+Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}

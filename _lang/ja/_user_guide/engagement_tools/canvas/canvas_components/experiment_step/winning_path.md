@@ -8,7 +8,7 @@ tool: Canvas
 
 # 実験パスの勝者パス
 
-> 勝者パスは、キャンペーンの[勝者バリアント]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations)に似ており、AB テストを自動化できます。
+> 勝者パスは、キャンペーンの[勝者バリアント]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/)に似ており、AB テストを自動化できます。
 
 実験パスのステップで勝者パスがオンになっている場合、一定時間が経過すると、それ以降のすべてのユーザーはコンバージョン率が最も高いパスに送られます。
 

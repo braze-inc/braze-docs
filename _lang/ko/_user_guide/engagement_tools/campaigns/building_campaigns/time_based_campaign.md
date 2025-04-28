@@ -17,7 +17,7 @@ description: "이 참조 문서에서는 예약 전송, Intelligent Timing 및 �
 
 ## 예약 배송
 
-이 섹션에서는 [예약된 배달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) 캠페인의 시간 기반 예약 및 배달 옵션에 대해 설명합니다.
+이 섹션에서는 [예약된 배달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/) 캠페인의 시간 기반 예약 및 배달 옵션에 대해 설명합니다.
 
 ### 지정한 시간에 발송
 
@@ -50,19 +50,19 @@ description: "이 참조 문서에서는 예약 전송, Intelligent Timing 및 �
 
 | 정의 | 시간대 |
 | ---------- | --------- |
-| 사용자가 이 캠페인에서 메시지를 받은 후 언제 다시 캠페인을 받을 수 있는 자격이 주어질지 지정합니다. [자세히 알아보기]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns). | N/A |
+| 사용자가 이 캠페인에서 메시지를 받은 후 언제 다시 캠페인을 받을 수 있는 자격이 주어질지 지정합니다. [자세히 알아보기]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![일주일 후 "사용자가 캠페인을 다시 받을 수 있도록 허용" 확인란이 선택된 캠페인입니다.][5]
 
 ## 액션 기반 전달
 
-이 섹션에서는 [액션 기반 배달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) 캠페인의 일정 지연 및 배달 옵션에 대해 설명합니다.
+이 섹션에서는 [액션 기반 배달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) 캠페인의 일정 지연 및 배달 옵션에 대해 설명합니다.
 
 ### 일정 지연
 
 {% alert important %}
-지연 시간을 선택할 때 [캠페인 기간보다]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration) 긴 지연 시간을 설정하면 사용자가 캠페인을 받지 못한다는 점에 유의하세요.
+지연 시간을 선택할 때 [캠페인 기간보다]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration) 긴 지연 시간을 설정하면 사용자가 캠페인을 수신하지 못한다는 점에 유의하세요.
 {% endalert %}
 
 #### 즉시 캠페인 보내기
@@ -118,7 +118,7 @@ Braze는 지연을 `day of the week` + `calendar days`로 계산한 다음 `time
 
 | 정의 | 시간대 |
 | ---------- | --------- |
-| 사용자가 이 캠페인에서 메시지를 받은 후 언제 다시 캠페인을 받을 수 있는 [자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)이 주어질지 지정합니다. | N/A |
+| 사용자가 이 캠페인에서 메시지를 받은 후 언제 다시 캠페인을 받을 수 있는 [자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)이 주어질지 지정합니다. | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![일주일 후 "사용자가 캠페인을 다시 받을 수 있도록 허용" 확인란이 선택된 캠페인입니다.][5]
@@ -138,7 +138,7 @@ Braze는 지연을 `day of the week` + `calendar days`로 계산한 다음 `time
 
 | 정의 | 시간대 |
 | ---------- | --------- |
-| 사용자의 전환 여부를 판정함에 있어 사용자가 캠페인을 수신한 시점과 할당된 행동을 수행한 시점 사이에 최대 경과 시간입니다. 자세한 내용은 [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) 참조하세요. | N/A |
+| 사용자의 전환 여부를 판정함에 있어 사용자가 캠페인을 수신한 시점과 할당된 행동을 수행한 시점 사이에 최대 경과 시간입니다. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

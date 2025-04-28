@@ -31,7 +31,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro    | Obrigatória | Tipo de dados | Descrição            |
 | ------------ | -------- | --------- | ---------------------- |
 | `segment_id` | Obrigatória | String | Consulte [Identificador da API de segmento]({{site.baseurl}}/api/identifier_types/).<br><br> O [endereço]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) `segment_id` para um determinado segmento pode ser encontrado na página [Chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) em sua conta Braze ou você pode usar o [endpoint Exportar lista de segmentos]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 {% raw %}
@@ -52,14 +52,14 @@ Authorization: Bearer YOUR-REST-API-KEY
       "updated_at" : (string) the date last updated as ISO 8601 date,
       "name" : (string) the segment name,
       "description" : (string) a human-readable description of filters,
-      "text_description" : (string) the segment description, 
+      "text_description" : (string) the segment description,
       "tags" : (array) the tag names associated with the segment formatted as strings,
       "teams" : (array) the names of the Teams associated with the campaign
 }
 ```
 
 {% alert tip %}
-Para obter ajuda com exportações CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

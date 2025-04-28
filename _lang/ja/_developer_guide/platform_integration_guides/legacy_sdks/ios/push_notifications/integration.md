@@ -54,7 +54,7 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 
 開発用と実稼働用のプッシュ証明書が別々にある場合は、[**全般**] タブの [**署名を自動的に管理する**] チェックボックスをオフにしてください。これにより、Xcode の自動コード署名機能は開発署名のみを行うため、ビルド構成ごとに異なるプロビジョニングプロファイルを選択できるようになります。
 
-![[一般] タブが表示されているXcode プロジェクトの設定。このタブでは、"Automatically manage signing"（署名を自動的に管理する）オプションのチェックを外す。]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
+![[一般] タブが表示されているXcode プロジェクトの設定。このタブでは、[署名を自動的に管理する] オプションはオフになっています。]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## ステップ3: プッシュ通知に登録する
 
@@ -63,7 +63,7 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 Braze には、プッシュアクションボタンをサポートするデフォルトのプッシュカテゴリーも用意されており、プッシュ登録コードに手動で追加する必要があります。その他の統合ステップについては、[プッシュアクションボタンを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/)参照のこと。
 
 {% alert warning %}
-当社の[プッシュ通知のベストプラクティス]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/)の説明に従ってカスタムプッシュプロンプトを実装している場合は、アプリにプッシュ許可を付与した後、アプリが**実行される**たびに次のコードを呼び出すようにしてください。**](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)デバイストークンは任意に変更される可能性がある[ため、アプリは APNs に再登録する必要があります**。
+当社の[プッシュ通知のベストプラクティス]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/)の説明に従ってカスタムプッシュプロンプトを実装している場合は、アプリにプッシュ許可を付与した後、アプリが**実行される**たびに次のコードを呼び出すようにしてください。**[デバイストークンは任意に変更される可能性がある](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)ため、アプリは APNs に再登録する必要があります。**
 {% endalert %}
 
 ### UserNotification フレームワークの使用（iOS 10以降）
@@ -320,5 +320,5 @@ Appboy.sharedInstance()?.register(application,
 
 ## ステップ 7:単体テスト (オプション)
 
-先ほどの統合ステップのテストカバレッジを追加するには、[プッシュ単体テストを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/)実装する。
+今行った統合手順のテストカバレッジを追加するには、[[プッシュ単体テスト]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/)] を実装します。
 

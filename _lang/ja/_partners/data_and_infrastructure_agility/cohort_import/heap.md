@@ -37,10 +37,6 @@ Heap と Braze の統合を使用して、Heap で定義されたコホートを
 
 Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] に移動し、[**Heap**] を選択します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 このページでは、データインポートキーとRESTエンドポイントを見つけることができます。統合の設定を完了するため、これらの両方の値をメモして Heap アカウントマネージャーに提出します。
 
 ![][3]{: style="max-width:90%;"}
@@ -57,13 +53,17 @@ Heap セグメントを使用するには、Braze キャンペーンまたはキ
 
 ![Braze キャンペーンビルダーのターゲティングステップで、[セグメントを基準にユーザーをターゲットに設定] フィルターが「Heap cohort」に設定されている。][4]{: style="max-width:90%;"}
 
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
+
 ## 統合の詳細
 
 エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。
 
 ## ユーザーマッチング
 
-識別されたユーザーは、`external_id` または`alias` のどちらかによって照合することができる。匿名ユーザーは、`device_id` 。元々匿名ユーザーとして作成された識別子ユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければならない。
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/heap/heap1.png %}

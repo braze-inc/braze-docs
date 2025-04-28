@@ -13,7 +13,7 @@ platform:
 
 # 機能フラグを作成する
 
-> フィーチャーフラグを使用すると、選択したユーザーに対してリモートで機能を有効または無効にすることができます。Brazeダッシュボードで新しい機能フラグを作成する。名前と `ID`、ターゲットオーディエンス、およびこの機能を有効にするユーザーの割合を指定します。その後、アプリまたは Web サイトのコードで同じ `ID` を使用して、ビジネスロジックの特定の部分を条件付きで実行できます。機能フラグおよびブレーズでの使用方法の詳細については、[機能フラグについて]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/)を参照してください。
+> フィーチャーフラグを使用すると、選択したユーザーに対してリモートで機能を有効または無効にすることができます。Brazeダッシュボードで新しい機能フラグを作成する。名前と `ID`、ターゲットオーディエンス、およびこの機能を有効にするユーザーの割合を指定します。その後、アプリまたは Web サイトのコードで同じ `ID` を使用して、ビジネスロジックの特定の部分を条件付きで実行できます。機能フラグおよび Braze での使用方法の詳細については、[機能フラグについて]({{site.baseurl}}/developer_guide/feature_flags/)を参照してください。
 
 ## 前提条件
 
@@ -25,7 +25,7 @@ platform:
 
 ### Braze 権限
 
-ダッシュボードの機能フラグを管理するには、管理者であるか、次の[permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) が必要です。
+ダッシュボードでフィーチャーフラグを管理するには、管理者であるか、次の [[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)] を持っている必要があります。
 
 | 許可                                                                    | あなたにできること                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
@@ -39,7 +39,7 @@ platform:
 
 [**メッセージング**] > [**フィーチャーフラグ**] に進み、[**フィーチャーフラグを作成**] を選択します。
 
-![Braze ダッシュボード] ({% image_buster /assets/img/feature_flags/feature-flags-list.png %}) で以前に作成された機能フラグのリスト{: style="max-width:75%"}
+![Braze ダッシュボード で以前に作成された機能フラグのリスト]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
 
 ### ステップ 2:詳細を記入する
 
@@ -71,7 +71,7 @@ platform:
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-追加できるプロパティ数に制限はありません。ただし、フィーチャーフラグのプロパティは合計10 kB に制限されています。プロパティ値とキーの長さはともに255文字に制限されている。
+追加できるプロパティ数に制限はありません。ただし、フィーチャーフラグのプロパティは合計10KBに制限されている。プロパティ値とキーの長さはともに255文字に制限されている。
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -80,11 +80,11 @@ platform:
 
 フィーチャーフラグをロールアウトする前に、ターゲットとするユーザーの[セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/)を選択する必要があります。**Add Filter**ドロップダウンメニューを使用して、ターゲットオーディエンスからユーザーをフィルタリングする。複数のフィルターを追加して、オーディエンスをさらに絞り込みます。
 
-![2つのドロップダウンメニューがある。1つ目は「セグメント別ターゲットユーザー」です。2 番目はAdditional Filters.]({% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}) を読み込みます。
+![2つのドロップダウンメニューがある。1つ目は「セグメント別ターゲットユーザー」です。2つ目は「追加のフィルター」です。]({% image_buster /assets/img/feature_flags/feature-flags-targeting.png %})
 
 ### ステップ5: ロールアウト・トラフィックを設定する {#rollout}
 
-デフォルトでは、機能フラグは常に無効になっています。これにより、機能リリースの日付をユーザーの合計アクティベーションから分離できます。ロールアウトを開始するには、**Rollout Traffic**スライダを使用するか、テキストボックスにパーセンテージを入力して、選択したセグメント内のランダムユーザーのパーセンテージを選択し、この新機能を受信します。
+デフォルトでは、フィーチャーフラグは常に無効になっているため、機能リリースの日付とユーザーのアクティベーションの合計を切り離すことができます。ロールアウトを開始するには、**Rollout Traffic**スライダを使用するか、テキストボックスにパーセンテージを入力して、選択したセグメント内のランダムユーザーのパーセンテージを選択し、この新機能を受信します。
 
 ![Rollout Traffic というラベルが付いたスライダ。0 ～100 の間にまたがります。]({% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}){: style="max-width:75%;"}
 
@@ -831,9 +831,9 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## フィーチャーフラグでセグメント化する {#segmentation}
 
-ブレーズは、機能フラグに対して現在有効になっているユーザを自動的に追跡します。[[**フィーチャーフラグ**] フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags) を使ってセグメントまたはターゲットメッセージングを作成できます。Segment s でのフィルター ing の詳細については、[Segmentの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
+Braze は、現在フィーチャーフラグが有効になっているユーザーを自動的に追跡します。[[**フィーチャーフラグ**] フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags) を使ってセグメントまたはターゲットメッセージングを作成できます。Segment s でのフィルター ing の詳細については、[Segmentの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を参照してください。
 
-![The "Filters" section with "Feature Flag" typed into the filter search bar.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![フィルター検索バーに「フィーチャーフラグ」と入力された「フィルター」セクション。]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 再帰的なセグメントを防ぐため、他のフィーチャーフラグを参照するセグメントを作成することはできない。

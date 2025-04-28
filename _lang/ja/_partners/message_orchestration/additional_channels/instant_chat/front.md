@@ -12,9 +12,9 @@ search_tag: Partner
 
 > Front の統合により、各プラットフォームから Braze Data Transformation および Webhook を活用して双方向の会話型 SMS パイプラインを設定できます。
 
-Front からの受信 Webhook には、ライブエージェントが送信したメッセージを含むペイロードが含まれています。リクエストは、Braze のエンドポイントで受け入れられる前に再フォーマットする必要があります。Front Data Transformation テンプレートによりペイロードが再フォーマットされ、カスタムイベントが、イベントプロパティとして渡されるメッセージ本文とともに **Outbound SMS Sent** というタイトルのユーザープロファイルに書き込まれます。
+Front からの受信 Webhook には、ライブエージェントが送信したメッセージを含むペイロードが含まれています。リクエストは、ブレーズエンドポイントで受け入れる前に再フォーマットする必要があります。Front Data Transformation テンプレートによりペイロードが再フォーマットされ、カスタムイベントが、イベントプロパティとして渡されるメッセージ本文とともに **Outbound SMS Sent** というタイトルのユーザープロファイルに書き込まれます。
 
-Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/)ドキュメントの各ティアのサポートマトリックスを確認することをお勧めします。私たちの無料およびプロのティアは、月ごとのアクティブな変換と受信リクエストの数が異なります。現在のプランがあなたのユースケースをサポートできるか確認してください。
+Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/user_guide/data/data_transformation/overview/)ドキュメントの各ティアのサポートマトリックスを確認することをお勧めします。私たちの無料およびプロのティアは、月ごとのアクティブな変換と受信リクエストの数が異なります。現在のプランがあなたのユースケースをサポートできるか確認してください。
 
 ## 前提条件
 
@@ -23,19 +23,19 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
 | 前提条件             | 説明                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Front アカウント            | このパートナーシップを利用するには、フロントアカウントが必要です。|
-| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) は、Frontからの受信 Webhook を再フォーマットして、Brazeの /users/track エンドポイントで受け入れられるようにします。|
+| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) は、Braze /users/track エンドポイントが受け入れることができるように、Front から受信するWebhook を再フォーマットするために使用されます。|
 | フロントREST APIキー         | Front REST API キーを使用して、Braze から Front へのアウトバウンド Webhook リクエストを行います。 |
 
 ## ユースケース
 
-- Brazeの自動SMSメッセージングを使用してリード生成プロセスを合理化し、ユーザーの好みを特定し、ライブ販売エージェントがフォローアップして販売を完了できるようにします。
+- Braze 自動SMS メッセージングを使用してリードジェネレーションプロセスを合理化し、ユーザープリファレンスを識別し、ライブセールスエージェントによるフォローアップとクローズセールスを可能にします。
 - 自動 SMS 応答とライブチャットサポートによりセールスコンバージョンを促進することで、ショッピングカートを放棄した顧客を再獲得します。
 
 ## Front の統合
 
 ### ステップ1:データ変換を作成する
 
-まず、Brazeで新しいデータ変換を作成します。次の手順は簡略化されています。完全な手順については、[変換の作成]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation)を参照してください。
+まず、Brazeで新しいデータ変換を作成します。次の手順は簡略化されています。完全な手順については、[変換の作成]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/)を参照してください。
 
 1. Braze で、**データ設定** > **データ変換** に移動し、**変換の作成** を選択します。
 2. 「**編集体験**」で「**最初からやり直す**」を選択します。
@@ -77,7 +77,7 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
     ![データ変換の例。]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
-このテンプレートを変更して、特定のニーズに合わせることができます。例えば、プリセットのカスタムイベント名をカスタマイズできます。詳細については、[データ変換の概要]({{site.baseurl}}/docs/user_guide/data_and_analytics/data_transformation/overview/)を参照してください。
+このテンプレートを変更して、特定のニーズに合わせることができます。例えば、プリセットのカスタムイベント名をカスタマイズできます。詳細については、[データ変換の概要]({{site.baseurl}}/user_guide/data/data_transformation/overview/)を参照してください。
 {% endalert %}
 
 ### ステップ2:アウトバウンドSMSキャンペーンを作成する

@@ -24,18 +24,18 @@ collections_dir: _lang/ko/
 
 collections:
   home:
-    title: ドキュメンテーション
+    title: 홈
   user_guide:
-    title: ユーザーガイド
+    title: 사용자 가이드
   developer_guide:
-    title: 開発者ガイド
+    title: 개발자 가이드
   api:
     title: API
     default_nav_url: basics/
   partners:
-    title: テクノロジーパートナー
+    title: 기술 파트너
   help:
-    title: ヘルプ
+    title: 도움말
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
   docs_pages: # Site specific pages. ie main redirects and search

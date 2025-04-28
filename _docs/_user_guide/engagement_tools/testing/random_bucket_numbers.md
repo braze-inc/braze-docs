@@ -44,7 +44,7 @@ You may want to use these types of segments if you want to run a test of three d
 
 Depending on how many segments you want and the distribution of users within each segment, your plan may look different.
 
-For each of your random bucket number segments, including the control group, turn on [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). When evaluating the success of variants relative to the control group, you can go to your [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) page and view how often each segment has completed certain custom events.
+For each of your random bucket number segments, including the control group, turn on [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). When evaluating the success of variants relative to the control group, you can go to your [custom events]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) page and view how often each segment has completed certain custom events.
 
 ### Random audience re-entry using random bucket numbers
 

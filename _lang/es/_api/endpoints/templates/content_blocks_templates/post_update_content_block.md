@@ -53,7 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `content` | Opcional | Cadena | Contenido HTML o de texto dentro de los bloques de contenido.
 | `state` | Opcional | Cadena | Elige `active` o `draft`. Predetermina `active` si no se especifica. |
 | `tags` | Opcional | Matriz de cadenas | [Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) ya deben existir. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```json
@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "content_block_id" :"content_block_id", 
+  "content_block_id" :"content_block_id",
   "name": "content_block",
   "description": "This is my Content Block",
   "content": "HTML or text content within block",
@@ -85,7 +85,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
@@ -107,7 +107,7 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 | `Tags must be an array` | Las etiquetas deben formatearse como una matriz de cadenas, por ejemplo `["marketing", "promotional", "transactional"]`. |
 | `All tags must be strings` | Asegúrate de que tus etiquetas estén entre comillas (`""`). |
 | `Some tags could not be found` | Para añadir una etiqueta al crear un Bloque de contenido, la etiqueta debe existir ya en Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

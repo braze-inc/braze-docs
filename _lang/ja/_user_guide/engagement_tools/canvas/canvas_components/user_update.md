@@ -14,9 +14,9 @@ tool: Canvas
 
 > ユーザーの更新コンポーネントを使用すると、JSON コンポーザーでユーザーの属性、イベント、購入を更新できるため、API キーなどの機密情報を含める必要はありません。
 
-ユーザー更新では、更新は 1 分あたり `/users/track` 件のリクエストのレート制限にはカウントされません。代わりに、Braze ではこれらの更新がバッチ処理されるので、Braze-to-Braze の Webhook よりも効率的に処理することができます。このコンポーネントは、請求対象外のデータポイント (サブスクリプショングループなど) の更新に使用される場合、[データポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)を消費しないことに注意してください。
+ユーザー更新では、更新は 1 分あたり `/users/track` 件のリクエストのレート制限にはカウントされません。代わりに、Braze ではこれらの更新がバッチ処理されるので、Braze-to-Braze の Webhook よりも効率的に処理することができます。このコンポーネントは、請求対象外のデータポイント (サブスクリプショングループなど) の更新に使用される場合、[データポイント]({{site.baseurl}}/user_guide/data/data_points/)を消費しないことに注意してください。
 
-ユーザーは、関連するユーザーの更新が完了した後でのみ、次のキャンバスステップに進みます。後続のメッセージングが作成中のユーザー更新に依存している場合は、メッセージが送信される前にこれらの更新が完了していることを確認できます。
+ユーザーは、関連するユーザーの更新が完了した後でのみ、次のキャンバスステップに進みます。つまり、これらのユーザー更新に依存する後続のメッセージングは、次のステップが実行されたときに最新の状態になる。
 
 ## ユーザーアップデートを作成する
 
@@ -52,7 +52,7 @@ tool: Canvas
 
 ### オブジェクトの配列を更新する
 
-[オブジェクトの配列は]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)、データ豊富なユーザープロファイルに保存されるカスタム属性である。これにより、ユーザーとあなたのブランドとのインタラクションの履歴を作成することができる。これにより、購入履歴やライフタイムバリューの合計など、計算フィールドであるカスタム属性に基づいてセグメントを作成することができる。
+[オブジェクトの配列は]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/)、データ豊富なユーザープロファイルに保存されるカスタム属性である。これにより、ユーザーとあなたのブランドとのインタラクションの履歴を作成することができる。これにより、購入履歴やライフタイムバリューの合計など、計算フィールドであるカスタム属性に基づいてセグメントを作成することができる。
 
 ユーザー更新ステップによって、このオブジェクトの配列に属性を追加したり削除したりすることが可能です。配列を更新するには、属性リストから配列属性名を選択し、キー値を入力する。
 
@@ -91,7 +91,7 @@ tool: Canvas
 {% endraw %}
 
 {:start="2"}
-2\.ユーザーがバスケットに商品を追加したときに記録される`add_item_to_cart` という[カスタムイベントを]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)作成する。
+2\.ユーザーがバスケットに商品を追加したときに記録される`add_item_to_cart` という[カスタムイベントを]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)作成する。
 3\.このカスタムイベントで、ターゲットとなるユーザーとキャンバスを作成します。さて、ユーザーが商品をカートに入れると、このキャンバスがトリガーされる。その後、そのユーザーを直接ターゲットにしたメッセージングを行い、一定の支出額に達したとき、一定の期間カートを放棄したとき、あるいはその他のユースケースに一致したときに、クーポンコードを提供することができます。 
 
 `shopping_cart` 属性は、多くのカスタムイベントの合計を運ぶ：すべてのアイテムの合計金額、カート内のアイテムの合計数、ショッピングカートにギフトが含まれている場合など。例えば、次のようになります。
@@ -129,7 +129,7 @@ tool: Canvas
 キャンバスのトリガーイベントのプロパティを属性として保存するには、パーソナライゼーションモーダルを使ってキャンバスのエントリプロパティを抽出し、保存します。ユーザーの更新では、次のパーソナライゼーション機能もサポートされています。 
 * [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [エントリのプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [エントリのプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * Liquid ロジック ([メッセージの中止]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/)を含む)
 * オブジェクトごとに複数の属性またはイベントを更新する
 

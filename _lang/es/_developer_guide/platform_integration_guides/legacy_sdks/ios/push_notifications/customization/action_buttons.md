@@ -22,7 +22,7 @@ Para registrar nuestras categorías push predeterminadas, sigue las instruccione
 
 ## Paso 1: Añadir categorías push predeterminadas Braze
 
-Utiliza el siguiente código para registrarte en nuestras categorías predeterminadas de [push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze) cuando [te registres en push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze):
+Utiliza el siguiente código para registrarte en nuestras categorías predeterminadas de push cuando te [registres en push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze):
 
 {% tabs %}
 {% tab OBJETIVO-C %}

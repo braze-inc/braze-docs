@@ -24,18 +24,4 @@ guide_featured_list:
 
 ## チーム、権限設定、役割の違いは何か？ 
 
-チーム、権限セット、ユーザーロールを使用して、Braze内のダッシュボードユーザーのアクセスと責任を管理できる。各機能には、権限とアクセスコントロールの異なるコレクションが含まれます。
-
-### 主な違い
-
-高いレベルでは、各機能にはそれぞれ異なるスコープがある：
-- 権限セットは、すべてのワークスペースでダッシュボードユーザーが実行できる操作を制御します。
-- ロールは、ダッシュボードのユーザーが特定のワークスペースでできることをコントロールする。
-- チームは、ダッシュボードのユーザーがメッセージを送信できるオーディエンスをコントロールします。
-
-| 特集｜何ができるのか？
-| - | - |
-| [ 権限セット]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-permission-set) | 特定のサブジェクト領域またはアクションに関連する権限 ("Developers" や"Marketers" など) をバンドルし、さまざまなワークスペースで同じ権限を必要とするダッシュボードユーザーに適用します。|
-[| ロール]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role)｜個々のカスタム権限とワークスペースへのアクセス制御を定義済みのロール（「マーケター - ファッションブランド」や「マーケター - スキンケアブランド」など）にまとめ、ダッシュボードユーザーにロールを割り当てて、関連するワークスペースへのアクセスと権限を直接付与する。|
-[| チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)｜ダッシュボードユーザーのリソースへのアクセスをオーディエンス（顧客群の所在地、言語、カスタム属性など）に基づいて制限する。|
-{: .reset-td-br-1 .reset-td-br-2 }
+{% multi_lang_include permissions.md content="Differences" %}

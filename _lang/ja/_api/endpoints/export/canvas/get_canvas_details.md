@@ -28,7 +28,7 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -211,17 +211,11 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

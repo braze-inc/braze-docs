@@ -29,8 +29,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -87,8 +85,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
@@ -109,8 +105,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: マイポストカード
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
-- name: ディクサ
+- name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
-- name: ナルバー
+- name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: タッカート
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---

@@ -35,18 +35,26 @@ braze.initialize(apiKey, {
 
 ### conectar-src {#connect-src}
 
-- `connect-src https://sdk.iad-01.braze.com`: permite al SDK comunicarse con las API de Braze.
-  - Cambia esta URL para que coincida con [el punto final del SDK de la API de]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) tu opción de inicialización `baseUrl`.
+|URL|Información|
+|---|-----------|
+|`connect-src https://sdk.iad-01.braze.com`|Permite al SDK comunicarse con las API Braze. Cambia esta URL para que coincida con el [punto final SDK de la API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) para la opción de inicialización `baseUrl` que hayas elegido.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### script-src {#script-src}
 
-- `script-src https://js.appboycdn.com`: necesario cuando se utiliza la integración alojada en CDN.
-- `script-src 'unsafe-eval'`: necesario cuando se utiliza el fragmento de código de integración que contiene una referencia a `appboyQueue`
-  - Para evitar el uso de esta directiva, realiza la integración mediante NPM.
-- `script-src 'nonce-...'` o `script-src 'unsafe-inline'`: necesario para determinados mensajes dentro de la aplicación (por ejemplo, HTML personalizado).
+|URL|Información|
+|---|-----------|
+|`script-src https://js.appboycdn.com`|Necesario cuando se utiliza la integración alojada en CDN.|
+|`script-src 'unsafe-eval'`|Necesario cuando se utiliza el fragmento de código de integración que contiene la referencia a `appboyQueue`. Para evitar el uso de esta directiva, [integra el SDK utilizando NPM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=package%20manager).|
+|`script-src 'nonce-...'`<br>o<br>`script-src 'unsafe-inline'`|Necesario para determinados mensajes dentro de la aplicación, como HTML personalizado.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### img-src {#img-src}
-- `img-src: appboy-images.com braze-images.com cdn.braze.eu`: necesario cuando se utilizan imágenes alojadas en CDN de Braze. Estos nombres de host pueden variar según el grupo de paneles.
+
+|URL|Información|
+|---|-----------|
+|`img-src: appboy-images.com braze-images.com cdn.braze.eu`|Necesario cuando se utilizan imágenes alojadas en CDN Braze. Los nombres de host pueden variar según el grupo de paneles.<br><br>**Importante:** Si utilizas fuentes personalizadas, también tienes que incluir `font-src`.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Font Awesome {#font-awesome}
 
@@ -63,6 +71,6 @@ braze.initialize(apiKey, {
 
 Si decides utilizar Font Awesome, se requieren las siguientes directivas CSP:
 
+- `font-src https://use.fontawesome.com`
 - `style-src https://use.fontawesome.com`
 - `style-src 'nonce-...'` o `style-src 'unsafe-inline'`
-- `font-src https://use.fontawesome.com`

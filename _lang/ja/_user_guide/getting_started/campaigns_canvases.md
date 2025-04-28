@@ -30,7 +30,7 @@ Braze では、[キャンペーン](#campaigns)または[キャンバス](#canva
 定期的なキャンペーンや AB テストキャンペーンをスケジュールすることも (予定されているイベントについてユーザーのリストに通知するなど)、ユーザーのアクションに応じて自動的に送信する (ニュースレターを購読したときにメールを送信するなど) こともできます。[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)の詳細をご覧ください。
 {% endalert %}
 
-作成するキャンペーンの種類にかかわらず、キャンペーンはユーザーのニーズに耳を傾け、思慮深くパーソナライズされた対応を提供できます。キャンペーンを送信したら、[組み込みの分析ツール]({{site.baseurl}}/user_guide/data_and_analytics/reporting)を使用して、キャンペーンのパフォーマンスと、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)に基づいてコンバージョンしたユーザーの数を確認します。
+作成するキャンペーンの種類にかかわらず、キャンペーンはユーザーのニーズに耳を傾け、思慮深くパーソナライズされた対応を提供できます。キャンペーンを送信したら、[組み込みの分析ツール]({{site.baseurl}}/user_guide/analytics/reporting/)を使用して、キャンペーンのパフォーマンスと、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)に基づいてコンバージョンしたユーザーの数を確認します。
 
 Braze のキャンペーンの詳細については、以下の追加リソースをご覧ください。
 
@@ -71,9 +71,9 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 | [Web プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Web サイトでアクティブでない場合でも、通知をユーザーのウェブブラウザに配信します。                                                         |
 | [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | ユーザーがモバイルアプリをアクティブに使用している間に、モバイルアプリ内にメッセージを表示します。                                                                             |
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | ユーザーの携帯電話にメールを送信します。                                                                                                            |
-| [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 人気のメッセージング プラットフォームであるWhatsAppを通じて、ユーザーsに手を差し伸べ、エンゲージするように伝言を送る。                                                   |
+| [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 人気のメッセージング プラットフォームであるWhatsAppを通じて、ユーザーに手を差し伸べ、エンゲージするように伝言を送る。                                                   |
 | [コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | ユーザーがメッセージを受信して操作したり、カルーセルにメッセージを表示したり、バナーとしてメッセージを表示したりできる受信トレイをアプリや Web サイト内に用意します。 |
-| [コネクテッド TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | コネクテッド TV プラットフォームでユーザーと交流します。                                                                                                   |
+| [コネクテッド TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | コネクテッド TV プラットフォームでユーザーと交流します。                                                                                                   |
 | [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | カスタムHTTPコールバックを使用して、外部システムとのリアルタイム通信および統合を有効にします。                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

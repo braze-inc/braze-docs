@@ -41,7 +41,7 @@ guide_menu_list:
     link: /docs/catalog_segments/
     image: /assets/img/braze_icons/users-01.svg
   - name: ユーザープロフィール
-    link: /docs/user_guide/engagement_tools/segments/using_user_search/
+    link: /docs/user_guide/engagement_tools/segments/user_profiles/
     image: /assets/img/braze_icons/users-01.svg
   - name: ロケーションターゲティング
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
@@ -49,6 +49,12 @@ guide_menu_list:
   - name: 正規表現
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg
+  - name: 抑制リスト
+    link: /docs/user_guide/engagement_tools/segments/suppression_lists/
+    image: /assets/img/braze_icons/list.svg 
+  - name: 測定セグメントサイズ
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: トラブルシューティング
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
@@ -56,7 +62,7 @@ guide_menu_list:
 guide_menu_title2: "Other"
 guide_menu_list2:
   - name: カスタム属性
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
     image: /assets/img/braze_icons/table.svg
 
 ---
@@ -79,11 +85,11 @@ Braze のセグメントがユーザーのターゲット設定にどのよう�
 
 #### セグメント拡張ユースケースs
 
-[Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用して、ユーザープロファイルの存続期間中に保存されたカスタムイベントまたは購買行動に基づいてユーザーs を対象にすることで、Segments をさらに絞り込むことができます。
+[Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用して、ユーザープロファイルの存続期間中に保存されたカスタムイベントまたは購買行動に基づいてユーザーを対象にすることで、Segments をさらに絞り込むことができます。
 
 - **過去の購入:**過去 2 年間に特定の色の特定製品を 2 回以上購入したかどうかによって、ユーザーをセグメント化します。
 - **イベントとメッセージのインタラクション:**過去 30 日間に購入を行ったかどうか、また特定のアプリ内メッセージと対話したかどうかによって、ユーザーをセグメント化します。
 - **データのクエリ:** 
-  - **Snowflake のクエリ:**[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を使用してSnowflakeを照会することにより、BrazeおよびCRMやデータウェアハウスなどの外部ソースから結合されたデータを含むセグメントユーザーs。
+  - **Snowflake のクエリ:**[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を使用してSnowflakeを照会することにより、BrazeおよびCRMやデータウェアハウスなどの外部ソースから結合されたデータを含むセグメントユーザー。
   - **データウェアハウスとの同期:**[CDI セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)により、データウェアハウスまたはファイルストレージシステムから Braze に直接同期されたデータを使用して、ユーザーをセグメント化します。
 

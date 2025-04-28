@@ -13,7 +13,7 @@ tool:
 
 > Install attribution tracking is a great way to improve your initial relationship with your user. Knowing how, where, and even more importantly, why a user installs your app allows you to get a better understanding of who your user is and how you should introduce them to your app. 
 
-While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/attribution) such as Branch and AppsFlyer to seamlessly provide you with install data.
+While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/) such as Branch and AppsFlyer to seamlessly provide you with install data.
 
 ## Segment your users
 
@@ -27,7 +27,7 @@ Now that you have more information about your user, you can personalize their on
 
 ### Reference data from the ad
 
-Users may be attracted to your app by a promotional offer or giveaway. Using install attribution data allows you to send campaigns containing discount codes or offers to only the users who installed due to these promotions. In a similar manner, if your ad contains information on a particular product (such as a specific movie in a video app or sale in an ecommerce app), you can send campaigns directing users to the correct page of your app.
+Users may be attracted to your app by a promotional offer or giveaway. Using install attribution data allows you to send campaigns containing discount codes or offers to only the users who installed due to these promotions. In a similar manner, if your ad contains information on a particular product (such as a specific movie in a video app or sale in an eCommerce app), you can send campaigns directing users to the correct page of your app.
 
 ## Evaluate advertising efforts
 

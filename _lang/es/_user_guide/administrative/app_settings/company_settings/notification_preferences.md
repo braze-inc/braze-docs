@@ -27,14 +27,15 @@ La siguiente tabla enumera las notificaciones disponibles:
 
 | Notificación | Descripción | Canales de notificación disponibles |
 |--------------|-------------|-----------------|
-| Errores de credenciales de AWS | Notifica a los destinatarios cuando Braze recibe un error mientras intenta usar tus credenciales de Amazon Web Services para una exportación de datos. | Correo electrónico, Webhook |
+| Errores de credenciales de AWS | Notifica a los destinatarios cuando Braze recibe un error mientras intenta usar tus credenciales de Amazon Web Services para una exportación de datos. Esto incluye notificaciones de error de credenciales para Google Cloud Services y Azure (Microsoft Cloud Services). | Correo electrónico, Webhook |
 | La campaña se ha detenido automáticamente | Notifica a los destinatarios cuando Braze ha detenido una campaña. | Correo electrónico |
 | Caducidad de interacciones de la campaña | Notifica a los destinatarios sobre cualquier campaña que esté a punto de caducar, junto con cualquier información sobre segmentos, campañas o lienzos que hagan referencia a ella en un filtro de retargeting y que se hayan utilizado para enviar un mensaje en los 30 días anteriores. | Correo electrónico |
-| La campaña/El Canvas se ha actualizado | Notifica a los destinatarios cuando se actualiza o desactiva una campaña/lienzo activo, así como cuando se reactiva una campaña/lienzo inactivo o cuando se lanzan borradores. | Correo electrónico |
+| La campaña/El Canvas se ha actualizado | Notifica a los destinatarios cuando se actualiza o desactiva una campaña o Canvas activo, así como cuando se reactiva una campaña o Canvas inactivo o se lanzan borradores. | Correo electrónico |
+| Límite de volumen de campaña/lienzo alcanzado | Notifica a los destinatarios cuando una campaña o Canvas alcanza su límite de volumen. | Correo electrónico | 
 | Caducidad de interacciones del Canvas | Notifica a los destinatarios la caducidad de los datos de interacción de cualquier lienzo, junto con cualquier información sobre segmentos, campañas o lienzos a los que se haga referencia en un filtro de retargeting y que se hayan utilizado para enviar un mensaje en los 30 días anteriores. | Correo electrónico |
 | Tarjeta de canal de noticias publicado/en vivo | Notifica a los destinatarios cuando se programan o publican tarjetas de noticias. | Correo electrónico, Webhook |
 | Errores de credenciales de notificaciones push | Notifica a los destinatarios el momento en que las credenciales de inserción de una aplicación dejan de ser válidas y cuando se acerca su caducidad. | Correo electrónico, Webhook |
-| Campaña planificada enviada/no enviada | Notifica a los destinatarios cuando las campañas programadas comienzan a enviarse o cuando las campañas programadas intentaron enviarse pero no había usuarios elegibles a los que enviar. | Correo electrónico, Webhook |
+| Campaña planificada enviada/no enviada | Notifica a los destinatarios cuando las campañas programadas empiezan a enviar o cuando las campañas programadas intentan enviar pero no tienen usuarios elegibles a los que enviar. | Correo electrónico, Webhook |
 | Se ha alcanzado el límite de campañas planificadas | Notifica a los destinatarios el momento en que se ha alcanzado el límite de una campaña planificada recurrente. | Correo electrónico, Webhook |
 | La campaña planificada ha finalizado el envío | Notifica a los destinatarios el momento en que una campaña planificada ha completado los envíos. | Correo electrónico, Webhook |
 | Informe de análisis semanal | Envía a los destinatarios, cada lunes, un resumen de la actividad del espacio de trabajo de la semana pasada. Los destinatarios reciben un resumen de cada espacio de trabajo al que pertenecen. | Correo electrónico |
@@ -66,8 +67,7 @@ Slack tiene una [aplicación de webhook entrante][67] que permite enviar mensaje
     ![Seleccione las notificaciones de Slack que desea activar][65]{: style="max-width:60%;"}<br><br>
 5. Introduce la URL que Slack ha generado para ti.
 
-Eso es todo. Debería empezar a recibir notificaciones sobre su empresa en este canal de Slack. También puedes consultar el artículo de ayuda de Slack sobre este tema: [Envío de mensajes mediante Webhooks entrantes][62].
-
+Eso es todo. Deberías empezar a recibir notificaciones sobre tu empresa en este canal de Slack. También puedes consultar el artículo de ayuda de Slack sobre este tema: [Envío de mensajes mediante Webhooks entrantes][62].
 
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [63]: {% image_buster /assets/img_archive/slack_f.png %}

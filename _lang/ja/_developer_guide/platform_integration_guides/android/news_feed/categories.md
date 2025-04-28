@@ -15,9 +15,7 @@ channel:
 
 このリファレンス記事では、Android または FireOS アプリケーションでニュースフィードカテゴリを定義する方法を示します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Braze ニュースフィードのインスタンスは、特定の「カテゴリ」からのカードのみを受信するように構成できます。これにより、1 つのアプリケーション内で複数のニュースフィードストリームを効果的に統合することができます。この機能について詳しくは、ニュースフィードの[ベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/)をご覧ください。
 

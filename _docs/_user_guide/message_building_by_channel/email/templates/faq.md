@@ -51,7 +51,7 @@ Yes, you can insert as many templates as you would like in your email messages. 
 
 ### How do I preview my links with all of the tags applied?
 
-There are several ways to preview your links. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) to yourself to view all the links. 
+There are several ways to preview your links. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to yourself to view all the links. 
 
 From the preview pane in a new tab, you can also open the links to view the links. You can also hover over the links in the preview pane and see them at the bottom of your browser.
 

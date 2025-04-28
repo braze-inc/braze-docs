@@ -27,7 +27,7 @@ description: "この記事では、「同期をトリガー」Braze エンドポ
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `integration_id` | 必須 | 文字列 | 統合 ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -54,7 +54,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |

@@ -18,7 +18,7 @@ Content QA with AI offers the following key features to enhance the quality of y
 - **Spelling and grammar check:** Automatically checks for spelling and grammar mistakes in your message. It suggests corrections and provides recommendations to improve the overall accuracy of the content.
 - **Tone analysis:** Evaluates the tone of the message to identify any potential issues. It helps ensure that the intended tone aligns with the desired communication style and helps avoid misunderstandings or unintended offenses.
 - **Offensive language detection:** Scans your message for any potentially offensive or inappropriate language, allowing you to revise your content and maintain respectful communication.
-- **Accidental content check:** Detects any inclusion of code, markup language, or test messages that might have been added unintentionally.
+- **Accidental content check:** Detects any inclusion of code, markup language, or test messages that might have been added unintentionally, including any Liquid code that didn't render for a test user.
 
 ## Accessing Content QA with AI
 
@@ -28,11 +28,12 @@ Content QA with AI is only available for push and SMS channels at this time.
 
 To access the content checker, follow these steps:
 
-1. After composing a push or SMS message, navigate to the **Test** tab.
-2. Locate the **Content QA with AI** section.
-3. Click **Test Content**.
+1. Compose a push or SMS message. 
+2. Navigate to the **Test** tab.
+3. Select a test receipient.
+4. Under **Content QA with AI**, select **Test Content**.
 
-![Content QA with AI section of the Test tab.][1]{: style="max-width:60%"}
+![Content QA with AI section of the Test tab.][1]
 
 ### Language support
 

@@ -19,10 +19,6 @@ Segment Insights shows you how one segment is performing compared to another acr
 
 Go to the **Segment Insights** page of your dashboard, under **Analytics**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Insights**.
-{% endalert %}
-
 ![Segment Insights dashboard.][1]
 
 The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:
@@ -68,7 +64,7 @@ To improve conversions among speakers of languages other than English, a good fi
 
 ### Understanding indicators of higher revenue
 
-Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an ecommerce app.
+Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an eCommerce app.
 
 ![][7]
 

@@ -32,10 +32,6 @@ Datadog で [API キー](https://docs.datadoghq.com/account_management/api-app-k
 
 Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Datadog**] を探します。Datadog パートナーページで Datadog API キーを指定します。これで、Braze がDatadog にデータを送信するための接続が作成されます。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ## Braze のイベント
 
 接続が統合されると、Brazeは以下のイベントをDatadogに送信する：

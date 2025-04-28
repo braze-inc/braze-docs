@@ -16,7 +16,7 @@ description: "Este artículo de referencia explica cómo probar campañas activa
 La única forma de probar la activación de una campaña con la API o un evento personalizado es lanzar la campaña en directo. Como parte del despliegue de una nueva campaña, recomendamos encarecidamente añadir un segmento de usuarios de prueba a las campañas cuando se pruebe la capacidad de entrega. Esto proporcionará una red de seguridad, asegurando que incluso si una campaña se envía accidentalmente, sólo llegará a los usuarios internos.
 
 1. **Importar usuarios de prueba**<br>Los usuarios de prueba pueden importarse a Braze mediante un CSV o una solicitud única por lotes a través de [Postman]({{site.baseurl}}/api/postman_collection/). Al importar estos usuarios, recomendamos establecer un atributo personalizado en sus perfiles (como `internal_test_user: true`) que pueda utilizarse para crear un segmento de grupo de prueba. <br><br>
-2. **Añadir usuarios de prueba como usuarios de prueba reconocidos por Braze**<br>[Si marca a sus usuarios de prueba como usuarios de prueba reconocidos por Braze]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) en el panel de control, tendrá acceso a un registro detallado de cada usuario, lo que le permitirá inspeccionar las solicitudes de API, sus cargas útiles y ver los registros de entregabilidad. Estos registros pueden ayudarle a determinar si hubo algún problema en la entrega de campañas a los usuarios finales. <br><br>
+2. **Añadir usuarios de prueba como usuarios de prueba reconocidos por Braze**<br>[Si marca a sus usuarios de prueba como usuarios de prueba reconocidos por Braze]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) en el panel de control, tendrá acceso a un registro detallado de cada usuario, lo que le permitirá inspeccionar las solicitudes de API, sus cargas útiles y ver los registros de entregabilidad. Estos registros pueden ayudarle a determinar si hubo algún problema en la entrega de campañas a los usuarios finales. <br><br>
 3. **Crear segmento**<br>Para crear un segmento de usuarios de prueba, cree un segmento de usuarios con el atributo personalizado `internal_test_user` establecido en `true`. Este segmento puede eliminarse cuando la campaña se ponga en marcha. 
 
 ## Paso 2: Probar los envíos
@@ -26,8 +26,8 @@ A continuación, puede realizar un envío de prueba desde el panel de control de
 ## Paso 3: Utilice el registro Braze para inspeccionar los resultados de entrada
 
 Utiliza el registro Braze para solucionar problemas de desencadenamiento, envío y eventos. 
-- El [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) le mostrará la carga útil sin procesar de la solicitud de activación de API, el evento personalizado que activa la campaña y cualquier propiedad de activación o evento asociada.
-- El [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) registrará cualquier error y le ayudará a entender por qué un mensaje en particular puede no haber sido entregado.
+- El [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) le mostrará la carga útil sin procesar de la solicitud de activación de API, el evento personalizado que activa la campaña y cualquier propiedad de activación o evento asociada.
+- El [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) registrará cualquier error y le ayudará a entender por qué un mensaje en particular puede no haber sido entregado.
 
 ## Paso 4: Eliminar el segmento de prueba y lanzar la campaña
 

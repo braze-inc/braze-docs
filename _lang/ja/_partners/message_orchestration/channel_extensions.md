@@ -50,8 +50,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
@@ -64,6 +62,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
-- name: ナルヴァル
+- name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: メール・ラブ
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
+- name: タップカート
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---

@@ -22,7 +22,7 @@ tool: Canvas
 
 각 단계마다 작업을 대기열에 추가하여 거의 동시에 실행하고 그 중 하나가 "승리"합니다. 실제로는 어느 정도 균등하게 정렬될 수 있지만, 적어도 먼저 생성된 단계에 약간의 편향이 있을 수 있습니다. 
 
-또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. 균등 분할을 원하면 [무작위 버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) 필터를 추가하세요.
+또한 이러한 배포가 정확히 어떻게 이루어질지에 대해서는 어떠한 보장도 할 수 없습니다. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
 
 ### 캔버스를 중지하면 어떻게 되나요?
 
@@ -32,9 +32,15 @@ tool: Canvas
 - 사용자가 흐름의 어느 위치에 있더라도 더 이상의 메시지는 발송되지 않습니다.
 - **예외:** 이메일이 있는 캔버스는 즉시 중지되지 않습니다. 전송 요청이 SendGrid로 전송된 후에는 사용자에게 전달되는 것을 막을 수 있는 방법이 없습니다.
 
+### 사용자 라이프사이클별로 하나의 캔버스를 구축해야 하나요, 아니면 별도의 캔버스를 구축해야 하나요?
+
+캔버스를 통해 달성하고자 하는 목표에 따라 사용자 여정을 구축하는 방식에 다른 접근 방식이 필요할 수 있습니다. 캔버스의 유연성을 통해 사용자 라이프사이클의 모든 단계에 대한 사용자 여정을 매핑할 수 있습니다. 효과적인 사용자 여정을 만들기 위한 간소화된 접근 방식의 몇 가지 예를 보려면 [Braze 캔버스 템플릿을]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) 확인하세요.
+
 #### 캔버스의 인앱 메시지
 
 다음 세션이 시작되면 인앱 메시지가 전송됩니다. 즉, 사용자가 캔버스가 중지되기 전에 캔버스 단계에 들어가면 인앱 메시지가 아직 만료되지 않은 한 다음 세션이 시작될 때 인앱 메시지를 계속 받게 됩니다.
+
+사용자가 캔버스가 중지되기 전에 세션을 시작할 수 있지만 앱 내 메시지가 즉시 표시되지 않을 수 있습니다. 인앱 메시지가 사용자 지정 이벤트에 의해 트리거되거나 지연되는 경우 이 문제가 발생할 수 있습니다. 즉, 사용자가 인앱 메시지 노출을 기록하고 캔버스가 중지된 후 인앱 메시지를 '수신'할 수 있습니다. 그러나 사용자는 캔버스가 중지되기 전에 세션을 시작해야 했지만 캔버스 단계를 받은 **후에** 세션을 시작해야 했습니다.
 
 {% alert note %}
 캔버스를 중지해도 메시지 수신을 기다리는 사용자가 사용자 여정을 종료하지는 않습니다. 캔버스를 다시 활성화했는데 사용자가 여전히 메시지를 기다리는 경우 메시지를 받게 됩니다(메시지를 보내야 하는 시간이 지나지 않았다면 메시지를 받지 못합니다).
@@ -48,7 +54,7 @@ tool: Canvas
 
 다단계 캔버스의 일부 단계를 편집하는 경우 이미 오디언스에 속해 있지만 단계를 받지 않은 사용자는 업데이트된 버전의 메시지를 받게 됩니다. 아직 해당 단계에 대한 평가가 이루어지지 않은 경우에만 이런 일이 발생한다는 점에 유의하세요.
 
-실행 후 편집할 수 있는 항목에 대한 자세한 내용은 [실행 후 캔버스 변경하기]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/)를 참조하세요.
+For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/post-launch_edits/).
 
 ### 캔버스에서 사용자 전환은 어떻게 추적하나요?
 
@@ -89,7 +95,7 @@ tool: Canvas
 
 ### 컴포넌트와 스텝의 차이점은 무엇인가요?
 
-[구성 요소]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)는 캔버스의 효과를 결정하는 데 사용할 수 있는 캔버스의 개별 부분입니다. 구성 요소에는 사용자 여정 분할, 지연 추가, 여러 캔버스 경로 테스트와 같은 작업이 포함될 수 있습니다. 캔버스의 단계는 캔버스 브랜치에서 개인화된 사용자 여정을 의미합니다. 기본적으로 캔버스는 사용자 여정을 위한 단계를 생성하는 개별 구성 요소로 이루어져 있습니다.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. 구성 요소에는 사용자 여정 분할, 지연 추가, 여러 캔버스 경로 테스트와 같은 작업이 포함될 수 있습니다. 캔버스의 단계는 캔버스 브랜치에서 개인화된 사용자 여정을 의미합니다. 기본적으로 캔버스는 사용자 여정을 위한 단계를 생성하는 개별 구성 요소로 이루어져 있습니다.
 
 ### 각 캔버스 구성 요소에 대한 분석을 보려면 어떻게 해야 하나요?
 
@@ -102,6 +108,10 @@ tool: Canvas
 ### 캔버스에 입장하는 사용자 수가 예상한 수와 일치하지 않는 이유는 무엇인가요?
 
 캔버스에 입장하는 사용자 수는 오디언스 및 트리거가 평가되는 방식에 따라 예상되는 수와 다를 수 있습니다. Braze에서는 트리거 전에 오디언스를 평가합니다([속성 변경]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) 트리거를 사용하지 않는 한). 이렇게 하면 트리거 동작이 평가되기 전에 선택한 대상 그룹에 속하지 않는 사용자가 캔버스에서 이탈하게 됩니다.
+
+### 익명 사용자는 캔버스 여정 중에 어떤 일이 발생하나요?
+
+익명 사용자는 캔버스에 들어오고 나갈 수 있지만, 식별될 때까지 특정 사용자 프로필과 연결되지 않으므로 분석에서 이들의 상호 작용이 완전히 추적되지 않을 수 있습니다. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
 
 ### 내 캔버스 단계 전환율이 내 캔버스 이형 상품 총 전환율과 같지 않은 이유는 무엇인가요?
 

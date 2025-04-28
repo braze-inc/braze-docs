@@ -12,10 +12,6 @@ tool: Segments
 
 Your filter options are related to the format (data type) that you're passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Data Settings** > **Custom Attributes**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
-{% endalert %}
-
 If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types][36].
 
 Keep in mind that changing the data type of a custom attribute in the dashboard will reject data that is sent to Braze in a different format.

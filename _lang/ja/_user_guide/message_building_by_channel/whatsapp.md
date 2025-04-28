@@ -37,14 +37,20 @@ guide_featured_list:
 - name: "不明な電話番号の処理"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp販売試験"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "WhatsApp報告"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg
+- name: "メッセージ利用ダッシュボード"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "WhatsAppのベストプラクティス"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: "カスタムドメイン"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
+  image: /assets/img/braze_icons/link-03.svg
 - name: "WhatsAppに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

@@ -13,7 +13,7 @@ channel:
 
 > MMSとSMSはどちらもBrazeのSMS チャネルに関連付けられています。自分のアカウントで MMS にアクセスするには、まだアクセス権を購入していないユーザーのために SMS を購入する必要があります。既存の SMS 顧客は、購入後に MMS に接続できます。 
 
-現在、MMS は、米国のショートコード (5 ～ 6桁の数字)、米国および CA のロングコード (10 桁の数字)、米国およびカナダの顧客番号でサポートされています。米国/カナダ以外の番号への番号の送信は可能ですが、MMSメッセージはメディアアセットへのリンク付きのSMSメッセージに変換されます。詳しくは、[短・長コードs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/)を参照してください。
+現在、MMS は、米国のショートコード (5 ～ 6桁の数字)、米国および CA のロングコード (10 桁の数字)、米国およびカナダの顧客番号でサポートされています。米国/カナダ以外の番号への番号の送信は可能ですが、MMSメッセージはメディアアセットへのリンク付きのSMSメッセージに変換されます。詳しくは、[短・長コードs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/)を参照してください。
 
 ## MMS のショートコード
 

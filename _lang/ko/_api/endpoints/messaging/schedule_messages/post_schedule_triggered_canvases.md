@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 브레이즈 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -16,7 +16,7 @@ description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 Bra
 
 > 이 엔드포인트를 사용하면 API 트리거 배달을 통해 Canvas 메시지를 예약하여 어떤 작업을 트리거하여 메시지를 전송할지 결정할 수 있습니다.
 
-Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `canvas_entry_properties`를 전달할 수 있습니다.
+Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `canvas_entry_properties` 을 전달할 수 있습니다.
 
 이 엔드포인트로 메시지를 보내려면 캔버스를 만들 때 생성한 [캔버스 ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)가 있어야 합니다.
 

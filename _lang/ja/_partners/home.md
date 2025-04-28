@@ -24,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -93,7 +91,7 @@ valid_partner_list:
 - name: セグメント
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
@@ -120,8 +118,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: インフィリオン
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -210,8 +208,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
 - name: Wunderkind
@@ -248,8 +244,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/
 - name: Smartling
@@ -298,18 +292,56 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
-- name: 未来の賛歌
+- name: Future Anthem
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
-- name: 受信トレイ・モンスター
+- name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 - name: マイポストカード
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
-- name: シーン
+- name: SEEN
   url: /docs/partners/message_personalization/dynamic_content/seen
-- name: ディクサ
+- name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
-- name: ナルヴァル
+- name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: ジャストゥーノ
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
+- name: コンストラクタ
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
+- name: メール・ラブ
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
+- name: Adikteev
+  url: /docs/partners/data_and_infrastructure_agility/analytics/adikteev/
+- name: Criteo
+  url: /docs/partners/canvas_steps/criteo_audience_sync/
+- name: Databricks
+  url: /docs/user_guide/data/cloud_ingestion/integrations/
+- name: Datadog
+  url: /docs/partners/data_and_infrastructure_agility/analytics/datadog/
+- name: Front
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
+- name: Notify
+  url: /docs/partners/message_personalization/dynamic_content/notify/
+- name: オディッチ
+  url: /docs/partners/message_personalization/dynamic_content/odicc/
+- name: Pinterest
+  url: /docs/partners/canvas_steps/pinterest_audience_sync/
+- name: Snapchat
+  url: /docs/partners/canvas_steps/snapchat_audience_sync/
+- name: TikTok
+  url: /docs/partners/canvas_steps/tiktok_audience_sync/
+- name: トラストパイロット
+  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+- name: VWO
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
+- name: SessionM
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
+- name: タップカート
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---

@@ -3,7 +3,7 @@ nav_title: Braze Overview
 article_title: Getting Started&#58; Braze Overview
 page_order: 1
 page_type: reference
-description: "Get acquianted with the core concepts you'll need to know when working in Braze."
+description: "Get acquainted with the core concepts you'll need to know when working in Braze."
 
 ---
 
@@ -12,7 +12,7 @@ description: "Get acquianted with the core concepts you'll need to know when wor
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 
 {% alert tip %}
-We highly recommend checking out our free [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) course along with these articles. No special login or account is needed for this course. If you're a developer looking for a technical rundown of Braze, check out [Getting Started for Developers]({{site.baseurl}}/developer_guide/platform_wide/getting_started/platform_overview), too.
+We highly recommend checking out our free [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) course along with these articles. No special login or account is needed for this course. If you're a developer looking for a technical rundown of Braze, check out [Getting Started for Developers]({{site.baseurl}}/developer_guide/getting_started/platform_overview/), too.
 {% endalert %}
 
 In the Getting Started sections, we focus on the common implementations of Braze. However, Braze is incredibly flexible and can be customized to bring value to your organization in various ways. To establish clarity and brevity, we've provided a descriptive overview of the default setup instead of offering rigid instructions. We recognize that every organization has its distinct needs, and Braze is built to cater to a diverse range of customization options that can be tailored to your specific requirements.
@@ -78,7 +78,7 @@ Here's the Braze framework for estimating the length of your integration based o
 Need help with your migration? Our [certified Braze partners](https://www.braze.com/partners/solutions-partners) can help!
 {% endalert %}
 
-- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2–3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
+- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2–3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
 - **Organizational complexity:** Our onboarding process can adapt to your business needs. Whether you're a single business unit, have a Center of Excellence, multiple independent units, or use agencies to augment your teams, Braze has experience working in all scenarios.
 - **Data infrastructure sophistication:** If you're only implementing the Braze SDK or already have a Customer Data Platform (CDP), it's possible to get everything set up in just 30 days. Using a modern CDP can speed up the process. But if you have many backend systems, tools, or databases to connect with Braze, it might take longer and need more dedicated resources to finish setup.
 

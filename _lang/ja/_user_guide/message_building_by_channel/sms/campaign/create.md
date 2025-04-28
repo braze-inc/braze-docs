@@ -25,15 +25,10 @@ search_rank: 1
 **ステップ:**
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**キャンペーン**の下に**エンゲージメント**があります。
-{% endalert %}
-
-{: start="2"}
-2\.**SMS**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は**Multichannel**を選択します。
-3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)と[tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)を追加します。
-   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+2. **SMS**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は**Multichannel**を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 6. [[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)] を選択して、メッセージを送信するユーザーが適切であることを確認します。サブスクリプショングループを選択すると、Braze によって自動的にセグメンテーションフィルターが追加され、配信登録済みのユーザーのみがキャンペーンを受信できるようになります。そのサブスクリプショングループに属する長いコードと短いコードのみを使用して、対象ユーザーに SMS が送信されます。
 
@@ -58,36 +53,44 @@ search_rank: 1
 
 ## ステップ 2: SMSを作成する
 
-必要に応じて言語やパーソナライズ（リキッド、コネクテッド・コンテンツ、絵文字）を使ってメッセージを書く。超過料金を請求される可能性を減らすため、メッセージのコピー数制限を必ず守ること。
+必要に応じて言語やパーソナライズ（リキッド、コネクテッド・コンテンツ、絵文字）を使ってメッセージを書きます。超過料金を請求される可能性を減らすため、メッセージのコピー数制限を必ず守ってください。
 
 {% alert important %}
-先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)ガイドラインを読む。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことである。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておくといいだろう。
+先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)ガイドラインを読みましょう。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことです。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておきましょう。
 {% endalert %}
 
-![次のメッセージを含む Braze の SMS コンポーザー: 「first_name さん、いつも応援していただきありがとうございます。このSMSを見せれば、特別割引が適用される。メッセージの受信を中止するには STOP と返信してください。」]({% image_buster /assets/img/sms_campaign_compose.png %})
+![次のメッセージを含む Braze の SMS コンポーザー: 「first_name さん、いつも応援していただきありがとうございます。このSMSを見せれば、特別割引が適用されます。メッセージの受信を中止するには STOP と返信してください。」]({% image_buster /assets/img/sms_campaign_compose.png %})
 
-{% alert tip %}
+### 連絡先カードの追加
+
+SMS メッセージに連絡先カードを追加すると、顧客がビジネスや連絡先情報を連絡先に簡単に追加できるようになります。これらのカードには、会社名、電話番号、住所、Eメール、小さな写真など、一般的なプロパティを割り当てることができます。詳しくは、[お問い合わせカード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)をご覧ください。
+
+### ヒント
+
+#### Liquid の使用
+
 {% raw %}
-Liquidを使用する場合は、受信者のユーザープロファイルが不完全な場合、名前やまとまった文章の代わりに空白のプレースホルダー`Hi, !` を受信しないように、選択したパーソナライズのデフォルト値を必ず含めること。
+Liquidを使用する場合は、受信者のユーザープロファイルが不完全な場合、名前やまとまった文章の代わりに空白のプレースホルダー`Hi, !` を受信しないように、選択したパーソナライズのデフォルト値を必ず含めてください。
 {% endraw %}
-{% endalert %}
 
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+#### AI コピーの生成
 
-![SMS コンポーザーのメッセージフィールドにある [AI コピーライター] ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-### コンタクトカード
+![SMS コンポーザーのメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-必要に応じて、連絡先カードをSMSメッセージに追加して、顧客がビジネスや連絡先情報を簡単に連絡先に追加できるようにすることができます。これらのカードには、会社名、電話番号、住所、Eメール、小さな写真など、一般的なプロパティを割り当てることができる。詳しくは、[お問い合わせカード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)をご覧ください。
+#### 右から左へのメッセージを作成する
+
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ## ステップ 3:メッセージをプレビューしてテストする
 
-Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨している。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューする。
+Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューしましょう。
 
-![コンポーザーのテストタブからの SMS コピーのプレビュー。プロファイルセクションの [名] フィールドは「James」に設定されている。プレビュー・セクションでは、SMSに "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %}) と表示されるようになった。
+![コンポーザーのテストタブからの SMS コピーのプレビュー。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビュー・セクションでは、SMSに "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %}) と表示されるようになりました。
 
 {% alert tip %}
-SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみよう。
+SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみましょう。
 {% endalert %}
 
 ## ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
@@ -95,7 +98,7 @@ SMSがいくつのセグメントに分けられるかテストしたい場合�
 {% tabs %}
 {% tab キャンペーン %}
 
-次に、キャンペーンの残りの部分を作成します。SMSメッセージの作成に最適なツールの使い方については、以下のセクションを参照のこと。
+次に、キャンペーンの残りの部分を作成します。SMSメッセージの作成に最適なツールの使い方については、以下のセクションを参照してください。
 
 #### 配信スケジュールまたはトリガーを選択する
 
@@ -115,7 +118,7 @@ SMSリターゲティングに興味がある？詳しくはSMS[リターゲテ�
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 コンバージョンイベントにより、キャンペーンの成否を測定できます。以下に例を示します。
 
@@ -135,6 +138,6 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ## ステップ 5: レビューと展開
 
-キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認し、テストしてから送信する！
+キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認しテストしてから送信してください。
 
 次に、[SMS レポート]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)をチェックして、SMS キャンペーンの結果にアクセスする方法を確認します。

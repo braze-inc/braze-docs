@@ -33,7 +33,7 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
 
 To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
 
-## Create an experiment path
+## Creating an experiment path
 
 To create an Experiment Paths component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
 
@@ -64,14 +64,14 @@ Lastly, you must build your downstream paths. Select **Done** and return to the 
 Keep in mind that paths and their downstream steps cannot be removed from a Canvas after they're created. However, when launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
 
 {% alert note %}
-Experiment Paths can't be edited after a Canvas is launched. If your experiment is in mid-send and you edit the message, the test will be rendered useless and any experiment results will be removed. You also can't turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.<br><br> For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Experiment Paths can't be edited after a Canvas is launched. If your experiment is in mid-send and you edit the message, the test will be rendered useless and any experiment results will be removed. You also can't turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.<br><br> For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Tracking performance
 
 From the **Canvas Analytics** page, click the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
-Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that the analytics of individual steps do **not** take into account the structure of the experiment. The analytics in the Experiment Step should be used to compare across paths.
+Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that the analytics of individual steps do **not** take into account the structure of the experiment. The analytics in the Experiment Step should be used to compare across paths.
 
 ### Winning Path and Personalized Paths performance
 
@@ -87,7 +87,6 @@ Experiment Paths will record users who enter each step and convert while in the 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
 [1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
-
 [WP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path
 [WP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics
 [PP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths

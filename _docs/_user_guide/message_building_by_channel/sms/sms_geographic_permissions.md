@@ -40,7 +40,7 @@ Changes will take effect after you select **Save**. Removing countries from your
 
 Certain countries have a higher risk of SMS traffic pumping. These countries are indicated by a **High Risk** tag in the country dropdown.
 
-![The country downdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
+![The country dropdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
 
 If you allow sending in these countries, you must first acknowledge the risk of doing so before the country is added to your allowlist.
 
@@ -50,7 +50,7 @@ Limit the countries on your allowlist to only those required to support your bus
 
 ## Visibility of blocked sends
 
-Attempted sends to countries that aren't on your allowlist will be aborted. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+Attempted sends to countries that aren't on your allowlist will be aborted. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 Aborted messages caused by blocked sends will show as `Abort_Type = "blocked_recipient_country"` with the abort log detailing the blocked country.
 

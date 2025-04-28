@@ -19,11 +19,12 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -101,7 +102,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 50 Ko.
 

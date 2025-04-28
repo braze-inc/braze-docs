@@ -30,19 +30,19 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Requis | Chaîne de caractères | Voir [identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Requis | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
-| `starting_at` | Optionnel* | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle l’exportation de données doit commencer. <br><br>Soit `length` ou `starting_at` est requis. |
-| `length` | Optionnel* | Chaîne de caractères | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>Soit `length` ou `starting_at` est requis. |
+| `canvas_id` | Requis | Chaîne de caractères | Voir l'[identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `ending_at` | Requis | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
+| `starting_at` | En option* | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>\* L'adresse `length` ou `starting_at` est requise. |
+| `length` | En option* | Chaîne de caractères | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>\* L'adresse `length` ou `starting_at` est requise. |
 | `include_variant_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques de variante (par défaut sur `false`).  |
 | `include_step_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques d’étape (par défaut sur `false`). |
 | `include_deleted_step_data` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur `false`). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 {% raw %}
 ```
-curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-05:00&starting_at=2018-05-28T23:59:59-05:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}

@@ -1,19 +1,19 @@
 ---
-nav_title: シーン
-article_title: シーン
-description: "SEENのパーソナライズされた動画は、顧客のカスタマージャーニー全体を通して、企業が比類のないアテンションとエンゲージメントを獲得するのに役立っている。"
+nav_title: SEEN
+article_title: SEEN
+description: "この参考記事では、カスタマージャーニーを通じてエンゲージメントを向上させるパーソナライズされた動画をデザインするプラットフォームであるSEENとBrazeのパートナーシップについて概説している。"
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
 ---
 
-# シーン
+# SEEN
 
-> [SEENの](https://seen.io/)パーソナライズされた動画は、顧客のカスタマージャーニー全体を通して、企業が比類のないアテンションとエンゲージメントを獲得するのに役立っている。簡単な3ステップで、SEENで動画をパーソナライズさせる：<br>1\.データを中心に動画をデザインする。<br>2\.クラウドで大規模にパーソナライズされる。<br>3\.最も効果的な場所に配布する。
+> [SEENは](https://seen.io/)パーソナライゼーション・ビデオ・プラットフォームであり、企業はカスタマーエクスペリエンスをより魅力的にするために、顧客を中心に動画を作成・構築することができる。SEEN を使えば、データを基に動画をデザインし、クラウドで大規模にパーソナライズした後、最適な場所に配信することができます。
 
 ## ユースケース
 
-SEENはカスタマージャーニー全体にわたって自動化された動画パーソナライゼーションを提供する。一般的な用途としては、オンボーディング、ロイヤルティ、サインアップ／コンバージョン、奪還／アンチチャーンなどがある。
+SEENはカスタマージャーニー全体にわたって自動化された動画パーソナライゼーションを提供する。一般的な用途としては、オンボーディング、ロイヤルティ、サインアップとコンバージョン、奪還と解約防止などがあります。
 
 ## 前提条件
 
@@ -22,24 +22,24 @@ SEENはカスタマージャーニー全体にわたって自動化された動�
 | 前提条件          | 説明                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | SEENキャンペーン   | このパートナーシップを利用するには、SEENキャンペーンが必要である。                                                                     |
-| データソース   | 動画をパーソナライズさせるためには、SEENにデータを送る必要がある。Brazeですべての関連データが利用可能であることを確認し、**braze_idを**識別子としてデータを渡す。 |
-| Braze Data Transformation Webhook URL   | Brazeデータ変換は、SEENからの受信データをBrazeの/users/trackエンドポイントで受け入れられるように再フォーマットするために使用される。 |
+| データソース   | 動画をパーソナライズするには、SEEN にデータを送る必要があります。Braze ですべての関連データが利用可能であることを確認し、**braze_id** を識別子としてデータを渡します。 |
+| Braze Data Transformation Webhook URL   | Braze Data Transformation を使用して、SEEN からの受信データを再フォーマットして、Brazeの /users/track エンドポイントで受け入れられるようにします。 |
 
 ## レート制限
 
-SEEN APIは現在、1時間に1000コールを受け付けている。
+SEEN API は現在、1時間に1,000コールを受け入れます。
 
 ## SEENとBrazeの統合
 
 以下の例では、動画生成のためにユーザーデータをSEENに送り、配信のためにユニークなランディングページリンクとパーソナライズされたユニークなサムネイルをBrazeに送り返す。この例では、POST Webhookを使用してSEENにデータを送信し、データ変換を使用してBrazeにデータを受信する。SEENで複数の動画キャンペーンを行っている場合は、このプロセスを繰り返してBrazeをすべての動画キャンペーンに接続する。
 
 {% alert tip %}
-何か問題が発生した場合は、SEENのカスタマーサクセスマネージャーにご相談いただきたい。
+何か問題が発生した場合は、SEENカスタマーサクセスマネージャーまでご連絡ください。
 {% endalert %}
 
-### ステップ 1: Webhook キャンペーンの作成
+### ステップ1: Webhook キャンペーンの作成
 
-Brazeに新しい[Webhookキャンペーンを](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks)作成する。キャンペーン名をつけ、以下の表を参考にWebhookを作成する：
+Brazeで新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks)作成する。キャンペーン名をつけ、以下の表を参考にWebhookを作成する：
 
 {% raw %}
 <table>
@@ -52,26 +52,26 @@ Brazeに新しい[Webhookキャンペーンを](https://www.braze.com/docs/user_
   <tbody>
     <tr>
       <td><strong>Webhook URL</strong></td>
-      <td>以下のWebhook URLを使用する。あなたは以下のものを受け取る。 <code>campaign_slug</code> SEENから正しいエンドポイントを呼び出す。<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
+      <td>以下のWebhook URLを使用する。あなたは以下のものを受け取る。 <code>campaign_slug</code> 正しいエンドポイントを呼び出すために、SEEN から受け取ります。<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
     </tr>
     <tr>
       <td><strong>HTTPメソッド</strong></td>
-      <td>を使う。 <code>POST</code> というメソッドだ。</td>
+      <td>を使用します。 <code>POST</code> メソッド</td>
     </tr>
     <tr>
       <td><strong>Request body</strong></td>
-      <td>以下のような生のテキストでリクエスト本文を入力する。<br><br><pre><code>[
+      <td>以下のような生のテキストでリクエスト本文を入力します。<br><br><pre><code>[
     {
     "first_name":"{{${first_name}}}",
     "last_name":"{{${last_name}}}",
     "email":"{{${email_address}}}",
     "customer_id":"{{${braze_id}}}"
     }
-]</code></pre><br>詳細は<a href="https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content">SEEN APIを</a>参照のこと。</td>
+]</code></pre><br>詳細については、「<a href="https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content">SEEN API</a>」を参照してください。</td>
     </tr>
     <tr>
       <td><strong>リクエストヘッダー</strong></td>
-      <td>リクエストヘッダーには以下の情報を記入する：<br><strong>- 認可する：</strong><code>Token {token}</code><br><strong>- コンテンツタイプ：</strong><code>application/json</code><br><br>SEENから認証トークンが届く。</td>
+      <td>次の情報を使用して、リクエストヘッダーに入力します。<br><strong>- 認証:</strong><code>Token {token}</code><br><strong>- コンテンツタイプ：</strong><code>application/json</code><br><br>SEEN から認証トークンが届きます。</td>
     </tr>
   </tbody>
 </table>
@@ -80,14 +80,14 @@ Brazeに新しい[Webhookキャンペーンを](https://www.braze.com/docs/user_
 
 **Test**タブに切り替えることで、ユーザーを使ってWebhookをテストすることができる。
 
-すべてが意図したとおりに動いたら、Brazeに行き、キャンペーンの送信レートを**毎分**10**メッセージに**設定する。これにより、SEENのレート制限である1時間あたり1000コールを超えることはない。
+すべてが意図したとおりに機能したら、Braze に移動し、キャンペーンの送信レートを**毎分10メッセージ**に設定します。こうすれば、SEENのレート制限である1時間あたり1,000コールを超えることはない。
 
-### ステップ 2: データ変換を作成する
+### ステップ2: データ変換を作成する
 
-1. `landing_page_url` と`email_thumbnail_url` に新しい[カスタム属性](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)フィールドを作成する。これが、この例で使用する2つの属性である。
-2. [データ](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) **設定の** [データ変換](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites)ツールを開封し、**変換の作成を**選択する。
-3. 変身に名前をつけ、**Start from scratchを**選択し、**送信**先を**POSTに設定する：ユーザーを追跡する** 。
-4. **WebhookのURLをSEENと共有するを**選択する。
+1. `landing_page_url` と`email_thumbnail_url` の[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)フィールドを新規作成する。これが、この例で使用する2つの属性である。
+2. [**データ設定**] で [[データ変換]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites)] を開き、 [**変換の作成**] を選択します。
+3. 変換に名前を付けてから、[**ゼロから作成**] を選択し、[**送信先**] を [**POST:ユーザーを追跡] に設定します。ユーザーを追跡** 。
+4. [**Webhook の UR Lを SEEN と共有する**] を選択します。
 5. 以下のコードを変換の出発点として使うことができる：
 
 ```javascript
@@ -104,11 +104,11 @@ let brazecall = {
 return brazecall;
 ```
 {% alert note %}
-他のデータも含めたい場合は、それらも含めるようにする。コールバックのペイロードに必要なフィールドがすべて含まれるように、SEENとも話し合うことを忘れずに。
+他のデータも含めたい場合は、それらも含めるようにしてください。コールバックのペイロードに必要なフィールドがすべて含まれるように、SEENとも話し合うことを忘れずに。
 {% endalert %}
 
 {: start="6"}
-6. 指定されたエンドポイントにテストペイロードを送信する。[SEENのドキュメントで](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp)定義されているコールバックペイロードを使いたい場合は、[Postmanや](https://www.postman.com/)他の同様のサービスを使って自分で送信することができる：
+6. 指定されたエンドポイントにテストペイロードを送信する。[SEENドキュメントで](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp)定義されているコールバックペイロードを使いたい場合は、[Postmanや](https://www.postman.com/)他の同様のサービスを使って自分で送信することができる：
 
 ```json
 {
@@ -123,5 +123,5 @@ return brazecall;
 ```
 
 {: start="7"}
-7. **Validateを**選択して、すべてが意図したとおりに動くことを確認する。
-8. すべてが意図したとおりに動いたら、**「Save**and**Activate**」を選択する。
+7. [**検証**] を選択して、すべてが意図したとおりに動くことを確認すします。
+8. [**保存**] および [**アクティブ化する**] を選択します。

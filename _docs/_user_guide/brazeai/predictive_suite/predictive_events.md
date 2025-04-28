@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Overview
 
-![Graphic titled "How Predictive Events Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to perform the event. The label reads "Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting."][1]
+![Graphic titled "How Predictive Events Works", displaying user data being funneled into the machine learning model. The label reads "Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't." It also shows the results of the machine learning, where users are ranked by least likely to most likely to perform the event. The label reads "Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting."][1]
 
 > Predictive Events give marketers a powerful tool for identifying and messaging users based on their likelihood to perform an event. When you create an event prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous activity and predict future activity.
 
@@ -36,10 +36,6 @@ The real value of Predictive Events lies in using prediction results to create a
 ## Access Predictive Events
 
 The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
-{% endalert %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo prediction with synthetic data as well as create one preview prediction model at a time. This prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to their likelihood score. It will also not update regularly after creation.
 

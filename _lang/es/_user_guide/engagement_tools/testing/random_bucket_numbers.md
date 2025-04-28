@@ -44,7 +44,7 @@ Puede utilizar este tipo de segmentos si desea realizar una prueba de tres varia
 
 Dependiendo del número de segmentos que desee y de la distribución de los usuarios dentro de cada segmento, su plan puede ser diferente.
 
-Para cada uno de tus segmentos de número de contenedor aleatorio, incluido el grupo de control, activa el [seguimiento de análisis]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). Al evaluar el éxito de las variantes en relación con el grupo de control, puedes ir a tu página de [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) y ver con qué frecuencia cada segmento ha completado determinados eventos personalizados.
+Para cada uno de tus segmentos de número de contenedor aleatorio, incluido el grupo de control, activa el [seguimiento de análisis]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). Al evaluar el éxito de las variantes en relación con el grupo de control, puedes ir a tu página de [eventos personalizados]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) y ver con qué frecuencia cada segmento ha completado determinados eventos personalizados.
 
 ### Reentrada aleatoria de la audiencia mediante números de contenedor aleatorios
 

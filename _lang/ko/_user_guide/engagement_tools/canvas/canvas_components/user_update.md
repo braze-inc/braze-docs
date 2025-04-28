@@ -14,7 +14,7 @@ tool: Canvas
 
 > 사용자 업데이트 구성요소를 사용하면 JSON 작성기에서 사용자의 속성, 이벤트 및 구매를 업데이트할 수 있으므로 API 키와 같은 민감한 정보를 포함할 필요가 없습니다.
 
-사용자 업데이트를 사용하면 업데이트는 분당 `/users/track` 요청 사용량 제한에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. 이 구성요소는 청구할 수 없는 데이터 포인트(예: 구독 그룹)를 업데이트하는 데 사용할 때는 [데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)를 소비하지 않습니다.
+사용자 업데이트를 사용하면 업데이트는 분당 `/users/track` 요청 사용량 제한에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
 
 사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 후속 메시징이 사용자 업데이트에 의존하는 경우 메시지를 보내기 전에 이러한 업데이트가 완료되었는지 확인할 수 있습니다.
 
@@ -52,7 +52,7 @@ tool: Canvas
 
 ### 개체 배열 업데이트하기
 
-[개체 배열]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)은 데이터가 풍부한 고객 프로필에 저장된 커스텀 속성입니다. 이를 통해 브랜드와 사용자의 상호작용에 대한 기록을 생성할 수 있습니다. 이를 통해 구매 내역 또는 총 생애주기 가치와 같이 계산된 필드인 커스텀 속성을 기반으로 세그먼트를 만들 수 있습니다.
+An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. 이를 통해 브랜드와 사용자의 상호작용에 대한 기록을 생성할 수 있습니다. 이를 통해 구매 내역 또는 총 생애주기 가치와 같이 계산된 필드인 커스텀 속성을 기반으로 세그먼트를 만들 수 있습니다.
 
 사용자 업데이트 단계에서는 이 개체 배열에 속성을 추가하거나 제거할 수 있습니다. 배열을 업데이트하려면 속성 목록에서 배열 속성 이름을 선택하고 키 값을 입력합니다.
 
@@ -91,7 +91,7 @@ tool: Canvas
 {% endraw %}
 
 {:start="2"}
-2\. 사용자가 장바구니에 품목을 추가할 때 기록되는 `add_item_to_cart`라는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)를 만듭니다.
+2\. Create a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket.
 3\. 이 커스텀 이벤트를 사용하여 타겟 오디언스가 있는 캔버스를 만듭니다. 이제 사용자가 장바구니에 아이템을 추가하면 이 캔버스가 트리거됩니다. 그런 다음 해당 사용자에게 직접 메시지를 타겟팅하여 특정 지출에 도달하거나 특정 시간 동안 장바구니를 이탈한 경우 또는 기타 사용 사례에 부합하는 모든 경우에 쿠폰 코드를 제공할 수 있습니다. 
 
 `shopping_cart` 속성은 모든 품목의 총 비용, 장바구니의 총 품목 수, 장바구니에 선물이 포함된 경우 등 다양한 커스텀 이벤트의 총합을 전달합니다. 다음과 같이 보일 수 있습니다:
@@ -129,7 +129,7 @@ tool: Canvas
 캔버스에 대한 트리거 이벤트의 속성을 속성으로 저장하려면 개인화 모달을 사용하여 캔버스 항목 속성을 추출하여 저장합니다. 사용자 업데이트는 다음과 같은 개인화 기능도 지원합니다: 
 * [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [콘텐츠 블록]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [항목 속성]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
+* [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
 * 리퀴드 로직( [메시지 중단]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) 포함)
 * 개체당 여러 속성 또는 이벤트 업데이트
 

@@ -35,16 +35,17 @@ API 経由でキャンバスメッセージの翻訳を更新することは、�
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`step_id`| 必須 | 文字列 | キャンバスのステップのID。 |
-|`message_variation_id`| 必須 | 文字列 | メッセージのID。 |
+|`message_variation_id`| 必須 | string | メッセージのID。 |
 |`locale_id`| 必須 | 文字列 | ロケールのID。 |
+|`workflow_id` | 必須 | 文字列 | キャンバスのID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、**多言語サポート**設定またはGETリクエストレスポンスで見つけることができるユニバーサル一意識別子（UUID）とみなされることに注意。
+すべての翻訳IDは、**多言語サポート**設定またはGETリクエストレスポンスで見つけることができるユニバーサルユニーク識別子（UUID）とみなされることに注意。
 
-## 例のリクエスト
+## リクエスト例
 
 ```json
 Content-Type: application/json

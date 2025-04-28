@@ -20,7 +20,7 @@ alias: /line/create/
 Before creating a LINE message, do the following:
 
 1. Read the LINE overview.
-2. Acknolwedge policies, limits, and content rules.
+2. Acknowledge policies, limits, and content rules.
 3. [Set up your LINE connection]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Sending LINE messages from Braze will draw from your account's Message Credits.
@@ -35,14 +35,9 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{: start="2"}
 2. Select **LINE**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -71,9 +66,15 @@ Write your message using personalization (such as Liquid or Connected Content) a
 
 ![LINE composer with a message displayed in the preview.][1]
 
-{% alert tip %}
+### Tips
+
+#### Using Liquid
+
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".
-{% endalert %}
+
+#### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Step 3: Preview and test your message
 
@@ -96,13 +97,13 @@ You can specify delivery controls, such as allowing users to become [re-eligible
 
 ### Choose users to target
 
-[Target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
+[Target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
 
 Select the larger audience from your segments, and optionally narrow that segment further with our [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 ### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 Conversion events help you measure the success of your campaign. For example:
 
@@ -114,7 +115,7 @@ You can also set custom conversion events based on your specific use case. Get c
 {% endtab %}
 {% tab Canvas %}
 
-If you haven’t already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Creating a Canvas](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you haven’t already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -123,7 +124,7 @@ If you haven’t already, complete the remaining sections of your Canvas. For fu
 
 After you’ve finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
-Next, check out [LINE reporting](https://www.braze.com/docs/line/reporting/) to learn how you can access the results of your LINE campaigns.
+Next, check out [LINE reporting]({{site.baseurl}}/line/reporting/) to learn how you can access the results of your LINE campaigns.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

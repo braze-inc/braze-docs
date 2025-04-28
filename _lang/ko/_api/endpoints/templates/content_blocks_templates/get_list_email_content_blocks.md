@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 사용 가능한 콘텐츠 블록 나열 Braze 엔드포인트에 대해 자세히 설명합니다."
+description: "이 문서에서는 사용 가능한 콘텐츠 블록 Braze 엔드포인트 목록에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}

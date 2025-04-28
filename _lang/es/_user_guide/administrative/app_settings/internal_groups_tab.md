@@ -50,8 +50,8 @@ Después de crear su Grupo Interno, puede añadir usuarios de prueba como miembr
 | Método de adición | Descripción |
 | :------------- | :------------- |
 | Usuarios identificados |Buscar al usuario por su ID de usuario externo o su dirección de correo electrónico.|
-|Usuarios anónimos| Busca por dirección IP. A continuación, proporcione un nombre para cada usuario de prueba que se añada. Este es el nombre con el que se asociarán todos los registros de eventos en la página [Registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/).|
-|Añadir usuarios en bloque|Copie y pegue una lista de direcciones de correo electrónico o identificadores externos en la sección correspondiente. Sólo puede añadir usuarios ya conocidos en el panel de control. Para más información, consulte [Importación de usuarios]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
+|Usuarios anónimos| Busca por dirección IP. A continuación, proporcione un nombre para cada usuario de prueba que se añada. Este es el nombre con el que se asociarán todos los registros de eventos en la página [Registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/).|
+|Añadir usuarios en bloque|Copie y pegue una lista de direcciones de correo electrónico o identificadores externos en la sección correspondiente. Sólo puede añadir usuarios ya conocidos en el panel de control. Para más información, consulte [Importación de usuarios]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Grupos de pruebas de contenido

@@ -40,7 +40,7 @@ El conector HTTP personalizado está actualmente en fase beta. Si te interesa co
 
 ### Paso 2: Configurar la transmisión de datos en Currents
 
-1. En Braze, ve a **Integraciones de socios** > Exportación de datos.
+1. En Braze, ve a **Integraciones de socios** > **Exportación de datos**.
 2. Selecciona **Crear nueva corriente** y **Exportar corrientes personalizadas**.<br><br>![El botón "Crear nueva corriente" con un desplegable que contiene "Exportar corrientes personalizadas".][3]{: style="max-width:60%;"}<br><br>
 3. Introduce un nombre de integración y un correo electrónico para ser contactado si se producen errores con la integración.
 4. En **Credenciales**, introduce la siguiente información que anotaste en [el Paso 1](#step-1-create-a-currents-source):

@@ -1,20 +1,20 @@
 ---
-nav_title: 百花繚乱のZeotap
-article_title: 百花繚乱のZeotap
-description: "この参考記事では、Braze Currentsと次世代顧客データプラットフォームであるZeotapのパートナーシップについて概説している。Zeotapは、アイデンティティ解決、インサイト、データエンリッチメントを提供することで、モバイルオーディエンスの発見と理解を支援する。"
+nav_title: Currents の Zeotap
+article_title: Currents の Zeotap
+description: "このリファレンス記事では、Braze Currents とZeotap のパートナーシップについて概説します。Zeotap は、アイデンティティ解決、インサイト、データ強化を提供して、モバイルオーディエンスを発見、理解できるようにする次世代の顧客データプラットフォームです。"
 page_type: partner
 tool: Currents
 search_tag: Partner
 ---
 
-# 百花繚乱のZeotap
+# Currents の Zeotap
 
 > [Zeotap](https://zeotap.com/) は、アイデンティティ解決、インサイト、データ強化を提供して、モバイルオーディエンスを発見、理解できるようにする次世代の顧客データプラットフォームです。
 
-BrazeとZeotapの統合により、Zeotapの顧客セグメントをBrazeのユーザープロファイルに同期させることで、キャンペーンの規模とリーチを拡大することができる。[Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)使えば、データをZeotapに接続して、成長スタック全体でアクション可能にすることもできる。
+Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze のユーザープロファイルに同期することで、キャンペーンの規模とリーチを拡大できます。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを Zeotap に接続し、グローススタック全体で実用的なデータにすることもできます。
 
 {% alert important %}
-カスタムHTTPコネクターは現在ベータ版である。この統合の設定に興味がある場合は、カスタマー・サクセス・マネージャーに連絡してほしい。
+カスタムHTTPコネクターは現在ベータ版である。この統合の設定に興味がある場合は、カスタマーサクセスマネージャーにご連絡ください。
 {% endalert %}
 
 ## 前提条件
@@ -22,32 +22,32 @@ BrazeとZeotapの統合により、Zeotapの顧客セグメントをBrazeのユ�
 | 必要条件 | 説明 |
 | --- | --- |
 |Zeotap アカウント | このパートナーシップを活用するには、[Zeotap アカウント](https://zeotap.com/)が必要です。 |
-| Currents | データをZeotapにエクスポートするには、アカウントに[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)設定する必要がある。 |
+| Currents | Zeotap にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を設定する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 実装
 
-### ステップ 1: Currentsソースを作成する
+### ステップ1:Currentsソースを作成する
 
-1. Zeotapで、**Integrateの**下の**Sourcesに**行く。
-2. **ソースの作成**」を選択する。
-3. カテゴリーとして**カスタマーエンゲージメントチャネルを**選択する。<br><br>![顧客エンゲージメント・チャネル」など、さまざまなカテゴリーをリストアップした「ソースの作成」ウィンドウ。][1]{: style="max-width:70%;"}<br><br>
-4. データソースとして**Brazeを**選択する。
-5. ソース名を入力する。
-6. 地域を選択する。<br><br>![地域とデータ・エンティティを選択するためのオプションがあるウィンドウ。][6]{: style="max-width:70%;"}<br><br>
-7. **ソースの作成**」を選択する。
-8. **Implementation Details**タブに行き、**API URLと** **Write Keyを**メモする。<br><br>![API URLとWrite Keyを含むBraze Currentsの実装詳細。][2]
+1. Zeotap で、[**統合**] の下の [**ソース**] に移動します。
+2. [**ソースの作成**] を選択します。
+3. カテゴリーとして [**カスタマーエンゲージメントチャネル**] を選択します。<br><br>![「カスタマーエンゲージメントチャネル」など、さまざまなカテゴリーを一覧表示する [ソースの作成] ウィンドウ。][1]{: style="max-width:70%;"}<br><br>
+4. データソースとして **Braze** を選択します。
+5. ソース名を入力します。
+6. 地域を選択します。<br><br>![地域とデータ・エンティティを選択するためのオプションがあるウィンドウ。][6]{: style="max-width:70%;"}<br><br>
+7. [**ソースの作成**] を選択します。
+8. [**実装の詳細**] タブに行き、**API URL** と **書き込みキー**をメモします。<br><br>![API URL と書き込みキーを含む Braze Currents の実装詳細。][2]
 
 ### ステップ2:Currentsでデータストリーミングを設定する
 
-1. Brazeで、**Partner Integrations**>**Data Exportに**進む。
-2. **Create New Currentsと** **Custom Currents Exportを**選択する。<br><br>![新しいカレントを作成」ボタンのドロップダウンに「カスタムカレントエクスポート」が含まれる。][3]{: style="max-width:60%;"}<br><br>
+1. Braze で、[**パートナー連携**] > [**データエクスポート**] に移動します。
+2. [**Currents の新規作成**] および [**カスタム Currents エクスポート**] を選択します。<br><br>![新しいカレントを作成」ボタンのドロップダウンに「カスタムカレントエクスポート」が含まれる。][3]{: style="max-width:60%;"}<br><br>
 3. 統合でエラーが発生した場合に連絡を受ける統合名とメールを入力する。
-4. **認証情報**」の下に、[ステップ](#step-1-create-a-currents-source)1で確認した以下の情報を入力する：
-- **エンドポイントとしての**API URL
-- **ベアラートークンとしての**ライトキー<br><br>![セクションに統合の詳細と認証情報を入力する。][4]<br><br>
-5. Zeotapに送信したいメッセージエンゲージイベントを選択する。<br><br>![一般設定」タブには、メッセージ・エンゲージメント・イベントを選択するセクションがある。][5]
-6. **Launch Currents]**を選択して変更を保存し、Zeotap へのイベント送信を開始する。
+4. **認証情報**の下に、[ステップ1](#step-1-create-a-currents-source)でメモした次の情報を入力します。
+- **エンドポイント**としての API URL
+- **ベアラートークン**としての書き込みキー<br><br>![統合の詳細および認証情報を入力するセクション。][4]<br><br>
+5. Zeotap に送信するメッセージエンゲージメントイベントを選択します。<br><br>![メッセージエンゲージメントイベントを選択するセクションがある [一般設定] タブ。][5]
+6. [**Currents を起動**] を選択して変更を保存し、イベントの Zeotap への送信を開始します。
 
 {% alert important %}
 Currentsコネクターは匿名ユーザー（`external_id` を持たないユーザー）をサポートしていない。

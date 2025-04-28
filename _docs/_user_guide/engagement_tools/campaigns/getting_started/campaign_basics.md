@@ -56,7 +56,7 @@ You can use pre-defined [segments]({{site.baseurl}}/user_guide/engagement_tools/
 
 > Why are you building this campaign? 
 
-It's always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand your campaign performance.
+It's always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will give you the ability to understand your campaign performance.
 
 ### The "where": Find my audience
 

@@ -22,7 +22,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
 
-Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) filter.
+Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
 
 ### What happens when you stop a Canvas?
 
@@ -32,11 +32,15 @@ When you stop a Canvas, the following applies:
 - No further messages will be sent out, despite where a user is in the flow.
 - **Exception:** Canvases with emails will not immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
+### Should I build one Canvas or separate Canvases per user lifecycle?
+
+Depending on what you’re looking to accomplish with your Canvas, you may need different approaches in how you build your user journey. The flexibility of Canvas allows you to map user journeys for any stage of the user lifecycle. Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for several examples of streamlined approaches to creating effective user journeys.
+
 #### In-app messages in Canvas
 
-In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they'll still receive the in-app message upon their next session start as long as the in-app message hasn't expired yet.
+In-app messages are sent upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they'll still receive the in-app message upon their next session start as long as the in-app message hasn't expired yet.
 
-It's possible for a user to start a session before the Canvas is stopped, but not be shown the in-app message immediately. This can occur if the in-app message is triggered by a custom event or is delayed. This means it's possible for a user to log an in-app message impression and "receive" the in-app message after the Canvas is stopped. However, the user would have had to start the session before the Canvas is stopped, but **after** they received the Canvas step.
+It's possible for a user to start a session before the Canvas is stopped, but not be shown the in-app message immediately. This can occur if the in-app message is triggered by a custom event or is delayed. This means it's possible for a user to log an in-app message impression and "receive" the in-app message after the Canvas is stopped. However, the user would have had to start the session before the Canvas was stopped, but **after** they received the Canvas step.
 
 {% alert note %}
 Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they'll receive it (unless the time they should've been sent the message has passed, then they won't receive it).
@@ -44,13 +48,13 @@ Stopping a Canvas won't cause users who are waiting to receive messages to exit 
 
 ### When does an exception event trigger?
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
 ### How does editing a Canvas affect users already in the Canvas?
 
 If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
 
-For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/post-launch_edits/).
 
 ### How are user conversions tracked in a Canvas?
 
@@ -65,7 +69,7 @@ There is a Canvas path with 10 push notifications and the conversion event is "s
 - User A opens the app after entering but before receiving the first message.
 - User B opens the app after each push notification.
 
-**Result:** The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+**Result:** The summary will show two conversions while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
 
 {% alert note %}
 If Quiet Hours is active when the conversion event happens, the same rules apply.
@@ -85,13 +89,13 @@ There is a one-step Canvas with Quiet Hours enabled:
 
 ### What is the difference between the different conversion rate types?
 
-- Total Canvas conversions reflects how many unique users completed a conversion event, not how many conversions they each completed. 
+- Total Canvas conversions reflect how many unique users completed a conversion event, not how many conversions they each completed. 
 - Variant conversion rate or summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message, as an aggregate total. 
 - Step conversion rate reflects how many individuals received that message step and completed any of the outlined conversion events.
 
 ### What's the difference between a component and a step?
 
-A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### How can I view analytics for each of my Canvas components?
 
@@ -99,7 +103,7 @@ To view the analytics of a Canvas component, go to your Canvas and scroll down t
 
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
 
-The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables that could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.
 
 ### Why does the number of users entering a Canvas not match the expected number?
 
@@ -107,7 +111,7 @@ The number of users entering a Canvas may differ from your expected number becau
 
 ### What happens to anonymous users during their Canvas journey?
 
-While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
+While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
@@ -131,11 +135,11 @@ Canvas Flow is the improved editing experience that simplifies how marketers can
 
 You can [clone your Canvas to Canvas Flow]({{site.baseurl}}/cloning_canvases/). This creates a copy of your original Canvas in the Canvas Flow workflow.
 
-### What will happen to my Canvases that I created using the original editor?
+### What will happen to the Canvases I created using the original editor?
 
 All of your existing Canvases and the original Canvas editor will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the original or Flow workflow.
 
-### Is there a limit for how many steps I can include?
+### Is there a limit to how many steps I can include?
 
 Yes. A Canvas built using Canvas Flow can contain up to 200 steps.
 
@@ -191,4 +195,4 @@ For segments and filters, the Canvas Flow Message component has a new feature ca
 
 ##### "In" or "On the next" schedule setting
 
-Exception events in Canvas Flow are created using Action Paths. Action Paths only support "after a X time window" and not "in X time" or "on the next X time".
+Exception events in Canvas Flow are created using Action Paths. Action Paths only support "after an X time window" and not "in X time" or "on the next X time".

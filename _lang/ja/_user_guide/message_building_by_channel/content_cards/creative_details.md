@@ -83,7 +83,7 @@ tool: Media
 
 | Android用コンテンツカード | iOS用コンテンツカード | ウェブ用コンテンツカード |
 | --- | --- |---|
-| Android SDK は、デフォルトではアニメーション GIF をサポートしていません。GIF サポートの有効化の詳細については、[GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/) を参照してください。 | Swift SDK では、アニメーション GIF がデフォルトではサポートされていません。GIF サポートの有効化の詳細については、[GIF サポートのチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)を参照してください。 | GIF のサポートは、Web SDK 統合にデフォルトで含まれています。 |
+| Android SDK は、デフォルトではアニメーション GIF をサポートしていません。GIF サポートの有効化の詳細については、[GIF]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android) を参照してください。 | Swift SDK では、アニメーション GIF がデフォルトではサポートされていません。GIF サポートの有効化の詳細については、[GIF サポートのチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)を参照してください。 | GIF のサポートは、Web SDK 統合にデフォルトで含まれています。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
@@ -94,4 +94,4 @@ tool: Media
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
+[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

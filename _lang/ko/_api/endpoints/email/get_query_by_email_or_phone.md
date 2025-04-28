@@ -12,7 +12,7 @@ description: "이 문서에서는 이메일 주소 또는 전화번호가 있는
 {% api %}
 # 이메일 주소 또는 전화번호로 구독 상태를 나열합니다.
 {% apimethod get %}
-/사용자/구독
+/users/subscription
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 이메일 주소 또는 전화번호를 기준으로 구독 상태 값을 반환합니다.

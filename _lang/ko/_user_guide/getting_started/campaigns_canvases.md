@@ -30,7 +30,7 @@ Braze에서 메시지는 [캠페인](#campaigns) 또는 [캔버스](#canvas-flow
 정기 및 A/B 테스트 캠페인은 예정된 일정에 따라 (예: 다가오는 이벤트에 대해 사용자 목록에게 알림) 또는 사용자의 행동에 대한 응답으로 자동으로 발송될 수 있습니다 (예: 누군가가 뉴스레터를 구독할 때 이메일을 보내는 경우). [캠페인 일정]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)에 대해 자세히 알아보세요.
 {% endalert %}
 
-캠페인의 유형에 관계없이, 캠페인은 사용자의 요구를 듣고 사려 깊고 개인화된 응답을 제공할 수 있습니다. 캠페인을 보낸 후, 우리의 [내장된 분석 도구]({{site.baseurl}}/user_guide/data_and_analytics/reporting)를 사용하여 캠페인이 어떻게 수행되었는지와 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 기반으로 몇 명의 사용자가 전환했는지 확인하세요.
+캠페인의 유형에 관계없이, 캠페인은 사용자의 요구를 듣고 사려 깊고 개인화된 응답을 제공할 수 있습니다. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 
 Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소스를 확인하세요:
 
@@ -73,7 +73,7 @@ Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소�
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | 사용자의 휴대폰으로 문자 메시지를 보내세요.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 인기 있는 메시징 플랫폼인 WhatsApp을 통해 메시지를 보내고 사용자와 소통하세요.                                                   |
 | [콘텐츠 카드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | 앱 또는 웹사이트 내에서 사용자가 메시지를 수신하고 상호작용할 수 있는 받은편지함을 제공하거나, 메시지를 캐러셀, 배너 등으로 표시합니다. |
-| [연결된 TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | 연결된 텔레비전 플랫폼에서 사용자와 소통하세요.                                                                                                   |
+| [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | 연결된 텔레비전 플랫폼에서 사용자와 소통하세요.                                                                                                   |
 | [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | 외부 시스템과의 실시간 통신 및 통합을 커스텀 HTTP 콜백을 통해 활성화합니다.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

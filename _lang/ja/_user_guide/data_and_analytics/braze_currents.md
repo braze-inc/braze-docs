@@ -10,7 +10,7 @@ description: "このランディングページには、Currents という名前
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"
-guide_top_text: "エンゲージメント戦略の影響を理解することは、ユーザーとのコミュニケーションの反復と最適化に関する情報を提供するうえで重要です。この貴重なエンゲージメントデータが以降の作戦と緊密に統合され、データサイエンスへの投資効果が増幅されるように、Braze プラットフォームでは、連携から幅広いイベントデータを追跡し、分析、リターゲティング、およびお客様のシステム内の他のユースケースに使用します。<br> <br>Currentsツールは、エンゲージメントイベントのリアルタイムデータストリームであり、Brazeプラットフォームからの最も堅牢でありながら詳細なエクスポートです。それは、Avroファイルタイプのデータを多くの<a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>データパートナー</a>の1つに提供し、Brazeが作成するユニークで価値のあるデータを使用して、他の最高クラスのプラットフォームでBIおよび分析の取り組みを強化することを可能にします。"
+guide_top_text: "エンゲージメント戦略の影響を理解することは、ユーザーとのコミュニケーションの反復と最適化に関する情報を提供するうえで重要です。この貴重なエンゲージメントデータを以降の作戦と緊密に統合し、データサイエンスへの投資効果が増幅されるようにするため、Braze プラットフォームでは、連携から幅広いイベントデータを追跡し、分析、リターゲティング、およびお客様のシステム内の他のユースケースに使用します。<br> <br>Currentsツールは、エンゲージメントイベントのリアルタイムデータストリームであり、Brazeプラットフォームからの最も堅牢でありながら詳細なエクスポートです。それは、Avroファイルタイプのデータを多くの<a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>データパートナー</a>の1つに提供し、Brazeが作成するユニークで価値のあるデータを使用して、他の最高クラスのプラットフォームでビジネスインテリジェンス (BI) および分析の取り組みを強化することを可能にします。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -50,7 +50,7 @@ Currents では、次のことができます。
 
 Currents からアクセスされるイベントデータを使用してできることは他にも多数あります。事実である証拠として、[Braze でも Currents を使用]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)しています。
 
-## Currents へのアクセス
+## Currents へのアクセス方法
 
 Currents コネクターは、弊社のプロレベルおよびエンタープライズレベルの多くのパッケージにすでに含まれています。Currents の使用に興味がある場合は、アカウントマネージャーにお問い合わせください。アカウントマネージャーとデータスペシャリストが、[Currents の設定と連携]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/)をサポートできます。
 

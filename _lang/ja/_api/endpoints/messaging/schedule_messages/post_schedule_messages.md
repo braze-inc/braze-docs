@@ -10,13 +10,17 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージの作成
-{% apimethod post core_エンドポイント|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/create
 {% endapimethod %}
 
 > このエンドポイントを使用して、指定した時刻に送信されるようにキャンペーン、キャンバス、または他のメッセージをスケジュールし、更新時にそのメッセージを参照するための識別子を提供します。
 
-セグメントををターゲットにする場合、スケジュールされたすべてのメッセージが送信された後、リクエストのレコードが[開発者コンソール](https://dashboard.braze.com/app_settings/developer_console/activitylog/)に保存されます。
+セグメントをターゲットとしている場合は、スケジュールされたすべてのメッセージが送信された後で、リクエストのレコードが[Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) に保存されます。
+
+{% alert tip %}
+指定したユーザにすぐにメッセージを送信する場合は、代わりに[`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) を使用します。
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -70,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
 | `external_user_ids` | オプション | 文字列の配列 | [外部ユーザー 識別子]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照。 |

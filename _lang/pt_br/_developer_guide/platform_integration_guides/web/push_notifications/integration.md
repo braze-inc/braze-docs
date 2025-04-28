@@ -79,7 +79,7 @@ Para oferecer suporte a notificações por push para o Safari no macOS X, siga e
 
 O Safari 16.4+ no iOS e iPadOS suporta web push para apps que foram [adicionados à tela inicial](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) e têm um arquivo [Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest). Depois de concluir as etapas para integrar as notificações por web push, você poderá fornecer suporte para push móvel também para o Safari. 
 
-Para oferecer suporte ao push para mobile e web do Safari, siga nosso [guia aqui]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/).
+Para oferecer suporte ao push para mobile e web do Safari, siga nosso guia [aqui]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/).
 
 ## Propt de soft push
 

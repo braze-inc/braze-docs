@@ -327,9 +327,11 @@ This feature is not currently supported on Roku.
 
 ## 분석
 
-배너 카드를 삽입하기 위해 SDK 방법을 사용할 때 Braze는 모든 노출 로깅을 자동으로 처리합니다. 
+배너 카드를 삽입하기 위해 SDK 방법을 사용할 때 Braze가 모든 노출 로깅을 자동으로 처리하므로 수동으로 노출을 추적하는 것에 대해 걱정할 필요가 없습니다.
 
-HTML을 파싱하고 렌더링해야 하는 경우 [당사에 문의하세요](mailto:banners-feedback@braze.com). 다음 방법을 사용하여 노출 수를 추적할 수 있습니다:
+사용자 지정 보기에서 HTML을 구문 분석하고 렌더링해야 하는 경우 [문의하세요](mailto:banners-feedback@braze.com).
+
+{% details 수동으로 노출을 추적하는 방법에 대한 자세한 정보 %}
 
 {% alert important %}
 통합을 위한 사용자 지정은 불필요할 수 있으므로 다음 단계를 신중하게 고려하세요.
@@ -406,6 +408,8 @@ This feature is not currently supported on Roku.
 ```
 {% endtab %}
 {% endtabs %}
+
+{% enddetails %}
 
 ## 모범 사례
 

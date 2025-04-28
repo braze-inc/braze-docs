@@ -18,11 +18,17 @@ description: "이 문서에서는 Intelligent Timing(이전의 지능형 전달)
 
 ## 작동 방식
 
-Braze는 사용자의 과거 앱과의 상호작용 및 각 메시징 채널과의 상호작용에 대한 통계 분석을 기반으로 최적의 전송 시간을 계산합니다.
+Braze는 사용자의 과거 앱과의 상호작용 및 각 메시징 채널과의 상호작용에 대한 통계 분석을 기반으로 최적의 전송 시간을 계산합니다. The following interaction data is used: 
+
+- Session times
+- Push Direct Opens
+- Push Influenced Opens
+- Email Clicks
+- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens))
 
 예를 들어, 샘은 아침에 정기적으로 이메일을 열람하지만 저녁에는 앱을 열고 알림과 상호 작용할 수 있습니다. 즉, 샘은 아침에 Intelligent Timing이 적용된 이메일 캠페인을 수신하고, 인게이지먼트 가능성이 높은 저녁에는 푸시 알림이 포함된 캠페인을 수신하게 됩니다.
 
-Braze가 최적의 전송 시간을 계산할 수 있는 인게이지먼트 데이터가 충분하지 않은 경우, 대체 [시간](#fallback-time)을 지정할 수 있습니다. 또한 최적의 시간을 계산하기 위해 기계 열람 수는 고려 대상에서 제외됩니다.
+Braze가 최적의 전송 시간을 계산할 수 있는 인게이지먼트 데이터가 충분하지 않은 경우, 대체 [시간](#fallback-time)을 지정할 수 있습니다.
 
 ## Intelligent Timing 사용
 
@@ -90,7 +96,7 @@ Intelligent Timing 또는 캠페인 오디언스에 대한 설정을 변경할 �
 
 ##### 최적화를 통한 A/B 테스트
 
-A/B 테스트가 종료된 후 자동으로 우승 배리언트를 전송하는 등 [최적화를 통해 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations)를 활용하는 경우 캠페인 기간이 늘어납니다. 기본적으로 Intelligent Timing 캠페인은 초기 테스트 다음 날에 나머지 사용자에게 당첨 배리언트를 보내지만, 이 전송 날짜를 변경할 수 있습니다.
+If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), such as automatically sending the Winning Variant after the A/B test is over, the duration of the campaign will increase. 기본적으로 Intelligent Timing 캠페인은 초기 테스트 다음 날에 나머지 사용자에게 당첨 배리언트를 보내지만, 이 전송 날짜를 변경할 수 있습니다.
 
 Intelligent Timing과 A/B 테스트를 모두 사용하는 경우, 위닝 배리언트를 초기 테스트 1일이 아닌 2일 후에 전송하도록 예약하는 것이 좋습니다.
 
@@ -195,7 +201,7 @@ Braze는 정확한 예측을 위해 일정량의 인게이지먼트 데이터가
 
 ### 예정된 날짜가 지나서 보내기
 
-[최적화와 함께 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations)를 활용하는 경우 Intelligent Timing 캠페인이 예정된 날짜보다 늦게 전송될 수 있습니다. A/B 테스트 최적화를 사용하는 캠페인은 초기 테스트가 종료된 후 자동으로 위닝 배리언트를 전송하여 캠페인 기간을 늘릴 수 있습니다. 기본적으로 최적화가 적용된 캠페인은 초기 테스트 다음 날에 나머지 사용자에게 위닝 배리언트를 전송하지만, 이 전송 날짜를 변경할 수 있습니다.
+Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). A/B 테스트 최적화를 사용하는 캠페인은 초기 테스트가 종료된 후 자동으로 위닝 배리언트를 전송하여 캠페인 기간을 늘릴 수 있습니다. 기본적으로 최적화가 적용된 캠페인은 초기 테스트 다음 날에 나머지 사용자에게 위닝 배리언트를 전송하지만, 이 전송 날짜를 변경할 수 있습니다.
 
 Intelligent Timing을 사용하는 경우, A/B 테스트가 완료될 때까지 시간을 더 두고 위닝 배리언트를 초기 테스트 후 1일이 아닌 2일 동안 전송하도록 예약하는 것이 좋습니다.
 

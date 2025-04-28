@@ -15,9 +15,11 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > 드래그 앤 드롭 편집기를 사용하면 드래그 앤 드롭 편집 경험을 통해 캠페인 또는 캔버스에서 완전히 커스텀되고 개인화된 인앱 메시지를 만들 수 있습니다.
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 기존 커스텀 HTML 템플릿이나 타사에서 생성한 템플릿을 사용하려면 드래그 앤 드롭 편집기에서 다시 생성해야 합니다.
 
-귀하의 인앱 메시지를 캠페인을 통해 보내야 할지 [캔버스<1>를 통해 보내야 할지 확신이 서지 않으십니까? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다. 메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 인앱 메시지를 만드는 단계로 들어가 보겠습니다.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다. 메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 인앱 메시지를 만드는 단계로 들어가 보겠습니다.
 
 ## 전제 조건
 
@@ -44,14 +46,14 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 | {::nomarkdown}{% sdk_min_versions swift:6.2.0 android:26.0.0 %}{:/} | {::nomarkdown}{% sdk_min_versions web:4.8.1 swift:6.5.0 android:26.0.0 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\*인앱 메시지에 URL로 리디렉션되는 링크를 포함하고 최종 사용자가 지정된 최소 SDK 버전이 아닌 경우 링크를 선택하면 메시지가 닫히고 사용자가 메시지로 돌아가 양식을 제출할 수 없게 됩니다.
+\*인앱 메시지에 URL로 리디렉션되는 링크를 포함하면 최종 사용자가 지정된 최소 SDK 버전이 아닐 경우, 링크를 선택하면 메시지가 닫히고 사용자는 양식을 제출하기 위해 메시지로 돌아갈 수 없습니다.
 
 {% enddetails %}
 
 ### 추가 전제 조건
 
 - 웹 SDK의 초기화 옵션 [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)를 `true`로 설정해야 합니다. `enableHtmlInAppMessages` 옵션은 이러한 메시지가 작동하도록 허용하지만 더 이상 사용되지 않으며 `allowUserSuppliedJavascript`로 업데이트해야 합니다.
-- Google 태그 관리자를 사용하는 경우 GTM 구성에서 'HTML 인앱 메시지 허용'을 활성화해야 합니다.
+- Google Tag Manager를 사용하고 있다면 GTM 구성에서 "In-App 메시지에 HTML 허용"을 활성화해야 합니다.
 
 ## 1단계: 인앱 메시지를 생성하세요
 
@@ -65,9 +67,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 - Braze 드래그 앤 드롭 인앱 메시지 템플릿을 사용하세요
 - 저장된 드래그 앤 드롭 인앱 메시지 템플릿을 선택하십시오
 
-**메시지 작성을** 선택하면 드래그 앤 드롭 편집기에서 인앱 메시지 디자인을 시작할 수 있습니다.
+드래그 앤 드롭 편집기에서 인앱 메시지를 디자인하기 시작하려면 **구축 메시지**를 선택하세요.
 
-![기본, 배경 이미지, 전화번호 캡처 또는 빈 템플릿을 선택할 수 있는 Braze 템플릿 섹션입니다.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![브레이즈 템플릿 섹션에서는 기본 템플릿, 배경 이미지, 전화번호 캡처 또는 빈 템플릿을 선택할 수 있습니다.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 템플릿의 **템플릿** 섹션에서 모든 템플릿에 액세스할 수 있습니다.
 
@@ -75,14 +77,14 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 인앱 메시지에 페이지를 추가하면 온보딩 흐름이나 환영 여정과 같은 순차적 흐름을 통해 사용자를 안내할 수 있습니다. **페이지** 섹션의 **구축** 탭에서 페이지를 관리할 수 있습니다.
 
-![세 페이지로 구성된 헬스케어 회사의 인앱 메시지입니다.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+![헬스케어 회사의 세 페이지로 구성된 인앱 메시지.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
 {% tab 페이지 추가 %}
 
 인앱 메시지는 기본적으로 한 페이지로 시작합니다. 새 페이지를 추가하려면:
 
-1. **페이지 추가를** 선택합니다.
+1. **페이지 추가** 선택.
 2. 커스텀 또는 Braze에서 제공한 템플릿 목록에서 선택하십시오.
 3. 페이지에 의미 있는 이름을 지정하세요. 이것은 페이지를 연결할 때 도움이 될 것입니다.
 
@@ -93,7 +95,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 기존 페이지를 복제하려면,
 
 1. 목록에서 페이지 위로 마우스를 가져가고 <i class="fas fa-ellipsis-vertical"></i>을 선택하여 더 많은 옵션을 엽니다.
-2. **복제를** 선택합니다.
+2. **중복** 선택.
 3. 페이지에 의미 있는 이름을 지정하세요. 이것은 페이지를 연결할 때 도움이 될 것입니다.
 
 {% endtab %}
@@ -119,26 +121,27 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 4. 시작 페이지에서 연결할 페이지를 선택하세요.
 5. 모든 페이지가 연결될 때까지 계속하십시오.
 
-![사용자가 인앱 메시지의 2페이지로 이동하기 위해 기본 동작 버튼을 편집하고 있습니다.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![사용자가 인앱 메시지의 페이지 2로 이동하기 위해 기본 실행 버튼을 편집하고 있습니다.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 페이지가 다른 페이지와 연결되지 않은 경우, 메시지를 실행할 수 없습니다.
 
 {% alert note %}
-사용자는 언제든지 닫기 X 버튼을 선택하여 메시지를 종료할 수 있습니다. 이 버튼은 제거할 수 없습니다.
+사용자는 언제든지 메시지를 종료하기 위해 닫기 X 버튼을 선택할 수 있습니다. 이 버튼은 제거할 수 없습니다.
 {% endalert %}
 
 ## 4단계: 인앱 메시지를 빌드하고 디자인
 
-여기에서 귀하의 메시지가 귀하의 브랜드 시그니처 스타일로 차려입고 런웨이를 활보합니다. 에디터 블록과 스타일 설정을 조합하여 인앱 메시지를 사용자 지정하고 디자인할 수 있습니다.
+여기에서 귀하의 메시지가 귀하의 브랜드 시그니처 스타일로 차려입고 런웨이를 활보합니다. 편집기 블록과 스타일 설정의 조합을 사용하여 인앱 메시지를 사용자 정의하고 디자인할 수 있습니다.
 
 - 사용 가능한 편집기 블록 및 해당 속성 목록은 [편집기 블록]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)을 참조하십시오.
 - 메시지의 모양과 느낌을 사용자 정의하는 데 도움이 필요하면 [스타일 설정]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)을 확인하세요.
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## 5단계: 인앱 메시지를 테스트하세요
 
 **미리보기 및 테스트** 섹션에서는 다양한 기기에서 인앱 메시지를 미리 보고 기기로 테스트 메시지를 보낼 수 있습니다. 여기에서 드래그 앤 드롭 인앱 메시지 캠페인에 대한 세부 정보가 모든 플랫폼에서 일치하도록 할 수 있습니다. 
 
-캠페인을 전송하기 전에 항상 인앱 메시지를 테스트하여 사용자 관점에서 최종 메시지가 어떻게 보일지 시각화하는 것이 중요합니다.
+앱 내 메시지를 항상 테스트하는 것이 중요합니다. 캠페인을 보내기 전에 사용자의 관점에서 최종 메시지가 어떻게 보일지를 시각화하는 데 도움이 됩니다.
 
 ### 사용자로서 메시지 미리보기
 
@@ -149,12 +152,12 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 메시지를 사용자인 것처럼 **미리보기 및 테스트** 탭에서 미리 볼 수 있습니다. 특정 사용자, 무작위 사용자 또는 커스텀 사용자를 선택할 수 있습니다.
 
 - **무작위 사용자:** Braze는 데이터베이스에서 사용자를 무작위로 선택하고 속성 또는 이벤트 정보를 기반으로 인앱 메시지를 미리 봅니다.
-- **사용자 선택:** 이메일 주소 또는 `external_id` 을 기준으로 특정 사용자를 선택할 수 있습니다. 인앱 메시지는 해당 사용자의 속성과 이벤트 정보를 기반으로 미리보기 됩니다.
-- **커스텀 사용자:** 사용자를 사용자 정의할 수 있습니다. Braze는 사용 가능한 모든 속성과 이벤트에 대한 입력을 제공합니다. 미리 보기 이메일에 보고 싶은 정보를 입력합니다.
+- **사용자 선택:** 특정 사용자를 이메일 주소 또는 `external_id`를 기준으로 선택할 수 있습니다. 인앱 메시지는 해당 사용자의 속성과 이벤트 정보를 기반으로 미리보기 됩니다.
+- **커스텀 사용자:** 사용자를 사용자 정의할 수 있습니다. Braze는 사용 가능한 모든 속성과 이벤트에 대한 입력을 제공합니다. 미리보기 이메일에서 보고 싶은 정보를 입력하세요.
 
 ### 테스트 체크리스트
 
-인앱 메시지를 테스트할 때 다음 질문을 고려하세요:
+다음 질문을 고려하면서 인앱 메시지를 테스트하세요:
 
 - 다양한 기기에서 메시지를 테스트해 보셨나요?
 - 이미지와 미디어가 예상대로 표시되고 작동합니까?
@@ -184,6 +187,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 네. 향후 캠페인 또는 캔버스 단계에서 다시 사용하려는 모든 인앱 메시지의 경우, 편집기를 종료한 후 사용할 수 있는 **템플릿으로 저장** 버튼을 사용하여 커스텀 템플릿으로 저장할 수 있습니다. 템플릿으로 저장하기 전에 먼저 캠페인을 시작하거나 초안으로 저장해야 합니다.
 
-![문자 업데이트 신청을 위한 인앱 메시지 미리보기.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![텍스트 업데이트를 위한 가입을 위한 인앱 메시지 미리보기.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **탬플릿** > **인앱 메시지 템플릿**으로 이동하여 인앱 메시지 템플릿을 생성하고 저장할 수도 있습니다.

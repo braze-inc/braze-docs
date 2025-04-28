@@ -38,8 +38,8 @@ WhatsApp은 각 언어에 대해 다른 [메시지 템플릿](#template-messages
 1. **캠페인** 페이지로 이동하여 <i class="fas fa-plus"></i> **캠페인 생성**을 클릭하십시오.
 2. **WhatsApp**을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인**을 선택하세요.
 3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가합니다.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
 {% alert tip %}
@@ -59,7 +59,7 @@ WhatsApp은 각 언어에 대해 다른 [메시지 템플릿](#template-messages
 6. 연결할 메시징 채널을 선택하세요.
 
 {% alert tip %}
-작업 기반 캔버스가 인바운드 WhatsApp 메시지에 의해 트리거되는 경우, 다음 작업 경로까지 모든 캔버스 단계에서 WhatsApp 속성을 참조할 수 있습니다.
+인바운드 WhatsApp 메시지에 의해 액션 기반 캔버스가 트리거되면, 다음 행동 경로까지 모든 캔버스 단계에서 WhatsApp 속성을 참조할 수 있습니다.
 {% endalert %}
 
 {% endtab %}
@@ -68,10 +68,6 @@ WhatsApp은 각 언어에 대해 다른 [메시지 템플릿](#template-messages
 ## 2단계: WhatsApp 메시지를 작성하세요
 
 WhatsApp [템플릿 메시지](#template-messages) 또는 응답 메시지를 생성할지 선택하세요, 사용 사례에 따라 다릅니다. 모든 비즈니스 시작 대화는 승인된 템플릿에서 시작해야 하며, 응답 메시지는 사용자로부터 24시간 이내에 수신된 메시지에 대한 응답으로 사용할 수 있습니다.
-
-{% alert note %}
-WhatsApp 템플릿은 현재 쿠폰 코드 버튼을 지원하지 않습니다.
-{% endalert %}
 
 ![메시지 변형 섹션에서는 구독 그룹과 두 가지 메시지 유형 중 하나를 선택할 수 있습니다: WhatsApp 템플릿 메시지 및 응답 메시지.][5]{: style="max-width:80%;"}
 
@@ -88,9 +84,11 @@ WhatsApp 템플릿은 현재 쿠폰 코드 버튼을 지원하지 않습니다.
 
 ![템플릿 목록에는 메시지 미리보기, 할당된 언어 및 승인 상태가 포함됩니다.][8]{: style="max-width:80%;"}
 
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 #### 변수
 
-Meta Business 관리자에서 WhatsApp 템플릿을 만들 때 변수를 추가한 경우, 해당 변수는 메시지 작성기에 빈 공간으로 표시됩니다. 이 빈칸을 Liquid 또는 일반 텍스트로 바꾸세요. 일반 텍스트를 사용하려면, 이중 중괄호로 둘러싸인 "여기에 텍스트" 형식을 사용하세요. 템플릿을 만들 때 이미지를 포함하도록 선택한 경우 미디어 라이브러리에서 이미지를 업로드하거나 추가하거나 이미지 URL을 참조하여 이미지를 추가할 수 있습니다.
+Meta Business 관리자에서 WhatsApp 템플릿을 만들 때 변수를 추가한 경우, 해당 변수는 메시지 작성기에 빈 공간으로 표시됩니다. 이 빈칸을 Liquid 또는 일반 텍스트로 바꾸세요. 일반 텍스트를 사용하려면, 이중 중괄호로 둘러싸인 "여기에 텍스트" 형식을 사용하세요. 템플릿을 만들 때 이미지를 포함하기로 선택한 경우, 미디어 라이브러리에서 이미지를 업로드하거나 추가하거나 이미지 URL을 참조하여 이미지를 추가할 수 있습니다.
 
 비활성화된 텍스트 필드(회색 강조 표시)는 승인된 WhatsApp 템플릿의 일부이므로 편집할 수 없습니다. 비활성화된 텍스트를 업데이트하려면 템플릿을 편집하고 다시 승인받아야 합니다.
 
@@ -183,7 +181,10 @@ WhatsApp 메시지에서 사용자에게 다음을 보낼 수 있습니다:
 ----------- |---------------- 
 헤더 | 
 텍스트 | 변수 매개변수 지원
-이미지 (JPEG 및 PNG) | 8비트, RGB 또는 RGBA여야 하며, 모든 유형에 대해 최대 5MB여야 합니다 
+이미지 (JPEG 및 PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
+Videos | Currently, must be hosted on a URL and less than sixteen MB. Must also have a video type of 3GPP or MP4. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+오디오 | Supported only for response messaging. Must be AAC, AMR, MP3, MP4 audio, or OGG, hosted on a URL, and less than sixteen MB. <br><br>Audio messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+문서 | Must be hosted on a URL and less than 100 MB. Must also have a document type of text (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`), or PDF (`.pdf`). <br><br>Document messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 본문 텍스트 | 변수 매개변수 지원
 바닥글 텍스트 | 변수 매개변수 지원 
 CTA | [행동 촉구](#ctas)을 참조하십시오.
@@ -199,8 +200,8 @@ CTA 유형    | 세부 정보
 전화번호로 전화하기 | 메시지 템플릿에서만 사용 가능합니다. <br>버튼 하나 최대.
 커스텀 빠른 응답 버튼 | 최대 세 개의 버튼. 
 마케팅 옵트아웃 버튼 | 이 옵션은 구독 상태를 자동으로 업데이트하지 않습니다. <br><br>설정 지침은 [옵트인 및 옵트아웃]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)을 참조하십시오.
-쿠폰 코드 메시지 템플릿 | 메시지 템플릿에서만 사용 가능합니다. <br>다른 메시지 템플릿과 마찬가지로 열고 편집할 수 있으며 Liquid 및 Braze 프로모션 코드와 호환됩니다. 
-CTA 응답 메시지  | 클릭 유도 문안 버튼이 포함된 응답 메시지를 작성합니다.
+쿠폰 코드 메시지 템플릿 | 메시지 템플릿에서만 사용 가능합니다. <br>이들은 다른 메시지 템플릿처럼 열고 편집할 수 있으며, Liquid 및 Braze 프로모션 코드와 호환됩니다. 
+CTA 응답 메시지  | 응답 메시지를 생성하여 실행 버튼을 포함합니다.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 수신 메시지
