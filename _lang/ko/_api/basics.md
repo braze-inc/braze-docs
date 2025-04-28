@@ -42,19 +42,7 @@ API 호출에 엔드포인트를 사용할 때는 REST 엔드포인트를 사용
 SDK 통합을 위해 [SDK 엔드포인트]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)를 사용하고, REST 엔드포인트는 사용하지 마십시오.
 {% endalert %}
 
-|인스턴스|URL|REST 엔드포인트|SDK 엔드포인트|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include 데이터 센터.md 데이터 센터='인스턴스' %}
 
 ### API 제한
 
@@ -86,16 +74,10 @@ REST API 키 외에도 특정 앱, 템플릿, 캔버스, 캠페인, 콘텐츠 �
 새 REST API 키를 만들려면 다음과 같이 하세요:
 
 1. **설정** > **API 및 식별자로** 이동합니다.
-
-{% alert note %}
-[구형 내비게이션]({{site.baseurl}}/navigation)를 사용하고 있다면, **개발자 콘솔** > **API 설정**에서 API 키를 생성할 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. **API 키 생성을** 선택합니다.
-3\. 새 키에 한눈에 식별할 수 있는 이름을 지정하세요.
-4\. 새 키의 [허용 목록에 있는 IP 주소](#api-ip-allowlisting) 및 서브넷을 지정합니다.
-5\. 새 키에 연결할 [권한을](#rest-api-key-permissions) 선택합니다.
+2. **API 키 생성을** 선택합니다.
+3. 새 키에 한눈에 식별할 수 있는 이름을 지정하세요.
+4. 새 키의 [허용 목록에 있는 IP 주소](#api-ip-allowlisting) 및 서브넷을 지정합니다.
+5. 새 키에 연결할 [권한을](#rest-api-key-permissions) 선택합니다.
 
 {% alert important %}
 새 API 키를 생성한 후에는 권한 범위나 허용된 IP를 편집할 수 없습니다. 이 제한은 보안상의 이유로 시행되고 있습니다. 키의 범위를 변경해야 하는 경우 업데이트된 권한으로 새 키를 만들고 이전 키 대신 해당 키를 구현하세요. 구현을 완료한 후에는 이전 키를 삭제할 수 있습니다.
@@ -383,7 +365,7 @@ Braze-Braze 웹훅을 생성하고 허용 목록을 사용하려면? [화이트�
 
 루비 클라이언트 라이브러리는 [사용자 엔드포인트]({{site.baseurl}}/api/endpoints/user_data)을 지원합니다.
 
-{% alert note %}
+{% alert important %}
 이 클라이언트 라이브러리는 현재 베타 버전입니다. 이 라이브러리를 개선하는 데 도움을 주고 싶으신가요? [smb-product@braze.com](mailto:smb-product@braze.com) 으로 피드백을 보내주세요.
 {% endalert %}
 
