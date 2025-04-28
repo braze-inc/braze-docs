@@ -12,10 +12,6 @@ tool: Campaigns
 
 > As campanhas de entrega baseadas em ação ou campanhas disparadas por eventos são muito eficazes para mensagens transacionais ou baseadas em conquistas. Em vez de enviar sua campanha em determinados dias, é possível disparar o envio depois que um usuário concluir um determinado evento. 
 
-{% alert important %}
-A entrega baseada em ação não está disponível para [componentes do Canva com mensagens no app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Essas etapas devem ser programadas.
-{% endalert %}
-
 ## Configuração de uma campanha disparada
 
 ### Etapa 1: Selecione um evento de gatilho
@@ -96,7 +92,7 @@ Você também pode optar por enviar a campanha em um dia específico da semana (
 
 ### Etapa 3: Selecionar eventos de exceção
 
-Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. Os eventos de exceção podem ser a realização de uma compra, o início de uma sessão, a performance de um dos [eventos de conversão][18]] designados de uma campanha ou a realização de um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
+Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. [Eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) podem ser fazer uma compra, iniciar uma sessão, realizar um dos eventos de conversão designados de uma campanha][18], ou realizar um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ![][20]
 
@@ -126,7 +122,7 @@ No caso de um usuário concluir o evento de gatilho dentro do período de tempo,
 
 ![][31]
 
-Se um usuário não receber a mensagem porque perdeu o prazo, ele ainda estará qualificado para recebê-la na próxima vez que concluir o evento de gatilho, mesmo que você não tenha optado por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Se optar pela reelegibilidade dos usuários, eles poderão receber a campanha sempre que concluírem o evento de gatilho, desde que se qualifiquem durante o período de tempo especificado.
+Se um usuário não receber a mensagem porque perdeu o prazo, ele ainda estará qualificado para recebê-la na próxima vez que concluir o evento de gatilho, mesmo que você não tenha optado por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Se optar pela reelegibilidade dos usuários, eles poderão receber a campanha sempre que concluírem o evento de gatilho, desde que se qualifiquem durante o período de tempo especificado.
 
 Se também tiver atribuído à campanha uma determinada duração, o usuário deverá se qualificar tanto na duração quanto na parte específica do dia para receber a mensagem.
 
