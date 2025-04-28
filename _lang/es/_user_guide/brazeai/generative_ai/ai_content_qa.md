@@ -18,7 +18,7 @@ El control de calidad del contenido con IA ofrece las siguientes característica
 - **Corrección ortográfica y gramatical:** Comprueba automáticamente si hay errores ortográficos y gramaticales en tu mensaje. Sugiere correcciones y proporciona recomendaciones para mejorar la exactitud general del contenido.
 - **Análisis del tono:** Evalúa el tono del mensaje para identificar posibles problemas. Ayuda a garantizar que el tono pretendido se alinea con el estilo de comunicación deseado y ayuda a evitar malentendidos u ofensas involuntarias.
 - **Detección de lenguaje ofensivo:** Analiza tu mensaje en busca de lenguaje potencialmente ofensivo o inapropiado, permitiéndote revisar el contenido y mantener una comunicación respetuosa.
-- **Comprobación accidental del contenido:** Detecta cualquier inclusión de código, lenguaje de marcado o mensajes de prueba que puedan haberse añadido involuntariamente.
+- **Comprobación accidental del contenido:** Detecta cualquier inclusión de código, lenguaje de marcado o mensajes de prueba que puedan haberse añadido involuntariamente, incluido cualquier código Liquid que no se haya renderizado para un usuario de prueba.
 
 ## Acceder a la garantía de calidad de los contenidos con IA
 
