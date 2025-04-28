@@ -12,7 +12,7 @@
 
 ### Mensagens completas no aplicativo
 
-[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} mensagens no app são úteis para maximizar o conteúdo e o impacto da sua comunicação com o usuário.  A metade superior de uma `full` mensagem no app contém uma imagem e a metade inferior exibe texto, bem como até dois botões de ação de clique e análise de dados habilitados.
+[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} mensagens no app são úteis para maximizar o conteúdo e o impacto da sua comunicação com o usuário.  A metade superior de uma mensagem no app `full` contém uma imagem e a metade inferior exibe texto, bem como até dois botões de ação de clique e análise de dados habilitados.
 
 ![Exemplo Completo][in_app_message_11]
 
@@ -36,7 +36,7 @@ O conteúdo completo da mensagem no app é exibido em um WKWebView e pode opcion
 
 ### Mensagens no app (disparadas)
 
-A seguinte documentação refere-se ao produto `In-App Messaging` da Braze, também conhecido como "mensagens no app disparadas", que são marcadas como destacadas abaixo no menu suspenso "Criar Campanha":
+A seguinte documentação refere-se ao produto Braze `In-App Messaging` , também conhecido como "mensagens in-app acionadas", que são marcadas como destacado abaixo no menu suspenso "Criar Campanha":
 
 ![Criador de mensagens no app][in_app_message_13]
 
