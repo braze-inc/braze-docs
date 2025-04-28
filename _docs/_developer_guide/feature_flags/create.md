@@ -120,11 +120,14 @@ if (featureFlag.enabled) {
 {% tab Swift %}
 
 ```swift
-let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-if featureFlag.enabled {
-  print("expanded_user_profile is enabled")
+if let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile") {
+  if featureFlag.enabled {
+    print("expanded_user_profile is enabled")
+  } else {
+    print("expanded_user_profile is not enabled")
+  }
 } else {
-  print("expanded_user_profile is not enabled")
+  print("No feature flag with that ID.")
 }
 ```
 {% endtab %}
