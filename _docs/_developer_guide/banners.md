@@ -15,19 +15,31 @@ channel:
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
-## Use cases
+## About Banners
+Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
+
+Using a simple drag-and-drop editor, marketers can design and launch Banners without developer assistance, reducing complexity and improving efficiency.
+
+### Use cases
 
 Because Banners never expire and are auto-personalized every time a user starts a new session, they’re great for:
 
-- Highlighting featured content
-- Notifying users about upcoming events
-- Sharing updates on loyalty programs
+- Highlighting featured content, trending products, or promotions
+- Notifying users about upcoming events or important dates
+- Promoting loyalty programs and personalized offers
+- Guiding users through onboarding flows and account setup
+- Upselling or cross-selling complementary products
 
-## About Banners
+## Features
 
-### Card expiration
+### Drag & drop editor {#drag-drop-editor}
+Banners feature an intuitive drag-and-drop editor designed for marketers, allowing for quick, no-code creation of engaging, personalized in-line messages. With the editor, you can easily customize Banners by adding and arranging various content elements without developer support.
 
-By default, Banners don't expire. However, you can choose an end date if needed.
+Key capabilities:
+- Easy content building: Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
+- Real-time preview: Instantly preview your Banners across different device views, ensuring a seamless user experience on mobile and desktop.
+- Flexible personalization: Utilize Braze's built-in personalization options and Liquid logic, refreshing dynamically for each user's session.
+- Custom HTML support: Add custom HTML blocks when advanced customization or integration with existing web styles is required.
 
 ### Placement IDs {#placement-ids}
 
@@ -39,7 +51,11 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low. If multiple Banners share the same priority level, the newest Banner will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low, or specify an exact priority via drag-and-drop. If multiple Banners share the same priority level, the newest Banner will be displayed first.
+
+### Card expiration
+
+By default, Banners don't expire, making them ideal for long-term, persistent messages. However, you have the option to set an expiration date if necessary.
 
 ### Metrics
 
