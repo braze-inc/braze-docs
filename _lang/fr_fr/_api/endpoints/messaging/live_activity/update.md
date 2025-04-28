@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Mettre à jour l’a
 /messages/live_activity/update
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour et terminer les [activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
+> Utilisez cet endpoint pour mettre à jour et terminer les [activités en direct]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
 
 Après avoir enregistré une activité en direct, vous pouvez passer une charge utile JSON pour mettre à jour votre service de notification push Apple (APNs). Consultez la documentation d'Apple sur [la mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d'informations.
 
@@ -26,7 +26,7 @@ Après avoir enregistré une activité en direct, vous pouvez passer une charge 
 Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 
 - Générez une clé API avec l’autorisation `messages.live_activity.update`.
-- Enregistrez une activité en direct [à distance]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) ou [localement]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) à l'aide du SDK Braze Swift.
+- Enregistrez une activité en direct [à distance]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) ou [localement]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) à l'aide du SDK Braze Swift.
 
 ## Limite de débit
 
