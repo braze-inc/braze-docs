@@ -72,7 +72,7 @@ If the context variable is valid, then you can reference the variables throughou
 - A call to an embedded Connected Content fails.
 - The context variable types don't match.
 
-In this case, we recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience.
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience.
 
 ## JSON types and Connected Content responses
 
