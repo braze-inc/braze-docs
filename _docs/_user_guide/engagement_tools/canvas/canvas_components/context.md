@@ -64,13 +64,15 @@ Note that if the Liquid expression at runtime returns a value that doesn’t mat
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas. 
 - For the Canvas step analytics, this is counted as _Not Updated_. 
 
-### How users exit Context steps
+### How users can exit subsequent steps
 
-Users can exit a Canvas for the following reasons:
+If the context variable is valid, then you can reference the variables throughout your Canvas. However, your users can exit the steps in a user journey after a Context step for the following reasons:
 
 - The context variable doesn't return any value (is null).
 - A call to an embedded Connected Content fails.
 - The context variable types don't match.
+
+In this case, we recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience.
 
 ## JSON types and Connected Content responses
 
