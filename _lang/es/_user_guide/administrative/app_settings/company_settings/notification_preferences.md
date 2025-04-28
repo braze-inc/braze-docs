@@ -17,10 +17,6 @@ La página **Preferencias de notificación** es donde puede configurar quién (s
 
 Para acceder a esta página, vaya a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), selecciona el menú desplegable de tu cuenta y ve a **Configuración de la empresa** > **Preferencias de notificación**.
-{% endalert %}
-
 ## Notificaciones disponibles
 
 La siguiente tabla enumera las notificaciones disponibles:
@@ -39,15 +35,12 @@ La siguiente tabla enumera las notificaciones disponibles:
 | Se ha alcanzado el límite de campañas planificadas | Notifica a los destinatarios el momento en que se ha alcanzado el límite de una campaña planificada recurrente. | Correo electrónico, Webhook |
 | La campaña planificada ha finalizado el envío | Notifica a los destinatarios el momento en que una campaña planificada ha completado los envíos. | Correo electrónico, Webhook |
 | Informe de análisis semanal | Envía a los destinatarios, cada lunes, un resumen de la actividad del espacio de trabajo de la semana pasada. Los destinatarios reciben un resumen de cada espacio de trabajo al que pertenecen. | Correo electrónico |
+| Límites diarios de volumen de entrada en Canvas/Campaña | Envía notificaciones cada vez que se alcanza un límite de envío. | Correo electrónico |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Informes analíticos semanales
 
 Braze envía opcionalmente un informe semanal por correo electrónico a las personas que usted designe dentro de su empresa todos los lunes a las 5 am EST. Puede seleccionar los eventos personalizados que se incluirán en el informe semanal desde **Configuración de datos** > **Eventos personalizados**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), esta página se encuentra en **Gestionar configuración** > **Eventos personalizados**.
-{% endalert %}
 
 Puede seleccionar hasta cinco eventos para incluirlos en su informe semanal:
 
