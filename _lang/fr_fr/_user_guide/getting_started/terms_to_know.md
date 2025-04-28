@@ -51,7 +51,7 @@ glossaries:
   - name: Endpoint
     description: "Une extrémité d’un canal de communication, également connue sous le nom d’<a href=\"https://www.braze.com/docs/api/endpoints/\">endpoint</a> API, est utilisée dans l’API de communication Braze pour l’envoi et la planification des messages."
   - name: "Événements d'exception"
-    description: "Un <a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">Événement d’exception</a> se produit lorsqu’un utilisateur a atteint l’objectif souhaité et ne reçoit pas de message déclenché. Ainsi, le message déclenché reste pertinent pour l'utilisateur."
+    description: "Un <a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">Événement d’exception</a> se produit lorsqu’un utilisateur a atteint l’objectif souhaité et ne reçoit pas de message déclenché. Ainsi, le message déclenché reste pertinent pour l'utilisateur."
   - name: Limite de fréquence
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">Limite de fréquence</a> vous permet de gérer la communication sans surcharger votre audience. Il s'agit d'une limite automatisée des messages visant à empêcher les utilisateurs de recevoir trop de communications dans un court laps de temps."
   - name: HIPAA
