@@ -15,10 +15,6 @@ Vous pouvez voir les transactions de campagne API, résoudre les problèmes sur 
 
 Pour accéder au journal, allez dans **Réglages** > **Journal d'activité des messages.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **journal d'activité des messages** sous **Paramètres** > **Console de développement.**
-{% endalert %}
-
 ![Journal des activités de message][2]
 
 {% alert tip %}
