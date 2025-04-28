@@ -13,10 +13,6 @@ description: "Este artigo de referência aborda configurações genéricas de se
 
 Para acessar essa página, acesse **Configurações** > **Configurações administrativas** > **Configurações de segurança**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione o menu suspenso da sua conta e acesse **Configurações da empresa** > **Configurações de segurança**.
-{% endalert %}
-
 ## Regras de autenticação
 
 ### Comprimento da senha
@@ -31,7 +27,7 @@ Selecione **Aplicar senhas complexas** para exigir que as senhas incluam pelo me
 - Número
 - Caractere especial
 
-### Reusabilidade da senha
+### Reutilização de senhas
 
 Determina o número mínimo de novas senhas que devem ser definidas para que um usuário possa reutilizar uma senha. O padrão é três.
 
