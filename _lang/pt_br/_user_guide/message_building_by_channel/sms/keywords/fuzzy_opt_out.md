@@ -30,9 +30,6 @@ Por exemplo, "Stpo" ou "Por favor, pareee" serão considerados imprecisos, e uma
 Para configurar a exclusão aproximada, navegue até a página de gerenciamento de palavras-chave do grupo de inscrições.
 
 1. Acessar **público** > **Inscrições** e selecionar um grupo de inscrições de SMS.
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Grupos de inscrição** em **Usuários**.
-{% endalert %}
 
 {:start="2"}
 2\. Em **SMS Global Keywords**, encontre a categoria **opt-out** e selecione o ícone de lápis.
