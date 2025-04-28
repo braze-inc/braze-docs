@@ -47,10 +47,6 @@ Para importar usuários previamente identificados, você pode fazer upload de um
 
 Você pode fazer upload e atualizar perfis de usuários via arquivos CSV de **público** > **Importar Usuários**. Ao importar seus dados de cliente, você precisará especificar o identificador único de cada cliente, também conhecido como `external_id`.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), isso está localizado em **Usuários** > **importação de usuário**.
-{% endalert %}
-
 Antes de iniciar sua importação de CSV, é importante entender com sua equipe de engenharia como os usuários serão identificados no Braze. Normalmente, isso seria um ID de banco de dados usado internamente. Isso deve estar alinhado com a forma como os usuários serão identificados pelo SDK da Braze em dispositivos móveis e web, para que cada cliente tenha um único perfil de usuário na Braze em todos os seus dispositivos. Saiba mais sobre o [ciclo de vida do perfil de usuário da Braze]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 Quando você fornece um `external_id` na sua importação, a Braze atualizará qualquer usuário existente com o mesmo `external_id` ou criará um novo usuário identificado com esse conjunto de `external_id` se não for encontrado nenhum.
@@ -440,7 +436,7 @@ Parar uma canva não fará com que os usuários que estão esperando em uma etap
 Canvas
 {% endapitags %}
 
-[Eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) só disparam enquanto o usuário está esperando para receber o componente de canva com o qual está associado. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
+Os eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
 
 Se você quiser excetuar usuários que realizaram um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) em vez disso.
 
@@ -573,13 +569,13 @@ Para agendar um relatório de engajamento recorrente, faça o seguinte:
 
 1. No seu dashboard, navegue até **Relatórios de Engajamento**, em **Dados**.
 2. Clique em **\+ Criar Novo Relatório**.
-3. Adicione as [campanhas e mensagens de canva]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente ou [por tag]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que você gostaria de compilar em seu relatório.
-4. [Adicione estatísticas]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) ao seu relatório.
+3. Adicione as [campanhas e mensagens de canva]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente ou [por tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que você gostaria de compilar em seu relatório.
+4. [Adicione estatísticas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) ao seu relatório.
 5. Selecione a compressão e o delimitador para o seu relatório.
 6. Insira os endereços de e-mail dos usuários da Braze que devem receber este relatório.
-7. Selecione o [período de tempo]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir do qual você gostaria que seu relatório executasse os dados.
-8. Selecione os [intervalos (diários, semanais, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) nos quais gostaria de ver a divisão dos seus dados.
-9. Agende seu relatório para [enviar imediatamente]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou em um [momento futuro especificado]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
+7. Selecione o [período de tempo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir do qual você gostaria que seu relatório executasse os dados.
+8. Selecione os [intervalos (diários, semanais, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) nos quais gostaria de ver a divisão dos seus dados.
+9. Agende seu relatório para [enviar imediatamente]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou em um [momento futuro especificado]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Execute o relatório, depois abra-o no seu e-mail quando ele chegar!
 
 {% endapi %}
