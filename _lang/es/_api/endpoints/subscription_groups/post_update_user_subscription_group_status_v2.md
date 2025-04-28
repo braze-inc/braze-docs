@@ -32,7 +32,7 @@ Si quieres ver ejemplos o probar este punto final para **Grupos de WhatsApp**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-## Requisitos
+## Requisitos previos
 
 Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `subscription.status.set`.
 
@@ -74,7 +74,8 @@ Al crear nuevos usuarios utilizando el [punto final`/users/track` ]({{site.baseu
 | `subscription_state` | Obligatoria | Cadena | Los valores disponibles son `unsubscribed` (no en el grupo de suscripción) o `subscribed` (en el grupo de suscripción). |
 | `external_ids` | Requerido* | Matriz de cadenas | El `external_id` del usuario o usuarios, puede incluir hasta 50 `id`s. |
 | `emails` | Requerido* | Cadena o matriz de cadenas | La dirección de correo electrónico del usuario, se puede pasar como una matriz de cadenas. Debe incluir al menos una dirección de correo electrónico (con un máximo de 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten la misma dirección de correo electrónico, todos los usuarios que comparten la dirección de correo electrónico se actualizan con los cambios del grupo de suscripción. |
-| `phones` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | Los números de teléfono del usuario, se pueden pasar como una matriz de cadenas. Debe incluir al menos un número de teléfono (con un máximo de 50). |
+| `phones` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | Los números de teléfono del usuario, se pueden pasar como una matriz de cadenas. Debe incluir al menos un número de teléfono (hasta 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten el mismo número de teléfono, todos los usuarios que comparten el número de teléfono se actualizan con los mismos cambios de grupo de suscripción.|
+| `use_double_opt_in_logic` | Opcional | Booleano | Si este parámetro se omite o se establece en `false`, los usuarios no entrarán en el flujo de trabajo de doble adhesión voluntaria por SMS. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
