@@ -23,12 +23,12 @@ channel:
 로컬 동영상 에셋을 사용하려면 캠페인에 에셋을 업로드할 때 이 파일을 포함해야 합니다.
 
 {% alert note %}
-동영상 콘텐츠는 디바이스의 네트워크 속도가 적절한 경우에만 사용할 수 있으며, 로컬에서 비디오를 소싱하지 않는 한 디바이스에서 사용할 수 없습니다.
+동영상 콘텐츠는 디바이스의 네트워크 속도가 적절한 경우에만 사용할 수 있으며, 로컬에서 비디오를 소싱하지 않는 한 기기에서 사용할 수 없습니다.
 {% endalert %}
 
 ## Android 고려 사항
 
-Android에서 HTML 인앱 메시지에 동영상 및 기타 HTML5 콘텐츠를 포함하려면 인앱 메시지가 표시되는 활동에서 하드웨어 가속을 사용하도록 설정해야 합니다. 자세한 내용은 [Android 개발자 가이드를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/) 참조하세요.
+Android에서 HTML 인앱 메시지에 동영상 및 기타 HTML5 콘텐츠를 포함하려면 인앱 메시지가 표시되는 활동에서 하드웨어 가속을 사용하도록 설정해야 합니다. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
 
 ## iOS 고려 사항
 

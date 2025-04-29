@@ -32,13 +32,13 @@ guide_featured_list:
   - name: "OBTER: Listar as próximas campanhas e canvas programadas"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Excluir mensagens programadas"
+  - name: "POST: Excluir envios de mensagens programadas"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST: Excluir campanhas programadas disparadas pela API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Excluir canvas programados disparados pela API"
+  - name: "POST: Excluir telas programadas disparadas pela API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST: Agendar mensagens"

@@ -77,15 +77,15 @@ Mac OS X で Safari 向けのプッシュ通知をサポートする場合は、
 
 ## Safari Mobile のプッシュ {#safari-mobile}
 
-iOS およびiPadOS 上のSafari 16.4+ は、[ がホーム画面](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) に追加され、[Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) ファイルがあるアプリケーションのWeb プッシュをサポートしています。Web プッシュ通知を統合する手順を完了したら、Safari のモバイルプッシュもサポートできるようになります。 
+iOS および iPadOS 上の Safari 16.4 以降は、[[ホーム画面に追加され]](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc)、[[Web アプリケーションマニフェスト]](https://developer.mozilla.org/en-US/docs/Web/Manifest)ファイルを持つアプリの Web プッシュをサポートします。Web プッシュ通知を統合する手順を完了したら、Safari のモバイルプッシュもサポートできるようになります。 
 
-モバイル Safari Web プッシュをサポートするには、[ ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/) に従ってください。
+モバイル Safari Web プッシュをサポートするには、[[このガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)]の説明に従ってください。
 
 ## ソフトプッシュプロンプト
 
 ソフト・プッシュ・プロンプト（「プッシュ・プライマー」とも呼ばれる）は、許可を求める際のオプトイン率を最適化するのに役立つ。
 
-ソフトプッシュプロンプトの設定方法については、[Soft push prompt]({{ site.baseurl }}/developer_<meta id="4" /)を参照してください。
+ソフトプッシュプロンプトの設定について詳しくは、[ソフトプッシュプロンプト]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/)を参照してください。
 
 ## HTTPS要件
 

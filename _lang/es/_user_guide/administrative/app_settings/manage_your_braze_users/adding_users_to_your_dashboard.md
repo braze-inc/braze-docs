@@ -59,13 +59,17 @@ Los administradores también pueden suspender a un usuario seleccionando su nomb
 
 ![Suspender un usuario al editar los detalles del usuario.][5]
 
+## Asignar acceso y responsabilidades a los usuarios
+
+{% multi_lang_include permissions.md content="Diferencias" %}
+
 ## Eliminar usuarios de Braze
 
 Para eliminar un usuario, vaya a **Configuración** > **Usuarios de la empresa**, busque su nombre de usuario y seleccione <i class="fa fa-trash-can"></i> **Eliminar usuario**.
 
 ![Eliminar un usuario][34]
 
-Una vez eliminado un usuario, Braze no conserva ninguno de los siguientes datos:
+Una vez eliminado un usuario, Braze no conserva ninguno de los siguientes datos de cuenta:
 
 - Cualquier atributo que el usuario tuviera
 - Dirección de correo electrónico
@@ -75,6 +79,11 @@ Una vez eliminado un usuario, Braze no conserva ninguno de los siguientes datos:
 - País
 - Idioma
 - Otros datos similares
+
+Braze conservará los siguientes datos de la cuenta:
+
+- Atributos personalizados o datos de prueba asociados a su cuenta
+- Campañas o Lienzos creados por ellos (pero el nombre del usuario no aparecerá en ellos, como por ejemplo en la columna **Último editado por** )
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

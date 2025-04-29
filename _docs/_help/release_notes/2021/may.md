@@ -18,7 +18,7 @@ We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_g
 
 ## Reports overview
 
-Not sure where to start with analyzing your campaigns or Canvases? The [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports overview]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
 ## New US-05 cluster
 

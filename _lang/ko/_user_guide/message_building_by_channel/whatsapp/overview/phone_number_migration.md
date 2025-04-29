@@ -14,14 +14,14 @@ channel:
 
 ## 전제 조건
 
-마이그레이션 자격을 얻으려면 전화번호가 메타의 요구 사항을 충족해야 합니다:
+마이그레이션 자격을 얻으려면 전화번호가 메타의 요구 사항을 충족해야 합니다.
 
 - 메타 비즈니스 계정이 인증되었습니다.
 - 기존 WhatsApp 비즈니스 계정이 승인되었습니다.
-- 기존 WhatsApp 비즈니스 계정의 **결제 설정에** 유효한 결제 수단이 있습니다.
+- 기존 WhatsApp 비즈니스 계정의 **결제 설정**에 유효한 결제 수단이 있습니다.
 - 비즈니스 전화번호의 2단계 인증이 해제되어 있습니다. WhatsApp 비즈니스 계정을 소유하고 있는 경우, WhatsApp 관리자에서 해당 번호에 대한 2단계 인증을 해제할 수 있습니다. 그렇지 않은 경우 솔루션 제공업체에 이 기능을 해제해 달라고 요청해야 합니다.
 
-WhatsApp 전화번호 마이그레이션에 대한 자세한 내용은 [임베디드 가입을 통해 WhatsApp 비즈니스 계정 간에 전화번호 마이그레이션에](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/) 대한 메타 문서를 참조하세요.
+WhatsApp 전화번호 마이그레이션에 대한 자세한 내용은 [임베디드 가입을 통해 WhatsApp 비즈니스 계정 간에 전화번호 마이그레이션](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/)에 대한 메타 설명서를 참조하세요.
 
 ## WhatsApp 휴대폰 번호 마이그레이션하기
 

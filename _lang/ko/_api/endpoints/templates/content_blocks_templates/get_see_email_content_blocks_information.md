@@ -33,7 +33,7 @@ description: "이 문서에서는 콘텐츠 블록 정보 보기 Braze 엔드포
 | `include_inclusion_data`  | 선택 사항 | 부울 | `true` 로 설정하면 API는 이 콘텐츠 블록이 포함된 캠페인 및 캔버스의 메시지 변형 API 식별자를 반환하여 후속 호출에서 사용할 수 있습니다.  결과에는 보관되거나 삭제된 캠페인 또는 캔버스가 제외됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=false' \

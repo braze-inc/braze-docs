@@ -12,7 +12,7 @@ channel:
 
 # HTML 이메일 템플릿 업로드 중
 
-> Braze 대시보드는 사용자가 직접 HTML 이메일 템플릿을 업로드하고 캠페인에서 나중에 사용할 수 있도록 저장할 수 있게 해줍니다. 편집기를 사용하여 [이메일 템플릿을 만들]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) 수도 있습니다.
+> Braze 대시보드는 사용자가 직접 HTML 이메일 템플릿을 업로드하고 캠페인에서 나중에 사용할 수 있도록 저장할 수 있게 해줍니다. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) using our editor.
 
 ## 필수 조건 {#upload-requirements}
 
@@ -30,7 +30,7 @@ channel:
 **템플릿** > **이메일 템플릿**으로 이동합니다.
 
 {% alert note %}
-만약 [이전 탐색<2>을 사용하고 있다면, 이 페이지는 **참여** > **템플릿 및 미디어** > **이메일 템플릿**에 위치해 있습니다.
+[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **참여** > **템플릿 및 미디어** > **이메일 템플릿에** 있습니다.
 {% endalert %}
 
 ### 2단계: 업로더를 열다
@@ -39,11 +39,11 @@ channel:
 
 ### 3단계: 템플릿을 업로드하세요
 
-클릭 **파일에서 업로드**하고 컴퓨터에서 템플릿을 선택하세요. [전제 조건](#upload-requirements) 섹션을 참조하여 템플릿이 업로드 요구 사항을 충족하는지 확인하십시오.
+**파일에서 업로드**를 클릭하고 컴퓨터에서 템플릿을 선택하세요. [전제 조건](#upload-requirements) 섹션을 참조하여 템플릿이 업로드 요구 사항을 충족하는지 확인하십시오.
 
 #### 템플릿 업로드 오류 문제 해결
 
-HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오류 메시지가 있습니다. 오류가 발생하면 다음 표를 참조하여 일반적인 문제와 권장 수정 사항을 확인하십시오:
+HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오류 메시지가 있습니다. 오류가 발생하면 다음 표를 참조하여 일반적인 문제와 권장 수정 사항을 확인하세요.
 
 | 오류 | 고치다 |
 |------|---|
@@ -54,7 +54,7 @@ HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오
 |5MB 이상의 이미지| 이미지 수를 줄이고 다시 업로드해 보세요. |
 |추가 이미지| HTML 파일에 참조되지 않은 추가 이미지가 파일에 있을 수 있습니다. 이것은 실패 오류를 일으키지 않지만, 추가 이미지는 폐기될 것입니다. 만약 그 이미지들이 HTML 파일에서 참조되어야 한다면, 내용을 확인하고 오류를 수정한 후 다시 업로드해 보세요.|
 |이미지 누락| HTML 파일에 참조된 이미지가 있지만 ZIP 파일의 이미지 폴더에 해당 이미지가 포함되어 있지 않으면 파일 오류가 발생합니다. 파일을 검사하고 오류(철자 오류와 같은)를 수정하거나 누락된 이미지를 ZIP 파일에 추가한 후 다시 업로드해 보세요.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 4단계: 마치고 템플릿을 저장하세요
 
@@ -66,17 +66,17 @@ HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오
 
 ## API 캠페인 {#api_for_upload_email_templates}에서 템플릿 사용
 
-API 캠페인에 이메일을 사용하려면 `email_template_id`이 필요하며, 이는 Braze에서 생성된 모든 이메일 템플릿 하단에서 찾을 수 있습니다.
+API 캠페인에 이메일을 사용하려면 `email_template_id`가 필요하며, 이는 Braze에서 생성된 모든 이메일 템플릿 하단에서 찾을 수 있습니다.
 
 ![API 식별자 섹션의 HTML 이메일 템플릿.][4]
 
 ## 이메일 템플릿 관리
 
-이메일 템플릿을 [복제]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/)하고 [보관]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)할 수 있습니다! 템플릿에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요 [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) email templates! [템플릿]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
 ## 자주 묻는 질문
 
-이메일 템플릿에 대한 자주 묻는 질문에 대한 답변은 이메일 및 링크 템플릿 FAQ][10] 페이지를 확인하세요.
+이메일 템플릿에 대한 자주 묻는 질문에 대한 답변은 [이메일 및 링크 템플릿 FAQ][10] 페이지를 확인하세요.
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}

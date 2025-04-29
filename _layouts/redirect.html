@@ -6,8 +6,12 @@
   <meta charset="utf-8">
   <title>Braze</title>
     <link rel="canonical" href="{{ page.redirect_to  | multi_lang}}">
-    <script tyle="text/javascript">window.location="{{ page.redirect_to  | multi_lang}}?redirected=true"</script>
-    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | multi_lang}}?redirected=true">
+    <script type="text/text/javascript">
+    var redirected_count = parseInt(query_params.get('redirected'),10) || 0;
+    redirected_count++;
+    </script>
+    <script type="text/javascript">window.location="{{ page.redirect_to  | multi_lang}}?redirected=" + redirected_count</script>
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | multi_lang}}?redirected=1">
     <meta name="robots" content="noindex">
 </head>
 <body>

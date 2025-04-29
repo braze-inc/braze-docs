@@ -83,22 +83,21 @@ $(document).ready(function () {
         .replace(/<(.|\n)*?>/g, "");
     }
     var search_msg = description || content;
-
+    var snippet = item?._highlightResult?.html?.value;
     if (search_msg.length > 200) {
       search_msg = search_msg.substring(0, 200);
       search_msg += "...";
     }
     var url = item.url;
-    if (heading) {
-      url += "#" + string_to_slug(heading);
+    if (item.anchor) {
+      url += "#" + item.anchor;
     }
-    result_template += '<a href="' +
-        base_url + url + '"><div class="title">' +
-        title + ' <div class="category">' +
-        tags_list + article_path +
-        '</div></div> <div class="content">' +
-        search_msg +
-        "</div></a>";
+    result_template += `<a href="${base_url}${url}">
+      <div class="title">${title}
+        <div class="category">${tags_list}${article_path}</div>
+      </div>
+      ${snippet ?`<div class="hit-snippet">${snippet}</div>` : `<div class="content">${search_msg}</div>`}
+    </a>`;
     return result_template;
   };
   function parseLABSearch(item){
@@ -185,6 +184,8 @@ $(document).ready(function () {
                     attributesToSnippet: ["description:24"],
                     snippetEllipsisText: " ...",
                     clickAnalytics: true,
+                    highlightPreTag: "<mark>",
+                    highlightPostTag: "</mark>",
                   },
                 },
                 {
@@ -195,6 +196,8 @@ $(document).ready(function () {
                     attributesToSnippet: ["description:24"],
                     snippetEllipsisText: " ...",
                     clickAnalytics: true,
+                    highlightPreTag: "<mark>",
+                    highlightPostTag: "</mark>",
                   },
                 },
               ],

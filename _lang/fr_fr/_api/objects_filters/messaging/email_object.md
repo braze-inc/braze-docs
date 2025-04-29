@@ -36,7 +36,7 @@ description: "Cet article de référence explique les différents composants de 
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- Pour plus d'informations et de bonnes pratiques sur les accroches, consultez notre article d'aide sur \[email body styling][46].
+- Pour plus d'informations et de bonnes pratiques sur les accroches, consultez notre article d'aide sur [email body styling][46].
 
 {% alert warning %}
 Braze recommande d’éviter d’utiliser les liens Google Drive pour les `url` de pièces jointes, car cela peut bloquer les appels de nos serveurs pour obtenir le fichier ce qui empêche l’envoi d’e-mails.

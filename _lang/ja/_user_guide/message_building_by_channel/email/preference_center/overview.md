@@ -9,13 +9,9 @@ channel:
 
 # ユーザー設定センターの概要
 
-> ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事にはAPIで生成されたユーザー設定センターを構築するステップが含まれているが、[ドラッグ＆ドロップエディターを使って]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)ユーザー設定センターを構築することもできる。
+> ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事では、API で生成されたユーザー設定センターの作成手順を説明しますが、[ドラッグ＆ドロップエディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使ってユーザー設定センターを作成することもできます。
 
 Braze ダッシュボードで、[**オーディエンス**] > [**購読**] > [**メールユーザー設定センター**] に移動します。
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは**ユーザー**>**サブスクリプショングループ**> ユーザー設定センターにある。
-{% endalert %}
 
 ここで各サブスクリプショングループを管理し、見ることができる。作成した各購読グループは、このユーザー設定センターリストに追加されます。複数のユーザー設定センターを作成することができます。
 
@@ -23,7 +19,7 @@ Braze ダッシュボードで、[**オーディエンス**] > [**購読**] > [*
 ユーザー設定センターは、Braze のメールチャネル内で使用するために用意されています。ユーザー設定センターのリンクは、各ユーザーに基づいて動的に設定されるため、外部でホストすることはできません。
 {% endalert %}
 
-## APIを使ってユーザー設定センターを作成する
+## API を使用してユーザー設定センターを作成する
 
 [ユーザー設定センターの Braze エンドポイント]({{site.baseurl}}/api/endpoints/preference_center)を使用することで、ユーザー設定センター （Braze がホストする Web サイト） を作成し、ユーザーの購読状態や購読グループのステータスを表示することができます。開発者チームは HTML と CSS を使ってユーザー設定センターを作成することにより、ページのスタイルをブランドガイドラインに合わせることができます。
 
@@ -39,11 +35,7 @@ Liquid を使うことで、購読グループの名前と各ユーザーのス�
 | ユーザー設定センターの権限を持つ API キーを生成済みである | Brazeダッシュボードで、**[設定]>**[**APIキー]**に進み、プリファレンスセンターの権限を持つAPIキーにアクセスできることを確認する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
-{% endalert %}
-
-### ステップ1:ユーザー設定センターを作成するエンドポイントを使用する。
+### ステップ1:ユーザー設定センターの作成エンドポイントを使用する
 
 [ユーザー設定センターの作成エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)を使って、ユーザー設定センターの作成を開始します。ユーザー設定センターをカスタマイズするには、`preference_center_page_html` フィールドと `confirmation_page_html` フィールドにブランディングに沿った HTML を含めることができます。
 
@@ -85,7 +77,7 @@ Liquid を使うことで、購読グループの名前と各ユーザーのス�
 
 ## カスタマイズ
 
-Braze は、ユーザー設定センターからの購読状態の更新を管理し、ユーザー設定センターの同期を保ちます。ただし、[購読グループ API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、以下のオプションで独自のユーザー設定センターを作成し、ホストすることも可能です。
+Braze は、ユーザー設定センターからの購読状態の更新を管理し、ユーザー設定センターの同期を保ちます。ただし、[購読グループ API]({{site.baseurl}}/api/endpoints/subscription_groups/) を使用して、以下のオプションで独自のユーザー設定センターを作成し、ホストすることも可能です。
 
 ### オプション 1: 文字列クエリパラメータを持つリンク
 
@@ -120,8 +112,31 @@ My encoded string is: {{my_string}}
 
 ## よくある質問
 
-### ユーザー設定センターは作っていない。ダッシュボードに "PreferenceCenterBrazeDefault "が表示されるのはなぜか？
+### ユーザー設定センターをまだ作成していません。ダッシュボードに "PreferenceCenterBrazeDefault "が表示されるのはなぜか？
 
-これは、レガシーリキッド{%raw%}`${preference_center_url}`{%endraw%} が使われているときに、ユーザー設定センターをレンダリングするために使われる。つまり、{%raw%}`${preference_center_url}` または`preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} のどちらかを参照するキャンバスステップやテンプレートは動作しない。これは、レガシーLiquidや "PreferenceCenterBrazeDefault "をメッセージの一部として含む、過去に送信されたメッセージにも適用される。 
+これは、レガシー Liquid {%raw%}`${preference_center_url}`{%endraw%} が仕様されている場合にユーザー設定センターをレンダリングするために使用されます。つまり、{%raw%}`${preference_center_url}` または `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} のいずれかを参照するキャンバスステップまたはテンプレートは機能しません。これは、レガシーLiquidや "PreferenceCenterBrazeDefault "をメッセージの一部として含む、過去に送信されたメッセージにも適用される。 
 
-新しいメッセージで{%raw%}`${preference_center_url}`{%endraw%} を再度参照すると、"PreferenceCenterBrazeDefault "というユーザー設定センターが再度作成される。
+新しいメッセージで {%raw%}`${preference_center_url}`{%endraw%} を再度参照すると、「PreferenceCenterBrazeDefault」という名前のユーザー設定センターが再度作成されます。
+
+### ユーザー設定センターは多言語に対応しているか？
+
+しかし、カスタムオプトインとオプトアウトページのHTMLを書くときにLiquidを活用することができる。ダイナミックなリンクを使って配信停止を管理している場合、これは1つのリンクになる。 
+
+例えば、スペイン語を話すユーザーの配信停止率をトラッキングする場合、別のキャンペーンを利用するか、Currents周辺の分析（ユーザーがいつ配信停止したかを調べたり、そのユーザーの優先言語をチェックするなど）を活用する必要がある。
+
+別の例として、スペイン語圏のユーザーの配信停止率をトラッキングする場合、ユーザーの言語がドイツ語であれば`?Spanish=true` のようなクエリパラメータ文字列を配信停止URLに追加し、そうでなければ通常の配信停止リンクを使用することができる：
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+そして、Currentsを通して、どのユーザーがスペイン語を話し、その配信停止リンクのクリックイベントが何回あったかを識別することができる。
+
+### 配信停止リンクとユーザー設定センターの両方が送信に必要か？
+
+配信停止リンクがコンテンツブロック内にある場合、この警告が表示される。

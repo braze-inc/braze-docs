@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-詳細については、[クラス・ドキュメントlogcustomevent](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 ":withpropertiesドキュメントを")参照のこと。
+詳細については、[クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties のドキュメント")を参照してください。
 
 ### 予約済みのキー {#event-reserved-keys}
 
@@ -90,5 +90,5 @@ Appboy.sharedInstance()?.logCustomEvent(
 ## その他のリソース
 
 - `Appboy.h` [ファイル](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h)内のメソッドの宣言を参照してください。 
-- 以下を参照のこと。 [`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "ドキュメントを参照のこと。")ドキュメントを参照のこと。
+- 詳細については、[`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent のドキュメント")ドキュメントを参照してください。
 

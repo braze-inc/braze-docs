@@ -28,7 +28,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 While there are no limits to how many text characters you can include in an in-app message (as well as buttons, headline, main body, and others), we moderate how many text characters you use. Too much text will require users to expand and scroll the message.
 
-All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPG, and GIF file types.
+All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPEG, and GIF file types.
 
 {% tabs %}
 {% tab Portrait %}
@@ -103,7 +103,7 @@ table td {
     <td>2:1 (recommended)</td>
     <td>1038 x 1038 px maximum</td>
     <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
+    <td>PNG, JPEG, GIF</td>
     <td>As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10 MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.<br><br>For more information, see <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS rich notifications</a>.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ table td {
     <td>1:1</td>
     <td>N/A</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td></td>
   </tr>
   <tr>
@@ -119,7 +119,7 @@ table td {
     <td>2:1</td>
     <td>Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Used in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android rich notifications</a>.</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ table td {
     <td>3:2</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>For more details, see <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android inline image push</a>.</td>
   </tr>
 </table>
@@ -147,7 +147,7 @@ table td {
 | --- | --- | 
 | Size | 5 MB |
 | Width | Header: 600 px<br>Body: 480 px |
-| File types | PNG, JPG, GIF |
+| File types | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text specifications | Recommended maximum properties |

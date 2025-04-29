@@ -12,14 +12,14 @@ tool: Canvas
 
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
-Using Action Paths, you can:
+![An Action Paths step  in a Canvas user journey.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Using Action Paths, you can:
 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
-## Create an action path
+## Creating an action path
 
 To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
@@ -29,11 +29,11 @@ In the **Action Settings**, set the **Evaluation Window** to determine how long 
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
-![][4]
+![The Action Settings with an evaluation window of 1 day.][2]
 
 By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they will immediately advance through the relevant action group. If a user doesn't perform a trigger event, then they will advance through the default **Everyone Else** group at the end of the evaluation period.
 
-When **Advanced users based on ranked order** is enabled, this means that **Ranking** is on. So, all users will be held until the end of the evaluation window. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window will advance through the default **Everyone Else** group.
+When **Advanced users based on ranked order** is turned on, this means **Ranking** is on. So, all users will be held until the end of the evaluation window. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window will advance through the default **Everyone Else** group.
 
 #### In-app messages
 
@@ -53,23 +53,23 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 - Make a purchase
 - Start a session
-- Perform a [custom event][2]
+- Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Perform a conversion event
 - Add an email address
-- Change a custom attribute value
+- Change a custom attribute value (not nested custom attributes)
 - Update their subscription status or subscription group status
 - Interact with a campaign or Content Card
 - Enter a location
 - Trigger a geofence
 - Send an SMS or WhatsApp inbound message
 
-![][3]
+![An action group named "Group 1" for users who make any purchase.][3]
 
-Within each action group settings, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group will exit the Canvas at the end of the evaluation period.
+In each action group setting, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group will exit the Canvas at the end of the evaluation period.
 
 ### Canvases with re-eligibility
 
-If users enter into an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking** status. 
+If users enter an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking** status.
 
 | Ranking Status | Action Path Behavior |
 |---|--------------|
@@ -77,10 +77,9 @@ If users enter into an action path multiple times and have multiple entries in t
 | **On** | All entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %} 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events
-[3]: {% image_buster /assets/img/actionpath_group.png %} 
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 
+[1]: {% image_buster /assets/img/canvas_actionpath.png %}
+[2]: {% image_buster /assets/img/actionpath_settings.png %}
+[3]: {% image_buster /assets/img/actionpath_group.png %}

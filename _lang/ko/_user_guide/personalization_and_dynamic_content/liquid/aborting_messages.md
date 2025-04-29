@@ -61,9 +61,13 @@ Send this message in English!
 
 !["언어가 없음"이라는 중단 메시지와 함께 개발자 콘솔에 메시지 오류 로그가 표시됩니다.][26]
 
+## 중단 메시지 쿼리
+
+[쿼리 빌더]({{site.baseurl}}/user_guide/analytics/query_builder/) 또는 자체 데이터 웨어하우스(Braze에 연결된 경우)를 사용하여 Liquid 로직으로 인해 메시지가 중단될 때 트리거되는 특정 중단 메시지를 쿼리할 수 있습니다.
+
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
+[31]:[31]:
+[32]:[32]:
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
 [37]:\#null 속성 값에 대한 회계 처리

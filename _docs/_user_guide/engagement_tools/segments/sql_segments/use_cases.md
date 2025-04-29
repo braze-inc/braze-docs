@@ -67,7 +67,7 @@ HAVING COUNT(DISTINCT id) > 3
 Event, Time range
 {% endapitags %}
 
-Select users that made a purchase in each of the last four quarters. This user segment can be used with [audience sync]({{site.baseurl}}/partners/canvas_steps) to identify high-value lookalike customers for acquisition.
+Select users that made a purchase in each of the last four quarters. This user segment can be used with [audience sync]({{site.baseurl}}/partners/canvas_audience_sync/) to identify high-value lookalike customers for acquisition.
 
 ```sql
 ELECT DISTINCT user_id

@@ -35,7 +35,7 @@ noindex: true
 ### BrazeManager.swift の作成
 
 {% tabs local %}
-{% tab BrazeManager スウィフトの作成 %}
+{% tab BrazeManager swift を作成する %}
 
 ##### BrazeManager.swift の作成
 `BrazeManager.swift` ファイルを作成するには、_BrazeManager_ という名前の新しい Swift ファイルを作成し、目的の場所のプロジェクトに追加します。次に、`import Foundation` を SPM の `import AppboyUI` に置き換えてから (CocoaPods の場合は `import Appboy_iOS_SDK`)、`BrazeManager` クラスを作成します。これは、すべての Braze 関連のメソッドと変数をホストするために使用されます。`Appboy_iOS_SDK`
@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 ### SDK の初期化
 
 {% tabs local %}
-{% tab ステップ 1:BrazeManager swift からSDK を初期化する %}
+{% tab ステップ 1:BrazeManager swift から SDK を初期化する %}
 
 ##### BrazeManager.swift から SDK を初期化する
 次に、SDK を初期化する必要があります。このガイドでは、すでに [SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) を Xcode プロジェクトに追加していることを前提としています。また、[ワークスペース SDK エンドポイント]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) および [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) を `Info.plist` ファイルまたは `appboyOptions` に設定する必要があります。

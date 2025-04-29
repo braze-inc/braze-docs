@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 module Tags
     class TabsBlock < Liquid::Block
       def initialize(tag_name, tabonly = 'false', tokens)
@@ -13,12 +15,16 @@ module Tags
           tabslist = '<ul class="ab-nav ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
+              itemid = (0...12).map { (97 + rand(26)).chr }.join
+              tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
+              tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
+
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-')
+              tabslist += '    <li tabindex="0" id="mt_' + itemid + '" class="coderow ' + tabslug
               if ind == 0
                 tabslist += ' active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tab[0].gsub(' ', '-') + '">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tabslug + '">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
@@ -44,13 +50,15 @@ module Tags
           match ? match[1].size : 0
           end
           indentation = indentation.min
+          contentid = (0...12).map { (97 + rand(26)).chr }.join
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
           content = content.strip # Strip again to avoid "\n"
-          tabslug = @tab.gsub(' ', '-')
+          tabslug = @tab.gsub(/[^0-9a-z]/i, '')
+          tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
+          return '<div id="mc_' + contentid + '" class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
       end
     end
 
@@ -66,15 +74,19 @@ module Tags
       def render(context)
           tabs = super.scan(/data\-sub\_tab=\"(.*?)\"/)
           tabslist = '<ul class="ab-sub_nav ab-sub_nav-sub_tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
-
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
+              itemid = (0...12).map { (97 + rand(26)).chr }.join
+
+              tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
+              tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
+
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-') + '_sub_tab'
+              tabslist += '    <li tabindex="0" id="st_' + itemid + '" class="coderow ' + tabslug + '_sub_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tab[0].gsub(' ', '-') + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tabslug + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
@@ -100,13 +112,15 @@ module Tags
           match ? match[1].size : 0
           end
           indentation = indentation.min
+          contentid = (0...12).map { (97 + rand(26)).chr }.join
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
           content = content.strip # Strip again to avoid "\n"
-          tabslug = @tab.gsub(' ', '-')
+          tabslug = @tab.gsub(/[^0-9a-z]/i, '')
+          tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          '<div class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
+          return '<div id="sc_' + contentid + '" class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
       end
     end
 end

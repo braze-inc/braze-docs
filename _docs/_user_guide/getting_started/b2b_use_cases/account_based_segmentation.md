@@ -10,7 +10,7 @@ description: "Learn how to use various Braze features to power your B2B account-
 
 > This page shows how to use various Braze features to power your B2B account-based segmentation use cases.
 
-You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site. baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
+You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - When using [catalogs for your business objects](#option-1-when-using-catalogs-for-your-business-objects)
 - When using [connected sources for your business objects](#option-2-when-using-connected-sources-for-your-business-objects)
@@ -49,7 +49,7 @@ Select the following variables for a B2B account-based segmentation use case:
 
 For more sophisticated or complex segmentation, refer to [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). To help you get started, here are a few SQL templates you can use to help you get a head start with B2B account-based segmentation:
 
-1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account).
+1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account). You must include the catalog ID and item ID.
 
 ```sql
 WITH salesforce_accounts AS (

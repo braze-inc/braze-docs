@@ -15,7 +15,7 @@ tool:
 
 Para detener el envío de una campaña o borrarla de tu panel, puedes archivarla:
 
-1. Ve a **Mensajes** > Campañas.
+1. Ve a **Mensajes** > **Campañas**.
 2. Pasa el ratón por encima de la fila de la campaña y selecciona el menú <i class="fas fa-ellipsis-vertical"></i>. 
 3. Selecciona **Archivo**.
 

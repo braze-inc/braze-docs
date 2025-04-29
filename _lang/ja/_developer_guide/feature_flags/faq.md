@@ -77,10 +77,6 @@ else {
 
 この戦略により、アプリ内で一貫した体験がユーザーに提供され、セッション間を行ったり来たりすることがなくなります。もちろん、機能を0%まで無効にすると、すべてのユーザーがフィーチャーフラグから削除されます。これは、バグを発見した場合や、機能を完全に無効にする必要がある場合に役立ちます。
 
-### 現在フィーチャーフラグに含まれているユーザーのセグメントを作成できますか? {#feature-flag-filter}
-
-これは製品ロードマップに記載されています。優先順位をつけるために、このフィードバックをBrazeのアカウントチームまでお寄せいただくか、Eメール（[feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com) ）でご連絡いただきたい。
-
 ## 技術トピック
 
 ### フィーチャーフラグを使用して、Braze SDK が初期化されるタイミングをコントロールできますか? {#initialization}
@@ -103,9 +99,9 @@ else {
 
 これをコントロールするには、フィーチャーフラグの[更新をリッスン]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates)し、変更されたフィーチャーフラグに基づいてアプリを再レンダリングするかどうかを決定します。 
 
-### Global Control Group のユーザーが機能フラグの実験を受信しないのはなぜですか?
+### グローバルコントロールグループのユーザーがフィーチャーフラグ実験を受信しないのはなぜですか?
 
-[Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)では、ユーザーの機能フラグを有効にすることはできません。つまり、グローバルコントロールグループのユーザーは、機能フラグの実験に参加できません。
+[Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)では、ユーザーの機能フラグを有効にすることはできません。これは、グローバルコントロールグループのユーザーもフィーチャーフラグ実験に参加できないことを意味します。
 
 ## その他の質問は？
 

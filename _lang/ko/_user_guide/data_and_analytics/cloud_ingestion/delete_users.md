@@ -27,17 +27,17 @@ description: "이 참조 문서에서는 클라우드 데이터 수집을 통해
 
 ### 사용자 식별자 열
 
-테이블에 하나 이상의 사용자 식별자 열이 포함될 수 있습니다. 각 행에는 `external_id`, `alias_name` 과 `alias_label` 의 조합 또는 `braze_id` 중 하나의 식별자만 포함되어야 합니다. 소스 테이블에는 하나, 둘 또는 세 가지 식별자 유형 모두에 대한 열이 포함될 수 있습니다.
+테이블에 하나 이상의 사용자 식별자 열이 포함될 수 있습니다. 각 행에는 하나의 식별자 즉, `external_id`, `alias_name`과 `alias_label`의 조합 또는 `braze_id`만 포함되어야 합니다. 소스 테이블에는 하나, 둘 또는 세 가지 식별자 유형 모두에 대한 열이 포함될 수 있습니다.
 - `EXTERNAL_ID` - 업데이트하려는 사용자를 식별합니다. 이 값은 Braze에서 사용하는 `external_id` 값과 일치해야 합니다. 
-- `ALIAS_NAME` 및 `ALIAS_LABEL` \- 이 두 열은 사용자 별칭 개체를 만듭니다. `alias_name` 은 고유 식별자이고 `alias_label` 은 별칭의 유형을 지정합니다. 사용자는 서로 다른 레이블을 가진 여러 개의 별칭을 가질 수 있지만 `alias_label` 당 하나의 `alias_name` 만 사용할 수 있습니다.
-- `BRAZE_ID` - Braze 사용자 식별자입니다. 이는 Braze SDK에 의해 생성되며, 클라우드 데이터 수집을 통해 Braze ID를 사용하여 신규 사용자를 생성할 수 없습니다. 새 사용자를 만들려면 외부 사용자 ID 또는 사용자 별칭을 지정합니다. 
+- `ALIAS_NAME` 및 `ALIAS_LABEL` \- 이 두 열은 사용자 별칭 개체를 만듭니다. `alias_name`은 고유 식별자이고 `alias_label`은 별칭의 유형을 지정합니다. 사용자는 여러 레이블이 있는 여러 별칭을 가질 수 있지만 `alias_label`당 하나의 `alias_name`만 가질 수 있습니다.
+- `BRAZE_ID` - Braze 사용자 식별자입니다. 이것은 Braze SDK에 의해 생성되었으며, 새로운 사용자는 Braze ID를 통해 클라우드 데이터 수집을 사용하여 생성될 수 없습니다. 새 사용자를 만들려면 외부 사용자 ID 또는 사용자 별칭을 지정합니다. 
 
 {% alert important %}
 사용자 제거를 위해 테이블에 `PAYLOAD` 열을 포함하지 마세요. 사용자의 우발적이고 영구적인 제거를 방지하기 위해 소스 테이블에 페이로드 열이 제공되면 동기화가 실패합니다. 다른 열은 허용되지만 Braze에서는 무시됩니다.
 {% endalert %}
 
 {% tabs %}
-{% tab 눈송이 %}
+{% tab Snowflake %}
 ```json
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
@@ -51,7 +51,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 );
 ```
 {% endtab %}
-{% tab 레드쉬프트 %}
+{% tab Redshift %}
 ```json
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
@@ -78,7 +78,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | `BRAZE_ID`| 문자열 | NULLABLE |
 {% endtab %}
 
-{% tab 데이터브릭 %}
+{% tab Databricks %}
 다음 필드가 포함된 테이블을 만듭니다:
 
 | 필드 이름 | 유형 | 모드 |
@@ -89,13 +89,31 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | `ALIAS_LABEL`| 문자열 | NULLABLE |
 | `BRAZE_ID`| 문자열 | NULLABLE |
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  --at least one of external_id, alias_name and alias_label, or braze_id is required  
+  EXTERNAL_ID VARCHAR,
+  --if using user alias, both alias_name and alias_label are required
+  ALIAS_NAME VARCHAR,
+  ALIAS_LABEL VARCHAR,
+  --braze_id can only be used to update existing users created through the Braze SDK
+  BRAZE_ID VARCHAR,
+)
+GO
+```
+{% endtab %}
+
 {% endtabs %}
 
 ### 작동 방식
 
-Braze 클라우드 데이터 수집을 사용하면 데이터 웨어하우스 인스턴스와 Braze 워크스페이스 간의 통합을 설정하여 반복적으로 데이터를 동기화할 수 있습니다. 이 동기화는 설정한 일정에 따라 실행되며, 각 통합마다 다른 일정을 가질 수 있습니다. 동기화는 15분마다 자주 실행하거나 한 달에 한 번처럼 드물게 실행할 수 있습니다. 15분보다 더 자주 동기화를 수행해야 하는 고객의 경우 고객 성공 관리자와 상담하거나 실시간 데이터 수집을 위해 REST API 호출을 사용하는 것을 고려하세요.
+Braze 클라우드 데이터 수집을 사용하면 데이터 웨어하우스 인스턴스와 Braze 워크스페이스 간의 통합을 설정하여 데이터를 정기적으로 동기화할 수 있습니다. 이 동기화는 사용자가 설정한 일정에 따라 실행되며, 각 통합은 다른 일정을 가질 수 있습니다. 동기화는 15분마다 자주 실행되거나 한 달에 한 번씩 드물게 실행될 수 있습니다. 15분보다 더 자주 동기화가 필요한 고객은 고객 성공 매니저와 상담하거나 실시간 데이터 수집을 위해 REST API 호출을 사용하는 것을 고려하세요.
 
-동기화가 실행되면 Braze는 데이터 웨어하우스 인스턴스에 직접 연결하여 지정된 테이블에서 모든 새 데이터를 검색하고 Braze 대시보드에서 해당 사용자 프로필을 삭제합니다. 
+동기화가 실행되면 Braze는 데이터 웨어하우스 인스턴스에 직접 연결하여 지정된 테이블에서 모든 새 데이터를 검색하고 Braze 대시보드에서 해당 고객 프로필을 삭제합니다. 
 
 {% alert warning %}
 사용자 프로필 삭제는 되돌릴 수 없습니다. 데이터에 불일치를 일으킬 수 있는 사용자를 영구적으로 제거합니다. 자세한 내용은 [사용자 프로필 삭제를]({{site.baseurl}}/help/help_articles/api/delete_user/) 참조하세요.

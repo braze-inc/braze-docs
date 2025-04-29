@@ -39,9 +39,9 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 
 ### Etapa 2: Ativar push capabilities
 
-No Xcode, adicione a capacidade de notificações por push usando o painel **Assinatura e Capacidades** ao alvo principal do app.
+No Xcode, acesse a seção **Signing & Capabilities** do direcionamento do app principal e adicione o recurso de notificações por push.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![A seção "Signing & Capabilities" (Assinatura e recursos) em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## Integração automática de push
 
@@ -78,7 +78,7 @@ Os passos de automação realizados pelo SDK são compatíveis com as integraç�
 
 {% alert warning %}
 O SDK deve ser inicializado na thread principal para ativar a automação de notificação por push. A inicialização do SDK deve ocorrer antes que o aplicativo tenha terminado de iniciar ou na sua implementação do AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application).
-Se o seu aplicativo exigir uma configuração adicional antes de inicializar o SDK, consulte a página da documentação sobre [inicialização]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) por postergação.
+Se o seu aplicativo exigir uma configuração adicional antes de inicializar o SDK, consulte a página da documentação sobre [inicialização por postergação]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/).
 {% endalert %}
 
 ### Substituindo configurações individuais
@@ -122,7 +122,7 @@ Se você depende de notificações por push para comportamento adicional especí
 
 Inclua o exemplo de código apropriado no método de delegado [`application:didFinishLaunchingWithOptions:` do seu app](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) para que os dispositivos dos seus usuários possam se registrar no APNs. Certifique-se de chamar todo o código de integração push na thread principal do seu aplicativo.
 
-Braze também fornece categorias de push padrão para suporte ao botão de ação por push, que devem ser adicionadas manualmente ao seu código de registro de push. Consulte [os botões de ação por push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/) para obter etapas adicionais de integração.
+Braze também fornece categorias de push padrão para suporte ao botão de ação por push, que devem ser adicionadas manualmente ao seu código de registro de push. Consulte os [botões de ação por push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/) para obter etapas adicionais de integração.
 
 Adicione o seguinte código ao método `application:didFinishLaunchingWithOptions:` do seu delegado do app. 
 

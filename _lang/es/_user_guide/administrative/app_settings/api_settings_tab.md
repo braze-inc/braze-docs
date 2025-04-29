@@ -14,7 +14,7 @@ description: "Este artículo trata de la página de APIs e identificadores, que 
 Puedes encontrar la página **API e identificadores** en **Configuración**.
 
 {% alert note %}
-Si utilizas la navegación antigua, esta página se llama **Configuración de la API** y se encuentra en **Configuración** > Administrar configuración.
+Si utilizas la navegación antigua, esta página se llama **Configuración de la API** y se encuentra en **Configuración** > **Administrar configuración**.
 {% endalert %}
 
 ### Claves de API

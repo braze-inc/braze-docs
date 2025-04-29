@@ -133,6 +133,14 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
-- name: 受信トレイ・モンスター
+- name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: オディッチ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
+- name: オプティマイズリー
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/optimizely/
+- name: ジャストゥーノ
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/ 
 ---

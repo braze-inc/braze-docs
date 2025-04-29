@@ -1,22 +1,22 @@
 ---
-nav_title: "POST: Envio de mensagens de canva via entrega disparada por API"
-article_title: "POST: Envio de mensagens de canva via entrega disparada por API"
+nav_title: "POST: Enviar Mensagens de Canva Usando Entrega Acionada por API"
+article_title: "POST: Enviar Mensagens de Canva Usando Entrega Acionada por API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint da Braze Envio de mensagens de canva via entrega disparada por API"
+description: "Este artigo descreve detalhes sobre o envio de canvas usando o API acionado pela entrega do Braze."
 
 ---
 {% api %}
-# Enviar mensagens do Canva por meio de entrega disparada pela API
+# Envie mensagens do canva usando entrega acionada por API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/send
 {% endapimethod %}
 
-> Use esse endpoint para enviar mensagens do canva por meio de entrega disparada pela API.
+> Use este endpoint para enviar mensagens de canva com entrega acionada por API.
 
-A entrega disparada por API permite que você armazene o conteúdo da mensagem no dashboard do Braze e, ao mesmo tempo, determine quando a mensagem será enviada e para quem por meio de sua API.
+A entrega acionada por API permite que você armazene o conteúdo da mensagem no dashboard do Braze enquanto determina quando uma mensagem é enviada e para quem usando sua API.
 
 Antes de enviar mensagens com esse endpoint, você deve ter um [ID do Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) (que é criado quando você constrói um Canvas).
 
@@ -63,11 +63,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Obrigatória | String | Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Opcional | Objeto | Consulte [Propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Pares de valores-chave de personalização que serão aplicados a todos os usuários nessa solicitação. O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB. |
-|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como true ao enviar uma mensagem para um segmento inteiro que uma campanha ou Canva direciona. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois a definição não intencional desse sinalizador pode fazer com que sua mensagem seja enviada a um público maior do que o esperado. |
+|`canvas_id`| Obrigatória | String | Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
+|`canvas_entry_properties`| Opcional | Objeto | Consulte [Propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Os pares de chave-valor de personalização se aplicarão a todos os usuários nesta solicitação. O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB. |
+|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 |`audience`| Opcional| Objeto do público conectado | Consulte [Público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). Se não for fornecido e `broadcast` for definido como true, a mensagem será enviada para todo o segmento de mensagem direcionado pelo Canva.<br><br> O vetor `recipients` pode conter até 50 objetos, sendo que cada objeto contém uma única string `external_user_id` e um objeto `canvas_entry_properties`. Os endereços `external_user_id` ou `user_alias` são necessários para essa chamada. As solicitações devem especificar apenas uma. <br><br> Quando `send_to_existing_only` for `true`, a Braze enviará a mensagem apenas para os usuários existentes - no entanto, esse sinalizador não pode ser usado com aliases de usuários. Quando `send_to_existing_only` for `false` e não existir um usuário com o `id` fornecido, o Braze criará um usuário com esse ID e atribuições antes de enviar a mensagem.|
+|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). Se não fornecido e `broadcast` estiver definido como verdadeiro, a mensagem será enviada para todo o segmento alvo do canva.<br><br> O `recipients` array pode conter até 50 objetos, com cada objeto contendo uma única `external_user_id` string e um `canvas_entry_properties` objeto. Os endereços `external_user_id` ou `user_alias` são necessários para essa chamada. As solicitações devem especificar apenas uma. <br><br> Quando `send_to_existing_only` é `true`, Braze só enviará a mensagem para usuários existentes—no entanto, essa flag não pode ser usada com aliases de usuário. Quando `send_to_existing_only` for `false` e não existir um usuário com o `id` fornecido, o Braze criará um usuário com esse ID e atribuições antes de enviar a mensagem.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Os clientes que usam a API para chamadas de servidor para servidor talvez precisem listar o URL apropriado da API se estiverem protegidos por um firewall.
@@ -77,7 +77,7 @@ A especificação de um destinatário por endereço de e-mail está atualmente e
 {% endalert %}
 
 {% alert note %}
-Se você incluir usuários específicos na sua chamada de API e um segmento de mensagem no dashboard, a mensagem será enviada especificamente para os perfis de usuário que estão na chamada de API e se qualificam para os filtros de segmento.
+Se você incluir tanto usuários específicos na sua chamada de API quanto um segmento alvo no dashboard, a mensagem será enviada especificamente para os perfis de usuário que estão tanto na chamada de API quanto qualificam para os filtros de segmento.
 {% endalert %}
 
 ## Exemplo de solicitação
@@ -154,7 +154,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
 
 ## Detalhes da resposta
 
-As respostas do endpoint de envio de mensagens incluirão o endereço `dispatch_id` da mensagem para referência ao envio da mensagem. O endereço `dispatch_id` é o ID do envio de mensagens (ID exclusivo para cada "transmissão" enviada da plataforma Braze). Para saber mais, consulte [Comportamento do Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+As respostas do endpoint de envio de mensagens incluirão o `dispatch_id` da mensagem para referência de volta ao envio da mensagem. O endereço `dispatch_id` é o ID do envio de mensagens (ID exclusivo para cada "transmissão" enviada da plataforma Braze). Para saber mais, consulte [Comportamento do Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ### Exemplo de resposta bem-sucedida
 
@@ -172,12 +172,12 @@ Se o seu canva estiver arquivado, você verá a mensagem `notice`: "O Canva est�
 
 Se sua solicitação encontrar um erro fatal, consulte [Erros e respostas]({{site.baseurl}}/api/errors/#fatal-errors) para obter o código e a descrição do erro.
 
-## Objeto de atribuições para o Canva
+## Objeto de atributos para canva
 
-Use o objeto de envio de mensagens `attributes` para adicionar, criar ou atualizar atribuições e valores para um usuário antes de enviar a ele um Canva disparado pela API usando o ponto de extremidade `canvas/trigger/send`. Essa chamada da API processa o objeto de atribuições do usuário antes de processar e enviar a tela. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/help/best_practices/race_conditions/).
+Use o objeto de envio de mensagens `attributes` para adicionar, criar ou atualizar atributos e valores para um usuário antes de enviar um Canvas acionado por API usando o endpoint `canvas/trigger/send`. Esta chamada de API processa o objeto de atributos do usuário antes de processar e enviar o canva. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/help/best_practices/race_conditions/). No entanto, por padrão, os grupos de inscrições não podem ser atualizados dessa forma.
 
 {% alert note %}
-Procurando a versão de campanhas desse endpoint? Confira o [Envio de mensagens de campanha por meio de entrega disparada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Procurando a versão da campanha deste endpoint? Confira [Envio de mensagens de campanha usando entrega acionada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 {% endalert %}
 
 {% endapi %}

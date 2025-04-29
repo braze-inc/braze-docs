@@ -17,7 +17,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Criar s
 
 > Use este endpoint para criar uma seleção em seu catálogo.
 {% alert important %}
-Este endpoint está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
+Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
 {% endalert %}
 
 ## Pré-requisitos
@@ -81,11 +81,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Resposta
 
-Existem três respostas de código de status para este endpoint: `202`, `400` e `404`.
+Há três respostas de código de status para esse endpoint: `202`, `400` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 
-O código de status `202` pode retornar o seguinte corpo de resposta.
+O código de status `202` poderia retornar o seguinte corpo de resposta.
 
 ```json
 {
@@ -95,7 +95,7 @@ O código de status `202` pode retornar o seguinte corpo de resposta.
 
 ### Exemplo de resposta de erro
 
-O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [Resolução de problemas](#troubleshooting) para saber mais sobre os erros que você pode encontrar.
+O código de status `400` poderia retornar o seguinte corpo de resposta. Consulte [Solução de problemas](#troubleshooting) para obter mais informações sobre os erros que você pode encontrar.
 
 ```json
 {
@@ -117,12 +117,12 @@ O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [
 
 ## Solução de problemas
 
-A tabela a seguir lista os possíveis erros retornados e suas etapas de solução de problemas associadas.
+A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas.
 
 | Erro                                | Solução de problemas                                                                               |
 |--------------------------------------|-----------------------------------------------------------------------------------------------|
 | `catalog-not-found`                  | Verifique se o nome do catálogo é válido.                                                         |
-| `company-size-limit-already-reached` | O limite de tamanho de armazenamento do catálogo foi atingido.                                                    |
+| `company-size-limit-already-reached` | O limite de tamanho do armazenamento do catálogo foi atingido.                                                    |
 | `selection-limit-reached`            | O limite de seleções do catálogo foi atingido.                                                      |
 | `invalid-selection`                  | Verifique se a seleção é válida.                                                            |
 | `too-many-filters`                   | Verifique se a seleção tem muitos filtros.                                                  |

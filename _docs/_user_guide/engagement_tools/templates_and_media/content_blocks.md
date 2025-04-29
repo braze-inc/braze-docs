@@ -23,7 +23,7 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
+There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [using the API][5].
 
 {% tabs %}
 {% tab Drag-and-drop %}
@@ -44,13 +44,13 @@ There are two types of editors used to create a Content Block—classic and drag
 |---|---|
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
-| Content Size | Maximum of 50kB (kilobyte). |
+| Content Size | Maximum of 50 KB. |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it can be beneficial to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ After creating your Content Block, you can insert it in your messages by followi
 1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-{% alert note %}
-Canvas entry properties and event properties are only supported in a Canvas, not in the Content Block.
-{% endalert %}
+### Things to know
+
+- Using HTML Content Blocks in drag-and-drop emails **or** drag-and-drop Content Blocks in HTML emails may result in unexpected rendering issues. This is because the drag-and-drop editor is generates HTML and CSS that dynamically renders the content whereas the HTML editor is more static.
+- Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 
 ### Updating and copying Content Blocks
 
@@ -77,11 +78,11 @@ If you choose to update a Content Block, it will update in all messages the Cont
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
+After making edits to a Content Block, you can save and launch the updated Content Block by selecting **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
 
-![][2]
+![A Content Block that reads "Welcome to our newsletter".][2]
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block. This creates a draft copy of the Content Block.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) a Content Block. This creates a draft copy of the Content Block.
 
 ### Previewing Content Blocks
 
@@ -89,7 +90,7 @@ After adding a Content Block in an active campaign or Canvas, you can preview th
 
 This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
 
-![][7]{: style="max-width:60%;"} 
+![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.][7]{: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
@@ -105,13 +106,13 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ![Expanded Settings dropdown menu that shows three options: Archive, Duplicate, and Copy to workspace.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
 
 #### Best practices
 
 - When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
-- When your block only has a typo or needs a minor change, we do not recommend archiving the block. Just update and get sending!
-- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
+- When your block only has a typo or needs a minor change, we do not recommend archiving the block. Instead, update the block and get sending!
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. This will ensure no outdated information is included in any newly sent emails.
 - If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace][4]

@@ -75,7 +75,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 먼저, 활동을 등록하는 방법을 선택합니다:
 
-- **원격 등록:** [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) 메서드를 사용한 다음, [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) 엔드포인트를 사용하여 활동을 시작합니다.
+- **원격 등록:** 애플리케이션 및 사용자 라이프사이클 초기에(그리고 푸시 투 스타트 토큰이 필요하기 전에) 가능한 한 빨리 [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) 메서드를 사용하세요. 그런 다음 [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) 엔드포인트를 사용하여 활동을 시작합니다.
 - **로컬 등록:** 라이브 활동의 인스턴스를 생성한 다음, 브레이즈가 관리할 푸시 토큰을 생성하려면 [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) 메서드를 사용하여 Braze가 관리할 푸시 토큰을 생성합니다.
 
 {% tabs local %}

@@ -99,4 +99,4 @@ description: "このハウツー記事では、キャンペーンコネクター
 [4]: {% image_buster /assets/img_archive/Campaign_Connector1.png %}
 [5]: {% image_buster /assets/img_archive/Campaign_Connector2.png %}
 [6]: {% image_buster /assets/img_archive/Campaign_Connector3.png %}
-[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/

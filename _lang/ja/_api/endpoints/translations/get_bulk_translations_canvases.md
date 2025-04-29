@@ -31,15 +31,16 @@ API 経由でキャンバスに翻訳を表示することは、現在、早期�
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`step_id`| 必須 | 文字列 | キャンバスのステップのID。 |
-|`message_variation_id`| 必須 | 文字列 | メッセージのID。 |
+|`message_variation_id`| 必須 | string | メッセージのID。 |
+|`workflow_id` | 必須 | string | キャンバスのID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
 
-## 例のリクエスト
+## リクエスト例
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations' \

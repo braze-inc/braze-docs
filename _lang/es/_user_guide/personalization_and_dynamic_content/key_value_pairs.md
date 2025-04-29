@@ -12,7 +12,7 @@ channel:
 
 # Pares clave-valor
 
-> Braze permite enviar cargas útiles de datos adicionales a los dispositivos de usuario mediante pares clave-valor. Esta característica está disponible en los canales de mensajería push, dentro de la aplicación, correo electrónico y tarjeta de contenido. 
+> Esta página explica cómo utilizar pares clave-valor para enviar cargas útiles de datos adicionales a dispositivos de usuario. Esta característica está disponible en los canales de mensajería push, dentro de la aplicación, correo electrónico y tarjeta de contenido.
 
 Utiliza pares clave-valor para añadir metadatos estructurados a los mensajes. Estas cargas útiles de datos adicionales pueden enriquecer los mensajes con información contextual adicional que puede influir en la forma en que se representa o procesa un mensaje.
 
@@ -41,7 +41,7 @@ Aquí tienes algunos casos de uso de ejemplo para añadir metadatos con pares cl
 
 Se pueden añadir pares clave-valor a las notificaciones push de Android, iOS y Web. Puedes utilizar pares clave-valor para actualizar las métricas internas y el contenido de la aplicación o personalizar las propiedades de las notificaciones push, como la priorización de alertas, la localización y los sonidos.
 
-En el compositor de mensajes, seleccione la pestaña **Configuración**, haga clic en **Añadir nuevo par** y especifique sus pares clave-valor.
+En el creador de mensajes, selecciona la pestaña **Configuración**, selecciona **Añadir nuevo par** y especifica tus pares clave-valor.
 
 ### iOS
 
@@ -113,7 +113,7 @@ Además de los valores de carga útil de la biblioteca ```aps```, puede enviar p
 
 ![][17]
 
-Los casos de uso de los pares clave-valor personalizados incluyen, entre otros, el mantenimiento de métricas internas y el establecimiento del contexto para la interfaz de usuario. Braze le permite enviar pares clave-valor adicionales junto con una notificación push para que los utilice como desee a través de su aplicación dentro de la [clave de extras][1]. Si prefieres utilizar otra clave, asegúrate de que tu aplicación puede manejar esta clave personalizada.
+Los casos de uso de los pares clave-valor personalizados incluyen, entre otros, el mantenimiento de métricas internas y la configuración del contexto de la interfaz de usuario. Braze te permite enviar pares clave-valor adicionales junto con una notificación push que se utilizará a través de tu aplicación dentro de la [clave de extras][1]. Si prefieres utilizar otra clave, confirma que tu aplicación puede manejar esta clave personalizada.
 
 {% alert warning %}
 Debe evitar manejar una clave de nivel superior o diccionario llamado ab en su aplicación.
@@ -167,7 +167,7 @@ El sistema operativo iOS puede [bloquear las notificaciones]({{site.baseurl}}/de
 
 ## Mensajes dentro de la aplicación
 
-Para añadir un par clave-valor a un mensaje in-app, seleccione la pestaña **Configuración** en el compositor de mensajes, haga clic en **Añadir nuevo par** y especifique sus pares clave-valor.
+Para añadir un par clave-valor a un mensaje dentro de la aplicación, selecciona la pestaña **Configuración** en el creador de mensajes, selecciona **Añadir nuevo par** y especifica tus pares clave-valor.
 
 ![][21]
 
@@ -187,7 +187,7 @@ Los correos electrónicos devueltos no entregarán pares clave-valor a SparkPost
 
 ## Tarjetas de contenido
 
-Para añadir un par clave-valor a una tarjeta de contenido, vaya a la pestaña **Configuración** del compositor de mensajes Braze y haga clic en **Añadir nuevo par**.
+Para añadir un par clave-valor a una tarjeta de contenido, ve a la pestaña **Configuración** del creador de mensajes Braze y selecciona **Añadir nuevo par**.
 
 ![Añadir par clave-valor a la tarjeta de contenido][24]{: style="max-width:70%;"}
 

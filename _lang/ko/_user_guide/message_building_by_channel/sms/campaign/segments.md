@@ -17,21 +17,21 @@ channel:
 
 ## SMS 세그먼트란 무엇인가요?
 
-SMS(단문 메시지 서비스)는 디바이스 간에 간단한 문자 메시지를 주고받을 수 있는 표준화된 통신 프로토콜입니다. 다른 시그널링 프로토콜 사이에 '끼워 맞추기' 위해 설계되었기 때문에 SMS 메시지 길이가 7비트 160자(1120비트 또는 140바이트)로 제한되어 있습니다. SMS 메시지 세그먼트는 휴대폰 사업자가 문자 메시지를 측정하는 데 사용하는 문자 일괄 처리입니다. 메시지는 메시지 세그먼트별로 요금이 부과되므로 SMS를 활용하는 고객은 메시지 분할 방식에 대한 뉘앙스를 이해하면 큰 이점을 얻을 수 있습니다. 
+SMS(단문 메시지 서비스)는 기기 간에 간단한 문자 메시징을 주고받을 수 있는 표준화된 통신 프로토콜입니다. 다른 시그널링 프로토콜 사이에 '끼워 맞추기' 위해 설계되었기 때문에 SMS 메시지 길이가 7비트 160자(1120비트 또는 140바이트)로 제한되어 있습니다. SMS 메시지 세그먼트는 휴대폰 사업자가 문자 메시지를 측정하는 데 사용하는 문자 일괄 처리입니다. 메시지는 메시지 세그먼트별로 요금이 부과되므로 SMS를 활용하는 고객은 메시지 분할 방식에 대한 뉘앙스를 이해하면 큰 이점을 얻을 수 있습니다. 
 
-Braze를 사용하여 SMS 캠페인 또는 캔버스를 만들 때 작성기에서 작성하는 메시지는 메시지가 휴대폰으로 전달될 때 사용자에게 표시되는 내용을 **나타내지만, 메시지가 세그먼트로 분할되는 방식과 궁극적으로 요금이 부과되는 방식은 나타내지 않습니다**. 전송할 세그먼트 수를 파악하고 초과 초과가 발생할 수 있음을 인지하는 것은 사용자의 책임이지만, 이를 보다 쉽게 처리할 수 있도록 몇 가지 리소스를 제공합니다. 사내 [세그먼트 계산기를](#segment-calculator) 확인하세요.
+Braze를 사용하여 SMS 캠페인 또는 캔버스를 만들 때 작성기에서 작성하는 메시지는 메시지가 휴대폰으로 전달될 때 사용자에게 표시되는 내용을 **나타내지만, 메시지가 세그먼트로 분할되는 방식과 궁극적으로 요금이 부과되는 방식은 나타내지 않습니다**. 전송할 세그먼트 수를 파악하고 초과량이 발생할 수 있음을 인지하는 것은 사용자의 책임이지만, 이를 보다 쉽게 처리할 수 있도록 몇 가지 리소스를 제공합니다. 사내 [세그먼트 계산기](#segment-calculator)를 확인하세요.
 
 ![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
 ### 세그먼트 분석
 
-**독립형 SMS 세그먼트의** 문자 수 제한은 인코딩 유형에 따라 160자[(GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) 인코딩[)](https://en.wikipedia.org/wiki/GSM_03.38) 또는 70자[(UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) 인코딩[)](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) 입니다. 그러나 대부분의 휴대폰과 네트워크는 연결 기능을 지원하여 최대 1530자(GSM-7) 또는 670자(UCS-2)의 긴 형식의 SMS 메시지를 제공합니다. 따라서 메시지에 여러 개의 세그먼트가 포함되어 있어도 이러한 연결 제한을 초과하지 않으면 하나의 메시지로 간주되어 그대로 보고됩니다.
+**독립형 SMS 세그먼트**의 문자 수 제한은 인코딩 유형에 따라 160자([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) 인코딩) 또는 70자([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) 인코딩)입니다. 그러나 대부분의 휴대폰과 네트워크는 연결 기능을 지원하여 최대 1530자(GSM-7) 또는 670자(UCS-2)의 긴 형식의 SMS 메시지를 제공합니다. 따라서 메시지에 여러 개의 세그먼트가 포함되어 있어도 이러한 연결 제한을 초과하지 않으면 하나의 메시지로 간주되어 그대로 보고됩니다.
 
 **첫 번째 세그먼트의 글자 수 제한을 초과하면 추가 글자 수에 따라 전체 메시지가 새로운 글자 수 제한에 따라 분할 및 세그먼트화된다는** 점에 유의하세요:
 - **GSM-7 인코딩**
-    - 이제 160자 제한을 초과하는 메시지는 153자로 분할되어 개별적으로 전송된 후 수신자의 디바이스에서 다시 작성됩니다. 예를 들어 161자 메시지는 하나는 153자, 다른 하나는 8자로 구성된 두 개의 메시지로 전송됩니다. 
+    - 이제 160자 제한을 초과하는 메시지는 153자로 분할되어 개별적으로 전송된 후 수신자의 기기에서 다시 작성됩니다. 예를 들어 161자 메시지는 하나는 153자, 다른 하나는 8자로 구성된 두 개의 메시지로 전송됩니다. 
 - **UCS-2 인코딩**
-    - SMS 메시지에 이모티콘, 중국어, 한국어, 일본어 등 GSM 이외의 문자를 포함할 경우 해당 메시지는 UCS-2 인코딩을 통해 전송해야 합니다. 초기 세그먼트 제한인 70자를 초과하는 메시지는 전체 메시지가 67자 메시지 세그먼트로 연결됩니다. 예를 들어 71자짜리 메시지는 67자짜리 메시지와 4자짜리 메시지 두 개로 전송됩니다. 
+    - SMS 메시지에 이모티콘, 중국어, 한국어, 일본어 등 GSM 이외의 문자를 포함할 경우 해당 메시지는 UCS-2 인코딩을 통해 전송해야 합니다. 초기 세그먼트 제한인 70자를 초과하는 메시지는 전체 메시지가 67자 메시지 세그먼트로 연결됩니다. 예를 들어 71자 메시지는 하나는 67자, 다른 하나는 4자로 구성된 두 개의 메시지로 전송됩니다. 
 
 인코딩 유형에 관계없이 Braze에서 발송하는 각 SMS 메시지는 최대 10개의 세그먼트로 제한되며, [Liquid 템플릿]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [커넥티드 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), 이모지 및 링크와 호환됩니다.
 
@@ -43,13 +43,13 @@ Braze를 사용하여 SMS 캠페인 또는 캔버스를 만들 때 작성기에�
 | 161 - 306자 | 2개 세그먼트 | 161 - 306자
 | 307 - 459자 | 3개 세그먼트 | 307 - 459자
 | 460 - 612자 | 4분 분량 | 4개 세그먼트
-| 613 - 765자 | 5개의 세그먼트 | 5개의 세그먼트
-| 766 - 918자 | 6분 분량 | 6개의 세그먼트
-| 919 - 1071자 | 7분 분량 | 7개의 세그먼트
-| 1072 - 1224자 | 8분 길이 | 8개의 세그먼트
+| 613 - 765자 | 5개의 세그먼트 |
+| 766 - 918자 | 6개의 세그먼트
+| 919 - 1071자 | 7개의 세그먼트
+| 1072 - 1224자 | 8개의 세그먼트
 | 1225 - 1377자 | 9개 세그먼트 | 1225 - 1377자
-| 1378 - 1530자 | 10개의 세그먼트 | 10개의 세그먼트
-{: .reset-td-br-1 .reset-td-br-2}
+| 1378 - 1530자 | 10개의 세그먼트 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab UCS-2 인코딩 %}
 | 문자 수 | 세그먼트 수는 몇 개인가요? |
@@ -58,26 +58,26 @@ Braze를 사용하여 SMS 캠페인 또는 캔버스를 만들 때 작성기에�
 | 71 - 134자 | 2 세그먼트 | 2 글자
 | 135 - 201자 | 3분 분량 | 3개 세그먼트
 | 202 - 268자 | 4분 분량 | 4개 세그먼트
-| 269 - 335자 | 5개의 세그먼트 | 5개의 세그먼트
+| 269 - 335자 | 5개의 세그먼트 |
 | 336 - 402자 | 6분 분량 | 6개의 세그먼트
-| 403 - 469자 | 7분 분량 | 7개의 세그먼트
-| 470 - 536자 | 8개의 세그먼트 | 470 - 536자
+| 403 - 469자 | 7개의 세그먼트
+| 470 - 536자 | 8개의 세그먼트 |
 | 537 - 603자 | 9개 세그먼트 | 537 - 603자
 | 604 - 670자 | 10개의 세그먼트 | 10개의 세그먼트
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
 ## 사본을 만들 때 염두에 두어야 할 사항
 
 - **세그먼트당 글자 수 제한**
-    - [GSM-7은](https://en.wikipedia.org/wiki/GSM_03.38) 단일 SMS 세그먼트에 160자 제한이 있습니다. 160자를 초과하는 메시지의 경우 모든 메시지는 153자 제한으로 세그먼트화됩니다.
-    - [UCS-2는](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) 메시지 세그먼트당 70자 제한이 있습니다. 70자를 초과하는 메시지의 경우 모든 메시지는 67자 제한으로 세그먼트화됩니다.<br><br>
+    - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38)은 단일 SMS 세그먼트에 160자 제한이 있습니다. 160자를 초과하는 메시지의 경우 모든 메시지는 153자 제한으로 세그먼트화됩니다.
+    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set)는 메시지 세그먼트당 70자 제한이 있습니다. 70자를 초과하는 메시지의 경우 모든 메시지는 67자 제한으로 세그먼트화됩니다.<br><br>
 - **메시지당 세그먼트 제한**
-    - 매체의 제한으로 인해 전송할 수 있는 세그먼트의 최대 수량이 정해져 있습니다. 하나의 Braze SMS 메시지에는 **10개** 이상의 **세그먼트** 메시지를 보낼 수 없습니다.
+    - 매체의 제한으로 인해 전송할 수 있는 세그먼트의 최대 수량이 정해져 있습니다. 하나의 Braze SMS 메시지에는 **10개 이상의 세그먼트** 메시지를 보낼 수 없습니다.
     - 이 10개의 세그먼트는 1530자(GSM-7 인코딩) 또는 670자(UCS-2 인코딩)로 제한됩니다.<br><br>
-- **Liquid 템플릿, 커넥티드 콘텐츠, 이모티콘 및 링크와 호환 가능**
-    - 리퀴드 템플릿 및 연결된 콘텐츠는 메시지가 인코딩 유형에 대한 글자 수 제한을 초과할 위험이 있습니다. [단어 잘라내기 필터를](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) 사용하여 리퀴드가 메시지에 포함할 수 있는 단어의 수를 제한할 수 있습니다.
+- **Liquid 템플릿, 연결된 콘텐츠, 이모티콘 및 링크와 호환 가능**
+    - Liquid 템플릿 및 연결된 콘텐츠는 메시지가 인코딩 유형에 대한 글자 수 제한을 초과할 위험이 있습니다. [단어 잘라내기 필터](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords)를 사용하여 Liquid가 메시지에 포함할 수 있는 단어의 수를 제한할 수 있습니다.
     - 이모티콘에는 모든 이모티콘에 표준 글자 수가 없으므로 메시지가 제대로 구분되고 표시되는지 테스트해야 합니다.
     - 링크에는 많은 문자가 사용되어 의도한 것보다 더 많은 메시지 세그먼트가 생성될 수 있습니다. 링크 단축기를 사용할 수 있지만 짧은 코드와 함께 사용하는 것이 가장 좋습니다. 자세한 내용은 [SMS FAQ를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) 참조하세요.<br><br>
 - **테스트**
@@ -396,18 +396,18 @@ auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
   const t = (type === "auto") ? smsutil.pickencoding(s) : type;
 
   if (t === "GSM") {
-    반환 s.length \+ (s.match(/^|€|{|}|\[|]|~||/g) || \[]).length;
+    반환 s.length \+ (s.match(/^|€|{|}|[|]|~||/g) || []).length;
   } else {
-    반환 s.length;
+    return s.length;
   }
 }
 
 함수 updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
-    var sms_type = $('#sms_split 입력\[이름=sms_type]:checked').val();
-    변수 유니코드 입력 = smsutil.unicodeCharacters(sms_text);
+    var sms_type = $('#sms_split 입력[이름=sms_type]:checked').val();
+    var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = [encodersms_type](sms_text);
-    var smsSegments = [세그미터ms_type](unicodeinput);
+    var smsSegments = segmenter[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
@@ -427,9 +427,9 @@ $("#sms_segments_data").show();
       const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
     $(hover_id).mouseover(function(e){
 var input_id = e.target.id;
-var index = input_id.split(input_id_prefix)\[1];
+var index = input_id.split(input_id_prefix)[1];
   if(!index) {
-    반환합니다;
+    return;
     }
     var output_id = `#${output_id_prefix}${index}`;
       $(`${output_id}, #${input_id}`).addClass("hover_segment");
@@ -440,13 +440,13 @@ var index = input_id.split(input_id_prefix)\[1];
     };
   //highlight 세그먼트에서 메시지 출력으로
 implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
-//세그먼트에 메시지 출력 강조 표시
+//highlight message output to segment
 implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
 $('#sms_message_split').on("input", function(e){
 $('#auto_encoding').html("");
 updateSMSSplit();
 });
-  $('#sms_split 입력\[name=sms_type]').change(function(e){
+  $('#sms_split 입력[name=sms_type]').change(function(e){
   $('#auto_encoding').html("");
 updateSMSSplit();
 });

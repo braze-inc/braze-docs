@@ -120,7 +120,7 @@ Une fois les tags et les déclencheurs configurés, vous devrez également mettr
 
 Une fois que l'outil Google Tag Manager est installé dans votre application, ajoutez un fournisseur de balises personnalisées pour appeler les méthodes du SDK Braze en fonction des balises que vous avez configurées dans Google Tag Manager. 
 
-Assurez-vous de noter le « chemin de classe » vers le fichier. C’est ce que vous allez saisir lors de la définition d’une balise dans la console de [](https://tagmanager.google.com/)Google Tag Manager](https://tagmanager.google.com/).
+Assurez-vous de noter le « chemin de classe » vers le fichier. C’est ce que vous allez saisir lors de la définition d’une balise dans la console de [Google Tag Manager](https://tagmanager.google.com/).
 
 Cet exemple illustre l'une des nombreuses façons de structurer votre fournisseur d'étiquettes personnalisé. Nous déterminons la méthode SDK de Braze à appeler en fonction de la paire clé-valeur `actionType` envoyée par le gestionnaire de balises Google. Cet exemple suppose que vous avez assigné l'instance de Braze en tant que variable dans l'AppDelegate.
 

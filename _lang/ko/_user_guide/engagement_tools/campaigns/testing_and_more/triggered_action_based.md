@@ -3,20 +3,20 @@ nav_title: API 트리거 및 액션 기반 캠페인
 article_title: API 트리거 및 액션 기반 캠페인 테스트하기
 page_order: 2
 page_type: reference
-description: "이 참조 문서에서는 API 트리거 및 액션 기반 캠페인을 테스트하는 방법에 대해 설명합니다."
+description: "이 참조 문서에서는 API 트리거 및 실행 기반 캠페인을 테스트하는 방법에 대해 설명합니다."
 
 ---
 
 # API 트리거 및 액션 기반 캠페인
 
-> 캠페인을 설정할 때는 항상 시작하기 전에 메시지를 테스트하는 것이 좋습니다. 이 참조 문서에서는 API 요청, 페이로드를 검사하고 전송 로그를 볼 수 있는 테스트 사용자 세그먼트를 만드는 방법에 대해 설명합니다.
+> 캠페인을 설정할 때는 항상 시작하기 전에 메시지를 테스트하는 것이 좋습니다. 이 참조 문서에서는 API 요청, 페이로드를 검사하고 전달 가능성 로그를 볼 수 있는 테스트 사용자 세그먼트를 만드는 방법에 대해 설명합니다.
 
 ## 1단계: 테스트 사용자 세그먼트 만들기
 
 API 또는 사용자 지정 이벤트로 캠페인의 트리거를 테스트하는 유일한 방법은 캠페인을 실시간으로 푸시하는 것입니다. 새 캠페인을 출시할 때 전달 가능성 트리거를 테스트할 때 캠페인에 테스트 사용자 세그먼트를 추가하는 것을 적극 권장합니다. 이렇게 하면 캠페인이 실수로 전송되더라도 내부 사용자에게만 전달되도록 안전망을 구축할 수 있습니다.
 
-1. **테스트 사용자 가져오기**<br>테스트 사용자는 CSV 또는 [Postman을]({{site.baseurl}}/api/postman_collection/) 통한 일회성 일괄 요청을 통해 Braze로 가져올 수 있습니다. 이러한 사용자를 가져올 때는 프로필에 테스트 그룹 세그먼트를 구축하는 데 사용할 수 있는 사용자 지정 속성(예: `internal_test_user: true`)을 설정하는 것이 좋습니다. <br><br>
-2. **테스트 사용자를 Braze가 인식하는 테스트 사용자로 추가하기**<br>대시보드에서 [테스트 사용자를 Braze가 인식하는 테스트 사용자로 표시하면]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) 각 사용자에 대한 자세한 로깅에 액세스할 수 있으므로 API 요청과 해당 페이로드를 검사하고 전달 가능성 로그를 볼 수 있습니다. 이러한 로그를 통해 최종 사용자에게 캠페인을 전달하는 데 문제가 있었는지 확인할 수 있습니다. <br><br>
+1. **테스트 사용자 가져오기**<br>테스트 사용자는 CSV 또는 [Postman]({{site.baseurl}}/api/postman_collection/)을 통한 일회성 일괄 요청을 통해 Braze로 가져올 수 있습니다. 이러한 사용자를 가져올 때는 프로필에 테스트 그룹 세그먼트를 구축하는 데 사용할 수 있는 사용자 지정 속성(예: `internal_test_user: true`)을 설정하는 것이 좋습니다. <br><br>
+2. **테스트 사용자를 Braze가 인식하는 테스트 사용자로 추가하기**<br>[Marking your test users as Braze-recognized test users]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) in the dashboard gives you access to verbose logging for each user, allowing you to inspect API requests, their payloads, and view deliverability logs. 이러한 로그를 통해 최종 사용자에게 캠페인을 전달하는 데 문제가 있었는지 확인할 수 있습니다. <br><br>
 3. **세그먼트 만들기**<br>테스트 사용자 세그먼트를 만들려면 `internal_test_user` 사용자 지정 속성을 `true` 으로 설정하여 사용자 세그먼트를 만듭니다. 이 세그먼트는 캠페인이 시작되면 제거할 수 있습니다. 
 
 ## 2단계: 테스트 전송
@@ -26,8 +26,8 @@ API 또는 사용자 지정 이벤트로 캠페인의 트리거를 테스트하�
 ## 3단계: Braze 로깅을 사용하여 인바운드 결과 검사하기
 
 Braze 로깅을 사용하여 트리거, 전송 및 이벤트 문제를 해결하세요. 
-- [이벤트 사용자 로그에는]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) API 트리거 요청의 원시 페이로드, 캠페인을 트리거하는 사용자 지정 이벤트, 관련 트리거 또는 이벤트 속성이 표시됩니다.
-- [메시지 활동 로그는]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) 모든 오류를 기록하고 특정 메시지가 전달되지 않은 이유를 파악하는 데 도움이 됩니다.
+- The [event user log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) will show you the raw payload of the API-trigger request, the custom event triggering the campaign, and any associated trigger or event properties.
+- The [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will log any errors and help you understand why a particular message may not have been delivered.
 
 ## 4단계: 테스트 세그먼트를 제거하고 캠페인을 롤아웃합니다.
 

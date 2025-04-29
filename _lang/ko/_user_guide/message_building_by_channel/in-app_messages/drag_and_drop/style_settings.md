@@ -7,17 +7,17 @@ page_order: 3
 
 # 인앱 메시지 스타일 설정
 
-> 드래그 앤 드롭 편집 경험은 두 섹션으로 나뉩니다: **구축** and **Preview & Test**. 이 문서에서는 편집기의 **구축** 탭에서 작업하는 데 필요한 내용을 다루며, 이미 [인앱 메시지를 생성한<4>} 것으로 가정합니다.
+> 드래그 앤 드롭 편집 경험은 두 섹션으로 나뉩니다: **빌드**와 **미리보기 및 테스트**. 이 문서에서는 편집기의 **빌드** 탭에서 작업하는 데 필요한 내용을 다루며, 이미 [인앱 메시지를 생성]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)한 것으로 가정합니다.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## 메시지 수준 스타일
 
-관련된 모든 블록에 적용할 특정 스타일을 인앱 메시지의 **메시지 스타일** 탭에서 설정할 수 있습니다. 예를 들어, 메시지의 모든 텍스트의 글꼴이나 모든 링크의 색상을 사용자 정의할 수 있습니다.
+관련된 모든 블록에 적용할 특정 스타일을 인앱 메시지의 **메시지 스타일** 탭에서 설정할 수 있습니다. 예를 들어, 메시지의 모든 텍스트의 글꼴이나 모든 링크의 색상을 커스텀할 수 있습니다.
 
-이 섹션의 스타일은 특정 블록에 대해 재정의하지 않는 한 메시지 전반에서 사용됩니다. 메시지에 [여러 페이지<1>}가 있는 경우 디스플레이 유형 및 최대 너비를 제외한 개별 페이지에 대한 메시지 수준 스타일을 재정의할 수도 있습니다.
+이 섹션의 스타일은 특정 블록에 대해 재정의하지 않는 한 메시지 전반에서 사용됩니다. 메시지에 [여러 페이지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page)가 있는 경우 디스플레이 유형 및 최대 너비를 제외한 개별 페이지에 대한 메시지 수준 스타일을 재정의할 수도 있습니다.
 
-더 쉬운 디자인 경험을 위해 메시지 수준 스타일을 설정한 후 블록 수준에서 스타일을 사용자 정의하는 것을 권장합니다.
+더 쉬운 디자인 경험을 위해 메시지 수준 스타일을 설정한 후 블록 수준에서 스타일을 커스텀하는 것을 권장합니다.
 
 언제든지 **메시지 스타일** 탭으로 돌아가려면:
 
@@ -26,14 +26,14 @@ page_order: 3
 
 ### 커스텀 글꼴
 
-다음 파일 형식을 글꼴로 허용합니다: `.ttf`, `.woff`, `.otf`, 및 `.woff2`. 자세한 내용은 [자산 파일]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files)을 참조하십시오.
+`.ttf`, `.woff`, `.otf`, 및 `.woff2` 파일 형식을 글꼴로 허용합니다. 자세한 내용은 [자산 파일]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files)을 참조하십시오.
 
 여러 가지 변형된 글꼴 패밀리를 추가할 수 있습니다. 일부 스타일링 옵션은 커스텀 글꼴에 사용할 수 없을 수 있습니다. 현재 URL을 통해 글꼴 추가를 지원하지 않습니다.
 
 커스텀 폰트를 추가하려면:
 
 1. **콘텐츠** 섹션으로 이동하여 **메시지 스타일** 탭을 엽니다.
-2. 클릭 **커스텀 폰트 추가**.
+2. **커스텀 폰트 추가**를 클릭합니다.
 3. 미디어 라이브러리를 사용하여 글꼴을 업로드하세요. 
 
 {% alert note %}
@@ -58,7 +58,7 @@ page_order: 3
 
 ![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
-모범 사례로서, 행 내부의 블록을 포맷하기 전에 행 및 열 속성을 포맷하십시오. 조정할 수 있는 많은 장소가 있으므로, 기초부터 시작하면 진행하면서 편집하기가 더 쉽습니다.
+모범 사례로서, 행 내부의 블록을 포맷하기 전에 행 및 열 속성을 포맷하세요. 조정할 수 있는 많은 장소가 있으므로, 기초부터 시작하면 진행하면서 편집하기가 더 쉽습니다.
 
 ### 블록
 
@@ -72,7 +72,7 @@ page_order: 3
 
 모든 블록에는 패딩에 대한 세밀한 제어와 같은 설정이 있습니다. 오른쪽 패널은 선택한 콘텐츠 요소에 대한 스타일링 패널로 자동 전환됩니다. 자세한 내용은 [편집기 블록 속성]({{site.baseurl}}/editor_blocks_dnd_iam/)을 참조하십시오.
 
-인앱 메시지를 구축할 때 툴바에서 모바일, 태블릿 또는 데스크탑 보기를 선택하여 사용자 그룹에 대한 인앱 메시지가 어떻게 보일지 미리 볼 수 있습니다. 이것은 귀하의 콘텐츠가 반응형이 되도록 보장하며, 진행 중에 필요한 모든 조정을 할 수 있습니다.
+인앱 메시지를 빌드할 때 툴바에서 모바일, 태블릿 또는 데스크탑 보기를 선택하여 사용자 그룹에 대한 인앱 메시지가 어떻게 보일지 미리 볼 수 있습니다. 이것은 콘텐츠가 응답형이 되도록 보장하며, 진행 중에 필요한 모든 조정을 할 수 있습니다.
 
 ## 창의적인 세부 사항
 
@@ -84,7 +84,7 @@ page_order: 3
 
 ### 배경 이미지 추가
 
-메시지의 배경에 이미지를 추가할 수 있습니다 **메시지 스타일** 탭에서. 
+**메시지 스타일** 탭에서 메시지의 배경에 이미지를 추가할 수 있습니다. 
 
 1. 캔버스 영역에서 배경 컨테이너를 선택합니다. 이것은 당신의 메시지의 스크롤 가능한 섹션입니다.
 2. **메시지 스타일** 탭에서 **배경 이미지**를 켭니다.
@@ -104,7 +104,7 @@ page_order: 3
 
 ### AI 카피라이터 사용
 
-인앱 메시지에서 텍스트 블록을 선택하면 블록 도구 모음에서 <i class="fa-solid fa-wand-magic-sparkles" title="AI 카피라이터"></i>를 클릭하여 [AI 기반 카피라이팅 도우미]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)를 실행하세요. AI 카피라이팅 어시스턴트는 간단한 제품 이름 또는 설명을 OpenAI의 GPT3 카피 생성 도구에 전달하여 인간과 같은 마케팅 카피를 생성하여 메시징에 사용합니다.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). AI 카피라이팅 어시스턴트는 간단한 제품명이나 설명을 OpenAI의 GPT3 카피 생성 도구에 전달하여 메시징에 사람과 유사한 마케팅 카피를 생성합니다.
 
 {% alert tip %}
 아이콘을 클릭하기 전에 블록 안의 텍스트를 강조 표시하여 몇 번의 클릭을 저장할 수 있습니다. 하이라이트된 텍스트가 도구에 추가되고 복사본이 즉시 생성됩니다.
@@ -134,8 +134,8 @@ page_order: 3
 
 키보드 단축키를 사용하여 스타일을 복사하고 붙여넣을 수도 있습니다:
 
-| 작업       | 맥                                            | Windows                                           |
+| 작업       | Mac                                            | Windows                                           |
 | ------------ | ---------------------------------------------- | ------------------------------------------------- |
 | 스타일 복사  | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
 | 스타일 붙여넣기 | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -64,17 +64,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Required | String | See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Optional | Object | See [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Personalization key-value pairs will apply to all users in this request. The Canvas entry properties object has a maximum size limit of 50 KB. |
+|`canvas_entry_properties`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Personalization key-value pairs will apply to all users in this request. The Canvas entry properties object has a maximum size limit of 50 KB. <br><br>**Note:** If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), this parameter is `context` and includes Canvas entry properties. |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 |`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will be sent to the entire segment targeted by the Canvas.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one. <br><br> When `send_to_existing_only` is `true`, Braze will only send the message to existing users—however, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.|
+|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to true, the message will be sent to the entire segment targeted by the Canvas.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
-
 {% alert important %}
-Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+For the `recipients` parameter, when `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. <br><br>If `send_to_existing_only` is `false`, an attribute object must be included. When `send_to_existing_only` is `false` **and** a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.
 {% endalert %}
+
+Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
 
 {% alert note %}
 If you include both specific users in your API call and a target segment in the dashboard, the message will be sent to specifically the user profiles that are both in the API call and qualify for the segment filters.
@@ -174,7 +174,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 
 ## Attributes object for Canvas
 
-Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). However, by default, subscription groups cannot be updated this way.
+Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/). However, by default, subscription groups cannot be updated this way.
 
 {% alert note %}
 Looking for the campaign version of this endpoint? Check out [Sending campaign messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).

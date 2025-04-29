@@ -23,12 +23,6 @@ It is your responsibility to make sure that your custom footer meets the aforeme
 To create or edit your custom footer, do the following:
 
 1. Go to **Settings** > **Email Preferences**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
-{% endalert %}
-
-{: start="2"}
 2. Go to the **Custom Footer** section and turn on custom footers.
 3. Edit your footer in the **Compose** section.
 4. Send a test message. 

@@ -37,14 +37,20 @@ guide_featured_list:
 - name: "Handling Unknown Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp Marketing Experiment"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg
+- name: "Message Usage Dashboard"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "WhatsApp Best Practices"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: "Custom Domains"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
+  image: /assets/img/braze_icons/link-03.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

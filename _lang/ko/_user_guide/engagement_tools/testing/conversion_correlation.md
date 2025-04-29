@@ -17,11 +17,11 @@ tool:
 
 ## 개요
 
-모든 캠페인에 대해 Braze는 속성 및 사용자 행동 목록을 확인하고 캠페인에 대해 선택한 각 [전환 이벤트에서]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) 사용자가 통계적으로 유의미한 증가 또는 감소와 관련이 있는지 계산합니다. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
+For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) you've chosen for the campaign. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
 
 전환 상관관계 분석을 실행하려면 드롭다운 메뉴에서 관심 있는 전환 이벤트를 선택합니다.
 
-!['전환 이벤트 선택'을 '기본 전환 이벤트 - A'로 설정하고 이벤트 설정을 '12시간 이내 구매(모든 제품)'로 설정한 예를 보여주는 전환 상관관계 패널입니다.][1]
+!["전환 이벤트 선택"을 "주요 전환 이벤트 - A"로 설정하고 이벤트 설정을 "12시간 이내 구매(모든 제품)"로 설정한 예를 보여주는 전환 상관관계 패널입니다.][1]
 
 ## 무엇을 확인하나요?
 
@@ -39,7 +39,7 @@ tool:
 마지막으로 여러 값을 가질 수 있는 여러 행동 변수를 확인합니다. 다음을 4개의 버킷 또는 사분위수로 나눈 다음, 해당 사분위수에 속하는 것과 전환율의 증가 또는 감소 간의 연관성을 측정합니다:
 
 - 연령
-- 총 지출 금액
+- 총 소비 금액(달러)
 - 세션 수
 
 ## 이 분석은 언제 확인할 수 있나요?
@@ -48,7 +48,7 @@ tool:
 
 ## Braze가 중요도를 확인하는 방법
 
-[윌슨 신뢰 구간을](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval) 사용하여 통계적 유의성을 확인합니다. 전체 캠페인 잠재고객의 전환율을 95% 신뢰도로 결정합니다. 이를 기본 요율이라고 합니다. 
+[윌슨 신뢰 구간](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval)을 사용하여 통계적 중요성을 확인합니다. 전체 캠페인 오디언스의 전환율을 95% 신뢰도로 결정합니다. 이를 기본 요율이라고 합니다. 
 
 그런 다음 각 변수에 대해 해당 특정 속성 또는 관심 행동을 가진 사용자가 95% 신뢰도로 전환한 비율도 계산합니다. 이를 기본 이자율로 나누면 비율을 측정할 수 있습니다. 이 값이 1보다 훨씬 크면 해당 속성이나 행동을 가진 사용자가 전환할 가능성이 높다는 뜻입니다. 그보다 훨씬 적으면 가능성이 적습니다. 비율 자체의 값을 표에 표시합니다. 이 값은 95% 신뢰 수준에서 유의미할 정도로 1에서 충분히 멀리 떨어져 있는 경우에만 표시됩니다.
 

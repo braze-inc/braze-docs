@@ -13,58 +13,58 @@ description: "이 도움말에서는 워크스페이스를 만들고, 설정하�
 
 ## 워크스페이스란 무엇인가요?
 
-Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 위크스페이스는 관련성 있는 모바일 앱이나 웹사이트에 대한 참여를 추적하고 관리할 수 있는 공유 작업 환경입니다. 작업 영역은 동일하거나 매우 유사한 앱(예: 모바일 앱의 Android 및 iOS 버전)을 함께 그룹화합니다. 
+Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 위크스페이스는 관련성 있는 모바일 앱이나 웹사이트에 대한 참여를 추적하고 관리할 수 있는 공유 작업 환경입니다. 워크스페이스는 동일하거나 매우 유사한 앱(예: 모바일 앱의 Android 및 iOS 버전)을 함께 그룹화합니다. 
 
 ## 작업 공간 만들기
 
 ### 1단계: 계획 세우기
 
-시작하기 전에 팀 및 Braze 온보딩 매니저와 협력하여 사용 사례에 가장 적합한 워크스페이스 구성을 결정하세요. Braze에서 작업 공간을 계획하는 방법에 대해 자세히 알아보려면 \[시작하기]를 확인하세요: 워크스페이스]\[링크] 가이드.
+시작하기 전에 팀 및 Braze 온보딩 매니저와 협력하여 사용 사례에 가장 적합한 워크스페이스 구성을 결정하세요. Braze에서 워크스페이스를 계획하는 방법에 대해 자세히 알아보려면 [시작하기: 워크스페이스][링크] 가이드를 확인하세요.
 
-### 2단계: 작업 공간 추가
+### 2단계: 워크스페이스 추가
 
 전역 헤더의 워크스페이스 드롭다운에서 새 워크스페이스를 만들거나 기존 워크스페이스 간에 전환할 수 있습니다.
 
-1. 작업 공간 드롭다운을 선택하고 <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **작업 공간 만들기를** 클릭합니다.
+1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
 
-![][1]
+![The workspace dropdown with the "Create workspace" button.][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. 작업 공간에 이름을 지정하세요.
 
 {% alert tip %}
-회사 내 다른 사람들이 내 워크스페이스를 쉽게 찾을 수 있도록 이름 지정 규칙을 채택하는 것이 좋습니다. 예를 들어, 다음과 같습니다. "미국 항해 시 - 제작" 및 "미국 항해 시 - 스테이징".
+회사 내 다른 사람들이 내 워크스페이스를 쉽게 찾을 수 있도록 이름 지정 규칙을 채택하는 것이 좋습니다. 예를 들어, 다음과 같습니다. "Upon Voyage US - 제작" 및 "Upon Voyage US - 스테이징".
 {% endalert %}
 
 {:start="3"}
-3\. **만들기를** 선택합니다. Braze가 작업 공간을 생성하는 데 몇 초 정도 걸릴 수 있습니다.
+3\. **만들기**를 선택합니다. Braze가 워크스페이스를 생성하는 데 몇 초 정도 걸릴 수 있습니다.
 
-![][2]
+!["Create Workspace" modal with the name "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
-**앱** 인스턴스 추가를 시작할 수 있는 **앱 설정** 페이지로 이동합니다. 이 페이지는 **설정** > **앱 설정에서** 언제든지 액세스할 수 있습니다.
+앱 인스턴스 추가를 시작할 수 있는 **앱 설정** 페이지로 이동합니다. 이 페이지는 **설정** > **앱 설정에서** 언제든지 액세스할 수 있습니다.
 
-![][3]
+!["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.][3]
 
 ### 3단계: 앱 인스턴스 추가
 
-작업 공간 내에서 수집되는 다양한 사이트와 앱을 "앱 인스턴스"라고 합니다.
+워크스페이스 내에서 수집되는 다양한 사이트와 앱을 "앱 인스턴스"라고 합니다.
 
-1. **앱 설정** 페이지에서 **\+ 앱 추가를** 클릭합니다.
+1. From the **App Settings** page, select **\+ Add app**.
 2. 앱 인스턴스의 이름을 지정하고 이 앱 인스턴스가 어떤 플랫폼에 있는지 선택하세요. 여러 플랫폼을 선택하면 Braze는 각 플랫폼에 대해 하나의 앱 인스턴스를 생성합니다.
 
-![][4]{: style="max-width:60%" }
+!["Add New App to Upon Voyage US - Staging" modal with options to select app details.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. **앱 추가를** 클릭하여 확인합니다.
+3\. Select **Add app** to confirm.
 
 #### 앱 API 키
 
 앱 인스턴스를 추가하면 해당 API 키에 액세스할 수 있습니다. API 키는 앱 인스턴스와 Braze API 간에 요청을 할 때 사용됩니다. API 키는 앱이나 웹사이트와 Braze SDK를 통합하는 데에도 중요합니다.
 
-![][5]
+![Settings page for the Upon Voyage iOS app with fields for the API Key and SDK Endpoint.][5]
 
 {% alert note %}
-각 플랫폼에서 앱의 각 버전에 대해 별도의 앱 인스턴스를 생성해야 합니다. 예를 들어 iOS와 Android 모두에 무료 및 프로 버전의 앱이 있는 경우 워크스페이스 내에 4개의 앱 인스턴스(무료 iOS 앱, 무료 Android 앱, 프로 iOS 앱, 프로 Android 앱)를 만듭니다. 이렇게 하면 각 앱 인스턴스에 대해 하나씩 사용할 수 있는 4개의 API 키가 제공됩니다.
+각 플랫폼에서 앱의 각 버전에 대해 별도의 앱 인스턴스를 생성해야 합니다. 예를 들어 iOS와 Android 모두에 무료 및 프로 버전의 앱이 있는 경우 워크스페이스 내에 4개의 앱 인스턴스(무료 iOS 앱, 무료 Android 앱, 프로 iOS 앱, 프로 Android 앱)를 생성합니다. 이렇게 하면 각 앱 인스턴스에 대해 하나씩 사용할 수 있는 4개의 API 키가 제공됩니다.
 {% endalert %}
 
 #### 라이브 SDK 버전
@@ -73,56 +73,57 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 이 필드는 앱이나 웹사이트에 Braze SDK를 통합한 후에 표시됩니다. 플랫폼에 최신 버전의 Braze SDK를 사용할 수 있는 경우 "최신 버전 사용 가능" 태그가 표시됩니다.
 
-![][6]
+!["Live SDK Version" section with a field value of "5.4.0" and an icon that says a new version is available.][6]
 
 ### 4단계: 필요에 따라 반복
 
-2단계와 3단계를 반복하여 계획에 필요한 만큼의 워크스페이스를 설정하세요. 모범 사례로, 통합 및 캠페인 테스트를 위한 테스트 작업 공간을 만드는 것이 좋습니다.
+2단계와 3단계를 반복하여 계획에 필요한 만큼의 워크스페이스를 설정하세요. 모범 사례로, 통합 및 캠페인 테스트를 위한 테스트 워크스페이스를 만드는 것이 좋습니다.
 
 {% alert tip %}
 **테스트 작업 공간 추가**<br>프로덕션 인스턴스에서 특정 사용자를 완전히 샌드박스화하여 앱 테스트를 수행할 수 있습니다. 새 워크스페이스를 생성하고 애플리케이션을 게시할 때 Braze가 사용하는 API 키를 테스트 워크스페이스가 아닌 프로덕션 워크스페이스의 키와 일치하도록 변경해야 합니다.
 {% endalert %}
 
-## 작업 공간 관리
+## 워크스페이스 관리
 
 ### 즐겨찾기 추가
 
-즐겨찾는 작업 공간을 추가하여 가장 자주 사용하는 작업 공간에 더욱 빠르게 액세스할 수 있습니다.
+즐겨찾는 워크스페이스를 추가하여 가장 자주 사용하는 워크스페이스에 더욱 빠르게 액세스할 수 있습니다.
 
-![][7]
+![Workspace dropdown with the tab for "Favorite workspaces".][7]{: style="max-width:50%;"}
 
 즐겨찾는 작업 공간을 추가하려면:
 
-1. 프로필 드롭다운을 선택한 다음 **계정 관리를** 선택합니다.
+1. 프로필 드롭다운을 선택한 다음 **계정 관리**를 선택합니다.
 2. **계정 프로필** 섹션에서 **즐겨찾는 작업 공간** 필드를 찾습니다.
-3. 목록에서 작업 공간을 선택합니다.
-4. **변경 사항 저장을** 선택합니다.
+3. 목록에서 워크스페이스를 선택합니다.
+4. **변경 사항 저장**을 선택합니다.
 
-즐겨찾기에 추가할 수 있는 작업 공간 수에는 제한이 없지만, 편의를 위해 이 목록을 짧게 작성하는 것이 좋습니다.
+즐겨찾기에 추가할 수 있는 워크스페이스 수에는 제한이 없지만, 편의를 위해 이 목록을 짧게 작성하는 것이 좋습니다.
 
-### 작업 공간 이름 바꾸기
+### 워크스페이스 이름 바꾸기
 
-작업 공간의 이름을 변경하려면
+워크스페이스의 이름을 변경하려면,
 
 1. **설정** > **앱 설정으로** 이동합니다.
 2. 워크스페이스 이름 위로 마우스를 가져가 <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i> 을 선택합니다.
 3. 워크스페이스에 새 이름을 지정한 다음 <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **저장을** 선택합니다.
 
-![][8]
+![The pencil icon appearing next to the workspace name.][8]{: style="max-width:50%;"}
 
-### 작업 공간 삭제하기
+### Deleting workspaces and app instances
 
-
-작업 공간을 삭제하려면
+To delete your workspace or app instance:
 
 1. **설정** > **앱 설정으로** 이동합니다.
-2. **작업 공간 삭제를** 선택합니다.
+2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
+
+You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/help/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
 {% alert warning %}
 작업 공간을 삭제할 때는 주의하세요! 워크스페이스가 삭제된 후에는 복원할 수 없습니다.
 {% endalert %}
 
-![][9]
+![The App Settings page with a button to delete a workspace and a trash can icon to delete an app.][9]
 
 ## 자주 묻는 질문
 
@@ -130,25 +131,25 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 사용자가 앱을 업데이트하기만 하면 되고 완전히 새로운 앱을 앱 스토어에 출시하지 않는 경우에는 이전 버전에서 더 이상 사용자에게 메시지를 보낼 계획이 없다면 새 작업 영역을 만들지 않아야 합니다.
 
-새 작업 공간을 만들면 이전 앱 버전의 모든 기록 데이터와 사용자 프로필이 이 새 작업 공간에 존재하지 않게 됩니다. 따라서 기존 사용자가 새 앱 버전으로 업그레이드하면 이전 앱의 행동 데이터 없이 새 프로필이 생성됩니다.
+새 워크스페이스를 만들면 이전 앱 버전의 모든 기록 데이터와 고객 프로필이 이 새 워크스페이스에 존재하지 않게 됩니다. 따라서 기존 사용자가 새 앱 버전으로 업그레이드하면 이전 앱의 행동 데이터 없이 새 프로필이 생성됩니다.
 
-또한 사용자는 이전 작업 공간과 새 작업 공간의 두 곳에 존재하게 됩니다. 또한 잠재적으로 동일한 푸시 토큰을 가질 수 있습니다. 이로 인해 이미 업그레이드한 사용자라도 이전 워크스페이스 사용자만을 대상으로 하는 마케팅 메시지를 받게 될 수 있습니다.
+또한 사용자는 이전 워크스페이스와 새 워크스페이스의 두 곳에 존재하게 됩니다. 또한 잠재적으로 동일한 푸시 토큰을 가질 수 있습니다. 이로 인해 이미 업그레이드한 사용자라도 이전 워크스페이스 사용자만을 대상으로 하는 마케팅 메시지를 받게 될 수 있습니다.
 
 #### 대신 어떻게 해야 하나요?
 
-기존 앱과 새 앱을 분리하려면 동일한 작업 공간 내에 새 앱 인스턴스를 만듭니다. 이렇게 하면 세분화 중에 해당 앱을 선택할 때 새 버전의 사용자를 효과적으로 타겟팅할 수 있습니다. 이전 버전을 사용하는 사용자에게 메시지를 보내려면 필터를 사용하여 [이전 앱 버전을 타겟팅할]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions) 수 있습니다.
+기존 앱과 새 앱을 분리하려면 동일한 워크스페이스 내에 새 앱 인스턴스를 만듭니다. 이렇게 하면 세분화 중에 해당 앱을 선택할 때 새 버전의 사용자를 효과적으로 타겟팅할 수 있습니다. 이전 버전을 사용하는 사용자에게 메시지를 보내려면 필터를 사용하여 [이전 앱 버전을 타겟팅할]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions) 수 있습니다.
 
-### 하나의 작업 영역에 여러 개의 앱 인스턴스가 있는데 어떻게 하면 메시지로 단일 앱만 타겟팅할 수 있나요? {#singular-app}
+### 하나의 워크스페이스에 여러 개의 앱 인스턴스가 있는데 어떻게 하면 메시지로 단일 앱만 타겟팅할 수 있나요? {#singular-app}
 
-메시지가 특정 앱만 타겟팅하도록 하려면 선택한 앱 인스턴스의 사용자만 타겟팅하는 세그먼트를 추가하세요. 이는 사용자가 동일한 작업 영역에서 서로 다른 앱 인스턴스에 대한 푸시 토큰을 두 개 가지고 있는 경우 특히 중요합니다. 이 시나리오에서 사용자는 현재 사용 중인 앱이 아닌 다른 앱에 대한 알림을 받을 수 있습니다. 이상적인 경험은 아닙니다!
+메시지가 특정 앱만 타겟팅하도록 하려면 선택한 앱 인스턴스의 사용자만 타겟팅하는 세그먼트를 추가하세요. 이는 사용자가 동일한 워크스페이스에서 서로 다른 앱 인스턴스에 대한 푸시 토큰을 두 개 가지고 있는 경우 특히 중요합니다. 이 시나리오에서 사용자는 현재 사용 중인 앱이 아닌 다른 앱에 대한 알림을 받을 수 있습니다. 이상적인 경험은 아닙니다!
 
-기본적으로 세그먼트는 작업 영역의 모든 앱과 웹사이트를 대상으로 합니다. 하나의 앱 또는 웹사이트만 타겟팅하는 세그먼트를 설정하려면 다음과 같이 하세요:
+기본적으로 세그먼트는 워크스페이스의 모든 앱과 웹사이트를 대상으로 합니다. 하나의 앱 또는 웹사이트만 타겟팅하는 세그먼트를 설정하려면 다음과 같이 하세요:
 
-1. 의미 있는 이름으로 세그먼트를 만듭니다. Braze에서는 "모든 사용자({이름} {플랫폼})" 형식을 사용합니다. 예: "모든 사용자(항해 시 iOS)".
-2. **타겟팅하는 앱 및 웹사이트의** 경우 **특정 앱의 사용자를** 선택합니다.
+1. 의미 있는 이름으로 세그먼트를 만듭니다. Braze에서는 "모든 사용자({이름} {플랫폼})" 형식을 사용합니다. 예: "모든 사용자(Upon Voyage iOS)".
+2. **타겟팅하는 앱 및 웹사이트**의 경우 **특정 앱의 사용자**를 선택합니다.
 3. **특정 앱** 드롭다운에서 앱 또는 사이트를 선택합니다.
 
-![][10]{: style="max-width:75%" }
+![Segment that is targetting users from specific apps.][10]
 
 그런 다음 이 세그먼트를 메시지에 추가하고 필요한 경우 추가 세그먼트 및 필터를 사용하여 오디언스를 더욱 세분화할 수 있습니다.
 
@@ -158,12 +159,12 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 
 #### 캔버스 플로우
 
-캔버스 플로우의 **배달 유효성 검사** 섹션에서 메시지 단계에 세그먼트를 추가합니다. 전달 검증은 메시지 발송 시 오디언스가 전달 기준을 충족했음을 재확인합니다. 각 메시지 단계마다 전달 유효성 검사를 지정하여 올바른 앱으로 전달되는지 확인하세요. 엔트리 레벨에서 세분화할 필요가 없습니다.
+캔버스 플로우의 **전달 유효성 검사** 섹션에서 메시지 단계에 세그먼트를 추가합니다. 전달 검증은 메시지 발송 시 오디언스가 전달 기준을 충족했음을 재확인합니다. 각 메시지 단계마다 전달 검증을 지정하여 올바른 앱으로 전달되는지 확인하세요. 엔트리 레벨에서 세분화할 필요가 없습니다.
 
 {% details 원래 캔버스 워크플로우의 단계를 보려면 확장하세요. %}
 
 {% alert important %}
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 콘텐츠는 원본 편집기에서 세그먼트와 타겟팅을 이해하는 데 참조할 수 있습니다.<br><br>기존 캔버스 환경을 사용하는 고객은 캔버스 플로우로 전환할 것을 권장합니다. 캔버스를 더 잘 만들고 관리할 수 있는 개선된 편집 환경입니다. [캔버스를 캔버스 플로우에 복제하는]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) 방법에 대해 자세히 알아보세요.
+2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 콘텐츠는 원본 편집기에서 세그먼트와 타겟팅을 이해하는 데 참조할 수 있습니다.<br><br>Braze는 원래 캔버스 경험을 사용하는 고객이 캔버스 플로우로 이동할 것을 권장합니다. 향상된 편집 경험을 통해 캔버스를 더 잘 구축하고 관리할 수 있습니다. [캔버스를 캔버스 플로우에 복제하는 방법]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)에 대해 자세히 알아보세요.
 {% endalert %}
 
 원래 캔버스 워크플로에서 **대상** 섹션의 캔버스 컴포넌트 레벨에 세그먼트를 추가합니다. 엔트리 레벨에서 세분화할 필요가 없습니다.
@@ -180,4 +181,4 @@ Braze에서 하는 모든 작업은 작업 공간 내에서 이루어집니다. 
 [8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
 [9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
 [10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
-\[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/
+[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/

@@ -12,36 +12,52 @@ tool: Canvas
 > This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
+If you're participating in the [Context component early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each `context` variable includes a name, data type, and a value that can include Liquid.
 {% endalert %}
 
-Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
+Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-
-Behavior also varies between workflows built with Canvas Flow versus the original editor. For example, in the original Canvas editor, you can use `event_properties` in the first full step if it's an action-based step. In Canvas Flow, full steps aren't supported, so this does not apply.
-
-Refer to the following table for a summary of differences between `canvas_entry_properties` and `event_properties`.
+Refer to the following table for a summary of differences between Canvas entry properties and event properties.
 
 | | Canvas Entry Properties | Event Properties
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
 | **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas built using Canvas Flow. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
 | **Original Canvas behavior** | - Must have persistent entry properties turned on. <br> - Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered. | - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas. <br> - Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component][2], the behavior follows the Canvas Flow rules for `event_properties`. |
-| **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
+| **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/) instead.
+{% details Original Canvas editor details %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
 
-{% alert note %}
-For in-app message channels, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) enabled in the original editor as part of the previous early access. However, `event_properties` cannot be used for in-app message channels.
-{% endalert %}
+For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+{% enddetails %}
 
-When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvas Flow. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+### Things to know
+
+- Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
+- For in-app message channels, `canvas_entry_properties` can only be referenced in a Canvas. `event_properties` can't be used for in-app message channels.
+- You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
+- When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+
+### Timestamps for event properties
+
+If you're using `event_properties` in a Canvas, timestamps are normalized to UTC, with some exceptions detailed below. Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
+
+{% raw %}
+```liquid
+{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
+```
+{% endraw %}
+
+#### Exceptions
+
+- Timestamps are not normalized to UTC in the first step of a Canvas if that step is a Message step.
+- Timestamps are not normalized to UTC in any Message step using the in-app message channel, regardless of its order in the Canvas.
 
 ## Use case
 
-![][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![An Action Path step followed by a Delay step and Message step for users who have added an item to their wishlist, and a path for everyone else.][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 To further understand the differences for `canvas_entry_properties` and `event_properties`, let's consider this scenario where users will enter an action-based Canvas if they perform the custom event "add item to wishlist". 
 

@@ -24,7 +24,6 @@ Acknowledge the following before proceeding with integration:
 - **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
 - **24-hour conversation limits:** After a business sends an initial templated message or a user sends a message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations:** Each Braze workspace can hold one WhatsApp Business account, subscription group, and phone number. Additionally, each WhatsApp Business account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
 <br><br>
 
 | Requirement| Description|
@@ -40,17 +39,13 @@ Acknowledge the following before proceeding with integration:
 
 In Braze, go to **Partner Integrations** > **Technology Partners** and search for **WhatsApp**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 On the WhatsApp partner page, select **Begin Integration**.
 
-![][1]
+![WhatsApp partner page with a button to begin the integration.][1]{: style="max-width:70%;"}
 
 In the open window, select **Next** until the **Begin Integration** button appears. Select the button to begin the integration process.
 
-![Instructions for connecting Braze to WhatsApp.][7]
+![Instructions for connecting Braze to WhatsApp.][7]{: style="max-width:50%;"}
 
 ### Step 2: WhatsApp setup
 

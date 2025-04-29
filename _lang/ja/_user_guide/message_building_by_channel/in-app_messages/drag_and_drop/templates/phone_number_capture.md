@@ -2,7 +2,8 @@
 nav_title: SMSおよびWhatsAppサインアップフォーム
 article_title: SMSおよびWhatsAppサインアップフォーム
 alias: "/phone_number_capture/"
-description: "このリファレンスページでは、SMSおよびWhatsAppのサインアップフォームをアプリ内メッセージのドラッグアンドドロップエディタで作成する方法について説明します。"
+page_order: 1
+description: "このページでは、アプリ内メッセージのドラッグ＆ドロップエディターを使ってSMSやWhatsAppの登録フォームを作成する方法をご紹介します。"
 ---
 
 # SMSとWhatsAppのサインアップフォーム
@@ -11,39 +12,23 @@ description: "このリファレンスページでは、SMSおよびWhatsAppの�
 
 ![電話サインアップフォームテンプレートを使用して作成されたアプリ内メッセージの3つの例。][img7]
 
-## SDK の要件
-
-### 最小の SDK バージョン
-
-ドラッグアンドドロップエディタを使用して作成されたメッセージは、次の最小SDKバージョンのユーザーにのみ送信できます。詳細と注意点については、[前提条件][1]セクションの[ドラッグアンドドロップでアプリ内メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)を参照してください。
-
-{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
-
-### テキストリンクのSDKバージョン
-
-メッセージを閉じないテキストリンクを含めたい場合、ユーザーは次の最小SDKバージョンを使用している必要があります:
-
-{% sdk_min_versions swift:6.2.0 android:26.0.0 %}
-
-{% alert warning %}
-アプリ内メッセージにURLにリダイレクトするリンクを含め、エンドユーザーが指定された最小SDKバージョンに達していない場合、リンクをクリックするとメッセージが閉じられ、ユーザーはフォームを送信するためにメッセージに戻ることができなくなります。
-{% endalert %}
+{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
 
 ## 電話番号登録フォームの作成
 
-ドラッグアンドドロップのアプリ内メッセージを作成する際は、テンプレートに**SMSサインアップ**または**WhatsAppサインアップ**を選択してください。
+### ステップ 1: テンプレートを選ぶ
+
+ドラッグアンドドロップのアプリ内メッセージを作成する際は、テンプレートに**SMS サインアップ**または **WhatsApp サインアップ**を選択し、[**メッセージを作成**] を選択します。これらのテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
 ![アプリ内メッセージを作成する際に、SMSサインアップまたはWhatsAppサインアップをテンプレートとして選択するためのモーダル。][img2]{: style="max-width:70%"}
 
-これらのテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
+### ステップ 2: メッセージスタイルを設定する
 
-### ステップ 1: メッセージスタイルを設定する
-
-テンプレートをカスタマイズする前に、サイドメニューを使用してメッセージ全体のメッセージレベルのスタイルを設定できます。例えば、メッセージに含まれるすべてのテキストのフォントやすべてのリンクの色をカスタマイズしたい場合があります。メッセージをモーダルまたは全画面表示タイプにすることもできます。
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ![カスタムフォントのアップロードと選択のワークフロー。][img6]
 
-### ステップ 2: 電話番号入力コンポーネントをカスタマイズする
+### ステップ 3: 電話番号入力コンポーネントをカスタマイズする
 
 サインアップフォームの作成を開始するには、エディターで電話番号の入力コンポーネントを選択します。
 
@@ -61,7 +46,7 @@ description: "このリファレンスページでは、SMSおよびWhatsAppの�
 
 ユーザーが受け入れられない特殊文字を含む電話番号を入力した場合、カスタマイズできない一般的なエラー指標が表示され、フォームを送信できません。**プレビュー & テスト** タブおよびテストデバイスでエラーの動作を確認できます。この記事を参照して、[Brazeが電話番号をフォーマットする方法][2]を学んでください。
 
-### ステップ 3: 免責事項の言語を追加する（SMSサインアップフォーム用）
+### ステップ 4: 免責事項の言語を追加する（SMSサインアップフォーム用）
 
 SMSサインアップフォームでは、送信するSMSの種類を明確に伝えることが重要です。フォームに次の情報を含めることで、リストの増加がコンプライアンスに準拠していることを確認してください。
 
@@ -79,21 +64,19 @@ SMSサインアップフォームでは、送信するSMSの種類を明確に�
 
 詳細については、[SMSの法律と規制][4]を参照してください。
 
-### ステップ 4: メッセージにスタイルを設定する
+### ステップ 5: メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、メッセージの外観と感触をカスタマイズできます。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、メッセージの外観と感触をカスタマイズします。
 
-## レポート
+## 結果を分析する
 
-キャンペーンの開始後、リアルタイムで結果を分析して、キャンペーンにエンゲージしたユーザー数を確認できます。サブスクリプショングループにオプトインしたユーザーの数を確認するには、アプリ内メッセージを受信してフォームを送信したユーザーをフィルタリングして、サブスクリプショングループに登録したユーザーの[セグメントを作成][5]します。
+{% multi_lang_include drag_and_drop/templates.md section='レポート' %}
 
 ![アプリ内メッセージパフォーマンスパネルは、アプリ内メッセージ内の各リンクのクリック数を表示します。][img8]
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}

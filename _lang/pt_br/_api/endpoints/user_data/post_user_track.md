@@ -17,7 +17,7 @@ description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braz
 > Use esse endpoint para registrar eventos e compras personalizados e atualizar as atribuições do perfil do usuário.
 
 {% alert note %}
-O Braze processa os dados passados por meio da API em seu valor nominal, e os clientes devem passar apenas deltas (dados em mudança) para minimizar o consumo desnecessário de pontos de dados. Para saber mais, consulte [Pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+O processo de Braze trata os dados passados pela API como estão, e os clientes devem passar apenas deltas (dados em mudança) para minimizar o consumo desnecessário de pontos de dados. Para saber mais, consulte [Pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Você pode atualizar um perfil de usuário por número de telefone usando o endpoint `/users/track`. Esse endpoint só funciona se você incluir um número de telefone válido.
 
 {% alert important %}
-Se você incluir uma solicitação com `email` e `phone`, o Braze usará o e-mail como identificador.
+Se você incluir um pedido com `email` e `phone`, Braze usará o e-mail como identificador.
 {% endalert %}
 
 ```
@@ -286,21 +286,21 @@ Se o site `external_id` existir, o perfil atualizado mais recentemente com um ID
 Um novo perfil será criado e um usuário somente de e-mail será criado. Não será criado um alias. O campo de e-mail será definido como test@braze.com, conforme notado na solicitação de exemplo para atualizar um perfil de usuário por endereço de e-mail.
 
 ### Como usar o site `/users/track` para importar dados de usuários antigos?
-Você pode enviar dados por meio da API do Braze para um usuário que ainda não tenha usado seu app móvel para gerar um perfil de usuário. Se o usuário usar o aplicativo posteriormente, todas as informações após a identificação por meio do SDK serão mescladas com o perfil de usuário existente criado por meio da chamada à API. Qualquer comportamento de usuário registrado anonimamente pelo SDK antes da identificação será perdido ao ser mesclado com o perfil de usuário existente gerado pela API.
+Você pode enviar dados por meio da API do Braze para um usuário que ainda não tenha usado seu app móvel para gerar um perfil de usuário. Se o usuário usar o aplicativo posteriormente, todas as informações após sua identificação usando o SDK serão mescladas com o perfil de usuário existente que você criou usando a chamada da API. Qualquer comportamento de usuário registrado anonimamente pelo SDK antes da identificação será perdido ao ser mesclado com o perfil de usuário existente gerado pela API.
 
-A ferramenta de segmentação incluirá esses usuários independentemente de seu engajamento com o app. Se quiser excluir usuários enviados por meio da API User que ainda não se engajaram com o app, adicione o filtro `Session Count > 0`.
+A ferramenta de segmentação incluirá esses usuários independentemente de seu engajamento com o app. Se você quiser excluir usuários enviados usando a API de Usuário que ainda não interagiram com o app, adicione o filtro `Session Count > 0`.
 
 ### Como o site `/users/track` lida com eventos duplicados?
 
 Cada objeto de evento no vetor de eventos representa uma única ocorrência de um evento personalizado por um usuário em um momento designado. Isso significa que cada evento ingerido no Braze tem seu próprio ID de evento, de modo que os eventos "duplicados" são tratados como eventos separados e exclusivos.
 
-## Usuários ativos mensais CY 24-25
-Para os clientes que adquiriram o Monthly Active Users - CY 24-25, o Braze gerencia diferentes limites de frequência em seu endpoint `/users/track`:
-- Os limites de frequência são definidos de acordo com a atividade de ingestão de dados esperada em sua conta, que pode corresponder ao número de usuários ativos mensais adquiridos, ao setor, à sazonalidade ou a outros fatores.
-- Além do limite de solicitações por hora, o Braze também impõe um limite de explosão no número de solicitações permitidas por segundo.
-- Cada solicitação pode ter até 50 atualizações combinadas entre atributos, eventos ou objetos de compra.
+## Usuários Ativos Mensais CY 24-25
+Para os clientes que adquiriram Usuários Ativos Mensais - CY 24-25, a Braze gerencia diferentes limites de taxa em seu endpoint `/users/track`:
+- Os limites de taxa horária são definidos de acordo com a atividade esperada de ingestão de dados em sua conta, que pode corresponder ao número de usuários ativos mensais que você adquiriu, setor, sazonalidade ou outros fatores.
+- Além do limite de solicitações por hora, Braze também impõe um limite de explosão no número de solicitações permitidas por segundo.
+- Cada solicitação pode agrupar até 50 atualizações combinadas entre objetos de atributo, evento ou compra.
 
-Os limites atuais com base na ingestão esperada podem ser encontrados no dashboard em **Settings** > **APIs and Identifiers** > **API limits**. Podemos modificar os limites de frequência para proteger a estabilidade do sistema ou permitir o aumento da taxa de transferência de dados em sua conta. Entre em contato com o suporte da Braze ou com o seu gerente de sucesso do cliente em caso de dúvidas ou preocupações relacionadas ao limite de solicitação por hora ou por segundo e às necessidades da sua empresa.
+Os limites atuais com base na ingestão esperada podem ser encontrados no dashboard em **Configurações** > **APIs e Identificadores** > **Limites de API**. Podemos modificar os limites de taxa para proteger a estabilidade do sistema ou permitir um aumento na taxa de transferência de dados em sua conta. Por favor, entre em contato com o suporte da Braze ou com o gerente de sucesso do cliente para perguntas ou preocupações relacionadas ao limite de solicitações por hora ou por segundo e às necessidades do seu negócio.
 
 
 

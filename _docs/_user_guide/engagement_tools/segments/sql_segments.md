@@ -11,7 +11,7 @@ tool: Segments
 
 # SQL Segment Extensions
 
-> You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
+> You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 
 Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
 
@@ -19,8 +19,8 @@ Like standard Segment Extensions, you can query events from up to the past two y
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
-- **Creating extensions with SQL Editor (full refresh):** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
-- **Creating extensions with Incremental SQL Editor (incremental refresh):** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. <br><br>The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
+- **Creating extensions with SQL Editor (full refresh):** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership hourly, daily, weekly, or monthly, but can’t be refreshed using incremental refresh.
+- **Creating extensions with Incremental SQL Editor (incremental refresh):** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership hourly, daily, weekly, or monthly.
 
 {% alert tip %}
 You can do a manual full refresh on all SQL Segments created in either SQL editor.
@@ -34,16 +34,13 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 To create a full refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
-{% endalert %}
-
-{:start="2"}
-2. Click **Create New Extension** and select **Full refresh**.<br><br>
+2. Select **Create New Extension** and then select **Full refresh**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
-   ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4. Save your Segment Extension.
+   ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %})<br><br>
+4. If desired, select [Enable refresh](#enable-refresh).<br><br>
+   ![Cycle icon with "Enable refresh" text.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:30%" }<br><br>
+5. Save your Segment Extension.
 
 {% endtab %}
 {% tab Incremental refresh %}
@@ -53,17 +50,16 @@ The Incremental refresh SQL editor allows user query aggregations to happen on a
 1. Go to **Audience** > **Segment Extensions**.
 {% alert note %}
 
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New Extension** and select **Incremental refresh**.<br><br>
+2. Select **Create New Extension** and then select **Incremental refresh**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
-   ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
-4. If desired, select **Regenerate Extension Daily**.<br><br>
-   ![Checkbox to regenerate the extension daily.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
-   When selected, Braze will update segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in 7 days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
+   ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %})<br><br>
+4. If desired, select [Enable refresh](#enable-refresh).<br><br>
+   ![Cycle icon with "Enable refresh" text.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:30%" }<br><br>
 5. Save your Segment Extension.
 
 {% endtab %}
@@ -76,12 +72,12 @@ The AI SQL generator is currently available as a beta feature. Contact your cust
 
 The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment.
 
-![AI SQL generator with the prompt "Users that received a notification last month"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![AI SQL generator with the prompt "Users that received a notification last month"]({% image_buster /assets/img/ai_sql_generator.png %})
 
 To use the AI SQL generator, do the following:
 
-1. Click **Launch AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
-2. Type in your prompt and click **Generate** to translate your prompt into SQL.
+1. Select **AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
+2. Type in your prompt and select **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then save your segment.
 
 ### Example prompts
@@ -89,7 +85,7 @@ To use the AI SQL generator, do the following:
 - Users who made less than five purchases in the last year
 
 ### Tips
-- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
 - Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 
@@ -105,9 +101,13 @@ SQL queries that take longer than 20 minutes to run will time out.
 
 When the extension finishes processing, you can [create a segment][4] using your Segment Extension and target this new segment with your campaigns and Canvases.
 
+### Designating refresh settings {#enable-refresh}
+
+{% multi_lang_include segments.md section='Refresh settings' %}
+
 ## Writing SQL
 
-Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
+Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
 {% alert important %}
 Note that the tables available to query contain only event data. If you wish to query for user attributes, you should combine your SQL segment with custom attribute filters from the [classic segmenter]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
@@ -136,18 +136,14 @@ All incremental refresh queries consist of two parts: a query, and schema detail
 
 1. In the editor, write a query that selects `user_id`s from your desired table.
 2. Add schema details by selecting an **Operator**, **Number of times**, and **Time period** from the fields above the editor. The query will check if the sum of the aggregate column meets a certain condition specified by the {% raw %}`{{operator}}` and `{{number of times}}`{% endraw %} placeholders. This functions similarly to the workflow for creating classic Segment Extensions.<br><br>
-   - **Operator:** Indicate if the event has happened more than, less than, or equal to a number of occurrences.<br>
-   ![Operator field with "More than" selected.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
-   - **Number of times:** How many times you would like to evaluate the event in relation to the operator.<br>
-   ![Number of times with "5" entered.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   - **Operator:** Indicate if the event has happened more than, less than, or equal to a number of occurrences.
+   - **Number of times:** How many times you would like to evaluate the event in relation to the operator.
    - **Time period:** Number of days from 1 to 730 in which you want to check instances of the event. This time period refers to past days relative to the current day. The following example shows querying for users that performed the event more than 5 times in the past 365 days.<br>
-   ![Time period field with "365" entered.]({% image_buster /assets/img_archive/sql_segments_period.png %})
+   ![Fields to select schema details.]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
-In the following example, the resulting segment would contain users that performed the `favorited` event more than 3 times during the last 30 days, after a specified date.
+In the following example, the resulting segment would contain users that performed a custom event more than 3 times during the last 30 days, after a specified date.
 
-![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
-
-![SQL preview of an incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %})
 
 ### Additional rules
 
@@ -174,13 +170,13 @@ For incremental SQL Segment Extensions, the preview will not include the additio
 
 On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
 
-Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
+Select a SQL Segment Extension to archive the extension, manually [refresh the segment membership](#refreshing-segment-membership), or select **Messaging Use** to view where the extension is being used.
 
-![Messaging Use section of the SQL editor showing where the SQL segment is being used.][3]
+![Messaging Use modal showing where the SQL segment is being used.][3]{: style="max-width:70%;"}
 
 ### Refreshing segment membership
 
-To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Only incremental refresh SQL Segment Extensions can automatically regenerate (if selected).
+To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. You can schedule automatic refreshes for any Segment Extension by selecting **Enable refresh** and configuring the refresh frequency (hourly, daily, weekly, or monthly).
 
 {% alert tip %}
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
@@ -198,7 +194,7 @@ Credit usage is correlated to the run time of your SQL query. The longer the run
 
 To save on credits, preview your query to ensure it is correct before saving the SQL Segment Extension.
 
-Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credit usage throughout the month within the credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
+Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credit usage throughout the month within the credits usage panel. From the **Segment Extensions** page, select <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
 ![SQL Credit Usage panel in the SQL Segment Extensions page][5]{: style="max-width:60%"}
 

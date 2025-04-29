@@ -125,7 +125,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `ids-not-unique` | Vérifiez que chaque ID de produit est unique. |
 | `ids-too-large` | La limite de caractères pour chaque ID de produit est de 250 caractères. |
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
-| `items-missing-ids` | Confirmez que chaque produit a un ID. |
+| `items-missing-ids` | Certains articles n'ont pas d'ID. Confirmez que chaque produit a un ID. |
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-ids` | Les caractères pris en charge pour les ID de produits sont les lettres, les nombres, les tirets et les traits de soulignement. |
 | `invalid-fields` | Confirmez que tous les champs que vous envoyez dans la requête API existent déjà dans le catalogue. Cela n'a rien à voir avec le champ ID mentionné dans l'erreur. |

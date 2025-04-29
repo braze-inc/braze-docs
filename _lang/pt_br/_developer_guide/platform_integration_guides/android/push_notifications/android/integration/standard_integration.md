@@ -29,7 +29,7 @@ Nesta seção, você aprenderá a se registrar para push usando a API do Firebas
 
 ### Etapa 1: Adicione o Firebase ao seu projeto
 
-Primeiro, adicione o Firebase ao seu projeto Android. Para obter instruções passo a passo, consulte [o guia de configuração](https://firebase.google.com/docs/android/setup) do [Firebase](https://firebase.google.com/docs/android/setup) do Google.
+Primeiro, adicione o Firebase ao seu projeto Android. Para obter instruções passo a passo, consulte o [guia de configuração do Firebase](https://firebase.google.com/docs/android/setup) do Google.
 
 ### Etapa 2: Adicione o Cloud Messaging às suas dependências
 
@@ -396,19 +396,19 @@ Se quiser personalizar o tratamento de deep linkings, você precisará criar um 
 
 #### Criação de deep links personalizados
 
-Siga as instruções encontradas na [documentação para desenvolvedores do Android - do Google](http://developer.android.com/training/app-indexing/deep-linking.html "Documentação") sobre deep linking - sobre deep linking, caso ainda não tenha adicionado deep links ao seu app. Para saber mais sobre o que são deep linkings, consulte nosso [artigo de perguntas frequentes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+Siga as instruções encontradas na [documentação para desenvolvedores do Android - do Google](http://developer.android.com/training/app-indexing/deep-linking.html "Documentação") sobre deep linking, caso ainda não tenha adicionado deep links ao seu app. Para saber mais sobre o que são deep linkings, consulte nosso [artigo de perguntas frequentes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 #### Adicionar deep links
 
 O dashboard do Braze oferece suporte à configuração de deep links ou URLs da Web em campanhas de notificações por push e canvas que serão abertos quando a notificação for clicada.
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![A configuração "Comportamento ao clicar" no painel do Braze com "Deep Link Into Application" selecionado no menu suspenso.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Personalização do comportamento da pilha traseira
 
 O SDK do Android, por padrão, colocará a atividade principal do iniciador do seu app host na pilha traseira ao seguir push deep links. A Braze permite definir uma atividade personalizada para ser aberta na pilha traseira no lugar da atividade principal do iniciador ou desativar a pilha traseira completamente.
 
-Por exemplo, para definir uma atividade chamada `YourMainActivity` como a atividade de back stack usando [a configuração de tempo de execução]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
+Por exemplo, para definir uma atividade chamada `YourMainActivity` como a atividade de back stack usando a [configuração de tempo de execução]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
 
 {% tabs %}
 {% tab JAVA %}
@@ -467,7 +467,7 @@ O nome e a descrição padrão do canal também podem ser configurados em `braze
 
 Nesse ponto, você poderá ver as notificações enviadas pelo Braze. Para testar isso, acesse a página **Campaigns (Campanhas** ) em seu dashboard do Braze e crie uma campanha **de notificação por push**. Escolha o **Android Push** e crie sua mensagem. Em seguida, clique no ícone do olho no criador para obter o remetente de teste. Digite o ID do usuário ou o endereço de e-mail do usuário atual e clique em **Send Test (Enviar teste**). Você deverá ver o push aparecer em seu dispositivo.
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![A guia "Teste" de uma campanha de notificação por push no dashboard do Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Para problemas relacionados ao push display, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
 
@@ -475,7 +475,7 @@ Para problemas relacionados ao push display, consulte nosso [guia de solução d
 
 Nesse ponto, você também deve ter registro de análise de dados para aberturas de notificações por push. Ao clicar na notificação quando ela chegar, as **aberturas diretas** na página de resultados de sua campanha deverão aumentar em 1. Confira nosso artigo sobre [relatórios push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) para obter informações detalhadas sobre a análise de dados push.
 
-Para problemas relacionados à análise [de dados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/) por push, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+Para problemas relacionados à análise de dados por push, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
 
 #### Testes a partir da linha de comando
 

@@ -360,7 +360,7 @@ glossaries:
     description: ユーザー設定センターを作成し、ユーザーがメールキャンペーンの通知設定を管理できるようにします。
     tags:
       - Preference Center
-  - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}.</a>"
+  - name: "<a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}.</a>"
     description: ユーザー設定センターを更新します。
     tags:
       - Preference Center
@@ -372,11 +372,11 @@ glossaries:
     description: カタログ項目とその詳細をリストアップする。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: カタログ内の複数の項目を編集します。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: カタログ内に複数の項目を作成します。
     tags:
       - Catalogs
@@ -392,28 +392,28 @@ glossaries:
     description: ワークスペース内のカタログを一覧表示する。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: カタログに項目を作成する。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: カタログの項目を編集する。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: 複数のカタログ項目とその内容を返す。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: カタログの項目を削除する。
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: カタログの項目を更新する。
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+    description: カタログの項目を置き換える。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: カタログの複数の項目を更新する。
+    description: カタログの複数の項目を置き換える。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,14 +437,14 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: Eメールを指定して既存のダッシュボード・ユーザー・アカウントを検索する。
+    description: リソースIDを指定して、既存のダッシュボードユーザーアカウントを検索する。
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
     description: メール、姓名、権限 (会社、ワークスペース、チームレベルでの権限設定) を指定して、既存ダッシュボードのユーザーアカウントを更新します。
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>"
     description: 既存のダッシュボードユーザーを完全に削除する。
     tags:
       - SCIM

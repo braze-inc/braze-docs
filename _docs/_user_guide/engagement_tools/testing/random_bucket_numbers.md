@@ -33,7 +33,7 @@ If you want to segment users for testing within a single campaign or single Canv
 
 When [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), add the "Random Bucket #" filter. Then, specify a number or range of numbers to include in your segment.
 
-![][2]
+![A segment filter that is for random bucket numbers no more than "3000".][2]
 
 You may want to use these types of segments if you want to run a test of three different variants and also include a control group. Consider the following sample plan for creating segments of equal size for three variants and a control group:
 
@@ -44,7 +44,7 @@ You may want to use these types of segments if you want to run a test of three d
 
 Depending on how many segments you want and the distribution of users within each segment, your plan may look different.
 
-For each of your random bucket number segments, including the control group, turn on [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). When evaluating the success of variants relative to the control group, you can go to your [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) page and view how often each segment has completed certain custom events.
+For each of your random bucket number segments, including the control group, turn on [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). When evaluating the success of variants relative to the control group, you can go to your [custom events]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) page and view how often each segment has completed certain custom events.
 
 ### Random audience re-entry using random bucket numbers
 

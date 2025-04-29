@@ -61,7 +61,7 @@ En algunos casos, un usuario puede recibir varios mensajes al pasar por un Canva
 
 ### Crear un grupo interno
 
-En lugar de crear usuarios de prueba individuales, puede crear un [Grupo de Prueba de Contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), que es un Grupo Interno cuyo propósito es revisar el contenido de su mensaje. Incluye un grupo de usuarios que recibirán mensajes de prueba de campañas y Lienzos. A continuación, puede añadir este grupo de prueba en el campo **Añadir grupos de prueba de contenido** en **Destinatarios de prueba**.
+En lugar de crear usuarios de prueba individuales, puede crear un [Grupo de Prueba de Contenido]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que es un Grupo Interno cuyo propósito es revisar el contenido de su mensaje. Incluye un grupo de usuarios que recibirán mensajes de prueba de campañas y Lienzos. A continuación, puede añadir este grupo de prueba en el campo **Añadir grupos de prueba de contenido** en **Destinatarios de prueba**.
 
 ### Reducir el tiempo de retraso
 

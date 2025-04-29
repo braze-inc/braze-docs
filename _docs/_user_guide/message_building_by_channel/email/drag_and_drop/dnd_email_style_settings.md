@@ -16,10 +16,6 @@ tool:
 
 To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings** > **Drag-and-Drop Email Editor Settings**.
-{% endalert %}
-
 ![][1]
 
 {% alert note %}

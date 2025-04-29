@@ -2,16 +2,20 @@
 nav_title: Promotion Codes
 article_title: Promotion Codes
 page_order: 5
+toc_headers: h2
 alias: "/promotion_codes/"
 description: "This reference article covers how to create promotion code lists and add them to your campaigns and Canvases."
-
 ---
 
 # Promotion codes
 
-> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases.
+> This page covers how to create promotion code lists and add them to your campaigns and Canvases.
 
-With Braze Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
+## How it works
+
+Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. You can create messages that pull from your list of promotion codes. 
+
+Each promotion code has an expiration date of up to six months. You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
 
 {% alert important %}
 Promotion codes can't be sent in in-app messages.
@@ -19,69 +23,66 @@ Promotion codes can't be sent in in-app messages.
 
 ## Creating a promotion code list
 
-### Step 1: Navigate to the Promotion Code section
+### Step 1: Go to the Promotion Code section
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Button to create a promotion code.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-From the dashboard, go to **Data Settings** > **Promotion Codes**, then select **Create Promotion Code List**.
+1. From the dashboard, go to **Data Settings** > **Promotion Codes**.
+2. Select **Create Promotion Code List**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Integrations**.
-{% endalert %}
+### Step 2: Name the promotion code
 
-### Step 2: Naming and creating your promotion code
+1. Name your promotion code list and add an optional description.
+2. Next, create a code snippet for the promotion code. 
 
-Name your promotion code list and add an optional description.
+Here are some details to consider when creating a code snippet:
 
-![][2]{: style="max-width:90%"}
+- Once saved, code snippets can’t be edited.
+- Snippets are case-sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
+- Use the snippet name in Liquid to reference this set of promotion codes.
+- Make sure the code snippet isn't already being used in another list.
 
-Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. Make sure that it is a code snippet that is not already being used in another list.
+![A promotion code list named "SpringSale2025" with the code snippet "spring25".][3]{: style="max-width:80%"}
 
-{% alert important %}
-Snippets are case-sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
-{% endalert %}
+### Step 3: Choose promotion code options
 
-![][3]{: style="max-width:90%"}
+Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months into the future from the day you're creating or editing your list. 
 
-{% alert warning %}
-You can't change the code snippet after saving!
-{% endalert %}
+Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list's code snippet will not be sent.
 
-### Step 3: Promotion code options
-
-Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months into the future from the day you're creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list's code snippet will not be sent.
-
-![][4]{: style="max-width:90%"}
+![List expiration settings that all remaining codes will expire on April 30, 2025 at 12 am.][4]{: style="max-width:80%"}
 
 You also have the option to set up optional and customized threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
 
-![][5]
+![An example of a threshold alert to notify "marketing@abc.com" when the promotion code list expires in 5 days.][5]{: style="max-width:80%"}
 
-### Step 4: Promotion code upload
+### Step 4: Upload promotion codes
 
-Braze does not manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
+Braze doesn't manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. 
+
+Make sure your CSV file follows these guidelines:
 
 - Includes a column for promotion codes.
 - Has one promotion code per row.
 
-You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) to create and export promotion codes.
+You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
 
-{% alert note %}
+{% alert important %}
 The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
 {% endalert %}
 
-![][6]
+1. After the upload is complete, select **Save List** to save all the details and codes you just entered.
 
-After the upload is complete, select **Save List** to save all the details and codes you just entered.
+![CSV file named "springsale" that was successfully uploaded.][7]
 
-![][7]
+{:start="2"}
+2. After selecting save, a new row will appear in the **Import History**. 
+3. To refresh the table to see if your import has finished, select <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
 
-After selecting save, a new row will appear in the **Import History**. To refresh the table to see if your import has finished, select <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
-
-![][8]
+![Promotion codes in the process of being uploaded.][8]
 
 {% alert note %}
-Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import is finished, you will see the status change to **Complete** in the table.
+Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import finishes, the status will change to **Complete** in the table.
 {% endalert %}
 
 #### Updating a promotion code list
@@ -92,19 +93,24 @@ All codes in the list will have the same expiration, regardless of the date of i
 
 ### Step 5: Use promotion codes
 
-To send promotion codes in messages, select **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
+To send promotion codes in messages:
 
-![][9]{: style="max-width:70%"}
+1. Select **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
 
-From there, you can paste this code into a message within the dashboard.
+![An option to copy the snippet to paste into your message.][9]{: style="max-width:70%"}
 
-![][10]{: style="max-width:70%"}
+{:start="2"}
+2. From there, you can paste this code into a message within the dashboard.
 
-Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. 
+![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.][10]{: style="max-width:70%"}
+
+Using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
+
+#### Sending promotion codes to users
 
 When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes.
 
-If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. For example, if a user receives two messages through two channels, they will receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
+If a user is eligible to receive a code through more than one channel, they will receive the same code through each channel. For example, if a user receives two messages through two channels, they'll receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
 
 {% alert important %}
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promotion codes, the message will not be sent.
@@ -116,13 +122,13 @@ Test sends and seed group email sends will use up promotion codes unless request
 
 ## Determining how many codes have been used
 
-You can find the remaining code count in the **Remaining** column of the promotion code list, located on the **Promotion Codes** page.
+You can find the remaining code count in the **Remaining** column of the promotion code list on the **Promotion Codes** page.
 
-![][12]{: style="max-width:90%"}
+![An example of a promotion code with unused codes.][12]
 
-This code count can also be found when revisiting a pre-existing promotion code list page. 
+This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
-![][13]{: style="max-width:50%"}
+![A promotion code named "Black Friday Sale" with 992 remaining codes.][13]{: style="max-width:70%"}
 
 ## Multichannel and single-channel sends
 
@@ -175,20 +181,23 @@ The same promotion code will be templated for all instances of the Liquid snippe
 
 ### What happens when a promotion code list is expired or empty?
 
-If the message should have contained a promotion code from an empty or expired list, the message will be canceled.
+Expired codes are deleted after six months.
+
+If the message should have contained a promotion code from an empty or expired list, the message will be canceled. 
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, message will send normally.
 
+### How do I save a promotion code to a user's profile so it can be used in follow up messages?
+
+To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done by attaching a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) to the same campaign or Canvas Message step.
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
 [4]:{% image_buster /assets/img/promocodes/promocode4.png %}
 [5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[6]:{% image_buster /assets/img/promocodes/promocode6.png %}
 [7]:{% image_buster /assets/img/promocodes/promocode7.png %}
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}

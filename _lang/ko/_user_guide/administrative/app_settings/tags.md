@@ -3,12 +3,12 @@ nav_title: 태그
 article_title: 태그
 page_order: 12
 page_type: reference
-description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 설명하며, 이를 사용하여 참여를 더욱 체계적으로 정리하고 분류할 수 있습니다."
+description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 설명하며, 이를 사용하여 인게이지먼트를 더욱 체계적으로 정리하고 분류할 수 있습니다."
 
 ---
 # 태그
 
-> Braze는 세그먼트, 캠페인 및 캔버스에 대한 작성자, 편집자, 날짜 및 상태 정보를 추적하고 참여를 더욱 체계적으로 정리하고 정렬할 수 있도록 태그를 생성할 수 있는 기능을 제공합니다.
+> Braze는 세그먼트, 캠페인 및 캔버스에 대한 작성자, 편집자, 날짜 및 상태 정보를 추적하고 인게이지먼트를 더욱 체계적으로 정리하고 정렬할 수 있도록 태그를 생성할 수 있는 기능을 제공합니다.
 
 ## 캠페인, 캔버스, 그리고 세그먼트 태그
 
@@ -41,14 +41,14 @@ description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 
 태그는 [커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) 및 [커스텀 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#managing-custom-events)을(를) 관리할 때 커스텀 데이터에 추가될 수도 있습니다. 
 
 {% alert important %}
-이 기능은 현재 초기 액세스 중입니다. 고객 성공 매니저에게 연락하여 이 얼리 액세스에 참여하고 싶다면 문의하십시오.
+이 기능은 현재 초기 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 매니저에게 문의하세요.
 {% endalert %}
 
 ## 모범 사례 {#tags-best-practices}
 
-태그는 참여 전술을 추적하는 데 유용한 조직 도구가 될 수 있습니다. 세그먼트와 캠페인을 비즈니스 목표, 퍼널 단계 등과 연결할 수 있습니다.
+태그는 인게이지먼트 전술을 추적하는 데 유용한 조직 도구가 될 수 있습니다. 세그먼트와 캠페인을 비즈니스 목표, 퍼널 단계 등과 연결할 수 있습니다.
 
-다음은 전자 상거래 앱에 유용할 수 있는 태그의 예입니다:
+The following is an example of tags an eCommerce app might find useful:
 
 <style>
 table td {
@@ -62,7 +62,7 @@ table td {
   <tr>
     <th>퍼널</th>
     <th>비즈니스 목표</th>
-    <th>지역의</th>
+    <th>지역</th>
     <th>캠페인</th>
     <th>휴일</th>
     <th>거래</th>
@@ -70,11 +70,11 @@ table td {
 </thead>
 <tbody>
   <tr>
-    <td>온보딩<br>재참여<br>충실한<br>파워유저<br>고객이탈<br>잃어버린</td>
-    <td>큰손<br>액티브유저<br>신규 사용자<br>페이스북어트리뷰션<br>첫번째 행동</td>
-    <td>유나이티드 스테이츠<br>북동<br>중서부<br>남쪽<br>서쪽<br>라탐<br>AP<br>서유럽<br>중동</td>
+    <td>온보딩<br>재참여<br>충실한<br>파워유저<br>고객이탈<br>유실</td>
+    <td>고지출자<br>액티브유저<br>신규 사용자<br>페이스북어트리뷰션<br>첫번째행동</td>
+    <td>미국<br>북동<br>중서부<br>남쪽<br>서쪽<br>남미<br>AP<br>서유럽<br>중동</td>
     <td>매출<br>쿠폰<br>이벤트</td>
-    <td>MLK<br>슈퍼볼<br>파이데이<br>성패트릭의날<br>3월의 광란<br>부활절<br>유월절<br>어머니의 날<br>메모리얼 데이<br>아버지의 날<br>포스 오브 줄라이<br>노동절<br>재향 군인의 날<br>콜럼버스데이<br>대통령의 날<br>할로윈<br>로쉬 하샤나<br>추수 감사절<br>크리스마스<br>하누카<br>새해</td>
+    <td>MLK<br>슈퍼볼<br>파이데이<br>성패트릭의날<br>3월의광란<br>부활절<br>유월절<br>어머니의 날<br>현충일<br>아버지의 날<br>독립기념일<br>노동절<br>재향 군인의 날<br>콜럼버스데이<br>대통령의 날<br>할로윈<br>로쉬하샤나<br>추수 감사절<br>크리스마스<br>하누카<br>새해</td>
     <td>트랜잭션<br>알림<br>연결된조치취함</td>
   </tr>
 </tbody>
@@ -96,15 +96,15 @@ table td {
 
 ## 사용 사례
 
-태그를 활용하여 메시징 라이프사이클을 관리하는 방법에 대한 영감을 찾고 계신가요? 다음은 몇 가지 일반적인 사용 사례입니다:
+태그를 활용하여 메시징 생애주기를 관리하는 방법에 대한 영감을 찾고 계신가요? 다음은 몇 가지 일반적인 사용 사례입니다:
 
 ### 제한
 
 고객이 특정 유형의 캠페인을 받는 빈도를 제한하십시오. 예를 들어, 다음 필터를 설정하여 프로모션 캠페인의 빈도를 제한할 수 있습니다:
 
-`Last received campaign` with 태그 `Promo` more than 5 days ago
+5일 이전 `Promo` 태그가 있는 `Last received campaign`
 <br>`OR`<br>
-`Has not received campaign` 와 태그 `Promo`
+`Promo` 태그가 있는 `Has not received campaign`
 
 ### 보고
 

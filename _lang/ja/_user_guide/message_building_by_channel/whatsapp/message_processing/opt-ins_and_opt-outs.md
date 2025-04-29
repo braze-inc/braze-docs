@@ -30,7 +30,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ## Braze WhatsAppチャンネルのオプトインを設定する
 
 WhatsApp のオプトインについては、[WhatsApp の要件](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/)を満たす必要があります。また、Braze に以下の情報を提供する必要があります。
-- 各ユーザーの`external_id` 、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、更新された購読状況。これは、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)を使用するか、[`/users/track` エンドポイント](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)経由で、電話番号と購読ステータスを更新することで実行できます。 
+- 各ユーザーの`external_id` 、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、更新された購読状況。これは、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)を使用するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)経由で、電話番号と購読ステータスを更新することで実行できます。
 
 {% alert note %}
 Braze が改良してリリースした `/users/track` エンドポイントでは購読ステータスの更新が可能になり、[購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)で確認できます。ただし、すでに [`/v2/subscription/status/set` エンドポイントを]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)使用してオプトインプロトコルを作成している場合は、引き続きそれを使用できます。
@@ -40,7 +40,7 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 
 お客様のアプリまたはウェブサイト（アカウント登録、チェックアウトページ、アカウント設定、クレジットカード端末）をBrazeに提供する。
 
-既にEメールやテキストでのマーケティング同意を得ている場合は、WhatsApp用のセクションを追加する。オプトインしたユーザーには、`external_id`、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、および更新後の購読ステータスが必要です。これを行うには、Braze のインストール方法に応じて、[`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を活用するか、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)を使用します。
+既にEメールやテキストでのマーケティング同意を得ている場合は、WhatsApp用のセクションを追加する。オプトインしたユーザーには、`external_id`、[電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)、および更新後の購読ステータスが必要です。これを行うには、Braze のインストール方法に応じて、[`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を活用するか、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)を使用します。
 
 #### 外部に作成されたオプトインリスト
 
@@ -54,8 +54,8 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 2. 顧客が「はい」を返信すると、オプトインが表明される[クイック返信アクション]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies)を指定します。
 3. カスタムキーワードトリガーを設定する。
 4. どちらのアイディアにせよ、おそらく次のようなパスが必要だろう：
-	- [`/users/track` エンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)呼び出して、ユーザーを更新するか、作成します。 
-	- [`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を利用するか、[SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) を使用します。 
+	- [`/users/track` エンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)呼び出して、ユーザーを更新するか、作成します。
+	- [`/subscription/status/set` エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)を利用するか、[SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) を使用します。
 
 #### WhatsAppのインバウンドメッセージ 
 
@@ -67,7 +67,7 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 2. ウェブフックキャンペーンを作成する。Webhook の例については、[購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status)を参照してください。
 
 {% alert tip %}
-WhatsAppチャンネルに参加するためのURLやQRコードは、[WhatsAppマネージャー](https://business.facebook.com/wa/manage/phone-numbers/)内の「**電話番号**」>「**メッセージリンク**」から作成できる。<br>![WhatsApp QR code composer.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+WhatsAppチャンネルに参加するためのURLやQRコードは、[WhatsAppマネージャー](https://business.facebook.com/wa/manage/phone-numbers/)内の「**電話番号**」>「**メッセージリンク**」から作成できる。<br>![WhatsApp QR コード作成画面。]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### ブレーズを利用したオプトイン・メソッド 
@@ -98,7 +98,7 @@ Braze SDK とのインターフェイスに、[HTML アプリ内メッセージ]
 
 #### ステップ 1:「インバウンドの WhatsApp メッセージ」のトリガーを持つキャンバスの作成
  
-![WhatsApp着信メッセージを送信するユーザーを入力するアクションベースのキャンバスエントリステップ。][6]{: style="max-width:85%;"}
+![WhatsApp インバウンドメッセージを送信するユーザーをエントリさせるアクションベースのキャンバスエントリステップ。][6]{: style="max-width:85%;"}
 
 キーワードトリガーを選択する際には、「Stop」や「No Message」といった単語を含める。この方法を選択した場合は、必ず顧客にオプトアウトの言葉を伝えてください。例えば、最初のオプトインを受信した後、「これらのメッセージからオプトアウトするには、いつでも『Stop』のメッセージを送信してください」などのフォローアップ応答を含めます。 
 
@@ -112,7 +112,7 @@ Braze SDK とのインターフェイスに、[HTML アプリ内メッセージ]
 
 WhatsApp のメッセージテンプレート作成画面で、[marketing opt-out] オプションを含めることができます。これを含むときはいつでも、テンプレートがサブスクリプショングループ変更のための後続ステップを持つキャンバスで使用されていることを確認すること。 
 
-1. マーケティングオプトアウト」クイック返信でメッセージテンプレートを作成する。<br>!["Marketing opt-out"のフッターオプションを持つメッセージテンプレート。][11]<br><br>![マーケティング監視ボタンを設定するセクション。][12]<br><br>
+1. マーケティングオプトアウト」クイック返信でメッセージテンプレートを作成する。<br>!["Marketing opt-out"のフッターオプションを持つメッセージテンプレート。][11]<br><br>![マーケティングオプトアウトボタンを設定するセクション。][12]<br><br>
 2. このメッセージテンプレートを使ってキャンバスを作成する。<br><br>
 3. 前述の例のステップに従うが、トリガーテキストは "STOP PROMOTIONS "とする。<br><br>
 4. [購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)で説明されている方法のいずれかを使用して、ユーザーの購読ステータスを更新します。
@@ -136,10 +136,10 @@ WhatsAppのキーワード応答ワークフローは、この2つの方法で�
 「STOP」メッセージの場合は、オプトアウトを確認するメッセージステップと、ユーザー更新ステップの順序を逆にします。そうしないと、ユーザーはまず購読グループからオプトアウトされ、確認メッセージを受け取る資格がなくなる。
 {% endalert %}
 
-![メッセージ本文が"START" であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}
+![メッセージ本文が「START」であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}
 
 {: start="2"}
-2\.キャンバスで、[**ユーザーの更新を設定**] ステップを作成し、[**アクション**] で [**高度な JSON エディター**] を選択します。<br><br>!["Advanced JSON Editor"のアクションで、User Updateステップを実行します。][14]<br><br>
+2\.キャンバスで、[**ユーザーの更新を設定**] ステップを作成し、[**アクション**] で [**高度な JSON エディター**] を選択します。<br><br>![アクションが「高度なJSONエディター」であるユーザー更新ステップ。][14]<br><br>
 3\.**ユーザー更新オブジェクト**に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。
 
 {% raw %}
@@ -174,9 +174,9 @@ Webhookキャンペーンは、ユーザーの電話番号をWhatsApp購読グ�
 STOPメッセージにこの方法を使う必要はない。確認メッセージは、ユーザーが購読グループから削除される前に送信されるため、他の 2つのステップのいずれかを使用できます。
 {% endalert %}
 
-1. アクションベースのステップ [**WhatsApp インバウンドメッセージを送信**] を含むキャンペーンまたはキャンバスを作成します。[**メッセージ本文の場所**] をオンにして、[**次に該当する**] に「START」と入力します。<br><br>![メッセージ本文が"START" であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}<br><br>
+1. アクションベースのステップ [**WhatsApp インバウンドメッセージを送信**] を含むキャンペーンまたはキャンバスを作成します。[**メッセージ本文の場所**] をオンにして、[**次に該当する**] に「START」と入力します。<br><br>![メッセージ本文が「START」であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}<br><br>
 2. キャンペーンまたはキャンバスで、Webhook メッセージステップを作成し、[**リクエスト本文**] を [**生のテキスト**] に変更します。<br><br>![Webhook のメッセージステップ。][16]<br><br>
-3. [**Webhook URL**] に顧客の[エンドポイント URL ]({{site.baseurl}}/api/basics/)を入力し、その後にエンドポイントのリンク `campaigns/trigger/send` を付加します。たとえば `https://dashboard-02.braze.eu/campaigns/trigger/send` です。<br><br>!["Compose Webhook"セクションの下のWebhook URL フィールド。][19]{: style="max-width:70%;"}<br><br>
+3. [**Webhook URL**] に顧客の[エンドポイント URL ]({{site.baseurl}}/api/basics/)を入力し、その後にエンドポイントのリンク `campaigns/trigger/send` を付加します。たとえば `https://dashboard-02.braze.eu/campaigns/trigger/send` です。<br><br>![「Webhook を作成」セクションの下のWebhook URL フィールド。][19]{: style="max-width:70%;"}<br><br>
 4. [生のテキスト] に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。2 つ目のキャンペーンの作成後に、`campaign_id` を置き換える必要があります。
 
 {% raw %}
@@ -212,11 +212,11 @@ STOPメッセージにこの方法を使う必要はない。確認メッセー�
 
 このテーブルでは、`STOP` がトリガーワードの例として使用され、修飾子の動作を示しています。
 
-| Modifier | トリガワード | アクション (Action) |
+| Modifier | トリガーワード | アクション (Action) |
 | --- | --- | --- |
-| `Is` | `STOP` | "stop" のすべての単語の使用を大文字小文字に関係なくキャッチします。たとえば、"stop"はキャッチしますが、"はストップ"はキャッチしません。 |
-| `Matches regex` | `STOP` | "STOP"の使用をキャッチします。たとえば、"stop"はキャッチしますが、"PLEASE STOP"はキャッチしません。 |
-| `Matches regex` | `(?i)STOP(?-i)` | "STOP"の使用をキャッチします。いずれの場合も。たとえば、"stop"、"please stop"、および"をキャッチします。メッセージ"の送信を停止することはありません。 |
+| `Is` | `STOP` | 大文字と小文字に関係なく、「stop」に完全一致する単語の使用をすべて検出します。たとえば、"stop"はキャッチしますが、"はストップ"はキャッチしません。 |
+| `Matches regex` | `STOP` | 指定されている大文字または小文字での「STOP」の使用をすべて検出します。たとえば、"stop"はキャッチしますが、"PLEASE STOP"はキャッチしません。 |
+| `Matches regex` | `(?i)STOP(?-i)` | 大文字と小文字に関係なく「STOP」の使用をすべて検出します。例えば 「stop」、「please stop」、「never stop sending me messages」を検出します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}

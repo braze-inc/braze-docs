@@ -6,22 +6,22 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「既存のダッシュボードユーザーアカウントの検索」Braze エンドポイントの詳細について説明します。"
+description: "この記事では、既存のダッシュボードユーザーアカウントリソースID Brazeエンドポイントを検索するについての詳細を概説する。"
 ---
 
 {% api %}
-# 現行のダッシュボード ユーザー口座を検索する
+# リソースIDで既存のダッシュボードユーザーアカウントを検索する
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使うには、SCIMトークンが必要だ。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
+このエンドポイントを使うには、SCIMトークンが必要だ。`X-Request-Origin` ヘッダーとしてサービス Origin を使用します。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
 
 ## レート制限
 
@@ -29,7 +29,7 @@ description: "この記事では、「既存のダッシュボードユーザー
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `id` | 必須 | 文字列 | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -63,6 +63,25 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Another Test Role",
+                "roleId": "23125dad23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25adfabcded",
+                        "appGroupName": "Production Workspace",
+                        "appGroupPermissionSets": [
+                            {
+                                "appGroupPermissionSetName": "A Permission Set",
+                                "appGroupPermissionSetId": "dfa385109bc38",
+                                "permissions": ["basic_access","publish_cards"]
+                            }
+                        ]
+                    } 
+                ]
+            }
+        ],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",

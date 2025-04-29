@@ -63,11 +63,11 @@ Send this message in English!
 
 ## アボートメッセージのクエリ
 
-Braze に接続されている場合は、[Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) または独自のデータウェアハウスを使用して、Liquid ロジックがメッセージをアボートさせたときにトリガーされる特定のアボートメッセージをクエリーできます。
+Braze に接続されている場合は、[Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) または独自のデータウェアハウスを使用して、Liquid ロジックがメッセージをアボートさせたときにトリガーされる特定のアボートメッセージをクエリーできます。
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:[31]:
-[32]:[32]:
+[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
+[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
 [37]:\#accounting-for-null-attribute-values

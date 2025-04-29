@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Contentsquare](https://contentsquare.com/) は、カスタマーエクスペリエンスを今までにない方法で理解できるようにするデジタルエクスペリエンス分析プラットフォームです。
 
+_この統合はContentsquareによって維持されている。_
+
+## 統合について
+
 BrazeとContentsquareの統合により、Brazeのカスタムイベントとしてライブシグナル（不正行為、フラストレーションシグナルなど）を送信することができる。Contentsquareのエクスペリエンスインサイトを活用し、顧客のデジタルエクスペリエンスとボディランゲージに基づいてメッセージをターゲティングすることで、キャンペーンの関連性とコンバージョン率を向上させる。
 
 ## 前提条件
@@ -19,7 +23,7 @@ BrazeとContentsquareの統合により、Brazeのカスタムイベントとし
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Contentsquare アカウント | このパートナーシップを活用するには、Contentsquare アカウントが必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。Braze ダッシュボードで新しいキーを作成するには、**Settings** > **API Keys** に移動します。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。Braze ダッシュボードで新しいキーを作成するには、[**設定**] > [**API キー**] に移動します。 |
 | Braze RESTエンドポイント | [REST エンドポイント URL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -46,10 +50,7 @@ Contentsquare を Braze に統合するには、Contentsquare 統合カタログ
 
 統合が完了すると、Contentsquareのカスタムイベントがキャンペーンやキャンバスで使用できるようになる。[**Data Settings**] > [**Custom Events**] から、どのイベントが Braze に送信されているかを確認できます。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは**Manage Settings**>**Custom Events** にある。
-{% endalert %}
-
 ![Braze の [カスタムイベント] タブのContentsquare ライブシグナルデータ][1]
+
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 

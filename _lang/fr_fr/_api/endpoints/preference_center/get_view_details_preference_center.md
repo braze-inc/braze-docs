@@ -31,6 +31,7 @@ Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par esp
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
+{: role="presentation" }
 
 ## Paramètres de demande
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Réponse 
-```json 
+## Réponse
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

@@ -28,7 +28,7 @@ alias: "/sms_geographic_permissions/"
 
 ![가장 일반적인 국가가 상단에 표시되는 "국가 허용 목록" 드롭다운입니다.][2]{: style="max-width:80%;"}
 
-이전에 선택한 국가를 제거하려면 해당 상자 옆의 상자를 지우십시오.
+이전에 선택한 국가를 제거하려면 해당 상자 옆의 상자를 지우세요.
 
 ### 변경 사항 저장 중
 
@@ -45,12 +45,12 @@ alias: "/sms_geographic_permissions/"
 이들 국가에서 발송을 허용하려면, 해당 국가가 허용 목록에 추가되기 전에 먼저 그러한 위험을 인지해야 합니다.
 
 {% alert note %}
-허용 목록의 국가를 비즈니스 요구 사항을 지원하는 데 필요한 국가로만 제한하십시오. 이것은 사기성 트래픽의 가능성을 최소화할 것입니다. SMS 트래픽 펌핑을 방지하기 위한 추가 지침은 [SMS 트래픽 펌핑 사기 FAQ]({{site.baseurl}}/sms_traffic_pumping_fraud/)를 참조하세요.
+허용 목록의 국가를 비즈니스 요구 사항을 지원하는 데 필요한 국가로만 제한하세요. 이것은 사기성 트래픽의 가능성을 최소화할 것입니다. SMS 트래픽 펌핑을 방지하기 위한 추가 지침은 [SMS 트래픽 펌핑 사기 FAQ]({{site.baseurl}}/sms_traffic_pumping_fraud/)를 참조하세요.
 {% endalert %}
 
 ## 차단된 전송의 가시성
 
-허용 목록에 없는 국가로의 전송 시도는 중단됩니다. 중단된 메시지는 [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) 및 [SMS 중단 메시지 참여 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)에 기록됩니다. 
+허용 목록에 없는 국가로의 전송 시도는 중단됩니다. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 차단된 전송으로 인해 중단된 메시지는 `Abort_Type = "blocked_recipient_country"`로 표시되며 중단 로그에는 차단된 국가가 자세히 나옵니다.
 

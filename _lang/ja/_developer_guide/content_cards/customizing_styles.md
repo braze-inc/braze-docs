@@ -299,7 +299,7 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 
 コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。ピン留めされたカードはユーザーのフィードの上部に表示され、ユーザーが閉じることはできません。カードスタイルをカスタマイズすると、固定されたアイコンの外観を変更できます。
 
-![Braze for Mobile and Web のコンテンツカードプレビューのサイドバイサイド。オプション&quot を使用します。このカードをフィード&クォートの最上部に固定します。selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![「このカードをフィードの一番上に固定する」オプションを選択した、モバイルおよび Web 用 Braze のコンテンツカードプレビューを並べて表示。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
 {% tab Android %}
@@ -414,7 +414,7 @@ pinnedIndicator.replaceChildren(customIcon);
 
 コンテンツカードの下部には、カードが閲覧されたかどうかを示す青い線が表示されます。 
 
-![2枚のコンテンツ・カードが並んで表示される。最初のカードの下部には青い線があり、それがまだ見られていないことを示している。2 番目のカードには、すでに表示されていることを示す青い線がありません。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
+![2枚のコンテンツ・カードが並んで表示される。最初のカードの下部には青い線があり、それがまだ見られていないことを示している。2番目のカードには、すでに表示されていることを示す青い線がありません。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
 {% tab Android %}

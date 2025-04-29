@@ -12,17 +12,13 @@ search_rank: 1
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Original Canvas editor %}
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Step 1: Create a new Canvas 
 
 Go to **Messaging** > **Canvas**, then select **Create Canvas**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
-{% endalert %}
 
 ## Step 2: Set up your Canvas
 
@@ -68,7 +64,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Summary %}
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the listed Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) turned on, you can approve the listed Canvas details before launching.
 
   {% endtab %}
 {% endtabs %}
@@ -78,14 +74,14 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
 {% alert tip %}
-Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![][53]
+![The Canvas details page, with fields for the Canvas name, description, location, and tags.][53]{: style="max-width:70%;"}
 
 #### Choose conversion events
 
-Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) will measure the efficiency of your Canvas. 
+Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]
 
@@ -101,16 +97,16 @@ You can choose one of three ways in which users can enter your Canvas.
   {% tab Scheduled Delivery %}
     With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, enter them into your journey at some point in the future, or on a recurring basis (daily, weekly, or monthly). 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
-    ![]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
     With action-based delivery, users will enter the Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
@@ -146,17 +142,21 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 #### Testing your audience
 
-After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
+![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Selecting entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas by a selected cadence (daily, lifetime of the Canvas, or every time the Canvas is scheduled). 
 
-![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+For example, if you select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas will only send to 5,000 users per day.
 
-Braze doesn't recommend using the **Limit everytime the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and whether you'd like to limit daily, lifetime of the Canvas, or every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze doesn't recommend using the **Every time the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+{% endalert %}
 
 #### Setting exit criteria
 
@@ -173,7 +173,7 @@ Note that:
 
 To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
 
-![Target Population breakdown with option to cacluate exact statistics.][2]
+![Target Population breakdown with option to calculate exact statistics.][2]
 
 ### Step 2d: Select your send settings
 
@@ -195,7 +195,7 @@ With this configuration, don't include any filters in the **Target Users** step 
 
 If desired, specify Quiet Hours (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-![][50]
+![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.][50]
 
 ## Step 3: Build your Canvas
 
@@ -205,20 +205,20 @@ Save time and streamline your Canvas creation by using [Braze Canvas templates](
 
 ### Adding a variant
 
-![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![The "Add Variant" button selected to show a context menu with the option to "Add Variant".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Select **Add Variant**, then add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
 You can add additional variants by selecting the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
-![][12]
+![Two example variants in a Braze Canvas.][12]
 
 {% alert tip %}
 By default, the Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
 
 {% details Expand for steps %}
 
-1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number and store it as a custom attribute. Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our `/users/track` endpoint.<br><br>
 3. Create the random number generator. You can do so with the code [ outlined here](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
 4. Format the `/users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
@@ -235,7 +235,7 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
+![The component search window adding a delay step to the Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
@@ -251,11 +251,11 @@ Looking to edit a step in your user journey? Check out how to do this depending 
 
 You can edit any step in your Canvas Flow workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
-![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
+![An example "Delay" step with the delay set to "Until a specific day."]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
 Or you can quickly edit and adjust the **Action Settings** of your [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
 
-![]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![The second step in the canvas, "Action Settings", with an evaluation window set to 1 day.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 The lightweight components in Canvas allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier. 
 
@@ -270,18 +270,16 @@ Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas co
 
 The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+![The "Set up Messages" step, with "Messaging Channels" selected which displays the list of available messaging channels, such as android push, content cards, email, and more.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 Select **Done** after you've finished configuring your Canvas component.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size of 50 KB. 
+The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object can be up to 50 KB. 
 
-For Canvas Flow, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
-
-Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.
@@ -313,30 +311,30 @@ You can adjust the distribution between your messages by double-clicking the **V
 
 In this example, we have our Canvas divided into two variants. Variant 1 has 70% of the users. The second variant is a control group with the remaining 30% of users.
 
-![]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
+![An example variant in a Braze Canvas, where 70% go to "Variant 1", which delays for 1 day in the first step, then sends a message in the second step. The other 30% go to a "Control" that does not have any follow-up steps.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
 ### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
-![][18b]
+![The "Intelligent Selection" option is enabled in the "Edit Variant Distribution" page. As it analyzes and optimizes the Canvas, it displays a horizontal bar across the page that's split into several sections, each varying in color and size. This is only a visual representation and does not correlate to any specific analytics.][18b]
 
-Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
+Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants, it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
 For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done creating your Canvas, select **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
+After you're done creating your Canvas, select **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
 
 You can also save your Canvas as a draft if you need to come back to it.
 
-![][19]
+![An example Canvas in Braze.][19]
 
 {% alert tip %}
-Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) for more information.
+Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
 

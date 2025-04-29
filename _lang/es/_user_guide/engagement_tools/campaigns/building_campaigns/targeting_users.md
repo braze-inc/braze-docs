@@ -45,7 +45,7 @@ En el caso de las campañas por correo electrónico, puede dirigirse a los Grupo
 
 ## Prueba tu audiencia
 
-Después de añadir segmentos y filtros a su público, puede probar si su público está configurado como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar si coincide con los criterios del público.
+Después de añadir segmentos y filtros a su público, puede probar si su público está configurado como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 

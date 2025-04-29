@@ -18,13 +18,13 @@ channel:
 
 ## 개요
 
-웹 푸시 알림은 긴급하고 실행 가능한 업데이트를 전달하여 빠른 전환을 유도합니다. 웹 푸시를 사용하면 가능합니다:
+웹 푸시 알림은 긴급하고 실행 가능한 업데이트를 전달하여 빠른 전환을 유도합니다. 웹 푸시를 사용하면 다음이 가능합니다.
 
 - 가격 하락과 같이 중요한 데이터가 변경되면 바로 메시지 트리거
-- 간단한 클릭 유도 문안 버튼으로 웹사이트 방문을 유도하세요.
+- 간단한 클릭 유도 실행 버튼으로 웹사이트 방문을 유도
 - 제품 및 고객 정보로 푸시를 개인화하여 메시지 관련성을 높입니다.
 
-웹 푸시는 휴대폰에서 앱 푸시 알림이 작동하는 방식과 동일하게 작동합니다. 웹 푸시 작성에 대한 자세한 내용은 [푸시 알림 만들기를][11] 참조하세요.
+웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. 웹 푸시 작성에 대한 자세한 내용은 [푸시 알림 만들기][11]를 참조하세요.
 
 ![노트북과 휴대폰에 동일한 푸시 메시지가 표시되는 웹 푸시 예시입니다.][12]{: style="border:none"}
 
@@ -35,21 +35,21 @@ channel:
 | 사용 사례 | 설명 |
 | --- | --- | 
 | 무료 평가판 | 웹사이트의 신규 방문자가 무료 평가판에 등록하도록 유도하세요. 사용자에게 특별한 경험을 할 수 있는 기회를 제공함으로써 유료 고객으로 전환할 가능성을 높일 수 있습니다. |
-| 앱 다운로드 | 웹 사용자를 모바일 앱으로 유도하여 제품에서 더 많은 가치를 얻을 수 있도록 하세요. 개인화를 활용하여 현재 참여 패턴에 따라 앱의 혜택을 강조하는 것도 고려해 보세요. |
+| 앱 다운로드 | 웹 사용자를 모바일 앱으로 유도하여 제품에서 더 많은 가치를 얻을 수 있도록 하세요. 개인화를 활용하여 현재 인게이지먼트 패턴에 따라 앱의 혜택을 강조하는 것도 고려해 보세요. |
 | 할인 및 세일 | 시간에 민감한 이벤트 및 프로모션에 대한 고객 인지도를 높입니다. 웹 푸시를 포함한 여러 채널에 메시지를 전달하여 브랜드 프로모션에 대한 인지도를 높일 수 있습니다. |
 | 장바구니 포기 | 거래를 완료하지 않은 사용자에게 자동 리마인더를 전송하여 결제 흐름으로 돌아오도록 유도합니다. <br><br>Braze에서 실시한 연구에 따르면 웹 푸시가 이메일보다 53%, 모바일 푸시보다 23% 더 효과적이어서 수신자가 다시 돌아와 구매를 완료하도록 유도하는 데 더 큰 영향을 미칩니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 웹 푸시 사용을 위한 전제 조건
 
-Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. 자세한 단계는 [웹 푸시 통합 가이드를]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/) 참조하세요.
+Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
 
 ### 푸시 권한
 
-모든 브랜드는 웹 푸시 알림을 웹사이트에 통합하여 사용할 수 있습니다. 웹 브라우저가 열려 있는 한 현재 웹 방문자와 이전 웹 방문자 모두에게 알림을 보낼 수 있지만, 기존 모바일 앱 푸시와 [마찬가지로]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)방문자가 [알림을 받으려면 옵트인해야]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)합니다.
+모든 브랜드는 웹 푸시 알림을 웹사이트에 통합하여 사용할 수 있습니다. 웹 브라우저가 열려 있는 한 현재 웹 방문자와 이전 웹 방문자 모두에게 알림을 보낼 수 있지만, 기존 모바일 앱 푸시와 마찬가지로 ]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)방문자가 알림을 받으려면 옵트인해야]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)합니다.
 
 {% alert tip %}
-[푸시 프라이머라고도]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) 하는 브라우저 내 메시지를 사용하여 사용자가 웹 푸시를 옵트인하도록 유도하는 것이 좋습니다.
+[푸시 프라이머]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)라고도 하는 인브라우저 메시지를 사용하여 사용자가 웹 푸시를 옵트인하도록 유도하는 것이 좋습니다.
 {% endalert %}
 
 ## 지원되는 브라우저
@@ -62,10 +62,10 @@ Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 �
 - Opera
 - Edge
 
-푸시 프로토콜 표준 및 브라우저 지원에 대한 자세한 내용은 사용 중인 브라우저에 따른 리소스를 검토할 수 있습니다:
+푸시 프로토콜 표준 및 브라우저 지원에 대한 자세한 내용은 사용 중인 브라우저에 따른 리소스를 검토할 수 있습니다.
 
 - [Safari(데스크톱)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari(모바일)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Safari (mobile)]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/safari_push/)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 

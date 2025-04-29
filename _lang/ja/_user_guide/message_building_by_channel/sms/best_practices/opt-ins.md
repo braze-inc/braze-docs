@@ -19,7 +19,7 @@ channel:
 
 ## オプション 2: ユーザーがアプリ内メッセージでオプトインします
 
-ユーザーがアプリ内メッセージからSMSにオプトインできるようにするには、Brazeが提供する[電話番号キャプチャフォーム]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/)を使用して、電話番号を収集し、SMSリストを拡大するためのブランド化されたフォームを作成します。
+ユーザーがアプリ内メッセージからSMSにオプトインできるようにするには、Brazeが提供する[電話番号キャプチャフォーム]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/)を使用して、電話番号を収集し、SMSリストを拡大するためのブランド化されたフォームを作成します。
 
 ![][3]{: style="max-width:30%;"}
 

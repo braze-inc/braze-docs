@@ -19,13 +19,9 @@ description: "This reference article covers important information for admins on 
 
 To access this page, go to **Settings** > **Admin Settings** > **Contact Information**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Contact Information**.
-{% endalert %}
-
 This page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!
 
-### Consequences of switching your time zone
+## Consequences of switching your time zone
 
 {% alert warning %}
 

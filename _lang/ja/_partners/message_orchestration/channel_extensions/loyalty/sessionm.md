@@ -1,15 +1,15 @@
 --- 
-nav_title: セッションM
-article_title: セッションM
+nav_title: SessionM
+article_title: SessionM
 description: "この参考記事では、カスタマーエンゲージメントとロイヤルティのプラットフォームであるBrazeとSessionMのパートナーシップについて概説している。"
 alias: /partners/sessionm/
 page_type: partner
 search_tag: Partner
 --- 
 
-# SessionMロイヤルティプラットフォーム
+# SessionM ロイヤルティプラットフォーム
 
-> [SessionMは](https://www.mastercardservices.com/en/capabilities/sessionm)カスタマーエンゲージメントとロイヤルティのプラットフォームで、キャンペーン管理機能とロイヤルティ管理ソリューションを提供し、マーケターがターゲットを絞ったアウトリーチを推進してエンゲージメントと収益性を向上させるのを支援する。
+> [SessionM](https://www.mastercardservices.com/en/capabilities/sessionm) は、キャンペーン管理機能とロイヤルティ管理ソリューションを提供するカスタマーエンゲージメントとロイヤリティプラットフォームで、マーケターがターゲットを絞ったアウトリーチを推進してエンゲージメントと収益性を向上させるのを支援します。
 
 ## 前提条件
 
@@ -17,18 +17,18 @@ search_tag: Partner
 | --- | --- | --- |
 | Braze | Braze REST API キー | `trigger_send` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze | Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
-| BrazeとSessionM | 一致する識別子 | 統合を使用するには、SessionMとBrazeの両方が、それぞれのプラットフォームで使用されている識別子の記録を持っていることを確認する。`user_id` への参照は、SessionMでのプロファイル生成時に生成されたSessionMのユーザー識別子に対応する。 |
-| セッションM | セッションMアカウント | このパートナーシップを利用するには、SessionMのアカウントが必要である。 |
-| セッションM | SessionM Core RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。これは、**デジタルプロパティから**SessionMダッシュボードで作成できる。 |
-| セッションM | SessionM Core REST API キー | インスタンスとBraze統合に関連付けられたSessionM APIキー。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは、**デジタルプロパティから**SessionMダッシュボードで作成できる。 |
-| セッションM | SessionM Core REST APIのシークレット | インスタンスとBraze統合に関連付けられたSessionM APIシークレット。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは、**デジタルプロパティから**SessionMダッシュボードで作成できる。 |
-| セッションM | SessionM Connect RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。SessionMテクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
-| セッションM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization文字列。この認証文字列は、get_user_offersを含む、すべてのconnectベースのコールで使用できる。SessionMテクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
-| セッションM | SessionM Connect RESTの小売（店）ID。 | インスタンスに関連付けられた特定の顧客に対する一意のguid識別。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
+| BrazeとSessionM | 一致する識別子 | 統合を使用するには、SessionMとBrazeの両方が、それぞれのプラットフォームで使用されている識別子の記録を持っていることを確認する。`user_id` への参照は、SessionM でのプロファイル作成時に生成された SessionM のユーザー識別子に対応します。 |
+| SessionM | SessionM アカウント | このパートナーシップを利用するには、SessionMのアカウントが必要である。 |
+| SessionM | SessionM Core RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。これは SessionM ダッシュボードの **Digital Properties** から作成できます。 |
+| SessionM | SessionM Core REST API キー | インスタンスとBraze統合に関連付けられたSessionM APIキー。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの **Digital Properties** から作成できます。 |
+| SessionM | SessionM Core REST APIのシークレット | インスタンスとBraze統合に関連付けられたSessionM APIシークレット。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの**デジタルプロパティ**から作成できます。 |
+| SessionM | SessionM Connect RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。SessionM テクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
+| SessionM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization 文字列。この認証文字列は、get_user_offersを含む、すべてのconnectベースのコールで使用できる。SessionM テクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
+| SessionM | SessionM Connect RESTの小売（店）ID。 | インスタンスに関連付けられている特定の顧客に対する一意の GUID 識別子。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
 {% endalert %} 
 
 ## ユースケース
@@ -36,26 +36,26 @@ search_tag: Partner
 以下のユースケースは、SessionMとBrazeの統合を活用するいくつかの方法を示している。
 
 - ロイヤルティ、顧客データ管理、メッセージングの各プラットフォームのデータを統合したセグメンテーションを作成する。
-- 強力なセグメンテーションを使用して、オファーやプロモーションで特定のユーザーをターゲットにする。
-- メッセージングの際には、最新のユーザー、オファー、ロイヤルティ情報を活用しよう。
-- プロモーションやロイヤルティ活動の進捗や完了について、顧客に詳細な通知を行う。
-- 新しいオファーが獲得されたら顧客に通知し、オファーの詳細を提供する。
+- 堅牢なセグメンテーションを使用して、オファーやプロモーションで特定のユーザーセットをターゲットにします。
+- メッセージを送信するときに、最新のユーザー、オファー、およびロイヤルティの情報を活用します。
+- プロモーションやロイヤルティ活動の進捗状況や完了について、顧客に詳細な通知を行います。
+- 新しいオファーが付与されたときに顧客に通知し、オファーの詳細を提供します。
 
 ## SessionMとBrazeの統合
 
-### ステップ 1: Brazeでセグメンテーションを作成する
+### ステップ1:Brazeでセグメンテーションを作成する
 
 Brazeで、SessionMのプロモーションやオファーでターゲットとするユーザーのセグメンテーションを作成する。 
 
-![カスタム属性」フィルターを選択したセグメンテーションビルダー]({% image_buster /assets/img/sessionm/CreateSegment.png %})
+![「カスタム属性」フィルターを選択したセグメントビルダー]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
-### ステップ 2: BrazeのセグメンテーションをSessionMにインポートする。
+### ステップ2:Braze のセグメントをSessionM にインポートする
 
 #### オプション 1: SessionM Tagエンドポイントにエクスポートする（推奨）。
 
-まず、BrazeでWebhookキャンペーンを作成し、Webhook URLを{% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %} に設定する。Liquidを使って、URL内部で`user_id` 。 
+まず、BrazeでWebhookキャンペーンを作成し、Webhook URLを{% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %} に設定する。Liquid を使って、URL 内で`user_id` を定義します。 
 
-生テキストの**リクエストボディを**使用して、SessionMのユーザープロファイルに追加される希望 のタグと、希望するライブ時間を含むように、Webhookボディを構成する。例は次のとおりです。
+生テキストの**リクエストボディ**を使用して、SessionM のユーザープロファイルに追加する希望のタグと、必要な存続時間を含む、Webhook 本文を作成します。例は次のとおりです。
 
  ```
  {
@@ -69,15 +69,15 @@ Brazeで、SessionMのプロモーションやオファーでターゲットと�
 ![]({% image_buster /assets/img/sessionm/SessionMWebhookComposer.png %}){: style="max-width:85%;"}
 
 **設定]**タブで、各リクエストヘッダーフィールドのキーと値のペアを追加する：
-    \- 対応する値を持つキー`Content-Type` を作成する。 `application/json`
-    \- 対応する値`Basic YOUR-ENCODED-STRING-KEY` を持つキー`Authorization` を作成する。エンドポイントのエンコードされた文字列キーについては、SessionM チームに問い合わせること。 
+    \- 対応する値`application/json`を持つキー`Content-Type`を作成する
+    \- 対応する値`Basic YOUR-ENCODED-STRING-KEY`を持つキー`Authorization`を作成します。エンドポイントのエンコードされた文字列キーについては、SessionM チームに問い合わせること。 
 
 ![Webhook 設定。]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
 
-配信スケジュールを立て、**ターゲットオーディエンスを** [前回作成した](#step-1-create-a-segment-in-braze)セグメンテーションに設定し、キャンペーンを開始する。
+配信をスケジュールし、[以前に作成した](#step-1-create-a-segment-in-braze)セグメントをターゲットとするように**ターゲットオーディエンス**を設定してから、キャンペーンを開始します。
 
 {% alert important %}
-このプロセスは、PostmanなどのAPIクライアントを介して、顧客、タグ名、コール内の各ユーザーの生存時間（コールごとに1ユーザー）を指定して、[SessionMタグエンドポイントに](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag)直接リクエストを行うことでも実行できる。
+このプロセスは、Postman などのAPI クライアントを使用して、[SessionM のタグエンドポイント](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag)にリクエストを直接送信することでも実行できます。この場合、リクエストには顧客、タグ名、各ユーザーの存続時間 (1回の呼び出しにつき1ユーザー) を指定します。
 <br><br>
 以下のリクエスト例はcURLを使用している。 
 
@@ -99,29 +99,29 @@ curl --location -g --request POST '{{endpoint_core}}/priv/v1/apps/{{apikey_core}
 
 #### オプション 2: CSV インポート
 
-Braze segmenterを使用してBrazeセグメントをエクスポートし、タグ付けする顧客、タグ名、ファイル内の各ユーザーの生存期間を含むCSVファイルをSessionMに提供する。
+Braze セグメンターを使用してBraze セグメントをエクスポートし、タグ付けする顧客、タグ名、ファイル内の各ユーザーの存続期間を含む CSV ファイルを SessionM に提供します。
 
-## Brazeでリアルタイムのオファーウォレットを検索する
+## Braze でリアルタイムのオファーウォレットを取得する
 
-SessionMとBrazeを統合することで、コネクテッドコンテンツを使用して、メッセージ送信時にSessionMのユーザーデータをリアルタイムで取り込むことができ、顧客に古い、有効期限が切れた、または既に償還されたロイヤルティオファーを伝えるリスクを排除することができる。 
+SessionM と Braze を統合することで、コネクテッドコンテンツを使用して、メッセージ送信時に SessionM のユーザーデータをリアルタイムで取り込むことができ、顧客に古い、有効期限が切れた、または既に償還されたロイヤルティオファーを送信するリスクを排除できます。 
 
-次の例では、コネクテッドコンテンツを使用して、オファーウォレットのデータをメッセージにテンプレート化している。しかし、コネクテッドコンテンツは、SessionMのコネクトエンドポイントのどれでも使用できる。 
+次の例では、コネクテッドコンテンツを使用してオファーウォレットデータをメッセージにテンプレート化しています。ただし、コネクテッドコンテンツは、SessionM の接続エンドポイントのいずれでも使用できます。 
 
-### ステップ1:セッションMでオファーを出す
+### ステップ1:SessionM でオファーを発行する
 
-セッションMは、設定可能ないくつかの異なる内部レバーから顧客にオファーを発行する。発行後、オファーはSessionMが「オファーウォレット」と呼ぶ状態に移される。
+SessionM は、設定可能ないくつかの異なる内部レバーから顧客にオファーを発行します。発行後、オファーはSessionMが「オファーウォレット」と呼ぶ状態に移されます。
 
-顧客は必要なアクションを完了するか、ターゲティングを満たす必要があり、SessionM内でオファーが発行される。
+お客様は、必要なアクションを実行するか、ターゲティングを満たす必要があり、SessionM 内でオファーが発行されます。
 
-次にSessionMは、発行された状態の顧客のウォレットにオファーを追加する。
+次に SessionM は、発行済みの状態で顧客のウォレットにオファーを追加します。
 
-### ステップ2:SessionMオファーウォレットAPIを呼び出す
+### ステップ2:SessionM オファーウォレット API を呼び出す
 
-SessionMオファーのあるキャンペーンまたはキャンバスステップで、[コネクテッドコンテンツを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)使用して、[SessionM`get_user_offers` エンドポイントに](https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers/)APIコールを行う。
+SessionM オファーのあるキャンペーンまたはキャンバスステップで、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)を使用して、[SessionM`get_user_offers` エンドポイント](https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers/)に API コールを行います。
 
-コネクテッドコンテンツリクエストで、ユーザーのSessionM`user_id` と、顧客がウォレットに持っているアクティブオファーの全リストを取得するためのあなたの`retailer_id` を指定する。このエンドポイントへの各リクエストは、1人のユーザーを含むことができる。コネクテッドコンテンツ呼の基本認証ヘッダー用のエンコードされた文字列キーについては、SessionMチームに問い合わせること。
+コネクテッドコンテンツリクエストで、ユーザーの SessionM `user_id` と `retailer_id` を指定して、顧客のウォレットにあるアクティブなオファーの完全なリストを取得します。このエンドポイントへの各リクエストは、1人のユーザーを含むことができる。コネクテッドコンテンツ呼の基本認証ヘッダー用のエンコードされた文字列キーについては、SessionMチームに問い合わせること。
 
-リクエストボディの中で、`culture` はデフォルトで`en-US` 。しかし、多言語のSessionMオファーのために、ユーザーの言語をテンプレート化するために、Liquidを使うことができる(例えば、{% raw %}`"culture":"{{${language}}}"`{% endraw %})。
+リクエスト本文では、`culture` のデフォルトは `en-US` ですが、Liquid を使用して、多言語 SessionM オファー用にユーザーの言語をテンプレート化することができます (たとえば、"{% raw %}`"culture":"{{${language}}}"`{% endraw %}"を使用します)。
 
 {% raw %}
 ```
@@ -144,7 +144,7 @@ SessionMオファーのあるキャンペーンまたはキャンバスステッ
 
 ### ステップ 3:Brazeメッセージングにオファーウォレットを入力する
 
-リクエストがエンドポイントに行われた後、SessionMは各オファーの完全な詳細とともに、発行された状態のオファーの完全なリストを返す。これは返されたレスポンシブの例である：
+リクエストがエンドポイントに行われた後、SessionM は各オファーの完全な詳細とともに、発行された状態のオファーの完全なリストを返します。これは返されたレスポンシブの例である：
 
 {% raw %}
 ```
@@ -187,7 +187,7 @@ SessionMオファーのあるキャンペーンまたはキャンバスステッ
 ```
 {% endraw %}
 
-Liquidドット記法を使えば、これをメッセージに入力することができる。例えば、`offer_id` の結果でメッセージをパーソナライズさせるために、{% raw %}`{{wallet.payload.available_points}`{% endraw %} を使って、`100` を返すペイロードを活用することができる。
+Liquid ドット記法を使えば、これをメッセージに入力できます。たとえば、結果として得られる `offer_id` でメッセージをパーソナライズするには、`100` を返す {% raw %}`{{wallet.payload.available_points}`{% endraw %} を使用してリターンペイロードを活用できます。
 
 {% alert note %}
 これは個別のAPIである。500ユーザー以上のバッチを送信する場合は、SessionMアカウントチームに連絡して、統合にバルクデータを組み込む方法について問い合わせること。
@@ -199,7 +199,7 @@ SessionMとBrazeの統合により、ユーザープロファイルのデータ�
 
 ### ステップ1:SessionMデリバリーチームがテンプレートを設定する
 
-SessionMデリバリーチームと協力して、トリガーメッセージで使用するテンプレートを開発する。SessionMは、ユーザープロファイルのデータ、オファーの詳細、ポイント残高をメッセージングに挿入し、Brazeでトリガーすることで、リアルタイムでの顧客メッセージングを実現する。
+SessionM デリバリーチームと協力して、トリガーされたメッセージングで使用するテンプレートを開発します。SessionMは、ユーザープロファイルのデータ、オファーの詳細、ポイント残高をメッセージングに挿入し、Brazeでトリガーすることで、リアルタイムでの顧客メッセージングを実現する。
 
 SessionMのすべてのテンプレートにある標準フィールドには、以下が含まれる：
 - `canvas_id`
@@ -214,22 +214,22 @@ SessionMのすべてのテンプレートにある標準フィールドには、
 
 特定のニーズに応じてフィールドを追加設定することもできる：
 
-- **データを提供する：** `offer_id` `offer title`, , , , , 、`user offer id` `description` `terms and conditions` `logo` `pos discount id` `expiration date`
-- **ポイント賞データ：** `point award amount`, `point account name`
+- **データを提供する：** `offer_id`、`offer title`、`user offer id`、`description`、`terms and conditions`、`logo`、`pos discount id`、`expiration date`
+- **ポイント付与データ：** `point award amount`、`point account name`
 - **イベントのトリガーデータ：**トリガー/送信Webhookの結果を利用するトリガーイベント内のすべてのデータ。
-- **キャンペーン専用データ：** `campaign runtime` `campaign_id` `campaign name` 、 `campaign custom data`
+- **キャンペーン専用データ：** `campaign runtime`、`campaign_id`、`campaign name`、`campaign custom data`
 
 追加フィールドは、メッセージをパーソナライズするための`trigger_properties` としてBrazeに送信される。 
 
 ### ステップ2:Brazeキャンペーンまたはキャンバスを作成する
 
-SessionMをトリガーとするAPIトリガーキャンペーンまたはキャンバスをBrazeで作成する。`offer_id` や`offer title` などの追加フィールドが設定されている場合、パーソナライズされたフィールドをメッセージングに追加するには、Liquid ({% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %} など) を使用する。
+SessionM によってトリガーされる API トリガーのキャンペーンまたはキャンバスを Braze で作成します。`offer_id` や `offer title` などの追加フィールドが設定されている場合は、Liquid (例えば{% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) を使用して、パーソナライズされたフィールドをメッセージングに追加します。
 
 ![API トリガーのプロパティ]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
-**スケジュール配信**タブで、キャンペーンまたはキャンバスIDをメモする。
+[**配信のスケジュール**] タブで、キャンペーンまたはキャンバス ID をメモします。これは SessionM キャンペーンの**高度な設定**に追加されます。
 
-![APIトリガーキャンペーン]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
+![API トリガーキャンペーン]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 
 キャンペーンまたはキャンバスの詳細を確定し、「**Launch**」を選択する。 
 
@@ -250,9 +250,9 @@ SessionMキャンペーンの詳細設定を更新して、`braze_campaign_id` �
 ```
 {% endraw %}
 
-![] （{% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %} ）。{: style="max-width:85%;"}
+![SessionM の高度な設定。]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
-スケジュールやビヘイビアに関するメッセージトリガーを作成する。次に、**外部メッセージ**メニューの**メッセージングバリアントとして** **Braze Messaging Variantを**選択し、テンプレートを使用する。
+スケジュールやビヘイビアに関するメッセージトリガーを作成する。次に、**外部メッセージ**メニューの**メッセージングバリアント**として **Braze メッセージングバリアント**を選択し、テンプレートを使用します。
 
 ![SessionM 外部メッセージ]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 

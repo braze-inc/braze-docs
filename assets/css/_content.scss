@@ -678,6 +678,9 @@ code {
   color: $grey-dust;
   background-color: $grey-athens;
   border: 1px solid $grey-ghost;
+	&.language-mermaid  {
+		background-color: inherit;
+	}
 }
 legend {
 	font-size: 15px;

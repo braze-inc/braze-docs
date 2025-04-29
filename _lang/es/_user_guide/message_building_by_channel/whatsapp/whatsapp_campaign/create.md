@@ -38,8 +38,8 @@ WhatsApp crea [plantillas de mensajes](#template-messages) diferentes para cada 
 1. Vaya a la página **Campañas** y haga clic en <i class="fas fa-plus"></i> **Crear campaña**.
 2. Seleccione **WhatsApp** o, para campañas dirigidas a varios canales, seleccione **Campaña multicanal**.
 3. Ponle a tu campaña un nombre claro y significativo.
-4. Añada [equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario.
-   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
+4. Añada [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+   * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -69,10 +69,6 @@ Si un Canvas basado en acciones es desencadenado por un mensaje entrante de What
 
 Selecciona si quieres crear un [mensaje de plantilla de](#template-messages) WhatsApp o un mensaje de respuesta, dependiendo de tu caso de uso. Cualquier conversación iniciada por la empresa debe partir de una plantilla aprobada, mientras que los mensajes de respuesta pueden utilizarse en respuestas a mensajes entrantes de usuarios dentro de un plazo de 24 horas.
 
-{% alert note %}
-Actualmente, las plantillas de WhatsApp no admiten botones de código de cupón.
-{% endalert %}
-
 ![La sección Variantes de mensajes le permite seleccionar un grupo de suscripción y uno de los dos tipos de mensajes: Plantilla de mensaje de WhatsApp y mensaje de respuesta.][5]{: style="max-width:80%;"}
 
 ### Mensajes de plantilla
@@ -87,6 +83,8 @@ Los campos de texto deshabilitados (resaltados en gris) no pueden editarse, ya q
 Cada plantilla tiene un idioma asignado, por lo que es necesario crear una campaña o paso de Canvas para cada idioma para configurar correctamente la correspondencia de usuarios. Por ejemplo, si está creando un lienzo que utiliza plantillas asignadas con el indonesio y el inglés, necesita crear un paso de lienzo para la plantilla indonesia y un paso de lienzo para la plantilla inglesa.
 
 ![Lista de plantillas con previsualización de sus mensajes, idiomas asignados y estado de aprobación.][8]{: style="max-width:80%;"}
+
+Si añades texto en un idioma escrito de derecha a izquierda, ten en cuenta que el aspecto final de los mensajes escritos de derecha a izquierda depende en gran medida de cómo los rendericen los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Variables
 
@@ -183,7 +181,10 @@ Función de mensajes    | Detalles
 ----------- |---------------- 
 Cabeceras | 
 Texto | Admite parámetros variables
-Imágenes (JPEG y PNG) | Debe ser de 8 bits, RGB o RGBA, y de hasta 5 MB para cualquier tipo 
+Imágenes (JPEG y PNG) | Debe ser de 8 bits, RGB o RGBA, y de hasta cinco MB para cualquier tipo 
+Vídeos | Actualmente, debe estar alojado en una URL y ocupar menos de dieciséis MB. También debe tener un tipo de video 3GPP o MP4. <br><br>Los mensajes de video están actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
+Audio | Sólo se admite para mensajería de respuesta. Debe ser audio AAC, AMR, MP3, MP4 u OGG, estar alojado en una URL y tener menos de dieciséis MB. <br><br>Los mensajes de audio están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
+Documentos | Debe estar alojado en una URL y tener menos de 100 MB. También debe tener un tipo de documento de texto (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`), o PDF (`.pdf`). <br><br>Los mensajes de documentación están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
 Cuerpo del texto | Admite parámetros variables
 Texto a pie de página | Admite parámetros variables 
 CTAs | Ver [Llamadas a la acción](#ctas).

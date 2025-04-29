@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 예약된 메시지 업데이트 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 예약 메시지 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,9 +14,9 @@ description: "이 문서에서는 예약된 메시지 업데이트 Braze 엔드�
 /messages/schedule/update
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 예약된 메시지를 업데이트하세요. 
+> 이 엔드포인트를 사용하여 예약된 메시지를 업데이트하세요.
 
-이 엔드포인트를 `schedule` 또는 `messages`매개변수 또는 둘 다에 대한 업데이트를 수락합니다. 요청에는 두 키 중 하나 이상이 포함되어 있어야 합니다.
+이 엔드포인트는 `schedule` 또는 `messages` 매개변수 또는 둘 다에 대한 업데이트를 허용합니다. 요청에는 두 키 중 하나 이상이 포함되어 있어야 합니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
@@ -53,7 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule_id` | 필수 | 문자열 | 업데이트할 `schedule_id` (일정 만들기 응답에서 얻은 값)입니다. |
 |`schedule` | 선택 사항 | 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 |`messages` | 선택 사항 | 객체 | [사용 가능한 메시징 개체를]({{site.baseurl}}/api/objects_filters/#messaging-objects) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

@@ -21,10 +21,6 @@ description: "この記事では、シングルサインオンに OneLogin を�
 | RelayState APIキー | IdP ログインを有効にするには、[**設定**] > [**API キー**] に移動し、`sso.saml.login` 権限を持つ API キーを作成します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
-{% endalert %}
-
 ## OneLogin 内での IdP 開始ログイン
 
 ### ステップ 1: Braze アプリを設定
@@ -41,10 +37,6 @@ description: "この記事では、シングルサインオンに OneLogin を�
 OneLogin で Braze を設定すると、ターゲット URL (`SAML 2.0 Endpoint (HTTP)`) と `x.509` 証明書が提供されます。これらを Braze アカウントに入力します。
 
 アカウントマネージャーがアカウントの SAML SSO を有効にしたら、[**設定**] > [**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを [**オン**] に切り替えます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
-{% endalert %}
 
 このページでは、次の項目を入力します。
 

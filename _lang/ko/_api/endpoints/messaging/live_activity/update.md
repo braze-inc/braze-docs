@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 실시간 활동 업데이트 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 실시간 활동 업데이트 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -26,7 +26,7 @@ description: "이 문서에서는 실시간 활동 업데이트 엔드포인트�
 이 엔드포인트를 사용하려면 다음을 완료해야 합니다:
 
 - `messages.live_activity.update` 권한을 사용하여 API 키를 생성합니다.
-- Braze Swift SDK를 사용하여[원격]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) 또는 [로컬]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity)로 라이브 활동을 등록하세요.
+- 브레이즈 스위프트 SDK를 사용하여 [원격]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) 또는 [로컬로]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) 라이브 활동을 등록하세요.
 
 ## 사용량 제한
 
@@ -86,11 +86,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `201` 및 `4XX` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `201` 와 `4XX` 두 가지입니다.
 
 ### 성공 응답의 예
 
-요청의 형식이 올바르고 요청을 받은 경우 `201` 상태 코드가 반환됩니다. `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
+요청 형식이 올바르게 지정되어 요청을 수신한 경우 `201` 상태 코드가 반환됩니다. `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {
@@ -100,9 +100,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ### 오류 응답의 예
 
-`4XX` 상태 코드 클래스는 클라이언트 오류를 ​​나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서]({{site.baseurl}}/api/errors/)를 참조하세요.
+`4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서를]({{site.baseurl}}/api/errors/) 참조하세요.
 
-`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다. 
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 
 
 ```json
 {

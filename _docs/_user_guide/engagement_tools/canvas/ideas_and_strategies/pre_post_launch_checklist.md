@@ -27,7 +27,7 @@ If you're entering users according to their local time zone using a scheduled en
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 {% endalert %}
 
-![][1]
+![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.][1]{: style="max-width:75%;"}
 
 ### Consider using regular expressions for audience filters
 
@@ -39,7 +39,13 @@ If you notice that your target audience is smaller than expected, try using "Mat
 
 ### Identify entry settings and race conditions
 
-A race condition can occur when you've used the same entry criteria in both your **Entry Schedule** and **Target Audience** settings. If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+A race condition can occur when you've used the same entry criteria in both your **Entry Schedule** and **Target Audience** settings. 
+
+If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+
+{% alert tip %}
+Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
+{% endalert %}
 
 ### Check Canvas entry properties and event properties
 
@@ -97,7 +103,7 @@ Next, it's important to identify these settings that can affect when and if mess
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Suspicious send volumes between paths
 

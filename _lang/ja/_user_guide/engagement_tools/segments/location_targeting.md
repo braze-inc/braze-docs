@@ -18,10 +18,6 @@ description: "この記事では、ロケーションターゲティングを設
 
 [**セグメント**] ページの[**オーディエンス**] に移動して、現在のすべてのユーザーセグメントを表示します。このページでは、新しいセグメントを作成して名前を付けることができます。開始するには、[**セグメントを作成**] をクリックし、セグメントに名前を付けます。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**セグメント**] は [**エンゲージメント**] の下にあります。
-{% endalert %}
-
 ![][1]{: style="max-width:70%;"}
 
 ## ステップ 2: 位置情報をカスタマイズする
@@ -42,13 +38,13 @@ description: "この記事では、ロケーションターゲティングを設
 
 ![選択された多角形領域としてのニューヨーク州の概要。][4]{: style="max-width:70%;"}
 
-## ビーコン・ジオフェンスのパートナーシップ支援
+## パートナーシップによるビーコンとジオフェンスのサポート
 
-既存のビーコンまたはジオフェンスのサポートをターゲティングおよびメッセージング機能と組み合わせることで、ユーザーの物理的な動作についてより多くの情報が得られ、それに応じてメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
+既存のビーコンやジオフェンスのサポートを Braze のターゲティング機能やメッセージング機能と組み合わせることで、ユーザーの物理的な行動に関する詳細な情報が判明し、それに応じてユーザーにメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
 
-- [レーダー]][6]
-- [ジンバル]][10]
-- [フルスクエア]][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [インフィリオン]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

@@ -8,19 +8,14 @@ tool:
  - Campaigns
 channel:
  - LINE
-hidden: true
-permalink: /line/create/
+alias: /line/create/
 ---
 
 # LINE 메시지 만들기
 
-> LINE 캠페인은 고객에게 직접 다가가 프로그래밍 방식으로 채팅할 수 있습니다. Liquid 및 기타 동적 콘텐츠를 사용하여 사용자와 개인적인 경험을 만들고 브랜드에 대한 사용자 경험을 방해하지 않는 환경을 조성하고 향상시킬 수 있습니다.<br><br>이 글은 LINE 베타 컬렉션의 일부입니다. [메인 페이지로 돌아갑니다](https://www.braze.com/docs/line/).
+> LINE 캠페인은 고객에게 직접 다가가 프로그래밍 방식으로 채팅할 수 있습니다. Liquid 및 기타 동적 콘텐츠를 사용하여 사용자와 개인적인 경험을 만들고 브랜드에 대한 사용자 경험을 방해하지 않는 환경을 조성하고 향상시킬 수 있습니다.
 
-{% alert important %}
-LINE 액세스는 베타 버전이며 일부 Braze 패키지에서만 사용할 수 있습니다. 시작하려면 계정 관리자 또는 고객 성공 관리자에게 문의하세요.
-{% endalert %}
-
-## 전제 조건
+## 필수 조건
 
 LINE 메시지를 작성하기 전에 다음을 수행합니다:
 
@@ -28,6 +23,7 @@ LINE 메시지를 작성하기 전에 다음을 수행합니다:
 2. 정책, 제한 및 콘텐츠 규칙에 동의합니다.
 3. [LINE 연결을 설정합니다]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
+Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감됩니다.
 
 ## 1단계: 메시지를 작성할 위치 선택
 
@@ -38,21 +34,20 @@ LINE 메시지를 작성하기 전에 다음을 수행합니다:
 
 **단계:**
 
-1. **메시징** > **캠페인으로** 이동하여 **캠페인 만들기를** 선택합니다.
+1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
 {% alert note %}
 [이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
 {% endalert %}
 
 {: start="2"}
-2\. **LINE을** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
+2\. **LINE**을 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가합니다.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 작성기를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
-5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 변형에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 참조하세요.
-6. [구독 그룹을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 선택하여 적절한 사용자에게 메시지를 보낼 수 있도록 하세요. 구독 그룹을 선택할 때 Braze는 자동으로 세그먼트 필터를 추가하여 구독한 사용자만 캠페인을 수신할 수 있도록 합니다. 해당 구독 그룹에 속하는 긴 코드와 짧은 코드만 대상 사용자에게 SMS를 보내는 데 사용됩니다.
+4\. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다.
+5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
 {% alert tip %}
-캠페인의 모든 메시지가 비슷하거나 콘텐츠가 동일한 경우, 변형을 추가하기 전에 메시지를 작성하세요. 그런 다음 **이형** 상품 **추가** 드롭다운에서 **이형 상품에서 복사를** 선택할 수 있습니다.
+캠페인의 모든 메시지가 비슷하거나 콘텐츠가 동일한 경우, 변형을 추가하기 전에 메시지를 작성하세요. 그런 다음 **배리언트 상품 추가** 드롭다운에서 **배리언트 상품에서 복사**를 선택할 수 있습니다.
 {% endalert %}
 
 {% endtab %}
@@ -62,9 +57,9 @@ LINE 메시지를 작성하기 전에 다음을 수행합니다:
 
 1. 캔버스 작성기를 사용하여 [캔버스를 만듭니다]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 2. 캔버스를 설정한 후 캔버스 빌더에서 단계를 추가합니다. 단계에 명확하고 의미 있는 이름을 붙이세요.
-3. [단계 일정을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) 선택하고 필요에 따라 지연을 지정합니다.
-4. 필요에 따라 이 단계의 대상 그룹을 필터링합니다. 세그먼트를 지정하고 필터를 추가하여 이 단계의 수신자를 더욱 세분화할 수 있습니다. 메시지가 전송된 후 지연 시간이 지나면 대상 옵션이 확인됩니다.
-5. [진급 행동을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) 선택하세요.
+3. [단계 스케줄]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)을 선택하고 필요에 따라 지연을 지정합니다.
+4. 필요에 따라 이 단계의 오디언스를 필터링합니다. 세그먼트를 지정하고 필터를 추가하여 이 단계의 수신자를 더욱 세분화할 수 있습니다. 메시지가 전송된 후 지연 시간이 지나면 오디언스 옵션이 확인됩니다.
+5. [진행 동작]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)을 선택하세요.
 6. 메시지와 페어링할 다른 메시징 채널을 선택합니다.
 
 {% endtab %}
@@ -72,13 +67,19 @@ LINE 메시지를 작성하기 전에 다음을 수행합니다:
 
 ## 2단계: LINE 메시지 작성하기
 
-필요에 따라 언어 및 개인화(예: 리퀴드 또는 연결된 콘텐츠)를 사용하여 메시지를 작성합니다. LINE은 각 메시지에 텍스트 또는 이미지 메시지로 최대 5개의 말풍선을 넣을 수 있습니다.
+필요에 따라 개인화(예: 리퀴드 또는 커넥티드 콘텐츠)를 사용하여 메시지를 작성합니다. LINE에서는 각 메시지에 텍스트, 이미지, 리치, 카드 기반 등 사용 가능한 메시지 레이아웃 중 하나를 선택해 최대 5개의 말풍선을 넣을 수 있습니다.
 
-![미리 보기에 메시지가 표시된 LINE 작곡가.][1]{: style="max-width:70%;"}
+![미리 보기에 메시지가 표시된 LINE 작성기입니다.][1]
 
-{% alert tip %}
-Liquid를 사용하려는 경우 개인화에 대한 기본값을 포함해야 합니다. 이렇게 하면 사용자 프로필이 불완전한 수신자가 빈 자리 표시자를 받는 것을 방지할 수 있습니다. 예를 들어 사용자가 "안녕하세요, !"라는 메시지를 받는 대신 "안녕하세요, 신규 구독자 여러분!"이라는 메시지를 받을 수 있습니다.
-{% endalert %}
+### Tips
+
+#### Using Liquid
+
+Liquid를 사용하려는 경우 개인화에 대한 기본값을 포함해야 합니다. 이렇게 하면 고객 프로필이 불완전한 수신자가 빈 입력 안내를 받는 것을 방지할 수 있습니다. 예를 들어 사용자가 "안녕하세요, !"라는 메시지를 받는 대신 "안녕하세요, 신규 구독자 여러분!"이라는 메시지를 받을 수 있습니다.
+
+#### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## 3단계: 메시지 미리보기 및 테스트
 
@@ -95,19 +96,19 @@ Liquid를 사용하려는 경우 개인화에 대한 기본값을 포함해야 �
 
 ### 배송 일정 또는 트리거 선택
 
-LINE 메시지는 예약된 시간, 동작 또는 API 트리거에 따라 전송할 수 있습니다. 예약 및 트리거 옵션에 대한 자세한 내용은 [캠페인 예약하기를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) 참조하세요.
+LINE 메시지는 예약된 시간, 동작 또는 API 트리거에 따라 전송할 수 있습니다. 예약 및 트리거 옵션에 대한 자세한 내용은 [캠페인 예약하기]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)를 참조하세요.
 
-사용자가 캠페인을 [다시]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) 수신할 수 있도록 허용하거나 [빈도 제한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) 규칙을 설정하는 등 전달 제어를 지정할 수 있습니다. 액션 기반 전달의 경우 캠페인의 기간과 [조용한 시간을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) 설정할 수도 있습니다.
+사용자가 캠페인을 [다시]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) 수신할 수 있도록 허용하거나 [최대 게재빈도 설정]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) 규칙을 설정하는 등 전달 제어를 지정할 수 있습니다. 액션 기반 전달의 경우 캠페인의 기간과 [조용한 시간을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) 설정할 수도 있습니다.
 
 ### 타겟팅할 사용자 선택
 
 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁힐 수 있습니다. 이미 구독 그룹을 선택했어야 하는데, 이 그룹은 사용자와 소통하고자 하는 수준이나 카테고리에 따라 사용자 범위를 좁혀줍니다. 
 
-세그먼트에서 더 많은 오디언스를 선택하고 [필터를]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) 사용하여 해당 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
+세그먼트에서 더 많은 오디언스를 선택하고 [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하여 해당 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
 
 ### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 전환 이벤트는 캠페인의 성공 여부를 측정하는 데 도움이 됩니다. 예를 들어, 다음과 같습니다.
 
@@ -119,7 +120,7 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 {% endtab %}
 {% tab 캔버스 %}
 
-아직 완료하지 않았다면 캔버스의 나머지 섹션을 완성하세요. 캔버스의 나머지 구성, 다변량 테스트 및 지능형 선택 등을 사용하는 방법에 대한 자세한 내용은 [캔버스 만들기를](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) 참조하세요.
+아직 완료하지 않았다면 캔버스의 나머지 섹션을 완성하세요. 캔버스의 나머지 구성, 다변량 테스트 및 지능형 선택 등을 사용하는 방법에 대한 자세한 내용은 [캔버스 만들기](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)를 참조하세요.
 
 {% endtab %}
 {% endtabs %}

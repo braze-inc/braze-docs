@@ -9,23 +9,28 @@ description: "This reference article covers the AI copywriting assistant, featur
 
 > The AI copywriting assistant passes a brief product name or description to a third-party provider GPT copy generation tool owned by OpenAI to generate human-like marketing copy for use in your messaging. This functionality is available by default for most message composers in the Braze dashboard.
 
+## Accessing the AI copywriting assistant {#access}
+
+The AI copywriting assistant is available in most message editors in the Braze dashboard. Look for the <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> icon. The button may be labeled something like **Copywriter**, **Content Assistant**, or **Copy**, depending on the channel or editor you're in.
+
+For drag-and-drop in-app messages, first select a text block, then choose <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> from the block’s toolbar. Once launched, the assistant opens a modal where you can describe your product or offering and generate AI-powered marketing copy.
+
+![AI copywriting assistant modal showing various features available"][1]
+
 ## Creating copy {#steps}
 
 To generate copy using the AI copywriting assistant, follow these steps:
 
-1. From your message composer, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Launch AI Copywriter**.
-   * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
+1. From your message composer, find and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> to [open the AI copywriting assistant](#access).
 2. Enter a product name or description in the input field.
 3. Select an approximate output length. You can choose a specific channel for an output length based on channel-specific best practices or select between short (1 sentence), medium (2-3 sentences), or long (1 paragraph). 
 4. (Optional) Create or apply a brand guideline to tailor this copy to your brand. These guidelines are saved in your workspace and reusable after they are created. For more information, see [Creating brand guidelines]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
 5. (Optional) Choose a message tone from the available options. This will determine the style of the copy generated.
 6. (Optional) Available for push notifications: Select **Reference past campaign data** to use your previous mobile push messages (campaigns and Canvas steps) as a stylistic reference for generating new copy. When selected, the output will mimic the style of your previous messages.
 7. Select the output language. This can be different from your input language.
-8. Click **Generate**.
+8. Select **Generate**.
 
 We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
-
-![AI copywriting assistant modal showing various features available"][1]{: style="max-width:70%;"}
 
 {% alert important %}
 We filter out responses for offensive content that violates OpenAI's [content policy](https://beta.openai.com/docs/usage-guidelines/content-policy).

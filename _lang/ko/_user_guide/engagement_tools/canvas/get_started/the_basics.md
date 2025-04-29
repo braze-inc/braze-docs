@@ -20,28 +20,28 @@ tool: Canvas
   {% tab 캔버스 %}
   캔버스는 마케터가 여러 메시지로 캠페인을 제작할 수 있는 통합 인터페이스입니다. 시각적 프로그래밍 도구와 비슷하며 일련의 단계를 통해 일관된 사용자 여정을 구축할 수 있습니다.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![An example of a Canvas with a Decision Split step into two different user journeys depending if a user is push enabled.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab 여정 %}
 
-  여정 또는 일반적으로 사용자 여정이라고 하는 것은 캔버스 내에서 개별 사용자의 경험을 의미합니다.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  여정 또는 일반적으로 사용자 여정이라고 하는 것은 캔버스 내에서 개별 사용자의 경험을 의미합니다.<br><br> ![A chart with the customer journey for a new user. An anonymous user installs an app, Kat creates an account, Kat doesn't open the app for a week, a push notification brings Kat back to the app, then Kat uses the app regularly.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab 캔버스 빌더 %}
-  캔버스 빌더는 캔버스를 만들 때 수행해야 할 단계를 매핑합니다. 여기에는 캔버스 이름 지정 및 팀 추가와 같은 기본 사항이 포함됩니다. 기본적으로 캔버스 빌더는 캔버스 제작을 시작하기 전에 필요한 중요한 설정입니다. 여기에서 [응모 일정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [대상 고객]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) 및 [전송 설정을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings) 편집하는 옵션을 사용하여 사용자가 고객 여정을 시작하고 완료하는 방식을 제어할 수 있습니다.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  캔버스 빌더는 캔버스를 만들 때 수행해야 할 단계를 매핑합니다. 여기에는 캔버스 이름 지정 및 팀 추가와 같은 기본 사항이 포함됩니다. 기본적으로 캔버스 빌더는 캔버스 제작을 시작하기 전에 필요한 중요한 설정입니다. 여기에서 [응모 일정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [대상 오디언스]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) 및 [전송 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)을 편집하는 옵션을 사용하여 사용자가 고객 여정을 시작하고 완료하는 방식을 제어할 수 있습니다.<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab 변형 %}
-  변형은 각 고객이 여정에서 따라가는 경로입니다. 캔버스는 대조군과 함께 최대 8개의 이형 상품을 지원합니다. 각 변형을 팔로우할 오디언스 세그먼트를 제어할 수 있습니다.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  배리언트는 각 고객이 여정에서 따라가는 경로입니다. 캔버스는 대조군과 함께 최대 8개의 배리언트 상품을 지원합니다. 각 배리언트를 팔로우할 오디언스 세그먼트를 제어할 수 있습니다.<br><br> ![Selecting the "Add Variant" button.]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab 단계 %}
-  캔버스의 한 단계는 "이걸 하면 저걸 한다"는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br>한 단계 내에서 트리거를 설정하거나 전송 일정을 예약하고, 필터를 추가하거나 [예외 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) 표시하여 타겟팅을 구체화하고, 푸시 알림이나 웹훅 이벤트 등 다양한 채널을 지정할 수 있습니다.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  캔버스의 한 단계는 "이 경우 저걸 한다"라는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}
@@ -56,19 +56,19 @@ tool: Canvas
 
 이름이 가진 힘을 절대 과소평가하지 마세요. Braze는 협업을 위해 만들어졌으므로 지금이 팀과 목표를 공유하는 방법에 대해 알아볼 수 있는 좋은 시기입니다.
 
-캔버스에서 태그를 추가하고 단계 및 이형 상품의 이름을 지정할 수 있습니다. 고객 여정에 대한 자세한 내용은 [사용자 라이프사이클 매핑에](https://learning.braze.com/mapping-customer-lifecycles) 대한 Braze 학습 과정을 확인하세요.
+캔버스에서 태그를 추가하고 단계 및 이형 상품의 이름을 지정할 수 있습니다. 고객 여정에 대한 자세한 내용은 [사용자 라이프사이클 매핑](https://learning.braze.com/mapping-customer-lifecycles)에 대한 Braze 학습 과정을 확인하세요.
 
 ### "왜": 전환 이벤트 식별
 
 > '무엇'을 기반으로 이 캔버스를 구축하는 이유는 무엇인가요? 
 
-항상 명확한 목표를 염두에 두는 것이 중요하며, Canvas는 세션 참여, 구매 및 사용자 지정 이벤트와 같은 KPI에 대한 성과를 파악하는 데 도움이 됩니다.
+항상 명확한 목표를 염두에 두는 것이 중요하며, 캔버스는 세션 인게이지먼트, 구매 및 커스텀 이벤트와 같은 KPI에 대한 성과를 파악하는 데 도움이 됩니다.
 
-하나 이상의 [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 선택하면 캔버스 내에서 성능을 최적화하는 방법을 이해할 수 있습니다. 또한 캔버스에 여러 변형 또는 대조 그룹이 있는 경우, Braze는 전환 이벤트를 사용하여 이 목표를 달성하는 데 가장 적합한 변형을 결정합니다.
+하나 이상의 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 선택하면 캔버스 내에서 성능을 최적화하는 방법을 이해할 수 있습니다. 또한 캔버스에 여러 변형 또는 대조 그룹이 있는 경우, Braze는 전환 이벤트를 사용하여 이 목표를 달성하는 데 가장 적합한 변형을 결정합니다.
 
 * **세션 시작**: 사용자가 다시 돌아와서 앱에 참여하기를 바랍니다.
 * **구매하기**: 사용자가 구매하기를 원합니다.
-* **사용자 지정 이벤트를 수행합니다**: 사용자가 사용자 지정 이벤트로 추적 중인 특정 작업을 수행하도록 하고 싶습니다.
+* **커스텀 이벤트 수행**: 사용자가 커스텀 이벤트로 추적 중인 특정 작업을 수행하도록 하고 싶습니다.
 * **앱 업그레이드:** 사용자가 앱 버전을 업그레이드하기를 원합니다.
 
 ### "언제": 시작 조건 만들기
@@ -81,13 +81,13 @@ tool: Canvas
 더 많은 전략과 일반적인 질문에 대한 답변은 Canvas의 [시간 기반 기능에서]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) 확인하세요.
 {% endalert %}
 
-예약된 배달을 사용하면 대상 고객에게 즉시 캔버스를 보낼 수 있습니다. 정기적으로 보내거나 향후 특정 시간으로 예약할 수도 있습니다. 액션 기반 캔버스는 특정 고객 행동이 발생하면 그에 따라 반응합니다. 예를 들어, 액션 기반 트리거에는 앱 열기, 구매, 다른 캠페인과의 상호 작용 또는 사용자 지정 이벤트 트리거 등이 포함될 수 있습니다. 작업이 발생하는 시점에 캔버스가 사용자에게 전송하도록 할 수 있습니다.
+예약된 전달을 사용하면 오디언스에게 즉시 캔버스를 보낼 수 있습니다. 정기적으로 보내거나 향후 특정 시간으로 예약할 수도 있습니다. 액션 기반 캔버스는 특정 고객 행동이 발생하면 그에 따라 반응합니다. 예를 들어, 액션 기반 트리거에는 앱 열기, 구매, 다른 캠페인과의 상호 작용 또는 커스텀 이벤트 트리거 등이 포함될 수 있습니다. 작업이 발생하는 시점에 캔버스가 사용자에게 전송하도록 할 수 있습니다.
 
 ### "누구": 대상 선택
 
 > 누구에게 연락하려는 대상인가요? 
 
-'대상'을 정의하려면 캔버스에서 제공되는 사전 정의된 세그먼트를 사용할 수 있습니다. 필터를 더 추가하여 타겟 오디언스와의 연결에 더욱 집중할 수도 있습니다. 이러한 세그먼트를 구축한 후에는 타겟 고객 기준과 일치하는 사용자만 캔버스 여정에 진입할 수 있으므로 보다 개인화된 경험을 제공할 수 있습니다. 사용 가능한 필터와 사용 사례에 맞게 사용자를 세분화하는 방법은 이 표를 참조하세요.
+"대상"을 정의하려면 캔버스에서 제공되는 사전 정의된 세그먼트를 사용할 수 있습니다. 필터를 더 추가하여 타겟 오디언스와의 연결에 더욱 집중할 수도 있습니다. 이러한 세그먼트를 구축한 후에는 타겟 고객 기준과 일치하는 사용자만 캔버스 여정에 진입할 수 있으므로 보다 개인화된 경험을 제공할 수 있습니다. 사용 가능한 필터와 사용 사례에 맞게 사용자를 세분화하는 방법은 이 표를 참조하세요.
 
 | 필터              | 설명                                                                                         |
 |---------------------|-----------------------------------------------------------------------------------------------------|
@@ -102,7 +102,7 @@ tool: Canvas
 
 > 잠재 고객에게 가장 잘 도달할 수 있는 곳은 어디인가요? 
 
-이를 통해 사용자 여정에 가장 적합한 메시징 채널을 결정합니다. 이상적으로는 사용자가 가장 접근하기 쉬운 곳에서 사용자에게 도달하는 것이 좋습니다. 이를 염두에 두고 다음 채널 중 하나를 캔버스와 함께 사용할 수 있습니다:
+이를 통해 사용자 여정에 가장 적합한 메시징 채널을 결정합니다. 이상적으로는 사용자가 가장 접근하기 쉬운 곳에서 사용자에게 도달하는 것이 좋습니다. 이를 염두에 두고 다음 채널 중 하나를 캔버스와 함께 사용할 수 있습니다.
 * [이메일]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)
 * [푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)

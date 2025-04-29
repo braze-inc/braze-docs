@@ -2,7 +2,7 @@
 nav_title: "SMS 구독 그룹"
 article_title: SMS 구독 그룹
 page_order: 4
-description: "이 참조 문서에서는 SMS 수신 그룹, 수신 상태 및 수신 그룹 설정 프로세스에 대해 설명합니다."
+description: "이 참조 문서에서는 SMS 구독 그룹, 수신 상태 및 구독 그룹 설정 프로세스에 대해 설명합니다."
 page_type: reference
 channel:
   - SMS
@@ -11,7 +11,7 @@ channel:
 
 # SMS 구독 그룹
 
-> 구독 그룹은 Braze를 통해 SMS 및 MMS를 전송하기 위한 기반입니다. 가입 그룹은 특정 유형의 메시징 목적으로 사용되는 \[발신 전화번호][2] (예: 단축 코드, 긴 코드 및/또는 영숫자 발신자 ID)의 모음입니다. 예를 들어, 브랜드에서 거래 및 프로모션 SMS 메시지를 모두 전송할 계획이 있는 경우, Braze 대시보드 내에서 별도의 전송 전화번호 풀을 가진 두 개의 구독 그룹을 설정해야 합니다.
+> 구독 그룹은 Braze를 통해 SMS 및 MMS를 전송하기 위한 기반입니다. 가입 그룹은 특정 유형의 메시징 목적으로 사용되는 [발신 전화번호][2](예: 짧은 코드, 긴 코드 또는 영숫자 발신자 ID)의 모음입니다. 예를 들어, 브랜드에서 거래 및 프로모션 SMS 메시지를 모두 전송할 계획이 있는 경우, Braze 대시보드 내에서 별도의 전송 전화번호 풀을 가진 두 개의 구독 그룹을 설정해야 합니다.
 
 ## SMS 구독 상태
 
@@ -20,18 +20,18 @@ SMS 사용자의 구독 상태는 `subscribed` 와 `unsubscribed` 두 가지입�
 | 상태 | 정의 |
 | --------- | ---------- |
 | 가입됨 | 사용자가 특정 구독 그룹으로부터 SMS 수신을 원한다고 명시적으로 확인했습니다. 사용자는 Braze 구독 API를 통해 구독 상태를 업데이트하거나 옵트인 키워드 응답을 문자로 전송하여 구독할 수 있습니다. SMS를 수신하려면 사용자가 SMS 수신 그룹에 가입되어 있어야 합니다. |
-| 탈퇴됨 | 사용자가 SMS 수신 그룹 및 수신 그룹 내 발신 전화번호의 메시지를 명시적으로 수신 거부한 경우. 사용자는 옵트아웃 키워드 응답을 문자로 전송하여 구독을 취소하거나 브랜드가 \[Braze 구독 API][4]]를 통해 사용자의 구독을 취소할 수 있습니다. SMS 수신 그룹에서 수신 거부된 사용자는 더 이상 수신 그룹에 속한 발신 전화번호로 발송되는 모든 SMS를 수신하지 않습니다.|
-{: .reset-td-br-1 .reset-td-br-2}
+| 탈퇴됨 | 사용자가 SMS 구독 그룹 및 구독 그룹 내 발신 전화번호의 메시지를 명시적으로 수신 거부한 경우. 사용자는 옵트아웃 키워드 응답을 문자로 전송하여 구독을 취소하거나 브랜드가 [Braze 구독 API][4]]를 통해 사용자의 구독을 취소할 수 있습니다. SMS 구독 그룹에서 수신 거부된 사용자는 더 이상 구독 그룹에 속한 발신 전화번호로 발송되는 모든 SMS를 수신하지 않습니다.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 사용자의 SMS 수신 그룹 설정 방법 
 
-- **Rest API:** 사용자 프로필은 \[`/subscription/status/set` 엔드포인트][4] ]에서 Braze REST API를 사용하여 프로그래밍 방식으로 설정할 수 있습니다.
-- **SDK 통합** 사용자는 [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS의](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 경우 `addToSubscriptionGroup` 방법을 사용하여 이메일 또는 SMS 구독 그룹에 추가하거나 [웹][11]] 을 사용하여 추가할 수 있습니다.
-- **사용자 옵트인/옵트아웃 시 자동으로 처리됩니다:** 사용자가 기본 옵트인 또는 옵트아웃 \[키워드][7]]을 문자로 보내면 Braze는 자동으로 사용자의 구독 상태를 설정하고 업데이트합니다.
+- **Rest API:** 고객 프로필은 [`/subscription/status/set` 엔드포인트][4]에서 Braze REST API를 사용하여 프로그래밍 방식으로 설정할 수 있습니다.
+- **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)), or [Web][11].
+- **사용자 옵트인/옵트아웃 시 자동으로 처리됩니다:** 사용자가 기본 옵트인 또는 옵트아웃 [키워드][7]을 문자로 보내면 Braze는 자동으로 사용자의 구독 상태를 설정하고 업데이트합니다.
 - **사용자 가져오기**: **사용자 가져오기를** 통해 이메일 또는 SMS 구독 그룹에 사용자를 추가할 수 있습니다. 구독 그룹 상태를 업데이트할 때는 CSV에 `subscription_group_id` 와 `subscription_state` 두 개의 열이 있어야 합니다. 자세한 내용은 [사용자 가져오기를]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) 참조하세요.
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **사용자** **가져오기라고** 하며 **사용자** 아래에서 찾을 수 있습니다.
+[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 이 페이지는 사용자 **가져오기라고** 하며 **사용자** 아래에서 찾을 수 있습니다.
 {% endalert %}
 
 사용자 프로필에서 전화번호가 업데이트되면 새 전화번호는 사용자의 가입 그룹 상태를 상속받습니다. 전화번호가 Braze에 이미 존재하는 번호로 업데이트되면 기존 전화번호의 구독 상태가 상속됩니다.
@@ -40,14 +40,14 @@ SMS 사용자의 구독 상태는 `subscribed` 와 `unsubscribed` 두 가지입�
 
 ### 사용자의 SMS 수신 그룹을 확인하는 방법
 
-- **사용자 프로필:** 개별 사용자 프로필은 사이드바에서 사용자 검색을 선택하여 Braze 대시보드에서 액세스할 수 있습니다. 여기에서 이메일 주소, 전화번호 또는 외부 사용자 아이디로 사용자 프로필을 조회할 수 있습니다. 사용자 프로필의 참여 탭에서 사용자의 SMS 수신 그룹을 볼 수 있습니다. 
-- **Rest API:** 개별 사용자 프로필 구독 그룹은 \[사용자의 구독 그룹 목록 엔드포인트][9] ] 또는 \[사용자의 구독 그룹 상태 목록 엔드포인트][8] ]에서 Braze REST API를 사용하여 확인할 수 있습니다. 
+- **사용자 프로필:** 개별 고객 프로필은 사이드바에서 사용자 검색을 선택하여 Braze 대시보드에서 액세스할 수 있습니다. 여기에서 이메일 주소, 전화번호 또는 외부 사용자 아이디로 사용자 프로필을 조회할 수 있습니다. 고객 프로필의 인게이지먼트 탭에서 사용자의 SMS 구독 그룹을 볼 수 있습니다. 
+- **Rest API:** 개별 고객 프로필 구독 그룹은 [사용자의 구독 그룹 목록 엔드포인트][9] 또는 [사용자의 구독 그룹 상태 목록 엔드포인트][8]에서 Braze REST API를 사용하여 확인할 수 있습니다. 
 
 ## 구독 그룹과 함께 보내기
 
-Braze를 통해 SMS 캠페인을 시작하려면 다음 이미지와 같이 드롭다운에서 구독 그룹을 선택해야 합니다. 대상 필터가 선택되면 캠페인 또는 캔버스에 자동으로 추가되어 선택한 구독 그룹의 `subscribed` 사용자만 타겟 대상에 포함되도록 합니다. 국제 \[통신 규정 준수 및 가이드라인][3]]을 준수하기 위해 Braze는 선택한 구독 그룹에 가입하지 않은 사용자에게는 절대로 SMS를 보내지 않습니다.  
+Braze를 통해 SMS 캠페인을 시작하려면 다음 이미지와 같이 드롭다운에서 구독 그룹을 선택해야 합니다. 오디언스 필터가 선택되면 캠페인 또는 캔버스에 자동으로 추가되어 선택한 구독 그룹의 `subscribed` 사용자만 타겟 대상에 포함되도록 합니다. 국제 [통신 규정 준수 및 가이드라인][3]]을 준수하기 위해 Braze는 선택한 구독 그룹에 가입하지 않은 사용자에게는 절대로 SMS를 보내지 않습니다.  
 
-![구독 그룹 드롭다운이 열려 있고 사용자가 'SMS용 메시징 서비스 A'를 강조 표시한 상태의 SMS 작성기입니다.][6]
+![구독 그룹 드롭다운이 열려 있고 사용자가 "SMS용 메시징 서비스 A"를 강조 표시한 상태의 SMS 작성기입니다.][6]
 
 ## 설정 프로세스
 
@@ -55,7 +55,7 @@ SMS 온보딩 과정에서 Braze 온보딩 관리자가 대시보드 계정에 �
 
 ## 구독 그룹 MMS 활성화
 
-MMS 메시지를 보내려면 가입한 그룹 내에서 하나 이상의 번호가 MMS를 보낼 수 있도록 설정되어 있어야 합니다. 이는 구독 그룹 옆에 있는 태그로 표시됩니다. 
+MMS 메시지를 보내려면 구독 그룹 내에서 하나 이상의 번호가 MMS를 보낼 수 있도록 설정되어 있어야 합니다. 이는 구독 그룹 옆에 있는 태그로 표시됩니다. 
 
 !["SMS용 메시징 서비스 A"가 강조 표시된 구독 그룹 드롭다운이 표시됩니다. 항목 앞에는 "MMS" 태그가 붙습니다.][10]{: style="max-width:40%"}
 

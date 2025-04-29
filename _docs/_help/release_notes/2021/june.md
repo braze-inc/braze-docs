@@ -22,7 +22,7 @@ New [`hmac_sha1` and `hmac_sha256` Liquid encoding filters]({{site.baseurl}}/use
 
 ## Purchase event page
 
-Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) article to learn more.
+Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) article to learn more.
 
 ## New Braze partnerships
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 커스텀 이벤트 목록 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 사용자 지정 이벤트 목록 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 커스텀 이벤트 목록 내보내기 Braze 
 /events/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 앱에 대해 기록된 커스텀 이벤트 목록을 내보낼 수 있습니다. 이벤트 이름은 알파벳순으로 정렬된 250개 그룹으로 반환됩니다.
+> 이 엔드포인트를 사용하여 앱에 대해 기록된 사용자 지정 이벤트 목록을 내보낼 수 있습니다. 이벤트 이름은 알파벳순으로 정렬된 250개 그룹으로 반환됩니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
@@ -57,10 +57,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 치명적인 오류 응답 코드 {#fatal-export}
 
-요청에 심각한 오류가 발생할 경우 반환되는 상태 코드 및 관련 오류 메시지는 [심각한 오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하세요.
+요청에 치명적인 오류가 발생할 경우 반환되는 상태 코드 및 관련 오류 메시지는 치명적인 [오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

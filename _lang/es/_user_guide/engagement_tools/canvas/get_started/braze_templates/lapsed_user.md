@@ -23,7 +23,7 @@ Supongamos que trabajamos para MovieCanon, un servicio de streaming que tiene co
 
 Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/), de modo que podamos añadir datos de usuarios de Braze a Google Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
 
-Para acceder a la plantilla de usuario lapsing, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > Plantillas de Braze. A continuación, junto a **Usuario Lapsing**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
+Para acceder a la plantilla de usuario lapsing, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Usuario Lapsing**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 
 ### Paso 1: Configura los detalles 
 
@@ -42,7 +42,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 ### Paso 2: Asigna tus eventos de conversión
 
-Actualiza el **Evento de** **conversión primaria - A** para que se dirija a los usuarios de nuestra aplicación (MovieCanon), y deja el **Evento de conversión primaria - B** como predeterminado para realizar cualquier compra.
+Actualiza el **Evento de conversión primaria - A** para que se dirija a los usuarios de nuestra aplicación (MovieCanon), y deja el **Evento de conversión primaria - B** como predeterminado para realizar cualquier compra.
 
 ![Sección "Asignar eventos de conversión" con un evento de conversión primaria de un usuario que inicia una sesión en una aplicación concreta.][2]
 

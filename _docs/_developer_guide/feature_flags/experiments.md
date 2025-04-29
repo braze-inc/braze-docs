@@ -11,7 +11,7 @@ platform:
 
 ---
 
-# Creating a feature flag experiment
+# Feature flag experiments
 
 > Feature flag experiments let you A/B test changes to your applications to optimize conversion rates. Marketers can use feature flags to determine whether a new feature positively or negatively impacts conversion rates, or which set of feature flag properties is most optimal.
 
@@ -32,47 +32,66 @@ if (featureFlag?.enabled) {
 
 ```
 
-## Step 1: Create an experiment
+## Creating a feature flag experiment
 
-1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
+### Step 1: Create an experiment
+
+1. Go to **Messaging** > **Campaigns**, then select **+ Create Campaign**.
 2. Select **Feature Flag Experiment**.
-3. Name your campaign something clear and meaningful.
+3. Give your campaign a clear and meaningful name.
 
-## Step 2: Add experiment variants
+### Step 2: Add experiment variants
 
-Next, create variations. For each variant, choose the feature flag you want to turn on or off and review the assigned properties.
+Next, create variations. For each variant, choose the feature flag you want to turn on or off, then review its assigned properties.
 
 To test the impact of your feature, use variants to split traffic into two or more groups. Name one group "My control group" and turn its feature flags off.
 
-### Overwriting properties
+### Step 3: Overwrite properties (optional)
 
-Though you specified default properties when you originally set up your feature flag, you can choose to overwrite those values for users who receive a specific campaign variant.
+You can choose to overwrite the default properties you initially set up for users who receive a specific campaign variant.
 
-![]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**. When a variant is disabled, the SDK will return an empty properties object for the given feature flag.
 
-To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**.
+![The 'Experiment Variants' section with the 'link' variable key overwritten with '/sales'.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
-When a variant is disabled, the SDK will return an empty properties object for the given feature flag. 
+### Step 4: Choose users to target
 
-## Step 3: Choose users to target
+Use one of your segments or filters to choose your [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. Segment membership is calculated when feature flags are refreshed for a given user.
+![The 'Target' page in a feature flag experiment with 'Received Feature Flag Variant' highlighted in the filter group search bar.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Changes are made available after your app refreshes feature flags, or when a new session is started.
+Segment membership is calculated when feature flags are refreshed for a given user. Changes are made available after your app refreshes feature flags, or when a new session is started.
 {% endalert %}
 
-## Step 4: Distribute variants
+### Step 5: Distribute variants
 
 Choose the percentage distribution for your experiment. As a best practice, you should not change the distribution after your experiment has been launched.
 
-## Step 5: Assign conversions
+### Step 6: Assign conversions
 
-Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
-## Step 6: Review and launch
+### Step 7: Review and launch
 
-After you’ve finished building the last of your experiment, review its details, then click **Launch Experiment**.
+After you’ve finished building the last of your experiment, review its details, then select **Launch Experiment**.
 
+## Reviewing the results
 
+After your feature flag experiment is finished, you can review impression data for your experiment. Go to **Messaging** > **Campaigns** and select the campaign with your feature flag experiment.
 
+### Campaign analytics
+
+**Campaign Analytics** offers a high-level overview of your experiment's performance, such as:
+
+- The total number of impressions
+- The number of unique impressions
+- The primary conversion rate
+- The total revenue generated by the message
+- The estimated audience
+
+You can also view the experiment's settings for delivery, audience, and conversion.
+
+### Feature flag experiment performance
+
+**Feature Flags Experiments Performance** shows how well your message performed across various dimensions. The specific metrics you see will vary depending on your chosen messaging channel, and whether you're running a multivariate test. To see the feature flag values associated with each variant, select **Preview**.

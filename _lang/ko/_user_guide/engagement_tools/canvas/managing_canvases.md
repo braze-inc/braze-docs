@@ -12,12 +12,12 @@ tool: Canvas
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: 테스트 캔버스 보내기
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    image: /assets/img/braze_icons/check-square-broken.svg
-  - name: 실행 후 캔버스 편집
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+  - name: 출시 후 캔버스 편집
+    link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: 캔버스 승인 및 권한
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: 캔버스용 초안 저장
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg

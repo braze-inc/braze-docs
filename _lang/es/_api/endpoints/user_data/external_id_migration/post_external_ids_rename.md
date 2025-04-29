@@ -54,11 +54,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Obligatoria | Matriz de identificadores externos renombrar objetos | Consulta el ejemplo de solicitud y las limitaciones siguientes para conocer la estructura del objeto renombrar identificador externo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- El `current_external_id` debe ser el ID principal del usuario, y no puede ser un ID obsoleto
-- El `new_external_id` no debe estar ya en uso ni como ID primario ni como ID obsoleto.
-- El `current_external_id` y el `new_external_id` no pueden ser el mismo
+Toma nota de lo siguiente:
+
+- El `current_external_id` debe ser el ID principal del usuario, y no puede ser un ID obsoleto.
+- El `new_external_id` no debe estar ya en uso ni como ID principal ni como ID obsoleto.
+- El `current_external_id` y el `new_external_id` no pueden ser iguales.
 
 ## Ejemplo de solicitud
 ```
@@ -75,7 +77,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 }'
 ```
 
-## Respuesta 
+## Respuesta
+
 La respuesta confirmará todos los renombramientos realizados con éxito, así como los renombramientos fallidos con los errores asociados. Los mensajes de error en el campo `rename_errors` harán referencia al índice del objeto en la matriz de la solicitud original.
 
 ```
@@ -87,26 +90,27 @@ La respuesta confirmará todos los renombramientos realizados con éxito, así c
 ```
 
 El campo `message` devolverá `success` para cualquier solicitud válida. Los errores más específicos se recogen en la matriz `rename_errors`. El campo `message` devuelve un error en caso de:
+
 - Clave de API no válida
 - Matriz vacía `external_id_renames` 
 - `external_id_renames` matriz con más de 50 objetos
-- Alcanzado el límite de velocidad (más de 1.000 solicitudes/minuto)
+- Alcanzado el límite de velocidad (más de 1.000 solicitudes por minuto)
 
 ## Preguntas más frecuentes
 
-**¿Influye esto en los MAU?**<br>
+### ¿Influye esto en los MAU?
 No, ya que el número de usuarios seguirá siendo el mismo, sólo tendrán un nuevo `external_id`.
 
-**¿Cambia históricamente el comportamiento de los usuarios?**<br>
+### ¿Cambia históricamente el comportamiento de los usuarios?
 No, ya que el usuario sigue siendo el mismo, y todo su comportamiento histórico sigue vinculado a él.
 
-**¿Puede ejecutarse en espacios de trabajo dev/staging?**<br>
+### ¿Puede ejecutarse en espacios de trabajo de desarrollador o de puesta en escena?
 Sí. De hecho, recomendamos encarecidamente realizar una migración de prueba en un espacio de trabajo de ensayo o de desarrollador, y asegurarse de que todo ha ido bien antes de ejecutarla en los datos de producción.
 
-**¿Consume puntos de datos?**<br>
+### ¿Consume puntos de datos?
 Esta característica no cuesta puntos de datos.
 
-**¿Cuál es el periodo de amortización recomendado?**<br>
+### ¿Cuál es el periodo de amortización recomendado?
 No tenemos un límite estricto sobre el tiempo que puedes mantener ID externos obsoletos, pero recomendamos encarecidamente eliminarlos cuando ya no sea necesario hacer referencia a los usuarios por el ID obsoleto.
 
 {% endapi %}

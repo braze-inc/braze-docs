@@ -25,7 +25,7 @@ Note that when the query parameter is URL encoded it will read like this:
 
 ## Prerequisites
 
-To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+To use this endpoint, you'll need a SCIM token. You'll use your service origin as the `X-Request-Origin` header. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 

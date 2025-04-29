@@ -10,18 +10,24 @@ description: "Cette section vous aidera, vous et votre équipe marketing, à con
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: Présentation du SDK
+    link: /docs/developer_guide/getting_started/sdk_overview/
+    image: /assets/img/braze_icons/edit-04.svg
   - name: Aperçu de la plateforme
-    link: /docs/developer_guide/platform_wide/getting_started/platform_overview/
+    link: /docs/developer_guide/getting_started/platform_overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: Aperçu de l’intégration
-    link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
+    link: /docs/developer_guide/getting_started/integration_overview/
     image: /assets/img/braze_icons/chevron-up-double.svg
   - name: "Aperçu de l'architecture"
-    link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
+    link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Présentation des analyses
-    link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
+    link: /docs/developer_guide/getting_started/analytics_overview/
     image: /assets/img/braze_icons/check-done-02.svg
+  - name: Aperçu de la personnalisation
+    link: /docs/developer_guide/getting_started/customization_overview/
+    image: /assets/img/braze_icons/announcement-01.svg
 
 search_rank: 4
 ---

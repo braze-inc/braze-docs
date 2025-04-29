@@ -286,9 +286,9 @@ Si l’`external_id` existe, le profil le plus récemment mis à jour avec un ID
 Un nouveau profil sera créé, ainsi qu'un utilisateur exclusivement par e-mail. Aucun alias ne sera créé. Le champ e-mail sera défini sur test@braze.com, comme indiqué dans l'exemple de demande de mise à jour d'un profil utilisateur par l'adresse e-mail.
 
 ### Comment utiliser `/users/track` pour importer des données utilisateur héritées ?
-Vous pouvez soumettre des données via l'API de Braze pour un utilisateur qui n'a pas encore utilisé votre application mobile afin de générer un profil utilisateur. Si l’utilisateur se sert ultérieurement de l’application, toutes les informations qui suivent son identification via le SDK seront fusionnées avec le profil utilisateur existant que vous avez créé via l’appel d’API. Tout comportement de l'utilisateur enregistré de manière anonyme par le SDK avant l'identification sera perdu lors de la fusion avec le profil utilisateur existant généré par l'API.
+Vous pouvez soumettre des données via l'API de Braze pour un utilisateur qui n'a pas encore utilisé votre application mobile afin de générer un profil utilisateur. Si l'utilisateur utilise ensuite l'application, toutes les informations relatives à son identification à l'aide du SDK seront fusionnées avec le profil utilisateur existant que vous avez créé à l'aide de l'appel API. Tout comportement de l'utilisateur enregistré de manière anonyme par le SDK avant l'identification sera perdu lors de la fusion avec le profil utilisateur existant généré par l'API.
 
-L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés via l'API utilisateur qui n'ont pas encore utilisé l'application, ajoutez le filtre `Session Count > 0`.
+L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés à l'aide de l'API utilisateur qui n'ont pas encore utilisé l'application, ajoutez le filtre `Session Count > 0`.
 
 ### Comment `/users/track` gère-t-il les événements en double ?
 

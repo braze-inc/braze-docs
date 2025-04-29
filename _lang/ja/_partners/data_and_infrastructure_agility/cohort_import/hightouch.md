@@ -15,10 +15,6 @@ search_tag: Partner
 ### ステップ1:Brazeデータインポートキーの取得
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Hightouch** を選択します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。<br><br>![][6]{: style="max-width:90%;"} 
 
 ### ステップ2:Hightouch で Braze コホートを宛先として追加する
@@ -26,6 +22,10 @@ Hightouch ワークスペースの**Destination**ページに移動し、**Braze
 
 ### ステップ3:モデル(またはオーディエンス)をBrazeコホートに同期する
 Hightouch では、作成した[モデル](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) または[オーディエンス](https://hightouch.io/docs/audiences/usage/) を使用して、新しい同期を作成します。次に、前のステップで作成した Braze コホート宛先を選択します。最後に Braze コホート宛先設定で、照合する識別子を選択し、Hightouch で新しい Braze コホートを作成するか、既存のコホートを更新するかを決定します。<br><br>![][8]{: style="max-width:90%;"}
+
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
 
 ### ステップ4:Hightouch カスタムオーディエンスから Braze セグメントを作成する
 Braze で [**セグメント**] に移動し、新しいセグメントを作成し、フィルターとして [**Hightouch コホート**] を選択します。ここから、どの Hightouch コホートを含めるかを選択できます。Hightouch のコホートセグメントを作成したら、キャンペーンまたはキャンバスを作成するときにこのセグメントをオーディエンスフィルターとして選択できます。<br><br>![][9]{: style="max-width:90%;"}
@@ -35,7 +35,7 @@ Hightouch セグメントを使用するには、Braze キャンペーンまた�
 
 ## ユーザーマッチング
 
-識別されたユーザーは、`external_id` または`alias` のどちらかによって照合することができる。匿名ユーザーは、`device_id` 。元々匿名ユーザーとして作成された識別子ユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければならない。
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。
 
 [1]: https://hightouch.io
 [6]: {% image_buster /assets/img/hightouch/data_import_key.png %}

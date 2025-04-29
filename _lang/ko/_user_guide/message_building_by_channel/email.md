@@ -56,13 +56,16 @@ guide_menu_list:
 - name: 트랜잭션 이메일
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
+- name: 식별자 필드 수준 암호화
+  link: /docs/user_guide/analytics/field_level_encryption/
+  image: /assets/img/braze_icons/database-01.svg
 - name: Gmail 프로모션 도구
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
   image: /assets/img/braze_icons/trophy-01.svg
 - name: Apple 비공개 릴레이 SSO
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
   image: /assets/img/braze_icons/apple.svg
-- name: Apple 메일 개인 정보 보호
+- name: Apple MPP
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
   image: /assets/img/braze_icons/apple.svg
 - name: 이메일 애널리틱스 용어집

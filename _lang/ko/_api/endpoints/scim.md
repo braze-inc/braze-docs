@@ -10,7 +10,7 @@ description: "이 랜딩 페이지에는 Braze SCIM 엔드포인트가 나열되
 page_type: landing
 
 guide_top_header: "SCIM 엔드포인트"
-guide_top_text: "[SCIM(교차 도메인 ID 관리 시스템)](http://www.simplecloud.info/) 사양은 사용자 및 그룹을 표현하는 정의된 스키마를 제고앟여 사용자 ID를 클라우드 기반 애플리케이션에서 관리하고 서비스를 보다 간편하게 만들도록 설계되었습니다. Braze SCIM 엔드포인트를 사용하여 자동화된 사용자 프로비저닝을 관리하세요."
+guide_top_text: "도메인 간 ID 관리(SCIM)](http://www.simplecloud.info/) 사양은 사용자 및 그룹을 표현하는 정의된 스키마를 제공하여 클라우드 기반 애플리케이션 및 서비스에서 사용자 ID를 보다 쉽게 관리할 수 있도록 설계되었습니다. Braze SCIM 엔드포인트를 사용하여 자동화된 사용자 프로비저닝을 관리하세요."
 
 guide_featured_title: ""
 guide_featured_list:

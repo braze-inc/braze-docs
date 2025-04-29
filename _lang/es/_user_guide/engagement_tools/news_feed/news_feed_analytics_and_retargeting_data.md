@@ -13,9 +13,7 @@ hidden: true
 
 # Análisis de noticias
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Al igual que las campañas programadas, la herramienta News Feed incluye un panel de análisis para controlar las impresiones, los clics y el porcentaje de clics. Al hacer clic en un mensaje de noticias específico en el panel de control, aparece una gran cantidad de análisis visuales. 
 

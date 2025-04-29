@@ -38,14 +38,14 @@ description: "この記事では、リストユーザーのサブスクリプシ
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `external_id`  | 必須 | 文字列 | ユーザーの `external_id` (少なくとも 1 つ、最大 50 の `external_ids` を含める必要があります)。 |
 | `email`  |  必須* | 文字列 | ユーザーのメールアドレスは、文字列の配列として渡すことができます。少なくとも 1 件のメールアドレス (最大 50件 まで) を含める必要があります。 |
 | `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。少なくとも1つの電話番号を含める必要があります（最大50まで）。 |
 | `limit` | オプション | 整数 | 返される結果の最大数の制限。デフォルト (および最大) の `limit` は 100 です。 |
 | `offset`  |  オプション | 整数 | 検索条件に一致するテンプレートの残りを返す前にスキップするテンプレートの数。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert tip %}
 同じメールアドレスを共有する複数のユーザー（複数の`external_ids`）がいる場合、すべてのユーザーは別々のユーザーとして返されます（たとえ同じメールアドレスやサブスクリプショングループを持っていても）。
@@ -76,4 +76,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
+## 応答の例
+
+```json
+{
+  "success": true,
+  "subscription_groups": [
+    {
+      "subscription_group_id": "group_id_1",
+      "subscription_status": "subscribed"
+    },
+    {
+      "subscription_group_id": "group_id_2",
+      "subscription_status": "unsubscribed"
+    }
+  ]
+}
+```
+
 {% endapi %}

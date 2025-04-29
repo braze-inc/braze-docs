@@ -16,7 +16,11 @@ description: "This article outlines details about the Create scheduled messages 
 
 > Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates.
 
-If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
+If you're targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
+
+{% alert tip %}
+If you're interested in sending messages immediately to designated users, use the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) instead.
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -80,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
+| `override_messaging_limits` | Optional | Boolean | Ignore frequency capping for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

@@ -14,16 +14,19 @@ description: "이 랜딩 페이지는 테스트 캔버스 전송, 캔버스 분�
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
+  - name: 사용자 경로 미리보기
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
   - name: 테스트 캔버스 보내기
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
-  - name: 캔버스 분석
+  - name: 캔버스 애널리틱스
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: 보유 보고서
-    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
+  - name: 리텐션 보고서
+    link: /docs/user_guide/analytics/reporting/retention_reports/
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: 퍼널 보고서
-    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reporting/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
 ---

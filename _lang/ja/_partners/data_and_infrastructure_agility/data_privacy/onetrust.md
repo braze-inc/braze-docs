@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [OneTrust](https://www.onetrust.com/) は、プライバシーおよびセキュリティソフトウェアのプロバイダーであり、信頼の状況、強力なインサイトを活用するためのアクション、そして競争で常に優位に立つためのオートメーションをより詳しく理解するために必要な可視化機能を提供します。 
 
+_この統合はOneTrust によって維持されます。_
+
+## 統合について
+
 Braze とOneTrust の統合により、OneTrust ワークフロービルダーを使用してプロダクトのセキュリティワークフローを作成できます。
 ## 前提条件
 
@@ -119,6 +123,7 @@ OneTrust ワークフローを使用して Braze でサブスクリプション�
 3. **Actions** タブに移動します。
 
 ![][7]
+
 
 [1]: {% image_buster /assets/img/onetrust/onetrust.png %}
 [2]: {% image_buster /assets/img/onetrust/onetrust2.png %}

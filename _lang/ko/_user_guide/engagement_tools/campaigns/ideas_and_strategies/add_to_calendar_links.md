@@ -12,13 +12,13 @@ channel: email
 
 > 이벤트, 세일 또는 약속을 홍보할 때 이메일에 "캘린더에 추가" 링크를 추가하여 사용자가 이벤트를 쉽게 캘린더에 저장할 수 있도록 도울 수 있습니다.
 
-그렇게 하려면 이메일을 작성하고 링크를 삽입할 위치를 결정하십시오. 그런 다음 Google 캘린더용 옵션 하나와 다른 캘린더(iCal 또는 Outlook과 같은)용 옵션 하나를 추가합니다. 예를 들어, "Google 캘린더에 추가" 및 "iCal 또는 Outlook에 추가".
+그렇게 하려면 이메일을 작성하고 링크를 삽입할 위치를 결정하세요. 그런 다음 Google 캘린더용 옵션 하나와 다른 캘린더(iCal 또는 Outlook과 같은)용 옵션 하나를 추가합니다. 예를 들어, "Google 캘린더에 추가" 및 "iCal 또는 Outlook에 추가".
 
 ![대시보드에서 링크를 추가할 때 링크 대화 상자. "링크 정보" 탭이 선택되고 텍스트가 "Google 캘린더에 추가"로 설정됩니다.][1]{: style="max-width:50%"}
 
 ## URL 형식
 
-다음 URL을 링크에 추가하고 자리 표시자를 교체하세요. 이 두 URL의 유일한 차이점은 Google 캘린더에 추가 매개변수가 필요하다는 것입니다: `&format=gcal`.
+다음 URL을 링크에 추가하고 자리 표시자를 교체하세요. 이 두 URL의 유일한 차이점은 Google 캘린더에 `&format=gcal` 추가 매개변수가 필요하다는 것입니다.
 
 {% tabs %}
 {% tab Google 캘린더 %}
@@ -42,10 +42,10 @@ https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=STA
 - `EVENT_SUBJECT`: 행사의 제목
 - `EVENT_LOCATION`: 행사의 위치
 - `START_TIME`: 이벤트의 시작 시간은 ISO 8601 형식(YYYY-MM-DDTHH:MM:SSZ)으로 UTC입니다
-- `END_TIME`: 이벤트 종료 시간의 ISO 8601 형식(YYYY-MM-DDTHH:MM:SSZ)으로 UTC
+- `END_TIME`: 이벤트 종료 시간의 ISO 8601 형식(YYYY-MM-DDTHH:MM:SSZ), UTC 기준
 - `EVENT_DESCRIPTION`: 이벤트 설명
 
-공백을`%20`HTML`%20`이스케이프`%20`코드로`%20`바꾸십시오. 예를 들어, "Meet Braze"라는 제목은 "Meet%20Braze"가 됩니다.
+공백을 `%20` HTML 이스케이프 코드로 바꾸세요. 예를 들어, "Meet Braze"라는 제목은 "Meet%20Braze"가 됩니다.
 
 다음은 "Google 캘린더에 추가" URL의 예입니다:
 
@@ -58,7 +58,7 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 다음 매개변수는 선택 사항이며 이벤트의 추가 측면을 정의하는 데 사용할 수 있습니다.
 
 - **주최자 이름:** `&organizer=name`
-- **이벤트와 관련된 URL을 첨부하십시오:** `&attach=http://www.example.com/`
+- **이벤트와 관련된 URL 첨부:** `&attach=http://www.example.com/`
 - **기간:** `duration=30M`, 이벤트 종료 시간 (dtend)의 대안으로 1H 또는 30M과 같은 기간을 지정합니다.
 - **알람 시간, 분 단위:** `&reminder=15`
 - **하루 종일 이벤트:** `&allday=1`
@@ -67,7 +67,7 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 다음과 같은 반복 이벤트에 대한 추가 매개변수를 추가할 수 있습니다:
 - **주간 이벤트:** `&recur=weekly`
 - **월간 이벤트:** `&recur=monthly`
-- **반복 종료:** `&recuruntil=END_DATE`, 여기서 `END_DATE`는 반복이 종료되는 날짜와 시간을 ISO 8601 형식(YYYY-MM-DDTHH:MM:SSZ)으로 UTC로 나타낸 것입니다.
+- **반복 종료:** `&recuruntil=END_DATE`, 여기서 `END_DATE`는 반복이 종료되는 날짜와 시간을 UTC 기준 ISO 8601 형식(YYYY-MM-DDTHH:MM:SSZ)으로 나타낸 것입니다.
 
 ## 링크 동작
 
@@ -79,7 +79,7 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 클릭하면 Google 캘린더가 새 탭 또는 창에서 열리며, 초대장에 이벤트 세부 정보가 미리 채워져 있고 사용자가 저장할 준비가 됩니다. 이것은 모바일과 데스크탑 모두에서 발생합니다.
 
-![Google 캘린더 dialog to add an event with the event's details added and ready to 저장.][2]{: style="max-width:75%"}
+![Google 캘린더 대화상자에서 이벤트 세부 정보를 추가하고 저장 준비가 된 이벤트를 추가합니다.][2]{: style="max-width:75%"}
 
 ### iCal 또는 Outlook
 
@@ -87,7 +87,7 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 ![iCal 캘린더에 새 이벤트를 추가하는 대화 상자가 있어 사용자가 캘린더를 선택하고 확인하도록 요청합니다.][3]{: style="max-width:75%"}
 
-![iCal 캘린더 with the event added.][4]{: style="max-width:81%"}
+![이벤트가 추가된 iCal 캘린더.][4]{: style="max-width:81%"}
 
 모바일에서 사용자는 링크를 길게 눌러 캘린더에 추가하라는 메시지가 표시됩니다.
 

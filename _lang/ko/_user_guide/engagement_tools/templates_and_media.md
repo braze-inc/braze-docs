@@ -20,6 +20,9 @@ guide_featured_list:
   - name: 콘텐츠 블록
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
+  - name: 캔버스 템플릿
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
+    image: /assets/img/braze_icons/palette.svg
   - name: 템플릿 관리
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
@@ -32,7 +35,7 @@ guide_featured_list:
 
 다음 기능에 대해 **템플릿** 섹션에서 템플릿 및 창의적인 콘텐츠를 사용할 수 있고 관리할 수 있습니다:
 
-- **[][2]이메일 템플릿][2]**
+- **[이메일 템플릿][2]**
 - **[콘텐츠 블록][7]**
 - **[웹훅 템플릿][3]**
 - **[링크 템플릿][6]**

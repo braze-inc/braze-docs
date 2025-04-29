@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 예약된 API로 트리거되는 캔버스 Braze 삭제 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 삭제된 예약 API 트리거 캔버스 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 예약된 API로 트리거되는 캔버스 Bra
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
-> 삭제 스케줄 엔드포인트를 사용하면 이전에 API 트리거 캔버스를 예약한 메시지가 전송되기 전에 취소할 수 있습니다.
+> 삭제 일정 엔드포인트는 이전에 예약한 API 트리거 캔버스를 전송되기 전에 취소할 수 있도록 합니다.
 
 예약된 메시지 또는 트리거가 전송 예정 시간에 매우 가까워지거나 그 사이에 삭제되는 경우 최선을 다해 업데이트되므로 마지막 순간 삭제가 대상 사용자 전체, 일부 또는 아무에게도 적용될 수 있습니다.
 
@@ -47,8 +47,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 | `canvas_id`| 필수 | 문자열 | [캔버스 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 생성에 대한 응답에서 얻음). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 만들기 응답에서 얻은 값)입니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 요청 예시

@@ -58,3 +58,13 @@ es:
   edit_github: Editar esta página en GitHub
   page_nav_title: En esta página
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
+de:
+  next: NÄCHSTES
+  previous: VORHERIGES
+  popular_topic: Beliebte Themen
+  useful_resources: Hilfreiche Ressourcen
+  braze_status: BRAZE-SYSTEMSTATUS
+  braze_status_check: Braze-Status wird geprüft
+  edit_github: Diese Seite auf GitHub bearbeiten
+  page_nav_title: Auf dieser Seite
+  useful: "WIE HILFREICH WAR DIESE SEITE?"

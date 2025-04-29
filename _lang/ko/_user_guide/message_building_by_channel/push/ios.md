@@ -7,15 +7,15 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: iOS
-description: "이 랜딩 페이지에는 브레이즈에 대한 모든 것이 iOS 푸시 전용으로 나열되어 있습니다."
+description: "이 랜딩 페이지에는 Braze에 대한 모든 것이 iOS 푸시 전용으로 나열되어 있습니다."
 
 guide_top_header: "iOS 푸시"
-guide_top_text: "다음 문서에는 브레이즈에 대한 모든 iOS 푸시 관련 내용이 나열되어 있습니다."
+guide_top_text: "다음 문서에는 Braze에 대한 모든 iOS 푸시 관련 내용이 나열되어 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
 - name: "푸시 프라이머 캠페인"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "사용자 지정 가능한 앱 아이콘"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/

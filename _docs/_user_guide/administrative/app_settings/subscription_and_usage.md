@@ -15,10 +15,6 @@ search_rank: 5
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then selecting **Subscriptions and Usage**.
-{% endalert %}
-
 The **Billing** page includes the following tabs:
 
 - [Subscriptions and Usage](#subscriptions-and-usage)
@@ -49,7 +45,7 @@ Under **Most Used Events and Attributes By App**,  you can check the drivers of 
 
 For each app, you can select **See breakdown** to view an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
 
-![Most Used Events and Attributes By App breakdown tab][1]
+![Most Used Events and Attributes By App breakdown tab][1]{: style="max-width:60%"}
 
 Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
 

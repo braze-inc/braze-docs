@@ -1,7 +1,7 @@
 ---
 nav_title: 퀴리 빌더
 article_title: 퀴리 빌더
-page_order: 100
+page_order: 15
 page_type: reference
 description: "이 참조 문서에서는 Query Builder에서 Snowflake의 Braze 데이터를 사용하여 보고서를 구축하는 방법을 설명합니다."
 tool: Reports
@@ -9,13 +9,13 @@ tool: Reports
 
 # 퀴리 빌더
 
-> 쿼리 빌더는 Snowflake의 Braze 데이터을 사용하여 보고서를 생성합니다. 쿼리 빌더는 시작할 수 있도록 미리 작성된 SQL [쿼리 템플릿]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)과 함께 제공되며, 직접 커스텀 SQL 쿼리를 작성하여 더 많은 인사이트를 얻을 수 있습니다.
+> 쿼리 빌더는 Snowflake의 Braze 데이터를 사용하여 보고서를 생성합니다. 쿼리 빌더는 시작할 수 있도록 미리 작성된 SQL [쿼리 템플릿]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)과 함께 제공되며, 직접 커스텀 SQL 쿼리를 작성하여 더 많은 인사이트를 얻을 수 있습니다.
 
 쿼리 빌더는 일부 고객 데이터에 직접 액세스할 수 있으므로 "PII 보기" [권한]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/)이 있는 경우에만 쿼리 빌더에 액세스할 수 있습니다.
 
 ## 쿼리 빌더에서 보고서 실행
 
-쿼리 빌더 보고서를 실행하려면:
+쿼리 빌더 보고서를 실행하는 방법:
 
 1. **분석** > **쿼리 빌더**로 이동합니다.
 
@@ -25,33 +25,33 @@ tool: Reports
 
 {:start="2"}
 2\. **SQL 쿼리 만들기**을 선택하십시오. 영감이나 도움을 받아 쿼리를 작성하려면 **쿼리 템플릿**을 선택하고 목록에서 템플릿을 선택하세요. 그렇지 않으면 편집기로 바로 이동하려면 **SQL Editor**를 선택하십시오.
-3\. 귀하의 보고서는 현재 날짜와 시간으로 자동으로 이름이 지정됩니다. 이름 위에 마우스를 올리고 <i class="fas fa-pencil" alt="Edit"></i>을 선택하여 SQL 쿼리에 의미 있는 이름을 지정하세요.
-4\. 편집기에서 SQL 쿼리를 작성하거나 [AI](#ai-query-builder)의 도움을 받으세요 **AI 쿼리 빌더** 탭에서. 자체 SQL을 작성하는 경우, 요구 사항 및 리소스에 대해서는 [커스텀 SQL 쿼리 작성](#custom-sql)을 참조하십시오.
+3\. 보고서는 현재 날짜와 시간으로 자동으로 이름이 지정됩니다. 이름 위에 마우스를 올리고 <i class="fas fa-pencil" alt="Edit"></i>을 선택하여 SQL 쿼리에 의미 있는 이름을 지정하세요.
+4\. 편집기에서 SQL 쿼리를 작성하거나 **AI 쿼리 빌더** 탭에서 [AI](#ai-query-builder)의 도움을 받으세요. 자체 SQL을 작성하는 경우, 요구 사항 및 리소스에 대해서는 [커스텀 SQL 쿼리 작성](#custom-sql)을 참조하세요.
 5\. **쿼리 실행**을 선택합니다.
-6\. 저장 your query.
+6\. 쿼리를 저장합니다.
 7\. 보고서의 CSV를 다운로드하려면 **내보내기**를 선택하세요.
 
-![쿼리 빌더가 템플릿 쿼리 "채널 참여 및 매출 지난 30일 동안"에 대한 결과를 보여줍니다.]({% image_buster /assets/img_archive/query_builder.png %})
+![쿼리 빌더가 템플릿 쿼리 "채널 인게이지먼트 및 매출 지난 30일 동안"에 대한 결과를 보여줍니다.]({% image_buster /assets/img_archive/query_builder.png %})
 
 각 보고서의 결과는 하루에 한 번 생성할 수 있습니다. 하루에 같은 보고서를 한 번 이상 실행하면 두 보고서에서 동일한 결과를 볼 수 있습니다.
 
 ### 쿼리 템플릿
 
-모든 쿼리 템플릿은 지난 60일 동안의 데이터를 표시합니다. **Create SQL Query** > **Query Template**를 선택하여 보고서를 처음 만들 때 템플릿에 액세스합니다.
+보고서를 처음 만들 때 **SQL 쿼리 만들기** > **쿼리 템플릿을** 선택하여 쿼리 템플릿에 액세스합니다.
 
-[쿼리 템플릿]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)을(를) 참조하여 사용 가능한 템플릿 목록을 확인하세요.
+[쿼리 템플릿]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)을 참조하여 사용 가능한 템플릿 목록을 확인하세요.
+
+### 데이터 기간
+
+모든 쿼리는 지난 60일 동안의 데이터를 표시합니다. 
 
 ## AI 쿼리 빌더로 SQL 생성
 
 AI 쿼리 빌더는 [GPT](https://openai.com/gpt-4)를 활용하여 OpenAI에서 제공하는 SQL을 추천합니다.
 
-{% alert note %}
-AI 쿼리 빌더는 현재 베타 기능으로 제공됩니다. 베타 시험에 참여하고 싶으시면 고객 성공 매니저에게 문의하십시오.
-{% endalert %}
-
 ![][2]{: style="max-width:60%;" }
 
-AI 쿼리 빌더를 사용하여 SQL을 생성하려면:
+AI 쿼리 빌더를 사용하여 SQL을 생성하는 방법:
 
 1. 쿼리 빌더에서 보고서를 만든 후 **AI 쿼리 빌더** 탭을 선택합니다.
 2. 프롬프트를 입력하거나 샘플 프롬프트를 선택하고 **생성**을 선택하여 프롬프트를 SQL로 번역하십시오.
@@ -59,18 +59,18 @@ AI 쿼리 빌더를 사용하여 SQL을 생성하려면:
 
 ### 팁
 
-- 사용 가능한 [Snowflake 데이터 테이블]({{site.baseurl}}/sql_segments_tables/)에 익숙해지십시오. 이 표에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 표를 만들 수 있습니다.
-- 이 기능에 대한 [SQL 작성 규칙]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql)을 숙지하십시오. 이 규칙을 따르지 않으면 오류가 발생합니다.
+- 사용 가능한 [Snowflake 데이터 테이블]({{site.baseurl}}/sql_segments_tables/)에 익숙해집니다. 이러한 테이블에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 테이블을 구성하게 될 수 있습니다.
+- 이 기능에 대한 [SQL 작성 규칙을]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) 숙지하세요. 이 규칙을 따르지 않으면 오류가 발생합니다.
 - AI 쿼리 빌더를 사용하여 분당 최대 20개의 프롬프트를 보낼 수 있습니다.
 
 ### 내 데이터는 어떻게 사용되고 OpenAI로 전송되나요?
 <!-- Contact Legal for changes. -->
 
-SQL을 생성하기 위해 Braze는 귀하의 프롬프트를 OpenAI의 API 플랫폼에 보낼 것입니다. Braze에서 OpenAI로 전송된 모든 쿼리는 익명화되므로, 제공한 콘텐츠에 고유하게 식별 가능한 정보가 포함되지 않는 한 OpenAI는 쿼리를 보낸 사람을 식별할 수 없습니다. OpenAI의 API 플랫폼 약속에 자세히 설명된 바와 같이, Braze를 통해 OpenAI의 API로 전송된 데이터는 모델을 훈련하거나 개선하는 데 사용되지 않으며 30일 후에 삭제됩니다. OpenAI의 정책, 특히 [사용 정책](https://openai.com/policies/usage-policies)을(를) 준수해야 합니다. Braze는 AI 생성 콘텐츠에 대해 어떠한 종류의 보증도 하지 않습니다. 
+SQL을 생성하기 위해 Braze는 사용자의 프롬프트를 OpenAI의 API 플랫폼으로 전송합니다. Braze에서 OpenAI로 전송되는 모든 쿼리는 익명으로 처리되므로, 사용자가 제공하는 콘텐츠에 고유 식별 정보를 포함하지 않는 한 OpenAI는 해당 쿼리가 누구로부터 전송되었는지 확인할 수 없습니다. [OpenAI의 API 플랫폼](https://openai.com/policies/api-data-usage-policies) 약관에 명시된 바와 같이, Braze를 통해 OpenAI의 API로 전송된 데이터는 모델을 학습하거나 개선하는 데 사용되지 않으며 30일 후에 삭제됩니다. [사용 정책](https://openai.com/policies/usage-policies)을 포함하여 사용자와 관련된 OpenAI의 정책을 준수해야 합니다. Braze는 AI 생성 콘텐츠에 대해 어떠한 종류의 보증도 하지 않습니다. 
 
 ## 커스텀 SQL 쿼리 작성 {#custom-sql}
 
-[Snowflake syntax<1>를 사용하여 SQL 쿼리를 작성하십시오. 전체 테이블 및 쿼리할 수 있는 열 목록은 [테이블 참조]({{site.baseurl}}/sql_segments_tables/)를 참조하십시오.
+[Snowflake syntax](https://docs.snowflake.com/en/sql-reference)를 사용하여 SQL 쿼리를 작성하십시오. 전체 테이블 및 쿼리할 수 있는 열 목록은 [테이블 참조]({{site.baseurl}}/sql_segments_tables/)를 참조하십시오.
 
 쿼리 빌더 내에서 테이블 세부 정보를 보려면:
 
@@ -78,7 +78,7 @@ SQL을 생성하기 위해 Braze는 귀하의 프롬프트를 OpenAI의 API 플�
 3. <i class="fas fa-chevron-down" alt=""></i> **자세히 보기**를 선택하여 테이블 설명 및 데이터 유형과 같은 테이블 열에 대한 정보를 확인하십시오.
 4. SQL에 테이블 이름을 삽입하려면 <i class="fas fa-copy" title="SQL 편집기에 테이블 이름 복사"></i>을 선택하십시오.
 
-Braze에서 제공하는 미리 작성된 쿼리를 사용하려면 Query Builder에서 보고서를 처음 만들 때 **쿼리 템플릿**을 선택하십시오.
+Braze에서 제공하는 미리 작성된 쿼리를 사용하려면 Query Builder에서 보고서를 처음 만들 때 **쿼리 템플릿**을 선택하세요.
 
 특정 기간으로 쿼리를 제한하면 더 빠르게 결과를 생성할 수 있습니다. 다음은 지난 한 시간 동안 발생한 구매 수와 매출을 가져오는 예제 쿼리입니다.
 
@@ -88,12 +88,29 @@ FROM USERS_BEHAVIORS_PURCHASE_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('hour', -1, date_trunc('day',CURRENT_DATE()));
 ```
 
-이 쿼리는 지난 달에 보낸 이메일 수를 검색합니다:
+이 쿼리는 지난 달에 보낸 이메일 수를 검색합니다.
 
 ```sql
 SELECT COUNT(*) as Sends
 FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',CURRENT_DATE()));
+```
+
+`CANVAS_ID`, `CANVAS_VARIATION_API_ID` 또는 `CAMPAIGN_ID` 에 대해 쿼리하는 경우 관련 이름 열이 자동으로 결과 테이블에 포함됩니다. `SELECT` 쿼리 자체에 포함할 필요는 없습니다.
+
+| ID 이름 | 연관된 이름 열 |
+| --- | --- |
+| `CANVAS_ID` | 캔버스 이름 |
+| `CANVAS_VARIATION_API_ID` | 캔버스 변형 이름 |
+| `CAMPAIGN_ID` | 캠페인 이름 |
+{: .reset-td-br-1 .reset-td-br-2 }
+
+이 쿼리는 최대 100개의 행으로 세 개의 ID와 연결된 이름 열을 모두 검색합니다:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
 ```
 
 ### 문제 해결
@@ -103,7 +120,7 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 - SQL 쿼리의 구문 오류
 - 처리 시간 초과 (6분 후)
     - 6분 이상 실행되는 보고서는 시간 초과됩니다.
-    - 보고서가 시간 초과되면 쿼리하는 데이터의 시간 범위를 제한하거나 더 구체적인 데이터 세트를 쿼리해 보십시오.
+    - 보고서가 시간 초과되면 쿼리하는 데이터의 시간 범위를 제한하거나 더 구체적인 데이터 세트를 쿼리해 봅니다.
 
 ## 변수 사용
 
@@ -119,7 +136,7 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 ### 지침
 
-변수는 다음 Liquid 구문을 준수해야 합니다: {% raw %}`{{ type.${name}}}`{% endraw %}, 여기서 `type`는 허용된 유형 중 하나여야 하며 `name`는 선택할 수 있는 아무 것이나 될 수 있습니다. 이 변수들의 레이블은 기본값으로 변수 이름이 됩니다.
+변수가 준수해야 하는 Liquid 구문: {% raw %}`{{ type.${name}}}`{% endraw %}, 여기서 `type`은 허용된 유형 중 하나여야 하며 `name`은 선택할 수 있는 아무 것이나 될 수 있습니다. 이 변수들의 레이블은 기본값으로 변수 이름이 됩니다.
 
 기본값으로, 모든 변수는 필수입니다 (변수 값이 선택되지 않으면 보고서가 실행되지 않습니다) 날짜 범위를 제외하고, 값이 제공되지 않으면 기본값은 지난 30일입니다.
 
@@ -160,13 +177,13 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 | 날짜 범위 유형 | 설명 | 필수 값 |
 | --- | --- | --- |
-| 상대 | 지정된 지난 X일 | 필요합니다 `start_date` |
-| 시작일 | 시작 날짜를 지정합니다 | 필요합니다 `start_date` |
-| 종료일 | 종료 날짜를 지정합니다 | 필요합니다 `end_date` |
+| 상대 | 지정된 지난 X일 | `start_date` 필요 |
+| 시작일 | 시작 날짜를 지정합니다 | `start_date` 필요 |
+| 종료일 | 종료 날짜를 지정합니다 | `end_date` 필요 |
 | 날짜 범위 | 시작 날짜와 종료 날짜를 모두 지정합니다 | `start_date` 및 `end_date` 모두 필요합니다 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-- **대체 값:** `start_date` 및 `end_date`을(를) UTC의 지정된 날짜에 대한 초 단위의 Unix 타임스탬프로 대체합니다. 예: `1696517353`.
+- **대체 값:** `start_date` 및 `end_date`를 UTC의 지정된 날짜에 대한 초 단위의 Unix 타임스탬프로 대체합니다. 예: `1696517353`.
 - **사용 예:** 모든 상대, 시작 날짜, 종료 날짜 및 날짜 범위 변수에 대해:
     - {% raw %}`time > {{start_date.${some name}}} AND time < {{end_date.${some name}}}` {% endraw %}
         - 날짜 범위를 원하지 않는 경우 `start_date` 또는 `end_date`를 사용할 수 있습니다.
@@ -216,7 +233,7 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 선택한 캔버스에 속하는 캔버스 변형을 선택하기 위해. 캔버스 또는 캔버스 변수를 사용해야 합니다.
 
-- **대체 값:** 캔버스 변형 API ID, `api-id1, api-id2`와 같이 쉼표로 구분된 문자열.
+- **대체 값:** 캔버스 배리언트 API ID, `api-id1, api-id2`와 같이 쉼표로 구분된 문자열.
 - **사용 예:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
 
 ##### 캔버스 단계
@@ -244,19 +261,19 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 커스텀 이벤트 목록을 선택하기 위해.
 
-- **대체 값:** 커스텀 이벤트 속성정보 names are separated by commas such as in `event1, event2`
+- **대체 값:** 커스텀 이벤트 속성정보 이름은 `event1, event2`와 같이 쉼표로 구분됩니다.
 - **사용 예:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
 
 #### 커스텀 이벤트 속성
 
 커스텀 이벤트 속성정보 이름 목록을 선택하기 위해. 커스텀 이벤트 변수와 함께 사용해야 합니다.
 
-- **대체 값:** 커스텀 이벤트 속성정보 names are separated by commas such as in `property1, property2`
+- **대체 값:** 커스텀 이벤트 속성정보 이름은 `property1, property2`와 같이 쉼표로 구분됩니다.
 - **사용 예:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
 
 #### 워크스페이스
 
-작업 공간을 선택하기 위해서.
+워크스페이스를 선택하기 위해서.
 
 - **대체 값:** 워크스페이스 BSON ID
 - **사용 예:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
@@ -282,7 +299,7 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 - **대체 값:** 선택한 옵션의 값
 - **사용 예:**
     - 선택 드롭다운의 경우: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` 사용자가 여러 옵션을 선택할 수 있는지 여부를 지정할 수 있습니다
+        - `is_multi_select`를 이용하면여러 옵션을 선택할 수 있는지 여부를 지정할 수 있습니다
     - 라디오 버튼의 경우: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
 
 #### 세그먼트
@@ -308,11 +325,11 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 ### 변수 메타데이터
 
-메타데이터는 변수 이름 뒤에 파이프 ( | ) 문자를 추가하여 변수에 메타데이터를 첨부하여 동작을 변경할 수 있습니다. 메타데이터의 순서는 중요하지 않으며 원하는 만큼 추가할 수 있습니다. 또한 모든 유형의 메타데이터는 특정 변수에만 해당하는 특수 메타데이터를 제외하고는 모든 변수에 사용할 수 있습니다(이 경우에는 해당 사항이 표시됩니다). 모든 메타데이터의 사용은 선택 사항이며 기본값의 변수 동작을 변경하는 데 사용됩니다.
+메타데이터는 변수 이름 뒤에 파이프( | ) 문자를 추가하여 변수에 메타데이터를 첨부하여 동작을 변경할 수 있습니다. 메타데이터의 순서는 중요하지 않으며 원하는 만큼 추가할 수 있습니다. 또한 모든 유형의 메타데이터는 특정 변수에만 해당하는 특수 메타데이터를 제외하고는 모든 변수에 사용할 수 있습니다(이 경우에는 해당 사항이 표시됩니다). 모든 메타데이터의 사용은 선택 사항이며 기본값의 변수 동작을 변경하는 데 사용됩니다.
 
 **사용 예:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
 
-#### 보이는
+#### 표시 여부
 
 변수가 보이는지 여부에 따라. 모든 변수는 **변수** 탭에서 기본값으로 표시되며, 값을 입력할 수 있습니다.
 
@@ -328,11 +345,11 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 #### 주문
 
-변수 탭에서 변수의 위치를 선택합니다.
+**변수** 탭에서 변수의 위치를 선택합니다.
 
 **사용 예:** `order: ‘1’`
 
-#### 단일 인용 부호를 포함하십시오
+#### 작은따옴표 포함
 
 변수의 값을 작은따옴표로 둘러싸기 위해서입니다.
 
@@ -401,12 +418,12 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 - **대체 값:** `true` 또는 `false` 다른 변수의 값에 따라 다릅니다
 - **사용 예:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
 
-`type` 및 `name`는 참조된 변수를 나타냅니다. 예를 들어, 다음 선택적 변수를 단락시키려면: {% raw %}`{{campaigns.${messaging}}`, 다음을 사용할 수 있습니다:
+`type` 및 `name`는 참조된 변수를 나타냅니다. 예를 들어, 다음 선택적 변수를 단축하려면 {% raw %}`{{campaigns.${messaging}}`, 다음을 사용할 수 있습니다.
 `{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
 
 ## 보고서 시간 초과
 
-실행하는 데 6분 이상 걸리는 보고서는 시간 초과됩니다. 이것이 오랜만에 실행하는 첫 번째 쿼리라면 처리하는 데 시간이 더 걸릴 수 있으며, 따라서 시간 초과될 가능성이 더 높습니다. 이런 일이 발생하면 보고서를 다시 실행해 보십시오.
+6분 이상 실행되는 보고서는 시간 초과됩니다. 이것이 오랜만에 실행하는 첫 번째 쿼리라면 처리하는 데 시간이 더 걸릴 수 있으며, 따라서 시간 초과될 가능성이 더 높습니다. 이런 일이 발생하면 보고서를 다시 실행해 보십시오.
 
 보고서가 시간 초과되거나 다시 시도한 후에도 오류가 발생하면 [지원]({{site.baseurl}}/help/support#braze-support)에 문의하십시오.
 
@@ -416,19 +433,19 @@ WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',C
 
 ## 쿼리 빌더 사용 모니터링
 
-각 Braze 작업 공간에는 매월 5개의 Snowflake 크레딧이 제공됩니다. 쿼리를 실행하거나 테이블을 미리 볼 때마다 Snowflake 크레딧의 작은 부분이 사용됩니다.
+각 Braze 워크스페이스에는 매월 5개의 Snowflake 크레딧이 제공됩니다. 쿼리를 실행하거나 테이블을 미리 볼 때마다 Snowflake 크레딧의 작은 부분이 사용됩니다.
 
 {% alert note %}
-Snowflake 크레딧은 기능 간에 공유되지 않습니다. 예를 들어, SQL 세그먼트 확장 및 쿼리 빌더의 크레딧은 서로 독립적입니다.
+Snowflake 크레딧은 기능 간에 공유되지 않습니다. 예를 들어 SQL 세그먼트 확장 프로그램과 쿼리 빌더의 크레딧은 서로 독립적입니다.
 {% endalert %}
 
 크레딧 사용량은 SQL 쿼리의 실행 시간과 상관관계가 있습니다. 실행 시간이 길수록 쿼리에 소요되는 Snowflake 크레딧의 비율이 높아집니다. 실행 시간은 시간이 지남에 따라 쿼리의 복잡성과 크기에 따라 달라질 수 있습니다. 더 복잡하고 빈번한 쿼리를 실행할수록 리소스 할당이 커지고 실행 시간이 빨라집니다.
 
-크레딧은 Braze SQL 편집기에서 보고서를 작성, 편집 또는 저장할 때 사용되지 않습니다. 귀하의 크레딧은 매월 1일 오전 12시(UTC)에 5로 재설정됩니다. 귀하는 쿼리 빌더 페이지 상단에서 월간 크레딧 사용량을 모니터링할 수 있습니다.
+크레딧은 Braze SQL 편집기에서 보고서를 작성, 편집 또는 저장할 때 사용되지 않습니다. 크레딧은 매월 1일 한국 시간 09:00에 5로 초기화됩니다. 쿼리 빌더 페이지 상단에서 월간 크레딧 사용량을 모니터링할 수 있습니다.
 
-![쿼리 빌더는 현재 월에 사용된 크레딧 양을 보여줍니다.][1]{: style="max-width:60%;"}
+![쿼리 빌더는 이번 달에 사용된 크레딧 양을 보여줍니다.][1]{: style="max-width:60%;"}
 
-신용 한도에 도달하면 쿼리를 실행할 수 없지만 SQL 보고서를 생성, 편집 및 저장할 수 있습니다. 쿼리 빌더 크레딧을 더 구매하려면 계정 매니저에게 문의하세요.
+크레딧 한도에 도달하면 쿼리를 실행할 수 없지만 SQL 보고서를 생성, 편집 및 저장할 수 있습니다. 쿼리 빌더 크레딧을 더 구매하려면 계정 매니저에게 문의하세요.
 
 [1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
 [2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}

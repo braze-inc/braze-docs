@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## 概要
 
-![「How Predictive Events Works (予測イベントの仕組み)」というタイトルのグラフィック。左側には、機械学習モデルに組み込まれているユーザデータが表示されます。ラベルは「Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't.」です。右側には、機械学習の結果が表示されます。ここでは、ユーザーがイベントを実行する可能性が最も低いものから昇順にランク付けされています。ラベルは「Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting.」です。][1]
+![How Predictive Events Works（予測イベントの仕組み）」と題されたグラフィックは、ユーザーデータが機械学習モデルに取り込まれる様子を示している。ラベルは「Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't.」です。機械学習の結果が表示されます。ここでは、ユーザーがイベントを実行する可能性が最も低いものから昇順にランク付けされています。ラベルは「Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting.」です。][1]
 
 > 予測イベントは、マーケターが、イベントを実行する可能性に基づいてユーザーを特定し、メッセージを送るための強力なツールとなります。イベント予測を作成すると、Braze は[グラデーションブーストされた意思決定ツリー](https://en.wikipedia.org/wiki/Gradient_boosting) を使用して機械学習モデルをトレーニングし、以前のアクティビティから学習し、将来のアクティビティを予測します。
 
@@ -36,10 +36,6 @@ guide_featured_list:
 ## アクセス予測イベント
 
 [**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**予測**] は [**エンゲージメント**] の下にあります。
-{% endalert %}
 
 この機能を購入する前に、プレビューモードで使用できます。これにより、合成データを使用してデモ予測を表示したり、一度に1 つのプレビュー予測モデルを作成したりできます。この予測は、実際のユーザーデータに基づいて作成されますが、ユーザーの可能性スコアに従ってメッセージングのターゲットを設定することはできません。また、作成後も定期的に更新されません。
 

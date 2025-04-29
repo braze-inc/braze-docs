@@ -14,7 +14,7 @@ description: "この記事では、無効な電話番号を削除するBrazeエ�
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-> このエンドポイントを使用して、「無効な」電話番号を無効リストから削除する。 
+> このエンドポイントを使用して、「無効な」電話番号を無効リストから削除する。
 
 これを使用して、電話番号が無効とマークされた後、それらの電話番号を再検証できます。
 
@@ -43,10 +43,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ---------|------ |
-| `phone_number` | 必須 | e.164 形式の文字列の配列 | 変更する最大 50 個の電話番号の配列。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `phone_number` | required | e.164 形式の文字列の配列 | 変更する最大 50 個の電話番号の配列。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 

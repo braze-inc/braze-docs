@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | ----------|-----------| ---------|------ |
 | `email` | Obligatoria | Cadena o matriz | Cadena de direcciones de correo electrónico a modificar, o una matriz de hasta 50 direcciones de correo electrónico a modificar. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```

@@ -79,17 +79,23 @@ Después de desactivar su Grupo de Control, puede guardar uno nuevo. Al introduc
 
 ## Exporte los miembros de su grupo de control {#export-group-members}
 
-Si desea ver qué usuarios están en su Grupo de control global, puede exportar los miembros de su Grupo mediante CSV o API. 
+Si quieres ver qué usuarios están en tu grupo de control global, puedes exportar los miembros de tu grupo mediante CSV o API. 
 
-Para ejecutar una exportación CSV, vaya a la pestaña **Configuración global del grupo de control** y haga clic en <i class="fas fa-download"></i> **Exportar**. Para exportar a través de la API, utiliza el [punto final `/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+Para ejecutar una exportación CSV, vaya a la pestaña **Configuración global del grupo de control** y haga clic en <i class="fas fa-download"></i> **Exportar**. Para exportar por API, utiliza el [punto final`/users/export/global_control_group` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Los grupos de control históricos no se conservan, por lo que sólo puede exportar los miembros de su grupo actual. Asegúrese de exportar toda la información necesaria antes de desactivar un grupo de control.
 {% endalert %}
 
+## Ver si un usuario está en un grupo de control global
+
+Puedes ver la pertenencia a un grupo de control global yendo a la sección **Varios** en la pestaña **Interacción** del perfil de un usuario individual.
+
+![Una sección "Varios" informa de que el usuario tiene un número de contenedor aleatorio es 2030 y está en el grupo de control global.][1]{: style="max-width:60%;"}
+
 ## Informe
 
-Consulte [Informes de grupos de control global]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) para obtener información sobre las métricas de los informes.
+Consulte [Informes de grupos de control global]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) para obtener información sobre las métricas de los informes.
 
 ## Solución de problemas
 
@@ -163,6 +169,7 @@ Antes de comenzar el experimento, debe decidir cuánto tiempo va a durar y, a co
 
 Tenga en cuenta los comportamientos de referencia para las métricas que más le interesan. ¿Te interesan las tasas de compra de los planes de suscripción que sólo se renuevan anualmente? ¿O tienen los clientes un hábito semanal para el evento que le gustaría medir? Piense en el tiempo que tardan los usuarios en alterar potencialmente sus comportamientos debido a su mensaje. Después de decidir cuánto tiempo debe durar tu experimento, asegúrate de no terminar tu experimento ni registrar los resultados finales antes de tiempo, o tus conclusiones podrían estar sesgadas.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

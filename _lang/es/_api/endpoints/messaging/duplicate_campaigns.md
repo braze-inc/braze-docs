@@ -9,7 +9,7 @@ description: "En este artículo se describen los detalles del punto final Duplic
 
 ---
 {% api %}
-# Duplicar campañas a través de la API
+# Duplicar campañas utilizando la API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/duplicate
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "En este artículo se describen los detalles del punto final Duplic
 > Utilice este punto final para duplicar campañas. Este punto final de la API es similar a la [duplicación de campañas en el panel de control de Braze][1].
 
 {% alert important %}
-Duplicar una campaña a través de la API se encuentra actualmente en acceso temprano. Póngase en contacto con su gestor de cuenta Braze si está interesado en participar en el acceso anticipado.
+Duplicar una campaña utilizando la API está actualmente en acceso temprano. Póngase en contacto con su gestor de cuenta Braze si está interesado en participar en el acceso anticipado.
 {% endalert %}
 
 ## Requisitos previos

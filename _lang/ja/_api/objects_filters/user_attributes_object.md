@@ -42,7 +42,7 @@ Brazeユーザープロファイルフィールド名（以下にリストされ
 }
 ```
 
-- [外部ユーザ ID]({{site.baseurl}}/api/basics/#user-ids)
+- [外部ユーザ ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [ユーザーのエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
 プロファイル属性を削除するには、それを`null`に設定します。いくつかのフィールド、例えば `external_id` や `user_alias` は、ユーザープロファイルに追加された後に削除することはできません。
@@ -83,23 +83,23 @@ Brazeは、プッシュトークンを持たない`push_token_import`フラグ�
 
 | データ型 | メモ |
 | --- | --- |
-| 配列 | カスタム属性配列がサポートされている。カスタム属性配列に要素を追加すると、その要素が配列の最後に追加されます。ただし、既に存在する場合は、現在の位置から配列の最後に移動されます。<br><br>例えば、配列`['hotdog','hotdog','hotdog','pizza']`がインポートされた場合、一意の値のみがサポートされるため、配列属性には`['hotdog', 'pizza']`として表示されます。<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]` のようにして配列の値を設定するだけでなく、`"my_array_custom_attribute" : { "add" : ["Value3"] },` のようにして既存の配列に値を追加したり、`"my_array_custom_attribute" : { "remove" : [ "Value1" ]}` のようにして配列から値を削除したりすることもできます。<br><br>カスタム属性配列の要素の最大数はデフォルトで25ですが、個々の配列では最大100まで増やすことができます。詳細については、[配列][6]を参照してください。 |
-| オブジェクト配列 | オブジェクトの配列では、各オブジェクトが属性のセットを含むオブジェクトのリストを定義することができる。これは、ホテルの宿泊、購入履歴、嗜好など、ユーザーに関する複数の関連データを保存する必要がある場合に便利である。<br><br> 例えば、`hotel_stays` というユーザープロファイルにカスタム属性を定義することができる。このカスタム属性は、各オブジェクトが別々のステイを表す配列として定義することができ、`hotel_name`,`check_in_date`,`nights_stayed` のような属性を持つ。詳しくは[この例を](#array-of-objects-example)参照のこと。 |
+| 配列 | カスタム属性配列がサポートされています。カスタム属性配列に要素を追加すると、その要素が配列の最後に追加されます。ただし、既に存在する場合は、現在の位置から配列の最後に移動されます。<br><br>例えば、配列`['hotdog','hotdog','hotdog','pizza']`がインポートされた場合、一意の値のみがサポートされるため、配列属性には`['hotdog', 'pizza']`として表示されます。<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]` のようにして配列の値を設定するだけでなく、`"my_array_custom_attribute" : { "add" : ["Value3"] },` のようにして既存の配列に値を追加したり、`"my_array_custom_attribute" : { "remove" : [ "Value1" ]}` のようにして配列から値を削除したりすることもできます。<br><br>カスタム属性配列の要素の最大数はデフォルトで25ですが、個々の配列では最大100まで増やすことができます。詳細については、[配列][6]を参照してください。 |
+| オブジェクト配列 | オブジェクトの配列では、各オブジェクトに一連の属性が含まれるオブジェクトのリストを定義できます。これは、ホテルの滞在、購入履歴、環境設定など、ユーザーの関連データの複数のセットを保存する必要がある場合に便利です。<br><br> たとえば、`hotel_stays` という名前のユーザープロファイルにカスタム属性を定義できます。このカスタム属性は、各オブジェクトが個別の宿泊を表す配列として定義できます。各宿泊には、例えば `hotel_name`、`check_in_date`、`nights_stayed` などの属性が含まれます。詳細については、[この例](#array-of-objects-example)を参照してください。 |
 | ブール値 | `true` または `false` |
 | 日付 | [ISO 8601][19] 形式または次のいずれかの形式で保存する必要があります。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY`<br><br>「T」は時間指定子であり、プレースホルダーではないことに注意してください。変更または削除しないでください。<br><br>タイムゾーンのない時間属性はデフォルトでUTCの真夜中になります（ダッシュボード上では会社のタイムゾーンのUTCの真夜中に相当する形式で表示されます）。<br><br> タイムスタンプが未来のイベントはデフォルトで現在の時刻になります。<br><br> 通常のカスタム属性の場合、年が0未満または3000を超える場合、Brazeはこれらの値をユーザーに文字列として保存します。 |
-| フロート | フロート・カスタム属性は、小数点付きの正数または負数である。たとえば、口座残高や商品・サービスに対するユーザー評価を保存するためにフロートを使うことができる。 |
+| フロート | float カスタム属性は、小数点付きの正または負の数です。たとえば、浮動小数点を使用して、アカウントの残高や製品またはサービスのユーザー評価を保存できます。 |
 | 整数 | 整数のカスタム属性は、フィールド「inc」とインクリメントしたい値を持つオブジェクトを割り当てることによって、正または負の整数でインクリメントできます。<br><br>例: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| 階層化カスタム属性 | 階層化カスタム属性は、属性のセットを別の属性のプロパティとして定義する。カスタム属性オブジェクトを定義すると、そのオブジェクトの追加属性のセットを定義することになる。詳細については、「[階層化カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)」を参照してください。 |
-| 文字列 | 文字列カスタム属性は、テキストデータを格納するために使用される文字のシーケンスである。例えば、文字列を使って名と姓、メール・アドレス、好みなどを保存することができる。 |
+| 階層化カスタム属性 | ネストされたカスタム属性は、属性のセットを別の属性のプロパティとして定義します。カスタム属性オブジェクトを定義する場合は、そのオブジェクトの追加属性のセットを定義します。詳細については、「[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)」を参照してください。 |
+| 文字列 | 文字列カスタム属性は、テキストデータを格納するために使用される一連の文字です。たとえば、文字列を使用して、姓名、メールアドレス、好みを保存できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-カスタムイベントとカスタム属性の使い分けについては、[カスタムイベントと]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) [カスタム属性の]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)それぞれのドキュメントを参照のこと。
+カスタムイベントとカスタム属性を使用する場合の詳細については、[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)および[カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)のそれぞれのドキュメントを参照してください。
 {% endalert %}
 
 ##### オブジェクトの配列の例 
 
-このオブジェクトの配列により、滞在の中の特定の条件に基づいてセグメンテーションを作成し、Liquidテンプレートで各滞在のデータを使用してメッセージをパーソナライズさせることができる。
+このオブジェクトの配列を使用すると、宿泊内の特定の条件に基づいてセグメントを作成し、Liquid テンプレートを使用して各宿泊からのデータを使用してメッセージをパーソナライズできます。
 
 ```json
 "hotel_stays": [
@@ -136,7 +136,7 @@ Brazeは、プッシュトークンを持たない`push_token_import`フラグ�
 | language | (string) 言語は[ISO-639-1標準][24]でBrazeに渡される必要があります。サポートされている言語については、[受け入れ可能な言語のリスト][2]をご覧ください。<br><br>CSV インポートまたは API によってユーザーの `language` を設定すると、Braze は SDK を通じてこの情報を自動的に取得することができなくなります。 |
 | last_name | (string) |
 | marked_email_as_spam_at | （文字列）ユーザーのメールがスパムとしてマークされた日付。ISO 8601 形式または次のいずれかの形式で表示されます。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| phone | (文字列）電話番号は以下のフォーマットで提供することを推奨する。 [E.164](https://en.wikipedia.org/wiki/E.164)形式で提供することを推奨する。詳しくは[ユーザー電話]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting)番号を参照のこと。|
+| phone | (string) [E.164](https://en.wikipedia.org/wiki/E.164) 形式で電話番号を入力することをお勧めします。詳細は[ユーザー電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting)を参照してください。|
 | push_subscribe | (文字列) 使用できる値は、「opted_in」 (プッシュメッセージを受信するように明示的に登録)、「unsubscribed」 (プッシュメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
 | push_tokens | オブジェクトの配列は`app_id`と`token`の文字列です。このトークンが関連付けられているデバイスに`device_id`を任意で提供することができます。例えば、`[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`。`device_id` が提供されていない場合は、ランダムに生成されます。 |
 | subscription_groups| `subscription_group_id` および `subscription_state` の文字列を持つオブジェクト配列 (`[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`など) 。`subscription_state` の利用可能な値は「subscribed」と「unsubscribed」です。|

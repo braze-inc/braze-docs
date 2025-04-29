@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Braze コネクテッドコンテンツを使用して、Voucherify API からデータを取得し、特定の Braze セグメントにメッセージを送信できます。このリファレンス記事では、Voucherify クーポンの発行、新しい紹介者の招待、ロイヤルティカードの残高の取得などのために、コネクテッドコンテンツスクリプトを設定する方法などを紹介します。
 
+_この統合は、Voucherifyによって維持されます。_
+
+## 統合について
+
 スクリプトの基本スキーマは次のようになります:
 {% raw %}
 ```json
@@ -467,3 +471,4 @@ Brazeメッセージテンプレートのスニペット:
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
 レート制限とフリークエンシーキャップについて詳しくは、Braze の[ドキュメント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting)でご確認ください。
+

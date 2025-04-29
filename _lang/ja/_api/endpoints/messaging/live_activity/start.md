@@ -15,7 +15,7 @@ description: "この記事では、「ライブアクティビティを開始」
 /messages/live_activity/start
 {% endapimethod %}
 
-> このエンドポイントを使用して、iOSアプリに表示される[Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/)をリモートで開始します。このエンドポイントは追加のセットアップが必要です。
+> このエンドポイントを使用して、iOSアプリに表示される[Live Activities]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)をリモートで開始します。このエンドポイントは追加のセットアップが必要です。
 
 ライブアクティビティを作成した後、任意のセグメントのアクティビティをリモートで開始するためにPOSTリクエストを送信できます。詳細については、Appleのライブアクティビティについては、[ActivityKitプッシュ通知でライブアクティビティを開始および更新する](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)を参照してください。
 
@@ -26,7 +26,7 @@ description: "この記事では、「ライブアクティビティを開始」
 このエンドポイントを使用するには、次の手順を完了する必要があります:
 
 - `messages.live_activity.start` の権限を持つ API キーを生成します。
-- 「[ライブアクティビティを作成]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity)」Braze SWIFT SDK を使用します。
+- 「[ライブアクティビティを作成]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity)」Braze SWIFT SDK を使用します。
 
 ## レート制限
 
@@ -53,7 +53,7 @@ description: "この記事では、「ライブアクティビティを開始」
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型| 説明  |
+| パラメーター | required | データ型| 説明  |
 |-----------|----------|----------|--------------|
 | `app_id` | 必須 | 文字列 | アプリ[API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)は[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得されました。  |
 | `activity_id` | 必須 | 文字列  | カスタム文字列を`activity_id`として定義します。この ID を使用して、ライブアクティビティに更新または終了イベントを送信します。  |
@@ -66,7 +66,7 @@ description: "この記事では、「ライブアクティビティを開始」
 | `external_user_ids` | `segment_id`または`audience`が提供されている場合は任意 | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。  |
 | `segment_id `  | `external_user_ids`または`audience`が提供されている場合は任意 | 文字列    | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `custom_audience` | `external_user_ids`または`segment_id`が提供されている場合は任意 | 接続されたオーディエンスオブジェクト  | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 

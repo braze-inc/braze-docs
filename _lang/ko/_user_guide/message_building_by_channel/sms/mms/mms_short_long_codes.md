@@ -1,8 +1,8 @@
 ---
-nav_title: "MMS 단축 코드 및 장문 코드"
-article_title: MMS 단축 코드 및 장문 코드
+nav_title: "MMS 짧은 코드 및 긴 코드"
+article_title: MMS 짧은 코드 및 긴 코드
 page_order: 1
-description: "이 참조 문서는 SMS 및 MMS 단축 코드와 장기 코드 간의 차이점을 다룹니다."
+description: "이 참조 문서는 SMS 및 MMS 짧은 코드와 긴 코드 간의 차이점을 다룹니다."
 page_type: reference
 channel:
   - MMS
@@ -11,15 +11,15 @@ channel:
 
 # MMS 단문 및 장문 코드
 
-> MMS와 SMS는 모두 Braze SMS 채널과 연결되어 있습니다. 귀하의 계정에서 MMS에 액세스하려면 아직 액세스를 구매하지 않은 사람들을 위해 SMS를 구매해야 합니다. 기존 SMS 고객은 MMS를 구매한 후에 MMS에 액세스할 수 있습니다. 
+> MMS와 SMS는 모두 Braze SMS 채널과 연결되어 있습니다. 계정에서 MMS에 액세스하려면 아직 액세스를 구매하지 않은 사람들을 위해 SMS를 구매해야 합니다. 기존 SMS 고객은 MMS를 구매한 후에 MMS에 액세스할 수 있습니다. 
 
-MMS는 현재 미국 단축 번호(5-6자리 숫자), 미국 및 캐나다 장기 번호(10자리 숫자), 그리고 미국 및 캐나다 고객 번호를 지원합니다. 미국/캐나다 외의 번호로 번호를 보내는 것은 가능하지만, MMS 메시지는 미디어 자산에 대한 링크가 포함된 SMS 메시지로 변환됩니다. 더 읽으려면 [짧은 코드와 긴 코드]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/)를 참조하십시오.
+MMS는 현재 미국 짧은 코드(5-6자리 숫자), 미국 및 캐나다 긴 코드(10자리 숫자), 그리고 미국 및 캐나다 고객 번호를 지원합니다. 미국/캐나다 외의 번호로 번호를 보내는 것은 가능하지만, MMS 메시지는 미디어 자산에 대한 링크가 포함된 SMS 메시지로 변환됩니다. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
 
 ## MMS 단축 코드
 
-일부 사용자는 MMS 단축 코드를 구현하거나 사용하지 않을 수 있지만, 나중에 필요할 경우 사용할 수 있습니다.
+일부 사용자는 MMS 짧은 코드를 구현하거나 사용하지 않을 수 있지만, 나중에 필요할 경우 사용할 수 있습니다.
 
-Braze에서 MMS를 지원하기 전에 짧은 코드를 받은 사용자의 경우, 미국 짧은 코드를 가진 모든 기존 고객은 MMS를 즉시 활성화할 수 있습니다. 해당 상황이 귀하에게 적용되고 MMS를 활성화하고 싶다면 고객 성공 매니저에게 문의하십시오.
+Braze에서 MMS를 지원하기 전에 짧은 코드를 받은 사용자의 경우, 미국 짧은 코드를 가진 모든 기존 고객은 MMS를 즉시 활성화할 수 있습니다. 해당 상황이 귀하에게 적용되고 MMS를 활성화하고 싶다면 고객 성공 매니저에게 문의하세요.
 
 {% alert important %}
 짧은 코드에 대해 MMS를 활성화할 때 이전에 MMS가 활성화되지 않은 경우, 짧은 코드는 몇 주가 걸릴 수 있는 승인 절차에서 다시 승인되어야 할 수 있습니다. MMS를 활성화하기로 결정할 때 이 타이밍을 고려하는 것이 중요합니다.

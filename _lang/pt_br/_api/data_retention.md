@@ -58,7 +58,7 @@ Os dados enviados pela Braze a determinados subprocessadores ainda poderão exis
 
 #### Retenção de dados do Braze Data Lake
 
-Os dados disponíveis para os clientes no dashboard da Braze são, em sua maioria, agregados. Os registros detalhados são mantidos em um banco de dados separado criado pela Braze (o "Data Lake"). Os dados do Data Lake são usados para relatórios agregados e outras funcionalidades avançadas. O Braze remove as informações de identificação pessoal dos dados de eventos armazenados no Data Lake após dois anos (consulte mais informações em nossa página [Retenção de dados do Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention#snowflake-data-retention/) ).
+Os dados disponíveis para os clientes no dashboard da Braze são, em sua maioria, agregados. Os registros detalhados são mantidos em um banco de dados separado criado pela Braze (o "Data Lake"). Os dados do Data Lake são usados para relatórios agregados e outras funcionalidades avançadas. O Braze remove as informações de identificação pessoal dos dados de eventos armazenados no Data Lake após dois anos (consulte mais informações em nossa página [Retenção de dados do Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention#snowflake-data-retention/)).
 
 Se você usar nossas APIs para excluir perfis de usuários ou excluir ou alterar atribuições de perfis de usuários, poderá levar até três semanas para que esses dados sejam excluídos do Data Lake do Braze. A exclusão de dados no Data Lake não afetará a segmentação ou a personalização, mas garantirá que os dados sejam removidos de todos os sistemas Braze.
 

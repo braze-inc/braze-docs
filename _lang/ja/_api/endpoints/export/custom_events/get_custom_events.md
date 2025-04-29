@@ -28,7 +28,7 @@ description: "この記事では、カスタムイベントリストBrazeエン�
 
 ## リクエストパラメーター
 
-| パラメータ| 必須 | データ型 | 説明 |
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返されるイベント名のページ。デフォルトは0です (最大250の最初のセットを返す)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

@@ -30,7 +30,7 @@ description: "この記事では、セグメントリストBrazeエンドポイ�
 
 ## リクエストパラメーター
 
-| パラメータ| 必須 | データ型 | 説明 |
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返すセグメントのページ。デフォルトは0（最大100の最初のセットを返す）。 |
 | `sort_direction` | オプション | 文字列 | \- 作成時刻を新しいものから古いものへと並べ替える: 値 `desc` を渡します。<br> \- 作成時刻を古いものから新しいものへと並べ替える: 値 `asc` を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

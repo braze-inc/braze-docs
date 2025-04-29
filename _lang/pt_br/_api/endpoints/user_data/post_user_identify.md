@@ -15,17 +15,18 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Identif
 /users/identify
 {% endapimethod %}
 
-> Use esse ponto de extremidade para identificar um usuário não identificado (somente alias). 
+> Use esse ponto de extremidade para identificar um usuário não identificado (somente alias ou somente e-mail) usando a ID externa fornecida.
 
-{% alert important %}
-A partir de 7 de agosto de 2023, esse endpoint mesclará os dados de todas as chamadas. Isso significa que [`merge_behavior`](#merge) será definido como `merge` para todas as chamadas.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-A chamada para `/users/identify` combina o perfil somente de alias com o perfil identificado e remove o perfil somente de alias.
+## Como funciona?
 
-A identificação de um usuário requer que um `external_id` seja incluído no objeto `aliases_to_identify`. Se não houver nenhum usuário com esse `external_id`, o `external_id` será adicionado ao registro do usuário com alias, e o usuário será considerado identificado. É possível adicionar até 50 aliases de usuário por solicitação.
+A chamada para `/users/identify` combina um perfil de usuário que é identificado por um alias (perfil somente de alias) ou endereço de e-mail (perfil somente de e-mail) com um perfil de usuário que tem um `external_id` (perfil identificado) e, em seguida, remove o perfil somente de alias. 
 
-Posteriormente, é possível associar vários aliases de usuário adicionais a um único `external_id`. 
+A identificação de um usuário exige que um `external_id` seja incluído no objeto `aliases_to_identify` ou `emails_to_identify`. Se não houver um usuário com esse `external_id`, o `external_id` será adicionado ao registro do usuário aliasing, e o usuário será considerado identificado.
+
+Observe o seguinte:
+
 - Quando essas associações subsequentes são feitas com o campo `merge_behavior` definido como `none`, somente os tokens por push e o histórico de mensagens associados ao alias do usuário são mantidos; quaisquer atributos, eventos ou compras ficarão "órfãos" e não estarão disponíveis para o usuário identificado. Uma solução alternativa é exportar os dados do usuário com aliasing de usuário antes da identificação usando o [ponto de extremidade`/users/export/ids` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) e, em seguida, associar novamente os atributos, eventos e compras ao usuário identificado.
 - Quando as associações são feitas com o campo `merge_behavior` definido como `merge`, esse ponto de extremidade mesclará [campos específicos](#merge) encontrados no usuário anônimo com o usuário identificado.
 
@@ -33,14 +34,13 @@ Posteriormente, é possível associar vários aliases de usuário adicionais a u
 Para evitar a perda inesperada de dados ao identificar usuários, é altamente recomendável consultar primeiro [as práticas recomendadas de coleta de dados]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) para saber como capturar dados de usuários quando as informações de usuários com alias já estiverem presentes.
 {% endalert %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
-
 ## Pré-requisitos
 
 Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}/api/api_key/) com a permissão `users.identify`.
 
-## Limite de taxa 
-Um limite de frequência é aplicado a solicitações feitas a esse endpoint para clientes que fizeram a integração com o Braze em 16 de setembro de 2021 ou após essa data. Para saber mais, consulte [Limites da API]({{site.baseurl}}/api/basics/#api-limits).
+## Limite de taxa
+
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## Corpo da solicitação
 
@@ -51,22 +51,28 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-   "aliases_to_identify" : (required, array of alias to identify objects), 
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "email_addresses": (optional, array of string) User emails for the users to identify,
    "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
 }
 ```
 
 ### Parâmetros de solicitação
 
+É possível adicionar até 50 aliases de usuário por solicitação. É possível associar vários aliases de usuário adicionais a um único `external_id`.
+
 | Parâmetro             | Obrigatória | Tipo de dados                           | Descrição                                                                                                                                                                 |
-| --------------------- | -------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify` | Obrigatória | Vetor de aliases para identificar o objeto | Consulte [alias para identificar o objeto]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) e [o objeto de alias do usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `emails_to_identify`  | Obrigatória | Vetor de aliases para identificar o objeto | Consulte [Identificação de usuários por e-mail](#identifying-users-by-email).                                                                                                              |
 | `merge_behavior`      | Opcional | String                              | Espera-se que seja um dos sites `none` ou `merge`.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Campo Merge_behavior {#merge}
 
-Definir o campo `merge_behavior` como `merge` define o ponto de extremidade para mesclar qualquer um dos seguintes campos encontrados **exclusivamente** no usuário anônimo para o usuário identificado. 
+Definir o campo `merge_behavior` como `merge` define o endpoint para mesclar a seguinte lista de campos encontrados **exclusivamente** no usuário anônimo para o usuário identificado. Definir o campo como `none` não mesclará nenhum dado de usuário ao perfil de usuário identificado.
+
+{% details Lista de campos que são mesclados %}
 - Nome
 - Sobrenome
 - E-mail
@@ -96,16 +102,14 @@ Definir o campo `merge_behavior` como `merge` define o ponto de extremidade para
 - Resumos de campanha (o Braze escolherá os campos de data mais recentes)
 - Resumos do fluxo de trabalho (o Braze escolherá os campos de data mais recentes)
 - Histórico de mensagens e de engajamento com mensagens
-
-Qualquer um dos seguintes campos encontrados no usuário anônimo para o usuário identificado:
 - Contagem de eventos personalizados e eventos de compra e registros de data e hora da primeira e da última data 
   - Esses campos mesclados atualizarão os filtros "para X eventos em Y dias". Para eventos de compra, esses filtros incluem "número de compras em Y dias" e "dinheiro gasto nos últimos Y dias".
-
-Os dados de sessão só serão mesclados se o app existir em ambos os perfis de usuário. Por exemplo, se o usuário-alvo não tiver um resumo do aplicativo "ABCApp", mas o usuário original tiver, o usuário-alvo terá o resumo do aplicativo "ABCApp" em seu perfil após a mesclagem. 
-
-Definir o campo como `none` não mesclará nenhum dado de usuário ao perfil de usuário identificado.
+- Dados de sessão se o app existir em ambos os perfis de usuário
+  - Por exemplo, se o usuário-alvo não tiver um resumo do aplicativo "ABCApp", mas o usuário original tiver, o usuário-alvo terá o resumo do aplicativo "ABCApp" em seu perfil após a mesclagem.
+{% enddetails %}
 
 ### Identificação de usuários por e-mail
+
 Se um `email` for especificado como um identificador, um valor `prioritization` adicional será necessário no identificador. O `prioritization` deve ser uma matriz que especifica qual usuário deve ser mesclado se houver vários usuários encontrados. `prioritization` é uma matriz ordenada, ou seja, se mais de um usuário corresponder a uma priorização, a mesclagem não ocorrerá.
 
 Os valores permitidos para o vetor são: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refere-se à priorização do usuário atualizado mais recentemente.

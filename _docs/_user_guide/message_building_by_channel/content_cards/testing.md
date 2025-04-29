@@ -26,7 +26,7 @@ To send a test to either [content test groups]({{site.baseurl}}/user_guide/admin
 
 You can also preview messages from the **Test** tab as if you were a user. You can select a specific user, a random user, or create a custom user.
 
-![Custom_User_Preview][3]
+![A Content Card preview in the "Test" tab.][3]{: style="max-width:80%;"}
 
 ### Test checklist
 
@@ -37,16 +37,11 @@ You can also preview messages from the **Test** tab as if you were a user. You c
 
 ## Debug
 
-After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) in the Developer Console. 
+After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) in the Developer Console. 
 
 A common use case is trying to debug why a user can't see a particular Content Card. To do so, you can look in the **Event User Logs** for the Content Cards delivered to the SDK on session start, but prior to an impression, and trace those back to a specific campaign:
 
 1. Go to **Settings** > **Event User Log**.
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** in the **Developer Console**.
-{% endalert %}
-
-{:start="2"}
 2. Locate and expand the SDK Request for your test user.
 3. Click **Raw Data**.
 4. Find the `id` for your session. The following shows an example excerpt:
@@ -57,7 +52,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -69,14 +64,14 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 5. Use a decoding tool like [Base64 Decode and Encode](https://www.base64decode.org/) to decode the `id` from Base64 format and find the associated `campaign_id`. In our example, this results in the following:
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Where `6185005a9d9bee79387cce43` is the `campaign_id`.<br><br>
+    Where `4861692e-6fce-4215-bd05-3254fb9e9057` is the `campaign_id`.<br><br>
 
 6. Go to the **Campaigns** page and search for the `campaign_id`.
 
-![Search for campaign_id on Campaigns page][1]
+![Search for campaign_id on Campaigns page][1]{: style="max-width:80%;"}
 
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 

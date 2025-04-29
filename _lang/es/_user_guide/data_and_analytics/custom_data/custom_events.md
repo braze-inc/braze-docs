@@ -26,7 +26,7 @@ Algunos casos habituales de uso de eventos personalizados son:
 
 ## Gestión de eventos personalizados
 
-Puedes gestionar, crear o bloquear eventos personalizados en el panel yendo a **Configuración de datos** > Eventos personalizados.
+Puedes gestionar, crear o bloquear eventos personalizados en el panel yendo a **Configuración de datos** > **Eventos personalizados**.
 
 {% alert note %}
 Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Eventos personalizados** en **Administrar configuración**.
@@ -52,7 +52,7 @@ Puede añadir una descripción a un evento personalizado después de crearlo si 
 
 ## Añadir etiquetas
 
-Puedes añadir etiquetas a un evento personalizado después de crearlo si tienes el permiso de usuario "Gestionar eventos, atributos, compras". Las etiquetas pueden utilizarse para filtrar la lista de eventos. 
+Puedes añadir etiquetas a un evento personalizado después de crearlo si tienes el [permiso de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) "Gestionar eventos, atributos, compras". Las etiquetas pueden utilizarse para filtrar la lista de eventos. 
 
 {% alert important %}
 Esta función se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
@@ -224,7 +224,7 @@ Los filtros de segmentación de propiedades del evento incluyen:
 - Ha realizado alguna compra con la propiedad A con valor B, X veces en los últimos Y días.
 - Añade la posibilidad de segmentar en 1, 3, 7, 14, 21 y 30 días.
 
-![][3]
+![Un grupo de filtrar que "tiene 'Carrito Abandonado' con propiedad 'número de itmes' y valor '2' 'más de' 1'1 veces en los últimos '30' días naturales (720-744 horas)".][3]
 
 Los datos sólo se registran para una determinada propiedad del evento una vez que ha sido habilitada por tu administrador del éxito del cliente, y las propiedades del evento sólo están disponibles a partir de esa fecha en adelante.
 

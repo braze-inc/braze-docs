@@ -66,16 +66,11 @@ The following types of messages are exempt from the requirements of CASL:
 
 ### Message consent
 
-Messages that do not fall under one of the exemptions require "expressed or implied" consent from the message recipient.
+Braze requires explicit consent for all email and SMS/MMS messages.
 
 #### Implied consent
 
-Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (such as the 2 years after a purchase was made).
-
-- The recipient of a message has purchased or leased a product, good, service or completed other business with your organization in the last 2 years
-- The electronic address has been published and does not explicitly forbid unsolicited emails
-
-Implied consent is only valid for 6 months if the recipient does not become a customer.
+Implied consent may be legally allowed in some jurisdictions but is not sufficient for sending emails through Braze. Our Acceptable Use Policy goes beyond legal requirements.
 
 #### Express consent
 
@@ -122,6 +117,6 @@ In Android, your users can assume to be opted-in by the implied opt-in that is s
 [1]: #can-spam
 [2]: #casl
 [3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Email spam legislation by country"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM Act: A Compliance Guide for Business"
+[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country
+[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

@@ -8,13 +8,13 @@ tool: Canvas
 
 # Winning Path in Experiment Paths
 
-> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests.
+> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) in campaigns, and lets you automate your A/B tests.
 
 When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
 
 ## Using Winning Path
 
-### Step 1: Add an Experiment Path
+### Step 1: Add an Experiment Path step
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
 
@@ -26,19 +26,15 @@ Specify the conversion event that should determine the winner. If there are no c
 
 Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 
-![][2]
+![Winning Path Settings with the conversion event "Clicks" selected for a 12-hour experiment window.][2]
 
 ### Step 3: Determine fallback {#statistical-significance}
 
 By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path.
 
-Alternatively, you can select **Continue sending all future users the mix of paths**.
+Alternatively, you can select **Continue sending all future users the mix of paths**. This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
-![][6]
-
-This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
-
-![Percentages specified in the experiment distribution][3]
+!["Continue sending all future users the mix of paths" selected as what will happen to users if the test result isn't statistically significant.][6]
 
 {% alert note %}
 A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry and your Experiment step has three paths or fewer. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.

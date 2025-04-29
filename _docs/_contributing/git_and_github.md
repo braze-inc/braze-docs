@@ -71,13 +71,13 @@ $ git commit -m "Fixing a typo in the recommended software doc
 Finally, push your changes to the Braze Docs GitHub repository.
 
 ```bash
-git push -u origin BRANCH_NAME
+git push -u upstream BRANCH_NAME
 ```
 
 Replace `BRANCH_NAME` with the name of your branch. The output is similar to the following:
 
 ```bash
-$ git push -u origin fixing-typo-in-recommended-software
+$ git push -u upstream fixing-typo-in-recommended-software
 Enumerating objects: 14, done.
 ...
 To github.com:braze-inc/braze-docs.git

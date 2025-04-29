@@ -33,7 +33,7 @@ L'objet destinataire vous permet de combiner l'[objet alias d'utilisateur]({{sit
 ```
 
 - [Alias utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [ID utilisateur externe]({{site.baseurl}}/api/basics/#user-ids)
+- [ID utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Détermination de l’ordre de priorité]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 
 ## Déduplication d’objet Destinataire

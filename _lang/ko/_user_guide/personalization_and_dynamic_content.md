@@ -16,7 +16,7 @@ guide_featured_list:
 - name: 연결된 콘텐츠
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   image: /assets/img/braze_icons/server-01.svg
-- name: "딥링킹 to In-앱 Content"
+- name: "인앱 콘텐츠와의 딥링킹"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   image: /assets/img/braze_icons/phone-02.svg
 - name: 콘텐츠 블록
@@ -32,7 +32,7 @@ guide_featured_list:
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: 카탈로그
-  link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
   image: /assets/img/braze_icons/list.svg
 ---
 
@@ -41,4 +41,4 @@ guide_featured_list:
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#회계-처리-속성-값
+[37]:\#null 속성 값에 대한 회계 처리

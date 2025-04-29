@@ -77,7 +77,7 @@ Si los usuarios entran varias veces en una ruta de acción y tienen varias entra
 | **Activado** | Todas las candidaturas avanzarán al final de la ventana de evaluación correspondiente. No se producirá ninguna deduplicación. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}

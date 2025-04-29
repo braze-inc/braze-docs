@@ -21,3 +21,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/
   image: /assets/img/braze_icons/users-01.svg
 ---
+
+## 팀, 권한 집합 및 역할 간의 차이점은 무엇인가요? 
+
+{% multi_lang_include permissions.md content="Differences" %}

@@ -13,7 +13,7 @@ search_rank: 1
 
 # MMSキャンペーンを作成する
 
-> この記事には、SMSコンポーザーの一部であるMMSコンポジション特有の情報が含まれている。SMS/MMSコンポーザーの詳細については、[SMSコンポーザーを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/)参照のこと。
+> この記事には、SMSコンポーザーの一部であるMMSコンポジション特有の情報が含まれている。SMS / MMS 作成画面の詳細については、[SMS 作成画面]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/)を参照してください。
 
 ## MMS送信の基本
 
@@ -23,7 +23,7 @@ MMSが有効な電話番号を持つサブスクリプショングループを�
 
 ### メッセージ本文の入力
 
-メディアライブラリーからPNG、JPEG、GIF、およびVCF画像タイプを入力するか、URLを指定します。画像は1枚のみサポートされる。
+メディアライブラリーからPNG、JPEG、GIF、およびVCF画像タイプを入力するか、URLを指定します。サポートされる画像は1枚のみです。
 
 ### MMS 送信に関する知識
 
@@ -31,13 +31,13 @@ MMSは、テキストのみのSMSとは異なる料金で請求され、すべ�
 
 ### 連絡先カードを使う
 
-連絡先カード（vCardまたはVirtual Contact Files (vcf)として知られることもある）は、ビジネス情報や連絡先情報を送信するための標準化されたファイル形式で、アドレス帳や連絡帳に簡単にインポートすることができる。これらのカードは[プログラムで](https://www.twilio.com/blog/send-vcard-twilio-sms)作成し、Brazeメディアライブラリーにアップロードすることも、内蔵の[連絡先カードジェネレーターで]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)作成することもできる。
+連絡先カードは vCard または仮想連絡先ファイル (VCF) とも呼ばれ、アドレス帳や連絡先一覧に簡単にインポートできるビジネス情報や連絡先情報を送信するために標準化されたファイル形式です。これらのカードは[プログラムで](https://www.twilio.com/blog/send-vcard-twilio-sms)作成して Braze メディアライブラリにアップロードするか、または組み込みの[連絡先カードジェネレーター]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)を使用して作成できます。
 
 ## MMSメッセージの作成
 
-MMSメッセージを作成するには、サブスクリプショングループをMMS送信用に設定する必要があります。これは、サブスクリプショングループを選択するときにMMSタグが表示されることで示されます。MMS対応サブスクリプショングループを選択すると、画像写真のアップロード、画像URLの参照、または連絡先カードを含めるイネーブルメントができる。
+MMSメッセージを作成するには、サブスクリプショングループをMMS送信用に設定する必要があります。これは、サブスクリプショングループを選択するときにMMSタグが表示されることで示されます。MMS 対応の購読グループを選択すると、画像のアップロード、画像 URL の参照、連絡先カードの取り込みができるようになります。
 
-![]({% image_buster /assets/img/sms/mms_composer.png %}) "メッセージ作成画面 "タブでメッセージを書く。
+![メッセージを作成するための [作成] タブ。]({% image_buster /assets/img/sms/mms_composer.png %})
 
 ### 画像の仕様
 

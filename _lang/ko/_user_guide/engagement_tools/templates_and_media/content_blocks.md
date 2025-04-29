@@ -14,16 +14,16 @@ tool:
 
 > 콘텐츠 블록 라이브러리를 사용하면 재사용 가능한 크로스채널 콘텐츠를 단일 중앙 위치에서 관리할 수 있습니다.
 
-콘텐츠 블록을 사용하면 다음을 수행할 수 있습니다:
+콘텐츠 블록을 사용하면 다음을 수행할 수 있습니다.
 
 - 이메일 캠페인의 헤더와 푸터로 사용하여 일관된 모양과 느낌을 만드세요.
-- 다양한 채널을 통해 동일한 제안 코드를 배포하십시오.
+- 다양한 채널을 통해 동일한 제안 코드를 배포하세요.
 - 미리 정의된 자산을 생성하여 일관된 정보와 자산으로 메시지를 구축하는 데 사용할 수 있습니다.
 - 전체 메시지 본문을 다른 메시지로 복사합니다.
 
 ## 콘텐츠 블록 만들기
 
-콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. API를 통해 콘텐츠 블록을 생성하고 관리할 수도 있습니다][5].
+콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. [API를 통해][5] 콘텐츠 블록을 생성하고 관리할 수도 있습니다.
 
 {% tabs %}
 {% tab 드래그 앤 드롭 %}
@@ -40,14 +40,14 @@ tool:
 
 ### 콘텐츠 블록 사양
 
-| 콘텐츠 블록 속성 | 명세서 |
+| 콘텐츠 블록 속성 | 사양 |
 |---|---|
 | 이름 | 최대 100자까지 입력 가능한 필수 필드입니다. 콘텐츠 블록이 저장된 후에는 이름을 변경할 수 없습니다. 또한, 이전 콘텐츠 블록이 보관되었더라도 새 콘텐츠 블록에 이전 콘텐츠 블록과 동일한 이름을 지정할 수 없습니다. |
-| 설명 | (선택 사항) 최대 250자. 콘텐츠 블록을 설명하여 다른 Braze 사용자가 그것이 무엇을 위한 것이며 어디에 사용되는지 알 수 있도록 하십시오. |
+| 설명 | (선택 사항) 최대 250자. 콘텐츠 블록을 설명하여 다른 Braze 사용자가 그것이 무엇을 위한 것이며 어디에 사용되는지 알 수 있도록 하세요. |
 | 콘텐츠 크기 | 최대 50kB(킬로바이트). |
 | 배치 | 콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없습니다. |
-| 창조 | HTML 편집기 또는 드래그 앤 드롭 편집기. |
-{: .reset-td-br-1 .reset-td-br-2}
+| 생성 | HTML 편집기 또는 드래그 앤 드롭 편집기. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 콘텐츠 블록을 만들 때 줄 바꿈을 추가하여 HTML 및 Liquid를 시각화하는 것이 도움이 될 때가 있습니다. 이 줄 바꿈이 전송 중에 남아 있으면 블록이 렌더링되는 방식에 영향을 줄 수 있는 불필요한 공백이 생길 위험이 있습니다. 이를 피하려면 블록에 **Capture** 태그를 사용하고 **| strip** 필터를 함께 사용하십시오.
@@ -68,7 +68,7 @@ tool:
 2. 메시지에 콘텐츠 블록 Liquid 태그를 삽입합니다. Liquid 및 태그를 자동으로 채우기 위해 입력을 시작할 수도 있습니다.
 
 {% alert note %}
-캔버스 항목 속성과 이벤트 속성은 콘텐츠 블록이 아닌 캔버스에서만 지원됩니다.
+Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 {% endalert %}
 
 ### 콘텐츠 블록 업데이트 및 복사
@@ -77,11 +77,11 @@ tool:
 
 단일 메시지에 대한 콘텐츠 블록을 업데이트하거나 다른 메시지에서 사용할 복사본을 만들려면 원본 메시지에서 HTML을 새 메시지로 복사하거나 원본 콘텐츠 블록을 편집(이미 메시지에서 사용된 경우)하고 저장할 수 있습니다. 새로운 콘텐츠 블록으로 저장할 수 있는 프롬프트가 표시됩니다.
 
-콘텐츠 블록에 편집을 한 후 **콘텐츠 블록 실행**을 클릭하여 업데이트된 콘텐츠 블록을 저장하고 실행할 수 있습니다. 또는 **더보기** > **복제**를 선택하여 콘텐츠 블록의 복제본을 만들 수 있습니다.
+After making edits to a Content Block, you can save and launch the updated Content Block by selecting **Launch Content Block**. 또는 **더보기** > **복제**를 선택하여 콘텐츠 블록의 복제본을 만들 수 있습니다.
 
-![][2]
+![A Content Block that reads "Welcome to our newsletter".][2]
 
-콘텐츠 블록 이것은 콘텐츠 블록의 초안 사본을 만듭니다.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) a Content Block. 이것은 콘텐츠 블록의 초안 사본을 만듭니다.
 
 ### 콘텐츠 블록 미리보기
 
@@ -89,7 +89,7 @@ tool:
 
 이 미리보기에는 콘텐츠 블록에 대한 정보가 포함되어 있습니다. 예를 들어, 누가 만들었는지, 태그, 생성 날짜, 마지막 편집 날짜, 설명, 편집기 유형, 세부 사항이 포함된 포함 횟수, 그리고 실제 콘텐츠 블록의 미리보기가 포함됩니다.
 
-![][7]{: style="max-width:60%;"} 
+![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.][7]{: style="max-width:60%;"} 
 
 ### 중첩 콘텐츠 블록
 
@@ -103,15 +103,15 @@ tool:
 
 ### 콘텐츠 블록 보관
 
-![확장된 설정 드롭다운 메뉴에는 세 가지 옵션이 표시됩니다: 보관, 중복, 작업 공간으로 복사.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![확장된 설정 드롭다운 메뉴에는 세 가지 옵션이 표시됩니다: 워크스페이스로 아카이브, 복제 및 복사.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-콘텐츠 블록 사용을 마치면 [템플릿 및 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) 페이지에서 보관할 수 있습니다. 보관된 콘텐츠 블록은 읽기 전용이므로 편집하기 전에 콘텐츠 블록의 보관을 해제하십시오. 콘텐츠 블록은 메시지에서 사용되는 경우 보관할 수 없습니다.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) page. 보관된 콘텐츠 블록은 읽기 전용이므로 편집하기 전에 콘텐츠 블록의 보관을 해제하십시오. 콘텐츠 블록은 메시지에서 사용되는 경우 보관할 수 없습니다.
 
 #### 모범 사례
 
-- 귀하의 블록이 몇 개의 이메일에서만 사용되는 경우, 오래된 블록을 보관하고 보관되지 않은 새 블록으로 실시간 메시지를 업데이트하는 것이 좋습니다.
-- 블록에 오타가 있거나 사소한 변경이 필요한 경우, 블록을 보관하는 것을 권장하지 않습니다. 그냥 업데이트하고 보내세요!
-- 블록이 이 목록의 첫 번째 제안으로 합리적으로 관리할 수 있는 것보다 더 많은 메시지에서 사용되는 경우, 블록의 모든 내용을 제거한 다음 보관할 것을 권장합니다. 이것은 새로 보낸 이메일에 오래된 정보가 포함되지 않도록 보장할 것입니다.
+- 블록이 몇 개의 이메일에서만 사용되는 경우, 오래된 블록을 보관하고 보관되지 않은 새 블록으로 실시간 메시지를 업데이트하는 것이 좋습니다.
+- 블록에 오타가 있거나 사소한 변경이 필요한 경우, 블록을 보관하는 것을 권장하지 않습니다. Instead, update the block and get sending!
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. 이것은 새로 보낸 이메일에 오래된 정보가 포함되지 않도록 보장할 것입니다.
 - 콘텐츠 블록을 실수로 보관하면 보관 해제할 수 있습니다.
 
 ![저장된 콘텐츠 블록 패널에서 "Test_32"의 설정 드롭다운 메뉴가 확장되어 세 가지 옵션이 표시됩니다: 보관 해제, 복제 및 작업 공간으로 복사][4]

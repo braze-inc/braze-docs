@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Punchh](https://punchh.com/)は、ブランドが店内でもデジタルでもオムニチャネル 顧客 ロイヤルティプログラムを配信できる、業界をリードするロイヤルティとエンゲージメント プラットフォームです。 
 
+_この統合はPunchhによって維持されている。_
+
+## 統合について
+
 Braze と Punchh の統合により、2つのプラットフォーム間でギフティングやロイヤルティの目的でデータを同期できます。Braze で公開されたデータはセグメンテーションに使用でき、Braze Webhook を介してユーザーデータを再び Punchh に同期できます。
 
 ## メリットは何でしょうか。
@@ -49,9 +53,11 @@ Braze と Punchh の統合により、2つのプラットフォーム間でギ�
 
 Punchh は、Braze の顧客が利用できる複数のエンドポイントを提供します。これは、次の Punchh API エンドポイントを使用して Punchh プラットフォームに external ID を追加するのに役立ちます。外部ID を追加したら、Punchh でアダプターを作成し、Braze 認証情報を入力して、同期したい行動を選択します。次に、Punchh セグメントID を使用して、キャンバスジャーニーで顧客同期をトリガーする Punchh Webhook を作成できます。
 
-Punchh `user_id` は、使用する統合のカスタム属性「punchh_user_id」として Braze ユーザープロファイルに追加する必要があることに注意してください。同様に、Braze で使用されている`external_id` は、Punchh ユーザープロファイルに`external_source_id` フィールドとして含める必要があります。 
+Punchh`user_id` 、Braze`external_id` 、どちらのプラットフォームでも利用可能でなければ、正しく同期できない。 
+- PunchhからBrazeに送られるイベントには、識別子としてBraze`external_id` が含まれる。Punchh が`external_source_id` を使用するように設定されている場合、その値が Braze`external_id` として設定される。そうでない場合、統合はデフォルトで Punchh`user_id` を Braze`external_id` として設定する。
+- BrazeからPunchhへWebhookを送信するには、BrazeユーザープロファイルでPunchh`user_id` が利用可能である必要がある。Punchh`user_id` をBraze`external_id` として使用しない場合は、カスタム属性 "punchh_user_id "として設定する。 
 
-### ステップ1:external ID 取り込みエンドポイントを設定する
+### ステップ1:外部ID取り込みエンドポイントの設定（オプション）
 
 Braze の external ID は、新規および既存の Punchh ユーザーの次のエンドポイントを使用して追加できます。
 
@@ -320,7 +326,7 @@ Braze で作成されたセグメンテーションを使用する場合は、�
 [4]: {% image_buster /assets/img/punchh/punchh4.png %}
 [5]: {% image_buster /assets/img/punchh/punchh5.png %}
 [7]: {% image_buster /assets/img/punchh/punchh6.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [8]: {% image_buster /assets/img/punchh/update1.png %}
 [9]: {% image_buster /assets/img/punchh/update2.png %}
 [10]: {% image_buster /assets/img/punchh/update3.png %}

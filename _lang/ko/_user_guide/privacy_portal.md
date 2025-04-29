@@ -46,12 +46,12 @@ guide_featured_list:
   link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
   image: /assets/img/braze_icons/clock-rewind.svg
 - name: 기본 및 최소 SDK 데이터 수집
-  link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
+  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
 - name: 캔버스 오디언스 동기화 데이터 개인 정보 보호 고려 사항
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
   image: /assets/img/braze_icons/fingerprint-03.svg
-- name: 브레이즈 데이터 보존
+- name: Braze 데이터 유지
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
   image: /assets/img/braze_icons/database-01.svg
 - name: 사용자 아카이브
@@ -72,7 +72,7 @@ guide_menu_list:
 - name: 표준 계약 조항
   link: https://www.braze.com/company/legal/scc
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: 브레이즈 서브프로세서
+- name: Braze 서브프로세서
   link: https://www.braze.com/company/legal/subprocessors
   image: /assets/img/braze_icons/dataflow-04.svg
 - name: 투명성 보고서

@@ -1,9 +1,5 @@
 1. [**テンプレート**] > [**コンテンツブロック**] に移動します。<i class="fas fa-plus"></i>**Create Content Block**をクリックし、**Drag-and-drop Content Block**を選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、このページは**Engagement**> **Templates &Media**> **Content Block Library** にあります。
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

@@ -17,13 +17,13 @@ page_order: 5
 ## 항목 속성 사용
 
 항목 속성은 작업 기반 및 API 트리거 캔버스에서 사용할 수 있습니다. 이 항목 속성은 커스텀 이벤트, 구매 또는 API 호출에 의해 캔버스가 트리거될 때 정의됩니다. 자세한 내용은 다음 기사를 참조하십시오:
-- [캔버스 entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
+- [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [이벤트 속성 객체]({{site.baseurl}}/api/objects_filters/event_object/)
-- [구매 대상]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
+- [구매 객체]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 이들 객체에서 전달된 속성은 `canvas_entry_properties` Liquid 태그를 사용하여 참조할 수 있습니다. 예를 들어, `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`가 포함된 요청은 Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}를 추가하여 메시지에 "shoes"라는 단어를 추가할 수 있습니다.
 
-캔버스에 `canvas_entry_properties` Liquid 태그가 포함된 메시지가 포함된 경우, 해당 속성에 연결된 값은 사용자가 캔버스를 탐색하는 동안 저장되고 사용자가 캔버스를 종료할 때 삭제됩니다. 캔버스 항목 속성은 Liquid에서 참조용으로만 사용할 수 있습니다. 캔버스 내 속성을 필터링하려면 대신 [이벤트 속성정보 세분화]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)를 사용하십시오.
+캔버스에 `canvas_entry_properties` Liquid 태그가 포함된 메시지가 포함된 경우, 해당 속성에 연결된 값은 사용자가 캔버스를 탐색하는 동안 저장되고 사용자가 캔버스를 종료할 때 삭제됩니다. 캔버스 항목 속성은 Liquid에서 참조용으로만 사용할 수 있습니다. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
 캔버스 항목 속성 객체의 최대 크기 제한은 50KB입니다.
@@ -31,11 +31,11 @@ page_order: 5
 
 ## 엔트리 속성을 사용하도록 캔버스 업데이트 중
 
-이전에 `canvas_entry_properties`을(를) 사용하지 않은 메시지가 포함되지 않은 활성 캔버스가 `canvas_entry_properties`을(를) 포함하도록 편집된 경우, `canvas_entry_properties`이(가) 캔버스에 추가되기 전에 캔버스에 들어간 사용자에게 해당 속성에 해당하는 값이 제공되지 않습니다. 값은 변경이 이루어진 후 캔버스에 들어가는 사용자에게만 저장됩니다.
+이전에 `canvas_entry_properties`를 사용하지 않은 메시지가 포함되지 않은 활성 캔버스가 `canvas_entry_properties`를 포함하도록 편집된 경우, `canvas_entry_properties`가 캔버스에 추가되기 전에 캔버스에 들어간 사용자에게 해당 속성에 해당하는 값이 제공되지 않습니다. 값은 변경이 이루어진 후 캔버스에 들어가는 사용자에게만 저장됩니다.
 
-예를 들어, 11월 3일에 항목 속성을 사용하지 않는 캔버스를 처음 시작한 후 11월 11일에 새 속성 `product_name`을(를) 캔버스에 추가한 경우, `product_name`에 대한 값은 11월 11일 이후에 캔버스에 들어간 사용자만 저장됩니다.
+예를 들어, 11월 3일에 항목 속성을 사용하지 않는 캔버스를 처음 시작한 후 11월 11일에 새 속성 `product_name`을 캔버스에 추가한 경우, `product_name`에 대한 값은 11월 11일 이후에 캔버스에 들어간 사용자만 저장됩니다.
 
-Canvas 항목 속성이 null이거나 비어 있는 경우 조건문을 사용하여 메시지를 중단할 수 있습니다. 다음 코드 스니펫은 Liquid를 사용하여 메시지를 중단하는 방법의 예입니다.
+캔버스 항목 속성이 null이거나 비어 있는 경우 조건문을 사용하여 메시지를 중단할 수 있습니다. 다음 코드 스니펫은 Liquid를 사용하여 메시지를 중단하는 방법의 예입니다.
 {%raw%}
 ```
 {% if canvas_entry_properties.${product_name} == blank %}
@@ -48,7 +48,7 @@ Liquid 메시지 중단에 대한 자세한 내용을 보려면 [Liquid 설명�
 
 ## 글로벌 캔버스 항목 속성
 
-`canvas_entry_properties`을 사용하면 모든 사용자에게 적용되는 전역 속성이나 지정된 사용자에게만 적용되는 사용자별 속성을 설정할 수 있습니다. 사용자별 속성은 해당 사용자의 전역 속성을 대체합니다.
+`canvas_entry_properties`를 사용하면 모든 사용자에게 적용되는 전역 속성이나 지정된 사용자에게만 적용되는 사용자별 속성을 설정할 수 있습니다. 사용자별 속성은 해당 사용자의 전역 속성을 대체합니다.
 
 ### 예시 요청
 
@@ -80,7 +80,7 @@ url -X POST \
 
 ## 사용 사례
 
-사용자가 전자 상거래 사이트에서 항목을 검색하지만 장바구니에 추가하지 않을 때 트리거되는 캔버스가 있는 경우, 캔버스의 첫 번째 단계는 항목 구매에 관심이 있는지 묻는 푸시 알림일 수 있습니다. 제품 이름을 참조할 수 있습니다 {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 제품 이름을 참조할 수 있습니다
 
 ![][1]{: style="border:0;margin-left:15px;"}
 

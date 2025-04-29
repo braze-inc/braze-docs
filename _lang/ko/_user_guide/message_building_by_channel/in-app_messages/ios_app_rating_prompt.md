@@ -14,7 +14,7 @@ channel:
 
 Apple은 iOS 10.3에 도입된 기본 프롬프트를 통해 사용자가 앱 자체에서 앱을 평가할 수 있는 기능을 제공합니다. iOS에서 인앱 메시지를 사용하여 사용자에게 앱 등급을 요청하려면 Apple에서 사용자 지정 검토 메시지를 허용하지 않으므로 기본 메시지를 사용해야 합니다( [앱 스토어 검토 가이드라인](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct) 5.6.1절 참조).
 
-Apple 가이드라인에 따라 앱 리뷰 프롬프트는 1년에 최대 3회까지 사용자에게 표시될 수 있으므로 모든 앱 리뷰 캠페인은 [비율 제한을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) 활용해야 합니다. 또한 사용자는 앱 설정에서 앱 리뷰 메시지를 완전히 표시하지 않도록 선택할 수도 있습니다. App Store 평가에 대한 자세한 내용은 Apple의 [평가, 리뷰 및 응답에](https://developer.apple.com/app-store/ratings-and-reviews/) 대한 문서를 참조하세요.
+Apple 가이드라인에 따라 앱 리뷰 프롬프트는 1년에 최대 3회까지 사용자에게 표시될 수 있으므로 모든 앱 리뷰 캠페인은 [사용량 제한조치]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)를 활용해야 합니다. 또한 사용자는 앱 설정에서 앱 리뷰 메시지를 완전히 표시하지 않도록 선택할 수도 있습니다. App Store 평가에 대한 자세한 내용은 Apple의 [평가, 리뷰 및 응답에](https://developer.apple.com/app-store/ratings-and-reviews/) 대한 문서를 참조하세요.
 
 ## Braze를 사용하여 사용자에게 앱 리뷰 요청하기
 
@@ -28,9 +28,9 @@ Apple은 기본 프롬프트를 사용하도록 요구하지만, Braze 캠페인
 
 ### 접근 방식 2: 소프트 프라이밍
 
-사용자가 앱을 떠나지 않도록 하려면 먼저 별도의 인앱 메시지로 사용자에게 메시지를 전달할 수 있습니다. 프라이밍은 기본 App Store 리뷰 프롬프트를 보내기 전에 사용자에게 권한을 요청하는 방법입니다. 이렇게 하려면 인앱 메시지 캠페인을 생성하고 클릭 시 `requestReview` 메서드를 호출하는 사용자 지정 딥링크를 추가합니다. 
+사용자가 앱을 떠나지 않도록 하려면 먼저 별도의 인앱 메시지로 사용자에게 메시지를 전달할 수 있습니다. 프라이밍은 기본 App Store 리뷰 프롬프트를 보내기 전에 사용자에게 권한을 요청하는 방법입니다. 이렇게 하려면 인앱 메시지 캠페인을 생성하고 클릭 시 `requestReview` 메서드를 호출하는 커스텀 딥링크를 추가합니다. 
 
-자세한 단계는 [사용자 지정 앱 스토어 검토 프롬프트를]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/) 참조하세요.
+For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
 
 ![두 개의 인앱 메시지를 나란히 표시합니다. 첫 번째는 앱을 평가할 시간이 있는지 물어봄으로써 사용자가 앱을 평가하도록 유도합니다. 두 번째는 기본 iOS 앱 스토어 리뷰 메시지로, 사용자가 앱을 평가하기 위해 선택할 수 있는 별 5개 등급을 표시합니다.][2]
 

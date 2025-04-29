@@ -34,4 +34,4 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"
+[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale

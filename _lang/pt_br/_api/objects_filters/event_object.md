@@ -71,7 +71,7 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 | Objetos | Os objetos serão ingeridos como strings. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem ter uma carga útil de propriedade de evento de até 50 KB.
+Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem ter uma carga útil de propriedade de evento de até 100 KB.
 
 ### Persistência de propriedades de eventos
 As propriedades de eventos são projetadas para filtragem e personalização de Liquid em mensagens disparadas por seus eventos principais. Por padrão, eles não são mantidos no perfil de usuário da Braze. Para usar valores de propriedades de eventos na segmentação, consulte [eventos personalizados][5], que detalha as várias abordagens para armazenar valores de propriedades de eventos a longo prazo.
@@ -109,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 8601 Time Code Wiki][19]
 
 ## Objetos de eventos
 

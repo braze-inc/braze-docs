@@ -16,7 +16,9 @@ description: "This article outlines details about the Delete users Braze endpoin
 
 > Use this endpoint to delete any user profile by specifying a known user identifier.
 
-Up to 50 `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request.
+Up to 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request. 
+
+If you have a use case that can't be solved with bulk user deletion through the API, contact the [Braze Support team]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for assistance.
 
 {% alert warning %}
 Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile using the API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
@@ -41,20 +43,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External ids for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
 ### Request parameters
 
 | Parameter         | Required | Data Type                  | Description                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | Optional | Array of strings           | External identifiers for the users to delete.                                                    |
-| `user_aliases`    | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for the users to delete. |
-| `braze_ids`       | Optional | Array of strings           | Braze user identifiers for the users to delete.                                                  |
-| `email_addresses` | Optional | Array of strings           | User emails for the users to delete. Refer to [Deleting users by email](#deleting-users-by-email) for more information.                                                             |
+| `external_ids`    | Optional | Array of strings           | External identifiers to be deleted.                                                    |
+| `user_aliases`    | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) to be deleted. |
+| `braze_ids`       | Optional | Array of strings           | Braze user identifiers to be deleted.                                                  |
+| `email_addresses` | Optional | Array of strings           | User emails to be deleted. Refer to [Deleting users by email](#deleting-users-by-email) for more information.                                                             |
+| `phone_numbers` | Optional | Array of strings | User phone numbers to be deleted. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Deleting users by email
@@ -100,7 +104,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
-  "deleted" : (required, integer) number of user ids queued for deletion
+  "deleted" : (required, integer) number of user IDs queued for deletion
 }
 ```
 {% endapi %}

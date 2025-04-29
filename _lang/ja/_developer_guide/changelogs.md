@@ -1,74 +1,103 @@
 ---
-page_order: 90
-nav_title: 変更履歴
-layout: dev_guide
-guide_top_header: "Braze SDK 変更ログ"
-guide_top_text: "Braze Docs または個々の GitHub リポジトリ内で、各 SDK の以下の変更ログを利用できます。"
-description: "このランディングページでは、Braze Docs および個々の GitHub リポジトリ内で利用可能な各 SDK の変更ログが一覧にされています。"
-
-guide_featured_title: "Braze Docs の変更ログ"
-guide_featured_list:
-  - name: Android SDK
-    link: /docs/developer_guide/platform_integration_guides/android/changelog/
-    image: /assets/img/braze_icons/android.svg
-  - name: iOS SDK (Swift)
-    link: /docs/developer_guide/platform_integration_guides/swift/changelog/
-    image: /assets/img/braze_icons/apple.svg
-  - name: iOS SDK (Objective-C)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
-    image: /assets/img/braze_icons/apple.svg
-  - name: ウェブSDK
-    link: /docs/developer_guide/platform_integration_guides/web/changelog/
-    image: /assets/img/braze_icons/globe-02.svg
-  - name: Cordova SDK
-    link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
-    image: /assets/img/cordova.png
-  - name: Flutter SDK
-    link: /docs/developer_guide/platform_integration_guides/flutter/changelog/
-    image: /assets/img/flutter_icon.png
-  - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/changelog/
-    image: /assets/img/reactnative_icon.png
-  - name: Unity SDK
-    link: /docs/developer_guide/platform_integration_guides/unity/changelog/
-    image: /assets/img/unity.png
-  - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/changelog/
-    image: /assets/img/xamarin.png  
-  - name: Roku SDK
-    link: /docs/developer_guide/platform_integration_guides/roku/changelog/
-    image: /assets/img/roku.png
-
-guide_menu_title: "Changelogs on GitHub"
-guide_menu_list:
-  - name: Android SDK
-    link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/braze_icons/android.svg
-  - name: iOS SDK (Swift)
-    link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
-    image: /assets/img/braze_icons/apple.svg
-  - name: iOS SDK (Objective-C)
-    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/braze_icons/apple.svg
-  - name: ウェブSDK
-    link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/braze_icons/globe-02.svg
-  - name: Cordova SDK
-    link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/cordova.png
-  - name: Flutter SDK
-    link: https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/flutter_icon.png
-  - name: React Native
-    link: https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/reactnative_icon.png
-  - name: Unity SDK
-    link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/unity.png
-  - name: Xamarin
-    link: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/xamarin.png  
-  - name: Roku SDK
-    link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
-    image: /assets/img/roku.png
+page_order: 98.1
+nav_title: 変更ログ
+description: "このリファレンスページには、各Braze SDKの変更履歴と、公開GitHubリポジトリの変更履歴へのリンクが含まれている。"
+platform: 
+  - Android
+  - Swift
+  - Web
+  - Cordova
+  - FireOS
+  - Flutter
+  - React Native
+  - Roku
+  - Unity
+  - Unreal Engine
+  - Xamarin
 ---
+
+# Braze SDKの変更履歴
+
+> このリファレンスページには、各Braze SDKの変更履歴と、公開GitHubリポジトリの変更履歴へのリンクが含まれている。リソースの全リストは、[リファレンス、リポジトリ、サンプルアプリを]({{site.baseurl}}/developer_guide/references/)参照のこと。
+
+{% sdktabs %}
+{% sdktab android %}
+{% alert tip %}
+[AndroidのBraze SDKの変更履歴はGitHubでも](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)見ることができる。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-android-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab swift %}
+{% alert tip %}
+[Swift Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-swift-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab web %}
+{% alert tip %}
+[Web Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab cordova %}
+{% alert tip %}
+[Cordova Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md)ある。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-cordova-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab flutter %}
+{% alert tip %}
+[FlutterのBraze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md)ある。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-flutter-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% alert tip %}
+[React Native Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-react-native-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% alert tip %}
+[Roku Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-roku-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-roku-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab unity %}
+{% alert tip %}
+[Unity Braze SDKの変更履歴はGitHubにも](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)ある。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab unreal engine %}
+{% alert tip %}
+また、[Unreal Engine Braze SDKの変更履歴もGitHubに](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
+{% sdktab xamarin %}
+{% alert tip %}
+また、[Xamarin Braze SDKの変更履歴もGitHubに](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)掲載されている。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+{% endsdktabs %}

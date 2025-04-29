@@ -7,11 +7,9 @@ description: "Este artículo de referencia explica cómo crear y utilizar selecc
 
 # Selecciones
 
-> Aprenda a crear y utilizar selecciones con sus catálogos.
+> Las selecciones son grupos de datos que pueden utilizarse para personalizar un mensaje para cada usuario de su campaña. Cuando utiliza una selección, básicamente está configurando filtros personalizados basados en columnas específicas de su catálogo. Puede incluir filtros por marca, tamaño, ubicación, fecha de adición, etc. Le da el control sobre lo que muestra a los usuarios al permitirle definir criterios que los artículos deben cumplir primero.<br><br>Esta página explica cómo crear y utilizar selecciones con tus catálogos.
 
-Las selecciones son grupos de datos que pueden utilizarse para personalizar un mensaje para cada usuario de su campaña. Cuando utiliza una selección, básicamente está configurando filtros personalizados basados en columnas específicas de su catálogo. Puede incluir filtros por marca, tamaño, ubicación, fecha de adición, etc. Le da el control sobre lo que muestra a los usuarios al permitirle definir criterios que los artículos deben cumplir primero.
-
-Después de crear un [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), puede seguir haciendo referencia a los datos de su catálogo incorporando selecciones en sus campañas o recomendaciones Braze.
+Después de crear un [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), puede seguir haciendo referencia a los datos de su catálogo incorporando selecciones en sus campañas o recomendaciones Braze.
 
 ![La sección Selecciones de un catálogo de ejemplo.][1]
 
@@ -19,7 +17,7 @@ Después de crear un [catálogo]({{site.baseurl}}/user_guide/personalization_and
 
 - Puede crear hasta 30 selecciones por catálogo.
 - Puedes añadir hasta cuatro filtros por selección.
-- Las selecciones son estupendas para refinar las recomendaciones a partir de los datos del catálogo de Braze. Si busca inspiración, eche un vistazo a [las recomendaciones de About item]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/) para ver ejemplos de casos de uso.
+- Las selecciones son estupendas para refinar las recomendaciones a partir de los datos del catálogo de Braze. Si busca inspiración, eche un vistazo a [las recomendaciones de About item]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) para ver ejemplos de casos de uso.
 
 ## Crear una selección
 
@@ -28,11 +26,15 @@ Para crear una selección, haga lo siguiente.
 1. Vaya a **Catálogos** y seleccione su catálogo de la lista.
 2. Seleccione la pestaña **Selección** y haga clic en **Crear selección**.
 3. Dé a su selección un nombre y una descripción opcional.
-4. En **Campo de filtro**, seleccione la columna del catálogo por la que desea filtrar. Los campos de cadena con más de 1.000 caracteres no pueden seleccionarse para los filtros.
+4. En **Campo de filtro**, seleccione la columna del catálogo por la que desea filtrar. Los campos de cadena con más de 1.000 caracteres no se pueden seleccionar para filtrar.
 5. Termine de definir los criterios de filtrado seleccionando el operador correspondiente (por ejemplo, "igual" o "no igual") y el atributo.
 6. En la sección **Tipo de ordenación**, determine cómo se ordenan los resultados. Por defecto, los resultados no se muestran en un orden determinado. Para especificar la ordenación por un campo concreto, desactive **Ordenar aleatoriamente** y especifique el **Campo de ordenación** y el **Orden de ordenación** (ascendente o descendente).
-7. En la sección **Límite de resultados**, introduzca el número máximo de resultados, hasta 50.
-8. Haga clic en **Crear selección**.
+7. En la sección **Límite de** resultados, introduce los resultados (hasta 50).
+8. Selecciona **Crear selección**.
+
+### Prueba y vista previa
+
+Después de crear una selección, puedes utilizar la sección **Vista previa para el usuario** para ver lo que devolvería una selección para un usuario aleatorio o para un usuario concreto. Para las selecciones que utilizan personalización, sólo puedes ver la vista previa después de seleccionar un usuario.
 
 ### Líquido en los resultados de la selección
 
@@ -44,13 +46,13 @@ El uso de cualquier Líquido en los catálogos, como atributos personalizados y 
 
 Tras crear tu selección, personaliza tus mensajes con Liquid para insertar los elementos filtrados de ese catálogo. Puede hacer que Braze genere el Líquido por usted desde la ventana de personalización que se encuentra en los compositores de mensajes:
 
-1. En cualquier compositor de mensajes que admita la personalización, haga clic en <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Añadir personalización"></i> para abrir la ventana de personalización.
+1. En cualquier creador de mensajes que admita la personalización, selecciona <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Añadir personalización"></i> para abrir la ventana de personalización.
 2. En **Tipo de personalización**, seleccione **Elementos de catálogo**.
 3. Seleccione el nombre de su catálogo.
 4. En **Método de selección de elementos**, seleccione **Utilizar una selección**.
 4. Seleccione su selección de la lista.
 5. En **Información a mostrar**, seleccione qué campos del catálogo deben incluirse para cada artículo.
-6. Haga clic en el icono **Copiar** y pegue el Líquido donde tenga que ir en su mensaje.
+6. Selecciona el icono **Copiar** y pega el Liquid donde sea necesario en tu mensaje.
 
 ![El modal Añadir Personalización con las siguientes selecciones: "Catalog Items" para "Personalization Type", "Games" para "Catalog Name", "Selections" para "Selection Type", "game_selection" para "Selection", y "title" y "description_es" para "Information to Display".][6]{: style="max-width:70%;"}
 

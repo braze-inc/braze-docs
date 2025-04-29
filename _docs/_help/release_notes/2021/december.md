@@ -17,7 +17,7 @@ Beginning December 2021, the following changes take effect for the [Export users
 
 ## New properties for Currents message engagement events
 
-New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
+New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
 
 - Add `LINK_ID`, `LINK_ALIAS` to:
   - Email Click (all destinations)
@@ -51,10 +51,10 @@ If you'd like to learn more, visit our new [Amazon Personalize]({{site.baseurl}}
 
 ## New Braze partnerships
 
-### Yotpo – Ecommerce
+### Yotpo – eCommerce
 
-The [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) and Braze integration allows you to dynamically pull and display star ratings, top reviews, and visual user-generated content on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
+The [Yotpo]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/yotpo/) and Braze integration allows you to dynamically pull and display star ratings, top reviews, and visual user-generated content on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 
 ### Zeotap – Customer data platform
 
-With the [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) and Braze integration, you can extend the scale and reach of your campaigns by syncing Zeotap customer segments to map Zeotap user data to Braze user accounts. You can then act on this data, delivering personalized target experiences to your users.
+With the [Zeotap]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/zeotap/) and Braze integration, you can extend the scale and reach of your campaigns by syncing Zeotap customer segments to map Zeotap user data to Braze user accounts. You can then act on this data, delivering personalized target experiences to your users.

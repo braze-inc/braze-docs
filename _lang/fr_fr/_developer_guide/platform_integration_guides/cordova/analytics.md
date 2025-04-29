@@ -8,7 +8,7 @@ page_order: 3
 
 > Découvrez comment intégrer l'analyse pour le SDK Braze Cordova.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Journalisation des événements personnalisés
 

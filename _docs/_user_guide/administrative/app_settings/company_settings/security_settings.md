@@ -13,10 +13,6 @@ description: "This reference article covers generic cross-company security setti
 
 To access this page, go to **Settings** > **Admin Settings** > **Security Settings**.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Security Settings**.
-{% endalert %}
-
 ## Authentication rules
 
 ### Password length
@@ -31,7 +27,7 @@ Select **Enforce complex passwords** to require passwords to include at least on
 - Number
 - Special character
 
-### Password reusability
+### Password re-usability
 
 Determines the minimum number of new passwords that must be set before a user can reuse a password. The default is three.
 
@@ -57,23 +53,29 @@ Use the field shown to allowlist specific IP addresses and subnets from which us
 
 Two-factor authentication is required for all Braze users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
 
-When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
+When two-factor authentication is turned on:
+
+- In addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent through an authenticator app, email, or SMS. 
+- The **Remember this account for 30 days** checkbox becomes available to users.
 
 Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
-### Remember me
+Be sure to save your changes before leaving the page!
 
-![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-After toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication once over the course of 30 days.
+### Remember this account for 30 days {#remember-me}
+
+This feature is available when two-factor authentication is turned on.
+
+When you select **Remember this account for 30 days**, a cookie is stored on your device, only requiring you to log in with two-factor authentication once over the course of 30 days. 
+
+![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:50%;margin-left:15px;"}
 
 Customers with multiple accounts under a dashboard company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
-Be sure to save your changes before leaving the page!
-
 ### Resetting user authentication
 
-Users experiencing issues logging in with two-factor authentication can contact their company administrators to reset their two-factor authentication. To do this, have an administrator perform the following steps:
+If you're having issues logging in with two-factor authentication, contact your company administrators to reset your two-factor authentication. Administrators can perform the following steps:
 
 1. Go to **Settings** > **Company Users**.
 2. Select the user from the provided list.
@@ -102,64 +104,65 @@ To download this report, do the following:
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
 {% details Reported security events %}
+
 ### Login and account 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Removed Developer
+- Added Additional Developer
+- Signed In
+- Failed Login
+- Two-Factor Auth Setup Completed
+- Two-Factor Auth Reset Completed
+- Cleared Developer 2FA
+- Developer Suspended
+- Developer Unsuspended
 
 ### Elevated access
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Started Elevated Access Flow
+- Completed Elevated Access Flow
+- Failed 2FA Verification For Elevated Access
 
 ### Campaign
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- Added Campaign
+- Edited Campaign
 
 ### Canvas
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- Added Journey
+- Edited Journey
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Added Segment
+- Edited Segment
+- Exported data to CSV
+- Exported Segment via API
 
 ### REST API key
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- Added REST API key
+- Removed REST API key
 
 ### Basic authentication credential
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Added Basic Auth credential
+- Updated Basic Auth credential
+- Removed Basic Auth credential
 
 ### Permission
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Cleared Developer 2FA
+- Updated Account Permission
 
 ### Company settings
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- Added App Group
+- Added App
 
 ### Email template
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- Added Email Template
+- Updated Email Template
 
 ### Push credential
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Updated Push Credential
+- Removed Push Credential
 
 ### SDK Debugger
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Started SDK Debugger Session
+- Exported SDK Debugger Log
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
@@ -211,6 +214,7 @@ You are responsible for determining the correct preferences for your workspace. 
 | Custom event | properties |  |
 | Purchase event | properties |  |
 | Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
 **Deletion is permanent!** If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.

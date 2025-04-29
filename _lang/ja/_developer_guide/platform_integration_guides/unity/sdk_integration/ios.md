@@ -28,7 +28,7 @@ Braze Unity パッケージは、次の2種類の統合オプションを使用�
   - この統合オプションは、Braze Android および iOS SDK と、iOS SDK の [SDWebImage](https://github.com/SDWebImage/SDWebImage) 依存関係をバンドルします。これは、Braze アプリ内メッセージングと、iOS 上のコンテンツカード機能を適切に機能させるために必要です。`SDWebImage` フレームワークは、GIF を含む画像のダウンロードと表示に使用されます。完全なBraze機能を使用する場合は、このパッケージを読み込むしてインポートします。
   - `SDWebImage` を自動的にインポートするには、[Braze 構成] の下にある Unity UIで `Import SDWebImage dependency` の横にあるボックスに*チェックマークが入れられている*ことを確認してください。
 
-**iOS**:iOS プロジェクトの[SDWebImage](https://github.com/SDWebImage/SDWebImage) 依存関係が必要かどうかを確認するには、[iOS in-app message documentation] を参照してください。{{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).<br>
+**iOS**:iOS プロジェクトに [SDWebImage](https://github.com/SDWebImage/SDWebImage) の依存関係が必要かどうかを確認するには、[iOS アプリ内メッセージドキュメント]を参照してください。({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).] <br>
 **Android**:Unity 2.6.0 以降、バンドルされた Braze Android SDK アーティファクトには [AndroidX](https://developer.android.com/jetpack/androidx) 依存関係が必要です。以前に`jetified unitypackage` を使用していた場合は、対応する`unitypackage` に安全に移行できます。
 
 ## ステップ2:パッケージをインポートする

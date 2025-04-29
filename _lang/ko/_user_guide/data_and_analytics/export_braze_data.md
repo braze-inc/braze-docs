@@ -4,7 +4,7 @@ article_title: Braze 데이터 내보내기
 page_order: 6
 layout: dev_guide
 guide_top_header: "Braze 데이터 내보내기"
-guide_top_text: "Braze는 Braze 대시보드 데이터의 CSV 내보내기를 제공하여 다양한 도구로 데이터를 분석할 수 있습니다. 다음 기사들은 대시보드에서 내보낼 수 있는 다양한 유형의 데이터를 다루며, Excel에서 데이터를 여는 팁과 API를 사용한 내보내기 방법도 포함하고 있습니다.<br><br>내보내기를 수행하기 전에 데이터를 보고자 하는 올바른 기간을 선택했는지 확인하십시오."
+guide_top_text: "Braze는 Braze 대시보드 데이터의 CSV 내보내기를 제공하여 다양한 도구로 데이터를 분석할 수 있습니다. 다음 기사들은 대시보드에서 내보낼 수 있는 다양한 유형의 데이터를 다루며, Excel에서 데이터를 여는 팁과 API를 사용한 내보내기 방법도 포함하고 있습니다.<br><br>내보내기를 수행하기 전에 데이터를 보고자 하는 올바른 기간을 선택했는지 확인하세요."
 
 page_type: landing
 description: "이 랜딩 페이지는 캠페인 및 캔버스 결과, 세그먼트 데이터, 개요 및 매출 데이터 등을 내보내는 방법과 같은 Braze 데이터 내보내기에 대한 리소스의 홈입니다."
@@ -34,9 +34,6 @@ guide_menu_list:
   - name: 매출 데이터 내보내기
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
-  - name: 뉴스피드 데이터 내보내기
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    image: /assets/img/braze_icons/announcement-02.svg
   - name: 내보내기 커스텀 이벤트 데이터
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg

@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner custom Currents connector
+# Custom Currents connector
 
-## Serialization and data format
+> Learn how to integrate a custom Currents connector, so you can get event data from Braze in real time, enabling more customized analytics, reporting, and automation.
 
-The target data format will be JSON over HTTPS. Events will be grouped into batches of events, the size of which is configurable, and sent to the endpoint as a JSON array containing all of the events. The batches will be sent in the following format:
+## Prerequisites
 
-`{"events": [event1, event2, event3, etc...]}`
+To integrate a custom Currents connector in Braze, you'll need to provide an endpoint URL and an [optional authentication token](#authentication).
 
-There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
+Additionally, if you have more than one app group in Braze, you'll need to configure a custom Currents connector for each group. However, you can point all app groups to the same endpoint, or to an endpoint with an additional `GET` parameter, such as `your_app_group_key=”Brand A”`.
 
-The following examples are for _individual_ events (such as they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
+## Preventing data loss
+
+### Error monitoring
+
+To avoid data loss and service interruption, its essential that you monitor your endpoints at all times and aim to address hard errors or downtime within 24 hours.
+
+For most error types, (such as server errors, network connection errors, etc.), Braze will continue to queue and retry event transmissions for up to 24 hours. After that time, non-transmitted events will be dropped. Connectors with consistently poor error rates or uptime will be automatically suspended.
+
+### Change resilience
+
+Occasionally, we'll make non-breaking changes to Braze Currents schemas. Non-breaking changes are new nullable columns or event types.
+
+We typically give a two-week notice for these changes, but sometimes this isn't possible. Its essential that you design your integration to handle unrecognized fields or event types, otherwise it will likely lead to data loss.
+
+{% alert tip %}
+For the full list of Currents event schemas, [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+{% endalert %}
+
+## Batching and serialization
+
+The target data format is JSON over HTTPS. By default, events are batched into groups of 100 based on the following:
+
+- **Number of queued events**: For example, if batch size is configured for 200 events and there are 200 events in the queue.
+- **Length of an event:** Typically events are not queued if an event is longer than 15 minutes. Each event type has a separate queue, so latency may vary across event types.
+
+Events are then sent to the endpoint as a JSON array of all events in the following format:
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+There will be a top-level JSON object with the key `"events"` that maps to an array of further JSON objects, each representing a single event.
+
+## Payload examples
+
+The following examples show payloads for individual events, meaning the payloads would belong to a larger array of JSON objects, where each JSON object represents a single event in the batch.
+
+Additionally, their structure varies slightly from the flat structure found in [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events). In particular, they contain two sub-objects:
+
+|Name|Description|
+|----|-----------|
+|`"user"`|Contains user properties such as `user_id`, `external_user_id`, `device_id`, and `timezone`.|
+|`"properties"`|Contains attributes of an event, such as the `app/campaign/canvas/platform` it applies to.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+If a downstream endpoint receives a payload with zero events or an empty request body, the result should be considered a no-op, meaning no downstream effects should occur from this call. However, you should still check the `Authorization` header (like you would a normal API call), and give an appropriate HTTP response for [invalid credentials](#authentication), such as `401` or `403`. This let's Braze know that the connector's credentials are valid.
 
 ### Campaign-associated events
 
 Here are some example event payloads for various events, as they would appear if associated with a campaign:
 
-```
+#### In-App Message Click
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### Push Notification Send
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### Email Open
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### SMS Delivery
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ Here are some example event payloads for various events, as they would appear if
 
 Here are some example event payloads for various events, as they would appear if associated with a Canvas:
 
-```
+#### In-App Message Click
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### Push Notification Send
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### Email Open
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-```
+#### SMS Delivery
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ Here are some example event payloads for various events, as they would appear if
 
 Here are some example event payloads for various other events that are not associated with either campaigns or Canvases:
 
-```
+#### Custom Event
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ Here are some example event payloads for various other events that are not assoc
 }
 ```
 
-```
+#### Purchase Event
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ Here are some example event payloads for various other events that are not assoc
 }
 ```
 
-```
+#### Session Start
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,51 +380,105 @@ Here are some example event payloads for various other events that are not assoc
 
 ## Authentication
 
-If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how for example, AWS's custom auth scheme works) if we so choose in the future.
+Authentication tokens in your payload are optional. They can be passed through an HTTP `Authorization` header using the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Although optional, if an authentication token is passed, Braze will always validate it first&#8212;even if no events are in the payload.
 
-As per RFC 6750, the token will be a Base64-encoded value of at least one character. (Obviously though, we must vet our partners and customers so that we know that they are unlikely to choose incredibly weak tokens.) A notable quirk of RFC 6750 is that it allows the token to contain the following characters in addition to the normal Base64 characters: '-', '.', '_', and '~'. Since the exact contents of the token make absolutely no difference to any of our systems, we won't care whether our partners decide to include these characters in their token or not.
+Per RFC 6750, tokens should be Base64-encoded values with at least one character. Keep in mind, RFC 6750 allows tokens to contain the following characters in addition to the normal Base64 characters: `-`, `.`, `_`, and `~`. You can choose whether you'd like to include these characters in your token or not&#8212;however, it must be in Base64 format.
 
-Per RFC 6750, the header will be constructed using the following format:
+Additionally, if the `Authorization` header is present, it will be constructed using the following format:
 
-`"Authorization: Bearer " + <token>`
+```plaintext
+"Authorization: Bearer " + <token>
+```
 
-So for example, if the API token is `0p3n5354m3==`, the Authorization header will look like this:
+For example, if your authentication token is `0p3n5354m3==`, your `Authorization` header should be similar to the following:
 
-`Authorization: Bearer 0p3n5354m3==`
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+{% alert note %}
+In the future, we may use `Authorization` headers to implement a custom, key-value-pair, authorization scheme that's unique to Braze. This would adhere to the [RFC 7235](https://tools.ietf.org/html/rfc7235) specification, which is how some companies implement their authentication schemes, such as Amazon Web Services (AWS).
+{% endalert %}
 
 ## Versioning
 
-All requests from our Integratable HTTP Connectors will be sent with a custom header designating the version of the Currents request being made:
+All requests from our HTTP connector integration will be sent with a custom header designating the version of the Currents request being made:
 
-`Braze-Currents-Version: 1`
+```plaintext
+Braze-Currents-Version: 1
+```
 
-The version will always be 1 unless we make severely backward-incompatible changes to the request payload or semantics. We don't expect to increment this number very often, if ever. 
+The version will always be `1` unless, as we don't expect to increment this number very often, if ever.
 
-Individual events will follow the same evolution rules as our existing Avro schemas. That is, every event's fields will be guaranteed to be backward-compatible with prior versions of the event payloads according to the Avro definition of backward-compatibility, including the following rules:
+Just like our [data warehouse storage schemas]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), every event field in an individual event is guaranteed to be backward-compatible with previous event payload versions, according to the [Apache Avro](https://avro.apache.org/) definition of backward-compatibility:
 
-- Specific event fields are guaranteed to always have the same datatype over time.
-- Any new fields that are added to the payload over time must be considered optional by all parties.
-- Required fields will never be removed.
-  - What is considered "required" will be specified via documentation that we will likely want to auto-generate from our Avro schemas as the central source of truth. This will require us to annotate the Avro schema fields with some metadata, and a special script that can read that metadata to generate the documentation.
+1. Specific event fields are guaranteed to always have the same datatype over time.
+2. Any new fields that are added to the payload over time must be considered optional by all parties.
+3. Required fields will never be removed.
 
 ## Error handling and retry mechanism
 
-In the event of an error, Braze will queue and retry the request based on the HTTP return code received. Any HTTP error code not listed below will be treated as an HTTP 5XX error.
+If an error occurs, Braze will queue and retry the request based on the HTTP return code received. It will continue to retry for at least two days, as long as data is buffered in the system. If data is stuck for more than 24 hours, our on-call engineers will be alerted automatically. At this time, our backoff strategy is to retry periodically.
 
-{% alert important %}
-If our retry mechanism fails to deliver events to their endpoint for more than 24 hours, there will be data loss.
+If your Currents integration starts returning `4XX` errors, Braze will automatically send you a notification email and automatically extend the retention period to a minimum of seven days.
+
+Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
+
+{% alert warning %}
+If the Braze retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
 {% endalert %}
 
 The following HTTP status codes will be recognized by our connector client:
-- **2XX** — Success
-  - Event data will not be re-sent.<br><br>
-- **5XX** — Serverside error
-  - Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.<br><br>
-- **400** — Client-side error
-  - Our connector somehow sent at least one malformed event. If this occurs, the event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive an additional HTTP 400 response will be dropped permanently. Partners and/or customers should be encouraged to let us know if they detect this occurring on their end.<br><br>
-- **401** (Unauthorized), **403** (Forbidden), **404**
-  - The connector was configured with invalid credentials. The connector task will halt sending, and will be marked as "Failed". Event data will be re-sent after a delay of between 2 and 5 minutes (this is handled by the Connect Task Restarter). If this issue is not resolved by the customer within 48 hours, the event data will be dropped.<br><br>
-- **413** — Payload Too Large
-  - Event data will be split into smaller batches and re-sent.<br><br>
-- **429** — Too Many Requests
-  - Indicates rate limiting. Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Response</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>Success</td>
+      <td>Event data will not be re-sent.</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td>Server-side error</td>
+      <td>Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td>Client-side error</td>
+      <td>The connector sent at least one malformed event. The event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive another <code>400</code> response will be dropped permanently. You should report repeated occurrences.</td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td>Unauthorized</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td>Forbidden</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td>Not Found</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td>Payload Too Large</td>
+      <td>Event data will be split into smaller batches and re-sent.</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td>Too Many Requests</td>
+      <td>Indicates rate limiting. Event data will be re-sent in an exponential backoff pattern with jitter. If not successfully sent within 24 hours, it will be dropped.</td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

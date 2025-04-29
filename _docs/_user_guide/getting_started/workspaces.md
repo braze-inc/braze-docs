@@ -18,7 +18,7 @@ Workspaces serve two key purposes:
 - **Separating distinct activities:** Workspaces also provide a means to keep distinct brands or activities separate. For instance, if you have multiple sub-brands with different user bases, it's beneficial to create separate workspaces for each.
 
 {% alert tip %} 
-This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or ecommerce sites that want separate workspaces for each region they operate in. 
+This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or eCommerce sites that want separate workspaces for each region they operate in. 
 {% endalert %}
 
 ## Planning workspaces
@@ -188,24 +188,24 @@ The following table describes the benefits and drawbacks of these two approaches
         <td>Frequency capping applies to all campaigns, not on a per-app basis, which makes it harder to prevent over-messaging customers.</td>
     </tr>
     <tr>
-        <td>Subscription status</td>
-        <td>Subscription status for each user profile is unique to each app instance.</td>
+        <td>Subscription status for user profiles</td>
+        <td>Each user profile's subscription status is unique to each app instance.</td>
         <td>N/A</td>
         <td>N/A</td>
-        <td>Subscription statuses across app instances are combined for a user profile.<br><br><b>Tip:</b> You could use custom attributes to manage subscriptions instead.</td>
+        <td>A user profile's subscription statuses are combined across app instances.<br><br><b>Tip:</b> You could use <a href='/docs/user_guide/data/custom_data/custom_attributes'>custom attributes</a> to manage your users' subscriptions instead.</td>
     </tr>
     <tr>
-        <td>User permissions</td>
+        <td>Braze user permissions</td>
         <td>N/A</td>
-        <td>Updating user permissions for a dashboard user must be done separately for each workspace the user needs access to.</td>
-        <td>User permissions can be set once for a dashboard user and they will have the same permissions for all app instances in the workspace.</td>
+        <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
+        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
         <td>N/A</td>
     </tr>
     <tr>
         <td>Duplicating content</td>
         <td>N/A</td>
-        <td>Cannot duplicate segments, campaigns, or Canvases across workspaces.</td>
-        <td>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
+        <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
+        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
         <td>N/A</td>
     </tr>
     <tr>

@@ -3,7 +3,7 @@ nav_title: 이벤트 사용자 로그
 article_title: 이벤트 사용자 로그
 page_order: 7
 page_type: reference
-description: "이 참조 문서에서는 Braze 연동에서 문제를 디버깅하거나 해결하는 데 도움이 되는 이벤트 사용자 로그를 다룹니다."
+description: "이 참조 문서에서는 Braze 통합에서 문제를 디버깅하거나 해결하는 데 도움이 되는 이벤트 사용자 로그를 다룹니다."
 
 ---
 
@@ -18,7 +18,7 @@ description: "이 참조 문서에서는 Braze 연동에서 문제를 디버깅�
 로그에 액세스하려면 **설정** > **이벤트 사용자 로그로** 이동합니다.
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정** > **개발자 콘솔에서** **이벤트 사용자 로그를** 찾을 수 있습니다.
+[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **설정** > **개발자 콘솔**에서 **이벤트 사용자 로그**를 찾을 수 있습니다.
 {% endalert %}
 
 로그를 쉽게 찾기 위해 다음을 기준으로 필터링할 수 있습니다:
@@ -28,7 +28,7 @@ description: "이 참조 문서에서는 Braze 연동에서 문제를 디버깅�
 * 시간 프레임
 * 사용자
 
-각 로그는 여러 섹션으로 나뉘며, 여기에는 다음이 포함될 수 있습니다:
+각 로그는 여러 섹션으로 나뉘며, 여기에는 다음이 포함될 수 있습니다.
 
 * 기기 속성
 * 사용자 속성
@@ -46,7 +46,7 @@ description: "이 참조 문서에서는 Braze 연동에서 문제를 디버깅�
 
 ### 테스트 사용자에 대한 누락된 SDK 로그
 
-내부 그룹에 사용자를 추가했지만 이벤트 사용자 로그에 SDK 로그가 표시되지 않는다면 구성 옵션이 누락되었기 때문일 수 있습니다. SDK 로그를 캡처하려면 해당 [내부 그룹의]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) **내부 그룹 설정에서** **그룹 구성원에 대한 사용자 이벤트 기록을** 선택해야 합니다.
+내부 그룹에 사용자를 추가했지만 이벤트 사용자 로그에 SDK 로그가 표시되지 않는다면 구성 옵션이 누락되었기 때문일 수 있습니다. In order to capture SDK logs, make sure to select **Record User Events for group members** in the **Internal Group Settings** for that [internal group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/).
 
 ### 로그 업데이트 지연
 

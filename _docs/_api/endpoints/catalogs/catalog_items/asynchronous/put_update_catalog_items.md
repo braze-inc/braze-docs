@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Update Multiple Catalog Items"
-article_title: "PUT: Update Multiple Catalog Items"
+nav_title: "PUT: Replace Multiple Catalog Items"
+article_title: "PUT: Replace Multiple Catalog Items"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update multiple catalog items Braze endpoint."
+description: "This article outlines details about the Replace multiple catalog items Braze endpoint."
 
 ---
 {% api %}
-# Update catalog items
+# Replace catalog items
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use this endpoint to update multiple items in your catalog.
+> Use this endpoint to replace multiple items in your catalog.
 
 If a catalog item doesn't exist, this endpoint will create the item in your catalog. Each request can support up to 50 catalog items. This endpoint is asynchronous.
 
@@ -125,7 +125,7 @@ The following table lists possible returned errors and their associated troubles
 | `ids-not-unique` | Check that each item ID is unique. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `item-array-invalid` | `items` must be an array of objects. |
-| `items-missing-ids` | Confirm that each item has an ID. |
+| `items-missing-ids` | Some items don't have item IDs. Confirm that each item has an ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
 | `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |

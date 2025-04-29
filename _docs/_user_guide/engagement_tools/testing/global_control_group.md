@@ -25,11 +25,15 @@ Your Global Control Group is applied to all channels, campaigns, and Canvases, w
 
 ### Assign users randomly to the Global Control Group
 
-Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, check out [Things to watch out for](#things-to-watch-for). 
+Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using random bucket numbers for any other purposes, check out [Things to watch out for](#things-to-watch-for). 
 
-### Data tracking for reporting
+When your Global Control Group is generated, all users with random bucket numbers will be part of the group. In addition, new users that join after this point (those acquired after the Global Control Group was generated) that have these random bucket numbers will also be added to the Global Control Group. Similarly, if many users are deleted, you can expect the size of your Global Control Group to shrink because a percentage of those deleted users will have fallen into this group. This maintains the size of your group as a constant percentage relative to your entire use base.
 
-Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method.
+### Assign users randomly to treatment group for reporting
+
+To empower you to report on uplift, Braze also creates a treatment group. The treatment group is a randomly selected group of users not part of your Global Control Group, and is generated using the same random bucket number method as the Global Control Group. 
+
+Your treatment group will be similar in size as your Global Control Group, but is unlikely to be the exact same size. For [reporting](#reporting), Braze measures the behaviors of users in your control group and users in your treatment sample. Each workspace has a maximum of one Global Control Group and one treatment sample group. The treatment sample group is the same group of users regardless of how you configure your Global Control reporting.
 
 ### Exclude users from feature flags
 
@@ -41,15 +45,11 @@ You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/ca
 
 From the dashboard, go to **Audience** > **Global Control Group**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Engagement** > **Global Message Settings** > **Global Control Group Settings**.
-{% endalert %}
-
 ### Step 2: Assign a percentage of all users to this control group
 
-Input a percentage for your control group and click **Save**. When entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
+Input a percentage for your control group and select **Save**. When entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. For instance, if the number of users in your workspace grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your workspace audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
+The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. In addition, new users that join after the Global Control Group was setup and that have random bucket numbers will also be added to the Global Control Group. If many users are added, then you can expect the size of your Global Control Group to grow so that it maintains a constant percentage relative to your entire use base. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
 ![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
 
@@ -61,13 +61,15 @@ Use tags to add exclusion settings to your Global Control Group. Any campaigns o
 You may want to add exclusion settings if you have transactional messages that should send to every user.
 {% endalert %}
 
-![The option to add exclusion settings to your Global Control Group.][5]
+![The section to add or edit exclusion settings for your Global Control Group.][5]
 
 ### Step 4: Save your control group
 
 At this point, Braze generates a randomly selected group of users to comprise the selected percentage of your total user base. When saved, all currently active and future campaigns and Canvases no longer send to users in this group, except for campaigns or Canvases that contain any of the tags in your exclusion settings.
 
-## Disable your Global Control Group
+## Making changes to your Global Control Group
+
+You can only make changes to your Global Control Group by disabling it and creating a new one. For example, if you set up a Global Control Group that is 10% of your audience and you want to decrease its size to 5%, you must disable your current Global Control Group and re-enable a new Global Control Group. 
 
 You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
 
@@ -75,21 +77,27 @@ Before disabling your Control Group, we recommend [exporting](#export-group-memb
 
 After disabling your Control Group, you can save a new one. When you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with text warning that once your Global Control Group is disabled, it will no longer be excluded from any new or active campaigns or Canvases.][2]{: style="max-width:60%" }
 
 ## Export your control group members {#export-group-members}
 
-If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. 
+If you'd like to see which users are in your Global Control Group, you can export your Group's members by CSV or API. 
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export by API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
 {% endalert %}
 
+## View whether a user is in a Global Control Group
+
+You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
+
+![A "Miscellaneous" section reporting that the user has a random bucket number of 6356 and is not in the Global Control Group.][1]{: style="max-width:50%;"}
+
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 
@@ -163,6 +171,7 @@ You should decide how long to run your experiment before beginning it, and then 
 
 Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

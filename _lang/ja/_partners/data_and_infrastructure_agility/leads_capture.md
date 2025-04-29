@@ -14,5 +14,8 @@ partner_top_header: "Leads Captures"
 valid_partner_list:
 - name: Zapierを使ったFacebookリード広告
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
-
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: ジュストゥーノ
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
 ---

@@ -13,7 +13,7 @@ search_rank: 1
 
 # Creating an MMS campaign
 
-> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).
+> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 
 ## MMS sending basics
 
@@ -37,7 +37,7 @@ Contact cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a st
 
 Creating an MMS message requires your subscription group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a subscription group. Upon selecting an MMS-enabled subscription group, you will have the ability to upload an image, reference an image URL, or include a contact card.
 
-![The "Compose" tab to write your message.]({% image_buster /assets/img/sms/mms_composer.png %})
+![The "Compose" tab to write your message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Image specifications
 
@@ -55,4 +55,4 @@ Braze provides a preview of the image you have uploaded in the **Preview** panel
 The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
 {% endalert %}
 
-![An example of a message "Get ready for your next trip!!!". The preview shows the message and image sent as texts.]({% image_buster /assets/img/sms/mms_preview.png %})
+![An example of a message "Ready to hit the gym...at home?". The preview shows the message and image sent as texts.]({% image_buster /assets/img/sms/mms_preview.png %})

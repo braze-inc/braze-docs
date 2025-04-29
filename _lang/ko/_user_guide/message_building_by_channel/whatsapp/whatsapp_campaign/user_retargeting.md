@@ -22,19 +22,19 @@ page_order: 4.1
 
 ### 사용자를 WhatsApp으로 필터링
 
-사용자는 마지막으로 WhatsApp을 받았을 때 또는 특정 WhatsApp 캠페인에서 WhatsApp을 받았는지 여부에 따라 필터링할 수 있습니다. 필터는 캠페인 빌더의 대상 사용자 단계에서 설정할 수 있습니다.
+사용자는 마지막으로 WhatsApp을 받았을 때 또는 특정 WhatsApp 캠페인에서 WhatsApp을 받았는지 여부에 따라 필터링할 수 있습니다. 필터는 캠페인 빌더의 타겟 사용자 단계에서 설정할 수 있습니다.
 
-**필터 by last received WhatsApp**<br>
+**마지막으로 수신한 WhatsApp으로 필터**<br>
 ![][5]{: style="max-width:75%"}
 
 **받은 메시지로 필터링 WhatsApp 캠페인**<br>
 특정 WhatsApp 캠페인에서 메시지를 받은 사용자를 필터링합니다. 이 필터를 사용하면 WhatsApp 캠페인에서 메시지를 받지 않은 사람들을 필터링할 수도 있습니다.<br>
 ![][4]
 
-### 참여로 필터
+### 인게이지먼트로 필터
 리타겟 사용자가 WhatsApp 캠페인 또는 캔버스 단계를 읽었거나 읽지 않은 경우. 
 
-**리타겟 users who have opened/read a specific WhatsApp 캠페인**
+**리타겟 사용자가 특정 WhatsApp 캠페인을 열거나 읽은 경우**
 1. **클릭됨/열림 캠페인** 필터를 사용하여 세그먼트를 만드십시오.
 2. **WhatsApp 메시지 읽기**을 선택하십시오.
 3. 원하는 캠페인을 선택하세요.<br>

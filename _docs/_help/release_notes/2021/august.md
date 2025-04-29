@@ -10,7 +10,7 @@ description: "This article contains release notes for August 2021."
 
 ## Google Audience Sync
 
-The Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (for example, push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's Customer Match.
+The Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (for example, push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's Customer Match.
 
 ## Best practice iOS SDK integration guide
 
@@ -18,11 +18,11 @@ This optional [iOS integration SDK guide]({{site.baseurl}}/developer_guide/platf
 
 ## Predictive Purchases
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a purchase prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) doc to learn more. 
+Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a purchase prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) doc to learn more. 
 
 ## Drag-and-drop editor
 
-With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 
@@ -50,16 +50,16 @@ Users experiencing issues logging in via two-factor authentication can reach out
 
 ### Hightouch - Workflow Automation
 
-The Braze and [Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/) integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. You want to provide relevant, timely interactions to your customers, and doing so heavily relies on data in your Braze account to be accurate and fresh. By automatically syncing customer data from your data warehouse into Braze, you no longer need to worry about data consistency, and you can focus on building world-class customer experiences.
+The Braze and [Hightouch]({{site.baseurl}}/partners/data_and_analytics/reverse_etl/hightouch/) integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. You want to provide relevant, timely interactions to your customers, and doing so heavily relies on data in your Braze account to be accurate and fresh. By automatically syncing customer data from your data warehouse into Braze, you no longer need to worry about data consistency, and you can focus on building world-class customer experiences.
 
 ### Transcend - Data Privacy & Compliance
 
-The Braze and [Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/transcend/) partnership helps users automate privacy requests by orchestrating data across dozens of data systems. Ultimately, this helps teams comply with regulations like GDPR and CCPA and puts individuals in the driver's seat when it comes to their data.
+The Braze and [Transcend]({{site.baseurl}}/partners/ecommerce/payments/transcend/) partnership helps users automate privacy requests by orchestrating data across dozens of data systems. Ultimately, this helps teams comply with regulations like GDPR and CCPA and puts individuals in the driver's seat when it comes to their data.
 
 ### Tinyclues - Cohort Import
 
-[Tinyclues]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/tinyclues/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
+[Tinyclues]({{site.baseurl}}/partners/data_and_analytics/cohort_import/tinyclues/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
 
 ### optilyz - Direct Mail
 
-[optilyz]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing and automate and better personalize campaigns. Use the optilyz and Braze webhook integration to send direct mail to your customers.
+[optilyz]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/optilyz/) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing and automate and better personalize campaigns. Use the optilyz and Braze webhook integration to send direct mail to your customers.
