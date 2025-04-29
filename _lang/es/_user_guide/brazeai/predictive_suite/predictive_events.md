@@ -37,10 +37,6 @@ El verdadero valor de los Eventos Predictivos reside en utilizar los resultados 
 
 La página **Predicciones** se encuentra en la sección **Análisis**. Para obtener acceso completo, ponte en contacto con tu director de cuentas.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las predicciones** en **Interacción**.
-{% endalert %}
-
 Antes de adquirir esta característica, está disponible en modo vista previa. Esto te permitirá ver una predicción de demostración con datos sintéticos, así como crear un modelo de predicción de vista previa cada vez. Esta predicción se creará basándose en tus datos de usuario reales, pero no te permitirá dirigirte a los usuarios para enviarles mensajes según su puntuación de probabilidad. Tampoco se actualizará regularmente tras su creación.
 
 Con la vista previa, también puedes editar y reconstruir esta única predicción o archivarla y crear otras para probar la [calidad de predicción]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality) esperada de [diferentes audiencias]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience) y familiarizarte con los análisis.

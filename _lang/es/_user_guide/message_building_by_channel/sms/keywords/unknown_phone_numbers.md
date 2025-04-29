@@ -14,7 +14,7 @@ channel:
 > Es posible que, después de poner en marcha los SMS con Braze, recibas mensajes de usuarios desconocidos. Los siguientes pasos describen cómo se procesan un usuario y un número no identificados.
 
 {% alert important %}
-¿Es usted actualmente un cliente no nativo de SMS? Si es así, visita la [documentación sobre SMS no nativos](/docs/user_guide/message_building_by_channel/sms/non_native/) para consultar el artículo correspondiente sobre la gestión de números de teléfono desconocidos.
+¿Es usted actualmente un cliente no nativo de SMS? Si es así, visita la [documentación sobre SMS no nativos]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) para consultar el artículo correspondiente sobre la gestión de números de teléfono desconocidos.
 {% endalert %}
 
 ## Flujo de trabajo Opt-in/out y palabras clave personalizadas para números desconocidos

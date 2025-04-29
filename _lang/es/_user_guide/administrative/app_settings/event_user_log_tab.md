@@ -17,10 +17,6 @@ Además de este artículo, también recomendamos consultar nuestro curso Braze L
 
 Para acceder al registro, ve a **Configuración** > **Registro de usuario de eventos**.
 
-{% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar el **Registro de eventos de usuario** en **Configuración** > **Consola de desarrollador**.
-{% endalert %}
-
 Para encontrar tus registros fácilmente, puedes filtrar en función de:
 
 * SDK o API

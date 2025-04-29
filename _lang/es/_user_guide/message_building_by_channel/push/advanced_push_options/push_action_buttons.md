@@ -38,7 +38,7 @@ Para utilizar botones de acción en tus mensajes push de iOS, haz lo siguiente:
 ![Menú desplegable de categorías de notificaciones de iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.
+Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.
 {% endalert %}
 
 ### Android {#android}
@@ -46,12 +46,12 @@ Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos d
 Para utilizar botones de acción en sus mensajes push de Android, haga lo siguiente:
 
 1. Cree una [campaña push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) para Android y active los botones de notificación en la pestaña **Redactar**.
-2. Haga clic en <i class="fas fa-plus-circle"></i> **Añadir botón** y especifique el texto del botón y el **comportamiento al hacer clic**. Puede seleccionar una de las siguientes acciones disponibles:
+2. Selecciona <i class="fas fa-plus-circle"></i> **Añadir botón** y especifica el texto del botón y el **Comportamiento al hacer clic**. Puede seleccionar una de las siguientes acciones disponibles:
   - Abrir aplicación
   - Redirigir a URL de página web
   - [Vínculo profundo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) a la aplicación
 
-![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![Seleccionar "Abrir aplicación" como comportamiento al hacer clic en un botón de notificación.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 Puedes añadir hasta tres botones en tu push.
 
@@ -59,7 +59,7 @@ Puedes añadir hasta tres botones en tu push.
 
 A diferencia de los botones de iOS, que están apilados, los de Android se muestran uno al lado del otro en una fila. Esto significa que cuantos más botones añadas (hasta tres), menos espacio tendrás para copiar botones. 
 
-![Botones de acción para notificación push de Android con texto truncado.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![Botones de acción para notificación push de Android con texto truncado.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 En la tabla siguiente se indica cuántos caracteres puede añadir antes de que se trunque la copia del botón, en función del número de botones que tenga:
 

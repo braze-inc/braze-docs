@@ -23,15 +23,11 @@ Alguns casos de uso comuns de eventos personalizados incluem:
 - Encontrar análises de dados adicionais usando relatórios de [funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) e [retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) 
 - Aproveitamento das [propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) para usar metadados do evento do cliente para personalização nas etapas do Canva
 - Geração de análises de dados mais sofisticadas com o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- Configuração de [eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) do Canvas para definir quando os usuários não devem avançar para a próxima etapa do Canva
+- Configuração de [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) para definir quando os usuários devem sair do seu Canva
 
 ## Gerenciamento de eventos personalizados
 
 Você pode gerenciar, criar ou colocar em lista de bloqueio eventos personalizados no dashboard acessando **Configurações de dados** > **Eventos personalizados**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os eventos personalizados** em **Manage Settings (Gerenciar configurações)**.
-{% endalert %}
 
 Selecione o menu ao lado de um evento personalizado para as seguintes ações:
 
@@ -71,13 +67,13 @@ Os eventos personalizados exigem configuração adicional. Consulte a lista abai
 
 {% details Expandir para documentação por plataforma %}
 
-- [Android e FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
+- [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -106,10 +102,6 @@ A tabela a seguir mostra os filtros disponíveis para segmentar usuários por ev
 ## Análise de dados
 
 O Braze nota o número de vezes que os eventos personalizados ocorreram e a última vez que foram realizados por cada usuário para segmentação. Visualize essas análises de dados acessando **Analytics** > **Relatório de eventos personalizados**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o relatório **Eventos personalizados** em **Dados**.
-{% endalert %}
 
 Na página **Custom Events Report (Relatório de eventos personalizados)** no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade do evento personalizado.
 
@@ -210,6 +202,8 @@ As propriedades de eventos personalizados são atualizadas em tempo real para qu
 ##### Adição de propriedades de eventos para segmentação
 
 Você precisará da [permissão de usuário]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Gerenciar segmentação de propriedades personalizadas de eventos" para criar segmentos com base na recência e na frequência da propriedade do evento.
+
+Por padrão, você pode ter 20 propriedades de eventos segmentáveis por espaço de trabalho. Entre em contato com o gerente da sua conta Braze para aumentar esse limite.
 
 Para adicionar propriedades de eventos para segmentação, faça o seguinte:
 

@@ -12,17 +12,13 @@ search_rank: 1
 
 > Cet article de référence aborde les étapes nécessaires à la création, à la gestion et aux essais d’un Canvas. Suivez ce guide, ou consultez notre [cours d'apprentissage Canvas Braze](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-{% endalert %}
+{% details Editeur de canevas original %}
+Vous ne pouvez plus créer ou dupliquer des toiles en utilisant l'expérience Canvas originale. Braze recommande de [cloner vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
+{% enddetails %}
 
 ## Étape 1 : Créer un Canvas 
 
 Allez dans **Messagerie** > **Canvas**, puis sélectionnez **Créer Canvas**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver **Canvas** sous **Engagement**.
-{% endalert %}
 
 ## Étape 2 : Configurer votre Canvas
 
@@ -81,11 +77,11 @@ Ici, vous nommerez votre Canvas, assignerez [des équipes]({{site.baseurl}}/user
 Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lors de l'utilisation de [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer par des balises particulières.
 {% endalert %}
 
-![La page de détails du canvas, avec des champs pour le nom du canvas, la description, l'emplacement/localisation et les tags.][53]
+![La page de détails du canvas, avec des champs pour le nom du canvas, la description, l'emplacement/localisation et les tags.][53]{: style="max-width:70%;"}
 
 #### Sélectionner des événements de conversion
 
-Choisissez votre type d'événement de conversion, puis sélectionnez les conversions à enregistrer. Ces [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) mesureront l'efficacité de votre canvas. 
+Choisissez votre type d'événement de conversion, puis sélectionnez les conversions à enregistrer. Ces [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) mesureront l'efficacité de votre canvas. 
 
 ![Un événement de conversion principal A avec le type d’événement de conversion Effectue un achat pour enregistrer les conversations pour les utilisateurs qui effectuent n’importe quel achat avant une date butoir de conversion de trois jours.][52]
 
@@ -101,7 +97,7 @@ Vous pouvez sélectionner l’un des trois modes d’accès à votre Canvas par 
   {% tab Livraison prévue %}
     Avec une livraison planifiée, les utilisateurs accéderont selon un calendrier, de la même façon que vous planifieriez une campagne. Vous pouvez inscrire des utilisateurs dans un Canvas dès qu'il est lancé, les intégrer dans votre parcours à un moment donné dans le futur, ou de manière récurrente (quotidienne, hebdomadaire ou mensuelle). 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +106,7 @@ Vous pouvez sélectionner l’un des trois modes d’accès à votre Canvas par 
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab Livraison déclenchée par l'API %}
@@ -148,15 +144,19 @@ Sous **Contrôles d'entrée**, vous pouvez limiter le nombre d'utilisateurs chaq
 
 Après avoir ajouté des segments et des filtres à votre audience cible, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer s'ils correspondent aux critères de l'audience.
 
-![Le champ "Recherche d'utilisateurs", qui vous permet d'effectuer une recherche par ID externe ou ID Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+![Le champ "Recherche d'utilisateurs", qui vous permet d'effectuer une recherche par ID externe ou ID Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Sélection des contrôles d'entrée
 
-Les contrôles d'entrée déterminent si les utilisateurs sont autorisés à entrer de nouveau dans un canvas. Vous pouvez également limiter le nombre de personnes qui pourraient potentiellement entrer dans ce Canvas. Par exemple, si vous définissez le champ **Nombre maximum d'utilisateurs pouvant potentiellement entrer dans ce Canvas** à 1 000 utilisateurs, et sélectionnez la case à cocher **Limiter chaque fois que le Canvas est programmé**, alors le Canvas sera envoyé à 1 000 utilisateurs par jour.
+Les contrôles d'entrée déterminent si les utilisateurs sont autorisés à entrer de nouveau dans un canvas. Vous pouvez également limiter le nombre de personnes susceptibles d'entrer dans ce Canvas en fonction d'une cadence choisie (quotidienne, pendant toute la durée du Canvas ou à chaque fois que le Canvas est planifié). 
 
-![La page "Contrôles d'entrée" affiche des cases à cocher pour "Autoriser les utilisateurs à entrer à nouveau dans le Canvas" et "Limiter le nombre de personnes qui pourront potentiellement entrer dans ce Canvas". Ce dernier vous permet de définir le nombre maximum d'utilisateurs et d'indiquer si vous souhaitez limiter chaque fois que le canvas est planifié.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+Par exemple, si vous sélectionnez **Limiter le volume d'entrée** et que vous réglez le champ **Entrées maximales** sur 5 000 utilisateurs avec **Quotidien** comme cadence limite, alors le Canvas n'enverra qu'à 5 000 utilisateurs par jour.
 
-Braze ne recommande pas d'utiliser la fonctionnalité **Limite appliquée à chaque planification du canvas** pour le réchauffement d’adresses IP, car cela peut entraîner une augmentation des volumes d'envoi.
+![La page "Contrôles d'entrée" affiche des cases à cocher pour "Autoriser les utilisateurs à entrer à nouveau dans Canvas" et "Limiter le volume d'entrée". Ce dernier vous permet de définir le nombre maximum d'entrées et de préciser si vous souhaitez limiter les entrées par jour, pendant toute la durée de vie du canvas ou à chaque fois que le canvas est planifié.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze ne recommande pas d'utiliser la fonctionnalité **Chaque fois que la toile est planifiée** pour le réchauffement d'adresses IP, car cela peut entraîner une augmentation des volumes d'envoi.
+{% endalert %}
 
 #### Définir les critères de sortie
 
@@ -205,7 +205,7 @@ Enregistrez votre temps et rationalisez votre création de canvas en utilisant l
 
 ### Ajouter une variante
 
-![Un gif qui montre un utilisateur sélectionnant "Ajouter une variante", puis sélectionnant à nouveau "Ajouter une variante" à partir du menu contextuel.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Le bouton "Ajouter une variante" est sélectionné pour afficher un menu contextuel avec l'option "Ajouter une variante".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Sélectionnez **Ajouter une variante**, puis ajoutez une nouvelle variante à votre Canvas. Les variantes représentent un parcours que vos utilisateurs emprunteront et peuvent contenir plusieurs étapes et branches.
 
@@ -235,7 +235,7 @@ Vous pouvez ajouter plus d'étapes à votre flux de travail Canvas en faisant gl
 Au fur et à mesure que vous commencez à ajouter plus d'étapes, vous pouvez changer le niveau de zoom pour vous concentrer sur les détails ou pour avoir une vue d'ensemble du parcours utilisateur. Zoomer avec <kbd>Shift</kbd> + <kbd>+</kbd> ou dézoomer avec <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![La fenêtre de recherche de composants ajoutant une étape du canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![La fenêtre de recherche de composants ajoutant une étape du canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Un Canvas créé en utilisant Canvas Flow peut comprendre jusqu’à 200 étapes. Des erreurs de chargement se produiront si votre Canvas a plus de 200 étapes.
@@ -277,11 +277,9 @@ Sélectionnez **Terminé** après avoir terminé la configuration de votre compo
 {% tabs local %}
 {% tab Propriétés d'entrée de la toile %}
 
-Les `canvas_entry_properties` sont configurés dans l'étape de planification d'entrée de la création d'un Canvas et indiquent le déclencheur qui fait entrer un utilisateur dans un Canvas. Ces propriétés peuvent également accéder aux propriétés des charges utiles d’entrée dans les Canvas déclenchés par API. Notez que l'objet `canvas_entry_properties` a une taille maximale de 50 Ko. 
+Les `canvas_entry_properties` sont configurés dans l'étape de planification d'entrée de la création d'un Canvas et indiquent le déclencheur qui fait entrer un utilisateur dans un Canvas. Ces propriétés peuvent également accéder aux propriétés des charges utiles d’entrée dans les Canvas déclenchés par API. Notez que l'objet `canvas_entry_properties` peut avoir une taille maximale de 50 Ko. 
 
-Pour Canvas Flow, les propriétés d’entrée peuvent être utilisées en Liquid dans n’importe laquelle des étapes de message. Utilisez le code Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
-
-Utilisez le code Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Notez que les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
+Utilisez le code Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Notez que les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
 
 {% raw %}
 Imaginons, par exemple, la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pourriez ajouter le mot « chaussures » à un message avec ce code Liquid ``{{canvas_entry_properties.${product_name}}}``.
@@ -317,13 +315,13 @@ Dans cet exemple, notre Canvas est réparti en deux variantes. La variante 1 co
 
 ### Sélection intelligente pour Canvas
 
-Les fonctionnalités de sélection intelligente sont désormais disponibles dans les Canvas multivariés. Similaire à la fonctionnalité [Sélection Intelligente][18a] pour les campagnes multivariées, la Sélection Intelligente pour Canvas analyse la performance de chaque variante de Canvas et ajuste le pourcentage d'utilisateurs passant par chaque variante. Cette répartition est basée sur chaque indicateur de performance de variante pour augmenter le nombre total de conversions escompté.
+Les fonctionnalités de sélection intelligente sont désormais disponibles dans les Canvas multivariés. Similaire à la fonctionnalité [Sélection Intelligente][18a] pour les campagnes multivariées, la Sélection Intelligente pour Canvas analyse la performance de chaque variante de Canvas et ajuste le pourcentage d'utilisateurs passant par chaque variante. Cette répartition est basée sur les indicateurs de performance de chaque variante afin de maximiser le nombre total de conversions attendues.
 
 N’oubliez pas que les Canvas multivariés vous permettent plutôt de tester que de copier, mais le calendrier et les canaux également. La sélection intelligente vous permet de tester des Canvas de manière plus efficace et de garantir que vos utilisateurs seront dirigés vers le meilleur parcours Canvas.
 
 ![L'option "Sélection intelligente" est activée dans la page "Modifier la répartition des variantes". Au fur et à mesure qu'il analyse et optimise le canvas, il affiche une barre horizontale en travers de la page qui est divisée en plusieurs sections, chacune variant en couleur et en taille. Il s'agit uniquement d'une représentation visuelle qui ne correspond à aucune analyse spécifique.][18b]
 
-La sélection intelligente pour Canvas optimise vos résultats Canvas en effectuant des ajustements progressifs en temps réel à la distribution des utilisateurs triés dans chaque variante. Lorsque l'algorithme statistique détermine un gagnant décisif parmi vos variantes, il exclura les variantes sous-performantes et attribuera tous les futurs destinataires éligibles du Canvas aux variantes gagnantes. 
+La sélection intelligente pour Canvas optimise vos résultats Canvas en effectuant des ajustements progressifs en temps réel à la distribution des utilisateurs triés dans chaque variante. Lorsque l'algorithme statistique détermine un gagnant décisif parmi vos variantes, il élimine les variantes moins performantes et place tous les futurs destinataires éligibles de la toile dans les variantes gagnantes. 
 
 En ce sens, la sélection intelligente fonctionne mieux sur des Canvas auxquels de nouveaux utilisateurs accèdent fréquemment.
 

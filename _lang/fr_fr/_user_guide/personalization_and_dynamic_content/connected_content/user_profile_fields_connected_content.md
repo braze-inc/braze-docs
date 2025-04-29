@@ -1,16 +1,20 @@
 ---
 nav_title: Extraction des données de profil utilisateur
 article_title: Extraction des données de profil utilisateur dans les appels de contenu connectés
-page_order: 5
+page_order: 3
 description: "Le présent article explique comment extraire les profils d’utilisateur dans vos appels de contenu connecté et les bonnes pratiques impliquant la modélisation de Liquid."
-
+toc_headers: h2
 ---
 
 # Extraire des données de profil utilisateur
 
 > Cette page explique comment intégrer les profils utilisateurs dans vos appels au contenu connecté et présente les meilleures pratiques en matière de création de modèles liquides. 
 
+## Conditions préalables
+
 Si une réponse de contenu connecté contient des champs de profil utilisateur (dans une étiquette de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message avec Liquid, avant l'appel de contenu connecté afin de rendre le passback Liquid correctement. De même, l’indicateur `:rerender` doit être inclus dans la requête. Prenez en compte le fait que l’indicateur `:rerender` a une profondeur d’un seul niveau, ce qui signifie qu’il ne s’applique pas aux balises de contenu connecté imbriquées.
+
+## Le "Liquid Templating" dans les appels au contenu connecté
 
 Pour la personnalisation, Braze extrait les champs de profil utilisateur avant de transmettre ce champ au Liquid. Donc si la réponse du contenu connecté comporte des champs de profil utilisateur, il doit être défini au préalable. 
 
@@ -21,14 +25,19 @@ Hi ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
-Et si la réponse du contenu connecté est {% raw %}`Your language is ${language}`{% endraw %}, le contenu affiché dans ce scénario sera `Hi Jon, your language is`. La langue elle-même ne sera pas modélisée. En effet, Braze doit savoir quels champs récupérer de l’utilisateur avant d’effectuer l’appel de contenu connecté.
 
-Pour pouvoir afficher le renvoi Liquid correctement, vous devez insérer la balise {% raw %}`${language}`{%endraw%} n’importe où dans la demande, comme illustré dans l’extrait de code suivant. Le préprocesseur Liquid saura qu’il doit obtenir l’attribut « langue » de l’utilisateur pour l’avoir à disposition pour modéliser la réponse.
+La réponse Contenu connecté est {% raw %}`Your language is ${language}`{% endraw %}. Le contenu affiché dans cet exemple est `Hi Jon, your language is`. 
+
+La langue elle-même ne sera pas modélisée. En effet, Braze doit savoir quels champs récupérer de l’utilisateur avant d’effectuer l’appel de contenu connecté.
+
+{% raw %}`${language}`{% endraw %} Pour que le rendu du passback Liquid soit correct, vous devez inclure l'étiquette Liquid n'importe où dans la requête, comme le montre l'extrait de code suivant. Le préprocesseur Liquid saura qu’il doit obtenir l’attribut « langue » de l’utilisateur pour l’avoir à disposition pour modéliser la réponse.
+
 {%raw%}
 ```liquid
 "Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
 ```
 {% endraw %}
+
 {% alert important %}
 Rappelez-vous que l’option d’indicateur `:rerender` a une profondeur d’un seul niveau. Si la réponse au contenu connecté comporte elle-même d'autres étiquettes de contenu connecté ou d'autres étiquettes de catalogue, Braze n'effectuera pas de nouveau le rendu de ces étiquettes supplémentaires.
 {% endalert %}

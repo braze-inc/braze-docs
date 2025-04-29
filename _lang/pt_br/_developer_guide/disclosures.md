@@ -1,8 +1,8 @@
 ---
+page_order: 99
 nav_title: Divulgações
 article_title: Divulgações e Qualificações
 layout: dev_guide
-page_order: 100
 guide_top_header: "Divulgações"
 guide_top_text: "A Braze está à sua disposição! Confira os seguintes artigos!"
 
@@ -18,13 +18,13 @@ guide_featured_list:
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Declaração de Inovação
-    link: /docs/help/innovation_statement/
+    link: /docs/innovation_statement/
     image: /assets/img/braze_icons/asterisk-01.svg
   - name: Qualificações de segurança
     link: /docs/developer_guide/disclosures/security_qualifications/
     image: /assets/img/braze_icons/user-square.svg
   - name: Assistência técnica de proteção de dados
-    link: /docs/help/dp-technical-assistance/
+    link: /docs/dp-technical-assistance/
     image: /assets/img/braze_icons/globe-04.svg
 
 ---

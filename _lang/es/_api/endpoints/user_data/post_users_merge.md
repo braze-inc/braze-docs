@@ -102,9 +102,15 @@ Estos campos fusionados actualizarán los filtros "para X eventos en Y días". P
 
 Si se especifica un `email` o `phone` como identificador, se requiere un valor `prioritization` adicional en el identificador. `prioritization` debe ser una matriz que especifique qué usuario fusionar si se encuentran varios usuarios. `prioritization` es una matriz ordenada, lo que significa que si más de un usuario coincide a partir de una priorización, no se producirá la fusión.
 
-Los valores permitidos para la matriz son: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` se refiere a dar prioridad al usuario actualizado más recientemente.
+Los valores permitidos para la matriz son:
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (se refiere a dar prioridad al usuario actualizado más recientemente)
+- `least_recently_updated` (se refiere a dar prioridad al usuario que se haya actualizado menos recientemente)
 
 En la matriz de priorización solo puede existir una de las siguientes opciones a la vez:
+
 - `identified` se refiere a dar prioridad a un usuario con un `external_id`
 - `unidentified` se refiere a dar prioridad a un usuario sin un `external_id`
 
@@ -159,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Fusionar usuario no identificado
 
-La siguiente solicitud fusionaría el usuario no identificado actualizado más recientemente con dirección de correo electrónico "john.smith@braze.com" en el usuario con `external_id` "john". Si utilizas `most_recently_updated`, filtrarás la consulta a un solo usuario no identificado. Así, si hubiera dos usuarios no identificados con esta dirección de correo electrónico, solo uno se fusionaría en el usuario con `external_id` "john".
+La siguiente solicitud fusionaría el usuario no identificado actualizado más recientemente con dirección de correo electrónico "john.smith@braze.com" en el usuario con `external_id` "john". Si utilizas `most_recently_updated` o `least_recently_updated`, filtrarás la consulta a un solo usuario no identificado. Así, si hubiera dos usuarios no identificados con esta dirección de correo electrónico, solo uno se fusionaría en el usuario con `external_id` "john".
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -183,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Fusionar usuario no identificado en usuario identificado
 
-El siguiente ejemplo fusiona el usuario no identificado actualizado más recientemente con la dirección de correo electrónico "john.smith@braze.com" en el usuario identificado actualizado más recientemente con la dirección de correo electrónico "john.smith@braze.com". El uso de `most_recently_updated` filtra las consultas a un solo usuario (un usuario no identificado para `identifier_to_merge`, y un usuario identificado para `identifier_to_keep`).
+El siguiente ejemplo fusiona el usuario no identificado actualizado más recientemente con la dirección de correo electrónico "john.smith@braze.com" en el usuario identificado actualizado más recientemente con la dirección de correo electrónico "john.smith@braze.com". Utilizar `most_recently_updated` o `least_recently_updated` filtra las consultas a un solo usuario (un usuario no identificado para `identifier_to_merge`, y un usuario identificado para `identifier_to_keep`).
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -195,11 +201,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
       }
     }
   ]
@@ -262,7 +268,7 @@ En la tabla siguiente se enumeran los posibles mensajes de error que pueden apar
 | --- |
 | `'merge_updates' must be an array of objects` | Comprueba que `merge_updates` es una matriz de objetos. |
 | `a single request may not contain more than 50 merge updates` | Solo puede especificar hasta 50 actualizaciones de fusión en una única solicitud. |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Comprueba los identificadores de tu solicitud. |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, 'email' property that is a string, or 'phone' property that is a string` | Comprueba los identificadores de tu solicitud. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Compruebe que `merge_updates` solo contiene los dos objetos `identifier_to_merge` y `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

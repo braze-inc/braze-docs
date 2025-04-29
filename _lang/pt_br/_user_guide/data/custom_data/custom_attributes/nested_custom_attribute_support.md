@@ -40,6 +40,7 @@ Os objetos de atributos personalizados podem conter [tipos de dados][1], como:
 - Os objetos têm um tamanho máximo de 100 KB.
 - Os nomes das chaves e os valores das strings têm um limite de tamanho de 255 caracteres.
 - Os nomes das chaves não podem conter espaços.
+- Os pontos (`.`) e os cifrões (`$`) não são caracteres suportados em uma carga útil da API se você estiver tentando enviar um atributo personalizado aninhado a um perfil de usuário.
 - Nem todos os Braze Partners suportam atributos personalizados aninhados. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se as integrações com parceiros específicos suportam esse recurso.
 - Os atributos personalizados aninhados não podem ser usados como um filtro ao fazer uma chamada à API do Connected Audience.
 
@@ -357,10 +358,6 @@ Para este exemplo, suponha que tenhamos um vetor de objetos `accounts` que acaba
 ```
 
 No dashboard da Braze, acesse **Configurações de dados** > **Atributos personalizados**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Atributos personalizados** em **Gerenciar configurações**.
-{% endalert %}
 
 Procure seu objeto ou vetor de objetos. Na coluna **Nome da atribuição**, selecione **Gerar esquema**.
 

@@ -12,10 +12,6 @@ description: "Este artigo aborda como criar uma previsão de evento no dashboard
 
 Na Braze, acesse **Análises** de dados > **Eventos preditivos**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **as previsões** em **Engajamento**.
-{% endalert %}
-
 Nessa página, você verá uma lista das previsões de eventos ativos atuais e algumas informações básicas sobre eles. Aqui, você pode renomear, arquivar e criar novas previsões. As previsões arquivadas são inativas e não atualizam as pontuações dos usuários.
 
 ## Etapa 1: Criar uma nova previsão

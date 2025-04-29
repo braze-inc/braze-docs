@@ -19,7 +19,9 @@ Puede introducir `trigger_properties`, que se incluirá como plantilla en el pro
 
 Tenga en cuenta que para enviar mensajes con este punto final, debe tener un ID de campaña, creado al crear una [campaña activada por API]({{site.baseurl}}/api/api_campaigns/).
 
-Cualquier horario sobrescribirá completamente el que haya proporcionado en la solicitud de creación de horario o en anteriores solicitudes de actualización de horario. Por ejemplo, si originalmente proporciona `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y luego en su actualización proporciona `"schedule" : {"time" : "2015-02-20T14:14:47"}`, su mensaje ahora se enviará a la hora proporcionada en UTC, no en la hora local del usuario. Los desencadenantes programados que se actualicen muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con el máximo esfuerzo, por lo que los cambios de último segundo podrían aplicarse a todos, a algunos o a ninguno de sus usuarios objetivo.
+Cualquier programación sobrescribirá completamente la que hayas proporcionado en la solicitud de crear programación o en las solicitudes de actualización de programación anteriores. Por ejemplo, si originalmente configuraste el horario a `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y más tarde lo actualizas a `"schedule" : {"time" : "2015-02-20T14:14:47"}`, el mensaje se enviará ahora a la hora especificada en UTC, no en la hora local del usuario.
+
+Los desencadenantes programados que se actualicen muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con el máximo esfuerzo para que los cambios de último momento puedan aplicarse a todos, a algunos o a ninguno de tus usuarios objetivo. Las actualizaciones no se aplican si la programación original utilizaba la hora local y la hora original ya ha pasado en cualquier zona horaria.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 

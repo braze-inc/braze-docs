@@ -55,11 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Resposta
 
-Esse endpoint retornará um código de status `202` e a criação da campanha ocorrerá de forma assíncrona. É possível usar o [download do evento Security][2] para ver os registros de quando as campanhas foram duplicadas e por qual chave de API.
-
+Esse endpoint retornará um código de status `202` e a criação da campanha ocorrerá de forma assíncrona. É possível usar o [download do evento de segurança][2] para ver os registros de quando as campanhas foram duplicadas e por qual chave de API.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/?redirected=true#security-event-download
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report
 
 {% endapi %}

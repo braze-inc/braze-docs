@@ -29,4 +29,4 @@ Este es el comportamiento esperado para espacios de trabajo con muchos usuarios.
 
 ### ¿Por qué veo duplicados cuando exporto usuarios por segmentos a través de la API REST?
 
-Se trata de un caso muy poco frecuente causado por la arquitectura subyacente del proveedor de la base de datos. Los duplicados se eliminan cada semana; sin embargo, la mayoría de las semanas no se elimina ningún duplicado.
+Se trata de un hecho muy poco frecuente causado por la arquitectura subyacente del proveedor de la base de datos. Los duplicados se eliminan cada semana; sin embargo, la mayoría de las semanas no se elimina ningún duplicado.

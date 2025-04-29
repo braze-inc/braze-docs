@@ -24,10 +24,6 @@ Para acessar o perfil de um usuário, acesse a página **Pesquisar usuários** e
 - Token por push
 - Alias de usuário com o formato "[user_alias]:[alias_name]", como "amplitude_id:user_123"
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Search Users** é **User Search** e pode ser encontrado em **Users**.
-{% endalert %}
-
 Se for encontrada uma correspondência, você poderá visualizar as informações que registrou para esse usuário com o Braze SDK. Caso contrário, se a pesquisa retornar vários perfis de usuário, será possível mesclar cada perfil individualmente ou realizar uma mesclagem de usuários em massa. Para obter um passo a passo completo, consulte [Usuários duplicados]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Resultados da pesquisa com um banner que diz "Vários usuários correspondem aos seus critérios de pesquisa" e dois botões denominados Anterior e Próximo.][1]
@@ -128,10 +124,6 @@ No momento, os eventos de abortar não estão disponíveis para mensagens no app
 ##### Eventos de limite de frequência
 
 Um evento de limite de frequência ocorre quando um usuário está qualificado para receber uma mensagem, mas não a recebe de fato devido às configurações de [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Você pode personalizar as configurações de limitação de frequência em **Settings** > **Frequency Capping Rules**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá gerenciar o limite de frequência em **Engajamento** > Configurações de mensagens globais **.**
-{% endalert %}
 
 ##### Destinos em branco
 

@@ -11,7 +11,7 @@ description: "Este artigo de referência aborda as diretrizes da marca para o as
 
 ## Criação de diretrizes da marca {#steps}
 
-Siga estas etapas para criar diretrizes da marca no assistente de copywriting da IA.
+Siga estas etapas para criar diretrizes da marca no assistente de copywriting da IA. Você também pode criar diretrizes da marca na página de configurações [Diretrizes da marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
 ### Etapa 1: Crie uma diretriz para a marca
 
@@ -20,6 +20,7 @@ Siga estas etapas para criar diretrizes da marca no assistente de copywriting da
 2. Selecione **Aplicar diretriz da marca** e, em seguida, **Criar uma diretriz da marca**.
 3. Digite um nome para essa diretriz. Será o rótulo que você vê na seleção anterior.
 4. Para **Quando você usará essas diretrizes da marca?**, adicione detalhes para ajudar seus colegas (e você no futuro) a entender o contexto de uso dessa diretriz.
+5. Se quiser que essa seja a diretriz de marca padrão para o espaço de trabalho atual, marque **Usar como diretriz de marca padrão**.
 
 ![Visualização da criação da diretriz da marca.][1]
 

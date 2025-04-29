@@ -150,3 +150,36 @@ Para los webhooks, Braze reintentará automáticamente las peticiones HTTP que f
 Para el Contenido conectado, si las solicitudes al anfitrión de destino se detienen por el detector de anfitrión insalubre, Braze continuará mostrando mensajes y seguirá su lógica Liquid como si hubiera recibido un código de respuesta de error. Si quieres asegurarte de que estas solicitudes de Contenido conectado se reintentan cuando son detenidas por el detector de host insalubre, utiliza la opción `:retry`. Para más información sobre la opción `:retry`, consulta [Reintentos de contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Si crees que la detección de host no saludable puede estar causando problemas, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/support_contact/).
+
+## Automatización de envíos electrónicos y entradas en el registro de actividad de mensajes
+
+### Configuración de envíos electrónicos automatizados
+
+Si experimentas más de 100.000 errores de webhook o de punto final de contenido conectado (incluidos los reintentos) en un espacio de trabajo en un periodo de 24 horas, recibirás un correo electrónico con la siguiente información sobre cómo resolver los errores. 
+
+- Nombre del espacio de trabajo
+- Un enlace al Canvas o a la campaña
+- URL del punto final
+- Código de error
+- Hora en que se observó el error por última vez
+- Enlaces al registro de actividad de mensajes y documentación relacionada
+
+{% alert note %}
+Puedes configurar el umbral de error por espacio de trabajo. Para ajustar este umbral, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+Los errores del punto final son:
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+Estos correos electrónicos sólo se envían una vez al día a nivel de espacio de trabajo. Si ningún usuario se registra para recibir estos correos electrónicos, se notificará a todos los administradores de la empresa.
+
+Para registrarte para recibir estos correos electrónicos, haz lo siguiente:
+
+1. Vaya a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**.
+2. Selecciona **Errores de contenido conectado** y **Errores de webhook** en la **sección Canvas y campañas.** 
+
+### Entradas del registro de actividad de mensajes
+
+Habrá al menos una entrada en [el Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) relacionada con el error que desencadenó el envío por correo electrónico automatizado.

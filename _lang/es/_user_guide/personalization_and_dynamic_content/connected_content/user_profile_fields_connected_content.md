@@ -1,16 +1,20 @@
 ---
 nav_title: Obtención de datos de perfil de usuario
 article_title: Obtención de datos de perfil de usuario en llamadas de contenido conectado
-page_order: 5
+page_order: 3
 description: "En este artículo se explica cómo incluir perfiles de usuario en las llamadas a Connected Content, así como las mejores prácticas en relación con las plantillas Liquid."
-
+toc_headers: h2
 ---
 
 # Obtención de datos del perfil del usuario
 
-> Esta página explica cómo introducir perfiles de usuario en tus llamadas de contenido conectado, y las mejores prácticas en relación con las plantillas de Liquid. 
+> Esta página explica cómo introducir perfiles de usuario en tus llamadas de contenido conectado y las mejores prácticas de plantillas Liquid. 
+
+## Requisitos previos
 
 Si una respuesta de contenido conectado contiene campos de perfil de usuario (dentro de una etiqueta de personalización de Liquid), estos valores deben definirse antes en el mensaje con Liquid, antes de la llamada de contenido conectado para que el passback de Liquid se represente correctamente. Del mismo modo, la bandera `:rerender` debe incluirse en la solicitud. Tenga en cuenta que el indicador `:rerender` sólo tiene un nivel de profundidad, lo que significa que no se aplicará a ninguna etiqueta de contenido conectado anidada.
+
+## Plantilla líquida en llamadas de contenido conectado
 
 Para la personalización, Braze extrae los campos de perfil de usuario antes de pasar ese campo a Liquid, de modo que si la respuesta de Connected Content tiene campos de perfil de usuario, debe definirse de antemano. 
 
@@ -21,14 +25,19 @@ Hi ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
-Y la respuesta Contenido conectado es {% raw %}`Your language is ${language}`{% endraw %}, el contenido mostrado en este escenario será `Hi Jon, your language is`. El idioma en sí no tendrá plantilla. Esto se debe a que Braze necesita saber qué campos recuperar del usuario antes de realizar la llamada a Contenido Conectado.
 
-Para renderizar correctamente el passback de Liquid, debe colocar la etiqueta {% raw %}`${language}`{%endraw%} en cualquier lugar de la solicitud, como se muestra en el siguiente fragmento de código. El preprocesador Liquid sabrá tomar el atributo "idioma" del usuario para tenerlo listo para la plantilla de la respuesta.
+La respuesta del Contenido conectado es {% raw %}`Your language is ${language}`{% endraw %}. El contenido mostrado en este ejemplo es `Hi Jon, your language is`. 
+
+La lengua en sí no tendrá plantilla. Esto se debe a que Braze necesita saber qué campos recuperar del usuario antes de realizar la llamada a Contenido Conectado.
+
+Para representar correctamente el passback de Liquid, debes incluir la etiqueta {% raw %}`${language}`{% endraw %} en cualquier parte de la solicitud, como se muestra en el siguiente fragmento de código. El preprocesador Liquid sabrá tomar el atributo "idioma" del usuario para tenerlo listo para la plantilla de la respuesta.
+
 {%raw%}
 ```liquid
 "Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
 ```
 {% endraw %}
+
 {% alert important %}
 Recuerde que la opción de bandera `:rerender` sólo tiene un nivel de profundidad. Si la propia respuesta de contenido conectado tiene más etiquetas de contenido conectado o cualquier etiqueta de catálogo, Braze no volverá a renderizar esas etiquetas adicionales.
 {% endalert %}

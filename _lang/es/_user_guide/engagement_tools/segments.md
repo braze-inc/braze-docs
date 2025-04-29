@@ -52,6 +52,9 @@ guide_menu_list:
   - name: Listas de supresión
     link: /docs/user_guide/engagement_tools/segments/suppression_lists/
     image: /assets/img/braze_icons/list.svg 
+  - name: Medir el tamaño de los segmentos
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: Solución de problemas
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg

@@ -18,11 +18,24 @@ Assim como em qualquer canva, apenas um usuário pode editar um rascunho por vez
 
 ![Um exemplo de rascunho de Canvas com um banner que indica ao usuário que ele está editando um rascunho de Canvas com uma opção para visualizar o Canvas ativo. O rodapé tem opções para voltar à exibição de análise de dados, salvar como rascunho ou iniciar rascunho.][1]
 
-Para criar um rascunho, acesse um Canvas ativo e selecione o botão **Salvar como rascunho** no rodapé do Canvas. Observe que as edições no canvas ativo não podem ser feitas enquanto houver um rascunho de um canvas. Você pode atualizar o Canva para aplicar as alterações ou descartar o rascunho.
+## Criando um rascunho
+
+Para criar um rascunho:
+
+1. Acesse um Canvas ativo.
+2. Selecione o botão **Salvar como Rascunho** no rodapé do Canvas. 
+
+Observe que as edições no canvas ativo não podem ser feitas enquanto houver um rascunho de um canvas. Você pode atualizar o Canva para aplicar as alterações ou descartar o rascunho.
+
+## Referenciando o rascunho ativo
 
 Para fazer referência ao Canvas ativo, selecione **Exibir Canvas ativo** no rodapé da visualização de análise de dados ou no cabeçalho do Canvas no rascunho. Para retornar a um Canvas ativo, selecione **Editar rascunho** na visualização de análise de dados ou na visualização do Canvas ativo.
 
 Você só pode referenciar etapas que já foram lançadas antes da criação do rascunho. Isso significa que se você criou uma etapa ou canal **após** o rascunho foi criado, não pode ser referenciado no seu rascunho.
+
+{% alert note %}
+Se um bloco de conteúdo for referenciado em um rascunho do Canvas, o Canvas é listado na contagem de inclusão do bloco de conteúdo. No entanto, se o bloco de conteúdo for referenciado em um rascunho de um **ativo** Canvas, o Canvas não será listado na contagem de inclusão do bloco de conteúdo.
+{% endalert %}
 
 ### Priorização de mensagens no app
 

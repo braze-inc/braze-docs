@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) .
+> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) .
 
 Il vous permet de mettre à jour les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe) et le département.
 

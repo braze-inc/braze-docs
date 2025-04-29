@@ -18,7 +18,7 @@ L'assurance qualité du contenu avec l'IA offre les fonctionnalités clés suiva
 - **Vérification de l'orthographe et de la grammaire :** Vérifie automatiquement si votre message contient des fautes d'orthographe et de grammaire. L’outil suggère des corrections et formule des recommandations pour améliorer l’exactitude générale du contenu.
 - **Analyse du ton :** Évalue le ton du message afin d'identifier tout problème potentiel. Ceci permet de s'assurer que le ton employé correspond au style de communication souhaité et d'éviter les malentendus ou les propos involontairement blessants.
 - **Détection du langage offensant :** Analyse votre message pour détecter tout langage potentiellement offensant ou inapproprié, ce qui vous permet de réviser votre contenu et de maintenir une communication respectueuse.
-- **Vérification du contenu inséré accidentellement :** Détecte toute inclusion involontaire de code, de langage de balisage ou de messages de test.
+- **Vérification du contenu inséré accidentellement :** Détecte toute inclusion de code, de langage de balisage ou de messages de test qui auraient pu être ajoutés involontairement, y compris tout code Liquid qui n'a pas été rendu pour un utilisateur test.
 
 ## Accéder à l'assurance qualité du contenu avec l’IA
 

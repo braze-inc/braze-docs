@@ -16,7 +16,9 @@ description: "Cet article décrit les détails de l'endpoint Braze pour supprime
 
 > Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu.
 
-Jusqu'à 50 `external_ids`, `user_aliases`, `braze_ids`, ou `email_addresses` peuvent être inclus dans une seule demande. Une seule des adresses `external_ids`, `user_aliases`, `braze_ids`, ou `email_addresses` peut être incluse dans une seule demande.
+Jusqu'à 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peuvent être inclus dans une seule demande. Une seule des adresses `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peut être incluse dans une seule demande. 
+
+Si vous avez un cas d'utilisation qui ne peut pas être résolu avec la suppression en bloc d'utilisateurs via l'API, contactez l' [équipe d'assistance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) pour obtenir de l'aide.
 
 {% alert warning %}
 La suppression des profils utilisateur ne peut pas être annulée. Cette action supprimera définitivement les utilisateurs susceptibles de provoquer des écarts dans vos données. Pour en savoir plus sur ce qui se passe lorsque vous [supprimez un profil utilisateur à l'aide de l'API,]({{site.baseurl}}/help/help_articles/api/delete_user/) consultez notre documentation d'aide.
@@ -41,20 +43,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External IDs for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
 ### Paramètres de demande
 
 | Paramètre         | Requis | Type de données                  | Description                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | Facultatif | Tableau de chaînes de caractères           | Identifiants externes pour les utilisateurs à supprimer.                                                    |
-| `user_aliases`    | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
-| `braze_ids`       | Facultatif | Tableau de chaînes de caractères           | Identifiants utilisateur de Braze pour les utilisateurs à supprimer.                                                  |
+| `external_ids`    | Facultatif | Tableau de chaînes de caractères           | Identifiants externes à supprimer.                                                    |
+| `user_aliases`    | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) à supprimer. |
+| `braze_ids`       | Facultatif | Tableau de chaînes de caractères           | Suppression des identifiants des utilisateurs de Braze.                                                  |
 | `email_addresses` | Facultatif | Tableau de chaînes de caractères           | Les e-mails des utilisateurs à supprimer. Pour plus d'informations, reportez-vous à la section [Suppression d'utilisateurs par e-mail](#deleting-users-by-email).                                                             |
+| `phone_numbers` | Facultatif | Tableau de chaînes de caractères | Numéros de téléphone de l'utilisateur à supprimer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Suppression des utilisateurs par e-mail

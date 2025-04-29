@@ -16,7 +16,11 @@ description: "Este artigo descreve detalhes sobre o endpoint Create scheduled me
 
 > Use esse ponto de extremidade para programar o envio de uma campanha, Canva ou outra mensagem em um horário designado e forneça um identificador para fazer referência a essa mensagem para atualizações.
 
-Se estiver direcionando um segmento de mensagem, um registro da sua solicitação será armazenado no [console de desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/) depois que todas as mensagens programadas tiverem sido enviadas.
+Se estiver direcionando um segmento de mensagem, um registro da sua solicitação será armazenado no [console do desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/) após o envio de todas as mensagens programadas.
+
+{% alert tip %}
+Se estiver interessado em enviar mensagens imediatamente para usuários designados, use o [endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages).
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 

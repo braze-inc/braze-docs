@@ -57,10 +57,6 @@ Para usar a configuração de e-mail por autoatendimento, você deve atender aos
 2. Em seguida, selecione a guia **Verificação do remetente**. Para visualizar essa guia, você deve ter a permissão no nível da empresa "Pode gerenciar configurações da empresa".
 3. Clique no botão **Iniciar configuração**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **a Verificação de remetente** selecionando o ícone do seu perfil.
-{% endalert %}
-
 ### Etapa 2: Adicionar e verificar um domínio de envio
 
 Um domínio de envio é usado no endereço do remetente na hora de enviar um e-mail. Insira um domínio de envio e clique em **Enviar**. 

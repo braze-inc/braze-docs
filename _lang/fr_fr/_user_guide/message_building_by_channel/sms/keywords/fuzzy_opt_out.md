@@ -30,9 +30,6 @@ Par exemple, « Stpo » ou « Please stopppp » seront considérés comme va
 Pour configurer le désabonnement vague, rendez-vous sur la page de gestion de mots-clés de groupe d’abonnement.
 
 1. Allez dans **Audience** > **Abonnements** et sélectionnez un groupe d'abonnement SMS.
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **groupes d'abonnement** sous **Utilisateurs.**
-{% endalert %}
 
 {:start="2"}
 2\. Dans **Mots-clés SMS globaux**, trouvez la catégorie de **désabonnement** et sélectionnez l'icône en forme de crayon.

@@ -11,15 +11,16 @@ description: "Cet article de référence traite des directives de marque pour l'
 
 ## Créer des directives de marque {#steps}
 
-Procédez comme suit pour créer des directives de marque dans l'assistant de rédaction avec l’IA.
+Procédez comme suit pour créer des directives de marque dans l'assistant de rédaction avec l’IA. Vous pouvez également créer des directives de marque sur la page de paramétrage des [directives de marque]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
-### Étape 1 : Créer une directive de marque
+### Étape 1 : Créer une directive de marque
 
 1. Dans votre composeur de messages, sélectionnez <i class="fa-solid fa-wand-magic-sparkles"></i> **Lancer le rédacteur IA**.
    * Dans l'éditeur par glisser-déposer pour les messages in-app, sélectionnez un bloc de texte et choisissez <i class="fa-solid fa-wand-magic-sparkles" title="Rédacteur IA"></i> dans la barre d'outils du bloc.
 2. Sélectionnez **Appliquer la directive de marque**, puis **Créer une directive de marque**.
 3. Saisissez un nom pour cette directive. Il s'agira de l'étiquette qui apparaît dans la sélection précédente.
 4. Pour la rubrique **Dans quels cas utiliserez-vous ces directives de marque ?**, ajoutez des détails afin d’aider vos collègues (et vous à l'avenir) à comprendre le contexte d'utilisation de ces directives.
+5. Si vous souhaitez qu'il s'agisse de la ligne directrice par défaut pour l'espace de travail actuel, cochez la case **Utiliser comme ligne directrice par défaut**.
 
 ![Vue de la création des directives de marque.][1]
 

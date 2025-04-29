@@ -25,6 +25,7 @@ If you use SendGrid as an email provider, you can send emails to Apple without m
 2. Go to the **Certificates, Identifiers & Profiles** page.
 3. Select **Services** > **Sign in with Apple for Email Communication**.
 4. In the **Email Sources** section, add the domains and subdomains.
+- The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (an example is: `bounces+1234567@braze.online.docs.com`). 
 
 If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
 

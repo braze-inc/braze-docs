@@ -33,15 +33,9 @@ Puede crear un número ilimitado de plantillas de enlaces para satisfacer sus di
 
 1. Vaya a **Plantillas** > **Plantillas de enlaces de correo electrónico**. 
 2. Selecciona **Crear plantilla de enlace de correo electrónico**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Interacción** > **Plantillas y medios** > **Plantillas de enlaces**.
-{% endalert %}
-
-{:start="3"}
-3\. Dale un nombre a tu plantilla de enlaces.
-4\. (opcional) Añade una descripción, un equipo o una etiqueta para añadir detalles sobre la plantilla del enlace.
-5\. (opcional) Selecciona la opción de alternar para añadir automáticamente la plantilla de enlace a los enlaces en campañas de correo electrónico y Lienzos. Esto se aplica al añadir un nuevo enlace a cualquier correo electrónico nuevo o existente.
+3. Dale un nombre a tu plantilla de enlaces.
+4. (opcional) Añade una descripción, un equipo o una etiqueta para añadir detalles sobre la plantilla del enlace.
+5. (Opcional) Selecciona la opción de alternar para añadir automáticamente la plantilla de enlace a los enlaces de las campañas de correo electrónico y los Lienzos. Esto se aplica al añadir un nuevo enlace a cualquier correo electrónico nuevo o existente.
 
 Puede crear dos tipos de plantillas de enlaces:
 
@@ -58,7 +52,7 @@ Para añadir una cadena o URL antes de los enlaces en tu mensaje de correo elect
 2. Configura la **Posición de la plantilla** en **Antes de URL**. 
 3. Introduce una cadena que siempre se añadirá a tu URL. 
 
-Se proporciona una sección de vista previa para darle un ejemplo del proceso de inserción.
+La **vista previa de la** plantilla se proporciona para darte un ejemplo de cómo se insertará la plantilla de enlace antes de una URL.
 
 ![Campos Template Position, Prepend URL y Template Preview para el proceso de inserción de plantillas de enlace antes de una URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 

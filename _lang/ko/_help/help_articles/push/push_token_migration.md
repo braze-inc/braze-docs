@@ -10,17 +10,23 @@ channel: push
 
 # 푸시 토큰 마이그레이션
 
-[푸시 토큰]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/)은 앱의 알림을 전송할 위치를 지정하는 고유한 익명 식별자입니다. Braze는 Android용 Firebase 클라우드 메시징 서비스(FCM) 및 iOS용 Apple 푸시 알림 서비스(APN)와 같은 푸시 서비스 제공업체와 연결되며, 이러한 제공업체는 앱을 식별하는 고유 기기 토큰을 전송합니다. Braze를 통합하기 전에 자체적으로 또는 다른 제공업체를 통해 푸시 알림을 보내고 있었다면, 푸시 토큰 마이그레이션을 통해 등록된 푸시 토큰으로 사용자에게 푸시 알림을 계속 보낼 수 있습니다.
+> [푸시 토큰]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/)은 앱의 알림을 전송할 위치를 지정하는 고유한 익명 식별자입니다. Braze는 Android용 Firebase 클라우드 메시징 서비스(FCM) 및 iOS용 Apple 푸시 알림 서비스(APN)와 같은 푸시 서비스 제공업체와 연결되며, 이러한 제공업체는 앱을 식별하는 고유 기기 토큰을 전송합니다. Braze를 통합하기 전에 자체적으로 또는 다른 제공업체를 통해 푸시 알림을 보내고 있었다면, 푸시 토큰 마이그레이션을 통해 등록된 푸시 토큰으로 사용자에게 푸시 알림을 계속 보낼 수 있습니다.
 
 ## SDK를 통한 자동 마이그레이션
 
-Braze SDK는 이전에 푸시 알림을 옵트인한 사용자가 Braze 통합 앱 또는 사이트에 처음 로그인할 때 푸시 토큰을 자동으로 마이그레이션합니다. Braze SDK를 통합하는 경우 API를 사용하여 푸시 토큰을 마이그레이션할 필요가 없습니다.
+[Braze SDK를 통합한]({{site.baseurl}}/developer_guide/sdk_integration/) 후에는 옵트인한 사용자의 푸시 토큰이 다음에 앱을 열 때 자동으로 마이그레이션됩니다. 그때까지는 해당 사용자에게 Braze를 통해 푸시 알림을 보낼 수 없습니다.
 
-그러나 사용자가 앱에 처음 로그인할 때 푸시 토큰이 마이그레이션되므로, Braze는 SDK 연동 후 로그인하지 않은 사용자에게 푸시 알림을 보낼 수 없다는 점에 유의하세요. 이러한 사용자와 다시 참여하기 위한 방법으로 Android 및 iOS 푸시 토큰을 수동으로 마이그레이션할 수도 있습니다.
+또는 [푸시 토큰을 수동으로 마이그레이션하여](#manual-migration-via-api) 사용자의 재참여를 더욱 신속하게 유도할 수 있습니다.
 
-{% alert note %}
-웹 푸시 토큰의 특성상 최대 60일마다 토큰이 만료되고 초기화됩니다. 해당 기간 내에 세션이 없는 사람은 웹 푸시 토큰이 활성화되지 않습니다. Braze는 만료된 웹 푸시 토큰을 마이그레이션하지 않습니다. 이러한 사용자는 [푸시 프라이머를]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) 통해 다시 참여해야 합니다.
-{% endalert %}
+### 웹 토큰 고려 사항
+
+웹 푸시 토큰의 특성상 웹용 푸시를 구현할 때 다음 사항을 고려해야 합니다:
+
+|Consideration|세부 정보|
+|----------------------|------------|
+| **서비스 작업자**  | `manageServiceWorkerExternally` 또는 `serviceWorkerLocation` 와 같은 다른 옵션을 지정하지 않는 한 기본적으로 웹 SDK는 `./service-worker` 에서 서비스 워커를 찾습니다 . 서비스 워커가 제대로 설정되어 있지 않으면 사용자의 푸시 토큰이 만료될 수 있습니다. |
+| **만료된 토큰**   | 사용자가 60일 이내에 웹 세션을 시작하지 않으면 푸시 토큰이 만료됩니다. Braze는 만료된 푸시 토큰을 마이그레이션할 수 없으므로, 다시 참여하려면 [푸시 프라이머를]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) 보내야 합니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## API를 통한 수동 마이그레이션
 
@@ -39,10 +45,11 @@ API를 통해 웹 푸시 토큰을 마이그레이션하는 것은 불가능합�
 API 마이그레이션의 대안으로 SDK를 통합하여 토큰 기반이 자연스럽게 다시 채워질 수 있도록 하는 것이 좋습니다.
 {% endalert %}
 
-### 외부 ID가 있는 경우 마이그레이션
+{% tabs local %}
+{% tab 외부 ID 존재 %}
 식별된 사용자의 경우 `push_token_import` 플래그를 `false`로 설정(또는 매개변수 생략)하고 사용자 `attributes` 오브젝트에 `external_id`, `app_id`, `token` 값을 지정합니다. 
 
-예를 들어, 다음과 같습니다.
+For example:
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -63,8 +70,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
   ]
 }'
 ```
+{% endtab %}
 
-### 외부 ID가 없는 경우 마이그레이션
+{% tab 외부 ID 누락 %}
 다른 시스템에서 푸시 토큰을 가져올 때 `external_id`를 항상 사용할 수 있는 것은 아닙니다. 이 경우 `push_token_import` 플래그를 `true`로 설정하고 `app_id` 및 `token` 값을 지정합니다. Braze는 각 토큰에 대해 임시 익명 고객 프로필을 생성하여 이러한 개인에게 계속 메시지를 보낼 수 있도록 합니다. 토큰이 이미 Braze에 존재하는 경우 요청은 무시됩니다.
 
 예를 들어, 다음과 같습니다.
@@ -104,6 +112,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 가져온 후 익명 사용자가 Braze 지원 버전의 앱을 실행하면, Braze는 가져온 푸시 토큰을 자동으로 Braze 고객 프로필로 이동하고 임시 프로필을 정리합니다.
 
 Braze는 한 달에 한 번씩 푸시 토큰이 없으며 `push_token_import` 플래그가 있는 익명 프로필을 확인합니다. 익명 프로필에 더 이상 푸시 토큰이 없는 경우 해당 프로필을 삭제합니다. 그러나 익명 프로필에 푸시 토큰이 남아 있어 실제 사용자가 아직 해당 푸시 토큰으로 기기에 로그인하지 않았다는 것을 암시하는 경에는 아무 조치도 취하지 않습니다.
+{% endtab %}
+{% endtabs %}
 
 ## Android 푸시 토큰 가져오기
 

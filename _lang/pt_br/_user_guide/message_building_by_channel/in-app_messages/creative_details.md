@@ -4,7 +4,7 @@ article_title: Detalhes criativos
 page_order: 4
 layout: dev_guide
 guide_top_header: "Detalhes criativos"
-guide_top_text: "Antes de ser criativo com nossas mensagens no app, você deve conhecer algumas das diretrizes. Todos os modelos de mensagens no app foram projetados para exibir textos de diferentes comprimentos e tamanhos de imagens em dispositivos modernos. Para garantir que sua mensagem seja bem exibida em todos os telefones, tablets e computadores, recomendamos que você siga estas diretrizes e sempre <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>teste suas mensagens</a> antes de lançá-las. <br><br> Confira o seguinte tipo de mensagem Creative Specs ou o artigo Creative Details global."
+guide_top_text: "Antes de ser criativo com nossas mensagens no app, você deve conhecer algumas das diretrizes. Todos os modelos de mensagens no app foram projetados para exibir textos de diferentes comprimentos e tamanhos de imagens em dispositivos modernos. Para garantir que sua mensagem seja bem exibida em todos os telefones, tablets e computadores, recomendamos que você siga estas diretrizes e sempre <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>teste suas mensagens</a> antes de lançá-las."
 description: "Este hub de destino abrange os requisitos de design e conteúdo para os três tipos de mensagens no app: modal, slideup e tela cheia."
 
 channel:
@@ -91,7 +91,7 @@ Em geral, a Braze recomenda o uso de imagens que caibam em uma tela 16:10.
 
 ### GIFs e vídeos
 
-Atualmente, a Braze suporta GIFs para mensagens pela internet (inclusive), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/) e iOS (inclusive) no app, uma vez que a capacitação foi ativada durante a integração da plataforma desejada. Para saber mais sobre vídeos em mensagens no app, consulte nossa [documentação de personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Atualmente, a Braze suporta GIFs para mensagens pela internet (inclusive), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android) e iOS (inclusive) no app, uma vez que a capacitação foi ativada durante a integração da plataforma desejada. Para saber mais sobre vídeos em mensagens no app, consulte nossa [documentação de personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Considerações adicionais
 

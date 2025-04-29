@@ -215,7 +215,7 @@ Le <i>taux d'envoi au transporteur</i> est le pourcentage du total des messages 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> est le nombre total d'e-mails délivrés qui ont été marqués comme "spam". Braze désinscrit automatiquement les utilisateurs qui ont marqué un e-mail comme spam, et ces utilisateurs ne seront pas ciblés par des e-mails futurs.
+Le <i>spam</i> est le nombre total d'e-mails livrés qui ont été marqués comme "spam" par le destinataire. Bien que Braze ne modifie pas l'état de l'abonnement de ces utilisateurs, ceux-ci seront automatiquement exclus des futurs e-mails, à moins que vous n'envoyiez un e-mail transactionnel, qui est configuré pour "envoyer à tous les utilisateurs, y compris ceux qui se désabonnent".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}

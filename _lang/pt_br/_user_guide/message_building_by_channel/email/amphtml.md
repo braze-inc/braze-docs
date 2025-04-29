@@ -11,7 +11,7 @@ channel:
 
 # AMP para e-mail
 
-> Com o [AMP para e-mail](https://amp.dev/about/email), é possível adicionar elementos interativos aos seus e-mails e elevar a comunicação com seus clientes, oferecendo uma experiência completa diretamente na caixa de entrada do usuário. A AMP torna isso possível por meio do uso de vários componentes que podem ser usados para ajudar a criar ofertas interessantes de e-mail, como pesquisas, questionários de feedback, campanhas de votação, avaliações, centros de inscrição e muito mais. Ferramentas como essas podem oferecer oportunidades para aumentar o engajamento e a retenção.
+> Com o [AMP para e-mail](https://amp.dev/about/email), é possível adicionar elementos interativos aos seus e-mails e elevar a comunicação com seus clientes, oferecendo uma experiência completa diretamente na caixa de entrada do usuário. A AMP torna isso possível por meio do uso de vários componentes que podem ser usados para ajudar a criar ofertas interessantes de envio de e-mail, como pesquisas, questionários de feedback, campanhas de votação, avaliações, centros de inscrição e muito mais. Ferramentas como essas podem oferecer oportunidades para aumentar o engajamento e a retenção.
 
 ## Solicitações
 
@@ -19,15 +19,15 @@ A Braze não é responsável pelo registro dos usuários no Google ou pelo cumpr
 
 | Requisito   | Descrição |
 | --------------| ----------- |
-| AMP para e-mail ativado | O AMP está disponível para todos. Entre em contato com seu gerente de conta se tiver interesse em ativar esse recurso. |
+| AMP para e-mail ativado | O AMP está disponível para todos os usuários. |
 | Capacitação da conta do Gmail | Consulte [Capacitação da conta do Gmail](#enabling-gmail-account). |
 | Autenticação de remetente do Google | O Gmail [autentica o remetente](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) dos e-mails AMP com DKIM, SPF e DMARC. Eles devem ser configurados para sua conta. <br><br>- [Correio Identificado por Chaves de Domínio](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Estrutura de política de remetente](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Autenticação, relatório e conformidade de mensagens baseadas em domínio](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | Elementos de e-mail AMP | Um envio de e-mail AMP atraente inclui o uso estratégico de vários componentes. Consulte a guia Essentials na seção [Componentes](#components) abaixo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Clientes com suporte
+### Clientes de e-mail suportados
 
-Antes de poder enviar e-mails AMP aos usuários, é necessário registrar-se em nossos clientes. O processo de registro envolve o envio de um e-mail HTML AMP de teste para ser aprovado. Os tempos de aprovação variam de cliente para cliente. Siga os links de registro para saber mais.
+Antes de poder enviar e-mails AMP aos usuários, é necessário registrar-se em nossos clientes de e-mail. O processo de registro envolve o envio de um e-mail HTML AMP de teste para ser aprovado. Os tempos de aprovação variam de cliente para cliente. Siga os links de registro para saber mais.
 
 | Cliente | Link de registro |
 | ------ | -------- |
@@ -36,7 +36,7 @@ Antes de poder enviar e-mails AMP aos usuários, é necessário registrar-se em 
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-Para obter uma lista completa das plataformas compatíveis, consulte a [documentação do AMP](https://amp.dev/support/faq/email-support). 
+Para obter uma lista completa dos clientes de e-mail compatíveis, consulte a [documentação do AMP](https://amp.dev/support/faq/email-support).
 
 ### Capacitação da conta do Gmail
 
@@ -87,10 +87,12 @@ Consulte estes recursos adicionais:
 
 ### Componentes
 
+Ao criar os elementos AMP, recomendamos que você verifique com sua equipe de engenharia e inclua recursos e elementos de design para obter uma camada extra de polimento.
+
 {% tabs %}
   {% tab Essenciais %}
 
-Estes são os elementos que tornam um AMP HTML email...AMP'ed! Cada um desses elementos é necessário no corpo de seu e-mail AMP.
+Cada um desses elementos é necessário no corpo de seu e-mail AMP.
 
 | Componente | Descrição | Exemplo |
 |---------|--------------|---------|
@@ -235,22 +237,19 @@ Note que o total de cliques e os cliques únicos não levam em conta os cliques 
 Antes de enviar seu e-mail AMP, recomendamos que você faça um teste de acordo com estas [diretrizes do Gmail](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 Para que seu e-mail AMP seja entregue a qualquer conta do Gmail, o e-mail deve atender às seguintes condições:
+
 - Os requisitos de segurança do AMP para e-mail devem ser atendidos.
 - A parte AMP MIME deve conter um documento AMP válido.
 - O e-mail deve incluir a parte AMP MIME antes da parte HTML MIME.
 - A parte AMP MIME deve ser menor que 100 KB.
 
-Se nenhuma dessas condições estiver causando o erro, entre em contato com o [Suporye][suporte].
+Se nenhuma dessas condições estiver causando o erro, entre em contato com [o Suporte]({{site.baseurl}}/support_contact/).
 
 ### Perguntas frequentes
 
-{% details Devo segmentar com e-mails AMP? %}
-Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML.
-{% enddetails %}
+#### Devo segmentar com e-mails AMP?
 
-{% details Você tem alguma dica adicional para criar um e-mail AMP? %}
-Verifique com sua equipe de engenharia para criar os elementos AMP. Depois que esses elementos estiverem configurados, recomendamos que você inclua recursos de design e elementos que tenha para adicionar uma camada extra de polimento.
-{% enddetails %}
+Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML. 
+
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-[suporte]: {{site.baseurl}}/support_contact/

@@ -11,7 +11,7 @@ description: "Este artigo contém notas de versão para abril de 2020."
 
 A Movable Ink oferece aos clientes da Braze a capacidade de usar recursos do Intelligent Creative, como cronômetros de contagem regressiva, enquetes e raspadinhas em suas campanhas de mensagens no app e cartões de conteúdo. O Movable Ink e a Braze oferecem uma abordagem mais completa para mensagens dinâmicas orientadas por dados, fornecendo aos usuários elementos em tempo real sobre as coisas que importam.
 
-Comece a [integrar o Movable Ink]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/) em suas campanhas!
+Comece a [integrar o Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) em suas campanhas!
 
 ## Intelligent Timing
 

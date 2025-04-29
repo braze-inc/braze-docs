@@ -2,7 +2,7 @@
 nav_title: Acerca de las recomendaciones de artículos
 article_title: Acerca de las recomendaciones de artículos
 description: "Este artículo de referencia describe diferentes casos de uso para recomendar artículos a los clientes utilizando Braze."
-page_order: 1
+page_order: 10
 ---
 
 # Acerca de las recomendaciones de artículos

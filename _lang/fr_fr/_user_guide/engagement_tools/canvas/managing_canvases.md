@@ -15,9 +15,6 @@ guide_featured_list:
   - name: Modification de Canvas après le lancement
     link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Approbations et autorisations dans Canvas
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
-    image: /assets/img/braze_icons/message-circle-01.svg
   - name: Enregistrer des ébauches pour Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg
@@ -27,10 +24,16 @@ guide_featured_list:
   - name: Clonage des Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: Duplication de Canvas
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
-    image: /assets/img/braze_icons/copy-04.svg
-  - name: Archivage de Canvas
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: Flux de travail d’approbation
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Archivage des messages
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Duplication des messages
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    image: /assets/img/braze_icons/copy-04.svg
 ---

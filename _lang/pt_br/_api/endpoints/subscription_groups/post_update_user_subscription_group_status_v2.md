@@ -74,7 +74,8 @@ Ao criar novos usuários usando o [endpoint `/users/track` ]({{site.baseurl}}/ap
 | `subscription_state` | Obrigatória | String | Os valores disponíveis são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). |
 | `external_ids` | Obrigatório* | Array de strings | O `external_id` do usuário ou usuários pode incluir até 50 `id`s. |
 | `emails` | Obrigatório* | string ou array de strings | O endereço de e-mail do usuário pode ser passado como um vetor de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo e-mail, todos os usuários que compartilham o e-mail são atualizados com as mudanças do grupo de inscrições. |
-| `phones` | Obrigatório* | string em [E.164](https://en.wikipedia.org/wiki/E.164) formato | Os números de telefone do usuário podem ser passados como um vetor de strings. Deve incluir pelo menos um número de telefone (com um máximo de 50). |
+| `phones` | Obrigatório* | string em [E.164](https://en.wikipedia.org/wiki/E.164) formato | Os números de telefone do usuário podem ser passados como um vetor de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, todos os usuários que compartilham o número de telefone serão atualizados com as mesmas alterações no grupo de inscrições.|
+| `use_double_opt_in_logic` | Opcional | Booleano | Se esse parâmetro for omitido ou definido como `false`, os usuários não serão inseridos no fluxo de trabalho de aceitação dupla de SMS. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}

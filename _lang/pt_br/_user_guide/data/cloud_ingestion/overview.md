@@ -34,7 +34,7 @@ A Ingestão de Dados na Nuvem pode sincronizar dados das seguintes fontes para a
 ## Tipos de dados suportados 
 
 A Ingestão de Dados na Nuvem suporta os seguintes tipos de dados: 
-- Atributos do usuário, incluindo: 
+- Atributos do usuário, incluindo:
    - Atributos personalizados aninhados
    - Arrays de objetos
    - Status de inscrições
@@ -386,10 +386,10 @@ Como a Solicitação 1 ocorre primeiro, as atribuições do usuário são atuali
 - Tamanho: "Grande"
 
 No entanto, quando a Solicitação 2 ocorre, o Braze começa com os valores de atribuição originais ("Verde" e "Grande") e, em seguida, atualiza os atributos do usuário para o seguinte:
-- Cor: "Verde"
+- Cor: "Vermelho"
 - Tamanho: "Médio"
 
-Quando as solicitações forem concluídas, a Solicitação 2 substituirá a atualização da Solicitação 1. Por esse motivo, é melhor escalonar suas atualizações para evitar que as solicitações sejam substituídas.
+Quando as solicitações forem concluídas, a Solicitação 2 substituirá a atualização da Solicitação 1, portanto, é melhor escalonar suas atualizações para evitar que as solicitações sejam substituídas.
 
 ### Criar uma string JSON a partir de outra tabela
 
@@ -552,6 +552,9 @@ Você pode incluir atributos personalizados aninhados na coluna de carga útil p
 {% endtab %}
 {% tab Evento %}
 Para sincronizar eventos, é necessário um nome de evento. O campo `time` deve ser formatado como uma string ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Se o campo `time` não estiver presente, o valor da coluna `UPDATED_AT` será usado como o horário do evento. Outros campos, incluindo `app_id` e `properties`, são opcionais. 
+
+Note que você só pode sincronizar um evento por linha.
+
 ```json
 {
     "app_id" : "your-app-id",
@@ -566,7 +569,9 @@ Para sincronizar eventos, é necessário um nome de evento. O campo `time` deve 
 
 {% endtab %}
 {% tab Compra %}
-Para sincronizar eventos de compra, o nome do evento, `product_id`, `currency` e `price` são necessários. O campo `time`, que é opcional, deve ser formatado como uma string ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Se o campo `time` não estiver presente, o valor da coluna `UPDATED_AT` será usado como o horário do evento. Outros campos, incluindo `app_id`, `quantity` e `properties` são opcionais. 
+Para sincronizar eventos de compra, são necessários os sites `product_id`, `currency` e `price`. O campo `time`, que é opcional, deve ser formatado como uma string ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Se o campo `time` não estiver presente, o valor da coluna `UPDATED_AT` será usado como o horário do evento. Outros campos, incluindo `app_id`, `quantity` e `properties` são opcionais.
+
+Note que você só pode sincronizar um evento de compra por linha.
 
 ```json
 {

@@ -2397,6 +2397,9 @@ validurls['/docs/help/support/'] = '/docs/user_guide/administrative/access_braze
 validurls['/docs/user_guide/administrative/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
 
+validurls['/docs/developer_guide/analytics/logging_iam_data'] = '/docs/developer_guide/analytics/logging_channel_data/in_app_messages/';
+validurls['/docs/developer_guide/analytics/logging_push_data'] = '/docs/developer_guide/analytics/logging_channel_data/push_notifications/';
+
 validurls['/docs/developer_guide/banner_cards'] = '/docs/developer_guide/banners/';
 validurls['/docs/developer_guide/banner_cards/creating_campaigns'] = '/docs/developer_guide/banners/creating_campaigns';
 validurls['/docs/developer_guide/banner_cards/embedding_cards'] = '/docs/developer_guide/banners/embedding_banners';
@@ -2636,5 +2639,5 @@ validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
-// validurls['OLD'] = 'NEW';
 
+// validurls['OLD'] = 'NEW';

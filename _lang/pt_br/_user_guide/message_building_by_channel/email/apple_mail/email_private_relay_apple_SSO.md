@@ -21,27 +21,12 @@ Se um usuário decidir desativar o envio de e-mail para o e-mail de retransmiss�
 
 Se você usar o SendGrid como provedor de e-mail, poderá enviar e-mails para a Apple sem fazer alterações no DNS. 
 
-1. Acesse a página do **certificado da Apple** e permita o endereço de e-mail que deseja usar para o envio por meio do serviço de retransmissão de e-mail da Apple (o endereço "De" desejado).
-- O endereço deve ser formatado como: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(um exemplo é: `bounces+1234567@braze.online.docs.com`). 
+1. Registre no [Portal do desenvolvedor da Apple](https://developer.apple.com/)
+2. Acesse a página **Certificados, identificadores e perfis**.
+3. Selecione **Serviços** > **Fazer login com a Apple para comunicação por e-mail**.
+4. Na seção **Fontes de e-mail**, adicione os domínios e subdomínios.
 
-![Opção para permitir a listagem de endereços de e-mail individuais na página do certificado da Apple.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
-
-{:start="2"}
-2\. Depois que o endereço for adicionado à página do certificado da Apple, os e-mails desse domínio serão entregues por meio do sistema Apple Private Relay.
-
-{% alert important %}
 Se o endereço "From" desejado for um endereço `abmail`, inclua-o em seu subdomínio. Por exemplo, use `abmail.docs.braze.com` em vez de `docs.braze.com`.
-{% endalert %}
-
-### Valores do endereço de origem
-
-Consulte esta tabela para ver os componentes usados ao adicionar endereços de e-mail com o Apple Private Relay.
-
-| Valor | Descrição |
-|---|---|
-| ID DO USUÁRIO | Esse valor é fornecido em seus registros DNS fornecidos pela Braze (da SendGrid). Não inclua a letra "u" em seu ID do usuário no endereço de e-mail. Por exemplo, se seu ID do usuário for apresentado na SendGrid como `u1234567.wl134.sendgrid.net`, então `1234567` é o valor do usuário. <br><br> Se não tiver acesso aos seus registros DNS, entre em contato com o gerente de sucesso do cliente Braze para fornecer seu ID do usuário. |
-| Subdomínio e domínio com marca branca | O domínio e o subdomínio iniciais que você inseriu na SendGrid. Também é possível usar o **valor HOST** em seus registros DNS na SendGrid. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Envio de e-mails para o SparkPost
 
@@ -49,11 +34,7 @@ Para configurar o Apple Private Relay para o SparkPost, siga estas etapas:
 
 1. Faça login com a Apple.
 2. Siga a [documentação da Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) para registrar os domínios de e-mail.
-3. A Apple verificará automaticamente os domínios e mostrará quais são verificados, além de oferecer a opção de reverificar ou excluir os domínios.
-
-{% alert important %}
-Certifique-se de concluir esse processo dentro de dois ou três dias após a criação dos arquivos de verificação, caso contrário, eles expirarão. A Apple não divulga por quanto tempo eles são válidos.
-{% endalert %}
+3. A Apple verificará automaticamente os domínios, mostrará quais são verificados e fornecerá a opção de reverificar ou excluir os domínios.
 
 ### Considerações
 
@@ -68,7 +49,7 @@ Se um domínio de envio também for usado como um domínio de bounce, não será
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-Para evitar falhas de SPF, é necessário criar os registros MX e TXT e propagá-los no DNS **antes** de excluir o registro CNAME.
+Para evitar falhas de SPF, é necessário criar os registros MX e TXT e propagá-los no DNS **antes de** excluir o registro CNAME.
 {% endalert %}
 
 {:start="2"}

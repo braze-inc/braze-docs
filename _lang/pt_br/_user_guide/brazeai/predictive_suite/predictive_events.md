@@ -37,10 +37,6 @@ O valor real dos eventos preditivos está no uso dos resultados da previsão par
 
 A página **Previsões** está localizada na seção **Análises de dados**. Para obter acesso total, entre em contato com o gerente da sua conta.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **as previsões** em **Engajamento**.
-{% endalert %}
-
 Antes de comprar esse recurso, ele está disponível em modo de prévia. Isso lhe permitirá ver uma previsão de demonstração com dados sintéticos, bem como criar um modelo de previsão prévia por vez. Essa previsão será criada com base nos dados reais do usuário, mas não permitirá o direcionamento de mensagens para os usuários de acordo com a pontuação de probabilidade deles. Ele também não será atualizado regularmente após a criação.
 
 Com a Prévia, você também pode editar e reconstruir essa previsão ou arquivá-la e criar outras para testar a [qualidade da previsão]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality) esperada de [diferentes públicos]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience) e se familiarizar com as análises preditivas.
