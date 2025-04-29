@@ -136,11 +136,11 @@ If you're participating in the Context step early access, Canvas entry propertie
 
 Yes. All variables in a Context step are evaluated in a sequence, meaning you could have the following context variables setup:
 
-| Context variable | Liquid | Description |
+| Context variable | Value | Description |
 |---|---|---|
-|`favorite_restaurant_type`| {% raw %}`{{user.favorite_type}}`{% endraw %} | A user's favorite restaurant type. |
-|`promo_code`| {% raw %}`{{user.promo_code}}`{% endraw %} | The available discount code for a user. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_restaurant_type}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
+|`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | A user's favorite type of cuisine. |
+|`promo_code`| {% raw %}`{{custom_attribute.${coupon_code}}}`{% endraw %} | The available discount code for a user. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user.
