@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST: 카탈로그 항목 생성"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT: 카탈로그 항목 업데이트"
+  - name: "PUT: 카탈로그 항목 바꾸기"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 

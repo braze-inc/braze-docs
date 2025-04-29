@@ -1,7 +1,7 @@
 ---
 nav_title: 로깅 분석  
 article_title: 로깅 분석 
-page_order: 4
+page_order: 1
 description: "이 문서에서는 사용자 지정된 콘텐츠 카드에 대한 클릭, 이벤트 및 분석을 수동으로 기록하는 방법을 다룹니다."
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # 로그 분석 
 
-> 콘텐츠 카드를 완전히 커스텀 방식으로 표시하려면 자체 콘텐츠 카드 프레젠테이션 UI를 구현할 수 있습니다. 그러나 노출 횟수, 클릭 및 해제와 같은 데이터는 기본 카드 모델을 사용할 때만 자동으로 처리됩니다. 완전히 커스텀 UI를 구현하는 경우 이 데이터를 수동으로 처리해야 합니다. 이를 위해 Braze 데이터 모델의 데이터를 사용하여 커스텀 UI를 채우고 노출 횟수 및 클릭과 같은 분석을 수동으로 기록합니다. 분석을 기록하는 방법을 이해하면 Braze 고객이 [커스텀 콘텐츠 카드를 생성]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)하는 일반적인 방법을 이해할 수 있습니다. 
+> 콘텐츠 카드를 완전히 커스텀 방식으로 표시하려면 자체 콘텐츠 카드 프레젠테이션 UI를 구현할 수 있습니다. 그러나 노출 횟수, 클릭 및 해제와 같은 데이터는 기본 카드 모델을 사용할 때만 자동으로 처리됩니다. 완전히 커스텀 UI를 구현하는 경우 이 데이터를 수동으로 처리해야 합니다. 이를 위해 Braze 데이터 모델의 데이터를 사용하여 커스텀 UI를 채우고 노출 횟수 및 클릭과 같은 분석을 수동으로 기록합니다. 분석을 기록하는 방법을 이해하면 Braze 고객이 [커스텀 콘텐츠 카드를 생성]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)하는 일반적인 방법을 이해할 수 있습니다. 
 
 ## 카드 업데이트를 기다리는 중
 
@@ -20,7 +20,7 @@ toc_headers: "h2"
 * **`id`**: 콘텐츠 카드 ID 문자열을 나타냅니다. 이것은 커스텀 콘텐츠 카드에서 분석을 기록하는 데 사용되는 고유 식별자입니다.
 * **`extras`**: Braze 대시보드의 모든 키-값 쌍을 포함합니다. 
 
-커스텀 콘텐츠 카드에 대한 구문 분석에서 `id` 및 `extras` 외의 모든 속성정보는 선택 사항입니다. 자세한 데이터 모델 정보는 각 플랫폼의 통합 기사를 참조하십시오: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/).
+커스텀 콘텐츠 카드에 대한 구문 분석에서 `id` 및 `extras` 외의 모든 속성정보는 선택 사항입니다. 자세한 데이터 모델 정보는 각 플랫폼의 통합 기사를 참조하십시오: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [웹]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-콘텐츠 카드는 `openSession()` 전에 가입 요청을 호출한 경우에만 세션을 시작할 때 새로 고쳐집니다. 항상 [피드를 수동으로 새로고침]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed)할 수도 있습니다.
+콘텐츠 카드는 `openSession()` 전에 가입 요청을 호출한 경우에만 세션을 시작할 때 새로 고쳐집니다. 항상 [피드를 수동으로 새로고침]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)할 수도 있습니다.
 {% endalert %}
 
 {% endtab %}

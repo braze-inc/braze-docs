@@ -174,7 +174,7 @@
 
 A2P 10DLC는 미국에서 기업이 표준 10자리 긴 코드(10DLC) 전화번호를 통해 A2P(애플리케이션 대 개인) 유형의 메시징을 보낼 수 있는 시스템을 말합니다. 10자리 긴 코드는 전통적으로 개인 간(P2P) 트래픽을 위해 설계되어 기업이 제한된 처리량과 강화된 필터링에 의해 제약을 받게 됩니다. 이 서비스는 이러한 문제를 완화하여 전반적인 메시지 전달력을 개선하고 브랜드가 링크와 클릭 유도 문안을 포함한 메시지를 대규모로 전송할 수 있도록 지원하며 원치 않는 메시지로부터 소비자를 더욱 보호할 수 있습니다. 
 
-현재 미국 고객에게 보내기 위해 미국 긴 코드를 보유하고 있거나 사용하는 모든 고객은 10DLC에 긴 코드를 등록해야 합니다. 이 신청 절차는 4~6주가 소요됩니다. 10DLC의 세부 사항과 필요한 이유에 대해 자세히 알아보려면 [10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/) 전용 [문서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/) 참조하세요.
+현재 미국 고객에게 보내기 위해 미국 긴 코드를 보유하고 있거나 사용하는 모든 고객은 10DLC에 긴 코드를 등록해야 합니다. 이 신청 절차는 4~6주가 소요됩니다. 10DLC의 세부 사항과 필요한 이유에 대해 자세히 알아보려면 [10DLC 전용 문서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/) 참조하세요.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

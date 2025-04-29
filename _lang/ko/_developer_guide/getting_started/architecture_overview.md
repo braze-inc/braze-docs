@@ -37,7 +37,7 @@ Braze는 기본적으로 데이터를 다룹니다. Braze 플랫폼은 SDK, REST
 Braze는 Snowflake, Kafka, MongoDB 및 Redis를 활용하여 스트리밍 데이터 아키텍처를 기반으로 빌드됩니다. SDK 및 API를 통해 여러 소스의 데이터를 Braze에 로드할 수 있습니다. 플랫폼은 데이터가 중첩되거나 구조화되는 방식에 관계없이 실시간으로 모든 데이터를 처리할 수 있습니다. 데이터 in Braze는 고객 프로필에 저장됩니다. 
 
 {% alert tip %}
-Braze는 사용자가 익명 상태일 때부터 앱에 로그인하여 알려진 상태가 될 때까지의 전체 여정에서 데이터를 추적할 수 있습니다. 각 사용자에 대해 Braze에서 `external_id`라고 하는 사용자 ID를 설정해야 합니다. 이들은 사용자가 앱을 열 때 변경되지 않고 접근할 수 있어야 하며, 이를 통해 기기와 플랫폼 전반에서 사용자를 추적할 수 있습니다. 최고의 실천 방법에 대해서는 [사용자 수명 주기 기사]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)를 참조하십시오.
+Braze는 사용자가 익명 상태일 때부터 앱에 로그인하여 알려진 상태가 될 때까지의 전체 여정에서 데이터를 추적할 수 있습니다. 각 사용자에 대해 Braze에서 `external_id`라고 하는 사용자 ID를 설정해야 합니다. 이들은 사용자가 앱을 열 때 변경되지 않고 접근할 수 있어야 하며, 이를 통해 기기와 플랫폼 전반에서 사용자를 추적할 수 있습니다. 최고의 실천 방법에 대해서는 [사용자 수명 주기 기사]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)를 참조하십시오.
 {% endalert %}
 
 ![Braze는 API에서 백엔드 데이터 소스를, SDK에서 프론트엔드 데이터 소스를, Braze 클라우드 데이터 수집에서 데이터 웨어하우스 데이터를, 파트너 통합에서 데이터를 가져옵니다. 이 데이터는 Braze API ]({% image_buster /assets/img/getting-started/import-export.png %})를 통해 내보냅니다.{: style="display:block;margin:auto;" }
@@ -56,7 +56,7 @@ Braze는 사용자의 디바이스와 같은 프론트엔드 데이터 소스에
 Braze에는 "Alloys"라고 부르는 150개 이상의 기술 파트너가 있습니다. [상호 운용 가능한 기술 및 데이터 API로]({{site.baseurl}}/partners/home) 구성된 의미 있고 강력한 네트워크를 통해 데이터 피드를 보완할 수 있습니다. 
 
 ### Braze 클라우드 데이터 수집을 통한 직접 웨어하우스 연결
-[Braze Cloud 데이터 수집을]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion) 통해 단 몇 분 만에 데이터 웨어하우스에서 플랫폼으로 고객 데이터를 스트리밍하여 관련 사용자 속성, 이벤트 및 구매를 동기화할 수 있습니다. 클라우드 데이터 수집 통합은 중첩된 JSON 및 오브젝트 배열을 포함하는 복잡한 데이터 구조를 지원합니다.
+[Braze Cloud 데이터 수집을]({{site.baseurl}}/user_guide/data/cloud_ingestion/) 통해 단 몇 분 만에 데이터 웨어하우스에서 플랫폼으로 고객 데이터를 스트리밍하여 관련 사용자 속성, 이벤트 및 구매를 동기화할 수 있습니다. 클라우드 데이터 수집 통합은 중첩된 JSON 및 오브젝트 배열을 포함하는 복잡한 데이터 구조를 지원합니다.
 
 클라우드 데이터 수집은 Snowflake, Amazon Redshift, Databricks 및 Google BigQuery에서 데이터를 동기화할 수 있습니다.
 
@@ -69,7 +69,7 @@ Braze에는 "Alloys"라고 부르는 150개 이상의 기술 파트너가 있습
 
 이름, 이메일, 생년월일, 국가 등과 같은 일반적인 유형의 여러 사용자 속성은 기본적으로 SDK에 의해 자동으로 추적됩니다. 개발자는 팀과 협력하여 사용 사례에 맞게 추적할 추가적인 커스텀 데이터를 정의할 수 있습니다. 귀하의 커스텀 데이터는 사용자 기반이 분류되고 세분화되는 방식에 영향을 미칩니다. 구현 과정에서 이 데이터 모델을 설정하게 됩니다. 
 
-[데이터 및 커스텀 데이터 자동 수집]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)에 대해 자세히 알아보세요.
+[데이터 및 커스텀 데이터 자동 수집]({{site.baseurl}}/developer_guide/analytics/)에 대해 자세히 알아보세요.
 
 ## 오케스트레이션 {#orchestration}
 마케팅 팀은 오케스트레이션 레이어를 사용하여 사용자 데이터 및 이전의 인게이지먼트를 기반으로 사용자 여정을 설계할 수 있습니다. 이 작업은 대부분 대시보드 인터페이스를 통해 이루어지지만 [API를 통해 캠페인을]({{site.baseurl}}/api/api_campaigns#api-campaigns) 시작할 수 있는 옵션도 있습니다. 예를 들어, 대시보드에서 마케터가 설계한 메시지와 캠페인을 보내는 시점을 백엔드에서 Braze에 알리고, 백엔드 로직에 따라 트리거할 수 있습니다. API-트리거된 메시지의 예로는 비밀번호 재설정 또는 배송 확인이 있을 수 있습니다. 
@@ -80,7 +80,7 @@ API로 트리거된 캠페인은 고급 트랜잭션 사용 사례에 적합합�
 
 
 ### 기능 플래그
-Braze에서는 [기능 플래그를]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/) 통해 일부 사용자에 대한 기능을 원격으로 활성화 또는 비활성화할 수 있습니다. 이를 통해 마케터는 전체 오디언스에 아직 롤아웃되지 않은 기능에 대한 메시징을 사용자 기반의 올바른 세그먼트에 타겟팅할 수 있습니다. 하지만 그보다 더 중요한 것은 기능 플래그를 사용하여 추가 코드 배포나 앱 스토어 업데이트 없이 프로덕션에서 기능을 켜고 끌 수 있다는 것입니다. 이를 통해 새로운 기능을 안심하고 안전하게 롤아웃할 수 있습니다.
+Braze에서는 [기능 플래그를]({{site.baseurl}}/developer_guide/feature_flags/) 통해 일부 사용자에 대한 기능을 원격으로 활성화 또는 비활성화할 수 있습니다. 이를 통해 마케터는 전체 오디언스에 아직 롤아웃되지 않은 기능에 대한 메시징을 사용자 기반의 올바른 세그먼트에 타겟팅할 수 있습니다. 하지만 그보다 더 중요한 것은 기능 플래그를 사용하여 추가 코드 배포나 앱 스토어 업데이트 없이 프로덕션에서 기능을 켜고 끌 수 있다는 것입니다. 이를 통해 새로운 기능을 안심하고 안전하게 롤아웃할 수 있습니다.
 
 ## 개인화 {#personalization}
 개인화 계층은 메시지에서 동적 콘텐츠를 제공하는 기능을 나타냅니다. 널리 사용되는 개인화 언어인 Liquid를 사용하여 팀은 기존 데이터를 동적으로 가져와 각 수신자에게 맞춤화된 메시지를 표시할 수 있습니다. 또한 [연결된 콘텐츠를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) 사용하여 웹서버에서 또는 API를 통해 액세스할 수 있는 모든 정보를 푸시 알림이나 이메일 등 전송하는 메시지에 직접 삽입할 수 있습니다. 연결된 콘텐츠는 Liquid에 기반하여 빌드되며 친숙한 구문을 사용합니다.
@@ -101,7 +101,7 @@ Braze는 채널에 구애받지 않고 사용자 중심의 데이터 모델을 �
 특히 Braze와의 모든 최종사용자 상호 작용이 추적되어 인게이지먼트와 아웃리치를 평가할 수 있습니다. Braze가 이러한 모든 소스에서 데이터를 집계한 후 다양한 툴을 사용하여 데이터를 다시 기술 스택으로 내보내 루프를 닫을 수 있습니다.
 
 ### 커런츠
-[Currents는]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) 세분화된 스트리밍 내보내기를 제공하여 스택의 다른 대상에 지속적으로 공급하는 Braze 애드온(옵션)입니다. 커런츠는 사용자 기준 이벤트당 원시 데이터 피드로, 5분마다 또는 15,000개의 이벤트마다(둘 중 먼저 도래하는 시점) 데이터를 내보냅니다. 커런츠의 다운스트림 대상 예로는 Segment, S3, Redshift, Mixpanel 등이 있습니다. 
+[Currents는]({{site.baseurl}}/user_guide/data/braze_currents/) 세분화된 스트리밍 내보내기를 제공하여 스택의 다른 대상에 지속적으로 공급하는 Braze 애드온(옵션)입니다. 커런츠는 사용자 기준 이벤트당 원시 데이터 피드로, 5분마다 또는 15,000개의 이벤트마다(둘 중 먼저 도래하는 시점) 데이터를 내보냅니다. 커런츠의 다운스트림 대상 예로는 Segment, S3, Redshift, Mixpanel 등이 있습니다. 
 
 ### Snowflake 데이터 공유
 Braze의 [보안 데이터 공유]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) 기능을 사용하면 일반적인 데이터 제공업체 관계에서 발생하는 워크플로 마찰, 장애 지점, 불필요한 비용에 대한 걱정 없이 Snowflake 포털의 데이터에 안전하게 액세스할 수 있습니다. 모든 공유는 Snowflake의 고유한 서비스 계층 및 메타데이터 저장소를 통해 수행됩니다: 실제로 데이터는 계정 간에 복사되거나 전송되지 않습니다. 이것은 중요한 개념입니다. 공유된 데이터는 소비자 계정에 저장 공간을 차지하지 않으므로 월간 데이터 스토리지 요금이 발생하지 않기 때문입니다. 소비자에게 부과되는 유일한 요금은 공유 데이터 쿼리에 사용되는 컴퓨팅 리소스(즉, 가상 웨어하우스)에 대한 요금입니다.
@@ -110,7 +110,7 @@ Braze의 [보안 데이터 공유]({{site.baseurl}}/partners/data_and_infrastruc
 Braze API는 개별 사용자 데이터를 내보낼 뿐만 아니라 집계 분석을 프로그래밍 방식으로 내보낼 수 있는 [엔드포인트를]({{site.baseurl}}/api/endpoints/export) 제공합니다. 모든 규모의 오디언스 및 세그먼트에 대해 이 데이터를 내보낼 수 있습니다. 
 
 ### CSV 파일
-마지막으로, 대시보드에서 집계 수준 데이터를 [CSV로]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data) 직접 다운로드할 수 있는 옵션이 있습니다. CSV 옵션을 사용하면 팀원이 Braze에서 데이터를 쉽게 내보낼 수 있습니다.
+마지막으로, 대시보드에서 집계 수준 데이터를 [CSV로]({{site.baseurl}}/user_guide/data/export_braze_data/) 직접 다운로드할 수 있는 옵션이 있습니다. CSV 옵션을 사용하면 팀원이 Braze에서 데이터를 쉽게 내보낼 수 있습니다.
 
 {% alert tip %}
 CSV 내보내기에는 기본적으로 500,000개의 행 제한이 있지만, API에는 이와 관련된 제한이 없습니다.

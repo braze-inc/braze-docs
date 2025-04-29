@@ -9,7 +9,7 @@
 {% endalert %}
 
 {% alert warning %}
-보안 강화를 위해 식별 가능한 값을 사용자 아이디로 포함하려는 경우, 사용자 사칭을 방지하기 위해 [SDK 인증]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) 기능을 추가하는 **것이 좋습니다**.
+보안 강화를 위해 식별 가능한 값을 사용자 아이디로 포함하려는 경우, 사용자 사칭을 방지하기 위해 [SDK 인증]({{site.baseurl}}/developer_guide/authentication/) 기능을 추가하는 **것이 좋습니다**.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

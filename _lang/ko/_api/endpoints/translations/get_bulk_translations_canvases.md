@@ -35,6 +35,7 @@ API를 통해 캔버스의 번역을 보는 것은 현재 초기 액세스 중�
 | --------- | ---------| --------- | ----------- |
 |`step_id`| 필수 | 문자열 | 캔버스 단계의 ID입니다. |
 |`message_variation_id`| 필수 | 문자열 | 당신의 메시지 ID. |
+|`workflow_id` | 필수 | 문자열 | 캔버스의 ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 모든 번역 ID는 보편적인 고유 식별자(UUID)로 간주되며, 이는 **다국어 지원** 설정 또는 요청 응답에서 찾을 수 있습니다.
