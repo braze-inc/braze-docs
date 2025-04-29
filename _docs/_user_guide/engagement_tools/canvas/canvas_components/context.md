@@ -69,14 +69,14 @@ Context variables have the same expected formats for data types as [custom event
 {% endalert %}
 
 | Data type | Example value and format | 
-|---|---|---|
+|---|---|
 |Boolean| {::nomarkdown}<ul><li><b>Context variable name:</b> loyalty_program</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}</li><li><b>Expected value:</b> `true`</li></ul>{:/} |
 |Number| {::nomarkdown}<ul><li><b>Context variable name:</b> credit_score</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}</li><li><b>Expected value:</b> 751</li></ul>{:/} |
 |String| {::nomarkdown}<ul><li><b>Context variable name:</b> product_name</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
 |Array| {::nomarkdown}<ul><li><b>Context variable name:</b> favorite_products</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}</li><li><b>Expected value:</b> <code>["moisturizer", "serum", "lipstick"]</code></li></ul>{:/} |
 |Time| {::nomarkdown}<ul><li><b>Context variable name:</b> last_purchase_date</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}</li><li><b>Expected value:</b> 2025-01-28T17:02:43.032Z</li></ul>{:/} |
 |Object| {::nomarkdown}<ul><li><b>Context variable name:</b> customer_profile</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
 
