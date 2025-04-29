@@ -60,6 +60,10 @@ Email addresses targeted via the Braze servers must be validated per [RFC 2822](
 
 When setting your "from" addresses, make sure your "from" email domain matches your sending domain (such as `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
+{% alert note %}
+Unicode encoding is not supported for the "from" addresses.
+{% endalert %}
+
 ### Checking HTML details
 
 Keep in mind that some HTML tags and attributes are not allowed as they may potentially let malicious code run in the browser.
