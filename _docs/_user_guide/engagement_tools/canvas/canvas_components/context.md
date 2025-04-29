@@ -11,7 +11,7 @@ tool: Canvas
 
 # Context
 
-> Use Context steps to create or update a set of variables for a user as they move through a Canvas. <br><br>Context variables exist only within the user's journey through the Canvas, providing a lightweight way to define data without adding to user profiles. This means a user can have different context variables each time they enter the Canvas. <br><br>For example, if you have a Canvas that manages flight bookings, you could use a context variable to store a different flight confirmation code each time a user enters the Canvas.
+> Use Context steps to create or update a set of variables for a user as they move through a Canvas. <br><br>Context variables exist only within the user's journey through the Canvas, providing a lightweight way to define data without adding to user profiles. This means a user can have different context variables each time they enter the Canvas. For example, if you have a Canvas that manages flight bookings, you could use a context variable to store a different flight confirmation code each time a user enters the Canvas.
 
 {% alert important %}
 Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
