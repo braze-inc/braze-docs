@@ -1,12 +1,12 @@
 ---
-nav_title: Realizar una llamada a la API
+nav_title: Hacer una llamada de contenido conectado
 article_title: Realización de una llamada a la API de contenidos conectados
 page_order: 0
 description: "Este artículo de referencia explica cómo hacer una llamada a la API de Contenidos conectados y proporciona ejemplos útiles y casos de uso avanzados de Contenidos conectados."
 search_rank: 2
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Hacer una llamada a la API
+# [![Curso de Braze Learning]](https://learning.braze.com/connected-content) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Realización de una llamada a la API de contenido conectado
 
 > Utiliza Contenido conectado para insertar cualquier información accesible mediante API directamente en los mensajes que envíes a los usuarios. Puede extraer contenidos directamente de su servidor web o de API de acceso público.<br><br>En esta página se explica cómo hacer llamadas a la API de Contenidos Conectados, casos de uso avanzados de Contenidos Conectados, gestión de errores y mucho más.
 
@@ -80,10 +80,6 @@ Los sistemas Braze pueden realizar la misma llamada a la API de contenido conect
 
 Si la URL requiere autenticación básica, Braze puede generar una credencial de autenticación básica para que la utilice en su llamada a la API. Puedes gestionar las credenciales de autenticación básica existentes y añadir otras nuevas desde **Configuración** > **Contenido conectado**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Contenido conectado** en **Administrar configuración**.
-{% endalert %}
-
 ![La configuración de "Contenido conectado" en el panel de Braze.][34]
 
 Para añadir una nueva credencial, selecciona **Añadir credencial**. Dale un nombre a tu credencial e introduce el nombre de usuario y la contraseña.
@@ -148,7 +144,7 @@ El siguiente ejemplo ilustra la recuperación y el almacenamiento de un token de
 
 #### Paso 2: Autorizar la API utilizando el token de acceso recuperado
 
-Ahora que el token está guardado, se puede introducir dinámicamente en la siguiente llamada a Contenido conectado para autorizar la solicitud:
+Una vez guardado el token, puede introducirse dinámicamente en la siguiente llamada a Contenido conectado para autorizar la solicitud:
 
 {% raw %}
 ```
@@ -172,49 +168,7 @@ Braze enviará solicitudes de Contenido Conectado desde los siguientes rangos de
 
 Braze tiene un conjunto reservado de IPs que se utilizan para todos los servicios, no todos los cuales están activos en un momento dado. Esto está diseñado para que Braze envíe desde un centro de datos diferente o realice tareas de mantenimiento, si es necesario, sin afectar a los clientes. Braze puede utilizar una, un subconjunto o todas las siguientes IP enumeradas al realizar solicitudes de Contenido conectado.
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
-|---|
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| Para las instancias `EU-01` y `EU-02`: |
-|---|
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88`
-
-| Para la instancia `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ## Solución de problemas
 
@@ -224,6 +178,24 @@ Utilice [Webhook.site](https://webhook.site/) para solucionar los problemas de l
 2. Previsualice y pruebe su campaña o paso de Canvas para ver las solicitudes que llegan a este sitio web.
 
 Con esta herramienta, puede diagnosticar problemas con las cabeceras de la solicitud, el cuerpo de la solicitud y otra información que se envía en la llamada.
+
+## Preguntas más frecuentes
+
+### ¿Por qué hay más llamadas de Contenido conectado que usuarios o envíos? 
+
+Braze puede hacer la misma llamada a la API de contenido conectado más de una vez por destinatario porque puede que necesitemos hacer una llamada a la API de contenido conectado para representar la carga útil de un mensaje. Las cargas útiles de los mensajes se pueden representar varias veces por destinatario para validación, lógica de reintento u otros fines internos.
+
+Se espera que una llamada a la API de contenido conectado pueda hacerse más de una vez por destinatario, aunque no se utilice la lógica de reintento en la llamada. Te recomendamos que establezcas el límite de velocidad de los mensajes que contengan Contenido conectado o que configures tus servidores para que puedan gestionar mejor el volumen previsto.
+
+### ¿Cómo funciona el límite de velocidad con el contenido conectado?
+
+El contenido conectado no tiene su propio límite de velocidad. En cambio, el límite de velocidad se basa en la tasa de envío de mensajes. Te recomendamos que configures el límite de velocidad de mensajería por debajo del límite de velocidad de tu Contenido conectado si hay más llamadas de Contenido conectado que mensajes enviados.  
+
+### ¿Qué es el comportamiento en caché?
+
+Por predeterminado, las peticiones POST no se almacenan en caché. Sin embargo, puedes añadir el parámetro `:cache_max_age` para forzar la llamada POST a la caché.
+El almacenamiento en caché puede ayudar a reducir las llamadas duplicadas de Contenido conectado. Sin embargo, no está garantizado que siempre resulte en una única llamada de Contenido conectado por usuario.
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

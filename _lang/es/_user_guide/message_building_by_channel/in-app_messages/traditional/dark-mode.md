@@ -36,10 +36,6 @@ Puedes utilizar esta función aunque tu aplicación no ofrezca su propio tema os
 
 Para utilizar el modo oscuro en todos los mensajes de la aplicación, ve a **Plantillas** > **Plantillas de mensajes de la aplicación**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará esta página en **Plantillas y medios**.
-{% endalert %}
-
 Desde allí, seleccione [Crear perfil de color][2] en el menú desplegable. Crea un Perfil de Color que se alinee con tu tema de Modo Oscuro. A continuación, cada vez que crees una versión en modo oscuro de un mensaje integrado en la aplicación, podrás seleccionar ese perfil de color y mantener la coherencia del aspecto de tus mensajes integrados en la aplicación.
 
 ## Compatibilidad

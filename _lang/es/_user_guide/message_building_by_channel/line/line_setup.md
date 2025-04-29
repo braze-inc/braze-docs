@@ -89,7 +89,7 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
 | --- | --- |
 | ID del proveedor | Seleccione su proveedor y vaya a **\*Configuración** > **Información básica** |
 | ID del canal | Seleccione su proveedor y vaya a **Canales** > su canal > **Ajustes básicos** |
-| Secreto del canal | Seleccione su proveedor y vaya a **Canales** > su canal > **Ajustes básicos** |
+| Secreto del canal | Selecciona tu proveedor y luego ve a **Canales** > tu canal > **Configuración básica**. |
 | Token de acceso al canal | Seleccione su proveedor y, a continuación, vaya a **Canales** > su canal > **API de mensajería**. Si no hay un token de acceso al canal, selecciona **Emitir**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -108,6 +108,10 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
    - ID del canal
    - Secreto del canal
    - Token de acceso al canal
+
+{% alert important %}
+Durante la integración, asegúrate de que el secreto de tu canal es correcto. Si es incorrecto, puede haber incoherencias en el estado de la suscripción.
+{% endalert %}
 
 ![Página de integración de mensajería LINE con la sección de integración LINE.][3]{: style="max-width:80%;"}
 
@@ -207,7 +211,7 @@ Para ayudar a gestionar esto, Braze ofrece herramientas y lógica que dan soport
 1. **Herramienta de sincronización de suscripciones:** Esta herramienta se despliega automáticamente tras una integración satisfactoria del canal LINE. Utilízala para actualizar perfiles existentes y crear perfiles nuevos.<br><br>Todos los perfiles de usuario Braze que tengan un `native_line_id` que siga el canal LINE se actualizarán para tener un estado del grupo de suscripción de `subscribed`. Cualquier seguidor del canal LINE que no tenga un perfil de usuario Braze con el `native_line_id` lo tendrá:<br><br>\- Un perfil de usuario anónimo creado con `native_line_id` configurado con el ID de LÍNEA del usuario siguiente al canal <br>\- Un alias de usuario `line_id` ajustado al ID de LÍNEA del usuario que sigue al canal <br>\- Un estado del grupo de suscripción de `subscribed`
 
 {: start="2"}
-2\. **Actualizaciones del evento:** Se utilizan para actualizar el estado de suscripción de un usuario. Cuando Braze recibe actualizaciones de eventos de usuario para el canal LINE integrado y el evento es un seguimiento, el perfil de usuario tendrá un estado del grupo de suscripción de `subscribed`. Si el evento es un unfollow, el perfil de usuario tendrá un estado del grupo de suscripción de `unsubscribed`.<br><br>\- Todos los perfiles de usuario de Braze que coincidan con `native_line_id` se actualizarán automáticamente. <br>\- Si no existe un perfil de usuario coincidente para un evento, Braze [creará un usuario anónimo](https://www.braze.com/docs/line/user_management/).
+2\. **Actualizaciones del evento:** Se utilizan para actualizar el estado de suscripción de un usuario. Cuando Braze recibe actualizaciones de eventos de usuario para el canal LINE integrado y el evento es un seguimiento, el perfil de usuario tendrá un estado del grupo de suscripción de `subscribed`. Si el evento es un unfollow, el perfil de usuario tendrá un estado del grupo de suscripción de `unsubscribed`.<br><br>\- Todos los perfiles de usuario de Braze que coincidan con `native_line_id` se actualizarán automáticamente. <br>\- Si no existe un perfil de usuario coincidente para un evento, Braze [creará un usuario anónimo]({{site.baseurl}}/line/user_management/).
 
 ## Ejemplos
 

@@ -16,7 +16,7 @@ Para más información sobre la configuración de alias de usuario contra un per
  [[Appboy sharedInstance].user addAlias:ALIAS_NAME withLabel:ALIAS_LABEL];
 ```
 
- {% endtab %}
+{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -45,10 +45,18 @@ Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endtab %}
 {% endtabs %}
 
+Para más información, consulta [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html#-1106019389%2FFunctions%2F-1725759721).
+
 {% elsif include.platform == "Web" %}
 
 ```javascript
 braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+
+{% elsif include.platform == "Swift" %}
+
+```swift
+AppDelegate.braze?.user.add(alias: ALIAS_NAME, label: ALIAS_LABEL)
 ```
 
 {% elsif include.platform == "REST" %}

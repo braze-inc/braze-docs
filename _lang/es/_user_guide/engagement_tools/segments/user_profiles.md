@@ -24,10 +24,6 @@ Para acceder al perfil de un usuario, vaya a la página **Buscar usuarios** y bu
 - Token de notificaciones push
 - Alias de usuario con el formato "[alias_usuario]:[nombre_alias]", como "amplitud_id:usuario_123"
 
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), **Buscar usuarios** es **Búsqueda de usuarios** y se encuentra en **Usuarios**.
-{% endalert %}
-
 Si se encuentra una coincidencia, puede ver la información que ha registrado para este usuario con el SDK Braze. De lo contrario, si su búsqueda devuelve varios perfiles de usuario, puede fusionar cada perfil individualmente o realizar una fusión de usuarios masiva. Para obtener más información, consulte [Usuarios duplicados]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Resultados de la búsqueda con un banner que dice "Varios usuarios coinciden con tus criterios de búsqueda" y dos botones denominados Anterior y Siguiente.][1]
@@ -128,10 +124,6 @@ Actualmente, los eventos de cancelación no están disponibles para los mensajes
 ##### Eventos de limitación de frecuencia
 
 Se produce un evento de limitación de frecuencia cuando un usuario está cualificado para recibir un mensaje, pero en realidad no lo recibe debido a la [configuración de limitación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) de frecuencia. Puede personalizar los ajustes de limitación de frecuencia desde **Configuración** > **Reglas de limitación de frecuencia**.
-
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes gestionar la limitación de frecuencia desde **Compromiso** > **Configuración global de mensajes**.
-{% endalert %}
 
 ##### Destinos en blanco
 

@@ -10,7 +10,7 @@ description: "Más información sobre la búsqueda global en Braze."
 
 Puedes utilizar la barra de búsqueda para encontrar tu trabajo y otra información dentro de tu panel Braze. La barra de búsqueda se encuentra en la parte superior del panel de control de Braze. Haz clic en la barra de búsqueda o pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> en Windows o <kbd>⌘</kbd> + <kbd>K</kbd> en Mac para saltar directamente a la barra de búsqueda.
 
-![][3]
+![Resultados de la búsqueda de la palabra clave "promo", mostrando campañas y artículos que incluyen el término promo, incluida la página Códigos promocionales.][1]
 
 ## ¿Qué puede buscar?
 
@@ -66,11 +66,13 @@ Cada resultado de búsqueda se asocia con etiquetas que indican el tipo de conte
 
 En el menú de búsqueda puede volver a consultar los contenidos a los que ha accedido recientemente. La interfaz de búsqueda muestra los resultados abiertos recientemente debajo de la barra de búsqueda, incluidos los elementos con los que se ha interactuado en toda la plataforma Braze. Esto le permite volver a páginas, campañas, lienzos, segmentos o plantillas de correo electrónico que haya visto anteriormente, de modo que puede continuar justo donde lo dejó con menos clics.
 
-![][1]
+![Búsqueda ampliada, que muestra las páginas abiertas recientemente y el contenido de Braze para el usuario.][2]
 
 ### Encontrar páginas que han cambiado de nombre
 
-La búsqueda comprende los sinónimos de las páginas que han cambiado de nombre en nuestra [navegación actualizada]({{site.baseurl}}/navigation). Por ejemplo, encontrará "Exportación de datos" cuando busque "Corrientes", ya que esa página ha cambiado de nombre.
+La búsqueda comprende los sinónimos de las páginas que han cambiado de nombre en nuestra [navegación actualizada]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). Por ejemplo, encontrará "Exportación de datos" cuando busque "Corrientes", ya que esa página ha cambiado de nombre.
+
+![Resultados de búsqueda de "Exportación de datos" donde el usuario ha buscado "Currents".][3]
 
 <!---
 
@@ -78,7 +80,7 @@ La búsqueda comprende los sinónimos de las páginas que han cambiado de nombre
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
-![][2]
+![][X]
 
 --->
 
@@ -92,8 +94,9 @@ Puede incluir contenidos activos y borradores en los resultados de búsqueda sel
 
 ¿Utilizas emojis para nombrar tus obras en Braze? ¡Búscalos! Puedes utilizar emojis como consultas de búsqueda. 😎
 
+[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
+[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
+[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
+[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
-[1]: {% image_buster /assets/img/global_search/global_search.png %}
-[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
-[3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}
+

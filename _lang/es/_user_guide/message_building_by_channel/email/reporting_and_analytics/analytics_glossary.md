@@ -25,7 +25,7 @@ channel:
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Variación' %}
+{% multi_lang_include metrics.md metric='Variation' %}
 
 <span class="calculation-line">Cálculo: Recuento</span>
 
@@ -39,7 +39,7 @@ Recuento
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Envío por correo electrónico' %}
+{% multi_lang_include metrics.md metric='Emailable' %}
 
 <span class="calculation-line">Cálculo: Recuento</span>
 
@@ -53,7 +53,7 @@ Recuento
 Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Audiencia' %}
+{% multi_lang_include metrics.md metric='Audience' %}
 
 <span class="calculation-line">Cálculo: (Número de destinatarios en la variante) / (Destinatarios únicos)</span>
 
@@ -123,7 +123,7 @@ Recuento
 Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Entregas %' %}
+{% multi_lang_include metrics.md metric='Deliveries %' %}
 
 <span class="calculation-line">Cálculo: (Envíos - Rebotes) / (Envíos) </span>
 
@@ -137,7 +137,7 @@ Porcentaje
 Recuento, Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Rebotes' %} 
+{% multi_lang_include metrics.md metric='Bounces' %} 
 
 Para el correo electrónico, *el % de rebote* o *tasa de rebote* es el porcentaje de mensajes que se enviaron sin éxito o se designaron como "devueltos" o "no recibidos" de los servicios de envío utilizados o no recibidos por los usuarios destinatarios del correo electrónico.
 
@@ -177,7 +177,9 @@ Recuento
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Rebote blando' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro.
+{% multi_lang_include metrics.md metric='Rebote blando' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. 
+
+Aunque los rebotes blandos no se siguen en los análisis de tu campaña, puedes controlar los rebotes blandos en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) o excluir a estos usuarios de tus envíos con el [filtro de segmento de rebotes blandos]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). En el Registro de actividad de mensajes, también puedes ver el motivo de los rebotes blandos y comprender las posibles discrepancias entre los "envíos" y las "entregas" de tus campañas de correo electrónico.
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
@@ -191,7 +193,7 @@ Recuento
 Recuento, Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Correo no deseado' %}
+{% multi_lang_include metrics.md metric='Spam' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -257,7 +259,7 @@ Recuento, Porcentaje
 Recuento, Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Cancelar suscripción o darse de baja' %}
+{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -279,7 +281,7 @@ Recuento, Porcentaje
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Ingresos' %}
+{% multi_lang_include metrics.md metric='Revenue' %}
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
@@ -315,7 +317,7 @@ Recuento, Porcentaje
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Confianza' %}
+{% multi_lang_include metrics.md metric='Confidence' %}
 
 {% endapi %}
 
@@ -323,7 +325,7 @@ Recuento
 
 ### Machine Opens (Aperturas automáticas)
   
-{% multi_lang_include metrics.md metric='Máquina Abre' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost.
+{% multi_lang_include metrics.md metric='Machine Opens' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost.
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
@@ -337,7 +339,7 @@ Recuento
 Recuento
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Otras aperturas' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como las aperturas que cuentan para <i>Otras aperturas</i>) antes de que se registre un recuento de <i>Aperturas de máquina</i>. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura automática desde una bandeja de entrada que no sea de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para <i>Otras aperturas</i> y sólo una vez para <i>Aperturas únicas</i>.
+{% multi_lang_include metrics.md metric='Other Opens' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como las aperturas que cuentan para <i>Otras aperturas</i>) antes de que se registre un recuento de <i>Aperturas de máquina</i>. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura automática desde una bandeja de entrada que no sea de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para <i>Otras aperturas</i> y sólo una vez para <i>Aperturas únicas</i>.
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
@@ -351,7 +353,7 @@ Recuento
 Porcentaje
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Tasa de clics por apertura' %}
+{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}
 
 <span class="calculation-line">Cálculo: (Clics únicos) / (Aperturas únicas) (para correo electrónico)</span>
 

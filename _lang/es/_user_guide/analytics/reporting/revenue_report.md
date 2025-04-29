@@ -12,10 +12,6 @@ tool: Reports
 
 Para ver un informe de sus ingresos desde el panel de control, vaya a **Análisis** > **Informe de ingresos**. 
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Datos**.
-{% endalert %}
-
 ## Personalización del informe de ingresos
 
 Puede personalizar su informe de ingresos seleccionando un intervalo de fechas, las aplicaciones sobre las que informar y los parámetros.
@@ -59,23 +55,23 @@ Puedes ver los siguientes datos en el **Gráfico de rendimiento en el tiempo**:
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Ingresos del ciclo de vida</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos de toda la vida' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de duración del ciclo de vida por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Valor de duración del ciclo de vida por usuario' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Ingresos medios diarios</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos medios diarios' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Compras diarias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Compras diarias' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Ingresos diarios por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos diarios por usuario' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>

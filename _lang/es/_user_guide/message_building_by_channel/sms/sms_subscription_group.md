@@ -30,10 +30,6 @@ Existen dos estados de suscripción para los usuarios de SMS: `subscribed` y `un
 - **Se gestiona automáticamente cuando el usuario se da de alta o de baja:** Cuando los usuarios envían un mensaje de texto con una opción de inclusión o exclusión predeterminada [palabra clave][7], Braze establece y actualiza automáticamente el estado de suscripción de los usuarios.
 - **Importación de usuarios**: Los usuarios pueden añadirse a grupos de suscripción por correo electrónico o SMS mediante **Importar usuarios**. Al actualizar el estado del grupo de suscripción, debe tener estas dos columnas en su CSV: `subscription_group_id` y `subscription_state`. Consulte [Importación de usuarios]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) para obtener más información.
 
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), esta página se llama **Importación de usuarios** y se encuentra en **Usuarios**.
-{% endalert %}
-
 Cuando se actualiza un número de teléfono en un perfil de usuario, el nuevo número de teléfono hereda el estado del grupo de suscripción del usuario. Si el número de teléfono se actualiza a un número que ya existe en Braze, se hereda el estado de suscripción de ese número de teléfono existente.
 
 Por ejemplo, si el usuario A tiene un número de teléfono que está suscrito a varios grupos de suscripción y ese número de teléfono se añade al usuario B, el usuario B estará suscrito a los mismos grupos de suscripción. Para evitar que un usuario herede las suscripciones existentes, puede restablecer los grupos de suscripción del número antiguo a través de la API REST cada vez que un usuario cambie de número. Si varios usuarios comparten este número de teléfono, todos serán dados de baja.
