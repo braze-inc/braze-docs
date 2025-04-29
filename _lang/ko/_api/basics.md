@@ -42,7 +42,7 @@ API 호출에 엔드포인트를 사용할 때는 REST 엔드포인트를 사용
 SDK 통합을 위해 [SDK 엔드포인트]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)를 사용하고, REST 엔드포인트는 사용하지 마십시오.
 {% endalert %}
 
-{% multi_lang_include 데이터 센터.md 데이터 센터='인스턴스' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API 제한
 
