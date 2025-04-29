@@ -39,7 +39,7 @@ Si de nouvelles propriétés sont envoyées à l'avenir, elles ne figureront pas
 
 ## Étape 2 : Utiliser l'objet imbriqué
 
-Après avoir généré un schéma, vous pouvez référencer les données imbriquées lors de la segmentation et de la personnalisation. Vous trouverez des exemples d'utilisation dans les sections suivantes :
+Vous pouvez faire référence aux données imbriquées lors de la segmentation et de la personnalisation. Notez qu'un schéma n'est pas nécessaire. Vous trouverez des exemples d'utilisation dans les sections suivantes :
 
 - [Corps de la requête API](#api-request-body)
 - [Modèles Liquid](#liquid-templating)

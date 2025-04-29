@@ -199,7 +199,7 @@ Derzeit werden von Braze keine wertorientierten, angepassten Zielgruppen erwarte
 
 1. Gehen Sie zu Ihrem Facebook Ad Manager Dashboard und wählen Sie **Zielgruppen**:in.
 2. Wählen Sie **Zielgruppe erstellen** > Angepasste **Zielgruppe.**
-3. Wählen Sie **Kund**: **in** aus.
+3. Wählen Sie **Kundenliste** aus.
 4. Laden Sie Ihre CSV-Datei oder Liste ohne die Spalte **Wert** hoch. Wählen Sie **Nein, fahren Sie mit einer Kundenliste fort, die keinen Kundenwert enthält**.
 5. Beenden Sie die Erstellung Ihrer angepassten Zielgruppe.
 6. Aktualisieren Sie in Braze den Schritt Facebook Audience Sync mit der angepassten Zielgruppe, die Sie erstellt haben.
@@ -331,7 +331,7 @@ Um Ihr Konto und Ihre ID zu finden, gehen Sie folgendermaßen vor:
 
 Prüfen Sie, ob Sie irgendwelche offenen Aufgaben bei Facebook haben, die Sie daran hindern könnten, die Dienste von Facebook Ads zu nutzen:
 
-1. [Melden Sie sich beim Facebook Ads Manager](https://adsmanager.facebook.com/):[in an](https://adsmanager.facebook.com/).
+1. [Melden Sie sich beim Facebook Ads Manager an](https://adsmanager.facebook.com/).
 2. Wählen Sie das Anzeigenkonto aus, mit dem Sie Probleme haben.
 3. Wählen Sie in der Navigation Ihre **Kontoübersicht** aus. <br> ![Die Navigation mit ausgewählter Kontoübersicht.]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
 4. Prüfen Sie, ob es Warnmeldungen gibt, die behoben werden müssen. <br> ![Ein Konto mit einer abgelaufenen Kreditkarte.]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})

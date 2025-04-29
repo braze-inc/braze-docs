@@ -41,6 +41,15 @@ Ceci donne le résultat suivant :
 
 > Obtenez Tales pour seulement 7,49 euros !
 
+## Exporter des catalogues
+
+Vous pouvez exporter des catalogues à partir du tableau de bord de deux manières : 
+
+- Survolez la ligne du catalogue dans la section **Catalogues**. Sélectionnez ensuite le bouton **Exporter le catalogue**.
+- Sélectionnez votre catalogue. Ensuite, sélectionnez le bouton **Exporter le catalogue** dans l'onglet **Aperçu** du catalogue.
+
+Vous recevrez un e-mail vous permettant de télécharger le fichier CSV après avoir lancé l'exportation. Vous aurez jusqu'à quatre heures pour récupérer ce fichier.
+
 ## Scénarios d’utilisation supplémentaires
 
 ### Plusieurs articles

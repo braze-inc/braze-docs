@@ -15,7 +15,7 @@ description: "En esta página de inicio encontrarás pruebas de campaña y conse
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
   - name: Cómo enviar mensajes de prueba
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Campañas activadas por API y basadas en acciones
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

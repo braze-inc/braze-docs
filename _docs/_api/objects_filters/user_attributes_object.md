@@ -148,7 +148,7 @@ Language values that are explicitly set through this API will take precedence ov
 
 ####  User attribute example request
 
-This example contains two user attribute objects with the allowed 75 requests per API call.
+This example contains four user attribute objects, out of a total of 75 allowed attribute objects per API call.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track

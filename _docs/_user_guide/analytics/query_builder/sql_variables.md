@@ -1,6 +1,6 @@
 ---
 nav_title: SQL Variables
-article_title: Query Builder variables
+article_title: Query Builder SQL variables
 page_order: 2
 page_type: reference
 description: "Learn how to use variables in the Query Builder, so you can reuse your queries and avoid hard-coding any data in your code."

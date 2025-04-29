@@ -13,10 +13,6 @@ description: "Cette page de référence décompose les composants du calendrier 
 
 Vous pouvez analyser les données des messages, ainsi que voir et gérer vos campagnes planifiées. Pour ouvrir le calendrier, sélectionnez **Messagerie** > **Calendrier de contenu**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), sélectionnez **Engagement** > **Campagnes** > **Calendrier**.
-{% endalert %}
-
 ## Analyse des messages
 
 La section d'analyse des messages contient deux rapports pour vos campagnes programmées récentes et à venir :

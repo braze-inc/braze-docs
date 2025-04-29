@@ -12,7 +12,7 @@ search_tag: Partner
 
 > ビジネスインテリジェンスとビッグデータ分析のプラットフォームである [Looker](https://looker.com/) は、リアルタイムのビジネス分析の探索、分析、共有をシームレスに行えるようにしています。
 
-Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。Braze と Looker を使用するには、[Braze Currents を使用してデータウェアハウスに][6] Braze データを送信してから、Braze の Looker Blocks を使用して Looker で Braze データを迅速にモデル化して視覚化することを推奨します。
+Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。ブレーズ付きルーカーを使用するには、ブレーズ電流を使用して[データウェアハウスにブレーズデータを送信し、次にブレーズルーカーブロックを使用して、ルーカー内のブレーズデータをすばやくモデル化して視覚化することをお勧めします。
 
 ## 前提条件
 
@@ -163,10 +163,10 @@ Looker アクションに問題がある場合、テストユーザーを[内部
 * `looker_export` フィールドは`Braze Platform > Settings > Manage Settings > Custom Attributes` の下に`Automatically Detect` として設定されている。
 * 変更はプロダクションにコミットされる。Looker Actionは本番環境でも機能する。
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
+[1]: {{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
-[4]: {{site.baseurl}}//user_guide/onboarding_with_braze/integration/
+[4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/
 [5]: {{site.baseurl}}/partners/braze_currents/about/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct

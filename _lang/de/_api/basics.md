@@ -50,7 +50,7 @@ Für die meisten APIs hat Braze ein Standard Rate-Limit von 250.000 Anfragen pro
 
 ### Benutzer-IDs
 
-- **Externe Nutzer**:**innen ID**: Die `external_id` dient als eindeutiger Bezeichner des Nutzers:in, für den Sie Daten übermitteln. Dieser Bezeichner sollte mit dem übereinstimmen, den Sie im Braze SDK festgelegt haben, um zu vermeiden, dass mehrere Profile für denselben Nutzer:in erstellt werden.
+- **Externe Nutzer:innen ID**: Die `external_id` dient als eindeutiger Bezeichner des Nutzers:in, für den Sie Daten übermitteln. Dieser Bezeichner sollte mit dem übereinstimmen, den Sie im Braze SDK festgelegt haben, um zu vermeiden, dass mehrere Profile für denselben Nutzer:in erstellt werden.
 - **Braze ID**: `braze_id` dient als eindeutiger Bezeichner für Nutzer:innen, der von Braze festgelegt wird. Dieser Bezeichner kann zusätzlich zu external_ids verwendet werden, um Nutzer:innen über die REST API zu löschen.
 
 Weitere Informationen finden Sie in den folgenden Artikeln zu Ihrer Plattform: [iOS][9], [Android][10] und [Internet][13].
@@ -310,7 +310,7 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 
 ### REST API-Schlüssel verwalten
 
-Unter **Einstellungen** > **APIs und Bezeichner** > Tab API-Schlüssel können Sie Details zu vorhandenen REST-API-Schlüsseln einsehen oder diese löschen. Beachten Sie, dass REST API-Schlüssel nach ihrer Erstellung nicht mehr bearbeitet werden können.
+Unter **Einstellungen** > **APIs und Bezeichner** > **Tab API-Schlüssel** können Sie Details zu vorhandenen REST-API-Schlüsseln einsehen oder diese löschen. Beachten Sie, dass REST API-Schlüssel nach ihrer Erstellung nicht mehr bearbeitet werden können.
 
 Der Tab **API-Schlüssel** enthält die folgenden Informationen für jeden Schlüssel:
 
@@ -327,7 +327,7 @@ Um die Details eines API-Schlüssels anzuzeigen, bewegen Sie den Mauszeiger übe
 
 ![Die Liste der API-Schlüssel-Berechtigungen im Braze-Dashboard.][30]
 
-Beachten Sie, dass beim [Löschen eines Nutzers]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/): [innen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) die zugehörigen API-Schlüssel, die der Nutzer erstellt hat, nicht gelöscht werden. Um eine Taste zu löschen, bewegen Sie den Mauszeiger über die Taste und wählen Sie <i class="fa-solid fa-trash-can" alt="Delete"></i> **Löschen**.
+Beachten Sie, dass beim [Löschen von Nutzer:innen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) die zugehörigen API-Schlüssel, die von den Nutzer:innen erstellt wurden, nicht gelöscht werden. Um eine Taste zu löschen, bewegen Sie den Mauszeiger über die Taste und wählen Sie <i class="fa-solid fa-trash-can" alt="Delete"></i> **Löschen**.
 
 ![Ein API-Schlüssel mit dem Namen 'Last Seen', wobei das Papierkorbsymbol hervorgehoben ist und 'Löschen' anzeigt.][29]{: style="max-width:30%;"}
 

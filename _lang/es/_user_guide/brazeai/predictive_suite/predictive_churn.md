@@ -40,10 +40,6 @@ La actualización de las puntuaciones de riesgo de la audiencia de predicción p
 
 La página **Predicciones** se encuentra en la sección **Análisis**. Para obtener acceso completo, ponte en contacto con tu director de cuentas.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las predicciones** en **Interacción**.
-{% endalert %}
-
 Antes de adquirir esta característica, está disponible en modo vista previa. Esto te permitirá ver una predicción de abandono de demostración con datos sintéticos y crear un modelo de predicción de abandono basado en tus datos de usuario a la vez. Esta vista previa no te permitirá segmentar a los usuarios para la mensajería en función del riesgo de abandono y no se actualizará regularmente tras su creación.
 
 Con la vista previa, también puedes editar y reconstruir tu única predicción o archivarla y crear otras para probar la [calidad de predicción]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) esperada de diferentes [definiciones]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).

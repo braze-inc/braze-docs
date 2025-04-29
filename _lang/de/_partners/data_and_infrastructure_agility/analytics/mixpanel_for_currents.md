@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Braze Lernkurse]](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Braze Lernkurse] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
 
 > [Mixpanel](https://mixpanel.com/) ist eine Analytics-Plattform für Unternehmen, die es Ihnen erlaubt, Ereignisse aus Mixpanel in andere Plattformen zu exportieren, um tiefere Analysen durchzuführen. Die gesammelten Daten können dann dazu verwendet werden, angepasste Berichte zu erstellen und das Engagement und die Bindung der Nutzer:innen zu messen.
 

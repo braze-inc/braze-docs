@@ -184,7 +184,7 @@ Geben Sie in der daraufhin erscheinenden Eingabeaufforderung **Autorisierung kon
 
 #### Schritt 2: Exportieren Sie Ihre Daten zur Segmentierung nach CSV
 
-Navigieren Sie in Braze zu **Zielgruppe** > Segmente. Suchen Sie das Segment, das Sie exportieren möchten, und wählen Sie dann <i class="fas fa-gear" aria-label="Einstellungen"></i> und dann **CSV Benutzerdaten exportieren**. Sie können bis zu 500.000 Nutzer:innen in ein Segment exportieren. Weitere Informationen finden Sie unter [Exportieren von Segmentdaten in CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
+Navigieren Sie in Braze zu **Zielgruppe** > **Segmente**. Suchen Sie das Segment, das Sie exportieren möchten, und wählen Sie dann <i class="fas fa-gear" aria-label="Einstellungen"></i> und dann **CSV Benutzerdaten exportieren**. Sie können bis zu 500.000 Nutzer:innen in ein Segment exportieren. Weitere Informationen finden Sie unter [Exportieren von Segmentdaten in CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 #### Schritt 3: Einen CSV-Importauftrag konfigurieren
 

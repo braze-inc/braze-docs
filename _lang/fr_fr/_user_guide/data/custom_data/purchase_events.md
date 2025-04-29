@@ -19,13 +19,13 @@ Vous pouvez enregistrer les achats en transmettant un [objet d'achat]({{site.bas
 
 La liste suivante énumère les méthodes utilisées pour enregistrer les achats sur les différentes plateformes. Dans ces pages, vous trouverez également de la documentation sur la manière d'ajouter des propriétés et des quantités à votre événement d'achat. Vous pouvez ensuite cibler vos utilisateurs en fonction de ces propriétés.
 
-- [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android et FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Consultation des données d'achat
 
@@ -256,10 +256,6 @@ Cela permet de faciliter l’identification des produits pour la segmentation et
 Vous pouvez occasionnellement identifier des événements d'achat qui soit consomment trop de points de données, soit ne sont plus utiles à votre stratégie marketing, soit ont été enregistrés par erreur. Pour empêcher l'envoi de ces données à Braze, vous pouvez mettre l'objet de données personnalisé sur liste de blocage pendant que votre équipe d'ingénieurs travaille à sa suppression du backend de votre appli ou de votre site web.
 
 Dans le tableau de bord de Braze, vous pouvez gérer la mise en liste de blocage à partir de **Paramètres des données** > **Produits**. Pour en savoir plus, consultez la rubrique [Gérer les données personnalisées]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **produits** sous **Gérer les paramètres.**
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

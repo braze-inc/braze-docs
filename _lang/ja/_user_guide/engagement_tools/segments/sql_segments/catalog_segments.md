@@ -98,7 +98,7 @@ tool: Segments
 
 ### カタログセグメントのユースケースがありますが、現在のテンプレートには対応していません。どのように設定すればよいですか?
 
-追加のガイダンスについては、カスタマーサポートマネージャーまたは [Brazeサポート]({{site.baseurl}}/help/support/)にお問い合わせください。
+追加のガイダンスについては、カスタマーサポートマネージャーまたは [Brazeサポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

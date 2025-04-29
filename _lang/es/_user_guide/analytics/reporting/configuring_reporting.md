@@ -22,7 +22,3 @@ Puede suscribirse a este informe en la página **Preferencias de notificación**
 ## Añadir eventos personalizados a los informes
 
 Además, si utilizas eventos personalizados, puedes seleccionar hasta cinco eventos clave de la página **Eventos personalizados** para incluirlos en tu informe semanal. Vaya a **Configuración de datos** > **Eventos personalizados** para actualizar estos eventos en cualquier momento.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), estas páginas están en una ubicación diferente. <br>\- Las preferencias de notificación se encuentran en el icono de tu cuenta > **Configuración de la empresa** > **Preferencias de notificación**.<br>- **Eventos personalizados** se encuentra en **Administrar configuración**.
-{% endalert %}

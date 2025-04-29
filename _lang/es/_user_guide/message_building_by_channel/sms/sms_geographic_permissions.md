@@ -40,7 +40,7 @@ Los cambios surtirán efecto después de seleccionar **Guardar**. Si eliminas pa
 
 Algunos países tienen un mayor riesgo de bombeo de tráfico SMS. Estos países se indican con una etiqueta de **alto riesgo** en el desplegable de países.
 
-![El país hacia abajo con Azerbaiyán tiene una etiqueta de "Alto Riesgo".][4]{: style="max-width:80%;"}
+![El desplegable de países con Azerbaiyán tiene una etiqueta de "Alto riesgo".][4]{: style="max-width:80%;"}
 
 Si permite el envío a estos países, primero debe reconocer el riesgo de hacerlo antes de que el país se añada a su lista de permitidos.
 

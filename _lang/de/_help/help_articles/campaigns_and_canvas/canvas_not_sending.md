@@ -13,7 +13,7 @@ Canvase sind robust und komplex, und wir wissen, dass Sie viel Zeit und Sorgfalt
 
 ## Zeitplan
 
-- Ist der [Zeitplan]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery) für den Canvas [korrekt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
+- Ist der Zeitplan für den Canvas [korrekt eingerichtet]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
 - Haben Sie das richtige Datum und die richtige Uhrzeit ausgewählt?
 - Bei [aktionsbasierter Zustellung]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery): Haben die Nutzer:innen die angegebenen Aktionen ausgeführt, seit Sie das Canvas gestartet haben?
 

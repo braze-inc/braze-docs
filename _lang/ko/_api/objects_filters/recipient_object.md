@@ -13,10 +13,6 @@ description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양
 
 이 객체에는 `external_user_id`, `user_alias` 또는 `email` 이 필요합니다. **요청은 하나만 지정해야 합니다.**
 
-{% alert important %}
-이메일 주소로 수신자를 지정하는 기능은 현재 얼리 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
-{% endalert %}
-
 수신자 객체를 사용하면 [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/), [트리거 속성 객체]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 및 [캔버스 항목 속성 객체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) 결합할 수 있습니다.
 
 ## 개체 본문
@@ -31,6 +27,8 @@ description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
+
+`send_to_existing_only` 이 `true` 일 경우, Braze는 기존 사용자에게만 메시지를 보냅니다. 그러나 이 플래그는 사용자 별칭과 함께 사용할 수 없습니다. `send_to_existing_only` 이 `false` 인 경우 속성을 포함해야 합니다. Braze는 메시지를 보내기 전에 `id` 및 속성을 가진 사용자를 생성합니다.
 
 - [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)

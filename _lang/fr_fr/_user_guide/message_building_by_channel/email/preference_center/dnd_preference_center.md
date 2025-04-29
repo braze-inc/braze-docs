@@ -14,10 +14,6 @@ page_order: 2
 
 Créez un centre de préférences en accédant à **Audience** > **Abonnements** > **Centre de préférences de messagerie**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Utilisateurs** > **Groupes d'abonnement** > **Centre de préférences de messagerie**.
-{% endalert %}
-
 Ici, une liste de centres de préférences personnalisés s’affiche. Sélectionnez **Créer Nouveau** pour créer un nouveau centre de préférences, ou sélectionnez le nom d'un centre existant pour apporter des modifications.
 
 ![Une liste de centres de préférences personnalisés avec le nom, la description, le type, le statut, la date de dernière modification et la date de création par l'utilisateur.][1]

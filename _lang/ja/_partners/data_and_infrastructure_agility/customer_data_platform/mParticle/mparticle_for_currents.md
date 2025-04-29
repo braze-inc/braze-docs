@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [mParticle](https://www.mparticle.com) は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォームです。
 
-BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) では、データを mParticle に接続し、グローススタック全体で実用的なデータにすることもできます。 
+BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを mParticle に接続し、グローススタック全体で実用的なデータにすることもできます。 
 
 ## 前提条件
 
@@ -63,7 +63,7 @@ mParticleに送信されるすべてのイベントには、ユーザーの `ext
 
 ## サポートされている Currents イベント
 
-Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメントイベントの]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)用語集に記載されている以下のデータをmParticleにエクスポートすることをサポートしている：
+Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメントイベントの]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)用語集に記載されている以下のデータをmParticleにエクスポートすることをサポートしている：
 
 ### 行動
 - アンインストール: `users.behaviors.Uninstall`

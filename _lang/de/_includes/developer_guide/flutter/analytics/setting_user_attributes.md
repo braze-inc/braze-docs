@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/flutter.md %}
+{% multi_lang_include developer_ %}
 
 ## Standard-Nutzerattribute
 

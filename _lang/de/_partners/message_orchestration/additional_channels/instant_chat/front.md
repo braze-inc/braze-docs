@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Mit der Integration von Front können Sie die Braze Data Transformation und Webhooks von jeder Plattform nutzen, um eine SMS-Pipeline für Konversationen in beide Richtungen einzurichten.
 
-Der eingehende Webhook von Front enthält eine Nutzlast, die die vom Live-Agenten gesendete Nachricht enthält. Die Anfrage muss neu formatiert werden, bevor sie von Braze Endpunkten akzeptiert werden kann. Das Template für die Datentransformation an der Vorderseite formatiert die Nutzdaten neu und schreibt ein angepasstes Event mit dem Titel **Ausgehende SMS gesendet** in das Nutzerprofil **,** wobei der Nachrichtentext als Event-Eigenschaft übergeben wird.
+Der eingehende Webhook von Front enthält eine Nutzlast, die die vom Live-Agenten gesendete Nachricht enthält. Die Anfrage muss neu formatiert werden, bevor sie von Braze Endpunkten akzeptiert werden kann. Das Template für die Datentransformation an der Vorderseite formatiert die Nutzdaten neu und schreibt ein angepasstes Event mit dem Titel **Ausgehende SMS gesendet** in das Nutzerprofil, wobei der Nachrichtentext als Event-Eigenschaft übergeben wird.
 
 Bevor Sie eine neue Transformation in Braze einrichten, empfehlen wir Ihnen, sich die Support-Matrix für jede Ebene in unserer Dokumentation zur [Datentransformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) anzusehen. Unsere Free- und Pro-Tiers bieten eine unterschiedliche Anzahl von aktiven Transformationen und eingehenden Anfragen pro Monat. Vergewissern Sie sich, dass Ihr aktueller Plan Ihren Anwendungsfall unterstützen kann.
 

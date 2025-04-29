@@ -20,7 +20,7 @@ alias: /line/create/
 LINE メッセージを作成する前に、次の手順を実行します。
 
 1. LINE の概要を読みます。
-2. ポリシー、制限、コンテンツルールを確認します。
+2. ポリシー、制限、およびコンテンツルールを承認します。
 3. [LINE への接続を設定します]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/)。
 
 Braze から LINE メッセージを送信すると、アカウントのメッセージクレジットが消費されます。
@@ -35,13 +35,8 @@ Braze から LINE メッセージを送信すると、アカウントのメッ�
 **ステップ:**
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
-{% endalert %}
-
-{: start="2"}
-2\.[**LINE**] を選択するか、マルチチャネルをターゲットとするキャンペーンでは、[**マルチチャネルキャンペーン**] を選択します。
-3\.キャンペーンに、明確で意味のある名前を付けます。
+2. [**LINE**] を選択するか、マルチチャネルをターゲットとするキャンペーンでは、[**マルチチャネルキャンペーン**] を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
 4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
@@ -79,7 +74,7 @@ Liquid を使用する場合は、必ずパーソナライゼーションのデ�
 
 #### 右から左へのメッセージを作成する
 
-右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)を参照してください。
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ## ステップ 3: メッセージをプレビューしてテストする
 
@@ -108,7 +103,7 @@ LINE メッセージは、スケジュールされた時刻、アクション、
 
 ### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 コンバージョンイベントにより、キャンペーンの成否を測定できます。以下に例を示します。
 
@@ -120,7 +115,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 {% endtab %}
 {% tab キャンバス %}
 
-まだキャンバスの残りのセクションを完了していない場合は、完了します。キャンバスの残りの部分を作成する方法の詳細については、多変量テストとインテリジェントセレクションを使用してください。詳しくは、「[キャンバスの作成](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)」を参照してください。
+まだキャンバスの残りのセクションを完了していない場合は、完了します。キャンバスの残りの部分を作成する方法の詳細については、多変量テストとインテリジェントセレクションを使用してください。詳しくは、「[キャンバスの作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)」を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -129,7 +124,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 キャンペーンまたはキャンバスの最後の部分の作成が完了したら、その詳細を確認し、テストしてから送信してください。
 
-次に、[LINE レポート](https://www.braze.com/docs/line/reporting/)をチェックして、LINE キャンペーンの結果にアクセスする方法を確認します。
+次に、[LINE レポート]({{site.baseurl}}/line/reporting/)をチェックして、LINE キャンペーンの結果にアクセスする方法を確認します。
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

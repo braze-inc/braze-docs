@@ -55,7 +55,7 @@ These partners specialize in product analytics and business intelligence and can
 [3]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
 [4]: {{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
 [5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
-[6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
+[6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
 [8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/

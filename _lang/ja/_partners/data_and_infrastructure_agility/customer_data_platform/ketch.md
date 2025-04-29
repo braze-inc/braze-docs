@@ -11,10 +11,14 @@ search_tag: Ketch
 
 > [Ketch ](https://www.ketch.com)は、企業がそのデータの責任者となることを可能にします。Ketchは、簡素化されたプライバシー処理、完全でダイナミックなデータ制御、インテリジェンスを提供します。 
 
+_この統合はKetchによって維持されている。_
+
+## 統合について
+
 Braze と Ketch の統合により、Ketch ユーザー設定センター内の顧客のコミュニケーション設定を管理し、これらの変更を自動的に Braze に伝播できます。 
 
 {% alert note %}
-購読グループの作成に関するガイダンスをお探しですか？<a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS購読グループと</a> <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>Eメール購読</a>グループの記事をチェックする。
+購読グループの作成に関するガイダンスをお探しですか？<a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>SMS購読グループと</a> <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>Eメール購読</a>グループの記事をチェックする。
 {% endalert %}
 
 ## 前提条件
@@ -32,7 +36,7 @@ Braze と Ketch の統合により、Ketch ユーザー設定センター内の�
 1. [Ketch インスタンス](https://app.ketch.com)で [**Data Systems**] に移動し、[**Braze**] を選択します。次に [**New Connection**] をクリックします。
 2. Braze接続に識別可能な名前を付け、APIベースの処理でこの接続を参照するために使用する。この接続のためのコードも作成されることに注意してください。このコードは、すべての接続において一意である必要があります。
 3. ユーザーのIDマッピングを確認する。デフォルトでは、Ketch はユーザーのメールアドレスまたは Braze の`external_id` によってユーザー ID をマッピングします。
-4. Braze APIキーを追加し、APIエンドポイントを指定する。この[APIエンドポイントは](https://www.braze.com/docs/api/basics/#endpoints)、あなたの組織が使用しているBrazeインスタンスに基づいていることに注意すること。
+4. Braze APIキーを追加し、APIエンドポイントを指定する。この[APIエンドポイントは]({{site.baseurl}}/api/basics/#endpoints)、あなたの組織が使用しているBrazeインスタンスに基づいていることに注意すること。
 
 ### ステップ2:サブスクリプション設定を構成する
 

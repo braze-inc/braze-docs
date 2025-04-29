@@ -38,7 +38,11 @@ Después de crear una selección, puedes utilizar la sección **Vista previa par
 
 ### Líquido en los resultados de la selección
 
-El uso de cualquier Líquido en los catálogos, como atributos personalizados y eventos personalizados, puede hacer que se devuelvan resultados diferentes para cada usuario de su selección.
+El uso de cualquier Líquido en los catálogos, como atributos personalizados y eventos personalizados, puede hacer que se devuelvan resultados diferentes para cada usuario de su selección. 
+
+{% alert note %}
+Contenido conectado Liquid no se admite en esta configuración de filtrar.
+{% endalert %}
 
 ![Ajustes de filtro para la selección de catálogos en los que el atributo se establece en un atributo personalizado de Liquid.][7]
 
@@ -70,7 +74,7 @@ Para utilizar este catálogo y esta selección en una campaña, utilice el modal
 
 Por ejemplo, supongamos que tiene un usuario cuya última categoría consultada es "Pollo". Utilizando la personalización establecida y una campaña de tarjeta de contenido, puede enviar tres recomendaciones de comidas que incluyan pollo para este usuario.
 
-![Una tarjeta de contenido con una imagen de pollo al limón a la parrilla y una lista de tres recomendaciones de comidas que incluyen pollo, basadas en la última categoría consultada por el usuario.][4]{: style="max-width:90%;"}
+![Una tarjeta de contenido con una imagen de pollo al limón a la parrilla, y una lista de tres recomendaciones de comidas que incluyen pollo basadas en la categoría que el usuario ha visto más recientemente.][4]{: style="max-width:90%;"}
 
 Utilizando la misma personalización, también puede enviar tres recomendaciones de comidas a un usuario cuya última categoría consultada sea "Carne de vacuno".
 

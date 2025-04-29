@@ -13,10 +13,6 @@ tool:
 
 > La page **Accueil** du tableau de bord fournit des indicateurs clés qui vous permettent de suivre et de comprendre les performances de votre appli ou de votre site web, et vous donne un aperçu de haut niveau de votre base d'utilisateurs.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), il s'agit de votre page d **'aperçu.** 
-{% endalert %}
-
 ![Tableau de bord de Braze.][1]
 
 La page d **'accueil** comporte deux sections principales :
@@ -62,7 +58,7 @@ Un faible ratio MAU/utilisateur peut indiquer que vous devez diversifier vos can
 ### Sessions à vie
 
 Le nombre *de sessions à vie* est le nombre total de sessions enregistrées par Braze depuis son intégration. En termes simples, une session correspond à chaque fois qu'un utilisateur utilise l'application ou visite votre site web. Pour une définition plus précise de la manière dont les sessions sont définies par plate-forme, consultez la page correspondante du site web de l'UE.
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), ou les articles des développeurs sur le suivi des sessions [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android et FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), ou les articles des développeurs sur le suivi des sessions [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ### Utilisateur actif par mois
 

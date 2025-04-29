@@ -42,19 +42,7 @@ Cuando utilices puntos finales para las llamadas a la API, utiliza el punto fina
 Para la integración de SDK, utiliza el [punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), no el punto final REST.
 {% endalert %}
 
-|Instancia|URL|Punto final de REST|Punto final de SDK|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### Límites de API
 
@@ -86,16 +74,10 @@ Además de las claves de API REST, también existe un tipo de clave llamada clav
 Para crear una nueva clave de API REST:
 
 1. Ve a **Configuración** > **API e identificadores**.
-
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes crear una clave de API desde **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecciona **Crear clave de API**.
-3\. Asigna un nombre a tu nueva clave para identificarla de un vistazo.
-4\. Especifica [las direcciones IP y subredes permitidas](#api-ip-allowlisting) para la nueva clave.
-5\. Selecciona los [permisos](#rest-api-key-permissions) que quieres asociar a tu nueva clave.
+2. Selecciona **Crear clave de API**.
+3. Asigna un nombre a tu nueva clave para identificarla de un vistazo.
+4. Especifica [las direcciones IP y subredes permitidas](#api-ip-allowlisting) para la nueva clave.
+5. Selecciona los [permisos](#rest-api-key-permissions) que quieres asociar a tu nueva clave.
 
 {% alert important %}
 Ten en cuenta que después de crear una nueva clave de API, no puedes editar el alcance de los permisos ni las IP permitidas. Esta limitación se aplica por motivos de seguridad. Si necesitas cambiar el alcance de una clave, crea una nueva con los permisos actualizados e implementa esa clave en lugar de la anterior. Cuando hayas completado la implementación, puedes eliminar la clave antigua.
@@ -383,7 +365,7 @@ Si estás implementando Braze utilizando Ruby, puedes utilizar nuestra [bibliote
 
 La biblioteca cliente Ruby admite los [puntos finales Usuario]({{site.baseurl}}/api/endpoints/user_data).
 
-{% alert note %}
+{% alert important %}
 Esta biblioteca cliente está actualmente en fase beta. ¿Quieres ayudarnos a mejorar esta biblioteca? Envíanos tus comentarios a [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

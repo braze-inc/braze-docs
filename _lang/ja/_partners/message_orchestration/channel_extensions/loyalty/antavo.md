@@ -1,7 +1,7 @@
 ---
 nav_title: Antavo
 article_title: Antavo Loyalty Cloud
-description: "このリファレンス記事では、Braze と Antavo のパートナーシップについて説明します。Antavo は、特典付きの購入からさらに進んだ次世代ロイヤルティプログラムです。"
+description: "この参考記事では、BrazeとAntavoの提携について概説している。Antavoは、購入報酬を超えた次世代ロイヤルティプログラムである。"
 alias: /partners/antavo/
 page_type: partner
 search_tag: Partner
@@ -11,14 +11,18 @@ search_tag: Partner
 
 > [Antavo](https://antavo.com/)社は、包括的なロイヤリティ・プログラムを構築し、ブランド愛を育み、顧客の行動を変える、エンタープライズ・グレードのSaaS型ロイヤリティ・テクノロジー・プロバイダーである。
 
-AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。Antavo では、2つのプラットフォーム間のロイヤルティデータ同期 (Antavo から Braze への一方向データ同期のみ) がサポートされています。この統合は、`external_id` Brazeフィールドをサポートしている。このフィールドは、Antavoがロイヤルティ会員IDを同期するフィールドである。
+_この統合はアンタボによって維持されている。_
+
+## 統合について
+
+AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。Antavo では、2つのプラットフォーム間のロイヤルティデータ同期 (Antavo から Braze への一方向データ同期のみ) がサポートされています。この統合は、`external_id` Brazeフィールドをサポートしており、Antavoはこのフィールドを使ってロイヤルティ会員IDを同期している。
 
 ## 前提条件
 
-| 要件          | 説明                                                                                                                                                                   |
+| 必要条件          | 説明                                                                                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
 | Antavo アカウント       | このパートナーシップを利用するには、Brazeとの統合を有効にした[Antavo](https://antavo.com/)アカウントが必要である。                                                |
-| Braze REST API キー   | `users.track` 権限を持つ Braze REST API キー。<br><br>Braze ダッシュボードで新しい API キーを作成するには、[**設定**] >[**API キー**] に移動し、[**新しい API キーを作成**] をクリックします。  |
+| Braze REST API キー   | 以下の権限を持つBraze REST APIキー：`users.track` `events.list`,`events.data_series`, および`events.get` 。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。  |
 | Braze RESTエンドポイント  | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。                |
 | Brazeアプリの識別子 | アプリ識別子キー。<br><br>Braze ダッシュボードでこのキーを確認するには、[**設定**] > [**API キー**] に進み、[**識別**] セクションを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -89,6 +93,7 @@ Antavoで設定されたフィールドのいずれかの値が変更される�
 Antavo から同期されたイベントを使用して、アクションベースの Braze キャンバスにロイヤルティメンバーを入力します。この統合は、Brazeにカスタムイベントとして表示されるあらゆるAntavoイベント（購入イベントを含む）を同期することができる。
 
 [ロイヤルティプログラム登録イベント](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)の同期および[ロイヤルティプログラム特典獲得イベント](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)の同期の設定方法については、ステップバイステップガイドを参照してください。
+
 
 [1]: {% image_buster /assets/img/antavo/connect_braze.png %}
 [2]: {% image_buster /assets/img/antavo/data_field_mapping.png %}

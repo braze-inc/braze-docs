@@ -35,7 +35,7 @@ Content-Cards für Currents und unsere API-Dokumentation für Content-Cards werd
 
 Braze hat einen neuen Kanal zu unseren Möglichkeiten hinzugefügt! Durch die Expansion in neue Kanäle können wir unsere Kunden in die Lage versetzen, ihre Daten durch das Verständnis des Sehverhaltens anzureichern oder ihren Verbraucher:in über alle relevanten Kanäle hinweg sinnvolle Erlebnisse zu bieten.
 
-Sie können jetzt [Daten von Roku-Geräten]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku) zur Datenanreicherung und zum angepassten Event Tracking [abrufen]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku).
+Sie können jetzt [Daten von Roku-Geräten abrufen]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku) und zur Datenanreicherung sowie zum angepassten Event Tracking nutzen.
 
 ## Benachrichtigungseinstellungen für Canvas- oder Kampagnen-Updates
 
@@ -97,7 +97,7 @@ _Update im August 2019 vermerkt._
 ## Kanal mit dem größten Engagement
 
 {% alert update %}
-Ab der [Produktversion im November 2019]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite) wurde "Most Engaged Channel" in ["Intelligent Channel"]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) umbenannt [.]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)
+Ab der [Produktversion im November 2019]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite) wurde "Most Engaged Channel" in ["Intelligent Channel"]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) umbenannt.
 {% endalert %}
 
 Der Filter Most Engaged Channel wählt den Teil Ihrer Zielgruppe aus, für den der ausgewählte Messaging-Kanal der "beste" Kanal ist. In diesem Fall bedeutet "am besten" "hat die höchste Wahrscheinlichkeit eines Engagements, wenn man den Verlauf des Nutzers:in betrachtet". Sie können E-Mail, Web-Push oder Mobile-Push (das jedes verfügbare mobile Betriebssystem oder Gerät einschließt) als Kanal auswählen.

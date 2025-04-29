@@ -17,6 +17,7 @@ Antes de esta función, las propiedades de entrada sólo podían utilizarse en e
 ## Uso de las propiedades de entrada
 
 Las propiedades de entrada pueden utilizarse en lienzos basados en acciones y activados por API. Estas propiedades de entrada se definen cuando un Canvas es activado por un evento personalizado, una compra o una llamada a la API. Consulte los siguientes artículos para obtener más información:
+
 - [Objeto de propiedades de entrada del lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objeto de propiedades de eventos]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

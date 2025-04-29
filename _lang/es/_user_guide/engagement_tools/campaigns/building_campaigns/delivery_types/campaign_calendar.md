@@ -13,10 +13,6 @@ description: "Esta página de referencia desglosa los componentes del calendario
 
 Puede analizar los datos de mensajería, así como ver y gestionar sus campañas programadas. Para abrir el calendario, seleccione **Mensajería** > **Calendario de contenidos**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione **Participación** > **Campañas** > **Calendario**.
-{% endalert %}
-
 ## Análisis de mensajería
 
 La sección de análisis de mensajería contiene dos informes para sus campañas programadas recientes y futuras:

@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/swift.md %}
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
 ## Einrichten des UI-Delegierten (erforderlich)
 

@@ -136,17 +136,8 @@ Cuando conecte diferentes espacios de trabajo a la misma cuenta Snowflake, debe 
 
 Dependiendo de la configuración de su cuenta Snowflake, puede que necesite permitir las siguientes direcciones IP en su política de red Snowflake. Para obtener más información sobre cómo activar esta opción, consulte la documentación pertinente de Snowflake sobre la [modificación de una política de red](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` | Para las instancias `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 {% tab Redshift %}
 
@@ -208,17 +199,8 @@ Algunas cosas importantes que hay que saber:
  
 Permita el acceso desde las siguientes IP correspondientes a la región de su cuadro de mandos Braze.
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` | Para las instancias `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 {% tab BigQuery %}
 
@@ -289,17 +271,7 @@ Tras crear la cuenta de servicio y conceder los permisos, genera una clave JSON.
 
 Si tienes políticas de red en vigor, debes dar acceso de red Braze a tu instancia de BigQuery. Permita el acceso desde las siguientes IP correspondientes a la región de su panel de control Braze.  
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` | Para las instancias `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Databricks %}
@@ -372,17 +344,7 @@ Guarde el token en un lugar seguro hasta que necesite introducirlo en el panel d
 
 Si tienes políticas de red en vigor, debes dar acceso de red Braze a tu instancia de Databricks. Permita el acceso desde las siguientes IP correspondientes a la región de su panel de control Braze.  
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` | Para las instancias `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Microsoft Fabric %}
@@ -456,17 +418,8 @@ Necesitarás el punto final SQL de tu almacén para que Braze pueda conectarse. 
 
 Dependiendo de la configuración de tu cuenta Microsoft Fabric, puede que tengas que permitir las siguientes direcciones IP en tu cortafuegos para permitir el tráfico desde Braze. Para más información sobre cómo habilitarlo, consulta la documentación correspondiente sobre el [Acceso Condicional Entra](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
-| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` | Para las instancias `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 
 {% endtabs %}

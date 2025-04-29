@@ -1,21 +1,21 @@
 ---
-nav_title: "COLOCAR: Actualizar varios elementos del catálogo"
-article_title: "COLOCAR: Actualizar varios elementos del catálogo"
+nav_title: "COLOCAR: Sustituir varios elementos del catálogo"
+article_title: "COLOCAR: Sustituir varios elementos del catálogo"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Actualizar varios elementos del catálogo de Braze."
+description: "En este artículo se describen los detalles del punto final Braze Sustituir varios elementos del catálogo."
 
 ---
 {% api %}
-# Actualizar elementos del catálogo
+# Sustituir artículos del catálogo
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar varios elementos de tu catálogo.
+> Utiliza este punto final para sustituir varios elementos de tu catálogo.
 
 Si un elemento del catálogo no existe, este punto final creará el elemento en tu catálogo. Cada solicitud puede admitir hasta 50 elementos de catálogo. Este punto final es asíncrono.
 

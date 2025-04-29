@@ -13,10 +13,6 @@ description: "Este artículo de referencia cubre la configuración genérica de 
 
 Para acceder a esta página, vaya a **Configuración** > **Configuración de administración** > **Configuración de seguridad**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione el menú desplegable de su cuenta y vaya a **Configuración de la empresa** > **Configuración de seguridad**.
-{% endalert %}
-
 ## Normas de autenticación
 
 ### Longitud de la contraseña
@@ -31,7 +27,7 @@ Selecciona **Forzar contraseñas complejas** para exigir que las contraseñas in
 - Número
 - Carácter especial
 
-### Reusabilidad de la contraseña
+### Reutilización de contraseñas
 
 Determina el número mínimo de nuevas contraseñas que deben establecerse antes de que un usuario pueda reutilizar una contraseña. El valor predeterminado es tres.
 

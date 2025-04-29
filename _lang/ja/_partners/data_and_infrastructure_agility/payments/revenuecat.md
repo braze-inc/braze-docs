@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [RevenueCat](https://www.revenuecat.com/) は、iOS、Android、および Web におけるサブスクリプションステータスの信頼できる唯一の情報源です。新しいアプリを作成する場合でも、すでに数百万のサブスクライバーがいる場合でも、RevenueCat を使用すれば、サーバーコードなしでクロスプラットフォームのアプリ内購入を構築し、製品とサブスクライバーを管理し、データを分析することができます。
 
+_この統合はRevenueCatによって維持されている。_
+
+## 統合について
+
 RevenueCat と Braze の統合により、顧客の購入およびサブスクリプションのライフサイクルイベントをプラットフォーム間で自動的に同期できます。これにより、無料トライアル中にオプトアウトした顧客への働きかけや、請求で問題のある顧客へのリマインダーの送信など、顧客のサブスクリプションライフサイクルステージに対応するキャンペーンを作成できます。
 
 ## 前提条件
@@ -139,6 +143,7 @@ RevenueCat で Braze の設定が完了したら、イベントが RevenueCat �
 ### テスト用のサンドボックスAPIキーを追加する
 
 RevenueCat に1つの Braze REST API キーのみを指定すると、本番イベントのみが送信されます。サンドボックステストイベントも送信する場合は、[別の Braze REST API キー][11]を作成し、RevenueCat の Braze 設定に追加します。
+
 
 [2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}

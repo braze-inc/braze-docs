@@ -22,7 +22,7 @@ Braze는 iOS용 Apple의 디바이스 토큰을 사용합니다.
 
 1. [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)를 통해 토큰을 가져옵니다. 대량 일괄 가져오기의 경우 프로세스를 신속하게 처리하는 데 도움이 되는 리소스를 제공합니다. 자세한 내용은 담당 COM 또는 SA에게 문의하세요!
 2. 토큰이 이미 Braze에 존재하는 경우 무시되며, 그렇지 않은 경우 익명 프로필이 생성됩니다.
-3. 푸시 통합에 대한 품질 보증을 수행합니다. [푸시 구성]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) 단계가 완료되었는지 확인합니다.
+3. 푸시 통합에 대한 품질 보증을 수행합니다. [푸시 구성]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 단계가 완료되었는지 확인합니다.
 
 사용자 프로필과 푸시 토큰이 서로 다른 위치에 저장되어 있는 경우 푸시 토큰을 익명으로 가져온 다음 기존 사용자 프로필을 마이그레이션하는 것을 권장합니다. 통합이 성공하면 Braze iOS SDK가 토큰 확인을 처리하므로 함께 매핑할 필요는 없습니다.
 

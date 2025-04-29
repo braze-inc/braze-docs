@@ -12,14 +12,14 @@ tool: Canvas
 
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
-Using Action Paths, you can:
+![An Action Paths step  in a Canvas user journey.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-![An Action Paths step as the first step in a Canvas user journey.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Using Action Paths, you can:
 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
-## Create an action path
+## Creating an action path
 
 To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
@@ -29,7 +29,7 @@ In the **Action Settings**, set the **Evaluation Window** to determine how long 
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
-![The Action Settings with an evaluation window of 1 day.][4]
+![The Action Settings with an evaluation window of 1 day.][2]
 
 By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they will immediately advance through the relevant action group. If a user doesn't perform a trigger event, then they will advance through the default **Everyone Else** group at the end of the evaluation period.
 
@@ -80,6 +80,6 @@ If users enter an action path multiple times and have multiple entries in the ac
 Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %} 
-[3]: {% image_buster /assets/img/actionpath_group.png %} 
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 
+[1]: {% image_buster /assets/img/canvas_actionpath.png %}
+[2]: {% image_buster /assets/img/actionpath_settings.png %}
+[3]: {% image_buster /assets/img/actionpath_group.png %}

@@ -78,7 +78,7 @@ In der folgenden Liste finden Sie die allgemeinen Schritte, die zur Aktivierung 
 
 Um Ihre Daten zur Zielgruppe von der Adobe Experience Platform korrekt an Braze zu senden, müssen Sie den Schritt der Abbildung der Felder abschließen. Die Abbildung stellt eine Verbindung zwischen den Feldern des Adobe Experience-Datenmodells und den entsprechenden Feldern der Braze-Plattform her.
 
-1. Wählen Sie im Schritt Abbildung **hinzufügen** die Option **Neue Abbildung hinzufügen**.<br>![][5]{: style="max-width:50%;"}<br><br>
+1. Wählen Sie im Schritt Abbildung hinzufügen die Option **Neue Abbildung hinzufügen**.<br>![][5]{: style="max-width:50%;"}<br><br>
 2. Wählen Sie im Bereich Quellfeld den Pfeil-Button neben dem leeren Feld, um das Fenster Quellfeld auswählen zu öffnen.<br>![][6]<br><br>
 3. Wählen Sie in dem Fenster die Adobe Attribute aus, die Sie Ihren Braze Attributen zuordnen möchten. <br>![][7]{: style="max-width:70%;"}<br><br>Wählen Sie dann den Identitäts-Namensraum aus. Mit dieser Option können Sie einen Namespace für die Plattformidentität auf einen Braze-Namespace abbilden.<br>![][8]{: style="max-width:80%;"}<br> Wählen Sie Ihre Quellfelder aus und wählen Sie dann **Auswählen**.<br><br>
 4. Wählen Sie im Abschnitt Targeting-Feld das Symbol für die Abbildung neben dem Feld aus.<br>![][9]{: style="max-width:90%;"} <br><br>

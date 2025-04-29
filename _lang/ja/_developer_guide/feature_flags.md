@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: フィーチャーフラグ
 article_title: Braze SDKのフィーチャーフラグ
-page_order: 1
 description: "このリファレンス記事では、前提条件とユースケースを含むフィーチャーフラグの概要について説明します。"
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > フィーチャーフラグを使用すると、特定のユーザーまたは選択したユーザーの機能をリモートで有効または無効にすることができます。重要なことは、追加のコード展開やアプリストア更新を使用せずに、機能のオンオフを本番環境で切り替えることができることです。これにより、新しい機能を安全かつ確信を持ってロールアウトできます。
 
 {% alert tip %}
-独自のフィーチャーフラグを作成する準備ができたら、[フィーチャーフラグの作成を]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/)チェックしよう。
+独自のフィーチャーフラグを作成する準備ができたら、[フィーチャーフラグの作成を]({{site.baseurl}}/developer_guide/feature_flags/create/)チェックしよう。
 {% endalert %}
 
 ## 前提条件
@@ -51,7 +51,7 @@ Braze フィーチャーフラグを使用することで、機能を段階的�
 * 人員が適切に配置されているかどうかを判断するために、この新機能を10%のユーザーに対してのみ有効にします。
 * バグがある場合は、新しいリリースを急いで配布するのではなく、ただちに機能を無効にすることができます。
 
-この機能を徐々に展開するには、"ライブチャットウィジェット "という[フィーチャーフラグを作成]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/)すればいい。
+この機能を徐々に展開するには、"ライブチャットウィジェット "という[フィーチャーフラグを作成]({{site.baseurl}}/developer_guide/feature_flags/create/)すればいい。
 
 ![Live Chat Widget という名前の例の機能フラグの詳細。ID はenable_live_chat です。このフィーチャーフラグの説明には、ライブチャットウィジェットがサポートページに表示されることが記載されています。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -143,7 +143,7 @@ return (<>
 
 [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) は、ユーザーのレスポンスを変数の複数バージョンと比較する強力なツールです。
 
-この例では、チームは e コマースアプリの新しいチェックアウトフローを構築しました。ユーザーエクスペリエンスは改善されていると確信しているにもかかわらず、AB テストを実行して、アプリの収益に与える影響を測定したいと考えています。
+この例では、我々のチームはeコマースアプリの新しいチェックアウトフローを構築した。ユーザーエクスペリエンスは改善されていると確信しているにもかかわらず、AB テストを実行して、アプリの収益に与える影響を測定したいと考えています。
 
 まず、`enable_checkout_v2` という新しいフィーチャーフラグを作成します。オーディエンスやロールアウトのパーセンテージeは追加しません。代わりに、フィーチャーフラグ試験を使用して、トラフィックを分割し、機能を有効にして、結果を測定します。
 
@@ -161,7 +161,7 @@ if (featureFlag?.enabled) {
 }
 ```
 
-A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) で設定します。
+A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/) で設定します。
 
 さて、50%のユーザー sが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントを分析して、どのチェックアウトフローが高い変換率をもたらしたかを判断することができます。{% multi_lang_include metrics.md metric='Conversion Rate' %}
 
@@ -188,7 +188,7 @@ Segment s でのフィルター ing の詳細については、[Segmentの作成
 | 機能                                                                                                   | 無償バージョン     | 有料版      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [アクティブなフィーチャーフラグ](#active-feature-flags)                                                                     | ワークスペースあたり10 | ワークスペースあたり110 |
-| [アクティブなキャンペーンの実験]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | ワークスペースごとに1つ  | ワークスペースあたり100 |
+| [アクティブなキャンペーンの実験]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | ワークスペースごとに1つ  | ワークスペースあたり100 |
 | [フィーチャーフラグキャンバスステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | 無制限        | 無制限         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

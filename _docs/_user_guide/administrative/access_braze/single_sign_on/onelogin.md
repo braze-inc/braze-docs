@@ -47,7 +47,7 @@ On this page, input the following:
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your OneLogin. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Opening Security Settings in Braze and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.

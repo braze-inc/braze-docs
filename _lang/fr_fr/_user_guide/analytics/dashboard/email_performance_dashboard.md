@@ -13,10 +13,6 @@ tool:
 
 > Les tableaux de bord des performances des canaux affichent les indicateurs de performance agrégés pour un canal entier, à partir des campagnes et des Canevas. Ces tableaux de bord sont disponibles actuellement pour les e-mails et les SMS.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), les tableaux de bord de la performance des canaux se trouvent sous l'**emplacement/localisation.**
-{% endalert %}
-
 ![Tableau de bord des performances e-mail affichant l’engagement des trente derniers jours sur ce canal de communication.][1]
 
 Vous pouvez consulter les tableaux de bord suivants :
@@ -41,7 +37,7 @@ Chaque vignette affiche d’abord l’indicateur de pourcentage, puis le chiffre
 | Envois | Total | Nombre total d’envois par jour dans la plage de dates |
 | Taux de livraison | Taux | (Nombre total de livraisons chaque jour dans la plage de dates) / (Nombre total d’envois effectués chaque jour dans la plage de dates) |
 | Taux de rebond | Taux | (Nombre total de rebonds pour chaque jour dans la plage de dates) / (Nombre total d’envois effectués chaque jour dans la plage de dates) |
-| Taux de désinscription | Taux | (Nombre total de désabonnements uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates)<br><br>Ceci utilise les désinscriptions uniques, qui sont utilisées également dans les analyses de campagne, l’aperçu et le créateur de rapports. |
+| Taux de désinscription | Taux | (Nombre total de désabonnements uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates)<br><br>Ceci utilise les désinscriptions uniques, qui sont utilisées également dans les analyses de campagne, l’aperçu et le créateur de rapports. Ces désabonnements sont enregistrés dans toutes les sources (telles que le SDK, l'API REST, les importations CSV, les e-mails et les désabonnements aux listes). Les taux de désabonnement dans les analyses Campaign et Canvas sont des désabonnements qui se produisent à la suite d'un clic de désabonnement sur un e-mail délivré par Braze.  |
 | Taux d’ouverture unique | Taux | (Nombre total d'ouvertures uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates) |
 | Taux d’autres ouvertures | Taux | (Nombre total d’autres ouvertures uniques pour chaque jour dans la plage de dates) / (Nombre total de livraisons pour la plage de dates)<br><br>Les autres ouvertures comprennent les e-mails qui n’ont pas été identifiés comme étant ouvert automatiquement, comme quand un utilisateur ouvre un e-mail. Cet indicateur n’est pas unique et est un sous–indicateur du nombre total d’ouvertures.  |
 | Taux de clics unique | Taux | (Nombre total de clics uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates) |
@@ -81,7 +77,7 @@ Le rapport **Engagement par fournisseur de boîte aux lettres** affiche les prin
 
 ### Heure de l’engagement
 
-Le rapport sur le **moment de l'engagement** affiche des données sur le moment où les utilisateurs s'engagent dans vos e-mails. Cela peut aider à répondre à des questions telles que le jour de la semaine ou l'heure à laquelle l'engagement de vos clients est le plus élevé. Grâce à ces informations, vous pouvez expérimenter le meilleur jour ou la meilleure heure pour envoyer vos messages afin d'augmenter le taux d'engagement. Notez que ces heures sont basées sur le fuseau horaire de votre espace de travail.
+Le rapport sur le **moment de l'engagement** affiche des données sur le moment où les utilisateurs s'engagent dans vos e-mails. Cela peut aider à répondre à des questions telles que le jour de la semaine ou l'heure à laquelle l'engagement de vos clients est le plus élevé. Grâce à ces informations, vous pouvez expérimenter le meilleur jour ou la meilleure heure pour envoyer vos messages afin d'augmenter le taux d'engagement. Notez que ces heures sont basées sur le fuseau horaire de votre entreprise.
 
 Le rapport d'engagement du **jour de la semaine** décompose les ouvertures ou les clics par jour de la semaine. 
 

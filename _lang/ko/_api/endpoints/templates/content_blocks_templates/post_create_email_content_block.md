@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `description` | 선택 사항 | 문자열 | 콘텐츠 블록에 대한 설명입니다. 250자 미만이어야 합니다. |
 | `content` | 필수 | 문자열 | 콘텐츠 블록 내의 HTML 또는 텍스트 콘텐츠. |
 | `state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
-| `tags` | 선택 사항 | 문자열 배열 | [태그가]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 이미 존재해야 합니다. |
+| `tags` | 선택 사항 | 문자열 배열 | [태그가]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 이미 존재해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시

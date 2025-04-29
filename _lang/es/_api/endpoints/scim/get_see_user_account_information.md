@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Buscar una cuenta de usuario existente en el panel de Braze."
+description: "En este artículo se describen los detalles del punto final Braze Buscar un ID de recurso de cuenta de usuario de panel existente."
 ---
 
 {% api %}
-# Buscar una cuenta de usuario existente en el panel
+# Buscar una cuenta de usuario existente en el panel por ID de recurso
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utiliza este punto final para buscar una cuenta de usuario existente en el panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/). 
+> Utiliza este punto final para buscar una cuenta de usuario existente en el panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/). 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

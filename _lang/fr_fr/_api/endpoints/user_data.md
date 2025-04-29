@@ -34,6 +34,9 @@ guide_featured_list:
   - name: "POST : Suivre les utilisateurs"
     link: /docs/api/endpoints/user_data/post_user_track/
     image: /assets/img/braze_icons/database-01.svg
+  - name: "POST : Suivi des utilisateurs (synchrone)"
+    link: /docs/api/endpoints/user_data/post_user_track_synchronous/
+    image: /assets/img/braze_icons/database-01.svg
   - name: "POST : Fusionner les utilisateurs"
     link: /docs/api/endpoints/user_data/post_users_merge/
     image: /assets/img/braze_icons/users-01.svg

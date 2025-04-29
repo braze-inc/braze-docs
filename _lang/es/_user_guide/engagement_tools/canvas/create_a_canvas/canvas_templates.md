@@ -59,7 +59,7 @@ Cuando hayas terminado de personalizar tu plantilla, selecciona el botón **Guar
 
 Hay dos formas de utilizar tu plantilla al componer un Canvas:
 
-- **De Messsaging**: Ve a **Mensajería** > **Canvas**. Selecciona el botón **Crear Canvas** y **Utilizar una plantilla de Canvas**.
+- **De mensajería**: Ve a **Mensajería** > **Canvas**. Selecciona el botón **Crear Canvas** y **Utilizar una plantilla de Canvas**.
 - **De plantillas**: Ve a **Plantillas** > **Plantillas Canvas** y busca la plantilla que desees. A continuación, selecciona el menú <i class="fas fa-ellipsis-vertical"></i> seguido de **Aplicar plantilla**. Esto te llevará a un nuevo Canvas con la plantilla aplicada en el compositor de Canvas.
 
 ### Plantillas Braze disponibles

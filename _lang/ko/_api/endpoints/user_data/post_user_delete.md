@@ -16,7 +16,9 @@ description: "이 문서에서는 사용자 삭제 Braze 엔드포인트에 대�
 
 > 이 엔드포인트를 사용하여 알려진 사용자 식별자를 지정하여 모든 사용자 프로필을 삭제할 수 있습니다.
 
-하나의 요청에 최대 50개의 `external_ids`, `user_aliases`, `braze_ids` 또는 `email_addresses` 을 포함할 수 있습니다. `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` 중 하나만 하나의 요청에 포함할 수 있습니다.
+하나의 요청에 최대 50개의 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` 또는 `phone_numbers` 을 포함할 수 있습니다. `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, `phone_numbers` 중 하나만 하나의 요청에 포함할 수 있습니다. 
+
+API를 통한 대량 사용자 삭제로 해결할 수 없는 사용 사례가 있는 경우 [Braze 지원팀에]({{site.baseurl}}/user_guide/administrative/access_braze/support/) 문의하여 도움을 받으세요.
 
 {% alert warning %}
 사용자 프로필 삭제는 되돌릴 수 없습니다. 데이터에 불일치를 일으킬 수 있는 사용자를 영구적으로 제거합니다. [API를 사용하여 사용자 프로필을 삭제하면]({{site.baseurl}}/help/help_articles/api/delete_user/) 어떤 일이 발생하는지 도움말 문서에서 자세히 알아보세요.
@@ -41,20 +43,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External IDs for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
 ### 요청 매개변수
 
 | 매개변수         | 필수 | 데이터 유형                  | 설명                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | 선택 사항 | 문자열 배열           | 사용자가 삭제할 외부 식별자.                                                    |
-| `user_aliases`    | 선택 사항 | 사용자 별칭 객체 배열 | 삭제할 사용자의 사용자 [별칭입니다]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `braze_ids`       | 선택 사항 | 문자열 배열           | 삭제할 사용자의 사용자 아이디를 브레이즈합니다.                                                  |
+| `external_ids`    | 선택 사항 | 문자열 배열           | 삭제할 외부 식별자.                                                    |
+| `user_aliases`    | 선택 사항 | 사용자 별칭 객체 배열 | 삭제할 [사용자 별칭입니다]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `braze_ids`       | 선택 사항 | 문자열 배열           | 삭제할 Braze 사용자 식별자.                                                  |
 | `email_addresses` | 선택 사항 | 문자열 배열           | 삭제할 사용자 이메일입니다. 자세한 내용은 [이메일로 사용자 삭제하기를](#deleting-users-by-email) 참조하세요.                                                             |
+| `phone_numbers` | 선택 사항 | 문자열 배열 | 삭제할 사용자 전화번호입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### 이메일로 사용자 삭제하기

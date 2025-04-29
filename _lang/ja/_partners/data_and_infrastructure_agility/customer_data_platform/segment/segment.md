@@ -16,8 +16,9 @@ search_tag: Partner
 > [Segment][5] は、顧客データの収集、クリーンアップ、およびアクティブ化を支援する顧客データプラットフォームです。 
 
 Braze と Segment の統合により、ユーザーを追跡し、さまざまなユーザー分析プロバイダーにデータを転送できます。Segment では次の操作を行うことができます。
+
 - Braze キャンペーンとキャンバスセグメンテーションで使用するために、[Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/)を Braze に同期する。
-- [2つのプラットフォームの間でデータをインポートする](#integration-options)。お客様のAndroid、iOS、およびWebアプリケーション用のサイドバイサイドSDKインテグレーションと、BrazeのREST APIにデータを同期するためのサーバー間インテグレーションを提供する。
+- [2つのプラットフォームの間でデータをインポートする](#integration-options)。お客様のAndroid、iOS、およびWebアプリケーション用のサイドバイサイドSDKインテグレーションと、お客様のデータをREST APIに同期させるためのサーバー間インテグレーションを提供。
 - [カレントを介してデータをセグメントに接続する]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/)。 
 
 ## 前提条件
@@ -38,7 +39,7 @@ BrazeとSegmentを統合するには、[選択した統合タイプ](#integratio
 
 ### ステップ2:宛先フレームワークと接続タイプを選択する {#integration-options}
 
-Segmentで、**[Destinations] > [Braze] > [Configure Braze] > [Select your Source] > [Setup]** の順に移動します。
+セグメンテーションで、**送信先**＞**Braze**＞**Configure Braze**＞**ソースを選択**＞**Setupと**進む。
 
 ![ソースの設定ページ。このページでは、宛先フレームワークを [Actions] または [Classic] のいずれかに設定し、接続モードを [Cloud mode] または [Device mode] のいずれかに設定します。][42]
 
@@ -48,7 +49,7 @@ Segment のWeb ソース (Analytics.js) およびネイティブクライアン�
 
 | 統合 | 詳細 |
 | ----------- | ------- |
-| [サイドバイサイド<br>(デバイスモード)](#side-by-side-sdk-integration) |Segment の SDK を使用して、イベントを Braze のネイティブ呼び出し変換します。これにより、サーバー間統合よりも高度な機能にアクセスでき、Braze をより包括的に使用できるようになります。<br><br>Segmentは、すべてのBrazeメソッド（例えば、Content Cards）をサポートしているわけではない。対応するマッピングを通してマッピングされていないBrazeメソッドを使用するには、コードベースにネイティブのBrazeコードを追加してメソッドを呼び出す必要がある。 |
+| [サイドバイサイド<br>(デバイスモード)](#side-by-side-sdk-integration) |SegmentのSDKを使用し、イベントをBrazeネイティブコールに変換することで、サーバー間統合よりも深い機能にアクセスでき、Brazeをより包括的に使用できる。<br><br>Segmentは、すべてのBrazeメソッド（例えば、Content Cards）をサポートしているわけではない。対応するマッピングを通してマッピングされていないBrazeメソッドを使用するには、コードベースにネイティブのBrazeコードを追加してメソッドを呼び出す必要がある。 |
 | [サーバー間<br>(クラウドモード)](#server-to-server-integration) | SegmentからBraze REST APIエンドポイントにデータを転送する。<br><br>アプリ内メッセージ、コンテンツカード、プッシュ通知などのBraze UI機能には対応していない。また、この方法では利用できないデバイスレベルのフィールドなど、自動的に取得されるデータも存在します。<br><br>これらの機能を使いたい場合は、サイド・バイ・サイドの統合を検討しよう。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,9 +85,7 @@ Androidデバイスモード統合のソースコードは、Brazeによって�
 
 {% endalert %}
 
-Android ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。 
-
-![]({% image_buster /assets/img/segment/android.png %})
+BrazeをAndroidソースのデバイスモード送信先として設定するには、**送信先フレームワークとして** **アクションを**選択し、**保存を**選択する。 
 
 サイドバイサイドの統合を完了するには、[Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/)アプリにBrazeのデスティネーション依存性を追加するためのSegmentの詳細な手順を参照する。
 
@@ -108,9 +107,7 @@ iOSデバイスモード統合のソースコードは、Brazeによって保守
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
-iOS ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。 
-
-![]({% image_buster /assets/img/segment/ios.png %})
+BrazeをiOSソースのデバイスモード送信先として設定するには、**送信先フレームワークとして** **アクションを**選択し、**保存を**選択する。 
 
 サイドバイサイドの統合を完了するには、[iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/)アプリにBraze Segmentポッドを追加するためのSegmentの詳細な手順を参照する。
 
@@ -119,9 +116,9 @@ iOS ソースのデバイスモードの宛先として Braze を設定するに
 {% endtab %}
 {% tab ウェブまたはJavaScript %}
 
-Segmentの新しいBraze Web Mode (Actions)フレームワークは、BrazeをWebソースのデバイスモードデスティネーションとして設定するのに推奨される。 
+Webソースのデバイスモード送信先としてBrazeを設定するには、セグメンテーションのBraze Web Mode（アクション）フレームワークが推奨される。 
 
-Setup UI で、宛先フレームワークとして [**Actions**] を選択し、接続モードとして [**Device Mode**] を選択します。
+セグメンテーションで、送信先フレームワークとして**アクションを**選択し、接続モードとして**デバイスモードを**選択する。
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
@@ -139,16 +136,16 @@ React Native Segment ソースを Braze に接続する場合は、オペレー�
 React Native アプリがすべてのデバイスで同じ Braze アプリ識別子を使用して Braze を初期化する場合、すべての React Native ユーザーは Braze で Android ユーザーまたは iOS ユーザーとみなされ、すべてのプッシュトークンはそのオペレーティングシステムに関連付けられます。
 {% endalert %}
 
-各ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。
+Brazeを各ソースのデバイスモード送信先として設定するには、**送信先フレームワークとして** **アクションを**選択し、**保存を**選択する。
 
 {% endtab %}
 {% endtabs %}
 
 #### サーバー間統合
 
-クラウドモードとも呼ばれるこの統合は、SegmentからBrazeのREST APIにデータを転送する。Segmentの新しい[Brazeクラウドモード（Actions）](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/)フレームワークを使って、どのソースにもクラウドモードのデスティネーションを設定する。 
+クラウドモードとも呼ばれるこの統合は、セグメンテーションからBraze REST APIにデータを転送する。Segmentの[Brazeクラウドモード（アクション）](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/)フレームワークを使用して、任意のソースにクラウドモードの送信先を設定する。 
 
-サイドバイサイド統合とは異なり、サーバー間統合では、アプリ内メッセージング、コンテンツカード、自動プッシュトークン登録といった Brazeの UI 機能がサポートされていません。また、クラウドモードでは利用できない[自動取得]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection)データ（匿名ユーザーやデバイスレベルのフィールドなど）も存在する。
+サイドバイサイドの統合とは異なり、サーバー間の統合では、アプリ内メッセージング、コンテンツカード、自動プッシュトークン登録などのBraze UI機能はサポートされない。また、クラウドモードでは利用できない[自動取得]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection)データ（匿名ユーザーやデバイスレベルのフィールドなど）も存在する。
 
 このデータとこれらの機能を使用したい場合は、サイド・バイ・サイド（デバイスモード）SDK統合の使用を検討すること。
 
@@ -182,12 +179,12 @@ React Native アプリがすべてのデバイスで同じ Braze アプリ識別
 | Do not load font awesome | Brazeはアプリ内のメッセージアイコンにFont Awesomeを使用している。デフォルトでは、Brazeは自動的にFontAwesome CDNからFontAwesomeを読み込む。この動作を無効にするには（例えば、あなたのサイトが FontAwesome のカスタマイズ版を使用しているため）、このオプションを`TRUE` に設定する。これを行う場合、FontAwesomeがあなたのサイトにロードされていることを確認する責任があることに注意すること - そうでない場合、アプリ内メッセージが正しくレンダリングされない可能性がある。 |
 | HTMLアプリ内メッセージを有効にする | このオプションを有効にすると、Braze ダッシュボードのユーザーが HTML アプリ内メッセージを使用できるようになります。 | 
 | アプリ内のメッセージを新しいタブで開く | デフォルトでは、アプリ内メッセージでクリックしたリンクは、現在のタブまたは新しいタブに読み込まれます。どちらのタブになるかは、ダッシュボードでメッセージごとに指定されています。このオプションを`TRUE` に設定すると、アプリ内メッセージのクリックによるすべてのリンクが新しいタブまたはウィンドウで強制的に開かれる。 |
-| アプリ内メッセージzインデックス | Braze のデフォルトの z-index をオーバーライドするには、このオプションに値を指定します。 | 
+| アプリ内メッセージzインデックス | Brazeデフォルトのz-indexをオーバーライドするには、このオプションに値を指定する。 | 
 | Require explicit in-app message dismissal | デフォルトでは、アプリ内メッセージが表示されている場合、エスケープボタンを押すか、ページのグレーアウトした背景をクリックすると、メッセージが表示されなくなる。このオプションをtrueに設定すると、この動作を防ぎ、メッセージを解除するために明示的なボタンクリックを要求する。 |
 | トリガーアクションの最小間隔（秒 | デフォルトは30です。<br>デフォルトでは、トリガーアクションは、前回のトリガーアクションから30秒以上が経過した場合にのみ実行されます。デフォルトを各自の値でオーバーライドするには、この設定オプションに値を指定します。ユーザーへのスパム通知を避けるため、この値を10より小さくすることは推奨しない。|
 | サービス従業員の所在地 | デフォルトでは、Webプッシュ通知のためにユーザーを登録するとき、Brazeは、Webサーバーのルートディレクトリの`/service-worker.js` にある必要なサービスワーカーファイルを探す。サーバー上の別のパスでサービスワーカーをホストする場合は、このオプションにファイルの絶対パスを指定します (例: `/mycustompath/my-worker.js`)。ここで値を設定すると、サイトでのプッシュ通知の範囲が制限されることに注意してください。たとえば上記の例では、サービスワーカーファイルは `/mycustompath/` ディレクトリ内にあるため、`requestPushPermission` は`http://yoursite.com/mycustompath/` で始まる Web ページからのみ呼び出すことができます。 |
 | プッシュトークンのメンテナンスを無効にする | デフォルトでは、確実に配信されるようにするため、すでに Web プッシュ通知の権限が付与されているユーザーが、新しいセッションでプッシュトークンを Braze バックグラウンドと自動的に同期します。この動作を無効にするには、このオプションを`FALSE` に設定する。 |
-| Manage service worker externally | 登録し、ライフサイクルを制御する独自のサービスワーカーがある場合、このオプションを`TRUE` に設定すると、Braze SDKはサービスワーカーを登録または登録解除しない。このオプションを `TRUE` に設定した場合、プッシュが正しく機能するためには、`requestPushPermission` を呼び出す前に自分自身でサービスワーカーを登録し、`self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` を使用するかまたはそのファイルのコンテンツを直接インクルードすることで、Braze のサービスワーカーコードが含まれているようにする必要があります。このオプションが`TRUE` の場合、`serviceWorkerLocation` オプションは無関係であり、無視される。 |
+| Manage service worker externally | 登録し、ライフサイクルを制御する独自のサービスワーカーがある場合、このオプションを`TRUE` に設定すると、Braze SDKはサービスワーカーを登録または登録解除しない。このオプションを`TRUE` に設定した場合、プッシュが正しく機能するためには、`requestPushPermission` を呼び出す前にサービスワーカーを自分で登録し、`self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` を使うか、そのファイルの内容を直接含めるかして、Brazeサービスワーカーのコードが含まれていることを確認する必要がある。このオプションが`TRUE` の場合、`serviceWorkerLocation` オプションは無関係であり、無視される。 |
 | Content security nonce | このオプションに値を指定すると、Braze SDK によって作成されたすべての `<script>` 要素と`<style>` 要素に nonce が追加されます。これにより Braze SDK は、Web サイトのコンテンツセキュリティポリシーを処理できるようになります。この nonce の設定に加えて、FontAwesome の読み込みを許可する必要があります。このためには、コンテンツセキュリティポリシー許可リストに `use.fontawesome.com` を追加するか、または `doNotLoadFontAwesome` オプションを使用して手動で読み込みます。 |
 | クローラーの活動を許可する | デフォルトでは、Braze Web SDK はエージェント文字列に基づいて、Google などの既知のスパイダーや Web クローラーからのアクティビティを無視します。これによりデータポイントを節約でき、分析がより正確になり、またページランクが向上する可能性があります。ただし、Braze にこれらのクローラーからのアクティビティを記録させる場合には、このオプションを `TRUE` に設定します。 |
 | ロギングを有効にする | デフォルトでロギングを有効にするには、`TRUE` に設定します。これにより Braze は、すべてのユーザーに対して表示される JavaScript コンソールにログを記録することに注意してください。ページを本番環境にリリースする前にこれを削除するか、`setLogger` で代替ロガーを指定する必要があります。 |
@@ -340,7 +337,7 @@ analytics.identify(
 
 ##### カスタム属性
 
-その他の特徴はすべて[カスタム属性として]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)記録される。
+その他の特徴はすべて[カスタム属性として]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)記録される。
 
 | Segment での方法 | Braze での方法 | 例 |
 |---|---|---|
@@ -371,12 +368,12 @@ analytics.identify(
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
 | [プロパティを使用した追跡](https://segment.com/docs/spec/track/) | [イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)として記録される | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});`<br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [製品を使用した追跡](https://segment.com/docs/spec/track/) | [購入イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)として記録される。 | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});`<br>Braze: `Braze.logPurchase("ab12", 19);` |
+| [製品を使用した追跡](https://segment.com/docs/spec/track/) | [購入イベント]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)として記録される。 | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});`<br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ##### 注文完了 {#order-completed}
 
-Segment の [Ecommerce API](https://segment.com/docs/spec/ecommerce/v2/) で説明されている形式を使用して、`Order Completed` という名前のイベントを追跡すると、リストした製品が[購入]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data)として記録されます。
+Segmentの[eコマースAPIに](https://segment.com/docs/spec/ecommerce/v2/)記載されているフォーマットを使用して、`Order Completed` という名前でイベントをトラッキング追跡すると、あなたが[購入として]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data)リストアップした商品が記録される。
 
 [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) 宛先と [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) 宛先では、Track Purchase Action でデフォルトのマッピングをカスタマイズできます。
 
@@ -458,7 +455,7 @@ Braze SDK のエンドポイントを正しく入力するには、適切な形�
 データが期待通りに通過しないシナリオ：
 
 1. 階層化カスタム属性
-  - [ネストされたカスタム属性は]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/)、技術的にはSegmentを通してBrazeに送信できるが、**ペイロード全体が**毎回送信される。これにより、ペイロードが送信されるたびに、ネストされたオブジェクトに渡されたキーごとに[データポイントが]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points)発生する。<br><br> ペイロードの送信時にデータポイントのサブセットのみを使用するには、Segment のカスタム[宛先関数](https://segment.com/docs/connections/functions/destination-functions/)機能を使用できます。Segment プラットフォームのこの機能により、ダウンストリームの宛先へのデータの送信方法をカスタマイズできます。
+  - [ネストされたカスタム属性は]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)、技術的にはSegmentを通してBrazeに送信できるが、**ペイロード全体が**毎回送信される。これにより、ペイロードが送信されるたびに、ネストされたオブジェクトに渡されたキーごとに[データポイントが]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points)発生する。<br><br> ペイロードの送信時にデータポイントのサブセットのみを使用するには、Segment のカスタム[宛先関数](https://segment.com/docs/connections/functions/destination-functions/)機能を使用できます。Segment プラットフォームのこの機能により、ダウンストリームの宛先へのデータの送信方法をカスタマイズできます。
 
   {% alert note %}
   カスタム宛先関数は Segment 内で管理されるため、Braze では外部で設定されているこの関数に関する情報は限られています。

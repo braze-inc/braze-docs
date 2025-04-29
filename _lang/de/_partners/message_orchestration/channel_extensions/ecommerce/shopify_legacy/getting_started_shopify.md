@@ -70,7 +70,7 @@ Wir fügen auch vordefinierte Skripte hinzu, wenn Sie die Ereignisse "Produkt an
 
 #### Wie Sie Enablement betreiben
 
-Um die Braze Web SDK-Skripte automatisch als Teil Ihrer Integration zu aktivieren, wählen Sie die unterstützten Shopify ScriptTag-Ereignisse aus oder aktivieren Sie In-App-Nachricht als Kanal während der [Einrichtung]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) Ihrer [Shopify-Integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
+Um die Braze Web SDK-Skripte automatisch als Teil Ihrer Integration zu aktivieren, wählen Sie die unterstützten Shopify ScriptTag-Ereignisse aus oder aktivieren Sie In-App-Nachricht als Kanal während der [Einrichtung Ihrer Shopify-Integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
 
 Im Shopify Setup Composer werden die mit einem Sternchen (\*) gekennzeichneten Ereignisse vom Internet SDK unterstützt. Wenn Sie diese Ereignisse auswählen oder In-Browser-Nachrichten einschließen, fügt Braze die Web SDK-Implementierung über Shopify ScriptTag als Teil Ihrer Einrichtung zu Ihrem Shopify Shop hinzu.
 
@@ -102,7 +102,7 @@ braze.getUser().setEmail(<email address>);
 
 Einzelheiten zur Einstellung dieser Werte finden Sie in diesen Javascript-Ressourcen:
 
-- Einstellen der [E-Mail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) des Nutzers [:](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)innen
+- Einstellen der [E-Mail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) des Nutzers
 - Festlegen der [Telefonnummer](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber) des Nutzers:innen
 
 Sie können auch den Abo-Status der Nutzer:innen festlegen, wenn Sie deren E-Mail oder Telefonnummer erfassen, etwa so:
@@ -218,7 +218,7 @@ braze.getUser().setEmail(<email address>);
 
 Einzelheiten zur Einstellung dieser Werte finden Sie in diesen Javascript-Ressourcen:
 
-- Einstellen der [E-Mail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) des Nutzers [:](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)innen
+- Einstellen der [E-Mail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) des Nutzers
 - Festlegen der [Telefonnummer](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber) des Nutzers:innen
 
 Sie können auch den Status des Abos der Nutzer:innen festlegen, wenn Sie deren E-Mail oder Telefonnummer erfassen, z.B. so:
@@ -310,7 +310,7 @@ Das Internet SDK verfolgt das Verhalten von Shopify vor Ort und anonymen Nutzer:
   - "alias_label": "shopify_email" 
   - "alias_name": "example@email.com"
 
-Wenn sich Nutzer:innen registrieren oder bei ihrem Konto anmelden, möchten Sie [das Nutzerprofil]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles) möglicherweise mit einer externen ID [identifizieren]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). Fügen Sie nach der Registrierung und Anmeldung des Nutzers die Methode [changeUser](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) hinzu, um eine externe ID zuzuweisen, wenn ein Nutzer:innen ein Konto erstellt oder sich anmeldet. 
+Wenn sich Nutzer:innen registrieren oder bei ihrem Konto anmelden, möchten Sie [das Nutzerprofil identifizieren]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), möglicherweise mit einer externen ID. Fügen Sie nach der Registrierung und Anmeldung des Nutzers die Methode [changeUser](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) hinzu, um eine externe ID zuzuweisen, wenn ein Nutzer:innen ein Konto erstellt oder sich anmeldet. 
 
 {% alert note %}
 Wenn Sie einen temporären Bezeichner für das Nutzerprofil festlegen, können Sie zu einem späteren Zeitpunkt eine Anfrage an den [Endpunkt users/merge]({{site.baseurl}}/api/endpoints/user_data/post_users_merge) stellen, um den Nutzer:innen zu identifizieren.
