@@ -72,7 +72,9 @@ You can find answers to some frequently asked questions about Currents on the ne
 
 #### Anonymous users
 
-The “How it works” and “Assigning user aliases” sections in [Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) have new details about how anonymous users work and why you might want to assign them user aliases.
+Check out the following sections in [Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) for new details about how anonymous users work and why you might want to assign them user aliases:
+- [How it works]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/#how-it-works) 
+- [Assigning user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/#assigning-user-aliases)
 
 #### Campaign drafts
 
@@ -154,7 +156,7 @@ New Braze customers: Starting April 2025, Braze will be gradually rolling out th
 
 #### Braze SDK version management
 
-You can now [learn about version management]({{site.baseurl}}/developer_guide/sdk_integration/version_management/) for the Braze SDK, so your app can stay up-to-date with the latest features and quality improvements.
+You can now learn about [version management]({{site.baseurl}}/developer_guide/sdk_integration/version_management/) for the Braze SDK, so your app can stay up-to-date with the latest features and quality improvements.
 
 #### SDK docs audit
 
@@ -168,7 +170,7 @@ If you’re a Braze Docs contributor, you can now generate your local docs site 
 
 #### Troubleshooting your Braze Docs fork
 
-For Braze Docs contributors having trouble targetting the our repository from their fork, we've [created troubleshooting steps]({{site.baseurl}}/contributing/troubleshooting/#missing-base-repository) to help get you back on track.
+For Braze Docs contributors having trouble targeting our repository from their fork, we've created [troubleshooting steps]({{site.baseurl}}/contributing/troubleshooting/#missing-base-repository) to help get you back on track.
 
 ### SDK updates
 
