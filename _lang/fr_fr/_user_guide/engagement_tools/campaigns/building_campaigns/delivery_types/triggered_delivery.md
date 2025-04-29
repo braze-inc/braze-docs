@@ -12,10 +12,6 @@ tool: Campaigns
 
 > Les campagnes de livraison par événement ou les campagnes déclenchées par des événements sont très efficaces pour les messages transactionnels ou basés sur le résultat. Au lieu d’envoyer votre campagne certains jours, vous pouvez les déclencher pour qu’elles s’envoient après qu’un utilisateur a effectué un certain événement. 
 
-{% alert important %}
-La livraison basée sur l'action n'est pas disponible pour les [composants Canvas avec des messages intégrés à l'application]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Ces étapes doivent être planifiées.
-{% endalert %}
-
 ## Configurer une campagne avec déclencheur
 
 ### Étape 1 : Sélectionner un événement déclencheur
@@ -96,7 +92,7 @@ Vous pouvez également choisir d’envoyer la campagne soit un jour spécifique 
 
 ### Étape 3 : Sélectionner des événements d’exception
 
-Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les événements d'exception peuvent être un achat, le début d'une session, l'exécution de l'un des événements de conversion désignés d'une campagne][18], ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
+Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) peuvent être un achat, le lancement d'une session, l'exécution d'un des [événements de conversion][18]] désignés dans le cadre d'une campagne ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ![][20]
 
@@ -126,7 +122,7 @@ Dans le cas où un utilisateur effectue l’événement déclencheur dans la fen
 
 ![][31]
 
-Si un utilisateur ne reçoit pas le message parce qu’il manque la fenêtre temporelle, il sera toujours éligible pour la recevoir la prochaine fois qu’il effectuera l’événement déclencheur, même si vous ne choisissez pas de rendre les utilisateurs [rééligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Si vous choisissez d’autoriser les utilisateurs à devenir rééligibles, ils peuvent recevoir la campagne chaque fois qu’ils effectuent l’événement déclencheur, en supposant qu’ils sont admissibles pendant la période spécifiée.
+Si un utilisateur ne reçoit pas le message parce qu’il manque la fenêtre temporelle, il sera toujours éligible pour la recevoir la prochaine fois qu’il effectuera l’événement déclencheur, même si vous ne choisissez pas de rendre les utilisateurs [rééligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Si vous choisissez d’autoriser les utilisateurs à devenir rééligibles, ils peuvent recevoir la campagne chaque fois qu’ils effectuent l’événement déclencheur, en supposant qu’ils sont admissibles pendant la période spécifiée.
 
 Si vous avez également attribué une certaine durée à la campagne, un utilisateur doit être admissible à la fois à la durée et au moment spécifique de la journée pour recevoir le message.
 

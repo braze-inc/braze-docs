@@ -41,7 +41,9 @@ O Test Connection está sendo executado em seu data warehouse, portanto, aumenta
 
 ### Erro ao conectar-se à instância do Snowflake: A solicitação de entrada com IP não tem permissão para acessar o Snowflake
 
-Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. Para saber mais, consulte [Integrações de data warehouse]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. ricPara saber mais, consulte [Integrações de data warehouse]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) ou permita os IPs relevantes:
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Erro ao executar o SQL devido à configuração do cliente: 002003 (42S02): Erro de compilação SQL: não existe ou não está autorizado
 
@@ -152,11 +154,11 @@ Para evitar esses comportamentos no futuro, recomendamos usar valores `UPDATED_A
 
 ## Durante uma sincronização, a ordem é preservada se vários registros tiverem o mesmo ID?
 
-A ordem de processamento não é 100% previsível. Por exemplo, se houver várias linhas com o mesmo `EXTERNAL_ID` na tabela durante uma sincronização, não poderemos garantir qual valor será incluído no perfil final. 
+A ordem de processamento não é 100% previsível. Por exemplo, se houver várias linhas com o mesmo `EXTERNAL_ID` na tabela durante uma sincronização, não poderemos garantir qual valor será incluído no perfil final. Se estiver atualizando o mesmo `EXTERNAL_ID` com atribuições diferentes na coluna de carga útil, todas as alterações serão refletidas quando a sincronização for concluída.
 
 ## Quais são as medidas de segurança do CDI?
 
-### Medidas do Braze
+### Nossas medidas
 
 A Braze tem as seguintes medidas em vigor para CDI:
 

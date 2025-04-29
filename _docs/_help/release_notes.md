@@ -129,7 +129,7 @@ You can also now extend Delay steps up to two years. For example, if you’re on
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-There are now three [default user profile attributes]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/user_attributes) in Snowflake. Each view is designed for a specific use case with its own performance considerations. For example, you can be provided a periodic snapchat of a user profile's default attributes.
+There are now three [default user profile attributes]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/user_attributes/) in Snowflake. Each view is designed for a specific use case with its own performance considerations. For example, you can be provided a periodic snapchat of a user profile's default attributes.
 
 ### Robust channels
 
@@ -161,15 +161,15 @@ You can [turn off click tracking]({{site.baseurl}}/user_guide/message_building_b
 
 [Dynamic APNs gateway management]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_dynamic-apns-gateway-management) enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually select APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and BadDeviceToken errors.
 
-#### Flutter support for Banner Cards
+#### Flutter support for Banners
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Banner Cards now support Flutter. Additionally, all Banner Card documentation has been overhauled for easier usability. Check out the following articles to get started:
+Banners now support Flutter. Additionally, all Banner documentation has been overhauled for easier usability. Check out the following articles to get started:
 
-- [About Banner Cards]({{site.baseurl}}/developer_guide/banner_cards)
-- [Creating Banner Card campaigns]({{site.baseurl}}/developer_guide/banner_cards/creating_campaigns)
-- [Embedding Banner Cards into your app]({{site.baseurl}}/developer_guide/banner_cards/embedding_cards)
+- [About Banners]({{site.baseurl}}/developer_guide/banners/)
+- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
 
 #### WhatsApp click tracking
 
@@ -321,11 +321,11 @@ WhatsApp messages now support [video, audio, and document outbound messages]({{s
  
 #### Email Love - Channel Extensions
  
-The Braze and [Email Love]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates) partnership leverages Email Love’s Export to Braze feature and the Braze API to upload your email templates to Braze seamlessly.
+The Braze and [Email Love]({{site.baseurl}}/partners/message_orchestration/) partnership leverages Email Love’s Export to Braze feature and the Braze API to upload your email templates to Braze seamlessly.
 
 #### VWO - A/B Testing
  
-The Braze and [VWO]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/vwo) integration allows you to leverage VWO experiment data to create targeted segments and deliver personalized campaigns.
+The Braze and [VWO]({{site.baseurl}}/partners/data_and_analytics/ab_testing/vwo/) integration allows you to leverage VWO experiment data to create targeted segments and deliver personalized campaigns.
  
 ### SDK updates
  
@@ -383,7 +383,7 @@ The following endpoints are now generally available:
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
+You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
 
 #### Using a phone number to identify a user via the API
 
@@ -436,7 +436,7 @@ One way B2B marketers can use Braze is through an integration with the Salesforc
 ### New Braze partnerships
 
 #### Constructor - Dynamic content
-[Constructor]({{site.baseurl}}/partners/message_personalization/dynamic_content/constructor) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
+[Constructor]({{site.baseurl}}/partners/ecommerce/product_search_recommendations/constructor/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
  
 #### Trustpilot - Dynamic content
 [Trustpilot]({{site.baseurl}}/partners/message_personalization/dynamic_content/trustpilot) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
@@ -492,7 +492,7 @@ You can [view Global Control Group membership]({{site.baseurl}}/user_guide/engag
 
 #### Justuno - Leads capture
 
-[Justuno]({{site.baseurl}}/partners/data_and_infrastructure_agility/leads_capture/justuno/) lets you create fully optimized visitor experiences for all of your audiences with dynamic segments, offering the most advanced targeting available&#8212;all without impacting site speed or increasing dev work.
+[Justuno]({{site.baseurl}}/partners/data_and_analytics/leads_capture/justuno/) lets you create fully optimized visitor experiences for all of your audiences with dynamic segments, offering the most advanced targeting available&#8212;all without impacting site speed or increasing dev work.
 
 #### Odicci - Customer data platform
 
@@ -500,7 +500,7 @@ Integrate Braze with [Odicci]({{site.baseurl}}/partners/message_personalization/
 
 #### Optimizely - A/B testing
 
-The Braze and [Optimizely]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/optimizely/) integration is a two-way integration that allows you to:
+The Braze and [Optimizely]({{site.baseurl}}/partners/data_and_analytics/ab_testing/optimizely/) integration is a two-way integration that allows you to:
 
 - Sync your Braze customer segments and events to Optimizely Data Platform (ODP) nightly to enrich Optimizely customer profiles, reports, and segmentation.
 - Send Braze Currents events from Braze to Optimizely’s reporting tool.
@@ -617,7 +617,7 @@ To get started, see our [LINE documentation]({{site.baseurl}}/user_guide/message
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
+You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
  
 ### Improving the developer guide
  
@@ -631,7 +631,7 @@ We're in the process of making major improvements to the [Braze Developer Guide]
  
 #### MyPostcard
 
-[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/mypostcard/).
+[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/mypostcard/).
  
 ### SDK updates
  
@@ -808,11 +808,11 @@ You can view the number of updates to your [Canvases]({{site.baseurl}}/user_guid
 
 #### Inbox Monster - Analytics
 
-[Inbox Monster]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/inbox_monster/) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
+[Inbox Monster]({{site.baseurl}}/partners/data_and_analytics/analytics/inbox_monster/) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
 
 #### SessionM - Loyalty
 
-[SessionM]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/sessionm/) is a customer engagement and loyalty platform that provides campaign management features and loyalty management solutions to help marketers drive targeted outreach to increase engagement and profitability.
+[SessionM]({{site.baseurl}}/partners/data_and_analytics/loyalty/sessionm/) is a customer engagement and loyalty platform that provides campaign management features and loyalty management solutions to help marketers drive targeted outreach to increase engagement and profitability.
 
 ### AI and ML automation
 

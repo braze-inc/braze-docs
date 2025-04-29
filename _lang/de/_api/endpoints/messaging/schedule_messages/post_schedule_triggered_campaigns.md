@@ -1,24 +1,24 @@
 ---
-nav_title: "POST: Planen von API-gesteuerten Kampagnen"
-article_title: "POST: Planen von API-gesteuerten Kampagnen"
+nav_title: "POST: Zeitplan für API-getriggerte Kampagnen"
+article_title: "POST: Zeitplan für API-getriggerte Kampagnen"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "In diesem Artikel finden Sie Einzelheiten zum API-gesteuerten Kampagnen-Endpunkt Braze."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Zeitplan API-getriggerte Kampagnen Braze."
 
 ---
 {% api %}
-# Planen Sie API-ausgelöste Kampagnen
+# Zeitplan für API-getriggerte Kampagnen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um vom Dashboard erstellte Kampagnennachrichten über eine API-ausgelöste Zustellung zu versenden. Dabei können Sie entscheiden, welche Aktion den Versand der Nachricht auslösen soll.
+> Verwenden Sie diesen Endpunkt, um vom Dashboard erstellte Kampagnen-Nachrichten über eine API-getriggerte Zustellung zu versenden. Dabei ist es zulässig, dass Sie entscheiden, welche Aktion den Versand der Nachricht auslösen soll.
 
-Sie können `trigger_properties` übergeben, das als Vorlage in die Nachricht selbst eingefügt wird.
+Sie können `trigger_properties` übergeben, das als Template in die Nachricht selbst eingefügt wird.
 
-Beachten Sie, dass Sie zum Senden von Nachrichten über diesen Endpunkt eine [Kampagnen-ID]({{site.baseurl}}/api/identifier_types/) benötigen, die Sie bei der Erstellung einer [API-ausgelösten Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) erstellt haben.
+Beachten Sie, dass Sie zum Versenden von Nachrichten mit diesem Endpunkt eine [ID für die Kampagne]({{site.baseurl}}/api/identifier_types/) benötigen, die Sie beim Erstellen einer [API-getriggerten Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) erstellt haben.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -26,11 +26,11 @@ Beachten Sie, dass Sie zum Senden von Nachrichten über diesen Endpunkt eine [Ka
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.trigger.schedule.create`.
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='Nachrichtenendpunkte' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -57,17 +57,17 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Erforderlich|String| Siehe [Kennung der Kampagne]({{site.baseurl}}/api/identifier_types/)|
-| `send_id` | Optional | String | Siehe [Kennung senden]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Optional | Array von Empfängerobjekten | Siehe [Empfängerobjekt]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `audience` | Optional | Verbundenes Publikumsobjekt | Siehe [angeschlossenes Publikum]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Optional | Boolesche | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, da das unbeabsichtigte Setzen dieser Markierung dazu führen kann, dass Sie Ihre Nachricht an ein größeres Publikum als erwartet senden. |
-| `trigger_properties` | Optional | Objekt | Personalisierungs-Schlüsselwertpaare für alle Benutzer in dieser Sendung. Siehe [Auslösereigenschaften]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
-| `schedule` | Erforderlich | Objekt terminieren | Siehe [Schedule-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`campaign_id`|Erforderlich|String| Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/)|
+| `send_id` | Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Optional | Array von Empfänger:innen-Objekten | Siehe [Empfänger:innen Objekt]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+| `trigger_properties` | Optional | Objekt | Schlüssel-Wert-Paare zur Personalisierung für alle Nutzer:innen in dieser Sendung. Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
+| `schedule` | Erforderlich | Objekt Zeitplan | Siehe [Zeitplan-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

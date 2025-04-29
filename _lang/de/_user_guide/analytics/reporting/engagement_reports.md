@@ -36,10 +36,6 @@ Sie können den Bericht erneut erstellen, um aktuelle Statistiken zu erhalten.
 
 Gehen Sie in Ihrem Dashboard-Konto zu **Analytics** > **Engagement-Berichte.** Wählen Sie **\+ Neuen Bericht erstellen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Engagement-Berichte** unter **Daten**.
-{% endalert %}
-
 ### Schritt 2: Nachrichten hinzufügen
 
 Fügen Sie die Kampagnen und Canvas-Nachrichten hinzu, die Sie in Ihrem Bericht zusammenstellen möchten. Sie können Ihre Nachrichten auf zwei Arten auswählen:

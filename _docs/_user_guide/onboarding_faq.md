@@ -159,7 +159,7 @@ Once you have created your segment, add a `Most Recent Location` filter to targe
 - For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
 {% alert tip %}
-Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location).
+Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}

@@ -29,10 +29,6 @@ Primeiro, você precisará criar seu modelo de e-mail HTML. Este deve ser um arq
 
 Acessar os **Templates** > **e-mail Templates**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Modelos e mídias **> **Modelos de e-mail.**
-{% endalert %}
-
 ### Etapa 2: Abrir o carregador
 
 Na seção **Tipo de Modelo**, selecione **editor de HTML** e role para baixo até a seção **Comece a partir de um Modelo HTML Básico**. Selecione **De Arquivo**.

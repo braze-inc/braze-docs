@@ -29,10 +29,6 @@ En primer lugar, tendrás que crear tu plantilla de correo electrónico HTML. De
 
 Vaya a **Plantillas** > **Plantillas de correo electrónico**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), esta página se encuentra en **Compromiso** > **Plantillas y medios** > **Plantillas de correo electrónico**.
-{% endalert %}
-
 ### Paso 2: Abre el cargador
 
 En la sección **Tipo de plantilla**, seleccione **Editor HTML** y desplácese hacia abajo hasta la sección **Empezar desde una plantilla HTML básica**. Seleccione **De archivo**.

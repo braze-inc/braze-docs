@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Future Anthem
 
-> Future Anthem のリアルマネーゲーム業界向けオールインワン製品である Amplifier AI は、コンテンツのパーソナライゼーション、リアルタイムエクスペリエンス、ダイナミックなオーディエンスを提供します。Amplifier AIは、スポーツ、カジノ、宝くじにシームレスに対応し、カスタマーは、好きなゲーム、好きなチーム、エンゲージメントスコア、次のベットの推奨、予想される次のベットなど、業界固有のプレイヤー属性でBrazeのプレイヤープロファイルを強化することができる。
+> Future Anthem のリアルマネーゲーム業界向けオールインワン製品である Amplifier AI は、コンテンツのパーソナライゼーション、リアルタイムエクスペリエンス、ダイナミックなオーディエンスを提供します。Amplifier AIはスポーツ、カジノ、宝くじにシームレスに対応し、カスタマーはBrazeのプレイヤープロファイルを、好きなゲーム、好きなチーム、エンゲージメントスコア、次のベットの推奨度、予想される次のベットなど、業界特有のプレイヤー属性で強化することができる。
 
 {% alert important %}
 この機能は現在早期アクセス段階です。まずは Future Anthem カスタマーサクセスチームまでご連絡ください。
@@ -21,7 +21,7 @@ search_tag: Partner
 |--------------------------|--------------------------------------------------------|
 | Future Anthem アカウント    | Future Anthem アカウントです。 |
 | Braze REST API キー       | [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント      | インスタンスにマッチするBraze[RESTエンドポイント](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints)、例えば`rest.iad-01.com` 。 |
+| Braze RESTエンドポイント      | インスタンスにマッチするBraze[RESTエンドポイント]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)、例えば`rest.iad-01.com` 。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース

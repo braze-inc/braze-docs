@@ -40,7 +40,7 @@ Braze provides the following statistics on segment size.
 
 For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![Icon to expand extra funnel statistics][8]
+![A filter group with a filter for users who had exactly one session count.][2]{: style="max-width:80%;"}
 
 ## Reachable users estimate
 

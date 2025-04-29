@@ -28,7 +28,7 @@ As mensagens modais no app são projetadas para se ajustarem ao dispositivo nas 
 
 Embora não haja limites para o número de caracteres de texto que você pode incluir em uma mensagem no app (assim como botões, título, corpo principal e outros), moderamos o número de caracteres de texto que você usa. O excesso de texto exigirá que os usuários expandam e rolem a mensagem.
 
-Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e são compatíveis com os tipos de arquivo PNG, JPG e GIF.
+Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e são compatíveis com os tipos de arquivo PNG, JPEG e GIF.
 
 {% tabs %}
 {% tab Retrato %}
@@ -103,7 +103,7 @@ table td {
     <td>2:1 (recomendado)</td>
     <td>1038 x 1038 px no máximo</td>
     <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
+    <td>PNG, JPEG, GIF</td>
     <td>A partir de janeiro de 2020, as notificações por push avançadas do iOS podem lidar com imagens de 1038 x 1038 px, desde que tenham menos de 10 MB, mas recomendamos usar o menor tamanho de arquivo possível. Na prática, o envio de arquivos grandes pode causar estresse desnecessário na rede e tornar os tempos limite de download mais comuns.<br><br>Para saber mais, consulte <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">notificações rich do iOS</a>.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ table td {
     <td>1:1</td>
     <td>N/D</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td></td>
   </tr>
   <tr>
@@ -119,7 +119,7 @@ table td {
     <td>2:1</td>
     <td>Pequeno: 512 x 256 px<br>Médio: 1024 x 512 px<br>Grande: 2048 x 1024 px</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Usado em <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notificações Rich do Android</a>.</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ table td {
     <td>3:2</td>
     <td>N/D</td>
     <td>N/D</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Para obter mais detalhes, consulte <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">push de imagem inline para Android</a>.</td>
   </tr>
 </table>
@@ -147,7 +147,7 @@ table td {
 | --- | --- | 
 | Tamanho | 5 MB |
 | Largura | Cabeçalho: 600 px<br>Corpo: 480 px |
-| Tipos de arquivos | PNG, JPG, GIF |
+| Tipos de arquivos | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificações de texto | Propriedades máximas recomendadas |

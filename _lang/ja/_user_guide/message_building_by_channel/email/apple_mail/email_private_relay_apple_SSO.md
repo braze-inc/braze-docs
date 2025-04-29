@@ -21,27 +21,12 @@ Apple のプライベートメールリレーにメールを送信するには�
 
 SendGrid をメールプロバイダーとして使用している場合、DNS を変更せずに Apple にメールを送信することができます。 
 
-1. [**Apple Certificate**] ページにアクセスし、Apple のメールリレーサービス経由での送信に使用するメールアドレス (希望の「差出人」アドレス) を許可します。
-- アドレスは、`bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (例: `bounces+1234567@braze.online.docs.com`) の形式にする必要があります。 
+1. [Apple Developer Portalにログインします](https://developer.apple.com/)
+2. **Certificates, Identifiers & Profiles** ページに移動します。
+3. **Services**> **Apple でサインインしてE メール通信を行います**。
+4. **Email Sources** セクションで、ドメインとサブドメインを追加します。
 
-![Apple Certificate ページで個々のメールアドレスを許可するオプション。]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
-
-{:start="2"}
-2\.Apple証明書ページにアドレスが追加されると、このドメインからのメールはApple Private Relayシステム経由で配信される。
-
-{% alert important %}
 希望する "From "アドレスが`abmail` の場合、サブドメインにそのアドレスを含める。例えば、`docs.braze.com` の代わりに`abmail.docs.braze.com` を使う。
-{% endalert %}
-
-### 差出人アドレスの値
-
-Apple Private Relayでメールアドレスを追加する際に使用するコンポーネントについては、この表を参照のこと。
-
-| 値 | 説明 |
-|---|---|
-| UID | この値は、Braze が (SendGrid から) 提供する DNS レコードで提供されます。メールアドレスの UID に「u」の文字を含めることはできません。例えば、あなたのUIDがSendGridで`u1234567.wl134.sendgrid.net` と表示されている場合、`1234567` がUID値である。<br><br> DNSレコードにアクセスできない場合は、Brazeカスタマーサクセスマネージャーに連絡してUIDを提供してもらう。 |
-| ホワイトラベル付きサブドメインとドメイン | SendGridに入力した最初のドメインとサブドメイン。SendGrid の DNS レコードで**HOST 値**を使用することもできます。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## SparkPostのメールを送信する
 
@@ -49,11 +34,7 @@ SparkPost用のApple Private Relayを設定するには、以下の手順に従�
 
 1. Appleでサインインする。
 2. [Appleのドキュメント](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service)に従って、メールドメインを登録します。
-3. Apple が自動的にドメインをチェックし、どのドメインが検証済みかを表示し、ドメインを再検証または削除するオプションを提供します。
-
-{% alert important %}
-このプロセスは、検証ファイルが作成されてから2 ～3 日以内に完了するようにしてください。そうしないと、有効期限が切れます。Apple ではこの有効期間を開示していません。
-{% endalert %}
+3. Appleは自動的にドメインをチェックし、どのドメインが検証されているかを表示し、ドメインを元に戻すか削除するオプションを提供します。
 
 ### 考慮事項
 
@@ -68,7 +49,7 @@ SparkPost用のApple Private Relayを設定するには、以下の手順に従�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-SPF 失敗を回避するには、MX レコードとTXT レコードを作成し、CNAME レコードを削除する**前に** DNS に反映する必要があります。
+SPF の障害を回避するには、MX レコードとTXT レコードを作成し、CNAME レコードを削除する前にDNS ** に伝播させる必要があります。
 {% endalert %}
 
 {:start="2"}

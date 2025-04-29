@@ -15,9 +15,7 @@ description: "이 문서에서는 이메일 템플릿 만들기 Braze 엔드포�
 
 > 이 엔드포인트를 사용하여 Braze 대시보드에서 이메일 템플릿을 만들 수 있습니다.
 
-이러한 템플릿은 **템플릿 및 미디어** 페이지에서 사용할 수 있습니다. 이 엔드포인트의 응답에는 `email_template_id` 필드가 포함되며, 이 필드는 후속 API 호출에서 템플릿을 업데이트하는 데 사용할 수 있습니다.
-
-사용자의 이메일 구독 상태는 RESTful API를 사용하여 Braze에서 업데이트 및 검색할 수 있습니다. API를 사용하여 Braze와 다른 이메일 시스템 또는 자체 데이터베이스 간의 양방향 동기화를 설정할 수 있습니다. 모든 API 요청은 HTTPS를 통해 이루어집니다.
+이러한 템플릿은 **템플릿 및 미디어** 페이지에서 사용할 수 있습니다. 이 엔드포인트의 응답에는 후속 API 호출에서 템플릿을 업데이트하는 데 사용할 수 있는 필드에 대한 `email_template_id` 필드가 포함됩니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -56,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|필수|문자열|HTML을 포함할 수 있는 이메일 템플릿 본문입니다.|
 |`plaintext_body`|선택 사항|문자열|이메일 템플릿 본문의 일반 텍스트 버전입니다.|
 |`preheader`|선택 사항|문자열|일부 클라이언트에서 미리보기를 생성하는 데 사용되는 이메일 프리헤더입니다.|
-|`tags`|선택 사항|문자열|[태그가]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 이미 존재해야 합니다.|
+|`tags`|선택 사항|문자열|[태그가]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 이미 존재해야 합니다.|
 |`should_inline_css`|선택 사항|부울|템플릿별로 `inline_css` 기능을 사용하거나 사용하지 않도록 설정합니다. 제공하지 않으면 Braze는 앱 그룹에 대한 기본 설정을 사용합니다. `true` 또는 `false` 중 하나가 예상됩니다.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -76,7 +74,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## 발생 가능한 오류
+## 응답 예시
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## 문제 해결
 
 다음 표에는 해당하는 경우 반환될 수 있는 오류 및 관련 문제 해결 단계가 나와 있습니다.
 

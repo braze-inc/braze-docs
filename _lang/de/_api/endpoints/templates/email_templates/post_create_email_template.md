@@ -1,34 +1,32 @@
 ---
-nav_title: "POST: E-Mail-Vorlage erstellen"
-article_title: "POST: E-Mail-Vorlagen erstellen"
+nav_title: "POST: E-Mail-Template erstellen"
+article_title: "POST: E-Mail Templates erstellen"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Braze-Endpunkt E-Mail-Vorlagen erstellen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts E-Mail-Vorlagen erstellen von Braze."
 ---
 {% api %}
-# E-Mail-Vorlage erstellen
+# E-Mail-Template erstellen
 {% apimethod post %}
 /templates/email/create
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um E-Mail-Vorlagen auf dem Braze Dashboard zu erstellen.
+> Verwenden Sie diesen Endpunkt, um E-Mail-Templates auf dem Braze-Dashboard zu erstellen.
 
-Diese Vorlagen werden auf der Seite **Vorlagen & Medien** verfügbar sein. Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zur Aktualisierung der Vorlage in nachfolgenden API-Aufrufen verwendet werden kann.
-
-Der E-Mail-Abonnementstatus der Benutzer kann mit Braze über eine RESTful API aktualisiert und abgerufen werden. Sie können die API verwenden, um eine bidirektionale Synchronisierung zwischen Braze und anderen E-Mail-Systemen oder Ihrer eigenen Datenbank einzurichten. Alle API-Anfragen werden über HTTPS gestellt.
+Diese Templates werden auf der Seite **Templates und Medien** verfügbar sein. Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zum Update des Templates in nachfolgenden API-Aufrufen verwendet werden kann.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `templates.email.create`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -47,17 +45,17 @@ Authorization: Bearer YOUR_REST_API_KEY
  }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|Erforderlich|String|Name Ihrer E-Mail-Vorlage.|
-|`subject`|Erforderlich|String|Betreffzeile der E-Mail-Vorlage.|
-|`body`|Erforderlich|String|E-Mail-Vorlagenkörper, der HTML enthalten kann.|
-|`plaintext_body`|Optional|String|Eine Klartextversion des Textes der E-Mail-Vorlage.|
-|`preheader`|Optional|String|E-Mail-Preheader, der in einigen Clients zur Erzeugung von Vorschauen verwendet wird.|
-|`tags`|Optional|String|Die [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) müssen bereits vorhanden sein.|
-|`should_inline_css`|Optional|Boolesche|Aktiviert oder deaktiviert die Funktion `inline_css` pro Vorlage. Wenn Sie keine Angaben machen, verwendet Braze die Standardeinstellung für die App-Gruppe. Erwartet wird eines von `true` oder `false`.|
+|`template_name`|Erforderlich|String|Name des Templates für Ihre E-Mail.|
+|`subject`|Erforderlich|String|E-Mail Template Betreffzeile.|
+|`body`|Erforderlich|String|Körper einer E-Mail-Vorlage, die HTML enthalten kann.|
+|`plaintext_body`|Optional|String|Eine Klartextversion des Body der E-Mail-Vorlage.|
+|`preheader`|Optional|String|Ein Preheader für E-Mails, der in einigen Clients zur Erstellung von Vorschauen verwendet wird.|
+|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) müssen bereits existieren.|
+|`should_inline_css`|Optional|Boolesch|Aktiviert oder deaktiviert das Feature `inline_css` pro Template. Wenn Sie keine Angaben machen, verwendet Braze die Standard-Einstellung für die App-Gruppe. Erwartet wird eines von `true` oder `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -76,17 +74,28 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## Mögliche Fehler
+## Beispielhafte Antwort
 
-In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehler und die damit verbundenen Schritte zur Fehlerbehebung, falls zutreffend.
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## Fehlersuche
+
+In der folgenden Tabelle sind die möglichen zurückgegebenen Fehler und die dazugehörigen Schritte zur Fehlerbehebung aufgelistet, falls zutreffend.
 
 | Fehler | Fehlersuche |
 | --- | --- |
-| Name der Vorlage ist erforderlich | Geben Sie einen Vorlagennamen ein. |
-| Tags müssen ein Array sein | Tags müssen als Array von Strings formatiert werden, zum Beispiel `["marketing", "promotional", "transactional"]`. |
-| Alle Tags müssen Strings sein | Stellen Sie sicher, dass Ihre Tags in Anführungszeichen (`""`) eingeschlossen sind. |
-| Einige Tags konnten nicht gefunden werden | Wenn Sie bei der Erstellung einer E-Mail-Vorlage ein Tag hinzufügen möchten, muss das Tag bereits in Braze vorhanden sein. |
-| E-Mail muss gültige Inhaltsblocknamen enthalten | Die E-Mail könnte Inhaltsblöcke enthalten, die in dieser Umgebung nicht vorhanden sind. |
+| Template-Name ist erforderlich | Geben Sie einen Template-Namen ein. |
+| Tags müssen ein Array sein | Tags müssen als String-Array formatiert werden, zum Beispiel `["marketing", "promotional", "transactional"]`. |
+| Alle Tags müssen Strings sein | Achten Sie darauf, dass Ihre Tags in Anführungszeichen (`""`) eingeschlossen sind. |
+| Einige Tags konnten nicht gefunden werden | Wenn Sie beim Erstellen einer E-Mail-Vorlage einen Tag hinzufügen möchten, muss dieser bereits in Braze vorhanden sein. |
+| E-Mails müssen gültige Content-Block-Namen haben | Die E-Mail könnte Content-Blöcke enthalten, die in dieser Umgebung nicht vorhanden sind. |
 | Ungültiger Wert für `should_inline_css`. Eine von `true` oder `false` wurde erwartet. | Dieser Parameter akzeptiert nur boolesche Werte (true oder false). Vergewissern Sie sich, dass der Wert für `should_inline_css` nicht in Anführungszeichen (`""`) eingeschlossen ist, wodurch der Wert stattdessen als String gesendet wird. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

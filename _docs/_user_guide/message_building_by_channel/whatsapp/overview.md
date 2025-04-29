@@ -41,11 +41,11 @@ In Braze, go to **Partner Integrations** > **Technology Partners** and search fo
 
 On the WhatsApp partner page, select **Begin Integration**.
 
-![][1]
+![WhatsApp partner page with a button to begin the integration.][1]{: style="max-width:70%;"}
 
 In the open window, select **Next** until the **Begin Integration** button appears. Select the button to begin the integration process.
 
-![Instructions for connecting Braze to WhatsApp.][7]
+![Instructions for connecting Braze to WhatsApp.][7]{: style="max-width:50%;"}
 
 ### Step 2: WhatsApp setup
 

@@ -30,7 +30,7 @@ Com essa abordagem, você deseja incentivar os usuários a visitar a App Store p
 
 Se não quiser que os usuários saiam do seu app, você pode primeiramente dar aos usuários uma mensagem no app separada. Priming é uma forma de pedir permissão aos usuários antes de enviar a eles o prompt de revisão nativo da App Store. Para fazer isso, crie uma campanha de mensagens no app e adicione um deep link personalizado que chame o método `requestReview` quando clicado. 
 
-Para obter informações detalhadas, consulte o [prompt de revisão da Custom App Store]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
+Para obter informações detalhadas, consulte o [prompt de revisão da Custom App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
 ![Duas mensagens no app lado a lado. A primeira prepara o usuário para avaliar o app, perguntando se ele tem um momento para avaliar o aplicativo. A segunda é a mensagem nativa de avaliação da App Store do iOS, que exibe uma escala de cinco estrelas que o usuário pode selecionar para avaliar o app.][2]
 

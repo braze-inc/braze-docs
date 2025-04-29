@@ -25,6 +25,14 @@ Las campañas desencadenadas por la API deduplicarán o enviarán deduplicados e
 - **Escenario 2: Correos duplicados en diferentes `user_ids` dentro del objeto destinatarios:** Si el mismo correo electrónico aparece dentro de varios `External_user_IDs` referenciados por el objeto `recipients``, el correo electrónico se enviará dos veces.
 - **Escenario 3: Correos duplicados debido a user_ids duplicados en el objeto destinatario:** Si intenta añadir el mismo perfil de usuario dos veces, sólo uno de los perfiles recibirá el correo electrónico.
 
+### ¿Cómo compruebo si una dirección de correo electrónico ya está asociada a un usuario?
+
+Antes de crear un usuario a través de la API o el SDK, llama al punto final [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) y especifica la dirección `email_address` del usuario. Si devuelve un perfil de usuario, ese usuario Braze ya está asociado a esa dirección de correo electrónico.
+
+Te recomendamos encarecidamente que busques direcciones de correo electrónico únicas cuando se creen nuevos usuarios, y que evites pasar o importar usuarios con la misma dirección de correo electrónico. De lo contrario, puedes tener consecuencias no deseadas que afecten al envío de mensajes, la segmentación, los informes y otras características.
+
+Por ejemplo, supongamos que tienes perfiles duplicados, pero determinados atributos o eventos personalizados residen sólo en un perfil. Cuando intentas desencadenar campañas o Lienzos con criterios múltiples, Braze no puede identificar al usuario como elegible porque hay dos perfiles de usuario. O, si una campaña se dirige a una dirección de correo electrónico compartida por dos usuarios, la página **Buscar usuarios** mostrará que ambos perfiles de usuario han recibido la campaña.
+
 ### ¿Se aplicarán retroactivamente las actualizaciones de mi configuración de correo electrónico saliente?
 
 No. Las actualizaciones realizadas en la configuración del correo electrónico saliente no afectan retroactivamente a los envíos existentes. Por ejemplo, cambiar el nombre de visualización predeterminado en la configuración de correo electrónico no sustituirá automáticamente el nombre de visualización predeterminado existente en sus campañas activas o lienzos. 
@@ -59,6 +67,12 @@ Puede que veas más clics que aperturas por alguna de las siguientes razones:
 - Los usuarios hacen varios clics en el cuerpo del correo electrónico con una sola apertura.
 - Los usuarios hacen clic en algunos enlaces de correo electrónico dentro del panel de vista previa de sus teléfonos. En este caso, Braze registra este correo electrónico como pulsado pero no abierto.
 - Los usuarios vuelven a abrir un correo electrónico que habían previsualizado anteriormente.
+
+### ¿Por qué no veo ni aperturas ni clics en los correos electrónicos?
+
+Puede que no veas ni aperturas ni clics en el correo electrónico si hay un error de configuración en tu dominio de seguimiento. Esto puede deberse a cualquiera de las siguientes razones:
+- Hay un problema de SSL en el que las URL de seguimiento son `http` en lugar de `https`.
+- Hay un problema con tu CDN por el que no se rellena la cadena del agente de usuario en los eventos de apertura, de clic o en ambos.
 
 ### ¿Cuáles son los riesgos potenciales de provocar clics en el servidor?
 

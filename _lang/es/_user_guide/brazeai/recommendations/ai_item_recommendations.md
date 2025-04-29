@@ -364,7 +364,7 @@ Esto ocurre en algunas condiciones específicas:
 
 ### ¿Las recomendaciones existentes se entrenan semanalmente después de actualizar a Recomendaciones de Artículos Pro?
 
-No, las recomendaciones existentes no se actualizarán automáticamente para entrenar semanalmente o predecir diariamente tras la actualización. Puedes comprobar los próximos tiempos de entrenamiento y predicción en la sección **Recomendación** seleccionando una recomendación. Para actualizar los horarios, te sugerimos que vuelvas a crear tus recomendaciones.
+Sí, pero sólo después de su próxima actualización programada. Las recomendaciones existentes no cambian a entrenamiento semanal y predicción diaria inmediatamente después de actualizar a Recomendaciones de artículos Pro. Sin embargo, adoptarán el nuevo horario automáticamente en su próximo ciclo de reciclaje. Por ejemplo, si una recomendación se entrenó por última vez el 1 de febrero y está configurada para volver a entrenarse cada 30 días, adoptará el nuevo programa semanal tras su próxima actualización el 2 de marzo.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}

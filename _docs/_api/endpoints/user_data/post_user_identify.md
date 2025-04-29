@@ -23,7 +23,13 @@ description: "This article outlines details about the Identify users Braze endpo
 
 Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
 
-Identifying a user requires an `external_id` to be included in the `aliases_to_identify` or `emails_to_identify` or `phone_numbers_to_identify` object. If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
+Identifying a user requires an `external_id` to be included in the following objects:
+
+- `aliases_to_identify`
+- `emails_to_identify` 
+- `phone_numbers_to_identify`
+
+If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
 
 Note the following:
 
@@ -63,10 +69,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 You can add up to 50 user aliases per request. You can associate multiple additional user aliases with a single `external_id`.
 
+{% alert important %}
+One of the following is required: `aliases_to_identify`, `emails_to_identify`, or `phone_numbers_to_identify` per request. For example, you can use this endpoint to identify users by email by using `emails_to_identify` in your request.
+{% endalert %}
+
 | Parameter                   | Required | Data Type                           | Description                                                                                                                                                                 |
 |-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify`       | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Required | Array of aliases to identify object | Email addresses to identify users. See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
+| `emails_to_identify`        | Required | Array of aliases to identify object | Required if `email` is specified as the identifier. Email addresses to identify users. See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
 | `phone_numbers_to_identify` | Required | Array of aliases to identify object | Phone numbers to identify users.                                                                                                                                            |
 | `merge_behavior`            | Optional | String                              | One of `none` or `merge` is expected.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

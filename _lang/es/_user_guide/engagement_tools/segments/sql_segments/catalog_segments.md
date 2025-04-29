@@ -98,7 +98,7 @@ Sí. Del mismo modo que las Extensiones de Segmento SQL cuentan para su asignaci
 
 ### Tengo un caso de uso de segmento de catálogo que la plantilla actual no sirve. ¿Cómo debo configurarlo?
 
-Póngase en contacto con su gestor de atención al cliente o con [el servicio de asistencia de Braze]({{site.baseurl}}/help/support/) para obtener más información.
+Póngase en contacto con su gestor de atención al cliente o con [el servicio de asistencia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obtener más información.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

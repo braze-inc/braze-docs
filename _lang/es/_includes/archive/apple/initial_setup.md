@@ -81,7 +81,7 @@ En `AppDelegate.swift`, añade el siguiente fragmento de código a tu `applicati
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**Nota**: El singleton `sharedInstance` de Braze será nulo antes de llamar a `startWithApiKey:`, ya que es un requisito previo para utilizar cualquier funcionalidad de Braze.
+**Nota**: El singleton de Braze `sharedInstance` será nulo antes de llamar a `startWithApiKey:`, ya que es un requisito previo para utilizar cualquier funcionalidad de Braze.
 
 {% endtab %}
 {% endtabs %}

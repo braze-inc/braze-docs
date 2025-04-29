@@ -12,7 +12,7 @@ description: "Cette page d’accueil contient des articles sur la collecte de do
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Collecte de données SDK
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: "Cycle de vie du profil de l'utilisateur"
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: Utilisateurs anonymes
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: Codes de langue utilisateur
     link: /docs/user_guide/data/user_data_collection/language_codes/

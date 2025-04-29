@@ -48,10 +48,6 @@ Bevor Sie mit der Integration beginnen, sollten Sie entscheiden, welche Integrat
 
 Gehen Sie zu **Partnerintegrationen** > Datenexport, um damit zu beginnen. Sie gelangen auf die Seite zur Verwaltung der Currents-Integration.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Integrationen** > Currents.
-{% endalert %}
-
 ![Currents-Seite im Braze-Dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Schritt 3: Ihren Partner hinzufügen
@@ -106,61 +102,4 @@ Um Ihren Test Currents-Konnektor zu upgraden, bearbeiten Sie die Integration im 
 
 Braze sendet Currents-Daten von den aufgeführten IPs:
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, und `US-07` |
-|---|
-| `127.0.0.1` |
-| `23.21.118.191` |
-| `34.206.23.173` |
-| `50.16.249.9` |
-| `52.4.160.214` |
-| `54.87.8.34` |
-| `54.156.35.251` |
-| `52.54.89.238` |
-| `18.205.178.15` |
-{: .reset-td-br-1 role="presentation"}
-
-| Für Instanz `US-08` |
-|---|
-| `52.151.246.51` |
-| `52.170.163.182` |
-| `40.76.166.157` |
-| `40.76.166.170` |
-| `40.76.166.167` |
-| `40.76.166.161` |
-| `40.76.166.156` |
-| `40.76.166.166` |
-| `40.76.166.160` |
-| `40.88.51.74` |
-| `52.154.67.17` |
-| `40.76.166.80` |
-| `40.76.166.84` |
-| `40.76.166.85` |
-| `40.76.166.81` |
-| `40.76.166.71` |
-| `40.76.166.144` |
-| `40.76.166.145` |
-{: .reset-td-br-1 role="presentation"}
-
-| Für die Instanzen `EU-01` und `EU-02` |
-|---|
-| `127.0.0.1` |
-| `52.58.142.242` |
-| `52.29.193.121` |
-| `35.158.29.228` |
-| `18.157.135.97` |
-| `3.123.166.46` |
-| `3.64.27.36` |
-| `3.65.88.25` |
-| `3.68.144.188` |
-| `3.70.107.88` |
-{: .reset-td-br-1 role="presentation"}
-
-| Für Instanz `AU-01` |
-|---|
-| `13.210.1.145` |
-| `13.211.70.159` |
-| `13.238.45.54` |
-| `52.65.73.167` |
-| `54.153.242.239` |
-| `54.206.45.213` |
-{: .reset-td-br-1 role="presentation"}
+{% multi_lang_include data_centers.md datacenters='ips' %}

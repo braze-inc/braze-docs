@@ -37,9 +37,9 @@ Weitere Informationen zur erneuten Interaktion mit ausgetretenen Nutzer:innen fi
 
 Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website oder App zu integrieren. Detaillierte Schritte finden Sie in unseren Integrationsanleitungen für jede Plattform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
-- [Internet]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
+- [Internet]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## Vorschriften für Push-Nachrichten
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Preguntas frecuentes
-article_title: Preguntas frecuentes sobre la campaña
+article_title: Preguntas frecuentes sobre las campañas
 page_order: 10
 page_type: FAQ
 description: "Esta página ofrece respuestas a las preguntas más frecuentes sobre las campañas."
@@ -8,13 +8,13 @@ tool: Campaigns
 
 ---
 
-# Preguntas frecuentes sobre la campaña
+# Preguntas más frecuentes
 
 > Este artículo da respuesta a algunas preguntas frecuentes sobre las campañas.
 
-### ¿Cómo se crea una campaña multicanal?
+### ¿Cómo creo una campaña multicanal?
 
-Las campañas multicanal pueden crearse seleccionando **Crear campaña** y, a continuación, **Campaña multicanal** en el panel de control. En una campaña multicanal, seleccione **Añadir canal de mensajería** en la pestaña de **composición** para añadir los canales que desee. Al hacer clic en los iconos de los canales que aparecen, podrá alternar entre diferentes compositores de mensajes a medida que elabora el texto de su campaña para los distintos canales.
+Para crear una campaña multicanal, selecciona **Mensajería** > Campañas. A continuación, selecciona **Crear campaña** > **Multicanal**. Desde aquí, puedes seleccionar uno de los siguientes canales de mensajería: Tarjetas de contenido, correo electrónico, LINE, notificaciones push, SMS/MMS/RCS, webhook, o WhatsApp.
 
 ### ¿Puedo añadir un grupo de control a mi campaña multicanal?
 
@@ -22,7 +22,7 @@ No, los grupos de control de las campañas están pensados para mensajes de un s
 
 ### ¿Cómo puedo empezar a probar y optimizar las campañas?
 
-Las campañas multivariantes y los lienzos con múltiples variantes son una buena forma de empezar. Por ejemplo, puede realizar una [campaña multivariante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para probar un mensaje con diferentes copias o líneas de asunto. Los lienzos con múltiples variantes son útiles para probar flujos de trabajo completos.
+Las campañas multivariantes y los lienzos con múltiples variantes son una buena forma de empezar. Por ejemplo, puede realizar una [campaña multivariante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para probar un mensaje con diferentes copias o líneas de asunto. Los lienzos con múltiples variantes pueden ayudar a probar flujos de trabajo completos.
 
 ### ¿Por qué ha disminuido la tasa de apertura de mi campaña?
 
@@ -68,17 +68,17 @@ Para que un usuario sea elegible para la entrada, debe ser elegible para ambas c
 
 Tenga en cuenta que el usuario debe estar en el segmento 24 horas antes del lanzamiento. Si el usuario no cumple los requisitos en la primera comprobación, Braze no intentará la segunda.
 
-Por ejemplo, si está previsto que una campaña se entregue a las 19:00 UTC, empezamos a poner en cola los envíos de la campaña en cuanto se identifica una zona horaria (como Samoa). Esto significa que nos estamos preparando para enviar el mensaje, no que enviemos la campaña. Si los usuarios no coinciden con ningún filtro cuando comprobamos su elegibilidad, no entrarán en el público objetivo.
+Por ejemplo, si está previsto que una campaña se entregue a las 19:00 UTC, empezamos a poner en cola los envíos de la campaña en cuanto se identifica una zona horaria (como Samoa). Esto significa que nos estamos preparando para enviar el mensaje, no para enviar la campaña. Si entonces los usuarios no coinciden con ningún filtro cuando comprobamos su elegibilidad, no entrarán en la audiencia objetivo.
 
-Otro ejemplo: cree dos campañas programadas para enviarse el mismo día, una por la mañana y otra por la tarde, y añada un filtro para que los usuarios sólo puedan recibir la segunda campaña si ya han recibido la primera. Con la entrega en zona horaria local, es posible que algunos usuarios no reciban la segunda campaña. Esto se debe a que comprobamos la elegibilidad cuando se identifica la zona horaria del usuario, por lo que si la hora programada aún no se ha producido en su zona horaria, no ha recibido la primera campaña. Por tanto, no serán elegibles para la segunda campaña.
+Otro ejemplo: cree dos campañas programadas para enviarse el mismo día, una por la mañana y otra por la tarde, y añada un filtro para que los usuarios sólo puedan recibir la segunda campaña si ya han recibido la primera. Con la entrega en zona horaria local, es posible que algunos usuarios no reciban la segunda campaña. Esto se debe a que comprobamos la elegibilidad cuando se identifica la zona horaria del usuario, por lo que si la hora programada aún no se ha producido en su zona horaria, no ha recibido la primera campaña, lo que significa que no será elegible para la segunda campaña.
 
 ### ¿Cómo programar una campaña de zona horaria local?
 
-Al programar una campaña, debe elegir enviarla a una hora determinada y, a continuación, marcar **Enviar campaña a los usuarios de su zona horaria local**.
+Cuando programes una campaña, elige enviarla a una hora determinada y luego selecciona **Enviar campaña a los usuarios de su zona horaria local**.
 
-Braze recomienda encarecidamente que todas las campañas en zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse a lo largo de todo un día, programarlas con 24 horas de antelación garantiza que su mensaje llegará a todo su segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora. 
+Braze recomienda encarecidamente que todas las campañas en zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse a lo largo de todo un día, programarlas con 24 horas de antelación garantiza que tu mensaje llegará a todo tu segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora. 
 
-Por ejemplo, si es la 1 de la tarde y programa una campaña de zona horaria local para las 3 de la tarde, la campaña se enviará inmediatamente a todos los usuarios cuya hora local esté entre las 3 y las 4 de la tarde, pero no a los usuarios cuya hora local sea las 5 de la tarde. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
+Por ejemplo, si es la 1 de la tarde y programas una campaña de zona horaria local para las 3 de la tarde, la campaña se enviará inmediatamente a todos los usuarios cuya hora local esté entre las 3 y las 4 de la tarde, pero no a los usuarios cuya hora local sea las 5 de la tarde. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
 
 La edición de una campaña de zona horaria local programada con menos de 24 horas de antelación no alterará la programación del mensaje. Si decide editar una campaña de zona horaria local para enviarla a una hora posterior (por ejemplo, a las 19:00 en lugar de a las 18:00), los usuarios que se encontraban en el segmento objetivo cuando se eligió la hora de envío original seguirán recibiendo el mensaje a la hora original (18:00). Si edita una zona horaria local para que se envíe a una hora más temprana (por ejemplo, a las 16:00 en lugar de a las 17:00), la campaña se seguirá enviando a todos los miembros del segmento a la hora original (17:00). 
 
@@ -86,7 +86,7 @@ La edición de una campaña de zona horaria local programada con menos de 24 hor
 Para los componentes de Canvas, los usuarios no necesitan estar en el componente durante 24 horas para recibir el siguiente componente en el viaje del usuario para la entrega de zona horaria local.
 {% endalert %}
 
-Si has permitido que los usuarios vuelvan a ser elegibles para la campaña, volverán a recibirla a la hora original (17:00 h). Sin embargo, para todas las apariciones posteriores de tu campaña, tus mensajes solo se enviarán a la hora que hayas actualizado.
+Si has permitido que los usuarios vuelvan a ser elegibles para la campaña, volverán a recibirla a la hora original (17:00 h). Sin embargo, para todas las apariciones posteriores de tu campaña, tus mensajes sólo se enviarán a la hora que hayas actualizado.
 
 ### ¿Cuándo entran en vigor los cambios en las campañas de la zona horaria local?
 
@@ -103,7 +103,7 @@ Cuando la campaña está programada, es necesario editar todo lo que no sea la c
 
 ### He actualizado mi campaña programada. ¿Por qué no se lanzó?
 
-Esto puede ocurrir cuando una campaña está programada para lanzarse en el momento exacto en que se actualizó. Por ejemplo, si actualmente son las 15:10 y ha cambiado la campaña para que se lance a las 15:10 y ha seleccionado **Actualizar campaña**, ahora son más de las 15:10, lo que significa que la hora programada para el lanzamiento ha pasado. En lugar de programar la campaña para la misma hora, seleccione **Enviar en cuanto se lance la campaña**.
+Esto puede ocurrir cuando una campaña está programada para lanzarse en el momento exacto en que se actualizó. Por ejemplo, si actualmente son las 15:10 y cambiaste la campaña para que se lanzara a las 15:10 y seleccionaste **Actualizar campaña**, ahora son más de las 15:10, lo que significa que ha pasado la hora programada para el lanzamiento. En lugar de programar la campaña para la misma hora, seleccione **Enviar en cuanto se lance la campaña**.
 
 ### ¿Cuál es la "zona segura" antes de que se pongan en cola los mensajes de una campaña programada?
 
@@ -112,7 +112,7 @@ Puede realizar cambios en los mensajes dentro de las siguientes zonas seguras:
 - **Las campañas programadas una sola vez** pueden editarse hasta la hora de envío programada.
 - **Las campañas programadas recurrentes** se pueden editar hasta la hora de envío programada.
 - **Las campañas con hora de envío local** pueden editarse hasta 24 horas antes de la hora de envío programada.
-- **Las campañas con hora de envío óptima** pueden editarse hasta 24 horas antes del día en que está previsto que se envíe la campaña.
+- **Las campañas con Hora óptima de envío** pueden editarse hasta 24 horas antes del día en que está previsto que se envíe la campaña.
 
 ### ¿Qué ocurre si modifico la hora de envío dentro de la "zona segura"?
 
@@ -123,16 +123,16 @@ Cambiar la hora de envío en las campañas dentro de este plazo puede provocar c
 
 ### ¿Qué debo hacer si la "zona segura" ya ha pasado?
 
-Para asegurarse de que las campañas funcionan como se desea, recomendamos detener la campaña actual (esto cancelará cualquier mensaje en cola). A continuación, puede duplicar la campaña, realizar los cambios necesarios y lanzar la nueva campaña. Es posible que tenga que excluir de esta campaña a los usuarios que ya hayan recibido la primera campaña.
+Para asegurarse de que las campañas funcionan como se desea, recomendamos detener la campaña actual (esto cancelará cualquier mensaje en cola). A continuación, puedes duplicar la campaña, realizar los cambios necesarios y lanzar la nueva campaña. Es posible que tenga que excluir de esta campaña a los usuarios que ya hayan recibido la primera campaña.
 
 Asegúrese de reajustar las horas de programación de la campaña para tener en cuenta el envío según la zona horaria.
 
 ### ¿Por qué el número de usuarios que entran en una campaña no coincide con el esperado?
 
-El número de usuarios que entran en una campaña puede diferir del número esperado debido a cómo se evalúan las audiencias y los desencadenantes. En Braze, un público se evalúa antes del desencadenante (a menos que se utilice un desencadenante de [cambio de atributo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Esto hará que los usuarios abandonen la campaña si no forman parte inicialmente de su audiencia seleccionada antes de que se evalúe cualquier acción desencadenante.
+El número de usuarios que entran en una campaña puede diferir del número esperado debido a cómo se evalúan las audiencias y los desencadenantes. En Braze, un público se evalúa antes del desencadenante (a menos que se utilice un desencadenante de [cambio de atributo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Esto hará que los usuarios abandonen la campaña si no forman parte inicialmente de tu audiencia seleccionada antes de que se evalúe cualquier acción desencadenante.
 
 {% alert tip %}
-Para obtener más ayuda con la solución de problemas de la campaña, asegúrese de ponerse en contacto con el servicio de asistencia de Braze en los 30 días siguientes a la aparición del problema, ya que sólo disponemos de los registros de diagnóstico de los últimos 30 días.
+Para obtener más ayuda con la solución de problemas de la campaña, asegúrate de ponerte en contacto con el soporte de Braze en los 30 días siguientes a la aparición del problema, ya que sólo disponemos de los registros de diagnóstico de los últimos 30 días.
 {% endalert %}
 
 ### ¿Cuál es la diferencia entre las opciones Exportar datos de usuario CSV y Exportar dirección de correo electrónico CSV en la página de análisis de mi campaña?
@@ -145,9 +145,9 @@ Sí, utilice el filtro `api_id:YOUR_API_ID` en la página **Campañas** para bus
 
 ### ¿Cuál es la diferencia entre las campañas API y las campañas desencadenadas por API?
 
-Las campañas activadas por API le permiten gestionar el texto de la campaña, las pruebas multivariantes y las reglas de reelegibilidad desde el panel de control de Braze, a la vez que activa la entrega de ese contenido desde sus propios servidores y sistemas. Estos mensajes también pueden incluir datos adicionales que se incorporarán a los mensajes en tiempo real.
+Las campañas desencadenadas por API te permiten gestionar la copia de la campaña, las pruebas multivariantes y las reglas de reelegibilidad dentro del panel de Braze, a la vez que desencadenan la entrega de ese contenido desde tus propios servidores y sistemas. Estos mensajes también pueden incluir datos adicionales que se incluirán en plantillas en los mensajes en tiempo real.
 
-Las campañas API se utilizan para realizar un seguimiento de los mensajes que se envían a través de la API. A diferencia de la mayoría de las campañas, usted no especifica el mensaje, los destinatarios o la programación, sino que pasa los identificadores a sus llamadas a la API. 
+Las campañas API se utilizan para realizar un seguimiento de los mensajes que se envían a través de la API. A diferencia de la mayoría de las campañas, no especificas el mensaje, los destinatarios ni el horario, sino que pasas los identificadores a tus llamadas a la API. 
 
 ### ¿Cuál es la diferencia entre las campañas basadas en acciones y las activadas por API?
 
@@ -171,10 +171,10 @@ Las campañas de entrega basadas en acciones o las campañas activadas por event
 
 #### Activada por API
 
-Las campañas activadas por API o por servidor son ideales para casos de uso transaccional más avanzados, ya que le permiten activar la entrega del contenido de la campaña desde sus propios servidores y sistemas. La solicitud de la API para desencadenar el mensaje también puede incluir datos adicionales que se incorporarán al mensaje en tiempo real.
+Las campañas activadas por API y por servidor son ideales para gestionar transacciones más avanzadas, permitiéndote desencadenar la entrega del contenido de la campaña desde tus propios servidores y sistemas. La solicitud de la API para desencadenar el mensaje también puede incluir datos adicionales que se incorporarán a la plantilla del mensaje en tiempo real.
 
 | Pros | Contras | 
 | ---- | ---- |
-| \- No consume puntos de datos<br><br>\- Los elementos de personalización se incluyen en las propiedades de la carga útil JSON | \- No permite crear un segmento de usuarios elegibles para el mensaje en las propiedades de la carga útil JSON.<br><br>\- No se pueden ver las cargas JSON entrantes a través del **registro de actividad de mensajes**.|
+| \- No consume puntos de datos<br><br>\- Los elementos de personalización se incluyen en las propiedades de la carga útil JSON | \- No permite crear un segmento de usuarios elegibles para el mensaje en las propiedades de la carga útil JSON.<br><br>\- No se pueden ver las cargas útiles JSON entrantes con el **registro de actividad de mensajes**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

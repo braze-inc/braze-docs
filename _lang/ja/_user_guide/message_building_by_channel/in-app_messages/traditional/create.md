@@ -22,14 +22,8 @@ search_rank: 4.8
 {% tab キャンペーン %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
-{% endalert %}
-
-{:start="2"}
-2\.[**アプリ内メッセージ**] を選択します。なお、アプリ内メッセージはマルチチャネルキャンペーンでは利用できない。
-3\.キャンペーンに、明確で意味のある名前を付けます。
+2. [**アプリ内メッセージ**] を選択します。なお、アプリ内メッセージはマルチチャネルキャンペーンでは利用できない。
+3. キャンペーンに、明確で意味のある名前を付けます。
 4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
@@ -210,7 +204,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 ##### 右から左へのメッセージを作成する
 
-アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)参照のこと。
+アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
 
 ### ボタンテキスト {#buttons}
 
@@ -273,7 +267,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 | フォーマット | インプット | 説明 |
 |---|---|---|
-|カラープロフィール | アプリ内のメッセージテンプレートギャラリーから申し込む。 | [**テンプレートを適用**] をクリックし、ギャラリーから選択します。次に、[**保存**] をクリックします。 |
+|[カラープロフィール]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | アプリ内のメッセージテンプレートギャラリーから申し込む。 | **Apply Templateを**選択し、ギャラリーから選択する。次に、**Save**を選択します。 |
 |文字揃え | 左、中央、または右。  | 新しいBraze SDKバージョンでのみ使用可能。 |
 |ヘッダー | HEXカラーコード。 | 希望のHEXカラーが表示される。色の不透明度も選択できます。  |
 |テキスト | HEXカラーコード。 | 希望のHEXカラーが表示される。色の不透明度も選択できます。 |
@@ -324,7 +318,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 開始日時は選択する必要がありますが、終了日はオプションです。終了日は、指定した日時の後に特定のアプリ内メッセージがデバイスに表示されるのを停止します。
 
-[サーバーサイドのイベントトリガーと]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) [ローカルでのアプリ内メッセージ配信については]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)、開発者向けドキュメントを参照のこと。
+[サーバーサイドのイベントトリガーと]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) [ローカルでのアプリ内メッセージ配信については]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)、開発者向けドキュメントを参照のこと。
 
 ##### オンライン・トリガーとオフライン・トリガー
 
@@ -374,7 +368,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 {% tab キャンバス %}

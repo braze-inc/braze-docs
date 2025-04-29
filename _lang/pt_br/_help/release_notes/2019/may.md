@@ -25,7 +25,7 @@ Você precisará atualizar para uma versão compatível do SDK da Braze:
 - Android: 2.6.0 ou posterior
 - Web: 2.2.0 ou posterior
 
-[Saiba mais sobre os Cartões de Conteúdo aqui!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
+[Saiba mais sobre os Cartões de Conteúdo aqui!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
 
 {% alert update %}
 Cartões de Conteúdo para Currents e nossa documentação da API para cartões de conteúdo serão lançados no final desta semana. Fique de olho!
@@ -35,7 +35,7 @@ Cartões de Conteúdo para Currents e nossa documentação da API para cartões 
 
 Braze adicionou um novo canal às nossas capacidades! Ao expandir para novos canais, podemos ativar nossos clientes a enriquecer seus dados ao entender o comportamento de visualização ou fornecer experiências significativas aos seus consumidores em todos os canais relevantes.
 
-Agora você pode [recuperar dados de dispositivos Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) para enriquecimento de dados e rastreamento de eventos personalizados.
+Agora você pode [recuperar dados de dispositivos Roku]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku) para enriquecimento de dados e rastreamento de eventos personalizados.
 
 ## Preferências de notificação para canva ou atualizações de campanha
 
@@ -45,7 +45,7 @@ Esta [nova notificação]({{site.baseurl}}/user_guide/administrative/company_set
 
 A Jampp é uma plataforma de marketing de performance para aquisição e redirecionamento de clientes móveis. Combina dados comportamentais com tecnologia preditiva e programática para gerar receita para os anunciantes, mostrando anúncios pessoais e relevantes que inspiram os consumidores a comprar pela primeira vez ou com mais frequência.
 
-Os clientes da Braze podem [integrar-se com a Jampp]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/) configurando o canal de webhook da Braze para transmitir eventos para a Jampp. Como resultado, os clientes conseguem adicionar conjuntos de dados mais ricos às suas iniciativas de redirecionamento com a Jampp dentro do ecossistema de publicidade móvel.
+Os clientes da Braze podem [integrar-se com a Jampp]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/) configurando o canal de webhook da Braze para transmitir eventos para a Jampp. Como resultado, os clientes conseguem adicionar conjuntos de dados mais ricos às suas iniciativas de redirecionamento com a Jampp dentro do ecossistema de publicidade móvel.
 
 ## Seletor de plataforma para mensagens no app
 
@@ -85,7 +85,7 @@ Usar `dispatch_id` permite que mensagens recorrentes reflitam a verdadeira conta
 
 Qualquer usuário que também use o Mailjet verá um aumento nesses números, já que o período de exclusividade anterior era superior a 30 dias. Deveriam ter informado você sobre essa mudança três (3) semanas atrás.  Os clientes do SendGrid não devem notar nenhuma diferença.
 
-Você pode procurar por esses termos atualizados em nosso [glossário de métricas de relatórios]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Você pode procurar por esses termos atualizados em nosso [glossário de métricas de relatórios]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 {% alert update %}
 O comportamento para `dispatch_id` difere entre canva e campanhas porque a Braze trata as etapas do canva (exceto as Etapas de Entrada, que podem ser agendadas) como eventos disparados, mesmo quando estão "agendadas". [Saiba mais sobre o [comportamento `dispatch_id` ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) em canvas e campanhas.
@@ -97,7 +97,7 @@ _Atualização registrada em agosto de 2019._
 ## Canal mais engajado
 
 {% alert update %}
-A partir do [lançamento do produto de novembro de 2019]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Canal mais engajado" foi renomeado para ["Canal inteligente"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
+A partir do [lançamento do produto de novembro de 2019]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Canal mais engajado" foi renomeado para ["Canal inteligente"]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/).
 {% endalert %}
 
 O filtro de Canal Mais Engajado seleciona a parte do seu público para quem o canal de envio de mensagens selecionado é o seu "melhor" canal. Neste caso, "melhor" significa "tem a maior probabilidade de engajamento, dado o histórico do usuário". Você pode selecionar e-mail, web push ou push móvel (que inclui qualquer sistema operacional móvel ou dispositivo disponível) como um canal.

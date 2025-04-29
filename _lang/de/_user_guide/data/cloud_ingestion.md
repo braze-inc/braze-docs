@@ -8,12 +8,12 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Cloud-Datenaufnahme von Braze"
-guide_top_text: "<h2>Was ist das?</h2>Mit Braze Cloud Data Ingestion (CDI) können Sie eine direkte Verbindung von Ihrer Datenspeicherlösung zu Braze einrichten, um relevante Nutzer:innen oder Katalogdaten zu synchronisieren und Nutzer:innen zu löschen. Wenn diese Daten mit Braze synchronisiert werden, können sie für Anwendungsfälle wie Personalisierung oder Segmentierung genutzt werden. Die flexible Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON-Objekte und Objekt-Arrays. <br><br>**Braze Cloud Data Ingestion-Funktionen:**<br> - Erstellen Sie in nur wenigen Minuten eine einfache Integration direkt aus Ihrem Data Warehouse oder Ihrer Dateispeicherlösung in Braze.<br>- Synchronisieren Sie Nutzerdaten, einschließlich Attribute, Events und Einkäufe, sicher von Ihrem Data Warehouse mit Braze.<br>- Schließen Sie den Datenkreislauf mit Braze, indem Sie Cloud Data Ingestion mit Currents oder Snowflake Data Sharing kombinieren.<br><br>**Cloud Data Ingestion kann Daten von folgenden Quellen synchronisieren**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Schneeflocke"
+guide_top_text: "<h2>Was ist das?</h2>Mit Braze Cloud Data Ingestion (CDI) können Sie eine direkte Verbindung von Ihrer Datenspeicherlösung zu Braze einrichten, um relevante Nutzer:innen oder Katalogdaten zu synchronisieren und Nutzer:innen zu löschen. Wenn diese Daten mit Braze synchronisiert werden, können sie für Anwendungsfälle wie Personalisierung oder Segmentierung genutzt werden. Die flexible Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON und Arrays von Objekten. <br><br>**Braze Cloud Data Ingestion-Funktionen:**<br> - Erstellen Sie in nur wenigen Minuten eine einfache Integration direkt aus Ihrem Data Warehouse oder Ihrer Dateispeicherlösung in Braze.<br>- Synchronisieren Sie Nutzerdaten, einschließlich Attribute, Events und Einkäufe, sicher von Ihrem Data Warehouse mit Braze.<br>- Schließen Sie den Datenkreislauf mit Braze, indem Sie Cloud Data Ingestion mit Currents oder Snowflake Data Sharing kombinieren.<br><br>**Cloud Data Ingestion kann Daten von folgenden Quellen synchronisieren**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Schneeflocke"
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Überblick und bewährte Praktiken
-    link: /docs/user_guide/data/cloud_ingestion/
+    link: /docs/user_guide/data/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: Verbundene Quellen
     link: /docs/user_guide/data/cloud_ingestion/connected_sources/

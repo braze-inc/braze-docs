@@ -3,7 +3,6 @@ nav_title: Abbrechen von Connected-Content
 article_title: Abbrechen von Connected-Content
 page_order: 2
 description: "Dieser Referenzartikel behandelt einige Best Practices zum Abbrechen von Connected-Content."
-
 ---
 
 # Abbrechen von Connected-Content {#aborting-connected-content}

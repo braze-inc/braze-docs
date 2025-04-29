@@ -9,11 +9,11 @@ description: "Este artigo contém notas de versão para janeiro de 2021."
 
 ## Criador de relatórios do Canva
 
-O Report Builder permite comparar os resultados de várias campanhas ou Canvas em uma única exibição, para que você possa determinar facilmente quais estratégias de engajamento tiveram maior impacto nas suas principais métricas. Leia mais sobre o [criador de relatórios do canva]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+O Report Builder permite comparar os resultados de várias campanhas ou Canvas em uma única exibição, para que você possa determinar facilmente quais estratégias de engajamento tiveram maior impacto nas suas principais métricas. Leia mais sobre o [criador de relatórios do canva]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
 
 ## Guia de implementação de mensagens no app para iOS
 
-Este guia detalhado aborda como aproveitar a subclasse para criar mensagens no app personalizadas do tipo slideup, mensagens no app personalizadas do tipo modal e mensagens no app personalizadas completas para adicionar às suas campanhas e telas do Braze. Estão incluídas as considerações de código necessárias, os casos de uso detalhados criados por nossa equipe e os trechos de código que os acompanham. Acesse nossa documentação [aqui]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) para saber mais. 
+Este guia detalhado aborda como aproveitar a subclasse para criar mensagens no app personalizadas do tipo slideup, mensagens no app personalizadas do tipo modal e mensagens no app personalizadas completas para adicionar às suas campanhas e telas do Braze. Estão incluídas as considerações de código necessárias, os casos de uso detalhados criados por nossa equipe e os trechos de código que os acompanham. Acesse nossa documentação [aqui]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/) para saber mais. 
 
 ## Categorias de palavras-chave personalizadas para SMS e opções de redirecionamento
 

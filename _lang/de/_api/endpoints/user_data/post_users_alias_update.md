@@ -1,23 +1,23 @@
 ---
-nav_title: "POST: Benutzer-Alias aktualisieren"
-article_title: "POST: Benutzer-Alias aktualisieren"
+nav_title: "POST: Nutzer:in aktualisieren"
+article_title: "POST: Nutzer:in aktualisieren"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Braze-Endpunkt Benutzer-Aliase aktualisieren."
+description: "Dieser Artikel beschreibt Details zum Endpunkt Update Nutzer:innen Braze."
 ---
 {% api %}
-# Benutzer-Alias aktualisieren
+# Nutzer:in aktualisieren
 {% apimethod post %}
 /users/alias/update
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um bestehende Benutzer-Aliase zu aktualisieren.
+> Verwenden Sie diesen Endpunkt, um bestehende Nutzer:innen-Aliase zu aktualisieren.
 
-Pro Anfrage können bis zu 50 Benutzer-Aliase angegeben werden.
+Pro Anfrage können bis zu 50 Nutzer:innen angegeben werden.
 
-Für die Aktualisierung eines Benutzer-Alias müssen `alias_label`, `old_alias_name` und `new_alias_name` in das Objekt update user alias aufgenommen werden. Wenn kein Benutzer-Alias mit `alias_label` und `old_alias_name` verknüpft ist, wird kein Alias aktualisiert. Wenn die angegebenen `alias_label` und `old_alias_name` gefunden werden, dann wird `old_alias_name` auf `new_alias_name` aktualisiert.
+Um einen Nutzer-Alias zu aktualisieren, müssen `alias_label`, `old_alias_name` und `new_alias_name` in das Objekt Nutzer-Alias aktualisieren aufgenommen werden. Wenn es keinen Nutzer-Alias gibt, der mit `alias_label` und `old_alias_name` verknüpft ist, wird kein Alias aktualisiert. Wenn die angegebenen `alias_label` und `old_alias_name` gefunden werden, dann wird `old_alias_name` auf `new_alias_name` aktualisiert.
 
 {% alert note %}
 Dieser Endpunkt garantiert nicht die Reihenfolge, in der die `alias_updates` Objekte aktualisiert werden.
@@ -29,11 +29,11 @@ Dieser Endpunkt garantiert nicht die Reihenfolge, in der die `alias_updates` Obj
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.alias.update`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -46,14 +46,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### Parameter anfordern
+### Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | --------- | --------- | ----------- |
-| `alias_updates` | Erforderlich | Array von Update-Benutzer-Alias-Objekten | Siehe [Benutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Weitere Informationen zu `old_alias_name`, `new_alias_name` und `alias_label` finden Sie unter [Benutzer-Aliase]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
+| `alias_updates` | Erforderlich | Array von Update Nutzer:in-Alias-Objekten | Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Weitere Informationen zu `old_alias_name`, `new_alias_name` und `alias_label` finden Sie unter [Nutzer:innen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Endpunkt-Anfragekörper mit Angabe des Objekts Benutzer-Alias aktualisieren
+### Körper der Anfrage des Endpunkts mit der Spezifikation des Objekts Nutzer:in aktualisieren
 
 ```json
 {

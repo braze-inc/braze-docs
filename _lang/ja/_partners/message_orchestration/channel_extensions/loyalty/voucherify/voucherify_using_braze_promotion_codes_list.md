@@ -12,6 +12,8 @@ search_tag: Partner
 
 > 接続されたコンテンツおよびカスタム属性s に加えて、Braze プロモコードs スニペットを使用してVoucherify コードs を共有できます。最初に Voucherify からコードをエクスポートしてから Braze にコードをインポートし、プロモーションリストからコードを取得するメールコードスニペットを追加します。 
 
+_この統合はVoucherifyによって維持されている。_
+
 ## ステップ1:Voucherifyからの一意のコードのエクスポート
 
 Voucherify で、Voucherify キャンペーンに移動します。次に、**CSV**にエクスポートを選択し、CSVファイルを編集して列の名前を削除し、コードs の一覧のみを残します。
@@ -21,10 +23,6 @@ Voucherify で、Voucherify キャンペーンに移動します。次に、**CS
 ## ステップ2:プロモーションコードリストを作成する
 
 [**Data Settings**] > [**Promotion Codes**] に移動し、[**Promotion Code List**] をクリックします。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**プロモーションコード**] の下に [**統合**] があります。
-{% endalert %}
 
 Voucherify キャンペーンの名前を使用して、一覧に名前を付け、データコンシステンシーを確認できます。
 
@@ -59,3 +57,4 @@ Braze キャンペーン内のリストからコードs を使用するには、
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_liquid_email.png %})
 
 コードを含むメッセージが送信されると、同じコードは再び使用されません。
+

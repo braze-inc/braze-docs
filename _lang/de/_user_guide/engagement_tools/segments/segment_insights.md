@@ -19,10 +19,6 @@ Segment Insights zeigt Ihnen, wie sich ein Segment im Vergleich zu einem anderen
 
 Gehen Sie auf die Seite **Segment Insights** in Ihrem Dashboard unter **Analytics** und klicken Sie auf <i class="fas fa-plus"></i> **Segment hinzufügen**, um bis zu vier verschiedene Segmente im Vergleich zu einer Baseline anzuzeigen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenteinblicke**.
-{% endalert %}
-
 ![Segment Insights Dashboard.][1]
 
 Das Basissegment kann entweder ein bestimmtes Segment sein, das Sie auswählen, oder ein Segment, das alle Ihre Nutzer enthält. Sie können die folgenden Statistiken mit Segment Insights vergleichen:

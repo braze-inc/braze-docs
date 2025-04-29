@@ -409,11 +409,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: 카탈로그에서 품목을 업데이트합니다.
+    description: 카탈로그에서 품목을 교체합니다.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: 카탈로그의 여러 항목을 업데이트합니다.
+    description: 카탈로그에서 여러 항목을 교체합니다.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +437,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: 이메일을 지정하여 기존 대시보드 사용자 계정을 조회합니다.
+    description: 리소스 ID를 지정하여 기존 대시보드 사용자 계정을 조회합니다.
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"

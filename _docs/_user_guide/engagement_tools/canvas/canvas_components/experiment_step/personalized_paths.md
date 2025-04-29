@@ -23,7 +23,7 @@ When Personalized Paths is turned on in an Experiment Path step, the behavior is
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Personalized Paths**.
 
-![][1]{: style="max-width:75%;" }
+![][1]
 
 ### Step 2: Configure Personalized Paths settings
 
@@ -31,7 +31,7 @@ Specify the conversion event that should determine the winner. If there are no c
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
-![][2]{: style="max-width:75%;" }
+![][2]
 
 ### Step 3: Determine fallback
 

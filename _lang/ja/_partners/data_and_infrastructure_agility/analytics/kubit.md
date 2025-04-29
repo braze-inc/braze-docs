@@ -19,7 +19,7 @@ BrazeとKubitの統合により、[Kubitユーザーコホートをインポー�
 | 必要条件 | 説明 |
 |---|---|
 |Kubitエンタープライズアカウント | このパートナーシップを利用するには、Kubitエンタープライズアカウントが必要である。 |
-| ユーザーIDの一致 | KubitとBrazeの顧客データは、2つのプラットフォームでユーザーIDが一致していなければならない。これには匿名UUIDも含まれる。BrazeがどのようにユーザーIDを設定するかについては、当社の[ドキュメントを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/)参照のこと。 |
+| ユーザーIDの一致 | KubitとBrazeの顧客データは、2つのプラットフォームでユーザーIDが一致していなければならない。これには匿名UUIDも含まれる。BrazeがどのようにユーザーIDを設定するかについては、当社の[ドキュメントを]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android)参照のこと。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## KubitでBrazeのデータを分析する

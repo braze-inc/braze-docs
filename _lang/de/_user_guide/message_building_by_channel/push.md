@@ -50,5 +50,17 @@ guide_menu_list:
 - name: Bewährte Praktiken
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Lokalisierungen im Messaging
+  link: /docs/user_guide/message_building_by_channel/push/using_locales/
+  image: /assets/img/braze_icons/translate-01.svg
+- name: Allgemeine Push-Fehlermeldungen
+  link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+  image: /assets/img/braze_icons/alert-triangle.svg
+- name: Fehlersuche
+  link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
+  image: /assets/img/braze_icons/annotation-question.svg
+- name: Häufig gestellte Fragen
+  link: /docs/user_guide/message_building_by_channel/push/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

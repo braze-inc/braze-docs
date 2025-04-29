@@ -30,9 +30,6 @@ Zum Beispiel werden "Stpo" oder "Bitte stopppp" als unscharf angesehen und eine 
 Um das Fuzzy-Opt-out zu konfigurieren, navigieren Sie zur Seite Abo-Gruppen Schlüsselwortverwaltung.
 
 1. Gehen Sie zu **Zielgruppe** > **Abonnements** und wählen Sie eine SMS-Abonnementgruppe.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Abonnementgruppen** unter **Benutzer**.
-{% endalert %}
 
 {:start="2"}
 2\. Suchen Sie unter **SMS Global Keywords** die Kategorie **Opt-out** und wählen Sie das Bleistiftsymbol.

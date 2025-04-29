@@ -32,11 +32,13 @@ Each log is broken up into multiple sections, which can include:
 * Campaign Events
 * Response Data
 
-Click the **Raw Data** button to show the raw JSON data for that specific log.
+Select the **Expand data** icon to show the raw JSON data for that specific log.
 
-![Raw logs for events][10]
+![The "Expand data icon" next to a specific log.][9]
 
 Event User Logs will remain in the dashboard for 30 days after they are logged.
+
+![Raw logs for events][10]{: style="max-width:60%;"}
 
 ## Troubleshooting
 
@@ -67,4 +69,5 @@ In relation to user sessions, you can use Braze to monitor data like:
 
 These behaviors are not impacted by the session end event being flushed on the next session.
 
+[9]: {% image_buster /assets/img_archive/expand_data.png %}
 [10]: {% image_buster /assets/img_archive/rawlogs.png %}

@@ -10,7 +10,7 @@ description: "Cette page d’accueil répertorie les articles sur le produit de 
 tool: currents
 search_rank: 9
 guide_top_header: "Currents Braze"
-guide_top_text: "Comprendre l’impact de votre stratégie d’engagement est essentiel pour informer votre itération et optimiser vos communications avec vos utilisateurs. Afin de garantir que ces précieuses données d’engagement sont étroitement intégrées au reste de vos opérations et contribuent à amplifier votre investissement dans la science des données, la plateforme Braze suit un large éventail de données d’événements de votre intégration pour l’analyse, le reciblage et d’autres cas d’utilisation ailleurs sur vos propres systèmes. <br> <br>L’outil Currents est un flux de données en temps réel de vos événements d’engagement qui est l’exportation la plus robuste, tout en étant granulaire, depuis la plateforme Braze. Il fournit vos données dans un type de fichier Avro à l’un de nos nombreux <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>partenaires de données</a>, vous permettant d’utiliser les données uniques et précieuses que Braze crée pour alimenter vos efforts BI et d’analyse dans d’autres plateformes de premier ordre."
+guide_top_text: "Comprendre l’impact de votre stratégie d’engagement est essentiel pour informer votre itération et optimiser vos communications avec vos utilisateurs. Pour intégrer étroitement ces précieuses données d'engagement au reste de vos opérations et contribuer à amplifier votre investissement dans la science des données, la plateforme Braze assure le suivi d'un large éventail de données d'événements issues de votre intégration à des fins d'analyse, de reciblage et d'autres cas d'utilisation ailleurs dans vos propres systèmes. <br> <br>L’outil Currents est un flux de données en temps réel de vos événements d’engagement qui est l’exportation la plus robuste, tout en étant granulaire, depuis la plateforme Braze. Il fournit vos données dans un type de fichier Avro à l’un de nos nombreux <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>partenaires de données</a>, vous permettant d’utiliser les données uniques et précieuses que Braze crée pour alimenter vos efforts BI et d’analyse dans d’autres plateformes de premier ordre."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -38,7 +38,9 @@ guide_featured_list:
 - name: "Transférer des données vers Redshift"
   link: /docs/user_guide/data/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
-
+- name: "FAQ sur les courants"
+  link: /docs/user_guide/data/braze_currents/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Capacités de Currents

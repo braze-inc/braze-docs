@@ -17,8 +17,10 @@ description: "This article outlines details about the Update translation in a Ca
 
 > Use this endpoint to update multiple translations for a Canvas.
 
+If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
+
 {% alert important %}
-Updating a translation for Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -27,7 +29,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 250,000 requests per hour.
+{% multi_lang_include rate_limits.md endpoint='translation endpoints' %}
 
 ## Path parameters
 
@@ -38,12 +40,14 @@ There are no path parameters for this endpoint.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`step_id`| Required | String | The ID of your Canvas step. |
-|`message_variation_id`| Required | String | The ID of your message. |
-|`locale_id`| Required | String | The ID of the locale. |
+|`message_variation_id`| Required | String | The ID of your message variation. |
+|`locale_name`| Required | String | The name of the locale. |
 |`workflow_id` | Required | String | The ID of the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% endalert %}
 
 ## Example request
 
@@ -51,19 +55,21 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "canvas_id": "9a0ba932-11c0-4c33-b529-e79aafc12409",
-    "message_variation_id": "f5896eec-847d-4c0d-a4b6-7695e67520d7",
-    "locale_id": "3fa10d31-83ae-4ff4-9631-f52cea9ec8fa",
+	"workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
+	"step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
+    "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
+    "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
-        "id_4": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
-        "subject_1": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
-        "id_1": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
-        "image": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca."
+       "id_3": "Ein Absatz ohne Formatierung"
     }
 }
 ```
 
-## Example success response
+## Response
+
+There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
+
+### Example success response
 
 ```json
 {
@@ -79,7 +85,7 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
 	"errors": [
 		{
-			"message": "Something went wrong. Translation IDs are mismatched or translated text exceeds limits."
+			"message": "The provided locale code does not exist."
 		}
 	]
 }
@@ -89,30 +95,14 @@ The status code `400` could return the following response body. Refer to [Troubl
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error message | Troubleshooting |
-| --- | --- |
-|`INVALID_CAMPAIGN_ID`|Confirm the campaign ID matches the campaign you're translating.|
-|`INVALID_LOCALE_ID`|Confirm your locale ID exists in your message translation.|
-|`INVALID_MESSAGE_VARIATION_ID`|Confirm your message ID is correct.|
-|`INVALID_TRANSLATION_OBJECT`|Translation IDs are mismatched or translated text exceeds limits.|
-|`MESSAGE_NOT_FOUND`|Check that the message to be translated.|
-|`LOCALE_NOT_FOUND`| Confirm the locale exists in your multi-language settings. |
-|`MISSING_TRANSLATIONS`|Translation IDs must match to the message.|
-|`MULTI_LANGUAGE_NOT_ENABLED`|Multi-language settings aren't turned on for your workspace.|
-|`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
-|`UNSUPPORTED_CHANNEL`| Only messages in email campaigns or Canvas messages with emails can be translated.|
+| Error message  | Troubleshooting |
+|----|----------|
+| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | Occurs when the third-party translator provides translations with exceptions that generate Liquid errors. Contact Braze Support for further assistance. |
+| `The provided translations are missing 'id_1', 'id_2'` | Translation IDs are mismatched or translated text exceeds limits. For example, this could mean the payload shape is missing fields in the translation object. Every message (when enabled for multi-language) should have a specific number of "translation blocks" with an ID associated with it. If the payload provided is missing any of the IDs, then this would be considered an incomplete object and result in an error. |
+| `The provided locale code does not exist.` | The third-party translator's payload contains a locale code that doesn't exist in Braze. |
+| `The provided translations have exceeded the maximum of 20MB.` | The provided payload exceeds the size limit. |
+| `You have exceeded the maximum number of requests. Please try again later.` | All Braze APIs have built-in rate limiting, and this error will automatically returned when the rate has exceeded the allotted amount for this authentication token. |
+| `This message does not support multi-language.` | This can occur when a message ID doesn't support multi-language messages yet. Only messages in the following channels can be translated: push, in-app messages, and email. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-
-          INVALID_CAMPAIGN_ID = "Invalid campaign or step ID"
-          INVALID_LOCALE_ID = "Invalid locale ID"
-          INVALID_MESSAGE_VARIATION_ID = "Invalid message ID"
-          INVALID_TRANSLATION_OBJECT = "Invalid translation object"
-          MESSAGE_NOT_FOUND = "Message not found"
-          LOCALE_NOT_FOUND = "Locale not found"
-          MISSING_TRANSLATIONS = "Missing translations from the request body"
-          MULTI_LANGUAGE_NOT_ENABLED = "Multi-language feature is not enabled on this company"
-          MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE = "This message does not have multi-language setup"
-          UNSUPPORTED_CHANNEL = "This message type does not support multi-language"
 
 {% endapi %}

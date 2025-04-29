@@ -12,16 +12,12 @@ tool: Canvas
 > Este artículo de referencia cubre información sobre `canvas_entry_properties` y `event_properties`, incluyendo cuándo utilizar cada propiedad y las diferencias de comportamiento. <br><br> Para obtener información sobre las propiedades de eventos personalizados en general, consulte [Propiedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este artículo está disponible como referencia cuando se utiliza `canvas_entry_properties` y `event_properties`para el flujo de trabajo original de Canvas.
+Si participas en el [acceso anticipado al componente Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), las propiedades de entrada de Canvas forman parte de las variables de contexto de Canvas. Esto significa que `canvas_entry_properties` se denomina ahora `context`. Cada variable de `context` incluye un nombre, un tipo de datos y un valor que puede incluir Liquid.
 {% endalert %}
 
-Las propiedades de entrada del lienzo y las propiedades de evento funcionan de forma diferente en los flujos de trabajo del lienzo. Las propiedades de los eventos o llamadas a la API que desencadenan la entrada de un usuario en un Canvas se conocen como `canvas_entry_properties`. Las propiedades de los eventos que se producen a medida que un usuario se desplaza por un recorrido de Canvas se conocen como `event_properties`. La diferencia clave aquí es que `canvas_entry_properties` no sólo se centra en los eventos, sino que también accede a las propiedades de las cargas útiles de entrada en los lienzos activados por la API.
+Las propiedades de entrada del lienzo y las propiedades de evento funcionan de forma diferente en los flujos de trabajo del lienzo. Las propiedades de los eventos o llamadas a la API que desencadenan la entrada de un usuario en un Canvas se conocen como `canvas_entry_properties`. Las propiedades de los eventos que se producen a medida que un usuario se desplaza por un recorrido de Canvas se conocen como `event_properties`. La diferencia clave es que `canvas_entry_properties` no sólo se centra en los eventos, sino que también accede a las propiedades de las cargas útiles de entrada en los Lienzos desencadenados por la API.
 
-Para el editor de lienzo original y el flujo de lienzo, no se puede utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
-
-El comportamiento también varía entre los flujos de trabajo creados con Canvas Flow y el editor original. Por ejemplo, en el editor Canvas original, puede utilizar `event_properties` en el primer paso completo si se trata de un paso basado en acciones. En Canvas Flow, no se admiten pasos completos, por lo que esto no se aplica.
-
-En la siguiente tabla se resumen las diferencias entre `canvas_entry_properties` y `event_properties`.
+Consulta la tabla siguiente para ver un resumen de las diferencias entre las propiedades de entrada del Canvas y las propiedades del evento.
 
 | | Propiedades de entrada de Canvas | Propiedades del evento
 |----|----|----|
@@ -31,17 +27,37 @@ En la siguiente tabla se resumen las diferencias entre `canvas_entry_properties`
 | **Comportamiento de Canvas Flow** | Puede hacer referencia a `canvas_entry_properties` en cualquier paso de un Canvas. Para el comportamiento posterior al lanzamiento, consulta [Editar lienzos después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | \- Puede hacer referencia a `event_properties` en el primer paso de Mensaje **después de** un paso de [Rutas de acción][3] en el que la acción realizada es un evento personalizado o un evento de compra. <br> \- No puede estar después de la ruta Todos los demás del paso Vías de acción. <br> \- Puede tener otros componentes que no sean del Lienzo de Mensajes entre las Rutas de Acción y los pasos de Mensajes. Si uno de estos componentes que no son Mensajes es un paso de Ruta de Acción, el usuario puede ir a través de la ruta Todos los demás de esa ruta de acción. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Tenga en cuenta que las propiedades de entrada de Canvas sólo están disponibles como referencia en Liquid. Para filtrar las propiedades dentro del lienzo, utilice [la segmentación de propiedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+{% details Detalles del editor Original Canvas %}
+A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este artículo está disponible como referencia cuando se utiliza `canvas_entry_properties` y `event_properties`para el flujo de trabajo original de Canvas.
 
-{% alert note %}
-Para los canales de mensajes in-app, `canvas_entry_properties` sólo puede referenciarse en Canvas Flow y en el editor Canvas original si tienes activadas [las propiedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) en el editor original como parte del acceso anticipado anterior. Sin embargo, `event_properties` no puede utilizarse para canales de mensajería dentro de la aplicación.
-{% endalert %}
+Para el editor de lienzo original y el flujo de lienzo, no se puede utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
+{% enddetails %}
 
-Cuando un paso de Ruta de acción contiene un activador "Envió de un mensaje SMS entrante" o "Envió de un mensaje WhatsApp entrante", los pasos posteriores de Canvas pueden incluir una propiedad SMS o WhatsApp Liquid. Esto refleja cómo funcionan las propiedades de eventos en el Canvas Flow. De este modo, puede aprovechar sus mensajes para guardar y consultar datos de origen sobre perfiles de usuario y mensajería conversacional.
+### Lo que hay que saber
+
+- Las propiedades de entrada del Canvas sólo están disponibles como referencia en Liquid. Para filtrar las propiedades dentro del lienzo, utilice [la segmentación de propiedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+- Para los canales de mensajería dentro de la aplicación, sólo se puede hacer referencia a `canvas_entry_properties` en un Canvas. `event_properties` no puede utilizarse para canales de mensajería dentro de la aplicación.
+- No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`. 
+- Cuando un paso de Ruta de acción contiene un activador "Envió de un mensaje SMS entrante" o "Envió de un mensaje WhatsApp entrante", los pasos posteriores de Canvas pueden incluir una propiedad SMS o WhatsApp Liquid. Esto refleja cómo funcionan las propiedades del evento en los Lienzos. De este modo, puede aprovechar sus mensajes para guardar y consultar datos de origen sobre perfiles de usuario y mensajería conversacional.
+
+### Marcas de tiempo para propiedades del evento
+
+Si utilizas `event_properties` en un Canvas, las marcas de tiempo se normalizan a UTC, con algunas excepciones que se detallan a continuación. Dado este comportamiento, Braze te recomienda encarecidamente que utilices un filtro de zona horaria Liquid como el del ejemplo siguiente para garantizar que tus mensajes se envían con tu [zona horaria preferida]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
+
+{% raw %}
+```liquid
+{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
+```
+{% endraw %}
+
+#### Excepciones
+
+- Las marcas de tiempo no se normalizan a UTC en el primer paso de un Canvas si ese paso es un paso de Mensaje.
+- Las marcas de tiempo no se normalizan a UTC en ningún paso de Mensaje que utilice el canal de mensajería dentro de la aplicación, independientemente de su orden en el Canvas.
 
 ## Caso de uso
 
-![][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Un paso de Ruta de acción seguido de un paso de Retraso y un paso de Mensaje para los usuarios que han añadido un artículo a su lista de deseos, y una ruta para todos los demás.][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Para entender mejor las diferencias entre `canvas_entry_properties` y `event_properties`, consideremos este escenario en el que los usuarios entrarán en un Canvas basado en acciones si realizan el evento personalizado "añadir artículo a la lista de deseos". 
 

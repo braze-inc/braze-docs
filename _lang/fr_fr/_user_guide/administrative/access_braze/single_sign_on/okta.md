@@ -24,19 +24,11 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 | RelayState API key | Pour activer l'identifiant IdP, sélectionnez **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver vos clés API sous **Paramètres** dans **Console Développeur** > **Paramètres API**.
-{% endalert %}
-
 ## Étape 1 : Configurer Braze
 
 ### Étape 1a : Accédez aux Paramètres de sécurité dans Braze
 
 Après que votre gestionnaire de compte a activé SAML SSO pour votre compte, allez dans **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et basculez la section SAML SSO sur **ACTIVÉ**.
-
-{% alert note %}
-Si vous utilisez l[a navigation plus ancienne]({{site.baseurl}}/navigation), sélectionnez l'icône de votre compte et allez dans **Paramètres de l'entreprise** > **Paramètres de sécurité** pour trouver la section SSO SAML.
-{% endalert %}
 
 ![Authentification unique (SSO) SAML Okta activée sur la page Paramètres de sécurité.][1]
 

@@ -16,7 +16,7 @@ Nous filtrons les données de nos campagnes de notification push et d’e-mail d
 
 ## Étape 1 : Intake et agrégation des Données d’événements
 
-Après avoir lancé des campagnes à l’aide de l’un de nos outils d’engagement (comme les Campagnes ou Canvas), nous suivons les données d’événements avec notre propre système et avec certains de nos partenaires d’e-mail. Certaines de ces données sont agrégées et affichées dans le tableau de bord, mais nous voulions creuser plus profond !
+Après avoir lancé des campagnes à l'aide de l'un de nos outils d'engagement (comme les campagnes ou Canvas), nous suivons les données de l'événement à l'aide de notre propre système ainsi que de certains de nos partenaires en matière d'e-mail. Certaines de ces données sont agrégées et affichées dans le tableau de bord, mais nous voulions creuser plus profond !
 
 ## Étape 2 : Envoi des données d’événement à un partenaire de stockage de données
 

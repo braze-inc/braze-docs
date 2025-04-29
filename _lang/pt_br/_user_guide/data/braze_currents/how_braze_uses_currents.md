@@ -16,7 +16,7 @@ Filtramos os dados de nossas campanhas de envio de e-mail e push em uma ferramen
 
 ## Etapa 1: Dados de eventos agregados e de admissão
 
-Depois de lançar campanhas usando qualquer uma de nossas ferramentas de engajamento (como campanhas ou Canva), rastreamos os dados do evento usando nosso próprio sistema e também alguns de nossos parceiros de e-mail. Alguns desses dados são agregados e mostrados no dashboard, mas estávamos interessados em nos aprofundar mais!
+Após o lançamento de campanhas usando qualquer uma de nossas ferramentas de engajamento (como campanhas ou Canva), rastreamos os dados do evento usando nosso próprio sistema, bem como alguns de nossos parceiros de e-mail. Alguns desses dados são agregados e mostrados no dashboard, mas estávamos interessados em nos aprofundar mais!
 
 ## Etapa 2: Enviar dados de eventos para um parceiro de armazenamento de dados
 

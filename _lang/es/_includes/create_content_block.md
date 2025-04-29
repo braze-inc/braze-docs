@@ -1,9 +1,5 @@
 1. Ve a **Plantillas** > **Bloques de contenido**. Haz clic en <i class="fas fa-plus"></i> **Crear bloque de contenido** y selecciona **Arrastrar y soltar bloque de contenido**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Interacción** > **Plantillas y medios** > **Biblioteca de bloques de contenido**.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

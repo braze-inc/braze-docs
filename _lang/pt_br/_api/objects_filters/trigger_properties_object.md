@@ -12,7 +12,9 @@ tool: Campaigns
 
 > Ao usar um dos pontos de extremidade para enviar uma campanha com entrega disparada por API, você pode fornecer um mapa de chaves e valores para personalizar sua mensagem.
 
-Se você fizer uma solicitação de API que contenha um objeto em `trigger_properties`, os valores desse objeto poderão ser referenciados em seu modelo de mensagem no namespace `api_trigger_properties`. Por exemplo, uma solicitação como esta poderia adicionar a palavra `"shoes"` a uma mensagem, acrescentando {% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %}.
+Se você fizer uma solicitação de API que contenha um objeto em `trigger_properties`, os valores desse objeto poderão ser referenciados em seu modelo de mensagem no namespace `api_trigger_properties`. Por exemplo, uma solicitação como esta poderia adicionar a palavra `"shoes"` a uma mensagem, acrescentando {% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %}. 
+
+Note que, embora as propriedades do disparador possam ser modeladas em mensagens, elas não são armazenadas automaticamente no perfil do usuário por padrão.
 
 {% alert note %}
 O objeto `trigger_properties` e a sintaxe {% raw %}`api_trigger_properties.${product_name}`{% endraw %} são compatíveis apenas com campanhas. Para personalizar o envio de mensagens com chaves e valores de uma solicitação de disparo de API para o Canvas, use o [objeto de propriedades de entrada do Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). O objeto `trigger_properties` tem um limite máximo de tamanho de 50 KB.

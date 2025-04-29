@@ -17,6 +17,7 @@ Avant cette fonctionnalité, les propriétés d’entrée pouvaient être utilis
 ## Utilisation des propriétés d’entrées
 
 Les propriétés d’entrées peuvent être utilisées dans des Canvas par événement et déclenchées par une API. Ces propriétés d’entrées sont définies lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API. Reportez-vous aux articles suivants pour en savoir plus :
+
 - [Objet Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objet de propriétés de l’événement]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objet Achat]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

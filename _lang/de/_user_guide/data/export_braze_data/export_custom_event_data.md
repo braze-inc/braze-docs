@@ -14,10 +14,6 @@ tool: Reports
 
 Sie finden den **Bericht Angepasste Events** unter **Analytics**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie die Berichtsseite **Angepasste Events** unter **Daten**.
-{% endalert %}
-
 ![Angepasste Events][14]
 
 Sie können die folgenden CSV-Dateien exportieren:

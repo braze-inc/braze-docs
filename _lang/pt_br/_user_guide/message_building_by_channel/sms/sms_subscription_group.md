@@ -30,10 +30,6 @@ Há dois estados de inscrição para usuários de SMS: `subscribed` e `unsubscri
 - **Tratada automaticamente na aceitação/exclusão do usuário:** Quando os usuários enviam uma mensagem de texto com a opção de aceitação ou aceitação [palavra-chave][7]], a Braze define e atualiza automaticamente o estado da inscrição dos usuários.
 - **Importação de usuário**: Os usuários podem ser adicionados a grupos de inscrições para e-mail ou SMS por meio da **importação de usuários**. Ao atualizar o status do grupo de inscrições, você deve ter estas duas colunas em seu CSV: `subscription_group_id` e `subscription_state`. Para saber mais, consulte [Importação de usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página se chama **Importação de usuário** e pode ser encontrada em **Usuários**.
-{% endalert %}
-
 Quando um número de telefone é atualizado em um perfil de usuário, o novo número de telefone herda o status do grupo de inscrições do usuário. Se o número de telefone for atualizado para um número que já existe no Braze, o status da inscrição desse número de telefone existente será herdado.
 
 Por exemplo, se o usuário A tiver um número de telefone inscrito em vários grupos de inscrições e esse número de telefone for adicionado ao usuário B, o usuário B será inscrito nos mesmos grupos de inscrições. Para evitar que um usuário herde as inscrições existentes, é possível redefinir os grupos de inscrições do número antigo via API REST sempre que um usuário alterar seu número. Se vários usuários compartilharem esse número de telefone, todos eles terão a inscrição cancelada.

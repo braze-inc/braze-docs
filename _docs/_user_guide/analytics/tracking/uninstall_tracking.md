@@ -37,13 +37,13 @@ To configure uninstall tracking for your iOS application, use a [utility method]
 
 ## Filtering segments by uninstalls
 
-The **Uninstalled** filter on the **Segments** page selects users who uninstalled your app within a time range. Because it's difficult to determine the exact time of an uninstall, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
+The **Uninstalled** filter selects users who uninstalled your app within a time range. Because it's difficult to determine the exact time of an uninstall, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
+
+Daily statistics on uninstalls are on the **Home** page. 
 
 ![Uninstall segment.][5]
 
-### App-level analysis
-
-Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then, scroll down to the **Performance Over Time** graph and do the following:
+The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then, scroll down to the **Performance Over Time** graph and do the following:
 
 1. In the **Statistics For** dropdown, select **Uninstalls**.
 2. In the **Breakdown** dropdown, select **By segment**.
@@ -52,8 +52,6 @@ Daily statistics on uninstalls are on the **Home** page. The graph can be broken
 {% alert note %}
 Apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
 {% endalert %}
-
-![Uninstall graph selection.][2]
 
 ## Uninstall tracking for campaigns
 
@@ -83,7 +81,9 @@ If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging 
 
 ### Why are the number of app uninstalls different from what's in APNs?
 
-The difference is expected. APNs will start returning a 410 status for these tokens on a fuzzy schedule.
+The difference is expected. 
+
+Apple uses a randomized schedule to delay reporting when a push token becomes invalid, meaning that even after a user uninstalls an app, APNs may continue to return successful responses to push notifications for a period of time. This delay is intentional and designed to protect user privacy. No bounce or failure will be reported until APNs returns a `410` status for an invalid token.
 
 [1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
 [2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"

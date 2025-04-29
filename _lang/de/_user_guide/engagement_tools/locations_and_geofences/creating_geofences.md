@@ -19,10 +19,6 @@ Sie können auf dem Braze-Dashboard Geofences definieren und diese verwenden, um
 
 Verwalten Sie Geofences unter **Publikum** > **Standorte**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Locations** unter **Engagement**.
-{% endalert %}
-
 Geofences sind in Geofence-Sets organisiert - eine Gruppe von Geofences, die verwendet werden können, um Nutzer auf der gesamten Plattform zu segmentieren oder einzubinden. Jedes Geofence-Set kann maximal 10.000 Geofences enthalten.
 
 Sie können eine unbegrenzte Anzahl von Geofences auf dem Dashboard erstellen oder hochladen, so dass Ihr Marketingteam Geofence-Sets und Kampagnen einrichten kann, ohne die Anzahl der Geofences berechnen zu müssen. Braze wird die Geofences, die es für jede:n einzelne:n Nutzer:in trackt, dynamisch neu synchronisieren, um sicherzustellen, dass die für sie:ihn relevantesten Geofences immer verfügbar sind.

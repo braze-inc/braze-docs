@@ -9,10 +9,6 @@ Das Dashboard **Nachrichtenverwendung** ist in drei Bereiche unterteilt:
 
 Rufen Sie das Dashboard auf, indem Sie zu **Einstellungen** > **Abrechnung** > **Nachrichtennutzung** gehen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie diese Seite finden, indem Sie auf Ihr Kontosymbol und dann auf **Abonnements und Nutzung** klicken.
-{% endalert %}
-
 ## Übersicht über die Verwendung von Nachrichtenguthaben
 
 **Die Übersicht über die Nutzung von Nachrichten-Credits** bietet einen Überblick über die Nutzung aller Kanäle, die Credits verwenden. Sie können sehen, wie es um Ihre Credit-Gesamtmenge bestellt ist, und finden Details zu Ihrem aktiven Vertrag und Ihrer Vertragslaufzeit.

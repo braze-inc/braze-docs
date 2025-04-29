@@ -55,7 +55,7 @@ Die folgende Tabelle beschreibt die vier verschiedenen HTTP-Methoden, die Sie in
 | HTTP-Methode | Beschreibung |
 | ----------- | ----------- |
 | POST | Diese Methode schreibt neue Informationen auf den Empfangsserver. Ein gängiges Beispiel für die POST-Methode in einer realen Anwendung ist ein [Kontaktformular](https://www.braze.com/company/contact) auf einer Website. Alle Informationen, die Sie in das Formular eingeben, werden Teil einer Anfrage und werden an eine:n Empfänger:in gesendet. Dies ist die gängigste Methode, um Daten zu versenden.
-| GET | Diese Methode ruft vorhandene Informationen ab, anstatt neue Informationen zu schreiben. Dies ist die gebräuchlichste Methode, um Daten von einem Server abzufragen. Nehmen wir zum Beispiel den [Endpunkt`/segments/list` ]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Wenn Sie eine GET-Anfrage stellen, wird eine Liste Ihrer Segmente zurückgegeben.
+| GET | Diese Methode ruft vorhandene Informationen ab, anstatt neue Informationen zu schreiben. Per Definition unterstützt eine GET-Anfrage keinen Anfragetext. Dies ist die gebräuchlichste Methode, um Daten von einem Server abzufragen. Nehmen wir zum Beispiel den [Endpunkt`/segments/list` ]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Wenn Sie eine GET-Anfrage stellen, wird eine Liste Ihrer Segmente zurückgegeben.
 | PUT | Diese Methode aktualisiert die Informationen des Endpunkts und ersetzt alle vorhandenen Informationen durch die Angaben im Anfragetext. 
 | LÖSCHEN | Diese Methode löscht die Ressource in der HTTP-URL. 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

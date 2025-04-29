@@ -100,27 +100,34 @@ APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endr
 
 指定された`:body`の後に`key1=value1&key2=value2&...`形式のクエリ文字列またはキャプチャされた値への参照を指定することで、オプションでPOSTボディを提供できます。Content-Typeのデフォルトは`application/x-www-form-urlencoded`です。`:content_type application/json`を指定し、`key1=value1&key2=value2`のようなフォームURLエンコードされた本文を提供すると、Brazeは送信前に自動的に本文をJSONエンコードします。
 
+また、接続されたコンテンツは、デフォルトではPOST 呼び出しをキャッシュしません。この動作を更新するには、`:cache_max_age` をConnected Content POST コールに追加します。
+
 #### デフォルトのコンテンツタイプ
+
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
 ```
 #### Application/JSON Content-Type
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
 ### JSONボディの提供
+
 独自のJSONボディを提供したい場合、スペースがない場合はインラインで記述できます。体にスペースがある場合は、割り当てまたはキャプチャのステートメントを使用する必要があります。つまり、以下の 3 つのいずれも使用できます。
 
 {% raw %}
 ##### インライン: スペースがない場合
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
 ##### capture ステートメント内の本文: スペースがある場合
+
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -148,8 +155,10 @@ APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endr
 %}
 ```
 {% endraw %}
+
 {% raw %}
 ##### 代入文の本文：スペースが許可されている
+
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
@@ -173,48 +182,6 @@ APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endr
 このキーは、有効な JSON オブジェクトと `2XX` 応答をエンドポイントが返す場合にのみ、コネクテッドコンテンツオブジェクトに自動的に追加されます。エンドポイントが配列や他の型を返す場合、そのキーは応答に自動的に設定されることはありません。
 {% endalert %}
 
-## 設定可能なキャッシュ{#configurable-caching}
-
-コネクテッドコンテンツの応答は、異なるキャンペーンやメッセージにわたって (同じワークスペース内で) キャッシュして、送信速度を最適化できます。
-
-Braze は、コネクテッドコンテンツの応答を永続的にログに記録または格納しません。コネクテッドコンテンツのコール応答をLiquid 変数として格納することを明示的に選択した場合、Braze では、Liquid 変数をレンダリングしてメッセージを送信するために、これがインメモリでのみ (つまり短い期間の経過後に削除される一時的なメモリに) 格納されます。キャッシュを完全に防止するには、`:no_cache` を指定できます。これにより、ネットワークトラフィックが増加する可能性があります。システムの正常性のトラブルシューティングと監視に役立つように、Braze は、失敗した接続コンテンツコール(404s や429s など) をログに記録することもできます。これらのログは最大30 日間保持されます。
-
-### キャッシュサイズの制限
-
-コネクテッドコンテンツの応答本文は 1 MBを超えてはなりません。超えた場合はキャッシュされません。
-
-### キャッシュ時間
-
-コネクテッドコンテンツは、GETエンドポイントから返される値を最低5分間キャッシュします。キャッシュ時間が指定されていない場合、デフォルトのキャッシュ時間は5分です。 
-
-コネクテッドコンテンツのキャッシュ時間は、次の例に示すように `:cache_max_age` で長く構成できます。最小キャッシュ時間は5分で、最大キャッシュ時間は4時間です。コネクテッドコンテンツデータは、Memcachedなどの揮発性キャッシュシステムを使用してインメモリでキャッシュされます。その結果、指定されたキャッシュ時間に関係なく、コネクテッドコンテンツデータは指定された時間よりも早くBrazeのインメモリキャッシュから削除される可能性があります。これは、キャッシュ期間が提案であり、実際にBrazeによってデータがキャッシュされる期間を保証するものではないことを意味します。また、指定されたキャッシュ期間で予想されるよりも多くのコネクテッドコンテンツリクエストが発生する可能性があります。
-
-デフォルトでは、コネクテッドコンテンツはPOST呼び出しをキャッシュしません。`:cache_max_age` をコネクテッドコンテンツの POST 呼び出しに追加することで、この動作を変更できます。
-
-#### 指定秒間のキャッシュ
-
-この例は900秒（または15分）キャッシュされます。
-{% raw %}
-```
-{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
-```
-{% endraw %}
-
-#### キャッシュバスティング
-
-コネクテッドコンテンツによる、GET リクエストからの戻り値のキャッシュを防ぐには、`:no_cache` 構成を使用します。ただし、Braze 内部のホストからの応答は引き続きキャッシュされます。
-
-{% raw %}
-```js
-{% connected_content https://example.com/webservice.json :no_cache %}
-```
-{% endraw %}
-
-{% alert important %}
-このオプションを使用する前に、指定したコネクテッドコンテンツのエンドポイントが集中的な大量のトラフィックを処理できることを確認してください。そうしないと、Brazeがすべてのメッセージについてコネクテッドコンテンツのリクエストを行うため、送信遅延の増加 (リクエストから応答までの遅延や時間間隔の増加) が発生する可能性があります。
-{% endalert %}
-
-`POST` では、キャッシュを停止する必要はありません。Braze は `POST` リクエストの結果を決してキャッシュしないためです。
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %}「コネクテッドコンテンツプッシュ使用例」

@@ -2,14 +2,18 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "この参考記事では、BrazeとYotpoのパートナーシップについて概説している。Yotpoはeコマース・マーケティング・プラットフォームのリーディングカンパニーで、何千もの先進的なブランドが消費者直販の成長を加速させるのを支援している。"
+description: "この参考記事では、何千ものフォワード・シンキング・ブランドがダイレクト・トゥ・コンシューマの成長を加速させるのに役立つ、主要なeコマース・マーケティング・プラットフォームであるBrazeとYotpoのパートナーシップについて概説する。"
 page_type: partner
 search_tag: Partner
 ---
 
 # Yotpo
 
-> [Yotpo](https://www.yotpo.com/) は大手 e コマースマーケティングプラットフォームであり、何千もの先進的なブランドが消費者直販の成長を加速できるよう支援しています。Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
+> eコマース・マーケティングの主要プラットフォームである[Yotpo](https://www.yotpo.com/)は、何千ものフォワード・シンキング・ブランドがダイレクト・トゥ・コンシューマの成長を加速させるのを助けている。Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
+
+_この統合はYotpoによって維持されます。_
+
+## 統合について
 
 BrazeとYotpoの統合により、Braze内のEメールやその他のコミュニケーションチャンネルで、商品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツ（UGC）を動的に取得し、表示することができる。また、顧客レベルのロイヤルティデータをメールやその他のコミュニケーション手段に組み込むことで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができます。
 
@@ -65,7 +69,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 ![YOTPO-API-KEYをあなたのYotpo Reviews APIキーに置き換える。][2]
 
@@ -88,7 +92,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 メールエディターのスニペットはこんな感じになる：
 
@@ -117,7 +121,7 @@ Image return NULL
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、`product_id` ブレーズの製品ID がYotpo の製品ID (通常はeCommerce の親製品ID) と一致している必要があります。
 
 スニペットは次のようになります。
 
@@ -170,6 +174,7 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 {% alert note %}
 Yotpoはこのガイドに記載されている以上のカスタム要件には対応していない。
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/yotpo/image1.png %}
 [2]: {% image_buster /assets/img/yotpo/image2.png %}

@@ -1,22 +1,22 @@
 ---
-nav_title: "GET: Kampagnendetails exportieren"
-article_title: "GET: Kampagnendetails exportieren"
+nav_title: "GET: Details zur Kampagne exportieren"
+article_title: "GET: Details zur Kampagne exportieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Kampagnendetails exportieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export von Kampagnendetails Braze."
 
 ---
 {% api %}
 # Details zur Kampagne exportieren
 {% apimethod get %}
-/campaigns/details
+/kampagnen/details
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um relevante Informationen zu einer bestimmten Kampagne abzurufen, die durch die `campaign_id` identifiziert werden kann.
+> Verwenden Sie diesen Endpunkt, um relevante Informationen zu einer bestimmten Kampagne abzurufen, die durch den Bezeichner `campaign_id` identifiziert werden kann.
 
-Wenn Sie Canvas-Daten abrufen möchten, wenden Sie sich an den Endpunkt [Canvas-Details exportieren]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Wenn Sie Canvas-Daten abrufen möchten, referenzieren Sie auf den Endpunkt [Canvas-Details exportieren]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
@@ -24,15 +24,15 @@ Wenn Sie Canvas-Daten abrufen möchten, wenden Sie sich an den Endpunkt [Canvas-
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.details`.
 
-## Preisgrenze
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Erforderlich | String | Siehe [API-Kennung der Kampagne]({{site.baseurl}}/api/identifier_types/).<br><br> Die `campaign_id` für API-Kampagnen finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite **Kampagnendetails** in Ihrem Dashboard; oder Sie können den [Endpunkt Kampagnenliste exportieren](#campaign-list-endpoint) verwenden. |
+| `campaign_id` | Erforderlich | String | Siehe [API-Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/).<br><br> Die `campaign_id` für API-Kampagnen finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite **Kampagnendetails** in Ihrem Dashboard; oder Sie können den [Endpunkt Liste der Kampagnen exportieren](#campaign-list-endpoint) verwenden. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -75,9 +75,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Nachrichten nach Kanal
 
-Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden finden Sie Beispielantworten für jeden Kanal:
+Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden finden Sie Beispielantworten auf Nachrichten für die einzelnen Kanäle:
 
-#### Drücken Sie
+#### Push
 
 ```json
 {
@@ -138,7 +138,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-#### Inhalt Karten
+#### Content-Cards
 
 ```json
 {
@@ -174,7 +174,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 
 #### WhatsApp
 
-##### Vorlage Nachrichten
+##### Template Nachrichten
 
 ```json
 {
@@ -189,7 +189,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-##### Antwort-Nachrichten
+##### Responsive Nachrichten
 
 ```json
 {
@@ -213,11 +213,11 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-### Verhalten bei der Konvertierung
+### Verhalten bei Konversion
 
-Das Array `conversion_behaviors` enthält Informationen über jedes für die Kampagne festgelegte Conversion-Event-Verhalten. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge. Zum Beispiel ist Konvertierungsereignis A das erste Element im Array, Konvertierungsereignis B das zweite usw. Im Folgenden finden Sie Beispiele für das Verhalten bei Konvertierungsereignissen:
+Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-Event-Verhalten, das für die Kampagne festgelegt wurde. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge. Zum Beispiel wird Konversions-Event A der erste Artikel im Array sein, Konversions-Event B der zweite usw. Im Folgenden finden Sie Beispiele für das Verhalten bei Konversions-Events:
 
-#### Klickt auf E-Mail
+#### Klicks auf E-Mail
 
 ```json
 {
@@ -226,7 +226,7 @@ Das Array `conversion_behaviors` enthält Informationen über jedes für die Kam
 }
 ```
 
-#### Öffnet E-Mail
+#### Öffnet eine E-Mail
 
 ```json
 {
@@ -254,7 +254,7 @@ Das Array `conversion_behaviors` enthält Informationen über jedes für die Kam
 }
 ```
 
-#### Führt ein benutzerdefiniertes Ereignis aus
+#### Führt angepasste Events durch
 
 ```json
 {
@@ -264,7 +264,7 @@ Das Array `conversion_behaviors` enthält Informationen über jedes für die Kam
 }
 ```
 
-#### Upgrades App
+#### Upgraden Sie die App
 
 ```json
 {
@@ -274,7 +274,7 @@ Das Array `conversion_behaviors` enthält Informationen über jedes für die Kam
 }
 ```
 
-#### Verwendet App
+#### Nutzt die App
 
 ```json
 {
@@ -285,7 +285,7 @@ Das Array `conversion_behaviors` enthält Informationen über jedes für die Kam
 ```
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -27,7 +27,7 @@ El SDK (kit de desarrollo de software) de Braze es la manera en que enviamos y o
 
 * Sus [claves API]({{site.baseurl}}/api/api_key/)
 * El [punto final de tu SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze ya no proporciona puntos finales personalizados, así que utiliza los puntos finales SDK predefinidos. Si se le ha proporcionado un punto final personalizado preexistente, aquí puede encontrar los pasos de configuración necesarios para la integración de [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
+  * Braze ya no proporciona puntos finales personalizados, así que utiliza los puntos finales SDK predefinidos. Si se le ha proporcionado un punto final personalizado preexistente, aquí puede encontrar los pasos de configuración necesarios para la integración de [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
 
 Puedes darles esta información directamente o darles acceso a Braze creándoles una cuenta. 
 
@@ -74,7 +74,7 @@ Si quieres cosas como el lanzamiento desencadenado por API y el contenido conect
 
 ### Paso 5: Ambos realizan el control de calidad de tu aplicación
 
-Colabora con tu ingeniero para asegurarte de que todo funciona correctamente. Envía [mensajes de prueba]({{site.baseurl}}/developer_guide/sending_test_messages/), utiliza nuestras [aplicaciones de prueba para Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) y [aplicaciones de prueba para iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), ¡comprueba todas las casillas antes de empezar a enviar!
+Colabora con tu ingeniero para asegurarte de que todo funciona correctamente. Envía [mensajes de prueba]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), utiliza nuestras [aplicaciones de prueba para Android]({{site.baseurl}}/developer_guide/references/?tab=android) y [aplicaciones de prueba para iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), ¡comprueba todas las casillas antes de empezar a enviar!
 
 Incluso tenemos instrucciones específicas para [probar su integración con Android o FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) y para probar [el push para iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 

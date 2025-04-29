@@ -1,9 +1,5 @@
 1. Gehen Sie zu **Vorlagen** > **Inhaltsblöcke**. Klicken Sie auf <i class="fas fa-plus"></i> **Inhaltsblock erstellen** und wählen Sie **Inhaltsblock ziehen und ablegen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **Inhaltsblock-Bibliothek**.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

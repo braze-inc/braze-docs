@@ -19,10 +19,6 @@ search_rank: 1
 
 Acesse **Modelos** > **Modelos de e-mail**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Modelos e mídias **> **Modelos de e-mail.**
-{% endalert %}
-
 ## Etapa 2: Selecione sua experiência de edição 
 
 Selecione entre o **editor de arrastar e soltar** ou **o editor de HTML** para sua experiência de edição. 

@@ -1,35 +1,35 @@
 ---
-nav_title: "POST: Sync auslösen"
-article_title: "POST: Sync auslösen"
+nav_title: "POST: Synchronsignal triggern"
+article_title: "POST: Synchronsignal triggern"
 search_tag: Endpoint
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten zum Trigger sync Braze Endpunkt."
+description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Trigger sync Braze."
 
 ---
 {% api %}
-# Eine Synchronisation auslösen
+# Eine Synchronisation triggern
 {% apimethod post %}
 /cdi/integrations/{integration_id}/sync
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Synchronisierung für eine bestimmte Integration auszulösen.
+> Verwenden Sie diesen Endpunkt, um eine Synchronisierung für eine bestimmte Integration zu triggern.
 
 {% alert note %}
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `cdi.integration_sync` erstellen.
 {% endalert %}
 
-## Preisgrenze
+## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpoint='cdi job sync' %}
+{% multi_lang_include rate_limits.md endpunkt='cdi job sync' %}
 
 ## Pfad-Parameter
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung |
 |---|---|---|---|
-| `integration_id` | Erforderlich | String | Integrations-ID. |
+| `integration_id` | Erforderlich | String | Integration ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -44,7 +44,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben:
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben:
 
 ```json
 {
@@ -52,17 +52,17 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben:
 }
 ```
 
-## Fehlersuche
+## Fehlerbehebung
 
 In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehler und die entsprechenden Schritte zur Fehlerbehebung.
 
-| Fehler | Fehlersuche |
+| Fehler | Fehlerbehebung |
 | --- | --- |
 | `400 Invalid integration ID` | Prüfen Sie, ob Ihre `integration_id` gültig ist. |
-| `404 Integration not found` | Es existiert keine Integration für die angegebene Integrations-ID. Stellen Sie sicher, dass Ihre Integrations-ID gültig ist. |
-| `429 Another job is in progress` | Derzeit läuft eine Synchronisierung für diese Integration. Versuchen Sie es erneut, nachdem die Synchronisierung abgeschlossen ist. |
+| `404 Integration not found` | Für die angegebene Integration ID existiert keine Integration. Vergewissern Sie sich, dass Ihre Integration ID gültig ist. |
+| `429 Another job is in progress` | Für diese Integration wird derzeit eine Synchronisierung durchgeführt. Versuchen Sie es erneut, nachdem die Synchronisierung abgeschlossen ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Fehlermeldungen finden Sie unter [Schwerwiegende Fehler und Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}

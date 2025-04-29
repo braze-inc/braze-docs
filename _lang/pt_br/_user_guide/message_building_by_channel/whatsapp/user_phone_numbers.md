@@ -38,7 +38,7 @@ Você pode ver as diferenças entre a formatação de números na localização 
 | País | Local | Código do país | `E.164` |
 |---|---|---|---|
 | EUA | `4155552671` | 1 | `+14155552671` |
-| REINO UNIDO | `2071838750` | 44 | `+442071838750` |
+| REINO UNIDO | `02071838750` | 44 | `+442071838750` |
 | Brasil | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
 

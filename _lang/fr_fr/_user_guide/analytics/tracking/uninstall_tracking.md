@@ -29,10 +29,6 @@ Braze collecte automatiquement des informations basiques sur la désinstallation
 
 Vous pouvez activer le suivi des désinstallations sur la page **Paramètres des applications**, sous **Paramètres**, pour chaque application que vous souhaitez suivre.
 
-{% alert note %}
-Si vous utilisez l'ancienne navigation, l’option **Paramètres des applications** correspond à **Paramètres**, elle est située sous **Gérer les paramètres**.
-{% endalert %}
-
 Lorsque le suivi des désinstallations est activé pour une application, des messages push en arrière-plan seront envoyés chaque nuit aux utilisateurs qui n'ont pas enregistré de session ou reçu de push depuis 24 heures.
 
 ### Configuration

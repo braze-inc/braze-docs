@@ -40,10 +40,6 @@ A atualização das pontuações de risco do público de previsão pode ser feit
 
 A página **Previsões** está localizada na seção **Análises de dados**. Para obter acesso total, entre em contato com o gerente da sua conta.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **as previsões** em **Engajamento**.
-{% endalert %}
-
 Antes de comprar esse recurso, ele está disponível em modo de prévia. Isso permitirá ver uma previsão de churn de demonstração com dados sintéticos e criar um modelo de previsão de churn com base nos dados de usuários de cada vez. Essa prévia não permitirá o direcionamento de usuários para envio de mensagens de acordo com o risco de churn e não será atualizada regularmente após a criação.
 
 Com a prévia, você também pode editar e reconstruir sua previsão ou arquivá-la e criar outras para testar a [qualidade de previsão]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) esperada de diferentes [definições]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).

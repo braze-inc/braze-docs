@@ -107,7 +107,7 @@ Para saber mais sobre as opções de notificação específicas da plataforma, c
 
 Adicione textos em vários idiomas usando o botão **Adicionar idiomas**. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para obter a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
 
-Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Título e corpo
 
@@ -124,7 +124,7 @@ Comece a digitar na caixa de mensagem e veja uma prévia na caixa de visualizaç
 Para tornar seu push personalizado e direcionado, você pode incluir o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert important %}
-**Não é possível** enviar uma mensagem push do Android sem um título; no entanto, você pode inserir um único espaço. Lembre-se de que, se sua mensagem contiver apenas um espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, consulte [Notificações por push silenciosas]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
+**Não é possível** enviar uma mensagem push do Android sem um título; no entanto, você pode inserir um único espaço. Lembre-se de que, se sua mensagem contiver apenas um espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, consulte [Notificações por push silenciosas]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -220,7 +220,7 @@ Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usu�
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 {% endtab %}
 

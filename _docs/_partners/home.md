@@ -107,7 +107,7 @@ valid_partner_list:
 - name: Playable
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
-  url: /docs/partners/message_personalization/dynamic_content/movable_ink/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink
 - name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
@@ -175,7 +175,7 @@ valid_partner_list:
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
 - name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/offerfit/
+  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
@@ -205,7 +205,7 @@ valid_partner_list:
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
 - name: Dynamic Yield
-  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: ThoughtSpot
@@ -217,7 +217,7 @@ valid_partner_list:
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
-  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Sisu
@@ -337,11 +337,13 @@ valid_partner_list:
 - name: TikTok
   url: /docs/partners/canvas_steps/tiktok_audience_sync/
 - name: Trustpilot
-  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+  url: /docs/partners/trustpilot/
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessionM
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Just Words
+  url: /docs/partners/just_words/
 ---

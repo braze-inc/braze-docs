@@ -43,6 +43,6 @@ RudderStack に送信されるすべてのイベントには、ユーザーの`e
 
 ## 統合の詳細
 
-Braze は、[Currents のイベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)に記載されているすべてのデータを RudderStack にエクスポートする操作をサポートしています。
+Braze は、[Currents のイベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/)に記載されているすべてのデータを RudderStack にエクスポートする操作をサポートしています。
 
 エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。

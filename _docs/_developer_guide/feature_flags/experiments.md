@@ -56,7 +56,7 @@ To edit, add, or remove additional default properties, edit the feature flag its
 
 ### Step 4: Choose users to target
 
-Use one of your segments or filters to choose your [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
+Use one of your segments or filters to choose your [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
 
 ![The 'Target' page in a feature flag experiment with 'Received Feature Flag Variant' highlighted in the filter group search bar.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 

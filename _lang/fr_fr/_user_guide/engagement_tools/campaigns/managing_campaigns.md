@@ -12,25 +12,28 @@ description: "Cette page d’accueil couvre la gestion des campagnes. Ici, vous 
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Approuver des campagnes
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
-    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "Copie d'un espace de travail à l'autre"
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
     image: /assets/img/braze_icons/copy-04.svg
   - name: Modifier votre campagne après son lancement
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Archiver des campagnes
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/
-    image: /assets/img/braze_icons/archive.svg
-  - name: Dupliquer des campagnes
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Alertes de campagne
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
     image: /assets/img/braze_icons/bell-03.svg
   - name: Recherche de campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
     image: /assets/img/braze_icons/search-refraction.svg
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: Flux de travail d’approbation
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Archiver des campagnes
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
+    image: /assets/img/braze_icons/archive.svg
+  - name: Dupliquer des campagnes
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    image: /assets/img/braze_icons/copy-04.svg
 ---

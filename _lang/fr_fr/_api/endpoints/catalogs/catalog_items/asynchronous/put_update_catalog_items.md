@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT : Mise à jour de plusieurs éléments du catalogue"
-article_title: "PUT : Mise à jour de plusieurs éléments du catalogue"
+nav_title: "PUT : Remplacer plusieurs articles du catalogue"
+article_title: "PUT : Remplacer plusieurs articles du catalogue"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Mettre à jour plusieurs produits du catalogue."
+description: "Cet article présente les détails du point de terminaison Remplacer plusieurs éléments de catalogue de Braze."
 
 ---
 {% api %}
-# Mettre à jour les produits du catalogue
+# Remplacer les articles du catalogue
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour plusieurs produits de votre catalogue.
+> Utilisez cet endpoint pour remplacer plusieurs éléments dans votre catalogue.
 
 Si un élément du catalogue n'existe pas, cet endpoint créera l'élément dans votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 produits du catalogue. Cet endpoint est asynchrone.
 

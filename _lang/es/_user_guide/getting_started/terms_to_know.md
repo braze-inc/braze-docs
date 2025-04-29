@@ -51,7 +51,7 @@ glossaries:
   - name: Punto de conexión
     description: "En la API de mensajería Braze se utiliza un canal de comunicación de extremo a extremo, también conocido como <a href=\"https://www.braze.com/docs/api/endpoints/\">punto final</a> de API, para enviar y programar mensajes."
   - name: Acontecimientos excepcionales
-    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">Los eventos de excepción</a> se producen cuando un usuario ha alcanzado el objetivo deseado y no recibe un mensaje de activación. De este modo, el mensaje desencadenado sigue siendo relevante para el usuario."
+    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">Los eventos de excepción</a> se producen cuando un usuario ha alcanzado el objetivo deseado y no recibe un mensaje de activación. De este modo, el mensaje desencadenado sigue siendo relevante para el usuario."
   - name: Limitación de frecuencia
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">La limitación de la frecuencia</a> le permite gestionar la comunicación sin abrumar a su audiencia. Es un límite automatizado de mensajes para evitar que los usuarios reciban demasiadas comunicaciones en poco tiempo."
   - name: HIPAA
