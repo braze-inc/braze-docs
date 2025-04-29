@@ -51,16 +51,15 @@ Questions? Contact Just Words on their [booking page](https://www.justwords.ai/b
 
 ### Step 3: Use Just Words in your Braze content
 
-Just Words works with Canvases and campaigns by using Connected Content.
-
-#### Canvas
-
-Each email step in the Canvas should correspond to a unique Just Words template.
+Just Words works with Canvases and campaigns by using Connected Content. If you're creating a Canvas, each email step should correspond to a unique Just Words template.
 
 #### Step 3.1: Set up your A/B test
 
-1. In a Canvas, select **Add Variant** > **Add Variant**, and add steps to each variant (like an email Message step).
-2. Split the audience traffic in half (make each variant 50%).
+{% tabs %}
+{% tab Canvas %}
+
+1. In a Canvas, select **Add Variant** > **Add Variant** until you have your desired number of variants, and add steps to each variant (like an email Message step).
+2. Split the audience traffic as desired. For example, if you have two variants, you might give each one 50%. Or, you could have two variants with 40% each and a control group with 20%. For more information about A/B tests for Canvases, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 3. In the composers for the Message steps that you want to use with Connected Content, paste in the Connected Content snippet from Just Words Console, such as the following snippet.
 
 {% raw %}
@@ -79,6 +78,31 @@ Each email step in the Canvas should correspond to a unique Just Words template.
 {% endraw %}
 
 ![Braze A/B test Canvas setup.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% tab Campaign %}
+
+1. In the **Compose Messages** step of your campaign, create two variants.
+2. In the **Target Audience** step, go to the **A/B Testing** section and modify the percentages of users who will receive each of your variants (and your optional control group). You can further customize your test by selecting an optimization option. For more information about A/B tests for campaigns, refer to [Creating multivariate and A/B tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/).
+3. In the message composer, paste in the Connected Content snippet from Just Words Console, such as the following snippet.
+
+{% raw %}
+```liquid
+{% connected_content https://worker.justwords.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
+  :save jw
+  :headers {
+    "x-api-key": <jw_api_key>,
+    "Content-Type": "application/json"
+  }
+%}
+
+{{jw.copy.vars.cta}}
+{% message_extras :key copy_id :value {{jw.copy.id }} %}
+```
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
 
 #### Step 3.2:  Add personalization with custom attributes (optional)
 
