@@ -102,7 +102,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### Como eles funcionam
 
-{% multi_lang_include anonymous_users/sobre_aliases_de_usuário.md %}
+{% multi_lang_include anonymous_users/about_user_aliases.md %}
 
 ### Definição de um alias de usuário
 
