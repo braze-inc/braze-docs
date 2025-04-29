@@ -34,7 +34,7 @@ L'ingestion de données dans le nuage peut synchroniser les données des sources
 ## Types de données prises en charge 
 
 L'ingestion de données dans le nuage prend en charge les types de données suivants : 
-- Attributs de l'utilisateur, y compris : 
+- Attributs de l'utilisateur, y compris :
    - Attributs personnalisés imbriqués
    - Tableaux d’objets
    - État des abonnements
@@ -386,10 +386,10 @@ Comme la demande 1 survient en premier, les attributs de l'utilisateur sont mis 
 - Taille : "Grand"
 
 Cependant, lorsque la demande 2 se produit, Braze commence par les valeurs d'attribut originales ("Vert" et "Grand"), puis met à jour les attributs de l'utilisateur de la manière suivante :
-- Couleur : "Vert"
+- Couleur : "Rouge"
 - Taille : "Moyen"
 
-Lorsque les demandes sont terminées, la demande 2 écrase la mise à jour de la demande 1. Pour cette raison, il est préférable d'échelonner vos mises à jour afin d'éviter que les demandes ne soient écrasées.
+Lorsque les demandes sont terminées, la demande 2 écrase la mise à jour de la demande 1\. Il est donc préférable d'échelonner vos mises à jour afin d'éviter que les demandes ne soient écrasées.
 
 ### Créer une chaîne de caractères JSON à partir d'une autre table
 
@@ -552,6 +552,9 @@ Vous pouvez inclure des attributs personnalisés imbriqués dans la colonne payl
 {% endtab %}
 {% tab Événement %}
 Pour synchroniser des événements, un nom d'événement est nécessaire. Le champ `time` doit être formaté comme une chaîne de caractères ISO 8601 ou dans le format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Si le champ `time` n'est pas présent, la valeur de la colonne `UPDATED_AT` est utilisée comme heure de l'événement. Les autres champs, y compris `app_id` et `properties`, sont facultatifs. 
+
+Notez que vous ne pouvez synchroniser qu'un seul événement par ligne.
+
 ```json
 {
     "app_id" : "your-app-id",
@@ -566,7 +569,9 @@ Pour synchroniser des événements, un nom d'événement est nécessaire. Le cha
 
 {% endtab %}
 {% tab Achat %}
-Pour synchroniser les événements d'achat, le nom de l'événement, `product_id`, `currency`, et `price` sont nécessaires. Le champ `time`, qui est facultatif, doit être formaté comme une chaîne de caractères ISO 8601 ou dans le format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Si le champ `time` n'est pas présent, la valeur de la colonne `UPDATED_AT` est utilisée comme heure de l'événement. Les autres champs, y compris `app_id`, `quantity` et `properties`, sont facultatifs. 
+Pour synchroniser les événements d'achat, `product_id`, `currency`, et `price` sont nécessaires. Le champ `time`, qui est facultatif, doit être formaté comme une chaîne de caractères ISO 8601 ou dans le format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Si le champ `time` n'est pas présent, la valeur de la colonne `UPDATED_AT` est utilisée comme heure de l'événement. Les autres champs, y compris `app_id`, `quantity` et `properties`, sont facultatifs.
+
+Notez que vous ne pouvez synchroniser qu'un seul événement d'achat par ligne.
 
 ```json
 {

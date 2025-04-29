@@ -195,10 +195,6 @@ La valeur `braze_id` peut être étiquetée comme `Appboy ID` dans les exportati
 
 ### Importation d'adresses e-mail et de numéros de téléphone
 
-{% alert important %}
-L'importation d'un fichier CSV contenant des adresses e-mail et des numéros de téléphone est actuellement en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
-{% endalert %}
-
 Vous pouvez omettre un ID externe ou un alias utilisateur et utiliser une adresse e-mail ou un numéro de téléphone pour importer des utilisateurs. Avant d'importer un fichier CSV contenant des adresses e-mail ou des numéros de téléphone, vérifiez les points suivants :
 
 - Vérifiez que vous n'avez pas d'ID externe ou d'aliasing de l'utilisateur pour ces profils dans votre fichier CSV. Si vous le faites, Braze utilisera en priorité l'ID externe ou l'alias d'utilisateur avant l'adresse e-mail pour identifier les profils.
@@ -297,22 +293,32 @@ Le filtre utilisé pour créer le segment sélectionne les utilisateurs qui ont 
 
 ## Résolution des problèmes
 
-### Lignes manquantes
+###  Le téléchargement s'est terminé avec des erreurs
 
-Plusieurs raisons peuvent expliquer pourquoi le nombre d’utilisateurs importés ne correspond pas forcément au total de lignes dans votre fichier CSV :
-
-- **ID externes en double :** Si des colonnes d'ID externe sont dupliquées, cela peut entraîner des lignes mal formées ou non importées, même si les lignes sont correctement formatées. Dans certains cas, cela n’indique pas une erreur spécifique. Vérifiez si des ID externes dupliqués sont présents dans votre CSV. Si c’est le cas, retirez les doublons et essayez de les charger à nouveau.
-- **Caractères accentués :** Votre CSV peut comporter des noms ou des attributs qui contiennent des accents. Assurez-vous que votre fichier est encodé UTF-8 pour éviter tout problème.
-
-### Ligne mal formée
+#### Ligne mal formée
 
 Il doit y avoir une ligne d'en-tête pour que les données soient correctement importées. Chaque ligne doit avoir le même nombre de cellules que la ligne d’en-tête. Les lignes qui ont plus, ou moins, de valeurs que la ligne d’en-tête seront exclues de l’importation. Les virgules dans une valeur seront interprétées comme un séparateur et peuvent conduire à cette erreur. De plus, toutes les données doivent être encodées en UTF-8.
 
 Si votre fichier CSV contient des lignes vides et importe moins de lignes que le nombre total de lignes du fichier CSV, cela n’indique pas forcément un problème puisque les lignes vides n’ont pas besoin d’être importées. Vérifiez le nombre de lignes correctement importées et assurez-vous qu’elles correspondent au nombre d’utilisateurs que vous essayez d’importer.
 
-### Plusieurs types de données
+#### Adresses e-mail non valides
 
-Braze s’attend à ce que toutes les valeurs d’une colonne soient du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut entraîneront des erreurs de segmentation.
+Braze a détecté des adresses e-mail cryptées non valides. Confirmez que toutes les adresses e-mail sont correctement cryptées avant de les importer dans Braze.
+
+- **Lors de la [mise à jour ou de l'importation d'adresses e-mail]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)** dans Braze, utilisez la valeur hachée de l'e-mail chaque fois qu'un e-mail est inclus. Ces valeurs d'e-mail de hachage sont fournies par votre équipe interne. 
+- **Lors de la création d'un nouvel utilisateur**, vous devez ajouter `email_encrypted` avec la valeur de l'e-mail crypté de l'utilisateur. Sinon, l'utilisateur ne sera pas créé. De même, si vous ajoutez une adresse e-mail à un utilisateur existant qui n'a pas d'e-mail, vous devez ajouter `email_encrypted`. Sinon, l'utilisateur ne sera pas mis à jour.
+
+### Lignes manquantes
+
+Plusieurs raisons peuvent expliquer pourquoi le nombre d’utilisateurs importés ne correspond pas forcément au total de lignes dans votre fichier CSV :
+
+- **Dupliquer des ID externes, des alias d'utilisateurs, des ID Braze, des adresses e-mail ou des numéros de téléphone :** Si des colonnes d'ID externe sont dupliquées, cela peut entraîner des lignes mal formées ou non importées, même si les lignes sont correctement formatées. Dans certains cas, il se peut qu'aucune erreur spécifique ne soit signalée. Vérifiez si des ID externes dupliqués sont présents dans votre CSV. Si c’est le cas, retirez les doublons et essayez de les charger à nouveau.
+- **Caractères accentués :** Votre CSV peut comporter des noms ou des attributs qui contiennent des accents. Assurez-vous que votre fichier est encodé UTF-8 pour éviter tout problème.
+- **L'ID de Braze appartient à un utilisateur orphelin :** Lorsqu'un utilisateur est orphelin, l'utilisateur restant avec lequel l'orphelin a été fusionné peut encore ne pas associer l'ID Braze de l'utilisateur orphelin au profil. Dans ce cas, Braze ne trouvera pas d'utilisateur à mettre à jour, et la ligne ne sera donc pas considérée comme importée.
+- **Rangée vide :** Il y a une ligne vide dans le fichier CSV. Cela peut être vérifié si vous ouvrez le fichier CSV dans un programme d'édition de texte (n'utilisez pas Excel ou Sheets). Si vous téléchargez le fichier CSV avec une ligne vide, un message d'erreur s'affichera, indiquant que certaines lignes contiennent des données mal formées.
+- **Y compris les guillemets doubles (`"`) :** Ce caractère n'est pas valide et rendra la ligne malformée. Utilisez plutôt des guillemets simples (`'`).
+- **Sauts de ligne incohérents :** Par exemple, si le fichier CSV utilise `\n` pour la première ligne et `\r\n` pour chaque ligne suivante, la première ligne de données sera traitée comme faisant partie de l'en-tête, et ces données ne seront pas importées comme prévu. Vous pouvez le vérifier dans un éditeur hexagonal ou un éditeur de texte spécialisé qui distingue les caractères d'espacement.
+- **Fichier mal encodé :** Le fichier CSV peut inclure des noms ou des attributs comportant des accents, mais le fichier doit être codé en UTF-8 pour les importer correctement. D'autres codages de caractères peuvent fonctionner dans certaines instances, mais seul l'UTF-8 est totalement compatible.
 
 ### Dates incorrectement formatées
 
@@ -325,6 +331,32 @@ Les valeurs encapsulées dans des guillemets simples (`''`) ou doubles (`""`) se
 ### Données importées comme attribut personnalisé
 
 Si une donnée utilisateur par défaut (telle que `email` ou `first_name`) est importée en tant qu'attribut personnalisé, vérifiez la casse et l'espacement de votre fichier CSV. Par exemple, `First_name` serait importé comme attribut personnalisé, alors que `first_name` serait correctement importé dans le champ « prénom » sur le profil d’un utilisateur.
+
+### Plusieurs types de données
+
+Braze s’attend à ce que toutes les valeurs d’une colonne soient du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut entraîneront des erreurs de segmentation.
+
+En outre, le fait de commencer un attribut de nombre par zéro posera des problèmes, car les nombres commençant par des zéros sont considérés comme des chaînes de caractères. Lorsque Braze convertit cette chaîne de caractères, elle peut être traitée comme une valeur octale (qui utilise les chiffres de zéro à sept), ce qui signifie qu'elle sera convertie en sa valeur décimale correspondante. Par exemple, si la valeur du fichier CSV est 0130, le profil Braze affichera 88. Pour éviter ce problème, utilisez des attributs avec des chaînes de caractères. Toutefois, ce type de données n'est pas disponible dans la comparaison des numéros de segmentation.
+
+### Types d'attribut par défaut
+
+Certains attributs par défaut peuvent n'accepter que certaines valeurs comme valables pour les mises à jour de l'utilisateur. Pour plus d'informations, reportez-vous à la section [Construire votre CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
+
+Les espaces de fin et les différences de capitalisation peuvent entraîner l'interprétation d'une valeur comme non valide. Par exemple, dans le fichier CSV suivant, seul l'utilisateur de la première ligne (`brazetest1`) verra ses statuts d'e-mail et de push mis à jour avec succès car les valeurs acceptées sont `unsubscribed`, `subscribed`, et `opted_in`. 
+
+```
+external_id,email,email_subscribe,push_subscribe
+brazetest1,test1@braze.com,unsubscribed,unsubscribed
+brazetest2,test2@braze.com,Unsubscribed,Unsubscribed
+```
+
+### Le bouton "Select CSV File" ne fonctionne pas
+
+Il y a plusieurs raisons pour lesquelles le bouton **Sélectionner un fichier CSV** peut ne pas fonctionner :
+
+- **Bloqueur de pop-up :** Cela peut empêcher l'affichage de la page. Confirmez que votre navigateur autorise les fenêtres pop-up sur le site web du tableau de bord de Braze. 
+- **Navigateur obsolète :** Assurez-vous que votre navigateur est à jour ; si ce n'est pas le cas, mettez-le à jour.
+- **Processus de base :** Fermez toutes les instances de votre navigateur, puis redémarrez votre ordinateur.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/

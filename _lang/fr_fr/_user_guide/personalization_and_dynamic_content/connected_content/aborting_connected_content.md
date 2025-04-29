@@ -3,7 +3,6 @@ nav_title: Abandon du contenu connecté
 article_title: Abandon du contenu connecté
 page_order: 2
 description: "Cet article de référence couvre plusieurs bonnes pratiques d’abandon de messages pour le contenu connecté."
-
 ---
 
 # Abandonner du contenu connecté {#aborting-connected-content}

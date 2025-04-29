@@ -15,12 +15,8 @@ tool:
 
 Le **rapport sur les revenus** est disponible sous **Analyse**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **chiffres d'affaires** sous **Données**.
-{% endalert %}
-
 {% alert tip %}
-Vous cherchez plus de moyens d’obtenir des données sur les revenus ? Essayez d'ajouter le comportement d'achat (ainsi que l'achat d'un produit) aux campagnes ou aux Canvas en tant qu'[événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Vous cherchez plus de moyens d’obtenir des données sur les revenus ? Essayez d'ajouter le comportement d'achat (ainsi que l'achat d'un produit) aux campagnes ou aux Canvas en tant qu'[événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 {% endalert %}
 
 Pour exporter vos chiffres d'affaires, sélectionnez <i class="fas fa-bars" title="Menu contextuel du graphique"></i> dans le graphique des **performances au fil du temps** et sélectionnez l'option d'exportation de votre choix.

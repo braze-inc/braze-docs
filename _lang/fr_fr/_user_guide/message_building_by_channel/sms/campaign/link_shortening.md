@@ -13,7 +13,9 @@ channel:
 
 # Raccourcissement de lien
 
-> Le raccourcissement de lien et le suivi des clics vous permettent de raccourcir automatiquement les URL contenues dans les messages SMS et de recueillir des analyses du taux de clics, fournissant ainsi des indicateurs d’engagement supplémentaires pour comprendre le comportement des utilisateurs dans le cadre de vos campagnes SMS. <br><br> Cette page explique comment activer le raccourcissement des liens dans vos messages SMS, tester les liens raccourcis, utiliser votre domaine personnalisé dans les liens raccourcis, etc.
+> Cette page explique comment activer le raccourcissement des liens dans vos messages SMS, tester les liens raccourcis, utiliser votre domaine personnalisé dans les liens raccourcis, etc.
+
+Le raccourcissement de lien et le suivi des clics vous permettent de raccourcir automatiquement les URL contenues dans les messages SMS et de recueillir des analyses du taux de clics, fournissant ainsi des indicateurs d’engagement supplémentaires pour comprendre le comportement des utilisateurs dans le cadre de vos campagnes SMS.
 
 Le raccourcissement des liens et le suivi des clics peuvent être activés au [niveau de la variante du message]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) dans les campagnes et les toiles. 
 
@@ -41,15 +43,7 @@ Braze ne reconnaîtra que les URL qui commencent par `http://` ou `https://`. Lo
 
 ### Ajout de paramètres UTM
 
-Si le raccourcissement des liens vous permet de suivre vos URL automatiquement, vous pouvez également ajouter des paramètres UTM à vos URL pour suivre les performances des campagnes dans des outils d'analyse/analytique tiers, tels que Google Analytics.
-
-Pour ajouter des paramètres UTM à votre URL, procédez comme suit :
-
-1. Commencez par votre URL de base. Il s'agit de l'URL de la page que vous souhaitez suivre (par exemple `https://www.example.com`).
-2. Ajoutez un point d'interrogation ( ?) après votre URL de base.
-3. Ajoutez chaque paramètre UTM séparé par une esperluette (&).
-
-Un exemple est `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## La personnalisation Liquid dans les URL
 
@@ -122,35 +116,15 @@ Les graphiques des **performances historiques** et des **performances des SMS/MM
 
 Pour obtenir des conseils sur le reciblage, consultez la page sur [le reciblage par SMS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)
 
-## Domaines personnalisés
+{% multi_lang_include click_tracking.md section='Domaines personnalisés' %}
 
-Le raccourcissement de lien vous permet également d’utiliser votre propre domaine pour personnaliser l’apparence de vos URL raccourcies et présenter une image de marque cohérente. Pour plus d'informations, reportez-vous à la section [Domaines personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+{% multi_lang_include click_tracking.md section='Foire aux questions' %}
 
-## Foire aux questions
-
-### Raccourcissement de lien
-
-#### Les liens que je reçois lors des tests sont-ils de vraies URL ?
-
-Si la campagne a été enregistrée en tant que brouillon avant l'envoi du test, oui. Sinon, il s’agit d’une marque substitutive d’URL. Notez que l'URL exacte envoyée lors d'une campagne lancée peut différer de celle envoyée lors d'un envoi test.
-
-#### Le SDK Braze doit-il être installé pour raccourcir des liens ?
-
-Non. Le raccourcissement des liens fonctionne sans aucune intégration SDK.
-
-#### Est-il possible de savoir quels utilisateurs cliquent sur une URL ?
+### Est-il possible de savoir quels utilisateurs cliquent sur une URL ?
 
 Oui. Lorsque le **suivi avancé** est activé, vous pouvez recibler les utilisateurs qui ont cliqué sur des URL en exploitant les [filtres de reciblage par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) ou les événements de clics par SMS (`users.messages.sms.ShortLinkClick`) envoyés par Currents.
 
-#### Est-il possible d’ajouter des paramètres UTM à une URL avant qu’elle ne devienne courte ?
-
-Oui. Des paramètres statiques et dynamiques peuvent être ajoutés. 
-
-#### Combien de temps les URL raccourcies restent-elles valides ?
-
-Les URL statiques sont valables un an à compter de la date d'enregistrement de l'URL, par exemple lors du premier envoi. Les URL dynamiques sont valables deux mois à compter de la date d'enregistrement de l'URL.
-
-#### Le raccourcissement des liens fonctionne-t-il avec des liens profonds ou des liens universels ?
+### Le raccourcissement des liens fonctionne-t-il avec des liens profonds ou des liens universels ?
 
 La fonction de raccourcissement de liens ne fonctionne pas avec les liens profonds. Vous pouvez raccourcir les liens universels à partir de fournisseurs tels que Branch ou Appsflyer, mais Braze n'est pas en mesure de résoudre les problèmes qui peuvent survenir lors de cette opération (comme la rupture de l'attribution ou la cause d'une redirection).
 
