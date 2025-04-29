@@ -2015,8 +2015,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshoo
 
 validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
 
-validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/unlisted_docs/post_duplicate_canvases/';
-
 validurls['/docs/developer_guide/platform_integration_guide/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 validurls['/docs/developer_guide/platforms/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 
@@ -2639,5 +2637,8 @@ validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
+
+validurls['/docs/api/endpoints/messaging/duplicate_campaigns'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/';
+validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/';
 
 // validurls['OLD'] = 'NEW';
