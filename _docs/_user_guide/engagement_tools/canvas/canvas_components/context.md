@@ -21,7 +21,7 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Each Context step defines a context variable, which is a variable that follows a user throughout their user journey in a Canvas. A context variable includes a variable name and an associated data type. This variable can be referenced in a Canvas using the Liquid snippet {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+Each Context step defines a context variable: a piece of custom data that only follows a user throughout their user journey in this Canvas. A context variable includes a variable name and an associated data type, and can be referenced in a Canvas using the Liquid snippet {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
 There are two ways to set context variables:
 
