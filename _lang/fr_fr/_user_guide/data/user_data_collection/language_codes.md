@@ -10,4 +10,4 @@ description: "Il s'agit des codes de langue utilisateur actuellement pris en cha
 
 > Il s'agit des codes linguistiques actuellement pris en charge par Braze.
 
-{% multi_lang_include codes_langues_supportés.md %}
+{% multi_lang_include supported_language_codes.md %}
