@@ -46,14 +46,14 @@ Um objeto de compra é um objeto que é passado pela API quando uma compra é fe
 - [Wiki do código de moeda ISO 4217][20]
 - [Wiki do código de tempo ISO 8601][22]
 
-## Comprar product_id
+## ID do produto de compra
 
 No objeto de compra, o `product_id` é um identificador da compra (como `Product Name` ou `Product Category`):
 
 - A Braze permite que você armazene até 5.000 `product_id`s no dashboard.
 - O endereço `product_id` pode ter até 255 caracteres.
 
-### Convenções de nomenclatura de ID de produto
+### Convenções de nomenclatura
 
 Na Braze, oferecemos algumas convenções gerais de nomenclatura para o objeto de compra `product_id`. Ao escolher `product_id`, a Braze sugere o uso de nomes simplistas, como o nome do produto ou a categoria do produto (em vez de SKUs), com a intenção de agrupar todos os itens registrados por esse `product_id`.
 
@@ -110,13 +110,18 @@ Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem
 
 [As propriedades de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) podem ser usadas para disparar mensagens e para personalização usando o Liquid, permitindo também o segmento de mensagens com base nessas propriedades.
 
-### Convenções de nomenclatura de propriedades de compra
+#### Convenções de nomenclatura
 
-É importante notar que esse recurso é ativado **por produto**, não por compra. Por exemplo, se um cliente tiver um grande volume de produtos distintos, mas cada um deles tiver as mesmas propriedades, a segmentação se tornará sem sentido.
+É importante notar que esse recurso é ativado **por produto**, não por compra. Por exemplo, se você tiver um grande volume de produtos distintos, mas cada um tiver as mesmas propriedades, a segmentação pode ser mais desnecessária.
 
-Nesse caso, é por isso que, ao definir as estruturas de dados, recomendamos o uso de nomes de produtos em um "nível de grupo" em vez de algo granular. Por exemplo, uma empresa de criação de bilhetes de trem deve ter produtos para "viagem única", "viagem de ida e volta", "várias cidades", e não transações específicas, como "transação 123" ou "transação 046". Ou, por exemplo, com o evento de compra "comida", as propriedades seriam melhor definidas como "bolo" e "sanduíche".
+Nesse caso, recomendamos o uso de nomes de produtos em um "nível de grupo" em vez de algo granular ao definir estruturas de dados. Por exemplo, uma empresa de criação de bilhetes de trem deve ter produtos para "viagem única", "viagem de ida e volta", "várias cidades", e não transações específicas, como "transação 123" ou "transação 046". Como outro exemplo, com o evento de compra "comida", as propriedades seriam melhor definidas como "bolo" e "sanduíche".
+
+{% alert important %}
+Note que os produtos podem ser adicionados por meio da Braze REST API. Por exemplo, se enviar uma chamada para o ponto de extremidade `/users/track` e incluir um novo ID de compra, um produto será criado automaticamente na seção **Configurações de dados** > **Produtos** do dashboard.
+{% endalert %}
 
 ### Exemplo de objeto de compra
+
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -165,14 +170,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Objetos de compra, objetos de evento e webhooks
+### Objetos de compra, objetos de evento e webhooks
 
-Usando o exemplo fornecido, podemos ver que alguém comprou uma mochila com as propriedades: cor, monograma, duração do checkout, tamanho e marca. Em seguida, podemos criar segmentos com essas propriedades usando [propriedades de eventos de compra][2] ou enviar mensagens personalizadas por meio de um canal usando o Liquid. Por exemplo, "Olá **Ana F.**, Agradecemos pela sua compra da **mochila vermelha média** por **$40**! Agradecemos por comprar na **Backpack Locker**!
+Usando o exemplo fornecido, podemos ver que alguém comprou uma mochila com as propriedades: cor, monograma, duração do checkout, tamanho e marca. Em seguida, podemos criar segmentos com essas propriedades usando [propriedades de eventos de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) ou enviar mensagens personalizadas por meio de um canal usando o Liquid. Por exemplo, "Olá **Ana F.**, Agradecemos pela sua compra da **mochila vermelha média** por **$40**! Agradecemos por comprar na **Backpack Locker**!
 
 Se quiser salvar, armazenar e rastrear propriedades para segmentar, será necessário configurá-las como atributos personalizados. Isso pode ser feito usando [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), que permitem o direcionamento de usuários com base em eventos personalizados ou comportamento de compra armazenado durante toda a vida útil desse perfil de usuário.
 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
+
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "Código de moeda ISO 4217"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "Código de tempo ISO 8601"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

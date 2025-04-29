@@ -50,15 +50,15 @@ Se você tiver definido um delegado de mensagem no app para lidar manualmente co
 
 1. Os disparos levam tempo para serem sincronizados com o dispositivo no início da sessão, portanto, pode haver uma condição de corrida se os usuários registrarem um evento ou uma compra logo após iniciarem uma sessão. Uma possível solução alternativa poderia ser alterar a campanha para disparar a partir do início da sessão e, em seguida, segmentar o evento ou a compra pretendida. Note que isso entregaria a mensagem no app no próximo início de sessão após a ocorrência do evento.
 
-2. Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral][1] ) (para dados de sessão) ou [Custom Events (Eventos personalizados][2] ):
+2. Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) ) (para dados de sessão) ou [Custom Events (Eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) ):
 
-![A página Eventos personalizados mostra um gráfico do número de vezes que o evento personalizado Adicionado aos favoritos ocorreu em um período de um mês][14]
+![Página de eventos personalizados mostrando um gráfico do número de vezes que o evento personalizado Added to Favorites ocorreu em um período de um mês]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### As impressões são mais baixas do que costumavam ser
 
 1. Certifique-se de que ninguém alterou involuntariamente o segmento ou a campanha desde o lançamento. Nossos changelogs de segmento e campanha lhe darão insights sobre as alterações feitas, quem fez a alteração e quando ela ocorreu.
 
-![Link para visualizar o changelog na página Detalhes da campanha com sete alterações desde a última vez que o usuário visualizou a campanha][10]
+![Link para visualizar o changelog na página Detalhes da campanha com sete alterações desde a última vez que o usuário visualizou a campanha]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Certifique-se de não reutilizar seu evento de gatilho em uma campanha de mensagens no app separada com uma prioridade mais alta.
 
@@ -126,7 +126,3 @@ Se o seu app estiver solicitando e recebendo mensagens no app com êxito, mas el
 {% endcase %}
 7. Se a sua mensagem no app for disparada pelo início da sessão e você tiver definido um tempo limite de sessão estendido, isso afetará a rapidez com que você pode mostrar mensagens. Por instância do app, se o tempo limite da sessão estiver definido para 300 segundos, fechar e reabrir o aplicativo em menos tempo não atualizará a sessão, portanto, uma mensagem no app disparada por um início de sessão não será exibida.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}

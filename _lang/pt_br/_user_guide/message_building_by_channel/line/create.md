@@ -35,14 +35,9 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 **Etapas:**
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
-{% endalert %}
-
-{: start="2"}
-2\. Selecione **LINE** ou, para campanhas com direcionamento para vários canais, selecione **Multichannel Campaign (Campanha multicanal**).
-3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+2. Selecione **LINE** ou, para campanhas com direcionamento para vários canais, selecione **Multichannel Campaign (Campanha multicanal**).
+3. Dê à sua campanha um nome claro e significativo.
+4. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -79,7 +74,7 @@ Se planeja usar o Liquid, certifique-se de incluir um valor padrão para sua per
 
 #### Criação de mensagens da direita para a esquerda
 
-A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Etapa 3: Pré-visualize e teste sua mensagem
 
@@ -108,7 +103,7 @@ Selecione o público maior de seus segmentos e, opcionalmente, restrinja esse se
 
 ### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 Os eventos de conversão ajudam a medir o sucesso de sua campanha. Por exemplo:
 
@@ -120,7 +115,7 @@ Também é possível definir eventos personalizados de conversão com base em se
 {% endtab %}
 {% tab Canvas %}
 
-Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canva, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criação de um Canvas](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canva, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criação de um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -129,7 +124,7 @@ Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais
 
 Depois de terminar de criar a última parte de sua campanha ou Canva, revise seus detalhes, teste-a e envie-a!
 
-Em seguida, confira [os relatórios LINE](https://www.braze.com/docs/line/reporting/) para saber como acessar os resultados de suas campanhas LINE.
+Em seguida, confira [os relatórios LINE]({{site.baseurl}}/line/reporting/) para saber como acessar os resultados de suas campanhas LINE.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

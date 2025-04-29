@@ -10,7 +10,7 @@ page_type: landing
 search_tag: Endpoint
 
 guide_top_header: "Endpoints de grupos de inscrições"
-guide_top_text: "Use as APIs REST de grupo de inscrições para gerenciar programaticamente os grupos de inscrições que você armazenou no dashboard do Braze, na página **Grupo de inscrições**. Isso se aplica a grupos de inscrições para e-mail e SMS.<br><br> Está procurando orientação sobre como criar grupos de inscrições? Confira nossos artigos sobre <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>grupos de inscrições para SMS</a> e <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>grupos de inscrições para e-mail</a>."
+guide_top_text: "Use as APIs REST de grupo de inscrições para gerenciar programaticamente os grupos de inscrições que você armazenou no dashboard do Braze, na página **Grupo de inscrições**. Isso se aplica a grupos de inscrições para e-mail e SMS.<br><br> Está procurando orientação sobre como criar grupos de inscrições? Confira nossos artigos sobre <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>grupos de inscrições para SMS</a> e <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>grupos de inscrições para e-mail</a>."
 
 guide_featured_title: ""
 guide_featured_list:

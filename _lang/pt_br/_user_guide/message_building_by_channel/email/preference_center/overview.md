@@ -13,10 +13,6 @@ channel:
 
 No dashboard do Braze, acesse **Público** > **Inscrições** > **Central de Preferências de E-mail**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Usuários** > **Grupos de inscrições **> **Central de Preferências de E-mail**.
-{% endalert %}
-
 É aqui que você pode gerenciar e visualizar cada grupo de inscrições. Cada grupo de inscrições que você cria é adicionado a essa lista da Central de Preferências. Você pode criar várias Centrais de Preferências.
 
 {% alert important %}
@@ -38,10 +34,6 @@ O uso do Liquid ativa a recuperação dos nomes dos seus grupos de inscrições 
 | Usuário válido | Um usuário com um endereço de e-mail e uma ID externa. |
 | Chave de API gerada com permissões do centro de preferências | No dashboard do Braze, acesse **Settings** > **API Keys** para confirmar que você tem acesso a uma chave de API com permissões da Central de Preferências. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá criar uma chave de API no **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 
 ### Etapa 1: Use o ponto de extremidade Criar centro de preferências
 
@@ -125,3 +117,26 @@ Essa abordagem não requer pares de valores de string de consulta incorporados n
 Isso é usado para renderizar a Central de Preferências quando o Liquid {%raw%}`${preference_center_url}`{%endraw%} legado é usado, o que significa que as etapas do canva ou os modelos que fazem referência a {%raw%}`${preference_center_url}` ou `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} não funcionarão. Isso também se aplica a mensagens enviadas anteriormente que incluíam o Liquid legado ou "PreferenceCenterBrazeDefault" como parte da mensagem. 
 
 Se você fizer referência a {%raw%}`${preference_center_url}`{%endraw%} em uma nova mensagem novamente, uma Central de Preferências chamada "PreferenceCenterBrazeDefault" será criada novamente.
+
+### As Centrais de Preferências oferecem suporte a vários idiomas?
+
+Não. No entanto, você pode usar o Liquid ao escrever o HTML para páginas personalizadas de aceitação e exclusão. Se estiver usando links dinâmicos para gerenciar cancelamentos de inscrição, esse é um único link. 
+
+Por exemplo, se estiver rastreando a taxa de cancelamento de inscrição de usuários de língua espanhola, será necessário usar campanhas separadas ou aproveitar a análise de dados do Currents (como observar quando um usuário cancela a inscrição e verificar o idioma preferido desse usuário).
+
+Como outro exemplo, para rastreamento das taxas de cancelamento de inscrição de usuários de língua espanhola, você poderia adicionar uma string de parâmetro de consulta como `?Spanish=true` ao URL de cancelamento de inscrição se o idioma dos usuários for alemão e usar um ink de cancelamento de inscrição normal se não for:
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+Em seguida, por meio do Currents, foi possível identificar quais usuários falam espanhol e quantos cliques ocorreram nesse ink de cancelamento de inscrição.
+
+### Os links de cancelamento de inscrição e as centrais de preferências de e-mail são necessários para o envio?
+
+Não. Se você vir a mensagem "Seu corpo de e-mail não inclui um link de cancelamento de inscrição" ao criar uma campanha de e-mail, esse aviso é esperado se o seu ink de cancelamento de inscrição estiver em um bloco de conteúdo.

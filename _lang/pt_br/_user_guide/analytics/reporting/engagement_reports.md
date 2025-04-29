@@ -36,10 +36,6 @@ Você pode executar novamente o relatório para gerar estatísticas atualizadas.
 
 Em sua conta do dashboard, acesse **Análise de dados** > **Relatórios de engajamento**. Selecione **\+ Criar novo relatório**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Relatórios de engajamento** em **Dados**.
-{% endalert %}
-
 ### Etapa 2: Adicionar mensagens
 
 Adicione as campanhas e as mensagens do Canva que você gostaria de compilar em seu relatório. Você pode selecionar suas mensagens de duas maneiras:

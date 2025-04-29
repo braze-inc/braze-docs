@@ -37,7 +37,7 @@ Tudo isso funciona em conjunto para criar interações bem-sucedidas entre sua b
 A Braze foi desenvolvida com base em uma arquitetura de fluxo de dados que utiliza Snowflake, Kafka, MongoDB e Redis. Os dados de muitas fontes podem ser carregados na Braze por meio do SDK e da API. A plataforma pode lidar com qualquer dado em tempo real, independentemente de como ela esteja aninhada ou estruturada. Os dados do Braze são armazenados no perfil do usuário. 
 
 {% alert tip %}
-O Braze pode rastrear os dados de um usuário durante toda a jornada dele com você, desde o momento em que ele é anônimo até o momento em que ele faz o registro no seu app e é conhecido. As IDs de usuário, chamadas `external_id`s no Braze, devem ser definidas para cada um de seus usuários. Eles devem ser imutáveis e acessíveis quando um usuário abre o app, permitindo o rastreamento de seus usuários entre dispositivos e plataformas. Consulte o [artigo Ciclo de vida do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) para obter as práticas recomendadas.
+O Braze pode rastrear os dados de um usuário durante toda a jornada dele com você, desde o momento em que ele é anônimo até o momento em que ele faz o registro no seu app e é conhecido. As IDs de usuário, chamadas `external_id`s no Braze, devem ser definidas para cada um de seus usuários. Eles devem ser imutáveis e acessíveis quando um usuário abre o app, permitindo o rastreamento de seus usuários entre dispositivos e plataformas. Consulte o artigo [Ciclo de vida do usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) para obter as práticas recomendadas.
 {% endalert %}
 
 ![A Braze importa fontes de dados de backend da API, fontes de dados de frontend do SDK, dados de data warehouse da nuvem pela ingestão de dados para nuvem da Braze e de integrações com parceiros. Esses dados são exportados por meio da API do Braze ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
@@ -56,7 +56,7 @@ O Braze captura automaticamente dados primários de fontes de dados de front-end
 A Braze tem mais de 150 parceiros tecnológicos, que chamamos de "Alloys". Você pode complementar seus Data Feeds por meio de uma rede significativamente robusta de [tecnologias interoperáveis e APIs de dados.]({{site.baseurl}}/partners/home) 
 
 ### Conexão direta com o data warehouse por meio da ingestão de dados da nuvem da Braze
-É possível enviar dados de clientes de seu data warehouse para a plataforma por meio do [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion) em apenas alguns minutos, permitindo a sincronização de atributos, eventos e compras relevantes do usuário. A integração da ingestão de dados para a nuvem oferece suporte a estruturas de dados complexas, incluindo JSON aninhado e vetores de objetos.
+É possível enviar dados de clientes de seu data warehouse para a plataforma por meio da [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/) em apenas alguns minutos, permitindo a sincronização de atributos, eventos e compras relevantes do usuário. A integração da ingestão de dados para a nuvem oferece suporte a estruturas de dados complexas, incluindo JSON aninhado e vetores de objetos.
 
 A ingestão de dados na nuvem pode sincronizar dados do Snowflake, Amazon Redshift, Databricks e Google BigQuery.
 
@@ -69,7 +69,7 @@ As camadas de classificação, orquestração e personalização são onde sua e
 
 Muitos tipos comuns de atribuições do usuário, como nome, e-mail, data de nascimento, país e outros, são automaticamente rastreados pelo SDK por padrão. Como desenvolvedor, você trabalhará com a sua equipe para definir quais dados adicionais e personalizados fazem sentido rastrear para o seu caso de uso. Seus dados personalizados afetarão a forma como sua base de usuários será classificada e segmentada. Você definirá esse modelo de dados durante o processo de implementação. 
 
-Saiba mais sobre [os dados coletados automaticamente e os dados personalizados]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/).
+Saiba mais sobre [os dados coletados automaticamente e os dados personalizados]({{site.baseurl}}/developer_guide/analytics/).
 
 ## Orquestração {#orchestration}
 A camada de orquestração permite que sua equipe de marketing projete jornadas de usuário com base nos dados de usuários e no engajamento anterior. Esse trabalho é feito principalmente por meio de nossa interface de dashboard, mas você também tem a opção de lançar [campanhas por meio da API]({{site.baseurl}}/api/api_campaigns#api-campaigns). Por exemplo, você pode fazer com que seu backend informe ao Braze quando enviar as mensagens e campanhas que seus profissionais de marketing projetaram no dashboard e dispará-las de acordo com sua lógica de backend. Um exemplo de mensagem disparada pela API pode ser a redefinição de senha ou a confirmação de envio. 
@@ -80,7 +80,7 @@ As campanhas disparadas por API são ideais para casos de uso transacionais mais
 
 
 ### Feature Flag
-O Braze permite ativar ou desativar remotamente a funcionalidade para uma seleção de usuários por meio de [sinalizadores de recursos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/). Isso permite que os profissionais de marketing direcionem o segmento correto da sua base de usuários com envios de mensagens para recursos que ainda não foram implementados para todo o público. Mas, mais do que isso, os sinalizadores de recursos podem ser usados para ativar e desativar um recurso na produção sem implementação de código adicional ou atualizações da loja de aplicativos. Isso permite que você implemente novos recursos com segurança e confiança.
+O Braze permite ativar ou desativar remotamente a funcionalidade para uma seleção de usuários por meio de [sinalizadores de recursos]({{site.baseurl}}/developer_guide/feature_flags/). Isso permite que os profissionais de marketing direcionem o segmento correto da sua base de usuários com envios de mensagens para recursos que ainda não foram implementados para todo o público. Mas, mais do que isso, os sinalizadores de recursos podem ser usados para ativar e desativar um recurso na produção sem implementação de código adicional ou atualizações da loja de aplicativos. Isso permite que você implemente novos recursos com segurança e confiança.
 
 ## Personalização {#personalization}
 A camada de personalização representa a capacidade de fornecer conteúdo dinâmico em suas mensagens. Ao usar o Liquid, uma linguagem de personalização amplamente utilizada, sua equipe pode extrair dinamicamente os dados existentes para exibir a mensagem personalizada para cada destinatário. Além disso, você pode inserir qualquer informação acessível em seu servidor da Web ou via API diretamente nas mensagens que está enviando, como notificações por push ou e-mails, usando o [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). O conteúdo conectado se baseia no Liquid e usa uma sintaxe familiar.
@@ -101,7 +101,7 @@ O [SDK do Braze]({{site.baseurl}}/user_guide/getting_started/web_sdk/) possibili
 De maneira crítica, todas as interações do usuário final com o Braze são rastreadas para que você possa medir seu engajamento e alcance. E depois que a Braze tiver agregado seus dados de todas essas fontes, eles poderão ser exportados de volta para seu stack de tecnologia usando uma variedade de ferramentas, fechando o ciclo.
 
 ### Currents
-O [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) é um complemento opcional do Braze que fornece uma exportação de streaming granular que alimenta continuamente outros destinos de sua pilha. O Currents é um feed de dados brutos por usuário e por evento que exporta dados a cada cinco minutos ou a cada 15.000 eventos, o que ocorrer primeiro. Exemplos de alguns destinos downstream do Currents seriam Segment, S3, Redshift e Mixpanel, entre outros. 
+O [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) é um complemento opcional do Braze que fornece uma exportação de streaming granular que alimenta continuamente outros destinos de sua pilha. O Currents é um feed de dados brutos por usuário e por evento que exporta dados a cada cinco minutos ou a cada 15.000 eventos, o que ocorrer primeiro. Exemplos de alguns destinos downstream do Currents seriam Segment, S3, Redshift e Mixpanel, entre outros. 
 
 ### Compartilhamento de dados Snowflake
 A funcionalidade de [compartilhamento seguro de dados]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) do Snowflake permite que o Braze lhe dê acesso seguro aos dados em nosso portal Snowflake sem se preocupar com o atrito do fluxo de trabalho, os pontos de falha e os custos desnecessários que vêm com os relacionamentos típicos com os provedores de dados. Todo o compartilhamento é realizado por meio da camada de serviços e do armazenamento de metadados exclusivos da Snowflake: nenhum dado é realmente copiado ou transferido entre as contas. Esse é um conceito importante porque os dados compartilhados não ocupam nenhum espaço de armazenamento em uma conta de consumidor e, portanto, não contribuem para suas cobranças mensais de armazenamento de dados. Os únicos encargos para os consumidores são os recursos de computação (ou seja, data warehouses virtuais) usados para consultar os dados compartilhados.
@@ -110,7 +110,7 @@ A funcionalidade de [compartilhamento seguro de dados]({{site.baseurl}}/partners
 A API do Braze fornece [endpoints]({{site.baseurl}}/api/endpoints/export) que permitem exportar análises agregadas de forma programática, bem como exportar dados de usuários individuais. Esses dados podem ser exportados para públicos e segmentos de qualquer tamanho. 
 
 ### CSVs
-Por fim, há uma opção para baixar seus dados em nível agregado diretamente do dashboard como um [CSV]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data). A opção CSV permite que os membros da sua equipe exportem facilmente os dados do Braze.
+Por fim, há uma opção para baixar seus dados em nível agregado diretamente do dashboard como um [CSV]({{site.baseurl}}/user_guide/data/export_braze_data/). A opção CSV permite que os membros da sua equipe exportem facilmente os dados do Braze.
 
 {% alert tip %}
 Embora a exportação CSV tenha um limite básico de 500.000 linhas, as APIs não têm um limite nesse sentido.

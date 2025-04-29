@@ -14,14 +14,11 @@ tool: Media
 
 Você pode encontrar a **Biblioteca de Mídia** em **Modelos**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **modelos e mídias**.
-{% endalert %}
-
 Você pode usar a **Biblioteca de Mídia** para:
 
 * Fazer upload de várias imagens ao mesmo tempo
 * Fazer upload de arquivos de contato virtual (.vcf)
+* Fazer upload de arquivos de vídeo para uso em envios de mensagens do WhatsApp
 * Fazer upload de uma pasta com suas imagens (máximo de 50 imagens)
 * [Gerar uma imagem usando IA](#generate-ai) e armazená-la na biblioteca de mídia
 * Corte uma imagem existente para criar a proporção certa para suas mensagens
@@ -36,7 +33,7 @@ Você pode usar a **Biblioteca de Mídia** para:
 
 ## Detalhes da imagem
 
-Dentro da biblioteca de mídia, você pode ver o tipo de imagem, tamanho, dimensões, URL e a data em que foi adicionada à biblioteca.
+Na biblioteca de mídia, é possível ver o tipo de ativo, o tamanho, as dimensões, o URL, a data em que foi adicionado à biblioteca e outras informações. 
 
 ### Usando a biblioteca de mídia versus um CDN
 
@@ -44,7 +41,7 @@ Usar a biblioteca de mídia proporciona melhor cache e performance para mensagen
 
 ## Especificações da imagem
 
-Todas as imagens carregadas na biblioteca de mídia devem ter menos de 5 MB. Os tipos de arquivo suportados são PNG, JPEG e GIF. Para recomendações específicas de imagens por canal de envio de mensagens, consulte as seguintes seções.
+Todas as imagens carregadas na biblioteca de mídia devem ter menos de 5 MB. Os tipos de arquivos compatíveis são PNG, JPEG, GIF e SVG. Para recomendações específicas de imagens por canal de envio de mensagens, consulte as seguintes seções.
 
 ### Cartões de conteúdo
 
@@ -68,6 +65,14 @@ Para saber mais, consulte os detalhes criativos da [mensagem no app]({{site.base
 
 - [Push imagem e especificações de texto]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 
+### Vídeo
+
+Por enquanto, os vídeos feitos upload para a biblioteca de mídia só podem ser usados em mensagens do WhatsApp. Para saber mais, consulte [Criação de uma mensagem do Whatsapp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+
+{% alert important %}
+A adição de vídeos às mensagens do WhatsApp está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
+{% endalert %}
+
 ## Acessando a biblioteca de mídia a partir de um criador de mensagem
 
 A biblioteca de mídia atua como o local centralizado do seu dashboard para ativos, pois todas as imagens são carregadas diretamente para ela. Isso permite que você reutilize imagens em diferentes envios de mensagens.
@@ -79,15 +84,15 @@ A biblioteca de mídia atua como o local centralizado do seu dashboard para ativ
 Você pode gerar imagens para sua biblioteca de mídia usando o [DALL-E 3](https://openai.com/index/dall-e-3/), um sistema de IA da OpenAI, um provedor terceirizado do Braze. Este sistema pode criar imagens e arte realistas a partir de uma descrição em linguagem natural. Cada solicitação gera quatro variações do seu prompt, e sua empresa pode gerar imagens 10 vezes por dia. Este total se aplica a todos os usuários da sua empresa.
 
 1. Na biblioteca de mídia, selecione <i class="fas fa-wand-magic-sparkles"></i> **Gerador de Imagens de IA**.
-2. Digite uma descrição da imagem que você deseja gerar, com até 300 caracteres. Quanto mais detalhada a descrição, melhor será o seu resultado.
+2. Digite uma descrição da imagem que você deseja gerar, com até 300 caracteres. Quanto mais detalhada a descrição, melhor será o seu resultado. Esse recurso só suporta entrada de texto - não é possível fazer upload de uma imagem como referência.
 3. Selecione **Gerar Imagens**. Pode levar cerca de um minuto para as imagens serem geradas.
 4. Selecionar <i class="fas fa-download" title="Add image to Media Library (Adicionar imagem à biblioteca de mídia)"></i> nas imagens que deseja adicionar à sua biblioteca de mídia.
 
 ![Gerador de imagens de IA modal na biblioteca de mídia.][6]{: style="max-width:75%"}
 
-Entre você e a Braze, todas as imagens geradas com o DALL-E 3 são de sua propriedade intelectual. A Braze não ajuizará nenhuma ação de titularidade de direitos autorais em relação a tais imagens nem apresenta garantias de nenhuma natureza em relação a qualquer conteúdo ou imagem gerada por IA. 
+Entre você e a Braze, todas as imagens geradas com o DALL-E 3 são de sua propriedade intelectual. A Braze não ajuizará nenhuma ação de titularidade de direitos autorais em relação a tais imagens nem apresenta garantias de nenhuma natureza em relação a qualquer conteúdo ou imagem gerada por IA.
 
-Para gerar imagens, a Braze enviará sua consulta para a Plataforma de API da OpenAI. Todas as consultas enviadas para a OpenAI pela Braze são anonimizadas, o que significa que a OpenAI não será capaz de identificar de quem a consulta foi enviada, a menos que você inclua informações exclusivamente identificáveis na entrada que você fornecer. Conforme detalhado em [Compromissos da Plataforma API da OpenAI](https://openai.com/policies/api-data-usage-policies), os dados enviados para a API da OpenAI via Braze não são usados para treinar ou melhorar seus modelos e serão excluídos após 30 dias. Certifique-se de aderir às políticas da OpenAI relevantes para você, que podem incluir [a Política de Uso](https://openai.com/policies/usage-policies) e a [Política de Compartilhamento e Publicação](https://openai.com/policies/sharing-publication-policy). A Braze não oferece nenhuma garantia de qualquer tipo com relação a qualquer conteúdo gerado por IA. 
+Para gerar imagens, o Braze enviará sua consulta à plataforma API da OpenAI. Todas as consultas enviadas para a OpenAI pela Braze são anonimizadas, o que significa que a OpenAI não será capaz de identificar de quem a consulta foi enviada, a menos que você inclua informações exclusivamente identificáveis na entrada que você fornecer. Conforme detalhado em [Compromissos da Plataforma API da OpenAI](https://openai.com/policies/api-data-usage-policies), os dados enviados para a API da OpenAI via Braze não são usados para treinar ou melhorar seus modelos e serão excluídos após 30 dias. Certifique-se de aderir às políticas da OpenAI relevantes para você, que podem incluir [a Política de Uso](https://openai.com/policies/usage-policies) e a [Política de Compartilhamento e Publicação](https://openai.com/policies/sharing-publication-policy). A Braze não oferece nenhuma garantia de qualquer tipo com relação a qualquer conteúdo gerado por IA. 
 
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}

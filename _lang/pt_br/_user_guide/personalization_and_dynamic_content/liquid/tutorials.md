@@ -15,7 +15,7 @@ Quando terminar de ler estes tutoriais, você será capaz de:
 - Escreva código Liquid para casos de uso comuns
 - String together Liquid conditional logic to personalize messages based on user data
 - Use variáveis e filtros para escrever equações que usem os valores das atribuições
-- Reconhecer os comandos básicos no código Liquid e formar um entendimento geral sobre o que o código está fazendo
+- Reconhecer comandos básicos no código Liquid e formar um entendimento geral sobre o que o código está fazendo
 
 | Tutorial | Objetivos de aprendizado |
 | --- | --- |

@@ -108,7 +108,7 @@ Para mais ideias sobre como melhorar a entregabilidade, leia [armadilhas de entr
 Se a Microsoft for seu principal provedor de caixa de e-mail, você pode usar esta integração para acessar e visualizar seus dados de reputação da Microsoft. Dessa forma, você pode monitorar a integridade de seus IPs para ajudar a determinar como seus e-mails estão sendo recebidos.
 
 {% alert important %}
-Se você não vir seus dados no Centro de Entregabilidade, entre em contato com [Suporte]({{site.baseurl}}/help/support/) com uma lista de seus endereços IP.
+Se você não vir seus dados no Centro de Entregabilidade, entre em contato com [Suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/) com uma lista de seus endereços IP.
 {% endalert %}
 
 ![][8]

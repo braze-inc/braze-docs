@@ -21,10 +21,6 @@ Após a configuração, solicitaremos que você forneça uma URL de login e um U
 | Chave de API do RelayState | Para ativar o login IdP, Acessar **Configurações** > **Chaves de API** e criar uma chave de API com permissões de `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar suas chaves API em **Configurações** na **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
-
 ## Login iniciado por IdP no OneLogin
 
 ### Etapa 1: Configurar o app Braze
@@ -41,10 +37,6 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 Depois de configurar a Braze em seu OneLogin, eles fornecerão um URL de direcionamento (`SAML 2.0 Endpoint (HTTP)`) e um certificado `x.509` que você inserirá em sua conta da Braze.
 
 Depois que o gerente da conta ativar o SAML SSO para sua conta, acesse **Configurações** > **Configurações administrativas** > **Configurações de segurança** e alterne a seção SAML SSO para **ATIVADO**
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione o ícone da sua conta e acesse **Configurações da Empresa** > **Configurações de Segurança** para encontrar a seção SAML SSO.
-{% endalert %}
 
 Nessa página, insira o seguinte:
 

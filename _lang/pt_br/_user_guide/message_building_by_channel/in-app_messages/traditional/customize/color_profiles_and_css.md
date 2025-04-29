@@ -14,10 +14,6 @@ channel:
 
 Acesse **Modelos** > **Modelos de mensagens no app**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar esta página em **Modelos e mídias.**
-{% endalert %}
-
 Nessa página, você pode editar modelos existentes ou clicar em **\+ Criar** e escolher **Perfil de cor** ou **Modelo CSS** para criar novos modelos a serem usados em suas mensagens no app.
 
 ## Perfil de cores

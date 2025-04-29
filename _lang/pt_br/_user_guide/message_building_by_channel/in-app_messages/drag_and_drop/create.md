@@ -135,7 +135,7 @@ Os usuários podem selecionar o botão fechar X para sair da mensagem a qualquer
 
 - Para obter uma lista dos blocos de editor disponíveis e suas propriedades, consulte [Blocos de editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Para obter ajuda na personalização da aparência de sua mensagem, consulte [Configurações de estilo]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- Para conhecer as práticas recomendadas de criação de mensagens da direita para a esquerda, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- Para conhecer as práticas recomendadas de criação de mensagens da direita para a esquerda, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Etapa 5: Teste sua mensagem no app
 
