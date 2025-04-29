@@ -23,7 +23,7 @@ description: "이 도움말에서는 익명 사용자와 사용자 별칭에 대
 
 ## How it works
 
-{% multi_lang_include 익명 사용자/about_anonymous_users.md 섹션='user_guide' %}
+{% multi_lang_include anonymous_users/about_anonymous_users.md section='user_guide' %}
 
 ## 사용자 별칭 할당
 
