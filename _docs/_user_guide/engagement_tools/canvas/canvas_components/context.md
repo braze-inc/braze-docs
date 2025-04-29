@@ -53,8 +53,6 @@ Add a step to your Canvas, then drag and drop the component from the sidebar, or
 
 ### Step 2: Define the variables
 
-To define Context step's variable:
-
 To define a context variable:
 
 1. Give your context variable a **name**.
@@ -62,7 +60,7 @@ To define a context variable:
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
 4. Select **Preview** to check the value of your context variable.
 5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
-5. When you're finished, select **Done**.
+6. When you're finished, select **Done**.
 
 {% alert note %}
 You can define up to 10 context variables for each Context step.
@@ -139,7 +137,7 @@ For consistency and error prevention, JSON returned by a [Connected Content call
 
 ### Mismatched data types
 
-If the Liquid expression at runtime returns a value that doesn't match the data type, the context variable won't be updated. For example, if the data type is set to **Number** but the value returns a string, the variable won't be updated, and the following will occur:
+If the Liquid expression at runtime returns a value that doesn't match the data type, the context variable won't be updated. For example, if the data type is set to **Number** but the value returns a string, the following will occur:
 
 - The user will either advance to the next step or exit if it's the last step in the Canvas. 
 - The Canvas step analytics will count this as _Not Updated_.
