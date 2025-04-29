@@ -1,4 +1,4 @@
-    ---
+---
 nav_title: Localidades no envio de mensagens
 article_title: Localidades no envio de mensagens
 page_order: 6.3
