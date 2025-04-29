@@ -1,4 +1,4 @@
----
+    ---
 nav_title: Localidades no envio de mensagens
 article_title: Localidades no envio de mensagens
 page_order: 6.3
@@ -99,4 +99,4 @@ Sim. No entanto, confira se o estilo HTML não está traduzido com o conteúdo.
 | Remoção de uma localização da mensagem depois que essa localização já tiver sido carregada para a mensagem como parte do arquivo de tradução.                           | A remoção da localidade removerá todas as traduções associadas à localidade em sua mensagem.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% multi_lang_include locales.md seção="Perguntas frequentes" %}
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}
