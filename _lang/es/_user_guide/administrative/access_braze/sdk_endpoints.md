@@ -15,7 +15,7 @@ Braze gestiona varias instancias diferentes para nuestro panel, SDK y puntos fin
 
 Si inicia sesión en [dashboard.braze.com](https://dashboard.braze.com) le enviará automáticamente a la dirección correcta del clúster.
 
-{% multi_lang_include centros_datos.md centros_datos='instancias' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 {% alert important %}
 Cuando integres tu SDK, utiliza el punto final SDK. Cuando realices llamadas a nuestra API REST, utiliza el punto final REST.
