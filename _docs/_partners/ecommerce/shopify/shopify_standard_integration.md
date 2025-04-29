@@ -141,6 +141,19 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 ## Step 4: Configure how you manage users
 
+Select your `external_id` type from the dropdown. 
+
+![“Collect subscribers” section.][10]
+
+{% alert important %}
+Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
+
+- **Guessable Information:** Email addresses are easily guessable, making them vulnerable to attacks.
+- **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
+{% endalert %}
+
+If you selected a custom external ID type, proceed to steps 4.1 and 4.2. Otherwise, continue to step 4.3.
+
 ### Step 4.1: Create a custom `external_id`
 
 First, go to Shopify and create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
@@ -163,22 +176,9 @@ Braze expects a 200 status code. Any other code is considered an endpoint failur
 ```
 {% endraw %}
 
-Vaidate the `shopify_customer_id` and email address by using the Admin API or Customer API to confirm that the parameter values match the customer values in Shopify. After validating, you could also use the APIs to retrieve the `braze.external_id` metafield and return the external ID value.
+Validate the `shopify_customer_id` and email address by using the Admin API or Customer API to confirm that the parameter values match the customer values in Shopify. After validating, you could also use the APIs to retrieve the `braze.external_id` metafield and return the external ID value.
 
-### Step 4.3: Select your `external_id` 
-
-Back in the Braze dashboard, select your custom `external_id` from the dropdown. 
-
-![“Collect subscribers” section.][10]
-
-{% alert important %}
-Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
-
-- **Guessable Information:** Email addresses are easily guessable, making them vulnerable to attacks.
-- **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
-{% endalert %}
-
-### Step 4.2: Collect your email or SMS opt-ins from Shopify (optional)
+### Step 4.3: Collect your email or SMS opt-ins from Shopify (optional)
 
 You have the option to collect your email or SMS marketing opt-ins from Shopify. 
 
@@ -206,7 +206,7 @@ You can enable in-app messages without using a developer by configuring them in 
 
 ### Supporting additional SDK channels
 
-The Braze SDKs enable various messaging channels, including in-app messages and Content Cards.
+The Braze SDKs enable various messaging channels, including Content Cards.
 
 #### Content Cards and Feature Flags
 
