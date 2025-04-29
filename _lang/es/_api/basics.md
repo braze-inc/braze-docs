@@ -42,7 +42,7 @@ Cuando utilices puntos finales para las llamadas a la API, utiliza el punto fina
 Para la integración de SDK, utiliza el [punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), no el punto final REST.
 {% endalert %}
 
-{% multi_lang_include centros_datos.md centros_datos='instancias' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### Límites de API
 
