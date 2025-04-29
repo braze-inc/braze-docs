@@ -109,7 +109,7 @@ Let's say you were to rolling out a new type of user profile for your app. You m
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -121,13 +121,10 @@ if (featureFlag.enabled) {
 
 ```swift
 if let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile") {
-  if featureFlag.enabled {
-    print("expanded_user_profile is enabled")
-  } else {
-    print("expanded_user_profile is not enabled")
-  }
+if featureFlag?.enabled == true {
+  print("expanded_user_profile is enabled")
 } else {
-  print("No feature flag with that ID.")
+  print("expanded_user_profile is not enabled")
 }
 ```
 {% endtab %}
@@ -158,7 +155,7 @@ if (featureFlag.enabled) {
 
 ```javascript
 const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
