@@ -16,7 +16,7 @@ description: "Braze SDK를 통해 사용자 ID를 설정하는 방법을 알아�
 
 ## 익명 사용자 정보
 
-{% multi_lang_include 익명 사용자/about_anonymous_users.md %}
+{% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
 ## 사용자 ID 설정
 
@@ -102,7 +102,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### 작동 방식
 
-{% multi_lang_include 익명_사용자/about_user_aliases.md %}
+{% multi_lang_include anonymous_users/about_user_aliases.md %}
 
 ### 사용자 별칭 설정
 
