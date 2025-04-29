@@ -19,4 +19,4 @@ Además del inglés, Braze admite varios idiomas para los mensajes de nuestro SD
 
 Cuando el idioma del teléfono de un usuario está configurado en uno de los idiomas admitidos, los mensajes del SDK integrado se traducirán a ese idioma. Por ejemplo, si tu aplicación muestra un mensaje sobre problemas de conectividad, se traducirá al idioma elegido.
 
-{% multi_lang_include codigos_idioma_apoyados.md %}
+{% multi_lang_include supported_language_codes.md %}
