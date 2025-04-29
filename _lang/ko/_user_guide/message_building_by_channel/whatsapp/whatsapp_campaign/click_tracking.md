@@ -63,7 +63,7 @@ WhatsApp의 클릭 추적 기능은 현재 얼리 액세스 중입니다. Contac
 
 !["버튼 이름, 웹사이트 URL, 클릭 추적 URL 필드가 있는 '버튼' 섹션입니다.][5]{: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md 섹션='사용자 정의 도메인' %}
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
 ## URL의 유동적 개인화
 
