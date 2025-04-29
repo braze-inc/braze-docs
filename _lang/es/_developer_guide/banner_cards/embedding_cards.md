@@ -25,7 +25,7 @@ Estas son las versiones mínimas del SDK necesarias para empezar a utilizar las 
 
 ## Insertar una tarjeta Banner
 
-{% multi_lang_include banner_cards/crear_colocaciones.md %}
+{% multi_lang_include banner_cards/creating_placements.md %}
 
 ### Paso 2: Actualiza las ubicaciones en tu aplicación {#requestBannersRefresh}
 
