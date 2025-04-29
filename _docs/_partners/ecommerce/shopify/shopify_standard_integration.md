@@ -168,7 +168,7 @@ An example endpoint is: `https://mystore.com/custom_id?shopify_customer_id=1234&
 
 #### Response
 
-Braze expects a 200 status code. Any other code is considered an endpoint failure. The response should be:
+Braze expects a `200` status code. Any other code is considered an endpoint failure. The response should be:
 
 {% raw %}
 ```json
