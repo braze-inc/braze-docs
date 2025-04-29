@@ -30,11 +30,11 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Optional* | String in YYYY-MM-DD format| One of `start_date` or `email` is required. This is the start date of the range to retrieve hard bounces and must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
+| `start_date` | Optional* | String in YYYY-MM-DD format| *One of `start_date` or `email` is required. This is the start date of the range to retrieve hard bounces and must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
 | `end_date` | Required | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
-| `email` | Optional* | String | One of `start_date` or `email` is required. If provided, we'll return whether or not the user has hard bounced. Check that the email strings are formatted properly. |
+| `email` | Optional* | String | *One of `start_date` or `email` is required. If provided, we'll return whether or not the user has hard bounced. Check that the email strings are formatted properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
