@@ -42,7 +42,7 @@ Ao usar endpoints para chamadas de API, use o endpoint REST.
 Para integração de SDK, use o [endpoint de SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), não o endpoint de REST.
 {% endalert %}
 
-{% multi_lang_include data_centers.md datacenters='instâncias' %}
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### Limites da API
 
