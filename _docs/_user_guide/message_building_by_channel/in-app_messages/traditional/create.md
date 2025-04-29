@@ -66,9 +66,13 @@ Start by choosing which platforms should receive the message. Use this selection
 
 Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) page, or by clicking on the linked message types in the following tables.
 
-When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
+When deciding which message type to use, consider how much space your message will occupy and how disruptive it may feel to the user experience.
 
-![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and fullscreen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- **Slideup** messages are the least intrusive, appearing subtly without blocking content.
+- **Modal** messages sit in the middle—prominent enough to catch attention without fully taking over the screen.
+- **Fullscreen** messages are the most attention-grabbing and best for critical announcements or promotions.
+
+The more complex your content, the more space you’ll need—and the more likely your message will interrupt the user’s flow.
 
 ### Message types
 
