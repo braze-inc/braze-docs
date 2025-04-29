@@ -7,6 +7,6 @@ description: "This reference article describes how to build reports using Braze 
 tool: Reports
 ---
 
-# Using the Query Builder
+# Query Builder
 
 {% multi_lang_include generative_ai/building_queries.md %}

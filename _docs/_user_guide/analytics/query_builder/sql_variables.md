@@ -7,9 +7,9 @@ description: "Learn how to use variables in the Query Builder, so you can reuse 
 tool: Reports
 ---
 
-# Query Builder variables
+# Query Builder SQL variables
 
-> Learn how to use variables in the Query Builder, so you can reuse your queries and avoid hard-coding any data in your code.
+> Learn how to use SQL variables in the Query Builder, so you can reuse your queries and avoid hard-coding any data in your code.
 
 ## Why use SQL variables?
 
@@ -27,7 +27,7 @@ To add a variable to your query, use the following syntax:
 
 {% raw %}
 ```sql
-'{{variable_type.${custom_name}}}'
+{{variable_type.${custom_name}}}
 ```
 {% endraw %}
 
@@ -35,7 +35,7 @@ Replace the following:
 
 | Placeholder      | Description                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `variable_type`   | The predefined variable type you'd like to use, such as `campaign` or `catalog_fields`. For the full list, see [Variable types](#variable-types). |
+| `variable_type`   | The predefined variable type you'd like to use, such as `campaign` or `catalog_fields`. For the full list, see [Supported variable types](#variable-types). |
 | `custom_name` | The name of your variable. This is used to identify the variable in the **Variables** tab of your Query Builder. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -61,12 +61,29 @@ In the following example, the "Summer Feature Launch" campaign is assigned as a 
 
 ![The "Variable" tab in the Query Builder showing the given example.]()
 
-## Variable types {#variable-types}
+## Supported types {#variable-types}
 
 ### Number
 
-- **Replacement value:** The provided value, such as `5.5`
-- **Usage example:** {% raw %}`some_number_column < {{number.${some name}}}`{% endraw %}
+Set to any positive or negative number, including decimal numbers, such as `5.5`.
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+some_number_column < {{number.${custom_name}}}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Date range
 
@@ -89,150 +106,518 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 - **Replacement value:** Replaces `start_date` and `end_date` with a Unix timestamp in seconds for a specified date in UTC, such as `1696517353`.
-- **Usage example:** For all of relative, start date, end date, and date range variables:
-    - {% raw %}`time > {{start_date.${some name}}} AND time < {{end_date.${some name}}}` {% endraw %}
-        - You can use either `start_date` or `end_date` if you don’t want a date range.
 
-### Messaging
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```
+time > {{start_date.${custom_name}}} AND time < {{end_date.${custom_name}}}
+```
+{% endraw %}
+{% endtab %}
 
-All messaging variables must share the same identifier when you want to tie together their state in one group.
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
-![]({% image_buster /assets/img_archive/sql_variables_canvases.png %}){: style="max-width:50%;"}
+You can use either `start_date` or `end_date` if you don't want a date range.
 
-#### Canvas
+### Campaigns
 
-For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that for selecting either Canvas or campaign.
-
-- **Replacement value:** Canvas BSON ID
-- **Usage example:** {% raw %}`canvas_id = ‘{{canvas.${some name}}}’`{% endraw %}
-
-#### Canvases
-
-For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab for selecting either Canvas or campaign.
-
-- **Replacement value:** Canvases BSON IDs
-- **Usage example:** {% raw %}`canvas_id IN ({{canvases.${some name}}})`{% endraw %}
-
-#### Campaign
-
+{% tabs local %}
+{% tab single campaign %}
 For selecting one campaign. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that for selecting either Canvas or campaign.
 
 - **Replacement value:** Campaign BSON ID
-- **Usage example:** {% raw %}`campaign_id = ‘{{campaign.${some name}}}’`{% endraw %}
 
-#### Campaigns
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+campaign_id = '{{campaign.${custom_name}}}'
+```
+{% endraw %}
+{% endsubtab %}
 
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab multiple campaigns %}
 For multi-selecting campaigns. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab for selecting either Canvas or campaign.
 
 - **Replacement value:** Campaigns BSON IDs
-- **Usage example:** {% raw %}`campaign_id IN ({{campaigns.${some name}}})`{% endraw %}
 
-#### Campaign variants
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+campaign_id IN ({{campaigns.${custom_name}}})
+```
+{% endraw %}
+{% endsubtab %}
 
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab campaign variants %}
 For selecting campaign variants that belong to the selected campaign. It must be used in conjunction with a campaign or campaigns variable.
 
 - **Replacement value:** Campaign variants API IDs, strings delimited by commas such as `api-id1, api-id2`.
-- **Usage example:** {% raw %}`message_variation_api_id IN ({{campaign_variants.${some name}}})`{% endraw %}
 
-#### Canvas variants
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+message_variation_api_id IN ({{campaign_variants.${custom_name}}})
+```
+{% endraw %}
+{% endsubtab %}
 
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+All campaign and Canvas variables must use the same identifiers in order to join their states in a single group.
+{% endalert %}
+
+### Canvases
+
+{% tabs local %}
+{% tab single canvas %}
+For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that for selecting either Canvas or campaign.
+
+- **Replacement value:** Canvas BSON ID
+
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+canvas_id = '{{canvas.${custom_name}}}'
+```
+{% endraw %}
+{% endsubtab %}
+
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab multiple canvases %}
+For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab for selecting either Canvas or campaign.
+
+- **Replacement value:** Canvases BSON IDs
+
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+canvas_id IN ({{canvases.${custom_name}}})
+```
+{% endraw %}
+{% endsubtab %}
+
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab canvas variants %}
 For selecting Canvas variants that belong to a chosen Canvas. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas variants API IDs, strings delimited by commas such as in `api-id1, api-id2`.
-- **Usage example:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
 
-#### Canvas Step
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+canvas_variation_api_id IN ({{canvas_variants.${custom_name}}})
+```
+{% endraw %}
+{% endsubtab %}
 
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab canvas step %}
 For selecting a Canvas step that belongs to a chosen Canvas. It must be used with a Canvas variable.
 
 - **Replacement value:** Canvas step API ID
-- **Usage example:** {% raw %}`canvas_step_api_id = ‘{{canvas_step.${some name}}}’`{% endraw %}
 
-#### Canvas Steps
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+canvas_step_api_id = '{{canvas_step.${custom_name}}}'
+```
+{% endraw %}
+{% endsubtab %}
 
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab canvas steps %}
 For selecting Canvas steps that belong to chosen Canvases. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas steps API IDs
-- **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
+
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+canvas_step_api_id IN ({{canvas_steps.${custom_name}}})
+```
+{% endraw %}
+{% endsubtab %}
+
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+All campaign and Canvas variables must use the same identifiers in order to join their states in a single group.
+{% endalert %}
 
 ### Products
 
-For selecting a list of product names.
+Use to select one or more products that you've added to Braze.
 
-- **Replacement value:** Product names are surrounded by single quotes and separated by commas, such as in `product1, product2`
-- **Usage example:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+({{products.${custom_name}}})
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+SELECT product_name
+FROM FULL_GAME_AND_DLC
+WHERE product_id IN ({{products.${Games with DLC}}});
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Custom events
 
-For selecting a list of custom events.
+Use to select one or more custom events that you've added to Braze.
 
-- **Replacement value:** Custom event property names are separated by commas such as in `event1, event2`
-- **Usage example:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+'{{custom_events.${custom_name}}}'
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+SELECT event_name
+FROM CUSTOM_EVENTS_TABLE
+WHERE event_name = '{{custom_events.${Purchased Game}}}';
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Custom event properties
 
 For selecting a list of custom event property names. It must be used with the custom events variable.
 
 - **Replacement value:** Custom event property names are separated by commas such as in `property1, property2`
-- **Usage example:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+name = '{{custom_event_properties.${property names)}}}'
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Workspace
 
 For selecting a workspace.
 
 - **Replacement value:** Workspace BSON ID
-- **Usage example:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+workspace_id = '{{workspace.${app_group_id}}}'
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Catalogs
 
 For selecting catalogs.
 
 - **Replacement value:** Catalog BSON IDs
-- **Usage example:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+catalog_id = '{{catalogs.${catalog}}}'
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Catalog Fields
 
 For selecting catalog fields. It must be used with the catalogs variable.
 
 - **Replacement value:** Catalog field names
-- **Usage example:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
 
-### Options {#options}
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+field_name = '{{catalog_fields.${custom_name}}}'
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+### Multiple choice {#options}
 
 For selecting from a list of options.
 
-- **Replacement value:** The value of the selected options
-- **Usage example:**
-    - For select dropdown: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` allows specifying whether the end user can select more than one option
-    - For radio button: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
+{% tabs local %}
+{% tab choose one %}
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}
+```
+{% endraw %}
+{% endsubtab %}
+
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab choose multiple %}
+{% subtabs %}
+{% subtab usage %}
+{% raw %}
+```sql
+{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}
+```
+{% endraw %}
+{% endsubtab %}
+
+{% subtab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Segments
 
 For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) turned on.
 
 - **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
-- **Usage example:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+{{segments.${analytics_segments}}}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### String
 
 For changing repetitive string values between report runs. Use this variable to avoid hardcoding a value multiple times in your SQL.
 
 - **Replacement value:** The string as is without any surrounding quotes
-- **Usage example:** {% raw %}`{{string.${some name}}}`{% endraw %}
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+{{string.${custom_name}}}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Tags
 
 For selecting tags for campaigns and Canvases.
 
 - **Replacement value:** Campaigns and Canvases with single-quoted comma-separated BSON IDs that are associated with the selected tags
-- **Usage example:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
 
-## Variable metadata
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+{{tags.${some tags}}}
+```
+{% endraw %}
+{% endtab %}
 
-Metadata can be attached to a variable to change its behavior by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn’t matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default’s variable behavior.
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
-**Usage example:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
+## Supported metadata
+
+Metadata can be attached to a variable to change its behavior by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn't matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default's variable behavior.
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+{{string.${my var}| is_required: 'false' | description: 'My optional string var'}}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Visible
 
@@ -240,37 +625,121 @@ For whether variables are visible. All variables are visible by default in the *
 
 There are several special variables whose value is dependent on another variable, such as whether another variable has a value. These special variables are marked as not visible so they don't show in the **Variables** tab.
 
-**Usage example:** `visible: ‘false’`
+{% tabs %}
+{% tab usage %}
+```sql
+visible: 'false'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Required
 
 For whether variables are required by default. An empty value for a variable usually leads to an incorrect query.
 
-**Usage example:** `required: ‘false’`
+{% tabs %}
+{% tab usage %}
+```sql
+required: 'false'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Order
 
 For selecting the position of the variable in the **Variables** tab.
 
-**Usage example:** `order: ‘1’`
+{% tabs %}
+{% tab usage %}
+```sql
+order: '1'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Include single quotes
 
 For surrounding the values of a variable with single quotes.
 
-**Usage example:** `include_quotes: ‘true’`
+{% tabs %}
+{% tab usage %}
+```sql
+include_quotes: 'true'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Include double quotes
 
 For surrounding the values of a variable with double quotes.
 
-**Usage example:** `include_double_quotes: ‘true’`
+{% tabs %}
+{% tab usage %}
+```sql
+include_double_quotes: 'true'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Multi-select
 
 For whether the select dropdown allows a single or multi-select. For now, you can include this metadata only if you use the [Options](#options) variable.
 
-**Usage example:** `is_multi_select: ‘true’`
+{% tabs %}
+{% tab usage %}
+```sql
+is_multi_select: 'true'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ![]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
@@ -278,7 +747,21 @@ For whether the select dropdown allows a single or multi-select. For now, you ca
 
 For showing options as radio buttons instead of a select dropdown in the **Variables** tab. You can include this metadata only if you use the [Options](#options) variable.
 
-**Usage example:** `is_radio_button: ‘true’`
+{% tabs %}
+{% tab usage %}
+```sql
+is_radio_button: 'true'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ![]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
@@ -286,42 +769,129 @@ For showing options as radio buttons instead of a select dropdown in the **Varia
 
 For providing the list of selectable options in the form of a label and value. The label is what gets shown and the value is what the variable gets replaced with when the option is selected. You can include this metadata only if you use the [Options](#options) variable.
 
-**Usage example:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
+{% tabs %}
+{% tab usage %}
+```sql
+options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Placeholder
 
-For specifying the placeholder text shown in the variable’s input field.
+For specifying the placeholder text shown in the variable's input field.
 
-**Usage example:** `placeholder: ‘enter some value’`
+{% tabs %}
+{% tab usage %}
+```sql
+placeholder: 'enter some value'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Description
 
-For specifying the description text shown under the variable’s input field.
+For specifying the description text shown under the variable's input field.
 
-**Usage example:** `description: ‘some description’`
+{% tabs %}
+{% tab usage %}
+```sql
+description: 'some description'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Default value
 
 For specifying the default value for the variable when no value is specified.
 
-**Usage example:** `default_value: ‘5’`
+{% tabs %}
+{% tab usage %}
+```sql
+default_value: '5'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ### Hide label
 
 For hiding the variable's name label. The variable's name is used as a default label.
 
-**Usage example:** `hide_label: ‘true’`
+{% tabs %}
+{% tab usage %}
+```sql
+hide_label: 'true'
+```
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ## Special variables
 
 The following variables can be used with other variables:
 
-### Presence or absence of another variable’s value
+### Presence or absence of another variable's value
 
-For knowing whether a variable’s value is filled. This is useful for optional variables where you want to short-circuit a condition if a variable’s value is not filled.
+For knowing whether a variable's value is filled. This is useful for optional variables where you want to short-circuit a condition if a variable's value is not filled.
 
-- **Replacement value:** `true` or `false` depending on the other variable’s value
-- **Usage example:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
+- **Replacement value:** `true` or `false` depending on the other variable's value
+
+{% tabs %}
+{% tab usage %}
+{% raw %}
+```sql
+{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab example %}
+{% raw %}
+```sql
+ADD_EXAMPLE
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 `type` and `name` refer to the referenced variable. For example, to short-circuit the following optional variable: {% raw %}`{{campaigns.${messaging}}`, you can use the following:
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
+`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: 'false'}})`{% endraw %}

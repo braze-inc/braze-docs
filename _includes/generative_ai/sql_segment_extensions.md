@@ -159,7 +159,7 @@ On the **Segment Extensions** page, segments generated using SQL are denoted wit
 
 Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
 
-![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %})
+![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ## Refreshing segment membership
 
