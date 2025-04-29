@@ -11,7 +11,7 @@ tool: Canvas
 
 # Context
 
-> Use Context steps to create or update a set of variables for a user as they move through a Canvas. <br><br>Context variables exist only within the user's journey through the Canvas, providing a lightweight way to define data without adding to user profiles. This means a user can have different context variables each time they enter the Canvas. For example, if you have a Canvas that manages flight bookings, you could use a context variable to store a different flight confirmation code each time a user enters the Canvas.
+> Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 {% alert important %}
 Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
@@ -21,12 +21,29 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Each Context step defines a context variable: a piece of custom data that only follows a user throughout their user journey in this Canvas. A context variable includes a variable name and an associated data type, and can be referenced in a Canvas using the Liquid snippet {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+A context variable is a temporary piece of custom data that exists only during a user’s journey through that specific Canvas. It does not persist across different Canvases or outside the journey where it is created.
 
-There are two ways to set context variables:
+Each Context step can define multiple context variables, providing a flexible way to personalize delays, segment users dynamically, and enrich messaging without permanently changing a user's profile data.
 
-- **At Canvas entry:** Variables from events or API calls that trigger a user's entry into a Canvas are stored as context variables.
-- **Using a Context step:** You can create or update context variables in the step editor.
+For example, if you're managing flight bookings, you could create a context variable for each user's scheduled flight time. You could then set delays relative to each user’s flight time and send personalized reminders from the same Canvas.
+
+You can set context variables in two ways:
+
+- **At Canvas entry:** When users enter a Canvas, data from the event or API trigger can automatically populate context variables.
+- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a Context step.
+
+Each context variable includes:
+
+- A name (such as `flight_time` or `subscription_renewal_date`)
+- A [data type](#context-variable-types) (such as number, string, time, or array)
+- A value you assign using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or through the **Add Personalization** tool.
+
+Once defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+
+For example:
+{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user’s scheduled flight time.
+
+Each time a user enters the Canvas—even if they have entered it before—the Context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
 ## Creating a Context step
 
@@ -38,20 +55,20 @@ Add a step to your Canvas, then drag and drop the component from the sidebar, or
 
 To define Context step's variable:
 
-To define a Context variable:
+To define a context variable:
 
-1. Give your Context variable a **name**.
-2. Select a **data type** (such as string, number, array, etc.).
+1. Give your context variable a **name**.
+2. Select a [data type](#context-variable-types).
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
-4. Select **Preview** to check the value of your Context variable.
-5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.  
+4. Select **Preview** to check the value of your context variable.
+5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
 5. When you're finished, select **Done**.
 
 {% alert note %}
 You can define up to 10 context variables for each Context step.
 {% endalert %}
 
-Now you can use your Context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using a context variable](#using-context-variables).
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using a context variable](#using-context-variables).
 
 ### Step 3: Test exit criteria (optional)
 
@@ -65,20 +82,20 @@ We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guid
 
 ## Context variable data types {#context-variable-types}
 
-Canvas Context variables that are created or updated in the step can be assigned the following data types.
+Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
 Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
 {% endalert %}
 
-| Data type | Example value and format | 
+| Data type | Example context variable setup |
 |---|---|
-|Boolean| {::nomarkdown}<ul><li><b>Context variable name:</b> loyalty_program</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}</li><li><b>Expected value:</b> `true`</li></ul>{:/} |
-|Number| {::nomarkdown}<ul><li><b>Context variable name:</b> credit_score</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}</li><li><b>Expected value:</b> 751</li></ul>{:/} |
-|String| {::nomarkdown}<ul><li><b>Context variable name:</b> product_name</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
-|Array| {::nomarkdown}<ul><li><b>Context variable name:</b> favorite_products</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}</li><li><b>Expected value:</b> <code>["moisturizer", "serum", "lipstick"]</code></li></ul>{:/} |
-|Time| {::nomarkdown}<ul><li><b>Context variable name:</b> last_purchase_date</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}</li><li><b>Expected value:</b> 2025-01-28T17:02:43.032Z</li></ul>{:/} |
-|Object (flattened) | {::nomarkdown}<ul><li><b>Context variable name:</b> customer_profile</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
+|Boolean| {::nomarkdown}<ul><li><b>Context variable name:</b> loyalty_program</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}</li></ul>{:/} | 
+|Number| {::nomarkdown}<ul><li><b>Context variable name:</b> credit_score</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}</li></ul>{:/} |
+|String| {::nomarkdown}<ul><li><b>Context variable name:</b> product_name</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li></ul>{:/} |
+|Array| {::nomarkdown}<ul><li><b>Context variable name:</b> favorite_products</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}</li></ul>{:/} |
+|Time| {::nomarkdown}<ul><li><b>Context variable name:</b> last_purchase_date</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}</li></ul>{:/} |
+|Object (flattened) | {::nomarkdown}<ul><li><b>Context variable name:</b> user_profile</li><li><b>Value:</b> {% raw %}<code><br>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %}</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
