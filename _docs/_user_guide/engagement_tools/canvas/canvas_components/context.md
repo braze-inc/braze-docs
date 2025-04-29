@@ -38,12 +38,12 @@ Each context variable includes:
 - A [data type](#context-variable-types) (such as number, string, time, or array)
 - A value you assign using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or through the **Add Personalization** tool.
 
-Once defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
-For example:
+For example,
 {% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user’s scheduled flight time.
 
-Each time a user enters the Canvas—even if they have entered it before—the Context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
+Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the Context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
 ## Creating a Context step
 
@@ -68,7 +68,7 @@ To define a context variable:
 You can define up to 10 context variables for each Context step.
 {% endalert %}
 
-Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using a context variable](#using-context-variables).
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
 ### Step 3: Test exit criteria (optional)
 
@@ -144,7 +144,7 @@ If the Liquid expression at runtime returns a value that doesn't match the data 
 - The user will either advance to the next step or exit if it's the last step in the Canvas. 
 - The Canvas step analytics will count this as _Not Updated_.
 
-Refer to [Context variable data types](#context-variable-types) for the expected values and examples for each data type.
+Refer to [Context variable data types](#context-variable-types) for the example setups for each data type.
 
 ## Frequently asked questions
 
