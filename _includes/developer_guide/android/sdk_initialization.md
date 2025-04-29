@@ -49,6 +49,10 @@ Another example can be found in our [Hello Braze sample app](https://github.com/
 While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
 {% endalert %}
 
+### Prerequisites
+
+To use this feature, [Android Braze SDK version XXXX](LINK) or later is required.
+
 ### Step 1: Enable in your project
 
 Delayed initialization is disabled by default. To enable, use one of the following options:
