@@ -93,7 +93,7 @@ Context variables have the same expected formats for data types as [custom event
 |String| product_name |{% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}|
 |Time| last_purchase_date|{% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}|
-|Object (flattened) | user_profile|{% raw %}<code><br>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
+|Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
