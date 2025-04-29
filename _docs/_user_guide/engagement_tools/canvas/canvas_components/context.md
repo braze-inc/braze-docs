@@ -34,14 +34,17 @@ There are two ways to set context variables:
 
 Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
 
-### Step 2: Define the variable
+### Step 2: Define the variables
 
 To define Context step's variable:
 
-1. Give your context variable a name.
-2. Select a [data type](#context-variable-types).
-3. Write a Liquid expression or select **Add Personalization** to create a Liquid snippet from pre-existing attributes.
-4. To view the context variable, select **Preview**.
+To define a Context variable:
+
+1. Give your Context variable a **name**.
+2. Select a **data type** (such as string, number, array, etc.).
+3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
+4. Select **Preview** to check the value of your Context variable.
+5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.  
 5. When you're finished, select **Done**.
 
 {% alert note %}
@@ -75,7 +78,7 @@ Context variables have the same expected formats for data types as [custom event
 |String| {::nomarkdown}<ul><li><b>Context variable name:</b> product_name</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
 |Array| {::nomarkdown}<ul><li><b>Context variable name:</b> favorite_products</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}</li><li><b>Expected value:</b> <code>["moisturizer", "serum", "lipstick"]</code></li></ul>{:/} |
 |Time| {::nomarkdown}<ul><li><b>Context variable name:</b> last_purchase_date</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}</li><li><b>Expected value:</b> 2025-01-28T17:02:43.032Z</li></ul>{:/} |
-|Object| {::nomarkdown}<ul><li><b>Context variable name:</b> customer_profile</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
+|Object (flattened) | {::nomarkdown}<ul><li><b>Context variable name:</b> customer_profile</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li><li><b>Expected value:</b> lotion</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
