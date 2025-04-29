@@ -59,7 +59,11 @@ Your report is split into three sections:
 
 ### Conversion details
 
-The conversion details table always shows one column for *Recipients* and another for *Conversions* (rate and total). The remaining two table columns that appear depend on the options you selected when setting up your report. The following table describes possible metrics.
+The conversion details table always shows one column for *Recipients* and another for *Conversions* (rate and total). The remaining two table columns that appear depend on the options you selected when setting up your report. 
+
+![Conversion details table showing Touches as the attribution method for columns three and four.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+The following table describes possible metrics.
 
 | Metric shown | Description |
 | --- | --- |
@@ -68,8 +72,6 @@ The conversion details table always shows one column for *Recipients* and anothe
 | Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
 | Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. If multiple channels are selected, this defaults to last-touch attribution. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 If you selected breakdown-level details for campaigns or Canvases when [setting up your report](#setting-up-your-report) (step 5), you can click <i class="fas fa-angle-down"></i> to expand the table.
 
@@ -85,7 +87,7 @@ To download the time series data, select a download option: PNG, JPEG, PDF, SVG,
 This graph only shows data for a single channel at a time. Use the **Channel** dropdown on the chart to select a single channel.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Conversions funnel bar graph for two email campaigns showing similar results for Email Delivered, Email Opened, Email Clicked, and Conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Conversions over time
 
@@ -93,7 +95,7 @@ This time series graph includes a representation of the conversions per campaign
 
 To download the time series data, select <i class="fas fa-bars"></i> and then select your download option. Available options are PNG, JPEG, PDF, SVG, or CSV.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Conversions over time time series graph for two email campaigns, showing conversions by day.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Attribution methods
 
