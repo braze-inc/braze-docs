@@ -160,7 +160,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 
 ### Step 3: Initialize the SDK
 
-After your chosen delay period, use the `Braze.disableDelayedInitialization()` method to initialize the SDK.
+After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method to initialize the SDK.
 
 {% tabs local %}
 {% tab JAVA %}
