@@ -53,6 +53,10 @@ Add a step to your Canvas, then drag and drop the component from the sidebar, or
 
 ### Step 2: Define the variables
 
+{% alert note %}
+You can define up to 10 context variables for each Context step.
+{% endalert %}
+
 To define a context variable:
 
 1. Give your context variable a **name**.
@@ -61,10 +65,6 @@ To define a context variable:
 4. Select **Preview** to check the value of your context variable.
 5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
 6. When you're finished, select **Done**.
-
-{% alert note %}
-You can define up to 10 context variables for each Context step.
-{% endalert %}
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
@@ -86,14 +86,14 @@ Context variables that are created or updated in the step can be assigned the fo
 Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
 {% endalert %}
 
-| Data type | Example context variable setup |
-|---|---|
-|Boolean| {::nomarkdown}<ul><li><b>Context variable name:</b> loyalty_program</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}</li></ul>{:/} | 
-|Number| {::nomarkdown}<ul><li><b>Context variable name:</b> credit_score</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}</li></ul>{:/} |
-|String| {::nomarkdown}<ul><li><b>Context variable name:</b> product_name</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}</li></ul>{:/} |
-|Array| {::nomarkdown}<ul><li><b>Context variable name:</b> favorite_products</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}</li></ul>{:/} |
-|Time| {::nomarkdown}<ul><li><b>Context variable name:</b> last_purchase_date</li><li><b>Value:</b> {% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}</li></ul>{:/} |
-|Object (flattened) | {::nomarkdown}<ul><li><b>Context variable name:</b> user_profile</li><li><b>Value:</b> {% raw %}<code><br>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %}</li></ul>{:/} |
+| Data type | Example variable name | Example value |
+|---|---|---|
+|Boolean| {::nomarkdown} loyalty_program |{% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}{:/}| 
+|Number| {::nomarkdown} credit_score |{% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}{:/}|
+|String| {::nomarkdown} product_name |{% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %}{:/} |
+|Array| {::nomarkdown} favorite_products|{% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}{:/} |
+|Time| {::nomarkdown} last_purchase_date|{% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}{:/} |
+|Object (flattened) | {::nomarkdown}user_profile|{% raw %}<code><br>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
