@@ -33,4 +33,4 @@ Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) p
 
 No menu suspenso **Visualizar mensagem como usuário** na guia **Teste**, selecione **Usuário personalizado** e insira idiomas diferentes para fazer a prévia da mensagem e verificar se a mensagem foi traduzida conforme o esperado.
 
-{% multi_lang_include locales.md seção="Perguntas frequentes" %}
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}
