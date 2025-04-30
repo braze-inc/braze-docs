@@ -16,11 +16,12 @@ Banners are currently in early access. Contact your Braze account manager if you
 {% endalert %}
 
 ## About Banners
+
 Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
 
 Using a simple drag-and-drop editor, marketers can design and launch Banners without developer assistance, reducing complexity and improving efficiency.
 
-### Use cases
+### Benefits of using Banners
 
 Because Banners never expire and are auto-personalized every time a user starts a new session, they’re great for:
 
@@ -32,14 +33,16 @@ Because Banners never expire and are auto-personalized every time a user starts 
 
 ## Features
 
-### Drag & drop editor {#drag-drop-editor}
+### Drag-and-drop editor {#drag-drop-editor}
+
 Banners feature an intuitive drag-and-drop editor designed for marketers, allowing for quick, no-code creation of engaging, personalized in-line messages. With the editor, you can easily customize Banners by adding and arranging various content elements without developer support.
 
-Key capabilities:
-- Easy content building: Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
-- Real-time preview: Instantly preview your Banners across different device views, ensuring a seamless user experience on mobile and desktop.
-- Flexible personalization: Utilize Braze's built-in personalization options and Liquid logic, refreshing dynamically for each user's session.
-- Custom HTML support: Add custom HTML blocks when advanced customization or integration with existing web styles is required.
+Key capabilities include:
+
+- **Easy content building:** Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
+- **Real-time preview:** Instantly preview your Banners across different device views, ensuring a seamless user experience on mobile and desktop.
+- **Flexible personalization:** Utilize Braze's built-in personalization options and Liquid logic, refreshing dynamically for each user's session.
+- **Custom HTML support:** Add custom HTML blocks when advanced customization or integration with existing web styles is required.
 
 ### Placement IDs {#placement-ids}
 
