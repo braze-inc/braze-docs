@@ -7,6 +7,8 @@ platform:
   - iOS
   - Android
   - Web
+  - Flutter
+  - React Native
 ---
 
 # Creating Banner placements
