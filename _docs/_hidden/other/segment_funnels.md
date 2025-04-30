@@ -1,12 +1,8 @@
 ---
 nav_title: Segment Funnels
-article_title: Segment Funnels
-page_order: 3
-
+permalink: /segment_funnels/
+hidden: true
 page_type: reference
-tool: Segments
-description: "This reference article explains how to use Braze Segment Funnels, their best practices, and use cases."
-search_rank: 1
 ---
 
 # Segment Funnels
