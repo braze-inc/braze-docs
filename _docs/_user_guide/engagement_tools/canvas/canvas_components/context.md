@@ -68,15 +68,11 @@ To define a context variable:
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
-### Step 3: Test exit criteria (optional)
+### Step 3: Test user paths (optional)
 
-If the context variables are valid, you can reference the variables throughout your Canvas. However, your users can exit the steps in a user journey after a Context step for the following reasons:
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. For example, if you create a context variable to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
 
-- The context variable doesn't return any value (is null).
-- A call to an embedded Connected Content fails.
-- The context variable types don't match.
-
-We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience.
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
 
 ## Context variable data types {#context-variable-types}
 
@@ -133,14 +129,21 @@ For consistency and error prevention, JSON returned by a [Connected Content call
 ```
 {%endraw%}
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
-### Mismatched data types
+### Invalid context variables
 
-If the Liquid expression at runtime returns a value that doesn't match the data type, the context variable won't be updated. For example, if the data type is set to **Number** but the value returns a string, the following will occur:
+A context variable is considered invalid when:
+- A call to an embedded Connected Content fails.
+- The Liquid expression at runtime returns a value that doesn't match the data type or is empty (null).
 
-- The user will either advance to the next step or exit if it's the last step in the Canvas. 
+For example, if the context variable data type is **Number** but the Liquid expression returns a string, it is invalid.
+
+In these circumstances: 
+- The user will advance to the next step. 
 - The Canvas step analytics will count this as _Not Updated_.
+
+Keep an eye on your _Not Updated_ analytic when troubleshooting and ensure your context variable is updating correctly. Your users can continue in your Canvas past the Context step but not qualify for later steps if the context variable is invalid.
 
 Refer to [Context variable data types](#context-variable-types) for the example setups for each data type.
 
