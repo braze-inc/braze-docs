@@ -146,7 +146,7 @@ The following table includes metrics and descriptions to help you better underst
 | Entered | Number of users who entered this component to be synced to Facebook. |
 | Proceeded to Next Step | How many users advanced to the next component if there is one. All users will auto-advance if this is the last step in the Canvas branch. |
 | Users Synced | Number of users who have successfully been synced to Facebook. |
-| Users Not Synced | Number of users that have not been synced due to missing fields to match. |
+| Users Not Synced | Number of users that have not been synced due to missing fields to match. Fields are matched using an "OR" operator, meaning as long as a user has one of the fields in Facebook, Facebook will match the user even if there's no match on all other fields. |
 | Users Pending | Number of users currently being processed by Braze to sync into Facebook. |
 | Users Errored | Number of users who were not synced to Facebook due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Facebook token or if the custom audience was deleted on Facebook. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
