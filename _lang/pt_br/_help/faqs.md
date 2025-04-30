@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     image: /assets/img/braze_icons/link-03.svg
   - name: "Perguntas frequentes sobre exportação"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "Perguntas frequentes sobre mensagens no app"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
@@ -40,23 +40,26 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg
   - name: "Perguntas frequentes sobre inteligência"
-    link: /docs/user_guide/intelligence/faqs/
+    link: /docs/user_guide/brazeai/intelligence/faqs/
     image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "Perguntas frequentes sobre o editor de arrastar e soltar e-mails"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
     image: /assets/img/braze_icons/channel-email.svg
   - name: "Perguntas frequentes sobre exportação de API e CSV"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "Perguntas frequentes sobre a Feature Flag"
-    link: /docs/developer_guide/platform_wide/feature_flags/faq/
+    link: /docs/developer_guide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
   - name: "Perguntas frequentes sobre atividades ao vivo"
-    link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
+    link: /docs/developer_guide/push_notifications/live_notifications/?sdktab=swift#swift_faq
     image: /assets/img/braze_icons/swift.svg
   - name: "Perguntas frequentes sobre o Liquid"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: "Perguntas frequentes sobre o push"
+    link: /docs/user_guide/message_building_by_channel/push/faq/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 
 guide_menu_title: "Best practices"

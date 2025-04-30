@@ -1,0 +1,37 @@
+---
+layout: documents
+hide_toc: true
+---
+
+{%- css_asset_tag -%}
+- /assets/css/scrollycode.scss
+- /assets/css/github-dark.scss
+{%- endcss_asset_tag -%}
+
+<style type="text/css">
+  @media (min-width: 1200px) {
+    #dev-main,
+    #featured_main {
+      max-width: unset;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .ab-tab-content,
+  .ab-sub_tab-content {
+    margin-bottom: unset !important;
+    padding: unset !important;
+  }
+
+  #main_content #article-main {
+    max-width: unset !important;
+  }
+</style>
+
+<script src="{{site.baseurl}}/assets/js/scrollycode.js"></script>
+<script src="{{site.baseurl}}/assets/js/scrolly-highlight.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+
+{{ content }}

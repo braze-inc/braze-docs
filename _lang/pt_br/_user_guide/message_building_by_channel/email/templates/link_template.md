@@ -33,15 +33,9 @@ Você pode criar um número ilimitado de modelos de link para suportar suas vár
 
 1. Acessar **Modelos** > **Enviar modelo de link por e-mail**. 
 2. Selecione **Criar modelo de link de e-mail**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Modelos e mídias** > **Modelos de links**.
-{% endalert %}
-
-{:start="3"}
-3\. Dê um nome ao seu modelo de link.
-4\. (opcional) Adicione uma descrição, equipe ou tag para adicionar detalhes sobre o modelo de link.
-5\. (opcional) Selecione o botão de alternância para adicionar automaticamente o modelo de link a links em campanhas de e-mail e Canvas. Isso se aplica ao adicionar um novo link a qualquer e-mail novo ou existente.
+3. Dê um nome ao seu modelo de link.
+4. (opcional) Adicione uma descrição, equipe ou tag para adicionar detalhes sobre o modelo de link.
+5. (opcional) Selecione o botão de alternância para adicionar automaticamente o modelo de link a links em campanhas de e-mail e Canvas. Isso se aplica ao adicionar um novo link a qualquer e-mail novo ou existente.
 
 Existem dois tipos de modelos de link que você pode criar:
 
@@ -58,7 +52,7 @@ Para adicionar uma string ou URL antes dos links em sua mensagem de e-mail, faç
 2. Defina a **posição do modelo** como **Antes da URL**. 
 3. Insira uma string que sempre será anexada ao seu URL. 
 
-Uma seção de prévia é fornecida com um exemplo do processo de inserção.
+A **prévia do modelo** é fornecida para lhe dar um exemplo de como o modelo de link será inserido antes de um URL.
 
 ![Os campos Posição do modelo, URL de prepend e Prévia do Modelo para o processo de inserção de modelo de link antes de um URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 

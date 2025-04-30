@@ -22,7 +22,7 @@ O Braze usa o token de dispositivo da Apple para iOS.
 
 1. Importe os tokens por meio do [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Para importações de grandes lotes, temos recursos disponíveis para ajudar a agilizar o processo. Entre em contato com seu COM ou SA para obter mais detalhes!
 2. Se o token já existir na Braze, ele será ignorado; caso contrário, será gerado um perfil anônimo.
-3. Realizar a garantia de qualidade na integração push. Certifique-se de que as etapas de [configuração do push]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) tenham sido concluídas.
+3. Realizar a garantia de qualidade na integração push. Certifique-se de que as etapas de [configuração do push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) tenham sido concluídas.
 
 Se os seus perfis de usuário e tokens por push estiverem armazenados em locais separados, recomendamos a importação de tokens por push de forma anônima e a migração subsequente dos perfis de usuário existentes. Não é necessário mapeá-los juntos, pois o Braze iOS SDK tratará da resolução do token após a integração bem-sucedida.
 

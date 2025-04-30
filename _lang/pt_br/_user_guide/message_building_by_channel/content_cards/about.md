@@ -114,7 +114,7 @@ Esta seção aborda as três maneiras mais comuns de colocar cartões de conteú
 - [Carrossel](#carousel)
 - [Banner](#banner)
 
-A lógica e a implementação desses posicionamentos não são padrão no Braze, portanto, sua equipe de engenharia deve fornecer e apoiar o trabalho para alcançar esses casos de uso. Para obter uma visão geral sobre como implementar esses posicionamentos, consulte [Criação de cartão de conteúdo personalizado]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
+A lógica e a implementação desses posicionamentos não são padrão no Braze, portanto, sua equipe de engenharia deve fornecer e apoiar o trabalho para alcançar esses casos de uso. Para obter uma visão geral sobre como implementar esses posicionamentos, consulte [Criação de cartão de conteúdo personalizado]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 exemplos de cartões de conteúdo de conteúdo, mostrando as diferentes opções de posicionamento: caixa de entrada de mensagens, carrossel e banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 

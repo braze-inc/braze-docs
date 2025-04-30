@@ -15,12 +15,8 @@ tool:
 
 Encontrará el **Informe de ingresos** en **Análisis**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Ingresos** en **Datos**.
-{% endalert %}
-
 {% alert tip %}
-¿Busca más formas de obtener datos sobre ingresos? Pruebe a añadir el comportamiento de compra (así como la compra de un producto) a las campañas o a los Canvases como [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+¿Busca más formas de obtener datos sobre ingresos? Pruebe a añadir el comportamiento de compra (así como la compra de un producto) a las campañas o a los Canvases como [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 {% endalert %}
 
 Para exportar tus datos de ingresos, selecciona <i class="fas fa-bars" title="Menú contextual del gráfico"></i> en el gráfico **Rendimiento en el tiempo** y selecciona tu opción de exportación.
@@ -45,7 +41,7 @@ Los siguientes datos pueden verse en el gráfico **Rendimiento a lo largo del ti
 
 Puede consultar las estadísticas de ingresos caso por caso en las páginas [Análisis de campaña]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) o [Análisis de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/). 
 
-{% multi_lang_include metrics.md metric='Ingresos totales' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
 Los informes de ingresos no se pueden exportar a través de la API. Para obtener ayuda con las exportaciones CSV, consulte la sección [de resolución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

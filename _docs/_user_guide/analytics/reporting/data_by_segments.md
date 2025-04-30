@@ -18,7 +18,7 @@ tool:
 
 To run these reports, do the following:
 1. In **Query Builder**, choose to create a new SQL report with a template. 
-2. Filter templates for those where the metrics include breakdowns of segment, which are:
+2. Select **Segment breakdowns** for the metric, which filters templates for those where the metrics include breakdowns of segment, which are:
 - Email performance metrics by segment
 - Email engagement metrics for variants or steps, by segment
 - Purchases and revenue by segment

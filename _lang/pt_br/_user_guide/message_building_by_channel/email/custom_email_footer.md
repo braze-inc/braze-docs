@@ -23,15 +23,9 @@ Ao usar os rodapés de e-mail personalizados, você não precisa mais criar um n
 Para criar ou editar seu rodapé personalizado, faça o seguinte:
 
 1. Acesse **Configurações** > **Preferências de e-mail**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página se chama **Configurações de e-mail** e está localizada em **Gerenciar configurações**.
-{% endalert %}
-
-{: start="2"}
-2\. Acesse a seção **Custom Footer (Rodapé personalizado** ) e ative os rodapés personalizados.
-3\. Edite o rodapé na seção **Criador**.
-4\. Envie uma mensagem de teste. 
+2. Acesse a seção **Custom Footer (Rodapé personalizado** ) e ative os rodapés personalizados.
+3. Edite o rodapé na seção **Criador**.
+4. Envie uma mensagem de teste. 
 
 ![Um exemplo de um rodapé personalizado.][20]
 

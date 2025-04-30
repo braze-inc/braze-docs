@@ -23,10 +23,6 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 | Clave API RelayState | Para habilitar el inicio de sesión del proveedor de identidad, vaya a **Configuración** > **Claves API** y cree una clave API con permisos `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar tus claves de API en **Configuración** en **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
-
 ## Inicio de sesión iniciado por el proveedor de servicios (SP) en Microsoft Entra SSO
 
 ### Paso 1: Añadir Braze desde la galería
@@ -96,13 +92,7 @@ Una vez que hayas configurado Braze en el centro de administración de Microsoft
 Después de que tu director de cuentas haya habilitado SAML SSO para tu cuenta, haz lo siguiente:
 
 1. Ve a **Configuración** > **Configuración del administrador** > **Configuración de seguridad** y alterna la sección SAML SSO a **ON**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione el icono de su cuenta y vaya a **Configuración de la empresa** > **Configuración de seguridad** para encontrar la sección SAML SSO.
-{% endalert %}
-
-{: start="2"}
-2\. En la misma página, añada lo siguiente:
+2. En la misma página, añada lo siguiente:
 
 | Requisito | Detalles |
 |---|---|

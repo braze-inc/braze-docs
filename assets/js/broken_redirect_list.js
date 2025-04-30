@@ -2015,8 +2015,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshoo
 
 validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
 
-validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/unlisted_docs/post_duplicate_canvases/';
-
 validurls['/docs/developer_guide/platform_integration_guide/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 validurls['/docs/developer_guide/platforms/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 
@@ -2397,6 +2395,9 @@ validurls['/docs/help/support/'] = '/docs/user_guide/administrative/access_braze
 validurls['/docs/user_guide/administrative/support/'] = '/docs/user_guide/administrative/access_braze/support';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events';
 
+validurls['/docs/developer_guide/analytics/logging_iam_data'] = '/docs/developer_guide/analytics/logging_channel_data/in_app_messages/';
+validurls['/docs/developer_guide/analytics/logging_push_data'] = '/docs/developer_guide/analytics/logging_channel_data/push_notifications/';
+
 validurls['/docs/developer_guide/banner_cards'] = '/docs/developer_guide/banners/';
 validurls['/docs/developer_guide/banner_cards/creating_campaigns'] = '/docs/developer_guide/banners/creating_campaigns';
 validurls['/docs/developer_guide/banner_cards/embedding_cards'] = '/docs/developer_guide/banners/embedding_banners';
@@ -2656,5 +2657,9 @@ validurls['/docs/api/endpoints/export/news_feed/get_news_feed_cards/'] = '/docs/
 validurls['/docs/developer_guide/news_feed/'] = '/docs/developer_guide/home/';
 validurls['/docs/user_guide/data/export_braze_data/export_news_feed_data/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
 
+validurls['/docs/api/endpoints/messaging/duplicate_campaigns'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/';
+validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/';
+
+validurls['/docs/user_guide/engagement_tools/segments/segment_funnels/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
 
 // validurls['OLD'] = 'NEW';

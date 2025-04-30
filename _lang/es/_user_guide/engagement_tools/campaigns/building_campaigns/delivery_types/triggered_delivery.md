@@ -12,10 +12,6 @@ tool: Campaigns
 
 > Las campañas de entrega basadas en acciones o las campañas activadas por eventos son muy eficaces para los mensajes transaccionales o basados en logros. En lugar de enviar su campaña en determinados días, puede hacer que se envíen después de que un usuario complete un determinado evento. 
 
-{% alert important %}
-La entrega basada en acciones no está disponible para los [componentes Canvas con mensajes in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). Estos pasos deben programarse.
-{% endalert %}
-
 ## Crear una campaña activada
 
 ### Paso 1: Seleccione un evento desencadenante
@@ -96,7 +92,7 @@ También puede elegir enviar la campaña en un día específico de la semana (se
 
 ### Paso 3: Seleccionar eventos de excepción
 
-Seleccione un evento de excepción que descalificará a los usuarios para recibir esta campaña. Solo puedes hacer esto si tu mensaje desencadenado se envía tras un retardo de tiempo. Los eventos de excepción pueden ser la realización de una compra, el inicio de una sesión, la realización de uno de los [eventos de conversión] designados de una campaña][18], o la realización de un evento personalizado. Si un usuario completa el evento de activación, pero luego completa tu evento de excepción antes de que se envíe el mensaje debido al retraso, no recibirá la campaña. Los usuarios que no reciban la campaña debido al evento de excepción serán automáticamente elegibles para recibirla en el futuro, la próxima vez que completen el evento desencadenante, incluso si no eliges que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
+Seleccione un evento de excepción que descalificará a los usuarios para recibir esta campaña. Solo puedes hacer esto si tu mensaje desencadenado se envía tras un retardo de tiempo. [Los eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) pueden ser la realización de una compra, el inicio de una sesión, la realización de uno de los [eventos de conversión][18] designados de una campaña o la realización de un evento personalizado. Si un usuario completa el evento de activación, pero luego completa tu evento de excepción antes de que se envíe el mensaje debido al retraso, no recibirá la campaña. Los usuarios que no reciban la campaña debido al evento de excepción serán automáticamente elegibles para recibirla en el futuro, la próxima vez que completen el evento desencadenante, incluso si no eliges que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ![][20]
 
@@ -126,7 +122,7 @@ En el caso de que un usuario complete el evento desencadenante dentro del plazo,
 
 ![][31]
 
-Si un usuario no recibe el mensaje porque se le ha pasado el plazo, seguirá estando cualificado para recibirlo la próxima vez que complete el evento desencadenante, aunque no haya elegido que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Si decides que los usuarios vuelvan a ser elegibles, podrán recibir la campaña cada vez que completen el evento desencadenante, siempre que cumplan los requisitos durante el plazo especificado.
+Si un usuario no recibe el mensaje porque se le ha pasado el plazo, seguirá estando cualificado para recibirlo la próxima vez que complete el evento desencadenante, aunque no haya elegido que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Si decides que los usuarios vuelvan a ser elegibles, podrán recibir la campaña cada vez que completen el evento desencadenante, siempre que cumplan los requisitos durante el plazo especificado.
 
 Si también ha asignado a la campaña una duración determinada, entonces un usuario debe cumplir los requisitos tanto dentro de la duración como de la parte específica del día para recibir el mensaje.
 

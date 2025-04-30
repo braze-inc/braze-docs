@@ -87,7 +87,7 @@ You can set styles to be applied across all relevant component blocks in your la
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 
-![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
+![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Optional and required fields
 
@@ -95,7 +95,7 @@ You can choose whether a form field is required or optional. Required fields mus
 
 For example, to enforce consent capture before form submission, you can turn on **Required field input** to set a checkbox to be required with the appropriate disclaimer text.
 
-![A checkbox form field with the "Required input field" toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:70%;"}
+![A checkbox form field with the "Required input field" toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Step 4: Create a confirmation page
 
@@ -121,7 +121,7 @@ Use landing page templates to create templates for your next campaigns. These te
 
 You can preview, archive, edit, or duplicate landing page templates. When editing a landing page, you can also save your landing page as a template, make changes to the template, or delete the content of the landing page. 
 
-![A dropdown with options to save, change, and delete a landing page.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:80%;"}
+![A dropdown with options to save, change, and delete a landing page.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## Viewing analytics
 

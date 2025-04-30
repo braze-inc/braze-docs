@@ -65,7 +65,7 @@ Depois que os perfis de usuário são mesclados, essa ação não pode ser desfe
 
 ## Recursos adicionais
 - Consulte nosso artigo sobre o [ciclo de vida do perfil de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) do Braze para obter mais contexto.<br>
-- Veja nossa documentação sobre como definir IDs de usuário e chamar o método `changeUser()` para [Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) e [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_user_ids/).
+- Veja nossa documentação sobre como definir IDs de usuário e chamar o método `changeUser()` para [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) e [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web).
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}

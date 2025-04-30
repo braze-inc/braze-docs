@@ -33,10 +33,6 @@ Il existe deux états d’abonnement pour les utilisateurs WhatsApp : `subscrib
 
 - **Profil utilisateur :** Les profils utilisateurs individuels sont accessibles via le tableau de bord de Braze à partir de **Audience** > **Rechercher des utilisateurs**. Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Lorsque vous êtes dans le profil d'un utilisateur, sous l'onglet **Engagement**, vous pouvez voir le groupe d'abonnement WhatsApp d'un utilisateur et son statut.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Utilisateurs** > **Recherche d'utilisateurs.**
-{% endalert %}
-
 - **API REST :** Le groupe d’abonnement des profils utilisateur individuels peut être consulté par l’[endpoint Lister les groupes d’abonnement de l’utilisateur][9] ou de l’[endpoint Lister le statut des groupes d’abonnement de l’utilisateur][8] en utilisant l'API REST de Braze. 
 
 ## Processus d'opt-in et d'opt-out de WhatsApp

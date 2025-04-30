@@ -17,7 +17,7 @@ A partir de diciembre de 2021, entrarán en vigor los siguientes cambios para el
 
 ## Nuevas propiedades para los eventos de interacción de mensajes Currents
 
-Se han añadido nuevas propiedades para seleccionar [eventos de interacción de mensajes]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Esta actualización se aplica a los siguientes eventos de interacción de mensajes de Currents y a todos los socios que los utilizan:
+Se han añadido nuevas propiedades para seleccionar [eventos de interacción de mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). Esta actualización se aplica a los siguientes eventos de interacción de mensajes de Currents y a todos los socios que los utilizan:
 
 - Añade `LINK_ID`, `LINK_ALIAS` a:
   - Clic en correo electrónico (todos los destinos)

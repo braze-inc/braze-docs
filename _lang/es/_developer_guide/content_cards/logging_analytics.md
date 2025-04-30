@@ -1,7 +1,7 @@
 ---
 nav_title: Análisis de registros  
 article_title: Análisis de registros 
-page_order: 4
+page_order: 1
 description: "Este artículo explica cómo registrar manualmente los clics, eventos y análisis de tus tarjetas de contenido personalizadas."
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Análisis de registros 
 
-> Si quieres mostrar las tarjetas de contenido de forma totalmente personalizada, puedes implementar tu propia interfaz de usuario de presentación de tarjetas de contenido. Sin embargo, datos como las impresiones, los clics y los descartes solo se gestionan automáticamente cuando se utilizan los modelos de tarjeta predeterminados. Cuando implementes una interfaz de usuario completamente personalizada, tendrás que manejar estos datos manualmente. Para ello, rellena tu IU personalizada con datos de los modelos de datos Braze y registra manualmente análisis como impresiones y clics. Una vez que entiendas cómo registrar los análisis, podrás ver las formas habituales en que los clientes de Braze [crean tarjetas de contenido personalizadas]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards). 
+> Si quieres mostrar las tarjetas de contenido de forma totalmente personalizada, puedes implementar tu propia interfaz de usuario de presentación de tarjetas de contenido. Sin embargo, datos como las impresiones, los clics y los descartes solo se gestionan automáticamente cuando se utilizan los modelos de tarjeta predeterminados. Cuando implementes una interfaz de usuario completamente personalizada, tendrás que manejar estos datos manualmente. Para ello, rellena tu IU personalizada con datos de los modelos de datos Braze y registra manualmente análisis como impresiones y clics. Una vez que entiendas cómo registrar los análisis, podrás ver las formas habituales en que los clientes de Braze [crean tarjetas de contenido personalizadas]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
 ## Escuchar las actualizaciones de las tarjetas
 
@@ -20,7 +20,7 @@ Para obtener los modelos de datos de la tarjeta de contenido, suscríbete a las 
 * **`id`**: Representa la cadena ID de la tarjeta de contenido. Es el identificador único utilizado para registrar los análisis de las tarjetas de contenido personalizadas.
 * **`extras`**: Engloba todos los pares clave-valor del panel Braze. 
 
-Todas las propiedades fuera de `id` y `extras` son opcionales para analizar las tarjetas de contenido personalizadas. Para más información sobre el modelo de datos, consulta el artículo de integración de cada plataforma: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/).
+Todas las propiedades fuera de `id` y `extras` son opcionales para analizar las tarjetas de contenido personalizadas. Para más información sobre el modelo de datos, consulta el artículo de integración de cada plataforma: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-Las tarjetas de contenido sólo se actualizarán al iniciar la sesión si se llama a una petición de suscripción antes de `openSession()`. También puedes [actualizar manualmente el canal]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed).
+Las tarjetas de contenido sólo se actualizarán al iniciar la sesión si se llama a una petición de suscripción antes de `openSession()`. También puedes [actualizar manualmente el canal]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/).
 {% endalert %}
 
 {% endtab %}

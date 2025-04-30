@@ -18,7 +18,7 @@
 
 ### HTML 전체 인앱 메시지
 
-[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} 인앱 메시지는 완전히 커스텀된 사용자 콘텐츠를 만드는 데 유용합니다. 사용자 정의 HTML 전체 인앱 메시지 콘텐츠는 `HTML Full`에 표시되며, 선택적으로 이미지 및 글꼴과 같이 다양한 형식의 기타 콘텐츠를 포함할 수 있으므로 메시지 모양과 기능을 완벽하게 제어할 수 있습니다.
+[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} 인앱 메시지는 완전히 커스텀된 사용자 콘텐츠를 만드는 데 유용합니다. 사용자 정의 HTML 전체 인앱 메시지 콘텐츠는 {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %}에 표시되며, 선택적으로 이미지 및 글꼴과 같이 다양한 형식의 기타 콘텐츠를 포함할 수 있으므로 메시지 모양과 기능을 완벽하게 제어할 수 있습니다.
 
  {% if include.platform == "iOS" %}
 다음 예는 페이지가 지정된 HTML 전체 인앱 메시지를 보여줍니다:
@@ -36,7 +36,7 @@
 
 ### 인앱 메시지(트리거됨)
 
-다음 설명서는 "캠페인 만들기" 드롭다운에서 아래 강조 표시된 것처럼 "트리거된 인앱 메시지"라고도 하는 Braze의 `In-App Messaging` 제품에 대한 설명입니다.
+다음 문서는 '캠페인 만들기' 드롭다운에서 아래 강조 표시된 것처럼 브랜드가 표시된 '트리거된 인앱 메시지'라고도 하는 Braze `In-App Messaging` 제품에 대해 설명합니다:
 
 ![인앱 메시징 작성기][in_app_message_13]
 

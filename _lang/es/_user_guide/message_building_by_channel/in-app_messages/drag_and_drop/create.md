@@ -135,7 +135,7 @@ Aquí es donde su mensaje se pavonea por la pasarela, vestido con el estilo cara
 
 - Para obtener una lista de los bloques de edición disponibles y sus propiedades, consulte [Bloques de edición]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Si necesitas ayuda para personalizar el aspecto de tu mensaje, consulta [Configuración de estilo]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- Para conocer las mejores prácticas para crear mensajes de derecha a izquierda, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- Para conocer las mejores prácticas para crear mensajes de derecha a izquierda, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Paso 5: Prueba tu mensaje in-app
 

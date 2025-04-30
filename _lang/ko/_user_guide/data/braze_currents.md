@@ -10,7 +10,7 @@ description: "이 랜딩 페이지는 커런츠라고 불리는 Braze 데이터 
 tool: currents
 search_rank: 9
 guide_top_header: "Braze 커런츠"
-guide_top_text: "인게이지먼트 전략의 영향을 이해하는 것은 사용자와의 커뮤니케이션을 반복하고 최적화하는 데 중요한 정보를 제공합니다. 이 귀중한 참여 데이터를 운영의 나머지 부분과 긴밀하게 통합하고 데이터 과학에 대한 투자를 확대할 수 있도록 Braze 플랫폼은 통합에서 얻은 다양한 이벤트 데이터를 추적하여 분석, 리타겟팅 및 기타 시스템 내 다른 사용 사례에 활용합니다. <br> <br>커런츠 도구는 Braze 플랫폼에서 가장 강력하면서도 세분화된 인게이지먼트 이벤트의 실시간 데이터 스트림입니다. 여러 <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>데이터 파트너</a> 중 한 곳에 Avro 파일 형식의 데이터를 제공하여 Braze가 생성하는 고유하고 가치 있는 데이터를 다른 동급 최고의 플랫폼에서 비즈니스 인텔리전스(BI) 및 분석 작업을 강화하는 데 사용할 수 있도록 지원합니다."
+guide_top_text: "인게이지먼트 전략의 영향을 이해하는 것은 사용자와의 커뮤니케이션을 반복하고 최적화하는 데 중요한 정보를 제공합니다. 이 귀중한 참여 데이터를 운영의 나머지 부분과 긴밀하게 통합하고 데이터 과학에 대한 투자를 확대할 수 있도록 Braze 플랫폼은 통합에서 얻은 다양한 이벤트 데이터를 추적하여 분석, 리타겟팅 및 기타 시스템 내 다른 사용 사례를 지원합니다. <br> <br>커런츠 도구는 Braze 플랫폼에서 가장 강력하면서도 세분화된 인게이지먼트 이벤트의 실시간 데이터 스트림입니다. 여러 <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>데이터 파트너</a> 중 한 곳에 Avro 파일 형식의 데이터를 제공하여 Braze가 생성하는 고유하고 가치 있는 데이터를 다른 동급 최고의 플랫폼에서 비즈니스 인텔리전스(BI) 및 분석 작업을 강화하는 데 사용할 수 있도록 지원합니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
@@ -38,7 +38,9 @@ guide_featured_list:
 - name: "데이터를 Redshift로 전송"
   link: /docs/user_guide/data/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
-
+- name: "전류 FAQ"
+  link: /docs/user_guide/data/braze_currents/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## 커런츠 기능

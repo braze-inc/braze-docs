@@ -13,7 +13,7 @@ platform:
 
 # Criação de feature flags
 
-> Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção de usuários. Crie um novo feature flag no dashboard da Braze. Forneça um nome e um endereço `ID`, um público-alvo e uma porcentagem de usuários para os quais ativar esse recurso. Em seguida, usando o mesmo `ID` no código do seu app ou site, você pode executar condicionalmente determinadas partes da sua lógica de negócios. Para saber mais sobre os feature flags e como você pode usá-los no Braze, consulte [Sobre os feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).
+> Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção de usuários. Crie um novo feature flag no dashboard da Braze. Forneça um nome e um endereço `ID`, um público-alvo e uma porcentagem de usuários para os quais ativar esse recurso. Em seguida, usando o mesmo `ID` no código do seu app ou site, você pode executar condicionalmente determinadas partes da sua lógica de negócios. Para saber mais sobre os feature flags e como você pode usá-los no Braze, consulte [Sobre os feature flags]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Pré-requisitos
 
@@ -71,7 +71,7 @@ No exemplo a seguir, o feature flag mostra um banner de falta de estoque para um
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-Não há limite para o número de propriedades que você pode adicionar. No entanto, as propriedades de um Feature Flag são limitadas a um total de 10kB. Tanto os valores de propriedade quanto as chaves estão limitados a 255 caracteres de comprimento.
+Não há limite para o número de propriedades que você pode adicionar. No entanto, as propriedades de um sinalizador de recurso são limitadas a um total de 10 KB. Tanto os valores de propriedade quanto as chaves estão limitados a 255 caracteres de comprimento.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

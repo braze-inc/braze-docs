@@ -36,10 +36,6 @@ Puede volver a ejecutar el informe para generar estadísticas actualizadas.
 
 En tu cuenta del panel, ve a **Análisis** > **Informes de interacción**. Selecciona **\+ Crear informe nuevo**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **los informes de interacción** en **Datos**.
-{% endalert %}
-
 ### Paso 2: Añadir mensajes
 
 Añada las campañas y los mensajes Canvas que desea compilar en su informe. Puedes seleccionar tus mensajes de dos maneras:

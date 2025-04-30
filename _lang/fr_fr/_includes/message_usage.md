@@ -9,10 +9,6 @@ Le tableau de bord de l'**utilisation des messages** est divisé en trois sectio
 
 Accédez au tableau de bord en sélectionnant **Paramètres** > **Facturation** > **Utilisation des messages**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte, puis en sélectionnant **Abonnements et utilisation.**
-{% endalert %}
-
 ## Aperçu de l'utilisation des crédits de messages
 
 L'**aperçu de l'utilisation des crédits de messages** donne un aperçu de l'utilisation de tous les canaux qui utilisent des crédits. Vous pouvez voir où vous en êtes par rapport à votre crédit global, et trouver des détails sur votre contrat actif et votre durée de contrat.
@@ -20,7 +16,7 @@ L'**aperçu de l'utilisation des crédits de messages** donne un aperçu de l'ut
 Cette page s'affiche si vous avez un contrat d'envoi de messages ou si vous avez acheté WhatsApp. Les canaux qui utilisent des crédits de messages sont indiqués dans l'**aperçu des contrats de crédits.**
 
 {% alert note %}
-Si vous avez acheté WhatsApp mais que vous n'avez pas de contrat de crédits de messages, vous verrez toujours la consommation de crédits pour WhatsApp, car c'est ainsi que les anciens contrats WhatsApp sont facturés. Cela diffère des anciens SMS, qui ne consomment des crédits que lorsque vous avez souscrit un contrat de crédits de messages.
+Si vous avez acheté WhatsApp mais que vous n'avez pas de contrat de crédits de messages, vous verrez toujours la consommation de crédits pour WhatsApp car c'est ainsi que les anciens contrats WhatsApp sont facturés. Cela diffère des anciens SMS, qui ne consomment des crédits que lorsque vous avez souscrit un contrat de crédits de messages.
 {% endalert %}
 
 Les données de l'**aperçu de l'utilisation des crédits de messages** sont limitées à la période du contrat, qui est affichée dans l'**aperçu du contrat de crédits.** Vous ne pouvez pas filtrer sur une plage de dates en dehors de la **période des crédits**.
@@ -42,7 +38,7 @@ Des filtres sont disponibles pour vous permettre de filtrer par **pays** ou par 
 Contrairement à l'**aperçu de l'utilisation des crédits de messages**, cette section contient les données historiques des périodes contractuelles précédentes. 
 
 {% alert note %}
-Il est possible de sélectionner une plage de dates qui contient à la fois des utilisations sans crédits et des utilisations avec crédits de messages. Dans ce cas, la consommation qui s'est produite en dehors des crédits d'envoi de messages affichera `—` (null) dans les colonnes **Rapport de crédit** et **Crédits.** 
+Il est possible de sélectionner une plage de dates contenant à la fois des utilisations sans crédits et des utilisations avec crédits de messages. Dans ce cas, la consommation qui s'est produite en dehors des crédits d'envoi de messages affichera `—` (null) dans les colonnes **Rapport de crédit** et **Crédits.** 
 {% endalert %}
 
 ![Tableau d'utilisation des crédits SMS/MMS avec des valeurs nulles.][3]{: style="max-width:80%;"}

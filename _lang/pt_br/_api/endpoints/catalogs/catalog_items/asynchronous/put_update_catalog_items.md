@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Atualizar vários itens do catálogo"
-article_title: "PUT: Atualizar vários itens do catálogo"
+nav_title: "PUT: Substituir Vários Itens do Catálogo"
+article_title: "PUT: Substituir Vários Itens do Catálogo"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o o endpoint da Braze \"Atualizar vários itens do catálogo\"."
+description: "Este artigo descreve detalhes sobre o endpoint Braze para substituir vários itens do catálogo."
 
 ---
 {% api %}
-# Atualizar itens do catálogo
+# Substituir itens do catálogo
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use esse ponto de extremidade para atualizar vários itens em seu catálogo.
+> Use este endpoint para substituir vários itens em seu catálogo.
 
 Se um item de catálogo não existir, esse endpoint criará o item em seu catálogo. Cada solicitação pode suportar até 50 itens de catálogo. Esse ponto de extremidade é assíncrono.
 

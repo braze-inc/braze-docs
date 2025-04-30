@@ -41,7 +41,9 @@ Le test de connexion est en cours d'exécution sur votre entrepôt de données, 
 
 ### Erreur de connexion à l'instance Snowflake : La demande entrante avec l'IP n'est pas autorisée à accéder à Snowflake
 
-Essayez d'ajouter les IP officielles de Braze à votre liste d'autorisation IP. Pour plus d'informations, reportez-vous à la section [Intégrations d'entrepôts de données]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Essayez d'ajouter les IP officielles de Braze à votre liste d'autorisation IP. Pour plus d'informations, reportez-vous à la section [Intégrations d'entrepôts de données]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), ou autorisez les adresses IP correspondantes :
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Erreur lors de l'exécution de SQL en raison de la configuration du client : 002003 (42S02): Erreur de compilation SQL : n'existe pas ou n'est pas autorisé
 
@@ -152,11 +154,11 @@ Pour éviter ces comportements à l'avenir, nous recommandons d'utiliser des val
 
 ## Lors d'une synchronisation, l'ordre est-il préservé si plusieurs enregistrements partagent le même identifiant ?
 
-L'ordre de traitement n'est pas prévisible à 100%. Par exemple, s'il y a plusieurs lignes avec le même `EXTERNAL_ID` dans le tableau lors d'une synchronisation, nous ne pouvons pas garantir quelle valeur se retrouvera dans le profil final. 
+L'ordre de traitement n'est pas prévisible à 100%. Par exemple, s'il y a plusieurs lignes avec le même `EXTERNAL_ID` dans le tableau lors d'une synchronisation, nous ne pouvons pas garantir quelle valeur se retrouvera dans le profil final. Si vous mettez à jour le même site `EXTERNAL_ID` avec différents attributs dans la colonne payload, toutes les modifications sont prises en compte lorsque la synchronisation est terminée.
 
 ## Quelles sont les mesures de sécurité pour CDI ?
 
-### Les mesures de Braze
+### Nos mesures
 
 Braze dispose des mesures suivantes pour CDI :
 

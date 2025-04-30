@@ -39,7 +39,7 @@ If new properties are sent in the future, they won't be in the schema until it i
 
 ## 2단계: 중첩된 개체 사용
 
-스키마를 생성한 후에는 세분화 및 개인화 중에 중첩된 데이터를 참조할 수 있습니다. 사용 예는 다음 섹션을 참조하세요:
+세분화 및 개인화 중에 중첩된 데이터를 참조할 수 있습니다. 스키마는 필요하지 않습니다. 사용 예는 다음 섹션을 참조하세요:
 
 - [API 요청 본문](#api-request-body)
 - [Liquid 템플릿](#liquid-templating)

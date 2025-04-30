@@ -29,10 +29,6 @@ Braze recopila automáticamente un nivel básico de información de desinstalaci
 
 Puedes activar el seguimiento de desinstalaciones en la página **Configuración de aplicaciones**, en **Ajustes**, para cada aplicación que quieras rastrear.
 
-{% alert note %}
-Si utilizas la navegación más antigua, **Ajustes de la aplicación** es **Ajustes** y se encuentra en **Gestionar ajustes**.
-{% endalert %}
-
 Cuando se activa el seguimiento de desinstalación para una aplicación, se enviarán mensajes push en segundo plano cada noche a los usuarios que no hayan registrado una sesión o recibido un push en 24 horas.
 
 ### Configuración

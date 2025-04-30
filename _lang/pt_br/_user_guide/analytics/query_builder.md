@@ -18,18 +18,12 @@ Como o Criador de consultas permite acesso direto a alguns dados de clientes, vo
 Para executar um relatório do Query Builder:
 
 1. Acesse **Análise de dados** > **Criador de consultas**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Query Builder** em **Data**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecione **Create SQL Query (Criar consulta de SQL**). Se precisar de inspiração ou ajuda para elaborar sua consulta, selecione **Query Template (Modelo de consulta** ) e escolha um modelo da lista. Caso contrário, selecione **Editor de SQL** para ir direto ao editor.
-3\. Seu relatório recebe automaticamente um nome com a data e a hora atuais. Passe o mouse sobre o nome e selecione <i class="fas fa-pencil" alt="Edit"></i> para dar à sua consulta de SQL um nome significativo.
-4\. Escreva sua consulta de SQL no editor ou [obtenha ajuda da IA](#ai-query-builder) na guia **IA Query Builder**. Se estiver escrevendo seu próprio SQL, consulte [Como escrever consultas de SQL personalizadas](#custom-sql) para obter requisitos e recursos.
-5\. Selecione **Executar consulta**.
-6\. Salve sua consulta.
-7\. Para baixar um CSV de seu relatório, selecione **Exportar**.
+2. Selecione **Create SQL Query (Criar consulta de SQL**). Se precisar de inspiração ou ajuda para elaborar sua consulta, selecione **Query Template (Modelo de consulta** ) e escolha um modelo da lista. Caso contrário, selecione **Editor de SQL** para ir direto ao editor.
+3. Seu relatório recebe automaticamente um nome com a data e a hora atuais. Passe o mouse sobre o nome e selecione <i class="fas fa-pencil" alt="Edit"></i> para dar à sua consulta de SQL um nome significativo.
+4. Escreva sua consulta de SQL no editor ou [obtenha ajuda da IA](#ai-query-builder) na guia **IA Query Builder**. Se estiver escrevendo seu próprio SQL, consulte [Como escrever consultas de SQL personalizadas](#custom-sql) para obter requisitos e recursos.
+5. Selecione **Executar consulta**.
+6. Salve sua consulta.
+7. Para baixar um CSV de seu relatório, selecione **Exportar**.
 
 ![O Criador de consultas mostra os resultados da consulta modelo "Engajamento e receita do canal nos últimos 30 dias".]({% image_buster /assets/img_archive/query_builder.png %})
 
@@ -429,7 +423,7 @@ Se um relatório expirar ou apresentar erros mesmo após uma nova tentativa, ent
 
 ## Dados e resultados
 
-Os resultados e as exportações de resultados são tabelas que podem conter até 1.000 linhas. Para relatórios que exigem grandes quantidades de dados, use outra ferramenta, como o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ou [as APIs de exportação]({{site.baseurl}}/api/endpoints/export) do Braze.
+Os resultados e as exportações de resultados são tabelas que podem conter até 1.000 linhas. Para relatórios que exigem grandes quantidades de dados, você pode usar ferramentas como o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ou o [endpoint da API de exportação]({{site.baseurl}}/api/endpoints/export).
 
 ## Monitoramento do uso do Query Builder
 

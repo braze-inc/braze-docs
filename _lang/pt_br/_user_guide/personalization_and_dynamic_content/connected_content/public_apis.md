@@ -1,11 +1,11 @@
 ---
-nav_title: APIs públicas
+nav_title: Uso de APIs públicas
 article_title: APIs públicas para conteúdo conectado
-page_order: 4
+page_order: 10
 description: "Este artigo aborda uma lista de APIs disponíveis publicamente que podem ser usadas com conteúdos conectados."
 ---
 
-# APIs públicas
+# Uso de APIs públicas para conteúdo conectado
 
 > Há uma variedade de APIs disponíveis publicamente que podem ser usadas para conteúdos conectados. As APIs públicas permitem que você insira dados personalizados nas mensagens. Esta página compila uma lista de APIs públicas que podem ser usadas para Connected Content. No entanto, há muito mais APIs disponíveis, fornecendo uma ampla variedade de usos potenciais de conteúdos conectados.  
 

@@ -41,26 +41,30 @@ Para obter as etapas de uso dessas localidades em suas campanhas de e-mail e no 
 
 ## Considerações
 
-Ao configurar uma localização, é possível selecionar idiomas nos atributos padrão do usuário ou nos atributos personalizados. Não é possível selecionar entre os dois.
-
-É possível selecionar até dois atributos personalizados em uma única localização ou até dois idiomas padrão de atributos de usuário. Em ambos os casos, o segundo atributo é opcional.
+- Ao configurar uma localização, é possível selecionar idiomas nos atributos padrão do usuário ou nos atributos personalizados. Não é possível selecionar entre os dois.
+- É possível selecionar até dois atributos personalizados em uma única localização ou até dois idiomas padrão de atributos de usuário. Em ambos os casos, o segundo atributo é opcional.
+- Ao fazer edições nos valores traduzidos no arquivo CSV, evite modificar quaisquer valores padrão no arquivo.
+- A chave de localização em seu arquivo feito upload deve corresponder à chave em suas configurações multilíngues.
 
 ### Suporte e priorização
 
 - Os usuários que correspondem a um atributo personalizado de localização são priorizados antes dos usuários que correspondem a um atributo de usuário padrão.
 - O suporte a atributos personalizados é limitado a tipos de string e à chave de comparação `equals`.
-- Se um atributo personalizado for excluído pelo Suporte ou se o tipo for alterado, o usuário não poderá mais se enquadrar nessa localização e será rebaixado na lista de prioridades de localidades em que se enquadra ou receberá traduções padrão de marketing.
+- Se um atributo personalizado for excluído ou seu tipo for alterado, o usuário não poderá mais se enquadrar nessa localidade e irá para a lista de prioridades de localidades em que se enquadra ou receberá traduções padrão de marketing.
 - Se uma localidade for inválida (o atributo personalizado foi alterado ou excluído), o erro aparecerá na página **Suporte multilíngue**.
 
 ## Perguntas frequentes
 
 #### Quantas localizações posso adicionar?
+
 Você pode adicionar até 200 localidades.
 
 #### Onde os arquivos de tradução são armazenados no Braze?
+
 Os arquivos de tradução são armazenados no nível da campanha, o que significa que cada variante de mensagens deve ter traduções feitas upload.
 
 #### O nome da localização precisa seguir um padrão ou formato específico?
+
 Não. Você pode usar sua convenção de nomenclatura preferida. O nome da localização é usado ao selecionar a localização no editor e estará nos cabeçalhos do arquivo baixado com os IDs de tradução.
 
 [1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

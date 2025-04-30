@@ -87,10 +87,6 @@ Para utilizar una plantilla HTML personalizada existente o plantillas creadas po
 
 También puede acceder a todas las plantillas desde la sección **Plantillas**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), las plantillas están en **Plantillas y medios.**
-{% endalert %}
-
 Una vez seleccionada la plantilla, verá un resumen de su correo electrónico en **Variantes de correo electrónico**, que incluye la información de envío y el cuerpo del mensaje. 
 
 A continuación, selecciona **Editar cuerpo del correo electrónico** para empezar a diseñar la estructura del correo electrónico en el editor de arrastrar y soltar. 
@@ -238,7 +234,7 @@ Al redactar tu mensaje, puedes alternar la dirección del texto entre izquierda-
 
 ![Menú del editor de arrastrar y soltar de correo electrónico con botón para alternar la alineación del texto entre derecha-izquierda e izquierda-derecha.][1]{: style="max-width:50%;"}
 
-El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ### Añadir atributos HTML a los enlaces
 
@@ -256,7 +252,7 @@ Otro caso de uso común es marcar enlaces específicos como enlaces universales.
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (debe configurarse una [sub-ruta personalizada](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) )
 
-Para configurar enlaces universales, consulte [Enlaces universales y App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Para configurar enlaces universales, consulte [Enlaces universales y App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 También puede integrarse con uno de nuestros socios de atribución, como [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) o [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), para gestionar los enlaces universales.
 

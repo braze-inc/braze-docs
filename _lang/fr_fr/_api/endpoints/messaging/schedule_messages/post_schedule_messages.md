@@ -18,6 +18,10 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mes
 
 Si vous ciblez un segment, un enregistrement de votre demande sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l'envoi de tous les messages planifiés.
 
+{% alert tip %}
+Si vous souhaitez envoyer des messages immédiatement à des utilisateurs désignés, utilisez plutôt l' [endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages).
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
 ## Conditions préalables

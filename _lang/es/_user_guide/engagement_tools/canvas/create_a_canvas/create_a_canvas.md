@@ -12,17 +12,13 @@ search_rank: 1
 
 > En este artículo de referencia se cubren los pasos necesarios para crear, mantener y probar un Canvas. Sigue esta guía o consulta nuestro [curso de Braze Learning en Canvas](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando la experiencia Canvas original. Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow. Es una experiencia de edición mejorada para construir y gestionar mejor los Lienzos. Más información sobre la [clonación de tus lienzos en el flujo de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Editor de lienzos original %}
+Ya no puedes crear o duplicar Lienzos utilizando la experiencia original de Canvas. Braze recomienda [clonar tus Lienzos en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Paso 1: Crear un nuevo lienzo 
 
 Vaya a **Mensajería** > **Lienzo** y seleccione **Crear lienzo**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Canvas** en **Compromiso**.
-{% endalert %}
 
 ## Paso 2: Configura tu Canvas
 
@@ -81,11 +77,11 @@ Aquí, nombrará su Lienzo, asignará [Equipos]({{site.baseurl}}/user_guide/admi
 Etiqueta tus lienzos para que sea fácil encontrarlos y crear informes a partir de ellos. Por ejemplo, al utilizar [el Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por determinadas etiquetas.
 {% endalert %}
 
-![La página de detalles del Canvas, con campos para el nombre, descripción, ubicación y etiquetas del Canvas.][53]
+![La página de detalles del Canvas, con campos para el nombre, descripción, ubicación y etiquetas del Canvas.][53]{: style="max-width:70%;"}
 
 #### Elegir eventos de conversión
 
-Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) medirán la eficacia de tu Canvas. 
+Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) medirán la eficacia de tu Canvas. 
 
 ![Evento de Conversión Principal A con el tipo de evento de conversión Realiza Compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.][52]
 
@@ -101,7 +97,7 @@ Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Can
   {% tab Entrega programada %}
     Con la entrega programada, los usuarios entrarán en un horario, de forma similar a como se programaría una campaña. Puede inscribir a los usuarios en un Canvas en cuanto se lance, introducirlos en su recorrido en algún momento en el futuro o de forma recurrente (diaria, semanal o mensualmente). 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +106,7 @@ Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Can
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab Entrega activada por API %}
@@ -148,15 +144,19 @@ Evite configurar una campaña basada en acciones o Canvas con el mismo desencade
 
 Después de añadir segmentos y filtros a su público objetivo, puede comprobar si su público está configurado según lo esperado [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
-![El campo "Búsqueda de usuarios", que te permite buscar por ID de usuario externo o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+![El campo "Búsqueda de usuarios", que te permite buscar por ID de usuario externo o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Seleccionar controles de entrada
 
-Los controles de entrada determinan si se permite a los usuarios volver a entrar en un lienzo. También puede limitar el número de personas que podrían entrar en este lienzo. Por ejemplo, si establece el campo **Máximo de usuarios que pueden entrar en este lienzo** en 1.000 usuarios y activa la casilla **Limitar cada vez que se programe el lienzo**, el lienzo se enviará a 1.000 usuarios al día.
+Los controles de entrada determinan si se permite a los usuarios volver a entrar en un lienzo. También puedes limitar el número de personas que potencialmente entrarían en este Canvas según una cadencia seleccionada (diariamente, durante toda la vida del Canvas o cada vez que se programe el Canvas). 
 
-![La página "Controles de entrada" muestra las casillas de verificación "Permitir que los usuarios vuelvan a entrar en el Canvas" y "Limitar el número de personas que pueden entrar en este Canvas". Esto último te permite establecer el máximo de usuarios y si quieres limitar cada vez que se programe el Canvas.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+Por ejemplo, si seleccionas **Limitar volumen de entradas** y estableces el campo **Entradas máximas** en 5.000 usuarios con **Diariamente** como cadencia límite, entonces el Canvas sólo enviará a 5.000 usuarios al día.
 
-Braze no recomienda utilizar la función **Limitar cada vez que se programe el lienzo** para el calentamiento de IP, ya que esto puede provocar un aumento de los volúmenes de envío.
+![La página "Controles de entrada" muestra las casillas de verificación "Permitir a los usuarios volver a entrar en Canvas" y "Limitar el volumen de entrada". Esto último te permite establecer el máximo de entradas y si quieres limitar diariamente, durante toda la vida del Canvas, o cada vez que se programe el Canvas.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze no recomienda utilizar la característica **Cada vez que se programa el Canvas** para el calentamiento de IP, ya que puede provocar un aumento del volumen de envíos.
+{% endalert %}
 
 #### Establecer criterios de salida
 
@@ -205,7 +205,7 @@ Si lo desea, especifique Horas de silencio (el tiempo durante el cual no se envi
 
 ### Añadir una variante
 
-![Un gif que muestra a un usuario seleccionando "Añadir variante", y luego volviendo a seleccionar "Añadir variante" en el menú contextual.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Selecciona el botón "Añadir variante" para mostrar un menú contextual con la opción "Añadir variante".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Seleccione **Añadir variante** y añada una nueva variante a su lienzo. Las variantes representan un viaje que realizarán sus usuarios y pueden contener múltiples pasos y ramificaciones.
 
@@ -235,7 +235,7 @@ Puede añadir más pasos a su flujo de trabajo Canvas arrastrando y soltando com
 Cuando empiece a añadir más pasos, puede cambiar el nivel de zoom para centrarse en los detalles o abarcar todo el recorrido del usuario. Acércate con <kbd>Shift</kbd> + <kbd>+</kbd> o aléjate con <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![La ventana de búsqueda de componentes añade un paso en Canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![La ventana de búsqueda de componentes añade un paso en Canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Un lienzo creado con el flujo del lienzo puede contener hasta 200 pasos. Si su lienzo supera los 200 pasos, se producirán problemas de carga.
@@ -277,11 +277,9 @@ Seleccione **Hecho** cuando haya terminado de configurar su componente Canvas.
 {% tabs local %}
 {% tab Propiedades de entrada del lienzo %}
 
-Las `canvas_entry_properties` se configuran en el paso Horario de entrada de la creación de un Canvas e indican el desencadenante que introduce a un usuario en un Canvas. Estas propiedades también pueden acceder a las propiedades de las cargas útiles de entrada en los lienzos activados por API. El objeto `canvas_entry_properties` tiene un límite de tamaño máximo de 50 KB. 
+Las `canvas_entry_properties` se configuran en el paso Horario de entrada de la creación de un Canvas e indican el desencadenante que introduce a un usuario en un Canvas. Estas propiedades también pueden acceder a las propiedades de las cargas útiles de entrada en los lienzos activados por API. Nota que el objeto `canvas_entry_properties` puede ser de hasta 50 KB. 
 
-Para el Canvas Flow, las propiedades de entrada se pueden utilizar en Liquid en cualquier paso de Mensaje. Utilice el siguiente Líquido cuando haga referencia a estas propiedades de entrada: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Los eventos deben ser eventos personalizados o eventos de compra para poder utilizarse de esta forma.
-
-Utilice el siguiente Líquido cuando haga referencia a estas propiedades de entrada: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Tenga en cuenta que los eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta manera.
+Utilice el siguiente Líquido cuando haga referencia a estas propiedades de entrada: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Tenga en cuenta que los eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta manera.
 
 {% raw %}
 Por ejemplo, considere la siguiente petición: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Puede añadir la palabra "zapatos" a un mensaje con este líquido ``{{canvas_entry_properties.${product_name}}}``.
@@ -323,7 +321,7 @@ Tenga en cuenta que los lienzos multivariantes no sólo le permiten probar el te
 
 ![La opción "Intelligent Selection" está habilitada en la página "Editar distribución de variantes". A medida que analiza y optimiza el Canvas, muestra una barra horizontal a través de la página dividida en varias secciones, cada una de las cuales varía en color y tamaño. Esto es sólo una representación visual y no se correlaciona con ningún análisis específico.][18b]
 
-La Selección Inteligente para Canvas optimiza sus resultados de Canvas realizando ajustes graduales en tiempo real de la distribución de usuarios clasificados en cada variante. Cuando el algoritmo estadístico determine un ganador decisivo entre sus variantes, descartará las variantes de menor rendimiento y asignará todos los futuros destinatarios elegibles del lienzo a las variantes ganadoras. 
+La Selección Inteligente para Canvas optimiza sus resultados de Canvas realizando ajustes graduales en tiempo real de la distribución de usuarios clasificados en cada variante. Cuando el algoritmo estadístico determine un ganador decisivo entre tus variantes, descartará las variantes de menor rendimiento y clasificará a todos los futuros destinatarios elegibles del Canvas en las Variantes Ganadoras. 
 
 Por esta razón, la Selección Inteligente funciona mejor en Lienzos en los que entran nuevos usuarios con frecuencia.
 

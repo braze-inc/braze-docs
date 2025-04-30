@@ -177,7 +177,9 @@ Total
 Total
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre. 
+
+Bien que les échecs provisoires ne soient pas suivis dans l'analyse/analytique de votre campagne, vous pouvez surveiller les échecs provisoires dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) ou exclure ces utilisateurs de vos envois à l'aide du [filtre de segmentation des échecs provis]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)oires. Dans le journal d'activité des messages, vous pouvez également voir la raison des échecs provisoires et comprendre les écarts éventuels entre les "envois" et les "réception/distributions" de vos campagnes de communication par e-mail.
 
 <span class="calculation-line">Calcul : Compter </span>
 
