@@ -44,7 +44,7 @@ Key capabilities include:
 
 ### Placement IDs {#placement-ids}
 
-Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [embed Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/).
+Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [create Banner placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements/).
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
@@ -71,5 +71,5 @@ These are the key metrics for Banners. For a full list of metrics, definitions, 
 
 Now that you know about Banners, you're ready for the next steps:
 
-- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
-- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
+1. [Creating Banner placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+2. [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
