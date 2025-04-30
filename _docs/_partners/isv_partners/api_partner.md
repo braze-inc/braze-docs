@@ -5,21 +5,18 @@ hidden: true
 ---
 
 # API partner integration
+## User Agents
 
-Alloys ISV partners are required to add their partner name to the `partner` field in their API Requests, allowing Braze to track API partner usage such as incoming requests from partners. Reference the following [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint structure when developing your implementation.
+All partners are required to include a User-Agent header which clearly identifies the source of the traffic. This enables our shared customers to see partner traffic in Braze’s API usage reporting, and enables Braze engineers to identify integrations which are not following best practices. Partners should generally only use a single user agent for all their traffic.
 
-## Partner request body
+User agents should follow the following format which clearly identifies the partner, similar to [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#page-46): ```User-Agent: partner-<partner name>-<partner product> / <version>```
 
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
+For example, Snowflake Cloud Data Ingestion’s user agent could be:
 
-```json
-{
-   "attributes" : (optional, array of Attributes Object),
-   "events" : (optional, array of Event Object),
-   "purchases" : (optional, array of Purchase Object),
-   "partner" : (required, string)
-}
-```
+```User-Agent: partner-Snowflake-CloudDataIngestion/179``` 
+
+An example of an unacceptable User-Agent header would be:
+
+```User-Agent: axios/1.4.0``` 
+
+This user agent is unacceptable because it does not clearly identify the source of the traffic.
