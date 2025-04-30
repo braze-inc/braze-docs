@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 2
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
-      - name: Deploy ${{ matrix.language | upper }} Docs
+      - name: Deploy ${{ matrix.language}} Docs
         run: |
           vercel link --yes --token=${{ env.VERCEL_TOKEN }} --project=braze-docs-${{ matrix.language }}
           vercel deploy --prod --token=${{ env.VERCEL_TOKEN }}
