@@ -9,13 +9,15 @@ tool:
   - Campaigns
 channel:
   - SMS
+  - MMS
+  - RCS
 ---
 
 # Link shortening
 
-> This page covers how to turn on link shortening in your SMS messages, test shortened links, use your custom domain in shortened links, and more.
+> This page covers how to turn on link shortening in your SMS and RCS messages, test shortened links, use your custom domain in shortened links, and more.
 
-Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns.
+Link shortening and click tracking allow you to automatically shorten URLs contained in SMS and RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS and RCS campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
@@ -28,7 +30,7 @@ Links will be shortened using our shared short domain (`brz.ai`). An example URL
 Any static URLs that start with `http://` or `https://` will be shortened. Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization will be valid for two months.
 
 {% alert note %}
-If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS channel to be selectable, turn on SMS link shortening with advanced tracking and [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
+If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking and [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
 {% endalert %}
 
 ## Using link shortening
@@ -72,7 +74,7 @@ https://example.com/{{url_var}}
 
 ### Shorten URLs rendered by Liquid variables
 
-We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the SMS message. 
+We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the SMS or RCS message. 
 
 ### Shorten URLs in /messages/send endpoint
 
@@ -88,7 +90,7 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 ## Testing
 
-Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
+Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
 This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
 
@@ -106,15 +108,15 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 ## Click tracking
 
-When link shortening is turned on, the SMS and MMS performance table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
+When link shortening is turned on, the **SMS/MMS/RCS Performance** table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
 ![SMS and MMS performance metrics table.][4]
 
-The **Historical Performance** and **SMS/MMS Performance** charts also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
+The **Historical Performance** and **SMS/MMS/RCS Performance** tables also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
 
 ## Retargeting users
 
-For guidance on retargeting, visit [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
+For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
 {% multi_lang_include click_tracking.md section='Custom Domains' %}
 

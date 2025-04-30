@@ -1,15 +1,17 @@
 ---
-nav_title: "SMS Laws & Regulations"
-article_title: SMS Laws & Regulations
+nav_title: "Laws & Regulations"
+article_title: Laws & Regulations for SMS, MMS, and RCS
 page_order: 3
-description: "This reference article covers laws and regulations surrounding SMS and MMS."
+description: "This reference article covers laws and regulations surrounding SMS, MMS, and RCS."
 page_type: reference
 channel:
   - SMS
+  - MMS
+  - RCS
   
 ---
 
-# SMS laws, regulations, and abuse prevention
+# Laws, regulations, and abuse prevention for SMS, MMS, and RCS
 
 > Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user's phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
@@ -94,3 +96,5 @@ Ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/telephone_consum
 ### International
 
 Most of these best practices apply to guidelines set forth in the United States of America. If you're reaching customers outside of U.S. regions, research best practices and laws in those areas. It's always a best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the United States, Canada, and countries part of the European Union.
+
+## Best practices for RCS compliance

@@ -1,29 +1,57 @@
 ---
-page_order: 11
-nav_title: Best Practices
-article_title: SMS Best Practices
-layout: dev_guide
-guide_top_header: "SMS Best Practices"
-guide_top_text: "Before sending your SMS messages, refer to the following articles for things you should know and check for."
-
-page_type: landing
-description: "This landing page is home to best practices that highlight things that you should know and check for prior to message send."
-channel: SMS
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-- name: "Best Practices"
-  link: /docs/user_guide/message_building_by_channel/sms/best_practices/best_practices/
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Know Before You Send"
-  link: /docs/know_before_send/
-  image: /assets/img/braze_icons/send-01.svg
-- name: "Opt-ins"
-  link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
-  image: /assets/img/braze_icons/message-text-circle-01.svg
-- name: "Sending Test Messages"
-  link: /docs/developer_guide/in_app_messages/sending_test_messages/
-  image: /assets/img/braze_icons/mail-01.svg
+nav_title: "Best Practices"
+article_title: Best Practices for SMS, MMS, and RCS 
+page_order: 1
+description: "This reference article covers best practices for SMS/MMS."
+page_type: reference
+channel:
+  - SMS
+  - MMS
+  - RCS
+  
 ---
 
-<br><br>
+# Best practices for SMS, MMS, and RCS 
+
+> Learn more about best practices for SMS, MMS, and RCS with Braze, including our recommendations for opt-out monitoring and traffic pumping.
+
+## Opt-out monitoring recommendations
+
+Complying with recipient requests to opt-out of communications is required by law. Failing to comply with requests by SMS recipients to opt-out of the channel can incur penalties, including fines, and can lead to lawsuits. Braze has features in place to enable robust SMS and MMS opt-in and out management, plus mechanisms to assist in making sure requests are correctly processed.
+
+Under their subscription agreements with us, our customers are solely responsible  for their compliance with applicable law in their use of our services. Accordingly, we strongly recommend that customers pay close attention to correctly configuring their SMS set-up, and that they test those set-ups thoroughly, take measures to monitor opt-out compliance, and act promptly should they identify instances of non-compliance with opt-out requests.
+
+When setting up SMS and MMS in Braze to manage opt-ins and opt-outs, refer to the following list of resources:
+* [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/): Subscription groups and opt-in/out methods and statuses.
+* [Subscription Group REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups): How to process opt-ins and outs they receive from a source other than a direct response to a message.
+* [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords): Explanations for how Braze approaches keyword processing and management.
+* [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/): Requires users to explicitly confirm their opt-in intent before they can receive SMS messages. SMS double opt-in is a requirement for some countries, so Braze recommends configuring this.
+* [SMS message sending]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
+
+### Considerations
+
+Where SMSand MMS have been set up across multiple instances, and due to misconfiguration, a campaign or Canvas opt-outs are sent to the wrong workspace.
+
+* Braze has monitoring in place to identify such instances. If this behavior is flagged, Braze will repoint opt-outs to the correct instance and backfill any opt-outs that occurred during the period.
+* We strongly recommend customers test opt-outs for each subscription group they have in Braze. Identifying this issue before launching a message is better than mitigating after an issue has been identified.
+
+Braze manages SMS/MMS subscriptions at both the user profile (`user_id`) level and the phone number (`channel_id`) level. When a phone number is opted-in or out, the update applies to all profiles which share that number. In the case where an end user opted-in with a certain phone number, but then changes phone number, the new phone number will inherit the subscription group status of the user. Accordingly, if an end user has opted-out, but then re-enters the app or website with a new phone number, they will not receive unwanted messages.
+
+## Traffic pumping recommendations
+
+### What is traffic pumping?
+
+Traffic pumping is a form of fraud that occurs when a bad actor uses an online form to trigger SMS messages to be sent at high volume (for example opt-in messages or one-time passwords). The bad actor sets up a premium rate phone number for these messages to be sent to and claims a revenue share from the mobile operator with which the premium rate number has been set up, thus generating illicit revenue.
+
+### How to spot traffic pumping
+
+* Premium rate numbers supporting this kind of scam are often, but not always, set up in countries outside of your normal sending geographies.
+* Unusual spikes in sending of messages from online forms might indicate traffic pumping.
+    * We recommend setting up [campaign alerts]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/) to cap and notify if an implausibly high number of messages are sent.
+* Incomplete online forms can indicate programmatic form filling.
+* When building online forms, we recommend setting rules to ensure forms are fully complete and use tools such as CAPTCHA to minimise risk.
+
+### Impact of traffic pumping
+
+Customers are responsible for monitoring the traffic that they are sending and will be invoiced for all SMS sent through their account. Between Braze and Customer, Customer is the party in the better position to detect and prevent traffic pumping.
+
