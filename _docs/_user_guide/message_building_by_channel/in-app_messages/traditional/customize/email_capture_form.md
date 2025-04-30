@@ -44,10 +44,8 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![][4]
-
 {% alert note %}
-To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+**Targeting web users?** <br>To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ## Step 2: Customize the form {#customizable-features}
@@ -67,26 +65,19 @@ If you need to make further customization, choose **Custom Code** for your **Mes
 
 ## Step 3: Set your entry audience
 
-If you only want to send this form to users without existing email addresses, use the filter `Email Available is false`.
+If you’re using an in-app message to capture user emails, you may want to limit the audience to users who haven’t already provided this information.
 
-![Filter by email available is false][10]{: style="max-width:50%"}
+- **To target users without an email address:** Use the filter `Email Available` is `false`. This ensures the form only appears to users who don’t have an email on file, helping you avoid redundant prompts for known users.
+- **To target anonymous users without external IDs:** Use the filter `External User ID` `is blank`. This is useful when you want to identify users who haven’t been authenticated or registered yet.
 
-If you only want to send this form to users without external IDs (anonymous users), use the filter `External User ID is blank`.
-
-![Filter by external user ID is blank][11]{: style="max-width:50%"}
-
-You can also combine the two filters using `AND` logic, if desired.
+You can also combine the two filters using `AND` logic, if desired. This ensures the form is shown only to users who are missing both an email address and an external user ID—ideal for capturing new leads or prompting account creation.
 
 ## Step 4: Target users who filled out the form (optional)
 
-After you've launched the email capture form and collected email addresses from your users, you can target those users with the filter `Clicked/Opened Campaign`. 
+After you've launched the email capture form and collected email addresses from your users, you can target users who filled out the form.
 
-Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_NAME>`. Replace `<CAMPAIGN_NAME>` with the name of your email capture form campaign.
+1. In any segment filter in Braze, select the filter `Clicked/Opened Campaign`. 
+2. From the dropdown, select `clicked in-app message button 1`
+3. Select your email capture form campaign.
 
-![Filter for has clicked in-app message button 1 for your web email capture form campaign][12]
-
-[4]: {% image_buster /assets/img/email_capture_config.png %}
 [5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}
