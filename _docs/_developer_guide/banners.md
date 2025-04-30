@@ -31,11 +31,9 @@ Because Banners never expire and are auto-personalized every time a user starts 
 - Guiding users through onboarding flows and account setup
 - Upselling or cross-selling complementary products
 
-## Features
+## How it works
 
-### Drag-and-drop editor {#drag-drop-editor}
-
-Banners feature an intuitive drag-and-drop editor designed for marketers, allowing for quick, no-code creation of engaging, personalized in-line messages. With the editor, you can easily customize Banners by adding and arranging various content elements without developer support.
+Banners feature an intuitive drag-and-drop editor designed for marketers, allowing for quick, no-code creation of engaging, personalized in-line messages. With the editor, you can easily customize Banners by adding and arranging various content elements without developer support. By default, Banners don't expire, making them ideal for long-term, persistent messages. However, you have the option to set an expiration date if necessary.
 
 Key capabilities include:
 
@@ -54,15 +52,11 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low, or specify an exact priority via drag-and-drop. If multiple Banners share the same priority level, the newest Banner will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low, or specify an exact priority using drag-and-drop. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
-### Card expiration
+## Metrics
 
-By default, Banners don't expire, making them ideal for long-term, persistent messages. However, you have the option to set an expiration date if necessary.
-
-### Metrics
-
-These are the most important Banner metrics. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+These are the key metrics for Banners. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Metric | Definition |
 | --- | --- |
