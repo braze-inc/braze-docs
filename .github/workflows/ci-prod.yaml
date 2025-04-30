@@ -32,5 +32,5 @@ jobs:
       - name: Deploy ${{ matrix.language}} Docs
         run: |
           vercel link --yes --token=${{ env.VERCEL_TOKEN }} --project=braze-docs-${{ matrix.language }}
-          vercel deploy --prod --token=${{ env.VERCEL_TOKEN }}
+          vercel deploy --archive=tgz --prod --token=${{ env.VERCEL_TOKEN }}
           echo "Deployed ${{ matrix.language }} Docs"
