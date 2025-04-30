@@ -1,7 +1,7 @@
 ---
-nav_title: Embedding Banners
-article_title: Embedding Banners for the Braze SDK
-description: "Learn how to embed Banners for the Braze SDK."
+nav_title: Creating Placements
+article_title: Creating Banner placements for the Braze SDK
+description: "Learn how to create Banner placements for the Braze SDK."
 platform:
   - iOS
   - Android
@@ -9,9 +9,9 @@ platform:
   
 ---
 
-# Embedding Banners
+# Creating Banner placements
 
-> Learn how to embed Banners using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
+> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -23,7 +23,7 @@ These are the minimum SDK versions needed to start using Banners:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## Embedding a Banner
+## Creating a placement
 
 {% multi_lang_include banner_cards/creating_placements.md %}
 
@@ -194,7 +194,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Embed using the placement ID {#insertBanner}
+### Step 4: Insert using the placement ID {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -410,7 +410,7 @@ Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/c
 Test Banners are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
-## Logging analytics
+## Logging impressions
 
 Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
 
