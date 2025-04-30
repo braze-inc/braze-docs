@@ -43,7 +43,7 @@ When the integration is successfully set, you can create email and push notifica
 ### Method 2
 In this method, you can integrate Braze with Zeotap through Symphony.
 
-- This method does not support the Braze UI features such as in-app messaging, News Feed, content cards, or push notifications.
+- This method does not support the Braze UI features such as in-app messaging, Content Cards, or push notifications.
 - Zeotap recommends mapping the `hashed email` available in Zeotap Catalogue to the `External ID`.
 
 When the integration is successfully set, you can only create email campaigns based on custom attributes sent to Braze through Symphony.

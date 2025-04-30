@@ -48,7 +48,6 @@ Select a trigger event. This can include any of the following:
     - View Content Card
     - Click Content Card
     - Dismiss Content Card
-- Interacting with News Feed cards (see [Campaign Connector][33])
 - Entering a location
 - Performing the exception event for another campaign
 - Interacting with a Canvas step
