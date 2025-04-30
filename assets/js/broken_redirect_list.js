@@ -2641,4 +2641,6 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/api/endpoints/messaging/duplicate_campaigns'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/';
 validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/';
 
+validurls['/docs/user_guide/engagement_tools/segments/segment_funnels/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
+
 // validurls['OLD'] = 'NEW';
