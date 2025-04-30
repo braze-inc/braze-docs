@@ -55,9 +55,10 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
 
-Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
+Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (which lets you select the past X number of days), a start date, an end date, or an exact date range (date A to date B).
 
 ![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.][3]
+
 
 #### Event property segmentation
 
@@ -95,6 +96,8 @@ While your extension is processing, you will see a small animation next to the n
 
 !["Segment Extensions" page with two active extensions.][5]
 
+When a Segment Extension is processing, Braze will continue to use the version history of the segment from before the processing began for audience segmentation purposes. Processing takes place each time a save or refresh occurs, and involves querying and updating user profiles - in other words, your segment's membership does not update instantaneously. This means that unless a user's action is performed before the refresh begins processing, we can't guarantee that the user will be included in the Segment Extension once that particular refresh is complete. Conversely, users who were in the Segment Extension before the refresh that  no longer meet the criteria will continue to match your segment until the refresh process is complete and updates are applied.
+
 ### Step 6: Use your extension in a segment
 
 After you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
@@ -122,6 +125,15 @@ When using **Simple extension** Segment Extensions, you can select one custom ev
 ### Can I archive Segment Extensions if they exist in an active campaign?
 
 No. Before you can archive a Segment Extension, you need to remove it from all active messaging.
+
+### Can I use arrays in Segment Extension - for instance, creating a segment of users who match at least 1 value of an array property?
+
+Yes, this is possible, but you'd need to append `[]` to your property name. For instance, if your property is `location_code`, then you would need to type in `location_code[]`. We use the bracket notation `[]` for traversing through arrays, and match if any item in the traversed array matches the event property.
+
+### How does Braze calculate the time period for a relative time period of "last __ days"?
+
+When Segment Extensions calculates the relative time period ("last __ days"), we base the start time on start of day in UTC. For example, for a Segment Extension that refreshes at 2024-09-16 21:00 UTC and specifies 10 days, the start time is set to 2024-09-06 00:00 UTC, not 2024-09-06 21:00 UTC. To specify which time zones to use, however, customers can use SQL Segments to identify users who performed the custom event 10 days ago based on midnight in company time, or users who performed the event 10 days ago based on the current time.
+
 
 [1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
