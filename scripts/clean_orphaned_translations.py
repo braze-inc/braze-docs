@@ -11,6 +11,7 @@ from pathlib import Path
 docs_dir = Path("_docs")
 lang_dirs = {
     "ja": Path("_lang/ja"),
+    "de": Path("_lang/de"),
     "es": Path("_lang/es"),
     "fr": Path("_lang/fr_fr"),
     "ko": Path("_lang/ko"),
