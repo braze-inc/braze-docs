@@ -2,7 +2,7 @@
 nav_title: Custom Keyword Handling
 article_title: Custom Keyword Handling
 page_order: 3
-description: "This reference article covers how Braze deals with two-way SMS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
+description: "This reference article covers how Braze deals with two-way SMS and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
 page_type: reference
 channel:
   - SMS
@@ -11,7 +11,7 @@ channel:
 
 # Custom keyword handling
 
-> This reference article covers how Braze deals with two-way SMS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support.
+> This reference article covers how Braze deals with two-way SMS and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support.
 
 ## Two-way messaging (custom keyword responses)
 

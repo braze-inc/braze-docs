@@ -2,18 +2,20 @@
 nav_title: Message Copy and Segment Calculator
 article_title: SMS Message Copy and Segment Calculator
 page_order: 5
-description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS message copy."
+description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS and RCS message copy."
 page_type: reference
 tool:
   - Testing Tools
 channel:
   - SMS
+  - MMS
+  - RCS
 
 ---
 
 # Message copy and segment calculator
 
-> SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages and will help prevent accidental overages.
+> SMS and RCS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages and will help prevent accidental overages.
 
 ## What is an SMS segment?
 

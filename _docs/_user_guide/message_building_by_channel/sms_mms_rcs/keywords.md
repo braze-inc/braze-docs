@@ -1,6 +1,6 @@
 ---
 nav_title: Keyword Processing
-article_title: SMS Keyword Processing
+article_title: Keyword Processing
 page_order: 8
 layout: dev_guide
 
@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Default Opt-In/Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   image: /assets/img/braze_icons/message-dots-circle.svg
-- name: SMS Double Opt-In
+- name: Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Custom Keyword Handing

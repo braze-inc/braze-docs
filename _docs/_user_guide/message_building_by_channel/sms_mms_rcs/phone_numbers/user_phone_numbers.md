@@ -21,15 +21,13 @@ You can import phone numbers by uploading a [CSV]({{site.baseurl}}/user_guide/da
 
 ### Formatting
 
-As a best practice, the best way to import a phone number is in [`E.164`](https://en.wikipedia.org/wiki/e.164) format. However, Braze will attempt to interpret or convert any U.S. number to the best of our ability.
+As a best practice, the best way to import a phone number is in the [`E.164`](https://en.wikipedia.org/wiki/e.164) format. Braze will attempt to interpret or convert any U.S. number to the best of our ability. However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, we recommend you use the `E.164` format, even for U.S.-based phone numbers.
 
 All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be input without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
 
-All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
+All international numbers should start with a `+`, followed by their country code and then the phone number. For example, `+442071838750`. 
 
 ![][picture]{: style="max-width:50%;border: 0;"}
-
-However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
 You can see the differences between local number formatting as well as universal, `E.164` formatting in the following table:
 
@@ -39,6 +37,10 @@ You can see the differences between local number formatting as well as universal
 | UK | `2071838750` | 44 | `+442071838750` |
 | Brazil | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
+
+#### About the `E.164` format
+
+Phone carriers have a specific type of format they expect called `E.164` which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image, and can have a maximum of 15 digits.
 
 ### Adding users to SMS subscription groups
 

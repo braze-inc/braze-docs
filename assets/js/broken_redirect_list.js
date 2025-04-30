@@ -2625,5 +2625,7 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/'] = '/docs/shopify_user_identity';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/'] = '/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze';
 
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers';
+
 // validurls['OLD'] = 'NEW';
 

@@ -1,12 +1,14 @@
 ---
 nav_title: User Retargeting
-article_title: SMS User Retargeting
-description: "This reference article covers how users can retarget their messages by users SMS interactions."
+article_title: User Retargeting
+description: "This reference article covers how users can retarget their messages by a user's SMS and RCS interactions."
 page_type: reference
 tool:
   - Campaigns
 channel:
   - SMS
+  - MMS
+  - RCS
 
 ---
 
