@@ -1,9 +1,14 @@
 ---
 nav_title: Creating Campaigns
 article_title: Creating Banner campaigns
-alias: "/create_banner/"
-description: "This reference article covers how to create and send Banners using Braze campaigns."
+description: "Learn how to create Banners when you build a campaign in Braze."
 page_order: 2
+platform:
+  - iOS
+  - Android
+  - Web
+  - Flutter
+  - React Native
 ---
 
 # Creating Banner campaigns
