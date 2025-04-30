@@ -20,7 +20,7 @@ description: "This page covers how to create an SMS and WhatsApp sign-up form wi
 
 When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template, then select **Build message**. These templates are supported for both mobile apps and web browsers.
 
-![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]{: style="max-width:70%"}
+![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]{: style="max-width:80%"}
 
 ### Step 2: Set up your message styles
 
@@ -32,7 +32,7 @@ When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsA
 
 To get started building your sign-up form, select the phone number input component in the editor.
 
-![Preview area when creating a sign-up form with the phone number input component selected.][img3]{: style="max-width:40%"}
+![Preview area when creating a sign-up form with the phone number input component selected.][img3]{: style="max-width:80%"}
 
 From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number sign-up form. However, if desired, you can use multiple forms to collect consent for other subscription groups.
 
