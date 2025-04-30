@@ -15,15 +15,13 @@ channel:
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
-## About Banners
+## Why use Banners?
 
 Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
 
 Using a simple drag-and-drop editor, marketers can design and launch Banners without developer assistance, reducing complexity and improving efficiency.
 
-### Benefits of using Banners
-
-Because Banners never expire and are auto-personalized every time a user starts a new session, they’re great for:
+Because they never expire and are auto-personalized every time a user starts a new session, they’re great for:
 
 - Highlighting featured content, trending products, or promotions
 - Notifying users about upcoming events or important dates
@@ -31,11 +29,11 @@ Because Banners never expire and are auto-personalized every time a user starts 
 - Guiding users through onboarding flows and account setup
 - Upselling or cross-selling complementary products
 
-## How it works
+## About Banners
 
-Banners feature an intuitive drag-and-drop editor designed for marketers, allowing for quick, no-code creation of engaging, personalized in-line messages. With the editor, you can easily customize Banners by adding and arranging various content elements without developer support. By default, Banners don't expire, making them ideal for long-term, persistent messages. However, you have the option to set an expiration date if necessary.
+### Features
 
-Key capabilities include:
+Key features for Banners include:
 
 - **Easy content building:** Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
 - **Real-time preview:** Instantly preview your Banners across different device views, ensuring a seamless user experience on mobile and desktop.
@@ -54,7 +52,7 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low, or specify an exact priority using drag-and-drop. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
-## Metrics
+### Metrics
 
 These are the key metrics for Banners. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
