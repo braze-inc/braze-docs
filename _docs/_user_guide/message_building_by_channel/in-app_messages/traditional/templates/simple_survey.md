@@ -32,8 +32,6 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 When creating an [in-app message][1], select **Simple Survey** for your **Message Type**.
 
-![]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
-
 This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum SDK versions](#supported-sdk-versions) required for this feature.
 
 ### Step 1: Add your survey question
@@ -46,42 +44,38 @@ To get started building your survey, add your question to the survey **Header** 
 These fields can include both Liquid and emojis, so get fancy! 
 {% endalert %}
 
-### Step 2: Choose between single or multiple-choice {#single-multiple-choice}
+### Step 2: Configure choices {#single-multiple-choice}
 
-Use **Single-choice selection** or **Multiple-choice selection** to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
+You can add up to 12 choices in a survey.
 
-![Choices dropdown with "Multiple-choice selection" selected.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
+Select either **Single-choice selection** or **Multiple-choice selection**. The **Helper text** will automatically update when you switch between the two options to let users know how many choices they can select. 
 
-{% alert tip %} 
-Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. 
-{% endalert %}
-
-### Step 3: Collect custom attributes {#custom-attributes}
-
-Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
+Then, determine if you will [collect custom attributes](#custom-attributes) or [log responses only](#no-attributes).
 
 ![Choices dropdown with "Log attributes upon submission" selected.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
-To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
+#### Collect custom attributes {#custom-attributes}
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
-![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
-
-You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
-
-{% alert important %} 
-When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
-{% endalert %}
-
-#### Custom attribute data types
+To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page][5].
 
 The data type of your custom attributes matters depending on how you've set up your survey.
 
 - **Multiple-choice selection:** The data type of the custom attribute must be an array. If the custom attribute is set to a different data type, responses will not be logged.
 - **Single-choice selection:** The data type of the custom attribute _must not_ be an array. Responses will not be logged if the attribute is an array.
 
-#### Logging responses only
+{% alert important %} 
+When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
+{% endalert %}
+
+##### Example 
+
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+
+You can then use the `Custom Attribute` filter to create a segment for users with the custom attribute `Promotions Topic` `is` `true` to make sure that only users interested in your promotions will receive the relevant campaigns.
+
+#### Logging responses only {#no-attributes}
 
 Alternatively, you can choose to **Log responses only (no attributes)**. When this option is selected, survey responses are logged as button clicks, but custom attributes are not logged to a user's profile. This means you can still view the click metrics for each survey option (see [Analytics](#analytics)), but that choice won't be reflected on their user profile.
 
