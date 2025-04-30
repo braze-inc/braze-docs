@@ -2643,6 +2643,6 @@ validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endp
 
 validurls['/docs/user_guide/engagement_tools/segments/segment_funnels/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
 
-validurls['/docs/developer_guide/banners/embedding_banners/'] = 'docs/developer_guide/banners/creating_placements/';
+validurls['/docs/developer_guide/banners/embedding_banners/'] = '/docs/developer_guide/banners/creating_placements/';
 
 // validurls['OLD'] = 'NEW';
