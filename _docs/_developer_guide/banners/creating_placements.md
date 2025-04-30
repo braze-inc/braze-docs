@@ -2,11 +2,11 @@
 nav_title: Creating Placements
 article_title: Creating Banner placements for the Braze SDK
 description: "Learn how to create Banner placements for the Braze SDK."
+page_order: 1
 platform:
   - iOS
   - Android
   - Web
-  
 ---
 
 # Creating Banner placements
