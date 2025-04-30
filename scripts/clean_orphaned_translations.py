@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-# Usage:  python3 scripts/clean_orphaned_translations.py
-# or:     python3 scripts/clean_orphaned_translations.py [language]
-# Example: python3 scripts/clean_orphaned_translations.py es
+
+# This script finds and deletes all files that exist in one or more '_lang' 
+# subdirectories that don't exist in the primary '_docs' directory. If no 
+# argument is given, all languages are processed. To see the full list of 
+# options, append '--help' to the script.
+#
+# Usage:  ./scripts/clean_orphaned_translations.py [LANGUAGE]
+
 import os
 import shutil
 import sys
@@ -29,6 +34,17 @@ def get_all_files(directory):
 
     return all_files
 
+help_text = f"""This script finds and deletes all files that exist in one or more '_lang' subdirectories
+that don't exist in the primary '_docs' directory. It can be run against a single language or all languages.
+
+USAGE:
+  ./scripts/clean_orphaned_translations.py [LANGUAGE]
+
+OPTIONS:
+  [LANGUAGE]         Process the given language. If none, process all. Available languages:
+                       {', '.join(lang_dirs.keys())}
+  -h, --help         Show this help message"""
+
 def main():
     # Get all files in the _docs directory
     docs_files = set(get_all_files(docs_dir))
@@ -42,13 +58,7 @@ def main():
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         if arg in ('--help', '-h'):
-            print("Usage: python3 scripts/clean_orphaned_translations.py [language]")
-            print("\nThis script finds and deletes orphaned translation files that exist in language directories")
-            print("but don't have corresponding files in the _docs directory.")
-            print("\nOptions:")
-            print("  [no arguments]     Process all language directories")
-            print(f"  [language]         Process only specified language. Available options: {', '.join(lang_dirs.keys())}")
-            print("  -h, --help         Show this help message")
+            print(help_text)
             sys.exit(0)
         else:
             target_language = arg
