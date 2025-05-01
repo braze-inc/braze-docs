@@ -12,6 +12,10 @@ search_tag: Octolis
 
 > [Octolis][0] est une puissante plateforme d'activation de données (ou plateforme de données clients headless). En se basant sur l’une de vos bases de données, Octolis permet d'unifier, de préparer, de noter et de synchroniser les données dans vos outils professionnels.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Octolis agit comme un intergiciel entre vos sources de données brutes et Braze, vous permettant de récupérer et d'unifier des données provenant de différentes sources, en ligne et hors ligne :
 1. Unifiez et combinez les données provenant de sources telles que des boutiques en ligne, le CRM, le système POS, etc.
 2. Normaliser et attribuer un score
@@ -80,7 +84,7 @@ Voici une définition spécifique des champs de paramétrage.
 
 | Champ d'application | Descriptif |
 | --- | --- |
-| Où souhaitez-vous synchroniser l'audience ? | L'entité de Braze où vous allez créer ou mettre à jour des enregistrements. |
+| Où souhaitez-vous synchroniser l'audience ? |  |
 | Quel champ est utilisé pour identifier un enregistrement ? | Le champ utilisera Octolis pour identifier un enregistrement s'il existe déjà dans Braze. |
 | À quelle fréquence souhaitez-vous envoyer chaque enregistrement ? | Par défaut, la synchronisation sera incrémentielle pour toutes les intégrations (API, base de données, FTP). Cela signifie que seules les nouvelles valeurs enregistrées depuis la dernière mise à jour seront mises à jour. Si nécessaire, vous pouvez également envoyer des tableaux entiers à intervalles réguliers. À l'initiation, Octolis enverra le tableau complet. |
 | Quels champs doivent être synchronisés ? | mappage des champs d'Octolis à Braze. La liste de tous les champs disponibles apparaît dans le menu déroulant. Pour envoyer un champ calculé à Braze, vous devez d'abord vous assurer que vous avez créé la colonne correspondante dans votre entité Braze. |
@@ -91,6 +95,7 @@ Voici une définition spécifique des champs de paramétrage.
 ## Déduplication à clés multiples
 
 La déduplication constitue un défi majeur lorsqu'il s'agit de réconcilier des données provenant de sources multiples, notamment en ligne et hors ligne. Grâce au module avancé sans code d'Octolis, vous pouvez utiliser plusieurs clés pour la [déduplication][3]. Ce module est disponible pour chaque table principale, ce qui signifie que vous pouvez adapter la logique à chaque entité.
+
 
 [0]: http://octolis.com
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
