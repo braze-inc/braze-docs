@@ -13,6 +13,10 @@ search_tag: Partner
 -->
 > Amazon Personalize, c'est comme si vous disposiez de votre propre système de recommandation Amazon machine learning ouvert toute la journée. S'appuyant sur plus de 20 ans d'expérience en matière de recommandations, Amazon Personalize vous permet d'améliorer l'engagement client en proposant des recommandations personnalisées de produits et de contenus en temps réel et des promotions marketing ciblées.
 
+
+
+## À propos de l'intégration
+
 À l'aide de l'apprentissage automatique et d'un algorithme que vous aidez à définir, Amazon Personalize peut vous aider à créer un modèle qui génère des recommandations de haute qualité pour vos sites Web et applications. Ces modèles vous permettent de créer des listes de recommandations en fonction des comportements antérieurs des utilisateurs, de trier les éléments par pertinence et de recommander d'autres éléments en fonction de leur similitude. Les listes obtenues à l'aide de l'API Amazon Personalize peuvent ensuite être utilisées dans Braze Connected Content pour lancer des campagnes de recommandation Braze personnalisées. Grâce à l'intégration à Amazon Personalize, les clients ont la liberté de contrôler les paramètres utilisés pour entraîner les modèles et de définir des objectifs commerciaux facultatifs qui optimisent les résultats de l'algorithme. 
 
 Cet article de référence vous aidera à comprendre les cas d'utilisation proposés par Amazon Personalize, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer à Braze.
@@ -147,6 +151,7 @@ This seems like a great fit for you:
 En incluant le titre, l'image et le lien vers l'URL, voici à quoi ressemblerait la fiche de contenu complète :
 
 ![Image d'une campagne avec du contenu connecté ajouté au corps du message et au champ « Ajouter une image ». Cette image montre également la logique de contenu connecté ajoutée au champ « Rediriger vers l'URL Web », reliant les utilisateurs à une URL de recommandation.][2]
+
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}
