@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Dyspatch][1] propose un générateur d'e-mails intuitif par glisser-déposer utilisé pour créer des e-mails magnifiques, réactifs et attrayants sans avoir à écrire de code. Collaborez avec votre équipe pour créer et approuver des e-mails dans Dyspatch, puis exportez-les vers Braze, le tout en quelques étapes ! 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Dyspatch et Braze vous permet de simplifier le cycle de vie de création de vos e-mails en exportant les modèles d'e-mails Dyspatch directement vers Braze.
 
 ## Conditions préalables
@@ -49,6 +53,7 @@ Ne sélectionnez pas le **CSS en ligne** dans la section **Informations d'envoi*
 ### Utilisation
 
 Trouvez le modèle Dyspatch que vous avez téléchargé dans la section **Modèles et médias > Modèles** d'e-mails de votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
+
 
 [1]: https://www.dyspatch.io
 [2]: https://dashboard.braze.com/sign_in
