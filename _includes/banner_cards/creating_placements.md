@@ -1,4 +1,4 @@
-### Step 1: Create placements
+### Step 1: Create placements in Braze
 
 If you haven't already, you'll need to create Banner placements in Braze that are used to define the locations in your app or site can display Banners. To create a placement, go to **Settings** > **Banners Placements**, then select **Create Placement**.
 
