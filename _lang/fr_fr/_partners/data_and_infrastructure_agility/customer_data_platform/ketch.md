@@ -11,10 +11,14 @@ search_tag: Ketch
 
 > [Ketch](https://www.ketch.com) permet aux entreprises d'être des gestionnaires responsables de leurs données. Ketch permet de simplifier les opérations de confidentialité et d'assurer un contrôle et un traitement complet et dynamique des données. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Ketch vous permet de contrôler les préférences de communication des clients dans le centre de préférences de Ketch et de propager automatiquement ces changements dans Braze. 
 
 {% alert note %}
-Vous souhaitez obtenir des conseils sur la création de groupes d'abonnement ? Consultez nos articles sur les <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>groupes d'abonnement SMS</a> et les <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>groupes d'abonnement e-mail</a>.
+Vous souhaitez obtenir des conseils sur la création de groupes d'abonnement ? Consultez nos articles sur les <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>groupes d'abonnement SMS</a> et les <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>groupes d'abonnement e-mail</a>.
 {% endalert %}
 
 ## Conditions préalables
@@ -32,7 +36,7 @@ Vous souhaitez obtenir des conseils sur la création de groupes d'abonnement ? 
 1. Dans votre [instance Ketch](https://app.ketch.com), naviguez vers **Data Systems**, et sélectionnez **Braze**. Cliquez ensuite sur **Nouvelle connexion**.
 2. Donnez à votre connexion Braze un nom identifiable, qui sera utilisé pour faire référence à cette connexion dans les processus basés sur l'API. Notez qu'un code sera également créé pour cette connexion. Ce code doit être unique pour toutes les connexions.
 3. Confirmez le mappage de l'identité de vos utilisateurs. Par défaut, Ketch mappera les identités des utilisateurs en fonction de leur adresse e-mail ou de leur adresse `external_id` dans Braze.
-4. Ajoutez la clé API de Braze et indiquez l'endpoint de l'API. Notez que cet [endpoint API](https://www.braze.com/docs/api/basics/#endpoints) dépend de l'instance de Braze utilisée par votre organisation.
+4. Ajoutez la clé API de Braze et indiquez l'endpoint de l'API. Notez que cet [endpoint API]({{site.baseurl}}/api/basics/#endpoints) dépend de l'instance de Braze utilisée par votre organisation.
 
 ### Étape 2 : Configurer les préférences d'abonnement
 
