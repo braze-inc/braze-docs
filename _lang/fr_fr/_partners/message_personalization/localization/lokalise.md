@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Lokalise](https://lokalise.com) est un service de gestion des traductions pour les équipes agiles.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Lokalise s'appuie sur le contenu connecté pour vous permettre d'insérer facilement du contenu traduit dans vos campagnes Braze en fonction des paramètres linguistiques de l'utilisateur.
 
 ## Conditions préalables
@@ -121,6 +125,7 @@ Oui, bien sûr. Vous pouvez consulter la documentation de Braze pour savoir comm
 
 **Après avoir actualisé le fichier de traduction sur Lokalise, pourquoi ne vois-je pas de changements dans le contenu traduit sur Braze ?**<br>
 Braze met en cache le contenu traduit et son actualisation peut prendre quelques minutes. Si vous testez vos campagnes et avez besoin de voir les résultats des traductions immédiatement, vous pouvez utiliser le paramètre `:cache_max_age` comme expliqué dans cet article de référence.
+
 
 [1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
 [2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}
