@@ -21,9 +21,9 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-A context variable is a temporary piece of custom data that exists only during a user’s journey through that specific Canvas. It does not persist across different Canvases or outside the journey where it is created.
+A Context step allows you to use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
-Each Context step can define multiple context variables, providing a flexible way to personalize delays, segment users dynamically, and enrich messaging without permanently changing a user's profile data.
+Within this framework, each Context step can define multiple context variables&mdash;temporary pieces of data that enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information.
 
 For example, if you're managing flight bookings, you could create a context variable for each user's scheduled flight time. You could then set delays relative to each user’s flight time and send personalized reminders from the same Canvas.
 
@@ -70,7 +70,7 @@ Now you can use your context variable anywhere you use Liquid, such as in Messag
 
 ### Step 3: Test user paths (optional)
 
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. For example, if you create a context variable to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
 
 We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
 
@@ -84,43 +84,38 @@ Context variables have the same expected formats for data types as [custom event
 
 | Data type | Example variable name | Example value |
 |---|---|---|
-|Boolean| loyalty_program |{% raw %}<code>{{custom_attribute.${active_member}}}</code>{% endraw %}| 
-|Number| credit_score |{% raw %}<code>{{custom_attribute.${Credit Score}}}</code>{% endraw %}|
-|String| product_name |{% raw %}<code>{{custom_attribute.${Product}}}</code>{% endraw %} |
-|Array| favorite_products|{% raw %}<code>{{custom_attribute.${Favorites}}}</code>{% endraw %}|
-|Time| last_purchase_date|{% raw %}<code>{{custom_attribute.${Last Purchase Date}}}</code>{% endraw %}|
+|Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
+|Number| credit_score |{% raw %}<code>740{% endraw %}|
+|String| product_name |{% raw %}<code>"green_tea"</code>{% endraw %} |
+|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]"</code>{% endraw %}|
+|Time| last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Using context variables {#using-context-variables}
 
-For example, let's say you want to send your users personalized recommendations about discounts for cosmetic products in your retail brand. These users will enter the Canvas if they haven't made a purchase yet. The first step of the user journey will be a Delay step for one day to allow time for users to consider their purchase.
+For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. These users will enter the Canvas when they check in for their flight. To determine lounge access eligibility, we'll create a boolean context variable in the Context step that we'll reference in subsequent steps of the user journey: `lounge_access_granted`.
 
-To provide these recommendations based on their preferences, we'll create two context variables in the Context step to reference in the subsequent steps of the user journey:
+![Context variable set up to track if a passenger qualifies for VIP lounge access.][2]{: style="max-width:90%"}
 
-- `favorite_category`
-- `discount_code`
+In this Context step, we'll use decision logic to set `lounge_access_granted` to `true` if either:
 
-![Two context variables set up to track a user's favorite category and the associated discount code.][2]{: style="max-width:90%"}
+* The user is a Rewards Club member (checked against their user profile attribute)
+* The user has purchased a first-class ticket (determined from the Canvas entry event data)
 
-Next, we'll set up a Message step for push notifications that includes the discount code for their favorite product category. The Liquid snippets for the context variables will be:
+Next, we'll set up a Message step for push notifications that includes personalized lounge information. The Liquid snippet for the context variable will be: {% raw %}`{{context.${lounge_access_granted} | default: 'false'}}`{% endraw %}.
 
-{% raw %}
-- `{{context.${discount_code} | default: 'SPRING10'}}` 
-- `{{context.${favorite_category} | default: 'sitewide'}}`
-{% endraw %}
+Based on this context variable, eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
 
-Based on the user's favorite category, they'll receive an exclusive discount code to use.
-
-![A Message step for a push notification with a discount code for a user's favorite product category.][3]{: style="max-width:90%"}
+![A Message step welcoming users to use the VIP lounge if they qualify.][3]{: style="max-width:90%"}
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 {% endalert %}
 
-## Converting strings to JSON
+## Converting Connected Content strings to JSON
 
-For consistency and error prevention, JSON returned by a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) will be evaluated as a string data type. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
+When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
 
 {%raw%}
 ```liquid
@@ -151,7 +146,7 @@ Refer to [Context variable data types](#context-variable-types) for the example 
 
 ### How do context variables differ from Canvas entry properties?
 
-If you're participating in the Context step early access, Canvas entry properties are now part of Canvas context variables, meaning `canvas_entry_properties` is now referenced as `context`. This also means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
@@ -160,13 +155,20 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 | Context variable | Value | Description |
 |---|---|---|
 |`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | A user's favorite type of cuisine. |
-|`promo_code`| {% raw %}`{{custom_attribute.${coupon_code}}}`{% endraw %} | The available discount code for a user. |
+|`promo_code`| {% raw %}`EATFRESH`{% endraw %} | The available discount code for a user. |
 |`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user.
 
-This also applies to multiple Context steps. For example, if Context step A defines Variable A as `job_title`, and Message step A uses Variable A, then Context step C updates Variable A to be `job_description`, then all subsequent steps referencing Variable A will have the value of `job_description`.
+This also applies across multiple Context steps. For example, imagine this sequence:
+1. An initial Context step creates a variable called `JobInfo` with the value `job_title`.
+2. A Message step references {% raw %}`{{context.${JobInfo}}}`{% endraw %} and displays `job_title` to the user.
+3. Later, a Context step updates the context variable, changing the value of `JobInfo` to `job_description`.
+4. All subsequent steps that reference `JobInfo` will now use the updated value `job_description`.
+
+Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
+
 
 [1]: {% image_buster /assets/img/context_step3.png %}
 [2]: {% image_buster /assets/img/context_example1.png %}
