@@ -85,6 +85,8 @@ To view detailed, user-specific information about your segments, click **User Da
 
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
+Note that in cases where your segment is very small relative to your workspace size, it's possible for the User Preview to return zero users. This does not mean necessarily that there are zero users in your segment - you should run Calculate Exact Stats to determine your segment's exact size.
+
 ![User Preview][8]
 
 ## Viewing performance data by segment
