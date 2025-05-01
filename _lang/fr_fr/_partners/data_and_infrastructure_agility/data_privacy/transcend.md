@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Transcend est une société d'infrastructure de confidentialité des données qui permet aux entreprises de donner à leurs utilisateurs le contrôle de leurs données, en répondant automatiquement aux requêtes des personnes concernées au sein des entreprises à travers tous leurs systèmes de données et leurs fournisseurs. 
 
+
+
+## À propos de l'intégration
+
 Le partenariat entre Braze et Transcend aide les utilisateurs à automatiser les requêtes de confidentialité en orchestrant les données à travers des dizaines de systèmes de données, aidant ainsi les équipes à se conformer à des réglementations telles que le RGPD et le CCPA. Transcend met à la disposition des utilisateurs finaux un panneau de contrôle, ou centre de confidentialité, hébergé sur `privacy.\<company\>.com`, où les utilisateurs peuvent gérer leurs préférences en matière de confidentialité, exporter leurs données ou les supprimer. 
 
 ## Conditions préalables
@@ -52,5 +56,6 @@ Pour supprimer le silo de données Braze de votre mappage de données Transcend�
 1. Accédez à votre **mappage de données** et cliquez sur **Braze**. <br><br>
 2. En bas de l'écran, développez **Supprimer Braze** et cliquez sur **Supprimer le silo**. Vous serez invité à confirmer que vous souhaitez supprimer le silo. Cliquez sur **Ok**. <br><br>
 3. Confirmez la suppression du silo en retournant à votre mappage de données.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
