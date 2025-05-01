@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Bluedot](https://bluedot.io/) est une plateforme de localisation qui fournit à vos applications des données de géorepérage précises et simples. Utilisez le SDK de Bluedot pour envoyer des messages plus intelligents, automatiser les enregistrements de commandes mobiles, optimiser les flux de travail et créer des expériences fluides. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et de Bluedot vous permet d'utiliser les services delocalisation de Bluedot pour créer des événements utilisateur qui peuvent être utilisés pour créer des parcours, des campagnes et analyser les comportements et les intérêts des clients. Les événements (entrée/sortie) générés par l'utilisateur sur son appareil sont envoyés immédiatement à Braze avec toutes les informations pertinentes. 
 
 ## Conditions préalables
@@ -53,3 +57,4 @@ Dans Braze, mettez en place une campagne basée sur des actions qui enverra des 
 
 Veillez à cibler **Tous les utilisateurs** pour votre espace de travail.
 ![Une campagne basée sur l'action avec l'étape des utilisateurs cibles vous encourageant à sélectionner "Tous les utilisateurs" comme segmentation souhaitée.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+
