@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) est un logiciel basé dans le cloud qui permet de gérer la localisation. Phrase permet d'automatiser les flux de traduction et de prendre en charge la localisation continue pour les équipes agiles.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Phrase et de Braze vous permet de traduire des modèles d'e-mail et des blocs de contenu sans quitter l'interface de Braze. Grâce à l'intégration de Phrase TMS pour Braze, vous pouvez accroître l'engagement client et stimuler la croissance sur de nouveaux marchés grâce localisation fluide des contenus.
 
 ## Prérequis
@@ -80,5 +84,6 @@ Dans Phrase, accédez à **Paramètres > Intégrations > Connecteurs > Nouveau**
 3. Les éléments de contenu sélectionnés sont importés dès la première exécution d'APC.
 
 L'[API du connecteur](https://cloud.memsource.com/web/docs/api#) permet d'automatiser des étapes qui, autrement, seraient effectuées manuellement via l'interface utilisateur. Les [webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) peuvent être utilisés pour que Phrase TMS informe des systèmes tiers de certains événements (par exemple, un changement de statut d'un travail).
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
