@@ -11,6 +11,8 @@ search_tag: Partner
 
 >[Scuba Analytics][1] est une plateforme de collaboration de données complète, alimentée par l'apprentissage automatique, conçue pour les données de séries temporelles à grande vitesse. Scuba vous permet d'exporter sélectivement des utilisateurs (également appelés acteurs) et de les charger dans votre plateforme Braze. Dans Scuba, les propriétés d'acteurs personnalisées sont utilisées pour analyser les tendances comportementales, activer vos données sur diverses plateformes et effectuer une modélisation prédictive à l'aide de l'apprentissage automatique.
 
+
+
 ## Conditions préalables
 
 Pour utiliser Scuba Analytics avec Braze, vous aurez besoin des éléments suivants :
@@ -96,6 +98,7 @@ Sélectionnez **Rechercher des attributs personnalisés**, puis choisissez le no
 En regard du nom de votre propriété d'acteur, choisissez un opérateur et une valeur (le cas échéant). Ces valeurs sont déterminées par les propriétés des acteurs que vous avez définies dans Scuba. Lorsque vous avez terminé, sélectionnez **Enregistrer.**
 
 ![Choisir une opération et une valeur pour le ][504] sélectionné
+
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table
