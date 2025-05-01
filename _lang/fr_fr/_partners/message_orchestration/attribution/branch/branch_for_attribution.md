@@ -14,7 +14,11 @@ search_tag: Partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), une plateforme de liaison mobile, vous aide à acquérir, engager et mesurer à travers tous les appareils, canaux et plateformes en fournissant une vue complète de tous les points de contact de l'utilisateur.
 
-L'intégration de Braze et Branch vous aidera à comprendre exactement quand et où les utilisateurs ont été acquis, ainsi que la façon de personnaliser leurs parcours grâce à l'attribution robuste et aux [liens profonds]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
+
+
+## À propos de l'intégration
+
+L'intégration de Braze et Branch vous aidera à comprendre exactement quand et où les utilisateurs ont été acquis, ainsi que la façon de personnaliser leurs parcours grâce à l'attribution robuste et aux [liens profonds]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/).
 
 ## Conditions préalables
 
@@ -81,18 +85,14 @@ braze.deviceId { deviceId in
 
 Dans Braze, naviguez vers **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Branch**. 
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un système de communication automatisé dans le tableau de bord Branch.<br><br>![Cette image montre la section "Importation de données pour l'attribution d'installation" qui se trouve sur la page de la technologie Branch. Cette section affiche la clé d'importation des données et l'endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Mettre en place des flux de données
 
-1. Dans Branch, sous la section **Exports**, cliquez sur **Flux de données**.
-2. Sur la page du **gestionnaire des flux de données**, cliquez sur l'onglet **Intégrations de données** en haut de la page. 
+1. 
+2.  
 3. Sélectionnez Braze dans la liste des partenaires de données disponibles. 
-4. Sur la page d'exportation de Braze, indiquez la clé d'importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze, puis cliquez sur **Activer**.
+4. 
 
 ### Étape 4 : Confirmer l'intégration
 
@@ -139,6 +139,7 @@ user_data_idfv={{most_recently_used_device.${id}}}
 **Cette recommandation est purement facultative**<br>
 Si vous n'utilisez actuellement aucun identifiant d'appareil, tel que l'IDFV ou le GAID, dans vos liens de suivi des clics, ou si vous n'envisagez pas de le faire à l'avenir, Branch pourra tout de même attribuer ces clics grâce à sa modélisation probabiliste.
 {% endalert %}
+
 
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Webhooks de Branch"
 [4]: {% image_buster /assets/img/attribution/branch.png %}
