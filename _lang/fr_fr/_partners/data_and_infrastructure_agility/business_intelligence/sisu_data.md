@@ -18,7 +18,7 @@ L'intégration de Sisu Data et Braze vous permet de comprendre pourquoi les indi
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Sisu | Un compte [Sisu][3] est nécessaire pour bénéficier de ce partenariat. |
-| Entrepôt cloud | Cette intégration suppose que vos données Braze sont stockées dans un entrepôt cloud (par exemple, Snowflake, BigQuery). Pour rationaliser ce processus d'intégration, nous vous recommandons d'utiliser la fonctionnalité native de Braze via [Currents][4]. |
+| Entrepôt cloud | Cette intégration suppose que vos données Braze sont stockées dans un entrepôt cloud (par exemple, Snowflake, BigQuery).  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
