@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Wyng][0] permet de créer facilement des expériences numériques interactives (c'est-à-dire des quiz, des centres de préférences, des promotions) qui engagent les consommateurs aux bons moments, collectent des préférences et d'autres données zero-party, et personnalisent en temps réel.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Wyng vous permet d'exploiter les données zero-party issues des expériences Wyng pour personnaliser les interactions dans les campagnes et canvas Braze. Wyng peut également alimenter un centre de préférences, afin que les consommateurs puissent contrôler les données et les préférences (y compris les préférences de communication) qu'ils partagent avec votre marque.
 
 ## Conditions préalables
@@ -72,6 +76,7 @@ La section **Voir l'erreur** affiche le code d'erreur et quelques informations s
 ![Un exemple de journal d'erreurs affiché dans la plateforme Wyng.][16]{: style="max-width:80%;"}
 
 Si vous avez d'autres questions, contactez le service d'assistance de Wyng ([support@wyng.com][13]]) pour obtenir de l'aide.
+
 
 [0]: https://wyng.com/
 [1]: https://wyng.com/dashboard/integrations/
