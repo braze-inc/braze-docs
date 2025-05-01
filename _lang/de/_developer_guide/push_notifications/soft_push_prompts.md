@@ -12,6 +12,6 @@ channel:
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include Entwickler_guide/web/push_notifications/soft_push_prompts.md %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}
