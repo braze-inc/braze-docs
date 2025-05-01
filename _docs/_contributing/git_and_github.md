@@ -40,7 +40,7 @@ $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-## Creating a pull request (PR) {#create-pr}
+## Creating a pull request {#create-pr}
 
 To create a pull request (PR) for the [branch you created previously](#create-branch), add your changes and stage a commit. Replace `COMMIT_MESSAGE` with a short sentence describing your changes.
 
