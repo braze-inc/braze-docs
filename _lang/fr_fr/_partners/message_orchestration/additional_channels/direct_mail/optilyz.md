@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [optilyz][1] est une plateforme d'automatisation du publipostage qui vous permet de mener des campagnes de publipostage plus orientées client, durables et rentables. 
 
+
+
+## À propos de l'intégration
+
 Utilisez l'intégration du webhook optilyz et Braze pour envoyer à vos clients du publipostage, tel que des lettres, des cartes postales et des envois automatiques.
 
 ## Conditions préalables
@@ -37,10 +41,6 @@ Pour intégrer optilyz, utilisez l'[API optilyz][2] pour envoyer des données du
 ### Étape 1 : Créez votre modèle de webhook Braze
 
 Pour créer un modèle de webhook Optilyz à utiliser dans de futures campagnes ou Canvases, accédez à **Modèles > Modèles** de **webhook** sur la plateforme Braze. 
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
-{% endalert %}
 
 Si vous souhaitez créer une campagne webhook Optilyz unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d'une nouvelle campagne.
 
@@ -95,6 +95,7 @@ Ensuite, prévisualisez votre requête dans le panneau **Aperçu** ou accédez �
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
+
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/
