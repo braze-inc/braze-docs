@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Playable][1] vous permet d'ajouter du contenu vidéo en lecture automatique à vos campagnes d'e-mailing de Braze.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Playable vous permet de fournir votre meilleur contenu (vidéo de haute qualité) à votre meilleure audience (e-mail), en augmentant vos indicateurs de clics et de post-clics grâce à un contenu de haute qualité passionnant qui est lu automatiquement directement dans la boîte de réception.
 
 ## Conditions préalables
@@ -39,6 +43,7 @@ Les vidéos s'afficheront automatiquement dans plus de 98 % des boîtes de réc
 ### Étape 3 : Collez le code d'intégration dans Braze
 
 Enfin, collez le code dans votre campagne d'e-mailing de Braze, puis continuez à concevoir, tester et publier votre campagne d'e-mailing.
+
 
 [1]: https://playable.video
 [signup]: https://signup.playable.video
