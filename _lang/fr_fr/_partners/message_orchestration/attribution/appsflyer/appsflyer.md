@@ -99,17 +99,13 @@ AppsFlyer.setAdditionalData(customData);
 
 Dans Braze, accédez à **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **AppsFlyer**. 
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés dans l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Appsflyer.<br><br>![La boîte de dialogue "Importation de données pour l'attribution d'installation" disponible sur la page Technologie d'Appsflyer. Cette boîte contient la clé d'importation des données et l'endpoint REST.][4]{: style="max-width:70%;"}
 
 ### Étape 3 : Configurez Braze dans le tableau de bord d'Appsflyer
 
-1. Dans Appsflyer, accédez à la page **Partenaires Intégrés** dans la barre de gauche. Ensuite, recherchez **Braze** et cliquez sur le logo de Braze pour ouvrir une fenêtre de configuration.
+1. Dans Appsflyer, accédez à la page **Partenaires Intégrés** dans la barre de gauche. 
 2. Dans l'onglet **intégration**, activez **Activer le partenaire**.
-3. Fournissez la clé d'importation des données et l'endpoint REST que vous avez trouvés dans le tableau de bord de Braze. 
+3.  
 4. Basculer **Advanced Privacy** off et enregistrer votre configuration.
 
 Des informations supplémentaires sur ces instructions sont disponibles dans la documentation d'Appsflyer][16].
@@ -149,7 +145,7 @@ Les données d'attribution pour les campagnes Facebook et X (anciennement Twitte
 Appsflyer s'intègre à la fois avec Sendgrid et SparkPost en tant que fournisseurs de services de messagerie (ESP) pour prendre en charge la création de liens profonds et le suivi des clics. Suivez les instructions ci-dessous pour intégrer le fournisseur de services de messagerie de votre choix.
 
 {% alert tip %}
-Les liens profonds—liens qui dirigent les utilisateurs vers une page ou un endroit spécifique au sein d'une application ou d'un site web—sont utilisés pour créer une expérience utilisateur sur mesure. Bien que largement utilisé, des problèmes peuvent survenir lors de l'utilisation de liens profonds envoyés par e-mail avec le suivi des clics, une autre fonctionnalité importante utilisée dans la collecte de données utilisateur. Ces problèmes sont dus aux fournisseurs de services de messagerie qui placent les liens profonds dans un domaine d'enregistrement de clics, brisant le lien d’origine. À ce titre, la prise en charge des liens profonds nécessite une configuration supplémentaire. En intégrant Appsflyer avec Sendgrid ou SparkPost, vous évitez ces problèmes. En savoir plus sur ce sujet dans [Liens universels et liens d'application]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Les liens profonds—liens qui dirigent les utilisateurs vers une page ou un endroit spécifique au sein d'une application ou d'un site web—sont utilisés pour créer une expérience utilisateur sur mesure. Bien que largement utilisé, des problèmes peuvent survenir lors de l'utilisation de liens profonds envoyés par e-mail avec le suivi des clics, une autre fonctionnalité importante utilisée dans la collecte de données utilisateur. Ces problèmes sont dus aux fournisseurs de services de messagerie qui placent les liens profonds dans un domaine d'enregistrement de clics, brisant le lien d’origine. À ce titre, la prise en charge des liens profonds nécessite une configuration supplémentaire. En intégrant Appsflyer avec Sendgrid ou SparkPost, vous évitez ces problèmes. En savoir plus sur ce sujet dans [Liens universels et liens d'application]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 {% endalert %}
 
 ### Étape 1 : Configurer OneLink dans Appsflyer
