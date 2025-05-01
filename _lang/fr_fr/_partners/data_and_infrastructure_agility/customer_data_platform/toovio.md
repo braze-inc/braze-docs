@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Toovio](https://toovio.com/) est une société de données en tant que service alimentée par l'IA qui vous aide à découvrir vos données exploitables et à utiliser les éléments les plus critiques pour obtenir des résultats incrémentaux en fonction d'objectifs prédéfinis.
 
+
+
+## À propos de l'intégration
+
 Le partenariat entre Braze et Toovio permet un envoi de messages en temps quasi réel, des outils de communication individualisés et l'accès aux outils de mesure de campagne avancés de Toovio.
 
 ## Prérequis
@@ -38,6 +42,7 @@ Créez une [campagne déclenchée par l'API de][4] Braze en fonction des événe
 ### Étape 3 : Créez votre compte Toovio
 
 Contactez Toovio à [info@toovio.com](mailto:info@toovio.com?subject=New%20Customer%20Request) avec l'objet "requête nouveau client" pour créer un compte. Toovio travaillera avec les clients pour mettre en place des déclencheurs et des modèles sous-jacents.
+
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/
 [2]: {{site.baseurl}}/api/api_key/
