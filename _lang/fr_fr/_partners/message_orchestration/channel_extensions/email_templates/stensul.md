@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stensul](https://stensul.com/) permet aux spécialistes du marketing par e-mail de créer facilement dans Stensul des e-mails adaptés aux appareils mobiles et à votre marque afin de les envoyer en temps réel à Braze pour créer des campagnes.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Stensul vous permet d'exporter vos e-mails Stensul au format HTML et de les télécharger en tant que modèles dans Braze.
 
 ## Conditions préalables
@@ -49,5 +53,6 @@ Saisissez ensuite le **nom du modèle**, l'**objet** et l'**accroche** de votre 
 ## Utilisation
 
 Retrouvez votre modèle Stensul téléchargé dans la section **Modèles et médias > Modèles d'e-mail de** votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages engageants à vos clients !
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
