@@ -19,7 +19,7 @@ Cette fonctionnalité est actuellement en version bêta. Pour plus d'information
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Treasure data | Un compte [Treasure data](https://www.treasuredata.com/) est nécessaire pour bénéficier de ce partenariat. |
-| Clé d'importation des données Braze | Elle peut être capturée dans le tableau de bord de Braze à partir de **Intégrations partenaires** > **Partenaires technologiques**, puis sélectionnez **Heap**. |
+| Clé d'importation des données Braze |  |
 | Endpoint REST de Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 | Adresse IP statique de Treasure data | L'adresse IP statique de Treasure Data est le point d'accès et la source du lien de cette intégration. Pour déterminer l'adresse IP statique, contactez votre gestionnaire en satisfaction client de Treasure Data ou l’assistance technique de Treasure Data. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
