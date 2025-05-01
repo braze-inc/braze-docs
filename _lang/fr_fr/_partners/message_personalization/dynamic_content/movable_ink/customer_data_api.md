@@ -59,7 +59,7 @@ Pour plus d'informations sur les Stories, l'API de données client de Movable In
 #### Étape 1c: Configurez votre charge utile
 
 1. Retournez dans l’onglet **Composer**.
-2. Pour votre **corps de requête**, créez votre propre corps de requête avec des paires clé-valeur JSON ou entrez votre charge utile d'événement en tant que texte brut. Reportez-vous aux [exemples de charges utiles](#sample-payloads) pour des exemples d'événements de commerce électronique standard.
+2. Pour votre **corps de requête**, créez votre propre corps de requête avec des paires clé-valeur JSON ou entrez votre charge utile d'événement en tant que texte brut. 
 
 ![Onglet Composer du générateur de webhooks dans Braze avec des paires clé-valeur JSON pour l'ID, l'horodatage, l'ID utilisateur et le type d'événement.][img3]{: style="max-width:75%" }
 
