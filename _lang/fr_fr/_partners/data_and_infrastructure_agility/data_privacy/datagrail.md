@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [DataGrail](https://www.datagrail.io/), une plateforme de gestion de la confidentialité, aide à renforcer la confiance des consommateurs et à éliminer les risques commerciaux. Avec la détection continue du système et le traitement automatisé des requêtes de droits des personnes concernées (DSR), DataGrail alimente les programmes de confidentialité, garantissant la conformité aux lois et réglementations sur la confidentialité en constante évolution, comme le RGPD, la CCPA et la CPRA. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et DataGrail vous permet de détecter les données des consommateurs collectées et stockées dans Braze pour traiter rapidement les DSR (requêtes d'accès, de suppression et de non-vente). Braze sera ajouté à un plan précis de l'endroit où les données des consommateurs se trouvent dans votre organisation avec un mappage de données automatisé — plus besoin d'enquêtes ou de feuilles de calcul pour maintenir un cadre de confidentialité ou produire un registre des activités de traitement (RoPA). 
 
 ## Conditions préalables
@@ -35,3 +39,4 @@ S'il y a des comptes Braze supplémentaires à intégrer :
 5. Sélectionnez **Connecter**.
 
 Envoyez un e-mail à DataGrail à l’adresse support@datagrail.io pour toute question ou problème concernant votre intégration.
+
