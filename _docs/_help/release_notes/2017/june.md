@@ -38,5 +38,5 @@ You can now select hours as a time unit when you are filtering for date and time
 [46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
 [47]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [49]: {{site.baseurl}}/api/endpoints/messaging/
-[50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
+[50]: {{site.baseurl}}/user_guide/data/user_data_collection/user_import/
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

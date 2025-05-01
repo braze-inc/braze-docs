@@ -76,6 +76,6 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 [66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
 [68]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [70]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_action_buttons/#how-to-use-action-buttons
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
