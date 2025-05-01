@@ -54,7 +54,7 @@ Découvrez les [modes de connexion](https://www.rudderstack.com/docs/destination
 
 Avec ce mode, vous pouvez envoyer vos événements à Braze en utilisant le SDK de Braze mis en place sur votre site web ou votre application mobile.
 
-Configurez les mappages vers le SDK de Rudderstack pour votre plateforme sur le dépôt GitHub de Braze, comme décrit dans les [méthodes prises en charge](#supported-methods) :
+
 
 - [Android][android]
 - [iOS][ios]
@@ -95,7 +95,7 @@ Pour [envoyer des événements via le mode hybride](https://www.rudderstack.com/
 Une fois la configuration initiale terminée, configurez les paramètres suivants pour recevoir correctement vos données dans Braze :
 
 - **Activer les groupes d'abonnement dans les appels de groupe**: Activez ce paramètre pour envoyer le statut du groupe d'abonnement dans vos événements de groupe. Pour plus d'informations, consultez la section [Groupe](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group).
-- **Utiliser l'opération d'attributs personnalisés**: Activez ce paramètre si vous souhaitez utiliser la fonctionnalité d'[attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) de Braze pour créer des segments et personnaliser vos messages à l'aide d'un objet d'attribut personnalisé. Pour plus d'informations, consultez la section [Envoyer des caractéristiques d'utilisateur en tant qu'attributs personnalisés imbriqués](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
+- **Utiliser l'opération d'attributs personnalisés**: Activez ce paramètre si vous souhaitez utiliser la fonctionnalité d'[attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) de Braze pour créer des segments et personnaliser vos messages à l'aide d'un objet d'attribut personnalisé. Pour plus d'informations, consultez la section [Envoyer des caractéristiques d'utilisateur en tant qu'attributs personnalisés imbriqués](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
 - **Suivre les événements pour les utilisateurs anonymes**: Activez ce paramètre pour suivre l'activité de l'utilisateur anonyme et envoyer ces informations à Braze.
 
 ### Paramètres du mode appareil
@@ -128,7 +128,7 @@ Vous pouvez supprimer un utilisateur dans Braze à l'aide de la [règle Suppress
 La [méthode`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) de Rudderstack capture toutes les activités de l'utilisateur et les propriétés associées à ces activités.
 
 **Commande terminée**<br>
-En utilisant l'[API RudderStack Ecommerce][20] pour appeler la méthode de suivi d'un événement portant le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze en tant que [`purchases`][21].
+
 
 {% endtab %}
 {% tab Écran %}
@@ -253,7 +253,7 @@ rudderanalytics.track("Product Viewed", {
 ```
 
 {% alert note %}
-Pour les opérations de mise à jour et de suppression, `identifier` est une clé obligatoire. Si les opérations d'ajout, de mise à jour ou de suppression ne sont pas présentes dans le tableau imbriqué, Rudderstack utilise par défaut l'opération de création pour créer les propriétés. Reportez-vous à la section [Tableau d'objets]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) pour plus d'informations sur l'envoi d'attributs personnalisés imbriqués.
+Pour les opérations de mise à jour et de suppression, `identifier` est une clé obligatoire. Si les opérations d'ajout, de mise à jour ou de suppression ne sont pas présentes dans le tableau imbriqué, Rudderstack utilise par défaut l'opération de création pour créer les propriétés. Reportez-vous à la section [Tableau d'objets]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) pour plus d'informations sur l'envoi d'attributs personnalisés imbriqués.
 {% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
