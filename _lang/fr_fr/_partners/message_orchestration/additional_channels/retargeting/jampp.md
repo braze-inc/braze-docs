@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Jampp](https://www.jampp.com/) est une plateforme de marketing de performance utilisée pour acquérir et recibler des clients mobiles. Jampp associe les données comportementales à la technologie prédictive et programmatique pour générer des chiffres d'affaires pour les annonceurs en affichant des publicités personnelles et pertinentes qui incitent les consommateurs à acheter pour la première fois ou plus souvent.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Jampp permet aux utilisateurs de Braze de synchroniser des événements dans Jampp via des événements webhook Braze. Ainsi, les clients peuvent ajouter des ensembles de données plus riches à leurs initiatives de reciblage au sein de leurs écosystèmes de publicité mobile.
 
 Voici quelques exemples de situations dans lesquelles vous souhaiteriez recibler des clients à l'aide d'une publicité :
@@ -37,10 +41,6 @@ Cette intégration prend en charge les applications iOS et Android.
 ### Étape 1 : Créez un modèle de webhook à Braze
 
 Pour créer un modèle de webhook Jampp à utiliser dans de futures campagnes ou Canvases, naviguez vers **Modèles** > **Modèles de webhook** dans la plateforme Braze.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
-{% endalert %}
 
 Si vous souhaitez réaliser une campagne webhook Jampp ponctuelle ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne.
 
@@ -95,6 +95,7 @@ Prévisualisez le message pour vous assurer que le message envoyé sera appropri
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
 [2]: {% image_buster /assets/img/jampp_webhook.png %}
