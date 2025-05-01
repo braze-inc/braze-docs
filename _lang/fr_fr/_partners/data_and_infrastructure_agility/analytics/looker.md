@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Looker](https://looker.com/), une plateforme d'aide à la décision et d'analyse de big data, vous permet de facilement explorer, analyser et partager des analyses commerciales en temps réel.
 
-L'intégration de Braze et Looker permet aux utilisateurs de Braze de tirer parti du signalement des utilisateurs [Blocs Looker](#looker-blocks) et [Actions Looker](#looker-actions) via l'API REST. Ces utilisateurs signalés peuvent être ajoutés à des segments pour [cibler](#segment-users) les futures campagnes Braze ou Canvases. Pour utiliser Looker avec Braze, nous vous recommandons d'envoyer vos données Braze à un [entrepôt de données à l’aide de flux Currents de Braze,][6] puis d'utiliser les blocs Looker de Braze pour modéliser et visualiser rapidement vos données Braze dans Looker.
+L'intégration de Braze et Looker permet aux utilisateurs de Braze de tirer parti du signalement des utilisateurs [Blocs Looker](#looker-blocks) et [Actions Looker](#looker-actions) via l'API REST. Ces utilisateurs signalés peuvent être ajoutés à des segments pour [cibler](#segment-users) les futures campagnes Braze ou Canvases. 
 
 ## Prérequis
 
@@ -163,10 +163,10 @@ Si vous rencontrez des problèmes avec l'action Looker, ajoutez un utilisateur t
 * Le champ `looker_export` est défini comme `Automatically Detect` sous`Braze Platform > Settings > Manage Settings > Custom Attributes`.
 * Les modifications sont enregistrées dans l’environnement de production. Looker Action fonctionne sur les paramètres de production.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
+[1]: {{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
-[4]: {{site.baseurl}}//user_guide/onboarding_with_braze/integration/
+[4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/
 [5]: {{site.baseurl}}/partners/braze_currents/about/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct
