@@ -41,11 +41,17 @@ Il est important de maintenir à jour la clé de rédaction de votre segment. Si
 2. Cliquez sur **\+ Créer un nouveau flux Currents** > **Exporter des données Segment**.
 3. Ensuite, indiquez le nom de l'intégration, l'e-mail du contact, la clé d'écriture du segment et la région du segment.
 
-![La page Segment Currents dans Braze. Cette page contient des champs permettant de spécifier le nom de l'intégration, l'e-mail de contact, la région du segment et la clé API.][3]
+![La page Segment Currents dans Braze. Cette page contient des champs permettant de spécifier le nom de l'intégration, l'e-mail de contact, la région du segment et la clé API.][1]
 
 ### Étape 3 : Exporter les événements d'engagement des messages
 
-Sélectionnez ensuite les événements d'engagement des messages que vous souhaitez exporter. Consultez le tableau des propriétés et des événements d'exportation ci-dessous. Tous les événements envoyés à Segment incluront celui de l'utilisateur `external_user_id` en tant que`userId`. Pour le moment, Braze n'envoie pas de données d'événements aux utilisateurs dont le paramètre `external_user_id` n’est pas défini.
+Sélectionnez ensuite les événements d'engagement des messages que vous souhaitez exporter. Consultez le tableau des propriétés et des événements d'exportation ci-dessous. 
+
+
+
+{% alert important %}
+ Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
 
 ![Liste de tous les événements d'engagement de messages disponibles sur la page Segment Currents de Braze.][2]
 
@@ -63,7 +69,7 @@ Pour en savoir plus, consultez la [documentation](https://segment.com/docs/conne
 
 ## Événements Currents pris en charge
 
-Braze prend en charge l'exportation vers Segment des données suivantes répertoriées dans les glossaires des événements Currents relatifs au [comportement des utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) et à [l'engagement des messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) :
+Braze prend en charge l'exportation vers Segment des données suivantes répertoriées dans les glossaires des événements Currents relatifs au [comportement des utilisateurs]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) et à [l'engagement des messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) :
  
 ### Comportements
 - Désinstaller : `users.behaviors.Uninstall`
@@ -132,6 +138,5 @@ Braze prend en charge l'exportation vers Segment des données suivantes réperto
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
 
-[1]: {% image_buster /assets/img/segment/segment_currents1.png %}
-[2]: {% image_buster /assets/img/segment/segment_currents.png %}
-[3]: {% image_buster /assets/img/segment/segment.png %}
+[1]: {% image_buster /assets/img/segment/segment_currents_integration_config.png %}
+[2]: {% image_buster /assets/img/segment/segment_currents_data_config.png %}
