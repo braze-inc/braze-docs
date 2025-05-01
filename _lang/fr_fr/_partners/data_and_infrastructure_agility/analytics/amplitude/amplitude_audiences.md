@@ -57,7 +57,11 @@ Utilisez les audiences pour envoyer les propriétés et les calculs des utilisat
 
 Lorsque la propriété d'un utilisateur ou un calcul est mis à jour, Amplitude met à jour un attribut personnalisé dans Braze portant le même nom que la propriété de l'utilisateur ou le calcul.
 
-Les synchronisations des traits d'utilisateur et des calculs créeront de nouveaux utilisateurs pour des ID qui n'existent pas encore dans Braze. Les calculs et les traits d'utilisateur ne peuvent être synchronisés qu'à l'aide de l'ID de l'utilisateur.
+  
+- ID externe
+- ID Braze
+- Alias utilisateur
+- Adresse e-mail
 
 Reportez-vous à la documentation d'Amplitude pour en savoir plus sur la [synchronisation des propriétés, des recommandations et des cohortes vers des destinations tierces](https://help.amplitude.com/hc/en-us/articles/360060055531).
 
