@@ -12,10 +12,10 @@ description: "Lernen Sie, wie Sie Deinstallationen über das Braze SDK verfolgen
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/analytics/tracking_uninstalls.md %}
+{% multi_lang_include developer_guide/android/analytics/tracking_uninstalls.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/analytics/tracking_uninstalls.md %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_uninstalls.md %}
 {% endsdktab %}
 {% endsdktabs %}
