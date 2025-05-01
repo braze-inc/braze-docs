@@ -38,5 +38,5 @@ Weitere Informationen finden Sie in der [Dokumentation`changeUser()` ](https://j
 
 ## User:innen Aliasing
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md plattform="Web" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Web" %}
 
