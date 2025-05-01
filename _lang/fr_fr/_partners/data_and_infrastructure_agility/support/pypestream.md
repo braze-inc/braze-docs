@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Pypestream](https://www.pypestream.com) est une plateforme d'intelligence artificielle conversationnelle tout-en-un offrant une fonction d’envoi de messages cloud brevetée pour transformer les marques en entités numériques "toujours actives". Avec Pypestream, les marques peuvent désormais engager des conversations omnicanal à grande échelle avec chaque client tout en tirant parti d'une expérience utilisateur immersive, de capacités avancées de NLU et d'intégrations en temps réel aux systèmes backend.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Pypestream vous permet d'orchestrer de façon fluide le cycle de vie complet du client, depuis le premier contact, en passant par une expérience conversationnelle, jusqu'au suivi omnicanal via un reciblage intelligent. 
 
 ## Conditions préalables
@@ -277,3 +281,4 @@ class BrazeExample:
 ### Étape 3 : Mettre à jour les flux de solution pour rediriger en cas de succès/échec du nœud d'action
 
 Enfin, dans la conception de chaque solution, vous pouvez diriger les utilisateurs vers des nœuds en fonction de la réussite de l'appel API du nœud d'action. Si le nœud d'action reçoit un message d'erreur, l'utilisateur final doit être traité avec soin. 
+
