@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) est la principale plateforme de géorepérage et de localisation. La plateforme Radar comprend trois produits de base : [Géorepérages](https://radar.io/product/geofencing), [Suivi des déplacements](https://radar.io/product/trip-tracking) et [API de géolocalisation](https://radar.io/product/api). La combinaison de la plateforme d'engagement de premier plan de Braze, et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer des revenus et de renforcer la fidélité grâce à un large éventail d'expériences produits et de services basées sur la localisation. Il s'agit notamment du suivi des retraits ou livraisons des articles, des notifications déclenchées en fonction de l'emplacement, de la personnalisation contextuelle, de la vérification de l'emplacement, des localisateurs de magasins, de la saisie semi-automatique des adresses, et bien plus encore.
+> [Radar](https://www.onradar.com/) est la principale plateforme de géorepérage et de localisation. La plateforme Radar comprend trois produits de base : [Géorepérages](https://radar.io/product/geofencing), [Suivi des déplacements](https://radar.io/product/trip-tracking) et [API de géolocalisation](https://radar.io/product/api).  Il s'agit notamment du suivi des retraits ou livraisons des articles, des notifications déclenchées en fonction de l'emplacement, de la personnalisation contextuelle, de la vérification de l'emplacement, des localisateurs de magasins, de la saisie semi-automatique des adresses, et bien plus encore.
+
+
+
+## À propos de l'intégration
 
 L'intégration de Braze et Radar vous permet d'accéder à des déclencheurs de campagne sophistiqués basés sur l'emplacement et à l'enrichissement du profil utilisateur grâce à des données d'emplacement/localisation riches et de première partie. Lorsque les événements de géorepérage ou de suivi de trajet de Radar sont générés, les événements personnalisés et les attributs clients sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes basées sur la localisation, alimenter les opérations de distribution sur le dernier kilomètre, surveiller la logistique des flottes et des déclencheurs, ou créer des segments d'utilisateurs basés sur des modèles d'emplacement/localisation. 
 
-De plus, les API Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+De plus, les API Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Conditions préalables
 
@@ -178,5 +182,6 @@ near you!
 {% alert tip %}
 Consultez la [documentation Radar](https://radar.io/documentation/api) pour connaître toutes les API Radar qui peuvent être utilisées dans le contenu connecté.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/radar_example.png %}
