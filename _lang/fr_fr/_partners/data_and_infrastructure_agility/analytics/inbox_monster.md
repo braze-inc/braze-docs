@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Boîte de réception Monster
 
-> [Inbox Monster](https://inboxmonster.com//) est une plateforme de signaux de boîte de réception qui aide les marques d'entreprise à faire atterrir chaque envoi. Il s'agit d'une suite intégrée de solutions pour la livrabilité, le rendu créatif et le contrôle des SMS, qui permet aux équipes modernes de gestion de la relation client (CRM) d'être plus efficaces et de mettre fin aux angoisses liées à l'envoi de messages.
+> [Inbox Monster](https://inboxmonster.com/) est une plateforme de signaux de boîte de réception qui aide les marques d'entreprise à faire atterrir chaque envoi. 
 
 L'intégration de Braze et Inbox Monster vous permet d'éliminer les tests manuels de seedlist, d'automatiser la création de signaux de placement en boîte de réception puissants et exploitables, de simplifier le processus d'examen et d'approbation des ressources créatives des e-mails et d'obtenir des informations exploitables sur la livrabilité. Vous pouvez également importer de façon fluide/sans heurts des modèles d'e-mails pour des diagnostics créatifs et des aperçus d'appareils.
 
