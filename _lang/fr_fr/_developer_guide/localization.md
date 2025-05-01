@@ -19,4 +19,4 @@ Outre l'anglais, Braze prend en charge plusieurs langues pour les messages de no
 
 Lorsque la langue du téléphone d'un utilisateur est réglée sur l'une des langues prises en charge, les messages du SDK intégré seront traduits dans cette langue. Par exemple, si votre appli affiche un message pour des problèmes de connectivité, il sera traduit dans la langue qu'ils ont choisie.
 
-{% multi_lang_include codes_langues_supportés.md %}
+{% multi_lang_include supported_language_codes.md %}
