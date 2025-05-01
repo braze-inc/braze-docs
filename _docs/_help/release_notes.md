@@ -630,7 +630,7 @@ You can [view Global Control Group membership]({{site.baseurl}}/user_guide/engag
 
 #### Odicci - Customer data platform
 
-Integrate Braze with [Odicci]({{site.baseurl}}/partners/message_personalization/dynamic_content/odicci/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
+Integrate Braze with [Odicci]({{site.baseurl}}/partners/odicci/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
 
 #### Optimizely - A/B testing
 

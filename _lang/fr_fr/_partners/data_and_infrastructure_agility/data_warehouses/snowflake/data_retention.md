@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Conservation des données par Snowflake
 
-> Braze anonymise, c’est-à-dire supprime les informations personnelles identifiables (IPI), de toutes les données relatives aux événements datant de plus de deux ans. Si vous utilisez le partage de données Snowflake, vous pouvez choisir de conserver l'intégralité des données d'événements dans votre environnement en stockant une copie dans votre compte Snowflake avant l'application de la politique de conservation.
+> Braze anonymise - c'est-à-dire supprime les informations personnelles identifiables (IPI) - toutes les données relatives aux événements stockées dans Snowflake qui datent de plus de deux ans. Si vous utilisez le partage de données Snowflake, vous pouvez choisir de conserver l'intégralité des données d'événements dans votre environnement en stockant une copie dans votre compte Snowflake avant l'application de la politique de conservation.
 
 Cette page décrit deux façons de conserver des données non anonymisées : 
 
@@ -158,7 +158,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 L'exécution répétée de la procédure n’aura pas pour effet de créer des enregistrements en double, car cette procédure vérifie le paramètre `SF_CREATED_AT` le plus récent et ne sauvegarde que les données les plus récentes.
 {% endalert %}
 
-## Charger les données dans une étape intermédiaire
+## Déchargement des données sur scène
 
 Vous pouvez conserver les données non anonymisées en déchargeant les données du schéma partagé `BRAZE_RAW_EVENTS` vers une étape. Pour ce faire, suivez les étapes suivantes :
 
