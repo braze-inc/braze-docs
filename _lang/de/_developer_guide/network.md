@@ -15,10 +15,10 @@ platform:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/network.md %}
+{% multi_lang_include developer_guide/android/network.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/network.md %}
+{% multi_lang_include developer_guide/swift/network.md %}
 {% endsdktab %}
 {% endsdktabs %}
