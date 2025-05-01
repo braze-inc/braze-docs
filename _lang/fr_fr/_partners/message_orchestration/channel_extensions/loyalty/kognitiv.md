@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Kognitiv Inspire][1] est un système technologique de fidélisation qui permet d'offrir des expériences clients inégalées grâce à des programmes de fidélisation axés sur les résultats qui amplifient l'engagement client, augmentent les dépenses et célèbrent les comportements loyaux.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Kognitiv vous permet de mettre en œuvre et d'évaluer votre stratégie de fidélisation, en offrant des capacités innovantes et des communications sur mesure avec les membres pour une meilleure efficacité du programme.
 
 ## Conditions préalables
@@ -124,6 +128,7 @@ Une fois que vous avez intégré Braze à Kognitiv Inspire, Kognitiv vous donne 
 - Région APAC : `https://aus.kognitivloyalty.com/WS`
 
 Pour plus d'informations sur la configuration des jetons d'accès et des endpoints SFTP, contactez Kognitiv pour une démonstration.
+
 
 [1]: http://kognitiv.com
 [2]: https://info.kognitivloyalty.com
