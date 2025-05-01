@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [SalesWings][1] est un module complémentaire SaaS de profilage de prospects B2B créé pour les équipes marketing et commerciales, qui aide à gérer la qualification des prospects et des comptes grâce au scoring et au classement des prospects, aux informations et alertes commerciales, à l'alignement marketing et aux rapports d'attribution B2B, ainsi qu'à une intégration étroite avec le CRM de Salesforce.
 
+
+
+## À propos de l'intégration
+
 SalesWings permet aux équipes marketing et aux gestionnaires des opérations marketing de qualifier les prospects et les comptes pour leurs équipes commerciales, ce qui est essentiel pour l'alignement et l'efficacité des ventes et du marketing. En outre, SalesWings, conjointement avec Braze, peut faire remonter à la surface le parcours client d'un lead et les données d'engagement des campagnes marketing de Braze pour les commerciaux, ce qui vous permet d'augmenter les taux de conversion des leads grâce à des conversations plus éclairées.
 
 ## Conditions préalables
@@ -122,6 +126,7 @@ Vous pouvez identifier automatiquement les utilisateurs lorsqu'ils cliquent sur 
 La variable `braze_id` est définie sur un identifiant de l'utilisateur généré par Braze et est toujours disponible. La variable `br_user_id` est définie sur l'identifiant de l'utilisateur dans votre système et peut être manquante dans certains scénarios (par exemple, pour les utilisateurs anonymes créés par le SDK). Si `braze_id` et `br_user_id` sont utilisés dans un lien, SalesWings ne prendra en compte que le paramètre `braze_id`.
 
 Pour la configuration et d'autres résolutions des problèmes, contactez l'[équipe des services de SalesWings][1] pour une assistance à l'onboarding.
+
 
 [1]: https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
