@@ -1,4 +1,3 @@
-
 ---
 nav_title: Geofences
 article_title: GeoFences für das Braze Swift SDK
