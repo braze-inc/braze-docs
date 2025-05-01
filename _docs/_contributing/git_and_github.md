@@ -8,7 +8,7 @@ noindex: true
 
 # Git and GitHub
 
-> Learn how to use Git and GitHub, so you can contribute to Braze Docs.
+> Learn how to use Git and GitHub, so you can contribute to Braze Docs. Approved contributions will be deployed on the following Tuesday or Thursday. Be sure to check out Braze Docs so you can celebrate your hard work. Thanks for contributing!
 
 {% alert tip %}
 If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/).
@@ -16,16 +16,16 @@ If you're new to Git or the command-line, start with our tutorial instead: [Your
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Getting the latest changes
+## Getting the latest changes {#latest}
 
-To update your local environment with the latest changes from the [Braze Docs repository](https://github.com/braze-inc/braze-docs):
+To update your local environment with the latest changes from the [Braze Docs repository](https://github.com/braze-inc/braze-docs), pull the `develop` branch.
 
 ```bash
 git checkout develop
 git pull
 ```
 
-## Creating a branch
+## Creating a branch {#create-branch}
 
 To create a new branch, use Git's `checkout` command with the `-b` flag.
 
@@ -40,9 +40,9 @@ $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-## Creating a pull request
+## Creating a pull request (PR) {#create-pr}
 
-To create a pull request (PR) for the [branch you created previously](#creating-a-branch), add your changes and stage a commit. Replace `COMMIT_MESSAGE` with a short sentence describing your changes.
+To create a pull request (PR) for the [branch you created previously](#create-branch), add your changes and stage a commit. Replace `COMMIT_MESSAGE` with a short sentence describing your changes.
 
 ```bash
 git add --all
@@ -102,15 +102,15 @@ When you're finished, select the pull request dropdown, then select **Draft pull
 
 ![The Braze Docs GitHub repository showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
 
-## Allowing changes to pull requests
+## Allowing changes to pull requests {#allow-changes}
 
-In GitHub, go to the [PR you previously created](#creating-a-pull-request), then check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+In GitHub, go to the [PR you previously created](#create-pr), then check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
 
 ![A Pull Request showing the allow edits from maintainers checkbox.]({% image_buster /assets/img/contributing/github/allow_maintainers_to_edit.png %}){: style="max-width:50%;"}
 
-## Requesting a review
+## Requesting a review {#request-review}
 
-To request a PR review from a member of the Braze Docs team, go to the [PR you previously created](#creating-a-pull-request) and select **Ready for review**.
+To request a PR review from a member of the Braze Docs team, go to the [PR you previously created](#create-pr) and select **Ready for review**.
 
 ![An example pull request with the "Ready for review" button highlighted.]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
 
