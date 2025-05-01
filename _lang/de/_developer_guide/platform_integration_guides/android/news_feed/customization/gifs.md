@@ -17,5 +17,5 @@ channel:
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-{% multi_lang_include archive/android/gifs.md channel="Newsfeed" %}
+{% multi_lang_include archive/android/gifs.md channel="News Feed" %}
 
