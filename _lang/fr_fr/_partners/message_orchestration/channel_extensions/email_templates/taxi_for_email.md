@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Taxi for email](http://taxiforemail.com/) est un outil de marketing par e-mail en ligne qui offre un éditeur d'e-mails visuel intuitif par glisser-déposer. Taxi encourage les teams à collaborer facilement sur des campagnes d'e-mail, permettant aux rédacteurs et éditeurs d'avoir l'accès et les ressources dont ils ont besoin pour créer des e-mails, le tout sans code.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Taxi exploite la syntaxe simple mais puissante de Taxi pour créer et exporter des modèles d'e-mail intelligents vers Braze. 
 
 ## Conditions préalables
@@ -40,5 +44,6 @@ Votre champ de connecteur changera de couleur après que les détails avec les a
 ## Utilisation
 
 Trouvez votre modèle Taxi téléchargé dans la section **modèles et médias > modèles d'e-mail** de votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages d'e-mail engageants à vos clients !
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
