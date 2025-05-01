@@ -14,14 +14,14 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/in_app_messages/troubleshooting.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/in_app_messages/troubleshooting.md %}
+{% multi_lang_include developer_guide/swift/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include Entwickler_guide/web/in_app_messages/troubleshooting.md %}
+{% multi_lang_include developer_guide/web/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}
