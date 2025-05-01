@@ -12,7 +12,7 @@ page_order: 3
 # Synchronisation de l'audience avec Google
 
 {% alert important %}
-Google met à jour ses [règles de consentement des utilisateurs de l'Union européenne](https://www.google.com/about/company/user-consent-policy/) en réponse aux changements apportés à la [loi sur les marchés numériques (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), en vigueur à partir du 6 mars 2024. Ce nouveau changement oblige les annonceurs à divulguer certaines informations à leurs utilisateurs finaux de l'EEE, du Royaume-Uni et de la Suisse, ainsi qu'à obtenir d'eux les consentements nécessaires. Consultez la documentation suivante pour en savoir plus.
+  Consultez la documentation suivante pour en savoir plus.
 {% endalert %}
 
 L'intégration de la synchronisation de l’audience Braze avec Google permet aux marques d'étendre la portée de leurs parcours clients cross-canal à Google Search, Google Shopping, Gmail, YouTube et Google Display. Grâce à vos données clients first-party, vous pouvez diffuser en toute sécurité des publicités basées sur des déclencheurs comportementaux dynamiques, la segmentation, etc. Tous les critères que vous utilisez habituellement pour déclencher un message (par exemple, push, e-mail ou SMS) dans le cadre d'un Canvas Braze peuvent être utilisés pour déclencher une publicité à l'intention de cet utilisateur via [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
@@ -32,7 +32,7 @@ Cette fonctionnalité permet aux marques de contrôler quelles données first-pa
 
 ## Conditions préalables
 
-Vous devez vous assurer que les éléments suivants ont été créés avant de configurer votre étape d’audience Google dans Canvas.
+
 
 | Exigence | Origine | Description |
 | ----------- | ------ | ----------- |
@@ -74,7 +74,7 @@ Si un EEE a précédemment donné son consentement pour les deux signaux, ces do
 
 * Envoyez la valeur en tant que valeur booléenne, et non de chaîne de caractères.
 * Le nom de l'attribut est précédé du signe du dollar ($). Braze utilise un signe de dollar au début du nom d'un attribut pour indiquer qu'il s'agit d'une clé spéciale et réservée.
-* Saisissez le nom de l'attribut en minuscules.
+* 
 * Bien que vous ne puissiez pas explicitement définir un utilisateur comme non spécifié, si vous envoyez une valeur `null` ou `nil` ou toute autre valeur qui n'est pas `true` ou `false`, Braze transmettra cet utilisateur à Google en tant que `UNSPECIFIED`.
 * Les nouveaux utilisateurs ajoutés ou mis à jour sans spécifier l'un ou l'autre des attributs de consentement seront synchronisés avec Google avec ces attributs de consentement marqués comme non spécifiés.
 
@@ -93,59 +93,51 @@ Dans tous les Canvas où vous ciblez des utilisateurs finaux de l'EEE, du Royaum
 
 ### Étape 1 : Connectez votre compte Google
 
-Pour commencer, allez dans **Intégrations partenaires** > **Partenaires technologiques** > **Google Ads** et sélectionnez **Connecter Google Ads**. Une fenêtre modale/boîte de dialogue vous invite ensuite à sélectionner l'e-mail associé à votre compte Google Ads, puis à accorder à Braze l'accès à votre compte Google Ads.
+Pour commencer, allez dans **Intégrations partenaires** > **Partenaires technologiques** > **Google Ads** et sélectionnez **Connecter Google Ads**. 
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
+ 
 
-Une fois que vous avez réussi à connecter votre compte Google Ads, vous êtes renvoyé vers votre page partenaire Google Ads. Vous serez ensuite invité à sélectionner les comptes publicitaires auxquels vous souhaitez accéder dans l'espace de travail de Braze.
 
-![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
-{% alert important %}
-Si vous prévoyez d'exporter des IDFA iOS ou des ID de publicité Google au sein de votre synchronisation d'audience, Google exige votre ID d'application iOS et votre ID d'application Android au sein des requêtes. Sous Google Audience Sync, sélectionnez **Ajouter des ID de publicité mobile**, saisissez l'ID de votre application iOS et l'ID de votre application Android (nom du package de l'application), puis enregistrez chacun d'entre eux.
+#### 
+
+ Sous Google Audience Sync, sélectionnez **Ajouter des ID de publicité mobile**, saisissez l'ID de votre application iOS et l'ID de votre application Android (nom du package de l'application), puis enregistrez chacun d'entre eux.
+
 <br><br>
 ![La page technologique Google Ads mise à jour affiche les comptes publicitaires connectés, ce qui vous permet de resynchroniser les comptes et d'ajouter des ID de publicité mobile.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
-{% endalert %}
+<br><br>
+
+  
 
 ### Étape 2 : Ajouter une étape Google Audience dans Canvas Flow
 
-Ajoutez un composant dans votre canvas et sélectionnez **Synchronisation de l’audience**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+
+ 
 
 ### Étape 3 : Configuration de la synchronisation
 
-Cliquez sur le bouton **Audience personnalisée** pour ouvrir l'éditeur de composants.
+1. 
+2. 
 
-Sélectionnez **Google** comme partenaire de synchronisation d’audience.
 
-![][19]{: style="max-width:80%;"}
 
-Sélectionnez le compte Google ad souhaité. Dans la liste déroulante **Choisir une audience nouvelle ou existante**, saisissez le nom d'une audience nouvelle ou existante. 
+{: start="3"}
+3\. Sélectionnez le compte Google ad souhaité.
+4\.  
 
 {% tabs %}
 {% tab Créer une nouvelle audience %}
-**Créer une nouvelle audience**<br>
-Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Ajouter des utilisateurs à l'audience** et sélectionnez les champs que vous souhaitez synchroniser avec Google. Vous pouvez sélectionner les champs suivants pour les synchroniser avec Google :
 
-- e-mail 
-- Téléphone
-- Nom et prénom
-- Ville
-- Pays
-- Date de naissance
-- Sexe
-- ID des publicités mobiles
-  - Vous devez vous abonner à la collecte [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) ou [GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection#google-advertising-id-android-only) via les SDK de Braze.
+1. 
+2. 
+3.  Vous pouvez choisir l'un des deux champs suivants :
 
-Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Ajouter des utilisateurs à l'audience** et sélectionnez les données first-party du champ utilisateur à envoyer avec votre audience. Vous pouvez choisir l'un des deux champs suivants :
+- **Coordonnées du client** :   
+- **ID de l’annonceur mobile** :  
 
-- **Coordonnées du client** : Contient l'e-mail ou le numéro de téléphone de vos utilisateurs, ou les deux s'ils existent dans Braze.
-- **ID de l’annonceur mobile** : Sélectionnez l’IDFA iOS ou le GAID Android.
-
-Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l'éditeur d'étape.
+{: start="4"}
+4\. 
 
 ![Vue élargie du composant d’audience personnalisée. Ici, le compte publicitaire souhaité est sélectionné, une nouvelle audience est créée et la case "Coordonnées du client" est cochée.]({% image_buster /assets/img/audience_sync/g_sync.png %})
 
@@ -153,17 +145,20 @@ Les utilisateurs seront avertis en haut de l'éditeur d'étape si l'audience est
 
 ![Une alerte qui apparaît après la création d'une nouvelle audience dans le composant Canvas.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
 
-Lorsque vous lancez un Canvas avec une nouvelle audience, Braze crée une nouvelle audience personnalisée dès le lancement du Canvas et synchronise ensuite les utilisateurs quasiment en temps réel au fur et à mesure qu'ils entrent dans le composant Google Audience. 
+ 
 
 {% alert important %}
 Compte tenu des exigences de Google en matière de correspondance des clients, vous ne pouvez pas avoir les coordonnées des clients et les ID des annonceurs mobiles dans les mêmes listes de clients. Google Customer Match utilisera ensuite ces informations pour déterminer quels utilisateurs de Google Search, Google Display, YouTube et Gmail peuvent être ciblés. Pour plus de détails sur les exigences de Google Customer Match, consultez leur [documentation](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
 {% endalert %}
 {% endtab %}
 {% tab Synchronisation avec une audience existante %}
-**Synchronisation avec une audience existante**<br>
-Braze offre également la possibilité d'ajouter ou de supprimer des utilisateurs des listes de clients Google existantes afin de s'assurer que ces audiences sont à jour. Pour synchroniser avec une audience existante, sélectionnez une audience personnalisée, puis choisissez **Ajouter à l'audience** ou **Supprimer de l'audience**. Braze ajoutera ou supprimera des utilisateurs en temps quasi réel lorsqu'ils entreront dans l'étape d’audience Google. 
 
-Une fois que vous avez configuré votre étape d’audience Google, sélectionnez **Terminé**. Votre étape d’audience Google contiendra des détails sur la nouvelle audience.
+Braze offre également la possibilité d'ajouter ou de supprimer des utilisateurs des listes de clients Google existantes afin de s'assurer que ces audiences sont à jour. 
+
+1. 
+2. 
+3.  
+4.  Votre étape d’audience Google contiendra des détails sur la nouvelle audience.
 
 ![Vue élargie du composant d’audience personnalisée. Ici, le compte publicitaire souhaité et l'audience existante sont sélectionnés, ainsi que le bouton radio "Ajouter l'utilisateur à l'audience".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
 
@@ -197,28 +192,28 @@ Le tableau suivant comprend des indicateurs et des descriptions pour vous aider 
 | *Utilisateurs ayant quitté le canvas* | Nombre d'utilisateurs ayant quitté le Canvas. Un utilisateur quitte le canvas lorsque la dernière étape d'un canvas est une étape Google. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Résolution des problèmes
+## Foire aux questions
 
-{% details Pourquoi ne puis-je pas sélectionner plusieurs champs à faire correspondre dans ma configuration de Google Audience Step ? %}
+### 
+
 Google Customer Match a des exigences strictes en ce qui concerne le formatage de ces audiences et les informations sur les clients qui y figurent. Plus précisément, les ID des annonceurs mobiles doivent être chargés séparément des informations de contact des clients (telles que l'e-mail et le numéro de téléphone). Pour plus de détails, consultez la [documentation de Google Customer Match](https://support.google.com/google-ads/answer/7659867?hl=en#undefined).
-{% enddetails %}
 
-{% details Combien de temps faut-il pour que mes audiences soient synchronisées dans Google ? %}
-Il faut compter entre 6 et 12 heures pour qu'une audience soit synchronisée dans Google.
-{% enddetails %}
+### Combien de temps faudra-t-il pour que mes audiences se synchronisent dans Google ?
 
-{% details J'ai synchronisé une audience, mais la taille de l'audience dans Google est égale à zéro. %}
-Pour des raisons de confidentialité, la taille de la liste d'utilisateurs affichera zéro jusqu'à ce que la liste compte au moins **1 000 membres**. Ensuite, la taille sera arrondie aux deux chiffres les plus significatifs.
-{% enddetails %}
+Il faut compter entre 6 et 12 heures pour qu'une audience soit synchronisée dans Google. 
 
-{% details J'ai synchronisé une audience dans Google, mais mes annonces ne sont pas diffusées. %}
-Vérifiez que vos audiences contiennent au moins **5 000** utilisateurs pour que les publicités commencent à être diffusées.
-{% enddetails %}
+### 
 
-{% details Comment résoudre l'erreur "ID de l'application mobile supprimés" ? %}
-Si vous synchronisez des audiences avec Google, cette erreur se déclenche si vous avez choisi de synchroniser des identifiants mobiles dans le cadre de vos synchronisations, mais que vous avez supprimé les ID de vos applications mobiles depuis la page partenaire de Google.
-Pour résoudre ce problème, assurez-vous d'avoir ajouté les ID d'applications mobiles appropriés pour iOS et Android à la page partenaire de Google.
-{% enddetails %}
+ Ensuite, la taille sera arrondie aux deux chiffres les plus significatifs.
+
+### J’ai synchronisé une audience sur Google, mais mes publicités ne sont pas diffusées.
+
+
+
+### 
+
+ 
+
 
 [1]: {% image_buster /assets/img/google_sync/google_sync1.png %}
 [2]: {% image_buster /assets/img/google_sync/google_sync2.png %}
