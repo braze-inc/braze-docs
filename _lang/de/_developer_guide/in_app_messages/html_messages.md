@@ -13,10 +13,10 @@ description: "Lernen Sie, wie Sie die Braze JavaScript Schnittstelle zu Ihrer Ap
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/in_app_messages/html_messages.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/html_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/in_app_messages/html_messages.md %}
+{% multi_lang_include developer_guide/swift/in_app_messages/html_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
