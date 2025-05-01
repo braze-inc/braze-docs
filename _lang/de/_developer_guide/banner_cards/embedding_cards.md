@@ -25,7 +25,7 @@ Dies sind die Mindestversionen des SDK, die Sie benötigen, um Banner Cards zu v
 
 ## Einbinden einer Bannerkarte
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banner_cards/erstellen_placements.md %}
 
 ### Schritt 2: Aktualisieren Sie die Platzierungen in Ihrer App {#requestBannersRefresh}
 
