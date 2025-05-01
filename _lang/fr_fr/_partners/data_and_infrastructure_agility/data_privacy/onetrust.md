@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [OneTrust](https://www.onetrust.com/) est un fournisseur de logiciels de confidentialité et de sécurité offrant la visibilité dont vous avez besoin pour mieux comprendre votre paysage de confiance, les actions à entreprendre pour exploiter des informations exploitables et l'automatisation pour vous permettre de gagner une longueur d’avance par rapport à la concurrence. 
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et OneTrust vous permet d'utiliser le générateur de flux de travail OneTrust pour créer des flux de travail de sécurité pour votre produit.
 ## Conditions préalables
 
@@ -119,6 +123,7 @@ Pour consulter la liste complète des actions soutenues :
 3. Accédez à l'onglet **Actions.** 
 
 ![][7]
+
 
 [1]: {% image_buster /assets/img/onetrust/onetrust.png %}
 [2]: {% image_buster /assets/img/onetrust/onetrust2.png %}
