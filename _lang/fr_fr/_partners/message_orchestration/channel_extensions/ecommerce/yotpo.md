@@ -2,14 +2,18 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme de marketing e-commerce de premier plan qui aide des milliers de marques innovantes à accélérer la croissance de leurs ventes directes aux consommateurs."
+description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
 page_type: partner
 search_tag: Partner
 ---
 
 # Yotpo
 
-> [Yotpo](https://www.yotpo.com/), une plateforme leader de marketing e-commerce, aide des milliers de marques innovantes à accélérer la croissance de leurs ventes directes aux consommateurs. L'approche de plateforme unique de Yotpo intègre des solutions axées sur les données pour les avis, la fidélisation, le marketing SMS et plus encore, donnant aux marques les moyens de créer des expériences clients plus intelligentes et à plus fort taux de conversion.
+>  L'approche de plateforme unique de Yotpo intègre des solutions axées sur les données pour les avis, la fidélisation, le marketing SMS et plus encore, donnant aux marques les moyens de créer des expériences clients plus intelligentes et à plus fort taux de conversion.
+
+
+
+## À propos de l'intégration
 
 Grâce à l'intégration de Braze et de Yotpo, vous pouvez tirer et afficher de manière dynamique les évaluations par étoiles, les meilleurs avis et le contenu visuel généré par les utilisateurs (CGU) sur les produits dans les e-mails et les autres canaux de communication de Braze. Vous pouvez également inclure les données de fidélisation au niveau du client dans les e-mails et autres méthodes de communication afin de créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
 
@@ -65,7 +69,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
 
 ![Remplacez YOTPO-API-KEY par votre clé API de Yotpo Reviews.][2]
 
@@ -88,7 +92,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
 
 Voici à quoi ressemblera l'extrait de code dans votre éditeur d'e-mail :
 
@@ -117,7 +121,7 @@ Image return NULL
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
 
 L'extrait de code ressemblera à ceci :
 
@@ -170,6 +174,7 @@ Oui ! Pour découvrir les autres points de données et les options de personnali
 {% alert note %}
 Yotpo ne prend pas en charge les exigences personnalisées au-delà de ce qui est décrit dans ce guide.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/yotpo/image1.png %}
 [2]: {% image_buster /assets/img/yotpo/image2.png %}
