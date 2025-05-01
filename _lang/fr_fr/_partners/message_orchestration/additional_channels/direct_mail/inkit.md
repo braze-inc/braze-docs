@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Inkit][1] et Braze permettent aux entreprises de générer et de distribuer des documents en toute sécurité, aussi bien sous forme numérique que par publipostage.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Inkit vous permet de générer des documents et de les envoyer directement aux utilisateurs de Braze grâce aux webhooks de Braze.
 
 ## Conditions préalables
@@ -33,10 +37,6 @@ Sur la plateforme Inkit, créez un modèle à utiliser dans votre campagne Braze
 ### Étape 2 : Créez votre modèle de webhook Braze à Braze
 
 Pour créer un modèle de webhook Inkit à utiliser dans de futures campagnes ou Canvases, naviguez vers **Modèles** > **Modèles de webhook** dans la plateforme Braze. 
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
-{% endalert %}
 
 Si vous souhaitez créer une campagne webhook Inkit unique ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne.
 
@@ -93,6 +93,7 @@ Prévisualisez votre requête dans le panneau **Aperçu** ou accédez à l'ongle
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
+
 
 [1]: https://www.inkit.com
 [2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration
