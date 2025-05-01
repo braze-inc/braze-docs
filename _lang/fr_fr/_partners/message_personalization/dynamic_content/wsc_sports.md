@@ -12,6 +12,10 @@ search_tag: Partner
 
 > La plateforme [WSC Sports][1] génère des vidéos sportives personnalisées pour chaque plateforme numérique et chaque fan de sport, automatiquement et en temps réel. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et WSC Sports vous permet d'inclure des médias sportifs riches et robustes dans vos notifications push Braze. 
 
 ## Conditions préalables
@@ -54,6 +58,7 @@ Le corps du message qui en résulte est le suivant :
 ### Étape 2 : Envoyer un test
 
 À ce stade, votre campagne devrait être prête à être testée et envoyée. Consultez les journaux des messages d'erreur de Braze si vous rencontrez des erreurs. 
+
 
 [1]: https://wsc-sports.com/
 [2]: {% image_buster /assets/img/wsc_sports/braze_integration.jpg %} « braze_integration.jpg »
