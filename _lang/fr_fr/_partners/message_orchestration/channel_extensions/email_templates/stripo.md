@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stripo](https://stripo.email/) est un générateur de modèles d'e-mails par glisser-déposer qui vous aide à créer et à concevoir des e-mails responsives avec des éléments interactifs. Les utilisateurs de Stripo peuvent également modifier en HTML et décider des éléments à afficher ou à masquer sur différents appareils grâce à l'éditeur de Stripo.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Stripo vous permet d'exporter vos e-mails Stripo personnalisés et de les télécharger en tant que modèles dans Braze.
 
 ## Prérequis
@@ -46,5 +50,6 @@ Il s'agit d'une configuration unique, et toutes les prochaines exportations util
 ## Utilisation
 
 Recherchez le modèle Stripo qui a été chargé dans la section **Modèles et médias > Modèles d'e-mail** dans votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages engageants à vos clients !
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
