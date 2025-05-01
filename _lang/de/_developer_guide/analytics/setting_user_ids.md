@@ -16,7 +16,7 @@ Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die ent
 
 ## Über anonyme Nutzer:innen
 
-{% multi_lang_include anonymous_users/about_anonymous_users.md %}
+{% multi_lang_include anonymous_benutzer/ueber_anonyme_benutzer.md %}
 
 ## Einstellen einer Nutzer:in ID
 
