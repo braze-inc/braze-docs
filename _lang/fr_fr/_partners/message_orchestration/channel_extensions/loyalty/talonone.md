@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Talon.One](https://talon.one/) fournit des incitations personnalisées pour votre CRM marketing mobile et vous permet de lancer rapidement et efficacement des campagnes contextuelles de coupons, de recommandations, de remises et de fidélisation.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et de Talon.One peut vous aider à faire passer votre programme de fidélité ou de coupons à la vitesse supérieure en envoyant des codes générés par Talon.One à votre audience par le biais de Braze Connected Content.
 
 
