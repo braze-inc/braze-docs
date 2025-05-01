@@ -19,4 +19,4 @@ Zusätzlich zum Englischen unterstützt Braze mehrere Sprachen für unsere integ
 
 Wenn die Sprache des Telefons eines Nutzers:innen auf eine der unterstützten Sprachen eingestellt ist, werden die Nachrichten des integrierten SDK in diese Sprache übersetzt. Wenn Ihre App zum Beispiel eine Nachricht über Verbindungsprobleme anzeigt, wird diese in die von Ihnen gewählte Sprache übersetzt.
 
-{% multi_lang_include unterstützte_Sprachcodes.md %}
+{% multi_lang_include supported_language_codes.md %}
