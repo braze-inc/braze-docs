@@ -1,3 +1,4 @@
+<!--
 ---
 nav_title: Shopify Custom Integration Setup
 article_title: "Shopify Custom Integration Setup"
@@ -11,6 +12,7 @@ page_order: 2
 # Shopify custom integration setup
 
 > This page walks you through how to integrate Braze with a Shopify Hydrogen store or any headless Shopify store by using a custom storefront.
+-->
 
 This guide uses Shopify’s Hydrogen framework as an example. However, you can follow a similar approach if your brand uses Shopify for the backend of your store with a "headless" front-end setup.  
 
