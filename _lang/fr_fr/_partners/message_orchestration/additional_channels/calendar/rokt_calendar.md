@@ -1,16 +1,22 @@
 ---
 nav_title: Calendrier Rokt
 article_title: Calendrier Rokt
-alias: /partners/rokt_calendar/
+alias: /partners/rokt_calendar
 description: "Cet article de référence présente le partenariat entre Braze et Rokt Calendar, une technologie de marketing de calendrier dynamique qui permet aux marques de pousser des événements 1:1 et des communications promotionnelles, sous la forme d'événements et de notifications de calendrier."
 page_type: partner
 search_tag: Partner
 
+layout: redirect
+redirect_to: /docs/partners/home
 ---
 
 # Calendrier Rokt
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) est une technologie de marketing de calendrier dynamique qui permet aux marques de diffuser des événements personnalisés et des communications promotionnelles sous forme d'événements de calendrier et de notifications.
+
+
+
+## À propos de l'intégration
 
 L'intégration de Braze et de Rokt Calendar permet à vos abonnés Rokt Calendar et à leurs données d'être poussés vers Braze via le webhook Braze. Vous pouvez ensuite utiliser ces données dans Braze Canvases pour le ciblage des parcours et la segmentation de l'audience à l'aide de l'un des attributs personnalisés suivants du [calendrier Rokt](#audience-segmentation). 
 
@@ -80,10 +86,6 @@ Dans Braze, vous pouvez configurer une campagne de webhook ou un webhook dans un
 - Mise à jour d'un événement personnalisé : Permettre la mise à jour d'un événement existant dans les calendriers des utilisateurs.
 
 Pour créer un modèle de webhook Rokt Calendar à utiliser dans de futures campagnes ou Canvases, naviguez vers **Modèles** > **Modèles de webhook** dans la plateforme Braze. 
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
-{% endalert %}
 
 Si vous souhaitez créer une campagne webhook du calendrier Rokt unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d'une nouvelle campagne.
 
@@ -197,3 +199,4 @@ Prévisualisez votre requête dans le panneau **Aperçu** ou accédez à l'ongle
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
+
