@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adikteev](https://www.adikteev.com/churn-prediction) est un moteur de rétention des utilisateurs qui combine la prédiction du taux de désabonnement avec un service complet de reciblage d'applications.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et d'Adikteev vous permet de stimuler la rétention des utilisateurs en exploitant la technologie de prédiction du taux d'attrition d'Adikteev au sein des campagnes CRM de Braze afin de cibler en priorité les segments d'utilisateurs désabonnés.
 
 ## Conditions préalables
@@ -34,7 +38,7 @@ Affinement de vos segments d'audience en fonction du risque de désabonnement.<b
 {% tab Ciblage des messages %}
 Personnalisation de vos campagnes de messages Braze en fonction du risque de désabonnement des destinataires.
 
-![Une capture d'écran montrant un exemple d'utilisation d'un attribut personnalisé envoyé par Adikteev comme filtre de ciblage de campagne.]({% image_buster /assets/img/adikteev/campaign.png %})
+
 {% endtab %}
 {% endtabs %}
 
@@ -80,3 +84,4 @@ La charge utile envoyée par Adikteev à Braze est personnalisable et peut être
 ## Assistance et résolution des problèmes
 
 Contactez votre gestionnaire de compte Adikteev pour toute question relative à l'intégration ou pour tout soutien concernant vos cas d'utilisation.
+
