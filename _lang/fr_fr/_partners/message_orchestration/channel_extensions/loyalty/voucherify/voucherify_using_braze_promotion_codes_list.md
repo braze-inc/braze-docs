@@ -12,6 +12,8 @@ search_tag: Partner
 
 > Outre le contenu connecté et les attributs personnalisés, vous pouvez partager des codes Voucherify à l'aide de l'extrait de code promo Braze. Tout d'abord, exportez les codes de Voucherify, importez les codes dans Braze et ajoutez un extrait de code e-mail pour extraire les codes de la liste des promotions. 
 
+
+
 ## Étape 1 : Exporter des codes uniques de Voucherify
 
 Dans Voucherify, accédez à votre campagne Voucherify. Ensuite, sélectionnez **Exporter vers CSV** et modifiez le fichier CSV en supprimant le nom de la colonne pour ne laisser que la liste des codes.
@@ -21,10 +23,6 @@ Dans Voucherify, accédez à votre campagne Voucherify. Ensuite, sélectionnez *
 ## Étape 2 : Créez une liste de codes de promotion
 
 Allez dans **Data Settings** > **Promotion Codes** et cliquez sur **Create Promotion Code List**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **codes de promotion** sous la rubrique **Intégrations.**
-{% endalert %}
 
 Vous pouvez utiliser le nom de la campagne Voucherify pour nommer la liste et vérifier la cohérence des données.
 
@@ -59,3 +57,4 @@ Ajoutez l'extrait de code pour afficher un code de la liste.
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_liquid_email.png %})
 
 Une fois que le message contenant le code est envoyé, le même code ne sera plus utilisé.
+
