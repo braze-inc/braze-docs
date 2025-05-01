@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Contentsquare](https://contentsquare.com/) est une plateforme d'analyse de l'expérience numérique qui permet de comprendre efficacement l'expérience client.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Contentsquare vous permet d'envoyer des Signaux en ligne (fraude, signaux de frustration, etc.) en tant que custom events dans Braze. Exploitez les informations d'expérience de Contentsquare pour améliorer la pertinence de vos campagnes et les taux de conversion en ciblant les messages en fonction de l'expérience numérique et du langage corporel de vos clients.
 
 ## Conditions préalables
@@ -46,10 +50,7 @@ Pour plus d'informations, consultez la section [Demander une intégration Conten
 
 Une fois l'intégration terminée, les custom events Contentsquare seront disponibles pour être utilisés dans vos campagnes et Canvases. Vous pouvez vérifier quels événements sont envoyés à Braze depuis **Paramètres des données** > **Événements personnalisés**.
 
-{% alert note %}
-Si vous utilisez la [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page dans **gérer les paramètres** > **custom events**.
-{% endalert %}
-
 ![Données de signaux en ligne de Contentsquare dans l'onglet Événements personnalisés de Braze][1]
+
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 
