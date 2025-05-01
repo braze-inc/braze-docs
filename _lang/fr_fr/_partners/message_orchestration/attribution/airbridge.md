@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) est une plateforme de mesure mobile unifiée qui vous aide à découvrir les véritables sources de croissance grâce à l'attribution mobile, à la mesure incrémentielle et à la modélisation du mix marketing.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Airbridge vous permet de transmettre toutes les données d'attribution d'installation non organiques d'Airbridge à Braze pour créer des campagnes marketing personnalisées.
 
 ## Conditions préalables
@@ -190,10 +194,6 @@ AirbridgeUnity.StartTracking()
 
 Dans Braze, accédez à **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Airbridge**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 Vous y trouverez l'endpoint REST et générerez votre clé d'importation des données Braze. Après la génération de la clé, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un système automatisé de communication dans le tableau de bord d'Airbridge.
 
 ![][1]
@@ -201,7 +201,7 @@ Vous y trouverez l'endpoint REST et générerez votre clé d'importation des don
 ### Étape 3 : Configurez Braze dans le tableau de bord d'Airbridge
 
 1. Dans Airbridge, accédez à **Intégrations > Intégrations tierces** dans la barre latérale gauche et sélectionnez **Braze**.
-2. Fournissez la clé d'importation des données et l'endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
+2. 
 3. Sélectionnez le type d'événement (Événement d'installation ou Événement d'installation et d'ouverture de lien profond) et enregistrer.
 
 {% alert note %}
@@ -272,6 +272,7 @@ idfv={{most_recently_used_device.${id}}}
 **Cette recommandation est purement facultative**<br>
 Si vous n'utilisez actuellement aucun identifiant d'appareil - tel que l'IDFV ou le GAID - dans vos liens de suivi de clics, ou ne prévoyez pas de le faire à l'avenir, Airbridge sera toujours en mesure d'attribuer ces clics grâce à leur modélisation probabiliste.
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
 [2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}
