@@ -14,6 +14,8 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) est une plateforme de données de localisation qui fournit un ciblage des données de localisation dans vos campagnes Braze. Utilisez le SDK Pilgrim de Foursquare sur les applications iOS et Android pour déclencher des événements en temps réel en fonction de l'emplacement/localisation, ce qui vous permet d'exploiter les puissantes capacités de ciblage géographique de Foursquare pour envoyer des messages pertinents et personnalisés avec Braze.
 
+
+
 ## Conditions préalables
 
 | Condition | Description |
@@ -59,6 +61,7 @@ Pour recibler vos utilisateurs, utilisez le SDK Pilgrim pour définir un `last_l
 ![Une campagne basée sur l'action à l'étape des utilisateurs cibles indiquant que « last_location » est égal à « Pizza Place ». ]({% image_buster /assets/img_archive/last-location-segment.png %})
 
 Vous pouvez également segmenter les utilisateurs de Braze qui ont visité un type de site particulier en fonction de ceux de Foursquare `primaryCategoryId` au cours d'une période donnée. Pour tirer parti de ce point de données pour vos cas d'utilisation de reciblage, enregistrez-`primaryCategoryId` en tant que propriété d’événement lors de votre processus de segmentation d'audience. [Pour identifier les utilisateurs et les propriétés utilisés par l'API Foursquare et le SDK Pilgrim, consultez le site des développeurs de Foursquare.](https://developer.foursquare.com/)
+
 
 [1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}
