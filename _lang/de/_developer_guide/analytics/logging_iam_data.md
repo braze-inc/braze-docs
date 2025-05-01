@@ -12,22 +12,22 @@ description: "Erfahren Sie, wie Sie In-App-Nachricht-Daten (IAM) über das Braze
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include Entwickler_guide/web/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/web/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-{% multi_lang_include Entwickler_guide/flutter/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/flutter/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-{% multi_lang_include Entwickler_guide/react_native/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/react_native/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-{% multi_lang_include Entwickler_guide/roku/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/roku/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include Entwickler_guide/unity/analytics/logging_iam_data.md %}
+{% multi_lang_include developer_guide/unity/analytics/logging_iam_data.md %}
 {% endsdktab %}
 {% endsdktabs %}
