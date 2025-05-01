@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévisions météorologiques dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi qu'automatiser la traduction grâce au [contenu connecté][60] de Braze. 
 
+
+
 ## Conditions préalables
 
 | Condition | Description |
@@ -201,6 +203,7 @@ Si l'appel d'API répond par un `{{local_weather[0].WeatherText}}` renvoyant `Ra
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} « Exemple d'utilisation du contenu connecté Push »
