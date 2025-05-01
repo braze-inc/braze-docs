@@ -8,4 +8,4 @@ platform:
 description: "Dieser Artikel behandelt Android 13, SDK-Updates, Änderungen an der Push-Erlaubnis, SDK-Kompatibilität und mehr."
 ---
 
-{% multi_lang_include Entwickler_guide/android/android_13.md %}
+{% multi_lang_include developer_guide/android/android_13.md %}
