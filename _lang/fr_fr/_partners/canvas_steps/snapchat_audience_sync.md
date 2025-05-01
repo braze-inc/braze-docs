@@ -45,10 +45,6 @@ Vous devez vous assurer que les éléments suivants sont créés, complétés et
 
 Dans le tableau de bord de Braze, allez dans **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Snapchat**. Sous Synchronisation de l'audience Snapchat, sélectionnez **Connecter Snapchat**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 ![Page sur la technologie Snapchat dans Braze qui comprend une section Aperçu et une section Synchronisation de l'audience Snapchat avec le bouton Snapchat connecté.][1]{: style="max-width:80%;"}
 
 Vous serez ensuite redirigé vers la page OAuth de Snapchat pour autoriser Braze à obtenir les permissions liées à votre intégration de synchronisation d’audience.
@@ -109,7 +105,7 @@ Une fois que vous avez configuré la synchronisation de votre audience avec Snap
 
 Vous pouvez afficher l'audience dans Snapchat en entrant dans votre compte gestionnaire de publicités et en sélectionnant **Audiences** dans la section Actifs de la navigation. Sur la page **Audiences**, vous pouvez voir la taille des audiences dès qu'elles atteignent environ 1 000.
 
-![Détails d’une audience Snapchat donnée, notamment le nom, le type, la taille et la rétention en jours de l’audience.][9]
+
 
 ## Considérations sur la synchronisation des utilisateurs et la limite de débit
 
@@ -136,25 +132,26 @@ Le tableau suivant comprend des indicateurs et des descriptions pour vous aider 
 N'oubliez pas qu'il y aura un délai dans la génération du rapport des utilisateurs synchronisés et des indicateurs d’erreurs en raison du vidage en masse et de la période de 13 heures de nouvelles tentatives, respectivement.
 {% endalert %}   
 
-## Résolution des problèmes
+## Foire aux questions
 
-{% details Que dois-je faire si je reçois une erreur de jeton non valide ? %}
-Vous pouvez déconnecter et reconnecter votre compte Snapchat sur la page partenaire de Snapchat. Assurez-vous auprès de votre gestionnaire de compte Snapchat que vous disposez des autorisations appropriées pour le compte publicitaire avec lequel vous souhaitez vous synchroniser.
-{% enddetails %}
+### 
 
-{% details Pourquoi mon canvas n'est-il pas autorisé à se lancer ? %}
-Assurez-vous que votre compte publicitaire Snapchat se connecte avec succès à Braze sur la page partenaire de Snapchat. Assurez-vous d'avoir sélectionné un compte publicitaire, d'avoir entré un nom pour la nouvelle audience et d'avoir sélectionné les champs à faire correspondre
-{% enddetails %}
+Pour l'instant, vous ne pouvez avoir que 1 000 audiences au sein de votre compte Snapchat. 
 
-{% details Comment puis-je savoir si des utilisateurs ont été appariés après avoir transféré des utilisateurs vers Snapchat ? %}
-En raison de ses politiques de confidentialité des données, Snapchat n’est pas en mesure de fournir ces informations.
-{% enddetails %}
+ 
 
-{% details Combien d'audiences Snapchat peut prendre en charge ? %}
-Pour l'instant, vous ne pouvez avoir que 1 000 audiences au sein de votre compte Snapchat.
-Si vous dépassez cette limite, Braze vous informera que nous ne pouvons pas créer de nouvelles audiences.
-Vous devrez vous rendre dans votre compte de publicités Snapchat et supprimer les audiences que vous n'utilisez plus.
-{% enddetails %}
+### Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à Snapchat ?
+
+
+
+### Que dois-je faire ensuite si je reçois une erreur de jeton non valide ?
+
+Vous pouvez déconnecter et reconnecter votre compte Snapchat sur la page partenaire de Snapchat. 
+
+### Pourquoi mon Canvas n’est-il pas autorisé à être lancé ?
+
+ 
+
 
 [1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
 [2]: {% image_buster /assets/img/snapchat/snapchat2.png %}
