@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [B.Layer](https://blayer.phiture.com) est le générateur de messages intégré de Phiture qui aide les équipes CRM des applications mobiles à créer des messages intégrés personnalisés de manière simple, rapide et sans codage. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et de B.Layer vous permet de tirer parti du générateur de messages in-app B.Layer pour vous aider à créer des messages in-app conformes à votre marque et pouvant être exportés sous forme de fichier zip ou de code HTML en ligne vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
 
 ![][2]
@@ -61,6 +65,7 @@ Dans Braze, créez un message in-app avec code personnalisé. Si vous possédez 
 AvecB.Layer, vous pouvez enregistrer les interactions avec les boutons ou la saisie de texte en tant qu'attribut Braze. Cela peut être fait dans l'éditeur. Un exemple courant est une enquête portant sur le NPS.
 
 B.Layer utilise le suivi des boutons Braze ajoutés aux liens que vous saisissez (par exemple,`?button=0`). De cette façon, vous pouvez voir les clics sur les boutons dans la partie des analyses de votre campagne.
+
 
 [2]: {% image_buster /assets/img/blayer/blayer2.png %}
 [3]: {% image_buster /assets/img/blayer/blayer3.png %}
