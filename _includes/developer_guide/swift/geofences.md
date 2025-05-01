@@ -47,8 +47,60 @@ configuration.location.automaticLocationCollection = YES;
 configuration.location.geofencesEnabled = YES;
 configuration.location.automaticGeofenceRequests = YES;
 
-// Configurations for background geofence reporting with `When In Use` authorization.
+// Additional configuration customization...
+
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Step 2.1 (Optional) Enable geofences background reporting
+
+By default, geofences are only monitored if your app is in the foreground, or if it has `Always` authorization (which monitors all application states).
+
+However, you can choose to monitor geofence events when your app is in the background or if [`When In Use` authorization](#swift_request-authorization) is active. To do this, add the `Background Mode -> Location updates` capability to your Xcode project.
+
+{ Add screenshot of Xcode here }
+
+Then, enable `allowBackgroundGeofenceUpdates` to let Braze extend your app's "When in use" status by continuously monitoring location updates. This setting only works when your app is in the background. When the app re-opens, the existing background processes are paused and foreground processes are prioritized instead.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+let configuration = Braze.Configuration(
+  apiKey: "<BRAZE_API_KEY>",
+  endpoint: "<BRAZE_ENDPOINT>"
+)
+
+// Additional configuration customization...
+
+// Enable background geofence reporting with `When In Use` authorization.
+configuration.location.allowBackgroundGeofenceUpdates = true
+
+// Determines the number of meters required to trigger a new location update.
+configuration.location.distanceFilter = 8000
+
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZConfiguration *configuration =
+    [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                    endpoint:brazeEndpoint];
+
+// Additional configuration customization...
+
+// Enable background geofence reporting with `When In Use` authorization.
 configuration.location.allowBackgroundGeofenceUpdates = YES;
+
+// Determines the number of meters required to trigger a new location update.
 configuration.location.distanceFilter = 8000;
 
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
@@ -58,16 +110,8 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-#### Configuring geofences for background reporting
-
-By default, geofences are only monitored if your app is in the foreground, or it has `Always` authorization (which monitors all application states).
-
-However, you can choose to monitor geofence events when your app is in the background or when it has the [`When In Use` authorization](#step-5) by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
-
-`allowBackgroundGeofenceUpdates` only works when your app is in the background. When it re-opens, it's existing background processes are paused, so foreground processes can be prioritized instead.
-
 {% alert important %}
-To prevent battery drain and rate limiting, be sure to configure `distanceFilter` to a value that meets your app's specific needs. Setting `distanceFilter` to a higher value prevents your app from requesting your user's location too frequently.
+To prevent battery drain and rate limiting, configure `distanceFilter` to a value that meets your app's specific needs. Setting `distanceFilter` to a higher value prevents your app from requesting your user's location too frequently.
 {% endalert %}
 
 ### Step 3: Verify background push
@@ -84,7 +128,7 @@ This description will be shown when the system location prompt requests authoriz
 Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's developer documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
 {% endalert %}
 
-### Step 5: Request authorization {#step-5}
+### Step 5: Request authorization {#request-authorization}
 
 When requesting authorization from a user, you can request `When In Use` or `Always` authorization.
 
