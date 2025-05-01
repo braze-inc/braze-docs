@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Iterate](https://iteratehq.com) facilite l'apprentissage auprès de vos clients, en proposant des outils de recherche intelligents et conviviaux, à l'image de votre marque.
 
+
+
+## À propos de l'intégration
+
 L'intégration d'Iterate avec Braze vous permet de proposer des enquêtes Iterate de façon fluide au sein de votre produit ou de vos campagnes. Les réponses à l'enquête peuvent être enregistrées en tant qu'attributs personnalisés de l'utilisateur dans Braze, ce qui vous permet de créer une image complète de vos utilisateurs ou de créer de nouvelles audiences et de nouveaux segments puissants.
 
 Avec le SDK de Braze installé dans votre application ou votre site web, vous pouvez utiliser les outils de segmentation et de ciblage disponibles dans Braze pour envoyer des enquêtes via des messages in-app à une partie spécifique de votre audience en fonction de n'importe quel déclencheur ou segment personnalisé. Les enquêtes Iterate peuvent également être intégrées directement dans vos campagnes d'e-mail ou incluses en tant que liens dans vos campagnes push ou autres.
@@ -84,5 +88,6 @@ Lorsqu'un utilisateur répond à une question de l'enquête, Iterate déclenche 
 Par défaut, l'attribut utilisateur créé pour une question est le même que l'invite.
 Dans certains cas, vous souhaiterez peut-être personnaliser cette procédure. Pour ce faire, cliquez sur le menu déroulant **Personnaliser les noms des attributs des utilisateurs** dans l'étape **Créer votre enquête** et saisissez les noms personnalisés que vous souhaitez.
 
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [2]: {% image_buster /assets/img/iterate.png %}
