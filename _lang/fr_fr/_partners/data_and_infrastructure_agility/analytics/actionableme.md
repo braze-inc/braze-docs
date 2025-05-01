@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [actionable.me][2], créé par l'équipe de Massive Rocket, une agence de données et de CRM, est une approche standardisée et automatisée de l'exécution des programmes de CRM, fournissant des outils et des processus conçus pour que les clients de Braze obtiennent de la valeur rapidement, de manière cohérente et prédictive. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et de actionable.me vous permet de déployer un service pour suivre vos progrès dans l'utilisation de Braze. Grâce à une combinaison d'outils et de processus, ils évalueront rapidement les performances de votre CRM, identifieront de nouvelles opportunités et fourniront des recommandations sur la manière d'être plus performant.
 
 ## Prérequis
@@ -48,10 +52,6 @@ Dans Braze, accédez à **Paramètres** > **Clés API**. Sélectionnez **Créer 
 - `kpi.new_users.data_series`
 - `kpi.uninstalls.data_series`
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
-{% endalert %}
-
 ### Étape 2 : Fournissez des informations à l'équipe actionable.me
 
 Pour terminer l'intégration, vous devez fournir votre clé API REST et l'[URL de l'endpoint REST][1] à votre équipe d'exploitation actionable.me. actionable.me établira alors la connexion et vous contactera une fois la configuration terminée pour commencer à partager des informations.
@@ -61,6 +61,7 @@ Pour terminer l'intégration, vous devez fournir votre clé API REST et l'[URL d
 ## Résolution des problèmes
 
 Contactez l'équipe actionable.me ou Massive Rocket pour obtenir une aide supplémentaire : [info@massiverocket.com][3]
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://actionable.me
