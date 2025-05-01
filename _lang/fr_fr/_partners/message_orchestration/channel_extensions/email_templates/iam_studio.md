@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [IAM Studio](https://www.inappmessage.com) est une plateforme de personnalisation de message sans code qui vous permet de créer des expériences personnalisées et riches dans l'application et de les diffuser via Braze.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et d’IAM Studio, vous permet de facilement insérer des modèles de message in-app personnalisables dans vos messages in-app Braze, afin de rendre possible le remplacement d'image, la modification de texte, la définition de paramètres de lien profond, d’attributs personnalisés et de paramètres d'événement. En utilisant IAM Studio, vous pouvez réduire le temps de production de message et consacrer plus de temps à la planification du contenu. 
 
 ## Conditions préalables
@@ -56,7 +60,7 @@ Ensuite, créez votre message in-app personnalisé en ajoutant des polices perso
 
 {% tabs local %}
 {% tab Polices %}
-![L'interface utilisateur IAM Studio montrant les options pour ajouter du liquid. Ces options incluent la création d'une phrase personnalisée.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+![L'interface utilisateur IAM Studio montrant les options pour ajouter du liquid. 
 {% endtab %}
 {% tab Liquid %}
 ![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la journalisation des événements/attributs. Ces options incluent ce journal de comportement des utilisateurs.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
@@ -77,6 +81,7 @@ Une fois toutes les modifications terminées, exportez le modèle en cliquant su
 Accédez à Braze, et dans votre message in-app, collez le code personnalisé dans la boîte **HTML Input**. Assurez-vous de tester votre message pour vérifier qu'il s'affiche correctement.
 
 ![][3]{: style="max-width:85%;"}
+
 
 [1]: {% image_buster /assets/img/iam_studio/iam_template_gallery.png %}
 [2]: {% image_buster /assets/img/iam_studio/export_iam_code.png %}
