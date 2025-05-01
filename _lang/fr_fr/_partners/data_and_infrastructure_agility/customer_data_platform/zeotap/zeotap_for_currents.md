@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Zeotap](https://zeotap.com/) est une plateforme de données clients de nouvelle génération qui vous aide à découvrir et à comprendre votre audience mobile grâce à des outils de résolution d'identité, des informations exploitables et des données enrichies.
 
-L'intégration entre Braze et Zeotap vous permet d'étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients de Zeotap avec les profils d'utilisateurs de Braze. Avec [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), vous pouvez également connecter les données à Zeotap pour les rendre exploitables dans l'ensemble des outils de croissance.
+L'intégration entre Braze et Zeotap vous permet d'étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients de Zeotap avec les profils d'utilisateurs de Braze. Avec [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), vous pouvez également connecter les données à Zeotap pour les rendre exploitables dans l'ensemble des outils de croissance.
 
 {% alert important %}
 Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souhaitez gérer cette intégration, contactez votre gestionnaire de satisfaction client.
@@ -22,7 +22,7 @@ Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souh
 | Condition | Descriptif |
 | --- | --- |
 |Compte Zeotap | Un [compte Zeotap](https://zeotap.com/) est nécessaire pour bénéficier de ce partenariat. |
-| Currents | Pour exporter des données dans Zeotap, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) pour votre compte. |
+| Currents | Pour exporter des données dans Zeotap, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Mise en œuvre
@@ -46,7 +46,7 @@ Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souh
 4. Sous **Credentials**, entrez les informations suivantes que vous avez notées à l'[étape 1 :](#step-1-create-a-currents-source)
 - L'URL de l'API comme **endpoint**
 - La clé d'écriture comme **jeton porteur**<br><br>![Sections permettant de saisir les détails de l'intégration et les informations d'identification.][4]<br><br>
-5. Sélectionnez les événements d'engagement lié aux messages que vous souhaitez envoyer à Zeotap.<br><br>![L'onglet "Paramètres généraux" comporte une section permettant de sélectionner les événements d'engagement aux messages.][5]
+5. <br><br>![L'onglet "Paramètres généraux" comporte une section permettant de sélectionner les événements d'engagement aux messages.][5]
 6. Sélectionnez **Lancer le courant** pour enregistrer les modifications et commencer à envoyer des événements à Zeotap.
 
 {% alert important %}
