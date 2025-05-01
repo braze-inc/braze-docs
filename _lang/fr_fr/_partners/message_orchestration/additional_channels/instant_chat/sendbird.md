@@ -12,8 +12,12 @@ search_tag: Partner
 
 > [Sendbird][4] Notifications offre aux marketeurs et aux gestionnaires de produits un nouveau canal puissant pour communiquer avec leurs clients in-app avec des messages persistants et interactifs à sens unique. Ces messages peuvent être utilisés pour toute communication et sont le plus souvent utilisés à des fins promotionnelles et transactionnelles.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et de Sendbird permet aux utilisateurs de Braze de :
-* Utilisez les capacités de segmentation et de déclencheur de Braze pour lancer des notifications personnalisées in-app.
+* 
 * Créez des notifications in-app personnalisées sur la plateforme Sendbird Notifications, qui sont ensuite diffusées dans l'environnement de l'application, améliorant ainsi l'engagement de l'utilisateur.
 
 En exploitant les capacités conjointes de Braze et Sendbird Notifications, les entreprises peuvent renforcer l'engagement client et obtenir des taux de conversion plus élevés grâce à des stratégies de notification in-app efficaces.
@@ -107,6 +111,7 @@ Pour intégrer l'événement de distribution des notifications et de statut d'ou
 Cet événement personnalisé sera déclenché deux fois pour chaque notification, lorsqu'un message est envoyé et lorsqu'un utilisateur ouvre le message.
 - Lorsqu'un message est envoyé, un événement personnalisé est déclenché avec le statut `SENT`.
 - Lorsqu'un message est lu, un événement personnalisé est déclenché avec le statut `READ`.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://sendbird.com/docs/notifications/v1/uikit/ios/install-uikit
