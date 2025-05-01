@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# connecteur Currents personnalisé Partner
+# 
 
-## Sérialisation et format des données
+> 
 
-Le format de données cible est JSON sur HTTPS. Les événements seront regroupés par lots de 100 événements par défaut, et envoyés à l'endpoint sous la forme d'un tableau JSON contenant tous les événements. Les lots seront envoyés dans le format suivant :
+## Conditions préalables
 
-`{"events": [event1, event2, event3, etc...]}`
 
-Il y aura un objet JSON de niveau supérieur avec les « événements » clés qui correspondent à un tableau d'autres objets JSON, chacun représentant un événement unique.
 
-Les exemples suivants concernent des événements _individuels_ (tels qu'ils feraient partie du tableau plus large d'objets JSON, chaque objet JSON représentant un événement unique dans le lot).
+ 
+
+## 
+
+### 
+
+
+
+  
+
+### 
+
+ 
+
+ 
+
+{% alert tip %}
+
+{% endalert %}
+
+## 
+
+Le format de données cible est JSON sur HTTPS. 
+
+-  
+-   
+
+
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+
+
+## 
+
+
+
+ 
+
+|Nom|Description|
+|----|-----------|
+|`"user"`||
+|`"properties"`||
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+  
 
 ### Événements liés à la campagne
 
 Voici quelques exemples de charges utiles pour différents événements, telles qu'elles apparaîtraient s'ils étaient associés à une campagne :
 
-```
+#### Clic sur le in-app Message
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ Voici quelques exemples de charges utiles pour différents événements, telles 
 }
 ```
 
-```
+#### Notification push envoyée
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ Voici quelques exemples de charges utiles pour différents événements, telles 
 }
 ```
 
-```
+#### Ouverture d'e-mails
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ Voici quelques exemples de charges utiles pour différents événements, telles 
 }
 ```
 
-```
+#### Envoi SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ Voici quelques exemples de charges utiles pour différents événements, telles 
 
 Voici quelques exemples de charges utiles d'événements pour différents événements, telles qu'elles apparaîtraient si elles étaient associées à un Canvas :
 
-```
+#### Clic sur le in-app Message
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ Voici quelques exemples de charges utiles d'événements pour différents évén
 }
 ```
 
-```
+#### Notification push envoyée
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ Voici quelques exemples de charges utiles d'événements pour différents évén
 }
 ```
 
-```
+#### Ouverture d'e-mails
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ Voici quelques exemples de charges utiles d'événements pour différents évén
 }
 ```
 
-```
+#### Envoi SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ Voici quelques exemples de charges utiles d'événements pour différents évén
 
 Voici quelques exemples de charges utiles d'événements pour divers autres événements qui ne sont associés ni à des campagnes ni à des Canvases :
 
-```
+#### Événement personnalisé
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ Voici quelques exemples de charges utiles d'événements pour divers autres év�
 }
 ```
 
-```
+#### Événement d’achat
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ Voici quelques exemples de charges utiles d'événements pour divers autres év�
 }
 ```
 
-```
+#### Démarrer une session
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,50 +380,105 @@ Voici quelques exemples de charges utiles d'événements pour divers autres év�
 
 ## Authentification
 
-Si nécessaire, l'authentification est réalisée en transmettant un jeton dans l'en-tête HTTP `Authorization`, via le schéma d'autorisation `Bearer`, comme spécifié dans la [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). À l'avenir, Braze pourra choisir d'utiliser l'en-tête `Authorization` pour mettre en œuvre un schéma d'autorisation par paire clé-valeur personnalisé (unique à Braze) conforme à la [RFC 7235](https://tools.ietf.org/html/rfc7235) (c'est ainsi que fonctionne, par exemple, le schéma d'authentification personnalisé d'AWS).
+  
 
-Conformément à la RFC 6750, le jeton doit être une valeur codée en Base64 d'au moins un caractère. Une particularité notable du document RFC 6750 est qu'il permet au jeton de contenir les caractères suivants en plus des caractères Base64 normaux : '-', ' . ',' _ 'et '~'. Les partenaires et les clients sont libres d'inclure ou non ces caractères dans leur jeton. Notez que les clients doivent fournir ce jeton sous forme de Base64 ; Braze n'effectuera pas cet encodage de notre côté.
+  
 
-Conformément à la RFC 6750, l'en-tête, s'il est présent, sera construit selon le format suivant :
 
-`"Authorization: Bearer " + <token>`
 
-Ainsi, par exemple, si le jeton d'API est`0p3n5354m3==`, l'en-tête Authorization ressemblera à ceci :
+```plaintext
+"Authorization: Bearer " + <token>
+```
 
-`Authorization: Bearer 0p3n5354m3==`
+
+
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+{% alert note %}
+ 
+{% endalert %}
 
 ## Versionnage
 
-Toutes les requêtes provenant de nos connecteurs HTTP intégrables seront envoyées avec un en-tête personnalisé désignant la version de la requête Currents en cours :
 
-`Braze-Currents-Version: 1`
 
-La version sera toujours `1`, à moins que nous n'apportions des modifications gravement incompatibles avec le passé à la charge utile ou à la sémantique de la demande. Nous prévoyons d'augmenter ce chiffre rarement, voire jamais.
+```plaintext
+Braze-Currents-Version: 1
+```
 
-Les événements individuels suivront les mêmes règles d'évolution que nos schémas S3 Avro existants pour l'exportation des données sur les courants. En d'autres termes, la rétrocompatibilité des champs de chaque événement avec les versions précédentes des charges utiles de l'événement sera garantie conformément à la définition de rétrocompatibilité d'Avro, y compris les règles suivantes :
 
-- Il est garanti que les champs d'événements spécifiques auront toujours le même type de données au fil du temps.
-- Tous les nouveaux champs ajoutés à la charge utile au fil du temps doivent être considérés comme facultatifs par toutes les parties.
-- Les champs obligatoires ne seront jamais supprimés.
+
+
+
+1. Il est garanti que les champs d'événements spécifiques auront toujours le même type de données au fil du temps.
+2. Tous les nouveaux champs ajoutés à la charge utile au fil du temps doivent être considérés comme facultatifs par toutes les parties.
+3. Les champs obligatoires ne seront jamais supprimés.
 
 ## Gestion des erreurs et mécanisme de nouvelle tentative
 
-En cas d'erreur, Braze mettra la requête en file d'attente et réessaiera en fonction du code de retour HTTP reçu. Tout code d'erreur HTTP non répertorié ci-dessous sera traité comme une erreur HTTP 5XX.
+   
 
-{% alert important %}
-Si notre mécanisme de nouvelle tentative ne parvient pas à transmettre les événements à leur endpoint pendant plus de 24 heures, il y aura une perte de données.
+
+
+
+
+{% alert warning %}
+
 {% endalert %}
 
 Les codes d'état HTTP suivants seront reconnus par notre client de connecteur :
-- **2XX — Succès**
-  - Les données relatives à l'événement ne seront pas renvoyées.<br><br>
-- **5XX** — Erreur côté serveur
-  - Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. Si les données ne sont pas envoyées avec succès dans les 24 heures, elles seront supprimées.<br><br>
-- **400** — Erreur côté client
-  - Notre connecteur a d'une manière ou d'une autre envoyé au moins un événement mal formé. Dans ce cas, les données d'événement seront divisées en lots de taille 1 et renvoyées. Tous les événements de ces lots de taille 1 qui reçoivent une réponse HTTP 400 supplémentaire seront définitivement supprimés. Les partenaires et/ou les clients sont invités à nous informer s'ils détectent ce phénomène chez eux.<br><br>
-- **401** (non autorisé), **403** (interdit), **404**
-  - Le connecteur a été configuré avec des informations d'identification non valides. Les données relatives à l'événement seront envoyées à nouveau après un délai compris entre 2 et 5 minutes. Si ce problème n'est pas résolu par le client dans les 48 heures, les données relatives à l'événement seront supprimées.<br><br>
-- **413** — Charge utile trop importante
-  - Les données relatives à l'événement seront divisées en lots plus petits et renvoyées.<br><br>
-- **429** — Trop de requêtes
-  - Indique la limite de débit. Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. Si les données ne sont pas envoyées avec succès dans les 24 heures, elles seront supprimées.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Réponse</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>Réussi</td>
+      <td>Les données relatives à l'événement ne seront pas renvoyées.</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td></td>
+      <td>Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. Si les données ne sont pas envoyées avec succès dans les 24 heures, elles seront supprimées.</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td></td>
+      <td>   <code>400</code>  </td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td></td>
+      <td>Le connecteur a été configuré avec des informations d'identification non valides.  </td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td></td>
+      <td>Le connecteur a été configuré avec des informations d'identification non valides.  </td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td>Introuvable</td>
+      <td>Le connecteur a été configuré avec des informations d'identification non valides.  </td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td></td>
+      <td>Les données relatives à l'événement seront divisées en lots plus petits et renvoyées.</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td></td>
+      <td>Indique la limite de débit. Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. </td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
