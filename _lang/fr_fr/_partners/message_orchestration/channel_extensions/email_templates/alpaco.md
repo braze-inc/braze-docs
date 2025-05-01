@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Alpaco](https://alpaco.email/) est un outil de marketing par e-mail en ligne qui offre un éditeur par glisser-déposer pour un nouveau niveau de contrôle de la conception et de la production. L'intégration entre Braze et Alpaco vous permet d'exporter vers Braze des e-mails conformes à votre marque et axés sur les données. 
 
+
+
 {% alert note %}
 Alpaco prend en charge l'[intégralité des variables liquides](https://shopify.github.io/liquid/) et, à ce titre, prend également en charge l'intégralité des variables liquides utilisées dans vos configurations de Braze.
 {% endalert %}
@@ -58,5 +60,6 @@ Si vous souhaitez apporter des modifications à votre modèle d'e-mail, faites-l
 ## Utiliser les modèles d'e-mail d'Alpaco dans Braze
 
 Retrouvez votre e-mail Alpaco téléchargé en naviguant vers **Modèles et médias > Modèles d'e-mail** dans le tableau de bord de Braze. Vous pouvez maintenant utiliser ce modèle pour envoyer à vos utilisateurs des e-mails axés sur la marque et les données.
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
