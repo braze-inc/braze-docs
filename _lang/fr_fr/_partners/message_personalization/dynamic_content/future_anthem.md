@@ -9,7 +9,7 @@ search_tag: Partner
 
 # L'hymne du futur
 
-> Amplifier AI, le produit tout-en-un de Future Anthem pour le secteur des jeux en argent réel, offre une personnalisation du contenu, des expériences en temps réel et des audiences dynamiques. Amplifier AI fonctionne de façon fluide/sans heurts/de la façon homogène, etc. Les clients peuvent enrichir les profils de joueurs de Braze avec des attributs de joueurs spécifiques à l'industrie, tels que le jeu préféré, l'équipe préférée, le score d'engagement, la recommandation du prochain pari, le prochain pari attendu, etc.
+> Amplifier AI, le produit tout-en-un de Future Anthem pour le secteur des jeux en argent réel, offre une personnalisation du contenu, des expériences en temps réel et des audiences dynamiques. 
 
 {% alert important %}
 Cette fonctionnalité est actuellement en accès anticipé. Veuillez contacter l'équipe de réussite client de Future Anthem pour commencer.
@@ -21,7 +21,7 @@ Cette fonctionnalité est actuellement en accès anticipé. Veuillez contacter l
 |--------------------------|--------------------------------------------------------|
 | Futur compte Anthem    | Un compte Future Anthem. |
 | Clé d'API REST Braze       | Une clé de l'API REST de Braze avec l'extension [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track). Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
-| Endpoint REST Braze      | L'[endpoint REST de](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) Braze qui correspond à votre instance, par exemple `rest.iad-01.com`. |
+| Endpoint REST Braze      | L'[endpoint REST de]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Braze qui correspond à votre instance, par exemple `rest.iad-01.com`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Cas d’utilisation
