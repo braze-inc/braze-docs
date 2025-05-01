@@ -11,7 +11,11 @@ search_tag: Partner
 
 > Cet article de référence vous guidera dans le processus de configuration d'Amazon Personalize et de son intégration dans votre environnement Braze à l'aide du contenu connecté. Pour ce faire, un atelier pratique vous guidera à travers toutes les étapes nécessaires au déploiement et à la formation des solutions Amazon Personalize et à leur intégration dans une campagne d'e-mailing de Braze.
 
-Les exemples suivants sont déployés dans un site de commerce électronique fictif entièrement fonctionnel appelé "Boutique de démonstration commerce de détail". Les ressources et le code de ce tutoriel sont publiés dans la [boutique de démonstration AWS Samples Retail.](https://github.com/aws-samples/retail-demo-store/) Vous pouvez utiliser cette mise en œuvre de l'architecture de référence comme une ébauche pour mettre en œuvre Amazon Personalize dans votre propre environnement.
+
+
+## À propos de l'intégration
+
+Les exemples suivants sont déployés dans un exemple de site de commerce électronique entièrement fonctionnel appelé Retail Demo Store (Boutique démo). Les ressources et le code de ce tutoriel sont publiés dans la [boutique de démonstration AWS Samples Retail.](https://github.com/aws-samples/retail-demo-store/) Vous pouvez utiliser cette mise en œuvre de l'architecture de référence comme une ébauche pour mettre en œuvre Amazon Personalize dans votre propre environnement.
 
 ## Exigences
 
@@ -19,7 +23,7 @@ Vous devez cloner la [boutique de démonstration](https://github.com/aws-samples
 
 ## Architecture d'intégration
 
-Avant de configurer Braze pour envoyer des messages personnalisés aux utilisateurs, passez en revue les composants pertinents requis pour un site Web de commerce électronique typique, en utilisant l'architecture de la boutique de démonstration Retail comme exemple.
+Avant de configurer Braze pour envoyer des messages personnalisés aux utilisateurs, passez en revue les composants pertinents requis pour un site web de commerce électronique typique, en utilisant l’architecture du Retail Demo Store comme exemple.
 
 ![Une image décomposant l'architecture de personnalisation de Braze et montrant comment les différents composants interagissent les uns avec les autres.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
@@ -71,6 +75,7 @@ Une fois les solutions et les campagnes Amazon Personalize en place, votre insta
 ### Étape 4 : Nettoyer les ressources
 
 Pour éviter d'encourir des frais à l'avenir, supprimez les ressources AWS que le projet Retail Demo Store a créées en supprimant la pile AWS CloudFormation que vous avez créée à l'étape 1.
+
 
 [1]: {% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}
 [2]: {% image_buster /assets/img/amazon_personalize/region.png %}
