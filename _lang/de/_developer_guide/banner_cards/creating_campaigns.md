@@ -22,7 +22,7 @@ Das sind die Mindestversionen des SDK, um Banner Cards zu verwenden:
 
 ## Erstellen einer Banner Card Kampagne
 
-{% multi_lang_include banner_cards/erstellen_placements.md %}
+{% multi_lang_include banner_cards/creating_placements.md %}
 
 ### Schritt 2: Eine Kampagne erstellen
 
