@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Jebbit](https://www.jebbit.com/) est un PaaS qui vous permet de créer des expériences engageantes pour les utilisateurs afin de capturer des données first-party.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Jebbit vous permet de transmettre à Braze, en temps réel, les e-mails et les attributs des utilisateurs de vos campagnes Jebbit en tant que données utilisateur. Ces données peuvent ensuite être utilisées pour piloter des initiatives marketing telles que des campagnes d'e-mail personnalisées et des déclencheurs. 
 
 ## Conditions préalables
@@ -43,6 +47,8 @@ L'ID de l'attribut que vous avez défini dans Jebbit correspond au nom du champ 
 ## Personnalisation
 
 Nous prenons actuellement en charge les endpoints de [données de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/) en particulier, mais les requêtes pour d'autres endpoints peuvent être prises en charge.
+
 Les noms des champs d'attribut peuvent également être personnalisés selon vos préférences.
 
 Si vous souhaitez obtenir des attributs supplémentaires de Jebbit dans Braze, mappez le nouvel attribut dans votre compte Jebbit. L'attribut s'affichera automatiquement dans Braze au fur et à mesure que vous collecterez des données pour cet attribut.
+
