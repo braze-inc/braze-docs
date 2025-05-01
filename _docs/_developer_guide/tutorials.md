@@ -11,13 +11,12 @@ guide_featured_list:
   - name: Accessing Key Value Pairs
     link: /docs/developer_guide/tutorials/in_app_messages/accessing_key_value_pairs
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Display On Specific Pages or Screens
-    link: /docs/developer_guide/tutorials/in_app_messages/display_on_specific_pages
+  - name: Conditionally Display
+    link: /docs/developer_guide/tutorials/in_app_messages/conditionally_display
     image: /assets/img/braze_icons/brush-02.svg
   - name: Defer and Restore a Triggered In App Message
     link: /docs/developer_guide/tutorials/in_app_messages/defer_and_restore_triggered_message
     image: /assets/img/braze_icons/brush-02.svg
-  
 ---
 
 <br>

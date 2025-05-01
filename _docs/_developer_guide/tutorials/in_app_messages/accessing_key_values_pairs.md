@@ -78,8 +78,7 @@ import UIKit
 import BrazeKit
 import BrazeUI
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, BrazeInAppMessageUIDelegate {
   var window: UIWindow?
   static var braze: Braze?
 
@@ -94,28 +93,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let braze = Braze(configuration: configuration)
     AppDelegate.braze = braze
 
-    braze.inAppMessageDelegate = InAppMessageHandler()
     return true
+  }
+
+  func inAppMessage(
+    _ ui: BrazeInAppMessageUI,
+    displayChoiceForMessage message: Braze.InAppMessage
+  ) -> BrazeInAppMessageUI.DisplayChoice {
+      let extras = message.extras
+
+      let template   = extras["custom-template"] as? String ?? ""
+      let color      = extras["custom-color"]   as? String ?? ""
+      let messageId  = extras["message-id"]     as? String ?? ""
+
+      // Your custom logic
+      print("Template: \(template), Color: \(color), ID: \(messageId)")
+
+      return .now
   }
 }
 ```
 
-```swift file=InAppMessageHandler.swift
-import BrazeKit
-import BrazeUI
+```swift file=SampleApp.swift
+import SwiftUI
 
-class InAppMessageHandler: NSObject, BrazeInAppMessageUIDelegate {
-  func beforeInAppMessageDisplayed(_ message: Braze.InAppMessage) -> BrazeInAppMessageDisplayChoice {
-    if let extras = message.extras {
-      let template = extras["custom-template"] ?? ""
-      let color = extras["custom-color"] ?? ""
-      let messageId = extras["message-id"] ?? ""
+@main
+struct SampleApp: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-      // TODO: Render using custom logic
-      print("Template: \(template), Color: \(color), ID: \(messageId)")
+  var body: some Scene {
+    WindowGroup {
+      YourView()
     }
-
-    return .displayNow
   }
 }
 ```
@@ -128,53 +137,46 @@ lines-AppDelegate.swift=13-15
 Use your dashboard API key and endpoint to create a Braze.Configuration object.
 
 !!step
-lines-AppDelegate.swift=16
+lines-AppDelegate.swift=17
 
 #### 2. Instantiate the Braze object
 
 Pass your configuration to initialize Braze, then store the instance globally for access across the app.
 
 !!step
-lines-AppDelegate.swift=17
+lines-AppDelegate.swift=18
 
 #### 3. Assign the instance to a static variable
 
 This makes the Braze instance accessible anywhere in your app using AppDelegate.braze.
 
 !!step
-lines-AppDelegate.swift=19
+lines-AppDelegate.swift=5
 
-#### 4. Set the in-app message delegate
+#### 4. Implement BrazeInAppMessageUIDelegate
 
-Hook into in-app messages by setting braze.inAppMessageDelegate = InAppMessageHandler(), a class you define next.
-
-!!step
-lines-InAppMessageHandler.swift=4-5
-
-#### 5. Implement BrazeInAppMessageUIDelegate
-
-Create a class that conforms to BrazeInAppMessageUIDelegate, which lets you intercept and customize in-app messages.
+Extend your AppDelegate to conforms to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
 
 !!step
-lines-InAppMessageHandler.swift=6
+lines-AppDelegate.swift=25-40
 
-#### 6. Handle messages before they're displayed
+#### 5. Handle messages before they're displayed
 
-Braze will call beforeInAppMessageDisplayed whenever a message is about to show. You can choose to intercept or render it differently.
+The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
 
 !!step
-lines-InAppMessageHandler.swift=7-13
+lines-AppDelegate.swift=29-33
 
-#### 7. Access key-value pairs from message.extras
+#### 6. Access key-value pairs from message.extras
 
 Use the extras dictionary to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
 
 !!step
-lines-InAppMessageHandler.swift=15
+lines-AppDelegate.swift=39
 
-#### 8. Choose whether to show the message
+#### 7. Choose whether to show the message
 
-Return .displayNow to use Braze’s built-in UI, or return .discard / .displayLater to take full control.
+Return `.now` to use Braze’s built-in In-App Message UI.
 
 {% endscrolly %}
 {% endtab %}
