@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [BlueConic][1], la plateforme spécialisée dans l’exploitation des données clients, extrait des données first-party de systèmes disparates et les rend accessibles au moment et à l’endroit où les entreprises en ont besoin pour transformer leurs relations avec les clients et stimuler leur croissance. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et BlueConic permet aux utilisateurs d'unifier les données à travers des profils individuels persistants, puis de les synchroniser entre les deux systèmes pour les objectifs d'importation via un serveur S3 d'Amazon Web Services. Les objectifs potentiels comprennent des initiatives axées sur la croissance, l'orchestration du cycle de vie des produits, la modélisation et l'analyse, les produits et expériences numériques, la monétisation basée sur l'audience, et plus encore. Cette intégration prend en charge l'importation et l'exportation par lots planifiés. 
 
 {% alert important %}
@@ -75,6 +79,7 @@ Une fois l'authentification terminée, vous devez créer au moins un objectif d'
 ## Étape 4 : Basculer la connexion sur
 
 Utilisez la bascule située à côté du titre de la connexion Braze pour activer ou désactiver la connexion. Une connexion doit être activée pour fonctionner pendant les heures planifiées. 
+
 
 [1]: https://www.blueconic.com/
 [2]: https://portal.aws.amazon.com/billing/signup#/start
