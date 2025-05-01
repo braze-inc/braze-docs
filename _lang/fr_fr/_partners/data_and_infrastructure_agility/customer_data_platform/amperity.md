@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Amperity](https://amperity.com/) est une plateforme de données client complète pour les entreprises, aidant les marques à mieux connaître leurs clients, à prendre des décisions stratégiques et à adopter systématiquement la bonne démarche pour mieux servir leurs consommateurs. Amperity fournit des capacités intelligentes dans l'unification de la gestion des données, l'analyse, les informations et l'activation.
 
+
+
 {% multi_lang_include video.html ID="06G0lxaSjgk" align="right" %}
 
 L'intégration de Braze et Amperity offre une vue unifiée de vos clients sur les deux plateformes. Cette intégration vous permet de :
@@ -48,7 +50,7 @@ Les [attributs de profil]({{site.baseurl}}/api/objects_filters/user_attributes_o
 
 ### Attributs personnalisés 
 
-[Attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) dans Braze sont des champs déterminés par votre marque. Si vous souhaitez qu'Amperity gère des attributs personnalisés qui existent déjà dans Braze, alignez la sortie envoyée par Amperity avec les noms déjà présents dans votre espace de travail Braze. Cela peut inclure les éléments suivants :
+[Attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) dans Braze sont des champs déterminés par votre marque. Si vous souhaitez qu'Amperity gère des attributs personnalisés qui existent déjà dans Braze, alignez la sortie envoyée par Amperity avec les noms déjà présents dans votre espace de travail Braze. Cela peut inclure les éléments suivants :
 - Historiques d'achats
 - Statut de fidélité
 - Niveaux de valeur
@@ -82,7 +84,7 @@ Le type de données utilisé dépend de la nature de l'attribut. Par exemple, un
 
 ### Duplication des attributs
 
-Évitez d'envoyer des attributs personnalisés qui dupliquent les champs de profil utilisateur par défaut. Par exemple, les dates de naissance doivent être envoyées à Braze en tant que champ de profil utilisateur nommé "dob" pour correspondre à l'attribut standard de Braze. S'ils sont envoyés comme "anniversaire", "Date de naissance" ou toute autre chaîne de caractères, un attribut personnalisé sera créé, et les valeurs dans le champ "dob" ne seront pas mises à jour.
+Évitez d'envoyer des attributs personnalisés qui dupliquent les champs de profil utilisateur par défaut.  S'ils sont envoyés comme "anniversaire", "Date de naissance" ou toute autre chaîne de caractères, un attribut personnalisé sera créé, et les valeurs dans le champ "dob" ne seront pas mises à jour.
 
 ### Points de données
 
@@ -94,7 +96,7 @@ Amperity suit les changements entre les synchronisations avec Braze et l'état d
 
 1. Créez une clé API REST Braze pour votre espace de travail Braze avec les `users.track` autorisations sous **Données utilisateur**. L'endpoint `users.track` synchronise l'audience Amperity avec Braze en tant qu'attribut personnalisé.
 2. Déterminez l'[endpoint de l'API REST]({{site.baseurl}}/api/basics#endpoints) pour votre instance Braze. Par exemple, si votre URL Braze est `https://dashboard-03.braze.com`, votre endpoint REST API est `https://rest.iad-03.braze.com` et votre instance est « US-03 ».
-3. Déterminer une liste de [champs de profil utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) et [attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) qui peuvent être envoyés à Braze depuis Amperity.
+3. Déterminer une liste de [champs de profil utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) et [attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) qui peuvent être envoyés à Braze depuis Amperity.
 
 ### Étape 2 : Configurer Braze en tant que destination—Opérateur DataGrid
 
@@ -187,9 +189,10 @@ Exécutez la campagne pour envoyer le segment à Braze. Cela peut être fait man
 
 ### Utilisation d'Amperity avec Braze Currents
 Pour envoyer des données Braze Currents dans Amperity :
-1. [Configurez un Braze Current]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) pour envoyer des données dans un bucket Amazon S3.
+1. [Configurez un Braze Current]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) pour envoyer des données dans un bucket Amazon S3.
 2. Configurez Amperity pour [lire les fichiers Apache Avro depuis ce compartiment Amazon S3](https://docs.amperity.com/datagrid/source_amazon_s3.html).
 3. Configurer les flux et automatiser les chargements de données en utilisant des flux de travail standard.
+
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}
