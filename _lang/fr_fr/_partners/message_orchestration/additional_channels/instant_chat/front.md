@@ -12,9 +12,9 @@ search_tag: Partner
 
 > L'intégration de Front vous permet de tirer parti de la transformation des données de Braze et des webhooks de chaque plateforme pour mettre en place un pipeline SMS conversationnel bidirectionnel.
 
-Le webhook entrant provenant de Front contiendra une charge utile comprenant le message envoyé par l'agent. La requête devra être reformatée pour pouvoir être acceptée par les endpoints de Braze. Le modèle de transformation des données frontales reformatera la charge utile et écrira un événement personnalisé dans le profil utilisateur intitulé **SMS sortant envoyé,** le corps du message étant transmis en tant que propriété de l'événement.
+Le webhook entrant provenant de Front contiendra une charge utile comprenant le message envoyé par l'agent.  Le modèle de transformation des données frontales reformatera la charge utile et écrira un événement personnalisé dans le profil utilisateur intitulé **SMS sortant envoyé,** le corps du message étant transmis en tant que propriété de l'événement.
 
-Avant de configurer une nouvelle transformation dans Braze, nous vous recommandons de consulter la matrice de prise en charge de chaque niveau dans notre documentation sur la [transformation des données]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/). Nos niveaux Free et Pro offrent un nombre différent de transformations actives et de requêtes entrantes par mois. Confirmez que le plan actuel que vous avez souscrit peut prendre en charge votre cas d'utilisation.
+Avant de configurer une nouvelle transformation dans Braze, nous vous recommandons de consulter la matrice de prise en charge de chaque niveau dans notre documentation sur la [transformation des données]({{site.baseurl}}/user_guide/data/data_transformation/overview/). Nos niveaux Free et Pro offrent un nombre différent de transformations actives et de requêtes entrantes par mois. Confirmez que le plan actuel que vous avez souscrit peut prendre en charge votre cas d'utilisation.
 
 ## Prérequis
 
@@ -23,19 +23,19 @@ Avant de commencer, vous avez besoin des éléments suivants :
 | Prérequis             | Descriptif                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Un compte Front            | Un compte Front est nécessaire pour tirer parti de ce partenariat.|
-| URL du webhook Braze pour la transformation des données | La [transformation des données de Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) sera utilisée pour reformater le webhook entrant de Front afin qu'il puisse être accepté par l'endpoint /users/track de Braze.|
+| URL du webhook Braze pour la transformation des données | |
 | Une clé API REST Front         | Une clé API REST de Front sera utilisée pour effectuer une requête webhook sortante de Braze à Front. |
 
 ## Cas d'utilisation
 
-- Rationalisez votre processus de production de prospects en utilisant les messages SMS automatisés de Braze pour identifier les préférences des utilisateurs et permettre aux agents commerciaux en ligne/en de faire le suivi et de conclure des ventes.
+- 
 - Réengagez les clients qui ont abandonné leur panier en stimulant les conversions de ventes grâce aux réponses automatisées par SMS et à l'assistance directe par chat.
 
 ## Intégration de Front
 
 ### Étape 1 : Créer une transformation de données
 
-Tout d'abord, vous allez créer une nouvelle transformation de données dans Braze. Les étapes suivantes sont simplifiées ; pour une description complète, voir [Création d'une transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation).
+Tout d'abord, vous allez créer une nouvelle transformation de données dans Braze. Les étapes suivantes sont simplifiées ; pour une description complète, voir [Création d'une transformation]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/).
 
 1. Dans Braze, accédez à **Paramètres des données** > **Transformations de données**, puis sélectionnez **Créer une transformation**.
 2. Sous **Modifier l'expérience**, sélectionnez **Recommencer à zéro**.
@@ -77,7 +77,7 @@ Tout d'abord, vous allez créer une nouvelle transformation de données dans Bra
     ![Exemple de transformation de données.]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
-Vous pouvez modifier ce modèle pour répondre à vos besoins spécifiques. Par exemple, vous pouvez personnaliser le nom de l'événement personnalisé prédéfini. Pour plus d'informations, voir l'[aperçu de la transformation des données]({{site.baseurl}}/docs/user_guide/data_and_analytics/data_transformation/overview/).
+Vous pouvez modifier ce modèle pour répondre à vos besoins spécifiques. Par exemple, vous pouvez personnaliser le nom de l'événement personnalisé prédéfini. Pour plus d'informations, voir l'[aperçu de la transformation des données]({{site.baseurl}}/user_guide/data/data_transformation/overview/).
 {% endalert %}
 
 ### Étape 2 : Créer une campagne de SMS sortants
