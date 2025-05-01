@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [GrowthLoop](https://growthloop.com/) aide les équipes marketing à activer les données des clients depuis l'entrepôt de données dans le cloud vers Braze et d'autres canaux. Automatisez, développez et mesurez des programmes de marketing à partir de votre entrepôt de données dans le cloud, en conservant les données dans un emplacement centralisé.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et GrowthLoop permet de segmenter les données clients directement depuis l'entrepôt de données et de les envoyer à Braze, garantissant ainsi que les utilisateurs peuvent optimiser les fonctionnalités avancées de Braze en parallèle avec leur source unique de vérité. Rationalisez les efforts de marketing pour la segmentation et l'activation des clients, en réduisant le temps nécessaire pour segmenter, lancer, tester et mesurer les résultats des campagnes ciblées envoyées à Braze.
 
 ## Conditions préalables 
@@ -61,5 +65,6 @@ Lorsque vous créez une campagne dans Braze, vous pouvez sélectionner des clien
 ## Résolution des problèmes
 
 Contactez l'équipe de GrowthLoop à l'adresse solutions@growthloop.com pour obtenir des informations supplémentaires ou de l’aide.
+
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
