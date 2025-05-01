@@ -12,6 +12,10 @@ search_tag: Partner
 
 > LiftIgniter est une plateforme de personnalisation de premier plan qui aide les entreprises à transformer leurs expériences clients grâce à la personnalisation en temps réel sur tous les points de contact.
 
+
+
+## À propos de l'intégration
+
 L'intégration de LiftIgniter et de Braze tire parti de contenu connecté pour vous permettre de recommander des sujets intéressants tels que des articles d'actualité, des vêtements et d'autres articles et vidéos de vente au détail.
 
 ## Conditions préalables
@@ -40,6 +44,7 @@ Ensuite, rédigez votre message, en définissant le contenu que vous souhaitez a
 Une fois que vous avez placé ce message dans le corps du compositeur, vous pouvez prévisualiser votre message. Vous pouvez même insérer des images, comme le montre l'exemple suivant :
 
 ![Une image de prévisualisation de ce à quoi ressemblera le message après son envoi.][2]
+
 
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}
