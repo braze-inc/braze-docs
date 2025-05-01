@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Lexer][6], une plateforme de données client créée pour le commerce de détail, aide les marques à générer des ventes incrémentales grâce à des expériences client améliorées en combinant un enrichissement robuste des données avec des outils intuitifs et des conseils d'experts.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Lexer vous permet de synchroniser les données entre les deux plateformes. Utilisez vos données Lexer pour créer de précieux segments Braze ou importez vos segments existants dans Lexer pour obtenir des informations. 
 
 ## Conditions préalables
@@ -71,6 +75,7 @@ Dans Braze, vous verrez que le nom de votre audience dans Lexer est maintenant u
 Pour créer votre segment, accédez à **Segment > + Créer un segment** et sélectionnez **Attribut personnalisé** comme filtre. Ensuite, sélectionnez `lexer_audience` comme attribut et le nom de l'audience Lexer que vous souhaitez utiliser. Une fois terminé, **enregistrez** votre audience.
 
 Vous pouvez désormais ajouter ce segment nouvellement créé aux futures campagnes et Canvas de Braze afin de cibler ces utilisateurs finaux.
+
 
 [1]: {% image_buster /assets/img/lexer/braze_integrate_screen.png %}
 [2]: {{site.baseurl}}/api/basics/#company-secret-explanation
