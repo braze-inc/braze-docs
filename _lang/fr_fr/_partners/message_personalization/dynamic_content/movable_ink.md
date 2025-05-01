@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Movable Ink](https://www.movableink.com/) est une plateforme logicielle basée sur le cloud qui permet aux marketeurs numériques de créer des expériences visuelles convaincantes et uniques pour engager les clients. La plateforme Movable Ink offre de précieuses options de personnalisation qui peuvent être facilement insérées dans vos campagnes. 
 
+
+
+## À propos de l'intégration
+
 Étendez vos capacités créatives en tirant parti des fonctionnalités de création intelligente de Movable Ink, telles que le sondage, le compte à rebours et le grattage. L'intégration de Movable Ink et de Braze permet une approche plus complète des messages dynamiques axés sur les données, en fournissant aux utilisateurs des éléments en temps réel sur les choses qui comptent.
 
 ## Prérequis
@@ -167,6 +171,7 @@ Ce modèle prend l'heure actuelle (en secondes), l'ajoute à la fin de l'onglet 
 
 ### Vous avez des difficultés à afficher des GIF sur Android ?
 - Android exige la prise en charge du format GIF dans la mise en œuvre. Consultez l'article Android [personnalisation des messages in-app][GIFsupport] ] si vous n'avez pas cette configuration.
+
 
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
