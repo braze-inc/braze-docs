@@ -14,7 +14,11 @@ search_tag: Partner
 
 > [Branch][1], une plateforme de liaison mobile, vous aide à acquérir, engager et mesurer à travers tous les appareils, canaux et plateformes en fournissant une vue complète de tous les points de contact de l'utilisateur.
 
-L'intégration de Braze et Branch vous permet d'offrir de meilleures expériences à vos clients en [attribuant]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) correctement le début de leur parcours utilisateur et en les connectant par des liens profonds à l'emplacement prévu.
+
+
+## À propos de l'intégration
+
+L'intégration de Braze et Branch vous permet d'offrir de meilleures expériences à vos clients en [attribuant]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_attribution/) correctement le début de leur parcours utilisateur et en les connectant par des liens profonds à l'emplacement prévu.
 
 ## Intégration
 
@@ -29,7 +33,7 @@ Pour prendre en charge l'envoi de liens universels iOS en tant que liens profond
 
 ### Création de liens profonds dans des e-mails
 
-Consultez notre documentation sur les [liens universels et les liens applicatifs.]({{site.baseurl}}/help/help_articles/email/universal_links/)
+Consultez notre documentation sur les [liens universels et les liens applicatifs.]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)
 ou consultez [la documentation de Branch](https://help.branch.io/developers-hub/docs/ios-universal-links#apps-that-always-work) pour mettre en place la création de liens profonds à partir d'e-mails envoyés par l'intermédiaire de Braze.
 
 La liaison avec des numéros de téléphone (en ajoutant `tel` à `href`) n'est pas prise en charge dans l'application Gmail pour iOS, sauf si l'utilisateur accorde des autorisations d'appel à l'application.
@@ -38,6 +42,7 @@ En fonction de votre ESP, une personnalisation supplémentaire peut être néces
 
 - [Sendgrid][7]
 - [SparkPost][9]
+
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
