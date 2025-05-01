@@ -1,3 +1,4 @@
+
 ---
 nav_title: Geofences
 article_title: GeoFences für das Braze Swift SDK
@@ -17,10 +18,10 @@ Tool:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/geofences.md %}
+{% multi_lang_include developer_guide/android/geofences.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/geofences.md %}
+{% multi_lang_include developer_guide/swift/geofences.md %}
 {% endsdktab %}
 {% endsdktabs %}
