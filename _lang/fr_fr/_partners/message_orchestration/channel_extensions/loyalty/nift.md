@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Nift](https://gonift.com/) aide les entreprises à acquérir, engager et fidéliser leurs clients. La plateforme bilatérale aide les partenaires à remercier leurs clients avec des cartes-cadeaux Nift. Remercier les clients augmente leur valeur à vie et génère des revenus supplémentaires.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Nift vous permet de déclencher automatiquement des "remerciements" contenant des cadeaux Nift à des moments clés du cycle de vie du client et d'identifier les clients qui ont utilisé leur cadeau. Les cartes-cadeaux Nift peuvent être utilisées pour accéder à des produits et services fournis par des marques qui s'appuient sur la technologie de mise en relation de Nift pour acquérir de nouveaux clients de manière rentable à l'échelle.
 
 ## Conditions préalables
@@ -47,6 +51,7 @@ Après l'intégration avec Braze, Nift poussera automatiquement les événements
 
 - Nom de l'événement : `nift_processed`
 - Heure : Le moment où le client a choisi/utilisé le cadeau
+
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
