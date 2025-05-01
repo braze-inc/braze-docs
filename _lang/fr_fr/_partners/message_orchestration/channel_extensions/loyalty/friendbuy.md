@@ -12,6 +12,8 @@ search_tag: Partner
 
 > Tirez parti de l'intégration entre Friendbuy et Braze pour étendre vos capacités en matière d'e-mails et de SMS tout en automatisant sans effort vos communications relatives aux programmes de recommandation et de fidélisation. Braze créera des profils de clients pour tous les numéros de téléphone ayant fait l'objet d'un abonnement et collectés par l'intermédiaire de Friendbuy.
 
+
+
 ## Conditions préalables
 
 Avant de commencer, vous avez besoin des éléments suivants :
@@ -22,10 +24,6 @@ Avant de commencer, vous avez besoin des éléments suivants :
 | Une clé de l'API REST de Braze  | Une clé API REST de Braze avec des autorisations `users.track`. Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**.        |
 | Un endpoint REST de Braze | L’[URL de votre endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), qui dépend de l'URL de votre instance Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si vous utilisez la [navigation plus ancienne]({{site.baseurl}}/navigation), vous pouvez créer une clé API dans la **console de développement** > **Paramètres de l'API**.
-{% endalert %}
 
 ## Intégration de Friendbuy
 
@@ -76,6 +74,7 @@ Friendbuy utilise la norme internationale (E.164) pour vérifier les numéros de
 | Téléphone uniquement        | Seul le numéro de téléphone du client est envoyé à Braze.              |
 | Aucun des deux           | Aucune donnée du client n'est envoyée à Braze.                              |
 | Les deux              | L'adresse e-mail et le numéro de téléphone du client sont envoyés à Braze. |
+
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}
