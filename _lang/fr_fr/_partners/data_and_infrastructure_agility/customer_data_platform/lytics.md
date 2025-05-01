@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Lytics][1] est la plateforme de données client (CDP) de choix pour la prochaine génération d'entreprises centrées sur le client. Les solutions Lytics Decision Engine, Conductor et Cloud Connect offrent aux marketeurs et aux équipes chargées des données des possibilités de résolution d'identité, d'orchestration et d'optimisation des campagnes en temps réel et dans le respect de la confidentialité.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Lytics offre une vue unifiée de vos clients pour permettre une personnalisation puissante et mener des campagnes optimisées à l'aide de l'orchestration et des décisions de la prochaine meilleure action.
 
 L'intégration permet aux marques de :
@@ -180,7 +184,7 @@ Dans l'invite **Configurer l'autorisation** qui s'affiche, fournissez un libell�
 
 #### Étape 2 : Exporter vos données de segmentation au format CSV
 
-Dans Braze, naviguez vers **Audience** > **Segments**. Localisez le segment que vous souhaitez exporter, puis sélectionnez <i class="fas fa-gear" aria-label="Paramètres"></i> puis **Exporter les données utilisateur au format CSV**. Vous pouvez exporter jusqu'à 500 000 utilisateurs dans une segmentation. Pour plus d'informations, reportez-vous à la section [Exportation des données de segmentation au format CSV]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv).
+Dans Braze, naviguez vers **Audience** > **Segments**. Localisez le segment que vous souhaitez exporter, puis sélectionnez <i class="fas fa-gear" aria-label="Paramètres"></i> puis **Exporter les données utilisateur au format CSV**. Vous pouvez exporter jusqu'à 500 000 utilisateurs dans une segmentation. Pour plus d'informations, reportez-vous à la section [Exportation des données de segmentation au format CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 #### Étape 3 : Configurer une tâche d'importation CSV
 
@@ -191,6 +195,7 @@ Sélectionnez ensuite le type de travail. Pour importer des fichiers CSV de Braz
 ![][10]{: style="max-width:80%;"}
 
 Enfin, saisissez un libellé et une description facultative pour la tâche et configurez tout autre détail nécessaire. Cliquez sur **Terminer** pour lancer et enregistrer le travail.
+
 
 [1]: https://www.lytics.com/
 [2]: {% image_buster /assets/img/lytics/braze_authorization.png %}
