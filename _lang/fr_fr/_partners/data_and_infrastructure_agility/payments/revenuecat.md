@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [RevenueCat](https://www.revenuecat.com/) est la seule source de vérité pour votre état d'abonnement sur iOS, Android et le web. Que vous soyez en train de créer une nouvelle application ou que vous ayez déjà des millions d'abonnés, vous pouvez utiliser RevenueCat pour créer des achats in-app multiplateformes, gérer vos produits et vos abonnés, et analyser vos données - sans code serveur.
 
+
+
+## À propos de l'intégration
+
 L'intégration de RevenueCat et Braze vous permet de synchroniser automatiquement les événements du cycle de vie des achats et des abonnements de vos clients sur les différentes plateformes. Cela vous permet de créer des campagnes qui réagissent à l'étape du cycle de vie de l'abonnement de vos clients, par exemple en engageant le dialogue avec les clients qui se sont désabonnés pendant leur essai gratuit ou en envoyant des rappels aux clients qui ont des problèmes de facturation.
 
 ## Conditions préalables
@@ -139,6 +143,7 @@ Après avoir configuré les paramètres de Braze dans RevenueCat, les événemen
 ### Ajoutez une clé API d’environnement de test pour les tests.
 
 Si vous ne fournissez qu'une seule clé API REST de Braze à RevenueCat, seuls les événements de production seront envoyés. Si vous souhaitez également envoyer des événements d’environnement de test, [créez une autre clé API REST Braze][11] et ajoutez-la à vos paramètres Braze dans RevenueCat.
+
 
 [2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}
