@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Transifex permet une localisation robuste à travers votre base d'utilisateurs, quelle que soit la langue.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Transifex s'appuie sur le contenu connecté pour vous permettre d'extraire une collection de chaînes de caractères de ressources et d'inclure les traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basées sur la langue. Cette intégration automatise la traduction et libère vos équipes pour qu'elles se concentrent sur la fourniture d'expériences client brillantes.
 
 {% alert important %}
@@ -69,6 +73,7 @@ Cet extrait de code utilise l'API de traduction des ressources Transifex et l'at
 {% endif %}
 ```
 {% endraw %}
+
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
