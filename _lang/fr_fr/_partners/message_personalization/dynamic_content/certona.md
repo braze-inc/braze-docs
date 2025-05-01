@@ -2,7 +2,7 @@
 nav_title: Certona
 article_title: Certona
 alias: /partners/certona/
-description: "Cet article de référence décrit le partenariat entre Braze et Certona, une solution de personnalisation omnicanal en temps réel qui offre une personnalisation tout au long du cycle de vie du client. Utilisez Certona avec le partenaire de contenu connecté de Braze pour insérer facilement des recommandations de contenu dans des campagnes multicanal."
+description: "Cet article de référence décrit le partenariat entre Braze et Certona, une solution de personnalisation omnicanal en temps réel qui offre une personnalisation tout au long du cycle de vie du client. "
 page_type: partner
 search_tag: Partner
 
@@ -11,6 +11,10 @@ search_tag: Partner
 # Certona
 
 > La plateforme de Certona stimule la personnalisation tout au long du cycle de vie du client. Des campagnes d'e-mail hautement individualisées aux recommandations de produits alimentées par l'apprentissage automatique, Certona garantit que vous exploitez la puissance de la personnalisation.
+
+
+
+## À propos de l'intégration
 
 L'intégration de Braze et Certona exploite les recommandations de produits de machine learning de Certona dans les campagnes et Canvases de Braze via le contenu connecté.
 
@@ -40,6 +44,7 @@ Ensuite, définissez le contenu que vous souhaitez appeler, tel que le texte ou 
 Une fois que vous avez mis ce message dans le corps du compositeur, prévisualisez votre appel de contenu connecté pour vous assurer que vous avez affiché les bonnes informations.
 
 ![Une image montrant l'onglet "Test", encourageant les utilisateurs à tester soigneusement leur message avant de l'envoyer.][2]
+
 
 [1]: {% image_buster /assets/img/certona.png %}
 [2]: {% image_buster /assets/img/certona2.png %}
