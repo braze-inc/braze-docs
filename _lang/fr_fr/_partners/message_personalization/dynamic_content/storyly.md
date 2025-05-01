@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Storyly](https://www.storyly.io/) est un SDK léger qui intègre des récits à votre application ou site web. Avec un studio de conception intuitif, des analyses pertinentes et une connectivité homogène, Storyly est un outil puissant pour enrichir l'expérience de l'audience. 
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Storyly vous permet d'utiliser vos segments dans Braze comme audience dans la plateforme Storyly. Grâce à cette intégration, vous pouvez :
 - Ciblez vos segmentations avec des histoires spécifiques
 - Utilisez les attributs de l'utilisateur pour personnaliser le contenu de votre histoire.
@@ -54,5 +58,6 @@ Une intégration doit être créée dans le **tableau de bord de Storyly > Param
 Ensuite, vous pouvez utiliser des segments de Braze pour créer une audience Storyly. Celle-ci peut être créée dans le **tableau de bord de Storyly > Paramètres > Audiences > Nouvelle audience > Créer une audience avec Braze**.
 
 Ici, il y a deux options de synchronisation. Sélectionnez la **synchronisation ponctuelle** pour les articles de campagne spécifiques, ou la **synchronisation quotidienne** pour les articles à long terme.
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
