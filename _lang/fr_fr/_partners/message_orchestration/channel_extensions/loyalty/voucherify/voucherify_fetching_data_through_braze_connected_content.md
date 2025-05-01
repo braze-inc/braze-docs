@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Avec Braze Connected Content, vous pouvez récupérer des données de l'API Voucherify et envoyer des messages à des segments Braze spécifiques. Cet article de référence vous montrera comment mettre en place des scripts de contenu connecté pour publier des coupons Voucherify, inviter de nouvelles recommandations, récupérer le solde des cartes de fidélité, et plus encore.
 
+
+
+## À propos de l'intégration
+
 Le schéma de base du script est le suivant :
 {% raw %}
 ```json
@@ -467,3 +471,4 @@ Lors de la définition d'une cible de campagne, utilisez les paramètres avancé
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
 Pour en savoir plus sur le limiteur de débit et la limite de fréquence, consultez la [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) Braze.
+
