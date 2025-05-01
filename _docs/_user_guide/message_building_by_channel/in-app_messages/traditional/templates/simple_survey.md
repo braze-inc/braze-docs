@@ -111,9 +111,13 @@ Once your campaign has launched, you can analyze results in real-time to see the
 Deleted survey choices will still appear in analytics but will not be shown as a choice to new users.
 {% endalert %}
 
-For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
+You can find your survey performance metrics by expanding the **Results** dropdown for a specific variant in the **In-App Message Performance** section of the analytics. Here’s a breakdown of what you’ll see:
 
-![In-app message performance panel with click analytics for each choice and button on the survey.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
+- **Survey engagement** shows how users interacted with the survey overall, including total submissions, dismissals, and clicks within the message body.
+- **Survey results** display a breakdown of how many users selected each response option, along with the percentage of total submissions each choice represents.
+- **Confirmation page metrics** (if enabled) include how many users viewed the confirmation screen, clicked its button, or dismissed it without interacting.
+
+For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
 
 Check out [In-app message reporting][4] for a breakdown of your campaign metrics.
 
