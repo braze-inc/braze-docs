@@ -8,6 +8,8 @@ description: "Intégration de Braze et Celebrus."
 
 > Celebrus s'intègre de façon fluide au SDK Braze sur les chaînes Web et les applications mobiles, facilitant ainsi l’alimentation de Braze avec les données d'activité des chaînes. Cela inclut des informations complètes sur le trafic de visiteurs sur les actifs numériques au cours de périodes spécifiées. <br><br>En outre, Celebrus collecte des données de profil riches pour chaque client individuel, qui peuvent être synchronisées avec Braze. Cela vous permet de créer des stratégies d'analyse et de communication efficaces de Braze, basées sur des données de première partie complètes, précises et détaillées. Cette fonctionnalité est renforcée par les signaux pilotés par l'apprentissage automatique de Celebrus, qui permettent une capture de données sans tracas, sans avoir besoin d'un balisage approfondi. Grâce à un graphe d'identité, toutes les données deviennent instantanément accessibles pour une utilisation immédiate. 
 
+
+
 ## Conditions préalables
 
 | Condition | Description |
@@ -35,7 +37,7 @@ Dans la mesure où le connecteur déploie et configure le SDK Braze dans votre c
 ```
 
 {% alert important %}
-Le connecteur Celebrus pour le SDK de Braze insère et initialise le SDK Braze pour identifier l'utilisateur et ajouter l'identifiant au graphique d'identité de Celebrus. Ce connecteur n'enregistre pas les données dans le profil utilisateur et ne déclenche pas d'autres méthodes du SDK Braze. <br><br>Vous pouvez appeler toutes les méthodes souhaitées directement dans votre base de code pour enregistrer des données via le [SDK Braze ou tirer parti d'autres fonctionnalités prises en charge par Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
+Le connecteur Celebrus pour le SDK de Braze insère et initialise le SDK Braze pour identifier l'utilisateur et ajouter l'identifiant au graphique d'identité de Celebrus. Ce connecteur n'enregistre pas les données dans le profil utilisateur et ne déclenche pas d'autres méthodes du SDK Braze. <br><br>Vous pouvez appeler toutes les méthodes souhaitées directement dans votre base de code pour enregistrer des données via le [SDK Braze ou tirer parti d'autres fonctionnalités prises en charge par Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web).
 {% endalert%}
 
 ### connecteur Celebrus pour les attributs personnalisés de Braze
@@ -46,13 +48,13 @@ Le connecteur Celebrus pour les attributs personnalisés de Braze envoie des att
 
 #### Étape 2 : Configurez l'ingestion de données dans le cloud dans votre tableau de bord de Braze
 
-Cette intégration utilise Braze Cloud Data Ingestion. Suivez les instructions de la section [Intégrations des entrepôts de données]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) pour configurer et configurer les [paramètres d'ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) en fonction du type d'entrepôt que vous utilisez. 
+Cette intégration utilise Braze Cloud Data Ingestion. Suivez les instructions de la section [Intégrations des entrepôts de données]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) pour configurer et configurer les [paramètres d'ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) en fonction du type d'entrepôt que vous utilisez. 
 
 #### Étape 3 : Synchroniser les données de Celebrus vers Braze
 
 Celebrus capture et attribue des identifiants uniques à une personne, tels qu'un e-mail, un numéro de téléphone, un `external_id` ou un alias d'utilisateur, et les envoie à Braze via l’outil CDI. Cela permet de synchroniser les données avec Braze pour la même personne.
 
-Celebrus utilisera les identifiants définis pour envoyer les attributs clients définis dans le générateur de profils Celebrus, mais uniquement lorsque les valeurs des attributs changent. Notez que les noms des attributs seront tels que définis dans le générateur de profil Celebrus, de sorte que les attributs de Braze refléteront ceux du profil Celebrus. Ceux-ci devront peut-être être ajustés pour se conformer aux conventions de dénomination de Braze. Par exemple, conformément aux conventions de [dénomination des attributs standard]({{site.baseurl}}/api/objects_filters/user_attributes_object/) de Braze.  
+Celebrus utilisera les identifiants définis pour envoyer les attributs clients définis dans le générateur de profils Celebrus, mais uniquement lorsque les valeurs des attributs changent.  
 
 {% alert important %}
 Pour l'instant, cette version ne prend pas en charge les événements et les achats.<br><br> Cette intégration envoie les attributs sous forme de chaînes de caractères. Certains attributs sont donc des listes (comme les signaux). Pour l'instant, les listes ne peuvent pas être converties en tableaux. Il n'existe aucun attribut imbriqué.
