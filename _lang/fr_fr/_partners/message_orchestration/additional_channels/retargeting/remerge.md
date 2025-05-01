@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Remerge](https://www.remerge.io/) est un outil de reciblage d'applications à grande échelle, qui vous fournit les outils nécessaires pour segmenter efficacement les audiences d'applications et recibler les utilisateurs.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Remerge vous permet de développer des campagnes marketing du cycle de vie cross-canal robustes en envoyant les données des utilisateurs à Remerge via des événements webhook afin de recibler les utilisateurs par le biais de leur plateforme mobile de gestion de la requête.
 
 ## Conditions préalables
@@ -30,10 +34,6 @@ L'intégration de Braze et Remerge vous permet de développer des campagnes mark
 ### Étape 1 : Créez votre modèle de webhook Braze à Braze
 
 Pour créer un modèle de webhook Remerge pour de futures campagnes ou Canvases, naviguez vers la rubrique **Modèles** > **Modèles de webhook** dans la plateforme Braze. 
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
-{% endalert %}
 
 Si vous souhaitez créer une campagne webhook Remerge ponctuelle ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne.
 
@@ -89,6 +89,7 @@ Prévisualisez le message pour vous assurer que le message envoyé sera appropri
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
+
 
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API
