@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Stylitics](https://stylitics.com/) est une plateforme SaaS basée sur le cloud pour les détaillants permettant d'automatiser et de distribuer du contenu visuel à grande échelle. Les offres groupées de Stylitics inspirent en contextualisant les produits, en renforçant la confiance dans les achats et en augmentant l'engagement, ce qui conduit finalement à une valeur moyenne de commande et à des taux de conversion plus élevés.
 
+
+
+## À propos de l'intégration
+
 Votre intégration Braze et Stylitics vous permet d'améliorer vos campagnes d'e-mail existantes avec un contenu groupé attrayant et pertinent, créant une expérience client personnalisée.
 
 ![][0]{: style="max-width:60%;"}
@@ -98,5 +102,6 @@ Contactez votre gestionnaire de compte Stylitics pour coordonner les prochaines 
 - Créez des maquettes avec votre ESP 
 - S'aligner sur l'analyse 
 - S'aligner sur le calendrier de lancement 
+
 
 [0]: {% image_buster /assets/img/stylitics.png %}
