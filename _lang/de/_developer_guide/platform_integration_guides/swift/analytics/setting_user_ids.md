@@ -48,5 +48,5 @@ Außerdem empfehlen wir, die ID nicht zu ändern, wenn sich ein Nutzer:innen abm
 
 ## User:innen Aliasing
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md plattform="Swift" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Swift" %}
 
