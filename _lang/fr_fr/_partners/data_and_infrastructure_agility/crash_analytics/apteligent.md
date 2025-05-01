@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) est une plateforme d’évaluation des performances des applications mobiles qui fournit des outils et des informations aux développeurs et aux chefs de produits. 
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Apteligent fournit des rapports détaillés sur les pannes iOS, ce qui vous permet d'enregistrer des données critiques dans votre solution Braze existante, ainsi que de segmenter, comprendre et interagir avec les utilisateurs qui ont connu des pannes d'applications.
 
 ## Conditions préalables 
@@ -55,3 +59,4 @@ Après réception de la notification, enregistrez un événement d’incident pe
 ```
 
 Une fois terminé, vous serez en mesure d'exploiter la puissance de la segmentation de Braze et de l'analyse de l'engagement à l'aide des informations sur les accidents disponibles sur la plateforme Apteligent.
+
