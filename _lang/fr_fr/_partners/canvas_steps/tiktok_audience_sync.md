@@ -44,10 +44,6 @@ Vous devez vous assurer que les éléments suivants sont créés, complétés et
 
 Dans le tableau de bord de Braze, allez dans **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **TikTok.** Sous Synchronisation de l'audience TikTok, sélectionnez **Connecter TikTok**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 ![La page de la technologie TikTok dans Braze comprend une section Aperçu et une section Synchronisation de l'audience TikTok avec le bouton TikTok connecté.][1]{: style="max-width:75%;"}
 
 Vous serez ensuite redirigé vers la page OAuth de TikTok afin d'autoriser Braze pour la gestion des comptes publicitaires et la gestion de l'audience. Après avoir sélectionné **Confirmer**, vous serez redirigé dans Braze pour sélectionner les comptes publicitaires TikTok avec lesquels vous souhaitez vous synchroniser. 
@@ -135,28 +131,34 @@ Le tableau suivant comprend des indicateurs et des descriptions pour vous aider 
 N'oubliez pas que les indicateurs relatifs aux utilisateurs synchronisés et aux utilisateurs en erreur sont retardés en raison de la vidange en masse et de la relance après 13 heures, respectivement.
 {% endalert %}
 
-## Résolution des problèmes
+## Foire aux questions
 
-{% details Que dois-je faire si je reçois une erreur de jeton non valide ? %}
+### Que dois-je faire ensuite si je reçois une erreur de jeton non valide ?
+
 Vous pouvez déconnecter et reconnecter votre compte TikTok sur la page partenaire de TikTok. Assurez-vous auprès de votre administrateur du Centre d'affaires TikTok que vous disposez des autorisations appropriées pour le compte publicitaire que vous souhaitez synchroniser.
-{% enddetails %}
 
-{% details Pourquoi mon Canvas n'est-il pas autorisé à se lancer ? %}
-Assurez-vous que votre compte TikTok se connecte avec succès à Braze sur la page partenaire de TikTok.
-Assurez-vous d'avoir sélectionné un compte publicitaire, saisi un nom pour la nouvelle audience et sélectionné les champs à faire correspondre.
-{% enddetails %}
+### Pourquoi mon Canvas n’est-il pas autorisé à être lancé ?
 
-{% details Comment puis-je savoir si des utilisateurs ont été appariés après avoir transféré des utilisateurs à TikTok ? %}
+ 
+
+### Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à TikTok ?
+
 TikTok ne fournit pas cette information pour leurs politiques de confidentialité des données.
-{% enddetails %}
 
-{% details Combien de temps faudra-t-il pour que mes audiences s'affichent sur TikTok ? %}
+### Combien de temps faudra-t-il à mes audiences pour se remplir dans TikTok ?
+
 La taille de l'audience sera mise à jour dans les 24 à 48 heures sur la page Audiences du gestionnaire de publicités de TikTok.
-{% enddetails %}
 
-{% details Quel est le nombre maximum d'audiences que je peux avoir dans mon compte TikTok ads ? %}
-400
-{% enddetails %}
+### 
+
+
+
+### 
+
+  
+
+ 
+
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
 [2]: {% image_buster /assets/img/tiktok/tiktok2.png %}
