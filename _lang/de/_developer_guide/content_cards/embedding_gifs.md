@@ -33,4 +33,3 @@ Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die ent
 Zur Zeit werden Content-Card-GIFs für das Internet Braze SDK nicht unterstützt.
 {% endsdktab %}
 {% endsdktabs %}
-ß
