@@ -10,7 +10,11 @@ search_tag: Partner
 
 # Wunderkind
 
-> [Wunderkind](https://www.wunderkind.co) est une plateforme qui augmente le chiffre d'affaires du commerce électronique grâce à des envois d'e-mails performants et personnalisés. En utilisant la technologie d'identification de Wunderkind, vous pouvez permettre aux marques de reconnaître plus d'utilisateurs anonymes sur différents appareils, jusqu'à une adresse e-mail exploitable. En moyenne, Wunderkind fait passer le pourcentage d'identification de 3 à 5 % du trafic du site web à environ 40 à 60 %.
+>  En utilisant la technologie d'identification de Wunderkind, vous pouvez permettre aux marques de reconnaître plus d'utilisateurs anonymes sur différents appareils, jusqu'à une adresse e-mail exploitable. En moyenne, Wunderkind fait passer le pourcentage d'identification de 3 à 5 % du trafic du site web à environ 40 à 60 %.
+
+
+
+## À propos de l'intégration
 
 L'intégration de Braze et Wunderkind vous permet d'analyser l'augmentation des performances et d'identifier plus d'utilisateurs anonymes, augmentant ainsi considérablement le nombre de messages envoyés via Braze et de contacts ajoutés directement à Braze.
 
@@ -30,3 +34,4 @@ Une fois connecté, Wunderkind va :
 - Créer des campagnes individuelles dans l'interface utilisateur de Braze pour chaque partie d'une série afin de permettre l'envoi des e-mails générés.
 - Développer l'intégration permettant d’envoyer le contenu des e-mails générés en temps réel via Braze en utilisant l’endpoint de l’API appropriée.
 - Appliquer des mesures d’assurance qualité dans un environnement de test pour garantir que les e-mails sont correctement transmis et que les données circulent dans Braze comme prévu.
+
