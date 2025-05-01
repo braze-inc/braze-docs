@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [MetaRouter améliore votre expérience](https://www.metarouter.io/) Braze en tant que puissante plateforme de gestion des balises côté serveur. Il vous permet d'orchestrer un parcours complet de données clients au sein de Braze, depuis la collecte de données fiable et complète enrichie jusqu'à 30 %, jusqu'à l'activation de flux d'événements en temps réel pour des parcours personnalisés. De plus, MetaRouter simplifie la mise en œuvre en éliminant le besoin de balises Braze ou d'autres balises tierces, ce qui vous permet de contrôler de manière granulaire, paramètre par paramètre, les données circulant dans Braze.
 
+
+
 ## Fonctionnalités prises en charge
 
 - Les nouvelles tentatives peuvent être intégrées.
@@ -31,10 +33,6 @@ Avant de commencer, vous aurez besoin des éléments suivants :
 | Clé d'API REST Braze    | Une clé API REST de Braze avec des autorisations `users.track`. Pour en créer un, allez dans **Paramètres** > **Clés d'API**.                                                |
 | Un endpoint REST Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API dans **Developer Console** > **API Settings**.
-{% endalert %}
 
 ## Configuration de MetaRouter
 
@@ -60,3 +58,4 @@ Dans Enterprise MetaRouter, sélectionnez **Intégrations** > **Nouvelle intégr
 Ajoutez un mappage d'événements pour chaque sortie d'identité, puis configurez les événements que vous souhaitez envoyer à Braze. Lorsque vous avez terminé, sélectionnez **Enregistrer en tant que nouvelle révision**.
 
 ![Ajoutez un mappage d'événements pour chacune des sorties d'identité. ]({% image_buster /assets/img/metarouter/img2.png %})
+
