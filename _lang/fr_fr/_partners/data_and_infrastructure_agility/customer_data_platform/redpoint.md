@@ -11,6 +11,10 @@ search_tag: Redpoint
 
 > [Redpoint][2] est une plateforme technologique qui offre aux marketeurs une plateforme d'orchestration de campagne entièrement intégrée. Tirez parti des capacités de segmentation, de planification et d'automatisation de Redpoint pour contrôler comment et quand les données CDP sont importées dans Braze.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Redpoint vous permet de créer des segments Braze basés sur vos données CDP Redpoint. Redpoint permet de transmettre des données à Braze de deux manières : 
 
 1. Mode d’**onboarding et de mise à jour** de Braze : « Mettre à jour/Insérer » un profil utilisateur de Redpoint dans Braze. Ce processus est destiné à être utilisé pour l'onboarding ou la mise à jour des enregistrements des utilisateurs lorsque les données ont changé. 
@@ -30,10 +34,6 @@ Dans ce cas, la mise à jour permet d’actualiser les données, mais aussi d’
 | Endpoint REST de Braze | [L'URL de votre endpoint REST.][1] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 | Composants de gestion de données Redpoint | L'intégration Braze est prise en charge par un ensemble de composants de gestion de données Redpoint. Contactez le [service d’assistance de Redpoint][3] pour demander les composants pour votre version de la fonction de gestion des données de Redpoint. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si vous utilisez la [navigation plus ancienne]({{site.baseurl}}/navigation), vous pouvez créer une clé API dans la **console de développement** > **Paramètres de l'API**.
-{% endalert %}
 
 ## Attributs personnalisés de CDP Redpoint
 
@@ -161,6 +161,7 @@ Une fois que le flux de travail a été exécuté avec succès dans RPI, l'orche
 Vous pouvez voir les propriétés associées à Redpoint sur le profil utilisateur.
 
 ![][15]{: style="max-width:80%;"}
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com
