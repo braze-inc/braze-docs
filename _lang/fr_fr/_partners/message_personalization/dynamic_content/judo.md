@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Judo](https://judo.app) est une plateforme d'interface utilisateur pilotée par un serveur qui permet aux éditeurs de fournir efficacement des expériences utilisateur riches et engageantes dans l'application sans mises à jour de l'application.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Judo offre des expériences sur mesure dans vos campagnes et Canvases. Au lieu d'une simple expérience de page de destination modélisée, une campagne Braze peut incorporer du contenu comprenant plusieurs écrans, modales, vidéos, polices personnalisées et paramètres de support tels que le mode sombre et l'accessibilité construits sans code et déployés sans mises à jour de l'application. Les données de Braze peuvent également être utilisées pour soutenir le contenu personnalisé dans une expérience Judo. Les événements utilisateur et les données de l'expérience peuvent être réinjectés dans Braze pour l'attribution et le ciblage.
 
 ## Conditions préalables
@@ -80,7 +84,7 @@ Définir une [paire clé-valeur personnalisée]({{site.baseurl}}/user_guide/pers
 <br><br>
 ### Étape 3 : Terminer la campagne
 
-Enfin, terminez la campagne, configurez un déclencheur pour la campagne et sélectionnez les utilisateurs via les segments dans les sections **Distribution** et **Utilisateur cible**. Consultez notre [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) sur les messages in-app pour en savoir plus sur les différents composants d'un message in-app Braze.
+Enfin, terminez la campagne, configurez un déclencheur pour la campagne et sélectionnez les utilisateurs via les segments dans les sections **Distribution** et **Utilisateur cible**. Consultez notre [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) sur les messages in-app pour en savoir plus sur les différents composants d'un message in-app Braze.
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}
