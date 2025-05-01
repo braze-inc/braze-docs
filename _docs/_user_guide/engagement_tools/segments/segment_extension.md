@@ -55,10 +55,9 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
 
-Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (which lets you select the past X number of days), a start date, an end date, or an exact date range (date A to date B).
+Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
 
 ![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.][3]
-
 
 #### Event property segmentation
 
@@ -126,14 +125,17 @@ When using **Simple extension** Segment Extensions, you can select one custom ev
 
 No. Before you can archive a Segment Extension, you need to remove it from all active messaging.
 
-### Can I use arrays in Segment Extension - for instance, creating a segment of users who match at least 1 value of an array property?
+### Can I use arrays in Segment Extensions?
 
-Yes, this is possible, but you'd need to append `[]` to your property name. For instance, if your property is `location_code`, then you would need to type in `location_code[]`. We use the bracket notation `[]` for traversing through arrays, and match if any item in the traversed array matches the event property.
+Yes. To use arrays, append brackets (`[]`) to your property name. If your property is `location_code`,  you would enter `location_code[]`. 
+
+Braze uses `[]` to traverse arrays and check if any item in the traversed array matches the event property. For example, you could create a segment of users who match at least one value of an array property.
 
 ### How does Braze calculate the time period for a relative time period of "last __ days"?
 
-When Segment Extensions calculates the relative time period ("last __ days"), we base the start time on start of day in UTC. For example, for a Segment Extension that refreshes at 2024-09-16 21:00 UTC and specifies 10 days, the start time is set to 2024-09-06 00:00 UTC, not 2024-09-06 21:00 UTC. To specify which time zones to use, however, customers can use SQL Segments to identify users who performed the custom event 10 days ago based on midnight in company time, or users who performed the event 10 days ago based on the current time.
+When Segment Extensions calculates the relative time period ("last X days"), the start time is set to midnight UTC. For example, for a Segment Extension that refreshes at 2024-09-16 21:00 UTC and specifies 10 days, the start time is set to 2024-09-06 00:00 UTC, not 2024-09-06 21:00 UTC. 
 
+However, you can specify the time zones by using SQL segments to identify users who performed the custom event 10 days ago based on midnight in company time, or users who performed the event 10 days ago based on the current time.
 
 [1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
