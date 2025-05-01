@@ -4,7 +4,7 @@ As of iOS 14, geofences do not work reliably for users who choose to only give t
 
 {% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
 
-## Setting up geofences
+## Setting up geofences {#setting-up-geofences}
 
 ### Step 1: Enable location services
 
@@ -12,7 +12,7 @@ Braze location services [must be enabled](https://braze-inc.github.io/braze-swif
 
 ### Step 2: Enable geofences
 
-Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
+Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the [`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see our [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
 {% tabs %}
 {% tab swift %}
 
@@ -26,9 +26,7 @@ configuration.location.automaticLocationCollection = true
 configuration.location.geofencesEnabled = true
 configuration.location.automaticGeofenceRequests = true
 
-// Configurations for background geofence reporting with `When In Use` authorization.
-configuration.location.allowBackgroundGeofenceUpdates = true
-configuration.location.distanceFilter = 8000
+// Additional configuration customization...
 
 let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
@@ -56,7 +54,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-#### Step 2.1 (Optional) Enable geofences background reporting
+#### Step 2.1 (Optional) Enable background reporting
 
 By default, geofences are only monitored if your app is in the foreground, or if it has `Always` authorization (which monitors all application states).
 
@@ -120,7 +118,7 @@ Braze syncs geofences to devices using background push notifications. Follow the
 
 ### Step 4: Update your `Info.plist`
 
-Add the key `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
+Add the key `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `Info.plist` with a `String` value that describes why your application needs to track location.
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
@@ -130,7 +128,7 @@ Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, s
 
 ### Step 5: Request authorization {#request-authorization}
 
-When requesting authorization from a user, you can request `When In Use` or `Always` authorization.
+When requesting authorization from a user, request either `When In Use` or `Always` authorization.
 
 {% tabs local %}
 {% tab When In Use %}
@@ -154,7 +152,9 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 {% endtab %}
 
 {% tab Always %}
-By default, `requestAlwaysAuthorization()` only grants your app `When In Use` authorization and will re-prompt your user for `Always` authorization after some time has passed. However, you can choose to immediately prompt your user by first calling `requestWhenInUseAuthorization()`, then calling `requestAlwaysAuthorization()` after receiving your initial `When In Use` authorization.
+By default, `requestAlwaysAuthorization()` only grants your app `When In Use` authorization and will re-prompt your user for `Always` authorization after some time has passed.
+
+However, you can choose to immediately prompt your user by first calling `requestWhenInUseAuthorization()`, then calling `requestAlwaysAuthorization()` after receiving your initial `When In Use` authorization.
 
 {% alert important %}
 You can only immediately prompt for `Always` authorization a single time.
@@ -182,7 +182,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 
 iOS only allows up to 20 geofences to be stored for a given app. With geofences enabled, Braze will use up some of these 20 available slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard. For our location services to work correctly, check that your app is not using all available geofence spots.
 
-There are two ways to enable geofences for a particular app: from the **Locations** page or from the **Manage Settings** page.
+There are two ways to enable geofences for a particular app: from the **Locations** page or from the **App Settings** page.
 
 {% tabs local %}
 {% tab Locations %}
@@ -205,7 +205,7 @@ Enable geofences from your app's settings.
 {% endtab %}
 {% endtabs %}
 
-## Disabling automatic geofence requests
+## Manually request geofences {#manually-request-geofences}
 
 ### Step 1: Set `automaticGeofenceRequests` to `false`
 
@@ -239,11 +239,11 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Manually request geofences
+### Step 2: Call `requestGeofences` manually
 
-When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported. There is a rate limit of one geofence refresh per session.
+When the Braze SDK requests geofences from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported.
 
-To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the latitude and longitude of a location. It is recommended to disable automatic geofence requests when using this method. To do so, use the following code:
+To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the latitude and longitude of a location. To do so, use the following code:
 
 {% tabs %}
 {% tab swift %}
@@ -262,3 +262,19 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 
 {% endtab %}
 {% endtabs %}
+
+## Frequently Asked Questions (FAQ) {#faq}
+
+#### Why am I being rate limited when requesting geofences?
+
+Braze has a limit of one geofence refresh per session to avoid unnecessary requests.
+
+#### Why are my geofences with Braze not being received by my device?
+
+The iOS operating system only allows a single app to store a maximum of 20 geofences. If your app also stores non-Braze geofences, there may not be space for the Braze geofences.
+
+#### Can the Geofences feature be used while a device is offline?
+
+If the device was connected to the internet and successfully receives geofences from the server, it is possible to enter a geofence even if the device is offline. This is because a device's location operates separately from its internet connectivity.
+
+For example, say a device successfully received and registered geofences on session start and goes offline. If it then enters one of those registered geofences, it can trigger a Braze campaign.
