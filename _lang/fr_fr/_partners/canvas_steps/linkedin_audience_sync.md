@@ -154,38 +154,36 @@ Sélectionnez le partenaire **LinkedIn**, votre compte publicitaire et l'audienc
 ![Exemple d'indicateurs d'étape d'Audience Sync avec 10 000 utilisateurs inscrits.]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
-## Résolution des problèmes
+## Foire aux questions
 
-{% details Combien de temps faut-il pour que les tailles d'audience s'affichent dans LinkedIn ? %}
+### 
+
 L’affichage des audiences dans votre compte LinkedIn peut prendre jusqu’à 48 heures.
-{% enddetails %}
 
-{% details Quelle est la taille minimale de l'audience pour que LinkedIn l’affiche dans votre compte publicitaire ?  %}
+### 
+
 L'audience doit compter au moins 300 membres pour que la taille de l'audience s’affiche dans votre compte LinkedIn.
-{% enddetails %}
 
-{% details Que dois-je faire si je reçois une erreur de jeton non valide ? %}
+### Que dois-je faire ensuite si je reçois une erreur de jeton non valide ?
+
 Vous pouvez déconnecter et reconnecter votre compte LinkedIn sur la page Partenaire de LinkedIn. Confirmez auprès de votre administrateur LinkedIn que vous disposez des autorisations appropriées pour le compte publicitaire avec lequel vous souhaitez vous synchroniser.
-{% enddetails %}
 
-{% details Pourquoi mon canvas n'est-il pas autorisé à se lancer ? %}
-Veuillez confirmer que votre compte publicitaire LinkedIn s'est bien connecté à Braze sur la page partenaire LinkedIn.
-Assurez-vous d'avoir sélectionné un compte publicitaire, saisi un nom pour la nouvelle audience et sélectionné les champs à faire correspondre.
-{% enddetails %}
+### Pourquoi mon Canvas n’est-il pas autorisé à être lancé ?
 
-{% details Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transmis à LinkedIn ? %}
-- Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transmis à LinkedIn ?
-LinkedIn fournit des informations sur les taux de correspondance dans son tableau de bord. Vous pouvez consulter ces informations dans LinkedIn dans la section **Audiences**. 
-- En outre, vous pouvez consulter le taux de correspondance de votre audience LinkedIn dans la page Détails de l'étape de Canvas de votre étape de synchronisation d'audience.
-{% enddetails %} 
+ 
 
-{% details Combien d'audiences LinkedIn peut-il prendre en charge ? %}
+### Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transmis à LinkedIn ?
+
+ Vous pouvez consulter ces informations dans LinkedIn dans la section **Audiences**. 
+
+### 
+
 Actuellement, il n'y a pas de limite au nombre d'audiences dans votre compte publicitaire LinkedIn.
-{% enddetails %}
 
-{% details Pourquoi un segment est-il bloqué à l'état BUILDING et n'est-il pas mis à jour ? %}
+### 
+
 Un segment est considéré comme inutilisé et défini comme ARCHIVÉ lorsqu'il n'a pas été utilisé de manière continue pendant 30 jours dans une campagne provisoire ou active. Pour cette raison, un segment peut sembler "bloqué" dans la phase de CONSTRUCTION lorsque des mises à jour sont envoyées à un segment ARCHIVÉ, le poussant ainsi dans l'état de CONSTRUCTION, et juste avant qu'il ne soit à nouveau archivé, de nouvelles mises à jour sont envoyées au segment inutilisé.
-{% enddetails %}
+
 
 [1]: {% image_buster /assets/img/linkedin/linkedin1.png %}
 [2]: {% image_buster /assets/img/linkedin/linkedin2.png %}
