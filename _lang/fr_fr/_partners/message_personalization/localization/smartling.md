@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Smartling][5] est un logiciel de traduction de bout en bout basé dans le cloud pour les clients désirant automatiser la traduction de sites web, d'applications et d'expériences client.
 
+
+
+## À propos de l'intégration
+
 Le connecteur Braze prend en charge la traduction des modèles d'e-mail HTML, des blocs de contenu, des canevas et des messages d'e-mail de campagne. Les traductions sont demandées à Smartling, et le contenu traduit est automatiquement envoyé à Braze.
 
 ## Conditions préalables
@@ -76,6 +80,7 @@ Smartling fournit des fonctionnalités avancées pour rechercher et sélectionne
 ### Étape 3 : Ajoutez des traductions à Braze
 
 Au fur et à mesure que les traductions sont complétées sur la plateforme Smartling, elles sont automatiquement envoyées à Braze—pas besoin de synchroniser manuellement le contenu entre Smartling et Braze.
+
 
 [1]: {{site.baseurl}}/api/basics/#endpoints
 [2]: https://dashboard.smartling.com/
