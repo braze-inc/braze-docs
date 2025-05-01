@@ -8,20 +8,20 @@ hidden: true
 ## Collecte des données
 
 En savoir plus sur la manière dont Braze recueille les données :
-- [Collecte de données par SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)
-- [Meilleures pratiques en matière de collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/)
-- [Cycle de vie du profil utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)
+- [Collecte de données par SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)
+- [Meilleures pratiques en matière de collecte de données]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)
+- [Cycle de vie du profil utilisateur]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 
 ## Identifiants de Braze
 
 - `braze_id`: Un identifiant attribué par la Braze qui est immuable et associé à un utilisateur particulier lorsqu'il est créé dans notre base de données.
 - `external_id`: Un identifiant attribué par le client, généralement un UUID. Nous recommandons aux clients d'attribuer le `external_id` lorsque l'utilisateur peut être identifié de manière unique. Une fois qu'un utilisateur est identifié, il ne peut pas redevenir anonyme.
-- `user_alias`: Un identifiant unique alternatif que le client peut attribuer comme moyen de référencer l'utilisateur par un ID avant l'attribution d'un `external_id`. Les alias des utilisateurs peuvent être fusionnés avec d'autres alias ou avec le site `external_id` lorsqu'un alias est disponible via l'endpoint d'[identification de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) de Braze.
+- `user_alias`: Un identifiant unique alternatif que le client peut attribuer comme moyen de référencer l'utilisateur par un ID avant l'attribution d'un `external_id`. 
     - Dans l'endpoint [Identification de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), le champ `merge_behavior` peut être utilisé pour spécifier quelles données du profil d'alias utilisateur doivent être conservées dans le profil utilisateur connu.
     - Notez que pour que l'alias d'utilisateur soit un profil pouvant être envoyé, vous devez toujours inclure l'e-mail et/ou le téléphone comme attribut standard du profil.
 - `device_id`: Un identifiant spécifique à l'appareil, généré automatiquement. Un profil utilisateur peut être associé à plusieurs `device_ids`. Par exemple, un utilisateur qui s'est connecté à son compte sur son ordinateur professionnel, son ordinateur personnel, sa tablette et son application iOS aurait 4 `device_ids` associés à son profil.
 - Adresse e-mail et numéro de téléphone :
-    - Pris en charge en tant qu'identifiant dans l'endpoint de suivi des utilisateurs de Braze. 
+    -  
     - Lorsque l'adresse e-mail ou le numéro de téléphone est utilisé comme identifiant dans une requête, trois résultats sont possibles :
         1. Si un utilisateur ayant cet e-mail/téléphone n'existe pas dans Braze, un profil utilisateur e-mail/téléphone uniquement sera créé et toutes les données de la requête seront ajoutées au profil.
         2. Si un profil avec cet e-mail/téléphone existe déjà dans Braze, il sera mis à jour pour inclure toutes les données envoyées dans la requête.
@@ -104,20 +104,20 @@ Cette fonctionnalité est actuellement en accès anticipé.
 [Ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
 - Comme pour l'endpoint de suivi des utilisateurs, les données peuvent être synchronisées avec les profils utilisateurs par le biais de l'ingestion de données dans le nuage. Lorsque vous utilisez cet outil, les attributs, les événements et les achats sont enregistrés dans les profils en configurant et en connectant la table ou la vue de l'entrepôt de données que vous souhaitez synchroniser avec l'espace de travail Braze souhaité.
 
-[Points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)
+[Points de données]({{site.baseurl}}/user_guide/data/data_points/)
 - Braze dispose d'un modèle de consommation de points de données dans lequel des points de données sont générés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non. C'est pourquoi nous vous recommandons de n'envoyer à Braze que les attributs qui ont été modifiés. 
 
 ## Envoi d'audiences d'utilisateurs à Braze
 
 [Documentation sur les partenaires de synchronisation de l'importation de la cohorte]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Les audiences d'utilisateurs peuvent être synchronisées avec Braze en tant que cohorte à l'aide des endpoints de l'API d'importation de cohorte de Braze. Plutôt que de stocker ces audiences dans le profil de l'utilisateur sous forme d'attributs, les clients peuvent créer et cibler cette cohorte à l'aide d'un filtre propre au partenaire dans notre outil de segmentation. Cela peut faciliter la recherche et le ciblage d'un segment particulier d'utilisateurs pour les clients.
+-  Plutôt que de stocker ces audiences dans le profil de l'utilisateur sous forme d'attributs, les clients peuvent créer et cibler cette cohorte à l'aide d'un filtre propre au partenaire dans notre outil de segmentation. Cela peut faciliter la recherche et le ciblage d'un segment particulier d'utilisateurs pour les clients.
 - Les endpoints d'importation de la cohorte ne sont pas publics et sont spécifiques à chaque partenaire. Pour cette raison, les synchronisations avec les endpoints de la cohorte ne seront pas prises en compte dans les limites de débit de l'espace de travail d'un client. 
 
 [Suivi de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
 - Il s'agit d'un endpoint accessible au public qui peut être utilisé immédiatement pour créer des utilisateurs dans Braze en désignant un utilisateur dans une audience particulière par le biais d'un attribut d'utilisateur. La principale différence entre cet endpoint et l'endpoint d'importation de cohorte est que les audiences envoyées à l'aide de cet endpoint seront stockées dans le profil utilisateur, alors que l'endpoint d'importation de cohorte apparaîtra comme un élément de remplissage dans notre outil de segmentation. Cet endpoint a une limite de débit de 50 000 requêtes par minute appliquée au niveau de l'espace de travail.
 - Lorsque vous utilisez cet endpoint, assurez-vous que vous incluez la clé `partner` comme indiqué dans la [documentation de notre partenaire]({{site.baseurl}}/partners/isv_partners/api_partner).
 
-[Points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)<br>
+[Points de données]({{site.baseurl}}/user_guide/data/data_points/)<br>
 - Braze dispose d'un modèle de consommation de points de données dans lequel des points de données sont générés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non.
 - Les points de données proviennent à la fois de l'importation de la cohorte et des endpoints du suivi de l'utilisateur.
 
@@ -125,10 +125,10 @@ Cette fonctionnalité est actuellement en accès anticipé.
 
 ### Currents
 
-Currents est l'outil d'analyse de l'engagement des messages en temps quasi réel de Braze. Cela transmettra des données d'utilisateur pour chaque envoi, distribution, ouverture, clics, etc. pour les campagnes et les canvas envoyés depuis l'espace de travail du client. Quelques points à noter : Les flux Currents sont tarifés par connecteur pour le client, de sorte que tous les nouveaux partenaires Currents doivent passer par un processus d'EA. Nous demandons à nos partenaires d'avoir cinq clients dans le cadre de l'EA avant de créer l'interface utilisateur personnalisée et de mettre le connecteur à la disposition du public. 
+ Cela transmettra des données d'utilisateur pour chaque envoi, distribution, ouverture, clics, etc. pour les campagnes et les canvas envoyés depuis l'espace de travail du client. Quelques points à noter : Les flux Currents sont tarifés par connecteur pour le client, de sorte que tous les nouveaux partenaires Currents doivent passer par un processus d'EA. Nous demandons à nos partenaires d'avoir cinq clients dans le cadre de l'EA avant de créer l'interface utilisateur personnalisée et de mettre le connecteur à la disposition du public. 
 - [Documentation du partenaire]({{site.baseurl}}/partners/isv_partners/currents_integration/)
-- [Événements d'engagement lié aux messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) \- tous les clients qui achètent un connecteur Currents auront accès à ces événements.
-- [Événements liés au comportement de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events) \- tous les clients qui achètent un connecteur Currents n'achètent pas un connecteur "tous les événements" qui inclura ces événements. 
+- [Événements d'engagement lié aux messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) \- tous les clients qui achètent un connecteur Currents auront accès à ces événements.
+- [Événements liés au comportement de l'utilisateur]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) \- tous les clients qui achètent un connecteur Currents n'achètent pas un connecteur "tous les événements" qui inclura ces événements. 
 
 ### Partage des données Snowflake
 
@@ -162,7 +162,7 @@ Lors de la création de campagnes API (différentes des campagnes déclenchées 
 - [Planifier une campagne API]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
 
 ### Envoyer des ID
-Utilisez l'endpoint de Braze pour générer un ID d'envoi qui peut être utilisé pour ventiler les analyses de la campagne par envoi. Par exemple, si un paramètre `campaign_id` (campagne API) est créé par emplacement, un ID d'envoi pourrait être généré par envoi pour suivre l'efficacité des différents messages pour un emplacement particulier. 
+ Par exemple, si un paramètre `campaign_id` (campagne API) est créé par emplacement, un ID d'envoi pourrait être généré par envoi pour suivre l'efficacité des différents messages pour un emplacement particulier. 
 - [Envoyer des ID]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)
 
 ## Contenu connecté
