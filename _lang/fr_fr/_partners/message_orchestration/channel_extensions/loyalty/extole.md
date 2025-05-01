@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Extole](https://www.extole.com/), une entreprise SaaS leader de l'industrie du marketing de parrainage permet de créer et d’optimiser des programmes de marketing de recommandation efficaces pour augmenter l'acquisition de clients.
 
+
+
+## À propos de l'intégration
+
 Avec l'intégration de Braze et Extole, vous pouvez extraire des événements et attributs client des programmes de parrainage et de croissance d'Extole vers Braze, vous permettant ainsi de créer des campagnes marketing plus personnalisées qui augmentent l'acquisition, l'engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement les attributs de contenu Extole, tels que les liens et codes de partage personnalisés dans les communications Braze.
 
 ## Conditions préalables
@@ -90,3 +94,4 @@ Pour certains cas d'utilisation, tels qu'un nouvel e-mail ou abonnement SMS où 
 ## Grâce à cette intégration
 
 Après avoir connecté vos comptes, les événements commenceront automatiquement à circuler d'Extole à Braze sans aucune action de votre part. Une vue en temps réel des événements envoyés à Braze est disponible dans le Centre des webhooks sortants d'Extole pour la résolution des problèmes. 
+
