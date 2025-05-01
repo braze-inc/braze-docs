@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Singular est une plateforme d'analyse marketing unifiée qui permet l'attribution, l'agrégation des coûts, l'analyse marketing, les rapports créatifs et l'automatisation des flux de travail.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Singular vous permet d'importer des données d'attribution d'installation payante pour segmenter intelligemment au sein de vos campagnes sur cycle de vie.
 
 ## Conditions préalables
@@ -72,10 +76,6 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 Dans Braze, naviguez vers **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Singular**. 
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. 
 
 Vous devrez fournir la clé d'importation des données et l'endpoint REST à votre gestionnaire de compte Singular pour terminer l'intégration.<br><br>![Cette image montre la boîte "Importation de données pour l'attribution d'installation" qui se trouve sur la page de la technologie Singular. Cette section affiche la clé d'importation des données et l'endpoint REST.][4]{: style="max-width:90%;"}
@@ -125,5 +125,6 @@ idfv={{most_recently_used_device.${id}}}
 **Cette recommandation est purement facultative**<br>
 Si vous n'utilisez actuellement aucun identifiant d'appareil - tel que l'IDFV ou le GAID - dans vos liens de suivi des clics, ou si vous ne prévoyez pas de le faire à l'avenir, Singular sera toujours en mesure d'attribuer ces clics grâce à sa modélisation probabiliste.
 {% endalert %}
+
 
 [4]: {% image_buster /assets/img/attribution/singular.png %}
