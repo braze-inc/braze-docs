@@ -44,19 +44,15 @@ Vous devez vous assurer que les éléments suivants sont créés, complétés et
 
 Dans le tableau de bord de Braze, allez à **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Pinterest**. Sous la rubrique Synchronisation de l'audience Pinterest, sélectionnez **Connecter Pinterest.**
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 ![Page technologique Pinterest dans Braze qui comprend une section Aperçu et une section Pinterest Audience Sync avec le bouton Pinterest connecté.][1]{: style="max-width:80%;"}
 
 Vous serez ensuite redirigé vers la page OAuth de Pinterest pour autoriser Braze à gérer les comptes publicitaires et les audiences.
 
-Une fois que vous avez sélectionné Confirmer, vous serez redirigé vers Braze pour sélectionner les comptes publicitaires Pinterest que vous souhaitez synchroniser. 
+ 
 
 ![Une liste de comptes publicitaires disponibles que vous pouvez connecter à Pinterest.][2]{: style="max-width:80%;"}
 
-Une fois connecté avec succès, vous serez renvoyé à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
+
 
 ![Une version mise à jour de la page des partenaires technologiques de Pinterest montrant les comptes publicitaires connectés avec succès.][3]{: style="max-width:80%;"}
 
@@ -134,23 +130,27 @@ Le tableau suivant comprend des indicateurs et des descriptions pour vous aider 
 N'oubliez pas qu'il y aura un délai dans la génération du rapport des utilisateurs synchronisés et des indicateurs d’erreurs en raison du vidage en masse et de la période de 13 heures de nouvelles tentatives, respectivement.
 {% endalert %}   
 
-## Résolution des problèmes
-{% details Que dois-je faire si je reçois une erreur de jeton non valide ? %}
-Vous pouvez simplement déconnecter et reconnecter votre compte Pinterest sur la page partenaire de Pinterest. Assurez-vous avec l'administrateur de votre Pinterest Business Hub que vous avez les autorisations appropriées pour le compte publicitaire que vous souhaitez synchroniser.
-{% enddetails %}
+## Foire aux questions
 
-{% details Pourquoi mon canvas n'est-il pas autorisé à se lancer ? %}
-Assurez-vous que votre compte Pinterest se connecte avec succès à Braze sur la page partenaire Pinterest.
-Assurez-vous d'avoir sélectionné un compte publicitaire, d'avoir entré un nom pour la nouvelle audience et d'avoir sélectionné les champs à faire correspondre
-{% enddetails %}
+### Combien de temps faudra-t-il à mes audiences pour se remplir dans Pinterest ?
 
-{% details Comment savoir si les utilisateurs ont été appariés après avoir transféré des utilisateurs vers Pinterest ? %}
+
+
+### Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à Pinterest ?
+
 Pinterest ne fournit pas ces informations pour ses propres politiques de confidentialité des données.
-{% enddetails %}
 
-{% details Combien de temps faudra-t-il pour que mes audiences se se constituent sur Pinterest ? %}
-La taille de l'audience sera mise à jour dans les 24 à 48 heures sur la page Audiences dans le gestionnaire de publicités de Pinterest.
-{% enddetails %}
+### Que dois-je faire ensuite si je reçois une erreur de jeton non valide ?
+
+  
+
+### Pourquoi mon Canvas n’est-il pas autorisé à être lancé ?
+
+Assurez-vous que votre compte Pinterest se connecte avec succès à Braze sur la page partenaire Pinterest. Assurez-vous d'avoir sélectionné un compte publicitaire, saisi un nom pour la nouvelle audience et sélectionné les champs à faire correspondre.
+
+### 
+
+  
 
 [1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
 [2]: {% image_buster /assets/img/pinterest/pinterest2.png %}
