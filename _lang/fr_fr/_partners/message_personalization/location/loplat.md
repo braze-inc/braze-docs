@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Loplat][1] est la principale plateforme hors ligne basée sur l'emplacement. Utilisez le SDK loplat pour augmenter intelligemment la fréquentation de votre magasin et exécuter des campagnes marketing qui encouragent les achats en magasin. Vous pouvez mesurer la performance du magasin grâce à l'analyse de la fréquentation après la fin de la campagne.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et loplat vous permet d'utiliser les services de localisation de loplat (POI de magasin et géorepérage personnalisé) pour déclencher des campagnes marketing géo-contextuelles et créer des custom events en utilisant la segmentation hors ligne. Lorsque les utilisateurs visitent l'emplacement ciblé que vous avez défini dans loplat X, les informations de la campagne et de l'emplacement sont envoyées immédiatement à Braze.
 
 ## Conditions préalables
@@ -60,6 +64,7 @@ Avec l'intégration, vous pouvez appliquer des conditions d'emplacement en envoy
 4. Sélectionnez l'événement personnalisé que vous avez créé dans loplat X pour définir une action de déclenchement de localisation.
 
 ![][8]
+
 
 [1]: https://www.loplat.com/
 [2]: https://www.loplat.com/loplat-x#usecase
