@@ -32,7 +32,7 @@ noindex: true
 
 ## Schritt 1: Laden Sie Ihr APN-Token hoch
 
-{% multi_lang_include Entwickler_guide/swift/apns_token.md %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## Schritt 2: Aktivieren Sie Push-Funktionen
 
