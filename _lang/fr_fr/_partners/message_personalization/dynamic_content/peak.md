@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Peak](https://platform.peak.ai/), une plateforme d'intelligence décisionnelle qui utilise l'intelligence artificielle à des fins commerciales pour améliorer la prise de décision commerciale, augmenter le chiffre d'affaires et les bénéfices.
 
+
+
+## À propos de l'intégration
+
 Le partenariat entre Braze et Peak vous permet d’importer dans Braze les prévisions d’attrition et les attributs basés sur les comportements et interactions des clients afin de les utiliser dans la segmentation et le ciblage des clients. 
 
 ## Prérequis
@@ -43,5 +47,6 @@ Une fois les clients mis à jour et les attributs associés, Peak les enverra à
 ### Étape 3 : Utilisation de cette intégration
 
 Une fois la synchronisation entre Peak et Braze réussie, les utilisateurs mis à jour incluent désormais les nouveaux attributs. Utilisez ces attributs dans les campagnes et les canvas pour cibler les utilisateurs et personnaliser les messages.
+
 
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
