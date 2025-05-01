@@ -14,6 +14,10 @@ search_tag: Partner
 
 > [Survicate][1] est une plateforme de feedback client qui vous aide à collecter, analyser et agir sur les informations clients sur plusieurs canaux et tout au long du parcours client.  
 
+
+
+## À propos de l'intégration
+
 Grâce à l'intégration entre Braze et Survicate, vous pouvez intégrer des enquêtes directement dans vos e-mails Braze afin d'augmenter les taux de réponse. Les réponses aux enquêtes se synchronisent automatiquement avec les profils des utilisateurs de Braze sous forme d'attributs personnalisés ou d'événements. Grâce aux informations en temps réel, il est facile de suivre et d'analyser les commentaires parallèlement aux données clients et de créer des suivis ciblés.
 
 ## Cas d'utilisation
