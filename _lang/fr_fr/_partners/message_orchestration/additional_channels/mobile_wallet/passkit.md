@@ -12,6 +12,10 @@ search_tag: Partner
 
 > PassKit vous permet d'étendre votre portée mobile en intégrant les pass Apple Wallet et lGoogle Pay à l'expérience de vos clients. Créez, gérez, distribuez et analysez facilement les performances des coupons numériques, des cartes de fidélité, des cartes de membre, des billets et bien plus encore, sans que vos clients aient besoin d'une autre application.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et PassKit vous permet d'augmenter et de mesurer l'engagement de vos campagnes en ligne en fournissant instantanément des passes Apple Wallet et Google Pay personnalisées. Vous pouvez ensuite analyser l'utilisation et effectuer des ajustements en temps réel pour augmenter le trafic en magasin en déclenchant des messages géolocalisés et des mises à jour personnalisées et dynamiques sur le portefeuille mobile de votre client. 
 
 ## Conditions préalables
@@ -26,7 +30,7 @@ L'intégration de Braze et PassKit vous permet d'augmenter et de mesurer l'engag
 
 ## Intégration
 
-Pour enrichir encore plus l'expérience de vos clients en matière de portefeuille mobile, depuis votre tableau de bord PassKit, vous pouvez choisir de transmettre des données à Braze via l’endpoint de Braze [`/users/track` ][7]. 
+ 
 
 Voici des exemples de données à partager à partir de PassKit :
 - **Pass créé** : lorsqu'un client clique sur le lien d'un pass et qu'un pass lui est présenté pour la première fois.
@@ -85,10 +89,6 @@ Pour une liste complète des champs disponibles, leurs types et leurs descriptio
 ### Étape 2 : Création et encodage d'une variable de charge utile non définie
 
 Créez et nommez un nouveau bloc de contenu en accédant à **Modèles** > **Blocs de contenu** dans le tableau de bord de Braze.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), accédez à **Engagement** > **Modèles et médias** > **Bibliothèque de blocs de contenu**.
-{% endalert %}
 
 Sélectionnez **Créer un bloc de contenu** pour commencer.
 
@@ -265,7 +265,7 @@ N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les mo
 
 ## Récupérez les détails du pass via du contenu connecté
 
-En plus de créer et de mettre à jour des pass, vous pouvez également récupérer les métadonnées des pass de vos utilisateurs via le [Connected Content] de Braze ][15] pour intégrer les détails des pass personnalisés dans vos campagnes d'envoi de messages.
+
 
 **Appel de contenu connecté PassKit**
 
@@ -304,12 +304,13 @@ UNREDEEMED
 {% endtab %}
 {% endtabs %}
 
+
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}
 Il y a [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
 [4]: {% image_buster /assets/img/passkit/passkit4.png %}
 [5]: {% image_buster /assets/img/passkit/passkit5.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
