@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Snowplow][1] est une plateforme évolutive open-source pour la collecte de données riches, de haute qualité et à faible latence. Elle est conçue pour collecter des données comportementales complètes et de haute qualité pour les entreprises.
 
+
+
+## À propos de l'intégration
+
 L'intégration entre Braze et Snowplow permet aux utilisateurs de transmettre les événements de Snowplow à Braze par l'intermédiaire des tags côté serveur de Google Tag Manager. La balise Braze pour Snowplow vous permet d'envoyer des événements à Braze tout en offrant une flexibilité et un contrôle supplémentaires :
 - Visibilité totale de toutes les transformations sur les données.
 - Capacité d'évolution de la sophistication au fil du temps
@@ -114,6 +118,7 @@ L'entité peut être spécifiée dans deux formats différents :
 | --------- | ----------- |
 | Inclure les entités non mappées dans l'événement | Lors du remappage ou du déplacement de certaines entités vers des attributs utilisateur avec la personnalisation précédente, cette option vous permet de vous assurer que toutes les entités non mappées (telles que toutes les entités non trouvées dans les [règles de propriété de l'](#event-property-rules)événement) seront incluses dans l'objet personnalisé de l'événement Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 
 [1]: https://snowplowanalytics.com
 [2]: https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/
