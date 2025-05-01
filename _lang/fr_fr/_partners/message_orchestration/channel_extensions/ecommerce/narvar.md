@@ -34,7 +34,7 @@ Si vous êtes intéressé par d'autres types ou canaux de notification, veuillez
 
 ## Détails de l'intégration
 
-Pour chaque événement de notification, Narvar envoie une demande au point d'extrémité de Braze pour délivrer un message push à chaque consommateur ayant donné son accord. [`/messaging/send`]({{site.baseurl}}/api/endpoints/messaging) de Braze afin d'envoyer un message push à chaque consommateur ayant opté pour un abonnement.
+
 
 Narvar est responsable de la configuration des charges utiles de notification push pour chaque message. Actuellement, Teams ne dispose pas d'une interface de conception intégrée pour les notifications push. Son équipe collaborera donc avec la vôtre pour déterminer et définir les exigences en matière de charge utile. Ces données utiles peuvent être personnalisées dans la même mesure que celles envoyées par votre propre système, y compris la prise en charge de marqueurs substitutifs à contenu variable, tels que les données relatives aux commandes et les détails concernant les consommateurs.
 
