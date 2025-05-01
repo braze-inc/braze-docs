@@ -11,6 +11,8 @@ search_tag: Partner
 
 > [NiftyImages](https://niftyimages.com) est un logiciel de personnalisation des e-mails en temps réel qui permet aux marketeurs d'envoyer des communications par e-mail pertinentes et actualisées plus efficacement tout en augmentant l'engagement et le chiffre d'affaires. Il s'agit d'un outil convivial et en libre-service qui permet aux marketeurs d'ajouter facilement et rapidement du contenu dynamique à leurs e-mails.
 
+
+
 ## Conditions préalables
 
 NiftyImages fonctionne avec la plateforme Braze par défaut sans aucune intégration nécessaire. Pour commencer, tout ce dont vous avez besoin, c'est d'un [compte NiftyImages](https://niftyimages.com/Signup).
@@ -58,5 +60,6 @@ Personnalisez la police de votre image, sa taille, son positionnement, sa couleu
 ### Étape 3 : Ajouter l'URL de l'image à Braze
 
 Dans Braze, ouvrez une campagne ou un canvas, puis collez votre URL NiftyImage. Vous pouvez prévisualiser vos modifications pour vérifier vos balises Liquid.
+
 
 ![texte alt]({% image_buster /assets/img/niftyimages/6.png %})
