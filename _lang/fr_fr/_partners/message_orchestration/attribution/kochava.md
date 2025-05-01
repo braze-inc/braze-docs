@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Kochava propose des fonctionnalités d'attribution et d'analyse mobiles pour vous aider à exploiter vos données pour stimuler votre croissance. La plateforme d'audience de Kochava vous permet de planifier, de cibler, d'activer, de mesurer et d'optimiser vos campagnes d'applications.
 
+
+
+## À propos de l'intégration
+
 L'intégration de Braze et Kochava contribue à une compréhension plus globale de vos campagnes en envoyant des données d'attribution à Braze afin de mieux comprendre quelles campagnes génèrent des installations, des activités intégrées à l'application, etc.
 
 ## Conditions préalables
@@ -60,15 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Dans Braze, accédez à **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Kochava**. 
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
-
 Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l’endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord de Kochava.<br><br>![Cette image montre la case « Importation de données pour l'attribution de l'installation » qui se trouve sur la page technologique de Kochava. Dans cette zone, vous pouvez voir la clé d'importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer un système de communication automatisé depuis Kochava
 
-[Ajoutez un postback][18] dans votre tableau de bord de Kochava. Il vous sera demandé de saisir la clé d'importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
+[Ajoutez un postback][18] dans votre tableau de bord de Kochava. 
 
 ### Étape 4 : Confirmez l'intégration
 
