@@ -50,61 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       codeElem.innerHTML = "";
       codeElem.appendChild(fragment);
-      updateHighlightOverlay();
-    }
-
-    // Create or update overlays for highlighted lines.
-    function updateHighlightOverlay() {
-      const activePre = getActiveCodeBlock();
-      if (!activePre) return;
-      const codeElem = activePre.querySelector("code");
-      if (!codeElem) return;
-      // Remove any existing overlays.
-      activePre
-        .querySelectorAll(".highlight-overlay")
-        .forEach((el) => el.remove());
-      const highlightedLines = Array.from(
-        codeElem.querySelectorAll(".code-line[data-highlight='true']")
-      );
-      if (highlightedLines.length === 0) return;
-
-      const containerRect = activePre.getBoundingClientRect();
-      // Group contiguous highlighted lines.
-      let groups = [];
-      let currentGroup = [highlightedLines[0]];
-      for (let i = 1; i < highlightedLines.length; i++) {
-        const prevRect = highlightedLines[i - 1].getBoundingClientRect();
-        const currRect = highlightedLines[i].getBoundingClientRect();
-        if (Math.abs(currRect.top - prevRect.bottom) < 2) {
-          currentGroup.push(highlightedLines[i]);
-        } else {
-          groups.push(currentGroup);
-          currentGroup = [highlightedLines[i]];
-        }
-      }
-      groups.push(currentGroup);
-
-      groups.forEach((group) => {
-        let groupTop = Infinity,
-          groupBottom = -Infinity;
-        group.forEach((line) => {
-          const rect = line.getBoundingClientRect();
-          const relTop = rect.top - containerRect.top;
-          const relBottom = rect.bottom - containerRect.top;
-          if (relTop < groupTop) groupTop = relTop;
-          if (relBottom > groupBottom) groupBottom = relBottom;
-        });
-        const newHeight = groupBottom - groupTop;
-        const overlay = document.createElement("div");
-        overlay.className = "highlight-overlay";
-        overlay.style.top = groupTop + "px";
-        overlay.style.height = newHeight + "px";
-        overlay.style.opacity = "0";
-        activePre.appendChild(overlay);
-        requestAnimationFrame(() => {
-          overlay.style.opacity = "1";
-        });
-      });
     }
 
     // Parse a range string like "1-3,5" into an array of line numbers.
@@ -165,8 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         stepsContainer.scrollTop >
         stepsContainer.scrollHeight - stepsContainer.clientHeight - 5
-      )
-        return steps.length - 1;
+      ) {
+        // -2 so we skip the buffer/rating prompt step
+        return steps.length - 2;
+      }
       const style = getComputedStyle(stepsContainer);
       const paddingBottom = parseFloat(style.paddingBottom) || 0;
       const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
@@ -174,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
+        if (i === steps.length - 1) return;
         // Use offsetTop relative to the scroll container.
         const mid = step.offsetTop + step.offsetHeight / 2;
         const distance = Math.abs(mid - centerY);
@@ -198,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clicking on a narrative step activates it.
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
+        if (step.classList.contains("rating-step")) return;
         step.scrollIntoView({ behavior: "smooth", block: "center" });
         activateStep(i);
       });
@@ -231,6 +180,34 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0.1 }
     );
     observer.observe(block);
+
+    // === rating prompt handler ===
+    const ratingStep = block.querySelector(".rating-step");
+    const stars = Array.from(ratingStep.querySelectorAll(".star"));
+    stars.forEach((star, idx) => {
+      star.addEventListener("click", () => {
+        const rating = idx + 1;
+
+        // 1) Log to Braze
+
+        // if (window.braze?.logCustomEvent) {
+        //   braze.logCustomEvent('Tutorial Rating', {
+        //     tutorial: block.id,
+        //     rating
+        //   });
+        // }
+        console.log("logged: " + rating);
+
+        // 2) Update UI
+        stars.forEach((s, i) => {
+          s.classList.toggle("selected", i < rating);
+        });
+        ratingStep.classList.add("rated");
+
+        // 3) Optional: disable further clicks
+        stars.forEach((s) => (s.style.pointerEvents = "none"));
+      });
+    });
 
     // Initialize this block after a short delay.
     setTimeout(() => {
