@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # About landing pages
 
-> Braze landing pages are standalone webpages that can drive your user acquisition and engagement strategy.
+> Braze landing pages are standalone web pages that can drive your user acquisition and engagement strategy.
+
+![Skincare product launch landing page featuring benefits, images, and a customer testimonial layout.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+Use landing pages to grow your audience, capture user data, promote special offers, and support multichannel campaigns.
 
 ## Prerequisites
 
-Before you can access, create, and publish landing pages, you either need administrator permissions or all of the following permissions:
+Before you can access, create, and publish landing pages, you either need administrator [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) or all the following permissions:
 
 - Access Landing Pages
 - Create Landing Page Drafts
 - Publish Landing Pages
+
+Check with your Braze admin if you’re unsure about your permission level.
 
 ## Plan tiers
 
@@ -41,7 +47,7 @@ No, there aren't any technical requirements.
 
 ### Is there an HTML editor for landing pages?
 
-You can edit the HTML of a landing page using the Custom Code block.
+Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HTML.
 
 ### Can I create a webhook inside a landing page?
 
