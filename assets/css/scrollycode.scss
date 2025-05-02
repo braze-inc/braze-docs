@@ -78,17 +78,22 @@ pre {
   box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
-.highlight-overlay {
-  top: 0;
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
+
+.code-line[data-highlight="true"] {
   background: rgba(216, 236, 255, 0.3);
-  pointer-events: none;
-  transition: top 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
+
+// .highlight-overlay {
+//   top: 0;
+//   height: 0;
+//   opacity: 0;
+//   position: absolute;
+//   left: 0;
+//   width: 100%;
+//   background: rgba(216, 236, 255, 0.3);
+//   pointer-events: none;
+//   transition: top 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+// }
 .code-blocks {
   font-size: 14px;
 }
@@ -124,6 +129,26 @@ pre {
     }
   }
 }
+
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  .star {
+    color: $color_6; // default “unfilled” color
+    transition: color 0.2s ease;
+    &.selected {
+      color: $color_8; // filled/starred color
+    }
+  }
+}
+.rating-step.rated .star {
+  cursor: default;
+  opacity: 0.6; // once rated, you can tone down hover
+}
+
 .hljs {
   background: #f9f9f9;
   color: $color_3;

@@ -158,21 +158,21 @@ lines-AppDelegate.swift=5
 Extend your AppDelegate to conforms to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
 
 !!step
-lines-AppDelegate.swift=25-40
+lines-AppDelegate.swift=23-38
 
 #### 5. Handle messages before they're displayed
 
 The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
 
 !!step
-lines-AppDelegate.swift=29-33
+lines-AppDelegate.swift=27-31
 
 #### 6. Access key-value pairs from message.extras
 
 Use the extras dictionary to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
 
 !!step
-lines-AppDelegate.swift=39
+lines-AppDelegate.swift=36
 
 #### 7. Choose whether to show the message
 
