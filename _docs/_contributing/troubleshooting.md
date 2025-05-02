@@ -11,6 +11,56 @@ toc_headers: h2
 
 > If you're having trouble contributing to Braze Docs, review these common issues first. If the issue you're experiencing isn't listed, [let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) so we can add it here.
 
+## Preview deployment returns a 404 response
+
+If your [GitHub preview deployment]({{site.baseurl}}/contributing/generating_a_preview/) builds successfully but returns a 404 response, there may be an issue with an image or Liquid tag in your Markdown file.
+
+!["Example error 404 response after opening a preview deployment in GitHub."]()
+
+To fix this:
+
+{% tabs local %}
+{% tab Images %}
+First, verify that each image reference adheres to [our syntax]({{site.baseurl}}/contributing/content_management/images/). For example:
+
+```markdown
+![The Braze Docs homepage on GitHub.]({% image_buster /assets/img/contributing/github_homepage.png %})
+```
+
+Then, verify that each reference matches the exact path and name of that image. For example:
+
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── github_homepage.png
+```
+
+{% endtab %}
+
+{% tab Liquid tags %}
+Verify that each Liquid tag in your Markdown file uses proper syntax. In most cases, the issue is because a mismatch between opening and closing tags. For example, `{% tab %}` tags require the following format:
+
+{% raw %}
+```
+{% tabs %}                # Opening tag for tab group.
+{% tab Tab One %}         # Opening tag for tab one.
+Content for tab one.
+{% endtab %}              # Closing tag for tab one.
+
+{% tab Tab Two %}         # Opening tag for tab two.
+Content for tab two.
+{% endtab %}              # Closing tag for tab two.
+{% endtabs %}             # Closing tag for tab group.
+```
+{% endraw %}
+
+To see examples of each supported Liquid tag in Braze Docs, see [Styling examples]({{site.baseurl}}/contributing/styling_examples).
+
+{% endtab %}
+{% endtabs %}
+
 ## Redirect isn't working
 
 {% multi_lang_include contributing/troubleshooting/redirects.md %}
