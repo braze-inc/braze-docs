@@ -15,7 +15,7 @@ toc_headers: h2
 
 If your [GitHub preview deployment]({{site.baseurl}}/contributing/generating_a_preview/) builds successfully but returns a 404 response, there may be an issue with an image or Liquid tag in your Markdown file.
 
-!["Example error 404 response after opening a preview deployment in GitHub."]()
+!["Example error 404 response after opening a preview deployment in GitHub."]({% image_buster /assets/img/contributing/github/example_build_preview_404_response.png %})
 
 To fix this:
 
