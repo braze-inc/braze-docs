@@ -38,7 +38,7 @@ This survey template is supported for both mobile apps and web browsers. Remembe
 
 To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear under your survey question.
 
-![Compose tab of the simple survey editor, with fields for a header, optional body, and optional helper text.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
+![Compose tab of the simple survey editor, with fields for a header, optional body, and optional helper text.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %} 
 These fields can include both Liquid and emojis, so get fancy! 
@@ -56,7 +56,7 @@ Then, determine if you will [collect custom attributes](#custom-attributes) or [
 
 #### Collect custom attributes {#custom-attributes}
 
-Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
+Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a [satisfaction survey](#user-satisfaction), you could send a follow-up email to all users who were not happy.
 
 To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page][5].
 
@@ -71,7 +71,7 @@ When custom attribute collection is enabled, choices that share the same custom 
 
 ##### Example 
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a [notification preferences survey](#notification-preferences), you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 You can then use the `Custom Attribute` filter to create a segment for users with the custom attribute `Promotions Topic` `is` `true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
@@ -85,7 +85,7 @@ These click metrics are not available for retargeting.
 
 Once a user submits their response, you can optionally show a confirmation page, or simply close the message.
 
-A confirmation page is a great place to thank users for their time or provide additional information. You can customize the Call To Action on this page to guide users to another page of your app or website.
+A confirmation page is a great place to thank users for their time or provide additional information. You can customize the call-to-action on this page to guide users to another page of your app or website.
 
 Edit your button text and on-click behavior in the **Submit Button** section at the bottom of the **Survey** tab:
 
@@ -93,7 +93,7 @@ Edit your button text and on-click behavior in the **Submit Button** section at 
 
 If you elect to add a confirmation page, switch to the **Confirmation Page** tab to customize your message:
 
-![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
+![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 If you want to guide users to another page of your app or website, change the button's **On-click behavior**.
 
@@ -131,39 +131,86 @@ Selected choices will automatically flow through to Currents, under the [**In-Ap
 
 **Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
 
-For this use case, use single-choice selection, with choices ranging from "Very Dissatisfied" to "Very Satisfied". Each choice has the custom attribute `customer_satisfaction` set to a number from 1 to 5, with 1 being the least satisfied and 5 being the most satisfied.
+To set this up, use a single-choice selection survey with five options ranging from “😡 Very Dissatisfied” to “😍 Very Satisfied.” Each choice is mapped to the custom attribute `customer_satisfaction`, with a numeric value from 1 to 5—where 1 indicates the least satisfied and 5 the most satisfied.
 
-After you've launched your survey, you can then target your win-back campaigns to users who reported being "Very Dissatisfied" or "Dissatisfied", which are users with `customer_satisfaction` set to 1 or 2.
+| Choice                                | Attribute              | Value |
+|---------------------------------------|------------------------|-------|
+| 😡 Very Dissatisfied                  | `customer_satisfaction` | 1     |
+| 😟 Dissatisfied                       | `customer_satisfaction` | 2     |
+| 🙂 Neither Satisfied nor Dissatisfied | `customer_satisfaction` | 3     |
+| 😊 Satisfied                          | `customer_satisfaction` | 4     |
+| 😍 Very Satisfied                     | `customer_satisfaction` | 5     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][7]
+When a user submits the survey, their selected value is logged as a custom attribute. You can then build follow-up campaigns using audience filters. For example, target win-back messages to users whose `customer_satisfaction` attribute is 1 or 2.
+
+### Notification preferences
+
+**Goal:** Let users opt into specific types of notifications.
+
+To set this up, use a multiple-choice selection survey where each choice represents a notification topic. Instead of assigning the same attribute with different values, each choice maps to a distinct boolean attribute that reflects the user’s interest in that topic. If a user selects a choice, the corresponding attribute is set to `true`. If left unselected, the attribute remains unchanged.
+
+| Choice             | Attribute              | Value  |
+|--------------------|------------------------|--------|
+| Product Updates    | `wants_product_updates`| `true` |
+| Promotions         | `wants_promotions`     | `true` |
+| Event Invites      | `wants_event_invites`  | `true` |
+| Surveys & Feedback | `wants_surveys`        | `true` |
+| Tips & Tutorials   | `wants_tips`           | `true` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Identify customer goals
 
 **Goal:** Identify top reasons why users visit your app.
 
-For this use case, use single-choice selection, with each choice being a common reason a user might be visiting your app. Each choice has the custom attribute `product_goal` set to the use case topic. 
+To set this up, use a single-choice selection survey with each option representing a common goal or intent. Each choice is mapped to the custom attribute `product_goal` with a value corresponding to the selected user intent.
 
-For example, if the user selects "Upgrading my account", that will set `product_goal = upgrade` on the user's profile.
+| Choice                     | Attribute       | Value     |
+|----------------------------|------------------|-----------|
+| Checking status            | `product_goal`   | `status`  |
+| Upgrading my account       | `product_goal`   | `upgrade` |
+| Scheduling an appointment  | `product_goal`   | `schedule`|
+| Customer support           | `product_goal`   | `support` |
+| Just Browsing              | `product_goal`   | `browse`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][8]
+When a user submits the survey, the selected value is logged as a custom attribute on their profile. You can then use this data to personalize future experiences or segment users based on their primary goal.
 
 ### Improve conversion rates
 
-**Goal:** Understand why customers aren't upgrading or purchasing.
+**Goal:** Understand why customers aren’t upgrading or purchasing.
 
-For this use case, use single-choice selection, with each choice being a common reason why a user might not upgrade to a premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
+To set this up, use a single-choice selection survey with each option representing a common barrier to upgrading. Each choice is mapped to the custom attribute `upgrade_reason` with a corresponding value that reflects the user's selection.
 
-For example, if the user selects "Too Expensive", that will set `upgrade_reason = expensive` on the user's profile. You can target these users for promotional campaigns like discounts or free trials.
+| Choice              | Attribute        | Value       |
+|---------------------|------------------|-------------|
+| Too Expensive       | `upgrade_reason` | `expensive` |
+| Not Valuable        | `upgrade_reason` | `value`     |
+| Difficult To Use    | `upgrade_reason` | `difficult` |
+| Using a Competitor  | `upgrade_reason` | `competitor`|
+| Other Reason        | `upgrade_reason` | `other`     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][9]
+When a user submits the survey, the selected value is saved to their profile. You can then target these users with campaigns tailored to their specific objection, like discount offers or usability improvements.
 
 ### Favorite features
 
 **Goal:** Understand which features customers enjoy using.
 
-For this use case, use multiple-choice selection with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, after the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
+To set this up, use a multiple-choice selection survey where each option represents a feature of your app. Each choice is mapped to the custom attribute `favorite_features`, and when the user submits the survey, the attribute is set to an array of the selected values.
 
-![][10]
+| Choice            | Attribute          | Value        |
+|-------------------|--------------------|--------------|
+| Bookmarks         | `favorite_features`| `bookmarks`  |
+| Mobile App        | `favorite_features`| `mobile`     |
+| Sharing Posts     | `favorite_features`| `sharing`    |
+| Customer Support  | `favorite_features`| `support`    |
+| Customization     | `favorite_features`| `custom`     |
+| Price / Value     | `favorite_features`| `value`      |
+| Community         | `favorite_features`| `community`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Because this survey uses multiple-choice selection, the user's profile will be updated with a list of all selected feature values.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
