@@ -140,7 +140,7 @@ In these circumstances:
 - The user will advance to the next step. 
 - The Canvas step analytics will count this as _Not Updated_.
 
-Keep an eye on your _Not Updated_ analytic when troubleshooting and ensure your context variable is updating correctly. Your users can continue in your Canvas past the Context step but not qualify for later steps if the context variable is invalid.
+When troubleshooting, monitor the _Not Updated_ metric to check that your context variable is updating correctly. If the context variable is invalid, your users can continue in your Canvas past the Context step, but may not qualify for later steps.
 
 Refer to [Context variable data types](#context-variable-types) for the example setups for each data type.
 
