@@ -148,7 +148,7 @@ Refer to [Context variable data types](#context-variable-types) for the example 
 
 ### How do context variables differ from Canvas entry properties?
 
-If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you're participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
