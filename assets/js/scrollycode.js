@@ -50,6 +50,71 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       codeElem.innerHTML = "";
       codeElem.appendChild(fragment);
+      updateHighlightOverlay();
+    }
+
+    // Create or update overlays for highlighted lines.
+    function updateHighlightOverlay() {
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+
+      // ensure <pre> is positioning context
+      if (getComputedStyle(activePre).position === "static") {
+        activePre.style.position = "relative";
+      }
+
+      // clear old overlays…
+      activePre
+        .querySelectorAll(".highlight-overlay")
+        .forEach((el) => el.remove());
+
+      const codeElem = activePre.querySelector("code");
+      if (!codeElem) return;
+
+      // pull out all the highlighted code-line spans
+      const highlighted = Array.from(
+        codeElem.querySelectorAll('.code-line[data-highlight="true"]')
+      );
+      if (!highlighted.length) return;
+
+      // group contiguous runs…
+      const groups = [];
+      let run = [highlighted[0]];
+      for (let i = 1; i < highlighted.length; i++) {
+        const prev = highlighted[i - 1],
+          curr = highlighted[i];
+        if (
+          Math.abs(curr.offsetTop - (prev.offsetTop + prev.offsetHeight)) < 2
+        ) {
+          run.push(curr);
+        } else {
+          groups.push(run);
+          run = [curr];
+        }
+      }
+      groups.push(run);
+
+      // compute the pre’s top padding:
+      const preStyle = getComputedStyle(activePre);
+      const prePaddingTop = parseFloat(preStyle.paddingTop) || 0;
+
+      // for each group, position one overlay
+      groups.forEach((group) => {
+        const first = group[0];
+        const last = group[group.length - 1];
+
+        // original offsetTop is relative to the code element;
+        // now we add the pre’s top padding so it aligns under the spans
+        const top = first.offsetTop + prePaddingTop;
+        const height = last.offsetTop + last.offsetHeight - first.offsetTop;
+
+        const overlay = document.createElement("div");
+        overlay.className = "highlight-overlay";
+        overlay.style.top = `${top}px`;
+        overlay.style.height = `${height}px`;
+        // width:100% from CSS
+        activePre.appendChild(overlay);
+      });
     }
 
     // Parse a range string like "1-3,5" into an array of line numbers.
@@ -166,6 +231,9 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightLines([]);
       });
     });
+
+    const codeContainer = block.querySelector(".scrolly-code .code-animate");
+    codeContainer.addEventListener("scroll", updateHighlightOverlay);
 
     // IntersectionObserver to handle blocks that are initially hidden.
     const observer = new IntersectionObserver(

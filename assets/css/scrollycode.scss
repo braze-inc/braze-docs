@@ -79,21 +79,16 @@ pre {
   transition: background-color 0.3s ease;
 }
 
-.code-line[data-highlight="true"] {
+.highlight-overlay {
+  position: absolute;
+  left: 0;
   background: rgba(216, 236, 255, 0.3);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  width: 100%; // fill the <pre>’s width
+  z-index: 0; // sit behind your code lines
 }
 
-// .highlight-overlay {
-//   top: 0;
-//   height: 0;
-//   opacity: 0;
-//   position: absolute;
-//   left: 0;
-//   width: 100%;
-//   background: rgba(216, 236, 255, 0.3);
-//   pointer-events: none;
-//   transition: top 0.3s ease, height 0.3s ease, opacity 0.3s ease;
-// }
 .code-blocks {
   font-size: 14px;
 }
