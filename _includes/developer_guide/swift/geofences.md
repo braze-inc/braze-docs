@@ -60,7 +60,7 @@ By default, geofences are only monitored if your app is in the foreground, or if
 
 However, you can choose to monitor geofence events when your app is in the background or if [`When In Use` authorization](#swift_request-authorization) is active. To do this, add the `Background Mode -> Location updates` capability to your Xcode project.
 
-![In Xcode, Background Mode > Location Updates]({% image_buster /assets/img/push_implementation_guide/xcode-background-modes-location-updates.png %})
+![In Xcode, Background Mode > Location Updates]({% image_buster /assets/img_archive/xcode-background-modes-location-updates.png %})
 
 Then, enable `allowBackgroundGeofenceUpdates` to let Braze extend your app's "When in use" status by continuously monitoring location updates. This setting only works when your app is in the background. When the app re-opens, the existing background processes are paused and foreground processes are prioritized instead.
 
