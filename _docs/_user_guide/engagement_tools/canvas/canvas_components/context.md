@@ -140,7 +140,7 @@ In these circumstances:
 - The user will advance to the next step. 
 - The Canvas step analytics will count this as _Not Updated_.
 
-Keep an eye on your _Not Updated_ analytic when troubleshooting and ensure your context variable is updating correctly. Your users can continue in your Canvas past the Context step but not qualify for later steps if the context variable is invalid.
+When troubleshooting, monitor the _Not Updated_ metric to check that your context variable is updating correctly. If the context variable is invalid, your users can continue in your Canvas past the Context step, but may not qualify for later steps.
 
 Refer to [Context variable data types](#context-variable-types) for the example setups for each data type.
 
@@ -148,7 +148,7 @@ Refer to [Context variable data types](#context-variable-types) for the example 
 
 ### How do context variables differ from Canvas entry properties?
 
-If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you're participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
