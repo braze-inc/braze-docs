@@ -21,7 +21,7 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-A Context step allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
+Context steps allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
 Within this framework, each Context step can define multiple context variables&mdash;temporary pieces of data that enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information.
 
@@ -86,8 +86,8 @@ Context variables have the same expected formats for data types as [custom event
 |---|---|---|
 |Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
-|String| product_name |{% raw %}<code>"green_tea"</code>{% endraw %} |
-|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]"</code>{% endraw %}|
+|String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
+|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
 |Time| last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -102,8 +102,8 @@ Users will enter the Canvas when they check in for their flight. To determine lo
 
 In this Context step, we'll use decision logic to set `lounge_access_granted` to `true` if either:
 
-* The user is a Rewards Club member (checked against their user profile attribute)
-* The user has purchased a first-class ticket (determined from the Canvas entry event data)
+- The user is a Rewards Club member (checked against their user profile attribute)
+- The user has purchased a first-class ticket (determined from the Canvas entry event data)
 
 Next, we'll create an audience group to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step for this audience to create a push notification that includes personalized lounge information. 
 
