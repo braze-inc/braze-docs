@@ -3,8 +3,10 @@ layout: documents
 hide_toc: true
 ---
 
-{%- css_asset_tag -%} - /assets/css/scrollycode.scss -
-/assets/css/github-dark.scss {%- endcss_asset_tag -%}
+{%- css_asset_tag -%}
+- /assets/css/scrollycode.scss
+- /assets/css/github-dark.scss
+{%- endcss_asset_tag -%}
 
 <style type="text/css">
   @media (min-width: 1200px) {
@@ -31,5 +33,9 @@ hide_toc: true
 <script>
   hljs.highlightAll();
 </script>
+
+{% alert important %}
+We're currently piloting these tutorials and would love your feedback. Click [here]() to help shape these guides!
+{% endalert %}
 
 {{ content }}

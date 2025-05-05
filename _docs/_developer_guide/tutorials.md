@@ -9,13 +9,13 @@ guide_top_header: "Tutorials for Common Braze Integrations"
 guide_featured_title: "In-App Messages"
 guide_featured_list:
   - name: Accessing Key Value Pairs
-    link: /docs/developer_guide/tutorials/in_app_messages/accessing_key_value_pairs
+    link: /docs/developer_guide/in_app_messages/tutorials/accessing_key_value_pairs
     image: /assets/img/braze_icons/brush-02.svg
   - name: Conditionally Display
-    link: /docs/developer_guide/tutorials/in_app_messages/conditionally_display
+    link: /docs/developer_guide/in_app_messages/tutorials/conditionally_display
     image: /assets/img/braze_icons/brush-02.svg
   - name: Defer and Restore a Triggered In App Message
-    link: /docs/developer_guide/tutorials/in_app_messages/defer_and_restore_triggered_message
+    link: /docs/developer_guide/in_app_messages/tutorials/defer_and_restore_triggered_message
     image: /assets/img/braze_icons/brush-02.svg
 ---
 
