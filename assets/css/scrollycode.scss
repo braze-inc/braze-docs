@@ -127,21 +127,53 @@ pre {
 
 .rating-stars {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 0.25rem;
   font-size: 1.5rem;
   cursor: pointer;
 
   .star {
-    color: $color_6; // default “unfilled” color
+    color: $color_6;
     transition: color 0.2s ease;
+    &:hover,
+    &:hover ~ .star {
+      color: $color_8;
+    }
+
     &.selected {
-      color: $color_8; // filled/starred color
+      color: $color_8;
     }
   }
 }
-.rating-step.rated .star {
-  cursor: default;
-  opacity: 0.6; // once rated, you can tone down hover
+
+.rating-step {
+  cursor: auto;
+}
+
+.rating-step {
+  // hide the message by default
+  &::after {
+    content: "";
+    display: none;
+  }
+
+  &.rated {
+    // hide the stars
+    .rating-stars {
+      display: none;
+    }
+
+    // show the thank‐you text
+    &::after {
+      content: "Thanks for the feedback!";
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: $color_8;
+      text-align: left;
+    }
+  }
 }
 
 .hljs {

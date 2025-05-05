@@ -51,6 +51,31 @@ document.addEventListener("DOMContentLoaded", () => {
       codeElem.innerHTML = "";
       codeElem.appendChild(fragment);
       updateHighlightOverlay();
+      scrollCodeToHighlight();
+    }
+
+    function scrollCodeToHighlight() {
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+
+      // Find the first highlighted line
+      const firstHl = activePre.querySelector(
+        '.code-line[data-highlight="true"]'
+      );
+      if (!firstHl) return;
+
+      // Compute its offset *inside* the pre
+      const hlOffset = firstHl.offsetTop;
+      const hlHeight = firstHl.clientHeight;
+      const containerHt = activePre.clientHeight;
+
+      // Target so that the highlighted line sits vertically centered
+      const scrollTo = hlOffset - containerHt / 2 + hlHeight / 2;
+
+      activePre.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
     }
 
     // Create or update overlays for highlighted lines.
@@ -254,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const stars = Array.from(ratingStep.querySelectorAll(".star"));
     stars.forEach((star, idx) => {
       star.addEventListener("click", () => {
-        const rating = idx + 1;
+        const rating = 5 - idx;
 
         // 1) Log to Braze
 
@@ -263,6 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //     tutorial: block.id,
         //     rating
         //   });
+        //   braze.requestImmediateDataFlush();
         // }
         console.log("logged: " + rating);
 

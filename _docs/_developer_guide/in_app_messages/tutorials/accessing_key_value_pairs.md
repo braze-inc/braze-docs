@@ -130,51 +130,30 @@ struct SampleApp: App {
 ```
 
 !!step
-lines-AppDelegate.swift=13-15
-
-#### 1. Create a Braze SDK configuration
-
-Use your dashboard API key and endpoint to create a Braze.Configuration object.
-
-!!step
-lines-AppDelegate.swift=17
-
-#### 2. Instantiate the Braze object
-
-Pass your configuration to initialize Braze, then store the instance globally for access across the app.
-
-!!step
-lines-AppDelegate.swift=18
-
-#### 3. Assign the instance to a static variable
-
-This makes the Braze instance accessible anywhere in your app using AppDelegate.braze.
-
-!!step
 lines-AppDelegate.swift=5
 
-#### 4. Implement BrazeInAppMessageUIDelegate
+#### 1. Implement BrazeInAppMessageUIDelegate
 
 Have your AppDelegate conform to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
 
 !!step
 lines-AppDelegate.swift=23-38
 
-#### 5. Handle messages before they're displayed
+#### 2. Handle messages before they're displayed
 
 The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
 
 !!step
 lines-AppDelegate.swift=27-31
 
-#### 6. Access key-value pairs from message.extras
+#### 3. Access key-value pairs from message.extras
 
 Use the extras dictionary to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
 
 !!step
 lines-AppDelegate.swift=36
 
-#### 7. Choose whether to show the message
+#### 4. Choose whether to show the message
 
 Return `.now` to use Braze’s built-in In-App Message UI.
 
