@@ -2643,4 +2643,7 @@ validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endp
 
 validurls['/docs/user_guide/engagement_tools/segments/segment_funnels/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
 
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/#email-body';
+
 // validurls['OLD'] = 'NEW';
