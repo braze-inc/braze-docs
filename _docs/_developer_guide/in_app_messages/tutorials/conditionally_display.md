@@ -125,9 +125,9 @@ struct SampleApp: App {
 !!step
 lines-AppDelegate.swift=5
 
-#### 1. Extend `BrazeInAppMessageUIDelegate`
+#### 1. Have you AppDelegate class conform to `BrazeInAppMessageUIDelegate`
 
-In your AppDelegate class, extend [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override it's `inAppMessage` method later on.
+In your AppDelegate class, extend [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
 
 !!step
 lines-AppDelegate.swift=12

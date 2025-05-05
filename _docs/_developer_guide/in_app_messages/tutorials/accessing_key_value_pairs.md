@@ -155,7 +155,7 @@ lines-AppDelegate.swift=5
 
 #### 4. Implement BrazeInAppMessageUIDelegate
 
-Extend your AppDelegate to conforms to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
+Have your AppDelegate conform to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
 
 !!step
 lines-AppDelegate.swift=23-38

@@ -4,7 +4,7 @@ article_title: Tutorials
 page_order: 1.9
 hide_toc: true
 layout: dev_guide
-guide_top_header: "Tutorials for Common Braze Integrations"
+guide_top_header: "Tutorials for Common Braze In-App Message Integrations"
 
 guide_featured_title: "In-App Messages"
 guide_featured_list:
