@@ -187,16 +187,16 @@ lines-AppDelegate.swift=26-29
 
 #### 3. Set up Braze In-App Message UI and delegate
 
-`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting it's delegate to `self`, it'll ensure it's called before any IAMs are invoked.
+`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to `self`, it'll ensure it's called before any IAMs are invoked.
 
 Save `inAppMessageUI`; you will need it later when restoring the message.
 
 !!step
 lines-AppDelegate.swift=34-43
 
-#### 4. Override `DisplayChoice()` with your logic
+#### 4. Override `DisplayChoice` with your logic
 
-Override [`BrazeInAppMessageUI.DisplayChoice()](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/displaychoice) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
+Override [`BrazeInAppMessageUI.DisplayChoice](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/displaychoice) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
 
 - `.now` will return the message as normal (now).
 - `.reenqueue` will place the message back on the top of the stack of IAM messages.
