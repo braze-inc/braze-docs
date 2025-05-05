@@ -12,27 +12,55 @@ channel:
 
 > This article covers the requirements needed to get your RCS channel up and running.
 
-## Prerequisites
+Setting up RCS is as straightforward as setting up SMS. Keep reading to learn how you can begin sending rich and interactive messages.
 
-| Requirement | Description |
-|----|----|
-| Message Credits | Contact your Braze customer success manager to confirm that you're set up on a Message Credits contract. Message Credits is a flexible contract type that allows you to purchase and allocate message volume across various channels, such as SMS and WhatsApp. |
-| RCS-verified sender | The sending entity of an RCS message that the recipient sees on their device to identify where the message is coming from. An RCS-Verified Sender consists of a company name, visual branding, and a verified badge. <br><br>Braze will help you apply and register for an RCS-verified sender in eligible regions. You’ll need to provide your Braze representative with some basic information. |
-| List of users with phone numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience. Users and phone numbers can be added to Braze through several different methods. Phone numbers must be formatted as a 10-digit number, as well as a country area code. Learn more about [user phone numbers](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting). |
-| Keywords and responses | All base keywords must have responses attributed to it before you can begin messaging. Braze will process opt-in, opt-out, and help keywords automatically. Customization options and additional keyword-response configurations are available. <br><br>Learn more about [keywords and responses](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/keywords/optin_optout). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+## Step 1: Meet the eligibility criteria
 
-## RCS verified senders
+To be eligible for sending RCS with Braze, your business must meet three criteria upfront:
 
-After you have purchased your RCS SKUs, confirmed your region eligibility, and are up and running on our Message Credits system, you’re ready to set up your RCS-verified senders. These are the sending entities that your customers will see on their mobile devices which represent your business, and that RCS presents robustly to enhance trust. As opposed to SMS, which identifies your business by a simple phone number, an RCS-verified sender consists of a company name, visual branding, and a verified badge. 
+1. Your current Braze contract must include Message Credits. 
+2. You must be sending RCS messages to a Braze-supported country. At the moment, those countries are:
+- United States
+- United Kingdom
+- Germany
+- Mexico
+- Sweden
+- Spain
+- Singapore
+- Brazil
+- France
+- Italy
+- Colombia
+3. You must procure a $0 RCS SKU(s) in your contract.
 
-To set up an RCS-verified sender, contact your Braze representative. We'll guide you through the RCS sender registration process and handle the creation of any subscription groups.
+## Step 2: Register an RCS-verified sender
 
-## SMS fallback
+Before you can send RCS messages, you must register an RCS-verified sender. This is the representation of your brand that users will see on their mobile devices, which includes your brand’s name, logo, a verification badge, and an optional tagline. The RCS-verified sender reinforces customer trust and confirms your messages come from an authenticated source. 
 
-For optimal message delivery, it's recommended for each subscription group to have an RCS and an SMS sender because Braze will attempt to fallback to SMS when RCS is unavailable. The SMS sender should be capable of delivering messages to the target country. For example, if your RCS sender is registered to send in the UK, you would include a UK long code in the subscription group.
+![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %})
 
-A few example scenarios of where RCS may be unavailable include:
+After you have added the RCS SKU(s) to your order form, Braze will be notified and will reach out to you with RCS sender registration forms. The format of these will depend on the countries you wish to send RCS messages to. 
 
-- The recipient's mobile device does not support RCS due to older hardware or software versions
-- An RCS send attempt to a region where the RCS sender is not registered
+When you've submitted your completed forms to Braze, we will complete the registration process on your behalf. 
+
+### Timeline for carrier approval
+
+The timeline for carrier approval varies by country, and can also vary within a country. Keep in mind that the RCS market is still in its infancy, so carrier and aggregator processes are rapidly evolving. In the United States, Braze estimates that carrier approval turnaround time for an RCS-verified sender typically falls within the 4—6 week range, with a test sender typically approved within one week.
+
+When your RCS-verified sender is approved, our opporations team will update your subscription groups as needed to confirm they have the RCS sender included in them. 
+
+## Step 3: Set up subscription groups
+
+RCS is typically used in two ways: 
+- To upgrade existing SMS traffic 
+- To enable new use cases that are only possible with the richer functionality provided by RCS
+
+Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new subscription groups for you. In either case, your Braze team will guide you through a seamless and compliant SMS traffic upgrade. For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}).   
+
+For new use cases that are not possible with SMS, consider setting up dedicated RCS subscription groups to align with your program goals.
+
+### Step 3.1: Set up SMS fallbacks for RCS subscription groups
+
+Because current carrier coverage varies by country, and user hardware and software support varies by individual, SMS fallback is a key component of having a successful RCS program today. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless so that you never miss an important moment with your users.
+
+We highly recommend reviewing your current SMS opt-in experience, subscription groups, and audience segmentation before deploying your first RCS campaign. If needed, our team is always available to provide guidance and help you navigate the setup process.
