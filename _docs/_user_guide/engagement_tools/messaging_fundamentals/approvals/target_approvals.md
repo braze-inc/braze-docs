@@ -10,12 +10,6 @@ description: "This page covers describes how to use target population approvals 
 
 > This page covers how to set up target population approvals for your messaging rules. Using target population approval, you can set volume thresholds for campaigns and Canvases to require additional approval for your messaging rules. This way, you can have an additional review when a larger audience is targeted in your messaging.
 
-## Prerequisite
-
-Before you can set up target population approval, both Canvas and campaign approval workflows must be turned on.
-
-To turn on Canvas and campaign approval workflows, go to **Settings** > **Approval Workflow** > **Always-On Approvals**. 
-
 ## Setting up target population approval
 
 1. Go to **Settings** > **Approval Workflow** > **Messaging Rules**.
