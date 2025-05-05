@@ -1,7 +1,8 @@
 ---
-nav_title: Embedding Banners
-article_title: Embedding Banners for the Braze SDK
-description: "Learn how to embed Banners for the Braze SDK."
+nav_title: Banner-Cards
+article_title: Bannerkarten für das Braze SDK
+hidden: true
+description: "Dieser Referenzartikel beschreibt Banner-Cards und die Integration dieses Features in das Braze SDK."
 platform:
   - iOS
   - Android
@@ -9,30 +10,30 @@ platform:
   
 ---
 
-# Embedding Banners
+# Bannerkarten einbinden
 
-> Learn how to embed Banners using the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
+> Ähnlich wie [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about) werden Banner Cards direkt in Ihre App oder Website eingebettet, so dass Sie die Benutzer mit einem Erlebnis ansprechen können, das sich natürlich anfühlt. Sie sind eine schnelle und nahtlose Lösung, um personalisierte Nachrichten für Ihre Nutzer zu erstellen und gleichzeitig die Reichweite anderer Kanäle (wie E-Mail oder Push-Benachrichtigungen) zu erhöhen.
 
 {% alert important %}
-Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+Banner-Cards befinden sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
 {% endalert %}
 
-## Prerequisites
+## Voraussetzungen
 
-These are the minimum SDK versions needed to start using Banners:
+Bevor Sie Banner-Cards integrieren können, müssen Sie [Banner-Card-Platzierungen]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in Ihrer App erstellen.
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+Außerdem sind die folgenden SDK-Mindestversionen für die Verwendung von Banner-Cards erforderlich:
 
-## Embedding a Banner
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 reactnative:14.0.0 %}
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+## Bannerkarten einbinden
 
-### Step 2: Refresh placements in your app {#requestBannersRefresh}
+### Schritt 1: Aktualisieren Sie die Platzierungen in Ihrer App {#requestBannersRefresh}
 
-Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
+Platzierungen können bei jeder Sitzung angefordert werden und werden automatisch zwischengespeichert, wenn die Sitzung eines Benutzers abläuft oder wenn Sie identifizierte Benutzer mit der Methode `changeUser` ändern.
 
 {% alert tip %}
-Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
+Aktualisieren Sie die Platzierungen so schnell wie möglich, um Verzögerungen beim Herunterladen oder Anzeigen von Bannern zu vermeiden.
 {% endalert %}
 
 {% tabs %}
@@ -63,7 +64,7 @@ Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 {% tab Kotlin %}
 
 ```kotlin
-Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
+ Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
 ```
 
 {% endtab %}
@@ -87,7 +88,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+This feature is not currently supported on Flutter.
 ```
 {% endtab %}
 
@@ -98,10 +99,10 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Listen for updates {#subscribeToBannersUpdates}
+### Schritt 2: Auf Updates achten {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
+Wenn Sie Banner mit den SDK-Methoden in dieser Anleitung einfügen, werden alle Analytics-Events automatisch verarbeitet. Wenn Sie den HTML-Code manuell rendern möchten, [teilen Sie uns dies bitte mit](mailto:banners-feedback@braze.com).
 {% endalert %}
 
 {% tabs %}
@@ -143,9 +144,9 @@ Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
 
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
-  for (banner in update.banners) {
-    Log.d(TAG, "Received banner: " + banner.placementId)
-  }
+    for (banner in update.banners) {
+      Log.d(TAG, "Received banner: " + banner.placementId)
+    }
 }
 ```
 
@@ -179,11 +180,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<BrazeBanner> banners) {
-  for (final banner in banners) {
-    print("Received banner: " + banner.toString());
-  }
-});
+This feature is not yet available in Flutter.
 ```
 {% endtab %}
 
@@ -194,18 +191,18 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Embed using the placement ID {#insertBanner}
+### Schritt 3: Karten nach Platzierungs-ID einfügen {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
 
-Create a container element for the banner. Be sure to set its width and height.
+Erstellen Sie ein Containerelement für das Banner. Stellen Sie sicher, dass Sie die Breite und Höhe festlegen.
 
 ```html
 <div id="global-banner-container" style="width: 100%; height: 450px;"></div>
 ```
 
-Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
+Als nächstes verwenden Sie die [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) Methode, um das innere HTML des Container-Elements zu ersetzen.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -256,7 +253,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
       case .success(let updates):
@@ -276,7 +273,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
       case .success(let updates):
@@ -292,13 +289,13 @@ if let braze = AppDelegate.braze {
 ```
 {% endtab %}
 {% tab Java %}
-To get the Banner in Java code, use:
+Um das Banner im Java-Code abzurufen, verwenden Sie Folgendes:
 
 ```java
 Banner globalBanner = Braze.getInstance(context).getBanner("global_banner");
 ```
 
-You can create Banners in your Android views layout by including this XML:
+Sie können Banner-Cards im Layout von Android Views erstellen, indem Sie diesen XML-Code einfügen:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -310,12 +307,12 @@ You can create Banners in your Android views layout by including this XML:
 
 {% endtab %}
 {% tab Kotlin %}
-To get the Banner in Kotlin, use:
+Um das Banner in Kotlin abzurufen, verwenden Sie Folgendes:
 ```kotlin
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
 
-If you're using Android Views, use this XML:
+Wenn Sie Android Views verwenden, geben Sie folgenden XML-Code ein:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -325,7 +322,7 @@ If you're using Android Views, use this XML:
     app:placementId="global_banner" />
 ```
 
-If you're using Jetpack Compose, you can use this:
+Wenn Sie Jetpack Compose verwenden, können Sie dies nutzen:
 
 ```kotlin
 Banner(placementId = "global_banner")
@@ -334,7 +331,7 @@ Banner(placementId = "global_banner")
 {% endtab %}
 {% tab React Native %}
 
-If you're using [React Native's New Architecture](https://reactnative.dev/architecture/landing-page), you need to register `BrazeBannerView` as a Fabric component in your `AppDelegate.mm`.
+Wenn Sie [die neue Architektur von React Native](https://reactnative.dev/architecture/landing-page) verwenden, müssen Sie `BrazeBannerView` als Fabric-Komponente in Ihrem `AppDelegate.mm` registrieren.
 
 ```swift
 #ifdef RCT_NEW_ARCH_ENABLED
@@ -347,13 +344,13 @@ If you're using [React Native's New Architecture](https://reactnative.dev/archit
 #endif
 ```
 
-To get the Banner's data model in React Native, use:
+Um das Banner in React Native zu erhalten, verwenden Sie:
 
 ```javascript
 const banner = await Braze.getBanner("global_banner");
 ```
 
-You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following JavaScript XML (JSX) snippet into your view hierarchy, providing just the placement ID.
+Fügen Sie in Ihrer React Native-Anwendung das folgende JavaScript-XML-Snippet (JSX) in Ihre Ansichtshierarchie ein.
 
 ```javascript
 <Braze.BrazeBannerView
@@ -374,24 +371,8 @@ This feature is not currently supported on Cordova.
 ```
 {% endtab %}
 {% tab Flutter %}
-To get the Banner's data model in Flutter, use:
-
 ```dart
-braze.getBanner("global_banner").then((banner) {
-  if (banner == null) {
-    // Handle null cases.
-  } else {
-    print(banner.toString());
-  }
-});
-```
-
-You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following widget into your view hierarchy, providing just the placement ID.
-
-```dart
-BrazeBannerView(
-  placementId: "global_banner",
-),
+This feature is not yet available in Flutter.
 ```
 {% endtab %}
 
@@ -402,22 +383,104 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Send a test Banner (optional) {#handling-test-cards}
+## Analytics
 
-Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Sie müssen sich keine Gedanken um das manuelle Tracking von Impressionen machen. Braze verarbeitet automatisch die Protokollierung aller Impressionen, wenn Sie die SDK-Methoden zum Einfügen von Banner-Cards verwenden.
 
-{% alert note %}
-Test Banners are like any other banners, except they're removed at the next app session.
+Wenn Sie den HTML-Code in einer angepassten Ansicht parsen und rendern müssen, [kontaktieren Sie uns bitte](mailto:banners-feedback@braze.com).
+
+{% details Weitere Informationen zum manuellen Tracking von Impressionen %}
+
+{% alert important %}
+Eine Anpassung für Ihre Integration ist wahrscheinlich unnötig, daher sollten Sie sich den folgenden Schritt gut überlegen.
 {% endalert %}
 
-## Logging analytics
+{% tabs %}
+{% tab JavaScript %}
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
+```javascript
+import * as braze from "@braze/web-sdk";
 
-## Dimensions and sizing
+const banner = braze.getBanner("global_banner");
+if (banner?.html) {
+  // do something with the html
+  // then log an impression when the HTML is in view
+  braze.logBannerImpressions([banner.id]);
+}
+```
 
-Here are some things to know about Banner dimensions and sizing:
+{% endtab %}
+{% tab Swift %}
 
-- While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
-- The HTML will take up the full width of the container it's rendered in.
-- We recommend making a fixed dimension element and testing those dimensions in composer.
+```swift
+// First, get the Banner object:
+var globalBanner: Braze.Banner?
+brazeClient.braze()?.banners.getBanner(for: "global_banner", { banner in
+  globalBanner = banner
+})
+
+// Then log the impression on the Banner.
+globalBanner?.context?.logImpression()
+```
+{% endtab %}
+{% tab Java %}
+```java
+Braze.getInstance(context).logBannerImpression(banner.getPlacementId());
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+Braze.getInstance(context).logBannerImpression(banner.placementId)
+```
+
+{% endtab %}
+{% tab React Native %}
+
+```javascript
+This feature is not currently supported on React Native.
+```
+
+{% endtab %}
+{% tab Unity %}
+```csharp
+This feature is not currently supported on Unity.
+```
+{% endtab %}
+
+{% tab Cordova %}
+```javascript
+This feature is not currently supported on Cordova.
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+This feature is not yet available in Flutter.
+```
+{% endtab %}
+
+{% tab Roku %}
+```brightscript
+This feature is not currently supported on Roku.
+```
+{% endtab %}
+{% endtabs %}
+
+{% enddetails %}
+
+## Handhabung von Testsendungen
+
+Verwenden Sie Testsendungen, um die Integration von Bannerkarten zu überprüfen, bevor Sie eine Kampagne einführen. Testbannerkarten werden in einem separaten Cache im Arbeitsspeicher gespeichert und bleiben bei Neustarts der App nicht erhalten. Es ist zwar keine zusätzliche Einrichtung erforderlich, aber das Gerät muss in der Lage sein, Push-Benachrichtigungen im Vordergrund zu empfangen, um Testbannerkarten anzuzeigen.
+
+{% alert important %}
+Ein Testbanner wird wie jedes andere Banner behandelt, außer dass es bei der nächsten App-Sitzung wieder entfernt wird. Sie müssen die Platzierung in Ihrer App einrichten, damit das Testbanner angezeigt werden kann.
+{% endalert %}
+
+## Abmessungen und Größenangaben
+
+Hier finden Sie einige Informationen zu den Abmessungen und der Größe von Bannerkarten:
+
+- Sie können im Composer zwar eine Vorschau der Banner in verschiedenen Größen anzeigen, aber die Informationen werden weder gespeichert noch an das SDK gesendet.
+- Der HTML-Code nimmt die gesamte Breite des Containers ein, in dem er dargestellt wird.
+- Wir empfehlen, ein Element mit festen Abmessungen zu erstellen und diese Abmessungen im Composer zu testen.

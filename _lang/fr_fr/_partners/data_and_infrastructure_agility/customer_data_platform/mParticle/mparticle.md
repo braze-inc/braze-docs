@@ -1,6 +1,6 @@
 ---
-nav_title: mParticle
-article_title: mParticle
+nav_title: mParticle de Rokt
+article_title: mParticle de Rokt
 alias: /partners/mparticle/
 description: "Cet article de référence présente le partenariat entre Braze et mParticle, une plateforme de données client qui collecte et achemine les données entre les sources de votre pile marketing."
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# mParticle
+# mParticle de Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,7 +24,7 @@ L'intégration de Braze et mParticle vous permet de contrôler de façon fluide 
 | Condition | Description |
 | ----------- | ----------- |
 | Compte mParticle | Un [compte mParticle](https://app.mparticle.com/login) est nécessaire pour profiter de ce partenariat. |
-| instance Braze | Vous trouverez votre instance Braze sur la [page d'aperçu de l'API]({{site.baseurl}}/api/basics/#endpoints). (Par exemple : US-01, US-02, etc.) |
+| instance Braze | Votre instance Braze se trouve sur la [page d'aperçu de l'API]({{site.baseurl}}/api/basics/#endpoints) (par exemple, `US-01` ou `US-02`). |
 | Clé d'identification de l'application Braze | L'identifiant de votre application est essentiel. <br><br>Vous trouverez cette clé dans le **tableau de bord de Braze > Gérer les paramètres > Clé API**. |
 | Clé API REST de l'espace de travail | (De serveur à serveur) Une clé API REST de Braze<br><br>Elle peut être créée dans le **tableau de bord Braze > Console de développement > Paramètres API > Clé API**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -147,7 +147,7 @@ Dans mParticle, naviguez vers **Configuration > Sorties > Ajouter des sorties** 
 | Type d'identité externe | Le type d'identité de l'utilisateur mParticle à transmettre comme ID externe à Braze. Nous vous recommandons de laisser la valeur par défaut, ID du client. |
 | Type d'identité e-mail | Le type d'identité de l'utilisateur mParticle à transmettre sous forme d'e-mail à Braze. Nous vous recommandons de laisser la valeur par défaut, E-mail, |
 | instance Braze | Le cluster vers lequel vos données Braze seront transférées ; il doit s'agir du même cluster que celui sur lequel se trouve votre tableau de bord. |
-| Activer le transfert des flux d'événements | (De serveur à serveur) Lorsque cette option est activée, tous les événements sont transmis en temps réel. Si ce n'est pas le cas, tous les événements seront transmis en bloc. Lorsque vous choisissez d'activer la transmission de flux d'événements, assurez-vous que les données que vous transmettez à Braze respectent les [limites de débit]({{site.baseurl}}/api/basics/#api-limits). |
+| Activer le transfert des flux d'événements | (De serveur à serveur) Lorsque cette option est activée, tous les événements sont transmis en temps réel. Si ce n'est pas le cas, tous les événements seront transmis en bloc. Lorsque vous choisissez d'activer la transmission de flux d'événements, assurez-vous que les données que vous transmettez à Braze respectent les [limites de débit]({{site.baseurl}}/api/api_limits/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][10]
@@ -212,8 +212,8 @@ Avant d'activer les options "Attributs d'utilisateur enrichis" ou "Identités d'
 
 #### Types de données
 Tous les types de données ne sont pas pris en charge par les deux plateformes.
-- Les [propriétés d'événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) prennent en charge les objets de type chaîne de caractères, numérique, booléen ou date. Il ne prend pas en charge les tableaux ou les objets imbriqués.
-- Les [attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) prennent en charge les chaînes de caractères, les nombres, les booléens, les objets de date et les tableaux, mais pas les objets ni les objets imbriqués. 
+- Les [propriétés d'événements personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) prennent en charge les objets de type chaîne de caractères, numérique, booléen ou date. Il ne prend pas en charge les tableaux ou les objets imbriqués.
+- Les [attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) prennent en charge les chaînes de caractères, les nombres, les booléens, les objets de date et les tableaux, mais pas les objets ni les objets imbriqués. 
 
 {% alert note %}
 Braze ne prend pas en charge les horodatages antérieurs à l'année 0 ou postérieurs à l'année 3000 dans les attributs personnalisés de type `Time`. Braze ingère ces valeurs lorsqu'elles sont envoyées par mParticle, mais la valeur est stockée sous la forme d'une chaîne de caractères.

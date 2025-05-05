@@ -11,6 +11,10 @@ search_tag: Partner
 
 > Un code de coupon est un code unique qui peut être utilisé par un seul utilisateur (soit une seule fois, soit plusieurs fois). Le cadre Punchh génère des codes de coupon, qui peuvent être traités dans une application mobile ou au système de point de vente (POS).
 
+_Cette intégration est maintenue par Punchh._
+
+## À propos de l'intégration
+
 En utilisant le cadre de coupon Punchh et Braze, vous pouvez réaliser les scénarios suivants :
 
 - Générez un code de coupon lorsque l'invité clique sur un lien de génération de coupon dans un e-mail: Le code du coupon sera généré dynamiquement et affiché sur une page web.
@@ -147,3 +151,4 @@ Pour lier le code de coupon à l'intérieur d'une image :
 | `usage_exceeded_by_guest` | Ce code promo a déjà été traité. | L'utilisation du code par un utilisateur dépasse le nombre de fois qu'un utilisateur peut l'utiliser. Par exemple, la configuration du tableau de bord permet à un seul code d'être utilisé trois fois par un utilisateur. Si le code est utilisé plus fréquemment, cette erreur est générée. |
 | `already_used_by_other_guest` | Ce code promo a déjà été utilisé par un autre invité. | Un autre utilisateur a déjà utilisé le code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
