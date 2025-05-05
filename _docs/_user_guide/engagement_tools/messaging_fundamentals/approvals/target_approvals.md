@@ -8,7 +8,7 @@ description: "This page covers describes how to use messaging rules in the appro
 
 # Messaging rules
 
-> Use messaging rules to set volume thresholds for campaigns and Canvases that will require additional approval for your messaging rules&#8212;this way, you can have another review when a larger audience is targeted in your messaging.
+> Use messaging rules to set volume thresholds for campaigns and Canvases that will require additional approval before launch&#8212;this way, you can have another review when a larger audience is targeted in your messaging.
 
 ## How it works
 
