@@ -22,3 +22,7 @@ As part of its innovation strategy, Braze analyzes information contained in the 
 Braze also communicates with (dashboard) Users to educate and inform them of ways to optimize their use of the Services and to share Braze's innovation efforts. Braze may send emails to (dashboard) Users or communicate with them through the dashboard. Customers can also subscribe to Braze's GitHub repositories to receive notifications when new releases are made.
 
 Braze owns all right, title and interest in and to any material resulting from such activities.
+
+{% alert note %}
+This page has been prepared and is incorporated into the customer’s agreement in the English language, which shall govern in all respects. Any translations of this page are for convenience and reference purposes only.
+{% endalert %}
