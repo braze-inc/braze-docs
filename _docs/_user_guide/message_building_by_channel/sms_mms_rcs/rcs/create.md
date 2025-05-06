@@ -77,6 +77,8 @@ As implied by the name, RCS text messages are focused on text as a medium. If yo
     - **Suggested Replies** are buttons containing suggested responses for users to click and pre-populate in their text input, removing the friction of having to think of a response by providing a constrained set of choices for them. 
     - **Suggested Actions** are buttons that initiate an action on the user’s device. They typically consist of one of two descriptive words and a visual icon to help the user understand what the button does. Braze currently supports OpenURL Suggested Actions. This functions similarly to a URL, where users who select the button are redirected to a webpage or other URL-identified location. 
 
+![A GIF of three Suggested Actions for an RCS message promoting trending fashion styles: "Fairytale royalty", "Edgy academia", and "Show me your other styles".]({% image_buster /assets/img/rcs_suggested_actions.png %})
+
 #### Considerations
 
 - For character limits on text, you may write up to 160 characters for a text-only (basic)RCS message or up to 3072 for a rich (single) RCS message. 

@@ -14,13 +14,11 @@ alias: "/geographic_permissions/"
 
 # Geographic Permissions
 
-> Geographic Permissions enhance security and protect against fraudulent SMS and RCS traffic by enforcing controls on the countries to which you can send SMS messages. You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
-
-![The read-only SMS Geographic Permissions section for a non-admin user with the United States and United Kingdom selected in the "Country allowlist".][6]{: style="max-width:80%;"}
+> Geographic Permissions enhance security and protect against fraudulent SMS, MMS, and RCS traffic by enforcing controls on the countries to which you can send messages. You can specify an allowlist of countries to make sure that SMS, MMS, and RCS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
 ## Configuring your country allowlist
 
-If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS or RCS subscription group. The allowlist is under **Geographic Permissions**.
+If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS, MMS, or RCS subscription group. The allowlist is under **Geographic Permissions**.
 
 ![The editable Geographic Permissions section for an admin with Australia, Canada, and the United States selected in the "Country allowlist".][1]{: style="max-width:80%;"}
 
@@ -47,7 +45,7 @@ Certain countries have a higher risk of SMS and RCS traffic pumping. These count
 If you allow sending in these countries, you must first acknowledge the risk of doing so before the country is added to your allowlist.
 
 {% alert note %}
-Limit the countries on your allowlist to only those required to support your business needs. This will minimize your potential for fraudulent traffic. For more guidance on preventing SMS and RCS traffic pumping, view [SMS traffic pumping fraud FAQs]({{site.baseurl}}/sms_traffic_pumping_fraud/).
+Limit the countries on your allowlist to only those required to support your business needs. This will minimize your potential for fraudulent traffic. For more guidance on preventing SMS traffic pumping, view [SMS traffic pumping fraud FAQs]({{site.baseurl}}/sms_traffic_pumping_fraud/).
 {% endalert %}
 
 ## Visibility of blocked sends
