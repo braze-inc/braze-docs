@@ -45,7 +45,7 @@ The user reconnecting must have both read and write access to all the audiences 
 
 ### What are common errors that can occur when creating and managing my Audience Syncs?
 
-| Error | Details | Steps to resolve |
+| Error | Reason | Solution |
 | --- | --- | --- |
 | **Invalid Token** | This can occur if you have changed your password to log into a specific ad network, or if your credentials have expired. | Go to the respective partner page to disconnect and reconnect your account. |
 | **Audience Size Too Low** | This can occur if you have created an Audience Sync step that removes users from your audiences. If your audience size gets close to zero, the network can flag that the audience size is too low to serve. | Confirm that you're considering an Audience Sync strategy that regularly adds and removes users in a way that doesn’t fully deplete the audience size. |
