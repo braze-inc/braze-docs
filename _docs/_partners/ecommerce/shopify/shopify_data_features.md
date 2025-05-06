@@ -321,82 +321,67 @@ page_order: 3
 {% subtab Order cancelled %}
 ```json
 {
- "name": "shopify_cancelled_order",
- "time": "2022-05-23T14:40:52-04:00",
- "properties": {
-   "order_id": 4444596371647,
-   "line_items": [
-     {
-       "quantity": 1,
-       "product_id": 6143033344191,
-       "sku": null,
-       "title": "LED High Tops",
-       "variant_id": 40094740549876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "name": "LED High Tops",
-       "properties": [],
-       "price": "80.00",
-       "fulfillment_status": null
-     }
-   ],
-   "shipping": [
-     {
-       "title": "Standard",
-       "price": "0.00"
-     }
-   ],
-   "total_price": "141.54",
-   "confirmed": true,
-   "total_discounts": "0.00",
-   "discount_codes": [],
-   "order_number": 1092,
-   "order_status_url": "https://test-store.myshopify.com/",
-   "cancelled_at": "2022-05-23T14:40:52-04:00",
-   "tags": "",
-   "closed_at": "2022-05-23T14:40:51-04:00",
-   "fulfillment_status": null,
-   "fulfillments": []
- },
- "braze_id": "123abc123abc"
+    "name": "ecommerce.order_cancelled",
+    "time": "2022-05-23T13:52:38-04:00",
+    "properties": {
+        "order_id": "820982911946154508",
+        "cancel_reason": "no longer necessary",
+        "total_value": 421.88,
+        "currency": "USD",
+        "total_discounts": 5,
+        "discounts": [],
+        "products": [
+            {
+                "product_id": "632910392",
+                "product_name": "IPod Nano - 8GB",
+                "variant_id": "808950810",
+                "quantity": 1,
+                "price": 199,
+                "metadata": {
+                    "sku": "IPOD2008PINK"
+                }
+            }
+        ],
+        "source": "braze-mock-storefront.myshopify.com",
+        "metadata": {
+            "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
+            "order_number": 1234,
+            "tags": [
+                "heavy",
+                "heavy2"
+            ]
+        }
+    }
 }
 ```
 {% endsubtab %}
 {% subtab Order refunded %}
 ```json
 {
- "name": "shopify_created_refund",
- "time": "2022-05-23T14:40:50-04:00",
- "properties": {
-   "order_id": 4444596371647,
-   "note": null,
-   "line_items": [
-     {
-       "quantity": 1,
-       "product_id": 6143033344191,
-       "sku": null,
-       "title": "LED High Tops",
-       "variant_id": 40094740549876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "properties": [],
-       "price": "80.00"
-     },
-     {
-       "quantity": 1,
-       "product_id": 6143032852671,
-       "sku": null,
-       "title": "Chequered Red Shirt",
-       "variant_id": 40094796619876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "properties": [],
-       "price": "50.00"
-     }
-   ]
- },
- "braze_id": "abc123abc123"
-}
+    "name": "ecommerce.order_refunded",
+    "time": "2022-05-23T13:52:38-04:00",
+    "properties": {
+        "order_id": "820982911946154508",
+        "total_value": 421.88,
+        "currency": "USD",
+        "products": [
+            {
+                "product_id": "632910392",
+                "product_name": "IPod Nano - 8GB",
+                "variant_id": "808950810",
+                "quantity": 1,
+                "price": 199,
+                "metadata": {
+                    "sku": "IPOD2008PINK"
+                }
+            }
+        ],
+        "source": "braze-mock-storefront.myshopify.com",
+        "metadata": {
+		"order_note": "item was broken"
+        }
+    }
+} 
 ```
 {% endsubtab %}
 {% subtab Account login %}
