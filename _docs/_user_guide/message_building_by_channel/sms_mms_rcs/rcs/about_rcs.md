@@ -1,7 +1,7 @@
 ---
 nav_title: "About RCS"
 article_title: About Rich Communication Services (RCS)
-alias: /text_only_rcs/
+alias: /about_rcs/
 page_type: reference
 page_order: 0
 description: "This reference article covers how to set up and create text-only RCS messages in Braze."

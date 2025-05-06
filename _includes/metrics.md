@@ -106,6 +106,10 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Delivery Failures</i> are when the SMS couldn't be sent because of queues overflowing (sending SMS at a rate higher than your long or short codes can handle).
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>Delivery Failures</i> are when the RCS couldn't be sent because of queues overflowing (sending RCS at a rate higher than your RCS-verified sender can handle).
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 The <i>Failed Delivery Rate</i> is the percentage of sends that failed because the message could not be sent. This can happen for various reasons, including queue overflows, account suspensions, and media errors in the case of MMS.
 {% endif %}
@@ -163,7 +167,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>Opt-Out</i> is when a user replied to your message with an <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">opt-out keyword</a> and was unsubscribed from your SMS program. 
+<i>Opt-Out</i> is when a user replied to your message with an <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">opt-out keyword</a> and was unsubscribed from your SMS or RCS program. 
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -175,7 +179,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Reads</i> is when the user reads the WhatsApp message. The user’s read receipts must be “On” for Braze to track reads.
+<i>Reads</i> is when the user reads the message. The user’s read receipts must be “On” for Braze to track reads.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>Rejections</i> are when the SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, and similar. 
+<i>Rejections</i> are when the SMS or RCS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, and similar. 
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -227,7 +231,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the number of unique recipients who clicked on a link in the delivered email.
+<i>Total Clicks</i> is the number of unique recipients who clicked on a link in the delivered message.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}

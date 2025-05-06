@@ -8,7 +8,7 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
   {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Content Cards
   {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by in-app message
   {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Push
-  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS
+  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS/MMS and RCS
   {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by WhatsApp
   {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Webhook{% endif %}.
 {% endalert %}
@@ -22,7 +22,7 @@ The **Campaign Details** panel shows a high-level overview of the entire perform
   {% elsif include.channel == "email" %}email.
   {% elsif include.channel == "in-app message" %}in-app message.
   {% elsif include.channel == "push" %}push message.
-  {% elsif include.channel == "SMS" %}SMS.
+  {% elsif include.channel == "SMS" %}SMS, MMS, and RCS.
   {% elsif include.channel == "whatsapp" %}WhatApp messages.
   {% elsif include.channel == "webhook" %}webhook.
   {% endif %}
@@ -69,7 +69,7 @@ To measure the impact of an individual Content Card, you can add a [control grou
 
 #### Control groups {#sms-control-group}
 
-To measure the impact of an individual SMS message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+To measure the impact of an individual SMS, MMS, or RCS message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% elsif include.channel == "whatsapp" %}
 
@@ -123,11 +123,11 @@ The **Push Performance** panel outlines how well your message has performed acro
 ![Push message performance analytics]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### SMS Performance
+### SMS/MMS/RCS Performance
 
-The **SMS Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **SMS/MMS/RCS Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
-![SMS/MMS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![SMS/MMS/RCS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Webhook Performance
@@ -473,9 +473,9 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
 {% elsif include.channel == "SMS" %}
 
-#### SMS metrics
+#### SMS, MMS, and RCS metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all SMS metrics, refer to the [Report Metrics Glossary][1] and filter by SMS.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all SMS, MMS, and RCS metrics, refer to the [Report Metrics Glossary][1] and filter by SMS/MMS and RCS.
 
 <style>
     .no-split {
@@ -628,7 +628,7 @@ If you select to only send to users who can see the latest Braze version of in-a
 
 The **Keyword Responses** panel shows you a timeline of the inbound keywords users replied with after receiving your message.  
 
-![Campaign Level SMS/MMS Keyword Responses panel that includes a line graph of keyword distribution over time, and a Keywords Categories section with selected checkboxes for Opt-In, Opt-Out, Help, Other, More, and Coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Campaign Level SMS/MMS/RCS Keyword Responses panel that includes a line graph of keyword distribution over time, and a Keywords Categories section with selected checkboxes for Opt-In, Opt-Out, Help, Other, More, and Coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Here, you can also view the response distribution of each keyword category to determine next steps for [retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) and to conveniently [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 

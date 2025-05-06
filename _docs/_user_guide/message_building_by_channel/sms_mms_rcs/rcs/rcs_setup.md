@@ -2,6 +2,7 @@
 nav_title: "RCS Setup"
 article_title: RCS Setup
 page_order: 1
+alias: /rcs_setup/
 description: "This reference article covers the requirements needed to get RCS up and running."
 page_type: reference
 channel:
@@ -63,4 +64,4 @@ For new use cases that are not possible with SMS, consider setting up dedicated 
 
 Because current carrier coverage varies by country, and user hardware and software support varies by individual, SMS fallback is a key component of having a successful RCS program today. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless so that you never miss an important moment with your users.
 
-We highly recommend reviewing your current SMS opt-in experience, subscription groups, and audience segmentation before deploying your first RCS campaign. If needed, our team is always available to provide guidance and help you navigate the setup process.
+We highly recommend reviewing your current SMS opt-in experience, subscription groups, and audience segmentation before deploying your first RCS campaign. If needed, your customer success manager is always available to provide guidance and help you navigate the setup process.

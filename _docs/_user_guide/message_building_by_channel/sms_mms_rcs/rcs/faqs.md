@@ -2,6 +2,7 @@
 nav_title: FAQ
 article_title: RCS FAQ
 page_order: 4
+alias: /rcs_faq/
 description: "This article covers some of the most frequently asked questions about RCS."
 page_type: FAQ
 channel:

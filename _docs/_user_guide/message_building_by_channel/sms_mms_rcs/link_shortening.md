@@ -17,20 +17,20 @@ channel:
 
 > This page covers how to turn on link shortening in your SMS and RCS messages, test shortened links, use your custom domain in shortened links, and more.
 
-Link shortening and click tracking allow you to automatically shorten URLs contained in SMS and RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS and RCS campaigns.
+Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
 The length of the URL is determined by the type of tracking that is turned on:
-- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and dynamic URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For dynamic URLs, they will have a length of 32–33 characters.
+- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For personalized URLs, they will have a length of 32–33 characters.
 
-Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/8jshX/2dj8d` (advanced, dynamic). Refer to [Testing](#testing) for more information.
+Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
 
 Any static URLs that start with `http://` or `https://` will be shortened. Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization will be valid for two months.
 
 {% alert note %}
-If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking and [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
+If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking.
 {% endalert %}
 
 ## Using link shortening
@@ -74,7 +74,7 @@ https://example.com/{{url_var}}
 
 ### Shorten URLs rendered by Liquid variables
 
-We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the SMS or RCS message. 
+We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the message. 
 
 ### Shorten URLs in /messages/send endpoint
 
@@ -108,7 +108,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 ## Click tracking
 
-When link shortening is turned on, the **SMS/MMS/RCS Performance** table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
+When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on metrics, see [Message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
 ![SMS and MMS performance metrics table.][4]
 
@@ -125,6 +125,10 @@ For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/mes
 ### Do I know which individual users are clicking on a URL?
 
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
+
+{% alert note %}
+At this time, RCS Click events are not available through Currents.
+{% endalert %}
 
 ### Does link shortening work with deep links or universal links?
 

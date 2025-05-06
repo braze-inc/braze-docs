@@ -2,6 +2,7 @@
 nav_title: "Creating an RCS Message"
 article_title: Creating an RCS Message
 page_order: 2
+alias: /create_rcs_message/
 description: "This article covers how to create an RCS Message."
 page_type: reference
 channel:

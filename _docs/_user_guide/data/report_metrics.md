@@ -185,7 +185,7 @@ Email
 ### Confirmed Deliveries
 
 {% apitags %}
-SMS
+SMS/MMS, RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} As a Braze customer, deliveries are charged toward your SMS allotment. 
@@ -207,7 +207,7 @@ SMS
 ### Confidence
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Confidence' %}
@@ -243,7 +243,7 @@ In-App Message
 ### Conversions (B, C, D)
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
@@ -289,7 +289,7 @@ In-App Message
 ### Conversion Rate
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Conversion Rate' %}
@@ -351,7 +351,7 @@ Email, Web Push, iOS Push, Android Push, WhatsApp
 ### Delivery Failures
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Delivery Failures' %}
@@ -364,10 +364,26 @@ Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in 
 
 {% api %}
 
+### Delivery Failures
+
+{% apitags %}
+RCS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Delivery Failures RCS' %}
+
+Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+
+<span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Failed Delivery Rate
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
@@ -475,7 +491,7 @@ When this occurs, Braze marks the email address as invalid but does not update t
 ### Help
 
 {% apitags %}
-SMS
+SMS/MMS, RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Help' %} A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
@@ -501,7 +517,7 @@ iOS Push, Android Push
 ### Lifetime Revenue
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Lifetime Revenue' %}
@@ -513,7 +529,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### Lifetime Value Per User
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Lifetime Value Per User' %}
@@ -525,7 +541,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### Average Daily Revenue
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS,LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Average Daily Revenue' %}
@@ -537,7 +553,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### Daily Purchases
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Daily Purchases' %}
@@ -549,7 +565,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### Daily Revenue Per User
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
@@ -585,7 +601,7 @@ Web Push, iOS Push, Android Push
 ### Opt-Out
 
 {% apitags %}
-SMS
+SMS/MMS, RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Opt-Out' %} A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
@@ -621,7 +637,7 @@ Email
 ### Primary Conversions (A) or Primary Conversion Event
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
@@ -669,7 +685,7 @@ WhatsApp
 ### Received
 
 {% apitags %}
-Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, WhatsApp
+Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Received' %} 
@@ -688,7 +704,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 ### Rejections
 
 {% apitags %}
-SMS
+SMS/MMS, RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Rejections' %} As a Braze customer, rejections are charged toward your SMS allotment.
@@ -722,7 +738,7 @@ Email
 ### Sent
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sent' %}
@@ -736,7 +752,7 @@ SMS
 ### Sends
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sends' %} This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
@@ -757,7 +773,7 @@ For Content Cards, this metric is calculated differently depending on what you s
 ### Messages Sent
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Messages Sent' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
@@ -778,7 +794,7 @@ For Content Cards, this metric is calculated differently depending on what you s
 ### Sends to Carrier
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
@@ -860,7 +876,7 @@ In-App Message
 ### Total Clicks
 
 {% apitags %}
-Email, Content Cards, SMS, LINE
+Email, Content Cards, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. 
@@ -944,7 +960,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 ### Total Revenue
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>
@@ -1081,7 +1097,7 @@ Email
 ### Variation
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Variation' %}
