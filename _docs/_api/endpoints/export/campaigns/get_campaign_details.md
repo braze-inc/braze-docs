@@ -73,6 +73,43 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+{
+    "created_at": "2025-03-27T16:51:24+00:00",
+    "updated_at": "2025-03-27T16:51:44+00:00",
+    "name": "Draft Export",
+    "description": "",
+    "archived": false,
+    "draft": true,
+    "enabled": false,
+    "schedule_type": "time_based",
+    "first_entry": null,
+    "last_entry": null,
+    "channels": [],
+    "variants": [
+        {
+            "id": "1c741c6c-aa80-42f4-9a2f-551f04292416", 
+            "name": "Variant 1", 
+            "first_step_ids": [ "8b67f657-16ad-40f4-9680-9960bf181dd0" ], 
+            "first_step_id": "8b67f657-16ad-40f4-9680-9960bf181dd0" 
+            }
+        ],
+    "tags": [],
+    "teams": [],
+    "steps": [
+        {
+            "name": "Step", 
+            "id": "8b67f657-16ad-40f4-9680-9960bf181dd0", 
+            "type": "delay", 
+            "next_paths": [] 
+            }
+        ],
+    "message": "success"
+}
+```
+
 ### Messages by channel
 
 The `messages` response will contain information about each message. The following includes example message responses for each channel:
