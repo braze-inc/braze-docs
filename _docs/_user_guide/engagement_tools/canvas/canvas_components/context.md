@@ -109,7 +109,7 @@ Next, we'll create an audience group to target users where {% raw %}`{{context.$
 
 Based on this context variable, eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
 
-![An audience group step with lounge_access_granted set to true.][3]{: style="max-width:90%"}
+![An Audience Paths step with lounge_access_granted set to true.][3]{: style="max-width:90%"}
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
