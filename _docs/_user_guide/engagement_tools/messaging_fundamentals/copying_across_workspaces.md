@@ -14,8 +14,6 @@ tool:
 
 > Copying campaigns across workspaces lets you jumpstart your message composition by starting with a copy of a campaign in a different workspace. This page covers how to copy campaigns to different workspaces and lists what is and isn't copied over.
 
-## How it works
-
 When you copy a campaign or Canvas to a different workspace, the copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
 {% tabs local %}
@@ -317,9 +315,9 @@ Note the following is not a comprehensive list of what is copied across workspac
 
 ## Copying messages that contain Liquid
 
-For message bodies that include Liquid references, the references are copied over to the destination workspace, but they may not function as expected. This means if a Canvas from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields like trigger actions and audience filters aren't copied over.
+Liquid references within message bodies are copied over to the destination workspace, but the references may not function as expected. This means if a Canvas from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields like trigger actions and audience filters aren't copied over.
 
-Note the following Liquid references with dependencies when copying campaigns and Canvases across workspaces:
+Keep track of the following Liquid references with dependencies when copying campaigns and Canvases across workspaces:
 
 - Catalog item tags
 - Connected Content tags
