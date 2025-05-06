@@ -67,10 +67,10 @@ If you need to make further customization, choose **Custom Code** for your **Mes
 
 If you’re using an in-app message to capture user emails, you may want to limit the audience to users who haven’t already provided this information.
 
-- **To target users without an email address:** Use the filter `Email Available` is `false`. This ensures the form only appears to users who don’t have an email on file, helping you avoid redundant prompts for known users.
+- **To target users without an email address:** Use the filter `Email Available` is `false`. This makes the form only appear to users who don’t have an email on file, helping you avoid redundant prompts for known users.
 - **To target anonymous users without external IDs:** Use the filter `External User ID` `is blank`. This is useful when you want to identify users who haven’t been authenticated or registered yet.
 
-You can also combine the two filters using `AND` logic, if desired. This ensures the form is shown only to users who are missing both an email address and an external user ID—ideal for capturing new leads or prompting account creation.
+You can also combine the two filters using `AND` logic, if desired. This makes the form only appear to users who are missing both an email address and an external user ID—ideal for capturing new leads or prompting account creation.
 
 ## Step 4: Target users who filled out the form (optional)
 
