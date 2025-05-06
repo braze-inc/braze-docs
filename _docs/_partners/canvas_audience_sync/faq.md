@@ -45,13 +45,13 @@ The user reconnecting must have both read and write access to all the audiences 
 
 ### What are common errors that can occur when creating and managing my Audience Syncs?
 
-| Error message | Details | Steps to resolve |
+| Error | Details | Steps to resolve |
 | --- | --- | --- |
-| **Invalid Token** | Can occur if you have changed your password to log into a specific ad network, or if your credentials have expired. | Go to the respective partner page to disconnect and reconnect your account. |
-| **Audience Size Too Low** | This error will typically occur if you have created an Audience Sync step that removes users from your audiences. If your audience size gets close to zero, the network can flag that the audience size is too low to serve. | Confirm that you're considering an Audience Sync strategy that regularly adds and removes users in a way that doesn’t fully deplete the audience size. |
-| **Audience Does Not Exist** | The Audience Sync step uses an audience that does not exist. This can also be triggered if you don’t have the necessary permission to access the audience. | Add an active audience within your Audience Sync configuration or create a new audience. |
+| **Invalid Token** | This can occur if you have changed your password to log into a specific ad network, or if your credentials have expired. | Go to the respective partner page to disconnect and reconnect your account. |
+| **Audience Size Too Low** | This can occur if you have created an Audience Sync step that removes users from your audiences. If your audience size gets close to zero, the network can flag that the audience size is too low to serve. | Confirm that you're considering an Audience Sync strategy that regularly adds and removes users in a way that doesn’t fully deplete the audience size. |
+| **Audience Does Not Exist** | The Audience Sync step uses an audience that does not exist. This can also be triggered if you don’t have the necessary permission to access the audience. | Add an active audience in your Audience Sync configuration or create a new audience. |
 | **Ad Account Access Attempt** | This error occurs if you don’t have permissions for the ad account, an audience that you selected, or both. | Work with the administrators of your ad account to get proper access and permissions. |
-| **Invalid Settings** | Occurs if you have not configured a specific Audience Sync destination in Canvas, including the ad account, audience, or user fields to match. | Complete the configuration of each partner before launching. |
+| **Invalid Settings** | This can occur if you haven't configured a specific Audience Sync destination in Canvas, including the ad account, audience, or user fields to match. | Complete the configuration of each partner before launching. |
 | **Terms of Service** | For some Audience Sync destinations, like Facebook, it is required by the ad network to accept specific terms of service to use the Audience Sync feature. This error will trigger if you have not accepted the appropriate terms. | Confirm you have accepted each partner's required terms. For Facebook specifically, review [Facebook troubleshooting]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/#troubleshooting). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
