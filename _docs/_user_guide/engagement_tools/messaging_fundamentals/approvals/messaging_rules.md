@@ -3,7 +3,7 @@ nav_title: Messaging Rules
 article_title: Messaging Rules
 page_order: 1
 page_type: reference
-description: "This page covers describes how to use messaging rules in the approval workflow for campaigns and Canvases with a large send volume."
+description: "This page covers how to use messaging rules in the approval workflow for campaigns and Canvases with a large send volume."
 ---
 
 # Messaging rules
@@ -31,7 +31,7 @@ However, you can’t set rules with overlapping user volumes for the same messag
 - Rule C for Canvas with a maximum of 10,000 users 
 - Rule D for Canvas with a maximum of 1,000,000 users
 
-## Create a messaging rule
+## Creating a messaging rule
 
 ### Step 1: Add a rule
 
@@ -66,7 +66,7 @@ Note the following details on launching messages with approval:
 
 No. Any user, regardless of their current permissions, can be selected as a target population approver.
 
-### How do messaging rules relate to the Target Audience step of the campaign and Canvas editor?
+### How do messaging rules relate to the Target Audience step?
 
 Messaging rules don't take into account details such as triggering events. For example, a campaign might target all your users. However, the campaign is event triggered, so the actual users who receive it is lower.
 
