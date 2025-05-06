@@ -101,8 +101,6 @@ Note the following is not a comprehensive list of what is copied across workspac
 
 | Copied | Omitted |
 |---|---|
-| Copied | Omitted |
-|---|---|
 | Type behavior | Workspace IDs |
 | Campaign interaction |  Campaign ID | 
 | Custom event name |  | 
@@ -128,8 +126,6 @@ Note the following is not a comprehensive list of what is copied across workspac
 {% tabs local %}
 {% tab campaigns %}
 
-| Copied | Omitted |
-|---|---|
 | Copied | Omitted |
 |---|---|
 | Type behavior | Workspace IDs |
