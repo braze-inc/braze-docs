@@ -351,10 +351,10 @@ Because recommended events are more opinionated custom events, you can search fo
 
 Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter.
 
-![Segment filters dropdown with "Ecommerce" filters.][7]
+![Segment filters dropdown with "Ecommerce" filters.][7]{: style="max-width:80%"}
 
 {% alert important %}
-The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of puchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
+The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
 {% endalert %}
 
 ## Nested event properties
