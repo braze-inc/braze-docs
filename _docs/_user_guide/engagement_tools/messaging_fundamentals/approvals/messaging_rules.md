@@ -35,11 +35,11 @@ You can’t set rules with an overlapping number of users for the same message t
 - Rule C for Canvas with a maximum of 10,000 users 
 - Rule D for Canvas with a maximum of 1,000,000 users
 
-## Prerequisites
+## Creating a messaging rule
+
+### Prerequisites
 
 Only Braze administrators can set messaging rules, but any Braze user can be a messaging rule approver (including users without general approval permissions).
-
-## Creating a messaging rule
 
 ### Step 1: Add a rule
 
