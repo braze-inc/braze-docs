@@ -4,9 +4,9 @@ article: Compliance Documentation for LINE Services
 permalink: /compliance_documentation_line/
 description: "Documentación de conformidad relativa al canal LINE."
 page_order: 5
+noindex: true
 layout: redirect
 redirect_to: https://www.braze.com/docs/compliance_documentation_line
-noindex: true
 ---
 
 <!--

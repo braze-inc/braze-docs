@@ -3,7 +3,6 @@ nav_title: Documentation de conformité pour les Webhooks
 article: Compliance Documentation for Webhooks
 permalink: /compliance_documentation_webhooks/
 description: "Documentation de conformité relative au canal des webhooks."
-page_order: 3
 noindex: true
 layout: redirect
 redirect_to: https://www.braze.com/docs/compliance_documentation_webhooks

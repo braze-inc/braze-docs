@@ -2,9 +2,9 @@
 nav_title: Documentación de conformidad
 article_title: Documentación de conformidad
 page_order: 1
+noindex: true
 layout: redirect
 redirect_to: https://www.braze.com/docs/compliance_documentation
-noindex: true
 ---
 
 <!--

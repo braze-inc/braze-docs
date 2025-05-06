@@ -3,10 +3,9 @@ nav_title: Documentação de conformidade para serviços de SMS/MMS
 article: Compliance Documentation for SMS/MMS Services
 permalink: /compliance_documentation_sms/
 description: "Documentação de conformidade relacionada aos canais de SMS e MMS."
-page_order: 2
 noindex: true
 layout: redirect
-redirect_to: https://www.braze.com/docs/compliance_documentation_sms
+redirect_to: https://www.braze.com/docs/compliance_documentation_sms/
 ---
 
 <!--

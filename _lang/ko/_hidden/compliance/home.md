@@ -2,8 +2,9 @@
 nav_title: 규정 준수 설명서
 article_title: 규정 준수 설명서
 page_order: 1
+permalink: /compliance_documentation/
 layout: redirect
-redirect_to: https://www.braze.com/docs/compliance_documentation
+redirect_to: https://www.braze.com/docs/compliance_documentation/
 noindex: true
 ---
 

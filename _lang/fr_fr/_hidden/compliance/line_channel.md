@@ -3,7 +3,6 @@ nav_title: Documentation de conformité pour les services LINE
 article: Compliance Documentation for LINE Services
 permalink: /compliance_documentation_line/
 description: "Documentation de conformité relative au canal LINE."
-page_order: 5
 layout: redirect
 redirect_to: https://www.braze.com/docs/compliance_documentation_line
 noindex: true
