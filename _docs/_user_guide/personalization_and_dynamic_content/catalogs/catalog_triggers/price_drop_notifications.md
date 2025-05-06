@@ -83,7 +83,7 @@ Here's an example custom event:
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
 {% endalert %}
 
-## Using price drop notifications in Canvas
+## Using price drop notifications in a Canvas
 
 After setting up the price drop notifications in a catalog, follow these steps to use these notifications for Canvas.
 
