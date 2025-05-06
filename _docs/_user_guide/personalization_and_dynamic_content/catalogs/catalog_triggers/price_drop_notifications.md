@@ -85,7 +85,7 @@ Notification rules in these settings do not replace Canvas notification settings
 
 ## Using price drop notifications in a Canvas
 
-After setting up the price drop notifications in a catalog, follow these steps to use these notifications for Canvas.
+After setting up the price drop notifications in a catalog, follow these steps to use these notifications for a Canvas.
 
 1. Set up an action-based Canvas.
 2. Select **Perform Price Drop Event** as the trigger.
