@@ -8,28 +8,36 @@ description: "This page covers how to use messaging rules in the approval workfl
 
 # Messaging rules
 
-> Use messaging rules to set user volume thresholds for campaigns and Canvases that will require additional approval before launch&#8212;this way, you can have another review when a larger audience is targeted in your messaging.
+> Use messaging rules in your approval workflow to limit the number of reachable users before an additional approval is required&#8212;this way, you can review your campaigns and Canvases before you target a larger audience.
 
 ## How it works
 
-Messaging rules apply to a workspace and are made up of a message type and a maximum reachable user threshold.
+Messaging rules apply to a workspace and are made up of a message type and a maximum number of reachable users.
 
 - **Message type:** Defines what message type the rule will be applied to: campaign, Canvas, or both Canvas and campaigns.
 - **Maximum reachable users:** Determines what audience size that will require an additional approval.
 
-Only Braze administrators can set messaging rules, but any Braze user can be a messaging rule approver (including users without general approval permissions).
+### Shared message types and maximum reachable users
 
-When setting up your messaging rule, two rules can exist with the same number of reachable users for the same message type. For example, you can set a maximum of 10,000 users for Canvas and 10,000 users for both Canvas and campaigns. 
+Two rules can exist with the same number of reachable users for the same message type. For example, you can set a maximum of 10,000 users for Canvas and 10,000 users for both Canvas and campaigns. 
 
-Similarly, you can save two rules that share the same user maximum so that you can organize and separate your rules by approvers. For example, you create the following two rules:
+### Separate approvers
+
+Two rules can share the same user maximum so that you can organize and separate your rules by approvers. For example, you create the following two rules:
 
 - Rule A for Canvas with a maximum of 100,000 users with approvers on your legal team
 - Rule B for Canvas with a maximum of 100,000 users with approvers on your marketing team 
 
-However, you can’t set rules with overlapping user volumes for the same message type. For example, the following messaging rule **can't** be set: 
+### No overlapping reachable users
+
+You can’t set rules with an overlapping number of users for the same message type. For example, the following messaging rule **can't** be set: 
 
 - Rule C for Canvas with a maximum of 10,000 users 
 - Rule D for Canvas with a maximum of 1,000,000 users
+
+## Prerequisites
+
+Only Braze administrators can set messaging rules, but any Braze user can be a messaging rule approver (including users without general approval permissions).
 
 ## Creating a messaging rule
 
@@ -50,8 +58,7 @@ You can create up to five messaging rules.
 
 ### Step 2: Determine launching with approval (optional)
 
-1. Select **Allow launching with approval**.
-2. For **With Approval From**, select the approvers who have permission to approve the Canvas or campaign if the maximum is met.
+Select **Allow launching with approval**. Next, for **With Approval From**, select the approvers who have permission to approve the Canvas or campaign if the maximum is met.
 
 Note the following details on launching messages with approval:
 
