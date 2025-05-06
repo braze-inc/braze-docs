@@ -46,7 +46,7 @@ You can create up to five messaging rules.
 5. Enter a number for **Maximum reachable users**. For more information, refer to [Audience statistics]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
 6. Select **Save**.
 
-![An example messaging rule "Rule 1" for campaigns with 10,000 users as the maximum. There are two users who can approve the Canvas and campaign to launch.][1]{: style="max-width:90%;"}
+![An example messaging rule "Rule 1" for campaigns with 100,000 users as the maximum. There is one user who can approve the Canvas and campaign to launch.][1]{: style="max-width:90%;"}
 
 ### Step 2: Determine launching with approval (optional)
 
