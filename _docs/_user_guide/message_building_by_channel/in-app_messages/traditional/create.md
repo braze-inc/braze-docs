@@ -66,9 +66,13 @@ Start by choosing which platforms should receive the message. Use this selection
 
 Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) page, or by clicking on the linked message types in the following tables.
 
-When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
+When deciding which message type to use, consider how much space your message will occupy and how disruptive it may feel to the user experience.
 
-![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and fullscreen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- **Slideup** messages are the least intrusive, appearing subtly without blocking content.
+- **Modal** messages sit in the middle—prominent enough to catch attention without fully taking over the screen.
+- **Fullscreen** messages are the most attention-grabbing and best for critical announcements or promotions.
+
+The more complex your content, the more space you’ll need—and the more likely your message will interrupt the user’s flow.
 
 ### Message types
 
@@ -210,13 +214,15 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
 
-![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
-
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
 #### Choosing a primary button
 
-If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
+If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result.
+
+In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
+
+![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### On-click behavior {#button-actions}
 
@@ -354,7 +360,7 @@ If there's a delay on the in-app message step, segment membership will be evalua
 
 In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
 
-![Audience Summary section of the Target Users step with the option to "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Checkbox for "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
 
