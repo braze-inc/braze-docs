@@ -155,7 +155,94 @@ lines-AppDelegate.swift=36
 
 #### 4. Choose whether to show the message
 
-Return `.now` to use Braze’s built-in In-App Message UI.
+Return `.now` to use Braze's built-in In-App Message UI.
+
+{% endscrolly %}
+{% endtab %}
+{% tab Android %}
+{% scrolly %}
+
+```kotlin file=MainApplication.kt
+import android.app.Application
+import com.braze.Braze
+import com.braze.ui.inappmessage.BrazeInAppMessageManager
+import com.braze.ui.inappmessage.listeners.IInAppMessageManagerListener
+
+class MainApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        
+        // Initialize Braze
+        val brazeConfig = BrazeConfig.Builder()
+            .setApiKey("YOUR-API-KEY")
+            .setCustomEndpoint("YOUR-ENDPOINT")
+            .build()
+        Braze.configure(this, brazeConfig)
+        
+        // Set up in-app message listener
+        BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
+            override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+                val extras = inAppMessage.extras
+                
+                val template = extras["custom-template"] ?: ""
+                val color = extras["custom-color"] ?: ""
+                val messageId = extras["message-id"] ?: ""
+                
+                // Your custom logic
+                Log.d("Braze", "Template: $template, Color: $color, ID: $messageId")
+                
+                // Return DISPLAY_NOW to show the message using Braze's UI
+                return InAppMessageOperation.DISPLAY_NOW
+            }
+        })
+    }
+}
+```
+
+```kotlin file=AndroidManifest.xml
+<manifest>
+    <application
+        android:name=".MainApplication"
+        ...>
+        <!-- Your other manifest entries -->
+    </application>
+</manifest>
+```
+
+!!step
+lines-MainApplication.kt=1-4
+
+#### 1. Set up your Application class
+
+Create a custom Application class that will initialize Braze and handle in-app messages.
+
+!!step
+lines-MainApplication.kt=8-15
+
+#### 2. Initialize Braze
+
+Configure Braze with your API key and endpoint in your Application's `onCreate()` method.
+
+!!step
+lines-MainApplication.kt=17-31
+
+#### 3. Set up the in-app message listener
+
+Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+
+!!step
+lines-MainApplication.kt=20-24
+
+#### 4. Access key-value pairs from message.extras
+
+Use the extras map to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
+
+!!step
+lines-MainApplication.kt=29
+
+#### 5. Choose whether to show the message
+
+Return `InAppMessageOperation.DISPLAY_NOW` to use Braze's built-in In-App Message UI.
 
 {% endscrolly %}
 {% endtab %}
