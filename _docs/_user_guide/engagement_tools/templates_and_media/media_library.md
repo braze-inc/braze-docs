@@ -75,7 +75,7 @@ Adding videos to WhatsApp messages is currently in early access. Contact your Br
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
-{% multi_lang_include generative_ai/about_images.md %}
+{% multi_lang_include brazeai/generative_ai/about_images.md %}
 
 {% alert important %}
 Before using this feature, review [how your data is used and sent to OpenAI]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_images#ai-policy).

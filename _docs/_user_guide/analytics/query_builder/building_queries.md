@@ -9,4 +9,4 @@ tool: Reports
 
 # Query Builder
 
-{% multi_lang_include generative_ai/building_queries.md %}
+{% multi_lang_include brazeai/generative_ai/building_queries.md %}

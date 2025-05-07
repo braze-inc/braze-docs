@@ -62,4 +62,4 @@ When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/u
 
 !["AI copywriting assistant with "Important Alerts!!" selected as the brand guideline.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}
