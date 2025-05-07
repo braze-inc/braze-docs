@@ -38,7 +38,7 @@ The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 - Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) for this feature. Not following these rules will cause an error.
 - You can send up to 20 prompts per minute with the AI Query Builder.
 
-##{% multi_lang_include generative_ai/policy.md %}
+##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
 {% tab On My Own %}

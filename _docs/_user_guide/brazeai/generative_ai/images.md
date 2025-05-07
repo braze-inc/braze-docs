@@ -7,7 +7,7 @@ description: "Learn how to generate images for your media library using DALL·E 
 
 # Generating images with AI
 
-> {% multi_lang_include generative_ai/about_images.md %}
+> {% multi_lang_include brazeai/generative_ai/about_images.md %}
 
 ## About the media library
 
@@ -22,4 +22,4 @@ The media library allows you to manage your assets in a single, centralized loca
 
 ![AI image generator modal in the media library.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

@@ -7,4 +7,4 @@ description: "This article describes how to create a SQL Segment Extension using
 tool: Segments
 ---
 
-{% multi_lang_include generative_ai/sql_segment_extensions.md %}
+{% multi_lang_include brazeai/generative_ai/sql_segment_extensions.md %}

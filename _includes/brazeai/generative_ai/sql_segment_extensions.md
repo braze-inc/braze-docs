@@ -78,7 +78,7 @@ To use the AI SQL generator, do the following:
 - Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 
-##{% multi_lang_include generative_ai/policy.md %}
+##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 {% endtabs %}
 

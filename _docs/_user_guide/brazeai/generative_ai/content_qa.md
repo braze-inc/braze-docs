@@ -42,4 +42,4 @@ Consider the following, so you can make the most of Content QA with AI:
 - **Understand the tone analysis:** The tone analysis results are subjective and based on the AI model's understanding. While they can provide useful insights, consider your intended tone and the conversation context to make appropriate adjustments.
 - **Double-check flagged offensive language:** Offensive language detection is designed to be robust, but it may occasionally flag false positives. Review flagged sections carefully and make appropriate changes as necessary.
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

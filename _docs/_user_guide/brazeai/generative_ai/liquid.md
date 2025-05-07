@@ -141,4 +141,4 @@ Here's some examples to help get you started:
 Let us know if you had any interesting prompts or experiences by booking a [feedback session](https://research.rallyuxr.com/braze/schedule/clxxhw8em0d071ak4b279553s?channel=share) with us.
 {% endalert %}
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

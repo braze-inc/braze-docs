@@ -48,4 +48,4 @@ When using push as your output length, if you select **Reference past campaign d
 
 If used in conjunction with a [brand guideline]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/), both the brand guideline and the past campaign data will be incorporated into the final output.
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

@@ -68,4 +68,4 @@ To edit your existing brand guidelines:
 2. Apply the brand guidelines you want to change. A button will appear near the field.
 3. Select **Edit guideline**.
 
-{% multi_lang_include generative_ai/policy.md %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}
