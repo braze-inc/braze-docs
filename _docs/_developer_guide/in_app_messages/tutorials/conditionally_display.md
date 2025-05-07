@@ -127,7 +127,7 @@ lines-AppDelegate.swift=5
 
 #### 1. Have you AppDelegate class conform to `BrazeInAppMessageUIDelegate`
 
-In your AppDelegate class, extend [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
+In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
 
 !!step
 lines-AppDelegate.swift=12
@@ -141,14 +141,14 @@ lines-AppDelegate.swift=19-21
 
 #### 3. Set up Braze In-App Message UI and delegate
 
-`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to `self`, it'll ensure it's called before any IAMs are invoked.
+`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to your `BrazeInAppMessageUIDelegate` implementation (in this case, `self`), it'll ensure its methods are called before any IAMs are invoked.
 
 !!step
 lines-AppDelegate.swift=26-33
 
 #### 4. Override `DisplayChoice` with your logic
 
-Override [`BrazeInAppMessageUI.DisplayChoice](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/displaychoice) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
+Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb>) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
 
 - `.now` will return the message as normal (now).
 - `.discard` will throw the message away.
