@@ -155,4 +155,95 @@ Override [`BrazeInAppMessageUI.DisplayChoice](https://braze-inc.github.io/braze-
 
 {% endscrolly %}
 {% endtab %}
+{% tab Android %}
+{% scrolly %}
+
+```kotlin file=MainApplication.kt
+import android.app.Application
+import com.braze.Braze
+import com.braze.support.BrazeLogger
+import com.braze.configuration.BrazeConfig
+import com.braze.ui.inappmessage.BrazeInAppMessageManager
+import com.braze.BrazeActivityLifecycleCallbackListener
+import com.braze.ui.inappmessage.listeners.IInAppMessageManagerListener
+import com.braze.models.inappmessage.IInAppMessage
+import com.braze.ui.inappmessage.InAppMessageOperation
+import android.util.Log
+
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Enable verbose Braze SDK logs
+        BrazeLogger.logLevel = Log.VERBOSE
+
+        // Initialize Braze
+        val brazeConfig = BrazeConfig.Builder()
+            .setApiKey("YOUR-API-KEY")
+            .setCustomEndpoint("YOUR-ENDPOINT")
+            .build()
+        Braze.configure(this, brazeConfig)
+
+        registerActivityLifecycleCallbacks(
+            BrazeActivityLifecycleCallbackListener()
+        )
+
+        // Set up in-app message listener
+        BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
+            override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+                // Check if we should show the message
+                val shouldShow = inAppMessage.extras["custom_key"] == "true"
+
+                return if (shouldShow) {
+                    // Show the message using Braze's UI
+                    InAppMessageOperation.DISPLAY_NOW
+                } else {
+                    // Discard the message
+                    InAppMessageOperation.DISCARD
+                }
+            }
+        })
+    }
+}
+```
+
+!!step
+lines-MainApplication.kt=17
+
+#### 1. Turn on debugging (optional)
+
+Turn on debugging while developing to make troubleshooting easier!
+
+!!step
+lines-MainApplication.kt=26-28
+
+#### 2. Register activity lifecycle callbacks
+
+Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
+
+!!step
+lines-MainApplication.kt=30-44
+
+#### 3. Set up the in-app message listener
+
+Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+
+!!step
+lines-MainApplication.kt=34-42
+
+#### 4. Check for any display condition
+
+Apply your custom logic to control whether or not the message should be displayed.
+
+In this example, we're checking if the `custom_key` extra is set to "true".
+
+!!step
+lines-MainApplication.kt=38,41
+
+#### 5. Return the appropriate operation
+
+Return `InAppMessageOperation.DISPLAY_NOW` to show the message using Braze's UI, or `InAppMessageOperation.DISCARD` to prevent the message from being displayed.
+
+{% endscrolly %}
+{% endtab %}
 {% endtabs %}

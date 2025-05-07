@@ -217,4 +217,154 @@ Here, our UI is restoring the method from a button-click.
 
 {% endscrolly %}
 {% endtab %}
+{% tab Android %}
+{% scrolly %}
+
+```kotlin file=MainApplication.kt
+import android.app.Application
+import com.braze.Braze
+import com.braze.support.BrazeLogger
+import com.braze.configuration.BrazeConfig
+import com.braze.ui.inappmessage.BrazeInAppMessageManager
+import com.braze.BrazeActivityLifecycleCallbackListener
+import com.braze.ui.inappmessage.listeners.IInAppMessageManagerListener
+import com.braze.models.inappmessage.IInAppMessage
+import com.braze.ui.inappmessage.InAppMessageOperation
+import android.util.Log
+
+class MyApplication : Application() {
+    companion object {
+        private var instance: MyApplication? = null
+        fun getInstance(): MyApplication = instance!!
+    }
+
+    private var showMessage = false
+
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+
+        // Enable verbose Braze SDK logs
+        BrazeLogger.logLevel = Log.VERBOSE
+
+        // Initialize Braze
+        val brazeConfig = BrazeConfig.Builder()
+            .setApiKey("YOUR-API-KEY")
+            .setCustomEndpoint("YOUR-ENDPOINT")
+            .build()
+        Braze.configure(this, brazeConfig)
+
+        registerActivityLifecycleCallbacks(
+            BrazeActivityLifecycleCallbackListener()
+        )
+
+        // Set up in-app message listener
+        BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
+            override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+                return if (showMessage) {
+                    // Show the message using Braze's UI
+                    InAppMessageOperation.DISPLAY_NOW
+                } else {
+                    // Re-enqueue the message for later
+                    InAppMessageOperation.DISPLAY_LATER
+                }
+            }
+        })
+    }
+
+    fun showDeferredMessage(show: Boolean) {
+        showMessage = show
+        BrazeInAppMessageManager.getInstance().presentNext()
+    }
+}
+```
+
+```kotlin file=MainActivity.kt
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ContentView()
+        }
+    }
+}
+
+@Composable
+fun ContentView() {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(20.dp)
+    ) {
+        // ... your UI
+
+        Button(onClick = {
+            MyApplication.getInstance().showDeferredMessage(true)
+        }) {
+            Text("Show Deferred IAM")
+        }
+    }
+}
+```
+
+!!step
+lines-MainApplication.kt=13-16
+
+#### 1. Set up a singleton instance
+
+Create a companion object to provide access to the Application instance.
+
+!!step
+lines-MainApplication.kt=25
+
+#### 2. Turn on debugging (optional)
+
+Turn on debugging while developing to make troubleshooting easier!
+
+!!step
+lines-MainApplication.kt=34-36
+
+#### 3. Register activity lifecycle callbacks
+
+Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
+
+!!step
+lines-MainApplication.kt=39-49
+
+#### 4. Set up the in-app message listener
+
+Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+
+!!step
+lines-MainApplication.kt=43,46
+
+#### 5. Control message display with `showMessage`
+
+Use the `showMessage` flag to determine whether to show the message now or later.
+
+!!step
+lines-MainApplication.kt=52-55
+
+#### 6. Create a method to show deferred messages
+
+`showDeferredMessage` will present the next IAM (the IAM at the top of the stack), and setting `showMessage` to true will make our listener return `DISPLAY_NOW`.
+
+!!step
+lines-MainActivity.kt=29
+
+#### 7. Trigger the method from your UI
+
+Restoring the message elsewhere in your app, in this case an activity with a trigger button.
+
+{% endscrolly %}
+{% endtab %}
 {% endtabs %}

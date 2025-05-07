@@ -163,34 +163,48 @@ Return `.now` to use Braze's built-in In-App Message UI.
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
+package com.example.brazedevlab
+
 import android.app.Application
 import com.braze.Braze
+import com.braze.support.BrazeLogger
+import com.braze.configuration.BrazeConfig
 import com.braze.ui.inappmessage.BrazeInAppMessageManager
+import com.braze.BrazeActivityLifecycleCallbackListener
 import com.braze.ui.inappmessage.listeners.IInAppMessageManagerListener
+import com.braze.models.inappmessage.IInAppMessage
+import com.braze.ui.inappmessage.InAppMessageOperation
+import android.util.Log
 
-class MainApplication : Application() {
+class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        
+
+        // Enable verbose Braze SDK logs
+        BrazeLogger.logLevel = Log.VERBOSE
+
         // Initialize Braze
         val brazeConfig = BrazeConfig.Builder()
             .setApiKey("YOUR-API-KEY")
             .setCustomEndpoint("YOUR-ENDPOINT")
             .build()
         Braze.configure(this, brazeConfig)
-        
+
+        registerActivityLifecycleCallbacks(
+            BrazeActivityLifecycleCallbackListener()
+        )
         // Set up in-app message listener
         BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
             override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
                 val extras = inAppMessage.extras
-                
+
                 val template = extras["custom-template"] ?: ""
                 val color = extras["custom-color"] ?: ""
                 val messageId = extras["message-id"] ?: ""
-                
+
                 // Your custom logic
                 Log.d("Braze", "Template: $template, Color: $color, ID: $messageId")
-                
+
                 // Return DISPLAY_NOW to show the message using Braze's UI
                 return InAppMessageOperation.DISPLAY_NOW
             }
@@ -199,46 +213,36 @@ class MainApplication : Application() {
 }
 ```
 
-```kotlin file=AndroidManifest.xml
-<manifest>
-    <application
-        android:name=".MainApplication"
-        ...>
-        <!-- Your other manifest entries -->
-    </application>
-</manifest>
-```
+!!step
+lines-MainApplication.kt=19
+
+#### 1. Turn on debugging (optional)
+
+Turn on debugging while developing to make troubleshooting easier!
 
 !!step
-lines-MainApplication.kt=1-4
+lines-MainApplication.kt=28-30
 
-#### 1. Set up your Application class
+#### 2. Register activity lifecycle callbacks
 
-Create a custom Application class that will initialize Braze and handle in-app messages.
-
-!!step
-lines-MainApplication.kt=8-15
-
-#### 2. Initialize Braze
-
-Configure Braze with your API key and endpoint in your Application's `onCreate()` method.
+Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
 
 !!step
-lines-MainApplication.kt=17-31
+lines-MainApplication.kt=32-46
 
 #### 3. Set up the in-app message listener
 
 Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
 
 !!step
-lines-MainApplication.kt=20-24
+lines-MainApplication.kt=34-38
 
 #### 4. Access key-value pairs from message.extras
 
 Use the extras map to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
 
 !!step
-lines-MainApplication.kt=29
+lines-MainApplication.kt=44
 
 #### 5. Choose whether to show the message
 
