@@ -2,17 +2,48 @@
 As of iOS 14, geofences do not work reliably for users who choose to only give their approximate location permission.
 {% endalert %}
 
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
 ## Setting up geofences {#setting-up-geofences}
 
-### Step 1: Enable location services
+### Step 1: Configure the Braze dashboard
+
+There are two ways to enable geofences for a particular app: from the **Locations** page or from the **App Settings** page.
+
+{% tabs local %}
+{% tab Locations %}
+Enable geofences on the **Locations** page of the dashboard.
+
+1. Go to **Audience** > **Locations**.
+2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
+3. Select the app to enable geofences. Click **Done.**
+![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+{% endtab %}
+
+{% tab App Settings %}
+Enable geofences from your app's settings.
+
+1. Go to **Settings** > **App Settings**.
+2. Select the app for which you wish to enable geofences.
+3. Select the **Geofences Enabled** checkbox. Click **Save.**
+
+![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+iOS only allows up to 20 geofences to be stored for a given app. With geofences enabled, Braze will use up some of these 20 available slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard. For our location services to work correctly, check that your app is not using all available geofence spots.
+{% endalert %}
+
+### Step 2: Enable your app's location services
 
 Braze location services [must be enabled](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) through the SDK. They are not enabled by default.
 
-### Step 2: Enable geofences
+{ TODO: Copy the content of the Tutorial, but then reference it later in this section }
 
-Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the [`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see our [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
+### Step 3: Enable geofences in your code
+
+In your app's code, enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the [`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see our [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
 {% tabs %}
 {% tab swift %}
 
@@ -54,7 +85,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-#### Step 2.1 (Optional) Enable background reporting
+#### Step 3.1 (Optional) Enable background reporting
 
 By default, geofences are only monitored if your app is in the foreground, or if it has `Always` authorization (which monitors all application states).
 
@@ -111,10 +142,6 @@ AppDelegate.braze = braze;
 {% alert important %}
 To prevent battery drain and rate limiting, configure `distanceFilter` to a value that meets your app's specific needs. Setting `distanceFilter` to a higher value prevents your app from requesting your user's location too frequently.
 {% endalert %}
-
-### Step 3: Verify background push
-
-Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ### Step 4: Update your `Info.plist`
 
@@ -178,34 +205,17 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 {% endtab %}
 {% endtabs %}
 
-### Step 6: Configure the dashboard
+### Step 6: Verify background push
 
-iOS only allows up to 20 geofences to be stored for a given app. With geofences enabled, Braze will use up some of these 20 available slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard. For our location services to work correctly, check that your app is not using all available geofence spots.
+Braze syncs geofences to devices using background push notifications. Follow these instructions to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) to ensure that you can receieve the latest geofences.
 
-There are two ways to enable geofences for a particular app: from the **Locations** page or from the **App Settings** page.
-
-{% tabs local %}
-{% tab Locations %}
-Enable geofences on the **Locations** page of the dashboard.
-
-1. Go to **Audience** > **Locations**.
-2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
-3. Select the app to enable geofences. Click **Done.**
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
-{% endtab %}
-
-{% tab App Settings %}
-Enable geofences from your app's settings.
-
-1. Go to **Settings** > **App Settings**.
-2. Select the app for which you wish to enable geofences.
-3. Select the **Geofences Enabled** checkbox. Click **Save.**
-
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
-{% endtab %}
-{% endtabs %}
+To ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications, follow the [ignoring silent push]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications) article.
 
 ## Manually request geofences {#manually-request-geofences}
+
+When the Braze SDK requests geofences from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported.
+
+To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the coordinates of a location.
 
 ### Step 1: Set `automaticGeofenceRequests` to `false`
 
@@ -241,9 +251,7 @@ AppDelegate.braze = braze;
 
 ### Step 2: Call `requestGeofences` manually
 
-When the Braze SDK requests geofences from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported.
-
-To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the latitude and longitude of a location. To do so, use the following code:
+In your code, request geofences with the appropriate latitude and longitude.
 
 {% tabs %}
 {% tab swift %}
@@ -265,13 +273,15 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-#### Why am I being rate limited when requesting geofences?
+#### Why am I being rate-limited when requesting geofences?
 
 Braze has a limit of one geofence refresh per session to avoid unnecessary requests.
 
-#### Why are my geofences with Braze not being received by my device?
+#### How does it work if I am using both Braze and non-Braze geofence features?
 
-The iOS operating system only allows a single app to store a maximum of 20 geofences. If your app also stores non-Braze geofences, there may not be space for the Braze geofences.
+The iOS operating system only allows a single app to store a maximum of 20 geofences. This means that both the Braze and non-Braze geofences share the same pool of 20 slots, managed by [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager).
+
+For instance, if your app contains 20 non-Braze geofences, there would be no storage to track any Braze geofences (and vise versa). In order to receive these new geofences, you will need to use [Apple's location APIs](https://developer.apple.com/documentation/corelocation) to stop monitoring some of the existing geofences on the device.
 
 #### Can the Geofences feature be used while a device is offline?
 
