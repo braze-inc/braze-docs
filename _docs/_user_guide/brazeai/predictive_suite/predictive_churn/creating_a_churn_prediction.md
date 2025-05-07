@@ -38,7 +38,7 @@ Churn window is the time frame in which a user performs the behavior specified t
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
-![Churn Definition where a user is considered churned if they do not start a session in 7 days][1]
+![Churn Definition where a user is considered churned if they do not start a session in 7 days]({% image_buster /assets/img/churn/churn1.png %})
 
 For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
@@ -64,7 +64,7 @@ In order to build a new prediction immediately, only a subset of Braze segmentat
 
 For a sample list of prediction audience definitions, check out our sample definitions in the following section on [Sample churn definitions](#sample-definitions).
 
-![][3]
+![]({% image_buster /assets/img/churn/churn5.png %})
 
 Just like the previous page, the bottom panel will show you the estimated number of historic users that result from your churn definition and prediction audience definition. These estimates must meet the minimum requirements shown in order to create a prediction.
 
@@ -72,7 +72,7 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh churn risk scores. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
-![Prediction Update Schedule set to daily at 5 pm.][2]
+![Prediction Update Schedule set to daily at 5 pm.]({% image_buster /assets/img/churn/churn2.png %})
 
 {% alert note %}
 Preview and demo prediction will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond weekly or monthly updates with Predictive Churn. To purchase this functionality, contact your account manager. 
@@ -103,7 +103,4 @@ For the churn definitions we outlined, there might be some corresponding predict
 
 Archived predictions will stop updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
 
-[1]: {% image_buster /assets/img/churn/churn1.png %}
-[2]: {% image_buster /assets/img/churn/churn2.png %}
-[3]: {% image_buster /assets/img/churn/churn5.png %}
 

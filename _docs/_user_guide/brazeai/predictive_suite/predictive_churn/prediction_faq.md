@@ -28,7 +28,7 @@ When building out your prediction audience to fine-tune the kind of use you want
 
 "Not enough past non-churners to reliably build the Prediction"
 
-![Prediction data requirements showing 31 past churners (meets requirement) and 0 past non-churners (below minimum). A warning message indicates not enough non-churners to build the prediction.][3]
+![Prediction data requirements showing 31 past churners (meets requirement) and 0 past non-churners (below minimum). A warning message indicates not enough non-churners to build the prediction.]({% image_buster /assets/img/churn/audience_size_error.png %})
 
 If your prediction audience definition is too strict, you might not have a large enough pool of both historic and active users to work with. To fix this, you will need to either change the number of days and type of attributes used in this definition, switch up the actions that define churn, or both. 
 
@@ -40,7 +40,7 @@ A prediction audience definition cannot exceed 100 million users. If you see a m
 
 ### Prediction has poor quality
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 If your model has a [prediction quality]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your churn and prediction audience definitions to be more specific or have different time windows. 
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product life cycle is longer than our current 60-day lookback window supports. 
@@ -54,5 +54,3 @@ The following are questions to ask yourself as you set up Predictive Churn. Mach
 - Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 60 days.
 - Have you considered times of the year that lead to atypical user behaviors such as holidays? Rapid shifts in consumer behavior will impact your predictions. 
 
-[1]: {% image_buster /assets/img/churn/churn3.png %}
-[3]: {% image_buster /assets/img/churn/audience_size_error.png %}
