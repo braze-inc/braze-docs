@@ -1,6 +1,6 @@
 ---
-nav_title: Message Copy and Segment Calculator
-article_title: SMS Message Copy and Segment Calculator
+nav_title: Billing Calculator
+article_title: SMS and RCS Billing Calculators
 page_order: 5
 description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS and RCS message copy."
 page_type: reference
@@ -13,11 +13,15 @@ channel:
 
 ---
 
-# Message copy and segment calculator
+# SMS and RCS billing calculators
 
-> SMS and RCS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages and will help prevent accidental overages.
+> At Braze, SMS messages are charged per message segment, while RCS messages are charged per message. Understanding what defines an SMS segment and the different RCS billing types will inform your understanding of how you will be billed and will help prevent accidental overages.
 
-## What is an SMS segment?
+## SMS message copy and segment calculator
+
+SMS messages are charged per message segment. Understanding how SMS messages are split is key to understanding your billing.
+
+### What is an SMS segment?
 
 The Short Messaging Service (SMS) is a standardized communication protocol that enables devices to send and receive brief text messages. It was designed to "fit in between" other signaling protocols, which is why SMS message length is limited to 160 7-bit characters, such as 1120 bits, or 140 bytes. SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split. 
 
@@ -25,7 +29,7 @@ As you create an SMS campaign or Canvas using Braze, the messages you build in t
 
 ![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
-### Segment breakdown
+#### Segment breakdown
 
 The character limit for **a stand-alone SMS segment** is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). So while a message may include several segments, if it does not exceed these concatenation limits, it will be viewed as one message, and reported as such.
 
@@ -70,7 +74,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 {% endtab %}
 {% endtabs %}
 
-## Things to keep in mind as you create your copy
+### Things to keep in mind as you create your copy
 
 - **Character limit per segment**
     - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit for a single SMS segment. For messages with more than 160 characters, all messages will be segmented with a 153 character limit.
@@ -85,7 +89,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 - **Testing**
     - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Note that test messages will count toward your message limits.
 
-## SMS segment calculator {#segment-calculator}
+### SMS segment calculator {#segment-calculator}
 ---
 
 {% alert tip %}
@@ -456,4 +460,17 @@ $('#sms_split input[name=sms_type]').change(function(e){
 
 {% endalert %}
 
----
+## RCS message calculator
+
+RCS messages are charged per message. Understanding the types of billable RCS messages is key to understanding your billing.
+
+### RCS billable message types
+
+RCS messages are billed in a few different ways. Braze currently supports two types of billing: Basic RCS and Single RCS. 
+
+- **Basic RCS messages**: Messages that are text-only and up to 160 characters in length. 
+- **Single RCS messages:** Messages that are text-only and greater than 160 characters in length OR messages with any rich element. Rich elements include images and buttons (such as suggested replies or suggested actions).
+
+The corresponding billing type will display within the RCS message composer in a label that has one of two values: **Text-only RCS** (Basic RCS) and **RCS** (Single RCS).
+
+You RCS billing type data will populate in your [Message Usage dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/), which displays your message credit consumption by specifying your credit ratio and number of message credits used. 

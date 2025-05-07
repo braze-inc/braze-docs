@@ -14,7 +14,7 @@ channel:
 
 # User retargeting
 
-> In addition to changing the user's subscription state and sending auto-responses based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
+> In addition to changing the user's subscription state and sending auto-responses based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter actions based on users who have been sent or have responded to SMS, MMS, and RCS campaigns, or further engage with users who have clicked shorted URLs.
 
 {% alert tip %}
 To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
@@ -26,20 +26,20 @@ To read more about custom keywords and how to set up two-way messaging to take a
 When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CUP. Marketers should implement the relevant filters for users’ eligibility within their Canvas and/or Campaign entry criteria.
 {% endalert %}
 
-### Filter users by SMS
+### Filter users by SMS, MMS, and RCS
 
-Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder. 
+Users can be filtered by when they last received an SMS, MMS, or RCS or if they have received an SMS, MMS, or RCS from a specific campaign. Filters can be set in the **Target Users** step of the campaign builder. 
 
-**Filter by last received SMS**<br>
+**Filter by last received SMS/MMS/RCS**<br>
 ![Segmentation filter Last Received SMS after December 8, 2020.][2]
 
-**Filter by received messages from SMS campaign**<br>
-Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
+**Filter by received messages from SMS/MMS/RCS campaign**<br>
+Filters users who have received a message from a specific campaign. With this filter, you also have the option to filter off those that have not received messages from a campaign. <br>
 ![Segmentation filter Has received message from campaign "SMS retargeting".][1]
 
-### Trigger messages as users receive SMS {#trigger-messages}
+### Trigger messages as users receive SMS, MMS, or RCS {#trigger-messages}
 
-To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS campaign you would like to use.
+To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS, MMS, or RCS campaign you would like to use.
 
 ![][3]
 
@@ -48,35 +48,35 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 Retarget users who have clicked campaigns with [advanced tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/).
 Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
 
-**Retarget users who have clicked a specific SMS Campaign**
+**Retarget users who have clicked a specific SMS, MMS, or RCS Campaign**
 1. Create a segment using the **Clicked/Opened Campaign** filter.
-2. Select **clicked sms**.
+2. Select **clicked shortened sms link**.
 3. Choose the desired campaign.
 
 ![][15]
 
 **Retarget users who have clicked a specific Canvas Step**
 1. Create a segment using the **Clicked/Opened Step** filter.
-2. Select **clicked sms**.
+2. Select **clicked shortened sms link**.
 3. Choose the desired Canvas and Canvas step.
 
 ![][16]
 
 ## Keyword category-specific retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about Global keyword categories and how to set them up, refer to [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/). 
 
 ### Filter by recency
 
-Filter for the recency of a user responding to your SMS program. This filter will evaluate the last date a user sent an inbound SMS that is within one of the keyword categories. 
+Filter for the recency of a user responding to your SMS, MMS, or RCS program. This filter will evaluate the last date a user sent an inbound message that is within one of the keyword categories. 
 
 ![Segmentation filter Last sent SMS to subscription group "Marketing SMS" with keyword "Opt-in" after August 11, 2020.][6]
 
 ### Filter by campaign or Canvas attribution
 
-Filter for users who have replied to a specific SMS campaign or Canvas component, keyword category, or tag.
+Filter for users who have replied to a specific SMS, MMS, or RCS campaign or Canvas component, keyword category, or tag.
 
-**Filter by replied to a specific campaign category**<br>
+**Filter by replied to a specific campaign with keyword category**<br>
 ![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."][12]
 
 **Filter by replied to a campaign or Canvas with a specific tag**
@@ -92,7 +92,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 When evaluating if an inbound message meets a defined trigger event, the leading and trailing spaces are removed before evaluation begins.
 
 {% alert tip %} 
-If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in any Canvas step until the next action path.
+If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) in any Canvas step until the next action path.
 {% endalert %}
 
 **Trigger by inbound keyword category**<br>
