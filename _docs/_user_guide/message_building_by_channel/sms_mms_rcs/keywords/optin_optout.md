@@ -21,14 +21,14 @@ Braze will process the following keywords automatically and update the subscript
 
 | Type | Keyword | Change |
 |-|-------|---|
-|Opt-in| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with one of these `Opt-In` keywords will result in a subscription group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. <br><br>User will receive your defined Opt-In auto response.  |
-|Opt-out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with one of these `Opt-Out` keywords will result in a subscription group state change to `unsubscribed`. Additionally, the pool of numbers associated with that subscription group will no longer be able to send an SMS message to that customer.<br><br>User will receive your defined Opt-Out auto response. |
+|Opt-in| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with one of these `Opt-In` keywords will result in a subscription group state change to `subscribed`. Additionally, the pool of senders associated with that subscription group will now be able to send an SMS, MMS, or RCS message to that customer (depending on the type of messaging the senders support). <br><br>User will receive your defined Opt-In auto response.  |
+|Opt-out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with one of these `Opt-Out` keywords will result in a subscription group state change to `unsubscribed`. Additionally, the pool of numbers associated with that subscription group will no longer be able to send messages to that customer.<br><br>User will receive your defined Opt-Out auto response. |
 | Help | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Only the **exact, single-word message** will be processed (case insensitive). Keywords such as `STOP PLEASE` will be ignored unless [fuzzy opt-out][fuzzylink] is turned on.
 
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
+If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The default response for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
 
 {% alert tip %}
 Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.

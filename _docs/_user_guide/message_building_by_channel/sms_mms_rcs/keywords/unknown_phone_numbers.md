@@ -1,21 +1,19 @@
 ---
 nav_title: Handling Unknown Phone Numbers
-article_title: Handling Unknown SMS Phone Numbers
+article_title: Handling Unknown Phone Numbers
 page_order: 4
-description: "This reference article covers how Braze processes unknown SMS phone numbers from new users."
+description: "This reference article covers how Braze processes unknown phone numbers from new users."
 page_type: reference
 channel:
   - SMS
+  - MMS
+  - RCS
   
 ---
 
 # Handling unknown phone numbers - new users
 
-> You may find that after you get SMS up and running with Braze, you receive messages from unknown users. The following steps describe how an unidentified user and number get processed.
-
-{% alert important %}
-Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) for your corresponding handling unknown phone numbers article.
-{% endalert %}
+> You may find that after you get SMS, MMS, and RCS up and running with Braze, you receive messages from unknown users. The following steps describe how an unidentified user and number get processed.
 
 ## Opt-in/out and custom keyword workflow for unknown numbers
 

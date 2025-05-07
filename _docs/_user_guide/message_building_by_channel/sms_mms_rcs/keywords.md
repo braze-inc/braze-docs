@@ -5,7 +5,7 @@ page_order: 8
 layout: dev_guide
 
 guide_top_header: "Keyword Processing"
-guide_top_text: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users can message a preset list of single-word commands that do some action, such as opting in and out of receiving SMS messages. With Braze, you can also set custom keywords and turn on fuzzy opt-out to further tailor your user journey. <br><br> These articles cover how Braze approaches keyword processing and management and some best practices."
+guide_top_text: "Keywords are a foundational aspect of automated SMS, MMS, and RCS messaging. With keywords, your users can message a preset list of single-word commands that do some action, such as opting in and out of receiving SMS, MMS, or RCS messages. With Braze, you can also set custom keywords and turn on fuzzy opt-out to further tailor your user journey. <br><br> These articles cover how Braze approaches keyword processing and management and some best practices."
 description: "This landing page includes articles relating to SMS keyword processing such as opt-in and opt-out keywords, custom keyword handling, how to handle unknown phone numbers, and fuzzy opt-out."
 
 guide_featured_title: "Section articles"

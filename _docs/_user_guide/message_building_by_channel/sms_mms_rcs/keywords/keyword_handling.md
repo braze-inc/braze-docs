@@ -2,16 +2,18 @@
 nav_title: Custom Keyword Handling
 article_title: Custom Keyword Handling
 page_order: 3
-description: "This reference article covers how Braze deals with two-way SMS and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
+description: "This reference article covers how Braze deals with two-way SMS, MMS, and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
 page_type: reference
 channel:
   - SMS
+  - MMS
+  - RCS
 
 ---
 
 # Custom keyword handling
 
-> This reference article covers how Braze deals with two-way SMS and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support.
+> This reference article covers how Braze deals with two-way SMS, MMS, and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support.
 
 ## Two-way messaging (custom keyword responses)
 
@@ -19,7 +21,7 @@ Two-way messaging allows you to send messages and process the responses to those
 
 ## Managing keywords and auto responses
 
-SMS with Braze gives you the option to create keyword triggers, custom responses, define keyword sets for multiple languages, and establish custom keyword categories. 
+SMS, MMS, and RCS with Braze gives you the option to create keyword triggers, custom responses, define keyword sets for multiple languages, and establish custom keyword categories. 
 
 {% tabs %}
 {% tab Add Keyword Triggers %}
@@ -30,8 +32,8 @@ In addition to the default opt-in and opt-out keywords, you may also define your
 
 To define your own keywords, do the following:
 
-1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select your SMS subscription group.<br><br>
-2. Under **SMS Global Keywords**, click the pencil icon next to the keyword category you want to add a keyword to. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
+1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select your subscription group.<br><br>
+2. Under **Global Keywords**, select the pencil icon next to the keyword category you want to add a keyword to. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
 3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case insensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %})
 
 The following rules apply to keywords and keyword responses:
@@ -42,7 +44,7 @@ The following rules apply to keywords and keyword responses:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) article for more information.
+Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
 {% endalert %}
 {% endtab %}
 
@@ -52,8 +54,8 @@ Interested in seeing how these keywords can be used in your campaigns and Canvas
 
 You can manage your own responses that are sent to users after they text in a keyword to a specific keyword category.
 
-1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select your SMS subscription group. <br><br>
-2. Under **SMS Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
+1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select an **SMS/MMS/RCS** subscription group. <br><br>
+2. Under **Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
 3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})<br><br>
 4. To automatically shorten static URLs in your response, select the **Link Shortening** toggle. The character counter will update to show the expected length of the shortened URL. ![A GIF showing the character counter updating when the "Link Shortening" toggle is on.]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:50%;"}
 
@@ -68,7 +70,7 @@ You can manage your own responses that are sent to users after they text in a ke
 {% endtabs %}
 
 {% alert tip %} 
-If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
+If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference SMS, MMS, or RCS properties in the first [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
 {% endalert %}
 
 ## Multi-language support
@@ -78,15 +80,15 @@ When sending to certain countries, a sender may be required to support inbound k
 
 ### Creating language-specific keywords
 
-Click **Add a Language** and select your target language or search for a language within the dropdown.
+Select **Add a Language** and select your target language or search for a language within the dropdown.
 
 {% alert important %}
-Note that other languages do not come with preset keywords and responses like English, so senders will need to work with their marketing and legal teams to add any required keywords to this set. Otherwise, Braze will not handle localized incoming messages for those languages. 
+Non-English languages do not come with preset keywords and responses, so senders will need to work with their marketing and legal teams to add any required keywords to this set. Otherwise, Braze will not handle localized incoming messages for those languages. 
 {% endalert %}
 
-If you need to delete a language, click the **Delete Language** button at the bottom right.
+If you need to delete a language, select the **Delete Language** button at the bottom right.
 
-![SMS Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.][5]
+![Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.][5]
 
 ## Custom keyword categories
 
@@ -101,7 +103,7 @@ These custom keywords operate in an "always-on" capacity, meaning that any user 
 To create a custom keyword category, do the following:
 
 1. Edit the appropriate subscription group.
-2. Click **Add custom keyword**. ![][13]{: style="max-width:90%;"}
+2. Select **Add custom keyword**. ![][13]{: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
 After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
@@ -124,14 +126,14 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 ### Dealing with unknown keywords
 
-While not required, we strongly recommend setting up an auto-response for when users send inbound SMS keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance. 
+While not required, we strongly recommend setting up an auto-response for when users send inbound keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance. 
 
-This can be done by creating an SMS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select **Action-Based Delivery** and use the trigger **Sent inbound SMS to subscription group within keyword category OTHER**.
+This can be done by creating an SMS, MMS, or RCS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select **Action-Based Delivery** and use the trigger **Sent inbound SMS to subscription group within keyword category OTHER**.
 
 ![]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) article for more information.
+Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
 {% endalert %}
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
