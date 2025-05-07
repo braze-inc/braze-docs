@@ -154,7 +154,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 {% tab Always %}
 By default, `requestAlwaysAuthorization()` only grants your app `When In Use` authorization and will re-prompt your user for `Always` authorization after some time has passed.
 
-However, you can choose to immediately prompt your user by first calling `requestWhenInUseAuthorization()`, then calling `requestAlwaysAuthorization()` after receiving your initial `When In Use` authorization.
+However, you can choose to immediately prompt your user by first calling `requestWhenInUseAuthorization()` and then calling `requestAlwaysAuthorization()` after receiving your initial `When In Use` authorization.
 
 {% alert important %}
 You can only immediately prompt for `Always` authorization a single time.
@@ -275,6 +275,6 @@ The iOS operating system only allows a single app to store a maximum of 20 geofe
 
 #### Can the Geofences feature be used while a device is offline?
 
-If the device was connected to the internet and successfully receives geofences from the server, it is possible to enter a geofence even if the device is offline. This is because a device's location operates separately from its internet connectivity.
+A device needs to be connected to the internet only when a refresh occurs. Once it has successfully received geofences from the server, it is possible to log a geofence entry or exit even if the device is offline. This is because a device's location operates separately from its internet connectivity.
 
 For example, say a device successfully received and registered geofences on session start and goes offline. If it then enters one of those registered geofences, it can trigger a Braze campaign.
