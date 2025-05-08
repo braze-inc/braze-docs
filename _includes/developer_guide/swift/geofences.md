@@ -39,7 +39,7 @@ Follow the steps below to enable location services in your app. Optionally refer
 
 #### Add the `BrazeLocation` module
 
-In the `General` tab of your `Application` configuration page, under `Frameworks and Libraries`, add the `BrazeLocation` module.
+In the `General` tab of your `Application` configuration page, under `Frameworks, Libraries, and Embedded Content`, add the `BrazeLocation` module.
 
 ![Add the BrazeLocation module in your Xcode project]({% image_buster /assets/img_archive/add-brazeLocation-module-xcode.png %})
 
@@ -304,3 +304,7 @@ For instance, if your app contains 20 non-Braze geofences, there would be no sto
 A device needs to be connected to the internet only when a refresh occurs. Once it has successfully received geofences from the server, it is possible to log a geofence entry or exit even if the device is offline. This is because a device's location operates separately from its internet connectivity.
 
 For example, say a device successfully received and registered geofences on session start and goes offline. If it then enters one of those registered geofences, it can trigger a Braze campaign.
+
+#### Why are geofences not monitored when my app is backgrounded/terminated?
+
+Without `Always` authorization, Apple restricts location services from running while an app is not in use. This is enforced by the operating system and is outside the control of the Braze SDK. While Braze offers separate configurations to run services while the app is in the background, there is no way to circumvent these restrictions for apps that are terminated without receiving explicit authorization from the user.
