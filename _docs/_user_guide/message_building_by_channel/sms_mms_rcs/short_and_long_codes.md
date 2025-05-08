@@ -7,6 +7,8 @@ description: "This article will walk you through important concepts involved in 
 page_type: reference
 channel:
   - SMS
+  - MMS
+  - RCS
 ---
 
 {% multi_lang_include archive/short_and_long_codes.md %}

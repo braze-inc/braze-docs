@@ -1,6 +1,6 @@
 # Message Usage dashboard
 
-> The Message Usage dashboard provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+> The Message Usage dashboard provides self-service insights into your SMS, RCS, and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 The **Message Usage** dashboard is divided into three sections:
 - [Credit Usage Overview](#credit-usage-overview)
@@ -27,13 +27,13 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 ![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.][1]{: style="max-width:80%;"}
 
-## SMS and MMS
+## SMS, MMS, and RCS
 
-**SMS/MMS Credits Usage** shows the usage breakdown for the SMS/MMS channel. The columns in the data table vary depending on whether SMS/MMS is a credit channel. If SMS/MMS is a credit channel, additional **Credit ratio** and **Credits** columns will be visible and indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevent, MMS consumption across the selected date range.
+**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevent, MMS consumption across the selected date range.
 
-Filters are available allowing you to filter by **Country** or **SMS type**.
+Filters are available allowing you to filter by **Country** or SMS and RCS type.
 
-![SMS/MSS Credits Usage with tiles for high-level data and a section for consumption by account.][2]{: style="max-width:80%;"}
+![SMS/MSS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.][2]{: style="max-width:80%;"}
 
 Unlike the **Message Credits Usage Overview**, this section contains historical data from prior contract periods. 
 
@@ -41,7 +41,7 @@ Unlike the **Message Credits Usage Overview**, this section contains historical 
 It’s possible to select a date range that contains both non-credits and message credits usage. In this case, the consumption that occurred outside of message credits will display `—` (null) in the **Credit ratio** and **Credits** columns.
 {% endalert %}
 
-![SMS/MMS Credits Usage table with null values.][3]{: style="max-width:80%;"}
+![SMS/MMS/RCS Credits Usage table with null values.][3]{: style="max-width:80%;"}
 
 ## WhatsApp
 

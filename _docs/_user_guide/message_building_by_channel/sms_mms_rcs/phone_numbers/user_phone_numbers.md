@@ -6,7 +6,8 @@ description: "This reference article covers SMS phone number formatting, how to 
 page_type: reference
 channel: 
   - SMS
-  
+  - MMS
+  - RCS
 ---
 
 # User phone numbers
@@ -42,9 +43,9 @@ You can see the differences between local number formatting as well as universal
 
 Phone carriers have a specific type of format they expect called `E.164` which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image, and can have a maximum of 15 digits.
 
-### Adding users to SMS subscription groups
+### Adding users to SMS and RCS subscription groups
 
-For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal requirements for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups][1]. 
+For a customer to receive an SMS or RCS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS or RCS program you are running (make sure you follow the [legal requirements for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS and RCS subscription groups][1]. 
 
 ### Handling invalid phone numbers
 
@@ -53,10 +54,10 @@ When a phone number is deemed invalid, Braze will mark the user's phone number a
 ![][picture2]{: style="max-width:50%;border: 0;"}
 
 A phone number is considered invalid for the following reasons:
-- **Provider Error**: a permanent error was received from the SMS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
+- **Provider Error**: a permanent error was received from the SMS and RCS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS or RCS messages.
 - **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user).
 
-These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
+These invalid phone numbers can be managed using [SMS and RCS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 
 {% alert note %}
 If multiple user profiles have the same phone number and that phone number is marked invalid, then all existing User Profiles with that number will display as invalid. Newly created user profiles will never initially be marked as invalid.
