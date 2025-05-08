@@ -141,7 +141,11 @@ Here are tips for troubleshooting common `5XX` errors:
 
 Braze webhooks and Connected Content employ an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
 
-In general, if the number of **failures exceeds 3,000 in any one-minute moving time window** (per unique combination of host name and app group&#8212;**not** per endpoint path), Braze temporarily will halt requests to the target host for one minute, instead simulating responses with a `598` error code to indicate the poor health. After one minute, Braze will resume requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+The detection thresholds differ between webhooks and Connected Content:
+- **For webhooks**: If the number of **failures exceeds 3,000 in any one-minute moving time window** (per unique combination of host name and app group&#8212;**not** per endpoint path), Braze temporarily will halt requests to the target host for one minute.
+- **For Connected Content**: If the number of **failures exceeds 3,000 AND the error rate exceeds 90% in any one-minute moving time window** (per unique combination of host name and app group&#8212;**not** per endpoint path), Braze temporarily will halt requests to the target host for one minute.
+
+When requests are halted, Braze simulates responses with a `598` error code to indicate the poor health. After one minute, Braze will resume requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
 
 The following error codes contribute to the unhealthy host detector failure count: `408`, `429`, `502`, `503`, `504`, `529`.
 

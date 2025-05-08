@@ -1,0 +1,152 @@
+$color_1: #222;
+$color_2: white;
+$color_3: #333;
+$color_4: #005cc5;
+$color_5: #032f62;
+$color_6: #6a737d;
+$color_7: #22863a;
+$color_8: #6f42c1;
+$font-family_1: monospace;
+
+/* Each code line is a block-level element */
+/* The overlay element that serves as the highlight */
+/* Highlight.js light theme override */
+.scrolly-container {
+  display: flex;
+}
+.scrolly-text {
+  flex: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+  scroll-margin-top: 10vh;
+  padding-bottom: 200px;
+}
+.scrolly-step {
+  background: #f9f9f9;
+  color: $color_1;
+  padding: 1rem;
+  border-radius: 0;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.scrolly-step[data-active="true"] {
+  background: #f0f7ff;
+  border: solid 0px #310c66 !important;
+  border-left-width: 5px !important;
+}
+.step-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+.scrolly-code {
+  width: 100%;
+  max-width: 700px;
+  height: 80vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 10vh;
+  align-self: flex-start;
+}
+.code-sticky {
+  position: relative;
+}
+.code-animate {
+  background: #f9f9f9;
+  padding: 1rem;
+  min-height: 400px;
+  font-family: $font-family_1;
+  white-space: pre;
+  transition: all 0.3s ease;
+  overflow-x: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  code {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+}
+pre {
+  code.hljs {
+    overflow-x: hidden;
+  }
+}
+.code-line {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+.highlight-overlay {
+  top: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgba(216, 236, 255, 0.3);
+  pointer-events: none;
+  transition: top 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+.code-blocks {
+  font-size: 14px;
+}
+.scrolly-tab {
+  background: #0d1117;
+  border: none;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  color: $color_2;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 20px;
+  i {
+    margin-right: 3px;
+  }
+}
+.scrolly-tab.scrolly-active-tab {
+  font-weight: 500;
+  background: #310c66;
+  color: $color_2;
+}
+.scrolly-tab-selector {
+  position: sticky;
+  top: 0;
+  background: #0d1116;
+  z-index: 99;
+  padding: 15px;
+  display: flex;
+  gap: 0.5rem;
+  button {
+    &:hover {
+      background: #0d1117;
+    }
+  }
+}
+.hljs {
+  background: #f9f9f9;
+  color: $color_3;
+}
+.hljs-keyword {
+  color: $color_4;
+}
+.hljs-title {
+  color: $color_4;
+}
+.hljs-built_in {
+  color: $color_4;
+}
+.hljs-string {
+  color: $color_5;
+}
+.hljs-comment {
+  color: $color_6;
+  font-style: italic;
+}
+.hljs-number {
+  color: $color_7;
+}
+.hljs-function {
+  color: $color_8;
+}

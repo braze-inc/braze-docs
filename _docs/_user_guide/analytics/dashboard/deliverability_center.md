@@ -151,7 +151,7 @@ To calculate the complaint rate, divide the number of complaints by the number o
 
 #### Spam trap hits
 
-Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to make sure that it's low, which means the messages aren't sent to these accounts and are being sent to actual accounts instead.
+Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to make sure that it's low. Low spam trap hits means the messages aren't sent to these accounts and are being sent to actual accounts instead.
 
 {% alert tip %}
 If you're looking for records related to one of your verified domains in Braze, note the Deliverability Center lists your data from Google Postmaster or Microsoft SNDS, meaning it's likely that either platform doesn't have any data to share with Braze. Alternatively, we suggest maintaining consistent email delivery as this can lead to a higher reputation. 

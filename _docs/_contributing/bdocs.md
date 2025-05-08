@@ -216,9 +216,15 @@ It should not be used to redirect URLs on an existing Braze Docs page to another
 
 `fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
 
-{% alert important %}
-To use `fblinks`, you'll need to install the dependencies using `yarn`. In the docs repository, run `brew install yarn && yarn install`. This only needs to be done a single time.
-{% endalert %}
+#### Requirements
+
+To use `fblinks`, you'll need to install the dependencies using `yarn`. This only needs to be done a single time. To install dependencies, run:
+
+```bash
+cd ~/braze-docs
+brew install node yarn
+yarn install
+```
 
 {% tabs local %}
 {% tab usage example %}
