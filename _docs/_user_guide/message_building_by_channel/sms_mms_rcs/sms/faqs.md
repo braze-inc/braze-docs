@@ -4,6 +4,7 @@ article_title: SMS FAQ
 page_order: 12
 description: "This article addresses some of the most frequently asked questions that arise when setting up SMS campaigns."
 page_type: FAQ
+alias: /sms_faq/
 channel:
   - SMS
   

@@ -4,6 +4,7 @@ article_title: MMS Short and Long Codes
 page_order: 1
 description: "This reference article covers the differences between SMS and MMS short codes and long codes."
 page_type: reference
+alias: /mms_short_long_codes/
 channel:
   - MMS
   

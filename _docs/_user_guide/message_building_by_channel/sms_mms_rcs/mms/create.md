@@ -4,6 +4,7 @@ article_title: Creating an MMS Campaign
 page_order: 2
 description: "This reference article covers the steps involved in creating, sending, and previewing an MMS message."
 page_type: reference
+alias: /create_mms_message/
 tool:
   - Campaigns
 channel:

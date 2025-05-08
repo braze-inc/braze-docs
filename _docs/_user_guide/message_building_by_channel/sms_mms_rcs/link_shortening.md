@@ -1,7 +1,7 @@
 ---
 nav_title: Link Shortening
 article_title: Link Shortening
-page_order: 5
+page_order: 3
 description: "This reference article covers how to turn on link shortening in your SMS messages and some frequently asked questions."
 page_type: reference
 alias: "/link_shortening/"

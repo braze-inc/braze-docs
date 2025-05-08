@@ -4,6 +4,7 @@ article_title: About MMS
 page_order: 0
 description: "This reference article covers what MMS messages are and general use cases for the MMS channel."
 page_type: reference
+alias: /about_mms/
 channel:
   - MMS
 search_rank: 2  

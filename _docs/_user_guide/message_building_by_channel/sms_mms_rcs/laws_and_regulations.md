@@ -1,9 +1,10 @@
 ---
 nav_title: "Laws & Regulations"
 article_title: Laws & Regulations for SMS, MMS, and RCS
-page_order: 3
+page_order: 0
 description: "This reference article covers laws and regulations surrounding SMS, MMS, and RCS."
 page_type: reference
+alias: /sms_mms_rcs_laws/
 channel:
   - SMS
   - MMS

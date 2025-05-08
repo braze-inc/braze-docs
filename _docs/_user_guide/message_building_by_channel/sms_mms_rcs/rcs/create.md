@@ -34,7 +34,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {: start="7"}
 7. Choose between SMS and RCS. Before composing RCS messages, choose the channel you send with. We generally recommend using RCS wherever possible as there are significant user engagement benefits over SMS; however, we always provide the option of sending with SMS so that you have maximum flexibility and control. 
 
-![Options to select from an RCS or SMS/MMS message type.]({% image_buster /assets/img/rcs_message_type.png %})
+![Options to select from an RCS or SMS/MMS message type.]({% image_buster /assets/img/rcs/rcs_message_type.png %})
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -65,7 +65,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Choose your RCS message type. Currently, the options are **Text** and **Media**.
 
-![Options to select from a Text or Media message type.]({% image_buster /assets/img/rcs_text_media.png %})
+![Options to select from a Text or Media message type.]({% image_buster /assets/img/rcs/rcs_text_media.png %})
 
 ### Text message type 
 
@@ -78,7 +78,7 @@ As implied by the name, RCS text messages are focused on text as a medium. If yo
     - **Suggested Replies** are buttons containing suggested responses for users to click and pre-populate in their text input, removing the friction of having to think of a response by providing a constrained set of choices for them. 
     - **Suggested Actions** are buttons that initiate an action on the user’s device. They typically consist of one of two descriptive words and a visual icon to help the user understand what the button does. Braze currently supports OpenURL Suggested Actions. This functions similarly to a URL, where users who select the button are redirected to a webpage or other URL-identified location. 
 
-![A GIF of three Suggested Actions for an RCS message promoting trending fashion styles: "Fairytale royalty", "Edgy academia", and "Show me your other styles".]({% image_buster /assets/img/rcs_suggested_actions.png %})
+![A GIF of three Suggested Actions for an RCS message promoting trending fashion styles: "Fairytale royalty", "Edgy academia", and "Show me your other styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %})
 
 #### Considerations
 
@@ -98,7 +98,7 @@ RCS media messages allow you to use engaging media formats that are not possible
 - Supports video files, including MP4, MPEG, and MV4 file formats. Video files can be added by URL directly in the message composer. 
 - Supports document files in the PDF file format. Document files can be added through the URL directly in the message composer. 
 
-![RCS composer with an option to upload a media file.]({% image_buster /assets/img/rcs_media_type.png %})
+![RCS composer with an option to upload a media file.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
 #### File specifications
 
@@ -176,7 +176,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Message composer with an icon to open the AI copywriting assistant.]({% image_buster /assets/img/rcs_ai_copywriter.png %})
+![Message composer with an icon to open the AI copywriting assistant.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %})
 
 ### Creating right-to-left messages
 

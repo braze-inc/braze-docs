@@ -4,6 +4,7 @@ article_title: Contact Cards
 page_order: 3
 description: "This reference article covers how to create a contact card to include in your MMS and SMS messages."
 page_type: reference
+alias: /mms_contact_cards/
 channel:
   - MMS
   

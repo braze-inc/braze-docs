@@ -2,9 +2,10 @@
 nav_title: "Sending Phone Numbers"
 article_title: Sending Phone Numbers
 noindex: true
-page_order: 3
+page_order: 9
 description: "This article will walk you through important concepts involved in sending phone numbers with Braze."
 page_type: reference
+alias: /sending_phone_numbers/
 channel:
   - SMS
   - MMS

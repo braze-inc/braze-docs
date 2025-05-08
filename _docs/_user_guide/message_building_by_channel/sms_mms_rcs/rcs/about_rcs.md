@@ -5,7 +5,6 @@ alias: /about_rcs/
 page_type: reference
 page_order: 0
 description: "This reference article covers how to set up and create text-only RCS messages in Braze."
-hidden: true
 ---
 
 # About Rich Communication Services (RCS)

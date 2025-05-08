@@ -4,6 +4,7 @@ article_title: MMS FAQ
 page_order: 4
 description: "This article covers some of the most frequently asked questions about MMS."
 page_type: FAQ
+alias: /mms_faq/
 channel:
   - MMS
   

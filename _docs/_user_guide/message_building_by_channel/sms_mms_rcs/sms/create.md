@@ -4,6 +4,7 @@ article_title: Creating an SMS message
 page_order: 5
 description: "This reference article covers the steps involved in building out and creating an SMS message."
 page_type: reference
+alias: /create_sms_message/
 tool:
   - Campaigns
 channel:

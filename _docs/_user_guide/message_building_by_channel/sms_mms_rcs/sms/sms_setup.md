@@ -7,6 +7,7 @@ page_order: 2
 guide_top_header: "SMS Setup"
 guide_top_text: "View the resources on this page to learn how to set up SMS with Braze."
 page_type: landing
+alias: /sms_setup/
 description: "This landing page is home to articles on SMS setup. Here, you can find resources on crafting SMS messages, SMS laws and regulations, terms to know, and more."
 channel: SMS
 

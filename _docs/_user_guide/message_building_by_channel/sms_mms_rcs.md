@@ -9,76 +9,90 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS, and RCS"
-guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS/MMS and RCS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS, MMS, and RCS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
 description: "This landing page is home to SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services). These services offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time."
 
 guide_featured_title: "General articles"
 guide_featured_list:
 - name: "Laws and Regulations"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+  link: /docs/sms_mms_rcs_laws/
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: "Subscription Group"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+- name: "Subscription Groups"
+  link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/table.svg
 - name: "Geographic Permissions"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
+  link: /docs/geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
 - name: "Link Shortening"
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
+  link: /docs/link_shortening/
   image: /assets/img/braze_icons/link-03.svg
-- name: "User Retargeting"
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
+- name: "Retargeting"
+  link: /docs/sms_mms_rcs_user_retargeting/
   image: /assets/img/braze_icons/users-01.svg
 - name: "Keyword Processing and Use Cases"
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/
+  link: /docs/keyword_processing/
   image: /assets/img/braze_icons/key-01.svg
 - name: "User Phone Numbers"
-  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
+  link: /docs/user_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Sending Phone Numbers"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
+  link: /docs/sending_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Message Copy and Segment Calculator"
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
+- name: "Reporting"
+  link: /docs/sms_mms_rcs_reporting/
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "Billing Calculators"
+  link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
+- name: "Message Usage Dashboard"
+  link: /docs/message_usage_dashboard/
+  image: /assets/img/braze_icons/file-07.svg
 
 guide_menu_title: "SMS"
 guide_menu_list:
 - name: "About SMS"
-  link: /docs/user_guide/message_building_by_channel/sms/about_sms/
+  link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "SMS Setup"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/
+  link: /docs/sms_setup/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Create an SMS Message"
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
+- name: "Creating an SMS Message"
+  link: /docs/create_sms_message/
   image: /assets/img/braze_icons/table.svg
-- name: "SMS Reporting"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "Message Usage Dashboard"
-  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/
-  image: /assets/img/braze_icons/file-07.svg
 - name: "SMS Frequently Asked Questions"
-  link: /docs/user_guide/message_building_by_channel/sms/faqs/
+  link: /docs/sms_faq/
   image: /assets/img/braze_icons/annotation-question.svg
 
-
-guide_menu_title: "MMS"
-guide_menu_list:
+guide_menu_title2: "MMS"
+guide_menu_list2:
 - name: "About MMS"
-  link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
+  link: /docs/about_mms/
   image: /assets/img/braze_icons/brush-02.svg
 - name: "MMS Short and Long Codes"
-  link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
+  link: /docs/mms_short_long_codes/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Creating an MMS Campaign"
-  link: /docs/user_guide/message_building_by_channel/sms/mms/create/
+  link: /docs/create_mms_message/
   image: /assets/img/braze_icons/table.svg
 - name: "Contact Cards"
-  link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
+  link: /docs/mms_contact_cards/
   image: /assets/img/braze_icons/user-circle.svg
 - name: "MMS Frequently Asked Questions"
-  link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
+  link: /docs/mms_faq/
+  image: /assets/img/braze_icons/annotation-question.svg
+
+guide_menu_title3: "RCS"
+guide_menu_list3:
+- name: "About RCS"
+  link: /docs/about_rcs/
+  image: /assets/img/braze_icons/brush-02.svg
+- name: "Creating an RCS Campaign"
+  link: /docs/create_rcs_message/
+  image: /assets/img/braze_icons/table.svg
+- name: "RCS Setup"
+  link: /docs/rcs_setup/
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "RCS Frequently Asked Questions"
+  link: /docs/rcs_faq/
   image: /assets/img/braze_icons/annotation-question.svg
 ---

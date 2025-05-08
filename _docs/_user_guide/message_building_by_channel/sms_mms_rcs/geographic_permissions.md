@@ -2,13 +2,13 @@
 nav_title: "Geographic Permissions"
 article_title: Geographic Permissions
 description: "This article covers the country allowlist for Geographic Permissions, which allows you to choose which countries SMS, MMS, and RCS can be delivered to."
-page_order: 4.5
+page_order: 2
 page_type: reference
 channel:
   - SMS
   - MMS
   - RCS
-alias: "/geographic_permissions/"
+alias: /geographic_permissions/
   
 ---
 
