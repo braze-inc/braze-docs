@@ -42,7 +42,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ### Étape 2 : Attribuez vos événements de conversion
 
-Mettez à jour l'**événement de conversion principal - A** pour cibler les utilisateurs de notre application (MovieCanon), et laissez l'**événement de conversion principal - B** comme valeur par défaut de tout achat.
+Mettez à jour l'**événement de conversion principal - A** pour cibler les utilisateurs de notre application (MovieCanon), et laissez l'**événement de conversion principal - B** comme valeur par défaut pour tout achat.
 
 ![" Attribuer des événements de conversion " avec un événement de conversion principal d'un utilisateur qui démarre une session dans une appli spécifique.][2]
 

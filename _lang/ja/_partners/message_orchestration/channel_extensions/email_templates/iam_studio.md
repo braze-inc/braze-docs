@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [IAM Studio](https://www.inappmessage.com) は、カスタマイズされたリッチなアプリ内エクスペリエンスを作成し、Braze を通じてそのエクスペリエンスを提供できる、ノーコードのメッセージパーソナライゼーションプラットフォームです。
 
+_この統合はIAM Studio.\*sによって維持されている。_
+
+## 統合について
+
 Braze と IAM Studio の統合により、カスタマイズ可能なアプリ内メッセージテンプレートを Braze アプリ内メッセージに簡単に挿入できます。これにより、画像の置き換え、テキストの変更、ディープリンク設定、カスタム属性、イベント設定が提供されます。IAM Studio を使用すると、メッセージの作成時間を短縮し、コンテンツ計画により多くの時間を費やすことができます。 
 
 ## 前提条件
@@ -56,7 +60,7 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 
 {% tabs ローカル %}
 {% tab フォント %}
-![Liquid を追加するオプションが表示されている IAM Studio のUI。これらの選択肢には、パーソナライズされた設定が含まれます。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+![Liquid を追加するオプションが表示されている IAM Studio のUI。これらのオプションには、パーソナライズされた文章を作成することも含まれる。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
@@ -77,6 +81,7 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 Braze に移動し、アプリ内メッセージで** HTML Input** ボックスにカスタムコードを貼り付けます。メッセージが正しく表示されていることを確認するために、メッセージをテストしてください。
 
 ![][3]{: style="max-width:85%;"}
+
 
 [1]: {% image_buster /assets/img/iam_studio/iam_template_gallery.png %}
 [2]: {% image_buster /assets/img/iam_studio/export_iam_code.png %}

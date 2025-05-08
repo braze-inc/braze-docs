@@ -48,7 +48,7 @@ Diese Ansicht bietet einen periodischen Schnappschuss der Standardattribute des 
 
 #### Anmerkungen zur Verwendung
 
-* Liefert eine Momentaufnahme der Attribute von Nutzer:innen mit einer **Verzögerung** von bis zu **8 Stunden**.
+* Liefert eine Momentaufnahme der Attribute von Nutzer:innen mit einer **Verzögerung von bis zu 8 Stunden**.
 * Gute Performance bei Abfragen, die keine Realtime-Genauigkeit erfordern.
 * Schnellere Abfrageausführung, insbesondere beim Filtern nach anderen Attributen als `USER_ID`.
 * **Einschränkung:** Die Daten sind nicht in Realtime auf dem neuesten Stand.

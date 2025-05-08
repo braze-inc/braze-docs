@@ -1,5 +1,5 @@
 ---
-nav_title: ドキュメントのフィードバック
+nav_title: アルのフィードバック
 permalink: /feedback/
 hide_toc: true
 ---

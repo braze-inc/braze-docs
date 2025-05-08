@@ -32,6 +32,9 @@ guide_featured_list:
 - name: 製品ポータル
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Braze支援
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 ## サポートされているブラウザー

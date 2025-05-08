@@ -113,7 +113,7 @@ Braze bietet auch die Möglichkeit, Nutzer:innen zu bestehenden Zielgruppen von 
 
 Sobald Sie Ihre Zielgruppe mit Criteo synchronisiert haben, starten Sie einfach das Canvas! Die neue Zielgruppe wird erstellt, und Nutzer:innen, die den Schritt Audience Sync durchlaufen, werden in diese Zielgruppe auf Criteo weitergeleitet. Wenn Ihr Canvas nachfolgende Komponenten enthält, werden Ihre Nutzer:innen zum nächsten Schritt in ihrer User Journey voranbringen.
 
-Sie können sich die Zielgruppe in Criteo ansehen, indem Sie in Ihr Ads Manager-Konto gehen und dann Segmente aus der **Bibliothek** der **Zielgruppe** in der Navigation auswählen. Auf der Seite **Segmente** sehen Sie die Größe der einzelnen Zielgruppen, nachdem sie ~1.000 erreicht haben.
+Sie können sich die Zielgruppe in Criteo ansehen, indem Sie in Ihr Ads Manager-Konto gehen und dann Segmente aus der **Bibliothek der Zielgruppe** in der Navigation auswählen. Auf der Seite **Segmente** sehen Sie die Größe der einzelnen Zielgruppen, nachdem sie ~1.000 erreicht haben.
 
 ![Die Bibliothek der Zielgruppe mit Segment, ID, Quelle, Typ, Größe, aktueller Verwendung und letztem Update.][0]
 

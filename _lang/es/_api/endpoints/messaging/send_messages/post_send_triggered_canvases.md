@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
@@ -67,14 +67,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_entry_properties`| Opcional | Objeto | Consulta [las propiedades de entrada en Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Los pares clave-valor de personalización se aplicarán a todos los usuarios de esta solicitud. El objeto Propiedades de entrada del Canvas tiene un límite de tamaño máximo de 50 KB. |
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
 |`audience`| Opcional| Objeto de audiencia conectado | Ver [Audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/). Si no se proporciona y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige el Canvas.<br><br> La matriz `recipients` puede contener hasta 50 objetos, cada uno de los cuales contiene una única cadena `external_user_id` y un objeto `canvas_entry_properties`. Para esta llamada, se requiere `external_user_id` o `user_alias`. Las solicitudes deben especificar sólo una. <br><br> Cuando `send_to_existing_only` es `true`, Braze sólo enviará el mensaje a los usuarios existentes; sin embargo, esta bandera no puede utilizarse con alias de usuario. Cuando `send_to_existing_only` es `false` y no existe un usuario con el `id` dado, Braze creará un usuario con ese ID y atributos antes de enviar el mensaje.|
+|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Si no se proporciona y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige el Canvas.<br><br> La matriz `recipients` puede contener hasta 50 objetos, cada uno de los cuales contiene una única cadena `external_user_id` y un objeto `canvas_entry_properties`. Esta llamada requiere un `external_user_id`, `user_alias`, o `email`. Las solicitudes deben especificar sólo una. <br><br>Si `email` es el identificador, debes incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) en el objeto destinatario. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Es posible que los clientes que utilicen la API para llamadas de servidor a servidor tengan que permitir la URL de API adecuada si están detrás de un cortafuegos.
-
 {% alert important %}
-Especificar un destinatario por dirección de correo electrónico está actualmente en acceso temprano. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
+Para el parámetro `recipients`, cuando `send_to_existing_only` sea `true`, Braze sólo enviará el mensaje a los usuarios existentes. Sin embargo, esta bandera no puede utilizarse con alias de usuario. <br><br>Si `send_to_existing_only` es `false`, debe incluirse un objeto de atributo. Cuando `send_to_existing_only` es `false` **y** no existe un usuario con el `id` dado, Braze creará un usuario con ese ID y atributos antes de enviar el mensaje.
 {% endalert %}
+
+Es posible que los clientes que utilicen la API para llamadas de servidor a servidor tengan que permitir la URL de API adecuada si están detrás de un cortafuegos.
 
 {% alert note %}
 Si incluyes tanto usuarios específicos en tu llamada a la API como un segmento objetivo en el panel, el mensaje se enviará específicamente a los perfiles de usuario que estén en la llamada a la API y que cumplan los requisitos para los filtros de segmento.
@@ -174,7 +174,7 @@ Si tu solicitud encuentra un error fatal, consulta [Errores y respuestas]({{site
 
 ## Objeto de atribución para Canvas
 
-Utiliza el objeto de mensajería `attributes` para añadir, crear o actualizar atributos y valores de un usuario antes de enviarle un Canvas desencadenado por la API utilizando el punto final `canvas/trigger/send`. Esta llamada a la API procesa el objeto de atributos del usuario antes de procesar y enviar el Canvas. Esto ayuda a minimizar el riesgo de problemas causados por [condiciones de carrera]({{site.baseurl}}/help/best_practices/race_conditions/). Sin embargo, por defecto, los grupos de suscripción no pueden actualizarse de esta forma.
+Utiliza el objeto de mensajería `attributes` para añadir, crear o actualizar atributos y valores de un usuario antes de enviarle un Canvas desencadenado por la API utilizando el punto final `canvas/trigger/send`. Esta llamada a la API procesa el objeto de atributos del usuario antes de procesar y enviar el Canvas. Esto ayuda a minimizar el riesgo de problemas causados por [condiciones de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/). Sin embargo, por defecto, los grupos de suscripción no pueden actualizarse de esta forma.
 
 {% alert note %}
 ¿Buscas la versión de campaña de este punto final? Consulta [Enviar mensajes de campaña utilizando la entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).

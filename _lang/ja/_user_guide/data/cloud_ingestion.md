@@ -8,12 +8,12 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Braze のクラウドデータ取り込み"
-guide_top_text: "<h2>内容</h2>Braze のクラウドデータ取り込み (CDI) では、データストレージソリューションから Braze への直接接続を設定して、関連するユーザーデータやカタログデータの同期、およびユーザーの削除ができます。Braze に同期すると、このデータをパーソナライゼーションやセグメンテーションなどのユースケースに活用できます。クラウドデータ取り込みの柔軟な連携は、階層化された JSON やオブジェクトの配列を含む複雑なデータ構造をサポートしています。<br><br>:**Braze のクラウドデータ取り込みの機能:**<br> - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな連携を直接構築できます。所要時間はわずか数分です。<br>- 属性、イベント、購入などのユーザーデータを、データウェアハウスから Braze に安全に同期します。<br>- クラウドデータ取り込みを Currents または Snowflake のデータ共有と組み合わせることで、Braze でデータループを閉じます。<br><br>:**クラウドデータ取り込みは、以下からのデータを同期できます。**<br> - アマゾン・レッドシフト<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - スノーフレーク"
+guide_top_text: "<h2>内容</h2>Braze Cloud Data Ingestion (CDI) を使用すると、データストレージソリューションから直接接続をセットアップして、関連するユーザーまたはカタログデータを同期し、ユーザーを削除することができます。Braze に同期すると、このデータをパーソナライゼーションやセグメンテーションなどのユースケースに活用できます。Cloud Data Ingestion の柔軟な統合は、ネストされたJSON やオブジェクトの配列などの複雑なデータ構造をサポートします。<br><br>:**Braze のクラウドデータ取り込みの機能:**<br> - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな連携を直接構築できます。所要時間はわずか数分です。<br>- 属性、イベント、購入などのユーザーデータを、データウェアハウスから Braze に安全に同期します。<br>- クラウドデータ取り込みを Currents または Snowflake のデータ共有と組み合わせることで、Braze でデータループを閉じます。<br><br>:**クラウドデータ取り込みは、以下からのデータを同期できます。**<br> - アマゾン・レッドシフト<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - スノーフレーク"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: 概要とベストプラクティス
-    link: /docs/user_guide/data/cloud_ingestion/
+    link: /docs/user_guide/data/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: 接続されたソース
     link: /docs/user_guide/data/cloud_ingestion/connected_sources/

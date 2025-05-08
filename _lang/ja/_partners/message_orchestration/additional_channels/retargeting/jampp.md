@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Jampp](https://www.jampp.com/) はモバイルの顧客の獲得とリターゲティングに利用されるパフォーマンスマーケティングプラットフォームです。Jampp は、行動データと予測技術やプログラム技術を組み合わせて、消費者に対して初めての購入やより頻繁な購入を促すパーソナルで関連性の高い広告を表示することで、広告主の収益を創出します。
 
+_この統合はJamppによって維持されます。_
+
+## 統合について
+
 Braze と Jampp の統合により、Braze ユーザーは Braze Webhook イベントを使用してイベントを Jampp に同期できます。その結果、お客様はモバイル広告エコシステム内で、より豊富なデータセットを各自のリターゲティングイニシアチブに追加できます。
 
 広告で顧客をリターゲティングする状況の例を以下に示します。
@@ -37,10 +41,6 @@ Braze と Jampp の統合により、Braze ユーザーは Braze Webhook イベ�
 ### ステップ1:Braze でのWebhook テンプレートの作成
 
 将来のキャンペーンs またはキャンバスで使用するJampp Webhook テンプレートを作成するには、Braze プラットフォームで**テンプレートs**>**Webhook テンプレートs** に移動します。
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 一度だけJampp Webhook キャンペーンしたい場合や、既設のテンプレートを使用したい場合は、新規キャンペーン作成時にBrazeで**Webhook**を選択してください。
 
@@ -95,6 +95,7 @@ Jampp WebhookにはHTTP メソッドとリクエストヘッダーが必要で�
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
 [2]: {% image_buster /assets/img/jampp_webhook.png %}

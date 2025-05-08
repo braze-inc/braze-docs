@@ -96,7 +96,7 @@ Nach Abschluss der Ersteinrichtung konfigurieren Sie die folgenden Einstellungen
 
 - **Enablement von Abo-Gruppen im Gruppenruf**: Aktivieren Sie diese Einstellung, um den Abo-Gruppenstatus in Ihren Gruppenereignissen zu senden. Weitere Informationen finden Sie unter [Gruppe](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group).
 - **Angepasste Attribute verwenden Operation**: Aktivieren Sie diese Einstellung, wenn Sie die [verschachtelten angepassten Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) in Braze nutzen möchten, um Segmente zu erstellen und Ihre Nachrichten mithilfe eines angepassten Attributs zu personalisieren. Weitere Informationen finden Sie unter [Senden von Nutzer:innen als verschachtelte angepasste Attribute](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
-- **Tracking von Ereignissen für anonyme Nutzer**:**innen**: Aktivieren Sie diese Einstellung, um anonyme Nutzer:in-Aktivitäten zu tracken und diese Informationen an Braze zu senden.
+- **Tracking von Ereignissen für anonyme Nutzer:innen**: Aktivieren Sie diese Einstellung, um anonyme Nutzer:in-Aktivitäten zu tracken und diese Informationen an Braze zu senden.
 
 ### Einstellungen des Gerätemodus
 
@@ -114,7 +114,7 @@ Braze unterstützt die Rudderstack-Methoden identify, track, screen, page, group
 {% tabs %}
 {% tab Identifizieren %}
 
-Die [Methode](https://rudderstack.com/docs/destinations/marketing/braze/#identify) Rudderstack [`identify` verbindet Nutzer:innen mit ihren Aktionen.](https://rudderstack.com/docs/destinations/marketing/braze/#identify)  Rudderstack erfasst eine eindeutige Nutzer:innen ID und optionale Merkmale wie Name, E-Mail, IP-Adresse, etc.
+Die Rudderstack-[Methode `identify`](https://rudderstack.com/docs/destinations/marketing/braze/#identify) verbindet Nutzer:innen mit ihren Aktionen. Rudderstack erfasst eine eindeutige Nutzer:innen ID und optionale Merkmale wie Name, E-Mail, IP-Adresse, etc.
 
 **Delta-Verwaltung für Bezeichner-Anrufe**<br>
 Wenn Sie Ereignisse über den Gerätemodus an Braze senden, können Sie Kosten sparen, indem Sie Ihre `identify` Anrufe deduplizieren. Aktivieren Sie dazu die Dashboard-Einstellung Traits deduplizieren. Rudderstack sendet dann nur die geänderten oder modifizierten Attribute (Traits) an Braze.

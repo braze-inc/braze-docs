@@ -103,8 +103,8 @@ Braze と Zendesk の間に共通の識別子がある場合は、それを `req
 - ウェブフックの名前と説明を入力する。
 - Webhookが使用するBrazeエンドポイントURLを入力する。{% raw %}この例では`https://{{instance_url}}/users/track` を使用する。{% endraw %}
 - ウェブフックのリクエスト・メソッドとしてPOSTを選択し、リクエスト・フォーマットをJSONに設定する。
-- Webhook にベアラートークン認証方式を選択し、[Braze API キー](https://www.braze.com/docs/api/basics/#creating-and-managing-rest-api-keys)を入力します。
-  - 使用する API キーに、Webhook が使用する Braze エンドポイントに対して[正しい権限](https://www.braze.com/docs/api/basics/#rest-api-key-permissions)があることを確認します。<br><br>
+- Webhook にベアラートークン認証方式を選択し、[Braze API キー]({{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys)を入力します。
+  - 使用する API キーに、Webhook が使用する Braze エンドポイントに対して[正しい権限]({{site.baseurl}}/api/basics/#rest-api-key-permissions)があることを確認します。<br><br>
 5. (推奨）Webhookをテストし、正しく動作していることを確認する。<br><br>
 6. トリガーとオートメーションのウェブフックについては、セットアップを終了する前に、ウェブフックをトリガーまたはオートメーションに接続する必要がある。Webhookのトリガーを作成する例については、次のステップを参照のこと。トリガーが作成されたら、このページに戻り、[**設定完了**] を選択します。
 

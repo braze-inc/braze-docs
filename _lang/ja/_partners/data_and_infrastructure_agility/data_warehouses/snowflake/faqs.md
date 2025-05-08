@@ -1,7 +1,7 @@
 ---
 nav_title: よくある質問
 article_title: Snowflake データシェアリングに関するよくある質問
-page_order: 4
+page_order: 50
 page_type: FAQ
 description: "この記事では、Snowflakeのデータ共有に関するよくある質問に答える。"
 

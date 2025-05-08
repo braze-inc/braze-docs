@@ -27,13 +27,13 @@ Bevor Sie beginnen, benötigen Sie Folgendes:
 
 ### Schritt 1: Erhalten Sie Ihre Contentful API-Zugangsdaten
 
-1. [Melden Sie sich](https://app.contentful.com/login) mit Ihren Zugangsdaten [bei Contentful an](https://app.contentful.com/login).
+1. [Melden Sie sich bei Contentful an](https://app.contentful.com/login), indem Sie Ihre Zugangsdaten eingeben.
 2. Erstellen oder rufen Sie API-Zugangs-Token im Contentful Dashboard unter **Einstellungen** > **API-Schlüssel** ab. Wenn Sie noch keinen API-Schlüssel haben, erstellen Sie einen neuen:<br>2.1 Wählen Sie **API-Schlüssel hinzufügen**.<br>2.2 Geben Sie die erforderlichen Details ein und wählen Sie die entsprechende Umgebung aus.<br>2.3 Wählen Sie **Speichern** und notieren Sie sich die **Space ID** und das **Content Delivery API - Zugangstoken**.
 3. Identifizieren Sie das Inhaltsmodell, auf das Sie über die Contentful API zugreifen möchten.
 
 ### Schritt 2: Konfigurieren Sie Braze Connected-Content
 
-1. [Melden Sie sich bei Braze](https://dashboard.braze.com/sign_in) mit Ihren Zugangsdaten [an](https://dashboard.braze.com/sign_in).
+1. [Melden Sie sich bei Braze an](https://dashboard.braze.com/sign_in), indem Sie Ihre Zugangsdaten eingeben.
 2. Gehen Sie im Braze-Dashboard zu **Templates** > **Content-Blöcke** > **Content-Block erstellen** > **HTML Content-Block**.
 3. Erstellen Sie eine Connected-Content-Anfrage an die Contentful [API URL für die Zustellung von Contentful-Inhalten](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links). Ein Beispiel für die Contentful Content Delivery API URL ist ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> Das Abrufen verschiedener Assets erfordert die Einbeziehung bestimmter Variablen. Die beispielhafte Connected-Content-URL-Anfrage zielt auf den Eingang-Endpunkt von Contentful [.](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console)  Dieser Endpunkt benötigt Variablen wie `{space_id}` und `{environment_id}`, oder `{entry_id}` und `{access_token}`. Diese können von Ihrer Contentful Instanz übernommen werden. In diesem Beispiel Content-Block müssen die Variablen durch Ihre Contentful Space ID und Environment ID ersetzt werden.<br><br>Die Beispiel-URL der Content Delivery API verwendet nur einen der verfügbaren Endpunkte von Contentful. Verschiedene Anwendungsfälle können durch das Nutzen verschiedener URLs erreicht werden. Die [Image API](https://www.contentful.com/developers/docs/references/images-api/) kann zum Beispiel dazu verwendet werden, in Contentful gespeicherte Bilder zu erfassen. Weitere Informationen finden Sie unter [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 

@@ -17,10 +17,6 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**カスタム属性** は**設定の管理** にあります。
-{% endalert %}
-
 ![4 つのカスタム属性 (ブール値)。]({% image_buster /assets/img/export_custom_attributes.png %})
 
 「**最終更新日**」の列には、カスタム属性が最後に編集された時間（ブロックリストやアクティブに設定された時間など）が表示される。
@@ -70,13 +66,13 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 {% details プラットフォーム別のドキュメントの拡張 %}
 
-- [Android と FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android と FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

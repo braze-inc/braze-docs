@@ -9,7 +9,7 @@ Se tal identificador não estiver disponível, a Braze atribuirá um identificad
 {% endalert %}
 
 {% alert warning %}
-Se quiser incluir um valor identificável como ID de usuário, para aumentar a segurança, é **altamente recomendável** adicionar o recurso [de autenticação do SDK]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) para evitar a simulação do usuário.
+Se quiser incluir um valor identificável como ID de usuário, para aumentar a segurança, é **altamente recomendável** adicionar o recurso de [autenticação do SDK]({{site.baseurl}}/developer_guide/authentication/) para evitar a simulação do usuário.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

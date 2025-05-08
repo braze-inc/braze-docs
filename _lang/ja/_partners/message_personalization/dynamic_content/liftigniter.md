@@ -12,6 +12,10 @@ search_tag: Partner
 
 > LiftIgniter は、業界をリードするパーソナライゼーションプラットフォームです。企業があらゆるタッチポイントでリアルタイムのパーソナライゼーションを行えるようにすることで、カスタマーエクスペリエンスの変革を支援しています。
 
+_この統合は、Liftigniterによって維持されます。_
+
+## 統合について
+
 LiftIgniterとBrazeインテグレーションは、Connected Contentを活用して、新聞記事、衣料品、他の小売 (店)アイテムや動画など、面白い話題をお勧めすることができます。
 
 ## 前提条件
@@ -40,6 +44,7 @@ LiftIgniterとBrazeインテグレーションは、Connected Contentを活用�
 このメッセージを作成画面の本文に入力すると、メッセージをプレビューできます。以下に示すように、画像を取得することもできます。
 
 ![送信後に表示されるメッセージのプレビュー画像。][2]
+
 
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}

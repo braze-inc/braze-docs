@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Zeotap](https://zeotap.com/) は、アイデンティティ解決、インサイト、データ強化を提供して、モバイルオーディエンスを発見、理解できるようにする次世代の顧客データプラットフォームです。
 
-Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze のユーザープロファイルに同期することで、キャンペーンの規模とリーチを拡大できます。[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) では、データを Zeotap に接続し、グローススタック全体で実用的なデータにすることもできます。
+Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze のユーザープロファイルに同期することで、キャンペーンの規模とリーチを拡大できます。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを Zeotap に接続し、グローススタック全体で実用的なデータにすることもできます。
 
 {% alert important %}
 カスタムHTTPコネクターは現在ベータ版である。この統合の設定に興味がある場合は、カスタマーサクセスマネージャーにご連絡ください。
@@ -22,7 +22,7 @@ Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze �
 | 必要条件 | 説明 |
 | --- | --- |
 |Zeotap アカウント | このパートナーシップを活用するには、[Zeotap アカウント](https://zeotap.com/)が必要です。 |
-| Currents | Zeotap にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) を設定する必要があります。 |
+| Currents | Zeotap にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を設定する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 実装
@@ -46,7 +46,7 @@ Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze �
 4. **認証情報**の下に、[ステップ1](#step-1-create-a-currents-source)でメモした次の情報を入力します。
 - **エンドポイント**としての API URL
 - **ベアラートークン**としての書き込みキー<br><br>![統合の詳細および認証情報を入力するセクション。][4]<br><br>
-5. Zeotapに送信したいメッセージエンゲージイベントを選択する。<br><br>![メッセージエンゲージメントイベントを選択するセクションがある [一般設定] タブ。][5]
+5. Zeotap に送信するメッセージエンゲージメントイベントを選択します。<br><br>![メッセージエンゲージメントイベントを選択するセクションがある [一般設定] タブ。][5]
 6. [**Currents を起動**] を選択して変更を保存し、イベントの Zeotap への送信を開始します。
 
 {% alert important %}

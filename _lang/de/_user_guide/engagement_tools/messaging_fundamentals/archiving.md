@@ -15,7 +15,7 @@ tool:
 
 ## Archivierung
 
-Wenn Sie eine Kampagne oder ein Canvas archivieren, werden Ihnen keine Nachrichten mehr zugestellt und Ihre In-App-Nachrichten werden nicht mehr angezeigt. Sie können die Ergebnisse auch nach der Archivierung noch einsehen, aber Sie können die Kampagne oder den Canvas nicht mehr bearbeiten. Dazu müssen Sie [die Datei](#unarchiving-campaigns-and-canvases) zunächst [entarchivieren](#unarchiving-campaigns-and-canvases).
+Wenn Sie eine Kampagne oder ein Canvas archivieren, werden Ihnen keine Nachrichten mehr zugestellt und Ihre In-App-Nachrichten werden nicht mehr angezeigt. Sie können die Ergebnisse auch nach der Archivierung noch einsehen, aber Sie können die Kampagne oder den Canvas nicht mehr bearbeiten. Dazu müssen Sie die Datei zunächst [entarchivieren](#unarchiving-campaigns-and-canvases).
 
 {% tabs local %}
 {% tab Kampagne %}

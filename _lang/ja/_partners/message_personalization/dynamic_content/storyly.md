@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Storyly](https://www.storyly.io/) は、アプリや Web サイトにストーリーをもたらす軽量 SDK です。直感的なデザインスタジオ、洞察に満ちた分析、シームレスな接続性を備えたStorylyは、視聴者の体験を豊かにする強力なツールだ。 
 
+_この統合はStorylyによって維持されている。_
+
+## 統合について
+
 Braze と Storyly の統合により、Braze のセグメントを Storyly プラットフォームでオーディエンスとして使用できます。この統合により、次のことが可能になります。
 - 特定のストーリーを持つセグメントをターゲットにする
 - ユーザー属性を使ってストーリー・コンテンツをパーソナライズする
@@ -54,5 +58,6 @@ Storylyインテグレーションがカスタムパラメータを保持して�
 次に、Braze セグメントを使用して Storyly オーディエンスを作成できます。これは、**Storylyダッシュボード > [Settings] > [Audiences] > [New Audience] > [Create Audience with Braze]** で作成できます。
 
 ここには2つの同期オプションがあります。特定のキャンペーン・ストーリーには**1回限りの同期を**、長期的なストーリーには**毎日の同期を**選択する。
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

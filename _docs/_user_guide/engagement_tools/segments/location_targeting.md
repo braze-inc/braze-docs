@@ -16,15 +16,15 @@ description: "This how-to article will walk you through how to set up Location t
 
 ## Step 1: Create your segment
 
-Navigate to the **Segments** page, under **Audience**, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
+Navigate to the **Segments** page, under **Audience**, to view all of your current user segments. On this page, you can create and name new segments. To get started, select **Create Segment** and give your segment a name.
 
-![][1]{: style="max-width:70%;"}
+![Modal to create a segment.][1]{: style="max-width:70%;"}
 
 ## Step 2: Customize your location
 
-Once you have created your segment, add a **Most Recent Location** filter to target users by the last place that they used your app. You have the option of either highlighting users in a standard circular region or a customizable polygonal region.
+After you have created your segment, add a **Most Recent Location** filter to target users by the last place that they used your app. You have the option of  highlighting users within or outside of a standard circular region or customizable polygonal region.
 
-![][2]
+![Filter for a most recent location within a circle.][2]
 
 ### Circular regions
 

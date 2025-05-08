@@ -36,6 +36,7 @@ Este punto final tiene un límite de velocidad de 250 000 solicitudes por hora.
 |`step_id`| Obligatoria | Cadena | El ID de tu paso en Canvas. |
 |`message_variation_id`| Obligatoria | Cadena | El ID de su variación de mensaje. |
 |`locale_id`| Obligatoria | Cadena | El ID de la configuración regional. |
+|`workflow_id` | Obligatoria | Cadena | ID del Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.

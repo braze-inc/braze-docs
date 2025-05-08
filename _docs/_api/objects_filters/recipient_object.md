@@ -11,7 +11,7 @@ description: "This reference article explains the different components of the Br
 
 > The recipients object allows you to request or write information in our endpoints.
 
-Either `external_user_id`, `user_alias`, or `email` is required in this object. **Requests must specify only one.**
+Either `external_user_id`, `user_alias`, `braze_id`, or `email` is required in this object. **Requests must specify only one.**
 
 The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
@@ -21,6 +21,7 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
 [{
   "user_alias": (optional, User Alias Object) User alias of user to receive message,
   "external_user_id": (optional, string) see External user ID,
+  "braze_id": (optional, string) see Braze ID,
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
@@ -30,6 +31,7 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
 
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
 
+- [Braze ID]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle)
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Prioritization]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)

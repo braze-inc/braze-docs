@@ -78,7 +78,7 @@ Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen ü
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Nachdem Sie eine Landing Page mit einem Formular erstellt haben, sollten Sie den [Liquid-Tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) der [Landing Page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) in Ihre Nachricht einbetten. Mit diesem Tag kann Braze bestehende Nutzer:innen-Profile automatisch identifizieren und aktualisieren, wenn sie das Formular abschicken.
+Nachdem Sie eine Landing Page mit einem Formular erstellt haben, sollten Sie den [Liquid-Tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) der Landing Page in Ihre Nachricht einbetten. Mit diesem Tag kann Braze bestehende Nutzer:innen-Profile automatisch identifizieren und aktualisieren, wenn sie das Formular abschicken.
 {% endalert %}
 
 #### Stile für Seitencontainer

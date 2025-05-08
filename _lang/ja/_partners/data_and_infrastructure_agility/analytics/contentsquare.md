@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Contentsquare](https://contentsquare.com/) は、カスタマーエクスペリエンスを今までにない方法で理解できるようにするデジタルエクスペリエンス分析プラットフォームです。
 
+_この統合はContentsquareによって維持されている。_
+
+## 統合について
+
 BrazeとContentsquareの統合により、Brazeのカスタムイベントとしてライブシグナル（不正行為、フラストレーションシグナルなど）を送信することができる。Contentsquareのエクスペリエンスインサイトを活用し、顧客のデジタルエクスペリエンスとボディランゲージに基づいてメッセージをターゲティングすることで、キャンペーンの関連性とコンバージョン率を向上させる。
 
 ## 前提条件
@@ -46,10 +50,7 @@ Contentsquare を Braze に統合するには、Contentsquare 統合カタログ
 
 統合が完了すると、Contentsquareのカスタムイベントがキャンペーンやキャンバスで使用できるようになる。[**Data Settings**] > [**Custom Events**] から、どのイベントが Braze に送信されているかを確認できます。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは**Manage Settings**>**Custom Events** にある。
-{% endalert %}
-
 ![Braze の [カスタムイベント] タブのContentsquare ライブシグナルデータ][1]
+
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 

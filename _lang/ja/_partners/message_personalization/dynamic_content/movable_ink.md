@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Movable Ink](https://www.movableink.com/) は、顧客に印象づける説得力のある独特なビジュアルエクスペリエンスを作成できる手段をデジタルマーケターに提供するクラウドベースのソフトウェアプラットフォームです。Movable Ink プラットフォームは、キャンペーンに簡単に挿入できる有用なカスタマイズオプションを提供します。 
 
+_この統合は、可動インクによって維持される。_
+
+## 統合について
+
 ポーリング、カウントダウンタイマー、スクラッチオフなど、Movable Ink の Intelligent Creative 機能を利用して Braze のクリエイティブ機能を拡大します。Movable Ink と Braze の統合により、動的なデータドリブン型メッセージへのよりバランスの取れたアプローチを可能にし、重要な事柄に関するリアルタイムの要素をユーザーに提供します。
 
 ## 前提条件
@@ -167,6 +171,7 @@ Braze プラットフォームで、クリエイティブなタグをメール�
 
 ### Android で GIF を表示するときに問題がありますか?
 - Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android[アプリ内メッセージ customization][GIFsupport] 記事に従ってください。
+
 
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})

@@ -14,7 +14,7 @@ description: "この記事では、配信停止になっているメールの照
 /email/unsubscribes
 {% endapimethod %}
 
-> このエンドポイントを使用して、`start_date` から `end_date` までの期間に配信停止された最新のメールを返します。完全なサブスクリプション状態の履歴については、このデータを追跡するために[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)を使用してください。
+> このエンドポイントを使用して、`start_date` から `end_date` までの期間に配信停止された最新のメールを返します。完全なサブスクリプション状態の履歴については、このデータを追跡するために[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)を使用してください。
 
 このエンドポイントを使用して、Brazeと他のメールシステムまたは独自のデータベースとの間で双方向同期を設定できます。
 

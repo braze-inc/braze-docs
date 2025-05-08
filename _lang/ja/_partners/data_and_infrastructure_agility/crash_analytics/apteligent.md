@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) は、開発者と製品マネージャーにツールとインサイトを提供するモバイルアプリケーションパフォーマンスプラットフォームです。 
 
+_この統合はApteligentによって維持されている。_
+
+## 統合について
+
 BrazeとApteligentの統合は、詳細なiOSクラッシュレポートを提供し、重要なデータを既存のBrazeソリューションに記録するだけでなく、アプリケーションのクラッシュを経験したユーザーをセグメント化し、理解し、エンゲージすることを可能にする。
 
 ## 前提条件 
@@ -55,3 +59,4 @@ Apteligent SDK は、クラッシュが発生した後、ユーザーがアプ�
 ```
 
 完了すれば、Apteligentプラットフォームにあるクラッシュ情報を使って、Brazeのセグメンテーションとエンゲージメント分析のパワーを活用できるようになる。
+

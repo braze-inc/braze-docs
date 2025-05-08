@@ -1,3 +1,13 @@
+CHANGELOGS_GLOBALCONTROLGROUP_SHARED: Global Control Group changed
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	RANDOM_BUCKET_NUMBER (NUMBER(38,0)): New random bucket number
+	GLOBAL_CONTROL_GROUP (BOOLEAN): With this change, the bucket number is included as global control group
+	PREVIOUS_GLOBAL_CONTROL_GROUP (BOOLEAN): Before this change the bucket number was included as global control group but it no longer is
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED: when a user has their first session
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -17,26 +27,6 @@ USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED: when a user has their first session
 	OS_VERSION (VARCHAR(16777216)): Version of the operating system of the device
 	DEVICE_MODEL (VARCHAR(16777216)): Model of the device
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
-
-USERS_CANVASSTEP_PROGRESSION_SHARED: Progression events for a user within a canvas
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
-	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
-	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
-	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
-	PROGRESSION_TYPE (VARCHAR(16777216)): What type of step progression event this is
-	IS_CANVAS_ENTRY (BOOLEAN): Whether this is entry into a first step in a canvas
-	EXIT_REASON (VARCHAR(16777216)): If this is an exit, the reason a user exited the canvas during the step
-	CANVAS_ENTRY_ID (VARCHAR(16777216)): Unique identifier for this instance of a user in a canvas
-	NEXT_STEP_ID (VARCHAR(16777216)): BSON ID of the next step in the canvas
-	NEXT_STEP_API_ID (VARCHAR(16777216)): API ID of the next step in the canvas
-	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED: when a user views the news feed
 	ID (VARCHAR(16777216)): Globally unique ID for this event
@@ -157,6 +147,34 @@ USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED: when a user installs an app and we at
 	SOURCE (VARCHAR(16777216)): The source of the attribution
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED: Live Activity Push To Start Token Change Events.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	ACTIVITY_ATTRIBUTES_TYPE (VARCHAR(16777216)): Live Activity attribute type
+	PUSH_TO_START_TOKEN (VARCHAR(16777216)): Live Activity push to start token
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
+	IOS_PUSH_TOKEN_APNS_GATEWAY (NUMBER(38,0)): APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production
+	PUSH_TOKEN_STATE_CHANGE_TYPE (VARCHAR(16777216)): A description of the push token state change type
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED: Live Activity Update Token Change Events.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	ACTIVITY_ID (VARCHAR(16777216)): Live Activity identifier
+	UPDATE_TOKEN (VARCHAR(16777216)): Live Activity update token
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
+	IOS_PUSH_TOKEN_APNS_GATEWAY (NUMBER(38,0)): APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production
+	PUSH_TOKEN_STATE_CHANGE_TYPE (VARCHAR(16777216)): A description of the push token state change type
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_BEHAVIORS_LOCATION_SHARED: when a user records a location
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -202,6 +220,27 @@ USERS_BEHAVIORS_PURCHASE_SHARED: when a user makes a purchase
 	AD_TRACKING_ENABLED (BOOLEAN): Whether advertising tracking is enabled for the device
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED: Push Notification Token State Change Events.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
+	PLATFORM (VARCHAR(16777216)): Platform of the device
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	PUSH_TOKEN (VARCHAR(16777216)): Push token of the event
+	PUSH_TOKEN_CREATED_AT (NUMBER(38,0)): UNIX timestamp at which the push token was created
+	PUSH_TOKEN_UPDATED_AT (NUMBER(38,0)): UNIX timestamp at which the push token was last updated
+	PUSH_TOKEN_FOREGROUND_PUSH_DISABLED (BOOLEAN): Foreground push disabled flag of the push token
+	PUSH_TOKEN_DEVICE_ID (VARCHAR(16777216)): Device id of the push token
+	PUSH_TOKEN_PROVISIONALLY_OPTED_IN (BOOLEAN): Provisionally opted in flag of the push token
+	IOS_PUSH_TOKEN_APNS_GATEWAY (NUMBER(38,0)): APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production
+	WEB_PUSH_TOKEN_PUBLIC_KEY (VARCHAR(16777216)): Public key of the push token, only applies to web push tokens
+	WEB_PUSH_TOKEN_USER_AUTH (VARCHAR(16777216)): User auth of the push token, only applies to web push tokens
+	WEB_PUSH_TOKEN_VAPID_PUBLIC_KEY (VARCHAR(16777216)): VAPID public key of the push token, only applies to web push tokens
+	PUSH_TOKEN_STATE_CHANGE_TYPE (VARCHAR(16777216)): A description of the push token state change type
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED: when a user is subscribed or unsubscribed globally from a channel such as email
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -223,6 +262,7 @@ USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED: when a user is subscribed
 	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
+	CHANNEL_IDENTIFIER (VARCHAR(16777216)): [PII] The user's identifier on the channel the event is for.
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED: when a user is subscribed or unsubscribed to/from a subscription group
@@ -249,6 +289,8 @@ USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED: when a user is subscribed 
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	STATE_CHANGE_SOURCE (VARCHAR(16777216)): Source of the state change, e.g: REST API, SDK, Dashboard, etc.
+	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	CHANNEL_IDENTIFIER (VARCHAR(16777216)): [PII] The user's identifier on the channel the event is for.
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_BEHAVIORS_UNINSTALL_SHARED: when a user uninstalls an app
@@ -401,7 +443,7 @@ USERS_CANVAS_ENTRY_SHARED: when a user enters a Canvas
 	IN_CONTROL_GROUP (BOOLEAN): Whether the user was enrolled in the control group
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of performing an event
+USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a Canvas because of matching an audience
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
@@ -414,7 +456,7 @@ USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of 
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a Canvas because of matching an audience
+USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of performing an event
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
@@ -498,6 +540,26 @@ USERS_CANVAS_REVENUE_SHARED: when a user generates revenue with in the primary c
 	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
 	REVENUE (NUMBER(38,0)): The amount of USD revenue in cents generated
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_CANVASSTEP_PROGRESSION_SHARED: Progression events for a user within a canvas
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	PROGRESSION_TYPE (VARCHAR(16777216)): What type of step progression event this is
+	IS_CANVAS_ENTRY (BOOLEAN): Whether this is entry into a first step in a canvas
+	EXIT_REASON (VARCHAR(16777216)): If this is an exit, the reason a user exited the canvas during the step
+	CANVAS_ENTRY_ID (VARCHAR(16777216)): Unique identifier for this instance of a user in a canvas
+	NEXT_STEP_ID (VARCHAR(16777216)): BSON ID of the next step in the canvas
+	NEXT_STEP_API_ID (VARCHAR(16777216)): API ID of the next step in the canvas
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_CONTENTCARD_ABORT_SHARED: An originally scheduled contentcard message was aborted for some reason.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
@@ -751,6 +813,34 @@ USERS_MESSAGES_EMAIL_CLICK_SHARED: when a user clicks a link in an email
 	IS_AMP (BOOLEAN): Indicates that this is an AMP event
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_EMAIL_DEFERRAL_SHARED: when an email deferred
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	EMAIL_ADDRESS (VARCHAR(16777216)): [PII] Email address of the user
+	RECIPIENT_DOMAIN (VARCHAR(16777216)): Receipient's email domain
+	ESP (VARCHAR(16777216)): ESP related to the event (Sparkpost or Sendgrid)
+	FROM_DOMAIN (VARCHAR(16777216)): Sending domain for the email
+	IP_POOL (VARCHAR(16777216)): IP pool from which the email send was made
+	SENDING_IP (VARCHAR(16777216)): IP address from which the email send was made
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	DEFERRAL_REASON (VARCHAR(16777216)): [PII] The SMTP reason code and user friendly message received for this deferral event
+	ATTEMPT_COUNT (NUMBER(38,0)): Number of attempts made to send the message
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_EMAIL_DELIVERY_SHARED: when an email is delivered
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -925,6 +1015,37 @@ USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED: when a user unsubscribes from email
 	IP_POOL (VARCHAR(16777216)): IP pool from which the email send was made
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED: when a user views an feature flag
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	FEATURE_FLAG_ID_NAME (VARCHAR(16777216)): The Feature Flag Rollout identifier
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	GENDER (VARCHAR(16777216)): [PII] Gender of the user
+	BROWSER (VARCHAR(16777216)): Device browser - extracted from user_agent - on which the open occurred
+	CARRIER (VARCHAR(16777216)): Carrier of the device
+	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
+	DEVICE_MODEL (VARCHAR(16777216)): Model of the device
+	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
+	OS_VERSION (VARCHAR(16777216)): Version of the operating system of the device
+	PLATFORM (VARCHAR(16777216)): Platform of the device
+	RESOLUTION (VARCHAR(16777216)): Resolution of the device
+	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED: An originally scheduled inappmessage message was aborted for some reason.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -1040,6 +1161,33 @@ USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED: when a user views an in app messa
 	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED: Live Activity Outcome Events.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	ACTIVITY_ID (VARCHAR(16777216)): Live Activity identifier
+	ACTIVITY_ATTRIBUTES_TYPE (VARCHAR(16777216)): Live Activity attribute type
+	PUSH_TO_START_TOKEN (VARCHAR(16777216)): Live Activity push to start token
+	UPDATE_TOKEN (VARCHAR(16777216)): Live Activity update token
+	LIVE_ACTIVITY_EVENT_TYPE (VARCHAR(16777216)): Event type of Live Activity. One of ['start', 'update', 'end']
+	LIVE_ACTIVITY_EVENT_OUTCOME (VARCHAR(16777216)): Outcome of Live Activity event
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED: Live Activity Send Events.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	ACTIVITY_ID (VARCHAR(16777216)): Live Activity identifier
+	ACTIVITY_ATTRIBUTES_TYPE (VARCHAR(16777216)): Live Activity attribute type
+	PUSH_TO_START_TOKEN (VARCHAR(16777216)): Live Activity push to start token
+	UPDATE_TOKEN (VARCHAR(16777216)): Live Activity update token
+	LIVE_ACTIVITY_EVENT_TYPE (VARCHAR(16777216)): Event type of Live Activity. One of ['start', 'update', 'end']
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED: An originally scheduled newsfeedcard message was aborted for some reason.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -1143,7 +1291,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED: when a push notification bounces
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	PUSH_TOKEN (VARCHAR(16777216)): Push token that we made a delivery attempt to
+	PUSH_TOKEN (VARCHAR(16777216)): Push token of the event
 	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
 	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
@@ -1279,7 +1427,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED: when we send a push notification to
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	PUSH_TOKEN (VARCHAR(16777216)): Push token that we made a delivery attempt to
+	PUSH_TOKEN (VARCHAR(16777216)): Push token of the event
 	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
 	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
@@ -1307,58 +1455,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED: when we send a push notification to
 	IS_SAMPLED (VARCHAR(16777216)): Indicates whether the push send was sampled and expected a delivery event
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_MESSAGES_WEBHOOK_ABORT_SHARED: An originally scheduled webhook message was aborted for some reason.
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
-	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
-	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
-	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
-	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
-	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
-	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
-	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
-	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
-	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
-	GENDER (VARCHAR(16777216)): [PII] Gender of the user
-	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
-	TIMEZONE (VARCHAR(16777216)): Time zone of the user
-	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
-	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
-	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
-
-USERS_MESSAGES_WEBHOOK_SEND_SHARED: when we send a webhook for a user
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
-	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
-	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
-	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
-	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
-	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
-	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
-	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
-	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
-	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
-	GENDER (VARCHAR(16777216)): [PII] Gender of the user
-	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
-	TIMEZONE (VARCHAR(16777216)): Time zone of the user
-	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
-	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
-
-USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled sms message was aborted for some reason.
+USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled SMS message was aborted.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
@@ -1376,34 +1473,6 @@ USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled sms message was aborted
 	SUBSCRIPTION_GROUP_API_ID (VARCHAR(16777216)): Subscription group API ID
 	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
-	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
-
-USERS_MESSAGES_SMS_SEND_SHARED: when a SMS message is sent
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
-	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
-	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
-	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
-	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
-	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
-	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
-	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
-	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
-	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
-	GENDER (VARCHAR(16777216)): [PII] Gender of the user
-	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
-	TIMEZONE (VARCHAR(16777216)): Time zone of the user
-	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	TO_PHONE_NUMBER (VARCHAR(16777216)): [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)
-	SUBSCRIPTION_GROUP_API_ID (VARCHAR(16777216)): Subscription group API ID
-	CATEGORY (VARCHAR(16777216)): Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value
-	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_SMS_CARRIERSEND_SHARED: when a SMS message is sent to carrier
@@ -1541,6 +1610,34 @@ USERS_MESSAGES_SMS_REJECTION_SHARED: when a SMS message is not delivered to a us
 	PROVIDER_ERROR_CODE (VARCHAR(16777216)): Error code from the SMS provider
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_SMS_SEND_SHARED: when a SMS message is sent
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	GENDER (VARCHAR(16777216)): [PII] Gender of the user
+	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
+	TO_PHONE_NUMBER (VARCHAR(16777216)): [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)
+	SUBSCRIPTION_GROUP_API_ID (VARCHAR(16777216)): Subscription group API ID
+	CATEGORY (VARCHAR(16777216)): Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value
+	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
+	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED: when a user clicks a Braze shortened URL included in an SMS message
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -1562,6 +1659,57 @@ USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED: when a user clicks a Braze shortened U
 	SHORT_URL (VARCHAR(16777216)): Shortened url that was clicked
 	USER_AGENT (VARCHAR(16777216)): User agent on which the spam report occurred
 	USER_PHONE_NUMBER (VARCHAR(16777216)): [PII] The user's phone number from which the message was received
+	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_WEBHOOK_ABORT_SHARED: An originally scheduled webhook message was aborted for some reason.
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	GENDER (VARCHAR(16777216)): [PII] Gender of the user
+	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
+	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_WEBHOOK_SEND_SHARED: when we send a webhook for a user
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	GENDER (VARCHAR(16777216)): [PII] Gender of the user
+	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
+	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WHATSAPP_ABORT_SHARED: when a scheduled WhatsApp message cannot be delivered, before sending to Meta
@@ -1588,6 +1736,29 @@ USERS_MESSAGES_WHATSAPP_ABORT_SHARED: when a scheduled WhatsApp message cannot b
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_WHATSAPP_CLICK_SHARED: when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain
+	ID (VARCHAR(16777216)): Globally unique ID for this event
+	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
+	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
+	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
+	TIMEZONE (VARCHAR(16777216)): Time zone of the user
+	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
+	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
+	URL (VARCHAR(16777216)): URL that the user clicked on
+	SHORT_URL (VARCHAR(16777216)): Shortened url that was clicked
+	USER_AGENT (VARCHAR(16777216)): User agent on which the spam report occurred
+	USER_PHONE_NUMBER (VARCHAR(16777216)): [PII] The user's phone number from which the message was received
+	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED: when a WhatsApp message is delivered to the end user
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
@@ -1609,6 +1780,7 @@ USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED: when a WhatsApp message is delivered to
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WHATSAPP_FAILURE_SHARED: when a WhatsApp message cannot be delivered, after sending to Meta
@@ -1634,6 +1806,7 @@ USERS_MESSAGES_WHATSAPP_FAILURE_SHARED: when a WhatsApp message cannot be delive
 	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	PROVIDER_ERROR_CODE (VARCHAR(16777216)): Error code from WhatsApp
 	PROVIDER_ERROR_TITLE (VARCHAR(16777216)): Description of error from WhatsApp
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED: when a WhatsApp message is received from a user
@@ -1683,6 +1856,7 @@ USERS_MESSAGES_WHATSAPP_READ_SHARED: when a WhatsApp message is read by the user
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WHATSAPP_SEND_SHARED: when a WhatsApp message is sent to Meta
@@ -1707,6 +1881,7 @@ USERS_MESSAGES_WHATSAPP_SEND_SHARED: when a WhatsApp message is sent to Meta
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	MESSAGE_EXTRAS (VARCHAR(16777216)): [PII] A JSON string of the tagged key-value pairs during liquid rendering
+	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_RANDOMBUCKETNUMBERUPDATE_SHARED: A user's current and previous random bucket number at the time it is changed
@@ -1739,47 +1914,6 @@ USERS_USERORPHAN_SHARED: when a user is orphaned, meaning the user is merged wit
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	ORPHANED_BY_ID (VARCHAR(16777216)): BSON ID of the user whose profile was merged with the orphaned user's profile
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
-
-CHANGELOGS_GLOBALCONTROLGROUP_SHARED: Global Control Group changed
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	RANDOM_BUCKET_NUMBER (NUMBER(38,0)): New random bucket number
-	GLOBAL_CONTROL_GROUP (BOOLEAN): With this change, the bucket number is included as global control group
-	PREVIOUS_GLOBAL_CONTROL_GROUP (BOOLEAN): Before this change the bucket number was included as global control group but it no longer is
-	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
-
-USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED: when a user views an feature flag
-	ID (VARCHAR(16777216)): Globally unique ID for this event
-	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
-	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
-	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
-	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
-	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
-	CANVAS_API_ID (VARCHAR(16777216)): API ID of the Canvas this event belongs to
-	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
-	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
-	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas variation this event belongs to
-	FEATURE_FLAG_ID_NAME (VARCHAR(16777216)): The Feature Flag Rollout identifier
-	MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the message variation this user received
-	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
-	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
-	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
-	GENDER (VARCHAR(16777216)): [PII] Gender of the user
-	BROWSER (VARCHAR(16777216)): Device browser - extracted from user_agent - on which the open occurred
-	CARRIER (VARCHAR(16777216)): Carrier of the device
-	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
-	DEVICE_MODEL (VARCHAR(16777216)): Model of the device
-	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	OS_VERSION (VARCHAR(16777216)): Version of the operating system of the device
-	PLATFORM (VARCHAR(16777216)): Platform of the device
-	RESOLUTION (VARCHAR(16777216)): Resolution of the device
-	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
-	TIMEZONE (VARCHAR(16777216)): Time zone of the user
-	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
-	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 CHANGELOGS_CAMPAIGN_SHARED: 
 	ID (VARCHAR(16777216))

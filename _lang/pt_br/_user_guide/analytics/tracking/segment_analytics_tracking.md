@@ -27,10 +27,6 @@ Um app pode ter o rastreamento ativado para até 25 segmentos. O Braze recomenda
 
 Acesse **Análise** **de dados** > **Relatório de receita** para visualizar os dados sobre [receita e compras ao longo do tempo para esse segmento][14].
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Revenue** em **Data**.
-{% endalert %}
-
 ![Dados de receita por segmento][17]
 
 Para comparar visualmente os dados do segmento para qualquer intervalo de tempo personalizado, adicione ou remova segmentos do gráfico. Selecione **By Segment (Por segmento** ) no menu suspenso Breakdown ( **Detalhamento** ) e, em seguida, selecione seus segmentos em **Breakdown values (Valores de detalhamento)**.
@@ -42,10 +38,6 @@ Selecione qualquer nome de segmento acima do gráfico para ativar ou desativar a
 ## Sessões ao longo do tempo
 
 Da mesma forma, você pode encontrar dados sobre [sessões ao longo do tempo para esse segmento específico][13] na página **inicial**.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta é a sua página **Overview (Visão geral** ).
-{% endalert %}
 
 ![Dados de sessão por segmento][18]
 

@@ -1,9 +1,14 @@
 ---
 nav_title: Creating Campaigns
 article_title: Creating Banner campaigns
-alias: "/create_banner/"
-description: "This reference article covers how to create and send Banners using Braze campaigns."
-page_type: reference
+description: "Learn how to create Banners when you build a campaign in Braze."
+page_order: 2
+platform:
+  - iOS
+  - Android
+  - Web
+  - Flutter
+  - React Native
 ---
 
 # Creating Banner campaigns
@@ -35,9 +40,9 @@ These are the minimum SDK versions to start using Banners:
 
 ### Step 2: Compose a message
 
-To compose your Banner, select **Edit message**. Here, you can style the card and define on-click behavior.
+To compose your Banner, select **Edit message**. Here, you can style the Banner and define on-click behavior.
 
-#### Step 2.1: Style the card {#styles}
+#### Step 2.1: Style the Banner {#styles}
 
 You can drag and drop blocks and rows into the canvas area to start building your message. To customize your message's background properties, border settings, and more, select **Styles**. If you only want to customize the style for a specific block or row, select it to make changes.
 
@@ -47,17 +52,17 @@ You can drag and drop blocks and rows into the canvas area to start building you
 
 When a customer clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your customer’s profile with custom data when they click the Banner.
 
-### Step 3: Set card priority {#set-priority}
+### Step 3: Set Banner priority {#set-priority}
 
-When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can manually set the priority to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can manually set the priority to high, medium, or low. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
-To set card priority for a card:
+To set the priority for a Banner:
 
 1. Select **Priority sorter**.
 2. Drag and drop the campaigns to order them with the correct priority.
 3. Select **Apply sort**.
 
-### Step 3: Finish building the campaign
+### Step 4: Finish building the campaign
 
 Finish building your campaign by completing the following:
 
@@ -68,6 +73,6 @@ Finish building your campaign by completing the following:
 | **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Step 4: Test and launch
+### Step 5: Test and launch
 
 After building your campaign, test and review it to make sure your campaign works as expected. When you’re ready, launch your Banner campaign!

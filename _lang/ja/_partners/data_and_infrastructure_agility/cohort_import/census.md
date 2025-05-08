@@ -44,6 +44,10 @@ Census プラットフォームで Census を統合するには、[**Connections
 Census と Braze の統合を使用する場合、Census は Braze との同期のたびに差分 (変更データ) のみを送信します。
 {% endalert %}
 
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
+
 ## ユーザーマッチング
 
 識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。

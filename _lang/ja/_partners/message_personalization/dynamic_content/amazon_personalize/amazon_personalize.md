@@ -13,6 +13,10 @@ search_tag: Partner
 -->
 > Amazon Personalizeは、Amazonの機械学習によるレコメンデーションシステムを一日中利用できるようなものだ。20年以上にわたるレコメンデーションの経験に基づき、Amazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、およびターゲットを絞ったマーケティングプロモーションを可能にすることで、顧客エンゲージメントを向上させることができる。
 
+_この統合は、Amazon Personalizeによって維持されます。_
+
+## 統合について
+
 Amazon Personalizeは、機械学習とあなたが定義したアルゴリズムを使用して、あなたのウェブサイトやアプリケーションに高品質のレコメンデーションを出力するモデルのトレーニングを支援する。これらのモデルは、ユーザーの過去の行動に基づいて推薦リストを作成し、関連性によってアイテムを並べ替え、類似性に基づいて他のアイテムを推薦することを可能にする。Amazon Personalize APIから取得したリストは、Braze Connected ContentでパーソナライズされたBrazeのレコメンデーションキャンペーンを実行するために使用できる。Amazon Personalizeと統合することで、顧客はモデルのトレーニングに使用するパラメーターを自由にコントロールし、アルゴリズムの出力を最適化するオプションのビジネス目標を定義することができる。 
 
 このリファレンス記事は、Amazon Personalizeが提供するユースケース、Amazon Personalizeが扱うデータ、サービスの設定方法、Brazeとの統合方法を理解するのに役立つ。
@@ -147,6 +151,7 @@ This seems like a great fit for you:
 タイトル、画像、URLのリンクを含めると、コンテンツカードの完成形はこのようになる：
 
 ![コネクテッド・コンテンツがメッセージ本文と「画像を追加」フィールドに追加されたキャンペーンの画像。この画像は、「ウェブURLへのリダイレクト」フィールドに追加されたコネクテッド・コンテンツ・ロジックも示しており、ユーザーをレコメンデーションURLにリンクさせている。][2]
+
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}

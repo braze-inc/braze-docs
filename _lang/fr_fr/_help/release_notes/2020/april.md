@@ -11,7 +11,7 @@ description: "Cet article contient les notes de version d’avril 2020."
 
 Movable Ink permet aux clients de Braze d’utiliser des fonctionnalités créatives intelligentes telles que des comptes à rebours, des sondages et des surfaces à gratter dans leurs campagnes de notification push, messages in-app et cartes de Contenu. L’intégration entre Movable Ink et Braze permet une approche plus complète pour les messages dynamiques axés sur les données, en offrant aux utilisateurs des éléments en temps réel sur les  choses importantes.
 
-Commencez à [intégrer Movable Ink]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/) dans vos campagnes !
+Commencez à [intégrer Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) dans vos campagnes !
 
 ## Timing intelligent
 

@@ -16,11 +16,7 @@ search_tag: Partner
 
 ### ステップ1:Brazeデータインポートキーを取得する
 
-Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Amplitude** を選択します。ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。 
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
+Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Amplitude** を選択します。ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。 
 
 生成されたら、新しいキーを作成したり、既存のキーを無効にしたりできます。データインポートキーとREST エンドポイントは、Amplitude のダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
@@ -39,9 +35,13 @@ Amplitude で [**Sources & Destinations**] > [**project name]**] > [**Destinatio
 
 コホートを作成したら、**Sync to...**を押して、これらのユーザーsをBrazeにエクスポートします。
 
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
+
 #### 同期ケイデンスの定義
 
-コホート同期は、1回限りの同期、毎日または毎時間のスケジュールされた同期、1分ごとに更新されるリアルタイム同期として設定できます。[データポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)の消費も考慮して、ビジネスニーズに適したオプションを選択してください。
+コホート同期は、1回限りの同期、毎日または毎時間のスケジュールされた同期、1分ごとに更新されるリアルタイム同期として設定できます。[データポイント]({{site.baseurl}}/user_guide/data/data_points/)の消費も考慮して、ビジネスニーズに適したオプションを選択してください。
 
 ### ステップ4:Braze でユーザーをセグメント化する
 

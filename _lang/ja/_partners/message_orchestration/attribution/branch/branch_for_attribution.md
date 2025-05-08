@@ -14,7 +14,11 @@ search_tag: Partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/) はあらゆるデバイス、チャネル、プラットフォームでの獲得、エンゲージメント、測定を支援するモバイルリンクプラットフォームで、すべてのユーザータッチポイントの一元的なビューを提供しています。
 
-Branch と Braze の統合では、堅牢なアトリビューションと[ディープリンク]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/)により、ユーザーがいつ、どこで獲得されたかを正確に把握し、ユーザーのジャーニーをパーソナライズできるようになります。
+_この統合はBranchによって維持されている。_
+
+## 統合について
+
+Branch と Braze の統合では、堅牢なアトリビューションと[ディープリンク]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/)により、ユーザーがいつ、どこで獲得されたかを正確に把握し、ユーザーのジャーニーをパーソナライズできるようになります。
 
 ## 前提条件
 
@@ -81,18 +85,14 @@ braze.deviceId { deviceId in
 
 Brazeで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Branch**] を選択します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Branch のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。<br><br>![Branch テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][4]{: style="max-width:90%;"}
 
 ### ステップ3:データフィードを設定する
 
-1. Branch の [**Exports**] セクションで [**Data Feeds**] をクリックします。
-2. [**Data Feeds Manager**] ページ上部にある [**Data Integrations**] タブをクリックします。 
+1. Branchの**Exports**セクションで、**Data Feedsを**選択する。
+2. **データフィードマネージャーページで**、ページ上部の**データ統合**タブを選択する。 
 3. 利用可能なデータパートナーのリストから Braze を選択します。 
-4. Braze のエクスポートページで、Braze のダッシュボードで確認したデータインポートキーと REST エンドポイントを入力し、[**Enable**] をクリックします。
+4. Brazeエクスポートページで、Brazeダッシュボードで見つけたデータインポートキーとRESTエンドポイントを入力し、**イネーブルメントを**選択する。
 
 ### ステップ4:統合を確認する
 
@@ -139,6 +139,7 @@ user_data_idfv={{most_recently_used_device.${id}}}
 **この推奨事項の適用は完全に任意です。**<br>
 現在、クリック追跡リンクにIDFVやGAIDなどのデバイス識別子を使用していない場合、または今後使用する予定がない場合でも、ブランチは確率的モデリングによってこれらのクリックを識別することができる。
 {% endalert %}
+
 
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhook"
 [4]: {% image_buster /assets/img/attribution/branch.png %}

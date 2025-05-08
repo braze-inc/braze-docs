@@ -22,7 +22,7 @@ Il est nécessaire de [migrer les jetons de notification push via l'API]({{site.
 
 1. Importez les jetons via l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Pour les importations de lots, nous disposons de ressources pour accélérer le processus. Contactez votre COM ou SA pour plus de détails !
 2. Si le jeton existe déjà dans Braze, il sera ignoré. Sinon, un profil anonyme sera généré.
-3. Effectuez l'assurance qualité de l'intégration "push". Assurez-vous que les étapes de la [configuration de push]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/) ont été effectuées.
+3. Effectuez l'assurance qualité de l'intégration "push". Assurez-vous que les étapes de la [configuration de push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) ont été effectuées.
 
 Si vos profils d’utilisateur et vos jetons de notification push sont stockés à des endroits distincts, nous vous recommandons d’importer des jetons de notification push de manière anonyme, puis de migration ultérieurement vos profils d’utilisateur existants. Il n’est pas nécessaire de les mapper ensemble car le SDK iOS de Braze va gérer la résolution du jeton lors de l’intégration réussie.
 

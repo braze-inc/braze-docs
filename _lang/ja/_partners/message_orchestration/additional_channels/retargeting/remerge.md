@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Remerge](https://www.remerge.io/) は、大規模なリターゲティングのための専用アプリであり、アプリのオーディエンスを効率的にセグメント化し、ユーザーをリターゲティングするツールを備えています。
 
+_この統合はRemergeによって維持されている。_
+
+## 統合について
+
 Braze と Remerge の統合により、ユーザーデータを Webhook イベント経由で Remerge に送信し、モバイルデマンドサイドプラットフォームでユーザーのリターゲティングを支援することで、堅牢なクロスチャネルのライフサイクルマーケティングキャンペーンを開発できます。
 
 ## 前提条件
@@ -30,10 +34,6 @@ Braze と Remerge の統合により、ユーザーデータを Webhook イベ�
 ### ステップ1:BrazeのWebhookテンプレートを作成する
 
 今後のキャンペーンまたはキャンバス用の Remerge Ｗebhook テンプレートを作成するには、Braze プラットフォームの [**テンプレート**] > [**Webhook テンプレート**] に移動します。 
-
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
 
 単発のRemergeウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
@@ -89,6 +89,7 @@ RemergeウェブフックはHTTPメソッドとリクエストヘッダを必要
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
+
 
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API

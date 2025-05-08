@@ -50,7 +50,7 @@ BrazeとZoetap Symphonyの統合により、リアルタイムのオーケスト
 
 ## Brazeへのデータフローとサポートされる識別子
 
-データはZeotapから[ユーザートラック](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)APIを使ってBrazeに流れる。データの流れをまとめると以下のようになる：
+データは、[`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を使用してZeotap からBraze に流れます。以下のポイントは、データフローをまとめたものです。
 
 1. Zeotapはユーザープロファイル属性、カスタム属性、カスタムイベント、購入フィールドを送信する。
 2. 関連するすべての Zeotap Catalogue フィールドを、[**Data To Send**] タブの Braze フィールドにマッピングします。
@@ -64,7 +64,7 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 
 #### 新しい宛先を追加する
 新しい宛先を追加するには、次の手順を実行します。
-1. [**Add New Destination**] をクリックします。
+1. **Add New Destination**を選択します。
 2. **Braze** を検索します。
 3. [**Client Name**]、[**API Key**]、および [**Instance**] を追加し、宛先を保存します。
 
@@ -94,13 +94,13 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 | 名 | 静的マッピング | これは、Zeotap Catalogueの`First Name` にマッピングされます。 |
 | 姓 | 静的マッピング | これは、Zeotap Catalogueの`Last Name` にマッピングされます。 |
 | 性別 | 静的マッピング | これは、Zeotap Catalogueの`Gender` にマッピングされます。 |
-| カスタムイベント名 | 静的マッピング | これは、Zeotap Catalogueの`Event Name` にマッピングされます。<br><br>Braze でカスタムイベントをキャプチャするため、カスタムイベント名とカスタムイベントタイムスタンプをマッピングする必要があります。どちらかがマッピングされていないと、カスタムイベントは処理できない。詳細については、「[イベントオブジェクト](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object)」を参照してください。 |
-| カスタムイベントタイムスタンプ | 静的マッピング | これは、Zeotap Catalogueの`Event Timestamp` にマッピングされます。<br><br>Braze でカスタムイベントをキャプチャするため、カスタムイベント名とカスタムイベントタイムスタンプをマッピングする必要があります。どちらかがマッピングされていないと、カスタムイベントは処理できない。詳細については、「[イベントオブジェクト](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object)」を参照してください。 |
+| カスタムイベント名 | 静的マッピング | これは、Zeotap Catalogueの`Event Name` にマッピングされます。<br><br>Braze でカスタムイベントをキャプチャするため、カスタムイベント名とカスタムイベントタイムスタンプをマッピングする必要があります。どちらかがマッピングされていないと、カスタムイベントは処理できない。詳細については、「[イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object#what-is-the-event-object)」を参照してください。 |
+| カスタムイベントタイムスタンプ | 静的マッピング | これは、Zeotap Catalogueの`Event Timestamp` にマッピングされます。<br><br>Braze でカスタムイベントをキャプチャするため、カスタムイベント名とカスタムイベントタイムスタンプをマッピングする必要があります。どちらかがマッピングされていないと、カスタムイベントは処理できない。詳細については、「[イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object#what-is-the-event-object)」を参照してください。 |
 | メール購読 | ドロップダウン選択 | `Email Marketing Preference` フィールドを登録してそれにマッピングします。<br><br>Zeotap は次の3つの値を送信します。<br>• `opted_in` - ユーザーがメールマーケティング設定を明示的に登録していることを示します。<br>• `unsubscribed` - ユーザーがメールメッセージを明示的にオプトアウトしたことを示します。<br>• `subscribed` - ユーザーがオプトインもオプトアウトもしていないことを示します。 |
 | プッシュサブスクライブ | ドロップダウン選択 | `Push Marketing Preference` フィールドを登録してそれにマッピングします。<br><br>Zeotap は次の3つの値を送信します。<br>• `opted_in` - ユーザーがプッシュマーケティング設定を明示的に登録していることを示します。<br>• `unsubscribed` - ユーザーがプッシュメッセージを明示的にオプトアウトしたことを示します。<br>• `subscribed` - ユーザーがオプトインもオプトアウトもしていないことを示します。 |
 | メール開封追跡が有効 | ドロップダウン選択 | 該当する`Marketing Preference` フィールドをマッピングする。<br><br>trueに設定すると、今後このユーザーに送信されるすべてのEメールに開封トラッキングピクセルを追加できるようになる。 |
 | 電子メールのクリック追跡を有効にする | ドロップダウン選択 | 該当する`Marketing Preference` フィールドをマッピングする。<br><br>trueに設定すると、このユーザーに今後送信されるすべてのメール内のすべてのリンクのクリックトラッキングを有効にする。 |
-| プロダクトID | ドロップダウン選択 | • 購入アクションの ID `(Product Name/Product Category)`。詳細については、「[購入オブジェクト](https://www.braze.com/docs/api/objects_filters/purchase_object/)」を参照してください。<br>• 関連する属性を Zeotap Catalogue に登録してそれにマッピングします。<br><br>Braze で購入イベントをキャプチャするには、`Product ID`、`Currency`、および`Price` を必ずマッピングする必要があります。この3つのいずれかが欠落している場合、購入イベントは成立しません。詳細については、「[購入オブジェクト](https://www.braze.com/docs/api/objects_filters/purchase_object/#purchase-object)」を参照してください。 |
+| プロダクトID | ドロップダウン選択 | • 購入アクションの ID `(Product Name/Product Category)`。詳細については、「[購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)」を参照してください。<br>• 関連する属性を Zeotap Catalogue に登録してそれにマッピングします。<br><br>Braze で購入イベントをキャプチャするには、`Product ID`、`Currency`、および`Price` を必ずマッピングする必要があります。この3つのいずれかが欠落している場合、購入イベントは成立しません。詳細については、「[購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-object)」を参照してください。 |
 | 通貨 | ドロップダウン選択 | \- 購入アクションの通貨属性。<br>\- サポートされているフォーマットは`ISO 4217 Alphabetic Currency Code` です。<br>\- 正しい形式の通貨データを Zeotap Catalogue に登録してそれにマッピングします。<br><br>Braze で購入イベントをキャプチャするには、`Product ID`、`Currency`、および`Price` を必ずマッピングする必要があります。この3つのいずれかが欠落している場合、購入イベントは成立しません。 |
 | 価格 | ドロップダウン選択 | \- 購入アクションの価格属性。<br>• 関連する属性を Zeotap Catalogue に登録してそれにマッピングします。<br><br>Braze で購入イベントをキャプチャするには、`Product ID`、`Currency`、および`Price` を必ずマッピングする必要があります。この3つのいずれかが欠落している場合、購入イベントは成立しません。 |
 | 数量 | ドロップダウン選択 | \- 購入アクションの数量属性。<br>• 関連する属性を Zeotap Catalogue に登録してそれにマッピングします。 |

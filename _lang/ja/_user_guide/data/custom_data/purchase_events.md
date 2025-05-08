@@ -19,13 +19,13 @@ search_rank: 3
 
 以下に、購入をログ記録するために使用されるさまざまなプラットフォームでの方法を示します。これらのページには、購入イベントにプロパティと数量を追加する方法に関するドキュメントもあります。これらのプロパティに基づいて、さらにユーザーのターゲットを絞り込むことができます。
 
-- [Android と FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android と FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## 購入データの表示
 
@@ -131,19 +131,19 @@ Braze はセグメンテーション用に購入指標を追跡するだけで�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">ユーザーあたりの生涯価値</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザあたりの寿命値' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='平均日割り売上' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">日割り購入数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='日割り購入数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">ユーザーあたりの日割り収益</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー1人あたりの日次収益' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -256,10 +256,6 @@ Brazeでは、購入オブジェクト`product_id`の一般的な命名規則を
 たまに、購入イベントについて、データポイントの消費量が多いもの、マーケティング戦略に不要になったもの、または誤って記録されたものが見つかることがあります。開発チームがアプリや Web サイトのバックエンドからこのデータを削除する作業をしている間、このデータが Braze に送信されないようにするために、カスタムデータオブジェクトを禁止リストに入れておくことができます。
 
 Braze ダッシュボードでは、[**データ設定**] > [**製品**] から禁止リストを管理できます。詳細については、「[カスタムデータの管理]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)」を参照してください。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**製品**の下に**設定の管理**があります。
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

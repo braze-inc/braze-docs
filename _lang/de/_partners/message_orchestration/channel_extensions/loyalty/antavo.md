@@ -54,7 +54,7 @@ So konfigurieren Sie die Abbildung von Feldern in Antavo:
 3. Geben Sie das **Remote-Feld** ein, das das entsprechende angepasste Attribut in Braze darstellt, in das die Daten eingefügt werden sollen.  
 
 {% alert note %}
-Sie finden Ihre Liste der angepassten Attribute in Braze unter **Dateneinstellungen** > Angepasste Attribute. Wenn das Feld, das Sie eingeben, nicht in Braze definiert ist, wird bei der ersten Synchronisierung automatisch ein neues Feld erzeugt.
+Sie finden Ihre Liste der angepassten Attribute in Braze unter **Dateneinstellungen** > **Angepasste Attribute**. Wenn das Feld, das Sie eingeben, nicht in Braze definiert ist, wird bei der ersten Synchronisierung automatisch ein neues Feld erzeugt.
 {% endalert %}
 
 {:start="4"}

@@ -1,21 +1,21 @@
 ---
-nav_title: "COLOCAR: Actualizar Artículo del Catálogo"
-article_title: "COLOCAR: Actualizar Artículo del Catálogo"
+nav_title: "COLOCAR: Sustituir artículo del catálogo"
+article_title: "COLOCAR: Sustituir artículo del catálogo"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Actualizar elemento del catálogo de Braze."
+description: "En este artículo se describen los detalles del punto final Braze Reemplazar elemento de catálogo."
 
 ---
 {% api %}
-# Actualizar elemento del catálogo
+# Sustituir artículo del catálogo
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar un elemento de tu catálogo.
+> Utiliza este punto final para sustituir un elemento de tu catálogo.
 
 Si no se encuentra `item_id`, este punto final creará el elemento en tu catálogo. Este punto final es síncrono.
 

@@ -11,9 +11,9 @@ description: "This landing page includes all Braze partners. Use it to explore t
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
 - name: Passkit
@@ -107,7 +107,7 @@ valid_partner_list:
 - name: Playable
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
-  url: /docs/partners/message_personalization/dynamic_content/movable_ink/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink
 - name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
@@ -175,7 +175,7 @@ valid_partner_list:
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
 - name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/offerfit/
+  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
@@ -205,7 +205,7 @@ valid_partner_list:
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
 - name: Dynamic Yield
-  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: ThoughtSpot
@@ -217,7 +217,7 @@ valid_partner_list:
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
-  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Sisu
@@ -291,13 +291,13 @@ valid_partner_list:
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+  url: /docs/partners/treasure_data/
 - name: Future Anthem
-  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+  url: /docs/partners/future_anthem
 - name: LiveRamp
-  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+  url: /docs/partners/liveramp/
 - name: Inbox Monster
-  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+  url: /docs/partners/inbox_monster/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
@@ -337,11 +337,13 @@ valid_partner_list:
 - name: TikTok
   url: /docs/partners/canvas_steps/tiktok_audience_sync/
 - name: Trustpilot
-  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+  url: /docs/partners/trustpilot/
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessionM
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Just Words
+  url: /docs/partners/just_words/
 ---

@@ -14,10 +14,6 @@ channel:
 
 Allez dans **Modèles** > **Modèles de messages in-app.**
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Modèles et médias.**
-{% endalert %}
-
 À partir de cette page, vous pouvez soit modifier les modèles existants, soit cliquer sur **\+ Créer** et choisir **Profil de couleur** ou **Modèle CSS** pour créer de nouveaux modèles à utiliser dans vos messages in-app.
 
 ## Profil de couleur

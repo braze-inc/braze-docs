@@ -48,7 +48,7 @@ Wenn Sie bereits Kund:in von Braze sind und über aktive Kampagnen oder Canvase 
 
 Nachdem die Integration in Betrieb genommen wurde, wird Braze über die Shopify-Integration Nutzerdaten aus zwei wichtigen Quellen sammeln:
 - **Shopify Internet Pixel API und App-Einbettungen:** Das Braze Web SDK und das Javascript SDK unterstützen das Tracking vor Ort, das Identitätsmanagement, die Verhaltensdaten im E-Commerce und leistungsstarke Messaging-Kanäle wie In-App-Nachrichten.
-- **Shopify Webhooks:** E-Commerce Verhaltensdaten, Produkt-Synchronisation und Abonnent**:** innen-Datenerfassung
+- **Shopify Webhooks:** E-Commerce Verhaltensdaten, Produkt-Synchronisation und Abonnent: innen-Datenerfassung
 
 Beim Onboarding der Integration müssen Sie auswählen, wann die Braze SDKs initialisiert und Ihre Shopify-Website geladen werden soll: 
 - Beim Besuch vor Ort (z.B. bei Beginn der Sitzung)

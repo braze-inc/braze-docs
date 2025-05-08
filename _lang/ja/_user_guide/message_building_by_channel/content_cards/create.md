@@ -24,13 +24,8 @@ search_rank: 3.9
 {% tab キャンペーン %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
-{% endalert %}
-
-{:start="2"}
-2\.**Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
-3\.キャンペーンに、明確で意味のある名前を付けます。
+2. **Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
 4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。たとえば、[Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)を使用する場合、関連するタグでフィルタリングできます。
 5. キャンペーンに必要な数のバリアントを追加し、名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。バリアントの詳細については、[多変量およびA/B 検定]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を参照してください。
@@ -83,7 +78,7 @@ search_rank: 3.9
 
 ##### 右から左へのメッセージを作成する
 
-右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)を参照してください。
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 #### タイトルとメッセージ
 
@@ -158,7 +153,7 @@ search_rank: 3.9
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 
@@ -213,7 +208,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ### 開始済みのカードの更新
 
-コンテンツカードの送信後は編集できません。送信済みのカードを変更する必要がある場合は、次のオプションに示すように、[キャンペーンの再適格性]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) を使用することを検討してください。
+コンテンツカードの送信後は編集できません。送信済みのカードを変更する必要がある場合は、次のオプションに示すように、[キャンペーンの再適格性]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) を使用することを検討してください。
 
 {% alert note %}
 コンテンツカードが再利用可能になると、オリジナルのカードがユーザーのアプリにまだ入っているときに、再度送信される場合があります。ユーザーのアプリでカードが重複しないようにするには、再適格を無効にするか、再適格期間を延長して、ユーザーがオリジナルの有効期限が切れるまで新しいカードを送信しないようにすることができます。

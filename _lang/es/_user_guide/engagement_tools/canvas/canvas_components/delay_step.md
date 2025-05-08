@@ -32,6 +32,12 @@ Los retrasos personalizados y los retrasos ampliados están en acceso temprano. 
 
 Selecciona el alternador **Personalizar retraso** para establecer un retraso personalizado para tus usuarios. Puedes utilizarlo con un [paso Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para seleccionar la variable contextual por la que retrasar.
 
+Braze saldrá de un usuario en el paso si:
+
+- La variable de contexto no vuelve a ningún valor.
+- Falla una llamada de Contenido conectado incrustado.
+- Los tipos de variables de contexto no coinciden.
+
 Supongamos que queremos recordar a nuestros clientes que compren pasta de dientes dentro de 30 días. Utilizando una combinación de un paso Contexto y un paso Retraso, podemos seleccionar esta variable de contexto para retrasarla. En este caso, nuestro paso Contexto tendría los siguientes campos:
 
 - **Nombre de la variable contextual:** intervalo_recordatorio_producto

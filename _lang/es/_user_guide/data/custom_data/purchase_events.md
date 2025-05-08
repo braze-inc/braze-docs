@@ -19,13 +19,13 @@ Puedes registrar las compras pasando un [objeto de compra]({{site.baseurl}}/api/
 
 A continuación se enumeran los métodos utilizados en diversas plataformas para registrar las compras. En estas páginas también encontrarás documentación sobre cómo añadir propiedades y cantidades a tu evento de compra. En función de estas propiedades, puede segmentar aún más a sus usuarios.
 
-- [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android y FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Ver datos de compra
 
@@ -127,23 +127,23 @@ Puedes encontrar estos datos en la página [Informe de ingresos]({{site.baseurl}
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Ingresos del ciclo de vida</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos de toda la vida' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de duración del ciclo de vida por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Valor de duración del ciclo de vida por usuario' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Ingresos medios diarios</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos medios diarios' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">Compras diarias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Compras diarias' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Ingresos diarios por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Ingresos diarios por usuario' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -256,10 +256,6 @@ Esto ayuda a que los productos sean fáciles de identificar para su segmentació
 Es posible que en ocasiones identifique eventos de compra que consumen demasiados puntos de datos, que ya no son útiles para su estrategia de marketing o que se registraron por error. Para impedir que estos datos se envíen a Braze, puede bloquear el objeto de datos personalizados mientras su equipo de ingeniería trabaja para eliminarlo del backend de su aplicación o sitio web.
 
 En el panel de control de Braze, puede gestionar las listas de bloqueo desde **Configuración de datos** > **Productos**. Consulte la sección [Gestión de datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para obtener más información.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Productos** en **Administrar configuración**.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

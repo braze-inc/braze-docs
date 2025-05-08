@@ -11,7 +11,7 @@ page_order: 2
 
 # Einrichten von Shopify in Braze
 
-> In diesem Artikel erfahren Sie, wie Sie die Integration von Shopify mit Braze abschließen. Folgen Sie diesen Anweisungen, nachdem Sie [das Braze Web SDK]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) auf Ihrer Shopify Website [implementiert]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) haben.
+> In diesem Artikel erfahren Sie, wie Sie die Integration von Shopify mit Braze abschließen. Folgen Sie diesen Anweisungen, nachdem Sie auf Ihrer Shopify Website [das Braze Web SDK implementiert]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) haben.
 
 ## Shopify Integration in Braze einrichten
 
@@ -71,7 +71,7 @@ Damit der Backfill die Ereignisse "Order Created" und "Braze Purchase Event" imp
 
 ### Schritt 3: Abonnent:innen sammeln (optional)
 
-Mit der Shopify Integration können Sie E-Mails und SMS Abonnent:innen aus Ihrem Shopify Shop an Braze weiterleiten. Weitere Informationen finden Sie unter [Synchronisierung von Shopify Abonnent]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/#syncing-shopify-subscribers): [innen]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/#syncing-shopify-subscribers).
+Mit der Shopify Integration können Sie E-Mails und SMS Abonnent:innen aus Ihrem Shopify Shop an Braze weiterleiten. Weitere Informationen finden Sie unter [Synchronisierung von Shopify Abonnent:innen]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/#syncing-shopify-subscribers).
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_3_email.png %}){: style="max-width:70%"}
 

@@ -58,7 +58,7 @@ Stellen Sie sicher, dass das Feld Braze `external_id` dem Primärschlüssel in I
 
 Abschnitt **Eigenschaften des Datensatzes senden**: Eine Liste der voreingestellten Felder des Nutzerprofils, die für die Abbildung von Daten zur Verfügung stehen. Jede dieser Eigenschaften kann mit Eigenschaften von Grouparoo synchronisiert werden.
 
-**Optionaler** Abschnitt **Braze Benutzerprofil Felder**: Erstellen Sie optional angepasste Braze Nutzerprofil-Felder. Wenn Sie auf **Neues Nutzerprofilfeld hinzufügen** klicken, werden alle verfügbaren Eigenschaften angezeigt, die Sie Braze zuordnen können. Der Name jedes neuen Feldes, das Sie erstellen, ist derselbe wie die Eigenschaft Grouparoo, kann aber umbenannt werden.
+Abschnitt **Optionale Braze Benutzerprofil Felder**: Erstellen Sie optional angepasste Braze Nutzerprofil-Felder. Wenn Sie auf **Neues Nutzerprofilfeld hinzufügen** klicken, werden alle verfügbaren Eigenschaften angezeigt, die Sie Braze zuordnen können. Der Name jedes neuen Feldes, das Sie erstellen, ist derselbe wie die Eigenschaft Grouparoo, kann aber umbenannt werden.
 
 #### Grouparoo Gruppen
 

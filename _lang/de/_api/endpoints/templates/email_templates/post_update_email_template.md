@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update E-Mail 
 
 > Verwenden Sie diesen Endpunkt, um E-Mail Templates auf dem Braze-Dashboard zu aktualisieren.
 
-Sie können auf die `email_template_id` einer E-Mail-Vorlage zugreifen, indem Sie auf der **Seite Templates und Medien** zu ihr navigieren **.**  Der [Endpunkt E-Mail-Vorlage erstellen]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) gibt auch eine `email_template_id` Referenz zurück.
+Sie können auf die `email_template_id` einer E-Mail-Vorlage zugreifen, indem Sie auf der Seite **Templates und Medien** zu ihr navigieren.  Der [Endpunkt E-Mail-Vorlage erstellen]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) gibt auch eine `email_template_id` Referenz zurück.
 
 Alle Felder außer `email_template_id` sind optional, aber Sie müssen mindestens ein Feld zum Aktualisieren angeben.
 
@@ -53,7 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`email_template_id`| Erforderlich |String|[Der API Bezeichner]({{site.baseurl}}/api/identifier_types/) Ihres [E-Mail Templates.]({{site.baseurl}}/api/identifier_types/)|
+|`email_template_id`| Erforderlich |String|Der [API-Bezeichner Ihres E-Mail Templates]({{site.baseurl}}/api/identifier_types/).|
 |`template_name`|Optional|String|Name des Templates für Ihre E-Mail.|
 |`subject`|Optional|String|E-Mail Template Betreffzeile.|
 |`body`|Optional|String|Körper einer E-Mail-Vorlage, die HTML enthalten kann.|

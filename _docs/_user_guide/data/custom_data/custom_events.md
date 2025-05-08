@@ -156,9 +156,9 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `item price` to improve your target audience and allow for increased campaign personalization.
 
-![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
+![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a item price between 100 and 200 dollars][16]
 
 Nested custom event properties are also supported in [action-based delivery][19].
 
@@ -216,7 +216,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
-![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendar days.][3]
+![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.][3]
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 

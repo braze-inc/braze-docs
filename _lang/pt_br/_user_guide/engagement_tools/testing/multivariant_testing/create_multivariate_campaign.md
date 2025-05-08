@@ -13,19 +13,20 @@ local_redirect: #optimizations
 
 > Você pode criar um [teste multivariante ou A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para qualquer campanha que tenha como direcionamento um único canal.
 
-![][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+![O menu suspenso ao selecionar o botão "Criar campanha" para escolher entre multicanal ou canal único.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Etapa 1: Crie sua campanha
 
-Clique em **Criar campanha** e selecione um canal para a campanha na seção que permite testes multivariantes e Testes A/B. Para obter documentação detalhada sobre cada canal de envio de mensagens, consulte [Criar uma campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
+1. Acesse **Envio de mensagens** > **Campanhas**.
+2. Selecione **Criar campanha** e um canal para a campanha na seção que permite testes multivariados e A/B. Para documentação detalhada sobre cada canal de envio de mensagens, consulte [Criar uma campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
 ## Etapa 2: Crie suas variantes
 
-Você pode criar até 8 variantes de sua mensagem, diferenciando entre títulos, conteúdo, imagens e muito mais. O número de diferenças entre as mensagens determina se esse é um teste multivariante ou A/B. Um teste A/B examina o efeito da alteração de uma variável, enquanto um teste multivariante examina duas ou mais.
+Você pode criar até oito variantes da sua mensagem, diferenciando entre títulos, conteúdo, imagens e mais. O número de diferenças entre as mensagens determina se esse é um teste multivariante ou A/B. Um teste A/B examina o efeito da alteração de uma variável, enquanto um teste multivariante examina duas ou mais.
 
 Para obter algumas ideias sobre como começar a diferenciar suas variantes, consulte [Dicas para diferentes canais](#tips-different-channels).
 
-![][3]
+![Selecionando "Adicionar Variante" para uma campanha.][3]
 
 ## Etapa 3: Programe sua campanha
 
@@ -34,7 +35,7 @@ O agendamento de sua campanha multivariante funciona da mesma forma que o agenda
 Após o início de um teste multivariante, não é possível fazer alterações na campanha. Se você alterar os parâmetros, como a linha de assunto ou o corpo do HTML, a Braze considerará o experimento comprometido e o desativará imediatamente.
 
 {% alert important %}
-Se quiser usar uma [otimização]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (disponível para canais selecionados), programe sua campanha para ser entregue uma vez. As otimizações não estão disponíveis para campanhas que se repetem ou que têm a reelegibilidade ativada.
+Para usar uma [otimização]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (disponível para canais selecionados), agende sua campanha para ser entregue uma vez. As otimizações não estão disponíveis para campanhas que se repetem ou que têm a reelegibilidade ativada.
 {% endalert %}
 
 ## Etapa 4: Escolha um segmento e distribua seus usuários entre as variantes
@@ -52,7 +53,7 @@ Ao visualizar seus resultados, é possível comparar as taxas de conversão de s
 ![Painel Testes A/B que mostra o detalhamento percentual do Grupo de controle, Variante 1, Variante 2 e Variante 3 com 25% para cada grupo.][5]
 
 {% alert important %}
-Não é recomendado usar um grupo de controle ao determinar o vencedor por aberturas ou cliques. Como o grupo de controle não receberá a mensagem, esses usuários não poderão abrir ou clicar. Portanto, a taxa de conversão desse grupo é 0% por definição e não constitui uma comparação significativa com as variantes.
+Usar um grupo de controle ao determinar um vencedor por _Aberturas_ ou _Cliques_ não é recomendado. Como o grupo de controle não receberá a mensagem, esses usuários não poderão abrir ou clicar. Portanto, a taxa de conversão desse grupo é 0% por definição e não constitui uma comparação significativa com as variantes.
 {% endalert %}
 
 #### Grupos de controle com Testes A/B
@@ -61,13 +62,13 @@ Ao usar o limite de frequência com um Testes A/B, o limite de frequência não 
 
 #### Grupos de controle com Intelligent Selection
 
-O tamanho do grupo de controle de uma campanha com [Intelligent Selection][1] é baseado no número de variantes. Se cada variante for enviada a mais de 20% dos usuários, o grupo de controle será de 20% e as variantes serão divididas igualmente entre os 80% restantes. No entanto, se tiver variantes suficientes para que cada variante seja enviada a menos de 20% dos usuários, o grupo de controle deverá ser menor. Quando a Intelligent Selection começa a analisar a performance do seu teste, o grupo de controle aumenta ou diminui com base nos resultados.
+O tamanho do grupo de controle de uma campanha com [Intelligent Selection][1] é baseado no número de variantes. Se cada variante for enviada para mais de 20% dos usuários, então o grupo de controle é 20%, e as variantes são divididas igualmente entre os 80% restantes. No entanto, se tiver variantes suficientes para que cada variante seja enviada a menos de 20% dos usuários, o grupo de controle deverá ser menor. Quando a Intelligent Selection começa a analisar a performance do seu teste, o grupo de controle aumenta ou diminui com base nos resultados.
 
 ## Etapa 5: Designar um evento de conversão (opcional)
 
 A definição de um evento de conversão para uma campanha permite que você veja quantos destinatários dessa campanha realizaram uma determinada ação após recebê-la.
 
-Isso só afeta o teste se você tiver escolhido **a Taxa de conversão primária** nas etapas anteriores. Para saber mais, consulte [Eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). 
+Isso só afeta o teste se você tiver escolhido **a Taxa de conversão primária** nas etapas anteriores. Para saber mais, consulte [Eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/). 
 
 ## Etapa 6: Revisão e lançamento
 
@@ -75,20 +76,16 @@ Na página de confirmação, revise os detalhes de sua campanha multivariante e 
 
 ## Coisas para saber
 
-{% alert important %}
-Fazer edições nas mensagens após o início da experiência invalidará os resultados do teste.
+Se seu experimento já começou a enviar e você editar a mensagem, o experimento será invalidado, e quaisquer resultados do experimento serão removidos.
 
-- Se o seu experimento estiver no meio do envio e você editar a mensagem, o experimento será inutilizado e todos os resultados do experimento serão removidos.
-- Se o experimento for concluído e você editar a mensagem após o envio, os resultados do experimento permanecerão disponíveis na página de análise de dados do dashboard. Se você relançar a campanha, os resultados do experimento serão removidos.
-{% endalert %}
+- Para evitar qualquer interferência no comportamento esperado do experimento, recomendamos evitar edições de mensagens dentro de uma hora após o lançamento da campanha do experimento.
+- Se seu experimento for concluído e você editar a mensagem após o envio, os resultados do experimento permanecerão disponíveis na análise do seu dashboard. No entanto, se você relançar a campanha, os resultados do experimento serão removidos.
 
 ### Dicas para diferentes canais {#tips-different-channels}
 
-Dependendo do canal que selecionar, você poderá testar diferentes componentes de sua mensagem. Tente criar variantes com uma ideia do que você deseja testar e do que espera provar.
+Dependendo de qual canal você selecionar, você pode testar diferentes componentes da sua mensagem. Por exemplo, você pode tentar compor variantes com uma ideia do que deseja testar e o que espera provar. Quais alavancas você tem para puxar, e quais são os efeitos desejados? Embora existam milhões de possibilidades que você pode investigar usando um teste multivariante e um teste A/B, temos algumas sugestões para você começar:
 
-Que alavancas você precisa acionar e quais são os efeitos desejados? Embora existam milhões de possibilidades que você pode investigar usando um teste multivariante e um teste A/B, temos algumas sugestões para você começar:
-
-| Canal | Aspectos da mensagem que você pode mudar | Resultados a serem buscados |
+| Canal | Aspectos da mensagem que você pode mudar | Resultados a serem observados |
 | ---------------------| --------------- | ------------- |
 | Push | Copiar <br> Uso de imagens e emojis <br> Deep links  <br> Apresentação de números (por exemplo, "triplicar" versus "aumentar em 200%")  <br> Apresentação do tempo (por exemplo, "termina à meia-noite" versus "termina em 6 horas") | Aberturas  <br> Taxa de conversão |
 | E-mail | Assunto <br> Nome de exibição <br> Saudação <br> Texto do corpo <br> Uso de imagens e emojis <br> Apresentação de números (por exemplo, "triplicar" versus "aumentar em 200%") <br> Apresentação do tempo (por exemplo, "termina à meia-noite" versus "termina em 6 horas") | Aberturas  <br> Taxa de conversão |
@@ -101,7 +98,7 @@ Ao executar Testes A/B, não se esqueça de gerar [relatórios de funil]({{site.
 
 Além disso, a duração ideal de seu teste também pode variar dependendo do canal. Tenha em mente o tempo médio que a maioria dos usuários pode precisar para se engajar em cada canal.
 
-Por exemplo, se estiver testando um push, poderá obter resultados significativos mais rapidamente do que ao testar o envio de e-mail, pois os usuários veem os pushes imediatamente, mas pode levar dias até que vejam ou abram um e-mail. Se estiver testando mensagens no app, lembre-se de que os usuários devem abrir o aplicativo para ver a campanha, portanto, espere mais tempo para coletar resultados tanto dos usuários mais ativos que abrem o app quanto dos usuários mais comuns.
+Por exemplo, se você está testando um push, pode obter resultados significativos mais rapidamente do que ao testar e-mail, uma vez que os usuários veem os pushes imediatamente, mas pode levar dias até que vejam ou abram um e-mail. Se você está testando mensagens no aplicativo, tenha em mente que os usuários devem abrir o aplicativo para ver a campanha, então você deve esperar mais para coletar resultados tanto dos seus usuários mais ativos quanto dos seus usuários mais típicos.
 
 Se você não tiver certeza de quanto tempo seu teste deve durar, o recurso [seleção inteligente][6]] pode ser útil para encontrar uma variante vencedora de forma eficiente.
 
@@ -114,23 +111,23 @@ Por exemplo, embora os usuários ativos possam ter taxas de resposta iguais para
 Além disso, ao escolher em qual segmento executar seu teste, não se esqueça de considerar se o tamanho desse segmento será grande o suficiente para seu teste. Em geral, os testes multivariantes e A/B com mais variantes exigem um grupo de teste maior para obter resultados estatisticamente significativos. Isso ocorre porque mais variantes resultarão em menos usuários vendo cada variante individual.
 
 {% alert tip %}
-Como orientação, provavelmente serão necessários cerca de 15.000 usuários por variante (incluindo o controle) para obter 95% de confiança nos resultados do teste. No entanto, o número exato de usuários de que você precisa pode ser maior ou menor do que isso, dependendo do seu caso específico. Para obter orientações mais precisas sobre tamanhos de amostras variantes, considere consultar uma [calculadora de tamanho de amostra](https://www.calculator.net/sample-size-calculator.html).
+Como orientação, provavelmente serão necessários cerca de 15.000 usuários por variante (incluindo o controle) para obter 95% de confiança nos resultados do teste. No entanto, o número exato de usuários que você precisa pode ser maior ou menor do que isso, dependendo do seu caso particular. Para obter orientações mais precisas sobre tamanhos de amostras variantes, considere consultar uma [calculadora de tamanho de amostra](https://www.calculator.net/sample-size-calculator.html).
 {% endalert %}
 
 ### Viés e randomização
 
-Uma pergunta comum sobre as atribuições de grupos de controle e de teste é se eles podem introduzir viés nos seus testes. Outras pessoas às vezes se perguntam como sabemos se essas atribuições são realmente aleatórias.
+Uma pergunta comum sobre as atribuições de grupos de controle e teste é se elas podem introduzir viés em seus testes. Outras pessoas às vezes se perguntam como sabemos se essas atribuições são realmente aleatórias.
 
-Os usuários são atribuídos a variantes de mensagens, variantes do Canvas ou a seus respectivos grupos de controle concatenando sua ID de usuário (gerada aleatoriamente) com a ID da campanha ou do Canvas (gerada aleatoriamente), considerando o módulo desse valor com 100 e, em seguida, ordenando os usuários em fatias que correspondem às atribuições de porcentagem para variantes e controle opcional escolhidos no dashboard. Portanto, não há nenhuma maneira prática de que os comportamentos dos usuários antes da criação de uma determinada campanha ou Canva possam variar sistematicamente entre variantes e controle. Também não é prático ser mais aleatório (ou mais precisamente, pseudo-aleatório) do que essa implementação.
+Os usuários são atribuídos a variantes de mensagens, variantes do Canvas ou a seus respectivos grupos de controle concatenando sua ID de usuário (gerada aleatoriamente) com a ID da campanha ou do Canvas (gerada aleatoriamente), considerando o módulo desse valor com 100 e, em seguida, ordenando os usuários em fatias que correspondem às atribuições de porcentagem para variantes e controle opcional escolhidos no dashboard. Portanto, não há uma maneira prática de que os comportamentos dos usuários antes de criar uma campanha ou canva específico possam variar sistematicamente entre variantes e controle. Também não é prático ser mais aleatório (ou mais precisamente, pseudo-aleatório) do que essa implementação.
 
 #### Erros a serem evitados
 
 Há alguns erros comuns que devem ser evitados, criando a aparência de diferenças com base no canal de envio de mensagens se os públicos não forem filtrados corretamente.
 
-Por exemplo, se você enviar uma mensagem push para um público amplo com um controle, o grupo de teste só enviará mensagens para usuários com um token por push. No entanto, o grupo de controle incluirá tanto os usuários que têm um token por push quanto os que não têm. Nesse caso, seu público inicial para a campanha ou o Canva deve filtrar por ter um token por push (`Push Enabled` é `true`). O mesmo deve ser feito para ser elegível para receber mensagens em outros canais: aceitação, ter um token por push, assinatura etc.
+Por exemplo, se você enviar uma mensagem push para um público amplo com um controle, o grupo de teste só enviará mensagens para usuários com um token por push. No entanto, o grupo de controle incluirá tanto usuários que têm um token por push quanto usuários que não têm. Nesse caso, seu público inicial para a campanha ou o Canva deve filtrar por ter um token por push (`Push Enabled` é `true`). O mesmo deve ser feito para ser elegível para receber mensagens em outros canais: aceitação, ter um token por push, assinatura etc.
 
 {% alert note %}
-Se você usar números aleatórios para grupos de controle manualmente, consulte esta lista de [coisas a serem observadas]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) em seus grupos de controle.
+Se você usar manualmente números de balde aleatórios para grupos de controle, confira [coisas a observar]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) em seus grupos de controle.
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/

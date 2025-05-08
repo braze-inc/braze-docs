@@ -22,10 +22,6 @@ Mixpanel のデータリテンションポリシーに従い、2010年1月1日�
 
 Brazeで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Mixpanel**] を選択します。ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Mixpanelのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
 ### ステップ2:MixpanelでBrazeとの統合をセットアップする
@@ -39,6 +35,10 @@ Mixpanel で **[Data Management] > [Integrations]** に移動します。次に 
 Mixpanel で **[Data Management] > [Cohorts]** に移動します。Braze に送信するコホートを選択し、[**Export to Braze**] を選択します。最後に、ワンタイムシンクまたはダイナミックシンクを選択する。動的同期を選択すると、Braze コホートが15分ごとに同期され、Mixpanel のユーザーと照合されます。 
 
 ![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
+
+{% alert important %}
+Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+{% endalert %}
 
 ### ステップ4:Brazeのセグメントユーザー
 

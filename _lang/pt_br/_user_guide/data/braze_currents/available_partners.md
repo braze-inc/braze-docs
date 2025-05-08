@@ -36,6 +36,7 @@ Essas plataformas de dados do cliente coletam e encaminham informações de vár
 * [Treasure Data][10]
 * [RudderStack][9]
 * [Adobe][12]
+* [Amperity][13]
 
 ## Análise de dados comportamentais
 
@@ -61,3 +62,4 @@ Esses parceiros são especializados em análise de dados de produtos e business 
 [10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
 [11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
 [12]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
+[13]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/#using-amperity-with-braze-currents

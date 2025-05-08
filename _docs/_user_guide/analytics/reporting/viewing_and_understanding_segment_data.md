@@ -21,9 +21,9 @@ The **Segments** page of your Braze dashboard contains a summary of all of your 
 
 After selecting the name of a segment, you can view segment statistics and filters, and edit the segment by adding or deleting filters. Be sure to save any changes!
 
-![Segment data][2]
+When you turn on [analytics tracking for a segment][9], you can view sessions, custom events, and revenue over time for this segment.
 
-When you turn on [analytics tracking for a segment][9], Braze lets you view sessions, custom events, and revenue over time by this segment.
+![Analytics tracking toggle for a segment][16]
 
 ### Segment statistics
 
@@ -73,8 +73,6 @@ You can see how one segment is performing compared to another across a set of pr
 ### Messaging use
 The **Messaging Use** section shows which segments, currently enabled campaigns, and currently enabled canvases are targeting your segment.
 
-![Under Messaging Use, view the campaigns that your segment is being used in.][4]
-
 ### Historical membership
 
 The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
@@ -84,8 +82,6 @@ To learn more about monitoring your segment’s membership and size, refer to [M
 ### User preview
 
 To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
-
-![User Specific Info][7]
 
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
@@ -109,8 +105,6 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/analytics/
 ## Variables {#variables}
 
 Before generating your report, go to the **Variables** tab to provide information for the Report Builder template, including required variables that will vary based on report. 
-
-![][11]
 
 The variables include:
 
@@ -138,10 +132,10 @@ If your company turned on this feature on October 2, and turned on analytics tra
 [1]: {% image_buster /assets/img_archive/segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[4]: {% image_buster /assets/img_archive/historical_membership1.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
 [6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}
+[16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}

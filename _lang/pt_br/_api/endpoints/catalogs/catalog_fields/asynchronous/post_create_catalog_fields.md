@@ -16,9 +16,6 @@ description: "Este artigo traz informações sobre o o endpoint da Braze \"Criar
 {% endapimethod %}
 
 > Use esse ponto de extremidade para criar vários campos em seu catálogo.
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
 
 ## Pré-requisitos
 

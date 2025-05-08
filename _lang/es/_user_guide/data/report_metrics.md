@@ -658,7 +658,7 @@ WhatsApp
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Read Rate' %} 
+{% multi_lang_include metrics.md metric='Read Rate' %}
 
 <span class="calculation-line">Cálculo: (Lecturas con recibos de lectura) / (Envíos)</span>
 
@@ -804,6 +804,8 @@ Correo electrónico
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro.
+
+Aunque los rebotes blandos no son objeto de seguimiento en los análisis de tu campaña, puedes controlar los rebotes blandos en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). También puedes excluir a estos usuarios de tus envíos o consultar la cantidad de rebotes blandos de los últimos 30 días con el [filtro de segmento Rebote blando]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). En el Registro de actividad de mensajes, también puedes ver el motivo de los rebotes blandos y comprender las posibles discrepancias entre los "envíos" y las "entregas" de tus campañas de correo electrónico.
 
 {% endapi %}
 
@@ -994,7 +996,7 @@ Tarjetas de contenido
 Mensaje en la aplicación, tarjetas de contenido
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} En el caso de los mensajes dentro de la aplicación, las impresiones únicas pueden incrementarse de nuevo al cabo de 24 horas si la reelecibilidad está activada y un usuario realiza la acción desencadenante. Si la reeligibilidad está activada, <i>Impresiones únicas</i> = <i>Destinatarios únicos</i>. <br><br>Para las tarjetas de contenido, el recuento no debe incrementarse la segunda vez que un usuario ve una tarjeta. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} En el caso de los mensajes dentro de la aplicación, las impresiones únicas pueden incrementarse de nuevo al cabo de 24 horas si la reelecibilidad está activada y un usuario realiza la acción desencadenante. Si la reelegibilidad está activada, <i>Impresiones únicas</i> = <i>Destinatarios únicos</i>. <br><br>Para las tarjetas de contenido, el recuento no debe incrementarse la segunda vez que un usuario ve una tarjeta. 
 
 <span class="calculation-line">Cálculo: Recuento</span>
 

@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Alpaco](https://alpaco.email/) は、ドラッグ＆ドロップメールエディターを備えたオンラインメールマーケティングツールであり、デザインと出力をこれまでにない方法でコントロールできます。Braze と Alpaco の統合では、データドリブン型でブランドらしさのあるメールテンプレートを作成して Braze にエクスポートできます。 
 
+_この統合はアルパコによって維持されている。_
+
 {% alert note %}
 Alpaco は[完全な Liquid](https://shopify.github.io/liquid/) 変数をサポートしています。このため、Braze 設定で使用されるすべての Liquid 変数を完全にサポートしています。
 {% endalert %}
@@ -58,5 +60,6 @@ Alpaco プラットフォームでは、さまざまな設定やオプション�
 ## BrazeでAlpacoのEメールテンプレートを使う
 
 Braze ダッシュボードで **[テンプレートとメディア] > [メールテンプレート]** に移動して、アップロードした Alpaco メールを見つけます。このテンプレートを使用して、ブランドらしさのあるデータドリブン型のメールをユーザーに送信できます。
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

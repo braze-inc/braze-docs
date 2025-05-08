@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [Kognitiv Inspire][1] はロイヤルティテクノロジーシステムであり、カスタマーエンゲージメントを強化し、顧客の支出を増やし、ロイヤルティの高い行動を称賛する、結果に基づくロイヤルティプログラムによって、比類のない顧客体験を実現できるように支援します。
 
+_この統合はKognitiv Inspireによって維持されている。_
+
+## 統合について
+
 Braze と Kognitiv の統合により、ロイヤルティ戦略を実装、評価できるようになり、プログラムの有効性を高めるための革新的な機能とカスタマイズされたメンバーコミュニケーションが提供されます。
 
 ## 前提条件
@@ -124,6 +128,7 @@ Braze を Kognitiv Inspire と統合すると、Kognitiv の広範な API ポー
 - APAC 地域： `https://aus.kognitivloyalty.com/WS`
 
 アクセストークンと SFTP エンドポイントの設定に関する詳細については、Kognitiv にデモを依頼してください。
+
 
 [1]: http://kognitiv.com
 [2]: https://info.kognitivloyalty.com

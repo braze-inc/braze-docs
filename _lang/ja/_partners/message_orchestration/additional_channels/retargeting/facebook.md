@@ -42,10 +42,6 @@ Facebookオーディエンス・エクスポートは、**ユーザー・アク�
 
 1. Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Facebook**] を選択します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 {: start="2"}
 2\.Facebook Audience Export (Facebook オーディエンスエクスポート) モジュールで、[**Facebook に接続**] を選択します。<br><br>![BrazeプラットフォームのFacebookテクノロジーパートナーのページ。][6]{: style="max-width:70%;"}
 

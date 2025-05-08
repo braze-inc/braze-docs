@@ -30,7 +30,7 @@ Bien que les campagnes puissent être créées de manière unique en fonction du
 Les campagnes régulières et les campagnes de test A/B peuvent être planifiées (par exemple, informer une liste d'utilisateurs d'un événement à venir) ou automatisées pour être envoyées en réponse à l'action d'un utilisateur (par exemple, envoyer un e-mail lorsqu'une personne s'abonne à votre lettre d'information). En savoir plus sur la [planification des campagnes.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)
 {% endalert %}
 
-Quel que soit le type de campagne que vous créez, vos campagnes peuvent être à l'écoute des besoins de vos utilisateurs et leur apporter une réponse réfléchie et personnalisée. Après avoir envoyé votre campagne, utilisez nos [outils d'analyse/analytique intégrés]({{site.baseurl}}/user_guide/analytics/reporting/) pour voir comment elle s'est comportée et combien d'utilisateurs se sont convertis en fonction de vos [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Quel que soit le type de campagne que vous créez, vos campagnes peuvent être à l'écoute des besoins de vos utilisateurs et leur apporter une réponse réfléchie et personnalisée. Après avoir envoyé votre campagne, utilisez nos [outils d'analyse/analytique intégrés]({{site.baseurl}}/user_guide/analytics/reporting/) pour voir comment elle s'est comportée et combien d'utilisateurs se sont convertis en fonction de vos [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Consultez ces ressources supplémentaires pour en savoir plus sur les campagnes chez Braze :
 

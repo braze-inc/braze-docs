@@ -218,7 +218,7 @@ The following table summarizes the different responses the server may send, how 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-For `5XX` errors, Braze will retry the webhook send up to 5 times over 30 minutes using exponential backoff. For all other errors, Braze will continue to retry for up to 24 hours.<br><br>Each webhook is allowed 90 seconds before it times out.
+Braze retries the above status codes up to five times within 30 minutes using exponential backoff. If we can't reach your endpoint, retries may be spread over a 24-hour period.<br><br>Each webhook is allowed 90 seconds before it times out.
 {% endalert %}
 
 ### IP allowlisting {#ip-allowlisting}

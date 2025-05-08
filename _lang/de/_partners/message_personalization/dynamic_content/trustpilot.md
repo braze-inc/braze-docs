@@ -30,7 +30,7 @@ Bevor Sie beginnen, benötigen Sie Folgendes:
 
 ### Schritt 1: Erhalten Sie Ihre Trustpilot API Zugangsdaten
 
-1. [Melden Sie sich](https://app.contentful.com/login) mit Ihren Zugangsdaten [bei Trustpilot an](https://app.contentful.com/login).  
+1. [Melden Sie sich bei Trustpilot an](https://app.contentful.com/login), indem Sie Ihre Zugangsdaten eingeben.  
 2. Erstellen Sie den API-Schlüssel und das Geheimnis im Trustpilot Dashboard oder rufen Sie diese ab, indem Sie zu **Integrationen** > **Entwickler**:in > **APIs** gehen. Wenn Sie noch keinen API-Schlüssel haben, erstellen Sie einen neuen:  
    1. Gehen Sie zu **Anwendungsname** > **Anwendung erstellen**  
    2. Kopieren Sie Ihren API-Schlüssel und Ihr Geheimnis, die für die Authentifizierung Ihrer Connected-Content-Anfragen verwendet werden.

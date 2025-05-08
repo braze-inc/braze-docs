@@ -16,7 +16,7 @@ Wenn Sie die Integration von Braze und Outgrow für interaktive Inhalte nutzen, 
 - **Verbesserte Personalisierung**: Erfassen Sie Daten aus Outgrow-Quizzes, Umfragen und Rechnern, die an angepasste Attribute in Braze angepasst werden können. Diese Daten sind für eine präzise Segmentierung und personalisierte Kampagnen zulässig.
 - **Echtzeitdaten synchronisieren**: Sie erhalten Outgrow-Daten in Braze in Realtime, was es Ihnen erlaubt, sofort auf Nutzer:innen-Insights zu reagieren. Dies erlaubt zeitnahe Nachfassaktionen oder personalisierte Nachrichten, die auf den letzten Interaktionen der Nutzer:innen basieren.
 - **Rationalisierte Datenverwaltung**: Automatisieren Sie den Datentransfer zwischen Outgrow und Braze. So vermeiden Sie manuelle Datenexporte und -importe, reduzieren Datenabweichungen und sparen Zeit.
-- **Verbesserte Nutzer**:**in**: Nutzen Sie Insights der Nutzer:innen, um relevantere Erlebnisse zu schaffen, die zu höherer Zufriedenheit, Bindung und Lifetime-Value führen.
+- **Verbesserte Nutzererfahrung**: Nutzen Sie Insights der Nutzer:innen, um relevantere Erlebnisse zu schaffen, die zu höherer Zufriedenheit, Bindung und Lifetime-Value führen.
 - **Flexibles Targeting und Segmentierung**: Verfeinern Sie die Segmentierung in Braze mit Hilfe von Outgrow-Daten, die es Ihnen erlauben, Nutzer:innen auf der Grundlage bestimmter Interaktionen (z.B. Quiz-Ergebnisse oder Antworten auf Umfragen) anzusprechen, um Kampagnen zu erstellen, die bei Ihren Nutzer:innen auf Resonanz stoßen.
 
 ## Voraussetzungen
@@ -37,7 +37,7 @@ Folgen Sie diesen Schritten, um die Integration von Braze und Outgrow zu konfigu
 
 ### Schritt 1: Generieren Sie Braze API-Schlüssel
 
-1. Gehen Sie in Ihrem Braze-Konto zu **Entwickler-Konsole** > API-Einstellungen.
+1. Gehen Sie in Ihrem Braze-Konto zu **Entwickler-Konsole** > **API-Einstellungen**.
 2. Wählen Sie **Neuen API-Schlüssel erstellen**.
 3. Benennen Sie Ihren API-Schlüssel, schalten Sie die Berechtigung `users.track` ein und speichern Sie den API-Schlüssel.
 
@@ -85,7 +85,7 @@ Mit der Integration können Sie Braze Segmente erstellen, die auf angepassten At
 
 Mit den angepassten Segmenten, die aus Outgrow-Daten erstellt wurden, können Sie Ihre Kampagnen für Braze personalisieren und Nutzer:in auf der Grundlage ihrer Reaktionen auf interaktive Inhalte ansprechen. Um dies zu tun und ein personalisiertes Nutzer:innen-Erlebnis zu schaffen, folgen Sie diesen Schritten:
 
-1. Gehen Sie in Braze zu **Engagement** > Kampagnen.
+1. Gehen Sie in Braze zu **Engagement** > **Kampagnen**.
 2. Wählen Sie **Kampagne erstellen** und wählen Sie die Art Ihrer Kampagne (E-Mail, Push, In-App-Nachricht oder andere).
 3. Im Schritt Targeting wählen Sie das Segment aus, das aus den Attributen von Outgrow zusammengestellt wurde (z. B. Nutzer:innen mit bestimmten Quizwerten oder Segmenten).
 4. Passen Sie den Inhalt und die Einstellungen Ihrer Kampagne an, und starten Sie sie dann.

@@ -14,10 +14,6 @@ search_tag: Partner
 
 Braze とFacebook の統合では、Messenger Platform API を介して Facebook Messenger のユーザーにメッセージを送信するために、Braze Webhook、セグメンテーション、パーソナライゼーション、トリガー機能が利用されます。カスタム Facebook Messenger Webhook テンプレートは、Braze プラットフォームの [**テンプレート**] > [**Webhook テンプレート**] にあります。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
-{% endalert %}
-
 Facebook Messenger プラットフォームは、「既存の取引を促進し、他の顧客サポートアクションを提供し、個人が要求したコンテンツを配信する非プロモーションメッセージ」を対象としています。詳細については、[Facebook のプラットフォームガイドライン](https://developers.facebook.com/docs/messenger-platform)と[許容可能なユースケースの例](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable)を参照してください。
 
 ## 前提条件
@@ -70,7 +66,7 @@ PSID は、Facebook が提供するさまざまな[エントリポイント](htt
 
 ### ステップ2:カスタム属性としてBrazeに送信
 
-PSID を受信していると確信したら、これを開発者と調整して共有し、[カスタム属性]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes) としてPSID をBraze に送信します。PSID は、[API コール](https://developers.facebook.com/docs/messenger-platform/reference/send-api) でアクセスできる文字列です。
+PSID を受信していると確信したら、これを開発者と調整して共有し、[カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/#custom-attributes) としてPSID をBraze に送信します。PSID は、[API コール](https://developers.facebook.com/docs/messenger-platform/reference/send-api) でアクセスできる文字列です。
 
 ### ステップ 3:Webhook テンプレートのセットアップ
 

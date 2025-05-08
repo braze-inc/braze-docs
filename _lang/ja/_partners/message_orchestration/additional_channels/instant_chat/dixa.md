@@ -25,10 +25,6 @@ Braze と Dixa の統合により、カスタマーサービス担当者にリ�
 | Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] で API キーを作成できます。
-{% endalert %}
-
 ## ユースケース
 
 メール、メッセンジャー、チャットなどのさまざまな通信チャネルでユーザーと通信しているときに、Braze データを顧客サービスエージェントビューに表示します。

@@ -1,6 +1,6 @@
 ---
 nav_title: Nachrichten von rechts nach links
-article_title: Nachrichten von rechts nach links erstellen
+article_title: Erstellen von Nachrichten von rechts nach links
 page_order: 1
 page_type: reference
 description: "Auf dieser Seite finden Sie bewährte Verfahren für die Erstellung von Nachrichten in Braze, die von rechts nach links gelesen werden."

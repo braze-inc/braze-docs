@@ -12,6 +12,8 @@ search_tag: Partner
 
 > FriendbuyとBrazeの統合により、EメールやSMSの機能を拡張し、紹介やロイヤルティプログラムのコミュニケーションを簡単に自動化することができる。Braze では、Friendbuy 経由で収集されたすべてのオプトイン電話番号の顧客プロファイルが生成されます。
 
+_この統合は、Friendbuy によって維持されます。_
+
 ## 前提条件
 
 開始する前に、次のものが必要になります。
@@ -22,10 +24,6 @@ search_tag: Partner
 | Braze REST API キー  | `users.track` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。        |
 | Braze RESTエンドポイント | [REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。これは Braze インスタンスの URL に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
-{% endalert %}
 
 ## Friendbuy の統合
 
@@ -76,6 +74,7 @@ Friendbuyは国際標準規格(E.164)を採用し、実在する電話番号を�
 | 電話のみ        | 顧客の電話番号だけが Braze に送信されます。              |
 | Neither           | 顧客データがBrazeに送信されることはない。                              |
 | どちらも              | 顧客のメールアドレスと電話番号が Braze に送信されます。 |
+
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}

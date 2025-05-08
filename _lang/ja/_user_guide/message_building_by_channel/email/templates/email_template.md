@@ -19,10 +19,6 @@ search_rank: 1
 
 [**テンプレート**] > [**メール テンプレート**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは**Engagement**> **Templates & Media**> **Email Templates** にあります。
-{% endalert %}
-
 ## ステップ 2: 編集体験を選択する 
 
 編集するには、**ドラッグアンドドロップエディタ**または**HTMLエディタ**から選択します。 

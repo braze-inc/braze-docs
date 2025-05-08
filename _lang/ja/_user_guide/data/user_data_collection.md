@@ -12,7 +12,7 @@ description: "このランディングページには、ユーザーデータの
 guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: SDK によるデータ収集
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: ユーザープロファイルのライフサイクル
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: 匿名ユーザー
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: ユーザー言語コード
     link: /docs/user_guide/data/user_data_collection/language_codes/

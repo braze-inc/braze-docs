@@ -16,7 +16,7 @@ Ce document n'est fourni qu'à titre d'information. Il n'a pas pour but de fourn
 
 ## Statuts d’abonnement {#subscription-states}
 
-Braze dispose de trois états d’abonnement globaux pour les utilisateurs de courrier électronique (répertoriés dans le tableau suivant), qui sont le contrôleur final entre vos messages et vos utilisateurs. Par exemple, les utilisateurs considérés comme `unsubscribed` ne recevront pas de messages ciblés à l’état d’abonnement global de `subscribed` ou `opted-in`.
+Braze dispose de trois états d'abonnement globaux pour les utilisateurs d'e-mail (énumérés dans le tableau suivant), qui sont les gardiens finaux entre vos messages et vos utilisateurs. Par exemple, les utilisateurs considérés comme `unsubscribed` ne recevront pas de messages ciblés à l’état d’abonnement global de `subscribed` ou `opted-in`.
 
 | État | Définition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze ne compte pas les changements d’état d’abonnement par rapport à vos 
 
 Braze désabonnera automatiquement tout utilisateur qui se désabonne manuellement de votre e-mail par le biais d'un [pied de page personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Si l'utilisateur met à jour son adresse e-mail et que l'option **Réinscrire les utilisateurs lorsqu'ils mettent à jour leur adresse e-mail** est activée dans vos paramètres de **configuration de l'envoi**, l'envoi normal d'e-mails reprendra.
 
-Si un utilisateur a marqué un ou plusieurs de vos e-mails comme étant des spams, Braze ne lui enverra que des e-mails transactionnels. Dans ce cas, les e-mails transactionnels font référence à l'option sélectionnée **Envoyer à tous les utilisateurs, y compris les utilisateurs désabonnés**, dans l'étape **Audience cible.** 
+Si un utilisateur a marqué un ou plusieurs de vos e-mails comme étant des spams, Braze ne lui enverra que des e-mails transactionnels. Dans ce cas, les e-mails transactionnels se réfèrent à l'option sélectionnée **Envoyer à tous les utilisateurs, y compris les utilisateurs désabonnés**, dans l'étape **Audience cible.** 
 
 {% alert tip %}
 Consultez nos bonnes pratiques en matière de [réchauffement d'adresses IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) pour savoir comment réengager efficacement vos utilisateurs.
@@ -90,15 +90,9 @@ Utilisez les [endpoints Groupe d'abonnement]({{site.baseurl}}/api/endpoints/subs
 ### Création d'un groupe d'abonnement
 
 1. Allez dans **Audience** > **Abonnements**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve sous **Utilisateurs** > **Groupes d'abonnement**.
-{% endalert %}
-
-{: start="2"}
-2\. Sélectionnez **Créer un groupe d'abonnement e-mail**.
-3\. Donnez un nom et une description à votre groupe d'abonnement.
-4\. Sélectionnez **Enregistrer**. 
+2. Sélectionnez **Créer un groupe d'abonnement e-mail**. 
+3. Donnez un nom et une description à votre groupe d'abonnement.
+4. Sélectionnez **Enregistrer**. 
 
 Tous les groupes d’abonnement sont automatiquement ajoutés à votre centre de préférences.
 

@@ -22,7 +22,7 @@ BrazeはアップルのiOS用デバイストークンを使用している。
 
 1. [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)経由でトークンをインポートする。大規模なバッチのインポートについては、プロセスを迅速化するために利用できるリソースがあります。詳細はCOMまたはSAに問い合わせること！
 2. トークンがすでにBrazeに存在する場合は無視され、そうでない場合は匿名プロファイルが生成される。
-3. プッシュ統合の品質保証を行う。[プッシュを設定する]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)手順が完了していることを確認します。
+3. プッシュ統合の品質保証を行う。[プッシュを設定する]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)手順が完了していることを確認します。
 
 ユーザープロファイルとプッシュトークンが別々の場所に保存されている場合は、プッシュトークンを匿名でインポートし、その後で既存のユーザープロファイルを移行することを推奨する。Braze iOS SDKが統合成功時にトークンの解決を処理するため、これらを一緒にマッピングする必要はない。
 

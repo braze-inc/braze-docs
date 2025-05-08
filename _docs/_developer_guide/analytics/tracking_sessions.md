@@ -170,7 +170,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 
 {% tab web %}
-By default, the session timeout is set to `30` seconds. To change this, pass the `sessionTimeoutInSeconds` option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function. It can be set to any integer greater than or equal to `1`. 
+By default, the session timeout is set to `30` minutes. To change this, pass the `sessionTimeoutInSeconds` option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function. It can be set to any integer greater than or equal to `1`. 
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30

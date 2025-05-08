@@ -9,41 +9,52 @@ channel:
 
 # Banners
 
-> With Banners, you can create personalized messaging for your users all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed cards directly in your app or website which let's you engage with users through an experience that feels natural.
+> With Banners, you can create personalized messaging for your users, all while extending the reach of your other channels, such as email or push notifications. Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), you can embed Banners directly in your app or website, which lets you engage with users through an experience that feels natural.
 
 {% alert important %}
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
-## Use cases
+## Why use Banners?
 
-Because Banners never expire and are auto-personalized every time a user starts a new session, they’re great for:
+Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
 
-- Highlighting featured content
-- Notifying users about upcoming events
-- Sharing updates on loyalty programs
+Using a simple drag-and-drop editor, marketers can design and launch Banners without developer assistance, reducing complexity and improving efficiency.
+
+Because they never expire and are auto-personalized every time a user starts a new session, they’re great for:
+
+- Highlighting featured content, trending products, or promotions
+- Notifying users about upcoming events or important dates
+- Promoting loyalty programs and personalized offers
+- Guiding users through onboarding flows and account setup
+- Upselling or cross-selling complementary products
 
 ## About Banners
 
-### Card expiration
+### Features
 
-By default, Banners don't expire. However, you can choose an end date if needed.
+Key features for Banners include:
+
+- **Easy content building:** Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
+- **Real-time preview:** Instantly preview your Banners across different device views, ensuring a seamless user experience on mobile and desktop.
+- **Flexible personalization:** Utilize Braze's built-in personalization options and Liquid logic, refreshing dynamically for each user's session.
+- **Custom HTML support:** Add custom HTML blocks when advanced customization or integration with existing web styles is required.
 
 ### Placement IDs {#placement-ids}
 
-Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [embed Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/).
+Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [create Banner placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements/).
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
 {% endalert %}
 
-### Card priority {#card-priority}
+### Banner priority {#card-priority}
 
-When multiple campaigns reference the same placement ID, cards are displayed in order of priority level. By default, newly-created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low. If multiple cards share the same priority level, the newest card will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) to high, medium, or low, or specify an exact priority using drag-and-drop. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
 ### Metrics
 
-These are the most important Banner metrics. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+These are the key metrics for Banners. For a full list of metrics, definitions, and calculations, refer to [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Metric | Definition |
 | --- | --- |
@@ -58,5 +69,5 @@ These are the most important Banner metrics. For a full list of metrics, definit
 
 Now that you know about Banners, you're ready for the next steps:
 
-- [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
-- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
+1. [Creating Banner placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+2. [Creating Banner campaigns]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)

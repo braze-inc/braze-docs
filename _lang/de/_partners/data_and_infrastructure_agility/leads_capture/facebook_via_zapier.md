@@ -23,7 +23,7 @@ Facebook Lead Ads ist ein Anzeigenformat, das es Unternehmen erlaubt, Lead-Infor
 | <a href="https://www.facebook.com/business/help/1710077379203657?id=180505742745347" target="_blank">Facebook Business Manager:in</a> | Im Rahmen dieser Integration verwenden Sie den Facebook Business Manager, ein zentrales Tool zur Verwaltung der Facebook-Assets Ihrer Marke (z.B. Anzeigenkonten, Seiten und Apps). |
 | <a href="https://www.facebook.com/business/help/195296697183682?id=829106167281625/" target="_blank">Facebook Werbekonto</a> | Sie benötigen ein aktives Facebook-Anzeigenkonto, das mit dem Business Manager Ihrer Marke verknüpft ist. <br><br>Vergewissern Sie sich, dass Sie die Berechtigung "Anzeigenkonten verwalten" für jedes Anzeigenkonto haben, das Sie mit Braze verwenden möchten, und dass Sie die Geschäftsbedingungen für Ihr Anzeigenkonto akzeptiert haben. |
 | <a href="https://www.facebook.com/business/help/183277585892925?id=420299598837059/" target="_blank">Facebook-Seite</a> | Sie benötigen eine aktive Facebook-Seite, die mit dem Business Manager Ihrer Marke verknüpft ist. <br><br>Vergewissern Sie sich, dass Sie die Berechtigung "Seiten verwalten" für jede Facebook-Seite haben, die Sie mit Braze verwenden möchten. |
-| Braze REST Endpunkt | Stellen Sie sicher, dass Sie die [URL][1] Ihres [REST-Endpunktes][1] kennen. Ihr API-Endpunkt entspricht der Dashboard-URL für Ihre Braze-Instanz. <br><br> Wenn Ihre Dashboard-URL zum Beispiel `https://dashboard-03.braze.com` lautet, ist Ihr Endpunkt `dashboard-03`. |
+| Braze REST Endpunkt | Stellen Sie sicher, dass Sie die [URL REST-Endpunktes][1] kennen. Ihr API-Endpunkt entspricht der Dashboard-URL für Ihre Braze-Instanz. <br><br> Wenn Ihre Dashboard-URL zum Beispiel `https://dashboard-03.braze.com` lautet, ist Ihr Endpunkt `dashboard-03`. |
 | Braze REST API-Schlüssel | Stellen Sie sicher, dass Sie über einen Braze REST API-Schlüssel mit `users.track` Berechtigungen verfügen. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -54,7 +54,7 @@ Gehen Sie in Ihrem Facebook Business Manager im linken Menü auf **Integrationen
 
 ![][3]{: style="max-width:80%;"}
 
-Die Schritte zur Zuweisung von Zapier als CRM Integration finden Sie in der Dokumentation von Facebook.
+Die Schritte zur Zuweisung von Zapier als CRM Integration finden Sie in der Dokumentation von Facebook</a>.
 
 ### Schritt 3: Erstellen Sie Ihren Zap
 
@@ -72,7 +72,7 @@ Wählen Sie Ihr Facebook-Konto aus, und **fahren Sie fort**.
 
 ![][6]{: style="max-width:80%;"}
 
-Wählen Sie Ihre Facebook-Seite und das zuvor erstellte Sofortformular aus und **fahren Sie** dann **fort**.
+Wählen Sie Ihre Facebook-Seite und das zuvor erstellte Sofortformular aus und klicken Sie auf **Fortfahren**.
 
 ![][7]{: style="max-width:80%;"}
 
@@ -154,7 +154,7 @@ Um diese Integration nutzen zu können, müssen Sie über einen <a href="https:/
 {% details Warum sehe ich doppelte Nutzerprofile mit der gleichen E-Mail? %}
 Es gibt eindeutige Möglichkeiten, Nutzerprofile in Braze auf der Grundlage ihres [Nutzerprofil-Lebenszyklus]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle) zu erstellen und zu verwalten.
 
-Abhängig von Ihren internen Prozessen und wenn Sie die Erstellung von Kund:in in Braze triggern, kann es zu doppelten Nutzerprofilen kommen, da eine Race-Condition zwischen dem Nutzerprofil, das von der Integration erstellt wird, und dem Nutzerprofil, das in Ihrem System erstellt wird, besteht. Sie können [Nutzer:innen-Profile]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) in Braze [zusammenführen]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+Abhängig von Ihren internen Prozessen und wenn Sie die Erstellung von Kund:in in Braze triggern, kann es zu doppelten Nutzerprofilen kommen, da eine Race-Condition zwischen dem Nutzerprofil, das von der Integration erstellt wird, und dem Nutzerprofil, das in Ihrem System erstellt wird, besteht. In Braze können Sie [Nutzer:innen-Profile zusammenführen]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 {% enddetails %}
 
 {% details Ich habe kein Zapier-Konto. Wie kann ich Facebook Lead Ads Webhooks in Braze triggern? %}

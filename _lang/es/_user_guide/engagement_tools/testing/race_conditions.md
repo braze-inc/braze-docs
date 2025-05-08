@@ -39,9 +39,11 @@ Sin embargo, en algunos casos, el segundo evento se activará primero. Esto sign
 
 #### Introduce retrasos
 
-Después de crear un nuevo usuario, puedes añadir una demora antes de enviar campañas dirigidas o Lienzos. Este retraso permite que se cree el perfil de usuario y que se actualice cualquier atributo relevante que pueda determinar su elegibilidad para recibir el mensaje. 
+Después de crear un nuevo usuario, puedes añadir una demora antes de enviar campañas dirigidas o Lienzos. Este retraso permite que se cree el perfil de usuario y que se actualice cualquier atributo relevante que pueda determinar su elegibilidad para recibir el mensaje.
 
 Por ejemplo, después de que un usuario se registre en tu aplicación, puedes enviarle una oferta promocional al cabo de 24 horas. O, si estás creando un usuario o registrando un atributo personalizado, puedes añadir un retraso de un minuto antes de proceder en tu proceso para evitar esta condición de carrera.
+
+También puedes añadir este retraso en el [SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration) para el evento personalizado específico que desencadena la entrada de un nuevo usuario en un Canvas. 
 
 ## Supuesto 2: Uso de varios puntos finales de API
 

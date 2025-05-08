@@ -14,10 +14,6 @@ page_order: 2
 
 Cree un centro de preferencias accediendo a **Audiencia** > **Suscripciones** > **Centro de preferencias de correo electrónico**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), vaya a **Usuarios** > **Grupos de suscripción** > **Centro de preferencias de correo electrónico**.
-{% endalert %}
-
 Aquí se mostrará una lista de centros de preferencias personalizados. Seleccione **Crear nuevo** para crear un nuevo centro de preferencias o seleccione el nombre de uno existente para realizar cambios.
 
 ![Una lista de centros de preferencias personalizados con el nombre, descripción, tipo, estado, fecha de última edición y creado por el usuario.][1]

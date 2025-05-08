@@ -62,7 +62,7 @@ Probieren Sie verschiedene Konfigurationen von Drilldown-Optionen aus, um die vi
     - **Manuell hinzufügen:** Wählen Sie die einzelnen Kampagnen oder Canvas aus, die in den Bericht aufgenommen werden sollen, indem Sie die Filter für das Datum der **letzten Sendung** und die Tags oder Kanäle verwenden oder den Namen der Kampagne oder des Canvas suchen.<br><br>![Der Bereich "Manuelles Hinzufügen von Kampagnen und Canvases" mit einer Liste von Kampagnen zum Auswählen.][3]{: style="width:90%;"}<br><br>
     - **Automatisch hinzufügen:** Legen Sie Regeln dafür fest, welche Kampagnen oder Canvase in den Bericht aufgenommen werden sollen. Sie müssen auf dieser Seite nur ein Feld auswählen.
         \- Beachten Sie, dass zusätzliche Kampagnen oder Canvase, die die Bedingungen erfüllen, die Sie auf diesem Bildschirm festgelegt haben, automatisch zu zukünftigen Ausführungen Ihres Berichts hinzugefügt werden.<br><br>![Der Abschnitt "Kampagnen und Canvase automatisch hinzufügen" mit Feldern zum Festlegen von Regeln, welche Kampagnen und Canvase dem Bericht hinzugefügt werden sollen.][4]{: style="width:90%;"}<br><br>
-9\. Führen Sie den Bericht aus, indem Sie **Speichern & Ausführen** auswählen **.**
+9\. Führen Sie den Bericht aus, indem Sie **Speichern & Ausführen** auswählen.
 
 {% alert note %}
 Die Ausführung des Berichts kann bis zu einigen Minuten dauern, je nach Datumsbereich und Anzahl der Kampagnen oder Canvase, die Sie in der Konfigurationsphase ausgewählt haben.

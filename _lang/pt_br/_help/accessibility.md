@@ -97,7 +97,7 @@ Dependendo das necessidades individuais, esses usuários contam com:
 - Estruture seu conteúdo de forma lógica e certifique-se de que os títulos sigam a hierarquia correta. Não pule os níveis de cabeçalho.
 - Evite texto alinhado ao centro para partes longas de conteúdo. Isso pode ser difícil de ler para usuários com deficiências cognitivas ou de aprendizado. O conteúdo que se estende por mais de duas linhas deve ser alinhado à esquerda.
 - Use fontes sans-serif, que são mais fáceis de ler em dispositivos digitais.
-- Sempre teste sua cópia [enviando uma mensagem de teste]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/) para um dispositivo para garantir que o texto não esteja truncado. Se sua mensagem estiver sendo cortada, isso prejudica você e o usuário, pois impede que seu conteúdo chegue aos usuários.
+- Sempre teste sua cópia [enviando uma mensagem de teste]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) para um dispositivo para garantir que o texto não esteja truncado. Se sua mensagem estiver sendo cortada, isso prejudica você e o usuário, pois impede que seu conteúdo chegue aos usuários.
 
 ### Links
 

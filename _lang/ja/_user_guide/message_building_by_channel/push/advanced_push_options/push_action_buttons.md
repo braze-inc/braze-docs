@@ -38,7 +38,7 @@ iOSのプッシュ・メッセージでアクション・ボタンを使うに�
 ![iOS 通知カテゴリのドロップダウンメニュー]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
+iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
 {% endalert %}
 
 ### Android{#android}
@@ -46,12 +46,12 @@ iOS でのボタンの処理に起因して、プッシュアクションボタ�
 Androidのプッシュ・メッセージでアクション・ボタンを使うには、以下のようにする：
 
 1. Android の[プッシュキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)を作成し、[**作成**] タブで通知ボタンを有効にします。
-2. **[追加] ボタン** <i class="fas fa-plus-circle"></i> をクリックし、ボタンテキストと [**クリック時動作**] を指定します。次の使用できるアクションを選択できます。
+2. <i class="fas fa-plus-circle"></i> **Add Buttonを**選択し、ボタンテキストと**On-Click Behaviorを**指定する。次の使用できるアクションを選択できます。
   - アプリを開く
   - ウェブURLにリダイレクトする
   - [アプリケーションへのディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)
 
-![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}) 通知ボタンのクリック時の動作として「アプリ開封」を選択する。{: style="max-width:70%"}
 
 プッシュのボタンは3つまで追加できる。
 
@@ -59,7 +59,7 @@ Androidのプッシュ・メッセージでアクション・ボタンを使う�
 
 重ねて表示されるiOSのボタンとは異なり、Androidのボタンは横一列に並んで表示される。つまり、追加するボタンが増えるほど (最大 3 つ)、ボタンの説明のスペースは少なくなります。 
 
-![テキストが切り捨てられたAndroidのプッシュ・アクション・ボタン]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![テキストが切り捨てられたAndroidのプッシュ・アクション・ボタン]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 次の表に、ボタンのテキストが切り詰められるまでに追加できる文字数を、ボタンの数に応じて示します。
 

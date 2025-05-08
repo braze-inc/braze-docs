@@ -12,6 +12,8 @@ search_tag: Partner
 
 > Brazeの統合により、BrazeメッセージでVoucherifyコードを送信できます。このリファレンス記事では、Voucherify ディストリビューションで Braze のカスタム属性を使用する方法について説明します。
 
+_この統合はVoucherifyによって維持されている。_
+
 {% alert tip %}
 Voucherify ディストリビューションで Braze のカスタム属性を使用する前に、Braze ユーザーを Voucherify ダッシュボードに追加する必要があります。Braze コネクテッドコンテンツを使用して、ユーザーを同期したり、CSV や API を使用して顧客をインポートしたりできます。[Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) について詳しく知るには、こちらをご覧ください。
 {% endalert %}
@@ -107,3 +109,4 @@ Braze と Voucherify を使用して自動ワークフローを設定するに�
 準備ができたら、メッセージプレビューでコードを確認できます。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_email_preview.png %})
+

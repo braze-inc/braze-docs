@@ -35,7 +35,7 @@ There are two ways you can test your Canvas.
 
 - **Method 1:** In the duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
 
-![][2]
+![A Canvas with an entry audience of "First used these apps less than 3 days ago" and the email addresses of two test users.][2]{: style="max-width:90%;"}
 
 - **Method 2:** [Preview your user paths]({{site.baseurl}}/preview_user_paths/) by selecting the **Test Canvas** button in the footer of the Canvas builder.
 
@@ -84,5 +84,4 @@ When you're testing a Canvas with multiple branches that target users based on d
 1. For each branch, identify the attributes and events that the user must have to be included in the Canvas journey.
 2. Build those into JSON payload to be posted using the `/users/track` endpoint.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
 [2]: {% image_buster /assets/img_archive/canvas_test2.png %}

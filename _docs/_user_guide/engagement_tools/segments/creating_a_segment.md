@@ -25,7 +25,7 @@ Optionally, you can do the following:
 - Add a [team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to your segment.
 - Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for further organization.
 
-![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
+![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][5]{: style="max-width:80%;"}
 
 ## Step 3: Choose your app or platform
 
@@ -33,7 +33,7 @@ Choose which apps or platforms you'd like to target by selecting **Users from al
 
 For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]{: style="max-width:70%;"}
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][2]{: style="max-width:80%;"}
 
 ## Step 4: Add filters to your segment
 
@@ -47,7 +47,7 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**. Edit the filter group name by selecting the icon that appears when you hover next to it.
 
-![Filter group with an editing icon next to its name.][14]{: style="max-width:70%;"}
+![Filter group with an editing icon next to its name.][14]
 
 Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
 
@@ -73,7 +73,7 @@ Depending on the specific filter you select, you will have different operators f
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segmenter filter groups with the AND operator.][9]{: style="max-width:70%;"}
+![Segmenter filter groups with the AND operator.][9]
 
 {% alert important %}
 Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
@@ -91,13 +91,13 @@ Create an exclusion group by adding filters like you would for filter groups. Th
 
 Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
 
-![An exclusion group with two filters.][12]{: style="max-width:70%;"}
+![An exclusion group with two filters.][12]
 
 #### Testing segments
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section.
 
-![User Lookup section with a search field.][6]{: style="max-width:80%;"}
+![User Lookup section with a search field.][6]
 
 User lookup is available when:
 - Creating a segment
@@ -106,11 +106,11 @@ User lookup is available when:
 
 When a user matches the segment, filter, and app criteria, an alert will state so.
 
-![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:80%;"}
+![A user lookup of "testuser" triggers an alert stating, "testuser matches all of the segments, filters, and apps.][7]
 
 When a user doesn’t match part or all of the segment, filter, or app criteria, the missing criteria is listed for troubleshooting purposes.
 
-![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:80%;"}
+![A user lookup with an alert stating, "test1 does not match the following targeting criteria:" and displays missing criteria.][8]
 
 #### Single-user segments
 
@@ -150,7 +150,7 @@ When segmenting with device-dependent filters (device model, device OS, and app 
 
 You can specify that only one push notification is sent to each user. When [composing your message]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
 
-![][13]{: style="max-width:60%;"}
+!["Addional settings" with a checkbox for only sending to the user's last used device.][13]{: style="max-width:60%;"}
 
 ### Considerations
 

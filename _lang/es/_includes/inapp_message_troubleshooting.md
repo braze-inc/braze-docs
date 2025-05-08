@@ -50,15 +50,15 @@ Si has configurado un delegado de mensajes dentro de la aplicación para que ges
 
 1. Los desencadenantes tardan en sincronizarse con el dispositivo al iniciar la sesión, por lo que puede darse una condición de carrera si los usuarios registran un evento o una compra justo después de iniciar la sesión. Una posible solución podría ser cambiar la campaña para que se desencadene al inicio de la sesión, y luego segmentar en función del evento o la compra previstos. Ten en cuenta que esto entregaría el mensaje dentro de la aplicación en el siguiente inicio de sesión tras producirse el evento.
 
-2. Si la campaña se desencadena por el inicio de una sesión o un evento personalizado, debes asegurarte de que este evento o sesión se produce con la frecuencia suficiente para desencadenar el mensaje. Comprueba estos datos en las páginas [Resumen][1] (para datos de sesión) o [Eventos personalizados][2]:
+2. Si la campaña se desencadena por el inicio de una sesión o un evento personalizado, debes asegurarte de que este evento o sesión se produce con la frecuencia suficiente para desencadenar el mensaje. Comprueba estos datos en las páginas [Resumen]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (para datos de sesión) o [Eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![Página de eventos personalizados que muestra un gráfico del número de veces que se ha producido el evento personalizado Añadido a Favoritos durante un periodo de un mes][14]
+![Página de eventos personalizados que muestra un gráfico del número de veces que se ha producido el evento personalizado Añadido a Favoritos durante un periodo de un mes]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Las impresiones son más bajas que antes
 
 1. Asegúrate de que nadie haya alterado involuntariamente el segmento o la campaña desde su lanzamiento. Nuestros registros de cambios de segmento y de campaña te darán información sobre los cambios que se han hecho, quién los hizo y cuándo ocurrieron.
 
-![Enlace para ver el registro de cambios en la página Detalles de la campaña con siete cambios desde la última vez que el usuario vio la campaña][10]
+![Enlace para ver el registro de cambios en la página Detalles de la campaña con siete cambios desde la última vez que el usuario vio la campaña]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Asegúrate de que no has reutilizado el evento desencadenante en una campaña de mensajes dentro de la aplicación con una prioridad más alta.
 
@@ -126,7 +126,3 @@ Si tu aplicación solicita y recibe correctamente mensajes dentro de la aplicaci
 {% endcase %}
 7. Si tu mensaje dentro de la aplicación se desencadena al iniciar la sesión y has configurado un tiempo de espera de sesión ampliado, esto afectará a la rapidez con la que puedes mostrar mensajes. Por ejemplo, si el tiempo de espera de tu sesión está configurado en 300 segundos, cerrar y volver a abrir la aplicación en menos de ese tiempo no actualizará la sesión, por lo que un mensaje dentro de la aplicación desencadenado por el inicio de una sesión no se mostrará.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}

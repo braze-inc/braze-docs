@@ -44,7 +44,7 @@ Ohne die folgenden Einstellungen wird jedes Mal, wenn eine Connected-Content Nac
 
 **Rate-Limiter**
 
-Stellen Sie sicher, dass Sie [die Anzahl der]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) von Braze gesendeten [Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) pro Minute [begrenzen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting). Dies schützt sowohl die APIs von Braze als auch von Voucherify vor zu viel Traffic aus Ihrer Kampagne. Begrenzen Sie beim Targeting von Nutzern:innen bei der Einrichtung von Kampagnen die Sendegeschwindigkeit auf 500 Nachrichten pro Minute.
+Stellen Sie sicher, dass Sie [die Anzahl der Nachrichten begrenzen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting), die von Braze pro Minute gesendet werden. Dies schützt sowohl die APIs von Braze als auch von Voucherify vor zu viel Traffic aus Ihrer Kampagne. Begrenzen Sie beim Targeting von Nutzern:innen bei der Einrichtung von Kampagnen die Sendegeschwindigkeit auf 500 Nachrichten pro Minute.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
@@ -359,7 +359,7 @@ Wir gehen davon aus, dass Sie bereits eine Braze-Kampagne oder ein Braze-Canvas 
     ```
     {% endraw %}
 
-2. Geben Sie Ihren Voucherify API Endpunkt an. Wenn Sie nicht wissen, wie Ihr API Endpunkt lautet, können Sie ihn unter **Projekteinstellungen** > **Allgemein** > API Endpunkt überprüfen.<br>
+2. Geben Sie Ihren Voucherify API Endpunkt an. Wenn Sie nicht wissen, wie Ihr API Endpunkt lautet, können Sie ihn unter **Projekteinstellungen** > **Allgemein** > **API Endpunkt** überprüfen.<br>
     {% raw %}
     ```
     YOUR API ENDPOINT/v1/publications?cache_id={{cache_id}}

@@ -178,7 +178,7 @@ Diese E-Mails werden nur einmal pro Tag auf der Ebene des Workspace gesendet. We
 Um sich für den Erhalt dieser E-Mails zu registrieren, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Benachrichtigungspräferenzen**.
-2. Wählen Sie **Connected-Content-Fehler** und **Webhook-Fehler** im **Bereich Canvas & Kampagnen** aus **.** 
+2. Wählen Sie **Connected-Content-Fehler** und **Webhook-Fehler** im Bereich **Canvas & Kampagnen** aus.
 
 ### Einträge im Nachrichten-Aktivitätsprotokoll
 

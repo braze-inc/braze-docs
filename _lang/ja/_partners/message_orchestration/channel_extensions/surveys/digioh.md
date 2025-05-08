@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Digioh](https://www.digioh.com/) は、リストの拡大、ファーストパーティデータの取り込み、Braze キャンペーンでのデータの利用を支援します。
 
+_この統合はDigioh によって維持されています。_
+
+## 統合について
+
 Braze と Digioh の統合により、柔軟性の高いドラッグ＆ドロップビルダーを使用して、顧客とつながるためのブランドらしさのあるフォーム、ポップアップ、パフォーマンスセンター、ランディングページ、アンケートを作成できます。Digioh は、統合の設定を支援し、最初のキャンペーンを作成、設計、開始できるようにします。
 
 ![「Digioh で柔軟製の高いメールとコミュニケーションのユーザー設定センターを作成する」][5]{: style="border:0"}
@@ -62,6 +66,7 @@ Digioh [デザインエディター](https://help.digioh.com/knowledgebase/digio
 ![「統合をライトボックスに追加する][3]{: style="max-width:90%"}
 
 ここで [**Add Integration**] を選択し、目的の統合を選択して [**Save**] をクリックします。Digioh は、キャプチャしたリードをリアルタイムで Braze に渡します。
+
 
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}

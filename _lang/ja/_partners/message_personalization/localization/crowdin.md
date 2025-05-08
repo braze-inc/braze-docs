@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Crowdin はローカライゼーション管理のためのクラウドベースのソフトウェアです。Crowdin を使用して、Android や iOS のアプリ、Web サイト、ストアスクリーンショットなどのコンテンツを翻訳できます。翻訳は、社内チーム、翻訳会社、または機械翻訳エンジンを使って行うことができる。
 
+_この統合はCrowdinによって維持されている。_
+
+## 統合について
+
 Braze と Crowdin の統合により、メールテンプレートとコンテンツブロックを翻訳できます。また、Braze アカウントから Crowdin プロジェクトにコンテンツを同期し、Braze に戻って翻訳を追加することもできます。
 
 ## 前提条件
@@ -63,6 +67,7 @@ Crowdin の Editor モードでは、Braze アカウントから同期された�
 翻訳が完了したらすぐに Crowdin で Braze アプリを開き、左側のパネルで翻訳済みファイルを選択し (ファイルごとに、すべての翻訳言語または特定の翻訳言語のみを選択できます)、[**Sync to Braze**] をクリックします。
 
 ![翻訳ファイルを選択し、Braze に同期しているユーザー。][3]
+
 
 [1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
 [2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}

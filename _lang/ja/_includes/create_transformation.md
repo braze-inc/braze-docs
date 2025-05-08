@@ -1,9 +1,5 @@
 Braze ダッシュボードで、[**データ設定**] > [**データ変換**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**データ**] の下に [**変換**] が表示されます。
-{% endalert %}
-
 [**変換を作成**] を選択して変換に名前を付け、編集エクスペリエンスを選択します。
 
 ![[テンプレートを使用] または [ゼロから作成] を選択するオプション付きの変換の詳細。]({% image_buster /assets/img/data_transformation/data_transformation10.png %})

@@ -12,6 +12,10 @@ search_tag: Airbyte
 
 > [Airbyte](https://airbyte.com/) は、データウェアハウス、データレイク、データベースにデータを統合するのに役立つオープンソースのデータ統合エンジンです。
 
+_この統合はAirbyteによって維持されている。_
+
+## 統合について
+
 BrazeとAirbyteの統合により、ユーザーはデータパイプラインを作成し、すべてのアプリケーションとデータベースを中央倉庫に接続することで、Brazeのデータを収集・分析することができる。中央ウェアハウスにデータが収集されると、データチームは好きなビジネスインテリジェンスツールを使って、Braze のデータを効率的に調査できます。
 
 ## 前提条件
@@ -52,5 +56,5 @@ Airbyte の Braze ソースコネクターは、以下の[同期モード](https
 - [`segments_analytics`](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e)
 
 {% alert note %}
-レート制限はストリームによって異なる。詳しくは[料金制限表を](https://www.braze.com/docs/api/api_limits/#rate-limits-by-request-type)参照のこと。
+レート制限はストリームによって異なる。詳しくは[料金制限表を]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type)参照のこと。
 {% endalert %}

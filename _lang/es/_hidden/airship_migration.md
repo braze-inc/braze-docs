@@ -22,7 +22,7 @@ Es necesario para [migrar tokens de notificaciones push a través de la API]({{s
 
 1. Importa los tokens a través del punto final [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Para las importaciones de grandes lotes, tenemos recursos disponibles para ayudar a agilizar el proceso. Ponte en contacto con tu COM o SA para más detalles.
 2. Si el token ya existe en Braze, se ignorará; de lo contrario, se generará un perfil anónimo.
-3. Realiza el control de calidad de la integración push. Asegúrate de que se han completado los pasos para [configurar push]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/).
+3. Realiza el control de calidad de la integración push. Asegúrate de que se han completado los pasos para [configurar push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
 Si tus perfiles de usuario y tus tokens push están almacenados en ubicaciones distintas, te recomendamos que importes los tokens push de forma anónima y realices una migración posterior de tus perfiles de usuario existentes. No es necesario mapearlos juntos, ya que el SDK de Braze para iOS se encargará de la resolución del token tras una integración correcta.
 

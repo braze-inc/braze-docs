@@ -11,6 +11,10 @@ search_tag: Partner
 
 > [SmarterSendsは][2]、企業が作成、スケジュール、展開できるマーケティング・キャンペーンでパーソナライゼーションを推進し、使用するコンテンツやデータをコントロールしながら、ブランドや法的コンプライアンスを強化する。 
 
+_この統合はSmarterSends によって維持されます。_
+
+## 統合について
+
 Braze と SmarterSends のパートナーシップにより、Braze の機能と、分散ユーザーが所有するハイパーローカライズされたコンテンツを組み合わせて、マーケティングキャンペーンを強化できます。
 
 ## 前提条件
@@ -22,10 +26,6 @@ Braze と SmarterSends のパートナーシップにより、Braze の機能と
 | Braze RESTエンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Braze APIキャンペーンID | [Braze API キャンペーン ID]({{site.baseurl}}/api/api_campaigns/) は、SmarterSends を介して送信されるすべてのキャンペーンの一意の識別子です。これは Braze ダッシュボードの [**メッセージング**] > [**キャンペーン**] で作成できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
-{% endalert %}
 
 ## ユースケース
 
@@ -81,6 +81,7 @@ SmarterSendsで作成したグループごとにメッセージバリアントID
 ## カスタマイズ
 
 SmarterSendsの各インスタンスは、ブランドのロゴカラーやカスタムドメイン名で完全にカスタマイズ可能で、親しみやすい環境を作ることができる。さらに、パーソナライゼーションを進めるために、Brazeワークスペース内のセグメントに基づいて、キャンペーンでユーザーをターゲットにする属性やカスタム属性を定義できる。
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://smartersends.com

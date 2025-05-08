@@ -29,7 +29,7 @@ Die Partnerschaft zwischen Braze und Toovio ermöglicht das Triggern von Nachric
 
 ## Integration
 
-Die folgende Integration erlaubt es Toovio, Trigger zu generieren, die auf bestimmte Kund:in abzielen und nahezu in Realtime kommunizieren. Von Toovio ermittelte Trigger werden über den [Endpunkt][3] Braze [`/users/track` an Braze übermittelt.][3]
+Die folgende Integration erlaubt es Toovio, Trigger zu generieren, die auf bestimmte Kund:in abzielen und nahezu in Realtime kommunizieren. Von Toovio ermittelte Trigger werden über den [`/users/track`Braze Endpunkt][3] an Braze übermittelt.
 
 ### Schritt 1: Daten Partner definieren
 

@@ -15,10 +15,6 @@ channel: email
 
 Les **Préférences de messagerie** se trouvent sous **Paramètres** dans le tableau de bord.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page s'appelle **Paramètres de messagerie** et se trouve sous **Paramètres** > **Gérer les paramètres** > **Paramètres de messagerie**.
-{% endalert %}
-
 ## Configuration de l’envoi
 
 Les paramètres de messagerie sous la section **Configuration d'envoi** déterminent quels détails sont inclus dans vos campagnes par e-mail. Ces paramètres concernent notamment ce que vos utilisateurs voient quand ils reçoivent un e-mail de Braze.
@@ -34,8 +30,6 @@ Dans cette section, vous pouvez ajouter les noms et adresses e-mail à utiliser 
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « De » correspond à votre domaine d’envoi (par exemple, marketing.yourdomain.com). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Les e-mails avec des adresses "De" dynamiques seront envoyés depuis le pool d'IP du domaine d'envoi correspondant. Tous les e-mails de réponse peuvent être définis dans votre domaine racine.
-
 {% endtab %}
 {% tab Adresse de réponse %}
 
@@ -49,7 +43,7 @@ L’ajout d’une adresse e-mail dans cette section vous permet de la sélection
 Cette section vous permet d’ajouter et de gérer des adresses CCI pouvant être ajoutées aux messages e-mail sortants envoyés par Braze. L’ajout d’une adresse CCI à un message e-mail enverra une copie identique du message que votre utilisateur reçoit dans votre boîte de réception CCI. Il s’agit d’un outil utile pour conserver des copies des messages que vous avez envoyés à vos utilisateurs pour les exigences de conformité ou les problèmes de support client. Les e-mails en copie cachée ne sont pas inclus dans les rapports et les analyses des e-mails.
 
 {% alert important %}
-L’ajout d’une adresse CCI à votre campagne ou à votre Canvas aura pour effet de doubler vos e-mails facturables pour la campagne ou le composant de Canvas puisque Braze enverra un message à votre utilisateur et un autre à votre adresse CCI.
+L'ajout d'une adresse CCI à votre campagne ou Canvas aura pour effet de doubler vos e-mails facturables pour la campagne ou le composant Canvas puisque Braze enverra un message à votre utilisateur et un autre à votre adresse CCI.
 {% endalert %}
 
 ![Section Adresse CCI de l’onglet Paramètres des e-mails.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -82,10 +76,6 @@ Pour modifier l’emplacement :
 1. Dans Braze, allez à **Paramètres** > **Préférences de messagerie**.
 2. Cochez la case sous **Paramètres des pixels de suivi d’ouverture personnalisé**. 
 3. Appuyez sur **Enregistrer**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cela se trouve dans **Gérer les paramètres** > **Paramètres de messagerie**.
-{% endalert %}
 
 Une fois enregistré, Braze enverra des instructions spéciales à l’ESP afin de placer le pixel de suivi ouvert en haut de tous les e-mails HTML.
   
@@ -135,7 +125,7 @@ Si l'en-tête figure dans la version brute de l'e-mail mais n'est pas affiché, 
 
 Lorsque la fonctionnalité d'en-tête de désabonnement par e-mail est activée, ce paramètre s'applique à l'ensemble de l'espace de travail, et non au niveau de l'entreprise. Il est ajouté aux campagnes et aux canvas configurés pour être envoyés aux utilisateurs abonnés ou inscrits, ou aux utilisateurs abonnés dans l'étape **Audiences cibles** des créateurs de campagnes et de canvas.
 
-Braze n’ajoute pas l’en-tête pour ce qui est considéré comme transactionnel, donc si un message est configuré pour être envoyé à tous les utilisateurs, y compris les utilisateurs désabonnés, l’en-tête de désabonnement de la liste ne sera pas attaché au message sauf indication contraire dans le paramètre de désabonnement en un clic au niveau du message. De plus, l'en-tête n'est pas ajouté pour les messages envoyés via un envoi de test car l'en-tête de désabonnement de la liste n'est généré et ajouté que pour cibler les profils d'utilisateurs dans Braze.
+Lorsque vous utilisez l'espace de travail par défaut, Braze n'ajoute pas l'en-tête de désabonnement en un clic pour les campagnes considérées comme transactionnelles, qui sont configurées pour "envoyer à tous les utilisateurs, y compris les utilisateurs désabonnés". Pour passer outre et ajouter l'en-tête de désabonnement en un clic lors de l'envoi aux utilisateurs désabonnés, vous pouvez sélectionner **Se désabonner globalement de tous les e-mails** dans les paramètres généraux des messages de la liste de désabonnement en un clic.
 
 ### En-tête de désabonnement de liste par défaut
 

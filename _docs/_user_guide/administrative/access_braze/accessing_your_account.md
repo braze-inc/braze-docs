@@ -32,8 +32,34 @@ After you log into Braze with SSO, you can no longer use your password to log in
 
 ## Resetting your password
 
-To reset your password, click the **Forgot your password?** link on the dashboard login page. You will then be prompted to input your email to receive a link to reset your password.
+To reset your password, select the **Forgot your password?** link on the dashboard login page. You'll be prompted to input your email to receive a link to reset your password.
 
-![Reset Password Button][45]
+![Dashboard login with "Forgot your password?" prompt.][1]{: style="max-width:60%"}
 
-[45]: {% image_buster /assets/img_archive/enable_reset.png %}
+## Supported browsers
+
+The Braze dashboard supports the following browsers:
+- Chrome (version 87 or newer)
+- Firefox (version 85 or newer)
+- Safari (version 15.4 or newer)
+- Edge (version 87 or newer)
+
+If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and reinstall your browser.
+
+### Browser cache and cookies
+
+If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser.
+
+{% alert important %}
+Clearing cookies will log you out, so unsaved work will be lost.
+{% endalert %}
+
+- [Clear cache & cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Clear cookies in Safari on Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
+- [Clear cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
+- [Delete all cookies in Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
+
+If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
+
+
+[1]: {% image_buster /assets/img_archive/enable_reset.png %}

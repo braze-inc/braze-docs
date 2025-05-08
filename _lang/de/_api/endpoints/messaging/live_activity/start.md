@@ -55,7 +55,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
 
 | Parameter | Erforderlich | Datentyp| Beschreibung  |
 |-----------|----------|----------|--------------|
-| `app_id` | Erforderlich | String | [Bezeichner der]({{site.baseurl}}/api/identifier_types/#the-app-identifier) App [API]({{site.baseurl}}/api/identifier_types/#the-app-identifier), der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
+| `app_id` | Erforderlich | String | [API-Bezeichner]({{site.baseurl}}/api/identifier_types/#the-app-identifier) der App, der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
 | `activity_id` | Erforderlich | String  | Definieren Sie einen angepassten String als Ihren `activity_id`. Sie verwenden diese ID, wenn Sie Update- oder End-Ereignisse an Ihre Live-Aktivität senden möchten.  |
 | `activity_attributes_type`  | Erforderlich | String | Die Art der Attribute, die Sie unter `liveActivities.registerPushToStart` in Ihrer App definieren.  |
 | `activity_attributes` | Erforderlich | Objekt  | Die statischen Attributwerte für die Aktivitätsart (z.B. die Namen der Sportteams, die sich nicht ändern). |

@@ -55,11 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Respuesta
 
-Este punto final devolverá un código de estado `202`, y la creación de la campaña se producirá de forma asíncrona. Puede utilizar la [descarga de eventos de seguridad][2] para ver los registros de cuándo se duplicaron las campañas y mediante qué clave API.
-
+Este punto final devolverá un código de estado `202`, y la creación de la campaña se producirá de forma asíncrona. Puedes utilizar la [descarga de eventos de seguridad][2] para ver los registros de cuándo se duplicaron las campañas y mediante qué clave de API.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/?redirected=true#security-event-download
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report
 
 {% endapi %}

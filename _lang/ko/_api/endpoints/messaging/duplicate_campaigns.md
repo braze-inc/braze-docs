@@ -55,11 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 응답
 
-이 엔드포인트는 `202` 상태 코드를 반환하며, 캠페인 생성은 비동기적으로 발생합니다. 캠페인이 복제된 시기와 어떤 API 키에 의해 복제되었는지의 기록을 보려면 [Security event download][2]를 사용할 수 있습니다.
-
+이 엔드포인트는 `202` 상태 코드를 반환하며, 캠페인 생성은 비동기적으로 발생합니다. [보안 이벤트 다운로드][2]를 사용하여 캠페인이 복제된 시기와 어떤 API 키에 의해 복제되었는지 기록을 확인할 수 있습니다.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/?redirected=true#security-event-download
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report
 
 {% endapi %}

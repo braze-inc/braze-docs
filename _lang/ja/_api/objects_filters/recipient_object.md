@@ -13,10 +13,6 @@ description: "この参考記事では、Braze 受信者オブジェクトのさ
 
 このオブジェクトには `external_user_id` または `user_alias`、または `email` のいずれかが必要です。**リクエストでは 1 つだけ指定する必要があります。**
 
-{% alert important %}
-メールアドレスによる受信者の指定は、現在早期アクセス中です。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
-
 受信者オブジェクトは、[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[トリガープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、[キャンバスエントリプロパティオブジェクトを]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)組み合わせることができます。
 
 ## オブジェクト本体
@@ -31,6 +27,8 @@ description: "この参考記事では、Braze 受信者オブジェクトのさ
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
+
+`send_to_existing_only` が`true` の場合、Braze は既存ユーザーにのみメッセージを送信します。ただし、このフラグは、ユーザーのエイリアスでは使えません。`send_to_existing_only` が`false` の場合、属性が含まれていなければなりません。Brazeは、メッセージを送信する前に、`id` と属性を持つユーザーを作成する。
 
 - [ユーザーのエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [外部ユーザ ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)

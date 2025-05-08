@@ -37,8 +37,6 @@ To duplicate a Canvas:
 2. Hover over the Canvas row and select <i class="fas fa-ellipsis-vertical"></i> **More actions**.
 3. Select **Duplicate**.
 
-![Canvas list page with the option to duplicate a Canvas named "api_triggered_canvas 3".]({% image_buster /assets/img_archive/duplicate_canvas.png %})
-
 {% details Original Canvas editor %}
 
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. 
