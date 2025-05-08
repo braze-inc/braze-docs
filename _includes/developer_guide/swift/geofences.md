@@ -8,24 +8,25 @@ As of iOS 14, geofences do not work reliably for users who choose to only give t
 
 ### Step 1: Configure the Braze dashboard
 
-There are two ways to enable geofences for a particular app: from the **Locations** page or from the **App Settings** page.
+You can enable geofences for your app in one of the following places:
 
 {% tabs local %}
-{% tab Locations %}
-Enable geofences on the **Locations** page of the dashboard.
+{% tab locations %}
+To enable geofences from the **Locations** page:
 
-1. Go to **Audience** > **Locations**.
-2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
-3. Select the app to enable geofences. Click **Done.**
+1. In Braze, go to **Audience** > **Locations**.
+2. The number of apps in your workspace that have geofences enabled is listed under the map. For example, if geofences is only enabled for some of your apps, it may read: **2 of 5 Apps with Geofences enabled**. To enable additional apps, select the current count under the map.
+3. Choose an app to enable geofences for, then select **Done.**
+
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 {% endtab %}
 
-{% tab App Settings %}
-Enable geofences from your app's settings.
+{% tab app settings %}
+To enable geofences from the **App Settings** page:
 
-1. Go to **Settings** > **App Settings**.
-2. Select the app for which you wish to enable geofences.
-3. Select the **Geofences Enabled** checkbox. Click **Save.**
+1. In Braze, go to **Settings** > **App Settings**.
+2. Select the app you'd like to enable geofences for.
+3. Check **Geofences Enabled**, then select **Save.**
 
 ![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 {% endtab %}
@@ -33,29 +34,29 @@ Enable geofences from your app's settings.
 
 ### Step 2: Enable your app's location services
 
-Braze location services must be enabled in your app. They are not enabled by default.
+By default, Braze location services are not enabled. To enable them in your app, complete the following steps. For a step-by-step tutorial, see [Tutorial: Braze Locations and Geofences](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/).
 
-Follow the steps below to enable location services in your app. Optionally reference [this tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) for more information.
+#### Step 2.1: Add the `BrazeLocation` module
 
-#### Add the `BrazeLocation` module
-
-In the `General` tab of your `Application` configuration page, under `Frameworks, Libraries, and Embedded Content`, add the `BrazeLocation` module.
+In Xcode, open the **General** tab. Under **Frameworks, Libraries, and Embedded Content**, add the `BrazeLocation` module.
 
 ![Add the BrazeLocation module in your Xcode project]({% image_buster /assets/img_archive/add-brazeLocation-module-xcode.png %})
 
-#### Update your `Info.plist`
+#### Step 2.2: Update your `Info.plist`
 
-Add the key `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `Info.plist` with a `String` value that describes why your application needs to track location.
+In your `info.plist`, assign a `String` value to one of the following keys that describes why your application needs to track location. This string will be shown when your users are prompted for location services, so be sure to clearly explain the value of enabling this feature for your app.
 
-This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
+- `NSLocationAlwaysAndWhenInUseUsageDescription` 
+- `NSLocationWhenInUseUsageDescription`
 
-{% alert note %}
+{% alert important %}
 Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's developer documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
 {% endalert %}
 
 ### Step 3: Enable geofences in your code
 
-In your app's code, enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the [`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see our [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
+In your app's code, enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the [`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. For other `location` configuration options, see [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
+
 {% tabs %}
 {% tab swift %}
 
@@ -99,13 +100,15 @@ AppDelegate.braze = braze;
 
 #### Step 3.1: Enable background reporting (optional)
 
-By default, geofences are only monitored if your app is in the foreground, or if it has `Always` authorization (which monitors all application states).
+By default, geofence events are only monitored if your app is in the foreground or has `Always` authorization, which monitors all application states.
 
-However, you can choose to monitor geofence events when your app is in the background or if [`When In Use` authorization](#swift_request-authorization) is active. To do this, add the `Background Mode -> Location updates` capability to your Xcode project.
+However, you can choose to also monitor geofence events if your app is in the background or has [`When In Use` authorization](#swift_request-authorization). 
+
+To monitor these additional geofence events, open your Xcode project, then go to **Signing & Capabilities**. Under **Background Modes**, check **Location updates**.
 
 ![In Xcode, Background Mode > Location Updates]({% image_buster /assets/img_archive/xcode-background-modes-location-updates.png %})
 
-Then, enable `allowBackgroundGeofenceUpdates` to let Braze extend your app's "When In Use" status by continuously monitoring location updates. This setting only works when your app is in the background. When the app re-opens, the existing background processes are paused and foreground processes are prioritized instead.
+Next, enable `allowBackgroundGeofenceUpdates` in your app's code. This lets Braze extend your app's "When In Use" status by continuously monitoring location updates. This setting only works when your app is in the background. When the app re-opens, all existing background processes are paused and foreground processes are prioritized instead.
 
 {% tabs %}
 {% tab swift %}
