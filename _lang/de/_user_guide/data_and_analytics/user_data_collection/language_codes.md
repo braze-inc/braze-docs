@@ -1,0 +1,199 @@
+---
+nav_title: "Nutzer:innen Codes für Sprachen"
+article_title: "Nutzer:innen Codes für Sprachen"
+page_type: reference
+description: "Dieses Glossar umfasst die aktuellen Nutzer:innen Codes, die Braze unterstützt." 
+
+---
+
+# Sprachcodes der Nutzer:innen
+
+> Dieser Artikel behandelt die Sprachcodes der Nutzer:innen, die derzeit bei Braze unterstützt werden.
+
+Im Allgemeinen verwendet Braze die meisten [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) Standard Codes, aber einige wenige sind nicht in diesem Set enthalten.
+
+| Sprache | Code | 
+| -------- | ---- |
+| ENGLISCH | en |
+| FRANZÖSISCH | fr |
+| DEUTSCH | de |
+| ITALIENISCH | es |
+| NIEDERLÄNDISCH | nl |
+| SCHWEDISCH | sv |
+| SPANISCH | es |
+| DÄNISCH | da |
+| PORTUGUESISCH | pt |
+| NORWEGISCH | nb |
+| HEBRÄISCH | er |
+| JAPANISCH | ja |
+| ARABISCH | ar |
+| FINNISCH | fi |
+| GRIECHENLAND | el |
+| IKELANDISCH | ist |
+| MALTESE | mt |
+| TÜRKISCH | tr |
+| KROATISCH | Std. |
+| CHINESISCH | zh |
+| URDU | ur |
+| HINDI | Hallo |
+| THAI | th |
+| KOREANISCH | ko |
+| LITAUISCH | lt |
+| POLNISCH | pl |
+| HUNGARISCH | hu |
+| ESTNISCH | und |
+| LETTISCH | lv |
+| SAMI | se |
+| SAMBURU | saq |
+| FAROESE | für |
+| FARSI | fa |
+| RUSSISCH | ru |
+| IRISH | ga |
+| ALBANISCH | sq |
+| RUMÄNISCH | ro |
+| TSCHECHISCH | cs |
+| SLOWAKISCH | sk |
+| SLOWENISCH | sl |
+| JIDDISCH | yi |
+| SERBISCH | sr |
+| MAZEDONISCH | mk |
+| DOUALA | dua |
+| BULGARISCH | bg |
+| UKRAINISCH | uk |
+| BELARUSSISCH | sein |
+| DAWIDA | dav |
+| UZBEK | uz |
+| KASACHISCH | kk |
+| AZERBAIJANI | az |
+| ARMENIEN | hy |
+| GEORGISCH | ka |
+| MOLDAUISCH | mo |
+| KIRGHIZ | ky |
+| TAJIKI | tg |
+| TURKMEN | tk |
+| MONGOLISCH | mn |
+| PASHTO | ps |
+| KURDISCH | ku |
+| KASHMIRI | ks |
+| SINDHI | sd |
+| TIBETAN | bo |
+| NEPALI | ne |
+| SANSKRIT | sa |
+| MARATHI | mr |
+| BENGALISCH | bn |
+| ASSAMESE | als |
+| GUJARATI | gu |
+| PUNJABI | pa |
+| ORIYA | oder |
+| MALAYALAM | ml |
+| KANNADA | kn |
+| TAMIL | ta |
+| TELUGU | te |
+| SINHALESE | si |
+| BURMESISCH | mein |
+| LAO | lo |
+| VIETNAMESISCH | vi |
+| INDONESISCH | id |
+| TAGALOG | tl |
+| MALAIISCH | ms |
+| AMHARISCH | a.m. |
+| TIGRINYA | ti |
+| OROMO | om |
+| SOMALI | also |
+| SWAHILI | sw |
+| KINYARWANDA | rw |
+| RUNDI | rn |
+| MALAGASY | mg |
+| ESPERANTO | eo |
+| WELSH | cy |
+| BASKISCH | eu |
+| CATALAN | ca |
+| LATEIN | la |
+| QUECHUA | qu |
+| GUARANI | gn |
+| AYMARA | ay |
+| TATARISCH | tt |
+| UIGHUR | ug |
+| DZONGKHA | dz |
+| JAVANISCH | jv |
+| SUNDANESISCH | su |
+| GALICISCH | gl |
+| AFRIKAANS | af |
+| BRETONISCH | br |
+| INUKTITUT | iu |
+| SCHOTTISCH | gd |
+| MANX | gv |
+| TONGAN | an |
+| GRÖNLÄNDISCH | kl |
+| NYNORSK | nn |
+| AKAN | ak |
+| AGHEM | agq |
+| ASU | asa |
+| BASA | bas |
+| BEMBA | bem |
+| BENA | bez |
+| BAMBARA | bm |
+| BODO | brx |
+| BOSNISCH | bs |
+| CHIGA | cgg |
+| CHEROKEE | chr |
+| ZARMA | dje |
+| JOLA_FONYI | dyo |
+| KIEMBU | ebu |
+| EWE | ee |
+| EWONDO | ewo |
+| PEUL | ff |
+| FILIPINO | fil |
+| SCHWEIZERDEUTSCH | gsw |
+| EKUGUSII | guz |
+| HAUSA | ha |
+| HAWAIIANISCH | haw |
+| IGBO | ig |
+| SICHUAN YI | ii |
+| MACHAME | jmc |
+| KABYLE | kab |
+| KAMBA | kam |
+| MAKONDE | kde |
+| CRIOL | kea |
+| SONGHAY | khq |
+| KIKUYU | ki |
+| KALENJIN | kln |
+| KAMBODSCHANISCH | km |
+| KONKANI | kok |
+| SHAMBALA | ksb |
+| BAFIA | ksf |
+| KORNISCH | kw |
+| LUXEMBURGISCH | lb |
+| GANDA | lg |
+| LINGALA | ln |
+| LUBA KATANGA | lu |
+| LUO | luo |
+| LUYIA | luy |
+| MASAI | mas |
+| MERU | mer |
+| MORISYEN | mfe |
+| MAKHUWA MEETTO | mgh |
+| MUNDANG | mua |
+| NAMA | naq |
+| NORD-NDEBELE | und |
+| RAETO ROMANCE | rm |
+| ROMBO | rof |
+| RWA | rwk |
+| SANGU | sbp |
+| SENA | seh |
+| KOYRABORO SENNI | ses |
+| TACHELHIT | shi |
+| SHONA | sn |
+| CONGO SWAHILI | swc |
+| TESO | teo |
+| TASAWAQ | twq |
+| ZENTRALATLAS TAMAZIGHT | tzm |
+| VAI | vai |
+| VUNJO | vun |
+| XHOSA | xh |
+| SOGA | xog |
+| YANGBEN | yav |
+| YORUBA | yo |
+| ZULU | zu |
+| NYANKOLE | nyn |
+| NUER | nus |
