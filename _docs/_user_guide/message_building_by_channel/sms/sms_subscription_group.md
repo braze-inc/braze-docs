@@ -43,7 +43,7 @@ For example, if User A has a phone number that is subscribed to several subscrip
 
 To launch an SMS campaign through Braze, a subscription group must be selected in the dropdown, as shown in the following image. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected subscription group.  
 
-![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS" highlighted by the user.][6]
+![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS/MMS" highlighted by the user.][6]{: style="max-width:80%"}
 
 ## Setup process
 
@@ -53,7 +53,7 @@ During your SMS onboarding process, a Braze onboarding manager will set up subsc
 
 In order to send an MMS message, at least one number within your subscription group has to be enabled to send MMS. This is indicated by a tag located next to the subscription group. 
 
-![Subscription Group dropdown with "Messaging Service A for SMS" highlighted. The entry is prefixed with the tag "MMS".][10]{: style="max-width:40%"}
+![Subscription Group dropdown with "Messaging Service C for SMS/MMS" highlighted. The entry is prefixed with the tag "MMS".][10]{: style="max-width:80%"}
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
