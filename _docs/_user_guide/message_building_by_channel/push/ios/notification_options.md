@@ -19,15 +19,15 @@ channel:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS push campaign, then look to the top of the **Compose** tab for the **Notification Groups** dropdown.
+Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
 
-![][26]{: style="max-width:60%;" }
+![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".][26]{: style="max-width:60%;" }
 
 Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the workspace.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
-![][27]
+![Window to manage iOS push notification groups.][27]
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
@@ -82,7 +82,7 @@ Provisional Authorization has the potential dramatically increase your opt-in ra
 
 Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Contact settings with a push subscribed status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -168,7 +168,7 @@ All notifications will still be accessible in the user's notification center.
 
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
-![][29]
+![Relevance score of "0.5".][29]
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 

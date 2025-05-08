@@ -2666,4 +2666,6 @@ validurls['/docs/partners/message_personalization/dynamic_content/amazon_persona
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
 
+validurls['/docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/'] = '/docs/user_guide/message_building_by_channel/push/ios/notification_options/';
+
 // validurls['OLD'] = 'NEW';
