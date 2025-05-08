@@ -97,7 +97,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-#### Step 3.1 (Optional) Enable background reporting
+#### Step 3.1: Enable background reporting (optional)
 
 By default, geofences are only monitored if your app is in the foreground, or if it has `Always` authorization (which monitors all application states).
 
