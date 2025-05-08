@@ -56,7 +56,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {: start="5"}
 5. Choose between SMS and RCS. Before composing RCS messages, choose the channel you send with. We generally recommend using RCS wherever possible as there are significant user engagement benefits over SMS; however, we always provide the option of sending with SMS so that you have maximum flexibility and control. 
 
-![Options to select from an RCS or SMS/MMS message type.]({% image_buster /assets/img/rcs_message_type.png %})
+![Options to select from an RCS or SMS/MMS message type.]({% image_buster /assets/img/rcs/rcs_message_type.png %})
 
 {% endtab %}
 {% endtabs %}
