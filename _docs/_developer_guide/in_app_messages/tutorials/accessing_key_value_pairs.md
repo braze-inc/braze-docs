@@ -132,14 +132,14 @@ struct SampleApp: App {
 !!step
 lines-AppDelegate.swift=5
 
-#### 1. Implement BrazeInAppMessageUIDelegate
+#### 1. Implement `BrazeInAppMessageUIDelegate`
 
-Have your AppDelegate conform to BrazeInAppMessageUIDelegate, which lets you intercept and handle in-app messages.
+Have your AppDelegate conform to `BrazeInAppMessageUIDelegate`, which lets you intercept and customize handling in-app messages.
 
 !!step
 lines-AppDelegate.swift=23-38
 
-#### 2. Handle messages before they're displayed
+#### 2. Process messages before they're displayed
 
 The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
 

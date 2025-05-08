@@ -173,7 +173,7 @@ lines-AppDelegate.swift=5
 
 #### 1. Have you AppDelegate class conform to `BrazeInAppMessageUIDelegate`
 
-In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
+Have your `AppDelegate` conform to [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). This will allow you to override its `inAppMessage` method later on.
 
 !!step
 lines-AppDelegate.swift=20
@@ -185,7 +185,7 @@ Turn on debugging while developing to make troubleshooting easier!
 !!step
 lines-AppDelegate.swift=26-29
 
-#### 3. Set up Braze In-App Message UI and delegate
+#### 3. Set up Braze In-App Message UI and its delegate
 
 `BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to your `BrazeInAppMessageUIDelegate` implementation (in this case, `self`), it'll ensure its methods are called before any IAMs are invoked.
 

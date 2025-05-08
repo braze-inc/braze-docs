@@ -98,7 +98,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, BrazeInAppMessageUIDelegate 
 
     func inAppMessage(_ ui: BrazeInAppMessageUI,
                       displayChoiceForMessage message: Braze.InAppMessage) -> BrazeInAppMessageUI.DisplayChoice {
-        if let showFlag = message.extras["custom_key"] as? String, showFlag == "true" {
+        if let showFlag = message.extras["should_display_message"] as? String, showFlag == "true" {
             return .now
         } else {
             return .discard
@@ -125,7 +125,7 @@ struct SampleApp: App {
 !!step
 lines-AppDelegate.swift=5
 
-#### 1. Have you AppDelegate class conform to `BrazeInAppMessageUIDelegate`
+#### 1. Implement `BrazeInAppMessageUIDelegate`
 
 In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
 
@@ -192,7 +192,7 @@ class MyApplication : Application() {
         BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
             override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
                 // Check if we should show the message
-                val shouldShow = inAppMessage.extras["custom_key"] == "true"
+                val shouldShow = inAppMessage.extras["should_display_message"] == "true"
 
                 return if (shouldShow) {
                     // Show the message using Braze's UI
@@ -235,7 +235,7 @@ lines-MainApplication.kt=34-42
 
 Apply your custom logic to control whether or not the message should be displayed.
 
-In this example, we're checking if the `custom_key` extra is set to "true".
+In this example, we're checking if the `should_display_message` extra is set to "true".
 
 !!step
 lines-MainApplication.kt=38,41
