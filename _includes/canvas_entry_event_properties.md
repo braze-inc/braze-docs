@@ -1,4 +1,4 @@
-You can use `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Refer to [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
+You can use Canvas entry properties and event properties in your Canvas user journeys.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -59,3 +59,5 @@ You can no longer create or duplicate Canvases using the original editor. This s
 
 {% endtab %}
 {% endtabs %}
+
+Refer to [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
