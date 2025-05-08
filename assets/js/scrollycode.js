@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       groups.push(run);
 
-      // compute the pre’s top padding:
+      // compute the pre's top padding:
       const preStyle = getComputedStyle(activePre);
       const prePaddingTop = parseFloat(preStyle.paddingTop) || 0;
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const last = group[group.length - 1];
 
         // original offsetTop is relative to the code element;
-        // now we add the pre’s top padding so it aligns under the spans
+        // now we add the pre's top padding so it aligns under the spans
         const top = first.offsetTop + prePaddingTop;
         const height = last.offsetTop + last.offsetHeight - first.offsetTop;
 
@@ -282,23 +282,41 @@ document.addEventListener("DOMContentLoaded", () => {
         const rating = 5 - idx;
 
         // 1) Log to Braze
+        if (window.braze?.logCustomEvent) {
+          braze.logCustomEvent('Tutorial Rating', {
+            tutorial: feedback_site,
+            rating
+          });
+          braze.requestImmediateDataFlush();
+        }
 
-        // if (window.braze?.logCustomEvent) {
-        //   braze.logCustomEvent('Tutorial Rating', {
-        //     tutorial: block.id,
-        //     rating
-        //   });
-        //   braze.requestImmediateDataFlush();
-        // }
-        console.log("logged: " + rating);
+        // 2) Send to feedback.js's network request
+        var submit_data = {
+          'Helpful': rating === 5 ? 'Very Helpful' : 
+                    rating === 4 ? 'Helpful' :
+                    rating === 3 ? 'Somewhat Helpful' :
+                    rating === 2 ? 'Unhelpful' : 'Very Unhelpful',
+          'URL': feedback_site,
+          'Article Title': feedback_article_title,
+          'Nav Title': feedback_nav_title,
+          'Params': window.location.search,
+          "Language": page_language
+        };
+        console.log('Sending feedback data:', submit_data);
+        $.ajax({
+          url: 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback',
+          method: "GET",
+          dataType: "json",
+          data: submit_data
+        });
 
-        // 2) Update UI
+        // 3) Update UI
         stars.forEach((s, i) => {
           s.classList.toggle("selected", i < rating);
         });
         ratingStep.classList.add("rated");
 
-        // 3) Optional: disable further clicks
+        // 4) disable further clicks
         stars.forEach((s) => (s.style.pointerEvents = "none"));
       });
     });
