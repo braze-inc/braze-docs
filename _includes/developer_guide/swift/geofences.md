@@ -49,6 +49,8 @@ In your `info.plist`, assign a `String` value to one of the following keys that 
 - `NSLocationAlwaysAndWhenInUseUsageDescription` 
 - `NSLocationWhenInUseUsageDescription`
 
+![Info.plist location strings in Xcode]({% image_buster /assets/img_archive/info-plist-location-strings.png %})
+
 {% alert important %}
 Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's developer documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
 {% endalert %}
