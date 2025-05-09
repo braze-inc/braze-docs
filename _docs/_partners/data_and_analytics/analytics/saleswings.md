@@ -118,7 +118,7 @@ Consult the SalesWings services team for full onboarding support via the [websit
 
 ## Using this integration 
 
-To trigger the behavioral data and other data to leads and accounts, SalesWings must identify a user on your website or app, or through a third-party integration. This can occur in the following ways:
+To trigger tie behavioral data and other data to leads and accounts, SalesWings must identify a user on your website or app, or through a third-party integration. This can occur in the following ways:
 
 - **Form submissions:** When a user submits a web form, SalesWings will automatically identify all of your web form types (such as login, download, contact us, etc.) and resolve the identity of a user when they submit a form. 
 - **URL clicks with a Braze ID or external ID:** A user clicks on a Braze marketing action, typically email clicks, banner clicks, or similar, leading to a page you are tracking with SalesWings.
