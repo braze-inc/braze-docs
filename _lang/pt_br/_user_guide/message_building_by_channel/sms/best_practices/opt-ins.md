@@ -19,7 +19,7 @@ Peça aos usuários para enviar uma mensagem de texto com "START", "UNSTOP", "YE
 
 ## Opção 2: Os usuários aceitam via mensagem no app
 
-Para permitir que os usuários optem por SMS a partir de uma mensagem no app, use o [formulário de captura de número de telefone]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fornecido pela Braze para criar um formulário com a marca que permite coletar números de telefone e aumentar sua lista de SMS.
+Para permitir que os usuários optem por SMS a partir de uma mensagem no app, use o [formulário de captura de número de telefone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fornecido pela Braze para criar um formulário com a marca que permite coletar números de telefone e aumentar sua lista de SMS.
 
 ![][3]{: style="max-width:30%;"}
 

@@ -34,16 +34,11 @@ Puede realizar una actualización manual completa de todos los segmentos SQL cre
 Para crear una extensión de segmento SQL de actualización completa:
 
 1. Vaya a **Audiencia** > **Extensiones de segmento**.
-{% alert note %}
-Si está utilizando la [navegación antigua]({{site.baseurl}}/navigation), puede encontrar esta página en **Compromiso** > **Segmentos** > **Extensiones de segmento**.
-{% endalert %}
-
-{:start="2"}
-2\. Haga clic en **Crear nueva extensión** y seleccione **Actualización completa**.<br><br>
+2. Haga clic en **Crear nueva extensión** y seleccione **Actualización completa**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\. Añada un nombre para su Extensión de Segmento e introduzca su SQL. Consulte la sección [Escribir SQL](#writing-sql) para conocer los requisitos y recursos.<br><br>
+3. Añada un nombre para su Extensión de Segmento e introduzca su SQL. Consulte la sección [Escribir SQL](#writing-sql) para conocer los requisitos y recursos.<br><br>
    ![Editor SQL que muestra un ejemplo de extensión de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\. Guarda tu extensión de segmento.
+4. Guarda tu extensión de segmento.
 
 {% endtab %}
 {% tab Actualización incremental %}
@@ -53,7 +48,7 @@ El editor SQL de actualización incremental permite al usuario realizar agregaci
 1. Vaya a **Audiencia** > **Extensiones de segmento**.
 {% alert note %}
 
-Si está utilizando la [navegación antigua]({{site.baseurl}}/navigation), puede encontrar esta página en **Compromiso** > **Segmentos** > **Extensiones de segmento**.
+Si está utilizando la [navegación antigua]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), puede encontrar esta página en **Compromiso** > **Segmentos** > **Extensiones de segmento**.
 {% endalert %}
 
 {:start="2"}

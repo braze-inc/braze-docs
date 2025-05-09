@@ -1,9 +1,14 @@
 ---
 nav_title: Creating Campaigns
 article_title: Creating Banner campaigns
-alias: "/create_banner/"
-description: "This reference article covers how to create and send Banners using Braze campaigns."
-page_type: reference
+description: "Learn how to create Banners when you build a campaign in Braze."
+page_order: 2
+platform:
+  - iOS
+  - Android
+  - Web
+  - Flutter
+  - React Native
 ---
 
 # Creating Banner campaigns
@@ -57,7 +62,7 @@ To set the priority for a Banner:
 2. Drag and drop the campaigns to order them with the correct priority.
 3. Select **Apply sort**.
 
-### Step 3: Finish building the campaign
+### Step 4: Finish building the campaign
 
 Finish building your campaign by completing the following:
 
@@ -68,6 +73,6 @@ Finish building your campaign by completing the following:
 | **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Step 4: Test and launch
+### Step 5: Test and launch
 
 After building your campaign, test and review it to make sure your campaign works as expected. When you’re ready, launch your Banner campaign!

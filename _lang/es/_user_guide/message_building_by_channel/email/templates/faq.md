@@ -51,7 +51,7 @@ Sí, puede insertar tantas plantillas como desee en sus mensajes de correo elect
 
 ### ¿Cómo puedo previsualizar mis enlaces con todas las etiquetas aplicadas?
 
-Hay varias formas de previsualizar sus enlaces. Una vez aplicada la [plantilla de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), puede enviarse a sí mismo un [correo electrónico de prueba]({{site.baseurl}}/developer_guide/sending_test_messages/) para ver todos los enlaces. 
+Hay varias formas de previsualizar sus enlaces. Una vez aplicada la [plantilla de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), puede enviarse a sí mismo un [correo electrónico de prueba]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) para ver todos los enlaces. 
 
 Desde el panel de vista previa en una nueva pestaña, también puede abrir los enlaces para ver los vínculos. También puede pasar el ratón por encima de los enlaces en el panel de vista previa y verlos en la parte inferior de su navegador.
 

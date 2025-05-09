@@ -16,10 +16,6 @@ search_rank: 3
 
 Acesse **Público** > **Segmentos**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os Segmentos** em **Engajamento**.
-{% endalert %}
-
 ## Etapa 2: Dê um nome ao seu segmento
 
 Selecione **Create Segment (Criar segmento** ) para começar a criar seu segmento. Nomeie seu segmento descrevendo o tipo de usuário que pretende filtrar. Isso o ajudará a identificar o segmento quando quiser direcioná-lo para suas campanhas ou Canvas. Títulos vagos de segmentos podem ser confusos.
@@ -124,43 +120,13 @@ No entanto, as estatísticas de segmentação ou a prévia podem não mostrar es
 
 O Braze tem filtros de teste para direcionamento a usuários específicos por ID de usuário ou endereço de e-mail.
 
-### Etapa 5: Salve seu segmento
+## Etapa 5: Salve seu segmento
 
 Selecione **Salvar**. Agora você está pronto para começar a enviar mensagens aos seus usuários!
 
-## Cálculo de associação de segmentos {#segment-membership-calculation}
+## Medição do tamanho do segmento
 
-O Braze atualiza a associação do segmento do usuário à medida que os dados são enviados de volta aos nossos servidores e processados, normalmente de forma instantânea. A associação de segmento de um usuário não será alterada até que a sessão seja processada. Por exemplo, um usuário que cair em um segmento de usuário expirado quando a sessão for iniciada será imediatamente removido do segmento de usuário expirado quando a sessão for processada.
-
-### Cálculo do total de usuários acessíveis
-
-Cada segmento exibe o número total de usuários que são membros desse segmento. Ao filtrar **Usuários de todos os apps**, ele também exibe todos os diferentes canais disponíveis para se comunicar com esses usuários, como web push ou e-mail. É possível que o número total de usuários seja diferente do número de usuários alcançáveis por cada canal.
-
-![Uma tabela que exibe o total de usuários acessíveis, divididos por usuários acessíveis por e-mail, envio de e-mail para iOS, envio de e-mail para Android, envio de e-mail pela Web, envio de e-mail para Kindle e envio de e-mail para Android China.][10]
-
-Para que um usuário seja listado como acessível por meio de um determinado canal, ele deve ter ambos:
-* Um endereço de e-mail válido ou um token por push associado ao seu perfil; e
-* Aceitação ou assinatura do seu app.
-
-Um único usuário pode pertencer a diferentes grupos de usuários acessíveis. Por exemplo, um usuário pode ter um endereço de e-mail válido e um token por push válido para Android e ter aceitação em ambos, mas não ter um token por push para iOS associado. A diferença entre o total de usuários alcançáveis e a soma dos diferentes canais é o número de usuários que se qualificaram para o segmento, mas não são alcançáveis por meio desses canais de comunicação.
-
-### Estatísticas para o tamanho do segmento
-
-A Braze fornece as seguintes estatísticas sobre o tamanho do segmento. Todas as estatísticas estimadas estão dentro de 1% acima ou abaixo do valor real, e a associação exata do segmento sempre será calculada antes que um segmento seja afetado por uma mensagem enviada em uma campanha ou Canva.
-
-#### Filtrar estatísticas
-
-Para cada grupo de filtros, é possível visualizar os usuários alcançáveis estimados. Selecione **Expandir estatísticas extras do funil** para ver um detalhamento entre os canais.
-
-![Um grupo de filtros com um filtro para um gênero que não seja desconhecido.][4]{: style="max-width:80%;"}
-
-#### Estatísticas do segmento
-
-Para um segmento inteiro, é possível visualizar os usuários alcançáveis estimados, bem como as contagens de usuários estimadas para cada canal, na parte inferior da página. Também é possível visualizar uma contagem exata de usuários acessíveis (tanto para o segmento como um todo quanto para cada canal) selecionando **Calcular estatísticas exatas**.
-
-Note que:
-- O cálculo de estatísticas exatas pode levar alguns minutos para ser executado. Essa função calcula apenas as estatísticas exatas no nível do segmento, não no nível do filtro ou do grupo de filtros.
-- Em segmentos grandes, é normal haver uma pequena variação, mesmo ao calcular estatísticas exatas. Espera-se que a precisão desse recurso seja de 99,999% ou mais.
+Para saber como monitorar a associação e o tamanho do seu segmento, consulte [Medição do tamanho do segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Arquivamento de segmentos
 
@@ -197,13 +163,11 @@ Ao segmentar com filtros dependentes do dispositivo (modelo do dispositivo, sist
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}

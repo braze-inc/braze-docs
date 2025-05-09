@@ -33,10 +33,6 @@ Há dois estados de inscrição para usuários do WhatsApp: `subscribed` e `unsu
 
 - **Perfil do usuário:** Os perfis de usuários individuais podem ser acessados no dashboard do Braze em **Público** > **Pesquisar usuários**. Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Quando estiver dentro de um perfil de usuário, na guia **Engajamento**, você poderá ver o grupo de inscrições do WhatsApp de um usuário e seu status.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Usuários** > **Pesquisa de usuários**.
-{% endalert %}
-
 - **API de descanso:** O grupo de inscrições de perfis de usuários individuais pode ser visualizado pelo [endpoint Listar grupos de inscrições do usuário][9] ou [endpoint Listar status de grupos de inscrições do usuário][8] usando a REST API da Braze. 
 
 ## Processo de aceitação e recusa do WhatsApp

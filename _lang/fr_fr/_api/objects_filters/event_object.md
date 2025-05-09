@@ -11,13 +11,11 @@ description: "Cet article de référence explique l’objet Événement, ce qu�
 
 > Cet article explique les différents composants d’un objet Événement, comment vous pouvez l’utiliser et des exemples dont vous pouvez vous inspirer.
 
-## Qu’est-ce que l’objet Événement ?
+## Qu'est-ce qu'un objet événementiel ?
 
 Un objet Événement est un objet qui passe par l’API lorsqu’un événement spécifique se produit. Les objets Événements sont hébergés dans un tableau d’événements. Chaque objet Événement du tableau d’événements représente l’occurrence unique d’un événement personnalisé par un utilisateur particulier à la valeur de temps désignée. L’objet Événement comporte plusieurs champs qui vous permettent de le personnaliser en définissant et en utilisant les propriétés de l’événement dans les messages, la collecte de données et la personnalisation.
 
-Vous pouvez vérifier comment mettre en place des événements personnalisés pour une plateforme spécifique en vous référant au Guide d'intégration des plateformes dans le [Guide du développeur][1]. Vous trouverez ces informations dans la page **Suivi des événements personnalisés** sous l'onglet **Analyse des** différentes plateformes. Nous en avons associé plusieurs pour vous.
-
-Article sur le suivi des événements personnalisés :
+Pour savoir comment configurer des événements personnalisés pour une plateforme spécifique, reportez-vous au Guide d'intégration des plateformes dans le [Guide du développeur][1]. Reportez-vous à l'article correspondant à votre plate-forme :
 
 - [Android][2]
 - [iOS][3]
@@ -50,13 +48,14 @@ Article sur le suivi des événements personnalisés :
 
 #### Mettre à jour les profils existants uniquement
 
-Si vous souhaitez mettre à jour uniquement les profils utilisateur existants dans Braze, vous devez passer la clé `_update_existing_only` avec la valeur `true` dans le corps de votre demande. Si cette valeur est omise, Braze créera un nouveau profil utilisateur si `external_id` n’existe pas déjà.
+Pour mettre à jour uniquement les profils utilisateurs existants dans Braze, vous devez transmettre la clé `_update_existing_only` avec la valeur `true` dans le corps de votre demande. Si cette valeur est omise, Braze créera un nouveau profil utilisateur si `external_id` n’existe pas déjà.
 
 {% alert note %}
 Si vous créez un profil utilisateur alias uniquement via l'endpoint `/users/track`, `_update_existing_only` doit être défini sur `false`. Si cette valeur est omise, le profil alias uniquement ne sera pas créé.
 {% endalert %}
 
 ## Objet de propriétés de l’événement
+
 Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar ($).
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
@@ -65,7 +64,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | --- | --- |
 | Chiffres | Sous forme d'[entiers](https://en.wikipedia.org/wiki/Integer) ou de [float](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booléens | `true` ou `false` |
-| Datetimes | Formatés sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
+| Datetimes | Doit être formaté sous forme de chaînes de caractères dans le format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ou dans l'un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Non pris en charge dans les tableaux. <br><br>Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br><br>Les attributs temporels sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l'équivalent de minuit UTC dans le fuseau horaire de l'entreprise). <br><br> Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle.  |
 | Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
@@ -74,6 +73,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 100 Ko.
 
 ### Persistance des propriétés de l’événement
+
 Les propriétés de l’événement sont conçues pour filtrer et personnaliser avec Liquid les messages déclenchés par leurs événements parents. Par défaut, elles ne sont pas persistantes sur le profil utilisateur Braze. Pour utiliser les valeurs des propriétés d'événement dans la segmentation, reportez-vous aux [événements personnalisés][5], qui détaillent les différentes approches de stockage à long terme des valeurs des propriétés d'événement.
 
 #### Demande d’exemple d’événement

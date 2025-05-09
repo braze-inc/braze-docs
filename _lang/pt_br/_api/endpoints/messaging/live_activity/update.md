@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint \"Atualizar ativid
 /messages/live_activity/update
 {% endapimethod %}
 
-> Use este endpoint para atualizar e encerrar [Atividades ao Vivo]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) exibidas pelo seu app iOS. Este endpoint requer configuração adicional.
+> Use este endpoint para atualizar e encerrar [Atividades ao Vivo]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) exibidas pelo seu app iOS. Este endpoint requer configuração adicional.
 
 Depois de registrar uma Atividade ao Vivo, você pode passar uma carga útil JSON para atualizar seu serviço de Notificações por Push da Apple (APNs). Consulte a documentação da Apple sobre [atualizar sua Atividade ao Vivo com payloads de notificação por push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) para saber mais.
 
@@ -26,7 +26,7 @@ Depois de registrar uma Atividade ao Vivo, você pode passar uma carga útil JSO
 Para usar este endpoint, você precisará concluir o seguinte:
 
 - Gere uma chave de API com a permissão `messages.live_activity.update`.
-- Registre uma Atividade ao Vivo [remotamente]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) ou [localmente]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) usando o Braze SWIFT SDK.
+- Registre uma Atividade ao Vivo [remotamente]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) ou [localmente]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) usando o Braze SWIFT SDK.
 
 ## Limite de taxa
 

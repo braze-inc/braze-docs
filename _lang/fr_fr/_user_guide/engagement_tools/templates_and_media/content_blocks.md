@@ -23,7 +23,7 @@ Avec les blocs de contenu, vous pouvez :
 
 ## Créer un bloc de contenu
 
-Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : classique et glisser-déposer. Ces deux types d'éditeurs correspondent au type de bloc de contenu : HTML et glisser-déposer. Vous pouvez également créer et gérer vos blocs de contenu [via l'API][5]].
+Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : classique et glisser-déposer. Ces deux types d'éditeurs correspondent au type de bloc de contenu : HTML et glisser-déposer. Vous pouvez également créer et gérer vos blocs de contenu [à l'aide de l'API][5].
 
 {% tabs %}
 {% tab Glisser-déposer %}
@@ -44,13 +44,13 @@ Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : clas
 |---|---|
 | Nom | Champ obligatoire avec un maximum de 100 caractères. Il ne peut pas être renommé une fois le bloc de contenu enregistré. De plus, vous ne pouvez pas nommer un nouveau bloc de contenu en utilisant le même nom que le précédent bloc de contenu, même si le précédent a été archivé. |
 | Description | (facultatif) Maximum de 250 caractères. Décrivez le bloc de contenu afin que les autres utilisateurs de Braze sachent à quoi il sert et où il est utilisé. |
-| Taille du contenu | Maximum 50 Ko (kilo-octets). |
+| Taille du contenu | Maximum de 50 KB. |
 | Placement | Les blocs de contenu ne peuvent pas être utilisés dans le pied de page des e-mails. |
 | Création | Éditeur HTML ou éditeur par glisser-déposer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Au moment de créer des blocs de contenu, il peut parfois être utile d’ajouter des sauts de ligne pour visualiser HTML et Liquid. Si ces sauts de ligne sont laissés au moment de l’envoi, vous risquez de vous retrouver avec des espaces étrangers qui peuvent affecter la façon dont le bloc va s’afficher. Pour éviter cela, utilisez la balise **Capture** sur votre bloc avec le filtre **| strip**.
+Lors de la création de blocs de contenu, il peut être utile de visualiser HTML et Liquid en ajoutant des sauts de ligne. Si ces sauts de ligne sont laissés au moment de l’envoi, vous risquez de vous retrouver avec des espaces étrangers qui peuvent affecter la façon dont le bloc va s’afficher. Pour éviter cela, utilisez la balise **Capture** sur votre bloc avec le filtre **| strip**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ Après avoir créé votre bloc de contenu, vous pouvez l'insérer dans vos messa
 1. Copiez l’**étiquette Liquid du bloc de contenu** de la section **Détails du bloc de contenu**.
 2. Insérez l’étiquette Liquid du bloc de contenu dans le message. Vous pouvez également commencer à saisir le Liquid pour que la balise s’insère automatiquement.
 
-{% alert note %}
-Les propriétés d'événement d'un canevas ne sont prises en charge que dans un canevas. Si vous faites référence à un bloc de contenu avec des propriétés d'entrée Canvas dans une campagne, il ne se remplira pas.
-{% endalert %}
+### Choses à savoir
+
+- L'utilisation de blocs de contenu HTML dans des e-mails par glisser-déposer **ou de** blocs de contenu par glisser-déposer dans des e-mails HTML peut entraîner des problèmes de rendu inattendus. En effet, l'éditeur par glisser-déposer génère du HTML et du CSS qui rendent le contenu dynamique alors que l'éditeur HTML est plus statique.
+- Les propriétés d'événement d'un canevas ne sont prises en charge que dans un canevas. Si vous faites référence à un bloc de contenu avec des propriétés d'entrée Canvas dans une campagne, il ne se remplira pas.
 
 ### Mise à jour et copie des blocs de contenu
 

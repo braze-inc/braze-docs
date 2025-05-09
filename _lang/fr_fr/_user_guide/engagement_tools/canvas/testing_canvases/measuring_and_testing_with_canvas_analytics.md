@@ -69,7 +69,7 @@ Comme les conversions, le revenu est soumis techniquement à un suivi au niveau 
 Par exemple, si un utilisateur exécute deux étapes puis effectue un achat, ce revenu est attribué au second composant et à la variante dans laquelle il est entré. S’il accède au Canvas, mais effectue un achat avant de recevoir le premier composant Canvas, ce revenu est attribué à la variante dans laquelle il est entré, mais pas à un composant.
 {% endalert %}
 
-Au-delà de cela, vous pouvez voir une répartition plus explicite des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), y compris les éléments suivants :
+Au-delà de cela, vous pouvez voir une répartition plus explicite des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), y compris les éléments suivants :
 
 - Totaux de conversion et taux de conversion pour chaque événement de conversion
 - Progression par rapport à la variante de contrôle

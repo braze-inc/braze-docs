@@ -1,6 +1,6 @@
 ---
 nav_title: Perguntas frequentes
-article_title: Perguntas Frequentes da Campanha
+article_title: Perguntas frequentes sobre campanhas
 page_order: 10
 page_type: FAQ
 description: "Esta página fornece respostas às perguntas frequentes sobre campanhas."
@@ -8,13 +8,13 @@ tool: Campaigns
 
 ---
 
-# Perguntas Frequentes da Campanha
+# Perguntas frequentes
 
 > Este artigo fornece respostas para algumas perguntas frequentes sobre campanhas.
 
-### Como você cria uma campanha multicanal?
+### Como faço para criar uma campanha multicanal?
 
-Campanhas multicanal podem ser criadas selecionando **Criar campanha** e depois **Campanha multicanal** no dashboard. Ao realizar uma campanha multicanal, selecione **Adicionar canal de envio de mensagens** na guia **compor** para adicionar os canais desejados. Clicar nos ícones de canal que aparecem permitirá alternar entre diferentes compositores de envio de mensagens enquanto você constrói sua cópia de campanha para os diferentes canais.
+Para criar uma campanha em vários canais, selecione **Mensagens** > Campanhas. Em seguida, selecione **Create Campaign** > **Multichannel**( **Criar campanha** > **Multicanal**). A partir daí, você pode selecionar os seguintes canais de envio de mensagens: Cartões de conteúdo, e-mail, LINE, notificações por push, webhook SMS/MMS/RCS, ou WhatsApp.
 
 ### Posso adicionar um grupo de controle à minha campanha multicanal?
 
@@ -22,7 +22,7 @@ Não, os grupos de controle em campanhas são destinados ao envio de mensagens d
 
 ### Quais são algumas maneiras de começar a testar e otimizar campanhas?
 
-Campanhas multivariantes e execução de canvas com várias variantes são uma ótima maneira de começar! Por exemplo, você pode executar uma [campanha multivariante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para testar uma mensagem que possui diferentes cópias ou linhas de assunto. Canvas com várias variantes são úteis para testar fluxos de trabalho inteiros.
+Campanhas multivariantes e execução de canvas com várias variantes são uma ótima maneira de começar! Por exemplo, você pode executar uma [campanha multivariante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para testar uma mensagem que possui diferentes cópias ou linhas de assunto. As telas com múltiplas variantes podem ajudar a testar fluxos de trabalho inteiros.
 
 ### Por que a taxa de abertura da minha campanha diminuiu?
 
@@ -68,17 +68,17 @@ Para que um usuário seja elegível para entrada, ele deve ser elegível para am
 
 O usuário precisa estar no segmento por 24 horas antes do lançamento. Se o usuário não for elegível na primeira verificação, então a Braze não tentará a segunda verificação.
 
-Por exemplo, se uma campanha está programada para ser entregue às 19h UTC, começamos a enfileirar os envios da campanha assim que um fuso horário é identificado (como Samoa). Isso significa que estamos nos preparando para enviar a mensagem, não que enviamos a campanha. Se os usuários não corresponderem a nenhum filtro quando verificarmos a elegibilidade, eles não cairão no público-alvo.
+Por exemplo, se uma campanha está programada para ser entregue às 19h UTC, começamos a enfileirar os envios da campanha assim que um fuso horário é identificado (como Samoa). Isso significa que estamos nos preparando para enviar a mensagem, não para enviar a campanha. Se os usuários não corresponderem a nenhum filtro quando verificarmos a elegibilidade, eles não se enquadrarão no público-alvo.
 
-Como outro exemplo, digamos que você queira criar duas campanhas agendadas para serem enviadas no mesmo dia—uma de manhã e outra à noite—e adicionar um filtro para que os usuários só possam receber a segunda campanha se já tiverem recebido a primeira. Com a entrega no fuso local, alguns usuários podem não receber a segunda campanha. Isso ocorre porque verificamos a elegibilidade quando o fuso horário do usuário é identificado, então, se o horário agendado ainda não ocorreu no fuso horário deles, eles não receberam a primeira campanha. Portanto, eles não serão elegíveis para a segunda campanha.
+Como outro exemplo, digamos que você queira criar duas campanhas agendadas para serem enviadas no mesmo dia—uma de manhã e outra à noite—e adicionar um filtro para que os usuários só possam receber a segunda campanha se já tiverem recebido a primeira. Com a entrega no fuso local, alguns usuários podem não receber a segunda campanha. Isso ocorre porque verificamos a elegibilidade quando o fuso horário do usuário é identificado; portanto, se o horário programado ainda não tiver ocorrido em seu fuso horário, ele não recebeu a primeira campanha, o que significa que não será elegível para a segunda campanha.
 
 ### Como faço para agendar uma campanha no fuso local?
 
-Ao agendar uma campanha, você precisa escolher enviá-la em um horário designado e, em seguida, selecionar **Enviar campanha para usuários no seu fuso local**.
+Ao programar uma campanha, opte por enviá-la em um horário designado e, em seguida, selecione **Enviar campanha para usuários em seu fuso local**.
 
-A Braze recomenda fortemente que todas as campanhas no fuso local sejam agendadas com 24 horas de antecedência. Como tal campanha precisa ser enviada ao longo de um dia inteiro, agendá-la com 24 horas de antecedência garante que sua mensagem alcance todo o seu segmento. No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário. Lembre-se de que a Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de 1 hora. 
+A Braze recomenda fortemente que todas as campanhas no fuso local sejam agendadas com 24 horas de antecedência. Como uma campanha desse tipo precisa ser enviada durante um dia inteiro, o envio de mensagens com 24 horas de antecedência garante que sua mensagem chegue a todo o segmento de mensagem. No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário. Lembre-se de que a Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de 1 hora. 
 
-Por exemplo, se for 13h e você agendar uma campanha de fuso local para as 15h, a campanha será enviada imediatamente para todos os usuários cujo fuso local seja das 15h às 16h, mas não para os usuários cujo fuso local seja 17h. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
+Por exemplo, se for 13h00 e você programar uma campanha de fuso local para as 15h00, a campanha será enviada imediatamente a todos os usuários cujo horário local esteja entre 15h00 e 16h00, mas não aos usuários cujo horário local seja 17h00. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
 
 Editar uma campanha de fuso local que está programada para menos de 24 horas de antecedência não alterará o cronograma da mensagem. Se você decidir editar uma campanha de fuso local para enviar em um horário posterior (por exemplo, 19h em vez de 18h), os usuários que estavam no segmento alvo quando o horário de envio original foi escolhido ainda receberão a mensagem no horário original (18h). Se você editar um fuso local para enviar em um horário anterior (por exemplo, 16h em vez de 17h), a campanha ainda será enviada a todos os membros do segmento no horário original (17h). 
 
@@ -86,7 +86,7 @@ Editar uma campanha de fuso local que está programada para menos de 24 horas de
 Para componentes de canva, os usuários não precisam estar no componente por 24 horas para receber o próximo componente na jornada do usuário para entrega no fuso local.
 {% endalert %}
 
-Se você permitiu que os usuários se tornassem re-elegíveis para a campanha, eles a receberão novamente no horário original (17h). Para todas as ocorrências subsequentes de sua campanha, no entanto, suas mensagens serão enviadas apenas no horário atualizado.
+Se você permitiu que os usuários se tornassem re-elegíveis para a campanha, eles a receberão novamente no horário original (17h). Para todas as ocorrências subsequentes de sua campanha, no entanto, suas mensagens são enviadas somente no horário atualizado.
 
 ### Quando as alterações nas campanhas de fuso local entram em vigor?
 
@@ -103,7 +103,7 @@ Quando a campanha está agendada, edições em qualquer coisa além da composiç
 
 ### Atualizei minha campanha agendada. Por que não lançou?
 
-Isso pode acontecer quando uma campanha está programada para ser lançada exatamente no momento em que foi atualizada. Por exemplo, se atualmente são 15h10 e você alterou a campanha para lançar às 15h10 e selecionou **Atualizar campanha**, agora já passou das 15h10, o que significa que o horário agendado para o lançamento já passou. Em vez de agendar a campanha para o mesmo horário, selecione **Enviar assim que a campanha for lançada**.
+Isso pode acontecer quando uma campanha está programada para ser lançada exatamente no momento em que foi atualizada. Por exemplo, se no momento são 15h10 e você alterou a campanha para ser lançada às 15h10 e selecionou **Atualizar campanha**, agora já passa das 15h10, o que significa que o horário programado para o lançamento já passou. Em vez de agendar a campanha para o mesmo horário, selecione **Enviar assim que a campanha for lançada**.
 
 ### Qual é a "zona segura" antes que as mensagens em uma campanha agendada sejam enfileiradas?
 
@@ -111,8 +111,8 @@ Você pode fazer alterações com segurança nas mensagens dentro das seguintes 
 
 - **Campanhas agendadas únicas** podem ser editadas até o horário de envio agendado.
 - **Campanhas recorrentes agendadas** podem ser editadas até o horário de envio agendado.
-- **Campanhas de horário de envio local** podem ser editadas até 24 horas antes do horário de envio agendado.
-- **Campanhas de horário de envio ideal** podem ser editadas até 24 horas antes do dia em que a campanha está programada para ser enviada.
+- **As campanhas de horário de envio local** podem ser editadas até 24 horas antes do horário de envio programado.
+- **As campanhas de horário ideal de envio** podem ser editadas até 24 horas antes do dia em que a campanha está programada para ser enviada.
 
 ### E se eu fizer uma edição no horário de envio dentro da "zona segura"?
 
@@ -123,16 +123,16 @@ Alterar o horário de envio das campanhas dentro desse período pode levar a um 
 
 ### O que devo fazer se a "zona segura" já passou?
 
-Para garantir que as campanhas operem conforme desejado, recomendamos parar a campanha atual (isso cancelará quaisquer mensagens enfileiradas). Você pode então duplicar a campanha, fazer as alterações necessárias e lançar a nova campanha. Você pode precisar excluir usuários desta campanha que já receberam a primeira campanha.
+Para garantir que as campanhas operem conforme desejado, recomendamos parar a campanha atual (isso cancelará quaisquer mensagens enfileiradas). Em seguida, você pode duplicar a campanha, fazer as alterações necessárias e lançar a nova campanha. Você pode precisar excluir usuários desta campanha que já receberam a primeira campanha.
 
 Reajuste os horários da campanha para permitir o envio no fuso horário.
 
 ### Por que o número de usuários que entram em uma campanha não corresponde ao número esperado?
 
-O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários abandonem a campanha se não fizerem parte inicialmente do seu público selecionado antes que quaisquer ações de disparo sejam avaliadas.
+O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam da campanha se inicialmente não fizerem parte do público selecionado antes que qualquer ação-gatilho seja avaliada.
 
 {% alert tip %}
-Para obter mais assistência com a solução de problemas da campanha, certifique-se de entrar em contato com o suporte da Braze dentro de 30 dias após a ocorrência do seu problema, pois só temos os últimos 30 dias de logs de diagnóstico.
+Para obter mais assistência com a solução de problemas de campanha, entre em contato com o suporte da Braze dentro de 30 dias da ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
 {% endalert %}
 
 ### Qual é a diferença entre as opções Exportar dados de usuários em CSV e Exportar endereço de e-mail em CSV na página de análise de dados da minha campanha?
@@ -143,11 +143,11 @@ Selecionar a opção **Exportar Endereços de E-mail em CSV** só vai baixar dad
 
 Sim, use o filtro `api_id:YOUR_API_ID` na página **Campanhas** para procurar uma campanha pelo seu identificador API. Consulte [procurando por campanhas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) para saber mais.
 
-### Qual é a diferença entre campanhas de API e campanhas acionadas por API?
+### Qual é a diferença entre campanhas de API e campanhas disparadas por API?
 
-Campanhas acionadas por API permitem que você gerencie a cópia da campanha, testes multivariantes e regras de re-eligibilidade no dashboard do Braze enquanto aciona a entrega desse conteúdo a partir de seus próprios servidores e sistemas. Essas mensagens também podem incluir dados adicionais para serem modelados nas mensagens em tempo real.
+As campanhas acionadas por API permitem gerenciar o texto da campanha, os testes multivariantes e as regras de reelegibilidade no dashboard do Braze e, ao mesmo tempo, disparar a entrega desse conteúdo a partir de seus próprios servidores e sistemas. Essas mensagens também podem incluir dados adicionais a serem modelados nas mensagens em tempo real.
 
-Campanhas de API são usadas para rastrear as mensagens que você envia usando a API. Ao contrário da maioria das campanhas, você não especifica a mensagem, os destinatários ou o cronograma, mas em vez disso passa os identificadores em suas chamadas de API. 
+Campanhas de API são usadas para rastrear as mensagens que você envia usando a API. Diferentemente da maioria das campanhas, você não especifica a mensagem, os destinatários ou a programação, mas passa os identificadores para as chamadas de API. 
 
 ### Qual é a diferença entre campanhas baseadas em ação e campanhas acionadas por API?
 
@@ -171,10 +171,10 @@ Campanhas de entrega baseada em ação ou campanhas disparadas por eventos são 
 
 #### Disparadas pela API
 
-Campanhas disparadas por API ou disparadas por servidor são ideais para casos de uso transacionais mais avançados, permitindo que você dispare a entrega de conteúdo de campanha a partir de seus próprios servidores e sistemas. A solicitação da API para disparar a mensagem também pode incluir dados adicionais a serem modelados na mensagem em tempo real.
+As campanhas acionadas por API e por servidor são ideais para lidar com transações mais avançadas, permitindo disparar a entrega do conteúdo da campanha a partir de seus próprios servidores e sistemas. A solicitação da API para disparar a mensagem também pode incluir dados adicionais a serem modelados na mensagem em tempo real.
 
 | Prós | Cons | 
 | ---- | ---- |
-| • Não consome pontos de dados<br><br>• Elementos de personalização estão incluídos nas propriedades da carga útil JSON | • Não permite que você crie um segmento de usuários elegíveis para a mensagem nas propriedades da carga útil JSON<br><br>• Não é possível ver as cargas úteis JSON recebidas através do **Registro de Atividade de Mensagens**|
+| • Não consome pontos de dados<br><br>• Elementos de personalização estão incluídos nas propriedades da carga útil JSON | • Não permite que você crie um segmento de usuários elegíveis para a mensagem nas propriedades da carga útil JSON<br><br>\- Não é possível ver cargas úteis JSON de entrada com o **registro de atividades de mensagens**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

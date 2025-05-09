@@ -22,15 +22,9 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 {% tab Campagne %}
 
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **campagnes** sous **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Sélectionnez **Message in-app.** Notez que les messages in-app ne sont pas disponibles dans les campagnes multicanaux.
-3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
+2. Sélectionnez **Message in-app.** Notez que les messages in-app ne sont pas disponibles dans les campagnes multicanaux.
+3. Donnez un nom clair et significatif à votre campagne.
+4. Ajoutez [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) au besoin.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d'informations sur ce sujet, consultez [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -210,7 +204,7 @@ Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assi
 
 ##### Création d'envois de messages de droite à gauche
 
-Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des langues telles que l'arabe et l'hébreu ? Reportez-vous à la section [Créer des messages de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) pour connaître les meilleures pratiques.
+Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des langues telles que l'arabe et l'hébreu ? Reportez-vous à la section [Créer des messages de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) pour connaître les meilleures pratiques.
 
 ### Texte du bouton {#buttons}
 
@@ -273,7 +267,7 @@ Le contenu de l'onglet **Style** varie en fonction des options de message que vo
 
 | Formatage | Entrée | Description |
 |---|---|---|
-|Profil de couleur | Appliquer à partir de la galerie des modèles de messages in-app. | Cliquez sur **Appliquer un modèle** et sélectionnez-le dans la galerie. Cliquez ensuite sur **Enregistrer**. |
+|[Profil de couleur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Appliquer à partir de la galerie des modèles de messages in-app. | Sélectionnez **Appliquer un modèle** et choisissez dans la galerie. Sélectionnez ensuite **Enregistrer**. |
 |Alignement du texte | Gauche, Centre ou Droite.  | Disponible uniquement pour les versions plus récentes du SDK Braze. |
 |En-tête | Code de couleur HEX. | La couleur HEX souhaitée s’affiche. Vous pouvez également choisir l’opacité de la couleur.  |
 |Texte | Code de couleur HEX. | La couleur HEX souhaitée s’affiche. Vous pouvez également choisir l’opacité de la couleur. |
@@ -324,7 +318,7 @@ La livraison des messages in-app est entièrement basée sur les déclencheurs d
 
 Une date et une heure de début doivent être sélectionnées, mais une date de fin est facultative. Une date de fin empêche ce message in-app spécifique de s’afficher sur les appareils après la date et l’heure indiquées.
 
-Reportez-vous à notre documentation destinée aux développeurs pour le [déclenchement d'événements côté serveur]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) et la [réception/distribution locale de messages in-app.]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)
+Reportez-vous à notre documentation destinée aux développeurs pour le [déclenchement d'événements côté serveur]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) et la [réception/distribution locale de messages in-app.]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages)
 
 ##### Déclenchement en ligne ou hors ligne
 
@@ -374,7 +368,7 @@ N’utilisez pas cette option pour les messages qui peuvent être déclenchés l
 
 #### Sélectionner des événements de conversion
 
-Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), après avoir reçu une campagne. Vous avez la possibilité d’autoriser une fenêtre allant jusqu’à 30 jours pendant laquelle une conversion sera comptée si l’utilisateur entreprend l’action spécifiée.
+Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), après avoir reçu une campagne. Vous avez la possibilité d’autoriser une fenêtre allant jusqu’à 30 jours pendant laquelle une conversion sera comptée si l’utilisateur entreprend l’action spécifiée.
 
 {% endtab %}
 {% tab Canvas %}

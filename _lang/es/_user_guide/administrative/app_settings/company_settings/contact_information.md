@@ -19,10 +19,6 @@ description: "Este artículo de referencia contiene información importante para
 
 Para acceder a esta página, vaya a **Configuración** > **Configuración de administración** > **Información de contacto**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione el menú desplegable de su cuenta y vaya a **Configuración de la empresa** > **Información de contacto**.
-{% endalert %}
-
 En esta página puede gestionar la información de contacto y la zona horaria de su empresa. Asegúrate de pulsar **Guardar** antes de salir de la página.
 
 ### Consecuencias del cambio de huso horario

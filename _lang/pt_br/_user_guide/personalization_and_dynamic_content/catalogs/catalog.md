@@ -46,10 +46,6 @@ Também recomendamos a formatação de todo o texto em seus arquivos CSV em letr
 
 Para criar um catálogo, acesse **Configurações de dados** > **Catálogos**.
 
-{% alert note %}
-Se você estiver usando a [navegação antiga]({{site.baseurl}}/navigation), poderá encontrar **Catálogos** em **Dados**.
-{% endalert %}
-
 Selecione **Criar novo catálogo** e, em seguida, escolha fazer **upload de CSV** ou **criar no navegador**.
 
 ### Método 1: Fazer upload de CSV

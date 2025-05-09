@@ -14,10 +14,6 @@ page_order: 2
 
 Crie uma Central de  Preferências navegando até **Público** > **Inscrições** > **Central de Preferências de E-mail**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), acesse **Usuários** > **Grupos de inscrições** > **Central de Preferências de E-mail**.
-{% endalert %}
-
 Aqui, será exibida uma lista de centros de preferências personalizados. Selecione **Create New (Criar novo)** para criar um novo centro de preferências ou selecione o nome de um já existente para fazer alterações.
 
 ![Uma lista de Centrais de Preferências personalizadas com o nome, a descrição, o tipo, o status, a data da última edição e a criação pelo usuário.][1]

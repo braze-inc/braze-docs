@@ -27,7 +27,7 @@ Le kit de développement de logiciel Braze (Software Development Kit, SDK) est l
 
 * Vos [clés API]({{site.baseurl}}/api/api_key/)
 * Votre [endpoint SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze n’offre plus d’endpoints personnalisés, donc utilisez les critères d’évaluation SDK prédéfinis. Si vous avez reçu un endpoint personnalisé préexistant, vous trouverez ici les étapes de configuration nécessaires pour l'intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
+  * Braze n’offre plus d’endpoints personnalisés, donc utilisez les critères d’évaluation SDK prédéfinis. Si vous avez reçu un endpoint personnalisé préexistant, vous trouverez ici les étapes de configuration nécessaires pour l'intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk).
 
 Vous pouvez leur donner ces informations directement, ou vous pouvez leur donner accès à Braze en créant un compte pour eux. 
 
@@ -74,7 +74,7 @@ Si vous souhaitez obtenir des éléments tels que le lancement déclenché par l
 
 ### Étape 5 : Vous assurez tous deux l'assurance qualité de votre mise en œuvre
 
-Travaillez avec votre ingénieur pour vous assurer que tout fonctionne. Envoyez des [messages de test]({{site.baseurl}}/developer_guide/sending_test_messages/), utilisez nos [applications de test pour Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) et nos [applications de test pour iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), vérifiez chaque case avant de commencer l'envoi !
+Travaillez avec votre ingénieur pour vous assurer que tout fonctionne. Envoyez des [messages de test]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), utilisez nos [applications de test pour Android]({{site.baseurl}}/developer_guide/references/?tab=android) et nos [applications de test pour iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), vérifiez chaque case avant de commencer l'envoi !
 
 Nous avons même des instructions spécifiques pour [tester votre intégration Android ou FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) et tester le [push pour iOS.]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/)
 

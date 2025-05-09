@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 기존 대시보드 사용자 계정 Braze 엔드포인트 조회에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 기존 대시보드 사용자 계정 리소스 ID Braze 엔드포인트 조회에 대한 자세한 내용을 설명합니다."
 ---
 
 {% api %}
-# 기존 대시보드 사용자 계정 조회
+# 리소스 ID로 기존 대시보드 사용자 계정 조회하기
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) 메서드에서 반환된 `id` 리소스를 지정하여 기존 대시보드 사용자 계정을 조회합니다. 
+> 이 엔드포인트를 사용하여 SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) 메서드에서 반환된 `id` 리소스를 지정하여 기존 대시보드 사용자 계정을 조회합니다. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

@@ -2,185 +2,108 @@
 nav_title: Generador de informes
 article_title: Generador de informes
 alias: /report_builder/
-page_order: 4
 page_type: reference
-description: "Esta página explica cómo ejecutar un informe utilizando el generador de informes, incluyendo la creación de informes comparativos de campaña y Canvas, y la creación de informes y gráficos."
-tool: 
-  - Reports
-
+description: "Este artículo de referencia describe la característica Generador de informes."
+tool:
+    - Reports
+page_order: 6.2
 ---
 
 # Generador de informes
 
-> El generador de informes le permite comparar los resultados de varias campañas o lienzos en una sola vista para que pueda determinar fácilmente qué estrategias de participación han tenido un mayor impacto en sus métricas clave. Tanto para las campañas como para los Lienzos, puedes exportar tus datos y guardar tu informe para consultarlo en el futuro.<br><br>Para obtener una lista descriptiva de las métricas que encontrarás en tus informes, consulta el [Glosario de métricas de los informes][16].
+> Esta página explica cómo utilizar el Generador de informes para crear y ver informes granulares utilizando datos de Braze, y cómo añadir informes a los paneles.
 
-![Ejemplo de comparación de campañas][5]{: style="max-width:80%;"}
+## Utilizar una plantilla de informe
 
-Utilice este informe para responder a preguntas clave de compromiso, por ejemplo:
+1. Ve a **Análisis** > **Generador de informes (Nuevo)**.
+2. Selecciona la flecha **Más opciones** situada junto al botón **Crear informe nuevo** y, a continuación, selecciona **Utilizar una plantilla de informe**.<br><br>![Botón desplegable "Crear informe nuevo" con opciones para crear un informe personalizado o utilizar una plantilla.][9]{: style="max-width:40%;"}<br><br>
+3. Selecciona una de las plantillas de informe de la biblioteca de plantillas Braze.
+    - Utiliza el desplegable **Elementos de fila** y **Etiquetas** para encontrar informes relevantes para tus casos de uso.<br><br>![Ventana "Plantillas de informes Braze" con una lista de plantillas Braze para seleccionar.][8]{: style="max-width:90%;"}<br><br>
+4. Sigue el paso 3 y siguientes en [Crear un informe](#creating-a-report) para personalizar aún más el informe y adaptarlo a tu caso de uso.
 
-- ¿Cuáles han sido las campañas o los lienzos con mejores resultados para una etiqueta o un canal específicos?
-- ¿Qué variantes de las campañas multivariantes registraron el mayor aumento con respecto al control?  
-- ¿Qué campaña de promoción estacional generó un mayor índice de compras: las rebajas de verano, las rebajas de otoño o las rebajas de invierno?
-- ¿Qué notificaciones push dentro de este Canvas tuvieron las tasas de apertura más altas?
-- ¿Qué pasos de este grupo de Lienzos tuvieron más conversiones?
-- ¿La versión 1 de un correo electrónico de bienvenida o la versión 2 de un correo electrónico de bienvenida consiguió una mayor participación y conversión? ¿Funcionaron los cambios?
-- ¿Cómo afectan los distintos métodos de entrega (por ejemplo, 3 push programados, 3 push basados en acciones y 3 push desencadenados por API) a tus tasas de apertura, tasas de conversión o tasas de compra?
-- ¿Han repercutido positivamente en sus indicadores clave de rendimiento las continuas mejoras de los mensajes de los usuarios rezagados a lo largo del tiempo?
+## Crear un informe
+
+1. Ve a **Análisis** > **Generador de informes (Nuevo)**.
+2. Selecciona **Crear informe nuevo**.
+3. En el desplegable **Filas**, selecciona una de las siguientes opciones para crear un informe:
+    - Campañas
+    - Canvas
+    - Campañas y Canvas
+    - Canales
+    - Etiquetas
+
+![La sección "Filas y columnas" con campos para seleccionar las filas y agrupaciones de tu informe.][1]{: style="width:90%;"}
+
+{: start="4"}
+4\. (Opcional) Selecciona **Añadir desglose** para desglosar tus datos en vistas más granulares:
+    \- Canales
+    \- Fecha
+        \- Utilízalo para dividir tus datos en intervalos de tiempo más pequeños. Por ejemplo, si te interesa conocer el rendimiento de tus campañas por días, selecciona la siguiente configuración:
+            - **Filas**: Campañas
+            - **Agrupación:** Fecha
+            - **Intervalo:** Días
+    \- Variantes
+    \- Campañas y Lonas
 
 {% alert tip %}
-Intenta utilizar los mismos eventos de conversión para la conversión A, B, etc. en todas las campañas y Canvases que desees comparar, para que puedas alinear estas conversiones en tus informes del Generador de informes.
+Prueba distintas configuraciones de opciones de desglose para explorar las muchas formas en que puedes desglosar tus datos.
 {% endalert %}
 
-## Ejecutar un informe
+{: start="5"}
+5\. En la sección **Columnas**, selecciona **Personalizar métricas**.
 
-### Paso 1: Crear un nuevo informe
+![La sección "Personalizar métricas" con opciones para seleccionar múltiples métricas.][2]{: style="width:90%;"}
 
-En el panel de control, vaya a **Análisis** > **Generador de informes**.
+{: start="6"}
+6\. Busca métricas por categoría y selecciona la casilla correspondiente para añadir una métrica a tu informe.
+    \- Reordena las métricas y columnas arrastrando el icono de puntos hacia arriba o hacia abajo.
+7\. En **Contenido del informe**, configura el intervalo de fechas para el que quieres incluir datos en tu informe.
+8\. A continuación, en función de lo que hayas seleccionado en el paso 3, elige añadir manual o automáticamente campañas, lienzos o ambos a tu informe.
+    - **Añade manualmente:** Elige cada campaña o Canvas que quieras incluir en el informe utilizando los filtros de fechas de **Último envío** y etiquetas o canales, o buscando el nombre de la campaña o Canvas.<br><br>![La sección "Añadir manualmente campañas y lienzos" con una lista de campañas para seleccionar.][3]{: style="width:90%;"}<br><br>
+    - **Añade automáticamente:** Establece las reglas sobre qué campañas o Lienzos incluir en el informe. Sólo tienes que seleccionar un campo en esta página.
+        \- Ten en cuenta que, a medida que las campañas o Lienzos adicionales cumplan las condiciones que establezcas en esta pantalla, se añadirán automáticamente a futuras ejecuciones de tu informe.<br><br>![La sección "Añadir automáticamente campañas y lienzos" con campos para establecer reglas sobre qué campañas y lienzos deben añadirse al informe.][4]{: style="width:90%;"}<br><br>
+9\. Ejecuta el informe seleccionando **Guardar y Ejecutar**.
 
 {% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **el Generador de informes** en **Datos**.
+El informe puede tardar unos minutos en ejecutarse, dependiendo del intervalo de fechas y del número de campañas o Lienzos que hayas seleccionado en la fase de configuración.
 {% endalert %}
 
-Selecciona **Crear informe nuevo** y elige un informe comparativo de campaña o un informe comparativo de Canvas.
+## Ver un informe
 
-Si decide realizar un informe sobre las campañas, puede seleccionar entre un informe **Manual** o **Automatizado**. Los informes pueden contener campañas o lienzos, pero no ambos a la vez. Todas las campañas y Lienzos que hayan enviado mensajes por última vez en los últimos 12 meses serán elegibles para un informe.
+Después de ejecutar tu informe, puedes ver los resultados en formato de tabla en la página del informe. 
 
-![Panel de campaña][6]{: style="max-width:80%;"}
+![Una tabla con los datos del informe de las métricas de cada campaña.][5]{: style="width:90%;"}
 
-A continuación se exponen las diferencias entre estas dos opciones:
+### Crear un gráfico de informe
 
-| **Acción** | **Manual** | **Automatización** |
-| ---- | ---------- | ------------- |
-| **Informe de construcción** | Podrá restringir su lista de campañas utilizando filtros y, a continuación, marcar campañas específicas. | Construirá su informe utilizando las opciones de filtro para acotar su lista de campañas. |
-| **Guardar y ver el informe** | Puede guardar su informe. La próxima vez que la visualice, podrá ver la misma campaña que añadió anteriormente, ya que estas campañas siguen estando dentro de su filtro "Últimas enviadas". | Puede guardar su informe. La próxima vez que lo visualice, el informe se actualizará automáticamente para incluir todas las campañas que coincidan actualmente con sus filtros. |
-| **Informe de edición** | Puedes seleccionar **Editar informe** para añadir o eliminar campañas de tu informe | Puede editar su informe ajustando los criterios de filtrado. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+En la parte inferior de la página puedes crear un gráfico de tus datos seleccionando un **Tipo de gráfico** y configurando las métricas del gráfico. Por defecto, verás la primera métrica.
+
+![Un gráfico de los datos del informe con opciones para configurar el eje x del gráfico, el eje y, el tipo de gráfico, etc.][6]{: style="max-width:90%;"}
 
 {% alert note %}
-Tanto los informes **manuales** como los **automatizados** pueden incluir un máximo de 250 campañas en un informe.
+Para crear un gráfico de líneas, selecciona **Fecha** como opción de desglose al configurar el informe. Esto mostrará las tendencias a lo largo del tiempo.
 {% endalert %}
 
-Los informes de Canvas funcionan de forma similar a un informe de campaña manual en el sentido de que las selecciones de Canvas y las actualizaciones de los informes también deben realizarse manualmente. Puede incluir un máximo de cinco lienzos en un informe.
+#### Descargar un gráfico de informe
 
-### Paso 2: Elija sus métricas
+Para descargar una imagen del gráfico del informe, selecciona el icono de puntos y elige una opción de descarga.
 
-Después de crear tu informe, encontrarás una tabla en blanco que contiene campañas en cada fila. La tabla se rellenará después de que seleccione **Editar columnas** y elija las métricas que desea añadir.
+![Un menú con opciones de descarga para diferentes formatos de archivo.][7]{: style="max-width:30%;"}
 
-![Opciones de campaña][15]{: style="max-width:80%;"}
+## Añadir un informe a un panel de control
 
-Su tabla se rellenará con las métricas que elija. Para las definiciones de estas métricas, consulte el [Glosario de métricas del Informe][16]. Algunas métricas sólo están disponibles para los informes de comparación de campañas.
+1. Selecciona el icono de puntos situado en la parte superior de la tabla de informes.
+2. Selecciona **Añadir al panel**.
+3. Selecciona si quieres crear un nuevo panel o añadirlo a uno ya existente.<br><br>![Ventana con opciones para seleccionar si quieres añadir el informe a un panel nuevo o existente.][10]{: style="width:90%;"}<br><br>
+4. Sigue los pasos [del Generador de paneles]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) para saber más sobre cómo crear un panel.
 
-También puede alternar los cálculos para la **Media** de cualquier tasa o métrica numérica y el **Total** para cualquier métrica numérica.
-
-### Paso 3: Elija un periodo de tiempo
-
-Puede seleccionar un periodo de tiempo específico para ver los datos de su informe. Si una determinada campaña, Canvas, variante en Canvas o componente de Canvas no tiene datos para el periodo de tiempo seleccionado, los resultados de esa fila estarán en blanco. 
-
-![Métrica numérica de la campaña][4]{: style="max-width:60%;"}
-
-### Paso 4: Asigne un nombre a su informe y guárdelo
-
-Nombra tu informe antes de guardarlo. Si se guarda un informe sin nombrarlo, Braze aplicará un nombre por defecto de "Informe de comparación de campañas".
-
-![Nota de campaña][7]{: style="max-width:60%;"}
-
-Cuando estés listo, selecciona **Guardar**. Los informes guardados pueden consultarse posteriormente en la página **del generador de informes**.
-
-## Informe de comparación de campañas con campañas multivariantes
-
-Para cualquier campaña multivariante, puede ver estas métricas desglosadas por sus variantes y grupo de control haciendo clic en la flecha situada junto al nombre de la campaña. Las filas que contienen sus variantes incluirán los resultados de rendimiento para esa variante, y la fila que contiene su control incluirá sólo los resultados para sus eventos de conversión. 
-
-![Nota de campaña][3]{: style="float:right;max-width:15%;margin-left:15px;"}
-
-Las métricas que rellenan la fila de tu campaña general reflejarán el rendimiento de sus variantes, pero no incluirán el rendimiento del control. Por ejemplo, el Evento de conversión primaria A de tu campaña general será la suma del Evento de conversión primaria A de tus variantes, y esto no incluirá el Evento de conversión primaria A de tu control.
-
-{% alert important %}
-Si eliminas una variante de una campaña multivariante, los datos de esa variante no estarán disponibles para su uso en un informe futuro.
-{% endalert %}
-
-## Desglose del informe comparativo de Canvas
-
-Dentro de un informe de Canvas, puede ver sus Canvases desglosados por variante, pasos o mensaje.
-
-### Variante
-
-Si seleccionas el **desglose por variante**, podrás ver las estadísticas de alto nivel de todos tus Canvas, así como las estadísticas de cada variante, que pueden ampliarse seleccionando la flecha situada junto al nombre del Canvas.
-
-![Variantes][12]{: style="max-width:90%;"}
-
-### Pasos 
-
-Si seleccionas el **desglose por pasos**, podrás ver las métricas a nivel de paso, y cada fila del informe contendrá la fila de un paso.
-
-![Pasos][13]{: style="max-width:90%;"}
-
-### Mensaje
-
-De forma similar a un desglose por pasos, al seleccionar **desglose por mensaje** se muestra el nombre de los pasos en cada fila. Sin embargo, dentro de las **columnas de edición**, tendrá acceso a las métricas a nivel de mensaje, como las estadísticas específicas del canal, como los clics de correo electrónico y las aperturas push.
-
-![Informe][14]{: style="max-width:90%;"}
-
-Tenga en cuenta que en el panel de control de Braze puede previsualizar las 50 primeras filas del informe Canvas. Puede acceder al informe completo cuando exporte un CSV.
-
-## Acceso a los informes guardados
-
-Cuando accedes a un **Informe manual** guardado, puedes ver las mismas campañas que añadiste anteriormente, ya que estas campañas siguen estando dentro de tu filtro "Último envío".
-
-Cuando acceda a un **Informe automático** guardado, el informe se actualizará automáticamente para incluir todas las campañas que coincidan actualmente con sus filtros. Por ejemplo, si tu informe filtró campañas con la etiqueta "Promoción", cada vez que veas este informe, podrás ver todas las campañas con la etiqueta "Promoción", incluso si estas campañas se crearon después de que hicieras este informe.
-
-## Edición de informes
-
-En un **Informe Manual**, puedes editar un informe seleccionando **Editar**. A partir de ahí, puede seleccionar o anular la selección de campañas para incluirlas en su informe.
-
-En un **informe automático**, basta con activar los filtros para limitar los resultados del informe.
-
-## Exportación de informes
-
-También puedes seleccionar **Exportar** para descargar tu informe a CSV.
-
-Si su informe contiene alguna campaña multivariante, su exportación incluirá dos archivos CSV: 
-
-- Un archivo que contiene sólo las métricas de nivel superior de cada campaña
-- Un archivo que contiene métricas a nivel de variante
-
-El archivo que contiene las métricas de variantes tendrá `variant_` añadido al principio de su nombre. La primera vez que exporte un informe automatizado, aparecerá una ventana emergente pidiéndole permiso para descargar varios archivos: haga clic en **Permitir**.
-
-![Descarga de la campaña][8]{: style="max-width:60%;"}
-
-### Exportación de informes de comparación de lienzos
-
-Tu exportación CSV reflejará la vista de desglose en la que estabas cuando seleccionaste **Exportar**. Por ejemplo, si estabas en la vista de desglose por pasos, tu exportación contendrá datos sobre las métricas de tus pasos. Para exportar datos de un desglose diferente, tendrás que navegar primero a ese desglose y seleccionar **Exportar** desde allí.
-
-Si descarga un informe Canvas de desglose de variantes, recibirá dos archivos CSV:
-
-- Un archivo que contiene sólo las métricas de nivel superior para cada lienzo
-- Un archivo que contiene métricas a nivel de variante
-
-## Gráfico de construcción 
-
-Utilice gráficos para visualizar una métrica seleccionada en su informe. Los gráficos están disponibles para los informes que incluyen campañas y tienen al menos una métrica añadida a sus columnas.
-
-![Gráfico de rendimiento de la campaña con la métrica Mensaje enviado seleccionada][17]
-
-Por defecto, el gráfico de cada informe mostrará la métrica en la primera columna del informe. Para seleccionar una métrica diferente para el gráfico, elija su métrica en el menú desplegable. Cualquier métrica de la tabla del informe podrá mostrarse en el gráfico.
-
-Puede representar gráficamente un máximo de tres métricas. Las unidades para todas las métricas deben ser las mismas; por ejemplo, si elige una tasa en el primer desplegable, sólo se podrán seleccionar tasas en el segundo desplegable.
-
-Si el gráfico sólo contiene una métrica, mostrará hasta 30 campañas en orden descendente en función de la métrica seleccionada. Por ejemplo, si la métrica de su gráfico es clics de correo electrónico, entonces su gráfico mostrará las 30 campañas de correo electrónico con más clics, ordenadas de mayor a menor número de clics. Si su informe contiene más de 30 campañas, sólo se mostrarán en el gráfico las 30 primeras. Si selecciona más de una métrica, el gráfico sólo mostrará las cinco mejores campañas según la primera métrica seleccionada.
-
-Actualmente, los gráficos no se guardan al guardar el informe.
-
-
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
-
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[1]: {% image_buster /assets/img/report_builder_2/rows_and_columns.png %}
+[2]: {% image_buster /assets/img/report_builder_2/customize_metrics.png %}
+[3]: {% image_buster /assets/img/report_builder_2/manually_add.png %}
+[4]: {% image_buster /assets/img/report_builder_2/automatically_add.png %}
+[5]: {% image_buster /assets/img/report_builder_2/report_table.png %}
+[6]: {% image_buster /assets/img/report_builder_2/visualize_table.png %}
+[7]: {% image_buster /assets/img/report_builder_2/download_options.png %}
+[8]: {% image_buster /assets/img/report_builder_2/report_templates.png %}
+[9]: {% image_buster /assets/img/report_builder_2/create_new_report.png %}
+[10]: {% image_buster /assets/img/report_builder_2/add_to_dashboard.png %} 

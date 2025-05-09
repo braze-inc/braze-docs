@@ -48,7 +48,7 @@ Detener un Canvas no hará que los usuarios que están esperando recibir mensaje
 
 ### ¿Cuándo se desencadena un evento de excepción?
 
-[Los eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) sólo se activan mientras el usuario está esperando recibir el componente Canvas al que está asociado. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará. Si desea excluir a los usuarios que hayan realizado un determinado evento con anterioridad, utilice [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) en su lugar.
+Los eventos de excepción sólo se desencadenan mientras el usuario está esperando recibir el componente Canvas al que está asociado. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará. Si desea excluir a los usuarios que hayan realizado un determinado evento con anterioridad, utilice [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) en su lugar.
 
 ### ¿Cómo afecta la edición de un lienzo a los usuarios que ya están en él?
 

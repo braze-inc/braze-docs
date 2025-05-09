@@ -50,5 +50,17 @@ guide_menu_list:
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: "Locales dans l'envoi de messages"
+  link: /docs/user_guide/message_building_by_channel/push/using_locales/
+  image: /assets/img/braze_icons/translate-01.svg
+- name: Messages d’erreur « Push » courants
+  link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+  image: /assets/img/braze_icons/alert-triangle.svg
+- name: Résolution des problèmes
+  link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
+  image: /assets/img/braze_icons/annotation-question.svg
+- name: Foire aux questions
+  link: /docs/user_guide/message_building_by_channel/push/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

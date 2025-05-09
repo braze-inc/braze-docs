@@ -9,11 +9,11 @@ description: "Cet article contient les notes de version pour janvier 2021."
 
 ## Créateur de rapports Canvas
 
-Le Créateur de rapports vous permet de comparer les résultats de plusieurs campagnes ou de plusieurs Canvas dans une vue unique pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés. En savoir plus sur le [générateur de rapports Canvas.]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)
+Le Créateur de rapports vous permet de comparer les résultats de plusieurs campagnes ou de plusieurs Canvas dans une vue unique pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés. En savoir plus sur le [générateur de rapports Canvas.]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)
 
 ## Guide d’implémentation des messages in-app sur iOS
 
-Ce guide détaillé explique comment tirer parti du subclassing pour créer des messages in-app slideup personnalisés, et des messages in-app complets ou modaux personnalisés, et les ajouter dans vos campagnes et Canvas Braze. Il contient les considérations de code requises, des cas d’utilisation détaillés développés par notre équipe et des extraits de code. Visitez notre documentation [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) pour en savoir plus. 
+Ce guide détaillé explique comment tirer parti du subclassing pour créer des messages in-app slideup personnalisés, et des messages in-app complets ou modaux personnalisés, et les ajouter dans vos campagnes et Canvas Braze. Il contient les considérations de code requises, des cas d’utilisation détaillés développés par notre équipe et des extraits de code. Visitez notre documentation [ici]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/) pour en savoir plus. 
 
 ## Catégories de mots-clés et options de reciblage personnalisées pour le SMS
 

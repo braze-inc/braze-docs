@@ -38,7 +38,7 @@ Vous pouvez voir les différences entre le formatage du numéro local et le form
 | Pays | Local | Code pays | `E.164` |
 |---|---|---|---|
 | États-Unis | `4155552671` | 1 | `+14155552671` |
-| UK | `2071838750` | 44 | `+442071838750` |
+| UK | `02071838750` | 44 | `+442071838750` |
 | Brésil | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
 

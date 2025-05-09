@@ -13,10 +13,6 @@ description: "Cet article traite de la page API et identifiants, qui affiche les
 
 Vous trouverez la page **API et identifiants** sous **Paramètres**.
 
-{% alert note %}
-Si vous utilisez l'ancienne navigation, cette page s'appelle **Paramètres API** et se trouve sous **Paramètres** > **Gérer les paramètres**.
-{% endalert %}
-
 ### Clés API
 
 Cette section fournit les clés API REST de votre espace de travail, les identifiants uniques qui vous permettent d'accéder à vos données pour un espace de travail. Une clé API REST est requise pour chaque demande de l’API Braze. Pour plus d'informations sur la création et l'utilisation des clés API, consultez notre [présentation des clés API REST]({{site.baseurl}}/api/api_key/).

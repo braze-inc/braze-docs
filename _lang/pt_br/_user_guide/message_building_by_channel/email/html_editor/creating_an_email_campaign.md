@@ -30,15 +30,9 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 {% tab Campanha %}
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
-{% endalert %}
-
-{:start=“2"}
-2\. Selecione **e-mail**, ou, para campanhas de direcionamento para múltiplos canais, selecione **Multichannel**.
-3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+2. Selecione **e-mail**, ou, para campanhas de direcionamento para múltiplos canais, selecione **Multichannel**.
+3. Dê à sua campanha um nome claro e significativo.
+4. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -93,7 +87,7 @@ Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copy
 ![Inicie o botão AI Copywriter, localizado no campo "Corpo" do criador de e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como árabe e hebraico? Consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) para conhecer as práticas recomendadas.
+Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como árabe e hebraico? Consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) para conhecer as práticas recomendadas.
 
 ### Etapa 3a: Adicione suas informações de envio
 
@@ -169,7 +163,7 @@ Os extras de e-mail permitem o envio de dados adicionais para outros prestadores
 Para adicionar extras de e-mail, Acessar as **Informações de Envio** e selecionar **Adicionar Novo Extra**.
 
 {% alert warning %}
-O total de pares de valores-chave adicionados não deve exceder 1 kB. Caso contrário, as mensagens serão abortadas.
+O total de pares chave-valor adicionados não deve exceder 1 KB. Caso contrário, as mensagens serão abortadas.
 {% endalert %}
 
 Os valores extras de e-mail não são publicados no Currents ou no Snowflake. Se estiver procurando enviar metadados adicionais ou valores dinâmicos para Currents ou Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) em vez disso.
@@ -256,7 +250,7 @@ Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usu�
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você pode especificar qualquer uma das seguintes ações como um evento de conversão:
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você pode especificar qualquer uma das seguintes ações como um evento de conversão:
 
 - Abre o aplicativo
 - Faz uma compra (pode ser uma compra genérica ou um item específico)

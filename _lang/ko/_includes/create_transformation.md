@@ -1,9 +1,5 @@
 Braze 대시보드에서 **데이터 설정** > **데이터 변환**로 이동합니다.
 
-{% alert note %}
-[구형 내비게이션]({{site.baseurl}}/navigation)를 사용하고 있다면, **변환**을 **데이터** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 변환 이름을 지정하려면 **Create Transformation**을 선택한 다음 편집 경험을 선택하세요.
 
 ![편집 경험을 위해 "템플릿 사용" 또는 "처음부터 시작" 옵션을 선택할 수 있는 변환 세부정보.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})

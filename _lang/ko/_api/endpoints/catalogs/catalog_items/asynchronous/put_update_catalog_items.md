@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: 여러 카탈로그 항목 업데이트"
-article_title: "PUT: 여러 카탈로그 항목 업데이트"
+nav_title: "PUT: 여러 카탈로그 항목 교체"
+article_title: "PUT: 여러 카탈로그 항목 교체"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 여러 카탈로그 항목 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 여러 카탈로그 항목 바꾸기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
-# 카탈로그 항목 업데이트
+# 카탈로그 항목 교체
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 카탈로그의 여러 항목을 업데이트할 수 있습니다.
+> 이 엔드포인트를 사용하여 카탈로그의 여러 항목을 교체할 수 있습니다.
 
 카탈로그 항목이 존재하지 않는 경우 이 엔드포인트가 카탈로그에 항목을 생성합니다. 각 요청은 최대 50개의 카탈로그 항목을 지원할 수 있습니다. 이 엔드포인트는 비동기식입니다.
 

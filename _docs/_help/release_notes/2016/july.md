@@ -14,7 +14,7 @@ This upgrade makes it easier for you to use the Message Error Log on the Develop
 
 ## Added timestamp for last uninstall tracking push sent
 
-Braze detects uninstalls by sending a silent push to a customer's apps to see which devices respond. This feature adds an unobtrusive timestamp indicating when uninstall tracking last ran. This timestamp can be found on your Settings page where uninstall tracking is configured. Learn more about [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking).
+Braze detects uninstalls by sending a silent push to a customer's apps to see which devices respond. This feature adds an unobtrusive timestamp indicating when uninstall tracking last ran. This timestamp can be found on your Settings page where uninstall tracking is configured. Learn more about [Uninstall Tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 ![Uninstall tracking checkbox][6]
 
@@ -24,7 +24,7 @@ You can now test-send a live webhook message from Braze prior to setting a campa
 
 ## Added message variation received to campaign recipients CSV export
 
-We've added a column indicating the message variation received to the Campaign Recipients CSV export. Learn more about [exporting data]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data) from Braze.
+We've added a column indicating the message variation received to the Campaign Recipients CSV export. Learn more about [exporting data]({{site.baseurl}}/docs/user_guide/data/export_braze_data/) from Braze.
 
 ## Approximate limit on number of impressions
 

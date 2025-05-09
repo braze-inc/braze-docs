@@ -100,27 +100,34 @@ De manera predeterminada, el Contenido conectado realiza una solicitud HTTP GET 
 
 Opcionalmente, puede proporcionar un cuerpo POST especificando `:body` seguido de una cadena de consulta con el formato `key1=value1&key2=value2&...` o una referencia a los valores capturados. Content-Type predeterminado a `application/x-www-form-urlencoded`. Si especifica `:content_type application/json` y proporciona un cuerpo con codificación URL de formulario como `key1=value1&key2=value2`, Braze codificará automáticamente el cuerpo en JSON antes de enviarlo.
 
+El Contenido conectado tampoco almacena en caché las llamadas POST de forma predeterminada. Puedes actualizar este comportamiento añadiendo `:cache_max_age` a la llamada POST de Contenido conectado.
+
 #### Tipo de contenido por defecto
+
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
 ```
 #### Content-Type para aplicación/JSON
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
 ### Proporcionar cuerpo JSON
+
 Si quieres proporcionar tu propio cuerpo JSON, puedes escribirlo en línea si no hay espacios. Si tu cuerpo tiene espacios, debes usar una sentencia assign o capture. Es decir, cualquiera de estos tres es aceptable:
 
 {% raw %}
 ##### Inline: espacios no permitidos
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
 ##### Cuerpo en una declaración de captura: espacios permitidos
+
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -148,8 +155,10 @@ Si quieres proporcionar tu propio cuerpo JSON, puedes escribirlo en línea si no
 %}
 ```
 {% endraw %}
+
 {% raw %}
 ##### Cuerpo en una sentencia assign: espacios permitidos
+
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
@@ -173,48 +182,6 @@ Puede utilizar el estado HTTP de una llamada a Contenido Conectado guardándolo 
 Esta clave sólo se añadirá automáticamente al objeto Contenido conectado si el endpoint devuelve un objeto JSON válido y una respuesta `2XX`. Si el endpoint devuelve un array u otro tipo, esa clave no puede establecerse automáticamente en la respuesta.
 {% endalert %}
 
-## Almacenamiento en caché configurable {#configurable-caching}
-
-Las respuestas de Connected Content pueden almacenarse en caché en diferentes campañas o mensajes (dentro del mismo espacio de trabajo) para optimizar la velocidad de envío.
-
-Braze no registra ni almacena permanentemente las respuestas de Contenido conectado. Si eliges explícitamente almacenar una respuesta a una llamada de Contenido conectado como una variable Liquid, Braze sólo la almacena en memoria, es decir, en un almacenamiento temporal que se elimina tras un breve periodo de tiempo, para renderizar la variable Liquid y enviar el mensaje. Para evitar por completo el almacenamiento en caché, puedes especificar `:no_cache`, lo que puede provocar un aumento del tráfico de red. Para ayudar a solucionar problemas y supervisar el estado del sistema, Braze también puede registrar las llamadas de contenido conectado que fallan (como 404 y 429); estos registros se conservan durante un máximo de 30 días.
-
-### Límite de tamaño de la caché
-
-El cuerpo de la respuesta Contenido conectado no debe superar 1 MB, o no se almacenará en caché.
-
-### Tiempo de caché
-
-Connected Content guardará en caché el valor que devuelva de los puntos finales GET durante un mínimo de 5 minutos. Si no se especifica un tiempo de caché, el tiempo de caché predeterminado es de 5 minutos. 
-
-El tiempo de caché de Connected Content puede configurarse para que sea más largo con `:cache_max_age`, como se muestra en el siguiente ejemplo. El tiempo mínimo de caché es de 5 minutos y el tiempo máximo de caché es de 4 horas. Los datos del Contenido conectado se almacenan en caché en memoria utilizando un sistema de caché volátil, como Memcached. Como resultado, independientemente del tiempo de caché especificado, los datos de contenido conectado pueden ser desalojados de la caché en memoria de Braze antes de lo especificado. Esto significa que las duraciones de caché son sugerencias y pueden no representar realmente la duración que se garantiza que los datos serán almacenados en caché por Braze y es posible que vea más solicitudes de Contenido Conectado de las que podría esperar con una duración de caché determinada.
-
-Por defecto, el Contenido conectado no almacena en caché las llamadas POST. Puede cambiar este comportamiento añadiendo `:cache_max_age` a la llamada POST de contenido conectado.
-
-#### Caché durante los segundos especificados
-
-Este ejemplo almacenará en caché durante 900 segundos (o 15 minutos).
-{% raw %}
-```
-{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
-```
-{% endraw %}
-
-#### Eliminación de caché
-
-Para evitar que Connected Content almacene en caché el valor que devuelve de una solicitud GET, puede utilizar la configuración `:no_cache`. Sin embargo, las respuestas de los hosts internos de Braze seguirán almacenándose en caché.
-
-{% raw %}
-```js
-{% connected_content https://example.com/webservice.json :no_cache %}
-```
-{% endraw %}
-
-{% alert important %}
-Asegúrese de que el punto final de contenido conectado proporcionado puede gestionar grandes cantidades de tráfico antes de utilizar esta opción, o es probable que aumente la latencia de envío (mayores retrasos o intervalos de tiempo más amplios entre la solicitud y la respuesta) debido a que Braze realiza solicitudes de contenido conectado para cada mensaje.
-{% endalert %}
-
-Con un `POST` no necesitas usar la técnica de eliminación de caché, ya que Braze nunca almacena en caché los resultados de las solicitudes a `POST`.
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Ejemplo de uso de push de contenido conectado"

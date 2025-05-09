@@ -13,10 +13,6 @@ description: "Este artículo de referencia explica cómo acceder y utilizar el p
 
 El portal de productos se encuentra en **Comunidad** > **Hoja de ruta de productos**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará **la hoja de ruta del producto** en **Recursos**.
-{% endalert %}
-
 ## Qué hay en el portal
 
 | Sección | Descripción |

@@ -117,7 +117,7 @@ Para eliminar tu espacio de trabajo o instancia de la aplicación:
 1. Ve a **Ajustes** > **Ajustes de la aplicación**.
 2. Selecciona **Eliminar espacio de trabajo** para eliminar el espacio de trabajo correspondiente, o selecciona el icono de la papelera situado junto a la instancia de la aplicación correspondiente.
 
-No puedes eliminar instancias de la aplicación o espacios de trabajo que se estén utilizando actualmente para seleccionar usuarios o que tengan más de 1.000 usuarios. Si intentas hacerlo, recibirás un mensaje de error. Para proceder a eliminarlos, [crea un caso de Soporte]({{site.baseurl}}/help/support/) que incluya un enlace al panel y el nombre de la instancia de la aplicación o del espacio de trabajo que se va a eliminar.
+No puedes eliminar instancias de la aplicación o espacios de trabajo que se estén utilizando actualmente para seleccionar usuarios o que tengan más de 1.000 usuarios. Si intentas hacerlo, recibirás un mensaje de error. Para proceder a eliminarlos, [crea un caso de Soporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/) que incluya un enlace al panel y el nombre de la instancia de la aplicación o del espacio de trabajo que se va a eliminar.
 
 {% alert warning %}
 Ten cuidado al eliminar espacios de trabajo. Una vez eliminado un espacio de trabajo, no se puede restaurar.

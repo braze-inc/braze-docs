@@ -22,9 +22,6 @@ guide_featured_list:
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Segment Funnels
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

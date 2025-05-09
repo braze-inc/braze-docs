@@ -15,7 +15,7 @@ Cuando hayas terminado con estos tutoriales, serás capaz de:
 - Escribe código Liquid para casos de uso comunes
 - Encadena la lógica condicional de Liquid para personalizar los mensajes en función de los datos de usuario
 - Utiliza variables y filtros para escribir ecuaciones que utilicen los valores de los atributos
-- Reconocer los comandos básicos del código de Liquid y formarse una idea general de lo que hace el código.
+- Reconocer los comandos básicos del código Liquid y formarse una idea general de lo que hace el código.
 
 | Tutorial | Objetivos de aprendizaje |
 | --- | --- |

@@ -11,9 +11,9 @@ description: "This landing page includes all Braze partners. Use it to explore t
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
 - name: Passkit
@@ -291,13 +291,13 @@ valid_partner_list:
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+  url: /docs/partners/treasure_data/
 - name: Future Anthem
-  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+  url: /docs/partners/future_anthem
 - name: LiveRamp
-  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+  url: /docs/partners/liveramp/
 - name: Inbox Monster
-  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+  url: /docs/partners/inbox_monster/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
@@ -344,4 +344,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Just Words
+  url: /docs/partners/just_words/
 ---

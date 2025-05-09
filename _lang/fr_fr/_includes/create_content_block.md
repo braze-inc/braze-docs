@@ -1,9 +1,5 @@
 1. Allez dans **Modèles** > **Blocs de contenu**. Cliquez sur <i class="fas fa-plus"></i> **Create Content Block (Créer un bloc de contenu)** et sélectionnez **Drag-and-drop Content Block (Glisser-déposer un bloc de contenu)**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page est située dans **Engagement** > **Modèles et médias** > **Bibliothèque de blocs de contenu**.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

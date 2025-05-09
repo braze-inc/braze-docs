@@ -2015,8 +2015,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshoo
 
 validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
 
-validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/unlisted_docs/post_duplicate_canvases/';
-
 validurls['/docs/developer_guide/platform_integration_guide/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 validurls['/docs/developer_guide/platforms/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/';
 
@@ -2639,5 +2637,33 @@ validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
+
+validurls['/docs/api/endpoints/messaging/duplicate_campaigns'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/';
+validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/';
+
+validurls['/docs/user_guide/engagement_tools/segments/segment_funnels/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/#email-body';
+
+validurls['/docs/developer_guide/banners/embedding_banners/'] = '/docs/developer_guide/banners/creating_placements/';
+
+validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities/faq/'] = '/docs/developer_guide/live_notifications/live_activities/';
+validurls['/docs/partners/message_personalization/dynamic_content/future_anthem/'] = '/docs/partners/future_anthem/';
+validurls['/docs/partners/message_personalization/dynamic_content/odicci/'] = '/docs/partners/odicci/';
+validurls['/docs/user_guide/data_and_analytics/exporting_dashboard_data/'] = '/docs/user_guide/data/export_braze_data';
+validurls['/docs/user_guide/data_and_analytics/uninstall_tracking/'] = '/docs/user_guide/analytics/tracking/uninstall_tracking';
+validurls['/docs/user_guide/data_and_analytics/influenced_opens/'] = '/docs/user_guide/analytics/tracking/influenced_opens';
+validurls['/docs/user_guide/personalization_and_dynamic_content/personalized_messaging/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags';
+validurls['/docs/user_guide/administrative/manage_your_users/user_import/'] = '/docs/user_guide/data/user_data_collection/user_import';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create';
+validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events';
+validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases';
+validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
+validurls['/docs/api/objects_filters/messaging/windows_objects/'] = '/docs/api/objects_filters';
+validurls['/docs/partners/message_personalization/dynamic_content/amazon_personalize/workshop/'] = '/docs/partners/amazon_personalize_workshop';
+validurls['/docs/partners/message_personalization/dynamic_content/amazon_personalize/'] = '/docs/partners/amazon_personalize';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
+validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
 
 // validurls['OLD'] = 'NEW';

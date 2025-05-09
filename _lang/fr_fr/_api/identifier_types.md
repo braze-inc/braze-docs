@@ -25,18 +25,11 @@ Il existe deux façons de localiser votre `app_id`:
 {% tabs local %}
 {% tab Identificateurs d'applications %}
 Allez dans **Paramètres** > **API et identifiants** > **Identifiants d'application**. Votre clé API pour chaque application est indiquée dans la colonne **Identifiant**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), **App Identifiers** se trouve dans **Developer Console** > **API Settings.**
-{% endalert %}
 {% endtab %}
 
 {% tab Paramètres de l'application %}
 Allez dans **Réglages** > **Réglages de l'application**. Votre clé API est indiquée à côté du champ **Clé API** dans la section des paramètres.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez  accéder aux **paramètres des applications** en sélectionnant **Gérer les paramètres** > **Paramètres**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -82,9 +75,6 @@ Cliquez sur **Modèles**, puis sélectionnez une page modèle et choisissez un m
 {% tab Clés API %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver les identifiants d'API dans la **console de développement** > **Paramètres d'API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -103,9 +93,6 @@ Gardez à l'esprit que si vous avez un canvas avec des variantes, il existe un I
 
 Vous pouvez trouver votre ID de Canvas dans le tableau de bord. Allez dans **Messagerie** > **Canvas** et sélectionnez un Canvas préexistant. Si le Canvas que vous voulez n’existe pas encore, créez-en un et enregistrez-le. En bas d'une page individuelle de Canvas, cliquez sur **Analyser variantes**. Une fenêtre apparaît avec l’identifiant de l’API de Canvas situé en bas.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), **Canvas** se trouve sous **Engagement**.
-{% endalert %}
 
 ### À quoi cela sert-il ?
 
@@ -129,17 +116,11 @@ Vous pouvez trouver votre ID de campagne de deux manières :
 {% tab Campagnes %}
 Allez dans **Envoi de messages** > **Campagnes** et sélectionnez une campagne préexistante. Si la campagne que vous souhaitez n’existe pas encore, créez-en une et enregistrez-la. Au bas de la page de la campagne individuelle, vous pourrez trouver votre **identifiant API de campagne.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **campagnes** se trouvent sous **Engagement**.
-{% endalert %}
 {% endtab %}
 
 {% tab Clés API %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **clés API** sont situées dans **Developer Console** > **API Settings.**
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -164,17 +145,11 @@ Vous pouvez trouver votre ID de segment de deux manières :
 {% tab Segmentations %}
 Allez dans **Audience** > **Segments** et sélectionnez un segment préexistant. Si le segment que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du segment individuel, vous trouverez votre identifiant de segment.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **segments se** trouvent sous **Engagement**.
-{% endalert %}
 {% endtab %}
 
 {% tab Clés API %}
 Cliquez sur **Paramètres** > \*\***API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **clés API** sont situées dans **Developer Console** > **API Settings.**
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -198,17 +173,11 @@ Vous pouvez trouver votre ID de carte de deux manières :
 {% tab Fil d'actualité %}
 Allez dans **Envoi de messages** > **Fil d'actualité** et sélectionnez un fil d'actualité préexistant. Si le fil d’actualité que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du fil d’actualité individuel, vous trouverez votre identifiant unique de carte.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), le **fil d'actualité** se trouve sous **Engagement**.
-{% endalert %}
 {% endtab %}
 
 {% tab Clés API %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les **clés API** sont situées dans **Developer Console** > **API Settings.**
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
