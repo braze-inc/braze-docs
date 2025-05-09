@@ -15,6 +15,8 @@ channel:
 Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## Why use Banners?
 
 Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
@@ -28,8 +30,6 @@ Because they never expire and are auto-personalized every time a user starts a n
 - Promoting loyalty programs and personalized offers
 - Guiding users through onboarding flows and account setup
 - Upselling or cross-selling complementary products
-
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## About Banners
 
