@@ -59,7 +59,7 @@ Braze requires an HTTP header for authorization that includes your API key and a
 
 Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
-![The "Settings" tab with the request headers for the webhook.][1]
+![The request headers for the webhook.][1]{: style="max-width:70%;"}
 
 #### Request body
 
@@ -111,7 +111,7 @@ Braze requires an HTTP header for authorization that includes your API key and a
 
 Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
-![The "Settings" tab with the request headers for the webhook.][1]
+![The request headers for the webhook.][1]{: style="max-width:70%;"}
 
 #### Request body
 
