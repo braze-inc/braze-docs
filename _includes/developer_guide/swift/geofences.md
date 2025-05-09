@@ -18,7 +18,7 @@ By default, Braze location services are not enabled. To enable them in your app,
 
 In Xcode, open the **General** tab. Under **Frameworks, Libraries, and Embedded Content**, add the `BrazeLocation` module.
 
-![Add the BrazeLocation module in your Xcode project]({% image_buster /assets/img_archive/add-brazeLocation-module-xcode.png %})
+![Add the BrazeLocation module in your Xcode project]({% image_buster /assets/img/sdk_geofences/add-brazeLocation-module-xcode.png %})
 
 #### Step 2.2: Update your `Info.plist`
 
@@ -27,7 +27,7 @@ In your `info.plist`, assign a `String` value to one of the following keys that 
 - `NSLocationAlwaysAndWhenInUseUsageDescription` 
 - `NSLocationWhenInUseUsageDescription`
 
-![Info.plist location strings in Xcode]({% image_buster /assets/img_archive/info-plist-location-strings.png %})
+![Info.plist location strings in Xcode]({% image_buster /assets/img/sdk_geofences/info-plist-location-strings.png %})
 
 {% alert important %}
 Apple has deprecated `NSLocationAlwaysUsageDescription`. For more information, see [Apple's developer documentation](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysusagedescription).
@@ -86,7 +86,7 @@ However, you can choose to also monitor geofence events if your app is in the ba
 
 To monitor these additional geofence events, open your Xcode project, then go to **Signing & Capabilities**. Under **Background Modes**, check **Location updates**.
 
-![In Xcode, Background Mode > Location Updates]({% image_buster /assets/img_archive/xcode-background-modes-location-updates.png %})
+![In Xcode, Background Mode > Location Updates]({% image_buster /assets/img/sdk_geofences/xcode-background-modes-location-updates.png %})
 
 Next, enable `allowBackgroundGeofenceUpdates` in your app's code. This lets Braze extend your app's "When In Use" status by continuously monitoring location updates. This setting only works when your app is in the background. When the app re-opens, all existing background processes are paused and foreground processes are prioritized instead.
 
