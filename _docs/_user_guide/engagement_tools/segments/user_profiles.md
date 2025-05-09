@@ -1,7 +1,7 @@
 ---
 nav_title: User Profiles
 article_title: User Profiles
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
