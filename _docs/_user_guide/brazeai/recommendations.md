@@ -12,7 +12,10 @@ local_redirect: #property-name
 
 guide_featured_title: "Articles"
 guide_featured_list:
-- name: About Recommendations
+- name: Using Item Recommendations
+  link: /docs/user_guide/brazeai/recommendations/about_item_recommendations/
+  image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Types and Use Cases
   link: /docs/user_guide/brazeai/recommendations/about_item_recommendations/
   image: /assets/img/braze_icons/book-closed.svg
 - name: AI Item Recommendations

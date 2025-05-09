@@ -19,6 +19,9 @@ guide_featured_list:
 - name: Predictive Suite
   link: /docs/user_guide/brazeai/predictive_suite/
   image: /assets/img/braze_icons/stars-01.svg
+- name: Recommendations
+  link: /docs/user_guide/brazeai/recommendations/
+  image: /assets/img/braze_icons/user-check-01.svg
 - name: Generative AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg

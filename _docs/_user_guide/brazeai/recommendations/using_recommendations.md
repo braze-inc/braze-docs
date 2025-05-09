@@ -13,7 +13,7 @@ page_order: 20
 This article describes the syntax of the Liquid object in detail. However, you can [insert pre-formatted variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) with defaults through the **Add Personalization** modal located on the top-right of any templated text field.
 {% endalert %}
 
-For additional guidance on using AI item recommendations in Braze, check out our Braze Learning [Course on Crafting Personalized Experiences with AI][1]. This course covers industry use cases, step-by-step instructions, and an additional use case for creating an in-app message with AI-driven recommendations.
+For additional guidance on using AI item recommendations in Braze, check out our Braze Learning [Course on Crafting Personalized Experiences with AI](https://learning.braze.com/ai-item-recommendations-use-case/1996254). This course covers industry use cases, step-by-step instructions, and an additional use case for creating an in-app message with AI-driven recommendations.
 
 ## Anatomy of the recommendation object
 
@@ -211,7 +211,7 @@ Your recommendation will pull items from a catalog. Follow the steps for Creatin
 ### Step 2: Set up your recommendation
 
 1. From your catalog, select **Create recommendation**.
-2. Follow the steps for [Creating an AI item recommendation][3]. 
+2. Follow the steps for [Creating an AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations#creating-an-ai-item-recommendation). 
 3. For the recommendation type, select **AI Personalized**.
 4. Use the catalog you just created to train the recommendation. This might take some time—you'll get an email when the training is complete.
 
@@ -277,4 +277,3 @@ If the recommendation doesn't appear in the preview, check the following:
 
 [1]: https://learning.braze.com/ai-item-recommendations-use-case/1996254
 [2]: {% image_buster /assets/img/image_with_liquid.png %}
-[3]: {{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations#creating-an-ai-item-recommendation

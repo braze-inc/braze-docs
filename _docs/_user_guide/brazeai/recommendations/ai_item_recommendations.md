@@ -10,13 +10,13 @@ description: "This reference article covers how to create an AI item recommendat
 
 > Learn how to create an AI item recommendation for items in a catalog.
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog][catalog]. After creating your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 
 Before you start, you'll need to complete the following:
 
-- You must have at least one [catalog][catalog] to use any of the recommendation types described below.
+- You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 {% alert tip %}
@@ -36,7 +36,7 @@ You can also choose to create a recommendation straight from an individual catal
 
 Give your recommendation a name and optional description.
 
-!["Recommendation details" step with the name and description fields.][1]
+!["Recommendation details" step with the name and description fields.]({% image_buster /assets/img/item_recs_1.png %})
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
@@ -55,7 +55,7 @@ When using **Most recent** or **AI Personalized**, users with insufficient data 
 
 To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-!["Define your recommendation" step with "AI Personalized" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
+!["Define your recommendation" step with "AI Personalized" as the type and the "Do not recommend items users have previously interacted with" option selected.]({% image_buster /assets/img/item_recs_2-3.png %})
 
 This setting prevents messages from reusing the items a user has already bought or interacted with, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
@@ -63,13 +63,13 @@ For example, when using the pro version of AI item recommendations, if a user pu
 
 #### Step 2b: Select a catalog
 
-If not already populated, select the [catalog][catalog] that this recommendation will pull items from.
+If not already populated, select the [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) that this recommendation will pull items from.
 
 #### Step 2c: Add a selection (optional)
 
 If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
-![An example of the "in-stock" selection selected for the recommendation.][2-2]
+![An example of the "in-stock" selection selected for the recommendation.]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
 If you can't find your selection, make sure it's set up in your catalog first.
@@ -87,7 +87,7 @@ You can optimize for:
 
 If you choose **Custom Event**, select your event from the list.
 
-![The "Completed Purchase" custom event selected as how events are currently tracked.][3]
+![The "Completed Purchase" custom event selected as how events are currently tracked.]({% image_buster /assets/img/item_recs_3.png %})
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
@@ -97,7 +97,7 @@ Select this field for the **Property Name**.
 
 The **Property Name** field will pre-populate with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
-![The property name "purchase_item" selected that corresponds to the item IDs in the catalog.][4]
+![The property name "purchase_item" selected that corresponds to the item IDs in the catalog.]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Requirements {#requirements}
 
@@ -302,7 +302,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![Recommendation audience metrics showing precision (25.3%), coverage (54.3%), and recommendation types split between personalized and most popular items.][5]
+![Recommendation audience metrics showing precision (25.3%), coverage (54.3%), and recommendation types split between personalized and most popular items.]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 These metrics are defined in the following table. 
 
@@ -318,15 +318,15 @@ The next section shows a breakdown of items in the catalog, split into two possi
 - **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
 - **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user.
 
-![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.][6]
+![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:50%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }
 
 ## Using recommendations in messaging
 
-!["Add Personalization" modal with item recommendation as the personalization type.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+!["Add Personalization" modal with item recommendation as the personalization type.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
@@ -366,14 +366,4 @@ This happens under a few specific conditions:
 
 Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
 
-[1]: {% image_buster /assets/img/item_recs_1.png %}
-[2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
-[2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
-[2-3]: {% image_buster /assets/img/item_recs_2-3.png %}
-[3]: {% image_buster /assets/img/item_recs_3.png %}
-[4]: {% image_buster /assets/img/item_recs_4.png %}
-[5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
-[6]: {% image_buster /assets/img/item_recs_analytics_2.png %}
-[7]: {% image_buster /assets/img/item_recs_analytics_3.png %}
-[10]: {% image_buster /assets/img/add_personalization.png %}
 [catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/
