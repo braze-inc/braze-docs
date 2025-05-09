@@ -29,6 +29,8 @@ Because they never expire and are auto-personalized every time a user starts a n
 - Guiding users through onboarding flows and account setup
 - Upselling or cross-selling complementary products
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## About Banners
 
 ### Features

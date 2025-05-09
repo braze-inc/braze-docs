@@ -61,5 +61,17 @@ Clearing cookies will log you out, so unsaved work will be lost.
 
 If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
 
+## Access to drag-and-drop editor
+
+For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that` *.bz-rndr.com` is allowlisted.
+
+The editor may experience loading issues due to the following:
+
+- **Transient error:** These are temporary failures that may affect connectivity, communication, or data transfer. Fortunately, they typically resolve on their own without requiring significant intervention, as they're often caused by short-lived conditions and do not indicate systemic problems.
+- **Major error:** This may involve an underlying infrastructure or product issue.  You can check our [Braze system status page](https://braze.statuspage.io/) as we are likely aware of the situation and actively working to resolve it.
+
+{% alert important %}
+If you're still experiencing issues, [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Before doing so, check that your IT administrator has confirmed that `*.bz-rndr.com` is allowlisted on your end.
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/enable_reset.png %}
