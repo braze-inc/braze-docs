@@ -40,6 +40,8 @@ Key features for Banners include:
 - **Flexible personalization:** Utilize Braze's built-in personalization options and Liquid logic, refreshing dynamically for each user's session.
 - **Custom HTML support:** Add custom HTML blocks when advanced customization or integration with existing web styles is required.
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ### Placement IDs {#placement-ids}
 
 Banner placements are unique to each workspace and can be used across 10 campaigns within a single workspace. Additionally, placements within each workspace must be assigned a unique ID. You'll create placements and assign them IDs when you [create a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/) or [create Banner placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements/).

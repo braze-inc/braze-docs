@@ -10,6 +10,8 @@ page_order: 2
 
 > Using the drag-and-drop editor, you can create and customize a preference center to help manage which users receive certain types of communication. You can have up to 50 preference centers per workspace.
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## Step 1: Create an email preference center
 
 Create a preference center by navigating to **Audience** > **Subscriptions** > **Email Preference Center**.
