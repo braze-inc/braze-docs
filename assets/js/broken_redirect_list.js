@@ -286,7 +286,7 @@ validurls['/docs/partners/advertising_technologies/attribution/appsflyer/'] = '/
 validurls['/docs/partners/advertising_technologies/attribution/branch_for_attribution/'] = '/docs/partners/message_orchestration/attribution/branch/branch_for_attribution/';
 validurls['/docs/partners/advertising_technologies/attribution/kochava/'] = '/docs/partners/message_orchestration/attribution/kochava/';
 validurls['/docs/partners/advertising_technologies/attribution/singular/'] = '/docs/partners/message_orchestration/attribution/singular/';
-validurls['/docs/partners/advertising_technologies/retargeting/jampp/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/jampp/';
+validurls['/docs/partners/advertising_technologies/retargeting/jampp/'] = '/docs/partners/message_orchestration/retargeting/jampp/';
 validurls['/docs/partners/advertising_technologies/retargeting/remerge/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/remerge/';
 validurls['/docs/partners/advertising_technologies/social/facebook/'] = '/docs/partners/message_orchestration/retargeting/facebook/';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/facebook/'] = '/docs/partners/message_orchestration/retargeting/facebook/';
@@ -749,7 +749,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/census/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/census#census';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents';
 validurls['/docs/partners/data_and_infrastructure_agility/cohort_import/mparticle/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle/';
-validurls['/docs/partners/data_and_infrastructure_agility/cohort_import/storyly/'] = '/docs/partners/message_personalization/dynamic_content/storyly/';
+validurls['/docs/partners/data_and_infrastructure_agility/cohort_import/storyly/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/storyly/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents#segmentio-for-currents';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/';
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo'] = '/docs/partners/home';
@@ -1160,7 +1160,7 @@ validurls['/docs/user_guide/engagement_tools/testing/random_bucket_numbers/undef
 validurls['/docs/developer_guide/platform_integration_guides/flutter/react_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/';
 validurls['/docs/developer_guide/platforms/flutter/deep_linking/'] = '/docs/developer_guide/push_notifications/deep_linking/?sdktab=flutter';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_basics'] = '/docs/user_guide/engagement_tools/canvas/get_started/the_basics/';
-validurls['/docs/partners/message_personalization/judo'] = '/docs/partners/message_personalization/dynamic_content/judo/';
+validurls['/docs/partners/message_personalization/judo'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
 validurls['/docs/user_guide/engagement_tools/campaign'] = '/docs/user_guide/engagement_tools/campaigns';
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/reporting/engagement_reports/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi'] = '/docs/user_guide/data_and_analytics/braze_currents/available_partners/';
@@ -2665,5 +2665,13 @@ validurls['/docs/partners/message_personalization/dynamic_content/amazon_persona
 validurls['/docs/partners/message_personalization/dynamic_content/amazon_personalize/'] = '/docs/partners/amazon_personalize';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
+
+validurls['/docs/partners/message_personalization/dynamic_content/certona'] = '/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona';
+validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
+validurls['/docs/partners/message_personalization/dynamic_content/movable_ink'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';
+validurls['/docs/partners/message_personalization/dynamic_content/offerfit'] = '/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit';
+validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
+validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
 
 // validurls['OLD'] = 'NEW';
