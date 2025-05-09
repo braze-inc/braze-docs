@@ -200,6 +200,8 @@ Some Content Cards are only relevant up until a user performs some action. For e
 
 Within a campaign or Canvas message, you can optionally add a **Removal Event** to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed—triggered by the SDK or REST API.
 
+Cards will be removed on subsequent refreshes once Braze has processed the specified event.
+
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
 {% endalert %}
