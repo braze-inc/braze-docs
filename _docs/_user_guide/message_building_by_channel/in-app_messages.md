@@ -41,7 +41,9 @@ guide_menu_list:
   image: /assets/img/braze_icons/star-01.svg
 - name: "Simple Survey"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  image: /assets/img/braze_icons/bar-chart-07.svg
+- name: "Using Locales"
+  link: /docs/iam_locales/
+  image: /assets/img/braze_icons/translate-01.svg
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

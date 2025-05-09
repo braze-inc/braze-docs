@@ -1,7 +1,7 @@
 ---
 nav_title: Creative Details
 article_title: Creative Details
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "Creative Details"
 guide_top_text: "Before you get creative with our in-app messages, you should know some of the guidelines. All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. To ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching."
