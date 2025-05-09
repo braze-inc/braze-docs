@@ -114,47 +114,6 @@ After creating your webhook, you can do a test send to check the webhook respons
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
-{% tab News Feed %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
-
-##### Step 1: Create a designated test segment
-
-Once you set up a test segment, you can use these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
-
-1. Go to the **Segments** page and [create a new segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
-2. Click the dropdown menu under **Add Filter** and locate the testing filters at the bottom of the list <br><br>![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift).<br><br>![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
-<br><br>These filters have the following options:
-- **Equals**: Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
-- **Does not equal**: Excludes a particular email or user ID from test campaigns.
-- **Matches**: Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
-<br><br>
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (for example, `matches` "email1@braze.com\|email2@braze.com").
-<br><br>
-4. Add the testing filters to your test segment.
-5. Click **Preview** at the top of the segment editor or export that segment's user data to CSV to verify that you've selected only the users you intended.
-6. Click the **User Data** dropdown and select **CSV Export All User Data** to export segment user data. 
-
-![Verify Test Segment]({% image_buster /assets/img_archive/testmessages3.png %})
-
-> Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The **Preview** tab is only a sample of users in the segment and therefore may appear to have not selected all intended members. For more information, check out [Viewing and Understanding Segment Data][7].
-
-After you've confirmed that you're only targeting the users you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
-
-##### Step 2: Send a test campaign
-
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
-
-![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
-
-Finish confirming your campaign and launch it to test your News Feed cards.
-
-> If you intend to use a single campaign to send a test message to yourself more than once, check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign composer.
-
-{% endtab %}
 {% endtabs %}
 
 ## Testing personalized campaigns 
