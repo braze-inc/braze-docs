@@ -1,7 +1,7 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-description: "This reference article outlines the partnership between Braze and SalesWings, an analytics platform, that helps you track scoring and grading, sales insights and alerts, marketing alignment, and B2B attribution reporting."
+description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting."
 alias: /partners/saleswings/
 page_type: partner
 search_tag: Partner
@@ -10,13 +10,13 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings][1] is a B2B SaaS lead profiling add-on built for marketing and sales teams, which helps manage lead and account qualification through lead scoring and grading, sales insights and alerts, marketing alignment, and B2B attribution reporting, along with a tight Salesforce CRM integration.
+> [SalesWings][1] is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.
 
 _This integration is maintained by SalesWings._
 
 ## About the integration
 
-SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations.
+SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and operational efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s and account’s full customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations. SalesWings identifies needs and interests along with other signals, allowing to hand-off qualified buyers to sales teams inside your CRM in an automated manner.
 
 ## Prerequisites
  
@@ -31,7 +31,7 @@ SalesWings allows marketing teams and marketing operations managers to qualify l
 ## Use cases
 
 {% tabs %}
-{% tab Lead Scoring %}
+{% tab Lead and Account Scoring %}
 
 SalesWings provides Braze customers with [a flexible way to qualify leads, contacts, and accounts with state-of-the-art lead scoring](https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs) and lead grading capabilities. All your lead qualification data is natively pushed to Salesforce CRM and other systems where you want to manage and report on leads, contacts, accounts, and opportunities.
 
@@ -68,7 +68,7 @@ SalesWings offers native email and Slack alerts, and you can set up report subsc
 _Example of sales alert via Slack channel_
 {% endtab %}
 {% tab Reporting in Salesforce CRM %}
-Through SalesWings integration with Salesforce, you can build automated reporting with leads, contacts, accounts, and opportunities based on web engagement data and Braze campaign engagement. For instance, you can surface a list of hot leads to a sales team, with everyone who clicked on a specific email campaign or performed a specific action in your app or website.
+Through the native SalesWings integration with Salesforce, you can build automated reporting with leads, contacts, accounts, and opportunities based on web engagement data and any Braze campaign engagement with a native Braze currents integration. For instance, you can surface a list of hot leads to a sales team, with everyone who clicked on a specific email campaign or performed a specific action in your app or website.
 
 ![Example dashboard linked to Braze email & marketing engagement within Salesforce, looking at impact of Braze campaigns on sales results and outcomes]({% image_buster /assets/img/saleswings/saleswings_email_campaign_attribution_dashboard.png %})
 
@@ -84,9 +84,11 @@ _Example dashboard linked to Braze email & marketing engagement within Salesforc
 
 ### Step 2: Installing behavioral tracking on your website or app
 
-Currently, there are two ways for you to collect behavioral data in SalesWings for lead scoring and sales insights:
+There are several ways for you to collect behavioral data in SalesWings for lead and account scoring, identifying buyer intent and sales insights:
 * [Deploy the SalesWings tracking JavaScript][5] on the websites and apps where you want to track and identify leads
-* Send behavioral lead activity data (and lead profile data) via SalesWings integration with Segment.com
+* Ingest Braze events along with event properties into SalesWings via Braze Currents
+* Send behavioral lead activity data (and lead profile data) via [SalesWings integration with Segment][13]
+* Send data straight to the SalesWings [API][14] from a third-party solution
 
 ### Step 3: Connecting SalesWings to Braze
 
@@ -102,7 +104,7 @@ Then, click **Save**.
 
 ### Step 4: Setting up a Custom Currents Export to SalesWings (optional)
 
-If you want to use [user behavior][10] and [message engagement][11] events for lead scoring in SalesWings, go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
+If you want to use [user behavior][10] and [message engagement][11] events for behavioral intelligence, lead and account scoring, show them to sales via sales insights or report on them in your CRM, go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
 
 Click **Generate** under **Generate an API token to setup a Custom Currents Export**.
 
@@ -110,13 +112,13 @@ Create a new Current as described in the [**Currents User Guide**][9], choose **
 
 In the **Credentials** section of the Current creation form, enter the API token you have generated on the [**SalesWings Integrations** page][6] as **Bearer Token** and `https://helium.saleswings.pro/api/braze/currents/events` as **Endpoint**.
 
-### Step 5: Configuring SalesWings lead scoring for Braze, CRM integration, and more
+### Step 5: Configuring SalesWings lead  and account scoring for Braze, CRM integration, and more
 
 Consult the SalesWings services team for full onboarding support via the [website][1].
 
 ## Using this integration 
 
-To trigger lead scoring and the creation of sales insights, SalesWings must identify a user on your website or app. This can occur in the following ways:
+To trigger the behavioral data and other data to leads and accounts, SalesWings must identify a user on your website or app, or through a third-party integration. This can occur in the following ways:
 
 - **Form submissions:** When a user submits a web form, SalesWings will automatically identify all of your web form types (such as login, download, contact us, etc.) and resolve the identity of a user when they submit a form. 
 - **URL clicks with a Braze ID or external ID:** A user clicks on a Braze marketing action, typically email clicks, banner clicks, or similar, leading to a page you are tracking with SalesWings.
@@ -136,9 +138,9 @@ You can identify users automatically when they click on a trackable URL (for exa
 
 The `braze_id` variable is set to an identifier of the user-generated by Braze and is always available. The `br_user_id` variable is set to the user's identifier in your system and may be missing in certain scenarios (for example, for anonymous users created by the Braze SDK). If both `braze_id` and `br_user_id` are used in a link, SalesWings will only consider the `braze_id` parameter.
 
-### Using Braze Currents Events for lead scoring
+### Using Braze Currents Events for lead and account scoring, sales insights, or reporting on them in your CRM
 
-If you connect a Braze Current to SalesWings, SalesWings will create identified lead profiles for every Braze user with an email, and record supported Braze events as lead activity. The recorded activity could be futher combined with the behavioral data collected with the SalesWings tracking script or Segment.com, and then used to setup lead scoring rules.
+If you connect a Braze Current to SalesWings, SalesWings will create identified lead profiles for every Braze user with an email, and record supported Braze events as lead activity. Inside your CRM, all data can automatically be aggregated on the lead’s account level. The recorded activity and data could be further combined with the behavioral data collected with the SalesWings tracking script or Segment.com, or by sending other data to the SalesWings API, and then used to identify the needs and sales-readiness of your prospects for your lead and account management processes.
 
 The following table shows the Braze event types supported by SalesWings and their representation in SalesWings lead activity history and rule engine:
 
@@ -184,3 +186,5 @@ For configuration and further troubleshooting, contact the [SalesWings services 
 [10]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events
 [11]: {{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events
 [12]: https://helium.saleswings.pro/falcon
+[13]: https://support.saleswingsapp.com/en/articles/9258905-segment-com-integration
+[14]: https://support.saleswingsapp.com/en/articles/6930889-using-saleswings-open-api-to-send-events-to-saleswings
