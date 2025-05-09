@@ -217,5 +217,13 @@ Message throughput is not as strictly defined or carrier-controlled as it is wit
 
 No. RCS-verified senders don't have the option of a separate high message throughput.
 
+### Can an RCS-verified sender be shared across multiple subscription groups? 
+
+No. Similar to an SMS sender, an RCS-verified sender can only be used with a single subscription group
+
+### Can an SMS fallback sender be shared across SMS subscription groups?
+
+No. SMS fallback senders can only be used with a single subscription group.
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
