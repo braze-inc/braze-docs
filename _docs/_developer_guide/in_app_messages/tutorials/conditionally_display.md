@@ -198,7 +198,7 @@ class MyApplication : Application() {
                     // Show the message using Braze's UI
                     InAppMessageOperation.DISPLAY_NOW
                 } else {
-                    // Discard the message
+                    // Discard the message (or we could also create our own UI using KVP values)
                     InAppMessageOperation.DISCARD
                 }
             }

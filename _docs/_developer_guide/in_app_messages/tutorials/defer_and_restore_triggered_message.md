@@ -274,7 +274,7 @@ class MyApplication : Application() {
 
     fun showDeferredMessage(show: Boolean) {
         showMessage = show
-        BrazeInAppMessageManager.getInstance().presentNext()
+        BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()
     }
 }
 ```
