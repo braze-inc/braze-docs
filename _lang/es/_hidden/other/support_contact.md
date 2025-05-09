@@ -1,6 +1,6 @@
 ---
 permalink: /support_contact/
-nav_title: Soporte | Braze
+nav_title: Suporte | Braze
 noindex: true
 layout: redirect
 redirect_to: https://www.braze.com/docs/support_contact/
