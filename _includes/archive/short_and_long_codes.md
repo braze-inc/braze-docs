@@ -14,7 +14,7 @@ Short and long codes are the phone number from which you send messages to your u
 
 An RCS-verified sender is a visual representation of your brand that includes a brand name, logo, optional caption, and verified badge. This provides the RCS-verified sender a significant advantage over SMS codes in terms of establishing user trust.  
 
-![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}
+![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
 
 ##### Details
 

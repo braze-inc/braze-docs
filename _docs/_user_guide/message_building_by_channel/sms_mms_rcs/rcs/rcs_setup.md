@@ -38,7 +38,7 @@ To be eligible for sending RCS with Braze, your business must meet three criteri
 
 Before you can send RCS messages, you must register an RCS-verified sender. This is the representation of your brand that users will see on their mobile devices, which includes your brand’s name, logo, a verification badge, and an optional tagline. The RCS-verified sender reinforces customer trust and confirms your messages come from an authenticated source. 
 
-![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %})
+![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
 After you have added the RCS SKU(s) to your order form, Braze will be notified and will reach out to you with RCS sender registration forms. The format of these will depend on the countries you wish to send RCS messages to. 
 
