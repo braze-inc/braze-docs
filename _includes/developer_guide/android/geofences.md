@@ -1,27 +1,28 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
-## Setting up geofences
+## Setting up geofences {#setting-up-geofences}
 
 ### Step 1: Configure the Braze dashboard
 
-There are two ways to enable geofences for a particular app: from the **Locations** page or from the **App Settings** page.
+You can enable geofences for your app in one of the following places:
 
 {% tabs local %}
-{% tab Locations %}
-Enable geofences on the **Locations** page of the dashboard.
+{% tab locations %}
+To enable geofences from the **Locations** page:
 
-1. Go to **Audience** > **Locations**.
-2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
-3. Select the app to enable geofences. Click **Done.**
+1. In Braze, go to **Audience** > **Locations**.
+2. The number of apps in your workspace that have geofences enabled is listed under the map. For example, if geofences is only enabled for some of your apps, it may read: **2 of 5 Apps with Geofences enabled**. To enable additional apps, select the current count under the map.
+3. Choose an app to enable geofences for, then select **Done.**
+
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 {% endtab %}
 
-{% tab App Settings %}
-Enable geofences from your app's settings.
+{% tab app settings %}
+To enable geofences from the **App Settings** page:
 
-1. Go to **Settings** > **App Settings**.
-2. Select the app for which you wish to enable geofences.
-3. Select the **Geofences Enabled** checkbox. Click **Save.**
+1. In Braze, go to **Settings** > **App Settings**.
+2. Select the app you'd like to enable geofences for.
+3. Check **Geofences Enabled**, then select **Save.**
 
 ![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 {% endtab %}
