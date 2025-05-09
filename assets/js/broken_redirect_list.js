@@ -2666,6 +2666,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/amazon_persona
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
 
+validurls['/docs/user_guide/analytics/reporting/viewing_and_understanding_segment_data/'] = '/docs/viewing_and_understanding_segment_data/';
 validurls['/docs/partners/message_personalization/dynamic_content/certona'] = '/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona';
 validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
 validurls['/docs/partners/message_personalization/dynamic_content/movable_ink'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';

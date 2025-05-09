@@ -1,7 +1,7 @@
 ---
 nav_title: Suppression Lists
 article_title: Suppression Lists
-page_order: 2.5
+page_order: 3
 page_type: reference
 tool: Segments
 description: "This page covers how to use suppression lists to specify which users should never receive your messages."

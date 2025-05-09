@@ -1,9 +1,10 @@
 ---
 nav_title: Segment Data
 article_title: Viewing and Understanding Segment Data
-page_order: 2
+page_order: 4
 page_type: reference
 description: "This page explains the segments section of your Braze dashboard, and includes a summary of the statistics provided."
+alias: /viewing_and_understanding_segment_data/
 tool: 
   - Segments
   - Reports
@@ -84,6 +85,8 @@ To learn more about monitoring your segment’s membership and size, refer to [M
 To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
 
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
+
+Note that in cases where your segment is very small relative to your workspace size, it's possible for the User Preview to return zero users. This doesn't necessarily mean that there are zero users in your segment; run [Calculate Exact Stats]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size) to determine your segment's exact size.
 
 ![User Preview][8]
 
