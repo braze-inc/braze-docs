@@ -207,5 +207,15 @@ A2P 10DLC refers to a system in the United States that allows businesses to send
 
 All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. This application process takes 4-6 weeks. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
 
+## Frequently asked questions
+
+### How RCS message throughput compare to SMS message throughput?
+
+Message throughput is not as strictly defined or carrier-controlled as it is with SMS. Because RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS, RCS doesn't rely on fixed network-imposed limits like SMS does. 
+
+### Do RCS-verified senders support high message throughput like a short code?
+
+No. RCS-verified senders don't have the option of a separate high message throughput.
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

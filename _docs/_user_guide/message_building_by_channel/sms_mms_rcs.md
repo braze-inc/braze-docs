@@ -92,7 +92,4 @@ guide_menu_list3:
 - name: "RCS Setup"
   link: /docs/rcs_setup/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "RCS Frequently Asked Questions"
-  link: /docs/rcs_faq/
-  image: /assets/img/braze_icons/annotation-question.svg
 ---

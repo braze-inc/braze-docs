@@ -181,3 +181,9 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ### Creating right-to-left messages
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
+
+## Frequently asked questions
+
+### Can I send pre-recorded voicemails with RCS?
+
+Yes, you can use media messages to support audio files.
