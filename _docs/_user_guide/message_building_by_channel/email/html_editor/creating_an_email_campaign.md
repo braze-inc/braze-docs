@@ -51,6 +51,8 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
+{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
+
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Choose the appropriate tile for the editing experience you'd prefer. 
