@@ -300,26 +300,22 @@ Concise alt text makes it easier for users to process. Include enough detail to 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">
-        Good examples <span aria-hidden="true">✅</span>
-      </th>
-      <th style="width: 50%">
-        Poor examples <span aria-hidden="true">🚫</span>
-      </th>
+      <th style="width: 50%">Good examples <span aria-hidden="true">✅</span></th>
+      <th style="width: 50%">Poor examples <span aria-hidden="true">🚫</span></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>"Red running shoes on a white background"</td>
-      <td>"Running shoes that are extremely comfortable and perfect for your active lifestyle in a vibrant shade of red."</td>
+      <td>"Running shoes that are extremely comfortable and perfect for your active lifestyle in a vibrant shade of red." (Too long and filled with promotional fluff)</td>
     </tr>
     <tr>
       <td>"Four laptops on a display stand"</td>
-      <td>"Discover the ultimate productivity booster that redefines how you work every day, in every way imaginable."</td>
+      <td>"Discover the ultimate productivity booster that redefines how you work every day, in every way imaginable." (Doesn't describe what's actually shown)</td>
     </tr>
     <tr>
       <td>"Group of friends eating ice cream on a sunny day"</td>
-      <td>"Capture pure happiness with the sweetest treat—life is better with our brand of ice cream!"</td>
+      <td>"Capture pure happiness with the sweetest treat—life is better with our brand of ice cream!" (Too abstract and brand-focused)</td>
     </tr>
   </tbody>
 </table>
@@ -393,57 +389,49 @@ Don't pad alt text with SEO terms or calls to action not directly related to the
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">
-        Good examples <span aria-hidden="true">✅</span>
-      </th>
-      <th style="width: 50%">
-        Poor examples <span aria-hidden="true">🚫</span>
-      </th>
+      <th style="width: 50%">Good examples <span aria-hidden="true">✅</span></th>
+      <th style="width: 50%">Poor examples <span aria-hidden="true">🚫</span></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>"Laptop showing the Braze dashboard analytics chart"</td>
-      <td>"Boost conversions and skyrocket ROI with the best platform on earth!"</td>
+      <td>"Boost conversions and skyrocket ROI with the best platform on earth!" (Adds unnecessary marketing language)</td>
     </tr>
     <tr>
       <td>"Backyard patio set featuring four chairs and a glass table"</td>
-      <td>"Host an incredible summer party for all your friends and family now!"</td>
+      <td>"Host an incredible summer party for all your friends and family now!" (Describes a scenario, not the image)</td>
     </tr>
     <tr>
       <td>"Mobile phone displaying a weather forecast app with 75°F in view"</td>
-      <td>"Experience real-time innovations in weather tracking that's a game-changer"</td>
+      <td>"Experience real-time innovations in weather tracking that's a game-changer" (Doesn't reflect what's visibly shown)</td>
     </tr>
   </tbody>
 </table>
 
 ##### Consider the image's purpose {#tip-6}
 
-If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” Link to,"“Sign up” ), not just the label or product shown.
+If an image is functioning like a link or call-to-action, describe the intended action (“Shop,” “Link to,” “Sign up”), not just the label or product shown.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
     <tr>
-      <th style="width: 50%">
-        Good examples <span aria-hidden="true">✅</span>
-      </th>
-      <th style="width: 50%">
-        Poor examples <span aria-hidden="true">🚫</span>
-      </th>
+      <th style="width: 50%">Good examples <span aria-hidden="true">✅</span></th>
+      <th style="width: 50%">Poor examples <span aria-hidden="true">🚫</span></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>"Shop the Fall Collection"</td>
-      <td>"Fall Collection"</td>
+      <td>"Fall Collection" (Missing intended action)</td>
     </tr>
     <tr>
       <td>"Link to free eBook"</td>
-      <td>"Free eBook"</td>
+      <td>"Free eBook" (Doesn't make it clear this is a link)</td>
     </tr>
     <tr>
       <td>"Sign up for the mailing list"</td>
-      <td>"Mailing list"</td>
+      <td>"Mailing list" (Doesn't describe what the user can do)</td>
     </tr>
   </tbody>
 </table>
