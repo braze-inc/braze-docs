@@ -37,7 +37,7 @@ Some more specific use cases include the following:
 
 ## Anatomy of a webhook
 
-A webhook consists of the following three parts.
+A webhook consists of the following parts.
 
 | Part of Webhook | Description |
 | --- | --- |
