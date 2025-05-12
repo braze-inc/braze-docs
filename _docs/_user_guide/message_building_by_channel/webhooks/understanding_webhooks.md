@@ -93,6 +93,19 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 {% endtab %}
 {% endtabs %}
 
+## Webhook error handling and rate limiting
+
+When Braze receives an error response from a webhook call, we automatically adjust that webhook's sending behavior based on these response headers:
+
+- `Retry-After`
+- `X-Rate-Limit-Limit`
+- `X-Rate-Limit-Remaining`
+- `X-Rate-Limit-Reset`
+
+These headers help us interpret rate limits and adjust sending speed accordingly to avoid further errors. We also implement an exponential backoff strategy for retries, which helps reduce the risk of overwhelming your servers by spacing out retry attempts over time.
+
+If we detect that the majority of webhook requests to a specific host are failing, we will temporarily defer all send attempts to that host. Then, we will resume sending after a defined cooldown period, allowing your system to recover.
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}
