@@ -15,7 +15,7 @@ Marketing content that excludes people with disabilities, even unintentionally, 
 When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
 {% alert important %}
-This content is intended for general guidance and doesn’t guarantee compliance with accessibility standards such as WCAG. Braze offers tools that support the creation of more accessible messages, but it’s your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
+This content is intended for general guidance and doesn't guarantee compliance with accessibility standards such as WCAG. Braze offers tools that support the creation of more accessible messages, but it's your responsibility to ensure that your final content meets any applicable requirements. Accessibility is a complex topic with many moving parts. Many companies work with accessibility specialists or consultants to ensure their content, design, and development practices meet the needs of all users.
 {% endalert %}
 
 ## Accessibility at Braze
@@ -105,15 +105,15 @@ Depending on individual needs, these users rely on:
 
 ## Best practices
 
-Creating accessible content doesn’t have to be overwhelming. Small, thoughtful choices can make a big difference. This section walks through practical tips that help more people successfully read, navigate, and interact with your messages. Whether you’re adjusting your copy, styling your buttons, or adding alt text to images, each tweak adds up to a more inclusive experience. Let’s dig in.
+Creating accessible content doesn't have to be overwhelming. Small, thoughtful choices can make a big difference. This section walks through practical tips that help more people successfully read, navigate, and interact with your messages. Whether you're adjusting your copy, styling your buttons, or adding alt text to images, each tweak adds up to a more inclusive experience. Let's dig in.
 
 ### Content
 
 #### Structure and flow
 
-Let’s start with the foundation. When your content has a clear structure, it’s easier for everyone to follow—especially people who rely on screen readers or keyboard navigation.
+Let's start with the foundation. When your content has a clear structure, it's easier for everyone to follow—especially people who rely on screen readers or keyboard navigation.
 
-- **Break your content into sections:** Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they’re in a hurry. 
+- **Break your content into sections:** Using headings, bullet points, and lists helps people quickly understand and scan your content—even when they're in a hurry. 
 - **Don't skip heading levels:** Headings give your content structure, helping readers quickly understand how sections relate to each other. When you skip heading levels (for example, jumping straight from an H2 to an H4), you break this logical structure. This makes it harder for users, especially those using screen readers, to navigate and understand your message clearly. Always follow a logical, sequential hierarchy of headings (H1 to H2 to H3, and so on) to make sure your content stays organized, accessible, and easy for everyone to follow.
 
 #### Readability
@@ -121,21 +121,21 @@ Let’s start with the foundation. When your content has a clear structure, it�
 Once your structure is in place, the next step is making sure your words are actually easy to read. This means keeping things simple, scannable, and comfortable to read across devices and user needs.
 
 - **Write short, clear sentences:** Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
-- **Choose readable font sizes and spacing:** Text that’s too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
+- **Choose readable font sizes and spacing:** Text that's too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
 - **Avoid justified text:** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for [right-to-left languages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
 - **Use bold, italic, and uppercase text sparingly:** Emphasizing too much text makes reading difficult—especially for people with dyslexia or visual impairments. Keep it simple.
 
 #### Clarity and usability
 
-Finally, let’s talk about the finer details—the things that help users not just see your content, but understand and interact with it. 
+Finally, let's talk about the finer details—the things that help users not just see your content, but understand and interact with it. 
 
 - **Clearly label links and buttons:** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
-- **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don’t replace clear, descriptive text.
+- **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don't replace clear, descriptive text.
 - **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
 
 ### Buttons
 
-Use **buttons** to indicate an action, such as sending a form or playing a carousel. If you’re navigating to a new URL, consider using a [link](#links) instead.
+Use **buttons** to indicate an action, such as sending a form or playing a carousel. If you're navigating to a new URL, consider using a [link](#links) instead.
 
 #### Write clear, action-oriented text
 
@@ -176,16 +176,16 @@ Similar to link text, button labels should clearly describe the action. Effectiv
   </tbody>
 </table>
 
-Keep button text concise to prevent truncation. If a button’s text is too long, it may be cut off with an ellipsis instead of wrapping.
+Keep button text concise to prevent truncation. If a button's text is too long, it may be cut off with an ellipsis instead of wrapping.
 
 #### Use sufficient color contrast
 
-Button text must be easy to read against the button’s background color. Check that your button text meets WCAG 2.2 AA [contrast minimums](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html):
+Button text must be easy to read against the button's background color. Check that your button text meets WCAG 2.2 AA [contrast minimums](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html):
 
 - 4.5:1 contrast ratio for normal-sized text (most buttons)
-- 3:1 contrast ration for large text (typically above 18pt)
+- 3:1 contrast ratio for large text (typically above 18pt)
 
-High contrast helps buttons remain readable and clickable for everyone, including users with visual impairments or viewing your message in challenging environments. For more guidance, see the [Color contrast](#color-contrast) section.
+High contrast helps buttons remain readable and clickable for everyone, including users with visual impairments or those viewing your message in challenging environments. For more guidance, see the [Color contrast](#color-contrast) section.
 
 #### Make buttons easy to tap
 
@@ -213,10 +213,10 @@ As with all content, keep it straightforward with as few extra words as possible
 
 #### Avoid styling links like buttons
 
-Braze drag-and-drop editors output semantic HTML by default, so links aren’t styled like buttons there. However, if you’re working with [custom HTML](#custom-html) or making code-level changes, keep this in mind:
+Braze drag-and-drop editors output semantic HTML by default, so links aren't styled like buttons there. However, if you're working with [custom HTML](#custom-html) or making code-level changes, keep this in mind:
 
 - **Links (`<a>`)** respond to the <kbd>Enter</kbd> key.
-- **Buttons (`<button>`)** respond to both the <kbd>Enter</kbd> or <kbd>Space</kbd> keys.
+- **Buttons (`<button>`)** respond to both the <kbd>Enter</kbd> and <kbd>Space</kbd> keys.
 
 Styling a link to look like a button can confuse people who navigate with a keyboard—they might try pressing <kbd>Space</kbd> and expect it to work.
 
@@ -241,17 +241,17 @@ Use the right element for the action:
 
 #### Provide alt text
 
-Alternative text (alt text) is a short description of the content or function of an image that screen readers and other assistive technologies provide to users. For every meaningful image, write descriptive alt text so users who can’t see the visuals still understand your message or call to action. 
+Alternative text (alt text) is a short description of the content or function of an image that screen readers and other assistive technologies provide to users. For every meaningful image, write descriptive alt text so users who can't see the visuals still understand your message or call to action. 
 
 #### Avoid images of text
 
-Whenever possible, avoid placing text inside images—screen readers can’t read image-based text, and users can’t easily adjust font size or color for better visibility. Consider these tips:
+Whenever possible, avoid placing text inside images—screen readers can't read image-based text, and users can't easily adjust font size or color for better visibility. Consider these tips:
 
 - **Remove text where you can:** Move any descriptive or promotional text from the image onto a text field in your message instead. This way, users can resize or recolor it as needed using their device or browser preferences.
-- **Test for readability and contrast:** If you must keep text in the image, follow [color contrast](#color-contrast) best practices and use a [large scale font](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-large-scale). This means text should be at least 18 points (about 24 pixels) for non-bold text or 14 points (about 18 pixels) if it’s bold. Using these sizes helps text remain legible without forcing users to zoom in, and it improves the overall contrast and readability of the content. Test to confirm it’s still legible on smaller screens.
+- **Test for readability and contrast:** If you must keep text in the image, follow [color contrast](#color-contrast) best practices and use a [large scale font](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-large-scale). This means text should be at least 18 points (about 24 pixels) for non-bold text or 14 points (about 18 pixels) if it's bold. Using these sizes helps text remain legible without forcing users to zoom in, and it improves the overall contrast and readability of the content. Test to confirm it's still legible on smaller screens.
 - **Provide alt text:** For essential text that must remain in the image, include alt text describing the words.
 
-When images contain text that can’t be edited, users with visual impairments lose the flexibility to make reading adjustments. By separating text from images, you help more users read and interact with your message comfortably.
+When images contain text that can't be edited, users with visual impairments lose the flexibility to make reading adjustments. By separating text from images, you help more users read and interact with your message comfortably.
 
 #### Tips for writing alt text
 
@@ -264,7 +264,7 @@ When images contain text that can’t be edited, users with visual impairments l
 
 ##### Describe what's actually in the image {#tip-1}
 
-Screen reader users rely on alt text to understand the content or function of an image. Avoid generic “marketing speak” that doesn’t match what’s visually shown.
+Screen reader users rely on alt text to understand the content or function of an image. Avoid generic “marketing speak” that doesn't match what's visually shown.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -280,7 +280,7 @@ Screen reader users rely on alt text to understand the content or function of an
   <tbody>
     <tr>
       <td>"Smiling woman wearing a blue denim jacket, holding a shopping bag."</td>
-      <td>"Time to treat yourself!" (No mention of what’s actually in the image)</td>
+      <td>"Time to treat yourself!" (No mention of what's actually in the image)</td>
     </tr>
     <tr>
       <td>"Man wearing a black T-shirt, leaning on a bike in a city street."</td>
@@ -288,7 +288,7 @@ Screen reader users rely on alt text to understand the content or function of an
     </tr>
     <tr>
       <td>"Blue apartment building with a 'For Rent' sign in front."</td>
-      <td>"The key to a better tomorrow!" (Doesn’t reflect the apartment or sign)</td>
+      <td>"The key to a better tomorrow!" (Doesn't reflect the apartment or sign)</td>
     </tr>
   </tbody>
 </table>
@@ -357,7 +357,7 @@ Screen readers already announce an image. Jump right into describing the subject
 
 ##### Reflect text that appears in the image {#tip-4}
 
-If an image includes essential text, put that information in the alt text so users don’t miss it.
+If an image includes essential text, put that information in the alt text so users don't miss it.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -372,15 +372,15 @@ If an image includes essential text, put that information in the alt text so use
   </thead>
   <tbody>
     <tr>
-      <td>"Banner reading ‘Summer Sale—50% off all swimwear.’"</td>
+      <td>"Banner reading ‘Summer Sale—50% off all swimwear.'"</td>
       <td>"Banner promoting a sale." (Fails to mention the actual discount)</td>
     </tr>
     <tr>
-      <td>"Logo with the text ‘Café Toscana’ in script font"</td>
-      <td>"Logo image for a café." (Doesn’t include text ‘Café Toscana’)</td>
+      <td>"Logo with the text ‘Café Toscana' in script font"</td>
+      <td>"Logo image for a café." (Doesn't include text ‘Café Toscana')</td>
     </tr>
     <tr>
-      <td>"Ad announcing ‘Concert Tickets Available Now—Starts June 5th’"</td>
+      <td>"Ad announcing ‘Concert Tickets Available Now—Starts June 5th'"</td>
       <td>"Concert ad." (No event details)</td>
     </tr>
   </tbody>
@@ -388,7 +388,7 @@ If an image includes essential text, put that information in the alt text so use
 
 ##### Stick to relevant context—no extra marketing jargon {#tip-5}
 
-Don’t pad alt text with SEO terms or calls to action not directly related to the image. Provide value for those who can’t see the image.
+Don't pad alt text with SEO terms or calls to action not directly related to the image. Provide value for those who can't see the image.
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -452,7 +452,7 @@ If the image doesn't have a purpose, make that known too. Decorative images, lik
 
 ### Videos
 
-Videos are engaging, but if they’re not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive:
+Videos are engaging, but if they're not accessible, you risk excluding part of your audience. Use the following tips to make your video content more inclusive:
 
 - [Provide closed captions](#closed-captions)
 - [Provide playback controls](#playback-controls)
@@ -487,7 +487,7 @@ Let users choose when to play a video by including clear controls.
 
 #### Avoid flashing or strobing content {#no-seizures}
 
-Don’t include videos with flashing or strobing effects, especially at a high frequency. These can trigger seizures in users with photosensitive epilepsy and cause discomfort for others.
+Don't include videos with flashing or strobing effects, especially at a high frequency. These can trigger seizures in users with photosensitive epilepsy and cause discomfort for others.
 
 ### Color contrast
 
@@ -517,10 +517,10 @@ If you use any custom HTML in your messaging:
 
 ### ARIA attributes
 
-When you’re using custom code in Braze editors, you can use Accessible Rich Internet Applications ([ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) to provide extra accessibility support for users who rely on assistive technology. ARIA roles and attributes help screen readers interpret your content more clearly, especially when you’re using elements that don’t convey meaning on their own (like `<div>` or `<span>`).
+When you're using custom code in Braze editors, you can use Accessible Rich Internet Applications ([ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) to provide extra accessibility support for users who rely on assistive technology. ARIA roles and attributes help screen readers interpret your content more clearly, especially when you're using elements that don't convey meaning on their own (like `<div>` or `<span>`).
 
 {% alert important %}
-While ARIA is designed to make web content more accessible, if used incorrectly, it can do more harm than good. ARIA doesn’t replace semantic HTML, it supplements it—so only use ARIA when native HTML elements won’t meet your needs. 
+While ARIA is designed to make web content more accessible, if used incorrectly, it can do more harm than good. ARIA doesn't replace semantic HTML, it supplements it—so only use ARIA when native HTML elements won't meet your needs. 
 {% endalert %}
 
 Here are a few examples that are especially useful in messaging contexts:
@@ -533,7 +533,7 @@ Here are a few examples that are especially useful in messaging contexts:
 
 #### aria-label
 
-`aria-label` adds an accessible name to elements that don’t have visible text. If you’re using an icon with no text (like a trash can or “X” for close), someone using a screen reader won’t know what it does—unless you label it. `aria-label` gives that icon a voice.
+`aria-label` adds an accessible name to elements that don't have visible text. If you're using an icon with no text (like a trash can or “X” for close), someone using a screen reader won't know what it does—unless you label it. `aria-label` gives that icon a voice.
 
 {% raw %}
 ```html
@@ -556,9 +556,9 @@ Here are a few examples that are especially useful in messaging contexts:
 
 #### aria-hidden="true"
 
-`aria-hidden="true"` hides things from screen readers.  It’s helpful for text or visuals that don’t convey important meaning—like a sparkle, checkmark, or emoji used purely for style.
+`aria-hidden="true"` hides things from screen readers.  It's helpful for text or visuals that don't convey important meaning—like a sparkle, checkmark, or emoji used purely for style.
 
-This keeps the experience cleaner for screen reader users, who otherwise might hear redundant or confusing content. It’s also useful for hiding things like offscreen accordion content that hasn’t been expanded yet.
+This keeps the experience cleaner for screen reader users, who otherwise might hear redundant or confusing content. It's also useful for hiding things like offscreen accordion content that hasn't been expanded yet.
 
 {% raw %}
 ```html
