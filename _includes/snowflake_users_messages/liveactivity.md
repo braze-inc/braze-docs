@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `PUSHTOSTARTTOKENCHANGE_SHARED`
 
@@ -110,4 +111,3 @@
     }
 }
 ```
-

@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `STATECHANGE_SHARED`
 
@@ -41,4 +42,3 @@
     }
 }
 ```
-

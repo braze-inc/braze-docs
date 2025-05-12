@@ -233,7 +233,8 @@ erDiagram
 - `PK` = primary key
 - `FK` = foreign key
 
-## Relationship tables 
+## Relationship tables
+
 
 ### `TOKENSTATECHANGE_SHARED`
 
@@ -503,4 +504,3 @@ erDiagram
     }
 }
 ```
-

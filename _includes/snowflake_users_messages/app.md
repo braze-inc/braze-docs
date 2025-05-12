@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `FIRSTSESSION_SHARED`
 
@@ -123,4 +124,3 @@
     }
 }
 ```
-

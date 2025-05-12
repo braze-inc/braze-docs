@@ -233,7 +233,8 @@ erDiagram
 - `PK` = primary key
 - `FK` = foreign key
 
-## Relationship tables 
+## Relationship tables
+
 
 ### `ABORT_SHARED`
 
@@ -391,4 +392,3 @@ erDiagram
     }
 }
 ```
-

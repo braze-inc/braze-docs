@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `SHARED`
 
@@ -30,4 +31,3 @@
     }
 }
 ```
-

@@ -1,118 +1,88 @@
 #!/usr/bin/env python3
 
-# This script converts the Entity Relationship JSON from 'erd_get_json.py'
-# into individual Markdown files, grouping tables by channel. It prints
-# the table name and (optionally) its description on separate lines within
-# the code block comment, with the description's first letter capitalized
-# and a period appended if not present.
+# Converts table-mapping JSON (from 'erd_get_json.py') into per-channel 
+# Markdown files, then prepends a shared Mermaid template and 
+# rewrites the include placeholder.
 
 import os
 import json
 import subprocess
 
 PROJECT_ROOT = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
-json_inpath = os.path.join(PROJECT_ROOT, "scripts", "temp", "table_mappings.json")
-output_dir = os.path.join(PROJECT_ROOT, "_includes", "snowflake_users_messages")
+erd_json = os.path.join(PROJECT_ROOT, "scripts", "temp", "table_mappings.json")
+markdown_dir = os.path.join(PROJECT_ROOT, "_includes", "snowflake_users_messages")
 mermaid_dir = os.path.join(PROJECT_ROOT, "_includes", "snowflake_mermaid")
-mermaid_template = os.path.join(mermaid_dir, "_TEMPLATE.md")
+mermaid_tpl = os.path.join(mermaid_dir, "_TEMPLATE.md")
 
 
-def create_tables(data, output_dir):
-    # Group tables by the third underscore-delimited part of the name
+def create_tables(data):
+    # group tables by third underscore-separated segment
     channel_to_tables = {}
-    for table_name, table_info in data.items():
-        parts = table_name.split("_")
+    for name, info in data.items():
+        parts = name.split("_")
         if len(parts) < 3:
             continue
         channel = parts[2]
-        if channel not in channel_to_tables:
-            channel_to_tables[channel] = {}
-        channel_to_tables[channel][table_name] = table_info
+        channel_to_tables.setdefault(channel, {})[name] = info
 
-    os.makedirs(output_dir, exist_ok=True)
-
-    for channel, tables_dict in channel_to_tables.items():
-        md_filename = os.path.join(output_dir, f"{channel.lower()}.md")
-        with open(md_filename, "w", encoding="utf-8") as md_file:
-            md_file.write("## Relationship tables \n\n")
-
-            for table_name, table_json in tables_dict.items():
-                # Determine the segment after the channel
-                parts = table_name.split("_")
-                rest_of_name = "_".join(parts[3:]) if len(parts) > 3 else ""
-
-                # Heading
-                md_file.write(f"### `{rest_of_name}`\n\n")
-
-                # Extract description (if any), ensure first char uppercase, end with period
-                desc = table_json.get("description", "").strip()
-                if desc:
-                    desc = desc[0].upper() + desc[1:]
-                    if desc[-1] != ".":
-                        desc += "."
-
-                # Make a copy to remove the 'description' field from the snippet
-                table_json_copy = dict(table_json)
-                table_json_copy.pop("description", None)
-
-                # Format the JSON
-                pretty_json = json.dumps(table_json_copy, indent=4)
-
-                # Code block
-                md_file.write("```json\n")
-                md_file.write(f"// {table_name}\n")
-                if desc:
-                    md_file.write(f"// {desc}\n\n")
-                else:
-                    md_file.write("\n")  # just a blank line
-
-                md_file.write(f"{pretty_json}\n")
-                md_file.write("```\n\n")
+    # build a dict: {filename: markdown_content}
+    files = {}
+    for channel, tables in channel_to_tables.items():
+        lines = ["## Relationship tables\n"]
+        for table_name, table_json in tables.items():
+            parts = table_name.split("_")
+            rest  = "_".join(parts[3:]) if len(parts) > 3 else ""
+            lines.append(f"\n### `{rest}`\n")
+            desc = table_json.get("description", "").strip()
+            if desc:
+                desc = desc[0].upper() + desc[1:]
+                if desc[-1] != ".":
+                    desc += "."
+            table_json_copy = dict(table_json)
+            table_json_copy.pop("description", None)
+            pretty = json.dumps(table_json_copy, indent=4)
+            lines.append("```json")
+            lines.append(f"// {table_name}")
+            lines.append(f"// {desc}\n" if desc else "\n")
+            lines.append(pretty)
+            lines.append("```")
+        files[f"{channel.lower()}.md"] = "\n".join(lines) + "\n"
+    return files
 
 
-def prepend_mermaid_template(output_dir, mermaid_dir, template_path):
-    """
-    For each file in `mermaid_dir`, if a file with the same basename exists
-    directly in `output_dir`, prepend the template content and replace the
-    placeholder `{% multi_lang_include snowflake_mermaid/FILENAME %}` with
-    that matching filename.
-    """
-    with open(template_path, "r", encoding="utf-8") as tfile:
-        template_content = tfile.read()
-
-    output_filenames = {f for f in os.listdir(output_dir) if f.endswith(".md")}
-
-    for fname in os.listdir(mermaid_dir):
-        if not fname.endswith(".md") or fname == "_TEMPLATE.md":
+def create_mermaid(file_map, mermaid_dir, template_str):
+    # prepend template + replace placeholder if mermaid file exists
+    for fname in file_map:
+        if fname == "_TEMPLATE.md":
             continue
-
-        if fname not in output_filenames:
-            continue  # no matching markdown generated by create_tables()
-
-        gen_file_path = os.path.join(output_dir, fname)
-
-        # Read current content of generated file
-        with open(gen_file_path, "r", encoding="utf-8") as gfile:
-            original_content = gfile.read()
-
-        # Build new content
-        placeholder = "{% multi_lang_include snowflake_mermaid/FILENAME %}"
-        replaced_template = template_content.replace(
+        mermaid_path = os.path.join(mermaid_dir, fname)
+        if not os.path.exists(mermaid_path):
+            continue
+        include_line = template_str.replace(
             "snowflake_mermaid/FILENAME", f"snowflake_mermaid/{fname}"
         )
-        new_content = f"{replaced_template}\n{original_content}"
-
-        # Overwrite file
-        with open(gen_file_path, "w", encoding="utf-8") as gfile:
-            gfile.write(new_content)
+        file_map[fname] = f"{include_line}\n{file_map[fname]}"
 
 
 def main():
-    with open(json_inpath, "r", encoding="utf-8") as f:
+    # load JSON
+    with open(erd_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    create_tables(data, output_dir)
-    prepend_mermaid_template(output_dir, mermaid_dir, mermaid_template)
+    # build markdown content
+    file_map = create_tables(data)
+
+    # read template once, then update content
+    with open(mermaid_tpl, "r", encoding="utf-8") as t:
+        template_content = t.read()
+    create_mermaid(file_map, mermaid_dir, template_content)
+
+    # write files to disk
+    os.makedirs(markdown_dir, exist_ok=True)
+    for fname, content in file_map.items():
+        out_path = os.path.join(markdown_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as out:
+            out.write(content)
 
 
 if __name__ == "__main__":

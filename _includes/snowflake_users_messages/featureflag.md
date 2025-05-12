@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `IMPRESSION_SHARED`
 
@@ -44,4 +45,3 @@
     }
 }
 ```
-

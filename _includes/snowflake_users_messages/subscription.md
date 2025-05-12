@@ -1,4 +1,5 @@
-## Relationship tables 
+## Relationship tables
+
 
 ### `GLOBALSTATECHANGE_SHARED`
 
@@ -37,4 +38,3 @@
     }
 }
 ```
-
