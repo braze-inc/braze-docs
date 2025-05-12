@@ -678,9 +678,6 @@ code {
   color: $grey-dust;
   background-color: $grey-athens;
   border: 1px solid $grey-ghost;
-	&.language-mermaid  {
-		background-color: inherit;
-	}
 }
 legend {
 	font-size: 15px;
@@ -1140,4 +1137,24 @@ blockquote {
 	img {
 		border: 0 !important;
 	}
+}
+
+svg[id^="mermaid"] {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	font-size: 18px;
+}
+  
+.language-mermaid {
+	overflow-x: auto;
+	overflow-y: auto; // test
+	padding: 1rem 0;
+	min-height: 600px; // test
+}
+
+.language-mermaid svg {
+	min-width: 800px; // adjust as needed
+	min-height: 600px; // test
+	font-size: 18px !important;
 }
