@@ -273,6 +273,9 @@ erDiagram
     GROUP_6 ||--o{ CONTENT_CARD_EVENT : logs
 ```
 
+- `PK` = primary key
+- `FK` = foreign key
+
 ## Relationship tables
 
 {% multi_lang_include snowflake_users_messages/contentcard.md %}
