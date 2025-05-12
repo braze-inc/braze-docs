@@ -1,8 +1,4 @@
-```mermaid
-erDiagram
-    direction TB
-
-    WEBHOOK_EVENT {
+    EVENT["EMAIL_EVENT"] {
         string id PK
         string campaign_id FK
         string campaign_updated_at
@@ -20,12 +16,24 @@ erDiagram
         string abort_type
         string abort_log
         string app_group_id
-        string external_user_id
-        string event_type
+        string bounce_reason
         string dispatch_id
+        string email_address
+        string esp
+        string event_type
+        string external_user_id
+        string from_domain
+        string ip_pool
+        string is_amp
+        string is_drop
+        string link_alias
+        string link_id
+        string machine_open
         string message_extras
         string send_id
+        string sending_ip
         string time
         string timezone
+        string url
+        string user_agent
     }
-```

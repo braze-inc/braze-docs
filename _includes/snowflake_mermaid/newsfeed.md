@@ -1,8 +1,4 @@
-```mermaid
-erDiagram
-    direction TB
-
-    NEWSFEED_CARD_EVENT {
+    EVENT["NEWSFEED_CARD_EVENT"] {
         string id PK
         string card_updated_at
         string card_id FK
@@ -20,4 +16,3 @@ erDiagram
         string time
         string timezone
     }
-```
