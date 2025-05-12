@@ -234,43 +234,40 @@ erDiagram
         string timezone
     }
 
-    %% Empty nodes as Group Labels
-    GROUP_1["Canvas Logs and Snapshots"] { }
-    GROUP_2["Campaign Logs and Snapshots"] { }
-    GROUP_3["Campaign Events"] { }
-    GROUP_4["Canvas Steps and Variations"] { }
-    GROUP_5["Canvas Events"] { }
-    GROUP_6["Canvas Experiments"] { }
-
     %% Relationships for Group Labels
+    GROUP_1["Campaign Snapshots and Log"] { }
+    CHANGELOGS_CAMPAIGN_SHARED ||--o{ GROUP_1 : joins
+    SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED ||--o{ GROUP_1 : joins
+    GROUP_1 ||--o{ CONTENT_CARD_EVENT : joins
 
-    CHANGELOGS_CANVAS_SHARED ||--o{ GROUP_1 : logs
-    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED ||--o{ GROUP_1 : logs
-    SNAPSHOTS_CANVAS_STEP_SHARED ||--o{ GROUP_1 : logs
-    SNAPSHOTS_CANVAS_VARIATION_SHARED ||--o{ GROUP_1 : logs
-    SNAPSHOTS_EXPERIMENT_STEP_SHARED ||--o{ GROUP_1 : logs
-    GROUP_1 ||--o{ CONTENT_CARD_EVENT : logs
+    GROUP_2["Campaign Events"] { }
+    CAMPAIGN_ENROLLMENT_EVENT ||--o{ GROUP_2 : joins
+    CAMPAIGN_CONVERSION_EVENT ||--o{ GROUP_2 : joins
+    GROUP_2 ||--o{ CONTENT_CARD_EVENT : joins
 
-    CHANGELOGS_CAMPAIGN_SHARED ||--o{ GROUP_2 : logs
-    SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED ||--o{ GROUP_2 : logs
-    GROUP_2 ||--o{ CONTENT_CARD_EVENT : logs
+    GROUP_3["Canvas Events"] { }
+    CANVAS_ENTRY_EVENT ||--o{ GROUP_3 : joins
+    CANVAS_EXPERIMENT_STEP_ENTRY_EVENT ||--o{ GROUP_3 : joins
+    CANVAS_EXIT_EVENT ||--o{ GROUP_3 : joins
+    GROUP_3 ||--o{ CONTENT_CARD_EVENT : joins
 
-    CAMPAIGN_ENROLLMENT_EVENT ||--o{ GROUP_3 : logs
-    CAMPAIGN_CONVERSION_EVENT ||--o{ GROUP_3 : logs
-    GROUP_3 ||--o{ CONTENT_CARD_EVENT : logs
+    GROUP_4["Canvas Steps"] { }
+    CANVAS_VARIATION ||--o{ GROUP_4 : joins
+    CANVAS_STEP ||--o{ GROUP_4 : joins
+    GROUP_4 ||--o{ CONTENT_CARD_EVENT : joins
 
-    CANVAS_VARIATION ||--o{ GROUP_4 : logs
-    CANVAS_STEP ||--o{ GROUP_4 : logs
-    GROUP_4 ||--o{ CONTENT_CARD_EVENT : logs
+    GROUP_5["Canvas Experiments"] { }
+    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT ||--o{ GROUP_5 : joins
+    CANVAS_CONVERSION_EVENT ||--o{ GROUP_5 : joins
+    GROUP_5 ||--o{ CONTENT_CARD_EVENT : joins
 
-    CANVAS_ENTRY_EVENT ||--o{ GROUP_5 : logs
-    CANVAS_EXPERIMENT_STEP_ENTRY_EVENT ||--o{ GROUP_5 : logs
-    CANVAS_EXIT_EVENT ||--o{ GROUP_5 : logs
-    GROUP_5 ||--o{ CONTENT_CARD_EVENT : logs
-
-    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT ||--o{ GROUP_6 : logs
-    CANVAS_CONVERSION_EVENT ||--o{ GROUP_6 : logs
-    GROUP_6 ||--o{ CONTENT_CARD_EVENT : logs
+    GROUP_6["Canvas Snapshots and Log"] { }
+    CHANGELOGS_CANVAS_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_STEP_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_VARIATION_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_EXPERIMENT_STEP_SHARED ||--o{ GROUP_6 : joins
+    GROUP_6 ||--o{ CONTENT_CARD_EVENT : joins
 ```
 
 - `PK` = primary key
