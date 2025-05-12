@@ -17,6 +17,11 @@ description: "A tutorial on how to access key-value pairs with in-app messages"
 import * as braze from "@braze/web-sdk";
 // Remove any calls to `braze.automaticallyShowInAppMessages()`
 
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
 braze.subscribeToInAppMessage(function (message) {
   const extras = message.extras;
   const customTemplateType = extras["custom-template"] || "";
@@ -33,7 +38,7 @@ braze.subscribeToInAppMessage(function (message) {
 ```
 
 !!step
-lines-index.js=2-3
+lines-index.js=2
 
 #### 1. Remove calls to `automaticallyShowInAppMessages()`
 
@@ -42,9 +47,16 @@ Be sure to remove any calls to [`automaticallyShowInAppMessages()`](https://js.a
 This method will show your messages regardless of any customized code you add later on.
 
 !!step
+lines-index.js=6
+
+#### 2. Enable debugging (optional)
+
+Enable debugging while developing to make troubleshooting easier!
+
+!!step
 lines-index.js=5,17
 
-#### 2. Subscribe to the in-app message callback handler
+#### 3. Subscribe to the in-app message callback handler
 
 Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage).
 
@@ -53,7 +65,7 @@ This method will be called whenever an in-app message has been triggered, with a
 !!step
 lines-index.js=6
 
-#### 3. Access the `message.extras` property
+#### 4. Access the `message.extras` property
 
 Key-value pairs you have defined in the Braze dashboard will be available using the `extras` message property.
 
@@ -62,7 +74,7 @@ All values supplied will be typed as a string
 !!step
 lines-index.js=11-16
 
-#### 4. Conditionally call the `showInAppMessage` method
+#### 5. Conditionally call the `showInAppMessage` method
 
 If you want Braze to display the message, call the [`showInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) method on the provided `message`.
 
@@ -89,9 +101,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BrazeInAppMessageUIDelega
       apiKey: "YOUR-API-KEY",
       endpoint: "YOUR-ENDPOINT"
     )
+    configuration.logger.level = .debug
+
     let braze = Braze(configuration: configuration)
     AppDelegate.braze = braze
-    
+
     // Set up Braze In-App Message UI and delegate
     let inAppMessageUI = BrazeInAppMessageUI()
     inAppMessageUI.delegate = self
@@ -141,21 +155,28 @@ lines-AppDelegate.swift=5
 Have your AppDelegate conform to `BrazeInAppMessageUIDelegate`, which lets you intercept and customize handling in-app messages.
 
 !!step
-lines-AppDelegate.swift=23-38
+lines-AppDelegate.swift=17
+
+#### 2. Enable debugging (optional)
+
+Enable debugging while developing to make troubleshooting easier!
+
+!!step
+lines-AppDelegate.swift=25-40
 
 #### 2. Process messages before they're displayed
 
 The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
 
 !!step
-lines-AppDelegate.swift=27-31
+lines-AppDelegate.swift=29-33
 
 #### 3. Access key-value pairs from message.extras
 
 Use the extras dictionary to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
 
 !!step
-lines-AppDelegate.swift=36
+lines-AppDelegate.swift=38
 
 #### 4. Choose whether to show the message
 
@@ -220,9 +241,9 @@ class MyApplication : Application() {
 !!step
 lines-MainApplication.kt=19
 
-#### 1. Configure debugging logs (optional)
+#### 1. Enable debugging (optional)
 
-Set the logger level to `.debug` while developing to make troubleshooting easier!
+Enable debugging while developing to make troubleshooting easier!
 
 !!step
 lines-MainApplication.kt=28-30

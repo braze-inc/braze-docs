@@ -15,8 +15,12 @@ description: "A tutorial on how to conditionally control whether or not to show 
 
 ```js file=index.js
 import * as braze from "@braze/web-sdk";
-// remove any calls to `automaticallyShowInAppMessages()`
-// REMOVE --> braze.automaticallyShowInAppMessages()
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
 
 braze.subscribeToInAppMessage(function (message) {
   if (
@@ -31,7 +35,7 @@ braze.subscribeToInAppMessage(function (message) {
 ```
 
 !!step
-lines-index.js=2-3
+lines-index.js=2
 
 #### 1. Remove calls to `automaticallyShowInAppMessages()`
 
@@ -40,27 +44,34 @@ Be sure to remove any calls to [`automaticallyShowInAppMessages()`](https://js.a
 This method will show your messages regardless of any customized code you add later on.
 
 !!step
-lines-index.js=5,11
+lines-index.js=6
 
-#### 2. Subscribe to the in-app message callback handler
+#### 2. Enable debugging (optional)
+
+Enable debugging while developing to make troubleshooting easier!
+
+!!step
+lines-index.js=9-18
+
+#### 3. Subscribe to the in-app message callback handler
 
 Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage).
 
 This method will be called whenever an in-app message has been triggered, with a `message` argument.
 
 !!step
-lines-index.js=6-10
+lines-index.js=10-13
 
-#### 3. Check for any display condition
+#### 4. Check for any display condition
 
 Apply your custom logic to control whether or not the message should be displayed.
 
 In this example, we're checking if the URL contains "checkout" or if a `#checkout` element exists on the page.
 
 !!step
-lines-index.js=9
+lines-index.js=16
 
-#### 4. Conditionally call the `showInAppMessage` method
+#### 5. Conditionally call the `showInAppMessage` method
 
 If you want to display the message, call the [`showInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) method on the provided `message`
 
@@ -132,9 +143,9 @@ In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https:/
 !!step
 lines-AppDelegate.swift=12
 
-#### 2. Turn on debugging (optional)
+#### 2. Enable debugging (optional)
 
-Turn on debugging while developing to make troubleshooting easier!
+Enable debugging while developing to make troubleshooting easier!
 
 !!step
 lines-AppDelegate.swift=19-21
@@ -210,9 +221,9 @@ class MyApplication : Application() {
 !!step
 lines-MainApplication.kt=17
 
-#### 1. Turn on debugging (optional)
+#### 1. Enable debugging (optional)
 
-Turn on debugging while developing to make troubleshooting easier!
+Enable debugging while developing to make troubleshooting easier!
 
 !!step
 lines-MainApplication.kt=26-28
