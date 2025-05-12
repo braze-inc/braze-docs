@@ -1,13 +1,13 @@
 ---
-nav_title: Accessing Key-Value Pairs
-guide_top_header: Accessing In-App Message Key-Value Pairs
-article_title: Accessing Key-Value Pairs
+nav_title: Custom Styling
+guide_top_header: Custom Styling With Key-Value Pairs
+article_title: Custom Styling With Key-Value Pairs
 page_order: 1
 layout: scrolly
-description: "A tutorial on how to access key-value pairs with in-app messages"
+description: "A tutorial on how to style in-app messages with custom properties"
 ---
 
-# Accessing Key-Value Pairs
+# Custom Styling With Key-Value Pairs
 
 {% tabs %}
 {% tab Web %}
@@ -54,7 +54,7 @@ lines-index.js=6
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-index.js=5,17
+lines-index.js=9-21
 
 #### 3. Subscribe to the in-app message callback handler
 
@@ -63,7 +63,7 @@ Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appbo
 This method will be called whenever an in-app message has been triggered, with a `message` argument.
 
 !!step
-lines-index.js=6
+lines-index.js=10-13
 
 #### 4. Access the `message.extras` property
 
@@ -72,7 +72,7 @@ Key-value pairs you have defined in the Braze dashboard will be available using 
 All values supplied will be typed as a string
 
 !!step
-lines-index.js=11-16
+lines-index.js=19
 
 #### 5. Conditionally call the `showInAppMessage` method
 
@@ -114,21 +114,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BrazeInAppMessageUIDelega
     return true
   }
 
-  func inAppMessage(
-    _ ui: BrazeInAppMessageUI,
-    displayChoiceForMessage message: Braze.InAppMessage
-  ) -> BrazeInAppMessageUI.DisplayChoice {
-      let extras = message.extras
+    func inAppMessage(
+      _ ui: BrazeInAppMessageUI,
+      prepareWith context: inout BrazeInAppMessageUI.PresentationContext
+    ) {
+      let customization = context.message.extras["customization"] as? String
 
-      let template   = extras["custom-template"] as? String ?? ""
-      let color      = extras["custom-color"]   as? String ?? ""
-      let messageId  = extras["message-id"]     as? String ?? ""
+      if customization == "slideup-attributes" {
+        // Create a new attributes object and make customizations.
+        var attributes = context.attributes?.slideup
+        attributes?.font = UIFont(name: "Chalkduster", size: 17)!
+        attributes?.imageSize = CGSize(width: 65, height: 65)
+        attributes?.cornerRadius = 20
+        attributes?.imageCornerRadius = 10
+        if #available(iOS 13.0, *) {
+          attributes?.cornerCurve = .continuous
+          attributes?.imageCornerCurve = .continuous
+        }
 
-      // Your custom logic
-      print("Template: \(template), Color: \(color), ID: \(messageId)")
-
-      return .now
-  }
+        context.attributes?.slideup = attributes
+      }
+    }
 }
 ```
 
@@ -162,25 +168,25 @@ lines-AppDelegate.swift=17
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-AppDelegate.swift=25-40
+lines-AppDelegate.swift=30-50
 
-#### 2. Process messages before they're displayed
+#### 3. Prepare messages before they're displayed
 
-The Braze SDK will call this function whenever a message is about to show. You can choose to intercept it, render it differently, or grab key-value pairs.
-
-!!step
-lines-AppDelegate.swift=29-33
-
-#### 3. Access key-value pairs from message.extras
-
-Use the extras dictionary to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
+The Braze SDK will call this function whenever a message is being prepared for presentation. You can choose to intercept it, render it differently, or grab key-value pairs.
 
 !!step
-lines-AppDelegate.swift=38
+lines-AppDelegate.swift=34
 
-#### 4. Choose whether to show the message
+#### 4. Access key-value pairs from message.extras
 
-Return `.now` to use Braze's built-in In-App Message UI.
+Use the extras dictionary to retrieve values like customization types, or attributes, or really any dashboard-defined properties.
+
+!!step
+lines-AppDelegate.swift=38-46
+
+#### 5. Update the message's styling attributes
+
+[BrazeInAppMessageUIDelegate inAppMessage(\_:prepareWith:)](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog>) surfaces `PresentationContext`, which allows direct modification of the message's styling attributes. Each type of in-app message has different attributes available.
 
 {% endscrolly %}
 {% endtab %}
@@ -218,22 +224,58 @@ class MyApplication : Application() {
         registerActivityLifecycleCallbacks(
             BrazeActivityLifecycleCallbackListener()
         )
-        // Set up in-app message listener
-        BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : IInAppMessageManagerListener {
-            override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
-                val extras = inAppMessage.extras
 
-                val template = extras["custom-template"] ?: ""
-                val color = extras["custom-color"] ?: ""
-                val messageId = extras["message-id"] ?: ""
+        // Set up custom in-app message view factory
+        BrazeInAppMessageManager.getInstance()
+        .setCustomInAppMessageViewFactory(CustomInAppMessageViewFactory())
+    }
+}
+```
 
-                // Your custom logic
-                Log.d("Braze", "Template: $template, Color: $color, ID: $messageId")
+```kotlin file=CustomInAppMessageViewFactory.kt
+import android.app.Activity
+import android.graphics.Color
+import android.view.View
+import com.braze.models.inappmessage.IInAppMessage
+import com.braze.ui.inappmessage.BrazeInAppMessageManager
+import com.braze.ui.inappmessage.IInAppMessageViewFactory
 
-                // Return DISPLAY_NOW to show the message using Braze's UI
-                return InAppMessageOperation.DISPLAY_NOW
+class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
+
+    override fun createInAppMessageView(
+        activity: Activity,
+        inAppMessage: IInAppMessage
+    ): View {
+        // 1) Obtain Braze’s default view factory for this message type
+        val defaultFactory =
+            BrazeInAppMessageManager.getInstance()
+                .getDefaultInAppMessageViewFactory(inAppMessage)
+                ?: throw IllegalStateException(
+                    "Braze default IAM view factory is missing"
+                )
+
+        // 2) Inflate the default view
+        val iamView = defaultFactory
+            .createInAppMessageView(activity, inAppMessage)
+            ?: throw IllegalStateException(
+                "Braze default IAM view is null"
+            )
+
+        // 3) Get your KVP extras
+        val extras = inAppMessage.extras ?: emptyMap()
+        val customization = extras["customization"]
+        val overrideColor = extras["custom-color"]
+
+        // 4) Style your root view
+        if (customization == "slideup-attributes" && overrideColor != null) {
+            try {
+                iamView.setBackgroundColor(Color.parseColor(overrideColor))
+            } catch (_: IllegalArgumentException) {
+                // ignore bad styling
             }
-        })
+        }
+
+        return iamView
     }
 }
 ```
@@ -253,25 +295,32 @@ lines-MainApplication.kt=28-30
 Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
 
 !!step
-lines-MainApplication.kt=32-46
+lines-CustomInAppMessageViewFactory.kt=8
 
-#### 3. Set up the in-app message listener
+#### 3. Create your custom view factory class
 
-Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
-
-!!step
-lines-MainApplication.kt=34-38
-
-#### 4. Access key-value pairs from message.extras
-
-Use the extras map to retrieve values like custom-template, custom-color, or any dashboard-defined properties.
+Make sure that your class conforms to [IInAppMessageViewFactory](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html); this will allow us to create a custom view factory class that will construct and render the message views.
 
 !!step
-lines-MainApplication.kt=44
+lines-CustomInAppMessageViewFactory.kt=15-20
 
-#### 5. Choose whether to show the message
+#### 4. Delegate first to Braze’s default factory
 
-Return `InAppMessageOperation.DISPLAY_NOW` to use Braze's built-in In-App Message UI.
+In this use case, we're simply overlaying our own conditional styling, so we want to make sure the IAM's built-in styling is preserved.
+
+!!step
+lines-CustomInAppMessageViewFactory.kt=30-32,35-41
+
+#### 5. Get key-value pairs, and apply your styling
+
+Inspect `inAppMessage.extras` for the keys of your choice (set via the dashboard). Apply any overrides (e.g. call view.setBackgroundColor(...)) before returning that view.
+
+!!step
+lines-MainApplication.kt=33-34
+
+#### 6. Set your custom [IInAppMessageViewFactory](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html)
+
+Use `IInAppMessageViewFactory` to create a custom view factory class that will construct and render the message views.
 
 {% endscrolly %}
 {% endtab %}
