@@ -88,7 +88,7 @@ Ao criar novos usuários usando o endpoint [/users/track]({{site.baseurl}}/api/e
 | `subscription_state` | Obrigatória | String | Os valores disponíveis são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). |
 | `external_id` | Obrigatório* | Matriz de strings | O `external_id` do usuário ou dos usuários pode incluir até 50 `id`s. |
 | `email` | Obrigatório* | string ou array de strings | O endereço de e-mail do usuário pode ser passado como um vetor de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo endereço de e-mail, todos os usuários que compartilham o endereço de e-mail serão atualizados com as alterações do grupo de inscrições. |
-| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (com um máximo de 50). |
+| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, todos os usuários que compartilham o número de telefone serão atualizados com as mesmas alterações no grupo de inscrições. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplos de solicitações

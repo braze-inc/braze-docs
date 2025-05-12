@@ -13,10 +13,6 @@ tool:
 
 > Os dashboards de desempenho do canal mostram métricas de desempenho agregadas para um canal inteiro, tanto de campanhas quanto de Canvas. Atualmente, esses dashboards estão disponíveis para envio de e-mail e SMS.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), os dashboards de performance do canal estão localizados em **Overview (Visão geral)**.
-{% endalert %}
-
 ![Dashboard de performance de e-mail que exibe o engajamento do canal de e-mail dos últimos trinta dias.][1]
 
 Você pode visualizar os seguintes dashboards:
@@ -41,7 +37,7 @@ Cada bloco mostra primeiro a métrica de taxa, seguida pela métrica de contagem
 | Envios | Contagem | Número total de envios em cada dia no intervalo de datas |
 | Taxa de entrega | Taxa | (Número total de entregas em cada dia do intervalo de datas) / (Número total de envios em cada dia do intervalo de datas) |
 | Taxa de bounce | Taxa | (Número total de bounces em cada dia do intervalo de datas) / (Número total de envios em cada dia do intervalo de datas) |
-| Taxa de cancelamento de inscrição | Taxa | (Número total de cancelamentos de inscrição exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas)<br><br>Isso usa cancelamentos de inscrição exclusivos, que também são usados em Análise de dados da campanha, Visão geral e Criador de relatórios. |
+| Taxa de cancelamento de inscrição | Taxa | (Número total de cancelamentos de inscrição exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas)<br><br>Isso usa cancelamentos de inscrição exclusivos, que também são usados em Análise de dados da campanha, Visão geral e Criador de relatórios. Esses cancelamentos de inscrição são registrados em todas as fontes (como SDK, API REST, importações de CSV, e-mails e cancelamentos de inscrição em listas). As taxas de cancelamento de inscrição na análise do Campaign e do Canvas são cancelamentos de inscrição que ocorrem como resultado de um clique de cancelamento em um e-mail enviado pelo Braze.  |
 | Taxa de aberturas únicas | Taxa | (Número total de aberturas exclusivas em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas) |
 | Outra taxa de abertura | Taxa | (Número total de outras aberturas em cada dia no intervalo de datas) / (Número total de entregas no intervalo de datas)<br><br>Outras aberturas incluem e-mails que não foram identificados como aberturas de máquina, como quando um usuário abre um e-mail. Essa métrica não é exclusiva e é uma submétrica do total de aberturas.  |
 | Taxa de cliques únicos | Taxa | (Número total de cliques exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas) |
@@ -81,7 +77,7 @@ O relatório de **engajamento por provedor de caixa de e-mail** exibe os princip
 
 ### Horário do engajamento
 
-O relatório **Time of Engagement (Tempo de engajamento** ) exibe dados de usuários que se engajam com seus e-mails. Isso pode ajudar a responder perguntas como, por exemplo, em que dia da semana ou em que horário há o maior engajamento de seus clientes. Com esses insights, você pode experimentar o melhor dia ou horário para enviar suas mensagens para aumentar o engajamento. Note que esses horários são baseados no fuso horário de seu espaço de trabalho.
+O relatório **Time of Engagement (Tempo de engajamento** ) exibe dados de usuários que se engajam com seus e-mails. Isso pode ajudar a responder perguntas como, por exemplo, em que dia da semana ou em que horário há o maior engajamento de seus clientes. Com esses insights, você pode experimentar o melhor dia ou horário para enviar suas mensagens para aumentar o engajamento. Note que esses horários são baseados no fuso horário de sua empresa.
 
 O relatório de engajamento **do dia da semana** divide as aberturas ou os cliques por dia da semana. 
 

@@ -150,3 +150,36 @@ Para webhooks, o Braze repetirá automaticamente as solicitações HTTP que fora
 Para o Connected Content, se as solicitações ao host de destino forem interrompidas pelo detector de host não saudável, o Braze continuará a renderizar mensagens e a seguir sua lógica Liquid como se tivesse recebido um código de resposta de erro. Se você quiser garantir que essas solicitações de Connected Content sejam repetidas quando forem interrompidas pelo detector de host não saudável, use a opção `:retry`. Para saber mais sobre a opção `:retry`, consulte [Tentativas de Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Se achar que a detecção de host não saudável pode estar causando problemas, entre em contato com o [suporte da Braze]({{site.baseurl}}/support_contact/).
+
+## Envio de e-mails automatizados e registros de atividade de mensagens
+
+### Configuração de e-mails automatizados
+
+Se ocorrerem mais de 100.000 erros de webhook ou de endpoint Connected Content (incluindo novas tentativas) em um espaço de trabalho em um período de 24 horas, você receberá um e-mail com as seguintes informações sobre como resolver os erros. 
+
+- Nome do espaço de trabalho
+- Um link para o Canva ou a campanha
+- URL do ponto de extremidade
+- Código de erro
+- Hora em que o erro foi observado pela última vez
+- Links para o registro de atividades de mensagens e documentação relacionada
+
+{% alert note %}
+Você pode configurar o limite de erro por espaço de trabalho. Para ajustar esse limite, entre em contato com [o suporte da Braze]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+Os erros do ponto de extremidade são:
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+Esses e-mails são enviados apenas uma vez por dia no nível do espaço de trabalho. Se nenhum usuário inscrever-se para receber esses e-mails, todos os administradores da empresa serão notificados.
+
+Para inscrever-se para receber esses e-mails, faça o seguinte:
+
+1. Acesse **Configurações** > **Configurações administrativas** > **Preferências de notificação**.
+2. Selecione **Erros de conteúdo conectado** e **Erros de webhook** na seção **Canvas & Campaigns**.
+
+### Entradas do registro de atividade de mensagens
+
+Haverá pelo menos uma entrada no [registro de atividades de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) relacionada ao erro que disparou o e-mail automático.

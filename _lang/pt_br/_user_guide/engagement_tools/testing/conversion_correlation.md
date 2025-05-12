@@ -17,7 +17,7 @@ tool:
 
 ## Visão geral
 
-Para cada campanha, o Braze verifica uma lista de atribuições e comportamentos do usuário e calcula se os usuários estão associados de forma estatisticamente significativa a aumentos ou reduções em cada um dos [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) que você escolheu para a campanha. Também calculamos a probabilidade maior ou menor de conversão dos usuários com determinada atribuição ou comportamento e, se for significativo, exibimos isso no lado correspondente da tabela. Os usuários com cada atribuição ou comportamento de interesse são comparados com as taxas de todo o público da campanha como um todo. Os comportamentos e atribuições que não têm correlação significativa com a conversão não são mostrados na tabela.
+Para cada campanha, o Braze verifica uma lista de atribuições e comportamentos do usuário e calcula se os usuários estão associados de forma estatisticamente significativa a aumentos ou reduções em cada um dos [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) que você escolheu para a campanha. Também calculamos a probabilidade maior ou menor de conversão dos usuários com determinada atribuição ou comportamento e, se for significativo, exibimos isso no lado correspondente da tabela. Os usuários com cada atribuição ou comportamento de interesse são comparados com as taxas de todo o público da campanha como um todo. Os comportamentos e atribuições que não têm correlação significativa com a conversão não são mostrados na tabela.
 
 Para executar uma análise de correlação de conversão, selecione o evento de conversão de interesse no menu suspenso.
 

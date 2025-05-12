@@ -8,12 +8,12 @@ This implementation guide is centered around a Swift implementation, but Objecti
 
 ![Two push messages shown side-by side. The message on the left shows what a push looks like with the default UI. The message on the right shows a coffee punch card push made by implementing a custom push UI.]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
-Notification content app extensions provide you a great option for push notification customization. Notification content app extensions display a custom interface for your app’s notifications when a push notification is expanded. 
+Notification content app extensions provide you a great option for push notification customization. Notification content app extensions display a custom interface for your app’s notifications when a push notification is expanded.
 
 Push notifications can be expanded in three different ways:
 - A long press on the push banner
 - Swiping down on the push banner
-- Swiping the banner to the left and selecting "View" 
+- Swiping the banner to the left and selecting "View"
 
 These custom views offer smart ways to engage customers by displaying distinct types of content, including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. One of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a push notification content app extension can look like!
 

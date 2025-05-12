@@ -14,27 +14,29 @@ description: "This reference article covers tags in the Braze dashboard, which y
 
 You can add tags when creating or editing a campaign, Canvas, or segment. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** under the engagement name and select an existing tag, or start typing to add a new tag.
 
-![Adding tags during campaign creation][2]
+![Adding tags during campaign creation][2]{: style="max-width:60%;" }
+
+{% alert important %}
+You can add up to 175 tags to a campaign, Canvas, or segment.
+{% endalert %}
+
+### Bulk tagging
 
 You can also add tags to multiple campaigns, Canvases, or segments by selecting multiple engagements and clicking <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
 
 ![Adding tags to multiple campaigns at the same time][5]
 
-The tags set on a campaign, Canvas, or segment are visible on the detail page near the engagement name.
+### Viewing tags
 
-![Tags shown on the Campaign Details page][3]
+The tags set on a campaign, Canvas, or segment are visible on the details page near the engagement name. They also appear on campaign analytics.
 
-They are also visible in the list of campaigns, Canvases, or segments, along with additional tags for status labels such as **Archived** and **Draft**.
+![Tags shown on the Campaign Analytics page][3]{: style="max-width:60%;" }
 
-![Tags on the list of campaigns][4]{: style ="max-width:70%;" }
+### Filtering by tag
 
-To filter by a tag, select the tag name from the list of tags or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
+Tags are visible in the list of campaigns, Canvases, or segments, along with additional tags for status labels such as **Archived** and **Draft**. To filter by a tag, select the tag name from the list of tags.
 
-![Searching for all campaigns tagged as Welcome Email][6]
-
-{% alert important %}
-You can add up to 175 tags to a campaign, Canvas, or segment.
-{% endalert %}
+![Tags on the list of campaigns][4]
 
 ## Custom data tags
 
@@ -43,6 +45,18 @@ Tags may also be added to custom data when managing [custom attributes]({{site.b
 {% alert important %}
 This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
+
+## Managing tags
+
+You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
+
+![Tags tab on the Manage Settings page][8]
+
+To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
+
+To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from the **Tag Management** page. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
+
+![Create a nested tag][1]{: style="max-width:70%;" }
 
 ## Best practices {#tags-best-practices}
 
@@ -80,16 +94,6 @@ table td {
 </tbody>
 </table>
 
-You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
-
-![Tags tab on the Manage Settings page][8]
-
-To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
-
-To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from the **Tag Management** page. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
-
-![Create a nested tag][1]{: style ="max-width:70%;" }
-
 ## Use cases
 
 Looking for inspiration on how to leverage tags to manage your messaging lifecycle? Here are some common use cases:
@@ -112,7 +116,7 @@ Set up an Engagement Report to keep an eye on the volume of all campaigns with a
 [2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
 [3]: {% image_buster /assets/img_archive/tag_details_page.png %}
 [4]: {% image_buster /assets/img_archive/tags_grid.png %}
-[5]: {% image_buster /assets/img_archive/tags_apply_multiple.png %}
+[5]: {% image_buster /assets/img_archive/tags_apply_multiple.gif %}
 [6]: {% image_buster /assets/img_archive/tags_filtering.png %}
 [7]: {% image_buster /assets/img_archive/Tags-Potential_Tags.png %}
 [8]: {% image_buster /assets/img_archive/tags_view.png %}

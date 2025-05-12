@@ -79,11 +79,11 @@ The **Engagement by Mailbox Provider** report displays the top mailbox providers
 
 The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your company’s time zone.
 
-The **Day of the Week** engagement report breaks down opens or clicks by day of the week. 
+The **Day of the week** engagement report breaks down opens or clicks by day of the week. 
 
 ![][6]
 
-The **Time of the Day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
+The **Time of the day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
 
 ![][7]
 
@@ -132,7 +132,7 @@ The comparison is the percentage change between the last and current periods, ca
 
 You can switch between **Show Change in Totals**—which compares the total counts (such as the number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (such as the delivery rate).
 
-![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.][4]
+![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.][4]{: style="max-width:60%"}
 
 ## Frequently asked questions
 

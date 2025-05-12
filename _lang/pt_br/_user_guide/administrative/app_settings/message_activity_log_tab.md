@@ -15,10 +15,6 @@ Você pode ver as transações da campanha de mensagens API, solucionar problema
 
 Para acessar o registro, acesse **Configurações** > **Registro de atividade de mensagens**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o **registro de atividade de mensagens** em **Configurações** > **Console do desenvolvedor**.
-{% endalert %}
-
 ![Registro de atividade de mensagens][2]
 
 {% alert tip %}

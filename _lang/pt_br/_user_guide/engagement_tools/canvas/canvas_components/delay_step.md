@@ -32,6 +32,12 @@ As postergações personalizadas e estendidas estão em acesso antecipado. Entre
 
 Selecione a opção **Personalizar postergação** para configurar uma postergação personalizada para seus usuários. Você pode usar isso com uma [etapa de Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para selecionar a variável de contexto para a postergação.
 
+O Braze encerrará um usuário na etapa se:
+
+- A variável de contexto não retorna a nenhum valor.
+- Uma chamada de Connected Content incorporada falha.
+- Os tipos de variáveis de contexto não correspondem.
+
 Digamos que queremos lembrar nossos clientes de comprar pasta de dente daqui a 30 dias. Usando uma combinação de uma etapa de Contexto e uma etapa de Postergação, podemos selecionar essa variável de contexto para postergar. Nesse caso, nossa etapa Context teria os seguintes campos:
 
 - **Nome da variável de contexto:** product_reminder_interval

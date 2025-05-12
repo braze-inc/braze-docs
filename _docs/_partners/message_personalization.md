@@ -67,6 +67,16 @@ valid_partner_list:
   url: /docs/partners/smartling/
 - name: Tangerine
   url: /docs/partners/tangerine/
+- name: Stylitics
+  url: /docs/partners/stylitics/
+- name: NiftyImages
+  url: /docs/partners/niftyimages/
+- name: Future Anthem
+  url: /docs/partners/future_anthem
+- name: SEEN
+  url: /docs/partners/seen
+- name: Just Words
+  url: /docs/partners/just_words/
 - name: Transifex
   url: /docs/partners/transifex/
 - name: AccuWeather

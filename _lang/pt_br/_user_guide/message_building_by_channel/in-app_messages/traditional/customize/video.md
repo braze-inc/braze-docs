@@ -28,7 +28,7 @@ O conteúdo de vídeo só está disponível quando o dispositivo tem uma velocid
 
 ## Considerações sobre o Android
 
-Para incorporar vídeo e outros conteúdos HTML5 em mensagens HTML no app no Android, é necessário ativar a aceleração de hardware na atividade em que a mensagem no app é exibida. Para saber mais, consulte o [guia do desenvolvedor do Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+Para incorporar vídeo e outros conteúdos HTML5 em mensagens HTML no app no Android, é necessário ativar a aceleração de hardware na atividade em que a mensagem no app é exibida. Para saber mais, consulte o [guia do desenvolvedor do Android]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## Considerações sobre o iOS
 

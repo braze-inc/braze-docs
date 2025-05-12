@@ -19,10 +19,6 @@ O Segment Insights mostra como está a performance de um segmento em comparaçã
 
 Acesse a página **Segment Insights de** seu dashboard, em **Analytics**, e clique em <i class="fas fa-plus"></i> **Add Segment** para visualizar até quatro segmentos diferentes em comparação com uma linha de base.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > Segmentos > **Insights de segmento**.
-{% endalert %}
-
 ![Dashboard de insights de segmento.][1]
 
 O segmento de linha de base pode ser um segmento específico selecionado por você ou um segmento que contenha todos os seus usuários. Você pode comparar as seguintes estatísticas usando o Segment Insights:

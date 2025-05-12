@@ -23,7 +23,7 @@ Com os blocos de conteúdo, você pode:
 
 ## Criar um bloco de conteúdo
 
-Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico e o de arrastar e soltar. Esses dois tipos de editores correspondem ao tipo de bloco de conteúdo: HTML e arrastar e soltar. Você também pode criar e gerenciar seus blocos de conteúdo [via API][5].
+Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico e o de arrastar e soltar. Esses dois tipos de editores correspondem ao tipo de bloco de conteúdo: HTML e arrastar e soltar. Você também pode criar e gerenciar seus blocos de conteúdo [usando a API][5].
 
 {% tabs %}
 {% tab Arrastar e soltar %}
@@ -44,13 +44,13 @@ Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico 
 |---|---|
 | Nome | Campo obrigatório com um máximo de 100 caracteres. Ele não pode ser renomeado depois que o bloco de conteúdo tiver sido salvo. Além disso, você não pode nomear um novo bloco de conteúdo com o mesmo nome de um bloco de conteúdo anterior, mesmo que o anterior tenha sido arquivado. |
 | Descrição | (opcional) Máximo de 250 caracteres. Descreva o bloco de conteúdo para que outros usuários do Braze saibam para que serve e onde é usado. |
-| Tamanho do conteúdo | Máximo de 50kB (kilobyte). |
+| Tamanho do conteúdo | Máximo de 50 KB. |
 | Posicionamento | Os blocos de conteúdo não podem ser usados em um rodapé de e-mail. |
 | Criação | Editor de HTML ou editor de arrastar e soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Ao criar blocos de conteúdo, às vezes é útil visualizar o HTML e o Liquid adicionando quebras de linha. Se essas quebras de linha forem deixadas durante o envio, você corre o risco de ter espaços estranhos que podem afetar a forma como o bloco será renderizado. Para evitar isso, use a tag **Capture** em seu bloco junto com o filtro **| strip**.
+Ao criar blocos de conteúdo, pode ser útil visualizar o HTML e o Liquid adicionando quebras de linha. Se essas quebras de linha forem deixadas durante o envio, você corre o risco de ter espaços estranhos que podem afetar a forma como o bloco será renderizado. Para evitar isso, use a tag **Capture** em seu bloco junto com o filtro **| strip**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ Depois de criar seu bloco de conteúdo, você pode inseri-lo em suas mensagens s
 1. Copie a **Liquid Tag** do **bloco de conteúdo** da seção **Detalhes do bloco de conteúdo** ).
 2. Insira a tag Content Block Liquid na mensagem. Você também pode começar a digitar o Liquid e fazer com que a tag seja preenchida automaticamente.
 
-{% alert note %}
-As propriedades do evento Canvas só são compatíveis com um Canvas. Se você fizer referência a um bloco de conteúdo com propriedades de entrada de tela em uma campanha, ele não será preenchido.
-{% endalert %}
+### Coisas para saber
+
+- O uso de blocos de conteúdo HTML em e-mails de arrastar e soltar **ou** de blocos de conteúdo de arrastar e soltar em e-mails HTML pode resultar em problemas inesperados de renderização. Isso ocorre porque o editor de arrastar e soltar gera HTML e CSS que renderizam dinamicamente o conteúdo, enquanto o editor de HTML é mais estático.
+- As propriedades do evento Canvas só são compatíveis com um Canvas. Se você fizer referência a um bloco de conteúdo com propriedades de entrada de tela em uma campanha, ele não será preenchido.
 
 ### Atualização e cópia de blocos de conteúdo
 

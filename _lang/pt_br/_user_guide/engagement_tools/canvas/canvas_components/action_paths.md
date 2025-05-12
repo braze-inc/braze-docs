@@ -14,7 +14,7 @@ tool: Canvas
 
 Usando jornadas de ação, você pode:
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Uma etapa das jornadas de ação como a primeira etapa de uma jornada do usuário do Canva.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 * Personalize os caminhos do usuário com base em uma ação específica, incluindo eventos de engajamento do usuário e eventos personalizados
 * Mantenha os usuários por uma determinada duração para priorizar sua próxima jornada com base em suas ações durante este período de avaliação
@@ -29,11 +29,11 @@ Nas **Configurações de Ação**, defina a **Janela de Avaliação** para deter
 
 Dentro das **Configurações de Ação**, você também pode ativar a ordem classificada para seus componentes ativando a alternância **Avançar usuários com base na ordem classificada**.
 
-![][4]
+![As Configurações de ação com uma janela de avaliação de 1 dia.][4]
 
 Por padrão, **Ranking** está desativado. Quando um usuário entra na jornada de ação e realiza o evento de gatilho anexado a qualquer grupo de ação, ele avançará imediatamente pelo grupo de ação relevante. Se um usuário não realizar um evento de gatilho, ele avançará pelo grupo padrão **Todos os Outros** no final do período de avaliação.
 
-Quando **usuários avançados com base na ordem de classificação** está ativado, isso significa que **classificação** está ativada. Então, todos os usuários serão retidos até o final da janela de avaliação. No final do período de avaliação, os usuários avançarão pelo grupo de ação de maior prioridade para o qual são elegíveis no final da janela de avaliação. Usuários que não realizarem nenhuma das ações durante a janela de avaliação avançarão pelo grupo padrão **Todos os Outros**.
+Quando **Advanced users based on ranked order** está ativado, isso significa que **a classificação** está ativada. Então, todos os usuários serão retidos até o final da janela de avaliação. No final do período de avaliação, os usuários avançarão pelo grupo de ação de maior prioridade para o qual são elegíveis no final da janela de avaliação. Usuários que não realizarem nenhuma das ações durante a janela de avaliação avançarão pelo grupo padrão **Todos os Outros**.
 
 #### Mensagem no app
 
@@ -53,23 +53,23 @@ Adicione um disparar ou vários disparar para definir seus grupos de ação. Aqu
 
 - Fazer uma compra
 - Iniciar uma sessão
-- Realizar um [evento personalizado][2]
+- Realizar um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Realizar um evento de conversão
 - Adicione um endereço de e-mail
-- Alterar o valor de um atributo personalizado
+- Alterar um valor de atributo personalizado (não atributos personalizados aninhados)
 - Atualize o status da inscrição ou o status do grupo de inscrições
 - Interaja com uma campanha ou cartão de conteúdo
 - Insira um local
 - Disparar um geofence
 - Enviar uma mensagem de entrada por SMS ou WhatsApp
 
-![][3]
+![Um grupo de ações chamado "Grupo 1" para usuários que fazem qualquer compra.][3]
 
-Dentro de cada configuração de grupo de ações, você também tem a opção de selecionar a caixa de seleção **Quero que este grupo saia da canva**, o que significa que os usuários deste grupo sairão da canva no final do período de avaliação.
+Em cada configuração de grupo de ação, você também tem a opção de marcar a caixa de seleção **Quero que esse grupo saia do Canvas**, o que significa que os usuários desse grupo sairão do Canvas no final do período de avaliação.
 
 ### canvas com re-eligibilidade
 
-Se os usuários entrarem em uma jornada de ação várias vezes e tiverem várias entradas na jornada de ação ao mesmo tempo, o comportamento esperado varia dependendo do status de **Ranking**. 
+Se os usuários entrarem em uma jornada de ação várias vezes e tiverem várias entradas na jornada de ação ao mesmo tempo, o comportamento esperado varia de acordo com o status **da classificação**.
 
 | Status de Classificação | Comportamento da jornada de ação |
 |---|--------------|
@@ -81,6 +81,5 @@ Nota que as classificações não são [editáveis após o lançamento]({{site.b
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[2]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_events
 [3]: {% image_buster /assets/img/actionpath_group.png %}
 [4]: {% image_buster /assets/img/actionpath_settings.png %} 

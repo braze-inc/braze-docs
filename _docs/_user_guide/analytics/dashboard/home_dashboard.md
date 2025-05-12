@@ -13,11 +13,11 @@ tool:
 
 > The **Home** page on the dashboard provides key metrics for you to track and understand the performance of your app or website, and gives you an at-a-glance high-level understanding of your userbase.
 
-![Home dashboard in Braze.][1]
-
 The **Home** page has two main sections:
 - [Pick up where you left off](#pick-up-where-you-left-off)
 - [Performance overview](#peformance-overview)
+
+![Home dashboard in Braze.][1]
 
 ## Pick up where you left off
 
