@@ -15,8 +15,7 @@ description: "A tutorial on how to access key-value pairs with in-app messages"
 
 ```js file=index.js
 import * as braze from "@braze/web-sdk";
-// remove any calls to `automaticallyShowInAppMessages()`
-// REMOVE --> braze.automaticallyShowInAppMessages()
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
 
 braze.subscribeToInAppMessage(function (message) {
   const extras = message.extras;
@@ -92,6 +91,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BrazeInAppMessageUIDelega
     )
     let braze = Braze(configuration: configuration)
     AppDelegate.braze = braze
+    
+    // Set up Braze In-App Message UI and delegate
+    let inAppMessageUI = BrazeInAppMessageUI()
+    inAppMessageUI.delegate = self
+    brazeInstance.inAppMessagePresenter = inAppMessageUI
 
     return true
   }
@@ -216,9 +220,9 @@ class MyApplication : Application() {
 !!step
 lines-MainApplication.kt=19
 
-#### 1. Turn on debugging (optional)
+#### 1. Configure debugging logs (optional)
 
-Turn on debugging while developing to make troubleshooting easier!
+Set the logger level to `.debug` while developing to make troubleshooting easier!
 
 !!step
 lines-MainApplication.kt=28-30
