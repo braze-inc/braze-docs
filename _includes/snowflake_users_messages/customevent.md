@@ -1,6 +1,5 @@
 ## Relationship tables
 
-
 ### `SHARED`
 
 ```json

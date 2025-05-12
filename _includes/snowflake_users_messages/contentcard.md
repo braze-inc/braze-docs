@@ -235,7 +235,6 @@ erDiagram
 
 ## Relationship tables
 
-
 ### `ABORT_SHARED`
 
 ```json

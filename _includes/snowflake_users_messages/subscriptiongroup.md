@@ -1,6 +1,5 @@
 ## Relationship tables
 
-
 ### `STATECHANGE_SHARED`
 
 ```json

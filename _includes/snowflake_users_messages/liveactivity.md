@@ -1,6 +1,5 @@
 ## Relationship tables
 
-
 ### `PUSHTOSTARTTOKENCHANGE_SHARED`
 
 ```json

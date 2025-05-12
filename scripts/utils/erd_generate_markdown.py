@@ -28,7 +28,7 @@ def create_tables(data):
     # build a dict: {filename: markdown_content}
     files = {}
     for channel, tables in channel_to_tables.items():
-        lines = ["## Relationship tables\n"]
+        lines = ["## Relationship tables"]
         for table_name, table_json in tables.items():
             parts = table_name.split("_")
             rest  = "_".join(parts[3:]) if len(parts) > 3 else ""

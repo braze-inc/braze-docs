@@ -1,6 +1,5 @@
 ## Relationship tables
 
-
 ### `GLOBALSTATECHANGE_SHARED`
 
 ```json

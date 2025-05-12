@@ -235,7 +235,6 @@ erDiagram
 
 ## Relationship tables
 
-
 ### `TOKENSTATECHANGE_SHARED`
 
 ```json
