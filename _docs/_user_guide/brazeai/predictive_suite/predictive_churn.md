@@ -1,5 +1,5 @@
 ---
-nav_title: Predictive Churn
+nav_title: Churn
 article_title: Predictive Churn
 page_order: 6.4
 layout: dev_guide

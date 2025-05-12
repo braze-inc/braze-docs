@@ -1,5 +1,5 @@
 ---
-nav_title: Predictive Events
+nav_title: Events
 article_title: Predictive Events
 page_order: 6.4
 layout: featured
