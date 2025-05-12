@@ -34,7 +34,6 @@ Braze provides the following filters in order to help you limit the rate at whic
 - Last Received Push Campaign
 - Last Received Email Campaign
 - Last Received SMS
-- Last Viewed News Feed
 
 #### Implementing filters
 

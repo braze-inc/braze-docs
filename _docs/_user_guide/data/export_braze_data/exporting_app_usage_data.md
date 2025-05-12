@@ -51,7 +51,6 @@ You can export CSVs with the following data:
     - Number of In-App Messages Opened
 - MAUs by Date
 - Number of New Users by Date
-- News Feed Impressions by Date
 - Push Notifications by Date
     - (Optional) Push Notifications for Different App Platforms
     - Number of Push Notifications Sent

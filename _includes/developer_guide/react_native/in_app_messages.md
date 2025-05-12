@@ -25,7 +25,7 @@ The in-app message model provides the base for all in-app messages.
 |`zippedAssetsUrl` | The zipped assets prepared to display HTML content.                                                                    |
 |`useWebView`      | Indicates whether the button click action should redirect using a web view.                                            |
 |`duration`        | The message display duration.                                                                                          |
-|`clickAction`     | The button click action type. The three types are: `NEWS_FEED`, `URI`, and `NONE`.                                     |
+|`clickAction`     | The button click action type. The types are: `URI`, and `NONE`.                                     |
 |`dismissType`     | The message close type. The two types are: `SWIPE` and `AUTO_DISMISS`.                                                 |
 |`messageType`     | The in-app message type supported by the SDK. The four types are: `SLIDEUP`, `MODAL`, `FULL` and `HTML_FULL`.          |
 |`extras`          | The message extras dictionary. Default value: `[:]`.                                                                   |
@@ -44,7 +44,7 @@ Buttons can be added to in-app messages to perform actions and log analytics. Th
 |`text`            | The text on the button.                                                                                                     |
 |`uri`             | The URI associated with the button click action.                                                                            |
 |`useWebView`      | Indicates whether the button click action should redirect using a web view.                                                 |
-|`clickAction`     | The type of click action processed when the user clicks on the button. The three types are: `NEWS_FEED`, `URI`, and `NONE`. |
+|`clickAction`     | The type of click action processed when the user clicks on the button. The types are: `URI`, and `NONE`. |
 |`id`              | The button ID on the message.                                                                                               |
 |`toString()`      | The button as a String representation.                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
