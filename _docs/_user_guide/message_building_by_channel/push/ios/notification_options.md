@@ -134,13 +134,15 @@ if (@available(iOS 12.0, *)) {
 
 With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 
+![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 Apps can now specify what level of interruption a notification should include, based on its urgency.
 
 To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
 
-This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+![Dropdown for selecting the interruption level.][28]{: style="max-width:50%"}
 
-![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:60%"}
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
 Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
 
@@ -177,5 +179,5 @@ For more information on maximum message lengths for different message types, ref
 
 [26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
+[28]: {% image_buster /assets/img/ios/interruption_level.png %}
 [29]: {% image_buster /assets/img/ios/relevance-score.png %}
