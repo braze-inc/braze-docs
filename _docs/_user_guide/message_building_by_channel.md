@@ -10,6 +10,9 @@ description: "This landing page covers Braze messaging channels. Messaging chann
 
 guide_featured_title: "Available channels"
 guide_featured_list:
+- name: Banners
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
