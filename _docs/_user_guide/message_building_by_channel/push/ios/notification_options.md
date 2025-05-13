@@ -21,13 +21,13 @@ If you want to categorize your messages and group them in your user's notificati
 
 Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
 
-![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".][26]{: style="max-width:60%;" }
+![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".][26]{: style="max-width:50%;" }
 
 Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the workspace.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
-![Window to manage iOS push notification groups.][27]
+![Window to manage iOS push notification groups.][27]{: style="max-width:70%;" }
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
@@ -132,11 +132,15 @@ if (@available(iOS 12.0, *)) {
 
 ### Interruption level (iOS 15+) {#interruption-level}
 
-![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 
 Apps can now specify what level of interruption a notification should include, based on its urgency.
+
+To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
+
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+
+![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:60%"}
 
 Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
 
@@ -150,12 +154,6 @@ Refer to the following table for interruption levels and their descriptions.
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
-
-![Interruption Level set to Active (Default) and expanded to show all available interruption levels: Passive, Active (Default), Time Sensitive, and Critical.][28]
-
-This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
-
 ### Relevance score (iOS 15+) {#relevance-score}
 
 ![A notification summary for iOS titled "Your Evening Summary" with three notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -168,7 +166,7 @@ All notifications will still be accessible in the user's notification center.
 
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
-![Relevance score of "0.5".][29]
+![Relevance score of "0.5".][29]{: style="max-width:80%;"}
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
