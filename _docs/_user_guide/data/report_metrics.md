@@ -182,7 +182,7 @@ Email
 
 {% api %}
 
-### Confirmed Deliveries
+### RCS Confirmed Deliveries or SMS Confirmed Deliveries
 
 {% apitags %}
 SMS/MMS, RCS
@@ -348,7 +348,7 @@ Email, Web Push, iOS Push, Android Push, WhatsApp
 
 {% api %}
 
-### Delivery Failures
+### RCS Delivery Failures or SMS Delivery Failures
 
 {% apitags %}
 SMS/MMS
@@ -701,7 +701,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS,
 
 {% api %}
 
-### Rejections
+### RCS Rejections or SMS Rejections
 
 {% apitags %}
 SMS/MMS, RCS
