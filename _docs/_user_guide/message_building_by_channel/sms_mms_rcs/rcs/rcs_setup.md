@@ -48,7 +48,7 @@ When you've submitted your completed forms to Braze, we will complete the regist
 
 The timeline for carrier approval varies by country, and can also vary within a country. Keep in mind that the RCS market is still in its infancy, so carrier and aggregator processes are rapidly evolving. In the United States, Braze estimates that carrier approval turnaround time for an RCS-verified sender typically falls within the 4—6 week range, with a test sender typically approved within one week.
 
-When your RCS-verified sender is approved, our opporations team will update your subscription groups as needed to confirm they have the RCS sender included in them. 
+When your RCS-verified sender is approved, our operations team will update your subscription groups as needed to confirm they have the RCS sender included in them. 
 
 ## Step 3: Set up subscription groups
 
@@ -62,6 +62,6 @@ For new use cases that are not possible with SMS, consider setting up dedicated 
 
 ### Step 3.1: Set up SMS fallbacks for RCS subscription groups
 
-Because current carrier coverage varies by country, and user hardware and software support varies by individual, SMS fallback is a key component of having a successful RCS program today. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless so that you never miss an important moment with your users.
+Because current carrier coverage varies by country, and user hardware and software support varies by individual, SMS fallback is a key component of having a successful RCS program today. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless, so that you never miss an important moment with your users.
 
 We highly recommend reviewing your current SMS opt-in experience, subscription groups, and audience segmentation before deploying your first RCS campaign. If needed, your customer success manager is always available to provide guidance and help you navigate the setup process.
