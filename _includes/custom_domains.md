@@ -23,8 +23,15 @@ When you delegate your domain to Braze, we automatically handle the certificate 
 To delegate your domain to Braze, do the following: 
 
 1. In Braze, go to **Company Settings** > **SMS/RCS and Messaging Apps Domains**.
+!["SMS/RCS and Messaging Apps Domains" page with several domains listed.][5]{: style="max-width:70%;"}
+
+{: start="2"}
 2. Select **Add Domain** to begin a new custom domain setup.
 3. Enter your desired custom domain into our in-app input, which uses our existing validation logic for proper formatting, then select **Next** and **Submit**.
+
+!["Add Domain" button on the "SMS/RCS and Messaging Apps Domains" page.][4]{: style="max-width:70%;"}
+
+{: start="4"}
 4. Have your technical partners update your DNS configuration with the Cloudflare DNS record details that display. Your DNS records must be updated within seven days. 
   - If you need additional time to update your DNS records, a new set of DNS records can be generated after the seven-day window passes and the old set expires.
 
@@ -38,7 +45,9 @@ If configuration errors are detected, an email will outline the issue and provid
 
 ### Ongoing management and usage
 
-After your domain is verified, your custom domains will appear in the table on the **SMS/RCS and Messaging Apps Domains** page with status indicators. You can immediately use these domains across multiple subscription groups, workspaces, and channels.
+After your domain is verified, your custom domains will appear in the table on the **SMS/RCS and Messaging Apps Domains** page with status indicators. You can immediately use connected domains across multiple subscription groups, workspaces, and channels.
+
+![List of custom domains and statuses.][3]{: style="max-width:50%;"}
 
 Live monitoring will alert you if any of your active domains has an issue, so that your custom links remain usable.
 
@@ -90,7 +99,9 @@ Yes. After a custom domain is verified, it can be used in all SMS, RCS, and What
 
 For additional help, [contact Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/). 
 
-
+[3]: {% image_buster /assets/img/custom_domain_statuses.png %} 
+[4]: {% image_buster /assets/img/custom_domain_button.png %} 
+[5]: {% image_buster /assets/img/main_page.png %} 
 [6]: {% image_buster /assets/img/custom_domain_whatsapp_composer.png %} 
 [7]: {% image_buster /assets/img/custom_domain.png %} 
 [8]: {% image_buster /assets/img/custom_domain2.png %}
