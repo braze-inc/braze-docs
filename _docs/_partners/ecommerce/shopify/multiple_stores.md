@@ -68,11 +68,17 @@ When you connect multiple stores, synced Shopify users who have logged in or pla
 
 ### Identity management considerations 
 
+You have the option of using the following for your Braze external ID: 
+- Shopify Custom ID
+- Email
+- Hashed Email
+- Custom External ID
+
 #### Using Shopify Customer ID
 
-If you use Shopify's customer ID as your Braze external ID, each store will generate a unique customer ID for each customer. This means that if a customer interacts with multiple stores, they will have separate profiles in Braze.
+If you use Shopify's customer ID as your Braze external ID, each store will generate a unique customer ID for each user. This means that if a user interacts with multiple stores, they will have separate profiles in Braze.
 
-#### Using Email, Hashed Email, or Custom External IDs 
+#### Using Email, Hashed Email, or Custom External ID 
 
 If you use the email, hashed email, or custom external ID types, users who engage with multiple stores will have their profiles merged into a single consolidated profile when they log in or place an order.
 
@@ -93,16 +99,19 @@ These are notable fields that will merge when you merge user profiles:
 
 For full details on merging behavior, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
-### Subscriber collection
+### Collecting subscribers
+
+You have the option of collecting subscribers directly through Braze or through API and SDK alternatives that sync data from Shopify.
 
 #### Email and SMS subscriber collection (optional) 
 
 When you connect and configure each Shopify store in Braze, you have the option to enable the email and SMS subscriber collection feature. This feature allows Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group.
+
 To maintain clean data on where subscribers are coming from, create a unique subscription group for each store you connect.
 
 #### Integrate directly to Braze endpoints (alternative) 
 
-If you decide not to enable the email and SMS subscriber collection through the integration, Braze provides several alternatives to sync email and SMS marketing opt-in information directly from Shopify:
+If you decide not to enable the email and SMS subscriber collection through the integration, Braze provides several API and SDK alternatives to sync email and SMS marketing opt-in information directly from Shopify.
 
 ##### APIs 
 - [Subscription group endpoints]({{site.baseurl}}/api/endpoints/subscription_groups/) to directly replace what is supported by the integration 
@@ -152,7 +161,7 @@ The supported eCommerce recommended events within the Shopify integration are:
 
 #### Shopify custom events 
 
-Incoming Shopify custom events include an event property called `shopify_storefront`. This property indicates which storefront URL the event came from, enabling you to leverage it for segmentation or triggering use cases.
+Incoming Shopify custom events include an event property called `shopify_storefront`. This property indicates which storefront URL the event came from, allowing you to leverage it for segmentation or triggering use cases.
 
 ![An action-based Canvas with a trigger to enter users who perform the `shopify_paid_order` custom event.][6]{: style="max-width:80%;"}
 
