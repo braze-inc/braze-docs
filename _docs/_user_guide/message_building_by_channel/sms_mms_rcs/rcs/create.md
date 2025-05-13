@@ -163,7 +163,7 @@ You can also set custom conversion events based on your specific use case. Get c
 
 After you’ve finished building your campaign or Canvas, review its details, test it, then send it!
 
-Next, refer to [SMS and RCS reporting]() to learn how you can access the results of your RCS campaigns.
+Next, refer to [Reporting for SMS, MMS, and RCS]({{site.baseurl}}/sms_mms_rcs_reporting/) to learn how you can access the results of your RCS campaigns.
 
 ## Tips
 
