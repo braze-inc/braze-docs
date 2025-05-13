@@ -46,7 +46,7 @@ When you've submitted your completed forms to Braze, we will complete the regist
 
 ### Timeline for carrier approval
 
-The timeline for carrier approval varies by country, and can also vary within a country. Keep in mind that the RCS market is still in its infancy, so carrier and aggregator processes are rapidly evolving. In the United States, Braze estimates that carrier approval turnaround time for an RCS-verified sender typically falls within the 4—6 week range, with a test sender typically approved within one week.
+The timeline for carrier approval varies by country and can also vary within a country. Keep in mind that the RCS market is still in its infancy, so carrier and aggregator processes are rapidly evolving. In the United States, Braze estimates that carrier approval turnaround time for an RCS-verified sender typically falls within the 4—6 week range, with a test sender typically approved within one week.
 
 When your RCS-verified sender is approved, our operations team will update your subscription groups as needed to confirm they have the RCS sender included in them. 
 
@@ -56,7 +56,7 @@ RCS is typically used in two ways:
 - To upgrade existing SMS traffic 
 - To enable new use cases that are only possible with the richer functionality provided by RCS
 
-Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new subscription groups for you. In either case, your Braze team will guide you through a seamless and compliant SMS traffic upgrade. For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}).   
+Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new subscription groups for you. In either case, your Braze team will guide you through a seamless and compliant SMS traffic upgrade. For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/).
 
 For new use cases that are not possible with SMS, consider setting up dedicated RCS subscription groups to align with your program goals.
 
