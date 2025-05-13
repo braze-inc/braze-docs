@@ -49,7 +49,9 @@ From the dashboard, go to **Audience** > **Global Control Group**.
 
 Input a percentage for your control group and select **Save**. When entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. In addition, new users that join after the Global Control Group was setup and that have random bucket numbers will also be added to the Global Control Group. If many users are added, then you can expect the size of your Global Control Group to grow so that it maintains a constant percentage relative to your entire use base. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
+The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. In addition, new users that join after the Global Control Group was setup and that have random bucket numbers will also be added to the Global Control Group. If many users are added, then you can expect the size of your Global Control Group to grow so that it maintains a constant percentage relative to your entire use base. When the size of your Global Control Group grows in size, the users that were previously in this group will still remain in the group (unless you decide to make changes to your group by disabling it and creating a new one).
+
+For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
 ![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
 
