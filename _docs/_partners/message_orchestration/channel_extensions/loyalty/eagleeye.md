@@ -1,5 +1,14 @@
+---
+nav_title: Eagle Eye
+article_title: Eagle Eye
+description: Learn how to integrate Eagle Eye with Braze.
+alias: /partners/Eagle_Eye/
+page_type: partner
+search_tag: Partner
+layout: dev_guide
+---
 
-### Eagle Eye Integration with Braze
+# Eagle Eye Integration with Braze
 
 ## Overview
 
@@ -19,13 +28,13 @@ This can be created in the Braze dashboard from Settings > API Keys. |
 
 The table below outlines the two types of integrations supported between Braze and Eagle Eye AIR. Eagle Eye Connect is the middleware that enables data exchange between AIR and partner systems like Braze. To learn more about the integration, refer to Eagle Eye’s [documentation](https://developer.eagleeye.com/docs/braze).
 
-| Integration Type | Direction           | Initiated By | Data Flow                        | Purpose                                                                                                                                                     | Example |
-|------------------|---------------------|--------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| Outbound         | Eagle Eye → Braze   | Eagle Eye    | To Braze API                     | Send loyalty data into Braze user profiles as custom attributes via custom events. Within Braze, the ingested data can be used to:  
+| Integration Type | Direction| Initiated By | Data Flow| Purpose| Example |
+|-----|-----|------|--------|-----------|---------|
+| Outbound| Eagle Eye → Braze| Eagle Eye| To Braze API| Send loyalty data into Braze user profiles as custom attributes via custom events. Within Braze, the ingested data can be used to:  
 - segment users, trigger campaigns, and  
 - personalize messages | - Sending loyalty points or tier status into Braze (`ee_loyalty.points.current`, `ee_loyalty.tier.tierId`)  
 - Updating a user's profile when they receive or redeem a coupon. |
-| Inbound          | Braze → Eagle Eye   | Braze        | To Eagle Eye API via webhook     | When a consumer enters an audience in Braze from any source, Braze can trigger a Braze webhook to EE Connect, allowing EE to issue a reward (coupon or points)  
+| Inbound| Braze → Eagle Eye| Braze | To Eagle Eye API via webhook| When a consumer enters an audience in Braze from any source, Braze can trigger a Braze webhook to EE Connect, allowing EE to issue a reward (coupon or points)  
 Upon completion of the action in AIR, Braze would receive an outbound event from AIR. | - Rewards (Coupon or points) are issued to a consumer for joining the loyalty program  
 - Rewards are issued to a consumer that had a late delivery  
 - Birthday Rewards |
