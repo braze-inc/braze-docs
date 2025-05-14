@@ -3,14 +3,12 @@ nav_title: Connecting Multiple Stores
 article_title: Shopify Multiple Store Support
 alias: /shopify_connecting_multiple_stores/
 page_order: 5
-description: "This reference article covers how to connect multiple Shopify stores to a single workspace."
+description: "This reference article covers how to connect and configure multiple Shopify stores to a single workspace."
 ---
 
 # Connecting multiple Shopify stores
 
 > Connect multiple Shopify store domains to a single workspace to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across regional stores.  
-
-Multiple store support for Shopify allows you to connect and configure regional storefronts. 
 
 {% alert important %}
 This feature doesn't support Shopify Markets or Markets Pro. If you would like to request support for these, submit a [product request]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
@@ -20,6 +18,7 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 
 | Requirement | Description |
 | ----------- | ----------- |
+| Set up a Shopify store | Already set up at least one Shopify store with Braze. |
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -38,19 +37,7 @@ Like your first Shopify store integration, you can choose either between a stand
 
 Choose the option that best fits your needs:
 
-{% tabs local %}
-{% tab standard %}
-The standard integration is tailored for Shopify online stores, providing a seamless and straightforward setup process. This option allows you to quickly connect your Shopify store to Braze, empowering you to leverage powerful customer engagement tools without extensive technical expertise. With this integration option, you can sync customer data, automate personalized messaging, and enhance your marketing efforts through comprehensive Braze features.
-
-To use the standard Shopify integration, refer to [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/).
-{% endtab %}
-
-{% tab custom %}
-The custom integration offers a more flexible and composable solution if you use Shopify Hydrogen or support a headless store. This option empowers you to implement Braze SDKs directly into your Shopify environment, enabling deeper integration and tailored functionalities. Whether you’re looking to create unique customer experiences or optimize specific workflows, the custom integration provides the tools necessary to fully leverage Braze’s capabilities in a headless setup.
-
-To use the custom Shopify integration, refer to [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/).
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 To view each store integration and configure advanced settings, select a store in the dropdown menu.
 
@@ -177,7 +164,8 @@ If you activate the product sync for each store, Braze will include the name of 
 
 ![Shopify catalogs with their Shopify store in their name.][7]
 
-[2]: {% image_buster /assets/img/Shopify/begin_setup_button.png %}
+[1]: {% image_buster /assets/img/Shopify/begin_setup_button.png %}
+[2]: {% image_buster /assets/img/Shopify/multiple_stores.png %}
 [3]: {% image_buster /assets/img/Shopify/standard_or_custom.png %}
 [4]: {% image_buster /assets/img/Shopify/store_dropdown_menu.png %}
 [5]: {% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}
