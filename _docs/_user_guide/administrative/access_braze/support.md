@@ -1,15 +1,16 @@
 ---
-nav_title: Braze Support
-article_title: Support
-description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
+nav_title: Support Portal
+article_title: About Braze support
+description: "Learn how to access the Braze support portal, submit detailed support cases, and manage your designated support contacts."
 alias: /braze_support/
-page_type: reference
 search_rank: 7
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
+# Braze support portal
 
-## Access the support portal
+> Learn how to access the Braze support portal, submit detailed support cases, and manage your designated support contacts.
+
+## Accessing the Braze support portal
 
 To contact the Braze Support team, navigate to the Braze dashboard. In the dashboard, select **Support** > **Get help**.
 
@@ -17,77 +18,140 @@ To contact the Braze Support team, navigate to the Braze dashboard. In the dashb
 
 Depending on your Braze permissions, and if you're a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 
-## Adding designated support contacts
+## Submitting a support case
 
-Designated support contacts can access all support cases for your company, regardless of who submitted them. You can set users as designated support contacts directly from the **Edit user** page. 
+To help us resolve your technical issues as quickly as possible, please submit a detailed support ticket that includes information about your organization, your affected user segments, screenshots of the issue, and any error logs.
 
-1. Go to **Settings** > **Company Users**, then search for the user by their name or email address.
-2. Either select the user name or hover over the user name row to display a menu. 
-3. In the menu, select **Edit** to be redirected to the **Edit user** page.
-4. Check the checkbox for **Set this user as a Designated Support Contact for Braze Support Portal**.
+### Step 1: Complete the questionnaire
 
-![The checkbox for setting a user as a designated support contact.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
+Complete the questionnaire...
 
-The number of designated support contacts you can set depends on your contact limit. Contact your customer success manager for more information.
+![ALT_TEXT.]()
 
-### Gaining access
+### Step 2: Compose your message
 
-After a user is designated as a support contact, the Braze support portal will send that user a welcome email with instructions to set up their access.
+1. In the **Subject** field, enter a short description of the issue.
+2. From the dropdown, choose a severity level. Only select **Critical** if your production instance is down and all work within Braze has stopped.
+3. Compose your message. To get started, copy and paste this template into the body of your message.
 
-## Provide developer console screenshots
+```plaintext
+Workspace details:
 
-When communicating with support, you may find you need to access your developer console to provide additional information:
-- Chrome
-  1. Right-click on the webpage and select **Inspect**.
-  2. Select the **Console** tab in the window that opens.
-  3. Take a screenshot of the console tab.<br><br>
-- Firefox
-  1. Right-click on the webpage and select **Inspect Element**.
-  2. Select the **Console** tab in the window that opens.
-  3. Take a screenshot of the console tab.<br><br>
-- Safari
-  1. Go to Safari in the menu bar at the top of your screen and then select **Preferences**.
-  2. Select **Advanced** and then check the checkbox next to **Show Develop menu in menu bar**. You can then exit the window.
-  3. Right-click on the webpage and select **Inspect Element**.
-  4. Select the **Console** tab in the window that opens.
-  5. Take a screenshot of the console tab.
+- Name: Enter workspace name
+- Campaign: Enter the URL
+- Size of segment: N/A 
+- External IDs: N/A
 
-## Best practices for submitting a support case
+Describe the issue here.
 
-### Provide as much information as possible
+What was the expected behavior vs. the actual behavior?
 
-The more insights you can offer, the better. Include specifics like the workspace, the URL to the campaign or segment, and any relevant external IDs. This can help us troubleshoot your issue more efficiently.
+Steps to reproduce:
 
-### Provide a sample of users
+1. Go to...
+2. Select...
+3. Choose...
+```
 
-Share a sampling of users rather than the entire affected segment. Providing a smaller amount of users helps us narrow our scope and speed up our investigations.
+### Step 3: Attach screenshots
 
-### Attach network logs (HAR logs)
+Consider attaching a screenshot to illustrate the problem. Providing these images can significantly aid our understanding of the issue and speed up the resolution process. To attach screenshot...
 
-If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
+### Step 4: Attach browser logs
 
-Have the affected user do the following:
+If..., then attach the following logs from your web browser.
 
-1. Open their developer tools. If using Chrome, this can be be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
-2. Select **Network** > **Fetch/XHR** or **XHR**.
-3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
+#### Step 4.1: Access the developer tools
 
-Then attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
+{% tabs %}
+{% tab Chrome %}
+1. Go to the page in Braze where you're experiencing the issue.
+2. Right-click the page, then select **Inspect**.
+{% endtab %}  
+  
+{% tab Firefox %}
+1. Go to the page in Braze where you're experiencing the issue.
+2. Right-click the page, then select **Inspect Element**.
+{% endtab %}
 
-### Clarify expected versus actual behavior
+{% tab Safari %}
+1. Launch Safaris, then from the menu bar at the top of your screen, select **Safari** > **Settings**.
+2. In the **Advanced** tab, check **Show features for web developers**.
+3. Go to the page in Braze where you're experiencing the issue, then right-click and select **Inspect Element**.
+{% endtab %}
+{% endtabs %}
 
-Let us know what you were expecting and what actually happened. This can help us narrow down the possible causes of the issue.
+#### Step 4.2: Get console logs
 
-### Attach relevant images
+{% tabs %}
+{% tab Chrome %}
+1. From your developer tools, select the **Console** tab.
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Chrome browser.]()
+{% endtab %}  
+  
+{% tab Firefox %}
+1. From your developer tools, select the **Console** tab.
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Firefox browser.]()
+{% endtab %}
 
-Consider attaching a screenshot to illustrate the problem. Providing these images can significantly aid our understanding of the issue and speed up the resolution process.
+{% tab Safari %}
+1. From your developer tools, select the **Console** tab.
+2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Safari browser.]()
+{% endtab %}
+{% endtabs %}
 
-### Assess the impact
+#### Step 4.3: Get network logs
 
-Select the appropriate severity level to help us assign the right resources to address the problem. 
+Network logs (also known as HAR logs) contain a history of network requests made between your browser and the Braze server, which helps us troubleshoot the individual components on the page causing issues.
+
+{% tabs %}
+{% tab Chrome %}
+1. From your developer tools, select **Network** > **Fetch/XHR**.
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Chrome browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
+{% endtab %}  
+  
+{% tab Firefox %}
+1. From your developer tools, select **Network** > **XHR**.
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "XHR" tab in a Firefox browser.]()
+{% endtab %}
+
+{% tab Safari %}
+1. From your developer tools, select **Network**, then select the filter dropdown and choose **Fetch/XHR**.
+2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Safari browser.]()
+{% endtab %}
+{% endtabs %}
+
+### Step 5: Submit your support case
+
+When you're ready, select ... to submit your support case.
+
+## Managing designated support contacts
 
 {% alert important %}
-Marking an an issue as "Critical" means your production instance is down and all work within Braze has stopped.
+Only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) can manage designated support contacts.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}
+Designated support contacts can access and reply to any support cases submitted by members of your organization. Your maximum number of contacts is determined by your contract. To increase your limit, contact your customer success manager.
+
+{% tabs local %}
+{% tab another user %}
+To make another user a designated support contact:
+
+1. Go to **Settings** > **Company Users**.
+2. Search using the user's name or email address, then select them from the list.
+3. Under **Department**, select their department from the dropdown, then check **Set this user as a Designated Support Contact for Braze Support Portal**.
+4. When you're finished, select **Update user**. They'll be sent an email prompting them to finish setting up their account.
+
+![The checkbox for setting a user as a designated support contact.]()
+{% endtab %}
+
+{% tab yourself %}
+To make yourself a designated support contact:
+
+1. This.
+2. This.
+3. This.
+
+![ALT_TEXT.]()
+{% endtab %}
+{% endtabs %}
