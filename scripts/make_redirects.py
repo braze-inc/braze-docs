@@ -19,7 +19,7 @@ def get_changed_files():
     changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
 
     if not changed_files:
-        print("Error: Git can't find any renamed files in this branch, so no redirects were created.")
+        print("Error: Git can't find any renamed files committed in this branch.\nNote that redirects are only created for renamed files if they're 'committed' and not just 'added' in this branch.")
         return []
     
     return changed_files
@@ -65,11 +65,25 @@ def create_redirect(line):
 def main():
     changed_files = get_changed_files()
     
-    with open(REDIRECT_FILE, 'a') as f:
+    with open(REDIRECT_FILE, 'r+') as f:
+        lines = f.readlines()
+
+        # Remove any existing placeholder comment
+        lines = [l for l in lines if l.strip() != "// validurls['OLD'] = 'NEW';"]
+
+        # Append any new redirects
         for line in changed_files:
-            formatted_redirect = create_redirect(line)
-            if formatted_redirect:
-                f.write(formatted_redirect + "\n")
+            redirect_line = create_redirect(line)
+            if redirect_line:
+                lines.append(redirect_line + "\n")
+
+        # Add blank line, placeholder, blank line at the end
+        lines.append("\n// validurls['OLD'] = 'NEW';\n")
+
+        # Rewrite file
+        f.seek(0)
+        f.truncate()
+        f.writelines(lines)
 
 if __name__ == "__main__":
     main()
