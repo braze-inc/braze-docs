@@ -2,18 +2,19 @@
 
 # DESCRIPTION
 #
-# Usage: ./bdocs credirects
+# Usage: ./bdocs mredirects
 
+import os
 import re
 import subprocess
 
-# Paths (assuming these are sourced or set elsewhere in your environment)
-redirect_file = "./assets/js/broken_redirect_list.js"
-project_root = "./"  # Adjust to your actual root if needed
+# Global variables
+PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
+REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
 
 # Using Git, get the list of files that have been renamed.
 def get_changed_files():
-    cmd = f"git diff -M --summary develop HEAD -- {project_root}_docs"
+    cmd = f"git diff -M --summary develop HEAD -- {PROJECT_ROOT}_docs"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     # Filter lines that start with "rename" or " rename"
     changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
@@ -64,7 +65,7 @@ def main():
     changed_files = get_changed_files()
     
     # Process each line and write to redirect file
-    with open(redirect_file, 'a') as f:
+    with open(REDIRECT_FILE, 'a') as f:
         for line in changed_files:
             formatted_redirect = create_redirect(line)
             if formatted_redirect:
