@@ -41,7 +41,7 @@ Choose the option that best fits your needs:
 
 To view each store integration and configure advanced settings, select a store in the dropdown menu.
 
-!["Integration settings" with a dropdown menu to select a Shopify store.][4]{: style="max-width:80%;"}
+!["Integration settings" with a dropdown menu to select a Shopify store.][4]
 
 ## Syncing users across stores
 
