@@ -13,6 +13,14 @@ search_rank: 1
 
 When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based on them like you can for custom events.
 
+## Entitlements {#entitlements}
+
+You can have up to 1,000 custom attributes per workspace. If you need to increase this limit, contact your Braze account manager for more information.
+
+As your workspace approaches the maximum number of custom attributes, you'll receive notifications in the dashboard and by email to help you stay on track.
+
+Even after reaching the limit, you'll still be able to update your existing custom attributes. However, you won't be able to create new custom attributes. Any data received for custom attributes that don't already exist will not be processed.
+
 ## Managing custom attributes
 
 To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
@@ -42,14 +50,6 @@ You can add a description to a custom attribute after it's created if you have t
 ### Adding tags
 
 You can add tags to a custom attribute after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of attributes. 
-
-### Entitlements
-
-Braze will limit the number of custom attributes that can be created in each workspace in your account. Typically, the maximum capacity is 1,000 custom attributes per workspace, but may be increased upon request. Please reach out to your account team for more details.
-
-If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
-
-When a workspace has too many custom attributes, no new attributes may be created, and Braze will ignore any data received for custom attributes that do not already exist. (However, existing custom attributes may still be updated.)
 
 ### Removing custom attributes
 

@@ -25,6 +25,14 @@ Some common custom event use cases include:
 - Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
+## Entitlements {#entitlements}
+
+You can have up to 2,000 custom events per workspace. If you need to increase this limit, contact your Braze account manager for more information.
+
+As your workspace approaches the maximum number of custom events, you'll receive notifications in the dashboard and by email to help you stay on track.
+
+Even after reaching the limit, existing custom events can still be received. However, you won't be able to create new custom events. Any data received for custom events that don't already exist will not be processed.
+
 ## Managing custom events
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.
