@@ -16,8 +16,11 @@ REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
 def get_changed_files():
     cmd = f"git diff -M --summary develop HEAD -- {PROJECT_ROOT}_docs"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    # Filter lines that start with "rename" or " rename"
     changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
+
+    if not changed_files:
+        print("Error: Git can't find any renamed files in this branch, so no redirects were created.")
+        return []
     
     return changed_files
 
@@ -45,33 +48,24 @@ def create_redirect(line):
     # (strip leading slash, if any)
     trailing_path = after_braces.strip()
     
-    # Combine to form full old & new
-    # old_in_braces, new_in_braces might still have .md in them
-    # trailing_path might also have .md
-
     old_full_path = f"/{leading_path}{old_in_braces}{trailing_path}"
     new_full_path = f"/{leading_path}{new_in_braces}{trailing_path}"
     
-    # Clean underscores and strip .md
     old_full_path = old_full_path.replace("/_", "/").replace(".md", "")
     new_full_path = new_full_path.replace("/_", "/").replace(".md", "")
 
-    # Return the final redirect line
+    print("Redirects created successfully!")
     return f"validurls['{old_full_path}'] = '{new_full_path}';"
 
 
 def main():
-    # Fetch changed files
     changed_files = get_changed_files()
     
-    # Process each line and write to redirect file
     with open(REDIRECT_FILE, 'a') as f:
         for line in changed_files:
             formatted_redirect = create_redirect(line)
             if formatted_redirect:
                 f.write(formatted_redirect + "\n")
-    
-    print("Redirects added successfully!")
 
 if __name__ == "__main__":
     main()
