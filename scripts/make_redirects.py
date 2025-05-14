@@ -34,14 +34,12 @@ def get_renamed_files():
 def create_redirect(line):
      # Save original for debugging
     original_line = line.strip()
-    print(f"\n[orig] {original_line}")
 
     # Remove 'rename ' and percentage '(98%)'. For example:
     #   before: rename _docs/_contributing/{yaml => jekyll}/metadata.md (100%)
     #   after:  _docs/_contributing/{yaml => jekyll}/metadata.md
     line = line.split(" ", 1)[1]
     line = re.sub(r"\s\(\d+%\)$", "", line)
-    print(f"[trim] {line}")
 
     # Create group using '{}' then '=>' to split into subgroups. For example:
     #   regex_group:  {yaml => jekyll}
@@ -50,7 +48,6 @@ def create_redirect(line):
     regex_group = re.search(r"{([^}]+) => ([^}]+)}", line)
     subgroup_old = regex_group.group(1)
     subgroup_new = regex_group.group(2)
-    print(f"[braces] subgroup_old={subgroup_old} | subgroup_new={subgroup_new}")
     
     # Get the relative path to renamed file or directory. For example:
     #   before: _docs/_contributing/{yaml => jekyll}/metadata.md
