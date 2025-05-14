@@ -36,6 +36,6 @@ You can now [preview your emails][96] based on your customer's platform, either 
 
 
 [92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
-[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
+[94]: {{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/
 [95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
 [96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision

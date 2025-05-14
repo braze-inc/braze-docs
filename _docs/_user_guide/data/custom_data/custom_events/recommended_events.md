@@ -30,6 +30,8 @@ Recommended events function similarly to [custom events]({{site.baseurl}}/user_g
 - `ecommerce.cart_updated`
 - `ecommerce.checkout_started`
 - `ecommerce.order_placed`
+- `ecommerce.order_refunded`
+- `ecommerce.order_cancelled`
 
 #### eCommerce Canvas templates
 

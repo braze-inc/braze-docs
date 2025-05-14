@@ -1,3 +1,5 @@
+## Relationship tables
+
 ### `SHARED`
 
 ```json
@@ -34,4 +36,3 @@
     }
 }
 ```
-

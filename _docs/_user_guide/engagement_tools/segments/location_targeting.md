@@ -1,7 +1,7 @@
 ---
 nav_title: Location Targeting
 article_title: Location Targeting
-page_order: 6.5
+page_order: 10
 page_type: tutorial
 tool: 
 - Segments

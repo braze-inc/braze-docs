@@ -1,9 +1,11 @@
 ---
 nav_title: "POST: Duplicate Canvases"
+article_title: "POST: Duplicate Canvases"
+search_tag: Endpoint
+page_order: 5
 layout: api_page
 page_type: reference
-alias: /post_duplicate_canvases/
-description: "This article outlines details about the Duplicating Canvases endpoint."
+description: "This article outlines details about the Duplicate Canvases endpoint."
 ---
 
 {% api %}
