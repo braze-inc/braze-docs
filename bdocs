@@ -8,8 +8,8 @@ set -e
 
 # The project's root directory and redirect file.
 export PROJECT_ROOT="$(dirname "$(realpath "$0")")"
-export REDIRECT_FILE="./assets/js/broken_redirect_list.js"
-export REDIRECT_MATCHES="./scripts/temp/redirect_matches.json"
+export REDIRECT_FILE="$PROJECT_ROOT/assets/js/broken_redirect_list.js"
+export REDIRECT_MATCHES="$PROJECT_ROOT/scripts/temp/redirect_matches.json"
 
 # All scripts exported so they can source bdocs and call each other if needed.
 export DEPLOY="$PROJECT_ROOT/scripts/create_deploy_text.sh"
@@ -17,6 +17,7 @@ export RELEASE="$PROJECT_ROOT/scripts/create_release_text.sh"
 export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
 export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
+export MREDIRECTS="$PROJECT_ROOT/scripts/make_redirects.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
 
@@ -45,6 +46,7 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  mredirects     Make redirects for all renamed files in this branch
   fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
   syntax         Print all unique Markdown syntax supported by Braze Docs
@@ -181,6 +183,9 @@ case $1 in
         logger "$ULINKS" "$2"
 
         # rm "$REDIRECT_MATCHES"
+        ;;
+    mredirects)
+        "$MREDIRECTS"
         ;;
     fblinks)
         # require_git_fetch
