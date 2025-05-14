@@ -405,7 +405,6 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditio
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
-
 validurls['/docs/help/webinars/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/ab_and_multivariate_testing/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/building_a_strategy_for_android_oreo/'] = '/docs/help/home/';
@@ -516,7 +515,6 @@ validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_t
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/'] = '/docs/user_guide/engagement_tools/testing/random_bucket_numbers/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
 
-
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/';
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/duplicating_segments_and_campaigns/#cloning-a-canvas'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#cloning-a-canvas';
 
@@ -601,7 +599,6 @@ validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_pri
 validurls['/docs/user_guide/message_building_by_channel/push/push_primer_messages'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages';
 validurls['/docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages';
 
-
 validurls['/docs/day-of-custom-attribute-behavior'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#time';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
@@ -635,7 +632,6 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/create
 
 validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
 validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
-
 
 validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/';
 
@@ -845,7 +841,6 @@ validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_
 
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api';
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/';
-
 
 validurls['/docs/user_guide/onboarding_with_braze/subscription_and_usage/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
 validurls['/docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/'] = '/docs/user_guide/administrative/app_settings/workspaces/';
@@ -1192,7 +1187,6 @@ validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
 
 validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
 
-
 validurls['/docs/hidden/archive_docs/ios_14/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/';
 validurls['/docs/hidden/archive_docs/ios_15/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_15/';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_16/';
@@ -1283,7 +1277,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
 validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
-
 
 validurls['/partners/gimbal/'] = '/partners/infillion/';
 
@@ -2233,7 +2226,6 @@ validurls['/docs/developer_guide/platforms/swift/sample_apps'] = '/docs/develope
 validurls['/docs/developer_guide/platforms/android/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_privacy-questionnaire';
 validurls['/docs/developer_guide/platforms/swift/privacy_manifest'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest';
 
-
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/#internationalize-campaigns'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
 validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/';
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages';
@@ -2564,7 +2556,6 @@ validurls['/docs/partners/message_personalization/dynamic_content/offerfit'] = '
 validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
 validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
-
 
 
 // validurls['OLD'] = 'NEW';
