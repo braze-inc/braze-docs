@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-# DESCRIPTION
+# Uses 'git diff' to track renamed files or directories, then creates redirects 
+# in 'assets/js/broken_redirect_list.js'. Note that redirects are only created 
+# for renamed files if they're 'committed', not just 'added' to the branch.
 #
 # Usage: ./bdocs mredirects
 
@@ -11,6 +13,7 @@ import subprocess
 # Global variables
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
 REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
+
 
 # Uses Git to return a list of renamed files and directories in this format:
 #   files:       rename _docs/_contributing/{bdocs.md => test.md} (100%)
@@ -113,6 +116,7 @@ def main():
         f.seek(0)
         f.truncate()
         f.writelines(unique_lines)
+
 
 if __name__ == "__main__":
     main()
