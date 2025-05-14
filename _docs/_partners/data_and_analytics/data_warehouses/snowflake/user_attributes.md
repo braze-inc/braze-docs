@@ -6,80 +6,123 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Default user profile attributes
+# User profile attributes
 
-> This page serves as a reference for the default attribute views in Snowflake. There are three views, each designed for a specific use case with its own performance considerations.
+> This page serves as a reference for the default and custom attribute views in Snowflake. There are three views for default attributes and three views for custom attributes, each designed for a specific use case with its own performance considerations.
 
 {% alert important %} 
 User profile attributes are currently in beta for Snowflake Data Sharing customers. If you're using Snowflake Data Sharing and would like access to this beta, contact your customer success manager or Braze Support.
 {% endalert %}
 
-## Available views
+# Available views
+- **Default Attributes** 
+  - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`  
+  - `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
+  - `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+- **Custom Attributes**  
+  - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
+  - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
+  - `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 
-- `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`  
-- `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
-- `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+## User profile snapshots
+
+These view provides a periodic snapshot of user profile default attributes. The data is delayed by up to 12 hours, making it useful for queries that don't require real-time updates. 
+
+ - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
+ - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
 
 ### `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
-
-This view provides a periodic snapshot of user profile default attributes. The data is delayed by up to 8 hours, making it useful for queries that don't require real-time updates.
 
 #### Schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
-| `APP_GROUP_ID`  | VARCHAR       |
-| `USER_ID`       | VARCHAR       |
-| `TIME`          | NUMBER        |
-| `UPDATE_SOURCE` | VARCHAR       |
+| `APP_GROUP_ID` | VARCHAR |
+| `APP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
 | `SF_UPDATED_AT` | TIMESTAMP_NTZ |
-| `EXTERNAL_ID`   | VARCHAR       |
-| `FIRST_NAME`    | VARCHAR       |
-| `LAST_NAME`     | VARCHAR       |
-| `EMAIL`         | VARCHAR       |
-| `GENDER`        | VARCHAR       |
-| `PHONE`         | VARCHAR       |
-| `DOB`           | VARCHAR       |
-| `TIME_ZONE`     | VARCHAR       |
-| `HOME_CITY`     | VARCHAR       |
-| `COUNTRY`       | VARCHAR       |
-| `LANGUAGE`      | VARCHAR       |
+| `EXTERNAL_ID` | VARCHAR |
+| `FIRST_NAME` | VARCHAR |
+| `LAST_NAME` | VARCHAR |
+| `EMAIL` | VARCHAR |
+| `GENDER` | VARCHAR |
+| `PHONE` | VARCHAR |
+| `DOB` | VARCHAR |
+| `TIME_ZONE` | VARCHAR |
+| `HOME_CITY` | VARCHAR |
+| `COUNTRY` | VARCHAR |
+| `LANGUAGE` | VARCHAR |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-#### Usage notes
 
-* Provides a snapshot of user attributes with up to an **8-hour delay**.
+### `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`
+
+#### Schema
+
+| Column name     | Data type     |
+|-----------------|---------------|
+| `APP_GROUP_ID` | VARCHAR |
+| `APP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
+| `SF_UPDATED_AT` | TIMESTAMP_NTZ |
+| `CUSTOM_ATTRIBUTES` | VARIANT |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation}  
+
+### User profile snapshots - usage notes
+
+* Provides a snapshot of user attributes with up to a **12-hour delay**.
 * Performs well for queries that don't require real-time accuracy.
 * Faster query execution, particularly when filtering on attributes other than `USER_ID`.
 * **Limitation:** Data is not up to date in real time.
 
-### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED`
+## Real time user profile views
 
 This view provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
 
+### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED`
 #### Schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
-| `APP_GROUP_ID`  | VARCHAR       |
-| `USER_ID`       | VARCHAR       |
-| `TIME`          | NUMBER        |
-| `UPDATE_SOURCE` | VARCHAR       |
-| `SF_UPDATED_AT` | TIMESTAMP_NTZ |
-| `EXTERNAL_ID`   | VARCHAR       |
-| `FIRST_NAME`    | VARCHAR       |
-| `LAST_NAME`     | VARCHAR       |
-| `EMAIL`         | VARCHAR       |
-| `GENDER`        | VARCHAR       |
-| `PHONE`         | VARCHAR       |
-| `DOB`           | VARCHAR       |
-| `TIME_ZONE`     | VARCHAR       |
-| `HOME_CITY`     | VARCHAR       |
-| `COUNTRY`       | VARCHAR       |
-| `LANGUAGE`      | VARCHAR       |
+| `APP_GROUP_ID` | VARCHAR |
+| `APP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
+| `SF_UPDATED_AT` | TIMESTAMP_LTZ |
+| `EXTERNAL_ID` | VARCHAR |
+| `FIRST_NAME` | VARCHAR |
+| `LAST_NAME` | VARCHAR |
+| `EMAIL` | VARCHAR |
+| `GENDER` | VARCHAR |
+| `PHONE` | VARCHAR |
+| `DOB` | VARCHAR |
+| `HOME_CITY` | VARCHAR |
+| `COUNTRY` | VARCHAR |
+| `LANGUAGE` | VARCHAR |
+| `TIME_ZONE` | VARCHAR |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-#### Usage notes
+### `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED`
+#### Schema
+
+| Column name     | Data type     |
+|-----------------|---------------|
+| `APP_GROUP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
+| `SF_UPDATED_AT` | TIMESTAMP_NTZ |
+| `APP_ID` | VARCHAR |
+| `CUSTOM_ATTRIBUTES` | OBJECT |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation}
+
+
+### Real time user profile views - usage notes
 
 * Provides up-to-date user attributes with minimal delay (~10 minutes).
 * Useful for real-time analysis and scenarios where recent data is required.
@@ -88,55 +131,73 @@ This view provides near real-time updates on user profile attributes, with data 
     * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
     * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
+## Historical change logs
+
+This view stores historical change logs of user attributes, capturing changes with a 12-hour granularity.
+
 ### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED`
-
-This view stores historical change logs of user attributes, capturing changes with an 8-hour granularity.
-
 #### Schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
-| `APP_GROUP_ID`  | VARCHAR       |
-| `USER_ID`       | VARCHAR       |
-| `TIME`          | NUMBER        |
-| `UPDATE_SOURCE` | VARCHAR       |
+| `APP_GROUP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `APP_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
 | `SF_UPDATED_AT` | TIMESTAMP_NTZ |
-| `EXTERNAL_ID`   | VARCHAR       |
-| `FIRST_NAME`    | VARCHAR       |
-| `LAST_NAME`     | VARCHAR       |
-| `EMAIL`         | VARCHAR       |
-| `GENDER`        | VARCHAR       |
-| `PHONE`         | VARCHAR       |
-| `DOB`           | VARCHAR       |
-| `TIME_ZONE`     | VARCHAR       |
-| `HOME_CITY`     | VARCHAR       |
-| `COUNTRY`       | VARCHAR       |
-| `LANGUAGE`      | VARCHAR       |
-| `EFF_DT`        | TIMESTAMP_NTZ |
-| `END_DT`        | TIMESTAMP_NTZ |
+| `EXTERNAL_ID` | VARCHAR |
+| `FIRST_NAME` | VARCHAR |
+| `LAST_NAME` | VARCHAR |
+| `EMAIL` | VARCHAR |
+| `GENDER` | VARCHAR |
+| `PHONE` | VARCHAR |
+| `DOB` | VARCHAR |
+| `TIME_ZONE` | VARCHAR |
+| `HOME_CITY` | VARCHAR |
+| `COUNTRY` | VARCHAR |
+| `LANGUAGE` | VARCHAR |
+| `EFF_DT` | TIMESTAMP_NTZ |
+| `END_DT` | TIMESTAMP_NTZ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-#### Usage notes
+### `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED`
+#### Schema
+
+| Column name     | Data type     |
+|-----------------|---------------|
+| `APP_GROUP_ID` | VARCHAR |
+| `USER_ID` | VARCHAR |
+| `APP_ID` | VARCHAR |
+| `TIME` | NUMBER |
+| `UPDATE_SOURCE` | VARCHAR |
+| `SF_UPDATED_AT` | TIMESTAMP_NTZ |
+| `CUSTOM_ATTRIBUTES` | VARIANT |
+| `EFF_DT` | TIMESTAMP_NTZ |
+| `END_DT` | TIMESTAMP_NTZ |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation}
+
+### Historical change logs - usage notes
 
 * Provides a record of historical changes to user attributes.
-* Data is snapshotted every eight hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
+* Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
 * `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
-## Best practices
+# Best practices
 
-### Recommended query usage
+## Recommended query usage
 
-| Use case                                               | Recommended view                                   | Notes                                                                 |
+| Use case                                               | Recommended views                                   | Notes                                                                 |
 |--------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------|
-| **General queries** that do not require recent updates | `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`              | Fast execution, with data up to 8 hours old.                          |
-| Queries requiring the **latest user attributes**       | `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` | Provides near real-time updates but can be slower for large datasets. |
-| **Historical tracking** of attribute changes           | `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED`      | Stores attribute changes with 8-hour granularity.                     |
+| **General queries** that do not require recent updates | `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` and `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`               | Fast execution, with data up to 12 hours old.                          |
+| Queries requiring the **latest user attributes**       | `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` and `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` | Provides near real-time updates but can be slower for large datasets. |
+| **Historical tracking** of attribute changes           | `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` and `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED`      | Stores attribute changes with 12-hour granularity.                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation}
 
-### Performance considerations
+## Performance considerations
 
-* Queries on `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` should return in under 10 seconds for large datasets (~1 billion users) on a large warehouse.
-* Queries on `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` for a single user return in under a minute but scale poorly without `USER_ID` filtering.
-* Queries on over 100 million users in `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` may take several minutes due to per-user aggregation.
+* Queries on `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` or `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED` should return in under 10 seconds for large datasets (~1 billion users) on a large warehouse.
+* Queries on `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` or `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED ` for a single user return in under a minute but scale poorly without `USER_ID` filtering.
+* Queries on over 100 million users in `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` or `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` may take several minutes due to per-user aggregation.
 
 
