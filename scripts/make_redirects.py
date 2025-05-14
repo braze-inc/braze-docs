@@ -14,7 +14,7 @@ REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
 
 # Using Git, get the list of files that have been renamed.
 def get_changed_files():
-    cmd = f"git diff -M --summary develop HEAD -- {PROJECT_ROOT}_docs"
+    cmd = f"git diff -M --summary develop HEAD -- {os.path.join(PROJECT_ROOT, '_docs')}"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
 
