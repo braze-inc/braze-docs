@@ -60,31 +60,25 @@ To view each store integration and configure advanced settings, select a store i
 
 !["Integration settings" with a dropdown menu to select a Shopify store.][4]{: style="max-width:80%;"}
 
-## Shopify user syncing  
+## Syncing users across stores
 
 ### Shopify alias
 
 When you connect multiple stores, synced Shopify users who have logged in or placed an order will receive a new alias in the format: `shopify_customer_id_{{storename}}`.
 
-### Identity management considerations 
+### Braze external ID
 
-You have the option of using the following for your Braze external ID: 
-- Shopify Custom ID
-- Email
-- Hashed Email
-- Custom External ID
+You can choose from the following options for your Braze external ID:
 
-#### Using Shopify Customer ID
+|Option|Description|
+|------|-----------|
+|Shopify Customer ID|If you use Shopify's customer ID as your Braze external ID, each store will generate a unique customer ID for each user. This means that if a user interacts with multiple stores, they will have separate profiles in Braze.|
+|Email, Hashed Email, or Custom External ID|If you use the email, hashed email, or custom external ID types, users who engage with multiple stores will have their profiles merged into a single consolidated profile when they log in or place an order.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-If you use Shopify's customer ID as your Braze external ID, each store will generate a unique customer ID for each user. This means that if a user interacts with multiple stores, they will have separate profiles in Braze.
+### Merged fields
 
-#### Using Email, Hashed Email, or Custom External ID 
-
-If you use the email, hashed email, or custom external ID types, users who engage with multiple stores will have their profiles merged into a single consolidated profile when they log in or place an order.
-
-#### Fields that merge when merging profiles
-
-These are notable fields that will merge when you merge user profiles:
+When a user profile is synced, the following fields will be merged. For full details on merging behavior, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
 - Device information
 - Total session count (combined from both profiles)
@@ -97,36 +91,32 @@ These are notable fields that will merge when you merge user profiles:
 - Message and engagement history
 - Subscription groups
 
-For full details on merging behavior, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
+### Collecting subscribers (optional)
 
-### Collecting subscribers
+You can choose to collect subscribers directly through Braze or through API and SDK alternatives that sync data from Shopify.
 
-You have the option of collecting subscribers directly through Braze or through API and SDK alternatives that sync data from Shopify.
+{% tabs local %}
+{% tab Braze dashboard %}
+You can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
 
-#### Email and SMS subscriber collection (optional) 
+1. [Create a unique subscription group](LINK) for each store you connect. This helps you maintain accurate data about where subscribers are coming from.
+2. Go to **THIS** > **THIS**, then enable email and SMS subscriber collection.
+{% endtab %}
 
-When you connect and configure each Shopify store in Braze, you have the option to enable the email and SMS subscriber collection feature. This feature allows Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group.
+{% tab Braze API or SDKs %}
+Alternatively, you can sync email and SMS marketing opt-in information directly from Shopify using the Braze API or SDKs.
 
-To maintain clean data on where subscribers are coming from, create a unique subscription group for each store you connect.
-
-#### Integrate directly to Braze endpoints (alternative) 
-
-If you decide not to enable the email and SMS subscriber collection through the integration, Braze provides several API and SDK alternatives to sync email and SMS marketing opt-in information directly from Shopify.
-
-##### APIs 
-- [Subscription group endpoints]({{site.baseurl}}/api/endpoints/subscription_groups/) to directly replace what is supported by the integration 
-- [`Users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#set-subscription-groups) to set subscription group data or the [global email subscription state]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)
-- [Braze preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) for more customized marketing opt-in collection options 
-
-##### SDKs 
-- [`NotificationSubscriptionTypes`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#notificationsubscriptiontypes)
-- [`addToSubscriptionGroup`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
-- [`removeFromSubscriptionGroup`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#removefromsubscriptiongroup)
-- [`setEmailNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
+|Option|Resources|
+|------|---------|
+|API |- [Subscription group endpoints]({{site.baseurl}}/api/endpoints/subscription_groups/) to directly replace what is supported by the integration<br>- [`Users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#set-subscription-groups) to set subscription group data or the [global email subscription state]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)<br>- [Braze preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) for more customized marketing opt-in collection options|
+|SDKs |- [`NotificationSubscriptionTypes`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#notificationsubscriptiontypes)<br>- [`addToSubscriptionGroup`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)<br>- [`removeFromSubscriptionGroup`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#removefromsubscriptiongroup)<br>- [`setEmailNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
+{% endtabs %}
 
 ## Shopify data 
 
-### Shopify standard and custom attributes
+### Synced attributes
 
 When you connect more than one store, the following attributes will be synced with the most recent state of the Shopify profile:
 - First Name
@@ -143,7 +133,7 @@ When you connect more than one store, the following attributes will be synced wi
 - Shopify Order Count
 - Shopify Total Spent
 
-### eCommerce recommended events and Shopify custom events 
+### Supported events
 
 #### eCommerce recommended events 
 
@@ -152,6 +142,7 @@ When you connect multiple stores, incoming eCommerce recommended events will inc
 ![An action-based Canvas with a trigger to enter users who perform the `ecommerce.order_placed` custom event.][5]{: style="max-width:80%;"}
 
 The supported eCommerce recommended events within the Shopify integration are:
+
 - `ecommerce.product_viewed`
 - `ecommerce.cart_updated`
 - `ecommerce.checkout_started`
@@ -166,6 +157,7 @@ Incoming Shopify custom events include an event property called `shopify_storefr
 ![An action-based Canvas with a trigger to enter users who perform the `shopify_paid_order` custom event.][6]{: style="max-width:80%;"}
 
 Supported Shopify custom events include:
+
 - `shopify_fulfilled_order`
 - `shopify_partially_fulfilled_order`
 - `shopify_paid_order`
