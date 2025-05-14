@@ -863,7 +863,7 @@ In-App Message
 Email, Content Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. 
+{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. <br><br>For Banners, this is the total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.
 
 {::nomarkdown}
 <span class="calculation-line">

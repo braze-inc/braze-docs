@@ -9,3 +9,9 @@ tool:
   - Reports
   
 ---
+
+# Banners reporting
+
+> Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance.
+
+{% multi_lang_include campaign_analytics.md channel="banner" %}
