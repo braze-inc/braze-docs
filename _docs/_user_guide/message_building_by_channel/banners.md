@@ -4,7 +4,7 @@ article_title: Banners
 page_order: 0
 layout: dev_guide
 guide_top_header: "Banners"
-guide_top_text: "With Banners, you can design and place targeted inline messages in your app or website that stay visible as long as they’re relevant and update automatically with real-time personalization at each session start."
+guide_top_text: "With Banners, you can design and place targeted inline messages in your app or website that stay visible as long as they’re relevant and update automatically with real-time personalization at each session start. <br><br>Banners are available as an add-on feature. To get started with Banners, reach out to your Braze customer success manager."
 description: "This landing page is home to Braze Banners. Here, you can find articles on how to create a Banner, how to customize your Banners, testing, reporting, and more."
 channel:
   - banners

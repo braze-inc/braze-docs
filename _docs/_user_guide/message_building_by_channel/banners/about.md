@@ -40,9 +40,24 @@ Key features for Banners include:
 
 ## How it works
 
+Banners are inline, embedded messages integrated into your app or website experience. Delivered as dynamically generated HTML content, Banners allow flexible rendering tailored to your design and layout.
+
+They use two key components to designate where and how they display in your app or website:
+
+- **Placement:** Placements are specific locations within your app or website where Banners can appear. Each placement acts as a container or slot designated by your developers during the initial integration. Common examples include the top of your homepage, product detail pages, checkout flows, or custom positions tailored to your UI. Once placements are configured, marketers can assign a banner directly to these areas
+- **Prioritization:** Prioritization controls the order in which multiple Banners compete for the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner.
 
 ## Use cases
 
+| Use case | Explanation |
+| --- | --- |
+| Announcements | Keep relevant announcements like policy changes at the forefront of your app experience. |
+| Personalizing offers | Show tailored promotions based on each user’s browsing history, cart content, subscription tier, and loyalty status. |
+| Targeting new user engagement | Guide onboarding or account setup by walking new users through important setup steps. |
+| Sales and promotions | Promote complementary products persistently and directly on your homepage. Or, keep your time-sensitive promotions visible and actionable, without being disruptive. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integrating Banners
+
+Your developers can create Banner placements for the Braze SDK. For more details on how to integrate with Banners, refer to the [Creating Banner placements]({{site.baseurl}}/developer_guide/banners/creating_placements).
 
