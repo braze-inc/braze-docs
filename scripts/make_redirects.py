@@ -48,9 +48,13 @@ def create_redirect(line):
     # (strip leading slash, if any)
     trailing_path = after_braces.strip()
     
+    # Combine to form full old & new
+    # old_in_braces, new_in_braces might still have .md in them
+    # trailing_path might also have .md
     old_full_path = f"/{leading_path}{old_in_braces}{trailing_path}"
     new_full_path = f"/{leading_path}{new_in_braces}{trailing_path}"
     
+    # Clean underscores and strip .md
     old_full_path = old_full_path.replace("/_", "/").replace(".md", "")
     new_full_path = new_full_path.replace("/_", "/").replace(".md", "")
 
