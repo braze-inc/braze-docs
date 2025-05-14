@@ -18,12 +18,12 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Set up a Shopify store | Already set up at least one Shopify store with Braze. |
+| Set up a Shopify store | Be sure that you've already [set up at least one Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Connecting an additional store
-After you install the Braze app to your Shopify store and install your first store, select the **+ Connect New Store** option.
+After you install the Braze app to your Shopify store and install your first store, select **+ Connect New Store**.
 
 ![The "+ Connect New Store" button on the Shopify integration page.][1]{: style="max-width:80%;"}
 
