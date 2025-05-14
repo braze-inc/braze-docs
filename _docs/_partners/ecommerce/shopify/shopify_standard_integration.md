@@ -143,7 +143,7 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 Select your `external_id` type from the dropdown. 
 
-![“Collect subscribers” section.][10]
+![“Collect subscribers” section.][14]
 
 {% alert important %}
 Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
@@ -184,7 +184,7 @@ You have the option to collect your email or SMS marketing opt-ins from Shopify.
 
 If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
-![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.][13]
+![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.][10]
 
 {% alert note %}
 As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
@@ -241,4 +241,5 @@ Confirm you can view your integration settings, the status of initial data sync,
 [10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
 [11]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}
 [12]: {% image_buster /assets/img/Shopify/configure_settings.png %}
-[13]: {% image_buster /assets/img/Shopify/collect_email_subscribers_2.png %}
+[13]: {% image_buster /assets/img/Shopify/activate_channels_standard.png %}
+[14]: {% image_buster /assets/img/Shopify/external_id_standard.png %}
