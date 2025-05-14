@@ -1730,7 +1730,7 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/content_card
 validurls['/docs/developer_guide/platforms/fireos/content_cards/examples'] = '/docs/developer_guide/content_cards/creating_cards';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/gif'] = '/docs/developer_guide/platforms/fireos/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose';
-validurls['/docs/developer_guide/platforms/fireos/content_cards/jetpack_compose'] = ['/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose']
+validurls['/docs/developer_guide/platforms/fireos/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/style/?tab=jetpack%20compose';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/geofences'] = '/docs/developer_guide/platforms/fireos/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/google_play_privacy'] = '/docs/developer_guide/analytics/managing_data_collection/?sdktab=android';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/in_app_messages'] = '/docs/developer_guide/in_app_messages/';
@@ -2379,11 +2379,11 @@ validurls['/docs/developer_guide/banner_cards/creating_placements/'] = '/docs/de
 
 validurls['/docs/developer_guide/push_notifications/live_notifications/'] = '/docs/developer_guide/live_notifications/';
 validurls['/developer_guide/platforms/android/live_updates'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android&tab=local';
-validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = ['/docs/developer_guide/in_app_messages/customization'];
+validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/gif'] = '/docs/developer_guide/in_app_messages/customization';
 validurls['/docs/developer_guide/platforms/fireos/in_app_messages/customization/app_store_review_prompt/'] = '/docs/developer_guide/in_app_messages/customization/';
 validurls['/docs/developer_guide/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events/';
 
-validurls['/docs/api/endpoints/email/bounce/remove/'] = ['/docs/api/endpoints/email/post_remove_hard_bounces/'];
+validurls['/docs/api/endpoints/email/bounce/remove/'] = '/docs/api/endpoints/email/post_remove_hard_bounces/';
 validurls['/docs/developer_guide/platforms/swift/archived_updates/ios_14/'] = '/docs/developer_guide/platforms/swift/ios_18/';
 validurls['/docs/developer_guide/platforms/android/initial_sdk_setup/optional_gaid_collection/'] = '/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id';
 validurls['/docs/developer_guide/platforms/android/live_updates/'] = '/docs/developer_guide/live_notifications/live_updates/';
