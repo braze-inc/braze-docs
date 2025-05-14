@@ -66,7 +66,6 @@ def create_redirect(line):
     url_old = f"/{path}{subgroup_old}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
     url_new = f"/{path}{subgroup_new}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
 
-    print("Redirects created successfully!")
     return f"validurls['{url_old}'] = '{url_new}';"
 
 
@@ -90,7 +89,8 @@ def remove_duplicates(lines):
 
 def main():
     changed_files = get_renamed_files()
-    
+    redirects_created = False
+
     with open(REDIRECT_FILE, 'r+') as f:
         lines = f.readlines()
 
@@ -102,6 +102,7 @@ def main():
             redirect_line = create_redirect(line)
             if redirect_line:
                 lines.append(redirect_line + "\n")
+                redirects_created = True
 
         # Re-add placeholder comment
         lines.append("\n// validurls['OLD'] = 'NEW';\n")
@@ -114,6 +115,8 @@ def main():
         f.truncate()
         f.writelines(unique_lines)
 
+    if redirects_created:
+        print("Redirects created successfully!")
 
 if __name__ == "__main__":
     main()
