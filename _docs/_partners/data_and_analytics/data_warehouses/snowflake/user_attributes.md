@@ -16,17 +16,18 @@ User profile attributes are currently in beta for Snowflake Data Sharing custome
 
 # Available views
 - **Default Attributes** 
-  - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`  
-  - `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
-  - `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+  - User profile snapshots:  `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`  
+  - Real time user profiles: `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
+  - Historical change logs: `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+ 
 - **Custom Attributes**  
-  - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
-  - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
-  - `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+  - User profile snapshots: `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
+  - Real time user profiles:  `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
+  - Historical change logs: `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 
 ## User profile snapshots
 
-These view provides a periodic snapshot of user profile default attributes. The data is delayed by up to 12 hours, making it useful for queries that don't require real-time updates. 
+These views provide periodic snapshots of user profile attributes. The data is delayed by up to 12 hours, making it useful for queries that don't require real-time updates. 
 
  - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
  - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
@@ -81,7 +82,10 @@ These view provides a periodic snapshot of user profile default attributes. The 
 
 ## Real time user profile views
 
-This view provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
+These views provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
+
+  - `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
+  - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
 
 ### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED`
 #### Schema
@@ -133,7 +137,10 @@ This view provides near real-time updates on user profile attributes, with data 
 
 ## Historical change logs
 
-This view stores historical change logs of user attributes, capturing changes with a 12-hour granularity.
+These views store historical change logs of user attributes, capturing changes with a 12-hour granularity.
+
+- `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+- `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 
 ### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED`
 #### Schema
