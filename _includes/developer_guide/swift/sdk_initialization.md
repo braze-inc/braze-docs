@@ -101,7 +101,7 @@ To initialize the Braze SDK, follow the [standard Swift SDK initialization proce
 
 The Braze Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
-In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for iOS, they can control which of Braze's third-party vendors receive this event and create tags specific to Braze.
+In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for iOS, they can control which of the Braze third-party vendors receive this event and create tags specific to Braze.
 
 ### Step 1: Create a trigger for custom events
 

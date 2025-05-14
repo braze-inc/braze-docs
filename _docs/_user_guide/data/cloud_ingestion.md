@@ -8,12 +8,12 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Braze Cloud Data Ingestion"
-guide_top_text: "<h2>What is it?</h2>Braze Cloud Data Ingestion (CDI) allows you to set up a direct connection from your data storage solution to Braze to sync relevant user or catalog data, and delete users. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion's flexible integration supports complex data structures including nested JSON and arrays of objects. <br><br>**Braze Cloud Data Ingestion capabilities:**<br> - Create a simple integration directly from your data warehouse or file storage solution to Braze in just a few minutes.<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze.<br>- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing.<br><br>**Cloud Data Ingestion can sync data from**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Snowflake"
+guide_top_text: "<h2>What is it?</h2>Braze Cloud Data Ingestion (CDI) allows you to set up a direct connection from your data storage solution to Braze to sync relevant user or catalog data and delete users. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion's flexible integration supports complex data structures, including nested JSON and arrays of objects. <br><br>**Braze Cloud Data Ingestion capabilities:**<br> - Create a simple integration directly from your data warehouse or file storage solution to Braze in just a few minutes.<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze.<br>- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing.<br><br>**Cloud Data Ingestion can sync data from**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Snowflake"
 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
-    link: /docs/user_guide/data/cloud_ingestion/
+    link: /docs/user_guide/data/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: Connected Sources
     link: /docs/user_guide/data/cloud_ingestion/connected_sources/

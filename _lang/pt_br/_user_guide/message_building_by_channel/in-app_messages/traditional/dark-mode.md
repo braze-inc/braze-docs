@@ -22,7 +22,7 @@ Quando o Modo escuro é ativado, os menus e as telas nativas do dispositivo (not
 
 ## Configuração de um tema do modo escuro
 
-A nova opção Modo escuro, localizada na guia Estilo ao [criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), permite adicionar facilmente um tema de cor alternativo para usuários que estão no Modo escuro em seus dispositivos.
+A nova opção Modo escuro, localizada na guia Estilo ao [criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), permite adicionar facilmente um tema de cor alternativo para usuários que estão no Modo escuro em seus dispositivos.
 
 ![Envio de mensagens pelo usuário entre os estilos Modo Claro e Modo Escuro na guia Estilo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
@@ -35,10 +35,6 @@ Você ainda pode usar esse recurso mesmo que seu app não ofereça seu próprio 
 ### Usando o modo escuro de forma consistente
 
 Para usar o modo escuro em todas as mensagens no app, acesse **Modelos** > **Modelos de mensagens no app**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar esta página em **Modelos e mídias.**
-{% endalert %}
 
 A partir daí, selecione [Create Color Profile (Criar perfil de cores][2] ) no menu suspenso. Crie um perfil de cores que se alinhe ao tema do modo escuro. Então, sempre que criar uma versão em modo escuro de uma mensagem no app, você poderá selecionar esse perfil de cor e manter a aparência das mensagens no app consistente.
 

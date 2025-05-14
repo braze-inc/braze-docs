@@ -1,38 +1,38 @@
 ---
-nav_title: Schnell-Push-Kampagnen
-article_title: Schnell-Push-Kampagnen
+nav_title: Schnelle Push-Nachrichten
+article_title: Schnelle Push-Nachrichten
 alias: "/quick_push/"
-description: "Dieser Artikel beschreibt, was Sie bei der Erstellung einer Push-Kampagne mit der Push-Schnellbearbeitung beachten sollten."
+description: "Dieser Artikel beschreibt, was Sie bei der Erstellung einer Push-Kampagne oder eines Canvas mit der Push-Schnellbearbeitung beachten sollten."
 ---
 
-# Schnelle Push-Kampagnen
+# Schnelle Push-Nachrichten
 
-Wenn Sie eine Push-Kampagne in Braze erstellen, können Sie mehrere Plattformen und Geräte auswählen, um per Quick Push eine Nachricht für alle Plattformen in einem Durchgang zu erstellen.
-
-{% alert important %}
-Diese Funktion ist nur für Kampagnen verfügbar.
-{% endalert %}
+Wenn Sie eine Push-Kampagne oder ein Canvas in Braze erstellen, können Sie mehrere Plattformen und Geräte auswählen, um eine Nachricht für alle Plattformen in einem einzigen Bearbeitungsvorgang, dem so genannten Quick Push, zu erstellen.
 
 ## Anwendungsfälle
 
 Diese Art der Bearbeitung eignet sich am besten für die folgenden Anwendungsfälle:
 
-- Mobile Push-Kampagnen, die an mehrere Gerätetypen (z. B. iOS und Android) gesendet werden müssen.
+- Mobile Push-Kampagnen und Canvas-Schritte für Nachrichten, die an mehrere Geräte (z. B. sowohl iOS als auch Android) gesendet werden müssen.
 - Zeitabhängige Push-Benachrichtigungen, die schnell und präzise auf mehrere Plattformen ausgerichtet werden müssen, wobei der Inhalt auf allen Plattformen gleich ist (z. B. aktuelle Nachrichten oder Live-Spiel-Updates).
 
-## Erstellen einer schnellen Push-Kampagne
+## Erstellen einer schnellen Push-Kampagne oder eines Canvas
 
 So erstellen Sie Kampagnen für mehrere Plattformen und Geräte:
 
-1. Gehen Sie zu **Kampagnen** und klicken Sie auf **Kampagne erstellen**.
+1. Erstellen Sie eine Kampagne oder fügen Sie einen [Nachrichten-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) zu einem Canvas hinzu.  
 2. Wählen Sie **Push-Benachrichtigung**.
 3. Wählen Sie die gewünschten Plattformen (Mobile, Web, Kindle) und Mobilgeräte (iOS, Android). Wenn Sie mehrere Geräte auswählen, sind keine Mehrvariantentests möglich.
 
+### Plattformen für eine Kampagne auswählen
 ![Möglichkeit zur Auswahl mehrerer Plattformen für Push-Kampagnen wie Mobilgerät, Web und Kindle oder mehrerer Geräte wie iOS und Android.][1]
 
+### Plattformen für einen Canvas-Schritt auswählen
+![Optionen, um mehrere Plattformen für einen Push-Nachrichten-Schritt auszuwählen, z. B. Mobile, Internet und Kindle, und mehrere Geräte, z. B. iOS und Android.][8]
+
 {:start="4"}
-4\. Klicken Sie auf **Weiter**. Nachdem Sie auf **Weiter** geklickt haben, können Sie Ihre ausgewählten Plattformen oder Geräte nicht mehr ändern.
-5\. Fahren Sie mit dem Einrichten Ihrer Push-Kampagne fort.
+4\. Wählen Sie **Bestätigen**. Nachdem Sie **Bestätigen** ausgewählt haben, können Sie Ihre ausgewählten Plattformen oder Geräte nicht mehr ändern.
+5\. Fahren Sie mit dem Einrichten Ihrer Kampagne oder Ihres Canvas fort.
 
 Der Editor wird etwas anders aussehen als sonst. Lesen Sie weiter, um zu erfahren, was anders ist.
 
@@ -62,9 +62,9 @@ Wenn Sie mehrere Geräte für mobile Plattformen also z. B. sowohl iOS als auch 
 
 ### Gerätespezifische Einstellungen
 
-Sie können plattformspezifische Einstellungen im Editor bearbeiten. Dazu gehören Einstellungen wie [Push-Action-Tasten]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), Benachrichtigungskanäle und -gruppen, TTL, Anzeigepriorität, Töne und mehr.
+Sie können plattformspezifische Einstellungen im Editor bearbeiten. Dazu gehören Einstellungen wie [Push-Action-Tasten]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), Benachrichtigungskanäle und -gruppen, TTL, Anzeigepriorität, Töne und mehr. 
 
-Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den folgenden Artikelsammlungen:
+Beachten Sie, dass Push-Action-Buttons beim Targeting von Quick-Push-Kampagnen sowohl für iOS als auch für Android nicht unterstützt werden. Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den folgenden Artikelsammlungen:
 
 - [iOS-Optionen][6]
 - [Android-Optionen][7]
@@ -73,6 +73,7 @@ Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den fol
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
+[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios

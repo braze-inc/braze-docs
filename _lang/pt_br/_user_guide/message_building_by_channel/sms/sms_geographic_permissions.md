@@ -40,7 +40,7 @@ As alterações entrarão em vigor depois que você selecionar **Salvar**. A rem
 
 Certos países têm um risco maior de bombeamento de tráfego de SMS. Esses países são indicados por uma tag de **Alto risco** no menu suspenso de países.
 
-![O país está em um nível mais baixo, com o Azerbaijão tendo uma tag de "Alto risco".][4]{: style="max-width:80%;"}
+![O menu suspenso de países com o Azerbaijão tendo uma tag de "Alto Risco".][4]{: style="max-width:80%;"}
 
 Se você permitir o envio nesses países, deverá primeiro reconhecer o risco de fazê-lo antes que o país seja adicionado à sua lista de permissões.
 
@@ -50,7 +50,7 @@ Limite os países em sua lista de permissões apenas àqueles necessários para 
 
 ## Visibilidade de envios bloqueados
 
-As tentativas de envio para países que não estão em sua lista de permissões serão abortadas. As mensagens abortadas serão registradas no [Evento de engajamento de mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) e no [evento de engajamento com mensagem de aborto de SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+As tentativas de envio para países que não estão em sua lista de permissões serão abortadas. As mensagens abortadas serão registradas no [Evento de engajamento de mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) e no [evento de engajamento com mensagem de aborto de SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 As mensagens abortadas causadas por envios bloqueados serão exibidas como `Abort_Type = "blocked_recipient_country"` com o registro de aborto detalhando o país bloqueado.
 

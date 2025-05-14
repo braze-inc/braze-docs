@@ -13,7 +13,7 @@ channel:
 
 > Push-Benachrichtigungen eignen sich hervorragend für zeitkritische Handlungsaufforderungen und um Nutzer, die die App schon länger nicht mehr besucht haben, wieder zu aktivieren. Erfolgreiche Push-Kampagnen führen den Nutzer direkt zum Inhalt und demonstrieren den Wert Ihrer Anwendung.
 
-Denken Sie daran, dass die Nutzer sich für Push entscheiden müssen, um Ihre Nachrichten zu erhalten. Es ist also eine gute Idee, Ihren Kunden mit In-App-Nachrichten zu erklären, warum Sie ihnen Push-Benachrichtigungen senden möchten und welchen Nutzen die Aktivierung von Push für sie hat. Dieser Vorgang wird [Push Priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/) genannt.
+Denken Sie daran, dass die Nutzer sich für Push entscheiden müssen, um Ihre Nachrichten zu erhalten. Es ist also eine gute Idee, Ihren Kunden mit In-App-Nachrichten zu erklären, warum Sie ihnen Push-Benachrichtigungen senden möchten und welchen Nutzen die Aktivierung von Push für sie hat. Dieser Vorgang wird [Push Priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) genannt.
 
 ![Beispiel für Push-Nachrichten über Apple Produkte.][1]{: height="400px"}  ![Beispiel für eine Push-Nachricht von Stopwatch auf dem Startbildschirm eines iPhones, die lautet: „Hallo! Dies ist ein iOS Push".][2]{: height="400px"}
 
@@ -37,9 +37,9 @@ Weitere Informationen zur erneuten Interaktion mit ausgetretenen Nutzer:innen fi
 
 Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website oder App zu integrieren. Detaillierte Schritte finden Sie in unseren Integrationsanleitungen für jede Plattform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
-- [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
+- [Internet]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## Vorschriften für Push-Nachrichten
 

@@ -59,10 +59,6 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`users.track` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
-{% endalert %}
-
 ![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
 
 #### Request body
@@ -86,7 +82,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 {% endraw %}
 
 {% alert note %}
-カスタム属性カウンターが更新 (増加または減少) されるたびに、[データポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)が消費され、これは総消費量に加算されます。
+カスタム属性カウンターが更新 (増加または減少) されるたびに、[データポイント]({{site.baseurl}}/user_guide/data/data_points/)が消費され、これは総消費量に加算されます。
 {% endalert %}
 
 ### ユースケース:最初のキャンバスから2番目のキャンバスをトリガーする
@@ -115,10 +111,6 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`canvas.trigger.send` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
-{% endalert %}
-
 ![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
 
 #### Request body
@@ -144,7 +136,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 - ユーザー・プロフィールの更新には追加の[データ・ポイントが]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count)発生するが、メッセージング・エンドポイントを通じて別のメッセージがトリガーされることはない。
 - [匿名ユーザー]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles)をターゲットにしたい場合は、Webhook のリクエスト本文で、`external_id` の代わりに`braze_id` を使用できます。
 - Braze-to-Braze Webhook を[template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) として保存し、再度使用することができます。
-- [メッセージ・アクティビティ・ログを]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/)チェックして、ウェブフックの失敗を確認し、トラブルシューティングすることができる。
+- [メッセージアクティビティログを]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)チェックして、Webhook の失敗を確認し、トラブルシューティングすることができる。
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}

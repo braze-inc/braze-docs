@@ -52,11 +52,14 @@ guide_featured_list:
     link: /docs/developer_guide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
   - name: "Live Activities FAQ"
-    link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
+    link: /docs/developer_guide/push_notifications/live_notifications/?sdktab=swift#swift_faq
     image: /assets/img/braze_icons/swift.svg
   - name: "Liquid FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: "Push FAQ"
+    link: /docs/user_guide/message_building_by_channel/push/faq/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 
 guide_menu_title: "Best practices"

@@ -32,9 +32,9 @@ Hier finden Sie Richtlinien für die Auswahl der Variablen:
 | Variablenfeld | Beschreibung |
 | --- | --- |
 | `Catalog` | Der Name des Katalogs, den Sie für das Nutzertargeting verwenden. |
-| `Catalog field`| Das Feld in Ihrem Katalog, das die gleichen Werte wie Ihr `Custom event property` enthält. Dies ist oft eine Art von ID. Im Anwendungsfall des elektronischen Handels wäre dies `shopify_id`. |
-| `Custom event` | Der Name Ihres benutzerdefinierten Ereignisses, das dasselbe Ereignis ist, das eine Eigenschaft mit Werten enthält, die zu Ihrem `Catalog field` passen. Im Anwendungsfall des elektronischen Handels wäre dies `Made Order`. |
-| `Custom event property` | Der Name der angepassten Event-Eigenschaft, der mit den Werten in `Catalog field` übereinstimmt. Im Anwendungsfall des E-Commerce-Beispiels wäre dies `Shopify_ID.`|
+| `Catalog field`| Das Feld in Ihrem Katalog, das die gleichen Werte wie Ihr `Custom event property` enthält. Dies ist oft eine Art von ID. Im E-Commerce Anwendungsfall wäre dies `shopify_id`. |
+| `Custom event` | Der Name Ihres benutzerdefinierten Ereignisses, das dasselbe Ereignis ist, das eine Eigenschaft mit Werten enthält, die zu Ihrem `Catalog field` passen. Im E-Commerce Anwendungsfall wäre dies `Made Order`. |
+| `Custom event property` | Der Name der angepassten Event-Eigenschaft, der mit den Werten in `Catalog field` übereinstimmt. Im E-Commerce-Beispiel wäre dies der Fall `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
@@ -98,7 +98,7 @@ Ja So wie SQL-Segmenterweiterungen auf Ihr Kontingent an Segmenterweiterungen an
 
 ### Ein Template eignet sich nicht für ein bestimmtes Katalogsegment. Wie soll ich das einrichten?
 
-Wenden Sie sich an Ihren Kundenbetreuer oder den [Braze-Support]({{site.baseurl}}/help/support/), wenn Sie weitere Hilfe benötigen.
+Wenden Sie sich an Ihren Kundenbetreuer oder den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/), wenn Sie weitere Hilfe benötigen.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

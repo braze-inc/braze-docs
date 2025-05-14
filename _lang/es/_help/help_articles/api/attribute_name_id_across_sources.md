@@ -24,7 +24,7 @@ Los atributos de campaña y Canvas también están disponibles en el [punto fina
 
 ### Currents
 
-Los atributos de campaña y Canvas están vinculados a [eventos de interacción de mensajes]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) de Currents. Esto es importante para que puedas determinar a qué campaña o componente de Canvas está asociado un envío push o una apertura de correo electrónico.
+Los atributos de campaña y Canvas están vinculados a [eventos de interacción de mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) de Currents. Esto es importante para que puedas determinar a qué campaña o componente de Canvas está asociado un envío push o una apertura de correo electrónico.
 
 ## Atributos de la campaña
 

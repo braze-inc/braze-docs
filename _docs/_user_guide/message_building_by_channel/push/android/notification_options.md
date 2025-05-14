@@ -17,7 +17,7 @@ channel:
 
 ## Silent notifications
 
-When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message), you **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, see [Silent push notifications]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
+When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message), you **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, see [Silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
 ## Notification groups
 

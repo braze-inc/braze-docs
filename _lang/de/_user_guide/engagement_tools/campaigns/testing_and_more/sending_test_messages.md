@@ -23,7 +23,7 @@ Bevor Sie Ihre Messaging-Kampagne testen, ist es wichtig, Ihre Testnutzer:innen 
 
 ### Optional: Erstellen Sie eine Inhaltstestgruppe
 
-Eine bequeme Möglichkeit, Ihre Testnutzer zu organisieren, ist die Erstellung einer [Content-Test-Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), die eine Gruppe von Nutzern umfasst, die Testnachrichten von Kampagnen erhalten werden. Sie können diese Testgruppe in das Feld **Inhaltstestgruppen hinzufügen** unter **Testempfänger** in Ihrer Kampagne hinzufügen und Ihre Tests starten, ohne einzelne Testbenutzer zu erstellen oder hinzuzufügen.
+Eine bequeme Möglichkeit, Ihre Testnutzer zu organisieren, ist die Erstellung einer [Content-Test-Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), die eine Gruppe von Nutzern umfasst, die Testnachrichten von Kampagnen erhalten werden. Sie können diese Testgruppe in das Feld **Inhaltstestgruppen hinzufügen** unter **Testempfänger** in Ihrer Kampagne hinzufügen und Ihre Tests starten, ohne einzelne Testbenutzer zu erstellen oder hinzuzufügen.
 
 ## Schritt 2: Kanalspezifische Testnachrichten senden
 
@@ -126,7 +126,7 @@ Sobald Sie ein Testsegment eingerichtet haben, können Sie diese Nachrichtenkan�
 
 1. Gehen Sie auf die Seite **Segmente** und [erstellen Sie ein neues Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Klicken Sie auf das Dropdown-Menü unter **Filter hinzufügen** und suchen Sie die Testfilter am Ende der Liste. <br><br>![Testen von Filtern]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Verwenden Sie die Testfilter, um Nutzer:innen mit bestimmten E-Mail-Adressen oder externen [IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) auszuwählen.<br><br>![Filteroptionen testen]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Verwenden Sie die Testfilter, um Nutzer:innen mit bestimmten E-Mail-Adressen oder externen [IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) auszuwählen.<br><br>![Filteroptionen testen]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>Diese Filter haben die folgenden Optionen:
 - **Ist gleich**: Sucht nach einer genauen Übereinstimmung mit der von Ihnen angegebenen E-Mail oder Benutzer-ID. Verwenden Sie diese Option, wenn Sie die Testkampagnen nur an Geräte senden möchten, die mit einer einzigen E-Mail oder Benutzer-ID verbunden sind.
 - **Ist nicht gleichbedeutend**: Schließt eine bestimmte E-Mail oder Benutzer-ID von Testkampagnen aus.

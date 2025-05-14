@@ -63,7 +63,7 @@ Sie können die abgebrochene Nachricht auch in Ihrem Nachrichten-Aktivitätsprot
 
 ## Abfrage für abgebrochene Nachrichten
 
-Sie können den [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) oder Ihr eigenes Data Warehouse, sofern es mit Braze verbunden ist, verwenden, um nach bestimmten Abbruchmeldungen zu suchen, die ausgelöst werden, wenn die Liquid-Logik den Abbruch einer Meldung verursacht.
+Sie können den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) oder Ihr eigenes Data Warehouse, sofern es mit Braze verbunden ist, verwenden, um nach bestimmten Abbruchmeldungen zu suchen, die ausgelöst werden, wenn die Liquid-Logik den Abbruch einer Meldung verursacht.
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}

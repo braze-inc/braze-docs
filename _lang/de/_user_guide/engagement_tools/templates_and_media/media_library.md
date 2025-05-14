@@ -14,14 +14,11 @@ tool: Media
 
 Sie finden die **Medienbibliothek** unter **Vorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, befindet sich diese Seite unter **Vorlagen & Medien**.
-{% endalert %}
-
 Sie können die **Mediathek** verwenden, um:
 
 * Mehrere Bilder auf einmal hochladen
 * Virtuelle Kontaktdateien (.vcf) hochladen
+* Hochladen von Videodateien zur Verwendung in WhatsApp Nachrichten
 * Laden Sie einen Ordner mit Ihren Bildern hoch (maximal 50 Bilder)
 * [Generieren Sie ein Bild mit Hilfe von KI](#generate-ai) und speichern Sie es in der Medienbibliothek
 * Schneiden Sie ein vorhandenes Bild zu, um das richtige Verhältnis für Ihre Nachrichten zu schaffen.
@@ -36,7 +33,7 @@ Sie können die **Mediathek** verwenden, um:
 
 ## Bild-Details
 
-In der Medienbibliothek sehen Sie den Bildtyp, die Größe, die Abmessungen, die URL und das Datum, an dem das Bild der Medienbibliothek hinzugefügt wurde.
+In der Bibliothek sehen Sie den Asset-Typ, die Größe, die Abmessungen, die URL, das Datum, an dem es der Bibliothek hinzugefügt wurde, und weitere Informationen. 
 
 ### Verwendung der Mediathek im Vergleich zu einem CDN
 
@@ -44,7 +41,7 @@ Die Verwendung der Medienbibliothek bietet eine bessere Zwischenspeicherung und 
 
 ## Bild-Spezifikationen
 
-Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5 MB sein. Unterstützte Dateitypen sind PNG, JPEG und GIF. Spezielle Bildempfehlungen für die einzelnen Nachrichtenkanäle finden Sie in den folgenden Abschnitten.
+Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5 MB sein. Unterstützte Dateitypen sind PNG, JPEG, GIF und SVG. Spezielle Bildempfehlungen für die einzelnen Nachrichtenkanäle finden Sie in den folgenden Abschnitten.
 
 ### Content-Cards
 
@@ -68,6 +65,14 @@ Weitere Informationen finden Sie unter [Details zur Gestaltung von In-App-Nachri
 
 - [Push-Spezifikationen für Bild und Text]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 
+### Video
+
+Videos, die in die Mediathek hochgeladen werden, können vorerst nur in WhatsApp Nachrichten verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Whatsapp Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+
+{% alert important %}
+Das Hinzufügen von Videos zu WhatsApp Nachrichten befindet sich derzeit in der Early Access Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
+{% endalert %}
+
 ## Zugriff auf die Medienbibliothek von einem Nachrichten-Editor aus
 
 Die Medienbibliothek fungiert als zentraler Standort Ihres Dashboards, da alle Bilder direkt in sie hochgeladen werden. So können Sie Bilder in verschiedenen Nachrichten wiederverwenden.
@@ -79,15 +84,15 @@ Die Medienbibliothek fungiert als zentraler Standort Ihres Dashboards, da alle B
 Sie können mit [DALL·E 3](https://openai.com/index/dall-e-3/), einem KI-System von OpenAI, einem Drittanbieter von Braze, Bilder für Ihre Medienbibliothek generieren. Dieses System kann realistische Bilder und Kunstwerke aus einer Beschreibung in natürlicher Sprache erstellen. Jede Anfrage generiert vier Variationen Ihres Prompts, und Ihr Unternehmen kann 10 Mal pro Tag Bilder generieren. Diese Summe gilt für alle Benutzer in Ihrem Unternehmen.
 
 1. Wählen Sie in der Medienbibliothek <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator**.
-2. Geben Sie eine Beschreibung des Bildes ein, das Sie generieren möchten (bis zu 300 Zeichen). Je detaillierter die Beschreibung ist, desto besser ist Ihr Ergebnis.
+2. Geben Sie eine Beschreibung des Bildes ein, das Sie generieren möchten (bis zu 300 Zeichen). Je detaillierter die Beschreibung ist, desto besser ist Ihr Ergebnis. Dieses Feature unterstützt nur Texteingaben - das Hochladen eines Bildes als Referenzieren ist nicht möglich.
 3. Wählen Sie **Bilder generieren**. Es kann etwa eine Minute dauern, bis die Bilder generiert sind.
 4. Wählen Sie <i class="fas fa-download" title="Bild zur Mediathek hinzufügen"></i> auf die Bilder, die Sie zu Ihrer Mediathek hinzufügen möchten.
 
 ![KI-Bildgenerator Modal in der Medienbibliothek.][6]{: style="max-width:75%"}
 
-Zwischen Ihnen und Braze sind alle mit DALL·E 3 generierten Bilder Ihr geistiges Eigentum. Braze erhebt keinen Anspruch auf das Urheberrecht an solchen Bildern und übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte oder Bilder. 
+Zwischen Ihnen und Braze sind alle mit DALL·E 3 generierten Bilder Ihr geistiges Eigentum. Braze erhebt keinen Anspruch auf das Urheberrecht an solchen Bildern und übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte oder Bilder.
 
-Um Bilder zu generieren, sendet Braze Ihre Anfrage an die API-Plattform von OpenAI. Alle Abfragen, die von Braze an OpenAI gesendet werden, sind anonymisiert. Das bedeutet, dass OpenAI nicht in der Lage ist, festzustellen, von wem die Abfrage gesendet wurde, es sei denn, Sie geben eindeutig identifizierbare Informationen in die von Ihnen bereitgestellten Eingaben ein. Wie in den [API Platform Commitments von OpenAI](https://openai.com/policies/api-data-usage-policies) beschrieben, werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern ihrer Modelle verwendet und nach 30 Tagen gelöscht. Bitte stellen Sie sicher, dass Sie die für Sie relevanten Richtlinien von OpenAI einhalten, die unter anderem die [Nutzungsrichtlinie](https://openai.com/policies/usage-policies) und der [Richtlinie zur gemeinsamen Nutzung und Veröffentlichung](https://openai.com/policies/sharing-publication-policy) umfassen können. Braze übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte. 
+Um Bilder zu erzeugen, sendet Braze Ihre Anfrage an die API-Plattform von OpenAI. Alle Abfragen, die von Braze an OpenAI gesendet werden, sind anonymisiert. Das bedeutet, dass OpenAI nicht in der Lage ist, festzustellen, von wem die Abfrage gesendet wurde, es sei denn, Sie geben eindeutig identifizierbare Informationen in die von Ihnen bereitgestellten Eingaben ein. Wie in den [API Platform Commitments von OpenAI](https://openai.com/policies/api-data-usage-policies) beschrieben, werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern ihrer Modelle verwendet und nach 30 Tagen gelöscht. Bitte stellen Sie sicher, dass Sie die für Sie relevanten Richtlinien von OpenAI einhalten, die unter anderem die [Nutzungsrichtlinie](https://openai.com/policies/usage-policies) und der [Richtlinie zur gemeinsamen Nutzung und Veröffentlichung](https://openai.com/policies/sharing-publication-policy) umfassen können. Braze übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte. 
 
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}

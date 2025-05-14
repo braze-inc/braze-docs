@@ -13,7 +13,7 @@ tool: Canvas
 A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow.
 {% endalert %}
 
-> Se você tiver uma tela existente do editor original, poderá clonar essa tela para criar uma cópia no Canvas Flow. Ao mudar para o fluxo de trabalho do Canvas Flow, você obtém acesso a [componentes leves do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [propriedades de entrada persistentes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) e [edição pós-lançamento]({{site.baseurl}}/post-launch_edits). Sua tela original não será alterada ou excluída.
+> Se você tiver uma tela existente do editor original, poderá clonar essa tela para criar uma cópia no Canvas Flow. Ao mudar para o fluxo de trabalho do Canvas Flow, você obtém acesso a [componentes leves do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [propriedades de entrada persistentes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) e [edição pós-lançamento]({{site.baseurl}}/post-launch_edits). Sua tela original não será alterada ou excluída.
 
 Para clonar seu Canva, faça o seguinte:
 

@@ -17,7 +17,7 @@ channel:
 
 ### Seleccione su grupo de suscripción
 
-Los mensajes SMS deben enviarse desde un [grupo de suscripción]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Un grupo de suscripción es una colección de números de teléfono de envío (como códigos cortos, códigos largos y/o ID alfanuméricos de remitente) que se utilizan para un tipo específico de mensajería. Debe designar un grupo de suscripción para asegurarse de que sólo los usuarios suscritos son los destinatarios. Algunos clientes pueden tener varios grupos de suscripción para diferentes casos de uso, como la mensajería SMS transaccional y la mensajería SMS promocional.<br><br>
+Los mensajes SMS deben enviarse desde un [grupo de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). Un grupo de suscripción es una colección de números de teléfono de envío (como códigos cortos, códigos largos y/o ID alfanuméricos de remitente) que se utilizan para un tipo específico de mensajería. Debe designar un grupo de suscripción para asegurarse de que sólo los usuarios suscritos son los destinatarios. Algunos clientes pueden tener varios grupos de suscripción para diferentes casos de uso, como la mensajería SMS transaccional y la mensajería SMS promocional.<br><br>
 
 ### Cuerpo del mensaje de entrada
 

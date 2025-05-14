@@ -3,7 +3,7 @@ nav_title: Braze Übersicht
 article_title: "Erste Schritte: Braze Übersicht"
 page_order: 1
 page_type: reference
-description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie für die Arbeit mit Braze benötigen."
+description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie bei der Arbeit mit Braze kennen müssen."
 
 ---
 
@@ -12,7 +12,7 @@ description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie f�
 Willkommen bei Braze! Diese Artikelsammlung wird Ihnen den Einstieg in unsere Plattform erleichtern und Sie mit den wichtigsten Begriffen, Merkmalen und Funktionalitäten von Braze vertraut machen. Auf dieser Seite werden die wichtigsten Konzepte vorgestellt, die Sie bei der Arbeit mit Braze kennen müssen.
 
 {% alert tip %}
-Wir empfehlen Ihnen dringend, neben diesen Artikeln auch unseren kostenlosen Kurs [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) zu besuchen. Für diesen Kurs ist keine spezielle Anmeldung oder ein Konto erforderlich. Wenn Sie ein Entwickler sind und einen technischen Überblick über Braze suchen, sollten Sie sich auch [Getting Started for Developers]({{site.baseurl}}/developer_guide/platform_wide/getting_started/platform_overview) ansehen.
+Wir empfehlen Ihnen dringend, neben diesen Artikeln auch unseren kostenlosen Kurs [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) zu besuchen. Für diesen Kurs ist keine spezielle Anmeldung oder ein Konto erforderlich. Wenn Sie ein Entwickler sind und einen technischen Überblick über Braze suchen, sollten Sie sich auch [Getting Started for Developers]({{site.baseurl}}/developer_guide/getting_started/platform_overview/) ansehen.
 {% endalert %}
 
 In den Abschnitten zu den ersten Schritten konzentrieren wir uns auf die gängigen Implementierungen von Braze. Braze ist jedoch unglaublich flexibel und kann so angepasst werden, dass es für Ihr Unternehmen auf verschiedene Weise von Nutzen ist. Aus Gründen der Übersichtlichkeit und der Kürze haben wir einen beschreibenden Überblick über die Standardeinstellungen gegeben, anstatt starre Anweisungen zu geben. Wir wissen, dass jedes Unternehmen seine eigenen Bedürfnisse hat, und Braze ist so konzipiert, dass es eine Vielzahl von Anpassungsmöglichkeiten bietet, die auf Ihre speziellen Anforderungen zugeschnitten werden können.
@@ -78,7 +78,7 @@ Hier ist das Braze-Rahmenwerk, mit dem Sie die Dauer Ihrer Integration anhand vo
 Benötigen Sie Hilfe bei Ihrer Migration? Unsere [zertifizierten Braze-Partner](https://www.braze.com/partners/solutions-partners) können Ihnen helfen!
 {% endalert %}
 
-- **E-Mail-Volumen:** Um E-Mails zu versenden, müssen Sie Ihre IPs aufwärmen. [IP-Warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) ist der Prozess des Aufbaus einer Absender-Reputation mit Ihren neu zugewiesenen IP-Adressen. Wenn Sie weniger als 2-3 Millionen E-Mails pro Tag versenden, sollte Ihr IP-Warming 30 Tage oder weniger dauern. Denken Sie daran, Ihre Spitzenwerte zu senden. Wenn Sie normalerweise 2 Millionen E-Mails pro Tag verschicken, aber für einen saisonalen Zeitraum den Versand von 7 Millionen E-Mails planen, sollten Sie sich auf diese "Spitze" einstellen. Absender mit hohem Datenaufkommen können mehrere IPs verwenden, um den Erwärmungsprozess zu beschleunigen.
+- **E-Mail-Volumen:** Um E-Mails zu versenden, müssen Sie Ihre IPs aufwärmen. [IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) ist der Prozess des Aufbaus einer Absender-Reputation mit Ihren neu zugewiesenen IP-Adressen. Wenn Sie weniger als 2-3 Millionen E-Mails pro Tag versenden, sollte Ihr IP-Warming 30 Tage oder weniger dauern. Denken Sie daran, Ihre Spitzenwerte zu senden. Wenn Sie normalerweise 2 Millionen E-Mails pro Tag verschicken, aber für einen saisonalen Zeitraum den Versand von 7 Millionen E-Mails planen, sollten Sie sich auf diese "Spitze" einstellen. Absender mit hohem Datenaufkommen können mehrere IPs verwenden, um den Erwärmungsprozess zu beschleunigen.
 - **Organisatorische Komplexität:** Unser Onboarding-Prozess kann an die Bedürfnisse Ihres Unternehmens angepasst werden. Ganz gleich, ob Sie eine einzelne Geschäftseinheit, ein Center of Excellence, mehrere unabhängige Einheiten oder Agenturen zur Verstärkung Ihrer Teams einsetzen, Braze hat Erfahrung mit allen Szenarien.
 - **Ausgereifte Dateninfrastruktur:** Wenn Sie nur das Braze SDK implementieren oder bereits über eine Customer Data Platform (CDP) verfügen, ist es möglich, alles in nur 30 Tagen einzurichten. Die Verwendung einer modernen CDP kann den Prozess beschleunigen. Wenn Sie jedoch viele Backend-Systeme, -Tools oder -Datenbanken mit Braze verbinden möchten, kann es länger dauern und Sie benötigen mehr Ressourcen, um die Einrichtung abzuschließen.
 

@@ -23,10 +23,6 @@ description: "この記事では、Braze を使用して Microsoft Entra のシ�
 | RelayState APIキー | IDプロバイダー・ログインを有効にするには、**「Settings（設定）**」＞「**API Keys（APIキー）**」と進み、`sso.saml.login` 権限を持つAPIキーを作成する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
-{% endalert %}
-
 ## Microsoft Entra SSO 内でサービスプロバイダー (SP) が開始するログイン
 
 ### ステップ1:ギャラリーから Braze を追加
@@ -96,13 +92,7 @@ Microsoft Entra 管理センターで Braze を設定すると、ターゲット
 アカウントマネージャーがアカウントの SAML SSO を有効にしたら、次の手順を実行します。
 
 1. [**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、[SAML SSO] セクションを [**オン**] に切り替えます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
-{% endalert %}
-
-{: start="2"}
-2\.そのページで、次の項目を追加します。
+2. そのページで、次の項目を追加します。
 
 | 必要条件 | 詳細 |
 |---|---|

@@ -54,7 +54,7 @@ Shorter TTLs make sure users receive timely notifications for events or promotio
 
 ## Firebase messaging delivery priority {#fcm-priority}
 
-The **Firebase Messaging Delivery Priority** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
+The **Firebase Messaging Delivery Priority** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more. High-priority messages are intended for time-sensitive, user-visible content. If FCM detects that your app frequently sends high-priority messages that do not result in user-visible notifications, those messages may be automatically deprioritized to normal priority. See [Message handling and deprioritization on Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize) for additional information.
 
 ## Summary text
 

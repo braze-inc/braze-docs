@@ -66,9 +66,9 @@ Dans l'exemple suivant, Braze utilise l'ID externe de l'utilisateur pour signale
 {% tabs local %}
 {% tab exemple de fichier CSV %}
 | Adresse e-mail | ID externe | Numéro de téléphone | ID Braze | Identifiant de la règle | Profil à conserver | Profil à fusionner | Profil à supprimer
-\|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | e-mail | VRAI | FAUX
-| alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | e-mail | FAUX | VRAI | Vrai | Vrai
+| alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | e-mail | FAUX | VRAI | VRAI | VRAI
 | alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | e-mail | FAUX | VRAI | Vrai | Vrai
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
@@ -111,6 +111,22 @@ Après avoir enregistré vos règles, vous pouvez avoir un aperçu de leur fonct
 ### Étape 3 : Fusionner les doublons
 
 Si vous êtes satisfait des résultats de votre aperçu, revenez à la page **Gérer l'audience** et sélectionnez **Fusionner tous les profils dupliqués**.
+
+{% alert warning %}
+Les profils utilisateurs dupliqués ne peuvent pas être récupérés après la fusion.
+{% endalert %}
+
+## Fusion planifiée
+
+Similaire à la fusion basée sur des règles, la fusion planifiée vous permet d'automatiser la fusion des profils utilisateurs sur une base quotidienne à l'aide de règles préconfigurées.
+
+{% alert important %}
+La fusion planifiée est en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
+![La page "Gestion de l'audience" avec le bouton "planification".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+Une fois la fonctionnalité activée, Braze attribue automatiquement un créneau horaire pour effectuer le processus de fusion quotidiennement. Vous pouvez désactiver la fusion planifiée à tout moment. Braze informera les administrateurs de votre espace de travail 24 heures avant la fusion planifiée, afin de leur rappeler et de leur donner le temps de revoir la configuration.
 
 {% alert warning %}
 Les profils utilisateurs dupliqués ne peuvent pas être récupérés après la fusion.

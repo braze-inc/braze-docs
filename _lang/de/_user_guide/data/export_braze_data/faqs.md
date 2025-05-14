@@ -29,4 +29,4 @@ Dies ist das erwartete Verhalten für Arbeitsbereiche mit vielen Benutzern. Braz
 
 ### Warum sehe ich Duplikate, wenn ich Nutzer:innen über die REST API nach Segmenten exportiere?
 
-Dies ist ein sehr seltenes Vorkommnis, das durch die zugrunde liegende Architektur des Datenbankanbieters verursacht wird. Duplikate werden jede Woche bereinigt. In den meisten Wochen werden jedoch keine Duplikate bereinigt.
+Dies ist ein sehr seltenes Vorkommen, das durch die zugrunde liegende Architektur des Datenbankanbieters verursacht wird. Duplikate werden jede Woche bereinigt. In den meisten Wochen werden jedoch keine Duplikate bereinigt.

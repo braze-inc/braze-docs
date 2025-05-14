@@ -1,7 +1,7 @@
 ---
 nav_title: Tipos de mensagens
 article_title: Tipos de Mensagem LINE
-page_order: 1
+page_order: 0
 description: "Este artigo cobre os diferentes tipos de mensagens LINE."
 page_type: reference
 tool:
@@ -90,7 +90,7 @@ Uma mensagem rica em texto pode conter até 400 caracteres.
 
 ## Cartão-baseado (carrossel)
 
-Uma mensagem baseada em cartão LINE permite que os usuários rolem por várias mensagens, como um carrossel, e tomem ações nas mensagens mais relevantes para eles, selecionando um cartão ou os botões de um cartão.
+Uma mensagem baseada em cartão do LINE permite que os usuários rolem por várias mensagens, como um carrossel, e tomem ações nas mensagens mais relevantes para eles, selecionando um cartão ou os botões de um cartão.
 
 Os casos de uso incluem:
 - Exibir promoções para itens de menu específicos

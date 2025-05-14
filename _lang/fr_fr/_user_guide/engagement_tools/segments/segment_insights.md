@@ -19,10 +19,6 @@ Les informations sur les segments vous montrent comment un segment se comporte p
 
 Accédez à la page **Segment Insights** de votre tableau de bord, sous **Analytics**, et cliquez sur <i class="fas fa-plus"></i> **Ajouter un segment** pour voir jusqu'à quatre segments différents comparés à une référence.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page à **Engagement** > **Segments** > **Informations sur les segments**.
-{% endalert %}
-
 ![Tableau de bord de Segment Insights.][1]
 
 Le segment de référence peut être un segment de votre choix ou un segment contenant tous vos utilisateurs. Segment Insights vous permet de comparer les statistiques suivantes :
@@ -68,7 +64,7 @@ Pour améliorer les conversions parmi les locuteurs de langues autres que l'angl
 
 ### Comprendre les indicateurs de revenus plus élevés
 
-Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pousser de nouveaux utilisateurs ou des utilisateurs inactifs à effectuer un achat peut amener l’utilisateur à désinstaller votre application. Les Segment Insights peuvent vous aider à découvrir des actions qui incitent les utilisateurs à progresser dans l’entonnoir d’achat sans qu’ils n’achètent quoi que ce soit, par exemple, en ajoutant des éléments à leur liste de souhaits, en partageant des messages sur les réseaux sociaux ou ajoutant du contenu dans leurs favoris. Vous pouvez, par exemple, représenter l’impact que différents comportements ont sur les achats dans une application d’e-commerce.
+Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pousser de nouveaux utilisateurs ou des utilisateurs inactifs à effectuer un achat peut amener l’utilisateur à désinstaller votre application. Les Segment Insights peuvent vous aider à découvrir des actions qui incitent les utilisateurs à progresser dans l’entonnoir d’achat sans qu’ils n’achètent quoi que ce soit, par exemple, en ajoutant des éléments à leur liste de souhaits, en partageant des messages sur les réseaux sociaux ou ajoutant du contenu dans leurs favoris. Par exemple, vous pouvez déterminer l'impact sur les achats des différents comportements au sein d'une application de commerce électronique.
 
 ![][7]
 

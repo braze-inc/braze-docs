@@ -61,7 +61,7 @@ In einigen Fällen kann ein:e Nutzer:in beim Durchlaufen eines Canvas möglicher
 
 ### Eine interne Gruppe erstellen
 
-Anstatt einzelne Testbenutzer zu erstellen, können Sie eine [Inhalts-Testgruppe]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) erstellen, d.h. eine interne Gruppe, deren Zweck es ist, den Inhalt Ihrer Nachricht zu überprüfen. Dazu gehört eine Gruppe von Nutzern, die Testnachrichten von Kampagnen und Canvases erhalten werden. Dann können Sie diese Testgruppe in das Feld **Inhaltstestgruppen hinzufügen** unter **Testempfänger** hinzufügen.
+Anstatt einzelne Testbenutzer zu erstellen, können Sie eine [Inhalts-Testgruppe]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) erstellen, d.h. eine interne Gruppe, deren Zweck es ist, den Inhalt Ihrer Nachricht zu überprüfen. Dazu gehört eine Gruppe von Nutzern, die Testnachrichten von Kampagnen und Canvases erhalten werden. Dann können Sie diese Testgruppe in das Feld **Inhaltstestgruppen hinzufügen** unter **Testempfänger** hinzufügen.
 
 ### Reduzieren Sie Zeitverzögerungen
 

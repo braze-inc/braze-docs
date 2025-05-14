@@ -40,6 +40,7 @@ Não há parâmetros de jornada para este endpoint.
 |`step_id`| Obrigatória | String | O ID de sua etapa do canva. |
 |`message_variation_id`| Obrigatória | String | O ID de sua mensagem. |
 |`locale_id`| Obrigatória | String | O ID da localização. |
+|`workflow_id` | Obrigatória | String | A ID da tela. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações do **Suporte multilíngue** ou na resposta da solicitação GET.

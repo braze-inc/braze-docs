@@ -75,6 +75,10 @@ CSV 가져오기를 통해 업로드한 커스텀 속성은 데이터 포인트�
 
 ## 데이터 포인트
 
+{% alert note %}
+The following tables are intended to be illustrative. For exact naming conventions, capitalization, and accepted values for certain fields, refer to the relevant documentation for your ingestion method.
+{% endalert %}
+
 {% tabs %}
 {% tab 청구 불가 %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

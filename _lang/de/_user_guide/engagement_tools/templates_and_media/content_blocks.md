@@ -23,7 +23,7 @@ Mit Content-Blöcken haben Sie folgende Möglichkeiten:
 
 ## Content-Block erstellen
 
-Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können Ihre Content-Blöcke auch [über API][5] erstellen und verwalten.
+Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können auch Ihre Content-Blöcke erstellen und verwalten [mit der API][5].
 
 {% tabs %}
 {% tab Ziehen und Ablegen %}
@@ -44,13 +44,13 @@ Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen kön
 |---|---|
 | Name | Pflichtfeld mit maximal 100 Zeichen. Dieses Feld kann nicht umbenannt werden, nachdem der Content-Block gespeichert wurde. Außerdem können Sie einem neuen Content-Block nicht denselben Namen geben wie einem früheren Content-Block, selbst wenn der vorherige archiviert wurde. |
 | Beschreibung | (optional) Maximal 250 Zeichen. Beschreiben Sie den Content-Block, damit andere Nutzer:innen von Braze wissen, wofür er gedacht ist und wo er verwendet wird. |
-| Content-Größe | Maximal 50kB (Kilobyte). |
+| Content-Größe | Maximal 50 KB. |
 | Platzierung | Inhaltsblöcke können nicht in einer E-Mail-Fußzeile verwendet werden. |
 | Erstellung | HTML-Editor oder Drag-and-Drop-Editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Bei der Erstellung von Content-Blöcken hilft es manchmal, HTML und Liquid durch Hinzufügen von Zeilenumbrüchen zu visualisieren. Wenn diese Zeilenumbrüche beim Senden nicht berücksichtigt werden, riskieren Sie überflüssige Leerzeichen, die die Darstellung des Blocks beeinträchtigen können. Um dies zu vermeiden, verwenden Sie das Tag **Erfassen** in Ihrem Block zusammen mit dem Filter **| strip**.
+Bei der Erstellung von Content-Blöcken kann es von Vorteil sein, HTML und Liquid durch Hinzufügen von Zeilenumbrüchen zu visualisieren. Wenn diese Zeilenumbrüche beim Senden nicht berücksichtigt werden, riskieren Sie überflüssige Leerzeichen, die die Darstellung des Blocks beeinträchtigen können. Um dies zu vermeiden, verwenden Sie das Tag **Erfassen** in Ihrem Block zusammen mit dem Filter **| strip**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ Nachdem Sie Ihren Content-Block erstellt haben, können Sie ihn in Ihre Nachrich
 1. Kopieren Sie das **Content Block Liquid Tag** aus dem Abschnitt **Content Block Details**.
 2. Fügen Sie das Liquid-Tag für Content-Block in die Nachricht ein. Sie können auch mit der Eingabe der Flüssigkeit beginnen und den Tag automatisch ausfüllen lassen.
 
-{% alert note %}
-Canvas-Entry-Eigenschaften und Event-Eigenschaften werden nur in einem Canvas unterstützt, nicht im Content-Block.
-{% endalert %}
+### Was Sie wissen sollten
+
+- Die Verwendung von HTML Content-Blöcken in E-Mails per Drag-and-Drop **oder von** Content-Blöcken in HTML-E-Mails kann zu unerwarteten Darstellungsproblemen führen. Das liegt daran, dass der Drag-and-Drop-Editor HTML und CSS generiert, die den Inhalt dynamisch wiedergeben, während der HTML-Editor eher statisch ist.
+- Canvas Event-Eigenschaften werden nur in einem Canvas unterstützt. Wenn Sie einen Content-Block mit Canvas-Eingangs-Eigenschaften in einer Kampagne referenzieren, wird er nicht aufgefüllt.
 
 ### Aktualisieren und Kopieren von Inhaltsblöcken
 
@@ -77,11 +78,11 @@ Wenn Sie einen Content-Block aktualisieren möchten, wird er in allen Nachrichte
 
 Wenn Sie einen Inhaltsblock für eine einzelne Nachricht aktualisieren oder eine Kopie zur Verwendung in anderen Nachrichten erstellen möchten, können Sie entweder den HTML-Code aus der ursprünglichen Nachricht in Ihre neue Nachricht kopieren oder den ursprünglichen Inhaltsblock bearbeiten (er muss bereits in einer Nachricht verwendet worden sein) und speichern. Sie erhalten eine Aufforderung, die es Ihnen erlaubt, ihn als neuen Content-Block zu speichern.
 
-Nachdem Sie Änderungen an einem Inhaltsblock vorgenommen haben, können Sie den aktualisierten Inhaltsblock speichern und starten, indem Sie auf **Inhaltsblock starten** klicken. Oder Sie können **Mehr** > **Duplizieren** wählen, um ein Duplikat Ihres Inhaltsblocks zu erstellen.
+Nachdem Sie Änderungen an einem Content-Block vorgenommen haben, können Sie den aktualisierten Content-Block speichern und starten, indem Sie **Content-Block starten** auswählen. Oder Sie können **Mehr** > **Duplizieren** wählen, um ein Duplikat Ihres Inhaltsblocks zu erstellen.
 
-![][2]
+![Ein Content-Block mit dem Text "Willkommen zu unserem Newsletter".][2]
 
-Sie können einen Content-Block auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). Dadurch wird eine Entwurfskopie des Inhaltsblocks erstellt.
+Sie können einen Content-Block auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Dadurch wird eine Entwurfskopie des Inhaltsblocks erstellt.
 
 ### Vorschau von Inhaltsblöcken
 
@@ -89,7 +90,7 @@ Nachdem Sie einen Inhaltsblock in einer aktiven Kampagne oder einem Canvas hinzu
 
 Diese Vorschau enthält Informationen zum Content-Block, z. B. wer ihn erstellt hat, Tags, Erstellungsdatum, Datum der letzten Bearbeitung, Beschreibung, Editor-Typ, Anzahl der Einschlüsse mit Details und eine aktuelle Vorschau des Content-Blocks.
 
-![][7]{: style="max-width:60%;"} 
+![Eine Vorschau auf einen Content-Block "Workout_Promo" für Radfahren und Tanzen, der sechs Einschlüsse hat.][7]{: style="max-width:60%;"} 
 
 ### Verschachtelte Content-Blöcke
 
@@ -105,13 +106,13 @@ Außerdem können Inhaltsblöcke nicht innerhalb einer E-Mail-Fußzeile verwende
 
 ![Erweitertes Dropdown-Menü Einstellungen, das drei Optionen anzeigt: Archivieren, Duplizieren und In Arbeitsbereich kopieren.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Wenn Sie die Verwendung eines Inhaltsblocks beendet haben, können Sie ihn auf der Seite [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
+Wenn Sie die Verwendung eines Inhaltsblocks beendet haben, können Sie ihn auf der Seite [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
 
 #### Bewährte Praktiken
 
 - Wenn Ihr Block nur in wenigen E-Mails verwendet wird, empfehlen wir Ihnen, den veralteten Block zu archivieren und Ihre Live-Nachrichten mit einem neueren Block zu aktualisieren, der nicht archiviert wurde.
-- Wenn Ihr Block nur einen Tippfehler hat oder eine kleine Änderung benötigt, empfehlen wir nicht, den Block zu archivieren. Aktualisieren Sie einfach und schicken Sie los!
-- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, den gesamten Content aus dem Block zu entfernen und ihn dann zu archivieren. So stellen Sie sicher, dass keine veralteten Informationen in neu versendeten E-Mails enthalten sind.
+- Wenn Ihr Block nur einen Tippfehler hat oder eine kleine Änderung benötigt, empfehlen wir nicht, den Block zu archivieren. Aktualisieren Sie stattdessen den Block und schicken Sie ihn ab!
+- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen und ihn zu archivieren. So stellen Sie sicher, dass keine veralteten Informationen in neu versendeten E-Mails enthalten sind.
 - Wenn Sie versehentlich einen Content-Block archiviert haben, können Sie die Archivierung aufheben.
 
 ![Panel „Gespeicherte Content-Blöcke“, in dem das Dropdown-Menü für „Test_32“ erweitert wird und drei Optionen anzeigt: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich][4]

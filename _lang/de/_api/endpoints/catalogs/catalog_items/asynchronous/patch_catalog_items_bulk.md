@@ -7,7 +7,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Mehrere Katalogartikel bearbeiten."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Mehrere Katalogartikel bearbeiten in Braze."
 
 ---
 {% api %}
@@ -16,9 +16,9 @@ description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Mehrere 
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um mehrere bestehende Artikel in Ihrem Katalog zu bearbeiten.
+> Verwenden Sie diesen Endpunkt, um mehrere vorhandene Artikel in Ihrem Katalog zu bearbeiten.
 
-Jeder Antrag kann bis zu 50 Artikel enthalten. Dieser Endpunkt ist asynchron.
+Jede Anfrage kann bis zu 50 Artikel enthalten. Dieser Endpunkt ist asynchron.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 
@@ -26,22 +26,22 @@ Jeder Antrag kann bis zu 50 Artikel enthalten. Dieser Endpunkt ist asynchron.
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.update_items`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `catalog_name` | Erforderlich | String | Name des Katalogs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `items` | Erforderlich | Array | Ein Array, das Artikelobjekte enthält. Die Artikelobjekte sollten Felder enthalten, die im Katalog vorhanden sind. Pro Anfrage sind bis zu 50 Artikelobjekte zulässig. |
+| `items` | Erforderlich | Array | Ein Array, das Artikel-Objekte enthält. Die Artikelobjekte sollten Felder enthalten, die im Katalog vorhanden sind. Es sind bis zu 50 Artikel pro Anfrage zulässig. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -90,11 +90,11 @@ Die Operatoren `$add` und `$remove` sind nur auf Felder vom Typ Array anwendbar 
 
 ## Antwort
 
-Es gibt drei Statuscode-Antworten für diesen Endpunkt: `202`, `400`, und `404`.
+Es gibt drei Status Code Antworten für diesen Endpunkt: `202`, `400`, und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -104,7 +104,7 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben.
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {
@@ -131,18 +131,18 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | Fehler | Fehlersuche |
 | --- | --- |
 | `catalog-not-found` | Prüfen Sie, ob der Katalogname gültig ist. |
-| `ids-too-large` | Die Artikel-IDs dürfen nicht mehr als 250 Zeichen lang sein. |
-| `ids-not-strings` | Artikel-IDs müssen vom Typ String sein. |
-| `ids-not-unique` | Die Artikel-IDs müssen in der Anfrage eindeutig sein. |
-| `invalid-ids` | Artikel-IDs dürfen nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten. |
+| `ids-too-large` | Artikel IDs dürfen nicht mehr als 250 Zeichen lang sein. |
+| `ids-not-strings` | Artikel IDs müssen vom Typ String sein. |
+| `ids-not-unique` | Die IDs der Artikel müssen in der Anfrage eindeutig sein. |
+| `invalid-ids` | Artikel IDs dürfen nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten. |
 | `invalid-fields` | Stellen Sie sicher, dass alle Felder, die Sie in der API-Anfrage senden, bereits im Katalog vorhanden sind. Dies hat nichts mit dem in der Fehlermeldung erwähnten ID-Feld zu tun. |
-| `invalid-keys-in-value-object` | Die Objektschlüssel können nicht `.` oder `$` enthalten. |
-| `items-missing-ids` | Einige Artikel haben keine Artikel-IDs. Prüfen Sie, ob jeder Artikel eine Artikel-ID hat. |
+| `invalid-keys-in-value-object` | Artikel-Objektschlüssel können nicht `.` oder `$` enthalten. |
+| `items-missing-ids` | Einige Artikel haben keine IDs. Prüfen Sie, ob jeder Artikel eine ID hat. |
 | `item-array-invalid` | `items` muss ein Array von Objekten sein. |
-| `items-too-large` | Artikelwerte dürfen nicht länger als 5.000 Zeichen sein. |
-| `request-includes-too-many-items` | Ihre Anfrage enthält zu viele Artikel. Das Artikellimit pro Anfrage beträgt 50. |
-| `too-deep-nesting-in-value-object` | Objektobjekte können nicht mehr als 50 Verschachtelungsebenen haben. |
-| `unable-to-coerce-value` | Gegenstandstypen können nicht umgewandelt werden. |
+| `items-too-large` | Die Werte der Artikel dürfen nicht länger als 5.000 Zeichen sein. |
+| `request-includes-too-many-items` | Ihre Anfrage enthält zu viele Artikel. Die Anzahl der Artikel pro Anfrage ist auf 50 begrenzt. |
+| `too-deep-nesting-in-value-object` | Artikel-Objekte können nicht mehr als 50 Verschachtelungsebenen haben. |
+| `unable-to-coerce-value` | Artikel-Typen können nicht umgewandelt werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

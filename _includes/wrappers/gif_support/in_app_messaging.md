@@ -2,7 +2,7 @@
 {% tab Android %}
 You can add animated GIFs to your in-app messages using the native [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk). By default, the Android SDK uses HTML in-app messages to display GIFs.
 
-For all other in-app message types, you'll need to use a custom image library. To learn more, see [Android In-App Messaging: GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).
+For all other in-app message types, you'll need to use a custom image library. To learn more, see [Android In-App Messaging: GIFs]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android).
 {% endtab %}
 
 {% tab iOS %}

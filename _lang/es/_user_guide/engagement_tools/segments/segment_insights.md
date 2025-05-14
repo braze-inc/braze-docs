@@ -19,10 +19,6 @@ Segment Insights le muestra el rendimiento de un segmento en comparación con ot
 
 Vaya a la página **Segment Insights** de su panel de control, en **Analytics**, y haga clic en <i class="fas fa-plus"></i> **Add Segment** para ver hasta cuatro segmentos diferentes comparados con una línea de base.
 
-{% alert note %}
-Si está utilizando la [navegación anterior]({{site.baseurl}}/navigation), puede encontrar esta página en **Participación** > **Segmentos** > **Información de segmentos**.
-{% endalert %}
-
 ![Panel de información del segmento.][1]
 
 El segmento base puede ser un segmento específico que usted seleccione o un segmento que contenga a todos sus usuarios. Puede comparar las siguientes estadísticas utilizando Segment Insights:
@@ -68,7 +64,7 @@ Para mejorar las conversiones entre hablantes de idiomas distintos del inglés, 
 
 ### Comprender los indicadores de mayores ingresos
 
-Conseguir que los usuarios se conviertan en compradores puede ser difícil, y tratar de empujar a los usuarios nuevos, inactivos o desconectados directamente hacia la compra puede llevar al usuario a desinstalar su aplicación. Segment Insights puede ayudarle a descubrir acciones que lleven a los usuarios más lejos en el embudo de compra sin que tengan que comprar todavía, por ejemplo, añadir artículos a su lista de deseos, compartir en las redes sociales o dar un favorito a un contenido. Por ejemplo, puede trazar el impacto en las compras de diferentes comportamientos dentro de una aplicación de comercio electrónico.
+Conseguir que los usuarios se conviertan en compradores puede ser difícil, y tratar de empujar a los usuarios nuevos, inactivos o desconectados directamente hacia la compra puede llevar al usuario a desinstalar su aplicación. Segment Insights puede ayudarle a descubrir acciones que lleven a los usuarios más lejos en el embudo de compra sin que tengan que comprar todavía, por ejemplo, añadir artículos a su lista de deseos, compartir en las redes sociales o dar un favorito a un contenido. Por ejemplo, puedes trazar el impacto en las compras de diferentes comportamientos dentro de una aplicación de comercio electrónico.
 
 ![][7]
 

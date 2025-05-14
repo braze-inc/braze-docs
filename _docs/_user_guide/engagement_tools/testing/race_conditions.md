@@ -39,9 +39,11 @@ However, in some cases, the second event will trigger first. This means a messag
 
 #### Introduce delays
 
-After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message. 
+After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message.
 
 For example, after a user registers for your app, you can send a promotional offer after 24 hours. Or, if you're creating a user or logging a custom attribute, you can add a one-minute delay before proceeding in your process to avoid this race condition.
+
+You can also add this delay in the [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration) for the specific custom event that triggers a new user to enter a Canvas. 
 
 ## Scenario 2: Using multiple API endpoints
 

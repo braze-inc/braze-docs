@@ -52,9 +52,9 @@ On the same page, input the following:
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your identity provider's name, like "Okta." |
-| `Target URL` | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
-| `Certificate` | The `x.509` certificate that is provided by your identity provider.|
+| SAML Name | This will appear as the button text on the login screen.<br>This is typically your identity provider's name, like "Okta." |
+| Target URL | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
+| Certificate | The `x.509` certificate that is provided by your identity provider.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Make sure that your `x.509` certificate follows this format when adding it to the dashboard:
@@ -65,13 +65,13 @@ Make sure that your `x.509` certificate follows this format when adding it to th
 -----END CERTIFICATE-----
 ```
 
-![Opening Security Settings and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 ### Step 3: Sign into Braze
 
 Save your security settings and log out. Then, sign back in with your identity provider.
 
-![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Setting up your RelayState
 
@@ -91,7 +91,7 @@ Members who opt to use SSO will no longer be able to use their password as they 
 
 You can restrict the members of your organization to only sign in with either Google SSO or SAML SSO. To turn on restrictions, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
 
-![Authentication Rules section of Security Settings page]({% image_buster /assets/img/sso3.png %})
+![Example setup of "Authentication Rules" section with a minimum password length of 8 characters and password reusability of 3 times. The passwords will expire after 180 days, and users will be logged out after 1,440 minutes of inactivity.]({% image_buster /assets/img/sso3.png %})
 
 By turning on restrictions, your company's Braze users will no longer be able to log in using a password, even if they have logged in with a password before.
 
@@ -163,7 +163,7 @@ Have the affected user [clear their browser's cache and cookies](https://its.uio
 
 ### Did you set your RelayState?
 
-If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayState could be misconfigured or nonexistant. If you haven't already, you need to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). 
+If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayState could be misconfigured or nonexistent. If you haven't already, you need to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). 
 
 ### Is the user stuck in a sign-in loop between Okta and Braze?
 

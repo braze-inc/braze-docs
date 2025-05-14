@@ -11,7 +11,7 @@ description: "Este artículo de referencia ofrece orientación sobre la migraci�
 Las Fuentes de datos están obsoletas. Braze recomienda a los clientes que utilizan Data Feeds que se pasen a las listas de códigos promocionales.
 {% endalert %}
 
-> La migración de fuentes de datos a códigos promocionales es un proceso sencillo. Esto implica crear manualmente listas de códigos de promoción con la información de sus fuentes de datos y actualizar las referencias de sus mensajes en consecuencia.
+> Esta página te guía en la migración de fuentes de datos a códigos promocionales. Se trata de un proceso sencillo que implica crear manualmente listas de códigos promocionales con la información de tus fuentes de datos y actualizar las referencias de tus mensajes en consecuencia.
 
 ## Características y funciones
 

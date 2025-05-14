@@ -17,10 +17,6 @@ Quando armazenados no Braze, os atributos personalizados podem ser usados para c
 
 Para criar e gerenciar atributos personalizados no dashboard, Acessar **Configurações de Dados** > **Atributos Personalizados**. 
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Atributos personalizados** em **Gerenciar configurações**.
-{% endalert %}
-
 ![Quatro atributos personalizados que são booleanos.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 A coluna **Última atualização** lista a última vez que o atributo personalizado foi editado, por exemplo, quando foi definido pela última vez como lista de bloqueio ou ativo.
@@ -33,7 +29,7 @@ A partir desta página, você pode visualizar, gerenciar, criar ou bloquear atri
 
 ### Colocando na lista de bloqueio
 
-Os atributos personalizados podem ser incluídos em uma lista de bloqueio individualmente no menu de ações ou até 10 atributos podem ser selecionados e incluídos em uma lista de bloqueio em massa. Se você bloquear um atributo personalizado, nenhum dado será coletado em relação a esse atributo, os dados existentes ficarão indisponíveis a menos que sejam reativados, e os atributos na lista de bloqueio não aparecerão em filtros ou gráficos. Além disso, se a atribuição estiver sendo referenciada por filtros ou disparadores em outras áreas do dashboard do Braze, será exibido um modal de aviso explicando que todas as instâncias dos filtros ou disparadores que fazem referência a ela serão removidas e arquivadas.
+Os atributos personalizados podem ser incluídos em uma lista de bloqueio individualmente no menu de ações ou até 100 atributos podem ser selecionados e incluídos em uma lista de bloqueio em massa. Se você bloquear um atributo personalizado, nenhum dado será coletado em relação a esse atributo, os dados existentes ficarão indisponíveis a menos que sejam reativados, e os atributos na lista de bloqueio não aparecerão em filtros ou gráficos. Além disso, se a atribuição estiver sendo referenciada por filtros ou disparadores em outras áreas do dashboard do Braze, será exibido um modal de aviso explicando que todas as instâncias dos filtros ou disparadores que fazem referência a ela serão removidas e arquivadas.
 
 ### Marcação como informações de identificação pessoal (IPI)
 
@@ -58,7 +54,7 @@ Existem duas maneiras de remover atributos personalizados dos perfis de usuário
 
 O relatório de uso lista todas as canvas, campanhas e segmentos que utilizam um atributo personalizado específico. Essa lista não inclui os usos do Liquid. 
 
-Você pode visualizar até 10 relatórios de uso por vez, selecionando as caixas de seleção ao lado dos respectivos atributos personalizados e, em seguida, selecionando **Ver relatório de uso**.
+Você pode visualizar até 100 relatórios de utilização por vez, marcando as caixas de seleção ao lado dos respectivos atributos personalizados e, em seguida, selecionando **Visualizar relatório de utilização**.
 
 ### Exportação de dados
 
@@ -70,13 +66,13 @@ A seguir estão listados métodos em várias plataformas que são usados para de
 
 {% details Expandir para documentação por plataforma %}
 
-- [Android e FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

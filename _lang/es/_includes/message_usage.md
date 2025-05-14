@@ -2,20 +2,12 @@
 
 > El panel de uso de mensajes proporciona información de autoservicio sobre tu uso de crédito de SMS y WhatsApp para obtener una visión completa del uso histórico y actual comparado con las asignaciones del contrato. Esta información puede reducir tu confusión y ayudarte a hacer ajustes para evitar riesgos de excedente.
 
-{% alert important %}
-El panel de Uso de Mensajes está actualmente en acceso anticipado. Póngase en contacto con su gestor de cuenta Braze si está interesado en participar en el acceso anticipado.
-{% endalert %}
-
 El panel de **Uso de Mensajes** está dividido en tres secciones:
 - [Resumen del uso del crédito](#credit-usage-overview)
 - [SMS/MMS](#smsmms) 
 - [WhatsApp](#whatsapp)
 
 Accede al panel yendo a **Configuración** > **Facturación** > **Uso de mensajes**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar esta página seleccionando el icono de tu cuenta y, a continuación, **Suscripciones y uso**.
-{% endalert %}
 
 ## Resumen del uso de los créditos para mensajes
 

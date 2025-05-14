@@ -15,7 +15,7 @@ description: "この記事では、ライブ・アクティビティを更新す
 /messages/live_activity/update
 {% endapimethod %}
 
-> このエンドポイントを使用して、iOSアプリが表示する[ライブ・アクティビティを]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/)更新・終了する。このエンドポイントは追加のセットアップが必要です。
+> このエンドポイントを使用して、iOSアプリが表示する[ライブ・アクティビティを]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)更新・終了する。このエンドポイントは追加のセットアップが必要です。
 
 ライブ・アクティビティを登録した後、アップル・プッシュ・ノーティフィケーション・サービス（APN）をアップデートするためにJSONペイロードを渡すことができる。詳しくは、[プッシュ通知ペイロードを使ったライブアクティビティの更新](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications)に関する Apple のドキュメントを参照してください。
 
@@ -26,7 +26,7 @@ description: "この記事では、ライブ・アクティビティを更新す
 このエンドポイントを使用するには、次の手順を完了する必要があります:
 
 - `messages.live_activity.update` の権限を持つ API キーを生成します。
-- Braze Swift SDK を使用して、[リモート]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity)または[ローカル]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity)でライブアクティビティを登録する。
+- Braze Swift SDK を使用して、[リモート]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift)または[ローカル]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift)でライブアクティビティを登録する。
 
 ## レート制限
 

@@ -3,7 +3,7 @@ nav_title: Kartenerstellung
 article_title: Kartenerstellung
 alias: /card_creation/
 description: "Dieser Artikel beschreibt die Unterschiede zwischen der Erstellung von Content Cards beim Kampagnenstart oder beim Eintritt in den Canvas-Schritt und beim ersten Eindruck."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards

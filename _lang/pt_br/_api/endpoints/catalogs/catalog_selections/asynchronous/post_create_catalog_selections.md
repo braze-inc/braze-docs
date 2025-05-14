@@ -16,9 +16,6 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Criar s
 {% endapimethod %}
 
 > Use este endpoint para criar uma seleção em seu catálogo.
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
 
 ## Pré-requisitos
 

@@ -54,3 +54,7 @@ page_order: 2.0
 {% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+{% alert note %}
+While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
+{% endalert %}

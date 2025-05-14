@@ -265,7 +265,7 @@ With headless UI, Braze will deliver a data model, such as JSON, that your app c
 
 **Android SDK**
 - [In-App Message Customization]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners)
-- [Content Cards Customization]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/)
+- [Content Cards Customization]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/)
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
@@ -273,6 +273,6 @@ With headless UI, Braze will deliver a data model, such as JSON, that your app c
 - [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**
-- [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
-- [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
+- [In-App Message Customization]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web)
+- [Content Cards Customization]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/)
 

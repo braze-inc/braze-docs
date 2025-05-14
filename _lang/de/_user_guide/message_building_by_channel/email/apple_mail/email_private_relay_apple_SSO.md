@@ -21,41 +21,20 @@ Wenn ein Benutzer beschließt, die E-Mail-Weiterleitung an die Relay-E-Mail Ihre
 
 Wenn Sie SendGrid als E-Mail-Anbieter verwenden, können Sie E-Mails an Apple senden, ohne DNS-Änderungen vornehmen zu müssen. 
 
-1. Rufen Sie Ihre **Apple-Zertifikatsseite** auf und geben Sie die E-Mail-Adresse an, die Sie für den Versand über den E-Mail-Relay-Service von Apple verwenden möchten (Ihre gewünschte "Von"-Adresse).
-- Die Adresse sollte wie folgt formatiert werden: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(Beispiel: `bounces+1234567@braze.online.docs.com`). 
+1. Loggen Sie sich in das [Apple Entwickler:in Portal](https://developer.apple.com/) ein.
+2. Gehen Sie auf die Seite **Zertifikate, Bezeichner & Profile**.
+3. Wählen Sie **Dienste** > **Mit Apple für E-Mail-Kommunikation anmelden**.
+4. Fügen Sie im Abschnitt **E-Mail-Quellen** die Domains und Subdomains hinzu.
 
-![Option zum Auflisten einzelner E-Mail-Adressen auf der Apple-Zertifikatsseite.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
-
-{:start="2"}
-2\. Nachdem die Adresse zu Ihrer Apple-Zertifikatsseite hinzugefügt wurde, werden E-Mails von dieser Domain über das Apple Private Relay System zugestellt.
-
-{% alert important %}
 Wenn Ihre gewünschte „Von“-Adresse eine `abmail`-Adresse ist, fügen Sie diese in Ihre Subdomain ein. Verwenden Sie zum Beispiel `abmail.docs.braze.com` anstelle von `docs.braze.com`.
-{% endalert %}
-
-### „Absenderadresse“-Werte
-
-In dieser Tabelle finden Sie die Komponenten, die beim Hinzufügen von E-Mail-Adressen mit Apple Private Relay verwendet werden.
-
-| Wert | Beschreibung |
-|---|---|
-| UID | Dieser Wert wird in Ihren DNS-Einträgen angegeben, die von Braze (von SendGrid) zur Verfügung gestellt werden. Verwenden Sie in Ihrer UID in der E-Mail-Adresse nicht den Buchstaben „u“. Wenn Ihre UID in SendGrid zum Beispiel als `u1234567.wl134.sendgrid.net` angezeigt wird, ist `1234567` der UID-Wert. <br><br> Wenn Sie keinen Zugriff auf Ihre DNS-Einträge haben, wenden Sie sich an Ihren Braze Customer Success Manager, um Ihre UID zu erhalten. |
-| Whitelabeled Subdomain und Domain | Die ursprüngliche Domain und Subdomain, die Sie in SendGrid eingegeben haben. Sie können den **HOST-Wert** auch in Ihren DNS-Einträgen in SendGrid verwenden. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Versenden von E-Mails für SparkPost
 
 Um Apple Private Relay für SparkPost einzurichten, gehen Sie wie folgt vor: 
 
 1. Melden Sie sich mit Apple an.
-2. Erstellen Sie anhand der [Dokumentation von Apple](https://developer.apple.com/sign-in-with-apple/get-started/) die erforderlichen Verifizierungsdateien und hosten Sie diese Dateien in einem zugänglichen Verzeichnis für die angegebenen Domains.
-3. Fügen Sie in Ihren DNS-Einstellungen einen A-Eintrag hinzu, der auf die Domain verweist, auf der Ihre Verifizierungsdatei gehostet wird. Dies ist ein einmaliger Verifizierungsprozess.
-4. Fügen Sie die E-Mail Domains in Apple hinzu.
-5. Apple überprüft automatisch die Domains und zeigt an, welche davon überprüft wurden. Außerdem haben Sie die Möglichkeit, die Domains erneut zu überprüfen oder zu löschen.
-
-{% alert important %}
-Stellen Sie sicher, dass Sie diesen Vorgang innerhalb von 2 bis 3 Tagen nach der Erstellung der Verifizierungsdateien abschließen, da diese sonst verfallen. Apple gibt nicht bekannt, wie lange sie gültig sind.
-{% endalert %}
+2. Folgen Sie der [Dokumentation von Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service), um die E-Mail Domains zu registrieren.
+3. Apple überprüft automatisch die Domains, zeigt an, welche davon überprüft sind, und bietet die Möglichkeit, die Domains erneut zu überprüfen oder zu löschen.
 
 ### Überlegungen
 
@@ -70,7 +49,7 @@ Wenn eine sendende Domain auch als Bounce-Domain verwendet wird, können Sie kei
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-Um SPF-Fehler zu vermeiden, müssen Sie die MX- und TXT-Einträge erstellen und in das DNS übertragen, **bevor** Sie den CNAME-Eintrag löschen.
+Um SPF-Fehler zu vermeiden, müssen Sie die MX- und TXT-Einträge erstellen und sie im DNS propagieren lassen **, bevor Sie** den CNAME-Eintrag löschen.
 {% endalert %}
 
 {:start="2"}

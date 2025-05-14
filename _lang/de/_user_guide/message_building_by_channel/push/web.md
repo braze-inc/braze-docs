@@ -42,7 +42,7 @@ Hier sind einige Beispiele für gängige Anwendungsfälle von Web-Push-Nachricht
 
 ## Voraussetzungen für die Verwendung von Web Push
 
-Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website zu integrieren. Detaillierte Schritte finden Sie in unserer [Anleitung zur Integration von Web-Push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
+Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website zu integrieren. Detaillierte Schritte finden Sie in unserer [Anleitung zur Integration von Web-Push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
 ### Push-Erlaubnis
 
@@ -65,7 +65,7 @@ Die folgenden Browser unterstützen Web-Push-Benachrichtigungen. Private Browsin
 Weitere Informationen zu den Push-Protokollstandards und der Browserunterstützung finden Sie in den für Ihren Browser relevanten Ressourcen:
 
 - [Safari (Desktop)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari (mobil)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Safari (mobil)]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=safari)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 

@@ -99,13 +99,41 @@ rake
 
 ### Tutorials
 
-Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
+There are two kinds of tutorials: use cases and generic. In most scenarios, you'll want to write a use case.
 
 {% tabs local %}
-{% tab tutorial template %}
-{% multi_lang_include contributing/templates/tutorial.md %}
+{% tab use cases %}
+Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory&#8212;unlike generic tutorials which may use hypothetical scenarios to illustrate some functionality. What makes use cases special is their ability to illustrate the _real-world value_ that Braze offers marketers.
+
+{% subtabs local %}
+{% subtab use case template %}
+{% multi_lang_include contributing/templates/use_case.md %}
+{% endsubtab %}
+{% endsubtabs %}
+
+#### Guidelines
+
+- Create a hypothetical but real-world scenario using an imaginary brand
+- Highlight the value that a feature brings to a different industry: eCommerce, finance, gaming, finance, and others.
+- Show a practical example of how Braze is commonly used: add to cart, add to wishlist, saved song, created playlist, loyalty program, submitted feedback, and similar.
+- Create a step-by-step activity for the user to roleplay
+- Make it clear that the use case is a fictional scenario; users should not actually follow these steps with real data.
+
+##### Header syntax
+
+The title header should be prepended with `Use case:` and describe the way Braze is being used in the recipe. For example, "Use case: Abandoned cart." 
+
+Each use of the words "Use case" in a header should have a description following it. 
 {% endtab %}
-{% endtabs %}
+
+{% tab generic %}
+Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
+
+{% subtabs local %}
+{% subtab tutorial template %}
+{% multi_lang_include contributing/templates/tutorial.md %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %}){: style="max-width:70%;"}
 
@@ -118,19 +146,21 @@ Tutorials are learning-oriented practical lessons. They focus on what the user l
 Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
 {% endalert %}
 
-##### Header syntax
+#### Header syntax
 
-The title header should be prepended with `Tutorial:` and generally describe what the user will do or create. For example, "Tutorial: Your first contribution". 
+The title header should be prepended with `Tutorial:` and generally describe what the user will do or create. For example, "Tutorial: Your first contribution".
+{% endtab %}
+{% endtabs %}
 
 ### References
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
-{% tabs local %}
-{% tab reference template %}
+{% subtabs local %}
+{% subtab reference template %}
 {% multi_lang_include contributing/templates/reference.md %}
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %}){: style="max-width:70%;"}
 
@@ -167,7 +197,7 @@ Explanations are understanding-oriented content. They focus on improving the use
 - Consider placing explanations that are too broad to fit into only one article onto a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns).
 
 {% alert tip %}
-Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
+Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to achieve a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
 {% endalert %}
 
 ##### Header syntax

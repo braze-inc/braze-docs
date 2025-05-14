@@ -25,10 +25,6 @@ Voir la section [Nombre de consommations](#consumption-count) de cet article pou
 
 Pour voir votre utilisation des points de données, allez dans **Paramètres** > **Facturation** et sélectionnez l'onglet **Utilisation Totale des Points de Données**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte > **Abonnements et utilisation** > **Utilisation totale des points de données**.
-{% endalert %}
-
 Pour plus d'informations sur les composants du tableau de bord des points de données, consultez [Facturation]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}
@@ -74,6 +70,10 @@ Les attributs personnalisés téléchargés via l'importation CSV comptent pour 
 De plus, étant donné que les changements d’état d’abonnement ne consomment pas de points de données, la mise à jour des champs `email_subscribe`, `push_subscribe`, `subscription_group_id`, ou `subscription_state` dans votre fichier CSV n’entraînera pas de frais.
 
 ## Points de données
+
+{% alert note %}
+Les tableaux suivants sont donnés à titre d'exemple. Pour connaître les conventions d'appellation exactes, les majuscules et les valeurs acceptées pour certains champs, reportez-vous à la documentation relative à votre méthode d'ingestion.
+{% endalert %}
 
 {% tabs %}
 {% tab Non facturable %}
@@ -166,3 +166,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

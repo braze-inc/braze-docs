@@ -26,16 +26,12 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 ### ユーザーのWhatsApp購読グループを設定する
 
 - **Rest API:**Braze REST API を使用することで、ユーザープロファイルは[`/subscription/status/set` エンドポイント][4]によってプログラムで設定できます。
-- **Web SDK:**[Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-)、[iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)、[Web][11]]の`addToSubscriptionGroup` メソッドを使って、Eメール、SMS、WhatsAppの購読グループにユーザーを追加できる。
+- **Web SDK:**[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html)、[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:))、[Web][11]]の`addToSubscriptionGroup` メソッドを使って、Eメール、SMS、WhatsAppの購読グループにユーザーを追加できる。
 - **ユーザー輸入**：ユーザは、**Import Users（ユーザのインポート**）により、EメールまたはSMS購読グループに追加することができる。購読グループのステータスを更新する場合、CSV には `subscription_group_id` と `subscription_state` の 2 列が必要です。詳細については、[「ユーザーインポート」]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status)を参照してください。
 
 ### ユーザーのWhatsApp購読グループを確認する
 
 - **ユーザープロフィール:**個々のユーザープロファイルには、Braze ダッシュボードの [**オーディエンス**] > [**ユーザーを検索**] からアクセスできます。ここでは、電子メールアドレス、電話番号、外部ユーザーIDでユーザープロファイルを検索できる。ユーザープロフィールの[**Engagement]**タブで、そのユーザーのWhatsApp購読グループとステータスを確認できる。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは [**ユーザー**] > [**ユーザー検索**] にあります。
-{% endalert %}
 
 - **Rest API:**Braze REST API を使用することで、[ユーザーの購読グループをリストするエンドポイント][9]または[ユーザーの購読グループのステータスをリストするエンドポイント][8]で、個々のユーザープロファイルの購読グループを確認できます。 
 

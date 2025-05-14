@@ -22,7 +22,7 @@ Si seleccionó **Sin optimización** al configurar su campaña, su vista de aná
 
 ![Sección de rendimiento de los análisis de campaña para una campaña de correo electrónico con múltiples variantes. La tabla enumera diversas métricas de rendimiento para cada variante, como destinatarios, rebotes, clics y conversiones.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-Para obtener más información, consulte el artículo [Análisis de campañas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) para su canal de mensajería.
+Para obtener más información, consulte el artículo [Análisis de campañas]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) para su canal de mensajería.
 
 ### Variante ganadora
 
@@ -127,7 +127,7 @@ La tabla de esta página muestra las métricas de cada variante del envío de Va
 La confianza es la medida estadística de nuestra certeza de que una diferencia en los datos, como las tasas de conversión, es real y no se debe al azar.
 
 {% alert note %}
-¿No ves confianza en tus resultados? La confianza sólo aparecerá si ha seleccionado **Variante ganadora** o **Variante personalizada** como optimización.
+¿No ves confianza en tus resultados? La confianza sólo aparecerá si tienes un grupo de control.
 {% endalert %}
 
 Una parte importante de sus resultados es la confianza en los mismos. Por ejemplo, ¿qué pasaría si el grupo de control tuviera una tasa de conversión del 20 % y la variante A tuviera una tasa de conversión del 25 %? Esto parece indicar que enviar la Variante A es más eficaz que no enviar ningún mensaje. Tener una confianza del 95% significa que la diferencia entre los dos índices de conversión se debe probablemente a una diferencia real en las respuestas de los usuarios y que sólo hay un 5% de probabilidades de que la diferencia se haya producido por casualidad.
@@ -183,4 +183,4 @@ Utiliza la información que obtengas de las pruebas anteriores para orientar las
 
 #### Comparar el impacto a largo plazo de las distintas variantes
 
-Si está realizando pruebas A/B con mensajes de reenganche, no olvide comparar el impacto a largo plazo de las distintas variantes mediante [los Informes de retención]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). Puedes utilizar los Informes de retención para analizar el impacto de cada variante en el comportamiento de cualquier usuario que elijas días, semanas o un mes después de la recepción del mensaje, y ver si hay una mejora.
+Si está realizando pruebas A/B con mensajes de reenganche, no olvide comparar el impacto a largo plazo de las distintas variantes mediante [los Informes de retención]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/). Puedes utilizar los Informes de retención para analizar el impacto de cada variante en el comportamiento de cualquier usuario que elijas días, semanas o un mes después de la recepción del mensaje, y ver si hay una mejora.

@@ -22,7 +22,7 @@ A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar
 
 Colocamos um trabalho na fila para cada etapa - eles são executados mais ou menos ao mesmo tempo, e um deles "vence". Na prática, isso pode ser classificado de maneira um pouco uniforme, mas é provável que haja pelo menos uma ligeira tendência para a etapa que foi criada primeiro. 
 
-Além disso, não podemos garantir exatamente como será essa distribuição. Se você quiser uma divisão uniforme, adicione um filtro [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/).
+Além disso, não podemos garantir exatamente como será essa distribuição. Se você quiser uma divisão uniforme, adicione um filtro [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
 
 ### O que acontece quando você interrompe um Canva?
 
@@ -48,13 +48,13 @@ A interrupção de um Canva não fará com que os usuários que estão esperando
 
 ### Quando um evento de exceção é disparado?
 
-Os [eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) só são disparados enquanto o usuário estiver esperando para receber o componente do canva ao qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será disparado. Se quiser excluir usuários que tenham realizado um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Os eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será disparado. Se quiser excluir usuários que tenham realizado um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 ### Como a edição de um Canvas afeta os usuários que já estão no Canvas?
 
 Se você editar algumas das etapas de um Canvas de várias etapas, os usuários que já estavam no público, mas não receberam as etapas, receberão a versão atualizada da mensagem. Note que isso só ocorrerá se eles ainda não tiverem sido avaliados para a etapa.
 
-Para saber mais sobre o que pode ser editado após o lançamento, consulte [Alterar seu canva após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Para saber mais sobre o que pode ser editado após o lançamento, consulte [Alterar seu canva após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
 ### Como as conversões de usuários são rastreadas em um Canva?
 
@@ -95,7 +95,7 @@ Há uma etapa do Canva com o Horário de silêncio ativado:
 
 ### Qual é a diferença entre um componente e uma etapa?
 
-Um [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) é uma parte individual do Canvas que pode ser usada para determinar a eficácia do Canva. Os componentes podem incluir ações como a divisão da jornada do usuário, a adição de uma postergação e até mesmo o teste de várias jornadas do Canva. Uma etapa do canva refere-se à jornada personalizada do usuário em suas filiais dos canvas. Essencialmente, seu Canva é feito de componentes individuais que criam etapas para a jornada do usuário.
+Um [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) é uma parte individual do Canvas que pode ser usada para determinar a eficácia do Canva. Os componentes podem incluir ações como a divisão da jornada do usuário, a adição de uma postergação e até mesmo o teste de várias jornadas do Canva. Uma etapa do canva refere-se à jornada personalizada do usuário em suas filiais dos canvas. Essencialmente, seu Canva é feito de componentes individuais que criam etapas para a jornada do usuário.
 
 ### Como posso visualizar a análise de dados de cada um dos meus componentes do Canva?
 
@@ -111,7 +111,7 @@ O número de usuários que entram em um Canva pode ser diferente do número espe
 
 ### O que acontece com os usuários anônimos durante sua jornada no canva?
 
-Enquanto usuários anônimos podem entrar e sair de Canvases, suas ações não estão associadas a um perfil de usuário específico até que sejam identificados, então suas interações podem não ser totalmente rastreadas em sua análise de dados. Você pode usar o [Construtor de Consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) para gerar um relatório dessas métricas.
+Enquanto usuários anônimos podem entrar e sair de Canvases, suas ações não estão associadas a um perfil de usuário específico até que sejam identificados, então suas interações podem não ser totalmente rastreadas em sua análise de dados. Você pode usar o [Construtor de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) para gerar um relatório dessas métricas.
 
 ### Por que minha taxa de conversão da etapa do Canva não é igual à taxa de conversão total da variante do Canvas?
 

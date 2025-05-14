@@ -51,7 +51,7 @@ Ja, Sie können so viele Templates in Ihre Nachrichten einfügen, wie Sie möcht
 
 ### Wie kann ich eine Vorschau meiner Links mit allen angewendeten Tags anzeigen?
 
-Es gibt mehrere Möglichkeiten, Ihre Links in der Vorschau anzuzeigen. Nachdem Sie die [Linkvorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/) angewendet haben, können Sie eine [Test-E-Mail]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) an sich selbst senden, um alle Links zu sehen. 
+Es gibt mehrere Möglichkeiten, Ihre Links in der Vorschau anzuzeigen. Nachdem Sie die [Linkvorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/) angewendet haben, können Sie eine [Test-E-Mail]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) an sich selbst senden, um alle Links zu sehen. 
 
 Sie können die Links auch über das Vorschaufenster in einer neuen Registerkarte öffnen, um die Links zu sehen. Sie können auch mit dem Mauszeiger über die Links im Vorschaufenster fahren und sie am unteren Rand Ihres Browsers sehen.
 

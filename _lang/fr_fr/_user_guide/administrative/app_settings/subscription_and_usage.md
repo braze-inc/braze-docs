@@ -15,10 +15,6 @@ search_rank: 5
 
 Pour accéder à la page de **facturation**, allez dans **Réglages** > **Facturation.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte, puis en sélectionnant **Abonnements et utilisation.**
-{% endalert %}
-
 La page **Facturation** comprend les onglets suivants :
 
 - [Abonnement et utilisation](#subscriptions-and-usage)

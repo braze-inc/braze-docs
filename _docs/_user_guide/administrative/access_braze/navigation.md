@@ -9,8 +9,6 @@ description: "This guide explains how to use the updated navigation."
 
 # Navigating Braze
 
-*Updates to Braze navigation are being released gradually. You may not see these changes in your environment yet.*
-
 Braze navigation is designed to help you efficiently access features and content across devices. Let’s explore how to make the most of it.
 
 - **Simplified menus:** Navigate intuitively with a vertical menu structure that organizes tools in stacked submenus.

@@ -22,7 +22,7 @@ Les filtres de segmentation permettent d'éviter que vos messages n'apparaissent
 - Allez-vous envoyer des campagnes spéciales aux utilisateurs avant de les exclure de vos segments ?
 - À quels canaux de messagerie votre politique de temporisation sera-t-elle appliquée ? 
 
-Par exemple, si vous avez des utilisateurs qui optent pour la [protection de la confidentialité dans Mail (MPP) d'Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/), réfléchissez à l'impact que cela peut avoir sur vos campagnes d'e-mail et vos indicateurs de livrabilité et déterminez la meilleure façon de structurer votre politique de temporisation.
+Par exemple, si vous avez des utilisateurs qui optent pour la [protection de la confidentialité dans Mail (MPP) d'Apple]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/), réfléchissez à l'impact que cela peut avoir sur vos campagnes d'e-mail et vos indicateurs de livrabilité et déterminez la meilleure façon de structurer votre politique de temporisation.
 
 Pour intégrer les politiques de temporisation dans vos campagnes, créez un [segment][19] qui exclut automatiquement les utilisateurs qui ont marqué vos e-mails comme étant des spams ou qui n'ont pas interagi avec vos messages pendant une certaine période.  
 

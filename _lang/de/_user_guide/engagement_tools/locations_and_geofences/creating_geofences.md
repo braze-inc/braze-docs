@@ -19,10 +19,6 @@ Sie können auf dem Braze-Dashboard Geofences definieren und diese verwenden, um
 
 Verwalten Sie Geofences unter **Publikum** > **Standorte**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Locations** unter **Engagement**.
-{% endalert %}
-
 Geofences sind in Geofence-Sets organisiert - eine Gruppe von Geofences, die verwendet werden können, um Nutzer auf der gesamten Plattform zu segmentieren oder einzubinden. Jedes Geofence-Set kann maximal 10.000 Geofences enthalten.
 
 Sie können eine unbegrenzte Anzahl von Geofences auf dem Dashboard erstellen oder hochladen, so dass Ihr Marketingteam Geofence-Sets und Kampagnen einrichten kann, ohne die Anzahl der Geofences berechnen zu müssen. Braze wird die Geofences, die es für jede:n einzelne:n Nutzer:in trackt, dynamisch neu synchronisieren, um sicherzustellen, dass die für sie:ihn relevantesten Geofences immer verfügbar sind.
@@ -40,7 +36,7 @@ Klicken Sie auf der Seite **Standorte** auf **\+ Geofence-Set erstellen**.
 
 ![Geofence-Set der deutschen Flughäfen mit einem Benutzer, der einen Radius von zweitausend Metern auf der Karte für den Flughafen Hamburg zeichnet.][1]
 
-Sobald Sie ein Geofence-Set erstellt haben, können Sie Geofences manuell hinzufügen, indem Sie sie auf der Karte einzeichnen. Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. Weitere Informationen zu den konfigurierbaren Optionen finden Sie unter [Geofence-Konfiguration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Sobald Sie ein Geofence-Set erstellt haben, können Sie Geofences manuell hinzufügen, indem Sie sie auf der Karte einzeichnen. Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. Weitere Informationen zu den konfigurierbaren Optionen finden Sie unter [Geofence-Konfiguration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Erstellen von Sets per Bulk-Upload {#creating-geofence-sets-via-bulk-upload}
 

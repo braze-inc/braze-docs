@@ -40,7 +40,7 @@ Los cambios surtirán efecto después de seleccionar **Guardar**. Si eliminas pa
 
 Algunos países tienen un mayor riesgo de bombeo de tráfico SMS. Estos países se indican con una etiqueta de **alto riesgo** en el desplegable de países.
 
-![El país hacia abajo con Azerbaiyán tiene una etiqueta de "Alto Riesgo".][4]{: style="max-width:80%;"}
+![El desplegable de países con Azerbaiyán tiene una etiqueta de "Alto riesgo".][4]{: style="max-width:80%;"}
 
 Si permite el envío a estos países, primero debe reconocer el riesgo de hacerlo antes de que el país se añada a su lista de permitidos.
 
@@ -50,7 +50,7 @@ Limite los países de su lista de permitidos a sólo los necesarios para satisfa
 
 ## Visibilidad de los envíos bloqueados
 
-Los intentos de envío a países que no estén en tu lista de permitidos serán abortados. Los mensajes abortados se registrarán en el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) y dentro del [evento de compromiso de mensaje SMS abortado]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). 
+Los intentos de envío a países que no estén en tu lista de permitidos serán abortados. Los mensajes abortados se registrarán en el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) y dentro del [evento de compromiso de mensaje SMS abortado]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 Los mensajes abortados causados por envíos bloqueados se mostrarán como `Abort_Type = "blocked_recipient_country"` con el registro de abortos detallando el país bloqueado.
 

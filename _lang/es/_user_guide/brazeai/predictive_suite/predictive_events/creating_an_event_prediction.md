@@ -12,10 +12,6 @@ description: "Este artículo explica cómo crear una predicción de eventos en e
 
 En Braze, ve a **Análisis** > **Eventos de predicción**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las predicciones** en **Interacción**.
-{% endalert %}
-
 En esta página, verás una lista de predicciones de acontecimientos activos actuales y alguna información básica sobre ellos. Aquí puedes renombrar, archivar y crear nuevas predicciones. Las predicciones archivadas están inactivas y no actualizan las puntuaciones de los usuarios.
 
 ## Paso 1: Crear una nueva predicción
@@ -36,7 +32,7 @@ Hay un límite de cinco predicciones activas simultáneamente. Antes de comprar 
 
 ## Paso 2: Especificar seguimiento de eventos {#event-tracking}
 
-Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
+Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 Aquí verás si el método seleccionado proporciona suficientes datos para que Braze cree un modelo de aprendizaje automático. Si no se cumple el requisito, intenta seleccionar el otro método de registro si también lo utiliza tu aplicación. Desgraciadamente, si no es así, Braze es incapaz de crear una predicción con la cantidad de datos disponibles. Si crees que estás viendo incorrectamente este error, ponte en contacto con tu administrador del éxito del cliente.
 

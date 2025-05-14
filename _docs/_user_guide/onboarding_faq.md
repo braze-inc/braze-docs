@@ -159,7 +159,7 @@ Once you have created your segment, add a `Most Recent Location` filter to targe
 - For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
 {% alert tip %}
-Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location).
+Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}
@@ -436,7 +436,7 @@ Stopping a Canvas will not exit users who are waiting in a step. If you re-enabl
 Canvases
 {% endapitags %}
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
+Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
 
 If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 

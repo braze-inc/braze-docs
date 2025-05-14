@@ -15,7 +15,7 @@ guide_top_text: "Los siguientes artículos enumeran todas las cosas únicamente 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
 - name: "Campaña Push Primer"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Iconos de aplicaciones personalizables"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/

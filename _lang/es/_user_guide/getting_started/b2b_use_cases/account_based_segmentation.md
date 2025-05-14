@@ -10,7 +10,7 @@ description: "Aprende a utilizar varias características de Braze para potenciar
 
 > Esta página muestra cómo utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B.
 
-Puedes hacer la segmentación B2B basada en cuentas de dos formas, dependiendo de cómo configures tu [modelo de datos B2B]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
+Puedes hacer la segmentación B2B basada en cuentas de dos formas, dependiendo de cómo configures tu [modelo de datos B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - Cuando utilices [catálogos para tus objetos de negocio](#option-1-when-using-catalogs-for-your-business-objects)
 - Cuando utilices [fuentes conectadas para tus objetos de negocio](#option-2-when-using-connected-sources-for-your-business-objects)
@@ -49,7 +49,7 @@ Selecciona las siguientes variables para un caso de uso de segmentación basada 
 
 Para una segmentación más sofisticada o compleja, consulta [Extensiones de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). Para ayudarte a empezar, aquí tienes algunas plantillas SQL que puedes utilizar para empezar con la segmentación basada en cuentas B2B:
 
-1. Crea un segmento comparando dos filtros en un mismo catálogo (como los usuarios que trabajan en el sector de la restauración para una cuenta de nivel empresarial).
+1. Crea un segmento comparando dos filtros en un mismo catálogo (como los usuarios que trabajan en el sector de la restauración para una cuenta de nivel empresarial). Debes incluir el ID del catálogo y el ID del artículo.
 
 ```sql
 WITH salesforce_accounts AS (

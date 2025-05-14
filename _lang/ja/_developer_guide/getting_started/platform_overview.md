@@ -58,7 +58,7 @@ Braze API を使えば、Braze からデータを大規模に出し入れする�
 
 また、この API は、モバイルおよび Web SDK 経由ではなく、HTTP 経由で直接ユーザーが実行したアクションを記録できる Web サービスも提供します。webhook と組み合わせることで、アプリ体験の内外でユーザーのアクションを追跡し、アクティビティをトリガーできます。[APIガイドには]({{site.baseurl}}/api/home)、利用可能なBraze APIエンドポイントとその用途が記載されている。
 
-Braze の構成要素については、以下を確認してください。[はじめに: アーキテクチャの概要]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
+Braze の構成要素については、以下を確認してください。[はじめに: アーキテクチャの概要]({{site.baseurl}}/developer_guide/getting_started/architecture_overview/).
 
 ## データ分析と行動
 
@@ -74,7 +74,7 @@ Brazeのダッシュボードは、多くの分析指標やアプリケーショ
 
 セグメンテーションを利用することで、アプリ内での行動やユーザー層データなどの強力なフィルターに基づいて、ユーザーのグループを作成することができます。また、Brazeでは、希望するアクションがデフォルトでキャプチャされない場合、任意のアプリ内ユーザーアクションを「カスタムイベント」として定義することができる。同じことが、"カスタム属性 "によるユーザー特性にも当てはまる。ダッシュボード上でユーザーセグメントが作成されると、ユーザーは定義された基準を満たす（または満たさない）ごとにセグメントを出たり入ったりする。例えば、アプリ内でお金を使い、最後にアプリを使ったのが2週間以上前であるすべてのユーザーを含むセグメントを作成することができる。
 
-データモデルについては、こちらをご覧いただきたい：[はじめに: 分析の概要]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview)。
+データモデルについては、こちらをご覧いただきたい：[はじめに: 分析の概要]({{site.baseurl}}/developer_guide/getting_started/architecture_overview/)。
 
 ## マルチチャンネル・メッセージング
 
@@ -106,39 +106,10 @@ Brazeのダッシュボードは、多くの分析指標やアプリケーショ
 
 <br>
 <br>
-メッセージングチャネルのカスタマイズの詳細については、以下を参照してください： [はじめにカスタマイズの概要]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
 
 ## Braze を統合する
 
-Braze は、迅速かつ簡単に稼働できるように設計されています。数百のブランドの顧客ベース全体で、当社の平均タイムトゥーバリューは6週間です。統合プロセスの詳細については、こちらをご覧いただきたい：[はじめに: 統合の概要]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/)。
-
-Brazeが提供するさまざまなSDKを探そう：
-
-<style>
-table th:nth-child(1) {
-width: 33%;
-}
-table th:nth-child(2) {
-width: 33%;
-}
-table th:nth-child(3) {
-width: 33%;
-}
-table td {
-word-break: break-word;
-text-align: center;
-}
-</style>
-注目の統合   |    |   
------------ |---------------- | --------------------
-[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) |[![Swift]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/) |[![ウェブ]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [ウェブ]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)  
-
-すべての統合   |    |   
------------ |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/) | [![Flutter の Android および iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter の Android および iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/)
-[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/)
-[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ アンドロイド]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/)
-[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
+Braze は、迅速かつ簡単に稼働できるように設計されています。数百のブランドの顧客ベース全体で、当社の平均タイムトゥーバリューは6週間です。統合プロセスの詳細については、こちらをご覧いただきたい：[はじめに: 統合の概要]({{site.baseurl}}/developer_guide/getting_started/integration_overview/)。
 
 ## ブックマークすべきリソース
 
@@ -146,6 +117,7 @@ text-align: center;
 
 | リソース | 学べる内容|
 |---|---|
+| [SDKをデバッグする]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | インテグレーションをトラブルシューティングする際には、SDKデバッグツールが役に立つ。必ず手元に置いておくこと！ |
 | [Braze Public GitHub](https://github.com/braze-inc/) | 統合に関する詳細な情報とサンプルコードについては、GitHub リポジトリを参照してください。 |
 | [Android SDK GitHubリポジトリ](https://github.com/braze-inc/braze-android-sdk/) | Android SDKのGitHubリポジトリ。 |
 | [Android SDK リファレンス](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Android SDKのクラス・ドキュメント。 |
@@ -153,9 +125,8 @@ text-align: center;
 | [iOS (Swift) SDK リファレンス](https://braze-inc.github.io/braze-swift-sdk/) | iOS SDKのクラス・ドキュメント。 |
 | [ウェブSDK GitHubリポジトリ](https://github.com/braze-inc/braze-web-sdk) | Web SDKのGitHubリポジトリ。 |
 | [Web SDK リファレンス](https://js.appboycdn.com/web-sdk/5.0/doc/modules/braze.html) | iOS SDKのクラス・ドキュメント。 |
-| [SDK 変更ログ]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs) | Braze は、重要な問題や主要な OS 更新のリリースに加えて、予測可能な毎月のリリースを提供しています。 |
+| [SDK 変更ログ]({{site.baseurl}}/developer_guide/changelogs) | Braze は、重要な問題や主要な OS 更新のリリースに加えて、予測可能な毎月のリリースを提供しています。 |
 | [Braze API Postman Collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Postman collection はこちらからダウンロードできます。  |
 | [Braze System Status Monitor](https://braze.statuspage.io/) | 私たちのステータス・ページは、事故や障害が発生するたびに更新される。アラートをサブスクライブするには、このページに移動します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
 

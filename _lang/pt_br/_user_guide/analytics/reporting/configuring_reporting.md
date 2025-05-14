@@ -22,7 +22,3 @@ Você pode assinar esse relatório na página **Preferências de notificação**
 ## Adição de eventos personalizados aos relatórios
 
 Além disso, se estiver usando eventos personalizados, você poderá selecionar até cinco eventos principais na página **Eventos personalizados** para serem incluídos no relatório semanal. Acesse **Configurações de dados** > **Eventos personalizados** para atualizar esses eventos a qualquer momento.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essas páginas estão em um local diferente. <br>\- As preferências de notificação estão localizadas no ícone de sua conta > **Configurações da empresa** > **Preferências de notificação**.<br>\- Os **eventos personalizados** estão localizados em **Gerenciar configurações**.
-{% endalert %}

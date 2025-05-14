@@ -12,7 +12,7 @@ channel:
 
 # Cargar una plantilla de correo electrónico HTML
 
-> El panel de control de Braze le permite cargar sus propias plantillas de correo electrónico HTML y guardarlas para utilizarlas posteriormente en campañas. También puede [crear una plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) utilizando nuestro editor.
+> El panel de control de Braze le permite cargar sus propias plantillas de correo electrónico HTML y guardarlas para utilizarlas posteriormente en campañas. También puede [crear una plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) utilizando nuestro editor.
 
 ## Requisitos previos {#upload-requirements}
 
@@ -28,10 +28,6 @@ En primer lugar, tendrás que crear tu plantilla de correo electrónico HTML. De
 ### Paso 1: Vaya al editor de plantillas de correo electrónico
 
 Vaya a **Plantillas** > **Plantillas de correo electrónico**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), esta página se encuentra en **Compromiso** > **Plantillas y medios** > **Plantillas de correo electrónico**.
-{% endalert %}
 
 ### Paso 2: Abre el cargador
 
@@ -72,7 +68,7 @@ Para utilizar su correo electrónico en una campaña API, necesita la dirección
 
 ## Gestión de plantillas de correo electrónico
 
-Puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) plantillas de correo electrónico. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas de correo electrónico. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Preguntas más frecuentes
 

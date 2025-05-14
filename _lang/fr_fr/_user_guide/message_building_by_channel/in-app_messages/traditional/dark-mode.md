@@ -22,7 +22,7 @@ Lorsque le mode sombre est activé, les menus et écrans natifs de l'appareil (n
 
 ## Définition d’un thème du mode sombre
 
-La nouvelle option Mode sombre, située dans l'onglet Style lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
+La nouvelle option Mode sombre, située dans l'onglet Style lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
 
 ![Utilisateur basculant entre les modes sombre et clair dans l’onglet Style lors de la création d’un message in-app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
@@ -35,10 +35,6 @@ Vous pouvez utiliser cette fonctionnalité même si votre application n’offre 
 ### Utilisation continue du mode sombre
 
 Pour utiliser le mode sombre pour tous les messages in-app, accédez à **Modèles** > **Modèles de messages in-app.**
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Modèles et médias.**
-{% endalert %}
 
 Sélectionnez ensuite [Créer un profil de couleur][2] dans la liste déroulante. Créez un profil de couleur qui correspond à votre thème du mode sombre. Puis, chaque fois que vous créez une version en mode sombre d’un message in-app, vous pouvez sélectionner ce profil de couleur et conserver la cohérence de l’apparence de vos messages in-app.
 

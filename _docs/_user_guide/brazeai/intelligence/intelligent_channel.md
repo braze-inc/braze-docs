@@ -10,9 +10,9 @@ search_rank: 11
 
 > The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
 
-In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, SMS, WhatsApp, web push, or mobile push (including any available mobile OS or device) as a channel.
-
 ![The Intelligent Channel filter with a dropdown for the different channels that can be selected.][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+
+In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, SMS, WhatsApp, web push, or mobile push (including any available mobile OS or device) as a channel.
 
 The Intelligent Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last six months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. 
 
@@ -21,7 +21,7 @@ Every time a message is sent to a user, or a user interacts with a message, the 
 To enable the Intelligent Channel filter, select the **Intelligent Channel** filter on the **Target Users** page when creating a email, web push, or mobile push campaign.
 
 {% alert important %}
-To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/) with advanced tracking and click tracking.
+To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/#tie-breaking).
 {% endalert %}
 
 ## The "Not enough data" option
@@ -32,7 +32,7 @@ If users haven't received enough messages across the channels, those users will 
 
 For example, let's say you want users who prefer push messages to receive a push and users who don't have enough data to receive the same push message. In that case, you could set the Intelligent Channel filter to **Mobile push** and use **OR** to add a second Intelligent Channel filter set to **Not Enough Data**. A separate campaign with the Intelligent Channel filter set to email could address users who prefer email.
 
-![Intelligent Channel filters for mobile push or not enough data.][2]
+![Intelligent Channel filters for mobile push or not enough data.][2]{:style="border:none"}
 
 {% alert note %}
 Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements.

@@ -27,7 +27,7 @@ Amazon Personalize uses machine learning to help create high-quality recommendat
 
 ## Vizbee partnership
 
-Vizbee enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps leverage existing mobile app marketing channels like notifications, deep-links, and emails to acquire and engage viewership across all CTV devices (like Roku, FireTV, Samsung TV, LG TV, etc.) For more information, check out our [Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/) documentation. 
+Vizbee enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps leverage existing mobile app marketing channels like notifications, deep-links, and emails to acquire and engage viewership across all CTV devices (like Roku, FireTV, Samsung TV, LG TV, etc.) For more information, check out our [Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/) documentation. 
 
 ## Bluedot partnership
 
@@ -35,4 +35,4 @@ Bluedot is a location platform that provides an accurate and straightforward geo
 
 ## Iterate partnership
 
-Iterate makes it easy to learn from your customer, offering smart, user-friendly survey tools that look and feel like your brand. For more information, check out our [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) documentation. 
+Iterate makes it easy to learn from your customer, offering smart, user-friendly survey tools that look and feel like your brand. For more information, check out our [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) documentation. 

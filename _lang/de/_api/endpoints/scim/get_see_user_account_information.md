@@ -6,32 +6,32 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Ein bestehendes Dashboard-Benutzerkonto nachschlagen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Braze-ID für ein bestehendes Dashboard-Nutzer:innen-Konto."
 ---
 
 {% api %}
-# Ein bestehendes Dashboard-Benutzerkonto nachschlagen
+# Suchen Sie ein bestehendes Dashboard-Benutzerkonto nach der ID einer Ressource
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu suchen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) Methode zurückgegeben wird. 
+> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard Nutzer:in-Konto zu suchen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden den Ursprung Ihres Dienstes als `X-Request-Origin` Kopfzeile. Weitere Informationen finden Sie unter [Automatisierte Benutzerbereitstellung]({{site.baseurl}}/scim/automated_user_provisioning/).
+Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Preisgrenze
+## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
+{% multi_lang_include rate_limits.md endpunkt='Nutzer:innen des Dashboards suchen' %}
 
 ## Pfad-Parameter
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung |
 |---|---|---|---|
-| `id` | Erforderlich | String | Die Ressourcen-ID des Benutzers. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
+| `id` | Erforderlich | String | Die ID des Nutzers:innen. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Körper der Anfrage

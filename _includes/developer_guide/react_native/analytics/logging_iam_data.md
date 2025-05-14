@@ -14,15 +14,17 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 | `performInAppMessageButtonAction(inAppMessage, buttonId)` | Performs the action for an in-app message button.                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Accessing message data
+## Handling message data
 
 In most cases, you can use the `Braze.addListener` method to register event listeners to handle data coming from in-app messages. 
 
 Additionally, you can access the in-app message data in the JavaScript layer by calling the `Braze.subscribeToInAppMessage` method to have the SDKs publish an `inAppMessageReceived` event when an in-app message is triggered. Pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
 
-### Basic implementation
+To customize how message data is handled, refer to the following implementation examples:
 
-To enhance the default behavior, or if you don't have access to customize the native iOS or Android code, we recommend that you disable the default UI while still receiving in-app message events from Braze. To disable the default UI, pass `false` to the `Braze.subscribeToInAppMessage` method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
+{% tabs local %}
+{% tab basic %}
+To enhance the default behavior, or if you don't have access to customize the native iOS or Android code, we recommend that you disable the default UI while still receiving in-app message events from Braze. To disable the default UI, pass `false` to the `Braze.subscribeToInAppMessage` method and use the in-app message data to construct your own message in JavaScript. Note that you will need to manually log analytics on your messages if you choose to disable the default UI.
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
@@ -43,21 +45,20 @@ Braze.subscribeToInAppMessage(false, (event) => {
   // Use `event.inAppMessage` to construct your own custom message UI.
 });
 ```
+{% endtab %}
 
-### Advanced implementation
-
+{% tab advanced %}
 To include more advanced logic to determine whether or not to show an in-app message using the built-in UI, implement in-app messages through the native layer.
 
 {% alert warning %}
 Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener` as described in [Accessing in-app message data](#accessing-in-app-message-data), you will need to handle publishing the events yourself.
 {% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
+{% subtabs %}
+{% subtab Android %}
 Implement the `IInAppMessageManagerListener` as described in our Android article on [Custom Manager Listener]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
-For more on these values, see our [Android documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/).
+For more on these values, see our [Android documentation]({{site.baseurl}}/developer_guide/in_app_messages/).
 
 ```java
 // In-app messaging
@@ -75,8 +76,8 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
     return InAppMessageOperation.DISPLAY_NOW;
 }
 ```
-{% endtab %}
-{% tab iOS %}
+{% endsubtab %}
+{% subtab iOS %}
 ### Overriding the default UI delegate
 
 By default, [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/) is created and assigned when you initialize the `braze` instance. `BrazeInAppMessageUI` is an implementation of the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and comes with a `delegate` property that can be used to customize the handling of in-app messages that have been received.
@@ -87,8 +88,6 @@ By default, [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/
 
 For more details on these values, see our [iOS documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/).
 
-{% subtabs %}
-{% subtab OBJECTIVE-C %}
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
                             displayChoiceForMessage:(BRZInAppMessageRaw *)message {
@@ -107,8 +106,6 @@ For more details on these values, see our [iOS documentation](https://braze-inc.
   return BRZInAppMessageUIDisplayChoiceNow;
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
 
 To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after initializing the `braze` instance. 
 
@@ -116,8 +113,6 @@ To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after i
 `BrazeUI` can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.
 {% endalert %}
 
-{% subtabs %}
-{% subtab OBJECTIVE-C %}
 ```objc
 @import BrazeUI;
 
@@ -128,15 +123,11 @@ To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after i
   AppDelegate.braze = braze;
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
 
 ### Overriding the default native UI
 
 If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following the sample below:
 
-{% subtabs %}
-{% subtab OBJECTIVE-C %}
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
 Braze *braze = [BrazeReactBridge initBraze:configuration];

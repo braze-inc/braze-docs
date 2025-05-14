@@ -33,6 +33,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
 ---
+
 ## 지원되는 브라우저
 
 Braze 대시보드에서 지원하는 브라우저는 다음과 같습니다:
@@ -40,5 +41,22 @@ Braze 대시보드에서 지원하는 브라우저는 다음과 같습니다:
 - Firefox(버전 85 이상)
 - Safari(버전 15.4 이상)
 - Edge(버전 87 이상)
+
+If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and reinstall your browser.
+
+### Browser cache and cookies
+
+If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser.
+
+{% alert important %}
+Clearing cookies will log you out, so unsaved work will be lost.
+{% endalert %}
+
+- [Clear cache & cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Clear cookies in Safari on Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
+- [Clear cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
+- [Delete all cookies in Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
+
+If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
 
 <br><br>

@@ -39,7 +39,13 @@ Se você notar que seu {target} público é menor do que o esperado, tente usar 
 
 ### Identificar configurações de entrada e condições de corrida
 
-Uma condição de corrida pode ocorrer quando você usou os mesmos critérios de entrada tanto nas suas configurações de **Programação de Entrada** quanto de **Público-Alvo**. Se você estiver usando entrada baseada em ação, verifique se não usou a mesma ação-gatilho aqui que no seu público-alvo. Uma condição de corrida pode ocorrer na qual o usuário não está no público no momento em que realiza o evento de gatilho, o que significa que ele não entrará no canva.
+Uma condição de corrida pode ocorrer quando você usou os mesmos critérios de entrada tanto nas suas configurações de **Programação de Entrada** quanto de **Público-Alvo**. 
+
+Se você estiver usando entrada baseada em ação, verifique se não usou a mesma ação-gatilho aqui que no seu público-alvo. Uma condição de corrida pode ocorrer na qual o usuário não está no público no momento em que realiza o evento de gatilho, o que significa que ele não entrará no canva.
+
+{% alert tip %}
+Confira as [práticas recomendadas]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) para evitar essa condição de corrida ao configurar um Canva baseado em ação com o mesmo disparo que o filtro de público.
+{% endalert %}
 
 ### Verifique as propriedades de entrada da canva e as propriedades do evento
 
@@ -97,7 +103,7 @@ Em seguida, é importante identificar essas configurações que podem afetar qua
 - Horário de silêncio
 - Validações de entrega
 
-Em geral, escolha Intelligent Timing ou horário de silêncio para o seu canva, não ambos. A mesma sugestão se aplica ao uso de Intelligent Timing ou [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), não ambos. Para saber mais sobre como usar melhor o Intelligence Suite, leia nossas [Perguntas frequentes sobre inteligência]({{site.baseurl}}/user_guide/intelligence/faqs/).
+Em geral, escolha Intelligent Timing ou horário de silêncio para o seu canva, não ambos. A mesma sugestão se aplica ao uso de Intelligent Timing ou [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), não ambos. Para saber mais sobre como usar melhor o Intelligence Suite, leia nossas [Perguntas frequentes sobre inteligência]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Volumes de envio suspeitos entre caminhos
 

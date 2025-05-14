@@ -45,7 +45,7 @@ All users are eligible for lead scoring, so you can add company-specific rules a
 
 ![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.][3]{: style="max-width:80%;"}
 
-#### Step 3b: Set Canvas re-eligibilty
+#### Step 3b: Set Canvas re-eligibility
 
 A user will go through this Canvas many times throughout their lifecycle with you, so make sure they can re-enter as quickly as they exited the previous time. This can be accomplished through re-eligibility settings. 
 
@@ -83,7 +83,7 @@ Add the following groups to your Action Path:
 - **Group 3:** All events that count for a 1-point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
-![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.][7]
+![Action Path containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.][7]
 
 #### Step 4c: Configure each group to include the relevant events
 
@@ -133,7 +133,7 @@ As your marketing tool, Braze contains extremely relevant data that could supple
 For example, messaging engagement data (such as email opens and clicks, landing page engagement, and others) can determine a lead’s engagement level. You can pass this data back to your cloud data warehouse and make it available as input for your lead scoring models by using Braze streaming export data solutions:
 
 - [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
+- [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze as a destination %}

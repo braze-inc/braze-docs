@@ -1,7 +1,7 @@
 ---
 nav_title: 機能の認知度と新しいアプリバージョン
 article_title: 機能の認知度と新しいアプリバージョン
-page_order: 7
+page_order: 9
 page_type: reference
 description: "この記事では、新しい機能やバージョンをリリースするときにユーザーに知識を与えて楽しみにしてもらえる状態を継続する方法について説明します。"
 tool: Campaigns

@@ -12,9 +12,9 @@ search_rank: 1
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Original Canvas editor %}
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Step 1: Create a new Canvas 
 
@@ -64,7 +64,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Summary %}
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the listed Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) turned on, you can approve the listed Canvas details before launching.
 
   {% endtab %}
 {% endtabs %}
@@ -81,7 +81,7 @@ Tag your Canvases so they're easy to find and build reports out of. For instance
 
 #### Choose conversion events
 
-Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will measure the efficiency of your Canvas. 
+Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]
 
@@ -277,11 +277,9 @@ Select **Done** after you've finished configuring your Canvas component.
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size of 50 KB. 
+The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object can be up to 50 KB. 
 
-For Canvas Flow, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
-
-Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.
@@ -317,13 +315,13 @@ In this example, we have our Canvas divided into two variants. Variant 1 has 70%
 
 ### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
 ![The "Intelligent Selection" option is enabled in the "Edit Variant Distribution" page. As it analyzes and optimizes the Canvas, it displays a horizontal bar across the page that's split into several sections, each varying in color and size. This is only a visual representation and does not correlate to any specific analytics.][18b]
 
-Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
+Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants, it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
 For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
 

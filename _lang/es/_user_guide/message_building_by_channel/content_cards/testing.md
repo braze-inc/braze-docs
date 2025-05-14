@@ -37,19 +37,14 @@ También puedes previsualizar los mensajes desde la pestaña **Prueba** como si 
 
 ## Depurar
 
-Una vez enviadas las tarjetas de contenido, puede desglosar o depurar cualquier problema desde el [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) de la consola de desarrollador. 
+Una vez enviadas las tarjetas de contenido, puede desglosar o depurar cualquier problema desde el [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) de la consola de desarrollador. 
 
 Un caso de uso común es tratar de depurar por qué un usuario no puede ver una tarjeta de contenido en particular. Para ello, puedes buscar en **los registros de usuarios del evento** las tarjetas de contenido entregadas al SDK al inicio de la sesión, pero antes de una impresión, y rastrearlas hasta una campaña específica:
 
 1. Vaya a **Configuración** > **Registro de usuario de eventos**.
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), puede encontrar el **Registro de eventos de usuario** en la **Consola de desarrollador**.
-{% endalert %}
-
-{:start="2"}
-2\. Localiza y amplía la Solicitud de SDK para tu usuario de prueba.
-3\. Haga clic en **Datos brutos**.
-4\. Busca la dirección `id` para tu sesión. A continuación se muestra un extracto de ejemplo:
+2. Localiza y amplía la Solicitud de SDK para tu usuario de prueba.
+3. Haga clic en **Datos brutos**.
+4. Busca la dirección `id` para tu sesión. A continuación se muestra un extracto de ejemplo:
 
     ```json
     [

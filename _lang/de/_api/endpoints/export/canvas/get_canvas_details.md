@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Details zur Leinwand exportieren"
-article_title: "GET: Details zur Leinwand exportieren"
+nav_title: "GET: Canvas-Details exportieren"
+article_title: "GET: Canvas-Details exportieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Export Canvas details Braze."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Export Canvas Details Braze."
 
 ---
 {% api %}
-# Details zum Exportieren von Leinwänden
+# Canvas Details exportieren
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
@@ -22,15 +22,15 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Export Canvas 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `canvas.details`.
 
-## Preisgrenze
+## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpunkt='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Daten Typ | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Erforderlich | String | Siehe [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
+| `canvas_id` | Erforderlich | String | Siehe [Canvas API Bezeichner]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -45,7 +45,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Antworten
 
 {% alert note %}
-Alle Canvas-Schritte haben ein `next_paths` Feld, das ein Array mit `{name, next_step_id}` Daten ist. Für vollständige Schritte und Nachrichtenschritte ist das Feld `next_step_ids` vorhanden, enthält aber keine Daten für andere Canvas Flow Schritte.
+Alle Canvas-Schritte verfügen über ein `next_paths` Feld, bei dem es sich um ein Array von `{name, next_step_id}` Daten handelt. Bei vollständigen Schritten und Nachrichten-Schritten ist das Feld `next_step_ids` vorhanden, enthält aber keine Daten für andere Canvas Flow-Schritte.
 {% endalert %}
 
 ```json
@@ -215,7 +215,7 @@ Im Folgenden finden Sie eine Beispielantwort, die Canvas-Nachrichten enthält, d
 ```
 
 {% alert tip %}
-Hilfe zum CSV- und API-Export finden Sie unter [Fehlerbehebung beim Exportieren]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

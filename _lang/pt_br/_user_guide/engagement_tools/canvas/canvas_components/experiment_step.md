@@ -64,14 +64,14 @@ Por fim, você deve montar suas jornadas dependentes. Selecione **Concluído** e
 Lembre-se de que os caminhos e seus passos subsequentes não podem ser removidos de uma canva depois de serem criados. No entanto, quando lançado, você pode modificar a distribuição do público entre as jornadas conforme achar adequado. Por exemplo, se um dia após lançar um canva, você concluir que uma jornada é superior às demais com base na análise de dados, você pode definir essa jornada para 100% e as outras para 0%. Ou, dependendo das suas necessidades, continue enviando os usuários por várias jornadas.
 
 {% alert note %}
-Os Caminhos de Experimento não podem ser editados depois que uma canva é lançada. Se o seu experimento estiver fazendo envios e você editar a mensagem, o teste será renderizado inútil e quaisquer resultados do experimento serão removidos. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br> Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Os Caminhos de Experimento não podem ser editados depois que uma canva é lançada. Se o seu experimento estiver fazendo envios e você editar a mensagem, o teste será renderizado inútil e quaisquer resultados do experimento serão removidos. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br> Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Rastreamento de performance
 
 Na página de **análise de dados da canva**, clique na jornada experimental para abrir uma [tabela detalhada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idêntica à guia **Analisar Variantes** para comparar estatísticas detalhadas de performance e conversão entre jornadas. Você também pode exportar a tabela via CSV e comparar as mudanças percentuais para métricas de interesse em relação à jornada ou controle que você selecionar.
 
-Cada etapa em cada jornada exibirá estatísticas na visualização [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/), assim como qualquer etapa do canva. No entanto, tenha em mente que a análise de dados dos passos individuais **não** leva em conta a estrutura do experimento. A análise de dados na Etapa do Experimento deve ser usada para comparar entre jornadas.
+Cada etapa em cada jornada exibirá estatísticas na visualização [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), assim como qualquer etapa do canva. No entanto, tenha em mente que a análise de dados dos passos individuais **não** leva em conta a estrutura do experimento. A análise de dados na Etapa do Experimento deve ser usada para comparar entre jornadas.
 
 ### Desempenho da Jornada Vencedora e Jornadas Personalizadas
 

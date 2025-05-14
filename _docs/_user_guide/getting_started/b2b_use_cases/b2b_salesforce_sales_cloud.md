@@ -92,7 +92,7 @@ Select **+ Add New Header** for each of the following request headers.
  
 ## Updating a lead in Salesforce Sales Cloud {#updating-lead}
 
-To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
 
 This example specifically demonstrates how to update a lead’s lead stage to “MQL” (Marketing Qualified Lead) after a lead crosses a certain lead threshold. This is a core part of our [B2B lead scoring workflow]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/) use case.
 
@@ -158,7 +158,7 @@ To create a lead in Salesforce when a user provides their email address, you can
 
 ### Lead scoring Canvas for crossing the Marketing Qualified Lead (MQL) threshold {#lead-scoring}
 
-This webhook is covered in the [lead scoring]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) use case, but you can also check for MQLs and directly update Salesforce within the lead scoring Canvas (as opposed to creating a separate webhook campaign): 
+This webhook is covered in the [lead scoring]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) use case, but you can also check for MQLs and directly update Salesforce within the lead scoring Canvas (as opposed to creating a separate webhook campaign): 
 
 Add a subsequent step to your user update to check if a user has crossed your defined MQL threshold. If they have crossed, update the user’s status to “MQL”, and then update Salesforce with the same “MQL” status by using this webhook template. Salesforce takes care of the rest by routing this lead to the appropriate sales teams using your defined lead routing rules.  
 

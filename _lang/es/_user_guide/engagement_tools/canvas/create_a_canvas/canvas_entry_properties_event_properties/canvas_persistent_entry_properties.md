@@ -17,13 +17,14 @@ Antes de esta función, las propiedades de entrada sólo podían utilizarse en e
 ## Uso de las propiedades de entrada
 
 Las propiedades de entrada pueden utilizarse en lienzos basados en acciones y activados por API. Estas propiedades de entrada se definen cuando un Canvas es activado por un evento personalizado, una compra o una llamada a la API. Consulte los siguientes artículos para obtener más información:
+
 - [Objeto de propiedades de entrada del lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objeto de propiedades de eventos]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 Las propiedades pasadas desde estos objetos pueden ser referenciadas utilizando la etiqueta `canvas_entry_properties` Liquid. Por ejemplo, una solicitud con `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` podría añadir la palabra "zapatos" a un mensaje añadiendo {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} de Liquid.
 
-Cuando un lienzo incluye un mensaje con la etiqueta `canvas_entry_properties` Liquid, los valores asociados a esas propiedades se guardarán mientras dure el recorrido del usuario en el lienzo y se borrarán cuando el usuario salga del lienzo. Tenga en cuenta que las propiedades de entrada de Canvas sólo están disponibles como referencia en Liquid. Para filtrar las propiedades dentro del lienzo, utilice [la segmentación de propiedades de eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Cuando un lienzo incluye un mensaje con la etiqueta `canvas_entry_properties` Liquid, los valores asociados a esas propiedades se guardarán mientras dure el recorrido del usuario en el lienzo y se borrarán cuando el usuario salga del lienzo. Tenga en cuenta que las propiedades de entrada de Canvas sólo están disponibles como referencia en Liquid. Para filtrar las propiedades dentro del lienzo, utilice [la segmentación de propiedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 {% alert note %}
 El objeto Propiedades de entrada del lienzo tiene un límite de tamaño máximo de 50 KB.
@@ -80,7 +81,7 @@ En esta solicitud, el valor global de "alergias alimentarias" es "ninguna". Para
 
 ## Caso de uso
 
-Si tiene un Canvas que se activa cuando un usuario navega por un artículo en su sitio de comercio electrónico pero no lo añade a su cesta, el primer paso del Canvas podría ser una notificación push preguntándole si está interesado en comprar el artículo. Puede hacer referencia al nombre del producto utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+Si tienes un Canvas que se desencadena cuando un usuario navega por un artículo en tu sitio de comercio electrónico pero no lo añade a su cesta, el primer paso del Canvas podría ser una notificación push preguntándole si está interesado en comprar el artículo. Puede hacer referencia al nombre del producto utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 

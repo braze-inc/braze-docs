@@ -40,6 +40,7 @@ Los objetos de atributo personalizados pueden contener [tipos de datos][1], como
 - Los objetos tienen un tamaño máximo de 100 KB.
 - Los nombres de las claves y los valores de las cadenas tienen un límite de tamaño de 255 caracteres.
 - Los nombres de las claves no pueden contener espacios.
+- Los puntos (`.`) y los signos de dólar (`$`) no son caracteres admitidos en una carga útil de la API si intentas enviar un atributo personalizado anidado a un perfil de usuario.
 - No todos los socios Braze admiten atributos personalizados anidados. Consulta la [documentación del socio]({{site.baseurl}}/partners/home) para confirmar si determinadas integraciones del socio admiten esta característica.
 - Los atributos personalizados anidados no se pueden utilizar como filtro al realizar una llamada a la API de Connected Audience.
 
@@ -121,6 +122,10 @@ Para eliminar un objeto de atributo personalizado, envíe un POST a `users/track
   ]
 }
 ```
+
+{% alert note %}
+Este método no puede utilizarse para eliminar una clave anidada dentro de una [matriz de objetos]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -354,10 +359,6 @@ Para este ejemplo, supongamos que tenemos una matriz de objetos `accounts` que a
 
 En el panel de Braze, ve a **Configuración de datos** > **Atributos personalizados**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **los atributos personalizados** en **Administrar configuración**.
-{% endalert %}
-
 Busca tu objeto o matriz de objetos. En la columna **Nombre del atributo**, selecciona **Generar esquema**.
 
 ![][8]
@@ -441,7 +442,7 @@ Si los datos no aparecen como se esperaba tras regenerar el esquema, puede que e
 
 ## Puntos de datos
 
-Cualquier clave que se actualice consume un punto de datos. Por ejemplo, este objeto inicializado en el perfil de usuario cuenta como siete (7) puntos de datos:
+Cualquier clave que se envíe consume un punto de datos. Por ejemplo, este objeto inicializado en el perfil de usuario cuenta como siete (7) puntos de datos:
 
 ```json
 {

@@ -7,7 +7,7 @@ description: "이 페이지에서는 클라우드 데이터 수집에 대해 자
 toc_headers: h2
 ---
 
-# 자주 묻는 질문(FAQ)
+# Frequently asked questions
 
 > 이 페이지에는 클라우드 데이터 수집과 관련하여 자주 묻는 질문에 대한 답변이 포함되어 있습니다.
 

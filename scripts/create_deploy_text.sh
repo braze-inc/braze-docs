@@ -7,8 +7,8 @@
 main() {
     TEMP_FILE=$(mktemp)
 
-    # Gets the latest commit hash from origin/master that is not in origin/develop.
-    LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/master ^origin/develop)
+    # Gets the latest commit hash from origin/$PRIMARY_BRANCH that is not in origin/develop.
+    LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/$PRIMARY_BRANCH ^origin/develop)
 
     if [ -z "$1" ] || [ -z "$2" ]; then
         # Gets the log of commits starting from the latest 

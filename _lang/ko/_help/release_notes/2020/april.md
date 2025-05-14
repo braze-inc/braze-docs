@@ -11,7 +11,7 @@ description: "이 문서에는 2020년 4월 릴리스 노트가 포함되어 있
 
 Movable Ink는 Braze 고객에게 푸시, 인앱 메시지 및 콘텐츠 카드 캠페인에서 카운트다운 타이머, 설문 조사 및 긁기와 같은 지능형 크리에이티브 기능을 사용할 수 있는 기능을 제공합니다. Movable Ink와 Braze는 데이터 중심의 동적 메시지에 대한 보다 균형 잡힌 접근 방식을 제공하여 사용자에게 중요한 것들에 대한 실시간 요소를 제공합니다.
 
-귀하의 캠페인에 [Movable Ink]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/) 통합을 시작하세요!
+귀하의 캠페인에 [Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) 통합을 시작하세요!
 
 ## Intelligent Timing
 

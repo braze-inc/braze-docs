@@ -15,10 +15,6 @@ Sie können API-Kampagnentransaktionen einsehen, Details zu fehlgeschlagenen Nac
 
 Um auf das Protokoll zuzugreifen, gehen Sie zu **Einstellungen** > **Nachrichtenaktivitätsprotokoll**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie das **Nachrichtenaktivitätsprotokoll** unter **Einstellungen** > **Entwicklerkonsole**.
-{% endalert %}
-
 ![Nachrichten-Aktivitätsprotokoll][2]
 
 {% alert tip %}
@@ -37,6 +33,9 @@ Sie können nach den folgenden im **Nachrichten-Aktivitätsprotokoll** protokoll
 - User-Aliasing-Fehler
 - A/B-Testing-Fehler
 - SMS/MMS-Fehler
+- WhatsApp-Fehler
+- Live-Aktivitätsfehler
+- Fehler beim Triggern durch Nutzer:in
 
 Diese Nachrichten können von unserem eigenen System, Ihren Anwendungen oder Plattformen oder von unseren Drittpartnern stammen. Dies kann zu einer unendlichen Anzahl von Meldungen führen, die in diesem Protokoll erscheinen können.
 
@@ -70,6 +69,23 @@ Zum Beispiel könnten einige potenzielle „Block“-Nachrichten zusätzlich zu 
 - Nachricht aufgrund lokaler Richtlinien abgelehnt.
 - Die Nachricht wurde vom Empfänger als Spam blockiert.
 - Dienst nicht verfügbar, Client-Host [_IP_ADDRESS_] mit Spamhaus blockiert.
+
+## Aufbewahrungsdauer der Bindung
+
+Die Fehler der letzten 60 Stunden finden Sie in den Protokollen der Nachrichtenaktivitäten. Protokolle, die mehr als 60 Stunden alt sind, werden gelöscht und sind nicht mehr zugänglich. 
+
+### Anzahl der gespeicherten Fehlerprotokolle
+
+Die Anzahl der gespeicherten Protokolle wird von mehreren Bedingungen beeinflusst. Wenn zum Beispiel eine geplante Kampagne an Tausende von Nutzer:innen gesendet wird, sehen wir im Nachrichten-Aktivitätsprotokoll möglicherweise eine Auswahl der Fehler statt aller Fehler.
+
+Hier finden Sie eine Übersicht über die Bedingungen, die beeinflussen, wie viele Protokolle gespeichert werden:
+- Bis zu 20 Connected-Content-Fehlerprotokolle werden für dieselbe Kampagne innerhalb einer festen Uhrzeit gespeichert.
+- Es werden bis zu 100 Fehlerprotokolle desselben Fehlertyps innerhalb einer festen Uhrzeit pro Workspace für die folgenden Fehlertypen gespeichert:
+    - Fehler bei abgebrochener Nachricht
+    - Webhook-Fehler
+    - Fehler bei Push-Benachrichtigungen
+    - Live-Aktivitätsfehler
+    - Fehler beim Triggern durch Nutzer:in
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

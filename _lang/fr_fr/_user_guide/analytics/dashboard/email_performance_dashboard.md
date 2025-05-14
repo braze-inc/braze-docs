@@ -13,10 +13,6 @@ tool:
 
 > Les tableaux de bord des performances des canaux affichent les indicateurs de performance agrégés pour un canal entier, à partir des campagnes et des Canevas. Ces tableaux de bord sont disponibles actuellement pour les e-mails et les SMS.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), les tableaux de bord de la performance des canaux se trouvent sous l'**emplacement/localisation.**
-{% endalert %}
-
 ![Tableau de bord des performances e-mail affichant l’engagement des trente derniers jours sur ce canal de communication.][1]
 
 Vous pouvez consulter les tableaux de bord suivants :
@@ -41,7 +37,7 @@ Chaque vignette affiche d’abord l’indicateur de pourcentage, puis le chiffre
 | Envois | Total | Nombre total d’envois par jour dans la plage de dates |
 | Taux de livraison | Taux | (Nombre total de livraisons chaque jour dans la plage de dates) / (Nombre total d’envois effectués chaque jour dans la plage de dates) |
 | Taux de rebond | Taux | (Nombre total de rebonds pour chaque jour dans la plage de dates) / (Nombre total d’envois effectués chaque jour dans la plage de dates) |
-| Taux de désinscription | Taux | (Nombre total de désabonnements uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates)<br><br>Ceci utilise les désinscriptions uniques, qui sont utilisées également dans les analyses de campagne, l’aperçu et le créateur de rapports. |
+| Taux de désinscription | Taux | (Nombre total de désabonnements uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates)<br><br>Ceci utilise les désinscriptions uniques, qui sont utilisées également dans les analyses de campagne, l’aperçu et le créateur de rapports. Ces désabonnements sont enregistrés dans toutes les sources (telles que le SDK, l'API REST, les importations CSV, les e-mails et les désabonnements aux listes). Les taux de désabonnement dans les analyses Campaign et Canvas sont des désabonnements qui se produisent à la suite d'un clic de désabonnement sur un e-mail délivré par Braze.  |
 | Taux d’ouverture unique | Taux | (Nombre total d'ouvertures uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates) |
 | Taux d’autres ouvertures | Taux | (Nombre total d’autres ouvertures uniques pour chaque jour dans la plage de dates) / (Nombre total de livraisons pour la plage de dates)<br><br>Les autres ouvertures comprennent les e-mails qui n’ont pas été identifiés comme étant ouvert automatiquement, comme quand un utilisateur ouvre un e-mail. Cet indicateur n’est pas unique et est un sous–indicateur du nombre total d’ouvertures.  |
 | Taux de clics unique | Taux | (Nombre total de clics uniques pour chaque jour de la plage de dates) / (Nombre total de réception/distribution pour une plage de dates) |
@@ -54,9 +50,18 @@ Le tableau de bord des informations sur les e-mails permet de savoir où et quan
 
 ### Engagement par appareil
 
-Le rapport sur **l'engagement par appareil** fournit une ventilation des appareils utilisés par vos utilisateurs pour s'engager dans votre e-mail. Ces données permettent de contrôler l'engagement des e-mails sur les mobiles, les ordinateurs de bureau, les tablettes et d'autres types d'appareils. 
+Le rapport sur **l'engagement par appareil** fournit une ventilation des appareils utilisés par vos utilisateurs pour s'engager dans votre e-mail. Ces données permettent de contrôler l'engagement des e-mails sur les mobiles, les ordinateurs de bureau, les tablettes et d'autres types d'appareils. Ces données sont basées sur la chaîne de caractères de l'agent utilisateur transmise par les appareils de vos utilisateurs.
+
+{% alert note %}
+Si vous utilisez CloudFront comme réseau de diffusion de contenu, assurez-vous que l'agent utilisateur de vos utilisateurs est transmis à l'ESP. Sinon, chaque agent utilisateur sera "Amazon Cloudfront".
+{% endalert %}
 
 La catégorie "Autres" comprend toute chaîne de caractères d'utilisateurs qui ne peut être identifiée comme étant un ordinateur de bureau, un mobile ou une tablette. Par exemple, télévision, voiture, console de jeux vidéo, OTT (over-the-top ou streaming), et similaires. Il peut également s'agir de valeurs nulles ou vides.
+
+Pour mieux comprendre ce qui se trouve dans la catégorie "Autres", vous pouvez extraire les agents utilisateurs à l'aide de l'une ou l'autre de ces options :
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) vous enverra la chaîne de caractères exacte de l'agent utilisateur qui a été récupérée sur les appareils de vos utilisateurs.
+2. Tirez parti de notre [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder) [pour]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) utiliser le langage SQL ou de notre [générateur de requêtes pour l'intelligence artificielle]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) pour afficher les agents utilisateurs.
 
 ![Rapport sur l'engagement par appareil qui indique le nombre de clics pour les mobiles, les ordinateurs de bureau, les tablettes et autres. C'est sur les appareils mobiles que l'on enregistre le plus grand nombre de clics.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
@@ -72,7 +77,7 @@ Le rapport **Engagement par fournisseur de boîte aux lettres** affiche les prin
 
 ### Heure de l’engagement
 
-Le rapport sur le **moment de l'engagement** affiche des données sur le moment où les utilisateurs s'engagent dans vos e-mails. Cela peut aider à répondre à des questions telles que le jour de la semaine ou l'heure à laquelle l'engagement de vos clients est le plus élevé. Grâce à ces informations, vous pouvez expérimenter le meilleur jour ou la meilleure heure pour envoyer vos messages afin d'augmenter le taux d'engagement. Notez que ces heures sont basées sur le fuseau horaire de votre espace de travail.
+Le rapport sur le **moment de l'engagement** affiche des données sur le moment où les utilisateurs s'engagent dans vos e-mails. Cela peut aider à répondre à des questions telles que le jour de la semaine ou l'heure à laquelle l'engagement de vos clients est le plus élevé. Grâce à ces informations, vous pouvez expérimenter le meilleur jour ou la meilleure heure pour envoyer vos messages afin d'augmenter le taux d'engagement. Notez que ces heures sont basées sur le fuseau horaire de votre entreprise.
 
 Le rapport d'engagement du **jour de la semaine** décompose les ouvertures ou les clics par jour de la semaine. 
 

@@ -56,7 +56,7 @@ Vous pouvez utiliser des [segments]({{site.baseurl}}/user_guide/engagement_tools
 
 > Pourquoi créez-vous cette campagne ? 
 
-Il est toujours important d’avoir un objectif défini en tête et les campagnes vous permettent de comprendre comment vous vous situez par rapport aux KPI tels que l’engagement de session, les achats et les événements personnalisés. En sélectionnant au moins un [événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), vous aurez la possibilité de comprendre les performances de votre campagne.
+Il est toujours important d’avoir un objectif défini en tête et les campagnes vous permettent de comprendre comment vous vous situez par rapport aux KPI tels que l’engagement de session, les achats et les événements personnalisés. En sélectionnant au moins un [événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), vous aurez la possibilité de comprendre les performances de votre campagne.
 
 ### Le « où » : Trouver mon audience
 

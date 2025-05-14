@@ -26,7 +26,7 @@ channel:
     - 有効なメールアドレス 
         - `example@gmail.com`
         - `example@gnail.com` (誤字あり）
-    - Braze でのメールアドレス検証の詳細については、[メールの技術ガイドラインと注記]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/)を参照してください。
+    - Braze でのメールアドレス検証の詳細については、[メールの技術ガイドラインと注記]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)を参照してください。
 
 {% details 識別されたユーザーと匿名ユーザーの違いの詳細 %}
 
@@ -36,7 +36,7 @@ channel:
 
 既存の `external_id` を使用して `changeUser` が呼び出された場合、その匿名ユーザーのユーザープロファイルは孤立し、識別されたユーザーにまだ存在しない[特定のユーザープロファイルのデータフィールド]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior)がマージされます。ただし、メールアドレスを含めて、すでに存在するフィールドは失われる。
 
-詳細については、「[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)」を参照してください。
+詳細については、「[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)」を参照してください。
 
 {% enddetails %}
 

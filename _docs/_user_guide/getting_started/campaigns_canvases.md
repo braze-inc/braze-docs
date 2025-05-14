@@ -30,7 +30,7 @@ While campaigns can be built uniquely depending on the channel, there are four m
 Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Check out these additional resources to learn more about campaigns at Braze:
 
@@ -48,7 +48,7 @@ In this way, Canvases are great for casting a net to capture users who fall off 
 
 When you create a Canvas, you follow many of the same steps as setting up a campaign: specifying an overall audience, entry conditions, and send settings. Your Canvas starts when someone matches your trigger condition. Then they move through a path in the Canvas until they meet your exit conditions.
 
-Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), and more. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_steps/overview/) such as Facebook, Google, or TikTok.
+Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), and more. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_audience_sync/overview/) such as Facebook, Google, or TikTok.
 
 Check out these additional resources to learn more about Canvas Flow:
 

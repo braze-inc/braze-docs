@@ -87,10 +87,6 @@ tool:
 
 また、**「テンプレート」**セクションからすべてのテンプレートにアクセスすることもできる。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、テンプレートは「**テンプレート＆メディア**」の下にある。
-{% endalert %}
-
 テンプレートを選択すると、[**メールのバリアント**] の下に送信情報とメール本文を含むメールの概要が表示されます。 
 
 [**メール本文を編集**] を選択して、ドラッグ＆ドロップエディターでメール構造のデザインを開始します。 
@@ -115,7 +111,7 @@ tool:
 メールを作成する際、デスクトップとモバイルのビューを切り替えて、ユーザーグループに対してどのようにメールメッセージが表示されるかをプレビューすることができる。これにより、コンテンツがレスポンシブであることが確認され、随時必要な調整ができます。
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![[コピーライター] ボタン。ドラッグ＆ドロップエディターで、 [コンテンツ] パネルの [スタイルの設定] の横にあります。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -232,6 +228,14 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 画像ソース属性に Liquid を含めることで、メールメッセージにダイナミックな画像を含めることができます。例えば、静止画像の代わりに、{% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} を画像 URL として挿入することで、ユーザーの名を画像に含めることができます。これは、各ユーザーに応じたメールのパーソナライゼーションに役立ちます。
 
+### テキストの方向を変更する
+
+メッセージを作成するときに、それぞれの [**テキストの方向**] ボタンを選択して、テキストの方向を左から右または右から左に切り替えることができます。このオプションは、アラビア語やヘブライ語などのメッセージを作成するときに使うことができる。
+
+![ドラッグ＆ドロップでテキストの配置を右から左、または左から右に切り替えるボタンが付いたメールエディタメニュー。][1]{: style="max-width:50%;"}
+
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
+
 ### リンクにHTML属性を追加する
 
 ![アトリビューション」セクションで、リンクの属性「clicktracking」がオフになっている。][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -248,7 +252,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 * **SendGrid:** `universal = "true"`
 * **SparkPost：** `data-msys-sublink = "open-in-app"` ([カスタムサブパスを](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths)設定する必要がある)
 
-ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/help/help_articles/email/universal_links/)を参照してください。
+ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)を参照してください。
 
 あるいは、[Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) や[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) などのアトリビューションパートナーのいずれかと連携して、ユニバーサルリンクを管理することもできます。
 
@@ -265,3 +269,4 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

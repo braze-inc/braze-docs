@@ -76,11 +76,10 @@ Der Abschnitt **Messaging-Nutzung** zeigt, welche Segmente, derzeit aktivierten 
 ![Unter Messaging-Verwendung sehen Sie die Kampagnen, in denen Ihr Segment verwendet wird.][4]
 
 ### Historische Mitgliedschaft
-Der Abschnitt **Historische Mitgliedschaft** zeigt, wie sich die Größe Ihres Segments im Laufe der Zeit verändert hat. Verwenden Sie das Dropdown-Menü, um die Segmentzugehörigkeit nach Datumsbereich zu filtern. 
 
-Die historische Anzahl der Segmentmitglieder ist eine Schätzung, ähnlich wie die Segmentgröße eine Schätzung ist, bevor Sie auf **Exakte Statistik berechnen** klicken. Braze schätzt die Zugehörigkeitsanzahl, indem es die Nutzer:innen in einem zufälligen Bucket-Bereich abfragt. Das bedeutet, dass an einem Tag die Zugehörigkeitsanzahl auf Nutzern und Nutzerinnen mit einer zufälligen Bucket-Nummer von 111-120 basieren könnte und an einem anderen Tag auf Nutzern und Nutzerinnen mit einer zufälligen Bucket-Nummer von 8.452-8.455. Daher kann das Diagramm an jedem Datum leichte Schwankungen aufweisen, da unterschiedlich viele Nutzer:innen innerhalb der zufälligen Bucket-Bereiche landen.
+Der Abschnitt **Historische Mitgliedschaft** zeigt, wie sich die Größe Ihres Segments im Laufe der Zeit verändert hat. Verwenden Sie das Dropdown-Menü, um die Segmentzugehörigkeit nach Datumsbereich zu filtern.
 
-![Verwenden Sie das Dropdown-Menü „Bisherige Zugehörigkeit“, um die Segmentzugehörigkeit nach Datumsbereich zu filtern.][10]
+Wenn Sie mehr über die Überwachung der Mitgliedschaft und Größe Ihres Segments erfahren möchten, referenzieren Sie auf [Messung der Segmentgröße]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Nutzervorschau
 
@@ -128,7 +127,7 @@ Die Variablen umfassen:
 
 Es sind Daten für Zeiträume verfügbar, in denen beide Bedingungen erfüllt sind:
 
-1. Das [Analytics Tracking für Segmente]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) ist für die Segmente aktiviert, für die Sie Daten sehen möchten.
+1. Das [Analytics Tracking für Segmente]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ist für die Segmente aktiviert, für die Sie Daten sehen möchten.
 2. Das Feature Performance-Daten nach Segmenten ist eingeschaltet.
 
 Sie können nicht auf Daten aus Zeiträumen zugreifen, die vor dem Zeitpunkt liegen, an dem dieses Feature für Ihr Unternehmen aktiviert wurde. Wenn beispielsweise das Analytics Tracking für Segment A am 1\. Oktober eingeschaltet ist und dieses Feature für Ihr Unternehmen am 2\. Oktober aktiviert wird, dann können Sie nur Daten für Segment A für die Kampagnen und Canvase einsehen, die nach dem 2\. Oktober Metriken aufgezeichnet haben. 
@@ -145,5 +144,4 @@ Wenn Ihr Unternehmen diese Funktion am 2\. Oktober aktiviert hat und das Analyti
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}

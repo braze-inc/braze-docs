@@ -38,7 +38,11 @@ After creating a selection, you can use the **Preview for user** section to view
 
 ### Liquid in selection results
 
-Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection.
+Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection. 
+
+{% alert note %}
+Connected Content Liquid isn't supported in these filter settings.
+{% endalert %}
 
 ![Filter settings for catalog selection where the attribute is set to a Liquid custom attribute.][7]
 
@@ -70,7 +74,7 @@ To use this catalog and selection in a campaign, use the **Add Personalization**
 
 For example, say you have a user whose most recently viewed category is "Chicken". Using the set personalization and a Content Card campaign, you can send three meal recommendations that include chicken for this user.
 
-![A Content Card with an image of chargrilled lemon chicken, and a list of three meal recommendations that include chicken based on the user's most recently viewed category.][4]{: style="max-width:90%;"}
+![A Content Card with an image of char-grilled lemon chicken, and a list of three meal recommendations that include chicken based on the user's most recently viewed category.][4]{: style="max-width:90%;"}
 
 Using the same personalization, you can also send three meal recommendations for a user whose most recently viewed category is "Beef".
 

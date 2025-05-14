@@ -48,7 +48,7 @@ Esse recurso está atualmente em acesso antecipado. Entre em contato com seu ger
 
 Os rastreamentos podem ser uma ferramenta organizacional útil para manter o controle das táticas de engajamento. Você pode vincular segmentos e campanhas a objetivos de negócios, estágios de funil e similares.
 
-Veja a seguir um exemplo de tags que podem ser úteis para um app de comércio eletrônico:
+O seguinte é um exemplo de tags que um aplicativo de eCommerce pode achar útil:
 
 <style>
 table td {
@@ -81,10 +81,6 @@ table td {
 </table>
 
 Você pode usar as mesmas tags em campanhas, Canvas e segmentos. Para renomear, remover ou adicionar tags com eficiência em seu dashboard, acesse **Configurações** > **Gerenciamento de tags**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Configurações** > **Gerenciar configurações** > **Tags**.
-{% endalert %}
 
 ![Guia Tags na página Gerenciar configurações][8]
 

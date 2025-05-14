@@ -10,7 +10,7 @@ description: "다양한 Braze 기능을 사용하여 B2B 계정 기반 세분화
 
 > 이 페이지에서는 B2B 계정 기반 세분화 사용 사례를 강화하기 위해 다양한 Braze 기능을 사용하는 방법을 보여줍니다.
 
-[B2B 데이터 모델을]({{site.baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/) 설정하는 방식에 따라 두 가지 방법으로 B2B 계정 기반 세분화를 수행할 수 있습니다:
+You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/):
 
 - [비즈니스 개체에 카탈로그를](#option-1-when-using-catalogs-for-your-business-objects) 사용하는 경우
 - [비즈니스 개체에 연결된 소스를](#option-2-when-using-connected-sources-for-your-business-objects) 사용하는 경우

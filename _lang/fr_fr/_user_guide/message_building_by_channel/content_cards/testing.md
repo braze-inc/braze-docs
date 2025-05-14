@@ -37,19 +37,14 @@ Vous pouvez également prévisualiser les messages à partir de l'onglet **Test*
 
 ## Débogage
 
-Après l'envoi de vos cartes de contenu, vous pouvez résoudre ou déboguer tout problème à partir du [journal des événements utilisateurs]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) sur la console de développement. 
+Après l'envoi de vos cartes de contenu, vous pouvez résoudre ou déboguer tout problème à partir du [journal des événements utilisateurs]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) sur la console de développement. 
 
 C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas à voir une carte de contenu spécifique. Pour ce faire, vous pouvez rechercher dans les **journaux des événements utilisateurs** les cartes de contenu transmises au SDK au début de la session, mais avant une impression, et les rattacher à une campagne spécifique :
 
 1. Sélectionnez **Paramètres** > **Journal des événements utilisateurs**.
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **journal des événements utilisateurs** dans la **console de développement**.
-{% endalert %}
-
-{:start="2"}
-2\. Localisez et développez la demande SDK pour votre utilisateur test.
-3\. Cliquez sur **Données brutes**.
-4\. Trouvez le `id` pour votre session. Voici un échantillon d’exemple :
+2. Localisez et développez la demande SDK pour votre utilisateur test.
+3. Cliquez sur **Données brutes**.
+4. Trouvez le `id` pour votre session. Voici un échantillon d’exemple :
 
     ```json
     [

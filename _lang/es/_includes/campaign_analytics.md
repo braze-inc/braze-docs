@@ -5,12 +5,12 @@ Una vez que hayas lanzado tu campaña, puedes volver a la página de detalles de
 {% alert tip %}
 ¿Buscas definiciones de los términos y métricas que aparecen en tu informe? Consulta nuestra
   {% if include.channel == "email" %}[Glosario de análisis de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Glosario de métricas de informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtro por tarjetas de contenido
-  {% elsif include.channel == "in-app message" %}[Glosario de métricas de informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtrar por mensaje dentro de la aplicación
-  {% elsif include.channel == "push" %}[Glosario de métricas de informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtro por push
-  {% elsif include.channel == "SMS" %}[Glosario de métricas de informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtro por SMS
-  {% elsif include.channel == "whatsapp" %}[Glosario de métricas de informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtro por WhatsApp
-  {% elsif include.channel == "webhook" %}[Glosario de métricas de informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtro por webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Informe Glosario de métricas]({{site.baseurl}}/user_guide/data/report_metrics/) y filtro por tarjetas de contenido
+  {% elsif include.channel == "in-app message" %}[Informe Glosario de métricas]({{site.baseurl}}/user_guide/data/report_metrics/) y filtrar por mensaje dentro de la aplicación
+  {% elsif include.channel == "push" %}[Informe Glosario de métricas]({{site.baseurl}}/user_guide/data/report_metrics/) y filtro por Push
+  {% elsif include.channel == "SMS" %}[Informe Glosario de métricas]({{site.baseurl}}/user_guide/data/report_metrics/) y filtro por SMS
+  {% elsif include.channel == "whatsapp" %}[Informe Glosario de métricas]({{site.baseurl}}/user_guide/data/report_metrics/) y filtro por WhatsApp
+  {% elsif include.channel == "webhook" %}[Glosario de métricas de informes]({{site.baseurl}}/user_guide/data/report_metrics/) y filtro por webhook{% endif %}.
 {% endalert %}
 
 Desde la pestaña **Análisis de campaña**, puedes ver tus informes en una serie de paneles. Puede que veas más o menos de los que se enumeran en las secciones siguientes, pero cada uno tiene su propia utilidad.
@@ -305,8 +305,20 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Rebote suave</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Aplazamiento</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Aplazamiento' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Aplazamientos
+
+Diferido o aplazamiento es cuando un correo electrónico no se entregó inmediatamente, pero Braze volverá a intentar el correo electrónico durante un máximo de 72 horas después de este fallo de entrega temporal para maximizar las posibilidades de éxito en la entrega antes de que se detengan los intentos para esa campaña específica. Las razones típicas de los aplazamientos incluyen la limitación de la tasa de volumen de correo electrónico basada en la reputación por parte del proveedor de correo electrónico de entrada, problemas temporales de conectividad o errores de DNS.
+
+_Los aplazamientos_ difieren de _los rebotes blandos_. Si no se entregó correctamente ningún correo electrónico durante este periodo de reintento, Braze enviará un evento de rebote blando por cada intento de envío de campaña. Antes del 25 de febrero de 2025, estos reintentos se contabilizaban como múltiples rebotes blandos para 1 envío de campaña.
+
+Ten en cuenta que actualmente _los Aplazamientos_ sólo están disponibles utilizando las características Currents o Braze Snowflake (como Generador de consultas, Segmento SQL, Compartir datos Snowflake). Si quieres incluirlo en los análisis de campaña o de Canvas, [envía tus comentarios sobre el producto]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Estimación de la tarifa abierta real {#estimated-real-open-rate}
 
@@ -660,13 +672,13 @@ Los mensajes entrantes se truncan a partir de 1.600 caracteres.
 
 ## Informe de retención
 
-Los informes de retención te muestran las tasas a las que tus usuarios han realizado un evento de retención seleccionado a lo largo de periodos de tiempo en una campaña o Canvas específicos. Para más información, consulta [Informes de retención]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Los informes de retención te muestran las tasas a las que tus usuarios han realizado un evento de retención seleccionado a lo largo de periodos de tiempo en una campaña o Canvas específicos. Para más información, consulta [Informes de retención]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Informe de embudo
 
 El informe de embudo ofrece un informe visual que te permite analizar los recorridos que realizan tus clientes tras recibir una campaña o Canvas. Si tu campaña o Canvas utiliza un grupo de control o múltiples variantes, podrás comprender cómo las diferentes variantes han impactado en el embudo de conversión a un nivel más granular y optimizar en base a estos datos.
 
-Para más información, consulta [Informes de embudo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+Para más información, consulta [Informes de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 

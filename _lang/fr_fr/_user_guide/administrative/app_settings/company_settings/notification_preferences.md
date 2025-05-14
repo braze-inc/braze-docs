@@ -17,20 +17,17 @@ La page **Préférences de notification** vous permet de déterminer qui (si que
 
 Pour accéder à cette page, allez dans **Réglages** > **Réglages administratifs** > **Préférences de notification.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), sélectionnez le menu déroulant de votre compte et allez dans **Paramètres de l'entreprise** > **Préférences de notification.**
-{% endalert %}
-
 ## Notifications disponibles
 
 Le tableau suivant répertorie les notifications disponibles :
 
 | Notification | Description | Canaux de notification disponibles |
 |--------------|-------------|-----------------|
-| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. Cela inclut également les notifications d'erreurs d'identification pour Google Cloud Services et Azure (Microsoft Cloud Services). | E-mail, Webhook |
+| Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors de la tentative d'utilisation de vos identifiants Amazon Web Services pour une exportation de données. Il s'agit notamment des notifications d'erreurs d'identification pour Google Cloud Services et Azure (Microsoft Cloud Services). | E-mail, Webhook |
 | Campagne arrêtée automatiquement | Avertit les destinataires lorsque Braze a arrêté une campagne. | E-mail |
 | Expiration de l’interaction avec la campagne | Informe les destinataires d’une campagne dont l’expiration des données d’interaction de campagne est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
-| Campagne/Canvas mis(e) à jour | Informe les destinataires lorsqu’une campagne/un canvas actif(ve) est mis(e) à jour ou désactivé(e), ainsi qu’une campagne/un canvas inactif(ve) est réactivé(e) ou lorsque des projets sont lancés. | E-mail |
+| Campagne/Canvas mis(e) à jour | Notifie les destinataires lorsqu'une campagne ou un Canvas actif est mis à jour ou désactivé, ainsi que lorsqu'une campagne ou un Canvas inactif est réactivé ou que des brouillons sont lancés. | E-mail |
+| Limite de volume de la campagne/du canvas atteinte | Notifie les destinataires lorsqu'une campagne ou un canvas atteint sa limite de volume. | E-mail | 
 | Expiration de l’interaction avec le canvas | Informe les destinataires d’un Canvas dont l’expiration des données d’interaction de Canvas est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
 | Carte de fil d’actualités publiée/en direct | Informe les destinataires lorsque les cartes de fil d’actualités sont programmées ou publiées. | E-mail, Webhook |
 | Erreurs d’identification de notification push | Avertit les destinataires lorsque les notifications push d’identification de l’application sont invalides et lorsqu’elles sont bientôt expirées. | E-mail, Webhook |
@@ -38,15 +35,12 @@ Le tableau suivant répertorie les notifications disponibles :
 | Limite de campagne planifiée atteinte | Informe les destinataires lorsque la limite d’une campagne planifiée récurrente a été atteinte. | E-mail, Webhook |
 | Envoi terminé d’une campagne planifiée | Informe les destinataires lorsque l’envoi d’une campagne planifiée est terminé. | E-mail, Webhook |
 | Rapport hebdomadaire d’analyse | Envoie chaque lundi aux destinataires un résumé de l'activité de l'espace de travail de la semaine écoulée. Les destinataires reçoivent un résumé pour chaque espace de travail auquel ils appartiennent. | E-mail |
+| Limites quotidiennes du volume d'entrées dans les canvas/campagnes | Envoie des notifications chaque fois qu'une limite d'envoi est atteinte. | E-mail |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Rapports hebdomadaires d’analyse
 
 Braze propose l’option d’envoi d’un rapport hebdomadaire par e-mail aux personnes que vous désignez dans votre entreprise tous les lundis à 5 h EST. Vous pouvez sélectionner les événements personnalisés à inclure dans le rapport hebdomadaire à partir de **Paramètres des données** > **Événements personnalisés**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne version de la navigation]({{site.baseurl}}/navigation), cette page est située sous **Gérer les paramètres** > **Événements personnalisés**.
-{% endalert %}
 
 Vous pouvez sélectionner jusqu’à cinq événements à inclure dans votre rapport hebdomadaire :
 

@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Banderas de características en Canvas
-    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Sincronización de audiencias en Canvas
     link: /docs/partners/canvas_steps/
@@ -54,7 +54,7 @@ Utilice [las rutas de acción][1] para dividir el recorrido del usuario en funci
 
 Los componentes [de división de decisión][3] utilizan una lógica simple de "sí o no" para crear dos rutas mutuamente excluyentes para sus recorridos de usuario que se basan en una acción o un atributo del usuario. Esto puede ayudar a identificar y orientar a sus grupos de usuarios.
 
-Los componentes de [retardo][4] le permiten retrasar un solo paso en su lienzo. Este paso de retardo independiente en su Canvas se utiliza mejor para comunicar mensajes a sus usuarios en un momento específico. Además, los componentes de Retraso también pueden aumentar el alcance de su audiencia al permitir más tiempo para que su audiencia cumpla los criterios del componente. 
+Los componentes de [retardo][4] le permiten retrasar un solo paso en su lienzo. Este paso de retardo independiente en su Canvas se utiliza mejor para comunicar mensajes a sus usuarios en un momento específico. Además, los componentes de Retraso también pueden aumentar el alcance de su audiencia al permitir más tiempo para que su audiencia cumpla los criterios del componente.
 
 ### Pruebas
 
@@ -62,7 +62,7 @@ Al crear sus recorridos de usuario, es posible que también desee probar la ruta
 
 ### Integración
 
-¿Quieres sincronizarte con los datos de los usuarios de tu marca? Aprovecha las opciones de sincronización de audiencia disponibles para [Facebook][6] y [Google][7]. <br><br>
+¿Quieres sincronizarte con los datos de los usuarios de tu marca? Aprovecha las opciones de sincronización de audiencia disponibles para [Facebook][6] y [Google][7].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

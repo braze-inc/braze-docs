@@ -19,10 +19,6 @@ O Segment Insights mostra como está a performance de um segmento em comparaçã
 
 Acesse a página **Segment Insights de** seu dashboard, em **Analytics**, e clique em <i class="fas fa-plus"></i> **Add Segment** para visualizar até quatro segmentos diferentes em comparação com uma linha de base.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > Segmentos > **Insights de segmento**.
-{% endalert %}
-
 ![Dashboard de insights de segmento.][1]
 
 O segmento de linha de base pode ser um segmento específico selecionado por você ou um segmento que contenha todos os seus usuários. Você pode comparar as seguintes estatísticas usando o Segment Insights:
@@ -68,7 +64,7 @@ Para melhorar as conversões entre falantes de outros idiomas que não o inglês
 
 ### Compreensão dos indicadores de maior receita
 
-Fazer com que os usuários se convertam em compradores pode ser difícil, e tentar empurrar usuários novos, inativos ou desengajados diretamente para a compra pode levar o usuário a desinstalar seu app. Os insights de segmento podem ajudá-lo a descobrir ações que levam os usuários mais adiante no funil de compras sem exigir que eles comprem ainda, por exemplo, adicionando itens à lista de desejos, compartilhando nas redes sociais ou favoritando conteúdo. Por exemplo, é possível mapear o impacto em compras de diferentes comportamentos em um app de comércio eletrônico.
+Fazer com que os usuários se convertam em compradores pode ser difícil, e tentar empurrar usuários novos, inativos ou desengajados diretamente para a compra pode levar o usuário a desinstalar seu app. Os insights de segmento podem ajudá-lo a descobrir ações que levam os usuários mais adiante no funil de compras sem exigir que eles comprem ainda, por exemplo, adicionando itens à lista de desejos, compartilhando nas redes sociais ou favoritando conteúdo. Por exemplo, é possível mapear o impacto em diferentes comportamentos de compra em um app de comércio eletrônico.
 
 ![][7]
 

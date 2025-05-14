@@ -18,10 +18,6 @@ description: "En este artículo se explica cómo configurar la segmentación por
 
 Vaya a la página **Segmentos**, en **Audiencia**, para ver todos sus segmentos de usuarios actuales. En esta página puede crear y nombrar nuevos segmentos. Para empezar, haga clic en **Crear segmento** y asigne un nombre a su segmento.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Segmentos** se encuentra en **Interacción**.
-{% endalert %}
-
 ![][1]{: style="max-width:70%;"}
 
 ## Paso 2: Personaliza tu ubicación

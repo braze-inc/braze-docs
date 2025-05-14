@@ -136,17 +136,8 @@ Wenn Sie verschiedene Arbeitsbereiche mit demselben Snowflake-Konto verbinden, m
 
 Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie möglicherweise die folgenden IP-Adressen in Ihrer Snowflake-Netzwerkrichtlinie zulassen. Weitere Informationen zum Enablement finden Sie in der entsprechenden Snowflake Dokumentation zum [Ändern einer Netzwerkrichtlinie](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Für die Instanzen `EU-01` und `EU-02` | Für Instanzen `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 {% tab Redshift %}
 
@@ -208,17 +199,8 @@ Einige wichtige Dinge zu wissen:
  
 Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Für die Instanzen `EU-01` und `EU-02` | Für Instanzen `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 {% tab BigQuery %}
 
@@ -289,17 +271,7 @@ Wenn Sie das Dienstkonto erstellt und die Berechtigungen erteilt haben, erzeugen
 
 Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff auf Ihre Big Query-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Für die Instanzen `EU-01` und `EU-02` | Für Instanzen `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Databricks %}
@@ -329,7 +301,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
   --If you include both email and phone, we will use the email as the primary identifier
   email STRING,
   phone STRING,
-  payload STRING
+  payload STRING, STRUCT, or MAP
 );
 ```
 
@@ -337,7 +309,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 | Feldname | Typ | Modus |
 |---|---|---|
 | `UPDATED_AT`| ZEITSTEMPEL | PFLICHTANGABE |
-| `PAYLOAD`| STRING oder STRUCT | PFLICHTANGABE |
+| `PAYLOAD`| STRING, STRUCT, oder MAP | PFLICHTANGABE |
 | `EXTERNAL_ID`| STRING | LÖSCHBAR |
 | `ALIAS_NAME`| STRING | LÖSCHBAR |
 | `ALIAS_LABEL`| STRING | LÖSCHBAR |
@@ -372,17 +344,7 @@ Bewahren Sie das Token an einem sicheren Ort auf, bis Sie es im Braze-Dashboard 
 
 Wenn Sie Netzwerkrichtlinien aufgestellt haben, müssen Sie Braze Netzwerkzugriff auf Ihre Databricks-Instanz gewähren. Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashboards entsprechen.  
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Für die Instanzen `EU-01` und `EU-02` | Für Instanzen `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 {% tab Microsoft Fabric %}
@@ -436,7 +398,7 @@ GO
 
 Sie können das Warehouse, das Schema und die Tabelle oder den View beliebig benennen, aber die Spaltennamen sollten mit der vorangegangenen Definition übereinstimmen.
 
-- `UPDATED_AT` - Der Zeitpunkt, zu dem diese Zeile in der Tabelle aktualisiert oder hinzugefügt wurde. Wir synchronisieren nur Zeilen, die seit der letzten Synchronisierung hinzugefügt oder aktualisiert wurden.
+- `UPDATED_AT` - Die Zeit, zu der diese Zeile in der Tabelle aktualisiert oder hinzugefügt wurde. Wir synchronisieren nur Zeilen, die seit der letzten Synchronisierung hinzugefügt oder aktualisiert wurden.
 - **Nutzer:innen-Spalten** \- Ihre Tabelle kann eine oder mehrere Nutzer:innen-Spalten enthalten. Jede Zeile sollte nur einen Bezeichner enthalten (entweder `external_id`, die Kombination aus `alias_name` und `alias_label`, `braze_id`, `email` oder `phone`). Eine Quelltabelle kann Spalten für einen, zwei, drei, vier oder alle fünf Bezeichner-Typen enthalten.
     - `EXTERNAL_ID` - Dies ist der Bezeichner der Nutzerin oder des Nutzers, den oder die Sie aktualisieren möchten. Dies sollte dem in Braze verwendeten Wert `external_id` entsprechen. 
     - `ALIAS_NAME` und `ALIAS_LABEL` \- Diese beiden Spalten erstellen ein Benutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt die Art des Alias an. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`.
@@ -456,17 +418,8 @@ Sie benötigen den SQL-Endpunkt für Ihr Warehouse, damit Braze eine Verbindung 
 
 Je nach Konfiguration Ihres Microsoft Fabric-Kontos müssen Sie möglicherweise die folgenden IP-Adressen in Ihrer Firewall zulassen, um den Datenverkehr von Braze zuzulassen. Weitere Informationen zum Enablement finden Sie in der entsprechenden Dokumentation zu [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Für die Instanzen `EU-01` und `EU-02` | Für Instanzen `AU-01` |
-|---|---|---|
-| `23.21.118.191`| `52.58.142.242`| `13.210.1.145`
-| `34.206.23.173`| `52.29.193.121`| `13.211.70.159`
-| `50.16.249.9`| `35.158.29.228`| `13.238.45.54`
-| `52.4.160.214`| `18.157.135.97`| `52.65.73.167`
-| `54.87.8.34`| `3.123.166.46`| `54.153.242.239`
-| `54.156.35.251`| `3.64.27.36`| `54.206.45.213`
-| `52.54.89.238`| `3.65.88.25`|
-| `18.205.178.15`| `3.68.144.188`|
-|   | `3.70.107.88`|
+{% multi_lang_include data_centers.md datacenters='ips' %}
+
 {% endtab %}
 
 {% endtabs %}

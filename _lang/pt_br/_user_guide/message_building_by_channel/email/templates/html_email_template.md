@@ -12,7 +12,7 @@ channel:
 
 # Carregando um modelo de e-mail HTML
 
-> O dashboard da Braze permite que você faça upload de seus próprios modelos de e-mail em HTML e os salve para uso posterior em campanhas. Você também pode [criar um modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) usando nosso editor.
+> O dashboard da Braze permite que você faça upload de seus próprios modelos de e-mail em HTML e os salve para uso posterior em campanhas. Você também pode [criar um modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) usando nosso editor.
 
 ## Pré-requisitos {#upload-requirements}
 
@@ -28,10 +28,6 @@ Primeiro, você precisará criar seu modelo de e-mail HTML. Este deve ser um arq
 ### Etapa 1: Navegue para o editor de modelo de e-mail
 
 Acessar os **Templates** > **e-mail Templates**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Modelos e mídias **> **Modelos de e-mail.**
-{% endalert %}
 
 ### Etapa 2: Abrir o carregador
 
@@ -72,7 +68,7 @@ Para usar seu e-mail em uma campanha de API, você precisa do `email_template_id
 
 ## Gerenciando templates de e-mail
 
-Você pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) modelos de e-mail! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Você pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos de e-mail! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Perguntas frequentes
 

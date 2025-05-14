@@ -34,6 +34,6 @@ Eメールリストのクリーニングサービスは、Eメールアドレス
 
 ## インポート方法
 
-メールリストの準備ができたら、Braze REST API や CSV ファイルなど、Braze にユーザーをインポートする方法がいくつかあります。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)の専用記事を参照してください。
+メールリストの準備ができたら、Braze REST API や CSV ファイルなど、Braze にユーザーをインポートする方法がいくつかあります。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)の専用記事を参照してください。
 
 [60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

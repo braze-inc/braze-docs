@@ -50,7 +50,7 @@ However, if you use [Google Tag Manager]({{ site.baseurl }}/developer_guide/plat
 Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) to learn more about our JavaScript integration in general.  <br><br>You may also want to bookmark the [JavaScript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
 {% endalert %}
 
-To integrate Braze's Web SDK, you'll first need to download a copy of the latest JavaScript library. This can be done using NPM or directly downloading it from [Braze's CDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
+To integrate the Braze Web SDK, you'll first need to download a copy of the latest JavaScript library. This can be done using NPM or directly downloading it from the [Braze CDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
 
 Alternatively, if you prefer to use [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) or use an externally hosted copy of the Braze SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) setting in your `manifest.json`.
 

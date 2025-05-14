@@ -76,7 +76,7 @@ We’ll define our target audience as users who we think are more likely to purc
 {: start="3"}
 3. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas’s maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximun duration of the Canvas.][6]
+!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximum duration of the Canvas.][6]
 
 {: start="4"}
 4. Adjust the exit criteria to remove users who performed the custom event of unfavoriting the Classic Straight Leg jeans.

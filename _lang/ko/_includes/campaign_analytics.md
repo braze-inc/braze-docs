@@ -5,12 +5,12 @@
 {% alert tip %}
 보고서에 나열된 용어와 측정기준에 대한 정의를 찾고 계십니까? 참고:
   {% if include.channel == "email" %}[이메일 분석 용어집]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 콘텐츠 카드로 필터링
-  {% elsif include.channel == "in-app message" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 인앱 메시지로 필터링
-  {% elsif include.channel == "push" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 푸시로 필터링
-  {% elsif include.channel == "SMS" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 SMS로 필터링
-  {% elsif include.channel == "whatsapp" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 WhatsApp으로 필터링
-  {% elsif include.channel == "webhook" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 웹훅으로 필터링{% endif %}.
+  {% elsif include.channel == "Content Card" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 콘텐츠 카드로 필터링
+  {% elsif include.channel == "in-app message" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 인앱 메시지로 필터링
+  {% elsif include.channel == "push" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 푸시로 필터링
+  {% elsif include.channel == "SMS" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 SMS로 필터링
+  {% elsif include.channel == "whatsapp" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 WhatsApp으로 필터링
+  {% elsif include.channel == "webhook" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 웹훅으로 필터링{% endif %}.
 {% endalert %}
 
 **캠페인 분석** 탭에서, 일련의 패널에서 보고서를 볼 수 있습니다. 아래 섹션에 나열된 것보다 더 많거나 적은 항목을 볼 수 있지만, 각각 유용한 목적이 있습니다.
@@ -208,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='고유 클릭 수' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">고유 무시 수</a></td>
@@ -305,8 +305,20 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">소프트바운스</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">연기</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### 연기
+
+지연 또는 연기는 이메일이 즉시 전달되지 않았을 때를 의미하지만, Braze는 이 임시 전달 실패 후 최대 72시간 동안 이메일을 재전송하여 특정 캠페인에 대한 시도가 중단되기 전에 성공적인 전달 가능성을 극대화합니다. 전형적인 연기 사유에는 받은편지함 제공자의 평판 기반 이메일 볼륨 속도 제한, 일시적인 연결 문제 또는 DNS 오류가 포함됩니다.
+
+_연기(Deferrals)_는 _소프트 반송(Soft Bounces)_과 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인당 하나의 소프트 바운스 이벤트를 보낼 것입니다. 2025년 2월 25일 이전에, 이러한 재시도는 1개의 캠페인 발송에 대해 여러 번의 소프트 반송으로 계산되었습니다.
+
+_Deferrals_는 현재 Currents 또는 Braze Snowflake 기능(예: Query Builder, SQL Segment, Snowflake Data Sharing)을 사용하여만 사용할 수 있습니다. 캠페인 또는 캔버스 분석에 포함하고 싶으시다면, [제품 피드백]({{site.baseurl}}/user_guide/administrative/access_braze/portal)을 제출해 주시기 바랍니다.
 
 ##### 추정된 실제 열람율 {#estimated-real-open-rate}
 
@@ -374,7 +386,7 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">닫기 메시지</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='닫기 메시지' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -660,13 +672,13 @@ Braze 분석 외에도 템플릿 수준의 분석은 WhatsApp 비즈니스 매�
 
 ## 리텐션 보고서
 
-유지 보고서는 사용자가 특정 캠페인이나 캔버스에서 시간 경과에 따라 선택된 유지 이벤트를 수행한 비율을 보여줍니다. 자세한 정보는 [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/)를 참조하십시오.
+유지 보고서는 사용자가 특정 캠페인이나 캔버스에서 시간 경과에 따라 선택된 유지 이벤트를 수행한 비율을 보여줍니다. 자세한 정보는 [유지 보고서]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)를 참조하십시오.
 
 ## 퍼널 보고서
 
 퍼널 리포팅은 고객이 캠페인이나 캔버스를 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다. 캠페인이나 캔버스가 대조군이나 여러 변형을 사용하는 경우, 다양한 변형이 전환 퍼널에 미친 영향을 더 세부적으로 이해하고 이 데이터에 기반하여 최적화할 수 있습니다.
 
-자세한 정보는 [퍼널 보고서]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)을 참조하십시오.
+자세한 정보는 [퍼널 보고서]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)를 참조하십시오.
 
 {% endif %}
 

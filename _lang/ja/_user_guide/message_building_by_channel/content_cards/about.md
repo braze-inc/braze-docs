@@ -114,7 +114,7 @@ search_rank: 4
 - [カルーセル](#carousel)
 - [バナー](#banner)
 
-これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)を参照してください。
+これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)を参照してください。
 
 ![メッセージインボックス、カルーセル、およびバナー(banner.]({% image_buster /assets/img_archive/cc_placements.png %})という異なる配置オプションを示す3 つのコンテンツカードの例{: style="border:0px;"}
 
@@ -176,7 +176,7 @@ search_rank: 4
 
 開発者は、Braze SDK を統合するときにコンテンツカードを統合します。コンテンツカードと統合する方法の詳細については、お使いのプラットフォームの開発者ガイドの記事を参照してください。
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "iOS コンテンツカード統合ガイド")
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS コンテンツカード統合ガイド")
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android コンテンツカード統合ガイド")
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web コンテンツカード統合ガイド")
 

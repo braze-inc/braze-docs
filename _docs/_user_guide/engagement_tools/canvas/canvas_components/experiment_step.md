@@ -33,7 +33,7 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
 
 To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
 
-## Create an experiment path
+## Creating an experiment path
 
 To create an Experiment Paths component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
 
@@ -87,7 +87,6 @@ Experiment Paths will record users who enter each step and convert while in the 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
 [1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
-
 [WP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path
 [WP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics
 [PP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths

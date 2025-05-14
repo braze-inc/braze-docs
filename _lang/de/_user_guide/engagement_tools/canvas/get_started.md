@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
   - name: Den Canvas-Status verstehen
-    link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_status/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas Umrisse
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/

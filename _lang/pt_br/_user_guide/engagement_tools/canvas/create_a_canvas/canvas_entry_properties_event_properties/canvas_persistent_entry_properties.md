@@ -17,13 +17,14 @@ Antes desse recurso, as propriedades de entrada só podiam ser usadas na primeir
 ## Uso de propriedades de entrada
 
 As propriedades de entrada podem ser usadas em Canvas baseadas em ação e disparadas por API. Essas propriedades de entrada são definidas quando um Canvas é disparado por um evento personalizado, uma compra ou uma chamada de API. Consulte os artigos a seguir para saber mais:
+
 - [Objeto de propriedades de entrada da tela]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objeto de propriedades do evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 As propriedades transmitidas por esses objetos podem ser referenciadas usando a tag `canvas_entry_properties` Liquid. Por exemplo, uma solicitação com `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` poderia acrescentar a palavra "shoes" (sapatos) a uma mensagem, adicionando o Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-Quando um Canvas inclui uma mensagem com a tag `canvas_entry_properties` Liquid, os valores associados a essas propriedades serão salvos durante a jornada do usuário no Canvas e excluídos quando o usuário sair do Canvas. Note que as propriedades de entrada do canva só estão disponíveis para referência no Liquid. Para filtrar as propriedades dentro do canva, use [a segmentação de propriedades de eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Quando um Canvas inclui uma mensagem com a tag `canvas_entry_properties` Liquid, os valores associados a essas propriedades serão salvos durante a jornada do usuário no Canvas e excluídos quando o usuário sair do Canvas. Note que as propriedades de entrada do canva só estão disponíveis para referência no Liquid. Para filtrar as propriedades dentro do canva, use [a segmentação de propriedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 {% alert note %}
 O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB.
@@ -80,7 +81,7 @@ Nessa solicitação, o valor global de "food allergies" (alergias alimentares) �
 
 ## Caso de uso
 
-Se você tiver um Canvas que é disparado quando um usuário navega por um item em seu site de comércio eletrônico, mas não o adiciona ao carrinho, a primeira etapa do Canva pode ser uma notificação por push perguntando se ele está interessado em comprar o item. Você pode fazer referência ao nome do produto usando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+Se você tiver um Canvas que é disparado quando um usuário navega por um item em seu site de comércio eletrônico, mas não o adiciona ao carrinho, a primeira etapa do Canvas pode ser uma notificação por push perguntando se ele está interessado em comprar o item. Você pode fazer referência ao nome do produto usando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 

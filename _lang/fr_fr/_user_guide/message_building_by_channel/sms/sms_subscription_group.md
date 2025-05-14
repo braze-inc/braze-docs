@@ -26,13 +26,9 @@ Il existe deux états d’abonnement pour les utilisateurs de SMS : `subscribed
 ### Comment les groupes d’abonnement SMS d’utilisateurs sont mis en place 
 
 - **API REST :** Les profils utilisateurs peuvent être définis de manière programmatique par l'endpoint [`/subscription/status/set`][4] en utilisant l'API REST de Braze.
-- **Intégration SDK** Les utilisateurs peuvent être ajoutés à un groupe d'abonnement e-mail ou SMS à l'aide de la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou [Web][11].
+- **Intégration SDK** Les utilisateurs peuvent être ajoutés à un groupe d'abonnement e-mail ou SMS à l'aide de la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) ou [Web][11].
 - **Traitement automatique en cas d'abonnement/de désabonnement de l'utilisateur :** En envoyant par SMS un message d'abonnement ou de désabonnement par défaut [mot-clé :][7]], Braze définit et met à jour automatiquement l'état de l'abonnement de l'utilisateur.
 - **Import d'utilisateurs**: Les utilisateurs peuvent être ajoutés à des groupes d'abonnement e-mail ou SMS via l'**importation d'utilisateurs.** Si vous mettez à jour le statut du groupe d’abonnement, vous devez avoir les deux colonnes suivantes dans votre CSV : `subscription_group_id` et `subscription_state`. Reportez-vous à l'[importation d'utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) pour plus d'informations.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page s'appelle **Importation d'utilisateurs** et se trouve sous **Utilisateurs.**
-{% endalert %}
 
 Lorsqu'un numéro de téléphone est mis à jour dans un profil utilisateur, le nouveau numéro de téléphone hérite du statut du groupe d'abonnement de l'utilisateur. Si le numéro de téléphone est mis à jour vers un numéro qui existe déjà dans Braze, le statut d'abonnement de ce numéro de téléphone existant est hérité.
 

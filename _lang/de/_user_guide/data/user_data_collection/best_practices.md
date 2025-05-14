@@ -65,7 +65,7 @@ Nachdem die Nutzerprofile zusammengeführt wurden, kann diese Aktion nicht mehr 
 
 ## Zusätzliche Ressourcen
 - Lesen Sie unseren Artikel über den [Nutzerprofil-Lebenszyklus]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) von Braze, um weitere Informationen zu erhalten.<br>
-- Sehen Sie sich unsere Dokumentation zum Festlegen von Nutzer:innen und zum Aufrufen der Methode `changeUser()` für [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) und [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) an.
+- Sehen Sie sich unsere Dokumentation zum Festlegen von Nutzer:innen und zum Aufrufen der Methode `changeUser()` für [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) und [Internet]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) an.
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}

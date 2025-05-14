@@ -13,13 +13,15 @@ channel:
 
 # リンク短縮
 
-> リンク短縮とクリックトラッキングにより、SMSメッセージに含まれるURLを自動的に短縮し、クリックスルーレートの分析を収集できます。これにより、ユーザーがSMSキャンペーンにどのようにエンゲージメントしているかを理解するための追加のエンゲージメント指標が提供されます。<br><br> このページでは、SMSメッセージでリンク短縮を有効にする方法、短縮リンクをテストする方法、短縮リンクでカスタムドメインを使用する方法などを紹介する。
+> このページでは、SMSメッセージでリンク短縮を有効にする方法、短縮リンクをテストする方法、短縮リンクでカスタムドメインを使用する方法などを紹介する。
+
+リンク短縮とクリックトラッキングにより、SMSメッセージに含まれるURLを自動的に短縮し、クリックスルーレートの分析を収集できます。これにより、ユーザーがSMSキャンペーンにどのようにエンゲージメントしているかを理解するための追加のエンゲージメント指標が提供されます。
 
 キャンペーンとキャンバスの両方で、[メッセージバリアントレベルで]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign)リンク短縮とクリック追跡をオンにすることができる。 
 
 URLの長さは、有効になっているトラッキングの種類によって決まる：
 - **基本的なトラッキング**はキャンペーンレベルのクリック追跡を可能にします。静的URLの長さは20文字で、ダイナミックなURLの長さは25文字になります。
-- **高度なトラッキング**は、キャンペーンレベルおよびユーザーレベルのクリック追跡を可能にします。クリックは、Currentsを通じて送信される[SMSクリックイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)も生成します。高度なトラッキングを備えた静的URLは27〜28文字の長さになり、URLをクリックしたユーザーのセグメントを作成することができます。ダイナミックなURLの場合、長さは32〜33文字になります。
+- **高度なトラッキング**は、キャンペーンレベルおよびユーザーレベルのクリック追跡を可能にします。クリックは、Currentsを通じて送信される[SMSクリックイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)も生成します。高度なトラッキングを備えた静的URLは27〜28文字の長さになり、URLをクリックしたユーザーのセグメントを作成することができます。ダイナミックなURLの場合、長さは32〜33文字になります。
 
 リンクは、共有ショートドメイン（`brz.ai`）を使用して短縮されます。例として、URLは次のようになります: `https://brz.ai/8jshX` (基本的、静的) または `https://brz.ai/8jshX/2dj8d` (高度な、ダイナミックな)。詳細については[テスト](#testing)を参照してください。
 
@@ -41,15 +43,7 @@ Braze は、`http://` または`https://` で始まるURL のみを認識しま�
 
 ### UTMパラメータの追加
 
-リンクの短縮により、URL を自動的に追跡できますが、URL にUTM パラメータを追加して、Google Analytics などのサードパーティの分析ツールでキャンペーンのパフォーマンスを追跡することもできます。
-
-URL にUTM パラメータを追加するには、次の手順を実行します。
-
-1. ベースURL から始めます。これは、追跡するページのURL です(`https://www.example.com` など)。
-2. ベースURL の後に疑問符(?) を追加します。
-3. アンパサンド(&) で区切られた各UTM パラメータを追加します。
-
-例は`https://www.example.com?utm_source=newsletter&utm_medium=sms`です。
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## URL での Liquid パーソナライゼーション
 
@@ -122,35 +116,15 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 リターゲティングに関するガイダンスについては、[SMSリターゲティング]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)をご覧ください。
 
-## カスタムドメイン
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
-リンクの短縮は、独自のドメインを使用して短縮URLの外観をパーソナライズし、一貫したブランド画像を表現するのに役立ちます。詳細については、[カスタムドメイン]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/)を参照してください。
+{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
 
-## よくある質問
-
-### リンク短縮
-
-#### テスト送信時に受け取るリンクは実際のURLですか？
-
-キャンペーンがテスト送信前に下書きとして保存されている場合は、はい。それ以外の場合は、プレースホルダーリンクです。送信されたキャンペーンで送信された正確な URL は、テスト送信で送信された URL とは異なる場合があることに注意してください。
-
-#### リンクを短縮するためにBraze SDKをインストールする必要がありますか？
-
-いいえ。リンクの短縮は、SDKの統合なしで機能します。
-
-#### URL をクリックしている個々のユーザーを特定することはできますか?
+### URL をクリックしている個々のユーザーを特定することはできますか?
 
 はい。**Advanced Tracking** をオンにすると、Currents 経由で送信される[SMS リターゲティングフィルタ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/)または SMS クリックイベント(`users.messages.sms.ShortLinkClick`)を利用して、URL をクリックしたユーザーをリターゲティングできます。
 
-#### URLを短縮する前にUTMパラメータを追加できますか？
-
-はい。静的パラメータとダイナミックなパラメータの両方を追加できます。 
-
-#### 短縮URLはどのくらいの期間有効ですか？
-
-静的URLは、URL登録時 (最初の送信など) から1年間有効です。動的URL は、URL 登録時から2 か月間有効です。
-
-#### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
+### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
 
 リンク短縮はディープリンクでは機能しない。BranchやAppsFlyerなどのプロバイダーからユニバーサルリンクを短縮することはできるが、Brazeでは、その際に発生する可能性のある問題（アトリビューションが壊れる、リダイレクトが発生するなど）のトラブルシューティングはできない。
 

@@ -17,10 +17,6 @@ In Braze gespeicherte angepasste Attribute können zum Aufbau von Zielgruppen-Se
 
 Um angepasste Attribute im Dashboard zu erstellen und zu verwalten, gehen Sie zu **Dateneinstellungen** > Angepasste Attribute. 
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Angepasste Attribute** unter **Einstellungen verwalten**.
-{% endalert %}
-
 ![Vier angepasste Attribute, die Boolesche sind.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 In der Spalte **Letztes Update** sehen Sie, wann das angepasste Attribut das letzte Mal bearbeitet wurde, z.B. wann es zuletzt auf Blockliste oder aktiv gesetzt wurde.
@@ -33,7 +29,7 @@ Auf dieser Seite können Sie bereits angepasste Attribute anzeigen, verwalten, e
 
 ### Wird auf Sperrliste gesetzt ...
 
-Angepasste Attribute können einzeln im Aktionsmenü blockiert werden, oder es können bis zu 10 Attribute ausgewählt und in der Gesamtliste blockiert werden. Wenn Sie ein angepasstes Attribut sperren, werden keine Daten zu diesem Attribut erfasst, vorhandene Daten sind nicht verfügbar, es sei denn, sie werden reaktiviert, und blockierte Attribute werden nicht in Filtern oder Diagrammen angezeigt. Wenn das Attribut derzeit von Filtern oder Triggern in anderen Bereichen des Braze-Dashboards referenziert wird, erscheint außerdem ein Modal mit einer Warnung, in dem erklärt wird, dass alle Instanzen der Filter oder Trigger, die darauf referenzieren, entfernt und archiviert werden.
+Angepasste Attribute können einzeln im Aktionsmenü blockiert werden, oder es können bis zu 100 Attribute ausgewählt und in einer Massenliste blockiert werden. Wenn Sie ein angepasstes Attribut sperren, werden keine Daten zu diesem Attribut erfasst, vorhandene Daten sind nicht verfügbar, es sei denn, sie werden reaktiviert, und blockierte Attribute werden nicht in Filtern oder Diagrammen angezeigt. Wenn das Attribut derzeit von Filtern oder Triggern in anderen Bereichen des Braze-Dashboards referenziert wird, erscheint außerdem ein Modal mit einer Warnung, in dem erklärt wird, dass alle Instanzen der Filter oder Trigger, die darauf referenzieren, entfernt und archiviert werden.
 
 ### Kennzeichnung als persönlich identifizierbare Information (PII)
 
@@ -58,7 +54,7 @@ Es gibt zwei Möglichkeiten, wie Sie angepasste Attribute aus Nutzerprofilen ent
 
 Der Nutzungsbericht listet alle Canvase, Kampagnen und Segmente auf, die ein bestimmtes angepasstes Attribut verwenden. Diese Liste enthält keine Verwendungen von Liquid. 
 
-Sie können bis zu 10 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen neben den jeweiligen angepassten Attributen auswählen und dann **Nutzungsbericht anzeigen** wählen.
+Sie können bis zu 100 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen neben den jeweiligen angepassten Attributen auswählen und dann **Nutzungsbericht anzeigen** wählen.
 
 ### Daten exportieren
 
@@ -70,13 +66,13 @@ Im Folgenden finden Sie eine Liste von Methoden für verschiedene Plattformen, m
 
 {% details Erweitern Sie für die Dokumentation nach Plattform %}
 
-- [Android und FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android und FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

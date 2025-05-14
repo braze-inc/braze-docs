@@ -24,7 +24,7 @@ platform: API
 
 ### 커런츠
 
-캠페인 및 캔버스 속성은 커런츠의 [메시지 인게이지먼트 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) 연결됩니다. 이는 푸시 전송 또는 이메일 열기가 어떤 캠페인 또는 캔버스 구성 요소와 연결되어 있는지 확인할 수 있도록 하는 중요한 정보입니다.
+캠페인 및 캔버스 속성은 커런츠의 [메시지 인게이지먼트 이벤트]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 연결됩니다. 이는 푸시 전송 또는 이메일 열기가 어떤 캠페인 또는 캔버스 구성 요소와 연결되어 있는지 확인할 수 있도록 하는 중요한 정보입니다.
 
 ## 캠페인 속성
 

@@ -87,10 +87,6 @@ Wenn Sie eine vorhandene benutzerdefinierte HTML-Vorlage oder eine von einem Dri
 
 Sie können auf alle Vorlagen auch über den Bereich **Vorlagen** zugreifen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie die Vorlagen unter **Vorlagen & Medien**.
-{% endalert %}
-
 Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie unter **E-Mail-Varianten** eine Übersicht über Ihre E-Mail, die die Versandinformationen und den E-Mail-Text enthält. 
 
 Wählen Sie dann **E-Mail-Text bearbeiten**, um mit der Gestaltung der E-Mail-Struktur im Drag-and-Drop-Editor zu beginnen. 
@@ -115,7 +111,7 @@ Unter [Weitere Anpassungen](#other-customizations) finden Sie weitere Möglichke
 Während Sie Ihre E-Mail erstellen, können Sie zwischen einer Desktop- und einer mobilen Ansicht hin- und herschalten, um zu sehen, wie Ihre E-Mail-Nachrichten für Ihre Benutzergruppen aussehen werden. So können Sie überprüfen, ob Ihre Inhalte responsiv sind und können ggf. Anpassungen vornehmen.
 
 {% alert tip %}
-Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
+Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
 ![Copywriter-Button im Content-Panel neben den Stileinstellungen im Drag-and-Drop-Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -232,6 +228,14 @@ Die Flüssigpersonalisierung wird für Bildblöcke und Felder vom Typ Schaltflä
 
 Sie können dynamische Bilder in Ihr E-Mail-Messaging aufnehmen, indem Sie Liquid in das Bildquellattribut aufnehmen. Anstelle eines statischen Bildes können Sie zum Beispiel {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} als Bild-URL einfügen, um den Vornamen eines Nutzers:innen in das Bild einzubinden. So können Sie Ihre E-Mails für jeden Benutzer personalisieren.
 
+### Textrichtung ändern
+
+Wenn Sie Ihre Nachricht verfassen, können Sie die Textrichtung zwischen links-nach-rechts und rechts-nach-links umschalten, indem Sie den entsprechenden Button **Textrichtung** auswählen. Sie können diese Option verwenden, wenn Sie Nachrichten in Sprachen wie Arabisch oder Hebräisch erstellen.
+
+![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.][1]{: style="max-width:50%;"}
+
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
+
 ### HTML-Attribute zu Links hinzufügen
 
 ![Der Abschnitt "Attribute" mit dem für einen Link deaktivierten Attribut "clicktracking".][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -248,7 +252,7 @@ Ein weiterer häufiger Anwendungsfall ist die Kennzeichnung bestimmter Links als
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (ein [benutzerdefinierter Unterpfad](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) muss konfiguriert werden)
 
-Wie Sie universelle Links einrichten, erfahren Sie unter [Universelle Links und App-Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Wie Sie universelle Links einrichten, erfahren Sie unter [Universelle Links und App-Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 Alternativ können Sie auch einen unserer Attributionspartner wie [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) oder [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) einbinden, um universelle Links zu verwalten.
 
@@ -265,3 +269,4 @@ Alternativ können Sie auch einen unserer Attributionspartner wie [Branch]({{sit
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

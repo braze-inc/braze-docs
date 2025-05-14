@@ -34,16 +34,11 @@ Você pode fazer uma atualização manual completa em todos os segmentos SQL cri
 Para criar uma extensão de segmento SQL totalmente atualizada:
 
 1. Acesse **Público** > **Extensões de segmento**.
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > **Segmentos** > **Extensões de segmento**.
-{% endalert %}
-
-{:start="2"}
-2\. Clique em **Create New Extension (Criar nova extensão** ) e selecione **Full refresh (Atualização completa**).<br><br>
+2. Clique em **Create New Extension (Criar nova extensão** ) e selecione **Full refresh (Atualização completa**).<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\. Adicione um nome para sua extensão de segmento e insira seu SQL. Consulte a seção [Escrevendo SQL](#writing-sql) para obter os requisitos e recursos.<br><br>
+3. Adicione um nome para sua extensão de segmento e insira seu SQL. Consulte a seção [Escrevendo SQL](#writing-sql) para obter os requisitos e recursos.<br><br>
    ![Editor SQL mostrando um exemplo de extensão de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\. Salve sua extensão de segmento.
+4. Salve sua extensão de segmento.
 
 {% endtab %}
 {% tab Atualização incremental %}
@@ -53,7 +48,7 @@ O editor SQL de atualização incremental permite que as agregações de consult
 1. Acesse **Público** > **Extensões de segmento**.
 {% alert note %}
 
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > **Segmentos** > **Extensões de segmento**.
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), poderá encontrar essa página em **Engajamento** > **Segmentos** > **Extensões de segmento**.
 {% endalert %}
 
 {:start="2"}
@@ -89,7 +84,7 @@ Para usar o gerador de IA SQL, faça o seguinte:
 - Usuários que fizeram menos de cinco compras no último ano
 
 ### Dicas
-- Familiarize-se com as tabelas de dados disponíveis [do Snowflake]({{site.baseurl}}/sql_segments_tables/). A solicitação de dados que não existem nessas tabelas pode fazer com que o ChatGPT crie uma tabela falsa.
+- Familiarize-se com as tabelas de dados disponíveis [do Snowflake]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). A solicitação de dados que não existem nessas tabelas pode fazer com que o ChatGPT crie uma tabela falsa.
 - Familiarize-se com as [regras de escrita SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) para esse recurso. O não cumprimento dessas regras causará um erro. Por exemplo, seu código SQL deve selecionar a coluna `user_id`. Iniciar seu prompt com "users who" pode ajudar.
 - Você pode enviar até 20 prompts por minuto com o IA SQL Generator.
 
@@ -107,7 +102,7 @@ Quando a extensão terminar de processar, você poderá [criar um segmento][4] u
 
 ## Escrevendo SQL
 
-Sua consulta de SQL deve ser escrita usando [a sintaxe do Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte a [referência da tabela]({{site.baseurl}}/sql_segments_tables/) para obter uma lista completa das tabelas e colunas disponíveis para consulta.
+Sua consulta de SQL deve ser escrita usando [a sintaxe do Snowflake](https://docs.snowflake.com/en/sql-reference.html). Consulte a [referência da tabela]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) para obter uma lista completa das tabelas e colunas disponíveis para consulta.
 
 {% alert important %}
 Observe que as tabelas disponíveis para consulta contêm apenas dados de eventos. Se desejar consultar os atributos do usuário, deverá combinar seu segmento SQL com filtros de atributos personalizados do [segmentador clássico]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).

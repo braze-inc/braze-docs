@@ -46,7 +46,7 @@ description: "이 참조 문서에서는 Braze 통합에서 문제를 디버깅�
 
 ### 테스트 사용자에 대한 누락된 SDK 로그
 
-내부 그룹에 사용자를 추가했지만 이벤트 사용자 로그에 SDK 로그가 표시되지 않는다면 구성 옵션이 누락되었기 때문일 수 있습니다. SDK 로그를 캡처하려면 해당 [내부 그룹]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/)의 **내부 그룹 설정**에서 **그룹 구성원에 대한 사용자 이벤트 기록**을 선택해야 합니다.
+내부 그룹에 사용자를 추가했지만 이벤트 사용자 로그에 SDK 로그가 표시되지 않는다면 구성 옵션이 누락되었기 때문일 수 있습니다. In order to capture SDK logs, make sure to select **Record User Events for group members** in the **Internal Group Settings** for that [internal group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/).
 
 ### 로그 업데이트 지연
 

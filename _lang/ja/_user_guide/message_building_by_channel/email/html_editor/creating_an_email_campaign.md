@@ -30,16 +30,10 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 {% tab キャンペーン %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
-{% endalert %}
-
-{:start=“2"}
-2\.[**メール**] を選択するか、複数のチャネルを対象とするキャンペーンの場合は、［**マルチチャネル**] を選択します。
-3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加する。
-   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+2. [**メール**] を選択するか、複数のチャネルを対象とするキャンペーンの場合は、［**マルチチャネル**] を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% alert tip %}
@@ -61,7 +55,7 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 
 Brazeでは、メールキャンペーンを作成する際に、[ドラッグ＆ドロップエディターと]({{site.baseurl}}/dnd/)標準のHTMLエディターの2種類の編集機能を提供している。好みの編集体験に適したタイルを選ぶ。 
 
-![ドラッグ＆ドロップエディターとHTMLエディターのどちらを使うか、メール編集の経験を選ぶ。][3]{: style="max-width:75%" }
+![ドラッグ＆ドロップエディター、HTMLエディター、テンプレートのいずれかを選択し、メール編集を体験できる。][3]{: style="max-width:75%" }
 
 次に、既存の[メールテンプレート][10]の選択、ファイルから[テンプレートをアップロード][18] (HTML エディターのみ)、または空白のテンプレートの使用ができます。 
 
@@ -71,7 +65,11 @@ Brazeでは、メールキャンペーンを作成する際に、[ドラッグ�
 
 ## ステップ 3:メールを作成します。
 
-テンプレートを選択すると、メールの概要が表示されます、そこから全画面エディターに直接移動して、メールの下書き、送信情報の変更、配信可能性や法令遵守に関する警告の表示ができます。 
+テンプレートを選択すると、メールの概要が表示されます、そこから全画面エディターに直接移動して、メールの下書き、送信情報の変更、配信可能性や法令遵守に関する警告の表示ができます。HTML、クラシック、プレーンテキスト、[AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) のタブを切り替えながら作成できます。 
+
+![「HTML から再生成」ボタン。][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+プレーンテキスト版の編集が検出されるまで、メールのプレーンテキスト版は常に HTML 版から自動的に更新されます。編集が検出されると、Brazeは平文を更新しなくなる。上書きされるべきではない意図的な変更を行ったと考えられるからだ。プレーンテキストが同期していない場合にのみ表示される「**HTML から生成**」アイコンを選択すると、「**プレーンテキスト**」タブで自動同期に戻すことができます。
 
 {% alert tip %}
 ほとんどの受信トレイはJavaScriptをサポートしていないため、正確なプレビューでメールに動きを加えるには、JavaScriptを必要とする要素の代わりにGIFを使用する。
@@ -84,10 +82,12 @@ Brazeは、属性として参照されているHTMLイベントハンドラを�
 {% endalert %}
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![メール作成画面の [本文] タブにある [AI コピーライターを起動] ボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
 
 ### ステップ 3a: 送信情報の追加
 
@@ -163,7 +163,7 @@ Braze には、高度なユースケースで必要に応じてメールヘッ�
 メール・エクストラを追加するには、「**送信情報**」から**「新しいエクストラを追加**」を選択する。
 
 {% alert warning %}
-追加されるキーと値のペアの合計は1kBを超えてはならない。それ以外の場合、メッセージは中止されます。
+追加されるキーと値のペアの合計は1KBを超えてはならない。それ以外の場合、メッセージは中止されます。
 {% endalert %}
 
 Eメールの余分な値は、CurrentsやSnowflakeには公開されない。追加のメタデータやダイナミックな値を Currents や Snowflake に送信する場合は、代わりに [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/)を使用してください。
@@ -250,7 +250,7 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。コンバージョンイベントとして、次のアクションをいずれでも選択できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。コンバージョンイベントとして、次のアクションをいずれでも選択できます。
 
 - アプリを開く
 - 購入する（これは一般的な購入でも、特定の商品でも構わない）
@@ -271,6 +271,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 メールキャンペーンの結果にアクセスする方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)レポートをご覧ください。
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

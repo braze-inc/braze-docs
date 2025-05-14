@@ -28,7 +28,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour **WhatsApp Group
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Pré-requis
+## Conditions préalables
 
 Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `subscription.groups.get`.
 
@@ -76,4 +76,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
+## Exemple de réponse
+
+```json
+{
+  "success": true,
+  "subscription_groups": [
+    {
+      "subscription_group_id": "group_id_1",
+      "subscription_status": "subscribed"
+    },
+    {
+      "subscription_group_id": "group_id_2",
+      "subscription_status": "unsubscribed"
+    }
+  ]
+}
+```
+
 {% endapi %}

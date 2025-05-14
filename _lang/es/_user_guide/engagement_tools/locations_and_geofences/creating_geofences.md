@@ -19,10 +19,6 @@ Puede definir geocercas en el panel de control de Braze y utilizarlas para activ
 
 Gestiona los geovallados desde **Audiencia** > **Ubicaciones**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Ubicaciones** en **Compromiso**.
-{% endalert %}
-
 Las geovallas se organizan en conjuntos de geovallas: un grupo de geovallas que pueden utilizarse para segmentar o interactuar con los usuarios en toda la plataforma. Cada conjunto de geovallas puede contener un máximo de 10 000 geovallas.
 
 Puede crear o cargar una cantidad ilimitada de geovallas en el panel de control, lo que permite a su equipo de marketing configurar conjuntos de geovallas y campañas sin necesidad de calcular el número de geovallas. Braze resincronizará dinámicamente las geovallas que sigue para cada usuario individual, asegurándose de que las geovallas más relevantes para ellos estén siempre disponibles.
@@ -40,7 +36,7 @@ En la página **Ubicaciones**, haga clic en **\+ Crear conjunto de geovallas**.
 
 ![Conjunto de geovallas de aeropuertos alemanes con un usuario que dibuja un radio de dos mil metros en el mapa para el aeropuerto de Hamburgo.][1]
 
-Una vez que hayas creado un conjunto de geovallas, puedes añadir geovallas manualmente dibujándolas en el mapa. Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para más información sobre las opciones configurables, consulta [Configuración de geovallas]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Una vez que hayas creado un conjunto de geovallas, puedes añadir geovallas manualmente dibujándolas en el mapa. Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para más información sobre las opciones configurables, consulta [Configuración de geovallas]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Creación de conjuntos mediante carga masiva {#creating-geofence-sets-via-bulk-upload}
 

@@ -37,9 +37,9 @@ For more information on re-engaging lapsed users, see our [Quick Wins][23] page 
 
 Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
+- [Web]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## Push message regulations
 

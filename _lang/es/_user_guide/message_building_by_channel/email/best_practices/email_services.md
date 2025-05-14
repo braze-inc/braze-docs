@@ -12,18 +12,18 @@ channel: email
 
 > Si necesita asistencia adicional con su programa de correo electrónico, Braze ofrece servicios recurrentes y puntuales por un coste adicional. Para más información, ponte en contacto con tu director de cuentas Braze.
 
-## Servicios premium de capacidad de entrega {#premium-deliverability-services}
+## Servicios de capacidad de entrega de correo electrónico {#email-deliverability-services}
 
 Ofrecemos dos niveles de asistencia recurrente por correo electrónico:
-1. Servicios premium de capacidad de entrega 
-2. Control de la capacidad de entrega
+1. Deluxe  
+2. Estándar 
 
 Estos servicios pueden incluir:
 
 - Auditoría de las prácticas históricas y actuales de envío de correos electrónicos con una revisión de las estrategias de segmentación, cadencia y mensajería.
 - Configuración de etiqueta blanca y plan de calentamiento de IP personalizado creado por un experto en entregabilidad de correo electrónico
-  - Llamadas de control periódicas durante el primer mes (tres veces por semana para la capacidad de entrega Premium y una vez por semana para la supervisión de la capacidad de entrega).
-- Llamadas periódicas con el experto en capacidad de entrega (dos veces al mes para la capacidad de entrega Premium y una vez al mes para la supervisión de la capacidad de entrega) para proporcionar:
+  - Llamadas regulares de control durante tu primer mes (tres veces por semana para Deluxe y una vez por semana para Standard)
+- Llamadas regulares con el experto en capacidad de entrega (dos veces al mes para Deluxe y una vez al mes para Standard) para proporcionar:
   - Control del rendimiento de la capacidad de entrega por dominio
   - Recomendaciones para mejorar el rendimiento y los resultados del programa de correo electrónico utilizando datos y las mejores prácticas establecidas.
 - Mitigar y remediar el triaje de crisis para eventos que conducen a problemas como una lista de bloqueo para la capacidad de entrega.

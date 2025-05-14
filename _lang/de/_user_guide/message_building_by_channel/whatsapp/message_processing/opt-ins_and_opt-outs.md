@@ -30,7 +30,7 @@ Opt-ins können aus externen Quellen oder von Braze stammen und SMS sowie In-App
 ## Richten Sie Opt-Ins für Ihren Braze WhatsApp-Kanal ein
 
 Für WhatsApp Opt-Ins müssen Sie die [Anforderungen von WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/) erfüllen. Außerdem müssen Sie Braze die folgenden Informationen zur Verfügung stellen:
-- Ein `external_id`, eine [Telefonnummer]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) und ein Update des Abo-Status für jeden Nutzer:innen. Telefonnummer und Abo-Status können über das [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) oder den [`/users/track` Endpunkt](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) aktualisiert werden. 
+- Ein `external_id`, eine [Telefonnummer]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) und ein Update des Abo-Status für jeden Nutzer:innen. Telefonnummer und Abo-Status können über das [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) oder den [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) aktualisiert werden.
 
 {% alert note %}
 Braze hat eine Verbesserung des Endpunkts `/users/track` veröffentlicht, die Aktualisierungen des Abonnementstatus ermöglicht, über die Sie sich in [Abonnementgruppen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status) informieren können. Wenn Sie jedoch bereits Opt-in-Protokolle über den [Endpunkt`/v2/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/) erstellt haben, können Sie dies auch weiterhin dort tun.
@@ -40,7 +40,7 @@ Braze hat eine Verbesserung des Endpunkts `/users/track` veröffentlicht, die Ak
 
 Ihre App oder Website (Kontoanmeldung, Kassenseite, Kontoeinstellungen, Kreditkartenterminal) an Braze.
 
-Wenn bereits eine Einwilligung für Werbesendungen per E-Mail oder SMS vorliegt, ergänzen Sie einen Abschnitt zu WhatsApp. Nachdem sich ein Benutzer angemeldet hat, benötigt er eine `external_id`, eine [Telefonnummer]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) und einen aktuellen Abonnementstatus. Je nachdem, wie Ihre Braze-Installation eingerichtet ist, können Sie entweder den [`/subscription/status/set` Endpunkt]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) nutzen oder das [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) verwenden.
+Wenn bereits eine Einwilligung für Werbesendungen per E-Mail oder SMS vorliegt, ergänzen Sie einen Abschnitt zu WhatsApp. Nachdem sich ein Benutzer angemeldet hat, benötigt er eine `external_id`, eine [Telefonnummer]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) und einen aktuellen Abonnementstatus. Je nachdem, wie Ihre Braze-Installation eingerichtet ist, können Sie entweder den [`/subscription/status/set` Endpunkt]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) nutzen oder das [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) verwenden.
 
 #### Externes Opt-in-Verzeichnis
 
@@ -54,8 +54,8 @@ In Ihrem Kundensupport-Kanal können Sie bei gelösten Problemen eine automatisc
 2. Richten Sie [Quick-Reply-Aktionen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies) ein, wenn die Einwilligung mit der Tastatureingabe "Ja" erfolgt.
 3. Richten Sie angepasste Trigger für Schlüsselwörter ein.
 4. In jedem Fall müssen Sie den Pfad voraussichtlich folgendermaßen vervollständigen:
-	- Rufen Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) auf, um Nutzer:innen zu aktualisieren bzw. zu erstellen. 
-	- Nutzen Sie den [Endpunkt`/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) oder verwenden Sie das [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 
+	- Rufen Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) auf, um Nutzer:innen zu aktualisieren bzw. zu erstellen.
+	- Nutzen Sie den [Endpunkt`/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) oder verwenden Sie das [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/)
 
 #### Eingehende WhatsApp-Nachricht 
 

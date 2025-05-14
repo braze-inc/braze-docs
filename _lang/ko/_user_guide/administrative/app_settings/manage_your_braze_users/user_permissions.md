@@ -42,9 +42,9 @@ tool: Dashboard
 {% endtab %}
 {% endtabs %}
 
-### 권한 집합과 역할은 팀과 어떻게 다른가요?
+## 권한 집합과 역할은 팀과 어떻게 다른가요?
 
-팀, 권한 집합 및 역할 간의 차이점에 대한 자세한 내용은 [회사 사용자를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) 참조하세요.
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## 사용자 권한 편집
 
@@ -127,13 +127,13 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 |워크스페이스|캔버스 승인 및 거부|사용자가 캔버스를 승인하거나 거부할 수 있습니다. 캔버스에 대한 [승인 워크플로]({{site.baseurl}}/canvas_approval)가 이 권한에 적용되도록 설정되어야 합니다.|
 |워크스페이스|커런츠 통합 편집|사용자가 자격 증명을 포함하여 커런츠 연결을 수정할 수 있습니다. 기본값으로, "외부 통합" 권한이 할당된 사용자에게도 이 권한이 할당됩니다.|
 |워크스페이스|세그먼트 편집|사용자가 세그먼트를 생성하고 편집할 수 있습니다. 이 권한 없이도 기존 세그먼트 및 필터로 캠페인을 계속 생성할 수 있습니다. CSV에 있는 사용자로부터 세그먼트를 생성하거나 CSV에 있는 사용자 그룹을 리타겟하기 위해 이 권한이 필요합니다.|
-|워크스페이스|사용자 데이터 내보내기|사용자가 세그먼트, 캠페인 및 캔버스에서 사용자 데이터를 내보낼 수 있습니다.|
+|워크스페이스|사용자 데이터 내보내기|사용자가 세그먼트, 캠페인 및 캔버스에서 사용자 데이터를 내보낼 수 있습니다. This permission includes sensitive user information like names, email addresses, and other collected personally identifiable information (PII). |
 |워크스페이스|사용자 데이터 가져오기 및 업데이트|사용자가 CSV를 가져오고 앱 사용자 파일을 업데이트하며 사용자 가져오기 페이지를 볼 수 있습니다. 이것은 또한 사용자의 구독 상태와 구독 그룹 옵트인/옵트아웃 규칙을 편집할 수 있게 해줍니다.|
 |워크스페이스|콘텐츠 블록 실행|사용자가 [콘텐츠 블록]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/)을 시작할 수 있습니다.|
 |워크스페이스|환경설정 센터 관리|사용자가 [선호 센터]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/)를 시작할 수 있습니다.|
 |워크스페이스|앱 관리|사용자가 **앱 설정**을 편집할 수 있습니다.|
 |워크스페이스|카탈로그 대시보드 권한 관리|사용자가 카탈로그를 생성하고 관리할 수 있습니다.|
-|워크스페이스|대시보드 사용자 관리|사용자가 **회사 사용자** 페이지를 보고, 편집하고, 관리할 수 있습니다. 이 권한을 가진 사용자는 자신을 포함한 모든 사용자의 권한을 수정할 수 있습니다. 따라서 이 권한은 관리 액세스 수준으로 간주되어야 합니다. 이 권한은 사용자가 사용자를 삭제할 수 없도록 허용하지 않습니다. 관리자만 사용자를 삭제할 수 있습니다.|
+|워크스페이스|대시보드 사용자 관리| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
 |워크스페이스|이메일 설정 관리|사용자가 이메일 구성 변경 사항을 저장할 수 있습니다 (**설정** > **이메일 환경설정**).|
 |워크스페이스|이벤트, 속성, 구매 관리|사용자가 커스텀 속성을 편집할 수 있도록 허용합니다(이 기능이 없는 사용자는 여전히 커스텀 속성을 볼 수 있음). 커스텀 이벤트의 속성을 편집 및 보기, **데이터 설정**에서 제품의 속성을 편집 및 보기.|
 |워크스페이스|외부 통합 관리|**기술 파트너** 아래의 모든 탭에 접근할 수 있으며 Braze를 다른 플랫폼과 동기화할 수 있는 기능을 제공합니다.|
@@ -144,17 +144,18 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 |워크스페이스|팀 관리|사용자가 **내부 팀**을 관리할 수 있습니다. 이 권한을 선택할 수 있는 능력은 Braze와의 계약에 따라 다릅니다.|
 |워크스페이스|변환 관리|사용자가 데이터 변환을 생성하고 관리할 수 있습니다.|
 |워크스페이스|카드 게시|이 권한은 뉴스피드가 사용 중지되는 경우에만 계정이 활성화된 경우에만 표시됩니다. 이것은 콘텐츠 카드에 영향을 미치지 않습니다. 사용자가 뉴스피드 카드를 만들고 편집할 수 있습니다. 이 권한 없이도 뉴스피드 카드를 여전히 볼 수 있습니다. 계정이 뉴스피드에 대해 활성화되어 있고 사용자가 기존 콘텐츠 블록을 실행할 수 있어야 하는 경우, "카드 게시" 및 "콘텐츠 블록 실행" 권한이 모두 필요합니다.|
-|워크스페이스|캠페인, 캔버스 발송|사용자가 캠페인 및 캔버스를 편집, 보관 및 중지하고 캠페인을 생성하고 캔버스를 시작할 수 있습니다.|
+|워크스페이스|캠페인, 캔버스 발송|사용자가 캠페인 및 캔버스를 편집, 보관 및 중지하고 캠페인을 생성하고 캔버스를 시작할 수 있습니다. |
 |워크스페이스|청구 상세정보 보기|사용자가 구독 및 청구를 볼 수 있습니다.|
 |워크스페이스|커런츠 통합 보기|사용자가 자격 증명을 제외한 Currents 연결에 대한 모든 정보를 볼 수 있도록 합니다. 기본값으로, "캠페인 액세스, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리, 위치, 프로모션 코드 및 환경 설정 센터" 권한이 할당된 사용자에게도 이 권한이 할당됩니다.|
-|워크스페이스|PII로 분류된 사용자 지정 속성 보기|관리자가 아니어도 PII로 표시된 커스텀 속성을 볼 수 있습니다.|
-|워크스페이스|PII 보기|사용자가 대시보드 내에서 회사에서 정의한 개인 식별 정보(PII) 필드를 볼 수 있도록 허용합니다. 사용자는 메시지 미리 보기의 **사용자로 미리 보기** 탭에서 PII 필드를 볼 수도 있습니다. |
-|워크스페이스|사용자 프로필 PII 준수사항 보기|사용자가 사용자 프로필을 볼 수 있도록 허용하지만 회사에서 개인 식별 정보로 정의한 필드를 삭제합니다.|
-|워크스페이스|변환 보기|사용자가 [Braze 데이터 변환]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/)을(를) 볼 수 있습니다.|
+|워크스페이스|PII로 분류된 사용자 지정 속성 보기|Allows non-admin users to view custom attributes that contain sensitive information and are marked as personally identifiable information (PII).|
+|워크스페이스|PII 보기|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. 사용자는 메시지 미리 보기의 **사용자로 미리 보기** 탭에서 PII 필드를 볼 수도 있습니다.|
+|워크스페이스|사용자 프로필 PII 준수사항 보기|Allows users to view user profiles that contain fields your company has defined as personally identifiable information (PII), but redacts the PII fields. |
+|워크스페이스|변환 보기|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |워크스페이스|사용 데이터 보기|사용자가 앱 사용량을 볼 수 있도록 하며, 채널 성능 대시보드를 포함합니다.|
 |워크스페이스|중복 사용자 병합|사용자가 중복된 사용자 프로필을 병합할 수 있습니다.|
 |워크스페이스|중복 사용자 미리보기|사용자가 중복된 사용자 프로필을 미리 볼 수 있습니다.|
 |워크스페이스|캔버스 템플릿 생성 및 편집|사용자가 캔버스 템플릿을 만들고 편집할 수 있습니다.|
 |워크스페이스|캔버스 템플릿 보기|사용자가 캔버스 템플릿을 볼 수 있도록 허용합니다.|
 |워크스페이스|캔버스 템플릿 아카이브|사용자가 캔버스 템플릿을 보관할 수 있습니다.|
+|워크스페이스|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

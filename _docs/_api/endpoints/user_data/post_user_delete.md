@@ -18,7 +18,7 @@ description: "This article outlines details about the Delete users Braze endpoin
 
 Up to 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request. 
 
-If you have a use case that can't be solved with bulk user deletion through the API, contact the [Braze Support team]({{site.baseurl}}/help/support/) for assistance.
+If you have a use case that can't be solved with bulk user deletion through the API, contact the [Braze Support team]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for assistance.
 
 {% alert warning %}
 Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile using the API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
@@ -61,13 +61,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone_numbers` | Optional | Array of strings | User phone numbers to be deleted. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Deleting users by email
+### Deleting users by email addresses and phone numbers
 
-If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` is an ordered array and should specify which user to delete if multiple users are found. This means deleting users will not occur if more than one user matches a prioritization.
+If an email address or phone number is specified as an identifier, an additional `prioritization` value is required in the identifier. `prioritization` must be an ordered array and should specify which user to delete if there are multiple users. This means deleting users will not occur if more than one user matches a prioritization.
 
-The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
+The allowed values for the array are:
 
-Only one of the following options may exist in the prioritization array at a time:
+- `identified`
+- `unidentified`
+- `most_recently_updated` (refers to prioritizing the most recently updated user)
+
+Only one of the following options may exist in the `prioritization` array at a time:
 
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`

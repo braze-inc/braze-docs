@@ -17,10 +17,6 @@ Además de este artículo, también recomendamos consultar nuestro curso Braze L
 
 Para acceder al registro, ve a **Configuración** > **Registro de usuario de eventos**.
 
-{% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar el **Registro de eventos de usuario** en **Configuración** > **Consola de desarrollador**.
-{% endalert %}
-
 Para encontrar tus registros fácilmente, puedes filtrar en función de:
 
 * SDK o API
@@ -46,7 +42,7 @@ Los registros de eventos de usuario permanecerán en el panel de control durante
 
 ### Faltan registros del SDK para los usuarios de prueba
 
-Si ha añadido un usuario a un grupo interno, pero no muestra ningún registro SDK en el registro de usuarios de eventos, puede deberse a que falte una opción de configuración. Para capturar los registros del SDK, asegúrese de seleccionar **Registrar eventos de usuario para los miembros del grupo** en la **Configuración interna del grupo** para ese [grupo interno]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/).
+Si ha añadido un usuario a un grupo interno, pero no muestra ningún registro SDK en el registro de usuarios de eventos, puede deberse a que falte una opción de configuración. Para capturar los registros del SDK, asegúrese de seleccionar **Registrar eventos de usuario para los miembros del grupo** en la **Configuración interna del grupo** para ese [grupo interno]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/).
 
 ### Retraso en la actualización de los registros
 

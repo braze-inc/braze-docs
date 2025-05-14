@@ -11,7 +11,7 @@ channel:
 
 # AMP pour e-mail
 
-> Avec [AMP pour les](https://amp.dev/about/email) e-mails, vous pouvez ajouter des éléments interactifs à vos e-mails et élever vos communications avec vos clients, en offrant une expérience complète directement dans la boîte de réception de votre utilisateur. AMP rend cela possible grâce à l'utilisation de divers composants qui peuvent être utilisés pour susciter de l’enthousiasme avec vos e-mails, par exemple avec des enquêtes, des questionnaires de feedback, des campagnes de vote, des évaluations, des centres d’abonnement, et plus encore. De tels outils peuvent offrir des possibilités d'accroître l'engagement et la fidélisation.
+> Avec [AMP pour les](https://amp.dev/about/email) e-mails, vous pouvez ajouter des éléments interactifs à vos e-mails et élever vos communications avec vos clients, en offrant une expérience complète directement dans la boîte de réception de votre utilisateur. AMP rend cela possible grâce à l'utilisation de divers composants qui peuvent être utilisés pour créer des offres d'e-mail intéressantes telles que des enquêtes, des questionnaires de retour d'information, des campagnes de vote, des évaluations, des centres d'abonnement, et bien plus encore. De tels outils peuvent offrir des possibilités d'accroître l'engagement et la fidélisation.
 
 ## Conditions
 
@@ -19,24 +19,24 @@ Braze n'est pas responsable de l'enregistrement des utilisateurs auprès de Goog
 
 | Condition   | Description |
 | --------------| ----------- |
-| Activation de l'AMP pour l'e-mail | AMP est disponible pour tout le monde. Contactez votre gestionnaire de compte si vous souhaitez activer cette fonctionnalité. |
+| Activation de l'AMP pour l'e-mail | L'AMP est disponible pour tous les utilisateurs. |
 | Activation du compte Gmail | Voir [Activation du compte Gmail.](#enabling-gmail-account) |
 | Authentification de l'expéditeur par Google | Gmail [authentifie l'expéditeur](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) des e-mails AMP avec DKIM, SPF et DMARC. Ceux-ci doivent être configurés pour votre compte. <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Authentification, notification et conformité des messages par domaine](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | Éléments de l'e-mail AMP | Un e-mail AMP convaincant passe par l'utilisation stratégique de différents éléments. Reportez-vous à l'onglet Essentiels dans la section [Composants](#components) ci-dessous. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Clients pris en charge
+### Clients e-mail pris en charge
 
-Avant de pouvoir envoyer des e-mails AMP aux utilisateurs, vous devez vous inscrire auprès de nos clients. Le processus d'inscription implique l'envoi d'un e-mail HTML AMP de test pour obtenir l'approbation. Le délai d’approbation varie entre les clients. Suivez les liens d’enregistrement pour obtenir plus d’informations.
+Avant de pouvoir envoyer des e-mails AMP aux utilisateurs, vous devez vous inscrire auprès de nos clients de messagerie. Le processus d'inscription implique l'envoi d'un e-mail HTML AMP de test pour obtenir l'approbation. Les délais d'approbation varient d'un client à l'autre. Suivez les liens d'inscription pour plus d'informations.
 
-| Client | Lien d’enregistrement |
+| Client | Lien d'inscription |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-Pour obtenir la liste complète des plateformes prises en charge, reportez-vous à la [documentation 'AMP](https://amp.dev/support/faq/email-support). 
+Pour une liste complète des clients e-mail pris en charge, consultez la [documentation de l'AMP](https://amp.dev/support/faq/email-support).
 
 ### Activation d’un compte Gmail
 
@@ -87,10 +87,12 @@ Consultez ces ressources supplémentaires :
 
 ### Composants
 
+Lorsque vous créez les éléments AMP, nous vous recommandons de vérifier avec votre équipe d'ingénieurs et d'inclure des ressources et des éléments de conception pour une couche supplémentaire de polissage.
+
 {% tabs %}
   {% tab Essentiels %}
 
-Ce sont ces éléments qui font d'un HTML AMP email...AMP'ed ! Chacun de ces éléments est requis dans le corps de votre e-mail AMP.
+Chacun de ces éléments est requis dans le corps de votre e-mail AMP.
 
 | Composant | Description | Exemple |
 |---------|--------------|---------|
@@ -235,22 +237,19 @@ Notez que le nombre total de clics et les clics uniques ne tiennent pas compte d
 Avant d'envoyer votre e-mail AMP, nous vous recommandons de le tester conformément à ces [directives de Gmail](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 Pour que votre e-mail AMP soit envoyé et reçu sur un compte Gmail, l’e-mail doit répondre aux conditions suivantes :
+
 - Les exigences de sécurité de l'AMP pour les e-mails doivent être respectées.
 - La partie MIME AMP doit contenir un document AMP valide.
 - L’e-mail doit inclure la partie MIME AMP avant la partie MIME HTML.
 - La partie MIME de l'AMP doit être inférieure à 100 Ko.
 
-Si aucune de ces conditions n'est à l'origine de l'erreur, contactez le [support][support].
+Si aucune de ces conditions n'est à l'origine de l'erreur, contactez le [service d'assistance.]({{site.baseurl}}/support_contact/)
 
 ### Foire aux questions
 
-{% details Dois-je segmenter avec des e-mails AMP ? %}
-Nous vous recommandons de ne pas segmenter pour envoyer à tous les types d’utilisateurs. La raison en est que nous envoyons les messages AMP en plusieurs parties en ayant les différentes versions comprises dans l’e-mail d’origine. Si un utilisateur ne peut pas voir la version AMP, il reviendra par défaut à la version HTML.
-{% enddetails %}
+#### Dois-je segmenter avec des e-mails AMP ?
 
-{% details Avez-vous d'autres conseils pour créer un e-mail AMP ? %}
-Consultez votre équipe d'ingénieurs pour créer les éléments AMP. Une fois que les éléments sont définis, nous vous encourageons à inclure toutes les ressources et tous les éléments de conception dont vous disposez pour le peaufiner le plus possible.
-{% enddetails %}
+Nous vous recommandons de ne pas segmenter pour envoyer à tous les types d’utilisateurs. La raison en est que nous envoyons les messages AMP en plusieurs parties en ayant les différentes versions comprises dans l’e-mail d’origine. Si un utilisateur ne peut pas voir la version AMP, il reviendra par défaut à la version HTML. 
+
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-[support]: {{site.baseurl}}/support_contact/

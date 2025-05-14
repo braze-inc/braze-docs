@@ -97,6 +97,6 @@ To enable the log level in the `info.plist`, go to **Settings** > **Project Sett
 </dict>
 ```
 
-The default log level is 8, which is minimal logging. Read more about log levels: [Other SDK Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/)
+The default log level is 8, which is minimal logging. Read more about log levels: [Other SDK Customization]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/)
 {% endtab %}
 {% endtabs %}

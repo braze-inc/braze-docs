@@ -133,7 +133,7 @@ De ce fait, vous ne devriez demander l’autorisation que quand l’utilisateur 
 Il existe deux façons de classer un [jeton de notification push][push-tokens] qui sont centrales pour comprendre comment une notification push peut être envoyée à vos utilisateurs.
 
 1. **Foreground push** permet d'envoyer régulièrement des notifications push visibles au premier plan de l'appareil d'un utilisateur.
-2. Le **push en arrière-plan** est disponible indépendamment du fait qu'un appareil particulier ait choisi de recevoir des notifications push de cette marque. Le push en arrière-plan permet aux marques d'envoyer des notifications push silencieuses - des notifications qui ne sont intentionnellement pas affichées - aux appareils pour prendre en charge des fonctionnalités clés telles que le [suivi de la désinstallation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/).
+2. Le **push en arrière-plan** est disponible indépendamment du fait qu'un appareil particulier ait choisi de recevoir des notifications push de cette marque. Le push en arrière-plan permet aux marques d'envoyer des notifications push silencieuses - des notifications qui ne sont intentionnellement pas affichées - aux appareils pour prendre en charge des fonctionnalités clés telles que le [suivi de la désinstallation]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
 Lorsqu’un profil d’utilisateur est associé à un jeton de notification push de premier plan valide associé à une application, Braze considère que l’utilisateur est « push registered » (abonné aux notifications push) pour l’application donnée. Braze fournit alors un filtre de segmentation spécifique, `Push Enabled for App,`, pour identifier ces utilisateurs.
 

@@ -18,10 +18,6 @@ description: "Este artículo de referencia explica cómo crear y personalizar pl
 
 En el panel de Braze, ve a **Plantillas** > **Plantillas webhook**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar esta página en **Interacción** > **plantillas y medios** > **plantillas de webhook**.
-{% endalert %}
-
 ![La página "Plantillas Webhook" con plantillas webhook prediseñadas y guardadas.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Paso 2: Elige tu plantilla
@@ -34,7 +30,7 @@ Por ejemplo, si utilizas [LINE]({{site.baseurl}}/user_guide/message_building_by_
 
 1. Dale un nombre único a tu plantilla de webhook.
 2. (Opcional) Añade una descripción de la plantilla para explicar cómo se va a utilizar esta plantilla.
-3. Añade [equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) según sea necesario para ayudar a encontrar y filtrar tu plantilla.
+3. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario para ayudar a encontrar y filtrar tu plantilla.
 
 ## Paso 4: Construye tu plantilla
 

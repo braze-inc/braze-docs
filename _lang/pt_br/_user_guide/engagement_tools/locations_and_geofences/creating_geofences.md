@@ -19,10 +19,6 @@ search_rank: 9
 
 Gerencie geofences em **Público** > **Locais**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os locais** em **Engajamento**.
-{% endalert %}
-
 As geofences são organizadas em conjuntos de geofences - um grupo de geofences que pode ser usado para segmentar ou engajar usuários em toda a plataforma. Cada conjunto de geofences pode conter um máximo de 10.000 geofences.
 
 É possível criar ou fazer upload de uma quantidade ilimitada de geofences no dashboard, permitindo que sua equipe de marketing configure conjuntos de geofences e campanhas sem precisar calcular o número de geofences. A Braze ressincronizará dinamicamente os geofences que rastreia para cada usuário individual, garantindo que os geofences mais relevantes para eles estejam sempre disponíveis.
@@ -40,7 +36,7 @@ Na página **Locais**, clique em **\+ Criar conjunto de geofences**.
 
 ![Conjunto de geofences de aeroportos alemães com um usuário desenhando um raio de dois mil metros no mapa para o Aeroporto de Hamburgo.][1]
 
-Depois de criar um conjunto de geofences, você pode adicionar geofences manualmente, desenhando-as no mapa. Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para saber mais sobre as opções configuráveis, consulte [Configuração de geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Depois de criar um conjunto de geofences, você pode adicionar geofences manualmente, desenhando-as no mapa. Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para saber mais sobre as opções configuráveis, consulte [Configuração de geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Criação de conjuntos via upload em massa {#creating-geofence-sets-via-bulk-upload}
 

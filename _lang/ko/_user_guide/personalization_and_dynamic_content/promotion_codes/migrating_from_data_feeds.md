@@ -11,7 +11,7 @@ description: "이 참조 문서에서는 Data Feeds에서 프로모션 코드로
 데이터 피드는 더 이상 사용되지 않습니다. Braze는 데이터 피드를 사용하는 고객에게 프로모션 코드 목록으로 이동할 것을 권장합니다.
 {% endalert %}
 
-> 데이터 피드에서 프로모션 코드로 마이그레이션하는 것은 간단한 과정입니다. 여기에는 Data Feeds의 정보로 프로모션 코드 목록을 수동으로 생성하고 그에 따라 메시지 참조를 업데이트하는 작업이 포함됩니다.
+> This page guides you through migrating from Data Feeds to promotion codes. This is a straightforward process that involves manually creating promotion code lists with the information from your Data Feeds and updating your message references accordingly.
 
 ## 특징 및 기능
 

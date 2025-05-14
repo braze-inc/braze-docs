@@ -20,7 +20,7 @@ If you choose to send a message as soon as it's launched, your message will begi
 
 This type of schedule is designed for one-off campaigns that you wish to send immediately, such as messages about a current event. A sports app, for instance, may schedule push notifications on score updates using this option. In addition, when sending test messages aimed at just yourself or your team, this option allows you to deliver them immediately. 
 
-If you plan on editing the campaign and re-sending it after viewing the test, be sure to check the box that makes users [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) to receive the campaign. By default, Braze sends a campaign to a user just once unless that box is checked.
+If you plan on editing the campaign and re-sending it after viewing the test, be sure to check the box that makes users [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) to receive the campaign. By default, Braze sends a campaign to a user just once unless that box is checked.
 
 ## Option 2: Send at a designated time
 

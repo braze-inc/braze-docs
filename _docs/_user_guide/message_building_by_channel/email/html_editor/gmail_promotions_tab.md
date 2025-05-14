@@ -23,7 +23,7 @@ Follow these steps to build a Gmail promotion card for an email campaign. Note t
 1. [Create your email campaign][7], and select the **HTML Editor** as your editing experience.
 2. Go to the **Content** section in the HTML editor, and select the **Gmail Promotion** tab.
 3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
-4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:50%;"}
+4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:70%;"}
 5. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
@@ -34,7 +34,7 @@ The Promotions script only appears if your email lands in the Gmail Promotions t
 
 Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
-![Options to specify the offer value, code, and start date and time for a discount offer.][11]{: style="max-width:50%;"}
+![Options to specify the offer value, code, and start date and time for a discount offer.][11]{: style="max-width:70%;"}
 
 ### Customizing your product carousel
 

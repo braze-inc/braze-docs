@@ -24,18 +24,4 @@ guide_featured_list:
 
 ## ¿Cuáles son las diferencias entre equipos, conjuntos de permisos y funciones? 
 
-Puede utilizar el equipo, los conjuntos de permisos y las funciones de usuario para gestionar el acceso y las responsabilidades de los usuarios del cuadro de mandos en Braze. Cada función abarca una colección diferente de permisos y controles de acceso.
-
-### Principales diferencias
-
-A alto nivel, cada característica tiene un alcance diferente:
-- Los conjuntos de permisos controlan lo que los usuarios del cuadro de mandos pueden hacer en todos los espacios de trabajo.
-- Los roles controlan lo que los usuarios del cuadro de mandos pueden hacer en espacios de trabajo específicos.
-- Los equipos controlan el público al que pueden enviar mensajes los usuarios del cuadro de mandos.
-
-| ¿Qué puedes hacer?
-| - | - |
-| [Conjuntos de permisos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-permission-set) | Agrupa los permisos relacionados con áreas temáticas o acciones específicas (como para "Desarrolladores" y "Especialistas en marketing"), y luego aplícalos a los usuarios del panel que necesiten los mismos permisos en diferentes espacios de trabajo. |
-| [Roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) | Agrupa los permisos personalizados individuales y los controles de acceso al espacio de trabajo en roles predefinidos (como "Especialista en marketing - Marcas de moda" y "Especialista en marketing - Marcas de cuidado de la piel"), y luego asigna un rol a los usuarios del panel para concederles directamente el acceso al espacio de trabajo y los permisos asociados. |
-| [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) | Limita el acceso de los usuarios del panel a los recursos en función de la audiencia (como la ubicación de la base de clientes, el idioma y los atributos personalizados). |
-{: .reset-td-br-1 .reset-td-br-2 }
+{% multi_lang_include permissions.md content="Diferencias" %}

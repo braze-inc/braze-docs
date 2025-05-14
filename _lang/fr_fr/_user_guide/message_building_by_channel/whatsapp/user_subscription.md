@@ -26,16 +26,12 @@ Il existe deux états d’abonnement pour les utilisateurs WhatsApp : `subscrib
 ### Définir les groupes d'abonnement WhatsApp des utilisateurs
 
 - **API REST :** Les profils utilisateurs peuvent être définis par programmation par l’[endpoint `/subscription/status/set`][4] à l'aide de l'API REST de Braze.
-- **SDK Web :** Les utilisateurs peuvent être ajoutés à un groupe d'abonnement par e-mail, SMS ou WhatsApp à l'aide de la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou [Web][11].
+- **SDK Web :** Les utilisateurs peuvent être ajoutés à un groupe d'abonnement par e-mail, SMS ou WhatsApp à l'aide de la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) ou [Web][11].
 - **Import d'utilisateurs**: Les utilisateurs peuvent être ajoutés à des groupes d'abonnement e-mail ou SMS via l'**importation d'utilisateurs.** Lorsque vous mettez à jour le statut du groupe d’abonnement, vous devez avoir ces deux colonnes dans votre CSV : `subscription_group_id` et `subscription_state`. Reportez-vous à l'[importation d'utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) pour plus d'informations.
 
 ### Vérifier le groupe d'abonnement WhatsApp d'un utilisateur
 
 - **Profil utilisateur :** Les profils utilisateurs individuels sont accessibles via le tableau de bord de Braze à partir de **Audience** > **Rechercher des utilisateurs**. Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Lorsque vous êtes dans le profil d'un utilisateur, sous l'onglet **Engagement**, vous pouvez voir le groupe d'abonnement WhatsApp d'un utilisateur et son statut.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Utilisateurs** > **Recherche d'utilisateurs.**
-{% endalert %}
 
 - **API REST :** Le groupe d’abonnement des profils utilisateur individuels peut être consulté par l’[endpoint Lister les groupes d’abonnement de l’utilisateur][9] ou de l’[endpoint Lister le statut des groupes d’abonnement de l’utilisateur][8] en utilisant l'API REST de Braze. 
 

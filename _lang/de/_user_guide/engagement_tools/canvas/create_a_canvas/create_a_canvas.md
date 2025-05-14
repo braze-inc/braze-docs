@@ -12,17 +12,13 @@ search_rank: 1
 
 > Dieser Referenzartikel behandelt die notwendigen Schritte zur Erstellung, Pflege und Prüfung eines Canvas. Folgen Sie diesem Leitfaden oder schauen Sie sich unseren [Canvas Braze Learning-Kurs](https://learning.braze.com/quick-overview-canvas-setup) an.
 
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kunden, die die klassische Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Original Canvas Editor %}
+Sie können Canvase nicht mehr mit dem ursprünglichen Canvas-Experiment erstellen oder duplizieren. Braze empfiehlt, [Ihre Canvase in Canvas Flow zu klonen]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Schritt 1: Erstellen Sie eine neue Leinwand 
 
 Gehen Sie zu **Nachrichten** > **Leinwand** und wählen Sie dann **Leinwand erstellen**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Canvas** unter **Engagement**.
-{% endalert %}
 
 ## Schritt 2: Richten Sie Ihr Canvas ein
 
@@ -78,14 +74,14 @@ Der Canvas-Builder führt Sie Schritt für Schritt durch die Einrichtung Ihres C
 Hier benennen Sie Ihr Canvas, weisen [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) zu und erstellen oder fügen [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags) hinzu. Sie können auch Konvertierungsereignisse für den Canvas zuweisen.
 
 {% alert tip %}
-Markieren Sie Ihre Canvases, damit Sie sie leicht finden und Berichte daraus erstellen können. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
+Markieren Sie Ihre Canvases, damit Sie sie leicht finden und Berichte daraus erstellen können. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
 {% endalert %}
 
-![Die Canvas-Detailseite mit Feldern für den Canvas-Namen, die Beschreibung, den Standort und die Tags.][53]
+![Die Canvas-Detailseite mit Feldern für den Canvas-Namen, die Beschreibung, den Standort und die Tags.][53]{: style="max-width:70%;"}
 
 #### Konversions-Events auswählen
 
-Wählen Sie den Typ Ihres Konversions-Events und wählen Sie dann die Konversionen aus, die Sie aufzeichnen möchten. Diese [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) messen die Effizienz Ihres Canvas. 
+Wählen Sie den Typ Ihres Konversions-Events und wählen Sie dann die Konversionen aus, die Sie aufzeichnen möchten. Diese [Konvertierungsereignisse]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) messen die Effizienz Ihres Canvas. 
 
 ![Primäres Konversions-Event A mit dem Konversions-Event-Typ „Kauf tätigen“, um Konversationen für Nutzer:innen aufzuzeichnen, die innerhalb einer dreitägigen Konversionsfrist einen Kauf tätigen.][52]
 
@@ -101,7 +97,7 @@ Sie können eine von drei Möglichkeiten wählen, wie Nutzer:innen in Ihr Canvas
   {% tab Geplante Lieferung %}
     Bei der zeitgesteuerten Zustellung geben die Nutzer:innen einen Zeitplan ein, ähnlich wie Sie eine Kampagne planen würden. Sie können Nutzer:innen in ein Canvas registrieren, sobald es gestartet wird, sie zu einem späteren Zeitpunkt in Ihre Journey einbeziehen oder sie auf einer wiederkehrenden Basis (täglich, wöchentlich oder monatlich) registrieren. 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +106,7 @@ Sie können eine von drei Möglichkeiten wählen, wie Nutzer:innen in Ihr Canvas
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab API-getriggerte Zustellung %}
@@ -146,17 +142,21 @@ Vermeiden Sie es, eine aktionsbasierte Kampagne oder ein Canvas mit demselben Au
 
 #### Zielgruppe testen
 
-Nachdem Sie Segmente und Filter zu Ihrer Zielgruppe hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [einen Nutzer oder eine Nutzerin suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) und überprüfen, ob er oder sie den Zielgruppen-Kriterien entspricht.
+Nachdem Sie Segmente und Filter zu Ihrer Zielgruppe hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [einen Nutzer oder eine Nutzerin suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) und überprüfen, ob er oder sie den Zielgruppen-Kriterien entspricht.
 
-![Das Feld „Nutzersuche“, das Ihnen die Suche nach der externen ID oder der Braze-ID ermöglicht.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+![Das Feld "Nutzer:innen", das Ihnen die Suche nach der externen ID oder der Braze ID ermöglicht.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Entry-Kontrollen auswählen
 
-Entry-Kontrollen bestimmen, ob Nutzer:innen ein Canvas erneut aufrufen dürfen. Sie können auch die Anzahl der Personen begrenzen, die potenziell an diesem Canvas teilnehmen können. Wenn Sie beispielsweise das Feld **Maximale Benutzer, die an diesem Canvas teilnehmen können** auf 1.000 Benutzer einstellen und das Kontrollkästchen **Jedes Mal, wenn das Canvas geplant wird, begrenzen** aktivieren, wird das Canvas an 1.000 Benutzer pro Tag gesendet.
+Entry-Kontrollen bestimmen, ob Nutzer:innen ein Canvas erneut aufrufen dürfen. Sie können auch die Anzahl der Personen, die dieses Canvas betreten können, durch eine ausgewählte Kadenz begrenzen (täglich, Lifetime des Canvas oder jedes Mal, wenn das Canvas geplant ist). 
 
-![Die Seite „Entry-Kontrolle“ mit den Kontrollkästchen für „Nutzer:innen dürfen erneut in dieses Canvas aufgenommen werden“ und „Anzahl der Personen begrenzen, die potenziell in dieses Canvas aufgenommen werden können“. Letzteres ermöglicht es Ihnen, die maximale Anzahl der Benutzer festzulegen und zu bestimmen, ob Sie jedes Mal, wenn das Canvas geplant wird, eine Begrenzung vornehmen möchten.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+Wenn Sie beispielsweise **Eingangsvolumen begrenzen** auswählen und das Feld **Maximale Einträge** auf 5.000 Nutzer:innen mit **Täglich** als Grenzkadenz festlegen, sendet das Canvas nur an 5.000 Nutzer:innen pro Tag.
 
-Braze rät davon ab, das Feature **Limit bei jeder Canvas-Planung anwenden** für IP-Warming zu verwenden, da dies zu einem erhöhten Sendevolumen führen kann.
+![Die Seite "Eingangskontrollen" zeigt Kontrollkästchen für "Nutzer:innen den erneuten Eintritt in Canvas erlauben" und "Eintrittsvolumen begrenzen" an. Letzteres ermöglicht es Ihnen, die maximalen Eingänge festzulegen und zu bestimmen, ob Sie täglich, die Lifetime des Canvas oder jedes Mal, wenn der Zeitplan für den Canvas erstellt wird, eine Begrenzung vornehmen möchten.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze empfiehlt nicht, das Feature **Jedes Mal, wenn der Canvas auf dem Zeitplan steht** für IP-Warming zu verwenden, da dies zu einem erhöhten Sendevolumen führen kann.
+{% endalert %}
 
 #### Ausstiegskriterien festlegen
 
@@ -205,7 +205,7 @@ Sparen Sie Zeit und rationalisieren Sie Ihre Canvas-Erstellung mit den [Braze Ca
 
 ### Variante hinzufügen
 
-![Eine GIF-Datei, die zeigt, wie ein:e Nutzer:in „Variante hinzufügen“ auswählt und dann erneut „Variante hinzufügen“ aus dem Kontextmenü auswählt.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Der Button "Variante hinzufügen" wurde ausgewählt, um ein Kontextmenü mit der Option "Variante hinzufügen" anzuzeigen.][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Wählen Sie **Variante hinzufügen** und fügen Sie dann eine neue Variante zu Ihrem Canvas hinzu. Varianten stellen eine Journey dar, die Ihre Nutzer:innen unternehmen werden, und können mehrere Schritte und Verzweigungen enthalten.
 
@@ -218,7 +218,7 @@ Standardmäßig wird die Zuweisung der Canvas-Variante beim Betreten des Canvas 
 
 {% details Für Schritte erweitern %}
 
-1. Erstellen Sie ein benutzerdefiniertes Attribut zum Speichern Ihrer Zufallszahl. Benennen Sie es mit einem leicht zu findenden Namen, wie „Lotterienummer“ oder „Zufallszuweisung“. Sie können das Attribut entweder [in Ihrem Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/) oder durch API-Aufrufe an unseren [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) erstellen.<br><br>
+1. Erstellen Sie ein benutzerdefiniertes Attribut zum Speichern Ihrer Zufallszahl. Benennen Sie es mit einem leicht zu findenden Namen, wie „Lotterienummer“ oder „Zufallszuweisung“. Sie können das Attribut entweder [in Ihrem Dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) oder durch API-Aufrufe an unseren [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) erstellen.<br><br>
 2. Erstellen Sie zu Beginn Ihres Canvas eine Webhook-Kampagne. Diese Kampagne wird das Medium sein, in dem Sie Ihre Zufallszahl erstellen und als benutzerdefiniertes Attribut speichern. Weitere Informationen finden Sie unter [Erstellen eines Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook). Legen Sie die URL zu unserem Endpunkt `/users/track` fest.<br><br>
 3. Erstellen Sie den Zufallszahlengenerator. Sie können dies mit dem [ hier beschriebenen](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486) Code tun, der die einmalige Eingabezeit eines jeden Benutzers nutzt, um eine Zufallszahl zu erstellen. Setzen Sie die resultierende Zahl als Liquid-Variable in Ihrer Webhook-Kampagne ein.<br><br>
 4. Formatieren Sie den Aufruf `/users/track` Ihrer Webhook-Kampagne so, dass er das in Schritt 1 erstellte benutzerdefinierte Attribut auf die Zufallszahl setzt, die Sie im Profil Ihres aktuellen Benutzers generiert haben. Wenn dieser Schritt ausgeführt wird, haben Sie erfolgreich eine Zufallszahl erstellt, die sich jedes Mal ändert, wenn ein Benutzer Ihre Kampagne betritt.<br><br>
@@ -235,7 +235,7 @@ Sie können Ihrem Canvas-Workflow weitere Schritte hinzufügen, indem Sie Kompon
 Wenn Sie weitere Schritte hinzufügen, können Sie die Zoomstufe erhöhen, um sich auf Details zu konzentrieren oder die gesamte Nutzer-Journey zu betrachten. Vergrößern Sie mit <kbd>Umschalt</kbd> + <kbd>+</kbd> oder verkleinern Sie mit <kbd>Umschalt</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![Das Fenster für die Komponentensuche fügt dem Braze-Canvas einen Delay-Schritt hinzu.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![Das Fenster für die Komponentensuche fügt dem Braze-Canvas einen Verzögerungsschritt hinzu.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Ein mit Canvas Flow erstelltes Canvas kann bis zu 200 Schritte enthalten. Wenn Ihr Canvas mehr als 200 Schritte umfasst, kommt es zu Ladeproblemen.
@@ -277,11 +277,9 @@ Wählen Sie **Fertig**, nachdem Sie die Konfiguration Ihrer Canvas-Komponente ab
 {% tabs local %}
 {% tab Canvas-Entry-Eigenschaften %}
 
-Die `canvas_entry_properties` werden im Entry-Zeitplan bei der Erstellung eines Canvas konfiguriert und geben den Trigger an, mit dem ein:e Nutzer:in einen Canvas aufrufen kann. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen. Beachten Sie, dass das `canvas_entry_properties`-Objekt eine maximale Größe von 50 KB hat. 
+Die `canvas_entry_properties` werden im Entry-Zeitplan bei der Erstellung eines Canvas konfiguriert und geben den Trigger an, mit dem ein:e Nutzer:in einen Canvas aufrufen kann. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen. Beachten Sie, dass das Objekt `canvas_entry_properties` bis zu 50 KB groß sein kann. 
 
-Für Canvas Flow können die Entry-Eigenschaften in Liquid in jedem Nachrichtenschritt verwendet werden. Verwenden Sie das folgende Liquid, wenn Sie auf diese Entry-Eigenschaften verweisen: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events müssen angepasste Events oder Kauf-Events sein, um auf diese Weise verwendet werden zu können.
-
-Verwenden Sie das folgende Liquid, wenn Sie auf diese Entry-Eigenschaften verweisen: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
+Verwenden Sie das folgende Liquid, wenn Sie auf diese Entry-Eigenschaften verweisen: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
 
 {% raw %}
 Betrachten Sie zum Beispiel die folgende Anfrage: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Mit diesem ``{{canvas_entry_properties.${product_name}}}``-Liquid können Sie das Wort „Schuhe“ in eine Nachricht einfügen.
@@ -317,13 +315,13 @@ In diesem Beispiel haben wir unser Canvas in zwei Varianten unterteilt. Variante
 
 ### Intelligente Auswahl für Canvas
 
-In multivariaten Canvase sind jetzt intelligente Auswahlmöglichkeiten verfügbar. Ähnlich wie die Funktion [Intelligente Auswahl][18a] ] für multivariate Kampagnen analysiert die Intelligente Auswahl für Canvas die Leistung jeder Canvas-Variante und passt den Prozentsatz der Nutzer an, die durch jede Variante geleitet werden. Diese Verteilung basiert auf den Leistungskennzahlen der einzelnen Varianten, um die erwartete Gesamtzahl der Konversionen zu maximieren.
+In multivariaten Canvase sind jetzt intelligente Auswahlmöglichkeiten verfügbar. Ähnlich wie die Funktion [Intelligente Auswahl][18a] ] für multivariate Kampagnen analysiert die Intelligente Auswahl für Canvas die Leistung jeder Canvas-Variante und passt den Prozentsatz der Nutzer an, die durch jede Variante geleitet werden. Diese Verteilung basiert auf den Performance-Metriken der einzelnen Varianten, um die erwartete Gesamtzahl der Konversionen zu maximieren.
 
 Denken Sie daran, dass Sie mit multivariaten Canvase nicht nur Texte, sondern auch Timing und Kanäle testen können. Mit der intelligenten Auswahl können Sie Canvase effizienter testen und darauf vertrauen, dass Ihre Nutzer:innen auf die bestmögliche Canvas-Journey geschickt werden.
 
 ![Die Option „Intelligente Auswahl“ ist auf der Seite „Variantenverteilung bearbeiten“ aktiviert. Bei der Analyse und Optimierung des Canvas wird ein horizontaler Balken quer über die Seite angezeigt, der in mehrere Abschnitte unterteilt ist, die jeweils in Farbe und Größe variieren. Dies ist nur eine visuelle Darstellung und steht in keinem Zusammenhang mit bestimmten Analysen.][18b]
 
-Intelligent Selection for Canvas optimiert Ihre Canvas-Ergebnisse, indem es schrittweise Echtzeit-Anpassungen an der Verteilung der in jede Variante sortierten Benutzer vornimmt. Wenn der statistische Algorithmus einen entscheidenden Gewinner unter Ihren Varianten ermittelt, schließt er die leistungsschwächeren Varianten aus und ordnet alle zukünftigen in Frage kommenden Empfänger des Canvas den Gewinnervarianten zu. 
+Intelligent Selection for Canvas optimiert Ihre Canvas-Ergebnisse, indem es schrittweise Echtzeit-Anpassungen an der Verteilung der in jede Variante sortierten Benutzer vornimmt. Wenn der statistische Algorithmus einen entscheidenden Gewinner unter Ihren Varianten ermittelt, schließt er die leistungsschwächeren Varianten aus und ordnet alle zukünftigen in Frage kommenden Empfänger:innen des Canvas den Gewinnervarianten zu. 
 
 Aus diesem Grund funktioniert die intelligente Auswahl am besten auf Canvase, bei denen häufig neue Nutzer:innen hinzukommen.
 
@@ -336,7 +334,7 @@ Sie können Ihr Canvas auch als Entwurf speichern, wenn Sie darauf zurückkommen
 ![Ein Beispiel für Canvas in Braze.][19]
 
 {% alert tip %}
-Müssen Sie nach dem Start Änderungen an Ihrem Canvas vornehmen? Nun, Sie können! Weitere Informationen finden Sie unter [Bearbeiten von Leinwänden nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Müssen Sie nach dem Start Änderungen an Ihrem Canvas vornehmen? Nun, Sie können! Weitere Informationen finden Sie unter [Bearbeiten von Leinwänden nach dem Start]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 

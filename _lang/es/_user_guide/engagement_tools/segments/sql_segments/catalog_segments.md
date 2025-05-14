@@ -34,7 +34,7 @@ Estas son las pautas para seleccionar las variables:
 | `Catalog` | El nombre del catálogo que utilizas para dirigirte a los usuarios. |
 | `Catalog field`| El campo de su catálogo que contiene los mismos valores que su `Custom event property`. Suele ser un tipo de identificación. En el caso de uso del comercio electrónico, sería `shopify_id`. |
 | `Custom event` | El nombre de su evento personalizado, que es el mismo evento que contiene una propiedad con valores que coinciden con su `Catalog field`. En el caso de uso del comercio electrónico, sería `Made Order`. |
-| `Custom event property` | El nombre de su propiedad de evento personalizada, que coincide con los valores de su `Catalog field`. En el caso del ejemplo de comercio electrónico, sería `Shopify_ID.`|
+| `Custom event property` | El nombre de su propiedad de evento personalizada, que coincide con los valores de su `Catalog field`. En el caso de uso del ejemplo de comercio electrónico, sería `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
@@ -98,7 +98,7 @@ Sí. Del mismo modo que las Extensiones de Segmento SQL cuentan para su asignaci
 
 ### Tengo un caso de uso de segmento de catálogo que la plantilla actual no sirve. ¿Cómo debo configurarlo?
 
-Póngase en contacto con su gestor de atención al cliente o con [el servicio de asistencia de Braze]({{site.baseurl}}/help/support/) para obtener más información.
+Póngase en contacto con su gestor de atención al cliente o con [el servicio de asistencia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obtener más información.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

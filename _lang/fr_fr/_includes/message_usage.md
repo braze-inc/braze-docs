@@ -2,20 +2,12 @@
 
 > Le tableau de bord de l'utilisation des messages fournit des informations en libre-service sur l'utilisation de vos crédits SMS et WhatsApp pour une vue d'ensemble de l'utilisation historique et actuelle par rapport aux attributions contractuelles. Ces informations peuvent réduire votre confusion et vous aider à faire des ajustements pour prévenir les risques de dépassement.
 
-{% alert important %}
-Le tableau de bord de l'envoi de messages est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 Le tableau de bord de l'**utilisation des messages** est divisé en trois sections :
 - [Aperçu de l'utilisation du crédit](#credit-usage-overview)
 - [SMS/MMS](#smsmms) 
 - [WhatsApp](#whatsapp)
 
 Accédez au tableau de bord en sélectionnant **Paramètres** > **Facturation** > **Utilisation des messages**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte, puis en sélectionnant **Abonnements et utilisation.**
-{% endalert %}
 
 ## Aperçu de l'utilisation des crédits de messages
 
@@ -24,7 +16,7 @@ L'**aperçu de l'utilisation des crédits de messages** donne un aperçu de l'ut
 Cette page s'affiche si vous avez un contrat d'envoi de messages ou si vous avez acheté WhatsApp. Les canaux qui utilisent des crédits de messages sont indiqués dans l'**aperçu des contrats de crédits.**
 
 {% alert note %}
-Si vous avez acheté WhatsApp mais que vous n'avez pas de contrat de crédits de messages, vous verrez toujours la consommation de crédits pour WhatsApp, car c'est ainsi que les anciens contrats WhatsApp sont facturés. Cela diffère des anciens SMS, qui ne consomment des crédits que lorsque vous avez souscrit un contrat de crédits de messages.
+Si vous avez acheté WhatsApp mais que vous n'avez pas de contrat de crédits de messages, vous verrez toujours la consommation de crédits pour WhatsApp car c'est ainsi que les anciens contrats WhatsApp sont facturés. Cela diffère des anciens SMS, qui ne consomment des crédits que lorsque vous avez souscrit un contrat de crédits de messages.
 {% endalert %}
 
 Les données de l'**aperçu de l'utilisation des crédits de messages** sont limitées à la période du contrat, qui est affichée dans l'**aperçu du contrat de crédits.** Vous ne pouvez pas filtrer sur une plage de dates en dehors de la **période des crédits**.

@@ -126,7 +126,7 @@ Once you set up a test segment, you can use these messaging channels. The proces
 
 1. Go to the **Segments** page and [create a new segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Click the dropdown menu under **Add Filter** and locate the testing filters at the bottom of the list <br><br>![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/).<br><br>![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Use the testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift).<br><br>![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>These filters have the following options:
 - **Equals**: Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
 - **Does not equal**: Excludes a particular email or user ID from test campaigns.
@@ -222,7 +222,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [17]: {% image_buster /assets/img_archive/testeventproperties-target.png %}
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}

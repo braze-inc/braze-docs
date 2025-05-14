@@ -22,7 +22,7 @@ Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassische
 
 Wir stellen für jeden Schritt einen Auftrag in die Warteschlange - sie laufen etwa zur gleichen Zeit und einer von ihnen "gewinnt". In der Praxis kann dies etwas gleichmäßig sortiert sein, aber es ist wahrscheinlich, dass zumindest eine leichte Tendenz zu dem Schritt besteht, der zuerst erstellt wurde. 
 
-Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau aussehen wird. Wenn Sie eine gleichmäßige Aufteilung wünschen, fügen Sie einen [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) Filter hinzu.
+Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau aussehen wird. Wenn Sie eine gleichmäßige Aufteilung wünschen, fügen Sie einen [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) Filter hinzu.
 
 ### Was passiert, wenn Sie einen Canvas anhalten?
 
@@ -48,13 +48,13 @@ Das Anhalten eines Canvas führt nicht dazu, dass Nutzer:innen, die auf den Empf
 
 ### Wann wird ein Ausnahmeereignis ausgelöst?
 
-[Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) werden nur getriggert, während der oder die Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Wenn ein:e Nutzer:in eine Aktion durchführt, wird das Ausnahme-Event nicht ausgelöst. Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Wenn ein:e Nutzer:in eine Aktion durchführt, wird das Ausnahme-Event nicht ausgelöst. Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 ### Wie wirkt sich die Bearbeitung eines Canvas auf Benutzer aus, die sich bereits im Canvas befinden?
 
 Wenn Sie einige der Schritte eines mehrstufigen Canvas bearbeiten, erhalten Benutzer, die bereits in der Zielgruppe waren, aber die Schritte noch nicht erhalten haben, die aktualisierte Version der Nachricht. Beachten Sie, dass dies nur geschieht, wenn sie noch nicht für den Schritt bewertet wurden.
 
-Weitere Informationen darüber, was Sie nach dem Start bearbeiten können, finden Sie unter [Ändern Ihres Canvas nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Weitere Informationen darüber, was Sie nach dem Start bearbeiten können, finden Sie unter [Ändern Ihres Canvas nach dem Start]({{site.baseurl}}/post-launch_edits/).
 
 ### Wie werden Benutzerkonversionen in einem Canvas verfolgt?
 
@@ -95,7 +95,7 @@ Es gibt einen einstufigen Canvas mit aktivierten Ruhezeiten:
 
 ### Was ist der Unterschied zwischen einer Komponente und einem Schritt?
 
-Eine [Komponente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) ist ein einzelner Teil Ihres Canvas, mit dem Sie die Effektivität Ihres Canvas bestimmen können. Die Komponenten können Aktionen wie die Aufteilung Ihrer Nutzer:innen, das Hinzufügen eines Delays und sogar das Testen mehrerer Canvas-Pfade umfassen. Ein Canvas-Schritt referenziert auf die personalisierte Nutzer:in in Ihren Canvas-Verzweigungen. Im Wesentlichen besteht Ihr Canvas aus einzelnen Komponenten, die Schritte für Ihre Nutzer:innen darstellen.
+Eine [Komponente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) ist ein einzelner Teil Ihres Canvas, mit dem Sie die Effektivität Ihres Canvas bestimmen können. Die Komponenten können Aktionen wie die Aufteilung Ihrer Nutzer:innen, das Hinzufügen eines Delays und sogar das Testen mehrerer Canvas-Pfade umfassen. Ein Canvas-Schritt referenziert auf die personalisierte Nutzer:in in Ihren Canvas-Verzweigungen. Im Wesentlichen besteht Ihr Canvas aus einzelnen Komponenten, die Schritte für Ihre Nutzer:innen darstellen.
 
 ### Wie kann ich die Analysen für jede meiner Canvas-Komponenten anzeigen?
 
@@ -111,7 +111,7 @@ Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwartete
 
 ### Was passiert mit anonymen Nutzer:innen während ihrer Canvas-Reise?
 
-Anonyme Benutzer können zwar Canvases betreten und verlassen, aber ihre Aktionen werden erst dann mit einem bestimmten Benutzerprofil verknüpft, wenn sie identifiziert werden. Daher werden ihre Interaktionen in Ihren Analysen möglicherweise nicht vollständig erfasst. Sie können den [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) verwenden, um einen Bericht über diese Metriken zu erstellen.
+Anonyme Benutzer können zwar Canvases betreten und verlassen, aber ihre Aktionen werden erst dann mit einem bestimmten Benutzerprofil verknüpft, wenn sie identifiziert werden. Daher werden ihre Interaktionen in Ihren Analysen möglicherweise nicht vollständig erfasst. Sie können den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) verwenden, um einen Bericht über diese Metriken zu erstellen.
 
 ### Warum ist die Konversionsrate meiner Canvas-Schritte nicht gleich der Gesamtkonversionsrate meiner Canvas-Variante?
 

@@ -11,13 +11,11 @@ description: "Este artículo de referencia repasa el objeto evento, qué es y c�
 
 > Este artículo explica los distintos componentes de un objeto evento, cómo puedes utilizarlo y ejemplos en los que inspirarte.
 
-## ¿Qué es el objeto de evento?
+## ¿Qué es un objeto de evento?
 
 Un objeto de evento es un objeto que se pasa a través de la API cuando se produce un evento específico. Los objetos de eventos se alojan en una matriz de eventos. Cada objeto evento de la matriz de eventos representa una única ocurrencia de un evento personalizado por un usuario concreto en el valor de tiempo designado. El objeto evento tiene muchos campos diferentes que te permiten personalizar mediante la configuración y el uso de propiedades del evento en los mensajes, la recopilación de datos y la personalización.
 
-Puedes comprobar cómo configurar eventos personalizados para una plataforma específica consultando la Guía de integración de plataformas en la [Guía del desarrollador][1]. Puedes encontrar esta información en la página **Seguimiento de eventos personalizados**, en la pestaña **Análisis** de las distintas plataformas. Hemos enlazado varios para ti.
-
-Artículo sobre el seguimiento de eventos personalizados:
+Para saber cómo configurar eventos personalizados para una plataforma concreta, consulta la Guía de integración de plataformas en la [Guía del desarrollador][1]. Consulta el artículo correspondiente según tu plataforma:
 
 - [Android][2]
 - [iOS][3]
@@ -50,13 +48,14 @@ Artículo sobre el seguimiento de eventos personalizados:
 
 #### Actualizar solo los perfiles existentes
 
-Si deseas actualizar solo los perfiles de usuario existentes en Braze, debes pasar la clave `_update_existing_only` con el valor `true` en el cuerpo de la solicitud. Si se omite este valor, Braze creará un nuevo perfil de usuario si `external_id` no existe ya.
+Para actualizar sólo los perfiles de usuario existentes en Braze, debes pasar la clave `_update_existing_only` con un valor de `true` dentro del cuerpo de tu solicitud. Si se omite este valor, Braze creará un nuevo perfil de usuario si `external_id` no existe ya.
 
 {% alert note %}
-Si está creando un perfil de usuario de solo alias a través del punto final `/users/track`, `_update_existing_only` debe establecerse en `false`. Si se omite este valor, no se creará el perfil de solo alias.
+Si estás creando un perfil de usuario de sólo alias a través del punto final `/users/track`, `_update_existing_only` debe estar configurado como `false`. Si se omite este valor, no se creará el perfil de solo alias.
 {% endalert %}
 
 ## Objeto de propiedades del evento
+
 Los eventos personalizados y las compras pueden tener propiedades del evento. Los valores de las "propiedades" deben ser un objeto en el que las claves son los nombres de las propiedades y los valores son los valores de las propiedades. Los nombres de las propiedades deben ser cadenas no vacías de menos o igual a 255 caracteres, sin signos de dólar ($) al principio.
 
 Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
@@ -65,7 +64,7 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 | --- | --- |
 | Números | Como [enteros](https://en.wikipedia.org/wiki/Integer) o [flotantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booleanos | `true` o `false` |
-| Fechas y horas | Formateados como cadenas en formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) o `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. No se admite dentro de matrices. |
+| Fechas y horas | Deben formatearse como cadenas en el formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) o en cualquiera de los siguientes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>No se admite dentro de matrices. <br><br>Ten en cuenta que la "T" es un indicador de tiempo, no un marcador de posición, y no debe cambiarse ni eliminarse. <br><br>Los atributos de tiempo sin zona horaria serán predeterminados a medianoche UTC (y se formatearán en el panel como el equivalente a medianoche UTC en la zona horaria de la empresa). <br><br> Los eventos con marcas de tiempo en el futuro serán predeterminados a la hora actual.  |
 | Cadenas | 255 caracteres o menos. |
 | Matrices | Las matrices no pueden incluir fechas. |
 | Objetos | Los objetos se ingestarán como cadenas. |
@@ -74,6 +73,7 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 100 KB.
 
 ### Persistencia de las propiedades del evento
+
 Las propiedades del evento están diseñadas para filtrar los mensajes desencadenados por sus eventos principales y para personalizarlos con Liquid. De forma predeterminada, no persisten en el perfil de usuario de Braze. Para utilizar los valores de las propiedades del evento en la segmentación, consulta los [eventos personalizados][5], donde se detallan los distintos enfoques para almacenar los valores de las propiedades del evento a largo plazo.
 
 #### Solicitud de ejemplo de evento

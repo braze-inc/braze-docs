@@ -33,7 +33,7 @@ If you want to segment users for testing within a single campaign or single Canv
 
 When [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), add the "Random Bucket #" filter. Then, specify a number or range of numbers to include in your segment.
 
-![][2]
+![A segment filter that is for random bucket numbers no more than "3000".][2]
 
 You may want to use these types of segments if you want to run a test of three different variants and also include a control group. Consider the following sample plan for creating segments of equal size for three variants and a control group:
 

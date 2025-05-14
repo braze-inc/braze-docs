@@ -16,27 +16,24 @@ Os eventos personalizados são ações realizadas por seus usuários ou atualiza
 ## Casos de uso
 
 Alguns casos de uso comuns de eventos personalizados incluem:
+
 - Acionamento de uma campanha ou Canva com base em um evento personalizado usando a [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmentação de usuários por quantas vezes eles realizaram um evento personalizado, quando foi a última vez que o evento ocorreu e similares
 - Usar a [análise de eventos personalizada]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) do dashboard para visualizar um agregado da frequência com que cada evento ocorreu
 - Encontrar análises de dados adicionais usando relatórios de [funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) e [retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) 
 - Aproveitamento das [propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) para usar metadados do evento do cliente para personalização nas etapas do Canva
 - Geração de análises de dados mais sofisticadas com o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- Configuração de [eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) do Canvas para definir quando os usuários não devem avançar para a próxima etapa do Canva
+- Configuração de [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) para definir quando os usuários devem sair do seu Canva
 
 ## Gerenciamento de eventos personalizados
 
 Você pode gerenciar, criar ou colocar em lista de bloqueio eventos personalizados no dashboard acessando **Configurações de dados** > **Eventos personalizados**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os eventos personalizados** em **Manage Settings (Gerenciar configurações)**.
-{% endalert %}
-
 Selecione o menu ao lado de um evento personalizado para as seguintes ações:
 
 ### Colocando na lista de bloqueio
 
-Você pode colocar em uma lista de bloqueio eventos personalizados individuais por meio do menu de ações ou selecionar e colocar em uma lista de bloqueio até 10 eventos em massa. 
+Você pode colocar em uma lista de bloqueio eventos personalizados individuais por meio do menu de ações ou selecionar e colocar em uma lista de bloqueio até 100 eventos em massa. 
 
 Quando você bloqueia um evento personalizado:
 
@@ -58,15 +55,11 @@ Você pode adicionar tags a um evento personalizado depois que ele for criado se
 
 O relatório de uso lista todos os canvas, campanhas e segmentos que usam um evento personalizado específico. A lista não inclui os usos do Liquid. 
 
-Você pode visualizar até 10 relatórios de utilização ao mesmo tempo, marcando as caixas de seleção de vários eventos personalizados e, em seguida, selecionando **Exibir relatório de utilização**.
+Você pode visualizar até 100 relatórios de utilização ao mesmo tempo, marcando as caixas de seleção de vários eventos personalizados e selecionando **Exibir relatório de utilização**.
 
 ## Exportação de dados
 
 Para exportar a lista de eventos personalizados como um arquivo CSV, selecione o botão **Exportar tudo** na parte superior da página. O arquivo CSV será gerado e um link para baixar será enviado para você por e-mail.
-
-{% alert important %}
-Esse recurso está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
 
 ## Registro de eventos personalizados
 
@@ -74,13 +67,13 @@ Os eventos personalizados exigem configuração adicional. Consulte a lista abai
 
 {% details Expandir para documentação por plataforma %}
 
-- [Android e FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -109,10 +102,6 @@ A tabela a seguir mostra os filtros disponíveis para segmentar usuários por ev
 ## Análise de dados
 
 O Braze nota o número de vezes que os eventos personalizados ocorreram e a última vez que foram realizados por cada usuário para segmentação. Visualize essas análises de dados acessando **Analytics** > **Relatório de eventos personalizados**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o relatório **Eventos personalizados** em **Dados**.
-{% endalert %}
 
 Na página **Custom Events Report (Relatório de eventos personalizados)** no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade do evento personalizado.
 
@@ -210,9 +199,16 @@ Use a segmentação de propriedades de eventos para direcionar os usuários com 
 
 As propriedades de eventos personalizados são atualizadas em tempo real para qualquer segmento que as utilize. Você pode gerenciar as propriedades acessando **Configurações de dados** > **Eventos personalizados** e selecionando **Gerenciar propriedades** para o evento personalizado associado. As propriedades de eventos personalizados usadas em determinados filtros de segmento têm um histórico de análise máximo de 30 dias.
 
-{% alert note %}
-Se quiser criar segmentos com base na recência e na frequência da propriedade do evento, entre em contato com o gerente de sucesso do cliente para ativar a segmentação para propriedades específicas de eventos personalizados. Quando ativada, você pode acessar opções adicionais de filtragem ao segmentar.
-{% endalert %}
+##### Adição de propriedades de eventos para segmentação
+
+Você precisará da [permissão de usuário]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Gerenciar segmentação de propriedades personalizadas de eventos" para criar segmentos com base na recência e na frequência da propriedade do evento.
+
+Por padrão, você pode ter 20 propriedades de eventos segmentáveis por espaço de trabalho. Entre em contato com o gerente da sua conta Braze para aumentar esse limite.
+
+Para adicionar propriedades de eventos para segmentação, faça o seguinte:
+
+1. Acesse seu evento personalizado e selecione **Gerenciar propriedades**.
+2. Selecione o botão de alternância **Ativar segmentação** para adicionar a propriedade de evento para segmentação. Você pode acessar opções adicionais de filtragem ao segmentar.
 
 Os filtros de segmentação de propriedades de eventos incluem:
 

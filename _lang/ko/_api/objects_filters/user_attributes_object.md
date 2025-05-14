@@ -89,12 +89,12 @@ Braze는 한 달에 한 번씩 푸시 토큰이 없으며 `push_token_import` �
 | 날짜 | [ISO 8601][19] 형식 또는 다음 형식 중 하나로 저장해야 합니다: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>'T'는 자리 표시자가 아닌 시간 지정자이므로 변경하거나 제거해서는 안 됩니다. <br><br>표준 시간대가 없는 시간 속성은 기본값이 자정(UTC)으로 설정됩니다(대시보드에서 회사 표준 시간대의 자정에 해당하는 시간으로 형식이 지정됨). <br><br> 향후 타임스탬프가 있는 이벤트는 기본적으로 현재 시간으로 설정됩니다. <br><br> 일반 사용자 지정 속성의 경우, 연도가 0보다 작거나 3000보다 크면 Braze는 이 값을 사용자에게 문자열로 저장합니다. |
 | 플로트 | 플로트 사용자 지정 속성은 소수점이 있는 양수 또는 음수입니다. 예를 들어 플로트를 사용하여 제품이나 서비스에 대한 계정 잔액이나 사용자 평점을 저장할 수 있습니다. |
 | 정수 | 정수 사용자 지정 속성은 'inc' 필드와 증가시킬 값을 가진 객체를 할당하여 양수 또는 음수 정수로 증가시킬 수 있습니다. <br><br>예시: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| 중첩된 커스텀 속성 | 중첩된 사용자 지정 속성은 속성 집합을 다른 속성의 속성으로 정의합니다. 사용자 지정 속성 개체를 정의할 때 해당 개체에 대한 추가 속성 집합을 정의합니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하세요. |
+| 중첩된 커스텀 속성 | 중첩된 사용자 지정 속성은 속성 집합을 다른 속성의 속성으로 정의합니다. 사용자 지정 속성 개체를 정의할 때 해당 개체에 대한 추가 속성 집합을 정의합니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)을 참조하세요. |
 | 문자열 | 문자열 사용자 지정 속성은 텍스트 데이터를 저장하는 데 사용되는 문자 시퀀스입니다. 예를 들어 문자열을 사용하여 이름과 성, 이메일 주소 또는 환경설정을 저장할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-사용자 지정 이벤트와 사용자 지정 속성을 언제 사용해야 하는지에 대한 자세한 내용은 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) 및 [사용자 지정 속성에]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) 대한 각 문서를 참조하세요.
+사용자 지정 이벤트와 사용자 지정 속성을 언제 사용해야 하는지에 대한 자세한 내용은 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) 및 [사용자 지정 속성에]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) 대한 각 문서를 참조하세요.
 {% endalert %}
 
 ##### 객체 배열 예제 

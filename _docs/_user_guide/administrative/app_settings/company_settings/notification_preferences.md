@@ -19,7 +19,7 @@ To access this page, go to **Settings** > **Admin Settings** > **Notification Pr
 
 ## Available notifications
 
-The following table lists available notifications:
+The following table describes available notifications and which channels are used to deliver them.
 
 | Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|

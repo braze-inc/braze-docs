@@ -5,12 +5,12 @@ Uma vez que você lançou sua campanha, pode retornar à página de detalhes des
 {% alert tip %}
 Procurando definições para os termos e métricas listados em seu relatório? Consulte
   {% if include.channel == "email" %}[Glossário de Análise de Dados de E-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtre por Cartões de Conteúdo
-  {% elsif include.channel == "in-app message" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtre por mensagem no app
-  {% elsif include.channel == "push" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtrar por push
-  {% elsif include.channel == "SMS" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtre por SMS
-  {% elsif include.channel == "whatsapp" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtre por WhatsApp
-  {% elsif include.channel == "webhook" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) e filtre por Webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por Cartões de Conteúdo
+  {% elsif include.channel == "in-app message" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por mensagem no app
+  {% elsif include.channel == "push" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por push
+  {% elsif include.channel == "SMS" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por SMS
+  {% elsif include.channel == "whatsapp" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por WhatsApp
+  {% elsif include.channel == "webhook" %}[Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por Webhook{% endif %}.
 {% endalert %}
 
 Da guia **Análise da campanha**, você pode visualizar seus relatórios em uma série de painéis. Você pode ver mais ou menos do que os listados nas seções abaixo, mas cada um tem seu próprio propósito útil.
@@ -200,7 +200,7 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressões únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Impressões Únicas' %} <span style="white-space: nowrap">Esta contagem</span> não incrementa na segunda vez que um usuário visualiza um cartão.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Esta contagem</span> não incrementa na segunda vez que um usuário visualiza um cartão.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatários únicos</a></td>
@@ -305,8 +305,20 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft bounce</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Adiamentos</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+        </tr>
     </tbody>
 </table>
+
+##### Prorrogações
+
+O adiamento ou a prorrogação é quando um e-mail não foi entregue imediatamente, mas o Braze tentará reenviar o e-mail por até 72 horas após essa falha temporária de entrega para maximizar as chances de entrega bem-sucedida antes que as tentativas para essa campanha específica sejam interrompidas. As razões típicas para adiamentos incluem limitação de taxa de volume de e-mail baseada na reputação do provedor de caixa de entrada, problemas temporários de conectividade ou erros de DNS.
+
+Os _adiamentos_ diferem dos _Soft Bounces_. Se nenhum e-mail foi entregue com sucesso durante este período de nova tentativa, a Braze enviará um evento de soft bounce por campanha enviada. Antes de 25 de fevereiro de 2025, essas tentativas foram contadas como múltiplos soft bounces para 1 envio de campanha.
+
+Observe que os _adiamentos_ estão atualmente disponíveis apenas usando os recursos Snowflake Currents ou Braze (como o Construtor de Consultas, Segmento SQL, Compartilhamento de Dados Snowflake). Se você gostaria de incluir isso na análise de campanhas ou do canva, [envie um feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
 
 ##### Taxa de abertura real estimada {#estimated-real-open-rate}
 
@@ -660,13 +672,13 @@ As mensagens de entrada são truncadas após 1.600 caracteres.
 
 ## Relatório de retenção
 
-Os relatórios de retenção mostram as taxas em que seus usuários realizaram um evento de retenção selecionado ao longo de períodos de tempo em uma campanha específica ou canva. Para saber mais, consulte [Relatórios de retenção]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Os relatórios de retenção mostram as taxas em que seus usuários realizaram um evento de retenção selecionado ao longo de períodos de tempo em uma campanha específica ou canva. Para saber mais, consulte [Relatórios de retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Relatório de funil
 
 O relatório de funil oferece um relatório visual que permite analisar as jornadas que seus clientes fazem após receber uma campanha ou canva. Se sua campanha ou canva usar um grupo de controle ou múltiplas variantes, você poderá entender como as diferentes variantes impactaram o funil de conversão de forma mais granular e otimizar com base nesses dados.
 
-Para saber mais, consulte [Relatórios de funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+Para saber mais, consulte [Relatórios de funil]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 

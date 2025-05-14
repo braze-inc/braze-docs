@@ -24,15 +24,10 @@ search_rank: 3.9
 {% tab キャンペーン %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
-{% endalert %}
-
-{:start="2"}
-2\.**Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
-3\.キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加する。
-   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。たとえば、[Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用する場合、関連するタグでフィルタリングできます。
+2. **Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。たとえば、[Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)を使用する場合、関連するタグでフィルタリングできます。
 5. キャンペーンに必要な数のバリアントを追加し、名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。バリアントの詳細については、[多変量およびA/B 検定]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を参照してください。
 
 {% alert tip %}
@@ -81,6 +76,10 @@ search_rank: 3.9
 
 ![言語として英語、スペイン語、フランス語が選択されており、複数言語で配信するフィールドとしてタイトル、説明、リンクテキストが選択されているウィンドウ。][2]{: style="max-width:70%;"}
 
+##### 右から左へのメッセージを作成する
+
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
+
 #### タイトルとメッセージ
 
 何でも好きなことを書けばいい。制限はありませんが、メッセージを素早く伝え、顧客にクリックしてもらうほど良いです!明確で簡潔なタイトルとメッセージ内容を推奨する。これらのフィールドはイメージ専用カードには提供されていないことに注意してください。
@@ -105,8 +104,8 @@ search_rank: 3.9
 |---|---|
 | ウェブURLにリダイレクトする | ネイティブでないウェブページを開く。 |
 | [アプリにディープリンクする]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | アプリの既存画面にディープリンクする。 |
-| カスタムイベントを記録する | トリガーする[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)を選択する。別のコンテンツカードを表示したり、追加メッセージのトリガーとして使用できる。 |
-| カスタム属性を記録する | 現在のユーザーに設定する[カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)選択する。 |
+| カスタムイベントを記録する | トリガーする[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)を選択する。別のコンテンツカードを表示したり、追加メッセージのトリガーとして使用できる。 |
+| カスタム属性を記録する | 現在のユーザーに設定する[カスタム属性を]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)選択する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Note**:__Log Custom Event__および__Log Custom Attribute__オプションは、以下のSDKバージョンとの互換性を必要とする：
@@ -154,7 +153,7 @@ search_rank: 3.9
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 
@@ -209,11 +208,13 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ### 開始済みのカードの更新
 
-コンテンツカードの送信後は編集できません。送信済みのカードを変更する必要がある場合は、次のオプションに示すように、[キャンペーンの再適格性]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) を使用することを検討してください。
+コンテンツカードの送信後は編集できません。送信済みのカードを変更する必要がある場合は、次のオプションに示すように、[キャンペーンの再適格性]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) を使用することを検討してください。
 
 {% alert note %}
-[最初のインプレッション]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression)を使用するコンテンツカードでは、インプレッション時間を使用して再適格性を計算します。ただし、その他すべてのコンテンツカードタイプでは、送信時間またはインプレション時間のいずれか遅い時間を使用します。
+コンテンツカードが再利用可能になると、オリジナルのカードがユーザーのアプリにまだ入っているときに、再度送信される場合があります。ユーザーのアプリでカードが重複しないようにするには、再適格を無効にするか、再適格期間を延長して、ユーザーがオリジナルの有効期限が切れるまで新しいカードを送信しないようにすることができます。
 {% endalert %}
+
+また、[を使用したコンテンツカードは、最初のインプレッション発生時に]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression)インプレッション時間を使用して、再適格性を計算することに注意してください。ただし、キャンペーンの起動時またはキャンバスのステップエントリで作成されたコンテンツカードでは、送信時間またはインプレッション時間のいずれか遅い方を使用します。
 
 #### オプション 1: キャンペーンを複製する
 

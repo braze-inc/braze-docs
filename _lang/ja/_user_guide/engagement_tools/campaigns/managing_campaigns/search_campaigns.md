@@ -32,7 +32,7 @@ tool:
 
 ### タグで検索する
 
-[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)でキャンペーンを検索すると、検索結果をさらに絞り込むことができます。例えば、新規顧客、頻繁に購入する顧客、離脱した顧客をターゲットとする作成済みのすべてのキャンペーンを検索する場合は、「**Targeting by customer type**」という共有タグでこれらのキャンペーンを検索できます。
+[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)でキャンペーンを検索すると、検索結果をさらに絞り込むことができます。例えば、新規顧客、頻繁に購入する顧客、離脱した顧客をターゲットとする作成済みのすべてのキャンペーンを検索する場合は、「**Targeting by customer type**」という共有タグでこれらのキャンペーンを検索できます。
 
 ### フィルターの調整
 
