@@ -19,7 +19,7 @@ def get_changed_files():
     changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
 
     if not changed_files:
-        print("Error: Git can't find any renamed files committed in this branch.\nNote that redirects are only created for renamed files if they're 'committed' and not just 'added' in this branch.")
+        print("Error: Git can't find any renamed files committed in this branch.\nNote that redirects are only created for renamed files if they're 'committed', not just 'added' to the branch.")
         return []
     
     return changed_files
@@ -62,6 +62,32 @@ def create_redirect(line):
     return f"validurls['{old_full_path}'] = '{new_full_path}';"
 
 
+# Remove duplicate lines while preserving blank lines
+def remove_duplicates(lines):
+    processed = []
+    unique_lines = []
+    blank_lines = 0
+
+    for line in lines:
+        if line.strip() == "":
+            # count consecutive blank lines but don't append yet
+            blank_lines += 1
+            continue
+
+        # if we just skipped one or more blanks, add exactly one
+        if blank_lines:
+            if not unique_lines or unique_lines[-1].strip() != "":
+                unique_lines.append("\n")
+            blank_lines = 0
+
+        # keep only the first occurrence of each non-blank line
+        if line not in processed:
+            processed.append(line)
+            unique_lines.append(line)
+
+    return unique_lines
+
+
 def main():
     changed_files = get_changed_files()
     
@@ -80,10 +106,13 @@ def main():
         # Add blank line, placeholder, blank line at the end
         lines.append("\n// validurls['OLD'] = 'NEW';\n")
 
+        # Remove duplicates
+        unique_lines = remove_duplicates(lines)
+
         # Rewrite file
         f.seek(0)
         f.truncate()
-        f.writelines(lines)
+        f.writelines(unique_lines)
 
 if __name__ == "__main__":
     main()
