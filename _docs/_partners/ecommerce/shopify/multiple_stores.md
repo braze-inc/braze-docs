@@ -1,12 +1,12 @@
 ---
-nav_title: Multiple Store Support
+nav_title: Connecting Multiple Stores
 article_title: Shopify Multiple Store Support
-alias: /shopify_multiple_store_support/
+alias: /shopify_connecting_multiple_stores/
 page_order: 5
 description: "This reference article covers how to connect multiple Shopify stores to a single workspace."
 ---
 
-# Shopify multiple store support
+# Connecting multiple Shopify stores
 
 > Connect multiple Shopify store domains to a single workspace to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across regional stores.  
 
@@ -23,24 +23,20 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Setting up an additional store
-1. After you install the Braze app to your Shopify store and install your first store, select the **+ Connect New Store** option.
+## Connecting an additional store
+After you install the Braze app to your Shopify store and install your first store, select the **+ Connect New Store** option.
 
 ![The "+ Connect New Store" button on the Shopify integration page.][1]{: style="max-width:80%;"}
 
-{: start="2"}
-2. Complete the integration setup for each additional Shopify regional store. 
+For your additional Shopify regional store, select **Begin setup**.
 
 ![The "Integration settings" section with a button to "Begin setup".][2]{: style="max-width:80%;"}
 
-{: start="3"}
-3. Similar to your initial Shopify store onboarding, you can onboard using either the standard setup or custom setup. 
+Like your first Shopify store integration, you can choose either between a standard or custom setup.
 
 !["Enable the Braze SDKs" section with options to implement the Braze Web SDK with the standard or custom setup.][3]{: style="max-width:80%;"}
 
-### Integration options
-
-Braze offers two integration options for Shopify merchants that are designed to meet the diverse needs of eCommerce businesses: **Standard integration** and **Custom integration**.
+Choose the option that best fits your needs:
 
 {% tabs local %}
 {% tab standard %}
