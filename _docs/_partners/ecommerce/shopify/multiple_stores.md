@@ -80,10 +80,10 @@ You can choose to collect subscribers directly through Braze or through API and 
 
 {% tabs local %}
 {% tab Braze dashboard %}
-You can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
+In the **Collect subscribers** step, you can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
 
-1. [Create a unique subscription group](LINK) for each store you connect. This helps you maintain accurate data about where subscribers are coming from.
-2. Go to **THIS** > **THIS**, then enable email and SMS subscriber collection.
+1. Create a unique subscription group for each store you connect. This helps you maintain accurate data about where subscribers are coming from.
+2. Enable email and SMS subscriber collection.
 {% endtab %}
 
 {% tab Braze API or SDKs %}
