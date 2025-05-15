@@ -17,17 +17,16 @@ channel:
 
 ## Creating action buttons
 
-Each interactive button can link to a web page or a deep link or open the app. You can specify your push action buttons in the **On-Click Behavior** section of the push message composer in the dashboard.
+Each interactive button can link to a web page or a deep link or open the app. 
 
-{% alert important %}
-If you want to target both iOS and Android in a single campaign, create a multichannel campaign. Push action buttons are not supported when targeting both iOS and Android using [quick push campaigns]({{site.baseurl}}/quick_push).
-{% endalert %}
+- For standard push campaigns, you can specify your push action buttons in the **On-Click Behavior** section of the push message composer in the dashboard.
+- For [quick push campaigns]({{site.baseurl}}/quick_push), action buttons can be configured separately for each platform under the **Settings** tab.
 
 ### iOS {#ios}
 
 To use action buttons in your iOS push messages, do the following:
 
-1. Create an iOS [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable action buttons in the **Compose** tab.
+1. In the **Compose** tab for a standard campaign (or **Settings** tab for quick push), enable action buttons.
 2. Select your **iOS Notification Category** from the following available button combinations:
  - Accept / Decline
  - Yes / No
@@ -45,7 +44,7 @@ Due to iOS's handling of buttons, you need to perform additional integration ste
 
 To use action buttons in your Android push messages, do the following:
 
-1. Create an Android [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
+1. In the **Compose** tab for a standard campaign (or **Settings** tab for quick push), enable action buttons.
 2. Select <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
   - Open App
   - Redirect to Web URL
