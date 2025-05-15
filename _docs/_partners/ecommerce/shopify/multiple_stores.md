@@ -18,6 +18,7 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 
 | Requirement | Description |
 | ----------- | ----------- |
+| Enable multiple stores | Contact your customer success manager to enable Shopify multiple store support. |
 | Set up a Shopify store | Be sure that you've already [set up at least one Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -47,7 +48,7 @@ To view each store integration and configure advanced settings, select a store i
 
 ### Shopify alias
 
-When you connect multiple stores, synced Shopify users who have logged in or placed an order will receive a new alias in the format: `shopify_customer_id_{{storename}}`.
+When you connect multiple stores, synced Shopify users who have logged in or placed an order will receive a new alias in the format: {% raw %}`shopify_customer_id_{{storename}}`{% endraw %}.
 
 ### Braze external ID
 
@@ -76,11 +77,11 @@ When a user profile is synced, the following fields will be merged. For full det
 
 ### Collecting subscribers (optional)
 
-You can choose to collect subscribers directly through Braze or through API and SDK alternatives that sync data from Shopify.
+You can choose to collect subscribers directly through Braze (in your Shopify connector settings) or through API and SDK alternatives that sync data from Shopify.
 
 {% tabs local %}
-{% tab Braze dashboard %}
-In the **Manage users** step, you can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
+{% tab Shopify connector %}
+In the **Manage users** step of your Shopify connector settings, you can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
 
 1. Create a unique subscription group for each store you connect. This helps you maintain accurate data about where subscribers are coming from.
 2. Enable email and SMS subscriber collection.
