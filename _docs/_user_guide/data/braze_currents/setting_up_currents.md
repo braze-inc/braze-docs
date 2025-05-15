@@ -83,6 +83,10 @@ You may test your integration or take a look at the sample Currents data in our 
 Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
 
+#### Send Test Events Button
+
+On the Currents connector details page, there is a test events button in the bottom right. When this button is pressed, one of each of the selected event types will be sent to this integration. This can be used to validate that your integration is working properly.
+
 #### Testing Currents connectors
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
