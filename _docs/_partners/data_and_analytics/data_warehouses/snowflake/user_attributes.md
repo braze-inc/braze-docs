@@ -15,15 +15,41 @@ User profile attributes are currently in beta for Snowflake Data Sharing custome
 {% endalert %}
 
 # Available views
-- **Default Attributes** 
-  - User profile snapshots:  `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`  
-  - Real time user profiles: `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
-  - Historical change logs: `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
- 
-- **Custom Attributes**  
-  - User profile snapshots: `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
-  - Real time user profiles:  `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
-  - Historical change logs: `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>View</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td rowspan="3">Default attribute</td>
+    <td><code>USER_DEFAULT_ATTRIBUTES_VIEW_SHARED</code></td>
+    <td>User profile snapshots</td>
+  </tr>
+  <tr>
+    <td><code>USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED</code></td>
+    <td>Real time user profiles</td>
+  </tr>
+  <tr>
+    <td><code>USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED</code></td>
+    <td>Historical change logs</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Custom attribute</td>
+    <td><code>USER_CUSTOM_ATTRIBUTES_VIEW_SHARED</code></td>
+    <td>User profile snapshots</td>
+  </tr>
+  <tr>
+    <td><code>USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED</code></td>
+    <td>Real time user profiles</td>
+  </tr>
+  <tr>
+    <td><code>USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED</code></td>
+    <td>Historical change logs</td>
+  </tr>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## User profile snapshots
 
