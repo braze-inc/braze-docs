@@ -2675,4 +2675,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = 
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
 validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
 
+validurls['/docs/developer_guide/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/create/';
+
+
 // validurls['OLD'] = 'NEW';
