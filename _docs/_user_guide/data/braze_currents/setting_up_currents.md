@@ -87,6 +87,8 @@ Currents will drop events with excessively large payloads of greater than 900&nb
 
 On the Currents connector details page, there is a test events button in the bottom right. When this button is pressed, one of each of the selected event types will be sent to this integration. This can be used to validate that your integration is working properly.
 
+You can find details about the contents of each event in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+
 #### Testing Currents connectors
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
