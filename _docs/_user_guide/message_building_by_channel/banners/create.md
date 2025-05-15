@@ -71,9 +71,15 @@ You can manually set the priority to high, medium, or low.
 
 To set the priority for a Banner:
 
-1. Select Set exact priority.
+1. Select **Set exact priority**.
 2. Drag and drop the campaigns to order them with the correct priority.
-3. Select Apply Sort.
+3. Select **Apply Sort**.
+
+If you have multiple Banner campaigns using the same placement ID, we recommend using the drag-and-drop priority sorter to define the exact priority.
+
+{% alert note %}
+As you create more Banner campaigns, a new Banner's priority is set as the highest priority in the **Medium Priority** section of the exact priority sorter.
+{% endalert %}
 
 ### Step 6: Finish building the campaign
 

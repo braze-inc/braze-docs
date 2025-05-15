@@ -17,5 +17,17 @@ guide_featured_list:
 - name: Create a Banner Campaign
   link: /docs/user_guide/message_building_by_channel/banners/create/
   image: /assets/img/braze_icons/columns-01.svg
+- name: Testing 
+  link: /docs/user_guide/message_building_by_channel/banners/testing/
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: Reporting
+  link: /docs/user_guide/message_building_by_channel/banners/reporting/
+  image: /assets/img/braze_icons/pie-chart-01.svg
+
+guide_menu_title: "More articles"
+guide_menu_list:
+- name: Creating Placement IDs
+  link: /docs/developer_guide/banners/creating_placements
+  image: /assets/img/braze_icons/file-code-01.svg
 ---
 <br><br>
