@@ -46,6 +46,8 @@ You can drag and drop blocks and rows into the canvas area to start building you
 
 To customize your message's background properties, border settings, and more, select **Styles**. If you only want to customize the style for a specific block or row, select it to make changes.
 
+![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
+
 #### Step 3.2: Define on-click behavior
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your user's profile with custom data when they click the Banner.
@@ -86,3 +88,37 @@ Finish building your campaign by completing the following:
 ### Step 7: Test and launch
 
 After building your campaign, test and review it to make sure your campaign works as expected. When you’re ready, launch your Banner campaign!
+
+## Frequently asked questions
+
+### What are the dimensions of a Banner?
+
+The HTML will take up the full width of the container it’s rendered in. To learn more about Banner specifications, see About Banners.
+
+### Can I create multiple Banners using the same placement?
+
+Only one Banner can be used for each placement ID. However, up to 10 Banners can be assigned to a placement.
+
+### Can Banners be dismissed?
+
+No. When a user is no longer eligible for a Banner, they won't see it again on their next session.
+
+### Can I export Banners campaign analytics using the Braze API?
+
+Yes. You can use the [`/campaigns/data_series` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) to get data on how many Banner campaigns were sent, opened, clicked, or converted.
+
+### When are users segmented?
+
+Users are segmented at the beginning of the session. If a campaign's targeted segments depend on custom attributes, custom events, or other targeting attributes need to be ingested into Braze and present on the user at the time of segmentation. 
+
+### How can I compose Banners to ensure the lowest latency?
+
+The simpler the messaging in your Banner, the faster it will render. It’s best to test your Banner campaign against the expected latency for your use case. For example, be sure to test Liquid attributes like `catalog_items`.
+
+### What Liquid tags are not supported?
+
+The following Liquid tags aren’t supported: Connected Content, promotion codes, and catalog `:rerender` tags.
+
+### How can click events be captured?
+
+Click events are only captured if an on-click action is set on a `logClick` element and is called using the JS Bridge.

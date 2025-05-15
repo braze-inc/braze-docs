@@ -38,14 +38,19 @@ Key features for Banners include:
 - **Native prioritization:** Easily set the display priority for multiple Banners targeting the same placement, ensuring the right message reaches users at the right time.
 - **Custom HTML support:** Add custom HTML blocks when advanced customization or integration with existing web styles is required.
 
-## How it works
+## How it works 
 
 Banners are inline, embedded messages integrated into your app or website experience. Delivered as dynamically generated HTML content, Banners allow flexible rendering tailored to your design and layout.
 
 They use two key components to designate where and how they display in your app or website:
 
-- **Placement:** Placements are specific locations within your app or website where Banners can appear. Each placement acts as a container or slot designated by your developers during the initial integration. Common examples include the top of your homepage, product detail pages, checkout flows, or custom positions tailored to your UI. Once placements are configured, marketers can assign a banner directly to these areas
-- **Prioritization:** Prioritization controls the order in which multiple Banners compete for the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner.
+### Placement {#placement-id}
+
+Placements are specific locations within your app or website where Banners can appear. Each placement acts as a container or slot designated by your developers during the initial integration. Common examples include the top of your homepage, product detail pages, checkout flows, or custom positions tailored to your app or website. After placements are configured, marketers can assign a banner directly to these areas
+
+### Prioritization
+
+Prioritization controls the order in which multiple Banners compete for the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner.
 
 ## Use cases
 
@@ -61,3 +66,12 @@ They use two key components to designate where and how they display in your app 
 
 Your developers can create Banner placements for the Braze SDK. For more details on how to integrate with Banners, refer to the [Creating Banner placements]({{site.baseurl}}/developer_guide/banners/creating_placements).
 
+## Frequently asked questions
+
+### How are Banners sent to my app and website?
+
+Banners are sent as HTML.
+
+### Can Banners be implemented in an existing (traditional) Content Card feed, or do Banners need their own code container? Should they be incorporated with an existing Content Card feed?
+
+Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to use a new integration.
