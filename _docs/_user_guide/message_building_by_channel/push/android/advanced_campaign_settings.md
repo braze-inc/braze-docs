@@ -30,7 +30,7 @@ The **Time to Live** field allows you to set a custom length of time to store me
 
 To edit the time to live for your Android push, go to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
 
-The default values for time to live are defined by your admin on the [Push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
+The default values for time to live are defined by your admin on the [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
 
 For example, let's say your app hosts a weekly trivia contest. You send a push notification an hour before it starts. By setting the TTL to 1 hour, you make sure that users who open the app after the contest starts won’t receive a notification about an event that has already begun.
 
@@ -54,7 +54,21 @@ Shorter TTLs make sure users receive timely notifications for events or promotio
 
 ## Firebase messaging delivery priority {#fcm-priority}
 
-The **Firebase Messaging Delivery Priority** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more. High-priority messages are intended for time-sensitive, user-visible content. If FCM detects that your app frequently sends high-priority messages that do not result in user-visible notifications, those messages may be automatically deprioritized to normal priority. See [Message handling and deprioritization on Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize) for additional information.
+The **Firebase Messaging Delivery Priority** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. This setting determines how quickly messages are delivered and how they affect device battery life.
+
+| Priority | Description | Best for |
+|---------|-------------|----------|
+| Normal | Battery-optimized delivery that may be delayed to conserve battery | Non-urgent content, promotional offers, news updates |
+| High | Immediate delivery with higher battery consumption | Time-sensitive notifications, critical alerts, live event updates |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### Important considerations:
+
+- **Default setting**: You can set a default FCM priority for all Android campaigns in your [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). This campaign-level setting will override the default if needed.
+- **Deprioritization**: If FCM detects that your app frequently sends high-priority messages that don't result in user-visible notifications or user engagement, those messages may be automatically deprioritized to normal priority.
+- **Battery impact**: High-priority messages wake sleeping devices more aggressively and consume more battery. Use this priority judiciously.
+
+For more detailed information on message handling and deprioritization, see [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) and [Message handling and deprioritization on Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize).
 
 ## Summary text
 
