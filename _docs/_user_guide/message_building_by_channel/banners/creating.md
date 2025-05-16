@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Banner
-article_title: Creating a Banner
+nav_title: Creating Campaigns
+article_title: Creating Banner campaigns in Braze
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns."
 tool:
@@ -9,9 +9,9 @@ channel:
   - banners
 ---
 
-# Creating a Banner campaign
+# Creating Banner campaigns
 
-> This page covers how to create Banners when you build a campaign in Braze.
+> Learn how to create Banners when you build a campaign in Braze.
 
 ## Prerequisites
 
@@ -21,11 +21,7 @@ These are the minimum SDK versions to start using Banners:
 
 ## Creating a Banner campaign
 
-### Step 1: Create placements
-
-If you haven’t already, you’ll need to create Banner placements in Braze that are used to define the locations in your app or site that can display Banners. To create a placement, go to **Settings** > **Banners Placements**, then select **Create placement**.
-
-Give your placement a name and assign a Placement ID. Be sure you consult other teams before assigning an ID, as it’ll be used throughout the card’s lifecycle and shouldn’t be changed later. For more information, see Placement IDs.
+{% multi_lang_include banners/creating_placements.md %}
 
 ### Step 2: Create a campaign
 
@@ -34,7 +30,7 @@ Give your placement a name and assign a Placement ID. Be sure you consult other 
 3. Name your campaign something clear and meaningful.
 4. Add teams and tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select the placement you previously created to associate it with your campaign.
-6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing].
+6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing).
 
 ### Step 3: Compose a Banner
 
@@ -64,11 +60,9 @@ Choose a start date and time for your Banner campaign. By default, Banners last 
 
 ### Step 5: Set Banner priority
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium. If multiple Banners share the same priority level, the newest Banner will be displayed first.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium&#8212;however, you can manually set the priority to high, medium, or low. If multiple Banners share the same priority level, the newest Banner will be displayed first.
 
-You can manually set the priority to high, medium, or low.
-
-To set the priority for a Banner:
+To manually set the priority for a Banner:
 
 1. Select **Set exact priority**.
 2. Drag and drop the campaigns to order them with the correct priority.

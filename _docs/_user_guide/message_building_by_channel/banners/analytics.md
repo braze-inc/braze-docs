@@ -1,16 +1,15 @@
 ---
-nav_title: Reporting
-article_title: Banners Reporting
+nav_title: Analytics
+article_title: Banner Analytics
 page_order: 4
-description: "This reference article provides an overview of the different reporting metrics and analytics options provided in the Braze dashboard for Banners."
+description: "Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance."
 channel:
   - banners
 tool:
   - Reports
-  
 ---
 
-# Banners reporting
+# Banner Analytics
 
 > Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance.
 

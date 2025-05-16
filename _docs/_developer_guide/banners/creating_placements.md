@@ -23,7 +23,7 @@ These are the minimum SDK versions needed to start using Banners:
 
 ## Creating a placement
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md %}
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
