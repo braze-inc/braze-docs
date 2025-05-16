@@ -35,6 +35,8 @@ To delegate your domain to Braze, do the following:
 4. Have your technical partners update your DNS configuration with the Cloudflare DNS record details that display. Your DNS records must be updated within seven days. 
   - If you need additional time to update your DNS records, a new set of DNS records can be generated after the seven-day window passes and the old set expires.
 
+!["DNS record" section with 3 steps to complete to finish setting up your domain.][2]
+
 {% alert note %}
 Your domain progress is saved automatically. If you need to exit mid-flow, you can resume later by selecting the pending domain entry on the **SMS/RCS and Messaging Apps Domains** page.
 {% endalert %}
@@ -99,6 +101,7 @@ Yes. After a custom domain is verified, it can be used in all SMS, RCS, and What
 
 For additional help, [contact Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/). 
 
+[2]: {% image_buster /assets/img/dns_record.png %} 
 [3]: {% image_buster /assets/img/custom_domain_statuses.png %} 
 [4]: {% image_buster /assets/img/custom_domain_button.png %} 
 [5]: {% image_buster /assets/img/main_page.png %} 
