@@ -43,7 +43,7 @@ Refresh placements as soon as possible to avoid delays in downloading or display
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -117,7 +117,7 @@ braze.subscribeToBannersUpdates((banners) => {
 })
 
 // always refresh after your subscriber function has been registered
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -209,6 +209,10 @@ Create a container element for the banner. Be sure to set its width and height.
 
 Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
 
+{% alert tip %}
+Be sure to still call `insertBanner` for `isControl` in order to track impressions. You can hide or collapse your container afterwards.
+{% endalert %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -238,7 +242,7 @@ braze.subscribeToBannersUpdates((banners) => {
     }
 });
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 
 ```
 
