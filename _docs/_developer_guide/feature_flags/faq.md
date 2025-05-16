@@ -32,6 +32,7 @@ Most of the effort involved will be related to your engineering team building th
 
 {% tabs %}
 {% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -42,8 +43,10 @@ else {
     // Show the old homepage
 }
 ```
+
 {% endtab %}
 {% tab Java %}
+
 ```java
 if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
   // Show the new homepage your team has built
@@ -51,8 +54,10 @@ if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
   // Show the old homepage
 }
 ```
+
 {% endtab %}
 {% tab KOTLIN %}
+
 ```kotlin
 if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
   // Show the new homepage your team has built
@@ -60,6 +65,7 @@ if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
   // Show the old homepage
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 

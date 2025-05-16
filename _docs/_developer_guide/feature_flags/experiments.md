@@ -21,6 +21,9 @@ Before you can track user data in the experiment, your app needs to record when 
 
 To learn more about logging feature flag impressions, see [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,34 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
 
 ## Creating a feature flag experiment
 
