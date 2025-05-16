@@ -54,12 +54,14 @@ if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-if (braze.getFeatureFlag("new_shopping_cart")?.enabled) {
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
   // Show the new homepage your team has built
 } else {
   // Show the old homepage
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### How can feature flags benefit Marketing teams? {#marketing-teams}
 
