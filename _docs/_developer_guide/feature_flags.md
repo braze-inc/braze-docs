@@ -149,6 +149,9 @@ To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't 
 
 In our app, we'll check if the feature flag is enabled or not and swap out the checkout flow based on the response:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -160,6 +163,35 @@ if (featureFlag?.enabled) {
   return <OldCheckoutFlow />
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewCheckoutFlow();
+} else {
+  return new OldCheckoutFlow();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
+braze.logFeatureFlagImpression("enable_checkout_v2""")
+if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
