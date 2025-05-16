@@ -34,4 +34,13 @@ guide_menu_list:
 - name: LINE Channel
   link: /docs/compliance_documentation_line/
   image: /assets/img/braze_icons/channel-line.svg
+- name: Shopify Integration
+  link: /docs/compliance_documentation_shopify/
+  image: /assets/img/braze_icons/shopify.svg
+- name: Audience Sync
+  link: /docs/compliance_documentation_audience_sync/
+  image: /assets/img/braze_icons/refresh-ccw-02.svg
+- name: Message Archiving and Field Level Encryption
+  link: /docs/compliance_documentation_message_archiving_field_level_encryption/
+  image: /assets/img/braze_icons/clock-rewind.svg
 ---
