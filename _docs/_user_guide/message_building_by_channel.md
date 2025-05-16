@@ -33,6 +33,15 @@ guide_featured_list:
   image: /assets/img/braze_icons/whatsapp.svg
 ---
 
+## Accessibility resources
+
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you’d like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/help/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
+
 ## Choosing a message channel
 
 When determining what message channel is best for your campaigns and Canvases, always think about the content and urgency of your message:
