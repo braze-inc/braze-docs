@@ -283,6 +283,14 @@ If your email service provider is SparkPost, use the HTML code `data-msys-clickt
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
 ```
 
+#### Amazon SES
+
+If your email service provider is Amazon SES, use the HTML code `ses:no-track` like this:
+
+```HTML
+<a ses:no-track href="https://aws.amazon.com/">Amazon Web Services</a>
+```
+
 #### Drag-and-drop editor
 
 When using the drag-and-drop email editor, enter your HTML code as a custom attribute if your link is attached to text, a button, or an image.

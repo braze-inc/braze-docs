@@ -882,7 +882,7 @@ Field | Type | Description
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `bounce_reason` | `null,`&nbsp;`string` | [PII] The SMTP reason code and user friendly message received for this bounce event
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 `is_drop` | `null, boolean` | Indicates that this event counts as a drop event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -917,7 +917,7 @@ Field | Type | Description
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `link_id` | `null,`&nbsp;`string` | Unique ID for the link which was clicked, as created by Braze
 `link_alias` | `null,`&nbsp;`string` | Alias associated with this link ID
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 `is_amp` | `null, boolean` | Indicates that this is an AMP event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -949,7 +949,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email was sent
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -980,7 +980,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `user_agent` | `null,`&nbsp;`string` | User agent on which the spam report occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1012,7 +1012,7 @@ Field | Type | Description
 `user_agent` | `null,`&nbsp;`string` | User agent on which the open occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `machine_open` | `null,`&nbsp;`string` | Populated to 'true' if the open event is triggered without user engagement, for example, by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 `is_amp` | `null, boolean` | Indicates that this is an AMP event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1044,7 +1044,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `message_extras` | `null,`&nbsp;`string` | [PII] A JSON string of the tagged key-value pairs during Liquid rendering
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1077,7 +1077,7 @@ Field | Type | Description
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `bounce_reason` | `null,`&nbsp;`string` | [PII] The SMTP reason code and user friendly message received for this bounce event
-`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
