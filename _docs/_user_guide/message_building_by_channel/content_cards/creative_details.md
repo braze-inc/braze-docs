@@ -48,7 +48,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 {% endtab %}
 {% tab Image-only %}
 
-If you want fancy, the image-only card is for you. This is completely customized to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
 ![Image of an image-only Content Card with recommended details and an image-only example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 

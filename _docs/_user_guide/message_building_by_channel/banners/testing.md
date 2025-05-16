@@ -10,7 +10,7 @@ channel:
 
 # Banner testing
 
-> It’s important to send a test Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes are generated correctly.
+> It’s important to send a test Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly.
 
 Our preview and testing capabilities offer two ways to look at your Banners:
 
@@ -33,9 +33,9 @@ When sending a test Banner, be sure to check for the following:
 
 ## Test checklist
 
+- Is your banner campaign assigned to a placement?
 - Do the images and media show up and act as expected?
 - Do your links and buttons direct the user to where they should go?
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
-- Is your banner campaign assigned to a placement?
 

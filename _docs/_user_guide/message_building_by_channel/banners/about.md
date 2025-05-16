@@ -50,7 +50,7 @@ Placements are specific locations within your app or website where Banners can a
 
 ### Prioritization
 
-Prioritization controls the order in which multiple Banners compete for the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner.
+Prioritization controls the order in which multiple Banners compete for the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner or when editing a placement.
 
 ## Use cases
 
