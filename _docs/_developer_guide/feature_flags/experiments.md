@@ -60,6 +60,8 @@ if (featureFlag?.enabled == true) {
 }
 ```
 
+{% endtab %}
+{% endtabs %}
 
 ## Creating a feature flag experiment
 
