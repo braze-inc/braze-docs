@@ -232,7 +232,7 @@ braze.subscribeToBannersUpdates((banners) => {
     // choose where in the DOM you want to insert the banner HTML
     const container = document.getElementById("global-banner-container");
 
-    // Insert the banner which replacees the innerHTML of that container
+    // Insert the banner which replaces the innerHTML of that container
     braze.insertBanner(globalBanner, container);
 
     // Special handling if the user is part of a Control Variant
