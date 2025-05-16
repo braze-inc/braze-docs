@@ -493,7 +493,7 @@ You can test your color choices using the [WebAim Contrast Checker Tool](https:/
 If you use any custom HTML in your messaging:
 
 - Use [semantic HTML](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML). This means using the correct HTML elements for their intended purpose instead of styling one element to look like another. Most HTML elements have their own accessibility support built in.
-- Set the language attribute within your HTML to identify the language that your content is in. Screen readers use different sound libraries for each language based on the pronunciation and characteristics of that language. If the language is specified, screen readers can automatically switch between language libraries as needed. For example:
+- Set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang) within your HTML to identify the language that your content is in. Screen readers use different sound libraries for each language based on the pronunciation and characteristics of that language. If this isn’t specified, a screen reader assumes the content is written in the default language that the user chose when setting up the screen reader. If the message isn’t actually in the default language, then the screen reader might not pronounce the message correctly. 
 
 {% raw %}
 ```html
