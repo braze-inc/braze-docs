@@ -19,24 +19,15 @@ Banners allow marketing and product teams to personalize app or website content 
 
 Once Banners are integrated into an app or website, marketers can design and launch Banners using a simple drag-and-drop editor, eliminating the need for ongoing developer assistance, reducing complexity, and improving efficiency.
 
-Because they never expire and are personalized every time a user starts a new session, they’re great for:
-
-- Highlighting featured content, trending products, or promotions
-- Notifying users about upcoming events or important dates
-- Promoting loyalty programs and personalized offers
-- Guiding users through onboarding flows and account setup
-- Upselling or cross-selling complementary products
-- Seasonal or ongoing brand campaigns
-
 ### Features
 
 Key features for Banners include:
 
-- **Easy content building:** Drag rows and editor blocks to structure your Banner, including images, text, buttons, email capture forms, and custom HTML.
-- **Real-time preview:** Instantly preview your Banners on different device views or using custom dimensions, ensuring a seamless user experience on mobile and desktop.
-- **Dynamic personalization:** Utilize Braze’s built-in personalization options and Liquid logic, refreshing dynamically for each user’s session.
-- **Native prioritization:** Easily set the display priority for multiple Banners targeting the same placement, ensuring the right message reaches users at the right time.
-- **Custom HTML support:** Add custom HTML blocks when advanced customization or integration with existing web styles is required.
+- **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more.
+- **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
+- **Dynamic personalization:** Banners dynamically refresh with every new user session, ensuring content stays current and personalized using Braze’s built-in personalization tools and Liquid logic.
+- **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
+- **Custom HTML support:** Incorporate custom HTML blocks for advanced customization or seamless integration with your existing web styles.
 
 ## How it works 
 
@@ -46,7 +37,7 @@ They use two key components to designate where and how they display in your app 
 
 ### Placement {#placement-id}
 
-Placements are specific locations within your app or website where Banners can appear. Each placement acts as a container or slot designated by your developers during the initial integration. Common examples include the top of your homepage, product detail pages, checkout flows, or custom positions tailored to your app or website. After placements are configured, marketers can assign a banner directly to these areas
+Placements are specific locations within your app or website where Banners can appear. Each placement acts as a container or slot designated by your developers during the initial integration. Common examples include the top of your homepage, product detail pages, and checkout flows. After placements are configured, marketers can assign a banner directly to these areas.
 
 ### Prioritization
 
@@ -56,10 +47,10 @@ Prioritization controls the order in which multiple Banners compete for the same
 
 | Use case | Explanation |
 | --- | --- |
-| Announcements | Keep relevant announcements like policy changes at the forefront of your app experience. |
-| Personalizing offers | Show tailored promotions based on each user’s browsing history, cart content, subscription tier, and loyalty status. |
-| Targeting new user engagement | Guide onboarding or account setup by walking new users through important setup steps. |
-| Sales and promotions | Promote complementary products persistently and directly on your homepage. Or, keep your time-sensitive promotions visible and actionable, without being disruptive. |
+| Announcements | Keep announcements like upcoming events or policy changes at the forefront of your app experience. |
+| Personalizing offers | Show personalized promotions and incentives based on each user’s browsing history, cart content, subscription tier, and loyalty status. |
+| Targeting new user engagement | Guide new users through onboarding flows and account setup. |
+| Sales and promotions | Highlight featured content, trending products, and ongoing brand campaigns persistently and directly on your homepage without disrupting the user experience. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integrating Banners
