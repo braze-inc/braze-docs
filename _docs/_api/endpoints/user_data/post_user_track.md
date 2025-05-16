@@ -294,6 +294,9 @@ The segmentation tool will include these users regardless of whether they have e
 
 Each event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so "duplicate" events are treated as separate, unique events.
 
+### How does `/users/track` handle invalid nested custom attributes?
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), all nested custom attribute updates in the request will be dropped from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+
 ## Monthly Active Users CY 24-25
 For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:
 - Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
