@@ -73,6 +73,20 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 
 - [**Best practices**]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/): Review our suggested WhatsApp best practices.
 
+## Banners
+
+#### Things to check
+- **Banner dimensions:** Build your Banners using a fixed dimension element and test them in the editor.
+- **Priority:** If you’re launching multiple Banners, you can manually set the priority for how each banner is displayed.
+
+#### Things to know
+**Liquid personalization:** Liquid personalization refreshes at every session start.
+**Placement and Banner ratio:** Each Banner placement can be used in up to 10 campaigns in a workspace.  
+**Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
+**Connected Content calls:** Using Connected Content isn’t currently supported in Banners.  
+**Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
+**Custom HTML:** Leverage JS bridge to log clicks when using custom HTML. Clicks are only logged automatically from the Banner button.
+
 ## Content Cards
 
 #### Things to check

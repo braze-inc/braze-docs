@@ -1,7 +1,7 @@
 ---
 nav_title: Email
 article_title: Email
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "Email"
 guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."

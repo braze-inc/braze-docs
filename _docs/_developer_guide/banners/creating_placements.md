@@ -13,11 +13,7 @@ platform:
 
 # Creating Banner placements
 
-> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
-
-{% alert important %}
-Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/about/).
 
 ## Prerequisites
 
