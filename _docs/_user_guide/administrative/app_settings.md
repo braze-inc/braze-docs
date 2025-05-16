@@ -38,8 +38,8 @@ guide_menu_list:
   - name: Email Preferences
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Push TTL Settings
-    link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
+  - name: Push Settings
+    link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Multi-Language Settings
     link: /docs/multi_language_support/
