@@ -26,13 +26,7 @@ The Braze integration with Shopify provides a powerful solution for ecommerce bu
 
 Braze offers two integration options for Shopify merchants that are designed to meet the diverse needs of eCommerce businesses: **Standard integration** and **Custom integration**.
 
-### Standard integration
-
-The [standard integration]({{site.baseurl}}/shopify_standard_integration/) is tailored for Shopify online stores, providing a seamless and straightforward setup process. This option allows you to quickly connect your Shopify store to Braze, empowering you to leverage powerful customer engagement tools without extensive technical expertise. With this integration option, you can sync customer data, automate personalized messaging, and enhance your marketing efforts through comprehensive Braze features.
-
-### Custom integration
-
-The custom integration offers a more flexible and composable solution if you use Shopify Hydrogen or support a headless store. This option empowers you to implement Braze SDKs directly into your Shopify environment, enabling deeper integration and tailored functionalities. Whether you’re looking to create unique customer experiences or optimize specific workflows, the [custom integration]({{site.baseurl}}/shopify_custom_integration/) provides the tools necessary to fully leverage Braze’s capabilities in a headless setup.
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 ## How the integration works
 

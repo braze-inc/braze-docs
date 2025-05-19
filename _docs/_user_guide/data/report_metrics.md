@@ -1012,7 +1012,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count should not increment the second time a user views a card. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count doesn't increment the second time a user views a card. Likewise, it doesn't increase when a user views a second card from the same campaign.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -1050,7 +1050,7 @@ All
 
 {% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. This number is received from Braze and is based on the `user_id`. Unique recipients are counted at the campaign or Canvas step level, not the <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>send identifier</a> level.
+Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. For Content Cards, each Content Card can only be received once, so viewing the same Content Card a second time, regardless of the day, will not increment this count.<br><br>This number is received from Braze and is based on the `user_id`. Unique recipients are counted at the campaign or Canvas step level, not the <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>send identifier</a> level.
 
 <span class="calculation-line">Calculation: Count</span>
 

@@ -261,11 +261,11 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>Unique Impressions</i> is the total number of users who received and viewed a given message in a day.
+<i>Unique Impressions</i> is the total number of users who received and viewed a message from a given campaign.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Unique Recipients</i> is the number of unique daily recipients, or users who received a particular message in a day.
+<i>Unique Recipients</i> is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

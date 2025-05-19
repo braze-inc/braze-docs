@@ -184,7 +184,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">Messages Sent</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Messages Sent</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
                 This is calculated differently depending on what you selected for 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Card creation</a>:<br><br>
@@ -195,23 +195,23 @@ Here is a breakdown of some key metrics you may see while reviewing your message
             </td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Total Impressions</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Total Impressions</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} This can increment multiple times for the same user.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Unique Impressions</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">This count</span> doesn't increment the second time that a user views a card.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Unique Impressions</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">This count</span> doesn't increment the second time that a user views a Content Card.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Unique Recipients</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Unique Recipients</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> For Content Cards, each Content Card can only be received once, so viewing the same Content Card a second time, regardless of the day, will not increment this count. Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Unique Clicks</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Unique Clicks</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} This includes clicks on Braze-provided unsubscribe links.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">Unique Dismissals</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Unique Dismissals</a></td>
             <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
@@ -225,7 +225,7 @@ Regarding how impressions are logged, there are some nuances between web, Androi
 
 There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. In particular, the difference between _Unique Recipients_ and _Unique Impressions_ can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
 
-Let's say you view a Content Card today, then view the same card tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You'll also be included in the number of _Messages Sent_, as the card was available on your device.
+Let’s say you view a Content Card today, then receive a new card from the same campaign tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
 
 As another example, suppose you see five _Unique Impressions_ on a Content Card campaign showing 150,000 _Messages Sent_. This means the card was made available (on the backend) to an audience of 150,000 users, but only five users' devices performed all of the following steps after that send occurred:
 
