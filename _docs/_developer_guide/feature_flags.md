@@ -93,6 +93,9 @@ To remotely configure this feature, we'll create a new feature flag called `navi
 
 In our app, we'll use getter methods by Braze to retrieve this feature flag's properties and build the navigation links based on those values:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 import {useState} from "react";
@@ -114,6 +117,40 @@ return (<>
   </div>
 </>)
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// liveChatView is the View container for the Live Chat UI
+FeatureFlag featureFlag = braze.getFeatureFlag("navigation_promo_link");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+liveChatView.setPromoLink(featureFlag.getStringProperty("link"));
+liveChatView.setPromoText(featureFlag.getStringProperty("text"));
+
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// liveChatView is the View container for the Live Chat UI
+val featureFlag = braze.getFeatureFlag("navigation_promo_link")
+if (featureFlag?.enabled == true) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
+liveChatView.promoLink = featureFlag.getStringProperty("link")
+liveChatView.promoText = featureFlag.getStringProperty("text")
+```
+
+{% endtab %}
+{% endtabs %}
 
 Now, the day before Thanksgiving, we only have to change those property values in the Braze dashboard.
 
