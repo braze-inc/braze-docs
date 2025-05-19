@@ -50,7 +50,9 @@ Your developers can create Banner placements for the Braze SDK. For more details
 
 ### How are Banners sent to my app and website?
 
-Banners are sent as HTML.
+Banners are delivered to your app or website as HTML content, typically rendered inside an iframe. This approach ensures that the banner displays consistently while keeping its styles and scripts isolated from the rest of your site or app.
+
+Using an iframe also allows for dynamic content updates, such as personalization, without requiring changes to your codebase. The iframe retrieves and displays the appropriate HTML for each user session based on campaign targeting and personalization logic
 
 ### Can I use Banners in my existing Content Card feed?
 

@@ -102,9 +102,11 @@ The HTML will take up the full width of the container it’s rendered in. To lea
 
 Only one Banner can be used for each placement ID. However, up to 10 Banners can be assigned to a placement.
 
-### Can Banners be dismissed?
+### Can Banners be dismissed by a user?
 
-No. When a user is no longer eligible for a segment targeted by a Banner campaign, they won't see it again on their next session.
+No, users cannot manually dismiss Banners. However, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session.
+
+For example, if you display a promotional Banner until a user makes a purchase, logging an event such as `purchase_completed` can remove that user from the targeted segment, effectively hiding the Banner in subsequent sessions.
 
 ### Can I export Banners campaign analytics using the Braze API?
 
@@ -112,7 +114,7 @@ Yes. You can use the [`/campaigns/data_series` endpoint]({{site.baseurl}}/api/en
 
 ### When are users segmented?
 
-Users are segmented at the beginning of the session. If a campaign's targeted segments depend on custom attributes, custom events, or other targeting attributes, they must be present on the user at the at the beginning of the session. 
+Users are segmented at the beginning of the session. If a campaign's targeted segments depend on custom attributes, custom events, or other targeting attributes, they must be present on the user at the beginning of the session. 
 
 ### How can I compose Banners to ensure the lowest latency?
 

@@ -85,8 +85,8 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 **Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
 **Connected Content calls:** Using Connected Content isn’t currently supported in Banners.  
 **Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
-**Custom HTML:** Leverage JS bridge to log clicks when using custom HTML. Clicks are only logged automatically from the Banner button.
-
+**Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) to log clicks when using custom HTML. Clicks are only logged automatically from the Banner button.
+**Requesting Placements:** Up to 10 placements can be returned to the SDK. Each placement will include the highest priority Banner a user is eligible for.
 ## Content Cards
 
 #### Things to check
