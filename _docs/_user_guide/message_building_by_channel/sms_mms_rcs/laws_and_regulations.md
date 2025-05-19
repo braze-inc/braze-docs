@@ -48,7 +48,7 @@ RCS is an emerging and evolving space. States, countries, and other regulatory b
 {% endalert %}
 
 - **Understand regulatory overlap:** Because RCS and SMS share many similarities, the same laws, regulations, and carrier policies apply. This includes TCPA rules for collecting opt-in and CTIA guidelines (such as SHAFT).
-- **Consent transfer:** Industry guidance is that consent transfers across SMS and RCS **for the same type of messaging (such as promotional or transactional)**, if the user has already provided opt-in to receive that type of messaging. Conversely, if the user did not opt-in to receive promotional SMS, you should not start sending promotional RCS, without collecting opt-in for that type of messaging
+- **Consent transfer:** Industry guidance is that consent transfers across SMS and RCS **for the same type of messaging (such as promotional or transactional)**, if the user has already provided opt-in to receive that type of messaging. Conversely, if the user did not opt-in to receive promotional SMS, you should not start sending promotional RCS without collecting opt-in for that type of messaging.
 - **Update policies and disclaimers:** It is recommended to update your Mobile Terms of Service & Privacy Policy to include RCS references. It is also recommended that your opt-in campaigns include language about RCS, in addition to SMS.
 
 ## Resources

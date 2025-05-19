@@ -14,7 +14,7 @@ channel:
 
 # SMS and RCS subscription groups
 
-> Subscription groups are the foundation for sending SMS, MMS, and RCS messages through Braze. A subscription group is a collection of [sending phone numbers][2] (such RCS-verified senders, SMS short codes, SMS long codes, or SMS alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two subscription groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Subscription groups are the foundation for sending SMS, MMS, and RCS messages through Braze. A subscription group is a collection of [sending entities][2] (such RCS-verified senders, SMS short codes, SMS long codes, or SMS alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two subscription groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS and RCS subscription states
 
@@ -54,7 +54,7 @@ During your SMS onboarding process, a Braze onboarding manager will set up subsc
 
 ## Subscription group MMS enablement
 
-In order to send an MMS message, at least one number within your subscription group has to be enabled to send MMS or RCS respectively. This is indicated by a tag located next to the subscription group. 
+In order to send an MMS message, at least one number within your subscription group has to be enabled to send MMS. This is indicated by a tag located next to the subscription group. 
 
 ![Subscription Group dropdown with "Messaging Service A for SMS" highlighted. The entry is prefixed with the tag "MMS".][10]{: style="max-width:40%"}
 
@@ -73,7 +73,7 @@ Depending on your integration, Braze can add RCS-verified senders to your existi
 
 If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a Canvas. 
 
-Braze recommends that you test sending RCS to smaller volumes of users initially and migrate more users to the RCS subscription group over time. For example, if you have 1,000,000 users subscribed to an SMS subscription group, it might be worth upgrading your traffic for 50,000 to 100,000 (5—10%) first, depending on your preference.
+Braze recommends that you test sending RCS to smaller volumes of users initially and migrate more users to the RCS subscription group over time. For example, if you have 1,000,000 users subscribed to an SMS subscription group, this could look like first migrating all users to the new subscription group and then segmenting on a smaller audience of 50,000 to 100,000 (5-10%) to test the RCS messages.
 
 #### Step 1: Create a Canvas and fill out the Entry Schedule
 
@@ -83,7 +83,7 @@ Braze recommends that you test sending RCS to smaller volumes of users initially
 #### Step 2: Define your audience
 
 You can do this in two ways:
-- **Create a segment:** Build a segment that includes all users in the desired subscription group. If you need to narrow that group further (for example, to a random 5–10% sample), consider adding additional segmentation filters. Segments are recalculated before each send, which means as your user base evolves, your targeted subset stays current
+- **Create a segment:** You can build a segment that includes either all users in the desired subscription group or a subset of them by using segmentation filters to narrow in on a smaller test audience (such as a random 5–10% of users in that subscription group). Segments are recalculated before each send, which means as your user base evolves, your targeted subset stays current
 - **Apply campaign or Canvas filters:** Refine the audience directly in your campaign or Canvas **Target Audience** step with the available targeting options. This gives you the flexibility to adjust your targeting criteria without navigating to another page.
 
 Then, go to the **Send Settings** step and select **Users who are subscribed or opted-in**.
@@ -115,7 +115,7 @@ Add a User Update Step to your Canvas. In the step, open the **Advanced JSON Edi
 
 #### Step 4: Test the Canvas
 
-We highly recommends [testing your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
+We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
 
 #### Step 5: Launch your Canvas
 
