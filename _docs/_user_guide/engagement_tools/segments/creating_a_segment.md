@@ -49,7 +49,7 @@ Filters are organized into filter groups. Every filter must be part of a filter 
 
 ![Filter group with an editing icon next to its name.][14]
 
-Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
+Select the icons next to each filter to collapse the filter editor or duplicate individiual filters. After duplicating a filter, you can adjust its values within each dropdown.
 
 #### Segmentation logic using AND and OR
 
