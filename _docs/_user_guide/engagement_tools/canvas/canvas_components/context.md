@@ -105,7 +105,7 @@ In this Context step, we'll use decision logic to set `lounge_access_granted` to
 - The user is a Rewards Club member (checked against their user profile attribute)
 - The user has purchased a first-class ticket (determined from the Canvas entry event data)
 
-Next, we'll create an audience group to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step for this audience to create a push notification that includes personalized lounge information. 
+Next, we'll create a short delay to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step to create a push notification that includes personalized lounge information for these users. 
 
 Based on this context variable, eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
 
