@@ -253,7 +253,7 @@ Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique
 
 These are the key metrics to track while reviewing your Banner campaign performance. Clicks and impressions for Banners are tracked automatically with the SDK. 
 
-For the full definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Banners.
+For the full definitions of all Banners metrics, refer to the [Report Metrics Glossary][1] and filter by Banners.
 
 <style>
     .no-split {
