@@ -102,7 +102,12 @@ Users will enter the Canvas when they purchase a plane ticket. To determine loun
 
 In this Context step, we'll use the Liquid value {% raw %}`{{custom_attribute.${Purchased Flight}}}`{% endraw %} to determine what type of flight they've purchased (first class, business, or economy).
 
-Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `first_class`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
+Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `first_class`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
+
+- First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
+- Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access!"
+
+![A Message step with different messages to send, depending on the type of plane ticket purchased.][3]{: style="max-width:90%"}
 
 <!-- Example with Audience Sync
 For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to members of the Rewards Club or passengers who purchased a first-class ticket. Whereas membership status is something you'd track on the user profile, a first-class ticket purchase is more temporary. A context variable is a flexible way to track this information.
