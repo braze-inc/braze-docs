@@ -13,14 +13,6 @@ search_rank: 1
 
 When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based on them like you can for custom events.
 
-## Entitlements {#entitlements}
-
-You can have up to 1,000 custom attributes per workspace. If you need to increase this limit, contact your Braze account manager for more information.
-
-As your workspace approaches the maximum number of custom attributes, you'll receive notifications in the dashboard and by email to help you stay on track.
-
-Even after reaching the limit, you'll still be able to update your existing custom attributes. However, you won't be able to create new custom attributes. Any data received for custom attributes that don't already exist will not be processed.
-
 ## Managing custom attributes
 
 To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
