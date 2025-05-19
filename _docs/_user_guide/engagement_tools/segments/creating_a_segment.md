@@ -51,8 +51,6 @@ Filters are organized into filter groups. Every filter must be part of a filter 
 
 Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
 
-You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
-
 #### Segmentation logic using AND and OR
 
 Within a filter group, filters can be joined by either "AND" or "OR". Between filter groups, groups can be joined by either "AND" or "OR". When using filter groups, you can create segmentation logic such as:
