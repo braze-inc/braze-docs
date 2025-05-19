@@ -34,7 +34,7 @@ When sending a test Banner, be sure to check for the following:
 ## Test checklist
 
 - Is your banner campaign assigned to a placement?
-- Do the images and media show up and act as expected?
+- Do the images and media show up and act as expected on your targeted device types and screen sizes?
 - Do your links and buttons direct the user to where they should go?
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
