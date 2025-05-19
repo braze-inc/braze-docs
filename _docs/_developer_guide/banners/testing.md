@@ -14,7 +14,7 @@ channel:
 
 ## Prerequisites
 
-Before you can test Banner messages in Braze, you'll need to create [placements in your app]({{site.baseurl}}/developer_guide/banners/creating_placements) and a [Banner campaign in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating/).
+Before you can test Banner messages in Braze, you'll need to create a [Banner campaign in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating/). Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements). 
 
 ## Testing a Banner
 
