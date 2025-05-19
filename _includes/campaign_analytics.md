@@ -253,7 +253,7 @@ Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique
 
 These are the key metrics to track while reviewing your Banner campaign performance. Clicks and impressions for Banners are tracked automatically with the SDK. 
 
-For the full definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Banners.
+For the full definitions of all Banners metrics, refer to the [Report Metrics Glossary][1] and filter by Banners.
 
 <style>
     .no-split {
@@ -308,9 +308,9 @@ For the full definitions of all Content Cards metrics, refer to the [Report Metr
 
 There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. In particular, the difference between _Unique Recipients_ and _Unique Impressions_ can be a bit confusing. Let’s use a few example scenarios to understand these metrics better.
 
-Let’s say you view a Banner today, then view the same card tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
+Let’s say you view a Banner today, then view the same Banner tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
 
-As another example, suppose you see five _Unique Impressions_ on a Banner campaign showing 150,000 _Messages Sent_. This means the card was made available (on the backend) to an audience of 150,000 users, but only five users’ devices performed all of the following steps after that send occurred:
+As another example, suppose you see five _Unique Impressions_ on a Banner campaign showing 150,000 _Messages Sent_. This means the Banner was made available (on the backend) to an audience of 150,000 users, but only five users’ devices performed all of the following steps after that send occurred:
 
 1. Started a session or the app explicitly requested a Banner sync (or both)
 2. Navigated to the Banners view
