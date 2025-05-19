@@ -496,10 +496,6 @@ Here is a breakdown of some key metrics you may see while reviewing your message
             <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends-to-carrier">Sends to Carrier</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
-        </tr>
-        <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">Delivery Failures</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
         </tr>

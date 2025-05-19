@@ -35,7 +35,7 @@ guide_featured_list:
 - name: "User Phone Numbers"
   link: /docs/user_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Sending Phone Numbers"
+- name: "SMS and RCS Senders"
   link: /docs/sending_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Reporting"

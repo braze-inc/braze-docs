@@ -1,10 +1,6 @@
 
 # SMS and RCS senders
 
-## SMS sending phone numbers
-
-Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
-
 ## Types of SMS and RCS senders
 
 {% tabs %}
@@ -20,7 +16,7 @@ An RCS-verified sender is a visual representation of your brand that includes a 
 
 | Visual components | Access | Throughput | MMS enabled | 1-way vs. 2-way |
 | --- | --- | --- | --- | --- |
-| - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for a sender| Approximately 100 messages per sender per second | Mo | 2-way |
+| - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for an application (can vary) | Approximately 100 messages per sender per second. Actual throughput rates can vary based on vendor, network conditions, and specific implementation details. | No | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ##### Pros and cons
@@ -28,7 +24,7 @@ An RCS-verified sender is a visual representation of your brand that includes a 
 | Pros |
 | ---- |
 | **Establishing trust**<br> RCS-verified senders are far more effective at establishing user trust than SMS codes given their highly visual nature as well as their explicit verification by the carrier. 
-<br><br>**Richer messaging features**<br>RCS-verified senders enable messages to be sent with far richer messaging capabilities than SMS, including rich media, like image files and interactive buttons. |
+<br><br>**Rich messaging features**<br>RCS-verified senders enable messages to be sent with richer messaging capabilities than SMS, including rich media, like image files and interactive buttons. |
 {: .reset-td-br-1}
 
 | Cons |
@@ -175,6 +171,10 @@ Besides these differences, know that a brand will usually have one short code, b
 Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/). 
 {% endalert %}
 
+## SMS sending phone numbers
+
+Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
+
 ## How do I get an SMS short code?
 
 Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you—they'll ask for some basic information that will help you qualify. Then, all there is to do is wait!
@@ -209,9 +209,9 @@ All customers who currently have and/or use US long codes to send to US customer
 
 ## Frequently asked questions
 
-### How RCS message throughput compare to SMS message throughput?
+### How does RCS message throughput compare to SMS message throughput?
 
-Message throughput is not as strictly defined or carrier-controlled as it is with SMS. Because RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS, RCS doesn't rely on fixed network-imposed limits like SMS does. 
+RCS message throughput is not as strictly defined or carrier-controlled as it is with SMS. Because RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS, RCS doesn't rely on fixed network-imposed limits like SMS does. 
 
 ### Do RCS-verified senders support high message throughput like a short code?
 
@@ -219,7 +219,7 @@ No. RCS-verified senders don't have the option of a separate high message throug
 
 ### Can an RCS-verified sender be shared across multiple subscription groups? 
 
-No. Similar to an SMS sender, an RCS-verified sender can only be used with a single subscription group
+No. Similar to an SMS sender, an RCS-verified sender can only be used with a single subscription group.
 
 ### Can an SMS fallback sender be shared across SMS subscription groups?
 

@@ -203,7 +203,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>Sent</i> is every time a campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It's possible that the SMS didn't reach a user's device due to errors.
+<i>Sent</i> is every time a campaign or Canvas step has been launched or triggered, and an SMS or RCS has been sent from Braze. It's possible that the SMS or RCS didn't reach a user's device due to errors.
 {% endif %}
 
 {% if include.metric == "Sends" %}

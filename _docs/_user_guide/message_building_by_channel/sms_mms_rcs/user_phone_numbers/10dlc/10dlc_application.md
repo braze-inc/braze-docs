@@ -50,7 +50,7 @@ All US carriers require the below company information for new campaign submissio
 
 ## SMS campaign information
 
-We'll need to register each SMS subscription group that contains a US long code with its own A2P 10DLC campaign (sometimes referred to as a use case). Please provide the information below one time for each of your SMS subscription group that contain a US long code.	
+We'll need to register each SMS subscription group that contains a US long code with its own A2P 10DLC campaign (sometimes referred to as a use case). Please provide the information below one time for each of your SMS subscription groups that contain a US long code.	
 
 | Field | Options (if applicable) | Description |
 | ------ | ------------------------ | --------------- |

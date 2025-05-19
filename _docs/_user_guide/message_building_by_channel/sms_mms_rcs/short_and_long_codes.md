@@ -1,6 +1,6 @@
 ---
-nav_title: "Sending Phone Numbers"
-article_title: Sending Phone Numbers
+nav_title: "SMS and RCS Senders"
+article_title: SMS and RCS Senders
 noindex: true
 page_order: 9
 description: "This article will walk you through important concepts involved in sending phone numbers with Braze."

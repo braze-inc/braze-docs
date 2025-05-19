@@ -13,7 +13,7 @@ Access the dashboard by going to **Settings** > **Billing** > **Message Usage**.
 
 **Message Credits Usage Overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details about your active contract and your contract period.
 
-This page displays if you're on a message credits contract or if you've purchased WhatsApp. The channels that use message credits are shown in the **Credits contract overview**.
+This page displays if you're on a message credits contract. The channels that use message credits are shown in the **Credits contract overview**.
 
 {% alert note %}
 If you purchased WhatsApp but aren't on a message credits contract, you'll still see credit consumption for WhatsApp because that's how legacy WhatsApp contracts are billed. This differs from legacy SMS, which only consumes credits when you're on a message credits contract.

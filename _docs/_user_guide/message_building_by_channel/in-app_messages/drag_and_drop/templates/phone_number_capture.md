@@ -8,7 +8,7 @@ description: "This page covers how to create an SMS, RCS, and WhatsApp sign-up f
 
 # SMS, RCS, and WhatsApp sign-up form
 
-> The SMS, RCS, and WhatsApp sign-up forms are templates available in the drag-and-drop editor for in-app messages. Use these templates to collect users' phone numbers and grow your SMS, MMS, and WhatsApp subscription groups.
+> The SMS, RCS, and WhatsApp sign-up forms are templates available in the drag-and-drop editor for in-app messages. Use these templates to collect users' phone numbers and grow your SMS, MMS, RCS, and WhatsApp subscription groups.
 
 ![Three examples of in-app messages created using the phone sign-up form template.][img7]
 
@@ -62,7 +62,7 @@ We have provided a placeholder disclaimer in the template solely as an exampleâ€
 This documentation is not intended to provide, nor may it be relied fully upon, as providing legal advise.
 {% endalert %}
 
-For more information about SMS compliance, see [Laws and regulations for SMS, MMS, and RCS][4].
+For more information about SMS and RCS compliance, see [Laws and regulations for SMS, MMS, and RCS][4].
 
 ### Step 5: Style your message
 
