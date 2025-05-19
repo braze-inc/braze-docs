@@ -105,9 +105,9 @@ In this Context step, we'll use decision logic to set `lounge_access_granted` to
 - The user is a Rewards Club member (checked against their user profile attribute)
 - The user has purchased a first-class ticket (determined from the Canvas entry event data)
 
-Next, we'll create a short delay to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step to create a push notification that includes personalized lounge information for these users. 
+Next, we'll set up a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This Message step will be a push notification that includes personalized lounge information for these users. Based on this context variable, the eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
 
-Based on this context variable, the eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
+![A Message step setup that includes a push notification to be sent.][4]
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
@@ -173,3 +173,4 @@ Context variables use their most recent value throughout the Canvas, with each u
 [1]: {% image_buster /assets/img/context_step3.png %}
 [2]: {% image_buster /assets/img/context_example1.png %}
 [3]: {% image_buster /assets/img/context_example2.png %}
+[4]: {% image_buster /assets/img/context_example3.png %}
