@@ -166,7 +166,7 @@ Lastly, regardless of whether you use the regular or incremental SQL editor, som
 - `DECLARE` statements are not accepted.
 
 {% alert note %}
-If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a Catalog ID. For example:
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a catalog ID. For example:
 
 ```sql
 SELECT * FROM CATALOGS_ITEMS_SHARED
