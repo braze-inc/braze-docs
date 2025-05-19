@@ -23,7 +23,7 @@ These are the minimum SDK versions needed to start using Banners:
 
 ## Creating a placement
 
-{% multi_lang_include banners/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md section="developer" %}
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
@@ -414,7 +414,7 @@ Braze automatically logs impressions when you use SDK methods to insert a Banner
 
 ## Dimensions and sizing
 
-Here are some things to know about Banner dimensions and sizing:
+Here's what you need to know about Banner dimensions and sizing:
 
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.

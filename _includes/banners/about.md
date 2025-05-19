@@ -45,15 +45,3 @@ Features for Banners include:
 ## Integrating Banners
 
 Your developers can create Banner placements for the Braze SDK. For more details on how to integrate with Banners, refer to the [Creating Banner placements]({{site.baseurl}}/developer_guide/banners/creating_placements).
-
-## Frequently asked questions
-
-### How are Banners sent to my app and website?
-
-Banners are delivered to your app or website as HTML content, typically rendered inside an iframe. This approach ensures that the banner displays consistently while keeping its styles and scripts isolated from the rest of your site or app.
-
-Using an iframe also allows for dynamic content updates, such as personalization, without requiring changes to your codebase. The iframe retrieves and displays the appropriate HTML for each user session based on campaign targeting and personalization logic
-
-### Can I use Banners in my existing Content Card feed?
-
-Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/).

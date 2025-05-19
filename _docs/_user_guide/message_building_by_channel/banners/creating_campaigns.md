@@ -21,7 +21,7 @@ These are the minimum SDK versions to start using Banners:
 
 ## Creating a Banner campaign
 
-{% multi_lang_include banners/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md section="user" %}
 
 ### Step 2: Create a campaign
 
@@ -58,20 +58,16 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 
 Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting End Time and specifying an end date and time.
 
-### Step 5: Set Banner priority
+### Step 5: Set Banner priority (optional)
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority level. By default, newly created Banners are set to medium&#8212;however, you can manually set the priority to high, medium, or low. If multiple Banners share the same priority level, the newest Banner will be displayed first.
-
-To manually set the priority for a Banner:
+[Banner priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) determines the order in which Banners are displayed if they share the same placement. To manually set the priority:
 
 1. Select **Set exact priority**.
 2. Drag and drop the campaigns to order them with the correct priority.
 3. Select **Apply Sort**.
 
+{% alert tip %}
 If you have multiple Banner campaigns using the same placement ID, we recommend using the drag-and-drop priority sorter to define the exact priority.
-
-{% alert note %}
-As you create more Banner campaigns, a new Banner's priority is set as the highest priority in the **Medium Priority** section of the exact priority sorter.
 {% endalert %}
 
 ### Step 6: Test your message (optional)
@@ -91,39 +87,3 @@ Finish building your campaign by completing the following:
 ### Step 8: Launch your campaign
 
 After you're finished building and testing your Banner campaign, you're ready to launch!
-
-## Frequently asked questions
-
-### What are the dimensions of a Banner?
-
-The HTML will take up the full width of the container it’s rendered in. To learn more about Banner specifications, see About Banners.
-
-### Can I create multiple Banners using the same placement?
-
-Only one Banner can be used for each placement ID. However, up to 10 Banners can be assigned to a placement.
-
-### Can Banners be dismissed by a user?
-
-No, users cannot manually dismiss Banners. However, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session.
-
-For example, if you display a promotional Banner until a user makes a purchase, logging an event such as `purchase_completed` can remove that user from the targeted segment, effectively hiding the Banner in subsequent sessions.
-
-### Can I export Banners campaign analytics using the Braze API?
-
-Yes. You can use the [`/campaigns/data_series` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) to get data on how many Banner campaigns were viewed, clicked, or converted.
-
-### When are users segmented?
-
-Users are segmented at the beginning of the session. If a campaign's targeted segments depend on custom attributes, custom events, or other targeting attributes, they must be present on the user at the beginning of the session. 
-
-### How can I compose Banners to ensure the lowest latency?
-
-The simpler the messaging in your Banner, the faster it will render. It’s best to test your Banner campaign against the expected latency for your use case. For example, be sure to test Liquid attributes like `catalog_items`.
-
-### What Liquid tags are not supported?
-
-The following Liquid tags aren’t supported: Connected Content, promotion codes, and catalog `:rerender` tags.
-
-### How can click events be captured?
-
-Click events are only captured if an on-click action is set on a `logClick` element and is called using the JS Bridge.

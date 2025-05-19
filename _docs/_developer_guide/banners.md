@@ -1,7 +1,7 @@
 ---
 nav_title: Banners
 article_title: About Banners
-page_order: 0
+page_order: 2.2
 description: "This reference article provides an overview of the Braze Banner channel and common use cases."
 channel:
   - banners
