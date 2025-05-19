@@ -165,6 +165,16 @@ Incremental refresh segments take into account late events, which are events tha
 Lastly, regardless of whether you use the regular or incremental SQL editor, some additional rules apply:
 - `DECLARE` statements are not accepted.
 
+{% alert note %}
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a Catalog ID. For example:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
 ## Previewing results
 
 Before saving, you can run a preview of your query. Query previews are automatically limited to 100 rows and will timeout after 60 seconds. The `user_id` column requirement does not apply when running a preview.
