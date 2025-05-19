@@ -32,7 +32,7 @@ These are the minimum SDK versions to start using Banners:
 5. Select the placement you previously created to associate it with your campaign.
 6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing).
 
-### Step 3: Compose a Banner
+### Step 3: Compose a Banner {#compose-a-banner}
 
 To compose your Banner, select **Edit message**. Here, you can create the Banner and define on-click behavior. 
 
@@ -74,7 +74,11 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 As you create more Banner campaigns, a new Banner's priority is set as the highest priority in the **Medium Priority** section of the exact priority sorter.
 {% endalert %}
 
-### Step 6: Finish building the campaign
+### Step 6: Test your message (optional)
+
+{% multi_lang_include banners/testing.md page="campaigns" %}
+
+### Step 7: Finish building the campaign
 
 Finish building your campaign by completing the following:
 
@@ -84,9 +88,9 @@ Finish building your campaign by completing the following:
 | **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Step 7: Test and launch
+### Step 8: Launch your campaign
 
-After building your campaign, test and review it to make sure your campaign works as expected. When you’re ready, launch your Banner campaign!
+After you're finished building and testing your Banner campaign, you're ready to launch!
 
 ## Frequently asked questions
 
