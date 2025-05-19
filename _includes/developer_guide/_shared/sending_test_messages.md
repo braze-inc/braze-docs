@@ -2,7 +2,7 @@
 
 > Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. You can use the dashboard to create and send test messages with push notifications, in-app messages (IAM), or email.
 
-## Sending a test message with Push, IAM, or Email
+## Sending a test message
 
 ### Step 1: Create a designated test segment <a class="margin-fix" name="test-segment"></a>
 
@@ -41,7 +41,7 @@ You can send a message using the Braze dashboard or the command line.
 
 {% tabs local %}
 {% tab Using the dashboard %}
-{% subtabs local %}
+{% subtabs %}
 {% subtab push or in-app message %}
 To send test push notifications or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment from the dropdown menu.
 
@@ -52,7 +52,7 @@ Confirm your campaign and launch it to test your push notification and in-app me
 {% alert note %}
 Be sure to select **Allow users to become re-eligible to receive campaign** under the **Schedule** portion of the campaign composer if you intend to use a single campaign to send a test message to yourself more than once.
 {% endalert %}
-{% endtab %}
+{% endsubtab %}
 
 {% subtab email message %}
 If you're only testing email messages, you do not necessarily have to set up a test segment. In the first step of the campaign composer where you compose your campaign's email message, click **Send Test** and enter the email address to which you wish to send a test email. 
