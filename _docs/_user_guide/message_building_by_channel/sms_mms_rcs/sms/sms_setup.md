@@ -16,15 +16,9 @@ guide_featured_list:
 - name: Terms to Know
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/terms/
   image: /assets/img/braze_icons/book-closed.svg
-- name: Sending Phone Numbers
-  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
-  image: /assets/img/braze_icons/phone-outgoing-01.svg
 - name: SMS Message Sending
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
   image: /assets/img/braze_icons/message-square-02.svg
-- name: SMS Subscription Groups
-  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
-  image: /assets/img/braze_icons/users-01.svg
   
 ---
 <br>
