@@ -310,7 +310,7 @@ There are a few metrics available that cover the visibility of your message. Thi
 
 Let’s say you view a Banner today, then view the same card tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
 
-As another example, suppose you see five _Unique Impressions_ on a Banner campaign showing 150,000 _Messages Sent_. This means the card was made available (on the backend) to an audience of 150,000 users, but only five users’ devices performed all of the following steps after that send occurred:
+As another example, suppose you see five _Unique Impressions_ on a Banner campaign showing 150,000 _Messages Sent_. This means the Banner was made available (on the backend) to an audience of 150,000 users, but only five users’ devices performed all of the following steps after that send occurred:
 
 1. Started a session or the app explicitly requested a Banner sync (or both)
 2. Navigated to the Banners view
