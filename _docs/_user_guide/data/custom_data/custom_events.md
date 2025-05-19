@@ -25,14 +25,6 @@ Some common custom event use cases include:
 - Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
-## Entitlements {#entitlements}
-
-You can have up to 2,000 custom events per workspace. If you need to increase this limit, contact your Braze account manager for more information.
-
-As your workspace approaches the maximum number of custom events, you'll receive notifications in the dashboard and by email to help you stay on track.
-
-Even after reaching the limit, existing custom events can still be received. However, you won't be able to create new custom events. Any data received for custom events that don't already exist will not be processed.
-
 ## Managing custom events
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.
@@ -58,14 +50,6 @@ You can add a description to a custom event after it's created if you have the `
 ## Adding tags
 
 You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events.
-
-### Entitlements
-
-Braze will limit the number of custom events that can be created in each workspace in your account. Typically, the maximum capacity is 2,000 custom events per workspace, but may be increased upon request. Please reach out to your account team for more details.
-
-If one of your workspaces is approaching (or has already reached) the maximum, you will see warnings in the dashboard and receive periodic email notifications.
-
-When a workspace has too many custom events, no new events may be created, and Braze will ignore any data received for custom events that do not already exist. (However, existing custom events may still be received.)
 
 ### Viewing usage reports
 
