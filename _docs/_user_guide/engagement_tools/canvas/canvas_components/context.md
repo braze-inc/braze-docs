@@ -107,9 +107,7 @@ In this Context step, we'll use decision logic to set `lounge_access_granted` to
 
 Next, we'll create a short delay to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step to create a push notification that includes personalized lounge information for these users. 
 
-Based on this context variable, eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
-
-![An Audience Paths step with lounge_access_granted set to true.][3]{: style="max-width:90%"}
+Based on this context variable, the eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
