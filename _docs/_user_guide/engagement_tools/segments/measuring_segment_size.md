@@ -46,6 +46,8 @@ For each filter group, you can view estimated reachable users. Select **Expand e
 
 You can view an entire segment's estimated reachable users, including estimated user counts for each channel, in the **Reachable users** side panel. This **estimation** shows you an approximate range for your segment size, and an estimate of what percentage of your overall user base falls into this segment. You can also view an exact count of reachable users (for both the segment overall and per channel) by selecting **Calculate exact statistics**. 
 
+![The "Reachable users" panel stating there are 2.3M—2.4M estimated users.][9]
+
 ### Considerations for estimate counts
 
 Braze measures the number of estimated users by querying a subset of your users, and then extrapolating those results to your entire audience. Because the subset of users that Braze queries may differ each time we calculate this estimate, the estimate may also change in cases where your audience membership technically should have stayed the same. For example, if you re-order your filters or re-check the same segment at a different time, it’s possible that the estimated count changes (even though **Calculate exact stats** would reveal the same results if your segment didn't change).
@@ -120,3 +122,4 @@ The membership count may significantly change for a number of reasons, such as t
 [6]: {% image_buster /assets/img_archive/calculation_queue.png %}
 [7]: {% image_buster /assets/img_archive/cancel_calculation.png %}
 [8]: {% image_buster /assets/img_archive/expand_stats.png %}
+[9]: {% image_buster /assets/img_archive/reachable_users_side_panel.png %}
