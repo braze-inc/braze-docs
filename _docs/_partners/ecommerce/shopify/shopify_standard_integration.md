@@ -194,7 +194,7 @@ As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you w
 
 ## Step 5: Sync products (optional)
 
-You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
+You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
 ![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][11]{: style="max-width:80%;"}
 

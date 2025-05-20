@@ -303,7 +303,7 @@ Banners now support Flutter. Additionally, all Banner documentation has been ove
 
 - [About Banners]({{site.baseurl}}/developer_guide/banners/)
 - [Creating Banner campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
-- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/embedding_banners/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/creating_placements/)
 
 #### WhatsApp click tracking
 
@@ -573,7 +573,7 @@ One way B2B marketers can use Braze is through an integration with the Salesforc
 [Constructor]({{site.baseurl}}/partners/ecommerce/product_search_recommendations/constructor/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
  
 #### Trustpilot - Dynamic content
-[Trustpilot]({{site.baseurl}}/partners/message_personalization/dynamic_content/trustpilot) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
+[Trustpilot]({{site.baseurl}}/partners/trustpilot/) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
 
 ### SDK updates
  
@@ -801,7 +801,7 @@ Use the [Braze SDK's built-in debugger]({{site.baseurl}}/developer_guide/debuggi
 
 #### Live Activities
 
-We updated the [frequently asked questions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/faq/) for Swift Live Activities with a few new questions and answers.
+We updated the [frequently asked questions]({{site.baseurl}}/developer_guide/live_notifications/live_activities/) for Swift Live Activities with a few new questions and answers.
 
 #### Custom events
 
@@ -842,7 +842,7 @@ We added new documentation:
 
 #### Future Anthem - Dynamic Content
 
-The Braze and [Future Anthem]({{site.baseurl}}/partners/message_personalization/dynamic_content/future_anthem/) partnership leverages Amplifier AI to deliver content personalization, real-time experiences, and dynamic audiences. Amplifier AI works across sports, casinos, and lottery, allowing you to enhance Braze player profiles with industry-specific player attributes, such as a favorite game, engagement score, expected next bet, and more.
+The Braze and [Future Anthem]({{site.baseurl}}/partners/future_anthem/) partnership leverages Amplifier AI to deliver content personalization, real-time experiences, and dynamic audiences. Amplifier AI works across sports, casinos, and lottery, allowing you to enhance Braze player profiles with industry-specific player attributes, such as a favorite game, engagement score, expected next bet, and more.
 
 ### Settings
 
