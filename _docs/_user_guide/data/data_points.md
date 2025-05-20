@@ -156,6 +156,7 @@ table td {
 | Custom events | All custom events | |
 | Custom event properties | All custom event properties | Custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
 | Purchases | All purchases | |
+| Purchase properties | All purchase properties | |
 | Amplitude cohort assignment | All assignments | |
 | Mixpanel cohort assignment | All assignments | |
 | Hightouch cohort assignment | All assignments | |
