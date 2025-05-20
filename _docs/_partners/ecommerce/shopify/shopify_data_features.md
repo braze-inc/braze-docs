@@ -399,7 +399,7 @@ page_order: 3
 {% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
-**Event**: `ecommerce.v1.product_viewed`<br>
+**Event**: `ecommerce.product_viewed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer views a product page<br>
 **Use Case**: Browse abandonment
@@ -423,7 +423,7 @@ page_order: 3
 
 {% endsubtab %}
 {% subtab Cart updated %}
-**Event**: `ecommerce.v1.cart_updated`<br>
+**Event**: `ecommerce.cart_updated`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
@@ -463,7 +463,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 
 {% endsubtab %}
 {% subtab Checkout started %}
-**Event**: `ecommerce.v1.checkout_started`<br>
+**Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
@@ -500,7 +500,7 @@ Then you can add the following Liquid tags into your message to reference the pr
 
 {% endsubtab %}
 {% subtab Order placed %}
-**Event**: `ecommerce.v1.order_placed`<br>
+**Event**: `ecommerce.order_placed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 

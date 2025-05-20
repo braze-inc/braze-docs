@@ -113,7 +113,7 @@ func didReceive(_ notification: UNNotification) {
 Push notifications can capture user information inside a content app extension, pushing the limits of what is possible with a push. Requesting user input through push notifications allows you to not only request basic information like name or email, but also prompt users to submit feedback or complete an unfinished user profile. 
 
 {% alert tip %}
-For more information, see [Logging push notification data]({{site.baseurl}}/developer_guide/analytics/logging_push_data/).
+For more information, see [Logging push notification data]({{site.baseurl}}/developer_guide/analytics/logging_channel_data/push_notifications/).
 {% endalert %}
 
 In the following flow, the custom view is able to respond to state changes. Those state change components are represented in each image. 
