@@ -183,7 +183,7 @@ For configuration and further troubleshooting, contact the [SalesWings services 
 [8]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
 [9]: {{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents
 [10]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events
-[11]: {{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events
+[11]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events
 [12]: https://helium.saleswings.pro/falcon
 [13]: https://support.saleswingsapp.com/en/articles/9258905-segment-com-integration
 [14]: https://support.saleswingsapp.com/en/articles/6930889-using-saleswings-open-api-to-send-events-to-saleswings
