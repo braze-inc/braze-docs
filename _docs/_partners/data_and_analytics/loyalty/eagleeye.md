@@ -5,16 +5,13 @@ description: Learn how to integrate Eagle Eye with Braze.
 alias: /partners/Eagle_Eye/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Eagle Eye
 
-> [Eagle Eye](https://eagleeye.com/) is a leading SaaS and AI technology company enabling retail, travel and hospitality brands to earn the loyalty of their end customers by powering their real-time, omnichannel and personalised consumer marketing activities, at scale.
-
+> [Eagle Eye](https://eagleeye.com/) is a leading SaaS and AI technology company enabling retail, travel and hospitality brands to earn the loyalty of their end customers by powering their real-time, omnichannel and personalized consumer marketing activities, at scale.
 
 _This integration is maintained by Eagle Eye._
-
 
 ## Overview
 
@@ -31,71 +28,134 @@ The Eagle Eye Connect is a bi-directional integration between Braze and AIR that
 
 | Requirement              | Description |
 |--------------------------|-------------|
-| Eagle Eye AIR account    | You need an active Eagle Eye AIR account to take advantage of this partnership. <br><br>If you're interested in using Eagle Eye AIR, reach out to Eagle Eye’s Partnerships team at partnerships@eagleeye.com to get started. |
+| Eagle Eye AIR account    | You need an active Eagle Eye AIR account to take advantage of this partnership. To get started, reach out to Eagle Eye’s Partnerships team at [partnerships@eagleeye.com](mailto:partnerships@eagleeye.com). |
 | Braze REST API key       | A Braze REST API key with `users.track` permissions. <br><br>This can be created in the Braze dashboard from **Settings > API Keys**. |
 | Braze REST endpoint      | [Your REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Integration
+## Outbound vs. inbound
 
-The table below outlines the two types of integrations supported between Braze and Eagle Eye AIR. Eagle Eye Connect is the middleware that enables data exchange between AIR and partner systems like Braze. To learn more about the integration, refer to Eagle Eye’s [documentation](https://developer.eagleeye.com/docs/braze).
+The following tables outline the two types of integrations supported between Braze and Eagle Eye AIR. Eagle Eye Connect is the middleware that enables data exchange between AIR and partner systems like Braze. To learn more, refer to [Eagle Eye’s  Braze documentation](https://developer.eagleeye.com/docs/braze).
 
-| Integration Type | Direction| Initiated By | Data Flow| Purpose| Example |
-|-----|-----|------|--------|-----------|---------|
-| Outbound| Eagle Eye → Braze| Eagle Eye| To Braze API| Send loyalty data into Braze user profiles as custom attributes via custom events. Within Braze, the ingested data can be used to: <ul><li>segment users, trigger campaigns</li><li>personalize messages</li></ul> |<ul><li> Sending loyalty points or tier status into Braze (`ee_loyalty.points.current`, `ee_loyalty.tier.tierId`)</li><li>Updating a user's profile when they receive or redeem a coupon.</li></ul>|
-| Inbound| Braze → Eagle Eye| Braze | To Eagle Eye API via webhook| When a consumer enters an audience in Braze from any source, Braze can trigger a Braze webhook to EE Connect, allowing EE to issue a reward (coupon or points)<br><br>Upon completion of the action in AIR, Braze would receive an outbound event from AIR. | <ul><li>Rewards (Coupon or points) are issued to a consumer for joining the loyalty program</li><li>Rewards are issued to a consumer that had a late delivery </li><li>Birthday Rewards</li></ul>|
+{% tabs local %}
+{% tab outbound %}
+<table>
+  <thead>
+    <tr>
+      <th>Direction</th>
+      <th>Initiated By</th>
+      <th>Data Flow</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Eagle Eye → Braze</td>
+      <td>Eagle Eye</td>
+      <td>To Braze API</td>
+      <td>
+        Send loyalty data into Braze user profiles as custom attributes via custom events. Within Braze, the ingested data can be used to:
+        <ul>
+          <li>segment users, trigger campaigns</li>
+          <li>personalize messages</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Sending loyalty points or tier status into Braze (<code>ee_loyalty.points.current</code>, <code>ee_loyalty.tier.tierId</code>)</li>
+          <li>Updating a user's profile when they receive or redeem a coupon.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
+{% endtab %}
 
-## Data Mapping
+{% tab inbound %}
+<table>
+  <thead>
+    <tr>
+      <th>Direction</th>
+      <th>Initiated By</th>
+      <th>Data Flow</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Braze → Eagle Eye</td>
+      <td>Braze</td>
+      <td>To Eagle Eye API via webhook</td>
+      <td>
+        When a consumer enters an audience in Braze from any source, Braze can trigger a Braze webhook to EE Connect, allowing EE to issue a reward (coupon or points)<br><br>
+        Upon completion of the action in AIR, Braze would receive an outbound event from AIR.
+      </td>
+      <td>
+        <ul>
+          <li>Rewards (Coupon or points) are issued to a consumer for joining the loyalty program</li>
+          <li>Rewards are issued to a consumer that had a late delivery</li>
+          <li>Birthday Rewards</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
+{% endtab %}
+{% endtabs %}
 
-The custom data that can be sent to Braze as custom attributes or events can be found in the data model in Eagle Eye’s [documentation](https://developer.eagleeye.com/docs/braze#data-model).
+{% alert tip %}
+To learn more about the custom data that can you can send to Braze as custom attributes or events, refer to [Eagle Eye’s Braze documentation](https://developer.eagleeye.com/docs/braze#data-model).
+{% endalert %}
 
-## Setup Instructions
+## Integration Overview
 
-### Config Service for EE Connect
+Currently, inbound and outbound connectors can only be set up via API with direct support from the Eagle Eye team&#8212;however, a self-serve option within the AIR dashboard is on the way!
 
-Inbound and outbound connectors can currently be set up via API with support from the Eagle Eye team. A self-serve option will soon be available directly within the AIR dashboard.
+When working with your Eagle Eye team, you'll complete the following:
 
-To set up the integration, you’ll work closely with your Eagle Eye team through the following steps:
+### Step 1: Provide configuration details
 
-1. **Provide Configuration Details**  
-   a. **Braze API Credentials**  
-   - Share your Braze REST endpoint, App Identifier, and API Key securely with your Eagle Eye contact.
-     
-   b. **Confirm Identifier Matching**
-   - Determine and share the primary user identifier for profile updates that is common in AIR and Braze, such as External ID or Email.
-   
-   c. **Provide Auth Key for security**  
-   - Determine and share a secret auth key for each inbound and outbound connector.
-   
-   d. **Determine currency**  
-   - Share the 3 digit currency code for display of monetary purchase amounts for e.g. USD.
+First, you'll provide the following details to your Eagle Eye team:
 
-3. **Eagle Eye Connect Configuration**  
-   - Your Eagle Eye team will configure Eagle Eye Connect with the above details along with unique AIR API credentials and outbound events for the connectors.
+| You Provide            | Description |
+|------------------------|-------------|
+| Braze API credentials  | Share your Braze REST endpoint, App Identifier, and API Key securely with your Eagle Eye contact. |
+| Identifier matching    | Determine and share the primary user identifier for profile updates that is common in AIR and Braze, such as External ID or Email. |
+| Auth key               | Determine and share a secret auth key for each inbound and outbound connector. |
+| Currency code          | Share the 3-digit currency code for displaying monetary purchase amounts (e.g., USD). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-4. **Configure Social Behavioral Actions in AIR**  
-   - Set up one or more Social Behavioural Actions in AIR with unique action references to issue points or coupons.
+### Step 2: Configure Eagle Eye Connect 
 
-5. **Braze Configuration**  
-   - Set up Campaigns in Braze to issue rewards in AIR  
-   - Set up any communications to consumers when AIR events are received
+Your Eagle Eye team will configure Eagle Eye Connect using your provided details along with unique AIR API credentials and outbound events for the connectors.
 
-6. **Test the Integration**  
-   - Make API calls in AIR and observe event data flow into your Braze workspace. Validate data received from AIR and confirm attributes are updating as expected.  
-   - Add users to audiences and confirm rewards are issued in AIR.
+### Step 3: Configure Social Behavioral Actions in AIR
 
-7. **Launch in Production**  
-   - Once testing is successful, the integration can go live to continuously send data to Braze. The same configuration steps are required for production environments in AIR and Braze
+Next, you'll set up one or more Social Behavioral Actions in AIR with unique action references to issue points or coupons.
+
+### Step 4: Configure Braze
+
+In Braze, you'll complete the following:
+
+- Set up Campaigns in Braze to issue rewards in AIR  
+- Set up any communications to consumers when AIR events are received
+
+### Step 5: Test your integration
+
+Make API calls in AIR and observe event data flow into your Braze workspace.Validate data received from AIR and confirm attributes are updating as expected.  
+
+Also, add users to audiences and confirm rewards are issued in AIR.
+
+### Step 6: Launch to production
+
+After testing is successful, the integration can go live to continuously send data to Braze. The same configuration steps are required for production environments in AIR and Braze
 
 Reach out to your Eagle Eye Customer Success Manager to have a resource assigned to you, to set up EE Connect.
 
-
 ## Support
 
-For integration support or troubleshooting, please contact the Eagle Eye support team at support@eagleeye.com.
-
-
-
-
-
-
-
+For integration support or troubleshooting, please contact the Eagle Eye support team at [support@eagleeye.com](mailto:support@eagleeye.com).
