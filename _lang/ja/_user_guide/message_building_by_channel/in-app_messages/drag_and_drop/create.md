@@ -135,7 +135,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 - 利用可能なエディターブロックとそのプロパティのリストについては、[エディターブロック]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 - メッセージの外観と感触をカスタマイズするためのヘルプについては、[スタイル設定]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)をチェックしてください。
-- 右から左へのメッセージの作成に関するベストプラクティスについては、[右から左へのメッセージの作成]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)を参照してください。
+- 右から左へのメッセージの作成に関するベストプラクティスについては、[右から左へのメッセージの作成]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ## ステップ 5: アプリ内メッセージをテストする
 

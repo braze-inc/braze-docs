@@ -89,8 +89,8 @@ $(document).ready(function () {
       search_msg += "...";
     }
     var url = item.url;
-    if (heading) {
-      url += "#" + string_to_slug(heading);
+    if (item.anchor) {
+      url += "#" + item.anchor;
     }
     result_template += `<a href="${base_url}${url}">
       <div class="title">${title}

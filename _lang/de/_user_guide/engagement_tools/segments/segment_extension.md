@@ -2,8 +2,7 @@
 nav_title: Segmenterweiterungen
 article_title: Segmenterweiterungen
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "In diesem Artikel erfahren Sie, wie Sie eine Segmenterweiterung einrichten und verwenden, um Ihre Segmentierungsfunktionen zu verbessern."
 tool: Segments
 ---
@@ -32,10 +31,6 @@ Um eine Segment-Erweiterung zu erstellen, erstellen Sie einen Filter zur Verfein
 
 Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenterweiterungen**.
-{% endalert %}
-
 Wählen Sie in der Tabelle Segment-Erweiterungen die Option **Neue Erweiterung erstellen** und wählen Sie dann Ihre Erfahrung bei der Erstellung von Segment-Erweiterungen aus:
 
 - **Einfache Erweiterung:** Erstellen Sie eine Segmenterweiterung, die sich auf ein einzelnes Event konzentriert, indem Sie ein geführtes Formular verwenden.
@@ -44,7 +39,7 @@ Am besten geeignet, wenn Sie kein SQL verwenden möchten.
 - **Inkrementelle Aktualisierung:** Schreiben Sie ein Snowflake-SQL-Segment, das automatisch die Daten der letzten 2 Tage aktualisiert oder aktualisieren Sie sie bei Bedarf manuell. Die beste Lösung für ein ausgewogenes Verhältnis zwischen Genauigkeit und Kosteneffizienz.
 - **Vollständige Auffrischung:** Schreiben Sie ein Snowflake-SQL-Segment, das die gesamte Zielgruppe bei einer manuellen Aktualisierung neu berechnet. Am besten geeignet, wenn Sie einen vollständigen, aktuellen Überblick über Ihre Zielgruppe benötigen.
 
-![""][20]{: style="max-width:50%"}
+![Tabelle mit verschiedenen Erfahrungen bei der Erstellung von Segment-Erweiterungen, aus der Sie auswählen können.][20]{: style="max-width:50%"}
 
 Wenn Sie eine Erfahrung auswählen, die SQL verwendet, finden Sie weitere Informationen unter [SQL-Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
 
@@ -62,7 +57,7 @@ Wählen Sie zwischen den Kriterien Kauf, Nachrichteninteraktion oder benutzerdef
 
 Die Segmentierung auf der Grundlage von Event-Daten aus mehr als 730 Tagen kann mit anderen Filtern unter **Segmente** vorgenommen werden. Bei der Auswahl Ihres Zeitraums können Sie einen relativen Datumsbereich (z.B. die letzten X Tage), ein Startdatum, ein Enddatum oder einen genauen Datumsbereich (Datum A bis Datum B) angeben.
 
-![""][3]
+![Segmentierungskriterien für Nutzer:innen, die im Zeitraum vom 1\. August 2023 bis zum 10\. August 2023 ein angepasstes Event, "# of aaa", mehr als 0 Mal durchgeführt haben.][3]
 
 #### Segmentierung der Eigenschaften von Events
 
@@ -85,7 +80,7 @@ Wir unterstützen auch die Segmentierung auf der Grundlage [verschachtelter Even
 Segmenterweiterungen beruhen auf der langfristigen Speicherung von Event-Eigenschaften und haben kein Limit für die Speicherung von zeitgestempelten Eigenschaften. Sie können auf die Event-Eigenschaften zurückblicken, die in den letzten zwei Jahren getrackt wurden. Die Verwendung von Ereigniseigenschaften innerhalb von Segment Extensions hat keinen Einfluss auf die Verwendung von Datenpunkten.
 
 {% alert note %}
-Sie benötigen keine Segment-Erweiterungen, um Event-Eigenschaften oder verschachtelte angepasste Attribute in Ihrem Segment zu verwenden. Segment-Erweiterungen erweitern lediglich das historische Fenster, das zur Erstellung eines Segments verwendet wird. Sie können ein Realtime [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) erstellen, das Event-Eigenschaften der letzten 30 Tage oder verschachtelte angepasste Attribute verwendet. Ebenso können Sie [Ihre Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) so [planen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/), dass sie auf der Grundlage einer Event-Eigenschaft in Realtime triggern - eine Segment-Erweiterung ist nicht erforderlich.
+Sie benötigen keine Segment-Erweiterungen, um Event-Eigenschaften oder verschachtelte angepasste Attribute in Ihrem Segment zu verwenden. Segment-Erweiterungen erweitern lediglich das historische Fenster, das zur Erstellung eines Segments verwendet wird. Sie können ein Realtime [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) erstellen, das Event-Eigenschaften der letzten 30 Tage oder verschachtelte angepasste Attribute verwendet. Ebenso können Sie Ihre Nachrichten so [planen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/), dass sie auf der Grundlage einer Event-Eigenschaft in Realtime triggern - eine Segment-Erweiterung ist nicht erforderlich.
 {% endalert %}
 
 ### Schritt 4: Einstellungen für die Aktualisierung festlegen (optional)
@@ -131,30 +126,59 @@ Segmente können aufgrund von Datenverarbeitungszeiten bis zu 60 Minuten für di
 - Für eine bestimmte Segmenterweiterung kann jeweils nur eine Aktualisierung erfolgen. Wenn es einen Konflikt gibt, bei dem eine neue Anfrage zur Aktualisierung gestartet wird, während die Verarbeitung einer bestehenden Aktualisierung bereits begonnen hat, bricht Braze die neue Anfrage zur Aktualisierung ab und setzt die laufende Verarbeitung fort.
 {% endalert %}
 
+#### Kriterien zur automatischen Deaktivierung veralteter Erweiterungen
+
+Geplante Aktualisierungen werden automatisch deaktiviert, sobald eine Segment-Erweiterung veraltet ist. Eine Segment-Erweiterung ist veraltet, wenn sie die folgenden Kriterien erfüllt:
+
+- Nicht in aktiven Kampagnen oder Canvasen verwendet
+- Wird in keinem Segment verwendet, das sich in einer aktiven Kampagne oder einem Canvas befindet
+- Wird in keinem Segment verwendet, in dem [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) aktiviert ist.
+- Wurde seit über sieben Tagen nicht mehr geändert
+- Wurde seit mehr als sieben Tagen nicht zu einer Kampagne, einem Canvas (einschließlich Entwürfen) oder einer Segmentierung hinzugefügt.
+
+Wenn die geplante Aktualisierung für eine Segment-Erweiterung deaktiviert ist, erhält diese Erweiterung eine entsprechende Benachrichtigung.
+
+![Eine Benachrichtigung, die besagt, dass "Geplante Aktualisierungen für diese Erweiterung ausgeschaltet wurden, da sie in keinen aktiven Kampagnen, Canvase oder Segmenten verwendet wird. Die Segment-Erweiterung wurde am 23\. Februar 2025 um 12:00 Uhr deaktiviert."][1]
+
+Wenn Sie bereit sind, eine veraltete Segment-Erweiterung zu verwenden, [überprüfen Sie die Aktualisierungseinstellungen](#step-4-designate-refresh-settings-optional), wählen Sie den Zeitplan für die Aktualisierung aus, der zu Ihrem Anwendungsfall passt, und speichern Sie dann alle Änderungen.
+
 ### Schritt 5: Speichern Sie Ihre Segmenterweiterung
 
 Sobald Sie **Speichern** auswählen, beginnt die Verarbeitung Ihrer Erweiterung. Wie lange es dauert, Ihre Erweiterung zu generieren, hängt davon ab, wie viele Nutzer:innen Sie haben, wie viele angepasste Events oder Kauf-Events Sie erfassen und wie viele Tage Sie im Verlauf zurückblicken wollen.
 
 Während Ihre Erweiterung in Bearbeitung ist, sehen Sie eine kleine Animation neben dem Namen der Erweiterung und das Wort "In Bearbeitung" in der Spalte **"Zuletzt bearbeitet"** in der Erweiterungsliste. Beachten Sie, dass Sie eine Erweiterung nicht bearbeiten können, solange sie in Bearbeitung ist.
 
-![""][5]
+!["Segment-Erweiterungen" Seite mit zwei aktiven Erweiterungen.][5]
 
 ### Schritt 6: Verwenden Sie Ihre Erweiterung in einem Segment
 
 Sobald Sie eine Erweiterung erstellt haben, können Sie sie als Filter verwenden, wenn Sie ein Segment erstellen oder eine Zielgruppe für eine Kampagne oder ein Canvas definieren. Beginnen Sie mit der Auswahl von **Braze Segment Extension** aus der Filterliste unter dem Abschnitt **Benutzerattribute**.
 
-![""][6]
+![Abschnitt "Filter" mit einem Filter-Dropdown, das "Braze Segment-Erweiterungen" anzeigt.][6]
 
 Wählen Sie in der Filterliste Braze-Segmenterweiterung die Erweiterung aus, die Sie in dieses Segment aufnehmen oder ausschließen möchten.
 
-![""][7]
+![Ein "Braze Segment-Erweiterungen" Filter, der ein Segment "Online Shopper Ext..." enthält.][7]
 
 Um die Kriterien der Erweiterung anzuzeigen, wählen Sie **Erweiterungsdetails anzeigen**, um die Details in einem modalen Popup anzuzeigen.
 
-![""][8]{: style="max-width:70%;"}
+![Erweiterungsdetails für die "Online Shopper Erweiterung - 90 Tage".][8]{: style="max-width:70%;"}
 
 Jetzt können Sie wie gewohnt mit der [Erstellung Ihrer Segmente][11] fortfahren.
 
+## Häufig gestellte Fragen
+
+### Kann ich eine Segment-Erweiterung erstellen, die mehrere angepasste Events verwendet?
+
+Ja Sie können mehrere Ereignisse hinzufügen oder mehrere Snowflake-Tabellen referenzieren, wenn Sie [SQL Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) verwenden. 
+
+Wenn Sie die **Einfache Erweiterung** Segment-Erweiterungen verwenden, können Sie ein angepasstes Event, ein Kauf-Event oder eine Kanal-Interaktion auswählen. Sie können jedoch mehrere Segment-Erweiterungen bei der Erstellung des Segments mit einem UND oder ODER kombinieren.
+
+### Kann ich Segment-Erweiterungen archivieren, wenn sie in einer aktiven Kampagne vorhanden sind?
+
+Nein. Bevor Sie eine Segment-Erweiterung archivieren können, müssen Sie sie aus allen aktiven Messaging-Nachrichten entfernen.
+
+[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension1.png %}
 [5]: {% image_buster /assets/img/segment/segment_extension5.png %}

@@ -1,14 +1,14 @@
 ---
 nav_title: Live Updates for Android
-article_title: Live Activities for the Android Braze SDK
+article_title: Live Updates for the Android Braze SDK
 page_order: 0.1
-description: "Learn how to set up Live Activities for the Android Braze SDK."
+description: "Learn how to set up Live Updates for the Android Braze SDK."
 platform: 
   - Android
   - FireOS
 ---
 
-# Live Activities for Android
+# Live Updates for Android
 
 > Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates aren't officially supported, this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/live_notifications/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
 

@@ -1,16 +1,16 @@
 ---
-nav_title: "GET: Vorhandenes Dashboard-Benutzerkonto nach E-Mail suchen"
-article_title: "GET: Vorhandenes Dashboard-Benutzerkonto nach E-Mail suchen"
+nav_title: "GET: Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen"
+article_title: "GET: Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Suche nach einem bestehenden Dashboard-Benutzerkonto per E-Mail."
+description: "Dieser Artikel beschreibt die Suche nach einem bestehenden Dashboard Nutzer:in-Konto per E-Mail Braze Endpunkt."
 ---
 
 {% api %}
-# Vorhandenes Dashboard-Benutzerkonto nach E-Mail suchen
+# Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen
 {% apimethod get %}
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
@@ -25,20 +25,20 @@ Beachten Sie, dass der Abfrageparameter, wenn er URL-kodiert ist, wie folgt auss
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden den Ursprung Ihres Dienstes als `X-Request-Origin` Kopfzeile. Weitere Informationen finden Sie unter [Automatisierte Benutzerbereitstellung]({{site.baseurl}}/scim/automated_user_provisioning/).
+Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
+{% multi_lang_include rate_limits.md endpunkt='look up dashboard user email' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `userName@example.com` | Erforderlich | String | Die E-Mail des Benutzers. |
+| `userName@example.com` | Erforderlich | String | Die E-Mail des Nutzers:innen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 ```json
 Content-Type: application/json

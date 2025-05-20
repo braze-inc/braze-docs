@@ -15,7 +15,7 @@ description: "Auf dieser Landing Page finden Sie Kampagnentests und Tipps. Hier 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Versenden von Testnachrichten
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API-gesteuerte und aktionsbasierte Kampagnen
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

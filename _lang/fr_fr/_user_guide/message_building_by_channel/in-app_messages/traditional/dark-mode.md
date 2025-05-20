@@ -36,10 +36,6 @@ Vous pouvez utiliser cette fonctionnalité même si votre application n’offre 
 
 Pour utiliser le mode sombre pour tous les messages in-app, accédez à **Modèles** > **Modèles de messages in-app.**
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Modèles et médias.**
-{% endalert %}
-
 Sélectionnez ensuite [Créer un profil de couleur][2] dans la liste déroulante. Créez un profil de couleur qui correspond à votre thème du mode sombre. Puis, chaque fois que vous créez une version en mode sombre d’un message in-app, vous pouvez sélectionner ce profil de couleur et conserver la cohérence de l’apparence de vos messages in-app.
 
 ## Compatibilité

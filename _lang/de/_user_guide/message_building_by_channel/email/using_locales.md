@@ -46,6 +46,33 @@ Alle Änderungen an den IDs oder Lokalisierungen in der CSV-Datei werden nicht a
 
 Wählen Sie im Bereich **Vorschau & Test** die Option **Nutzer:innen in mehreren Sprachen** aus, um zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
 
+## Übersetzungen verwalten
+
+### Bearbeitung von Übersetzungen für gestartete Kampagnen und Canvase
+
+Nachdem eine Kampagne oder ein Canvas gestartet wurde, können Sie auch im Entwurfsmodus noch Übersetzungen ändern. Dies gilt unabhängig davon, ob Sie die Übersetzungen direkt im Composer, per CSV-Upload oder über die API bearbeiten. 
+
+Bevor Sie ein Update der Übersetzung vornehmen, müssen Sie die Kampagne oder das Canvas zunächst als Entwurf speichern.
+
+1. Wählen Sie **Kampagne/Canvas bearbeiten** und nehmen Sie dann Ihre Änderungen im Composer vor.
+2. Wählen Sie **Als Entwurf speichern** und wählen Sie dann im Modal **Ja**.
+3. Gehen Sie zum Schritt **Review Summary** und wählen Sie **Update campaign/Canvas**.
+4. Wählen Sie im Modal **Kampagne/Canvas aktualisieren** aus.
+
+Weitere Einzelheiten zur Verwaltung von Kampagnen und Canvase nach dem Einführen finden Sie unter [Bearbeiten von gestarteten Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) und [Canvas-Entwürfen und Bearbeiten nach dem Einführen]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+
+### Duplizieren von Canvas-Schritten oder Kampagnen und Übersetzungen
+
+Wenn Sie einen Canvas-Schritt oder eine Kampagne duplizieren, egal ob im Entwurfsmodus nach dem Start oder während der ursprünglichen Erstellung, werden die mit diesem Schritt verbundenen Übersetzungen nicht übernommen. Alle notwendigen Übersetzungen müssen dem neuen Schritt oder der Kampagne hinzugefügt werden. Achten Sie darauf, die Übersetzungen zu überprüfen und entsprechend zu aktualisieren, wenn Sie Änderungen an Ihrem Canvas oder Ihrer Kampagne vornehmen.
+
+### Verwendung der mehrsprachigen API mit Canvase
+
+Um die [mehrsprachige API mit Canvase]({{site.baseurl}}/api/endpoints/translations/) zu verwenden, müssen Sie die Parameter `workflow_id`, `step_id` und `message_variation_id` in die Parameterliste aufnehmen.
+
+#### Canvas-Schritte zu Entwürfen nach der Markteinführung hinzugefügt
+
+Wenn Sie die mehrsprachige API mit Canvas-Schritten verwenden, die nach dem Start des Canvas erstellt wurden, ist die `message_variation_id`, die Sie an die API übergeben, leer oder leer.
+
 ## Häufig gestellte Fragen
 
 #### Ich möchte eine Änderung an der übersetzten Kopie in einer meiner Sprachversionen vornehmen. Wie kann ich das tun?
@@ -71,3 +98,5 @@ Ja Achten Sie jedoch darauf, dass das HTML-Design nicht mitübersetzt wird.
 | Die Übersetzungsdatei enthält Textblöcke, die in der aktuellen Nachricht nicht vorkommen (wie den Entwurfsstand beim Upload der Übersetzungen). | Textblöcke, die in der Nachricht fehlen, werden nicht aus der Übersetzungsdatei übernommen und in Braze gespeichert. |
 | Ein Gebietsschema wird aus einer Nachricht entfernt, nachdem es als Teil der Übersetzungsdatei in die Nachricht übernommen worden ist.                           | Wenn Sie das Gebietsschema entfernen, werden alle damit verbundenen Übersetzungen in der Nachricht entfernt.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% multi_lang_include locales.md section="Häufig gestellte Fragen" %}

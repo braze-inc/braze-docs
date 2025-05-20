@@ -1,6 +1,6 @@
 ## About the Web Braze SDK
 
-The Web Braze SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. For more information, see [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs").
+The Web Braze SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. For more information, see [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -200,7 +200,7 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 </script>
 ```
 
-For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/).
+For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
 ## Other integration methods
 
@@ -260,15 +260,12 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 
 ### AMD: Disable support
 
-{% details See more %}
 If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options in this list, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-{% enddetails %}
 
 ### AMD: Module loader
 
-{% details See more %}
 If you use RequireJS or other AMD module-loaders we recommend self-hosting a copy of our library and referencing it as you would with other resources:
 
 ```javascript
@@ -278,17 +275,13 @@ require(['path/to/braze.min.js'], function(braze) {
   braze.openSession();
 });
 ```
-{% enddetails %}
 
 ### Electron {#electron}
 
-{% details See more %}
 Electron does not officially support web push notifications (see: this [GitHub issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
-{% enddetails %}
 
 ### Jest framework {#jest}
 
-{% details See more %}
 When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration in `package.json` to ignore the Braze SDK:
 
 ```
@@ -298,11 +291,9 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
   ]
 }
 ```
-{% enddetails %}
 
 ### SSR frameworks {#ssr}
 
-{% details See more %}
 If you use a Server-Side Rendering (SSR) framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
 
 You can retain the benefits of tree-shaking when doing so by exporting the parts of the SDK that you need in a separate file and then dynamically importing that file into your component.
@@ -342,19 +333,15 @@ useEffect(() => {
     });
 }, []);
 ```
-{% enddetails %}
 
 ### Tealium iQ
 
-{% details See more %}
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
 For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
-{% enddetails %}
 
 ### Vite {#vite}
 
-{% details See more %}
 If you use Vite and see a warning around circular dependencies or `Uncaught TypeError: Class extends value undefined is not a constructor or null`, you may need to exclude the Braze SDK from its [dependency discovery](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior):
 
 ```
@@ -362,10 +349,7 @@ optimizeDeps: {
     exclude: ['@braze/web-sdk']
 },
 ```
-{% enddetails %}
 
 ### Other tag managers
 
-{% details See more %}
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
-{% enddetails %}

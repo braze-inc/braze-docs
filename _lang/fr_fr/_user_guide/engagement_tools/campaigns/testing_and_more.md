@@ -15,7 +15,7 @@ description: "Cette page d’accueil présente des tests et des conseils pour le
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Envoyer des messages de test
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Campagnes déclenchées par API et par événement
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

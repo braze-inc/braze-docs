@@ -31,13 +31,13 @@ To target users that fall into multiple previously created segments, add multipl
 {% tab multiple filters %}
 To target users without adding a segment, you can use a series of filters. This is an impromptu audience during message creation and allows you to skip segment creation when sending to one-off audiences.
 
-![Additional filters for a message that targets users who've last opened an app within the day, have never received a campaign or Canvas step, and who made a purchase less than 30 days ago.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:70%;"}
+![Additional filters for a message that targets users who've last opened an app within the day, have never received a campaign or Canvas step, and who made a purchase less than 30 days ago.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments & filters %}
 You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the following screenshot, which targets users that are in the "Daily Active Users" segment, "Never opened email" segment, and made a purchase more than 30 days ago.
 
-![Targeting options for a message that include two segments and have an additional filter for a last purchase made less than 30 days ago.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:70%;"}
+![Targeting options for a message that include two segments and have an additional filter for a last purchase made less than 30 days ago.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
 {% endtab %}
 {% endtabs %}
 
@@ -49,7 +49,7 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![The "User Lookup" section with a button "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%"}
+![The "User Lookup" section with a button "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Audience summary
 

@@ -98,7 +98,7 @@ Ja So wie SQL-Segmenterweiterungen auf Ihr Kontingent an Segmenterweiterungen an
 
 ### Ein Template eignet sich nicht für ein bestimmtes Katalogsegment. Wie soll ich das einrichten?
 
-Wenden Sie sich an Ihren Kundenbetreuer oder den [Braze-Support]({{site.baseurl}}/help/support/), wenn Sie weitere Hilfe benötigen.
+Wenden Sie sich an Ihren Kundenbetreuer oder den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/), wenn Sie weitere Hilfe benötigen.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

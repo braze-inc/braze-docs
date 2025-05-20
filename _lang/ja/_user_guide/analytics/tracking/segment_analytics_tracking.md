@@ -27,10 +27,6 @@ Segmentのページ** Segment Details** セクションで、**Analytics Trackin
 
 [このセグメントの収益と購入の推移][14]に関するデータを表示するには、[**分析**] > [**収益レポート**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Revenue** は**Data** にあります。
-{% endalert %}
-
 ![Segment別売上高][17]
 
 任意のカスタム期間のセグメントデータを視覚的に比較するには、セグメントをグラフに追加するか、グラフから削除します。**Breakdown**ドロップダウンで**Segment**を選択し、**Breakdown values**でSegmentを選択します。
@@ -42,10 +38,6 @@ Segmentのページ** Segment Details** セクションで、**Analytics Trackin
 ## セッション数の推移
 
 同様に、[この特定セグメントのセッション数の推移][13]に関するデータは、[**ホーム**] ページで確認できます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これは [**概要**] ページです。
-{% endalert %}
 
 ![Segment別セッションデーター][18]
 

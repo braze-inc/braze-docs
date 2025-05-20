@@ -77,10 +77,6 @@ Los despliegues de la bandera de características siguen siendo coherentes para 
 
 Esta estrategia ayuda a garantizar que los usuarios tengan una experiencia coherente en tu aplicación y no vayan y vengan de una sesión a otra. Por supuesto, desactivar una característica hasta el 0% eliminará a todos los usuarios de la bandera de características, lo que resulta útil si descubres un error o necesitas desactivar la característica por completo.
 
-### ¿Puedo crear un segmento de usuarios que estén actualmente en una bandera de característica? {#feature-flag-filter}
-
-Está en nuestra hoja de ruta de productos. Para ayudar a priorizar esto, plantea esta opinión a tu equipo de cuenta Braze o envía un correo electrónico a nuestro equipo: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
-
 ## Temas técnicos
 
 ### ¿Se pueden utilizar feature flags para controlar cuándo se inicializa el SDK de Braze? {#initialization}

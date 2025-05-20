@@ -46,10 +46,6 @@ También recomendamos formatear todo el texto de los archivos CSV en minúsculas
 
 Para crear un catálogo, vaya a **Configuración de datos** > **Catálogos**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Catálogos** en **Datos**.
-{% endalert %}
-
 Selecciona **Crear nuevo catálogo** y, a continuación, elige **Cargar CSV** o **Crear en el navegador**.
 
 ### Método 1: Cargar CSV

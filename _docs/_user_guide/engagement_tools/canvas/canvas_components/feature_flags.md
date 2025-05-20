@@ -17,9 +17,11 @@ Looking for more information about feature flags and how they can be used in Bra
 
 ## Creating a feature flag
 
-![][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![An example Feature Flag step for the Live Chat Button feature.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 To create a Feature Flag component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Feature Flag**. Next, select the feature flag from the dropdown, which contains any feature flags that are not archived.
+
+## How this step works
 
 When a Canvas is stopped, or archived, or a step is removed, any user who has gone through that step will no longer receive the step's feature flag and its properties. The user will still be subject to the default rollout percentage and audience segmentation for that feature flag and any other Canvases that might still be active.
 
@@ -29,7 +31,7 @@ Properties in a Canvas step can be changed after launch, and even after a user g
 
 When creating a feature flag you specify default properties. When setting up a feature flag Canvas step, you can either keep the default values, or overwrite the values for users who enter this step.
 
-![][4]{: style="max-width:85%"}
+![A feature flag "Preference Center" with "String" as the property, "url" as the property key, and a value.][4]{: style="max-width:90%"}
 
 Go to **Messaging** > **Feature Flags** to edit, add, or remove additional properties.
 

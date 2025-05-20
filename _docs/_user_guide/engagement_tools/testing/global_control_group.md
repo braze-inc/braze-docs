@@ -61,7 +61,7 @@ Use tags to add exclusion settings to your Global Control Group. Any campaigns o
 You may want to add exclusion settings if you have transactional messages that should send to every user.
 {% endalert %}
 
-![The option to add exclusion settings to your Global Control Group.][5]
+![The section to add or edit exclusion settings for your Global Control Group.][5]
 
 ### Step 4: Save your control group
 
@@ -77,7 +77,7 @@ Before disabling your Control Group, we recommend [exporting](#export-group-memb
 
 After disabling your Control Group, you can save a new one. When you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with text warning that once your Global Control Group is disabled, it will no longer be excluded from any new or active campaigns or Canvases.][2]{: style="max-width:60%" }
 
 ## Export your control group members {#export-group-members}
 
@@ -93,7 +93,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
 
-![A "Miscellaneous" section reporting that the user has a random bucket number is 2030 and is in the Global Control Group.][1]{: style="max-width:60%;"}
+![A "Miscellaneous" section reporting that the user has a random bucket number of 6356 and is not in the Global Control Group.][1]{: style="max-width:50%;"}
 
 ## Reporting
 

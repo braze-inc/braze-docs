@@ -17,6 +17,7 @@ Antes desse recurso, as propriedades de entrada só podiam ser usadas na primeir
 ## Uso de propriedades de entrada
 
 As propriedades de entrada podem ser usadas em Canvas baseadas em ação e disparadas por API. Essas propriedades de entrada são definidas quando um Canvas é disparado por um evento personalizado, uma compra ou uma chamada de API. Consulte os artigos a seguir para saber mais:
+
 - [Objeto de propriedades de entrada da tela]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objeto de propriedades do evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

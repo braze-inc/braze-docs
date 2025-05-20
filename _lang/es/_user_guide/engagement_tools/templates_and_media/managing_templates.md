@@ -42,10 +42,6 @@ Las plantillas duplicadas pueden encontrarse ordenando la columna **Última edic
 
 ## Archivando plantillas
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), **Plantillas** es **Plantillas y medios**.
-{% endalert %}
-
 ![Menú desplegable de ajustes ampliado que muestra tres opciones: Editar, Archivar y Duplicar, donde resalta la opción Archivar.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 Para archivar una plantilla individual, seleccione el icono de configuración en la pantalla de la parrilla de plantillas y seleccione **Archivar**. Cuando se archiva una plantilla, ten en cuenta los siguientes escenarios diferentes:

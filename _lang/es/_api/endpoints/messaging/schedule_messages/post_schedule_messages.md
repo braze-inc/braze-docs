@@ -18,6 +18,10 @@ description: "En este artículo se describen los detalles del punto final Crear 
 
 Si te diriges a un segmento, se almacenará un registro de tu solicitud en la [Consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/) después de que se hayan enviado todos los mensajes programados.
 
+{% alert tip %}
+Si te interesa enviar mensajes inmediatamente a usuarios designados, utiliza en su lugar el [punto final`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages).
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
 ## Requisitos previos

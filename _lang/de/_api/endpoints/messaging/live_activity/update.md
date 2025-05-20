@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Live-Aktivität aktualisieren."
+description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Update Live Activity."
 
 ---
 {% api %}
@@ -15,9 +15,9 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Live-Aktivität 
 /messages/live_activity/update
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die von Ihrer iOS-App angezeigten [Live-Aktivitäten]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) zu aktualisieren und zu beenden. Dieser Endpunkt erfordert eine zusätzliche Einrichtung.
+> Verwenden Sie diesen Endpunkt, um die von Ihrer iOS App angezeigten [Live-Aktivitäten]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) zu aktualisieren und zu beenden. Dieser Endpunkt erfordert eine zusätzliche Einrichtung.
 
-Nachdem Sie eine Live-Aktivität registriert haben, können Sie eine JSON-Nutzlast übergeben, um Ihren Apple Push Notification Service (APNs) zu aktualisieren. Weitere Informationen finden Sie in der Apple-Dokumentation zum [Aktualisieren Ihrer Live-Aktivitäten mit Push-Benachrichtigungen](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
+Nachdem Sie eine Live-Aktivität registriert haben, können Sie eine JSON-Nutzlast übergeben, um Ihren Apple Push-Benachrichtigungsdienst (APNs) zu aktualisieren. Weitere Informationen finden Sie in der Dokumentation von Apple zum [Update Ihrer Live-Aktivitäten mit Push-Benachrichtigungen](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -26,13 +26,13 @@ Nachdem Sie eine Live-Aktivität registriert haben, können Sie eine JSON-Nutzla
 Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
 
 - Erzeugen Sie einen API-Schlüssel mit der Berechtigung `messages.live_activity.update`.
-- Registrieren Sie eine Live-Aktivität [aus der Ferne]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) oder [lokal]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) mit dem Braze Swift SDK.
+- Registrieren Sie eine Live-Aktivität [aus der Ferne]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) oder [lokal]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) mit dem Braze Swift SDK.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```json
 {
@@ -46,17 +46,17 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
  }
  ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `app_id` | Erforderlich | String | [App-API-Kennung]({{site.baseurl}}/api/identifier_types/#the-app-identifier), die von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
-| `activity_id` | Erforderlich | String | Wenn Sie Ihre Live-Aktivität mit [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class)registrieren, verwenden Sie den Parameter `pushTokenTag`, um das Push-Token der Aktivität mit einer benutzerdefinierten Zeichenfolge zu benennen.<br><br>Setzen Sie `activity_id` auf diese benutzerdefinierte Zeichenfolge, um festzulegen, welche Live-Aktivität Sie aktualisieren möchten. |
-| `content_state` | Erforderlich | Objekt | Sie definieren die `ContentState` Parameter, wenn Sie Ihre Live-Aktivität erstellen. Übergeben Sie die aktualisierten Werte für Ihr `ContentState` mit diesem Objekt.<br><br>Das Format dieser Anfrage muss der Form entsprechen, die Sie ursprünglich definiert haben. |
-| `end_activity` | Optional | Boolesche | Wenn `true`, beendet diese Anfrage die Live-Aktivität. |
-| `dismissal_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) Zeichenfolge) | Dieser Parameter legt die Zeit fest, nach der die Live-Aktivität aus der Benutzeroberfläche entfernt wird. Wenn dieser Zeitpunkt in der Vergangenheit liegt und `end_activity` `true` ist, wird die Live-Aktivität sofort entfernt.<br><br> Wenn `end_activity` `false` ist oder weggelassen wird, aktualisiert dieser Parameter nur die Live-Aktivität.|
-| `stale_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) Zeichenfolge) | Dieser Parameter teilt dem System mit, wann der Inhalt der Live-Aktivität in der Benutzeroberfläche als veraltet markiert wird. |
-| `notification` | Optional | Objekt | Fügen Sie ein [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) Objekt, um eine Push-Benachrichtigung zu definieren. Das Verhalten dieser Push-Benachrichtigung hängt davon ab, ob der Benutzer aktiv ist oder ob er ein Proxy-Gerät verwendet. {::nomarkdown}<ul><li>Wenn ein <code>notification</code> enthalten ist und der Benutzer zum Zeitpunkt der Aktualisierung auf seinem iPhone aktiv ist, wird die aktualisierte Live-Aktivitäts-Benutzeroberfläche nach unten geschoben und wie eine Push-Benachrichtigung angezeigt.</li><li>Wenn ein <code>notification</code> enthalten ist und der Benutzer auf seinem iPhone nicht aktiv ist, leuchtet sein Bildschirm auf und zeigt die aktualisierte Live Activity UI auf dem Sperrbildschirm an.</li><li>Die <code>notification alert</code> wird nicht als Standard-Push-Benachrichtigung angezeigt. Wenn ein Benutzer über ein Proxy-Gerät wie eine Apple Watch verfügt, kann die <code>alert</code> wird dort angezeigt.</li></ul>{:/} |
+| `app_id` | Erforderlich | String | [API-Bezeichner]({{site.baseurl}}/api/identifier_types/#the-app-identifier) der App, der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
+| `activity_id` | Erforderlich | String | Wenn Sie Ihre Live-Aktivität mit [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class)registrieren, verwenden Sie den Parameter `pushTokenTag`, um das Push-Token der Aktivität mit einem angepassten String zu benennen.<br><br>Setzen Sie `activity_id` auf diesen angepassten String, um festzulegen, welche Live-Aktivität Sie aktualisieren möchten. |
+| `content_state` | Erforderlich | Objekt | Sie definieren die `ContentState` Parameter, wenn Sie Ihre Live-Aktivität erstellen. Übergeben Sie die aktualisierten Werte für Ihr `ContentState` mit diesem Objekt.<br><br>Das Format dieser Anfrage muss mit der Form übereinstimmen, die Sie ursprünglich definiert haben. |
+| `end_activity` | Optional | Boolesch | Wenn `true`, beendet diese Anfrage die Live-Aktivität. |
+| `dismissal_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter legt die Zeit fest, nach der die Live-Aktivität aus dem UI des Nutzers:innen entfernt wird. Wenn dieser Zeitpunkt in der Vergangenheit liegt und `end_activity` `true` ist, wird die Live-Aktivität sofort entfernt.<br><br> Wenn `end_activity` `false` ist oder weggelassen wird, aktualisiert dieser Parameter nur die Live-Aktivität.|
+| `stale_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter teilt dem System mit, wenn der Inhalt der Live-Aktivität in der UI des Nutzers:in als veraltet markiert wird. |
+| `notification` | Optional | Objekt | Fügen Sie ein [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) Objekt ein, um eine Push-Benachrichtigung zu definieren. Das Verhalten dieser Push-Benachrichtigung hängt davon ab, ob der Nutzer:innen aktiv ist oder ob er ein Proxy-Gerät verwendet. {::nomarkdown}<ul><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone aktiv ist, wenn das Update zugestellt wird, wird die aktualisierte Live Activity UI nach unten geschoben und wie eine Push-Benachrichtigung angezeigt.</li><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone nicht aktiv ist, leuchtet sein Bildschirm auf und zeigt das aktualisierte Live Activity UI auf seinem Sperrbildschirm an.</li><li>Die <code>notification alert</code> wird nicht als normale Push-Benachrichtigung angezeigt. Wenn ein Nutzer:innen ein Proxy-Gerät, wie eine Apple Watch, besitzt, kann die <code>alert</code> wird dort angezeigt.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -86,11 +86,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## Antwort
 
-Es gibt zwei Statuscode-Antworten für diesen Endpunkt: `201` und `4XX`.
+Für diesen Endpunkt gibt es zwei Status Code Antworten: `201` und `4XX`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Ein `201` Statuscode wird zurückgegeben, wenn die Anfrage korrekt formatiert wurde und wir die Anfrage erhalten haben. Der Statuscode `201` könnte den folgenden Antwortkörper zurückgeben.
+Ein `201` Status Code wird zurückgegeben, wenn die Anfrage korrekt formatiert wurde und wir die Anfrage erhalten haben. Der Status Code `201` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -100,9 +100,9 @@ Ein `201` Statuscode wird zurückgegeben, wenn die Anfrage korrekt formatiert wu
 
 ### Beispiel einer Fehlerantwort
 
-Die Klasse `4XX` des Statuscodes weist auf einen Client-Fehler hin. Weitere Informationen zu Fehlern, die auftreten können, finden Sie im [Artikel API-Fehler und Antworten]({{site.baseurl}}/api/errors/).
+Die Klasse `4XX` des Status Codes zeigt einen Client-Fehler an. Weitere Informationen zu Fehlern, die auftreten können, finden Sie im [Artikel API-Fehler und Antworten]({{site.baseurl}}/api/errors/).
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. 
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. 
 
 ```json
 {

@@ -24,7 +24,7 @@ if (site_language && (site_language != 'en')){
   var base_url = '{{ site.baseurl }}';
   for (var url in validurls) {
     var adjusted_url = url;
-    var adjusted_destination = validurls[url] || "";
+    var adjusted_destination = (Array.isArray(validurls[url]) ? validurls[url][0] : validurls[url]) || "";
     if (!adjusted_url.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
       adjusted_url = adjusted_url.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
     }

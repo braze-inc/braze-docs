@@ -215,7 +215,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam". O Braze cancela automaticamente a inscrição de usuários que marcaram um e-mail como spam, e esses usuários não serão direcionados para futuros e-mails.
+<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não altere o estado da inscrição desses usuários, eles serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar a todos os usuários, inclusive cancelar inscrição".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}

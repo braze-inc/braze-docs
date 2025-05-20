@@ -19,10 +19,6 @@ search_rank: 9
 
 Gerencie geofences em **Público** > **Locais**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os locais** em **Engajamento**.
-{% endalert %}
-
 As geofences são organizadas em conjuntos de geofences - um grupo de geofences que pode ser usado para segmentar ou engajar usuários em toda a plataforma. Cada conjunto de geofences pode conter um máximo de 10.000 geofences.
 
 É possível criar ou fazer upload de uma quantidade ilimitada de geofences no dashboard, permitindo que sua equipe de marketing configure conjuntos de geofences e campanhas sem precisar calcular o número de geofences. A Braze ressincronizará dinamicamente os geofences que rastreia para cada usuário individual, garantindo que os geofences mais relevantes para eles estejam sempre disponíveis.

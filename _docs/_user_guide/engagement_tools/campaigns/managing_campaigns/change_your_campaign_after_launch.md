@@ -60,8 +60,6 @@ This resets eligibility for people who already received the original campaign, s
 
 Drafts are great for making large-scale changes to active campaigns. By creating a draft, you're able to pilot planned changes before your next launch.
 
-![A draft of an active campaign with an option to view the active campaign.]({% image_buster /assets/img/campaign_draft.png %})
-
 {% alert note %}
 A campaign can only have one draft at a time. Additionally, analytics aren't available since the drafted changes haven't been launched yet.
 {% endalert %}
@@ -72,7 +70,11 @@ To create a draft, do the following:
 2. Make your changes.
 3. Select **Save as Draft**. Note that after creating a draft, you cannot edit the active campaign until you either launch or discard your draft.
 
-You can reference the active campaign in the header of the campaign draft or the footer of the campaign analytics after selecting **View Active Campaign**. To return to an active campaign, select **Edit Draft** from the analytics view or the active campaign view.
+![A draft of an active campaign with an option to view the active campaign.]({% image_buster /assets/img/campaign_draft.png %})
+
+As you're making edits to the draft, you can also reference the active campaign in the header of the campaign draft or the footer of the campaign analytics. 
+
+To return to an active campaign, select **Edit Draft** from the analytics view or the active campaign view.
 
 ### In-app message prioritization
 

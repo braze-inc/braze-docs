@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Dashboard-Benutzerkonto entfernen."
+description: "Dieser Artikel beschreibt den Endpunkt Nutzer:innen des Dashboard-Kontos Braze entfernen."
 ---
 
 {% api %}
@@ -15,28 +15,28 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Dashboar
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um einen bestehenden Dashboard-Benutzer dauerhaft zu löschen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) Methode zurückgegeben wird. 
+> Verwenden Sie diesen Endpunkt, um einen bestehenden Nutzer:in des Dashboards dauerhaft zu löschen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird. 
 
-Dies ist vergleichbar mit dem Löschen eines Benutzers im Abschnitt **Unternehmensbenutzer** des Braze Dashboards.
+Dies ist vergleichbar mit dem Löschen eines Nutzers:innen im Bereich **Unternehmensnutzer** des Braze-Dashboards.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden den Ursprung Ihres Dienstes als `X-Request-Origin` Kopfzeile. Weitere Informationen finden Sie unter [Automatisierte Benutzerbereitstellung]({{site.baseurl}}/scim/automated_user_provisioning/).
+Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
+{% multi_lang_include rate_limits.md endpunkt='dashboard nutzer:innen löschen' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `id` | Erforderlich | String | Die Ressourcen-ID des Benutzers. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
+| `id` | Erforderlich | String | Die ID des Nutzers:innen. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Körper der Anfrage
+## Anfragetext
 
 ```json
 Content-Type: application/json
@@ -61,7 +61,7 @@ HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 
-Wenn ein Entwickler mit dieser ID in Braze nicht existiert, wird der Endpunkt mit antworten:
+Wenn ein Entwickler:in mit dieser ID nicht in Braze existiert, antwortet der Endpunkt mit:
 ```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8

@@ -18,10 +18,6 @@ description: "Este artigo explica como configurar o direcionamento por local, pe
 
 Navegue até a página **Segments (Segmentos** ), em **Audience (Público**), para visualizar todos os segmentos de usuários atuais. Nessa página, você pode criar e nomear novos segmentos. Para começar, clique em **Create Segment (Criar segmento** ) e dê um nome ao seu segmento.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Segments** está localizado em **Engagement (Engajamento**).
-{% endalert %}
-
 ![][1]{: style="max-width:70%;"}
 
 ## Etapa 2: Personalize seu local

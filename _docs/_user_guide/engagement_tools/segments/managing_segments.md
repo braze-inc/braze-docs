@@ -1,7 +1,7 @@
 ---
 nav_title: Managing Segments
 article_title: Managing Segments
-page_order: 1.1
+page_order: 1
 page_type: tutorial
 tool: Segments
 description: "This article covers the actions you can take to manage your segments, such as filtering a list of segments, creating segments, and editing segments."

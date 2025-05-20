@@ -370,7 +370,6 @@ Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die 
 SMS
 {% endapitags %}
 
-
 {% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
 
 Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die Gründe für die fehlgeschlagene Zustellung zu erfahren.
@@ -806,6 +805,8 @@ E-Mail
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Wenn eine E-Mail einen Soft Bounce erhält, versuchen wir es in der Regel innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger.
 
+Soft Bounces werden zwar nicht in den Analytics Ihrer Kampagne getrackt, aber Sie können die Soft Bounces im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) überwachen. Sie können diese Nutzer:innen auch von der Versendung ausschließen oder sich die Anzahl der Soft Bounces der letzten 30 Tage mit dem [Filter Soft Bounced Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) ansehen. Im Nachrichten-Aktivitätsprotokoll können Sie auch den Grund für die Soft Bounces sehen und mögliche Diskrepanzen zwischen den "Sendungen" und "Zustellungen" Ihrer Kampagnen nachvollziehen.
+
 {% endapi %}
 
 {% api %}
@@ -995,7 +996,7 @@ Content-Cards
 In-App-Nachricht, Content-Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiedererkennbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger:innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiederwählbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger:innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
 
 <span class="calculation-line">Kalkulation: Anzahl</span>
 

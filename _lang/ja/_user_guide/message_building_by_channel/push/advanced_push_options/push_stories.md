@@ -33,7 +33,11 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 
 ![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-プッシュス通知ストーリーを使用するには、[プッシュキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)を作成し、[**通知タイプ**] として [**プッシュ通知ストーリー**] を選択します。
+プッシュストーリーを使用するには、次の手順を実行します。
+
+1. [プッシュキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) を作成します。
+2. **Notification Type**では、**プッシュストーリー**を選択します。
+3. **iOS**または**Android**を選択します。プッシュメッセージの両方を選択した場合、プッシュストーリーを作成するオプションは表示されません。 
 
 ### プッシュストーリーの作曲家
 

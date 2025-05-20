@@ -46,10 +46,6 @@ Nous vous recommandons également de formater tout le texte de vos fichiers CSV 
 
 Pour créer un catalogue, allez dans **Paramètres des données** > **Catalogues**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **catalogues** sous **Données.**
-{% endalert %}
-
 Sélectionnez **Créer un catalogue**, puis choisissez de **charger un fichier CSV** ou de **créer dans le navigateur**.
 
 ### Méthode 1 : Charger un fichier CSV

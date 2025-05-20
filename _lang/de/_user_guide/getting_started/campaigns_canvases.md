@@ -30,7 +30,7 @@ Obwohl Kampagnen je nach Kanal unterschiedlich gestaltet werden können, gibt es
 Regelmäßige Kampagnen und A/B-Testkampagnen können geplant werden (z. B. um eine Liste von Nutzern über eine bevorstehende Veranstaltung zu informieren) oder automatisch als Reaktion auf eine Nutzeraktion versendet werden (z. B. um eine E-Mail zu senden, wenn jemand Ihren Newsletter abonniert hat). Erfahren Sie mehr über die [Planung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Unabhängig von der Art der Kampagne, die Sie erstellen, können Ihre Kampagnen auf die Bedürfnisse Ihrer Nutzer eingehen und eine durchdachte, personalisierte Antwort liefern. Nachdem Sie Ihre Kampagne verschickt haben, können Sie mit unseren [integrierten Analysetools]({{site.baseurl}}/user_guide/analytics/reporting/) sehen, wie sie abgeschnitten hat und wie viele Nutzer auf der Grundlage Ihrer [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) konvertiert haben.
+Unabhängig von der Art der Kampagne, die Sie erstellen, können Ihre Kampagnen auf die Bedürfnisse Ihrer Nutzer eingehen und eine durchdachte, personalisierte Antwort liefern. Nachdem Sie Ihre Kampagne verschickt haben, können Sie mit unseren [integrierten Analysetools]({{site.baseurl}}/user_guide/analytics/reporting/) sehen, wie sie abgeschnitten hat und wie viele Nutzer auf der Grundlage Ihrer [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) konvertiert haben.
 
 Hier erfahren Sie mehr über Braze-Kampagnen:
 

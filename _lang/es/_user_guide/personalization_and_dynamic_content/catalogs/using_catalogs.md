@@ -41,6 +41,15 @@ Esto se traduce en lo siguiente:
 
 > ¡Consigue Tales por solo 7,49!
 
+## Exportar catálogos
+
+Hay dos formas de exportar catálogos desde el panel: 
+
+- Pasa el ratón por encima de la fila del catálogo en la sección **Catálogos**. A continuación, selecciona el botón **Exportar catálogo**.
+- Selecciona tu catálogo. A continuación, selecciona el botón **Exportar catálogo** en la pestaña **Vista previa** del catálogo.
+
+Recibirás un correo electrónico para descargar el archivo CSV después de iniciar la exportación. Tendrás hasta cuatro horas para recuperar este archivo.
+
 ## Casos de uso adicionales
 
 ### Varios artículos

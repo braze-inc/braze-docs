@@ -38,7 +38,11 @@ Depois de criar uma seleção, é possível usar a seção **Pré-visualização
 
 ### Liquid nos resultados da seleção
 
-O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos personalizados, pode resultar em resultados diferentes retornados para cada usuário em sua seleção.
+O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos personalizados, pode resultar em resultados diferentes retornados para cada usuário em sua seleção. 
+
+{% alert note %}
+O Connected Content Liquid não é compatível com essas configurações de filtro.
+{% endalert %}
 
 ![Configurações de filtro para seleção de catálogo em que o atributo está definido como um atributo personalizado Liquid.][7]
 

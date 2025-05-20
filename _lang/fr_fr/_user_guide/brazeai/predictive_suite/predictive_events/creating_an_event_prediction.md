@@ -12,10 +12,6 @@ description: "Cet article explique comment créer une prédiction d'événement 
 
 Dans Braze, sélectionnez **Analyse** > **Événements prévisionnels**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **prédictions** sous la rubrique **Engagement**.
-{% endalert %}
-
 Sur cette page, vous trouverez une liste des prédictions d'événements actifs actuels et quelques informations de base à leur sujet. Vous pouvez y renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores utilisateur.
 
 ## Étape 1 : Créer une nouvelle prédiction

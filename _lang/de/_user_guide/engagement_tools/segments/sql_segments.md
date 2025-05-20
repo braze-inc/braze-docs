@@ -34,16 +34,11 @@ Sie können alle SQL Segmente, die in einem der beiden SQL-Editoren erstellt wur
 So erstellen Sie eine vollständige Aktualisierung der SQL-Segmenterweiterung:
 
 1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenterweiterungen**.
-{% endalert %}
-
-{:start="2"}
-2\. Klicken Sie auf **Neue Erweiterung erstellen** und wählen Sie **Vollständige Aktualisierung**.<br><br>
+2. Klicken Sie auf **Neue Erweiterung erstellen** und wählen Sie **Vollständige Aktualisierung**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\. Fügen Sie einen Namen für Ihre Segmenterweiterung hinzu und geben Sie Ihr SQL ein. Lesen Sie den Abschnitt [SQL schreiben](#writing-sql) für Anforderungen und Ressourcen.<br><br>
+3. Fügen Sie einen Namen für Ihre Segmenterweiterung hinzu und geben Sie Ihr SQL ein. Lesen Sie den Abschnitt [SQL schreiben](#writing-sql) für Anforderungen und Ressourcen.<br><br>
    ![SQL-Editor mit einem Beispiel für eine SQL-Segmenterweiterung.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\. Speichern Sie Ihre Segmenterweiterung.
+4. Speichern Sie Ihre Segmenterweiterung.
 
 {% endtab %}
 {% tab Inkrementelle Aktualisierung %}
@@ -53,7 +48,7 @@ Der SQL-Editor für die inkrementelle Aktualisierung ermöglicht dem Benutzer di
 1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
 {% alert note %}
 
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenterweiterungen**.
+Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenterweiterungen**.
 {% endalert %}
 
 {:start="2"}

@@ -102,9 +102,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 식별자로 `email` 또는 `phone` 을 지정한 경우, 식별자에 `prioritization` 값을 추가로 입력해야 합니다. `prioritization`은 여러 사용자가 있는 경우 병합할 사용자를 지정하는 배열이어야 합니다. `prioritization`은 정렬된 배열이므로 우선순위에서 일치하는 사용자가 두 명 이상이면 병합이 발생하지 않습니다.
 
-배열에 허용되는 값은 `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated`이며 이는 가장 최근에 업데이트된 사용자에게 우선순위를 지정하는 것을 의미합니다.
+배열에 허용되는 값은 다음과 같습니다:
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (가장 최근에 업데이트한 사용자에게 우선순위를 부여하는 것을 의미함)
+- `least_recently_updated` (가장 최근에 업데이트한 사용자에게 우선순위를 부여하는 것을 의미함)
 
 우선순위 배열에는 한 번에 다음 옵션 중 하나만 존재할 수 있습니다.
+
 - `identified` 를 가진 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`
 - `unidentified` 없는 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`
 
@@ -159,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 미확인 사용자 병합하기
 
-다음 요청은 이메일 주소 "john.smith@braze.com"를 가진 가장 최근에 업데이트된 미확인 사용자를 `external_id` "john"을 가진 사용자로 병합합니다. `most_recently_updated`를 사용하면 확인되지 않은 사용자 한 명으로만 쿼리가 필터링됩니다. 따라서 이 이메일 주소를 가진 미확인 사용자가 두 명인 경우 `external_id` "john"을 가진 사용자로 한 명만 병합됩니다.
+다음 요청은 이메일 주소 "john.smith@braze.com"를 가진 가장 최근에 업데이트된 미확인 사용자를 `external_id` "john"을 가진 사용자로 병합합니다. `most_recently_updated` 또는 `least_recently_updated` 을 사용하면 신원이 확인되지 않은 사용자 한 명으로만 쿼리가 필터링됩니다. 따라서 이 이메일 주소를 가진 미확인 사용자가 두 명인 경우 `external_id` "john"을 가진 사용자로 한 명만 병합됩니다.
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -183,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 미확인 사용자를 식별된 사용자로 병합하기
 
-다음 예에서는 가장 최근에 업데이트된 이메일 주소 "john.smith@braze.com"의 미확인 사용자를 가장 최근에 업데이트된 이메일 주소 "john.smith@braze.com"의 식별된 사용자로 병합합니다. `most_recently_updated`를 사용하면 쿼리가 한 명의 사용자(`identifier_to_merge`의 경우 식별되지 않은 사용자 1명, `identifier_to_keep`의 경우 식별된 사용자 1명)로만 필터링됩니다.
+다음 예에서는 가장 최근에 업데이트된 이메일 주소 "john.smith@braze.com"의 미확인 사용자를 가장 최근에 업데이트된 이메일 주소 "john.smith@braze.com"의 식별된 사용자로 병합합니다. `most_recently_updated` 또는 `least_recently_updated` 을 사용하면 쿼리가 한 명의 사용자( `identifier_to_merge` 의 경우 미확인 사용자 1명, `identifier_to_keep` 의 경우 확인된 사용자 1명)로만 필터링됩니다.
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -195,11 +201,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
       }
     }
   ]
@@ -262,7 +268,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 | --- |
 | `'merge_updates' must be an array of objects` | `merge_updates` 이 객체 배열인지 확인합니다. |
 | `a single request may not contain more than 50 merge updates` | 한 요청에 병합 업데이트는 최대 50개까지만 지정할 수 있습니다. |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | 요청에 포함된 식별자를 확인하세요. |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, 'email' property that is a string, or 'phone' property that is a string` | 요청에 포함된 식별자를 확인하세요. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | `merge_updates` 에 `identifier_to_merge` 과 `identifier_to_keep` 두 개의 객체만 포함되어 있는지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

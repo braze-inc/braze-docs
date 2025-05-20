@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, Braze requires an external image library to display animated GIFs.
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Using runtime configuration
 

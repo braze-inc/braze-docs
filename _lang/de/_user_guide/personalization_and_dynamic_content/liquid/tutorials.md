@@ -15,7 +15,7 @@ Nach Abschluss dieser Tutorials können Sie Folgende Aktionen ausführen:
 - Schreiben Sie Liquid-Code für gängige Anwendungsfälle
 - Bedingte Liquid-Logik zusammenstellen, um Nachrichten auf der Grundlage von Nutzerdaten zu personalisieren.
 - Variablen und Filter verwenden, um Gleichungen zu schreiben, die die Werte von Attributen verwenden
-- Grundlegende Befehle in Liquid-Code wiedererkennen und ein allgemeines Verständnis dafür entwickeln, was der Code tut
+- Grundlegende Befehle im Liquid Code zu erkennen und ein allgemeines Verständnis dafür zu entwickeln, was der Code tut
 
 | Tutorial | Lernziele |
 | --- | --- |
@@ -334,7 +334,7 @@ Lassen Sie uns das Lieblingsprodukt eines Nutzers bewerben, wenn sein letzter Ka
 {% endraw %}
 
 {: start="6"}
-6\. Da das Datum des letzten Kaufs und das heutige Datum in Sekunden angegeben sind, müssen wir berechnen, wie viele Sekunden in sechs Monaten enthalten sind. Lassen Sie uns eine Gleichung aufstellen (ungefähr 6 Monate * 30,44 Tage * 24 Stunden * 60 Minuten * 60 Sekunden) und sie der Variablen `six_months` zuweisen. Wir werden `times` verwenden, um die Multiplikation von Zeiteinheiten anzugeben.
+6\. Da das Datum des letzten Kaufs und das heutige Datum in Sekunden angegeben sind, müssen wir berechnen, wie viele Sekunden in sechs Monaten liegen. Lassen Sie uns eine Gleichung aufstellen (ungefähr 6 Monate * 30,44 Tage * 24 Stunden * 60 Minuten * 60 Sekunden) und sie der Variablen `six_months` zuweisen. Wir werden `times` verwenden, um die Multiplikation von Zeiteinheiten anzugeben.
 
 {% raw %}
 ```liquid

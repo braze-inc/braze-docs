@@ -100,27 +100,34 @@ Par défaut, le contenu connecté fait une demande HTTP GET à l’URL spécifi�
 
 Vous pouvez éventuellement fournir un corps POST en spécifiant `:body` suivi d’une chaîne de caractères de requête du format `key1=value1&key2=value2&...` ou une référence à des valeurs capturées. Type de contenu par défaut `application/x-www-form-urlencoded`. Si vous spécifiez `:content_type application/json` et fournir un corps sous forme de code-urétroté, comme `key1=value1&key2=value2`, Braze jSON automatiquement le code de l’organisme avant d’envoyer.
 
+Par défaut, le contenu connecté ne met pas non plus en cache les appels POST. Vous pouvez modifier ce comportement en ajoutant `:cache_max_age` à l'appel POST du contenu connecté.
+
 #### Type de contenu par défaut
+
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
 ```
 #### Type de contenu Application/JSON
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
 ### Fournir le corps du JSON
+
 Si vous souhaitez fournir votre propre corps JSON, vous pouvez l’écrire en ligne s’il n’y a pas d’espace. Si votre corps dispose d’espaces, vous devez utiliser un relevé d’affectation ou de capture. C’est-à-dire que l’un de ces trois éléments est acceptable :
 
 {% raw %}
 ##### Inséré : espaces non autorisés
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
 ##### Corps dans un relevé de capture : espaces autorisés
+
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -148,8 +155,10 @@ Si vous souhaitez fournir votre propre corps JSON, vous pouvez l’écrire en li
 %}
 ```
 {% endraw %}
+
 {% raw %}
 ##### Corps dans un état d’affectation : espaces autorisés
+
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
@@ -173,48 +182,6 @@ Vous pouvez utiliser l’état HTTP à partir d’un appel de contenu connecté 
 Cette clé ne sera automatiquement ajoutée à l'objet Contenu connecté que si l'endpoint renvoie un objet JSON valide et une réponse `2XX`. Si l'endpoint renvoie un tableau ou un autre type, cette clé ne peut pas être automatiquement définie dans la réponse.
 {% endalert %}
 
-## Mise en cache configurable {#configurable-caching}
-
-Les réponses au contenu connecté peuvent être mises en cache dans différentes campagnes ou messages (au sein du même espace de travail) afin d'optimiser les vitesses d'envoi.
-
-Braze n'enregistre ni ne stocke en permanence les réponses au contenu connecté. Si vous choisissez explicitement de stocker une réponse à un appel de contenu connecté en tant que variable Liquid, Braze ne la stocke qu'en mémoire, c'est-à-dire sur un stockage temporaire qui est supprimé après un court laps de temps, pour effectuer le rendu de la variable Liquid et envoyer le message. Pour empêcher complètement la mise en cache, vous pouvez spécifier `:no_cache`, ce qui peut entraîner une augmentation du trafic réseau. Pour faciliter le dépannage et le contrôle de la santé du système, Braze peut également consigner les appels au contenu connecté qui échouent (tels que les 404 et les 429) ; ces journaux sont conservés pendant 30 jours maximum.
-
-### Limite de la taille du cache
-
-Le corps de réponse du contenu connecté ne doit pas dépasser 1 Mo, ou il ne sera pas mis en cache.
-
-### Temps cache
-
-Le contenu connecté mettra en cache la valeur qu’il renvoie à partir des critères d’évaluation GET pendant au moins 5 minutes. Si un temps de cache n’est pas spécifié, l’heure de cache par défaut est de 5 minutes. 
-
-L’heure du cache de contenu connecté peut être configurée pour être plus longue avec `:cache_max_age`, comme illustré dans l’exemple suivant. Le temps de cache minimum est de 5 minutes et le temps de cache maximum est de 4 heures. Les données de contenu connecté sont mises en cache en mémoire à l’aide d’un système de cache volatil, tel que Memcached. Par conséquent, indépendamment de l’heure de cache spécifiée, les données du contenu connecté peuvent être évitées depuis le cache in-memory de Braze plus tôt que spécifié. Cela signifie que les durées de cache sont des suggestions et qu’elles ne représentent pas réellement la durée pendant laquelle les données sont garanties à être mises en cache par Braze et que vous pouvez voir plus de requêtes de contenu connecté que vous ne pouvez attendre avec une durée de cache donnée.
-
-Par défaut, le contenu connecté ne cache pas les appels POST. Vous pouvez modifier ce comportement en ajoutant `:cache_max_age` à l’appel POST de contenu connecté.
-
-#### Cache pour les secondes spécifiées
-
-Cet exemple se cache pendant 900 secondes (ou 15 minutes).
-{% raw %}
-```
-{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
-```
-{% endraw %}
-
-#### Mise en cache du cache
-
-Pour empêcher le contenu connecté de mettre en cache la valeur qu’il renvoie à partir d’une demande GET, vous pouvez utiliser la configuration `:no_cache`. Toutefois, les réponses provenant d'hôtes internes à Braze seront toujours mises en cache.
-
-{% raw %}
-```js
-{% connected_content https://example.com/webservice.json :no_cache %}
-```
-{% endraw %}
-
-{% alert important %}
-Assurez-vous que l’endpoint de contenu connecté fourni peut gérer de grandes quantité de trafic avant d'utiliser cette option, ou vous verrez probablement une latence d'envoi accrue (des retards accrus ou des intervalles de temps plus longs entre la demande et la réponse) en raison du fait que Braze effectue des demandes de contenu connecté pour chaque message.
-{% endalert %}
-
-Avec un `POST` vous n’avez pas besoin de cache, car Braze ne cache jamais les résultats de `POST` demandes.
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Exemple d'utilisation de la fonction Push du contenu connecté"

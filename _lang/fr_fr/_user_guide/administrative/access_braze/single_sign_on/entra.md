@@ -23,10 +23,6 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 | RelayState API key | Pour activer la connexion du fournisseur d'identité, sélectionnez **Paramètres** > **Clés API** et créez une clé API avec des autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver vos clés API sous **Paramètres** dans **Console Développeur** > **Paramètres API**.
-{% endalert %}
-
 ## Identifiant initié par le fournisseur de services (SP) dans le cadre de Microsoft Entra SSO
 
 ### Étape 1 : Ajouter un Braze à partir de la galerie
@@ -96,13 +92,7 @@ Après avoir configuré Braze dans le centre d'administration de Microsoft Entra
 Une fois que votre gestionnaire de compte a activé l’authentification unique (SSO) SAML pour votre compte, procédez comme suit :
 
 1. Accédez à **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et activez la section SAML SSO sur **ACTIVÉ**.
-
-{% alert note %}
-Si vous utilisez l[a navigation plus ancienne]({{site.baseurl}}/navigation), sélectionnez l'icône de votre compte et allez dans **Paramètres de l'entreprise** > **Paramètres de sécurité** pour trouver la section SSO SAML.
-{% endalert %}
-
-{: start="2"}
-2\. Sur la même page, ajoutez ce qui suit :
+2. Sur la même page, ajoutez ce qui suit :
 
 | Condition | Détails |
 |---|---|

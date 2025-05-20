@@ -29,4 +29,4 @@ C'est le comportement attendu pour les espaces de travail avec beaucoup d'utilis
 
 ### Pourquoi y a-t-il des doublons lorsque j'exporte des utilisateurs par segmentation via l'API REST ?
 
-Il s'agit d'un cas très rare causé par l'architecture sous-jacente du fournisseur de base de données. Les doublons sont nettoyés toutes les semaines, mais la plupart des semaines, aucun doublon n’est supprimé.
+Il s'agit d'un cas très rare, dû à l'architecture sous-jacente du fournisseur de base de données. Les doublons sont nettoyés toutes les semaines, mais la plupart des semaines, aucun doublon n’est supprimé.

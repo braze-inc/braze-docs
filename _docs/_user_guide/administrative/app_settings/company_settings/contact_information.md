@@ -21,7 +21,7 @@ To access this page, go to **Settings** > **Admin Settings** > **Contact Informa
 
 This page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!
 
-### Consequences of switching your time zone
+## Consequences of switching your time zone
 
 {% alert warning %}
 

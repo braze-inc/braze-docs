@@ -41,6 +41,15 @@ O resultado é o seguinte:
 
 > Adquira o Tales por apenas 7,49!
 
+## Exportação de catálogos
+
+Há duas maneiras de exportar catálogos do dashboard: 
+
+- Passe o mouse sobre a linha do catálogo na seção **Catalogs (Catálogos** ). Em seguida, selecione o botão **Exportar catálogo**.
+- Selecione seu catálogo. Em seguida, selecione o botão **Exportar catálogo** na guia **Pré-visualização** do catálogo.
+
+Você receberá um e-mail para baixar o arquivo CSV depois de iniciar a exportação. Você terá até quatro horas para recuperar esse arquivo.
+
 ## Casos de uso adicionais
 
 ### Vários itens

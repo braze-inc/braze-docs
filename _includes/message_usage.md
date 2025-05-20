@@ -25,7 +25,7 @@ If you purchased WhatsApp but aren't on a message credits contract, you'll still
 
 The **Message Credits Usage over Contract** graph shows your usage over the selected period of time. The granularity of this chart depends on your selected time frame. Export export options by selecting the menu in the top right corner of the chart.
 
-![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.][1]{: style="max-width:80%;"}
+![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.][1]{: style="max-width:70%;"}
 
 ## SMS and MMS
 
@@ -33,7 +33,7 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 Filters are available allowing you to filter by **Country** or **SMS type**.
 
-![SMS/MSS Credits Usage with tiles for high-level data and a section for consumption by account.][2]{: style="max-width:80%;"}
+![SMS/MSS Credits Usage with tiles for high-level data and a section for consumption by account.][2]{: style="max-width:70%;"}
 
 Unlike the **Message Credits Usage Overview**, this section contains historical data from prior contract periods. 
 
@@ -41,7 +41,7 @@ Unlike the **Message Credits Usage Overview**, this section contains historical 
 It’s possible to select a date range that contains both non-credits and message credits usage. In this case, the consumption that occurred outside of message credits will display `—` (null) in the **Credit ratio** and **Credits** columns.
 {% endalert %}
 
-![SMS/MMS Credits Usage table with null values.][3]{: style="max-width:80%;"}
+![SMS/MMS Credits Usage table with null values.][3]{: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -56,7 +56,7 @@ You can filter your data by:
 - Conversation category type
 - Region
 
-![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.][4]{: style="max-width:80%;"}
+![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.][4]{: style="max-width:70%;"}
 
 ## Things to know
 

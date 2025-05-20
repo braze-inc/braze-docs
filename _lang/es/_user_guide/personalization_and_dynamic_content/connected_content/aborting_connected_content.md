@@ -3,7 +3,6 @@ nav_title: Anular contenidos conectados
 article_title: Anular contenidos conectados
 page_order: 2
 description: "Este artículo de referencia cubre algunas de las mejores prácticas de cancelación de mensajes para el Contenido conectado."
-
 ---
 
 # Anular contenidos conectados {#aborting-connected-content}

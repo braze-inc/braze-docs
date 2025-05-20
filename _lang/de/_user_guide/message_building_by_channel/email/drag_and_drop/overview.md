@@ -87,10 +87,6 @@ Wenn Sie eine vorhandene benutzerdefinierte HTML-Vorlage oder eine von einem Dri
 
 Sie können auf alle Vorlagen auch über den Bereich **Vorlagen** zugreifen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie die Vorlagen unter **Vorlagen & Medien**.
-{% endalert %}
-
 Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie unter **E-Mail-Varianten** eine Übersicht über Ihre E-Mail, die die Versandinformationen und den E-Mail-Text enthält. 
 
 Wählen Sie dann **E-Mail-Text bearbeiten**, um mit der Gestaltung der E-Mail-Struktur im Drag-and-Drop-Editor zu beginnen. 
@@ -238,7 +234,7 @@ Wenn Sie Ihre Nachricht verfassen, können Sie die Textrichtung zwischen links-n
 
 ![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.][1]{: style="max-width:50%;"}
 
-Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) rechts nach links.
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 ### HTML-Attribute zu Links hinzufügen
 
@@ -256,7 +252,7 @@ Ein weiterer häufiger Anwendungsfall ist die Kennzeichnung bestimmter Links als
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (ein [benutzerdefinierter Unterpfad](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) muss konfiguriert werden)
 
-Wie Sie universelle Links einrichten, erfahren Sie unter [Universelle Links und App-Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Wie Sie universelle Links einrichten, erfahren Sie unter [Universelle Links und App-Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 Alternativ können Sie auch einen unserer Attributionspartner wie [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) oder [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) einbinden, um universelle Links zu verwalten.
 

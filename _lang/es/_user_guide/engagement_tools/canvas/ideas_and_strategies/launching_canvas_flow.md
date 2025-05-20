@@ -86,9 +86,20 @@ Después de revisar los detalles de su lienzo, consulte [Enviar lienzos de prueb
 ## Solución de problemas
 
 {% details ¿Por qué mis usuarios no reciben mis mensajes Canvas? %}
-- Comprueba que su estado de suscripción push es "suscrito" u "adhesión voluntaria" **y** que su estado **Notificaciones push habilitadas** es "true". Si las ha añadido como reglas de entrada en el lienzo, es posible que los usuarios se hayan dado de baja entre el momento en que entraron en el lienzo y recibieron el paso Mensaje.
-- Si la limitación de frecuencia global está activada para tu Canvas, dependiendo de tus reglas específicas, esto puede limitar cuántas veces cada usuario debe recibir un mensaje de un canal específico. 
-- Si se habilitan las Horas tranquilas, esto puede afectar a la hora de envío de tu mensaje, lo que significa que tu mensaje puede enviarse a la siguiente hora disponible (cuando terminen las Horas tranquilas) o cancelar el mensaje por completo.
+**Comprobar la disponibilidad del usuario**
+- Asegúrate de que cumplen tus criterios de segmentación.
+- Confirma que su estado de suscripción push es "suscrito" o "habilitado" **y** que su estado **de habilitación push** es "verdadero". Si las ha añadido como reglas de entrada en el lienzo, es posible que los usuarios se hayan dado de baja entre el momento en que entraron en el lienzo y recibieron el paso Mensaje.
+- Confirma que coinciden con tu configuración de envío de Canvas. (Si los usuarios están "suscritos" pero la configuración es "Adhesión voluntaria", los usuarios no estarán habilitados para el canal).
+- Si la limitación de frecuencia global está habilitada para tu Canvas, comprueba si tus reglas están limitando cuántas veces puede recibir cada usuario un mensaje de un canal específico. 
+- Si se habilitan las Horas tranquilas, la hora de envío de tu mensaje podría verse afectada, lo que significa que tu mensaje podría enviarse a la siguiente hora disponible (cuando finalicen las Horas tranquilas) o cancelarse por completo.
+
+**Comprueba la disponibilidad del usuario para filtrar más en tu paso en Canvas**
+- Confirma que han realizado el evento personalizado o la compra necesarios.
+- Comprueba si existe una [condición de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), que afecta a los mensajes que reciben los usuarios si desencadenan varias acciones al mismo tiempo.
+- Asegúrate de que no hay filtros específicos en el paso que podrían haber bloqueado a los usuarios la recepción del mensaje.
+- Busca conflictos entre diferentes pasos dentro del mismo Canvas. Por ejemplo, los usuarios que no recibieron el mensaje podrían ser detenidos por un filtro que requiere la realización de otro paso en una rama diferente.
+- Confirma que los usuarios cumplen las normas de validación adicionales.
+- Confirma que el paso en Canvas estaba conectado al paso anterior en el momento del envío.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

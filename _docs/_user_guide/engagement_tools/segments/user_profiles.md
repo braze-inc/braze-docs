@@ -1,7 +1,7 @@
 ---
 nav_title: User Profiles
 article_title: User Profiles
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,7 +26,7 @@ To access a user's profile, go to the **Search Users** page and search for a use
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]{: style="max-width:60%;"}
 
 ## Use cases
 

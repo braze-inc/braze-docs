@@ -67,7 +67,7 @@ SDK 統合からの特定のデータの自動収集をブロックしたり、�
 {% tabs %}
 {% tab Web SDK %}
 
-SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) を使用することもできます。このメソッドにより、`disableSDK()` の呼び出し前にロギングされたデータが同期され、このページと将来のページの読み込みに対するその後の Braze Web SDK の呼び出しはすべて無視されます。後の時点でデータ収集を再開するには、後で [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) メソッドを使用できます。この詳細については、[Web トラッキングの無効化]({{site.baseurl}}/developer_guide/platforms/web/analytics/disabling_tracking/)に関する記事をご覧ください。
+SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) を使用することもできます。このメソッドにより、`disableSDK()` の呼び出し前にロギングされたデータが同期され、このページと将来のページの読み込みに対するその後の Braze Web SDK の呼び出しはすべて無視されます。後の時点でデータ収集を再開するには、後で [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) メソッドを使用できます。この詳細については、[Web トラッキングの無効化]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web)に関する記事をご覧ください。
 
 {% endtab %}
 {% tab Android SDK %}
@@ -87,7 +87,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 デフォルトでは、Braze Swift SDK ですべてのフィールドが収集されます。一部のデバイスプロパティを削除すると、SDK 機能が無効になる場合があります。
 {% endalert %}
 
-使用の詳細については、Swift SDK ドキュメントの「[ストレージ]({{site.baseurl}}/developer_guide/platforms/swift/storage/)」を参照してください。
+使用の詳細については、Swift SDK ドキュメントの「[ストレージ]({{site.baseurl}}/developer_guide/storage/?tab=swift)」を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -99,6 +99,6 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 ![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0です。]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
-iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) を使用していることを確認できます。
+iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) を使用していることを確認できます。
 {% endalert %}
 
