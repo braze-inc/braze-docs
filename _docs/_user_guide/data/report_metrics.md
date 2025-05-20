@@ -972,9 +972,9 @@ Email, iOS Push, Android Push, Web Push, LINE
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Email:</b> (Opens) / (Deliveries)</li>
-        <li><b>Web push:</b> (Direct Opens) / (Deliveries)</li>
-        <li><b>iOS, Android, and Kindle push:</b> (Unique Opens) / (Deliveries)</li>
+        <li><b>Email:</b> (Opens) + (Deliveries)</li>
+        <li><b>Web push:</b> (Direct Opens) + (Deliveries)</li>
+        <li><b>iOS, Android, and Kindle push:</b> (Direct Opens) + (Deliveries)</li>
     </ul>
 </span>
 {:/}
