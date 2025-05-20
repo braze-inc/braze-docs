@@ -94,7 +94,7 @@ Context variables have the same expected formats for data types as [custom event
 
 ## Using context variables {#using-context-variables}
 
-For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. Whereas membership status is something you'd track on the user profile, a first-class ticket purchase is more temporary. A context variable is a flexible way to track this information.
+For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
 Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
 
