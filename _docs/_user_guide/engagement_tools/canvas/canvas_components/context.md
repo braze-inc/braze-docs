@@ -100,7 +100,7 @@ Users will enter the Canvas when they purchase a plane ticket. To determine loun
 
 ![Context variable set up to track if a passenger qualifies for VIP lounge access.][5]{: style="max-width:90%"}
 
-In this Context step, we'll use {% raw %}`{{custom_attribute.${Purchased Flight}}}`{% endraw %} to determine if the type of flight they've purchased is first class.
+In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is first class.
 
 Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
 
