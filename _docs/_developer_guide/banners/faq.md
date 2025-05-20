@@ -7,6 +7,7 @@ channel:
   - banners
 tool:
   - Reports
+noindex: true
 ---
 
 {% multi_lang_include banners/faq.md %}

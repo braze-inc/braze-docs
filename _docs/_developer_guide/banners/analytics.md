@@ -7,6 +7,7 @@ channel:
   - banners
 tool:
   - Reports
+noindex: true
 ---
 
 # Banner Analytics
