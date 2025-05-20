@@ -37,6 +37,8 @@ You can use native A/B testing features in your campaigns and Canvases. To learn
 
 To run experiments using Braze data in Eppo, create [assignments tables](https://docs.geteppo.com/data-management/definitions/assignment-sql/) in your warehouse based on user-level message event data exported from Braze. Separate tables are recommended for Canvas and campaign experiments because they rely on different metadata.
 
+{% tabs local %}
+{% tab canvas experiments %}
 For Canvas experiments, assignments can be created either:
 
 - At the Canvas entry level (`users.canvas.Entry`)
@@ -44,7 +46,13 @@ For Canvas experiments, assignments can be created either:
 
 In these cases, fields like `canvas_name`, `experiment_step_id`, `canvas_variation_name`, and `experiment_split_id` are used to define the experiment name and variation.
 
+{% endtab %}
+
+{% tab campaign experiments %}
 For campaign experiments, use send events (such as push, email, SMS) to determine when a user entered the experiment. `campaign_name`, `message_variation_name`, and `time` are used to populate the assignment table.
+
+{% endtab %}
+{% endtabs %}
 
 To track message-specific metrics (like clicks or opens), include a **Secondary Entity** by creating a `combined_id` that joins the user ID with the campaign or Canvas name. This `combined_id` is also used in your fact tables to align metrics with the correct experiment and variation.
 
