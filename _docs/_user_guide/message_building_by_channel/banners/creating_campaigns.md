@@ -56,7 +56,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 
 ### Step 4: Set campaign duration
 
-Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting End Time and specifying an end date and time.
+Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.
 
 ### Step 5: Set Banner priority (optional)
 
