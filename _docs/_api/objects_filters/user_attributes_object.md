@@ -126,8 +126,8 @@ The following user profile fields are case sensitive, so be sure to reference th
 | dob | (date of birth) String in format "YYYY-MM-DD", for example, 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
-| email_open_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the open tracking pixel from being added to all future emails sent to this user.|
-| email_click_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the click tracking for all links within a future email, sent to this user.|
+| email_open_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the open tracking pixel from being added to all future emails sent to this user. Available for SparkPost and SendGrid only.|
+| email_click_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the click tracking for all links within a future email, sent to this user. Available for SparkPost and SendGrid only.|
 | external_id | (string) A unique identifier for a user profile. After assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
