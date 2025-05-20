@@ -2,7 +2,7 @@
 
 > With Banners, you can create personalized messaging for your users, all while extending the reach of your other channels, such as email or push notifications. You can embed Banners directly in your app or website, which lets you engage with users through an experience that feels natural.
 
-![ALT_TEXT]()
+![An example Banner rendered on a device.]({% image_buster /assets/img/banners/sample_banner.png %})
 
 ## Prerequisites
 
@@ -22,9 +22,7 @@ After Banners are integrated into an app or website, marketers can design and la
 | Sales and promotions | Highlight featured content, trending products, and ongoing brand campaigns persistently and directly on your homepage without disrupting the user experience. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## About Banners {#about-banners}
-
-### Features
+## Features
 
 Features for Banners include:
 
@@ -33,6 +31,8 @@ Features for Banners include:
 - **Dynamic personalization:** Banners dynamically refresh with every new user session, ensuring content stays current and personalized using Braze’s built-in personalization tools and Liquid logic.
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
 - **Custom HTML support:** Incorporate custom HTML blocks for advanced customization or seamless integration with your existing web styles.
+
+## About Banners {#about-banners}
 
 ### Placement IDs {#placement-id}
 
@@ -48,7 +48,9 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-Banner priority determines the order in which Banners are displayed if they share the same placement. When more than one Banner qualifies for a given placement and audience segment, prioritization ensures that the most relevant message is displayed first. Priorities are easily adjustable when creating a Banner or when editing a placement.
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
+
+If multiple Banners are set to the same priority, the newest Banner that user is eligible for is displayed first.
 
 ### Message delivery
 
