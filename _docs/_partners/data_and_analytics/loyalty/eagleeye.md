@@ -2,7 +2,7 @@
 nav_title: Eagle Eye
 article_title: Eagle Eye
 description: Learn how to integrate Eagle Eye with Braze.
-alias: /partners/Eagle_Eye/
+alias: /partners/eagle_eye/
 page_type: partner
 search_tag: Partner
 ---
