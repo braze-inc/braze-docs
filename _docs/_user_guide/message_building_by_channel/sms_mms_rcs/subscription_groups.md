@@ -26,7 +26,7 @@ There are two subscription states for SMS and RCS users: `subscribed` and `unsub
 | Unsubscribed | User has explicitly opt-ed out of messaging from your SMS and RCS subscription group and the sending-phone numbers inside the subscription group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API][4]. Users unsubscribed from an SMS and RCS subscription group will no longer receive any SMS or RCS from sending phone numbers that belong to the subscription group.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### How users' SMS and RCS subscription groups get set 
+### How subscription groups are set
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] by using the Braze REST API.
 - **SDK Integration** Users can be added to an email or SMS and RCS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)), or [Web][11].
@@ -37,7 +37,7 @@ When a phone number is updated on a user profile, the new phone number inherits 
 
 For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number through the Braze REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
 
-### How to check a user's SMS and RCS subscription group
+### Checking a user's subscription group
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's SMS and RCS subscription groups. 
 - **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using the Braze REST API. 

@@ -1,6 +1,8 @@
 
 # SMS and RCS senders
 
+> This article will walk you through important concepts involved in sending phone numbers with Braze.
+
 ## Types of SMS and RCS senders
 
 {% tabs %}

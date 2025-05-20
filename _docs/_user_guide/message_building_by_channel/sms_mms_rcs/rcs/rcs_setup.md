@@ -20,7 +20,7 @@ Setting up RCS is as straightforward as setting up SMS. Keep reading to learn ho
 To be eligible for sending RCS with Braze, your business must meet three criteria upfront:
 
 1. Your current Braze contract must include Message Credits. 
-2. You must be sending RCS messages to a Braze-supported country. At the moment, those countries are:
+2. You must send your RCS messages to one of the following Braze-supported countries:
 - United States
 - United Kingdom
 - Germany
