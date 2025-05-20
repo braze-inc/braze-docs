@@ -50,7 +50,7 @@ When a user clicks a link in the Banner, you can choose to navigate them deeper 
 
 {% alert important %}
 {::nomarkdown}
-On-click behavior can be overridden if a specific element (such as a button, link, or image, of the banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
+On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
 {:/}
 {% endalert %}
 

@@ -10,7 +10,7 @@ To send a test message, add either a content test group or one or more individua
 
 While reviewing your test Banner, verify the following:
 
-- Is your banner campaign assigned to a placement?
+- Is your Banner campaign assigned to a placement?
 - Do the images and media show up and act as expected on your targeted device types and screen sizes?
 - Do your links and buttons direct the user to where they should go?
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?

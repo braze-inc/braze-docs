@@ -99,7 +99,7 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
+If you insert Banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
 {% endalert %}
 
 {% tabs %}
@@ -197,7 +197,7 @@ This feature is not currently supported on Roku.
 {% tabs %}
 {% tab JavaScript %}
 
-Create a container element for the banner. Be sure to set its width and height.
+Create a container element for the Banner. Be sure to set its width and height.
 
 ```html
 <div id="global-banner-container" style="width: 100%; height: 450px;"></div>
