@@ -77,17 +77,17 @@ Selecting a field for one of these transformations will apply that transformatio
 
 ### Step 6: Test your integration
 
-You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
-
 {% alert important %}
 Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
 
-#### Send Test Events Button
+Before you test, consider checking out our [sample Currents data in GitHub](https://github.com/Appboy/currents-examples). When you're ready to test, you choose an option below:
 
-On the Currents connector details page, there is a test events button in the bottom right. When this button is pressed, one of each of the selected event types will be sent to this integration. This can be used to validate that your integration is working properly.
+#### Sending test events
 
-You can find details about the contents of each event in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+To test your integration, you can select **Send Test Events** to send one event from each of your selected event types to this Current. For detailed information about each event type, refer to our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+
+![The "Currents Test" page in the Braze dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Testing Currents connectors
 
@@ -98,7 +98,7 @@ Test Currents connectors are free versions of our existing connectors that can b
 
 After your Test Currents connectors reach the sending limit, your connector will not send events until the next seven-day period.
 
-To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 
 ## Updating Currents
 
