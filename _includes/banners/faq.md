@@ -1,6 +1,6 @@
 # Banners: Frequently Asked Questions
 
-> These are answers to frequently asked questions about Banners in Braze.
+> These are answers to frequently asked questions about Banners in Braze. For more general information, see [About Banners]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %}).
 
 ## When do Banner updates appear for users?
 

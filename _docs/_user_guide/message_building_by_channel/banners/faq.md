@@ -9,4 +9,4 @@ tool:
   - Reports
 ---
 
-{% multi_lang_include banners/faq.md %}
+{% multi_lang_include banners/faq.md section="user" %}
