@@ -66,4 +66,7 @@ guide_menu_list:
   - name: Messaging Statuses
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
     image: /assets/img/braze_icons/book-closed.svg
+  - name: Know Before Sending
+    link: /docs/know_before_send/
+    image: /assets/img/braze_icons/book-closed.svg
 ---
