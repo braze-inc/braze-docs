@@ -210,7 +210,7 @@ Create a container element for the banner. Be sure to set its width and height.
 Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
 
 {% alert tip %}
-Be sure to still call `insertBanner` for `isControl` in order to track impressions. You can hide or collapse your container afterwards.
+ To track impressions, be sure to call `insertBanner` for `isControl`. You can then hide or collapse your container afterwards.
 {% endalert %}
 
 ```javascript
