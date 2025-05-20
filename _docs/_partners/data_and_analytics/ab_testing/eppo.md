@@ -48,7 +48,7 @@ For campaign experiments, use send events (such as push, email, SMS) to determin
 
 To track message-specific metrics (like clicks or opens), include a **Secondary Entity** by creating a `combined_id` that joins the user ID with the campaign or Canvas name. This `combined_id` is also used in your fact tables to align metrics with the correct experiment and variation.
 
-Then, Eppo uses these assignments and fact tables to analyze results, and it's recommended to set up a **Protocol** in Eppo to standardize future experiment setup. For more information, refer to [Eppo’s documentation](https://docs.geteppo.com/guides/marketing/integrating-with-braze/).
+Eppo uses these assignments and fact tables to analyze results, and it's recommended to set up a **Protocol** in Eppo to standardize future experiment setup. For more information, refer to [Eppo’s documentation](https://docs.geteppo.com/guides/marketing/integrating-with-braze/).
 
 ## Support
 
