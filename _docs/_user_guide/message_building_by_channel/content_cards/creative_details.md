@@ -46,11 +46,11 @@ The Captioned Image card is a great way to show off and attract attention to imp
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Banner %}
+{% tab Image-only %}
 
-If you want fancy, the banner card is for you. This is completely customized to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
-![Image of a banner with recommended details and a banner example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Image of an image-only Content Card with recommended details and an image-only example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
