@@ -100,15 +100,15 @@ Copy the value of the **Identifier** column for the newly created key and paste 
 
 Add your Braze API endpoint as described in [API and SDK endpoints article][8], and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
 
-Then, click **Save**.
+Then, select **Save**.
 
-### Step 4: Setting up a custom Currents export to SalesWings (optional)
+### Step 4: Set up a custom Currents export to SalesWings (optional)
 
-If you want to use [user behavior][10] and [message engagement][11] events for behavioral intelligence, lead and account scoring, show them to sales with sales insights, or report on them in your CRM, go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
+If you want to use [user behavior][10] and [message engagement][11] events for behavioral intelligence, lead and account scoring, produce sales insights, or generate reports in your CRM, go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
 
 Select **Generate** under **Generate an API token to setup a Custom Currents Export**.
 
-Then, [create a new Current][9], and select **Custom Currents Export** as the Current type.
+Then, [create a new Current][9] and select **Custom Currents Export** as the Current type.
 
 In the **Credentials** section of the Current creation form, enter the API token you have generated on the [**SalesWings Integrations** page][6] for **Bearer Token**, and `https://helium.saleswings.pro/api/braze/currents/events` for **Endpoint**.
 
