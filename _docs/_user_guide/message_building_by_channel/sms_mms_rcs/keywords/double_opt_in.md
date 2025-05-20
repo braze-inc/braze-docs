@@ -22,13 +22,13 @@ While not an explicit requirement of the Telephone Consumer Protection Act of 19
 
 Double opt-in empowers you to obtain explict consent through inbound and outbound opt-in campaigns.
 
-### Outbound double opt-in
+### Outbound
 
 When a user provides their phone number, they are sent a message that asks for their consent.
 
 ![Screenshot of outbound SMS message with the brand texting, "Welcome to BRAND text updates! 1 msg a week for the latest offers. Reply Y to opt-in.", the users replying with "Y", and the brand responding with "Thanks! You're now opted-in to BRAND alerts. Here is a promo code SMS10 for 10% off your first purchase!"][2]{:style="max-width:40%;"}
 
-### Inbound double opt-in
+### Inbound
 
 When a user sends a message that contains an opt-in keyword, they are sent a message that asks for their consent.
 
