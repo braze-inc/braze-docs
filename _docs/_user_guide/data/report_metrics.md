@@ -1080,7 +1080,7 @@ All
 
 {% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. This number is received from Braze and is based on the `user_id`. Unique recipients are counted at the campaign or Canvas step level, not the <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>send identifier</a> level.
+Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. For Content Cards, each Content Card can only be received once, so viewing the same Content Card a second time, regardless of the day, will not increment this count.<br><br>This number is received from Braze and is based on the `user_id`. Unique recipients are counted at the campaign or Canvas step level, not the <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>send identifier</a> level.
 
 <span class="calculation-line">Calculation: Count</span>
 

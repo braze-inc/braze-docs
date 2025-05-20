@@ -729,7 +729,7 @@ After you've gone through all the steps, select **Finish Setup** to return to th
 [3]: {% image_buster /assets/img/Shopify/enable_braze_sdks_setup.png %}
 [4]: {% image_buster /assets/img/Shopify/track_shopify_data_setup.png %}
 [5]: {% image_buster /assets/img/Shopify/historical_backfill_setup.png %}
-[6]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
+[6]: {% image_buster /assets/img/Shopify/external_id_standard.png %}
 [7]: {% image_buster /assets/img/Shopify/sync_product_data.png %}
 [8]: {% image_buster /assets/img/Shopify/shopify_app_embed_banner.png %}
-[9]: {% image_buster /assets/img/Shopify/collect_email_subscribers_2.png %}
+[9]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}

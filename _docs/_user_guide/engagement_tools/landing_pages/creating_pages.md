@@ -9,19 +9,25 @@ page_order: 0
 
 > Learn how to create and customize a landing page using the drag-and-drop editor, so you can grow your audience and collect preferences directly in Braze.
 
+## Prerequisites
+
+To access the landing page builder, you need [certain permissions]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#prerequisites). If you don’t have access, ask your Braze admin for help.
+
 ## Creating a landing page
 
 ### Step 1: Create a new draft
 
-Go to **Messaging** > **Landing Pages**, then select **Create landing page**. You can also click the name of an existing landing page to duplicate or make changes to it.
+Go to **Messaging** > **Landing Pages**, then select **Create landing page**. You can also select the name of an existing landing page to duplicate or make changes to it.
 
 ![The landing pages section in the Braze dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Step 2: Enter the page details
 
+Add internal and public-facing details that help you organize, brand, and share your landing page.
+
 #### General details
 
-The landing page name and description are used to search for the page in your internal workspace. These won't be visible to your customers.
+Enter a name and description for the landing page. These details are used to search for the page in your internal workspace. They won't be visible to your customers.
 
 #### Site details
 
@@ -29,7 +35,7 @@ Set up metatags to customize how your page appears on the browser tab and optimi
 
 We suggest following these best practices:
 
-| Detail | Description | Recommendations |
+| Field | Description | Recommendations |
 | --- | --- |
 | Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Meta description | A text snippet that displays in search results. | Use between 140-160 characters.|
@@ -97,9 +103,17 @@ For example, to enforce consent capture before form submission, you can turn on 
 
 ![A checkbox form field with the "Required input field" toggle selected.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
-### Step 4: Create a confirmation page
+### Step 4: Create a confirmation page (optional)
 
-If you added a [form](#form-block) to your landing page in the previous step, create an additional landing page for the confirmation state, then add the **Open web URL** link to the button that submits the form. Otherwise, continue to the next step.
+If your landing page doesn’t include a form, continue to the next step.
+
+If your landing page includes a [form](#form-blocks), create a second landing page to serve as the confirmation experience. This page should thank users or provide a next step after form submission.
+
+To link the confirmation page:
+- Select the **Submit** button on your form
+- Use the **Open web URL** action to link to your confirmation page
+
+If you don’t include a confirmation page, users may not know their form was submitted successfully. Always include a confirmation experience to complete the journey.
 
 ### Step 5: Preview the page
 
@@ -107,17 +121,19 @@ You can preview your landing page in the editor's **Preview** tab. After saving 
 
 ![A landing page with the menu open to show the "Copy URL" option.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
+Before you publish, make sure:
+
+- You haven’t exceeded your plan’s published landing page limit
+- Each form-based page links to a [confirmation page](#step-4-create-a-confirmation-page) using the **Open web URL** action
+- All required page fields (like URL path and title) are complete
+
 When you're ready, select **Publish Landing Page**.
 
-## Handling form submission errors
-
-If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior on the landing page preview.
-
-## Using landing page templates
+## Using templates
 
 Use landing page templates to create templates for your next campaigns. These templates can be accessed and managed in both the landing page editor and the **Templates** section of the dashboard (**Templates** > **Landing Page Templates**). Landing page templates require a name and optionally require a description. 
 
-### Managing templates
+## Managing templates
 
 You can preview, archive, edit, or duplicate landing page templates. When editing a landing page, you can also save your landing page as a template, make changes to the template, or delete the content of the landing page. 
 
@@ -128,3 +144,15 @@ You can preview, archive, edit, or duplicate landing page templates. When editin
 To analyze the effectiveness of your landing page, go to **Messaging** > **Landing Pages**, then selected a landing page you've published. Here, you can track the number of page views, page clicks, page submissions, and the submission rates for your landing page.
 
 ![The analytics section for a landing page.]({% image_buster /assets/img/landing_pages/analytics.png %})
+
+## Handling form submission errors {#handling-form-submission-errors}
+
+If a user tries to submit a form with missing or unsupported input, they’ll see a generic error message and won’t be able to submit.
+
+Common causes:
+
+- Required fields are left blank
+- Special characters are used in text inputs
+- A required checkbox is not selected
+
+Error messages shown to users can’t be customized. Preview your landing page to confirm field behavior before publishing. 
