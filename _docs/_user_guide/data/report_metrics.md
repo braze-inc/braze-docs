@@ -64,15 +64,11 @@ Email, Web Push, iOS Push
 
 {% multi_lang_include metrics.md metric='Bounces' %} This could occur because there isn't a valid push token, the user unsubscribed after the campaign was launched, or the email address is inaccurate or deactivated.
 
-#### Email
-
-An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`).
-
-For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
-
-#### Push
-
-These users have been automatically unsubscribed from all future push notifications. 
+|Channel|Additional information|
+|-------|-----------------------|
+|Email|An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`).<br><br>For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.|
+|Push|These users have been automatically unsubscribed from all future push notifications.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -246,13 +242,14 @@ In-App Message
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. 
 
-#### In-app messages
-
-For in-app messages, a conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not.
-
-Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This means that each in-app message delivery is associated with only one conversion.
+|Channel|Additional information|
+|-------|-----------------------|
+|Email, Push, Webhooks|Conversions are tracked after the initial send.|
+|Content Cards|Conversions are counted when the user views a Content Card for the first time.|
+|In-app messages|A conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not.<br><br>Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This means that each in-app message delivery is associated with only one conversion.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
@@ -294,11 +291,10 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
-#### In-app messages
-
-The metric of total daily <i>Unique Impressions</i> is used to calculate the <i>Conversion Rate</i> for in-app messages.
-
-Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the <i>Conversion Rate</i> can increase accordingly, but impressions will only be counted once.
+|Channel|Additional information|
+|-------|-----------------------|
+|In-app messages|The metric of total daily <i>Unique Impressions</i> is used to calculate the <i>Conversion Rate</i> for in-app messages.<br><br>Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the <i>Conversion Rate</i> can increase accordingly, but impressions will only be counted once.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -332,7 +328,12 @@ All
 Email, Web Push, iOS Push, Android Push, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Deliveries' %} For emails, *Deliveries* is the total number of messages (Sends) successfully sent to and received by emailable parties.
+{% multi_lang_include metrics.md metric='Deliveries' %}
+
+|Channel|Additional information|
+|-------|-----------------------|
+|Email|Refers to the total number of messages (Sends) successfully sent to and received by emailable parties.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -640,7 +641,13 @@ Email
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
+
+|Channel|Additional information|
+|-------------|----------------------|
+|Email, Push, Webhooks|After the initial send.|
+|Content Cards, In-app messages|When the user views the Content Card or message for the first time.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -690,12 +697,15 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS,
 
 {% multi_lang_include metrics.md metric='Received' %} 
 
-- Content Cards: Received when users view the card in the app.
-- Push: Received when messages are sent from the Braze server to the push provider.
-- Email: Received when messages are sent from the Braze server to the email service provider.
-- SMS/MMS: “Delivered” after the SMS provider receives confirmation from the upstream carrier and destination device.
-- In-app message: Received at the time of display based on the trigger action defined.
-- WhatsApp: Received at the time of display based on the trigger action defined.
+|Channel|Additional information|
+|-------|-------|
+|Content Cards|Received when users view the card in the app.|
+|Push|Received when messages are sent from the Braze server to the push provider.|
+|Email|Received when messages are sent from the Braze server to the email service provider.|
+|SMS/MMS|“Delivered” after the SMS provider receives confirmation from the upstream carrier and destination device.|
+|In-app message|Received at the time of display based on the trigger action defined.|
+|WhatsApp|Received at the time of display based on the trigger action defined.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
@@ -879,7 +889,13 @@ In-App Message
 Email, Content Cards, SMS/MMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools. 
+{% multi_lang_include metrics.md metric='Total Clicks' %}
+
+|Channel|Additional information|
+|-------|-------|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools.|
+|Banners|The total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -924,9 +940,13 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %} This number is a sum of the number of impression events that Braze receives from the SDKs. For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
+{% multi_lang_include metrics.md metric='Total Impressions' %} This number is a sum of the number of impression events that Braze receives from the SDKs.
 
-For in-app messages, if there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on an impression is logged for every time that user sees the in-app message.
+|Channel|Additional information|
+|-------|-----------------------|
+|Content Cards|The total count of impressions logged for a given Content Card. This can increment multiple times for the same user.|
+|In-app messages|If there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on, an impression is logged for every time that user sees the in-app message.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -940,7 +960,13 @@ For in-app messages, if there are multiple devices and re-eligibility is off, th
 Email, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Opens' %}  For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. For AMP emails, this is the total opens for the HTML and plaintext versions. 
+{% multi_lang_include metrics.md metric='Total Opens' %}
+
+|Channel|Additional information|
+|-------|-----------------------|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
+|AMP emails|The total opens for the HTML and plaintext versions.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -975,7 +1001,15 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Email, Content Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %}  This includes clicks on Braze-provided unsubscribe links. This is tracked over a seven-day period for email. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+{% multi_lang_include metrics.md metric='Unique Clicks' %}
+
+This includes clicks on Braze-provided unsubscribe links.
+
+|Channel|Additional information|
+|-------|-----------------------|
+|Email|Tracked over a seven-day period.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -1012,7 +1046,13 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count doesn't increment the second time a user views a card. Likewise, it doesn't increase when a user views a second card from the same campaign.
+{% multi_lang_include metrics.md metric='Unique Impressions' %} 
+
+|Channel|Additional information|
+|-------|-----------------------|
+|In-app messages|Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>.|
+|Content Cards|The count should not increment the second time a user views a card.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -1026,7 +1066,13 @@ In-App Message, Content Cards
 Email, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+{% multi_lang_include metrics.md metric='Unique Opens' %}
+
+|Channel|Additional information|
+|-------|-----------------------|
+|Email|Tracked over a 7 day period.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
