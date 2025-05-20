@@ -2,7 +2,7 @@
 nav_title: Creating Placements
 article_title: Creating Banner placements for the Braze SDK
 description: "Learn how to create Banner placements for the Braze SDK."
-page_order: 1
+page_order: 2
 platform:
   - iOS
   - Android
@@ -43,7 +43,7 @@ Refresh placements as soon as possible to avoid delays in downloading or display
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -52,8 +52,10 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 ```swift
 AppDelegate.braze?.banners.requestRefresh(placementIds: ["global_banner", "navigation_square_banner"])
 ```
+
 {% endtab %}
 {% tab Java %}
+
 ```java
 ArrayList<String> listOfBanners = new ArrayList<>();
 listOfBanners.add("global_banner");
@@ -77,26 +79,34 @@ Braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 
 {% endtab %}
 {% tab Unity %}
+
 ```csharp
 This feature is not currently supported on Unity.
 ```
+
 {% endtab %}
 
 {% tab Cordova %}
+
 ```javascript
 This feature is not currently supported on Cordova.
 ```
+
 {% endtab %}
 {% tab Flutter %}
+
 ```dart
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+
 {% endtab %}
 
 {% tab Roku %}
+
 ```brightscript
 This feature is not currently supported on Roku.
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -114,10 +124,10 @@ import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
   console.log(`Banners were updated`);
-})
+});
 
 // always refresh after your subscriber function has been registered
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -130,8 +140,10 @@ let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
   }
 }
 ```
+
 {% endtab %}
 {% tab Java %}
+
 ```java
 Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
   for (Banner banner : banners.getBanners()) {
@@ -157,29 +169,34 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 ```javascript
 const bannerCardsSubscription = Braze.addListener(
   Braze.Events.BANNER_CARDS_UPDATED,
-  data => {
+  (data) => {
     const banners = data.banners;
     console.log(
       `Received ${banners.length} Banner Cards with placement IDs:`,
-      banners.map(banner => banner.placementId),
+      banners.map((banner) => banner.placementId)
     );
-  },
+  }
 );
 ```
 
 {% endtab %}
 {% tab Unity %}
+
 ```csharp
 This feature is not currently supported on Unity.
 ```
+
 {% endtab %}
 
 {% tab Cordova %}
+
 ```javascript
 This feature is not currently supported on Cordova.
 ```
+
 {% endtab %}
 {% tab Flutter %}
+
 ```dart
 StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<BrazeBanner> banners) {
   for (final banner in banners) {
@@ -187,12 +204,15 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
   }
 });
 ```
+
 {% endtab %}
 
 {% tab Roku %}
+
 ```brightscript
 This feature is not currently supported on Roku.
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -213,33 +233,31 @@ Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modul
 import * as braze from "@braze/web-sdk";
 
 braze.initialize("sdk-api-key", {
-    baseUrl: "sdk-base-url",
-    allowUserSuppliedJavascript: true, // banners require you to opt-in to user-supplied javascript
+  baseUrl: "sdk-base-url",
+  allowUserSuppliedJavascript: true, // banners require you to opt-in to user-supplied javascript
 });
 
 braze.subscribeToBannersUpdates((banners) => {
-   
-    // get this placement's banner. If it's `null` the user did not qualify for one.
-    const globalBanner = braze.getBanner("global_banner");
-    if (!globalBanner) {
-        return;
-    }
+  // get this placement's banner. If it's `null` the user did not qualify for one.
+  const globalBanner = braze.getBanner("global_banner");
+  if (!globalBanner) {
+    return;
+  }
 
-    // choose where in the DOM you want to insert the banner HTML
-    const container = document.getElementById("global-banner-container");
+  // choose where in the DOM you want to insert the banner HTML
+  const container = document.getElementById("global-banner-container");
 
-    // Insert the banner which replacees the innerHTML of that container
-    braze.insertBanner(globalBanner, container);
+  // Insert the banner which replacees the innerHTML of that container
+  braze.insertBanner(globalBanner, container);
 
-    // Special handling if the user is part of a Control Variant
-    if (globalBanner.isControl) {
-        // hide or collapse the container
-        container.style.display = 'none';
-    }
+  // Special handling if the user is part of a Control Variant
+  if (globalBanner.isControl) {
+    // hide or collapse the container
+    container.style.display = "none";
+  }
 });
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
-
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -292,6 +310,7 @@ if let braze = AppDelegate.braze {
   )
 }
 ```
+
 {% endtab %}
 {% tab Java %}
 To get the Banner in Java code, use:
@@ -313,6 +332,7 @@ You can create Banners in your Android views layout by including this XML:
 {% endtab %}
 {% tab Kotlin %}
 To get the Banner in Kotlin, use:
+
 ```kotlin
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
@@ -358,22 +378,24 @@ const banner = await Braze.getBanner("global_banner");
 You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following JavaScript XML (JSX) snippet into your view hierarchy, providing just the placement ID.
 
 ```javascript
-<Braze.BrazeBannerView
-  placementID='global_banner'
-/>
+<Braze.BrazeBannerView placementID="global_banner" />
 ```
 
 {% endtab %}
 {% tab Unity %}
+
 ```csharp
 This feature is not currently supported on Unity.
 ```
+
 {% endtab %}
 
 {% tab Cordova %}
+
 ```javascript
 This feature is not currently supported on Cordova.
 ```
+
 {% endtab %}
 {% tab Flutter %}
 To get the Banner's data model in Flutter, use:
@@ -395,12 +417,15 @@ BrazeBannerView(
   placementId: "global_banner",
 ),
 ```
+
 {% endtab %}
 
 {% tab Roku %}
+
 ```brightscript
 This feature is not currently supported on Roku.
 ```
+
 {% endtab %}
 {% endtabs %}
 

@@ -2,7 +2,7 @@
 nav_title: Creating Campaigns
 article_title: Creating Banner campaigns
 description: "Learn how to create Banners when you build a campaign in Braze."
-page_order: 2
+page_order: 3
 platform:
   - iOS
   - Android
@@ -66,11 +66,12 @@ To set the priority for a Banner:
 
 Finish building your campaign by completing the following:
 
-| Option                    | Description |
-|---------------------------|-------------|
-| **Campaign Duration** | Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time. |
-| **Targeted Users** | Target users by choosing segments or filters to narrow down your audience. You’ll automatically be given a snapshot of the approximate segment population. Exact segment membership is calculated just before the message is sent. |
-| **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion. |
+| Option                | Description                                                                                                                                                                                                                        |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Campaign Duration** | Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.                                                   |
+| **Targeted Users**    | Target users by choosing segments or filters to narrow down your audience. You’ll automatically be given a snapshot of the approximate segment population. Exact segment membership is calculated just before the message is sent. |
+| **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion.                                                        |
+
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Step 4: Test and launch
