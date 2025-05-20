@@ -581,7 +581,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Email
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+{% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. For Amazon SES, analytics will show up as _Opens_. However, bot filtering for clicks will be supported.
 
 {% endapi %}
 

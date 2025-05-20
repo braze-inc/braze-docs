@@ -3,7 +3,10 @@ nav_title: Know Before You Send
 article_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
 alias: /know_before_send/
-
+page_order: 10
+tool:
+    - Campaigns
+    - Canvas
 ---
 
 # Know before you send: channels
@@ -104,7 +107,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 ## In-app messages
 
 #### Things to know
-- **In-app message triggering**: At the session start, the SDK requests that all eligible in-app messages be sent to the device along with its triggers, so if they perform the event during the session, they can receive the in-app message quickly and reliably. Due to this, in-app messages cannot be triggered by custom events in Canvas.
+- **In-app message triggering**: At the session start, the SDK requests that all eligible in-app messages be sent to the device along with its triggers, so if they perform the event during the session, they can receive the in-app message quickly and reliably.
 - **Sent versus impressions**: For in-app messages, the concept of "sent" differs from the other available channels. To see an in-app message, a user has to start a session, be in the eligible audience, and perform the trigger. Because of this, we track "impressions" as it is more clear.
 - **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) and [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android).
 - [Canvas in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): These messages appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
