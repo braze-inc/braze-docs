@@ -972,7 +972,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Email<i>Total Opens</i>:</b> Count</li>
+        <li><b>Email <i>Total Opens</i>:</b> Count</li>
         <li><b>Email <i>Total Open Rate</i>:</b> (Opens) / (Deliveries)</li>
         <li><b>Web push <i>Total Opens</i>:</b> <i>Direct Opens</i> count</li>
         <li><b>Web push <i>Total Open Rate</i>:</b> (Total Opens) / (Deliveries)</li>
