@@ -40,7 +40,7 @@ Adding an email address in this section allows you to select it as a reply-to ad
 {% endtab %}
 {% tab BCC Address %}
 
-This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. BCC addresses are available for SendGrid and SparkPost only. For Amazon SES, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
+This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
 
 Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
