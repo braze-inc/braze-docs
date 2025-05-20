@@ -2512,6 +2512,8 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/'] = '/docs/shopify_user_identity';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/'] = '/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze';
 
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers';
+
 validurls['/docs/help/help_articles/account/locked_out'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
 validurls['/docs/help/help_articles/account'] = '/docs/user_guide/administrative/access_braze/troubleshooting/';
 
@@ -2548,6 +2550,33 @@ validurls['/docs/partners/message_personalization/dynamic_content/amazon_persona
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
 
+validurls['/docs/user_guide/message_building_by_channel/sms/best_practices/know_before_send'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/best_practices/know_before_send';
+validurls['/docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/best_practices/opt-ins';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/geographic_permissions';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/optin_optout'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/unknown_phone_numbers';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/message_usage';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/about_mms'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/contact_card'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/create'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/create';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/faqs'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/mms_short_long_codes';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/rcs';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/retargeting'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/segments'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/segments';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/create'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/create';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application';
+
 validurls['/docs/user_guide/analytics/reporting/viewing_and_understanding_segment_data/'] = '/docs/viewing_and_understanding_segment_data/';
 validurls['/docs/partners/message_personalization/dynamic_content/certona'] = '/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona';
 validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
@@ -2556,6 +2585,8 @@ validurls['/docs/partners/message_personalization/dynamic_content/offerfit'] = '
 validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
 validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
+
+validurls['/docs/developer_guide/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/creating_campaigns';
 
 validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/push_settings/';
 
