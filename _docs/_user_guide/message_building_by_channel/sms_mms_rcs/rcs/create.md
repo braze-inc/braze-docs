@@ -13,7 +13,9 @@ channel:
 
 > RCS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
-## Step 1: Choose where to build your message
+## Creating an RCS message
+
+### Step 1: Choose where to build your message
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
@@ -58,7 +60,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Select your RCS message type
+### Step 2: Select your RCS message type
 
 For your RCS message type, choose between **Text** or **Media**.
 
@@ -115,7 +117,7 @@ Generally speaking, RCS integrates more naturally with Android devices (this met
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Compose your RCS message
+### Step 3: Compose your RCS message
 
 Write your message using languages and personalization ([Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), and emojis) as needed. Be sure to adhere to our message copy limits to reduce your chances of overage charges.
 
@@ -123,15 +125,15 @@ Write your message using languages and personalization ([Liquid]({{site.baseurl}
 Before proceeding, read our [guidelines for RCS message limits](#step-2-select-your-rcs-message-type). RCS messages are [charged per message]({{site.baseurl}}/sms_rcs_billing_calculators/), so it’s a good idea to understand the nuances of what can be included in each type of RCS message.
 {% endalert %}
 
-## Step 4: Preview and test your message
+### Step 4: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending. Go to the **Test** tab to send a test RCS to content test groups or individual users, or preview the message as a user directly in Braze.
 
-## Step 5: Build the remainder of your campaign or Canvas
+### Step 5: Build the remainder of your campaign or Canvas
 
 Next, build the remainder of your campaign or Canvas. Refer to the following sections for further details on how to best use our tools to build RCS messages.
 
-### Step 5.1: Choose delivery schedule or trigger
+#### Step 5.1: Choose delivery schedule or trigger
 
 RCS messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -139,7 +141,7 @@ For action-based delivery, you can also set the campaign’s duration and Quiet 
 
 Specify your delivery controls, such as allowing users to become re-eligible to receive the campaign or enabling frequency capping rules.
 
-### Step 5.2: Choose users to target
+#### Step 5.2: Choose users to target
 
 Target users by choosing segments or filters to narrow down your audience. You should have already selected the subscription group, which narrows users by the level or category of communication they want to have with you. 
 
@@ -149,7 +151,7 @@ Next, you'll select the larger audience from your segments and narrow that segme
 Interested in using RCS retargeting to target users based on their SMS and RCS interactions? Refer to [Retargeting]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).
 {% endalert %}
 
-### Step 5.3: Choose conversion events
+#### Step 5.3: Choose conversion events
 
 Braze allows you to track how often users perform specific actions, or conversion events, after receiving a campaign. You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
@@ -159,7 +161,7 @@ Conversion events help you measure the success of your campaign. For example:
 
 You can also set custom conversion events based on your specific use case. Get creative with how you truly want to measure your campaign’s success.
 
-## Step 6: Review and deploy
+### Step 6: Review and deploy
 
 After you’ve finished building your campaign or Canvas, review its details, test it, then send it!
 
