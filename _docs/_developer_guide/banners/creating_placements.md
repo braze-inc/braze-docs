@@ -13,7 +13,7 @@ platform:
 
 # Creating Banner placements
 
-> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/about/).
+> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
 ## Prerequisites
 
@@ -402,7 +402,7 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you [launch a Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.

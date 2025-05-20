@@ -38,7 +38,7 @@ Features for Banners include:
 
 Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/creating_placements/) that designate where Banners are allowed to appear.
 
-Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating/).
+Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
 
 Additionally, Banner placements are unique to each workspace and can only be used across 10 campaigns within a single workspace. Placements within each workspace must be given a unique ID, which you'll do when creating a placement in Braze.
 
@@ -48,7 +48,7 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/developer_guide/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
+When multiple campaigns reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
 
 If multiple Banners are set to the same priority, the newest Banner that user is eligible for is displayed first.
 
@@ -87,4 +87,4 @@ Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto
 Now that you know about Banners, you're ready for the next steps:
 
 1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/)
-2. [Creating Banner campaigns in Braze]({{site.baseurl}}/developer_guide/banners/creating_campaigns/)
+2. [Creating Banner campaigns in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)

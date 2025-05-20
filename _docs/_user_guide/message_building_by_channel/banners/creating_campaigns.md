@@ -11,7 +11,7 @@ channel:
 
 # Creating Banner campaigns
 
-> Learn how to create Banners when you build a campaign in Braze.
+> Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 
 ## Prerequisites
 
