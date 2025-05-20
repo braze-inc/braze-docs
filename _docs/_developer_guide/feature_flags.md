@@ -57,6 +57,9 @@ To gradually roll out this feature, we can [create a feature flag]({{site.baseur
 
 In our app code, we will only show the **Start Live Chat** button when the Braze feature flag is enabled:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import {useState} from "react";
 import * as braze from "@braze/web-sdk";
@@ -76,8 +79,56 @@ return (<>
   Need help? <button>Email Our Team</button>
   {liveChatEnabled && <button>Start Live Chat</button>}
 </>)
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get the initial value from the Braze SDK
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
+Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+  Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+  liveChatEnabled = newValue;
+});
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get the initial value from the Braze SDK
+val featureFlag = braze.getFeatureFlag("enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
 
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ### Remotely control app variables
 
@@ -145,8 +196,8 @@ if (featureFlag?.enabled == true) {
 } else {
   liveChatView.visibility = View.GONE
 }
-liveChatView.promoLink = featureFlag.getStringProperty("link")
-liveChatView.promoText = featureFlag.getStringProperty("text")
+liveChatView.promoLink = featureFlag?.getStringProperty("link")
+liveChatView.promoText = featureFlag?.getStringProperty("text")
 ```
 
 {% endtab %}
