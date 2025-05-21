@@ -73,7 +73,11 @@ The **Until a specific date** option allows you to hold users in the step until 
 
 ##### Users won't receive past-dated steps or messages
 
-If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be a maximum of 31 days between the start of the Canvas and the dates chosen for "Wait until Exact Date" steps.
+If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be up to 31 days between the start of the Canvas and the dates chosen for "Wait until Exact Date" steps. 
+
+{% alert important %}
+If you're participating in the [Context step early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), you can set delays of up to 2 years.
+{% endalert %}
 
 For example, users won't receive steps or messages in these scenarios:
 - A message is scheduled to send on May 3rd at 9 pm, but the Delay step expires on May 3rd at 9 am. 

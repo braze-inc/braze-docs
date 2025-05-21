@@ -24,7 +24,7 @@ You can now test-send a live webhook message from Braze prior to setting a campa
 
 ## Added message variation received to campaign recipients CSV export
 
-We've added a column indicating the message variation received to the Campaign Recipients CSV export. Learn more about [exporting data]({{site.baseurl}}/docs/user_guide/data/export_braze_data/) from Braze.
+We've added a column indicating the message variation received to the Campaign Recipients CSV export. Learn more about [exporting data]({{site.baseurl}}/user_guide/data/export_braze_data/) from Braze.
 
 ## Approximate limit on number of impressions
 
