@@ -14,7 +14,7 @@ description: "This reference article describes eCommerce recommended events and 
 Braze recognizes that data planning takes time. We encourage our customers to familiarize their development teams and begin sending these events now. While some features may not be available immediately with the eCommerce recommended events, you can look forward to the introduction of new products throughout 2025 that will enhance your eCommerce capabilities.
 
 {% alert important %}
-eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're leveraging the new [Shopify connector]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/), these recommended events will be automatically available through the integration.
+eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're leveraging the new [Shopify connector]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration.
 {% endalert %}
 
 
