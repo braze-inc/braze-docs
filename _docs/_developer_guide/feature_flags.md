@@ -270,7 +270,7 @@ if (featureFlag != null && featureFlag.getEnabled()) {
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
-braze.logFeatureFlagImpression("enable_checkout_v2""")
+braze.logFeatureFlagImpression("enable_checkout_v2")
 if (featureFlag?.enabled == true) {
   return NewCheckoutFlow()
 } else {

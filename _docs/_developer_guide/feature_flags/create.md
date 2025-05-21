@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 To access the properties of a feature flag, use one of the following methods depending on the type you defined in the dashboard.
 
-If a property you reference does not exist, these methods will return `null`.
+If a property you referenced does not exist, these methods will return `null`.
 
 {% tabs %}
 {% tab JavaScript %}
