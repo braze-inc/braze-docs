@@ -27,7 +27,7 @@ Both email address and external user ID filters offer the following options:
 
 You can select multiple specific emails using the "`matches`" option and separating the email addresses with a &#124; character. For example: "`matches`" "`email1@braze.com` &#124; `email2@braze.com`". You can also combine multiple operators together. For example, the test segment could include an email address filter that "`matches`" "`@braze.com`" and another filter that "`does not equal`" "`sales@braze.com`". 
 
-After adding the testing filters to your test segment, you can verify it's working by selecting **Preview** or by select **Settings** > **CSV Export All User Data** to export that segment's user data to a CSV file.
+After adding the testing filters to your test segment, you can verify it's working by selecting **Preview** or by selecting **Settings** > **CSV Export All User Data** to export that segment's user data to a CSV file.
 
 ![A section of a Braze campaign titled Segment Details]({% image_buster /assets/img_archive/testmessages3.png %})
 
