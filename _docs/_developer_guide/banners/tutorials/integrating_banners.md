@@ -124,23 +124,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-```swift file=ContentView.swift
-import SwiftUI
-
-struct UIKitBannerExample: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> BannerViewController {
-        return BannerViewController()
-    }
-    func updateUIViewController(_ vc: BannerViewController, context: Context) {}
-}
-
-struct ContentView: View {
-    var body: some View {
-        UIKitBannerExample()
-    }
-}
-```
-
 ```swift file=SampleApp.swift
 import SwiftUI
 
@@ -196,11 +179,6 @@ final class BannerViewController: UIViewController {
     return bannerView
   }()
 
-  override func loadView() {
-    super.loadView()
-    view.backgroundColor = .white
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.addSubview(contentView)
@@ -252,16 +230,9 @@ lines-BannerViewController.swift=34-36
 Hide the banner view until content loads and disable autoresizing mask translation to use Auto Layout constraints.
 
 !!step
-lines-BannerViewController.swift=39-42
+lines-BannerViewController.swift=43-57
 
-#### 5. Configure the view hierarchy and background
-
-Set up your controller’s background color and add both the main content label and banner view to the hierarchy.
-
-!!step
-lines-BannerViewController.swift=48-63
-
-#### 6. Pin views with Auto Layout constraints and set up height constraint
+#### 5. Pin views with Auto Layout constraints and set up height constraint
 
 Anchor your main content to the top. Place the banner view directly below, pinning its leading, trailing, and bottom to the safe area.
 Set up a height constraint for the banner view (starting at 0), which will be updated when banner content loads.
@@ -525,16 +496,9 @@ lines-MainApplication.kt=30-34
 Invoke `requestBannersRefresh()` to fetch the latest banner content from Braze for the specified placement ID(s).
 
 !!step
-lines-MainActivity.kt=7-8
-
-#### 4. Inflate the XML layout containing your BannerView
-
-In MainActivity, call `setContentView(R.layout.banners)` so that the activity loads the layout file where your BannerView will be defined. Optionally, you can also use `Banner(placementId = "placement-id")` if using Jetpack Compose.
-
-!!step
 lines-banners.xml=15-19
 
-#### 5. Define the BannerView in banners.xml
+#### 4. Define the BannerView in banners.xml
 
 Specify a `<com.braze.ui.banners.BannerView>` element with `app:placementId="<placement-id>"` so that Braze knows where to render the banner content in your UI.
 
