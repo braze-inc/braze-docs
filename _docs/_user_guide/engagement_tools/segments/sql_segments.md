@@ -28,7 +28,7 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
-To run SQL segment queries, a user must have PII permissions, since it is possible to access PII data via this feature.
+To run SQL segment queries, a user must have PII permissions because it's possible to access PII data through this feature.
 
 {% tabs local %}
 {% tab Full refresh %}
