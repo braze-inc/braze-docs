@@ -32,7 +32,7 @@ After adding the testing filters to your test segment, you can verify it's worki
 ![A section of a Braze campaign titled Segment Details]({% image_buster /assets/img_archive/testmessages3.png %})
 
 {% alert note %}
-Exporting the segment's User Data to a CSV file is the most accurate method for verification, as the preview will only show a sample of your users and may not include all users.
+Exporting the segment's User Data to a CSV file is the most accurate verification method, as the preview will only show a sample of your users and may not include all users.
 {% endalert %}
 
 ### Step 2: Send the message
