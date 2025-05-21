@@ -7,7 +7,7 @@ permalink: /handbooks/
 <br>
 
 - [Entitlements Handbook FY'26 PDF][6] (Valid for order forms signed from May 19, 2025)
-- [Entitlements Handbook FY’25 PDF][5] (Valid for order forms signed from March 4, 2024 or for order forms that specifically refer to this handbook)
+- [Entitlements Handbook FY'25 PDF][5] (Valid for order forms signed from March 4, 2024 or for order forms that specifically refer to this handbook)
 - [Support & Success Services Handbook FY'24 PDF][4] (Valid for order forms signed between April 1, 2023 and February 29, 2024)
 - [Support & Success Services Handbook FY'23 PDF][3] (Valid for order forms signed between June 30, 2022 and April 1, 2023; as well as for order forms that specifically referred to this handbook)
 - [Support & Success Services Handbook FY'22 PDF][2] (Valid for order forms that specifically referred to this handbook)
