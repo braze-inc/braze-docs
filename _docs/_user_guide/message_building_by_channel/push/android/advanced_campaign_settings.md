@@ -59,10 +59,10 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 | Priority | Description | Best for |
 |---------|-------------|----------|
 | Normal | Battery-optimized delivery that may be delayed to conserve battery | Non-urgent content, promotional offers, news updates |
-| High | Immediate delivery with higher battery consumption | Time-sensitive notifications, critical alerts, live event updates |
+| High | Immediate delivery with higher battery consumption | Time-sensitive notifications, critical alerts, live event updates, account alerts, breaking news, or urgent reminders |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-#### Important considerations:
+#### Considerations
 
 - **Default setting**: You can set a default FCM priority for all Android campaigns in your [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). This campaign-level setting will override the default if needed.
 - **Deprioritization**: If FCM detects that your app frequently sends high-priority messages that don't result in user-visible notifications or user engagement, those messages may be automatically deprioritized to normal priority.

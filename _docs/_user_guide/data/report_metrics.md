@@ -581,7 +581,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Email
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+{% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. For Amazon SES, analytics will show up as _Opens_. However, bot filtering for clicks will be supported.
 
 {% endapi %}
 
@@ -972,9 +972,12 @@ Email, iOS Push, Android Push, Web Push, LINE
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Email:</b> (Opens) / (Deliveries)</li>
-        <li><b>Web push:</b> (Direct Opens) / (Deliveries)</li>
-        <li><b>iOS, Android, and Kindle push:</b> (Unique Opens) / (Deliveries)</li>
+        <li><b>Email <i>Total Opens</i>:</b> Count</li>
+        <li><b>Email <i>Total Open Rate</i>:</b> (Opens) / (Deliveries)</li>
+        <li><b>Web push <i>Total Opens</i>:</b> <i>Direct Opens</i> count</li>
+        <li><b>Web push <i>Total Open Rate</i>:</b> (Total Opens) / (Deliveries)</li>
+        <li><b>iOS, Android, and Kindle push <i>Total Opens</i>:</b> (Direct Opens) + (Influenced Opens)</li>
+        <li><b>iOS, Android, and Kindle push <i>Total Open Rate</i>:</b> (Total Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}

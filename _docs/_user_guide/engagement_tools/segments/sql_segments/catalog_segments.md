@@ -44,6 +44,16 @@ Here are guidelines to select the variables:
 
 5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), managing [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
+{% alert note %}
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a catalog ID. For example:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
 ## Use cases
 
 ### Health app
