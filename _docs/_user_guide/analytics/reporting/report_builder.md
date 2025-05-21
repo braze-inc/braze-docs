@@ -46,7 +46,7 @@ page_order: 6.2
     - Campaigns and Canvases
 
 {% alert tip %}
-Try out different configurations of drilldown options to explore the many ways you can break down your data. 
+Try out different configurations of drilldown options to explore the [many ways you can break down your data](#metrics-availability). 
 {% endalert %}
 
 {: start="5"}
@@ -67,6 +67,23 @@ Try out different configurations of drilldown options to explore the many ways y
 {% alert note %}
 The report may take up to a few minutes to run, depending on the date range and number of campaigns or Canvases you selected in the configuration stage.
 {% endalert %}
+
+## Metrics availability
+
+Your selection for **Rows** affects the metrics you can select.
+
+| Metric | Description |
+| --- | --- |
+| Conversion metrics | Available for Campaigns, Canvases, Campaigns and Canvases. |
+| Entries | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
+| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. |
+| Sends | Available for each relevant channel. |
+| Messages Sent | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
+| Subject line | Available for email Campaigns with **Variant** drilldown, Canvases, and Canvases with **Variant** drilldown. |
+| Total Revenue | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
+| Unique Impressions | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
+| Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Viewing a report
 
