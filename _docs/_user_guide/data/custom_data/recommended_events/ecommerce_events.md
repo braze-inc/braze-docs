@@ -446,5 +446,5 @@ These user field calculations are also included on the **Transactions** tab of u
 ![The "Transactions" tab with user calcuated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
 
 {% alert important %}
-The purchase event will be deprecated in late 2025 and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/recommended_events/). This means that new eCommerce events will not power pre-existing purchase event features, like LTV or revenue reporting in Canvases or campaigns. Refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events) for a full list of purchase events.
+The purchase event will be deprecated in late 2025 and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/). This means that new eCommerce events will not power pre-existing purchase event features, like LTV or revenue reporting in Canvases or campaigns. Refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events) for a full list of purchase events.
 {% endalert %}
