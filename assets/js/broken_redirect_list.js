@@ -2589,5 +2589,6 @@ validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/do
 validurls['/docs/help/help_articles/campaigns_and_canvas/know_before_send'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send';
 validurls['/docs/developer_guide/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/creating_campaigns';
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_subscription_group'] = '/docs/sms_rcs_subscription_groups/';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/';
 
 // validurls['OLD'] = 'NEW';
