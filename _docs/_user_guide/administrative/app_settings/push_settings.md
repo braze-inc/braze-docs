@@ -3,14 +3,14 @@ nav_title: Push Settings
 article_title: Push Settings
 page_order: 16
 page_type: reference
-description: "This reference article covers the Push Time to Live settings page in the Braze dashboard."
+description: "This article provides an overview of the Push Settings in the Braze dashboard."
 channel: push
 
 ---
 
 # Push Settings
 
-> The Push Settings page allows you to configure key settings for your push notifications, including the Push Time to Live (TTL) and the default FCM priority for Android campaigns. These settings help optimize the delivery and effectiveness of your push notifications, ensuring a better experience for your users.
+> The **Push Settings** page allows you to configure key settings for your push notifications, including the Push Time to Live (TTL) and the default FCM priority for Android campaigns. These settings help optimize the delivery and effectiveness of your push notifications, ensuring a better experience for your users.
 
 ## What is Push TTL?
 
@@ -36,7 +36,7 @@ To set a different default Push TTL:
 2. For each Android platform, define a default time to live value. You can set smaller increments like hours or seconds for more precise control.
 3. Select **Save** to apply your changes.
 
-![Push Time to Live Settings tab under Manage Settings][1]
+![Push TTL settings for Firebase, Web, Kindle, and Huawei devices.][1]
 
 ## Default FCM Priority for Android Campaigns
 
@@ -56,7 +56,7 @@ To set the default FCM priority:
 2. In the FCM Priority section, select either "Normal" or "High" as the default setting.
 3. Select **Save** to apply your changes.
 
-![FCM Priority Settings under Push Settings][2]
+![Android delivery priority settings.][2]
 
 This setting applies globally to all new Android push campaigns unless a different priority is selected when creating a specific campaign. 
 
