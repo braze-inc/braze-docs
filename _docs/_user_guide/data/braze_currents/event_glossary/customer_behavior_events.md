@@ -1139,7 +1139,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 ## Push Notification Token State Change events
 
 {% apitags %}
-Push, TokenStateChange
+Push, Token State Change
 {% endapitags %}
 
 This event occurs when a push token is inserted, updated or removed. Use this to track the states of push tokens.
