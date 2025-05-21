@@ -2592,4 +2592,6 @@ validurls['/docs/user_guide/message_building_by_channel/sms/sms_subscription_gro
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/';
 validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/push_settings/';
 
+validurls['/docs/user_guide/data/custom_data/custom_events/recommended_events/'] = '/docs/user_guide/data/custom_data/recommended_events/';
+
 // validurls['OLD'] = 'NEW';

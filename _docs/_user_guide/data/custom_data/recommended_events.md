@@ -24,7 +24,7 @@ Recommended events function similarly to [custom events]({{site.baseurl}}/user_g
 
 ### eCommerce recommended events
 
-[eCommerce recommended events]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) are based on recommended events. These eCommerce recommended events track actions taken by your customers such as viewing a product, updating their cart, or starting the checkout process. 
+[eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) are based on recommended events. These eCommerce recommended events track actions taken by your customers such as viewing a product, updating their cart, or starting the checkout process. 
 
 - `ecommerce.product_viewed`
 - `ecommerce.cart_updated`
