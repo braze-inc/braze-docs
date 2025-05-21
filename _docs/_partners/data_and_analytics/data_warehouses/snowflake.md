@@ -137,28 +137,6 @@ Nearly every event record Braze stores includes a few fields representing users'
 
 The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
-## Braze Benchmarks
-
-Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benchmarks), allows Braze prospects and customers to see how they compare to top players in their industry by comparing their metrics against Braze industry benchmarks.
-
-The initial industries include:
-
-- Delivery services
-- eCommerce
-- Education
-- Entertainment
-- Finance
-- Gaming
-- Health
-- Lifestyle
-- Restaurants
-- Retail
-- Technology
-- Transportation
-- Travel
-
-Our benchmarking data is also available directly in the [Snowflake Data Exchange](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
-
 > For a set of example queries to reference when setting up snowflake, check out our [sample queries][SQ] and [ETL event pipeline setup][ETL] examples.
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/

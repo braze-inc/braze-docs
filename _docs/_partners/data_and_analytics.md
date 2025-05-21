@@ -160,5 +160,7 @@ valid_partner_list:
 - name: Nexla
   url: /docs/partners/nexla/
 - name: Eagle Eye
-  url: /docs/partners/eagle_eye
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
 ---

@@ -347,5 +347,7 @@ valid_partner_list:
 - name: Just Words
   url: /docs/partners/just_words/
 - name: Eagle Eye
-  url: /docs/partners/eagle_eye
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
 ---
