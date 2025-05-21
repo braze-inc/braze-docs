@@ -13,7 +13,7 @@ description: "This reference article describes recommended events, which are rec
 For example, you may have a custom event named “cart_updated” or “update_to_cart” to capture when a user has added, removed, or updated the products in their cart. For recommended events, Braze will provide the event template, which includes a defined name and relevant properties for this event.
 
 {% alert important %}
-Recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're leveraging the new [Shopify connector]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/), these recommended events will be automatically available through the integration.
+Recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're leveraging the new [Shopify connector]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration.
 {% endalert %}
 
 ## How it works
