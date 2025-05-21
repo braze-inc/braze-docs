@@ -67,7 +67,7 @@ You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/admi
 {% endtab %}
 
 {% tab Using the command line %}
-Alternatively, you can send a single notification using cURL and the [Braze Messaging API]({{site.baseurl}}/api/endpoints/messaging/). Note that these examples use the `US-01` instance for making a request. To find out your instance, refer to [API documentation]({{site.baseurl}}/api/basics/#endpoints).
+Alternatively, you can send a single notification using cURL and the [Braze Messaging API]({{site.baseurl}}/api/endpoints/messaging/). Note that these examples make a request using the `US-01` instance. To find out yours, refer to [API endpoints]({{site.baseurl}}/api/basics/#endpoints).
 
 {% subtabs local %}
 {% subtab android %}
