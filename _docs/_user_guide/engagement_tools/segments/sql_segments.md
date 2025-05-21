@@ -27,6 +27,8 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
+To run SQL segment queries, a user must have PII permissions because it's possible to access PII data through this feature.
+
 {% tabs local %}
 {% tab Full refresh %}
 
@@ -158,6 +160,19 @@ Incremental refresh segments take into account late events, which are events tha
 
 {% endtab %}
 {% endtabs %}
+
+Lastly, regardless of whether you use the regular or incremental SQL editor, some additional rules apply:
+- `DECLARE` statements are not accepted.
+
+{% alert note %}
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a catalog ID. For example:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
 
 ## Previewing results
 
