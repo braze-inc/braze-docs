@@ -7,7 +7,7 @@ layout: scrolly
 description: "A tutorial on how to integrate and refresh banner placements"
 ---
 
-# Conditionally Display In-App Messages
+# Displaying a Banner by its Placement ID
 
 {% tabs %}
 {% tab Web %}
@@ -22,7 +22,7 @@ braze.initialize("YOUR-API-KEY", {
 });
 
 braze.subscribeToBannersUpdates((banners) => {
-  // get this placement's banner. If it's `null` the user did not qualify for one.
+  // Get this placement's banner. If it's `null`, the user did not qualify for any banners.
   const globalBanner = braze.getBanner("global_banner");
   if (!globalBanner) {
     return;
@@ -33,7 +33,7 @@ braze.subscribeToBannersUpdates((banners) => {
   braze.insertBanner(globalBanner, container);
 
   if (globalBanner.isControl) {
-    // hide or collapse the container
+    // Hide or collapse the container
     container.style.display = "none";
   }
 });
@@ -230,7 +230,7 @@ Enable debugging while developing to make troubleshooting easier!
 !!step
 lines-AppDelegate.swift=21
 
-#### 2. Trigger a banners refresh (optional)
+#### 2. Trigger a banners refresh
 
 Call `requestBannersRefresh` for your placement ID after initializing Braze.
 This proactively fetches the latest banner data, ensuring your app can display new content quickly after launch.
@@ -241,8 +241,8 @@ lines-BannerViewController.swift=18-32
 #### 3. Initialize the Braze banner view with a processContentUpdates callback
 
 Create your `BrazeBannerUI.BannerUIView` with the correct placement ID and Braze instance.
-The `processContentUpdates` callback will fire whenever the banner content (and height) changes.
-Inside the callback, unhide the banner and update its height constraint using the provided content height (capped at 80pt for consistency).
+The `processContentUpdates` callback will fire whenever the banner height changes.
+Inside the callback, unhide the banner and update its height constraint using the provided content height (capped at 80pt for this example).
 
 !!step
 lines-BannerViewController.swift=34-36
@@ -259,7 +259,7 @@ lines-BannerViewController.swift=39-42
 Set up your controller’s background color and add both the main content label and banner view to the hierarchy.
 
 !!step
-lines-BannerViewController.swift=50-63
+lines-BannerViewController.swift=48-63
 
 #### 6. Pin views with Auto Layout constraints and set up height constraint
 
@@ -438,7 +438,7 @@ public class MainApplication : Application() {
         // Turn on verbose Braze logging
         BrazeLogger.logLevel = Log.VERBOSE
 
-        // Configure Braze with your SDK key & endpoint
+        // Configure Braze with your SDK key and endpoint
         val config = BrazeConfig.Builder()
             .setApiKey("YOUR-API-KEY")
             .setCustomEndpoint("YOUR-ENDPOINT")
@@ -450,7 +450,7 @@ public class MainApplication : Application() {
             .subscribeToBannersUpdates { update ->
                 for (banner in update.banners) {
                     Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
-                    // any custom logic you'd like
+                    // And any custom banner logic you'd like
                 }
             }
 
@@ -470,7 +470,7 @@ import androidx.activity.ComponentActivity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Inflate the XML layout:
+        // Inflate the XML layout
         setContentView(R.layout.banners)
     }
 }
@@ -515,7 +515,7 @@ lines-MainApplication.kt=21-28
 
 #### 2. Subscribe to banner updates
 
-Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+Use `subscribeToBannersUpdates()` to subscribe to banner updates.
 
 !!step
 lines-MainApplication.kt=30-34
