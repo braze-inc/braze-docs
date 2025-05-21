@@ -79,7 +79,7 @@ Using the Shopify integration, you can collect email and SMS subscribers from yo
 
 ### Step 4: Set up Shopify product syncs (optional)
 
-You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product syncs]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
+You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product syncs]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_4_catalog.png %}){: style="max-width:70%"}
 

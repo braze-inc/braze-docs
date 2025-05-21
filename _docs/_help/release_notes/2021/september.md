@@ -32,7 +32,7 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 ## Updates to Android and FireOS developer guides
 
-Android and FireOS developer guides have merged into one location. Dedicated FireOS articles will be available in this [new Android section]({{site.baseurl}}/developer_guide/platforms/fireos/push_notifications/).
+Android and FireOS developer guides have merged into one location. Dedicated FireOS articles will be available in this [new Android section]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
 ## Updates to Funnel and Retention Reports
 

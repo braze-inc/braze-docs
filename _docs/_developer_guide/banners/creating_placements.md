@@ -13,11 +13,7 @@ platform:
 
 # Creating Banner placements
 
-> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners/).
-
-{% alert important %}
-Banners are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
 ## Prerequisites
 
@@ -27,7 +23,7 @@ These are the minimum SDK versions needed to start using Banners:
 
 ## Creating a placement
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md section="developer" %}
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
@@ -113,7 +109,7 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
+If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically.
 {% endalert %}
 
 {% tabs %}
@@ -221,13 +217,17 @@ This feature is not currently supported on Roku.
 {% tabs %}
 {% tab JavaScript %}
 
-Create a container element for the banner. Be sure to set its width and height.
+Create a container element for the Banner. Be sure to set its width and height.
 
 ```html
 <div id="global-banner-container" style="width: 100%; height: 450px;"></div>
 ```
 
 Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
+
+{% alert tip %}
+To track impressions, be sure to call `insertBanner` for `isControl`. You can then hide or collapse your container afterwards.
+{% endalert %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -247,7 +247,7 @@ braze.subscribeToBannersUpdates((banners) => {
   // choose where in the DOM you want to insert the banner HTML
   const container = document.getElementById("global-banner-container");
 
-  // Insert the banner which replacees the innerHTML of that container
+  // Insert the banner which replaces the innerHTML of that container
   braze.insertBanner(globalBanner, container);
 
   // Special handling if the user is part of a Control Variant
@@ -431,7 +431,7 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you [launch a Banner campaign]({{site.baseurl}}/developer_guide/banners/creating_campaigns/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you [launch a Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.
@@ -439,11 +439,11 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 ## Logging impressions
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. If you need to parse and render the HTML in a custom view, contact us at [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
+Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. 
 
 ## Dimensions and sizing
 
-Here are some things to know about Banner dimensions and sizing:
+Here's what you need to know about Banner dimensions and sizing:
 
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.

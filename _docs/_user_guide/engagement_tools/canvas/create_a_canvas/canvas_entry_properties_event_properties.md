@@ -23,14 +23,24 @@ Refer to the following table for a summary of differences between Canvas entry p
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
 | **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas built using Canvas Flow. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
-| **Original Canvas behavior** | - Must have persistent entry properties turned on. <br> - Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered. | - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas. <br> - Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component][2], the behavior follows the Canvas Flow rules for `event_properties`. |
-| **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
+| **Canvas behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% details Original Canvas editor details %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
 
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+You can no longer create or duplicate Canvases using the original editor. This article is available for reference when using Canvas entry properties and event properties for the previous Canvas workflow.
+
+**Canvas entry properties:**
+- Must have persistent entry properties turned on. 
+- Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered.
+
+**Entry properties:**
+- Can reference `event_properties` in any full step that uses action-based delivery in a Canvas.
+- Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), the behavior follows the Canvas Flow rules for `event_properties`.
+
+**Event properties:**
+- Cannot use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+
 {% enddetails %}
 
 ### Things to know
