@@ -64,7 +64,7 @@ MARKDOWN_API=true PARTNER_API=true rake
 ```
 
 > [!NOTE]
-> Prepending `MARKDOWN_API=true` to your rake command let's you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` let's you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
+> Prepending `MARKDOWN_API=true` to your rake command lets you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` lets you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
 
 ## About `bdocs` wrapper
 
