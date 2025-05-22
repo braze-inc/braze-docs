@@ -6,7 +6,7 @@
 
 Banners are automatically refreshed at the start of each new user session with their latest data&#8212;there's no need to resend or update your Banner campaign.
 
-## How many placements can be requested be requested in a session?
+## How many placements can be requested in a session?
 Up to 10 placements can be returned per session. Each placement will include the highest priority Banner a user is eligible for.
 
 ## For campaigns sharing a placement, which Banner is displayed first?
