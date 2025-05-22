@@ -1,7 +1,12 @@
-<img src="assets/Braze_Primary_Icon_PURPLE.png" width="80" height="80" alt="icon" align="left"/>
+<img src="assets/Braze_Primary_Icon_PURPLE.png" width="65" height="65" alt="Braze icon" align="left"/>
 
 Welcome to Braze Docs!
 ===
+
+[![GitHub Release](https://img.shields.io/github/v/release/braze-inc/braze-docs)](https://github.com/braze-inc/braze-docs/releases)
+[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/develop)](https://github.com/braze-inc/braze-docs/deployments)
+[![Static Badge](https://img.shields.io/badge/License-Creative_Commons-lightgrey)](/LICENSE)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/braze)](https://x.com/braze)
 
 This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
