@@ -2593,5 +2593,25 @@ validurls['/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_
 validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/push_settings/';
 
 validurls['/docs/user_guide/data/custom_data/custom_events/recommended_events/'] = '/docs/user_guide/data/custom_data/recommended_events/';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/'] = '/docs/sms_mms_rcs_reporting/';
+validurls['/docs/user_guide/message_building_by_channel/sms/about_sms/'] = '/docs/about_sms/';
+validurls['/docs/user_guide/onboarding/platform_administrative_features/'] = '/docs/user_guide/administrative/';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/'] = '/docs/sms_message_sending/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/terms/'] = '/docs/sms_terms_to_know/';
+validurls['/docs/user_guide/message_building_by_channel/sms/faqs/'] = '/docs/sms_faq/';
+validurls['/docs/user_guide/message_building_by_channel/sms/best_practices/best_practices/'] = '/docs/sms_mms_rcs_best_practices/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/'] = '/docs/partners/ecommerce/shopify_legacy/getting_started_shopify/';
+validurls['/docs/partners/message_personalization/dynamic_content/personalize/'] = '/docs/user_guide/personalization_and_dynamic_content/';
+validurls['/docs/partners/message_personalization/dynamic_content/storyly/'] = '/docs/partners/storyly/';
+validurls['/docs/partners/message_orchestration/additional_channels/retargeting/quikly/'] = '/docs/partners/quikly/';
+validurls['/docs/partners/message_personalization/dynamic_content/wyng/'] = '/docs/partners/wyng/';
+validurls['/docs/partners/message_personalization/dynamic_content/worthy/'] = '/docs/partners/worthy/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/ios_15/'] = '/docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/';
+validurls['/docs/partners/message_orchestration/additional_channels/retargeting/jampp/'] = '/docs/partners/jampp/';
+validurls['/docs/api/endpoints/email_templates/'] = '/docs/api/endpoints/templates/';
+validurls['/docs/developer_guides/content_cards/analytics/'] = '/docs/user_guide/message_building_by_channel/content_cards/reporting/';
+validurls['/docs/developer_guides/android/content_cards/logging_analytics/'] = '/docs/developer_guide/content_cards/logging_analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/android/android_11/'] = '/docs/developer_guide/platforms/android/android_13/';
+validurls['/docs/developer_guide/platform_integration_guides/android/android_12/'] = '/docs/developer_guide/platforms/android/android_13/';
 
 // validurls['OLD'] = 'NEW';
