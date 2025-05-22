@@ -6,6 +6,9 @@
 
 Banners are automatically refreshed at the start of each new user session with their latest data&#8212;there's no need to resend or update your Banner campaign.
 
+## How many placements can be requested be requested in a session?
+Up to 10 placements can be returned to the SDK per session. Each placement will include the highest priority Banner a user is eligible for.
+
 ## For campaigns sharing a placement, which Banner is displayed first?
 
 If a user qualifies for multiple Banner campaigns that share the same placement, the Banner with the highest priority will be displayed. For more information, refer to [Banner priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority).
