@@ -474,4 +474,4 @@ RCS messages are billed in a few different ways. Braze currently supports two ty
 
 The corresponding billing type will display within the RCS message composer in a label that has one of two values: **Text-only RCS** (Basic RCS) and **RCS** (Single RCS).
 
-You RCS billing type data will populate in your [Message Usage dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/), which displays your message credit consumption by specifying your credit ratio and number of message credits used. 
+You RCS billing type data will populate in your [Message Usage dashboard]({{site.baseurl}}/message_usage_dashboard/), which displays your message credit consumption by specifying your credit ratio and number of message credits used. 

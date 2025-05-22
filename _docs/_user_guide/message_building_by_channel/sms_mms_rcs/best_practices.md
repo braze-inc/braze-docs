@@ -3,6 +3,7 @@ nav_title: "Best Practices"
 article_title: Best Practices for SMS, MMS, and RCS 
 page_order: 15
 description: "This reference article covers best practices for SMS/MMS."
+alias: /sms_mms_rcs_best_practices/
 page_type: reference
 channel:
   - SMS
@@ -26,7 +27,7 @@ When setting up SMS and MMS in Braze to manage opt-ins and opt-outs, refer to th
 * [Subscription Group REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups): How to process opt-ins and outs they receive from a source other than a direct response to a message.
 * [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords): Explanations for how Braze approaches keyword processing and management.
 * [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/): Requires users to explicitly confirm their opt-in intent before they can receive SMS messages. SMS double opt-in is a requirement for some countries, so Braze recommends configuring this.
-* [SMS message sending]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
+* [SMS message sending]({{site.baseurl}}/sending_phone_numbers/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
 
 ### Considerations
 

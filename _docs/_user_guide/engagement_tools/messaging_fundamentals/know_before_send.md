@@ -61,7 +61,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 
 #### Things to check
 - **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
-- **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/#how-can-i-avoid-overages).
+- **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/sms_faq/).
 - **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
 
 #### Things to know

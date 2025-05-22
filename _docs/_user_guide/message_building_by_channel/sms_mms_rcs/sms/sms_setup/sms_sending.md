@@ -2,6 +2,7 @@
 nav_title: "SMS Message Sending"
 article_title: SMS Message Sending Overview
 page_order: 4
+alias: /sms_message_sending/
 description: "This reference article covers the basics and best practices of SMS sending."
 page_type: reference
 channel:

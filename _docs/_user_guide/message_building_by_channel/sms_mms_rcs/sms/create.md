@@ -141,4 +141,4 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 After you've finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
-Next, check out [SMS reporting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/) to learn how you can access the results of your SMS campaigns.
+Next, check out [SMS reporting]({{site.baseurl}}/sms_mms_rcs_reporting/) to learn how you can access the results of your SMS campaigns.
