@@ -77,7 +77,7 @@ For Amazon SES, refer to [Option 2: Configuring an HTTPS domain](https://docs.aw
 - **Braze US clusters:** `r.us-east-1.awstrack.me`
 - **Braze EU clusters:** `r.eu-central-1.awstrack.me`
 
-{% alert warning %}
+{% alert important %}
 When configuring your click tracking domain in your CDN, make sure you enable the `X-Forwarded-Host` header. This header is used to prevent potential security issues, such as host header attacks. Refer to the CDN documentation or your support team on how to do this as this vary depending on the CDN.
 {% endalert %}
 
