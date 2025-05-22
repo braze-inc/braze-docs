@@ -9,6 +9,7 @@ Banners are automatically refreshed at the start of each new user session with t
 ## How many placements can be requested in a session?
 Up to 10 placements can be returned per session. Each placement will include the highest priority Banner a user is eligible for.
 
+For example, if you have three placements--homepage-promo, cart-abandonment, and seasonal-offer--you can request all three in a single session. For each one, Braze will return the top-priority Banner that matches the user's targeting criteria. If you request more than 10 placements in one session, only the first 10 will be evaluated and returned.
 ## For campaigns sharing a placement, which Banner is displayed first?
 
 If a user qualifies for multiple Banner campaigns that share the same placement, the Banner with the highest priority will be displayed. For more information, refer to [Banner priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority).
