@@ -23,7 +23,7 @@ This file will contain the fields defined under [File references](#file-referenc
 If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
 
 {% alert important %}
-Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to maintain accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput, and the size of the saved documents.
 {% endalert %}
 
 The JSON will be saved in your storage bucket using the following key structure:
