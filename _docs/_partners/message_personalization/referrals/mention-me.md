@@ -49,7 +49,8 @@ Connecting Mention Me to Braze takes just a few minutes, just follow these simpl
 3. Enter the API Key and select your Braze Instance
 4. Select the countries you want to sync with
 
-More details on the setup process can be found [here](https://help.mention-me.com/hc/en-gb/articles/26151756257693-How-to-setup-Braze-with-Mention-Me)
+More details on the setup process can be found [here](https://help.mention-me.com/hc/en-gb/articles/26151773368221-How-to-setup-Braze-with-Mention-Me)
+
 ### What data is sent from Mention Me to Braze
 
 During the setup of the Braze integration, Mention Me will take care of creating the customer attributes and events, so you won't need to do this beforehand.
