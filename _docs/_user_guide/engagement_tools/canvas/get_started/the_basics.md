@@ -107,7 +107,7 @@ This is where we determine which messaging channels make the most sense for your
 * [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS or MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS or MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### The "how": Build the complete experience
