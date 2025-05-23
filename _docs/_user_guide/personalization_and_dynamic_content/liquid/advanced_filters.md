@@ -87,11 +87,52 @@ This filter should always be used when personalizing a string in a JSON dictiona
 
 | filter name | filter description |
 |---|---|
-| `json_parse` | Converts a JSON string into a corresponding data structure, such as an object or array. |
-| `as_json_string` | Converts a data structure, such as an object or array, into a corresponding JSON string. |
+| `json_parse` | Converts a JSON string into a corresponding data structure, such as an object or array. | 
+| `as_json_string` | Converts a data structure, such as an object or array, into a corresponding JSON string. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
+
+{% details json_parse example input and output %}
+
+### Input 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store","shopify_product_id":"1234567890123"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Output
+
+```liquid
+{% for thing in my_data %}
+Thing ID: {{ thing.id }}
+Thing Name: {{ thing.store_name }}
+Thing Shopify: {{ thing.shopify_product_id }}
+---
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string example input and output %}
+
+### Input
+
+{% raw %}
+```liquid
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Output
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
