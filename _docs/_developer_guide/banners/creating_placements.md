@@ -15,13 +15,17 @@ platform:
 
 > Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-## Prerequisites
+## Placement requests {#requests}
 
-These are the minimum SDK versions needed to start using Banners:
-
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include banners/placement_requests.md %}
 
 ## Creating a placement
+
+### Prerequisites
+
+These are the minimum SDK versions needed for Banners:
+
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -406,7 +410,7 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you [launch a Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/), you can send a test Banner to verify the integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/testing/) to verify your integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.
