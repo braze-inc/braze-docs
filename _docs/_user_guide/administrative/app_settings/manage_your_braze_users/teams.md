@@ -107,15 +107,15 @@ To do so, create a "Development" Team that only has access to test users. You ca
 
 The general process would be as follows:
 
-1. Development Team creates a campaign and adds the "Development" Team tag.
-2. Development Team launches the campaign to test users.
-3. Approver Team validates the local campaign design, promotes, and launches. To launch, the Approver Team changes the Team tag from "Development" to "[All Teams]" and relaunches the campaign.
+1. The Development Team creates a campaign and adds the "Development" Team tag.
+2. The Development Team launches the campaign to test users.
+3. The Approver Team validates the local campaign design, promotes, and launches. To launch, the Approver Team changes the Team tag from "Development" to "[All Teams]" and relaunches the campaign.
 
 For changes to active campaigns:
 
-1. Development Team clones the running campaign, adds the "Development" Team tag, and saves.
-2. Development Team makes edits and shares with the Approver Team.
-3. Approver Team removes the "Development" Team tag, pauses the previous campaign, and launches the new campaign.
+1. The Development Team clones the running campaign, adds the "Development" Team tag, and saves.
+2. The Development Team makes edits and shares with the Approver Team.
+3. The Approver Team removes the "Development" Team tag, pauses the previous campaign, and launches the new campaign.
 
 ## Archiving an existing Team
 
