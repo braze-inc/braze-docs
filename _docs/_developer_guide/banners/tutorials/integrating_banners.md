@@ -97,7 +97,7 @@ Add a div in your HTML (e.g. `<div id="global-banner-container"></div>`) where B
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
-import SwiftUI
+import UIKit
 import BrazeKit
 import BrazeUI
 
@@ -141,6 +141,10 @@ struct SampleApp: App {
 ```
 
 ```swift file=BannerViewController.swift
+import UIKit
+import BrazeKit
+import BrazeUI
+
 final class BannerViewController: UIViewController {
 
   static let bannerPlacementID = "top-1"
@@ -243,7 +247,7 @@ Set up a height constraint for the banner view (starting at 0), which will be up
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
-import SwiftUI
+import UIKit
 import BrazeKit
 import BrazeUI
 
@@ -315,7 +319,7 @@ struct BannerSwiftUIView: View {
               if let height = updates.height {
                 self.contentHeight = height
               }
-            case .failure(_):
+            case .failure:
               return
             }
           }
@@ -424,12 +428,6 @@ public class MainApplication : Application() {
                     // And any custom banner logic you'd like
                 }
             }
-
-        // Refresh placements
-        Braze.getInstance(this)
-            .requestBannersRefresh(
-                listOf("top-1")
-            )
     }
 }
 ```
@@ -443,6 +441,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         // Inflate the XML layout
         setContentView(R.layout.banners)
+        
+        // Refresh placements
+        Braze.getInstance(this)
+            .requestBannersRefresh(
+                listOf("top-1")
+            )
     }
 }
 ```
@@ -486,7 +490,7 @@ lines-MainApplication.kt=21-28
 
 #### 2. Subscribe to banner updates
 
-Use `subscribeToBannersUpdates()` to subscribe to banner updates.
+Use `subscribeToBannersUpdates()` to listen for and react to incoming banner refresh results from the server.
 
 !!step
 lines-MainApplication.kt=30-34
