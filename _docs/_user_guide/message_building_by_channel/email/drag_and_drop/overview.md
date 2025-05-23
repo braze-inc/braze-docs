@@ -67,6 +67,10 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
+#### Cards Style
+
+**Cards Style** is a Row Property that adds spacing between columns and rounds their corners, helping users create more polished, visually engaging layouts. By using card-style formatting, users can highlight key content like product features, testimonials, special offers, or news in a clean, structured way. This improves the clarity and appeal of messages across emails, pages, and popups—making important information stand out and elevating the overall design experience.
+
 ## Using the drag-and-drop editor
 
 Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
