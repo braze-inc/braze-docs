@@ -72,18 +72,67 @@ There is no way to instantiate a hash as a variable (such as an expression) in L
 | filter name | filter description | example input | example output |
 |---|---|---|---|
 | `number_with_delimiter` | Formats a number with commas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## JSON escape / string escape filter
 
 | filter name | filter description |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Escapes any special characters in a string (such as double quote `""` and backslash '\'). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 This filter should always be used when personalizing a string in a JSON dictionary and is useful for webhooks in particular.
+
+## JSON-formatting filters
+
+| filter name | filter description |
+|---|---|
+| `json_parse` | Converts a JSON string into a corresponding data structure, such as an object or array. | 
+| `as_json_string` | Converts a data structure, such as an object or array, into a corresponding JSON string. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse example input and output %}
+
+### Input 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store","shopify_product_id":"1234567890123"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Output
+
+```liquid
+{% for thing in my_data %}
+Thing ID: {{ thing.id }}
+Thing Name: {{ thing.store_name }}
+Thing Shopify: {{ thing.shopify_product_id }}
+---
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string example input and output %}
+
+### Input
+
+{% raw %}
+```liquid
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Output
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
