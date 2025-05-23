@@ -128,7 +128,7 @@ Select **Export**. For **Select cookie-filter profile**, select **None**. Then, 
 
 If you're getting the error `ERROR_CODE_SSO_INVALID_EMAIL`, the user's email address isn't valid. Confirm in the SAML trace that the `saml2:Attribute Name="email"` field matches the email address the user is using to log in. If you use Microsoft Entra ID, the attribute mapping is `email = user.userprincipalname`.
 
-The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Azure Active Directory, and others).
+The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Microsoft Entra ID, and others).
 
 Other errors that indicate you have issues with the user's email address include:
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: The user's email address isn't within the dashboard.
