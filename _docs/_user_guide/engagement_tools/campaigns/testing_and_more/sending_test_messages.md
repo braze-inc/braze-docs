@@ -146,7 +146,7 @@ After you've confirmed that you're only targeting the users you want to receive 
 
 ##### Step 2: Send a test campaign
 
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
+To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Audiences** step, select your test segment as shown in the following image.
 
 ![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
 

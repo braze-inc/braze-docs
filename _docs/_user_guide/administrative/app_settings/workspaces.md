@@ -155,7 +155,7 @@ You can then add this segment to your message and begin further refining your au
 
 #### Campaigns
 
-For campaigns, add your segment to the **Target Users** step of the composer.
+For campaigns, add your segment to the **Target Audiences** step of the composer.
 
 #### Canvas
 

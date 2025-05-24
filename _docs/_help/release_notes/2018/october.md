@@ -19,7 +19,7 @@ description: "This article contains release notes for October 2018."
 
 ## Calculate exact audience stats for campaigns
 
-You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Click **Calculate Exact Stats** in the footer of the **Target Users** section, and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as drafts).
+You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Click **Calculate Exact Stats** in the footer of the **Target Audiences** section, and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as drafts).
 
 ## Windows 8 deprecation
 

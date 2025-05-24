@@ -18,7 +18,7 @@ The Intelligent Channel computes the engagement rate for each user for each of t
 
 Every time a message is sent to a user, or a user interacts with a message, the engagement ratio is recalculated within seconds. A user can only be counted as interacting with a message once (for example, an open and click on the same email will cause that message to be marked as having been engaged with only once, not twice). 
 
-To enable the Intelligent Channel filter, select the **Intelligent Channel** filter on the **Target Users** page when creating a email, web push, or mobile push campaign.
+To enable the Intelligent Channel filter, select the **Intelligent Channel** filter on the **Target Audiences** page when creating a email, web push, or mobile push campaign.
 
 {% alert important %}
 To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/#tie-breaking).

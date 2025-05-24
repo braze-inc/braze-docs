@@ -48,7 +48,7 @@ The campaign creation flow for Transaction Email campaigns is simplified compare
 As a result, you'll notice several settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
 
 - The **Delivery** step has been simplified to remove scheduling options. Transactional emails will always be triggered through the Braze REST API using the campaign ID shown on the **Delivery** page. Additional settings, like re-eligibility controls and frequency capping settings, have also been removed to confirm that all users are reachable for these critical transactional alerts when your service triggers a send request.
-- The **Target Users** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
+- The **Target Audiences** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
 - The **Conversions** step has been removed. Transactional emails do not support conversion event tracking at this time.
 
 ![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.][2]{: style="max-width:80%;"}
